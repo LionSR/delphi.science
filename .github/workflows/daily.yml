@@ -1,0 +1,61 @@
+# The open index's daily pull, as SciRate pulls arXiv each day: harvest every enabled job in
+# harvest.json, label the new records, build, commit the new entry files, and load
+# the build into Supabase Postgres.
+# Secrets: ANTHROPIC_API_KEY labels new records (without it they wait, shown as research);
+# SUPABASE_DB_URL loads the build (without it the run stops after the commit).
+name: Open index
+
+on:
+  schedule:
+    - cron: '30 5 * * *' # 05:30 UTC daily
+  workflow_dispatch:
+
+concurrency:
+  group: registry
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: true
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+
+      - run: pip install pyyaml
+      - name: Harvest
+        run: python3 index.py harvest
+      - name: Label new records
+        if: env.ANTHROPIC_API_KEY != ''
+        run: |
+          npm install -g @anthropic-ai/claude-code
+          python3 index.py label
+      - name: Build
+        run: python3 index.py build
+
+      - name: Commit new entries
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add entries site/lib/taxonomy.json
+          git diff --cached --quiet || { git commit -m "Open index: daily pull $(date -u +%F)"; git push; }
+
+      - name: Load into Supabase
+        if: env.SUPABASE_DB_URL != ''
+        working-directory: site
+        run: |
+          npm ci
+          node --experimental-strip-types scripts/load-open-index.ts ../dist/index.json

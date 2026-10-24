@@ -72,13 +72,13 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 	});
 
 	test('text search finds, ranks and pages', async () => {
-		const r = await search(db, 'ti:grokking', { limit: 2 });
-		assert.ok(r.total >= 4 && r.results.every((x) => /grok/i.test(String(x.title))));
-		const page2 = await search(db, 'ti:grokking', { limit: 2, cursor: r.next_cursor });
+		const r = await search(db, 'ti:lattice', { limit: 2 });
+		assert.ok(r.total >= 4 && r.results.every((x) => /lattice/i.test(String(x.title))));
+		const page2 = await search(db, 'ti:lattice', { limit: 2, cursor: r.next_cursor });
 		assert.notDeepEqual(page2.results.map((x) => x.id), r.results.map((x) => x.id));
 		assert.ok((await search(db, 'au:claude')).results.some((x) => String(x.title).startsWith('Zeta23')));
 		assert.ok((await search(db, '"zero-free"')).total >= 1);
-		assert.ok((await search(db, 'grok*')).total >= r.total);
+		assert.ok((await search(db, 'lattice*')).total >= r.total);
 	});
 
 	test('one record by id', async () => {
@@ -165,13 +165,13 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 	});
 
 	test('top today, this week, this month: votes cast in that time', async () => {
-		const [old, fresh] = items.filter((it) => it.source === 'jaigp').slice(0, 2).map((it) => String(it.id));
+		const [old, fresh] = items.filter((it) => it.source === 'palomar').slice(0, 2).map((it) => String(it.id));
 		const erin = { login: 'erin', agent: '' }, finn = { login: 'finn', agent: '' };
 		await vote(db, old, erin, { value: 1 });
 		await vote(db, old, finn, { value: 1 });
 		await db.query("UPDATE open_index.votes SET at = now() - interval '10 days' WHERE record_id = $1", [old]);
 		await vote(db, fresh, erin, { value: 1 });
-		const top = async (sort: string) => (await search(db, 'source:jaigp', { sort, limit: 1 })).results[0].id;
+		const top = async (sort: string) => (await search(db, 'source:palomar', { sort, limit: 1 })).results[0].id;
 		assert.deepEqual([await top('week'), await top('month'), await top('score')], [fresh, old, old]);
 		assert.equal((await myVotes(db, 'erin', [old, fresh, 'nope/x'])).get(fresh)?.value, 1);
 	});

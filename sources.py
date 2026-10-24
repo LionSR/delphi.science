@@ -133,13 +133,15 @@ def iso_date(text: str | None) -> str:
 
 
 class MetaParser(HTMLParser):
-    """Collects <meta name|property=… content=…> (repeated names become lists) and <title>."""
+    """Collects <meta name|property=… content=…> (repeated names become lists), <title>, and the first
+    <h1> and <p>, for pages that carry no metadata at all."""
 
     def __init__(self) -> None:
         super().__init__()
         self.meta: dict[str, list[str]] = {}
-        self.title = ""
+        self.title = self.h1 = self.p = ""
         self._in_title = False
+        self._in = ""  # "h1" or "p" while inside the first of each
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         a = dict(attrs)
@@ -148,13 +150,19 @@ class MetaParser(HTMLParser):
             if name:
                 self.meta.setdefault(name, []).append(a["content"] or "")
         self._in_title = tag == "title"
+        if tag in ("h1", "p") and not getattr(self, tag) and not self._in:
+            self._in = tag
 
     def handle_endtag(self, tag: str) -> None:
         self._in_title = False
+        if tag == self._in:
+            self._in = ""
 
     def handle_data(self, data: str) -> None:
         if self._in_title:
             self.title += data
+        if self._in:
+            setattr(self, self._in, getattr(self, self._in) + data)
 
     def one(self, name: str) -> str:
         """The first value of a meta tag, or ''."""
@@ -218,12 +226,15 @@ def discussion_link(url: str) -> dict[str, Any]:
         m = MetaParser()
         m.feed(get_text(url, cache=False))
         one = m.one
-        author = clean(one("author") or one("article:author"))
+        # citation_author (arXiv, journals) is "Last, First"; shown as "First Last".
+        authors = [" ".join(reversed(clean(a).split(", ", 1))) for a in m.meta.get("citation_author", []) if clean(a)]
+        author = ", ".join(authors[:4]) + (" et al." if len(authors) > 4 else "") or clean(one("author") or one("article:author"))
         link = {
-            "kind": "web", "url": url, "title": clean(one("og:title") or m.title), "site": clean(one("og:site_name")) or host,
-            "author": "" if "://" in author else author,
-            "text": trim(one("og:description") or one("description"), LINK_CHARS),
-            "date": iso_date(one("article:published_time") or one("citation_publication_date") or one("date")),
+            "kind": "web", "url": url, "title": clean(one("citation_title") or one("og:title") or m.title or m.h1),
+            "site": clean(one("og:site_name")) or host.removeprefix("www."), "author": "" if "://" in author else author,
+            "text": trim(one("og:description") or one("description") or m.p, LINK_CHARS),
+            "date": iso_date(one("article:published_time") or one("citation_publication_date") or one("citation_date")
+                             or one("citation_online_date") or one("date") or one("article:modified_time")),
         }
     return {k: v for k, v in link.items() if v}
 

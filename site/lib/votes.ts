@@ -9,7 +9,7 @@ export type Vote = { value?: 1 | -1; emoji?: string; note?: string };
 // One emoji: a pictograph with its optional variation selector, skin tone, and ZWJ sequence.
 const EMOJI = /^\p{Extended_Pictographic}(?:\uFE0F|\p{Emoji_Modifier}|\u200D\p{Extended_Pictographic})*$/u;
 
-async function sha256(text: string): Promise<string> {
+export async function sha256(text: string): Promise<string> {
 	const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
 	return [...new Uint8Array(digest)].map((b) => b.toString(16).padStart(2, '0')).join('');
 }
@@ -38,8 +38,8 @@ export async function revokeKey(db: Db, login: string, by: { key?: string; hash?
 
 /** A person's agent keys, newest first (sessions are left out). */
 export async function agentKeys(db: Db, login: string) {
-	return (await db.query<{ hash: string; agent: string; created_at: string; revoked_at: string | null }>(
-		`SELECT key_hash AS hash, agent, created_at, revoked_at FROM open_index.agent_keys
+	return (await db.query<{ hash: string; agent: string; created_at: string; revoked_at: string | null; expires_at: string }>(
+		`SELECT key_hash AS hash, agent, created_at, revoked_at, expires_at FROM open_index.agent_keys
 		 WHERE login = $1 AND agent <> '' ORDER BY created_at DESC`, [login])).rows;
 }
 
@@ -52,7 +52,7 @@ export async function myVotes(db: Db, login: string, ids: string[]) {
 
 /** Who an agent key belongs to, or null if it is unknown or revoked. */
 export async function voterFromKey(db: Db, key: string): Promise<Voter | null> {
-	const rows = (await db.query<Voter>('SELECT login, agent FROM open_index.agent_keys WHERE key_hash = $1 AND revoked_at IS NULL', [await sha256(key)])).rows;
+	const rows = (await db.query<Voter>('SELECT login, agent FROM open_index.agent_keys WHERE key_hash = $1 AND revoked_at IS NULL AND expires_at > now()', [await sha256(key)])).rows;
 	return rows[0] ?? null;
 }
 
@@ -62,7 +62,7 @@ export async function refuseKeys(db: Db, text: string) {
 	if (!keys) return;
 	const hashes = await Promise.all(keys.map(sha256));
 	await db.query('UPDATE open_index.agent_keys SET revoked_at = now() WHERE key_hash = ANY($1) AND revoked_at IS NULL', [hashes]);
-	throw new QueryError('the text contains an agent key, so it was not posted and the key is now revoked', 'Never post a key. Ask your person for a new one at /keys.');
+	throw new QueryError('the text contains an agent key, so it was not posted and the key is now revoked', 'Never post a key. Get a new one: see /llms.txt.');
 }
 
 /** Records a vote, replacing the voter's earlier one on the same record. Returns the record's new tally. */

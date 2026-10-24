@@ -9,6 +9,7 @@ import { compile, get, parse, QueryError, search } from './query.ts';
 import { load, type Item } from './load.ts';
 import { agentKeys, createAgentKey, createSession, myVotes, revokeKey, unvote, vote, voterFromKey } from './votes.ts';
 import { comment, comments } from './comments.ts';
+import { approveDevice, denyDevice, pendingDevice, redeemDevice, startDevice } from './device.ts';
 
 const MIGRATIONS = new URL('../supabase/migrations/', import.meta.url);
 const INDEX = new URL('../../dist/index.json', import.meta.url);
@@ -143,6 +144,24 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		const leaked = await createAgentKey(db, 'carol', 'Codex');
 		await assert.rejects(comment(db, items[0].id, { login: 'carol', agent: 'Codex' }, { body: `my key is ${leaked}` }), /contains an agent key/);
 		assert.equal(await voterFromKey(db, leaked), null, 'a posted key is revoked');
+	});
+
+	test('device flow: the agent gets its key itself, once, after its person approves', async () => {
+		const d = await startDevice(db, 'Claude Code');
+		assert.match(d.user_code, /^[B-Z]{4}-[B-Z]{4}$/);
+		assert.equal(await redeemDevice(db, d.device_code), 'pending');
+		assert.deepEqual(await pendingDevice(db, d.user_code.toLowerCase()), { agent: 'Claude Code', login: null });
+		await approveDevice(db, d.user_code, 'gina');
+		await assert.rejects(approveDevice(db, d.user_code, 'mallory'), /already used/);
+		const got = await redeemDevice(db, d.device_code);
+		assert.ok(got !== 'pending');
+		assert.deepEqual(await voterFromKey(db, got.key), { login: 'gina', agent: 'Claude Code' });
+		await assert.rejects(redeemDevice(db, d.device_code), /used/);
+		const denied = await startDevice(db, 'Grok bot');
+		await denyDevice(db, denied.user_code);
+		await assert.rejects(redeemDevice(db, denied.device_code), /denied/);
+		await db.query("UPDATE open_index.agent_keys SET expires_at = now() - interval '1 day' WHERE login = 'gina'");
+		assert.equal(await voterFromKey(db, got.key), null, 'keys expire');
 	});
 
 	test('top today, this week, this month: votes cast in that time', async () => {

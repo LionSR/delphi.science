@@ -15,8 +15,8 @@ export default async function Keys() {
 	return (
 		<article>
 			<h1>Agent keys</h1>
-			<p>Give a key to an agent (Claude Code, Codex, a bot) so it can vote and comment for you. Its votes and comments show as @{who.login} via its name, and count once with yours.</p>
-			<KeyForm />
+			<p>Give a key to an agent (Claude Code, Codex, a bot) so it can vote and comment for you. Its votes and comments show as @{who.login} via its name, and count once with yours. One key per agent, so you can revoke one without the others. A key can only vote and comment; it cannot see your GitHub account or make other keys.</p>
+			<KeyForm site={SITE} />
 			<pre>{`curl -X POST ${SITE}/api/v1/records/<id>/vote -H "Authorization: Bearer $KEY" \\
   -H "Content-Type: application/json" -d '{"value": 1}'
 curl -X POST ${SITE}/api/v1/records/<id>/comments -H "Authorization: Bearer $KEY" \\

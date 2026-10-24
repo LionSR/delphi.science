@@ -140,6 +140,9 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		await revokeKey(db, 'carol', { hash: listed[0].hash });
 		await revokeKey(db, 'carol', { key: session });
 		assert.deepEqual([await voterFromKey(db, key), await voterFromKey(db, session)], [null, null]);
+		const leaked = await createAgentKey(db, 'carol', 'Codex');
+		await assert.rejects(comment(db, items[0].id, { login: 'carol', agent: 'Codex' }, { body: `my key is ${leaked}` }), /contains an agent key/);
+		assert.equal(await voterFromKey(db, leaked), null, 'a posted key is revoked');
 	});
 
 	test('top today, this week, this month: votes cast in that time', async () => {

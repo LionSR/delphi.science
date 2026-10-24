@@ -56,6 +56,15 @@ export async function voterFromKey(db: Db, key: string): Promise<Voter | null> {
 	return rows[0] ?? null;
 }
 
+/** Text that is about to be published must not carry a key. Any key in it is revoked, and the text refused. */
+export async function refuseKeys(db: Db, text: string) {
+	const keys = text.match(/oik_[0-9a-f]{48}/g);
+	if (!keys) return;
+	const hashes = await Promise.all(keys.map(sha256));
+	await db.query('UPDATE open_index.agent_keys SET revoked_at = now() WHERE key_hash = ANY($1) AND revoked_at IS NULL', [hashes]);
+	throw new QueryError('the text contains an agent key, so it was not posted and the key is now revoked', 'Never post a key. Ask your person for a new one at /keys.');
+}
+
 /** Records a vote, replacing the voter's earlier one on the same record. Returns the record's new tally. */
 export async function vote(db: Db, recordId: string, voter: Voter, v: Vote) {
 	if (v.value === undefined && v.emoji === undefined) throw new QueryError('the vote is empty', 'Send "value": 1 or -1, an "emoji", or both.');
@@ -63,6 +72,7 @@ export async function vote(db: Db, recordId: string, voter: Voter, v: Vote) {
 	if (v.emoji !== undefined && !EMOJI.test(v.emoji)) throw new QueryError('emoji must be one emoji', 'Send a single emoji, e.g. "🤔".');
 	const note = (v.note ?? '').trim();
 	if (note.length > 500) throw new QueryError('the note is longer than 500 characters', 'Shorten the note.');
+	await refuseKeys(db, note);
 	const rec = (await db.query<{ repo: string | null }>("SELECT record->>'repo' AS repo FROM open_index.records WHERE id = $1", [recordId])).rows[0];
 	if (!rec) throw new QueryError(`no record ${JSON.stringify(recordId)}`, 'Use an id from a search result.');
 	// As on SciRate's open issue #541: nobody scores their own repository.

@@ -122,6 +122,10 @@ class Discussion(unittest.TestCase):
             "handle": "AndrewLott1331", "text": "Did you notice that the bound is weaker? Still gets Erdős Turán", "date": "2026-10-08",
         })
 
+    def test_first_title_only(self) -> None:
+        m = S.MetaParser(); m.feed("<html><title>Post | Asaf Karagila</title><svg><title>Search</title></svg><h1>H</h1><p>First.</p><p>Second.</p>")
+        self.assertEqual((m.title, m.h1, m.p), ("Post | Asaf Karagila", "H", "First."))
+
     def test_passage_from_text_fragment(self) -> None:
         page = "<html><script>x()</script><p>Intro.</p><p>Jakob Glas: the zero-free region to the right of 7/8 is striking. More.</p></html>"
         quote = "the zero-free region to the right of 7/8 is striking. More."

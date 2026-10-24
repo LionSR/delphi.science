@@ -243,6 +243,7 @@ class GitHub(Source):
         return self.entry(
             repo.replace("/", "__"),
             url=d["html_url"],
+            repo=d["html_url"],
             title=d["name"].replace("-", " ").replace("_", " "),
             authors=[d["owner"]["login"]],
             summary=trim(d.get("description")),

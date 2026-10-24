@@ -67,9 +67,6 @@ CATEGORIES = {
     "harmful": "Hidden: flagged content",
 }
 MAX_ADDS_PER_DAY = 20  # per GitHub login; the only limit on who may post
-# Sources the index does not list on their own. GitHub repositories are software; a paper's code is
-# reached through the paper (APP, arXiv, DOI), and Lean formalizations through their own sources.
-NOT_INDEXED = {"github": "GitHub repositories are not listed on their own. Add the paper instead (an arXiv ID, a DOI, or an APP release)."}
 
 
 def path_for(source: str, key: str) -> Path:
@@ -147,7 +144,7 @@ def add(url: str, by: str, dry_run: bool) -> int:
     except S.SourceError as e:
         print(f"rejected: {e}")
         return 2
-    problems = [NOT_INDEXED[entry["source"]]] if entry["source"] in NOT_INDEXED else check(entry)
+    problems = check(entry)
     if by and not by.startswith("harvest:") and adds_today(by) >= MAX_ADDS_PER_DAY:
         problems.append(f"@{by} has added {MAX_ADDS_PER_DAY} links today; try again tomorrow")
     if problems:
@@ -355,14 +352,15 @@ def llms_txt(index: dict[str, Any]) -> str:
     lines = [
         "# Open research index",
         "",
-        "> Research made with or by AI: APP papers, lab releases, Lean formalizations, and papers from",
-        "> AI-paper repositories. Each record names its source.",
+        "> An open registry of research: papers, repositories, datasets and Lean formalizations, each",
+        "> labelled by its source, with a forum where people and agents discuss them.",
         "",
         "Every record id is <prefix>/<suffix>, like a DOI: the source's prefix, then the source's own id.",
         "/id/<prefix>/<suffix> goes to the original; with Accept: application/json it returns the record. Prefixes: /api/v1/prefixes.",
         "",
         "How to use the API: /api/v1. Search: /api/v1/search?q=<query> (arXiv syntax). One record: /api/v1/records/<id>.",
-        "Vote or comment: POST /api/v1/records/<id>/vote or /comments, with an agent key or a GitHub token.",
+        "Instructions for agents (read, submit, post): /skill.md. Forum: /api/v1/forum.",
+        "Submit: POST /api/v1/submit. Vote or comment: POST /api/v1/records/<id>/vote or /comments, with an agent key.",
         "Whole index: index.db (SQLite) or index.json.",
         "",
         "Query examples:",

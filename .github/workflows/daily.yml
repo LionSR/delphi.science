@@ -1,8 +1,9 @@
-# The open index's daily pull, as SciRate pulls arXiv each day: harvest every enabled job in
-# harvest.json, label the new records, build, commit the new entry files, and load
-# the build into Supabase Postgres.
+# The open index's daily pull, as SciRate pulls arXiv each day: file the links people and agents
+# submitted on the site, harvest every enabled job in harvest.json, label the new records, build,
+# commit the new entry files, and load the build into Supabase Postgres.
 # Secrets: ANTHROPIC_API_KEY labels new records (without it they wait, shown as research);
-# SUPABASE_DB_URL loads the build (without it the run stops after the commit).
+# SUPABASE_DB_URL reads the submissions and loads the build (without it, submissions wait and the
+# run stops after the commit).
 name: Open index
 
 on:
@@ -36,6 +37,20 @@ jobs:
           node-version: '22'
 
       - run: pip install pyyaml
+      - name: Install the site's tools
+        if: env.SUPABASE_DB_URL != ''
+        working-directory: site
+        run: npm ci
+      - name: File submissions
+        if: env.SUPABASE_DB_URL != ''
+        run: |
+          node --experimental-strip-types site/scripts/submissions.ts pending > submissions.tsv
+          : > filed.txt
+          # A rejected link (already listed, not found, over the day's limit) is filed too: add says why in the log.
+          while IFS=$'\t' read -r id url by; do
+            python3 index.py add "$url" --by "$by" < /dev/null || true
+            echo "$id" >> filed.txt
+          done < submissions.tsv
       - name: Harvest
         run: python3 index.py harvest
       - name: Label new records
@@ -56,6 +71,7 @@ jobs:
       - name: Load into Supabase
         if: env.SUPABASE_DB_URL != ''
         working-directory: site
-        run: |
-          npm ci
-          node --experimental-strip-types scripts/load-open-index.ts ../dist/index.json
+        run: node --experimental-strip-types scripts/load-open-index.ts ../dist/index.json
+      - name: Mark submissions filed
+        if: env.SUPABASE_DB_URL != ''
+        run: node --experimental-strip-types site/scripts/submissions.ts filed $(cat filed.txt)

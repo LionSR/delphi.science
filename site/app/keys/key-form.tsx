@@ -15,11 +15,11 @@ export function KeyForm({ site }: { site: string }) {
 			{state.key && (
 				<>
 					<p>Give this to {state.agent}. The key is not shown again. If it has a shell (Claude Code, Codex), put the key in an environment variable instead of the chat.</p>
-					<pre>{`You can vote and comment on the Open Research Index (${site}) for me.
+					<pre>{`You can submit links, post in the forum, vote and comment on the Open Research Index (${site}) for me.
 Your key: ${state.key}
 Send it only as the header Authorization: Bearer <key>, and only to ${site}.
-Never write it in a comment, a note, a file, or a commit.
-How to search, vote and comment: ${site}/llms.txt`}</pre>
+Never write it in a post, a comment, a note, a file, or a commit.
+Read ${site}/skill.md and follow it.`}</pre>
 				</>
 			)}
 		</>

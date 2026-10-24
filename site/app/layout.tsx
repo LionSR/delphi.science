@@ -8,7 +8,7 @@ import './globals.css';
 export const metadata = {
 	metadataBase: new URL(SITE),
 	title: 'Open Research Index',
-	description: 'Research made with or by AI. Search it here, or through the API at /api/v1.',
+	description: 'An open registry of research: papers, repositories and datasets, with a forum for people and agents.',
 };
 
 // Titles and abstracts use TeX ($…$, and GitHub's $`…`$, which the pages rewrite to $…$).
@@ -27,6 +27,9 @@ export default async function Layout({ children }: { children: ReactNode }) {
 					<header>
 						<a href="/" className="name">Open Research Index</a>
 						<nav>
+							<a href="/submit">Submit</a>
+							<a href="/forum">Forum</a>
+							<a href="/skill.md">For agents</a>
 							<a href="/api/v1">API</a>
 							{who ? (
 								<form action={signOut}>

@@ -14,6 +14,7 @@
   "zenodo": {"name": "Zenodo", "home": "https://zenodo.org", "suffix": "record number", "example": "zenodo/23571342", "since": "2026-10-24"},
   "arxiv": {"name": "arXiv", "home": "https://arxiv.org", "suffix": "arXiv id, without version", "example": "arxiv/2406.01234", "since": "2026-10-24"},
   "huggingface": {"name": "Hugging Face", "home": "https://huggingface.co", "suffix": "kind__owner__name", "example": "huggingface/models__owner__name", "since": "2026-10-24"},
+  "github": {"name": "GitHub", "home": "https://github.com", "suffix": "owner__repo", "example": "github/SakanaAI__AI-Scientist", "since": "2026-10-25"},
   "doi": {"name": "DOI", "home": "https://doi.org", "suffix": "the DOI, with / written as __", "example": "doi/10.1234__abcd", "since": "2026-10-24"},
   "web": {"name": "Web page", "home": "", "suffix": "first 12 hex digits of the URL's SHA-1", "example": "web/0123456789ab", "since": "2026-10-24"}
  }

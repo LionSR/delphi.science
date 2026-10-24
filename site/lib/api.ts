@@ -46,7 +46,7 @@ export async function handle(run: () => Promise<Response>): Promise<Response> {
 	} catch (e) {
 		if (e instanceof ApiError) return Response.json({ error: { code: e.code, message: e.message, fix: e.fix } }, { status: e.status });
 		if (e instanceof QueryError) {
-			const status = e.message.startsWith('no record') ? 404 : 400;
+			const status = /^no (record|topic) /.test(e.message) ? 404 : 400;
 			return Response.json({ error: { code: status === 404 ? 'not_found' : 'bad_request', message: e.message, fix: e.fix } }, { status });
 		}
 		throw e;

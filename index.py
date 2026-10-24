@@ -361,10 +361,31 @@ def to_item(e: dict[str, Any]) -> dict[str, Any] | None:
     })
 
 
+def crosslink(all_items: list[dict[str, Any]]) -> None:
+    """A discussion link whose paper is itself in the index points at that record ("record"), and the
+    record lists what it discusses ("discusses"), so an arXiv response and the manuscript it answers
+    link both ways. Resolved with sources.detect, so it works for every source, not only arXiv."""
+    by_id = {it["id"]: it for it in all_items}
+    for it in all_items:
+        for link in it.get("discussion") or []:
+            try:
+                src, key = S.detect(link["url"])
+            except ValueError:
+                continue
+            target = by_id.get(f"{src.name}/{key}")
+            if not target or target is it:
+                continue
+            link["record"] = target["id"]
+            discusses = target.setdefault("discusses", [])
+            if all(d["id"] != it["id"] for d in discusses):
+                discusses.append({"id": it["id"], "title": it["title"]})
+
+
 def items(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """APP papers (oldest first), then every other entry, newest first."""
     out = [to_item(e) for e in [*map(app_entry, load_entries()), *entries]]
     kept = [it for it in out if it]
+    crosslink(kept)
     apps = sorted((it for it in kept if it["source"] == "app"), key=lambda it: it.get("published", ""))
     rest = sorted((it for it in kept if it["source"] != "app"), key=lambda it: it.get("published", ""), reverse=True)
     return apps + rest

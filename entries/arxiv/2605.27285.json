@@ -1,0 +1,22 @@
+{
+  "key": "2605.27285",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.27285",
+  "title": "Basis-Adaptive Sparse-State Simulation of Quantum Circuits",
+  "authors": [
+    "Ch Nihar Kartikeya",
+    "Anjana K",
+    "Bijita Sarma",
+    "Sangkha Borah"
+  ],
+  "summary": "Classical simulation of many-body quantum systems remains economical only when wavefunction amplitudes stay localized in the working basis. Fixed-basis sparse-state simulators scale memory as $\\mathcal{O}(k)$ by keeping the largest computational-basis amplitudes; however, fidelity drops once entanglement or basis rotations spread weight across the Hilbert space. In this work, we introduce an algorithm called Basis-Adaptive Sparse-State Simulation (BASS), which updates each qubit's local representation basis during execution rather than locking the computational basis for the entire circuit.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

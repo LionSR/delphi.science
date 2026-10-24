@@ -1,0 +1,24 @@
+{
+  "key": "2610.03205",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03205",
+  "title": "Hamiltonian locality testing and certification do not achieve the Heisenberg limit",
+  "authors": [
+    "Francisco Escudero Gutiérrez",
+    "Junseo Lee",
+    "Sebastian Zur"
+  ],
+  "summary": "We establish lower bounds for Hamiltonian property testing with access to the time-evolution operator but not its inverse. Each experiment may query the time-evolution operator multiple times, and distances between Hamiltonians are measured in the normalized Frobenius norm. In this model, we show that testing whether a Hamiltonian is $k$-local or $\\varepsilon$-far from every $k$-local Hamiltonian requires $Ω(1/\\varepsilon^2)$ total evolution time, matching the upper bound of Kallaugher and Liang (TQC'25). We also prove that testing whether an unknown Hamiltonian equals a target Hamiltonian…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.DS",
+    "cs.LG"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

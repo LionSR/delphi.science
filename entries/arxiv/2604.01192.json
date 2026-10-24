@@ -1,0 +1,22 @@
+{
+  "key": "2604.01192",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.01192",
+  "title": "Quantum Gibbs Sampling in Infinite Dimensions: Generation, Mixing Times and Circuit Implementation",
+  "authors": [
+    "Simon Becker",
+    "Cambyse Rouzé",
+    "Robert Salzmann"
+  ],
+  "summary": "We develop a rigorous and implementable framework for Gibbs sampling of infinite-dimensional quantum systems governed by unbounded Hamiltonians. Extending dissipative Gibbs samplers beyond finite dimensions raises fundamental obstacles, including ill-defined generators, the absence of spectral gaps on natural Banach spaces, and tensions between implementability and convergence guarantees. We overcome these issues by constructing KMS-symmetric quantum Markov semigroups on separable Hilbert spaces that are both well-posed and efficiently implementable on qubit hardware. Our generation theory…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math-ph"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

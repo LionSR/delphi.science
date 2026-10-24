@@ -1,0 +1,27 @@
+{
+  "key": "2602.20376",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.20376",
+  "title": "Exploiting Low-Rank Objective Structure in Discrete Quadratic Optimization",
+  "authors": [
+    "Ria Stevens",
+    "Fangshuo Liao",
+    "Barbara Su",
+    "Thanasis Hadjidimoulas",
+    "Jianqiang Li",
+    "Anastasios Kyrillidis"
+  ],
+  "summary": "We study the problem of maximizing a complex-valued quadratic form over the $K^{\\text{th}}$ roots of unity. We show that when the objective matrix $\\mathbf{Q}^\\star \\in \\mathbb{C}^{n \\times n}$ of the quadratic has rank $r$, the global maximizer belongs to a candidate set of size $O(rn^{2r-1})$. This set can be constructed deterministically in $O(rn^{2r+1})$ time by enumerating the vertices of a hyperplane arrangement in $\\mathbb{R}^{2r}.$ The algorithm is embarrassingly parallel; with~$P$ processors, the time complexity drops to $O(r n^{2r+1}/P)$. For approximately low-rank settings, where…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.LG",
+    "math.OC",
+    "quant-ph"
+  ],
+  "published": "2026-02-23",
+  "updated": "2026-07-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

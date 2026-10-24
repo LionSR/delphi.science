@@ -1,0 +1,22 @@
+{
+  "key": "2609.02781",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.02781",
+  "title": "Conditional validity of quantum event classifiers under collider systematics and quantum estimation uncertainty",
+  "authors": [
+    "Roberto Fernández-Barrios",
+    "Iker Pastor-López",
+    "Asier González-Santocildes",
+    "Pablo García Bringas"
+  ],
+  "summary": "Claims about a deployed quantum machine-learning classifier can fail when target data shift or when finite-shot quantum evaluation randomizes the model itself. We develop an information-conditional, fail-closed auditing framework that returns supported, refuted or unresolved verdicts with anytime-valid per-claim error control under a declared sampling protocol. On a Higgs-to-tau-tau collider benchmark, stable classifier metrics do not guarantee valid signal-strength inference: at the studied finite-template statistics, the fixed-template profile can lose coverage, even in shift-free…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-02",
+  "updated": "2026-09-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

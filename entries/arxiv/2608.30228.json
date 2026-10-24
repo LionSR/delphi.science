@@ -1,0 +1,27 @@
+{
+  "key": "2608.30228",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.30228",
+  "title": "SpiderLS: Leveraging Full ZX Reduction for Lattice Surgery Compilation",
+  "authors": [
+    "Hyungseok Kim",
+    "Changheon Lee",
+    "Seungjik Kim",
+    "Enhyeok Jang",
+    "Youngmin Kim",
+    "Seungwoo Choi",
+    "Hanbit Lee",
+    "Sungho Pyun",
+    "Won Woo Ro"
+  ],
+  "summary": "Lattice surgery compilation plays a central role in translating fault-tolerant quantum programs into efficient surface code realizations, where both spatial and temporal resources directly determine the cost of execution. Recent work has demonstrated the benefits of using ZX-diagrams as an intermediate representation for lattice surgery compilation, enabling semantics-preserving transformations that reduce spacetime cost. However, existing compilation restricts ZX reduction to preserve diagram structures that can be directly embedded as lattice surgery junctions. We present SpiderLS, which…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-31",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

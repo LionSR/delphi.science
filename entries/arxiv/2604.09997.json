@@ -1,0 +1,21 @@
+{
+  "key": "2604.09997",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.09997",
+  "title": "Quantum Lattice Boltzmann with Denoising Collision Operators",
+  "authors": [
+    "Trong Duong",
+    "Matthias Möller",
+    "Norbert Hosters"
+  ],
+  "summary": "The Lattice Boltzmann method (LBM) is a well-established mesoscopic approach for simulating fluid dynamics by evolving particle distribution functions on discrete lattices. While the LBM is highly parallelizable on classical hardware, its translation to quantum algorithms is impeded by the collision process, which is intrinsically nonlinear and irreversible. Several existing quantum formulations implement this process through repeated quantum tomography and state preparation at every timestep, leading to significant overheads. We introduce a quantum LBM based on a denoising-type collision…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-11",
+  "updated": "2026-04-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

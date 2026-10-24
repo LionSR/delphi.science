@@ -1,0 +1,24 @@
+{
+  "key": "2610.23405",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.23405",
+  "title": "Quantum Circuits for Variable-Coefficient Vlasov Dynamics via Schrödingerisation",
+  "authors": [
+    "Fong Yew Leong",
+    "Dax Enshan Koh",
+    "Wei-Bin Ewe",
+    "Qiubo Chen",
+    "Zhun-Yong Ong"
+  ],
+  "summary": "High-dimensional Vlasov equations present promising use cases for quantum simulation, but their transport coefficients must be implemented coherently in order to preserve a compact quantum representation. We develop explicit Schrödingerised circuits for prescribed external field Vlasov dynamics without classical field updates. In 1D1V, velocity-dependent streaming is compiled directly from the encoded velocity register, while a non-linear cubic field is evaluated using reversible fixed-point arithmetic. For fixed polynomial degree, the field workspace scales linearly with the coordinate…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.plasm-ph"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2608.11890",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.11890",
+  "title": "The optimization landscape of peaked-circuit generation",
+  "authors": [
+    "Ilyes Jamoussi"
+  ],
+  "summary": "Peaked circuits are random quantum circuits whose measurement returns one bitstring far more often than chance. The probability of that string is the peakedness, and a verifier who knows the string checks the device in a few shots. Peaked circuits are a candidate route to verifiable quantum advantage, and classical generation is the bottleneck. Aaronson and Zhang train a variational circuit by gradient descent, and the peakedness they reach decays exponentially with the number of qubits. They state that either their optimizer stalls or no efficient generation method exists. Here we show that…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-12",
+  "updated": "2026-08-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

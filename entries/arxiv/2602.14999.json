@@ -1,0 +1,21 @@
+{
+  "key": "2602.14999",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14999",
+  "title": "Low Depth Unitary Coupled Cluster Algorithm for Large Chemical Systems",
+  "authors": [
+    "Jeremy Canfield",
+    "Dominika Zgid",
+    "J K Freericks"
+  ],
+  "summary": "The unitary coupled cluster (UCC) algorithm is one of the most promising implementations of the variational quantum eigensolver for quantum computers. However, for large systems, the number of UCC factors leads to deep quantum circuits, which are prohibitive for execution on quantum hardware. To address this, circuit depth can be reduced at the cost of more measurements with a Taylor series expansion of UCC factors with small angles, while treating the large-angle factors exactly. We implement this approach to quadratic order (qUCC) for systems with strong correlations and systems where…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-02-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

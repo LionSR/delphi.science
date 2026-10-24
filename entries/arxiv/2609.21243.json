@@ -1,0 +1,20 @@
+{
+  "key": "2609.21243",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.21243",
+  "title": "From Trainability Diagnostics to Optimization Claims: Boundaries and Controls in Variational Quantum Optimization",
+  "authors": [
+    "Pilsung Kang"
+  ],
+  "summary": "Barren plateau diagnostics characterize whether gradient signal remains available for training, but surviving signal need not translate into successful optimization. We study this trainability--optimization gap at the level of optimizer steps. Treating coefficient-weighted Hamiltonian-term gradients as task-like components, we introduce step-level diagnostics and derive an exact bridge between signed termwise organization, directional activity, and first-order descent. Resolving this bridge into standard first-order geometry shows that the apparent organization--activity factors are not…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-09-18",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2609.23752",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.23752",
+  "title": "Near-optimal incoherent tomography of low-rank quantum channels",
+  "authors": [
+    "Kean Chen",
+    "Aadil Oufkir"
+  ],
+  "summary": "We study tomography for quantum channels with input dimension $d_1$, output dimension $d_2$, and Kraus rank at most $r$, to within diamond norm error $\\varepsilon$, using adaptive experiments that retain no quantum memory between channel queries. - For quantum channels whose non-zero Choi eigenvalues are bounded below by $Ω(d_1/r)$, we establish optimal query upper and lower bounds $Θ(d_1d_2r^2/ε^2)$. The upper bound is achieved by a nonadaptive algorithm that uses the estimator from [Surawy-Stepney et al., Quantum (2022)], together with a new diamond-norm analysis. The lower bound applies…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-20",
+  "updated": "2026-09-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

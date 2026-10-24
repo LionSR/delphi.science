@@ -1,0 +1,24 @@
+{
+  "key": "2606.11673",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.11673",
+  "title": "Higher-Order Token Interactions via Quantum Attention",
+  "authors": [
+    "Jian Xu",
+    "Chao Li",
+    "Delu Zeng",
+    "John Paisley",
+    "Qibin Zhao"
+  ],
+  "summary": "Standard dot-product self-attention computes, in a single layer, only pairwise (order-2) interactions between tokens; representing a generic order-$k$ interaction is known to require either super-quadratic resources in one layer or composition across depth. We introduce \\textbf{Quantum Higher-Order Attention (QHA)}, a shallow, hardware-realizable quantum attention head that, via data re-uploading and an all-to-all non-Clifford entangler, synthesizes order-$k$ token interactions inside the circuit and exposes them through a local single-qubit read-out. We prove (i) an expressivity separation:…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-06-10",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

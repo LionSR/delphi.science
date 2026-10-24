@@ -1,0 +1,22 @@
+{
+  "key": "2603.05190",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.05190",
+  "title": "Optimization landscapes of variational quantum algorithms",
+  "authors": [
+    "Xiaozhen Ge",
+    "Shuming Cheng",
+    "Guofeng Zhang",
+    "Re-Bing Wu"
+  ],
+  "summary": "Optimization plays a central role in variational quantum algorithms, where the objective function typically takes the form $F(\\boldsymbolθ)= \\sum_{m=1}^{M} f_m \\left(\\mathrm{Tr}[U(\\boldsymbolθ)ρ_m U^\\dagger(\\boldsymbolθ) O_m]\\right)$, with $U(\\boldsymbolθ)$ being a parameterized quantum ansatz. Understanding the optimization landscape of such objective functions is crucial for assessing the trainability and performance of these algorithms. For the special case $M=1$, it is known that under certain assumptions, the landscape is free of false traps (FTs), i.e., local optima that are not…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-05",
+  "updated": "2026-07-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2604.14229",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.14229",
+  "title": "Magnitude Is All You Need? Rethinking Phase in Quantum Encoding of Complex SAR Data",
+  "authors": [
+    "Sakthi Prabhu Gunasekar",
+    "Prasanna Kumar Rangarajan"
+  ],
+  "summary": "Synthetic Aperture Radar (SAR) data is inherently complex-valued, while quantum machine learning (QML) models operate in complex Hilbert spaces. This similarity suggests that using both the magnitude and phase of SAR data in quantum encoding should help automatic target recognition in SAR images. In this study, we test this assumption by comparing five encoding strategies for quantum models: magnitude-only encoding, joint magnitude-phase encoding, in-phase and quadrature encoding, preprocessed phase encoding, and a purely quantum architecture. All approaches are evaluated under a unified…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI",
+    "cs.LG",
+    "eess.IV"
+  ],
+  "published": "2026-04-14",
+  "updated": "2026-05-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

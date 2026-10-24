@@ -1,0 +1,21 @@
+{
+  "key": "2609.33686",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.33686",
+  "title": "Simultaneously Query-Optimal Quantum Linear-System Algorithm",
+  "authors": [
+    "Minbo Gao",
+    "Zhengfeng Ji",
+    "Chenghua Liu"
+  ],
+  "summary": "Quantum linear-system algorithms access the coefficient matrix through a block-encoding oracle $U_A$ and the right-hand side through a state-preparation oracle $U_b$. The optimal query complexities of these two oracles are known separately: $O(κ\\log(1/\\varepsilon))$ queries to $U_A$ and $O(κ/s)$ queries to $U_b$, where $s=α\\|A^{-1}b\\|$. Whether a single algorithm can achieve both bounds simultaneously has remained open. We resolve this question affirmatively. Given a constant-factor estimate of $s$, we give a quantum linear-system algorithm that prepares the normalized solution to error…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-27",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

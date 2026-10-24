@@ -1,0 +1,23 @@
+{
+  "key": "2604.26900",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26900",
+  "title": "Strict Hierarchy for Quantum Channel Certification to Unitary",
+  "authors": [
+    "Kean Chen",
+    "Qisheng Wang",
+    "Zhicheng Zhang"
+  ],
+  "summary": "We consider the problem of quantum channel certification to unitary, where one is given access to an unknown $d$-dimensional channel $\\mathcal{E}$, and wants to test whether $\\mathcal{E}$ is equal to a target unitary channel or is $\\varepsilon$-far from it in the diamond norm. We present optimal quantum algorithms for this problem, settling the query complexities in three access models with increasing power. Specifically, we show that: (i) $Θ(d/\\varepsilon^2)$ queries suffice for incoherent access model, matching the lower bound due to Fawzi, Flammarion, Garivier, and Oufkir (COLT 2023).…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.DS"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2603.03109",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.03109",
+  "title": "Quantum-Inspired Hamiltonian Feature Extraction for ADMET Prediction: A Simulation Study",
+  "authors": [
+    "B. Maurice Benson",
+    "Kendall Byler",
+    "Anna Petroff",
+    "Shahar Keinan",
+    "William J Shipman"
+  ],
+  "summary": "Predicting absorption, distribution, metabolism, excretion, and toxicity (ADMET) properties remains a critical bottleneck in drug discovery. While molecular fingerprints effectively capture local structural features, they struggle to represent higher-order correlations among molecular substructures. We present a quantum-inspired feature extraction method that encodes molecular fingerprints into a parameterized Hamiltonian, using mutual information (MI) to guide entanglement structure. By simulating quantum evolution on GPU-accelerated backends, we extract expectation values that capture…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-03",
+  "updated": "2026-03-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

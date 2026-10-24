@@ -1,0 +1,21 @@
+{
+  "key": "2605.13796",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.13796",
+  "title": "Backdoor Threats in Variational Quantum Circuits: Taxonomy, Attacks, and Defenses",
+  "authors": [
+    "Lei Jiang",
+    "Fan Chen"
+  ],
+  "summary": "Variational quantum algorithms (VQAs) are a central paradigm for noisy intermediate-scale (NISQ) quantum computing, yet their reliance on predesigned and pretrained variational quantum circuits (VQCs) introduces critical security vulnerabilities, particularly backdoor attacks. These attacks embed hidden malicious behaviors that remain dormant under normal conditions but are activated by specific triggers, leading to adversarial outcomes such as incorrect predictions or manipulated objective values. This paper presents a survey of backdoor attacks in VQCs, covering data-poisoning,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

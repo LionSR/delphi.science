@@ -1,0 +1,25 @@
+{
+  "key": "2610.03220",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03220",
+  "title": "Evolving Hybrid Quantum-Classical Architectures for Image Classification",
+  "authors": [
+    "Devroop Kar",
+    "Daniel Krutz",
+    "Travis Desell"
+  ],
+  "summary": "Hybrid quantum classical neural networks integrate parameterized quantum circuits (PQCs) with established deep learning architectures, but their performance depends strongly on the choice of quantum circuit architecture, a choice that remains largely manual. Most existing approaches rely on hand-designed or fixed circuit ansätze, requiring circuit structure, gate composition, and qubit connectivity to be specified in advance with no guarantee that they suit the task. This limitation is especially acute in image classification, where quantum circuits must transform features extracted by…",
+  "domain": "cs.NE",
+  "tags": [
+    "cs.NE",
+    "cs.AI",
+    "cs.CV",
+    "cs.LG",
+    "quant-ph"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2607.10262",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10262",
+  "title": "HSF-S: Speed-Optimized Compilation and Acceleration for Hybrid Schrodinger-Feynman Quantum Circuit Emulation",
+  "authors": [
+    "Sechan Park",
+    "Kyeongwon Lee",
+    "Mundo Jeong",
+    "Chaebin Jung",
+    "Woojoo Lee"
+  ],
+  "summary": "Hybrid Schrodinger-Feynman (HSF) simulation offers an attractive memory-path tradeoff for exact quantum-circuit emulation, but its practical runtime is often dominated by exponential path growth from cross-boundary two-qubit gates. Existing GPU and FPGA quantum simulators are largely optimized for full-state Schrodinger execution and therefore do not align well with HSF's path-centric workflow. This paper presents HSF-S, a compiler-accelerator co-designed framework for exact HSF-based quantum circuit emulation. HSF-S lowers input circuits to an HSF-compatible basis, formulates a rank-aware…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-07-11",
+  "updated": "2026-07-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

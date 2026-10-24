@@ -1,0 +1,24 @@
+{
+  "key": "2610.02183",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02183",
+  "title": "Single-Particle Spectral Estimation",
+  "authors": [
+    "Adrian Chapman",
+    "Charles Derby",
+    "Steven T. Flammia",
+    "Yeongwoo Hwang",
+    "Joel Klassen",
+    "Calum McCartney"
+  ],
+  "summary": "We study Hamiltonian learning in a novel setting, where we are promised a physical structure that is obfuscated by a global unitary. In particular, we consider the task of learning the weights $E_i$ of a Hamiltonian $H=U^{\\dagger}(\\sum_{i \\in I} E_i n_i + H_O)U$ comprised of a set of non-interacting modes $I$ and an arbitrary ``spectator'' $H_O$ acting on a disjoint set of modes $O$. The non-interacting structure is hidden by an unknown global unitary $U$, and our goal is to recover the $E_i$ without reconstructing $U$. Such Hamiltonians are well-motivated in the setting of materials…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2604.24467",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.24467",
+  "title": "Adaptive Tensor Network Sampling for Quantum Optimal Control",
+  "authors": [
+    "Zeki Zeybek",
+    "Rick Mukherjee",
+    "Peter Schmelcher"
+  ],
+  "summary": "Quantum optimal control (QOC) provides a systematic framework for achieving high-fidelity operations in quantum systems and plays a central role in tasks such as gate synthesis, state transfer, and pulse design. Existing QOC methods broadly fall into two categories: gradient-based and gradient-free algorithms. The associated optimization landscape is often high-dimensional, non-convex, and populated by numerous local minima, making efficient gradient-free search strategies essential. To address this, we introduce a gradient-free matrix product state/tensor train (MPS/TT) sampling heuristic…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.comp-ph"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-04-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

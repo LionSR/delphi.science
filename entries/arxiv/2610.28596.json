@@ -1,0 +1,27 @@
+{
+  "key": "2610.28596",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.28596",
+  "title": "Entanglement Distribution in Quantum Switch Networks: Memory Limits and Achievability",
+  "authors": [
+    "Lei Hu",
+    "Alptug Aytekin",
+    "Stavros Mitrolaris",
+    "Mohamed Nomeir",
+    "Subhankar Banerjee",
+    "Sennur Ulukus",
+    "Saikat Guha"
+  ],
+  "summary": "We study the minimum persistent memory required to distribute a graph state through a quantum switch. Specifically, consider a central switch that assists $n$ remote users in distributing a graph state, using independently generated user-switch Bell pairs. Since Bell-pair generation is probabilistic, different links generally succeed at different times. When a Bell-pair is generated, the qubits may need to be stored in memory while waiting for other links to succeed. Recently, new protocols have been proposed to reduce this storage overhead by processing and releasing some switch qubits…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "cs.NI",
+    "quant-ph"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

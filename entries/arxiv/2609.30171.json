@@ -1,0 +1,23 @@
+{
+  "key": "2609.30171",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.30171",
+  "title": "Optimal spectrum estimation",
+  "authors": [
+    "Ainesh Bakshi",
+    "Apoorv Vikram Singh",
+    "Xinyu Tan"
+  ],
+  "summary": "We prove that the spectrum of an unknown $d$-dimensional quantum state can be estimated to error $\\varepsilon$ in total variation distance using \\[ O\\!\\left(d^2\\min\\left\\{ \\frac{1}{(\\varepsilon\\log d)^4},\\; \\frac{1}{(\\varepsilon\\log d)^2} \\right\\}\\right) \\] copies. This matches the recent lower bound of Wang. When restricted to unentangled measurements, we give an algorithm with an additional factor of $d$ in copy complexity, which we conjecture to be optimal. We develop a framework for recovering the small eigenvalues of a quantum state by matching Chebyshev moments. We bound the variance…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.DS"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

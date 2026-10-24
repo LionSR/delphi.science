@@ -1,0 +1,34 @@
+{
+  "key": "2603.25762",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.25762",
+  "title": "QHap: Quantum-Inspired Haplotype Phasing",
+  "authors": [
+    "Rui Zhang",
+    "Xian-Zhe Tao",
+    "Yibo Chen",
+    "Jiawei Zhang",
+    "Lei He",
+    "Dongming Fang",
+    "Lin Yang",
+    "Yuhui Sun",
+    "Qinyuan Zheng",
+    "Xinmeng Shi",
+    "Yang Zhou",
+    "Wanyi Chen",
+    "Chentao Yang",
+    "Man-Hong Yung",
+    "Jun-Han Huang"
+  ],
+  "summary": "Haplotype phasing, the process of resolving parental allele inheritance patterns in diploid genomes, is critical for precision medicine and population genetics, yet the underlying optimization is NP-hard, posing a scalability challenge. To address this, we introduce QHap, a haplotype phasing algorithm that leverages quantum-annealing-inspired optimization. By reformulating haplotype phasing as a Max-Cut problem and deploying a GPU-accelerated ballistic simulated bifurcation solver, QHap accelerates phasing while maintaining accuracy comparable to established phasing tools. On the highly…",
+  "domain": "q-bio.GN",
+  "tags": [
+    "q-bio.GN",
+    "quant-ph"
+  ],
+  "published": "2026-03-26",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

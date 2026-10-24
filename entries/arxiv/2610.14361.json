@@ -1,0 +1,21 @@
+{
+  "key": "2610.14361",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.14361",
+  "title": "Competitive scaling of small-subsystem-optimization heuristics for LABS",
+  "authors": [
+    "Ginger E. Lau",
+    "Adil A. Gangat"
+  ],
+  "summary": "The low autocorrelation binary sequences (LABS) problem, often formulated as a spin-lattice energy-minimization problem, is a combinatorial optimization problem with a very rugged energy landscape. We demonstrate that iterative optimization of very small subsystems of n spins that are decoupled from the rest of the system achieves global optimization of LABS with a time-to-solution scaling that is competitive with heuristics that optimize the global system of N spins directly. Our isolated-subsystem heuristic with n = 4 achieves a time scaling of O(1.333^N ) on the interval N = [27, 60],…",
+  "domain": "cond-mat.stat-mech",
+  "tags": [
+    "cond-mat.stat-mech",
+    "quant-ph"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

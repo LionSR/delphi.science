@@ -1,0 +1,19 @@
+{
+  "key": "2603.24822",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.24822",
+  "title": "Coefficient-Decoupled Matrix Product Operators as an Interface to Linear-Combination-of-Unitaries Circuits",
+  "authors": [
+    "Younes Javanmard"
+  ],
+  "summary": "We introduce a coefficient-decoupled matrix product operator (MPO) representation for Pauli-sum operators that separates reusable symbolic operator support from a tunable coefficient bridge across a fixed bipartition. This representation provides a direct interface to linear-combination-of-unitaries (LCU) circuits: the symbolic left/right dictionaries define a static \\textsc{Select} oracle that is compiled once, while coefficient updates modify only a dynamic \\textsc{Prep} oracle. As a proof of concept, we construct compact state-adapted Pauli pools by sampling Pauli strings from a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-25",
+  "updated": "2026-03-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

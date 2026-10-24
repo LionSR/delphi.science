@@ -1,0 +1,22 @@
+{
+  "key": "2605.01008",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.01008",
+  "title": "Semantics-Based Verification of an Implemented Shor Oracle for ECDLP in Qrisp",
+  "authors": [
+    "Lei Zhang",
+    "Zhiyuan Chen"
+  ],
+  "summary": "Shor-style quantum algorithms for the elliptic-curve discrete logarithm problem (ECDLP) are highly sensitive to the exact semantics of their group-operation oracles. Consequently, minor implementation choices can invalidate the intended mathematical model and lead to misleading conclusions. This paper introduces a semantics-first verification perspective for an end-to-end, compilable ECDLP implementation built on Qrisp. We specify the implemented oracle at the level of program semantics, derive refinement-style verification obligations for its key components, and provide a high-level…",
+  "domain": "cs.SE",
+  "tags": [
+    "cs.SE",
+    "cs.CR",
+    "quant-ph"
+  ],
+  "published": "2026-05-01",
+  "updated": "2026-05-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

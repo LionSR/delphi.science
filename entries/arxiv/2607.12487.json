@@ -1,0 +1,23 @@
+{
+  "key": "2607.12487",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12487",
+  "title": "Benchmarking loss functions for trainable quantum feature maps",
+  "authors": [
+    "Nguyen Dinh Quyen",
+    "Vu Tuan Hai",
+    "Quoc Chuong Nguyen",
+    "Le Bin Ho",
+    "Lan Nguyen Tran"
+  ],
+  "summary": "Many quantum machine learning models employ quantum feature maps to encode classical data into quantum states. While fixed feature maps often lack sufficient expressivity for complex nonlinear classification tasks, trainable quantum feature maps (TQFMs) enable adaptive quantum kernels with enhanced learning capability. Different loss functions can induce distinct optimization dynamics, yet their effects remain poorly understood. In this work, we apply the Log-Likelihood Loss function for TQFMs and provide a systematic comparison with Distance Loss and Measurement Loss. Through extensive…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

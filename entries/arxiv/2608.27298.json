@@ -1,0 +1,22 @@
+{
+  "key": "2608.27298",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.27298",
+  "title": "Optimal cloning of mixed states",
+  "authors": [
+    "Marco Fanizza",
+    "Dmitry Grinko",
+    "Thilo Scharnhorst",
+    "Jack Spilecki"
+  ],
+  "summary": "We consider the problem of approximate cloning of quantum states: given $n$ copies of an unknown state $ρ\\in \\mathbb{C}^{d \\times d}$, prepare an $(n+k)$-copy state with high fidelity to $ρ^{\\otimes (n+k)}$. Werner's pure state cloner is the optimal channel for the pure state case, and shows that $n = Θ(kd/\\varepsilon)$ copies are necessary and sufficient to clone $k$ additional copies of an unknown pure state to fidelity $1-\\varepsilon$. The random purification channel gives a straightforward extension of Werner's cloner to mixed state inputs: given $n$ copies of a mixed state, randomly…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-27",
+  "updated": "2026-08-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

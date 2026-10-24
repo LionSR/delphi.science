@@ -1,0 +1,19 @@
+{
+  "key": "2610.08890",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08890",
+  "title": "Quantum Readout Complexity for Normalized Linear Functionals",
+  "authors": [
+    "Roi Vence-Nogueira"
+  ],
+  "summary": "Quantum numerical algorithms often encode a positive solution $q$ in the amplitudes of a quantum state, while the required scientific output is a normalized linear functional of $q$. Basis measurements produce probabilities determined by squared solution values, while the functional uses the solution values themselves. We study the complexity of this output-interface problem for $F_φ(q)=\\intφq\\,\\mathrm dν/\\int q\\,\\mathrm dν$ and identify a target-dependent susceptibility $χ_φ$ that governs the amount of copies of the solution state needed. For a fixed positive reference state and a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

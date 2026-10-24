@@ -1,0 +1,20 @@
+{
+  "key": "2604.20088",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.20088",
+  "title": "CVaR-Assisted Custom Penalty Function for Constrained Optimization",
+  "authors": [
+    "Xin Wei Lee",
+    "Hoong Chuin Lau"
+  ],
+  "summary": "We propose a slack-free penalty formulation for constrained binary optimization that eliminates auxiliary slack variables and preserves the feasibility structure of the original problem. The proposed approach introduces a nonlinear custom penalty function to enforce inequality constraints directly in the objective function. To address the computational challenges associated with evaluating nonlinear penalties in variational quantum algorithms, we employ the finite-sampling method that avoids the exponential complexity required by exact expectation computation. Furthermore, we integrate the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-22",
+  "updated": "2026-07-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2604.15888",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.15888",
+  "title": "Enhancing Neural-Network Variational Monte Carlo through Basis Transformation",
+  "authors": [
+    "Zhixuan Liu",
+    "Dongheng Qian",
+    "Jing Wang"
+  ],
+  "summary": "Neural-network variational Monte Carlo (NNVMC) has emerged as a powerful tool for solving quantum many-body problems, yet systematic pathways for improving its accuracy remain largely heuristic. Here, we introduce a physically motivated basis transformation for NNVMC that enhances variational expressivity without increasing the complexity of the neural-network ansatz itself. By formulating the many-body wave function in a Gaussian basis, we introduce a single learnable locality parameter, $α$, that reshapes the target ground state into a more learnable representation. This approach…",
+  "domain": "cond-mat.str-el",
+  "tags": [
+    "cond-mat.str-el",
+    "cond-mat.dis-nn",
+    "physics.comp-ph",
+    "quant-ph"
+  ],
+  "published": "2026-04-17",
+  "updated": "2026-06-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2603.04126",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.04126",
+  "title": "Efficient Time-Aware Partitioning of Quantum Circuits for Distributed Quantum Computing",
+  "authors": [
+    "Raymond P. H. Wu",
+    "Chathu Ranaweera",
+    "Sutharshan Rajasegarar",
+    "Ria Rushin Joseph",
+    "Jinho Choi",
+    "Seng W. Loke"
+  ],
+  "summary": "To overcome the physical limitations of scaling monolithic quantum computers, distributed quantum computing (DQC) interconnects multiple smaller-scale quantum processing units (QPUs) to form a quantum network. However, this approach introduces a critical challenge, namely the high cost of quantum communication between remote QPUs incurred by quantum state teleportation and quantum gate teleportation. To minimize this communication overhead, DQC compilers must strategically partition quantum circuits by mapping logical qubits to distributed physical QPUs. Static graph partitioning methods are…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DC"
+  ],
+  "published": "2026-03-04",
+  "updated": "2026-03-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

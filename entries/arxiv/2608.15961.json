@@ -1,0 +1,22 @@
+{
+  "key": "2608.15961",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.15961",
+  "title": "ChainForge: Characterizing Embedding as the Bottleneck in Quantum Annealer Workloads",
+  "authors": [
+    "Kanishka Jayathilake",
+    "Cordelia Brumley",
+    "Tanner Smith",
+    "Ramin Ayanzadeh"
+  ],
+  "summary": "Quantum Annealers (QAs) are among the first commercially scaled quantum computing systems designed for large-scale optimization. Unlike digital systems that execute sequences of compiled instructions, QAs operate as analog single-instruction machines that directly evolve an Ising Hamiltonian toward low-energy solutions. To execute an application, the logical problem graph must first be mapped onto the hardware's sparse connectivity via embedding, where logical variables are represented by chains of connected physical qubits. As a result, embedding becomes the dominant system challenge in…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-16",
+  "updated": "2026-08-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

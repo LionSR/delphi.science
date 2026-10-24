@@ -1,0 +1,24 @@
+{
+  "key": "2610.20702",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.20702",
+  "title": "Efficient numerical evolution of self-gravitating systems with dark-matter-baryon scattering",
+  "authors": [
+    "Marc Kamionkowski",
+    "Vera Gluscevic",
+    "Kris Sigurdson"
+  ],
+  "summary": "We present a fast algorithm to numerically evolve a spherically symmetric system consisting of dark matter and gas, including dark-matter-baryon scattering. The method augments the spherical N-body code NSphere, which collapses the six-dimensional phase space of a spherical collisionless system to three dimensions, with a one-dimensional Lagrangian treatment of gas. Dark-matter-baryon scattering is implemented as a Monte-Carlo process between the dark-matter numerical particles and the gas shells. We also implement an algorithm for radiative gas cooling that is valid for weak cooling. The…",
+  "domain": "astro-ph.CO",
+  "tags": [
+    "astro-ph.CO",
+    "astro-ph.GA",
+    "hep-ph",
+    "hep-th"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

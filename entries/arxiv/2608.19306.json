@@ -1,0 +1,27 @@
+{
+  "key": "2608.19306",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19306",
+  "title": "Quantum Gaussian processes for prediction of channel observations",
+  "authors": [
+    "Jonas Jäger",
+    "Yaroslav Khmelnitskiy",
+    "Paolo Braccia",
+    "Artur Miroszewski",
+    "Diego García-Martín",
+    "M. Cerezo",
+    "Piotr Czarnik"
+  ],
+  "summary": "Given a set of input states, we consider the task of predicting the expectation value of a Pauli observable at the output of an unknown quantum evolution, using only a limited number of measurements. Recently, quantum Gaussian process (QGP) regression was introduced for this task across various classes of unitary evolution. Here, we extend the QGP framework beyond unitary dynamics. In particular, we prove convergence of the channel's outputs to a QGP and derive the associated closed-form kernel under a uniform (Lebesgue measure) prior over quantum channels. The kernel's dimensional factor,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-08-19",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

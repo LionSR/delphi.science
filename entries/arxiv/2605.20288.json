@@ -1,0 +1,20 @@
+{
+  "key": "2605.20288",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.20288",
+  "title": "Mechanism of Efficacy in QAOA for Random k-SAT: From Adiabatic Manifold to Sublinear Parameter Optimization",
+  "authors": [
+    "Mingyou Wu",
+    "Hanwu Chen"
+  ],
+  "summary": "The Quantum Approximate Optimization Algorithm (QAOA) is a leading candidate for demonstrating quantum advantage on near-term devices, yet the physical origins of its efficacy remain poorly understood. In this work, we study QAOA for random $k$-SAT problems within a universal-mixer $k$-local search framework, establishing a formal correspondence between adiabatic state transfer and the QAOA ansatz. This correspondence yields a rigorous performance guarantee for random instances with clause density $m=O(n^{1+ε})$ and circuit depth $Θ(n^2)$. We further investigate the NISQ regime with shallow…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

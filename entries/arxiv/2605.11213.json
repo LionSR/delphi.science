@@ -1,0 +1,26 @@
+{
+  "key": "2605.11213",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11213",
+  "title": "Quantum Parity Representations: Learnable Basis Discovery, Encoders, and Shadow Deployment",
+  "authors": [
+    "Sang Hyub Kim",
+    "Oliver Knitter",
+    "Jonathan Mei",
+    "Claudio Girotto",
+    "Masako Yamada",
+    "Martin Roetteler",
+    "Chi Chen"
+  ],
+  "summary": "We study parity features as representations that can be evaluated entirely classically once the binary or quantized input representation and parity words are fixed, particularly when labels depend on higher-order feature interactions or when discrete inference interfaces support perturbation robustness. A parity feature is a signed product over selected bits of a binary input: once the participating bits are known, evaluation requires no quantum resources. Reaching a useful parity representation requires solving two challenges. When the input is parity-ready (a meaningful binary string), the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

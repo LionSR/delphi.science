@@ -1,0 +1,22 @@
+{
+  "key": "2603.03159",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.03159",
+  "title": "Solving sign problems with physics-informed kernels",
+  "authors": [
+    "Friederike Ihssen",
+    "Renzo Kapust",
+    "Jan M. Pawlowski"
+  ],
+  "summary": "In the present work we construct a novel generative architecture for systems with complex probability distributions. In general, these sampling tasks come with two challenges: resolving sign problems and efficient sampling. The architecture is based on physics-informed kernels (PIKs) introduced in arXiv:2510.26678, and aims at resolving both challenges. Key to the complex PIK-architecture is its probability-weight preserving property, which allows us to map the sampling task to one on a sign-problem free manifold with a simple distribution and efficient sampling. The potential of this novel…",
+  "domain": "hep-lat",
+  "tags": [
+    "hep-lat",
+    "hep-th"
+  ],
+  "published": "2026-03-03",
+  "updated": "2026-03-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

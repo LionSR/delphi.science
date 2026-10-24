@@ -1,0 +1,22 @@
+{
+  "key": "2609.03928",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.03928",
+  "title": "Approximate maximum-likelihood decoding via truncated free energies",
+  "authors": [
+    "Yuanqi Liu",
+    "Weilei Zeng",
+    "Junjie Wu",
+    "Lingling Lao"
+  ],
+  "summary": "Maximum-likelihood decoding (MLD) achieves the minimum logical error rate of stabilizer codes under known i.i.d. Pauli noise, but its exact evaluation is \\#P-hard. Practical pipelines therefore approximate MLD by minimum-weight decoding (MWD), retaining only the lowest-weight recovery per syndrome and discarding the coset degeneracy. The minimum-weight search is in turn implemented by stochastic solvers. We introduce approximate maximum-likelihood decoding (AMLD), a black-box framework that recycles the candidate samples discarded by stochastic inner decoders into a per-class truncated…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

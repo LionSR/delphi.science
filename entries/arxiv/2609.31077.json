@@ -1,0 +1,22 @@
+{
+  "key": "2609.31077",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.31077",
+  "title": "Quantum Approximate Optimisation Algorithm for Protein Sidechain Packing",
+  "authors": [
+    "Sebastian O. M. Stewart",
+    "Nick Chancellor",
+    "Jonte R Hance",
+    "Ittoop Vergheese Puthoor"
+  ],
+  "summary": "Sidechain packing is a critical stage in protein folding, with direct implications for structure-based drug discovery. Google DeepMind's tool, AlphaFold2, predicts protein backbone reliably but sidechain positioning less accurately. Recovering the lowest-energy rotamer assignment over a fixed backbone is NP-hard. We present a hybrid quantum-classical pipeline that repacks sidechains on the AlphaFold backbone using the Quantum Approximate Optimisation Algorithm (QAOA), encoding the one- and two-body energies as a quadratic unconstrained binary optimisation (QUBO) problem. We introduce a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

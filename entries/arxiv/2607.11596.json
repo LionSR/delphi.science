@@ -1,0 +1,21 @@
+{
+  "key": "2607.11596",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.11596",
+  "title": "Moment-Structured Block Encodings of Periodic Finite-Difference Operators",
+  "authors": [
+    "Jishnu Mahmud",
+    "Rebekah Herrman"
+  ],
+  "summary": "Block encoding is the standard technique for accessing matrix data in quantum linear-algebra algorithms. Its implementation directly affects its subnormalization, which in turn controls the algorithm's success probability, simulation time, and downstream costs. Explicit construction of block encodings with provably optimal subnormalization exists for only a handful of operators, with bespoke calculations used in its design. In this work, we develop a framework to block encode translation-invariant finite-difference operators on a periodic grid. These operators are the finite-difference…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.AP"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

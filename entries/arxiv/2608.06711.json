@@ -1,0 +1,23 @@
+{
+  "key": "2608.06711",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.06711",
+  "title": "Conditions for Quantum Advantage in AC Power Flow",
+  "authors": [
+    "Parikshit Pareek",
+    "Abhijith Jayakumar",
+    "Carleton Coffrin",
+    "Sidhant Misra"
+  ],
+  "summary": "This paper aims to contextualize the requirements for Quantum Computing (QC) algorithms to achieve a quantum advantage in solving the alternating current power flow (ACPF) problem, with a focus on runtime complexity. First, we establish a benchmark for a QC iterative solver to demonstrate an advantage over the classical Newton-Raphson Load Flow (NRLF) algorithm. Next, we derive a baseline expression for the end-to-end runtime complexity of any Gate-based QC algorithm as $Ω(N κ/\\varepsilon),$ reflecting dependence on system size $N$, condition number $κ$, and error tolerance $\\varepsilon$.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "eess.SY"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

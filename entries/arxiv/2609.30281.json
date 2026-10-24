@@ -1,0 +1,22 @@
+{
+  "key": "2609.30281",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.30281",
+  "title": "Seasonal and Quantum-inspired Models for Neutron Monitor Time Series Forecasting",
+  "authors": [
+    "Krishna Bhatia",
+    "Shalini Devendrababu",
+    "Srinjoy Ganguly"
+  ],
+  "summary": "We present a focused and reproducible study of multi-horizon forecasting on the Lomnicky Stit neutron monitor (LMKS) time series. Our evaluation suite covers simple seasonal baselines, modern deep sequence models, and functional and quantum-inspired architectures, including Seasonal Naive, Long Short-Term Memory (LSTM), Temporal Convolutional Network (TCN), N-BEATS, Kolmogorov-Arnold Networks (KAN), and two quantum-inspired variants, QiLSTM and QiKAN. We describe the dataset characteristics, diagnostic analysis, preprocessing pipeline, and training procedures, and report aggregate…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "quant-ph"
+  ],
+  "published": "2026-08-26",
+  "updated": "2026-08-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

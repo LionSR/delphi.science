@@ -1,0 +1,23 @@
+{
+  "key": "2609.13721",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.13721",
+  "title": "Scaling Hindi Quantum Natural Language Processing through Automatic Pregroup Supertagging",
+  "authors": [
+    "Gautami Sanjay Naik",
+    "Krishna Bhatia",
+    "Mithun Paul Saint-Germain",
+    "H Aswath Babu"
+  ],
+  "summary": "Quantum Natural Language Processing (QNLP) uses pregroup grammars to translate grammatical structure into diagrammatic representations and quantum circuits. Recent Hindi QNLP work has shown that Hindi-specific pregroup grammars can support grammar-sensitive compositional models, but grammatical type assignment is still largely manual, limiting scalability. This paper formulates automatic Hindi pregroup supertagging as a token-level classification task. Using a manually annotated corpus of 380 Hindi sentences, we evaluate lexical, contextual, prompting-based, lexical-repair, and…",
+  "domain": "cs.CL",
+  "tags": [
+    "cs.CL",
+    "quant-ph"
+  ],
+  "published": "2026-09-12",
+  "updated": "2026-09-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

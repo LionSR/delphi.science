@@ -1,0 +1,19 @@
+{
+  "key": "2605.17143",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.17143",
+  "title": "Truncated-Binary Encoding: Spectral Degree Reduction of Combinatorial Optimization Problems for Quantum Hardware",
+  "authors": [
+    "Tristan Zaborniak"
+  ],
+  "summary": "Exact-binary encoding compiles a discrete cost function network (CFN) into a higher-order unconstrained binary optimization (HUBO) problem whose maximum monomial degree grows with the cardinalities of the underlying CFN variables. Given that quantum optimization hardware generally favours quadratic unconstrained binary optimization or low-degree HUBO Hamiltonians, high-cardinality CFNs therefore incur substantial overhead in the form of circuit depth, or ancilla qubits when degree-reduction techniques are employed. To ameliorate these issues, we propose \\textit{truncated-binary encoding}…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-16",
+  "updated": "2026-05-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

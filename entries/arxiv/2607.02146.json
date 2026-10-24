@@ -1,0 +1,22 @@
+{
+  "key": "2607.02146",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.02146",
+  "title": "Extending the computational reach of Quantum Annealing using Reverse Annealing",
+  "authors": [
+    "Lucas Joshua Menger",
+    "Thomas Lippert",
+    "Manpreet Singh Jattana"
+  ],
+  "summary": "Quantum annealing is a promising heuristic for combinatorial optimization, but on current hardware its performance degrades for larger and more complex problems due to noise and small energy gaps. Reverse annealing has been proposed as a refinement strategy, yet it remains unclear when it provides systematic advantages over standard forward annealing or simply increasing annealing time. We find that combining forward and reverse annealing consistently improves solution quality and efficiency across multiple problem classes. The benefits of reverse annealing increase with problem complexity…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-07-02",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

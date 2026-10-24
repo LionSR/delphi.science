@@ -1,0 +1,21 @@
+{
+  "key": "2608.27224",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.27224",
+  "title": "Exploring continuous beta-ensembles: A Python implementation for random matrix spectral statistics",
+  "authors": [
+    "Dorin Weissman"
+  ],
+  "summary": "We present an open-source Python package for sampling the Gaussian, Laguerre, Jacobi, and Circular $β$-ensembles of random matrix theory. The package implements the Dumitriu--Edelman and Killip--Nenciu constructions, allowing efficient generation of random spectra for general $β> 0$. In addition to spectrum generation, it includes tools for the analysis of spectral statistics, from standard nearest-neighbor spacings and spacing ratios to non-adjacent $k$-spacings and the spectral form factor. These tools can be applied to generic spectral data, allowing users to compare them with and fit…",
+  "domain": "nlin.CD",
+  "tags": [
+    "nlin.CD",
+    "hep-th",
+    "math-ph"
+  ],
+  "published": "2026-08-27",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

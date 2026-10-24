@@ -1,0 +1,27 @@
+{
+  "key": "2601.02435",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.02435",
+  "title": "Formal Modeling and Verification of Grover's Algorithm",
+  "authors": [
+    "H. Sun",
+    "Z. Shi",
+    "S. Chen",
+    "G. Wang",
+    "X. Li",
+    "Y. Guan",
+    "Q. Zhang",
+    "Z. Shao"
+  ],
+  "summary": "Grover's algorithm relies on the superposition and interference of quantum mechanics, which is more efficient than classical computing in specific tasks such as searching an unsorted database. Due to the high complexity of quantum mechanics, the correctness of quantum algorithms is difficult to guarantee through traditional simulation methods. By contrast, the fundamental concepts and mathematical structure of Grover's algorithm can be formalized into logical expressions and verified by higher-order logical reasoning. In this paper, we formally model and verify Grover's algorithm in the HOL…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.FL"
+  ],
+  "published": "2026-01-05",
+  "updated": "2026-01-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

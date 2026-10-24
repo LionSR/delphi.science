@@ -1,0 +1,24 @@
+{
+  "key": "2602.17479",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.17479",
+  "title": "Progressive Binarization - Pauli Correlation Encoding: a Continuation Method for Constrained Optimization",
+  "authors": [
+    "Jacobo Padín-Martínez",
+    "Vicente P. Soloviev",
+    "Alejandro Borrallo-Rentero",
+    "Antón Rodríguez-Otero",
+    "Raquel Alfonso-Rodríguez",
+    "Michal Krompiec"
+  ],
+  "summary": "Pauli Correlation Encoding (PCE) reduces the qubit requirements of quantum optimization by embedding the problem variables into the expectation values of Pauli observables, so that the number of qubits can be much smaller than the number of variables. PCE has not yet been studied for constrained optimization. We extend it to constrained combinatorial problems, using the budget-constrained MinCut as a case study, and show that the standard formulation fails to reliably enforce the constraint: feasibility hinges on the binarization of the encoded variables, which depends sensitively on…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-19",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

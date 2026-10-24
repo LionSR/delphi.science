@@ -1,0 +1,23 @@
+{
+  "key": "2605.24166",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.24166",
+  "title": "Optimal Quantum Differential Privacy via Fisher Information Spectral Analysis",
+  "authors": [
+    "Justice Owusu Agyemang",
+    "Jerry John Kponyo",
+    "Elliot Amponsah",
+    "Godfred Manu Addo Boakye"
+  ],
+  "summary": "The Quantum Fisher Information (QFI) metric governs a fundamental duality: it quantifies both how precisely a parameter can be estimated (metrology) and how distinguishable two quantum states are (privacy). We exploit this duality to establish a geometry-aware framework for quantum differential privacy (DP) that replaces isotropic depolarizing noise with direction-dependent noise aligned to the QFI eigenstructure of the quantum embedding. We prove six principal theorems: (1) the minimax-optimal mechanism concentrates the noise budget in the dominant QFI eigenmode, achieving $\\varepsilon =…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-05-22",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

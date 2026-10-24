@@ -1,0 +1,24 @@
+{
+  "key": "2606.19947",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.19947",
+  "title": "QMaxCal: Path-Space Regularization for Open Quantum Control via Girsanov's Theorem",
+  "authors": [
+    "Merijn Moody",
+    "Zier Mensch",
+    "Miranda C. N. Cheng",
+    "Peter G. Bolhuis",
+    "Max Welling"
+  ],
+  "summary": "Reliable quantum control in the presence of decoherence requires policies that combat the effect of environmental noise on the controlled dynamics. Open quantum systems under continuous monitoring generate classical measurement records whose drift depends on the noise experienced by the system; the records of two evolutions sharing the same decoherence channels differ only in this drift, so Girsanov's theorem yields a closed-form, differentiable estimator of the KL divergence between their trajectory distributions. We instantiate this estimator with two physically motivated reference…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

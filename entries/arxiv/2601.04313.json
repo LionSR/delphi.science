@@ -1,0 +1,23 @@
+{
+  "key": "2601.04313",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.04313",
+  "title": "Rare-Event Quantum Sensing using Logical Qubits",
+  "authors": [
+    "Robert Ott",
+    "Torsten V. Zache",
+    "Soonwon Choi",
+    "Adam M. Kaufman",
+    "Hannes Pichler"
+  ],
+  "summary": "We present a novel protocol to detect rare signals in a noisy environment using quantum error correction (QEC). The key feature of our protocol is the discrimination between signal and noise through distinct higher-order correlations, realized by the non-linear processing that occurs during syndrome extraction in QEC. In this scheme, QEC has two effects: First, it sacrifices part of the signal $ε$ by recording a reduced, stochastic, logical phase $φ_L = \\mathcal{O}(ε^3)$. Second, it corrects the physical noise and extends the (logical) coherence time for signal acquisition. For rare signals…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-07",
+  "updated": "2026-01-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

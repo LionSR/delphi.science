@@ -1,0 +1,22 @@
+{
+  "key": "2602.09282",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.09282",
+  "title": "How to Classically Verify a Quantum Cat without Killing It",
+  "authors": [
+    "Yael Tauman Kalai",
+    "Dakshita Khurana",
+    "Justin Raizes"
+  ],
+  "summary": "A quantum verifier decides membership in QMA using a (single) quantum witness state. This witness may be arbitrary, and no requirement is placed on it beyond its acceptance probability. A protocol claiming to classically verify QMA should offer the same guarantee: any witness that would convince a quantum verifier should also suffice to convince a classical verifier. Unfortunately, existing classical verification of quantum computation (CVQC) protocols behave quite differently from the original QMA verifier: they require many copies of the witness and destroy every one, effectively demanding…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-02-09",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2609.32348",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32348",
+  "title": "A Quantum Framework for K Coloring of Graphs",
+  "authors": [
+    "Lord Sen",
+    "Shyamapada Mukherjee"
+  ],
+  "summary": "Graph coloring is a well-known NP-complete problem with applications in scheduling, register allocation, frequency assignment, and network optimization. Quantum computing offers the potential for polynomial or even super-polynomial speedups in certain problem instances, yet practical quantum graph coloring methods must carefully balance qubit resources, circuit depth, and constraint enforcement. We proposed a solver agnostic quantum framework for $K$-coloring. Along with a novel encoding and efficient constraint implementation for its exact coloring exploiting Grover search and almost…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

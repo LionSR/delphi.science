@@ -1,0 +1,20 @@
+{
+  "key": "2603.17941",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.17941",
+  "title": "Efficient Quantum Algorithm for Solving Linear Distributed Delay Differential Equations",
+  "authors": [
+    "Wataru Setoyama",
+    "Keisuke Fujii"
+  ],
+  "summary": "Non-Markovian dynamics is ubiquitous in both quantum and classical systems, but the numerical computation of the time-delay dynamics is demanding. In this work, we propose an efficient quantum algorithm for solving linear distributed delay differential equations and identify the condition under which it applies. Using the linear chain trick, the distributed delay differential equations can be embedded into ordinary differential equations augmented with auxiliary variables, when the kernel function is characterized by a phase-type distribution. Employing the Schrödingerization method, the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-18",
+  "updated": "2026-03-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

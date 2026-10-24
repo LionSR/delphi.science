@@ -1,0 +1,23 @@
+{
+  "key": "2610.06606",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06606",
+  "title": "Staying Sober: A Shot-Free Predictor of Logical Error Rates for Concatenated Quantum Error Correcting Codes",
+  "authors": [
+    "Sayam Sethi",
+    "Aditi Awasthi",
+    "Maxwell Poster",
+    "Joshua Viszlai",
+    "Jonathan Mark Baker"
+  ],
+  "summary": "Estimating the logical error rate (LER) of a quantum error-correcting (QEC) code by Monte Carlo sampling takes $O(p^{-\\lceil d/2 \\rceil}/\\varepsilon^2)$ samples at physical error rate $p$, code distance $d$ and relative error $\\varepsilon$, which becomes intractable at large distances and low error rates, and especially for concatenated codes, whose distance grows as $d^{\\ell}$ with the number of levels $\\ell$. The fail fast method reduces this cost by sampling the failures of each weight separately, but it only works for unconcatenated codes, and does not model the soft information that the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

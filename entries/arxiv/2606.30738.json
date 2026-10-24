@@ -1,0 +1,28 @@
+{
+  "key": "2606.30738",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.30738",
+  "title": "Practical Estimation of Trotter Error for Hamiltonian Simulation",
+  "authors": [
+    "William Maxwell",
+    "Pablo A. M. Casares",
+    "Robert A. Lang",
+    "Stepan Fomichev",
+    "Juan Miguel Arrazola",
+    "Soran Jahangiri",
+    "Ali Asadi",
+    "Luis Alfredo Nunez Meneses",
+    "Thomas Germain",
+    "Danial Motlagh"
+  ],
+  "summary": "Trotter product formulas are a leading approach for Hamiltonian simulation on quantum computers, yet their practical performance has remained difficult to assess due to the challenge of accurately estimating the Trotter error. In this work, we develop new theoretical results, algorithms, and software tools that advance the state-of-the-art in Trotter error estimation by orders of magnitude in both scale and accuracy. On the theoretical side, we prove that in the asymptotic limit the error of a product formula depends on the diagonal elements of the Baker-Campbell-Hausdorff (BCH) error…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

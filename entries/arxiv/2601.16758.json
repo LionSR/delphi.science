@@ -1,0 +1,22 @@
+{
+  "key": "2601.16758",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.16758",
+  "title": "Noise Resilience and Robust Convergence Guarantees for the Variational Quantum Eigensolver",
+  "authors": [
+    "Mirko Legnini",
+    "Julian Berberich"
+  ],
+  "summary": "Variational Quantum Algorithms (VQAs) are a class of hybrid quantum-classical algorithms that leverage on classical optimization tools to find the optimal parameters for a parameterized quantum circuit. One relevant application of VQAs is the Variational Quantum Eigensolver (VQE), which aims at steering the output of the quantum circuit to the ground state of a certain Hamiltonian. Recent works have provided global convergence guarantees for VQEs under suitable local surjectivity and smoothness hypotheses, but little has been done in characterizing convergence of these algorithms when the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-01-23",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

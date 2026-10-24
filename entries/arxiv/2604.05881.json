@@ -1,0 +1,20 @@
+{
+  "key": "2604.05881",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.05881",
+  "title": "Hybrid Quantum-Classical Algorithm for Hamiltonian Simulation",
+  "authors": [
+    "Nhat A. Nghiem",
+    "Tzu-Chieh Wei"
+  ],
+  "summary": "We introduce a hybrid classical-quantum algorithm for simulating a Hamiltonian of the form $H= \\sum_{i=1}^K H_i = \\sum_{i=1}^K H_{i_1} \\otimes H_{i_2} \\otimes \\cdots \\otimes H_{i_M}$. Given that the entries of all $\\{ H_{i_1}, H_{i_2} , \\cdots , H_{i_M}\\}$ (for all $i$) are classically known, we present a procedure (with three variants) in which these operators are classically diagonalized, and then this information is fed into three possible quantum procedures to obtain the block-encoding of $H$. The evolution operator $\\exp(-iHt)$ is then obtained using the standard block-encoding/quantum…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-07",
+  "updated": "2026-04-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

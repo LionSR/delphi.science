@@ -1,0 +1,21 @@
+{
+  "key": "2610.05647",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05647",
+  "title": "Transformer-Based Time-Series Inference of Lindblad Dynamics in Open Quantum Systems",
+  "authors": [
+    "Julian Guam",
+    "Jianqing Liu"
+  ],
+  "summary": "The Lindblad master equation is the standard framework for describing the non-unitary evolution of open quantum systems, where environmental interactions induce dissipation and decoherence. When both the system Hamiltonian and the dissipation rates are partially unknown or explicitly time-dependent, traditional analytical inversion and system-identification techniques become intractable. Recent works have demonstrated that Transformer-based models can infer unknown dissipation rates from observable time series, yet these approaches typically rely on hand-crafted statistical features under…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

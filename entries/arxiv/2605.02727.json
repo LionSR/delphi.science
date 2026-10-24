@@ -1,0 +1,21 @@
+{
+  "key": "2605.02727",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.02727",
+  "title": "Distributed Quantum Circuit Optimisation: Evaluating Global and Local encodings",
+  "authors": [
+    "Maria Gragera Garces",
+    "Majid Haghparast"
+  ],
+  "summary": "As distributed quantum architectures begin to emerge, understanding the interaction between quantum circuit optimisation and circuit partitioning becomes increasingly important. In this work, we study how circuit optimisation influences distributed quantum workloads under system-level trade-offs. We compare three compilation strategies (global optimisation, local optimisation, and a hybrid approach) across a large benchmark suite of quantum algorithms. Using telegate-based partitioning, we evaluate the resulting distributed circuits in terms of gate counts, circuit depth, the number of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DC"
+  ],
+  "published": "2026-05-04",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

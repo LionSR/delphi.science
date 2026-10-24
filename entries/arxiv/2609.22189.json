@@ -1,0 +1,25 @@
+{
+  "key": "2609.22189",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.22189",
+  "title": "Physics-Informed Classical and Quantum Neural Networks for One-Dimensional Schrodinger Eigenvalue Problems",
+  "authors": [
+    "Tariq Mahmood",
+    "Waqas Arshad",
+    "Bilal Naseer",
+    "Alfredo Raya"
+  ],
+  "summary": "The Schrodinger equation in one spatial dimension admits a small set of exactly solvable potentials that serve as natural proving grounds for any new eigenvalue solver. We formulate Physics-Informed Neural Networks (PINNs) and Physics-Informed Quantum Neural Networks (PIQNNs) for the time-independent Schrodinger equation and apply them to three of these benchmarks: the harmonic oscillator, the infinite square well, and the finite square well. In each case a composite loss encodes the differential-equation residual, the normalization condition, the boundary behavior, and the orthogonality…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG",
+    "hep-ph",
+    "hep-th"
+  ],
+  "published": "2026-08-28",
+  "updated": "2026-08-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2608.15827",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.15827",
+  "title": "Resource Analysis for Quantum Simulation of Spatially Varying Transport-Reaction Equations",
+  "authors": [
+    "Benjamin Jasperson",
+    "Krishna Garikipati",
+    "Siddhartha Srivastava"
+  ],
+  "summary": "Spatially varying coefficients are the primary source of circuit complexity in quantum simulation of linear advection-diffusion-reaction equations. This work presents a resource analysis of single-step quantum propagators constructed using sparse FABLE block encodings, Quantum Singular Value Transformation, and linear-combination-of-unitaries. We derive theoretical estimates for qubit count, gate complexity, and circuit depth in terms of the spatial discretization, sparsity, and polynomial degree, and compare these predictions with synthesized quantum circuits for one- and two-dimensional…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.NA"
+  ],
+  "published": "2026-08-16",
+  "updated": "2026-08-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

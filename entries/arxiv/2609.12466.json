@@ -1,0 +1,22 @@
+{
+  "key": "2609.12466",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.12466",
+  "title": "Tensor-network Monte Carlo approach based on time-evolving block decimation",
+  "authors": [
+    "Shimpei Goto",
+    "Hidemaro Suwa",
+    "Synge Todo"
+  ],
+  "summary": "We propose a tensor-network Monte Carlo (TNMC) approach for unitary evolution following the compression sequence of the time-evolving block decimation (TEBD) algorithm. In the TNMC approach, the obtained results contain evaluable statistical errors rather than truncation errors, unlike ordinary singular-value-decomposition-based methods such as the TEBD algorithm. Consequently, one can estimate unbiased expectation values within statistical errors even with a finite bond dimension. Since the sampling scheme is introduced in the simulations of unitary evolution, the proposed Monte Carlo…",
+  "domain": "cond-mat.stat-mech",
+  "tags": [
+    "cond-mat.stat-mech",
+    "quant-ph"
+  ],
+  "published": "2026-09-11",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

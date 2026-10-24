@@ -1,0 +1,21 @@
+{
+  "key": "2603.01443",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.01443",
+  "title": "Applicability and Limitations of Quantum Circuit Cutting in Classical State-Vector Simulation",
+  "authors": [
+    "Mitsuhiro Matsumoto",
+    "Shinichiro Sanji",
+    "Takahiko Satoh"
+  ],
+  "summary": "Circuit cutting partitions a large quantum circuit into smaller subcircuits that can be executed independently and recombined by classical post-processing. In classical state-vector simulation with full-state reconstruction, the runtime is governed by a trade-off between reduced subcircuit size and the overheads of exponentially many subcircuits and full-state reconstruction. For equal partitioning, we derive threshold conditions on the number of cuts below which cutting reduces the wall-clock time. State-vector experiments validate the predicted speedup boundary up to 24 qubits, and a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-02",
+  "updated": "2026-03-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2607.13756",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.13756",
+  "title": "Precoding-based protocols for entanglement assisted linear computation over a quantum many-to-one network",
+  "authors": [
+    "Ruoyu Meng",
+    "Aditya Ramamoorthy"
+  ],
+  "summary": "In this work, we consider the problem of computing a linear combination over a noiseless quantum many-to-one network. There are $k$ senders, Alice$_1$, $\\ldots$, Alice$_k$, and a single receiver, Bob. Each Alice$_i$ has a data vector $W_i \\in \\mathbb{F}^{m_i}$, where $\\mathbb{F}$ is a finite field. Bob wants to compute the linear combination $Y = V_1 W_1 + V_2 W_2 + \\cdots + V_k W_k \\in \\mathbb{F}^m$, where $V_i$ is an $m \\times m_i$ matrix over $\\mathbb{F}$. The senders transmit quantum states to Bob through a noiseless many-to-one quantum network, but they are not allowed to communicate…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "quant-ph"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

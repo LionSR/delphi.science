@@ -1,0 +1,24 @@
+{
+  "key": "2608.11563",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.11563",
+  "title": "Efficient Quantum Modular Reduction: Crandall reduction and its Fault-tolerant resource analysis",
+  "authors": [
+    "Changyeol Lee",
+    "Sungyeon Kook",
+    "Wooyeong Song",
+    "Kwangil Bae",
+    "Wonhyuk Lee",
+    "IlKwon Sohn"
+  ],
+  "summary": "Modular arithmetic is central to quantum algorithms for cryptographic problems, including Shor's algorithm and Grover-based cryptanalysis, with modular reduction contributing substantially to circuit cost. Pseudo-Mersenne moduli $q=2^n-c$ allow classical Crandall reduction to replace division with folding and constant arithmetic, providing a structural opportunity for more efficient quantum modular reduction than Barrett reduction. We translate this advantage into a reversible quantum setting by deriving explicit folding and normalization conditions for $2n$-bit inputs. To the best of our…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-12",
+  "updated": "2026-08-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

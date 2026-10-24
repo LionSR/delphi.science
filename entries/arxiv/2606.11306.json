@@ -1,0 +1,23 @@
+{
+  "key": "2606.11306",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.11306",
+  "title": "Implementing Hamiltonian Renormalization Group Flow on Quantum Computers with VAPOR",
+  "authors": [
+    "Federica Fragomeno",
+    "Jorden Roberts",
+    "Saeed Rastgoo",
+    "Klaus Liegener"
+  ],
+  "summary": "While Hamiltonian Lattice Gauge Theory is gaining traction, today's limited numerical capacity leaves simulations affected by discretization errors. This motivates the implementation of renormalization group (RG) techniques to find discretization-error-free operators. To this end, we introduce VAPOR, a variational quantum algorithm that decomposes operators into Pauli strings, identifies RG flow orbits, and determines fixed points of a naively discretized operator. We illustrate this using a toy model of a kinematic operator in a symmetry-restricted SU(2) Yang-Mills theory.",
+  "domain": "hep-lat",
+  "tags": [
+    "hep-lat",
+    "quant-ph"
+  ],
+  "published": "2026-06-09",
+  "updated": "2026-06-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

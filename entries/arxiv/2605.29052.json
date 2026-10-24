@@ -1,0 +1,20 @@
+{
+  "key": "2605.29052",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.29052",
+  "title": "A Quantum Algorithm for Simulating Nonunitary Dynamics Governed by Nonautonomous Linear Ordinary Differential Equations",
+  "authors": [
+    "Pouya Khazaei",
+    "Eitan Geva"
+  ],
+  "summary": "Nonautonomous linear ordinary differential equations of the form $\\dot{v}(t) = A(t)\\, v(t)$, where $A(t)$ is non-skew-symmetric, are often used to describe nonunitary dynamics in a variety of fields that range from open quantum system dynamics to economic modeling. Because quantum computing hardware is designed to natively implement unitary transformations, existing algorithms for solving such equations on quantum hardware are based on the assumption that the nonunitary propagator is known, and use dilation techniques to embed the nonunitary dynamics within the unitary dynamics of a larger…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-27",
+  "updated": "2026-06-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

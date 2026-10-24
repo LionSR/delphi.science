@@ -1,0 +1,22 @@
+{
+  "key": "2609.26516",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.26516",
+  "title": "Tensor Network Simulation of Dynamic Circuits",
+  "authors": [
+    "Innocenzo Fulginiti",
+    "Alessandro Poggiali",
+    "Christian B. Mendl"
+  ],
+  "summary": "Dynamic circuits, which incorporate mid-circuit measurements and classically controlled operations, extend the expressive power of quantum programs and are central to applications such as quantum error correction, state preparation, and distributed quantum algorithms. However, their classical simulation is challenging due to the exponential growth of execution branches induced by mid-circuit measurements. In this work, we develop a tensor network approach for simulating dynamic circuits by extending a DMRG-based method for quantum circuit simulation to support dynamic circuit operations. To…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-09-22",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

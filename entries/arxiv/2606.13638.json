@@ -1,0 +1,23 @@
+{
+  "key": "2606.13638",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.13638",
+  "title": "Optimal classical shadow estimation of unitary channels at Heisenberg limit",
+  "authors": [
+    "Entong He",
+    "Zihao Li",
+    "Noam Scully",
+    "Sisi Zhou",
+    "Yuxiang Yang"
+  ],
+  "summary": "Full tomography of an unknown quantum evolution is resource-intensive and often unnecessary when the goal is only to predict selected properties. This motivates the study of classical shadow estimation of unitary channels (CSEU), a task in which one queries an unknown $d$-dimensional unitary $U$ and stores classical data that can later be used to predict expectation values $\\mathrm{tr}[O UρU^\\dagger]$ for arbitrary input states $ρ$ and observables $O$. Here we propose a parallel and non-adaptive CSEU protocol that uses $\\mathcal{O}(\\min\\{d\\varepsilon^{-2},d^{3/2}\\varepsilon^{-1}\\})$ queries…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

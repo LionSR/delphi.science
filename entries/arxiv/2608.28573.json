@@ -1,0 +1,24 @@
+{
+  "key": "2608.28573",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.28573",
+  "title": "Quantum Fourier transform toolbox",
+  "authors": [
+    "Carli Bruinsma",
+    "Pietro M. Posta",
+    "Joppe Stokvis",
+    "Dmitry Grinko",
+    "Maris Ozols"
+  ],
+  "summary": "Quantum Fourier transforms (QFTs) are essential primitives in quantum algorithms. While abelian groups admit efficient QFT circuits, with circuit size polynomial in the logarithm of the group order, efficient constructions are known for relatively few non-abelian families. We develop two new approaches to QFT circuit construction, based on Mackey theory and Clifford theory, respectively, and use them to show exponential improvement in circuit cost for specific group families. Using the Mackey-theoretic approach, we obtain explicit quantum circuits for the QFT over $\\mathrm{GL}_2(F_q)$ that…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.RT"
+  ],
+  "published": "2026-08-28",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

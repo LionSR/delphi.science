@@ -1,0 +1,21 @@
+{
+  "key": "2608.08248",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.08248",
+  "title": "Catching Transpilation Drift with a CI/CD Workflow in Quantum Software Development",
+  "authors": [
+    "Jouni Peltonen",
+    "Otso Kinanen",
+    "Vlad Stirbu"
+  ],
+  "summary": "Quantum software workflows rely on compiler and provider toolchains that evolve independently of application source code. Consequently, an unchanged quantum circuit may transpile into a different target-specific realization after changes in SDK versions, optimization settings, basis gates, coupling maps, or backend descriptions. Such transpilation drift can affect circuit depth, gate composition, qubit mapping, and execution behavior, yet it is rarely monitored in CI/CD pipelines. This paper proposes a Quantum DevOps workflow for detecting transpilation drift before execution. The workflow…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-08",
+  "updated": "2026-08-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2601.17725",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.17725",
+  "title": "Reducing Circuit Resources in Grover's Algorithm via Constraint-Aware Initialization",
+  "authors": [
+    "Eunok Bae",
+    "Jeonghyeon Shin",
+    "Minjin Choi"
+  ],
+  "summary": "Grover's search algorithm provides a quadratic speedup over classical brute-force search in terms of query complexity and is widely used as a versatile subroutine in numerous quantum algorithms, including those for combinatorial problems with large search spaces. For such problems, it is natural to reduce the effective search space by incorporating problem constraints at the initialization step, which in Grover's algorithm can be achieved by preparing structured initial states that encode constraint information. In this work, we present a systematic framework with a simple preprocessing…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-25",
+  "updated": "2026-01-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

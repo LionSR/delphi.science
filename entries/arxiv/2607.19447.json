@@ -1,0 +1,23 @@
+{
+  "key": "2607.19447",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.19447",
+  "title": "Auditing Syndrome-to-Decoder Mappings for Repetition, Surface, CSS, and Digitized-GKP Interfaces",
+  "authors": [
+    "Dennis Delali Kwesi Wayo",
+    "Chinonso Onah",
+    "Rodrigo Alves Dias",
+    "Leonardo Goliatt",
+    "Sven Groppe"
+  ],
+  "summary": "Quantum error-correction experiments increasingly require a verified interface between measured syndrome bits and decoder-native correction requests. We report a four-branch syndrome-to-decoder mapping audit spanning a five-data-qubit repetition code, a distance-five surface Z-check interface, a compact Steane CSS benchmark, and a digitized-GKP proxy. For the surface interface, an independent noiseless interpreter verifies 40/40 single-X syndrome columns and data-bit round trips, while a reversed-register negative control fails for all 40 targets. Sampled hardware and local-noise streams are…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-21",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

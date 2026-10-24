@@ -1,0 +1,24 @@
+{
+  "key": "2605.21597",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.21597",
+  "title": "Matrix Product Operator Encodings of the Magnus Expansion and Dyson Series",
+  "authors": [
+    "Victor Vanthilt",
+    "Maarten Van Damme",
+    "Jutho Haegeman",
+    "Ian P. McCulloch",
+    "Laurens Vanderstraeten"
+  ],
+  "summary": "We introduce a matrix product operator (MPO) encoding of the Magnus expansion and the Dyson series for one-dimensional quantum lattice models with time-dependent Hamiltonians. The MPO construction can be made accurate up to arbitrary order in the time step, it can be applied to both finite and infinite systems, and it can handle long-range interactions. The resulting MPO can be combined with state-of-the-art time evolution algorithms based on matrix product states, allowing for drastic improvements in simulating evolution under time-dependent Hamiltonians. Our MPO construction can also be…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.str-el"
+  ],
+  "published": "2026-05-20",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

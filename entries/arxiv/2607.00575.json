@@ -1,0 +1,24 @@
+{
+  "key": "2607.00575",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.00575",
+  "title": "Reducing quantum resources for ADAPT-VQE via plateau-operator elimination and correlated mean-field downfolding",
+  "authors": [
+    "Phuoc Minh Vo",
+    "Thai Cong Ngoc Vu",
+    "Thien Ngoc Tran",
+    "Hoang Thanh Nguyen",
+    "Lan Nguyen Tran"
+  ],
+  "summary": "Adaptive Derivative-Assembled Problem-Tailored variational quantum eigensolvers (ADAPT-VQE) represent one of the most promising approaches for quantum chemistry on near-term quantum devices. However, their optimization is slow and may stall due to vanishing parameters and redundant operators in the ansatz. In this work, we propose a simple strategy of operator elimination that removes non-contributing operators from the pool once they are detected, enabling the optimization to continue progressing toward convergence. We examine two variants, with and without pool restoration after…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.chem-ph"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2605.06101",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.06101",
+  "title": "Syndrome resampling enhances quantum error correction thresholds",
+  "authors": [
+    "Luis Colmenarez",
+    "Áron Márton",
+    "Markus Müller"
+  ],
+  "summary": "Quantum error correction (QEC) enables fault-tolerant quantum computation but requires operating quantum hardware at physical error rates below code-dependent thresholds, which remains challenging for current devices. We introduce syndrome resampling, a general method that increases QEC thresholds of any decoder and suppresses logical errors without additional hardware, decoding modifications, or code-specific assumptions beyond syndrome statistics. The method exploits the fact that syndromes with low probability are likely to lead to logical failure, therefore biasing syndrome averages…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

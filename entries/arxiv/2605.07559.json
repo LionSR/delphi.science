@@ -1,0 +1,21 @@
+{
+  "key": "2605.07559",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.07559",
+  "title": "svPITE: A Python package for the state-vector-based probabilistic imaginary-time evolution algorithm",
+  "authors": [
+    "Pascal Sievers",
+    "Satoshi Ejima"
+  ],
+  "summary": "We present a Python package for ground-state preparation based on the probabilistic imaginary-time evolution algorithm, with particular focus on its state-vector-based implementation. A standard shot-based simulation is also supported, and results can be benchmarked against exact diagonalisation via a dedicated wrapper. The package enables efficient tuning of initial parameters, facilitating systematic exploration and optimisation of the method's performance. Starting from the prepared ground state, the strong interoperability with other packages further enables real-time evolution and the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.str-el"
+  ],
+  "published": "2026-05-08",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

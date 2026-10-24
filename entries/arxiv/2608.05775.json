@@ -1,0 +1,19 @@
+{
+  "key": "2608.05775",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.05775",
+  "title": "Robust logarithmic entanglement lower bound for $f$-routing",
+  "authors": [
+    "Kevin Bogner"
+  ],
+  "summary": "In one-round $f$-routing, Alice receives an $n$-bit string $x$ and an unknown qubit, and Bob receives an $n$-bit string $y$. They exchange one simultaneous message each and cannot communicate afterwards; the party selected by a Boolean function $f(x,y)$ must then recover the qubit. The parties may share unlimited entanglement in advance. When $f$ is the inner product modulo $2$, we prove that every protocol with worst-case error at most $0.09$ must use a shared state whose entanglement of formation grows at least logarithmically in $n$. The lower bound is robust: it tolerates constant error…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-06",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

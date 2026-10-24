@@ -1,0 +1,21 @@
+{
+  "key": "2603.05320",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.05320",
+  "title": "Simplified circuit-level decoding using Knill error correction",
+  "authors": [
+    "Ewan Murphy",
+    "Subhayan Sahu",
+    "Michael Vasmer"
+  ],
+  "summary": "Quantum error correction will likely be essential for building a large-scale quantum computer, but it comes with significant requirements at the level of classical control software. In particular, a quantum error-correcting code must be supplemented with a fast and accurate classical decoding algorithm. Standard techniques for measuring the parity-check operators of a quantum error-correcting code involve repeated measurements, which both increases the amount of data that needs to be processed by the decoder, and changes the nature of the decoding problem. Knill error correction is a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-05",
+  "updated": "2026-04-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

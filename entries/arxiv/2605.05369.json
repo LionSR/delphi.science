@@ -1,0 +1,24 @@
+{
+  "key": "2605.05369",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05369",
+  "title": "Toward Hop-Independent Fidelity in Quantum Data Centers: Resource Requirements for Entanglement Purification",
+  "authors": [
+    "Mohadeseh Azari",
+    "Anoosha Fayyaz",
+    "Amy Babay",
+    "David Tipper",
+    "Prashant Krishnamurthy",
+    "Kaushik Seshadreesan"
+  ],
+  "summary": "Quantum data-center networks must distribute entanglement between QPUs over paths whose length grows with system scale, but each entanglement-swapping step reduces the quality of the raw end-to-end state. Topology, multiplexing, and repeated connection attempts can increase the number of raw end-to-end copies available for a request, yet they do not answer the central resource question: whether those copies are sufficient to remove, via entanglement purification, the fidelity loss caused by multi-hop distribution. We study this question through a topology-independent black-box model of the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-07-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2610.28867",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.28867",
+  "title": "Engineering Low-Latency, High-Throughput Quantum Decoders on NVIDIA GPUs",
+  "authors": [
+    "Stefano Markidis",
+    "Luca Pennati",
+    "Ivy Peng"
+  ],
+  "summary": "We design and optimize a quantum error correction (QEC) decoder for NVIDIA GPUs, combining Relay belief propagation, a state-of-the-art message-passing algorithm, with order-zero ordered statistics post-processing. Our implementation uses CUDA Graphs to control GPU execution, stops updates for converged samples, and collects unresolved samples in queues for post-processing. We optimize sparse traversal through coalesced message accesses, prefetching, and register reuse, and accelerate binary post-processing with warp-level collectives. In addition, mixed FP16-FP32 arithmetic and INT8…",
+  "domain": "cs.DC",
+  "tags": [
+    "cs.DC",
+    "quant-ph"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

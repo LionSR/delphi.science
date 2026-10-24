@@ -1,0 +1,20 @@
+{
+  "key": "2607.28435",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.28435",
+  "title": "Classical Tensor Network and Quantum Fourier Transform Approaches for Large-Scale Carr-Madan Option Pricing",
+  "authors": [
+    "Sascha Hauck",
+    "Ivica Turkalj"
+  ],
+  "summary": "Fourier-based methods are among the most widely used techniques for pricing European options when the characteristic function of the underlying asset process is available. Their applicability to increasingly fine discretizations, however, is limited by the rapidly growing memory requirements of classical Fourier transforms, which become a computational bottleneck for large-scale pricing problems. In this work, we overcome this limitation by reformulating the Carr-Madan pricing framework using tensor networks. Specifically, we employ the Superfast Fourier Transform (SFFT), a compressed Tensor…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-30",
+  "updated": "2026-08-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

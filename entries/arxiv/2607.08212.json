@@ -1,0 +1,25 @@
+{
+  "key": "2607.08212",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08212",
+  "title": "Möbius-Guided Diagonal-Gate Compilation with Native Multiqubit Controlled-Phase Gates on Neutral-Atom Processors",
+  "authors": [
+    "Hairuo Huang",
+    "Yanwu Gu",
+    "Chen Huang",
+    "Xi Zhao",
+    "Meng-Jun Hu",
+    "Dong E. Liu",
+    "Jingbo Wang"
+  ],
+  "summary": "Diagonal gates are ubiquitous primitives in quantum algorithms, from phase oracles, hypergraph-state preparation, and multi-control logic to Hamiltonian simulation of spin models and digitized lattice field theories, where Ising interactions and local potential terms are diagonal in the encoded basis. Standard compilers, however, often lower diagonal structure into one- and two-qubit gates before neutral-atom hardware can exploit native Rydberg-mediated multiqubit controlled-phase operations. We propose a Möbius-guided compiler that maps a diagonal phase function to a phase hypergraph via…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-09",
+  "updated": "2026-07-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

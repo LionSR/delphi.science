@@ -1,0 +1,22 @@
+{
+  "key": "2606.11383",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.11383",
+  "title": "Rolling Stock Planning Using the Quantum Approximate Optimization Algorithm",
+  "authors": [
+    "Jiří Guth Jarkovský",
+    "Patricia Bickert",
+    "Elisabeth Wybo",
+    "Martin Leib"
+  ],
+  "summary": "Rolling stock planning is a complex optimization problem in railway management that involves assigning physical trains to scheduled trips while minimizing operational costs. In this work, we address a specific instance of this problem featuring 190 trips over two days, subject to constraints such as mandatory maintenance stops. We reformulate the problem as a Maximum-Weight Independent Set (MWIS) problem on a graph where nodes represent feasible train cycles. To handle the computational complexity of the large search space, we propose a hybrid divide-and-conquer algorithm. This approach…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-09",
+  "updated": "2026-06-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

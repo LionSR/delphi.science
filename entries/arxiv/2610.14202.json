@@ -1,0 +1,21 @@
+{
+  "key": "2610.14202",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.14202",
+  "title": "Below-threshold execution of fault-tolerant ripple-carry addition on a trapped-ion quantum computer",
+  "authors": [
+    "Jacob S. Nelson",
+    "Andrew J. Landahl",
+    "Andrew D. Baczewski"
+  ],
+  "summary": "We deploy a universal fault-tolerant quantum computing (FTQC) architecture based on error-detecting $[\\![8,3,2]\\!]$ and $[\\![4,2,2]\\!]$ codes on Quantinuum's Helios-1 trapped-ion quantum computer. We compile and execute ripple-carry adder (RCA) circuits for classical inputs up to five bits on this architecture. Uncomputing a workspace qubit provides an additional ``algorithmic check'' to detect errors. While available at both the physical and logical levels, this check synergizes with our architecture by increasing the effective fault distance of many circuit locations from two to four.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2606.27411",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.27411",
+  "title": "Compression-Driven Anomaly Detection in Brain MRI Using an Interpretable Quantum Autoencoder",
+  "authors": [
+    "Santanu Ganguly",
+    "Xing Liang",
+    "Dimitrios Makris"
+  ],
+  "summary": "We study a quantum autoencoder (QAE) for compression-driven anomaly detection in brain MRI data. The approach leverages angle encoding to map image patches into quantum states, followed by a variational encoder-decoder architecture trained to discard information via auxiliary trash qubits. Anomaly scores reflect the degree to which inputs resist compression relative to normal data, with higher scores corresponding to deviations from the learned normal manifold. Evaluated on publicly available brain MRI DICOM datasets, the method achieves a slice-level ROC-AUC of approximately 0.95 and a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI",
+    "eess.IV"
+  ],
+  "published": "2026-06-25",
+  "updated": "2026-06-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

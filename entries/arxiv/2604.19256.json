@@ -1,0 +1,22 @@
+{
+  "key": "2604.19256",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.19256",
+  "title": "Quantum Homomorphic Encryption: Towards Practical QOTP-Encrypted Computation on Gate-Based Hardware",
+  "authors": [
+    "Jon Hernández-Bueno",
+    "Oscar Lage",
+    "Marivi Higuero",
+    "Jasone Astorga"
+  ],
+  "summary": "As quantum computing moves toward remote and cloud-based access, protecting quantum data during outsourced execution becomes important. Quantum one-time pad (QOTP) encryption provides information-theoretic hiding of quantum state, but evaluating gates on Pauli-encrypted data is nontrivial: Clifford operations allow classical Pauli-frame updates, whereas non-Clifford operations require key-dependent corrections. We introduce QOTPH, a client-side key-tracked compilation framework for encrypted quantum computation. The client retains the QOTP keys and transforms each operation into a corrected…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-21",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

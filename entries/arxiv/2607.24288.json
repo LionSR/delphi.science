@@ -1,0 +1,26 @@
+{
+  "key": "2607.24288",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.24288",
+  "title": "Superpixel-Based QUBO for Scalable Quantum-Enhanced Medical Image Segmentation",
+  "authors": [
+    "Mohammad Chalhoub",
+    "Mahdi Chehimi",
+    "Laia Domingo",
+    "Omar Alhussein",
+    "Ahmed Farouk",
+    "Saif Al-Kuwari"
+  ],
+  "summary": "Quadratic unconstrained binary optimization (QUBO) has emerged as a powerful framework for medical computing problems. Binary decision variables naturally represent clinical choices, making QUBO formulations well-suited for quantum annealing hardware. However, a fundamental scalability challenge limits practical deployment: problem size grows rapidly with input dimensionality, creating computational bottlenecks that restrict applications to simplified scenarios. This paper addresses this challenge through hierarchical problem reduction, as demonstrated in medical image segmentation, where…",
+  "domain": "cs.CV",
+  "tags": [
+    "cs.CV",
+    "cs.NI",
+    "quant-ph"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

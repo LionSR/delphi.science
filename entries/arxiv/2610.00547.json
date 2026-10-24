@@ -1,0 +1,25 @@
+{
+  "key": "2610.00547",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00547",
+  "title": "Unifying and Extending Strong Simulation of Quantum Circuits",
+  "authors": [
+    "Floris Geerts",
+    "Rihan Hai",
+    "Matthias Lanzinger",
+    "Reinhard Pichler",
+    "Emanuel Sallinger",
+    "Daniel Unterberger"
+  ],
+  "summary": "We establish functional aggregate queries (FAQs) as a unifying language for exact classical simulation of quantum circuits. A circuit becomes a sum-product query: factors encode gates, internal wire variables are aggregated, and free boundary variables index transition amplitudes. The central insight is that distinct sources of simulation tractability can be exploited within the same InsideOut evaluation scheme. The query specifies what is computed; the evaluation plan, semiring, and representation of intermediate factors determine the cost. This view unifies structural and algebraic…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

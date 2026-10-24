@@ -1,0 +1,19 @@
+{
+  "key": "2609.19707",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.19707",
+  "title": "Local Optimality Does Not Compose: Invariant Simplices and the Complexity of Shared Probabilistic Automata",
+  "authors": [
+    "Yixin Zhao"
+  ],
+  "summary": "Probabilistic models are often constructed separately for different test suites and then expected to share a single latent dynamical system. We study bounded-state shared realization for probabilistic automata from finite partial trace specifications. A shared realization uses one normalized automaton with named initial distributions, a common family of row-stochastic letter-transition matrices, and one final output vector. We compare it with separate local realizations and a labelled query-specific static relaxation. Local and labelled query-specific static optima need not compose. For…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

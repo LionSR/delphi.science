@@ -1,0 +1,21 @@
+{
+  "key": "2607.23683",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.23683",
+  "title": "Qutrit-Based Neural Quantum Kernels for Classification Tasks",
+  "authors": [
+    "Camila Cristiano-Romero",
+    "Pablo Rodriguez-Grasa",
+    "Mikel Sanz"
+  ],
+  "summary": "Neural quantum kernels (NQKs) construct quantum kernels by pretraining a quantum neural network (QNN) and subsequently reusing the trained circuit as a task-adapted embedding. Extending this framework to qudits, with local unitaries in $\\mathrm{SU}(d)$, provides a natural route to richer data embeddings through the increased local degrees of freedom and a direct interface for multiclass classification via intrinsically multi-level quantum systems. In this work, focusing on qutrits ($d=3$), we extend NQKs to the qudit setting and perform a systematic study of key design choices, including the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-26",
+  "updated": "2026-07-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

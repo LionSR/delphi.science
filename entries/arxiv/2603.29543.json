@@ -1,0 +1,22 @@
+{
+  "key": "2603.29543",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.29543",
+  "title": "Reducing Complexity for Quantum Approaches in Train Load Optimization",
+  "authors": [
+    "Zhijie Tang",
+    "Albert Nieto-Morales",
+    "Arit Kumar Bishwas"
+  ],
+  "summary": "Efficiently planning container loads onto trains is a computationally challenging combinatorial optimization problem, central to logistics and supply chain management. A primary source of this complexity arises from the need to model and reduce rehandle operations-unproductive crane moves required to access blocked containers. Conventional mathematical formulations address this by introducing explicit binary variables and a web of logical constraints for each potential rehandle, resulting in large-scale models that are difficult to solve. This paper presents a fundamental departure from this…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI"
+  ],
+  "published": "2026-03-31",
+  "updated": "2026-03-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2609.34623",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.34623",
+  "title": "Trotterisation Thresholds and Dissipative Quantum Chaos in Open-System Digital Quantum Simulation",
+  "authors": [
+    "Angsar Manatuly",
+    "Lukas M. Sieberer",
+    "Cahit Kargi",
+    "Nathan K. Langford"
+  ],
+  "summary": "Digital quantum simulation (DQS) is one of the most promising applications of quantum computing. Trotterised DQS models quantum dynamics by decomposing the evolution into a sequence of gate-based Trotter steps. Using larger Trotter steps reduces the required gate count, but it is now understood that the Trotterisation step size cannot be increased beyond a certain threshold value, beyond which there is a sudden breakdown in simulation accuracy, due to the onset of quantum chaos. To date, this behaviour has only been studied for closed systems not subjected to the environmental noise and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.mes-hall",
+    "nlin.CD"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

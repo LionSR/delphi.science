@@ -1,0 +1,22 @@
+{
+  "key": "2606.20504",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20504",
+  "title": "Entropy Estimation in Multi-Qutrit Systems via Variational and Classical Neural Networks",
+  "authors": [
+    "Sai Sakunthala Guddanti",
+    "Anil Prabhakar",
+    "Ria Rushin Joseph"
+  ],
+  "summary": "We present a systematic study of von Neumann entropy estimation in multi-qutrit quantum systems using two complementary approaches: variational quantum algorithms (VQAs) and classical convolutional neural networks (CNNs), evaluated using an ideal (noise-free) quantum simulator. For systems up to three qutrits, we construct and evaluate 11 hardware-efficient SU(3)-inspired ansatzes. A parameter sweep shows that estimation accuracy is primarily determined by the number of trainable parameters, provided sufficient entanglement is present. Based on this study, we fix the parameter count to…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

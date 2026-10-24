@@ -1,0 +1,22 @@
+{
+  "key": "2605.11529",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11529",
+  "title": "QuBridge: Layer-wise Fidelity Decomposition in Quantum Computation Pipeline",
+  "authors": [
+    "Kisho Sotokawa",
+    "Hideaki Kawaguchi",
+    "Shin Nishio",
+    "Takahiko Satoh"
+  ],
+  "summary": "Running a quantum circuit on current hardware involves a sequence of engineering decisions, each with tunable parameters and distinct error characteristics. Existing tools optimize each decision in isolation, leaving practitioners unable to determine how much each decision contributes to final output quality. We present QuBridge, a pipeline analysis tool that decomposes quantum computation into three decision layers and measures each layer's fidelity contribution through progressive ablation and isolation experiments. Applied to quantum teleportation under IBM-calibrated noise models, the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

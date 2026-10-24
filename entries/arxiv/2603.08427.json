@@ -1,0 +1,29 @@
+{
+  "key": "2603.08427",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.08427",
+  "title": "Stochastic Loop Corrections to Belief Propagation for Tensor Network Contraction",
+  "authors": [
+    "Gi Beom Sim",
+    "Tae Hyeon Park",
+    "Kwang S. Kim",
+    "Yanmei Zang",
+    "Xiaorong Zou",
+    "Hye Jung Kim",
+    "D. ChangMo Yang",
+    "Soohaeng Yoo Willow",
+    "Chang Woo Myung"
+  ],
+  "summary": "Tensor network contraction is a fundamental computational challenge underlying quantum many-body physics, statistical mechanics, and machine learning. Belief propagation (BP) provides an efficient approximate solution, but introduces systematic errors on graphs with loops. Here, we introduce a hybrid method that achieves accurate results by stochastically sampling loop corrections to BP and showcase our method by applying it to the two-dimensional ferromagnetic Ising model. For any pairwise Markov random field with symmetric edge potentials, our approach exploits an exact factorization of…",
+  "domain": "cond-mat.str-el",
+  "tags": [
+    "cond-mat.str-el",
+    "cond-mat.stat-mech",
+    "quant-ph"
+  ],
+  "published": "2026-03-09",
+  "updated": "2026-04-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

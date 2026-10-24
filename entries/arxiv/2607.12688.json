@@ -1,0 +1,23 @@
+{
+  "key": "2607.12688",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12688",
+  "title": "Quantum PDE Solvers in Practice: Application-Driven Benchmarking of the Heat Equation",
+  "authors": [
+    "Mahmoud Elkarargy",
+    "Abdelaziz Rahwan",
+    "Abdelrahman Elsayed",
+    "Forat Hatem"
+  ],
+  "summary": "Quantum PDE solvers are difficult to evaluate in practice because published studies use different discretizations, output models, reconstruction rules, and hardware assumptions. We present a reproducible, application-driven benchmark for the 1-D Dirichlet heat equation that compares eleven kernels under the same problem instances and readout contract. The benchmark covers coherent linear solvers (HHL, QSVT, and QLS-Fourier), VQLS, imaginary-time methods (QITE, var-QITE, and AVQDS), real-time Hamiltonian simulation and unitary dilations (Hamiltonian simulation, Schade-Hamiltonian, and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.SE"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

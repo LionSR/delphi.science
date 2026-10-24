@@ -1,0 +1,22 @@
+{
+  "key": "2607.29443",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.29443",
+  "title": "Erasure surface code circuit without mid-circuit erasure checks",
+  "authors": [
+    "Margaret Pavlovich",
+    "Ivan Rojkov",
+    "Chen Wang",
+    "Shruti Puri"
+  ],
+  "summary": "Quantum error correction (QEC) codes can correct twice as many erasure errors as Pauli errors. Because of this scaling advantage, there is significant interest in developing qubits whose dominant error channel can be converted into erasures via mid-circuit erasure checks. However, such erasure checks come with hardware overhead in practice. End-of-the-line three-state readout, in which one simultaneously measures a qubit's erasure status and computational state, is an alternative to mid-circuit erasure checks that is generally simpler to implement. In this work, we systematically study the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-31",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

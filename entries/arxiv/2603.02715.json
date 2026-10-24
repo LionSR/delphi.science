@@ -1,0 +1,21 @@
+{
+  "key": "2603.02715",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.02715",
+  "title": "Correction scheme for molecular total energies from quantum phase estimation under limited qubit resources",
+  "authors": [
+    "Nobuki Inoue",
+    "Hisao Nakamura"
+  ],
+  "summary": "We propose a practical method for accurately evaluating molecular total energies using a hybrid approach that integrates fault-tolerant quantum computers with classical computing. Our scheme consists of two complementary components: quantum dominant orbital selection (QDOS) and subspace dynamical correlation (SDC). QDOS extracts only the essential active orbitals from the complete active space (CAS) configuration interaction (CI) state on a quantum computer, yielding a compact active space suitable for classical CASCI calculations. SDC then evaluates dynamical-correlation corrections for the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.chem-ph"
+  ],
+  "published": "2026-03-03",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

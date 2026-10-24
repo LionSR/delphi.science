@@ -1,0 +1,23 @@
+{
+  "key": "2609.34995",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.34995",
+  "title": "Simulation-Based Quantum System Inference with Neural Posterior Estimation",
+  "authors": [
+    "Hang Zou",
+    "Anton Frisk Kockum",
+    "Martin Rahm",
+    "Simon Olsson"
+  ],
+  "summary": "Models of quantum systems faithfully map system parameters to observations, but the inverse problem of parameter inference from measurement data presents a fundamental challenge: computationally intractable likelihoods due to an exponentially large Hilbert space. Here, we introduce simulation-based quantum system inference, a unified, likelihood-free framework that learns parameter posteriors directly from classical simulation data. The central idea is to pair polynomial-cost classical simulators, such as Pauli propagation and tensor networks, with normalizing flows or other neural density…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

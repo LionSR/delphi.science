@@ -1,0 +1,26 @@
+{
+  "key": "2604.25531",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.25531",
+  "title": "Quantum Optimization Methods for the Generalized Traveling Salesman Problem",
+  "authors": [
+    "Maximilian Zorn",
+    "Melinda Braun",
+    "Michael Ertl",
+    "Tommy Kiss",
+    "Sara Juarez Oropeza",
+    "Claudia Linnhoff-Popien",
+    "Jonas Stein"
+  ],
+  "summary": "This paper studies quantum optimization baselines for the Generalized Traveling Salesman Problem (GTSP), a clustered routing problem that naturally models variant selection and sequencing problems under discrete alternatives. We propose a novel GTSP QUBO formulation focused on maintaining feasible solutions for quantum annealing, as well as a hardware-executable gate-based pipeline utilizing the Quantum Approximate Optimization Algorithm (QAOA). We implement a constrained QAOA variant using an XY-mixer, which preserves the stepwise Hamming weight in the ideal circuit model, while feasibility…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-04-28",
+  "updated": "2026-04-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

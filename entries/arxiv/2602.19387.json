@@ -1,0 +1,27 @@
+{
+  "key": "2602.19387",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.19387",
+  "title": "AI Agents for Variational Quantum Circuit Design",
+  "authors": [
+    "Marco Knipfer",
+    "Alexander Roman",
+    "Konstantin T. Matchev",
+    "Katia Matcheva",
+    "Sergei Gleyzer"
+  ],
+  "summary": "Variational quantum circuits (VQCs) constitute a central building block of near-term quantum machine learning (QML), yet the principled design of expressive and trainable architectures remains a major open challenge. The VQC design space grows combinatorially with the number of qubits, layers, entanglement structures, and gate parameterizations, rendering manual circuit construction inefficient and often suboptimal. We introduce an autonomous agent-based framework for VQC architecture search that integrates high-level reasoning with a quantum simulation environment. The agent proposes…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET",
+    "hep-ex",
+    "hep-lat",
+    "hep-ph"
+  ],
+  "published": "2026-02-22",
+  "updated": "2026-02-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

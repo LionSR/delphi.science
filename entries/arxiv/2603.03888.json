@@ -1,0 +1,24 @@
+{
+  "key": "2603.03888",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.03888",
+  "title": "Numerical evaluation of Casimir forces using the discontinuous Galerkin time-domain method",
+  "authors": [
+    "Carles Martí Farràs",
+    "Bettina Beverungen",
+    "Philip Trøst Kristensen",
+    "Francesco Intravaia",
+    "Kurt Busch"
+  ],
+  "summary": "We present a time-domain scheme for computing Casimir forces within the Maxwell stress tensor formalism, together with a specific realization using the finite-element-based discontinuous Galerkin time-domain method. The approach enables accurate evaluation of Casimir--Lifshitz interactions for a wide range of geometries and material properties at finite temperature. At the core of the method, the electromagnetic Green's tensor is expressed as the system's response to dipolar excitations, thereby recasting the Maxwell stress tensor into a set of classical scattering problems driven by…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.comp-ph"
+  ],
+  "published": "2026-03-04",
+  "updated": "2026-03-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

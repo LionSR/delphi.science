@@ -1,0 +1,23 @@
+{
+  "key": "2609.31370",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.31370",
+  "title": "Adaptive Dissipative State Preparation through Reinforcement Learning",
+  "authors": [
+    "Nathan M. Myers",
+    "Chenxu Liu",
+    "Yulong Dong",
+    "Nicholas P. Bauman",
+    "Karol Kowalski"
+  ],
+  "summary": "Dissipative algorithms approach the problem of ground state preparation by mimicking the natural thermalization of a quantum system in contact with a large, low-temperature thermal environment. The environment can be efficiently simulated by a single ancilla qubit with a variable energy gap that is repeatedly coupled to the system qubits to generate a dissipative channel, and then reset after each interaction. Here we present an adaptive implementation of the dissipative algorithm, RL-Adapt, that uses single-shot reinforcement learning to optimize the selection of ancilla frequency and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2603.13073",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.13073",
+  "title": "Exponential Scaling Barriers for Variational Quantum Eigensolvers",
+  "authors": [
+    "Manuel Hagelueken",
+    "David A. Kreplin",
+    "Florian Wieland",
+    "Marco F. Huber",
+    "Marco Roth"
+  ],
+  "summary": "The Variational Quantum Eigensolver (VQE) is widely regarded as a promising algorithm for calculating ground states of quantum systems that are intractable for classical computers. This promise is typically motivated by the hope of mitigating the exponential growth of Hilbert space with system size. Here we scrutinize how the computational cost of adaptive VQE scales with the size of the target system. We demonstrate that the Rényi entropy derived from classical simulations predicts the required number of adaptive iterations of VQE with high accuracy ($R^2 \\approx 0.99$). We validate this on…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-13",
+  "updated": "2026-04-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2608.23460",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.23460",
+  "title": "Satisfying Quantum Codes: Physics-Informed and Hardware-Aware Code Design with SAT Solvers",
+  "authors": [
+    "Ben DalFavero",
+    "William M. Watkins",
+    "Margarite L. LaBorde",
+    "Vincent Russo",
+    "Ethan Egger",
+    "Gregory Quiroz",
+    "Ryan LaRose"
+  ],
+  "summary": "Although quantum error correction is widely believed to be necessary for impactful applications of quantum computers, the design of quantum error correction codes is largely done by hand, without respect to problem or hardware constraints. In this work, we present a highly general and flexible framework for the computational design of both physics-inspired and hardware-aware quantum codes. To do so, we formulate code design as a Boolean satisfiability (SAT) problem and show how to incorporate all required error correction criteria. We prove that code design is NP-complete, ruling out any…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-24",
+  "updated": "2026-08-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

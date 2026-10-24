@@ -1,0 +1,19 @@
+{
+  "key": "2606.29562",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.29562",
+  "title": "The QAOA on the ring of disagrees",
+  "authors": [
+    "Kunal Marwaha"
+  ],
+  "summary": "We study the performance of symmetric local algorithms finding large cuts on the cycle graph. Such algorithms that cannot see the whole graph at depth p cut at most a (2p+1)/(2p+2) fraction of edges in expectation. We prove that the QAOA achieves this value, a long-standing conjecture of Farhi, Goldstone, and Gutmann. Curiously we do this without finding the optimal parameters. Instead we show it is equivalent to find an optimal pair of Laurent polynomials of degree at most 2p-1. This is made possible by recasting the QAOA on one qubit in the language of quantum signal processing.",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-28",
+  "updated": "2026-06-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

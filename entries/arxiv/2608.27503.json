@@ -1,0 +1,22 @@
+{
+  "key": "2608.27503",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.27503",
+  "title": "Quantized Low-Rank Quantum State Tomography: Hyperbolic Quantization and Riemannian Least-Squares Recovery",
+  "authors": [
+    "HanQin Cai",
+    "Longxiu Huang",
+    "Juntao You"
+  ],
+  "summary": "We study low-rank quantum state tomography from finite-bit Pauli batch responses. To avoid bias introduced by generic quantization, we propose HyperQuant, a mean-preserving hyperbolic quantizer adapted to the second-moment scale of Pauli responses. We establish minimax distortion guarantees and show that exact mean preservation enables direct rank-constrained least-squares recovery without altering the population target. We derive nonasymptotic recovery guarantees and an explicit bit--shot tradeoff under which finite-bit responses retain the error order of unquantized batch averages using…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.IT"
+  ],
+  "published": "2026-08-27",
+  "updated": "2026-08-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

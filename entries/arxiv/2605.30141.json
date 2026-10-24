@@ -1,0 +1,23 @@
+{
+  "key": "2605.30141",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.30141",
+  "title": "Overcoming the Matrix-Product-State Encoding Barrier via DMRG-Guided Probabilistic Imaginary-Time Evolution",
+  "authors": [
+    "Masari Watanabe",
+    "Hirofumi Nishi",
+    "Taichi Kosugi",
+    "Shinji Tsuneyuki",
+    "Yu-ichiro Matsushita"
+  ],
+  "summary": "Ground-state preparation is a fundamental task in quantum simulation, because the overlap of the prepared state with the true ground state significantly affects the overall cost of subsequent quantum algorithms. We propose a three-stage framework in which a matrix product state (MPS) of an $N$-site system obtained by the density-matrix renormalization group (DMRG) is loaded onto an $N$-qubit quantum register through an optimization-free matrix product disentangler (MPD) encoding circuit, and the residual error is then reduced by probabilistic imaginary-time evolution (PITE). We demonstrate…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-05-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

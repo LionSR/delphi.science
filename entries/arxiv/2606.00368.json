@@ -1,0 +1,22 @@
+{
+  "key": "2606.00368",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.00368",
+  "title": "Quantum Signal Processing for Linear PDEs: Circuit Design and Experimental Validation",
+  "authors": [
+    "Hyeongjin Kim",
+    "Revathi Jambunathan",
+    "Jan Balewski",
+    "Daan Camps"
+  ],
+  "summary": "Quantum algorithms offer new avenues for solving partial differential equations (PDEs). While the potential for end-to-end quantum advantage is at present not well understood, recent literature presents explicit circuit constructions for solving certain classes of linear PDEs in the frequency domain and thus offers concrete examples to study. In this work, we develop end-to-end implementations of these quantum circuits compiled to machine-level instructions and benchmark them in both numerical simulations and IBMQ hardware experiments. We focus on the advection, wave, and Poisson equations…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

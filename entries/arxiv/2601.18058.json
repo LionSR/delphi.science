@@ -1,0 +1,26 @@
+{
+  "key": "2601.18058",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.18058",
+  "title": "Differentiable Architecture Search for Adversarially Robust Quantum Computer Vision",
+  "authors": [
+    "Mohamed Afane",
+    "Quanjiang Long",
+    "Haoting Shen",
+    "Ying Mao",
+    "Junaid Farooq",
+    "Ying Wang",
+    "Juntao Chen"
+  ],
+  "summary": "Current quantum neural networks suffer from extreme sensitivity to both adversarial perturbations and hardware noise, creating a significant barrier to real-world deployment. Existing robustness techniques typically sacrifice clean accuracy or require prohibitive computational resources. We propose a hybrid quantum-classical Differentiable Quantum Architecture Search (DQAS) framework that addresses these limitations by jointly optimizing circuit structure and robustness through gradient-based methods. Our approach enhances traditional DQAS with a lightweight Classical Noise Layer applied…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CV"
+  ],
+  "published": "2026-01-26",
+  "updated": "2026-01-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

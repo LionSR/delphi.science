@@ -1,0 +1,23 @@
+{
+  "key": "2604.21863",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.21863",
+  "title": "Replay-buffer engineering for noise-aware quantum circuit optimization",
+  "authors": [
+    "Akash Kundu",
+    "Sebastian Feld"
+  ],
+  "summary": "Deep reinforcement learning for quantum circuit optimization faces three bottlenecks: replay buffers that overlook temporal difference (TD) target reliability, curriculum-based architecture search requiring a full quantum-classical evaluation after every edit, and the discard of noiseless trajectories when retraining under hardware noise. We address these limitations by treating replay as a central algorithmic lever. We introduce ReaPER+, an annealed replay rule that transitions from TD-error prioritization to reliability-aware sampling as value estimates mature. ReaPER+ achieves up to 4x…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI",
+    "cs.ET",
+    "cs.LG"
+  ],
+  "published": "2026-04-23",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

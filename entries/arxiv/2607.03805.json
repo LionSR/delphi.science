@@ -1,0 +1,19 @@
+{
+  "key": "2607.03805",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.03805",
+  "title": "A regularization method for quantum neural networks using data symmetry",
+  "authors": [
+    "Hiroshi Ohno"
+  ],
+  "summary": "Leveraging data symmetries has recently become a key strategy in quantum neural networks (QNNs) to improve training efficiency. In this study, we propose a symmetry-informed regularization method for QNNs based on an input density matrix. By introducing a penalty term that encourages the model to align with data symmetry, our method enables improved training speed. This symmetry-based regularization is simple to implement and does not require an explicitly specified symmetry group, although it requires access to training samples or to the input distribution from which an empirical or…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-04",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

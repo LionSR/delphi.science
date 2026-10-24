@@ -1,0 +1,20 @@
+{
+  "key": "2605.13268",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.13268",
+  "title": "Physics Guided Generative Optimization for Trotter Suzuki Decomposition",
+  "authors": [
+    "WenBin Yan"
+  ],
+  "summary": "Trotter Suzuki product formulas are the standard route to Hamiltonian evolution on noisy intermediate-scale quantum (\\NISQ{}) hardware, but their accuracy depends on three coupled choices: term grouping, product-formula order, and time-step allocation. Grouping and order are discrete, which makes direct gradient optimization infeasible and forces existing compilers to rely on static heuristics. We describe P-GONE, a method that combines a conditional diffusion model (D3PM + DDPM), a graph neural network (\\GNN{}) encoder, and closed-loop REINFORCE fine-tuning to jointly learn grouping, order,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-06-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

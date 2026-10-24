@@ -1,0 +1,24 @@
+{
+  "key": "2605.05299",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05299",
+  "title": "Universal Neural Propagator: Learning Time Evolution in Many-Body Quantum Systems",
+  "authors": [
+    "Zihao Qi",
+    "Christopher Earls",
+    "Yang Peng"
+  ],
+  "summary": "Conventional approaches to simulating quantum many-body dynamics produce a single trajectory: if the Hamiltonian or the initial state is changed, the computation must be re-performed. Recent efforts toward foundation models have begun to address this limitation, yet existing methods transfer across either Hamiltonians or initial states, but not both. In this work, we introduce the Universal Neural Propagator (UNP), a single, unified model that learns the functional mapping from driving protocols to time-evolution propagators. Trained in an entirely self-supervised way, a single UNP model…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.mes-hall",
+    "cond-mat.str-el",
+    "physics.comp-ph"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

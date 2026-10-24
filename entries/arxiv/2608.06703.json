@@ -1,0 +1,21 @@
+{
+  "key": "2608.06703",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.06703",
+  "title": "Shor's algorithm requires Fanout",
+  "authors": [
+    "Lucas Gretta",
+    "Malvika Raj Joshi"
+  ],
+  "summary": "Shor's algorithm is a canonical quantum supremacy target whose core operation relies on the Quantum Fourier Transform (QFT). In this note, we resolve an open question of Fang, Fenner, Green, Homer and Zhang from 2006 by showing that approximating QFT in constant depth, for any $n$-qubit modulus, necessarily requires the $n$-qubit Fanout operation. Formally, let $\\mathsf{QFT}_q$ be the gate acting on $n = \\lceil \\log q \\rceil$ qubits that computes the QFT under modulus $q$. It is known that any $n$-qubit $\\mathsf{QFT}_q$ can be implemented in constant depth using $\\mathsf{FANOUT}_n$, i.e.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

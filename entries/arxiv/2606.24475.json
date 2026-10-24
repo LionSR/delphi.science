@@ -1,0 +1,23 @@
+{
+  "key": "2606.24475",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.24475",
+  "title": "Exact log-depth preparation of highly entangled matrix product states",
+  "authors": [
+    "Keisuke Murota",
+    "Frédéric Sauvage",
+    "Marco Ballarin",
+    "Gabriel Matos",
+    "Enrico Rinaldi"
+  ],
+  "summary": "Preparing matrix product states (MPS) on a quantum device is a key subroutine in many quantum algorithms. The most competitive methods, based on the renormalisation group, prepare translationally invariant MPS of size $L$ and bond dimension $χ$, up to an error $\\varepsilon$, in circuit depth $\\tilde O(χ^{4}\\log(L/\\varepsilon))$ or $\\tilde O(χ^{6}\\log\\log(L/\\varepsilon))$. We improve multiple aspects of these methods. First, using block-encoded correction maps, whose post-selection succeeds with constant probability, we render the preparation exact without sacrificing the scaling in $L$.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-23",
+  "updated": "2026-06-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

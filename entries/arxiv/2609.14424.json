@@ -1,0 +1,21 @@
+{
+  "key": "2609.14424",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.14424",
+  "title": "Certification cost of quantum models: measurement correlation, not parameter count",
+  "authors": [
+    "Pavel Sulimov",
+    "Claude Lehmann"
+  ],
+  "summary": "Reporting the Fisher geometry of a trained variational quantum model is routine; quoting the shot budget that would establish it is not. Certifying an empirical Fisher matrix to relative Frobenius error $\\varepsilon$ under coordinate-wise parameter shift costs $Θ(B p^{2} V/(\\varepsilon^{2} G))$ circuit executions, where $V$ is the measured readout variance and $G$ the measured squared gradient norm, with uniform allocation optimal in that class. One constant reproduces the cost of two circuit families whose exponents differ by a full power of $p$. The exponent is an identity in how $nV$ and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-09-13",
+  "updated": "2026-09-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

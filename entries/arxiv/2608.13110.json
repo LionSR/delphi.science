@@ -1,0 +1,21 @@
+{
+  "key": "2608.13110",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.13110",
+  "title": "Classical Simulation and Design Frontiers for IBM's Doped Clifford Sampling Experiment",
+  "authors": [
+    "Hidetaka Manabe",
+    "Hanfeng Gu",
+    "Feng Pan"
+  ],
+  "summary": "We classically simulate the IBM doped Clifford random circuit sampling experiment, comprising $70$ qubits, $70$ entangling layers, and $468$ inserted $T$ gates. A deterministic temporal-boundary tensor network contraction approach is specifically designed to tackle such open-boundary one-dimensional brickwork circuits with operator-Schmidt-rank-$2$ entangling gates. For an $n$-qubit circuit of depth $d$, the resulting unsliced path evaluates an exact amplitude with contraction width $\\lceil d/2\\rceil$; Ratcatcher calculations certify that no smaller width is possible for the tested…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

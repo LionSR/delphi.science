@@ -1,0 +1,24 @@
+{
+  "key": "2607.08220",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08220",
+  "title": "Quantum linear solvers for quantum chemistry: prospects of exponential quantum advantage",
+  "authors": [
+    "Peniel Bertrand Tsemo",
+    "Kenji Sugisaki",
+    "Ishita Bhattacharjee",
+    "V. S. Prasannaa"
+  ],
+  "summary": "Quantum linear solvers (QLSs) can offer the potential for exponential quantum advantage in solving quantum chemical problems, but its assessment hinges on determining the condition number ($κ$) scaling, which itself is computationally challenging. While a recent work applied the Harrow-Hassidim-Lloyd (HHL) algorithm to single-reference linearized coupled cluster equations (SRLCC), the validity of the HHL-SRLCC framework is restricted to weakly correlated regimes. A general treatment requires a formulation that can access strongly correlated regions. We thus begin by extending the QLS-SRLCC…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.atom-ph",
+    "physics.chem-ph"
+  ],
+  "published": "2026-07-09",
+  "updated": "2026-07-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

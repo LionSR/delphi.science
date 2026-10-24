@@ -1,0 +1,21 @@
+{
+  "key": "2607.28541",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.28541",
+  "title": "A Provable Oracle-Free Quantum Algorithm for Nonlinear Dynamics on Hybrid Oscillator-Qubit Processors",
+  "authors": [
+    "Kausthubh Chandramouli",
+    "Yan Li",
+    "Yuan Liu"
+  ],
+  "summary": "We develop a hybrid qubit--qumode algorithm for nonlinear ordinary differential equations of the form $\\dot{\\mathbf{x}}=\\mathbf{f}(\\mathbf{x})$ with drift of polynomial degree~$L$. Following the Fokker--Planck route of Tennie and Magri, the algorithm propagates the state density and returns the deterministic trajectory as the peak of that density in the small-noise limit. The discretised generator is carried into a parametrised family of Schrödinger equations by the warped-phase transformation of Jin, Liu, and Yu, and the Fourier-mode parameter of that family is placed on a single…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-30",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

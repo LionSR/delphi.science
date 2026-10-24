@@ -1,0 +1,21 @@
+{
+  "key": "2605.17628",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.17628",
+  "title": "A Penalty-Free Pipeline for Direct Quantum-Annealer Portfolio Optimization",
+  "authors": [
+    "Luis Lozano"
+  ],
+  "summary": "Cardinality-constrained portfolio selection is routinely cast as a quadratic unconstrained binary optimization (QUBO) and submitted to a quantum processing unit (QPU) for direct annealing. We show that this standard penalty encoding is the binding constraint for direct-QPU execution on current D-Wave Pegasus and Zephyr hardware. Expanding the exact cardinality penalty contributes a dense rank-one term that makes the logical interaction graph complete regardless of the covariance, producing chain-break fractions from 83% at small universes up to 92% at the full forty-nine-industry…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.OC",
+    "q-fin.PM"
+  ],
+  "published": "2026-05-17",
+  "updated": "2026-05-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

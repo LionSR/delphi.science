@@ -1,0 +1,20 @@
+{
+  "key": "2605.05256",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05256",
+  "title": "Error Mitigation in Dynamic Circuits for Hamiltonian Simulation",
+  "authors": [
+    "Sumeet Shirgure",
+    "Siyuan Niu"
+  ],
+  "summary": "Dynamic quantum circuits integrate mid-circuit measurements and feed-forward operations to enable real-time classical processing and conditional quantum logic. These capabilities are central to key quantum protocols such as quantum error correction, and have recently demonstrated significant potential for reducing quantum resources, including circuit depth and gate count, across a range of applications. However, executing dynamic circuits on real quantum hardware introduces a critical trade-off: while resource requirements decrease, circuit fidelity degrades due to high error rates of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

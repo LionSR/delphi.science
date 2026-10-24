@@ -1,0 +1,30 @@
+{
+  "key": "2603.25496",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.25496",
+  "title": "Send the Key in Cleartext: Halving Key Consumption while Preserving Unconditional Security in QKD Authentication",
+  "authors": [
+    "Claudia De Lazzari",
+    "Francesco Stocco",
+    "Edoardo Signorini",
+    "Giacomo Fregona",
+    "Fernando Chirici",
+    "Damiano Giani",
+    "Tommaso Occhipinti",
+    "Guglielmo Morgari",
+    "Alessandro Zavatta",
+    "Davide Bacco"
+  ],
+  "summary": "Quantum Key Distribution (QKD) protocols require Information-Theoretically Secure (ITS) authentication of the classical channel to preserve the unconditional security of the distilled key. Standard ITS schemes are based on one-time keys: once a key is used to authenticate a message, it must be discarded. Since QKD requires mutual authentication, two independent one-time keys are typically consumed per round, imposing a non-trivial overhead on the net secure key rate. In this work, we present the authentication-with-response scheme, a novel ITS authentication scheme based on…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR",
+    "cs.IT"
+  ],
+  "published": "2026-03-26",
+  "updated": "2026-03-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

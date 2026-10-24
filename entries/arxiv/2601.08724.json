@@ -1,0 +1,21 @@
+{
+  "key": "2601.08724",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.08724",
+  "title": "Kernel Learning for Regression via Quantum Annealing Based Spectral Sampling",
+  "authors": [
+    "Yasushi Hasegawa",
+    "Masayuki Ohzeki"
+  ],
+  "summary": "While quantum annealing (QA) has been developed for combinatorial optimization, practical QA devices operate at finite temperature and under noise, and their outputs can be regarded as stochastic samples close to a Gibbs--Boltzmann distribution. In this study, we propose a QA-in-the-loop kernel learning framework that integrates QA not merely as a substitute for Markov-chain Monte Carlo sampling but as a component that directly determines the learned kernel for regression. Based on Bochner's theorem, a shift-invariant kernel is represented as an expectation over a spectral distribution, and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-01-13",
+  "updated": "2026-01-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

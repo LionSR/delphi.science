@@ -1,0 +1,23 @@
+{
+  "key": "2601.03855",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.03855",
+  "title": "MPM-QIR: Measurement-Probability Matching for Quantum Image Representation and Compression via Variational Quantum Circuit",
+  "authors": [
+    "Chong-Wei Wang",
+    "Mei Ian Sam",
+    "Tzu-Ling Kuo",
+    "Nan-Yow Chen",
+    "Tai-Yue Li"
+  ],
+  "summary": "We present MPM-QIR, a variational-quantum-circuit (VQC) framework for classical image compression and representation whose core objective is to achieve equal or better reconstruction quality at a lower Parameter Compression Ratio (PCR). The method aligns a generative VQC's measurement-probability distribution with normalized pixel intensities and learns positional information implicitly via an ordered mapping to the flattened pixel array, thus eliminating explicit coordinate qubits and tying compression efficiency directly to circuit (ansatz) complexity. A bidirectional convolutional…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-07",
+  "updated": "2026-01-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

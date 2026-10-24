@@ -1,0 +1,20 @@
+{
+  "key": "2602.09696",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.09696",
+  "title": "Quantum-accelerated conjugate gradient method via spectral initialization",
+  "authors": [
+    "Shigetora Miyashita",
+    "Yoshi-aki Shimada"
+  ],
+  "summary": "Solving large-scale linear systems problems is a cornerstone in scientific and industrial computing. Classical iterative solvers face increasing difficulty as the number of unknowns becomes large, while fully quantum linear solvers require fault-tolerant resources that remain far beyond near-term feasibility. Here we propose a quantum-accelerated conjugate gradient (QACG) method in which a fault-tolerant quantum algorithm is used exclusively to construct a spectrally informed initial guess for a classical conjugate gradient (CG) solver. We estimate the total runtime and resource requirements…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-10",
+  "updated": "2026-04-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

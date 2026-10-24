@@ -1,0 +1,21 @@
+{
+  "key": "2610.03670",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03670",
+  "title": "Classical Algorithms for Bipartite Quantum Max-Cut on Dense Expanders",
+  "authors": [
+    "Stuart Wayland",
+    "Zackary Jorquera",
+    "Alexandra Kolla"
+  ],
+  "summary": "Quantum Max-Cut is a well-studied local Hamiltonian problem for which the classical complexity of the bipartite case remains open. We give a polynomial-time classical randomized algorithm for the spin-$\\tfrac12$ antiferromagnetic Heisenberg model, equivalently Quantum Max-Cut, on dense balanced bipartite expanders. This class includes $G(n,n,p)$ with high probability for every fixed $p>0$. The algorithm estimates the ground energy and any ground state edge correlation to additive error $\\varepsilon$ in time polynomial in $n$ and $1/\\varepsilon$. We construct a Markov chain on perfect…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

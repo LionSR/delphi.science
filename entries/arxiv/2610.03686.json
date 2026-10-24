@@ -1,0 +1,22 @@
+{
+  "key": "2610.03686",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03686",
+  "title": "Efficient Block Encoding of Structured Hamiltonians by Separating Where and What",
+  "authors": [
+    "Alessandro Summer",
+    "François Jamet"
+  ],
+  "summary": "In fault-tolerant block encodings of structured Hamiltonians, the support geometry can set how the non-Clifford cost of SELECT scales with the system size, however many operators act on each support. We construct permute-act-unpermute circuits: a CSWAP network fixed by this geometry brings a selected support to a fixed target register, a shared local circuit acts there, and the permutation is undone. The operators add only an $XZ$ mask on this register, at a cost independent of the system size, and one query can mix several support geometries. For two-site supports, we establish and attain…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.stat-mech",
+    "cond-mat.str-el"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

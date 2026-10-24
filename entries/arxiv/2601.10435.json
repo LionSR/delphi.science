@@ -1,0 +1,27 @@
+{
+  "key": "2601.10435",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.10435",
+  "title": "The SpinPulse library for transpilation and noise-accurate simulation of spin qubit quantum computers",
+  "authors": [
+    "Benoît Vermersch",
+    "Oscar Gravier",
+    "Nathan Miscopein",
+    "Julia Guignon",
+    "Carlos Ramos Marimón",
+    "Jonathan Durandau",
+    "Matthieu Dartiailh",
+    "Tristan Meunier",
+    "Valentin Savin"
+  ],
+  "summary": "We introduce SpinPulse, an open-source python package for simulating spin qubit-based quantum computers at the pulse-level. SpinPulse models the specific physics of spin qubits, particularly through the inclusion of classical non-Markovian noise. This enables realistic simulations of native gates and quantum circuits, in order to support hardware development. In SpinPulse, a quantum circuit is first transpiled into the native gate set of our model and then converted to a pulse sequence. This pulse sequence is subsequently integrated numerically in the presence of a simulated noisy…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-15",
+  "updated": "2026-01-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2603.08081",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.08081",
+  "title": "Simulating non-Markovian open quantum dynamics by exploiting physics-informed neural network",
+  "authors": [
+    "Long Cao",
+    "Liwei Ge",
+    "Daochi Zhang",
+    "Yao Wang",
+    "Rui-Xue Xu",
+    "YiJing Yan",
+    "Xiao Zheng"
+  ],
+  "summary": "This work integrates the physics-informed neural network (PINN) approach into the neural quantum state framework to simulate open quantum system dynamics, to circumvent the computationally expensive time-dependent variational principle required in conventional variational methods. The proposed PINN-DQME method employs time-encoded neural networks within a time-domain decomposition strategy to represent the evolution governed by the dissipaton-embedded quantum master equation (DQME). We implement and validate this approach in the single-impurity Anderson model, benchmarking the PINN-DQME…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-09",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

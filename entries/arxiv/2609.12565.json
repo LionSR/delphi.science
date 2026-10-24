@@ -1,0 +1,20 @@
+{
+  "key": "2609.12565",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.12565",
+  "title": "Security Implications of Measurement Based Crosstalk on Superconducting Quantum Computers",
+  "authors": [
+    "Subarna Adhikari",
+    "Kimmo Halunen"
+  ],
+  "summary": "Crosstalk is one of the major issues for scalability of superconducting quantum processors. But it can also be used by threat actors to intentionally sabotage computations and steal information. This paper analyzes data leakage due to crosstalk during qubit measurement. Prior research yielded an accuracy of 96% in classifying measurement of one qubit in IBM quantum computers. When evaluated on superconducting hardware from VTT, we achieved an accuracy of 71.68% with similar framework. Our extended framework with additional labels yields an accuracy of 76.30% for classifying measurement of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-11",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

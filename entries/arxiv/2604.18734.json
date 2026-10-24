@@ -1,0 +1,23 @@
+{
+  "key": "2604.18734",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.18734",
+  "title": "Learning error suppression strategies for dynamic quantum circuits",
+  "authors": [
+    "Christopher Tong",
+    "Liran Shirizly",
+    "Edward H. Chen",
+    "Derek S. Wang",
+    "Bibek Pokharel"
+  ],
+  "summary": "Dynamic quantum circuits integrate unitary evolution with mid-circuit measurement and feedforward, enabling conditional operations essential for efficient quantum algorithms and foundational for fault-tolerant quantum computation. However, such operations introduce measurement-induced errors and control constraints that are not addressed by conventional error-suppression techniques. Here, we introduce an empirical learning framework that optimizes dynamical decoupling (DD) sequences for dynamic circuits at the level of circuit subintervals and qubit subregisters. Applying empirically learned…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

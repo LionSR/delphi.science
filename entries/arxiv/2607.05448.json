@@ -1,0 +1,22 @@
+{
+  "key": "2607.05448",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.05448",
+  "title": "iSTAR: an algebraic-collapse framework for variational reduction in quantum-inspired continuous Ising solvers",
+  "authors": [
+    "Bowen Liu",
+    "Dongmei Xiao"
+  ],
+  "summary": "Continuous Ising solvers embed a discrete optimization problem into a continuous dynamical system and recover the spin configuration by sign readout, but dense interaction evaluation gives an $O(N^2)$-per-step cost. We show that this cost is not intrinsic: during late-stage simulated bifurcation the trajectory collapses onto a lower-dimensional active subspace, and saturated coordinates can be eliminated exactly by a variational frozen-set identity whose couplings fold into an induced field on the unresolved subsystem. We prove large-parameter recovery for the external-field quartic model,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC",
+    "quant-ph"
+  ],
+  "published": "2026-07-05",
+  "updated": "2026-07-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2605.13979",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.13979",
+  "title": "Winning Lottery Tickets in Neural Networks via a Quantum-Inspired Classical Algorithm",
+  "authors": [
+    "Natsuto Isogai",
+    "Hayata Yamasaki",
+    "Sho Sonoda",
+    "Mio Murao"
+  ],
+  "summary": "Quantum machine learning (QML) aims to accelerate machine learning tasks by exploiting quantum computation. Previous work studied a QML algorithm for selecting sparse subnetworks from large shallow neural networks. Instead of directly solving an optimization problem over a large-scale network, this algorithm constructs a sparse subnetwork by sampling hidden nodes from an optimized probability distribution defined using the ridgelet transform. The quantum algorithm performs this sampling in time $O(D)$ in the data dimension $D$, whereas a naive classical implementation relies on handling…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

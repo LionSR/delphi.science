@@ -1,0 +1,22 @@
+{
+  "key": "2605.14042",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.14042",
+  "title": "C-Phase-Aware Compilation for Efficient Fault-Tolerant Quantum Execution",
+  "authors": [
+    "Dhanvi Bharadwaj",
+    "Siddharth Dangwal",
+    "Yuewen Hou",
+    "Gokul Subramanian Ravi"
+  ],
+  "summary": "Achieving practical quantum advantage on fault-tolerant quantum computers (FTQC) is fundamentally constrained by the substantial spatial and temporal overheads required to map logical operations onto physical hardware. Existing compilation approaches typically adopt coarse-grained, slice-based abstractions that overlook fine-grained microarchitectural effects, such as routing contention, leading to inefficient resource utilization and limited alignment between algorithm structure and hardware capabilities. We introduce Qomet, a microarchitecture-aware compiler that tightly couples…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-08-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2603.17774",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.17774",
+  "title": "Quantum Depth Compression via Local Dynamic Circuits",
+  "authors": [
+    "Benjamin Hall",
+    "Palash Goiporia",
+    "Rich Rines"
+  ],
+  "summary": "We present Quantum Depth Compression (QDC), a general compilation framework that utilizes dynamic circuits to reduce arbitrary quantum circuits to depth linear in the number of non-Clifford gates and to grid connectivity without the need for expensive SWAP-networks. The framework consists of pushing Clifford gates to the end of the circuit, resulting in a sequence of non-Clifford Pauli-phasors followed by an all Clifford sub-circuit, both of which are then reduced to constant depth via dynamic circuits. We show that applying QDC to random Pauli-phasor circuits lowers both their depth and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-18",
+  "updated": "2026-03-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

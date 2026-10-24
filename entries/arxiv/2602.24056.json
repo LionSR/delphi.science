@@ -1,0 +1,24 @@
+{
+  "key": "2602.24056",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.24056",
+  "title": "Learning spectral density functions in open quantum systems",
+  "authors": [
+    "Felipe Peleteiro",
+    "João Victor Shiguetsugo Kawanami Lima",
+    "Pedro Marcelo Prado",
+    "Felipe Fernandes Fanchini",
+    "Ariel Norambuena"
+  ],
+  "summary": "Spectral density functions quantify how environmental modes couple to quantum systems and govern their open dynamics. Inferring such frequency-dependent functions from time-domain measurements is an ill-conditioned inverse problem. Here, we use exactly solvable spin-boson models with pure-dephasing and amplitude-damping channels to reconstruct spectral density functions from noisy simulated data. First, we introduce a parameter estimation approach based on machine learning regressors to infer Lorentzian and Ohmic-like spectral density parameters, quantifying robustness to noise. Second, we…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.comp-ph"
+  ],
+  "published": "2026-02-27",
+  "updated": "2026-07-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

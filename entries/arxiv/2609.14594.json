@@ -1,0 +1,21 @@
+{
+  "key": "2609.14594",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.14594",
+  "title": "When is global evolutionary search useful for variational quantum algorithms? A landscape-first study",
+  "authors": [
+    "Vojtěch Novák",
+    "Ivan Zelinka"
+  ],
+  "summary": "Variational quantum algorithms recast state preparation as classical nonconvex optimization, but it is often unclear when multistart local search suffices and when population-based global search justifies its evaluation cost. Using a landscape-first design, controlled QAOA experiments identify two mechanisms making local search unreliable: parameter reuse across circuit layers and competition between 2-local and 3-local cost terms. Increasing QAOA depth alone does not replicate this effect. We test these mechanisms across eight unseen spin glasses, fresh $N=10$ and $N=12$ instances, and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.NE"
+  ],
+  "published": "2026-09-13",
+  "updated": "2026-09-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

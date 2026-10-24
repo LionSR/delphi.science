@@ -1,0 +1,21 @@
+{
+  "key": "2607.15158",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.15158",
+  "title": "Fast two-dimensional tensor-network contraction via subspace iteration",
+  "authors": [
+    "Yining Zhang",
+    "Philippe Corboz"
+  ],
+  "summary": "The corner transfer matrix renormalization group (CTMRG) is one of the standard contraction methods for infinite projected entangled-pair states (iPEPS), but its computational cost is dominated by repeated truncated singular value decompositions (SVDs). We introduce subspace-iteration CTMRG (SI-CTMRG), a QR-based projector construction that replaces each large-matrix SVD with an SVD of a much smaller matrix. The resulting algorithm shifts the dominant cost from decompositions to tensor contractions, making it highly suited to GPU acceleration and yielding speedups of up to two orders of…",
+  "domain": "cond-mat.str-el",
+  "tags": [
+    "cond-mat.str-el",
+    "quant-ph"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

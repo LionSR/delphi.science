@@ -1,0 +1,23 @@
+{
+  "key": "2604.03593",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.03593",
+  "title": "Moving Detector Quantum Walk with Random Relocation",
+  "authors": [
+    "Md Aquib Molla",
+    "Sanchari Goswami"
+  ],
+  "summary": "We study a discrete-time quantum walk in presence of a detector at $x_D$ initially. The detector here is repeatedly removed after a span of $t_R$, the removal time, and reinserted at random locations. Two relocation rules are considered here: In Model~1, the detector is reinserted at any site beyond $x_D$, while in Model~2, reinsertion is done within a restricted window around the position of the detector at that time. Both variants behave like Semi Infinite Walk (SIW) for large $t_R$, where the detector behaves effectively as a fixed boundary. However, in the rapid-relocation regime, i.e.,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.stat-mech",
+    "physics.comp-ph",
+    "physics.ins-det"
+  ],
+  "published": "2026-04-04",
+  "updated": "2026-04-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

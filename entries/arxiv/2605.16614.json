@@ -1,0 +1,20 @@
+{
+  "key": "2605.16614",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.16614",
+  "title": "Magic Secret Sharing: Threshold Control of Quantum Computational Power via GHZ Entanglement",
+  "authors": [
+    "Soumyojyoti Dutta",
+    "Tushar"
+  ],
+  "summary": "We introduce Magic Secret Sharing (MSS), a quantum cryptographic primitive in which the secret is the computational capability of a quantum state rather than its classical description. In the resource theory of magic, non-stabilizer states fuel universal quantum computation via non-Clifford gates; MSS distributes this resource with an (n-1,n) threshold structure using a pre-shared GHZ state and a single local phase gate P(phi) = diag(1, exp(i*phi)). Any individual party holds the maximally mixed state I/2, with Wigner distance C(I/2) = 0, so no local operation can yield non-Clifford…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-15",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

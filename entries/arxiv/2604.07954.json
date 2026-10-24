@@ -1,0 +1,22 @@
+{
+  "key": "2604.07954",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.07954",
+  "title": "Quantum Property Testing for Bounded-Degree Directed Graphs",
+  "authors": [
+    "Pan Peng",
+    "Jingyu Wu"
+  ],
+  "summary": "We study quantum property testing of directed graphs whose maximum in-degree and out-degree are bounded by a fixed constant $d$. For a proximity parameter $\\varepsilon$, we prove that every property testable with $O_{\\varepsilon,d}(1)$ quantum queries in the bidirectional model, where both incoming and outgoing neighbors are accessible, can also be tested in the quantum unidirectional model, where only outgoing neighbors are accessible, using $n^{1/2-Ω_{\\varepsilon,d}(1)}$ queries. This gives an almost quadratic quantum speedup over the best known generic classical transformation. Our proof…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.DS"
+  ],
+  "published": "2026-04-09",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2609.38073",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38073",
+  "title": "Optimal Quantum-Classical Separations for Exact Learning",
+  "authors": [
+    "Srinivasan Arunachalam",
+    "Amin Shiraz Gilani",
+    "Nikhil S. Mande"
+  ],
+  "summary": "We study exact learning with membership queries for concept classes $\\mathcal C\\subseteq\\{0,1\\}^N$, focusing on the relationships among their deterministic, randomized, and quantum query complexities, denoted $\\mathsf{D}(\\mathcal C)$, $\\mathsf{R}(\\mathcal C)$, and $\\mathsf{Q}(\\mathcal C)$, respectively. The two canonical quantum speedups in this model are witnessed by Grover search and Bernstein-Vazirani, leading to the longstanding conjecture $$ \\mathsf{R}(\\mathcal C)=O(\\mathsf{Q}(\\mathcal C)^2+\\mathsf{Q}(\\mathcal C)\\log N). $$ We first refute this conjecture by constructing concept classes…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.LG"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

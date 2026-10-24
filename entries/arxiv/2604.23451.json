@@ -1,0 +1,19 @@
+{
+  "key": "2604.23451",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23451",
+  "title": "Quantum Causal Discovery via Amplitude Estimation of Kullback-Leibler Divergence",
+  "authors": [
+    "Shabnam Sodagari"
+  ],
+  "summary": "Causal discovery from observational data underpins applications in finance, climate modeling, and machine learning. Constraint-based causal discovery reduces structure learning to a sequence of conditional independence (CI) tests, where each test decides independence by estimating conditional mutual information $I(X;Y \\mid Z)$ to additive precision $τ$ and thresholding against it. Classically this requires $Θ(1/τ^{2})$ samples per test, a cost that dominates in the high-precision regime typical of weak dependencies. We present QKLA (Quantum Kullback--Leibler Amplitude estimation), a quantum…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-25",
+  "updated": "2026-05-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,27 @@
+{
+  "key": "2610.21778",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.21778",
+  "title": "Same Spectrum, Harder First-Order Training: Phase-Locking in Single- versus Multi-Qubit Re-Uploading Circuits",
+  "authors": [
+    "Michael Poppel",
+    "David Bucher",
+    "Maximilian Zorn",
+    "Markus Baumann",
+    "Sebastian Wölckert",
+    "Claudia Linnhoff-Popien",
+    "Philipp Altmann",
+    "Jonas Stein"
+  ],
+  "summary": "Angle-encoded variational quantum circuits implement truncated Fourier series. For one-dimensional inputs, a single-qubit re-uploading (serial) circuit represents every function that a multi-qubit circuit with the same encoding budget $E$ can; we find that this exchange of width for depth is not free in first-order training. Because its state lives on the Bloch sphere, all parameters of the serial circuit move the state, at each input, along one complex direction, which we call \\emph{phase-locking}. We prove that this costs no Fourier direction but leaves no direction to spare: however many…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

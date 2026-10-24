@@ -1,0 +1,25 @@
+{
+  "key": "2601.21629",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.21629",
+  "title": "Reinforcement Learning for Adaptive Composition of Quantum Circuit Optimisation Passes",
+  "authors": [
+    "Daniel Mills",
+    "Ifan Williams",
+    "Jacob Swain",
+    "Gabriel Matos",
+    "Enrico Rinaldi",
+    "Alexander Koziell-Pipe"
+  ],
+  "summary": "Many quantum software development kits provide a suite of circuit optimisation passes. These passes have been highly optimised and tested in isolation. However, the order in which they are applied is left to the user, or else defined in general-purpose default pass sequences. While general-purpose sequences miss opportunities for optimisation which are particular to individual circuits, designing pass sequences bespoke to particular circuits requires exceptional knowledge about quantum circuit design and optimisation. Here we propose and demonstrate training a reinforcement learning agent to…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-01-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

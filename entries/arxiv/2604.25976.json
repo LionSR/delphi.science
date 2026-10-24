@@ -1,0 +1,22 @@
+{
+  "key": "2604.25976",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.25976",
+  "title": "No Tile Left Behind: Multiprogramming for Surface-Code Architectures",
+  "authors": [
+    "Archisman Ghosh",
+    "Avimita Chatterjee",
+    "Swaroop Ghosh"
+  ],
+  "summary": "Fault-tolerant quantum computing (FTQC) is emerging as the architectural regime in which practical large-scale quantum workloads will execute. In this setting, however, multiprogramming is no longer a matter of partitioning a flat pool of qubits. Quantum error correction exposes a structured floorplan of data tiles, ancilla tiles, and magic-state service resources, so concurrent execution must account for compact placement, connectivity, routing headroom, and shared support infrastructure. This makes FTQC multiprogramming fundamentally harder than its NISQ counterpart: admission decisions…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AR"
+  ],
+  "published": "2026-04-28",
+  "updated": "2026-04-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

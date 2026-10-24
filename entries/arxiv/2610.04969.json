@@ -1,0 +1,26 @@
+{
+  "key": "2610.04969",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04969",
+  "title": "Hamiltonian Metric Learning and Energy-Based Training: A Dissipative Geometric Framework for Optimization",
+  "authors": [
+    "Sparsho Chakraborty",
+    "Mohammad Alamgir",
+    "Nishanth M",
+    "Akshit Nanda",
+    "Ram Prasad Padhy",
+    "Sayan Mukherjee"
+  ],
+  "summary": "Optimization in machine learning is usually expressed through iterative rules that update model parameters using information from the loss landscape. In this work, we study an alternative viewpoint in which parameter optimization is treated as the evolution of a dissipative dynamical system. The model parameters are regarded as generalized coordinates, the loss acts as a potential energy, and a positive-definite metric defines the local kinetic geometry of parameter space. Starting from a variational formulation, we derive the corresponding Hamiltonian dynamics, the geometric force generated…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "quant-ph"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

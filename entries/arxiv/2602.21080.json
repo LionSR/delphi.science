@@ -1,0 +1,27 @@
+{
+  "key": "2602.21080",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.21080",
+  "title": "Quantum feedback algorithms for DNA assembly using FALQON variants",
+  "authors": [
+    "Pedro M. Prado",
+    "Lucas A. M. Rattighieri",
+    "Rafael Simões do Carmo",
+    "Giovanni S. Franco",
+    "Guilherme E. L. Pexe",
+    "Alexandre Drinko",
+    "Erick G. Dorlass",
+    "Tatiana F. de Almeida",
+    "Felipe F. Fanchini"
+  ],
+  "summary": "Reconstructing DNA sequences without a reference, known as de novo assembly, is a complex computational task involving the alignment of overlapping fragments. To address this problem, a usual strategy is to map the assembly to a Quadratic Unconstrained Binary Optimization (QUBO) formulation, which can be solved by different quantum algorithms. In this work, we focus on three versions of the Feedback-based Algorithm, a protocol that eliminates classical optimization loops via measurement feedback. We analyze long-read DNA fragments from SARS-CoV-2 and human mitochondrial DNA using standard…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-24",
+  "updated": "2026-02-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2607.05178",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.05178",
+  "title": "Efficient classical simulation of two-dimensional long-range systems: Rydberg arrays and beyond",
+  "authors": [
+    "Jia-Lin Chan",
+    "Tao Xiang",
+    "Yantao Wu"
+  ],
+  "summary": "In variational Monte Carlo (VMC) calculations of $N$-site quantum systems with arbitrary all-to-all two-body interactions, evaluating the local energy generally costs $O(N^3)$. We introduce a new framework that reduces this cost to $O(N)$ for tensor network states, capable of scalable and accurate computation of real-time dynamics and ground states. As a result, we obtain accurate simulations of the adiabatic real-time protocol of a $10\\times10$ dipolar XY model realized in a Rydberg simulator [C. Chen et al., Nature 616, 691 (2023)], which was previously beyond the reach of classical…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.quant-gas",
+    "cond-mat.str-el"
+  ],
+  "published": "2026-07-06",
+  "updated": "2026-07-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

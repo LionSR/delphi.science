@@ -1,0 +1,23 @@
+{
+  "key": "2604.27324",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.27324",
+  "title": "Q3SAT-GPT: A Generative Model for Discovering Quantum Circuits for the 3-SAT Problem",
+  "authors": [
+    "Pratim Ugale",
+    "Ilya Tyagin",
+    "Karunya Shirali",
+    "Kien X. Nguyen",
+    "Ilya Safro"
+  ],
+  "summary": "This work introduces Q3SAT-GPT, a generative model for discovering quantum circuits for the Max-E3-SAT problem. Our method learns from high-performing QAOA-style ansätze to directly generate candidate circuits. To create high-quality supervision, we also introduce Mosaic Adaptive QAOA (MosaicADAPT-QAOA), an adaptive strategy for constructing low-depth QAOA circuits by selecting subsets of mixer operators in each step, rather than inserting operators sequentially. The resulting circuits serve as training data for the generative model, allowing it to learn effective circuit design patterns…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-30",
+  "updated": "2026-04-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

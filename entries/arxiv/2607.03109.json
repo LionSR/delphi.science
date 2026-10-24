@@ -1,0 +1,23 @@
+{
+  "key": "2607.03109",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.03109",
+  "title": "Graph Neural Networks for the Graphical Bootstrap",
+  "authors": [
+    "Rigers Aliaj",
+    "Gabriele Dian",
+    "Reza Doobary",
+    "Paul Heslop"
+  ],
+  "summary": "We study a graph classification problem involving over 20 million graphs, arising from high-order perturbative computations of correlators in planar $\\mathcal{N}=4$ super-Yang--Mills, a model closely related to the theory of the strong nuclear force. We benchmark graph neural networks, including graph transformers, achieving robust generalization to larger graphs with up to $99.996\\%$ ROC AUC. Then, we analyze how the models can be used to gain a computational speedup compared to the traditional graphical bootstrap algorithm, through shrinking the redundant data by up to $85.5\\%$ at the…",
+  "domain": "hep-th",
+  "tags": [
+    "hep-th",
+    "cs.LG"
+  ],
+  "published": "2026-07-03",
+  "updated": "2026-07-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

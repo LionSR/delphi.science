@@ -1,0 +1,27 @@
+{
+  "key": "2609.22572",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.22572",
+  "title": "Modular fault-tolerant quantum computing on a non-CSS code",
+  "authors": [
+    "Robert Freund",
+    "Friederike Butt",
+    "César Benito",
+    "Ivan Pogorelov",
+    "Marcel Meyer",
+    "Alex Steiner",
+    "Alejandro Bermudez",
+    "Markus Müller",
+    "Thomas Monz"
+  ],
+  "summary": "Modularization promises to break down the design and implementation complexity of large scale quantum processors into smaller manageable subtasks. In this approach, quantum channels, realized for instance through physical rerouting of qubits or quantum teleportation, connect multiple modules. Each of those modules hosts a subset of qubits, e.g. multiple logical qubits, and provides quantum operations on them. In this work, we implement for the first time all logical operations required for modular fault-tolerant universal quantum computing with a non-Calderbank-Shor-Steane (CSS) code, the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-18",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2602.14827",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14827",
+  "title": "Constrained Portfolio Optimization via Quantum Approximate Optimization Algorithm (QAOA) with XY-Mixers and Trotterized Initialization: A Hybrid Approach for Direct Indexing",
+  "authors": [
+    "Javier Mancilla",
+    "Theodoros D. Bouloumis",
+    "Frederic Goguikian"
+  ],
+  "summary": "Portfolio optimization under strict cardinality constraints is a combinatorial challenge that defies classical convex optimization techniques, particularly in the context of \"Direct Indexing\" and ESG-constrained mandates. In the Noisy Intermediate-Scale Quantum (NISQ) era, the Quantum Approximate Optimization Algorithm (QAOA) offers a promising hybrid approach. However, standard QAOA implementations utilizing transverse field mixers often fail to strictly enforce hard constraints, necessitating soft penalties that distort the energy landscape. This paper presents a comprehensive analysis of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "q-fin.CP",
+    "q-fin.PM"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-02-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

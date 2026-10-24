@@ -1,0 +1,27 @@
+{
+  "key": "2604.04828",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.04828",
+  "title": "Hybrid Fourier Neural Operator for Surrogate Modeling of Laser Processing with a Quantum-Circuit Mixer",
+  "authors": [
+    "Mateusz Papierz",
+    "Asel Sagingalieva",
+    "Alix Benoit",
+    "Toni Ivas",
+    "Elia Iseli",
+    "Alexey Melnikov"
+  ],
+  "summary": "Data-driven surrogates can replace expensive multiphysics solvers for parametric PDEs, yet building compact, accurate neural operators for three-dimensional problems remains challenging: in Fourier Neural Operators, dense mode-wise spectral channel mixing scales linearly with the number of retained Fourier modes, inflating parameter counts and limiting real-time deployability. We introduce HQ-LP-FNO, a hybrid quantum-classical FNO that replaces a configurable fraction of these dense spectral blocks with a compact, mode-shared variational quantum circuit mixer whose parameter count is…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CE",
+    "cs.LG",
+    "physics.comp-ph"
+  ],
+  "published": "2026-04-06",
+  "updated": "2026-04-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

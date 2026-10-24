@@ -1,0 +1,24 @@
+{
+  "key": "2609.35958",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.35958",
+  "title": "Solver Agent: an Agentic AI Framework for Theoretical Physics Computations Applied to F-theory Uplifts of O3-planes and S-folds",
+  "authors": [
+    "Eliott Morgensztern",
+    "Cesar Fierro Cota",
+    "Alessandro Mininno"
+  ],
+  "summary": "We introduce Solver Agent, an AI framework based on large language models for calculations and proofs in mathematics and theoretical physics. The solution process is tracked through a persistent ledger that records assumptions, derivations, and computations. A central agent delegates tasks to specialized sub-agents, while independent agents verify both intermediate steps and the final result. This setup improves the traceability, reproducibility, and verification of computer-assisted calculations. Applying Solver Agent, we study global F-theory uplifts of Type IIB orientifolds and their…",
+  "domain": "hep-th",
+  "tags": [
+    "hep-th",
+    "cs.AI",
+    "math-ph",
+    "math.AG"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2602.05224",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05224",
+  "title": "Quantum-Inspired Algorithm for Classical Spin Hamiltonians Based on Matrix Product Operators",
+  "authors": [
+    "Ryo Watanabe",
+    "Joseph Tindall",
+    "Shohei Miyakoshi",
+    "Hiroshi Ueda"
+  ],
+  "summary": "We propose a tensor-network (TN) approach for solving classical optimization problems that is inspired by spectral filtering and sampling on quantum states. We first shift and scale an Ising Hamiltonian of the cost function so that all eigenvalues become non-negative and the ground states correspond to the the largest eigenvalues, which are then amplified by power iteration. We represent the transformed Hamiltonian as a matrix product operator (MPO) and form an immense power of this object via truncated MPO-MPO contractions, embedding the resulting operator into a matrix product state for…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.dis-nn"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-02-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

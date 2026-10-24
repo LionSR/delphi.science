@@ -1,0 +1,22 @@
+{
+  "key": "2603.20127",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20127",
+  "title": "Analyzing Decoders for Quantum Error Correction",
+  "authors": [
+    "Abtin Molavi",
+    "Feras Saad",
+    "Aws Albarghouthi"
+  ],
+  "summary": "Quantum error correction (QEC) enables reliable computation on noisy hardware by encoding logical information across many physical qubits and periodically measuring parities to detect errors. A decoder is the classical algorithm that uses these measurements to infer which error most likely occurred, so that the system can correct it. The decoder's accuracy-how rarely it makes the wrong guess-directly determines the scale of quantum computation that can be reliably executed. With a wealth of competing decoding algorithms, a QEC system designer needs reliable methods to evaluate them. Today,…",
+  "domain": "cs.PL",
+  "tags": [
+    "cs.PL",
+    "quant-ph"
+  ],
+  "published": "2026-03-20",
+  "updated": "2026-03-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

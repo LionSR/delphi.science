@@ -1,0 +1,22 @@
+{
+  "key": "2601.03343",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.03343",
+  "title": "Optimizing Fault-tolerant Cat State Preparation",
+  "authors": [
+    "Tom Peham",
+    "Erik Weilandt",
+    "Robert Wille"
+  ],
+  "summary": "Cat states are an important resource for fault-tolerant quantum computing, where they serve as building blocks for a variety of fault-tolerant primitives. Consequently, the ability to prepare high-quality cat states at large fault distances is essential. While optimizations for low fault distances or small numbers of qubits exist, higher fault distances can be achieved via generalized constructions with potentially suboptimal circuit sizes. In this work, we propose a cat state preparation scheme based on preparing two cat states with low-depth circuits, followed by a transversal CNOT and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-01-06",
+  "updated": "2026-01-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

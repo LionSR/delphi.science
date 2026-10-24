@@ -1,0 +1,28 @@
+{
+  "key": "2608.24527",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.24527",
+  "title": "Provable Quantum-Classical Separation for Continuous Gibbs Sampling",
+  "authors": [
+    "Enrico Olivucci",
+    "Mariia Sobchuk",
+    "Sehmimul Hoque",
+    "Jeffrey Hnybida",
+    "Kyungho W. Kim",
+    "Ala Shayeghi",
+    "Pooya Ronagh"
+  ],
+  "summary": "We prove the first quantum-classical separation for a sampling problem over a continuous domain. For a class of Gibbs states $p\\propto e^{-βE}$ on the torus $\\mathbb{T}^d$ with smooth ($s$-Gevrey) potential and barrier amplitude $α=e^{βΔ}$, where $Δ= \\max E-\\min E$, every classical algorithm querying the value, gradient, or any higher-order derivatives of the log-density requires $Ω(α)$ queries to sample at constant accuracy in total variation distance, while a quantum algorithm based on quantum singular value thresholding and temperature annealing samples with $\\tilde{O}\\left(\\sqrtα\\right)$…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS",
+    "cs.ET",
+    "cs.LG"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

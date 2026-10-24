@@ -1,0 +1,22 @@
+{
+  "key": "2608.14544",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.14544",
+  "title": "GPU implementation of mixed quantum-classical Liouville molecular dynamics without momentum jump",
+  "authors": [
+    "Koji Ando"
+  ],
+  "summary": "We implemented on GPU a mixed quantum-classical Liouville molecular dynamics simulation based on a momentum-jump-free theory. The trajectory spawning that was previously implemented on CPU for sampling enhancement was eliminated to avoid the overhead of thread divergence and dynamic memory allocation on the GPU. This achieved a speedup of an order of magnitude compared to the CPU computation with spawning, as well as a linear scaling with respect to the number of sampling trajectories.",
+  "domain": "physics.chem-ph",
+  "tags": [
+    "physics.chem-ph",
+    "cond-mat.mtrl-sci",
+    "physics.comp-ph",
+    "quant-ph"
+  ],
+  "published": "2026-08-14",
+  "updated": "2026-08-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

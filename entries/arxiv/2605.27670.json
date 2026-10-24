@@ -1,0 +1,21 @@
+{
+  "key": "2605.27670",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.27670",
+  "title": "Benchmarking Quantum Annealing for a Greenhouse-Inspired Control QUBO",
+  "authors": [
+    "Hamzeh Alavirad",
+    "Maryam Bahrami Zanjani"
+  ],
+  "summary": "We benchmark current annealing-based optimization workflows on a greenhouse-inspired quadratic unconstrained binary optimization problem for binary heater scheduling, where the horizon H denotes the number of hourly control decisions. For the main one-day instance (H=24), all solver outputs are decoded back into heater schedules and evaluated in the original greenhouse simulator using the same physical objective and feasibility criterion. Classical simulated annealing and path-integral simulated quantum annealing produce feasible near-optimal solutions in all repetitions, with best…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "hep-th"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

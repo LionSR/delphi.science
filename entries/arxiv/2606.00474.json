@@ -1,0 +1,23 @@
+{
+  "key": "2606.00474",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.00474",
+  "title": "Complexity of tensor network simulation for noisy quantum circuits",
+  "authors": [
+    "Yuguo Shao",
+    "Zishuo Zhao",
+    "Song Cheng",
+    "Zhengwei Liu"
+  ],
+  "summary": "We aim to rigorously address how local noise affects classical simulability of quantum dynamics benchmarked by tensor-network methods. Using operator entanglement entropy (OEE), we prove the following: (1) For single-qubit depolarizing noise on arbitrary circuits, tensor networks with $\\mathrm{poly}(n)$ bond dimension suffice for fixed absolute Hilbert-Schmidt error after $\\order{1}$ depth, while relative error demands $\\order{\\log n}$ depth; and this bound is optimal. (2) For single-qubit depolarizing noise on 1D local circuits, the existence of whole-trajectory error-bounded matrix product…",
+  "domain": "cond-mat.str-el",
+  "tags": [
+    "cond-mat.str-el",
+    "quant-ph"
+  ],
+  "published": "2026-05-30",
+  "updated": "2026-05-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

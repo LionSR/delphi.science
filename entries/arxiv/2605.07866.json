@@ -1,0 +1,22 @@
+{
+  "key": "2605.07866",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.07866",
+  "title": "Hybrid Quantum-Classical Logistic Regression for Calibrated Classification of Pulsar Candidates",
+  "authors": [
+    "Chanelle Matadah Manfouo",
+    "Donovan Slabbert",
+    "Prince Koree Osei",
+    "Francesco Petruccione"
+  ],
+  "summary": "Reliable pulsar candidate ranking requires probability estimates that are not only discriminative but also well calibrated. We evaluate hybrid quantum-calssical logistic regression on the imbalanced HTRU-2 dataset using three quantum feature encodings: angle encoding, amplitude encoding, and data re-uploading. The models are trained using analytic gradients and compared with classical baselines and a quantum support vector machine reference model under a paired-seed protocol. Evaluation combines rare-event discrimination, low-false-positive-rate recovery, probability calibration, and runtime…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-08",
+  "updated": "2026-05-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

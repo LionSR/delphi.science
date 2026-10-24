@@ -1,0 +1,22 @@
+{
+  "key": "2601.17757",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.17757",
+  "title": "Simple, Efficient, and Generic Post-Selection Decoding for qLDPC Codes",
+  "authors": [
+    "Haipeng Xie",
+    "Nobuyuki Yoshioka",
+    "Kento Tsubouchi",
+    "Ying Li"
+  ],
+  "summary": "Quantum error correction is indispensable for scalable quantum computation. Although encoding logical qubits substantially enhances noise resilience, achieving logical error rates low enough for practical algorithms remains challenging on existing hardware. Here we introduce argument reweighting, a simple and broadly applicable post-selection decoding strategy that boosts the performance of maximum-likelihood-type decoders, including minimum-weight perfect matching and belief-propagation families. The method suppresses logical errors by performing additional decoding rounds under reweighted…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-25",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

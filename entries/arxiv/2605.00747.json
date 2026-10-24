@@ -1,0 +1,22 @@
+{
+  "key": "2605.00747",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.00747",
+  "title": "Quantum Interval Bound Propagation for Certified Training of Quantum Neural Networks",
+  "authors": [
+    "Emma Andrews",
+    "Nahyeon Kim",
+    "Prabhat Mishra"
+  ],
+  "summary": "Quantum machine learning is a promising field for efficiently learning features of a dataset to perform a specified task, such as classification. Interval bound propagation (IBP) is a popular certified training method in classical machine learning, where the lower and upper bounds are tracked throughout the model. These bounds are used during training to ensure that the model is certified to predict the correct label even under adversarial perturbations. While IBP is successful in classical domain, there are limited certified training efforts in quantum domain. In this paper, we present…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-05-01",
+  "updated": "2026-05-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

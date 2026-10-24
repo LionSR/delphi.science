@@ -1,0 +1,26 @@
+{
+  "key": "2607.09882",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.09882",
+  "title": "Benchmarking Zero-Setup Quantum Circuit Simulators",
+  "authors": [
+    "Arul Rhik Mazumder",
+    "Hovnatan Karapetyan",
+    "Mohammed Zuhair Mullath",
+    "Rudy H. Tanin",
+    "Hrant Gharibyan",
+    "Hayk Tepanyan"
+  ],
+  "summary": "Practitioners increasingly rely on hosted simulation environments, but their performance characteristics remain poorly documented. We present a systematic benchmarking study of GPU-accelerated approximate quantum simulation across two widely used methods: matrix product states (MPS) and Pauli path simulation (PPS), comparing BlueQubit (a hosted tool that handles hardware provisioning, simulator configuration, and job orchestration) against AWS Braket, Quantum Rings, Qiskit pauli-prop, and PauliPropagation (written in Julia). For MPS, we find that GPU runtime yields sub-quadratic scaling with…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DC",
+    "cs.PF"
+  ],
+  "published": "2026-07-10",
+  "updated": "2026-09-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

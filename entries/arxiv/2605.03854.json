@@ -1,0 +1,21 @@
+{
+  "key": "2605.03854",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.03854",
+  "title": "Space-Time Tradeoffs of Pauli-Based Computation in Distributed qLDPC Architectures",
+  "authors": [
+    "Naphan Benchasattabuse",
+    "Michal Hajdušek",
+    "Rodney Van Meter"
+  ],
+  "summary": "Pauli-based computation (PBC) provides a universal framework for executing fault-tolerant quantum algorithms using Pauli measurements and magic states. In monolithic architectures, the serialized nature of PBC directly ties runtime to a circuit's T-gate count, making it slow on metrics like circuit depth. However, in distributed quantum computing (DQC), the primary bottleneck is remote Bell pair generation. We investigate the tradeoff between error-correcting code block size and execution time of PBC within the Q-Fly architecture at intermediate scale, limiting individual node capacities to…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-05-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

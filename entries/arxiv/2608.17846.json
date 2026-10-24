@@ -1,0 +1,21 @@
+{
+  "key": "2608.17846",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17846",
+  "title": "Quantum Circuit for General Unitary: Improved T-count via Block Flattening and Dilation",
+  "authors": [
+    "Pei Yuan",
+    "Shengyu Zhang",
+    "Wei Zi"
+  ],
+  "summary": "Synthesizing arbitrary $n$-qubit unitaries using as few non-Clifford gates as possible is a central problem in fault-tolerant quantum compilation. We present a Clifford+$T$ quantum circuit construction that approximately implements any classically specified unitary to within error $ε$ and achieves a worst-case $T$-count with leading exponential scaling of $2^{5n/4}$ whenever $\\log(1/ε)=\\operatorname{poly}(n)$. This improves upon the best previous $2^{4n/3}$ scaling. The key innovation lies in treating the target unitary as a single block-encoded object rather than a long product of simpler…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

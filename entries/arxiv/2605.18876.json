@@ -1,0 +1,20 @@
+{
+  "key": "2605.18876",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.18876",
+  "title": "Statistical Quantum Phase Estimation: Extensions and Practical Considerations",
+  "authors": [
+    "Amit Surana",
+    "Brandon Allen"
+  ],
+  "summary": "We present several refinements and extensions of the statistical quantum phase estimation (SQPE) framework to address some of its key practical limitations, improving its applicability to realistic cases. Recently, a family of statistical approaches for QPE have been proposed where each run uses only a few ancillae and shorter circuits than standard QPE and thus is better suited for early fault-tolerant quantum computers that are qubit-and depth-limited. SQPE method within that family estimates the cumulative distribution function (CDF) associated with spectral density of the Hamiltonian for…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-15",
+  "updated": "2026-05-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

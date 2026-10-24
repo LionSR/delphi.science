@@ -1,0 +1,22 @@
+{
+  "key": "2610.23415",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.23415",
+  "title": "ConQUESTA: Topology-Aware Post-Training Structural Pruning of Quantum Neural Networks",
+  "authors": [
+    "Saim Rehman",
+    "Muhammad Shafique"
+  ],
+  "summary": "Deploying quantum neural networks (QNNs) on sparse hardware requires preserving task accuracy while reducing compiler-induced two-qubit gates, SWAPs, and depth. We present ConQUESTA (\\underline{C}onstrained \\underline{Qu}antum \\underline{E}ntangler \\underline{S}election with \\underline{T}opology \\underline{A}wareness), a post training pruning framework that combines task saliency with compiler cost, screens candidate entanglers, and searches complete pruning masks under an explicit accuracy constraint. Unlike one-shot ranking, each mask is transpiled as a whole across multiple coupling…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AR",
+    "eess.SY"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

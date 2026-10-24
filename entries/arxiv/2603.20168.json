@@ -1,0 +1,21 @@
+{
+  "key": "2603.20168",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20168",
+  "title": "Certified Quantum Schrödinger Control via Hierarchical Tucker Models",
+  "authors": [
+    "Nahid Binandeh Dehaghani",
+    "Rafal Wisniewski",
+    "A. Pedro Aguiar"
+  ],
+  "summary": "High-dimensional Schrödinger systems arising from tensor-product discretizations suffer from exponential state growth, making direct controller synthesis and real-time closed-loop simulation computationally challenging. Hierarchical Tucker (HT) tensor representations offer scalable low-rank surrogates, but the impact of fixed-rank truncation on closed-loop stability is not well understood. This paper develops a local robustness framework for sampled-data feedback control implemented with fixed-rank HT projections. By viewing each truncation as a bounded, rank-dependent perturbation of the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-20",
+  "updated": "2026-03-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

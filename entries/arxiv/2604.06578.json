@@ -1,0 +1,20 @@
+{
+  "key": "2604.06578",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.06578",
+  "title": "Database Reordering for Compact Grover Oracles with ESOP Minimization",
+  "authors": [
+    "Yusuke Kimura",
+    "Yutaka Takita"
+  ],
+  "summary": "Grover's algorithm searches for data satisfying a desired condition in an unstructured database. This algorithm can search a space of size $N$ in $\\sqrt{N}$ queries, thereby achieving a quadratic speedup. However, within the Grover oracle circuit that is repeatedly applied, the quantum state preparation circuit -- which embeds database information into quantum states -- suffers from a large gate count and circuit depth. To address this problem, we propose reducing the quantum state preparation circuit by reordering the database. Specifically, we consider a Quantum Read-Only Memory (QROM),…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-08",
+  "updated": "2026-04-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

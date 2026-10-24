@@ -1,0 +1,25 @@
+{
+  "key": "2610.29050",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.29050",
+  "title": "Buffer-Qubit-Based Quantum Circuit Allocation Method Against Crosstalk Attacks",
+  "authors": [
+    "Haruki Nakayama",
+    "Satoyuki Tsukano",
+    "Satoshi Kono",
+    "Keita Matsumoto",
+    "Toshio Mori",
+    "Takumi Oikawa",
+    "Ryo Uchida"
+  ],
+  "summary": "Quantum Multi-Programming (QMP) enables the simultaneous execution of quantum circuits from multiple users on a single quantum chip in cloud quantum computing services. However, QMP is vulnerable to crosstalk attacks, in which a malicious user deliberately induces crosstalk to disrupt other users' computations. As a countermeasure, prior work has proposed the use of buffer qubits, which remain idle and are allocated between quantum circuits to suppress the effect of crosstalk. Nevertheless, to the best of our knowledge, such countermeasures have not been publicly reported in production…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

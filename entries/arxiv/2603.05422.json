@@ -1,0 +1,31 @@
+{
+  "key": "2603.05422",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.05422",
+  "title": "Interleaved Benchmarking with Single-Qubit References",
+  "authors": [
+    "Ilya A. Simakov",
+    "Arina V. Zotova",
+    "Tatyana A. Chudakova",
+    "Alena S. Kazmina",
+    "Artyom M. Polyanskiy",
+    "Nikolay N. Abramov",
+    "Mikhail A. Tarkhov",
+    "Alexander M. Mumlyakov",
+    "Igor V. Trofimov",
+    "Nikita Yu. Rudenko",
+    "Maxim V. Chichkov",
+    "Vladimir I. Chichkov",
+    "Grigoriy S. Mazhorin"
+  ],
+  "summary": "Cross-entropy benchmarking (XEB) with single-qubit reference sequences is widely used to characterize multi-qubit gates in large-scale quantum processors, despite the lack of a rigorous theoretical justification. Here we show that the commonly employed additive single-qubit errors approximation underlying this approach breaks down and leads to a systematic overestimation of gate fidelities. We derive an analytical expression for the joint decay of simultaneous single-qubit reference sequences, identify when interleaved circuits generate sufficient randomization for the standard depolarizing…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-05",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

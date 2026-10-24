@@ -1,0 +1,22 @@
+{
+  "key": "2608.03472",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.03472",
+  "title": "Matrix Product Evolution: A Method for Simulating Quantum Circuits Using Tensor Networks",
+  "authors": [
+    "Haruyuki Kawabe",
+    "Minoru Nagai",
+    "Tsuyoshi Okubo",
+    "Synge Todo"
+  ],
+  "summary": "Classical simulation of quantum circuits is an essential tool in quantum information science, but its applicability is constrained by the exponential growth of the Hilbert space and the entanglement structure of quantum states. In this work, we introduce Matrix Product Evolution (MPE), a tensor-train representation of quantum circuits constructed along the circuit depth rather than along the qubit index. Within this formulation, the simulation of a quantum circuit is modeled as the contraction of multiple MPE tensors. We develop an efficient contraction strategy based on a zip-up procedure…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

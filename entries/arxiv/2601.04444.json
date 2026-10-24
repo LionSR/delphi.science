@@ -1,0 +1,23 @@
+{
+  "key": "2601.04444",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.04444",
+  "title": "Nearly Time-Optimal Pure State Tomography with Pauli Measurements",
+  "authors": [
+    "Sabee Grewal",
+    "Meghal Gupta",
+    "William He",
+    "Aniruddha Sen",
+    "Mihir Singhal"
+  ],
+  "summary": "We give an algorithm for pure state tomography with near-optimal copy and time complexity using only single-qubit measurements. Specifically, given $\\widetilde{O}(2^n/ε)$ copies of an unknown $n$-qubit pure state $|ψ\\rangle$, the algorithm performs only nonadaptive Pauli measurements, runs in time $\\widetilde{O}(2^n/ε)$, and outputs $|\\widehatψ \\rangle$ with fidelity at least $1-ε$ with $|ψ\\rangle$ with high probability. This is the first algorithm for pure state tomography that achieves near-optimal running time.",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-07",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

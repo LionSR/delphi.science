@@ -1,0 +1,23 @@
+{
+  "key": "2609.16352",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.16352",
+  "title": "qdmag: A Python package for simulating nonequilibrium magnetization of molecules using quantum master equations",
+  "authors": [
+    "Shuanglong Liu",
+    "Xiao Chen",
+    "Andrew Cupo",
+    "James N. Fry",
+    "Hai-Ping Cheng"
+  ],
+  "summary": "We present qdmag, a computational utility for calculating the magnetization of magnetic molecules in a time-varying external magnetic field by solving a generalized Lindblad quantum master equation with spin-phonon coupling treated as a dissipation term. The package relies on the spin Hamiltonian formalism, which includes both the magnetic exchange interactions and the zero-field splitting (ZFS) interaction. Different types of magnetic exchange interaction and ZFS terms up to 12th order, which are written in terms of the extended Stevens operators, are supported. qdmag enables long-time…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

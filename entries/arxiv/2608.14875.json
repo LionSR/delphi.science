@@ -1,0 +1,25 @@
+{
+  "key": "2608.14875",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.14875",
+  "title": "When do machine-learned exchange-correlation improvements inherit into density-functional tight binding?",
+  "authors": [
+    "Can Polat",
+    "Mustafa Kurban",
+    "Erchin Serpedin",
+    "Hasan Kurban"
+  ],
+  "summary": "Machine-learned exchange-correlation functionals correct band gaps at near-semilocal cost, while density-functional tight binding reaches the $10^3$-$10^6$-atom regime; combining them assumes that a better parent yields a better parameterization, but we show it does not. Current-generation functionals are orbital-dependent generalized Kohn-Sham operators, whereas the parameterization channel is built on a multiplicative potential, preventing exact representation. Using the transfer ratio, the surviving fraction of a parent-level change, we find anti-transfer: coherently negative ratios…",
+  "domain": "cond-mat.mtrl-sci",
+  "tags": [
+    "cond-mat.mtrl-sci",
+    "cs.LG",
+    "physics.chem-ph",
+    "quant-ph"
+  ],
+  "published": "2026-08-14",
+  "updated": "2026-08-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

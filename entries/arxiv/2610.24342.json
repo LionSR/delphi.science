@@ -1,0 +1,22 @@
+{
+  "key": "2610.24342",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.24342",
+  "title": "Quantum-Classical Iterative Refinement for the Pressure-Poisson Equation on NISQ Hardware",
+  "authors": [
+    "Doyeol \"David\" Ahn",
+    "Byeongyong Park",
+    "Rho Shin Myong",
+    "Franz Klein"
+  ],
+  "summary": "We present a hybrid quantum-classical iterative refinement for the pressure-Poisson equation of the incompressible Navier-Stokes projection method on noisy quantum hardware. Rather than solving the pressure equation once per time step, we solve it repeatedly for the normalized residual and scale each quantum direction by a least-squares fit to the physical residual. As a result, the error of the quantum solve enters as a contraction factor $\\sinθ_k$ of the residual rather than as an error floor. This removes the requirement of a state infidelity below $10^{-7}$ that was estimated for…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-17",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2610.21469",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.21469",
+  "title": "Limits of adaptive two-way linear postprocessing in six-state quantum key distribution",
+  "authors": [
+    "Toyohiro Tsurumaru"
+  ],
+  "summary": "Two-way classical communication improves the noise tolerance of quantum key distribution, but the limits of adaptive parity processing remain unclear. For the six-state protocol with equal three-basis error rate $p\\in[p_*,1/2]$, where $p_*=(5-\\sqrt5)/10\\simeq27.64\\%$, we construct a single compatible collective attack that defeats a broad class of linear postprocessing. Each public message may be a linear function of the sender's raw key, chosen adaptively from the public history. For every finite input length and every accepted transcript of positive probability, Eve's optimal probability…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

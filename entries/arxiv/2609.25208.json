@@ -1,0 +1,25 @@
+{
+  "key": "2609.25208",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.25208",
+  "title": "Adaptive thresholding for scalable measurement-based qubit reset",
+  "authors": [
+    "Qian Cao",
+    "Unnati Akhouri",
+    "Samuel Vizvary",
+    "Nissim Ofek",
+    "Wei Dai",
+    "Kater W. Murch"
+  ],
+  "summary": "Fast, high-fidelity qubit initialization is a key primitive for scalable quantum information processing, but conventional reset protocols either require long relaxation times or discard information contained in continuous measurement records. We demonstrate an adaptive measurement-based reset protocol for superconducting qubits that uses Bayesian inference to update the qubit-state estimate after each readout and dynamically adjust the feedback threshold. Unlike fixed-threshold or repeat-until-success (RUS) protocols, the method utilizes the full analog measurement history, enabling the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.stat-mech"
+  ],
+  "published": "2026-09-21",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

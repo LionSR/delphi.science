@@ -1,0 +1,23 @@
+{
+  "key": "2607.06230",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06230",
+  "title": "Entanglement as a Structural Complexity Axis: A PAC-Bayesian View of Generalization in Quantum Policies and Value Functions",
+  "authors": [
+    "Jian Xu",
+    "Delu Zeng",
+    "John Paisley",
+    "Qibin Zhao"
+  ],
+  "summary": "Parameterized quantum circuits (PQCs) are increasingly used as policies and value functions in quantum reinforcement learning, yet it remains unclear when and why quantum policies generalize. We give a PAC-Bayesian account in which generalization is governed not by the raw number of circuit parameters, but by the effective dimension of the Fisher geometry induced by the circuit. This quantity is inflated by entanglement, making entangling connectivity an independent axis of complexity.In controlled experiments that fix the number of trainable rotations and vary only entanglement, we find…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,27 @@
+{
+  "key": "2608.12938",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.12938",
+  "title": "Encoding Circuit Satisfiability in Rydberg Atom Arrays",
+  "authors": [
+    "Haotian Ji",
+    "Zhangjie Qin",
+    "Zheng An",
+    "Bowen Yan",
+    "Daoheng Niu",
+    "Kunzhe Dai",
+    "Jingkai Fang",
+    "Dongyang Cao",
+    "Jiangyu Cui"
+  ],
+  "summary": "Rydberg atom arrays natively encode the maximum-weight independent set (MWIS) problem through the blockade mechanism, so the Boolean circuit satisfiability problem (Circuit-SAT) can be brought onto the platform once it is reduced to MWIS. The conventional encoding of Circuit-SAT in the Rydberg atom array proceeds through conjunctive normal form (CNF) and incurs a substantial atom overhead. We introduce CAMERA (Circuit-SAT Atom-efficient MWIS Encoding for Rydberg Arrays), a method that provides MWIS encodings of Circuit-SAT instances on the king subgraph geometry of the array. CAMERA…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

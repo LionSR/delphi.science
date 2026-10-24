@@ -1,0 +1,23 @@
+{
+  "key": "2603.24052",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.24052",
+  "title": "Data-driven synthesis of high-fidelity triaxial magnetic waveforms for quantum control",
+  "authors": [
+    "Giuseppe Bevilacqua",
+    "Valerio Biancalana",
+    "Roberto Cecchi"
+  ],
+  "summary": "We present a system for generating arbitrary, triaxial magnetic waveforms with a spectral content spanning from DC to tens of kHz, a critical capability for quantum control and spin manipulation. To compensate for amplifier-coil dynamics, we implement a data-driven approach to identify a numerical compensation model. The method parametrizes the system response using a Finite Impulse Response (FIR) filter calibrated on the specific waveform to be generated. The application of a driving signal designed via frequency-domain inversion of the identified model enables the synthesis of complex…",
+  "domain": "physics.ins-det",
+  "tags": [
+    "physics.ins-det",
+    "physics.app-ph",
+    "quant-ph"
+  ],
+  "published": "2026-03-25",
+  "updated": "2026-03-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

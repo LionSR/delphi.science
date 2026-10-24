@@ -1,0 +1,22 @@
+{
+  "key": "2609.23050",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.23050",
+  "title": "A Coherent Memory Register for Sequential Quantum Generative Modeling, with Application to Calorimeter Showers",
+  "authors": [
+    "Jamal Slim. Saverio Monaco",
+    "Ran Xue",
+    "Dirk Kruecker",
+    "Kerstin Borras"
+  ],
+  "summary": "Simulating the showers that particles deposit in a calorimeter, the detector that records their energy across many cells, is one of the largest computing costs in high-energy physics, and fast generative surrogates are needed. Quantum circuits have been proposed as such surrogates, but demonstrations on calorimeter data have either required a register that grows with the image, roughly one qubit per cell, or have passed the information between parts of the image through a classical channel. We remove both constraints for this problem, using a construction drawn from the sequential-generation…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-19",
+  "updated": "2026-09-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

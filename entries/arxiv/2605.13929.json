@@ -1,0 +1,20 @@
+{
+  "key": "2605.13929",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.13929",
+  "title": "Linear-Time T-Gate Optimization via Random Abstraction",
+  "authors": [
+    "Aws Albarghouthi"
+  ],
+  "summary": "Quantum computers promise exponential speedups for problems in cryptography, chemistry, and optimization. Realizing this promise requires fault tolerance: physical qubits are noisy, so logical qubits must be encoded redundantly across many physical ones using quantum error-correcting codes. In most practical fault-tolerance schemes, T gates cannot be implemented transversally and instead require costly magic-state distillation protocols involving a complex set of operations. As a result, T-gate count can dominate the resource budget of large-scale quantum computations, making T-count…",
+  "domain": "cs.PL",
+  "tags": [
+    "cs.PL",
+    "quant-ph"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-07-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

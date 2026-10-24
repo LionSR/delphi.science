@@ -1,0 +1,22 @@
+{
+  "key": "2604.07856",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.07856",
+  "title": "Hardware-Aware Quantum Support Vector Machines",
+  "authors": [
+    "Adil Mubashir Chaudhry",
+    "Ali Raza Haider",
+    "Hanzla Khan",
+    "Muhammad Faryad"
+  ],
+  "summary": "Deploying quantum machine learning algorithms on near-term quantum hardware requires circuits that respect device-specific gate sets, connectivity constraints, and noise characteristics. We present a hardware-aware Neural Architecture Search (NAS) approach for designing quantum feature maps that are natively executable on IBM quantum processors without transpilation overhead. Using genetic algorithms to evolve circuit architectures constrained to IBM Torino native gates (ECR, RZ, SX, X), we demonstrate that automated architecture search can discover quantum Support Vector Machine (QSVM)…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-09",
+  "updated": "2026-04-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

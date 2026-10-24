@@ -1,0 +1,21 @@
+{
+  "key": "2608.10789",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.10789",
+  "title": "Resource-bounded controllability benchmarking of open quantum systems",
+  "authors": [
+    "Yule Mayevsky",
+    "Akram Youssry",
+    "Alberto Peruzzo"
+  ],
+  "summary": "This paper develops a resource-bounded framework for evaluating practical controllability in open quantum systems using a trained graybox response model. Rather than treating controllability as a binary property of an idealised Hamiltonian model, the proposed approach evaluates the best-achievable process fidelity over a finite, hardware-realisable pulse family under explicit control constraints. The graybox model retains the known coherent dynamics while learning control-dependent open-system distortions from pulse-response data. The resulting surrogate predictions are used to reconstruct…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-11",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

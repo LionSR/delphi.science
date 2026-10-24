@@ -1,0 +1,23 @@
+{
+  "key": "2610.13879",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.13879",
+  "title": "GPU-Based Parallel BP Decoding for Quantum LDPC Memory",
+  "authors": [
+    "Ming Wang",
+    "Yanbo Zhao",
+    "Ang Li",
+    "Frank Mueller"
+  ],
+  "summary": "Quantum low-density parity-check (qLDPC) decoding requires reliable corrections and low latency over long syndrome histories. We extend BP-SF, an oscillation-guided belief-propagation (BP) decoder with independent syndrome-flip trials, by introducing windowed and streaming operations. Our CUDA implementation combines disordered-memory retries, sliding windows, correlation-aware graphs, and layered scheduling. Circuit-level simulations test fixed-basis memory and complete logical Pauli-frame recovery. On the [[144,12,12]] bivariate bicycle code at physical error rate p = 0.002, parallel BP-SF…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.IT"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

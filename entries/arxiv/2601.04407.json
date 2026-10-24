@@ -1,0 +1,22 @@
+{
+  "key": "2601.04407",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.04407",
+  "title": "Exact Multimode Quantization of Superconducting Circuits via Boundary Admittance and Continued Fractions",
+  "authors": [
+    "Mustafa Bakr",
+    "Robin Wopalenski"
+  ],
+  "summary": "Accurate extraction of linearized quantum circuit models from electromagnetic simulations is essential for the design of superconducting circuits. We present a quantization framework based on the driving-point admittance $Y_{\\mathrm{in}}(s)$ seen by a Josephson junction embedded in an arbitrary passive linear environment. By taking the Schur complement of the nodal admittance matrix, we show that the linearized coupled system obeys an eigenvalue-dependent boundary condition, $s Y_{\\mathrm{in}}(s) + 1/L_J = 0$, whose roots determine the dressed linear mode frequencies. This boundary condition…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.mes-hall",
+    "math-ph"
+  ],
+  "published": "2026-01-07",
+  "updated": "2026-02-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

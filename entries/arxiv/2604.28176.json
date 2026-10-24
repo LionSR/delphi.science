@@ -1,0 +1,22 @@
+{
+  "key": "2604.28176",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.28176",
+  "title": "Defending Quantum Classifiers against Adversarial Perturbations through Quantum Autoencoders",
+  "authors": [
+    "Emma Andrews",
+    "Sahan Sanjaya",
+    "Prabhat Mishra"
+  ],
+  "summary": "Machine learning models can learn from data samples to carry out various tasks efficiently. When data samples are adversarially manipulated, such as by insertion of carefully crafted noise, it can cause the model to make mistakes. Quantum machine learning models are also vulnerable to such adversarial attacks, especially in image classification using variational quantum classifiers. While there are promising defenses against these adversarial perturbations, such as training with adversarial samples, they face practical limitations. For example, they are not applicable in scenarios where…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-04-30",
+  "updated": "2026-04-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

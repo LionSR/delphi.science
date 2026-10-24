@@ -1,0 +1,24 @@
+{
+  "key": "2603.25101",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.25101",
+  "title": "Gradient-Based Optimization Enables Scalable Fault-Tolerant Quantum Gate Synthesis",
+  "authors": [
+    "Marc Grau Davis",
+    "Ed Younis",
+    "Mathias Weiden",
+    "Hyeongrak Choi",
+    "Dirk Englund"
+  ],
+  "summary": "We develop a numerical approach to optimizing a quantum circuit over a discrete gate set by using gradient descent to tune $R_Z$ angles to a solution where many $R_Z$ gates can be rounded to a Clifford or $T$ gate without introducing further synthesis error. Through benchmarking, we show that our approach is able to match state-of-the-art techniques for multi-qubit Clifford + $T$ circuit synthesis, and is able to find circuits for unitaries that previous approaches fail to find solutions for. Our approach can adapt to any discrete gate set, which we demonstrate using the Clifford + $T$ +…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-03-26",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

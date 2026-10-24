@@ -1,0 +1,23 @@
+{
+  "key": "2601.20681",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.20681",
+  "title": "Co-Designed Adaptive Quantum State Preparation Protocols",
+  "authors": [
+    "Mafalda Ramôa",
+    "Luis Paulo Santos",
+    "Nicholas J. Mayhall",
+    "Edwin Barnes",
+    "Sophia E. Economou"
+  ],
+  "summary": "We propose a co-designed variant of ADAPT-VQE (Co-ADAPT-VQE) where the quantum hardware is taken into account in the construction of the ansatz. This framework can be readily used to optimize state preparation circuits for any device, addressing shortcomings such as limited connectivity, short coherence times, and variable gate errors. We exemplify the impact of Co-ADAPT-VQE by creating state preparation circuits for devices with linear nearest-neighbor (LNN) connectivity. We show a reduction of the CNOT count of the final circuits by up to 97% for 12-14 qubit systems, with the impact being…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-28",
+  "updated": "2026-01-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,27 @@
+{
+  "key": "2604.06265",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.06265",
+  "title": "SMT-AD: a scalable quantum-inspired anomaly detection approach",
+  "authors": [
+    "Apimuk Sornsaeng",
+    "Si Min Chan",
+    "Wenxuan Zhang",
+    "Swee Liang Wong",
+    "Joshua Lim",
+    "Jonathan Pan",
+    "Dario Poletti"
+  ],
+  "summary": "Quantum-inspired tensor networks algorithms have shown to be effective and efficient models for machine learning tasks, including anomaly detection. Here, we propose a highly parallelizable quantum-inspired approach which we call SMT-AD from Superposition of Multiresolution Tensors for Anomaly Detection. It is based upon the superposition of bond-dimension-1 matrix product operators to transform the input data with Fourier-assisted feature embedding, where the number of learnable parameters grows linearly with feature size, embedding resolutions, and the number of additional components in…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cond-mat.stat-mech",
+    "quant-ph"
+  ],
+  "published": "2026-04-07",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

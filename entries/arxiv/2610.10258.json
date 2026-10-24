@@ -1,0 +1,26 @@
+{
+  "key": "2610.10258",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.10258",
+  "title": "QuSema: Detecting Silent Bugs in Quantum Libraries via Quantum-knowledge-enhanced Agents",
+  "authors": [
+    "Yujin Song",
+    "Kaining Zhang",
+    "Qixin Zhang",
+    "Shuai Wang",
+    "Pingchuan Ma",
+    "Yuxuan Du"
+  ],
+  "summary": "Quantum libraries are now critical infrastructure for quantum algorithm development, yet their correctness remains difficult to test. Existing testing techniques mainly rely on failure-based or comparison-based oracles, exposing bugs only when executions fail, violate runtime checks, or disagree with another implementation. Their applicability is limited when suitable execution-based oracles are unavailable, leaving some silent bugs undetected. Such missed bugs can produce incorrect results that propagate into experimental conclusions, simulation studies, and algorithmic designs. Here we…",
+  "domain": "cs.SE",
+  "tags": [
+    "cs.SE",
+    "cs.AI",
+    "quant-ph"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2605.26544",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.26544",
+  "title": "Adaptive Shot Allocation for Recursive QAOA via Reinforcement Learning",
+  "authors": [
+    "Euimin Lee",
+    "Shiho Kim"
+  ],
+  "summary": "Recursive QAOA (RQAOA) solves combinatorial optimization problems by using shallow quantum circuits to estimate pairwise correlations and recursively eliminate variables until a classical solver can handle the residual instance. Each elimination step requires measurement shots, and the total shot cost grows with the number of recursive stages. On near-term quantum devices, increasing shot counts can translate directly into greater exposure to hardware-level noise sources such as readout errors and decoherence, making shot-efficient execution not merely a cost-reduction measure but a factor…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

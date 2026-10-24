@@ -1,0 +1,22 @@
+{
+  "key": "2606.23823",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.23823",
+  "title": "Wavelet Matrix Product States for Quantum Fields",
+  "authors": [
+    "Molly Kaplan",
+    "Antoine Tilloy"
+  ],
+  "summary": "We introduce a variational method to solve continuum quantum models with discrete tensor network techniques. The method leverages wavelet matrix product states (wMPS): matrix product states built on top of sufficiently regular ($N\\geq 6$) Daubechies scaling functions. These states live in the continuum field theory Fock space, have finite energy density, and can be optimized with standard algorithms, without restriction to free theories. Further, exploiting the multi-resolution analysis built into wavelets, and its quantum circuit description, we can iteratively refine wMPS to obtain…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.str-el",
+    "hep-th"
+  ],
+  "published": "2026-06-22",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

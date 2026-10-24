@@ -1,0 +1,24 @@
+{
+  "key": "2610.18029",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.18029",
+  "title": "Lossless Reductions and Hybrid Sampling for Phylogeny Using the Maximum Compatibility Criterion",
+  "authors": [
+    "Orson Ye",
+    "James Bonfield",
+    "Joshua Cudby",
+    "Richard Durbin",
+    "Sergii Strelchuk"
+  ],
+  "summary": "Maximum compatibility provides a criterion for phylogenetic reconstruction in which the objective is to retain a maximum set of mutually compatible characters. For binary characters, pairwise compatibility can be represented by a weighted graph whose vertices correspond to characters and whose edges connect compatible pairs. A leading algorithm by Cherry [BMC Bioinformatics, 18(1):127, 2017] uses this representation to identify maximum compatible character sets as maximum weight cliques. We formulate the problem as maximum weight independent set enumeration on the complement graph and use…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "q-bio.PE"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

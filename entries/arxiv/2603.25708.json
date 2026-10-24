@@ -1,0 +1,26 @@
+{
+  "key": "2603.25708",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.25708",
+  "title": "Provably Efficient Long-Time Exponential Decompositions of Non-Markovian Gaussian Baths",
+  "authors": [
+    "Zhen Huang",
+    "Zhiyan Ding",
+    "Ke Wang",
+    "Jason Kaye",
+    "Xiantao Li",
+    "Lin Lin"
+  ],
+  "summary": "Gaussian baths are widely used to model non-Markovian environments, yet the cost of accurate simulation at long times remains poorly understood, especially when spectral densities exhibit nonanalytic behavior as in a range of realistic models. We rigorously bound the complexity of representing bath correlation functions on a time interval $[0,T]$ by sums of complex exponentials, as employed in recent variants of pseudomode and hierarchical equations of motion methods. These bounds make explicit the dependence on the maximal simulation time $T$, inverse temperature $β$, and the type and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.str-el",
+    "math-ph"
+  ],
+  "published": "2026-03-26",
+  "updated": "2026-04-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

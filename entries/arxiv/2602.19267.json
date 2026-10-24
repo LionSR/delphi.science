@@ -1,0 +1,22 @@
+{
+  "key": "2602.19267",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.19267",
+  "title": "Reconstruction of Gravitational Form Factors using Generative Machine Learning",
+  "authors": [
+    "Herzallah Alharazin",
+    "Julia Yu. Panteleeva"
+  ],
+  "summary": "We develop a generative framework based on denoising diffusion for the model-independent reconstruction of hadronic form factors from sparse and noisy data. The generative prior is built from a large ensemble of synthetic curves drawn from ten distinct functional classes rooted in different theoretical approaches to hadron structure. Applied to the proton gravitational form factors $A(t)$, $J(t)$, and $D(t)$, the framework yields non-parametric reconstructions consistent with lattice QCD across the full kinematic range $0\\le -t\\le 2~\\mathrm{GeV}^{2}$, remaining robust even when only one or…",
+  "domain": "hep-ph",
+  "tags": [
+    "hep-ph",
+    "hep-lat",
+    "hep-th"
+  ],
+  "published": "2026-02-22",
+  "updated": "2026-06-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

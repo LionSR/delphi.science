@@ -1,0 +1,20 @@
+{
+  "key": "2608.06072",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.06072",
+  "title": "Balanced Routing for Symmetric Quantum Circuits",
+  "authors": [
+    "Samuel Punch"
+  ],
+  "summary": "Mapping quantum programs to restricted physical chips requires SWAP operations, incurring depth and error penalties. In symmetric programs, this routing overhead breaks theoretical symmetry because identical logical roles experience unequal shuffling. While often attributed to hardware topology alone, we show this is a two-level phenomenon. A qubit patch's shape dictates if it can host a balanced assignment. When balance is possible, the actual imbalance is set by the logical-to-physical assignment, meaning a balanced assignment can distribute routing costs perfectly evenly at no extra…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-08-06",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

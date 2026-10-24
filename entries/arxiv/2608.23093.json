@@ -1,0 +1,20 @@
+{
+  "key": "2608.23093",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.23093",
+  "title": "Partial-Moment PINNs for Caldeira--Leggett Parameter Learning in Quantum Brownian Motion",
+  "authors": [
+    "Krishna Bhatia"
+  ],
+  "summary": "We study parameter recovery in the Caldeira--Leggett (quantum Brownian) oscillator from partial moment traces. Our model is a moment-level PINN that predicts the five first/second moments and enforces the linear CL/HPZ ODEs by automatic differentiation. Physical structure is imposed through a PSD (Cholesky) covariance head, high-temperature CL assumptions with $D_{xp}\\approx0$, and fluctuation--dissipation ties between $D_{pp}$ and $γ$. On synthetic CL data with channels ${μ_x,σ_{xx},σ_{xp}}$, the constrained variant recovers $(ω,γ)$ accurately, stabilizes $D_{pp}$, and achieves low rollout…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-08-24",
+  "updated": "2026-08-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

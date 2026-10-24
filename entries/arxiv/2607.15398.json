@@ -1,0 +1,20 @@
+{
+  "key": "2607.15398",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.15398",
+  "title": "Saturating the Bayesian Nagaoka-Hayashi bound within numerical precision for the depolarization SU(2) rotation channel",
+  "authors": [
+    "Leo Bia",
+    "Christos N. Gagatsos"
+  ],
+  "summary": "The Bayesian Nagaoka--Hayashi (NH) bound is a semidefinite lower bound on the Bayes risk of multiparameter estimation, tighter than the Bayesian symmertic logarithmic derivative (SLD) Cramér--Rao bounds, and whether it can be attained is an open problem. We study the single-shot estimation of a qubit rotation, all three parameters at once, under depolarizing noise and a uniform prior, with $k$ parallel uses of the channel. Rotational covariance reduces the joint optimization of probe, measurement, and estimator, and the NH bound itself, to small semidefinite programs, solvable through $k=4$.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

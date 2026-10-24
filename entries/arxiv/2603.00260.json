@@ -1,0 +1,24 @@
+{
+  "key": "2603.00260",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.00260",
+  "title": "Constrained Quantum Optimization at Utility Scale: Application to the Knapsack Problem",
+  "authors": [
+    "Naeimeh Mohseni",
+    "Julien-Pierre Houle",
+    "Ibrahim Shehzad",
+    "Giorgio Cortiana",
+    "Corey O'Meara",
+    "Adam Bene Watts"
+  ],
+  "summary": "Constrained combinatorial optimization problems are challenging for quantum computing, particularly at utility-relevant scales and on near-term hardware. At the same time, these problems are of practical significance in industry; for example, the Unit Commitment (UC) problem in energy systems involves complex operational constraints. To address this challenge, we apply copula-QAOA (cop-QAOA), a hardware-efficient approach for constrained optimization to a single-period UC that can be reduced to a one-dimensional knapsack. Cop-QAOA biases the quantum state toward feasible solutions using…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-27",
+  "updated": "2026-02-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2605.05315",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05315",
+  "title": "Two Layers, No Swaps: Biplanar SPOQC Architecture Improves Runtime of Fermi-Hubbard Simulation",
+  "authors": [
+    "Boris Bourdoncle",
+    "Peter-Jan Derks",
+    "Théo Dessertaine",
+    "Johannes Frank"
+  ],
+  "summary": "We estimate the cost of simulating the two-dimensional Fermi-Hubbard model on a biplanar spin-optical quantum computing (SPOQC) architecture. Qubits are encoded in the honeycomb Floquet code, and we use a circuit-level noise model with explicit timings for each native physical operation. We benchmark lattice surgery and magic state preparation within each plane, and transversal CNOT gates between corresponding logical qubits across planes. We compile a plaquette-based Trotterization of the time evolution operator, mapping the two spin sectors of the Fermi-Hubbard model onto two physical…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

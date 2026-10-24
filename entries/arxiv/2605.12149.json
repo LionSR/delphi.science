@@ -1,0 +1,21 @@
+{
+  "key": "2605.12149",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.12149",
+  "title": "Zeno-Enhanced Probabilistic Error Cancellation with Quantum Error Detection Codes",
+  "authors": [
+    "Yi Yuan",
+    "Yuanchen Zhao",
+    "Dong E. Liu"
+  ],
+  "summary": "Probabilistic error cancellation (PEC) is unbiased but suffers exponential sampling overhead set by noise-weighted circuit volume, whereas quantum error-detecting codes (QEDCs) remove many physical faults by stabilizer post-selection but leave an undetectable logical residue. We exploit this complementarity by using post-selection to map physical noise to a weaker accepted logical channel, and then applying PEC only to the residual channel. The resulting feedback-free QED+PEC scheme interleaves Clifford logical blocks, stabilizer measurements, post-selection, and probabilistic cancellation…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

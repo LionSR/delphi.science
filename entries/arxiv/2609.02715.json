@@ -1,0 +1,19 @@
+{
+  "key": "2609.02715",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.02715",
+  "title": "Quantum amplitude estimation beyond power-of-two schedules",
+  "authors": [
+    "Farrokh Labib"
+  ],
+  "summary": "Non-adaptive quantum amplitude estimation (QAE) fixes its Grover depths in advance, so every circuit can run in parallel, but it has so far needed more queries than the best adaptive methods. We show that most of this gap comes from two conventional choices: subspace-based post-processing and power-of-two depth ladders. We replace the first by the exact maximum-likelihood estimate, one matrix multiplication per batch of estimates, and the second by a geometric ladder with ratio $r \\approx 1.45$. The result is a fully parallel, deterministic-schedule estimator with total query complexity…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-02",
+  "updated": "2026-09-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

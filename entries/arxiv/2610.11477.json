@@ -1,0 +1,34 @@
+{
+  "key": "2610.11477",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.11477",
+  "title": "Quantitative Rules for Parallel Calibration and Drift-Resilient Maintenance of Large-Scale Superconducting Quantum Processors",
+  "authors": [
+    "Zhihao Wu",
+    "Kechengqi Zhu",
+    "Shichuan Xue",
+    "Xinfang Zhang",
+    "Zhaohua Yang",
+    "Zhida Zhang",
+    "Shun Hu",
+    "Cong Li",
+    "Dingdong Liu",
+    "Kangding Zhao",
+    "Peng Luo",
+    "Lingling Lao",
+    "Xiang Fu",
+    "Mingtang Deng",
+    "Junjie Wu",
+    "Kai Lu"
+  ],
+  "summary": "As superconducting quantum processors scale toward hundreds of qubits, manual calibration becomes increasingly costly and difficult to sustain. Here we address two system-level factors governing automated calibration, namely, crosstalk induced by parallel operations and temporal drift of control parameters. On a 66-qubit superconducting processor, cross-entropy benchmarking shows that single-qubit calibration tolerates full-chip concurrency with minimal fidelity loss, whereas CZ calibration requires a minimum coupler-graph distance of four to avoid elevated control errors. Continuous…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

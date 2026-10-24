@@ -1,0 +1,23 @@
+{
+  "key": "2605.18241",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.18241",
+  "title": "An Entropy-Governed Speedup for Quantum Algorithms on Local Hamiltonians",
+  "authors": [
+    "Ranitha Mataraarachchi",
+    "François Le Gall",
+    "Suguru Tamaki"
+  ],
+  "summary": "Low-energy estimation and state preparation for general $k$-local Hamiltonians are fundamental challenges in quantum complexity theory. For constant relative accuracy, Buhrman et al. (PRL 2025) recently broke the natural Grover bound $O(2^{n/2})$, where $n$ denotes the number of qubits, for both problems. In this paper, for any sufficiently small parameter $d\\ge 0$, we present an even faster quantum algorithm that outputs a quantum state with energy bounded by the minimum energy over all depth-$d$ states (i.e., states obtained by applying a depth-$d$ circuit to the all-zero state), together…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.DS"
+  ],
+  "published": "2026-05-18",
+  "updated": "2026-05-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2607.00998",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.00998",
+  "title": "Limitations of Error Model Approximations in Quantum Network Simulation",
+  "authors": [
+    "Julia Freund",
+    "Jorge Miguel-Ramiro",
+    "Julius Wallnöfer",
+    "Wolfgang Dür"
+  ],
+  "summary": "Efficient classical simulation of large-scale quantum networks frequently relies on noise approximations, which consider a restricted set of operators to describe noisy channels and operations. In this work, we demonstrate how such simplified error models, such as Pauli twirling or reset channels, can lead to severe quantitative and qualitative discrepancies in protocol performance predictions. We analyze, in particular, how small differences can accumulate in iterative and sequential protocols such as entanglement purification, entanglement swapping, and repeater chains. Our results reveal…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

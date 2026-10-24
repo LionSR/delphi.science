@@ -1,0 +1,21 @@
+{
+  "key": "2610.06835",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06835",
+  "title": "Distributional Quantum Query Complexity",
+  "authors": [
+    "Shalev Ben-David",
+    "M. H. Ebtehaj"
+  ],
+  "summary": "Quantum query complexity enjoys a variety of pleasing joint computation properties: for example, a composition theorem asserting $Q(f\\circ g)=Θ(Q(f)Q(g))$ for all Boolean functions $f$ and $g$; a direct sum theorem asserting that computing $k$ copies of a function (or search problem) costs $Ω(k)$ times as much as the cost of computing one copy; and a direct product theorem asserting that for Boolean functions, even succeeding at the direct sum problem with exponentially small probability still requires $Ω(k)$ times the cost of computing one copy to bounded error. However, all of these…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

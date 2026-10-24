@@ -1,0 +1,23 @@
+{
+  "key": "2603.11195",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.11195",
+  "title": "Generative modeling with Gaussian Boson Sampling: classically trainable Bosonic Born Machines",
+  "authors": [
+    "Zoltán Kolarovszki",
+    "Bence Bakó",
+    "Michał Oszmaniec",
+    "Changhun Oh",
+    "Zoltán Zimborás"
+  ],
+  "summary": "Quantum generative modeling has emerged as a promising application of quantum computers, aiming to model complex probability distributions beyond the reach of classical methods. In practice, however, training such models often requires costly gradient estimation performed directly on the quantum hardware. Crucially, for certain structured quantum circuits, expectation values of local observables can be efficiently evaluated on a classical computer, enabling classical training without calls to the quantum hardware in the optimization loop. In these models, sampling from the resulting circuits…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-11",
+  "updated": "2026-03-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

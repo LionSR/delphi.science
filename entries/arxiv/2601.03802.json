@@ -1,0 +1,23 @@
+{
+  "key": "2601.03802",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.03802",
+  "title": "Quantum vs. Classical Machine Learning: A Benchmark Study for Financial Prediction",
+  "authors": [
+    "Rehan Ahmad",
+    "Muhammad Kashif",
+    "Nouhaila Innan",
+    "Muhammad Shafique"
+  ],
+  "summary": "In this paper, we present a reproducible benchmarking framework that systematically compares QML models with architecture-matched classical counterparts across three financial tasks: (i) directional return prediction on U.S. and Turkish equities, (ii) live-trading simulation with Quantum LSTMs versus classical LSTMs on the S\\&P 500, and (iii) realized volatility forecasting using Quantum Support Vector Regression. By standardizing data splits, features, and evaluation metrics, our study provides a fair assessment of when current-generation QML models can match or exceed classical methods.…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "quant-ph"
+  ],
+  "published": "2026-01-07",
+  "updated": "2026-01-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

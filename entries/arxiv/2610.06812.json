@@ -1,0 +1,22 @@
+{
+  "key": "2610.06812",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06812",
+  "title": "Protecting Quantum Computers against Untrusted Users",
+  "authors": [
+    "Shiv Akshar Yadavalli",
+    "Joel Rajakumar",
+    "Alexander Schuckert",
+    "Michael J. Gullans"
+  ],
+  "summary": "Publicly accessible fault-tolerant quantum computers must preserve scientific utility while limiting cryptanalytic power. We propose the restricted model of computation, 1/2BQP_1: a quantum server provides random computational-basis inputs, revealed only after execution, and one designated output bit. This interface permits arbitrary circuits and system sizes. We conjecture that a classical client making polynomially many adaptive requests cannot efficiently factor RSA moduli. The model subsumes the well-known one-clean-qubit model DQC1, retaining its applications to infinite-temperature…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

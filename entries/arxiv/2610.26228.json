@@ -1,0 +1,21 @@
+{
+  "key": "2610.26228",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.26228",
+  "title": "The Fundamental Memory Ceiling of Noisy Quantum Reservoirs",
+  "authors": [
+    "Markus Baumann",
+    "Jonas Stein",
+    "Claudia Linnhoff-Popien"
+  ],
+  "summary": "Fresh qubits, not size, set how long a noisy quantum system can remember. With $k$ input qubits reinitialized per time step, the longest memory any reservoir can attain under depolarizing noise is $\\exp[Θ(k)]$ time steps, whatever its size, dynamics, and input encoding. A universal upper bound and an explicit reservoir that attains the exponential scaling establish this optimal resource law. The bound depends on the dynamics only through the entropy that fresh qubits remove per time step, so it holds for any Markovian noisy dynamics without feedback, including measurement-free error…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

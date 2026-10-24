@@ -1,0 +1,22 @@
+{
+  "key": "2609.32911",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32911",
+  "title": "Quantum Machine Learning for Cybersecurity Applications: Simulation and Hardware Validation",
+  "authors": [
+    "Zirui Zhu",
+    "Zisheng Chen",
+    "Xiangyang Li"
+  ],
+  "summary": "Under tight feature and compute budgets, classical threat detection pipelines often degrade on near-decision-boundary events. Small quantum processors are now available, but existing work inadequately shows whether quantum components improve end-to-end threat detection under the above resource constrained conditions. This paper tries to address this gap with a hybrid architecture that uses a compact multilayer perceptron layer to compress the information in data and then routes the processed features to a few qubit quantum heads implemented in quantum support vector machine (QSVM) and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

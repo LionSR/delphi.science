@@ -1,0 +1,19 @@
+{
+  "key": "2607.27644",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.27644",
+  "title": "Quantum LDPC codes with design rate 1/5 and good performance below 1000 physical qubits",
+  "authors": [
+    "Yifan Hong"
+  ],
+  "summary": "Constant-rate quantum low-density parity-check (LDPC) codes promise fault-tolerant quantum computation with constant spatial overhead in the asymptotic limit. Nonetheless, discovering finite-length code instances with good practical performance remains challenging. We introduce a new family of quantum LDPC codes with design rate $1/5$ and check weight $9$ that approaches the teraquop memory regime per qubit-round with several hundred physical qubits, under idling-free circuit-level noise of strength $0.1\\%$ and GPU-accelerated Relay-belief-propagation (Relay-BP) decoding with average…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-30",
+  "updated": "2026-07-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

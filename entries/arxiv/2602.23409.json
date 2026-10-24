@@ -1,0 +1,26 @@
+{
+  "key": "2602.23409",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.23409",
+  "title": "Long Range Frequency Tuning for QML",
+  "authors": [
+    "Michael Poppel",
+    "Markus Baumann",
+    "Sebastian Wölckert",
+    "Claudia Linnhoff-Popien",
+    "Jonas Stein"
+  ],
+  "summary": "Angle-encoded variational quantum circuits admit a truncated Fourier series representation of their output, but approximating functions with maximum frequency $ω_{\\max}$ using fixed unary encoding requires $\\mathcal{O}(ω_{\\max})$ encoding gates. Trainable-frequency (TF) circuits promise a reduction by learning the data-encoding prefactors alongside the ansatz parameters, adapting the accessible frequency spectrum to the target during training. We identify a practical barrier that prevents this promise from being realized: the prefactor gradient is suppressed by the spectral gap between the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "cs.ET",
+    "quant-ph"
+  ],
+  "published": "2026-02-26",
+  "updated": "2026-07-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

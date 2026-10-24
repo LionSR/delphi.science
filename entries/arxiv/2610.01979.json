@@ -1,0 +1,21 @@
+{
+  "key": "2610.01979",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01979",
+  "title": "Fully tolerant product state testing and closest product state learning",
+  "authors": [
+    "Zongbo Bao",
+    "Jonas Helsen",
+    "Tuyen Nguyen"
+  ],
+  "summary": "We address the problem of testing whether an unknown $n$-qudit state $ρ$ is $a$-close to a product state or $b$-far away from any product state, as measured in terms of state overlap. We provide a time-efficient algorithm to solve this problem that requires an $n$-independent number of copies of the unknown state. Our random coloring argument shows that for any unknown state there always exists a partition of $[n]$ into $q$ parts such that the square of the overlap with the closest product state with respect to this partition is only an additive factor $O(1/q)$ larger. This reduces the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

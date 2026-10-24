@@ -1,0 +1,22 @@
+{
+  "key": "2610.31330",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.31330",
+  "title": "Quantum Fokker-Planck solvers as trainable generative models",
+  "authors": [
+    "Tariq Mahassen",
+    "Marcin Jastrzebski",
+    "Oleksandr Kyriienko"
+  ],
+  "summary": "We develop and analyze generative models based on quantum solvers of stochastic differential equations. Unlike the common approach based on layered variational quantum circuits with parameterized rotations, we parameterize the potential of a Langevin process. The associated Fokker-Planck (FP) equations are Hermitianized and solved using a linear combination of cosine operators implemented through quantum singular value transformation. By encoding the square root of the stationary density, the model enables sampling through computational-basis measurements and is efficiently controlled by…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.stat-mech"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

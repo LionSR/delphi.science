@@ -1,0 +1,22 @@
+{
+  "key": "2604.04778",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.04778",
+  "title": "QCommute: a tool for symbolic computation of nested commutators in quantum many-body spin-1/2 systems",
+  "authors": [
+    "Oleg Lychkovskiy",
+    "Viacheslav Khrushchev",
+    "Ilya Shirokov"
+  ],
+  "summary": "We present QCommute, a software tool implemented in C++ for symbolic computation of nested commutators between a Hamiltonian and local observables in quantum many-body spin-1/2 systems on one-, two-, and three-dimensional hypercubic lattices. The computation is performed algebraically directly in the thermodynamic limit, and the Hamiltonian parameters are kept symbolic. Importantly, this way the entire parameter space is covered in a single run. The implementation supports extensive parallelization to achieve high computational performance. QCommute can serve as a computational backend for…",
+  "domain": "cond-mat.str-el",
+  "tags": [
+    "cond-mat.str-el",
+    "quant-ph"
+  ],
+  "published": "2026-04-06",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

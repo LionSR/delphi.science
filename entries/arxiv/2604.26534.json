@@ -1,0 +1,19 @@
+{
+  "key": "2604.26534",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26534",
+  "title": "Neural and Tensor Networks in the Study of Quantum Annealing Processors",
+  "authors": [
+    "Tomasz Śmierzchalski"
+  ],
+  "summary": "Quantum annealing targets low-energy solutions of Ising/QUBO problems, but reliable assessment requires more than best-energy comparisons. This dissertation develops a benchmarking framework for D-Wave quantum annealers that combines strong classical baselines, sampling and diversity metrics, and thermodynamic cost. Its first contribution, SpinGlassPEPS$.$jl, is a topology-aware tensor-network heuristic for optimization and sampling on Pegasus/Zephyr-like graphs. It maps Ising instances to local Potts clusters, represents the partition function with PEPS, and performs branch-and-bound search…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-04-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

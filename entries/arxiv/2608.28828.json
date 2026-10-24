@@ -1,0 +1,23 @@
+{
+  "key": "2608.28828",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.28828",
+  "title": "Representation Learning with Quantum Signal Processing",
+  "authors": [
+    "Junqi Wang",
+    "Junyu Liu"
+  ],
+  "summary": "Representation learning begins when training changes the features that define similarity between data. A frozen-kernel model only reweights a fixed geometry. We establish quantum signal processing (QSP) as a solvable quantum model of the representation-learning regime. At arbitrary depth, we compute the exact mean and variance of its quantum neural tangent kernel, revealing an input-dependent angular geometry whose diagonal remains non-self-averaging even when the underlying unitary approaches Haar randomness. We also prove a sparse-data guarantee for the full nonlinear gradient flow without…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-08-28",
+  "updated": "2026-08-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

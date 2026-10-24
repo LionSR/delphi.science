@@ -1,0 +1,24 @@
+{
+  "key": "2608.20164",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.20164",
+  "title": "Architecture and Compilation Co-Design for High-Rate Quantum Product Codes on Neutral Atom Arrays",
+  "authors": [
+    "Adrian Liu",
+    "Wan-Hsuan Lin",
+    "Daniel Bochen Tan",
+    "Qian Xu",
+    "Jason Cong"
+  ],
+  "summary": "Achieving fault-tolerant quantum computing at a practical scale demands quantum error correction (QEC) codes with high encoding rates. Quantum low-density parity-check (qLDPC) codes emerge as a promising candidate, especially given the rise of neutral atom arrays that provide dynamic long-range connectivity via atom movements. In general, synthesizing valid and efficient physical execution plans for QEC is a provably hard combinatorial problem, forming a critical compilation bottleneck that worsens as code sizes grow. To overcome this complexity, we focus on an important product family of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AR"
+  ],
+  "published": "2026-08-20",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2608.06318",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.06318",
+  "title": "Breaking Memory Bottlenecks in Quantum Control Systems for More Precise Experiments and Higher Throughput Computing",
+  "authors": [
+    "Yicheng Guang",
+    "Neel Vora",
+    "Yilun Xu",
+    "Yueqi Chen",
+    "Gang Huang"
+  ],
+  "summary": "As quantum computing matures, there is an increasing need for deeper and longer experiments to characterize quantum devices precisely and higher circuit throughput to validate more domain applications. However, this need is hindered by a memory bottleneck at the quantum control system layer, arising from the limited capacity of on-chip block random-access memory (BRAM) and the non-deterministic latency of dynamic random-access memory (DRAM). To break this bottleneck, we present Ant-Q, a memory hierarchy design for the QubiC 2.0 control system that integrates DRAM with BRAM to support…",
+  "domain": "cs.AR",
+  "tags": [
+    "cs.AR",
+    "cs.ET",
+    "quant-ph"
+  ],
+  "published": "2026-08-06",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

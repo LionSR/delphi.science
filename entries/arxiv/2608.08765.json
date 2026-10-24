@@ -1,0 +1,24 @@
+{
+  "key": "2608.08765",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.08765",
+  "title": "Bona: Automatic Management of Dirty Ancilla Borrowing in Quantum Circuits",
+  "authors": [
+    "Xiaoquan Xu",
+    "Chenke Liu",
+    "Boning Meng",
+    "Zihao Shen",
+    "Li Zhou"
+  ],
+  "summary": "The management of ancilla qubits has become a critical technique for reducing quantum circuit width. Dirty ancillas, which may be borrowed from any temporarily idle qubit regardless of their initial states, offer substantial flexibility for width optimization, but their use has so far required manual and error-prone handling. We formalize the dirty-qubit borrowing problem and establish a fundamental computational limit by proving its NP-hardness. To support practical optimization, we present \\bona, the first scheduler for dirty-qubit borrowing, built on a novel depth-aware heuristic…",
+  "domain": "cs.PL",
+  "tags": [
+    "cs.PL",
+    "quant-ph"
+  ],
+  "published": "2026-08-09",
+  "updated": "2026-08-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

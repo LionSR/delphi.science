@@ -1,0 +1,22 @@
+{
+  "key": "2602.11384",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.11384",
+  "title": "Recent Developments and Perspectives in Variational Quantum Eigensolvers for Molecular Electronic Structure: Methods, Tradeoffs, and Benchmarking",
+  "authors": [
+    "Taylor Harville",
+    "Rishu Khurana",
+    "Vitor F. Grizzi",
+    "Cong Liu"
+  ],
+  "summary": "The variational quantum eigensolver (VQE) is a hybrid quantum-classical algorithm designed for noisy intermediate-scale quantum (NISQ) hardware to estimate eigenvalues of many-body Hamiltonians. Unlike fully quantum approaches such as quantum phase estimation (QPE), VQE trades deep coherent circuits for repeated state preparation, measurement, and classical optimization, making it more compatible with limited qubit counts and finite coherence times. Recent developments have focused on reducing quantum resource requirements while retaining chemically meaningful wavefunction structure. In this…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-11",
+  "updated": "2026-07-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

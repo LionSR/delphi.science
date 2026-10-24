@@ -1,0 +1,23 @@
+{
+  "key": "2602.04072",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.04072",
+  "title": "Data Verification is the Future of Quantum Computing Copilots",
+  "authors": [
+    "Junhao Song",
+    "Ziqian Bi",
+    "Xinliang Chia",
+    "William Knottenbelt",
+    "Yudong Cao"
+  ],
+  "summary": "Quantum program generation demands a level of precision that may not be compatible with the statistical reasoning carried out in the inference of large language models (LLMs). Hallucinations are mathematically inevitable and not addressable by scaling, which leads to infeasible solutions. We argue that architectures prioritizing verification are necessary for quantum copilots and AI automation in domains governed by constraints. Our position rests on three key points: verified training data enables models to internalize precise constraints as learned structures rather than statistical…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-03",
+  "updated": "2026-02-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

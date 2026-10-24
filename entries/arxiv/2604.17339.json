@@ -1,0 +1,21 @@
+{
+  "key": "2604.17339",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.17339",
+  "title": "Fault-Tolerant Cut-Cat State Syndrome Extraction for Quantum Codes",
+  "authors": [
+    "Diego Forlivesi",
+    "Lorenzo Valentini",
+    "Marco Chiani"
+  ],
+  "summary": "Reliable quantum computation requires fault-tolerant protocols to prevent errors from propagating during syndrome extraction in quantum error correction. We present a novel fault-tolerant syndrome extraction technique for CSS codes, which we refer to as the cut-cat state scheme. While each ancilla qubit interacts non-fault-tolerantly with a pair of data qubits, we introduce additional cat stabilizer measurements to identify and correct the resulting hook errors. Our approach maintains the key benefit of cat-based extraction, i.e., parallelized data qubit interactions, while reducing the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-19",
+  "updated": "2026-04-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

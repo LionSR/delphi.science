@@ -1,0 +1,19 @@
+{
+  "key": "2609.12284",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.12284",
+  "title": "A Simple Quantum Linear-System Solver via Dissipation",
+  "authors": [
+    "Zhong-Xia Shang"
+  ],
+  "summary": "Dissipation has been recently demonstrated as a powerful primitive for designing quantum algorithms. We apply this viewpoint directly to linear-system solving, $Ax=b$. We construct a simple purely dissipative Lindbladian whose unique fixed point encodes the linear-system solution. We prove dimension-independent trace-distance mixing in $Θ(κ^2\\log(1/\\eps))$ time. We then show how to run this Lindbladian on digital quantum computers via collective block encoding and Lindbladian simulation, resulting in an $O\\!\\left(κ^2\\log(1/\\eps) \\frac{\\log(κ/\\eps)}{\\log\\log(κ/\\eps)}\\right)$ query complexity…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

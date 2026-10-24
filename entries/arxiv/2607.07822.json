@@ -1,0 +1,22 @@
+{
+  "key": "2607.07822",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.07822",
+  "title": "Routing Techniques for Error-Corrected Silicon Spin Qubit Quantum Architectures",
+  "authors": [
+    "Julian Shen",
+    "Ludwig Schmid",
+    "Robert Wille"
+  ],
+  "summary": "Silicon spin qubits have emerged as a promising qubit technology due to their favorable scaling and fabrication properties. However, efficiently compiling quantum circuits onto spin qubit platforms remains challenging, particularly when accounting for hardware constraints and the high sensitivity to static defects. Existing compilation approaches for spin qubits either largely ignore error correction, despite its critical role for large-scale quantum computation, or focus on low-level schedule constructions, missing a high-level compilation and routing for logical, error-corrected…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

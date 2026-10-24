@@ -1,0 +1,22 @@
+{
+  "key": "2606.13150",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.13150",
+  "title": "Robust Pretty Good Measurement via Hybrid Classical-Quantum Pseudoinverse Approximation and Circuit-Level Realization",
+  "authors": [
+    "Bikash K. Behera",
+    "Andrés Camilo Granda Arango",
+    "Giuseppe Sergioli",
+    "Roberto Giuntini"
+  ],
+  "summary": "Pretty Good Measurement (PGM) is a near-optimal strategy for quantum state discrimination, but its practical realization becomes unstable when the ensemble operator is singular or ill-conditioned. We introduce a numerically robust PGM formulation based on the Moore-Penrose pseudoinverse, replacing the standard inverse square root with a threshold-regularized variant that remains well-defined across different spectral regimes. We develop a hybrid classical-quantum framework that combines pseudoinverse-based spectral preprocessing with quantum circuit realizations using block-encoding and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

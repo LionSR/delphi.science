@@ -1,0 +1,22 @@
+{
+  "key": "2606.26691",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.26691",
+  "title": "CHESS: CHEbyshev pSeudo-Spectral transport for Feynman integral differential equations",
+  "authors": [
+    "Yuanche Liu",
+    "Yang Zhang"
+  ],
+  "summary": "We present CHESS (CHEbyshev pSeudo Spectrum), a Wolfram Language package for high-precision one-dimensional transport of ε-factorized differential equations for Feynman master integrals. The solver works with the matrix obtained by pulling a differential one-form to a chosen path. This matrix may be supplied directly, or assembled from constant matrices and precomputed scalar pullbacks of the one-forms. The program combines Chebyshev-Lobatto spectral collocation, sparse matrix assembly, sequential propagation in the ε-expansion, and residue-based regularization of spurious regular singular…",
+  "domain": "hep-ph",
+  "tags": [
+    "hep-ph",
+    "hep-th",
+    "physics.comp-ph"
+  ],
+  "published": "2026-06-25",
+  "updated": "2026-06-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

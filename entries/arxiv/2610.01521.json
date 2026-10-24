@@ -1,0 +1,19 @@
+{
+  "key": "2610.01521",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01521",
+  "title": "Continuous-Process Randomized Compilation for Quantum Process Tensors",
+  "authors": [
+    "He Wang"
+  ],
+  "summary": "Traditional discrete randomized compiling (RC) tailors errors with random control frames at logical-gate boundaries, but fails to capture intra-instrument control evolution or persistent system-environment coupling. In memory-bearing environments, errors correlate across times, not just single gates. We build continuous-process randomized compilation (CPRC) in the continuous process tensor (cPT) framework, unifying random unitary control trajectories, pointwise-covariant finite-duration instruments, and environmental dynamics on one time axis. We study four protocols: fixed Pauli refresh,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

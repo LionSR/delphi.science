@@ -1,0 +1,22 @@
+{
+  "key": "2604.25429",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.25429",
+  "title": "Deterministic Realization of Classical Dissipation on Quantum Computers",
+  "authors": [
+    "Muhammad Idrees Khan",
+    "Sauro Succi",
+    "Hua-Dong Yao"
+  ],
+  "summary": "Lattice Boltzmann (LB) on quantum devices must reconcile unitary gate evolution with the dissipative \\emph{collision} step. In the multiple-relaxation-time (MRT) class, we work in the common setting of \\emph{modewise diagonal} moment relaxation, $δm_r'=λ_r\\,δm_r$ with $λ_r\\in[-1,1]$ (overrelaxation if $λ_r<0$). Embedding that contraction in a unitary by block encoding or a linear combination of unitaries (LCU) typically yields subunitary success probability that decays multiplicatively across modes, sites, and time, a key bottleneck for quantum LB. \\emph{For the dissipative MRT block alone}…",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "quant-ph"
+  ],
+  "published": "2026-04-28",
+  "updated": "2026-04-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,27 @@
+{
+  "key": "2605.24252",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.24252",
+  "title": "Hybrid Quantum-Classical Machine Learning Algorithms for Multi-Output Time-Series Forecasting at Utility Scale",
+  "authors": [
+    "Mackenson Polché",
+    "Varun Puram",
+    "Aditi Lal",
+    "Weronika Golletz",
+    "Joan Étude Arrow",
+    "Vardaan Sahgal",
+    "Kumar Ghosh",
+    "Giorgio Cortiana",
+    "Corey O'Meara"
+  ],
+  "summary": "Multi-output time-series forecasting in energy systems is challenging because of nonlinear dynamics, multi-scale seasonality, and strong dependencies across correlated series. In this work, we investigate two hybrid quantum-classical frameworks for multi-stream time-series forecasting on a real Smart Meter dataset comprising 103 household electricity consumption time-series, with experiments executed on the $ibm\\_marrakesh$ superconducting quantum processor. The first model, Kernelized Quantum Reservoir Computing with Repeated Measurement (KQRC-RM), combines coupled quantum reservoirs,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-22",
+  "updated": "2026-05-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

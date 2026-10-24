@@ -1,0 +1,22 @@
+{
+  "key": "2607.06953",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06953",
+  "title": "A quantum model for synchronizing finite state transition systems",
+  "authors": [
+    "Martin Lukac",
+    "Khaled El-Fakih",
+    "Uraz Turker"
+  ],
+  "summary": "We propose a quantum model for finding a resetting input sequence (RS) which can take a finite state transition system (FA), to particular state independent of its current state. The complexity of finding such sequences for various types of FA can be NP-Hard or even PSPACE-Complete. To this end, we represent the FA states, inputs, and transition function in quantum space. Accordingly, we propose a model to represent the execution of an input sequence of a particular length $l$ starting form an initial FA state. The model is extended considering the application in superposition of all input…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

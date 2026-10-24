@@ -1,0 +1,22 @@
+{
+  "key": "2601.04413",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.04413",
+  "title": "Distribution-Guided and Constrained Quantum Machine Unlearning",
+  "authors": [
+    "Nausherwan Malik",
+    "Zubair Khalid",
+    "Muhammad Faryad"
+  ],
+  "summary": "Machine unlearning aims to remove the influence of specific training data from a learned model without full retraining. While recent work has begun to explore unlearning in quantum machine learning, existing approaches largely rely on fixed, uniform target distributions and do not explicitly control the trade-off between forgetting and retained model behaviour. In this work, we propose a distribution-guided framework for class-level quantum machine unlearning that treats unlearning as a constrained optimization problem. Our method introduces a tunable target distribution derived from model…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "quant-ph"
+  ],
+  "published": "2026-01-07",
+  "updated": "2026-02-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2603.11536",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.11536",
+  "title": "Quantum mechanical framework for quantization-based optimization: from Gradient flow to Schroedinger equation",
+  "authors": [
+    "Jinwuk Seok",
+    "Changsik Cho"
+  ],
+  "summary": "This work presents a quantum mechanical framework for analyzing quantization-based optimization algorithms. The sampling process of the quantization-based search is modeled as a gradient-flow dissipative system, leading to a Hamilton-Jacobi-Bellman (HJB) representation. Through a suitable transformation of the objective function, this formulation yields the Schroedinger equation, which reveals that quantum tunneling enables escape from local minima and guarantees access to the global optimum. By establishing the connection to the Fokker-Planck equation, the framework provides a thermodynamic…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.NE",
+    "math.OC"
+  ],
+  "published": "2026-03-12",
+  "updated": "2026-03-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

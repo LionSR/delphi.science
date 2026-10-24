@@ -1,0 +1,22 @@
+{
+  "key": "2603.07495",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.07495",
+  "title": "Sharpening Worst-Case Error Assessment for Fault-Tolerant Quantum Computing: Fidelity and Its Deviation",
+  "authors": [
+    "Kyoungho Cho",
+    "Ilkwon Sohn",
+    "Yongsoo Hwang",
+    "Jeongho Bang"
+  ],
+  "summary": "Gate fidelity -- an average fidelity over all possible input states -- is the workhorse metric for benchmarking quantum gates or circuits, yet fault-tolerant quantum computing ultimately depends on the worst-case behavior, typically quantifiable by so-called the diamond distance. In the low-error regime, the coherent errors can inflate the worst-case error even when the reported gate fidelity is high, making the gate fidelity alone an unreliable proxy for fault-tolerance readiness. To capture the missing information, we introduce a companion observable -- what we dub the fidelity deviation…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-08",
+  "updated": "2026-03-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

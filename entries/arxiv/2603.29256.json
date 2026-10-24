@@ -1,0 +1,22 @@
+{
+  "key": "2603.29256",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.29256",
+  "title": "A Framework for Ruling Out Quantum Speedups",
+  "authors": [
+    "Thomas Huffstutler",
+    "Upendra Kapshikar",
+    "David Miloschewsky",
+    "Supartha Podder"
+  ],
+  "summary": "We study when partial Boolean functions can (and cannot) exhibit superpolynomial quantum query speedups, and develop a general framework for ruling out such speedups via two complementary lenses: promise-aware complexity measures and function completions. First, we introduce promise versions of standard combinatorial measures (including block sensitivity and related variants) and prove that if the relevant promise and completion measures ``collapse'', then deterministic and quantum query complexities are necessarily polynomially related, i.e. $D(f) = \\mathrm{poly}(Q(f))$. We then analyze…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-31",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

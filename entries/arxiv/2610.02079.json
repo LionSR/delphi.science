@@ -1,0 +1,22 @@
+{
+  "key": "2610.02079",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02079",
+  "title": "A computational phase diagram for the transverse field Ising model",
+  "authors": [
+    "Thuy-Duong Vuong"
+  ],
+  "summary": "We study the transverse field Ising model, defined by the Hamiltonian $H =\\frac{1}{2}\\sum_{i, j\\in [n]} J_{ij} Z_i Z_j +\\sum_{i=1}^n h_i^z Z_i + η\\sum_{i} X_i$ where $J $ is the symmetric interaction matrix, and $η$ is the transverse field strength. Let $Δ(J)=λ_{\\max}(J)-λ_{\\min}(J)$ be the spectral width of $J.$ When the inverse temperature $β\\geq0$ satisfies $Δ(J)\\cdot\\frac{\\tanh(βη)}η\\leq1$, we give a randomized classical algorithm that approximates the partition function $Z(β)=\\operatorname{Tr}(e^{-βH})$ to a given relative error $ε\\in(0,1)$ in time polynomial in $n$, $β$, the model…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS",
+    "math-ph",
+    "math.PR"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

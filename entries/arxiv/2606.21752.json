@@ -1,0 +1,23 @@
+{
+  "key": "2606.21752",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.21752",
+  "title": "Configurable Algorithms for Histopathologic Cancer Detection on Quantum Hardware",
+  "authors": [
+    "Nandika Goyal",
+    "Glen Uehara",
+    "Andreas Spanias"
+  ],
+  "summary": "Histopathologic cancer detection is challenging due to tissue variability, staining differences, and subtle visual distinctions between disease classes. We propose two quantum algorithms for this task: a configurable dual-gradient CSWAP circuit (DG-CSWAP) that computes multi-directional edge responses in a single execution via per-pixel local Ry encoding, and a hardware-efficient destructive swap circuit (DG-DST) natively matched to quantum processing unit (QPU) gate sets at substantially lower circuit complexity. We prove algebraic equivalence between DG-CSWAP and DG-DST, enabling a…",
+  "domain": "eess.IV",
+  "tags": [
+    "eess.IV",
+    "cs.CV",
+    "quant-ph"
+  ],
+  "published": "2026-06-19",
+  "updated": "2026-06-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

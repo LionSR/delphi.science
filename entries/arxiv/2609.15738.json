@@ -1,0 +1,23 @@
+{
+  "key": "2609.15738",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.15738",
+  "title": "Disentangling QAOA: From Weakly Entangled Circuits to a Classical QUBO Solver",
+  "authors": [
+    "Boris I. Bantysh",
+    "Andrey Yu. Chernyavskiy",
+    "Denis A. Kulikov",
+    "Maksim A. Gavreev",
+    "Evgeniy O. Kiktenko"
+  ],
+  "summary": "The role of entanglement in quantum optimization remains actively debated. To address this question, we focus on the fixed-parameter expanding-depth regime of the quantum approximate optimization algorithm (QAOA), where a compact two-parameter schedule is trained once on small instances and then applied as the problem size and circuit depth increase. To probe this regime beyond full state-vector simulation, we perform approximate matrix product state simulations for up to 50 qubits and 100 layers and quantify entanglement by the bond dimension. We observe an entangle--disentangle profile,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

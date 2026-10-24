@@ -1,0 +1,23 @@
+{
+  "key": "2605.20078",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.20078",
+  "title": "On Performance and Limitations of Quantum Wave Packet Dynamics Simulated using NISQ Hardware",
+  "authors": [
+    "Tamila Kuanysheva",
+    "Jonathan Andrade-Plascencia",
+    "Jayakrushna Sahoo",
+    "Brian Kendrick",
+    "Dmitri Babikov"
+  ],
+  "summary": "We investigate one-dimensional quantum wave-packet dynamics using a grid-based encoding of the wave function onto qubit registers. Time evolution is implemented using a split operator approach, with the kinetic energy operator realized via the Quantum Fourier Transform (QFT) and arbitrary discretized potentials represented by commuting Pauli-Z gates. The algorithm is benchmarked against classical grid-based simulations and validated using a noiseless Qiskit Statevector simulator before being implemented on current quantum hardware (IBM Quantum and IonQ) for qubit counts ranging from two to…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

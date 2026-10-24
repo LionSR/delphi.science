@@ -1,0 +1,20 @@
+{
+  "key": "2604.19717",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.19717",
+  "title": "Qubit Routing for (Almost) Free",
+  "authors": [
+    "Arianne Meijer-van de Griend"
+  ],
+  "summary": "In this paper, we give a mathematical proof that bounds the number of CNOT gates required to synthesize an $n$ qubit phase polynomial with $g$ terms to be at least $O(\\frac{gn}{\\max (\\log g, 1)})$ and at most $O(gn)$. However, when targeting restricted hardware, not all CNOTs are allowed. If we were to use SWAP-based methods to route the qubits on the architecture such that the earlier synthesized gates are natively allowed, we increase the number of CNOTs by a routing overhead factor of $O(\\log n) \\leq α\\leq O(n \\log^2 n)$. However, if we only synthesize allowed gates, we do not need to…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-04-21",
+  "updated": "2026-04-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

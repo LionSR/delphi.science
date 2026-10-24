@@ -1,0 +1,24 @@
+{
+  "key": "2609.36464",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.36464",
+  "title": "Degree Balance as a Fine-Grained Complexity Boundary for Quantum SAT",
+  "authors": [
+    "Atsuya Hasegawa",
+    "Jonas Kamminga",
+    "François Le Gall",
+    "Suguru Tamaki"
+  ],
+  "summary": "The local Hamiltonian problem is the canonical $\\mathsf{QMA}$-complete problem, and $O(2^n)$ time classical algorithms and $O(2^{n/2})$ time quantum algorithms are known to solve the problem in the worst case. It is not clear how to improve these brute force strategies for a broad class of the problem because ground states are highly entangled in general, and we cannot directly apply known strategies for classical CSPs. In this work, we present exponentially faster classical and quantum algorithms under two mild assumptions: (1) the Hamiltonian is frustration-free on YES instances, and (2)…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.DS"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2610.30645",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.30645",
+  "title": "FVQKD: A Formal Verification of Quantum Key Distribution Security in Rocq",
+  "authors": [
+    "Ruixuan Deng",
+    "Zhengfeng Ji",
+    "Jiayu Zhang",
+    "Li Zhou"
+  ],
+  "summary": "Quantum key distribution (QKD), whose security is derived from quantum mechanics rather than computational assumptions, is moving into standardization and commercial deployment. Yet its security guarantees rest on technically delicate proofs checked by hand. Formal verification closes this gap, establishing a two-factor assurance: unconditional security from physical principles, and machine-checked proofs against reasoning errors. We present FVQKD, a Rocq library for machine-checking QKD security proofs. Its first result is a complete, end-to-end machine-checked proof of composable,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR",
+    "cs.LO"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

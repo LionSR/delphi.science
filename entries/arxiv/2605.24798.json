@@ -1,0 +1,22 @@
+{
+  "key": "2605.24798",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.24798",
+  "title": "Improved Dual Attack and Trapdoor Sampling via Quantum Rejection Sampling",
+  "authors": [
+    "Cong Ling",
+    "Hao Yan",
+    "Nicholas Zhao"
+  ],
+  "summary": "In this work, we revisit the dual attack and GPV trapdoor sampling, focusing on the lattice Gaussian sampling term, which can be a significant bottleneck in the overall complexity. We show that this sampling step can be quantumly accelerated by combining the lower bound underlying Wang and Ling's analysis of Klein's algorithm with the quantum rejection sampling (QRS) framework proposed by Ozols et al. Specifically, this lower bound gives precisely the pointwise domination condition required for quantum rejection sampling when given coherent oracle access to a truncated Klein proposal…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS"
+  ],
+  "published": "2026-05-24",
+  "updated": "2026-05-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

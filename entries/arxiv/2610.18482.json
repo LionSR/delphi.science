@@ -1,0 +1,26 @@
+{
+  "key": "2610.18482",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.18482",
+  "title": "Lifting: Quantum State Discrimination Framework for Mid-Circuit Measurements",
+  "authors": [
+    "Chi Zhang",
+    "Neel Vora",
+    "Yilun Xu",
+    "Gang Huang",
+    "Fan Chen",
+    "Lei Jiang"
+  ],
+  "summary": "Quantum computing promises new capabilities beyond classical computation. Mid-circuit measurements (MCMs) enable error correction and outcome-dependent control, but their reliability is limited by noise on superconducting hardware. These operations depend on accurate quantum state discrimination (QSD), which assigns measured signals to state labels. Neural network-based (NN-based) QSD improves this assignment, yet its error remains bounded below by the Bayes risk of the available readout distributions. A complementary challenge is state deterioration as successive measurements accumulate and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET",
+    "cs.LG"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

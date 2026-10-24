@@ -1,0 +1,23 @@
+{
+  "key": "2604.26792",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26792",
+  "title": "Fault-Tolerant Resource Comparison of Qudit and Qubit Encodings for Diagonal Quadratic Operators",
+  "authors": [
+    "Samuel Godwood",
+    "Doğa Murat Kürkçüoğlu",
+    "Gabriel N. Perdue",
+    "Marina Maneyro",
+    "Alessandro Roggero"
+  ],
+  "summary": "Finite local Hilbert-space truncations arise naturally in quantum simulations of lattice field theories and motivate qudit encodings, but their fault-tolerant advantage over qubit encodings remains unclear. We compare the non-Clifford cost of implementing quadratic diagonal evolutions, exemplified by $U=e^{-itφ_x^2}$ in a uniform field-amplitude discretization of a real scalar field, using either one logical $d$-level qudit or $n_b=\\lceil \\log_2 d\\rceil$ logical qubits. We analyze two standard settings: product-formula simulation and LCU/block encoding, taking the resource metric to be the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

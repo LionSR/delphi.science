@@ -1,0 +1,22 @@
+{
+  "key": "2607.21121",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.21121",
+  "title": "Approximate Quantum State Preparation Through Proximal Policy Optimization",
+  "authors": [
+    "Marco Mordacci",
+    "Michele Amoretti"
+  ],
+  "summary": "In this work, a quantum architecture search framework for approximate quantum state preparation (QSP) is proposed. QSP is a challenging task, since the search space grows exponentially with the number of qubits, making the identification of the optimal circuit non-trivial. To address this problem, deep reinforcement learning is employed through an agent based on proximal policy optimization. The objective of the agent is to identify the best possible approximation of the target state while simultaneously minimizing the number of gates used. At each step, the agent appends a new gate to the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET",
+    "cs.LG"
+  ],
+  "published": "2026-07-23",
+  "updated": "2026-07-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

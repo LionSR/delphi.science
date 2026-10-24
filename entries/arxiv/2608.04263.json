@@ -1,0 +1,23 @@
+{
+  "key": "2608.04263",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.04263",
+  "title": "Poisson-Compiled Quantum Singular Value Transformation for Power-Exponential Dissipation",
+  "authors": [
+    "Chao Wang",
+    "Xi-Ning Zhuang",
+    "Menghan Dou",
+    "Zhao-Yun Chen",
+    "Guo-Ping Guo"
+  ],
+  "summary": "We study quantum implementations of the contraction $\\exp(-T H^α)$ for $H=H^\\dagger\\succeq0$ and $α>0$. Poisson summation provides an exact target--alias--tail decomposition whose Fourier samples are compiled classically into a single Chebyshev polynomial, so the quantum circuit uses polynomial eigenvalue transformation rather than a frequency linear combination of unitaries. We compare block encodings of $H/\\norm{H}$ and of the shifted signal $2H/\\norm{H}-I$. Under ordinary single-sequence QSVT, parity forces the former to use an even extension, which is entire only for even positive…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

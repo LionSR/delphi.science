@@ -1,0 +1,23 @@
+{
+  "key": "2606.20176",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20176",
+  "title": "Quantum-Accelerated Self-Consistent Field: A Hybrid Algorithm",
+  "authors": [
+    "Alexis Ralli",
+    "Tim Weaving",
+    "Thomas M. Bickley",
+    "Peter V. Coveney",
+    "Peter J. Love"
+  ],
+  "summary": "We present the Grover adaptive search self-consistent field (GAS-SCF) algorithm. GAS-SCF leverages quantum arithmetic to construct an efficient oracle that marks target states (Fock states) which improve upon some initial classical energy estimate. Amplitude amplification then increases the probability of measuring these states. This approach offers a theoretical quadratic speed-up for the optimization problem encountered in SCF quantum chemistry and establishes a baseline against which structured optimization algorithms, such as QAOA and DQI may be compared. In this work, we classically…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

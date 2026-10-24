@@ -1,0 +1,20 @@
+{
+  "key": "2606.08760",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.08760",
+  "title": "Visual-to-Code Authoring, Tensor-Network Debugging, and Quantum-Circuit Inspection Tools in Python",
+  "authors": [
+    "Alejandro Mata Ali"
+  ],
+  "summary": "Tensor networks and quantum circuits are structural objects whose meaning depends on connectivity, indices, contraction order, gate placement, measurements, and related design choices. They are often easier to reason about visually than as code, yet in Python they are frequently constructed, transformed, and checked through backend-specific objects or compact symbolic expressions. This can make structural mistakes hard to notice during development, debugging, and communication. This paper presents three complementary packages: Tensor-Network-Visualization for visual debugging and structural…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.comp-ph"
+  ],
+  "published": "2026-06-07",
+  "updated": "2026-06-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

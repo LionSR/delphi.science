@@ -1,0 +1,29 @@
+{
+  "key": "2605.10191",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.10191",
+  "title": "Computing eigenpairs of quantum many-body systems with Polfed.jl",
+  "authors": [
+    "Rok Pintar",
+    "Konrad Pawlik",
+    "Rafał Świętek",
+    "Miroslav Hopjan",
+    "Jan Šuntajs",
+    "Jakub Zakrzewski",
+    "Piotr Sierant",
+    "Lev Vidmar"
+  ],
+  "summary": "We present Polfed$.$jl, an open-source Julia package implementing the Polynomially Filtered Exact Diagonalization (POLFED) algorithm for computing mid-spectrum eigenvalues and eigenvectors (shortly, eigenpairs) of quantum many-body Hamiltonians. Access to such eigenpairs is essential for studying non-equilibrium many-body physics, but is hindered by the exponential growth of Hilbert-space dimension. POLFED addresses this challenge through a polynomial spectral transformation evaluated on the fly within a Lanczos iteration, preserving Hamiltonian sparsity and substantially reducing memory…",
+  "domain": "cond-mat.stat-mech",
+  "tags": [
+    "cond-mat.stat-mech",
+    "cond-mat.dis-nn",
+    "cond-mat.str-el",
+    "quant-ph"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2609.29856",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.29856",
+  "title": "A Block Decomposed QUBO Workflow for Chromosome-Y Phylogeny Reconstruction",
+  "authors": [
+    "Giuliana Siddi Moreau",
+    "Riccardo Berutti",
+    "Manuela Profir",
+    "Lorenzo Pisani",
+    "Maria Laura Clemente",
+    "Lidia Leoni"
+  ],
+  "summary": "This paper sets out a computational workflow that reconstructs the phylogeny of human Y-chromosome populations from a Variant Call Format (VCF) file of biallelic Single Nucleotide Polymorphisms (SNP). The two classical phylogenetic decisions - topology selection and root placement - are cast as Quadratic Unconstrained Binary Optimisation (QUBO) problems. The workflow combines two QUBO formulations with an Alternating Direction Method of Multipliers (ADMM) decomposition strategy and a plug-in Digitized Counter-Diabatic Quantum Optimization (DCQO) solver, enabling large phylogenetic…",
+  "domain": "cs.DC",
+  "tags": [
+    "cs.DC",
+    "quant-ph"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

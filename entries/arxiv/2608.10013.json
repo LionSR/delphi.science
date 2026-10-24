@@ -1,0 +1,20 @@
+{
+  "key": "2608.10013",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.10013",
+  "title": "RF-Budgeted Frame Compilation for Frequency-Multiplexed Superconducting-Qubit Control Using Qubit-Control Identity Records and a Circuit-Informed RFSoC Model",
+  "authors": [
+    "Mingqi Ge",
+    "Anne-Marie Valente-Feliciano"
+  ],
+  "summary": "Frequency-multiplexed superconducting-qubit control requires more than carrier assignment: the RF budget of a shared source can perturb multi-qubit rotations through finite bandwidth, crest factor, clipping, quantization, jitter, spurs, compression, crosstalk, and leakage. We present an RF-budgeted frame-compilation and validation workflow that combines qubit-control identity (QID) records, a MATLAB/Simulink-based circuit-informed RFSoC source-chain model, QuTiP qutrit dynamics, and Qiskit-derived algorithm workloads. QID records encode qubit-specific computational and leakage transition…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-08",
+  "updated": "2026-08-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

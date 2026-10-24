@@ -1,0 +1,23 @@
+{
+  "key": "2608.30937",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.30937",
+  "title": "Constrained minimax approximation for quantum signal processing",
+  "authors": [
+    "Yulong Dong",
+    "James B. Larsen",
+    "Lin Lin",
+    "Rahul Sarkar"
+  ],
+  "summary": "Quantum signal processing (QSP) provides a simple and efficient framework for implementing polynomial transformations using quantum circuits. Its classical design stage leads to a constrained minimax approximation problem: find a polynomial of prescribed parity that approximates a target function uniformly on a fitting set while remaining bounded in magnitude by one on the domain $[0,1]$, which can be viewed as a semi-infinite constraint. Discretization converts the problem into a linear program, but feasibility at a set of finitely many sampled points does not ensure feasibility on the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.NA"
+  ],
+  "published": "2026-08-31",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

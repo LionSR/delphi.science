@@ -1,0 +1,21 @@
+{
+  "key": "2608.02600",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.02600",
+  "title": "A Unified Complexity Framework for Quantum Property Testing",
+  "authors": [
+    "Qisheng Wang"
+  ],
+  "summary": "We develop a unified framework for analyzing the complexity of quantum property testing through functionals of the form $\\mathcal{L}_φ(ρ) = \\operatorname{tr}(φ(dρ))/d$, where $ρ$ is an unknown $d$-dimensional quantum state and $φ$ is a given function. A master theorem is established that derives sample complexity lower bounds for estimating $\\mathcal{L}_φ(ρ)$ from properties of $φ$, combining Haar-random moment encoding with moment matching and best polynomial approximation. Corresponding query complexity lower bounds follow from quantum sample-to-query lifting. The framework yields nearly…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.IT"
+  ],
+  "published": "2026-08-03",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2608.00954",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.00954",
+  "title": "NoisePQC++: A Unified NIST-Compliant PQC and Hybrid-PQC Implementation of the Noise Protocol",
+  "authors": [
+    "Nadeem Ahmed",
+    "Aryya Gangopadhyay",
+    "Lei Zhang"
+  ],
+  "summary": "The threat of quantum computers to classical public-key cryptography has created an urgent need to evolve secure communication protocols with post-quantum cryptographic (PQC) primitives. The Noise Protocol Framework, widely used in systems such as WireGuard and WhatsApp, traditionally relies on the Elliptic Curve Diffie-Hellman (ECDH) public-key exchange scheme, which is vulnerable to quantum threats. In this paper, we present NoisePQC++, a unified C++23 implementation of the Noise Protocol framework augmented with post-quantum Key Encapsulation Mechanisms and Hybrid Forward Secrecy. Our…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "cs.NI",
+    "quant-ph"
+  ],
+  "published": "2026-08-02",
+  "updated": "2026-08-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

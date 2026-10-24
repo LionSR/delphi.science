@@ -1,0 +1,21 @@
+{
+  "key": "2606.03914",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.03914",
+  "title": "Quantum Erasure Imaging: Complementary Modalities from Delayed-Choice Erasure",
+  "authors": [
+    "Sean D Huver",
+    "Sanjaya Lohani"
+  ],
+  "summary": "Quantum Erasure Imaging (QEI) turns delayed-choice erasure into a practical imaging protocol. Entangled photon pairs encode two classical modalities, absorption $T(x,y)$ and a phase-sensitive cosine quadrature of $φ(x,y)$, reconstructed from a single run of time-tagged coincidences by retrospective sorting on a remote ancilla. Measuring the ancilla in H/V yields $T$ via which-path information; D/A yields interference visibility $\\propto \\frac{2\\sqrt{T}}{T+1}\\cosφ$; and a rotated orthonormal analyzer continuously trades between them. We derive balanced two-port estimators whose denominators…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.optics"
+  ],
+  "published": "2026-06-02",
+  "updated": "2026-06-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

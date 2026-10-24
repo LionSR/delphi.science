@@ -1,0 +1,22 @@
+{
+  "key": "2602.07913",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.07913",
+  "title": "Multi-Agent Route Planning as a QUBO Problem",
+  "authors": [
+    "Renáta Rusnáková",
+    "Martin Chovanec",
+    "Juraj Gazda"
+  ],
+  "summary": "Multi-Agent Route Planning considers selecting vehicles, each associated with a single predefined route, such that route-level coverage utility is maximized while redundant spatial overlaps are limited. This paper gives a formal problem definition, proves NP-hardness by reduction from the Weighted Set Packing problem, and derives a Quadratic Unconstrained Binary Optimization formulation whose coefficients directly encode route utility rewards and pairwise overlap penalties. A single penalty parameter $λ$ controls the coverage--overlap trade-off. We distinguish between a soft regime, which…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "quant-ph"
+  ],
+  "published": "2026-02-08",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

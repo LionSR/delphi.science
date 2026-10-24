@@ -1,0 +1,27 @@
+{
+  "key": "2609.22748",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.22748",
+  "title": "Feasibility and optimum recovery in warm-start quantum optimization for a drug-response model on a trapped-ion processor",
+  "authors": [
+    "Tanzir Hossain",
+    "Rajib Rana",
+    "Prabal Datta Barua",
+    "Abu Ali Ibn Sina",
+    "Niall Higgins",
+    "Pascal Elahi",
+    "Robert Sang",
+    "Bjorn W. Schuller"
+  ],
+  "summary": "On a seven-compound drug-response model, warm-start quantum approximate optimization (QAOA) on IonQ Forte-1 returned valid assignments more often than random bitstrings, but this alone did not show effective optimization. Ideal QAOA raised optimum probability above uniform feasible sampling in only four of twelve reference circuits. Hardware often fell below its own noiseless circuits, while greedy search solved all hardware models within 200 objective evaluations. Expanded simulations showed a gain over feasible sampling in 28 of 35 CAMA-1 panels and none of four 647-V panels. Annealing…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-09-19",
+  "updated": "2026-09-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2610.00945",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00945",
+  "title": "TATVA: A Reinforcement Learning Framework for Quantum Circuit Synthesis",
+  "authors": [
+    "Om Bhamare",
+    "Aryan Jadhav",
+    "Manas Shinde",
+    "Prithvi Shinde"
+  ],
+  "summary": "One of the most important initial steps in quantum computing is high-fidelity quantum state preparation, because errors in it can affect the final computational result. Therefore, one of the major challenges is to design a quantum circuit that can achieve the desired target state accurately with a smaller number of gates. Traditionally, circuits are designed using predefined rules and mathematical decompositions, but this makes it difficult to design circuits for different and complex target states. This paper presents TATVA, a reinforcement learning (RL) system for synthesizing quantum…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

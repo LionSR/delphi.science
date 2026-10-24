@@ -1,0 +1,21 @@
+{
+  "key": "2603.02954",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.02954",
+  "title": "Improved Grid-Based Simulation of Coulombic Dynamics",
+  "authors": [
+    "Xiaoning Feng",
+    "Hans Hon Sang Chan",
+    "David P. Tew"
+  ],
+  "summary": "Accurate time-dependent quantum dynamics of Coulombic systems on grid-based representations remains computationally demanding due to the singularity of the Coulomb potential, which necessitates extremely fine spatial grids to mitigate discretisation errors. We propose two complementary correction schemes that, under identical resource budgets, consistently outperform the uncorrected counterparts. The first scheme modifies the potential operator to incorporate grid-basis structure into its representation, while the second introduces a corrected initial wavefunction inspired by analytical…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-03",
+  "updated": "2026-09-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

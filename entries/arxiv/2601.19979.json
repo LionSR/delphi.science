@@ -1,0 +1,23 @@
+{
+  "key": "2601.19979",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.19979",
+  "title": "Exploring the holographic entropy cone via reinforcement learning",
+  "authors": [
+    "Temple He",
+    "Jaeha Lee",
+    "Hirosi Ooguri"
+  ],
+  "summary": "We develop a reinforcement learning algorithm to study the holographic entropy cone. Given a target entropy vector, our algorithm searches for a graph realization whose min-cut entropies match the target vector. If the target vector does not admit such a graph realization, it must lie outside the cone, in which case the algorithm finds a graph whose corresponding entropy vector most nearly approximates the target and allows us to probe the location of the facets. For the $\\sf N=3$ cone, we confirm that our algorithm successfully rediscovers monogamy of mutual information beginning with a…",
+  "domain": "hep-th",
+  "tags": [
+    "hep-th",
+    "cs.LG",
+    "quant-ph"
+  ],
+  "published": "2026-01-27",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

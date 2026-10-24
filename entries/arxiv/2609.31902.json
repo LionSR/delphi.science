@@ -1,0 +1,19 @@
+{
+  "key": "2609.31902",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.31902",
+  "title": "Quantum Encoding Agents: A Natural Language Interface for Data Embedding Strategy Selection in Quantum Machine Learning",
+  "authors": [
+    "Ana Paula Appel"
+  ],
+  "summary": "Selecting a data encoding is a central and poorly tooled decision in quantum machine learning. The feature map fixes the geometry of the Hilbert space, the expressibility of quantum kernels, and whether the circuit can run on near-term hardware. This paper presents Quantum Encoding Agents, an open-source system that turns encoding selection into a natural-language interaction. Given a dataset and an optional task description, it profiles the data, applies a hardware-aware policy using the gate-error threshold p* approximately 10^{-3}, returns a copyable Qiskit circuit with a justification in…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

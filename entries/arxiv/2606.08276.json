@@ -1,0 +1,22 @@
+{
+  "key": "2606.08276",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.08276",
+  "title": "QnRL: Quantum-Native Reinforcement Learning",
+  "authors": [
+    "Alexander DeRieux",
+    "Walid Saad"
+  ],
+  "summary": "Quantum reinforcement learning (QRL) is a promising approach to learn effective decision strategies across several applications with stochastic environments. Instead of directly modeling the random variables that govern these environments, existing QRL architectures indirectly approximate environment behavior by estimating expected outcomes, which limits their expressive power and adaptive potential. Overcoming such challenges requires a novel QRL approach that exploits the distributional nature of quantum computers to directly model environment random variables as quantum state…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET",
+    "cs.LG"
+  ],
+  "published": "2026-06-06",
+  "updated": "2026-06-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

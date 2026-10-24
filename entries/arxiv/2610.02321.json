@@ -1,0 +1,19 @@
+{
+  "key": "2610.02321",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02321",
+  "title": "Halving the cost of QROM again via dense encoding",
+  "authors": [
+    "Danial Motlagh"
+  ],
+  "summary": "Quantum read only memory (QROM) is a substantial source of non-Clifford cost in fault-tolerant quantum algorithms. Borrowing dirty qubits can reduce this cost, provided their unknown initial states are restored. We consider the practically relevant qubit-constrained regime, where limited workspace restricts the table-block size and table loading dominates the cost. For $N$ entries of $b$ bits and approximately $bλ$ dirty qubits, SelectSwap has leading Toffoli count $2N/λ$. Recent work using sequential bit packets reduces this to $(1+1/b)N/λ$. In this work we introduce a dense encoding…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

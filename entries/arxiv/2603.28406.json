@@ -1,0 +1,22 @@
+{
+  "key": "2603.28406",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.28406",
+  "title": "Physics as Code: From Scans to Theorems with ITP APIs in $SU(5)$ Model Building",
+  "authors": [
+    "Sven Krippendorf",
+    "Joseph Tooby-Smith"
+  ],
+  "summary": "A recurring challenge in theoretical physics is to make reliable global statements about bounded but combinatorially large model spaces. Exhaustive scans quickly become opaque or impractical, while statistical exploration does not by itself provide theorem-backed guarantees. This motivates workflows in which the model-building problem itself is formalized inside an interactive theorem prover (ITP). In this paper we develop an API-based methodology for formalizing such bounded model-building questions inside Lean, an interactive theorem prover. The central step is to represent the relevant…",
+  "domain": "hep-th",
+  "tags": [
+    "hep-th",
+    "cs.LO",
+    "hep-ph"
+  ],
+  "published": "2026-03-30",
+  "updated": "2026-03-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

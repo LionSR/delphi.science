@@ -1,0 +1,21 @@
+{
+  "key": "2601.19184",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.19184",
+  "title": "Quantum computing of the nonlinear Schrödinger equation via measurement-induced potential reconstruction",
+  "authors": [
+    "Kaiwen Weng",
+    "Zhaoyuan Meng",
+    "Guohui Hu"
+  ],
+  "summary": "The nonlinear Schrödinger equation (NLSE) is a fundamental model that describes diverse complex phenomena in nature. However, simulating the NLSE on a quantum computer is inherently challenging due to the presence of the nonlinear term. We propose a hybrid quantum-classical framework for simulating the NLSE based on the split-step Fourier method. During the linear propagation step, we apply the kinetic evolution operator to generate an intermediate quantum state. Subsequently, the Hadamard test is employed to measure the Fourier components of low-wavenumber modes, enabling the efficient…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-27",
+  "updated": "2026-02-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

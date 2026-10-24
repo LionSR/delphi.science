@@ -1,0 +1,24 @@
+{
+  "key": "2608.07893",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.07893",
+  "title": "Breaking the Curse of Dimensionality in Quantum PDE Solvers via Gevrey Regularity",
+  "authors": [
+    "Pooya Ronagh",
+    "Mariia Sobchuk",
+    "Xiaoran Li",
+    "Grecia Castelazo",
+    "Ala Shayeghi"
+  ],
+  "summary": "We connect different degrees of smoothness of real-valued periodic functions to the number of qubits required for their high-precision Fourier-basis amplitude encodings. Our central observation is that the Gevrey hierarchy, which stratifies the space between smooth and analytic functions, provides a natural class for high-precision quantum algorithms. We use Gevrey regularity to analyze a quantum algorithm for solving general linear partial differential equations (PDEs) with periodic boundary conditions. We then extend the solver to PDEs with Dirichlet boundary conditions using thin Gevrey…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.NA"
+  ],
+  "published": "2026-08-08",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

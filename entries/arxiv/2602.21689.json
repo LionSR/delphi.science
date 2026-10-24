@@ -1,0 +1,25 @@
+{
+  "key": "2602.21689",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.21689",
+  "title": "Landscape-Similarity-Guided Optimization in Divide-and-Conquer QAOA",
+  "authors": [
+    "Sokea Sang",
+    "Leanghok Hour",
+    "Sanghyeon Lee",
+    "Aniket Patra",
+    "Hee Chul Park",
+    "Moon Jip Park",
+    "Youngsun Han"
+  ],
+  "summary": "Divide-and-conquer strategies mitigate hardware constraints for the Quantum Approximate Optimization Algorithm (QAOA) on Noisy Intermediate-Scale Quantum (NISQ) devices by partitioning large interaction graphs into smaller, hardware-compatible sub-problems. However, this approach introduces a severe classical training bottleneck: a decomposition across $m$ boundary nodes generates $2^m$ distinct sub-problems that typically require independent optimization. In this work, we demonstrate that across diverse synthetic and real-world interaction graphs, the variational landscapes of these reduced…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-25",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2610.06176",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06176",
+  "title": "What Does It Cost to Simulate a Quantum Sentence Classifier? An Energy and Compute Perspective on Near-Term QNLP",
+  "authors": [
+    "Kishlay Kashyap",
+    "Sandipan Ganguly"
+  ],
+  "summary": "Near-term quantum natural language processing (QNLP) experiments often run on classical simulators, so simulator cost is part of the field's practical compute burden, yet accuracy tables do not show it. We measure that cost for a variational quantum classifier (VQC) on binary SST-2 sentiment classification, using PennyLane's state-vector simulator over a controlled grid of 27 configurations: three balanced training-set sizes (N = 200, 500, 1000), three qubit counts (4, 6, 8), and three circuit depths. Each VQC is compared with logistic regression on the same PCA-reduced input; full TF-IDF…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CL",
+    "cs.LG"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

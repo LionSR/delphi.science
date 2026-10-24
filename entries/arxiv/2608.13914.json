@@ -1,0 +1,32 @@
+{
+  "key": "2608.13914",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.13914",
+  "title": "Hybrid Quantum-inspired Kolmogorov-Arnold Networks for Privacy-Aware Federated Biosignal Learning",
+  "authors": [
+    "Chun-Hua Lin",
+    "Samuel Yen-Chi Chen",
+    "Yu-Chao Hsu",
+    "Kuo-Chung Peng",
+    "Jiun-Cheng Jiang",
+    "Chi-Sheng Chen",
+    "Tai-Yue Li",
+    "Nan-Yow Chen",
+    "En-Jui Kuo",
+    "Hsi-Sheng Goan"
+  ],
+  "summary": "Electrocardiogram (ECG) recordings are sensitive biomedical data, limiting the ability of hospitals and wearable devices to share raw signals for centralized model training. Federated learning addresses this practical privacy constraint by enabling collaborative model training while keeping raw biosignal data at their respective sources. However, federated ECG classification remains challenging due to limited client-side samples, imbalanced arrhythmia labels, and non-independent and identically distributed (non-IID) data across clients. These constraints require classifiers that are both…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "cs.DC",
+    "cs.ET",
+    "quant-ph"
+  ],
+  "published": "2026-08-14",
+  "updated": "2026-08-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

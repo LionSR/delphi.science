@@ -1,0 +1,25 @@
+{
+  "key": "2609.00663",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.00663",
+  "title": "Separating perception from reasoning in vision-language models: a model-free render ceiling for crystal structures",
+  "authors": [
+    "Can Polat",
+    "Mustafa Kurban",
+    "Erchin Serpedin",
+    "Hasan Kurban"
+  ],
+  "summary": "Multimodal evaluations cannot say whether a vision-language model misread an image or misreasoned about it, because every existing method for separating the two places a second model in the loop. We introduce the render ceiling, a model-free reference for benchmarks built by rendering known objects: inverting the frozen cameras and re-solving cross-view correspondence recovers exactly the answer the images support. We prove the ceiling fails only through an enumerable set of projection coincidences and certify that set empty on 2,160 rendered crystal structures, so every point of a model's…",
+  "domain": "cs.CV",
+  "tags": [
+    "cs.CV",
+    "cond-mat.mtrl-sci",
+    "physics.chem-ph",
+    "quant-ph"
+  ],
+  "published": "2026-09-01",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

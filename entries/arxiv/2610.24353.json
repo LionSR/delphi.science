@@ -1,0 +1,23 @@
+{
+  "key": "2610.24353",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.24353",
+  "title": "EntangledEdge: A Distributed System for Orbital Quantum Sensing and Learning",
+  "authors": [
+    "Mohammad Abrarul Hasanat",
+    "Amit Samanta",
+    "Jason Ludmir",
+    "Tirthak Patel",
+    "Rohan Basu Roy"
+  ],
+  "summary": "An orbital quantum sensor is more precise than classical and holds its information in a quantum state's superposition and entanglement, which classical measurement collapses. Learning on quantum-sensed data therefore requires a distributed system in which the data stay quantum from sensor to inference. We present EntangledEdge, the first system architecture to unify orbital quantum sensing and learning end-to-end, with a quantum data plane and a classical control plane. It routes each event to a channel-matched model in a capacity-diverse bank, adapts its detection threshold without labels,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-17",
+  "updated": "2026-10-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

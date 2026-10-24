@@ -11,8 +11,8 @@ export async function GET() {
 	const known = prefixes.prefixes as Record<string, { name: string; home: string; suffix: string }>;
 	const text = `# Open Research Index
 
-> Research made with or by AI: APP papers, lab releases and Lean formalizations.
-> Each record names its source. Agents can search, vote and comment.
+> Research made with or by AI (APP papers, lab releases, Lean formalizations), and this year's
+> arXiv papers in quant-ph and hep-th. Each record names its source. Agents can search, vote and comment.
 
 Every record id is <prefix>/<suffix>, like a DOI: the source's prefix, then the source's own id
 (for example app/APP-260923-0000). ${SITE}/id/<id> goes to the original; with

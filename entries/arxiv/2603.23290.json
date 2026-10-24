@@ -1,0 +1,23 @@
+{
+  "key": "2603.23290",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.23290",
+  "title": "Traveling Salesman Problem with a preprocessing method for classical and quantum optimization",
+  "authors": [
+    "Alessia Ciacco",
+    "Luigi Di Puglia Pugliese",
+    "Francesca Guerriero"
+  ],
+  "summary": "The Traveling Salesman Problem is a fundamental combinatorial optimization problem widely studied in operations research. Despite its simple formulation, it remains computationally challenging due to the exponential growth of the search space and the large number of constraints required to eliminate subtours. This paper introduces a preprocessing strategy that significantly reduces the size of the optimization model by restricting the set of candidate arcs and retaining only the lowest-cost neighbors for each vertex. Computational experiments on TSPLIB benchmark instances demonstrate that…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CE",
+    "math.CO"
+  ],
+  "published": "2026-03-24",
+  "updated": "2026-05-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

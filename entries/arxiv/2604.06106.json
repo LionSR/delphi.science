@@ -1,0 +1,20 @@
+{
+  "key": "2604.06106",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.06106",
+  "title": "Nonvariational quantum optimisation approaches to pangenome-guided sequence assembly",
+  "authors": [
+    "Josh Cudby",
+    "Sergii Strelchuk"
+  ],
+  "summary": "Assembling genomes from short-read sequencing data remains difficult in repetitive regions, where reference bias and combinatorial complexity limit existing methods. Pangenome-guided sequence assembly (PGSA) mitigates reference bias by reconstructing an individual genome as a walk through a population-level graph. The associated problem, identifying a walk whose node visits match read-derived copy numbers, is NP-hard and already challenges classical solvers at a moderate scale. We develop near-term quantum optimisation approaches for this computational bottleneck. We consider two problem…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-07",
+  "updated": "2026-04-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

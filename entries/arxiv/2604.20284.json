@@ -1,0 +1,23 @@
+{
+  "key": "2604.20284",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.20284",
+  "title": "Hamiltonian simulation for 3D elastic wave equations in homogeneous elastic media",
+  "authors": [
+    "Kosuke Nakanishi",
+    "Hiroshi Yano",
+    "Yuki Sato"
+  ],
+  "summary": "We present an explicit quantum circuit construction for Hamiltonian simulation of a first-order velocity--stress formulation of the three-dimensional elastic wave equation in homogeneous isotropic media. Previous studies have shown how elastic wave equations can be cast into forms amenable to Hamiltonian simulation, but they typically rely on black box Hamiltonian access assumptions, making gate complexity estimation difficult. Starting from the first-order velocity--stress formulation, we discretize the system by finite differences, transform it into Schrödinger form, and exploit the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CE",
+    "math.NA"
+  ],
+  "published": "2026-04-22",
+  "updated": "2026-04-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2608.05110",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.05110",
+  "title": "Representational separation between unitary and channel quantum generative models via shared classical randomness at shallow depth",
+  "authors": [
+    "Arunava Majumder",
+    "Marius Krumm",
+    "Hendrik Poulsen Nautrup",
+    "Hans J. Briegel"
+  ],
+  "summary": "Near-term quantum hardware limits circuit depth and often imposes geometrically local connectivity for quantum generative models, restricting the output distributions accessible to shallow unitary Born models. Introducing stochasticity into a unitary quantum Born model can improve the empirical generative performance of the resulting channel model and, for a restricted small-scale architecture, has been proven to represent a strictly larger family of distributions than its unitary counterpart. However, whether such randomness provides a provable separation at fixed shallow depth for…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-08-05",
+  "updated": "2026-08-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

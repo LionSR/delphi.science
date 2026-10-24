@@ -1,0 +1,20 @@
+{
+  "key": "2608.05314",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.05314",
+  "title": "Machine learning for sample-based quantum diagonalization: a review of generative configuration recovery and the classical-simulability frontier",
+  "authors": [
+    "Nicolás Bonilla Vargas"
+  ],
+  "summary": "Sample-based quantum diagonalization (SQD), equivalently quantum-selected configuration interaction (QSCI), has become a centre of gravity of pre-fault-tolerant quantum chemistry: a processor samples electronic configurations and the Hamiltonian is diagonalized classically in the resulting subspace. Accuracy is governed entirely by which configurations enter it -- a machine-learning selection problem, made acute by a coupon-collector bottleneck. We review the generative and learned selectors by what each generates and the signal it exploits, and identify one gap: no reward-proportional…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.chem-ph"
+  ],
+  "published": "2026-08-05",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

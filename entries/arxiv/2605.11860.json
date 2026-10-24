@@ -1,0 +1,21 @@
+{
+  "key": "2605.11860",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11860",
+  "title": "Runtime Calibration as State-Trajectory Feedback Control in Quantum-Classical Workflows",
+  "authors": [
+    "Xiaolong Deng"
+  ],
+  "summary": "In superconducting devices running variational workloads, gate and readout fidelities drift on hour timescales, while existing runtime schedulers treat backend quality as static. The temporal dimension of calibration remains unresolved. We formulate runtime calibration as a state-trajectory feedback-control problem under a fixed wall-clock budget, and investigate whether spending time on calibration now can improve the future optimization trajectory. Calibration quality proxy is represented as a drifting equivalent-age state, recovery action is modeled as costly state reset, and policies are…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AR",
+    "cs.ET"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

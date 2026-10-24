@@ -1,0 +1,22 @@
+{
+  "key": "2608.24494",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.24494",
+  "title": "Optimal Quantum Algorithm for Ground-State Energy Estimation with a Guiding State",
+  "authors": [
+    "Stacey Jeffery",
+    "Freek Witteveen"
+  ],
+  "summary": "In the problem of ground-state energy estimation, one aims to estimate the smallest eigenvalue of a Hamiltonian, often given a guiding state, with some promised overlap $γ$ with the ground space. The main approach to this problem is to simulate its evolution, and estimate the smallest (or equivalently, largest) eigenphase of the resulting unitary $U$. We give a quantum algorithm that estimates the largest eigenphase of a unitary $U$ in this guided setting using a factor of $\\log\\frac{1}γ$ fewer queries to $U$ than the previous best approach. The result matches an existing lower bound, and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.DS"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

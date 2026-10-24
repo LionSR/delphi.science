@@ -1,0 +1,21 @@
+{
+  "key": "2609.30253",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.30253",
+  "title": "How Not to Build Microcrypt",
+  "authors": [
+    "Aditya Gulati",
+    "Dakshita Khurana",
+    "Kabir Tomer"
+  ],
+  "summary": "A key challenge in quantum cryptography is to build quantum one-wayness and pseudorandomness without the use of (quantum computable) one-way functions. So far, this has turned out to be a difficult task, with only a few proposed candidates that are not directly built from one-way functions. Even within these few proposed candidates, we have lacked the techniques to analyze when proposed constructions may inadvertently yield one-way functions. In this work, we introduce efficient NP-aided shadow tomography of quantum states. We prove that collections of {\\em computable} pure states can be…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

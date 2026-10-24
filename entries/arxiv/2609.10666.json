@@ -1,0 +1,21 @@
+{
+  "key": "2609.10666",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10666",
+  "title": "Walking Floquet code circuits for zero-overhead leakage reduction",
+  "authors": [
+    "Hanna Westerheim",
+    "Kaavya Sahay",
+    "Shruti Puri"
+  ],
+  "summary": "Leakage, occurring when a qubit undetectably exits the computational subspace, poses a significant challenge for quantum error correction by inducing correlated errors in space and time. These correlations reduce both the code threshold and the effective code distance. To address this challenge, we introduce two zero-overhead walking circuits for the honeycomb Floquet code (hFC), termed the swirling and sliding circuits, which periodically remove leakage while dynamically protecting logical qubits via a schedule of anticommuting two-body measurements. Unlike previous dynamic circuits for the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

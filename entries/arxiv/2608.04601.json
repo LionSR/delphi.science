@@ -1,0 +1,24 @@
+{
+  "key": "2608.04601",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.04601",
+  "title": "Solving Differential Equations Using Continuous-Variable Quantum Annealing",
+  "authors": [
+    "Kazuki Miyanishi",
+    "Soshun Naito",
+    "Asuka Koura",
+    "Kazue Kudo",
+    "Toshiki Yamaji",
+    "Yuichiro Matsuzaki"
+  ],
+  "summary": "Most existing quantum annealing approaches are formulated for qubit-based architectures. Consequently, applying them to continuous-variable optimization problems requires discretizing the variables, which can incur substantial qubit overhead. Continuous-variable quantum annealing based on bosonic systems has recently been proposed as an alternative framework, in which each optimization variable is directly encoded in a bosonic mode, such as a cavity mode. In this work, we develop a continuous-variable quantum annealing formulation for solving linear differential equations. By recasting the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-05",
+  "updated": "2026-08-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

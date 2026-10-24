@@ -1,0 +1,21 @@
+{
+  "key": "2609.20219",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20219",
+  "title": "Verification Meets Calibration: Bounds and Secret-Independent State Preparation with an NV-Center as a Case Study",
+  "authors": [
+    "Ezra Acalapati",
+    "Elham Kashefi",
+    "Cica Gustiani"
+  ],
+  "summary": "Verification protocols provide cryptographic guarantees that the outcome of a delegated quantum computation is correct, a key requirement for scalable and trustworthy quantum computing. A central assumption underlying these protocols is secret independence: the noise affecting state preparation must not depend on the classical secrets that specify the prepared states. In earlier protocols this assumption was enforced by the physical separation of client and server; in the recent on-chip setting it becomes a property of the hardware itself, and one that high-fidelity devices do not…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-19",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

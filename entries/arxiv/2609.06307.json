@@ -1,0 +1,22 @@
+{
+  "key": "2609.06307",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.06307",
+  "title": "Hierarchical Fourier Approximation for Variational Quantum Distribution Learning",
+  "authors": [
+    "Taha Hoseinpour Asli",
+    "Sajjad Hashemian",
+    "Ebrahim Ardeshir-Larijani"
+  ],
+  "summary": "We study variational quantum distribution learning through a hierarchy of Walsh--Fourier approximations on the Boolean cube. At each level, a selected set of target Fourier coefficients defines a spectral truncation, which is projected onto the probability simplex and used as the target of a quantum circuit Born machine. Parameters learned at one level initialize the next through a warm-start map. We prove an end-to-end expected learning guarantee where the approximation term is determined by the omitted Fourier mass, while a normalized unbiased estimator yields an explicit statistical bound…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-09-05",
+  "updated": "2026-09-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

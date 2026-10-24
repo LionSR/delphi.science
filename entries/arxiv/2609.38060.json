@@ -1,0 +1,21 @@
+{
+  "key": "2609.38060",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38060",
+  "title": "Classical Verification of Quantum Computation with Quasilinear Resources, from Compiled Nonlocal Games",
+  "authors": [
+    "Finn Holler",
+    "Anand Natarajan"
+  ],
+  "summary": "Computational self-testing gives a classical verifier command over the quantum register of a single computationally bounded prover. We use this framework to construct the first argument system for BQP with quasilinear total resource requirements in the circuit model. Our argument system is based on the learning with errors (LWE) assumption and requires total resources of $O(\\mathrm{poly}(λ, \\log g)\\cdot g)$ for delegating a circuit with $g$ gates, where $λ$ is the LWE security parameter. This is achieved by constructing a new computational self-test for certifying the prover's quantum state…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

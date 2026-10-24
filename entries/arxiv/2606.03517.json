@@ -1,0 +1,25 @@
+{
+  "key": "2606.03517",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.03517",
+  "title": "Scalable On-Hardware Training of Quantum Neural Networks and Application to Clinical Data Imputation",
+  "authors": [
+    "Natansh Mathur",
+    "Panagiotis Kl. Barkoutsos",
+    "Masako Yamada",
+    "Martin Roetteler",
+    "Iordanis Kerenidis"
+  ],
+  "summary": "Training quantum neural networks (QNNs) on quantum hardware is currently bottlenecked by the cost of gradient estimation: standard parameter-shift methods require a number of circuit evaluations that grows quadratically with the number of trainable parameters, making hardware-based optimisation impractical beyond small system sizes. In this work, we introduce a training framework that reduces this cost to logarithmic in the number of qubits, making gradient-based QNN optimisation feasible on near-term hardware at increasing scales. Our framework combines three co-designed ingredients: (i) a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "published": "2026-06-02",
+  "updated": "2026-06-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

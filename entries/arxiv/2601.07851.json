@@ -1,0 +1,19 @@
+{
+  "key": "2601.07851",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.07851",
+  "title": "LOTUS: Layer-ordered Temporally Unified Schedules For Quantum Approximate Optimization Algorithms",
+  "authors": [
+    "Phuong-Nam Nguyen"
+  ],
+  "summary": "In this paper, we introduce LOTUS (Layer-Ordered Temporally-Unified Schedules), which is a framework that restructures QAOA from a high-dimensional, chaotic search into a low-dimensional dynamical system. By replacing independent layer-wise angles with a Hybrid Fourier-Autoregressive (HFA) mapping, LOTUS enforces global temporal coherence while maintaining local flexibility. LOTUS consistently outperforms standard optimizers, achieving up to a $27.2\\%$ improvement in expectation values over L-BFGS-B and $20.8\\%$ compared with COBYLA. Besides, our proposed method drastically reduces…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-09",
+  "updated": "2026-01-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

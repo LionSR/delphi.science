@@ -1,0 +1,25 @@
+{
+  "key": "2602.08965",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.08965",
+  "title": "Learning to Coordinate via Quantum Entanglement in Multi-Agent Reinforcement Learning",
+  "authors": [
+    "John Gardiner",
+    "Orlando Romero",
+    "Brendan Tivnan",
+    "Nicolò Dal Fabbro",
+    "George J. Pappas"
+  ],
+  "summary": "The inability to communicate poses a major challenge to coordination in multi-agent reinforcement learning (MARL). Prior work has explored correlating local policies via shared randomness, sometimes in the form of a correlation device, as a mechanism to assist in decentralized decision-making. In contrast, this work introduces the first framework for training MARL agents to exploit shared quantum entanglement as a coordination resource, which permits a larger class of communication-free correlated policies than shared randomness alone. This is motivated by well-known results in quantum…",
+  "domain": "cs.MA",
+  "tags": [
+    "cs.MA",
+    "cs.LG",
+    "quant-ph"
+  ],
+  "published": "2026-02-09",
+  "updated": "2026-02-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

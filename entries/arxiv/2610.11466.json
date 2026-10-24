@@ -1,0 +1,23 @@
+{
+  "key": "2610.11466",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.11466",
+  "title": "An iterative Bayesian variational quantum eigensolver with the von Mises-Fisher distribution",
+  "authors": [
+    "Trung Minh Huynh",
+    "Gwangil An",
+    "Minsu Kim",
+    "Yu-Seong Jeon",
+    "Jinhyoung Lee"
+  ],
+  "summary": "We develop an iterative Bayesian variational quantum eigensolver in which the unknown ground state, parametrised as a real unit vector, is inferred through a von Mises--Fisher distribution sequentially updated from Hadamard-test measurements on a single ancilla qubit. Building on a companion paper that treated a single success outcome via exact moment matching, we generalise the scheme to condition on $m$ success outcomes for the likelihood function per iteration. Since exact moment matching becomes impractical for $m>1$, we exploit the large-concentration regime, in which a first-order…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

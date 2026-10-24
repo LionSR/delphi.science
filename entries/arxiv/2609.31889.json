@@ -1,0 +1,26 @@
+{
+  "key": "2609.31889",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.31889",
+  "title": "Scattering amplitudes from quantum hardware a la RESOs",
+  "authors": [
+    "Raul A Briceno",
+    "Ivan M Burbano",
+    "Anthony N Ciavarella",
+    "Ermal Rrapaj",
+    "Thomas R Richardson",
+    "Andre Walker-Loud"
+  ],
+  "summary": "We report the first quantum-hardware implementation of Real-time Estimators for Scattering Observables (RESOs). The physical model is a one-dimensional lattice theory of non-relativistic spin-1/2 fermions with a single contact interaction. The lattice sizes studied are up to $N_x=54$ lattice sites and up to $20$ time steps. Spacetime correlation functions were computed on IBM's quantum computers, using $109$ qubits with $10,806$ CZ gates applied, reaching a two-qubit gate depth of $246$. We demonstrate how to study bound states and extract scattering amplitudes from these correlation…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "hep-lat",
+    "nucl-th"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

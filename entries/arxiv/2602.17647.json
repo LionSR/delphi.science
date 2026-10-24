@@ -1,0 +1,22 @@
+{
+  "key": "2602.17647",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.17647",
+  "title": "Pseudo-deterministic Quantum Algorithms",
+  "authors": [
+    "Hugo Aaronson",
+    "Tom Gur",
+    "Jiawei Li"
+  ],
+  "summary": "We initiate a systematic study of pseudo-deterministic quantum algorithms. These are quantum algorithms that, for any input, output a canonical solution with high probability. Focusing on the query complexity model, our main contributions include the following complexity separations, which require new lower bound techniques specifically tailored to pseudo-determinism: - We exhibit a problem, Avoid One Encrypted String (AOES), whose classical randomized query complexity is $O(1)$ but is maximally hard for pseudo-deterministic quantum algorithms ($Ω(N)$ query complexity). - We exhibit a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-02-19",
+  "updated": "2026-02-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

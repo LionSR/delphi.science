@@ -1,0 +1,21 @@
+{
+  "key": "2607.16275",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.16275",
+  "title": "QR-SPPS: Quantum-Native Retail Shock Propagation and Policy Stress Simulator",
+  "authors": [
+    "Sumit Tapas Chongder"
+  ],
+  "summary": "Classical supply chain risk models treat node failures as statistically independent events, systematically underestimating correlated cascade failures across multi-tier supplier networks. We present QR-SPPS (Quantum-Native Retail Shock Propagation and Policy Stress Simulator), a quantum-native framework for retail supply chain risk analysis implemented on the Qiskit ecosystem using OpenFermion-based Ising Hamiltonian encoding. A 40-node, four-tier supply network is mapped to a 40-qubit Hamiltonian with ZZ coupling terms representing correlated supplier dependencies. A hardware-efficient…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CE",
+    "cs.ET"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

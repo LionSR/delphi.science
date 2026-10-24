@@ -1,0 +1,22 @@
+{
+  "key": "2609.04557",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.04557",
+  "title": "A Sim-to-Real Study of Surface-Code Decoder Benchmarking",
+  "authors": [
+    "Shay J. Manor",
+    "Leila S. Erhili",
+    "Yassine Jebbouri"
+  ],
+  "summary": "Quantum error-correction decoders are typically benchmarked against synthetic circuit-level noise, under the assumption that a decoder's ranking under such noise transfers to hardware and improves as the noise model becomes more realistic. The Willow processor, the first to operate below the surface-code threshold, allows us to test this assumption. We rank a panel of six decoders using a four-rung ladder of noise models with increasing fidelity, evaluated against real data across three code distances, two bases, and fifteen round counts. Rank agreement with hardware appears once the noise…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2601.13718",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.13718",
+  "title": "Quantum Box-Muller Transform",
+  "authors": [
+    "Dinh-Long Vu",
+    "Hitomi Mori",
+    "Patrick Rebentrost"
+  ],
+  "summary": "The Box-Muller transform is a widely used method to generate Gaussian samples from uniform samples. Quantum amplitude encoding methods encode the multi-variate normal distribution in the amplitudes of a quantum state. This work presents the Quantum Box-Muller transform which creates a superposition of binary-encoded grid points representing the multi-variate normal distribution. The gate complexity of our method depends on quantum arithmetic operations and, using a specific set of known implementations, the complexity is quadratic in the number of qubits. We apply our method to Monte-Carlo…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-20",
+  "updated": "2026-01-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

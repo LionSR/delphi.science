@@ -1,0 +1,20 @@
+{
+  "key": "2606.31753",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.31753",
+  "title": "Distributed Property Testing with (Quantum) Carrier Pigeons: Tight Bounds on State Certification",
+  "authors": [
+    "Kenny Chen"
+  ],
+  "summary": "Recently, Doosti et al. introduced the problem of distributed quantum state verification, where $m$ distributed nodes are given a copy of an unknown state $ρ$, and can send limited one way communication to a central node, who has a complete description of a known state $σ$. They ask how many distributed nodes $m$ are required, before the central node can succeed at distinguishing whether $ρ=σ$ or $\\|ρ-σ\\|_1\\geq\\varepsilon$ with high probability. In the setting where only quantum communication is allowed, Doosti et al. exhibit conditional lower bounds in both the public and private-coin…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS"
+  ],
+  "published": "2026-06-30",
+  "updated": "2026-07-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

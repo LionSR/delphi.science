@@ -1,0 +1,22 @@
+{
+  "key": "2607.08548",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08548",
+  "title": "An Effective Quantum Hoare Logic for Hybrid Quantum Programs with Unbounded Loops",
+  "authors": [
+    "Christophe Chareton",
+    "Jad Issa",
+    "Romain Péchoux"
+  ],
+  "summary": "While quantum hardware remains limited, hybrid quantum-classical algorithms with complex control structures, including unbounded loops, are emerging, posing new challenges for quantum program analysis, including the accurate estimation of the resource consumption of a given program. Meanwhile, precise analysis techniques such as symbolic execution have largely left out hybridization and unbounded recursion. On the other hand, current quantum Hoare logics that generally support them are lacking in expressiveness and miss out on efficient computational equational reasoning that could be…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.PL"
+  ],
+  "published": "2026-07-09",
+  "updated": "2026-07-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

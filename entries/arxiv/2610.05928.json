@@ -1,0 +1,20 @@
+{
+  "key": "2610.05928",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05928",
+  "title": "Evaluating the performance of QEC primitives on quantum processors at large width and depth",
+  "authors": [
+    "J. A. Montanez-Barrera",
+    "Kristel Michielsen"
+  ],
+  "summary": "Quantum error correction (QEC) relies on repeated parity extraction, mid-circuit measurement (MCM), reset, feed-forward, and scheduling, yet these primitives are usually assessed either in isolation or through resource-demanding experiments. We introduce a few-sample benchmark of QEC-relevant primitives based on an MCM implementation of the quantum approximate optimization algorithm (QAOA) with a fixed set of linear parameters (LR-QAOA). For a chosen code, the QAOA Hamiltonian is constructed from its check structure, such that the resulting circuit mimics the syndrome-extraction connectivity…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

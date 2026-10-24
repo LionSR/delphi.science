@@ -1,0 +1,24 @@
+{
+  "key": "2606.07727",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.07727",
+  "title": "Benchmarking Quantum Algorithmic Resilience for CVaR Portfolio Optimization: The Expressibility-Coherence Trade-off",
+  "authors": [
+    "Prashik N. Somkuwar",
+    "K. Srinivasan",
+    "G. Raghavan"
+  ],
+  "summary": "Quantum combinatorial optimization offers theoretical advantages for complex financial modeling, but physical implementation on Noisy Intermediate Scale Quantum (NISQ) devices is severely constrained by hardware topology. This study presents a hardware benchmarking analysis between a Hardware Efficient Variational Quantum Neural Network (HE-VQNN) and the Warm Start Quantum Approximate Optimization Algorithm (WS-QAOA) for a hybrid Mean Variance and Conditional Value at Risk (CVaR) portfolio objective. By implementing a novel classical quantum hybrid proxy matrix to bypass the CVaR auxiliary…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CL",
+    "math.OC",
+    "q-fin.PM"
+  ],
+  "published": "2026-06-05",
+  "updated": "2026-06-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,26 @@
+{
+  "key": "2601.22033",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.22033",
+  "title": "Holographic generative flows with AdS/CFT",
+  "authors": [
+    "Ehsan Mirafzali",
+    "Sanjit Shashi",
+    "Sanya Murdeshwar",
+    "Edgar Shaghoulian",
+    "Daniele Venturi",
+    "Razvan Marinescu"
+  ],
+  "summary": "Holography, in the form of the anti-de Sitter/conformal field theory (AdS/CFT) correspondence, offers a natural setting for generative modelling. Data on a boundary manifold lifts into a higher-dimensional bulk through a propagator, and this extra dimension plays the role of a flow parameter. We exploit this structure to build GenAdS, an approach to generative flow matching in which the dynamics are represented by the evolution of fields in AdS, together with a residual correction learned by a neural network. Boundary samples are encoded as scalar sources, transported into the bulk along the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "gr-qc",
+    "hep-th"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2603.14042",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.14042",
+  "title": "Block-QAOA-Aware Detection with Parameter Transfer for Large-Scale MIMO",
+  "authors": [
+    "Shuai Zeng"
+  ],
+  "summary": "Large-scale MIMO detection remains challenging because exact or near-maximum-likelihood search is difficult to scale, while available quantum resources are insufficient for directly solving full-size detection instances by QAOA. This paper therefore proposes a Block-QAOA-Aware MIMO Detector (BQA-MD), whose primary purpose is to reorganize the detection chain so that it becomes compatible with limited-qubit local quantum subproblems. Specifically, BQA-MD combines block-QAOA-aware preprocessing in the QR domain, a standards-consistent blockwise 5G NR Gray-HUBO interface, an MMSE-induced…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.NI",
+    "eess.SP"
+  ],
+  "published": "2026-03-14",
+  "updated": "2026-03-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

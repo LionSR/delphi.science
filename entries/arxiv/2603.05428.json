@@ -1,0 +1,23 @@
+{
+  "key": "2603.05428",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.05428",
+  "title": "Optimal Decoding with the Worm",
+  "authors": [
+    "Zac Tobias",
+    "Nikolas P. Breuckmann",
+    "Benedikt Placke"
+  ],
+  "summary": "We propose a new decoder for \"matchable'' qLDPC codes that uses a Markov Chain Monte Carlo algorithm - called the worm algorithm - to approximately compute the probabilities of logical error classes given a syndrome. The algorithm hence performs (approximate) optimal decoding, and we expect it to be computationally efficient in certain settings. The algorithm is applicable to decoding random errors for the surface code, the honeycomb Floquet code, and hyperbolic surface codes with constant rate, in all cases with and without measurement errors. The efficiency of the decoder hinges on the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.dis-nn",
+    "cond-mat.stat-mech"
+  ],
+  "published": "2026-03-05",
+  "updated": "2026-03-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

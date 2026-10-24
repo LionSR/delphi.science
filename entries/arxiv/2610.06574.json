@@ -1,0 +1,20 @@
+{
+  "key": "2610.06574",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06574",
+  "title": "CT-bMPS: Approximate Tensor Network Contraction with Boundary MPS on Contraction Trees",
+  "authors": [
+    "Hidetaka Manabe",
+    "Feng Pan"
+  ],
+  "summary": "We introduce contraction tree boundary matrix product states (CT-bMPS), a scalable approximate contraction method for general closed tensor networks. CT-bMPS represents the boundary tensor and its complementary environment at each edge of a contraction tree as matrix product states. This representation allows local compression based on a reduced transition matrix to incorporate environment information along arbitrary contraction trees, while keeping the time and memory costs polynomial in the network size and bond dimension. We benchmark the method on a variety of models and applications,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

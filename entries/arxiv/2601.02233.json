@@ -1,0 +1,25 @@
+{
+  "key": "2601.02233",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.02233",
+  "title": "PauliEngine: High-Performant Symbolic Arithmetic for Quantum Operations",
+  "authors": [
+    "Leon Müller",
+    "Adelina Bärligea",
+    "Alexander Knapp",
+    "Jakob S. Kottmann"
+  ],
+  "summary": "Quantum computation is inherently hybrid, and fast classical manipulation of qubit operators is necessary to ensure scalability in quantum software. We introduce PauliEngine, a high-performance C++ framework that provides efficient primitives for Pauli string multiplication, commutators, symbolic phase tracking, and structural transformations. Built on a binary symplectic representation and optimized bit-wise operations, PauliEngine supports both numerical and symbolic coefficients and is accessible through a Python interface. Runtime benchmarks demonstrate substantial speedups over…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET",
+    "cs.SE",
+    "physics.comp-ph"
+  ],
+  "published": "2026-01-05",
+  "updated": "2026-01-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

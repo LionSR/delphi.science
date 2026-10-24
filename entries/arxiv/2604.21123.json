@@ -1,0 +1,23 @@
+{
+  "key": "2604.21123",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.21123",
+  "title": "Qubit-efficient and gate-efficient encodings of graph partitioning problems for quantum optimization",
+  "authors": [
+    "Tristan Zaborniak",
+    "Prashanti Priya Angara",
+    "Vikram Khipple Mulligan",
+    "Hausi Müller",
+    "Ulrike Stege"
+  ],
+  "summary": "We introduce a qubit- and gate-efficient higher-order unconstrained binary optimization (HUBO) encoding for graph partitioning problems requiring label-count minimization. This widely applicable class of problems includes minimum graph coloring, minimum \\textit{k}-cut, and community detection. To the best of our knowledge, this is the first work to address the optimization versions of these problems in a quantum setting, rather than only their decision counterparts. Our construction encodes each vertex variable in a number of bits logarithmic in the number of available labels---the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-22",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

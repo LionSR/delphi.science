@@ -1,0 +1,24 @@
+{
+  "key": "2602.21544",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.21544",
+  "title": "Efficient time-series prediction on NISQ devices via time-delayed quantum extreme learning machine",
+  "authors": [
+    "Mio Kawanabe",
+    "Saud Cindrak",
+    "Kathy Ludge",
+    "Jun-ichi Shirakashi",
+    "Tetsuo Shibuya",
+    "Hiroshi Imai"
+  ],
+  "summary": "We proposed a time-delayed quantum extreme learning machine (TD-QELM) for efficient time-series prediction on noisy intermediate-scale quantum (NISQ) devices. By encoding multiple past inputs simultaneously, TD-QELM achieves shallow circuit depth independent of sequence length, thereby, mitigating noise accumulation and reducing computational complexity. Experiments using the NARMA benchmark on both noiseless simulations and IBM's 127-qubit processor demonstrate that TD-QELM consistently outperforms conventional quantum reservoir computing in prediction accuracy and noise robustness. These…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-25",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

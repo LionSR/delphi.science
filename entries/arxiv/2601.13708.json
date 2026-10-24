@@ -1,0 +1,23 @@
+{
+  "key": "2601.13708",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.13708",
+  "title": "Generative Adversarial Networks for Resource State Generation",
+  "authors": [
+    "Shahbaz Shaik",
+    "Sourav Chatterjee",
+    "Sayantan Pramanik",
+    "Indranil Chakrabarty"
+  ],
+  "summary": "We introduce a physics-informed Generative Adversarial Network framework that recasts quantum resource-state generation as an inverse-design task. By embedding task-specific utility functions into training, the model learns to generate valid two-qubit states optimized for teleportation and entanglement broadcasting. Comparing decomposition-based and direct-generation architectures reveals that structural enforcement of Hermiticity, trace-one, and positivity yields higher fidelity and training stability than loss-only approaches. The framework reproduces theoretical resource boundaries for…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-01-20",
+  "updated": "2026-03-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

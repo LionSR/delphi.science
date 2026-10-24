@@ -1,0 +1,23 @@
+{
+  "key": "2604.24760",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.24760",
+  "title": "Contracting Tensor Networks with Generalized Belief Propagation",
+  "authors": [
+    "Joseph Tindall",
+    "Grace M. Sommers",
+    "Hilbert Kappen"
+  ],
+  "summary": "Recent years have seen a growing interest in the use of belief propagation - an algorithm originally introduced for performing statistical inference on graphical models - for approximate, but highly efficient, tensor network contraction. Here, we detail how to apply generalized belief propagation (GBP) - where messages are passed within a hierarchy of overlapping regions of the tensor network - to approximately contract tensor networks and obtain accurate results. The original belief propagation algorithm is a corner case of this approach, corresponding to a particularly simple choice of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.stat-mech",
+    "physics.comp-ph"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-04-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

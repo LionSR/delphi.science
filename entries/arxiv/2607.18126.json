@@ -1,0 +1,26 @@
+{
+  "key": "2607.18126",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.18126",
+  "title": "CutBackdoor: A Circuit Cut Triggered Backdoor Attack on Variational Quantum Algorithms",
+  "authors": [
+    "Ahatesham Bhuiyan",
+    "Hoang Ngo",
+    "Cheng Chu",
+    "Qian Lou",
+    "Lei Jiang",
+    "My T. Thai",
+    "Mengxin Zheng"
+  ],
+  "summary": "Variational Quantum Algorithms (VQAs) are a leading paradigm for near-term quantum computing, combining parameterized quantum circuits with classical optimization across quantum chemistry, combinatorial optimization, and quantum machine learning. Since real-world VQA deployments routinely require circuits that exceed available hardware capacity, quantum circuit cutting has become an indispensable execution strategy, and pre-trained parameters are increasingly distributed through public repositories, introducing supply-chain security risks that have received little attention. Prior quantum…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-07-20",
+  "updated": "2026-07-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

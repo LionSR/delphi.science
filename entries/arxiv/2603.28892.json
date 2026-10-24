@@ -1,0 +1,21 @@
+{
+  "key": "2603.28892",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.28892",
+  "title": "Real Variance-Based Variational Quantum Eigensolver for Non-Hermitian Matrices",
+  "authors": [
+    "Durgesh Pandey",
+    "Ankit Kumar Das",
+    "P. Arumugam"
+  ],
+  "summary": "Non-Hermitian operators naturally arise in the description of open quantum systems, which exhibit features such as resonances and decay processes, where the associated eigenvalues are complex. Standard quantum algorithms, including the Variational Quantum Eigensolver (VQE), are designed for Hermitian operators and are ineffective in recovering correct eigenvalues for non-Hermitian matrices. We present a systematic formulation based on a Real Variance-based Variational Quantum Eigensolver (RVVQE) for non-Hermitian operators. A correct cost function that guarantees convergence to the true…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-30",
+  "updated": "2026-03-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

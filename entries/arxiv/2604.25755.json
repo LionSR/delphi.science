@@ -1,0 +1,28 @@
+{
+  "key": "2604.25755",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.25755",
+  "title": "Quantum-Inspired Robust and Scalable SAR Object Classification",
+  "authors": [
+    "Maximilian Scharf",
+    "Marco Trenti",
+    "Felix Bock",
+    "Padraig Davidson",
+    "Tobias Brosch",
+    "Benjamin Rodrigues de Miranda",
+    "Sigurd Huber",
+    "Timo Felser"
+  ],
+  "summary": "SAR image classification naturally has to deal with huge noise and a high dynamic range particularly requiring robust classification models. Additionally, the deployment of these models on edge devices, such as drones and military aircraft, requires a careful balance between model size and classification accuracy. This study explores the potential of tensor networks to meet these robustness requirements, specifically evaluating their resilience to data poisoning. Unlike previous works that concentrated on conventional neural networks for SAR object detection, this research focuses on the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CV",
+    "physics.comp-ph"
+  ],
+  "published": "2026-04-28",
+  "updated": "2026-05-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2604.24886",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.24886",
+  "title": "Getting large-scale quantum neural networks ready for quantum hardware",
+  "authors": [
+    "Mario Boneberg",
+    "Simon Kochsiek",
+    "Igor Lesanovsky"
+  ],
+  "summary": "Quantum neural networks generalize classical artificial neural networks into the quantum domain. They are formulated as parameterized quantum circuits which are optimized by measuring and minimizing a suitably chosen loss function. The core challenge in understanding, implementing and ultimately using quantum neural networks is that they represent many-body systems with an exponentially large Hilbert space, in combination with a large parameter search space. Moreover, noise -- which is inherent to any quantum measurement -- sets practical limits for the estimation of training loss. Here, we…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-04-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

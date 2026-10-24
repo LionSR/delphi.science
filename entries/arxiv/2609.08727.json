@@ -1,0 +1,21 @@
+{
+  "key": "2609.08727",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.08727",
+  "title": "Adaptive AI for Pulse-Level Quantum Control",
+  "authors": [
+    "Sanjeev Shapkota",
+    "Yayu Mo",
+    "Sanjaya Lohani"
+  ],
+  "summary": "The Control Variational Quantum Eigensolver (ctrl-VQE) directly optimizes microwave pulses to enable faster and lower-error quantum-state preparation, but its continuous control landscape re- quires efficient search strategies. We demonstrate that a reinforcement-learning agent based on a deep Q learning network can autonomously discover high-performance pulse sequences using only system parameters and a reward function. The approach is fully general for superconducting qubit platforms, requires no ansatz, and operates at nanosecond resolution compatible with hardware con- straints. As a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

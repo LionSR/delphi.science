@@ -1,0 +1,25 @@
+{
+  "key": "2604.23490",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23490",
+  "title": "Efficient Quantum Fully Homomorphic Encryption",
+  "authors": [
+    "Fengxia Liu",
+    "Zixian Gong",
+    "Kun Tian",
+    "Yi Zhang",
+    "Zhiming Zheng",
+    "Maozhi Xu"
+  ],
+  "summary": "Quantum fully homomorphic encryption (QFHE) enables arbitrary quantum computations on encrypted data, but prior constructions require prohibitive quantum resources--specifically, O(lambda^2) EPR pairs per T-gate evaluation using the Barrington-based approach (DSS16). This paper introduces a unified framework achieving exponential improvement over the generic Barrington-based approach in program length. The central innovation is a novel modular arithmetic program (MA-Program) tailored to learning with errors (LWE) decryption. We show that LWE decryption computes the inner product mod q, a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-04-26",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

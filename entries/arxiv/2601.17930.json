@@ -1,0 +1,22 @@
+{
+  "key": "2601.17930",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.17930",
+  "title": "A Rigorous and Self--Contained Proof of the Grover--Rudolph State Preparation Algorithm",
+  "authors": [
+    "Antonio Falco",
+    "Daniela Falco-Pomares",
+    "Hermann G. Matthies"
+  ],
+  "summary": "We give a rigorous and self-contained analysis of the Grover--Rudolph quantum state-preparation algorithm, which encodes a probability distribution $\\{p_k\\}$ as an $n$-qubit amplitude state $\\sum_k\\sqrt{p_k}\\ket{k}$ via a hierarchy of controlled $\\RY$ rotations determined by a dyadic refinement of the target. We formalize the dyadic probability tree, derive the trigonometric factorization of conditional masses, and prove by induction that the circuit prepares exactly the desired measurement law. We further prove that perturbing each rotation angle by at most $η$ changes the output…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.NA"
+  ],
+  "published": "2026-01-25",
+  "updated": "2026-05-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

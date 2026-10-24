@@ -1,0 +1,23 @@
+{
+  "key": "2607.12532",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12532",
+  "title": "Quantum Weakest Preconditions Revisited: Pre-expectations for Expected Runtime Analysis",
+  "authors": [
+    "Christina Gehnen",
+    "Dominique Unruh",
+    "Joost-Pieter Katoen"
+  ],
+  "summary": "Quantum weakest preconditions are a fundamental tool for program verification of quantum programs. Many variations have been reported in the literature. We revisit quantum weakest preconditions from the perspective of expected runtime analysis of quantum programs and introduce a novel pre-expectation framework that enables to reason about the preconditions of quantum programs without the need of an upper bound. This is particularly interesting for quantum programs involving reward statements. The overall goal is to analyze runtime behavior even in the case of programs with potentially…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "cs.PL",
+    "quant-ph"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

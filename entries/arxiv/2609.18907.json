@@ -1,0 +1,19 @@
+{
+  "key": "2609.18907",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.18907",
+  "title": "Logarithmic-depth quantum simulation of boson sampling",
+  "authors": [
+    "Changhun Oh"
+  ],
+  "summary": "We show that boson sampling with an arbitrary $m$-mode interferometer and $n\\le m$ single-photon inputs can be simulated to inverse-polynomial total-variation error by a logarithmic-depth qubit circuit with polynomially many qubits. The circuit uses Clifford+$T$ gates, arbitrary qubit connectivity, and a single final measurement, and its family is logspace uniform. The key idea is to enlarge the optical system, decompose the resulting transformation into six quadratic shears, and distribute each mode over many submodes. This redistribution permits a fixed local occupation cutoff, after which…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2603.19406",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.19406",
+  "title": "The Bilateral Efficiency of Ethernet: Recalibrating Metcalfe and Boggs After Fifty Years",
+  "authors": [
+    "Paul Borrill"
+  ],
+  "summary": "In July 1976, Metcalfe and Boggs published their foundational paper on Ethernet in Communications of the ACM. Their efficiency model -- E = (P/C)/(P/C + W*T) -- measures the fraction of Ether time carrying good forward packets under contention. For fifty years this model has framed how the community thinks about Ethernet performance. We argue it is silent on the question that matters for modern intra-rack interconnect: bilateral transaction efficiency -- the fraction of link time that produces committed agreements between sender and receiver. Metcalfe and Boggs themselves planted the seed in…",
+  "domain": "cs.DC",
+  "tags": [
+    "cs.DC",
+    "cs.NI",
+    "quant-ph"
+  ],
+  "published": "2026-03-19",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

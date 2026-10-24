@@ -1,0 +1,20 @@
+{
+  "key": "2609.07826",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07826",
+  "title": "SolutionsX: supergravity theories/solutions as code, with an agentic workflow for machine-verifiable physics",
+  "authors": [
+    "Vasil Dimitrov"
+  ],
+  "summary": "A supergravity solution in the literature is an artifact that cannot be verified without re-deriving it: conventions might not be clearly stated, papers have typos, algebra is tedious. SolutionsX is a Mathematica package that turns an xAct environment, whatever physics it may describe, into a stored, machine-verifiable record: code that replays in a fresh kernel, carries its own verification, and can later be fetched for re-use or extension. The shipped examples are supergravity theories and their solutions, but the scope is anything xAct reaches: abstract tensors, differential forms,…",
+  "domain": "hep-th",
+  "tags": [
+    "hep-th",
+    "gr-qc"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

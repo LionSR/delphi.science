@@ -1,0 +1,23 @@
+{
+  "key": "2604.22996",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.22996",
+  "title": "Accelerating quantum Gibbs sampling without quantum walks",
+  "authors": [
+    "Jiaqi Leng",
+    "Jiaqing Jiang",
+    "Lin Lin"
+  ],
+  "summary": "Szegedy's quantum walk quadratically accelerates reversible classical Markov chains, but extending this mechanism to efficiently implementable quantum Gibbs samplers has remained challenging beyond special classes. We present a walk-free quantum algorithm for preparing purified Gibbs states with a quadratic improvement in spectral-gap dependence for a broad class of quantum Gibbs samplers that satisfy exact Kubo-Martin-Schwinger detailed balance. Our main structural result is an explicit factorization of the corresponding parent Hamiltonian into noncommutative first-order operators. This…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math-ph",
+    "math.NA"
+  ],
+  "published": "2026-04-24",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

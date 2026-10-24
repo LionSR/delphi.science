@@ -1,0 +1,24 @@
+{
+  "key": "2605.22980",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.22980",
+  "title": "Automatic De-Quantization of Quantum Programs Using Constant Propagation",
+  "authors": [
+    "Lian Remme",
+    "Alexander Weinert",
+    "Andre Waschk",
+    "Lukas Burgholzer",
+    "Robert Wille"
+  ],
+  "summary": "Quantum computing promises to solve problems beyond the reach of classical computers, but today's quantum hardware is error-prone and much slower than classical hardware. Every quantum operation is costly, making it crucial to minimize quantum resource usage in near-term algorithms. Quantum resources should only be used when they are truly essential for quantum advantage, and not wasted on operations that can be efficiently handled by classical computation. In this work, we focus on de-quantizing quantum operations to classical computation whenever possible. The approach we propose for this…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-05-21",
+  "updated": "2026-05-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

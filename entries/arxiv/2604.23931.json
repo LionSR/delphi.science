@@ -1,0 +1,21 @@
+{
+  "key": "2604.23931",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23931",
+  "title": "Do Quantum Transformers Help? A Systematic VQC Architecture Comparison on Tabular Benchmarks",
+  "authors": [
+    "Chi-Sheng Chen",
+    "En-Jui Kuo"
+  ],
+  "summary": "Variational quantum circuits (VQCs) are a leading approach to quantum machine learning on near-term devices, yet it remains unclear which circuit architecture yields the best accuracy-parameter trade-off on classical tabular data. We present a systematic empirical comparison of four VQC families -- multi-layer fully-connected (FC-VQC), residual (ResNet-VQC), hybrid quantum-classical transformer (QT), and fully quantum transformer (FQT) -- across five regression and classification benchmarks. Our key findings are: \\textbf{(i)}~FC-VQCs achieve 90-96\\% of the $R^2$ of attention-based VQCs while…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

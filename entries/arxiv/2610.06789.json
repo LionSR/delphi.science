@@ -1,0 +1,23 @@
+{
+  "key": "2610.06789",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06789",
+  "title": "Characterizing Quantum Advantage for Generalizations of the Boolean Hidden Matching Problem",
+  "authors": [
+    "Mark Bun",
+    "Joao F. Doriguello",
+    "John Kallaugher",
+    "Nadezhda Voronova"
+  ],
+  "summary": "We study the one-way communication complexity of the $f$-Boolean Hidden Partition problem. Here, Alice is given an $n$-bit string and Bob is given $Ω(n)$ disjoint blocks of its indices together with a string of labels. Under the promise that the evaluations of $f$ on these blocks either agree with all of the labels or disagree with all of them, Bob must determine which is the case using a single message from Alice. This problem generalizes the Boolean Hidden Matching and Hidden Hypermatching problems, which capture the special case where $f$ is the parity function. We establish classical and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2609.40073",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.40073",
+  "title": "Transducer-based linear combination of unitaries: theory and applications",
+  "authors": [
+    "Dong An",
+    "Dekuan Dong",
+    "Changpeng Shao",
+    "Yuxin Zhang",
+    "Chenhao Zhao"
+  ],
+  "summary": "Linear combination of unitaries (LCU) is a fundamental primitive in quantum algorithms, whose cost is typically governed by the most expensive unitary appearing in the combination. We develop a transducer-based LCU framework that reduces this worst-case dependence to a weighted average query complexity, when the constituent unitaries share access to a common set of primitive oracles. Consider $A=\\sum_j c_j U_j$, where $c_j>0$ and each unitary $U_j$ can be implemented using $C_j$ primitive queries. Given an upper bound $a\\geq \\|A\\|$, our algorithm implements a block-encoding of $A/α$ with…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2605.31449",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.31449",
+  "title": "Support Vector Machine with a Scalable Quantum Kernel",
+  "authors": [
+    "Anant Agnihotri",
+    "Michael Krebsbach",
+    "Florentin Reiter",
+    "Thomas Wellens"
+  ],
+  "summary": "Quantum support vector machines are classification algorithms that rely on quantum-generated kernels. The fidelity quantum kernel commonly used in quantum support vector machines suffers from exponential concentration as system size increases, preventing an efficient scaling beyond fewqubit systems. We introduce the Hamming quantum kernel, a classical post-processing method that is based on the same measurement outcomes as the fidelity quantum kernel. However, it avoids the exponential concentration problem by using the full measurement statistics rather than a single fidelity value. We…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

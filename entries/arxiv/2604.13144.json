@@ -1,0 +1,20 @@
+{
+  "key": "2604.13144",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.13144",
+  "title": "Quantum-inspired classical simulation through randomized time evolution",
+  "authors": [
+    "Fredrik Hasselgren",
+    "Bálint Koczor"
+  ],
+  "summary": "Tensor-network simulations of quantum many-body dynamics are fundamentally limited by entanglement build-up, which leads to exponentially growing computational costs. Furthermore, these classical simulation algorithms are inherently sequential as typically a tensor network representation of the quantum state is updated incrementally at each time step. We build on recently introduced randomized quantum algorithms for time evolution (TE-PAI), and adapt them to the classical simulation context with the purpose of enabling massive parallelisation. Our MPS TE-PAI approach achieves exact time…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-14",
+  "updated": "2026-04-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

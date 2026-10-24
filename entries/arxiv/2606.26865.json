@@ -1,0 +1,21 @@
+{
+  "key": "2606.26865",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.26865",
+  "title": "Quantum Physics-Informed Neural Networks for Solving Integro and Fractional PDEs",
+  "authors": [
+    "Deepak Gupta",
+    "Ratikanta Behera"
+  ],
+  "summary": "Quantum neural networks have emerged as powerful models for approximating nonlinear functions. Yet their use in solving integro-differential equations (IDEs) and fractional integro-partial differential equations (FIPDEs), which involve inherently nonlocal operators, remains unexplored. This work introduces a quantum physics-informed neural network (QPINN) framework that combines a quantum neural network with the governing equations of general nonlinear IDEs and FIPDEs. The proposed quantum network uses an affine feature map and variational quantum circuits to produce trial solutions with…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "quant-ph"
+  ],
+  "published": "2026-06-25",
+  "updated": "2026-06-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

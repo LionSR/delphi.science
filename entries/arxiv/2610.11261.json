@@ -1,0 +1,26 @@
+{
+  "key": "2610.11261",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.11261",
+  "title": "Q-Capsule: A Localized Capsule-Based Quantum Neural Architecture for Barren Plateau Mitigation",
+  "authors": [
+    "Awal Ahmed Fime",
+    "Tasfia Zaman Samiha",
+    "Saika Zaman",
+    "Dimitris Pados",
+    "George Sklivanitis",
+    "Abdur R. Shahid",
+    "Ahmed Imteaj"
+  ],
+  "summary": "Variational quantum algorithms are often limited by barren plateaus: gradients vanish as circuit size and depth increase, making quantum neural networks difficult to train. We propose Q-Capsule, a localized capsule-based quantum neural architecture that mitigates this problem through register partitioning, local readout, sparse inter-capsule coupling, trainable data re-uploading, and Quantum Fisher Information Matrix (QFIM)-guided adaptive depth growth. By restricting the dominant support of each observable to a small capsule and controlling inter-capsule entanglement, Q-Capsule preserves…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

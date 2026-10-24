@@ -1,0 +1,21 @@
+{
+  "key": "2603.02958",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.02958",
+  "title": "Layer-wise QUBO-Based Training of CNN Classifiers for Quantum Annealing",
+  "authors": [
+    "Mostafa Atallah",
+    "Rebekah Herrman"
+  ],
+  "summary": "Variational quantum circuits for image classification suffer from barren plateaus, while quantum kernel methods scale quadratically with dataset size. We propose an iterative framework based on Quadratic Unconstrained Binary Optimization (QUBO) for training the classifier head of convolutional neural networks (CNNs) via quantum annealing, entirely avoiding gradient-based circuit optimization. Following the Extreme Learning Machine paradigm, convolutional filters are randomly initialized and frozen, and only the fully connected layer is optimized. At each iteration, a convex quadratic…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI"
+  ],
+  "published": "2026-03-03",
+  "updated": "2026-03-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

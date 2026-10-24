@@ -1,0 +1,20 @@
+{
+  "key": "2609.34293",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.34293",
+  "title": "Optimal Quantum Algorithms for Ordered Search",
+  "authors": [
+    "Joseph Carolan",
+    "Andrew M. Childs"
+  ],
+  "summary": "Ordered search is the problem of locating a target element in a sorted list of size $n$ using comparison queries. Classically, binary search requires $\\lceil \\log_2 n\\rceil$ queries, which is optimal. Quantum algorithms offer a constant-factor speedup, but the precise constant has been a longstanding open question. We close this gap by exhibiting two new quantum algorithms for ordered search, each using the optimal $\\frac{1}π\\ln n+o(\\log n)$ queries. The first, discovered by Claude Fable 5, is a simple zero-error algorithm derived from a continuum relaxation of the problem. The second,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

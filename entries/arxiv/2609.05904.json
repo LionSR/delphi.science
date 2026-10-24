@@ -1,0 +1,20 @@
+{
+  "key": "2609.05904",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.05904",
+  "title": "Boundary-Cancelled Score-Hamiltonian Sampling",
+  "authors": [
+    "Masayuki Ohzeki"
+  ],
+  "summary": "Diffusion sampling can be viewed as imaginary-time annealing of probability densities. From a forward/backward Euclidean Schrödinger pair, we show that fixing the noising drift forces the reverse score term, and that the same logarithmic force is the one-sided imaginary-time counterdiabatic connection of a supersymmetric Score Hamiltonian. The correspondence turns score-learning error into a Hamiltonian perturbation and yields a schedule principle: if the first $r$ terminal derivatives vanish, Morita--Nishimori boundary cancellation suppresses the residual Hellinger error from $T^{-2}$ to…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.dis-nn"
+  ],
+  "published": "2026-09-05",
+  "updated": "2026-09-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

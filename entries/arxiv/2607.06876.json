@@ -1,0 +1,22 @@
+{
+  "key": "2607.06876",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06876",
+  "title": "XOR Games at Full Tilt: The Hardness of Binary Nonlocal Games",
+  "authors": [
+    "Richard Cleve",
+    "Eric Culf",
+    "Aviv Taller"
+  ],
+  "summary": "It is well known that the quantum value of an XOR nonlocal game, where the winning condition depends only on the XOR of the two players' output bits, may be approximated in polynomial time. We study a variant of the XOR game model, which we call tilted XOR games, where the winning condition can additionally depend on only one of the output bits. We show that this dramatically increases the expressive power: the computational complexity of the problem of approximating the quantum value of tilted XOR games to constant precision is RE-complete. Also, our result extends to succinct versions of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

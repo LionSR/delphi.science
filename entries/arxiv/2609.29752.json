@@ -1,0 +1,22 @@
+{
+  "key": "2609.29752",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.29752",
+  "title": "One-shot Routing in Quantum Networks",
+  "authors": [
+    "Nadav Lavi",
+    "Nir Gutman",
+    "Ido Kaminer",
+    "Ariel Orda"
+  ],
+  "summary": "Distributed quantum computation requires many entangled pairs to be available simultaneously, so routing must optimize fidelity from a fixed, short-lived set of network resources rather than the rate of pairs accumulated over time. We formulate this one-shot routing problem for heterogeneous Werner-state links and jointly optimize path selection and the schedule of entanglement swapping and distillation. We show that the common purify-then-swap ordering is not optimal network-wide and that exact schedule enumeration requires $m^{Θ(m)}$ time. We introduce Fidelity-Optimizing Local Detours…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

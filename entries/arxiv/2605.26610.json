@@ -1,0 +1,23 @@
+{
+  "key": "2605.26610",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.26610",
+  "title": "End-to-End PDE-Based Quantum Algorithms for Multi-Asset Option Pricing under Local and Stochastic Volatility",
+  "authors": [
+    "Nikita Guseynov",
+    "Nana Liu",
+    "Chi Seng Pun",
+    "Tushar Vaidya"
+  ],
+  "summary": "Multi-asset option pricing under local- and stochastic-volatility models leads naturally to high-dimensional parabolic PDEs. We develop an end-to-end quantum PDE framework for European option pricing under local-volatility Black--Scholes and Heston models. The framework takes classical contract and model data as input and returns classical estimates of selected option values. We solve the pricing PDEs after finite-difference discretization on spatial grids. For $N=2^n$ grid points per spatial direction and $d$ assets, the end-to-end gate complexity for single-point recovery, counted in…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "q-fin.CP"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

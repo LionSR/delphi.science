@@ -1,0 +1,21 @@
+{
+  "key": "2604.06866",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.06866",
+  "title": "A hardware efficient quantum residual neural network without post-selection",
+  "authors": [
+    "Amena Khatun",
+    "Akib Karim",
+    "Muhammad Usman"
+  ],
+  "summary": "We propose a hardware efficient quantum residual neural network which implements residual connections through a deterministic mixture of the identity operation and variational unitaries, enabling fully differentiable training. In contrast to the previous implementation of residual connections, our architecture avoids post-selection while preserving residual learning. Furthermore, we highlight circuit constructions where barren plateaus could be mitigated, which are considered as a major limitation of variational quantum learning models. In order to show the working of our model, we report…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-08",
+  "updated": "2026-05-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

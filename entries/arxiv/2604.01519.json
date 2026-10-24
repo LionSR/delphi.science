@@ -1,0 +1,24 @@
+{
+  "key": "2604.01519",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.01519",
+  "title": "DQC1-completeness of normalized trace estimation for functions of log-local Hamiltonians",
+  "authors": [
+    "Zhengfeng Ji",
+    "Tongyang Li",
+    "Changpeng Shao",
+    "Xinzhao Wang",
+    "Yuxin Zhang"
+  ],
+  "summary": "We study the computational complexity of estimating the normalized trace $2^{-n}\\mathrm{Tr}[f(A)]$ for a log-local Hamiltonian $A$ acting on $n$ qubits. This problem arises naturally in the DQC1 model, yet its complexity is only understood for a limited class of functions $f(x)$. We show that if $f(x)$ is a continuous function with approximate degree $Ω(\\mathrm{poly}(n))$, then estimating $2^{-n}\\mathrm{Tr}[f(A)]$ up to constant additive error is DQC1-complete, under a technical condition on the polynomial approximation error of $f(x)$. This condition holds for a broad class of functions,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-04-02",
+  "updated": "2026-09-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2607.26478",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.26478",
+  "title": "Explicit Separations for One-Query Unitary Synthesis",
+  "authors": [
+    "Fangqi Dong",
+    "Alex Lombardi",
+    "Fermi Ma"
+  ],
+  "summary": "The unitary synthesis problem (Aaronson-Kuperberg, CCC 2007) asks whether every $n$-qubit unitary $U$ is computable by efficient quantum circuits relative to some classical oracle $f = f_U$ depending on $U$. Recently, Lombardi-Ma-Wright (STOC 2024) proved that Haar-random unitaries cannot be efficiently synthesized by algorithms that make 1 query (or poly$(n)$ parallel queries) to an arbitrary classical oracle. In this work, we prove several results about the hardness (and easiness!) of variants of unitary synthesis. Our results include: (1) 1-query vs. 2-query unitary synthesis: we prove…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.CR"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

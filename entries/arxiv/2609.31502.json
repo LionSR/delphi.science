@@ -1,0 +1,20 @@
+{
+  "key": "2609.31502",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.31502",
+  "title": "Parallel and Distributed Fermionic Simulation via Dynamic Encoding",
+  "authors": [
+    "Michael Williams de la Bastida",
+    "Peter V. Coveney"
+  ],
+  "summary": "We demonstrate a simple and efficient method to parallelize and distribute Trotterized Hamiltonian simulation of fermionic systems across multiple QPUs. Using combinatorial covering designs to define a minimal set of fermion-qubit encodings, we demonstrate communication cost scaling as $\\mathcal{O}(M q^4 r)$ for a system of $M$ fermionic modes and Trotter number $r$, improving on the static encoding bound for $q$ QPUs, $\\mathcal{O}(M^4 q r)$. We compare this approach to dynamic encoding using a randomised method, Pauli-weight based optimisation and hypergraph partitioning. Applying these to…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

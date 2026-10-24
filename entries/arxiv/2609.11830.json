@@ -1,0 +1,20 @@
+{
+  "key": "2609.11830",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11830",
+  "title": "Oracle Separations in the Fourier Hierarchy",
+  "authors": [
+    "Atul Mantri"
+  ],
+  "summary": "The Fourier hierarchy $\\mathrm{FH}_0\\subseteq\\mathrm{FH}_1\\subseteq\\mathrm{FH}_2\\subseteq\\cdots$, introduced by Shi (TCS 2005), measures a quantum computation by the number of Hadamard layers it uses. Between two layers the circuit may permute basis states and attach phases, but it may not create superposition; the layers are its only source of interference. The first level is exactly $\\mathrm{BPP}$, while the second already solves Simon's problem and, through phase estimation, factors integers. Shi conjectured that every additional layer strictly increases computational power, and asked, as…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

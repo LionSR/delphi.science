@@ -1,0 +1,22 @@
+{
+  "key": "2604.05962",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.05962",
+  "title": "Distributed Quantum Property Testing with Communication Constraints",
+  "authors": [
+    "Mina Doosti",
+    "Ryan Sweke",
+    "Chirag Wadhwa"
+  ],
+  "summary": "We introduce a framework for distributed quantum inference under communication constraints. In our model, $m$ distributed nodes each receive one copy of an unknown $d$-dimensional quantum state $ρ$, before communicating via a constrained one-way communication channel with a central node, which aims to infer some property of $ρ$. This framework generalizes the classical distributed inference framework introduced by Acharya, Canonne, and Tyagi [COLT2019], by allowing quantum resources such as quantum communication and shared entanglement. Within this setting, we focus on the fundamental…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS"
+  ],
+  "published": "2026-04-07",
+  "updated": "2026-04-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

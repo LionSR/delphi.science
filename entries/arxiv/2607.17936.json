@@ -1,0 +1,22 @@
+{
+  "key": "2607.17936",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.17936",
+  "title": "Noise structuring in fixed-depth Trotter simulation: stationary channels and observable-level depolarization",
+  "authors": [
+    "G. L. Stavisskii",
+    "W. V. Pogosov",
+    "L. E. Fedichkin",
+    "A. V. Lebedev"
+  ],
+  "summary": "We analyze fixed-depth Trotter simulation as a method for structuring hardware noise in digital many-body dynamics. The number of layers is chosen using the largest endpoint time and is then kept fixed throughout the time scan, making the total noise dose approximately independent of the endpoint time. For local stochastic faults, we show that, once propagated faults lose memory of their insertion layer, the noisy circuit factorizes into ideal evolution followed by a stationary finite-depth binomial channel. In the dilute-layer limit, this channel reduces to a Poissonian exponential. The…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-20",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

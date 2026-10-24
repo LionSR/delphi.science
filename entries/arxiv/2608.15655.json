@@ -1,0 +1,21 @@
+{
+  "key": "2608.15655",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.15655",
+  "title": "Rand-SEMI-QAOA: Finite-Budget Depth-One MaxCut Ensembles on Compressed Quantum Registers",
+  "authors": [
+    "Emilio Semre",
+    "Steven Frankel"
+  ],
+  "summary": "We introduce Rand-SEMI-QAOA, a finite-budget QRAO--QAOA ensemble for MaxCut based on a $(3,1)$-QRAC relaxation. The method samples labels uniformly without replacement from the product-$X$ family of an implemented Galois stabilizer mutually unbiased basis (MUB) system. Each selected state--mixer pair is optimized independently for relaxed QRAO energy and then evaluated by deterministic Pauli-sign decoding. Exhaustive scans of the implemented noncomputational MUB catalog place the product-$X$ family first in 18 of 20 validated family-mean cells and in every tested cell for $r=5,6,7$. On a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-08-16",
+  "updated": "2026-08-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

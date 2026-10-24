@@ -1,0 +1,23 @@
+{
+  "key": "2607.25358",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.25358",
+  "title": "QCOEM: Quantum Cloud Orchestration with Evolutionary Multi-Objective Optimization",
+  "authors": [
+    "Tam N. Pham",
+    "Hoa T. Nguyen",
+    "Quan Le-Trung"
+  ],
+  "summary": "Quantum cloud platforms need to dynamically orchestrate workloads across heterogeneous quantum computation backends whose noise profiles, qubit topologies, and queues vary over time. Existing orchestrators use noise-agnostic heuristics that ignore backend-specific errors, causing reduced execution fidelity, load imbalance, and frequent rescheduling. To address these challenges, we propose QCOEM - a Quantum Cloud Orchestration framework that leverages Evolutionary algorithms for Multi-objective optimization of quantum task scheduling. We compare NSGA-II and NSGA-III for jointly minimizing…",
+  "domain": "cs.DC",
+  "tags": [
+    "cs.DC",
+    "cs.ET",
+    "quant-ph"
+  ],
+  "published": "2026-07-28",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

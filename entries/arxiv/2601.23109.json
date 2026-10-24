@@ -1,0 +1,26 @@
+{
+  "key": "2601.23109",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.23109",
+  "title": "TopoLS: Lattice Surgery Compilation via Topological Program Transformations",
+  "authors": [
+    "Junyu Zhou",
+    "Yuhao Liu",
+    "Ethan Decker",
+    "Justin Kalloor",
+    "Mathias Weiden",
+    "Kean Chen",
+    "Costin Iancu",
+    "Gushu Li"
+  ],
+  "summary": "Lattice surgery is a leading approach for implementing fault-tolerant logical operations in surface code quantum computing, but compiling efficient lattice surgery layouts remains challenging. Existing compilers are largely circuit-centric and operate directly on gate sequences, limiting their ability to exploit the topological flexibility of merge-split operations and minimize space--time volume. We present TopoLS, a topology-centric compiler that uses ZX diagrams as an intermediate representation for lattice surgery compilation. TopoLS combines semantic-preserving ZX-level program…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-30",
+  "updated": "2026-03-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

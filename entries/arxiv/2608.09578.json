@@ -1,0 +1,22 @@
+{
+  "key": "2608.09578",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.09578",
+  "title": "Quantum Uncomputation of Clean and Dirty Ancilla Qubits",
+  "authors": [
+    "Chenke Liu",
+    "Li Zhou",
+    "Boning Meng"
+  ],
+  "summary": "Automatic uncomputation aims to provide programming-language-level support to facilitate the correct and safe use of ancilla qubits in quantum computing, but efforts have only been made for clean ancillas, leaving dirty ancillas unexplored. We present a unified formalization of the uncomputation of both clean and dirty ancillas. For the first time, we prove that checking the existence of uncomputation is coNP-hard. We introduce two complementary synthesis-oriented existence checking methods: a syntax-directed static reasoning system and a rewrite-based normalization procedure (\\RwUnx),…",
+  "domain": "cs.PL",
+  "tags": [
+    "cs.PL",
+    "quant-ph"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-10-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

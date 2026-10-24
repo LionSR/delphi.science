@@ -1,0 +1,20 @@
+{
+  "key": "2602.00555",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.00555",
+  "title": "Entanglement-Dependent Error Bounds for Hamiltonian Simulation",
+  "authors": [
+    "Prateek P. Kulkarni"
+  ],
+  "summary": "We establish tight connections between entanglement entropy and the approximation error in Trotter-Suzuki product formulas for Hamiltonian simulation. Product formulas remain the workhorse of quantum simulation on near-term devices, yet standard error analyses yield worst-case bounds that can vastly overestimate the resources required for structured problems. For systems governed by geometrically local Hamiltonians with maximum entanglement entropy $S_\\text{max}$ across all bipartitions, we prove that the first-order Trotter error scales as $\\mathcal{O}(t^2 S_\\text{max}…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-01-31",
+  "updated": "2026-01-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

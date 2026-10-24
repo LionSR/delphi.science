@@ -1,0 +1,21 @@
+{
+  "key": "2610.00527",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00527",
+  "title": "Polynomial-time local-unitary equivalence of graph states",
+  "authors": [
+    "Yuxuan Zhang"
+  ],
+  "summary": "Local-unitary (LU) equivalence asks whether two quantum states differ only by independent changes of basis on their qubits. For graph states, whether this relation can be decided in polynomial time has remained open for over a decade. We give a deterministic algorithm that decides LU equivalence for graphs on $n$ labelled vertices in $\\widetilde O(n^{6.38})$ bit operations and constructs exact single-qubit unitaries whenever the states are equivalent. Building on Claudet and Perdrix's quasipolynomial algorithm, we replace the enumeration of vertex subsets by a compact system of constraints…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.mtrl-sci",
+    "cs.CC"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

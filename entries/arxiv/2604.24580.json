@@ -1,0 +1,21 @@
+{
+  "key": "2604.24580",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.24580",
+  "title": "Spectral Gap Informed Ramp QAOA",
+  "authors": [
+    "Kieran McDowall",
+    "Konstantinos Georgopoulos",
+    "Petros Wallden"
+  ],
+  "summary": "A challenge with the Quantum Approximate Optimisation Algorithm (QAOA), and variational algorithms in general, is finding good variational parameters, a task which in itself can be NP-hard. Recent work has sought to de-variationalise QAOA by picking well-informed guesses for the variational parameters. The Linear Ramp QAOA (LR-QAOA) achieves this by using parameter schedules inspired by the quantum adiabatic algorithm. In this work, we propose Spectral Gap Informed Ramp QAOA (SGIR-QAOA), a new QAOA variant that incorporates spectral gap information from an adiabatic Hamiltonian, with the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-08-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

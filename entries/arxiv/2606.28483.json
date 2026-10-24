@@ -1,0 +1,21 @@
+{
+  "key": "2606.28483",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28483",
+  "title": "Quantum Fourier Generative Models Trainable at Large Scale",
+  "authors": [
+    "Cenk Tüysüz",
+    "Oleksandr Kyriienko",
+    "Michele Grossi"
+  ],
+  "summary": "We propose an algorithmic framework for building and training quantum generative models corresponding to multivariate probability distributions. Our model uses parallel Fourier feature maps for embedding continuous-valued variables combined with a forrelation-type quantum circuit for tuning Fourier coefficients of the quantum model. Crucially, we develop a distinct training strategy where training is enabled at large scale by log-likelihood loss with unbiased Monte Carlo estimator based on Parseval's identity. Unlike prior work that relied on maximal mean discrepancy (MMD) loss, our approach…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-26",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2603.25394",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.25394",
+  "title": "Quantum Finite Temperature Lanczos Method",
+  "authors": [
+    "Gian Gentinetta",
+    "Friederike Metz",
+    "William Kirby",
+    "Giuseppe Carleo"
+  ],
+  "summary": "The computation of thermal properties of quantum many-body systems is a central challenge in our understanding of quantum mechanics. We introduce the Quantum Finite Temperature Lanczos Method (QFTLM), which extends the finite-temperature Lanczos method to quantum computers by combining real-time quantum Krylov methods with efficient preparation of typical states for trace estimation. This approach enables the computation of thermal expectation values while avoiding the exponential scaling inherent to classical exact simulation techniques. Numerical experiments on the transverse-field Ising…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-26",
+  "updated": "2026-03-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

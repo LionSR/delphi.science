@@ -1,0 +1,24 @@
+{
+  "key": "2605.09616",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09616",
+  "title": "A Hybrid Classical-Quantum Annealing Algorithm for the TSP",
+  "authors": [
+    "Siwei Hu",
+    "Victor Lopata",
+    "Salvatore Sinno",
+    "Shruthi Thuravakkath",
+    "Paolo Zuliani"
+  ],
+  "summary": "Hybrid quantum-classical algorithms can help mitigating the physical limitations of current quantum devices, particularly the low qubit count and the reduced topological connectivity. In this paper, we propose a hybrid technique to solve a well-known NP-hard optimization problem: the Traveling Salesperson Problem (TSP). Our approach is based on a graph contraction technique that removes most of the dimensionality of the original problem instance, producing a sub-TSP of a size suitable to be efficiently solved by a quantum device. The performance of our approach is first demonstrated on…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-05-10",
+  "updated": "2026-05-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

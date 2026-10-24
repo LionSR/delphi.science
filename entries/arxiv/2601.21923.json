@@ -1,0 +1,23 @@
+{
+  "key": "2601.21923",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.21923",
+  "title": "A scalable quantum-enhanced greedy algorithm for maximum independent set problems",
+  "authors": [
+    "Elisabeth Wybo",
+    "Jami Rönkkö",
+    "Olli Hirviniemi",
+    "Jernej Rudi Finžgar",
+    "Martin Leib"
+  ],
+  "summary": "We investigate a hybrid quantum-classical algorithm for solving the Maximum Independent Set (MIS) problem on regular graphs, combining the Quantum Approximate Optimization Algorithm (QAOA) with a minimal degree classical greedy algorithm. The method leverages pre-computed QAOA angles, derived from depth-$p$ QAOA circuits on regular trees, to compute local expectation values and inform sequential greedy decisions that progressively build an independent set. This hybrid approach maintains shallow quantum circuit and avoids instance-specific parameter training, making it well-suited for…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-01-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

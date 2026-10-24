@@ -1,0 +1,23 @@
+{
+  "key": "2607.05489",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.05489",
+  "title": "Black Hole Black Boxes: Numerical Black Hole Metrics via AInstein Neural Networks",
+  "authors": [
+    "Tancredi Schettini Gherardini",
+    "Edward Hirst",
+    "Alexander George Stapleton"
+  ],
+  "summary": "The AInstein architecture introduced an unsupervised neural method for solving the Riemannian Einstein equations on arbitrary manifolds. This Physics Informed Neural Network approach (PINN) is extended here to Lorentzian signature, validated by recovering the maximally extended Schwarzschild geometry, and tested as novel search method for arbitrary black hole solutions. The topology is built into the architecture by treating $S^{2}$ globally through its standard embedding, such that the network learns an ambient metric on the manifold $\\mathbb{R}^{2} \\times \\mathbb{R}^{3}$, where Penrose…",
+  "domain": "gr-qc",
+  "tags": [
+    "gr-qc",
+    "cs.LG",
+    "hep-th"
+  ],
+  "published": "2026-07-06",
+  "updated": "2026-07-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

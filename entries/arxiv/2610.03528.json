@@ -1,0 +1,20 @@
+{
+  "key": "2610.03528",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03528",
+  "title": "Breaking the chain: geometry-native state preparation with ASPIRE",
+  "authors": [
+    "Fredrik Hasselgren",
+    "Matthew L. Sims-Goh"
+  ],
+  "summary": "Loading data into quantum computers is a key bottleneck that threatens end-to-end quantum advantage. Quantum-circuit compilers for structured states like matrix product states (MPS) are a critical enabler to manage this in quantum chemistry, finance, and many-body quantum simulation. Approximate preparation of MPS typically relies on layered sequential staircases of nearest-neighbour gates. We present Adaptive State Preparation by Iterative Removal of Entanglement (ASPIRE), an algorithm that approximately compiles state-preparation circuits by selecting gates based on the state's underlying…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

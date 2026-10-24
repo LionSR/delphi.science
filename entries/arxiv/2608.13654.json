@@ -1,0 +1,20 @@
+{
+  "key": "2608.13654",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.13654",
+  "title": "Entanglement Negativity in Noisy Quantum Volume Sampling",
+  "authors": [
+    "Elijah Pelofske",
+    "Stephan Eidenbenz"
+  ],
+  "summary": "The Quantum Volume protocol uses scrambling random circuits to benchmark NISQ computers. Quantum Volume is generally well-regarded as a benchmark for small, noisy, quantum computers because it requires the quantum computer to implement many non-local entangling gates within a square-shaped circuit, which incentivizes high qubit count, long qubit coherence times, and low error rates on all hardware gates. Quantum Volume circuits inherently produce high-entanglement states that are fragile to errors and decoherence. The Quantum Volume benchmark measures an observable called…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

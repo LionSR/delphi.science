@@ -1,0 +1,23 @@
+{
+  "key": "2607.13404",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.13404",
+  "title": "Deterministic Quantum Phase Estimation with Linear Circuit Complexity in a Photonic System",
+  "authors": [
+    "M. Midhuna",
+    "Ajay Jayachandran",
+    "Kanad Sengupta",
+    "Akshai T. Krishnan",
+    "C. M. Chandrashekar"
+  ],
+  "summary": "Quantum algorithms solve certain computational problems faster than the best known classical algorithms. Many algorithms, including Shor's for factoring, Grover's for unstructured search, and the HHL for solving linear systems, rely on quantum phase estimation (QPE) as a fundamental subroutine. The QPE protocol proceeds through the initialization of a control register in a uniform superposition, controlled unitary evolution encoding the eigenphase, and a final inverse quantum Fourier transform followed by measurement to extract the phase. Here, we address a special class of unitary operators…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

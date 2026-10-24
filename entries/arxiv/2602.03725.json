@@ -1,0 +1,29 @@
+{
+  "key": "2602.03725",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.03725",
+  "title": "Quantum Speedups for Derivative Pricing Beyond Black-Scholes",
+  "authors": [
+    "Dylan Herman",
+    "Yue Sun",
+    "Jin-Peng Liu",
+    "Marco Pistoia",
+    "Charlie Che",
+    "Rob Otter",
+    "Shouvanik Chakrabarti",
+    "Aram Harrow"
+  ],
+  "summary": "This paper explores advancements in quantum algorithms for derivative pricing of exotics, a computational pipeline of fundamental importance in quantitative finance. For such cases, the classical Monte Carlo integration procedure provides the state-of-the-art provable, asymptotic performance: polynomial in problem dimension and quadratic in inverse-precision. While quantum algorithms are known to offer quadratic speedups over classical Monte Carlo methods, end-to-end speedups have been proven only in the simplified setting over the Black-Scholes geometric Brownian motion (GBM) model. This…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS",
+    "q-fin.CP",
+    "q-fin.MF"
+  ],
+  "published": "2026-02-03",
+  "updated": "2026-02-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

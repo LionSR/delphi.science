@@ -1,0 +1,23 @@
+{
+  "key": "2610.06781",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06781",
+  "title": "Pretty good shadow tomography",
+  "authors": [
+    "Sabee Grewal",
+    "Angelos Pelecanos",
+    "Jack Spilecki",
+    "Ewin Tang",
+    "John Wright"
+  ],
+  "summary": "We give a shadow tomography algorithm that uses $O(\\log(m) \\log(m/δ) / \\varepsilon^2)$ copies of the input state. Specifically, given a quantum state $ρ$ and observables $O_1,\\ldots,O_m$, the algorithm outputs estimates of $\\mathrm{tr}(O_iρ)$ for all $i\\in[m]$ that are all accurate to within $\\pm\\varepsilon$, except with probability at most $δ$. The key idea is to work in the average-case setting: for a random state drawn from a known prior, a pretty good measurement on $O(\\log(m)/\\varepsilon^2)$ copies gives a constant-error guarantee on all but a small fraction of the prior. Boosting this…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

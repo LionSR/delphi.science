@@ -1,0 +1,22 @@
+{
+  "key": "2608.22769",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.22769",
+  "title": "Classical and quantum spectral density estimation under local graph access",
+  "authors": [
+    "Rong-Hua Li",
+    "Meihao Liao",
+    "Yichun Yang"
+  ],
+  "summary": "We study spectral density estimation for the normalized adjacency matrix of an unweighted graph under local access model. Previously, Cohen-Steiner et al. [KDD 2018] proposed an algorithm for $\\varepsilon$-approximate spectral density estimation in the Wasserstein-1 distance, using $2^{O(1/\\varepsilon)}$ local queries to the graph. In this paper, we prove that every constant-success estimator with Wasserstein--$1$ error at most $\\eps$ requires $2^{Ω(1/\\eps)}$ queries, showing that the Cohen-Steiner algorithm is optimal up to constant in the exponent. This resolves the open problem left by…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS"
+  ],
+  "published": "2026-08-24",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

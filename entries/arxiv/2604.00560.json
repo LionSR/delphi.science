@@ -1,0 +1,21 @@
+{
+  "key": "2604.00560",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00560",
+  "title": "Quantum-Safe Code Auditing: LLM-Assisted Static Analysis and Quantum-Aware Risk Scoring for Post-Quantum Cryptography Migration",
+  "authors": [
+    "Animesh Shaw"
+  ],
+  "summary": "The impending arrival of cryptographically relevant quantum computers (CRQCs) threatens the security foundations of modern software: Shor's algorithm breaks RSA, ECDSA, ECDH, and Diffie-Hellman, while Grover's algorithm reduces the effective security of symmetric and hash-based schemes. Despite NIST standardising post-quantum cryptography (PQC) in 2024 (FIPS 203 ML-KEM, FIPS 204 ML-DSA, FIPS 205 SLH-DSA), most codebases lack automated tooling to inventory classical cryptographic usage and prioritise migration based on quantum risk. We present Quantum-Safe Code Auditor, a quantum-aware static…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "cs.SE",
+    "quant-ph"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-04-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

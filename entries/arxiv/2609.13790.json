@@ -1,0 +1,21 @@
+{
+  "key": "2609.13790",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.13790",
+  "title": "Binary Optimization with Complex Constraints via Quantum Approximate Multi-Objective Optimization",
+  "authors": [
+    "Andres Ruiz",
+    "Soumyadip Ghosh",
+    "Stefan Woerner"
+  ],
+  "summary": "We show that a class of binary optimization problems with complex non-quadratic objectives or constraints can be reformulated as multi-objective quadratic unconstrained binary optimization problems. When the objective and constraints depend on a small number of quadratic features and are monotone with respect to their preferred directions, at least one globally optimal solution lies in the Pareto set of the associated MO-QUBO. This enables the constraints to be evaluated classically on Pareto-optimal candidates rather than encoded as penalties. We demonstrate the approach for binary…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-12",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2609.02633",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.02633",
+  "title": "Heuristically optimizing, synthesizing, and prioritizing measurement settings for quantum state tomography",
+  "authors": [
+    "Sumukh S. Moudghalya",
+    "Anton Frisk Kockum",
+    "Akshay Gaikwad"
+  ],
+  "summary": "A key task in many quantum-computing applications, e.g., quantum simulation and quantum state tomography (QST), is to partition an arbitrary set of operators into mutually commuting subsets for efficient measurements. However, brute-force approaches to this task quickly become intractable as the number and dimensionality of operators grow. Here, we reformulate operator partitioning as a graph-coloring (GC) problem and develop an efficient computational framework to solve it, balancing accuracy and efficiency. Our framework enables leveraging a range of GC algorithms, which we benchmark for…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-02",
+  "updated": "2026-09-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

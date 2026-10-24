@@ -1,0 +1,20 @@
+{
+  "key": "2610.10339",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.10339",
+  "title": "Binary Optimization of Measurement Groupings for Quantum Energy Estimation",
+  "authors": [
+    "Isaac L. Huidobro-Meezs",
+    "Rodrigo A. Vargas-Hernández"
+  ],
+  "summary": "Repeated measurements can dominate the resources required for quantum energy estimation, making the choice of which Pauli observables to measure together a central optimization problem for variational quantum algorithms. We formulate fully commuting measurement grouping as a classical binary optimization problem based on clique selection and construct non-overlapping groups using mixed-integer linear programming (MILP). For a benchmark of molecular Hamiltonians, groupings optimized with approximate covariances reduce the non-overlapping measurement requirement $\\varepsilon^2M$ by $51.8\\%$ on…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

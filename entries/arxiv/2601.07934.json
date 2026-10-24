@@ -1,0 +1,27 @@
+{
+  "key": "2601.07934",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.07934",
+  "title": "Data-driven learning of non-Markovian quantum dynamics",
+  "authors": [
+    "Samuel Goodwin",
+    "Brian K. McFarland",
+    "Manuel H. Muñoz-Arias",
+    "Edward C. Tortorici",
+    "Melissa C. Revelle",
+    "Christopher G. Yale",
+    "Daniel S. Lobser",
+    "Susan M. Clark",
+    "Mohan Sarovar"
+  ],
+  "summary": "Fault-tolerant quantum computing requires extremely precise knowledge and control of qubit dynamics during the application of a gate. We develop a data-driven learning protocol for characterizing quantum gates that builds off previous work on learning the Nakajima-Mori-Zwanzig (NMZ) formulation of open system dynamics from time series data, which allows detailed reconstruction of quantum evolution, including non-Markovian dynamics. We demonstrate this learning technique on three different systems: a simulation of a qubit whose dynamics are purely Markovian, a simulation of a driven qubit…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-12",
+  "updated": "2026-02-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

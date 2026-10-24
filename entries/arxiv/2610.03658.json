@@ -1,0 +1,19 @@
+{
+  "key": "2610.03658",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03658",
+  "title": "A note on tomography of states with low stabilizer rank",
+  "authors": [
+    "Arkopal Dutt"
+  ],
+  "summary": "In this note, we consider tomography of $n$-qubit quantum states $|ψ\\rangle$ that are promised to have stabilizer rank $k$ i.e., admit a stabilizer decomposition of $|ψ\\rangle = \\sum_{i=1}^k c_i |φ_i\\rangle$ where each $|φ_i\\rangle$ is a stabilizer state. We give a tomography protocol for such states up to trace distance $\\varepsilon > 0$ running in $\\textsf{poly}(n,2^k,1/\\varepsilon)$ time and thus can handle $k=O(\\log n)$ efficiently. This follows from first showing that the stabilizer extent $ξ(|ψ\\rangle)$, which is the minimal $\\ell_1$ norm over the coefficients $\\{c_i\\}$ of any…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

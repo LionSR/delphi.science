@@ -1,0 +1,25 @@
+{
+  "key": "2610.27332",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.27332",
+  "title": "Orchestrating Key Scarcity: Global Capacity Allocation in Hybrid QKD-PQC Networks",
+  "authors": [
+    "Pablo P. Rejo",
+    "Manuel Fernández-Veiga",
+    "Ana Fernández-Vilas",
+    "Diego Cajaraville-Aboy",
+    "Javier Vecino-Peñas",
+    "Rebeca P. Díaz-Redondo"
+  ],
+  "summary": "This article presents a Distributed Key Management System (DKMS) that provisions quantum-safe symmetric encryption keys to applications across a network. To overcome the distance and rate limitations inherent to Quantum Key Distribution (QKD), the architecture adopts a hybrid design: it utilizes multi-hop trusted relays for physical key transport, while applying an end-to-end Post-Quantum Cryptography (PQC) layer to ensure the relayed key material remains strictly protected from intermediate nodes. Because QKD transforms key generation into a scarce physical resource, managing unpredictable…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "quant-ph"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

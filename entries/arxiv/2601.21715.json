@@ -1,0 +1,24 @@
+{
+  "key": "2601.21715",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.21715",
+  "title": "Hierarchical quantum decoders",
+  "authors": [
+    "Nirupam Basak",
+    "Ankith Mohan",
+    "Andrew Tanggara",
+    "Tobias Haug",
+    "Goutam Paul",
+    "Kishor Bharti"
+  ],
+  "summary": "Decoders are a critical component of fault-tolerant quantum computing. They must identify errors based on syndrome measurements to correct quantum states. While finding the optimal correction is NP-hard and thus extremely difficult, approximate decoders with faster runtime often rely on uncontrolled heuristics. In this work, we propose a family of hierarchical quantum decoders with a tunable trade-off between speed and accuracy while retaining guarantees of optimality. We use the Lasserre Sum-of-Squares (SOS) hierarchy from optimization theory to relax the decoding problem. This approach…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-01-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

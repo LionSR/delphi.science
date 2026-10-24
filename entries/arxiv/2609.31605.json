@@ -1,0 +1,21 @@
+{
+  "key": "2609.31605",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.31605",
+  "title": "Measurement-Based Uncomputation from an Error Correction Perspective",
+  "authors": [
+    "Minjun Jeon",
+    "Po-Wei Huang",
+    "Zhenyu Cai"
+  ],
+  "summary": "Coherent uncomputation can be as costly as the computation itself, creating substantial spacetime overheads that can be prohibitive on early fault-tolerant quantum computers. We develop an algebraic framework for measurement-based uncomputation (MBU) through a quantum error-correction picture: measurements of the garbage register induce relative phases analogous to errors causing non-trivial syndromes. Accepting only zero-syndrome outcomes achieves post-selected MBU, removing the need for an uncomputation oracle at the cost of a probabilistic success rate determined by the affine rank of the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2603.27037",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.27037",
+  "title": "Integrating Julia-ITensors into the Tensor Network Quantum Virtual Machine (TNQVM)",
+  "authors": [
+    "Zachary W. Windom",
+    "Daniel Claudino",
+    "Vicente Leyton-Ortega"
+  ],
+  "summary": "The Tensor Network Quantum Virtual Machine (TNQVM) is a high-performance classical circuit simulation backend for the eXtreme-scale ACCelerator (XACC) framework that leverages the Intelligent Tensor (ITensor) library for tensor network--based quantum circuit simulation. However, TNQVM's original C++ ITensor backend is tied to an older integrated release, limiting access to newer tensor network algorithms, diagnostics, and performance improvements available in the actively developed Julia-based ITensors ecosystem. We introduce JuliaITensorTNQVM, an interoperability layer that bridges TNQVM's…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-27",
+  "updated": "2026-03-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

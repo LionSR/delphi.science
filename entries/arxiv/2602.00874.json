@@ -1,0 +1,24 @@
+{
+  "key": "2602.00874",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.00874",
+  "title": "Sublinear Time Quantum Algorithm for Attention Approximation",
+  "authors": [
+    "Zhao Song",
+    "Jianfei Xue",
+    "Jiahao Zhang",
+    "Lichen Zhang"
+  ],
+  "summary": "Given the query, key and value matrices $Q, K, V\\in \\mathbb{R}^{n\\times d}$, the attention module is defined as $\\mathrm{Att}(Q, K, V)=D^{-1}AV$ where $A=\\exp(QK^\\top/\\sqrt{d})$ with $\\exp(\\cdot)$ applied entrywise, $D=\\mathrm{diag}(A{\\bf 1}_n)$. The attention module is the backbone of modern transformers and large language models, but explicitly forming the softmax matrix $D^{-1}A$ incurs $Ω(n^2)$ time, motivating numerous approximation schemes that reduce runtime to $\\widetilde O(nd)$ via sparsity or low-rank factorization. We propose a quantum data structure that approximates any row of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS",
+    "cs.LG"
+  ],
+  "published": "2026-01-31",
+  "updated": "2026-01-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2609.15728",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.15728",
+  "title": "A Modular, Topology-Aware Software Stack for Entanglement-Based Distributed Quantum Computing",
+  "authors": [
+    "Luke Andreesen",
+    "Shobhit Gupta",
+    "Sean Sullivan",
+    "Manish Kumar Singh"
+  ],
+  "summary": "Distributed quantum computing (DQC) seeks to scale beyond the limits of monolithic processors by interconnecting multiple quantum processing units (QPUs) through entanglement-based links. Realizing this vision requires the co-design of hardware and software across the domains of quantum networking, compilation, and scheduling, yet existing tools remain fragmented between monolithic circuit compilers and long-distance quantum network simulators. We present an open-source, topology-informed framework for the compilation and scheduling of distributed quantum programs. Given an input circuit and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

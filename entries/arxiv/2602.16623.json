@@ -1,0 +1,23 @@
+{
+  "key": "2602.16623",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.16623",
+  "title": "Scalable Quantum Machine Learning via Multi-layer Fully-Connected Variational Quantum Circuits",
+  "authors": [
+    "Howard Su",
+    "Chen-Yu Liu",
+    "Samuel Yen-Chi Chen",
+    "Kuan-Cheng Chen",
+    "Huan-Hsin Tseng"
+  ],
+  "summary": "Variational quantum circuits (VQCs) face an expressivity-trainability dilemma and scalability challenges. We propose Multi-Layer Fully-Connected Variational Quantum Circuits (FC-VQC), a general-purpose quantum machine learning framework that connects local VQC blocks through measurement, deterministic parameter-free routing, and re-encoding. All trainable model parameters reside within the quantum blocks, without trainable classical neural components. We study fully connected, sliding-window, and parallel block mixing and analyze computational costs, conditional error propagation, and block…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-18",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

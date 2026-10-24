@@ -1,0 +1,22 @@
+{
+  "key": "2609.13935",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.13935",
+  "title": "SUTURE: Syndrome-Guided Repair for Segmented Feasibility-Preserving VQAs on Noisy Hardware",
+  "authors": [
+    "Sokea Sang",
+    "Leanghok Hour",
+    "Sanghyeon Lee",
+    "Youngsun Han"
+  ],
+  "summary": "Constrained binary optimization is a representative class of NP-hard problems in scheduling, resource allocation, and finance. Segmented feasibility-preserving variational quantum algorithms (VQAs) are a promising approach that restricts ideal circuit evolution to feasible assignments and executes short measure-and-reseed segments. The existing boundary runtime enforces feasibility through purification, which discards measurements that violate the constraints. As problem size and noise increase, feasible measurements become rare; if no shot survives, the execution chain terminates. In our…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-12",
+  "updated": "2026-09-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

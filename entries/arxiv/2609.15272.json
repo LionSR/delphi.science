@@ -1,0 +1,23 @@
+{
+  "key": "2609.15272",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.15272",
+  "title": "Variational Real-Time Dynamics on Reduced Operator Manifolds",
+  "authors": [
+    "Aeishah Ameera Anuar",
+    "PV Sriluckshmy",
+    "Riccardo Rossi",
+    "Fedor Simkovic"
+  ],
+  "summary": "Accurate real-time simulation of correlated quantum systems remains challenging for both classical methods and near-term quantum hardware. We introduce operator-projected variational quantum real-time evolution (OVQRTE), which updates a parameterized circuit by enforcing the Ehrenfest equations for a selected set of observables. OVQRTE requires only expectation-value measurements, while the choice of operator set enables a systematic trade-off between accuracy and measurement cost, substantially reducing quantum-resource requirements relative to existing variational real-time-evolution…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.str-el"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

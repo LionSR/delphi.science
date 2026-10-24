@@ -1,0 +1,21 @@
+{
+  "key": "2608.30363",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.30363",
+  "title": "Quantum Imaginary Time Evolution on an Infinite 1D Chain",
+  "authors": [
+    "Hao-Ti Hung",
+    "Tung Tsao",
+    "Ying-Jer Kao"
+  ],
+  "summary": "We introduce a quantum-circuit algorithm for performing imaginary-time evolution on infinite one-dimensional lattice systems. The method uses a parameterized quantum circuit to represent a uniform matrix product state ansatz. We derive the ITE algorithm using the time-dependent variational principle and employ the quantum Lanczos algorithm to improve the ground-state energy estimate. As a benchmark, we simulate the transverse-field Ising model using both classical simulators and IBM Quantum devices. Our analysis includes a statistical study of the distributions of the cost function and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-31",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,26 @@
+{
+  "key": "2610.24160",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.24160",
+  "title": "Trajectree - A quantum trajectory-based quantum circuit simulator",
+  "authors": [
+    "Ansh Singal",
+    "Allen Zang",
+    "Jordan Thomas",
+    "Alexander Kolar",
+    "Anirudh Ramesh",
+    "Joaquin Chung",
+    "Rajkumar Kettimuthu",
+    "Prem Kumar"
+  ],
+  "summary": "We introduce Trajectree, a quantum trajectory-based quantum circuit simulator that uses a novel, state-saving partial execution of the quantum circuits to simulate broad and deep noisy quantum circuits efficiently. Trajectree can efficiently generate a large number of Monte Carlo samples by saving partially executed trajectories. We conduct extensive performance analysis of the Trajectree approach, proving the utility of the trajectory saving scheme for simulations of open quantum systems. Using this architecture, we show that Trajectree can simulate standard benchmark noisy circuits over…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2609.29570",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.29570",
+  "title": "Task-Resolved Fisher Spectroscopy for Quantum Reservoir Computing",
+  "authors": [
+    "Yang Peng"
+  ],
+  "summary": "Quantum reservoir computing (QRC) uses fixed quantum dynamics to encode a time series and trains only a classical readout, but a benchmark capacity alone does not reveal whether task information is lost in the reservoir, the measurement, feature compression, or finite sampling. We introduce \\emph{task-resolved Fisher spectroscopy}, in which prediction targets define orthonormal score coordinates on the stationary distribution of input histories. Reweighting labeled histories along these scores generates an exactly affine family of reservoir states and measurement outcomes. In the same…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-08-26",
+  "updated": "2026-08-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

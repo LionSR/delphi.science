@@ -1,0 +1,27 @@
+{
+  "key": "2610.11540",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.11540",
+  "title": "Quickly extracting fidelity decay rates in random circuit benchmarking experiments",
+  "authors": [
+    "Ake Köhne",
+    "Stavros Efthymiou",
+    "Joanna Majsak",
+    "Jadwiga Wilkens",
+    "Bram Evert",
+    "Andrew D. Patterson",
+    "Jonas Helsen",
+    "Markus Heinrich",
+    "Ingo Roth"
+  ],
+  "summary": "Randomized benchmarking (RB) with structured circuits is experimentally scalable, but gives biased short-depth fidelity estimates because incomplete ensemble mixing introduces transient modes. Waiting for these transients to decay in deeper circuits can push the signal below the noise floor. This is a well-established obstacle, e.g. in linear cross-entropy benchmarking (LinXEB). Here we overcome this obstacle solely through classical post-processing. We introduce a one-parameter family of estimators that interpolate between the standard LinXEB-type post-processing and a new post-processing…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

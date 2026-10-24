@@ -1,0 +1,29 @@
+{
+  "key": "2610.25968",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.25968",
+  "title": "Efficient Block Encodings for Ensembles of Molecular Hamiltonians",
+  "authors": [
+    "Cristian L. Cortes",
+    "Andrew J. Jenkins",
+    "William Pol",
+    "Dario Rocca",
+    "Mark Steudtner",
+    "Gian-Luca R. Anselmetti",
+    "Matthias Degroote",
+    "Nikolaj Moll",
+    "Raffaele Santagati",
+    "Michael Streif",
+    "Markus R. Hermann"
+  ],
+  "summary": "Accurately characterizing molecular properties and reactivity often requires electronic-structure calculations across an ensemble of molecular geometries. Quantum algorithms that process such ensembles coherently could address this challenge, but they require Hamiltonian block encoding circuits that combine advanced factorization techniques with sublinear scaling in ensemble size. Here, we introduce SVD-THC, which extends tensor hypercontraction to sets of Hamiltonians defined at different nuclear geometries through a singular value decomposition of the ensemble. We use SVD-THC to construct…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

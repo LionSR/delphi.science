@@ -1,0 +1,19 @@
+{
+  "key": "2602.07097",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.07097",
+  "title": "Alleviating Post-Linearization Challenges for Solving Nonlinear Systems on a Quantum Computer",
+  "authors": [
+    "Tayyab Ali"
+  ],
+  "summary": "The linearity inherent in quantum mechanics limits current quantum hardware from directly solving nonlinear systems governed by nonlinear differential equations. One can opt for linearization frameworks such as Carleman linearization, which provides a high dimensional infinite linear system corresponding to a finite nonlinear system, as an indirect way of solving nonlinear systems using current quantum computers. We provide an efficient data access model to load this infinite linear representation of the nonlinear system, upto truncation order $N$, on a quantum computer by decomposing the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-06",
+  "updated": "2026-02-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

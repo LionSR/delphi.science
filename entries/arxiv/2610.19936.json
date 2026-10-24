@@ -1,0 +1,21 @@
+{
+  "key": "2610.19936",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.19936",
+  "title": "Improved Quantum Algorithms for Rényi Entropies Estimation",
+  "authors": [
+    "Zongxing Xiong",
+    "Chengshen Gao",
+    "Lvzhou Li"
+  ],
+  "summary": "Entropy estimation of discrete probability distributions is a fundamental problem in statistical inference and quantum property estimation. In this paper, we study the problem of estimating Rényi entropy $H_α(\\mathbf{p})$ for any distribution $\\mathbf{p} = (p_i)_{i=1}^n$ given its purified quantum query-access. For non-integer $α> 1$, our algorithm estimates $H_α(\\mathbf{p})$ to within additive error $ε$ using only $\\widetilde{\\mathcal{O}}\\big(n^{\\max\\{1/2,1-1/α\\}}/ε\\big)$ queries, which improves the best known upper bound for dependence on both $n$ and $1/ε$. For $0<α<1$, our algorithm has…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

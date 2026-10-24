@@ -1,0 +1,23 @@
+{
+  "key": "2609.03625",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.03625",
+  "title": "Quantum Quasi-Monte Carlo: a window for pre-asymptotic quantum advantage",
+  "authors": [
+    "Paolo Recchia",
+    "Zhan Yu",
+    "Kelvin Koor",
+    "Patrick Rebentrost"
+  ],
+  "summary": "Numerical integration with Monte Carlo methods is a central computational task in many scientific and industrial applications, including financial derivative pricing and risk management. Classical Monte Carlo algorithms are computationally demanding: achieving an accuracy $ε$ typically requires a number of function evaluations scaling as $O(1/ε^2)$. Quantum-accelerated Monte Carlo methods based on quantum amplitude estimation can in principle quadratically improve this dependence. However, \\textit{quasi}-Monte Carlo methods have not been explored in the quantum context. In this work, we…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.comp-ph"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2610.07124",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.07124",
+  "title": "Black Hole Radiation Decoding in the Haar Random Oracle Model",
+  "authors": [
+    "Ezekiel Cochran",
+    "Atul Mantri"
+  ],
+  "summary": "We prove optimal query bounds for recovering a single qubit from black-hole radiation in the Haar random oracle model, when the remaining black hole contains at most one sixteenth of the system's qubits. Recovery with any constant Haar-averaged advantage over trivial decoding requires queries proportional to the Hilbert-space dimension of the remaining black hole. The lower bound is unconditional for decoders chosen independently of the sampled unitary, allows arbitrary computation between queries, and access to $U, U^\\dagger, U^*, U^\\mathsf T$ along with the controlled variants. An existing…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.CR"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

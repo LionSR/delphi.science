@@ -1,0 +1,24 @@
+{
+  "key": "2607.17872",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.17872",
+  "title": "Entanglement geometry separates circuit cutting, classical hardness, and trainability",
+  "authors": [
+    "Maria Gragera Garces",
+    "Sabina Drăgoi",
+    "Lirandë Pira"
+  ],
+  "summary": "Circuit cutting promises to scale quantum computations beyond current hardware, but variational quantum advantage also requires low cutting overhead, classical hardness, and trainability. We show that these properties are strongly constrained by entanglement geometry. Matrix product state (MPS) and tree tensor network (TTN) circuits with constant seam bond dimension can be cut with \\(O(1/\\varepsilon^2)\\) sampling overhead, but remain efficiently classically simulable, ruling out asymptotic quantum advantage within these families. By independently controlling seam and intra-block…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DC",
+    "cs.ET",
+    "cs.LG"
+  ],
+  "published": "2026-07-20",
+  "updated": "2026-07-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

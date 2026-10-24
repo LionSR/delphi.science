@@ -1,0 +1,21 @@
+{
+  "key": "2609.06179",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.06179",
+  "title": "Quantum lattice Boltzmann method via density-matrix encoding for fluid simulation with wall boundary conditions",
+  "authors": [
+    "Hao Su",
+    "Boyuan Wang",
+    "Yue Yang"
+  ],
+  "summary": "The quantum lattice Boltzmann method (QLBM) holds promise for efficient fluid simulations, yet the treatment of realistic boundary conditions, particularly solid wall boundary with arbitrary geometry, remains a critical open challenge. We propose a QLBM algorithm that incorporates wall boundaries as well as inlet/outlet velocity conditions. Building upon the existing QLBM with ensemble transformations, we adopt a density-matrix encoding that offers greater flexibility in circuit design and enables the implementation of non-unitary operations through Kraus operators. For boundary enforcement,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-05",
+  "updated": "2026-09-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

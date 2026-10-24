@@ -1,0 +1,21 @@
+{
+  "key": "2608.24320",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.24320",
+  "title": "QisMC: A Model Checker for QISKIT Program Debugging",
+  "authors": [
+    "Aochu Dai",
+    "Mingsheng Ying"
+  ],
+  "summary": "We present QisMC, the first quantum model checker dedicated to debugging Qiskit programs. On the theoretical side, we introduce the notion of quantum-classical transition system and a quantum computation tree logic (qCTL) grounded in Birkhoff-von Neumann logic for modeling the behaviors and specifying the properties of Qiskit programs, respectively. On the implementation side, QisMC provides an end-to-end framework encompassing transition system generation, logical formula representation, and model checking algorithms, and it efficiently performs image computation based on decision diagrams.…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "quant-ph"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

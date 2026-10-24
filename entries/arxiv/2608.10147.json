@@ -1,0 +1,22 @@
+{
+  "key": "2608.10147",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.10147",
+  "title": "A Simple Algorithm for Best Separable State",
+  "authors": [
+    "Prashanti Anderson",
+    "Samuel B. Hopkins",
+    "Amit Rajaraman"
+  ],
+  "summary": "We study the best separable state problem (BSS), which asks for the maximum acceptance probability of a quantum measurement over unentangled states. In classical terms, the goal is to maximize $\\langle(x \\otimes y), M (x \\otimes y)\\rangle$ over unit vectors $x,y$ where $0 \\preceq M \\preceq I$; we call this value $\\mathrm{BSS}(M)$. We study $\\mathrm{BSS}$ in the \"perfect completeness\" regime, where given $M$ such that $\\mathrm{BSS}(M) = 1$ the goal is to find the best possible solution $x,y$ -- this generalizes the problem of finding a rank-one matrix as close as possible to a given subspace…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "quant-ph"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

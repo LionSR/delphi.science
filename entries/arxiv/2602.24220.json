@@ -1,0 +1,21 @@
+{
+  "key": "2602.24220",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.24220",
+  "title": "Comparing Classical and Quantum Variational Classifiers on the XOR Problem",
+  "authors": [
+    "Miras Seilkhan",
+    "Adilbek Taizhanov"
+  ],
+  "summary": "Quantum machine learning applies principles such as superposition and entanglement to data processing and optimization. Variational quantum models operate on qubits in high-dimensional Hilbert spaces and provide an alternative approach to model expressivity. We compare classical models and a variational quantum classifier on the XOR problem. Logistic regression, a one-hidden-layer multilayer perceptron, and a two-qubit variational quantum classifier with circuit depths 1 and 2 are evaluated on synthetic XOR datasets with varying Gaussian noise and sample sizes using accuracy and binary…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "quant-ph"
+  ],
+  "published": "2026-02-27",
+  "updated": "2026-02-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

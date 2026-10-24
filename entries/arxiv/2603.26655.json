@@ -1,0 +1,24 @@
+{
+  "key": "2603.26655",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.26655",
+  "title": "Autonomous Hamiltonian certification and changepoint detection",
+  "authors": [
+    "Steven T. Flammia",
+    "Dmitrii Khitrin",
+    "Muzhou Ma",
+    "Jamie Sikora",
+    "Yu Tong",
+    "Alice Zheng"
+  ],
+  "summary": "Modern quantum devices require high-precision Hamiltonian dynamics, but environmental noise can cause calibrated Hamiltonian parameters to drift over time, necessitating expensive recalibration. Detecting when recalibration is needed is challenging, especially since the very gates required for sophisticated verification protocols may themselves be miscalibrated. While cloud quantum computing services implement heuristic routines for triggering recalibration, the fundamental limits of optimal recalibration are not yet known. We develop efficient Hamiltonian certification and changepoint…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-27",
+  "updated": "2026-03-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

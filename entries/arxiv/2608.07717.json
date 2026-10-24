@@ -1,0 +1,24 @@
+{
+  "key": "2608.07717",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.07717",
+  "title": "Implicit Differentiation for Measurement-Efficient Bilevel Quantum-Classical Optimization",
+  "authors": [
+    "Tobias Rohe",
+    "Markus Baumann",
+    "Federico Harjes Ruiloba",
+    "Maximilian Zorn",
+    "Jonas Stein",
+    "Claudia Linnhoff-Popien"
+  ],
+  "summary": "Quantum optimization has shown promising results for quadratic unconstrained binary optimization (QUBO) problems. Real-world applications, however, often involve polynomial coefficients that depend on tunable external factors - such as demand forecasts or risk preferences - giving rise to bilevel optimization structures. We show how variational quantum algorithms (VQAs) can efficiently handle such parametric problems, making three contributions. First, we propose a bilevel optimization model for diagonal cost Hamiltonians where coefficients depend on a tunable outer parameter: an outer loop…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2603.15552",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.15552",
+  "title": "Optimizing and Comparing Quantum Resources of Statistical Phase Estimation and Krylov Subspace Diagonalization",
+  "authors": [
+    "Oumarou Oumarou",
+    "Pauline J. Ollitrault",
+    "Stefano Polla",
+    "Christian Gogolin"
+  ],
+  "summary": "We develop a framework that enables direct and meaningful comparison of two early fault-tolerant methods for the computation of eigenenergies, namely \\gls{qksd} and \\gls{spe}, within which both methods use expectation values of Chebyshev polynomials of the Hamiltonian as input. For \\gls{qksd} we propose methods for optimally distributing shots and ensuring sufficient non-linearity of states spanning the Krylov space. For \\gls{spe} we improve rigorous error-bounds, achieving roughly a factor $2/3$ reduction of circuit depth. We provide insights into the scalability of and the practical…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-16",
+  "updated": "2026-03-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

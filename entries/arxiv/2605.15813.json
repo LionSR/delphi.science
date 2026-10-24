@@ -1,0 +1,24 @@
+{
+  "key": "2605.15813",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.15813",
+  "title": "Bias Analysis and Regularization of Sequential Minimal Optimization in Variational Quantum Eigensolvers",
+  "authors": [
+    "Samuele Pedrielli",
+    "Frederik Stalschus",
+    "Stefan Kühn",
+    "Karl Jansen",
+    "Kim A. Nicoli",
+    "Shinichi Nakajima"
+  ],
+  "summary": "The Nakanishi Fujii Todo (NFT) algorithm, also known as Rotosolve, implements Sequential Minimal Optimization for Variational Quantum Eigensolvers (SMO-VQE) by exploiting the trigonometric dependence of the energy on individual circuit parameters. This enables analytical one-dimensional minimization using only a few , typically two, energy evaluations, but introduces bias in the estimated energy. Although performing additional measurements every few tens of iterations can mitigate bias accumulation, we find that such corrections often degrade optimization performance. In this paper, we…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-15",
+  "updated": "2026-05-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2606.05777",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.05777",
+  "title": "Periodic Symmetry-Adapted Encoding: Qubit Reduction in Crystalline Electronic Structure",
+  "authors": [
+    "Dario Picozzi"
+  ],
+  "summary": "We introduce periodic symmetry-adapted encoding (SAE) for qubit-efficient simulations of crystalline materials, extending the molecular SAE framework developed in earlier work to periodic systems. The method constructs a Gamma-point supercell active-space Hamiltonian from k-point Hartree-Fock data and identifies independent Boolean symmetry generators arising from spin parity, crystal translations, and point-group operations. Each generator removes one qubit while preserving the Hamiltonian spectrum in the target symmetry sector. The inclusion of crystal translations increases the maximum…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-04",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

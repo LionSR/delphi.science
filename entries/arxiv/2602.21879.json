@@ -1,0 +1,24 @@
+{
+  "key": "2602.21879",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.21879",
+  "title": "Quantum Error Mitigation Simulates General Non-Hermitian Dynamics",
+  "authors": [
+    "Hiroki Kuji",
+    "Suguru Endo",
+    "Tetsuro Nikuni",
+    "Ryusuke Hamazaki",
+    "Yuichiro Matsuzaki"
+  ],
+  "summary": "While non-Hermitian Hamiltonians enable exotic dynamical phenomena, implementing their nonunitary time evolution on near-term quantum devices remains challenging. We propose a hardware-friendly protocol that simulates non-Hermitian dynamics without ancillas, controlled time evolution, or continuous monitoring. The protocol combines a Gorini-Kossakowski-Sudarshan-Lindblad (GKSL) evolution via classical Gaussian white-noise averaging with stochastic quantum error mitigation (QEM) to cancel the jump contribution at the level of expectation values. The mitigation layer uses only single-qubit…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.dis-nn"
+  ],
+  "published": "2026-02-25",
+  "updated": "2026-08-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

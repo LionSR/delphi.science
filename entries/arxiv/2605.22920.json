@@ -1,0 +1,20 @@
+{
+  "key": "2605.22920",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.22920",
+  "title": "Estimating Green's functions with a robust quantum Arnoldi method",
+  "authors": [
+    "Jacob S. Nelson",
+    "Andrew B. Baczewski"
+  ],
+  "summary": "Many applications of Green's functions (GFs) require their evaluation over intervals or at multiple points, motivating quantum algorithms that return an efficiently computable functional representation rather than mere point estimates. We introduce a robust quantum Arnoldi method (ROQAM) that achieves this goal. Its robustness is derived from formulation in terms of orthogonal polynomials, which preserves the upper-Hessenberg structure of the projected matrices despite finite-precision estimation. We also show that as the iteration depth increases, the precision required for matrix-element…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-21",
+  "updated": "2026-05-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

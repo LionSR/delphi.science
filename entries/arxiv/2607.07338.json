@@ -1,0 +1,27 @@
+{
+  "key": "2607.07338",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.07338",
+  "title": "Quantum simulation of real-world nonlinear dynamics via Koopman method",
+  "authors": [
+    "Baoyang Zhang",
+    "Dong An",
+    "Zhaoyuan Meng",
+    "Yefei Yu",
+    "Xiaoxiao Xiao",
+    "Zhen Lu",
+    "Yue Yang"
+  ],
+  "summary": "Nonlinear dynamics is ubiquitous in nature, ranging from chemical pattern formation to ocean circulation, yet its simulation on quantum computers is fundamentally limited by the unitary nature of quantum evolution. We propose the quantum Koopman method, a data-driven framework that embeds nonlinear dynamics into a learned linear representation and implements the resulting evolution using shallow quantum circuits. This method learns Koopman observables from trajectory data, projects the lifted dynamics onto a finite-dimensional subspace, and decomposes the corresponding non-unitary propagator…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

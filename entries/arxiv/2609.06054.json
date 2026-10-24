@@ -1,0 +1,22 @@
+{
+  "key": "2609.06054",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.06054",
+  "title": "Propagating sparsely supported states with time-dependent neural quantum states",
+  "authors": [
+    "Lexin Ding",
+    "Markus Reiher"
+  ],
+  "summary": "Neural quantum states (NQSs) have emerged as a powerful ansatz for quantum dynamics. Their high entanglement capacity promises to overcome the entanglement barrier. However, existing time-dependent NQS methods are ill-equipped to propagate sparsely supported initial states due to the inherent mismatch between the supports of such states and their time derivatives. To address this issue, we introduce the interpolation sampling method as a novel form of importance sampling, where samples are drawn from a distribution that interpolates between the wave function and its time derivative. Combined…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.chem-ph",
+    "physics.comp-ph"
+  ],
+  "published": "2026-09-05",
+  "updated": "2026-09-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

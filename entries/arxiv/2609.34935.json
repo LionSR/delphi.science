@@ -1,0 +1,24 @@
+{
+  "key": "2609.34935",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.34935",
+  "title": "Classical simulation of amplitude-damped bucket-brigade quantum random access memories via predictable branch evolution",
+  "authors": [
+    "Zhao-Yun Chen",
+    "Ming-Yang Tan",
+    "Sheng Zhang",
+    "Peng Wang",
+    "Yun-Jie Wang",
+    "Guo-Ping Guo"
+  ],
+  "summary": "Classical simulation of quantum random access memory (QRAM) under noise can be accelerated dramatically by branch pruning: noise histories are sampled as trajectory ensembles, and good branches, whose routing paths avoid every sampled fault, need not be evolved because their final states are analytically predictable. Under amplitude damping this predictability is not automatic, because the no-jump operator $K_0$ acts on every branch at every time slice. Here we give a complete account of damping-channel predictability in bucket-brigade QRAM simulation, for both qutrit and qubit encodings.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

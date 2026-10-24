@@ -1,0 +1,21 @@
+{
+  "key": "2607.27153",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.27153",
+  "title": "Improved Methods for Determining Quantum Error Correcting Code Performance and Fault Tolerance",
+  "authors": [
+    "Michael Mullan",
+    "Matthew Weippert",
+    "Winton Brown"
+  ],
+  "summary": "One of the central challenges in quantum error correction is determining the performance of a code in the low-error regimes needed to implement utility-scale computations. While performance at these error rates is not amenable to direct Monte Carlo simulation, it can be extrapolated from simulations at higher logical error rates, assuming the logical error rate scales predictably with increasing distance or decreasing physical error rate. However, the expected scaling depends sensitively on the minimum weight of uncorrectable error patterns. In many cases, the minimum weight is unknown since…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,27 @@
+{
+  "key": "2606.04686",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.04686",
+  "title": "Digital Quantum Reservoir Computing for ATM Time Series Prediction",
+  "authors": [
+    "Chiara Vercellino",
+    "Giacomo Vitali",
+    "Valeria Zaffaroni",
+    "Francesca Cibrario",
+    "Emanuele Dri",
+    "Paolo Viviani",
+    "Olivier Terzo",
+    "Davide Corbelletto"
+  ],
+  "summary": "We investigate a digital quantum reservoir computing (QRC) framework for multi-step forecasting of automated teller machine (ATM) cash demand time series on near-term quantum devices. The proposed approach uses parametrized four-qubit reservoirs with a fixed structure exploiting partial measurement and reset, where temporal data is encoded in rotation angles. Training is restricted to a classical Ridge-regression readout. We systematically analyze the impact of the circuit ansatzë, reservoir memory, measurement-derived observables, and the execution backend on the forecasting performance.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CE"
+  ],
+  "published": "2026-06-03",
+  "updated": "2026-06-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

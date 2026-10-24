@@ -1,0 +1,24 @@
+{
+  "key": "2610.23832",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.23832",
+  "title": "Leveraging verifiable structure in quantum circuits to find more efficient compilations with agentic AI",
+  "authors": [
+    "Tanuj Khattar",
+    "Nicholas C. Rubin",
+    "Craig Gidney",
+    "Michael Broughton",
+    "Guang Hao Low",
+    "Ryan Babbush"
+  ],
+  "summary": "We discuss an effective paradigm of utilizing AI agents to better compile quantum circuits when one can constrain bottleneck subroutines to have some form of classically verifiable structure. For example, when critical subroutines are composed exclusively of reversible classical logic, phasing operations, and measurement based uncomputation, one can efficiently simulate execution for classical inputs. This property facilitates efficient certification of approximate circuit synthesis via a form of fuzz testing, provided suitable assumptions on the input distribution. While this pattern was…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2602.05047",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05047",
+  "title": "QuantumGS: Quantum Encoding Framework for Gaussian Splatting",
+  "authors": [
+    "Grzegorz Wilczyński",
+    "Rafał Tobiasz",
+    "Paweł Gora",
+    "Marcin Mazur",
+    "Przemysław Spurek"
+  ],
+  "summary": "Recent advances in neural rendering, particularly 3D Gaussian Splatting (3DGS), have enabled real-time rendering of complex scenes. However, standard 3DGS relies on spherical harmonics, which often struggle to accurately capture high-frequency view-dependent effects such as sharp reflections and transparency. While hybrid approaches like Viewing Direction Gaussian Splatting (VDGS) mitigate this limitation using classical Multi-Layer Perceptrons (MLPs), they remain limited by the expressivity of classical networks in low-parameter regimes. In this paper, we introduce QuantumGS, a novel hybrid…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CV"
+  ],
+  "published": "2026-02-04",
+  "updated": "2026-02-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

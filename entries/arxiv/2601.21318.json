@@ -1,0 +1,21 @@
+{
+  "key": "2601.21318",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.21318",
+  "title": "QCL-IDS: Quantum Continual Learning for Intrusion Detection with Fidelity-Anchored Stability and Generative Replay",
+  "authors": [
+    "Zirui Zhu",
+    "Xiangyang Li"
+  ],
+  "summary": "Continual intrusion detection must absorb newly emerging attack stages while retaining legacy detection capability under strict operational constraints, including bounded compute and qubit budgets and privacy rules that preclude long-term storage of raw telemetry. We propose QCL-IDS, a quantum-centric continual-learning framework that co-designs stability and privacy-governed rehearsal for NISQ-era pipelines. Its core component, Q-FISH (Quantum Fisher Anchors), enforces retention using a compact anchor coreset through (i) sensitivity-weighted parameter constraints and (ii) a fidelity-based…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-02-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

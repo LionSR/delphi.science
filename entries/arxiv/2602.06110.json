@@ -1,0 +1,24 @@
+{
+  "key": "2602.06110",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.06110",
+  "title": "Private and interpretable clinical prediction with quantum-inspired tensor train models",
+  "authors": [
+    "José Ramón Pareja Monturiol",
+    "Juliette Sinnott",
+    "Roger G. Melko",
+    "Mohammad Kohandel"
+  ],
+  "summary": "Publicly available clinical machine learning models pose an underappreciated privacy risk: their parameters or outputs can be exploited to recover information from patients whose data were used during training. Moreover, this risk is exacerbated by models such as logistic regression (LR), which are typically preferred in clinical settings for their transparency. To assess this empirically, we attack LORIS, a publicly available LR model for immunotherapy response prediction hosted on a U.S. government website. From evaluations through its public interface, we recover the model parameters and…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.CR",
+    "quant-ph"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-08-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

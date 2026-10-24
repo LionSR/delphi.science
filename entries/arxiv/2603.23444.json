@@ -1,0 +1,27 @@
+{
+  "key": "2603.23444",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.23444",
+  "title": "Scalable quantum circuit generation for iterative ground state approximation using Majorana Propagation",
+  "authors": [
+    "Rahul Chakraborty",
+    "Aaron Miller",
+    "Anton Nykänen",
+    "Özlem Salehi",
+    "Fabio Tarocco",
+    "Fabijan Pavošević",
+    "Pi. A. B. Haase",
+    "Martina Stella",
+    "Adam Glos"
+  ],
+  "summary": "We introduce the Adaptive Derivative-Assembled Pseudo-Trotter ansatz Variational Majorana Propagation Eigensolver (ADAPT-VMPE), a quantum-inspired classical algorithm that exploits Majorana Propagation (MP) to produce circuits for approximating the ground state of molecular Hamiltonians. Equipped with the theoretical guarantees of MP, which provide controllable bounds on the approximation error, ADAPT-VMPE offers an efficient and scalable approach for iterative ansatz construction. A theoretical analysis of the computational complexity demonstrates that it is polynomial in both the number of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-24",
+  "updated": "2026-03-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

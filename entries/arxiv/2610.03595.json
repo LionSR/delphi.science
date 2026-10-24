@@ -1,0 +1,22 @@
+{
+  "key": "2610.03595",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03595",
+  "title": "The exact LCU sampling overhead of collective diagonal unitaries: resonances and a continued-fraction dichotomy",
+  "authors": [
+    "Zhihui Wang",
+    "Sujit Roy",
+    "Manil Maskey",
+    "Rahul Ramachandran"
+  ],
+  "summary": "The minimal sampling overhead of the quadratic collective phase $e^{-iγK^2}$ over one layer of single-qubit rotations is decided by the continued fraction of $γ/π$. Here $K$ is a collective observable with spectrum $\\{0,\\dots,n\\}$, such as the permutation-symmetric Hamming weight. This gate is the cardinality-penalty layer of constrained optimization, the one-axis-twisting gate of spin squeezing and the Kerr phase of a bosonic mode. Instead of compiling it to two-qubit gates, we sample it as an LCU over such layers at overhead $Γ$. Our results give an optimality theory for this overhead.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

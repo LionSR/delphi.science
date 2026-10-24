@@ -1,0 +1,21 @@
+{
+  "key": "2604.08367",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.08367",
+  "title": "Per-Shot Evaluation of QAOA on Max-Cut: A Black-Box Implementation Comparison with Goemans-Williamson",
+  "authors": [
+    "Evgenii Dolzhkov",
+    "Franz G. Fuchs",
+    "Dirk Oliver Theis"
+  ],
+  "summary": "The Quantum Approximate Optimization Algorithm (QAOA) has emerged as a promising approach for addressing combinatorial optimization problems on near-term quantum hardware. In this work, we conduct an empirical evaluation of QAOA on the Max-Cut problem, using the Goemans-Williamson (GW) algorithm as a classical baseline for comparison. Unlike many prior studies, our methodology treats QAOA implementations as black-box optimizers, relying solely on default parameter settings without manual fine-tuning. We evaluate specific off-the-shelf QAOA implementations under default settings, not the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-09",
+  "updated": "2026-04-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

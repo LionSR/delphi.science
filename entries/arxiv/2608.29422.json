@@ -1,0 +1,19 @@
+{
+  "key": "2608.29422",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.29422",
+  "title": "The ZZ feature map induces a signless Laplacian metric: a closed-form classical surrogate for quantum kernel regression",
+  "authors": [
+    "Erkut Tekeli"
+  ],
+  "summary": "Bandwidth-tuned quantum kernels have been shown to lose their advantage over classical kernels and to resemble radial basis function kernels, but the analytical support for that observation rests on separable encoding circuits and captures entangling circuits only qualitatively. We close this gap for the ZZ feature map. We prove that in the small-bandwidth regime the induced kernel has, to leading order, the anisotropic Mahalanobis geometry defined by M = I + pi^2 Q, where Q is the signless Laplacian of the entanglement graph, and that it admits a parameter-free Gaussian surrogate matching…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-29",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2603.17847",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.17847",
+  "title": "A Continuous-Variable Quantum Fourier Layer: Applications to Filtering and PDE Solving",
+  "authors": [
+    "Paolo Marcandelli",
+    "Stefano Mariani",
+    "Martina Siena",
+    "Stefano Markidis"
+  ],
+  "summary": "Fourier representations play a central role in operator learning methods for partial differential equations and are increasingly being explored in quantum machine learning architectures. The classical fast Fourier transform (FFT), particularly in its Cooley--Tukey decomposition, exhibits a structure that naturally matches continuous-variable quantum circuits. This correspondence establishes a direct structural isomorphism between the Cooley-Tukey butterfly network and Gaussian photonic gates, enabling the FFT to be realized as a native optical computation in continuous-variable quantum…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-18",
+  "updated": "2026-03-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

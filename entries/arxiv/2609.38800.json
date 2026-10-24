@@ -1,0 +1,22 @@
+{
+  "key": "2609.38800",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38800",
+  "title": "Breaking the Shot-Noise Barrier: Cached Recycled Variance-Reduced Gradients for Quantum Optimization",
+  "authors": [
+    "Lam M. Nguyen",
+    "Sumanta Mukherjee",
+    "Dzung T. Phan"
+  ],
+  "summary": "Variational Quantum Algorithms (VQAs) rely heavily on classical optimization routines to navigate high-dimensional, noisy parameter landscapes. However, the evaluation of analytical gradients via the parameter-shift rule requires $\\mathcal{O}(p)$ circuit executions, rendering this approach computationally prohibitive for deep circuits. While simultaneous perturbation methods provide an $\\mathcal{O}(1)$ alternative, their gradient estimates suffer from severe $\\mathcal{O}(p)$ spatial variance, which impedes convergence. To resolve this tension, we introduce the Cached Recycled…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.OC"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

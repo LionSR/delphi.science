@@ -1,0 +1,20 @@
+{
+  "key": "2604.25631",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.25631",
+  "title": "Local tensor-train surrogates for quantum learning models",
+  "authors": [
+    "Sreeraj Rajindran Nair",
+    "Christopher Ferrie"
+  ],
+  "summary": "A key bottleneck in quantum machine learning is the computational cost of repeated quantum circuit evaluations during the inference phase. To address this, we present a framework for constructing fast, cheap, provably accurate classical tensor-train surrogates of fully trained quantum machine learning models within local patches of their input data space. The approach combines Taylor polynomial approximation with a tensor-train (TT) representation and embeds it in a statistical learning paradigm via empirical risk minimization. In our analysis, the Taylor-TT construction serves as a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-28",
+  "updated": "2026-04-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

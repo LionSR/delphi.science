@@ -1,0 +1,19 @@
+{
+  "key": "2610.25657",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.25657",
+  "title": "Quantum State Search with Classical Interactive Advice",
+  "authors": [
+    "Mohammed Barhoush"
+  ],
+  "summary": "We study whether a quantum verifier can find a hidden quantum state by exchanging classical messages with an unbounded prover who knows the state. The verifier has access to a reflection oracle about the target. For a Haar-random $n$-qubit target, we prove that achieving constant average fidelity with the target requires $(q+1)^2(B+1)=Ω(2^n)$, where $q$ is the number of verifier queries and $B$ is the total prover-to-verifier communication. The bound allows arbitrary classical interaction and unrestricted computation between queries. Our proof extends the lower bound of Aaronson and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

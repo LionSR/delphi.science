@@ -1,0 +1,25 @@
+{
+  "key": "2609.14277",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.14277",
+  "title": "Parameter Estimation of Ringdown Quasinormal Modes with Autoencoder",
+  "authors": [
+    "Momoka Iida",
+    "Hayato Motohashi",
+    "Hirotaka Takahashi"
+  ],
+  "summary": "Ringdown gravitational waves from binary black hole mergers can be modeled as superpositions of quasinormal modes (QNMs), whose frequencies and excitation factors encode properties of the remnant Kerr black hole. Reliable extraction of multiple QNM components is challenging because of mode overlap and noise. We develop an autoencoder-based framework for multi-component QNM analysis, in which the latent space is trained to represent the physical parameters of individual modes, enabling waveform denoising and parameter estimation within a common framework. Using controlled model waveforms…",
+  "domain": "gr-qc",
+  "tags": [
+    "gr-qc",
+    "astro-ph.HE",
+    "astro-ph.IM",
+    "cs.LG",
+    "hep-th"
+  ],
+  "published": "2026-09-13",
+  "updated": "2026-09-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

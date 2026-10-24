@@ -1,0 +1,23 @@
+{
+  "key": "2609.03583",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.03583",
+  "title": "Optimizing Atom Transport, Gate-Count and Depth with Parity Twine",
+  "authors": [
+    "Javad Kazemi",
+    "Michael Fellner",
+    "Riccardo J. Valencia-Tortora",
+    "Michael Schuler",
+    "Wolfgang Lechner"
+  ],
+  "summary": "We present an efficient implementation of the Parity Architecture for neutral-atom quantum processors. We adapt Parity Twine Networks (PTNs) to different atom layouts, native entangling gates, and atom-shuttling capabilities. This provides a general framework for hardware-aware optimization of gate count, circuit depth, and atom transport for quantum circuits encoding arbitrary interaction graphs in a common basis. Specifically, we develop PTN constructions based on different native entangling-gate realizations, namely CZ, CZSWAP, and iSWAP, providing flexibility to accommodate different…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

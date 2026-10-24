@@ -1,0 +1,21 @@
+{
+  "key": "2604.23777",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23777",
+  "title": "Architecture-aware Unitary Synthesis",
+  "authors": [
+    "Frans Perkkola",
+    "Arianne Meijer-van de Griend",
+    "Jukka K. Nurminen"
+  ],
+  "summary": "We present a novel architecture-aware transpilation method for exact general unitary gate synthesis on superconducting quantum hardware. Our approach is tightly integrated with the optimized block-ZXZ decomposition, exploiting its recursive structure to make hardware-aware decisions at each level of the recursion rather than treating transpilation as an independent post-processing step. The method introduces three key techniques: a greedy qubit mapping strategy that minimizes pairwise distances between physical qubits, an adaptive Gray code selection combined with qubit swapping that…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-26",
+  "updated": "2026-07-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

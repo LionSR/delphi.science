@@ -1,0 +1,21 @@
+{
+  "key": "2601.13306",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.13306",
+  "title": "The table maker's quantum search",
+  "authors": [
+    "Benjamin C. A. Morrison",
+    "Stefanos Kourtis"
+  ],
+  "summary": "We show that quantum search can be used to compute the hardness to round an elementary function, that is, to determine the minimum working precision required to compute the values of an elementary function correctly rounded to a target precision of $n$ digits for all possible precision-$n$ floating-point inputs in a given interval. For elementary functions $f$ related to the exponential function, quantum search takes time $\\tilde O(2^{n/2} \\log (1/δ))$ to return, with probability $1-δ$, the hardness to round $f$ over all $n$-bit floating-point inputs in a given binade. For periodic…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.NA"
+  ],
+  "published": "2026-01-19",
+  "updated": "2026-06-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

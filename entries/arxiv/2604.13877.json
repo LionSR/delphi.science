@@ -1,0 +1,28 @@
+{
+  "key": "2604.13877",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.13877",
+  "title": "Scalable Quantum Molecular Generation via GPU-Accelerated Tensor-Network Simulation",
+  "authors": [
+    "Yu-Cheng Xiao",
+    "Jen-Yu Chang",
+    "Tzu-Ling Kuo",
+    "Aninda Astuti",
+    "Shu-Chi Wu",
+    "Ka-Lok Ng",
+    "Yun-Yuan Wang",
+    "Yu-Ze Chen",
+    "Nan-Yow Chen",
+    "Tai-Yu Li"
+  ],
+  "summary": "We propose Scalable Quantum Molecular Generation (SQMG), a variational quantum-circuit for sampling molecular graphs using chemical priors on atoms and bonds. SQMG assigns a fixed 3-qubit register to each heavy atom and reuses a single 2-qubit bond register to generate bonds sequentially, yielding an ''atom no-reuse, bond reuse'' architecture with linear qubit scaling. Measurement results are mapped to molecular graphs via lightweight classical decoding with structural constraints. In CUDA-Q, we benchmark the state-vector simulation (CPU/GPU) and the tensor-network simulation (GPU). At $N=8$…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-15",
+  "updated": "2026-04-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

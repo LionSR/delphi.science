@@ -1,0 +1,23 @@
+{
+  "key": "2605.23358",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.23358",
+  "title": "A Compilation Framework for Quantum Simulation of Non-unitary Dynamics",
+  "authors": [
+    "Qifan Huang",
+    "Minbo Gao",
+    "Li Zhou",
+    "Mingsheng Ying"
+  ],
+  "summary": "Most quantum compilers assume programs are reversible unitary circuits. This fits closed-system algorithms, but not open-system simulation, where the natural program objects are quantum channels describing non-unitary dynamics. We present a channel-first compilation framework that treats channels as first-class compilation objects. Our core IR, ChannelIR, represents channels explicitly in Kraus form, a standard channel representation, with Pauli-sum structure, enabling algebraic rewrites before circuit synthesis. We instantiate the framework with LindFront, a frontend that lowers…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.PL"
+  ],
+  "published": "2026-05-22",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2609.40339",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.40339",
+  "title": "The Single-Copy Quantum Bandit Is Classical: An Exact Spectral Collapse",
+  "authors": [
+    "Siu Hin Ng"
+  ],
+  "summary": "We study multi-armed bandits whose arms supply unknown quantum states and whose mean rewards are defined by a known effect $F$. Each fresh copy may be measured by an arbitrary, adaptively chosen POVM. We prove an exact collapse: the measured relative entropy from an arm state to its confusing reward half-space equals the classical Burnetas-Katehakis functional of $F$'s spectral statistics, and the spectral measurement of $F$ together with an explicit least-favorable state, built from the derivative of the matrix logarithm, forms a saddle point of the underlying measurement game.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

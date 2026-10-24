@@ -1,0 +1,28 @@
+{
+  "key": "2610.28231",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.28231",
+  "title": "Dynamical Mean-Field Theory for Real Materials using Variational Quantum Compressed Time Evolution on a Quantum Computer",
+  "authors": [
+    "Stefan Wolf",
+    "Johannes Selisko",
+    "Timo Eckstein",
+    "Ludwig Nützel",
+    "Maximilian Amsler",
+    "Christopher Wever",
+    "Georgy Samsonidze",
+    "Thomas Eckl",
+    "Michael J. Hartmann"
+  ],
+  "summary": "We design a hybrid quantum-classical computational workflow, combining density functional theory and dynamical mean-field theory, to investigate the electronic properties of CaCuO2, a parent structure of high-temperature cuprate superconductors. Our approach uses a quantum algorithm as an impurity solver that is based on variational quantum compressed time evolution to compute the time-dependent Greens function on an IBM Heron quantum device. Utilizing error mitigation techniques and a Lehmann representation fitting procedure, we extract the density of states from the signal in the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.str-el"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2607.02987",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.02987",
+  "title": "Time-dependent multiparameter estimation for quantum experiments via online-offline sequential Monte-Carlo method",
+  "authors": [
+    "Chattamas Manoworakul",
+    "Jason F. Ralph",
+    "Nattaphong Wonglakhon",
+    "Areeya Chantasri"
+  ],
+  "summary": "While typical online estimation methods can estimate the multiparameter dynamics of many systems, they may not be sufficient for a system with highly noisy measurement and rapid detection rate. In this paper, we create a hybrid estimation method by augmenting the sequential Monte Carlo (SMC) sampler, an online estimation method with an offline technique known as the time-batch estimation technique. By continuously monitoring the system, we may divide signals into batches and average them into an averaged trajectory. The system dynamics is then evolved with batch-averaged Kraus maps, for…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-03",
+  "updated": "2026-07-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

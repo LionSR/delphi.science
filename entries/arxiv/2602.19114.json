@@ -1,0 +1,28 @@
+{
+  "key": "2602.19114",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.19114",
+  "title": "Kaiwu-PyTorch-Plugin: Bridging Deep Learning and Photonic Quantum Computing for Energy-Based Models and Active Sample Selection",
+  "authors": [
+    "Hongdong Zhu",
+    "Qi Gao",
+    "Yin Ma",
+    "Shaobo Chen",
+    "Haixu Liu",
+    "Fengao Wang",
+    "Tinglan Wang",
+    "Chang Wu",
+    "Kai Wen"
+  ],
+  "summary": "This paper introduces the Kaiwu-PyTorch-Plugin (KPP) to bridge Deep Learning and Photonic Quantum Computing across multiple dimensions. KPP integrates the Coherent Ising Machine into the PyTorch ecosystem, addressing classical inefficiencies in Energy-Based Models. The framework facilitates quantum integration in three key aspects: accelerating Boltzmann sampling, optimizing training data via Active Sampling, and constructing hybrid architectures like QBM-VAE and Q-Diffusion. Empirical results on single-cell and OpenWebText datasets demonstrate KPPs ability to achieve SOTA performance,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI"
+  ],
+  "published": "2026-02-22",
+  "updated": "2026-02-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

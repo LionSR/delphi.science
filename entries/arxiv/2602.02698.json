@@ -1,0 +1,26 @@
+{
+  "key": "2602.02698",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.02698",
+  "title": "Compiling Quantum Regular Language States",
+  "authors": [
+    "Armando Bellante",
+    "Reinis Irmejs",
+    "Marta Florido-Llinàs",
+    "María Cea Fernández",
+    "Marianna Crupi",
+    "Matthew Kiser",
+    "J. Ignacio Cirac"
+  ],
+  "summary": "State preparation compilers for quantum computers typically sit at two extremes: general-purpose routines that treat the target as an opaque amplitude vector, and bespoke constructions for a handful of well-known state families. We ask whether a compiler can instead accept simple, structure-aware specifications while providing predictable resource guarantees. We answer this by designing and implementing a quantum state-preparation compiler for regular language states (RLS): uniform superpositions over bitstrings accepted by a regular description, and their complements. Users describe the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.FL"
+  ],
+  "published": "2026-02-02",
+  "updated": "2026-02-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

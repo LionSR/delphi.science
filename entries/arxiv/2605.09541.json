@@ -1,0 +1,24 @@
+{
+  "key": "2605.09541",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09541",
+  "title": "An Algorithm for the Symbolic Reduction of Multi-loop Feynman Integrals via Generating Functions",
+  "authors": [
+    "Bo Feng",
+    "Xiang Li",
+    "Yuanche Liu",
+    "Yanqing Ma",
+    "Yang Zhang"
+  ],
+  "summary": "We develop a generating-function formulation for the symbolic reduction of multi-loop Feynman integrals. In this framework, integration-by-parts identities are rewritten as differential equations for sector-wise generating functions, so the reduction problem can be studied in a non-commutative algebra of differential operators rather than only through relations among individual integrals. This viewpoint leads to an iterative algorithm that generates candidate equations, extracts symbolic reduction rules, updates the active rule set, and tests completeness on the lattice of integral indices.…",
+  "domain": "hep-ph",
+  "tags": [
+    "hep-ph",
+    "hep-th"
+  ],
+  "published": "2026-05-10",
+  "updated": "2026-05-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

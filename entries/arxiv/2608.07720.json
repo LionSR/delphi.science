@@ -1,0 +1,20 @@
+{
+  "key": "2608.07720",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.07720",
+  "title": "Randomized product formulas beyond optimal deterministic scaling",
+  "authors": [
+    "Leeseok Kim",
+    "Luis Pedro García-Pintos"
+  ],
+  "summary": "Product formulas, also known as Trotter formulas, are among the most widely used and practical methods for simulating quantum systems on quantum computers. Here we introduce two new classes of randomized product formulas for simulating Hamiltonians with separated energy scales, $H=A+αB$, where $α$ is small. In the standard access model, where one can implement exponentials of $A$ and $B$ separately, our randomized formulas achieve $\\mathcal O(α^2)$ error scaling at the cost of only doubling the gate depth of the corresponding deterministic formula. We further prove an $Ω(α)$ lower bound for…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

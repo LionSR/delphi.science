@@ -1,0 +1,24 @@
+{
+  "key": "2608.18065",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.18065",
+  "title": "Quantum Geometric Tensor Preconditioning for Stable Training of Recurrent Neural Quantum States",
+  "authors": [
+    "Adil Attar",
+    "Amine M. Aboussalah",
+    "Mohamed Hibat-Allah"
+  ],
+  "summary": "Neural Quantum States (NQS) provide a powerful neural network-based variational framework for representing many-body wave functions and solving for ground states. Recurrent Neural Networks (RNNs) are particularly promising owing to their relatively low computational cost and their autoregressive property, which enables perfect sampling. Recently, RNNs have been reported to be unstable under curvature-based optimizers such as the minimum-step stochastic reconfiguration (minSR) method. In this paper, we address this perceived limitation and show that minSR can be stabilized through simple…",
+  "domain": "cond-mat.dis-nn",
+  "tags": [
+    "cond-mat.dis-nn",
+    "cond-mat.str-el",
+    "physics.comp-ph",
+    "quant-ph"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

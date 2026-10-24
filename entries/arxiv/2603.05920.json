@@ -1,0 +1,22 @@
+{
+  "key": "2603.05920",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.05920",
+  "title": "Classical simulability of quantum circuits followed by sparse classical post-processing",
+  "authors": [
+    "Yasuhiro Takahashi",
+    "Masayuki Miyamoto",
+    "Noboru Kunihiro"
+  ],
+  "summary": "We study the classical simulability of a polynomial-size quantum circuit $C_n$ on $n$ qubits followed by sparse classical post-processing (SCP) on $m$ bits, where $m \\leq n \\leq {\\rm poly}(m)$. The SCP is described by a non-zero Boolean function $f_m$ that is classically computable in polynomial time and is sparse, i.e., has a peaked Fourier spectrum. First, we provide a necessary and sufficient condition on $C_n$ such that, for any SCP $f_m$, $C_n$ followed by $f_m$ is classically simulable. This characterization extends the result of Van den Nest and implies that various quantum circuits…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-03-06",
+  "updated": "2026-03-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

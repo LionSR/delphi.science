@@ -1,0 +1,23 @@
+{
+  "key": "2610.02757",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02757",
+  "title": "Design Automation for Gray-Code Quantum Read-Only Memory",
+  "authors": [
+    "Hao-Yu Lu",
+    "Yu-Ting Kao",
+    "Yeong-Jar Chang",
+    "Chao-Hung Wang",
+    "Darsen D. Lu"
+  ],
+  "summary": "We propose a programmable quantum read-only memory based on Gray code encoding, termed GQROM, designed to efficiently load classical data into quantum circuits. This architecture mitigates critical bottlenecks in near-term quantum computing by reducing initialization overhead and gate-induced errors. By utilizing Gray code, in which consecutive addresses differ by only a single bit, GQROM minimizes state transition complexity. We demonstrate the architecture's flexibility in accessing targeted data through initial-state modification. The entire design, including a systematic EDA flow, was…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

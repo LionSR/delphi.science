@@ -1,0 +1,23 @@
+{
+  "key": "2609.28233",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.28233",
+  "title": "Certifying fermionic Gaussian states (and a little more) with optimal precision dependence",
+  "authors": [
+    "Ninnat Dangniam",
+    "Laphas Premcharoen",
+    "Metrasit Sripech",
+    "Thiparat Chotibut"
+  ],
+  "summary": "Fermionic Gaussian states are the workhorse reference states for qubit-based quantum simulation of fermionic systems, yet existing certification protocols either proceed via fidelity estimation, leading to suboptimal sample complexity in the target precision $ε$, only apply to Haar-typical states, or require adaptive measurements on a large fraction of qubits. We give an adaptive protocol that certifies any $d$-mode pure fermionic Gaussian state using $O(d^2ε^{-1})$ copies, single-qubit measurements with only one qubit measured adaptively per copy, and $O(d^3)$ classical processing time per…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.stat-mech"
+  ],
+  "published": "2026-09-23",
+  "updated": "2026-09-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

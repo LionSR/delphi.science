@@ -1,0 +1,24 @@
+{
+  "key": "2608.11569",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.11569",
+  "title": "Improved quantum sampling methods for molecular simulations",
+  "authors": [
+    "Connor van Rossum",
+    "Jeffery Cohn",
+    "Sally Shrapnel",
+    "Riddhi Gupta"
+  ],
+  "summary": "Quantum-selected configuration interaction (QSCI) methods use a quantum computer to identify dominant electronic configurations in the molecular ground state, while a classical computer diagonalizes the Hamiltonian within the reduced subspace spanned by those configurations. Sample-based quantum diagonalization (SQD), a leading QSCI approach, uses iterative classical post-processing to correct noisy quantum measurement to ensure that the corresponding configurations remain physically sensible. In this work, we show that SQD performance can be strongly influenced by uncontrolled growth of the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.chem-ph",
+    "physics.comp-ph"
+  ],
+  "published": "2026-08-12",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

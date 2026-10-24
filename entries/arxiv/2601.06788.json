@@ -1,0 +1,28 @@
+{
+  "key": "2601.06788",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.06788",
+  "title": "Artificial Entanglement in the Fine-Tuning of Large Language Models",
+  "authors": [
+    "Min Chen",
+    "Zihan Wang",
+    "Canyu Chen",
+    "Zeguan Wu",
+    "Manling Li",
+    "Junyu Liu"
+  ],
+  "summary": "Large language models (LLMs) can be adapted to new tasks using parameter-efficient fine-tuning (PEFT) methods that modify only a small number of trainable parameters, often through low-rank updates. In this work, we adopt a quantum-information-inspired perspective to understand their effectiveness. From this perspective, low-rank parameterizations naturally correspond to low-dimensional Matrix Product States (MPS) representations, which enable entanglement-based characterizations of parameter structure. Thereby, we term and measure \"Artificial Entanglement\", defined as the entanglement…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "hep-th",
+    "quant-ph",
+    "stat.ML"
+  ],
+  "published": "2026-01-11",
+  "updated": "2026-01-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

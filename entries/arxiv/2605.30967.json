@@ -1,0 +1,23 @@
+{
+  "key": "2605.30967",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.30967",
+  "title": "Evaluating higher-order product formulae for molecular ground-state energy estimation",
+  "authors": [
+    "Hiromu Abe",
+    "Keita Kanno",
+    "Ryosuke Kimura",
+    "Masahiko Kamoshita",
+    "Kosuke Mitarai"
+  ],
+  "summary": "We evaluate deterministic higher-order product formulae for molecular ground-state energy estimation. Motivated by recent fault-tolerant architectures in which non-Clifford operations may be generated more locally and cheaply than in conventional assumptions, we re-examine such formulae as practical candidates for quantum chemistry. Using one-dimensional hydrogen chains from $\\mathrm{H}_2$ to $\\mathrm{H}_{15}$ as benchmarks, we estimate both the total gate count and the depth of $R_Z$-rotation layers required to reach a target energy error. To make this comparison feasible at larger system…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

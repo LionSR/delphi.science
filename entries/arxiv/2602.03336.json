@@ -1,0 +1,24 @@
+{
+  "key": "2602.03336",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.03336",
+  "title": "Even More Efficient Soft-Output Decoding with Extra-Cluster Growth and Early Stopping",
+  "authors": [
+    "Kaito Kishi",
+    "Riki Toshio",
+    "Jun Fujisaki",
+    "Hirotaka Oshima",
+    "Shintaro Sato",
+    "Keisuke Fujii"
+  ],
+  "summary": "In fault-tolerant quantum computing, soft outputs from real-time decoders play a crucial role in improving decoding accuracy, post-selecting magic states, and accelerating lattice surgery. A recent paper by Meister et al. [arXiv:2405.07433 (2024)] proposed an efficient method to evaluate soft outputs for cluster-based decoders, including the Union-Find (UF) decoder. However, in parallel computing environments, its computational complexity is comparable to or even surpasses that of the UF decoder itself, resulting in a substantial overhead. Furthermore, this method requires global information…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-03",
+  "updated": "2026-02-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

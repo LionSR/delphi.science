@@ -1,0 +1,20 @@
+{
+  "key": "2601.18164",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.18164",
+  "title": "Quantum Recurrent Unit: A Parameter-Efficient Quantum Neural Network Architecture for NISQ Devices",
+  "authors": [
+    "Tzong-Daw Wu",
+    "Hsi-Sheng Goan"
+  ],
+  "summary": "The rapid growth of modern machine learning (ML) models presents fundamental challenges in parameter efficiency and computational resource requirements. This study introduces the Quantum Recurrent Unit (QRU), a novel quantum neural network (NN) architecture specifically designed to address these challenges while remaining compatible with Noisy Intermediate-Scale Quantum (NISQ) devices. QRU leverages quantum controlled-SWAP (C-SWAP; Fredkin) gates to implement an information selection mechanism inspired by classical Gated Recurrent Units (GRUs), enabling selective processing of temporal…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-26",
+  "updated": "2026-01-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2604.07896",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.07896",
+  "title": "Non-variational supervised quantum kernel methods: a review",
+  "authors": [
+    "John Tanner",
+    "Chon-Fai Kam",
+    "Jingbo Wang"
+  ],
+  "summary": "Quantum kernel methods (QKMs) have emerged as a prominent framework for supervised quantum machine learning. Unlike variational quantum algorithms, which rely on gradient-based optimisation and may suffer from issues such as barren plateaus, non-variational QKMs employ fixed quantum feature maps, with model selection performed classically via convex optimisation and cross-validation. This separation of quantum feature embedding from classical training ensures stable optimisation while leveraging quantum circuits to encode data in high-dimensional Hilbert spaces. In this review, we provide a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-04-09",
+  "updated": "2026-04-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

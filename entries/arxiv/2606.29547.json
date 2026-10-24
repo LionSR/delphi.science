@@ -1,0 +1,23 @@
+{
+  "key": "2606.29547",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.29547",
+  "title": "Quantum simulation of molecular excited-state manifolds and energies using the TEPID-ADAPT-VQE algorithm",
+  "authors": [
+    "Jason Saroni",
+    "Bharath Sambasivam",
+    "Ayush Asthana",
+    "Edwin Barnes"
+  ],
+  "summary": "The simulation of molecular excited states is a key challenge in quantum chemistry and a promising application for quantum computing. In this work, we investigate the efficacy of the truncated eigenvalue parametrized initial density adaptive variational algorithm (TEPID-ADAPT-VQE) for computing low-lying excited states and potential energy surfaces. TEPID-ADAPT variationally diagonalizes a truncated low-temperature Gibbs state, enabling the simultaneous preparation of multiple excited states within a single optimization. We apply the method to H$_2$, LiH, and linear H$_4$ across bond lengths…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.chem-ph"
+  ],
+  "published": "2026-06-28",
+  "updated": "2026-06-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2610.06620",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06620",
+  "title": "Quantum Krylov Linear Solving Beyond Global Conditioning via Spectral Compression and Directional Stability",
+  "authors": [
+    "Sijia Yu",
+    "Yifan Zhou"
+  ],
+  "summary": "Global condition-number dependence can substantially overestimate the difficulty of preparing normalized quantum linear-system solutions. Many existing beyond-conditioning approaches are favorable when globally ill-conditioned directions have limited relevance to the target solution. Here we study a harder regime for time-evolution quantum Krylov linear solving (QKS), where a vanishing eigenvalue remains solution-relevant and must be retained. We identify a QKS regime in which the solution-relevant spectrum is compressed into a compact reduced space where the ill-conditioning is concentrated…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

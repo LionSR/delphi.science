@@ -1,0 +1,23 @@
+{
+  "key": "2601.02870",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.02870",
+  "title": "Quantum-Enhanced Neural Contextual Bandit Algorithms",
+  "authors": [
+    "Yuqi Huang",
+    "Vincent Y. F Tan",
+    "Sharu Theresa Jose"
+  ],
+  "summary": "Stochastic contextual bandits are fundamental for sequential decision-making but pose significant challenges for existing neural network-based algorithms, particularly when scaling to quantum neural networks (QNNs) due to issues such as massive over-parameterization, computational instability, and the barren plateau phenomenon. This paper introduces the Quantum Neural Tangent Kernel-Upper Confidence Bound (QNTK-UCB) algorithm, a novel algorithm that leverages the Quantum Neural Tangent Kernel (QNTK) to address these limitations. By freezing the QNN at a random initialization and utilizing…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.IT",
+    "quant-ph"
+  ],
+  "published": "2026-01-06",
+  "updated": "2026-01-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

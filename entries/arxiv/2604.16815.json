@@ -1,0 +1,26 @@
+{
+  "key": "2604.16815",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.16815",
+  "title": "Scalable Quantum Error Mitigation with Physically Informed Graph Neural Networks",
+  "authors": [
+    "Huaxin Wang",
+    "Xinge Wu",
+    "Jiajun Liu",
+    "Ruiqing He",
+    "Jiandong Shang",
+    "Hengliang Guo",
+    "Qiang Chen"
+  ],
+  "summary": "Quantum error mitigation (QEM) provides a practical route for estimating reliable observables on noisy intermediate-scale quantum (NISQ) devices. Traditional QEM strategies, including zero-noise extrapolation (ZNE) and Clifford data regression (CDR), rely on noise scaling or global regression, and their performance is constrained by the exponential growth of the system degrees of freedom. We construct a graph-enhanced mitigation (GEM) framework, which incorporates physical information into the model representation. In this work, quantum circuits are encoded as attributed graphs.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-04-18",
+  "updated": "2026-04-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

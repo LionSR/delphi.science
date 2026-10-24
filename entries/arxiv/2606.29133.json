@@ -1,0 +1,23 @@
+{
+  "key": "2606.29133",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.29133",
+  "title": "Shadow tomography for classical tensor network simulations",
+  "authors": [
+    "Jiace Sun",
+    "Garnet Kin-Lic Chan"
+  ],
+  "summary": "Shadow tomography has appeared as a powerful tool for estimating observables on quantum computers from a small number of samples. We show that shadow-tomography-inspired ideas can offer similarly improved sample scaling for estimating observables on tensor network states on classical computers after proper adaptation. We develop strategies for both spin (bosonic) and fermionic systems, tailored to the contraction requirements of tensor networks, and generate scaling improvements of factors of $O(N)$ to $O(N^{3})$ (where $N$ is system size), depending on the specific task and system type. For…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.str-el",
+    "physics.chem-ph",
+    "physics.comp-ph"
+  ],
+  "published": "2026-06-28",
+  "updated": "2026-06-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

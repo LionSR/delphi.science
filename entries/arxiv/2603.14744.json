@@ -1,0 +1,26 @@
+{
+  "key": "2603.14744",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.14744",
+  "title": "Towards Exponential Quantum Improvements in Solving Cardinality-Constrained Binary Optimization",
+  "authors": [
+    "Haomu Yuan",
+    "Hanqing Wu",
+    "Kuan-Cheng Chen",
+    "Bin Cheng",
+    "Crispin H. W. Barnes"
+  ],
+  "summary": "Cardinality-constrained binary optimization is a fundamental computational primitive with broad applications in machine learning, finance, and scientific computing. In this work, we introduce a Grover-based quantum algorithm that exploits the structure of the fixed-cardinality feasible subspace under a natural promise on solution existence. For quadratic objectives, our approach achieves ${O}\\left(\\sqrt{\\frac{\\binom{n}{k}}{M}}\\right)$ Grover rotations for any fixed cardinality $k$ and degeneracy of the optima $M$, yielding an exponential reduction in the number of Grover iterations compared…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "math.OC",
+    "math.ST"
+  ],
+  "published": "2026-03-16",
+  "updated": "2026-03-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

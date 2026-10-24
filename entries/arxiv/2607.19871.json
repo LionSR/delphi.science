@@ -1,0 +1,22 @@
+{
+  "key": "2607.19871",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.19871",
+  "title": "A reduction scheme for general-order Ising-like Hamiltonians in quantum heuristic solvers",
+  "authors": [
+    "Chengsi Mao",
+    "Pavel Mosharev",
+    "Yao Wang",
+    "Man-Hong Yung"
+  ],
+  "summary": "The Ising model is ubiquitous in various optimization problems but notoriously difficult to solve due to combinatorial explosion. In view of this, Hamiltonian reduction is a useful preprocessing technique for reducing the effective problem size before applying heuristic solvers. However, existing reduction techniques mainly target second-order Ising models, whereas many pseudo-Boolean formulations naturally contain higher-order interactions. In this work, we generalize the concept of non-separable groups to arbitrary-order Ising-like models and develop a Hamiltonian reduction framework that…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-22",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

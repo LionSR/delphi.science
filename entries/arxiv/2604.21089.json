@@ -1,0 +1,22 @@
+{
+  "key": "2604.21089",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.21089",
+  "title": "A rigorous quasipolynomial-time classical algorithm for SYK thermal expectations",
+  "authors": [
+    "Alexander Zlokapa"
+  ],
+  "summary": "Estimating local observables in Gibbs states is a central problem in quantum simulation. While this task is BQP-complete at asymptotically low temperatures, the possibility of quantum advantage at constant temperature remains open. The Sachdev-Ye-Kitaev (SYK) model is a natural candidate: at any constant temperature, its Gibbs states have polynomial quantum circuit complexity and are not described by Gaussian states. Rigorous analyses of the SYK model are difficult due to the failure of known techniques using random matrix theory, cluster expansions, and rigorous formulations of the quantum…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.dis-nn",
+    "cs.DS",
+    "math-ph"
+  ],
+  "published": "2026-04-22",
+  "updated": "2026-04-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

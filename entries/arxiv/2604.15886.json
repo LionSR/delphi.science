@@ -1,0 +1,22 @@
+{
+  "key": "2604.15886",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.15886",
+  "title": "Asymptotic optimality of Grover-Radhakrishnan-Korepin algorithm",
+  "authors": [
+    "Kun Zhang",
+    "Kang-Yuan Chen",
+    "Xiao-Hui Wang",
+    "Vladimir Korepin"
+  ],
+  "summary": "Grover's algorithm is a cornerstone of quantum algorithms and is strictly optimal in oracle-query complexity. While the full search problem admits no further improvement, one may trade accuracy for speed in the partial search problem, where the task is to identify only the block containing the target item. The best known quantum algorithm for the partial search problem is the Grover-Radhakrishnan-Korepin (GRK) algorithm, whose optimality has long been conjectured but not proved. In this work, we prove the optimality of GRK in the large-block limit. We formulate partial search as a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-17",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

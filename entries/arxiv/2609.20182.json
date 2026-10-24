@@ -1,0 +1,21 @@
+{
+  "key": "2609.20182",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20182",
+  "title": "QECirc: A Community-Driven, FAIR Library of Quantum Error Correction Circuits",
+  "authors": [
+    "Ludwig Schmid",
+    "Tom Peham",
+    "Robert Wille"
+  ],
+  "summary": "Quantum error correction (QEC) underpins fault-tolerant quantum computing, but the circuits that realize QEC codes (encoders, logical state-preparation and gate routines, and syndrome-extraction schedules) are scattered across papers and one-off repositories in incompatible formats, often documented too sparsely to reconstruct or reuse. We present QECirc (https://qecirc.com/), a community-driven, open library that makes QEC circuits Findable, Accessible, Interoperable, and Reusable (FAIR). Each entry links to its underlying code, ships in Stim and OpenQASM with interactive visualizations,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

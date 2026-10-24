@@ -1,0 +1,23 @@
+{
+  "key": "2602.07483",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.07483",
+  "title": "Recursive QAOA for Interference-Aware Resource Allocation in Wireless Networks",
+  "authors": [
+    "Kuan-Cheng Chen",
+    "Hiromichi Matsuyama",
+    "Wei-hao Huang",
+    "Yu Yamashiro"
+  ],
+  "summary": "Discrete radio resource management problems in dense wireless networks are naturally cast as quadratic unconstrained binary optimization (QUBO) programs but are difficult to solve at scale. We investigate a quantum-classical approach based on the Recursive Quantum Approximate Optimization Algorithm (RQAOA), which interleaves shallow QAOA layers with variable elimination guided by measured single- and two-qubit correlators. For interference-aware channel assignment, we give a compact QUBO/Ising formulation in which pairwise interference induces same-channel couplings and one-hot constraints…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DC"
+  ],
+  "published": "2026-02-07",
+  "updated": "2026-02-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

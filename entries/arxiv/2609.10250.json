@@ -1,0 +1,24 @@
+{
+  "key": "2609.10250",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10250",
+  "title": "An analysis of iterative refinement for quantum linear system solvers",
+  "authors": [
+    "Adrian Harkness",
+    "Mohammadhossein Mohammadisiahroudi",
+    "Brandon Augustino",
+    "Giacomo Nannicini",
+    "Tamás Terlaky"
+  ],
+  "summary": "We present and analyze an iterative refinement (IR) framework for improving the precision dependence of algorithms that combine a quantum linear system algorithm (QLSA) with quantum state tomography. Existing QLSAs achieve polylogarithmic dependence on the inverse error tolerance to prepare a quantum state encoding the solution, but extracting a classical description of such a state via tomography typically introduces a polynomial dependence on the target precision. To retain polylogarithmic dependence in the inverse error tolerance throughout the entire process, we develop an IR scheme that…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.NA"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

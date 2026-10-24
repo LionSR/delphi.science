@@ -1,0 +1,25 @@
+{
+  "key": "2604.01279",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.01279",
+  "title": "Sven: Singular Value Descent as a Computationally Efficient Natural Gradient Method",
+  "authors": [
+    "Samuel Bright-Thonney",
+    "Thomas R. Harvey",
+    "Andre Lukas",
+    "Jesse Thaler"
+  ],
+  "summary": "We introduce Sven (Singular Value dEsceNt), a new optimization algorithm for neural networks that exploits the natural decomposition of loss functions into a sum over individual data points, rather than reducing the full loss to a single scalar before computing a parameter update. Sven treats each data point's residual as a separate condition to be satisfied simultaneously, using the Moore-Penrose pseudoinverse of the loss Jacobian to find the minimum-norm parameter update that best satisfies all conditions at once. In practice, this pseudoinverse is approximated via a truncated singular…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "hep-th",
+    "math.OC"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

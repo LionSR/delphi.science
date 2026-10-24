@@ -1,0 +1,27 @@
+{
+  "key": "2607.29145",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.29145",
+  "title": "Transpiler Autotuning with Predictive Models for Quantum Circuit Optimization",
+  "authors": [
+    "Piotr Malkowski",
+    "Domenik Eichhorn",
+    "Joshua Ammermann",
+    "Rinor Kelmendi",
+    "Nick Poser",
+    "Patrick Hopf",
+    "Ina Schaefer"
+  ],
+  "summary": "Quantum software engineering is an emerging research field focusing on efficiently embedding the quantum programming paradigm into existing software ecosystems. A key aspect of this field is the realization of quantum algorithms using gate-based programming and the subsequent low-level optimization of the resulting quantum circuits, a process that is commonly performed by so-called transpilation pipelines. One significant challenge in these pipelines is determining which optimizations to apply to a given circuit. This decision is usually based on fixed default configurations that are…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG",
+    "cs.SE"
+  ],
+  "published": "2026-07-31",
+  "updated": "2026-07-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

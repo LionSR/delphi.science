@@ -1,0 +1,25 @@
+{
+  "key": "2604.14381",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.14381",
+  "title": "Learning Cut Distributions with Quantum Optimization",
+  "authors": [
+    "Bao Bach",
+    "Cameron Ibrahim",
+    "Reuben Tate",
+    "Jad Salem",
+    "Stephan Eidenbenz",
+    "Ilya Safro"
+  ],
+  "summary": "Many combinatorial optimization problems admit a maximin fairness variant, where the aim is to find a distribution over possible solutions which maximizes an expected worst-case outcome. However, the support for an optimal distribution may be exponential, which can be intractable to represent in the worst case. To this end, we propose a quantum based approach to solving distribution optimization problems. Expanding on work analyzing the Dynamical Lie Algebras of the Quantum Approximate Optimization Algorithm (QAOA), we show that with a finite number of layers, a QAOA ansatz can be…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.CO"
+  ],
+  "published": "2026-04-15",
+  "updated": "2026-04-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

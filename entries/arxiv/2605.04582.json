@@ -1,0 +1,23 @@
+{
+  "key": "2605.04582",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04582",
+  "title": "Fundamental Limitations of Post-Quantum Cryptographic Architectures",
+  "authors": [
+    "Jiho Jung",
+    "Donghwa Ji",
+    "Mingyu Lee",
+    "Kabgyun Jeong"
+  ],
+  "summary": "Modern lattice-based cryptography, particularly the learning with errors paradigm, relies on injecting artificial noise to secure data against quantum adversaries. This study systematically examines the theoretical and physical boundaries of this noise-reliant model across four interconnected domains: computational complexity, information-theoretic thermodynamics, quantum error correction, and quantum learning theory. Starting from the algorithmic foundation, our analysis notes that these frameworks rely on provisional complexity-theoretic assumptions that remain vulnerable to future quantum…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

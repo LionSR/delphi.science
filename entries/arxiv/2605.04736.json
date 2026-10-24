@@ -1,0 +1,26 @@
+{
+  "key": "2605.04736",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04736",
+  "title": "Neural-powered unit disk graph embedding: qubits connectivity for some QUBO problems",
+  "authors": [
+    "Chiara Vercellino",
+    "Paolo Viviani",
+    "Giacomo Vitali",
+    "Alberto Scionti",
+    "Andrea Scarabosio",
+    "Olivier Terzo",
+    "Edoardo Giusto",
+    "Bartolomeo Montrucchio"
+  ],
+  "summary": "Graph embedding is a recurrent problem in quantum computing, for instance, quantum annealers need to solve a minor graph embedding in order to map a given Quadratic Unconstrained Binary Optimization (QUBO) problem onto their internal connectivity pattern. This work presents a novel approach to constrained unit disk graph embedding, which is encountered when trying to solve combinatorial optimization problems in QUBO form, using quantum hardware based on neutral Rydberg atoms. The qubits, physically represented by the atoms, are excited to the Rydberg state through laser pulses. Whenever…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

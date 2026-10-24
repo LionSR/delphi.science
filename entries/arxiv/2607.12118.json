@@ -1,0 +1,27 @@
+{
+  "key": "2607.12118",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12118",
+  "title": "Error correction on an array of superconducting qubits with defective components",
+  "authors": [
+    "Julien M. Drouet",
+    "Xanda C. Kolesnikow",
+    "Campbell K. McLauchlan",
+    "Georgia M. Nixon",
+    "Seok-Hyung Lee",
+    "Dominic J. Williamson",
+    "Stephen D. Bartlett",
+    "Benjamin J. Brown",
+    "Robin Harper"
+  ],
+  "summary": "A solid-state quantum-computing architecture will require the fabrication of arrays of many coupled qubits. It is inevitable that this process will produce qubits and couplers with varying performance, with some components underperforming due to imperfect fabrication. Quantum error-correction requires high-performing components and hence these defects must be dealt with, either by adapting the code to exclude the defects, or by informing the decoder to accommodate defects in post-processing. Here we implement and compare strategies to operate distance-5 surface codes on a quantum processor…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

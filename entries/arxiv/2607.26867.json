@@ -1,0 +1,22 @@
+{
+  "key": "2607.26867",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.26867",
+  "title": "Analytical Series Expansion for Efficient Gradient Evaluation in Multi-Qubit Optimal Control",
+  "authors": [
+    "Ashutosh Mishra",
+    "Elena Lupo",
+    "Frank K. Wilhelm",
+    "Alessandro Ciani"
+  ],
+  "summary": "Gradient-based quantum optimal control and the theory of operator evolution are rarely discussed together. In this Letter, we bridge this gap by showing that the gradient of the time-evolved propagator involves the Heisenberg evolution of local operators. We present a unifying framework by deriving from first principles the formal solution for the gradient under an arbitrary pulse parameterization, and show that the same construction extends to derivatives of any order. We obtain a series of nested, time-independent commutators weighted by time-dependent scalar coefficients. The commutators…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

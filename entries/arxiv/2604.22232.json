@@ -1,0 +1,23 @@
+{
+  "key": "2604.22232",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.22232",
+  "title": "A Simulation Framework for Noise and Error-Correction Analysis in Device-Independent Quantum Key Distribution",
+  "authors": [
+    "Nguyen Duong Hoang Duy",
+    "Nguyen Trinh Dong",
+    "Vu Tuan Hai",
+    "Le Vu Trung Duong",
+    "Nguyen Van Tinh"
+  ],
+  "summary": "Device-Independent Quantum Key Distribution (DIQKD) certifies security from the violation of a Bell inequality alone, but its practical margin against noise is narrow and is usually quoted only through the Bell violation itself. We build a simulator of the event-ready DIQKD experiment and use it to trace readout noise through the Bell test into classical post-processing. For a symmetric outcome-flip channel of strength $e$, we reproduce the simulated violation window e<5.86%, to within $0.11$ percentage points. Combining these with a multi-pass Cascade reconciliation and the Devetak-Winter…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-24",
+  "updated": "2026-09-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

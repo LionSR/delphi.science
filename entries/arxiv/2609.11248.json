@@ -1,0 +1,25 @@
+{
+  "key": "2609.11248",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11248",
+  "title": "Generative Replay Mitigates Sample Starvation in Quantum Architecture Search",
+  "authors": [
+    "Akash Kundu",
+    "Amit Kumar Jaiswal",
+    "Sebastian Feld",
+    "Prayag Tiwari"
+  ],
+  "summary": "Reinforcement learning (RL) can automate quantum architecture search, but its scalability is limited when useful circuit trajectories become rare in the rapidly expanding search space. Existing replay mechanisms reuse observed transitions; the proposed learned model produces additional predicted one step transitions from real state-action seeds. Here we introduce GenQAS, a tensor network-guided RL framework that combines a fixed matrix product state warm-start with prioritized generative replay. A learned local transition model generates synthetic circuit transitions on demand and mixes them…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI",
+    "cs.ET",
+    "cs.LG"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

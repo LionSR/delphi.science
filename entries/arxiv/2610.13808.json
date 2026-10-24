@@ -1,0 +1,25 @@
+{
+  "key": "2610.13808",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.13808",
+  "title": "Diversity-Aware Ensemble of Quantum-Classical Models via Combinatorial Fusion",
+  "authors": [
+    "Jingyan Xu",
+    "Yuanhong Wu",
+    "Samuel Yen-Chi Chen",
+    "Sean Patten",
+    "Christina Schweikert",
+    "D. Frank Hsu"
+  ],
+  "summary": "Variational quantum circuits (VQCs) are highly sensitive to circuit architecture, yet most quantum machine learning pipelines select a single best design and discard the remaining candidates. This paper addresses whether the structural diversity across quantum circuit search spaces can be used to produce stronger predictions through model fusion. We apply Combinatorial Fusion Analysis (CFA), a model fusion framework that selects and combines multiple scoring systems using rank-score function (RSF) and cognitive diversity (CD), to a pool of 29 architecturally diverse classical models and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

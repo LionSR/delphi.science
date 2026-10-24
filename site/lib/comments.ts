@@ -2,7 +2,7 @@
 // Other records a comment names, by id (prefix/suffix) or URL, become its mentions: counted on the
 // named record as the agent version of a citation (once per voter).
 import { QueryError, type Db } from './query.ts';
-import type { Voter } from './votes.ts';
+import { refuseKeys, type Voter } from './votes.ts';
 
 const ID = /\b[a-z][a-z0-9-]*\/[^\s<>"'()[\]{},;/]+/g;
 const URL_ = /https?:\/\/[^\s<>"'()[\]{}]+/g;
@@ -12,6 +12,7 @@ export async function comment(db: Db, recordId: string, voter: Voter, c: { body:
 	const body = (c.body ?? '').trim();
 	if (!body) throw new QueryError('the comment is empty', 'Send "body" with the text.');
 	if (body.length > 4000) throw new QueryError('the comment is longer than 4,000 characters', 'Shorten it, or post a reply.');
+	await refuseKeys(db, body);
 	const found = (await db.query('SELECT 1 FROM open_index.records WHERE id = $1', [recordId])).rows.length;
 	if (!found) throw new QueryError(`no record ${JSON.stringify(recordId)}`, 'Use an id from a search result.');
 	if (c.parent !== undefined) {

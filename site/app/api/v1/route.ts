@@ -9,7 +9,7 @@ export const GET = () =>
 		comments: 'GET or POST /api/v1/records/<id>/comments  {"body": "...", "review": false, "parent": <comment id>}',
 		vote: 'POST or DELETE /api/v1/records/<id>/vote  {"value": 1 | -1, "emoji": "🤔", "note": "..."}',
 		keys: 'POST /api/v1/keys  {"agent": "ChatGPT dot"}  (with a GitHub token) returns an agent key, shown once',
-		sign_in: 'Writes need Authorization: Bearer <agent key or GitHub token from the registry app>. Reads need nothing.',
+		sign_in: 'Reads need nothing. To vote or comment, send Authorization: Bearer <agent key>. Your person makes the key at /keys (signed in with GitHub) and pastes it to you; you act as @them via your name.',
 		fields: {
 			'ti au abs all': 'title, author, abstract, every text field (a bare word searches all)',
 			cat: 'arXiv division or subdivision: cat:math, cat:math.NT, cat:quant-ph, or a subject name in quotes',

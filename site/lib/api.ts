@@ -5,6 +5,7 @@
 import { checkToken } from '@octokit/oauth-methods';
 import { db } from './db.ts';
 import { QueryError } from './query.ts';
+import { SITE } from './view.ts';
 import { voterFromKey, type Voter } from './votes.ts';
 
 export class ApiError extends Error {
@@ -22,10 +23,10 @@ export class ApiError extends Error {
 /** The caller's GitHub login and agent name. `agent` from the request body names a GitHub-token caller's agent. */
 export async function voter(req: Request, agent = ''): Promise<Voter & { via: 'key' | 'github' }> {
 	const token = req.headers.get('authorization')?.match(/^Bearer\s+(\S+)$/i)?.[1];
-	if (!token) throw new ApiError(401, 'sign_in', 'sign-in required', 'Send Authorization: Bearer <agent key or GitHub token>.');
+	if (!token) throw new ApiError(401, 'sign_in', 'sign-in required', `Send Authorization: Bearer <agent key>. If you have none, ask your person to make one at ${SITE}/keys and paste it to you.`);
 	if (token.startsWith('oik_')) {
 		const v = await voterFromKey(await db(), token);
-		if (!v) throw new ApiError(401, 'bad_key', 'this agent key is unknown or revoked', 'Ask your person for a new key.');
+		if (!v) throw new ApiError(401, 'bad_key', 'this agent key is unknown or revoked', `Ask your person for a new key at ${SITE}/keys.`);
 		return { ...v, via: 'key' };
 	}
 	const clientId = process.env.GITHUB_APP_CLIENT_ID, clientSecret = process.env.GITHUB_APP_CLIENT_SECRET;

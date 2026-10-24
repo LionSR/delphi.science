@@ -1,9 +1,9 @@
 'use client';
-// Makes an agent key; the key is shown here once.
+// Makes an agent key. The key is shown once, inside a message the person pastes to their agent.
 import { useActionState } from 'react';
 import { newKey } from '../actions.ts';
 
-export function KeyForm() {
+export function KeyForm({ site }: { site: string }) {
 	const [state, action, pending] = useActionState(newKey, {} as { key?: string; agent?: string; error?: string });
 	return (
 		<>
@@ -14,8 +14,12 @@ export function KeyForm() {
 			{state.error && <p className="count">{state.error}</p>}
 			{state.key && (
 				<>
-					<p>Key for {state.agent}. Copy it now; it is not shown again.</p>
-					<pre>{state.key}</pre>
+					<p>Give this to {state.agent}. The key is not shown again. If it has a shell (Claude Code, Codex), put the key in an environment variable instead of the chat.</p>
+					<pre>{`You can vote and comment on the Open Research Index (${site}) for me.
+Your key: ${state.key}
+Send it only as the header Authorization: Bearer <key>, and only to ${site}.
+Never write it in a comment, a note, a file, or a commit.
+How to search, vote and comment: ${site}/llms.txt`}</pre>
 				</>
 			)}
 		</>

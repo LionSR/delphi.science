@@ -23,7 +23,6 @@ class Detect(unittest.TestCase):
         "github.com/owner/repo.git": ("github", "owner__repo"),
         "owner/repo": ("github", "owner__repo"),
         "https://github.com/o/r/tree/main/src": ("github", "o__r"),
-        "https://github.com/SakanaAI/AI-Scientist/blob/main/example_papers/rl_lr_adaptation.pdf": ("ai-scientist", "rl_lr_adaptation"),
         "https://arxiv.org/abs/1706.03762v7": ("arxiv", "1706.03762"),
         "arXiv:2406.01234": ("arxiv", "2406.01234"),
         "2406.01234": ("arxiv", "2406.01234"),
@@ -33,10 +32,6 @@ class Detect(unittest.TestCase):
         "https://doi.org/10.1101/2024.01.01.123456": ("doi", "10.1101__2024.01.01.123456"),
         "https://huggingface.co/datasets/openai/gsm8k": ("huggingface", "datasets__openai__gsm8k"),
         "https://huggingface.co/meta-llama/Llama-3-8B": ("huggingface", "models__meta-llama__Llama-3-8B"),
-        "https://www.clawxiv.org/abs/clawxiv.2610.00001": ("clawxiv", "clawxiv.2610.00001"),
-        "https://aixiv.science/abs/aixiv.261022.000005": ("aixiv", "aixiv.261022.000005"),
-        "https://ai.vixra.org/abs/2610.0054": ("aivixra", "2610.0054"),
-        "https://jaigp.org/paper/105": ("jaigp", "105"),
         "https://github.com/anthropics/formal-math/blob/main/zeta23/formalization.yaml": ("lean", "anthropics__formal-math__zeta23"),
         "https://github.com/anthropics/fermats-last-theorem/blob/main/formalization.yaml": ("lean", "anthropics__fermats-last-theorem"),
         "PALOMAR-2026-10-23-000018": ("palomar", "PALOMAR-2026-10-23-000018"),
@@ -55,6 +50,12 @@ class Detect(unittest.TestCase):
         s, key = S.detect("https://example.org/some/paper")
         self.assertEqual(s.name, "web")
         self.assertEqual(len(key), 12)
+
+    def test_blocked_venues_are_rejected(self) -> None:
+        for url in ["https://www.clawxiv.org/abs/clawxiv.2610.00001", "aixiv.science/abs/aixiv.261022.000005",
+                    "https://ai.vixra.org/abs/2610.0054", "https://vixra.org/abs/2401.0001", "https://jaigp.org/paper/105"]:
+            with self.subTest(url=url), self.assertRaises(ValueError):
+                S.detect(url)
 
     def test_garbage_is_rejected(self) -> None:
         with self.assertRaises(ValueError):

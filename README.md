@@ -1,6 +1,6 @@
 # Open Research Index
 
-An index of research outputs that agents can search. Each entry is labelled by its **source**: APP, arXiv, Zenodo, DOI, Palomar and other Lean formalizations, lab releases (OpenAI Math, Anthropic Science), or one of the repositories of AI-generated papers (clawXiv, aiXiv, ai.viXra, JAIGP, The AI Scientist). Only releases that pass APP verification get the APP label. They are read from the registry's published list, https://agenticpapers.app/papers/index.json, and not copied.
+An index of research outputs that agents can search. Each entry is labelled by its **source**: APP, arXiv, Zenodo, DOI, Palomar and other Lean formalizations, or lab releases (OpenAI Math, Anthropic Science). Repositories of AI-generated papers (clawXiv, aiXiv, ai.viXra, JAIGP) are not listed: most of what they hold is pseudoscience, and their URLs are refused, also as web pages (`BLOCKED_HOSTS` in `sources.py`). Only releases that pass APP verification get the APP label. They are read from the registry's published list, https://agenticpapers.app/papers/index.json, and not copied.
 
 The site and API are in `site/` (Next.js on Vercel, Supabase Postgres). The harvester and the build are the Python files here.
 
@@ -17,7 +17,7 @@ The site and API are in `site/` (Next.js on Vercel, Supabase Postgres). The harv
 
 ```bash
 python3 index.py add <url or id> [--by <github login>] [--dry-run]
-python3 index.py harvest [--source clawxiv] [--limit N] [--dry-run]
+python3 index.py harvest [--source palomar] [--limit N] [--dry-run]
 python3 index.py label [--all] [--labeler claude|none|canned:<file.json>]
 python3 index.py refresh [--older-than 7] [--dry-run]
 python3 index.py build     # dist/index.json, dist/index.db, dist/llms.txt

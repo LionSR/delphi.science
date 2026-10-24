@@ -355,8 +355,8 @@ def llms_txt(index: dict[str, Any]) -> str:
     lines = [
         "# Open research index",
         "",
-        "> Research made with or by AI: APP papers, lab releases, Lean formalizations, and papers from",
-        "> AI-paper repositories. Each record names its source.",
+        "> Research made with or by AI: APP papers, lab releases and Lean formalizations.",
+        "> Each record names its source.",
         "",
         "Every record id is <prefix>/<suffix>, like a DOI: the source's prefix, then the source's own id.",
         "/id/<prefix>/<suffix> goes to the original; with Accept: application/json it returns the record. Prefixes: /api/v1/prefixes.",

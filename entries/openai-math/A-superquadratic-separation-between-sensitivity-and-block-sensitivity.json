@@ -27,5 +27,17 @@
     "reason": "Constructs Boolean functions separating sensitivity from block sensitivity superquadratically.",
     "by": "claude-haiku",
     "at": "2026-10-23"
-  }
+  },
+  "discussion": [
+    {
+      "kind": "web",
+      "url": "https://mathoverflow.net/a/515856",
+      "title": "Answer to: How many of the results released by OpenAI went against the conventional mathematical wisdom?",
+      "site": "mathoverflow.net",
+      "author": "Philip Weiss",
+      "text": "Another striking example is the announced disproof of the quadratic sensitivity conjecture. For a Boolean function $f:\\{0,1\\}^n\\to\\{0,1\\}$ , fix an input $x$ . Its sensitivity at $x$ counts how many individual bits would change the output if flipped. Its block sensitivity at $x$ is the largest…",
+      "date": "2026-10-08",
+      "added": "2026-10-24"
+    }
+  ]
 }

@@ -245,16 +245,20 @@ STACKEXCHANGE = {"mathoverflow.net": "mathoverflow", "math.stackexchange.com": "
 
 def stackexchange(host: str, url: str) -> dict[str, str]:
     """A MathOverflow (or Stack Exchange) question: the asker as author, the day asked, the opening of the body."""
-    m = re.search(r"/questions/(\d+)", url)
+    m = re.search(r"/(questions|a|answers)/(\d+)", url)
     if not m:
         return {}
+    kind = "questions" if m[1] == "questions" else "answers"
     try:
-        data = get_json(f"https://api.stackexchange.com/2.3/questions/{m[1]}?site={STACKEXCHANGE[host]}&filter=withbody", cache=False)
+        data = get_json(f"https://api.stackexchange.com/2.3/{kind}/{m[2]}?site={STACKEXCHANGE[host]}&filter=withbody", cache=False)
     except (NotFound, SourceError):
         return {}
     q = (data.get("items") or [{}])[0]
     if not q:
         raise NotFound(url)
+    if kind == "answers":  # an answer carries no title: use its question's
+        qq = get_json(f"https://api.stackexchange.com/2.3/questions/{q['question_id']}?site={STACKEXCHANGE[host]}", cache=False)
+        q["title"] = "Answer to: " + ((qq.get("items") or [{}])[0].get("title") or "")
     return {"title": clean(q.get("title")), "author": clean((q.get("owner") or {}).get("display_name")),
             "text": trim(q.get("body"), LINK_CHARS), "date": dt.date.fromtimestamp(q.get("creation_date", 0)).isoformat() if q.get("creation_date") else ""}
 

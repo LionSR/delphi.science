@@ -39,6 +39,16 @@
     },
     {
       "kind": "web",
+      "url": "https://mathoverflow.net/a/515855",
+      "title": "Answer to: How many of the results released by OpenAI went against the conventional mathematical wisdom?",
+      "site": "mathoverflow.net",
+      "author": "Philip Weiss",
+      "text": "One of OpenAI's results is a deterministic algorithm for multiplying two $n$ -bit integers in time $$O(n (\\log n)^{1-\\varepsilon})$$ for a fixed $\\varepsilon>0$ . This is especially startling because multiplication is one of the most fundamental operations in mathematics, and $n\\log n$ was not…",
+      "date": "2026-10-08",
+      "added": "2026-10-24"
+    },
+    {
+      "kind": "web",
       "url": "https://arxiv.org/abs/2610.14263",
       "title": "Bipartite Carrier Compression and Machine-Certified Bounds in Sch\\\"onhage Trilinear Multiplication Tensors",
       "site": "arXiv.org",

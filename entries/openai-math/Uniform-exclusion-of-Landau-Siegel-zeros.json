@@ -1,0 +1,32 @@
+{
+  "key": "Uniform-exclusion-of-Landau-Siegel-zeros",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Uniform-exclusion-of-Landau-Siegel-zeros-October-1-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Uniform-exclusion-of-Landau-Siegel-zeros-October-1-2026/paper.pdf",
+  "title": "Uniform exclusion of Landau–Siegel zeros",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the uniform exclusion of Landau–Siegel zeros. There is an absolute constant c > 0 such that every real zero $`\\beta\\in(0,1)`$ of every primitive nonprincipal real Dirichlet L -function of conductor q ≥ 3 satisfies $`(1-\\beta)\\log q\\ge c`$.",
+  "domain": "Number theory",
+  "published": "2026-10-01",
+  "family": "003",
+  "family_title": "The quasi-Riemann hypothesis",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "analytic-number-theory",
+      "dirichlet-l-functions",
+      "siegel-zeros",
+      "l-functions"
+    ],
+    "reason": "Proves a uniform lower bound on how far real zeros of Dirichlet L-functions lie from one.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

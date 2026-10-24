@@ -1,0 +1,52 @@
+{
+  "key": "PALOMAR-2026-10-05-000007",
+  "source": "palomar",
+  "url": "https://github.com/vltanh/lean4-markman25-hodge-abelian-fourfolds/tree/4be865ee7242c8ac4e7b7f92b192b31f9d1c3338/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-05-000007-v1.json",
+  "title": "Weil classes on abelian sixfolds and the Hodge conjecture for abelian fourfolds (Markman)",
+  "authors": [
+    "The-Anh Vu-Le"
+  ],
+  "summary": "A conditional Lean 4 formalization of E. Markman, \"Cycles on abelian 2n-folds of Weil type from secant sheaves on abelian n-folds\" (arXiv:2502.03415v2). The paper proves that the Hodge-Weil classes of polarized abelian sixfolds of Weil type with discriminant -1 are algebraic (Theorem 1.5.1) and deduces the Hodge conjecture for abelian fourfolds (Corollary 1.6.1). Every result of the paper about cohomology classes, Clifford algebras, spin representations, Hodge structures and period domains is proved in a linear-algebra model of the cohomology of abelian varieties (abelian varieties up to…",
+  "domain": "math.AG",
+  "tags": [
+    "math.AG",
+    "msc:14C30",
+    "msc:14C25",
+    "msc:14K22",
+    "msc:14K12",
+    "msc:15A66",
+    "msc:14F08"
+  ],
+  "published": "2026-10-05",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Cycles on abelian 2n-folds of Weil type from secant sheaves on abelian n-folds",
+      "identifier": "arXiv:2502.03415v2",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/vltanh/lean4-markman25-hodge-abelian-fourfolds",
+  "commit": "4be865ee7242c8ac4e7b7f92b192b31f9d1c3338",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "algebraic-geometry",
+      "hodge-conjecture",
+      "abelian-varieties",
+      "lean-formalization"
+    ],
+    "reason": "Conditional Lean formalization of results on Weil classes and the Hodge conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

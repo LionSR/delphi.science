@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-10-05-000002",
+  "source": "palomar",
+  "url": "https://github.com/linrock/math-proofs/tree/7caa4144741e10f96cf79d6f7313a0efd9a18b67/erdos-2",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-05-000002-v1.json",
+  "title": "Erdős 2: minimum modulus of distinct covering systems",
+  "authors": [
+    "Linmiao Xu"
+  ],
+  "summary": "A complete Lean 4 proof of the negative answer to Erdős problem 2 (Hough 2015; Balister–Bollobás–Morris–Sahasrabudhe–Tiba 2022): there is an absolute constant B such that every finite covering of the integers by distinct moduli > 1 contains a modulus ≤ B. For any finite set D of moduli above B with N = lcm(D), the proof builds a probability measure on ZMod N prime by prime via the BBMST half-cap fiber update, preserving the progression bound w(z ≡ a mod d) ≤ 2^ω(d)/d while bounding each prime-p loss by C (log p)^6 / (p - 1)^2 via Euler factorization and Mertens' third theorem. Combining this…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO",
+    "msc:11A07",
+    "msc:11B25"
+  ],
+  "published": "2026-10-05",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "On the Erdős Covering Problem: the density of the uncovered set",
+      "identifier": "https://arxiv.org/abs/1811.03547v1",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/linrock/math-proofs",
+  "commit": "7caa4144741e10f96cf79d6f7313a0efd9a18b67",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "covering-systems",
+      "number-theory",
+      "erdos-problems",
+      "lean-formalization"
+    ],
+    "reason": "Lean 4 proof answering Erdős problem 2 on minimum modulus of distinct covering systems.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

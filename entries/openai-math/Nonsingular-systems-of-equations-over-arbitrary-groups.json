@@ -1,0 +1,31 @@
+{
+  "key": "Nonsingular-systems-of-equations-over-arbitrary-groups",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Nonsingular-systems-of-equations-over-arbitrary-groups-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Nonsingular-systems-of-equations-over-arbitrary-groups-October-5-2026/nonsingular-systems-over-arbitrary-groups.pdf",
+  "title": "Nonsingular systems of equations over arbitrary groups",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "Every finite nonsingular system of equations over an arbitrary group has a simultaneous solution in an overgroup. This proves Howie's conjecture on nonsingular systems.",
+  "domain": "Group theory",
+  "published": "2026-10-05",
+  "family": "256",
+  "family_title": "Nonsingular systems of equations over arbitrary groups",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "group-theory",
+      "equations-over-groups",
+      "howie-conjecture"
+    ],
+    "reason": "Proves that finite nonsingular systems of equations over any group have solutions in an overgroup.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

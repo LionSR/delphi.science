@@ -1,0 +1,52 @@
+{
+  "key": "PALOMAR-2026-10-06-000011",
+  "source": "palomar",
+  "url": "https://github.com/alialiev78/gs_Lean_formalization/tree/1270ba6cf3050f53a4beb98f0d65ab7459d4494b/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-06-000011-v1.json",
+  "title": "Structured orthogonal and unitary matrices: factorization, geometry and singularities",
+  "authors": [
+    "Ali Aliev"
+  ],
+  "summary": "Block-diagonal matrix factors interleaved with fixed coordinate permutations define low-parametric matrix families. This formalization proves orthogonal-factor sufficiency for two and three real layers, its complex unitary analogue, and explicit four-layer counterexamples over both fields. It establishes an exact two-factor cell-rank criterion and real and unitary cosine-sine exhaustion for the (p,2,p) shuffle family. Two-layer images with complete within-layer block sharing, arbitrary overlap and arbitrary fixed carriers have a smooth atlas in the inherited matrix topology, an exact tangent…",
+  "domain": "math.DG",
+  "tags": [
+    "math.DG",
+    "math.NA",
+    "math.RA",
+    "msc:15A23",
+    "msc:15B10",
+    "msc:53B21",
+    "msc:57N35"
+  ],
+  "published": "2026-10-06",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Riemannian Structure and Optimization for a Class of Low-Parametric Orthogonal Matrices",
+      "identifier": "arXiv:2609.27982",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/alialiev78/gs_Lean_formalization",
+  "commit": "1270ba6cf3050f53a4beb98f0d65ab7459d4494b",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "matrix-factorization",
+      "differential-geometry",
+      "orthogonal-matrices",
+      "lean-formalization"
+    ],
+    "reason": "Formalizes factorization and geometry results for structured orthogonal and unitary matrices.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

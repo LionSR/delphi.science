@@ -1,0 +1,31 @@
+{
+  "key": "A-strict-four-row-permanent-inequality-and-permutation-moments",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-strict-four-row-permanent-inequality-and-permutation-moments-September-26-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-strict-four-row-permanent-inequality-and-permutation-moments-September-26-2026/main.pdf",
+  "title": "A strict four-row permanent inequality and permutation moments",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove a permanent inequality with exponent strictly below two for laws on S 4 sufficiently close to uniform and with exactly uniform coordinate marginals. Applied to a four-row recursion, it shows that an absolute number of coordinate sweeps brings the full permutation of the Thorp shuffle on $`N=2^d`$ cards to total-variation distance tending to zero from uniform as $`N\\to\\infty`$. Thus the mixing time has the optimal order $`O(\\log N)`$ in physical shuffles.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-09-26",
+  "family": "238",
+  "family_title": "Optimal logarithmic mixing of the Thorp shuffle",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "combinatorics",
+      "permanents",
+      "card-shuffling"
+    ],
+    "reason": "Proves a permanent inequality and bounds mixing time of the Thorp shuffle.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

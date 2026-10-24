@@ -1,0 +1,42 @@
+{
+  "key": "PALOMAR-2026-08-29-000010",
+  "source": "palomar",
+  "url": "https://github.com/BochaoKong/classical-complex-wpt/tree/b4a7273fe5c9752753c52e10494097569089642d/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-29-000010-v1.json",
+  "title": "BochaoKong/classical-complex-wpt",
+  "authors": [
+    "BochaoKong"
+  ],
+  "summary": "A Mathlib-only Lean 4 formalization of the classical complex-analytic Weierstrass preparation theorem at the origin. For every number of base variables and every preparation degree, including the zero-dimensional and degree-zero cases, it constructs the distinguished monic polynomial and nonvanishing analytic unit and proves uniqueness of all factors as germs.",
+  "domain": "math.CV",
+  "tags": [
+    "math.CV",
+    "msc:32A05",
+    "msc:32A10",
+    "msc:32B05"
+  ],
+  "published": "2026-08-29",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/BochaoKong/classical-complex-wpt",
+  "commit": "b4a7273fe5c9752753c52e10494097569089642d",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "complex-analysis",
+      "several-complex-variables",
+      "lean-formalization",
+      "weierstrass-preparation"
+    ],
+    "reason": "Mathlib-based Lean formalization of the complex Weierstrass preparation theorem.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

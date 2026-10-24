@@ -1,0 +1,31 @@
+{
+  "key": "Sharp-One-Dimensional-Lieb-Thirring-Constants",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Sharp-One-Dimensional-Lieb-Thirring-Constants-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Sharp-One-Dimensional-Lieb-Thirring-Constants-September-23-2026/paper.pdf",
+  "title": "Sharp one-dimensional Lieb–Thirring constants",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We resolve affirmatively the remaining cases of the scalar one-dimensional Lieb–Thirring conjecture: for every $`\\frac12\\lt \\gamma\\lt \\frac32`$, the optimal constant is the one-bound-state constant. The estimate holds for every nonnegative potential in $`L^{\\gamma+1/2}(\\mathbb R)`$, with all negative eigenvalues included.",
+  "domain": "Mathematical physics",
+  "published": "2026-09-23",
+  "family": "262",
+  "family_title": "Sharp finite-matrix Lieb–Thirring inequalities and all equality cases",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "mathematical-physics",
+      "spectral-theory",
+      "inequalities"
+    ],
+    "reason": "Establishes optimal one-dimensional Lieb–Thirring constants for a range of exponents.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

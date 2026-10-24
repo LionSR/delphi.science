@@ -1,0 +1,42 @@
+{
+  "key": "PALOMAR-2026-10-19-000007",
+  "source": "palomar",
+  "url": "https://github.com/plasma-ai/erdos-111/tree/de72caf0e388c729697b6813f4ea90bfe1617c7b/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-19-000007-v1.json",
+  "title": "Erdős Problem 111: bipartizing finite subgraphs of uncountably chromatic graphs",
+  "authors": [
+    "Jacob Parish"
+  ],
+  "summary": "A Lean proof that for every real C, a graph whose finite subgraphs on m vertices can each be made bipartite by deleting at most Cm edges has countable chromatic number. Hence h_G(n)/n → ∞ for every graph G that is not countably colorable, in particular for every graph of chromatic number ℵ₁. This answers the second question of Erdős Problem 111 in the affirmative.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.LO",
+    "msc:05C15",
+    "msc:05C63",
+    "msc:03E05"
+  ],
+  "published": "2026-10-19",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/plasma-ai/erdos-111",
+  "commit": "de72caf0e388c729697b6813f4ea90bfe1617c7b",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "chromatic-number",
+      "formalization"
+    ],
+    "reason": "Lean formalization addressing an Erdős problem on bipartizing finite subgraphs and chromatic number.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "A-directional-zero-one-law-under-strict-ellipticity",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-directional-zero-one-law-under-strict-ellipticity-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-directional-zero-one-law-under-strict-ellipticity-September-23-2026/paper.pdf",
+  "title": "A directional zero–one law under strict ellipticity",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the directional zero–one conjecture for nearest-neighbor random walks in independent and identically distributed strictly elliptic environments on ℤ d , d ≥ 3: the probability of escape in each fixed nonzero real direction is zero or one. Only strict positivity of the transition probabilities is required; no uniform lower bound or moment assumption is imposed.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-09-23",
+  "family": "220",
+  "family_title": "Directional zero–one laws beyond iid environments and iid ballisticity",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "random-walks",
+      "random-environments",
+      "probability"
+    ],
+    "reason": "Proves the directional zero-one conjecture for random walks in strictly elliptic i.i.d. environments.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

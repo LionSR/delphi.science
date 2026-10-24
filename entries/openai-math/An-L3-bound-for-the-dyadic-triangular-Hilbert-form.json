@@ -1,0 +1,30 @@
+{
+  "key": "An-L3-bound-for-the-dyadic-triangular-Hilbert-form",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/An-L3-bound-for-the-dyadic-triangular-Hilbert-form-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/An-L3-bound-for-the-dyadic-triangular-Hilbert-form-October-5-2026/dyadic-triangular-hilbert.pdf",
+  "title": "An L³ bound for the dyadic triangular Hilbert form",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove a uniform $`L^3\\times L^3\\times L^3`$ estimate for the dyadic triangular Hilbert form with unrestricted real inputs. The sum of the absolute local contributions over any finite set of scales is bounded by forty times the product of the input norms. In particular, the bound allows coefficients of modulus at most one to vary independently among admissible interval triples.",
+  "domain": "Real and complex analysis",
+  "published": "2026-10-05",
+  "family": "082",
+  "family_title": "Annular variation and dyadic absolute bounds for the triangular Hilbert transform",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "harmonic-analysis",
+      "multilinear-analysis"
+    ],
+    "reason": "Proves a uniform L3 estimate for the dyadic triangular Hilbert form.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

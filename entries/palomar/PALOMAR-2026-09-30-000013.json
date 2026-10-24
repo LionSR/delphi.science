@@ -1,0 +1,41 @@
+{
+  "key": "PALOMAR-2026-09-30-000013",
+  "source": "palomar",
+  "url": "https://github.com/dtq1997/li2-half-irrationality/tree/950ee9d53914e1afb89c8f835a8bca6ccfaa0108/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000013-v1.json",
+  "title": "Irrationality of Li₂(1/2)",
+  "authors": [
+    "Qian Tang"
+  ],
+  "summary": "A Lean formalization of the irrationality of Li₂(1/2) = Σ_{n≥1} 2^(-n)/n². The proof is inspired by A. Fauzan's work on the irrationality of ζ(5) and builds on Moritz Firsching's Lean formalization in mo271/Zeta5. The central idea is to establish the irrationality of a real number r by constructing a sequence of integer polynomials P_n whose values P_n(r) decay rapidly as n tends to infinity, while for every rational q, P_n(q) ≠ 0 for infinitely many n. Analytic umbral calculus was used to find suitable polynomials Q_n with rational coefficients. Random matrix theory provides rapid decay of…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11J72",
+    "msc:33B30"
+  ],
+  "published": "2026-09-30",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/dtq1997/li2-half-irrationality",
+  "commit": "950ee9d53914e1afb89c8f835a8bca6ccfaa0108",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "lean",
+      "number-theory",
+      "polylogarithm",
+      "irrationality"
+    ],
+    "reason": "Lean formalization of the irrationality of the dilogarithm at one half.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

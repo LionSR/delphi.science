@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-10-20-000003",
+  "source": "palomar",
+  "url": "https://github.com/jtraverso/erdos-posa-cycles/tree/67bfea6b3893ffdf57e76cd83c9c3538647bdec8/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-20-000003-v1.json",
+  "title": "The Erdős–Pósa theorem for cycles",
+  "authors": [
+    "Juan Pablo Traverso Gianini"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of the Erdős–Pósa theorem: for every k, every finite simple graph either contains k vertex-disjoint cycles or has a set of at most c (k + 1)(log₂(k + 1) + 1) vertices meeting every cycle, for a fixed constant c (the proof gives c = 65); together with the qualitative Erdős–Pósa property and the easy converse that a feedback vertex set of size s rules out s + 1 disjoint cycles. Mathlib has acyclic graphs but not this theorem.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C38",
+    "msc:05C70"
+  ],
+  "published": "2026-10-20",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "On independent circuits contained in a graph",
+      "identifier": "doi:10.4153/CJM-1965-035-8",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jtraverso/erdos-posa-cycles",
+  "commit": "67bfea6b3893ffdf57e76cd83c9c3538647bdec8",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "erdos-posa",
+      "formalization"
+    ],
+    "reason": "Lean 4 formalization of the Erdős–Pósa theorem for cycles in graphs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

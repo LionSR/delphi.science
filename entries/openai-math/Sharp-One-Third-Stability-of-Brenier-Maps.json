@@ -1,0 +1,31 @@
+{
+  "key": "Sharp-One-Third-Stability-of-Brenier-Maps",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Sharp-One-Third-Stability-of-Brenier-Maps-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Sharp-One-Third-Stability-of-Brenier-Maps-September-25-2026/article.pdf",
+  "title": "Sharp One-Third Stability of Brenier Maps",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For the uniform probability measure ρ on a compact convex body in ℝ d , d ≥ 2, quadratic optimal transport maps are one-third Hölder continuous in $`L^2(\\rho)`$ with respect to the target's 2-Wasserstein distance. The constant is uniform over all targets supported in a fixed compact set, and the exponent is optimal. A three-atom family on a fixed cube disproves Letrouit's conjectured uniform square-root estimate.",
+  "domain": "Partial differential equations",
+  "published": "2026-09-25",
+  "family": "374",
+  "family_title": "Sharp one-third stability of Brenier maps",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "optimal-transport",
+      "stability",
+      "convex-geometry"
+    ],
+    "reason": "Proves sharp one-third Hölder stability of quadratic optimal transport maps for uniform measures.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

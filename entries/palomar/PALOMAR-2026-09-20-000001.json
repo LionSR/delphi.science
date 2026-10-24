@@ -1,0 +1,51 @@
+{
+  "key": "PALOMAR-2026-09-20-000001",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/blackwell-approachability-lean/tree/42b9d7c77e77fc158d44cb31ef320798c3c73492/rate-preserving-reduction",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-20-000001-v1.json",
+  "title": "Finite tight Blackwell approachability-to-improper phi-regret reduction in Lean",
+  "authors": [
+    "Arthur Freitas Ramos",
+    "Ruy Jose Guerra Barretto de Queiroz",
+    "David Barros Hulak"
+  ],
+  "summary": "A Mathlib-only nonempty finite-simplex, algorithmic specialization of Theorem 4 in Dann, Mansour, Mohri, Schneider, and Sivan (COLT 2025). It realizes the tensor action space as a joint simplex, defines the source improper comparator by adding a mixed-constraint tensor of the canonical action marginal, proves that comparator escapes the action set, and proves exact finite-horizon equality between approachability loss and improper phi-regret under explicit causal strategy translations in both directions. It also proves that every joint action is a mixture of at most one rank-one tensor per…",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "cs.LG",
+    "msc:91A26",
+    "msc:68T05"
+  ],
+  "published": "2026-09-20",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Rate-Preserving Reductions for Blackwell Approachability",
+      "identifier": "https://proceedings.mlr.press/v291/dann25a.html",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/blackwell-approachability-lean",
+  "commit": "42b9d7c77e77fc158d44cb31ef320798c3c73492",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "game-theory",
+      "online-learning",
+      "lean",
+      "regret"
+    ],
+    "reason": "Lean formalization of an approachability to phi-regret reduction in finite games.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

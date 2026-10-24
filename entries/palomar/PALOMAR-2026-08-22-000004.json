@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-08-22-000004",
+  "source": "palomar",
+  "url": "https://github.com/mbaccaro-dev/mathematical-proofs/tree/f0ccae19f2cb5afdca00c42694d677c74dc492f6/MathematicalProofs/SubpowerDyadicEnergy/Lean",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-22-000004-v1.json",
+  "title": "mbaccaro-dev/mathematical-proofs",
+  "authors": [
+    "Mayk Loide Baccaro"
+  ],
+  "summary": "A Lean 4 proof of the global power-of-two balance connecting dyadic defect, block variation, and positive Möbius-logarithm prefix energy. Eventual nonnegativity on exactly those dyadic blocks gives an explicit all-endpoint cubic energy bound. With the stated weighted-squarefree remainder estimate, the formalization also recovers the sharp 6/pi^2 leading coefficient and retains the complete finite-prefix correction.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11M26",
+    "msc:11N37"
+  ],
+  "published": "2026-08-22",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Subpower Energy and Dyadic Defect Criteria for the Riemann Hypothesis",
+      "identifier": "10.5281/zenodo.22038521",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/mbaccaro-dev/mathematical-proofs",
+  "commit": "f0ccae19f2cb5afdca00c42694d677c74dc492f6",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "analytic-number-theory",
+      "mobius-function",
+      "lean-formalization",
+      "squarefree-numbers"
+    ],
+    "reason": "Lean proof of a global power-of-two balance bounding Möbius-logarithm prefix energy.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

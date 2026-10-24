@@ -1,0 +1,55 @@
+{
+  "key": "PALOMAR-2026-09-15-000006",
+  "source": "palomar",
+  "url": "https://github.com/scottnarmstrong/CoarseGraining/tree/28ca42c02fd286c8f63a45be3344f6f82d026db3/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-15-000006-v1.json",
+  "title": "CoarseGraining",
+  "authors": [
+    "Scott Armstrong",
+    "Tuomo Kuusi"
+  ],
+  "summary": "A Lean formalization of the coarse-graining approach to quantitative stochastic homogenization of divergence-form elliptic equations: function-space, deterministic, probabilistic, and homogenization-scale theory up to the quenched minimal-scale theorem. The public main result is a uniformly elliptic, isotropic specialization of the quenched homogenization comparison estimate in Armstrong-Kuusi, \"Renormalization Group and Elliptic Homogenization in High Contrast\" (Inventiones Mathematicae, 2025), independently checked using Audit/QuenchedComparison/comparator.json, together with four further…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "msc:35B27",
+    "msc:60K37",
+    "msc:35J15"
+  ],
+  "published": "2026-09-15",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Coarse-Graining Theory for Elliptic Equations",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Renormalization Group and Elliptic Homogenization in High Contrast",
+      "identifier": "doi:10.1007/s00222-025-01370-9",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/scottnarmstrong/CoarseGraining",
+  "commit": "28ca42c02fd286c8f63a45be3344f6f82d026db3",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "homogenization",
+      "elliptic-pdes",
+      "stochastic-analysis",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of coarse-graining for quantitative elliptic homogenization.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

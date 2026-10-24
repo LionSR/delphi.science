@@ -1,0 +1,32 @@
+{
+  "key": "Product-projection-localization-and-the-QAC0-parity-lower-bound",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Product-projection-localization-and-the-QAC0-parity-lower-bound-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Product-projection-localization-and-the-QAC0-parity-lower-bound-September-24-2026/paper.pdf",
+  "title": "Product-projection localization and the QAC0 parity lower bound",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that constant-depth quantum circuits with arbitrary one-qubit and unbounded-arity Toffoli gates cannot compute parity with any fixed positive worst-case advantage using polynomially many qubits. Ancillas start in zero, only one output qubit is measured, and all final garbage is unrestricted. This resolves Moore's parity conjecture in the measured-output model.",
+  "domain": "Mathematical physics",
+  "published": "2026-09-24",
+  "family": "274",
+  "family_title": "Parity is not in QAC 0",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "quantum-computing",
+      "circuit-complexity",
+      "qac0",
+      "parity"
+    ],
+    "reason": "Shows constant-depth quantum circuits cannot compute parity with fixed advantage using polynomial qubits.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

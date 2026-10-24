@@ -1,0 +1,60 @@
+{
+  "key": "PALOMAR-2026-10-22-000007",
+  "source": "palomar",
+  "url": "https://github.com/dozenalist/ModularFormsMod/tree/585d9fa44e7ada745691c234af53ca6785f175ae/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-22-000007-v1.json",
+  "title": "Ramanujan congruences for the partition function",
+  "authors": [
+    "Carter Hastings"
+  ],
+  "summary": "A Lean formalization of modular forms over coefficient subrings of the complex numbers, their coefficientwise reductions modulo ring homomorphisms, and a proof classifying the Ramanujan congruences for the partition function following an argument from Ahlgren and Boylan. The recorded results prove Ramanujan's congruences modulo 5, 7, and 11 as well as the fact there there are no other such examples. The proof develops modular forms modulo a prime, filtration, and theta and U operators, using the arguments of Ahlgren–Boylan, Kiming–Olsson, and Swinnerton-Dyer.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO",
+    "msc:11P83",
+    "msc:11F33",
+    "msc:05A17"
+  ],
+  "published": "2026-10-22",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Arithmetic properties of the partition function",
+      "identifier": "doi:10.1007/s00222-003-0295-6",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Congruences like Ramanujan's for powers of the partition function",
+      "identifier": "",
+      "relationship": "adapts"
+    },
+    {
+      "title": "On l-adic representations and congruences for coefficients of modular forms",
+      "identifier": "",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/dozenalist/ModularFormsMod",
+  "commit": "585d9fa44e7ada745691c234af53ca6785f175ae",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "partitions",
+      "modular-forms",
+      "lean"
+    ],
+    "reason": "Lean formalization classifying Ramanujan congruences for the partition function via modular forms.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

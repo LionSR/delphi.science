@@ -1,0 +1,67 @@
+{
+  "key": "PALOMAR-2026-08-27-000009",
+  "source": "palomar",
+  "url": "https://github.com/yuma-mizuno/markoff-modp/tree/aea702e1116c5688a0c570127ebcd3f194924439/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-27-000009-v1.json",
+  "title": "yuma-mizuno/markoff-modp",
+  "authors": [
+    "Yuma Mizuno"
+  ],
+  "summary": "Lean 4 formalization of strong approximation for the Markoff surface modulo sufficiently large primes. The primary source is Bourgain-Gamburd-Sarnak.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11D25"
+  ],
+  "published": "2026-08-27",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Strong Approximation and Diophantine Properties of Markoff Triples",
+      "identifier": "https://doi.org/10.1090/jams/1061",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Greatest common divisors of u - 1, v - 1 in positive characteristic and rational points on curves over finite fields",
+      "identifier": "https://doi.org/10.4171/JEMS/409",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Some cases of Vojta's Conjecture on integral points over function fields",
+      "identifier": "https://doi.org/10.1090/S1056-3911-07-00489-4",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "A new proof of Chen's theorem for Markoff graphs",
+      "identifier": "https://doi.org/10.1007/s00222-025-01346-9",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Connectivity of Markoff mod-p graphs and maximal divisors",
+      "identifier": "https://doi.org/10.1112/plms.70027",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/yuma-mizuno/markoff-modp",
+  "commit": "aea702e1116c5688a0c570127ebcd3f194924439",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "lean",
+      "strong-approximation",
+      "markoff-surface"
+    ],
+    "reason": "Lean formalization of strong approximation for the Markoff surface modulo primes.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

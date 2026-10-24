@@ -1,0 +1,50 @@
+{
+  "key": "PALOMAR-2026-10-08-000001",
+  "source": "palomar",
+  "url": "https://github.com/yuhaolei-ctrl/Sharp-W2-to-W2-Propagation-of-Chaos/tree/84dbe881384ad2f0358857b025ef6fd824ebc9a1/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-08-000001-v1.json",
+  "title": "Sharp Wasserstein propagation of chaos from correlated initial data",
+  "authors": [
+    "Yuhao Lei"
+  ],
+  "summary": "A Lean 4 proof, checked against Mathlib, of a sharp quantitative propagation of chaos estimate for mean field diffusions dX_i = (a(X_i) + N^{-1} sum_j K(X_i, X_j)) dt + sqrt 2 dW_i with a globally Lipschitz one-body drift a and a bounded, globally Lipschitz pairwise interaction K. If every k-particle marginal of the (possibly correlated and singular) exchangeable initial law lies within squared quadratic Wasserstein distance C_0 (k/N)^2 of the corresponding power of the McKean-Vlasov initial law, then the same holds on every finite time interval [0, T] with an explicit constant C_T that…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "msc:60K35",
+    "msc:82C22",
+    "msc:60H10",
+    "msc:35Q84",
+    "msc:49Q22"
+  ],
+  "published": "2026-10-08",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Sharp Wasserstein propagation of chaos from correlated initial data",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/yuhaolei-ctrl/Sharp-W2-to-W2-Propagation-of-Chaos",
+  "commit": "84dbe881384ad2f0358857b025ef6fd824ebc9a1",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "propagation-of-chaos",
+      "mean-field-diffusions",
+      "lean-formalization"
+    ],
+    "reason": "Lean proof of a quantitative propagation of chaos estimate for mean-field diffusions.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

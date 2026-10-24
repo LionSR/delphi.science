@@ -1,0 +1,53 @@
+{
+  "key": "PALOMAR-2026-10-01-000008",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/roberts-theorem-lean/tree/0c176c66d2afa62301297f443b1e40eda2387ca2/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-01-000008-v1.json",
+  "title": "roberts-theorem-lean",
+  "authors": [
+    "Arthur Freitas Ramos"
+  ],
+  "summary": "A Lean formalization of Roberts theorem: for finite nonempty agent and alternative types with at least three alternatives, every onto dominant-strategy incentive compatible choice function is an affine maximizer. The proof follows the modular route: the taxation principle and weak monotonicity, reduction to strong monotonicity by tie-breaking, no-veto-power range analysis, the two-agent affine price representation, and induction on the number of agents.",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "econ.TH",
+    "msc:91B14"
+  ],
+  "published": "2026-10-01",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "The characterization of implementable choice rules",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "A Modular Approach to Roberts Theorem",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/roberts-theorem-lean",
+  "commit": "0c176c66d2afa62301297f443b1e40eda2387ca2",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "mechanism-design",
+      "social-choice",
+      "affine-maximizers",
+      "lean"
+    ],
+    "reason": "Lean formalization of Roberts' theorem on affine maximizers in mechanism design.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "Classical-capacity-and-entropy-inequalities-for-generalized-amplitude-damping",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Classical-capacity-and-entropy-inequalities-for-generalized-amplitude-damping-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Classical-capacity-and-entropy-inequalities-for-generalized-amplitude-damping-September-24-2026/paper.pdf",
+  "title": "Classical capacity and entropy inequalities for generalized amplitude damping",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We determine the unassisted classical capacity of every qubit generalized amplitude-damping channel, for all damping strengths and thermal occupations. It equals the one-shot Holevo capacity and is given by a one-variable maximum. A binary pure-state ensemble attains the one-use optimum, and its independent products attain the optimum at every block length. We also prove that one-shot Holevo capacity, minimum output entropy, and regularized unassisted classical capacity are additive under tensor product with every finite-dimensional completely positive trace-preserving partner channel.",
+  "domain": "Mathematical physics",
+  "published": "2026-09-24",
+  "family": "276",
+  "family_title": "Classical capacity of generalized amplitude damping",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "quantum-information",
+      "quantum-channels",
+      "information-theory"
+    ],
+    "reason": "Determines classical capacity of generalized amplitude-damping channels and proves additivity results.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

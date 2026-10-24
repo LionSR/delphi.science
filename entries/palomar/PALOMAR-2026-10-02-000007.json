@@ -1,0 +1,52 @@
+{
+  "key": "PALOMAR-2026-10-02-000007",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/bayes-correlated-equilibrium-lean/tree/1f2d307e49d5dbcc33984709f9c7bf8691554fbc/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-02-000007-v1.json",
+  "title": "Finite Bayes Correlated Equilibrium, Information Expansions and Information Order",
+  "authors": [
+    "Arthur Freitas Ramos",
+    "David Barros Hulak",
+    "Ruy Jose Guerra Barretto de Queiroz"
+  ],
+  "summary": "Bergemann–Morris Theorem 1 for arbitrary finite players and states with heterogeneous action and original-signal spaces: a normalized decision rule is obedient if and only if a finite marginal-preserving information expansion supports a valid mixed Bayes–Nash strategy profile inducing its joint law. The recommendation expansion and the converse for arbitrary extra signals and independent behavioral randomization are proved. Null fibers are handled without conditioning, and exact induction is equivalent to the paper's positive-support quotient. Zero prior masses are permitted, extending the…",
+  "domain": "econ.TH",
+  "tags": [
+    "econ.TH",
+    "cs.GT",
+    "msc:91A27",
+    "msc:91A10",
+    "msc:91B44",
+    "msc:03B35"
+  ],
+  "published": "2026-10-02",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Bayes correlated equilibrium and the comparison of information structures in games",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/bayes-correlated-equilibrium-lean",
+  "commit": "1f2d307e49d5dbcc33984709f9c7bf8691554fbc",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "game-theory",
+      "information-economics",
+      "lean-formalization"
+    ],
+    "reason": "Formal treatment of Bayes correlated equilibrium and information expansions.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

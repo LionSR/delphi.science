@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-10-22-000022",
+  "source": "palomar",
+  "url": "https://github.com/sthubbar/goldbach-lean/tree/3ba1189ed38f0a913828af00d72196eebd68777f/entries/hardylittlewood1923",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-22-000022-v1.json",
+  "title": "Sums of primes, after Hardy and Littlewood 1923, Partitio Numerorum III, Theorems B to F proved without Hypothesis R",
+  "authors": [
+    "Steve Hubbard"
+  ],
+  "summary": "A sorry-free Lean 4 proof, with no hypothesis, of Theorems B, C, D, E and F of G. H. Hardy and J. E. Littlewood, Some problems of Partitio Numerorum III, Acta Math. 44, 1923. Hardy and Littlewood proved these theorems on their Hypothesis R, a form of the generalized Riemann hypothesis for Dirichlet L-functions; here they are proved unconditionally, from Vinogradov's estimate for exponential sums over primes and the Siegel-Walfisz theorem, so the argument is not Hardy and Littlewood's own for Theorems B, D and E. Formalized: Theorem B, the asymptotic for the weighted count nu_r of n as an…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11P32",
+    "msc:11P55",
+    "msc:11N13"
+  ],
+  "published": "2026-10-22",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Some problems of 'Partitio Numerorum'; III: On the expression of a number as a sum of primes",
+      "identifier": "doi:10.1007/BF02403921",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/sthubbar/goldbach-lean",
+  "commit": "3ba1189ed38f0a913828af00d72196eebd68777f",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "additive-number-theory",
+      "primes",
+      "goldbach-type-problems",
+      "lean"
+    ],
+    "reason": "Lean proof of Hardy–Littlewood theorems on sums of primes, unconditionally.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

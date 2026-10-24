@@ -1,0 +1,55 @@
+{
+  "key": "PALOMAR-2026-10-20-000004",
+  "source": "palomar",
+  "url": "https://github.com/jtraverso/lovasz-local-lemma/tree/9d020fa8fb20e9426c2d6780a3cfab4a68794d89/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-20-000004-v1.json",
+  "title": "The Lovász Local Lemma and two applications",
+  "authors": [
+    "Juan Pablo Traverso Gianini"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of the Lovász Local Lemma for finitely many events in a probability space with a dependency graph (each event mutually independent, in the sense of Mathlib's `ProbabilityTheory.Indep` of generated σ-algebras, of its non-neighbours), in its general form (P(A_i) ≤ x_i ∏_{j∼i}(1 − x_j) implies P(no event) ≥ ∏(1 − x_i)) and its symmetric form (e p (d + 1) ≤ 1 implies P(no event) > 0); and of two applications: Spencer's Ramsey lower bound (if 2e(C(k,2)C(n,k−2) + 1) ≤ 2^C(k,2) then R(k,k) > n) and the Erdős–Lovász property B theorem for k-uniform hypergraphs (each…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.PR",
+    "msc:05D40",
+    "msc:05C55",
+    "msc:05C15",
+    "msc:60C05"
+  ],
+  "published": "2026-10-20",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Problems and results on 3-chromatic hypergraphs and some related questions",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Asymptotic lower bounds for Ramsey functions",
+      "identifier": "doi:10.1016/0012-365X(77)90044-9",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jtraverso/lovasz-local-lemma",
+  "commit": "9d020fa8fb20e9426c2d6780a3cfab4a68794d89",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "probabilistic-method",
+      "graph-theory",
+      "formalization"
+    ],
+    "reason": "Lean 4 formalization of the Lovász Local Lemma with two combinatorial applications.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "key": "PALOMAR-2026-10-12-000002",
+  "source": "palomar",
+  "url": "https://github.com/pmaronow/aging-palomar/tree/d3f09f56462be6f73eb20733cb7963410409fa06/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-12-000002-v1.json",
+  "title": "Aging in Spherical Spin Glass Dynamics",
+  "authors": [
+    "P. M. Aronow",
+    "Patrick Lopatto"
+  ],
+  "summary": "Lean formalization of the spherical Gaussian spin-glass dynamics and its positive-semidefinite Cugliandolo--Kurchan limit, including the physical variational response, entropy and Fisher estimates, stationary translated clusters, general-spin selection and aging bounds, and stationary relaxation. Theorem 11.4 covers every integer p >= 3 and beta > 0. The cubic product inequality includes beta = beta_d; strictly positive Fisher-cost conclusions require beta > beta_d. The root Challenge retains the original complete-conclusions theorem with the five principal theorem groups and all-spin…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.AP",
+    "msc:60H10",
+    "msc:82D30",
+    "msc:60G15"
+  ],
+  "published": "2026-10-12",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Aging in Spherical Spin Glass Dynamics",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/pmaronow/aging-palomar",
+  "commit": "d3f09f56462be6f73eb20733cb7963410409fa06",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "spin-glasses",
+      "stochastic-dynamics",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of spherical spin-glass dynamics and aging bounds.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "A-quadratic-bound-for-Jacobsthals-function",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-quadratic-bound-for-Jacobsthals-function-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-quadratic-bound-for-Jacobsthals-function-September-25-2026/paper.pdf",
+  "title": "A quadratic bound for Jacobsthal's function",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "Let $`h(k)`$ be the least integer such that every interval of $`h(k)`$ consecutive integers contains an integer coprime to any prescribed positive integer having at most k distinct prime divisors. We prove $`h(k)\\ll k^2/(\\log\\log(3k))^2`$, giving an affirmative answer to Jacobsthal's quadratic-bound question.",
+  "domain": "Number theory",
+  "published": "2026-09-25",
+  "family": "021",
+  "family_title": "A quadratic bound for Jacobsthal’s function",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "sieve-theory",
+      "jacobsthal-function"
+    ],
+    "reason": "Proves a quadratic-type bound for Jacobsthal's function on coprime integers in intervals.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

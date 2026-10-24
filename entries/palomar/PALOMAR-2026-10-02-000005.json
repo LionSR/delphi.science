@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-10-02-000005",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/maskin-nash-implementation-lean/tree/9c041756dcee8e572b73f4c12b62e6c95322db09/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-02-000005-v1.json",
+  "title": "maskin-nash-implementation-lean",
+  "authors": [
+    "Arthur Freitas Ramos",
+    "David Barros Hulak",
+    "Ruy Jose Guerra Barretto de Queiroz"
+  ],
+  "summary": "Lean 4 formalization of Maskin's theorem on Nash implementation: necessity of Maskin monotonicity and sufficiency of monotonicity plus no-veto power via the canonical mechanism. Alternatives form a finite nonempty type, agents are indexed by Fin n, preferences are complete preorders, and the social choice correspondence is nonempty-valued. Sufficiency requires at least three agents; implementation is in pure strategies.",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "econ.TH",
+    "msc:91B26"
+  ],
+  "published": "2026-10-02",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Nash Equilibrium and Welfare Optimality",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/maskin-nash-implementation-lean",
+  "commit": "9c041756dcee8e572b73f4c12b62e6c95322db09",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "mechanism-design",
+      "game-theory",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of Maskin's theorem on Nash implementation.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

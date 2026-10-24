@@ -1,0 +1,31 @@
+{
+  "key": "A-Capacity-Criterion-for-Four-State-Potts-Reconstruction-on-Trees",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-Capacity-Criterion-for-Four-State-Potts-Reconstruction-on-Trees-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-Capacity-Criterion-for-Four-State-Potts-Reconstruction-on-Trees-October-5-2026/four-state-capacity.pdf",
+  "title": "A Capacity Criterion for Four-State Potts Reconstruction on Trees",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For the ferromagnetic four-state broadcast model with $`0\\lt \\lambda\\lt 1`$, we prove that reconstruction on a bounded-degree deterministic rooted tree occurs exactly when its L 3 capacity with edge resistances $`\\lambda^{-2|e|}`$ is positive. This gives an exact criterion without regularity or growth-rate assumptions on the tree, including at the exponential critical boundary.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-10-05",
+  "family": "229",
+  "family_title": "Exact three- and four-state reconstruction thresholds and four-state tree capacity",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "statistical-physics",
+      "reconstruction-problem",
+      "trees"
+    ],
+    "reason": "Proves an exact capacity-based criterion for Potts reconstruction on bounded-degree trees.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

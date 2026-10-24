@@ -1,0 +1,32 @@
+{
+  "key": "The-Kerr-Newman-Penrose-Inequality-for-Axisymmetric-Electrovacuum-Exteriors",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-Kerr-Newman-Penrose-Inequality-for-Axisymmetric-Electrovacuum-Exteriors-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-Kerr-Newman-Penrose-Inequality-for-Axisymmetric-Electrovacuum-Exteriors-October-5-2026/paper.pdf",
+  "title": "The Kerr–Newman Penrose Inequality for Axisymmetric Electrovacuum Exteriors",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the sharp Kerr–Newman Penrose inequality $`\\displaystyle m^2\\ge \\frac{A}{16\\pi}+\\frac{Q^2}{2} +\\frac{\\pi(Q^4+4J^2)}{A}.`$ Here $`Q^2=Q_e^2+Q_b^2`$, and J is the conserved total angular momentum, including its electromagnetic contribution. The result applies to smooth axisymmetric electrovacuum exteriors in the stated one-ended topological and decay class, with a connected outermost, outer-area-minimizing future marginally outer trapped boundary, Coulomb electromagnetic asymptotics, zero ADM momentum, and the explicitly assumed physical-area condition $`A\\ge4\\pi\\sqrt{Q^4+4J^2}`$. No…",
+  "domain": "Mathematical physics",
+  "published": "2026-10-05",
+  "family": "260",
+  "family_title": "Spacetime Penrose inequalities: enclosing area, charge, rotation, and anti-de Sitter extensions",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "general-relativity",
+      "penrose-inequality",
+      "black-holes",
+      "electrovacuum"
+    ],
+    "reason": "Proves a sharp Penrose-type mass inequality for axisymmetric electrovacuum exteriors under stated assumptions.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-09-18-000007",
+  "source": "palomar",
+  "url": "https://github.com/carlok/sharp-symmetry-bounds-lean/tree/ced9fe2d4d2aa42aa03bbc19b1b56cdcd18c9413/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-18-000007-v1.json",
+  "title": "Sharp symmetry bounds for real plane algebraic curves (Theorem 1)",
+  "authors": [
+    "Carlo Perassi"
+  ],
+  "summary": "Let C be an infinite real plane algebraic curve defined by a polynomial of degree d >= 2 that is irreducible over the complex numbers, and suppose C is not a circle. Its group of Euclidean symmetries is finite, the orientation-preserving part is cyclic of order at most max(d, 2d - 4), and the full group has order at most 2d. Both bounds are attained in every degree d >= 2. For d >= 5, curves attaining the rotation bound are exactly, up to orientation-preserving similarity, the curves Re(z^(d-2)(|z|^2 + a)) = 0 with |a| = 1 and a not real; conversely each such curve with d - 2 >= 3 attains…",
+  "domain": "math.AG",
+  "tags": [
+    "math.AG",
+    "math.MG",
+    "msc:14H50",
+    "msc:14P05",
+    "msc:51N20"
+  ],
+  "published": "2026-09-18",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Sharp symmetry bounds for real algebraic curves (working draft, 2026), Theorem 1",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/carlok/sharp-symmetry-bounds-lean",
+  "commit": "ced9fe2d4d2aa42aa03bbc19b1b56cdcd18c9413",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "algebraic-geometry",
+      "symmetry",
+      "plane-curves"
+    ],
+    "reason": "Derives sharp bounds on Euclidean symmetry groups of real plane algebraic curves.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

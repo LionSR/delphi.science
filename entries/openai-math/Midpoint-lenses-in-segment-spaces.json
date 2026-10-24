@@ -1,0 +1,31 @@
+{
+  "key": "Midpoint-lenses-in-segment-spaces",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Midpoint-lenses-in-segment-spaces-September-27-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Midpoint-lenses-in-segment-spaces-September-27-2026/manuscript.pdf",
+  "title": "Midpoint lenses in segment spaces",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For a real segment-forest dual with unbounded finite component heights and the real infinite-height coordinate predual, we bound the tail of an arbitrary displacement in a symmetric lens by $`2\\sqrt{R^2-\\|x\\|^2}`$, where R is the lens radius and x is its finitely supported center. Both given norms are asymptotically midpoint uniformly convex, although neither space admits an equivalent asymptotically uniformly convex norm. The finite-height forest dual is reflexive.",
+  "domain": "Functional analysis",
+  "published": "2026-09-27",
+  "family": "331",
+  "family_title": "Reflexive midpoint convexity and diamond distortion",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "banach-spaces",
+      "asymptotic-convexity",
+      "forest-duals"
+    ],
+    "reason": "Bounds displacement tails in symmetric lenses for segment-forest dual spaces and their convexity properties.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

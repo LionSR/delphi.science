@@ -1,0 +1,31 @@
+{
+  "key": "Equidistribution-of-Primitive-Sextic-Torus-Packets",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Equidistribution-of-Primitive-Sextic-Torus-Packets-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Equidistribution-of-Primitive-Sextic-Torus-Packets-October-5-2026/primitive-sextic-torus-packets.pdf",
+  "title": "Equidistribution of Primitive Sextic Torus Packets",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that the complete ideal-class packets of maximal orders in totally real sextic fields with no proper intermediate fields become equidistributed, with no escape of mass, in the space of unimodular lattices as their field discriminants tend to infinity. The limit is Haar probability measure. Each packet includes all coordinate-sign translates and is weighted by diagonal-orbit volume.",
+  "domain": "Number theory",
+  "published": "2026-10-05",
+  "family": "015",
+  "family_title": "Torus-packet equidistribution in prime, quartic, and sextic degrees",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "equidistribution",
+      "sextic-fields"
+    ],
+    "reason": "Proves equidistribution of sextic torus packets in the space of unimodular lattices.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

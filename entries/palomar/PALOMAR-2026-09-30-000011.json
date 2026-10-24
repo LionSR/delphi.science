@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-09-30-000011",
+  "source": "palomar",
+  "url": "https://github.com/mmislan/palomar-p082-acr-zero-divisors/tree/a2bcfab8f3015df957bc20da1db66cbf1ae98bd0/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000011-v1.json",
+  "title": "Zero-divisor criteria for absolute concentration robustness",
+  "authors": [
+    "Michael Mislan"
+  ],
+  "summary": "García Puente et al. (arXiv:2401.00078v3, Question 3.13) asked whether a unique positive zero-divisor value is necessary or sufficient for absolute concentration robustness (ACR) in at-most-bimolecular mass-action networks. Explicit networks with positive rational rates answer both questions negatively. A further three-species example shows that their candidate algorithm can miss a zero-divisor ACR value under an admissible elimination order, refuting the unrestricted elimination-order form of Conjecture 4.7. For block orders that compare the other species before the distinguished species,…",
+  "domain": "math.AC",
+  "tags": [
+    "math.AC",
+    "q-bio.MN",
+    "msc:13P10",
+    "msc:13P25",
+    "msc:92C42"
+  ],
+  "published": "2026-09-30",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Zero-divisor methods for absolute concentration robustness: completeness, positive geometry, and quantitative certificates",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/mmislan/palomar-p082-acr-zero-divisors",
+  "commit": "a2bcfab8f3015df957bc20da1db66cbf1ae98bd0",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "reaction-networks",
+      "commutative-algebra",
+      "concentration-robustness"
+    ],
+    "reason": "Zero-divisor criteria and counterexamples for absolute concentration robustness in networks.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

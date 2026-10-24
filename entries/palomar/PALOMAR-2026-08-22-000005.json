@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-08-22-000005",
+  "source": "palomar",
+  "url": "https://github.com/mbaccaro-dev/mathematical-proofs/tree/11d59ae23fb0fe3d8591a00069bec47a868ac93f/MathematicalProofs/MobiusResidualComplexity/Lean",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-22-000005-v1.json",
+  "title": "mbaccaro-dev/mathematical-proofs",
+  "authors": [
+    "Mayk Loide Baccaro"
+  ],
+  "summary": "A Lean 4 proof of a residual-or-unmatched barrier for local Möbius cancellation. At every sufficiently large fixed-band scale, either the permitted edge length reaches the retained-prime product or every member of an explicit squarefree prime-product family is unmatched. Chebyshev estimates give the exact binomial and factorial population bounds. The product scale also converts residual rank to its logarithmic threshold with the exact limiting constant.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11N37",
+    "msc:11A25"
+  ],
+  "published": "2026-08-22",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Logarithmic Residual-Complexity Barriers for Local Möbius Cancellation",
+      "identifier": "10.5281/zenodo.22006119",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/mbaccaro-dev/mathematical-proofs",
+  "commit": "11d59ae23fb0fe3d8591a00069bec47a868ac93f",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "mobius-function",
+      "lean-formalization"
+    ],
+    "reason": "Lean proof on Möbius cancellation barriers and prime-product population bounds.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "key": "Approximate-counting-of-common-bases-of-two-matroids",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Approximate-counting-of-common-bases-of-two-matroids-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Approximate-counting-of-common-bases-of-two-matroids-September-23-2026/main.pdf",
+  "title": "Approximate counting of common bases of two matroids",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We give a fully polynomial randomized approximation scheme for counting the common bases of two arbitrary matroids of the same rank, supplied by independence oracles. The algorithm requires no explicit representation of either matroid and has polynomial bounds on both oracle calls and bit operations on every execution.",
+  "domain": "Theoretical computer science",
+  "published": "2026-09-23",
+  "family": "114",
+  "family_title": "Approximate counting of common integer polymatroid bases",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "matroids",
+      "approximate-counting",
+      "randomized-algorithms",
+      "combinatorics"
+    ],
+    "reason": "Presents a randomized approximation scheme for counting common matroid bases, with complexity bounds.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "key": "PALOMAR-2026-09-15-000003",
+  "source": "palomar",
+  "url": "https://github.com/jbaelaw/erdos190-lean/tree/be43a3ead08a9d9af352cf296d284dd3468ca805/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-15-000003-v1.json",
+  "title": "Erdős Problem 190: every canonical N exceeds (Ck)^k for large k, and H(k)^{1/k}/k → ∞ under the existence hypothesis — a Lean 4 formalization of the qualitative statement of arXiv:2604.20588",
+  "authors": [
+    "Ji Ho Bae"
+  ],
+  "summary": "A Lean 4 formalization, against Mathlib, of the qualitative statement of J. H. Bae, \"A resolution of Erdős Problem #190: the canonical van der Waerden number satisfies H(k)^{1/k}/k → ∞\" (arXiv:2604.20588, v2), Corollary 1.2, via the elementary argument of its Section 4.3. Let H(k) be the least N such that every finite colouring of {1,…,N} contains a monochromatic or a rainbow k-term arithmetic progression; Erdős and Graham (1979) asked whether H(k)^{1/k}/k → ∞ (Problem 190 in Bloom's database). The compared theorems state that for every C there is K such that for all k ≥ K every N for which…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.NT",
+    "msc:05D10",
+    "msc:11B25",
+    "msc:05C65"
+  ],
+  "published": "2026-09-15",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A resolution of Erdős Problem #190: the canonical van der Waerden number satisfies H(k)^{1/k}/k → ∞",
+      "identifier": "https://arxiv.org/abs/2604.20588",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "A new lower bound for van der Waerden numbers",
+      "identifier": "https://doi.org/10.1016/j.ejc.2017.10.007",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Problems and results on 3-chromatic hypergraphs and some related questions",
+      "identifier": "Colloq. Math. Soc. János Bolyai 10 (1975), 609–627",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/jbaelaw/erdos190-lean",
+  "commit": "be43a3ead08a9d9af352cf296d284dd3468ca805",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "combinatorics",
+      "ramsey-theory",
+      "van-der-waerden",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of growth bounds for canonical van der Waerden numbers, relating to Erdős Problem 190.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

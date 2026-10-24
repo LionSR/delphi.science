@@ -1,0 +1,31 @@
+{
+  "key": "A-linear-cycle-and-edge-decomposition-of-every-graph",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-linear-cycle-and-edge-decomposition-of-every-graph-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-linear-cycle-and-edge-decomposition-of-every-graph-September-24-2026/main.pdf",
+  "title": "A linear cycle-and-edge decomposition of every graph",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that every finite simple undirected graph on n vertices has an edge partition into at most $`Cn`$ simple cycles and single edges, for an absolute constant C . This resolves the Erdős–Gallai cycle decomposition conjecture positively.",
+  "domain": "Combinatorics",
+  "published": "2026-09-24",
+  "family": "181",
+  "family_title": "The Erdős–Gallai cycle-decomposition conjecture",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "cycle-decomposition",
+      "combinatorics"
+    ],
+    "reason": "Proves every graph splits into linearly many cycles and edges, resolving Erdős–Gallai.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

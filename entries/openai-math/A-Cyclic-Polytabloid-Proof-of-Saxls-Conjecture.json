@@ -1,0 +1,31 @@
+{
+  "key": "A-Cyclic-Polytabloid-Proof-of-Saxls-Conjecture",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-Cyclic-Polytabloid-Proof-of-Saxls-Conjecture-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-Cyclic-Polytabloid-Proof-of-Saxls-Conjecture-September-24-2026/paper.pdf",
+  "title": "A Cyclic Polytabloid Proof of Saxl's Conjecture",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For every staircase partition, we prove that the tensor square of the corresponding irreducible complex representation of the symmetric group contains every irreducible representation of that group. This proves Saxl's conjecture.",
+  "domain": "Algebra",
+  "published": "2026-09-24",
+  "family": "205",
+  "family_title": "Saxl’s conjecture and universal tensor squares",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "representation-theory",
+      "symmetric-group",
+      "young-tableaux"
+    ],
+    "reason": "Proves Saxl's conjecture on tensor squares of staircase-partition representations of symmetric groups.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

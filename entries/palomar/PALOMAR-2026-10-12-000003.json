@@ -1,0 +1,51 @@
+{
+  "key": "PALOMAR-2026-10-12-000003",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/Math-Formalization/tree/ccc3ca43dc26c6774f2afd7f2b2223066451c362/topology/dowker-characterization",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-12-000003-v1.json",
+  "title": "Dowker's countable paracompactness, product normality and strict insertion characterization",
+  "authors": [
+    "Arthur Freitas Ramos",
+    "David Barros Hulak",
+    "Ruy Jose Guerra Barretto de Queiroz"
+  ],
+  "summary": "Formalization of Dowker (1951), Theorem 4: normality plus ordinary countable paracompactness of an arbitrary topological space X is equivalent to normality of X times the closed unit interval, and to strict continuous insertion between arbitrary real upper and lower semicontinuous functions h<g. No T1 or Hausdorff assumption on X, boundedness or uniform gap is added. Companion compact metrizable product theorem (Lemma 3) and countable-cover/decreasing-closed-sequence equivalences (Theorem 2) are included.",
+  "domain": "math.GN",
+  "tags": [
+    "math.GN",
+    "msc:54D15",
+    "msc:54D20",
+    "msc:54B10",
+    "msc:54C30"
+  ],
+  "published": "2026-10-12",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "On countably paracompact spaces",
+      "identifier": "https://doi.org/10.4153/CJM-1951-026-2",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/Math-Formalization",
+  "commit": "ccc3ca43dc26c6774f2afd7f2b2223066451c362",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "general-topology",
+      "paracompactness",
+      "lean-formalization"
+    ],
+    "reason": "Formalizes Dowker's characterization of countable paracompactness via product normality.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

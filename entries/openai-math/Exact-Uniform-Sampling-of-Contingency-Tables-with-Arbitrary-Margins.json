@@ -1,0 +1,31 @@
+{
+  "key": "Exact-Uniform-Sampling-of-Contingency-Tables-with-Arbitrary-Margins",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Exact-Uniform-Sampling-of-Contingency-Tables-with-Arbitrary-Margins-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Exact-Uniform-Sampling-of-Contingency-Tables-with-Arbitrary-Margins-September-24-2026/main.pdf",
+  "title": "Exact Uniform Sampling of Contingency Tables with Arbitrary Margins",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We give an exact uniform sampler for nonnegative integer contingency tables with arbitrary prescribed margins. It terminates almost surely and has expected bit complexity polynomial in both dimensions and the binary length of the margins. No positivity, balance, sparsity, or fixed-dimension assumption is required.",
+  "domain": "Theoretical computer science",
+  "published": "2026-09-24",
+  "family": "115",
+  "family_title": "Sampling and counting contingency tables with arbitrary margins",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "algorithms",
+      "sampling",
+      "contingency-tables"
+    ],
+    "reason": "Gives an exact uniform sampler for contingency tables with arbitrary margins and polynomial complexity.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

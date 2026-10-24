@@ -1,0 +1,32 @@
+{
+  "key": "Single-fold-Diophantine-representations",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Single-fold-Diophantine-representations-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Single-fold-Diophantine-representations-September-24-2026/paper.pdf",
+  "title": "Single-fold Diophantine representations",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "Every recursively enumerable set of natural-number tuples has a polynomial Diophantine representation with exactly one complete auxiliary tuple for each member. This proves the single-fold conjecture and, consequently, the finite-fold conjecture.",
+  "domain": "Mathematical logic",
+  "published": "2026-09-24",
+  "family": "242",
+  "family_title": "Single-fold Diophantine representations and undecidability under an at-most-one-solution promise",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "logic",
+      "diophantine-equations",
+      "computability",
+      "hilbert-tenth-problem"
+    ],
+    "reason": "Proves single-fold Diophantine representations for recursively enumerable sets.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

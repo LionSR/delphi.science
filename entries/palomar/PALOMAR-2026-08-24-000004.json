@@ -1,0 +1,42 @@
+{
+  "key": "PALOMAR-2026-08-24-000004",
+  "source": "palomar",
+  "url": "https://github.com/jeremypparker/mahler-hansen-cograph/tree/c7639c5060f40d69b613bcbd637b1750f27b7e3f/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-24-000004-v2.json",
+  "title": "Three Sharp Bounds for Hansen Polytopes of Cographs",
+  "authors": [
+    "Jeremy P Parker"
+  ],
+  "summary": "A Lean 4/Mathlib formalisation of three sharp lower bounds for Hansen polytopes of finite nonempty cographs: normalized Mahler volume at least one, at least 3^d nonempty faces, and at least 2^d d! full flags in dimension d. In each result equality holds exactly for threshold graphs.",
+  "domain": "math.MG",
+  "tags": [
+    "math.MG",
+    "math.CO",
+    "msc:52A40",
+    "msc:52B05",
+    "msc:05C75"
+  ],
+  "published": "2026-09-10",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/jeremypparker/mahler-hansen-cograph",
+  "commit": "c7639c5060f40d69b613bcbd637b1750f27b7e3f",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "convex-geometry",
+      "cographs",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of sharp lower bounds for Hansen polytopes of cographs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

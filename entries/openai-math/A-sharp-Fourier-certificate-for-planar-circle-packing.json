@@ -1,0 +1,31 @@
+{
+  "key": "A-sharp-Fourier-certificate-for-planar-circle-packing",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-sharp-Fourier-certificate-for-planar-circle-packing-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-sharp-Fourier-certificate-for-planar-circle-packing-September-23-2026/paper.pdf",
+  "title": "A sharp Fourier certificate for planar circle packing",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We resolve the planar Cohn–Elkies sharpness conjecture: the two-point Fourier bound attains the optimal circle-packing density $`\\pi/(2\\sqrt3)`$. We construct a radial Schwartz certificate and prove its global sign conditions using rigorous interval arithmetic and analytic estimates. The same certificate recovers the classical uniqueness of the triangular packing among periodic equality cases.",
+  "domain": "Convex and metric geometry",
+  "published": "2026-09-23",
+  "family": "090",
+  "family_title": "Triangular-lattice optimality, long-range Riesz and Coulomb energies, and spherical logarithmic energy",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "discrete-geometry",
+      "sphere-packing",
+      "fourier-analysis"
+    ],
+    "reason": "Resolves the planar Cohn-Elkies sharpness question using a Fourier certificate for circle packing.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "PALOMAR-2026-08-22-000010",
+  "source": "palomar",
+  "url": "https://github.com/CBirkbeck/uniform-sheafy-tate-domains-lean/tree/93be0af164d6feec98f17326dd6dcef884751fc9/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-22-000010-v1.json",
+  "title": "CBirkbeck/uniform-sheafy-tate-domains-lean",
+  "authors": [
+    "Christopher Birkbeck",
+    "Alex Torzewski"
+  ],
+  "summary": "A Lean 4 formalisation of *Uniform sheafy Tate rings that are not stably uniform* (Birkbeck–Torzewski), answering Question 7 of Kedlaya's *Nonarchimedean Scottish Book* in the negative: a sheafy uniform Huber pair need not be stably uniform. Buzzard–Verberkmoes and Mihara proved that stably uniform Tate Huber rings are sheafy; whether the converse holds was open. The paper gives two complete Tate algebras over a complete discretely valued field `k` that are uniform, nonnoetherian integral domains with `A° = A₀`, strongly sheafy (every Tate algebra `A⟨X₁, …, Xₙ⟩` is sheafy), and yet not…",
+  "domain": "math.AG",
+  "tags": [
+    "math.AG",
+    "math.NT",
+    "msc:14G22",
+    "msc:12J25",
+    "msc:13J10",
+    "msc:16W80",
+    "msc:14G45"
+  ],
+  "published": "2026-08-22",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Uniform sheafy Tate rings that are not stably uniform",
+      "identifier": "https://cbirkbeck.github.io/uniform-sheafy-tate-domains/",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/CBirkbeck/uniform-sheafy-tate-domains-lean",
+  "commit": "93be0af164d6feec98f17326dd6dcef884751fc9",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "rigid-geometry",
+      "commutative-algebra",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of a result on uniform sheafy Tate rings and stable uniformity.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

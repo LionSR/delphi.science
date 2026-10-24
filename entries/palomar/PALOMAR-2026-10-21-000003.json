@@ -1,0 +1,55 @@
+{
+  "key": "PALOMAR-2026-10-21-000003",
+  "source": "palomar",
+  "url": "https://github.com/jtraverso/lovasz-theta/tree/2d506b5abca378d9133b5e3f1264a5316843c9a7/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-21-000003-v1.json",
+  "title": "Lovász's bound on the Shannon capacity",
+  "authors": [
+    "Juan Pablo Traverso Gianini"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of Lovász's orthonormal-representation bound on the independence number (if u is an orthonormal representation of G with handle c and 1 ≤ t (c·u_i)² for every vertex, then α(G) ≤ t), of its multiplicativity under strong powers (α(G^⊠k) ≤ t^k), and of its application to the pentagon: α(C₅^⊠k)² ≤ 5^k for every k, Shannon's α(C₅^⊠2) = 5, and hence the Shannon capacity Θ(C₅) = √5. Mathlib has independence numbers but neither strong graph products nor the Shannon capacity.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.IT",
+    "msc:05C69",
+    "msc:94A15",
+    "msc:05C50"
+  ],
+  "published": "2026-10-21",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "On the Shannon capacity of a graph",
+      "identifier": "doi:10.1109/TIT.1979.1055985",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "The zero error capacity of a noisy channel",
+      "identifier": "doi:10.1109/TIT.1956.1056798",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jtraverso/lovasz-theta",
+  "commit": "2d506b5abca378d9133b5e3f1264a5316843c9a7",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "shannon-capacity",
+      "independence-number",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of Lovász's bound on independence number and Shannon capacity of C5.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "key": "PALOMAR-2026-10-21-000013",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/Math-Formalization/tree/0377aacab289fee8153cdec87fd8a1be06b9ec2c/topology/banach-mazur-category",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-21-000013-v1.json",
+  "title": "Banach–Mazur determinacy for Baire-property targets",
+  "authors": [
+    "Arthur Freitas Ramos",
+    "David Barros Hulak",
+    "Ruy Jose Guerra Barretto de Queiroz"
+  ],
+  "summary": "For any complete metric space and any target set with the property of Baire, the Banach–Mazur category game is determined: the first player has a winning full-history strategy exactly when the target is nonmeagre, and the second exactly when it is meagre. A win for the first player means one target point lies in every move. The proof constructs meagre-target avoidance without metric assumptions and shrinking closed-trap target forcing in complete metric spaces; it proves actual joint-play existence and excludes simultaneous winners. Empty spaces and equal nested moves are explicit. This is…",
+  "domain": "math.GN",
+  "tags": [
+    "math.GN",
+    "msc:54E52",
+    "msc:91A44",
+    "msc:03E15"
+  ],
+  "published": "2026-10-21",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Banach-Mazur Games with Simple Winning Strategies, CSL2012, pp.305–319",
+      "identifier": "https://doi.org/10.4230/LIPIcs.CSL.2012.305",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/Math-Formalization",
+  "commit": "0377aacab289fee8153cdec87fd8a1be06b9ec2c",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "set-theory",
+      "topology",
+      "game-theory",
+      "baire-category"
+    ],
+    "reason": "Determinacy of the Banach–Mazur category game for targets with the Baire property.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

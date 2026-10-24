@@ -1,0 +1,60 @@
+{
+  "key": "PALOMAR-2026-08-29-000012",
+  "source": "palomar",
+  "url": "https://github.com/sneed-and-feed/lean-theorems-1/tree/737f479090feab036d6f83b069e23a9e523daf33/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-29-000012-v1.json",
+  "title": "sneed-and-feed/lean-theorems-1",
+  "authors": [
+    "Sneed & Feed Formalization Team"
+  ],
+  "summary": "A complete, machine-checked Lean 4 formalization of Bárány's Colorful Carathéodory Theorem (1982), Bárány's First Selection Lemma (1982), the 1D Centerpoint Theorem, and geometric deductions from first principles. Proves that for any d + 1 sets of points S_0, ..., S_d in R^d whose convex hulls all contain a common target point p, there exists a colorful transversal f (selecting f(i) in S_i for each color class i) whose convex hull conv({f(0), ..., f(d)}) contains p. Formulated over arbitrary dimension d, with specializations to the origin and low dimensions (d = 0, 1, 2), a formal deduction…",
+  "domain": "math.MG",
+  "tags": [
+    "math.MG",
+    "math.CO",
+    "msc:52A35",
+    "msc:52A20",
+    "msc:05D15"
+  ],
+  "published": "2026-08-29",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A generalization of Carathéodory's theorem",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Über den Variabilitätsbereich der Koeffizienten von Potenzreihen, die gegebene Werte nicht annehmen",
+      "identifier": "",
+      "relationship": "adapts"
+    },
+    {
+      "title": "A Theorem on General Measure",
+      "identifier": "",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/sneed-and-feed/lean-theorems-1",
+  "commit": "737f479090feab036d6f83b069e23a9e523daf33",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "convex-geometry",
+      "lean-formalization",
+      "caratheodory-theorem",
+      "discrete-geometry"
+    ],
+    "reason": "Lean formalization of Bárány's colorful Carathéodory and selection lemmas.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

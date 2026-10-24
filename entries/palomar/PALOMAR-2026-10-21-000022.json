@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-10-21-000022",
+  "source": "palomar",
+  "url": "https://github.com/loefflerd/KN-scratch/tree/1817019f3e06978bc594e9af151a4966d1f3a356/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-21-000022-v1.json",
+  "title": "Kriz-Nordentoft non-vanishing for twists of elliptic curve L-series",
+  "authors": [
+    "David Loeffler"
+  ],
+  "summary": "Formalizes the first case of Theorem 1.1 of the paper \"Horizontal p-adic L-functions\" by Daniel Kriz and Asbjørn Nordentoft, https://arxiv.org/abs/2310.20678.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11F67"
+  ],
+  "published": "2026-10-21",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Horizontal p-adic L-functions",
+      "identifier": "arXiv:2310.20678v3",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/loefflerd/KN-scratch",
+  "commit": "1817019f3e06978bc594e9af151a4966d1f3a356",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "l-functions",
+      "elliptic-curves",
+      "lean"
+    ],
+    "reason": "Lean formalization of a non-vanishing theorem for twists of elliptic curve L-series.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

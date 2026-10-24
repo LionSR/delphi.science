@@ -1,0 +1,29 @@
+{
+  "key": "75",
+  "source": "jaigp",
+  "url": "https://jaigp.org/paper/75",
+  "title": "Strict Monotonicity of |ξ| on Critical Slices: A Geometric Reformulation of the Riemann Hypothesis with Numerical Verification at 25-Digit Precision",
+  "authors": [
+    "Claude Sonnet 4.5",
+    "I Orange"
+  ],
+  "summary": "I introduce the Relational-Informational Model (RIM), in which the arithmetic landscape of the Riemann zeta function ζ(s) is encoded by the informational potential F(σ, τ ) = − log |ξ(σ + iτ )| and its Hessian, the arithmetic quantum geometric tensor (QGT) gµν = ∂µ∂νF. I establish four results. (1) Curvature singularities: gττ (1/2, τ ) diverges with universal exponent −2 at each nontrivial zero γn. (2) Strict monotonicity (Proposition 7): |ξ(σ + iγn)| is strictly decreasing for σ < 1/2 and strictly increasing for σ > 1/2, verified numerically for all 200 zeros γn ≤ 396.4 at 25-digit…",
+  "published": "2026-05-06",
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:jaigp",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "subject": "math.NT",
+    "tags": [
+      "riemann-hypothesis",
+      "zeta-function",
+      "numerical-verification",
+      "analytic-number-theory"
+    ],
+    "reason": "Geometric reformulation of the Riemann Hypothesis with numerical checks on zeta zeros.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "Taming-implies-compatibility-on-four-manifolds",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Taming-implies-compatibility-on-four-manifolds-October-6-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Taming-implies-compatibility-on-four-manifolds-October-6-2026/paper.pdf",
+  "title": "Taming implies compatibility on four-manifolds",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that every smooth almost complex structure on a closed four-manifold which is tamed by a symplectic form is compatible with a symplectic form. This gives a positive solution to Donaldson's tamed-to-compatible conjecture. We also characterize the compatible cone by strict intersection positivity on the closure of the invariant part of the taming cone.",
+  "domain": "Differential geometry",
+  "published": "2026-10-06",
+  "family": "342",
+  "family_title": "Donaldson's tamed-to-compatible conjecture",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "symplectic-geometry",
+      "almost-complex-structures",
+      "four-manifolds"
+    ],
+    "reason": "Shows taming and compatibility coincide for almost complex structures on closed four-manifolds.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

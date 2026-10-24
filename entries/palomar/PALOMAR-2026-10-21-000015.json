@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-10-21-000015",
+  "source": "palomar",
+  "url": "https://github.com/Flaman55/RamanujanNestedRadicals/tree/2b932baf2e72426583ef47a1bb23b4458879e959/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-21-000015-v1.json",
+  "title": "RamanujanNestedRadicals: convergence and exact values of Ramanujan-type nested radicals",
+  "authors": [
+    "Artur Flamandzki"
+  ],
+  "summary": "Lean 4 / Mathlib formalization of the results of the author's paper \"Nested Radicals of Ramanujan's Type with Arbitrary Coefficient Sequences\" (Flamandzki, 2026). For a coefficient sequence a : N -> R, the radical of depth d is built by the recursion R_k = sqrt(1 + a_k R_{k+1}) from a seed; `Submission.rollUp a T d` is the depth-d truncation with seed T and `Submission.truncRadical a d` uses the seed 1. For a root order n >= 2 the square root is replaced by the n-th root (`Submission.rollUpN`) and, for the classical unbounded family, by the signed recursion with radicand (-1)^n + a_k R_{k+1}…",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA",
+    "math.NT",
+    "msc:40A05"
+  ],
+  "published": "2026-10-21",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Nested Radicals of Ramanujan's Type with Arbitrary Coefficient Sequences",
+      "identifier": "https://doi.org/10.5281/zenodo.18071173",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Flaman55/RamanujanNestedRadicals",
+  "commit": "2b932baf2e72426583ef47a1bb23b4458879e959",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "analysis",
+      "nested-radicals",
+      "series",
+      "lean"
+    ],
+    "reason": "Lean formalization of convergence and exact values for Ramanujan-type nested radicals.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

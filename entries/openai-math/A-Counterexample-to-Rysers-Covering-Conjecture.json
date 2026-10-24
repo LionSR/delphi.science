@@ -1,0 +1,31 @@
+{
+  "key": "A-Counterexample-to-Rysers-Covering-Conjecture",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-Counterexample-to-Rysers-Covering-Conjecture-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-Counterexample-to-Rysers-Covering-Conjecture-September-23-2026/paper.pdf",
+  "title": "A counterexample to Ryser's covering conjecture",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For every sufficiently large prime $`s\\equiv2\\pmod3`$ and every sufficiently large odd integer n , with the threshold depending on s , we construct an intersecting $`(s^n+1)`$-partite $`(s^n+1)`$-uniform hypergraph with covering number $`s^n+1`$. This disproves Ryser's covering conjecture in its intersecting case.",
+  "domain": "Combinatorics",
+  "published": "2026-09-23",
+  "family": "162",
+  "family_title": "Counterexamples to Ryser’s covering conjecture",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "hypergraphs",
+      "combinatorics",
+      "covering-number"
+    ],
+    "reason": "Constructs intersecting hypergraphs disproving Ryser's covering conjecture for large parameters.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

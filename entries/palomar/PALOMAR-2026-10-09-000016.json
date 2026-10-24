@@ -1,0 +1,54 @@
+{
+  "key": "PALOMAR-2026-10-09-000016",
+  "source": "palomar",
+  "url": "https://github.com/JD-Jones-ASES/PlanarMidpoint/tree/148b39618710caf576189cbdb75551cec1735201/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-09-000016-v1.json",
+  "title": "Planar Euclidean midpoint rigidity",
+  "authors": [
+    "JD Jones"
+  ],
+  "summary": "A complete Lean proof of the dimension-two case of Nielsen–Okamura Conjecture 9.1. On any connected open planar Euclidean domain, complementarity of the actual canonical local affine-parameter midpoints of a smooth pair of dual torsion-free connections forces the symmetric cubic tensor to be constant. The proof constructs and identifies the short geodesic germs and derives the fourth-order obstruction, including the exceptional rank-deficient tensors. A second theorem needs only everywhere Frechet differentiability and vanishing of that obstruction; five fixed direction tests at every point…",
+  "domain": "math.DG",
+  "tags": [
+    "math.DG",
+    "math.CA",
+    "msc:53B12",
+    "msc:39B22"
+  ],
+  "published": "2026-10-09",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Planar Euclidean midpoint rigidity",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Nielsen–Okamura, arXiv:2609.07551v2, Section 9",
+      "identifier": "",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/JD-Jones-ASES/PlanarMidpoint",
+  "commit": "148b39618710caf576189cbdb75551cec1735201",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "differential-geometry",
+      "connections",
+      "midpoints",
+      "lean"
+    ],
+    "reason": "Lean proof of the planar case of a midpoint rigidity conjecture for connections.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

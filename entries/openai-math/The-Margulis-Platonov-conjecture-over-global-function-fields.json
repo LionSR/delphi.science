@@ -1,0 +1,32 @@
+{
+  "key": "The-Margulis-Platonov-conjecture-over-global-function-fields",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-Margulis-Platonov-conjecture-over-global-function-fields-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-Margulis-Platonov-conjecture-over-global-function-fields-October-5-2026/margulis-platonov-global-function-fields.pdf",
+  "title": "The Margulis–Platonov conjecture over global function fields",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the Margulis–Platonov conjecture over every global function field, including characteristic two. For an absolutely almost simple simply connected algebraic group, every noncentral abstract normal subgroup of its rational points is the inverse image of an open normal subgroup of the finite product of its anisotropic local groups.",
+  "domain": "Number theory",
+  "published": "2026-10-05",
+  "family": "018",
+  "family_title": "The Margulis–Platonov conjecture over global fields",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "group-theory",
+      "algebraic-groups",
+      "normal-subgroups",
+      "global-function-fields"
+    ],
+    "reason": "Proves the Margulis–Platonov normal subgroup classification over global function fields.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

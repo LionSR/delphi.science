@@ -1,0 +1,31 @@
+{
+  "key": "Matrix-Multiplication-Nine-Fourths",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Matrix-Multiplication-Nine-Fourths-October-2-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Matrix-Multiplication-Nine-Fourths-October-2-2026/paper.pdf",
+  "title": "An Upper Bound of 9/4 for the Matrix Multiplication Exponent",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that the exponent of matrix multiplication over the complex numbers is at most 9/4.",
+  "domain": "Theoretical computer science",
+  "published": "2026-10-02",
+  "family": "107",
+  "family_title": "Matrix multiplication with exponent at most 9/4",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "matrix-multiplication",
+      "algebraic-complexity",
+      "computational-complexity"
+    ],
+    "reason": "Claims an upper bound of 9/4 on the matrix multiplication exponent.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "key": "PALOMAR-2026-10-23-000003",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/Math-Formalization/tree/d33817461fadbe8d7498a237b0c5bc27dc044afb/topology/sierpinski-rationals",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-23-000003-v1.json",
+  "title": "Sierpiński's characterization of the rationals",
+  "authors": [
+    "Arthur Freitas Ramos",
+    "David Barros Hulak",
+    "Ruy Jose Guerra Barretto de Queiroz"
+  ],
+  "summary": "Every nonempty countable metrizable topological space without isolated points is homeomorphic to the rational numbers with their usual topology. Conversely, these four properties characterize spaces homeomorphic to the rationals. A clopen basis is derived from the hypotheses. Scheduled binary clopen splits give each point an address with both bits arbitrarily far out; the induced lexicographic order is proved dense, without endpoints, and to generate exactly the original topology. The countable dense-order isomorphism theorem then gives the homeomorphism. This formalizes classical…",
+  "domain": "math.GN",
+  "tags": [
+    "math.GN",
+    "msc:54F65",
+    "msc:54E35",
+    "msc:06A05"
+  ],
+  "published": "2026-10-23",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Two Topological Uniqueness Theorems for Spaces of Real Numbers, arXiv:1210.1008v1",
+      "identifier": "https://arxiv.org/pdf/1210.1008v1",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/Math-Formalization",
+  "commit": "d33817461fadbe8d7498a237b0c5bc27dc044afb",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "general-topology",
+      "rational-numbers",
+      "formalization"
+    ],
+    "reason": "Formal proof of Sierpiński's characterization of the rationals as a topological space.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

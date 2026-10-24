@@ -1,0 +1,32 @@
+{
+  "key": "Smooth-Anisotropic-Uniqueness-in-the-Calderon-Problem-from-One-Boundary-Patch",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Smooth-Anisotropic-Uniqueness-in-the-Calderon-Problem-from-One-Boundary-Patch-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Smooth-Anisotropic-Uniqueness-in-the-Calderon-Problem-from-One-Boundary-Patch-September-24-2026/paper.pdf",
+  "title": "Smooth anisotropic uniqueness in the Calderón problem from one boundary patch",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We resolve the smooth anisotropic Calderón uniqueness problem with arbitrary same-patch measurements. A smooth Riemannian metric on a compact connected manifold of dimension at least three is determined, up to a diffeomorphism fixing the measured patch, by its zero-frequency Dirichlet-to-Neumann energy form with both input and observation on any nonempty open boundary patch.",
+  "domain": "Partial differential equations",
+  "published": "2026-09-24",
+  "family": "365",
+  "family_title": "Joint metric and connection recovery from one boundary patch",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "inverse-problems",
+      "calderon-problem",
+      "riemannian-geometry",
+      "dirichlet-to-neumann"
+    ],
+    "reason": "Proves smooth anisotropic metrics are determined by data from one boundary patch.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

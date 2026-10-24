@@ -1,0 +1,31 @@
+{
+  "key": "The-strong-thin-tree-conjecture",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-strong-thin-tree-conjecture-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-strong-thin-tree-conjecture-September-23-2026/paper.pdf",
+  "title": "The strong thin tree conjecture",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that every finite loopless k -edge-connected multigraph on at least two vertices, with k ≥ 1, has a spanning tree meeting each cut in at most $`C/k`$ times the size of the cut, where C is a universal constant. This resolves the strong thin tree conjecture.",
+  "domain": "Combinatorics",
+  "published": "2026-09-23",
+  "family": "174",
+  "family_title": "Deterministic construction of strong thin spanning trees",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "combinatorics",
+      "spanning-trees"
+    ],
+    "reason": "Proves the strong thin tree conjecture for k-edge-connected multigraphs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

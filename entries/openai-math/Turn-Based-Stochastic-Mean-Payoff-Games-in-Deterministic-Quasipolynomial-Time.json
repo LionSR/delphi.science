@@ -1,0 +1,31 @@
+{
+  "key": "Turn-Based-Stochastic-Mean-Payoff-Games-in-Deterministic-Quasipolynomial-Time",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Turn-Based-Stochastic-Mean-Payoff-Games-in-Deterministic-Quasipolynomial-Time-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Turn-Based-Stochastic-Mean-Payoff-Games-in-Deterministic-Quasipolynomial-Time-October-5-2026/stochastic-mean-payoff-games.pdf",
+  "title": "Turn-Based Stochastic Mean-Payoff Games in Deterministic Quasipolynomial Time",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We give a uniform deterministic quasipolynomial-time algorithm for finite turn-based stochastic mean-payoff games with signed integer rewards and rational chance-transition probabilities encoded in binary. It computes exactly the vertices of nonnegative value, including value zero, for the expectation of the pathwise liminf mean payoff. The algorithm uses exact rational arithmetic and $`2^{O((\\log(L+2))^2)}`$ bit operations, where L is the complete binary input length.",
+  "domain": "Theoretical computer science",
+  "published": "2026-10-05",
+  "family": "104",
+  "family_title": "Quasipolynomial algorithms for mean-payoff, stochastic and parity games",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "game-theory",
+      "algorithms",
+      "stochastic-games"
+    ],
+    "reason": "Gives a deterministic quasipolynomial-time algorithm for stochastic mean-payoff games.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

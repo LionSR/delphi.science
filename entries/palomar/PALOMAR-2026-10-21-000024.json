@@ -1,0 +1,42 @@
+{
+  "key": "PALOMAR-2026-10-21-000024",
+  "source": "palomar",
+  "url": "https://github.com/itpplasma/symplectic-stafford-formal/tree/0e55a8059cc923ef39d6ddb66c5b6f6a2682b46b/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-21-000024-v1.json",
+  "title": "Symplectic Stafford: the affine same-divisor theorem",
+  "authors": [
+    "Christopher Albert"
+  ],
+  "summary": "Let k be a field of characteristic zero and U a simple, infinite-dimensional k-algebra with an exhaustive nonnegative multiplicative filtration by finite-dimensional k-subspaces. Suppose F_0 U = k and the associated graded algebra is a commutative affine domain of finite Krull dimension. Then for every nonzero d, a in U and every B in U there exist H, R, S in U such that 1 = dR + (B + Ha)dS. The Lean 4 development proves this theorem, its left-handed form, and module generation, stable range and cancellation results for U.",
+  "domain": "math.RA",
+  "tags": [
+    "math.RA",
+    "math.AG",
+    "msc:16S32",
+    "msc:16S38"
+  ],
+  "published": "2026-10-21",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/itpplasma/symplectic-stafford-formal",
+  "commit": "0e55a8059cc923ef39d6ddb66c5b6f6a2682b46b",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "ring-theory",
+      "algebra",
+      "stable-range",
+      "lean"
+    ],
+    "reason": "Lean proof of an affine same-divisor theorem for simple infinite-dimensional algebras.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

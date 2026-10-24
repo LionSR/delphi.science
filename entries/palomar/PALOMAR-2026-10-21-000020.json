@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-10-21-000020",
+  "source": "palomar",
+  "url": "https://github.com/wcook04/plectis-erdos-lean/tree/52f29ad173b04e3bac941b3663f2b9aebe5de0bb/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-21-000020-v1.json",
+  "title": "Erdős problem #257: all base irrationality of the reciprocal Mersenne subseries for every infinite reciprocal summable support, with weighted mass and positive cover extensions, achievement set geometry, and exact greedy membership criteria",
+  "authors": [
+    "Will Cook"
+  ],
+  "summary": "Erdős problem 257 asks whether the sum over a in A of 1/(2^a - 1) is irrational for every infinite set A of positive integers. The principal theorem compared here settles the whole reciprocal summable regime at every integer base: if A is infinite and the sum over a in A of 1/a converges, then the sum over a in A of 1/(b^a - 1) is irrational for every integer b at least 2 (ReciprocalSupport.irrational_supportPowerSeries_of_summable_reciprocal). No pairwise coprimality, periodicity, density, or powerful support hypothesis appears. Paul Erdős printed the pairwise coprime case of exactly this…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CA",
+    "math.DS",
+    "msc:11J72",
+    "msc:11A25",
+    "msc:11A07",
+    "msc:11B37",
+    "msc:11B83",
+    "msc:28A80",
+    "msc:11K16"
+  ],
+  "published": "2026-10-21",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/wcook04/plectis-erdos-lean",
+  "commit": "52f29ad173b04e3bac941b3663f2b9aebe5de0bb",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "erdos-problems",
+      "irrationality",
+      "reciprocal-series"
+    ],
+    "reason": "Irrationality of reciprocal Mersenne-type subseries across integer bases, extending Erdős problem 257.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

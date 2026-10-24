@@ -1,0 +1,61 @@
+{
+  "key": "PALOMAR-2026-08-30-000002",
+  "source": "palomar",
+  "url": "https://github.com/pengzhang91/Feige/tree/939c2581c8c97339c7d465bc2c85c31e95255c17/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-30-000002-v1.json",
+  "title": "pengzhang91/Feige",
+  "authors": [
+    "Guanyang Wang",
+    "Peng Zhang"
+  ],
+  "summary": "A Lean 4 formalization of the sharp unit-slack (delta = 1) small-deviation inequality for sums of independent nonnegative random variables. For every positive integer n and every independent family X_1, ..., X_n of measurable, integrable, nonnegative random variables satisfying E[X_i] = (n / (n + 1))^n and proves that this constant is optimal for each fixed n. This optimal dimension-dependent bound strengthens and implies Feige's 1/e conjecture. The repository also formalizes the Vlassis-Thomas exact calibration theorem and Grünbaum's centroid-halfspace inequality used in the proof.",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.CO",
+    "msc:60E15",
+    "msc:60G50",
+    "msc:52A40"
+  ],
+  "published": "2026-08-30",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Sharp Small-Deviation Inequalities for Sums of Independent Nonnegative Random Variables",
+      "identifier": "arXiv:2607.23980",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "An Exact Distribution-Free Test for Means of Nonnegative Random Variables",
+      "identifier": "arXiv:2607.08415",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Partitions of Mass-Distributions and of Convex Bodies by Hyperplanes",
+      "identifier": "doi:10.2140/pjm.1960.10.1257",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/pengzhang91/Feige",
+  "commit": "939c2581c8c97339c7d465bc2c85c31e95255c17",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "probability",
+      "small-deviation",
+      "lean-formalization",
+      "feige-conjecture"
+    ],
+    "reason": "Lean formalization of a sharp small-deviation inequality for nonnegative random variables.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

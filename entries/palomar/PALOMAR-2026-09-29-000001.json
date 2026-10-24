@@ -1,0 +1,69 @@
+{
+  "key": "PALOMAR-2026-09-29-000001",
+  "source": "palomar",
+  "url": "https://github.com/troyjlee/quantum-query-complexity/tree/517ba85eb211232771429804d8583e3f52b9d541/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-29-000001-v1.json",
+  "title": "Adversary bounds and the polynomial method for quantum queries",
+  "authors": [
+    "Troy Lee"
+  ],
+  "summary": "Lean proofs of strong duality and exact block composition for the negative-weight adversary bound on total Boolean functions, explicit constant-factor characterizations of bounded-error quantum query complexity in value and Boolean XOR oracle models, and uniform extraction of query algorithms from supplied promise dual certificates. The submission also proves that every output probability of a q-query algorithm on Boolean inputs has a real polynomial representation of degree at most 2q in each model. Seven statements are compared against a standalone Mathlib-only specification of the finite…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "msc:68Q12",
+    "msc:81P68"
+  ],
+  "published": "2026-09-29",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Negative weights make adversaries stronger",
+      "identifier": "https://arxiv.org/abs/quant-ph/0611054v2",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Quantum query complexity of state conversion",
+      "identifier": "https://arxiv.org/abs/1011.3020v2",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Reflections for quantum query algorithms",
+      "identifier": "https://arxiv.org/abs/1005.1601v1",
+      "relationship": "adapts"
+    },
+    {
+      "title": "The quantum query complexity of composition with a relation",
+      "identifier": "https://arxiv.org/abs/2004.06439v1",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Quantum Lower Bounds by Polynomials",
+      "identifier": "https://arxiv.org/abs/quant-ph/9802049v3",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/troyjlee/quantum-query-complexity",
+  "commit": "517ba85eb211232771429804d8583e3f52b9d541",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "lean",
+      "quantum-computing",
+      "query-complexity",
+      "adversary-bounds"
+    ],
+    "reason": "Lean proofs on adversary bounds and polynomial representations for quantum query algorithms.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

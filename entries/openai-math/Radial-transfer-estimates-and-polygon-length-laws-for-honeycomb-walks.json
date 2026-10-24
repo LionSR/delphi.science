@@ -1,0 +1,32 @@
+{
+  "key": "Radial-transfer-estimates-and-polygon-length-laws-for-honeycomb-walks",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Radial-transfer-estimates-and-polygon-length-laws-for-honeycomb-walks-September-26-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Radial-transfer-estimates-and-polygon-length-laws-for-honeycomb-walks-September-26-2026/main.pdf",
+  "title": "Radial transfer estimates and polygon length laws for honeycomb walks",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove critical diameter-tail exponents −2 for unrooted honeycomb polygons and −2/3 for length-weighted polygons, together with a truncated second-length-moment bound of exponent 2/3. Consequently, polygons conditioned to have length at least n have diameter $`n^{3/4+o(1)}`$ in probability under either weight.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-09-26",
+  "family": "237",
+  "family_title": "The three-quarter exponent for honeycomb self-avoiding walk",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "probability",
+      "combinatorics",
+      "random-walks",
+      "polymers"
+    ],
+    "reason": "Establishes diameter-tail exponents and length laws for honeycomb polygons and walks.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

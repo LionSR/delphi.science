@@ -1,0 +1,64 @@
+{
+  "key": "PALOMAR-2026-09-26-000005",
+  "source": "palomar",
+  "url": "https://github.com/troyjlee/tcs-formalizations/tree/55d7c9c11ee4240328a71b1ab43d66f27a976da6/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-26-000005-v1.json",
+  "title": "Metric TSP subtour-LP integrality gap",
+  "authors": [
+    "Troy Lee"
+  ],
+  "summary": "Lean proofs that every metric TSP instance on at least three vertices has a Hamiltonian tour costing at most (3/2 - 2.05522e-30) times any feasible subtour-LP objective, with one strictly larger saving uniform over all instances. The submission also exposes the exact finite-layer saving and a KKO-framework bound using GKL capacity estimates.",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO",
+    "msc:90C27",
+    "msc:05C45"
+  ],
+  "published": "2026-09-26",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A (Slightly) Improved Approximation Algorithm for Metric TSP",
+      "identifier": "https://arxiv.org/abs/2007.01409v6",
+      "relationship": "adapts"
+    },
+    {
+      "title": "A (Slightly) Improved Bound on the Integrality Gap of the Subtour LP for TSP",
+      "identifier": "https://arxiv.org/abs/2105.10043v3",
+      "relationship": "adapts"
+    },
+    {
+      "title": "From Trees to Polynomials and Back Again: New Capacity Bounds with Applications to TSP",
+      "identifier": "https://arxiv.org/abs/2311.09072v2",
+      "relationship": "adapts"
+    },
+    {
+      "title": "A Sharper Explicit Bound on the Subtour-LP Integrality Gap for Metric TSP",
+      "identifier": "https://www.preprints.org/manuscript/202609.0140/v1",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/troyjlee/tcs-formalizations",
+  "commit": "55d7c9c11ee4240328a71b1ab43d66f27a976da6",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "combinatorial-optimization",
+      "tsp",
+      "lean-formalization",
+      "approximation"
+    ],
+    "reason": "Lean proofs bounding the integrality gap of metric TSP subtour LPs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "Paired-states-and-Hamiltonian-cycles-in-cubic-bipartite-planar-graphs",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Paired-states-and-Hamiltonian-cycles-in-cubic-bipartite-planar-graphs-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Paired-states-and-Hamiltonian-cycles-in-cubic-bipartite-planar-graphs-September-24-2026/paper.pdf",
+  "title": "Paired states and Hamiltonian cycles in cubic bipartite planar graphs",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove Barnette's conjecture: every finite simple cubic bipartite planar 3-vertex-connected graph has a Hamiltonian cycle.",
+  "domain": "Combinatorics",
+  "published": "2026-09-24",
+  "family": "180",
+  "family_title": "Barnette’s Hamiltonian-cycle conjecture",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "hamiltonian-cycles",
+      "planar-graphs"
+    ],
+    "reason": "Proves Barnette's conjecture that cubic bipartite 3-connected planar graphs are Hamiltonian.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "The-sharp-exponential-rate-of-singularity-for-symmetric-Bernoulli-matrices",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-sharp-exponential-rate-of-singularity-for-symmetric-Bernoulli-matrices-October-3-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-sharp-exponential-rate-of-singularity-for-symmetric-Bernoulli-matrices-October-3-2026/symmetric-bernoulli-singularity.pdf",
+  "title": "The sharp exponential rate of singularity for symmetric Bernoulli matrices",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "Let A n be a symmetric $`n\\times n`$ matrix whose entries on and above the diagonal are independent uniform signs. We prove $`\\displaystyle \\Pr(\\det A_n=0)=\\left(\\frac12+o(1)\\right)^n.`$",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-10-03",
+  "family": "239",
+  "family_title": "Sharp singularity rates for symmetric random sign matrices",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "random-matrices",
+      "probability",
+      "combinatorics"
+    ],
+    "reason": "Determines the sharp exponential rate of singularity for symmetric random sign matrices.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

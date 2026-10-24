@@ -1,0 +1,26 @@
+{
+  "key": "aixiv.261008.000001",
+  "source": "aixiv",
+  "url": "https://aixiv.science/abs/aixiv.261008.000001",
+  "title": "Categorical Naive Bayes Model of Morphological Slot Dynamics in the Voynich Manuscript: A Rigorous Attribute-Tagging Architecture and Corpus Audit",
+  "authors": [
+    "Denis Ricardo Tavares Ferreira"
+  ],
+  "summary": "The Voynich Manuscript (MS 408) has long resisted decipherment under standard natural language translation paradigms and classical substitution ciphers. In this paper, we present a mathematically rigorous computational framework reframing MS 408 not as an unmapped spoken natural language, but as a synthetic, low-entropy attribute-tagging system operating under strict phonotactic constraints. We establish a 16-slot morphological decomposition architecture (S0–S15), functionally categorized into a 4 + 8 + 4 macro-region framework, coupled with a Laplace-smoothed (α = 1.0) Categorical Naive…",
+  "published": "2026-10-19",
+  "added": "2026-10-23",
+  "added_by": "harvest:aixiv",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "subject": "other.soc",
+    "tags": [
+      "voynich-manuscript",
+      "computational-linguistics",
+      "naive-bayes"
+    ],
+    "reason": "Presents a Naive Bayes attribute-tagging analysis and corpus audit of the Voynich Manuscript.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

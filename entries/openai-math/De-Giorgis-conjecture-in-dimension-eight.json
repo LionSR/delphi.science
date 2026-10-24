@@ -1,0 +1,31 @@
+{
+  "key": "De-Giorgis-conjecture-in-dimension-eight",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/De-Giorgis-conjecture-in-dimension-eight-September-26-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/De-Giorgis-conjecture-in-dimension-eight-September-26-2026/article.pdf",
+  "title": "A positive resolution of De Giorgi's conjecture in dimension eight",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We resolve De Giorgi's conjecture positively in dimension eight: every entire C 2 solution $`u:\\mathbb R^8\\to(-1,1)`$ of $`\\Delta u=u^3-u`$ with an everywhere positive directional derivative is a planar heteroclinic. We prove that every stable solution $`v:\\mathbb R^7\\to[-1,1]`$ of this equation is a constant well or a planar heteroclinic, without an energy-growth assumption.",
+  "domain": "Partial differential equations",
+  "published": "2026-09-26",
+  "family": "375",
+  "family_title": "De Giorgi's conjecture in dimension eight",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "pde",
+      "elliptic-equations",
+      "allen-cahn"
+    ],
+    "reason": "Resolves De Giorgi's conjecture in dimension eight for solutions of Δu = u³ − u.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

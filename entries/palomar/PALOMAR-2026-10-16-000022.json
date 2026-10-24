@@ -1,0 +1,55 @@
+{
+  "key": "PALOMAR-2026-10-16-000022",
+  "source": "palomar",
+  "url": "https://github.com/AItoBit/erdos-656-lean/tree/5f2ab8de0634f343917b0d122153640f293b0e20/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000022-v1.json",
+  "title": "Erdős Problem 656: translated restricted pair sums",
+  "authors": [
+    "AItoBit"
+  ],
+  "summary": "A reproduction of a complete Lean proof that every set A of natural numbers with positive ordinary upper asymptotic density contains an infinite subset B whose distinct pair sums, after one integer translation, all lie in A. This is the exact ordinary-density statement of Erdős Problem 656, an instance of Kra–Moreira–Richter–Robertson Theorem 1.2(i).",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "math.CO",
+    "msc:37A44",
+    "msc:11B13",
+    "msc:68V15"
+  ],
+  "published": "2026-10-16",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A proof of Erdős's B+B+t conjecture",
+      "identifier": "doi:10.1090/cams/34",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Erdős Problem 656",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/AItoBit/erdos-656-lean",
+  "commit": "5f2ab8de0634f343917b0d122153640f293b0e20",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "additive-combinatorics",
+      "erdos-problems",
+      "lean-formalization",
+      "ergodic-theory"
+    ],
+    "reason": "Lean reproduction of a proof for Erdős Problem 656 on translated restricted pair sums.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

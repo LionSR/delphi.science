@@ -1,0 +1,31 @@
+{
+  "key": "Polynomial-vacuum-representations-and-bridge-mass-for-honeycomb-walks",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Polynomial-vacuum-representations-and-bridge-mass-for-honeycomb-walks-September-26-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Polynomial-vacuum-representations-and-bridge-mass-for-honeycomb-walks-September-26-2026/main.pdf",
+  "title": "Polynomial vacuum representations and bridge mass for honeycomb walks",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that, under the all-length critical measure, a honeycomb bridge crossing a strip of h layers, with its initial port fixed and its terminal port free, has mean length $`h^{4/3+o(1)}`$. We also obtain central visit probability $`R^{-2/3+o(1)}`$ and mean length $`R^{4/3+o(1)}`$ for macroscopic free-boundary chords in a regular hexagon.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-09-26",
+  "family": "237",
+  "family_title": "The three-quarter exponent for honeycomb self-avoiding walk",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "probability",
+      "self-avoiding-walks",
+      "statistical-mechanics"
+    ],
+    "reason": "Derives scaling exponents for honeycomb bridges and chords under a critical walk measure.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

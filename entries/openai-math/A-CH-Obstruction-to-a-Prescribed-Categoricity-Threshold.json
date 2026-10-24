@@ -1,0 +1,31 @@
+{
+  "key": "A-CH-Obstruction-to-a-Prescribed-Categoricity-Threshold",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-CH-Obstruction-to-a-Prescribed-Categoricity-Threshold-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-CH-Obstruction-to-a-Prescribed-Categoricity-Threshold-September-24-2026/paper.pdf",
+  "title": "A CH obstruction to a prescribed categoricity threshold",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "Assuming the continuum hypothesis, we construct an abstract elementary class with Löwenheim–Skolem number ℵ 0 that is categorical in every sufficiently large cardinal but has at least two nonisomorphic models of cardinality $`\\beth_{\\omega_2}`$. Thus categoricity does not transfer down to the proposed bound $`\\beth_{(2^{\\aleph_0})^+}`$, which equals $`\\beth_{\\omega_2}`$ under CH. Consequently, if ZFC is consistent, the prescribed-threshold form of Shelah's categoricity conjecture is not provable in ZFC.",
+  "domain": "Mathematical logic",
+  "published": "2026-09-24",
+  "family": "240",
+  "family_title": "Shelah's eventual categoricity and the prescribed-threshold obstruction",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "set-theory",
+      "model-theory",
+      "categoricity"
+    ],
+    "reason": "Under CH, builds an abstract elementary class showing a categoricity threshold cannot be proven in ZFC.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

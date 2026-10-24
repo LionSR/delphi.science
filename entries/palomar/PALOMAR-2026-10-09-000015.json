@@ -1,0 +1,50 @@
+{
+  "key": "PALOMAR-2026-10-09-000015",
+  "source": "palomar",
+  "url": "https://github.com/mmislan/palomar-endotactic-permanence/tree/c72c945264565397ecc3eee779e6bd5f3f3a061d/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-09-000015-v1.json",
+  "title": "Uniform permanence of endotactic reaction networks with measurable rates",
+  "authors": [
+    "Michael Mislan"
+  ],
+  "summary": "Uniform permanence is established for finite endotactic reaction networks with arbitrary real complexes and measurable rate coefficients bounded above and away from zero almost everywhere. Each positive stoichiometric compatibility class contains a compact convex forward-invariant absorbing set, with entry times uniform over compact sets of initial conditions and all rate histories within a fixed rate box. Global positive Carathéodory solutions exist and are unique, and an exponential continuous-dependence estimate holds for initial data under a common rate history on a compact positive…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "q-bio.MN",
+    "msc:34A12",
+    "msc:34D23",
+    "msc:92C42"
+  ],
+  "published": "2026-10-09",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Uniform permanence of endotactic reaction networks with measurable rates",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/mmislan/palomar-endotactic-permanence",
+  "commit": "c72c945264565397ecc3eee779e6bd5f3f3a061d",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "reaction-networks",
+      "dynamical-systems",
+      "permanence",
+      "mathematical-biology"
+    ],
+    "reason": "Establishes uniform permanence for endotactic reaction networks with measurable rates.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

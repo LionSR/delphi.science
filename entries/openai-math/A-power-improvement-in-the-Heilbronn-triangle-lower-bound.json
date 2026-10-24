@@ -1,0 +1,31 @@
+{
+  "key": "A-power-improvement-in-the-Heilbronn-triangle-lower-bound",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-power-improvement-in-the-Heilbronn-triangle-lower-bound-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-power-improvement-in-the-Heilbronn-triangle-lower-bound-September-25-2026/main.pdf",
+  "title": "A power improvement in the Heilbronn triangle lower bound",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "There are absolute constants $`\\eta,c_1\\gt 0`$ such that, for every sufficiently large integer n , one can choose n points in the unit square so that every triangle they determine has area at least $`c_1n^{-2+\\eta}`$. Thus the almost n −2 upper-bound formulation of Heilbronn's triangle problem is false. The exponent η is fixed but extremely small.",
+  "domain": "Combinatorics",
+  "published": "2026-09-25",
+  "family": "191",
+  "family_title": "A power improvement in the Heilbronn triangle lower bound",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "discrete-geometry",
+      "heilbronn-problem",
+      "combinatorics"
+    ],
+    "reason": "Shows a power improvement in the lower bound for Heilbronn triangle configurations.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

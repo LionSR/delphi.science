@@ -1,0 +1,31 @@
+{
+  "key": "A-nondegenerate-counterexample-to-the-Morse-number-Arnold-bound",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-nondegenerate-counterexample-to-the-Morse-number-Arnold-bound-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-nondegenerate-counterexample-to-the-Morse-number-Arnold-bound-September-23-2026/paper.pdf",
+  "title": "A nondegenerate counterexample to the Morse-number Arnold bound",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We construct a smooth one-periodic Hamiltonian on a closed symplectic twelve-manifold whose time-one map has fewer fixed points than the manifold's ordinary Morse number. Every fixed point is nondegenerate and has a contractible Hamiltonian trajectory. This disproves the Morse-number form of the Arnold conjecture. The deficit can be arbitrarily large among twelve-dimensional examples.",
+  "domain": "Differential geometry",
+  "published": "2026-09-23",
+  "family": "347",
+  "family_title": "Counterexamples to stable-Morse and strong Arnold fixed-point bounds",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "symplectic-geometry",
+      "fixed-points",
+      "hamiltonian-dynamics"
+    ],
+    "reason": "Constructs a Hamiltonian counterexample to the Morse-number form of the Arnold conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

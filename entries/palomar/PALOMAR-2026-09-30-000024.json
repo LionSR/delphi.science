@@ -1,0 +1,40 @@
+{
+  "key": "PALOMAR-2026-09-30-000024",
+  "source": "palomar",
+  "url": "https://github.com/stalex444/pdt-hodge-lie-generation/tree/e2d8dde6f076b730b9a718c95ff1664c6aa88b51/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000024-v1.json",
+  "title": "Local Hodge generation of sl(15) and scalar response rigidity",
+  "authors": [
+    "Stephanie Alexander"
+  ],
+  "summary": "An explicit local Hodge operator on the oriented coordinate four-plane 0123, extended by zero, together with the fifteen adjoint basis actions of the orthogonal algebra for diag(1,1,1,-1,1,-1), generates sl(15,K) over every field of characteristic different from two. A finite integral commutator certificate produces signed skew matrix units and one symmetric seed; a general propagation lemma then produces all trace-free matrices. Dimension 224 follows from generation. As a consequence, an endomorphism of this algebra commuting with the commutator actions of the same sixteen generators is…",
+  "domain": "math.RT",
+  "tags": [
+    "math.RT",
+    "msc:17B05",
+    "msc:17B10"
+  ],
+  "published": "2026-09-30",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/stalex444/pdt-hodge-lie-generation",
+  "commit": "e2d8dde6f076b730b9a718c95ff1664c6aa88b51",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "lie-algebras",
+      "representation-theory",
+      "sl-n"
+    ],
+    "reason": "Proof that a local Hodge operator and adjoint actions generate sl(15) over general fields.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

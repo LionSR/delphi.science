@@ -1,0 +1,31 @@
+{
+  "key": "The-complete-Crouzeix-theorem",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-complete-Crouzeix-theorem-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-complete-Crouzeix-theorem-September-23-2026/paper.pdf",
+  "title": "The complete Crouzeix theorem: optimal similarity and a common positive boundary representation",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We resolve the complete Crouzeix conjecture by proving the sharp constant-two numerical-range inequality for every bounded operator on a complex Hilbert space and every matrix-valued polynomial. No separability assumption is needed. The closure of the numerical range is a complete 2-spectral set, and the bound extends to finite matrix-valued functions holomorphic near that closure. For a finite matrix and a bounded convex domain containing its numerical range with regular real-analytic Jordan boundary, the optimal similarity making its conformal disk image contractive is attained with…",
+  "domain": "Functional analysis",
+  "published": "2026-09-23",
+  "family": "325",
+  "family_title": "The complete Crouzeix conjecture",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "numerical-analysis",
+      "operator-theory",
+      "numerical-range"
+    ],
+    "reason": "Proves a sharp numerical-range inequality for bounded operators and matrix polynomials.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

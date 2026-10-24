@@ -1,0 +1,27 @@
+// The database: Supabase Postgres when DATABASE_URL is set (its connection pooler, transaction mode),
+// otherwise Postgres in-process (PGlite) loaded with the last local build, for development.
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import type { Db } from './query.ts';
+
+const MIGRATION = 'supabase/migrations/20261024000000_open_index.sql';
+const BUILD = '../dist/index.json';
+
+async function open(): Promise<Db> {
+	if (process.env.DATABASE_URL) {
+		const { default: postgres } = await import('postgres');
+		const sql = postgres(process.env.DATABASE_URL, { prepare: false, max: 5 });
+		return { query: async (text, params = []) => ({ rows: (await sql.unsafe(text, params as never[])) as never[] }) };
+	}
+	const { PGlite } = await import('@electric-sql/pglite');
+	const { vector } = await import('@electric-sql/pglite/vector');
+	const { load } = await import('./load.ts');
+	const pg = new PGlite({ extensions: { vector } });
+	await pg.exec(readFileSync(join(process.cwd(), MIGRATION), 'utf8'));
+	await load(pg, JSON.parse(readFileSync(join(process.cwd(), BUILD), 'utf8')).items);
+	return pg;
+}
+
+// One connection per server process, kept across hot reloads in development.
+const cache = globalThis as { openIndexDb?: Promise<Db> };
+export const db = () => (cache.openIndexDb ??= open());

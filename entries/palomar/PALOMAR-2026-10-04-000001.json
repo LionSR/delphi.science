@@ -1,0 +1,54 @@
+{
+  "key": "PALOMAR-2026-10-04-000001",
+  "source": "palomar",
+  "url": "https://github.com/lennrt/palomar-formalizations/tree/636768718796b33b36d344d04b8e5f2f840633dd/zenodo-23125523/palomar",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-04-000001-v1.json",
+  "title": "Distance-Shell Tomography: Geometric Certificates for Fault-Tolerant Sensing, Moment Compression, and Hypercube Equalization",
+  "authors": [
+    "Lennart Rudolph"
+  ],
+  "summary": "Substantive Lean development for labelled distance-shell observations of anonymous integer populations. The focused 14-statement interface covers six result groups. Square grids have an exact four-corner interval-cut characterization of recovery of all populations of mass at most two after one erased report, an equivalent distance-sum compression contract, and exact corner-constrained optimum ceil(3(n+1)/2) for every n at least 3. For every positive q, the actual-distance equalizer cardinality of Q_(4q) lies between 2^(4q-1)+2q-1 and 2^(4q-1)+2q; explicit prefixes also give the infinite…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.IT",
+    "msc:05C12",
+    "msc:05C69"
+  ],
+  "published": "2026-10-04",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Distance-Shell Tomography: Geometric Certificates for Fault-Tolerant Sensing, Moment Compression, and Hypercube Equalization",
+      "identifier": "doi:10.5281/zenodo.23125523",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Distance-Shell Tomography on Graphs: Integer Trades and Optimal Grid Sensing",
+      "identifier": "doi:10.5281/zenodo.22404456",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/lennrt/palomar-formalizations",
+  "commit": "636768718796b33b36d344d04b8e5f2f840633dd",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "combinatorics",
+      "coding-theory",
+      "distance-sets",
+      "lean-formalization"
+    ],
+    "reason": "Lean development on recovering integer populations from labelled distance-shell observations on grids.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

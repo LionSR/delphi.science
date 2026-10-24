@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-08-18-000003",
+  "source": "palomar",
+  "url": "https://github.com/xinjiegit/ben_27_formalization/tree/f70352964007662e97a810c880abbfea1e2ea262/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-18-000003-v1.json",
+  "title": "xinjiegit/ben_27_formalization",
+  "authors": [
+    "Xinjie He"
+  ],
+  "summary": "A Lean 4 and Mathlib proof that there are absolute constants c > 0 and p₀ such that, for every prime p ≥ p₀, the minimum size m(p) of a set A ⊆ 𝔽_p with |A| ≥ 2 and no uniquely represented sum satisfies m(p) ≥ c (log p / log log p)². Here representations are unordered two-element multisets from A, repeated summands are allowed, and \"no unique sum\" means that every such multiset has a distinct equal-sum mate.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.NT",
+    "msc:11B30",
+    "msc:11B34"
+  ],
+  "published": "2026-08-18",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A near-quadratic lower bound for sets with no unique sums",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/xinjiegit/ben_27_formalization",
+  "commit": "f70352964007662e97a810c880abbfea1e2ea262",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "additive-combinatorics",
+      "finite-fields",
+      "lean-formalization"
+    ],
+    "reason": "Lean proof of a logarithmic lower bound on sets in finite fields without unique sums.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

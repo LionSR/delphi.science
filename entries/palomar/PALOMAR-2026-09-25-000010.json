@@ -1,0 +1,46 @@
+{
+  "key": "PALOMAR-2026-09-25-000010",
+  "source": "palomar",
+  "url": "https://github.com/jfairfaxball-348/TreeStack-Structural-Certificates-for-Stacking-on-Trees/tree/457b88b785e50a749710108a935a661a9d992348/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-25-000010-v1.json",
+  "title": "Tree stacking equals the Csernák--Soukup estimator on nontrivial finite trees",
+  "authors": [
+    "John Fairfax-Ball"
+  ],
+  "summary": "A Lean 4 proof of the corrected nontrivial-tree form of the Csernák--Soukup tree-stacking conjecture. For every finite tree with at least two vertices, the exact-size stacking number equals the explicit rooted-distance-and-degree estimator. The one-vertex case is excluded because the source stacking-number convention restricts admissible thresholds to t >= 2 while the displayed estimator is 1 on the one-vertex tree.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C05"
+  ],
+  "published": "2026-09-25",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Stacking and clearing in graph pebbling",
+      "identifier": "arXiv:2604.22341v1",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/jfairfaxball-348/TreeStack-Structural-Certificates-for-Stacking-on-Trees",
+  "commit": "457b88b785e50a749710108a935a661a9d992348",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "tree-stacking",
+      "lean-formalization"
+    ],
+    "reason": "Lean proof of a tree-stacking estimator on nontrivial finite trees.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

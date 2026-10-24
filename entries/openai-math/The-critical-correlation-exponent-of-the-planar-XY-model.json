@@ -1,0 +1,32 @@
+{
+  "key": "The-critical-correlation-exponent-of-the-planar-XY-model",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-critical-correlation-exponent-of-the-planar-XY-model-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-critical-correlation-exponent-of-the-planar-XY-model-September-24-2026/paper.pdf",
+  "title": "The critical correlation exponent of the planar XY model",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For the ordinary nearest-neighbor XY model on the square lattice, we prove the Berezinskii–Kosterlitz–Thouless prediction that the critical spin-correlation exponent is 1/4. More precisely, at the mass-defined critical inverse temperature, the infinite-volume correlation is $`n^{-1/4+o(1)}`$. The infinite-volume limit through free square boxes is taken before the separation limit.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-09-24",
+  "family": "216",
+  "family_title": "Critical and near-critical XY scaling and BKT universality",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "statistical-mechanics",
+      "xy-model",
+      "bkt-transition",
+      "critical-phenomena"
+    ],
+    "reason": "Proves the predicted critical spin-correlation exponent 1/4 for the planar XY model.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

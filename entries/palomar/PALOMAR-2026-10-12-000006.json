@@ -1,0 +1,53 @@
+{
+  "key": "PALOMAR-2026-10-12-000006",
+  "source": "palomar",
+  "url": "https://github.com/JD-Jones-ASES/thg-gradient-curve/tree/134788107eb28be0459555383a482a350bc953a4/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-12-000006-v1.json",
+  "title": "Sharp last-iterate bounds and extremal trajectories for constant-step gradient descent",
+  "authors": [
+    "JD Jones"
+  ],
+  "summary": "Exact final-gradient bounds for convex functions with Lipschitz gradient on real Hilbert spaces, under an initial-distance bound, for every horizon and nonnegative constant step. The factor is the maximum of reciprocal linear progress and the quadratic oscillation power, with genuine smooth convex attaining examples. The formalization includes the joint progress potential, complete sampled equality trajectories in both strict branches and at balance, and a direct transfer from actual constrained proximal minimizers to sharp residual and terminal objective-residual bounds. All ten principal…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "msc:90C25",
+    "msc:90C30",
+    "msc:49M37"
+  ],
+  "published": "2026-10-12",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Last-Iterate Performance of Gradient Descent and Relaxed Proximal Point via s-Composability",
+      "identifier": "",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Smooth Strongly Convex Interpolation and Exact Worst-case Performance of First-order Methods",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/JD-Jones-ASES/thg-gradient-curve",
+  "commit": "134788107eb28be0459555383a482a350bc953a4",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "convex-optimization",
+      "gradient-descent",
+      "lean-formalization"
+    ],
+    "reason": "Derives sharp last-iterate bounds for constant-step gradient descent on smooth convex functions.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

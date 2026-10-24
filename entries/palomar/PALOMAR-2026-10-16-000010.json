@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-10-16-000010",
+  "source": "palomar",
+  "url": "https://github.com/Naveen18888/Erdos-99-Partial/tree/d2bab08b0fbd5537310ec2e859107bbc042dd64d/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000010-v1.json",
+  "title": "Erdos 99 Partial Solution",
+  "authors": [
+    "Naveen Stewart"
+  ],
+  "summary": "A formalization of a partial solution to Erdos Problem 99. It shows that Erdos Problem 99 holds for all sufficiently large n where h(n) is finite. Here, h(n) denotes the number of incongruence, diameter-minimizing sets of minimum separation at least 1.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:52C10"
+  ],
+  "published": "2026-10-16",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Erdos Problem 99 with Finite Multiplicity",
+      "identifier": "https://zenodo.org/records/23387136",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Naveen18888/Erdos-99-Partial",
+  "commit": "d2bab08b0fbd5537310ec2e859107bbc042dd64d",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "discrete-geometry",
+      "erdos-problems",
+      "formal-verification",
+      "lean"
+    ],
+    "reason": "Formalized partial solution to Erdős Problem 99 on incongruent diameter-minimizing sets.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

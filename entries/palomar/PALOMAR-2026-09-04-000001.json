@@ -1,0 +1,50 @@
+{
+  "key": "PALOMAR-2026-09-04-000001",
+  "source": "palomar",
+  "url": "https://github.com/lennrt/palomar-formalizations/tree/a55482e8e2cd43bb8099f600678644e1646f6c3d/zenodo-22264675/palomar",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-04-000001-v1.json",
+  "title": "Even-order Grünschloß–Keller permutation nets: net property and tiling distance",
+  "authors": [
+    "Lennart Rudolph"
+  ],
+  "summary": "This Lean development proves that the even-order permutation construction of Grünschloß and Keller (MCQMC 2008 proceedings, implemented in gendiag0m2.h) is a base-2 (0,m,2)-net for every even m >= 4. The proof is symbolic: for every resolution a it proves, for every even m >= 8, that one explicit pair of points has squared distance 241 * 2^(m-8), and at m = 8 that 241 is the exact minimum over all pairs and all lattice translates. The exhaustive m = 8 lower bound is reduced by ordinary kernel decide; the exactness of the computed candidate minimum over the whole lattice is a symbolic lemma.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LO",
+    "msc:11K38",
+    "msc:65C05",
+    "msc:65D18",
+    "msc:68V20"
+  ],
+  "published": "2026-09-04",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "The Even-Order Grünschloß–Keller Permutation Nets Are (0,m,2)-Nets",
+      "identifier": "doi:10.5281/zenodo.22264675",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/lennrt/palomar-formalizations",
+  "commit": "a55482e8e2cd43bb8099f600678644e1646f6c3d",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "quasi-monte-carlo",
+      "digital-nets",
+      "lean-formalization"
+    ],
+    "reason": "Lean proof that a permutation construction gives a base-2 digital net with stated distance bounds.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

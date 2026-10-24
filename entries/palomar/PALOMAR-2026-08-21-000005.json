@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-08-21-000005",
+  "source": "palomar",
+  "url": "https://github.com/mbaccaro-dev/mathematical-proofs/tree/979219b93b9e19344219ffd96ad4c8b84ca89cf5/MathematicalProofs/PrimeLocalWeilObstruction/Lean",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-21-000005-v1.json",
+  "title": "mbaccaro-dev/mathematical-proofs",
+  "authors": [
+    "Mayk Loide Baccaro"
+  ],
+  "summary": "Formalizes the prime-local obstruction by proving the sharp threshold for each local block, divergence of the associated von Mangoldt and prime-power budgets, and divergence of every scalar budget satisfying the sharp pointwise lower bound at every natural-number index.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11M26",
+    "msc:11N05"
+  ],
+  "published": "2026-08-21",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A Prime-Local Weil Obstruction",
+      "identifier": "10.5281/zenodo.22005240",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/mbaccaro-dev/mathematical-proofs",
+  "commit": "979219b93b9e19344219ffd96ad4c8b84ca89cf5",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "analytic-number-theory",
+      "von-mangoldt",
+      "lean-formalization",
+      "prime-powers"
+    ],
+    "reason": "Lean formalization of prime-local obstructions and divergence of von Mangoldt-type budgets.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

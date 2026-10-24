@@ -1,0 +1,32 @@
+{
+  "key": "Signed-tensor-densities-and-diagram-budgets-for-coordinate-sweeps",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Signed-tensor-densities-and-diagram-budgets-for-coordinate-sweeps-September-26-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Signed-tensor-densities-and-diagram-budgets-for-coordinate-sweeps-September-26-2026/paper.pdf",
+  "title": "Signed tensor densities and diagram budgets for the Thorp shuffle",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that a fixed number of coordinate sweeps of the Thorp shuffle on $`2^d`$ cards makes the squared L 2 distance of the full permutation density from uniform tend to zero as $`d\\to\\infty`$. In particular, the total-variation mixing time is $`\\Theta(d)`$ physical shuffles.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-09-26",
+  "family": "238",
+  "family_title": "Optimal logarithmic mixing of the Thorp shuffle",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "probability",
+      "card-shuffling",
+      "markov-chains",
+      "mixing-times"
+    ],
+    "reason": "Analyzes how coordinate sweeps of the Thorp shuffle drive permutations toward uniformity.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "Disk-transfer-representations-and-confined-bridge-mass",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Disk-transfer-representations-and-confined-bridge-mass-September-26-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Disk-transfer-representations-and-confined-bridge-mass-September-26-2026/main.pdf",
+  "title": "Disk transfer representations and confined bridge mass",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that critical honeycomb bridges crossing a strip of width R have mean length $`R^{4/3+o(1)}`$, with the same exponent after confinement to a fixed multiple of the strip width. The initial boundary port is fixed, the terminal port is summed, and all finite lengths receive their critical weights. The bridge mass is comparable to R −1/4 ; the half-plane arch kernel at endpoint separation m is comparable to m −5/4 .",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-09-26",
+  "family": "237",
+  "family_title": "The three-quarter exponent for honeycomb self-avoiding walk",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "probability",
+      "percolation",
+      "statistical-mechanics"
+    ],
+    "reason": "Analyzes the length and mass of critical honeycomb bridges confined to a strip.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "key": "PALOMAR-2026-10-16-000019",
+  "source": "palomar",
+  "url": "https://github.com/jtraverso/matrix-tree/tree/aeab0f267c523dd3cac9a287b589f65a99d20d01/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000019-v1.json",
+  "title": "The Cauchy–Binet formula, Kirchhoff's matrix-tree theorem and Cayley's formula",
+  "authors": [
+    "Juan Pablo Traverso Gianini"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of the Cauchy–Binet formula for determinants of products of rectangular matrices over commutative rings (not in Mathlib), of Kirchhoff's matrix-tree theorem (the number of spanning trees of a finite graph is any principal cofactor of Mathlib's Laplacian matrix), and of Cayley's formula (n^(n−2) labelled trees on n ≥ 1 vertices), derived from the matrix-tree theorem for the complete graph.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C05",
+    "msc:05C30",
+    "msc:05C50",
+    "msc:15A15"
+  ],
+  "published": "2026-10-16",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Ueber die Auflösung der Gleichungen, auf welche man bei der Untersuchung der linearen Vertheilung galvanischer Ströme geführt wird",
+      "identifier": "doi:10.1002/andp.18471481202",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "A theorem on trees",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Mémoire sur un système de formules analytiques, et leur application à des considérations géométriques",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Mémoire sur les fonctions qui ne peuvent obtenir que deux valeurs égales et de signes contraires par suite des transpositions opérées entre les variables qu'elles renferment",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jtraverso/matrix-tree",
+  "commit": "aeab0f267c523dd3cac9a287b589f65a99d20d01",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "combinatorics",
+      "matrix-tree-theorem",
+      "lean-formalization",
+      "spanning-trees"
+    ],
+    "reason": "Lean formalization of Cauchy–Binet, Kirchhoff's matrix-tree theorem, and Cayley's formula.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

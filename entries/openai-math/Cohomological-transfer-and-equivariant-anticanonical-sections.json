@@ -1,0 +1,31 @@
+{
+  "key": "Cohomological-transfer-and-equivariant-anticanonical-sections",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Cohomological-transfer-and-equivariant-anticanonical-sections-September-26-2026/main.pdf",
+  "title": "Cohomological transfer and equivariant anticanonical sections",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "Let X be a smooth projective complex variety with smoothly semipositive anticanonical bundle. For any torus linearization of that bundle, we show that invariant sections in unbounded degrees with one fixed negative pseudoeffective error yield an invariant section in a positive untwisted degree. Combining the natural invariant index with compact-monodromy structure, we deduce that every such X has a nonzero section of some positive anticanonical power.",
+  "domain": "Algebraic and complex geometry",
+  "published": "2026-09-26",
+  "family": "068",
+  "family_title": "Anticanonical nonvanishing in every dimension",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "algebraic-geometry",
+      "anticanonical-bundles",
+      "complex-geometry"
+    ],
+    "reason": "Proves a result on invariant anticanonical sections for smooth projective varieties with semipositive bundles.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

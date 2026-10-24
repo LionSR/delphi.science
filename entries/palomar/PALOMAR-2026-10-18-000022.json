@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-10-18-000022",
+  "source": "palomar",
+  "url": "https://github.com/jtraverso/robbins-strong-orientation/tree/076e734e9949720d3e4fcc2cc3cad4284871442c/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-18-000022-v1.json",
+  "title": "Robbins' theorem on strongly connected orientations",
+  "authors": [
+    "Juan Pablo Traverso Gianini"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of Robbins' theorem: a finite connected simple graph has a strongly connected orientation (a digraph with underlying graph G, never containing both u → v and v → u, in which every vertex reaches every other) if and only if no edge of it is a bridge. As a corollary, every finite 2-edge-connected graph on a nonempty vertex type has a strongly connected orientation. Mathlib has bridges, edge connectivity and digraphs, but not this theorem.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C20",
+    "msc:05C40"
+  ],
+  "published": "2026-10-18",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A Theorem on Graphs, with an Application to a Problem of Traffic Control",
+      "identifier": "doi:10.2307/2303897",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jtraverso/robbins-strong-orientation",
+  "commit": "076e734e9949720d3e4fcc2cc3cad4284871442c",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "orientations",
+      "lean"
+    ],
+    "reason": "Lean 4 / Mathlib formalization of Robbins' theorem on strongly connected orientations.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

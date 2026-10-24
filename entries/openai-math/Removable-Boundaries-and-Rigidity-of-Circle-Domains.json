@@ -1,0 +1,31 @@
+{
+  "key": "Removable-Boundaries-and-Rigidity-of-Circle-Domains",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Removable-Boundaries-and-Rigidity-of-Circle-Domains-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Removable-Boundaries-and-Rigidity-of-Circle-Domains-September-23-2026/paper.pdf",
+  "title": "Removable Boundaries and Rigidity of Circle Domains",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that a circle domain with conformally removable boundary is conformally rigid, with no restriction on the number of complementary components. This establishes the removability-to-rigidity direction of the He–Schramm Conjecture.",
+  "domain": "Real and complex analysis",
+  "published": "2026-09-23",
+  "family": "071",
+  "family_title": "Koebe’s circle-domain conjecture",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "complex-analysis",
+      "conformal-mapping",
+      "circle-domains"
+    ],
+    "reason": "Proves conformally removable boundaries imply rigidity for circle domains.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

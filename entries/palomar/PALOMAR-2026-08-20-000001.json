@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-08-20-000001",
+  "source": "palomar",
+  "url": "https://github.com/dcposch/jc2-lean/tree/3cee8100665bc59734511500b98728628ea190db/vertex-gap",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-20-000001-v1.json",
+  "title": "dcposch/jc2-lean",
+  "authors": [
+    "Dan Clemens Posch"
+  ],
+  "summary": "Lean 4 / Mathlib formalization of the vertex-gap obstruction at (k,d2) = (2,2) (label thm:22, Theorem 3.4 in the current compilation) from the campaign paper \"A Vertex-Gap Obstruction for Low-Degree Strip Pairs in the Plane Jacobian Conjecture\": for polynomials P, Q in K[x,y] over a field K of characteristic not in {2,3,5}, supported in the normalized type-(2,2) Newton strips along (1,2) with [P,Q] = x^2, the block coefficients satisfy a3 = 0 and a2^2*a6 = 0 - so the generic chart a2*a6 != 0 of the strip family is empty (VertexGap22, plus the side-symmetric companion VertexGap22_swapped in…",
+  "domain": "math.AG",
+  "tags": [
+    "math.AG",
+    "math.AC",
+    "msc:14R15"
+  ],
+  "published": "2026-08-20",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A Vertex-Gap Obstruction for Low-Degree Strip Pairs in the Plane Jacobian Conjecture (campaign paper, archived with its reproduction artifact \"Artifact for: A Vertex-Gap Obstruction for Low-Degree Strip Pairs in the Plane Jacobian Conjecture\")",
+      "identifier": "doi:10.5281/zenodo.21894922",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/dcposch/jc2-lean",
+  "commit": "3cee8100665bc59734511500b98728628ea190db",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "algebraic-geometry",
+      "jacobian-conjecture",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of a vertex-gap obstruction for low-degree strip pairs in the plane.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "key": "PALOMAR-2026-10-16-000014",
+  "source": "palomar",
+  "url": "https://github.com/JD-Jones-ASES/finite-quantum-designs-lean/tree/5938504ecc632f9101d5ef17603879a08dad3866/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000014-v1.json",
+  "title": "Finite quantum designs: mutually unbiased bases, SIC-POVMs, and the Welch and Gerzon bounds",
+  "authors": [
+    "JD Jones"
+  ],
+  "summary": "A Lean 4 development of two structures of finite-dimensional quantum information, in the vocabulary of google-deepmind/formal-conjectures (Open Quantum Problems 13 and 23; the fourteen definitions restated character for character under their Apache-2.0 license, see NOTICE). A basis of C^d is a unitary matrix whose columns are the basis vectors; two bases U, V are mutually unbiased when every entry of U^* V has squared norm 1/d; HasMUBs d k says k pairwise unbiased bases exist and IsMaxMUBCount d k that k is the largest such number. Theorems: for d >= 2, HasMUBs d m implies m = 2; for a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.CO",
+    "msc:81P15",
+    "msc:05B30",
+    "msc:52C35",
+    "msc:11T24"
+  ],
+  "published": "2026-10-16",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Constructions of Mutually Unbiased Bases",
+      "identifier": "doi:10.1007/978-3-540-24633-6_10",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "A New Proof for the Existence of Mutually Unbiased Bases",
+      "identifier": "doi:10.1007/s00453-002-0980-7",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "A gap for the maximum number of mutually unbiased bases",
+      "identifier": "doi:10.1090/S0002-9939-2013-11487-5",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Complex Lines with Restricted Angles",
+      "identifier": "https://arxiv.org/abs/1306.0978",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Symmetric informationally complete quantum measurements",
+      "identifier": "doi:10.1063/1.1737053",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/JD-Jones-ASES/finite-quantum-designs-lean",
+  "commit": "5938504ecc632f9101d5ef17603879a08dad3866",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "quantum-information",
+      "mutually-unbiased-bases",
+      "formal-verification",
+      "lean"
+    ],
+    "reason": "Lean development on mutually unbiased bases and SIC-POVM bounds in quantum information.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

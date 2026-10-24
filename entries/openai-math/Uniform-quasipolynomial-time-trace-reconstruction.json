@@ -1,0 +1,32 @@
+{
+  "key": "Uniform-quasipolynomial-time-trace-reconstruction",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Uniform-quasipolynomial-time-trace-reconstruction-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Uniform-quasipolynomial-time-trace-reconstruction-October-5-2026/uniform-trace-reconstruction.pdf",
+  "title": "Uniform quasipolynomial-time trace reconstruction",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We give a uniform algorithm that reconstructs every binary string from independent deletion traces when its length and rational retention probability are known. For each fixed retention probability, both the number of traces and the bit complexity are quasipolynomial in the string length. More generally, we give an explicit sample bound uniform over all rational retention probabilities, with running time polynomial in the sample budget and the binary input length. If the deletion probability is at most $`n^{-\\varepsilon}`$ for fixed ε > 0, the sample and running-time bounds are polynomial.…",
+  "domain": "Theoretical computer science",
+  "published": "2026-10-05",
+  "family": "122",
+  "family_title": "Quantitative trace-reconstruction bounds with a uniform decoder",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "trace-reconstruction",
+      "learning-theory",
+      "theoretical-computer-science",
+      "deletion-channels"
+    ],
+    "reason": "Gives a uniform quasipolynomial algorithm for reconstructing binary strings from deletion traces.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

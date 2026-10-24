@@ -1,0 +1,54 @@
+{
+  "key": "PALOMAR-2026-10-21-000007",
+  "source": "palomar",
+  "url": "https://github.com/jtraverso/perfect-graphs/tree/796922460172c4e51c39c96575d03957652c0bab/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-21-000007-v1.json",
+  "title": "Lovász's perfect graph theorems",
+  "authors": [
+    "Juan Pablo Traverso Gianini"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of Lovász's 1972 theorems on perfect graphs: a finite simple graph is perfect (every induced subgraph has chromatic number equal to its clique number) if and only if |S| ≤ α(G[S]) · ω(G[S]) for every vertex set S; and the perfect graph theorem conjectured by Berge, that a finite graph is perfect if and only if its complement is perfect. The proof follows Gasparian's linear-algebra argument. Mathlib has chromatic, clique and independence numbers but no perfect graphs.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C17",
+    "msc:05C15",
+    "msc:05C69"
+  ],
+  "published": "2026-10-21",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Normal hypergraphs and the perfect graph conjecture",
+      "identifier": "doi:10.1016/0012-365X(72)90006-4",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "A characterization of perfect graphs",
+      "identifier": "doi:10.1016/0095-8956(72)90045-7",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jtraverso/perfect-graphs",
+  "commit": "796922460172c4e51c39c96575d03957652c0bab",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "perfect-graphs",
+      "chromatic-number",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of Lovász's theorems characterizing perfect graphs and the Berge conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

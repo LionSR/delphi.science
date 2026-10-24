@@ -1,0 +1,53 @@
+{
+  "key": "PALOMAR-2026-10-01-000020",
+  "source": "palomar",
+  "url": "https://github.com/enaslund/linniks-constant-3.99/tree/ecdbe3e3e08ad499d2c749ff417cc461f57334c5/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-01-000020-v1.json",
+  "title": "Linnik's constant is at most 3.99: A formalization of a weighted version of Heath-Brown's near-density estimate, and of the proof's certificate checker",
+  "authors": [
+    "Eric Naslund"
+  ],
+  "summary": "Two components of the proof, in the paper \"Linnik's constant is at most 3.99\" (paper/linnik399.pdf in this repository), that every reduced residue class modulo q contains a prime below q^3.99 for all large q. That bound itself is NOT formally verified here: the paper's zero-location arguments, case analysis and exterior regimes have conventional proofs and computer checks only. (1) The graded near lemma: fix test data (a detector f satisfying Heath-Brown's Condition 1, a Gram test g satisfying his Conditions 1 and 2, a Selberg-sieve weight with heights h_k >= 0 on cells [t_k, t_{k+1}) with…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11M20",
+    "msc:11M26",
+    "msc:11N13",
+    "msc:11N35",
+    "msc:11Y35",
+    "msc:68V15",
+    "msc:90C05"
+  ],
+  "published": "2026-10-01",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Linnik's constant is at most 3.99",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/enaslund/linniks-constant-3.99",
+  "commit": "ecdbe3e3e08ad499d2c749ff417cc461f57334c5",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "primes",
+      "lean-formalization",
+      "analytic-number-theory"
+    ],
+    "reason": "Lean formalization of components of a proof bounding Linnik's constant.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

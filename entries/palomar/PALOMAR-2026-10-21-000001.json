@@ -1,0 +1,57 @@
+{
+  "key": "PALOMAR-2026-10-21-000001",
+  "source": "palomar",
+  "url": "https://github.com/zijie123123/PottsDiscontinuity-lean/tree/435fb57856860eda7a65c8fec9e5fb29eff2b46b/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-21-000001-v1.json",
+  "title": "Discontinuity of the phase transition for the planar random-cluster and Potts models with q > 4 (Theorems 1.1 and 1.2)",
+  "authors": [
+    "Zijie Zhuang"
+  ],
+  "summary": "A complete Lean 4 / Mathlib formalization of Theorems 1.1 and 1.2 of Duminil-Copin, Gagnebin, Harel, Manolescu and Tassion (arXiv:1611.09877v2). For the q-state Potts model on the square lattice with q > 4, at beta_c = log(1 + sqrt q), the q + 1 box-limit Gibbs measures are distinct and ergodic, each monochromatic measure gives its own colour probability greater than 1/q at the origin, and the inverse correlation length in the diagonal direction is lambda + 2 sum_{k >= 1} (-1)^k tanh(k lambda) / k, where cosh lambda = sqrt(q) / 2, a positive number. For the random-cluster model on the square…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math-ph",
+    "msc:82B20",
+    "msc:82B26",
+    "msc:82B43",
+    "msc:60K35",
+    "msc:82B23"
+  ],
+  "published": "2026-10-21",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Discontinuity of the phase transition for the planar random-cluster and Potts models with q > 4",
+      "identifier": "arXiv:1611.09877v2",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "The Bethe ansatz for the six-vertex and XXZ models: an exposition",
+      "identifier": "arXiv:1611.09909v1",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/zijie123123/PottsDiscontinuity-lean",
+  "commit": "435fb57856860eda7a65c8fec9e5fb29eff2b46b",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "statistical-mechanics",
+      "potts-model",
+      "random-cluster-model",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of phase transition discontinuity results for planar Potts and random-cluster models.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

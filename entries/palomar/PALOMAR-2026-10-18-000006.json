@@ -1,0 +1,68 @@
+{
+  "key": "PALOMAR-2026-10-18-000006",
+  "source": "palomar",
+  "url": "https://github.com/jtraverso/chordal-split-threshold-graphs/tree/ed65dcdc7339767d3e8e412420abbf54eae65ddb/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-18-000006-v1.json",
+  "title": "Chordal, split, threshold and cograph structure",
+  "authors": [
+    "Juan Pablo Traverso Gianini"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of classical structure theorems for finite simple graphs. Chordal graphs: every minimal a–b separator is a clique, a nonempty finite chordal graph has a simplicial vertex, and a connected non-complete one has two non-adjacent simplicial vertices (Dirac 1961); a finite graph is chordal iff it has a perfect elimination order (Fulkerson–Gross 1965), iff it is the intersection graph of subtrees of a finite tree (Gavril 1974); a nonempty finite chordal graph has treewidth ω − 1, and every finite graph has ω ≤ tw + 1. Split graphs: split iff the graph and its…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C75",
+    "msc:05C05"
+  ],
+  "published": "2026-10-18",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "On rigid circuit graphs",
+      "identifier": "doi:10.1007/BF02992776",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Incidence matrices and interval graphs",
+      "identifier": "doi:10.2140/pjm.1965.15.835",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "The intersection graphs of subtrees in trees are exactly the chordal graphs",
+      "identifier": "doi:10.1016/0095-8956(74)90094-X",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Split graphs",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Aggregation of Inequalities in Integer Programming",
+      "identifier": "doi:10.1016/S0167-5060(08)70731-3",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jtraverso/chordal-split-threshold-graphs",
+  "commit": "ed65dcdc7339767d3e8e412420abbf54eae65ddb",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "chordal-graphs",
+      "graph-structure",
+      "lean",
+      "cographs"
+    ],
+    "reason": "Lean formalization of classical structure theorems for chordal and split graphs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

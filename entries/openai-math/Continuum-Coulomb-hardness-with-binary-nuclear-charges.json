@@ -1,0 +1,31 @@
+{
+  "key": "Continuum-Coulomb-hardness-with-binary-nuclear-charges",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Continuum-Coulomb-hardness-with-binary-nuclear-charges-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Continuum-Coulomb-hardness-with-binary-nuclear-charges-September-24-2026/Continuum-Coulomb-hardness-with-binary-nuclear-charges-September-24-2026.pdf",
+  "title": "Continuum Coulomb hardness with binary nuclear charges",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that approximating the electronic Coulomb spectral infimum in three-dimensional space is QMA-hard when positive integer nuclear charges are encoded in binary. The nuclei have distinct rational positions, the electron number is unary, and the energy is minimized over all antisymmetric continuum states and spin sectors. A deterministic classical polynomial-time reduction produces instances with threshold separation at least one. The nuclear charges may be exponentially large, but every output has polynomial bit length.",
+  "domain": "Mathematical physics",
+  "published": "2026-09-24",
+  "family": "275",
+  "family_title": "QMA-hardness of continuum Coulomb energy",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "quantum-chemistry",
+      "computational-complexity",
+      "coulomb-systems"
+    ],
+    "reason": "Proves QMA-hardness of approximating the electronic Coulomb spectral infimum with binary-encoded nuclear charges.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "key": "PALOMAR-2026-09-11-000004",
+  "source": "palomar",
+  "url": "https://github.com/BrandonMYates/allones-comparator/tree/76f3a65407c45de21228824f7a41430acec473a4/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-11-000004-v1.json",
+  "title": "All-ones polynomials over GF(2) under the substitution X ↦ X² + X + 1 (OEIS A071642, TheoremDB P12771)",
+  "authors": [
+    "Brandon Yates"
+  ],
+  "summary": "Formalizes in Lean 4 the resolution of a 2019 OEIS conjecture of L. H. Gallardo (comment on A071642; TheoremDB P12771): for every n ≥ 2 the all-ones polynomial 1 + X + ⋯ + Xⁿ is irreducible over GF(2) if and only if 1 + P + ⋯ + Pⁿ is irreducible over GF(2), where P = X² + X + 1. The compared statements are the per-n equivalence, the literal set-level form of the OEIS comment (the terms ≥ 2 coincide), and the failure of the excluded case n = 1. The proof is elementary: a factorization of the all-ones polynomial composes to one of the substituted polynomial; conversely irreducibility forces n…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11T06",
+    "msc:12E20"
+  ],
+  "published": "2026-09-11",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/BrandonMYates/allones-comparator",
+  "commit": "76f3a65407c45de21228824f7a41430acec473a4",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "finite-fields",
+      "lean",
+      "polynomials"
+    ],
+    "reason": "Lean formalization resolving an OEIS conjecture on irreducibility of all-ones polynomials over GF(2).",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

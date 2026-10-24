@@ -1,0 +1,54 @@
+{
+  "key": "PALOMAR-2026-09-21-000003",
+  "source": "palomar",
+  "url": "https://github.com/Vulkin-prog/paper-c-lean/tree/409779f46c0599edcd9ae1f973dd931b1d0a1cea/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-21-000003-v1.json",
+  "title": "Regular configurations, Palm deficits and the cumulant obstruction",
+  "authors": [
+    "Brice Pouly"
+  ],
+  "summary": "Arithmetic regular configurations with private prime pivots, exact source–target Palm mass identities, ordinary deletion and normalized deficit bounds. The independent target is regular with probability tending to one, while absolute cumulant activity has a positive normalized lower bound on prime scales for original and stronger retained sets.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.PR",
+    "msc:11K65",
+    "msc:60F05"
+  ],
+  "published": "2026-09-21",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Long runs and rare patterns of a random completely multiplicative function",
+      "identifier": "https://github.com/Vulkin-prog/paper-c-lean/blob/b3cf9aa27700d784efc61e6f82a92cef53320c40/manuscripts/paper-c/paper_c_version_3PREL9_en.pdf",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Technical companion to Long runs and rare patterns of a random completely multiplicative function",
+      "identifier": "https://github.com/Vulkin-prog/paper-c-lean/blob/b3cf9aa27700d784efc61e6f82a92cef53320c40/manuscripts/paper-c/paper_c_version_3PREL9_technical_companion_en.pdf",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/Vulkin-prog/paper-c-lean",
+  "commit": "409779f46c0599edcd9ae1f973dd931b1d0a1cea",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "probability",
+      "number-theory",
+      "palm-calculus",
+      "cumulants"
+    ],
+    "reason": "Regular arithmetic configurations, Palm mass identities, and cumulant bounds on prime scales.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

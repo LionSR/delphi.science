@@ -1,0 +1,31 @@
+{
+  "key": "A-finite-entropy-separation-of-microstates-and-nonmicrostates-free-entropy",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-finite-entropy-separation-of-microstates-and-nonmicrostates-free-entropy-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-finite-entropy-separation-of-microstates-and-nonmicrostates-free-entropy-September-25-2026/paper.pdf",
+  "title": "A finite-entropy separation of microstates and nonmicrostates free entropy",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We answer the finite-entropy equality question for microstates and nonmicrostates free entropy negatively. We construct a bounded self-adjoint tuple X in a von Neumann algebra with faithful normal tracial state such that $`-\\infty\\lt \\chi(X)\\leq\\chi^*(X)-\\tfrac12\\lt \\infty`$. Here χ is the original microstates entropy with an operator-norm cutoff and a limsup over matrix sizes. The counterexample uses a large but fixed number of variables.",
+  "domain": "Operator algebras",
+  "published": "2026-09-25",
+  "family": "298",
+  "family_title": "Two notions of free entropy differ even when both are finite",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "free-probability",
+      "operator-algebras",
+      "free-entropy"
+    ],
+    "reason": "Answers a finite-entropy question on microstates and nonmicrostates free entropy negatively.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

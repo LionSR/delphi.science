@@ -1,0 +1,31 @@
+{
+  "key": "Rigidity-of-Smooth-Billiards-with-a-Continuous-Caustic-Collar",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Rigidity-of-Smooth-Billiards-with-a-Continuous-Caustic-Collar-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Rigidity-of-Smooth-Billiards-with-a-Continuous-Caustic-Collar-September-24-2026/paper.pdf",
+  "title": "Rigidity of Smooth Billiards with a Continuous Caustic Collar",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that a smooth strictly convex planar billiard with positive curvature is an ellipse whenever a full neighborhood of its boundary is continuously foliated by smooth closed convex caustics. No differentiability across the leaves is assumed. This resolves the near-boundary Birkhoff conjecture in the stated smooth class.",
+  "domain": "Dynamical systems and ergodic theory",
+  "published": "2026-09-24",
+  "family": "147",
+  "family_title": "The near-boundary Birkhoff conjecture",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "billiards",
+      "dynamical-systems",
+      "birkhoff-conjecture"
+    ],
+    "reason": "Shows smooth convex billiards with continuous caustic collars must be ellipses.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "A-Nearly-Quartic-Separation-Between-Randomized-and-Quantum-Query-Complexity",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-Nearly-Quartic-Separation-Between-Randomized-and-Quantum-Query-Complexity-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-Nearly-Quartic-Separation-Between-Randomized-and-Quantum-Query-Complexity-October-5-2026/quartic-query-separation.pdf",
+  "title": "A Nearly Quartic Separation Between Randomized and Quantum Query Complexity",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We construct total Boolean functions with a nearly quartic separation between bounded-error randomized and quantum query complexity. Writing these complexities as $`\\mathrm R(f)`$ and $`\\mathrm Q(f)`$, the examples rule out every universal bound $`\\mathrm R(f)=O((1+\\mathrm Q(f))^\\alpha)`$ with α < 4. Thus the known quartic upper bound has the optimal exponent, disproving the conjectured cubic bound. Both complexities count worst-case bit queries with error at most 1/3 on every input.",
+  "domain": "Mathematical physics",
+  "published": "2026-10-05",
+  "family": "284",
+  "family_title": "The optimal quartic separation between randomized and quantum queries",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "quantum-computing",
+      "query-complexity",
+      "boolean-functions"
+    ],
+    "reason": "Constructs Boolean functions with a near-quartic randomized versus quantum query separation.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

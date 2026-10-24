@@ -1,0 +1,40 @@
+{
+  "key": "PALOMAR-2026-08-24-000006",
+  "source": "palomar",
+  "url": "https://github.com/SauersML/group-approximation/tree/f6ccc7a138b281eb6c4eedf111c6cbd37b4917ce/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-24-000006-v1.json",
+  "title": "SauersML/group-approximation",
+  "authors": [
+    "Sauers"
+  ],
+  "summary": "The displayed finitely presented group is sofic and is not MF in the Carrión-Dadarlat-Eckhardt operator-norm sense.",
+  "domain": "math.OA",
+  "tags": [
+    "math.OA",
+    "math.GR",
+    "msc:46L05"
+  ],
+  "published": "2026-08-24",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/SauersML/group-approximation",
+  "commit": "f6ccc7a138b281eb6c4eedf111c6cbd37b4917ce",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "operator-algebras",
+      "group-theory",
+      "soficity"
+    ],
+    "reason": "States soficity and failure of matricial field property for a finitely presented group.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

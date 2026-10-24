@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-08-23-000001",
+  "source": "palomar",
+  "url": "https://github.com/geoconuk/lean-misc-math/tree/4a1b0c422b6b4e0fd98b04b31a5c41b33fcea123/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-23-000001-v1.json",
+  "title": "geoconuk/lean-misc-math",
+  "authors": [
+    "George A. Constantinides"
+  ],
+  "summary": "For a fixed angular radius theta in (0, pi/2), the least number M(n, theta) of spherical caps of angular radius theta, centred at points of the unit sphere of R^n, whose union is that whole sphere satisfies (1/n) log M(n, theta) -> -log sin theta as n -> infinity. This is the covering half of Wyner (1967): the elementary volume bound gives the lower bound on the covering number and a random-covering argument gives the upper bound. The statement is given in Mathlib's own vocabulary, as an asymptotic for Metric.coveringNumber of Metric.sphere 0 1 in EuclideanSpace R (Fin n) at chordal radius 2…",
+  "domain": "math.MG",
+  "tags": [
+    "math.MG",
+    "cs.IT",
+    "msc:52C17",
+    "msc:41A46",
+    "msc:94B65"
+  ],
+  "published": "2026-08-23",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Random packings and coverings of the unit n-sphere",
+      "identifier": "doi:10.1002/j.1538-7305.1967.tb04246.x",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/geoconuk/lean-misc-math",
+  "commit": "4a1b0c422b6b4e0fd98b04b31a5c41b33fcea123",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "covering-numbers",
+      "high-dimensional-geometry",
+      "information-theory"
+    ],
+    "reason": "Lean formalization of asymptotic spherical covering numbers, extending Wyner's 1967 result.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

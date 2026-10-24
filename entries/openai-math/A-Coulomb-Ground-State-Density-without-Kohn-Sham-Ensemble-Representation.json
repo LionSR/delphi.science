@@ -1,0 +1,31 @@
+{
+  "key": "A-Coulomb-Ground-State-Density-without-Kohn-Sham-Ensemble-Representation",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-Coulomb-Ground-State-Density-without-Kohn-Sham-Ensemble-Representation-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-Coulomb-Ground-State-Density-without-Kohn-Sham-Ensemble-Representation-September-25-2026/paper.pdf",
+  "title": "A Coulomb ground-state density without Kohn-Sham ensemble representation",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We construct a finite three-electron Coulomb molecule whose spin-summed ground-state density cannot be reproduced by any ground-state ensemble of noninteracting electrons in a single real, spin-independent local potential in $`L^{3/2}(\\mathbf R^3)+L^\\infty(\\mathbf R^3)`$. The molecule has two equal positive integer nuclear charges, specified by an exact finite nonnumerical formula.",
+  "domain": "Mathematical physics",
+  "published": "2026-09-25",
+  "family": "278",
+  "family_title": "Failure of Kohn–Sham ensemble representation",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "density-functional-theory",
+      "quantum-chemistry",
+      "kohn-sham"
+    ],
+    "reason": "Constructs a three-electron Coulomb system lacking a noninteracting ensemble representation of its density.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

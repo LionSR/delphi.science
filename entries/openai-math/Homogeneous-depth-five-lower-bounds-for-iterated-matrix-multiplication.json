@@ -1,0 +1,31 @@
+{
+  "key": "Homogeneous-depth-five-lower-bounds-for-iterated-matrix-multiplication",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Homogeneous-depth-five-lower-bounds-for-iterated-matrix-multiplication-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Homogeneous-depth-five-lower-bounds-for-iterated-matrix-multiplication-September-25-2026/Homogeneous-depth-five-lower-bounds-for-iterated-matrix-multiplication-September-25-2026.pdf",
+  "title": "Homogeneous depth-five lower bounds for iterated matrix multiplication",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "Let $`\\mathop{\\mathrm{IMM}}\\nolimits _{n,n}`$ be the $`(1,1)`$ entry of a product of n independent $`n\\times n`$ matrices of variables. Over every field of characteristic zero, every syntactically homogeneous $`\\Sigma\\Pi\\Sigma\\Pi\\Sigma`$ circuit computing $`\\mathop{\\mathrm{IMM}}\\nolimits _{n,n}`$ has at least $`n^{\\sqrt n/400}`$ gates for all sufficiently large n , with an absolute threshold independent of the field. Bottom linear forms may have arbitrary support, and arbitrary finite fan-in, fan-out, and gate sharing are allowed. Over every field, a block expansion gives such circuits with…",
+  "domain": "Theoretical computer science",
+  "published": "2026-09-25",
+  "family": "135",
+  "family_title": "Homogeneous depth-five lower bounds for iterated matrix multiplication",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "arithmetic-circuits",
+      "algebraic-complexity",
+      "matrix-multiplication"
+    ],
+    "reason": "Proves circuit size lower bounds for computing iterated matrix multiplication in a restricted circuit model.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

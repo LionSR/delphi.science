@@ -1,0 +1,31 @@
+{
+  "key": "Failure-of-Bounded-Approximation-in-a-Lipschitz-Free-Space-over-a-Uniformly-Discrete-Metric-Space",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Failure-of-Bounded-Approximation-in-a-Lipschitz-Free-Space-over-a-Uniformly-Discrete-Metric-Space-September-26-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Failure-of-Bounded-Approximation-in-a-Lipschitz-Free-Space-over-a-Uniformly-Discrete-Metric-Space-September-26-2026/main.pdf",
+  "title": "A uniformly discrete counterexample to bounded approximation in Lipschitz-free spaces",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We construct a countable uniformly discrete metric space whose real Lipschitz-free space has the approximation property but fails the bounded approximation property, answering Kalton's question negatively. The identity can be approximated on every compact set by finite-rank operators, but no uniform bound on their norms is possible.",
+  "domain": "Functional analysis",
+  "published": "2026-09-26",
+  "family": "330",
+  "family_title": "A uniformly discrete counterexample to bounded approximation in Lipschitz-free spaces",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "functional-analysis",
+      "lipschitz-free-spaces",
+      "approximation-property"
+    ],
+    "reason": "Constructs a uniformly discrete metric space whose Lipschitz-free space lacks bounded approximation.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

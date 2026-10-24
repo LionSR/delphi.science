@@ -1,0 +1,31 @@
+{
+  "key": "One-sided-negative-sectional-curvature-and-the-holomorphic-Liouville-property",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/One-sided-negative-sectional-curvature-and-the-holomorphic-Liouville-property-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/One-sided-negative-sectional-curvature-and-the-holomorphic-Liouville-property-September-25-2026/paper.pdf",
+  "title": "One-sided negative sectional curvature and the holomorphic Liouville property",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We construct, in some sufficiently large fixed finite complex dimension m , a domain in ℂ m diffeomorphic to $`\\mathbb R^{2m}`$ that admits a complete Kähler metric with real sectional curvature at most −1 and has only constant bounded holomorphic functions. Its sectional curvatures are unbounded below. The construction gives a negative answer to the one-sided bounded-holomorphic-function question.",
+  "domain": "Differential geometry",
+  "published": "2026-09-25",
+  "family": "359",
+  "family_title": "Negative Kähler curvature without bounded holomorphic coordinates",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "complex-geometry",
+      "riemannian-geometry",
+      "several-complex-variables"
+    ],
+    "reason": "Constructs a complete Kähler metric with negative curvature bound and no nonconstant bounded holomorphic functions.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

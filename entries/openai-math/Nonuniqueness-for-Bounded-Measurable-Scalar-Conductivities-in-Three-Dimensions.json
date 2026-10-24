@@ -1,0 +1,31 @@
+{
+  "key": "Nonuniqueness-for-Bounded-Measurable-Scalar-Conductivities-in-Three-Dimensions",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Nonuniqueness-for-Bounded-Measurable-Scalar-Conductivities-in-Three-Dimensions-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Nonuniqueness-for-Bounded-Measurable-Scalar-Conductivities-in-Three-Dimensions-September-23-2026/paper.pdf",
+  "title": "Nonuniqueness for bounded measurable scalar conductivities in three dimensions",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We construct two distinct uniformly positive bounded measurable scalar conductivities on a ball in ℝ 3 with the same full Dirichlet-to-Neumann operator. Both conductivities equal one near the boundary. This gives nonuniqueness in the scalar Calderón problem at bounded measurable regularity.",
+  "domain": "Partial differential equations",
+  "published": "2026-09-23",
+  "family": "365",
+  "family_title": "Joint metric and connection recovery from one boundary patch",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "inverse-problems",
+      "calderon-problem",
+      "elliptic-pdes"
+    ],
+    "reason": "Constructs distinct bounded measurable conductivities on a ball sharing the same Dirichlet-to-Neumann map.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

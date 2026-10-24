@@ -1,0 +1,31 @@
+{
+  "key": "Lifting-sections-from-the-reduced-support-of-an-adjoint",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Lifting-sections-from-the-reduced-support-of-an-adjoint-September-27-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Lifting-sections-from-the-reduced-support-of-an-adjoint-September-27-2026/paper.pdf",
+  "title": "Lifting sections from the reduced support of an adjoint",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For a projective ℚ-factorial dlt pair with effective rational boundary over an algebraically closed field of characteristic zero, we prove that the adjoint has positive Iitaka dimension whenever a nonzero effective Cartier multiple is supported on the coefficient-one boundary and restricts to a semiample line bundle on its whole reduced support. This gives log abundance after nonvanishing in dimension at most four over ℂ.",
+  "domain": "Algebraic and complex geometry",
+  "published": "2026-09-27",
+  "family": "034",
+  "family_title": "Log abundance for compact Kähler spaces under logarithmic Iitaka subadditivity",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "birational-geometry",
+      "log-abundance",
+      "minimal-model-program"
+    ],
+    "reason": "Proves positive Iitaka dimension for adjoint divisors of dlt pairs, giving log abundance in low dimensions.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

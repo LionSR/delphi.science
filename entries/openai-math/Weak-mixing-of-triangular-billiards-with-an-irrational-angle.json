@@ -1,0 +1,31 @@
+{
+  "key": "Weak-mixing-of-triangular-billiards-with-an-irrational-angle",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Weak-mixing-of-triangular-billiards-with-an-irrational-angle-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Weak-mixing-of-triangular-billiards-with-an-irrational-angle-October-5-2026/weak-mixing-triangular-billiards.pdf",
+  "title": "Weak mixing of triangular billiards with an irrational angle",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that the unit-speed billiard flow in every nondegenerate Euclidean triangle with at least one angle irrational relative to π is weakly mixing for normalized Liouville measure. Equivalently, the product of the flow with itself is ergodic.",
+  "domain": "Dynamical systems and ergodic theory",
+  "published": "2026-10-05",
+  "family": "150",
+  "family_title": "Weak mixing of triangular billiards with an irrational angle",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "ergodic-theory",
+      "billiards",
+      "dynamical-systems"
+    ],
+    "reason": "Proves weak mixing of the billiard flow in triangles with an irrational angle.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "key": "PALOMAR-2026-10-17-000003",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/Math-Formalization/tree/497432e5e02244f242cdfc8c0a43316de3aa5bdc/topology/sneider-diagonal",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-17-000003-v1.json",
+  "title": "Sneider's Gδ-diagonal metrization theorem",
+  "authors": [
+    "Arthur Freitas Ramos",
+    "David Barros Hulak",
+    "Ruy Jose Guerra Barretto de Queiroz"
+  ],
+  "summary": "A compact Hausdorff space is metrizable if and only if its diagonal is a Gδ subset of its square with the product topology. The proof supplies a cofinal countable family of finite intersections of closed diagonal neighborhoods and an actual metric inducing exactly the given topology. The underlying type is arbitrary and may be empty. A general supporting theorem proves countable neighborhood character of every closed Gδ set in a compact normal space. This is classical mathematics; no novelty or priority is claimed.",
+  "domain": "math.GN",
+  "tags": [
+    "math.GN",
+    "msc:54E35",
+    "msc:54D30"
+  ],
+  "published": "2026-10-17",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Spaces having a small diagonal, arXiv:math/9910153v1",
+      "identifier": "https://arxiv.org/pdf/math/9910153v1",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/Math-Formalization",
+  "commit": "497432e5e02244f242cdfc8c0a43316de3aa5bdc",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "general-topology",
+      "metrization",
+      "lean-formalization",
+      "compact-spaces"
+    ],
+    "reason": "Formalized proof that compact Hausdorff spaces with a Gδ diagonal are metrizable.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

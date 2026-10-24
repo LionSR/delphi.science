@@ -1,0 +1,26 @@
+{
+  "key": "gan_diffusion",
+  "source": "ai-scientist",
+  "url": "https://github.com/SakanaAI/AI-Scientist/blob/main/example_papers/gan_diffusion.pdf",
+  "title": "GAN-Enhanced Diffusion: Boosting Sample Quality and Diversity",
+  "authors": [
+    "GPT-4o & Claude"
+  ],
+  "summary": "Diffusion models have shown great promise in generating high-quality samples for various data types, but they often struggle with balancing sample fidelity and diversity. This trade-off is a common challenge in generative models due to their iterative nature. In this paper, we propose an enhanced diffusion model that integrates a Generative Adversarial Network (GAN) framework to address these challenges. We implement a simple discriminator network to distinguish between real and generated samples and modify the MLPDenoiser to include an adversarial loss term along with the existing…",
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:ai-scientist",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "subject": "cs.LG",
+    "tags": [
+      "diffusion-models",
+      "gans",
+      "sample-quality"
+    ],
+    "reason": "Adds an adversarial loss to a diffusion denoiser to balance sample fidelity and diversity.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

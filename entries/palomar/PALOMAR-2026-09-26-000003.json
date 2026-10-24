@@ -1,0 +1,52 @@
+{
+  "key": "PALOMAR-2026-09-26-000003",
+  "source": "palomar",
+  "url": "https://github.com/ShengtongZhang-alt/lovasz-opus/tree/ee0085ddec79996279c7b52044659032e5cf8431/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-26-000003-v1.json",
+  "title": "Hamilton cycles in Cayley graphs of polylogarithmic degree",
+  "authors": [
+    "Shengtong Zhang"
+  ],
+  "summary": "A complete Lean 4 / Mathlib formalization of the following theorem: there are absolute constants C, n0 > 0 such that every connected Cayley graph Cay(G, S) on n >= n0 vertices whose degree d = |S| is at least C (log n)^13 / log log n contains a Hamilton cycle (Lovasz.hamiltonian_of_polylog_degree). Here G is a finite group, S is a connection set (S = S^-1 and 1 not in S, so the graph is |S|-regular), log is the natural logarithm, and connectivity is equivalent to S generating G. The theorem is a case of the Lovász conjecture (every connected vertex-transitive graph has a Hamilton path) in…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C45",
+    "msc:05C25",
+    "msc:05C48",
+    "msc:05C50",
+    "msc:05C70",
+    "msc:05C80"
+  ],
+  "published": "2026-09-26",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Hamilton cycles in Cayley graphs of polylogarithmic degree",
+      "identifier": "docs/Polylog_Cayley.pdf (this repository, at the submitted commit)",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/ShengtongZhang-alt/lovasz-opus",
+  "commit": "ee0085ddec79996279c7b52044659032e5cf8431",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "hamilton-cycles",
+      "cayley-graphs",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of Hamilton cycles in Cayley graphs of polylogarithmic degree.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

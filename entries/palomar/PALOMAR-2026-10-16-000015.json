@@ -1,0 +1,63 @@
+{
+  "key": "PALOMAR-2026-10-16-000015",
+  "source": "palomar",
+  "url": "https://github.com/jtraverso/gallai-roy/tree/e737218bf80c3d3684d670f5f8aa9a8257e1a52f/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000015-v1.json",
+  "title": "The Gallai–Hasse–Roy–Vitaver theorem",
+  "authors": [
+    "Juan Pablo Traverso Gianini"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of the Gallai–Hasse–Roy–Vitaver theorem: if an orientation of a finite graph has no directed path on more than k vertices, the graph is k-colourable; and conversely every k-colourable graph has such an orientation. Hence the chromatic number is the minimum over orientations of the number of vertices of a longest directed path.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C15",
+    "msc:05C20"
+  ],
+  "published": "2026-10-16",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Nombre chromatique et plus longs chemins d'un graphe",
+      "identifier": "doi:10.1051/m2an/1967010501291",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Zur algebraischen Begründung der Graphentheorie. I",
+      "identifier": "doi:10.1002/mana.19650280503",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "On directed paths and circuits",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Determination of minimal coloring of vertices of a graph by means of Boolean powers of the incidence matrix",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jtraverso/gallai-roy",
+  "commit": "e737218bf80c3d3684d670f5f8aa9a8257e1a52f",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "graph-coloring",
+      "formal-verification",
+      "lean"
+    ],
+    "reason": "Lean 4 formalization of the Gallai–Hasse–Roy–Vitaver theorem on orientations and colouring.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

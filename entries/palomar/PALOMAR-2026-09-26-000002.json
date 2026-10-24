@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-09-26-000002",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/myerson-satterthwaite-lean/tree/f4dae9744e26a499679e4b8a7aeb9d82dd3f11ee/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-26-000002-v1.json",
+  "title": "Myerson-Satterthwaite impossibility theorem (continuous bilateral-trade version)",
+  "authors": [
+    "Arthur Freitas Ramos"
+  ],
+  "summary": "Formalizes the continuous-type bilateral-trade impossibility result: no mechanism can satisfy ex post efficiency (almost surely), Bayesian incentive compatibility, interim individual rationality, and weak ex ante budget balance when buyer and seller supports overlap. The proof uses payoff equivalence and envelope identities, together with the strict rent-gap identity B + C > S.",
+  "domain": "econ.TH",
+  "tags": [
+    "econ.TH",
+    "cs.GT",
+    "msc:91B26"
+  ],
+  "published": "2026-09-26",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Efficient Mechanisms for Bilateral Trading",
+      "identifier": "https://doi.org/10.1016/0022-0531(83)90048-0",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/myerson-satterthwaite-lean",
+  "commit": "f4dae9744e26a499679e4b8a7aeb9d82dd3f11ee",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "mechanism-design",
+      "bilateral-trade",
+      "lean-formalization",
+      "game-theory"
+    ],
+    "reason": "Lean formalization of the Myerson-Satterthwaite impossibility theorem for bilateral trade.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

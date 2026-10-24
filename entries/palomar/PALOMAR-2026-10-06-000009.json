@@ -1,0 +1,67 @@
+{
+  "key": "PALOMAR-2026-10-06-000009",
+  "source": "palomar",
+  "url": "https://github.com/cadamcat/catalan-lean4/tree/597469e8eba93909efc94892e6f7df5ea4951fe3/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-06-000009-v1.json",
+  "title": "A Lean 4 formalization of Catalan's conjecture (Mihăilescu's theorem)",
+  "authors": [
+    "Yao Xu"
+  ],
+  "summary": "A complete Lean 4 formalization of Catalan's conjecture, proved by Preda Mihăilescu: 8 and 9 are the only consecutive positive proper perfect powers. The formal proof follows the cyclotomic proof in Yuri Bilu's expositions. Cassels' relations, Stickelberger annihilation, and height and counting estimates exclude the case in which one exponent is congruent to 1 modulo the other. Thaine's theorem on circular units, together with a Runge-type approximation argument, settles the remaining case. The class-field-theoretic input comes from a fixed, vendored subset of the ClassFieldTheory library.…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "cs.LO",
+    "msc:11D61",
+    "msc:11R18",
+    "msc:11R29",
+    "msc:11R37",
+    "msc:68V20"
+  ],
+  "published": "2026-10-06",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Primary cyclotomic units and a proof of Catalan's conjecture",
+      "identifier": "doi:10.1515/crll.2004.048",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Catalan's conjecture (after Mihăilescu)",
+      "identifier": "Séminaire Bourbaki, vol. 2002/2003, Astérisque 294 (2004), 1–26",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Catalan without logarithmic forms (after Bugeaud, Hanrot and Mihăilescu)",
+      "identifier": "doi:10.5802/jtnb.478",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "A class number free criterion for Catalan's conjecture",
+      "identifier": "doi:10.1016/S0022-314X(02)00101-4",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/cadamcat/catalan-lean4",
+  "commit": "597469e8eba93909efc94892e6f7df5ea4951fe3",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "catalan-conjecture",
+      "lean-formalization",
+      "cyclotomic-fields"
+    ],
+    "reason": "Lean formalization of Mihăilescu's proof of Catalan's conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

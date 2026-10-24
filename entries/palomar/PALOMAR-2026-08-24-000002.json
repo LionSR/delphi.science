@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-08-24-000002",
+  "source": "palomar",
+  "url": "https://github.com/rwst/Confinement-Certificates/tree/eb810d8f86e49b2b8e058d02a9edac9e5fedafc8/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-24-000002-v2.json",
+  "title": "rwst/Confinement-Certificates",
+  "authors": [
+    "Ralf Stephan (direction, review, paper author)"
+  ],
+  "summary": "A Lean 4 / Mathlib development of a paper on the emptiness theory of the sets Z_{p/q}(s, s+t) = {ξ > 0 : {ξ(p/q)ⁿ} ∈ [s, s+t) for all n ≥ 0}, the generalized Z-numbers of Flatto, Lagarias and Pollington, at and beyond the window length 1/p. The paper introduces block certificates --- finite integer witnesses, rechecked from scratch by the Lean proof kernel, whose soundness rests on the aperiodicity lemma alone --- and uses them to pass the length-$1/p$ line: $\\Zset_{3/2}(1/6,13/24)=\\emptyset$ (window length $3/8>1/3$), $\\Zset_{3/2}(961/3600,2427/3600)=\\emptyset$ (length $733/1800$), and…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.DS",
+    "msc:11J71",
+    "msc:11K06",
+    "msc:37B10"
+  ],
+  "published": "2026-09-06",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Confinement certificates for powers of rational numbers modulo one",
+      "identifier": "https://doi.org/10.13140/RG.2.2.36190.19520",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/rwst/Confinement-Certificates",
+  "commit": "eb810d8f86e49b2b8e058d02a9edac9e5fedafc8",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "dynamical-systems",
+      "z-numbers",
+      "lean-formalization"
+    ],
+    "reason": "Lean certificates on emptiness of generalized Z-number sets at window length.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

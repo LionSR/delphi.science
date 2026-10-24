@@ -1,0 +1,69 @@
+{
+  "key": "PALOMAR-2026-10-09-000014",
+  "source": "palomar",
+  "url": "https://github.com/amelieloher/hoermander-rothschild-stein/tree/d1462014b4ca69cf04b250582ea45021aa07b546/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-09-000014-v1.json",
+  "title": "Hörmander's hypoellipticity theorem and the Rothschild–Stein theory",
+  "authors": [
+    "Scott Armstrong",
+    "Amélie Loher"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of the regularity theory of Hörmander operators: second-order operators built from smooth vector fields X_1, ..., X_q (and possibly a drift X_0) whose iterated commutators span the tangent space at every point. It proves Hörmander's 1967 theorem that such operators are hypoelliptic: every locally integrable weak solution of X_0 u + sum X_i^2 u + c u = g with smooth data is smooth. It then develops the Rothschild–Stein theory (Acta Math. 1976), following Bramanti and Brandolini's \"Hörmander Operators\" (2023): lifting and approximation of the fields by the…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "math.CA",
+    "math.DG",
+    "msc:35H10",
+    "msc:35H20",
+    "msc:43A80",
+    "msc:53C17",
+    "msc:22E25"
+  ],
+  "published": "2026-10-09",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Hypoelliptic second order differential equations",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Hypoelliptic differential operators and nilpotent groups",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Hörmander Operators",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Balls and metrics defined by vector fields I: Basic properties",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/amelieloher/hoermander-rothschild-stein",
+  "commit": "d1462014b4ca69cf04b250582ea45021aa07b546",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "hypoellipticity",
+      "pde",
+      "sub-riemannian-geometry",
+      "lean"
+    ],
+    "reason": "Lean formalization of Hörmander's hypoellipticity theorem and Rothschild-Stein theory.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

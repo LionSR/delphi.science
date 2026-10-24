@@ -1,0 +1,31 @@
+{
+  "key": "The-complexity-of-identifying-a-graph-by-Weisfeiler-Leman-refinement",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-complexity-of-identifying-a-graph-by-Weisfeiler-Leman-refinement-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-complexity-of-identifying-a-graph-by-Weisfeiler-Leman-refinement-September-25-2026/paper.pdf",
+  "title": "The complexity of identifying a graph by Weisfeiler–Leman refinement",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that deciding whether Weisfeiler–Leman refinement of an input dimension identifies a given graph is EXPTIME-complete. The input is a nonempty finite simple uncolored graph in adjacency-matrix form and a positive binary-encoded dimension. Identification quantifies over every comparison graph.",
+  "domain": "Theoretical computer science",
+  "published": "2026-09-25",
+  "family": "133",
+  "family_title": "The computational complexity of Weisfeiler–Leman refinement",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "computational-complexity",
+      "weisfeiler-leman"
+    ],
+    "reason": "Shows that deciding Weisfeiler–Leman graph identification is EXPTIME-complete.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

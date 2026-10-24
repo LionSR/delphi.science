@@ -1,0 +1,32 @@
+{
+  "key": "Generic-Future-Inextendibility-with-Square-Integrable-Connection-Near-a-Fixed-Kerr-Spacetime",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Generic-Future-Inextendibility-with-Square-Integrable-Connection-Near-a-Fixed-Kerr-Spacetime-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Generic-Future-Inextendibility-with-Square-Integrable-Connection-Near-a-Fixed-Kerr-Spacetime-September-23-2026/paper.pdf",
+  "title": "Generic Future Inextendibility with Square-Integrable Connection Near a Fixed Kerr Spacetime",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For each fixed rotating subextremal Kerr background with mass M > 0 and rotation $`0\\lt |\\mathfrak a|\\lt M`$, we prove that the smooth vacuum data near its complete two-ended bridge whose full maximal globally hyperbolic development admits a future $`C^0\\cap W^{1,2}_{\\mathrm{loc}}`$ extension form a meagre set in the weighted smooth topology. The extension metric is continuous and nondegenerate, and its weak connection is locally square-integrable. The neighborhood requires smallness of only the tenth weighted seminorm, while the topology tests every finite order.",
+  "domain": "Mathematical physics",
+  "published": "2026-09-23",
+  "family": "264",
+  "family_title": "Strong cosmic censorship near two-ended Kerr data",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "general-relativity",
+      "kerr-spacetime",
+      "weak-solutions",
+      "pde"
+    ],
+    "reason": "Analyzes generic weak extendibility of vacuum data near a fixed Kerr background, with proofs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

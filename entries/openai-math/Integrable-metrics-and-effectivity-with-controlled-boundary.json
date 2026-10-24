@@ -1,0 +1,31 @@
+{
+  "key": "Integrable-metrics-and-effectivity-with-controlled-boundary",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Integrable-metrics-and-effectivity-with-controlled-boundary-September-26-2026/main.pdf",
+  "title": "Integrable metrics and effectivity with controlled boundary",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "Let Y be smooth projective and let C be an effective integral divisor. If $`-K_Y+C`$ admits a metric with a global strict curvature lower bound for which the canonical section of C is locally square integrable, every pseudoeffective rational divisor becomes rationally effective after an effective correction supported on C . For a smooth projective X with smoothly semipositive $`L=-K_X`$, sections of $`m_jL-P`$ at unbounded positive exponents, with any fixed pseudoeffective Cartier error P , yield a section of a positive multiple of L .",
+  "domain": "Algebraic and complex geometry",
+  "published": "2026-09-26",
+  "family": "068",
+  "family_title": "Anticanonical nonvanishing in every dimension",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "algebraic-geometry",
+      "effective-divisors",
+      "complex-geometry"
+    ],
+    "reason": "Gives conditions under which pseudoeffective divisors become effective, using metrics with boundary control.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

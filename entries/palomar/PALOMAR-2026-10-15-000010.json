@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-10-15-000010",
+  "source": "palomar",
+  "url": "https://github.com/AItoBit/DARPA-s-23-Mathematical-Challenges/tree/42b1d19b3d53ff5333725ef4410c1e0de84b22d2/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-15-000010-v1.json",
+  "title": "H2 obstruction to lifting discrete matrix representations",
+  "authors": [
+    "AItoBit"
+  ],
+  "summary": "A Lean proof that a discrete matrix representation lifts across a surjective homomorphism of commutative rings with square-zero kernel exactly when its explicitly constructed second-cohomology obstruction vanishes. The proof constructs the conjugation action and defect cocycle for an abelian group extension, proves the lifting criterion, and applies it to reduction of invertible matrices. The underlying additive kernel is identified with matrices over the coefficient-ring kernel. This is classical obstruction theory motivated by DARPA Challenge 18, not a solution of its homotopy/Langlands…",
+  "domain": "math.GR",
+  "tags": [
+    "math.GR",
+    "math.RA",
+    "msc:20J06"
+  ],
+  "published": "2026-10-15",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "User-supplied H2 cohomology and square-zero matrix lemmas",
+      "identifier": "",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/AItoBit/DARPA-s-23-Mathematical-Challenges",
+  "commit": "42b1d19b3d53ff5333725ef4410c1e0de84b22d2",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "group-theory",
+      "matrix-representations",
+      "obstruction-theory"
+    ],
+    "reason": "Proves a cohomological obstruction criterion for lifting discrete matrix representations across ring extensions.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

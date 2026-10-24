@@ -1,0 +1,58 @@
+{
+  "key": "PALOMAR-2026-10-21-000017",
+  "source": "palomar",
+  "url": "https://github.com/mbucic4/Induced-Erdos-Sauer/tree/6990e58d8ec5f771ac3a3a76adfdfd341702bdfe/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-21-000017-v1.json",
+  "title": "Induced Erdős–Sauer: an n log log n bound",
+  "authors": [
+    "Matija Bucic",
+    "Fankang He",
+    "Hyunwoo Lee"
+  ],
+  "summary": "We formalize in Lean an O_k(n log log n) bound for the induced Erdős–Sauer problem. For every fixed integer k >= 3, there is a constant C_k > 0 such that every finite simple graph on n >= 1 vertices with more than C_k n log(log(4n)) edges contains a nonempty induced k-regular subgraph. The result is unconditional, and the constants depending on k are not optimized.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-10-21",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "On the induced Erdős–Sauer problem",
+      "identifier": "sha256:7c60f46a6c6d0d8036aa33fa97a4d6f4e018c63e69d98fb001f2c80da3e523fb",
+      "relationship": "adapts"
+    },
+    {
+      "title": "A power-saving bound for k-sunflower-free sets via interpolation and slice rank",
+      "identifier": "sha256:86bea95dcae66f3c2d89f5d3935b6eba89f3df411e377b38690750f35fdf23cd",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Regular subhypergraphs of uniform hypergraphs",
+      "identifier": "sha256:3a142a3b454140149052a1009a67fd78b0f41d819fa5e131d421cbf7cd6b0378",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/mbucic4/Induced-Erdos-Sauer",
+  "commit": "6990e58d8ec5f771ac3a3a76adfdfd341702bdfe",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "extremal-combinatorics",
+      "graph-theory",
+      "induced-subgraphs",
+      "lean"
+    ],
+    "reason": "Lean formalization of an O(n log log n) bound for the induced Erdős–Sauer problem.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

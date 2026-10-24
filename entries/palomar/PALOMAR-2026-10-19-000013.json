@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-10-19-000013",
+  "source": "palomar",
+  "url": "https://github.com/jtraverso/alon-tarsi-choosability/tree/4ab98b11f340ea2160b34d0b57ef7102452b98cc/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-19-000013-v1.json",
+  "title": "The Alon–Tarsi theorem and 3-choosability of planar bipartite graphs",
+  "authors": [
+    "Juan Pablo Traverso Gianini"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of the Alon–Tarsi theorem: if a finite simple graph has an orientation whose numbers of even and odd Eulerian subdigraphs differ, then it can be properly coloured from any lists larger than the out-degrees; and of its corollary that every finite planar bipartite graph is 3-choosable. Planarity is the combinatorial notion of a plane map (a rotation system of genus zero) of the registered entry PALOMAR-2026-10-15-000005, whose definitions are reproduced verbatim in the Challenge. The proof uses the graph polynomial and Mathlib's Combinatorial Nullstellensatz,…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C15",
+    "msc:05C10",
+    "msc:05C20"
+  ],
+  "published": "2026-10-19",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Colorings and orientations of graphs",
+      "identifier": "doi:10.1007/BF01204715",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jtraverso/alon-tarsi-choosability",
+  "commit": "4ab98b11f340ea2160b34d0b57ef7102452b98cc",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "list-coloring",
+      "formalization"
+    ],
+    "reason": "Lean formalization of the Alon–Tarsi theorem and 3-choosability of planar bipartite graphs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

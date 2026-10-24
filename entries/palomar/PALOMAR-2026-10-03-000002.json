@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-10-03-000002",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/jehiel-moldovanu-lean/tree/4ab48f369106f8e7304ea62d6d9264a736ebf7b6/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-03-000002-v1.json",
+  "title": "Continuous binary implementation congruence and sharp finite welfare frontier",
+  "authors": [
+    "Arthur Freitas Ramos",
+    "David Barros Hulak",
+    "Ruy Jose Guerra Barretto de Queiroz"
+  ],
+  "summary": "A general two-alternative implementation characterization on own-type domains containing an open ball: affine private and social valuation differences, nonzero social linear form, one active welfare cut, and a fixed independent opposing probability law force nonnegative coefficient alignment. Arbitrary measurable efficient lotteries have integrable Bayesian incentive compatible transfers exactly under alignment, with explicit ex-post truthful-opponent transfers and a measurable efficient allocation witness. Arbitrary distributions including atoms are covered. A genuine independent…",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "econ.TH",
+    "msc:91B26"
+  ],
+  "published": "2026-10-03",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Efficient Design with Interdependent Valuations",
+      "identifier": "",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/jehiel-moldovanu-lean",
+  "commit": "4ab48f369106f8e7304ea62d6d9264a736ebf7b6",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "mechanism-design",
+      "game-theory",
+      "welfare-economics"
+    ],
+    "reason": "Characterizes binary implementation congruence and welfare frontiers for two-alternative mechanisms.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

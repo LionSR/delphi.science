@@ -1,0 +1,31 @@
+{
+  "key": "Elliptic-Squares-and-Zilber-Pink-for-Curves-in-A2",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Elliptic-Squares-and-Zilber-Pink-for-Curves-in-A2-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Elliptic-Squares-and-Zilber-Pink-for-Curves-in-A2-September-24-2026/paper.pdf",
+  "title": "Elliptic squares and Zilber–Pink for curves in A2",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that every Hodge-generic algebraic curve in $`\\mathcal A_2`$ over $`\\overline{\\mathbb Q}`$ contains only finitely many points whose abelian surface is isogenous to the square of an elliptic curve without complex multiplication (CM). Combining this result with the companion $`E\\times\\mathrm{CM}`$ and quaternionic-division finiteness theorems, we prove the curve case of Zilber–Pink in $`\\mathcal A_2`$ over $`\\overline{\\mathbb Q}`$, without a boundary hypothesis.",
+  "domain": "Number theory",
+  "published": "2026-09-24",
+  "family": "016",
+  "family_title": "Zilber–Pink in abelian varieties and the Siegel threefold",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "arithmetic-geometry",
+      "abelian-varieties",
+      "zilber-pink"
+    ],
+    "reason": "Proves finiteness results for elliptic squares on curves in the moduli space A2.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

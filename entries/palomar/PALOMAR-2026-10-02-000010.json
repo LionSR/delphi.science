@@ -1,0 +1,52 @@
+{
+  "key": "PALOMAR-2026-10-02-000010",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/gershkov-bic-dic-lean/tree/0e1bed171ab66b194d5ee28ac02818b9a7bc5073/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-02-000010-v1.json",
+  "title": "Finite Bayesian-to-Dominant-Strategy Equivalence",
+  "authors": [
+    "Arthur Freitas Ramos",
+    "David Barros Hulak",
+    "Ruy Jose Guerra Barretto de Queiroz"
+  ],
+  "summary": "Finite Gershkov–Goeree–Kushnir–Moldovanu–Shi (2013) Theorem 2 for arbitrary finite agents and alternatives, heterogeneous ordered finite scalar type supports, arbitrary independent positive support masses, and linear private values with nonnegative slopes and arbitrary constants. The library constructs a feasible dominant-strategy mechanism preserving every support type's interim expected utility and ex ante social surplus. Weighted monotone lifting is proved by a compact feasible quadratic minimizer and an improving perturbation. Adjacent transfer bounds imply full-report IC by telescoping.…",
+  "domain": "econ.TH",
+  "tags": [
+    "econ.TH",
+    "cs.GT",
+    "msc:91A27",
+    "msc:91A10",
+    "msc:91B44",
+    "msc:03B35"
+  ],
+  "published": "2026-10-02",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "On the Equivalence of Bayesian and Dominant Strategy Implementation",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/gershkov-bic-dic-lean",
+  "commit": "0e1bed171ab66b194d5ee28ac02818b9a7bc5073",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "mechanism-design",
+      "game-theory",
+      "lean-formalization"
+    ],
+    "reason": "Finite formalization of Bayesian-to-dominant-strategy equivalence in mechanism design.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

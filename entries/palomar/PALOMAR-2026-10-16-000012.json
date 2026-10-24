@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-10-16-000012",
+  "source": "palomar",
+  "url": "https://github.com/shaikidris/kkp-connected-spectral-counterexamples/tree/c611a4a733fe796809cd941f96ff8f2c294fd1ef/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000012-v1.json",
+  "title": "Connected counterexamples to the exact color-critical two-eigenvalue bound",
+  "authors": [
+    "Idris Ali Shaik"
+  ],
+  "summary": "For F=K5 minus one edge, a color-critical graph of chromatic number four, the graph formed from K(s,s,s) and K4 by one bridge is connected and F-free for every integer s at least three. It has 3s squared plus 7 edges, and the sum of squares of its two largest ordered adjacency eigenvalues exceeds 4m/3 by at least (656s squared-1366s+62)/(3(37s-1) squared)>0. The family has arbitrarily large edge counts, refuting the exact assertion in KKP Conjecture 1.16 and Li–Liu–Zhang Conjecture 5.4.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C50",
+    "msc:05C35"
+  ],
+  "published": "2026-10-16",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Asymptotic rank two spectral bounds and a color critical counterexample",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/shaikidris/kkp-connected-spectral-counterexamples",
+  "commit": "c611a4a733fe796809cd941f96ff8f2c294fd1ef",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "extremal-graph-theory",
+      "spectral-graph-theory",
+      "counterexample"
+    ],
+    "reason": "Connected graph families giving counterexamples to a color-critical eigenvalue conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

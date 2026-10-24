@@ -1,0 +1,50 @@
+{
+  "key": "PALOMAR-2026-10-21-000005",
+  "source": "palomar",
+  "url": "https://github.com/sthubbar/goldbach-lean/tree/6d7ae7b40fb5550e836456fd2ff4d8587157aee7/entries/heathbrown1985",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-21-000005-v1.json",
+  "title": "Vinogradov's three primes theorem and almost all binary Goldbach, after Heath-Brown 1985, with the Siegel-Walfisz theorem",
+  "authors": [
+    "Steve Hubbard"
+  ],
+  "summary": "A sorry-free Lean 4 proof of the main results of D. R. Heath-Brown, The ternary Goldbach problem, Rev. Mat. Iberoam. 1 (1985): the Siegel-Walfisz theorem in the form the paper quotes as (1.1), proved from a zero-free region for Dirichlet L-functions and Siegel's theorem; Theorem 1, sum over 2x < m <= 3x of |N2(m) - x S(m)| << x^2 (log x)^{-C}; Corollary 1 and the van der Corput, Chudakov, Estermann theorem that at most O(X (log X)^{-A}) even numbers up to X are not sums of two primes, and density zero; Corollary 2, Vinogradov's theorem that every sufficiently large odd number is a sum of…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11P32",
+    "msc:11N13",
+    "msc:11M20",
+    "msc:11P55"
+  ],
+  "published": "2026-10-21",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "The ternary Goldbach problem",
+      "identifier": "doi:10.4171/RMI/2",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/sthubbar/goldbach-lean",
+  "commit": "6d7ae7b40fb5550e836456fd2ff4d8587157aee7",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "additive-number-theory",
+      "goldbach-problem",
+      "ternary-goldbach",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of Heath-Brown's results on the ternary Goldbach problem and Siegel-Walfisz.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

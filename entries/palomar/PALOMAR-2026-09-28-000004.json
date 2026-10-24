@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-09-28-000004",
+  "source": "palomar",
+  "url": "https://github.com/yoshito-ishiki-math/lean-gh-space-hilbert/tree/8b25d3fc5b9f2a61dffa59e1daa8c9c483f70a46/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-28-000004-v1.json",
+  "title": "Conditional Hilbert-space classification of Gromov--Hausdorff space",
+  "authors": [
+    "Yoshito Ishiki"
+  ],
+  "summary": "A Lean formalization of the implication from five explicitly stated literature inputs to a homeomorphism between the ordinary Gromov--Hausdorff space of nonempty compact metric spaces and real square-summable sequences. The proof constructs invariant full-support probability assignments, finite dimensional local models, global AR domination and discrete approximation. The five literature inputs are assumptions, not theorems proved in this snapshot.",
+  "domain": "math.GN",
+  "tags": [
+    "math.GN",
+    "math.MG",
+    "msc:54E35",
+    "msc:54C55"
+  ],
+  "published": "2026-09-28",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "The topology of Gromov--Hausdorff space",
+      "identifier": "arxiv:2609.09639v4",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/yoshito-ishiki-math/lean-gh-space-hilbert",
+  "commit": "8b25d3fc5b9f2a61dffa59e1daa8c9c483f70a46",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "lean",
+      "metric-geometry",
+      "gromov-hausdorff",
+      "topology"
+    ],
+    "reason": "Lean formalization of a conditional homeomorphism classification of Gromov–Hausdorff space.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

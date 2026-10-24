@@ -1,0 +1,58 @@
+{
+  "key": "PALOMAR-2026-10-18-000016",
+  "source": "palomar",
+  "url": "https://github.com/jtraverso/spectral-graph-bounds/tree/8d8b4ce17e56165b5f1ad3b285fb141666804e1c/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-18-000016-v1.json",
+  "title": "Spectral bounds on the chromatic and independence numbers",
+  "authors": [
+    "Juan Pablo Traverso Gianini"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of classical eigenvalue bounds for a finite simple graph G on a nonempty vertex type, with λ_max and λ_min the largest and smallest eigenvalues of its real adjacency matrix: the average degree is at most λ_max and λ_max is at most the maximum degree (Collatz–Sinogowitz); G is (⌊λ_max⌋ + 1)-colourable (Wilf 1967); if G has an edge, every proper colouring uses at least 1 − λ_max/λ_min colours (Hoffman 1970); and if G is k-regular with k ≥ 1, every independent set has at most n(−λ_min)/(k − λ_min) vertices (Hoffman's ratio bound). Mathlib has the spectral…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C50",
+    "msc:05C15",
+    "msc:05C69"
+  ],
+  "published": "2026-10-18",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Spektren endlicher Grafen",
+      "identifier": "doi:10.1007/BF02941924",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "The Eigenvalues of a Graph and Its Chromatic Number",
+      "identifier": "doi:10.1112/jlms/s1-42.1.330",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "On eigenvalues and colorings of graphs",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jtraverso/spectral-graph-bounds",
+  "commit": "8d8b4ce17e56165b5f1ad3b285fb141666804e1c",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "spectral-graph-theory",
+      "chromatic-number",
+      "lean"
+    ],
+    "reason": "Lean 4 formalization of eigenvalue bounds on chromatic and independence numbers of graphs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

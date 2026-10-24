@@ -1,0 +1,32 @@
+{
+  "key": "Quaternionic-Division-Points-on-Curves-in-the-Siegel-Threefold",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Quaternionic-Division-Points-on-Curves-in-the-Siegel-Threefold-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Quaternionic-Division-Points-on-Curves-in-the-Siegel-Threefold-September-24-2026/paper.pdf",
+  "title": "Quaternionic division points on curves in the Siegel threefold",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the quaternionic-division component of Zilber–Pink for curves in $`\\mathcal A_2`$ over $`\\overline{\\mathbb Q}`$. A Hodge-generic algebraic curve contains only finitely many points whose full geometric rational endomorphism algebra is an indefinite quaternion division algebra over ℚ. No boundary or reduction hypothesis is required.",
+  "domain": "Number theory",
+  "published": "2026-09-24",
+  "family": "016",
+  "family_title": "Zilber–Pink in abelian varieties and the Siegel threefold",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "arithmetic-geometry",
+      "shimura-varieties",
+      "zilber-pink",
+      "abelian-varieties"
+    ],
+    "reason": "Proves finiteness of quaternionic division points on Hodge-generic curves in the Siegel threefold.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

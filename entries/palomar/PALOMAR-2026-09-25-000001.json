@@ -1,0 +1,51 @@
+{
+  "key": "PALOMAR-2026-09-25-000001",
+  "source": "palomar",
+  "url": "https://github.com/LR-UK/Bounded-orbit-wandering-domains/tree/6e306deb8169e834e9cc6662160c70231a7e2a83/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-25-000001-v4.json",
+  "title": "Absence of bounded-orbit wandering domains",
+  "authors": [
+    "Nikolai Prochorov",
+    "Lasse Rempe",
+    "James Waterman"
+  ],
+  "summary": "We formalise the proof of two major recent results on wandering domains of transcendental entire and meromorphic functions: every orbit in a wandering domain accumulates at infinity and at a non-isolated (derived) point of the spherical set of singular values. Both results are obtained as a special case of a more general theorem, for locally defined functions on possibly disconnected complex one-manifolds. Let f be an open holomorphic function from an open subset O of such a manifold X into X. Different components of O may map to different components of X, even when those source components…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "math.CV",
+    "msc:37F10",
+    "msc:30D05",
+    "msc:30F45"
+  ],
+  "published": "2026-10-01",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Absence of bounded-orbit wandering domains",
+      "identifier": "https://arxiv.org/abs/2609.28279",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/LR-UK/Bounded-orbit-wandering-domains",
+  "commit": "6e306deb8169e834e9cc6662160c70231a7e2a83",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "complex-dynamics",
+      "wandering-domains",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalisation of results on wandering domains of transcendental entire functions.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "key": "PALOMAR-2026-08-31-000017",
+  "source": "palomar",
+  "url": "https://github.com/sneed-and-feed/lean-theorems-1/tree/becacae53c6b6de3322707e130b5829dbbce0ed4/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-31-000017-v1.json",
+  "title": "sneed-and-feed/lean-theorems-1",
+  "authors": [
+    "Sneed & Feed Formalization Team"
+  ],
+  "summary": "A complete, machine-checked Lean 4 formalization of Dilworth's Theorem (Robert P. Dilworth, 1950) on chain decompositions of finite posets and Mirsky's Dual Theorem (Leon Mirsky, 1971) on antichain covers. Proves that the maximum size of an antichain equals the minimum number of chains covering the poset, and dually that the maximum length of a chain equals the minimum number of antichains covering the poset. To the maintainers' knowledge, the theorem was not found in an exact declaration name, docstring, and type signature search of the pinned Mathlib revision (Mathlib v4.34.0-rc1).",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:06A07",
+    "msc:05A18",
+    "msc:05D15"
+  ],
+  "published": "2026-08-31",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A Decomposition Theorem for Partially Ordered Sets",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "A dual of Dilworth's decomposition theorem",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/sneed-and-feed/lean-theorems-1",
+  "commit": "becacae53c6b6de3322707e130b5829dbbce0ed4",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "combinatorics",
+      "order-theory",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of Dilworth's theorem and Mirsky's dual theorem on posets.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-09-25-000025",
+  "source": "palomar",
+  "url": "https://github.com/mmislan/palomar-p005-raf-interior-realizability/tree/ebc29d42debba48f8ffc90624d7bd14cdb4a281e/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-25-000025-v1.json",
+  "title": "Same-ground RAF realizability of finite interior operators and the four-reaction threshold for the empty-or-at-least-three family",
+  "authors": [
+    "Michael Mislan"
+  ],
+  "summary": "Addressing the RAF-realizability question in Section 4 of Mike Steel's Interior Operators and Their Relationship to Autocatalytic Networks (arXiv:2305.16714v4, 2023), we characterize which interior operators on the subsets of a finite set E are maxRAF operators of catalytic reaction systems whose reaction set is exactly E. An interior operator is represented by its family of fixed sets, a union-closed family containing the empty set. A same-ground realization is a system with one reaction per element of E, finitely many molecule types, a food set and a catalysis relation; it realizes the…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05B35",
+    "msc:05C20"
+  ],
+  "published": "2026-09-25",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Interior operators realizable by autocatalytic networks: an antimatroid characterization",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/mmislan/palomar-p005-raf-interior-realizability",
+  "commit": "ebc29d42debba48f8ffc90624d7bd14cdb4a281e",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "autocatalytic-sets",
+      "interior-operators",
+      "combinatorics",
+      "reaction-networks"
+    ],
+    "reason": "Characterizes which interior operators are realizable by catalytic reaction systems.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

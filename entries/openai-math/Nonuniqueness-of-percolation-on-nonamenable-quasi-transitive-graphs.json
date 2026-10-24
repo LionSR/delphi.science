@@ -1,0 +1,31 @@
+{
+  "key": "Nonuniqueness-of-percolation-on-nonamenable-quasi-transitive-graphs",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Nonuniqueness-of-percolation-on-nonamenable-quasi-transitive-graphs-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Nonuniqueness-of-percolation-on-nonamenable-quasi-transitive-graphs-September-24-2026/paper.pdf",
+  "title": "Nonuniqueness of percolation on nonamenable quasi-transitive graphs",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the bond-percolation nonuniqueness conjecture of Benjamini and Schramm: every infinite connected, locally finite, nonamenable quasi-transitive graph has a nonempty interval of parameters for which Bernoulli bond percolation almost surely has infinitely many infinite clusters. We also prove Hutchcroft's stronger operator-threshold conjecture, establishing $`p_c\\lt p_{2\\to2}\\le p_u`$.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-09-24",
+  "family": "214",
+  "family_title": "The Benjamini–Schramm nonuniqueness conjecture",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "percolation",
+      "probability",
+      "graph-theory"
+    ],
+    "reason": "Proves Benjamini-Schramm nonuniqueness conjecture for bond percolation on nonamenable graphs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

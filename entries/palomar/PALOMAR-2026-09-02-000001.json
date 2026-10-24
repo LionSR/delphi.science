@@ -1,0 +1,55 @@
+{
+  "key": "PALOMAR-2026-09-02-000001",
+  "source": "palomar",
+  "url": "https://github.com/yuma-mizuno/markoff-modp-generalized/tree/01ed89dd540d942ab1df6a25d88e64b6b951cab1/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-02-000001-v2.json",
+  "title": "Generalized Markoff strong approximation",
+  "authors": [
+    "Yuma Mizuno"
+  ],
+  "summary": "A Lean 4 formalization of the generic branch of eventual strong approximation for generalized Markoff surfaces, specialized to a fixed ordered integral coefficient triple. It proves punctured transitivity for both the full Vieta group and the two-Vieta rotation group, supplies an explicit coefficient-dependent cutoff, and derives surjectivity of coordinatewise reduction onto the full finite-field surface.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.DS",
+    "msc:11D25",
+    "msc:11T06",
+    "msc:37P25"
+  ],
+  "published": "2026-10-12",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Strong Approximation for the Relative Character Variety of the Four-Times Punctured Sphere",
+      "identifier": "arXiv:2603.04096v3",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Divisibility by p for Markoff-like Surfaces",
+      "identifier": "arXiv:2509.02187v3",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/yuma-mizuno/markoff-modp-generalized",
+  "commit": "01ed89dd540d942ab1df6a25d88e64b6b951cab1",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "markoff-surfaces",
+      "lean",
+      "strong-approximation"
+    ],
+    "reason": "Lean formalization of strong approximation for generalized Markoff surfaces over finite fields.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

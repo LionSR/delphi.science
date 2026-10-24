@@ -1,0 +1,31 @@
+{
+  "key": "Regular-trajectories-pruning-and-quantum-parity",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Regular-trajectories-pruning-and-quantum-parity-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Regular-trajectories-pruning-and-quantum-parity-September-24-2026/paper.pdf",
+  "title": "Regular trajectories, pruning and quantum parity",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that constant-depth quantum circuits with arbitrary one-qubit gates and unbounded-arity Toffoli gates cannot compute parity with any fixed positive worst-case advantage using polynomially many total qubits. Ancillary qubits are initialized to $`|0\\rangle`$, one output qubit is measured, and all other final registers may be discarded without restriction. This resolves Moore's parity conjecture in the measured-output model.",
+  "domain": "Mathematical physics",
+  "published": "2026-09-24",
+  "family": "274",
+  "family_title": "Parity is not in QAC 0",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "quantum-computing",
+      "circuit-complexity",
+      "parity"
+    ],
+    "reason": "Proves constant-depth quantum circuits cannot compute parity with polynomially many qubits.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

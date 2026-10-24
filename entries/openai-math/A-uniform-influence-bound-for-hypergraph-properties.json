@@ -1,0 +1,31 @@
+{
+  "key": "A-uniform-influence-bound-for-hypergraph-properties",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-uniform-influence-bound-for-hypergraph-properties-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-uniform-influence-bound-for-hypergraph-properties-October-5-2026/hypergraph-influences.pdf",
+  "title": "A uniform influence bound for hypergraph properties",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For every fixed integer r ≥ 3, we prove that every relabeling-invariant Boolean property of simple r -uniform hypergraphs on n vertices satisfies $`\\mathop{\\mathrm{Var}}\\nolimits _p(f)\\le C_r I_p(f)/(\\log n)^{r/(r-1)}`$. The constant depends only on r , and the bound holds uniformly for all $`0\\lt p\\lt 1`$ without a monotonicity assumption. For increasing properties, it gives the corresponding threshold-width bound with exponent $`r/(r-1)`$, proving the hypergraph threshold-width conjecture of Friedgut and Kalai.",
+  "domain": "Combinatorics",
+  "published": "2026-10-05",
+  "family": "186",
+  "family_title": "Uniform influence and sharp thresholds for graph and hypergraph properties",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "boolean-functions",
+      "hypergraphs",
+      "threshold-phenomena"
+    ],
+    "reason": "Proves a variance-influence bound for hypergraph properties, supporting the threshold-width conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

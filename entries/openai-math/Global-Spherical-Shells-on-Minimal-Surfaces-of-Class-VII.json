@@ -1,0 +1,32 @@
+{
+  "key": "Global-Spherical-Shells-on-Minimal-Surfaces-of-Class-VII",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Global-Spherical-Shells-on-Minimal-Surfaces-of-Class-VII-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Global-Spherical-Shells-on-Minimal-Surfaces-of-Class-VII-September-24-2026/paper.pdf",
+  "title": "Global Spherical Shells on Minimal Surfaces of Class VII",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the Global Spherical Shell conjecture: every connected minimal compact complex surface of class VII with positive second Betti number contains a global spherical shell. This is a holomorphically embedded neighborhood of the standard three-sphere in $`\\mathbb C^2\\setminus\\{0\\}`$ whose complement is connected.",
+  "domain": "Algebraic and complex geometry",
+  "published": "2026-09-24",
+  "family": "060",
+  "family_title": "The Global Spherical Shell conjecture",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "complex-geometry",
+      "surfaces",
+      "class-vii",
+      "complex-analysis"
+    ],
+    "reason": "Proves existence of global spherical shells in minimal class VII surfaces, resolving a conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

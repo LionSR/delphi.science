@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-10-11-000017",
+  "source": "palomar",
+  "url": "https://github.com/pmaronow/arbitrary-rsb-palomar/tree/5162e2d15b440ce46fd322f20eb429468d601948/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-11-000017-v1.json",
+  "title": "Replica symmetry breaking at arbitrary depth",
+  "authors": [
+    "P. M. Aronow",
+    "Patrick Lopatto"
+  ],
+  "summary": "A Lean formalization of open phases with every prescribed finite replica symmetry breaking depth in mixed even-spin Ising models at zero external field and positive temperature. The first selected result constructs strictly increasing even degrees beginning at four and a nonempty open set of positive effective covariance coefficients, with an optimizing probability measure having exactly k+1 support points. The independent statement uses concrete Gaussian Cole–Hopf recursions and comparison against all finite schemes at every competing depth. The substantive development constructs minimizers…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math-ph",
+    "msc:60K35",
+    "msc:82B44"
+  ],
+  "published": "2026-10-11",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Replica symmetry breaking at arbitrary depth",
+      "identifier": "https://arxiv.org/abs/2609.05317",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/pmaronow/arbitrary-rsb-palomar",
+  "commit": "5162e2d15b440ce46fd322f20eb429468d601948",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "spin-glasses",
+      "replica-symmetry-breaking",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of replica symmetry breaking results for mixed even-spin Ising models.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

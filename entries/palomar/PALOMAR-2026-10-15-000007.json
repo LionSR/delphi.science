@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-10-15-000007",
+  "source": "palomar",
+  "url": "https://github.com/sascha2718/lean-brownian-images/tree/343d25c53699fbcb2372d3016002993d475e249e/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-15-000007-v1.json",
+  "title": "Distinguishing sets and measures from their planar Brownian images",
+  "authors": [
+    "Sascha Troscheit"
+  ],
+  "summary": "Lean 4 formalisation of all 32 numbered statements of \"Distinguishing sets and measures from their planar Brownian images\" (Sascha Troscheit, arXiv:2610.16339), which asks whether two deterministic time measures on the unit interval can be distinguished almost surely from a single planar Brownian image. Rescaled correlation integrals of the time measures determine expected correlation profiles of the image measures, and profiles that differ in the limit make the image laws mutually singular, even when the time measures have the same dimension. For natural measures of self-similar sets…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.DS",
+    "msc:60J65",
+    "msc:28A80"
+  ],
+  "published": "2026-10-15",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Distinguishing sets and measures from their planar Brownian images",
+      "identifier": "https://arxiv.org/abs/2610.16339",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/sascha2718/lean-brownian-images",
+  "commit": "343d25c53699fbcb2372d3016002993d475e249e",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "stochastic-processes",
+      "brownian-motion",
+      "fractal-measures"
+    ],
+    "reason": "Lean formalization of results on distinguishing measures from planar Brownian images.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

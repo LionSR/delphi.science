@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-08-21-000003",
+  "source": "palomar",
+  "url": "https://github.com/mbaccaro-dev/mathematical-proofs/tree/4c8fd5edad3fd7eaf12812832d3caf1935ea35d5/MathematicalProofs/BoundaryConstantObstruction/Lean",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-21-000003-v1.json",
+  "title": "mbaccaro-dev/mathematical-proofs",
+  "authors": [
+    "Mayk Loide Baccaro"
+  ],
+  "summary": "A Lean 4 proof that every finite member of the stated positive-shift incomplete-gamma family has a nonreal zero.",
+  "domain": "math.CV",
+  "tags": [
+    "math.CV",
+    "math.NT",
+    "msc:30D15",
+    "msc:11M26"
+  ],
+  "published": "2026-08-21",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A Boundary-Constant Obstruction to Real-Rooted Riemann Incomplete-Gamma Approximants",
+      "identifier": "10.5281/zenodo.21941655",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/mbaccaro-dev/mathematical-proofs",
+  "commit": "4c8fd5edad3fd7eaf12812832d3caf1935ea35d5",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "complex-analysis",
+      "number-theory",
+      "lean-formalization",
+      "incomplete-gamma"
+    ],
+    "reason": "Lean proof that finite members of a positive-shift incomplete-gamma family have nonreal zeros.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

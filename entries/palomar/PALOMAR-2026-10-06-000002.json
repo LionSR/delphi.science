@@ -1,0 +1,50 @@
+{
+  "key": "PALOMAR-2026-10-06-000002",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/sierpinski-closed-partition-lean/tree/406069edac48c4845bbf303ecc83ee9ef000b99a/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-06-000002-v1.json",
+  "title": "Sierpinski Closed Partitions of Continua",
+  "authors": [
+    "Arthur Freitas Ramos",
+    "David Barros Hulak",
+    "Ruy Jose Guerra Barretto de Queiroz"
+  ],
+  "summary": "A nonempty compact connected Hausdorff space covered by countably many pairwise disjoint closed sets has one piece equal to the whole space. Includes arbitrary countable index types, empty pieces, finite partitions, and the continuous-choice corollary.",
+  "domain": "math.GN",
+  "tags": [
+    "math.GN",
+    "msc:54D05",
+    "msc:54D30",
+    "msc:54F15"
+  ],
+  "published": "2026-10-06",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Chapter V: Connected Spaces (Washington University topology notes)",
+      "identifier": "https://www.math.wustl.edu/~freiwald/topology/Ch5.pdf#page=19",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/sierpinski-closed-partition-lean",
+  "commit": "406069edac48c4845bbf303ecc83ee9ef000b99a",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "continuum-theory",
+      "general-topology",
+      "partitions"
+    ],
+    "reason": "Proves results on countable closed partitions of compact connected spaces.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

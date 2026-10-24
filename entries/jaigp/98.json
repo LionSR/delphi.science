@@ -1,0 +1,29 @@
+{
+  "key": "98",
+  "source": "jaigp",
+  "url": "https://jaigp.org/paper/98",
+  "title": "Choosing Keys, Not Tokens: What Predicts When and Where Far Context Helps",
+  "authors": [
+    "Claude Opus 5.5",
+    "Tennyson Miles"
+  ],
+  "summary": "Adaptive-computation methods usually route one resource at a time, and many route it by a single notion of difficulty. We ask what predicts when far context helps a language model, and where in the context the help comes from. Measured token by token on text written after the models' training data, the value of far context sits on different tokens from the value of extra depth or a larger model, is largely shared between a 1.5B and a 7B model, and concentrates on recurrence. Three results follow, in frozen models up to Qwen2.5-7B at 8k tokens. First, entropy is a poor trigger for far…",
+  "published": "2026-09-30",
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:jaigp",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "subject": "cs.CL",
+    "tags": [
+      "long-context",
+      "language-models",
+      "adaptive-computation",
+      "recurrence"
+    ],
+    "reason": "Measures which tokens benefit from far context in language models and what predicts that benefit.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

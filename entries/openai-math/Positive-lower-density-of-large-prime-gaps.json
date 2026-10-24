@@ -1,0 +1,31 @@
+{
+  "key": "Positive-lower-density-of-large-prime-gaps",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Positive-lower-density-of-large-prime-gaps-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Positive-lower-density-of-large-prime-gaps-September-25-2026/main.pdf",
+  "title": "Positive lower density of large prime gaps",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For every fixed C > 0, we prove that a positive proportion of consecutive prime gaps exceed $`C\\log p`$, where p is the smaller prime. The proportion is bounded below for every sufficiently large initial segment of the prime sequence, with a constant depending on C . It follows that the indices at which $`p_n/n`$ increases have positive lower asymptotic density, answering a question of Erdős and Prachar.",
+  "domain": "Number theory",
+  "published": "2026-09-25",
+  "family": "026",
+  "family_title": "Positive lower density of large prime gaps",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "prime-numbers",
+      "analytic-number-theory"
+    ],
+    "reason": "Proves a positive lower density of large prime gaps, addressing a question of Erdős and Prachar.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

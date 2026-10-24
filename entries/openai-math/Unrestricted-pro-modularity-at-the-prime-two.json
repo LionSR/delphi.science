@@ -1,0 +1,32 @@
+{
+  "key": "Unrestricted-pro-modularity-at-the-prime-two",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Unrestricted-pro-modularity-at-the-prime-two-October-6-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Unrestricted-pro-modularity-at-the-prime-two-October-6-2026/two-adic-promodularity.pdf",
+  "title": "Unrestricted pro-modularity at the prime two",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "Every continuous, odd, absolutely irreducible two-dimensional 2-adic representation of $`G_{\\mathbb Q}`$ that is unramified outside finitely many finite primes occurs in the full completed Hecke algebra at some odd tame level. The level may contain auxiliary tame primes, and scalar and reducible residual representations are included. This is a completed-Hecke occurrence result, with no de Rham hypothesis; it does not assert classical modularity.",
+  "domain": "Number theory",
+  "published": "2026-10-06",
+  "family": "010",
+  "family_title": "Unrestricted pro-modularity at the prime two",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "galois-representations",
+      "modularity",
+      "automorphic-forms"
+    ],
+    "reason": "Proves a completed-Hecke occurrence result for 2-adic Galois representations of the rationals.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

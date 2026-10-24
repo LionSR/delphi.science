@@ -1,0 +1,31 @@
+{
+  "key": "A-Polynomial-Time-2-Approximation-for-Shortest-Common-Superstring",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-Polynomial-Time-2-Approximation-for-Shortest-Common-Superstring-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-Polynomial-Time-2-Approximation-for-Shortest-Common-Superstring-September-24-2026/paper.pdf",
+  "title": "A Polynomial-Time 2-Approximation for Shortest Common Superstring",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We give a deterministic algorithm that, for every finite family of explicitly represented ordinary strings, outputs a common superstring of length at most twice the optimum in time polynomial in the total encoded input size, including symbol labels. The guarantee applies to the algorithm constructed here, not the classical maximum-overlap Greedy procedure.",
+  "domain": "Theoretical computer science",
+  "published": "2026-09-24",
+  "family": "128",
+  "family_title": "A factor-two approximation for shortest common superstring",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "approximation-algorithms",
+      "strings",
+      "combinatorics"
+    ],
+    "reason": "Presents a polynomial-time 2-approximation algorithm for the shortest common superstring problem.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

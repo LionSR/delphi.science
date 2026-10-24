@@ -1,0 +1,40 @@
+{
+  "key": "PALOMAR-2026-10-21-000018",
+  "source": "palomar",
+  "url": "https://github.com/wcook04/plectis-erdos-lean/tree/c39cea6a976747d132a848d26f110b9c608d5a45/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-21-000018-v1.json",
+  "title": "Erdős #257: irrationality for every reciprocal-summable support and every integer base",
+  "authors": [
+    "Will Cook"
+  ],
+  "summary": "For every infinite set A of exponents whose reciprocal sum converges and every integer base b at least two, the series with terms 1/(b^a - 1) supported on A is irrational. The theorem settles the whole reciprocal-summable support regime at once and uniformly in the base, with no pairwise-coprimality, periodicity, density or powerful-support hypothesis, and with the zero exponent normalised to zero by real division. Any counterexample to the universal Erdős Problem 257 must therefore be supported on a set whose reciprocal sum diverges. The mechanism produces close returns of shifted binary…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11J72"
+  ],
+  "published": "2026-10-21",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/wcook04/plectis-erdos-lean",
+  "commit": "c39cea6a976747d132a848d26f110b9c608d5a45",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "irrationality",
+      "erdos-problems",
+      "diophantine-approximation"
+    ],
+    "reason": "Irrationality result for reciprocal-summable exponent supports, addressing Erdős problem 257.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

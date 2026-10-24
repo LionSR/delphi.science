@@ -1,0 +1,32 @@
+{
+  "key": "The-arithmetic-category-and-stable-recovery-of-lattice-factors",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-arithmetic-category-and-stable-recovery-of-lattice-factors-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-arithmetic-category-and-stable-recovery-of-lattice-factors-September-23-2026/paper.pdf",
+  "title": "The arithmetic category and stable recovery of lattice factors",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove stable canonical recovery for scalar-twisted group factors of ICC groups commensurable with property-$`(T)`$ lattices over characteristic-zero local fields. Every specified stable isomorphism to a scalar-twisted factor of any countably infinite ICC group recovers the group, the cocycle up to a normalized cochain, and equal amplification scales, with an implementing partial isometry in the given matrix corners. We compute the arithmetic correspondence subcategory for arbitrary countable ICC groups, including all bounded maps, summands, conjugates, and Connes fusion, and combine it…",
+  "domain": "Operator algebras",
+  "published": "2026-09-23",
+  "family": "286",
+  "family_title": "Rigidity and arithmetic of lattice von Neumann algebras",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "operator-algebras",
+      "property-t",
+      "group-theory",
+      "von-neumann-algebras"
+    ],
+    "reason": "Proves stable recovery results for group factors of ICC groups tied to property (T) lattices.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

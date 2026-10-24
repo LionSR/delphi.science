@@ -1,0 +1,32 @@
+{
+  "key": "The-Generalized-Mukai-Conjecture",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-Generalized-Mukai-Conjecture-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-Generalized-Mukai-Conjecture-September-24-2026/article.pdf",
+  "title": "The generalized Mukai conjecture",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the generalized Mukai conjecture: every positive-dimensional smooth complex Fano manifold of dimension n , Picard number ρ , and pseudoindex ι satisfies $`\\rho(\\iota-1)\\le n`$. Equality holds precisely for the product of ρ copies of $`\\mathbb P^{\\iota-1}`$.",
+  "domain": "Algebraic and complex geometry",
+  "published": "2026-09-24",
+  "family": "063",
+  "family_title": "The generalized Mukai conjecture",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "algebraic-geometry",
+      "fano-manifolds",
+      "pseudoindex",
+      "picard-number"
+    ],
+    "reason": "Proves a bound relating Picard number, pseudoindex and dimension for smooth complex Fano manifolds.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

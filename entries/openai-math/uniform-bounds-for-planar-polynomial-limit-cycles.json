@@ -1,0 +1,32 @@
+{
+  "key": "uniform-bounds-for-planar-polynomial-limit-cycles",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/uniform-bounds-for-planar-polynomial-limit-cycles-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/uniform-bounds-for-planar-polynomial-limit-cycles-September-24-2026/uniform-bounds-for-planar-polynomial-limit-cycles-September-24-2026.pdf",
+  "title": "Uniform bounds for planar polynomial limit cycles",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For every degree, we prove that the number of isolated periodic orbits of a real planar polynomial vector field is bounded by a finite constant depending only on that degree. This establishes the uniform boundedness assertion in the second part of Hilbert's sixteenth problem. The proof uses separation of asymptotic expansions on nested complex domains and a finite-dimensional counting argument.",
+  "domain": "Dynamical systems and ergodic theory",
+  "published": "2026-09-24",
+  "family": "143",
+  "family_title": "Hilbert's sixteenth problem: uniform bounds for limit cycles",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "dynamical-systems",
+      "limit-cycles",
+      "hilbert-sixteenth-problem",
+      "polynomial-vector-fields"
+    ],
+    "reason": "Proves a uniform degree-dependent bound on limit cycles of planar polynomial vector fields.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

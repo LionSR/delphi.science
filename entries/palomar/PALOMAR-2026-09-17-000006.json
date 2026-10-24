@@ -1,0 +1,44 @@
+{
+  "key": "PALOMAR-2026-09-17-000006",
+  "source": "palomar",
+  "url": "https://github.com/blawton/fried-conj-lean/tree/610d659ea15af869553f6e3e79c432880d9b0ab0/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-17-000006-v1.json",
+  "title": "Resonance-cluster analysis for a proposed counterexample to Fried's conjecture",
+  "authors": [
+    "Benjamin Lawton"
+  ],
+  "summary": "A Lean 4 formalization of the theorem FriedCrossing.fried_counterexample_of_resolvent_inputs, the machine-checked reduction behind a proposed codimension-one failure of Fried's identity ζ(0) = τ_R for acyclic characters on a closed hyperbolic 3-manifold with b₁ = 1. For a simple illustration of the method with figures, see docs/counterexample_intuitive_view.pdf. The Mechanism: Near (g_hyp, ρ_triv), along the conformal family g_τ = e^{−2τb}g_hyp with characters χ_θ, the Ruelle resonances near 0 form two small clusters: a rank-2 cluster in degree 1, encoded by a 2×2 matrix M(θ,τ), and a rank-4…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "math.SP",
+    "msc:37C30",
+    "msc:37D20",
+    "msc:58J52",
+    "msc:57Q10"
+  ],
+  "published": "2026-09-17",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/blawton/fried-conj-lean",
+  "commit": "610d659ea15af869553f6e3e79c432880d9b0ab0",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "dynamical-systems",
+      "spectral-geometry",
+      "ruelle-resonances",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of a reduction for a proposed counterexample to Fried's conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

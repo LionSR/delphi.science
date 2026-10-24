@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-09-02-000013",
+  "source": "palomar",
+  "url": "https://github.com/DhyeyMavani2003/chip-firing-with-lean/tree/5b422d855c02af60591121ba7c11b5e8242542b8/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-02-000013-v1.json",
+  "title": "Chip-Firing with Lean 4",
+  "authors": [
+    "Dhyey Dharmendrakumar Mavani",
+    "Nathan Pflueger"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of Baker and Norine's Riemann-Roch theorem for finite graphs. Chip configurations on a finite graph, modulo chip-firing moves, form an abelian group analogous to the group of line bundles on a compact Riemann surface. Each class can be assigned a rank, analogous to the dimension of a linear series. These ranks then satisfy a formula of the form r(D) - r(K-D) = deg D + 1 - g, in exact analogy to Riemann surfaces. This formula is formalized, along with the analog of Clifford's theorem for finite graphs.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C57",
+    "msc:14T20"
+  ],
+  "published": "2026-09-02",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Riemann-Roch and Abel-Jacobi theory on a finite graph",
+      "identifier": "https://doi.org/10.1016/j.aim.2007.04.012",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/DhyeyMavani2003/chip-firing-with-lean",
+  "commit": "5b422d855c02af60591121ba7c11b5e8242542b8",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "riemann-roch",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of the Baker–Norine Riemann–Roch theorem for finite graphs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

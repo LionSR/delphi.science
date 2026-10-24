@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-10-22-000028",
+  "source": "palomar",
+  "url": "https://github.com/sthubbar/goldbach-lean/tree/4d87394fed5e86a866ec2335621dc1b57f2e0c9d/entries/renyi1948",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-22-000028-v1.json",
+  "title": "Renyi's theorem, Renyi 1948: every large even number is a prime plus a number with at most 8 prime factors",
+  "authors": [
+    "Steve Hubbard"
+  ],
+  "summary": "A sorry-free Lean 4 proof of Renyi's theorem: there is N0 such that every even N >= N0 is p + m with p prime, m >= 1 and Omega of m at most 8, where Omega counts prime factors with multiplicity, as Mathlib's ArithmeticFunction.cardFactors does. So the theorem is proved with the explicit constant K = 8. Also proved: a lower bound e^{-36} N / 2 log^2 N for the number of primes p < N with Omega of N - p at most 8; the same two statements with the weaker K = 13000; and the K = 8 statement written with Mathlib's Nat.IsAtMostAlmostPrime. The entry also proves twin_renyi_count, a derived analogue…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11P32",
+    "msc:11N35",
+    "msc:11N36"
+  ],
+  "published": "2026-10-22",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "On the representation of an even number as the sum of a single prime and a single almost-prime number",
+      "identifier": "https://www.mathnet.ru/eng/im3018",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/sthubbar/goldbach-lean",
+  "commit": "4d87394fed5e86a866ec2335621dc1b57f2e0c9d",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "prime-numbers",
+      "lean-formalization",
+      "almost-primes"
+    ],
+    "reason": "Lean 4 proof of Rényi's theorem on primes plus almost-prime numbers.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

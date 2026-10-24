@@ -1,0 +1,32 @@
+{
+  "key": "Maximal-Multipoint-Seshadri-Constants-in-Higher-Dimensions",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Maximal-Multipoint-Seshadri-Constants-in-Higher-Dimensions-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Maximal-Multipoint-Seshadri-Constants-in-Higher-Dimensions-October-5-2026/main.pdf",
+  "title": "Maximal Multipoint Seshadri Constants in Higher Dimensions",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "Let L be an ample line bundle on a smooth integral complex projective variety X of dimension n ≥ 3. We prove that there is a threshold $`r_0=r_0(X,L)`$ such that for every integer $`r\\ge r_0`$, the ordinary multipoint Seshadri constant at r very general points equals the volume bound $`(L^n/r)^{1/n}`$. This establishes the qualitative Nagata–Biran–Szemberg assertion in these dimensions.",
+  "domain": "Algebraic and complex geometry",
+  "published": "2026-10-05",
+  "family": "039",
+  "family_title": "Nagata’s conjecture and maximal Seshadri constants",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "seshadri-constants",
+      "algebraic-geometry",
+      "multipoint",
+      "projective-varieties"
+    ],
+    "reason": "Shows multipoint Seshadri constants reach the volume bound for large point counts in higher dimensions.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

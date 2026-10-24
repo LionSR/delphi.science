@@ -1,0 +1,25 @@
+{
+  "name": "open-index-site",
+  "private": true,
+  "type": "module",
+  "description": "The open index: pages and the agent API (Next.js on Vercel), over Supabase Postgres.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "node --test --experimental-strip-types lib/*.test.ts"
+  },
+  "dependencies": {
+    "@octokit/oauth-methods": "6.0.5",
+    "next": "16.4.3",
+    "postgres": "3.4.7",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.3.15",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "typescript": "7.0.2"
+  }
+}

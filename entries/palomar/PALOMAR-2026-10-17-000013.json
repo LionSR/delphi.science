@@ -1,0 +1,54 @@
+{
+  "key": "PALOMAR-2026-10-17-000013",
+  "source": "palomar",
+  "url": "https://github.com/stalex444/triangle-group-growth/tree/874b6a264e1eb8adf06141686eabab8a7afbe583/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-17-000013-v1.json",
+  "title": "Growth series of the triangle Coxeter groups (p, q, infinity), with the PGL(2,Z) instance: Padovan sphere sizes and growth rate the plastic number",
+  "authors": [
+    "Stephanie Alexander"
+  ],
+  "summary": "Kernel-checked proof, for every Coxeter system on three generators a, b, c with m(a,c) = p, m(b,c) = q, m(a,b) = infinity and p, q >= 2, of the growth-series identity in the ring of integer power series: (sum_n a(n) X^n) * (1 - (X + ... + X^(p-1))(X + ... + X^(q-1))) = (1 + X)(1 + ... + X^(p-1))(1 + ... + X^(q-1)), where a(n) is the number of group elements of Coxeter length n; together with its instances (2,3,inf), (2,4,inf), (3,3,inf) and, for (2,3,inf) = PGL(2,Z), the sphere sizes 1, 3, 5, 7, 9, 12, 16, ..., the Padovan identity a(n) = Pad(n+5) for n >= 2, the two-sided bounds 2 rho^n =…",
+  "domain": "math.GR",
+  "tags": [
+    "math.GR",
+    "gr-qc",
+    "math-ph",
+    "msc:20F55",
+    "msc:20F69",
+    "msc:05A15",
+    "msc:11B39",
+    "msc:83C75",
+    "msc:17B67"
+  ],
+  "published": "2026-10-17",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Growth of planar Coxeter groups, P.V. numbers, and Salem numbers",
+      "identifier": "Mathematische Annalen 293 (1992), 475-483",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/stalex444/triangle-group-growth",
+  "commit": "874b6a264e1eb8adf06141686eabab8a7afbe583",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "coxeter-groups",
+      "growth-series",
+      "group-theory",
+      "formal-verification"
+    ],
+    "reason": "Kernel-checked proof of growth series identities for triangle Coxeter groups.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "key": "PALOMAR-2026-10-01-000013",
+  "source": "palomar",
+  "url": "https://github.com/flengyel/FailureOfComposition/tree/fb32a19c4883baad83b286d4594cfbc6b1d2ad5c/Lean",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-01-000013-v1.json",
+  "title": "Pointwise provable equality and the failure of composition",
+  "authors": [
+    "Florian Lengyel"
+  ],
+  "summary": "In their study of pathologies in recursion categories, Montagna (1989) and Di Paola–Montagna (1991) introduce the algebraic systems S′ and S′_T, respectively, and claim that they are categories. We show that the proposed composition is not independent of the choice of representatives. For every consistent recursively enumerable extension T of Peano arithmetic (PA), we exhibit two unary programs whose partial functions are provably equal in T, separately at each standard input. Composing each after a program that searches for a T-proof of contradiction and returns its code yields programs…",
+  "domain": "math.LO",
+  "tags": [
+    "math.LO",
+    "msc:03D75",
+    "msc:03F40",
+    "msc:08A30",
+    "msc:18B10"
+  ],
+  "published": "2026-10-01",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Pointwise provable equality and the failure of composition, version 37",
+      "identifier": "https://api.github.com/repos/flengyel/FailureOfComposition/git/blobs/f833fc8848bcabfbbbc0a077fa7505dbcf352334",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/flengyel/FailureOfComposition",
+  "commit": "fb32a19c4883baad83b286d4594cfbc6b1d2ad5c",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "logic",
+      "recursion-theory",
+      "provability",
+      "category-theory"
+    ],
+    "reason": "Shows a claimed composition in recursion-category constructions is not well-defined.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

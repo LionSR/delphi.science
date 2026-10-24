@@ -1,0 +1,71 @@
+{
+  "key": "PALOMAR-2026-10-02-000013",
+  "source": "palomar",
+  "url": "https://github.com/RBarish-UTokyo/NPCompleteness-Lean4/tree/3e603e795b44fedcf7d6dd65b7d1e30547ead925/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-02-000013-v1.json",
+  "title": "NP-completeness of SAT, 3-SAT and their variants (the Cook–Levin theorem) in Lean 4",
+  "authors": [
+    "Robert D. Barish"
+  ],
+  "summary": "A Lean 4 proof of the Cook–Levin theorem and of the NP-completeness of several variants of satisfiability, for an explicit machine model, using only Lean's core library. The compared theorems state that the following languages are NP-complete: SAT, the set of binary codes of satisfiable CNF formulas (Complexity.sat_np_complete); 3-SAT, with at most three literals per clause (threeSAT_np_complete); exactly-3-SAT, with exactly three literals per clause on three distinct variables (exactThreeSAT_np_complete); (≤1,≤2)-SAT, with two or three literals per clause and every variable occurring at…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "cs.LO",
+    "msc:68Q17",
+    "msc:68Q15",
+    "msc:03D15",
+    "msc:68Q04",
+    "msc:68V20"
+  ],
+  "published": "2026-10-02",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "The complexity of theorem-proving procedures",
+      "identifier": "doi:10.1145/800157.805047",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Reducibility among combinatorial problems",
+      "identifier": "doi:10.1007/978-1-4684-2001-2_9",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "A simplified NP-complete satisfiability problem",
+      "identifier": "doi:10.1016/0166-218X(84)90081-7",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Planar formulae and their uses",
+      "identifier": "doi:10.1137/0211025",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Computational Complexity: A Modern Approach",
+      "identifier": "ISBN 978-0-521-42426-4",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/RBarish-UTokyo/NPCompleteness-Lean4",
+  "commit": "3e603e795b44fedcf7d6dd65b7d1e30547ead925",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "complexity-theory",
+      "satisfiability",
+      "lean-formalization"
+    ],
+    "reason": "Lean proof of the Cook–Levin theorem and NP-completeness of SAT variants.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

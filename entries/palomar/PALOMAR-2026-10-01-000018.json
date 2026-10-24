@@ -1,0 +1,60 @@
+{
+  "key": "PALOMAR-2026-10-01-000018",
+  "source": "palomar",
+  "url": "https://github.com/enaslund/unit-distance-bound-0.0427/tree/edd88c0c175ab4d18cf6115e2f6ddf3865d36b12/lean",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-01-000018-v2.json",
+  "title": "An Exponent of 1.043 for the Unit Distance Problem: Lean formalization at exponent 1.04315, conditional on one zeta inequality",
+  "authors": [
+    "Eric Naslund"
+  ],
+  "summary": "Lean formalization accompanying the paper An Exponent of 1.043 for the Unit Distance Problem by Eric Naslund (cited under sources), which proves the exponent 1.043171 unconditionally with a computer-assisted certificate. Conditional theorem on unit distances in the Euclidean plane. Let B = Q(sqrt 241) and let E be the number field of degree 512 generated over Q by sqrt 241 and square roots of the eight elements -1, -71011068 + 4574225 sqrt 241, (-6101 - 393 sqrt 241)/2, (6101 - 393 sqrt 241)/2, 31 - 2 sqrt 241, 31 + 2 sqrt 241, 326 - 21 sqrt 241 and 326 + 21 sqrt 241 of B (a basis of the…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.NT",
+    "msc:52C10",
+    "msc:11R37",
+    "msc:20C05"
+  ],
+  "published": "2026-10-10",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "An Exponent of 1.043 for the Unit Distance Problem",
+      "identifier": "https://github.com/enaslund/unit-distance-bound-0.0427/blob/2586d6b97682cc4cb890e076d2c4906e27f421f9/papers/0.043171/main.tex",
+      "relationship": "adapts"
+    },
+    {
+      "title": "An exponent of 1.04273 for the unit distance problem",
+      "identifier": "https://github.com/enaslund/unit-distance-bound-0.0427/blob/2586d6b97682cc4cb890e076d2c4906e27f421f9/papers/0.04273/main.tex",
+      "relationship": "adapts"
+    },
+    {
+      "title": "A lower exponent of 1.0418235 for planar unit distances",
+      "identifier": "https://github.com/enaslund/unit-distance-bound-0.0427/blob/2586d6b97682cc4cb890e076d2c4906e27f421f9/papers/0.0418235/main.tex",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/enaslund/unit-distance-bound-0.0427",
+  "commit": "edd88c0c175ab4d18cf6115e2f6ddf3865d36b12",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "unit-distance",
+      "discrete-geometry",
+      "number-theory",
+      "lean"
+    ],
+    "reason": "Lean formalization of a conditional unit-distance exponent bound in the Euclidean plane.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

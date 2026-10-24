@@ -1,0 +1,41 @@
+{
+  "key": "PALOMAR-2026-10-07-000011",
+  "source": "palomar",
+  "url": "https://github.com/JD-Jones-ASES/six-concyclic-lean/tree/6bf3f4019bf0ced69f609abe3d517f9d7c31e55e/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-07-000011-v1.json",
+  "title": "Six concyclic points satisfy the Euclidean Ramsey tensor criterion, as does every spherical set of at most m + 4 points of affine dimension m and every algebraic spherical set; given the classification's sufficiency half, these sets are Ramsey (the algebraic ones when spanning)",
+  "authors": [
+    "JD Jones"
+  ],
+  "summary": "A Lean 4 development around the tensor criterion of the classification of finite Euclidean Ramsey configurations (openai/math, family 172). With the criterion's definitions restated character for character from that project's challenge file: every set of six distinct points on a circle satisfies the criterion, by an explicit certificate (the product of the two bilinear forms through the first three and the last three points of a homogeneous parametrisation of the circle, scaled and conjugated by the parametrisation); the sharp dimension theorem: every spherical set of at most m + 4 distinct…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.MG",
+    "msc:05D10",
+    "msc:52C10"
+  ],
+  "published": "2026-10-07",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/JD-Jones-ASES/six-concyclic-lean",
+  "commit": "6bf3f4019bf0ced69f609abe3d517f9d7c31e55e",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "euclidean-ramsey",
+      "discrete-geometry",
+      "lean-formalization"
+    ],
+    "reason": "Lean development on Euclidean Ramsey criteria for spherical point configurations.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

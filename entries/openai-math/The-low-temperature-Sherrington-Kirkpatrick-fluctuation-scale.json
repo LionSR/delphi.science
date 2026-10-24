@@ -1,0 +1,32 @@
+{
+  "key": "The-low-temperature-Sherrington-Kirkpatrick-fluctuation-scale",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-low-temperature-Sherrington-Kirkpatrick-fluctuation-scale-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-low-temperature-Sherrington-Kirkpatrick-fluctuation-scale-September-24-2026/The-low-temperature-Sherrington-Kirkpatrick-fluctuation-scale-September-24-2026.pdf",
+  "title": "The low-temperature Sherrington–Kirkpatrick fluctuation scale",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For the zero-field Gaussian Sherrington–Kirkpatrick model at every fixed inverse temperature β > 1, we prove that the standard deviation of the log partition function is $`n^{1/6+o(1)}`$. The same exponent describes its typical centered absolute fluctuations, establishing the predicted one-sixth exponent in this regime.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-09-24",
+  "family": "217",
+  "family_title": "The low-temperature Sherrington–Kirkpatrick fluctuation law",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "spin-glass",
+      "sherrington-kirkpatrick",
+      "statistical-physics",
+      "probability"
+    ],
+    "reason": "Determines the fluctuation scale of the log partition function in the low-temperature SK model.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

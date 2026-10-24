@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-09-23-000003",
+  "source": "palomar",
+  "url": "https://github.com/Dishah3241/Erdos1007/tree/43f89415a6663848a1445effbda8b3abe77b052b/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-23-000003-v1.json",
+  "title": "Unit-distance graphs of dimension four with nine edges",
+  "authors": [
+    "Dishant Shah"
+  ],
+  "summary": "A graph has dimension n when n is the least number such that its vertices can be placed injectively in ℝⁿ with every edge of length one (Erdős, Harary and Tutte). House proved that a graph of dimension four has at least nine edges, and that nine is attained only by K_{3,3}. This project proves the second half in Lean 4, in the form google-deepmind/formal-conjectures states it as erdos_1007.variants.dimension_four_extremal: a graph of dimension four with nine edges and no isolated vertex is isomorphic to K_{3,3}. The proof follows Chaffee and Noble's proof of House's theorem. On the way it…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.MG",
+    "msc:05C62",
+    "msc:52C10"
+  ],
+  "published": "2026-09-23",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Dimension 4 and dimension 5 graphs with minimum edge set",
+      "identifier": "https://ajc.maths.uq.edu.au/pdf/64/ajc_v64_p327.pdf",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/Dishah3241/Erdos1007",
+  "commit": "43f89415a6663848a1445effbda8b3abe77b052b",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "unit-distance-graphs",
+      "discrete-geometry",
+      "lean"
+    ],
+    "reason": "Lean 4 proof that the only four-dimensional unit-distance graph with nine edges is K3,3.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

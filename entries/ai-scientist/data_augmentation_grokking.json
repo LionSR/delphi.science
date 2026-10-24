@@ -1,0 +1,26 @@
+{
+  "key": "data_augmentation_grokking",
+  "source": "ai-scientist",
+  "url": "https://github.com/SakanaAI/AI-Scientist/blob/main/example_papers/data_augmentation_grokking.pdf",
+  "title": "Accelerating Mathematical Insight: Boosting Grokking through Strategic Data Augmentation",
+  "authors": [
+    "GPT-4o & Claude"
+  ],
+  "summary": "This paper investigates the impact of data augmentation on grokking dynamics in mathematical operations, focusing on modular arithmetic. Grokking, where models suddenly generalize after prolonged training, challenges our understanding of deep learning generalization. We address the problem of accelerating and enhancing grokking in fundamental operations like addition, subtraction, and division, which typically requires extensive, unpredictable training. Our novel contribution is a data augmentation strategy combining operand reversal and negation, applied with varying probabilities to…",
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:ai-scientist",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "subject": "cs.LG",
+    "tags": [
+      "grokking",
+      "data-augmentation",
+      "modular-arithmetic"
+    ],
+    "reason": "Studies how data augmentation affects grokking in transformer training on modular arithmetic.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

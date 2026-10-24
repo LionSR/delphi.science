@@ -1,0 +1,31 @@
+{
+  "key": "The-spherical-magnetization-law-for-the-three-dimensional-quantum-Heisenberg-ferromagnet",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-spherical-magnetization-law-for-the-three-dimensional-quantum-Heisenberg-ferromagnet-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-spherical-magnetization-law-for-the-three-dimensional-quantum-Heisenberg-ferromagnet-October-5-2026/spherical-magnetization.pdf",
+  "title": "The spherical magnetization law for the three-dimensional quantum Heisenberg ferromagnet",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the spherical magnetization law for the three-dimensional nearest-neighbor isotropic quantum Heisenberg ferromagnet at every fixed positive quantum spin and every sufficiently low fixed positive temperature. As the even periodic cubes grow, the symmetric zero-field magnetization converges in moments to a uniform direction with a deterministic positive magnitude. This magnitude equals the right derivative at zero field of the infinite-volume pressure. The law is expressed through self-adjoint linear combinations of the spin components and requires no joint measurement of noncommuting…",
+  "domain": "Mathematical physics",
+  "published": "2026-10-05",
+  "family": "271",
+  "family_title": "Bloch's law, its lattice correction, and the spherical magnetization law",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "quantum-statistical-mechanics",
+      "magnetism",
+      "heisenberg-model"
+    ],
+    "reason": "Proves a magnetization law for the 3D quantum Heisenberg ferromagnet at low temperature.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

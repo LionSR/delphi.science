@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-10-21-000021",
+  "source": "palomar",
+  "url": "https://github.com/wcook04/plectis-erdos-lean/tree/9ab395cda99d13f8fcd16cf655fc17458b3eaa38/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-21-000021-v1.json",
+  "title": "All-base bases and integral relations for the totient kernel",
+  "authors": [
+    "Will Cook"
+  ],
+  "summary": "For every integer base k at least two and depth e at least one, the rational span of the sections n ↦ φ(k^j n+r) through level e has dimension k^e+1. An explicit retained family is a basis, every omitted section is an integer multiple of a retained section, and these reductions form a basis for all integral relations, with rank Σ_(1≤j<e) k^j. The entry also gives the full dyadic basis and an affine independence theorem. The retained positive residues satisfy k ∤ r, a weaker condition than gcd(k,r)=1. Martin’s earlier theorem already implies affine independence, and Coons proved…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11A25",
+    "msc:11B83"
+  ],
+  "published": "2026-10-21",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Bases and Integral Relations for the k-Kernel of Euler’s Totient",
+      "identifier": "https://github.com/wcook04/plectis-erdos/blob/147f3f1da400a84dcb3013ea6cef75dc8f382b09/paper/249/erdos-249-binary-totient-series.pdf",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/wcook04/plectis-erdos-lean",
+  "commit": "9ab395cda99d13f8fcd16cf655fc17458b3eaa38",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "totient-function",
+      "linear-algebra",
+      "arithmetic-functions"
+    ],
+    "reason": "Bases and integral relations for sections of the totient function across integer bases.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

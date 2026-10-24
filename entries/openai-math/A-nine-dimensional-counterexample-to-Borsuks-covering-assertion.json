@@ -1,0 +1,31 @@
+{
+  "key": "A-nine-dimensional-counterexample-to-Borsuks-covering-assertion",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-nine-dimensional-counterexample-to-Borsuks-covering-assertion-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-nine-dimensional-counterexample-to-Borsuks-covering-assertion-September-23-2026/paper.pdf",
+  "title": "A nine-dimensional counterexample to Borsuk's covering assertion",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "The compact set of rank-one orthogonal projectors on ℝ 4 , with the Frobenius metric, cannot be covered by ten sets of strictly smaller diameter. It therefore gives a counterexample to Borsuk's conjecture in dimension nine.",
+  "domain": "Combinatorics",
+  "published": "2026-09-23",
+  "family": "156",
+  "family_title": "Borsuk's conjecture fails in dimension nine",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "discrete-geometry",
+      "convex-geometry",
+      "borsuk-problem"
+    ],
+    "reason": "Gives a nine-dimensional counterexample to Borsuk's covering assertion using projectors.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

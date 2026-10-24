@@ -1,0 +1,32 @@
+{
+  "key": "The-Gaussian-Propeller-Bound-in-Every-Dimension",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-Gaussian-Propeller-Bound-in-Every-Dimension-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-Gaussian-Propeller-Bound-in-Every-Dimension-September-24-2026/main.pdf",
+  "title": "The Gaussian propeller bound in every dimension",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the Gaussian propeller conjecture: for every finite measurable partition of a Euclidean space, the sum of the squared lengths of its Gaussian first moments is at most $`9/(8\\pi)`$. For dimension at least two and at least three cells, three planar sectors of angle $`2\\pi/3`$, extended by an orthogonal Euclidean factor, attain the bound.",
+  "domain": "Convex and metric geometry",
+  "published": "2026-09-24",
+  "family": "096",
+  "family_title": "The Gaussian propeller conjecture in every dimension",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "geometry",
+      "gaussian-measure",
+      "partitions",
+      "extremal-problems"
+    ],
+    "reason": "Proves a sharp bound on squared Gaussian first moments over measurable partitions, with extremal examples.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "A-Counterexample-to-the-Group-Ring-Determinant-Conjecture",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-Counterexample-to-the-Group-Ring-Determinant-Conjecture-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-Counterexample-to-the-Group-Ring-Determinant-Conjecture-September-23-2026/paper.pdf",
+  "title": "A Counterexample to the Group-Ring Determinant Conjecture",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We disprove the unrestricted group-ring Determinant Conjecture. We construct a finitely generated group G and a square matrix over $`\\mathbb Z[G]`$ that is invertible over $`\\mathbb Q[G]`$ and has Fuglede–Kadison determinant strictly between zero and one. The logarithmic integral defining the determinant is finite.",
+  "domain": "Algebra",
+  "published": "2026-09-23",
+  "family": "197",
+  "family_title": "A torsion-free group algebra that is not directly finite",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "group-rings",
+      "fuglede-kadison-determinant",
+      "operator-algebras"
+    ],
+    "reason": "Constructs a group-ring matrix disproving the unrestricted determinant conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

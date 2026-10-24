@@ -1,0 +1,31 @@
+{
+  "key": "Midpoint-convexity-from-two-recursive-potentials",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Midpoint-convexity-from-two-recursive-potentials-September-27-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Midpoint-convexity-from-two-recursive-potentials-September-27-2026/manuscript.pdf",
+  "title": "Midpoint convexity from two recursive potentials",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We study tree norms computed by two least nonnegative fields whose difference is the vector. For Euclidean child aggregation, two root-sum spaces have an averaged asymptotic midpoint modulus of at least $`t^3/128`$ for $`0\\lt t\\lt 1`$, including a reflexive joining-root space. A reflexive construction with a fixed zero root also satisfies a homogeneous cubic estimate. These spaces admit no equivalent asymptotically uniformly convex norm. We also obtain sixth-power and cubic estimates when the aggregation exponent depends on the height of a finite component.",
+  "domain": "Functional analysis",
+  "published": "2026-09-27",
+  "family": "331",
+  "family_title": "Reflexive midpoint convexity and diamond distortion",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "banach-spaces",
+      "tree-norms",
+      "asymptotic-convexity"
+    ],
+    "reason": "Derives midpoint modulus estimates for tree norms defined by two recursive potentials.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

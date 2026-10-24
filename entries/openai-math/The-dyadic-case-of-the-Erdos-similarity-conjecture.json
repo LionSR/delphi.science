@@ -1,0 +1,32 @@
+{
+  "key": "The-dyadic-case-of-the-Erdos-similarity-conjecture",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-dyadic-case-of-the-Erdos-similarity-conjecture-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-dyadic-case-of-the-Erdos-similarity-conjecture-September-25-2026/paper.pdf",
+  "title": "The dyadic case of the Erdős similarity conjecture",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We construct a compact subset of the unit interval, of measure arbitrarily close to one, that contains no affine copy of the dyadic sequence $`\\{2^{-n}:n\\ge1\\}`$. The conclusion holds for every translation and every nonzero real dilation, of either sign, proving the dyadic case of the Erdős similarity conjecture.",
+  "domain": "Real and complex analysis",
+  "published": "2026-09-25",
+  "family": "084",
+  "family_title": "The geometric case of the Erdős similarity conjecture",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "measure-theory",
+      "erdos-similarity",
+      "fractals",
+      "real-analysis"
+    ],
+    "reason": "Constructs a near-full-measure compact set avoiding affine copies of the dyadic sequence.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

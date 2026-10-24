@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-09-30-000020",
+  "source": "palomar",
+  "url": "https://github.com/mmislan/palomar-p087-d-stability-critical-points/tree/e0e376f5df0a639c619259a1e4a0a09648d25f93/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000020-v1.json",
+  "title": "A critical-point criterion for D-stability in every dimension",
+  "authors": [
+    "Michael Mislan"
+  ],
+  "summary": "Johnson's contact criterion for D-stability is expressed as an explicit principal-minor critical-point system. For every real square matrix and every choice of positive barrier weights, D-stability is equivalent to Hurwitz stability and the absence of positive solutions of the associated Fritz-John equations. The proof applies a proper exhaustion of the positive orthant to Johnson's contact variety, so that every nonempty contact set contains a critical point. In dimension five, the criterion is written explicitly as a Lagrange system and a tangency system, with coefficients given by…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "msc:15A18",
+    "msc:34D20",
+    "msc:14P10"
+  ],
+  "published": "2026-09-30",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A critical-point criterion for D-stability in every dimension",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/mmislan/palomar-p087-d-stability-critical-points",
+  "commit": "e0e376f5df0a639c619259a1e4a0a09648d25f93",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "dynamical-systems",
+      "matrix-stability",
+      "critical-points"
+    ],
+    "reason": "Critical-point characterization of D-stability for real matrices, with an explicit five-dimensional case.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

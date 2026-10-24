@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-09-12-000003",
+  "source": "palomar",
+  "url": "https://github.com/rwst/Confinement-Certificates/tree/e773310aa60d010038c3b1a02ee09dcaacce064d/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-12-000003-v1.json",
+  "title": "Confinement schemas and the reach of block certificates for powers of rational numbers modulo one",
+  "authors": [
+    "Ralf Stephan"
+  ],
+  "summary": "A Lean 4 / Mathlib development of the second paper on the sets Z_{p/q}(s, s+t) = {ξ > 0 : {ξ(p/q)ⁿ} ∈ [s, s+t) for all n ≥ 0}, the generalized Z-numbers of Flatto, Lagarias and Pollington. The first paper built a corpus of block certificates for individual statements Z_{p/q}(U) = ∅. This paper replaces parts of that corpus by theorems, and then asks what the certificate format can and cannot reach. Thirty certificates in the regime p > q² collapse into one closed-form criterion on the single real parameter ε = {(p−q)s}, settling a set of positions of measure 1 − 2q²/(p(p+q)) at every base…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.DS",
+    "msc:11J71",
+    "msc:11K06",
+    "msc:37E05"
+  ],
+  "published": "2026-09-12",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Confinement schemas and the reach of block certificates for powers of rational numbers modulo one",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/rwst/Confinement-Certificates",
+  "commit": "e773310aa60d010038c3b1a02ee09dcaacce064d",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "lean",
+      "dynamical-systems"
+    ],
+    "reason": "Lean development on sets defined by fractional parts of powers of rational numbers.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

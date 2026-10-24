@@ -1,0 +1,31 @@
+{
+  "key": "Exponential-decay-in-two-dimensional-classical-On-models",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Exponential-decay-in-two-dimensional-classical-On-models-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Exponential-decay-in-two-dimensional-classical-On-models-September-23-2026/paper.pdf",
+  "title": "Exponential decay in two-dimensional classical O(n) models",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove exponential decay of two-point correlations for the classical nearest-neighbor $`O(n)`$ model on the square lattice, for every n ≥ 3 and every finite positive inverse temperature. The estimate is uniform over finite free-boundary subgraphs and bounded nonnegative edge strengths. This resolves positively the all-temperature exponential spin-decay conjecture for these models.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-09-23",
+  "family": "215",
+  "family_title": "Canonical $`O(3)`$ continuum limit and exact $`O(4)`$ mass asymptotics",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "statistical-mechanics",
+      "spin-models",
+      "correlation-decay"
+    ],
+    "reason": "Proves exponential two-point correlation decay for planar O(n) models at all temperatures.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-6-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Finite-ordinary-minimal-model-programs-on-compact-Kahler-fourfolds-October-6-2026/paper.pdf",
+  "title": "Finite ordinary minimal model programs on compact Kähler fourfolds",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that every maximal ordinary negative-ray program starting from a compact Kähler klt fourfold pair with effective rational boundary in the global Weil-divisor ℚ-factorial category terminates. It ends at a nef model when the adjoint is pseudo-effective and at a projective Mori fibre space otherwise.",
+  "domain": "Algebraic and complex geometry",
+  "published": "2026-10-06",
+  "family": "056",
+  "family_title": "Termination of projective and Kähler fourfold minimal model programs",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "algebraic-geometry",
+      "minimal-model-program",
+      "kahler-geometry"
+    ],
+    "reason": "Proves termination of maximal ordinary negative-ray programs on compact Kähler klt fourfolds.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

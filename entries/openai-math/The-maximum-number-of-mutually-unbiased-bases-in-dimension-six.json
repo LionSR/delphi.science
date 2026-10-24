@@ -1,0 +1,31 @@
+{
+  "key": "The-maximum-number-of-mutually-unbiased-bases-in-dimension-six",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-maximum-number-of-mutually-unbiased-bases-in-dimension-six-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-maximum-number-of-mutually-unbiased-bases-in-dimension-six-September-24-2026/The-maximum-number-of-mutually-unbiased-bases-in-dimension-six-September-24-2026.pdf",
+  "title": "The maximum number of mutually unbiased bases in dimension six",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that the maximum number of mutually unbiased orthonormal bases in ℂ 6 is three, resolving Zauner's dimension-six MUB conjecture. The upper bound is computer-assisted: under the stated binary64 arithmetic and compiler conditions, a complete execution of the documented verification pipeline excludes four arbitrary complex bases.",
+  "domain": "Mathematical physics",
+  "published": "2026-09-24",
+  "family": "266",
+  "family_title": "Exactly three mutually unbiased bases in dimension six",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "quantum-information",
+      "mutually-unbiased-bases",
+      "computer-assisted-proof"
+    ],
+    "reason": "Proves that three is the maximum number of mutually unbiased bases in dimension six.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

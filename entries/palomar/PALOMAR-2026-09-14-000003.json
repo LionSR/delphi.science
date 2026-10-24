@@ -1,0 +1,58 @@
+{
+  "key": "PALOMAR-2026-09-14-000003",
+  "source": "palomar",
+  "url": "https://github.com/boonsuan/nivat/tree/0d94547e934418c9d1b75fcbb7d6af493e86759d/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-14-000003-v1.json",
+  "title": "A proof of Nivat's conjecture",
+  "authors": [
+    "Boon Suan Ho"
+  ],
+  "summary": "A Lean+mathlib proof of Nivat's conjecture: Given a finite alphabet A, we consider configurations c: Z^2 -> A, which are arbitrary maps that can be thought of as colorings of the 2D lattice. Writing P_c(m, n) for the number of distinct m-by-n block patterns occurring in a configuration c, Nivat conjectured that if P_c(m, n) <= mn for some positive m and n, then c is periodic; that is, there exists nonzero h such that c(v+h) = c(v) for all v. The proof is due to GPT-6 Pro.",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "math.CO",
+    "msc:37B10",
+    "msc:68R15"
+  ],
+  "published": "2026-09-14",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Pattern complexity and Nivat's conjecture",
+      "identifier": "paper/nivat.tex",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "An Algebraic Geometric Approach to Nivat's Conjecture",
+      "identifier": "https://arxiv.org/abs/1605.05929v1",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Nivat's conjecture holds for sums of two periodic configurations",
+      "identifier": "https://arxiv.org/abs/1710.05360v1",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/boonsuan/nivat",
+  "commit": "0d94547e934418c9d1b75fcbb7d6af493e86759d",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "symbolic-dynamics",
+      "lean",
+      "combinatorics-on-words"
+    ],
+    "reason": "Lean+mathlib proof of Nivat's conjecture on periodicity of two-dimensional configurations.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

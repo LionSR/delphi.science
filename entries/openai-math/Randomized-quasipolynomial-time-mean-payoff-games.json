@@ -1,0 +1,31 @@
+{
+  "key": "Randomized-quasipolynomial-time-mean-payoff-games",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Randomized-quasipolynomial-time-mean-payoff-games-September-25-2026/paper.pdf",
+  "title": "Randomized quasipolynomial-time mean-payoff games",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We give a randomized algorithm that computes the complete zero-threshold winning set of a finite mean-payoff game with arbitrary signed integer edge weights encoded in binary. For total explicit input length L , it uses $`2^{O((\\log(L+2))^2)}`$ bit operations on every random tape and is correct with probability at least 7/8. A polynomial-time check certifies the winning regions and positional strategies for both players or reports failure. Independent repetition therefore gives an always-correct algorithm with the same expected quasipolynomial bit bound.",
+  "domain": "Theoretical computer science",
+  "published": "2026-09-25",
+  "family": "104",
+  "family_title": "Quasipolynomial algorithms for mean-payoff, stochastic and parity games",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "algorithms",
+      "game-theory",
+      "complexity"
+    ],
+    "reason": "Gives a randomized quasipolynomial-time algorithm for mean-payoff game winning sets.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

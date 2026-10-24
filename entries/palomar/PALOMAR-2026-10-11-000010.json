@@ -1,0 +1,60 @@
+{
+  "key": "PALOMAR-2026-10-11-000010",
+  "source": "palomar",
+  "url": "https://github.com/mrklwk/zeta-density-39-over-17-lean/tree/ee2a8a32be49a4f73c7386e9dffdea24d7e3d8c0/lean",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-11-000010-v1.json",
+  "title": "Zero-density estimates from an improved large-values bound",
+  "authors": [
+    "Mark Lewko"
+  ],
+  "summary": "Let N(σ,T) count the nontrivial zeros of the Riemann zeta function with real part at least σ and imaginary part of absolute value at most T, counted with multiplicity. For every fixed σ ∈ [1/2,1] and every ε > 0, we prove N(σ,T) ≤ Cσ,ε T^(A(σ)(1−σ)+ε) for all T ≥ 2, where | σ interval | A(σ) | | --- | --- | | [1/2,9/13] | 3/(2−σ) | | (9/13,5/7] | 18/(7σ+3) | | (5/7,3/4] | 9/4 | | (3/4,1] | 3/(2σ) | The maximum of this coefficient bound is 39/17, improving the coefficient 30/13 in the Guth–Maynard bound. We also prove the separate estimate N(σ,T) ≤ Cε T^((39/17)(1−σ)+ε) for every ε > 0,…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-10-11",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Selected Lean analytic proofs from Scott McColm repository, later pinned source",
+      "identifier": "https://github.com/smccolm/Lean/tree/6e2d10c6c2252ee1575bb7ef12dea12e2f1a3af1",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Selected Lean oscillatory, Abel/Jensen and contour proofs from earlier McColm pin",
+      "identifier": "https://github.com/smccolm/Lean/tree/2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Selected Fourier, Poisson, Mellin and Gamma proofs from prime-minor-arcs-2-15",
+      "identifier": "https://github.com/jconorgrogan/prime-minor-arcs-2-15/tree/f369f267b4dcfebf010c8e7baa2c9602e2960eba",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Selected PrimeNumberTheoremAnd analytic foundations, including attributed digamma source",
+      "identifier": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd/tree/4ecb950126c4290293c5662dfe0e884123171df5",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/mrklwk/zeta-density-39-over-17-lean",
+  "commit": "ee2a8a32be49a4f73c7386e9dffdea24d7e3d8c0",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "analytic-number-theory",
+      "riemann-zeta",
+      "zero-density"
+    ],
+    "reason": "Proves improved zero-density bounds for the Riemann zeta function, improving a known coefficient.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

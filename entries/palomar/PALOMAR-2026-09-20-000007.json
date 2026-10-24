@@ -1,0 +1,53 @@
+{
+  "key": "PALOMAR-2026-09-20-000007",
+  "source": "palomar",
+  "url": "https://github.com/Vulkin-prog/paper-c-lean/tree/d8edbc44654f623fc68df92612c26a6ef9a90ec2/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-20-000007-v1.json",
+  "title": "Threshold staircases and the Poisson–Gaussian bridge",
+  "authors": [
+    "Brice Pouly"
+  ],
+  "summary": "Joint Poisson–Gaussian limits for conditioned run counts, with an autoregressive Gaussian target and independent normal innovations. Quantitative results give local Poisson probabilities, a Gaussian distribution-function bound, moderate deviations, and relative local or tail estimates for the multiplicative source under the stated information budgets. The whole integer-level point process has locally finite but infinite total mass; its complete upper-half laws, conditioning on a fixed count and extreme phases are included. The two upper-half law assertions include proved measurability and…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.PR",
+    "msc:11K65",
+    "msc:60F05"
+  ],
+  "published": "2026-09-20",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Long runs and rare patterns of a random completely multiplicative function",
+      "identifier": "https://github.com/Vulkin-prog/paper-c-lean/blob/b3cf9aa27700d784efc61e6f82a92cef53320c40/manuscripts/paper-c/paper_c_version_3PREL9_en.pdf",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Technical companion to Long runs and rare patterns of a random completely multiplicative function",
+      "identifier": "https://github.com/Vulkin-prog/paper-c-lean/blob/b3cf9aa27700d784efc61e6f82a92cef53320c40/manuscripts/paper-c/paper_c_version_3PREL9_technical_companion_en.pdf",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/Vulkin-prog/paper-c-lean",
+  "commit": "d8edbc44654f623fc68df92612c26a6ef9a90ec2",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "probability",
+      "number-theory",
+      "gaussian-limits"
+    ],
+    "reason": "Joint Poisson-Gaussian limit results for conditioned run counts with quantitative bounds.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

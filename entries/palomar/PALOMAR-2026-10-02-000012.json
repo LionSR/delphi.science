@@ -1,0 +1,50 @@
+{
+  "key": "PALOMAR-2026-10-02-000012",
+  "source": "palomar",
+  "url": "https://github.com/mmislan/palomar-p036-quotient-channel-raf-limit/tree/12b505dcc1ccc5ee2d06b32692af201d452a2a7c/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-02-000012-v1.json",
+  "title": "Critical-window emergence of autocatalytic sets under reaction-channel quotienting",
+  "authors": [
+    "Michael Mislan"
+  ],
+  "summary": "Hordijk and Steel (https://arxiv.org/abs/1605.03919, Section 7, Eq. (21)) conjectured a zero-one threshold for RAF emergence at linear mean catalysis. An interior limiting law is established for the reversible binary-polymer model with monomer/dimer food and reaction channels obtained by identifying the split descriptions u + v and v + u precisely when uv = vu. Each molecule independently catalyzes each channel, with one catalysis coordinate shared by both directions. For every real sequence f(n)/n → λ > 0, the clamped channel parameter eventually equals f(n)/|J_n|, and the probability of a…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "q-bio.MN",
+    "msc:60K35",
+    "msc:92E20",
+    "msc:05C80"
+  ],
+  "published": "2026-10-02",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Critical-window emergence of autocatalytic sets under reaction-channel quotienting",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/mmislan/palomar-p036-quotient-channel-raf-limit",
+  "commit": "12b505dcc1ccc5ee2d06b32692af201d452a2a7c",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "random-graphs",
+      "autocatalytic-sets",
+      "probability",
+      "origin-of-life"
+    ],
+    "reason": "Analyzes the critical-window emergence of autocatalytic sets under a reaction-channel model.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

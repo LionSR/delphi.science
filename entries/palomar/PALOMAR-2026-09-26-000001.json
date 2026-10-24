@@ -1,0 +1,51 @@
+{
+  "key": "PALOMAR-2026-09-26-000001",
+  "source": "palomar",
+  "url": "https://github.com/jbaelaw/erdos1220-lean/tree/9cb81ffa48ffb766127c7e485ccef77bd4160868/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-26-000001-v1.json",
+  "title": "Erdős Problem #1220 in Lean 4: the affirmative statement is not provable in ZFC",
+  "authors": [
+    "Ji Ho Bae (JRTI)"
+  ],
+  "summary": "Erdős problem #1220 (erdosproblems.com/1220; Erdős–Hajnal 1971): let λ be a singular cardinal such that both λ and cf(λ) are ℵ₀-inaccessible (μ^ℵ₀ < κ for all μ < κ); does λ → (λ, ℵ₁)² hold? This formalization settles the question as asked on erdosproblems.com in the negative sense \"not provable\": ZFC does not prove that every such λ satisfies λ → (λ, ℵ₁)² (erdos1220_not_provable : ¬ (ZFC ⊨ᵇ Erdos1220)), i.e. there is a model of ZFC with a singular λ, λ and cf(λ) ℵ₀-inaccessible, and λ ↛ (λ, ℵ₁)². Shelah and Stanley (Sh:258, Ann. Pure Appl. Logic 36 (1987)) showed that a negative answer is…",
+  "domain": "math.LO",
+  "tags": [
+    "math.LO",
+    "msc:03E35",
+    "msc:03E02",
+    "msc:03E05",
+    "msc:03E40",
+    "msc:03E55"
+  ],
+  "published": "2026-09-26",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A theorem and some consistency results in partition calculus",
+      "identifier": "Ann. Pure Appl. Logic 36 (1987), 119–152 (Sh:258), doi:10.1016/0168-0072(87)90015-7",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jbaelaw/erdos1220-lean",
+  "commit": "9cb81ffa48ffb766127c7e485ccef77bd4160868",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "set-theory",
+      "erdos-problems",
+      "lean-formalization",
+      "partition-calculus"
+    ],
+    "reason": "Lean formalization of an independence result for an Erdős partition-relation problem.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

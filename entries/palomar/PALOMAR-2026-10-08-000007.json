@@ -1,0 +1,54 @@
+{
+  "key": "PALOMAR-2026-10-08-000007",
+  "source": "palomar",
+  "url": "https://github.com/JD-Jones-ASES/four-row/tree/861abe5342847d3f32985d55403547e1832ffac4/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-08-000007-v1.json",
+  "title": "Sharp robustness and stability of the four-row permanent inequality",
+  "authors": [
+    "JD Jones"
+  ],
+  "summary": "A formalization of sharp balanced-law robustness and stability refinements of the classical four-row permanent inequalities of Carlen-Lieb-Loss and Bristiel-Caputo. It proves the exact total-variation radius 1/24, optimal variance-deficit coefficient (1-24r)/9, complete nonnegative equality cases, sharp endpoint entropy constants, and adaptive tensorization. The explicit interior exponent is sufficient rather than optimal; at radius zero it is weaker than the classical optimal uniform exponent. Lean checks exhaustive support coverage and exact rational Gram identities.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.PR",
+    "msc:15A15",
+    "msc:60E15",
+    "msc:26D15"
+  ],
+  "published": "2026-10-08",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Sharp four-row permanent robustness, stability, and entropy",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "A strict four-row permanent inequality and permutation moments",
+      "identifier": "https://github.com/openai/math/tree/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-strict-four-row-permanent-inequality-and-permutation-moments-September-26-2026",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/JD-Jones-ASES/four-row",
+  "commit": "861abe5342847d3f32985d55403547e1832ffac4",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "permanent-inequality",
+      "combinatorics",
+      "lean-formalization"
+    ],
+    "reason": "Formalized sharp robustness and stability refinements of four-row permanent inequalities.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

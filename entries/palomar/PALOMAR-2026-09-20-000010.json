@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-09-20-000010",
+  "source": "palomar",
+  "url": "https://github.com/insammael/stable-marriage-f6/tree/2bbce71bd8dedafd31539ed6a7a5cd71b12f50d6/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-20-000010-v1.json",
+  "title": "The order-six stable-marriage finite-poset bound",
+  "authors": [
+    "Myunglae Jo"
+  ],
+  "summary": "A Lean formalization of the finite-poset theorem that any finite poset with at most fifteen elements, width at most three, and the CI2 common-incomparability condition has at most forty-eight antichains.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:06A07"
+  ],
+  "published": "2026-09-20",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Small Rotation Blocks and the Order-Six Stable Marriage Problem",
+      "identifier": "10.5281/zenodo.22860585",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/insammael/stable-marriage-f6",
+  "commit": "2bbce71bd8dedafd31539ed6a7a5cd71b12f50d6",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "combinatorics",
+      "posets",
+      "antichains",
+      "lean"
+    ],
+    "reason": "Lean formalization of an antichain-count bound for certain finite posets.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

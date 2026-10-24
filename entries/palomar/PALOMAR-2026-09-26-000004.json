@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-09-26-000004",
+  "source": "palomar",
+  "url": "https://github.com/yawara/t3-model-companion/tree/7d38e7d9fe9d131e713ce160853983321970e598/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-26-000004-v2.json",
+  "title": "Existence of a Model Companion for Groups of Exponent 3: Lean Formalization",
+  "authors": [
+    "Yawara Ishida"
+  ],
+  "summary": "This project formalizes the existence of a model companion for the first-order theory of groups satisfying x^3 = 1. Its principal group-theoretic result gives a uniform, explicit bound on the number of generators needed to witness a failure of amalgamation with an existentially closed exponent-three group. The development follows the accompanying manuscript through free groups, associated graded Lie algebras, strict extensions, and the bounded-amalgamation criterion.",
+  "domain": "math.LO",
+  "tags": [
+    "math.LO",
+    "math.GR",
+    "msc:03C60",
+    "msc:20A15"
+  ],
+  "published": "2026-09-26",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Existence of a Model Companion for Groups of Exponent 3",
+      "identifier": "https://arxiv.org/abs/2609.30061",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/yawara/t3-model-companion",
+  "commit": "7d38e7d9fe9d131e713ce160853983321970e598",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "model-theory",
+      "group-theory",
+      "lean-formalization",
+      "exponent-three"
+    ],
+    "reason": "Lean formalization of a model companion for exponent-three groups.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-08-08-000001",
+  "source": "palomar",
+  "url": "https://github.com/kim-em/erdos-unit-distance-comparator/tree/be6c2ee4c9fb16fd6bed442b4c361fb10369beb5/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-08-000001-v3.json",
+  "title": "kim-em/erdos-unit-distance-comparator",
+  "authors": [
+    "Kim Morrison"
+  ],
+  "summary": "Comparator wrapper certifying that the ErdosUnitDistance library proves the literal negation of the uniform-constant form of Erdős's unit-distance conjecture, from a Mathlib-only statement of that negation.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.MG",
+    "msc:52C10",
+    "msc:11R21"
+  ],
+  "published": "2026-08-14",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Integral points on norm-one tori and the Erdős unit-distance exponent",
+      "identifier": "https://x.com/__alpoge__/status/2064409100562366543",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/kim-em/erdos-unit-distance-comparator",
+  "commit": "be6c2ee4c9fb16fd6bed442b4c361fb10369beb5",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "discrete-geometry",
+      "lean",
+      "unit-distance"
+    ],
+    "reason": "Lean comparator certifying a result on Erdős's unit-distance conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-09-30-000031",
+  "source": "palomar",
+  "url": "https://github.com/rwst/Subspace-Theorems/tree/f10f915bc689c86ae0abe45d4164dcb7df91e7ea/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000031-v1.json",
+  "title": "Evertse 1984: sums of S-units and linear recurrences",
+  "authors": [
+    "Ralf Stephan"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of the whole of J.-H. Evertse, On sums of S-units and linear recurrences (Compositio Math. 53 (1984)), built on the repository's libraries ArithmeticHeights and DiophantineApproximation, whose p-adic Subspace Theorem (Schlickewei's, the paper's Theorem 4) it uses. The library Evertse1984 is sorry-free and within Lean's three standard axioms. It proves Theorem 2 (a lower bound for S-integral sums without vanishing subsums, at any set of places), Theorem 1 (finitely many admissible projective solutions of x₀ + ⋯ + xₙ = 0), Corollaries 1 and 2, Lemmas 1 and 2…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11D61",
+    "msc:11B37",
+    "msc:11J87",
+    "msc:11R27"
+  ],
+  "published": "2026-09-30",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "On sums of S-units and linear recurrences",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/rwst/Subspace-Theorems",
+  "commit": "f10f915bc689c86ae0abe45d4164dcb7df91e7ea",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "diophantine-approximation",
+      "subspace-theorem",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of Evertse's 1984 results on sums of S-units and linear recurrences.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

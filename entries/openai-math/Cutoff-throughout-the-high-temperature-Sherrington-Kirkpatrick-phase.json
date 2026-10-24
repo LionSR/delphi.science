@@ -1,0 +1,31 @@
+{
+  "key": "Cutoff-throughout-the-high-temperature-Sherrington-Kirkpatrick-phase",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Cutoff-throughout-the-high-temperature-Sherrington-Kirkpatrick-phase-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Cutoff-throughout-the-high-temperature-Sherrington-Kirkpatrick-phase-September-24-2026/paper.pdf",
+  "title": "Cutoff throughout the high-temperature Sherrington–Kirkpatrick phase",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove worst-case total-variation cutoff for the zero-field Gaussian Sherrington–Kirkpatrick heat-bath dynamics at every fixed inverse temperature $`0\\leq\\beta\\lt 1`$. With rate-one refresh at each spin, the cutoff location is $`\\log n/(2\\lambda(\\beta))`$ for a positive deterministic rate $`\\lambda(\\beta)`$. The location for uniformly chosen single-site update attempts is n times as large. Convergence is in probability over the disorder.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-09-24",
+  "family": "227",
+  "family_title": "Critical SK autocorrelation processes and dynamics across the temperature transition",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "spin-glass",
+      "markov-chains",
+      "mixing-times"
+    ],
+    "reason": "Proves total-variation cutoff for SK heat-bath dynamics at all high-temperature inverse temperatures.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

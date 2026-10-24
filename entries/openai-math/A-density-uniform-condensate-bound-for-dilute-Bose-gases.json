@@ -1,0 +1,32 @@
+{
+  "key": "A-density-uniform-condensate-bound-for-dilute-Bose-gases",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-density-uniform-condensate-bound-for-dilute-Bose-gases-September-27-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-density-uniform-condensate-bound-for-dilute-Bose-gases-September-27-2026/paper.pdf",
+  "title": "A density-uniform condensate bound for dilute Bose gases",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For each fixed bounded measurable, nonnegative, radial interaction of finite range in three dimensions that is not zero almost everywhere, we prove a positive lower bound on the constant-orbital condensate fraction that is uniform over all sufficiently small densities and all temperatures between zero and the square of the density. The interaction and density remain fixed in the thermodynamic limit.",
+  "domain": "Mathematical physics",
+  "published": "2026-09-27",
+  "family": "267",
+  "family_title": "Positive-temperature Bose–Einstein condensation and exact quantum depletion",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "bose-gases",
+      "mathematical-physics",
+      "bose-einstein-condensation",
+      "statistical-mechanics"
+    ],
+    "reason": "Proves a uniform lower bound on condensate fraction for dilute Bose gases at small densities.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

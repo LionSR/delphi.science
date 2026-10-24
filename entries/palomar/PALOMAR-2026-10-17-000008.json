@@ -1,0 +1,59 @@
+{
+  "key": "PALOMAR-2026-10-17-000008",
+  "source": "palomar",
+  "url": "https://github.com/jtraverso/nash-williams-trees/tree/101e48847a929dd8102521f57723e2137989ce2e/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-17-000008-v1.json",
+  "title": "The Nash-Williams–Tutte tree packing theorem and Nash-Williams' arboricity theorem",
+  "authors": [
+    "Juan Pablo Traverso Gianini"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of three classical results on edge-disjoint trees and forests in finite simple graphs, none of which is in Mathlib. (1) The Nash-Williams–Tutte tree packing theorem: a graph has k edge-disjoint spanning trees if and only if every partition of its vertices into m parts has at least k(m − 1) edges between different parts. (2) Nash-Williams' arboricity theorem: the edges can be covered by k forests if and only if every nonempty vertex set S spans at most k(|S| − 1) edges. (3) The corollary that every 2k-edge-connected graph has k edge-disjoint spanning trees.…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C05",
+    "msc:05C70",
+    "msc:05C40"
+  ],
+  "published": "2026-10-17",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Edge-Disjoint Spanning Trees of Finite Graphs",
+      "identifier": "doi:10.1112/jlms/s1-36.1.445",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "On the Problem of Decomposing a Graph into n Connected Factors",
+      "identifier": "doi:10.1112/jlms/s1-36.1.221",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Decomposition of Finite Graphs Into Forests",
+      "identifier": "doi:10.1112/jlms/s1-39.1.12",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jtraverso/nash-williams-trees",
+  "commit": "101e48847a929dd8102521f57723e2137989ce2e",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "tree-packing",
+      "arboricity",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of the Nash-Williams–Tutte tree packing and arboricity theorems.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

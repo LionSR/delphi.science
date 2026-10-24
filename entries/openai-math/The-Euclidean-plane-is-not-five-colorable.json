@@ -1,0 +1,32 @@
+{
+  "key": "The-Euclidean-plane-is-not-five-colorable",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026/paper.pdf",
+  "title": "The Euclidean plane is not five-colorable",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that every coloring of the Euclidean plane with five colors has a monochromatic unit-distance pair, with no regularity assumption on the color classes. Consequently, the chromatic number of the plane is either six or seven.",
+  "domain": "Combinatorics",
+  "published": "2026-09-23",
+  "family": "158",
+  "family_title": "The Euclidean plane cannot be colored with five colors",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "discrete-geometry",
+      "chromatic-number",
+      "combinatorics",
+      "plane-coloring"
+    ],
+    "reason": "Proves a monochromatic unit-distance result for five-colorings of the plane, bounding its chromatic number.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

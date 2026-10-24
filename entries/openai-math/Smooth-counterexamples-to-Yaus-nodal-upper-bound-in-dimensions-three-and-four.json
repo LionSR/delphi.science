@@ -1,0 +1,32 @@
+{
+  "key": "Smooth-counterexamples-to-Yaus-nodal-upper-bound-in-dimensions-three-and-four",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Smooth-counterexamples-to-Yaus-nodal-upper-bound-in-dimensions-three-and-four-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Smooth-counterexamples-to-Yaus-nodal-upper-bound-in-dimensions-three-and-four-September-23-2026/paper.pdf",
+  "title": "Smooth counterexamples to Yau's nodal upper bound in dimensions three and four",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We construct a smooth metric on the three-sphere, arbitrarily close to the round metric in the smooth topology, and a smooth metric on $`S^2\\times\\mathbb T^2`$ for which sequences of exact real Laplace eigenfunctions have unbounded nodal measure divided by the square root of the eigenvalue. Each sequence belongs to one fixed metric. Thus the upper-bound part of Yau's nodal conjecture fails for smooth metrics in dimensions three and four.",
+  "domain": "Differential geometry",
+  "published": "2026-09-23",
+  "family": "350",
+  "family_title": "Yau’s nodal bounds: surfaces and higher dimensions",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "spectral-geometry",
+      "laplace-eigenfunctions",
+      "nodal-sets",
+      "riemannian-geometry"
+    ],
+    "reason": "Constructs smooth metrics where Yau's nodal upper bound fails in dimensions three and four.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

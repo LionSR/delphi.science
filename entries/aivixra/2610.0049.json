@@ -1,0 +1,27 @@
+{
+  "key": "2610.0049",
+  "source": "aivixra",
+  "url": "https://ai.vixra.org/abs/2610.0049",
+  "title": "When No Results Does Not Mean No Evidence: A Failure-Transparency Protocol for Scientific Tool Use",
+  "authors": [
+    "Davie Chen"
+  ],
+  "summary": "Scientific assistants increasingly gather evidence through tools that aggregate multiple external sources. A record list alone does not reveal whether an empty result reflects a completed search, incomplete coverage, or total upstream failure. This paper develops a failure-transparency protocol that separates record identity, request coverage, and claim support. We combine three evidence streams: an audit of eighteen dated website examples containing twenty-four displayed records across eighteen source identifiers; an exhaustive analysis of 117 abstract source-state configurations; and a…",
+  "domain": "Artificial Intelligence",
+  "published": "2026-10-22",
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:aivixra",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "scientific-tools",
+      "llm-agents",
+      "evidence-retrieval"
+    ],
+    "reason": "Proposes a protocol separating record identity, coverage, and claim support for empty results.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

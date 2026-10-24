@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-10-19-000014",
+  "source": "palomar",
+  "url": "https://github.com/shaikidris/priority-controller-phase1/tree/fc703dd3415e3a892536c0b624bf65b1ade2871d/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-19-000014-v1.json",
+  "title": "Guarded detection and constrained eligible-set extensions",
+  "authors": [
+    "Idris Ali Shaik"
+  ],
+  "summary": "Correctness and completeness of fault detection and extension over a supplied guarded decoder DAG, together with an executed native cold-detector bound.",
+  "domain": "cs.DM",
+  "tags": [
+    "cs.DM",
+    "msc:68Q25",
+    "msc:68Q60"
+  ],
+  "published": "2026-10-19",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Polynomial Fault Detection Without Bounded Width: Exact Reachable Sets in Priority Controllers",
+      "identifier": "doi:10.5281/zenodo.23400057",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/shaikidris/priority-controller-phase1",
+  "commit": "fc703dd3415e3a892536c0b624bf65b1ade2871d",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "fault-detection",
+      "decoders",
+      "combinatorics"
+    ],
+    "reason": "Proves correctness and completeness of fault detection over a guarded decoder DAG.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

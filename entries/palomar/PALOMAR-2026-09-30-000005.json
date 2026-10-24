@@ -1,0 +1,44 @@
+{
+  "key": "PALOMAR-2026-09-30-000005",
+  "source": "palomar",
+  "url": "https://github.com/carlok/magma-1518-obstruction-lean/tree/eb2bbde8c137570d0e281a237187f5323a1b0a2d/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000005-v1.json",
+  "title": "One-generated (1518 + 3862)-magmas are trivial or the Z/3 shift; an explicit family of finite 1518-magmas violating laws 47, 614, 817, 3862",
+  "authors": [
+    "Carlo Perassi"
+  ],
+  "summary": "Lean 4 results (core Lean, no dependencies, no axioms beyond the standard three) about law 1518 of the Equational Theories Project, x = (y ◇ y) ◇ (x ◇ (y ◇ x)). Theorem A: in every magma satisfying 1518 and 3862 (x ◇ x = (x ◇ (x ◇ x)) ◇ x), writing S x = x ◇ x, the set {x, S x, S (S x)} is closed under ◇ with u ◇ v = S v and S (S (S x)) = x; hence every one-generated such magma is the trivial magma or the three-element cyclic shift x ◇ y = y + 1. This proves a classification conjectured by Terence Tao on the Lean Zulip on 2024-11-29 (message 485148288). That message assumed 1518 together…",
+  "domain": "math.RA",
+  "tags": [
+    "math.RA",
+    "math.LO",
+    "msc:20N02",
+    "msc:08B05",
+    "msc:03C05",
+    "msc:68V20"
+  ],
+  "published": "2026-09-30",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/carlok/magma-1518-obstruction-lean",
+  "commit": "eb2bbde8c137570d0e281a237187f5323a1b0a2d",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "lean",
+      "universal-algebra",
+      "magmas",
+      "equational-theories"
+    ],
+    "reason": "Lean classification of one-generated magmas satisfying a given equational law.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

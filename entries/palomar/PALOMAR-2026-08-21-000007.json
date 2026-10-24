@@ -1,0 +1,50 @@
+{
+  "key": "PALOMAR-2026-08-21-000007",
+  "source": "palomar",
+  "url": "https://github.com/lennrt/palomar-formalizations/tree/d259d35ad32d0e7c8c60ddd5a574aa987956e1d2/zenodo-21986230/palomar",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-21-000007-v2.json",
+  "title": "lennrt/palomar-formalizations",
+  "authors": [
+    "Lennart Rudolph"
+  ],
+  "summary": "A Lean formalization of the paper's standard finite-word semantics for k-uniform two-word π-representability, its neighbourhood-trace bound binomial(k(|A|+1),k)^2, the explicit 20-by-741322 bit-incidence graph B20, and the theorem that B20 is not representable by two 2-uniform words. It also retains the companion's token-order bridge and exact arithmetic endpoints.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C62",
+    "msc:05C75",
+    "msc:06A07",
+    "msc:68R15"
+  ],
+  "published": "2026-09-03",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "An Explicit Obstruction to Uniform Two-Word π-Representability",
+      "identifier": "10.5281/zenodo.21986230",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/lennrt/palomar-formalizations",
+  "commit": "d259d35ad32d0e7c8c60ddd5a574aa987956e1d2",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "combinatorics",
+      "lean-formalization",
+      "bit-incidence"
+    ],
+    "reason": "Lean formalization of word representability bounds and a specific 20-by-741322 incidence graph.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "key": "PALOMAR-2026-08-22-000009",
+  "source": "palomar",
+  "url": "https://github.com/xiangyazi24/palomar-qseries-prime-coefficients/tree/0df90a92002da988b4cbc439f5a1c76b2759a14c/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-22-000009-v1.json",
+  "title": "xiangyazi24/palomar-qseries-prime-coefficients",
+  "authors": [
+    "Xiang Huang"
+  ],
+  "summary": "For an explicitly defined difference B of two signed cone theta series over Q(sqrt(5)), Lean proves a closed nonmultiplicativity witness and a complete prime-index classification. For every rational prime p congruent to 1 modulo 10, B((p-1)/10) is one of -2, -1, 1, 2; a norm-negative golden integer generator and its strict fundamental-window normalization exist; and the coefficient has magnitude two exactly when the resulting geometric residue invariant is one modulo three. The invariant is also proved independent of the generator within the explicitly defined signed fundamental-unit orbit.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11F27",
+    "msc:11R11"
+  ],
+  "published": "2026-08-22",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/xiangyazi24/palomar-qseries-prime-coefficients",
+  "commit": "0df90a92002da988b4cbc439f5a1c76b2759a14c",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "theta-series",
+      "lean-formalization"
+    ],
+    "reason": "Lean verification of theta series coefficients and prime-index classification over Q(√5).",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

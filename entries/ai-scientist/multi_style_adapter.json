@@ -1,0 +1,26 @@
+{
+  "key": "multi_style_adapter",
+  "source": "ai-scientist",
+  "url": "https://github.com/SakanaAI/AI-Scientist/blob/main/example_papers/multi_style_adapter.pdf",
+  "title": "StyleFusion: Adaptive Multi-Style Generation in Character-Level Language Models",
+  "authors": [
+    "LLM"
+  ],
+  "summary": "This paper introduces the Multi-Style Adapter, a novel approach to enhance style awareness and consistency in character-level language models. As language models advance, the ability to generate text in diverse and consistent styles becomes crucial for applications ranging from creative writing assistance to personalized content generation. However, maintaining style consistency while preserving language generation capabilities presents a significant challenge. Our Multi-Style Adapter addresses this by introducing learnable style embeddings and a style classification head, working in tandem…",
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:ai-scientist",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "subject": "cs.CL",
+    "tags": [
+      "language-models",
+      "style-transfer",
+      "character-level-models"
+    ],
+    "reason": "Introduces a multi-style adapter with learnable style embeddings for character-level language models.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

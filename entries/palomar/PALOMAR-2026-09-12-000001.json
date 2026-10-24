@@ -1,0 +1,46 @@
+{
+  "key": "PALOMAR-2026-09-12-000001",
+  "source": "palomar",
+  "url": "https://github.com/KiringYJ/mathlib4/tree/9e0a67ce31f1dbac121879a94e9e02319e273a50/Palomar/BroughtonHuff",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-12-000001-v1.json",
+  "title": "The Broughton--Huff theorem on increasing unions of sigma-fields",
+  "authors": [
+    "Yi-Jing Tseng"
+  ],
+  "summary": "A Lean formalization of the Broughton--Huff theorem that the ordinary union of a strictly increasing sequence of sigma-fields is not a sigma-field. The proof also proves the existence of a set measurable in the lattice supremum but in none of the individual sigma-fields.",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "msc:28A05"
+  ],
+  "published": "2026-09-12",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A Comment on Unions of Sigma-Fields",
+      "identifier": "https://doi.org/10.2307/2320022",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/KiringYJ/mathlib4",
+  "commit": "9e0a67ce31f1dbac121879a94e9e02319e273a50",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "measure-theory",
+      "lean",
+      "sigma-algebras"
+    ],
+    "reason": "Lean formalization of the Broughton–Huff theorem on increasing unions of sigma-fields.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

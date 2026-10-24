@@ -1,0 +1,32 @@
+{
+  "key": "Linear-Variance-of-the-Random-3-SAT-Hitting-Time",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Linear-Variance-of-the-Random-3-SAT-Hitting-Time-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Linear-Variance-of-the-Random-3-SAT-Hitting-Time-October-5-2026/linear-variance-of-the-random-3-sat-hitting-time.pdf",
+  "title": "Linear Variance of the Random 3-SAT Hitting Time",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For random 3-SAT on n Boolean variables, with independent uniformly signed clauses on three distinct variables sampled with replacement, we prove that the first unsatisfiable prefix has variance $`\\Theta(n)`$. The upper bound removes the logarithmic loss in the earlier variance estimate; the matching lower bound follows from Wilson's transition-width theorem.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-10-05",
+  "family": "235",
+  "family_title": "Limiting random SAT thresholds, sharp variance and computability",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "random-sat",
+      "probability",
+      "combinatorics",
+      "satisfiability"
+    ],
+    "reason": "Proves variance bounds for the first unsatisfiable prefix in random 3-SAT.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "key": "PALOMAR-2026-10-15-000017",
+  "source": "palomar",
+  "url": "https://github.com/JD-Jones-ASES/crystallographic-restriction-lean/tree/fc03fa9a8f942031e0c3c59539705c18af5f4409/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-15-000017-v1.json",
+  "title": "The crystallographic restriction in every dimension: GL(N, ℤ) has an element of order m if and only if ψ(m) ≤ N",
+  "authors": [
+    "JD Jones"
+  ],
+  "summary": "A Lean 4 development of the crystallographic restriction in every dimension. For a positive integer m let psi(m) be the sum of phi(p^k) over the prime powers p^k exactly dividing m, except that the prime power 2 contributes 0 (phi is Euler's totient; psi(1) = psi(2) = 0, psi(3) = psi(4) = psi(6) = 2, psi(ab) = psi(a) + psi(b) for coprime a, b; OEIS A080737). Theorem (Vaidyanathaswamy 1928; Hiller 1985; a proof in Kuzmanovich-Pavlichenkov 2002; Theorem 1 of Bamberg-Cairns-Kilminster 2003): for N >= 1, the group GL(N, Z) of invertible integer N x N matrices has an element of order m >= 1 if…",
+  "domain": "math.GR",
+  "tags": [
+    "math.GR",
+    "math.NT",
+    "msc:20H25",
+    "msc:20H15",
+    "msc:15B36",
+    "msc:11A25"
+  ],
+  "published": "2026-10-15",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "The Crystallographic Restriction, Permutations, and Goldbach's Conjecture",
+      "identifier": "doi:10.1080/00029890.2003.11919956",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/JD-Jones-ASES/crystallographic-restriction-lean",
+  "commit": "fc03fa9a8f942031e0c3c59539705c18af5f4409",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "group-theory",
+      "crystallographic-groups",
+      "formal-verification"
+    ],
+    "reason": "Lean development of the crystallographic restriction on element orders in GL(N, Z).",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

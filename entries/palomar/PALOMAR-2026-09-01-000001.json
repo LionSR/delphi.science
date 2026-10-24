@@ -1,0 +1,61 @@
+{
+  "key": "PALOMAR-2026-09-01-000001",
+  "source": "palomar",
+  "url": "https://github.com/mysticflounder/modular-schur/tree/7c91cf3c5ca9b50354a74344dce71a28c9fefa01/lean",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-01-000001-v2.json",
+  "title": "Modular Schur numbers: S_m(k,ℓ) = n − 1 for k ≥ n − 1, where n = m/gcd(m,ℓ−1)",
+  "authors": [
+    "Adam McKenna"
+  ],
+  "summary": "A Lean 4 formalization, with Mathlib, of the main results of the paper \"Prime-power structure of the stable regime for modular Schur numbers\" (docs/paper/modular-schur.pdf in this repository). The modular Schur number S_m(k,ℓ), introduced by Chappelon, Revuelta Marchena and Sanz Domínguez (2013), is the largest N such that 1, …, N can be coloured with k colours so that no colour class contains a solution of x_1 + ⋯ + x_ℓ ≡ y (mod m). For m ≥ 2 and ℓ ≥ 2, put n = m/gcd(m,ℓ−1). The main theorem is the closed form S_m(k,ℓ) = n − 1 for every k ≥ n − 1. D'orville, Sim, Wong and Ho (Integers 25…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.NT",
+    "msc:05D10",
+    "msc:11B13",
+    "msc:11B75",
+    "msc:68V20"
+  ],
+  "published": "2026-10-11",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Prime-power structure of the stable regime for modular Schur numbers",
+      "identifier": "https://github.com/mysticflounder/modular-schur/blob/main/docs/paper/modular-schur.pdf",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Modular Schur numbers",
+      "identifier": "Electron. J. Combin. 20(2) (2013) #P61; arXiv:1306.5635",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Modular generalizations of Schur numbers",
+      "identifier": "Integers 25 (2025) #A62",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/mysticflounder/modular-schur",
+  "commit": "7c91cf3c5ca9b50354a74344dce71a28c9fefa01",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "combinatorics",
+      "number-theory",
+      "lean-formalization",
+      "schur-numbers"
+    ],
+    "reason": "Lean formalization of closed-form results for modular Schur numbers in the stable regime.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

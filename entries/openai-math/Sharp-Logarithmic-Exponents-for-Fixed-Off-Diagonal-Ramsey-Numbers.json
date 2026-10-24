@@ -1,0 +1,31 @@
+{
+  "key": "Sharp-Logarithmic-Exponents-for-Fixed-Off-Diagonal-Ramsey-Numbers",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Sharp-Logarithmic-Exponents-for-Fixed-Off-Diagonal-Ramsey-Numbers-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Sharp-Logarithmic-Exponents-for-Fixed-Off-Diagonal-Ramsey-Numbers-September-24-2026/paper.pdf",
+  "title": "Sharp logarithmic exponents for fixed off-diagonal Ramsey numbers",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For every fixed integer s ≥ 6, we determine the sharp logarithmic exponent of the off-diagonal Ramsey number: $`\\displaystyle r(s,t)=\\frac{t^{s-1}}{(\\log t)^{s-2+o(1)}} \\qquad (t\\longrightarrow\\infty).`$",
+  "domain": "Combinatorics",
+  "published": "2026-09-24",
+  "family": "170",
+  "family_title": "Sharp logarithmic exponents for off-diagonal Ramsey numbers",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "combinatorics",
+      "ramsey-theory",
+      "extremal-graph-theory"
+    ],
+    "reason": "Determines the sharp logarithmic exponent of fixed off-diagonal Ramsey numbers.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "Catalans-constant-is-irrational",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Catalans-constant-is-irrational-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Catalans-constant-is-irrational-September-24-2026/paper.pdf",
+  "title": "Catalan's constant is irrational",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that Catalan's constant $`G=\\sum_{j\\geq0}(-1)^j/(2j+1)^2`$ is irrational.",
+  "domain": "Number theory",
+  "published": "2026-09-24",
+  "family": "005",
+  "family_title": "Irrationality of Catalan’s constant",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "irrationality",
+      "number-theory",
+      "transcendental-numbers"
+    ],
+    "reason": "Proves that Catalan's constant is irrational.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "key": "A-counterexample-to-the-coarse-Novikov-conjecture",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-counterexample-to-the-coarse-Novikov-conjecture-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-counterexample-to-the-coarse-Novikov-conjecture-September-23-2026/paper.pdf",
+  "title": "A counterexample to the coarse Novikov conjecture",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We disprove the coarse Novikov conjecture: ordinary coarse assembly need not be rationally injective for uniformly discrete spaces of bounded geometry. We construct a coarse disjoint union of finite graphs of uniformly bounded degree and an infinite-order class in its degree-one coarse K-homology whose image under ordinary coarse assembly in the K-theory of the reduced, locally compact Roe algebra vanishes.",
+  "domain": "Topology",
+  "published": "2026-09-23",
+  "family": "307",
+  "family_title": "Failure of rational injectivity for maximal coarse assembly",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "coarse-geometry",
+      "k-theory",
+      "roe-algebras",
+      "coarse-assembly"
+    ],
+    "reason": "Disproves the coarse Novikov conjecture via a coarse K-homology class that vanishes under assembly.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

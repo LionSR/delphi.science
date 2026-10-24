@@ -1,0 +1,56 @@
+{
+  "key": "PALOMAR-2026-08-19-000007",
+  "source": "palomar",
+  "url": "https://github.com/stalex444/pdt-lean/tree/0dae307fb786a3d180bba137a44555a1bf645637/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-19-000007-v2.json",
+  "title": "stalex444/pdt-lean",
+  "authors": [
+    "Stephanie Alexander"
+  ],
+  "summary": "Kernel-checked exact-constant results for the CHSH operator T = A₀B₀ + A₀B₁ + A₁B₀ − A₁B₁ of an arbitrary CHSH tuple (Mathlib's IsCHSHTuple: self-adjoint involutions with the A's commuting with the B's). (1) The Landau identity: in any *-ring, T² = 4 + [A₀,A₁]·[B₁,B₀] — the exact, representation-independent correction to the naive T² = 8·1 (chsh_mul_self). (2) Tsirelson's bound in norm form: ‖T‖ ≤ 2√2 for every CHSH tuple in every nontrivial unital real C*-normed algebra (chsh_norm_le). (3) The classical constant, exactly: if either party's pair commutes, ‖T‖ = 2 — not merely ≤ 2…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.OA",
+    "msc:81P40",
+    "msc:81P45",
+    "msc:46L60",
+    "msc:15A18"
+  ],
+  "published": "2026-08-20",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Quantum generalizations of Bell's inequality",
+      "identifier": "Letters in Mathematical Physics 4 (1980), 93–100",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "On the violation of Bell's inequality in quantum theory",
+      "identifier": "Physics Letters A 120, no. 2 (1987), 54–56",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/stalex444/pdt-lean",
+  "commit": "0dae307fb786a3d180bba137a44555a1bf645637",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "quantum-info",
+      "chsh-inequality",
+      "operator-algebras",
+      "lean-formalization"
+    ],
+    "reason": "Kernel-checked exact bounds on the norm of the CHSH operator in C*-algebras.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

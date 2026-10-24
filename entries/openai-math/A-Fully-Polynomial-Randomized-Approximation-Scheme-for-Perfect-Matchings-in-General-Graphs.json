@@ -1,0 +1,31 @@
+{
+  "key": "A-Fully-Polynomial-Randomized-Approximation-Scheme-for-Perfect-Matchings-in-General-Graphs",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-Fully-Polynomial-Randomized-Approximation-Scheme-for-Perfect-Matchings-in-General-Graphs-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-Fully-Polynomial-Randomized-Approximation-Scheme-for-Perfect-Matchings-in-General-Graphs-September-23-2026/main.pdf",
+  "title": "A Fully Polynomial Randomized Approximation Scheme for Perfect Matchings in General Graphs",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We give a fully polynomial randomized approximation scheme (FPRAS) for counting perfect matchings in arbitrary finite simple undirected graphs, resolving the general-graph perfect-matching approximation problem. The algorithm returns zero with certainty when no perfect matching exists. Otherwise, it achieves relative error ε with failure probability at most δ in worst-case bit time polynomial in the input length, $`\\varepsilon ^{-1}`$, and $`\\log\\delta^{-1}`$.",
+  "domain": "Theoretical computer science",
+  "published": "2026-09-23",
+  "family": "113",
+  "family_title": "Approximate counting and entropy of perfect matchings",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "approximate-counting",
+      "perfect-matchings",
+      "randomized-algorithms"
+    ],
+    "reason": "Gives an FPRAS for counting perfect matchings in arbitrary general graphs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

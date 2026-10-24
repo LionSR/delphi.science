@@ -1,0 +1,32 @@
+{
+  "key": "Log-abundance-in-characteristic-zero",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Log-abundance-in-characteristic-zero-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Log-abundance-in-characteristic-zero-September-24-2026/paper.pdf",
+  "title": "Log abundance in characteristic zero",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the rational-boundary log abundance conjecture in every dimension over algebraically closed fields of characteristic zero: every nef ℚ-Cartier log canonical divisor on a projective log canonical pair with effective rational boundary is semiample. Over ℂ, the proof also establishes canonical nonvanishing for smooth projective varieties in every dimension.",
+  "domain": "Algebraic and complex geometry",
+  "published": "2026-09-24",
+  "family": "034",
+  "family_title": "Log abundance for compact Kähler spaces under logarithmic Iitaka subadditivity",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "algebraic-geometry",
+      "log-abundance",
+      "birational-geometry",
+      "minimal-model-program"
+    ],
+    "reason": "Proves rational-boundary log abundance in every dimension over characteristic zero fields.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

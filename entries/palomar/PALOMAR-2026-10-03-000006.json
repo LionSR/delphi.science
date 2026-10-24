@@ -1,0 +1,56 @@
+{
+  "key": "PALOMAR-2026-10-03-000006",
+  "source": "palomar",
+  "url": "https://github.com/scottnarmstrong/EscauriazaSereginSverak/tree/ae1a0e46086b9b16179dea76b41da10b01845151/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-03-000006-v1.json",
+  "title": "Escauriaza–Seregin–Šverák and Ladyzhenskaya–Prodi–Serrin regularity",
+  "authors": [
+    "Scott Armstrong"
+  ],
+  "summary": "A Lean formalization of two classical regularity theorems for the three-dimensional incompressible Navier–Stokes equations. The Escauriaza–Seregin–Šverák theorem states that a Leray–Hopf solution whose spatial L³ norm remains bounded in time is smooth at positive times and unique among Leray–Hopf solutions with the same initial data. The Ladyzhenskaya–Prodi–Serrin theorem gives the corresponding conclusion under a family of mixed space-time integrability conditions. The development includes the local regularity theorem, L⁵ space-time integrability under the endpoint L³ condition, and the…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "msc:35Q30",
+    "msc:76D05",
+    "msc:35B65",
+    "msc:35D30",
+    "msc:35B60"
+  ],
+  "published": "2026-10-03",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "The Escauriaza--Seregin--Šverák theorem: version for the Lean formalization",
+      "identifier": "paper/ess.tex",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "The Three-Dimensional Navier-Stokes Equations: Classical Theory",
+      "identifier": "doi:10.1017/CBO9781139095143",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/scottnarmstrong/EscauriazaSereginSverak",
+  "commit": "ae1a0e46086b9b16179dea76b41da10b01845151",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "navier-stokes",
+      "pde-regularity",
+      "fluid-dynamics",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of classical regularity theorems for 3D incompressible Navier-Stokes equations.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

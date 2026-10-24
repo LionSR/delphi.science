@@ -1,0 +1,52 @@
+{
+  "key": "PALOMAR-2026-10-20-000016",
+  "source": "palomar",
+  "url": "https://github.com/roos-j/lean-spherical/tree/800b71afca91e42809c21e6e2fd9ae4f82467082/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-20-000016-v1.json",
+  "title": "Endpoint power weight inequalities for spherical maximal functions in Lean",
+  "authors": [
+    "Marco Fraccaroli",
+    "Juyoung Lee",
+    "Nikou Lei",
+    "Joris Roos",
+    "Andreas Seeger"
+  ],
+  "summary": "This is a Lean 4 formalization of Theorems 1.1-1.4 from the paper \"Endpoint power weight inequalities for spherical maximal functions\" by M. Fraccaroli, J. Lee, N. Lei, J. Roos and A. Seeger. The theorem statements were human-written, while the proof was automatically generated directly from the paper using coding agents.",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA",
+    "msc:42B25",
+    "msc:28A80"
+  ],
+  "published": "2026-10-20",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Endpoint power weight inequalities for spherical maximal functions",
+      "identifier": "arXiv:2610.18316v1 (2026), https://arxiv.org/abs/2610.18316v1",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/roos-j/lean-spherical",
+  "commit": "800b71afca91e42809c21e6e2fd9ae4f82467082",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "harmonic-analysis",
+      "spherical-maximal-functions",
+      "weighted-inequalities",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of endpoint power-weight inequalities for spherical maximal functions.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "key": "PALOMAR-2026-10-09-000009",
+  "source": "palomar",
+  "url": "https://github.com/npflueger/brill-noether-graphs/tree/bfa274b00e6e559f34f3307d33c4aae52825778e/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-09-000009-v1.json",
+  "title": "Brill--Noether existence and rank for graphs through genus six",
+  "authors": [
+    "Nathan Pflueger"
+  ],
+  "summary": "This repository proves Baker's Brill--Noether existence conjecture for finite graphs of genus at most six. The conjecture states that if G is a finite connected loopless multigraph, with genus defined to be g = E-V+1, then for all nonnegative integers d, r, there exists a configuration of d chips on G with Baker--Norine rank at least r provided that the Brill--Noether number rho = g - (r+1)(g-d+r) is nonnegative. To the author's knowledge, this is a new result, extending a result of Atanasov and Ranganathan from genus five to six. Two generalizations are also included. First, in genus at…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.AG",
+    "msc:05C57",
+    "msc:14T15",
+    "msc:14H51"
+  ],
+  "published": "2026-10-09",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/npflueger/brill-noether-graphs",
+  "commit": "bfa274b00e6e559f34f3307d33c4aae52825778e",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "brill-noether",
+      "algebraic-geometry",
+      "chip-firing"
+    ],
+    "reason": "Proves Baker's Brill-Noether existence conjecture for graphs of genus up to six.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

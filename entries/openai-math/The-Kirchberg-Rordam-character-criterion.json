@@ -1,0 +1,32 @@
+{
+  "key": "The-Kirchberg-Rordam-character-criterion",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-Kirchberg-Rordam-character-criterion-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-Kirchberg-Rordam-character-criterion-September-25-2026/paper.pdf",
+  "title": "The Kirchberg–Rørdam character criterion",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the Kirchberg–Rørdam character criterion: for every free ultrafilter on ℕ, a nonzero unital separable complex C ∗ -algebra absorbs the Jiang–Su algebra if and only if its norm central-sequence algebra has no characters. We also prove that the infinite minimal tensor power of every nonzero unital separable complex C ∗ -algebra without characters is $`\\mathcal Z`$-stable and contains a unital copy of $`\\mathcal Z`$.",
+  "domain": "Operator algebras",
+  "published": "2026-09-25",
+  "family": "299",
+  "family_title": "The Kirchberg–Rørdam character criterion and infinite tensor-power Jiang–Su stability",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "operator-algebras",
+      "c-star-algebras",
+      "jiang-su-algebra",
+      "central-sequences"
+    ],
+    "reason": "Proves a character criterion for absorbing the Jiang–Su algebra in separable C*-algebras.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

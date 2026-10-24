@@ -1,0 +1,50 @@
+{
+  "key": "PALOMAR-2026-10-17-000015",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/Math-Formalization/tree/fc3f403c4d07356d2232e809f326f63a9ce9da45/topology/countable-coordinate-factorization",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-17-000015-v1.json",
+  "title": "Countable-coordinate factorization for compact products",
+  "authors": [
+    "Arthur Freitas Ramos",
+    "David Barros Hulak",
+    "Ruy Jose Guerra Barretto de Queiroz"
+  ],
+  "summary": "Every continuous map from an arbitrary product of nonempty compact Hausdorff spaces into a metrizable space factors continuously through a countable subproduct. A uniform-space proof establishes countable coordinate dependence for uniformly continuous maps into separated countably generated uniform spaces. The factor for a fixed coordinate set is unique. Countably many maps share a countable coordinate set. Continuous injections into metrizable targets force only countably many nontrivial factors, giving the exact metrizability criterion for nonempty compact Hausdorff products. Empty index…",
+  "domain": "math.GN",
+  "tags": [
+    "math.GN",
+    "msc:54B10",
+    "msc:54C05",
+    "msc:54E35"
+  ],
+  "published": "2026-10-17",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "On α-embedded subsets of products, arXiv:1411.3173v1",
+      "identifier": "https://arxiv.org/pdf/1411.3173v1",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/Math-Formalization",
+  "commit": "fc3f403c4d07356d2232e809f326f63a9ce9da45",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "general-topology",
+      "compact-spaces",
+      "metrizability"
+    ],
+    "reason": "Proves factorization and metrizability results for compact Hausdorff product spaces.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

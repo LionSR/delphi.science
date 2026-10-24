@@ -1,0 +1,54 @@
+{
+  "key": "PALOMAR-2026-09-01-000004",
+  "source": "palomar",
+  "url": "https://github.com/savarin/lean-spectral-theory/tree/d19e279f0ab244657f02ce678e8d67fa69e2f407/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-01-000004-v1.json",
+  "title": "lean-spectral-theory",
+  "authors": [
+    "Ezzeri Esa"
+  ],
+  "summary": "The spectral theorem for possibly unbounded self-adjoint operators on complex Hilbert spaces, formalized through the Cayley transform and real projection-valued measures. The selected spectral theorem constructs a PVM whose scalar measures give the exact finite-second-moment domain and first-moment quadratic form, with measurable-set uniqueness, and is proved equivalent to equality with the unbounded coordinate spectral integral. The selected Stone theorem proves both that strongly continuous one-parameter unitary groups have self-adjoint generators and that every self-adjoint operator…",
+  "domain": "math.FA",
+  "tags": [
+    "math.FA",
+    "math.OA",
+    "msc:47A10",
+    "msc:47B15"
+  ],
+  "published": "2026-09-01",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Unbounded Self-adjoint Operators on Hilbert Space",
+      "identifier": "10.1007/978-94-007-4753-1",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Methods of Modern Mathematical Physics I: Functional Analysis",
+      "identifier": "ISBN 978-0-12-585050-6",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/savarin/lean-spectral-theory",
+  "commit": "d19e279f0ab244657f02ce678e8d67fa69e2f407",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "spectral-theory",
+      "functional-analysis",
+      "lean",
+      "unbounded-operators"
+    ],
+    "reason": "Formalization of the spectral theorem for unbounded self-adjoint operators and Stone's theorem.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

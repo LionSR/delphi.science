@@ -1,0 +1,31 @@
+{
+  "key": "A-C1-Counterexample-to-the-Entropy-Conjecture",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-C1-Counterexample-to-the-Entropy-Conjecture-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-C1-Counterexample-to-the-Entropy-Conjecture-September-25-2026/article.pdf",
+  "title": "A C^1 Counterexample to the Entropy Conjecture",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We disprove the general C 1 self-map formulation of Shub's entropy conjecture. We construct a noninvertible C 1 self-map of a compact smooth manifold without boundary whose topological entropy is zero, while its action on second real homology has eigenvalue 2. Thus the topological entropy is strictly smaller than the logarithm of the homological spectral radius.",
+  "domain": "Dynamical systems and ergodic theory",
+  "published": "2026-09-25",
+  "family": "151",
+  "family_title": "A C 1 counterexample to the entropy conjecture",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "dynamical-systems",
+      "topological-entropy",
+      "smooth-maps"
+    ],
+    "reason": "Constructs a C^1 self-map disproving a formulation of Shub's entropy conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

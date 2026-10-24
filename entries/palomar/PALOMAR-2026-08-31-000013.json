@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-08-31-000013",
+  "source": "palomar",
+  "url": "https://github.com/rwst/Pisot-Cantor-61/tree/d61132ffcdb748b641f9de59b7acfffc860796b2/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-31-000013-v2.json",
+  "title": "Lean formalization toward Bugeaud Problem 10.61",
+  "authors": [
+    "Ralf Stephan"
+  ],
+  "summary": "A Lean 4 / Mathlib development of criteria for Bugeaud's Problem 10.61 ([Bug12, p. 222], due to Mendès France [MF67]): for a Pisot number α > 2 and the Cantor set C(α) = {(α−1) Σ_{k≥1} ε_k α^{−k} : ε_k ∈ {0,1}}, no ξ ∈ C(α) has (ξαⁿ)_{n≥1} uniformly distributed modulo one. The problem is open; what is proved here are criteria for it and two instances. Every compared statement that concludes Problem 10.61 does so for a *quadratic* setup — a real root α > 1 of X² − aX − b whose conjugate has modulus below one — and the two instances are quadratic; the arbitrary-degree material is conditional…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.DS",
+    "msc:11K06",
+    "msc:11J71",
+    "msc:11R06",
+    "msc:37B10",
+    "msc:28A80",
+    "msc:37D35",
+    "msc:37A35"
+  ],
+  "published": "2026-09-06",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/rwst/Pisot-Cantor-61",
+  "commit": "d61132ffcdb748b641f9de59b7acfffc860796b2",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "uniform-distribution",
+      "lean-formalization",
+      "pisot-numbers"
+    ],
+    "reason": "Lean development of criteria toward an open problem on uniform distribution modulo one.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

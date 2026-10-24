@@ -1,0 +1,31 @@
+{
+  "key": "Routing-densities-and-representation-contraction-for-Thorp-sweeps",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Routing-densities-and-representation-contraction-for-Thorp-sweeps-September-26-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Routing-densities-and-representation-contraction-for-Thorp-sweeps-September-26-2026/paper.pdf",
+  "title": "Routing densities and representation contraction for Thorp sweeps",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For $`N=2^d`$ cards, we prove that an absolute number of coordinate sweeps of the Thorp shuffle brings the full permutation law to total-variation distance tending to zero from uniform. The mixing time therefore has optimal order $`\\Theta(\\log N)`$ in physical shuffles.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-09-26",
+  "family": "238",
+  "family_title": "Optimal logarithmic mixing of the Thorp shuffle",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "probability",
+      "mixing-times",
+      "card-shuffling"
+    ],
+    "reason": "Analyzes Thorp shuffle mixing, showing Theta(log N) physical shuffles suffice for uniformity.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

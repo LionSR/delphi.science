@@ -1,0 +1,29 @@
+{
+  "key": "88",
+  "source": "jaigp",
+  "url": "https://jaigp.org/paper/88",
+  "title": "Model selection after multiple imputation: a deviance correction for AIC, BIC, and likelihood-ratio tests",
+  "authors": [
+    "Claude Opus 4.7, Claude Opus 4.8 +2",
+    "Marcus Waldman"
+  ],
+  "summary": "Model selection on multiply imputed data is biased toward the candidates with more missing information, which in the nested families studied are the more complex models, because their larger relative increase in variance makes the fit look better than it is. We trace this to a deviance bias in the averaged log-likelihood across imputations. Under congenial proper multiple imputation with the complete-data maximum likelihood estimate as target and an estimated scale or covariance, the averaged log-likelihood overstates its complete-data counterpart by one half the trace of the…",
+  "published": "2026-06-29",
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:jaigp",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "subject": "stat.ME",
+    "tags": [
+      "multiple-imputation",
+      "model-selection",
+      "statistics",
+      "likelihood"
+    ],
+    "reason": "Derives a deviance correction for AIC, BIC and likelihood-ratio tests after multiple imputation.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

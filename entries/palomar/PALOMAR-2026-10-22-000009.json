@@ -1,0 +1,67 @@
+{
+  "key": "PALOMAR-2026-10-22-000009",
+  "source": "palomar",
+  "url": "https://github.com/miinadietrich/crown_graphs_maximise/tree/368a515d22ec74a9f4c2b9b9798f27b49df377e2/lean",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-22-000009-v1.json",
+  "title": "A formal proof that crown graphs maximise the representation number of bipartite graphs",
+  "authors": [
+    "Matthew J. Colbrook",
+    "Catherine Drysdale"
+  ],
+  "summary": "Lean proofs of the sharp bipartite representation bound, crown extremality, and the supporting finite and structural results.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-10-22",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Crown graphs maximise the representation number of bipartite graphs",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Crown graph computational certificates",
+      "identifier": "validation/SOURCES.json",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "On the representation number of a crown graph",
+      "identifier": "doi:10.1016/j.dam.2018.03.013",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Solving computational problems in the theory of word-representable graphs",
+      "identifier": "https://cs.uwaterloo.ca/journals/JIS/VOL22/Kitaev/kitaev11.html",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "On the conjecture of the representation number of bipartite graphs",
+      "identifier": "arXiv:2506.01057v1",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/miinadietrich/crown_graphs_maximise",
+  "commit": "368a515d22ec74a9f4c2b9b9798f27b49df377e2",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "bipartite-graphs",
+      "extremal-combinatorics",
+      "lean"
+    ],
+    "reason": "Lean proofs of a sharp representation bound for bipartite graphs and crown extremality.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

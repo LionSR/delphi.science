@@ -1,0 +1,32 @@
+{
+  "key": "Symplectic-Ball-Packings-in-Higher-Dimensions",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Symplectic-Ball-Packings-in-Higher-Dimensions-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Symplectic-Ball-Packings-in-Higher-Dimensions-September-23-2026/paper.pdf",
+  "title": "Symplectic Ball Packings in Higher Dimensions",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that, for all integers n ≥ 3 and k ≥ 1 and all positive real capacities $`R_1,\\ldots,R_k`$, the closed standard symplectic $`2n`$-balls of these capacities embed disjointly into the interior of a ball of capacity R > 0 if and only if $`\\displaystyle \\sum_{i=1}^k R_i^n\\lt R^n, \\qquad R_i+R_j\\lt R\\quad(i\\ne j).`$ Capacity is π times the squared Euclidean radius, and each embedding is defined on a neighborhood of its closed source ball. This proves Siegel and Yao's Conjecture A.",
+  "domain": "Differential geometry",
+  "published": "2026-09-23",
+  "family": "343",
+  "family_title": "Symplectic ball packing in higher dimensions",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "symplectic-geometry",
+      "ball-packing",
+      "gromov-width",
+      "siegel-yao"
+    ],
+    "reason": "Characterizes symplectic ball packings in dimensions 2n with n at least 3, proving Siegel and Yao's conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

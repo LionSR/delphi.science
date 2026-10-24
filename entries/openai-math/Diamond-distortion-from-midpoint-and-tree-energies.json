@@ -1,0 +1,31 @@
+{
+  "key": "Diamond-distortion-from-midpoint-and-tree-energies",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Diamond-distortion-from-midpoint-and-tree-energies-September-27-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Diamond-distortion-from-midpoint-and-tree-energies-September-27-2026/manuscript.pdf",
+  "title": "Distortion of countably branching diamonds from midpoint and tree energies",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We derive quantitative distortion bounds for countably branching diamond graphs from midpoint estimates and direct tree energies. In the dual of a finite-height segment forest, every distortion- D embedding of the depth- k diamond satisfies $`D^2\\ge1+k/4`$. The same bound holds in the infinite-height coordinate predual. We also obtain power-type distortion bounds for path-cost and recursive tree norms.",
+  "domain": "Functional analysis",
+  "published": "2026-09-27",
+  "family": "331",
+  "family_title": "Reflexive midpoint convexity and diamond distortion",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "metric-geometry",
+      "embeddings",
+      "diamond-graphs"
+    ],
+    "reason": "Derives distortion bounds for countably branching diamond graphs via midpoint and tree energies.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "key": "PALOMAR-2026-08-26-000001",
+  "source": "palomar",
+  "url": "https://github.com/sneed-and-feed/lean-theorems-1/tree/fc4a68b1a7ec3ab87aa40ab64fbfd168fda862d2/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-26-000001-v1.json",
+  "title": "sneed-and-feed/lean-theorems-1",
+  "authors": [
+    "Sneed & Feed Formalization Team"
+  ],
+  "summary": "A complete, machine-checked Lean 4 formalization of the Graham–Pollak theorem (1971) and its tightness on complete bipartite partitions of complete graphs. Proves that any partition of the edges of the complete graph K_n into m complete bipartite subgraphs requires at least n - 1 bipartite graphs (m >= n - 1), adapting Helge Tverberg's 1982 linear-algebraic quadratic form argument. Also formalizes the canonical star partition proving tightness. To the maintainers' knowledge, Graham–Pollak was not previously formalized in Mathlib (checked against Mathlib v4.34.0-rc1).",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C50",
+    "msc:05C70",
+    "msc:15A03"
+  ],
+  "published": "2026-08-26",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "On embedding graphs in squashed cubes",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "On the decomposition of K_n into complete bipartite graphs",
+      "identifier": "",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/sneed-and-feed/lean-theorems-1",
+  "commit": "fc4a68b1a7ec3ab87aa40ab64fbfd168fda862d2",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "combinatorics",
+      "lean",
+      "formal-verification"
+    ],
+    "reason": "Machine-checked Lean formalization of the Graham–Pollak theorem on bipartite edge partitions.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

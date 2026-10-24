@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-09-20-000006",
+  "source": "palomar",
+  "url": "https://github.com/MColbrook/Kung-Traub_conjecture/tree/902bb22e24fb5c4e8e319305fb75378fb32d9eb4/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-20-000006-v1.json",
+  "title": "A formal proof of the Kung–Traub conjecture",
+  "authors": [
+    "Matthew J. Colbrook"
+  ],
+  "summary": "For deterministic stationary root-finding methods without memory, the Kung–Traub bound 2^(n-1) for n >= 1 real or complex scalar derivative observations, the bound given by the first group size times the product of one plus each subsequent size for prescribed positive groups, and entire counterexamples, including one real witness defeating every larger real exponent simultaneously. A concrete inverse Hermite method attains 2^(n-1) for n >= 2 on open real intervals and has that exact order on exp(x)-1. Supporting constructions are included.",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "msc:65H05"
+  ],
+  "published": "2026-09-20",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Adversarial Wronskians: A proof of the Kung–Traub conjecture",
+      "identifier": "https://doi.org/10.5281/zenodo.22850057",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/MColbrook/Kung-Traub_conjecture",
+  "commit": "902bb22e24fb5c4e8e319305fb75378fb32d9eb4",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "numerical-analysis",
+      "root-finding",
+      "lean",
+      "iterative-methods"
+    ],
+    "reason": "Formal proof of order bounds for derivative-based root-finding methods.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

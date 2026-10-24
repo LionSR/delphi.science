@@ -1,0 +1,51 @@
+{
+  "key": "PALOMAR-2026-09-07-000006",
+  "source": "palomar",
+  "url": "https://github.com/rwst/Ceiling-Orbits/tree/f76e02755cf909322015890f568338273d98038f/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-07-000006-v1.json",
+  "title": "Ceiling orbits of rational bases are not P-recursive",
+  "authors": [
+    "Ralf Stephan"
+  ],
+  "summary": "A Lean 4 / Mathlib development of the companion paper of the same name (doi:10.13140/RG.2.2.10727.82081). Fix coprime integers p > q ≥ 2 and an integer x₀ ≥ 1 and iterate the ceiling map of the rational base p/q, xₙ = ⌈p·xₙ₋₁/q⌉, with associated word wₙ = q·xₙ₊₁ − p·xₙ ∈ {0,…,q−1}, the correction that makes p·xₙ divisible by q. Four statements are compared. (A) The word of every such orbit is not P-recursive: it satisfies no nontrivial linear recurrence with polynomial coefficients. (B) At p/q = 3/2 the orbit itself is not P-recursive either; for x₀ = 1 it is the sequence A061419, which is…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO",
+    "msc:11B37",
+    "msc:11A63",
+    "msc:05A15",
+    "msc:68R15",
+    "msc:12H05"
+  ],
+  "published": "2026-09-07",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Ceiling orbits of rational bases are not P-recursive",
+      "identifier": "https://doi.org/10.13140/RG.2.2.10727.82081",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/rwst/Ceiling-Orbits",
+  "commit": "f76e02755cf909322015890f568338273d98038f",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "p-recursive-sequences",
+      "lean-formalization"
+    ],
+    "reason": "Lean development showing ceiling orbits of rational bases are not P-recursive.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

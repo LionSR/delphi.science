@@ -1,0 +1,52 @@
+{
+  "key": "PALOMAR-2026-10-23-000016",
+  "source": "palomar",
+  "url": "https://github.com/jtraverso/mader-connectivity/tree/b471abcdfbb303aabc1af26f4531e080729bb469/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-23-000016-v1.json",
+  "title": "Mader's theorem on highly connected subgraphs",
+  "authors": [
+    "Juan Pablo Traverso Gianini"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of Mader's 1972 theorem in the form of Diestel's Theorem 1.4.3: for k ≥ 1, every nonempty finite simple graph with average degree at least 4k has a (k + 1)-connected induced subgraph H with e(H)/|H| > e(G)/|G| − k. Vertex connectivity is defined by deletion of fewer than k vertices (same definition as in the Menger–Hamiltonicity entry). Mathlib does not contain vertex connectivity or this theorem.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C40",
+    "msc:05C35"
+  ],
+  "published": "2026-10-23",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Existenz n-fach zusammenhängender Teilgraphen in Graphen genügend großer Kantendichte",
+      "identifier": "doi:10.1007/BF02993903",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Graph Theory",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jtraverso/mader-connectivity",
+  "commit": "b471abcdfbb303aabc1af26f4531e080729bb469",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "connectivity",
+      "formalization"
+    ],
+    "reason": "Lean 4 formalization of Mader's theorem on highly connected subgraphs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

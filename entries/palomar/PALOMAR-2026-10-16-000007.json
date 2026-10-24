@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-10-16-000007",
+  "source": "palomar",
+  "url": "https://github.com/AItoBit/continuum-hypothesis-lean4/tree/c8d3b542530e1b0c9817fad5febd6dfb0298f608/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000007-v1.json",
+  "title": "Continuum hypothesis independence: a Flypitch reproduction",
+  "authors": [
+    "Alexander"
+  ],
+  "summary": "An attributed adaptation of the Flypitch formal proof of two-sided syntactic independence of the continuum hypothesis from its explicitly encoded first-order ZFC theory. Cohen and collapse Boolean-valued models, together with soundness, establish that neither the encoded CH sentence nor its negation is derivable. The development uses an expanded language with definable set operations, collection and Zorn's lemma. It does not supply a formal translation to membership-only ZFC or determine the truth of CH for the ambient Lean reals. This is a reproduction of established work, not a new…",
+  "domain": "math.LO",
+  "tags": [
+    "math.LO",
+    "msc:03E50",
+    "msc:03E35",
+    "msc:03B35"
+  ],
+  "published": "2026-10-16",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A Formal Proof of the Independence of the Continuum Hypothesis",
+      "identifier": "doi:10.1145/3372885.3373826",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/AItoBit/continuum-hypothesis-lean4",
+  "commit": "c8d3b542530e1b0c9817fad5febd6dfb0298f608",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "set-theory",
+      "continuum-hypothesis",
+      "forcing",
+      "lean"
+    ],
+    "reason": "Lean adaptation of a Flypitch proof of independence of the continuum hypothesis.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

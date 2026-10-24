@@ -1,0 +1,46 @@
+{
+  "key": "PALOMAR-2026-08-17-000002",
+  "source": "palomar",
+  "url": "https://github.com/Paul-Lez/hadamard-668-comparator/tree/da94bc80401b6ece36d8dd2f5c316755fd97dd65/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-17-000002-v1.json",
+  "title": "Paul-Lez/hadamard-668-comparator",
+  "authors": [
+    "Paul Lezeau"
+  ],
+  "summary": "Hadamard 668 Comparator formalization",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05B20"
+  ],
+  "published": "2026-08-17",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Order-668 construction",
+      "identifier": "https://x.com/__alpoge__/status/2087504785952182273",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/Paul-Lez/hadamard-668-comparator",
+  "commit": "da94bc80401b6ece36d8dd2f5c316755fd97dd65",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "combinatorics",
+      "hadamard-matrices",
+      "lean-formalization"
+    ],
+    "reason": "Formalization of a Hadamard-matrix combinatorics result; the summary is a single line.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

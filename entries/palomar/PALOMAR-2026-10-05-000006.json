@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-10-05-000006",
+  "source": "palomar",
+  "url": "https://github.com/shaikidris/DixmierMassSix-Palomar/tree/61783d52b6ae44cd2d8d20ad6cb798e7bbbce3ff/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-05-000006-v2.json",
+  "title": "The rank-one Dixmier conjecture for elements of mass at most six",
+  "authors": [
+    "Idris Ali Shaik"
+  ],
+  "summary": "Over any characteristic-zero field, two elements P and Q of the first Weyl algebra satisfying QP-PQ=1 generate the algebra when P has at most six nonzero homogeneous components for deg X=1 and deg Y=-1. The degree, order and mass of Q are unrestricted. The proof combines sparse-polynomial rigidity with internally proved Newton and Weyl-algebra structural results.",
+  "domain": "math.RA",
+  "tags": [
+    "math.RA",
+    "msc:16S32",
+    "msc:16W20",
+    "msc:16W50"
+  ],
+  "published": "2026-10-05",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "The rank-one Dixmier conjecture for elements of mass at most six",
+      "identifier": "https://doi.org/10.5281/zenodo.23161793",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/shaikidris/DixmierMassSix-Palomar",
+  "commit": "61783d52b6ae44cd2d8d20ad6cb798e7bbbce3ff",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "ring-theory",
+      "weyl-algebra",
+      "dixmier-conjecture",
+      "lean-formalization"
+    ],
+    "reason": "Formal proof of a rank-one Dixmier conjecture case for Weyl algebra elements.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

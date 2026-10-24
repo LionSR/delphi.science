@@ -1,0 +1,31 @@
+{
+  "key": "A-Smooth-Metric-with-No-Local-Isometric-Immersion-into-Three-Space",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-Smooth-Metric-with-No-Local-Isometric-Immersion-into-Three-Space-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-Smooth-Metric-with-No-Local-Isometric-Immersion-into-Three-Space-September-24-2026/paper.pdf",
+  "title": "A Smooth Metric with No Local Isometric Immersion into Three-Space",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We construct a smooth positive-definite Riemannian metric on $`(-1,1)^2`$ that agrees with the Euclidean metric to every order at the origin, yet no neighborhood of the origin admits a smooth isometric immersion into Euclidean three-space. This gives a negative answer to the unrestricted smooth local isometric realization problem for surfaces.",
+  "domain": "Differential geometry",
+  "published": "2026-09-24",
+  "family": "334",
+  "family_title": "A smooth surface metric with no local isometric immersion in ℝ 3",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "differential-geometry",
+      "isometric-embedding",
+      "riemannian-geometry"
+    ],
+    "reason": "Constructs a smooth metric on a surface with no local isometric immersion into R^3.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-08-29-000004",
+  "source": "palomar",
+  "url": "https://github.com/yuhangshi888/zeta-simple-zeros-673316977/tree/7cfd0ce9a9ef1615889b5c1191fac5de41f13960/lean",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-29-000004-v1.json",
+  "title": "yuhangshi888/zeta-simple-zeros-673316977",
+  "authors": [
+    "Yuhang Shi"
+  ],
+  "summary": "A Lean 4 and Mathlib formalization of the supporting-plane and exact-arithmetic portion of the finite-dimensional argument in Yuhang Shi's research draft on simple zeros of the Riemann zeta function. It proves a conditional scalar two-certificate supporting-plane implication, its explicit piecewise-square-root specialization at block length 219, and the exact strict comparison above 673316977/10^9 for the resulting local assembly expression. The spectral derivation of the trace-envelope alternative, the upstream seven- and nine-point interval certificates, and the analytic passage from…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11M26"
+  ],
+  "published": "2026-08-29",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A two-certificate trace-energy deduction for simple zeros of the Riemann zeta function",
+      "identifier": "doi:10.5281/zenodo.21926962",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/yuhangshi888/zeta-simple-zeros-673316977",
+  "commit": "7cfd0ce9a9ef1615889b5c1191fac5de41f13960",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "riemann-zeta",
+      "number-theory",
+      "lean-formalization",
+      "zeros"
+    ],
+    "reason": "Lean formalization of supporting components of an analytic number theory argument on zeta zeros.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

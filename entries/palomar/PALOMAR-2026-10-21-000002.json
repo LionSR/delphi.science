@@ -1,0 +1,54 @@
+{
+  "key": "PALOMAR-2026-10-21-000002",
+  "source": "palomar",
+  "url": "https://github.com/sthubbar/goldbach-lean/tree/4501f42c25c951fc2e461801ec661fdb3969a022/entries/wu2008",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-21-000002-v2.json",
+  "title": "Wu 2008 Lemma 2.2, Chen's double sieve inequality, with the range of the last sum repaired",
+  "authors": [
+    "Steve Hubbard"
+  ],
+  "summary": "A Lean 4 proof of the combinatorial inequality (2.2) of J. Wu, Chen's double sieve, Goldbach's conjecture and the twin prime problem, 2, Acta Arith. 131 (2008), Lemma 2.2: 4 D_{1,2} >= 3 Y1 + Y2 - Y3 - Y4 + Y5 + Y6 - 2 Y7 - Y8 - Y9 - Y10 - Y11 - error, where the Y_i are Wu's sieve sums over the sequence A = {N - p}. The printed proof drops part of the range of the triple sum produced by Buchstab's identity, so the printed Y11, over p4 1, every pair kappa1, kappa2 meeting Wu's hypotheses, any finite A of integers 0 < a < N coprime to N, and with Wu's O(N^{1-kappa1}) made explicit as…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11P32",
+    "msc:11N35",
+    "msc:11N36"
+  ],
+  "published": "2026-10-21",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Chen's double sieve, Goldbach's conjecture and the twin prime problem, 2",
+      "identifier": "arXiv:0709.3764",
+      "relationship": "adapts"
+    },
+    {
+      "title": "On Chen's theorem, Goldbach's conjecture and almost prime twins II",
+      "identifier": "arXiv:2405.05727",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/sthubbar/goldbach-lean",
+  "commit": "4501f42c25c951fc2e461801ec661fdb3969a022",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "sieve-theory",
+      "goldbach-conjecture",
+      "analytic-number-theory",
+      "lean-formalization"
+    ],
+    "reason": "Lean proof of a combinatorial sieve inequality from Wu's Chen double sieve paper.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

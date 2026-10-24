@@ -1,0 +1,31 @@
+{
+  "key": "A-stable-coordinate-that-is-not-a-coordinate-in-four-variables",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-stable-coordinate-that-is-not-a-coordinate-in-four-variables-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-stable-coordinate-that-is-not-a-coordinate-in-four-variables-October-5-2026/stable-coordinate-four-variables.pdf",
+  "title": "A stable coordinate that is not a coordinate in four variables",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We construct an explicit degree-five polynomial over $`\\mathbf C`$ that is not a coordinate in four variables but becomes one after adjoining a single variable. This gives a counterexample to the stable coordinate conjecture in four variables. Every fiber is isomorphic to affine three-space, yet its embedding in affine four-space is not rectifiable. Thus the example also disproves the Abhyankar–Sathaye embedding conjecture in ambient dimension four.",
+  "domain": "Algebraic and complex geometry",
+  "published": "2026-10-05",
+  "family": "049",
+  "family_title": "A stable-coordinate counterexample in four variables",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "affine-geometry",
+      "polynomial-rings",
+      "stable-coordinates"
+    ],
+    "reason": "Gives an explicit polynomial counterexample to the stable coordinate conjecture in four variables.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-10-16-000002",
+  "source": "palomar",
+  "url": "https://github.com/pmaronow/ec567-palomar/tree/b1f2ded85275d67b78fada55212fefff54d7c35e/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000002-v1.json",
+  "title": "Elliptic curves of exact ranks five, six, and seven: conditional formalization",
+  "authors": [
+    "P. M. Aronow",
+    "Patrick Lopatto"
+  ],
+  "summary": "Lean proves that the finite-complexity affine-linear prime asymptotic implies infinitely many geometric isomorphism classes of rational elliptic curves of each exact Mordell–Weil rank five, six, and seven. The generic analytic theorem is an explicit hypothesis. The specialization checks, two-isogeny descent, exact rank calculations, and passage to infinitely many j-invariants are formalized; the prime asymptotic is not proved in Lean here.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11G05",
+    "msc:11N32"
+  ],
+  "published": "2026-10-16",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Infinitely Many Elliptic Curves of Exact Ranks Five, Six, and Seven",
+      "identifier": "sha256:5d3f85d7f6a07c8e8382f2629a49449689746655b0c4d2edb319b0197523e75a",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/pmaronow/ec567-palomar",
+  "commit": "b1f2ded85275d67b78fada55212fefff54d7c35e",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "elliptic-curves",
+      "number-theory",
+      "formal-verification",
+      "lean"
+    ],
+    "reason": "Conditional Lean formalization of elliptic curves with exact Mordell–Weil ranks five to seven.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

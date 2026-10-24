@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-09-30-000027",
+  "source": "palomar",
+  "url": "https://github.com/mmislan/palomar-p081-productive-core-np-completeness/tree/9a4508c8643310033182b18e1f348f5d786f7c28/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000027-v1.json",
+  "title": "Unconstrained detection of productive autocatalytic cores is NP-complete",
+  "authors": [
+    "Michael Mislan"
+  ],
+  "summary": "Kosc, Kuperberg, Rajon and Charlat (PNAS 122, e2421274122, 2025, Section 2.1) left open the complexity of detecting an autocatalytic core without a prescribed target species or allowed-food set. For finite reversible reaction networks with literal nonnegative integer reactant and product matrices, this unconstrained detection problem is proved NP-complete. A core is a nonempty entity/reaction pair, minimal under componentwise inclusion, with a selected reactant and product in every selected reaction and a signed real flow that strictly produces every selected entity. The input uses a…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "q-bio.MN",
+    "msc:68Q17",
+    "msc:92C42"
+  ],
+  "published": "2026-09-30",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Unconstrained detection of productive autocatalytic cores is NP-complete",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/mmislan/palomar-p081-productive-core-np-completeness",
+  "commit": "9a4508c8643310033182b18e1f348f5d786f7c28",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "computational-complexity",
+      "reaction-networks",
+      "autocatalysis"
+    ],
+    "reason": "Proof that detecting autocatalytic cores in reaction networks is NP-complete.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

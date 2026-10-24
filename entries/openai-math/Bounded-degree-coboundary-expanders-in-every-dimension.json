@@ -1,0 +1,31 @@
+{
+  "key": "Bounded-degree-coboundary-expanders-in-every-dimension",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Bounded-degree-coboundary-expanders-in-every-dimension-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Bounded-degree-coboundary-expanders-in-every-dimension-September-24-2026/paper.pdf",
+  "title": "Bounded-degree coboundary expanders in every dimension",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For every integer d ≥ 3, we construct arbitrarily large finite d -dimensional simplicial complexes with uniformly bounded vertex degrees and uniform 𝔽 2 coboundary expansion in every degree below d . Together with the known graph and two-dimensional cases, this establishes the existence of bounded-degree 𝔽 2 coboundary expanders in every positive dimension.",
+  "domain": "Combinatorics",
+  "published": "2026-09-24",
+  "family": "177",
+  "family_title": "Bounded-degree coboundary expanders",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "simplicial-complexes",
+      "coboundary-expanders",
+      "combinatorics"
+    ],
+    "reason": "Constructs bounded-degree coboundary expanders in every dimension, extending known graph cases.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

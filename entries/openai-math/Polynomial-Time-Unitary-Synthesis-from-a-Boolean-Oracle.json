@@ -1,0 +1,31 @@
+{
+  "key": "Polynomial-Time-Unitary-Synthesis-from-a-Boolean-Oracle",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Polynomial-Time-Unitary-Synthesis-from-a-Boolean-Oracle-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Polynomial-Time-Unitary-Synthesis-from-a-Boolean-Oracle-October-5-2026/paper.pdf",
+  "title": "Polynomial-Time Unitary Synthesis from a Boolean Oracle",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We give a positive answer to the constant-error formulation of the Aaronson–Kuperberg unitary synthesis problem. For every n , a quantum oracle circuit generated in polynomial time from n alone can approximate the channel of every n -qubit unitary to full diamond-norm error at most 1/2, after a suitable Boolean oracle is chosen. Using the fixed gates $`H,T,T^\\dagger,\\mathrm{CNOT}`$, the circuit has polynomially many qubits, elementary gates, and oracle calls, and its oracle queries have polynomial length. The oracle may depend on the target unitary; the theorem does not give an efficient…",
+  "domain": "Mathematical physics",
+  "published": "2026-10-05",
+  "family": "283",
+  "family_title": "Polynomial-time unitary synthesis from a Boolean oracle",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "quantum-computing",
+      "quantum-circuits",
+      "complexity"
+    ],
+    "reason": "Gives a polynomial-time constant-error construction for the unitary synthesis problem.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

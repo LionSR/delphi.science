@@ -1,0 +1,31 @@
+{
+  "key": "Complex-Matrix-Multiplication-Below-2.258-and-Rectangular-Bounds",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Complex-Matrix-Multiplication-Below-2.258-and-Rectangular-Bounds-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Complex-Matrix-Multiplication-Below-2.258-and-Rectangular-Bounds-September-24-2026/Complex-Matrix-Multiplication-Below-2.258-and-Rectangular-Bounds-September-24-2026.pdf",
+  "title": "Complex Matrix Multiplication Below 2.258 and Rectangular Bounds",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "— secondary writeup Over every field of characteristic zero, we prove that the square matrix-multiplication exponent satisfies ω < 2.258, the dual exponent satisfies α > 0.465, and $`\\omega(1,0.709,1)\\lt 2.092`$. The strict square and k = 0.709 rectangular bounds also hold over every field except possibly in one finite set of positive characteristics, in the arithmetic-operation model.",
+  "domain": "Theoretical computer science",
+  "published": "2026-09-24",
+  "family": "107",
+  "family_title": "Matrix multiplication with exponent at most 9/4",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "matrix-multiplication",
+      "computational-complexity",
+      "algebra"
+    ],
+    "reason": "Gives improved bounds on the matrix multiplication exponent and rectangular variants.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

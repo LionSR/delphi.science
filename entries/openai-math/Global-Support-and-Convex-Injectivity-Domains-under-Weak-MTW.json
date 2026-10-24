@@ -1,0 +1,32 @@
+{
+  "key": "Global-Support-and-Convex-Injectivity-Domains-under-Weak-MTW",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Global-Support-and-Convex-Injectivity-Domains-under-Weak-MTW-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Global-Support-and-Convex-Injectivity-Domains-under-Weak-MTW-September-25-2026/paper.pdf",
+  "title": "Global Support and Convex Injectivity Domains under Weak MTW",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that weak Ma–Trudinger–Wang curvature on a smooth, connected, compact Riemannian manifold of dimension at least two without boundary implies convexity of every tangent injectivity domain, resolving Villani's conjecture in this setting. Conjugate cut points are allowed. More generally, every ordinary subgradient of a squared-distance cost potential is a minimizing velocity with a global supporting mountain. No density hypothesis is used.",
+  "domain": "Differential geometry",
+  "published": "2026-09-25",
+  "family": "360",
+  "family_title": "Weak MTW curvature gives convexity and regular optimal transport",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "optimal-transport",
+      "riemannian-geometry",
+      "mtw-curvature",
+      "convexity"
+    ],
+    "reason": "Proves convexity of injectivity domains under weak MTW curvature, addressing a Villani conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

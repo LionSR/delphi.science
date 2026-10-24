@@ -1,0 +1,70 @@
+{
+  "key": "PALOMAR-2026-09-08-000005",
+  "source": "palomar",
+  "url": "https://github.com/DiarHaidary/Sharp-Bounds-for-Graph-Matrices/tree/01994362f8543743d556e7544d2538e93c62c02b/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-08-000005-v1.json",
+  "title": "Sharp Bounds for Graph Matrices",
+  "authors": [
+    "Diar Heidary"
+  ],
+  "summary": "A Lean formalization of matching polynomial and logarithmic orders for the norm of every fixed finite simple graph matrix in the globally injective dense independent-sign model. For each fixed positive real moment order p, the pth norm moment to the power 1/p is bounded above and below by positive shape-dependent constants times n^((h+i0-s)/2) log(2n)^(b*/2). Here h is the number of graph roles, i0 counts isolated interior roles, s is the minimum boundary-separator size, and b* is the maximum number of attached floating components over minimum separators. The expected-norm specialization and…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.CO",
+    "msc:60B20",
+    "msc:05C80",
+    "msc:03B35"
+  ],
+  "published": "2026-09-08",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "The polynomial and logarithmic order of every fixed dense sign graph matrix",
+      "identifier": "Graph Matrices technical report 96, 8 September 2026",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Critical separator operators and connected creation commutators",
+      "identifier": "Graph Matrices technical report 97, 8 September 2026",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Separator extremes survive in the graph-matrix norm",
+      "identifier": "Graph Matrices technical report 98, 8 September 2026",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Connected floating fields and the critical occupation operators",
+      "identifier": "Graph Matrices technical report 90",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Maximum exponents of all connected floating components",
+      "identifier": "Graph Matrices technical report 95",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/DiarHaidary/Sharp-Bounds-for-Graph-Matrices",
+  "commit": "01994362f8543743d556e7544d2538e93c62c02b",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "random-matrices",
+      "graph-theory",
+      "probability",
+      "lean"
+    ],
+    "reason": "Lean formalization of sharp norm bounds for graph matrices in a random sign model.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

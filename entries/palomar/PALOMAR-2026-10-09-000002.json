@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-10-09-000002",
+  "source": "palomar",
+  "url": "https://github.com/manvirjaswal/generalized-fermat-257-lean/tree/b92783ad06317075c880fc2a77ec5c15bb63e283/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-09-000002-v1.json",
+  "title": "The generalized Fermat equation x² + y⁵ = z⁷",
+  "authors": [
+    "Manvir Jaswal"
+  ],
+  "summary": "A Lean 4 and Mathlib formalization of the main results of the paper \"The generalized Fermat equation x² + y⁵ = z⁷\" by Manvir Jaswal. Following Putz, a solution is a triple of integers (X, Y, Z) with X⁵ + Y² = Z⁷, gcd(X, Y, Z) = 1 and XYZ ≠ 0; put η = X⁵/Z⁷ and A_η = ℚ[t]/(f_η), where f_η(t) = 4t⁵ψ(t) − η(4t − 1) and ψ(t) = 25t³ + 20t² + 14t + 14. Theorem 1.1 says that A_η is never isomorphic to Putz's octic field L₈ = ℚ[x]/(h), where h(x) = x⁸ + 4x⁷ − 28x⁶ − 168x⁵ − 140x⁴ + 560x³ + 840x² − 480x − 940. Theorem 1.2 combines this with Putz's Theorem 4.33, which says that A_η is always…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11D41",
+    "msc:11R29",
+    "msc:11Y40",
+    "msc:11Y50"
+  ],
+  "published": "2026-10-09",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "The generalized Fermat equation x² + y⁵ = z⁷",
+      "identifier": "https://doi.org/10.5281/zenodo.23223027",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/manvirjaswal/generalized-fermat-257-lean",
+  "commit": "b92783ad06317075c880fc2a77ec5c15bb63e283",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "diophantine-equations",
+      "number-fields",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of results on the generalized Fermat equation x²+y⁵=z⁷.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

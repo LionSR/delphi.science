@@ -1,0 +1,44 @@
+{
+  "key": "PALOMAR-2026-08-26-000006",
+  "source": "palomar",
+  "url": "https://github.com/g-pichler/bsc-averaging/tree/288a1d8787c68010534969b53dcf01ba223e085e/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-26-000006-v3.json",
+  "title": "BSCAveraging",
+  "authors": [
+    "Georg Pichler"
+  ],
+  "summary": "Three theorems about binary channels on a doubly symmetric binary source: a pair (𝑋, 𝑌) of Bernoulli(1/2) bits with P(𝑋 ≠ 𝑌) = 𝑝, together with Markov chains 𝑈 - 𝑋 - 𝑌 - 𝑉 in which 𝑈 and 𝑉 are the outputs of two independent binary channels applied to 𝑋 and to 𝑌. Let 𝒜 be the set of rate triples (𝑅₀, 𝑅₁, 𝑅₂) with 𝐼(𝑈;𝑋) ≤ 𝑅₁, 𝐼(𝑌;𝑉) ≤ 𝑅₂ and 𝑅₀ ≤ 𝐼(𝑈;𝑉) attainable by arbitrary binary channels on the two sides, and ℬ the same set with both channels restricted to be binary symmetric. (1) conv 𝒜 = conv ℬ for every 𝑝 in [0,1]. (2) At 𝑝 = 0, no pair of binary channels whose rates do not exceed…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "math.IT",
+    "msc:94A17",
+    "msc:94A15",
+    "msc:94A40",
+    "msc:94A34",
+    "msc:26D07"
+  ],
+  "published": "2026-09-15",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/g-pichler/bsc-averaging",
+  "commit": "288a1d8787c68010534969b53dcf01ba223e085e",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "information-theory",
+      "channel-coding",
+      "binary-channels"
+    ],
+    "reason": "Three theorems on rate regions for binary channels on a doubly symmetric binary source.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-09-25-000012",
+  "source": "palomar",
+  "url": "https://github.com/mmislan/palomar-p003-d-unstable-cores/tree/95798cfde0bf77c95f63d211b18c19cb63c9cad8/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-25-000012-v1.json",
+  "title": "An exact counterexample to the D-unstable-core conjecture for parameter-rich reaction networks",
+  "authors": [
+    "Michael Mislan"
+  ],
+  "summary": "Vassena and Stadler conjectured that a reaction network with parameter-rich kinetics cannot have a Hurwitz-unstable Jacobian unless it contains a D-unstable core, a minimal square child-selection submatrix that becomes unstable under positive column scaling. We show that this conjecture is false. We construct a consistent reaction network with four species and five reactions and an admissible reactivity matrix for which the Jacobian has an eigenvalue with strictly positive real part, yet the network has no D-unstable core. Consistency is witnessed by a strictly positive stoichiometric kernel…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "msc:15A18",
+    "msc:34D20"
+  ],
+  "published": "2026-09-25",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "An exact counterexample to the D-unstable-core conjecture for parameter-rich reaction networks",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/mmislan/palomar-p003-d-unstable-cores",
+  "commit": "95798cfde0bf77c95f63d211b18c19cb63c9cad8",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "reaction-networks",
+      "stability",
+      "dynamical-systems"
+    ],
+    "reason": "Counterexample to a conjecture on unstable cores in reaction networks.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

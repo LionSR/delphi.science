@@ -1,0 +1,31 @@
+{
+  "key": "Triple-ergodic-averages-with-distinct-integer-slopes",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Triple-ergodic-averages-with-distinct-integer-slopes-October-4-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Triple-ergodic-averages-with-distinct-integer-slopes-October-4-2026/triple-ergodic-distinct-slopes.pdf",
+  "title": "Triple ergodic averages with distinct integer slopes",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For every invertible mixing probability-preserving transformation, triple ergodic averages of bounded measurable functions along any three pairwise distinct nonzero integer slopes converge almost everywhere to the product of their integrals. The slopes may be positive or negative.",
+  "domain": "Dynamical systems and ergodic theory",
+  "published": "2026-10-04",
+  "family": "154",
+  "family_title": "Pointwise multiple ergodic averages for mixing transformations",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "ergodic-theory",
+      "ergodic-averages",
+      "dynamics"
+    ],
+    "reason": "Proves almost everywhere convergence of triple ergodic averages with distinct integer slopes.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

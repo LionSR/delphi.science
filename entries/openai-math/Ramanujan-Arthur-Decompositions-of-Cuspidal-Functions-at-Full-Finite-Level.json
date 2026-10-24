@@ -1,0 +1,31 @@
+{
+  "key": "Ramanujan-Arthur-Decompositions-of-Cuspidal-Functions-at-Full-Finite-Level",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Ramanujan-Arthur-Decompositions-of-Cuspidal-Functions-at-Full-Finite-Level-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Ramanujan-Arthur-Decompositions-of-Cuspidal-Functions-at-Full-Finite-Level-September-24-2026/paper.pdf",
+  "title": "Ramanujan-Arthur Decompositions of Cuspidal Functions at Full Finite Level",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove rational and $`\\overline{\\mathbb Q}_\\ell`$ decompositions of cuspidal automorphic functions for split semisimple groups over global function fields into subspaces indexed by nilpotent orbits of the dual group. The decompositions hold at every full finite level, with arbitrary divisor multiplicities. Each summand is governed by the same orbit at every unramified place and every complex embedding. At trivial level this proves Conjectures 3.4.5 and 3.4.6 of Gaitsgory–Lafforgue–Raskin. For split connected adjoint absolutely simple groups, we also prove that a cuspidal automorphic…",
+  "domain": "Number theory",
+  "published": "2026-09-24",
+  "family": "014",
+  "family_title": "Restricted geometric Langlands, global Arthur enhancements, and generic Ramanujan",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "automorphic-forms",
+      "langlands",
+      "function-fields"
+    ],
+    "reason": "Proves decompositions of cuspidal automorphic functions over global function fields by nilpotent orbits.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

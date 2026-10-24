@@ -1,0 +1,31 @@
+{
+  "key": "A-PD4-group-without-an-aspherical-manifold-model",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-PD4-group-without-an-aspherical-manifold-model-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-PD4-group-without-an-aspherical-manifold-model-September-24-2026/paper.pdf",
+  "title": "A PD4 group without an aspherical manifold model",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We construct a finitely presented integral Poincaré duality group of dimension four that has a finite classifying space but is not the fundamental group of any closed aspherical topological four-manifold. This gives a negative answer to Wall's manifold-realization question in dimension four.",
+  "domain": "Topology",
+  "published": "2026-09-24",
+  "family": "305",
+  "family_title": "Four-dimensional disk embedding and Wall's conjecture",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "geometric-group-theory",
+      "poincare-duality",
+      "topology"
+    ],
+    "reason": "Constructs a four-dimensional Poincaré duality group not realized by an aspherical manifold.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

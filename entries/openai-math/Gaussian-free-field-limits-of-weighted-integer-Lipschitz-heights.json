@@ -1,0 +1,31 @@
+{
+  "key": "Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-October-6-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Gaussian-free-field-limits-of-weighted-integer-Lipschitz-heights-October-6-2026/paper.pdf",
+  "title": "Gaussian free-field limits of weighted integer Lipschitz heights",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove a Gaussian free field scaling limit for weighted integer Lipschitz heights on the triangular lattice. With zero boundary values and a factor x for each edge on which the height changes, the field converges after division by a positive constant depending only on x to the zero-Dirichlet Gaussian free field, for every fixed $`x\\in[1/\\sqrt2,1]`$. The convergence holds as a random distribution on every bounded C 2 Jordan domain under inside lattice approximations with uniformly convergent boundary parametrizations. This includes the uniform height model and the predicted critical endpoint.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-10-06",
+  "family": "232",
+  "family_title": "Gaussian fields and interfaces for triangular-lattice Lipschitz heights",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "gaussian-free-field",
+      "statistical-mechanics",
+      "probability"
+    ],
+    "reason": "Proves a Gaussian free field scaling limit for weighted integer Lipschitz height models.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

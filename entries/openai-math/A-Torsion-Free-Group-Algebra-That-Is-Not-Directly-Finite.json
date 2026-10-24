@@ -1,0 +1,31 @@
+{
+  "key": "A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-Finite",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-Finite-October-4-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-Torsion-Free-Group-Algebra-That-Is-Not-Directly-Finite-October-4-2026/direct-finiteness.pdf",
+  "title": "A Torsion-Free Group Algebra That Is Not Directly Finite",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We construct a finitely presented torsion-free counterexample to Kaplansky's direct finiteness conjecture over the field of two elements. The group admits a finite two-dimensional classifying complex.",
+  "domain": "Algebra",
+  "published": "2026-10-04",
+  "family": "197",
+  "family_title": "A torsion-free group algebra that is not directly finite",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "group-algebras",
+      "ring-theory",
+      "finite-presentations"
+    ],
+    "reason": "Constructs a torsion-free group algebra over F_2 that fails direct finiteness, answering Kaplansky's conjecture negatively.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "key": "PALOMAR-2026-09-03-000007",
+  "source": "palomar",
+  "url": "https://github.com/sneed-and-feed/lean-theorems-1/tree/932380aafde3af51cea2aa43f0e9612acca48dc6/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-03-000007-v1.json",
+  "title": "Tucker's Lemma: Full Combinatorial & Topological Parity Suite in 1D and 2D",
+  "authors": [
+    "Noah Cohen"
+  ],
+  "summary": "A complete machine-checked Lean 4 formalization of Tucker's Lemma (Albert W. Tucker, 1945) and the combinatorial Borsuk–Ulam theorem in 1D and 2D without artificial conditions. Formalizes four foundational pillars: (1) 1D discrete sign-change parity and antipodal interval subdivision lemma; (2) 2D combinatorial double counting of face doors and modulo-2 parity conservation on edge-pseudomanifolds; (3) the boundary cycle engine on 2D edge-pseudomanifolds with an enumerated cyclic boundary (CyclicBoundaryPseudomanifold2D) under antipodal boundary labeling, proving that non-complementary…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.AT",
+    "msc:05C10",
+    "msc:55M20",
+    "msc:57M15"
+  ],
+  "published": "2026-09-03",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Some topological properties of disk and sphere",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "A generalization of Tucker's combinatorial lemma with topological applications",
+      "identifier": "",
+      "relationship": "adapts"
+    },
+    {
+      "title": "A Constructive Proof of Tucker's Combinatorial Lemma",
+      "identifier": "",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/sneed-and-feed/lean-theorems-1",
+  "commit": "932380aafde3af51cea2aa43f0e9612acca48dc6",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "combinatorial-topology",
+      "tucker-lemma",
+      "lean-formalization"
+    ],
+    "reason": "Machine-checked Lean formalization of Tucker's lemma and combinatorial Borsuk–Ulam in low dimensions.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

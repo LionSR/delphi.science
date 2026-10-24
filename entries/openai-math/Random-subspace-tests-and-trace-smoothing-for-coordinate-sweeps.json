@@ -1,0 +1,32 @@
+{
+  "key": "Random-subspace-tests-and-trace-smoothing-for-coordinate-sweeps",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Random-subspace-tests-and-trace-smoothing-for-coordinate-sweeps-September-26-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Random-subspace-tests-and-trace-smoothing-for-coordinate-sweeps-September-26-2026/paper.pdf",
+  "title": "Random-subspace tests and trace smoothing for coordinate sweeps",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that an absolute number of coordinate sweeps of the Thorp shuffle on $`n=2^d`$ positions brings the full permutation to total-variation distance at most $`\\frac12n^{-5}`$ from uniform, uniformly over the initial deck. Thus $`O(d)`$ physical shuffles suffice, which is optimal in order.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-09-26",
+  "family": "238",
+  "family_title": "Optimal logarithmic mixing of the Thorp shuffle",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "probability",
+      "mixing-times",
+      "card-shuffling",
+      "combinatorics"
+    ],
+    "reason": "Proves an O(d) total-variation mixing bound for coordinate sweeps of the Thorp shuffle.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

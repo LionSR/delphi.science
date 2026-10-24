@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-10-17-000009",
+  "source": "palomar",
+  "url": "https://github.com/jtraverso/erdos-girth-chromatic/tree/e41d7493430ba42f18da380192a4111763155064/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-17-000009-v1.json",
+  "title": "Erdős' theorem on graphs of large girth and large chromatic number",
+  "authors": [
+    "Juan Pablo Traverso Gianini"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of Erdős' 1959 theorem: for every g and k there is a finite graph with girth greater than g and chromatic number greater than k. The formalization proves the structural form given by Erdős' probabilistic argument: for every g and every ε > 0, for all sufficiently large n there is a graph on n vertices with no cycle of length at most g in which every independent set has fewer than εn vertices; hence, for all large n, a graph on n vertices with girth greater than g that is not k-colourable. Mathlib has girth and chromatic number but not this theorem;…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C15",
+    "msc:05C38",
+    "msc:05C80"
+  ],
+  "published": "2026-10-17",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Graph Theory and Probability",
+      "identifier": "doi:10.4153/CJM-1959-003-9",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jtraverso/erdos-girth-chromatic",
+  "commit": "e41d7493430ba42f18da380192a4111763155064",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "large-girth",
+      "chromatic-number",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of Erdős's theorem on graphs with large girth and chromatic number.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

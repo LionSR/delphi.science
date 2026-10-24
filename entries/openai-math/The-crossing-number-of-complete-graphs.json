@@ -1,0 +1,31 @@
+{
+  "key": "The-crossing-number-of-complete-graphs",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-crossing-number-of-complete-graphs-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-crossing-number-of-complete-graphs-September-23-2026/paper.pdf",
+  "title": "The crossing number of complete graphs",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the Harary–Hill conjecture: for every positive integer n , the ordinary crossing number of the complete graph K n is $`\\displaystyle \\frac14\\left\\lfloor\\frac n2\\right\\rfloor \\left\\lfloor\\frac{n-1}{2}\\right\\rfloor \\left\\lfloor\\frac{n-2}{2}\\right\\rfloor \\left\\lfloor\\frac{n-3}{2}\\right\\rfloor.`$",
+  "domain": "Combinatorics",
+  "published": "2026-09-23",
+  "family": "165",
+  "family_title": "The Harary–Hill and Zarankiewicz crossing-number formulas",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "crossing-number",
+      "combinatorics"
+    ],
+    "reason": "Proves the Harary–Hill formula for the crossing number of complete graphs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

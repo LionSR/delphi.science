@@ -1,0 +1,63 @@
+{
+  "key": "PALOMAR-2026-10-04-000006",
+  "source": "palomar",
+  "url": "https://github.com/shaikidris/gallai-two-exception/tree/5f4130a2e14b836cfaa86cad6ae59beb9768b9ea/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-04-000006-v1.json",
+  "title": "Gallai's conjecture with two exceptional even vertices",
+  "authors": [
+    "Idris Ali Shaik"
+  ],
+  "summary": "Every connected finite simple graph admits an edge partition into at most ceil(|V(G)|/2) simple paths when at most two vertices of its induced even-degree graph have degree greater than three. One positive designated even vertex can be exposed twice at the ceiling budget. Two designated even vertices can be exposed twice simultaneously within floor(|V(G)|/2)+1 paths, giving simultaneous ceiling exposure at odd order. Exceptional and ordinary degrees are unrestricted. Simultaneous even-order ceiling exposure and the unrestricted Gallai conjecture are not claimed.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C38",
+    "msc:05C70"
+  ],
+  "published": "2026-10-04",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Gallai's conjecture with two exceptional even vertices",
+      "identifier": "doi:10.5281/zenodo.23134427",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Towards Gallai's path decomposition conjecture",
+      "identifier": "https://arxiv.org/abs/1911.04546",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Gallai's Conjecture on Path Decompositions",
+      "identifier": "doi:10.1007/s40305-022-00435-3",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Path decompositions and Gallai's conjecture",
+      "identifier": "doi:10.1016/j.jctb.2004.09.008",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/shaikidris/gallai-two-exception",
+  "commit": "5f4130a2e14b836cfaa86cad6ae59beb9768b9ea",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "gallai-conjecture",
+      "edge-decomposition",
+      "combinatorics"
+    ],
+    "reason": "Partial results on Gallai's path-partition conjecture for graphs with two exceptional even vertices.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

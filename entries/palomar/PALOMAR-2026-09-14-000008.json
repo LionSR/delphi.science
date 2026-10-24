@@ -1,0 +1,40 @@
+{
+  "key": "PALOMAR-2026-09-14-000008",
+  "source": "palomar",
+  "url": "https://github.com/SauersML/group-approximation/tree/a4eea122897265caab10088c303451049bdd797f/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-14-000008-v1.json",
+  "title": "A Counterexample to the Trace Problem for Uniform Tracial Completions",
+  "authors": [
+    "Sauers"
+  ],
+  "summary": "We formalize a negative answer to Problem XXII of Schafhauser, Tikuisis and White. There is a separable unital C*-algebra A with nonempty compact tracial state space such that its uniform tracial completion M has a tracial state that is discontinuous in the uniform 2-norm. Thus the canonical extensions of the traces of A form a proper subset X of the traces of M. A second theorem gives a factorial tracially complete pair (M, X) with the same failure, answering Question 1.1 of Carrion, Castillejos, Evington, Gabe, Schafhauser, Tikuisis and White negatively. In both statements, X is exactly…",
+  "domain": "math.OA",
+  "tags": [
+    "math.OA",
+    "msc:46L05",
+    "msc:46L30"
+  ],
+  "published": "2026-09-14",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/SauersML/group-approximation",
+  "commit": "a4eea122897265caab10088c303451049bdd797f",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "operator-algebras",
+      "lean",
+      "tracial-completions"
+    ],
+    "reason": "Formal counterexample to the trace problem for uniform tracial completions of C*-algebras.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

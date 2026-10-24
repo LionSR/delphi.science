@@ -1,0 +1,31 @@
+{
+  "key": "The-Abelian-Zilber-Pink-Conjecture",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-Abelian-Zilber-Pink-Conjecture-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-Abelian-Zilber-Pink-Conjecture-September-24-2026/paper.pdf",
+  "title": "The abelian Zilber–Pink conjecture",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the abelian Zilber–Pink conjecture over $`\\overline{\\mathbb Q}`$. Every irreducible subvariety of an abelian variety has only finitely many maximal atypical subvarieties, where atypicality is measured inside its smallest containing torsion coset.",
+  "domain": "Number theory",
+  "published": "2026-09-24",
+  "family": "016",
+  "family_title": "Zilber–Pink in abelian varieties and the Siegel threefold",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "diophantine-geometry",
+      "abelian-varieties",
+      "unlikely-intersections"
+    ],
+    "reason": "Proves finiteness of maximal atypical subvarieties in the abelian Zilber–Pink setting.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

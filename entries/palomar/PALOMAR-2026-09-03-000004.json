@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-09-03-000004",
+  "source": "palomar",
+  "url": "https://github.com/stalex444/radial-harmonic-classification/tree/74e9b3ea7f204fba2e84e546c80457bcca5c6268/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-03-000004-v1.json",
+  "title": "Radial harmonic functions on a real inner product space: the classification, the Laplacian of radial functions, and the stability of circular orbits for power-law central forces; Ehrenfest's dimensionality argument (1917) as the application",
+  "authors": [
+    "Stephanie Alexander"
+  ],
+  "summary": "GENERAL THEOREMS FIRST. Throughout, E is a finite-dimensional real inner product space of dimension n, Δ is Mathlib's coordinate-free Laplacian, HarmonicOnNhd its harmonic functions, and f : ℝ → ℝ is twice differentiable on (0, ∞) (two HasDerivAt hypotheses, with derivatives f', f''). (I) THE CLASSIFICATION OF RADIAL HARMONIC FUNCTIONS: (1) for n ≠ 2 and E ≠ 0, the radial function f ∘ ‖·‖ is harmonic on E ∖ {0} if and only if f(r) = a + b r^(2−n) on (0, ∞) for some real a, b; (2) for n = 2, if and only if f(r) = a + b log r — every radial harmonic function with a twice-differentiable profile…",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA",
+    "math.AP",
+    "math-ph",
+    "physics.class-ph",
+    "msc:31B05",
+    "msc:35J05",
+    "msc:34A05",
+    "msc:70F05",
+    "msc:70H14",
+    "msc:70K20"
+  ],
+  "published": "2026-09-03",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/stalex444/radial-harmonic-classification",
+  "commit": "74e9b3ea7f204fba2e84e546c80457bcca5c6268",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "harmonic-functions",
+      "potential-theory",
+      "lean-formalization"
+    ],
+    "reason": "Formal classification of radial harmonic functions and related orbital stability results.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

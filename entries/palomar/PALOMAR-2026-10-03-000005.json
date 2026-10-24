@@ -1,0 +1,57 @@
+{
+  "key": "PALOMAR-2026-10-03-000005",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/bayesian-persuasion-lean/tree/6bb350283717128bcd625daf93da18fe199e13d9/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-03-000005-v1.json",
+  "title": "Optimal Information and Concavification in Bayesian Persuasion",
+  "authors": [
+    "Arthur Freitas Ramos",
+    "David Barros Hulak",
+    "Ruy Jose Guerra Barretto de Queiroz"
+  ],
+  "summary": "Kamenica and Gentzkow's finite-state persuasion theorem from economic primitives: nonempty compact metric actions, continuous sender and receiver utilities, and a full-support common prior. Receiver best replies and sender-preferred tie actions exist. The induced sender payoff is bounded and upper semicontinuous. Finite signals realize exactly finite Bayes-plausible posterior splittings, with prescribed posteriors recovered only at nonnull messages. An optimal finite signal with at most the number of states plus two messages exists and dominates every finite experiment. Its value is the…",
+  "domain": "econ.TH",
+  "tags": [
+    "econ.TH",
+    "cs.GT",
+    "msc:91A26",
+    "msc:91B44",
+    "msc:52A20"
+  ],
+  "published": "2026-10-03",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Bayesian Persuasion",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Econlib: Finite Persuasion and Primal Attainment",
+      "identifier": "",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/bayesian-persuasion-lean",
+  "commit": "6bb350283717128bcd625daf93da18fe199e13d9",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "bayesian-persuasion",
+      "game-theory",
+      "economic-theory",
+      "formal-verification"
+    ],
+    "reason": "Formal treatment of Bayesian persuasion with concavification, proving optimal finite signals exist.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

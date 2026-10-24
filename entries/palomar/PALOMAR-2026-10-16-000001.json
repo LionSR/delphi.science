@@ -1,0 +1,59 @@
+{
+  "key": "PALOMAR-2026-10-16-000001",
+  "source": "palomar",
+  "url": "https://github.com/jtraverso/hadwiger-mader/tree/cb10154cd439a419d0bbf34052839dd27242b619/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000001-v1.json",
+  "title": "Mader's theorem and Hadwiger's conjecture for t ≤ 4",
+  "authors": [
+    "Juan Pablo Traverso Gianini"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of Mader's theorem (a nonempty finite graph of average degree at least 2^(r−2) has a K_r minor), of Dirac's lemma (a graph without a K4 minor has a vertex of degree at most two, hence at most 2n − 3 edges for n ≥ 2), and of Hadwiger's conjecture for t ≤ 4 (graphs without a K3 minor are 2-colourable, graphs without a K4 minor are 3-colourable). Minors are branch-set models.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C83",
+    "msc:05C15",
+    "msc:05C35"
+  ],
+  "published": "2026-10-16",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Homomorphieeigenschaften und mittlere Kantendichte von Graphen",
+      "identifier": "doi:10.1007/BF01364272",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "A property of 4-chromatic graphs and some remarks on critical graphs",
+      "identifier": "doi:10.1112/jlms/s1-27.1.85",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Über eine Klassifikation der Streckenkomplexe",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jtraverso/hadwiger-mader",
+  "commit": "cb10154cd439a419d0bbf34052839dd27242b619",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "hadwiger-conjecture",
+      "formal-verification",
+      "lean"
+    ],
+    "reason": "Lean 4 formalization of Mader's theorem and Hadwiger's conjecture for small t.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

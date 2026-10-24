@@ -1,0 +1,53 @@
+{
+  "key": "PALOMAR-2026-08-20-000006",
+  "source": "palomar",
+  "url": "https://github.com/rwst/Even-Integral/tree/db8f6025df35517cb9552df04d18345c68d8ac11/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-20-000006-v2.json",
+  "title": "rwst/Even-Integral",
+  "authors": [
+    "Ralf Stephan (direction, review, paper author)"
+  ],
+  "summary": "A Lean 4 / Mathlib development of a paper, which improves on a problem by Dubickas. Dubickas (Glasgow Math. J. 48 (2006), 331–336) splits the reals α > 1 in two: α lies in 𝒵 when some real ξ ≠ 0 makes every integral part ⌊ξαⁿ⌋, n ≥ 1, even, and in 𝒮 otherwise. At α = 3/2 this is Mahler's question, and open; his Problem 5 asks whether 𝒮 has an element greater than 2. This formalization decides 𝒮 versus 𝒵 for every quadratic Pisot number: the golden mean is the only one in 𝒮, so none greater than 2 lies there and Problem 5 loses its whole natural class of candidates, though the problem itself…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.DS",
+    "msc:11J71",
+    "msc:11K16",
+    "msc:11R06",
+    "msc:11B37",
+    "msc:11B39",
+    "msc:68V20"
+  ],
+  "published": "2026-09-03",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Even integral parts of powers of quadratic Pisot numbers",
+      "identifier": "https://doi.org/10.13140/RG.2.2.20582.79689",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/rwst/Even-Integral",
+  "commit": "db8f6025df35517cb9552df04d18345c68d8ac11",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "dynamical-systems",
+      "lean-formalization",
+      "pisot-numbers"
+    ],
+    "reason": "Lean 4 formalization resolving Dubickas's classification question for quadratic Pisot numbers.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

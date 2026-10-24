@@ -1,0 +1,32 @@
+{
+  "key": "Projection-moments-positive-cap-domination-and-Riesz-estimates-on-the-sphere",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Projection-moments-positive-cap-domination-and-Riesz-estimates-on-the-sphere-September-27-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Projection-moments-positive-cap-domination-and-Riesz-estimates-on-the-sphere-September-27-2026/paper.pdf",
+  "title": "Projection moments, positive cap domination, and Riesz estimates on the sphere",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove moment estimates for exact random projections of finite measures whose mass is controlled on Euclidean balls, and derive positive domination by countable sums of spherical cap measures. For learners with $`M=o(d^2)`$ bits of memory, these estimates give three proofs that uniform-sphere average success at least 2/3 at angular accuracy $`0\\lt \\epsilon\\le1/10`$ requires $`\\Omega(d\\log(1/\\epsilon))`$ noiseless Gaussian observations. The three proofs keep their different stopping and accuracy costs explicit.",
+  "domain": "Theoretical computer science",
+  "published": "2026-09-27",
+  "family": "140",
+  "family_title": "Memory–sample lower bounds for noiseless Gaussian regression",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "learning-theory",
+      "random-projections",
+      "sphere-geometry",
+      "lower-bounds"
+    ],
+    "reason": "Proves moment estimates for random projections, giving memory-bounded learning lower bounds on the sphere.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

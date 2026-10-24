@@ -1,0 +1,32 @@
+{
+  "key": "Uniform-real-Lipschitz-surfaces-on-the-triangular-lattice",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Uniform-real-Lipschitz-surfaces-on-the-triangular-lattice-October-6-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Uniform-real-Lipschitz-surfaces-on-the-triangular-lattice-October-6-2026/paper.pdf",
+  "title": "Uniform real Lipschitz surfaces on the triangular lattice",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the Gaussian free field and SLE$`_4`$ scaling limits for uniformly sampled real nearest-neighbor Lipschitz heights on the triangular lattice, resolving Schramm's Problem 2.3. On approximations of smooth simply connected domains, the centered height field converges as a random distribution to a multiple of the Dirichlet Gaussian free field. At one tuned two-arc boundary amplitude, the zero-height interface converges in uniform curve distance to chordal SLE$`_4`$. We identify the relation between the field variance and the boundary height in terms of an implicit stationary…",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-10-06",
+  "family": "232",
+  "family_title": "Gaussian fields and interfaces for triangular-lattice Lipschitz heights",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "probability",
+      "gaussian-free-field",
+      "sle",
+      "random-surfaces"
+    ],
+    "reason": "Proves Gaussian free field and SLE4 scaling limits for random Lipschitz heights on the triangular lattice.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

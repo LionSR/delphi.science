@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-10-21-000004",
+  "source": "palomar",
+  "url": "https://github.com/roos-j/lean-dfr/tree/5c7595a83657b6c02f62ebf4f4ae1c02cb4109e4/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-21-000004-v1.json",
+  "title": "Formalization of a curved three-dimensional simplex Hilbert transform",
+  "authors": [
+    "Polona Durcik",
+    "Marco Fraccaroli",
+    "Joris Roos"
+  ],
+  "summary": "This is a Lean 4 formalization of the main theorem from the paper \"A curved three-dimensional simplex Hilbert transform\" by P. Durcik, M. Fraccaroli and J. Roos.",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA",
+    "msc:42B20"
+  ],
+  "published": "2026-10-21",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A curved three-dimensional simplex Hilbert transform",
+      "identifier": "arXiv:2610.24850, https://arxiv.org/abs/2610.24850",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/roos-j/lean-dfr",
+  "commit": "5c7595a83657b6c02f62ebf4f4ae1c02cb4109e4",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "harmonic-analysis",
+      "hilbert-transform",
+      "simplex",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of the main theorem on a curved three-dimensional simplex Hilbert transform.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

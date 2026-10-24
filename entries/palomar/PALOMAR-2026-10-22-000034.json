@@ -1,0 +1,57 @@
+{
+  "key": "PALOMAR-2026-10-22-000034",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/Math-Formalization/tree/dfbeea7108d04be545185d5f868efbcd9c86c6e5/topology/open-polish-images",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-22-000034-v1.json",
+  "title": "Continuous open images of Polish spaces",
+  "authors": [
+    "Arthur Freitas Ramos",
+    "David Barros Hulak",
+    "Ruy Jose Guerra Barretto de Queiroz"
+  ],
+  "summary": "Continuous open surjections preserve the strong Choquet property in arbitrary topological spaces. An explicit full-history strategy lifts each legal target play coherently, keeps the marked point, and maps an actual common source point. Consequently a continuous open metrizable image of a Polish space is Polish. A second-countable completely metrizable source gives a completely metrizable metrizable image. A regular Hausdorff codomain also suffices, by inherited second countability and Urysohn metrizability. These are classical results; no novelty or priority is claimed.",
+  "domain": "math.GN",
+  "tags": [
+    "math.GN",
+    "msc:54C10",
+    "msc:54E50",
+    "msc:54E52",
+    "msc:91A44"
+  ],
+  "published": "2026-10-22",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Stationary and convergent strategies in Choquet games, arXiv:0907.4126v2",
+      "identifier": "https://arxiv.org/pdf/0907.4126v2",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Notes on quasi-Polish spaces",
+      "identifier": "https://rynchn.github.io/math/qpol.pdf",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/Math-Formalization",
+  "commit": "dfbeea7108d04be545185d5f868efbcd9c86c6e5",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "general-topology",
+      "polish-spaces",
+      "open-maps",
+      "descriptive-set-theory"
+    ],
+    "reason": "Proof that continuous open metrizable images of Polish spaces remain Polish.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

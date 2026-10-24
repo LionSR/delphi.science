@@ -1,0 +1,31 @@
+{
+  "key": "A-uniform-Hilbert-transform-estimate-for-Lipschitz-directions",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-uniform-Hilbert-transform-estimate-for-Lipschitz-directions-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-uniform-Hilbert-transform-estimate-for-Lipschitz-directions-September-25-2026/main.pdf",
+  "title": "A uniform Hilbert transform estimate for Lipschitz directions",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove a uniform L 2 bound for the Hilbert transform along a Lipschitz unit vector field in the plane, with integration restricted to a fixed absolute multiple of the reciprocal Lipschitz seminorm. The bound is uniform in the inner truncation and holds for fields depending on both coordinates. This gives an affirmative answer to Stein's weak-$`(2,2)`$ conjecture.",
+  "domain": "Real and complex analysis",
+  "published": "2026-09-25",
+  "family": "083",
+  "family_title": "Hilbert transforms along Lipschitz directions",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "harmonic-analysis",
+      "singular-integrals",
+      "hilbert-transform"
+    ],
+    "reason": "Proves a uniform L2 bound for Hilbert transforms along Lipschitz vector fields.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

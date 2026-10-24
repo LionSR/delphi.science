@@ -1,0 +1,53 @@
+{
+  "key": "PALOMAR-2026-09-05-000005",
+  "source": "palomar",
+  "url": "https://github.com/nicholasbulka/li-criterion-rh-equivalence-lean/tree/35df682f3b709ffe5fbcfdd452dfa964bd622b87/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-05-000005-v1.json",
+  "title": "Li's criterion for the Riemann Hypothesis",
+  "authors": [
+    "Nicholas Bulka"
+  ],
+  "summary": "Li's criterion for the Riemann zeta function, formalized in Lean 4 over Mathlib: Mathlib's `RiemannHypothesis` holds if and only if every Li-Keiper coefficient of the completed xi function has nonnegative real part. The zero-indexed analytic coefficient at n is Li's classical lambda_(n+1), the n-th Taylor coefficient at 0 of the logarithmic derivative of s |-> xi(1/(1-s)). A second compared theorem identifies this analytic coefficient with Li's arithmetic coefficient, the symmetrized sum over the nontrivial zeros counted with multiplicity, and proves that symmetrized family summable so the…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11M26",
+    "msc:11M06",
+    "msc:30D15"
+  ],
+  "published": "2026-09-05",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "The positivity of a sequence of numbers and the Riemann hypothesis",
+      "identifier": "J. Number Theory 65 (1997), 325-333; doi:10.1006/jnth.1997.2137",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Complements to Li's criterion for the Riemann hypothesis",
+      "identifier": "J. Number Theory 77 (1999), 274-287; doi:10.1006/jnth.1999.2392",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/nicholasbulka/li-criterion-rh-equivalence-lean",
+  "commit": "35df682f3b709ffe5fbcfdd452dfa964bd622b87",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "riemann-hypothesis",
+      "lean-formalization",
+      "number-theory"
+    ],
+    "reason": "Lean 4 formalization of Li's criterion equivalent to the Riemann Hypothesis.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

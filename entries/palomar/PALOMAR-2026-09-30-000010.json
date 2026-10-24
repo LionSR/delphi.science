@@ -1,0 +1,61 @@
+{
+  "key": "PALOMAR-2026-09-30-000010",
+  "source": "palomar",
+  "url": "https://github.com/rwst/Subspace-Theorems/tree/ce289c64054c8ffcfb6fd37d5881312c6a5d577d/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000010-v1.json",
+  "title": "Adamczewski–Bugeaud 2007: the complexity of algebraic numbers in integer bases",
+  "authors": [
+    "Ralf Stephan"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of B. Adamczewski and Y. Bugeaud, On the complexity of algebraic numbers I. Expansions in integer bases (Ann. of Math. 165 (2007)), built on the repository's libraries ArithmeticHeights, DiophantineApproximation and ForMathlib, whose Subspace Theorem with algebraic coefficients it uses. The library AdamczewskiBugeaud2007 is sorry-free and within Lean's three standard axioms. It proves Theorem 1 (the complexity of an irrational algebraic number in an integer base satisfies p(n)/n → ∞, with (1), p(n) − n → ∞), Theorems 2–4 (automatic and morphic expansions),…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11J81",
+    "msc:11A63",
+    "msc:11K16",
+    "msc:11R06",
+    "msc:68R15"
+  ],
+  "published": "2026-09-30",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "On the complexity of algebraic numbers I. Expansions in integer bases",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "On periodic expansions of Pisot numbers and Salem numbers",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Suites algébriques, automates et substitutions",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/rwst/Subspace-Theorems",
+  "commit": "ce289c64054c8ffcfb6fd37d5881312c6a5d577d",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "lean",
+      "number-theory",
+      "transcendence",
+      "automatic-sequences"
+    ],
+    "reason": "Lean formalization of Adamczewski–Bugeaud complexity results for algebraic numbers.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-08-25-000005",
+  "source": "palomar",
+  "url": "https://github.com/teal-sea/zeta-lab/tree/84312e4477dfeb7e0d8a91c38897f225f5a52f19/lean/bridge",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-25-000005-v1.json",
+  "title": "teal-sea/zeta-lab",
+  "authors": [
+    "Thomas Lince"
+  ],
+  "summary": "Let N(T,2T) count the nontrivial zeros of the Riemann zeta function with ordinate in (T,2T], with multiplicity, and N_0^s(T,2T) the simple zeros among them on the critical line. The Lean development accompanying arXiv:2608.13637 (anthropics/zeta-23-lean) proves, for Mathlib's riemannZeta and unconditionally, that for every eps > 0 and all large T, (H - eps) N(T,2T) = 2, c > 0, m >= n, p > 0 with c(m-(n-1)) 0 and all large T, (Phi_n(n,c,m,p) - eps) N(T,2T) <= N_0^s(T,2T), where Phi_n(n,c,m,p) = (H - (n-1)(m-1)/(pm)) / (1 - c(m-(n-1))/m). At n = 7 this is Ainta's theorem. THE THREE-POINT…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11M26",
+    "msc:15A42"
+  ],
+  "published": "2026-08-25",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "More than 67.3% of the zeros of the Riemann zeta function are simple and lie on the critical line",
+      "identifier": "",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/teal-sea/zeta-lab",
+  "commit": "84312e4477dfeb7e0d8a91c38897f225f5a52f19",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "riemann-zeta",
+      "number-theory",
+      "lean",
+      "zeros"
+    ],
+    "reason": "Lean development proving bounds on zeta zeros in intervals, accompanying an arXiv preprint.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

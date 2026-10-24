@@ -1,0 +1,40 @@
+{
+  "key": "PALOMAR-2026-09-30-000033",
+  "source": "palomar",
+  "url": "https://github.com/jfairfaxball-348/Pascal-Extremes/tree/a7e414a9e5bcf931c79b2bd4d4ffa81eeb6cfc22/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000033-v1.json",
+  "title": "Pascal Extremes",
+  "authors": [
+    "John Fairfax-Ball"
+  ],
+  "summary": "A Lean 4 formalisation of sharp p-adic extremal behaviour for the restricted binomial gcd G(N;m) = gcd{C(N,k) : 0 = 2 with p not dividing m, it proves that the maximum of v_p(G(N;m)) over admissible rows is the least r >= 1 with m = 2, the exact least-row formula T_p(p^a+1) = p^(3a)+1.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11B65"
+  ],
+  "published": "2026-09-30",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jfairfaxball-348/Pascal-Extremes",
+  "commit": "a7e414a9e5bcf931c79b2bd4d4ffa81eeb6cfc22",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "binomial-coefficients",
+      "p-adic",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of p-adic extremal behaviour for restricted binomial gcds.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

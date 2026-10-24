@@ -1,0 +1,58 @@
+{
+  "key": "PALOMAR-2026-08-29-000015",
+  "source": "palomar",
+  "url": "https://github.com/ehrlich-b/composition-algebras/tree/e37e22b0571a170ba18a0d8db29fe2a857906b92/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-29-000015-v1.json",
+  "title": "ehrlich-b/composition-algebras",
+  "authors": [
+    "Bryan Ehrlich"
+  ],
+  "summary": "Hurwitz's theorem (1898), dimension form: a nontrivial finite-dimensional Euclidean composition algebra over R - a unital, not necessarily associative or commutative bilinear product together with a symmetric positive-definite form whose quadratic form is multiplicative - has real dimension 1, 2, 4 or 8. R, C and H are exhibited so the class is inhabited; the classification into R, C, H and O is strictly stronger and is not part of this entry. Machine checked, not peer reviewed, no priority claim.",
+  "domain": "math.RA",
+  "tags": [
+    "math.RA",
+    "math.RT",
+    "msc:17A75",
+    "msc:11E88",
+    "msc:17A35",
+    "msc:17D05",
+    "msc:17C40",
+    "msc:15A63"
+  ],
+  "published": "2026-08-29",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Uber die Composition der quadratischen Formen von beliebig vielen Variablen",
+      "identifier": "",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Composition algebras and their applications, and the nucleus of an alternative algebra",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/ehrlich-b/composition-algebras",
+  "commit": "e37e22b0571a170ba18a0d8db29fe2a857906b92",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "composition-algebras",
+      "hurwitz-theorem",
+      "lean-formalization",
+      "algebra"
+    ],
+    "reason": "Lean formalization of the dimension restriction in Hurwitz's composition algebra theorem.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

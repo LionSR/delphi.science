@@ -1,0 +1,44 @@
+{
+  "key": "PALOMAR-2026-09-02-000011",
+  "source": "palomar",
+  "url": "https://github.com/CoolRmal/Besicovitchs-1-2/tree/8b0e98aa712374c96da7e619624f5b36ed8d5fd3/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-02-000011-v2.json",
+  "title": "A machine-checked bound of 0.6934 for Besicovitch's 1/2-problem",
+  "authors": [
+    "Yongxi Lin"
+  ],
+  "summary": "Besicovitch's 1/2-conjecture asserts that a Borel set in the plane with finite one-dimensional Hausdorff measure whose lower density exceeds 1/2 almost everywhere is countably 1-rectifiable. Writing sigma_1(R^2) for the least threshold that forces countable 1-rectifiability, the conjecture is sigma_1(R^2) = 1/2. The previously published record is sigma_1(R^2) <= 7/10, obtained by De Lellis, Glaudo, Massaccesi and Vittone. This development proves, with a complete Lean 4 proof term, sigma_1(H) <= 6934/10000 = 0.6934 for every real Hilbert space H, without finite-dimensionality or separability…",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA",
+    "math.MG",
+    "msc:28A75",
+    "msc:28A78",
+    "msc:49Q15",
+    "msc:68V20",
+    "msc:90C05"
+  ],
+  "published": "2026-09-20",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/CoolRmal/Besicovitchs-1-2",
+  "commit": "8b0e98aa712374c96da7e619624f5b36ed8d5fd3",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "geometric-measure-theory",
+      "rectifiability",
+      "lean-formalization"
+    ],
+    "reason": "Machine-checked Lean bound on a threshold in Besicovitch's 1/2-rectifiability problem.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

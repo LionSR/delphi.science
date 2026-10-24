@@ -1,0 +1,31 @@
+{
+  "key": "The-Singer-conjecture-in-dimension-four",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-Singer-conjecture-in-dimension-four-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-Singer-conjecture-in-dimension-four-September-25-2026/paper.pdf",
+  "title": "The Singer conjecture in dimension four",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the four-dimensional Singer conjecture: the L 2 -Betti numbers of the universal cover of a closed connected aspherical topological four-manifold vanish outside degree two. More generally, the same vanishing holds for finite connected aspherical integral Poincaré complexes of formal dimension four, including nonorientable ones.",
+  "domain": "Topology",
+  "published": "2026-09-25",
+  "family": "315",
+  "family_title": "The four-dimensional Singer conjecture",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "geometric-topology",
+      "l2-betti-numbers",
+      "aspherical-manifolds"
+    ],
+    "reason": "Proves L2-Betti number vanishing for four-dimensional aspherical manifolds, per the Singer conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

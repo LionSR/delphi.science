@@ -1,0 +1,44 @@
+{
+  "key": "PALOMAR-2026-09-11-000001",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/lean-poincare-formalization-plan/tree/0cc7c31bf6e2dac5c0359a432f3d99803f563017/bonnet-myers",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-11-000001-v1.json",
+  "title": "Independent Bonnet--Myers diameter and compactness theorem",
+  "authors": [
+    "Arthur Freitas Ramos",
+    "David Barros Hulak",
+    "Ruy J. G. B. de Queiroz"
+  ],
+  "summary": "Formalizes the classical Bonnet--Myers theorem for complete connected smooth boundaryless finite-dimensional real Riemannian manifolds. From dimension n >= 2, K > 0, and the pointwise lower bound Ric(a,a) >= (n-1) K g(a,a), the selected theorem constructs the Levi--Civita connection and actual curvature, proves compactness, and gives the sharp induced extended-diameter bound pi/sqrt K. The development proves minimizing-geodesic, parallel-transport, second-variation, index-form, and metric-compactness bridges rather than assuming them.",
+  "domain": "math.DG",
+  "tags": [
+    "math.DG",
+    "math.LO",
+    "msc:53C20",
+    "msc:53C21",
+    "msc:03B35"
+  ],
+  "published": "2026-09-11",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/lean-poincare-formalization-plan",
+  "commit": "0cc7c31bf6e2dac5c0359a432f3d99803f563017",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "riemannian-geometry",
+      "formal-verification",
+      "lean"
+    ],
+    "reason": "Lean formalization of the Bonnet–Myers theorem on Riemannian manifolds with positive Ricci bounds.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

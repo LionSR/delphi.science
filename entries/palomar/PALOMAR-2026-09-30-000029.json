@@ -1,0 +1,42 @@
+{
+  "key": "PALOMAR-2026-09-30-000029",
+  "source": "palomar",
+  "url": "https://github.com/savarin/lean-stochastic-calculus/tree/bde839683ba3cf1bf149355a40e9de9522babe92/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000029-v1.json",
+  "title": "Black-Scholes pricing via Girsanov change of measure",
+  "authors": [
+    "Ezzeri Esa"
+  ],
+  "summary": "Formal proof of the time-zero Black-Scholes formula for a European call on any strong solution of the geometric Brownian motion SDE, with positive initial price, strike, volatility and maturity, and constant drift and interest rate. The change of measure uses the constant-drift case of the general predictable (dynamic) Girsanov theorem. The discounted stopped asset is a martingale under one fixed terminal measure, and the call-payoff expectation equals the closed-form Black-Scholes expression.",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "q-fin.MF",
+    "msc:91G20",
+    "msc:60H10",
+    "msc:60H05"
+  ],
+  "published": "2026-09-30",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/savarin/lean-stochastic-calculus",
+  "commit": "bde839683ba3cf1bf149355a40e9de9522babe92",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "mathematical-finance",
+      "stochastic-calculus",
+      "lean-formalization"
+    ],
+    "reason": "Formal proof of the Black-Scholes call price via Girsanov change of measure.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

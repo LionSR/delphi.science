@@ -1,0 +1,59 @@
+{
+  "key": "PALOMAR-2026-09-06-000002",
+  "source": "palomar",
+  "url": "https://github.com/ShengtongZhang-alt/Nikodym/tree/0cd3550000630f4653fac67db43c2d264a0ca426/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-06-000002-v1.json",
+  "title": "The sharp finite-field Nikodym exponent",
+  "authors": [
+    "Ting-Wei Chao",
+    "Zach Hunter",
+    "Cosmin Pohoata",
+    "Hung-Hsun Hans Yu",
+    "Shengtong Zhang"
+  ],
+  "summary": "A complete Lean 4 / Mathlib formalization of the sharp power saving in the finite-field Nikodym problem. A set N in F_q^d is a Nikodym set if through every point x there is a line all of whose points other than x lie in N. Lower bound: for every finite field F_q, every d >= 2 and every Nikodym set N in F_q^d, |N| >= q^d - (8 d^2 + 1) q^(d - 2^(1-d)); the proof goes through a carrier theorem for integral projective varieties containing many affine lines with private points, proved by finite-grid Hermite interpolation, Hilbert-function estimates (normalized monotonicity and a degree upper…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.AG",
+    "msc:05B25",
+    "msc:11T06",
+    "msc:13D40",
+    "msc:14G15"
+  ],
+  "published": "2026-09-06",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Nikodym sets: a power saving from finite-grid interpolation",
+      "identifier": "docs/Nikodym_sharp_power_saving.tex (this repository, at the submitted commit)",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "A prime-uniform construction of small finite-field Nikodym sets",
+      "identifier": "docs/nikodym_construction.tex (this repository, at the submitted commit)",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/ShengtongZhang-alt/Nikodym",
+  "commit": "0cd3550000630f4653fac67db43c2d264a0ca426",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "finite-fields",
+      "combinatorics",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of a sharp power-saving bound for finite-field Nikodym sets.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

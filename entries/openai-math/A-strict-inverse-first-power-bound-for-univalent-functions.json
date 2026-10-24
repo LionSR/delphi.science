@@ -1,0 +1,31 @@
+{
+  "key": "A-strict-inverse-first-power-bound-for-univalent-functions",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-strict-inverse-first-power-bound-for-univalent-functions-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-strict-inverse-first-power-bound-for-univalent-functions-September-24-2026/paper.pdf",
+  "title": "A strict inverse-first-power bound for univalent functions",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove a uniform upper bound for inverse-first-power integral means of normalized univalent disk maps with exponent strictly below 1/4. Consequently, the bounded universal integral-means spectrum satisfies $`B_b(-1)\\lt 1/4`$, disproving Kraetzer's conjectured spectrum at p = −1.",
+  "domain": "Real and complex analysis",
+  "published": "2026-09-24",
+  "family": "072",
+  "family_title": "Brennan's conjecture and the integral-means spectrum",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "complex-analysis",
+      "univalent-functions",
+      "integral-means"
+    ],
+    "reason": "Proves a bound on inverse-first-power integral means of univalent disk maps.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

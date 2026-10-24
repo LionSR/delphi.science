@@ -1,0 +1,55 @@
+{
+  "key": "PALOMAR-2026-10-22-000024",
+  "source": "palomar",
+  "url": "https://github.com/sthubbar/goldbach-lean/tree/559706d617bc554787e10dba07066dc63ab69cb5/entries/mann1942",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-22-000024-v1.json",
+  "title": "Mann's alpha plus beta theorem for Schnirelmann density, after Mann 1942",
+  "authors": [
+    "Steve Hubbard"
+  ],
+  "summary": "A Lean 4 proof, with no unproved steps, of the theorem of H. B. Mann, A proof of the fundamental theorem on the density of sums of sets of positive integers, Ann. of Math. 43, 1942: for sets A and B of natural numbers that contain 0, the Schnirelmann density of A + B is at least the minimum of 1 and sigma A + sigma B. It is stated for Mathlib's own schnirelmannDensity and Mathlib's pointwise sum of sets, so the Challenge restates no density definition, and it is also proved for any finite number of sets. This fills a Mathlib TODO: Mathlib/Combinatorics/Schnirelmann.lean lists Mann's theorem…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO",
+    "msc:11B13",
+    "msc:11B05",
+    "msc:11P70"
+  ],
+  "published": "2026-10-22",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A proof of the fundamental theorem on the density of sums of sets of positive integers",
+      "identifier": "doi:10.2307/1968807",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Additive number theory and the Dyson transform",
+      "identifier": "arXiv:2407.12253",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/sthubbar/goldbach-lean",
+  "commit": "559706d617bc554787e10dba07066dc63ab69cb5",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "additive-combinatorics",
+      "number-theory",
+      "lean-formalization",
+      "sumsets"
+    ],
+    "reason": "Lean 4 proof of Mann's theorem on Schnirelmann density of sumsets.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

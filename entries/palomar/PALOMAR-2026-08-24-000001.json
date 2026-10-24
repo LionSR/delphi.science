@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-08-24-000001",
+  "source": "palomar",
+  "url": "https://github.com/catskillsresearch/scott1980/tree/ef6c05671582b7883ecd40b7081b642ce5351963/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-24-000001-v2.json",
+  "title": "catskillsresearch/scott1980",
+  "authors": [
+    "Lars Warren Ericson"
+  ],
+  "summary": "A Lean 4 / mathlib formalization of Dana Scott's 1980 Oxford lectures, published May 1981 as PRG-19 Lectures on a Mathematical Theory of Computation. The principal sourced Palomar result is the first sentence of Theorem 8.8: the neighbourhood system U over [0,1) ⊆ ℚ is universal, in the sense that every countable neighbourhood system D embeds as a subdomain (D ⊴ U). Comparator also selects two new formal corollaries: P4_embeds for Scott's Example 1.5 and Ssys_embeds for Exercise 7.22. Scott defines those systems but does not separately state the embeddings. Challenge.lean fixes the…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "math.LO",
+    "msc:68Q55",
+    "msc:06B35",
+    "msc:03B70"
+  ],
+  "published": "2026-08-25",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Lectures on a Mathematical Theory of Computation",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/catskillsresearch/scott1980",
+  "commit": "ef6c05671582b7883ecd40b7081b642ce5351963",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "domain-theory",
+      "denotational-semantics",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of Scott's universality theorem for neighbourhood systems.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "key": "PALOMAR-2026-09-08-000001",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/correlated-equilibrium-lean/tree/67f1dc1f2fcb6e75ea62de92f9c67bd92191fd6e/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-08-000001-v1.json",
+  "title": "Finite correlated equilibria and regret certificates",
+  "authors": [
+    "Arthur Freitas Ramos",
+    "David Barros Hulak",
+    "Ruy Jose Guerra Barretto de Queiroz"
+  ],
+  "summary": "For finite games with player-specific action types, a valid independent product distribution is a correlated equilibrium exactly when its mixed profile is Nash. The correlated-equilibrium set is nonempty, compact, and convex when every player's action type is nonempty. For every positive finite horizon, cumulative external-regret and swap-regret bounds give corresponding approximate coarse-correlated and correlated equilibria of the empirical distribution. The development also proves equivalence with conditional obedience inequalities, arbitrary mixed-deviation sufficiency, and…",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "msc:91A10",
+    "msc:91A26"
+  ],
+  "published": "2026-09-08",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Subjectivity and correlation in randomized strategies",
+      "identifier": "https://doi.org/10.1016/0304-4068(74)90037-8",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Algorithmic Game Theory lecture notes, lectures 17 and 18",
+      "identifier": "https://timroughgarden.org/f13/l/f13.pdf",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Dependent finite mixed Nash equilibria in Lean",
+      "identifier": "https://github.com/Arthur742Ramos/dependent-nash-equilibrium-lean/tree/2f65710af26a24a26660dd1e92d09adf1697a527",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/correlated-equilibrium-lean",
+  "commit": "67f1dc1f2fcb6e75ea62de92f9c67bd92191fd6e",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "game-theory",
+      "correlated-equilibrium",
+      "regret-bounds",
+      "formalization"
+    ],
+    "reason": "Formal development of correlated equilibria and regret-based approximate equilibrium certificates for finite games.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

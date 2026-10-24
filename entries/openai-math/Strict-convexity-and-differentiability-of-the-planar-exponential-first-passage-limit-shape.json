@@ -1,0 +1,32 @@
+{
+  "key": "Strict-convexity-and-differentiability-of-the-planar-exponential-first-passage-limit-shape",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Strict-convexity-and-differentiability-of-the-planar-exponential-first-passage-limit-shape-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Strict-convexity-and-differentiability-of-the-planar-exponential-first-passage-limit-shape-September-24-2026/main.pdf",
+  "title": "Strict convexity and differentiability of the planar exponential first-passage limit shape",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that the limit shape of undirected nearest-neighbor first-passage percolation on ℤ 2 with independent exponential edge weights is strictly convex and has a C 1 boundary. This resolves the strict convexity and differentiability conjectures for the planar exponential model. More generally, we prove differentiability of the time-constant norm for every Gamma edge-weight law with positive shape and rate.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-09-24",
+  "family": "212",
+  "family_title": "Planar first-passage geometry and the absence of bigeodesics",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "probability",
+      "first-passage-percolation",
+      "limit-shape",
+      "convexity"
+    ],
+    "reason": "Proves strict convexity and differentiability of the limit shape for planar exponential first-passage percolation.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

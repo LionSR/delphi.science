@@ -1,0 +1,50 @@
+{
+  "key": "PALOMAR-2026-10-12-000009",
+  "source": "palomar",
+  "url": "https://github.com/Vlado-V/chopped-plane-point-ideals/tree/4200d41342404e66f177d067763c0d1c1dd2d768/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-12-000009-v1.json",
+  "title": "Hilbert functions of chopped ideals of general plane points",
+  "authors": [
+    "Vlado Vojdanovski"
+  ],
+  "summary": "Formalizes Theorem 1.1 and Corollary 5.1 of Hilbert Functions of Chopped Ideals of General Plane Points over arbitrary characteristic-zero fields: the full Hilbert function of degree-d chopped point ideals, the regular-sequence cases, the least stabilization degree, and the Expected Syzygy Conjecture.",
+  "domain": "math.AG",
+  "tags": [
+    "math.AG",
+    "math.AC",
+    "msc:13D40",
+    "msc:13D02",
+    "msc:14N05"
+  ],
+  "published": "2026-10-12",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Hilbert Functions of Chopped Ideals of General Plane Points",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Vlado-V/chopped-plane-point-ideals",
+  "commit": "4200d41342404e66f177d067763c0d1c1dd2d768",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "algebraic-geometry",
+      "commutative-algebra",
+      "hilbert-functions",
+      "lean"
+    ],
+    "reason": "Lean formalization of Hilbert function results for chopped point ideals and the Expected Syzygy Conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

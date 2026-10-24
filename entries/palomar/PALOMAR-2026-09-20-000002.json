@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-09-20-000002",
+  "source": "palomar",
+  "url": "https://github.com/linrock/math-proofs/tree/54f272582dd71321ab9d458663d675edd3d0a463/erdos-689",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-20-000002-v1.json",
+  "title": "Erdős 689: eventual double covering by prime residue classes",
+  "authors": [
+    "Linmiao Xu"
+  ],
+  "summary": "A complete Lean 4 proof of Erdős problem 689: for all sufficiently large n, one residue class per prime p ≤ n can cover every integer from 1 through n at least twice. The proof follows the argument for Theorem 1.1 in Chojecki’s April 2026 manuscript “A greedy matching proof of Erdős’s two-fold residue-class problem.” The formalization directly proves the required three-prime counting estimate using Fourier analysis, replacing the manuscript’s invocation of Green–Tao, and verifies the sieve bounds and greedy-matching construction in Lean.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO"
+  ],
+  "published": "2026-09-20",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A greedy matching proof of Erdős’s two-fold residue-class problem (working manuscript, 27 April 2026)",
+      "identifier": "https://www.ulam.ai/research/erdos689.pdf",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/linrock/math-proofs",
+  "commit": "54f272582dd71321ab9d458663d675edd3d0a463",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "covering-problems",
+      "lean",
+      "erdos-problems"
+    ],
+    "reason": "Lean proof of an Erdős problem on double covering by prime residue classes.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "A-power-saving-for-planar-halving-lines",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-power-saving-for-planar-halving-lines-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-power-saving-for-planar-halving-lines-September-25-2026/main.pdf",
+  "title": "A power saving for planar halving lines",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "There are absolute constants ε > 0 and C such that every sufficiently large even n -point set in the plane with no three collinear has at most $`Cn^{4/3-\\varepsilon}`$ unordered halving pairs. This gives a power saving over the classical $`O(n^{4/3})`$ bound for planar halving lines. The proof is nonquantitative and does not supply explicit constants.",
+  "domain": "Combinatorics",
+  "published": "2026-09-25",
+  "family": "183",
+  "family_title": "Power savings for planar halving lines and k -sets",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "discrete-geometry",
+      "halving-lines",
+      "combinatorics"
+    ],
+    "reason": "Improves the classical O(n^{4/3}) bound on planar halving pairs by a power saving.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

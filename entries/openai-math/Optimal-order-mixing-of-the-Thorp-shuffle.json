@@ -1,0 +1,31 @@
+{
+  "key": "Optimal-order-mixing-of-the-Thorp-shuffle",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Optimal-order-mixing-of-the-Thorp-shuffle-September-26-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Optimal-order-mixing-of-the-Thorp-shuffle-September-26-2026/paper.pdf",
+  "title": "Optimal-order mixing of the Thorp shuffle",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that the Thorp shuffle on $`2^d`$ cards mixes in $`\\Theta(d)`$ complete shuffles. The full permutation law after $`1600d`$ shuffles converges to uniform in total variation as $`d\\to\\infty`$, uniformly over the initial deck, while a support count gives a lower bound of $`2d-O(1)`$.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-09-26",
+  "family": "238",
+  "family_title": "Optimal logarithmic mixing of the Thorp shuffle",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "probability",
+      "markov-chains",
+      "card-shuffling"
+    ],
+    "reason": "Proves the Thorp shuffle on 2^d cards mixes in order d shuffles, with matching bounds.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "Polynomial-Mixing-of-the-Switch-Chain-for-Every-Graphical-Degree-Sequence",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Polynomial-Mixing-of-the-Switch-Chain-for-Every-Graphical-Degree-Sequence-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Polynomial-Mixing-of-the-Switch-Chain-for-Every-Graphical-Degree-Sequence-September-25-2026/main.pdf",
+  "title": "Polynomial mixing of the switch chain for every graphical degree sequence",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the simple-undirected form of the Kannan–Tetali–Vempala conjecture: the switch chain on simple undirected graphs mixes in polynomial time for every graphical degree sequence. For a lazy chain that proposes switches uniformly on four vertices, the total-variation mixing time at distance 1/4 is at most $`2n^8`$. We also give an exactly uniform sampler for every graphical labeled degree vector. It uses unbiased random bits, terminates almost surely, and has expected polynomial bit running time.",
+  "domain": "Theoretical computer science",
+  "published": "2026-09-25",
+  "family": "131",
+  "family_title": "Rapid mixing of graph switches for every degree sequence",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "markov-chains",
+      "graph-sampling",
+      "combinatorics"
+    ],
+    "reason": "Proves polynomial mixing of the switch chain and gives an exactly uniform graph sampler.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

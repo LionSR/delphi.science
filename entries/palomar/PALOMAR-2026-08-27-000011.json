@@ -1,0 +1,70 @@
+{
+  "key": "PALOMAR-2026-08-27-000011",
+  "source": "palomar",
+  "url": "https://github.com/nielstron/langlib/tree/10fb20454652d4b7f0f1710880f79240986021c6/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-27-000011-v2.json",
+  "title": "nielstron/langlib",
+  "authors": [
+    "Niels Mündler",
+    "Martin Dvořák"
+  ],
+  "summary": "A Lean 4 formalization of grammar and automaton presentations of the extended Chomsky hierarchy. Starting from unrestricted-grammar rewriting, it defines regular, linear, context-free, context-sensitive, indexed, deterministic context-free, recursive, and recursively enumerable language classes; relates finite, pushdown, linearly bounded, and Mathlib TM0 automata to the corresponding grammar classes; proves strict hierarchy inclusions; and establishes closure or non-closure under thirteen operations for seven major classes.",
+  "domain": "cs.FL",
+  "tags": [
+    "cs.FL",
+    "msc:68Q42",
+    "msc:68Q45",
+    "msc:68Q04"
+  ],
+  "published": "2026-08-27",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Introduction to Automata Theory, Languages, and Computation, 3rd edition",
+      "identifier": "ISBN 978-0321455369",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Indexed Grammars—An Extension of Context-Free Grammars",
+      "identifier": "doi:10.1145/321479.321488",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Classes of Languages and Linear-Bounded Automata",
+      "identifier": "doi:10.1016/S0019-9958(64)90120-2",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Linear Bounded Automata",
+      "identifier": "WADD Technical Note 60-165",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "On the Translation of Languages from Left to Right",
+      "identifier": "doi:10.1016/S0019-9958(65)90426-2",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/nielstron/langlib",
+  "commit": "10fb20454652d4b7f0f1710880f79240986021c6",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "formal-languages",
+      "lean",
+      "chomsky-hierarchy",
+      "automata"
+    ],
+    "reason": "Lean library formalizing grammar and automaton classes of the Chomsky hierarchy and their closure properties.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

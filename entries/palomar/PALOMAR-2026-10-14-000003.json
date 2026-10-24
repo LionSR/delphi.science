@@ -1,0 +1,46 @@
+{
+  "key": "PALOMAR-2026-10-14-000003",
+  "source": "palomar",
+  "url": "https://github.com/jjtripodo-lgtm/erdos-670-verification/tree/5510ffd94156d48dbe393ac619586b935212da79/palomar",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-14-000003-v1.json",
+  "title": "Fixed-dimensional separated Euclidean distances below 0.74 n squared",
+  "authors": [
+    "John Tripodo"
+  ],
+  "summary": "For every natural n at least 68000, the formalization constructs n injectively indexed points in the fixed Euclidean space R^458999. Distances between distinct points are at least one, distances attached to different unordered non-diagonal pairs differ by at least one, and both every pair distance and the diameter are strictly below (37/50)n^2. The dimension and threshold are explicit sufficient bounds; no optimality or independent priority review is claimed. This code-only port preserves the theorem of the cited public formalization. The full migrated build and final axiom audit have…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.MG"
+  ],
+  "published": "2026-10-14",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Separated Euclidean distances with diameter below 0.74n^2 in a fixed dimension",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jjtripodo-lgtm/erdos-670-verification",
+  "commit": "5510ffd94156d48dbe393ac619586b935212da79",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "discrete-geometry",
+      "distance-sets",
+      "lean"
+    ],
+    "reason": "Explicit construction of separated point sets with bounded Euclidean distances, formalized in code.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

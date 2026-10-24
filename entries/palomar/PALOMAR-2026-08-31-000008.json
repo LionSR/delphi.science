@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-08-31-000008",
+  "source": "palomar",
+  "url": "https://github.com/yoshito-ishiki-math/lean-scottish-book-155/tree/233eff4af7901eadee7927a1eb1f814ad0f3c118/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-31-000008-v1.json",
+  "title": "yoshito-ishiki-math/lean-scottish-book-155",
+  "authors": [
+    "Yoshito Ishiki"
+  ],
+  "summary": "A Lean proof that there are real Banach spaces X and Y and a bijection U from X to Y which preserves every pairwise distance on every closed ball of radius one quarter while failing to be a global isometry. This gives a counterexample to Scottish Book Problem 155.",
+  "domain": "math.FA",
+  "tags": [
+    "math.FA",
+    "math.MG",
+    "msc:46B20",
+    "msc:54E40"
+  ],
+  "published": "2026-08-31",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "AI-Assisted Research Report: A counterexample to Scottish Book Problem 155",
+      "identifier": "doi:10.5281/zenodo.22168214",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/yoshito-ishiki-math/lean-scottish-book-155",
+  "commit": "233eff4af7901eadee7927a1eb1f814ad0f3c118",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "functional-analysis",
+      "banach-spaces",
+      "lean-formalization"
+    ],
+    "reason": "Lean proof of a counterexample to Scottish Book Problem 155 on isometries.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

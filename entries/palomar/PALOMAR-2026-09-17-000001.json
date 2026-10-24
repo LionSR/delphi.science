@@ -1,0 +1,52 @@
+{
+  "key": "PALOMAR-2026-09-17-000001",
+  "source": "palomar",
+  "url": "https://github.com/AIQ-Kitware/aiq-davis-kahan-1970-rotation-eigenvectgors-perturbation-formalization/tree/38e37da6e147cd0016da1eb05987c3edf7d95b39/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-17-000001-v1.json",
+  "title": "Davis-Kahan 1970: the four Section 2 rotation-of-eigenvectors theorem families",
+  "authors": [
+    "Jon Crall",
+    "Edward Wang"
+  ],
+  "summary": "Machine-checked Lean 4 presentation of the four headline theorem families in Section 2 of Davis and Kahan (1970): sin-Theta, tan-Theta, sin-2-Theta, and tan-2-Theta. The Palomar Comparator exposes five selected source-facing declarations: the residual sin-Theta estimate, the residual tan-Theta estimate, both the residual and whole-space sin-2-Theta estimates, and the residual tan-2-Theta estimate. The statements retain the paper's standing separable ambient Hilbert-space scope, permit finite or infinite ambient dimension, and are generic over RCLike scalars to cover the real and complex…",
+  "domain": "math.FA",
+  "tags": [
+    "math.FA",
+    "math.NA",
+    "msc:47A55",
+    "msc:47A15",
+    "msc:15A42",
+    "msc:65F15"
+  ],
+  "published": "2026-09-17",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "The rotation of eigenvectors by a perturbation. III",
+      "identifier": "doi:10.1137/0707001",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/AIQ-Kitware/aiq-davis-kahan-1970-rotation-eigenvectgors-perturbation-formalization",
+  "commit": "38e37da6e147cd0016da1eb05987c3edf7d95b39",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "spectral-theory",
+      "perturbation-theory",
+      "numerical-linear-algebra",
+      "lean-formalization"
+    ],
+    "reason": "Lean presentation of Davis–Kahan eigenvector rotation theorem families.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

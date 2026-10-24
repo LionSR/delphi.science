@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-10-17-000005",
+  "source": "palomar",
+  "url": "https://github.com/shaikidris/kkp-asymptotic-spectral-bound/tree/8aa258c7a0b06ae96cfa56018bddd60ee643efd5/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-17-000005-v1.json",
+  "title": "A sharp asymptotic spectral bound for forbidden subgraphs",
+  "authors": [
+    "Idris Ali Shaik"
+  ],
+  "summary": "For every fixed finite graph F of chromatic number r+1 at least three and every positive epsilon, there is an edge threshold M such that every finite simple F-free graph G with m at least M satisfies F2(A_G) <= 2(1-1/r)m - (2(1-1/r)-1)Delta(G) + epsilon m. F2 is the sum of the squares of the two largest positive adjacency eigenvalues with missing terms padded by zero. The graphs may be disconnected. A companion theorem establishes agreement with the two largest ordered eigenvalue squares in the same eventual range. Enough edges force an F-free graph to be noncomplete; BN nonedge interlacing…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C50",
+    "msc:05C35"
+  ],
+  "published": "2026-10-17",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Asymptotic rank two spectral bounds and a color critical counterexample",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/shaikidris/kkp-asymptotic-spectral-bound",
+  "commit": "8aa258c7a0b06ae96cfa56018bddd60ee643efd5",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "spectral-graph-theory",
+      "forbidden-subgraphs",
+      "extremal-graph-theory"
+    ],
+    "reason": "Asymptotic spectral bound for F-free graphs in terms of top adjacency eigenvalues.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

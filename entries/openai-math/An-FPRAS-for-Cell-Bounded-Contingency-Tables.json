@@ -1,0 +1,30 @@
+{
+  "key": "An-FPRAS-for-Cell-Bounded-Contingency-Tables",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/An-FPRAS-for-Cell-Bounded-Contingency-Tables-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/An-FPRAS-for-Cell-Bounded-Contingency-Tables-September-24-2026/main.pdf",
+  "title": "An FPRAS for Cell-Bounded Contingency Tables",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We give a fully polynomial randomized approximation scheme for counting nonnegative integer matrices with prescribed row sums, column sums, and individual entry bounds. Both dimensions vary, all numerical data are encoded in binary, and zero bounds are allowed. The algorithm uses only unbiased random bits and has a polynomial bound on its bit operations on every execution.",
+  "domain": "Theoretical computer science",
+  "published": "2026-09-24",
+  "family": "115",
+  "family_title": "Sampling and counting contingency tables with arbitrary margins",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "combinatorics",
+      "approximate-counting"
+    ],
+    "reason": "Gives a fully polynomial randomized approximation scheme for counting bounded contingency tables.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

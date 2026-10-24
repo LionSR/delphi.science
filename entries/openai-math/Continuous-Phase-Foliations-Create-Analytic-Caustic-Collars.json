@@ -1,0 +1,31 @@
+{
+  "key": "Continuous-Phase-Foliations-Create-Analytic-Caustic-Collars",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Continuous-Phase-Foliations-Create-Analytic-Caustic-Collars-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Continuous-Phase-Foliations-Create-Analytic-Caustic-Collars-September-24-2026/paper.pdf",
+  "title": "Continuous Phase Foliations Create Analytic Caustic Collars",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For a smooth strictly convex planar billiard of positive curvature, a continuous foliation of a full grazing annulus by individually invariant essential curves forces an analytic boundary and a jointly analytic collar of smooth strictly convex caustics. The physical-collar rigidity theorem proved in the companion article then implies that the table is an ellipse.",
+  "domain": "Dynamical systems and ergodic theory",
+  "published": "2026-09-24",
+  "family": "147",
+  "family_title": "The near-boundary Birkhoff conjecture",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "billiards",
+      "dynamical-systems",
+      "integrable-systems"
+    ],
+    "reason": "Proves analyticity of billiard boundaries from continuous foliations, concluding the table is an ellipse.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

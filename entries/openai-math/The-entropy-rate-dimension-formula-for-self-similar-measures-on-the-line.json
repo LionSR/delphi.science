@@ -1,0 +1,32 @@
+{
+  "key": "The-entropy-rate-dimension-formula-for-self-similar-measures-on-the-line",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-entropy-rate-dimension-formula-for-self-similar-measures-on-the-line-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-entropy-rate-dimension-formula-for-self-similar-measures-on-the-line-September-24-2026/main.pdf",
+  "title": "The entropy-rate dimension formula for self-similar measures on the line",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that the Hausdorff dimension of every finite real self-similar measure equals the minimum of one and its random-walk entropy rate divided by its Lyapunov exponent. Exact overlaps are allowed, and the contraction ratios may be unequal and negative. This resolves the entropy-rate dimension conjecture.",
+  "domain": "Dynamical systems and ergodic theory",
+  "published": "2026-09-24",
+  "family": "148",
+  "family_title": "The entropy-rate dimension formula for self-similar measures",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "fractal-geometry",
+      "self-similar-measures",
+      "dynamical-systems",
+      "entropy"
+    ],
+    "reason": "Proves a Hausdorff dimension formula for self-similar measures via entropy rate and Lyapunov exponent.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

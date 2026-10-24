@@ -1,0 +1,50 @@
+{
+  "key": "PALOMAR-2026-09-15-000001",
+  "source": "palomar",
+  "url": "https://github.com/philipp-svinger/Math_Lean_Palomar_Vanishing-Horizon-Boundary-Reg/tree/b90e5cc8ac0d36dfedd84cbfe517acc58cbc1a4a/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-15-000001-v1.json",
+  "title": "Boundary regularity for non-local operators with symmetric kernels and vanishing horizon",
+  "authors": [
+    "Philipp Svinger"
+  ],
+  "summary": "This Lean 4 formalization proves the two main theorems of the paper 'Boundary regularity for non-local operators with symmetric kernels and vanishing horizon' (arXiv:2504.00567v1). For a fractional order s in (1/2,1), the paper studies a nonlocal operator with symmetric kernel whose interaction horizon depends on the distance to the boundary and on a horizon parameter sigma in (0,1], and shrinks near the boundary. The formalization proves that weak solutions u to the Dirichlet problem with zero Dirichlet data and bounded right-hand side are in the Hölder space C^{2s-1} up to the boundary.…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "msc:47G20",
+    "msc:35B65",
+    "msc:35S15",
+    "msc:35R09"
+  ],
+  "published": "2026-09-15",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Boundary regularity for non-local operators with symmetric kernels and vanishing horizon",
+      "identifier": "https://arxiv.org/abs/2504.00567v1",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/philipp-svinger/Math_Lean_Palomar_Vanishing-Horizon-Boundary-Reg",
+  "commit": "b90e5cc8ac0d36dfedd84cbfe517acc58cbc1a4a",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "nonlocal-operators",
+      "regularity",
+      "pde",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of boundary regularity for nonlocal operators with vanishing horizon.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

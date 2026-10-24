@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-08-23-000003",
+  "source": "palomar",
+  "url": "https://github.com/novou/square-maximality-palomar/tree/b1d30cdb3334aa7bff7834b22b342393cdc97df8/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-23-000003-v1.json",
+  "title": "novou/square-maximality-palomar",
+  "authors": [
+    "Jiechen Zhang"
+  ],
+  "summary": "A Lean 4 formalization of square maximality for spanning trees of induced subgraphs of the square lattice. For every positive integer n and every finite set S of n^2 points in Z^2, the induced lattice graph on S has at most as many spanning trees as the n by n square, with equality exactly when S is a translate of that square. The development also proves the corresponding strict and equality statements for arbitrary spanning subgraphs, together with the finite Matrix--Tree theorem and the proof chain used by the paper.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C05",
+    "msc:05C30",
+    "msc:05C35"
+  ],
+  "published": "2026-08-23",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Square Maximality for Spanning Trees of Induced Grid Subgraphs",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/novou/square-maximality-palomar",
+  "commit": "b1d30cdb3334aa7bff7834b22b342393cdc97df8",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "spanning-trees",
+      "graph-theory",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of spanning tree maximality for induced square-lattice subgraphs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

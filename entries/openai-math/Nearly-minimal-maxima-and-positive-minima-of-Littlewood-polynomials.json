@@ -1,0 +1,31 @@
+{
+  "key": "Nearly-minimal-maxima-and-positive-minima-of-Littlewood-polynomials",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Nearly-minimal-maxima-and-positive-minima-of-Littlewood-polynomials-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Nearly-minimal-maxima-and-positive-minima-of-Littlewood-polynomials-October-5-2026/littlewood-lower-envelope.pdf",
+  "title": "Nearly minimal maxima and positive minima of Littlewood polynomials",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For every η > 0 and every sufficiently large integer N , there is a polynomial with N consecutive coefficients in $`\\{-1,1\\}`$ whose modulus lies between $`\\sqrt N/16`$ and $`(1+\\eta)\\sqrt N`$ everywhere on the unit circle.",
+  "domain": "Real and complex analysis",
+  "published": "2026-10-05",
+  "family": "076",
+  "family_title": "Real ultraflat Littlewood polynomials and unbounded binary merit factors",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "analysis",
+      "polynomials",
+      "littlewood-polynomials"
+    ],
+    "reason": "Shows existence of ±1 polynomials with nearly minimal sup norm on the unit circle.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

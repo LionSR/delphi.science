@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-08-22-000003",
+  "source": "palomar",
+  "url": "https://github.com/xiangyazi24/palomar-hahn-hecke-appell/tree/b9d84fd9f905605b3956f974f50ed41ee59d54e2/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-22-000003-v1.json",
+  "title": "xiangyazi24/palomar-hahn-hecke-appell",
+  "authors": [
+    "Xiang Huang"
+  ],
+  "summary": "A Lean 4 verification of the coefficientwise Kronecker partial-fraction identity and the general boundary-cleared Hickerson--Mortenson Hecke--Appell identity for f_{n,n+p,n}, for all positive integers n and p.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11F27",
+    "msc:33D15"
+  ],
+  "published": "2026-08-22",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A Hahn-Series Coefficientwise Proof of the Hickerson--Mortenson Hecke--Appell Identities",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/xiangyazi24/palomar-hahn-hecke-appell",
+  "commit": "b9d84fd9f905605b3956f974f50ed41ee59d54e2",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "q-series",
+      "hecke-appell",
+      "lean-formalization",
+      "partial-fractions"
+    ],
+    "reason": "Lean verification of a Hecke–Appell identity for a family of indefinite theta-type series.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

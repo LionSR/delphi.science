@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-08-26-000007",
+  "source": "palomar",
+  "url": "https://github.com/sneed-and-feed/lean-theorems-1/tree/1fbfff16eb01c3640f48194de9690baf0c07a01d/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-26-000007-v1.json",
+  "title": "sneed-and-feed/lean-theorems-1",
+  "authors": [
+    "Sneed & Feed Formalization Team"
+  ],
+  "summary": "A complete machine-checked Lean 4 formalization of J. A. Bondy's 1972 theorem on induced subsets. Proves that for any family F of n distinct subsets of an arbitrary finite ground set X, there exists a distinguishing subset S ⊆ X of cardinality at most n - 1 such that the restriction map s ↦ s ∩ S is injective on F. To the maintainers' knowledge, the theorem was not found in an exact declaration, docstring, and type signature search of the pinned Mathlib revision (Mathlib v4.34.0-rc1).",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05D05",
+    "msc:05C65"
+  ],
+  "published": "2026-08-26",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Induced subsets",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/sneed-and-feed/lean-theorems-1",
+  "commit": "1fbfff16eb01c3640f48194de9690baf0c07a01d",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "combinatorics",
+      "set-systems",
+      "lean",
+      "formal-verification"
+    ],
+    "reason": "Machine-checked Lean formalization of Bondy's 1972 theorem on distinguishing induced subsets.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

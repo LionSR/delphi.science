@@ -1,0 +1,32 @@
+{
+  "key": "A-cubic-lower-bound-for-border-determinantal-complexity-of-the-permanent",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-cubic-lower-bound-for-border-determinantal-complexity-of-the-permanent-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-cubic-lower-bound-for-border-determinantal-complexity-of-the-permanent-September-24-2026/A-cubic-lower-bound-for-border-determinantal-complexity-of-the-permanent-September-24-2026.pdf",
+  "title": "A cubic lower bound for border determinantal complexity of the permanent",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that the complex border determinantal complexity of the $`m\\times m`$ permanent is $`\\Omega(m^3)`$, allowing arbitrary affine-linear determinant representations and coefficientwise limits. It also gives cubic lower bounds for exact determinantal complexity and for the numbers of vertices and edges in affine-linear algebraic branching programs, including coefficientwise limits with a fixed vertex or edge budget.",
+  "domain": "Theoretical computer science",
+  "published": "2026-09-24",
+  "family": "108",
+  "family_title": "A cubic permanent–determinant lower bound",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "computational-complexity",
+      "determinantal-complexity",
+      "algebraic-complexity",
+      "permanent"
+    ],
+    "reason": "Proves cubic lower bounds on border determinantal complexity of the permanent.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

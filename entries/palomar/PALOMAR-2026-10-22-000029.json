@@ -1,0 +1,55 @@
+{
+  "key": "PALOMAR-2026-10-22-000029",
+  "source": "palomar",
+  "url": "https://github.com/gdahia/SzemerediWithRandomDifferences/tree/ec1328dcdb8efe9c683124546358173c267b9522/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-22-000029-v1.json",
+  "title": "Szemerédi's theorem with random differences",
+  "authors": [
+    "Gabriel Dahia"
+  ],
+  "summary": "Lean 4 formalization of the main result of the preprint \"Szemerédi's theorem with random differences and arithmetic Kakeya\" by Gabriel Dahia (arXiv:2610.18859), a threshold for Szemerédi's theorem with random differences. For c = 1/100, k ≥ 3, δ > 0 and p ≥ C n^(-c / log log k), where C is a value of the Ackermann function depending on k and δ, a p-random set D of differences in {1, …, n} has the following property with probability at least 1 - exp(-n^(1 - c / log log k)): every subset of {1, …, n} with at least δn elements contains a k-term arithmetic progression with common difference in…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.NT",
+    "msc:11B25",
+    "msc:11B30",
+    "msc:05D40"
+  ],
+  "published": "2026-10-22",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Szemerédi's theorem with random differences and arithmetic Kakeya",
+      "identifier": "arXiv:2610.18859",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "On the arithmetic Kakeya conjecture of Katz and Tao",
+      "identifier": "arXiv:1712.02108",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/gdahia/SzemerediWithRandomDifferences",
+  "commit": "ec1328dcdb8efe9c683124546358173c267b9522",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "additive-combinatorics",
+      "szemeredi-theorem",
+      "random-sets",
+      "lean-formalization"
+    ],
+    "reason": "Lean 4 formalization of Szemerédi's theorem with random differences.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

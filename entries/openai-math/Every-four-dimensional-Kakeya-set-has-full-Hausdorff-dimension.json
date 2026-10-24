@@ -1,0 +1,31 @@
+{
+  "key": "Every-four-dimensional-Kakeya-set-has-full-Hausdorff-dimension",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Every-four-dimensional-Kakeya-set-has-full-Hausdorff-dimension-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Every-four-dimensional-Kakeya-set-has-full-Hausdorff-dimension-September-24-2026/paper.pdf",
+  "title": "Every four-dimensional Kakeya set has full Hausdorff dimension",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the four-dimensional Hausdorff-dimension Kakeya conjecture: every subset of ℝ 4 containing a unit line segment in every direction has Hausdorff dimension four. No compactness or regularity assumption is imposed on the set or its witnessing line family.",
+  "domain": "Real and complex analysis",
+  "published": "2026-09-24",
+  "family": "074",
+  "family_title": "Kakeya in three and four dimensions",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "harmonic-analysis",
+      "kakeya-problem",
+      "fractal-geometry"
+    ],
+    "reason": "Proves the four-dimensional Kakeya conjecture on Hausdorff dimension of line-containing sets.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

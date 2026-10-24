@@ -1,0 +1,31 @@
+{
+  "key": "Determination-of-a-metric-and-a-unitary-connection-from-one-boundary-patch",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Determination-of-a-metric-and-a-unitary-connection-from-one-boundary-patch-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Determination-of-a-metric-and-a-unitary-connection-from-one-boundary-patch-October-5-2026/paper.pdf",
+  "title": "Determination of a metric and a unitary connection from one boundary patch",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that zero-frequency boundary measurements on any nonempty open boundary patch determine both a smooth Riemannian metric and a smooth unitary connection on the trivial Hermitian rank-two bundle over a compact connected smooth manifold of dimension at least three with smooth boundary. Both inputs and observations are restricted to the same patch. The metric and connection are determined up to a diffeomorphism and a unitary gauge that restrict to the identity on the measured patch.",
+  "domain": "Partial differential equations",
+  "published": "2026-10-05",
+  "family": "365",
+  "family_title": "Joint metric and connection recovery from one boundary patch",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "differential-geometry",
+      "inverse-problems",
+      "gauge-theory"
+    ],
+    "reason": "Proves uniqueness of a metric and unitary connection from boundary measurements on one patch.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

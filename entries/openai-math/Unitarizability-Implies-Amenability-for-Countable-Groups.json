@@ -1,0 +1,32 @@
+{
+  "key": "Unitarizability-Implies-Amenability-for-Countable-Groups",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Unitarizability-Implies-Amenability-for-Countable-Groups-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Unitarizability-Implies-Amenability-for-Countable-Groups-September-23-2026/paper.pdf",
+  "title": "Unitarizability implies amenability for discrete groups",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that a discrete group is amenable if and only if every uniformly bounded representation on a complex Hilbert space is similar to a unitary representation. This resolves Dixmier's unitarizability problem affirmatively for discrete groups.",
+  "domain": "Group theory",
+  "published": "2026-09-23",
+  "family": "251",
+  "family_title": "Amenability, unitarizability, and strong Ulam stability",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "operator-algebras",
+      "amenability",
+      "group-representations",
+      "functional-analysis"
+    ],
+    "reason": "Proves an equivalence between amenability and unitarizability of bounded representations for discrete groups.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

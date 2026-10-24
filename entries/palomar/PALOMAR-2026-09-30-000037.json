@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-09-30-000037",
+  "source": "palomar",
+  "url": "https://github.com/laurentbartholdi/hopfamenability/tree/6399798618014ed9a89694008cceb5b75707c7e0/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000037-v1.json",
+  "title": "Amenability of Lie, group and Hopf algebras",
+  "authors": [
+    "Laurent Bartholdi"
+  ],
+  "summary": "Formalization of 18 claims from manuscript Theorems A, B, C, E (extension direction), F, G, H (hierarchy inclusions and characteristic-zero strictness), I, and J. The claims include coalgebraic rounding, algebraic and coalgebraic amenability, Hopf-module quotients, cleft extensions, group and Lie applications, and augmentation-associated graded amenability. Every selected claim is proved without unformalized literature inputs or project-local axioms. Theorem D, the equivalence form of E, and arbitrary-characteristic strictness in H remain in the library but are excluded from the submission.",
+  "domain": "math.RA",
+  "tags": [
+    "math.RA",
+    "math.GR",
+    "msc:16T05",
+    "msc:43A07"
+  ],
+  "published": "2026-09-30",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Amenability of Lie, Group and Hopf algebras",
+      "identifier": "https://arxiv.org/abs/2609.10373v1",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/laurentbartholdi/hopfamenability",
+  "commit": "6399798618014ed9a89694008cceb5b75707c7e0",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "amenability",
+      "hopf-algebras",
+      "group-theory",
+      "formalization"
+    ],
+    "reason": "Formalization of amenability results for Lie, group, and Hopf algebras from a manuscript.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

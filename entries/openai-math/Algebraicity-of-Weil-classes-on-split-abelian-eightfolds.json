@@ -1,0 +1,30 @@
+{
+  "key": "Algebraicity-of-Weil-classes-on-split-abelian-eightfolds",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Algebraicity-of-Weil-classes-on-split-abelian-eightfolds-September-18-2026",
+  "title": "Algebraicity of Weil classes on split abelian eightfolds",
+  "authors": [
+    "OpenAI"
+  ],
+  "published": "2026-09-18",
+  "withdrawn": true,
+  "withdrawn_on": "2026-10-06",
+  "pdf": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Algebraicity-of-Weil-classes-on-split-abelian-eightfolds-September-18-2026/paper.pdf",
+  "summary": "Withdrawal notice: The proof contains a sign error in the stabilization-trace argument used to obtain negative double points. In the manuscript's signed double-point convention, write $I(f_1)=-m$ with $m>0$. The proof assigns each reverse stabilization trace sign $+1$ and therefore claims that inserting $m$ such traces makes the signed count zero. Accounting for the opposite source orientations of the two branches of the standard cusp gives sign $-1$ for each reverse trace in this convention. The resulting count is therefore $$I_{\\mathrm{new}}=I(f_1)-m=-2m\\ne0.$$ The Eliashberg-Murphy…",
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "subject": "math.AG",
+    "tags": [
+      "algebraic-geometry",
+      "hodge-conjecture",
+      "weil-classes"
+    ],
+    "reason": "Withdrawal notice describing a sign error in a proof about Weil classes.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

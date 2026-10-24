@@ -1,0 +1,53 @@
+{
+  "key": "PALOMAR-2026-08-31-000010",
+  "source": "palomar",
+  "url": "https://github.com/MaxWellApexLab/BicausalOT-palomar/tree/66fbfd2fcf10f570d43946aafbd8731ef0dc127f/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-31-000010-v1.json",
+  "title": "MaxWellApexLab/BicausalOT-palomar",
+  "authors": [
+    "KT. Wu"
+  ],
+  "summary": "A Lean 4 formalization of the Bellman value representation for bicausal optimal transport, together with the descriptive-set-theoretic library it requires. The result registered by this Comparator configuration is the Polish-space structure of the space of probability measures: if X is a Polish space carrying its Borel sigma-algebra, then the space of Borel probability measures on X, with the topology of weak convergence, is again Polish — its topology is second countable and admits a complete compatible metric. Mathlib at the pinned revision already supplies the Levy-Prokhorov metric, the…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.GN",
+    "math.LO",
+    "msc:60B05",
+    "msc:60B10",
+    "msc:28A33",
+    "msc:54E50",
+    "msc:54E35",
+    "msc:68V20"
+  ],
+  "published": "2026-08-31",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Probability Measures on Metric Spaces",
+      "identifier": "ISBN 978-0-8218-3889-1 (AMS Chelsea Publishing 352, 2005; originally Academic Press, New York, 1967)",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/MaxWellApexLab/BicausalOT-palomar",
+  "commit": "66fbfd2fcf10f570d43946aafbd8731ef0dc127f",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "probability",
+      "polish-spaces",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization showing the space of probability measures on a Polish space is Polish.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

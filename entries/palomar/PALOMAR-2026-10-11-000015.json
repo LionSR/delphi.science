@@ -1,0 +1,40 @@
+{
+  "key": "PALOMAR-2026-10-11-000015",
+  "source": "palomar",
+  "url": "https://github.com/raphaeldelors-code/palomar-erdos607/tree/45ef2462f0a9f139734ac590238456229bca068b/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-11-000015-v1.json",
+  "title": "Erdos607",
+  "authors": [
+    "Raphael Delors"
+  ],
+  "summary": "Machine-checked upper bound on Erdős problem 607. For n ≥ 2 let F(n) be the number of distinct multiplicity sets A(P) that can arise from a collection P of n points of the plane, where A(P) is the set of block sizes (point counts) of the lines determined by P. The proof shows that the lines of P form a pairwise-balanced design on the n points (every pair of points lies on exactly one line, and each line contains at least two points), so A(P) is exactly the set of block sizes of such a PBD. Hence F(n) is bounded by the number of PBD profile sets on n points, and the Colbourn–Phelps–Rödl…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05D10",
+    "msc:52C10"
+  ],
+  "published": "2026-10-11",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/raphaeldelors-code/palomar-erdos607",
+  "commit": "45ef2462f0a9f139734ac590238456229bca068b",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "combinatorial-geometry",
+      "pbd",
+      "lean-formalization"
+    ],
+    "reason": "Machine-checked upper bound on distinct line-multiplicity sets for planar point configurations.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

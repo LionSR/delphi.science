@@ -1,0 +1,32 @@
+{
+  "key": "Graph-Decompositions-at-the-Integral-Expectation-Threshold",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Graph-Decompositions-at-the-Integral-Expectation-Threshold-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Graph-Decompositions-at-the-Integral-Expectation-Threshold-October-5-2026/graph-threshold-decompositions.pdf",
+  "title": "Graph Decompositions at the Integral Expectation Threshold",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the graph-decomposition conjecture of Ascoli, He, Park, and Talagrand. Every graph admits a partition into a universally bounded number of fixed edge pieces, each having ordinary containment threshold at most a universal constant times the original graph's integral expectation threshold. The partition is chosen before sampling the random host, and the separate embeddings of the pieces need not agree on shared vertices.",
+  "domain": "Combinatorics",
+  "published": "2026-10-05",
+  "family": "175",
+  "family_title": "Talagrand’s expectation thresholds, discrete convexity, and graph decompositions",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "combinatorics",
+      "random-graphs",
+      "thresholds",
+      "graph-decomposition"
+    ],
+    "reason": "Proves a graph-decomposition conjecture relating containment thresholds to integral expectation thresholds.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

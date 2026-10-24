@@ -1,0 +1,53 @@
+{
+  "key": "PALOMAR-2026-09-19-000006",
+  "source": "palomar",
+  "url": "https://github.com/enaslund/sarkozy-lower-bound-0.758/tree/5a83f4174578c242ff3ea9373c2d4b9e406a9ffb/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-19-000006-v2.json",
+  "title": "An interval-moment criterion for square-difference-free integer sets",
+  "authors": [
+    "Eric Naslund"
+  ],
+  "summary": "We prove a general interval-moment criterion for square-difference-free integer sets and apply it to obtain an improved unconditional lower bound in Sarkozy's theorem, with exponent 0.7580758318008816. If D(N) is the largest size of a subset of {1, ..., N} containing no two distinct elements whose difference is a square, then for every epsilon > 0 and all sufficiently large N we prove D(N) >= N^(0.7580758318008816 - epsilon). The exact exponent is 473797394875551/625000000000000. The reusable criterion starts from finite digit sets in pairwise coprime square bases, with ordered intervals and…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO",
+    "msc:11B75",
+    "msc:05D05"
+  ],
+  "published": "2026-10-09",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Ranked residues, intervals, and the integer construction",
+      "identifier": "",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Square-Difference-Free Sets beyond the Three-Quarter Barrier",
+      "identifier": "https://arxiv.org/abs/2608.01325v1",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/enaslund/sarkozy-lower-bound-0.758",
+  "commit": "5a83f4174578c242ff3ea9373c2d4b9e406a9ffb",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "additive-combinatorics",
+      "number-theory",
+      "sarkozy-theorem"
+    ],
+    "reason": "Proves an interval-moment criterion and a lower bound for square-difference-free sets.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

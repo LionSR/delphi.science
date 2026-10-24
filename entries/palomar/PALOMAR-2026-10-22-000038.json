@@ -1,0 +1,54 @@
+{
+  "key": "PALOMAR-2026-10-22-000038",
+  "source": "palomar",
+  "url": "https://github.com/wcook04/plectis-erdos-lean/tree/80024c64bc77a95249e34824a36bf43989f62ae6/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-22-000038-v1.json",
+  "title": "Infinite rank of the three-prime running-LCM kernel",
+  "authors": [
+    "Will Cook"
+  ],
+  "summary": "For pairwise distinct primes p, q and r, the three-prime reciprocal running-LCM kernel has nonzero square minors of every order, with row and column indices chosen independently of the third exponent. Consequently it admits no finite rational separated representation. The selected entry also proves an exact rank formula for threshold-column matrices, an explicit two-by-two example at 2,3,5, separation in the two-prime comparison, and the four-base dyadic recurrence for the actual 2,3,5 sum. A uniform finite-rank approximation statement concerns the rescaled carry matrix. The stronger…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11B83",
+    "msc:15A03",
+    "msc:11J72"
+  ],
+  "published": "2026-10-22",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "No Finite Separable Representation at Three Prime Generators",
+      "identifier": "https://github.com/wcook04/plectis-erdos/blob/147f3f1da400a84dcb3013ea6cef75dc8f382b09/paper/269/erdos-269-three-prime-running-lcm.pdf",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "The Three-Prime Running LCM: Kernel Rank and Tail Arithmetic",
+      "identifier": "https://github.com/wcook04/plectis-erdos/blob/147f3f1da400a84dcb3013ea6cef75dc8f382b09/paper/269/erdos269-running-lcm-reasoning-surface.pdf",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/wcook04/plectis-erdos-lean",
+  "commit": "80024c64bc77a95249e34824a36bf43989f62ae6",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "matrix-rank",
+      "lcm-kernel",
+      "reciprocal-sums"
+    ],
+    "reason": "Rank results for a three-prime reciprocal running-LCM kernel, with Lean verification.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

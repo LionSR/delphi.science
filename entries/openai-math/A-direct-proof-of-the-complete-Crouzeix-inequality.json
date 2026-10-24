@@ -1,0 +1,31 @@
+{
+  "key": "A-direct-proof-of-the-complete-Crouzeix-inequality",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-direct-proof-of-the-complete-Crouzeix-inequality-September-26-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-direct-proof-of-the-complete-Crouzeix-inequality-September-26-2026/paper.pdf",
+  "title": "A direct proof of the complete Crouzeix inequality",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We give a direct proof of the sharp constant-two numerical-range inequality for matrix-valued polynomials in all finite base and coefficient dimensions. This resolves the complete Crouzeix conjecture in its matrix formulation, including matrices whose numerical ranges are points or line segments.",
+  "domain": "Functional analysis",
+  "published": "2026-09-26",
+  "family": "325",
+  "family_title": "The complete Crouzeix conjecture",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "matrix-analysis",
+      "numerical-range",
+      "polynomial-inequalities"
+    ],
+    "reason": "Gives a direct proof of the complete Crouzeix inequality for matrix-valued polynomials.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "Finite-angular-cylinder-covers-below-the-half-area-bound",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/main.pdf",
+  "title": "Finite angular cylinder covers below the half-area bound",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "A regular tetrahedron admits a finite cylinder covering with compact triangular perpendicular bases whose total area is less than half its minimum orthogonal projection area. This disproves the half-area cylinder-covering conjecture. By affine invariance, the same construction gives a counterexample to the directionwise normalized half-bound for every nondegenerate tetrahedron.",
+  "domain": "Convex and metric geometry",
+  "published": "2026-09-27",
+  "family": "100",
+  "family_title": "Cylinder coverings below the half-area bound",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "convex-geometry",
+      "cylinder-covering",
+      "tetrahedra"
+    ],
+    "reason": "Gives a tetrahedron cylinder covering disproving the half-area covering conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "key": "PALOMAR-2026-10-01-000016",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/rochet-cyclic-monotonicity-lean/tree/88171ba4b232466c510d45863a91626a1c546a87/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-01-000016-v1.json",
+  "title": "Rochet's Cyclic-Monotonicity Characterization",
+  "authors": [
+    "Arthur Freitas Ramos",
+    "David Barros Hulak",
+    "Ruy Jose Guerra Barretto de Queiroz"
+  ],
+  "summary": "For any nonempty report type T, any outcome type X, any real-valued valuation v : T -> X -> Real and allocation f : T -> X, DSIC payments exist exactly when every finite closed walk has nonnegative sum of weights l(s,t) = v(t,f(t)) - v(t,f(s)). The proof constructs payments as the infimum of finite path weights from a fixed anchor. Direct edges establish nonemptiness; a return edge supplies an explicit real lower bound before using the infimum's order properties. The payments are zero at the anchor and satisfy every implementing difference inequality. The characterization also holds for…",
+  "domain": "econ.TH",
+  "tags": [
+    "econ.TH",
+    "cs.GT",
+    "msc:91B03",
+    "msc:91B16",
+    "msc:03B35"
+  ],
+  "published": "2026-10-01",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A necessary and sufficient condition for rationalizability in a quasi-linear context",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "A Rockafellar-type theorem for non-traditional costs",
+      "identifier": "",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Roberts theorem Lean formalization: definitions and taxation",
+      "identifier": "",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/rochet-cyclic-monotonicity-lean",
+  "commit": "88171ba4b232466c510d45863a91626a1c546a87",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "mechanism-design",
+      "cyclic-monotonicity",
+      "dsic",
+      "payments"
+    ],
+    "reason": "Characterizes DSIC payments via cyclic monotonicity, with a constructive proof.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

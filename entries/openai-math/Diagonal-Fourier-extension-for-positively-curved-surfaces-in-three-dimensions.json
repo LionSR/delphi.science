@@ -1,0 +1,31 @@
+{
+  "key": "Diagonal-Fourier-extension-for-positively-curved-surfaces-in-three-dimensions",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Diagonal-Fourier-extension-for-positively-curved-surfaces-in-three-dimensions-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Diagonal-Fourier-extension-for-positively-curved-surfaces-in-three-dimensions-September-24-2026/Diagonal-Fourier-extension-for-positively-curved-surfaces-in-three-dimensions-September-24-2026.pdf",
+  "title": "Diagonal Fourier extension for positively curved surfaces in three dimensions",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the diagonal Fourier extension conjecture for compact smooth positively curved surfaces $`\\Sigma\\subset\\mathbb R^3`$, including surfaces with smooth boundary. For every $`3\\lt p\\lt \\infty`$, the extension operator maps $`L^p(\\Sigma)`$ boundedly into $`L^p(\\mathbb R^3)`$. The compact paraboloid case also yields free Schrödinger local smoothing in two spatial dimensions for every $`3\\lt p\\lt \\infty`$ and Sobolev order $`s\\gt 2-6/p`$.",
+  "domain": "Real and complex analysis",
+  "published": "2026-09-24",
+  "family": "077",
+  "family_title": "Fourier restriction for positively curved surfaces",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "harmonic-analysis",
+      "fourier-extension",
+      "geometric-analysis"
+    ],
+    "reason": "Proves diagonal Fourier extension bounds for positively curved surfaces in three dimensions.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

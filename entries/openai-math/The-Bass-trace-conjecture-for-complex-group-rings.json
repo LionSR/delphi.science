@@ -1,0 +1,31 @@
+{
+  "key": "The-Bass-trace-conjecture-for-complex-group-rings",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-Bass-trace-conjecture-for-complex-group-rings-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-Bass-trace-conjecture-for-complex-group-rings-September-24-2026/The-Bass-trace-conjecture-for-complex-group-rings-September-24-2026.pdf",
+  "title": "The Bass trace conjecture and the characteristic-zero Kaplansky idempotent conjecture",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the complex group-ring Bass trace conjecture for every discrete group: the Hattori–Stallings trace of a finitely generated projective module over its complex group ring is supported on conjugacy classes of finite-order elements. As a consequence, for every torsion-free group G and every commutative unital domain R of characteristic zero, the only idempotents in $`RG`$ are 0 and 1. This proves Kaplansky's idempotent conjecture in characteristic zero.",
+  "domain": "Algebra",
+  "published": "2026-09-24",
+  "family": "207",
+  "family_title": "The ℓ¹-Bass conjecture for all discrete groups",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "group-rings",
+      "idempotents",
+      "algebraic-k-theory"
+    ],
+    "reason": "Proves the Bass trace conjecture for complex group rings and Kaplansky's idempotent conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

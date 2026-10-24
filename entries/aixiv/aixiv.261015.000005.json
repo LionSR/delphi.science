@@ -1,0 +1,26 @@
+{
+  "key": "aixiv.261015.000005",
+  "source": "aixiv",
+  "url": "https://aixiv.science/abs/aixiv.261015.000005",
+  "title": "Hypothesis on Emergence and Consciousness Mechanisms of Large Language Models Based on Reciprocal Unit Coupling, Critical Dynamics and Local Entropy Reduction",
+  "authors": [
+    "tiantai chen"
+  ],
+  "summary": "The emergence capability of large language models (LLMs) is a core puzzle in the fundamental theories of artificial intelligence. The mainstream scaling law only describes external phenomena of capability change with model scale and fails to explain the underlying dynamical causes for the jumpwise emergence of emergent behaviors. This paper proposes an integrated framework: numer\u0002ous basic units inside the Transformer network perform nonlinear reciprocal coupling and layer-wise mutual correction; under the long-term self-organization of gradient descent, system parameters are driven into the…",
+  "published": "2026-10-15",
+  "added": "2026-10-23",
+  "added_by": "harvest:aixiv",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "subject": "cs.LG",
+    "tags": [
+      "llm-emergence",
+      "critical-dynamics",
+      "entropy"
+    ],
+    "reason": "Hypothesizes that reciprocal unit coupling and entropy reduction explain emergence in large language models.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

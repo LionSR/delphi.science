@@ -1,0 +1,32 @@
+{
+  "key": "A-counterexample-to-the-Monge-ansatz-for-the-three-marginal-Coulomb-cost",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-counterexample-to-the-Monge-ansatz-for-the-three-marginal-Coulomb-cost-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-counterexample-to-the-Monge-ansatz-for-the-three-marginal-Coulomb-cost-September-25-2026/paper.pdf",
+  "title": "A counterexample to the Monge ansatz for the three-marginal Coulomb cost",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We construct a smooth compactly supported probability density on ℝ 3 , with a smooth compactly supported square root, for which the three-marginal Coulomb transport minimum is not attained by any pair of measure-preserving Borel maps. Nevertheless, the Monge and Kantorovich infima agree: we construct preserving maps whose costs approach the Kantorovich minimum. For every d ≥ 2 and s > 0, we also construct a smooth identical marginal with the same nonattainment and equality-of-infima properties for the inverse-power interaction $`\\sum_{i\\lt j}|x_i-x_j|^{-s}`$ on ℝ d .",
+  "domain": "Partial differential equations",
+  "published": "2026-09-25",
+  "family": "373",
+  "family_title": "Nonattainment of the three-marginal Coulomb Monge problem",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "optimal-transport",
+      "coulomb-cost",
+      "multi-marginal",
+      "monge-problem"
+    ],
+    "reason": "Shows the three-marginal Coulomb transport minimum is not attained by measure-preserving maps.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

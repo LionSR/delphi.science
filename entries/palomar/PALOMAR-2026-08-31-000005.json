@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-08-31-000005",
+  "source": "palomar",
+  "url": "https://github.com/akopjan/NRR-AAK/tree/9e57be63320f29cbb8d2da7c4a8ad6afdef681eb/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-31-000005-v1.json",
+  "title": "akopjan/NRR-AAK",
+  "authors": [
+    "Arseniy Akopyan"
+  ],
+  "summary": "Formalization of the result by A. Akopyan, S. Avvakumov, and R. Karasev that every convex figure in the plane can be partitioned into n convex pieces having equal area and equal perimeter for any n≥1.",
+  "domain": "math.MG",
+  "tags": [
+    "math.MG",
+    "msc:52C35",
+    "msc:55M20",
+    "msc:55M35"
+  ],
+  "published": "2026-08-31",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Convex fair partitions into an arbitrary number of pieces",
+      "identifier": "doi:10.1016/j.aim.2026.110927",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/akopjan/NRR-AAK",
+  "commit": "9e57be63320f29cbb8d2da7c4a8ad6afdef681eb",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "convex-geometry",
+      "lean-formalization",
+      "equipartition"
+    ],
+    "reason": "Lean formalization of a result on equal-area, equal-perimeter convex partitions of planar figures.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

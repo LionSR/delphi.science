@@ -1,0 +1,28 @@
+{
+  "key": "21930642",
+  "source": "zenodo",
+  "url": "https://zenodo.org/records/21930642",
+  "title": "MIRA: Towards a General AI Scientist",
+  "authors": [
+    "Deep Principle"
+  ],
+  "summary": "Artificial intelligence now reaches into much of scientific practice, yet a gap persists between systems that answer scientific questions and systems that advance science. Scientific discovery is not a single response but an iterative loop that runs from hypothesis generation through execution to interpretation, carried out under uncertainty and accountable to reproducible evidence. We present MIRA, an AI scientist tailored for the physical sciences, to operationalize this loop end to end. MIRA is organized as a squad of agents with different harnesses and tools that mirror how a human…",
+  "domain": "publication",
+  "published": "2026-08-14",
+  "doi": "10.5281/zenodo.21930642",
+  "added": "2026-10-23",
+  "added_by": "harvest:zenodo-ai-generated",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "subject": "cs.AI",
+    "tags": [
+      "ai-scientist",
+      "multi-agent-systems",
+      "physical-sciences"
+    ],
+    "reason": "Presents a multi-agent AI system for end-to-end scientific discovery in the physical sciences.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

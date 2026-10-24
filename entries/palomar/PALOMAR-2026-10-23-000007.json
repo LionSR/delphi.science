@@ -1,0 +1,54 @@
+{
+  "key": "PALOMAR-2026-10-23-000007",
+  "source": "palomar",
+  "url": "https://github.com/ispacex/group-dimension/tree/533dc1c66d26de4863983fc303382151a593df3a/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-23-000007-v1.json",
+  "title": "Fifth dimension subgroups: D₅ = γ₅ when G/γ₂ is finite of exponent 3, candidates for a counterexample, and a reduction of Kourovka 20.84",
+  "authors": [
+    "Stanislav Vorobev"
+  ],
+  "summary": "Lean 4 / Mathlib formalization accompanying S. Vorobev, \"On the inclusion D_5(G) ⊆ γ_4(G): reductions, the Lie-ring proof, and evidence\" (preprint, 2026; submitted to arXiv math.GR on 2026-10-22). The integral dimension subgroups D_n(G) = {g ∈ G : g − 1 ∈ Δ(G)^n} are defined from the augmentation ideal of Mathlib's integral group ring. Kourovka Problem 20.84 asks whether D_5(G) ⊆ γ_4(G) for every group; it is open and is not claimed here. Unconditional results: D_5(G) = γ_5(G) whenever G/γ_2(G) is finite of exponent 3, and more generally whenever G/γ_2(G) is a finite 3-group whose cubes form…",
+  "domain": "math.GR",
+  "tags": [
+    "math.GR",
+    "msc:20F14",
+    "msc:20D15",
+    "msc:20C05",
+    "msc:16S34"
+  ],
+  "published": "2026-10-23",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "On the inclusion D_5(G) ⊆ γ_4(G): reductions, the Lie-ring proof, and evidence",
+      "identifier": "https://ispacex.github.io/d5/paper/d5.pdf",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "S. A. Jennings, The structure of the group ring of a p-group over a modular field, Trans. Amer. Math. Soc. 50 (1941) 175-185",
+      "identifier": "",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/ispacex/group-dimension",
+  "commit": "533dc1c66d26de4863983fc303382151a593df3a",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "group-theory",
+      "dimension-subgroups",
+      "formalization"
+    ],
+    "reason": "Lean formalization of results on integral dimension subgroups and a Kourovka problem reduction.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "key": "PALOMAR-2026-09-11-000002",
+  "source": "palomar",
+  "url": "https://github.com/geoconuk/lean-misc-math/tree/7a3052cdb08bba42d782957568e06ae08d52d8d8/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-11-000002-v1.json",
+  "title": "The Kolmogorov-Arnold representation theorem",
+  "authors": [
+    "George A. Constantinides"
+  ],
+  "summary": "Every continuous real function on the closed unit n-cube is a superposition of continuous functions of one variable and addition, with the inner functions universal for the dimension. Three forms, each implying the next, named for who is credited with the statement. Lorentz-Sprecher form: there are positive constants lam_1, ..., lam_n and continuous strictly increasing psi_0, ..., psi_2n : R -> R, all depending only on n, such that every f continuous on [0,1]^n is f(x) = sum_{q=0}^{2n} g(sum_{p=1}^{n} lam_p psi_q(x_p)) on the cube for some continuous g : R -> R depending on f. Lorentz's…",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA",
+    "msc:26B40",
+    "msc:41A63"
+  ],
+  "published": "2026-09-11",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "On the representation of continuous functions of several variables by superposition of continuous functions of one variable and addition",
+      "identifier": "doi:10.1090/trans2/028/04",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Metric entropy, widths, and superpositions of functions",
+      "identifier": "doi:10.1080/00029890.1962.11989915",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "On the structure of continuous functions of several variables",
+      "identifier": "doi:10.1090/S0002-9947-1965-0210852-X",
+      "relationship": "adapts"
+    },
+    {
+      "title": "The Kolmogorov superposition theorem",
+      "identifier": "doi:10.1007/BFb0058976",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Sur le théorème de superposition de Kolmogorov",
+      "identifier": "doi:10.1016/0021-9045(75)90035-0",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/geoconuk/lean-misc-math",
+  "commit": "7a3052cdb08bba42d782957568e06ae08d52d8d8",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "approximation-theory",
+      "kolmogorov-arnold",
+      "real-analysis"
+    ],
+    "reason": "Expository treatment of the Kolmogorov–Arnold representation theorem and its equivalent forms.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

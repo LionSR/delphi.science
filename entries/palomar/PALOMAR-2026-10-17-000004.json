@@ -1,0 +1,51 @@
+{
+  "key": "PALOMAR-2026-10-17-000004",
+  "source": "palomar",
+  "url": "https://github.com/jtraverso/pseudorandom-hypergraph-matchings/tree/3957f3c0dbc34fd310cb5fecf7941fddc9ef6c8f/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-17-000004-v1.json",
+  "title": "Pseudorandom hypergraph matchings (Ehard–Glock–Joos)",
+  "authors": [
+    "Juan Pablo Traverso Gianini"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of the main results of Ehard, Glock and Joos, \"Pseudorandom hypergraph matchings\" (Combin. Probab. Comput. 2020): Pippenger's theorem on almost perfect matchings in almost regular hypergraphs with small codegrees (Theorem 1.1); the existence of a matching M in any r-uniform hypergraph with Δ(H) ≤ Δ, codegrees ≤ Δ^{1−δ} and at most exp(Δ^{ε²}) edges such that ω(M) = (1 ± Δ^{−ε}) ω(E(H))/Δ simultaneously for up to exp(Δ^{ε²}) weight functions (Theorem 1.2, with ε = δ/(50r²)); the generalization to weight functions on ℓ-tuples of edges, under the same…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.PR",
+    "msc:05C70",
+    "msc:05C65",
+    "msc:05B07",
+    "msc:60C05"
+  ],
+  "published": "2026-10-17",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Pseudorandom hypergraph matchings",
+      "identifier": "doi:10.1017/S0963548320000280",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jtraverso/pseudorandom-hypergraph-matchings",
+  "commit": "3957f3c0dbc34fd310cb5fecf7941fddc9ef6c8f",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "extremal-combinatorics",
+      "hypergraph-matchings",
+      "probabilistic-method",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of Pippenger's and Ehard–Glock–Joos's pseudorandom hypergraph matching results.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

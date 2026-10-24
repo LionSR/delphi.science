@@ -1,0 +1,32 @@
+{
+  "key": "The-Gaussian-free-field-limit-of-the-balanced-six-vertex-model-with-variance-multiplier-1-over-arcsin-c-over-2",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-Gaussian-free-field-limit-of-the-balanced-six-vertex-model-with-variance-multiplier-1-over-arcsin-c-over-2-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-Gaussian-free-field-limit-of-the-balanced-six-vertex-model-with-variance-multiplier-1-over-arcsin-c-over-2-September-23-2026/The-Gaussian-free-field-limit-of-the-balanced-six-vertex-model-with-variance-multiplier-1-over-arcsin-c-over-2-September-23-2026.pdf",
+  "title": "The Gaussian free field limit of the balanced six-vertex model with variance multiplier 1/arcsin(c/2)",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that the height function of the square-lattice six-vertex model with weights $`a=b=1`$ and $`0\\lt c\\le2`$, in the plane state obtained from balanced tori, converges to a multiple of the Gaussian free field. For unit height jumps and Green kernel $`-(2\\pi)^{-1}\\log|x-y|`$, the squared multiplier is $`1/\\arcsin(c/2)`$.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-09-23",
+  "family": "225",
+  "family_title": "Gaussian free field limits throughout the balanced six-vertex regime",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "statistical-mechanics",
+      "six-vertex-model",
+      "gaussian-free-field",
+      "integrable-systems"
+    ],
+    "reason": "Establishes Gaussian free field convergence for the six-vertex model height function with an explicit multiplier.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

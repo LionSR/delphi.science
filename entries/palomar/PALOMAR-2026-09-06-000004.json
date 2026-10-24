@@ -1,0 +1,52 @@
+{
+  "key": "PALOMAR-2026-09-06-000004",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/lean-poincare-formalization-plan/tree/90d215d81d30a5f67922dce00dfa160b4878e1c5/contracted-bianchi",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-06-000004-v1.json",
+  "title": "Double-contracted second Bianchi identity for metric-compatible torsion-free connections",
+  "authors": [
+    "Arthur Freitas Ramos",
+    "David Barros Hulak",
+    "Ruy J. G. B. de Queiroz"
+  ],
+  "summary": "Proves the orthonormal double contraction of the actual corrected curvature derivative of a tangent connection on a smooth finite-dimensional real manifold. The Challenge exposes the corrected commutator and the smooth tangent-vector extensions explicitly; the Solution proves the identity for every supplied extension satisfying the stated hypotheses. The derivative symmetries and cyclic Bianchi equations are derived from torsion-freeness and metric compatibility, not assumed as abstract tensor data. No separate Einstein-divergence theorem is selected.",
+  "domain": "math.DG",
+  "tags": [
+    "math.DG",
+    "gr-qc",
+    "math.LO",
+    "msc:53B20",
+    "msc:53C21",
+    "msc:03B35"
+  ],
+  "published": "2026-09-06",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Lecture Notes on General Relativity",
+      "identifier": "https://ned.ipac.caltech.edu/level5/March01/Carroll3/Carroll3.html",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/lean-poincare-formalization-plan",
+  "commit": "90d215d81d30a5f67922dce00dfa160b4878e1c5",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "differential-geometry",
+      "riemannian-curvature",
+      "formal-proof"
+    ],
+    "reason": "Proof of a double-contracted second Bianchi identity for metric-compatible torsion-free connections.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

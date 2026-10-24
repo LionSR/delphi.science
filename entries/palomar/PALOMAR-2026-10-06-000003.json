@@ -1,0 +1,42 @@
+{
+  "key": "PALOMAR-2026-10-06-000003",
+  "source": "palomar",
+  "url": "https://github.com/mysticflounder/schur-centred-bound/tree/6b1c69732d73428042efce8d563f67604320cad4/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-06-000003-v1.json",
+  "title": "S(6) ≤ 1801 if R₄(3) ≤ 61: a centred Schur bound and the structure at the frontier",
+  "authors": [
+    "Adam McKenna"
+  ],
+  "summary": "A Lean 4 formalization, with Mathlib, of an upper bound for the Schur numbers in terms of the triangle Ramsey numbers, and of the structure of a colouring at the limit of that bound. If every colouring with k colours of the pairs of r points has a monochromatic triangle (R_k(3) ≤ r), then the interval [1, 2((k + 1)⌊(r − 1)/2⌋ + 1)] is not covered by k + 1 sumfree sets, so S(k + 1) ≤ 2(k + 1)⌊(r − 1)/2⌋ + 1. With R_2(3) ≤ 6 this gives S(3) ≤ 13, which is exact. Under the hypothesis R_4(3) ≤ 61, a computer-assisted claim of M. Tatarevic that this project does not prove, the pigeonhole step…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05D10",
+    "msc:11B75",
+    "msc:05C55"
+  ],
+  "published": "2026-10-06",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/mysticflounder/schur-centred-bound",
+  "commit": "6b1c69732d73428042efce8d563f67604320cad4",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "ramsey-theory",
+      "schur-numbers",
+      "combinatorics",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of Schur number bounds linked to triangle Ramsey numbers.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

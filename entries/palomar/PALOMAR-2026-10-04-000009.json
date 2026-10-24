@@ -1,0 +1,43 @@
+{
+  "key": "PALOMAR-2026-10-04-000009",
+  "source": "palomar",
+  "url": "https://github.com/thonmay/thesis-lean/tree/c4c2c0fb15adf42b8b584e4fc83d5cbe643d5819/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-04-000009-v2.json",
+  "title": "Dynamic MCS Ordering Maintenance",
+  "authors": [
+    "Md Thoriqul Islam Thonmay",
+    "Gregory Morse"
+  ],
+  "summary": "A fully-dynamic Maximum-Cardinality-Search (MCS) ordering algorithm that, on a single-edge insertion or deletion into a loop-free undirected graph, scans the affected window between the two endpoints for the first step at which the current ordering's choice stops being a legal MCS pick, and only then regreedies the suffix (probe-then-repair). Correctness - every order produced stays a valid MCS ordering of the updated graph, and in fact equals the from-scratch canonical ordering - is machine-checked in Lean 4 / Mathlib, together with locality (the first position whose choice can change lies…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO",
+    "msc:05C85",
+    "msc:68Q25"
+  ],
+  "published": "2026-10-15",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/thonmay/thesis-lean",
+  "commit": "c4c2c0fb15adf42b8b584e4fc83d5cbe643d5819",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "dynamic-algorithms",
+      "graph-algorithms",
+      "maximum-cardinality-search",
+      "lean-formalization"
+    ],
+    "reason": "Fully dynamic maximum-cardinality-search ordering maintenance with machine-checked correctness and locality.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

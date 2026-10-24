@@ -1,0 +1,50 @@
+{
+  "key": "PALOMAR-2026-10-17-000011",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/Math-Formalization/tree/47aaba112beb17b7c0ca68f56356c5c829ee154d/topology/compact-countable-network",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-17-000011-v1.json",
+  "title": "Compact Hausdorff countable-network metrization",
+  "authors": [
+    "Arthur Freitas Ramos",
+    "David Barros Hulak",
+    "Ruy Jose Guerra Barretto de Queiroz"
+  ],
+  "summary": "For an arbitrary compact Hausdorff space, metrizability and second countability are each equivalent to the existence of a countable network of arbitrary subsets. A genuine Urysohn-function construction from pairs of network elements supplies continuous separation, and a compatible metric induces exactly the original topology. Supporting results give bounded-real-coordinate closed embeddings, preservation under continuous surjections, arbitrary-subspace heredity and compact-subspace metrization. Empty spaces and arbitrary universes are allowed. This is classical mathematics; no novelty or…",
+  "domain": "math.GN",
+  "tags": [
+    "math.GN",
+    "msc:54E35",
+    "msc:54D30"
+  ],
+  "published": "2026-10-17",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Countable Tightness and the Grothendieck Property in Cp-Theory, arXiv:2007.08579v1",
+      "identifier": "https://arxiv.org/pdf/2007.08579v1",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/Math-Formalization",
+  "commit": "47aaba112beb17b7c0ca68f56356c5c829ee154d",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "general-topology",
+      "metrization",
+      "lean-formalization",
+      "compact-spaces"
+    ],
+    "reason": "Formalized equivalence of compact Hausdorff metrizability with a countable network.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "Essential-Singularity-of-the-Correlation-Length-in-the-Planar-XY-Model",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Essential-Singularity-of-the-Correlation-Length-in-the-Planar-XY-Model-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Essential-Singularity-of-the-Correlation-Length-in-the-Planar-XY-Model-October-5-2026/paper.pdf",
+  "title": "Essential Singularity of the Correlation Length in the Planar XY Model",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the Berezinskii–Kosterlitz–Thouless essential singularity for the correlation length of the nearest-neighbor cosine XY model on the square lattice. Let $`m(b)`$ be the mass obtained by taking first the free-box thermodynamic limit and then the separation limit along a coordinate axis. As the inverse temperature b approaches b c from the massive side, $`\\displaystyle \\sqrt{b_c-b}\\log\\frac{1}{m(b)} \\longrightarrow A_{\\mathrm{XY}},`$ where $`A_{\\mathrm{XY}}`$ is a finite, strictly positive model-specific constant.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-10-05",
+  "family": "216",
+  "family_title": "Critical and near-critical XY scaling and BKT universality",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "statistical-mechanics",
+      "xy-model",
+      "phase-transitions"
+    ],
+    "reason": "Establishes the BKT essential singularity for the correlation length of the planar XY model.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

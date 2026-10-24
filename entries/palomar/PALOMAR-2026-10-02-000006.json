@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-10-02-000006",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/agv-mechanism-lean/tree/4e1f6b369836e6ec0a5443ea57424b5ed71b97d6/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-02-000006-v1.json",
+  "title": "agv-mechanism-lean",
+  "authors": [
+    "Arthur Freitas Ramos",
+    "David Barros Hulak",
+    "Ruy Jose Guerra Barretto de Queiroz"
+  ],
+  "summary": "Lean 4 formalization of the AGV (d'Aspremont-Gérard-Varet-Arrow) expected-externality mechanism: with independent types, ex post efficiency, Bayesian incentive compatibility, and budget balance are jointly attainable. Agents are indexed by Fin n with 2 ≤ n; each agent has a finite nonempty type space with an independent PMF prior; alternatives form a finite nonempty type; values are private. The efficient rule xmax maximizes utilitarian welfare, and agvTransfer pays each agent its expected externality minus an equal share of the other agents' receipts. Interim individual rationality is not…",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "econ.TH",
+    "msc:91B26"
+  ],
+  "published": "2026-10-02",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Incentives and incomplete information",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/agv-mechanism-lean",
+  "commit": "4e1f6b369836e6ec0a5443ea57424b5ed71b97d6",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "mechanism-design",
+      "game-theory",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of the AGV expected-externality mechanism and its properties.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

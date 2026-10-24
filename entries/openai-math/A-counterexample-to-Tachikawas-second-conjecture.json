@@ -1,0 +1,32 @@
+{
+  "key": "A-counterexample-to-Tachikawas-second-conjecture",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-counterexample-to-Tachikawas-second-conjecture-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-counterexample-to-Tachikawas-second-conjecture-September-23-2026/paper.pdf",
+  "title": "A counterexample to Tachikawa's second conjecture",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We disprove Tachikawa's second conjecture by constructing a finite-dimensional symmetric algebra over $`k=\\mathbb F_2(q,H_1,H_2)`$ with a finite-dimensional nonprojective module whose self-extension groups vanish in every positive degree. The associated endomorphism algebra also gives counterexamples to the classical, generalized, and strong Nakayama conjectures, the Auslander–Gorenstein conjecture, and the Wakamatsu tilting conjecture. These conclusions persist after every extension of k .",
+  "domain": "Algebra",
+  "published": "2026-09-23",
+  "family": "199",
+  "family_title": "Counterexamples to Auslander–Reiten, Tachikawa and related homological conjectures",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "representation-theory",
+      "symmetric-algebras",
+      "homological-algebra",
+      "nakayama-conjecture"
+    ],
+    "reason": "Constructs a symmetric algebra counterexample to Tachikawa's second conjecture and related conjectures.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

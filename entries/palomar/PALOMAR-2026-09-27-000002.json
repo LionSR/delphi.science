@@ -1,0 +1,51 @@
+{
+  "key": "PALOMAR-2026-09-27-000002",
+  "source": "palomar",
+  "url": "https://github.com/rwst/Subspace-Theorems/tree/d7a11cb1dcab3883fd1008db27a8382c95455b0a/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-27-000002-v1.json",
+  "title": "Corvaja–Zannier 2004: rational approximations to the powers of an algebraic number",
+  "authors": [
+    "Ralf Stephan"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of the whole of P. Corvaja and U. Zannier, On the rational approximations to the powers of an algebraic number: solution of two problems of Mahler and Mendès France (Acta Math. 193 (2004)), built on the repository's libraries ArithmeticHeights and DiophantineApproximation, whose Subspace Theorem it uses. The library CorvajaZannier2004 is sorry-free and within Lean's three standard axioms. It proves the Main Theorem (finitely many non-pseudo-Pisot δqu that are very close to integers, u in a finitely generated group of algebraic numbers), Theorem 1 (Mahler's…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11J68",
+    "msc:11R06",
+    "msc:11J70",
+    "msc:11A55",
+    "msc:11J87"
+  ],
+  "published": "2026-09-27",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "On the rational approximations to the powers of an algebraic number: solution of two problems of Mahler and Mendès France",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/rwst/Subspace-Theorems",
+  "commit": "d7a11cb1dcab3883fd1008db27a8382c95455b0a",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "diophantine-approximation",
+      "lean-formalization",
+      "mahler-problem",
+      "algebraic-numbers"
+    ],
+    "reason": "Lean formalization of Corvaja–Zannier rational approximation results for algebraic powers.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

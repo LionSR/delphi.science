@@ -1,0 +1,44 @@
+{
+  "key": "PALOMAR-2026-10-13-000003",
+  "source": "palomar",
+  "url": "https://github.com/vltanh/lean4-ambidextrous-sofa/tree/0f24fe48b4cadf02a442420e677b45a036136dbf/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-13-000003-v1.json",
+  "title": "Optimality and uniqueness of Romik's ambidextrous sofa, formalized in Lean 4",
+  "authors": [
+    "The-Anh Vu-Le"
+  ],
+  "summary": "The ambidextrous moving sofa problem asks for the largest area of a connected planar shape that can be moved, from one starting position, around the right-angled corner of a hallway of unit width that turns right, and also around the corner of a hallway that turns left. Dan Romik (Experimental Mathematics, 2018) constructed a shape of area M = 1 + 4Y^2 + arctan Y = 1.64495..., where Y = 0.2980... is the positive root of 4Y^3 + 3Y = 1, and proposed it as a likely solution; in 2025 Georgiev, Gómez-Serrano, Tao and Wagner listed the problem as open. This entry proves that Romik's ambidextrous…",
+  "domain": "math.MG",
+  "tags": [
+    "math.MG",
+    "math.OC",
+    "msc:49Q10",
+    "msc:52A10",
+    "msc:52A38",
+    "msc:52A40",
+    "msc:68V20"
+  ],
+  "published": "2026-10-13",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/vltanh/lean4-ambidextrous-sofa",
+  "commit": "0f24fe48b4cadf02a442420e677b45a036136dbf",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "computational-geometry",
+      "moving-sofa",
+      "lean"
+    ],
+    "reason": "Lean formalization proving optimality and uniqueness of Romik's ambidextrous sofa shape.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

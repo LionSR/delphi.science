@@ -1,0 +1,32 @@
+{
+  "key": "A-counterexample-to-the-nearby-Lagrangian-conjecture",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-counterexample-to-the-nearby-Lagrangian-conjecture-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-counterexample-to-the-nearby-Lagrangian-conjecture-September-23-2026/paper.pdf",
+  "title": "A counterexample to the nearby Lagrangian conjecture",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We disprove the unrestricted nearby Lagrangian conjecture. For some sufficiently large even integer N , we construct a closed exact smoothly embedded Lagrangian in $`T^*(S^9\\times S^{N-1})`$ that is diffeomorphic to the base but is not Hamiltonian isotopic to the zero section.",
+  "domain": "Differential geometry",
+  "published": "2026-09-23",
+  "family": "340",
+  "family_title": "A counterexample to the nearby Lagrangian conjecture",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "symplectic-geometry",
+      "lagrangian-submanifolds",
+      "cotangent-bundles",
+      "floer-theory"
+    ],
+    "reason": "Constructs an exact Lagrangian not Hamiltonian isotopic to the zero section, disproving the conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

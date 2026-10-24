@@ -1,0 +1,31 @@
+{
+  "key": "Failure-of-rational-injectivity-for-maximal-coarse-assembly",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Failure-of-rational-injectivity-for-maximal-coarse-assembly-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Failure-of-rational-injectivity-for-maximal-coarse-assembly-October-5-2026/paper.pdf",
+  "title": "Failure of rational injectivity for maximal coarse assembly",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We construct a uniformly discrete bounded-geometry space whose maximal coarse assembly map has an infinite-order element in its kernel. The space is a coarse disjoint union of finite connected graphs of uniformly bounded degree, so maximal coarse assembly need not be rationally injective even for such graph unions.",
+  "domain": "Topology",
+  "published": "2026-10-05",
+  "family": "307",
+  "family_title": "Failure of rational injectivity for maximal coarse assembly",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "coarse-geometry",
+      "k-theory",
+      "assembly-maps"
+    ],
+    "reason": "Constructs bounded-geometry spaces where the maximal coarse assembly map is not rationally injective.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

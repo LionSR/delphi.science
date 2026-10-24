@@ -1,0 +1,30 @@
+{
+  "key": "An-unconditional-first-moment-for-cubic-Gauss-sums",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/An-unconditional-first-moment-for-cubic-Gauss-sums-September-25-2026/paper.pdf",
+  "title": "An unconditional first moment for cubic Gauss sums",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove Patterson's first-moment conjecture for normalized cubic Gauss sums over all primary Eisenstein primes, unconditionally. The sharp-cutoff main term is $`(6/5)c_*X^{5/6}/\\log X`$, where $`c_*=(2\\pi)^{2/3}/(3\\Gamma(2/3))`$. For every fixed nonzero angular Fourier mode of the prime argument, we also prove cancellation at the first-moment scale.",
+  "domain": "Number theory",
+  "published": "2026-09-25",
+  "family": "023",
+  "family_title": "Patterson's first moment for cubic Gauss sums",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "analytic-number-theory",
+      "gauss-sums"
+    ],
+    "reason": "Proves Patterson's first-moment conjecture for normalized cubic Gauss sums over Eisenstein primes.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

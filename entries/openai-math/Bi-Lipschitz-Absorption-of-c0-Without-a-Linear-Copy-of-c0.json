@@ -1,0 +1,31 @@
+{
+  "key": "Bi-Lipschitz-Absorption-of-c0-Without-a-Linear-Copy-of-c0",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Bi-Lipschitz-Absorption-of-c0-Without-a-Linear-Copy-of-c0-September-26-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Bi-Lipschitz-Absorption-of-c0-Without-a-Linear-Copy-of-c0-September-26-2026/paper.pdf",
+  "title": "Bi-Lipschitz Absorption of c0 Without a Linear Copy of c0",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We construct a separable real Banach space Z that contains no linear copy of c 0 , yet is bi-Lipschitz equivalent to $`Z\\oplus_\\infty c_0`$. The same space contains a bi-Lipschitz image of every separable metric space.",
+  "domain": "Functional analysis",
+  "published": "2026-09-26",
+  "family": "324",
+  "family_title": "Lipschitz equivalent Banach spaces need not be linearly isomorphic",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "banach-spaces",
+      "bi-lipschitz-embeddings",
+      "functional-analysis"
+    ],
+    "reason": "Constructs a Banach space bi-Lipschitz equivalent to a c0 sum yet containing no linear copy of c0.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

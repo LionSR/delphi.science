@@ -1,0 +1,67 @@
+{
+  "key": "PALOMAR-2026-10-02-000008",
+  "source": "palomar",
+  "url": "https://github.com/vltanh/lean4-moving-sofa/tree/1174c5c25c1c66b807e368446d6682e8d0276759/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-02-000008-v5.json",
+  "title": "Optimality, uniqueness and stability of Gerver's sofa from one coercive certificate, formalized in Lean 4",
+  "authors": [
+    "The-Anh Vu-Le"
+  ],
+  "summary": "The moving sofa problem asks for the largest area of a planar shape that can be moved around the right-angled corner of a hallway of unit width. Jineon Baek proved (arXiv:2411.19826) that Gerver's sofa G, of area 2.2195..., is optimal. His proof bounds the area of every large moving sofa by a concave functional Q of a triple (K, B, D) of convex bodies built from a cap K of the sofa, and shows that Q is largest at Gerver's triple, where it equals |G|. This entry proves one estimate for Q, the coercive certificate, and derives three results from it. On an enlarged domain of triples, on which…",
+  "domain": "math.MG",
+  "tags": [
+    "math.MG",
+    "math.OC",
+    "msc:49Q10",
+    "msc:52A10",
+    "msc:52A38",
+    "msc:52A40",
+    "msc:68V20"
+  ],
+  "published": "2026-10-08",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Optimality of Gerver's Sofa",
+      "identifier": "arXiv:2411.19826v1",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Stability of Gerver's sofa: notes",
+      "identifier": "docs/archive/stability/",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "The coercive route: notes",
+      "identifier": "docs/archive/coercive/",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Uniqueness of Gerver's sofa: complete paper argument",
+      "identifier": "docs/archive/uniqueness/20-complete-paper-proof.md",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/vltanh/lean4-moving-sofa",
+  "commit": "1174c5c25c1c66b807e368446d6682e8d0276759",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "moving-sofa",
+      "convex-geometry",
+      "lean-formalization",
+      "optimization"
+    ],
+    "reason": "Lean formalization of a coercive certificate supporting optimality of Gerver's sofa.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

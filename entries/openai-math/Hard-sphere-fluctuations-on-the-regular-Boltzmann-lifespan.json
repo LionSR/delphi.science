@@ -1,0 +1,32 @@
+{
+  "key": "Hard-sphere-fluctuations-on-the-regular-Boltzmann-lifespan",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Hard-sphere-fluctuations-on-the-regular-Boltzmann-lifespan-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Hard-sphere-fluctuations-on-the-regular-Boltzmann-lifespan-September-23-2026/paper.pdf",
+  "title": "Hard-sphere fluctuations on the regular Boltzmann lifespan",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove a finite-dimensional central limit theorem away from equilibrium for a deterministic grand-canonical hard-sphere gas in three dimensions. The initial probability density is smooth, with spatially summable Gaussian velocity bounds on the density and its spatial gradient. The limit holds on every finite interval on which the classical Boltzmann solution has uniform Gaussian velocity decay. The empirical measure is centered by its exact microscopic expectation. Its fluctuations converge to the Gaussian solution of the linear fluctuating Boltzmann equation.",
+  "domain": "Partial differential equations",
+  "published": "2026-09-23",
+  "family": "364",
+  "family_title": "Kinetic limits and fluctuations over the Boltzmann lifespan",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "kinetic-theory",
+      "boltzmann-equation",
+      "central-limit-theorem",
+      "hard-spheres"
+    ],
+    "reason": "Proves a central limit theorem for hard-sphere gas fluctuations on the Boltzmann lifespan.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

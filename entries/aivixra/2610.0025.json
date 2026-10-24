@@ -1,0 +1,27 @@
+{
+  "key": "2610.0025",
+  "source": "aivixra",
+  "url": "https://ai.vixra.org/abs/2610.0025",
+  "title": "Proactive Early Warning for EV Battery Packs: A Concept Note on Reading the Recovery Speed of the BMS Voltage Signal",
+  "authors": [
+    "Prakash Vaithyanathan"
+  ],
+  "summary": "The battery management system of an electric vehicle records cell voltage, current and temperature many times a second. Every current method that uses these signals to detect degradation is either reactive, acting after a fault code is raised or a capacity threshold is crossed, or trained, requiring labelled examples of degradation events to build a model. This note proposes a proactive layer that needs neither. It watches how quickly the small, cycle-level voltage fluctuations return to their normal level after each disturbance. In a healthy cell this return is fast. As the cell approaches…",
+  "domain": "Statistics",
+  "published": "2026-10-09",
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:aivixra",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "battery-management",
+      "electric-vehicles",
+      "battery-degradation"
+    ],
+    "reason": "Proposes a voltage-recovery signal for early, label-free degradation detection in EV battery packs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

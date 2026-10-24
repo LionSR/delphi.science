@@ -1,0 +1,31 @@
+{
+  "key": "A-translational-tile-with-no-fully-periodic-tiling-in-dimension-three",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-translational-tile-with-no-fully-periodic-tiling-in-dimension-three-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-translational-tile-with-no-fully-periodic-tiling-in-dimension-three-September-23-2026/paper.pdf",
+  "title": "A translational tile with no fully periodic tiling in dimension three",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We construct a finite translational tile in ℤ 3 that admits tilings but no fully periodic tiling. Its unit-cube thickening has the same property in ℝ 3 , even when arbitrary real translations are allowed. This gives a negative resolution of the periodic tiling conjecture in dimension three.",
+  "domain": "Combinatorics",
+  "published": "2026-09-23",
+  "family": "155",
+  "family_title": "A counterexample to periodic tiling in dimension three",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "tilings",
+      "discrete-geometry",
+      "periodic-tiling"
+    ],
+    "reason": "Builds a translational tile in dimension three lacking any fully periodic tiling.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

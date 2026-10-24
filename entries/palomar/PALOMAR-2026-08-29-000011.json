@@ -1,0 +1,58 @@
+{
+  "key": "PALOMAR-2026-08-29-000011",
+  "source": "palomar",
+  "url": "https://github.com/mccorvie/classification-of-surfaces/tree/e3c7230fe78d7b056a415d9ecae6f77887046b32/LeanEval/topological_classification_of_surfaces",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-29-000011-v1.json",
+  "title": "mccorvie/classification-of-surfaces",
+  "authors": [
+    "Ryan McCorvie",
+    "Jack McCarthy"
+  ],
+  "summary": "A Lean 4 formalization of the classification theorem for compact connected topological 2-manifolds, including surfaces with boundary. The main theorem proves that every compact connected Hausdorff 2-manifold modeled on the Euclidean half-plane is homeomorphic to the sphere, an orientable canonical quotient surface, or a non-orientable canonical quotient surface. The submitted theorem is the exact statement of the Lean Eval `topological_classification_of_surfaces` challenge.",
+  "domain": "math.GT",
+  "tags": [
+    "math.GT",
+    "msc:57K20"
+  ],
+  "published": "2026-08-29",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Topological classification of surfaces",
+      "identifier": "https://lean-lang.org/eval/problems/topological_classification_of_surfaces/",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "A Guide to the Classification Theorem for Compact Surfaces",
+      "identifier": "https://doi.org/10.1007/978-3-642-34364-3",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Geometric Topology in Dimensions 2 and 3",
+      "identifier": "https://doi.org/10.1007/978-1-4612-9906-6",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/mccorvie/classification-of-surfaces",
+  "commit": "e3c7230fe78d7b056a415d9ecae6f77887046b32",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "topology",
+      "surfaces",
+      "lean-formalization",
+      "classification"
+    ],
+    "reason": "Lean formalization of the classification theorem for compact 2-manifolds.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

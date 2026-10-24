@@ -1,0 +1,57 @@
+{
+  "key": "PALOMAR-2026-10-16-000017",
+  "source": "palomar",
+  "url": "https://github.com/jtraverso/degree-sequences/tree/b49808e0c0aade945472b777047148399a582858/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000017-v1.json",
+  "title": "Graphic sequences: the Erdős–Gallai and Havel–Hakimi theorems",
+  "authors": [
+    "Juan Pablo Traverso Gianini"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of the two classical characterizations of degree sequences of finite simple graphs: the Erdős–Gallai theorem (a non-increasing sequence is graphic if and only if its sum is even and every initial segment satisfies the Erdős–Gallai inequality) and the Havel–Hakimi theorem (a non-increasing sequence is graphic if and only if its first term is at most the number of remaining terms, the next d₀ terms are positive, and the reduced sequence is graphic).",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C07"
+  ],
+  "published": "2026-10-16",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Gráfok előírt fokú pontokkal (Graphs with prescribed degrees of vertices)",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "A remark on the existence of finite graphs",
+      "identifier": "doi:10.21136/CPM.1955.108220",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "On realizability of a set of integers as degrees of the vertices of a linear graph. I",
+      "identifier": "doi:10.1137/0110037",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jtraverso/degree-sequences",
+  "commit": "b49808e0c0aade945472b777047148399a582858",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "combinatorics",
+      "graph-theory",
+      "lean-formalization",
+      "degree-sequences"
+    ],
+    "reason": "Lean formalization of the Erdős–Gallai and Havel–Hakimi graphic sequence theorems.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

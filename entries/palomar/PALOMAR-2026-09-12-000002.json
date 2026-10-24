@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-09-12-000002",
+  "source": "palomar",
+  "url": "https://github.com/ykanoria/FD1d-Lean/tree/26a5b4e2fd83fa86053239e09e92af370c62f18c/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-12-000002-v2.json",
+  "title": "A Tight Upper Bound for Fully Dynamic Matching on the Line",
+  "authors": [
+    "Yash Kanoria"
+  ],
+  "summary": "There are `m` labeled supplies in `[0,1]`. In each period, an independent uniform demand arrives; an online policy selects one live supply, pays the distance between them, and replaces that supply by an independent uniform point. This is the one-dimensional fully dynamic model studied in Kanoria's [*Dynamic spatial matching*](https://doi.org/10.1214/25-AAP2154). That paper established a lower bound of order `log(m)/m` and an upper bound of order `log(m)^2/m`, and posed closing this logarithmic gap as an open problem. We construct a policy and show that its performance matches the prior known…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.PR",
+    "msc:68W27",
+    "msc:90C40",
+    "msc:60J20"
+  ],
+  "published": "2026-09-14",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Optimal fully dynamic matching on the line",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/ykanoria/FD1d-Lean",
+  "commit": "26a5b4e2fd83fa86053239e09e92af370c62f18c",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "online-algorithms",
+      "spatial-matching",
+      "probability"
+    ],
+    "reason": "Analysis of a tight upper bound for a fully dynamic one-dimensional matching policy.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

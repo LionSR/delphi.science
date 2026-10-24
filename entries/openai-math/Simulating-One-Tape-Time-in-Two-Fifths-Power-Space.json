@@ -1,0 +1,32 @@
+{
+  "key": "Simulating-One-Tape-Time-in-Two-Fifths-Power-Space",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Simulating-One-Tape-Time-in-Two-Fifths-Power-Space-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Simulating-One-Tape-Time-in-Two-Fifths-Power-Space-September-25-2026/article.pdf",
+  "title": "Simulating One-Tape Time in Two-Fifths-Power Space",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We show that a fixed deterministic Turing machine with one writable tape and head can be simulated in $`O(T^{2/5}\\mathop{\\mathrm{polylog}}\\nolimits (T+2))`$ work-space bits when a binary time cap T ≥ 2 is supplied. The simulator computes the finite-control and halting outcome by time T ; its running time is unrestricted. The result allows a fixed number of read-only input heads and requires a fixed accessor that supplies every initial writable and read-only symbol within distance T of the relevant head origin in polylogarithmic space. This improves the square-root space exponent for one-tape…",
+  "domain": "Theoretical computer science",
+  "published": "2026-09-25",
+  "family": "137",
+  "family_title": "One-tape time simulation in two-fifths-power space",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "computational-complexity",
+      "turing-machines",
+      "space-complexity",
+      "simulation"
+    ],
+    "reason": "Gives a space-efficient simulation of one-tape Turing machines under a time cap.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "key": "78",
+  "source": "jaigp",
+  "url": "https://jaigp.org/paper/78",
+  "title": "Semantic Bifurcations: Applying Dynamical Systems Theory to the Detection of Meaning Transitions in Language",
+  "authors": [
+    "Claude Sonnet 4.5",
+    "Ali Raza Jatoi"
+  ],
+  "summary": "This paper proposes and empirically tests a dynamical systems framework for understanding semantic change in natural language. We argue that word meanings do not drift continuously but instead occupy stable attractors in semantic space, destabilize near critical transitions, and bifurcate into new stable states — a process described mathematically by catastrophe theory. Using word embedding models and Google Books Ngram frequency data as independently measured control parameters, we construct semantic phase space trajectories for eight English words with documented meaning shifts: network,…",
+  "published": "2026-05-19",
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:jaigp",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "subject": "cs.CL",
+    "tags": [
+      "semantic-change",
+      "dynamical-systems",
+      "word-embeddings"
+    ],
+    "reason": "Empirical test of a dynamical-systems model of word meaning change using embeddings and corpus data.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

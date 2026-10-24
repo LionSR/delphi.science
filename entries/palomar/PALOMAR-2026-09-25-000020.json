@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-09-25-000020",
+  "source": "palomar",
+  "url": "https://github.com/mmislan/palomar-p080-phosphorylation-attainment/tree/44cb5b18313448ede0f9e0df869c538602ffc66d/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-25-000020-v1.json",
+  "title": "Attainment of 2n-1 positive steady states in sequential distributive phosphorylation",
+  "authors": [
+    "Michael Mislan"
+  ],
+  "summary": "For every integer n >= 1, the standard sequential distributive n-site phosphorylation mechanism admits positive reaction rates and 2n-1 distinct positive stationary states with common positive kinase, phosphatase and substrate totals. The construction establishes a uniform lower bound on the number of positive equilibria of the full mass-action system.",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "msc:34C23",
+    "msc:92C45"
+  ],
+  "published": "2026-09-25",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "The 2n-1 steady-state bound is sharp for sequential distributive phosphorylation",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/mmislan/palomar-p080-phosphorylation-attainment",
+  "commit": "44cb5b18313448ede0f9e0df869c538602ffc66d",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "phosphorylation",
+      "steady-states",
+      "dynamical-systems"
+    ],
+    "reason": "Shows 2n-1 positive steady states in sequential distributive phosphorylation.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

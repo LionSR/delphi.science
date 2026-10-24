@@ -1,0 +1,31 @@
+{
+  "key": "Velocity-Field-Detection-of-Computation-in-Forced-Navier-Stokes-Flows",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Velocity-Field-Detection-of-Computation-in-Forced-Navier-Stokes-Flows-September-27-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Velocity-Field-Detection-of-Computation-in-Forced-Navier-Stokes-Flows-September-27-2026/manuscript.pdf",
+  "title": "Velocity-Field Detection of Computation in Forced Navier–Stokes Flows",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We construct smooth forces for three-dimensional incompressible Navier–Stokes flow, from rest at any fixed positive computable viscosity, whose velocity field detects whether a prescribed machine halts. On the unit flat torus, a pointwise test of the third velocity component uses successively shorter stirring intervals in a fixed spatial region. On $`\\mathbb R^2\\times\\mathbb T`$, an integral test uses an expanding array of translation regions and a force with globally bounded mixed derivatives. The vertical velocity solves an advection–diffusion equation: short bursts control its pointwise…",
+  "domain": "Partial differential equations",
+  "published": "2026-09-27",
+  "family": "376",
+  "family_title": "Universal computation in forced Navier–Stokes flows",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "navier-stokes",
+      "fluid-dynamics",
+      "computability"
+    ],
+    "reason": "Constructs forcings for which Navier–Stokes velocity fields reveal whether a machine halts.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

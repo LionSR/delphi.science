@@ -1,0 +1,31 @@
+{
+  "key": "Cap-selected-amplitudes-and-triangle-chords-for-honeycomb-walks",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Cap-selected-amplitudes-and-triangle-chords-for-honeycomb-walks-September-26-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Cap-selected-amplitudes-and-triangle-chords-for-honeycomb-walks-September-26-2026/main.pdf",
+  "title": "Cap-selected amplitudes and triangle chords for honeycomb walks",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "At the critical honeycomb fugacity, self-avoiding port-to-port chords in an equilateral lattice triangle of side R , summed over both boundary endpoints and restricted to diameter at least $`R/100`$, have partition sum comparable to R 3/4 and mean length $`R^{4/3+o(1)}`$. We also determine the amplitude selected by two vacuum caps on a cylinder of circumference N and prove that it grows as $`N^{1/6+o(1)}`$.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-09-26",
+  "family": "237",
+  "family_title": "The three-quarter exponent for honeycomb self-avoiding walk",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "self-avoiding-walks",
+      "honeycomb-lattice",
+      "statistical-mechanics"
+    ],
+    "reason": "Analyzes self-avoiding honeycomb chords in triangles and cylinder cap amplitudes asymptotically.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

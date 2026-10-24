@@ -1,0 +1,32 @@
+{
+  "key": "Strong-diffeomorphic-approximation-in-three-dimensions-for-p-gt-2",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Strong-diffeomorphic-approximation-in-three-dimensions-for-p-gt-2-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Strong-diffeomorphic-approximation-in-three-dimensions-for-p-gt-2-September-24-2026/main.pdf",
+  "title": "Strong diffeomorphic approximation in three dimensions for p>2",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We resolve the three-dimensional Ball–Evans approximation problem for every finite p > 2. Every $`W^{1,p}`$ homeomorphism between arbitrary bounded domains in ℝ 3 can be approximated strongly in $`W^{1,p}`$ by smooth diffeomorphisms onto the same target.",
+  "domain": "Partial differential equations",
+  "published": "2026-09-24",
+  "family": "368",
+  "family_title": "The three-dimensional Ball–Evans approximation problem",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "sobolev-spaces",
+      "geometric-analysis",
+      "diffeomorphisms",
+      "approximation"
+    ],
+    "reason": "Resolves strong W^{1,p} diffeomorphic approximation of homeomorphisms in three dimensions for p above 2.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

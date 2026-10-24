@@ -1,0 +1,31 @@
+{
+  "key": "Generalized-Star-Height-at-Most-Four",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Generalized-Star-Height-at-Most-Four-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Generalized-Star-Height-at-Most-Four-September-25-2026/Generalized-Star-Height-at-Most-Four-September-25-2026.pdf",
+  "title": "Generalized Star Height at Most Four",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "Every regular language over a finite alphabet has generalized star height at most four over that same alphabet. We give a complete construction using an affine correction that hides one interval product, a finite clock, and several scales for moving boundaries through periodic words.",
+  "domain": "Theoretical computer science",
+  "published": "2026-09-25",
+  "family": "134",
+  "family_title": "Generalized star height at most three",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "formal-languages",
+      "automata",
+      "regular-languages"
+    ],
+    "reason": "Proves every regular language has generalized star height at most four, with a construction.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "key": "PALOMAR-2026-09-07-000002",
+  "source": "palomar",
+  "url": "https://github.com/ShengtongZhang-alt/BN/tree/4625b2daaa48a5d1781315e78d933cc78ea6e0fb/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-07-000002-v1.json",
+  "title": "A proof of the Bollobás–Nikiforov conjecture in Lean",
+  "authors": [
+    "Gabriel Coutinho",
+    "Yinchen Liu",
+    "Thomás Jung Spier",
+    "Quanyu Tang",
+    "Shengtong Zhang"
+  ],
+  "summary": "A complete Lean 4 / Mathlib formalization of the Bollobás–Nikiforov conjecture (2007) and of the matrix theorems that prove it. Let G be a finite simple graph with adjacency eigenvalues lambda_1 >= lambda_2 >= ..., m edges and clique number omega(G). The conjecture states that every noncomplete graph on at least two vertices satisfies lambda_1^2 + lambda_2^2 <= 2 (1 - 1/omega(G)) m. The formalization proves it (BN.lambda1_sq_add_lambda2_sq_le) as a consequence of a weighted spectral inequality: for every symmetric entrywise nonnegative matrix B with zero diagonal supported on the edges of G,…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C50",
+    "msc:05C35",
+    "msc:15B48",
+    "msc:15A18"
+  ],
+  "published": "2026-09-07",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "The Bollobás–Nikiforov inequality for nonnegative edge weights",
+      "identifier": "docs/sol.tex (this repository, at the submitted commit)",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/ShengtongZhang-alt/BN",
+  "commit": "4625b2daaa48a5d1781315e78d933cc78ea6e0fb",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "spectral-graph-theory",
+      "lean-formalization",
+      "extremal-graph-theory"
+    ],
+    "reason": "Lean formalization of the Bollobás–Nikiforov spectral conjecture for graphs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

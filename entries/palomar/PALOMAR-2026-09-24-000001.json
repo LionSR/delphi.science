@@ -1,0 +1,43 @@
+{
+  "key": "PALOMAR-2026-09-24-000001",
+  "source": "palomar",
+  "url": "https://github.com/CoolRmal/FavardLength/tree/65f19d4c36d4e576417da893f54cf351aef9d672/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-24-000001-v1.json",
+  "title": "The Favard-length decay exponent of the four-corner Cantor set is at least 1/4",
+  "authors": [
+    "Yongxi Lin"
+  ],
+  "summary": "For the four-corner Cantor set approximants K_n = C_n × C_n, where C_n is the union of the 2^n intervals of length 4^{-n} with left endpoints sum_{j = 0 for which the Favard length Fav(K_n) = (1/π) ∫_0^π |π_θ(K_n)| dθ is at most C n^{-a} for all n >= 1. This project proves in Lean that every a < 1/4 is admissible, so 1/4 <= α_Fav, together with the classical bound α_Fav <= 1. The previous best lower bounds were 1/6 (Nazarov-Peres-Volberg, 2010) and 1/5 (Marshall, arXiv:2509.02882 v2, 2026, whose v1 claim of 1/4 was withdrawn). The new ingredient is a joint negative-moment estimate for the…",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA",
+    "math.MG",
+    "msc:28A80",
+    "msc:28A75",
+    "msc:42A38"
+  ],
+  "published": "2026-09-24",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/CoolRmal/FavardLength",
+  "commit": "65f19d4c36d4e576417da893f54cf351aef9d672",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "harmonic-analysis",
+      "favard-length",
+      "fractals",
+      "lean"
+    ],
+    "reason": "Lean proof of a lower bound on the Favard-length decay exponent for a Cantor set.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

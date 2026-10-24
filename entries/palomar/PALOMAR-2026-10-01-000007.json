@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-10-01-000007",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/bulow-klemperer-lean/tree/b6b7068f5846f63eb18baeb753fcdbd0acf3f99f/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-01-000007-v1.json",
+  "title": "bulow-klemperer-lean",
+  "authors": [
+    "Arthur Freitas Ramos"
+  ],
+  "summary": "A Lean proof that a no-reserve second-price auction with one additional independent bidder has at least the expected revenue of the optimal normalized BIC auction under a regular common value distribution.",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "econ.TH",
+    "msc:91B26"
+  ],
+  "published": "2026-10-01",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Auctions Versus Negotiations",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/bulow-klemperer-lean",
+  "commit": "b6b7068f5846f63eb18baeb753fcdbd0acf3f99f",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "auction-theory",
+      "mechanism-design",
+      "common-value",
+      "lean"
+    ],
+    "reason": "Lean proof comparing second-price auctions with optimal BIC auctions under common values.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

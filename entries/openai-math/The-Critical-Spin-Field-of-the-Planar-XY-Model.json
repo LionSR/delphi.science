@@ -1,0 +1,31 @@
+{
+  "key": "The-Critical-Spin-Field-of-the-Planar-XY-Model",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-Critical-Spin-Field-of-the-Planar-XY-Model-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-Critical-Spin-Field-of-the-Planar-XY-Model-October-5-2026/paper.pdf",
+  "title": "The Critical Spin Field of the Planar XY Model",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "Using the companion critical Bessel-height and pin-limit theorems, we prove that at the mass-defined critical inverse temperature of the nearest-neighbor XY model on the square lattice, the spin field on a square with boundary angles fixed to zero converges along the full sequence to the full-variance imaginary exponential of a zero-Dirichlet Gaussian free field with stiffness $`2/\\pi`$. The normalization uses the exact center magnetization and the lattice Green-function factor. Convergence holds in law in $`H^{-3}_{\\mathrm{loc}}((-1,1)^2)`$; all mixed moments and joint laws of fields…",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-10-05",
+  "family": "216",
+  "family_title": "Critical and near-critical XY scaling and BKT universality",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "statistical-mechanics",
+      "xy-model",
+      "gaussian-free-field"
+    ],
+    "reason": "Shows the critical XY model spin field converges to an imaginary-exponential Gaussian free field.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

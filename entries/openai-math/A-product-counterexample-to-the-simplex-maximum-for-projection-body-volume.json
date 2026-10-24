@@ -1,0 +1,31 @@
+{
+  "key": "A-product-counterexample-to-the-simplex-maximum-for-projection-body-volume",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-product-counterexample-to-the-simplex-maximum-for-projection-body-volume-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-product-counterexample-to-the-simplex-maximum-for-projection-body-volume-September-24-2026/paper.pdf",
+  "title": "A product counterexample to the simplex maximum for projection-body volume",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "The product of two ten-dimensional simplices has larger normalized projection-body volume than a twenty-dimensional simplex. This gives a counterexample to Brannen's proposed simplex maximum.",
+  "domain": "Convex and metric geometry",
+  "published": "2026-09-24",
+  "family": "088",
+  "family_title": "Sharp projection-body inequalities and a counterexample to simplex maximization",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "convex-geometry",
+      "projection-bodies",
+      "geometric-inequalities"
+    ],
+    "reason": "Gives a product-of-simplices counterexample to a proposed simplex maximum for projection bodies.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

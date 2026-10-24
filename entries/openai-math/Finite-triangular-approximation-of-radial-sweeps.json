@@ -1,0 +1,31 @@
+{
+  "key": "Finite-triangular-approximation-of-radial-sweeps",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Finite-triangular-approximation-of-radial-sweeps-September-27-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Finite-triangular-approximation-of-radial-sweeps-September-27-2026/main.pdf",
+  "title": "Finite triangular approximation of radial sweeps",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that radially aligned segment sweeps admit finite cylinder covers with one triangular base for each interval of any tagged partition. As the mesh tends to zero, the total perpendicular base area converges to a weighted parameter area. An explicit application covers every regular tetrahedron with total base area below half its minimum projection area, giving negative answers to the half-area question and the directionwise normalized 1-Codimensional Cylinder Covering Conjecture.",
+  "domain": "Convex and metric geometry",
+  "published": "2026-09-27",
+  "family": "100",
+  "family_title": "Cylinder coverings below the half-area bound",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "convex-geometry",
+      "covering-problems",
+      "tetrahedra"
+    ],
+    "reason": "Proves cylinder covering results for radial sweeps and applies them to regular tetrahedra.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

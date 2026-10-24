@@ -1,0 +1,32 @@
+{
+  "key": "A-counterexample-to-Naimarks-problem-in-ZFC",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-counterexample-to-Naimarks-problem-in-ZFC-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-counterexample-to-Naimarks-problem-in-ZFC-September-24-2026/naimark-counterexample-zfc.pdf",
+  "title": "A counterexample to Naimark's problem in ZFC",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We construct in ZFC a unital infinite-dimensional simple complex C ∗ -algebra with a faithful tracial state whose nonzero irreducible representations are all unitarily equivalent. This gives a negative answer to Naimark's problem without additional set-theoretic assumptions.",
+  "domain": "Operator algebras",
+  "published": "2026-09-24",
+  "family": "297",
+  "family_title": "A ZFC counterexample to Naimark's problem",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "operator-algebras",
+      "c-star-algebras",
+      "representation-theory",
+      "set-theory"
+    ],
+    "reason": "Gives a ZFC construction answering Naimark's problem negatively for simple C*-algebras.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

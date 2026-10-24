@@ -1,0 +1,53 @@
+{
+  "key": "PALOMAR-2026-10-18-000005",
+  "source": "palomar",
+  "url": "https://github.com/jtraverso/tutte-f-factor/tree/dc3bbce463c80c499d3e9fa072d13f9145d907d0/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-18-000005-v1.json",
+  "title": "Tutte's f-factor theorem",
+  "authors": [
+    "Juan Pablo Traverso Gianini"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of Tutte's f-factor theorem: a finite simple graph G has a spanning subgraph H with deg_H v = f v for every vertex v if and only if, for all disjoint vertex sets S and T, q(S, T) ≤ ∑_{v ∈ S} f v − ∑_{v ∈ T} f v + ∑_{v ∈ T} deg_{G−S} v, where q(S, T) is the number of connected components C of G − (S ∪ T) for which ∑_{v ∈ C} f v + e(C, T) is odd and deg_{G−S} v is the number of neighbours of v outside S. Mathlib has Tutte's 1-factor theorem but not the f-factor theorem.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C70",
+    "msc:05C07"
+  ],
+  "published": "2026-10-18",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "The Factors of Graphs",
+      "identifier": "doi:10.4153/CJM-1952-028-2",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "A Short Proof of the Factor Theorem for Finite Graphs",
+      "identifier": "doi:10.4153/CJM-1954-033-3",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jtraverso/tutte-f-factor",
+  "commit": "dc3bbce463c80c499d3e9fa072d13f9145d907d0",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "f-factors",
+      "lean",
+      "tutte-theorem"
+    ],
+    "reason": "Lean formalization of Tutte's f-factor theorem for finite graphs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

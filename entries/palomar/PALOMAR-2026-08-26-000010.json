@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-08-26-000010",
+  "source": "palomar",
+  "url": "https://github.com/Vulkin-prog/paper-c-lean/tree/b3cf107d2df629453a5da8e84f2bad29eea0bf94/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-26-000010-v2.json",
+  "title": "Vulkin-prog/paper-c-lean",
+  "authors": [
+    "Brice Pouly"
+  ],
+  "summary": "Lean 4 formalization of three Poisson-limit statements for the starting points of long constant stretches of an extended Rademacher random completely multiplicative function in a dyadic block, corresponding to the three clauses of Theorem 1.2 in the cited source article. The first proves a total-variation Poisson approximation uniformly over every deterministic mask of the dyadic block. The second gives the Laplace-functional characterization of the limiting spatial Poisson point process. The third gives the corresponding marked characterization together with uniform tightness of the…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.PR",
+    "msc:11K65",
+    "msc:60F05"
+  ],
+  "published": "2026-08-27",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A critical Poisson law in a dyadic block -- Starting points of long constant stretches of an extended Rademacher random completely multiplicative function",
+      "identifier": "https://doi.org/10.33774/coe-2026-z3l74",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/Vulkin-prog/paper-c-lean",
+  "commit": "b3cf107d2df629453a5da8e84f2bad29eea0bf94",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "probability",
+      "number-theory",
+      "lean",
+      "random-multiplicative"
+    ],
+    "reason": "Lean formalization of Poisson-limit statements for constant stretches of a random multiplicative function.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

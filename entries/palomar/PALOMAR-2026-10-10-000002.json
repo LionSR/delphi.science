@@ -1,0 +1,52 @@
+{
+  "key": "PALOMAR-2026-10-10-000002",
+  "source": "palomar",
+  "url": "https://github.com/pmaronow/ccv-palomar/tree/f3ef2ef312d44bbc693c1d5bea9cee654a29b598/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-10-000002-v1.json",
+  "title": "Nearly minimax variance estimation under rough random design",
+  "authors": [
+    "P. M. Aronow",
+    "Patrick Lopatto"
+  ],
+  "summary": "Minimax root-mean-square bounds for estimating a constant conditional variance from independent random-design regression observations. The design density has fixed positive lower and upper bounds but no smoothness; covariate-dependent errors have uniformly bounded conditional fourth moments. For 1 < s < d/4, the proved bracket identifies the polynomial exponent 2(s+1)/(d+4) and the common explicit stretched-exponential factor, with a remaining logarithmic gap. It also proves the exponent corollary, the exact low-smoothness rate, and the parametric regime.",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.TH",
+    "msc:62G05",
+    "msc:62G08",
+    "msc:62G20",
+    "msc:62C20"
+  ],
+  "published": "2026-10-10",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Nearly Minimax Variance Estimation Under Rough Random Design",
+      "identifier": "hexagon:2610.00162v1",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/pmaronow/ccv-palomar",
+  "commit": "f3ef2ef312d44bbc693c1d5bea9cee654a29b598",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "statistics",
+      "minimax-estimation",
+      "nonparametric-regression",
+      "lean"
+    ],
+    "reason": "Minimax rate bounds for variance estimation under rough random design.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

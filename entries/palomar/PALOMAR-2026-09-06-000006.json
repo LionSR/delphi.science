@@ -1,0 +1,83 @@
+{
+  "key": "PALOMAR-2026-09-06-000006",
+  "source": "palomar",
+  "url": "https://github.com/teorth/pfr/tree/3d7898164ebff70a809dce618f9082a7b39e7850/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-06-000006-v1.json",
+  "title": "Marton's conjecture (the polynomial Freiman-Ruzsa conjecture)",
+  "authors": [
+    "Aaron Anderson",
+    "Mantas Bakšys",
+    "Jonas Bayer",
+    "Mauricio Collares",
+    "Rémy Degenne",
+    "Yaël Dillies",
+    "Ben Eltschig",
+    "Sébastien Gouëzel",
+    "Kalle Kytölä",
+    "Rob Lewis",
+    "Paul Lezeau",
+    "Lorenzo Luccioli",
+    "Heather Macbeth",
+    "Patrick Massot",
+    "Arend Mellendijk",
+    "Kyle Miller",
+    "Pietro Monticone",
+    "Kim Morrison",
+    "Oliver Nash",
+    "Utensil Song",
+    "Terence Tao",
+    "Floris van Doorn",
+    "Sky Wilshaw",
+    "Lawrence Wu"
+  ],
+  "summary": "A Lean formalization of Marton's conjecture, widely known as the polynomial Freiman-Ruzsa conjecture, together with its principal consequences. If A is a non-empty subset of an abelian group of exponent 2 with |A + A| = 2, the covering number is m * K^(256m^3 + 1). Three consequences are also recorded: a finite set of small doubling in Z^D has a subset of at least K^(-34) of its size whose affine dimension is at most (80/log 2) log K; a map between finite groups of exponent 2 whose additive defects f(x+y) - f(x) - f(y) all lie in a set S differs from a homomorphism by a map taking at most…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.NT",
+    "msc:11B30",
+    "msc:11P70",
+    "msc:20K01",
+    "msc:94A17"
+  ],
+  "published": "2026-09-06",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "On a conjecture of Marton",
+      "identifier": "arXiv:2311.05762",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Marton's conjecture in abelian groups with bounded torsion",
+      "identifier": "arXiv:2404.02244",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Improved Exponent for Marton's Conjecture in $\\mathbb{F}_2^n$",
+      "identifier": "arXiv:2404.09639",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/teorth/pfr",
+  "commit": "3d7898164ebff70a809dce618f9082a7b39e7850",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "additive-combinatorics",
+      "lean-formalization",
+      "freiman-ruzsa"
+    ],
+    "reason": "Lean formalization of Marton's conjecture and its consequences in additive combinatorics.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

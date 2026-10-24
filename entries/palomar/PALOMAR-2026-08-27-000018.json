@@ -1,0 +1,50 @@
+{
+  "key": "PALOMAR-2026-08-27-000018",
+  "source": "palomar",
+  "url": "https://github.com/shaikidris/CollatzEndpointTransport-Palomar/tree/9505e8fd59f2b49a2dad269436766319c57b4012/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-27-000018-v3.json",
+  "title": "Refined Arbitrary-Target Transport Through Collatz Endpoints",
+  "authors": [
+    "Idris Ali Shaik"
+  ],
+  "summary": "A Lean 4 formalization of a quantitative stability theorem for the one-block endpoint-pullback operator of the shortcut Collatz map. If an arbitrary target set has at most C N^(1-D) exceptions among the positive integers up to N, then, for every central Renyi order 1/2 < theta < 1, every admissible fixed central window, and every positive transport coefficient below the explicit asymptotic slope, its pullback through one floor(log_2 n)-step endpoint is (K(1+C^(theta/(1+theta)))D^(-theta/(2(1+theta))), transport*D)-dense whenever D is sufficiently small. The cutoff and K depend only on the…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.PR",
+    "msc:11B83",
+    "msc:37P99",
+    "msc:60F10"
+  ],
+  "published": "2026-09-07",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Quantitative Endpoint Transport for the Collatz Map with a Natural-Density Descent Application",
+      "identifier": "doi:10.5281/zenodo.22544006",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/shaikidris/CollatzEndpointTransport-Palomar",
+  "commit": "9505e8fd59f2b49a2dad269436766319c57b4012",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "lean",
+      "collatz",
+      "probability"
+    ],
+    "reason": "Lean formalization of a quantitative stability theorem for Collatz endpoint pullbacks.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

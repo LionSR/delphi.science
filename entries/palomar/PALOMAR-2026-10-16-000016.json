@@ -1,0 +1,59 @@
+{
+  "key": "PALOMAR-2026-10-16-000016",
+  "source": "palomar",
+  "url": "https://github.com/jtraverso/euler-petersen/tree/02c3f1a5327c5f066938860bb07e9fce226b36ca/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000016-v1.json",
+  "title": "Euler's theorem on Eulerian circuits and trails, and Petersen's 2-factor theorem",
+  "authors": [
+    "Juan Pablo Traverso Gianini"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of the classical characterization of Eulerian graphs and of Petersen's 2-factor theorem, for finite simple graphs. (1) Euler–Hierholzer: a finite connected graph has an Eulerian circuit if and only if every vertex has even degree, and the circuit can start at any prescribed vertex. (2) Eulerian trails: a finite connected graph has an Eulerian trail if and only if it has 0 or 2 vertices of odd degree; when the odd vertices are exactly a and b, there is an Eulerian trail from a to b. (3) Eulerian orientations: if every degree is even, the edges can be oriented…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C45",
+    "msc:05C70",
+    "msc:05C20"
+  ],
+  "published": "2026-10-16",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Solutio problematis ad geometriam situs pertinentis",
+      "identifier": "Euler Archive E53",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Ueber die Möglichkeit, einen Linienzug ohne Wiederholung und ohne Unterbrechung zu umfahren",
+      "identifier": "doi:10.1007/BF01442866",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Die Theorie der regulären graphs",
+      "identifier": "doi:10.1007/BF02392606",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jtraverso/euler-petersen",
+  "commit": "02c3f1a5327c5f066938860bb07e9fce226b36ca",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "eulerian-graphs",
+      "formal-verification",
+      "lean"
+    ],
+    "reason": "Lean 4 formalization of Euler's circuit theorem and Petersen's 2-factor theorem.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

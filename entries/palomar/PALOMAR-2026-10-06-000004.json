@@ -1,0 +1,52 @@
+{
+  "key": "PALOMAR-2026-10-06-000004",
+  "source": "palomar",
+  "url": "https://github.com/linrock/math-proofs/tree/b135fd8f6e5ee25129c4855e06c93739dd80651d/erdos-575",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-06-000004-v1.json",
+  "title": "Erdős 575: bipartite extremal-graph compactness",
+  "authors": [
+    "Linmiao Xu"
+  ],
+  "summary": "A complete Lean 4 disproof of Erdős problem 575 in both its unrestricted and cycle-containing formulations: a finite family F of forbidden graphs containing a bipartite member need not contain a bipartite H ∈ F with ex(n; H) = O(ex(n; F)). Proves the unrestricted case from scratch via the bipartite forest family F_0 = {K_{1,2}, 2K_2} (where ex(n; F_0) ≤ 1 while ex(n; K_{1,2}) ≥ ⌊n/2⌋ and ex(n; 2K_2) ≥ n - 1), and resolves the cycle-containing case by adapting OpenAI's all-bipartite cyclic counterexample family from Erdős problem 180 (where ex(n; F) = O(n^(21/16)) and ex(n; H) = Ω(n^(4/3))…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C35"
+  ],
+  "published": "2026-10-06",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Ten advances in mathematics and theoretical computer science",
+      "identifier": "https://cdn.openai.com/pdf/ten-proofs-oai.pdf",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "The Erdős–Simonovits Compactness Conjecture Needs More Assumptions",
+      "identifier": "https://ywigderson.math.ethz.ch/math/static/Compactness.pdf",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/linrock/math-proofs",
+  "commit": "b135fd8f6e5ee25129c4855e06c93739dd80651d",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "extremal-graph-theory",
+      "combinatorics",
+      "erdos-problems",
+      "lean-formalization"
+    ],
+    "reason": "Lean disproof of an extremal graph theory statement for Erdős problem 575.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

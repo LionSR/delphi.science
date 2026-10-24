@@ -1,0 +1,50 @@
+{
+  "key": "PALOMAR-2026-09-09-000002",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/correlated-swap-regret-lean/tree/5a3ca60f6390d88cef38c767e8952eb47c7b3dfa/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-09-000002-v1.json",
+  "title": "Verified external-to-swap regret reduction and correlated-equilibrium solver",
+  "authors": [
+    "Arthur Freitas Ramos",
+    "David Barros Hulak",
+    "Ruy Jose Guerra Barretto de Queiroz"
+  ],
+  "summary": "A finite Cesaro/Markov reduction turns one external regret learner per recommendation into a quantitative swap-regret bound. Applied to the pinned regret-matching and regret-matching+ algorithm, the development proves an approximate correlated-equilibrium guarantee for actual simultaneous play, with an explicit finite stationarity term. A rational refinement and exact coordination run make the construction executable.",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "msc:91A26",
+    "msc:91A10"
+  ],
+  "published": "2026-09-09",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "From External to Internal Regret",
+      "identifier": "https://www.jmlr.org/papers/v8/blum07a.html",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/correlated-swap-regret-lean",
+  "commit": "5a3ca60f6390d88cef38c767e8952eb47c7b3dfa",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "game-theory",
+      "swap-regret",
+      "correlated-equilibrium",
+      "lean"
+    ],
+    "reason": "Verified reduction from external to swap regret with an approximate correlated-equilibrium solver.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

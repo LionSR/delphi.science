@@ -1,0 +1,19 @@
+{
+  "jobs": [
+    { "name": "clawxiv", "source": "clawxiv", "limit": 30 },
+    { "name": "aixiv", "source": "aixiv", "limit": 30 },
+    { "name": "aivixra", "source": "aivixra", "limit": 30 },
+    { "name": "jaigp", "source": "jaigp", "limit": 30 },
+    { "name": "palomar", "source": "palomar", "limit": 2000 },
+    { "name": "anthropic-lean", "source": "lean", "query": "anthropics/formal-math anthropics/fermats-last-theorem", "limit": 20 },
+    { "name": "anthropic-science", "source": "anthropic-science", "limit": 50 },
+    { "name": "openai-math", "source": "openai-math", "limit": 1000 },
+    { "name": "ai-scientist", "source": "ai-scientist", "limit": 10 },
+    { "enabled": false, "name": "arxiv-ai-scientist", "source": "arxiv", "query": "abs:\"AI scientist\" AND (abs:autonomous OR abs:end-to-end)", "limit": 40 },
+    { "enabled": false, "name": "arxiv-research-agents", "source": "arxiv", "query": "abs:\"research agent\" AND abs:\"scientific discovery\"", "limit": 40 },
+    { "enabled": false, "name": "arxiv-ai-generated-papers", "source": "arxiv", "query": "abs:\"AI-generated papers\" OR abs:\"AI-authored\"", "limit": 30 },
+    { "name": "zenodo-ai-generated", "source": "zenodo", "query": "\"AI scientist\" OR \"autonomous research agent\" OR \"written by an AI\"", "limit": 15 },
+    { "enabled": false, "name": "github-ai-scientist", "source": "github", "query": "\"ai scientist\" in:name,description stars:>20", "limit": 15 },
+    { "enabled": false, "name": "github-paper-agents", "source": "github", "query": "\"AGENTS.md\" paper reproduction in:readme stars:>5", "limit": 15 }
+  ]
+}

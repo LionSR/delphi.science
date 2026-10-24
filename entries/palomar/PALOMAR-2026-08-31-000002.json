@@ -1,0 +1,63 @@
+{
+  "key": "PALOMAR-2026-08-31-000002",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/GraphCoveringTheory/tree/be06b655ae6d2cfee8fee8033b2ff0f5a4f99bf5/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-31-000002-v1.json",
+  "title": "Arthur742Ramos/GraphCoveringTheory",
+  "authors": [
+    "Arthur Freitas Ramos",
+    "David Barros Hulak",
+    "Ruy J. G. B. de Queiroz"
+  ],
+  "summary": "Formalizes the sharp Schreier index formula for a finite-index subgroup of a free group on a finite nonempty generating type. For a finite nonempty type alpha, a subgroup H of FreeGroup alpha with finite index d is proved equivalent, as a group, to FreeGroup (Fin (1 + d * (card alpha - 1))). More strongly, the repository exposes a FreeGroupBasis for H with this indexing type. The proof realizes H as the vertex group of the finite action-groupoid covering on the coset space, verifies the covering locally by explicit star and costar bijections, and counts the complement of a geodesic spanning…",
+  "domain": "math.GR",
+  "tags": [
+    "math.GR",
+    "math.AT",
+    "math.LO",
+    "msc:20E07",
+    "msc:05C25",
+    "msc:18B40"
+  ],
+  "published": "2026-08-31",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Mathlib GroupTheory.FreeGroup.NielsenSchreier",
+      "identifier": "",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Mathlib Combinatorics.Quiver.Covering",
+      "identifier": "",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Mathlib Combinatorics.Quiver.Arborescence",
+      "identifier": "",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/GraphCoveringTheory",
+  "commit": "be06b655ae6d2cfee8fee8033b2ff0f5a4f99bf5",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "group-theory",
+      "free-groups",
+      "lean-formalization",
+      "covering-theory"
+    ],
+    "reason": "Lean formalization of the sharp Schreier index formula for free group subgroups.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

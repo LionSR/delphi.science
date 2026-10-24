@@ -1,0 +1,53 @@
+{
+  "key": "PALOMAR-2026-09-25-000028",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/gibbard-satterthwaite-lean/tree/8398e65a99cd3d5e973c64963c4bab8c0491947c/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-25-000028-v1.json",
+  "title": "Gibbard-Satterthwaite theorem (strategy-proof social choice)",
+  "authors": [
+    "Arthur Freitas Ramos"
+  ],
+  "summary": "Formalizes the Gibbard-Satterthwaite theorem for finite electorates and finite alternative sets with at least three alternatives: every onto, strategy-proof social choice function is dictatorial. The proof constructs a social welfare function and reduces to Arrow's impossibility theorem.",
+  "domain": "math.LO",
+  "tags": [
+    "math.LO",
+    "cs.GT",
+    "msc:91B14"
+  ],
+  "published": "2026-09-25",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Manipulation of voting schemes: A general result",
+      "identifier": "https://doi.org/10.2307/1914083",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Strategy-proofness and Arrow's conditions: Existence and correspondence theorems for voting procedures and social welfare functions",
+      "identifier": "https://doi.org/10.1016/0022-0531(75)90002-6",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/gibbard-satterthwaite-lean",
+  "commit": "8398e65a99cd3d5e973c64963c4bab8c0491947c",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "social-choice",
+      "lean-formalization",
+      "mechanism-design",
+      "game-theory"
+    ],
+    "reason": "Lean formalization of the Gibbard-Satterthwaite theorem via reduction to Arrow's theorem.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

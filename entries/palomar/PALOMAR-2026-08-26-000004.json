@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-08-26-000004",
+  "source": "palomar",
+  "url": "https://github.com/JD-Jones-ASES/fs-formal/tree/4e796565301b1425c53e807a6edf408535b2e922/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-26-000004-v1.json",
+  "title": "JD-Jones-ASES/fs-formal",
+  "authors": [
+    "JD Jones"
+  ],
+  "summary": "A Lean 4 formalization of an explicit construction for the Furstenberg-Sárközy problem. If D(N) is the largest size of a subset of {1,...,N} with no nonzero square difference, the development proves that an explicit eleven-block constant alphaInf is at most liminf log D(N)/log N, that every exponent below alphaInf holds eventually pointwise, and that 0.7537 < alphaInf. The proof includes the finite certificates, the composite even-digit lift, CRT gluing, asymptotic passage, and kernel-checked numerical inequalities. This strictly improves Krachun's preceding explicit exponent…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.NT",
+    "msc:11B30",
+    "msc:11B75"
+  ],
+  "published": "2026-08-26",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "An improved lower bound for the Furstenberg-Sárközy problem",
+      "identifier": "https://github.com/JD-Jones-ASES/fs-lower-bound/tree/c2c06875ee4544e069e8da16564ee429d870a13e",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/JD-Jones-ASES/fs-formal",
+  "commit": "4e796565301b1425c53e807a6edf408535b2e922",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "additive-combinatorics",
+      "number-theory",
+      "lean",
+      "furstenberg-sarkozy"
+    ],
+    "reason": "Lean formalization of explicit exponent bounds for the Furstenberg–Sárközy square-difference problem.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "key": "PALOMAR-2026-10-13-000001",
+  "source": "palomar",
+  "url": "https://github.com/JD-Jones-ASES/qubit-cloning-lean/tree/f619a52e67849f80205127e3ba7877f7f7658e50/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-13-000001-v1.json",
+  "title": "Optimal universal 1 → 2 qubit cloning at fidelity 5/6, the universal-NOT, and asymmetric cloning",
+  "authors": [
+    "JD Jones"
+  ],
+  "summary": "A Lean 4 development of the optimal universal 1 -> 2 cloning of a qubit, with every figure of merit finite: a channel from one qubit to two is a finite Kraus family K_i : C^2 -> C^2 (x) C^2 with sum K_i^* K_i = 1 (the blank qubit is fixed, so this is a 1 -> 2 map; the Choi-Kraus theorem is not proved), the two clone fidelities of a pure input psi are Re and Re , and F1-bar, F2-bar are their averages over the six Pauli eigenstates (1 +- sigma)/2, Gaussian-rational density matrices (the six states form a 2-design, the octahedron being a spherical 3-design, so these equal the Bloch-sphere…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "msc:81P45",
+    "msc:81P47",
+    "msc:15A45"
+  ],
+  "published": "2026-10-13",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Quantum copying: Beyond the no-cloning theorem",
+      "identifier": "doi:10.1103/PhysRevA.54.1844",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Optimal quantum cloning machines",
+      "identifier": "doi:10.1103/PhysRevLett.79.2153",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Optimal cloning of pure states",
+      "identifier": "doi:10.1103/PhysRevA.58.1827",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Optimal copying of one quantum bit",
+      "identifier": "doi:10.1103/PhysRevA.58.4377",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Highly asymmetric quantum cloning in arbitrary dimension",
+      "identifier": "arXiv:quant-ph/0505212",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/JD-Jones-ASES/qubit-cloning-lean",
+  "commit": "f619a52e67849f80205127e3ba7877f7f7658e50",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "quantum-information",
+      "quantum-cloning",
+      "lean"
+    ],
+    "reason": "Lean development of optimal universal qubit cloning, universal-NOT, and asymmetric cloning fidelities.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

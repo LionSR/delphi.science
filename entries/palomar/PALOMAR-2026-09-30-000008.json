@@ -1,0 +1,51 @@
+{
+  "key": "PALOMAR-2026-09-30-000008",
+  "source": "palomar",
+  "url": "https://github.com/mmislan/palomar-p038-futile-cycle-child-selections/tree/87366c2f6997480f4127b634c813e8daf8199abf/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000008-v1.json",
+  "title": "Determinants and unstable cores in sequential distributive phosphorylation",
+  "authors": [
+    "Michael Mislan"
+  ],
+  "summary": "Vassena and Stadler (arXiv:2308.11486v3, Supplementary Example D) conjectured that sequential distributive phosphorylation cycles have only unstable-positive cores and that every invertible child-selection matrix has determinant of absolute value one. The determinant assertion is proved, and the restriction to unstable-positive cores is disproved. In the n-site cycle, every child-selection matrix has determinant 0, 1 or -1. For every n >= 3, a six-species child-selection matrix is minimally Hurwitz-unstable and has determinant 1, giving an unstable-negative core. For every n >= 2, there is…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "q-bio.MN",
+    "msc:92C42",
+    "msc:15A15",
+    "msc:15A18",
+    "msc:34D20"
+  ],
+  "published": "2026-09-30",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Child-selection determinants and unstable cores in sequential distributive futile cycles",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/mmislan/palomar-p038-futile-cycle-child-selections",
+  "commit": "87366c2f6997480f4127b634c813e8daf8199abf",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "dynamical-systems",
+      "chemical-reaction-networks",
+      "phosphorylation",
+      "linear-algebra"
+    ],
+    "reason": "Determinant results and unstable cores for sequential distributive phosphorylation cycles.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

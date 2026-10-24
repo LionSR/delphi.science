@@ -1,0 +1,31 @@
+{
+  "key": "Posterior-replicas-and-conditional-information-in-Gaussian-regression",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Posterior-replicas-and-conditional-information-in-Gaussian-regression-September-27-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Posterior-replicas-and-conditional-information-in-Gaussian-regression-September-27-2026/paper.pdf",
+  "title": "Posterior replicas and conditional information in Gaussian regression",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For a signal with density bounded by L relative to uniform probability on $`S^{d-1}`$, we bound the information in a finite message W formed from exact Gaussian measurements, conditional on an independent projection revealed only to the analyst. For explicit row counts proportional to d , the bound is $`O(H(W)/d+d+\\log(2+\\log L))`$. Consequently, a finite-state learner with $`o(d^2)`$ persistent bits and a deterministic sample horizon needs $`\\Omega(d\\log(1/\\epsilon))`$ fresh noiseless Gaussian measurements for constant-probability angular accuracy $`0\\lt \\epsilon\\le1/10`$ under the uniform…",
+  "domain": "Theoretical computer science",
+  "published": "2026-09-27",
+  "family": "140",
+  "family_title": "Memory–sample lower bounds for noiseless Gaussian regression",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "information-theory",
+      "statistics",
+      "learning-theory"
+    ],
+    "reason": "Bounds conditional information and measurement requirements for angular learning from Gaussian measurements.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

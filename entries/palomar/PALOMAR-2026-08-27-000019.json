@@ -1,0 +1,50 @@
+{
+  "key": "PALOMAR-2026-08-27-000019",
+  "source": "palomar",
+  "url": "https://github.com/yuhangshi888/sun-cotangent-permanent-counterexample-lean/tree/8db902a56070f0d90866bf8a44d485a20cb817af/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-27-000019-v1.json",
+  "title": "yuhangshi888/sun-cotangent-permanent-counterexample-lean",
+  "authors": [
+    "Yuhang Shi"
+  ],
+  "summary": "A Lean 4 and Mathlib formalization of the exact evaluation of the normalized 14 by 14 cotangent permanent at p = 29. The formalization proves that its value is 84643985981440 and hence gives a counterexample to the cotangent sign inequality in Zhi-Wei Sun's Conjecture 4.7(ii). It includes the analytic-to-cyclotomic bridge, two separately kernel-checked finite permanent certificates, Chinese-remainder and coefficientwise integer lifting, the Section 3 Archimedean uniqueness argument, and equation (4.1) in the integral cyclotomic quotient.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO",
+    "msc:11C20",
+    "msc:15A15",
+    "msc:11A07"
+  ],
+  "published": "2026-08-27",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A counterexample to Sun's sign conjecture for cotangent permanents",
+      "identifier": "doi:10.5281/zenodo.22105063",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/yuhangshi888/sun-cotangent-permanent-counterexample-lean",
+  "commit": "8db902a56070f0d90866bf8a44d485a20cb817af",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "lean",
+      "permanents",
+      "cotangent-sums"
+    ],
+    "reason": "Lean verification of a permanent value giving a counterexample to a Zhi-Wei Sun conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

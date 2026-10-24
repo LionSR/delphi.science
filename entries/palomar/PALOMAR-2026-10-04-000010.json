@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-10-04-000010",
+  "source": "palomar",
+  "url": "https://github.com/linrock/math-proofs/tree/7caa4144741e10f96cf79d6f7313a0efd9a18b67/erdos-546",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-04-000010-v1.json",
+  "title": "Erdős 546: sparse graph Ramsey numbers",
+  "authors": [
+    "Linmiao Xu"
+  ],
+  "summary": "A complete Lean 4 proof of the affirmative answer to Erdős problem 546 (Sudakov's theorem): there exists an absolute constant C > 0 such that every finite simple graph G with m edges and no isolated vertices has diagonal Ramsey number R(G) ≤ 2^(C √m). Formalizing Sudakov's 2011 proof—including high-degree vertex deletion, greedy bounded-degree embedding and hereditary sparse cuts, low-density monochromatic-pair extraction, and iterative clique-reservoir amplification. This proves the uniform explicit bound R(G) ≤ 2^(4000 √m) across all finite simple graphs without isolated vertices…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C55",
+    "msc:05C35",
+    "msc:05D10"
+  ],
+  "published": "2026-10-04",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A conjecture of Erdős on graph Ramsey numbers",
+      "identifier": "https://arxiv.org/abs/1002.0095",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/linrock/math-proofs",
+  "commit": "7caa4144741e10f96cf79d6f7313a0efd9a18b67",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "ramsey-theory",
+      "sparse-graphs",
+      "erdos-problems",
+      "lean-formalization"
+    ],
+    "reason": "Lean 4 formalization of Sudakov's sparse graph Ramsey bound answering Erdős problem 546.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

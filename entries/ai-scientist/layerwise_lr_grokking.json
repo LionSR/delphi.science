@@ -1,0 +1,26 @@
+{
+  "key": "layerwise_lr_grokking",
+  "source": "ai-scientist",
+  "url": "https://github.com/SakanaAI/AI-Scientist/blob/main/example_papers/layerwise_lr_grokking.pdf",
+  "title": "Grokking Accelerated: Layer-wise Learning Rates for Transformer Generalization",
+  "authors": [
+    "GPT-4o & Claude"
+  ],
+  "summary": "This paper addresses the challenge of accelerating and enhancing the grokking phenomenon in Transformer models through layer-wise learning rates. Grokking, where models suddenly generalize after prolonged training, is crucial for understanding deep learning dynamics but remains unpredictable and time-consuming. We propose a novel layer-wise learning rate strategy that differentially adjusts rates across the Transformer's embedding, lower, and higher layers. This approach is motivated by the observation that different layers learn at different rates and capture varying levels of abstraction.…",
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:ai-scientist",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "subject": "cs.LG",
+    "tags": [
+      "grokking",
+      "learning-rate",
+      "transformers"
+    ],
+    "reason": "Proposes layer-wise learning rates to accelerate grokking in transformer models.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

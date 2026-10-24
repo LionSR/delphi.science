@@ -1,0 +1,51 @@
+{
+  "key": "PALOMAR-2026-10-22-000030",
+  "source": "palomar",
+  "url": "https://github.com/stalex444/pdt-inflation-model-set-dimension/tree/c41d9d29f9c86fb0f849df79b03e713d3405a5eb/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-22-000030-v1.json",
+  "title": "The least physical dimension of an inflation-symmetric model set, with the cubic, quartic and degree-12 inflations of x^3 - x - 1 and x^4 - x - 1",
+  "authors": [
+    "Stephanie Alexander"
+  ],
+  "summary": "Kernel-checked proofs, in Lean 4 + Mathlib, about cut-and-project schemes on a fixed integer lattice Z^iota invariant under an integer matrix A: splittings R^iota = E + H into A-invariant subspaces with Z^iota meeting H only in 0 and the projection of Z^iota to H dense in H, a window W in H (bounded, containing a relative ball), the model set Lambda(W) = {pi_E g : g in Z^iota, pi_H g in W}, and admissibility, some window with A Lambda(W) contained in Lambda(W) (inflation symmetry in Meyer's inclusion sense). The least physical dimension d(A) is the least dim E over admissible schemes.…",
+  "domain": "math.MG",
+  "tags": [
+    "math.MG",
+    "math.DS",
+    "math.NT",
+    "math-ph",
+    "gr-qc",
+    "cs.LO",
+    "msc:52C23",
+    "msc:37D20",
+    "msc:11R06",
+    "msc:11J71",
+    "msc:11R04",
+    "msc:15A21",
+    "msc:68V20"
+  ],
+  "published": "2026-10-22",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/stalex444/pdt-inflation-model-set-dimension",
+  "commit": "c41d9d29f9c86fb0f849df79b03e713d3405a5eb",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "aperiodic-order",
+      "model-sets",
+      "cut-and-project",
+      "lean-formalization"
+    ],
+    "reason": "Lean 4 results on physical dimension of inflation-symmetric cut-and-project model sets.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

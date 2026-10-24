@@ -1,0 +1,32 @@
+{
+  "key": "QMA-hardness-of-continuum-Coulomb-energy-with-unit-nuclear-charges",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/QMA-hardness-of-continuum-Coulomb-energy-with-unit-nuclear-charges-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/QMA-hardness-of-continuum-Coulomb-energy-with-unit-nuclear-charges-September-24-2026/QMA-hardness-of-continuum-Coulomb-energy-with-unit-nuclear-charges-September-24-2026.pdf",
+  "title": "QMA-hardness of continuum Coulomb energy with unit nuclear charges",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that approximating the electronic ground-energy infimum for clamped unit-charge nuclei is QMA-hard on the full spinful fermionic continuum space. A deterministic classical polynomial-time reduction produces polynomially many nuclei at distinct rational positions and polynomially many electrons, with polynomial rational bit lengths and threshold separation at least one. No orbital basis, magnetic field, or additional external potential is supplied, and no binding assumption is imposed.",
+  "domain": "Mathematical physics",
+  "published": "2026-09-24",
+  "family": "275",
+  "family_title": "QMA-hardness of continuum Coulomb energy",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "quantum-complexity",
+      "quantum-chemistry",
+      "qma",
+      "electronic-structure"
+    ],
+    "reason": "Proves QMA-hardness of approximating electronic ground energy for clamped unit-charge nuclei.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-09-01-000006",
+  "source": "palomar",
+  "url": "https://github.com/JD-Jones-ASES/Hadamard-B-Formal/tree/d99c0180872e4213e54272f9699d28f28032a2a3/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-01-000006-v1.json",
+  "title": "hadamard-b-formal: the bordered Goethals-Seidel characterisation, the s=1 layer, and Theorem D",
+  "authors": [
+    "JD Jones"
+  ],
+  "summary": "A Lean 4 and Mathlib formalization of part of the theorem layer of the Hadamard-B note on bordered Goethals-Seidel arrays: twenty-six compared theorems over fifty-eight compared definitions. Theorem A characterises, by an if-and-only-if, when a Goethals-Seidel array of four sign-valued sequences over a finite abelian group extends to a Hadamard matrix through a border of width 4s whose strips are constant on the cosets of a subgroup. Theorem B is its house form, whose hypothesis is exactly a two-tier periodic-autocorrelation profile, and carries two classical degenerations at an arbitrary…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05B20"
+  ],
+  "published": "2026-09-01",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Hadamard-B: bordered Goethals-Seidel arrays - characterisation, classification, and three equivalence classes at order 668",
+      "identifier": "https://github.com/JD-Jones-ASES/Hadamard-B/tree/01a7f0614208ca68d69e64a7cd5b560aadafbb8a",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/JD-Jones-ASES/Hadamard-B-Formal",
+  "commit": "d99c0180872e4213e54272f9699d28f28032a2a3",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "combinatorics",
+      "hadamard-matrices",
+      "lean",
+      "finite-groups"
+    ],
+    "reason": "Lean formalization of bordered Goethals-Seidel characterisations for Hadamard matrix constructions.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

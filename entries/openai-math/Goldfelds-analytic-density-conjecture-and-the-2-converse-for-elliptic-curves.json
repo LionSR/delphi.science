@@ -1,0 +1,32 @@
+{
+  "key": "Goldfelds-analytic-density-conjecture-and-the-2-converse-for-elliptic-curves",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Goldfelds-analytic-density-conjecture-and-the-2-converse-for-elliptic-curves-October-7-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Goldfelds-analytic-density-conjecture-and-the-2-converse-for-elliptic-curves-October-7-2026/paper.pdf",
+  "title": "Goldfeld's analytic density conjecture and the 2-converse for elliptic curves",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove Goldfeld's analytic density conjecture: for every elliptic curve E over ℚ, the quadratic twists of E with analytic rank zero and one each have density 1/2 among signed squarefree twist parameters ordered by absolute value. We also prove the low-corank 2-converse: if the $`2^\\infty`$-Selmer corank of E is zero or one, then it equals the analytic and Mordell–Weil ranks, and the Tate–Shafarevich group is finite.",
+  "domain": "Number theory",
+  "published": "2026-10-07",
+  "family": "006",
+  "family_title": "Goldfeld’s conjecture: densities and mean analytic rank",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "elliptic-curves",
+      "quadratic-twists",
+      "bsd-conjecture"
+    ],
+    "reason": "Proves Goldfeld's density conjecture for quadratic twists and a 2-converse for elliptic curves.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

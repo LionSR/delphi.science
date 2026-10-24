@@ -1,0 +1,57 @@
+{
+  "key": "PALOMAR-2026-08-29-000005",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/TopologicalComputationalPaths/tree/8254c40d0de03ff469c7c9c05087b8bc154e9a87/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-29-000005-v1.json",
+  "title": "Arthur742Ramos/TopologicalComputationalPaths",
+  "authors": [
+    "Arthur Freitas Ramos",
+    "Ruy J. G. B. de Queiroz",
+    "Anjolina Grisi de Oliveira",
+    "Tiago M. L. de Veras",
+    "David Barros Hulak"
+  ],
+  "summary": "A Lean formalization of topological semantics for endpoint-varying computational paths. It constructs both the canonical final composable quotient and the ordinary pullback of quotient arrows. The selected result proves that the canonical comparison is a continuous bijection and characterizes exactly when it is quotient, a homeomorphism, and an induced topology agreement; under these equivalent conditions ordinary composition is continuous. It also records discontinuity as an obstruction and proves compact--Hausdorff and discrete sufficient cases. The selected certificate additionally…",
+  "domain": "math.AT",
+  "tags": [
+    "math.AT",
+    "math.GN",
+    "msc:22A22",
+    "msc:54B15",
+    "msc:03B38",
+    "msc:55Q05",
+    "msc:68V20",
+    "msc:54B30"
+  ],
+  "published": "2026-08-29",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Topological Semantics for Scoped Computational Paths",
+      "identifier": "https://github.com/Arthur742Ramos/ComputationalPathsLean/blob/2a2baa1f31c68f0e696021db91f8381dd2854652/paper/topological/main.tex",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/TopologicalComputationalPaths",
+  "commit": "8254c40d0de03ff469c7c9c05087b8bc154e9a87",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "topology",
+      "computational-paths",
+      "lean-formalization",
+      "homotopy-theory"
+    ],
+    "reason": "Lean formalization of topological semantics for endpoint-varying computational paths.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

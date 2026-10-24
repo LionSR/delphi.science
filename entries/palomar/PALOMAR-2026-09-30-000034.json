@@ -1,0 +1,53 @@
+{
+  "key": "PALOMAR-2026-09-30-000034",
+  "source": "palomar",
+  "url": "https://github.com/roos-j/lean-discretesw/tree/b2c652acaf76541089e1b09079e5c0b3c86b98a8/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000034-v2.json",
+  "title": "Formalization of a discrete Carleson theorem of Stein-Wainger type",
+  "authors": [
+    "Joris Roos"
+  ],
+  "summary": "This is a Lean 4 formalization of the main theorem of the papers arXiv:1907.00405 and arXiv:2107.14616 by Ben Krause and Joris Roos. The result concerns l^p boundedness for a discrete maximal singular oscillatory operator of Stein-Wainger type, also called a discrete Carleson operator.",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA",
+    "msc:42B20",
+    "msc:42B25",
+    "msc:42B15"
+  ],
+  "published": "2026-10-17",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Discrete analogues of maximally modulated singular integrals of Stein-Wainger type: l^p bounds for p > 1",
+      "identifier": "J. Funct. Anal. 285 (2023), no. 10, Paper No. 110123, doi:10.1016/j.jfa.2023.110123; arXiv:2107.14616v2",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Discrete analogues of maximally modulated singular integrals of Stein-Wainger type",
+      "identifier": "J. Eur. Math. Soc. (JEMS) 24 (2022), no. 9, 3183-3213, doi:10.4171/JEMS/1160; arXiv:1907.00405v3",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/roos-j/lean-discretesw",
+  "commit": "b2c652acaf76541089e1b09079e5c0b3c86b98a8",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "harmonic-analysis",
+      "discrete-carleson",
+      "lean-formalization"
+    ],
+    "reason": "Lean 4 formalization of a discrete Carleson theorem of Stein–Wainger type.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

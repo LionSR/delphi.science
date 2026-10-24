@@ -1,0 +1,32 @@
+{
+  "key": "Hardness-of-finding-large-independent-sets-in-three-colorable-graphs",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Hardness-of-finding-large-independent-sets-in-three-colorable-graphs-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Hardness-of-finding-large-independent-sets-in-three-colorable-graphs-September-24-2026/Hardness-of-finding-large-independent-sets-in-three-colorable-graphs-September-24-2026.pdf",
+  "title": "Hardness of finding large independent sets in three-colorable graphs",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that, for every fixed $`0\\lt \\delta\\lt 1/3`$, it is NP-hard to distinguish three-colorable graphs from graphs in which every independent set has fewer than δ times the number of vertices. Consequently, for every fixed integer c ≥ 3, finding a proper c -coloring of a three-colorable graph is NP-hard.",
+  "domain": "Theoretical computer science",
+  "published": "2026-09-24",
+  "family": "106",
+  "family_title": "Hardness of coloring three-colorable graphs",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "computational-complexity",
+      "graph-coloring",
+      "independent-sets",
+      "np-hardness"
+    ],
+    "reason": "Proves NP-hardness of distinguishing three-colorable graphs from graphs with small independent sets.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

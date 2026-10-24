@@ -1,0 +1,42 @@
+{
+  "key": "PALOMAR-2026-09-09-000001",
+  "source": "palomar",
+  "url": "https://github.com/itpplasma/global-stafford-formal/tree/e676caed1253e5d09fc6699d5dc683febbabf7bb/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-09-000001-v2.json",
+  "title": "Global Stafford",
+  "authors": [
+    "Christopher Albert"
+  ],
+  "summary": "Lean formalization of the same-divisor identity 1 = d*R + F*d*S in the ring of k-linear finite-order differential operators of every smooth integral finitely generated algebra over a characteristic-zero field, extending Stafford's Conjecture 3.8 from Weyl algebras to smooth affine varieties.",
+  "domain": "math.RA",
+  "tags": [
+    "math.RA",
+    "math.AG",
+    "msc:16S32",
+    "msc:14F10"
+  ],
+  "published": "2026-09-09",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/itpplasma/global-stafford-formal",
+  "commit": "e676caed1253e5d09fc6699d5dc683febbabf7bb",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "ring-theory",
+      "differential-operators",
+      "algebraic-geometry",
+      "lean"
+    ],
+    "reason": "Lean formalization extending Stafford's same-divisor identity to smooth affine varieties.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

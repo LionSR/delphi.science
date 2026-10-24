@@ -1,0 +1,58 @@
+{
+  "key": "PALOMAR-2026-09-05-000001",
+  "source": "palomar",
+  "url": "https://github.com/npflueger/brill-noether-graphs/tree/7987ddbab4f757592e2d2b52565f2c3670e4ff6b/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-05-000001-v1.json",
+  "title": "Brill--Noether generality and gonality for chains of cycles and theta graphs",
+  "authors": [
+    "Nathan Pflueger"
+  ],
+  "summary": "This repository formalizes Brill--Noether generality for chains whose factors may be cycles or theta graphs, subject to a genericity condition on path lengths and an evenly-marked condition on the theta factors. A graph is called Brill--Noether general if the possible degrees and ranks of its chip configurations, in the sense of Baker and Norine, match the behavior of a general algebraic curve. Here we use only the existential form of Brill--Noether generality, without computing dimensions. Following Cools--Draisma--Payne--Robeva, we also formalize a mild vanishing-order condition that…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C57",
+    "msc:14T15",
+    "msc:14H51"
+  ],
+  "published": "2026-09-05",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A tropical proof of the Brill--Noether theorem",
+      "identifier": "https://doi.org/10.1016/j.aim.2012.02.019",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "(Hurwitz-)Brill--Noether general marked graphs via the Demazure product",
+      "identifier": "https://arxiv.org/abs/2201.12316",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Twice-marked banana graphs & Brill--Noether generality",
+      "identifier": "https://doi.org/10.5802/alco.443",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/npflueger/brill-noether-graphs",
+  "commit": "7987ddbab4f757592e2d2b52565f2c3670e4ff6b",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "brill-noether",
+      "chip-firing",
+      "lean-formalization"
+    ],
+    "reason": "Formalizes Brill–Noether generality and existence results for chains of cycles and theta graphs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

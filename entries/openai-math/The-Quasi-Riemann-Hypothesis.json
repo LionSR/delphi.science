@@ -1,0 +1,31 @@
+{
+  "key": "The-Quasi-Riemann-Hypothesis",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/paper.pdf",
+  "title": "The Quasi-Riemann Hypothesis: A Zero-Free Half-Plane $`\\Re s\\gt 7/8`$",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that all finite-order Hecke L -functions over $`\\mathbb Q(\\sqrt{-3})`$ and all Dirichlet L -functions are zero-free in the half-plane $`\\Re s\\gt 7/8`$, with the principal pole at s = 1 allowed. In particular, the Riemann zeta function is zero-free in this half-plane, proving the quasi-Riemann hypothesis.",
+  "domain": "Number theory",
+  "published": "2026-09-30",
+  "family": "003",
+  "family_title": "The quasi-Riemann hypothesis",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "analytic-number-theory",
+      "l-functions",
+      "zeta-function"
+    ],
+    "reason": "Claims a zero-free half-plane for Dirichlet and Hecke L-functions over Q(sqrt(-3)).",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

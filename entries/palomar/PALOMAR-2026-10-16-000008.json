@@ -1,0 +1,42 @@
+{
+  "key": "PALOMAR-2026-10-16-000008",
+  "source": "palomar",
+  "url": "https://github.com/AItoBit/restricted-sumsets-counterexamples/tree/f2fec945b6c156edec290e15a7ab54bd3db2ba7c/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000008-v1.json",
+  "title": "Counterexamples to the restricted-sumset inverse theorem in arXiv:2609.10148v2",
+  "authors": [
+    "alexander"
+  ],
+  "summary": "Explicit finite counterexamples to Theorem A (Theorem 3.1) and Lemma 3.2 of Li and Liang, arXiv:2609.10148v2. In Z/13Z, sets of sizes seven and four satisfy all size hypotheses and have restricted sumset size nine, but neither is an arithmetic progression. A separate example in Z/11Z contradicts the lower bound of Lemma 3.2 as stated.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO",
+    "msc:11B13",
+    "msc:11B25"
+  ],
+  "published": "2026-10-16",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/AItoBit/restricted-sumsets-counterexamples",
+  "commit": "f2fec945b6c156edec290e15a7ab54bd3db2ba7c",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "additive-combinatorics",
+      "sumsets",
+      "counterexample",
+      "lean"
+    ],
+    "reason": "Explicit finite counterexamples to a restricted-sumset inverse theorem in a preprint.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

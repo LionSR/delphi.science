@@ -1,0 +1,72 @@
+{
+  "key": "PALOMAR-2026-10-11-000001",
+  "source": "palomar",
+  "url": "https://github.com/amelieloher/hypoelliptic-aleksandrov/tree/d7e0125892d7bbd013c86c9c5d6a04e39e0168a6/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-11-000001-v1.json",
+  "title": "Kinetic Aleksandrov estimates",
+  "authors": [
+    "Amélie Loher"
+  ],
+  "summary": "A Lean 4 / Mathlib formalisation of Aleksandrov maximum principles for kinetic equations d_t u + v.grad_x u - A : D_v^2 u = f in non-divergence form, with measurable, uniformly elliptic diffusion acting only in the velocity. For coefficients A(t,v) the estimate holds for every source exponent p > 2d+1; for autonomous coefficients a(x,v) in one space dimension for every p above a threshold 1 + beta_*(Lambda/lambda) = 1 + 128 d^2 (Lambda/lambda)^2 / 3. In each case the estimate implies interior Hölder continuity of solutions; for coefficients A(t,x,v) this is the kinetic Krylov–Safonov…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "math.PR",
+    "msc:35K70",
+    "msc:35B50",
+    "msc:35B65",
+    "msc:35Q84",
+    "msc:35H10"
+  ],
+  "published": "2026-10-11",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "From Döblin to Aleksandrov",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Döblin–Fourier cancellation and kinetic Aleksandrov estimates",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "We need ABP",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Sequences of convex functions and estimates of the maximum of the solution of a parabolic equation",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "A certain property of solutions of parabolic equations with measurable coefficients",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/amelieloher/hypoelliptic-aleksandrov",
+  "commit": "d7e0125892d7bbd013c86c9c5d6a04e39e0168a6",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "kinetic-equations",
+      "pde",
+      "maximum-principle",
+      "lean"
+    ],
+    "reason": "Lean formalization of Aleksandrov maximum principles for kinetic equations.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

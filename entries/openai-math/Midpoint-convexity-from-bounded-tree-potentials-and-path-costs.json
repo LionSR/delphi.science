@@ -1,0 +1,31 @@
+{
+  "key": "Midpoint-convexity-from-bounded-tree-potentials-and-path-costs",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Midpoint-convexity-from-bounded-tree-potentials-and-path-costs-September-27-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Midpoint-convexity-from-bounded-tree-potentials-and-path-costs-September-27-2026/manuscript.pdf",
+  "title": "Midpoint convexity from bounded tree potentials and path costs",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "Four real Banach spaces defined by bounded tree potentials satisfy the averaged asymptotic midpoint bound $`\\widehat\\delta(t)\\ge\\sqrt{1+t^2/4}-1`$ for $`0\\lt t\\lt 1`$, while none admits an asymptotically uniformly convex (AUC) renorming. On finite-height trees, the globally constrained norm equals the least additive cost of a Hilbert vector and root paths. The quadratic path and segment-start outer Hilbert sums are reflexive and asymptotically midpoint uniformly convex, and admit no equivalent AUC norm.",
+  "domain": "Functional analysis",
+  "published": "2026-09-27",
+  "family": "331",
+  "family_title": "Reflexive midpoint convexity and diamond distortion",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "banach-spaces",
+      "functional-analysis",
+      "midpoint-convexity"
+    ],
+    "reason": "Studies midpoint convexity bounds and renorming obstructions for Banach spaces built from tree potentials.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

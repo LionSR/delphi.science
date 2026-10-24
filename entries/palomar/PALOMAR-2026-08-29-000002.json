@@ -1,0 +1,54 @@
+{
+  "key": "PALOMAR-2026-08-29-000002",
+  "source": "palomar",
+  "url": "https://github.com/dcposch/jc2-lean/tree/ba44127093e65cbd862604a16e3fe79fb63e93cf/gcd3-69-cube",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-29-000002-v1.json",
+  "title": "dcposch/jc2-lean",
+  "authors": [
+    "Dan Clemens Posch"
+  ],
+  "summary": "Lean 4 / Mathlib proof of the source-facing polynomial-cube exclusion at actual partial degrees (6,9). From literal bivariate polynomials of outer degrees six and nine, leading coefficients s^6 and s^9 for a common polynomial s, and nonzero constant Keller bracket, the formalization proves that no such source exists, including when s is constant. It constructs the finite-pole or infinity expansion, exhausts every timing of the eight Faber loads through rho2, and excludes the remaining elliptic, cusp, zero-invariant, and constant-core terminal fibres. It does not claim the reduction from an…",
+  "domain": "math.AG",
+  "tags": [
+    "math.AG",
+    "math.AC",
+    "msc:14R15",
+    "msc:13P10"
+  ],
+  "published": "2026-08-29",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "GCD3 (6,9) cube-core mismatch gate",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "GCD3 (6,9) cube-core rational trajectory gate",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/dcposch/jc2-lean",
+  "commit": "ba44127093e65cbd862604a16e3fe79fb63e93cf",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "algebraic-geometry",
+      "lean-formalization",
+      "polynomials",
+      "commutative-algebra"
+    ],
+    "reason": "Lean formalization of a polynomial exclusion result in algebraic geometry.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

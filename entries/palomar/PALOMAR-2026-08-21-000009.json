@@ -1,0 +1,64 @@
+{
+  "key": "PALOMAR-2026-08-21-000009",
+  "source": "palomar",
+  "url": "https://github.com/ehrlich-b/sequential-products-lean/tree/9c6d92f5fc222d9d1646ae6044dcec053900ca83/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-21-000009-v1.json",
+  "title": "ehrlich-b/sequential-products-lean",
+  "authors": [
+    "Bryan Ehrlich"
+  ],
+  "summary": "A sequential product on the effects of an order-unit space is a binary operation a & b, read \"first test a, then test b with the state updated by the first test\", satisfying the seven axioms S1-S7 of van de Wetering (arXiv:1803.11139, Definition 2). This development registers two classification theorems for such products on the Hermitian matrix algebras. On H_N(R), the Hermitian N x N real matrices with N >= 1, every sequential product is the Lueders product sqrt(a) b sqrt(a): there is no free parameter. On H_N(C) with N >= 3, every sequential product has the twist normal form a^(1/2+it) b…",
+  "domain": "math.OA",
+  "tags": [
+    "math.OA",
+    "math.RA",
+    "quant-ph",
+    "msc:17C65",
+    "msc:81P16",
+    "msc:46L70",
+    "msc:81P10",
+    "msc:15B57",
+    "msc:17C90"
+  ],
+  "published": "2026-08-21",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Sequential Products on Euclidean Jordan Algebras: Classification in Rank at Least Three and the Complex Qubit",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Power-associative rings",
+      "identifier": "",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Wigner's theorem on symmetries of quantum mechanical systems, real case",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/ehrlich-b/sequential-products-lean",
+  "commit": "9c6d92f5fc222d9d1646ae6044dcec053900ca83",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "operator-algebras",
+      "quantum-foundations",
+      "lean-formalization",
+      "sequential-products"
+    ],
+    "reason": "Lean development classifying sequential products on Hermitian matrix algebras, as in a related entry.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

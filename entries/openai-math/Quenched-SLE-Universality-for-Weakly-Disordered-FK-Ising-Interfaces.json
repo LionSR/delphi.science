@@ -1,0 +1,32 @@
+{
+  "key": "Quenched-SLE-Universality-for-Weakly-Disordered-FK-Ising-Interfaces",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Quenched-SLE-Universality-for-Weakly-Disordered-FK-Ising-Interfaces-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Quenched-SLE-Universality-for-Weakly-Disordered-FK-Ising-Interfaces-October-5-2026/quenched-fk-ising.pdf",
+  "title": "Quenched SLE Universality for Weakly Disordered FK–Ising Interfaces",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that critical FK–Ising interfaces with sufficiently weak, symmetric, independent two-valued bond disorder converge to chordal SLE 16/3 . The disorder strength is fixed as the mesh tends to zero, and convergence of the conditional curve laws holds in probability over the environment.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-10-05",
+  "family": "223",
+  "family_title": "Random-cluster interfaces: critical, disordered, thermal, and natural-time scaling",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "probability",
+      "sle",
+      "ising-model",
+      "disordered-systems"
+    ],
+    "reason": "Proves convergence of weakly disordered FK-Ising interfaces to SLE16/3 under quenched disorder.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

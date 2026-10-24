@@ -1,0 +1,63 @@
+{
+  "key": "PALOMAR-2026-10-16-000003",
+  "source": "palomar",
+  "url": "https://github.com/jtraverso/brooks/tree/b99e6f500256586626396de9c2d6fd4d96119d60/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000003-v2.json",
+  "title": "Brooks' theorem, degree-choosability and blocks",
+  "authors": [
+    "Juan Pablo Traverso Gianini"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of Brooks' theorem: for k ≥ 3, a finite graph of maximum degree at most k without a (k+1)-clique is k-colourable (no connectedness assumption), and a finite connected graph that is neither complete nor an odd cycle is colourable with as many colours as its maximum degree. The proof uses greedy colourings in Lovász's style and an induction on the number of edges with a separation-and-gluing step. Version 2 adds the Erdős–Rubin–Taylor / Borodin theorem (a finite connected graph is degree-choosable, i.e. colourable from any lists with |L(v)| ≥ deg(v), if and…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C15",
+    "msc:05C40"
+  ],
+  "published": "2026-10-19",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "On colouring the nodes of a network",
+      "identifier": "doi:10.1017/S030500410002168X",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Choosability in graphs",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Criteria of chromaticity of a degree prescription",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Vertex colorings with given colors",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jtraverso/brooks",
+  "commit": "b99e6f500256586626396de9c2d6fd4d96119d60",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-coloring",
+      "graph-theory",
+      "formal-verification",
+      "lean"
+    ],
+    "reason": "Lean 4 formalization of Brooks' theorem and degree-choosability of graphs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

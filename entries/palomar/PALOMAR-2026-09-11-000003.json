@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-09-11-000003",
+  "source": "palomar",
+  "url": "https://github.com/JD-Jones-ASES/ry-lean/tree/a4edb0ea61422813cfd23b319cb28c62f09129bf/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-11-000003-v1.json",
+  "title": "ry-lean: sets avoiding {x, x+y, x+y²} — Younis's two-set construction and the exponent 0.77028",
+  "authors": [
+    "JD Jones"
+  ],
+  "summary": "A Lean 4 proof of Younis's lower-bound construction for subsets of {1,...,N} with no configuration {x, x+y, x+y^2} (y nonzero), in its two-set form: for every square-free modulus m and residue sets R1, R2 modulo m with R1 square-difference-free and no nonzero difference of R2 equal to the square of a difference of R1, the interval {1,...,N} contains a configuration-free set of size at least C(rho) N^rho for every rho below 1/2 + log|R1|/(3 log m) + log|R2|/(6 log m). The theorem is instantiated at m = 145 with |R1| = 10 and |R2| = 32, giving the exponent 0.770287..., which is proved to…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO",
+    "msc:11B30",
+    "msc:11B75",
+    "msc:05D10"
+  ],
+  "published": "2026-09-11",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Lower bounds in the polynomial Szemerédi theorem",
+      "identifier": "arXiv:1908.06058",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/JD-Jones-ASES/ry-lean",
+  "commit": "a4edb0ea61422813cfd23b319cb28c62f09129bf",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "additive-combinatorics",
+      "lean",
+      "number-theory"
+    ],
+    "reason": "Lean proof of a lower-bound construction for sets avoiding a configuration in integers.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

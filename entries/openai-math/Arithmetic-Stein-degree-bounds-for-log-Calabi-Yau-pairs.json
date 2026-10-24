@@ -1,0 +1,31 @@
+{
+  "key": "Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Arithmetic-Stein-degree-bounds-for-log-Calabi-Yau-pairs-September-25-2026/paper.pdf",
+  "title": "Arithmetic Stein-degree bounds for log Calabi–Yau pairs",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "Fix d ≥ 1 and t > 0. Let $`(X,B)`$ be an ordinary projective log canonical ℚ-pair of dimension d over a characteristic-zero field k , with X normal and integral, $`H^0(X,\\mathcal O_X)=k`$, B effective, and $`K_X+B\\sim_{\\mathbb Q}0`$. We prove that every prime component S of B with coefficient at least t satisfies $`[k_S:k]\\leq N(d,t)`$, where k S is the relative algebraic closure of k in $`k(S)`$. This also bounds the Stein degree of S over k , proving the contraction-to-a-point formulation of Birkar's Stein-degree conjecture for ordinary ℚ-pairs.",
+  "domain": "Algebraic and complex geometry",
+  "published": "2026-09-25",
+  "family": "034",
+  "family_title": "Log abundance for compact Kähler spaces under logarithmic Iitaka subadditivity",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "algebraic-geometry",
+      "log-calabi-yau",
+      "birational-geometry"
+    ],
+    "reason": "Proves degree bounds for log Calabi–Yau pairs, addressing Birkar's Stein-degree conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

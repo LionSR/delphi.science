@@ -1,0 +1,50 @@
+{
+  "key": "PALOMAR-2026-09-17-000003",
+  "source": "palomar",
+  "url": "https://github.com/JD-Jones-ASES/ns-lean/tree/035e9b0c147630e35631e4401433660f695d1fba/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-17-000003-v1.json",
+  "title": "ns-lean: Naslund's Conjecture 13 is false at q = 3, k = 2, for every n congruent to 0 mod 4 with n >= 8",
+  "authors": [
+    "JD Jones"
+  ],
+  "summary": "A Lean 4 proof that square-difference-free subsets of the polynomials of degree below n over F_3 can be larger than 3^(3n/4). Call A square-difference-free when no two of its elements differ by a nonzero square, and let D_3(n) be the largest size of such a set inside P_{3,n}. A ten-word code S in F_3^4, in which no two words differ by a vector with every coordinate in {0, 1}, drives a lift that carries a square-difference-free subset of P_{3,m} to one of P_{3,m+8} with 810 times as many elements. Iterating it from the bases {0} and B_4 = {a T^3 + b T + c (1 - T^2)} gives…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO",
+    "msc:11T55",
+    "msc:11B30",
+    "msc:05B40"
+  ],
+  "published": "2026-09-17",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Paley graphs and Sárközy's theorem in function fields",
+      "identifier": "doi:10.1093/qmath/haac035",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/JD-Jones-ASES/ns-lean",
+  "commit": "035e9b0c147630e35631e4401433660f695d1fba",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "finite-fields",
+      "polynomials",
+      "combinatorics",
+      "lean-formalization"
+    ],
+    "reason": "Lean proof of a counterexample to Naslund's conjecture over F_3 via a lifting construction.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

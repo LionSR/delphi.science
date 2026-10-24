@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-10-18-000008",
+  "source": "palomar",
+  "url": "https://github.com/QuanyuTang/polya-szego-planar-unconditional-palomar/tree/5311f47821b5da92e81e75b7da5091d176c8deb9/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-18-000008-v1.json",
+  "title": "Planar Pólya–Szegő Buckling Inequality",
+  "authors": [
+    "Quanyu Tang",
+    "Haiqi Zhang"
+  ],
+  "summary": "Lean formalization proving the planar Polya-Szego conjecture for the first buckling eigenvalue. For open planar sets of positive finite area, it proves the sharp area inequality and characterizes equality by exact equality with an open disk. It retains the original Sobolev-space, variational eigenvalue and Bessel definitions, and includes the disk eigenvalue and buckling–Dirichlet comparison.",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-10-18",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A sharp comparison between planar buckling and Dirichlet eigenvalues",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/QuanyuTang/polya-szego-planar-unconditional-palomar",
+  "commit": "5311f47821b5da92e81e75b7da5091d176c8deb9",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "spectral-theory",
+      "buckling-eigenvalue",
+      "lean",
+      "pdes"
+    ],
+    "reason": "Lean formalization proving the planar Pólya–Szegő buckling inequality.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

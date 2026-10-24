@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-10-07-000004",
+  "source": "palomar",
+  "url": "https://github.com/mrklwk/szemeredi-trotter-lean/tree/844228bc6c042e59373888d1b69f4e215d1c00e4/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-07-000004-v1.json",
+  "title": "Explicit Szemerédi–Trotter bounds over arbitrary fields",
+  "authors": [
+    "Mark Lewko"
+  ],
+  "summary": "We formalize four explicit Szemerédi–Trotter incidence bounds for m distinct points and n distinct affine lines in a field plane. In characteristic zero the bound is 3(mn)^(2/3) + m + n. In positive characteristic p, an arbitrary field admits the additional term 2mn/p. This term is absent when mn ≤ p³. Over the prime field ZMod p the additional term improves to mn/p without a size restriction. The development adapts the author's polynomial-method argument, uses generic coordinates for the improved linear term, and proves a finite-plane counting estimate for the prime-field refinement.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:52C10",
+    "msc:05B25"
+  ],
+  "published": "2026-10-07",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A Szemeredi-Trotter Theorem in Arbitrary Fields",
+      "identifier": "arXiv:2609.27023v2",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/mrklwk/szemeredi-trotter-lean",
+  "commit": "844228bc6c042e59373888d1b69f4e215d1c00e4",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "incidence-geometry",
+      "combinatorics",
+      "finite-fields",
+      "lean-formalization"
+    ],
+    "reason": "Explicit Szemerédi–Trotter incidence bounds over arbitrary fields, formalized in Lean.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

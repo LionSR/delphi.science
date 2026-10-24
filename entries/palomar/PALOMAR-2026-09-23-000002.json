@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-09-23-000002",
+  "source": "palomar",
+  "url": "https://github.com/shaikidris/CollatzConvergencePositiveDensity/tree/f0fda887ee60dc8ac4ef0d864935148b03734726/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-23-000002-v1.json",
+  "title": "Positive density of Collatz convergence at every rate above 3/log(4/3)",
+  "authors": [
+    "Idris Ali Shaik"
+  ],
+  "summary": "A Lean 4 formalization of eighteen selected Phase 1 statements, led by a single positive lower natural-density constant for the set of positive integers reaching 1 within c log x ordinary Collatz steps, valid for every fixed c > 3/log(4/3). It also covers fixed-target hitting, the exact target criterion, individual-root consequences, vanishing-clock-loss variants, depth-eleven density bounds, exact finite fan allocation, real-moment comparison, target profiles, and bounded actual reference entropy with explicit tail estimates and zero normalized growth. Density witnesses and levels are…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11B83",
+    "msc:37P99"
+  ],
+  "published": "2026-09-23",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Positive density of Collatz convergence at every rate above 3/log(4/3)",
+      "identifier": "doi:10.5281/zenodo.22871622",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/shaikidris/CollatzConvergencePositiveDensity",
+  "commit": "f0fda887ee60dc8ac4ef0d864935148b03734726",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "collatz",
+      "natural-density",
+      "lean"
+    ],
+    "reason": "Lean formalization of positive-density Collatz convergence results with explicit estimates.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

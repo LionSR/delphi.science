@@ -1,0 +1,27 @@
+{
+  "key": "2610.0039",
+  "source": "aivixra",
+  "url": "https://ai.vixra.org/abs/2610.0039",
+  "title": "Many Angles, One Integer Sequence",
+  "authors": [
+    "Brian Scannell"
+  ],
+  "summary": "The irrational numbers tan 15◦ = 2 −√3, cot 15◦ = 2 + √3 generate the integer sequence2, 4, 14, 52, 194, . . .when corresponding powers are added. Surprisingly, 15◦ is only one of infinitely many angles that generate this same sequence when the exponents are chosen appropriately. We describe a two-parameter family behind this phenomenon and show how two elementary recurrence relations connect symmetric trigonometric powers with Chebyshev polynomials, Lucas sequences, Pell equations, and, unexpectedly, the Lucas—Lehmer test for Mersenne primes.",
+  "domain": "Number Theory",
+  "published": "2026-10-18",
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:aivixra",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "trigonometry",
+      "integer-sequences"
+    ],
+    "reason": "Studies a trigonometric-power integer sequence and its links to Chebyshev polynomials.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

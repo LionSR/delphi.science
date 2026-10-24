@@ -1,0 +1,31 @@
+{
+  "key": "Brennans-conjecture-and-sharp-inverse-square-integral-means",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Brennans-conjecture-and-sharp-inverse-square-integral-means-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Brennans-conjecture-and-sharp-inverse-square-integral-means-September-24-2026/paper.pdf",
+  "title": "Brennan's conjecture and sharp inverse-square integral means",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove Brennan's conjecture: if a simply connected plane domain admits a conformal bijection φ onto the unit disk, then $`|\\varphi'|^s`$ is area-integrable for every $`4/3\\lt s\\lt 4`$. We also prove the sharp inverse-square integral-means exponent $`B_{\\mathcal S}(-2)=1`$ for the normalized schlicht class $`\\mathcal S`$.",
+  "domain": "Real and complex analysis",
+  "published": "2026-09-24",
+  "family": "072",
+  "family_title": "Brennan's conjecture and the integral-means spectrum",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "complex-analysis",
+      "conformal-mapping",
+      "brennans-conjecture"
+    ],
+    "reason": "Proves Brennan's conjecture on integrability of conformal map derivatives of simply connected domains.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

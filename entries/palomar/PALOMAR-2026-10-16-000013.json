@@ -1,0 +1,54 @@
+{
+  "key": "PALOMAR-2026-10-16-000013",
+  "source": "palomar",
+  "url": "https://github.com/macgregor-sudo/compact-albert-recognition/tree/40d3b344180d9ddb78aaa2876873377c1e631515/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000013-v1.json",
+  "title": "Finite Observations and Recognition of the Compact Albert Algebra",
+  "authors": [
+    "Robert MacGregor"
+  ],
+  "summary": "Let J=H_3(O), the real algebra of 3×3 Hermitian matrices over the division octonions, with product a∘b=(ab+ba)/2 and diagonal trace T. A frame p=(p_0,p_1,p_2) consists of trace-one elements satisfying p_i∘p_i=p_i, p_i∘p_j=0 for i≠j, and p_0+p_1+p_2=1. For frames p,q,r, record the 27 pair traces T(p_i∘q_j), T(q_j∘r_k), T(r_k∘p_i), and 27 triple traces T((p_i∘q_j)∘r_k), for i,j,k∈{0,1,2}. How much do these traces determine? Each trace list in some open neighborhood of the data with pair entries 1/3 and triple entries 1/9, in a fixed twenty-dimensional chart, determines exactly two equivalence…",
+  "domain": "math.RA",
+  "tags": [
+    "math.RA",
+    "math.DG",
+    "msc:17C40",
+    "msc:17C37",
+    "msc:17C30"
+  ],
+  "published": "2026-10-16",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Unpublished notes on compact Albert reconstruction and finite observations",
+      "identifier": "",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Rational invariants of three frames in the split Albert algebra: CubicJordan formalization",
+      "identifier": "https://github.com/macgregor-sudo/albert-frame-triple-invariants/blob/dd06ef5d423a0e4a5d814d2c221e999b98887ee1/AlbertLean/CubicJordan.lean",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/macgregor-sudo/compact-albert-recognition",
+  "commit": "40d3b344180d9ddb78aaa2876873377c1e631515",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "jordan-algebras",
+      "albert-algebra",
+      "octonions"
+    ],
+    "reason": "Analysis of finite trace observations determining the compact Albert algebra.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

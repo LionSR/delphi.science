@@ -1,0 +1,54 @@
+{
+  "key": "PALOMAR-2026-09-21-000004",
+  "source": "palomar",
+  "url": "https://github.com/JD-Jones-ASES/nk-lean/tree/55acbf0def926afb15eb243a3c3f2a3b42439bce/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-21-000004-v1.json",
+  "title": "Lower bounds for sets without perfect-power differences",
+  "authors": [
+    "JD Jones"
+  ],
+  "summary": "Let D_k(N) be the largest size of a subset of {1, ..., N} with no positive k-th-power difference. We prove D_k(N) >= c_k N^alpha_k for every N >= 1, with positive constants c_k and exponents 0.75806770413, 0.9142, and 0.95295 for squares, fourth powers, and sixth powers. The proofs use a general interval-moment criterion for every positive integer k. We also prove arithmetic lifting results, exact product and prime-depth laws for interval capacity, and existence of the binary square capacity limit. The square construction refines Naslund's published example while retaining its binary…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO",
+    "msc:11B30",
+    "msc:11B75",
+    "msc:05C20"
+  ],
+  "published": "2026-09-21",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Square-difference-free sets of exponent 0.75806746",
+      "identifier": "",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Square-Difference-Free Sets beyond the Three-Quarter Barrier",
+      "identifier": "arXiv:2608.01325",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/JD-Jones-ASES/nk-lean",
+  "commit": "55acbf0def926afb15eb243a3c3f2a3b42439bce",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "additive-combinatorics",
+      "perfect-powers"
+    ],
+    "reason": "Lower bounds on subsets of integers avoiding perfect-power differences, with proofs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

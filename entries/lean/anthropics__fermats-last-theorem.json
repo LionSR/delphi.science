@@ -1,0 +1,49 @@
+{
+  "key": "anthropics__fermats-last-theorem",
+  "source": "lean",
+  "url": "https://github.com/anthropics/fermats-last-theorem/tree/main",
+  "title": "Fermat's Last Theorem in Lean 4",
+  "authors": [
+    "Anthropic"
+  ],
+  "summary": "A complete, machine-checked Lean 4 proof of Fermat's Last Theorem, built on Mathlib: for every natural number n >= 3 there are no positive natural numbers a, b, c with a^n + b^n = c^n (declaration fermat_last_theorem). The default build target also derives Mathlib's own statement FermatLastTheorem. The argument is that of Frey, Serre, Ribet, Wiles and Taylor-Wiles; the named classical inputs (irreducibility of the Frey representation, Langlands-Tunnell, modularity lifting, modularity of semistable curves, level lowering) are proved within the development, in the strength the argument needs,…",
+  "published": "2026-09-04",
+  "updated": "2026-09-24",
+  "formalized": true,
+  "formalizes": [
+    {
+      "title": "Modular elliptic curves and Fermat's Last Theorem",
+      "identifier": "doi:10.2307/2118559",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Ring-theoretic properties of certain Hecke algebras",
+      "identifier": "doi:10.2307/2118560",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Fermat's Last Theorem",
+      "identifier": "In: Current Developments in Mathematics, 1995 (International Press), 1-154",
+      "relationship": "formalizes"
+    }
+  ],
+  "license": "Apache-2.0",
+  "repo": "https://github.com/anthropics/fermats-last-theorem",
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:anthropic-lean",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "subject": "math.NT",
+    "tags": [
+      "fermats-last-theorem",
+      "lean4",
+      "formal-verification",
+      "modular-forms"
+    ],
+    "reason": "Machine-checked Lean 4 formalization of Fermat's Last Theorem built on Mathlib.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "key": "PALOMAR-2026-10-15-000003",
+  "source": "palomar",
+  "url": "https://github.com/jtraverso/haggkvist-janssen/tree/807e08bd7c480d4fae80c1b78377d23989d39ab0/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-15-000003-v1.json",
+  "title": "The Häggkvist–Janssen bound on the list chromatic index of complete graphs",
+  "authors": [
+    "Juan Pablo Traverso Gianini"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of the Häggkvist–Janssen theorem χ′ₗ(Kₙ) ≤ n: for arbitrary lists of at least n colours on the edges of the complete graph on n vertices (from an arbitrary colour type), there is a proper edge colouring, i.e. a colouring of Mathlib's line graph of ⊤, choosing every colour from the list of its edge. Orders 0 and 1 are included. The proof constructs an explicit local-rank certificate, shows by a forced-choice induction that the corresponding coefficient of an extended-star polynomial is nonzero, and applies Mathlib's combinatorial Nullstellensatz; it is an…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C15"
+  ],
+  "published": "2026-10-15",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "New Bounds on the List-Chromatic Index of the Complete Graph and Other Simple Graphs",
+      "identifier": "doi:10.1017/S0963548397002927",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jtraverso/haggkvist-janssen",
+  "commit": "807e08bd7c480d4fae80c1b78377d23989d39ab0",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "edge-coloring",
+      "formal-verification"
+    ],
+    "reason": "Lean formalization of the Häggkvist–Janssen list chromatic index bound for complete graphs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

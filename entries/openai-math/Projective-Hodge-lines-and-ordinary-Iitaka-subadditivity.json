@@ -1,0 +1,32 @@
+{
+  "key": "Projective-Hodge-lines-and-ordinary-Iitaka-subadditivity",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Projective-Hodge-lines-and-ordinary-Iitaka-subadditivity-September-27-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Projective-Hodge-lines-and-ordinary-Iitaka-subadditivity-September-27-2026/paper.pdf",
+  "title": "Projective Hodge lines and ordinary Iitaka subadditivity",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the ordinary Iitaka subadditivity conjecture for surjective projective morphisms with connected fibers between smooth connected projective varieties over algebraically closed fields of characteristic zero. If F is the geometric generic fiber of $`f:X\\to Z`$, then $`\\kappa(X)\\geq\\kappa(F)+\\kappa(Z)`$.",
+  "domain": "Algebraic and complex geometry",
+  "published": "2026-09-27",
+  "family": "033",
+  "family_title": "Iitaka subadditivity, variation, and logarithmic additivity",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "algebraic-geometry",
+      "iitaka-dimension",
+      "birational-geometry",
+      "hodge-theory"
+    ],
+    "reason": "Proves ordinary Iitaka subadditivity for projective morphisms with connected fibers.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

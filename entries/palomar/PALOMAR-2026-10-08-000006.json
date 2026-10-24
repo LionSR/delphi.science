@@ -1,0 +1,70 @@
+{
+  "key": "PALOMAR-2026-10-08-000006",
+  "source": "palomar",
+  "url": "https://github.com/scottnarmstrong/LiebThirring/tree/8bf4656f07f5aaa227b0b850d77b16976915bbd4/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-08-000006-v1.json",
+  "title": "Stability of Matter in Lean: Lieb–Thirring, Ionization, the Thermodynamic Limit and Thomas–Fermi Theory",
+  "authors": [
+    "Scott Armstrong",
+    "Amélie Loher"
+  ],
+  "summary": "A Lean 4 and Mathlib formalization of the stability of non-relativistic Coulomb matter in three dimensions. For normalized antisymmetric L2 electron states with q >= 1 spin states and static nuclei with charges between zero and Z, it proves a lower energy bound -C(q,Z)(N+M), uniformly in particle counts and nuclear positions. The main estimate is an additive inequality between nonnegative extended energies, valid even for infinite kinetic energy and nuclear collisions. A real quadratic-form theorem proves Coulomb finiteness and the lower bound for states with finite kinetic energy and…",
+  "domain": "math-ph",
+  "tags": [
+    "math-ph",
+    "math.AP",
+    "msc:81V70",
+    "msc:81Q10",
+    "msc:35Q40"
+  ],
+  "published": "2026-10-08",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "The Lieb-Thirring inequalities: Recent results and open problems",
+      "identifier": "arxiv:2007.09326",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Methods of Modern Mathematical Physics: Uncertainty and Exclusion Principles in Quantum Mechanics",
+      "identifier": "arxiv:1805.03063",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Balanced distribution-energy inequalities and related entropy bounds",
+      "identifier": "doi:10.1215/00127094-1444305",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Bound on the maximum negative ionization of atoms and molecules",
+      "identifier": "doi:10.1103/PhysRevA.29.3018",
+      "relationship": "adapts"
+    },
+    {
+      "title": "The constitution of matter: Existence of thermodynamics for systems composed of electrons and nuclei",
+      "identifier": "doi:10.1016/0001-8708(72)90023-0",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/scottnarmstrong/LiebThirring",
+  "commit": "8bf4656f07f5aaa227b0b850d77b16976915bbd4",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "mathematical-physics",
+      "stability-of-matter",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of stability of non-relativistic Coulomb matter, including Lieb–Thirring bounds.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

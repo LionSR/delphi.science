@@ -1,0 +1,57 @@
+{
+  "key": "PALOMAR-2026-10-22-000042",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/Math-Formalization/tree/b77053ba8669ad046ec3c0d54d83a79724935a9f/topology/baire-space-characterization",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-22-000042-v1.json",
+  "title": "Alexandrov–Urysohn characterization of Baire space",
+  "authors": [
+    "Arthur Freitas Ramos",
+    "David Barros Hulak",
+    "Ruy Jose Guerra Barretto de Queiroz"
+  ],
+  "summary": "A topological space is homeomorphic to Baire space, the countable product of discrete natural numbers, if and only if it is nonempty, Polish, has a basis of clopen sets, and every compact subset has empty interior. The construction partitions each nonempty clopen set into countably infinitely many distinct nonempty clopen children with arbitrarily small diameter. A fully branching shrinking scheme gives a continuous open bijective limit map and therefore a homeomorphism. The converse uses finite coordinate images of compact Baire subsets. This formalizes a classical theorem of Alexandrov and…",
+  "domain": "math.GN",
+  "tags": [
+    "math.GN",
+    "math.LO",
+    "msc:54E50",
+    "msc:54F65",
+    "msc:03E15"
+  ],
+  "published": "2026-10-22",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Introduction to descriptive set theory",
+      "identifier": "https://www.math.mcgill.ca/atserunyan/Teaching_notes/dst_lectures.pdf",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Descriptive set theory problem set",
+      "identifier": "https://homepages.math.uic.edu/~cdean8/docs/dst_problems.pdf",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/Math-Formalization",
+  "commit": "b77053ba8669ad046ec3c0d54d83a79724935a9f",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "general-topology",
+      "baire-space",
+      "descriptive-set-theory",
+      "topology-characterization"
+    ],
+    "reason": "Topological characterization of Baire space via clopen bases and Polish property.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "The-normalized-volume-gap-in-dimension-four",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-normalized-volume-gap-in-dimension-four-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-normalized-volume-gap-in-dimension-four-September-24-2026/paper.pdf",
+  "title": "The normalized-volume gap in dimension four",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that every singular complex algebraic klt fourfold germ with zero boundary has normalized volume at most 162, with equality precisely for an analytic ordinary double point. This resolves the ordinary-double-point volume-gap conjecture in dimension four.",
+  "domain": "Algebraic and complex geometry",
+  "published": "2026-09-24",
+  "family": "037",
+  "family_title": "The ordinary-double-point volume gap",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "algebraic-geometry",
+      "klt-singularities",
+      "normalized-volume"
+    ],
+    "reason": "Bounds normalized volume of singular klt fourfold germs, with equality at ordinary double points.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

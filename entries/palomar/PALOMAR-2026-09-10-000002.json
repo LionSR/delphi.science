@@ -1,0 +1,55 @@
+{
+  "key": "PALOMAR-2026-09-10-000002",
+  "source": "palomar",
+  "url": "https://github.com/yuma-mizuno/KR-mod9-lean/tree/d8b921339ecc655aa14b38b556605dbf81f7b87b/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-10-000002-v1.json",
+  "title": "KR-mod9-lean",
+  "authors": [
+    "Yuma Mizuno"
+  ],
+  "summary": "Lean 4 proofs of the three Kanade-Russell identities modulo nine as identities of integer formal power series, including coefficientwise summability of the defining double sums. The development includes concrete vertex-operator spanning bounds and the character evaluations used to identify the sums with their infinite products.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO",
+    "msc:11P84",
+    "msc:33D15",
+    "msc:11F03"
+  ],
+  "published": "2026-09-10",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "The three Kanade-Russell identities modulo nine",
+      "identifier": "https://arxiv.org/abs/2609.09653v1",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "A vertex operator reformulation of the Kanade-Russell conjecture modulo 9",
+      "identifier": "https://arxiv.org/abs/2211.12351v3",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/yuma-mizuno/KR-mod9-lean",
+  "commit": "d8b921339ecc655aa14b38b556605dbf81f7b87b",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "q-series",
+      "partition-identities",
+      "lean",
+      "number-theory"
+    ],
+    "reason": "Lean proofs of three Kanade–Russell identities modulo nine as formal power series.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

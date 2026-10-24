@@ -1,0 +1,26 @@
+{
+  "key": "aixiv.261017.000001",
+  "source": "aixiv",
+  "url": "https://aixiv.science/abs/aixiv.261017.000001",
+  "title": "Positive Density of Collatz Convergence at Every Rate above 3/log(4/3)",
+  "authors": [
+    "Idris Ali Shaik"
+  ],
+  "summary": "We prove that a positive proportion of positive integers reach 1 within c log x ordinary Collatz steps for every fixed c > 3/log(4/3), with one positive lower natural-density bound independent of c. For each fixed positive target not divisible by three, the same range of times holds with a target-dependent bound, irrespective of its subsequent orbit. Targets divisible by three have predecessor basins of natural density zero. Diagonalization gives one positive-density set with a vanishing excess above the limiting time coefficient. The proof extends weighted inverse trajectories from a fixed…",
+  "published": "2026-10-17",
+  "added": "2026-10-23",
+  "added_by": "harvest:aixiv",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "subject": "math.NT",
+    "tags": [
+      "collatz",
+      "natural-density",
+      "number-theory"
+    ],
+    "reason": "Proof work on density of Collatz trajectories reaching 1 within logarithmic steps.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

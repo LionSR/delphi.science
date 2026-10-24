@@ -1,0 +1,50 @@
+{
+  "key": "PALOMAR-2026-10-22-000012",
+  "source": "palomar",
+  "url": "https://github.com/RGConj/fourth-consecutive-ratio-palomar/tree/55ff1f42612a01b2fbe4a1eafc618cdcf83c3b75/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-22-000012-v1.json",
+  "title": "The fourth consecutive Dirichlet eigenvalue ratio",
+  "authors": [
+    "Jiachen Shi",
+    "Quanyu Tang"
+  ],
+  "summary": "An unconditional Lean proof of the strict inequality lambda_5 / lambda_4 < C_N for every nonempty bounded connected open subset of Euclidean space of dimension at least two, with variational Dirichlet eigenvalues and the sharp Bessel-zero constant. No boundary regularity is assumed.",
+  "domain": "math.SP",
+  "tags": [
+    "math.SP",
+    "math.AP",
+    "msc:35P15",
+    "msc:35J05",
+    "msc:68V20"
+  ],
+  "published": "2026-10-22",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A sharp bound for the fourth consecutive Dirichlet eigenvalue ratio",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/RGConj/fourth-consecutive-ratio-palomar",
+  "commit": "55ff1f42612a01b2fbe4a1eafc618cdcf83c3b75",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "spectral-theory",
+      "dirichlet-eigenvalues",
+      "lean"
+    ],
+    "reason": "Lean proof of an unconditional bound on the fourth consecutive Dirichlet eigenvalue ratio.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

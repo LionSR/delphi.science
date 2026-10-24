@@ -1,0 +1,56 @@
+{
+  "key": "PALOMAR-2026-08-18-000002",
+  "source": "palomar",
+  "url": "https://github.com/AxiomMath/PrimeGapsLib/tree/1faa7b14e82ddebc2772dfb9153922f01b106477/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-18-000002-v1.json",
+  "title": "AxiomMath/PrimeGapsLib",
+  "authors": [
+    "Evan Chen",
+    "Sidharth Hariharan",
+    "Kenny Lau",
+    "Bhavik Mehta",
+    "Ken Ono",
+    "Ashvin Swaminathan",
+    "Jesse Thorner",
+    "Yunzhou Xie"
+  ],
+  "summary": "`PrimeGapsLib` is an evolving codebase aimed at housing results about gaps in primes. The flagship result thus far is that pairs of primes are separated by at most 246 infinitely often, conditional on the Bombieri-Vinogradov theorem. The 246 proof was generated collaboratively between human formalisers at Axiom Math and AxiomProver, their in-house theorem proving system. Community feedback and contributions are welcome!",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11N05",
+    "msc:11N35",
+    "msc:11N36",
+    "msc:11P32"
+  ],
+  "published": "2026-08-18",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Variants of the Selberg sieve",
+      "identifier": "https://doi.org/10.1186/s40687-014-0012-7",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/AxiomMath/PrimeGapsLib",
+  "commit": "1faa7b14e82ddebc2772dfb9153922f01b106477",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "prime-gaps",
+      "number-theory",
+      "lean-formalization"
+    ],
+    "reason": "Lean library on prime gaps, including bounded gaps conditional on Bombieri-Vinogradov.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

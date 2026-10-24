@@ -1,0 +1,31 @@
+{
+  "key": "Variable-dimension-Weisfeiler-Leman-equivalence-on-general-and-subcubic-graphs",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Variable-dimension-Weisfeiler-Leman-equivalence-on-general-and-subcubic-graphs-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Variable-dimension-Weisfeiler-Leman-equivalence-on-general-and-subcubic-graphs-September-25-2026/paper.pdf",
+  "title": "Variable-dimension Weisfeiler–Leman equivalence on general and subcubic graphs",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "Deciding joint-update k -dimensional Weisfeiler–Leman equivalence is $`\\mathsf{EXPTIME}`$-complete when the two graphs are given by explicit adjacency matrices and k ≥ 2 is encoded in binary. The result holds even for connected simple uncolored graphs of equal positive order and maximum degree at most three.",
+  "domain": "Theoretical computer science",
+  "published": "2026-09-25",
+  "family": "133",
+  "family_title": "The computational complexity of Weisfeiler–Leman refinement",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-isomorphism",
+      "complexity-theory",
+      "weisfeiler-leman"
+    ],
+    "reason": "Establishes EXPTIME-completeness of variable-dimension Weisfeiler–Leman equivalence on subcubic graphs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

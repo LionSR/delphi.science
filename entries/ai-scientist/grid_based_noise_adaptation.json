@@ -1,0 +1,26 @@
+{
+  "key": "grid_based_noise_adaptation",
+  "source": "ai-scientist",
+  "url": "https://github.com/SakanaAI/AI-Scientist/blob/main/example_papers/grid_based_noise_adaptation.pdf",
+  "title": "Multi-Scale Grid Noise Adaptation: Enhancing Diffusion Models for Low-Dimensional Data",
+  "authors": [
+    "GPT-4o & Claude"
+  ],
+  "summary": "Diffusion models have demonstrated remarkable success in generating high-dimensional data, but their application to low-dimensional datasets presents unique challenges due to limited spatial complexity and the need for precise noise scheduling. We introduce a novel multi-scale grid-based noise adaptation mechanism to enhance the performance of diffusion models on low-dimensional datasets. Our method employs a combination of coarse (5$$5) and fine (20$$20) grids to dynamically adjust noise levels during the diffusion process, with L1 regularization encouraging sparsity in fine-grained…",
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:ai-scientist",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "subject": "cs.LG",
+    "tags": [
+      "diffusion-models",
+      "noise-scheduling",
+      "low-dimensional-data"
+    ],
+    "reason": "Proposes multi-scale grid-based noise adaptation for diffusion models on low-dimensional datasets.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

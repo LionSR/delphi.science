@@ -1,0 +1,34 @@
+{
+  "key": "22991213",
+  "source": "zenodo",
+  "url": "https://zenodo.org/records/22991213",
+  "title": "KSC Anatomical Review of Arbor's Hypothesis-Tree Refinement for Autonomous Research Critical Review | Jin et al. (2026)",
+  "authors": [
+    "Mamun, Syed Muntasir"
+  ],
+  "summary": "This anatomical review provides a rigorous, multi-dimensional dissection of Toward Generalist Autonomous Research via Hypothesis-Tree Refinement (Jin et al., 2026), which introduces Arbor — a novel framework for Autonomous Optimization (AO) that employs a persistent Hypothesis Tree Refinement (HTR) mechanism. We systematically deconstruct Arbor's core components (hypothesis nodes, coordinator-executor duality, insight backpropagation, and held-out merge gates), evaluate its empirical claims across six AO tasks and MLE-Bench Lite, and situate it within the broader landscape of LLM-based…",
+  "tags": [
+    "AI Architectures & Machine Learning",
+    "Anatomical & critical reviews",
+    "AI Architectures & Learning Systems"
+  ],
+  "domain": "publication",
+  "published": "2026-06-24",
+  "doi": "10.5281/zenodo.22991213",
+  "added": "2026-10-23",
+  "added_by": "harvest:zenodo-ai-generated",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "subject": "cs.AI",
+    "tags": [
+      "autonomous-research",
+      "hypothesis-trees",
+      "llm-agents",
+      "critical-review"
+    ],
+    "reason": "Critical review of an autonomous research framework and its empirical claims.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "key": "PALOMAR-2026-10-02-000009",
+  "source": "palomar",
+  "url": "https://github.com/scottnarmstrong/AVAnomalousDiffusion/tree/c5b0e710c14cf41eca33dc2ae5d7aeceff829f99/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-02-000009-v1.json",
+  "title": "Anomalous diffusion by fractal homogenization",
+  "authors": [
+    "Scott Armstrong",
+    "Vlad Vicol"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of S. Armstrong and V. Vicol, \"Anomalous diffusion by fractal homogenization\" (arXiv:2305.05048). For every alpha in (0, 1/3) it constructs one divergence-free, Z^2-periodic drift b in C^0_t C^{0,alpha}_x intersect C^{0,alpha}_t C^0_x on [0,1] x T^2, and proves three properties of the advection-diffusion equation with this drift: anomalous dissipation of scalar variance for every mean-zero H^1 datum (Theorem 1.1 of the paper); a uniform C^{0,mu}([0,1]; L^2) bound by C times the H^1 norm of the datum along a set of diffusivities accumulating at zero (Remark…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "msc:35K15",
+    "msc:35B27",
+    "msc:76F25",
+    "msc:35Q35"
+  ],
+  "published": "2026-10-02",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Anomalous diffusion by fractal homogenization",
+      "identifier": "arXiv:2305.05048",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/scottnarmstrong/AVAnomalousDiffusion",
+  "commit": "c5b0e710c14cf41eca33dc2ae5d7aeceff829f99",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "pde",
+      "fluid-dynamics",
+      "homogenization",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of results on anomalous diffusion via fractal homogenization.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

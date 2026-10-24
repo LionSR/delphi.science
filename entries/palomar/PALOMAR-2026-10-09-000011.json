@@ -1,0 +1,41 @@
+{
+  "key": "PALOMAR-2026-10-09-000011",
+  "source": "palomar",
+  "url": "https://github.com/jfairfaxball-348/Inverse-Zero-Sum-Research/tree/c5f9e5e822020688c72b2a3bfacbf147a801e219/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-09-000011-v1.json",
+  "title": "Inverse classification for innerly joint short zero-sum subsequences in C3^3",
+  "authors": [
+    "John Fairfax-Ball"
+  ],
+  "summary": "We formalize an exact positional inverse classification in the elementary abelian group C3^3. For a sequence of 24 nonzero elements, every pair of nonempty zero-sum subsequences of length at most three has intersection sum zero if and only if the original sequence, up to a permutation of all 24 positions, consists of three copies of eight distinct elements having no short nonempty zero sum. The two implications, including the positional intersection condition, are proved in Lean. The existing literature review did not locate the exact inverse classification, but historical novelty, priority…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.NT",
+    "msc:11B75"
+  ],
+  "published": "2026-10-09",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jfairfaxball-348/Inverse-Zero-Sum-Research",
+  "commit": "c5f9e5e822020688c72b2a3bfacbf147a801e219",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "combinatorics",
+      "zero-sum",
+      "additive-combinatorics",
+      "lean"
+    ],
+    "reason": "Formalizes an inverse classification of short zero-sum subsequences in C3^3.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

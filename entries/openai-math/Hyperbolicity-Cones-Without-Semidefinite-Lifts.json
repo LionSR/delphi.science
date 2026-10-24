@@ -1,0 +1,31 @@
+{
+  "key": "Hyperbolicity-Cones-Without-Semidefinite-Lifts",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Hyperbolicity-Cones-Without-Semidefinite-Lifts-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Hyperbolicity-Cones-Without-Semidefinite-Lifts-October-5-2026/nonliftable-hyperbolicity.pdf",
+  "title": "Hyperbolicity Cones Without Semidefinite Lifts",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that not every hyperbolicity cone is a spectrahedral shadow: some closed hyperbolicity cones admit no finite affine semidefinite lift, even with arbitrary real coefficients and any finite number of auxiliary variables. This disproves the Projected Lax Conjecture and hence the generalized Lax conjecture.",
+  "domain": "Convex and metric geometry",
+  "published": "2026-10-05",
+  "family": "095",
+  "family_title": "Hyperbolicity cones without semidefinite lifts",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "convex-geometry",
+      "hyperbolic-polynomials",
+      "semidefinite-programming"
+    ],
+    "reason": "Shows some hyperbolicity cones lack semidefinite lifts, disproving the Projected Lax Conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "Conditional-information-under-deterministic-coordinate-sweeps",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Conditional-information-under-deterministic-coordinate-sweeps-September-26-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Conditional-information-under-deterministic-coordinate-sweeps-September-26-2026/main.pdf",
+  "title": "Conditional information under deterministic coordinate sweeps",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We bound the information remaining after paths of specified cards in the Thorp shuffle on $`n=2^d`$ cards have been observed. After a fixed number of deterministic coordinate sweeps, the joint endpoint law of further cards is close to uniform on the available positions, on average over the observed paths, provided a fixed positive fraction of labels lies outside both lists. Combined with a Fourier transfer, these bounds give full-deck mixing after $`2048d`$ physical shuffles.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-09-26",
+  "family": "238",
+  "family_title": "Optimal logarithmic mixing of the Thorp shuffle",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "probability",
+      "random-permutations",
+      "information-theory"
+    ],
+    "reason": "Bounds residual information after observed card paths in the Thorp shuffle, implying full-deck mixing.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "key": "PALOMAR-2026-08-17-000003",
+  "source": "palomar",
+  "url": "https://github.com/gexahedron/sabidussi-lean/tree/58307d74da99ec6e4fe28e012c30c83e369c54c3/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-17-000003-v1.json",
+  "title": "gexahedron/sabidussi-lean",
+  "authors": [
+    "Nikolay Ulyanov"
+  ],
+  "summary": "Sabidussi compatibility in Lean",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C45",
+    "msc:05C70"
+  ],
+  "published": "2026-08-17",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Graph Puzzles III.1: A Proof of Sabidussi's Compatibility Conjecture",
+      "identifier": "https://arxiv.org/abs/2607.13225",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/gexahedron/sabidussi-lean",
+  "commit": "58307d74da99ec6e4fe28e012c30c83e369c54c3",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of Sabidussi compatibility for graphs; the summary is a single line.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

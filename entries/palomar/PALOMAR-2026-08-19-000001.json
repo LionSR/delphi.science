@@ -1,0 +1,57 @@
+{
+  "key": "PALOMAR-2026-08-19-000001",
+  "source": "palomar",
+  "url": "https://github.com/rkirov/jordan_pick/tree/b3c9b7cf7358bf81a077d78ad67e6e8247869ddd/submission/jordan_curve",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-19-000001-v1.json",
+  "title": "rkirov/jordan_pick",
+  "authors": [
+    "Rado Kirov"
+  ],
+  "summary": "The Jordan curve theorem, formalized in Lean 4 against Mathlib: a continuous injective map from the circle into the plane has a complement with exactly two connected components. The hypothesis is bare continuity and injectivity — no smoothness, piecewise-linearity or rectifiability — which is what makes the theorem hard and what separates it from the polygonal case. The proof follows Maehara's reduction to the Brouwer fixed point theorem, via a crossing lemma for transversal paths in a rectangle and the fact that every component has the curve as its boundary, together with a farthest-pair…",
+  "domain": "math.GT",
+  "tags": [
+    "math.GT",
+    "math.GN",
+    "msc:54F65",
+    "msc:54F15",
+    "msc:54H25",
+    "msc:55M20",
+    "msc:55M25",
+    "msc:54D05"
+  ],
+  "published": "2026-08-19",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Cours d'analyse de l'École Polytechnique, Vol. III (the original statement)",
+      "identifier": "Gauthier-Villars, Paris, 2nd ed. (1887), pp. 587-594",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "The Jordan curve theorem via the Brouwer fixed point theorem",
+      "identifier": "Amer. Math. Monthly 91(10) (1984), 641-643; doi:10.2307/2323369",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/rkirov/jordan_pick",
+  "commit": "b3c9b7cf7358bf81a077d78ad67e6e8247869ddd",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "topology",
+      "jordan-curve-theorem",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of the Jordan curve theorem for continuous injective closed curves.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

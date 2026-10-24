@@ -1,0 +1,31 @@
+{
+  "key": "Approximation-Paving-over-Arbitrary-Maximal-Abelian-Subalgebras",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Approximation-Paving-over-Arbitrary-Maximal-Abelian-Subalgebras-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Approximation-Paving-over-Arbitrary-Maximal-Abelian-Subalgebras-September-25-2026/Approximation-Paving-over-Arbitrary-Maximal-Abelian-Subalgebras-September-25-2026.pdf",
+  "title": "Approximation Paving over Arbitrary Maximal Abelian Subalgebras",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the approximation-paving conjecture of Popa and Vaes for every maximal abelian subalgebra of a complex von Neumann algebra. For each $`0\\lt \\varepsilon\\lt 1`$, every self-adjoint operator is a strong limit of self-adjoint operators of norm at most three times its norm, each admitting a norm paving with error at most ε times the approximant's own norm. The number of projections is at most $`C\\varepsilon^{-6}`$ for a universal constant C . No separability or conditional-expectation hypothesis is required.",
+  "domain": "Operator algebras",
+  "published": "2026-09-25",
+  "family": "300",
+  "family_title": "Approximation and quadratic strong-operator paving",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "operator-algebras",
+      "von-neumann-algebras",
+      "approximation-paving"
+    ],
+    "reason": "Proves the Popa–Vaes approximation-paving conjecture for maximal abelian subalgebras.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

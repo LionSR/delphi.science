@@ -1,0 +1,31 @@
+{
+  "key": "Fixed-Points-of-Nonexpansive-Maps-in-Reflexive-Banach-Spaces",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Fixed-Points-of-Nonexpansive-Maps-in-Reflexive-Banach-Spaces-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Fixed-Points-of-Nonexpansive-Maps-in-Reflexive-Banach-Spaces-September-24-2026/paper.pdf",
+  "title": "Fixed Points of Nonexpansive Maps in Reflexive Banach Spaces",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "Every nonexpansive selfmap of a nonempty closed bounded convex subset of a real reflexive Banach space has a fixed point. This resolves the reflexive-space fixed point problem for the given norm.",
+  "domain": "Functional analysis",
+  "published": "2026-09-24",
+  "family": "328",
+  "family_title": "Nonexpansive fixed points in reflexive Banach spaces",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "functional-analysis",
+      "fixed-point-theory",
+      "banach-spaces"
+    ],
+    "reason": "Proves existence of fixed points for nonexpansive maps on reflexive Banach spaces.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

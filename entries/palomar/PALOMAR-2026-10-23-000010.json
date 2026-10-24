@@ -1,0 +1,53 @@
+{
+  "key": "PALOMAR-2026-10-23-000010",
+  "source": "palomar",
+  "url": "https://github.com/masakioshikawa/rp2-rp3-lean/tree/ab120db3ae50756b2f640400aeca757a0ff9dbb5/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-23-000010-v1.json",
+  "title": "Log-square quadrupolar correlation decay in two-dimensional RP2 and RP3 models",
+  "authors": [
+    "Masaki Oshikawa"
+  ],
+  "summary": "For the two-dimensional nearest-neighbor RP2 and RP3 director models, the absolute quadrupolar two-point correlation is bounded by C exp(-c (log(2+r))^2) at every finite bound on the dimensionless coupling. The positive constants are uniform over finite square-lattice subgraphs, arbitrary signed edge couplings within that bound, and observation sites; r is the integer lattice infinity distance. The compared statements use explicit normalized spherical product measures and Gibbs-integral quotients, with observable (n_x dot n_y)^2 - 1/3 or - 1/4, respectively. No response estimate or decay…",
+  "domain": "math-ph",
+  "tags": [
+    "math-ph",
+    "cond-mat.stat-mech",
+    "msc:82B20",
+    "msc:82B26"
+  ],
+  "published": "2026-10-23",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Faster-than-power-law decay of order parameter correlations in the two-dimensional RP2 model: a rigorous result by vibe-proving",
+      "identifier": "https://doi.org/10.5281/zenodo.23549037",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Exponential decay in two-dimensional classical O(n) models",
+      "identifier": "https://github.com/openai/math/tree/adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/masakioshikawa/rp2-rp3-lean",
+  "commit": "ab120db3ae50756b2f640400aeca757a0ff9dbb5",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "statistical-mechanics",
+      "lattice-models",
+      "correlation-decay"
+    ],
+    "reason": "Mathematical physics bounds on quadrupolar correlation decay in two-dimensional RP2 and RP3 models.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

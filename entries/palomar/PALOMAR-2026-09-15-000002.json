@@ -1,0 +1,58 @@
+{
+  "key": "PALOMAR-2026-09-15-000002",
+  "source": "palomar",
+  "url": "https://github.com/nihargargava/IntegralMatrices/tree/4124db884ee55ef0da9e899d44d1bec5bfe432ea/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-15-000002-v1.json",
+  "title": "Integral Matrices of Fixed Rank over Number Fields: Lean formalization",
+  "authors": [
+    "Nihar Gargava"
+  ],
+  "summary": "A Lean formalization of the fixed-rank asymptotic count for integral matrices over a number field and the convergence of moments of lifts of algebraic codes. The public results preserve the submission PDF's main scale, error terms, echelon-integral limit, and denominator normalization. The intermediate-rank height-counting input attributed to Schmidt is an explicit hypothesis; it is not silently assumed as an axiom.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11R04",
+    "msc:11H06"
+  ],
+  "published": "2026-09-15",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Integral matrices of fixed rank over number fields",
+      "identifier": "arXiv:2510.11673",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Short Bases of Lattices over Number Fields",
+      "identifier": "doi:10.1007/978-3-642-14518-6_15",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Integral matrices of fixed rank",
+      "identifier": "doi:10.2307/2160455",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/nihargargava/IntegralMatrices",
+  "commit": "4124db884ee55ef0da9e899d44d1bec5bfe432ea",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "lean-formalization",
+      "algebraic-codes",
+      "matrix-counting"
+    ],
+    "reason": "Lean formalization of fixed-rank integral matrix counts over number fields and code moments.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

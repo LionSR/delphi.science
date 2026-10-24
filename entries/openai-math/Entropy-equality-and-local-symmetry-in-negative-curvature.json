@@ -1,0 +1,31 @@
+{
+  "key": "Entropy-equality-and-local-symmetry-in-negative-curvature",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Entropy-equality-and-local-symmetry-in-negative-curvature-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Entropy-equality-and-local-symmetry-in-negative-curvature-September-23-2026/paper.pdf",
+  "title": "Entropy equality and local symmetry in negative curvature",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For every closed connected smooth Riemannian manifold of dimension at least three with strictly negative sectional curvature, we prove that normalized Liouville measure has maximal entropy for the unit-speed geodesic flow if and only if the metric is locally symmetric. This resolves Katok's entropy rigidity conjecture positively in these dimensions, including all rank-one symmetric types at arbitrary scale.",
+  "domain": "Differential geometry",
+  "published": "2026-09-23",
+  "family": "339",
+  "family_title": "Katok's entropy rigidity conjecture",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "riemannian-geometry",
+      "geodesic-flow",
+      "entropy-rigidity"
+    ],
+    "reason": "Shows maximal geodesic-flow entropy characterizes locally symmetric negatively curved manifolds.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

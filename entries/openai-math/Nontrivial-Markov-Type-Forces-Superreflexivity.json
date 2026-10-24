@@ -1,0 +1,31 @@
+{
+  "key": "Nontrivial-Markov-Type-Forces-Superreflexivity",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Nontrivial-Markov-Type-Forces-Superreflexivity-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Nontrivial-Markov-Type-Forces-Superreflexivity-September-23-2026/paper.pdf",
+  "title": "Nontrivial Markov Type Forces Superreflexivity",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that every real Banach space with Markov type p > 1 is superreflexive. Together with the known converse, this characterizes superreflexivity by nontrivial Markov type. This answers Naor's question: every real Banach space with nontrivial Markov type admits an equivalent uniformly smooth norm.",
+  "domain": "Functional analysis",
+  "published": "2026-09-23",
+  "family": "327",
+  "family_title": "Markov type characterizes superreflexivity",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "banach-spaces",
+      "markov-type",
+      "superreflexivity"
+    ],
+    "reason": "Proves that nontrivial Markov type implies superreflexivity for real Banach spaces.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

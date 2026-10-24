@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-10-08-000002",
+  "source": "palomar",
+  "url": "https://github.com/balancedscorpion/countably-infinite-dimension-strong-meyer-spaces/tree/4d3163a0ce1dd93fa48b7d4677fe78db15c0af9c/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-08-000002-v1.json",
+  "title": "A strongly tempered Meyer space of countably infinite Hamel dimension",
+  "authors": [
+    "Jamie Martin"
+  ],
+  "summary": "There exists a locally finite carrier Λ in the real line whose whole complex strongly tempered Meyer space has Hamel dimension ℵ₀. Both a tempered distribution and its distributional Fourier transform have local atomic formulas on Λ, with coefficient families whose absolute values are summable after division by some polynomial weight (1 + |x|)^N. The same carrier supports the entire space; finite-dimensional exponent layers prove the rank upper bound and independent original parity modes prove the lower bound. The radius schedule is selected classically. This is an existence theorem for one…",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA",
+    "math.FA",
+    "msc:42A38",
+    "msc:46F12",
+    "msc:52C23"
+  ],
+  "published": "2026-10-08",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Whole strongly tempered Meyer space of Hamel dimension aleph0 (PR #653)",
+      "identifier": "https://github.com/ls558/MeyerGeneralProblem/pull/653",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/balancedscorpion/countably-infinite-dimension-strong-meyer-spaces",
+  "commit": "4d3163a0ce1dd93fa48b7d4677fe78db15c0af9c",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "fourier-analysis",
+      "meyer-sets",
+      "tempered-distributions"
+    ],
+    "reason": "Existence theorem about the Hamel dimension of a strongly tempered Meyer space.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

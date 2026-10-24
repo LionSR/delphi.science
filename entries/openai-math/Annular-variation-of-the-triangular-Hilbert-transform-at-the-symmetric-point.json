@@ -1,0 +1,30 @@
+{
+  "key": "Annular-variation-of-the-triangular-Hilbert-transform-at-the-symmetric-point",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Annular-variation-of-the-triangular-Hilbert-transform-at-the-symmetric-point-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Annular-variation-of-the-triangular-Hilbert-transform-at-the-symmetric-point-October-5-2026/annular-variation.pdf",
+  "title": "Annular variation of the triangular Hilbert transform at the symmetric point",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the annular r -variation estimate for the triangular Hilbert transform from complex $`L^3\\times L^3`$ to L 3/2 for every r > 2. The partitions may depend on the output point and range over all positive scales. The estimate yields the two-endpoint maximal bound and joint almost-everywhere and norm principal values, and resolves the symmetric scalar triangular Hilbert transform problem.",
+  "domain": "Real and complex analysis",
+  "published": "2026-10-05",
+  "family": "082",
+  "family_title": "Annular variation and dyadic absolute bounds for the triangular Hilbert transform",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "harmonic-analysis",
+      "triangular-hilbert-transform"
+    ],
+    "reason": "Proves an annular variation estimate for the triangular Hilbert transform at the symmetric point.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

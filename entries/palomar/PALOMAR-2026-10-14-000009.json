@@ -1,0 +1,44 @@
+{
+  "key": "PALOMAR-2026-10-14-000009",
+  "source": "palomar",
+  "url": "https://github.com/stalex444/pdt-em-source-selection/tree/1c9ba637b5e664a88b6487d463515587616476e1/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-14-000009-v2.json",
+  "title": "Selection of the electromagnetic source tensor by covariance, conservation and the exchange law",
+  "authors": [
+    "Stephanie Alexander"
+  ],
+  "summary": "On a fixed flat Lorentz frame with metric diag(1,1,1,-1), sources are symmetric 4x4 tensor-valued functions of the six real components of an antisymmetric field. Twelve kernel-checked statements. Among all symmetric homogeneous quadratic sources (210 free coefficients), the six infinitesimal Lorentz covariance equations together with zero trace select the Maxwell stress (the electromagnetic energy-momentum tensor) up to a unique real scale, and a displayed certificate of 209 linear coefficient equations is equivalent to both laws. Among the same homogeneous quadratic sources, conservation…",
+  "domain": "math-ph",
+  "tags": [
+    "math-ph",
+    "cs.LO",
+    "msc:15A72",
+    "msc:35Q61",
+    "msc:70S10",
+    "msc:78A25",
+    "msc:68V20"
+  ],
+  "published": "2026-10-16",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/stalex444/pdt-em-source-selection",
+  "commit": "1c9ba637b5e664a88b6487d463515587616476e1",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "electromagnetism",
+      "tensor-analysis",
+      "formal-verification"
+    ],
+    "reason": "Kernel-checked derivation selecting the Maxwell stress tensor from covariance and conservation constraints.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

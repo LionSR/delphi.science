@@ -1,0 +1,31 @@
+{
+  "key": "Prefix-Instructions-and-Incompressible-Flows",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Prefix-Instructions-and-Incompressible-Flows-September-27-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Prefix-Instructions-and-Incompressible-Flows-September-27-2026/manuscript.pdf",
+  "title": "Prefix Instructions and Incompressible Flows",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "Finite prefix instructions may change area and erase information. We give explicit history processors and smooth incompressible motions that retain that information and realize every instruction on its full domain. A first application assigns each machine and finite input a smooth mean-zero force on the flat unit three-torus, at any fixed positive computable viscosity. The solution starts from rest; a fixed particle enters a fixed open strip exactly when the machine halts. The force repeats with period one after an initial loading interval. We then prove alternative realizations using full…",
+  "domain": "Partial differential equations",
+  "published": "2026-09-27",
+  "family": "376",
+  "family_title": "Universal computation in forced Navier–Stokes flows",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "fluid-dynamics",
+      "computability",
+      "incompressible-flows"
+    ],
+    "reason": "Constructs incompressible flows that encode prefix machine computations, with applications to the Navier–Stokes setting.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

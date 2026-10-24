@@ -1,0 +1,31 @@
+{
+  "key": "Finite-cylinder-approximation-of-ruled-sets",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Finite-cylinder-approximation-of-ruled-sets-September-27-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Finite-cylinder-approximation-of-ruled-sets-September-27-2026/main.pdf",
+  "title": "Finite cylinder approximation of ruled sets",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We approximate compact ruled families of segments by finitely many cylinders with square intercept tiles and perpendicular-base area at most their integral projection cost plus any positive error. The velocity field is C 1 , and its differential has opposite real eigenvalues whose magnitudes are strictly below the inverse segment half-length; both eigenvalues may vanish. The result includes square-zero differentials with unrestricted shear and fields that pass between the two regimes. It holds for arbitrary compact label sets.",
+  "domain": "Convex and metric geometry",
+  "published": "2026-09-27",
+  "family": "100",
+  "family_title": "Cylinder coverings below the half-area bound",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "geometry",
+      "ruled-sets",
+      "vector-fields"
+    ],
+    "reason": "Approximates compact ruled segment families by finitely many cylinders with area bounds.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

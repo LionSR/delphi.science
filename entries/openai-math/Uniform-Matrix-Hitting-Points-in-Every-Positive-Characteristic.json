@@ -1,0 +1,31 @@
+{
+  "key": "Uniform-Matrix-Hitting-Points-in-Every-Positive-Characteristic",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Uniform-Matrix-Hitting-Points-in-Every-Positive-Characteristic-October-4-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Uniform-Matrix-Hitting-Points-in-Every-Positive-Characteristic-October-4-2026/uniform-matrix-hitting-points-positive-characteristic.pdf",
+  "title": "Uniform Matrix Hitting Points in Every Positive Characteristic",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We construct a single matrix substitution that detects every nonzero size- s division-free noncommutative formula in n variables over every field of a given positive characteristic. One deterministic machine, given a promised prime p in binary and n , s in unary, outputs matrices over 𝔽 p of dimension $`O(n^3s^6)`$ in polynomial bit time. The same tuple works with arbitrary extension-field coefficients, including in characteristic two. The construction also applies to the stated acyclic algebraic path programs.",
+  "domain": "Theoretical computer science",
+  "published": "2026-10-04",
+  "family": "116",
+  "family_title": "Uniform black-box noncommutative identity testing across characteristics",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "algebraic-complexity",
+      "formulas",
+      "positive-characteristic"
+    ],
+    "reason": "Constructs a uniform matrix substitution detecting noncommutative formulas over fields of positive characteristic.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

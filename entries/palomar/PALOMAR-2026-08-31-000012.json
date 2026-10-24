@@ -1,0 +1,63 @@
+{
+  "key": "PALOMAR-2026-08-31-000012",
+  "source": "palomar",
+  "url": "https://github.com/mrdouglasny/OSforGFF-comparator/tree/6e56a6f2a0fe01272492ae8c2ae3dd4fc5bc5901/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-31-000012-v1.json",
+  "title": "mrdouglasny/OSforGFF-comparator",
+  "authors": [
+    "Sergey A. Cherkis",
+    "Michael R. Douglas",
+    "Sarah Hoback",
+    "Anna Mei",
+    "Ron Nissim"
+  ],
+  "summary": "Construction of the massive Gaussian Free Field in Euclidean spacetime of any dimension d >= 2 as a probability measure on the tempered distributions S'(R^d), and a proof that it satisfies all of the Osterwalder-Schrader axioms: OS0 analyticity, OS1 regularity, OS2 Euclidean invariance, OS3 reflection positivity, and OS4 clustering and ergodicity. The OS axioms are the conditions under which a Euclidean field theory reconstructs a relativistic quantum field theory obeying the Wightman axioms, so the free field is the base case of constructive quantum field theory on which interacting…",
+  "domain": "hep-th",
+  "tags": [
+    "hep-th",
+    "math-ph",
+    "msc:81T08",
+    "msc:81S40",
+    "msc:60G60"
+  ],
+  "published": "2026-08-31",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Quantum Physics: A Functional Integral Point of View",
+      "identifier": "ISBN:978-0-387-96477-7",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Axioms for Euclidean Green's functions",
+      "identifier": "10.1007/BF01645738",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Axioms for Euclidean Green's functions II",
+      "identifier": "10.1007/BF01608978",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/mrdouglasny/OSforGFF-comparator",
+  "commit": "6e56a6f2a0fe01272492ae8c2ae3dd4fc5bc5901",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "quantum-field-theory",
+      "constructive-qft",
+      "osterwalder-schrader"
+    ],
+    "reason": "Construction of the massive Gaussian free field and verification of Osterwalder–Schrader axioms.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

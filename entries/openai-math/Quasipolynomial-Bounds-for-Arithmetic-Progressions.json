@@ -1,0 +1,32 @@
+{
+  "key": "Quasipolynomial-Bounds-for-Arithmetic-Progressions",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Quasipolynomial-Bounds-for-Arithmetic-Progressions-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Quasipolynomial-Bounds-for-Arithmetic-Progressions-September-23-2026/paper.pdf",
+  "title": "Quasipolynomial Bounds for Arithmetic Progressions",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove Erdős's conjecture that every set of positive integers with divergent reciprocal sum contains arithmetic progressions of every finite length. More quantitatively, for every fixed k ≥ 3, we show $`\\displaystyle r_k(N)\\le C_kN\\exp\\bigl(-c_k(\\log N)^{\\varepsilon_k}\\bigr)`$ with $`C_k,c_k,\\varepsilon_k\\gt 0`$, where $`r_k(N)`$ is the largest size of a subset of $`\\{1,\\ldots,N\\}`$ with no nonconstant k -term arithmetic progression.",
+  "domain": "Combinatorics",
+  "published": "2026-09-23",
+  "family": "159",
+  "family_title": "Erdős’s reciprocal-sum conjecture and quasipolynomial Szemerédi bounds",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "additive-combinatorics",
+      "arithmetic-progressions",
+      "erdos-problems",
+      "combinatorics"
+    ],
+    "reason": "Proves Erdős's conjecture on arithmetic progressions in sets with divergent reciprocal sum.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

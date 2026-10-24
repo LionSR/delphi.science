@@ -1,0 +1,55 @@
+{
+  "key": "PALOMAR-2026-09-27-000005",
+  "source": "palomar",
+  "url": "https://github.com/RBarish-UTokyo/FourColorTheorem-Lean4/tree/20fa34599f5189dd569d96dd22f306c94ab1c446/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-27-000005-v1.json",
+  "title": "The Four Color Theorem (Lean 4 port of Gonthier's Coq proof)",
+  "authors": [
+    "Robert D. Barish"
+  ],
+  "summary": "A Lean 4 and Mathlib formalization of the Four Color Theorem, ported from Georges Gonthier's Coq proof by Claude Opus 5.5, Anthropic's AI model, working as an agent under the direction of Robert D. Barish. The main theorem, FourColor.RealPlane.four_color, states that every simple map of the real plane can be colored with at most four colors so that adjacent regions get different colors. The map may have infinitely many regions, bounded or not; each region must be open and connected, and two regions are adjacent when their closures share a point that lies in the closure of no third region. As…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C15",
+    "msc:05C10",
+    "msc:68V20",
+    "msc:68V15"
+  ],
+  "published": "2026-09-27",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "The four-colour theorem",
+      "identifier": "doi:10.1006/jctb.1997.1750",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Formal Proof—The Four-Color Theorem",
+      "identifier": "https://www.ams.org/notices/200811/tx081101382p.pdf",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/RBarish-UTokyo/FourColorTheorem-Lean4",
+  "commit": "20fa34599f5189dd569d96dd22f306c94ab1c446",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "four-color-theorem",
+      "lean-formalization",
+      "formal-verification"
+    ],
+    "reason": "Lean 4 port of a Coq formalization of the Four Color Theorem.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-09-30-000025",
+  "source": "palomar",
+  "url": "https://github.com/mmislan/palomar-p026-nonnegative-degradation-unistationarity/tree/f8d9da22ab2743054412b71177e4dbc5fb6ac993/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000025-v1.json",
+  "title": "Unistationarity of Type II_l and Type V normal forms with nonnegative degradation",
+  "authors": [
+    "Michael Mislan"
+  ],
+  "summary": "Nandan, Nghe and Unterberger (arXiv:2507.15546, Theorem 5.2 and the following remark) left uniqueness with degradation unresolved for Type II_l cores with l > 2 and, when some degradation rates vanish, for Type V cores. For the source-minimal Type II_l normal forms with l ≥ 3 and the Type V normal forms, unistationarity is established for reversible mass-action kinetics with positive forward and reverse rate constants and arbitrary nonnegative linear degradation. Any two strictly positive stationary concentration vectors coincide, including all internal species of the reversible unit chains.…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "q-bio.MN",
+    "msc:92C42",
+    "msc:80A30",
+    "msc:15B48"
+  ],
+  "published": "2026-09-30",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Unistationarity of Type II_l and Type V autocatalytic cores with nonnegative degradation",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/mmislan/palomar-p026-nonnegative-degradation-unistationarity",
+  "commit": "f8d9da22ab2743054412b71177e4dbc5fb6ac993",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "reaction-networks",
+      "chemical-kinetics",
+      "dynamical-systems"
+    ],
+    "reason": "Uniqueness results for stationary states of reversible mass-action networks with degradation.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "key": "Subsphere-methods-for-memory-sample-lower-bounds-in-noiseless-Gaussian-regression",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Subsphere-methods-for-memory-sample-lower-bounds-in-noiseless-Gaussian-regression-September-27-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Subsphere-methods-for-memory-sample-lower-bounds-in-noiseless-Gaussian-regression-September-27-2026/paper.pdf",
+  "title": "Subsphere methods for memory-sample lower bounds in noiseless Gaussian regression",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "Let a finite-state streaming learner estimate a uniformly random unit vector from independent exact Gaussian linear measurements. We prove that $`o(d^2)`$ bits of persistent memory and angular success probability at least 2/3 require at least $`2^{-16}d\\log_2(1/\\epsilon)`$ samples for all sufficiently large d , uniformly for $`0\\lt \\epsilon\\le1/10`$. The proof conditions each batch on its observed projection and controls the resulting random residual subsphere.",
+  "domain": "Theoretical computer science",
+  "published": "2026-09-27",
+  "family": "140",
+  "family_title": "Memory–sample lower bounds for noiseless Gaussian regression",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "learning-theory",
+      "memory-bounds",
+      "streaming",
+      "gaussian-regression"
+    ],
+    "reason": "Proves memory-sample lower bounds for streaming learners in noiseless Gaussian regression.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

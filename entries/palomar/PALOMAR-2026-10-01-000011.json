@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-10-01-000011",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/revenue-equivalence-lean/tree/b07bab2482b6ff98a71d650d5b4d4ac327e240b0/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-01-000011-v1.json",
+  "title": "revenue-equivalence-lean",
+  "authors": [
+    "Arthur Freitas Ramos"
+  ],
+  "summary": "A Lean formalization of Myerson's 1981 revenue equivalence theorem in a single-parameter Bayesian mechanism-design model with continuous real types. The formal result is RevenueEquivalence.Palomar.revenueEquivalence (X P1 P2 : ℝ → ℝ) (h1 : BIC X P1) (h2 : BIC X P2) (hU : interimUtility X P1 0 = interimUtility X P2 0) (t : ℝ) (ht : 0 ≤ t) : P1 t = P2 t: two Bayesian incentive-compatible mechanisms with the same interim allocation rule and the same interim utility at the reference type (type zero) charge the same interim payments at every nonnegative type. Types range over all of ℝ; there is…",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "econ.TH",
+    "msc:91B26"
+  ],
+  "published": "2026-10-01",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Optimal auction design",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/revenue-equivalence-lean",
+  "commit": "b07bab2482b6ff98a71d650d5b4d4ac327e240b0",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "mechanism-design",
+      "revenue-equivalence",
+      "bayesian-games",
+      "lean"
+    ],
+    "reason": "Lean formalization of Myerson's revenue equivalence theorem in a Bayesian setting.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

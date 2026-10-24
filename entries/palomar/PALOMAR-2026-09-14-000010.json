@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-09-14-000010",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/two-dimensional-lambda-calculus-lean/tree/7aa1f961347b19deab3718521627b98f14357bc7/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-14-000010-v1.json",
+  "title": "Certified naturality and the obstruction to unrestricted naturality in a typed two-dimensional calculus",
+  "authors": [
+    "Arthur F. Ramos"
+  ],
+  "summary": "We formalize the boundary of naturality in the labelled conversion calculus of A Theory of a Two-Dimensional Typed Lambda Calculus. Canonical evaluation of inductively presented homotopies constructs naturality squares, and transport along finite presentations preserves two-paths and recovers the naturality boundary. In contrast, an explicit pointwise family on Fin 3 admits no naturality two-cell or finite pasting: a six-element dihedral-group invariant separates its two boundary paths while respecting every declared two-cell generator. This independently reconstructed refutation is…",
+  "domain": "math.LO",
+  "tags": [
+    "math.LO",
+    "msc:03B40",
+    "msc:03B38"
+  ],
+  "published": "2026-09-14",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A Theory of a Two-Dimensional Typed Lambda Calculus",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/two-dimensional-lambda-calculus-lean",
+  "commit": "7aa1f961347b19deab3718521627b98f14357bc7",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "type-theory",
+      "lambda-calculus",
+      "homotopy",
+      "formalization"
+    ],
+    "reason": "Formal study of naturality limits in a two-dimensional typed lambda calculus, with certified checks.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

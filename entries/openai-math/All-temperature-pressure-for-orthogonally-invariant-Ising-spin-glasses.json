@@ -1,0 +1,31 @@
+{
+  "key": "All-temperature-pressure-for-orthogonally-invariant-Ising-spin-glasses",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/All-temperature-pressure-for-orthogonally-invariant-Ising-spin-glasses-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/All-temperature-pressure-for-orthogonally-invariant-Ising-spin-glasses-September-25-2026/paper.pdf",
+  "title": "All-temperature pressure for orthogonally invariant Ising spin glasses",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We determine the limiting pressure of an Ising spin glass with Haar orthogonal eigenvectors, a compact limiting spectral law, and no asymptotic outliers, at every fixed temperature. The pressure converges in expectation and almost surely to a variational formula. We also give the limiting pressure with deterministic external fields whose empirical laws converge in first-moment transport distance, and derive a formula for the zero-field ground-state energy by taking temperature to zero.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-09-25",
+  "family": "234",
+  "family_title": "All-temperature pressure of orthogonally invariant Ising spin glasses",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "probability",
+      "spin-glasses",
+      "random-matrices"
+    ],
+    "reason": "Derives limiting pressure formulas for Ising spin glasses with orthogonal invariance at all temperatures.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

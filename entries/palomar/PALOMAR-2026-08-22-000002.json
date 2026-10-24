@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-08-22-000002",
+  "source": "palomar",
+  "url": "https://github.com/mbaccaro-dev/mathematical-proofs/tree/f0ccae19f2cb5afdca00c42694d677c74dc492f6/MathematicalProofs/SelbergDivisorFeedback/Lean",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-22-000002-v1.json",
+  "title": "mbaccaro-dev/mathematical-proofs",
+  "authors": [
+    "Mayk Loide Baccaro"
+  ],
+  "summary": "A Lean 4 proof of the sequence-level conditioning construction for Selberg divisor feedback. Two explicit perturbations of the von Mangoldt weight stay in the positive prime-power cone, approximate the divisor data to an arbitrary tolerance through twice the observation scale, separate their summatory outputs at a near-linear power scale, and retain one uniform linear Selberg bound.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11N05",
+    "msc:11M26"
+  ],
+  "published": "2026-08-22",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Selberg Feedback and Approximate Divisor Data Do Not Stably Determine Square-Root Prime Error",
+      "identifier": "10.5281/zenodo.22005767",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/mbaccaro-dev/mathematical-proofs",
+  "commit": "f0ccae19f2cb5afdca00c42694d677c74dc492f6",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "analytic-number-theory",
+      "selberg-sieve",
+      "lean-formalization",
+      "von-mangoldt"
+    ],
+    "reason": "Lean proof of a sequence-level conditioning construction for Selberg divisor feedback.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

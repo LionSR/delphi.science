@@ -1,0 +1,31 @@
+{
+  "key": "Path-selection-and-an-elliptic-inequality-on-degenerating-Ricci-flat-trees",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Path-selection-and-an-elliptic-inequality-on-degenerating-Ricci-flat-trees-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Path-selection-and-an-elliptic-inequality-on-degenerating-Ricci-flat-trees-September-24-2026/paper.pdf",
+  "title": "Path selection and an elliptic inequality on degenerating Ricci-flat trees",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove a sequential elliptic inequality for the renormalized Einstein–Hilbert functional on a fixed finite tree of four-dimensional Ricci-flat spaces. As the joining lengths diverge and the scale-neutral weighted Ricci error M tends to zero, the functional satisfies $`E=o(M)`$. The root end has decay exponent greater than one, and every joined quotient group is nontrivial. We also prove the multivariable path-selection theorem for asymptotic expansions used to obtain this estimate.",
+  "domain": "Differential geometry",
+  "published": "2026-09-24",
+  "family": "351",
+  "family_title": "Scalar curvature and finite-time Ricci-flow singularities",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "differential-geometry",
+      "ricci-flat",
+      "elliptic-pde"
+    ],
+    "reason": "Proves an elliptic inequality for a renormalized Einstein-Hilbert functional on degenerating Ricci-flat trees.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

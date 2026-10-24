@@ -1,0 +1,63 @@
+{
+  "key": "PALOMAR-2026-10-13-000006",
+  "source": "palomar",
+  "url": "https://github.com/linrock/math-proofs/tree/ba96303b34a95ac458958c1eb0bbdee54733484a/erdos-1105",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-13-000006-v1.json",
+  "title": "Erdős 1105: anti-Ramsey numbers for cycles and paths",
+  "authors": [
+    "Linmiao Xu"
+  ],
+  "summary": "A complete Lean 4 proof of both parts of Erdős problem 1105 on the anti-Ramsey number AR(n, H), the maximum number of colors in a surjective edge-coloring of K_n with no rainbow copy of H. Part (i) proves the Erdős–Simonovits–Sós (1975) cycle formula AR(n, C_k) = ((k - 2) / 2 + 1 / (k - 1)) n + O(1) for every fixed k ≥ 3 (Montellano-Ballesteros and Neumann-Lara 2005; Choi 2011), together with the exact triangle value AR(n, C_3) = n - 1 and the explicit two-sided bounds ⌊n / (k - 1)⌋(choose(k - 1, 2) + 1) - 1 ≤ AR(n, C_k) ≤ ((k - 2) / 2 + 1 / (k - 1)) n - 1 for all n ≥ k ≥ 3 via private-color…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C55",
+    "msc:05C38",
+    "msc:05C35"
+  ],
+  "published": "2026-10-13",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Anti-Ramsey theorems",
+      "identifier": "https://real.mtak.hu/110457/1/1975-05.pdf",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "An anti-Ramsey theorem on cycles",
+      "identifier": "https://doi.org/10.1007/s00373-005-0619-3",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Problems in Graph Theory and Probability",
+      "identifier": "https://doi.org/10.31274/etd-180810-2269",
+      "relationship": "adapts"
+    },
+    {
+      "title": "The anti-Ramsey number for paths",
+      "identifier": "https://arxiv.org/abs/2102.00807",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/linrock/math-proofs",
+  "commit": "ba96303b34a95ac458958c1eb0bbdee54733484a",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "extremal-combinatorics",
+      "anti-ramsey",
+      "lean"
+    ],
+    "reason": "Lean proof of anti-Ramsey number bounds for cycles and paths, addressing an Erdős problem.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

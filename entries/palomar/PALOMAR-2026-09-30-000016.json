@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-09-30-000016",
+  "source": "palomar",
+  "url": "https://github.com/Dishah3241/FKSEdgeThreshold/tree/b0577b932a2780463139c25aedde6ea222bb6bd1/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000016-v1.json",
+  "title": "Frankl-Kupavskii-Swanepoel Theorem 3: fewer than C(d+2,2) edges embeds in R^d",
+  "authors": [
+    "Dishant Shah"
+  ],
+  "summary": "For every integer d ≥ 4, every finite simple graph with fewer than C(d + 2, 2) edges has an injective placement in Euclidean d-space under which every edge has length 1, and the complete graph K_{d+2} has exactly C(d + 2, 2) edges and has no such placement. Equivalently, f(d) = C(d + 2, 2), where f(d) is the least number of edges in a finite simple graph with no unit-distance representation in R^d. Non-edges may also lie at distance 1. Finite simple graphs are represented as SimpleGraph (Fin n), including the empty graph. The proof is Frankl–Kupavskii–Swanepoel Theorem 3, already proved in…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.MG",
+    "msc:05C62",
+    "msc:52C10"
+  ],
+  "published": "2026-09-30",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Embedding graphs in Euclidean space",
+      "identifier": "https://arxiv.org/abs/1802.03092",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Dishah3241/FKSEdgeThreshold",
+  "commit": "b0577b932a2780463139c25aedde6ea222bb6bd1",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "combinatorics",
+      "discrete-geometry",
+      "unit-distance-graphs",
+      "lean-formalization"
+    ],
+    "reason": "Lean-checked proof of a unit-distance embedding edge-count bound for graphs in R^d.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

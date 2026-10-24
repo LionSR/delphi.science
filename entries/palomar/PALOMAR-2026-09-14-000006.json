@@ -1,0 +1,59 @@
+{
+  "key": "PALOMAR-2026-09-14-000006",
+  "source": "palomar",
+  "url": "https://github.com/DiarHaidary/Spectral-norms-of-independent-entries-with-regular-moment-growth/tree/762bd5ec5050a96f5e6ba3926b6cda4816fcd4b0/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-14-000006-v1.json",
+  "title": "MI-32: Lean formalization of the parity and positive-polynomial upper bound",
+  "authors": [
+    "Diar Heidary"
+  ],
+  "summary": "A Lean 4 formalization of the MI-32 upper bound, that is, of the Latała-Świątkowski conjecture that for every regularity parameter alpha >= 1 there is a constant C > 0, independent of the dimension and of the entry laws, with E||X|| = 1. Here ||.|| is the Euclidean operator norm, M(X) is the sum of the largest row and column standard deviations, and D(X) is the max-min weak moment at order log(k+1) taken over one shared deterministic deletion set on both axes. The probability space is arbitrary and the subunit order log 2 at k = 1 is kept literally. The selected theorem MI32.main_upper…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.FA",
+    "msc:60B20",
+    "msc:60E15",
+    "msc:47A30"
+  ],
+  "published": "2026-09-14",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "MI-32 - Spectral norms of independent entries with regular moment growth, in Open Problems in Numerical Linear Algebra",
+      "identifier": "https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/d7fcfe7bfe8c02cd98d9463fa5a8ba12850d5bdb/matrix-inequalities-and-norms/MI-32/README.md",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Norms of randomized circulant matrices",
+      "identifier": "https://doi.org/10.1214/22-EJP799",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "MI-32: a proof through parity counts and positive walk polynomials",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/DiarHaidary/Spectral-norms-of-independent-entries-with-regular-moment-growth",
+  "commit": "762bd5ec5050a96f5e6ba3926b6cda4816fcd4b0",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "random-matrices",
+      "lean",
+      "probability"
+    ],
+    "reason": "Lean formalization of an upper bound in the Latała–Świątkowski random matrix conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

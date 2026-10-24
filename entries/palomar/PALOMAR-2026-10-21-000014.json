@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-10-21-000014",
+  "source": "palomar",
+  "url": "https://github.com/shaikidris/priority-controller-phase1/tree/a510ea7e76d9b10e21e7f4db8f57fd3a3468a090/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-21-000014-v1.json",
+  "title": "Bounded conjunction and proper-basis algorithms",
+  "authors": [
+    "Idris Ali Shaik"
+  ],
+  "summary": "Bounded-support and consistent selector-expansion laws for decoder DAGs, with complete native detection executions and checked emitted witnesses for bounded live conjunctions and proper bases. Selected time inequalities give a general XP bound, a polynomial bound for one live conjunction, and an FPT bound for healthy-one roots. Concrete source construction, total time and temporary word-storage proofs are supplied as companion declarations.",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "msc:68Q25",
+    "msc:68Q60"
+  ],
+  "published": "2026-10-21",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Polynomial Fault Detection Without Bounded Width: Exact Reachable Sets in Priority Controllers",
+      "identifier": "doi:10.5281/zenodo.23400057",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/shaikidris/priority-controller-phase1",
+  "commit": "a510ea7e76d9b10e21e7f4db8f57fd3a3468a090",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "computational-complexity",
+      "algorithms",
+      "parameterized-complexity",
+      "decoder-dags"
+    ],
+    "reason": "Algorithms and complexity bounds for bounded conjunctions and proper-basis detection, with checked witnesses.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

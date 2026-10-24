@@ -1,0 +1,41 @@
+{
+  "key": "PALOMAR-2026-10-17-000001",
+  "source": "palomar",
+  "url": "https://github.com/kejace/cd4vt/tree/bfd433640794b11424be43ad4778566be9253ef4/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-17-000001-v1.json",
+  "title": "A converse to the discrete four-vertex theorem",
+  "authors": [
+    "Kristoffer Josefsson"
+  ],
+  "summary": "Lean 4 / Mathlib formalization of the paper \"A converse to the discrete four-vertex theorem\", answering Tabachnikov's Problem 2. For every n >= 4, every cyclic sequence of positive numbers with two distinct plateau maxima and two distinct plateau minima is the sequence of circumradii of consecutive vertex triples of a simple, strictly convex, coherent polygon (circumcenters inside the vertex angles). Together with Dahlberg's discrete four-vertex theorem, also proved here, this characterizes the nonconstant radius sequences of such polygons. The realization can be chosen C^1 in the data near…",
+  "domain": "math.MG",
+  "tags": [
+    "math.MG",
+    "math.DG",
+    "msc:53A70"
+  ],
+  "published": "2026-10-17",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/kejace/cd4vt",
+  "commit": "bfd433640794b11424be43ad4778566be9253ef4",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "discrete-geometry",
+      "polygons",
+      "four-vertex-theorem",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of a converse to the discrete four-vertex theorem for convex polygons.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

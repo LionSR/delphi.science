@@ -1,0 +1,46 @@
+{
+  "key": "PALOMAR-2026-09-30-000022",
+  "source": "palomar",
+  "url": "https://github.com/elliotglazer/solid-lean/tree/337e7a5afd81ee7236c0e0dceadbc8cfc313f83f/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000022-v1.json",
+  "title": "solid-lean",
+  "authors": [
+    "Elliot Glazer"
+  ],
+  "summary": "The tower theory H is the many-sorted first-order theory of a tower of ZFC universes Z_0, Z_1, ... cut at consecutive inaccessible cardinals, with transition maps j_n identifying Z_n with the rank segment V(kappa_n) of Z_{n+1}. H is solid in Enayat's sense. For models M, N, P, with N interpreted in M and P interpreted in N, and an M-definable isomorphism between M and P, there is an M-definable isomorphism between M and N. The registered statement (Palomar/Challenge.lean) writes out the many-sorted first-order logic of H from scratch, with structures, formulas, satisfaction and definability…",
+  "domain": "math.LO",
+  "tags": [
+    "math.LO",
+    "msc:03C62",
+    "msc:03C40",
+    "msc:03F25",
+    "msc:03E30",
+    "msc:03E55",
+    "msc:03B38",
+    "msc:03B35"
+  ],
+  "published": "2026-09-30",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/elliotglazer/solid-lean",
+  "commit": "337e7a5afd81ee7236c0e0dceadbc8cfc313f83f",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "set-theory",
+      "model-theory",
+      "tower-theory",
+      "lean-formalization"
+    ],
+    "reason": "Formalization of a solidity result for a tower theory of ZFC universes.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

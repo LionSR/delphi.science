@@ -1,0 +1,31 @@
+{
+  "key": "the-additive-indecomposability-of-the-primes",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/the-additive-indecomposability-of-the-primes-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/the-additive-indecomposability-of-the-primes-September-24-2026/paper.pdf",
+  "title": "The additive indecomposability of the primes",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove Ostmann's inverse Goldbach conjecture: no set differing from the primes by finitely many elements can be written as $`A+B`$, where A and B are sets of nonnegative integers with at least two elements each.",
+  "domain": "Number theory",
+  "published": "2026-09-24",
+  "family": "013",
+  "family_title": "Ostmann’s inverse Goldbach conjecture",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "additive-combinatorics",
+      "prime-numbers",
+      "number-theory"
+    ],
+    "reason": "Proves Ostmann's inverse Goldbach conjecture on additive decompositions of prime-like sets.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

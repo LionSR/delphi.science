@@ -1,0 +1,55 @@
+{
+  "key": "PALOMAR-2026-10-06-000006",
+  "source": "palomar",
+  "url": "https://github.com/CoolRmal/FluidSingularSets/tree/dd3ae61ce421a634818f52a6e11a8b78dd1bfc97/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-06-000006-v1.json",
+  "title": "FluidSingularSets",
+  "authors": [
+    "Yongxi (Aaron) Lin"
+  ],
+  "summary": "Hausdorff nullity for all finite products of squared successive logarithms and an upper parabolic box dimension bound of 25/23 for interior singular sets of unforced three-dimensional suitable weak Navier–Stokes solutions.",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "math.MG",
+    "msc:35Q30",
+    "msc:28A78",
+    "msc:28A80"
+  ],
+  "published": "2026-10-06",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A logarithmic refinement of CKN partial regularity",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Packing dimension and logarithmic gauges for the Navier–Stokes singular set",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/CoolRmal/FluidSingularSets",
+  "commit": "dd3ae61ce421a634818f52a6e11a8b78dd1bfc97",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "navier-stokes",
+      "geometric-measure-theory",
+      "fluid-dynamics",
+      "singular-sets"
+    ],
+    "reason": "Bounds Hausdorff nullity and box dimension of singular sets for Navier–Stokes solutions.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

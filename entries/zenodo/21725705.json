@@ -1,0 +1,37 @@
+{
+  "key": "21725705",
+  "source": "zenodo",
+  "url": "https://zenodo.org/records/21725705",
+  "title": "Corpus commitment: pre-execution decision records from an LLM research-screening funnel (stage 0)",
+  "authors": [
+    "Zheng, Yixing"
+  ],
+  "summary": "This is a cryptographic commitment to a dataset, not the dataset. It fixes the contents of a per-decision record from an operating LLM research-screening funnel in advance of that record being released in stages, so that records published later can be verified as having been fixed at this date rather than authored to fit a result. Commitment q6/v1 sha256-merkle root=7e1f5795a5814adf391a7442b9c5e9e81527cd0c21ac57b266d09db3c0b011bc n=285 window=2026-06-07..2026-07-28 Merkle leaves are salted — sha256(0x00 || nonce || canonical_json(record)) with a 32-byte per-record nonce revealed only on…",
+  "tags": [
+    "file drawer problem",
+    "large language models",
+    "AI scientist",
+    "research provenance",
+    "cryptographic commitment",
+    "OpenTimestamps"
+  ],
+  "domain": "dataset",
+  "published": "2026-07-31",
+  "doi": "10.5281/zenodo.21725705",
+  "added": "2026-10-23",
+  "added_by": "harvest:zenodo-ai-generated",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "subject": "cs.DL",
+    "tags": [
+      "research-provenance",
+      "cryptographic-commitment",
+      "llm-screening",
+      "file-drawer-problem"
+    ],
+    "reason": "Cryptographic commitment to records from an LLM research-screening pipeline, for later verification.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

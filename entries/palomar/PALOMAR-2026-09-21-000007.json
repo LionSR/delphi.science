@@ -1,0 +1,55 @@
+{
+  "key": "PALOMAR-2026-09-21-000007",
+  "source": "palomar",
+  "url": "https://github.com/bbj-lab/Scope-Reach-Formalized/tree/213759b733027d2558a73187b48b143a483ba3a1/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-21-000007-v1.json",
+  "title": "SCOPE and REACH with almost-surely finite stopping times",
+  "authors": [
+    "Luke Solo",
+    "Matthew B. A. McDermott",
+    "William F. Parker",
+    "Bashar Ramadan",
+    "Michael C. Burkhart",
+    "Brett K. Beaulieu-Jones"
+  ],
+  "summary": "SCOPE and REACH are integrable unbiased estimators of an outcome-before-stopping probability for autoregressive models on countably infinite vocabularies. REACH is the conditional expectation of a two-stage Monte Carlo estimator given the outcome-free backbones. Its variance bound against ordinary Monte Carlo is derived from that Rao–Blackwell identity and the law of total variance, for every positive sample count. The development also proves the stopping-time property, almost-sure finiteness, and the bridge between the two sampling experiments.",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "math.PR",
+    "msc:62F10",
+    "msc:65C05",
+    "msc:60G40"
+  ],
+  "published": "2026-09-21",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Efficient Generative Prediction for EHR Foundation Models: The SCOPE and REACH Estimators",
+      "identifier": "arXiv:2602.03730v2",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/bbj-lab/Scope-Reach-Formalized",
+  "commit": "213759b733027d2558a73187b48b143a483ba3a1",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "statistics",
+      "monte-carlo",
+      "autoregressive-models",
+      "unbiased-estimation"
+    ],
+    "reason": "Unbiased estimators with variance bounds for outcome probabilities in autoregressive models.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

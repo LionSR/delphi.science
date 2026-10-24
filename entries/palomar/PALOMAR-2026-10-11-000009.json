@@ -1,0 +1,52 @@
+{
+  "key": "PALOMAR-2026-10-11-000009",
+  "source": "palomar",
+  "url": "https://github.com/nitromannitol/subdiffusive-process/tree/4c6b8fa60357a07fd5713e5104a6cc70f8e432dc/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-11-000009-v1.json",
+  "title": "Anomalous scaling limit of a Brownian particle in a log-correlated potential",
+  "authors": [
+    "Scott Armstrong",
+    "Ahmed Bou-Rabee",
+    "Tuomo Kuusi"
+  ],
+  "summary": "A Lean 4 formalization of the paper \"Anomalous scaling limit of a Brownian particle in a log-correlated potential\" by Armstrong, Bou-Rabee and Kuusi: the subdiffusive scaling limit of a Brownian particle whose drift is the gradient of a log-correlated random potential (Theorem A, in its introduction form and in its precise quenched form), quantitative homogenization of the Dirichlet problem uniformly in the infrared cutoff (Theorem B), and large-scale Hölder regularity with a Liouville theorem (Theorem C), together with the supporting coarse-graining, elliptic-regularity and Markov-process…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.AP",
+    "msc:60K37",
+    "msc:35R60",
+    "msc:82B28"
+  ],
+  "published": "2026-10-11",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Anomalous scaling limit of a Brownian particle in a log-correlated potential",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/nitromannitol/subdiffusive-process",
+  "commit": "4c6b8fa60357a07fd5713e5104a6cc70f8e432dc",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "random-walks",
+      "homogenization",
+      "log-correlated-fields",
+      "lean"
+    ],
+    "reason": "Lean formalization of scaling limits for a Brownian particle in a random potential.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

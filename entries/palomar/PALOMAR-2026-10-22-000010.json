@@ -1,0 +1,55 @@
+{
+  "key": "PALOMAR-2026-10-22-000010",
+  "source": "palomar",
+  "url": "https://github.com/32805433/Universal-Group/tree/6416dd36ad22f3684583457f234519bafc851396/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-22-000010-v1.json",
+  "title": "A universal group with thirteen relators",
+  "authors": [
+    "Qiuyu Ren"
+  ],
+  "summary": "Lean 4 proof that there exists a presentation with two generators and thirteen relators whose group contains an isomorphic copy of every finitely presented group. The construction combines a universal finitely presented input, positive preparation, word recognition, a six-generator nineteen-relator host, and a final HNN compression.",
+  "domain": "math.GR",
+  "tags": [
+    "math.GR"
+  ],
+  "published": "2026-10-22",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Subgroups of finitely presented groups",
+      "identifier": "https://doi.org/10.1098/rspa.1961.0132",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Universal group with twenty-one defining relations",
+      "identifier": "https://doi.org/10.1016/0012-365X(77)90153-4",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Small undecidable groups and unrecognizable 4-manifolds",
+      "identifier": "https://arxiv.org/abs/2609.10461v1",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/32805433/Universal-Group",
+  "commit": "6416dd36ad22f3684583457f234519bafc851396",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "group-theory",
+      "combinatorial-group-theory",
+      "lean"
+    ],
+    "reason": "Lean proof of a two-generator, thirteen-relator group containing every finitely presented group.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "The-Blockwise-Alperin-Weight-Conjecture",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-Blockwise-Alperin-Weight-Conjecture-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-Blockwise-Alperin-Weight-Conjecture-September-23-2026/paper.pdf",
+  "title": "The Blockwise Alperin Weight Conjecture",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the numerical blockwise Alperin weight conjecture for every finite group and every prime p . For each p -block B , the number of irreducible Brauer characters in B equals the number of conjugacy classes of B -weights.",
+  "domain": "Algebra",
+  "published": "2026-09-23",
+  "family": "202",
+  "family_title": "The blockwise Alperin weight conjecture",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "modular-representation-theory",
+      "finite-groups",
+      "blocks"
+    ],
+    "reason": "Proves the numerical blockwise Alperin weight conjecture for finite groups.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "No-bigeodesics-in-planar-first-passage-percolation",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/No-bigeodesics-in-planar-first-passage-percolation-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/No-bigeodesics-in-planar-first-passage-percolation-September-24-2026/main.pdf",
+  "title": "No bigeodesics in planar first-passage percolation",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that planar first-passage percolation with independent identically distributed nonnegative nonatomic edge weights has almost surely no doubly infinite geodesic, provided the minimum of four independent weights has finite second moment. This resolves the planar no-bigeodesics conjecture under that moment assumption. The conclusion rules out all bigeodesics simultaneously, without any regularity assumption on the limit shape.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-09-24",
+  "family": "212",
+  "family_title": "Planar first-passage geometry and the absence of bigeodesics",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "probability",
+      "first-passage-percolation",
+      "geodesics"
+    ],
+    "reason": "Proves planar first-passage percolation has almost surely no doubly infinite geodesics under a moment condition.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

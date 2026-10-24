@@ -1,0 +1,58 @@
+{
+  "key": "PALOMAR-2026-08-27-000016",
+  "source": "palomar",
+  "url": "https://github.com/sneed-and-feed/lean-theorems-1/tree/262be20ccc67d4a9e1beb939d3842bff730d7fd8/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-27-000016-v1.json",
+  "title": "sneed-and-feed/lean-theorems-1",
+  "authors": [
+    "Sneed & Feed Formalization Team"
+  ],
+  "summary": "A complete machine-checked Lean 4 formalization of Descartes's Rule of Signs (1637, Wiedijk #73). Proves that for any non-zero real polynomial p(X) over ℝ, the number of positive real roots counted with algebraic multiplicity is bounded above by the number of sign variations in its coefficient sequence (ignoring zero coefficients), and their difference is an even non-negative integer. While the pinned Mathlib revision (Mathlib v4.34.0-rc1) contains the upper-bound inequality in `Mathlib.Algebra.Polynomial.RuleOfSigns` (`Polynomial.roots_countP_pos_le_signVariations`), this development…",
+  "domain": "math.AG",
+  "tags": [
+    "math.AG",
+    "math.CA",
+    "math.HO",
+    "msc:12D10",
+    "msc:26C10",
+    "msc:30C15",
+    "msc:01A45",
+    "msc:01A55"
+  ],
+  "published": "2026-08-27",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "La Géométrie",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Beweis eines algebraischen Lehrsatzes",
+      "identifier": "",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/sneed-and-feed/lean-theorems-1",
+  "commit": "262be20ccc67d4a9e1beb939d3842bff730d7fd8",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "real-algebra",
+      "lean",
+      "descartes-rule",
+      "polynomials"
+    ],
+    "reason": "Machine-checked Lean formalization of Descartes's Rule of Signs for real polynomials.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

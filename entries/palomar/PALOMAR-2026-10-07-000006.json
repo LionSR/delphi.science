@@ -1,0 +1,56 @@
+{
+  "key": "PALOMAR-2026-10-07-000006",
+  "source": "palomar",
+  "url": "https://github.com/jconorgrogan/palomar-chair-verification/tree/5f5ceedee770b76c21e8f1105e5e4e3b84b8d676/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-07-000006-v1.json",
+  "title": "The CLARK Tile: An Aperiodic Monotile in Five Dimensions",
+  "authors": [
+    "Conor Grogan"
+  ],
+  "summary": "We give an explicit compact tile, called CLARK (Chair with Local Asymmetric Registration Keys), in five-dimensional Euclidean space. It modifies a chair of 31 unit five-cubes with 256 rational pyramidal keys. Copies may be translated, rotated or reflected. The selected theorem proves tiling existence, no nonzero translation period in any physical tiling, and a finite full Euclidean symmetry group of cardinality at most 3840 for every such tiling. No registration, matching-rule or hierarchy assumption is imposed. A trivial symmetry group is not asserted.",
+  "domain": "math.MG",
+  "tags": [
+    "math.MG",
+    "math.CO"
+  ],
+  "published": "2026-10-07",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "S54 exact final sparse-key T5 specification",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Uniform prime-dimensional framed chair hierarchy manuscripts, 2026-10-05",
+      "identifier": "",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Five-dimensional physical right-symmetry quotient hierarchy, 2026-10-05",
+      "identifier": "",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jconorgrogan/palomar-chair-verification",
+  "commit": "5f5ceedee770b76c21e8f1105e5e4e3b84b8d676",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "discrete-geometry",
+      "aperiodic-tiling",
+      "tilings"
+    ],
+    "reason": "Mathematical construction of an aperiodic tile in five dimensions with proved symmetry and tiling properties.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

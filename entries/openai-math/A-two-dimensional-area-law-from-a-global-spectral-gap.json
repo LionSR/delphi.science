@@ -1,0 +1,31 @@
+{
+  "key": "A-two-dimensional-area-law-from-a-global-spectral-gap",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-two-dimensional-area-law-from-a-global-spectral-gap-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-two-dimensional-area-law-from-a-global-spectral-gap-September-24-2026/paper.pdf",
+  "title": "A two-dimensional area law from a global spectral gap",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove an entropy area law for the unique ground state of a finite-range Hamiltonian on any finite induced subgraph of the square lattice. A lower bound on the spectral gap of the full Hamiltonian and fixed bounds on the local dimension, interaction range, and interaction strength suffice. For every set of sites, its entanglement entropy is bounded by a constant times the number of edges crossing its boundary, independently of the size and shape of the domain.",
+  "domain": "Mathematical physics",
+  "published": "2026-09-24",
+  "family": "265",
+  "family_title": "Area laws and tensor networks for two-dimensional gapped systems",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "quantum-many-body",
+      "entanglement",
+      "area-law"
+    ],
+    "reason": "Proves an entanglement entropy area law for ground states under a spectral gap.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

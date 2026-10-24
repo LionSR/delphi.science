@@ -1,0 +1,54 @@
+{
+  "key": "PALOMAR-2026-09-21-000002",
+  "source": "palomar",
+  "url": "https://github.com/Vulkin-prog/paper-c-lean/tree/d8edbc44654f623fc68df92612c26a6ef9a90ec2/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-21-000002-v1.json",
+  "title": "Microscopic signed fields and empirical Poisson laws",
+  "authors": [
+    "Brice Pouly"
+  ],
+  "summary": "Quantitative comparison of the actual position/excess/sign field at growing intensity, retaining the original small-prime conditioning; same-grid dyadic restriction and common measurable readouts. Along literal dyadic scales, empirical window counts converge almost surely to Poisson, while empirical full vectors have a positive total-variation obstruction.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.PR",
+    "msc:11K65",
+    "msc:60F05"
+  ],
+  "published": "2026-09-21",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Long runs and rare patterns of a random completely multiplicative function",
+      "identifier": "https://github.com/Vulkin-prog/paper-c-lean/blob/b3cf9aa27700d784efc61e6f82a92cef53320c40/manuscripts/paper-c/paper_c_version_3PREL9_en.pdf",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Technical companion to Long runs and rare patterns of a random completely multiplicative function",
+      "identifier": "https://github.com/Vulkin-prog/paper-c-lean/blob/b3cf9aa27700d784efc61e6f82a92cef53320c40/manuscripts/paper-c/paper_c_version_3PREL9_technical_companion_en.pdf",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/Vulkin-prog/paper-c-lean",
+  "commit": "d8edbc44654f623fc68df92612c26a6ef9a90ec2",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "probability",
+      "number-theory",
+      "poisson-laws",
+      "empirical-fields"
+    ],
+    "reason": "Quantitative comparison of signed fields and empirical Poisson laws at growing intensity.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

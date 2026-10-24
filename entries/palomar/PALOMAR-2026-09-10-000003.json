@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-09-10-000003",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/blackwell-approachability-lean/tree/8a53170bbf91309d687d4f0131b2147457a3dbc3/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-10-000003-v1.json",
+  "title": "Irreducible improper phi-regret in Lean",
+  "authors": [
+    "Arthur Freitas Ramos"
+  ],
+  "summary": "A Mathlib-only formalization of two explicit three-action improper phi-regret families in Section 4.4.1 of Dann, Mansour, Mohri, Schneider, and Sivan (COLT 2025). They are finite counterexample families for the paper's rate-preserving linear-reduction program. It proves valid-improper certificates, the affine-hyperplane invariant-transport core of Lemma 4, the extreme-point antipodal-displacement core of Lemma 5, a direct finite one-way affine action/loss-transfer-to-canonical bridge, a source-style two-direction affine linear-equivalence-to-canonical bridge in an explicit…",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "cs.LG",
+    "msc:91A26",
+    "msc:68T05"
+  ],
+  "published": "2026-09-10",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Rate-Preserving Reductions for Blackwell Approachability",
+      "identifier": "https://proceedings.mlr.press/v291/dann25a.html",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/blackwell-approachability-lean",
+  "commit": "8a53170bbf91309d687d4f0131b2147457a3dbc3",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "game-theory",
+      "phi-regret",
+      "online-learning",
+      "lean"
+    ],
+    "reason": "Lean formalization of finite counterexample families for improper phi-regret reduction programs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "A-latest-anchor-induction-with-spectrally-compact-masks-for-worst-case-trace-reconstruction",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-latest-anchor-induction-with-spectrally-compact-masks-for-worst-case-trace-reconstruction-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-latest-anchor-induction-with-spectrally-compact-masks-for-worst-case-trace-reconstruction-October-5-2026/paper.pdf",
+  "title": "A latest-anchor induction with spectrally compact masks for worst-case trace reconstruction",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We give an improved worst-case sample bound for reconstructing a string from independent deletion traces, with its length and retention probability known. For each fixed retention probability, the number of traces is quasipolynomial: the logarithm of the sample budget is $`O((\\log n)^3(1+\\log\\log(2n))^6)`$. If the deletion probability is at most $`n^{-\\varepsilon}`$ for fixed ε > 0, polynomially many traces suffice. These bounds apply to binary strings and to strings of general symbols observed exactly. They concern sample complexity and do not assert an efficient reconstruction algorithm or…",
+  "domain": "Theoretical computer science",
+  "published": "2026-10-05",
+  "family": "122",
+  "family_title": "Quantitative trace-reconstruction bounds with a uniform decoder",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "trace-reconstruction",
+      "sample-complexity",
+      "theoretical-computer-science"
+    ],
+    "reason": "Improves worst-case sample bounds for reconstructing strings from deletion traces.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

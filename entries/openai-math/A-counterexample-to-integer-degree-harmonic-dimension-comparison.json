@@ -1,0 +1,32 @@
+{
+  "key": "A-counterexample-to-integer-degree-harmonic-dimension-comparison",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-counterexample-to-integer-degree-harmonic-dimension-comparison-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-counterexample-to-integer-degree-harmonic-dimension-comparison-September-25-2026/paper.pdf",
+  "title": "A counterexample to integer-degree harmonic dimension comparison",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For some even n ≥ 8 and integer k ≥ 2, we construct a complete smooth metric on ℝ n with nonnegative Ricci curvature whose space of real harmonic functions of pointwise polynomial growth at most k has dimension larger than the Euclidean harmonic-polynomial dimension. The metric is Euclidean near the origin, has asymptotic volume ratio strictly between zero and one, and has nonunique tangent cones at infinity. This answers the integer-degree form of Yau's dimension comparison question in the negative.",
+  "domain": "Differential geometry",
+  "published": "2026-09-25",
+  "family": "361",
+  "family_title": "Failure of integer-degree harmonic dimension comparison",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "geometric-analysis",
+      "harmonic-functions",
+      "ricci-curvature",
+      "asymptotic-geometry"
+    ],
+    "reason": "Builds a nonnegative Ricci curvature metric answering Yau's dimension comparison question negatively.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

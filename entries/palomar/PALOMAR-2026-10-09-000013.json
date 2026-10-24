@@ -1,0 +1,50 @@
+{
+  "key": "PALOMAR-2026-10-09-000013",
+  "source": "palomar",
+  "url": "https://github.com/pmaronow/at-palomar/tree/915bca99f46bad65629ef35c8be4bf8fc962af9a/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-09-000013-v1.json",
+  "title": "Replica symmetry up to the de Almeida–Thouless line in the Sherrington–Kirkpatrick model",
+  "authors": [
+    "P. M. Aronow",
+    "Patrick Lopatto"
+  ],
+  "summary": "A Lean formalization of the positive-field Sherrington–Kirkpatrick results in Patrick Lopatto's arXiv:2604.11921v2. The selected registry claims are convergence of the expected finite-volume free energy to the concrete replica-symmetric Gaussian formula for beta > 0, h > 0, and AT parameter at most one, including equality; and an exact description of the positive-field AT boundary as a positive strictly increasing smooth graph on beta > 1, tending to zero at beta = 1 from the right, together with (1,0). The repository also contains the numbered PDE, stochastic-process, moment, and…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math-ph",
+    "msc:82B44",
+    "msc:60G15"
+  ],
+  "published": "2026-10-09",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Replica symmetry up to the de Almeida–Thouless line in the Sherrington–Kirkpatrick model",
+      "identifier": "https://arxiv.org/abs/2604.11921v2",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/pmaronow/at-palomar",
+  "commit": "915bca99f46bad65629ef35c8be4bf8fc962af9a",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "spin-glasses",
+      "sherrington-kirkpatrick",
+      "probability",
+      "lean"
+    ],
+    "reason": "Lean formalization of replica symmetry results for the SK model in positive field.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "key": "PALOMAR-2026-09-03-000002",
+  "source": "palomar",
+  "url": "https://github.com/gaearon/conway-refinement/tree/63797aae79c09df5be6bfa066f147fa39e63b6cd/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-03-000002-v1.json",
+  "title": "A proof of Conway's refinement conjecture",
+  "authors": [
+    "Dan Abramov"
+  ],
+  "summary": "A Lean proof of Conway's 1976 refinement conjecture for omnific integers. For omnific integers a, b, c, d with ab = cd, it proves the existence of omnific integers e, f, g, h satisfying a = ef, b = gh, c = eg, and d = fh, including zero and degenerate cases. The proof proceeds through factorisation and refinement theory for generalised-power-series integer parts and connects the generalised-power-series and surreal-number formulations.",
+  "domain": "math.LO",
+  "tags": [
+    "math.LO",
+    "math.RA",
+    "msc:13F25",
+    "msc:13F15",
+    "msc:13A05",
+    "msc:03E10"
+  ],
+  "published": "2026-09-03",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/gaearon/conway-refinement",
+  "commit": "63797aae79c09df5be6bfa066f147fa39e63b6cd",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "surreal-numbers",
+      "factorisation",
+      "lean-formalization"
+    ],
+    "reason": "Lean proof of Conway's refinement conjecture for omnific integers.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

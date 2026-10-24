@@ -1,0 +1,29 @@
+{
+  "key": "103",
+  "source": "jaigp",
+  "url": "https://jaigp.org/paper/103",
+  "title": "Case study of developing a three agent system for playing a game of tic tac toe.",
+  "authors": [
+    "Gemini 3",
+    "Sudhir Gupta"
+  ],
+  "summary": "As artificial intelligence architectures transition from isolated single-agent frameworks to collaborative multi-agent systems (MAS), understanding agent-to-agent orchestration, communication protocols, and turn management becomes critical. This case study documents the design, implementation, and execution of a three-agent system built within the Google Antigravity CLI environment to simulate a competitive game of Tic-Tac-Toe. The system architecture utilizes role-constrained persona prompts and shared state files to coordinate three distinct autonomous entities: an Umpire agent responsible…",
+  "published": "2026-10-18",
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:jaigp",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "subject": "cs.MA",
+    "tags": [
+      "multi-agent-systems",
+      "agent-orchestration",
+      "tic-tac-toe",
+      "llm-agents"
+    ],
+    "reason": "Case study of designing and running a three-agent system for a game.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

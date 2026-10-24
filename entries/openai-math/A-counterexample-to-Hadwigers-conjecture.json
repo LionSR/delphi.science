@@ -1,0 +1,32 @@
+{
+  "key": "A-counterexample-to-Hadwigers-conjecture",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-counterexample-to-Hadwigers-conjecture-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-counterexample-to-Hadwigers-conjecture-September-23-2026/paper.pdf",
+  "title": "A counterexample to Hadwiger's conjecture",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We disprove Hadwiger's conjecture by constructing arbitrarily large graphs whose chromatic number exceeds their Hadwiger number. The examples have independence number at most two, and even their ordinary fractional chromatic number exceeds their Hadwiger number. Thus they also disprove the fractional-coloring weakening discussed by Reed and Seymour.",
+  "domain": "Combinatorics",
+  "published": "2026-09-23",
+  "family": "157",
+  "family_title": "Graph coloring, clique minors, and Colin de Verdière invariants",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-coloring",
+      "hadwiger-conjecture",
+      "extremal-graph-theory",
+      "chromatic-number"
+    ],
+    "reason": "Disproves Hadwiger's conjecture with graphs whose chromatic number exceeds their Hadwiger number.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

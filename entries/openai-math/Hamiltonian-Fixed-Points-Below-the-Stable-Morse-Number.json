@@ -1,0 +1,32 @@
+{
+  "key": "Hamiltonian-Fixed-Points-Below-the-Stable-Morse-Number",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Hamiltonian-Fixed-Points-Below-the-Stable-Morse-Number-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Hamiltonian-Fixed-Points-Below-the-Stable-Morse-Number-October-5-2026/paper.pdf",
+  "title": "Hamiltonian Fixed Points Below the Stable Morse Number",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We disprove the stable Morse lower bound for nondegenerate Hamiltonian fixed points by constructing a simply connected closed Kähler manifold with sixteen fewer fixed points than its stable Morse number. All the corresponding periodic orbits are contractible. The construction combines a Hamiltonian involution with integral homology torsion at two different primes; its proof uses finite-dimensional Morse theory and complex blowups.",
+  "domain": "Differential geometry",
+  "published": "2026-10-05",
+  "family": "347",
+  "family_title": "Counterexamples to stable-Morse and strong Arnold fixed-point bounds",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "symplectic-geometry",
+      "hamiltonian-dynamics",
+      "morse-theory",
+      "kahler-manifolds"
+    ],
+    "reason": "Disproves the stable Morse lower bound via a Kähler manifold construction with Hamiltonian involution.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

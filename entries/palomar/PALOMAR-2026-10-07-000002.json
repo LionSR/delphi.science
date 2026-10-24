@@ -1,0 +1,54 @@
+{
+  "key": "PALOMAR-2026-10-07-000002",
+  "source": "palomar",
+  "url": "https://github.com/CoolRmal/partial-balayage-lean/tree/f0777f541fd38a1be42a87e6c69806c8ac488015/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-07-000002-v1.json",
+  "title": "Two partial balayage principles for weak-type estimates",
+  "authors": [
+    "Yongxi Lin"
+  ],
+  "summary": "A candidate Lean formalization of fifteen selected statements from Yongxi Lin's table of weak type (1,1) upper bounds for singular integrals and maximal operators. Bounds include full-vector complex-input Riesz, complex Beurling, full and traceless Frobenius Hessians, both projections, centred intervals and balls, and all six Poisson and heat maximal bounds. The strict planar square bound below 3.616 is excluded from the submitted scope at the human author's request.",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA",
+    "msc:42B25",
+    "msc:42B20",
+    "msc:31B15"
+  ],
+  "published": "2026-10-07",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Two partial balayage principles for weak-type estimates",
+      "identifier": "https://coolrmal.github.io/articles/two-partial-balayage-principles/",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Centred maximal constants for cubes and Euclidean balls",
+      "identifier": "https://github.com/CoolRmal/centered-maximal-constant/tree/72c022ba09032b522c878cca2f9b6c68217d77ea",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/CoolRmal/partial-balayage-lean",
+  "commit": "f0777f541fd38a1be42a87e6c69806c8ac488015",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "harmonic-analysis",
+      "weak-type-estimates",
+      "singular-integrals",
+      "lean-formalization"
+    ],
+    "reason": "Candidate formalization of weak-type bounds for singular integrals and maximal operators.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

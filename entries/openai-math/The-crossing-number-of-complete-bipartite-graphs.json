@@ -1,0 +1,31 @@
+{
+  "key": "The-crossing-number-of-complete-bipartite-graphs",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-crossing-number-of-complete-bipartite-graphs-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-crossing-number-of-complete-bipartite-graphs-September-23-2026/paper.pdf",
+  "title": "The crossing number of complete bipartite graphs",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the Zarankiewicz crossing-number conjecture, resolving Turán's brickyard problem. For all positive integers m , n , the ordinary crossing number of the complete bipartite graph $`K_{m,n}`$ is $`\\displaystyle \\left\\lfloor\\frac m2\\right\\rfloor \\left\\lfloor\\frac{m-1}{2}\\right\\rfloor \\left\\lfloor\\frac n2\\right\\rfloor \\left\\lfloor\\frac{n-1}{2}\\right\\rfloor.`$",
+  "domain": "Combinatorics",
+  "published": "2026-09-23",
+  "family": "165",
+  "family_title": "The Harary–Hill and Zarankiewicz crossing-number formulas",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "crossing-number",
+      "combinatorics"
+    ],
+    "reason": "Proves the Zarankiewicz crossing-number formula for complete bipartite graphs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

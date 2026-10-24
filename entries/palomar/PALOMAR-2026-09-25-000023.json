@@ -1,0 +1,44 @@
+{
+  "key": "PALOMAR-2026-09-25-000023",
+  "source": "palomar",
+  "url": "https://github.com/gmDevi/zeta2-7-9-11-lean/tree/2ae1bccb82f1f72ed7a7aeab3196aa1cdbee165a/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-25-000023-v1.json",
+  "title": "At least one of the 2-adic zeta values ζ₂(7), ζ₂(9), ζ₂(11) is irrational",
+  "authors": [
+    "Gennaro Marco Devincenzis"
+  ],
+  "summary": "A Lean 4 and Mathlib proof that at least one of the 2-adic zeta values ζ₂(7), ζ₂(9), ζ₂(11) is irrational. The theorem has no hypotheses, and its proof uses only the axioms propext, Classical.choice and Quot.sound. The values are defined through the Volkenborn integral: zeta2 s = J(s−1)/((s−1)·2^s), where J(s) is the 2-adic limit of the Riemann sums 2^(−N) Σ_{x<2^N} (x+1/2)^(−s), and the theorem also proves that these limits exist. By Lemma 2.8 of Lai, Sprang and Zudilin (IMRN 2026), zeta2 s is the Kubota–Leopoldt value ζ₂(s) = L₂(s, ω^(1−s)) for s ≥ 2. That identification is cited, not…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11J72",
+    "msc:11S40",
+    "msc:11S80",
+    "msc:11M06",
+    "msc:33C20"
+  ],
+  "published": "2026-09-25",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/gmDevi/zeta2-7-9-11-lean",
+  "commit": "2ae1bccb82f1f72ed7a7aeab3196aa1cdbee165a",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "p-adic-zeta",
+      "lean-formalization",
+      "number-theory",
+      "irrationality"
+    ],
+    "reason": "Lean 4 proof that a 2-adic zeta value is irrational, using Volkenborn integrals.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

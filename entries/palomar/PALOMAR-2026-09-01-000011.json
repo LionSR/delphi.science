@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-09-01-000011",
+  "source": "palomar",
+  "url": "https://github.com/roos-j/lean-booleanfun/tree/62125550b3dbaca60028e266be19397c2ef027ee/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-01-000011-v1.json",
+  "title": "Arrow's theorem via Fourier analysis",
+  "authors": [
+    "Joris Roos"
+  ],
+  "summary": "This is a formalization in Lean 4 of Arrow's theorem for three-candidate elections as stated in Ryan O'Donnell's book \"Analysis of Boolean Functions\", Sec. 2.5, with a single voting rule applied to every pairwise election. The theorem states that every unanimous voting rule that always admits a Condorcet winner must be a dictatorship, i.e. there must exist a voter that alone determines the outcome. Here voting rules are encoded by Boolean-valued functions on the Hamming cube. The proof follows the exposition given there, which is based on Gil Kalai's Fourier-analytic argument using the…",
+  "domain": "cs.DM",
+  "tags": [
+    "cs.DM",
+    "msc:68R01"
+  ],
+  "published": "2026-09-01",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Analysis of Boolean Functions",
+      "identifier": "doi:10.1017/CBO9781139814782",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/roos-j/lean-booleanfun",
+  "commit": "62125550b3dbaca60028e266be19397c2ef027ee",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "social-choice",
+      "arrow-theorem",
+      "lean",
+      "boolean-functions"
+    ],
+    "reason": "Lean formalization of Arrow's theorem for three candidates via Fourier analysis.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

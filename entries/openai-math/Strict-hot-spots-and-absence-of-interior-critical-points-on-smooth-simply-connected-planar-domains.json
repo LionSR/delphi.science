@@ -1,0 +1,32 @@
+{
+  "key": "Strict-hot-spots-and-absence-of-interior-critical-points-on-smooth-simply-connected-planar-domains",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Strict-hot-spots-and-absence-of-interior-critical-points-on-smooth-simply-connected-planar-domains-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Strict-hot-spots-and-absence-of-interior-critical-points-on-smooth-simply-connected-planar-domains-September-24-2026/main.pdf",
+  "title": "Strict hot spots and absence of interior critical points on smooth simply connected planar domains",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the strict hot spots conjecture for smooth bounded simply connected planar domains. More precisely, every nonzero eigenfunction for the first positive Neumann eigenvalue has nonvanishing gradient in the interior, so all its global maxima and minima lie on the boundary. This holds even when the eigenvalue is multiple.",
+  "domain": "Partial differential equations",
+  "published": "2026-09-24",
+  "family": "369",
+  "family_title": "The hot spots conjecture for simply connected planar domains",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "spectral-geometry",
+      "neumann-eigenfunctions",
+      "hot-spots",
+      "pde"
+    ],
+    "reason": "Proves the strict hot spots conjecture for smooth simply connected planar domains.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

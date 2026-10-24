@@ -1,0 +1,43 @@
+{
+  "key": "PALOMAR-2026-10-11-000005",
+  "source": "palomar",
+  "url": "https://github.com/JD-Jones-ASES/sperner-t7-lean/tree/0e846b6144d2c5954a983d2d97e90e02169d9809/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-11-000005-v1.json",
+  "title": "A 7-vertex tournament whose Sperner capacity exceeds the order of its largest transitive subtournament: T₇, induced by the Paley tournament on 23 vertices on 0, 1, 2, 3, 9, 14, 18, has t = 4 and √18 ≤ C ≤ 5; every tournament on at most six vertices has C = t, so seven is the least order",
+  "authors": [
+    "JD Jones"
+  ],
+  "summary": "A Lean 4 development on the capacity of digraphs in the sense of Alon (1998): w(R^n) is the largest set of words of length n such that every ordered pair of distinct words has a coordinate carrying an arc from the first to the second, and C(R) is the supremum of w(R^n)^(1/n), which equals the limit; for a tournament T, t(T) is the order of its largest transitive subtournament and t(T) ≤ C(T). Conjecture 1.1 of Alon's paper, attributed to Körner and Simonyi, asserts C(T) = t(T) for every tournament; Alon disproved it with a random construction and with the Paley tournament on 67 vertices, and…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.IT",
+    "msc:05C20",
+    "msc:05C35",
+    "msc:94A24"
+  ],
+  "published": "2026-10-11",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/JD-Jones-ASES/sperner-t7-lean",
+  "commit": "0e846b6144d2c5954a983d2d97e90e02169d9809",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "tournaments",
+      "sperner-capacity",
+      "extremal-combinatorics",
+      "lean"
+    ],
+    "reason": "Lean development on Sperner capacity of tournaments, with a seven-vertex counterexample.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

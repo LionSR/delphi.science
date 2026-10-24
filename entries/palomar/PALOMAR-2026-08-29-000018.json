@@ -1,0 +1,58 @@
+{
+  "key": "PALOMAR-2026-08-29-000018",
+  "source": "palomar",
+  "url": "https://github.com/ehrlich-b/composition-algebras/tree/98d4437ce1bfd8d042b8383e0cfe28ec3e595eee/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-29-000018-v1.json",
+  "title": "ehrlich-b/composition-algebras",
+  "authors": [
+    "Bryan Ehrlich"
+  ],
+  "summary": "Hurwitz's theorem (1898), classification form: a nontrivial finite-dimensional Euclidean composition algebra over R - a unital, not necessarily associative or commutative bilinear product together with a symmetric positive-definite form whose quadratic form is multiplicative - is isomorphic to R, C, the quaternions or the octonions, by a linear isomorphism preserving the unit, the product and the norm form. All four targets are constructed, with Degen's eight-square identity discharging the octonion composition law, so every branch of the conclusion is attained. Machine checked, not peer…",
+  "domain": "math.RA",
+  "tags": [
+    "math.RA",
+    "math.RT",
+    "msc:17A75",
+    "msc:11E88",
+    "msc:17A35",
+    "msc:17D05",
+    "msc:17C40",
+    "msc:15A63"
+  ],
+  "published": "2026-08-29",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Uber die Composition der quadratischen Formen von beliebig vielen Variablen",
+      "identifier": "",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Composition algebras and their applications, and the nucleus of an alternative algebra",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/ehrlich-b/composition-algebras",
+  "commit": "98d4437ce1bfd8d042b8383e0cfe28ec3e595eee",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "composition-algebras",
+      "hurwitz-theorem",
+      "lean-formalization",
+      "octonions"
+    ],
+    "reason": "Lean formalization of the classification of finite-dimensional real composition algebras.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

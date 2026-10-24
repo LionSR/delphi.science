@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-10-09-000003",
+  "source": "palomar",
+  "url": "https://github.com/QuanyuTang/polya-dirichlet-simply-connected-formalization-Palomar-version/tree/ba3690bfd48618cf48da07fa4555382bd9852ff3/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-09-000003-v1.json",
+  "title": "Strict Dirichlet Pólya inequality on simply connected planar domains",
+  "authors": [
+    "Quanyu Tang",
+    "Zuoqin Wang"
+  ],
+  "summary": "A Lean 4 formalization of the strict Dirichlet Pólya inequality for bounded, open, simply connected planar domains, including the indexed eigenvalue and counting formulations.",
+  "domain": "math.SP",
+  "tags": [
+    "math.SP",
+    "math.AP",
+    "msc:35P15",
+    "msc:35J05"
+  ],
+  "published": "2026-10-09",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Strict Dirichlet Pólya inequality on simply connected planar domains",
+      "identifier": "https://github.com/QuanyuTang/polya-dirichlet-simply-connected-formalization-Palomar-version/blob/ef13e368542014bdce12bdc3ca45e64003f7dc6d/paper/D_simply_connected_strict_v7.tex",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/QuanyuTang/polya-dirichlet-simply-connected-formalization-Palomar-version",
+  "commit": "ba3690bfd48618cf48da07fa4555382bd9852ff3",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "spectral-theory",
+      "polya-inequality",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of a strict Dirichlet Pólya inequality for simply connected planar domains.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

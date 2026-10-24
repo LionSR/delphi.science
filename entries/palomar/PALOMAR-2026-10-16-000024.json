@@ -1,0 +1,63 @@
+{
+  "key": "PALOMAR-2026-10-16-000024",
+  "source": "palomar",
+  "url": "https://github.com/jtraverso/turan-stability/tree/3eb99033cc931add291781f77b7446dcba8f5f9d/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-16-000024-v1.json",
+  "title": "Füredi's stability theorem and the Erdős–Simonovits stability theorem",
+  "authors": [
+    "Juan Pablo Traverso Gianini"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of the stability theory of Turán's theorem. (1) Füredi's sharp stability theorem for cliques: a K_{p+1}-free graph on n vertices with at least t(n, p) − t edges (t(n, p) the number of edges of the Turán graph) has a p-partite subgraph with at least e(G) − t edges, via Füredi's partition inequality e(G) + Σᵢ e(G[Vᵢ]) ≤ e(K(V₁, …, V_p)); also edit distance at most 3t to a complete p-partite graph. (2) The Erdős–Simonovits stability theorem for every forbidden graph L with χ(L) ≤ p + 1: for every ε > 0 there are δ > 0 and n₀ such that every L-free graph on n ≥…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C35",
+    "msc:05C75"
+  ],
+  "published": "2026-10-16",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A proof of the stability of extremal graphs, Simonovits' stability from Szemerédi's regularity",
+      "identifier": "doi:10.1016/j.jctb.2015.05.001",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "A method for solving extremal problems in graph theory, stability problems",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Some recent results on extremal problems in graph theory",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "The asymptotic number of graphs not containing a fixed subgraph and a problem for hypergraphs having no exponent",
+      "identifier": "doi:10.1007/BF01788085",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jtraverso/turan-stability",
+  "commit": "3eb99033cc931add291781f77b7446dcba8f5f9d",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "extremal-graph-theory",
+      "turan-theorem",
+      "stability",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of Füredi's and Erdős–Simonovits stability theorems for Turán problems.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-09-07-000004",
+  "source": "palomar",
+  "url": "https://github.com/vo-rodrigues/rr-equals-nonmeager-paper/tree/a8e74a91fe0b9f3534194910172349c9926e3b3b/lean",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-07-000004-v1.json",
+  "title": "The rearrangement number: non(M) ≤ rr",
+  "authors": [
+    "Vinicius de Oliveira Rodrigues"
+  ],
+  "summary": "A Lean formalization of the lower bound non(M) ≤ rr, where non(M) is the least cardinality of a nonmeagre subset of the usual real line and rr is the least cardinality of a family of permutations of the natural numbers that changes the sum or destroys convergence of every conditionally convergent real series. It accompanies the manuscript *Determining the Rearrangement Number* by Vinicius de Oliveira Rodrigues. The reverse inequality was already known in the literature. The reverse inequality, the full equality, and further manuscript corollaries are not formalized in this project.",
+  "domain": "math.LO",
+  "tags": [
+    "math.LO",
+    "msc:03E17",
+    "msc:40A05"
+  ],
+  "published": "2026-09-07",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Determining the Rearrangement Number",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/vo-rodrigues/rr-equals-nonmeager-paper",
+  "commit": "a8e74a91fe0b9f3534194910172349c9926e3b3b",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "set-theory",
+      "rearrangement-number",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of a lower bound relating the rearrangement number to non(M).",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

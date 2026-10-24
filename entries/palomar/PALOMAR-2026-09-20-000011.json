@@ -1,0 +1,54 @@
+{
+  "key": "PALOMAR-2026-09-20-000011",
+  "source": "palomar",
+  "url": "https://github.com/Vulkin-prog/paper-c-lean/tree/d8edbc44654f623fc68df92612c26a6ef9a90ec2/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-20-000011-v1.json",
+  "title": "Microscopic boundary, prefixes and longest runs",
+  "authors": [
+    "Brice Pouly"
+  ],
+  "summary": "The exact left-border probability is 2^(-pi(L)), and the microscopic non-vacancy probability satisfies 0 <= q_L/2^(-pi(L)) - 1 <= 2^(-pi(L)/256) for sufficiently large L. The results give conditional localization and uniqueness, stability under changes of mesoscopic cutoff, and a quantitative Poisson law for runs contained in a finite prefix. They yield the critical longest-run distribution and asymmetric almost-sure envelopes for all integer prefix lengths. The exact border identity needs no literature hypothesis. The asymptotic results use, as applicable, scalar Stein bounds, the prime…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.PR",
+    "msc:11K65",
+    "msc:60F05"
+  ],
+  "published": "2026-09-20",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Long runs and rare patterns of a random completely multiplicative function",
+      "identifier": "https://github.com/Vulkin-prog/paper-c-lean/blob/b3cf9aa27700d784efc61e6f82a92cef53320c40/manuscripts/paper-c/paper_c_version_3PREL9_en.pdf",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Technical companion to Long runs and rare patterns of a random completely multiplicative function",
+      "identifier": "https://github.com/Vulkin-prog/paper-c-lean/blob/b3cf9aa27700d784efc61e6f82a92cef53320c40/manuscripts/paper-c/paper_c_version_3PREL9_technical_companion_en.pdf",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/Vulkin-prog/paper-c-lean",
+  "commit": "d8edbc44654f623fc68df92612c26a6ef9a90ec2",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "probability",
+      "number-theory",
+      "longest-runs",
+      "prefixes"
+    ],
+    "reason": "Asymptotic results on boundary probabilities and longest-run distributions for prime-related sequences.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

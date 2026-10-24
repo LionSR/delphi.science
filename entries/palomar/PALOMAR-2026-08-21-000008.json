@@ -1,0 +1,51 @@
+{
+  "key": "PALOMAR-2026-08-21-000008",
+  "source": "palomar",
+  "url": "https://github.com/lennrt/palomar-formalizations/tree/d259d35ad32d0e7c8c60ddd5a574aa987956e1d2/zenodo-21892986/palomar",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-21-000008-v2.json",
+  "title": "lennrt/palomar-formalizations",
+  "authors": [
+    "Lennart Rudolph"
+  ],
+  "summary": "Lean formalization of the paper's finite skew-symmetric path instance, exact prefix-deletion completion oracle, deterministic oracle-pruned DFS, correctness and duplicate-freedom, and an executable DFS event trace whose extracted first-output, inter-output, post-output, and no-output work intervals satisfy the paper-level depth/LCP bounds.",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO",
+    "msc:05C20",
+    "msc:05C38",
+    "msc:68Q25",
+    "msc:68R10"
+  ],
+  "published": "2026-09-03",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Polynomial-Delay Enumeration of Fixed-Endpoint Vertex-Regular Paths in Skew-Symmetric Digraphs",
+      "identifier": "doi:10.5281/zenodo.21892986",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/lennrt/palomar-formalizations",
+  "commit": "d259d35ad32d0e7c8c60ddd5a574aa987956e1d2",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "algorithms",
+      "graph-enumeration",
+      "lean-formalization",
+      "combinatorics"
+    ],
+    "reason": "Lean formalization of a deterministic pruned DFS for skew-symmetric paths with work-bound analysis.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "key": "PALOMAR-2026-10-22-000037",
+  "source": "palomar",
+  "url": "https://github.com/wcook04/plectis-erdos-lean/tree/34ab2ba6304c936a3537fd1cd8a91f23bbf2e575/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-22-000037-v1.json",
+  "title": "Uniform sparse rationalisation of dyadic series",
+  "authors": [
+    "Will Cook"
+  ],
+  "summary": "Given any convergent dyadic series with nonnegative integer coefficients, any finite prefix and any eventually unbounded correction allowance, one common permitted set of upper Banach density zero supports nonnegative integer corrections realising every target in a nondegenerate interval above the original sum. Each fixed modulus eventually divides both corrections and cumulative corrections beyond a cutoff independent of the target. With polylogarithmic allowance, the selected theorem also bounds support in dyadic windows and preserves empirical block distributions in total variation for…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11J72",
+    "msc:11B83",
+    "msc:11A41"
+  ],
+  "published": "2026-10-22",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Sparse Congruence-Preserving Perturbations of Dyadic Series",
+      "identifier": "https://github.com/wcook04/plectis-erdos/blob/147f3f1da400a84dcb3013ea6cef75dc8f382b09/paper/251/erdos-251-prime-gap-dyadic-series.pdf",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Prime-Gap Dyadic Series: Perturbations, Exact Criteria and Certificates",
+      "identifier": "https://github.com/wcook04/plectis-erdos/blob/147f3f1da400a84dcb3013ea6cef75dc8f382b09/paper/251/erdos251-prime-gap-reasoning-surface.pdf",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/wcook04/plectis-erdos-lean",
+  "commit": "34ab2ba6304c936a3537fd1cd8a91f23bbf2e575",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "dyadic-series",
+      "rational-approximation",
+      "banach-density",
+      "number-theory"
+    ],
+    "reason": "Results on sparse integer corrections realizing targets for convergent dyadic series.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

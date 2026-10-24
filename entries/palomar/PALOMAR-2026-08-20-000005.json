@@ -1,0 +1,44 @@
+{
+  "key": "PALOMAR-2026-08-20-000005",
+  "source": "palomar",
+  "url": "https://github.com/google-deepmind/formal-conjectures/tree/d2e3d71ef64e3c7a67b0ea942d0a49e454a853b4/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-20-000005-v1.json",
+  "title": "google-deepmind/formal-conjectures",
+  "authors": [
+    "The Formal Conjectures Authors",
+    "Moritz Firsching",
+    "Codrut Grosu",
+    "Reklle"
+  ],
+  "summary": "Formal proof of the First Cuboid Conjecture, which states that for all positive coprime integers a, b with a ≠ b, a certain degree-8 polynomial P_{a,b}(t) over ℤ is irreducible. This conjecture was proposed by Shapirov in \"Perfect cuboids and irreducible polynomials\" (arXiv:1108.5348) as part of a family of three conjectures whose combined truth would imply the nonexistence of a perfect Euler brick. The proof first analyses rational factors and the symmetry F(−x) vs F(x) to reduce irreducibility of the degree-8 polynomial to irreducibility of a degree-4 factor Q_{a,b}, and the coprime branch…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.AG",
+    "msc:11D41",
+    "msc:12E05"
+  ],
+  "published": "2026-08-20",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/google-deepmind/formal-conjectures",
+  "commit": "d2e3d71ef64e3c7a67b0ea942d0a49e454a853b4",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "perfect-cuboid",
+      "lean-formalization"
+    ],
+    "reason": "Formal proof that a degree-8 polynomial tied to the cuboid conjecture is irreducible.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

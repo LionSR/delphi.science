@@ -1,0 +1,54 @@
+{
+  "key": "PALOMAR-2026-09-14-000011",
+  "source": "palomar",
+  "url": "https://github.com/abhisaha-git/fourier-jacobi-core-evaluation/tree/fb2b788d6271dd6228044b2c4e9e47c891a16762/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-14-000011-v1.json",
+  "title": "Explicit Fourier–Jacobi Haar-core evaluation and Abel limits",
+  "authors": [
+    "Abhishek Saha"
+  ],
+  "summary": "For a nonarchimedean local field with residue cardinality q > 2, this development evaluates a sum of three normalized Haar integrals of an explicit eight-term Weyl kernel defined from valuations of entries and two-by-two minors of a concrete 4 by 4 matrix. It proves measurability and Bochner integrability on the natural damped range, an explicit rational evaluation in the undamped interior, principal Abel convergence, and the whole signed special Abel limit at delta = plus or minus q^(-1/2). The Satake parameters are unitary and avoid the stated Weyl walls; the special quotient also excludes…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.RT",
+    "msc:11F70",
+    "msc:11F85"
+  ],
+  "published": "2026-09-14",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "An explicit refined Gan–Gross–Prasad identity for Fourier–Jacobi periods of degree 2 Siegel cusp forms",
+      "identifier": "https://arxiv.org/abs/2608.26007",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Expanded Section 2 and corrected core-evaluation brief",
+      "identifier": "PROVENANCE.md",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/abhisaha-git/fourier-jacobi-core-evaluation",
+  "commit": "fb2b788d6271dd6228044b2c4e9e47c891a16762",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "representation-theory",
+      "harmonic-analysis",
+      "p-adic"
+    ],
+    "reason": "Explicit evaluation of Haar integrals and Abel limits for Fourier–Jacobi kernels over local fields.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

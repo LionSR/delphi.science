@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-10-13-000010",
+  "source": "palomar",
+  "url": "https://github.com/AxiomMath/DedekindZetaZeroFree/tree/09afbb4ce6570c1615d58509dc197fc9f0956b7d/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-13-000010-v2.json",
+  "title": "A uniform zero-free region for Dedekind zeta functions",
+  "authors": [
+    "Dean Cureton"
+  ],
+  "summary": "A Lean formalization of Theorem 1.1 and Corollary 1.2 of A quasi-Riemann hypothesis for Dedekind zeta functions: for every number field K, its Dedekind zeta function has no zeros in Re(s) > 31/32. The formal statement asserts the existence of a holomorphic function away from 1 that agrees with Mathlib's Dedekind zeta function for Re(s) > 1 and is nonzero for Re(s) > 31/32 with s different from 1. The corollary gives the same zero-free bound for Hecke L-functions associated with finite-order Hecke characters, including s = 1 for nonprincipal characters. These characters are represented in…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11M41",
+    "msc:11F70"
+  ],
+  "published": "2026-10-14",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A quasi-Riemann hypothesis for Dedekind zeta functions",
+      "identifier": "https://hexagonmath.org/2610.00200v1",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/AxiomMath/DedekindZetaZeroFree",
+  "commit": "09afbb4ce6570c1615d58509dc197fc9f0956b7d",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "analytic-number-theory",
+      "dedekind-zeta",
+      "lean"
+    ],
+    "reason": "Lean formalization of a uniform zero-free region for Dedekind zeta functions.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-10-19-000018",
+  "source": "palomar",
+  "url": "https://github.com/mkwn/triangle-free-probability/tree/2d3c19f579dc366a3cbe2083df58a51909a23af0/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-19-000018-v1.json",
+  "title": "A certificate for the triangle variational problem",
+  "authors": [
+    "Matthew Kwan",
+    "Huy Tuan Pham"
+  ],
+  "summary": "A Lean formalization of a technical lemma in the paper \"Nonlinear lower-tail large deviations at criticality\" by Matthew Kwan and Huy Tuan Pham. This lemma is used to solve a certain variational problem, which is necessary to characterise the probability that a random graph is triangle-free in the so-called \"critical regime\" where the edge probability is of order 1 / sqrt n. Specifically, this lemma defines a \"certificate function\" G and proves that it satisfies a certain inequality. This involves lots of interval arithmetic.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.PR",
+    "msc:05C80",
+    "msc:60F10"
+  ],
+  "published": "2026-10-19",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Nonlinear lower-tail large deviations at criticality",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/mkwn/triangle-free-probability",
+  "commit": "2d3c19f579dc366a3cbe2083df58a51909a23af0",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "random-graphs",
+      "large-deviations",
+      "formalization"
+    ],
+    "reason": "Lean formalization of a certificate lemma for a triangle-free large-deviation variational problem.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "The-Selmer-converse-for-elliptic-curves-at-every-prime",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-Selmer-converse-for-elliptic-curves-at-every-prime-October-7-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-Selmer-converse-for-elliptic-curves-at-every-prime-October-7-2026/main.pdf",
+  "title": "The Selmer converse for elliptic curves at every prime",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the Selmer converse in coranks zero and one for every elliptic curve over ℚ and every prime p : if the full p -power Selmer group has ℤ p -corank $`r\\in\\{0,1\\}`$, then the analytic and Mordell–Weil ranks both equal r , and the entire Tate–Shafarevich group is finite. As an application at the additive prime 3, we prove that for every prime $`\\ell\\equiv4,7,8\\pmod9`$, the cubic $`X^3+Y^3=\\ell Z^3`$ has analytic and Mordell–Weil rank one and finite Tate–Shafarevich group. In particular, every such ℓ is a sum of two rational cubes.",
+  "domain": "Number theory",
+  "published": "2026-10-07",
+  "family": "002",
+  "family_title": "The full BSD formula from low Selmer corank",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "elliptic-curves",
+      "arithmetic-geometry",
+      "selmer-groups"
+    ],
+    "reason": "Proves the Selmer converse in coranks zero and one, with applications to cubic equations.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

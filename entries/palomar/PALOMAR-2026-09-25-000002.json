@@ -1,0 +1,55 @@
+{
+  "key": "PALOMAR-2026-09-25-000002",
+  "source": "palomar",
+  "url": "https://github.com/sascha2718/qi-trees-and-matching-lean/tree/35e78969d036b4f663fc9a96d8c22750834a6ac4/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-25-000002-v2.json",
+  "title": "The quasi-isometry classes of Galton–Watson trees: Lean formalisation",
+  "authors": [
+    "Jayadev S. Athreya",
+    "Sascha Troscheit"
+  ],
+  "summary": "Lean 4 formalisation of the automorphism-matching theorems and the quasi-isometry classification of Galton–Watson trees from the paper \"The quasi-isometry classes of Galton–Watson trees\" by Jayadev S. Athreya and Sascha Troscheit (arXiv:2609.23882). The audited statements are: the i.i.d. matching theorem on the binary tree (Theorem 5.1), the general Markov matching theorem for typed label processes on the binary tree, in its finite-type and zero-compatible forms (Theorem 6.1), the complete classification, up to quasi-isometry, of Galton–Watson trees with finitely supported offspring law…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.GR",
+    "math.MG",
+    "msc:60J80",
+    "msc:51F30",
+    "msc:30L10",
+    "msc:28A80",
+    "msc:60K35",
+    "msc:68V20"
+  ],
+  "published": "2026-09-30",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "The quasi-isometry classes of Galton–Watson trees",
+      "identifier": "arXiv:2609.23882",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/sascha2718/qi-trees-and-matching-lean",
+  "commit": "35e78969d036b4f663fc9a96d8c22750834a6ac4",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "galton-watson-trees",
+      "probability",
+      "geometric-group-theory",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalisation of quasi-isometry classification of Galton–Watson trees.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-10-19-000016",
+  "source": "palomar",
+  "url": "https://github.com/shaikidris/priority-controller-phase1/tree/a510ea7e76d9b10e21e7f4db8f57fd3a3468a090/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-19-000016-v2.json",
+  "title": "Canonical streaming enumeration of eligible detections",
+  "authors": [
+    "Idris Ali Shaik"
+  ],
+  "summary": "Canonical eligible-set enumeration with actual prefix traversal, exact returned sets, detecting emitted witnesses, iterator delay and native program resource bounds.",
+  "domain": "cs.DM",
+  "tags": [
+    "cs.DM",
+    "msc:68Q25",
+    "msc:68Q60"
+  ],
+  "published": "2026-10-21",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Polynomial Fault Detection Without Bounded Width: Exact Reachable Sets in Priority Controllers",
+      "identifier": "doi:10.5281/zenodo.23400057",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/shaikidris/priority-controller-phase1",
+  "commit": "a510ea7e76d9b10e21e7f4db8f57fd3a3468a090",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "enumeration",
+      "fault-detection",
+      "algorithms"
+    ],
+    "reason": "Describes canonical streaming enumeration of eligible detections with delay and resource bounds.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

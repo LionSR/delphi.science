@@ -1,0 +1,53 @@
+{
+  "key": "PALOMAR-2026-10-22-000035",
+  "source": "palomar",
+  "url": "https://github.com/jtraverso/expander-spectral/tree/f96a99893d4d31495af5f8d9e6181f7b4c91e0ba/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-22-000035-v1.json",
+  "title": "The expander mixing lemma and the Alon–Boppana bound",
+  "authors": [
+    "Juan Pablo Traverso Gianini"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of two basic results of spectral graph theory, stated through the adjacency quadratic form on vectors orthogonal to the all-ones vector: the expander mixing lemma of Alon and Chung (for a d-regular graph on n ≥ 2 vertices with |x·Ax| ≤ μ‖x‖² on 𝟙⊥, |e(S,T) − d|S||T|/n| ≤ μ√(|S||T|)), and the Alon–Boppana bound in Nilli's form (a d-regular graph, d ≥ 2, with two vertices at distance at least 2k + 4 has a nonzero x ⟂ 𝟙 with x·Ax ≥ (2√(d−1) − (2√(d−1) − 1)/(k+1))‖x‖²). Mathlib has adjacency matrices but neither result.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C50",
+    "msc:05C48"
+  ],
+  "published": "2026-10-22",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Explicit construction of linear sized tolerant networks",
+      "identifier": "doi:10.1016/0012-365X(88)90189-6",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "On the second eigenvalue of a graph",
+      "identifier": "doi:10.1016/0012-365X(91)90112-F",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jtraverso/expander-spectral",
+  "commit": "f96a99893d4d31495af5f8d9e6181f7b4c91e0ba",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "spectral-graph-theory",
+      "expander-graphs",
+      "lean-formalization",
+      "graph-theory"
+    ],
+    "reason": "Lean 4 formalization of the expander mixing lemma and Alon-Boppana bound.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

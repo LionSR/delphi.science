@@ -1,0 +1,32 @@
+{
+  "key": "Prime-Predecessors-with-an-Even-Number-of-Prime-Factors",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Prime-Predecessors-with-an-Even-Number-of-Prime-Factors-September-17-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Prime-Predecessors-with-an-Even-Number-of-Prime-Factors-September-17-2026/paper.pdf",
+  "title": "Prime Predecessors with an Even Number of Prime Factors",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that there are infinitely many primes p for which $`p-1`$ is squarefree and has an even number of prime factors. Equivalently, there are infinitely many primes p with $`\\mu(p-1)=1`$.",
+  "domain": "Number theory",
+  "published": "2026-09-17",
+  "family": "011",
+  "family_title": "Prime-factor statistics of $`p-1`$",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "primes",
+      "squarefree-integers",
+      "multiplicative-functions"
+    ],
+    "reason": "Proves infinitely many primes p have squarefree p-1 with an even number of prime factors.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

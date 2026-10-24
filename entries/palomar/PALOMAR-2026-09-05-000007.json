@@ -1,0 +1,39 @@
+{
+  "key": "PALOMAR-2026-09-05-000007",
+  "source": "palomar",
+  "url": "https://github.com/itpplasma/stafford38-formal/tree/0bb3aa929b931bf5d82d90f62d7508d3ae1dccc1/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-05-000007-v3.json",
+  "title": "Stafford 3.8",
+  "authors": [
+    "Christopher Albert"
+  ],
+  "summary": "Lean formalization of Stafford's Conjecture 3.8 for every characteristic-zero field and every Weyl-algebra rank, proving that each nonzero d admits F, R, and S with 1 = d*R + F*d*S. The development also proves an exact Bernstein-degree fixed-source strengthening and derived localization, adjoint, and evolutionary results.",
+  "domain": "math.RA",
+  "tags": [
+    "math.RA",
+    "msc:16S32"
+  ],
+  "published": "2026-10-04",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/itpplasma/stafford38-formal",
+  "commit": "0bb3aa929b931bf5d82d90f62d7508d3ae1dccc1",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "weyl-algebra",
+      "lean-formalization",
+      "ring-theory"
+    ],
+    "reason": "Lean formalization of Stafford's conjecture 3.8 on Weyl algebras over characteristic-zero fields.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

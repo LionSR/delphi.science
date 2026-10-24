@@ -1,0 +1,31 @@
+{
+  "key": "Brownian-continuum-random-tree-limits-of-finite-Fortuin-Kasteleyn-maps-above-four",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Brownian-continuum-random-tree-limits-of-finite-Fortuin-Kasteleyn-maps-above-four-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Brownian-continuum-random-tree-limits-of-finite-Fortuin-Kasteleyn-maps-above-four-September-24-2026/main.pdf",
+  "title": "Brownian continuum random tree limits of finite Fortuin–Kasteleyn maps above four",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the finite-volume continuum-random-tree prediction for critical Fortuin–Kasteleyn planar maps at every fixed q > 4. After rescaling graph distances by a constant times n −1/2 , an n -edge map with normalized degree measure converges to the Brownian continuum random tree in the Gromov–Hausdorff–Prokhorov topology. The convergence holds through all positive integer sizes.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-09-24",
+  "family": "211",
+  "family_title": "The geometric phase diagram, diffusion, and spectra of random planar maps",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "random-planar-maps",
+      "percolation",
+      "probability"
+    ],
+    "reason": "Shows critical FK planar maps above q=4 converge to the Brownian continuum random tree.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

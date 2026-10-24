@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-10-22-000003",
+  "source": "palomar",
+  "url": "https://github.com/sthubbar/goldbach-lean/tree/3ba1189ed38f0a913828af00d72196eebd68777f/entries/brun1919",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-22-000003-v1.json",
+  "title": "Brun's theorem: the sum of the reciprocals of the twin primes converges, after Brun 1919, with the twin prime upper bound and every even gap",
+  "authors": [
+    "Steve Hubbard"
+  ],
+  "summary": "A sorry-free Lean 4 proof of the theorem of V. Brun, La série 1/5 + 1/7 + 1/11 + 1/13 + ... où les dénominateurs sont nombres premiers jumeaux est convergente ou finie, Bull. Sci. Math. 43, 1919: the sum of the reciprocals of p and of p + 2 over the primes p with p + 2 prime converges. This is a sorry-free proof of a statement that lean-eval lists as a challenge, brun_constant_converges, proved here in the exact lean-eval form as well. With it, the twin prime upper bound, at most C N / log^2 N twin primes below N, which is stronger than the bound of Brun's paper; the same convergence for…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11N36",
+    "msc:11N05",
+    "msc:11A41"
+  ],
+  "published": "2026-10-22",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "La série 1/5 + 1/7 + 1/11 + 1/13 + 1/17 + 1/19 + 1/29 + 1/31 + 1/41 + 1/43 + 1/59 + 1/61 + ... où les dénominateurs sont nombres premiers jumeaux est convergente ou finie",
+      "identifier": "Bulletin des Sciences Mathématiques 43, 1919, pages 100-104 and 124-128",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/sthubbar/goldbach-lean",
+  "commit": "3ba1189ed38f0a913828af00d72196eebd68777f",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "twin-primes",
+      "formal-verification",
+      "lean"
+    ],
+    "reason": "Lean 4 proof of Brun's 1919 theorem on convergence of reciprocal twin primes.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

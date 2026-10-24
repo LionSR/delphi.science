@@ -1,0 +1,42 @@
+{
+  "key": "PALOMAR-2026-10-01-000003",
+  "source": "palomar",
+  "url": "https://github.com/jfairfaxball-348/Greedy-Uniformity-on-Trees/tree/1733c29a5165148d71a2f0bd1ed2dcd7c35309ce/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-01-000003-v1.json",
+  "title": "Greedy Uniformity on Trees",
+  "authors": [
+    "John Fairfax-Ball"
+  ],
+  "summary": "Formalization of exact distributional results for the random-permutation greedy maximal-independent-set process on finite trees. For every finite nonempty tree, the complete greedy output law is uniform over maximal independent sets exactly for K1 and K2. For the mixed-spider family T_{k,l}, the development counts maximal independent sets, proves exact output probabilities, and for l=2^k-k proves positive total-variation bias with decay O(sqrt(k)/4^k), equivalently O(sqrt(log n_k)/n_k^2) along n_k=2^k+k+1. The Stage-4 novelty classification is \"plausibly new with bounded uncertainty\"; no…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.PR",
+    "msc:05C05",
+    "msc:05C69"
+  ],
+  "published": "2026-10-01",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jfairfaxball-348/Greedy-Uniformity-on-Trees",
+  "commit": "1733c29a5165148d71a2f0bd1ed2dcd7c35309ce",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "random-permutations",
+      "independent-sets",
+      "trees",
+      "probability"
+    ],
+    "reason": "Exact distributional analysis of greedy random maximal independent sets on finite trees.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

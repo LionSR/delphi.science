@@ -1,0 +1,57 @@
+{
+  "key": "PALOMAR-2026-10-22-000018",
+  "source": "palomar",
+  "url": "https://github.com/jasondavies/lsbgcd/tree/8423f4e77e1ab3a13423530151d69a1ef7125510/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-22-000018-v1.json",
+  "title": "Analysis of a left-shift binary GCD algorithm (Shallit–Sorenson 1994), with a proof of its sum-of-squares conjecture",
+  "authors": [
+    "Jason Davies"
+  ],
+  "summary": "A complete Lean 4 formalization of Jeffrey Shallit and Jonathan Sorenson, \"Analysis of a Left-Shift Binary GCD Algorithm\" (J. Symbolic Computation 17, 1994). LSBGCD replaces (u, v) by v and the distance from u to the nearer of the shifted multiples 2^e v and 2^(e+1) v, where 2^e v ≤ u < 2^(e+1) v. The formalization proves that the algorithm computes the gcd, and proves Theorem 1.1: for every n, the lexicographically least ordered input taking exactly n iterations, its six closed forms in powers of 2 ± √3, and the order-16 linear recurrence satisfied by both coordinates. It proves in full…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "cs.DS",
+    "msc:11A05",
+    "msc:11Y16",
+    "msc:11A55",
+    "msc:68W40",
+    "msc:05A05"
+  ],
+  "published": "2026-10-22",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Analysis of a Left-Shift Binary GCD Algorithm",
+      "identifier": "doi:10.1006/jsco.1994.1030",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Extremal values of continuants",
+      "identifier": "doi:10.1090/S0002-9939-1983-0712621-7",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jasondavies/lsbgcd",
+  "commit": "8423f4e77e1ab3a13423530151d69a1ef7125510",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "gcd-algorithms",
+      "number-theory",
+      "algorithm-analysis",
+      "lean"
+    ],
+    "reason": "Lean formalization analysing a left-shift binary GCD algorithm and its iteration counts.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "key": "PALOMAR-2026-08-31-000001",
+  "source": "palomar",
+  "url": "https://github.com/JD-Jones-ASES/Hadamard-formal/tree/46544fab662e04db8b6fd18b47bd994585c4685c/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-31-000001-v1.json",
+  "title": "JD-Jones-ASES/Hadamard-formal",
+  "authors": [
+    "JD Jones"
+  ],
+  "summary": "A Lean 4 formalization of the periodic Cooper-Wallis construction and of Hadamard existence at eight orders: from kernel-checked periodic T-matrix quadruples of orders 103 and 163 and seven symmetric-circulant Williamson quadruples, the development proves that Hadamard matrices of orders 2884, 4532, 7004, 7172, 7828, 8476, 9476, and 11948 exist. Each of the eight orders lands on an entry of Table 4 of Cati and Pasechnik's maintained construction database (arXiv:2411.18897v2, 2025-08-30) recording no Hadamard matrix of that order as known, and the source repositories' firsthand audit of the…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05B20"
+  ],
+  "published": "2026-08-31",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Hadamard-T: T-matrix witnesses and the Hadamard orders they close",
+      "identifier": "https://github.com/JD-Jones-ASES/Hadamard-T/tree/eec1bed6216c44675d946fe80d47695a7ae2ab40",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Hadamard-M: an erratum at order 515, and an explicit Hadamard matrix of order 7796",
+      "identifier": "https://github.com/JD-Jones-ASES/Hadamard-M/tree/0208cf661fcd6b1e7d69eb52078d873eefc4d7cf",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/JD-Jones-ASES/Hadamard-formal",
+  "commit": "46544fab662e04db8b6fd18b47bd994585c4685c",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "hadamard-matrices",
+      "combinatorics",
+      "lean-formalization",
+      "circulant-matrices"
+    ],
+    "reason": "Lean formalization of periodic constructions proving existence of eight Hadamard orders.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

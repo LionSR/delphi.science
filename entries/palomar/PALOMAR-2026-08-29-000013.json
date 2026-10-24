@@ -1,0 +1,50 @@
+{
+  "key": "PALOMAR-2026-08-29-000013",
+  "source": "palomar",
+  "url": "https://github.com/sneed-and-feed/lean-theorems-1/tree/f72d0d60a7ba8c8a4789e03bb6be0f9d007bea64/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-29-000013-v1.json",
+  "title": "sneed-and-feed/lean-theorems-1",
+  "authors": [
+    "Sneed & Feed Formalization Team"
+  ],
+  "summary": "A comprehensive, machine-checked Lean 4 formalization of the Erdős–Szekeres Convex Polygon Theorem (1935). Formalizes orientation determinants, general position, 2D rotation transformations with finite slope avoidance (rotating any finite set to have mutually distinct x-coordinates), x-coordinate sorting, cup-cap sequences with Pascal-type binomial split recurrences, halfspace separation for convex hulls, and rotation invariance of convex polygons. Proves that any finite set of at least choose(2k - 4, k - 2) + 1 points in general position in ℝ² contains the vertices of a strictly convex…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.MG",
+    "msc:52C10",
+    "msc:05D10",
+    "msc:52A10"
+  ],
+  "published": "2026-08-29",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A combinatorial problem in geometry",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/sneed-and-feed/lean-theorems-1",
+  "commit": "f72d0d60a7ba8c8a4789e03bb6be0f9d007bea64",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "combinatorial-geometry",
+      "lean-formalization",
+      "erdos-szekeres",
+      "convex-polygons"
+    ],
+    "reason": "Lean formalization of the Erdős–Szekeres convex polygon theorem.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

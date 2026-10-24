@@ -1,0 +1,51 @@
+{
+  "key": "PALOMAR-2026-09-30-000003",
+  "source": "palomar",
+  "url": "https://github.com/jbaelaw/erdos1219-lean/tree/00e696a9cd2bbd8cad33d2cdc90ad385058c1466/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000003-v1.json",
+  "title": "Erdős Problem #1219 in Lean 4: Σ_k 2^{ℵ_{n_k}} → (ℵ_ω)² (Shelah 1975)",
+  "authors": [
+    "Ji Ho Bae (JRTI)"
+  ],
+  "summary": "Erdős problem #1219 (erdosproblems.com/1219; Erdős–Hajnal 1971, Problem 3, asked by Erdős, Hajnal and Rado): let (n_k) be an increasing sequence of integers such that 2^{ℵ_{n_k}} is strictly increasing and 2^{ℵ_{n_0}} > ℵ_ω; is it true that Σ_k 2^{ℵ_{n_k}} → (ℵ_ω)²? Shelah (Notes on partition calculus, 1975, §1) proved that the answer is yes. This project formalizes that proof in Lean 4 with Mathlib: the comparator target erdos_1219 states that for every strictly increasing n : ℕ → ℕ with k ↦ 2 ^ ℵ_(n k) strictly increasing and ℵ_ω < 2 ^ ℵ_(n 0), the binary partition relation PartitionArrow…",
+  "domain": "math.LO",
+  "tags": [
+    "math.LO",
+    "math.CO",
+    "msc:03E02",
+    "msc:03E05",
+    "msc:03E10",
+    "msc:05D10"
+  ],
+  "published": "2026-09-30",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Notes on partition calculus",
+      "identifier": "Infinite and finite sets (Colloq., Keszthely, 1973), Vol. III, Colloq. Math. Soc. János Bolyai 10, North-Holland 1975, 1257–1276 (Sh:40; MR 406798)",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jbaelaw/erdos1219-lean",
+  "commit": "00e696a9cd2bbd8cad33d2cdc90ad385058c1466",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "lean",
+      "set-theory",
+      "partition-calculus",
+      "erdos-problems"
+    ],
+    "reason": "Lean formalization of Shelah's proof for a partition relation in Erdős problem 1219.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

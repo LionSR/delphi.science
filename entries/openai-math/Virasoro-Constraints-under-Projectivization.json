@@ -1,0 +1,31 @@
+{
+  "key": "Virasoro-Constraints-under-Projectivization",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Virasoro-Constraints-under-Projectivization-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Virasoro-Constraints-under-Projectivization-October-5-2026/virasoro-constraints-under-projectivization.pdf",
+  "title": "Virasoro Constraints under Projectivization",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that full ordinary descendant Virasoro constraints pass from a smooth projective complex base to the projectivization of any algebraic vector bundle of rank at least two. The bundle need not split and satisfies no positivity requirement. Assuming the full constraints on the base, the conclusion includes every genus, each individual integral curve class, and all cohomology insertions, including primitive and odd classes. The result also applies successively to towers of projective bundles.",
+  "domain": "Algebraic and complex geometry",
+  "published": "2026-10-05",
+  "family": "065",
+  "family_title": "Virasoro constraints for complete intersections and projective-bundle towers",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "gromov-witten-theory",
+      "algebraic-geometry",
+      "projective-bundles"
+    ],
+    "reason": "Shows full Virasoro constraints pass from a base variety to projectivized vector bundles.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

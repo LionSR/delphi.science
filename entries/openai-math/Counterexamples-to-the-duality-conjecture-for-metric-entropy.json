@@ -1,0 +1,31 @@
+{
+  "key": "Counterexamples-to-the-duality-conjecture-for-metric-entropy",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Counterexamples-to-the-duality-conjecture-for-metric-entropy-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Counterexamples-to-the-duality-conjecture-for-metric-entropy-September-24-2026/main.pdf",
+  "title": "Counterexamples to the duality conjecture for metric entropy",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We disprove Pietsch's dimension-free duality conjecture for metric entropy. For every proposed pair of universal constants, we construct origin-symmetric convex bodies that violate the corresponding covering-entropy inequality, already when the covering body is a cube.",
+  "domain": "Functional analysis",
+  "published": "2026-09-24",
+  "family": "329",
+  "family_title": "A counterexample to metric-entropy duality",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "convex-geometry",
+      "metric-entropy",
+      "functional-analysis"
+    ],
+    "reason": "Constructs convex bodies that disprove Pietsch's dimension-free duality conjecture for metric entropy.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "key": "anthropics__formal-math__zeta23",
+  "source": "lean",
+  "url": "https://github.com/anthropics/formal-math/tree/main/zeta23",
+  "title": "Zeta23 — more than two thirds of the zeta zeros are simple and on the critical line",
+  "authors": [
+    "Claude"
+  ],
+  "summary": "A complete, sorry-free Lean 4 / Mathlib formalization of the headline theorems of Alpöge–Furman, \"More than two thirds of the zeta zeros are simple and on the critical line\" (arXiv:2608.13637). Writing N(T) for the number of nontrivial zeros ρ of the Riemann zeta function with 0 1. The statements are made against Mathlib's `riemannZeta` and `DirichletCharacter.LFunction`, with multiplicity via `analyticOrderAt`; nothing is assumed — every analytic input (Weil's explicit formula for ζ and for L(s,χ), the Riemann–von Mangoldt formula, Stirling-type estimates for Γ′/Γ, Chebyshev–Mertens bounds,…",
+  "published": "2026-08-06",
+  "updated": "2026-10-06",
+  "formalized": true,
+  "ai_models": [
+    "Claude"
+  ],
+  "license": "Apache-2.0",
+  "repo": "https://github.com/anthropics/formal-math",
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:anthropic-lean",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "subject": "math.NT",
+    "tags": [
+      "riemann-zeta",
+      "zeta-zeros",
+      "lean4",
+      "formal-verification"
+    ],
+    "reason": "Lean 4 formalization of results on simple zeta zeros lying on the critical line.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

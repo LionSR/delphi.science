@@ -1,0 +1,55 @@
+{
+  "key": "PALOMAR-2026-10-23-000009",
+  "source": "palomar",
+  "url": "https://github.com/dracoanguis/temporal-graphs/tree/79214ea8379246e8705cfeee95fb9dca090112e9/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-23-000009-v1.json",
+  "title": "Temporal cliques admit spanners of size O(n log n)",
+  "authors": [
+    "Ethan Bargaud-Arm"
+  ],
+  "summary": "Lean 4 / Mathlib formalization of the theorem that every temporal clique on n vertices admits a temporal spanner with O(n log n) edges. A temporal clique is the complete graph on a finite vertex set whose edges carry natural-number time labels, locally injective (two edges sharing an endpoint have distinct labels); a temporal spanner is a set of edges in which every vertex reaches every other one by a journey with non-decreasing labels. The result is due to Casteigts, Peters and Schoeters (ICALP 2019, JCSS 2021); the formal proof follows the dismountability-only proof of Carnevale, Casteigts…",
+  "domain": "cs.DM",
+  "tags": [
+    "cs.DM",
+    "math.CO",
+    "msc:05C85",
+    "msc:05C40",
+    "msc:05C38",
+    "msc:68R10"
+  ],
+  "published": "2026-10-23",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Dismountability in Temporal Cliques Revisited",
+      "identifier": "doi:10.4230/LIPIcs.SAND.2025.6",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "How to Reduce Temporal Cliques to Find Sparse Spanners",
+      "identifier": "doi:10.4230/LIPIcs.ESA.2024.11",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/dracoanguis/temporal-graphs",
+  "commit": "79214ea8379246e8705cfeee95fb9dca090112e9",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "temporal-graphs",
+      "spanners",
+      "formalization"
+    ],
+    "reason": "Lean 4 formalization of an O(n log n) temporal spanner bound for temporal cliques.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

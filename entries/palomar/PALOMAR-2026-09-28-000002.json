@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-09-28-000002",
+  "source": "palomar",
+  "url": "https://github.com/n-yamaguchi-0729/FiniteAbelianLocalReciprocityv2/tree/3b402b69622b131ebdc7ffe746c8975c593dc330/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-28-000002-v1.json",
+  "title": "Local class field theory in Lean 4.35.0-rc2",
+  "authors": [
+    "Naganori Yamaguchi"
+  ],
+  "summary": "For every finite abelian extension L/K of a nonarchimedean local field, the multiplicative group K× modulo the field-norm subgroup N_{L/K}(L×) is isomorphic as a topological group to Gal(L/K). The registered declaration is the finite norm-quotient form of local reciprocity proved in the included ClassFieldTheory development. Stronger compatibility, normalization and existence results in that development are documented separately and are not part of the compared declaration.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11S31"
+  ],
+  "published": "2026-09-28",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Class Field Theory (version 4.03)",
+      "identifier": "https://www.jmilne.org/math/CourseNotes/CFT.pdf",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/n-yamaguchi-0729/FiniteAbelianLocalReciprocityv2",
+  "commit": "3b402b69622b131ebdc7ffe746c8975c593dc330",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "lean",
+      "number-theory",
+      "class-field-theory",
+      "local-fields"
+    ],
+    "reason": "Lean formalization of the norm-quotient form of local class field reciprocity.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

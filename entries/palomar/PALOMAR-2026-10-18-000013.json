@@ -1,0 +1,57 @@
+{
+  "key": "PALOMAR-2026-10-18-000013",
+  "source": "palomar",
+  "url": "https://github.com/F-Najman/normalizer-lean/tree/e7ca694d9e349326e03e5acfa4e41ed823e4e2dc/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-18-000013-v2.json",
+  "title": "Modular automorphisms of Cartan modular curves of prime level",
+  "authors": [
+    "Filip Najman"
+  ],
+  "summary": "Formal statements and proofs, in Lean 4 with Mathlib, about the normalizers in SL₂(ℝ) of the groups defining the split and non-split Cartan modular curves and their normalizer curves: for any level N, every element of the normalizer of a group containing Γ(N) is a rational matrix of a restricted form; X_sp(N) ≅ X₀(N²); X_sp(p) (p ≥ 5) and X_ns(p) (p odd) have exactly 2 modular automorphisms; X_sp⁺(p) (p ≥ 7) and X_ns⁺(p) (p ≥ 5) have none, and both bounds on p are sharp. 17 theorems, no sorry, only the axioms propext, Classical.choice and Quot.sound.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.GR",
+    "msc:11F06",
+    "msc:14G35",
+    "msc:14H37",
+    "msc:11G18",
+    "msc:68V20"
+  ],
+  "published": "2026-10-20",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Automorphisms of Cartan modular curves of prime and composite level",
+      "identifier": "arXiv:2005.09009v2",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Automorphisms of general modular curves",
+      "identifier": "arXiv:2610.08998v1",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/F-Najman/normalizer-lean",
+  "commit": "e7ca694d9e349326e03e5acfa4e41ed823e4e2dc",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "cartan-modular-curves",
+      "modular-automorphisms",
+      "lean",
+      "number-theory"
+    ],
+    "reason": "Lean formalization of modular automorphisms of Cartan modular curves of prime level.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

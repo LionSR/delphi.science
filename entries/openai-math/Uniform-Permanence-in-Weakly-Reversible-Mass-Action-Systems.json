@@ -1,0 +1,31 @@
+{
+  "key": "Uniform-Permanence-in-Weakly-Reversible-Mass-Action-Systems",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Uniform-Permanence-in-Weakly-Reversible-Mass-Action-Systems-October-5-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Uniform-Permanence-in-Weakly-Reversible-Mass-Action-Systems-October-5-2026/permanence.pdf",
+  "title": "Uniform Permanence in Weakly Reversible Mass-Action Systems",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the permanence conjecture for finite weakly reversible mass-action systems with fixed positive reaction rates. Every positive stoichiometric compatibility class admits one compact convex forward-invariant set that every positive trajectory in that class enters in finite time, even when the class is unbounded. The set depends only on the network, the rates, and the class; the entry time may depend on the initial state. Thus, after its entry time, every concentration satisfies the same positive lower and finite upper bounds throughout that class.",
+  "domain": "Dynamical systems and ergodic theory",
+  "published": "2026-10-05",
+  "family": "149",
+  "family_title": "Classwise permanence for weakly reversible mass-action systems",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "chemical-reaction-networks",
+      "dynamical-systems",
+      "permanence"
+    ],
+    "reason": "Proves the permanence conjecture for weakly reversible mass-action reaction systems.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

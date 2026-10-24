@@ -1,0 +1,31 @@
+{
+  "key": "Power-law-violations-of-Yaus-nodal-upper-bound",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Power-law-violations-of-Yaus-nodal-upper-bound-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Power-law-violations-of-Yaus-nodal-upper-bound-September-23-2026/paper.pdf",
+  "title": "Power-law violations of Yau's nodal upper bound",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We construct a smooth Riemannian metric on $`S^4\\times S^1`$ and a sequence of real Laplace eigenfunctions whose nodal four-volume grows faster than $`\\lambda^{1/2+\\epsilon_0}`$ for one fixed $`\\epsilon_0\\gt 0`$. This disproves the smooth upper-bound assertion in Yau's nodal-set conjecture and the proposed bound with an arbitrarily small positive power loss.",
+  "domain": "Differential geometry",
+  "published": "2026-09-23",
+  "family": "350",
+  "family_title": "Yau’s nodal bounds: surfaces and higher dimensions",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "spectral-geometry",
+      "eigenfunctions",
+      "riemannian-geometry"
+    ],
+    "reason": "Constructs a metric and eigenfunctions showing power-law growth of nodal volume, disproving a conjectured bound.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

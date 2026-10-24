@@ -1,0 +1,32 @@
+{
+  "key": "Universal-Tensor-Squares-for-Symmetric-Groups",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Universal-Tensor-Squares-for-Symmetric-Groups-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Universal-Tensor-Squares-for-Symmetric-Groups-September-24-2026/main.pdf",
+  "title": "Universal Tensor Squares for Symmetric Groups",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For every positive integer n other than 2, 4, and 9, we prove that some irreducible complex representation of S n has a tensor square containing every irreducible representation. This resolves the tensor square conjecture for symmetric groups affirmatively.",
+  "domain": "Algebra",
+  "published": "2026-09-24",
+  "family": "205",
+  "family_title": "Saxl’s conjecture and universal tensor squares",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "representation-theory",
+      "symmetric-groups",
+      "tensor-squares",
+      "group-theory"
+    ],
+    "reason": "Proves the tensor square conjecture for symmetric groups for all n except 2, 4, and 9.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

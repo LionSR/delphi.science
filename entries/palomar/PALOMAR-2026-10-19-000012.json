@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-10-19-000012",
+  "source": "palomar",
+  "url": "https://github.com/JD-Jones-ASES/kuhn-poker-lean/tree/352a870a3702229cd6823966940dbd8a92fb281b/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-19-000012-v1.json",
+  "title": "Kuhn poker: the value −1/18, all optimal strategies, and the solution at every ante and bet",
+  "authors": [
+    "JD Jones"
+  ],
+  "summary": "A Lean 4 development of Kuhn's simplified two-person poker (Kuhn 1950): three cards 1 0 and bet b > 0 (Kuhn's pp. 102-103, stated there without proof, and the region b > 2a he does not state): the value is -b^2/(6(2a + b)) for b = 2a, with explicit guaranteeing strategies in each case; in Case 3 the calling probability eta with the 2 ranges over [(2a - b)/(2a + b), b/(2a + b)], and the interval printed on p. 102, b/(2a + b) = 2a never bets the 1 or the 2 first, folds them, and with the 3 is cut out by one inequality (a single strategy at b = 2a; beyond it a two-dimensional set in which I may…",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "msc:91A05",
+    "msc:91A18",
+    "msc:91A60"
+  ],
+  "published": "2026-10-19",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A simplified two-person poker",
+      "identifier": "doi:10.1515/9781400881727-010",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/JD-Jones-ASES/kuhn-poker-lean",
+  "commit": "352a870a3702229cd6823966940dbd8a92fb281b",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "game-theory",
+      "poker",
+      "formalization"
+    ],
+    "reason": "Lean development analyzing the value and optimal strategies of Kuhn poker.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

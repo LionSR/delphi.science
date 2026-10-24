@@ -1,0 +1,46 @@
+{
+  "key": "PALOMAR-2026-10-07-000009",
+  "source": "palomar",
+  "url": "https://github.com/mrklwk/zeta-zero-density-lean/tree/5dd0dd391c117ef4d8fd04a6b16b4b1ad5735d88/lean",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-07-000009-v1.json",
+  "title": "The density hypothesis for σ > 3/4",
+  "authors": [
+    "Mark Lewko"
+  ],
+  "summary": "Lean formalization of Nζ(σ,T) ≪σ,ε T^(2(1−σ)+ε), hence A(σ) ≤ 2, for fixed 3/4 0; zeros with Re(ρ) ≥ σ and 0 < Im(ρ) ≤ T are counted with multiplicity.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11M26"
+  ],
+  "published": "2026-10-07",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Unpublished proof notes on large values and zeta zero density",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/mrklwk/zeta-zero-density-lean",
+  "commit": "5dd0dd391c117ef4d8fd04a6b16b4b1ad5735d88",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "analytic-number-theory",
+      "riemann-zeta",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of a zero-density estimate for the Riemann zeta function.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

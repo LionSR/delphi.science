@@ -1,0 +1,30 @@
+{
+  "key": "An-atomic-certificate-for-triangular-lattice-universal-optimality",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/An-atomic-certificate-for-triangular-lattice-universal-optimality-September-26-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/An-atomic-certificate-for-triangular-lattice-universal-optimality-September-26-2026/paper.pdf",
+  "title": "An atomic certificate for triangular-lattice universal optimality",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that the density-one triangular lattice minimizes the lower energy per particle for every nonnegative completely monotone function of squared distance, among all locally finite planar configurations of centered disk density one. The comparison includes infinite energies. The proof constructs sharp Gaussian Fourier minorants using an atomic interpolation certificate.",
+  "domain": "Convex and metric geometry",
+  "published": "2026-09-26",
+  "family": "090",
+  "family_title": "Triangular-lattice optimality, long-range Riesz and Coulomb energies, and spherical logarithmic energy",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "discrete-geometry",
+      "lattice-energy"
+    ],
+    "reason": "Proves the triangular lattice minimizes energy among planar configurations for completely monotone interactions.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

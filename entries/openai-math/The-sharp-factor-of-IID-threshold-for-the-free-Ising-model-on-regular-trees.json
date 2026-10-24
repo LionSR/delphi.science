@@ -1,0 +1,31 @@
+{
+  "key": "The-sharp-factor-of-IID-threshold-for-the-free-Ising-model-on-regular-trees",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-sharp-factor-of-IID-threshold-for-the-free-Ising-model-on-regular-trees-September-26-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-sharp-factor-of-IID-threshold-for-the-free-Ising-model-on-regular-trees-September-26-2026/article.pdf",
+  "title": "The sharp factor-of-IID threshold for the free Ising model on regular trees",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For every integer d ≥ 3 and inverse temperature β ≥ 0, the free zero-field ferromagnetic Ising measure on the infinite d -regular tree is a factor of IID exactly when $`\\tanh\\beta\\le(d-1)^{-1/2}`$. We prove the positive implication, including equality, resolving the conjecture of Nam, Sly and Zhang; the strict converse is known. The spin factor can be chosen to commute with every tree automorphism on every label input.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-09-26",
+  "family": "236",
+  "family_title": "The exact factor-of-IID threshold for free Ising spins on trees",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "probability",
+      "statistical-mechanics",
+      "ising-model"
+    ],
+    "reason": "Establishes the sharp factor-of-IID threshold for the free Ising model on regular trees.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "key": "22995439",
+  "source": "zenodo",
+  "url": "https://zenodo.org/records/22995439",
+  "title": "When Hypothesis Agents May Act Only Through Papers: A Protocol for Joint MCP-Hypothesis Benchmarks",
+  "authors": [
+    "Mamun, Syed Muntasir"
+  ],
+  "summary": "K SC Paper2Agent showed that a wrapped paper can outperform repository-browsing agents on tutorial and novel method queries (Miao et al., 2026). Co-Scientist, the AI Scientist and the Virtual Lab showed that multi-agent systems can propose hypotheses that sometimes survive experiment or review (Gottweis et al., 2026; Lu et al., 2024; Lu et al., 2026; Swanson et al., 2025). These results are not yet commensurate. Volume I called the comparison a category error and asked for a joint evaluation in which a hypothesis agent may act only through paper MCPs (Mamun, 2026a). Volume II specified the…",
+  "tags": [
+    "AI Architectures & Machine Learning",
+    "Papers, volumes & notes",
+    "AI Architectures & Learning Systems"
+  ],
+  "domain": "publication",
+  "published": "2026-09-17",
+  "doi": "10.5281/zenodo.22995439",
+  "added": "2026-10-23",
+  "added_by": "harvest:zenodo-ai-generated",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "subject": "cs.AI",
+    "tags": [
+      "benchmarks",
+      "mcp",
+      "hypothesis-generation",
+      "llm-agents"
+    ],
+    "reason": "Protocol for benchmarking hypothesis agents that act only through paper tools.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

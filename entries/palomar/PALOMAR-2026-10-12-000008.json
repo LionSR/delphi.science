@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-10-12-000008",
+  "source": "palomar",
+  "url": "https://github.com/roos-j/lean-lt-carleson/tree/1fde1f341dfdde6e69500bfe909ea1f77159d163/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-12-000008-v2.json",
+  "title": "Formalization of Carleson's theorem via the Lacey-Thiele approach",
+  "authors": [
+    "Joris Roos"
+  ],
+  "summary": "This is a Lean 4 formalization of Theorem 1.1 from the paper \"Bounds for anisotropic Carleson operators\" by J. Roos, which generalizes the Lacey-Thiele proof for Carleson's theorem. The classical Carleson theorem on pointwise almost everywhere convergence of Fourier series is derived as a special case.",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA",
+    "msc:42B20",
+    "msc:42B25",
+    "msc:42A20"
+  ],
+  "published": "2026-10-17",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Bounds for anisotropic Carleson operators",
+      "identifier": "J. Fourier Anal. Appl. 25 (2019), no. 5, 2324-2355, doi:10.1007/s00041-018-09657-7; arXiv:1710.10962v1",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/roos-j/lean-lt-carleson",
+  "commit": "1fde1f341dfdde6e69500bfe909ea1f77159d163",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "harmonic-analysis",
+      "carleson-theorem",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of an anisotropic Carleson operator bound and Carleson's theorem.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

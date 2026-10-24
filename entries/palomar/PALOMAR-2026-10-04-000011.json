@@ -1,0 +1,51 @@
+{
+  "key": "PALOMAR-2026-10-04-000011",
+  "source": "palomar",
+  "url": "https://github.com/Arthur742Ramos/cell-attachment-lean/tree/1c671038e320cecc58ca1d81dca11bbe2e2a507c/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-04-000011-v1.json",
+  "title": "Fundamental Groups of Arbitrary Two-Cell Attachments",
+  "authors": [
+    "Arthur Freitas Ramos",
+    "David Barros Hulak",
+    "Ruy Jose Guerra Barretto de Queiroz"
+  ],
+  "summary": "The full arbitrary-family two-cell attachment theorem for ordinary topological fundamental groups. For any path-connected topological space X, any basepoint, and any indexed family of continuous circle attaching maps, a genuine adjunction quotient is constructed from X and the coproduct of closed complex unit disks. The actual inclusion-induced fundamental-group homomorphism is surjective and its kernel is precisely the normal closure of the once-around attaching loops, transported along the specified basepoint paths. A quotient group isomorphism is proved compatible with the actual…",
+  "domain": "math.AT",
+  "tags": [
+    "math.AT",
+    "math.CT",
+    "msc:55Q05",
+    "msc:18B40"
+  ],
+  "published": "2026-10-04",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Algebraic Topology",
+      "identifier": "https://pi.math.cornell.edu/~hatcher/AT/AT..pdf",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Arthur742Ramos/cell-attachment-lean",
+  "commit": "1c671038e320cecc58ca1d81dca11bbe2e2a507c",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "algebraic-topology",
+      "fundamental-group",
+      "homotopy-theory",
+      "lean-formalization"
+    ],
+    "reason": "Theorem on fundamental groups of spaces with arbitrary two-cell attachments, with formal construction.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

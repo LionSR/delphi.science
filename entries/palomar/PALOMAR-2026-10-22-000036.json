@@ -1,0 +1,54 @@
+{
+  "key": "PALOMAR-2026-10-22-000036",
+  "source": "palomar",
+  "url": "https://github.com/wcook04/plectis-erdos-lean/tree/eb6cd7ceae9ff5c5bceeb514cac749c30861d8c6/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-22-000036-v1.json",
+  "title": "Cubic-rate irrationality for reciprocal sums",
+  "authors": [
+    "Will Cook"
+  ],
+  "summary": "Every positive strictly increasing zero-indexed integer sequence a with n^3(a_n^2/a_(n+1) - 1 - 3/n) tending to zero has an irrational reciprocal sum. The entry also states the exact integer-tail and number-field steps used to exclude the resulting cubic profile: positive-density exceptions, primitive gcd reduction, square specialisation, scale twelve, forbidden words modulo seven, and regular-rate extraction. The printed one-indexed paper theorem uses its stated finite-prefix argument. The separate bounded-increment Sylvester criterion in the paper is outside this configuration, and the…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11J72",
+    "msc:11B83",
+    "msc:11R11"
+  ],
+  "published": "2026-10-22",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Cubic-Rate Irrationality and Reciprocal-Tail Rigidity",
+      "identifier": "https://github.com/wcook04/plectis-erdos/blob/147f3f1da400a84dcb3013ea6cef75dc8f382b09/paper/243/erdos-243-reciprocal-tail-rigidity.pdf",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Reciprocal-Tail Rigidity: Theorems, Proofs and Questions",
+      "identifier": "https://github.com/wcook04/plectis-erdos/blob/147f3f1da400a84dcb3013ea6cef75dc8f382b09/paper/243/erdos243-reciprocal-tail-reasoning-surface.pdf",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/wcook04/plectis-erdos-lean",
+  "commit": "eb6cd7ceae9ff5c5bceeb514cac749c30861d8c6",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "irrationality",
+      "reciprocal-sums",
+      "diophantine-approximation",
+      "number-theory"
+    ],
+    "reason": "Proof that reciprocal sums of certain increasing integer sequences are irrational.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

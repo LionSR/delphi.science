@@ -1,0 +1,32 @@
+{
+  "key": "A-classification-of-finite-Euclidean-Ramsey-configurations",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-classification-of-finite-Euclidean-Ramsey-configurations-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-classification-of-finite-Euclidean-Ramsey-configurations-September-23-2026/paper.pdf",
+  "title": "A classification of finite Euclidean Ramsey configurations",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We classify finite Euclidean Ramsey configurations by a necessary and sufficient tensor condition over their coordinate fields. The Ramsey property here concerns monochromatic congruent copies at the original scale under arbitrary finite colorings. The criterion shows that every nonempty subtransitive set and every nonempty set of at most five points on a circle is Ramsey. In particular, some Ramsey cyclic quadrilaterals are not subtransitive, disproving the necessity direction of the Leader–Russell–Walters conjectured characterization.",
+  "domain": "Combinatorics",
+  "published": "2026-09-23",
+  "family": "172",
+  "family_title": "Classification of finite Euclidean Ramsey configurations",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "ramsey-theory",
+      "euclidean-geometry",
+      "combinatorics",
+      "discrete-geometry"
+    ],
+    "reason": "Classifies finite Euclidean Ramsey configurations and tests a conjectured characterization for cyclic quadrilaterals.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

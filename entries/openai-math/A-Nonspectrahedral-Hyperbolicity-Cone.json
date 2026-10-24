@@ -1,0 +1,31 @@
+{
+  "key": "A-Nonspectrahedral-Hyperbolicity-Cone",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-Nonspectrahedral-Hyperbolicity-Cone-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-Nonspectrahedral-Hyperbolicity-Cone-September-24-2026/nonspectrahedral-hyperbolicity-cone.pdf",
+  "title": "A nonspectrahedral hyperbolicity cone",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We construct a homogeneous polynomial of degree 16 in 23 real variables whose hyperbolicity cone has no representation by a finite homogeneous real symmetric linear matrix inequality. This disproves the geometric Generalized Lax conjecture.",
+  "domain": "Convex and metric geometry",
+  "published": "2026-09-24",
+  "family": "095",
+  "family_title": "Hyperbolicity cones without semidefinite lifts",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "real-algebraic-geometry",
+      "convex-geometry",
+      "hyperbolic-polynomials"
+    ],
+    "reason": "Constructs a hyperbolicity cone with no finite LMI representation, disproving the geometric Generalized Lax conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "key": "PALOMAR-2026-09-02-000010",
+  "source": "palomar",
+  "url": "https://github.com/sneed-and-feed/lean-theorems-1/tree/87f8794c71218c0174f51248bde1396f3793abdd/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-02-000010-v1.json",
+  "title": "The Kőnig–Egerváry Theorem on Matchings and Vertex Covers in Bipartite Graphs",
+  "authors": [
+    "Noah Cohen"
+  ],
+  "summary": "A complete machine-checked Lean 4 formalization of the Kőnig–Egerváry Theorem (1931) and Gallai identities (1959). Proves strong min-max duality matchingNumber(G) = vertexCoverNumber(G) for 2-colorable graphs G via Hall's defect matching theorem, and formalizes Gallai's identity independenceNumber(G) + vertexCoverNumber(G) = |V(G)|. To the maintainers' knowledge, the theorem was not found in an exact declaration name, docstring, and type signature search of the pinned Mathlib revision (Mathlib v4.34.0-rc1).",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C70",
+    "msc:05C69",
+    "msc:90C27"
+  ],
+  "published": "2026-09-02",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Gráfok és mátrixok",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Matrixok kombinatorius tulajdonságairól",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Über extreme Punkt- und Kantenmengen",
+      "identifier": "",
+      "relationship": "adapts"
+    },
+    {
+      "title": "On Representatives of Subsets",
+      "identifier": "",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/sneed-and-feed/lean-theorems-1",
+  "commit": "87f8794c71218c0174f51248bde1396f3793abdd",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-theory",
+      "matchings",
+      "lean-formalization"
+    ],
+    "reason": "Machine-checked Lean proof of Kőnig–Egerváry and Gallai identities for bipartite graphs.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "key": "PALOMAR-2026-10-02-000001",
+  "source": "palomar",
+  "url": "https://github.com/vltanh/lean4-graham-rearrangement-conjecture/tree/e4d1034e026688b6ef3966dde89437d823a4262e/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-02-000001-v1.json",
+  "title": "On Graham's rearrangement conjecture (Pham–Sauermann)",
+  "authors": [
+    "The-Anh Vu-Le"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of H. T. Pham and L. Sauermann, \"On Graham's rearrangement conjecture\" (arXiv:2602.15797v1). Graham conjectured in 1971 that for every prime p, every subset S of Z_p \\ {0} has an ordering whose partial sums are pairwise distinct. The formalization proves the paper's main theorem (Theorem 1.2): for every 0 0 such that, for every prime p, every S ⊆ Z_p \\ {0} with C_α ≤ |S| ≤ p^(1-α) has such an ordering. It also proves the paper's anticoncentration bounds for the sum of a uniformly random m-element subset R of a set S ⊆ Z_p with |S| ≥ 2: the probability that…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.NT",
+    "msc:11B75",
+    "msc:05D40",
+    "msc:11B30",
+    "msc:60C05",
+    "msc:11P70",
+    "msc:05A05"
+  ],
+  "published": "2026-10-02",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "On Graham's rearrangement conjecture",
+      "identifier": "arXiv:2602.15797v1",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/vltanh/lean4-graham-rearrangement-conjecture",
+  "commit": "e4d1034e026688b6ef3966dde89437d823a4262e",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "combinatorics",
+      "number-theory",
+      "lean-formalization",
+      "additive-combinatorics"
+    ],
+    "reason": "Lean formalization of a theorem on orderings with distinct partial sums, related to Graham's conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-09-02-000009",
+  "source": "palomar",
+  "url": "https://github.com/nihargargava/MeanValueIdealLattices/tree/339043190fd8b5468af851a680b7e8737f5467e7/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-02-000009-v1.json",
+  "title": "Mean Value for Random Ideal Lattices: Lean formalization",
+  "authors": [
+    "Nihar Gargava"
+  ],
+  "summary": "A Lean formalization of the geometric, analytic, and arithmetic argument for mean values of lattice-point counts in Haar-random unit-covolume ideal lattices. For cyclotomic fields, it proves the conditional quantitative estimate for every exponent below the assumed subconvexity exponent and its positive power-saving corollary, uniformly over origin-centered balls. The subconvexity, Stark residue, and discriminant-growth inputs remain explicit hypotheses rather than claimed consequences of the formalization.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11R04",
+    "msc:11M41",
+    "msc:11R42"
+  ],
+  "published": "2026-09-02",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Mean Value for Random Ideal Lattices",
+      "identifier": "arXiv:2411.14973",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/nihargargava/MeanValueIdealLattices",
+  "commit": "339043190fd8b5468af851a680b7e8737f5467e7",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "lattices",
+      "number-theory",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of conditional mean-value estimates for random ideal lattices in cyclotomic fields.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

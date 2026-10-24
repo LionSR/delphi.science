@@ -1,0 +1,31 @@
+{
+  "key": "The-critical-dimension-for-one-phase-Bernoulli-minimizers",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-critical-dimension-for-one-phase-Bernoulli-minimizers-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-critical-dimension-for-one-phase-Bernoulli-minimizers-September-24-2026/The-critical-dimension-for-one-phase-Bernoulli-minimizers-September-24-2026.pdf",
+  "title": "The critical dimension for one-phase Bernoulli minimizers",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that seven is the critical dimension for the one-phase Bernoulli problem: every nonzero one-homogeneous global minimizer in dimensions at most six is flat, while a nonflat one-homogeneous global minimizer exists in dimension seven. It follows that the interior free boundary of a local minimizer is smooth in dimensions at most six. In dimension n ≥ 7, its singular set has Hausdorff dimension at most $`n-7`$, and this bound is sharp. In dimension seven, the singular set is locally finite.",
+  "domain": "Partial differential equations",
+  "published": "2026-09-24",
+  "family": "367",
+  "family_title": "The critical dimension for the one-phase Bernoulli problem",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "free-boundary-problems",
+      "geometric-measure-theory",
+      "calculus-of-variations"
+    ],
+    "reason": "Establishes dimension seven as critical for regularity of one-phase Bernoulli minimizers.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

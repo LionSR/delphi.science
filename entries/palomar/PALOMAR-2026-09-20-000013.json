@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-09-20-000013",
+  "source": "palomar",
+  "url": "https://github.com/insammael/one-sided-affine-hat-guessing/tree/991721669233b41666e6f56b1471e58eb63d719e/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-20-000013-v1.json",
+  "title": "One-Sided Affine Obstructions in Complete Bipartite Hat Guessing",
+  "authors": [
+    "Myunglae Jo"
+  ],
+  "summary": "A Lean 4 formalization of manuscript Theorem 2.4: for every finite field K with |K| at least 4 and every m at least 1, a coordinatewise-affine strategy on the class of size |K|-1 cannot be completed to a winning strategy by arbitrary deterministic rules on the opposite class of size m, with respect to the fixed finite-field labeling.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C57",
+    "msc:91A43",
+    "msc:11T06"
+  ],
+  "published": "2026-09-20",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "One-Sided Affine Obstructions in Complete Bipartite Hat Guessing",
+      "identifier": "10.5281/zenodo.22568338",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/insammael/one-sided-affine-hat-guessing",
+  "commit": "991721669233b41666e6f56b1471e58eb63d719e",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "combinatorics",
+      "hat-guessing",
+      "finite-fields",
+      "lean"
+    ],
+    "reason": "Lean 4 formalization of affine strategy limits in complete bipartite hat guessing.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

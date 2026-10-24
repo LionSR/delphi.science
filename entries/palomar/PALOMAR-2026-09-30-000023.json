@@ -1,0 +1,51 @@
+{
+  "key": "PALOMAR-2026-09-30-000023",
+  "source": "palomar",
+  "url": "https://github.com/jfairfaxball-348/ProbStack-Random-Stacking-on-Trees/tree/1897a76956168fba047f5943fa7998601f4fe459/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000023-v1.json",
+  "title": "ProbStack — Random Stacking on Trees",
+  "authors": [
+    "John Fairfax-Ball"
+  ],
+  "summary": "Lean 4 formalization of a deterministic finite-path necessity theorem for graph-pebbling stackability: a positive-mass nonstackable path configuration above an explicit mass threshold must contain an actual directed integer branch message at most -h. The package also verifies the exact fixed-total corollary at total n*mu, forcing a message at most -(2*mu-1). The project's two-sided random path threshold theorem is not part of this Palomar result.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C99"
+  ],
+  "published": "2026-09-30",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "ProbStack Session 5/23 global deep-message necessity theorem",
+      "identifier": "https://github.com/jfairfaxball-348/ProbStack-Random-Stacking-on-Trees/tree/6b58462042a41125bd8d113168bb51276b2940ef",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "TreeStack — Structural Certificates for Stacking on Trees",
+      "identifier": "https://github.com/jfairfaxball-348/TreeStack-Structural-Certificates-for-Stacking-on-Trees/tree/f4112f08d42a37c0941bf469ac124621b1f54f22",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jfairfaxball-348/ProbStack-Random-Stacking-on-Trees",
+  "commit": "1897a76956168fba047f5943fa7998601f4fe459",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "graph-pebbling",
+      "combinatorics",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of a finite-path necessity theorem for graph-pebbling stackability.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

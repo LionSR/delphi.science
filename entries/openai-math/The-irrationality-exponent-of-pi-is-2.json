@@ -1,0 +1,31 @@
+{
+  "key": "The-irrationality-exponent-of-pi-is-2",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-irrationality-exponent-of-pi-is-2-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-irrationality-exponent-of-pi-is-2-September-24-2026/paper.pdf",
+  "title": "The irrationality exponent of pi is 2",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the conjecture that the irrationality exponent of π is 2. As a consequence, the classical Flint–Hills series $`\\sum_{n\\ge1}1/(n^3\\sin^2 n)`$ converges, with angles in radians.",
+  "domain": "Number theory",
+  "published": "2026-09-24",
+  "family": "017",
+  "family_title": "The irrationality exponent of π is 2",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "diophantine-approximation",
+      "irrationality-measure"
+    ],
+    "reason": "Proves the irrationality exponent of pi equals 2, with consequences for the Flint–Hills series.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

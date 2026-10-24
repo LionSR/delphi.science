@@ -1,0 +1,58 @@
+{
+  "key": "PALOMAR-2026-10-15-000021",
+  "source": "palomar",
+  "url": "https://github.com/jtraverso/ramsey-graph-bounds/tree/562986a7ce9edf086c20b3a2b8c7d5ace2ffd843/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-15-000021-v1.json",
+  "title": "Classical bounds for graph Ramsey numbers",
+  "authors": [
+    "Juan Pablo Traverso Gianini"
+  ],
+  "summary": "A Lean 4 / Mathlib formalization of the classical bounds for graph Ramsey numbers: R(3, 3) = 6 (every graph on six vertices has a triangle or three independent vertices, and the pentagon has neither), the Erdős–Szekeres upper bound R(s, t) ≤ C(s + t − 2, s − 1), and Erdős's lower bound R(k, k) > 2^(k/2) for k ≥ 3, proved by a union bound over the edge sets of graphs on n vertices.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C55",
+    "msc:05D10"
+  ],
+  "published": "2026-10-15",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "A combinatorial problem in geometry",
+      "identifier": "http://www.numdam.org/item/CM_1935__2__463_0/",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Some remarks on the theory of graphs",
+      "identifier": "doi:10.1090/S0002-9904-1947-08785-1",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Combinatorial relations and chromatic graphs",
+      "identifier": "doi:10.4153/CJM-1955-001-4",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/jtraverso/ramsey-graph-bounds",
+  "commit": "562986a7ce9edf086c20b3a2b8c7d5ace2ffd843",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "ramsey-theory",
+      "graph-theory",
+      "formal-verification",
+      "lean"
+    ],
+    "reason": "Lean 4 formalization of classical bounds on graph Ramsey numbers.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

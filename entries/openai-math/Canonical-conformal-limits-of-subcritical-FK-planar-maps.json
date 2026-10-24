@@ -1,0 +1,31 @@
+{
+  "key": "Canonical-conformal-limits-of-subcritical-FK-planar-maps",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Canonical-conformal-limits-of-subcritical-FK-planar-maps-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Canonical-conformal-limits-of-subcritical-FK-planar-maps-September-24-2026/main.pdf",
+  "title": "Canonical conformal limits of subcritical FK planar maps",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "For every fixed $`0\\lt q\\lt 4`$, we prove joint convergence of spherical Fortuin–Kasteleyn planar maps in their flag-triangle uniformization to the corresponding unit-area Liouville quantum gravity sphere decorated by an independent conformal loop ensemble. The convergence includes the area measure, deterministically rescaled graph distances between all vertex pairs, and the full nested interface collection, with interfaces converging uniformly up to reparameterization.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-09-24",
+  "family": "211",
+  "family_title": "The geometric phase diagram, diffusion, and spectra of random planar maps",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "liouville-quantum-gravity",
+      "fk-percolation",
+      "random-geometry"
+    ],
+    "reason": "Proves joint scaling limits of subcritical FK planar maps to LQG spheres with CLE.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "Sharp-nodal-length-on-smooth-surfaces",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Sharp-nodal-length-on-smooth-surfaces-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Sharp-nodal-length-on-smooth-surfaces-September-23-2026/paper.pdf",
+  "title": "Sharp nodal length on smooth surfaces",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that a nonzero real Laplace eigenfunction with eigenvalue λ > 0 on a fixed smooth closed connected Riemannian surface has nodal length at most $`C\\sqrt\\lambda`$. Together with the known lower bound, this proves Yau's conjecture in this setting.",
+  "domain": "Differential geometry",
+  "published": "2026-09-23",
+  "family": "350",
+  "family_title": "Yau’s nodal bounds: surfaces and higher dimensions",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "spectral-geometry",
+      "eigenfunctions",
+      "nodal-sets"
+    ],
+    "reason": "Proves a sqrt(lambda) upper bound on nodal length of Laplace eigenfunctions on surfaces.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

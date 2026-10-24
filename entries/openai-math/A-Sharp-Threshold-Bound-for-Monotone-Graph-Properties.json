@@ -1,0 +1,31 @@
+{
+  "key": "A-Sharp-Threshold-Bound-for-Monotone-Graph-Properties",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/A-Sharp-Threshold-Bound-for-Monotone-Graph-Properties-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/A-Sharp-Threshold-Bound-for-Monotone-Graph-Properties-September-25-2026/paper.pdf",
+  "title": "A Sharp Threshold Bound for Monotone Graph Properties",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the Friedgut–Kalai sharp-threshold conjecture. For every integer n ≥ 2, every nontrivial increasing family of graphs on n vertices invariant under all vertex permutations, and every $`0\\lt \\varepsilon\\lt 1/2`$, the edge probabilities at which its probability equals ε and $`1-\\varepsilon`$ differ by at most $`C\\log(1/(2\\varepsilon))/(\\log n)^2`$, for a universal constant C .",
+  "domain": "Combinatorics",
+  "published": "2026-09-25",
+  "family": "186",
+  "family_title": "Uniform influence and sharp thresholds for graph and hypergraph properties",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "random-graphs",
+      "threshold-phenomena",
+      "combinatorics"
+    ],
+    "reason": "Proves the Friedgut–Kalai sharp-threshold bound for monotone graph properties.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

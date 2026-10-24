@@ -1,0 +1,47 @@
+{
+  "key": "PALOMAR-2026-08-19-000005",
+  "source": "palomar",
+  "url": "https://github.com/dcposch/jc2-lean/tree/6c0f56309226432afb90b6213638ec987d46f4a3/theorem-a",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-19-000005-v1.json",
+  "title": "dcposch/jc2-lean",
+  "authors": [
+    "Dan Clemens Posch"
+  ],
+  "summary": "Lean 4 / Mathlib formalization of Theorem A (ODE rigidity, all weights; label thm:ode, Theorem 6.1 in the current compilation of the campaign paper): if polynomials A, C over an integral domain of characteristic zero and an integer weight nu >= 1 satisfy A*C' - nu*A'*C = c for a nonzero constant c, then deg A <= 1 (TheoremA). Also a standalone positive-characteristic strengthening extracted from the same proof (TheoremA_charP): the same conclusion over a domain of characteristic p under the degree bounds nu*deg A < p and deg C < p. The theorem is the rigidity engine of the depth-two block…",
+  "domain": "math.AG",
+  "tags": [
+    "math.AG",
+    "math.AC",
+    "msc:14R15"
+  ],
+  "published": "2026-08-19",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Sheet-number obstruction theory for the plane Jacobian Conjecture: campaign theory bundle v1",
+      "identifier": "doi:10.5281/zenodo.22002825",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/dcposch/jc2-lean",
+  "commit": "6c0f56309226432afb90b6213638ec987d46f4a3",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "algebraic-geometry",
+      "jacobian-conjecture",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of an ODE rigidity theorem for polynomials over integral domains.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "key": "PALOMAR-2026-09-02-000003",
+  "source": "palomar",
+  "url": "https://github.com/stalex444/salem-theorem/tree/887be765bf24c6a645600dfc7bd0a1055a1761dd/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-02-000003-v1.json",
+  "title": "Salem's theorem: every Pisot number is a two-sided limit of Salem numbers",
+  "authors": [
+    "Stephanie Alexander"
+  ],
+  "summary": "Kernel-checked Salem's theorem — every Pisot number is a limit point of Salem numbers from both sides (R. Salem, Algebraic Numbers and Fourier Analysis, D. C. Heath, 1963, Ch. III, Theorem IV, p. 30; origin R. Salem, Duke Math. J. 12 (1945)) — with both of Salem's constructions, each stated as a construction. Three compared statements carry the surface. (1) salem_theorem — the theorem for Pisot numbers: a real algebraic integer alpha > 1 every other complex root of whose minimal polynomial has modulus 0, a Salem number in (alpha - eps, alpha) and one in (alpha, alpha + eps). (2)…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11R06",
+    "msc:11R04"
+  ],
+  "published": "2026-09-02",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Algebraic Numbers and Fourier Analysis",
+      "identifier": "Heath Mathematical Monographs, D. C. Heath and Company, Boston, 1963, x+68 pp. (reprinted Wadsworth, Belmont, 1983); Ch. III, Theorem IV, p. 30, proof pp. 30-31; the definition of the class T and its reciprocity consequence, p. 26 (cited by page; numbered Lemma 1 in Smyth 2015)",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Power series with integral coefficients",
+      "identifier": "Duke Mathematical Journal 12 (1945), no. 1, 153-172",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Pisot and Salem numbers in intervals of the real line",
+      "identifier": "Mathematics of Computation 32 (1978), no. 144, 1244-1260; Section 4, eq. (26), p. 1252",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/stalex444/salem-theorem",
+  "commit": "887be765bf24c6a645600dfc7bd0a1055a1761dd",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "salem-numbers",
+      "pisot-numbers",
+      "lean"
+    ],
+    "reason": "Kernel-checked formalization of Salem's theorem on Pisot numbers as limits of Salem numbers.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

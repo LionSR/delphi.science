@@ -1,0 +1,31 @@
+{
+  "key": "Bi-Lipschitz-Coordinates-at-Regular-Points-of-Noncollapsed-RCD-Spaces",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Bi-Lipschitz-Coordinates-at-Regular-Points-of-Noncollapsed-RCD-Spaces-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Bi-Lipschitz-Coordinates-at-Regular-Points-of-Noncollapsed-RCD-Spaces-September-25-2026/paper.pdf",
+  "title": "Bi-Lipschitz Coordinates at Regular Points of Noncollapsed RCD Spaces",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We resolve the regular-point bi-Lipschitz conjecture in the noncollapsed setting. For every integer n ≥ 2 and every real K , every regular point of a noncollapsed $`\\mathrm{RCD}(K,n)`$ space has an open neighborhood bi-Lipschitz homeomorphic to an open subset of ℝ n . The bi-Lipschitz constant depends only on n , and the neighborhood uses the restricted ambient distance.",
+  "domain": "Differential geometry",
+  "published": "2026-09-25",
+  "family": "357",
+  "family_title": "Bi-Lipschitz coordinates at every regular RCD point",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "metric-geometry",
+      "ricci-curvature",
+      "rcd-spaces"
+    ],
+    "reason": "Proves bi-Lipschitz coordinate charts at regular points of noncollapsed RCD spaces.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

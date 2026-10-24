@@ -1,0 +1,31 @@
+{
+  "key": "Numerical-Semiampleness-of-Nef-Adjoint-Divisors",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Numerical-Semiampleness-of-Nef-Adjoint-Divisors-October-3-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Numerical-Semiampleness-of-Nef-Adjoint-Divisors-October-3-2026/paper.pdf",
+  "title": "Numerical Semiampleness of Nef Adjoint Divisors",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the Generalised Abundance Conjecture: if $`(X,B)`$ is a projective klt ℚ-pair over an algebraically closed field of characteristic zero, $`K_X+B`$ is pseudo-effective, M is a nef ℚ-Cartier divisor on X , and $`K_X+B+M`$ is nef, then $`K_X+B+M`$ is numerically equivalent to a semiample ℚ-Cartier divisor on X .",
+  "domain": "Algebraic and complex geometry",
+  "published": "2026-10-03",
+  "family": "036",
+  "family_title": "Numerical semiampleness and generalized minimal models",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "algebraic-geometry",
+      "minimal-model-program",
+      "birational-geometry"
+    ],
+    "reason": "Proves the Generalised Abundance Conjecture for klt pairs via numerical semiampleness.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-08-31-000003",
+  "source": "palomar",
+  "url": "https://github.com/sneed-and-feed/lean-theorems-1/tree/a3047d6bc04685572164ac141822aea8d3ad60e4/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-31-000003-v1.json",
+  "title": "sneed-and-feed/lean-theorems-1",
+  "authors": [
+    "Sneed & Feed Formalization Team"
+  ],
+  "summary": "A complete machine-checked Lean 4 formalization of the Frankl–Wilson theorem (1981) for modulo-p intersecting set families. Uses the polynomial linear algebra method over ZMod p to prove both the general non-uniform bound |F| <= sum_{i=0}^s choose(n, i) and the uniform cardinality bound |F| <= choose(n, s). To the maintainers' knowledge, the theorem was not found in an exact declaration name, docstring, and type signature search of the pinned Mathlib revision (Mathlib v4.34.0-rc1).",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05D05",
+    "msc:11B75",
+    "msc:15A03"
+  ],
+  "published": "2026-08-31",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Intersection theorems with geometric consequences",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/sneed-and-feed/lean-theorems-1",
+  "commit": "a3047d6bc04685572164ac141822aea8d3ad60e4",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "combinatorics",
+      "extremal-set-theory",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization of the Frankl–Wilson theorem on modular intersecting set families.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

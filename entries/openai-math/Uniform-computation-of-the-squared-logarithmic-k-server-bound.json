@@ -1,0 +1,32 @@
+{
+  "key": "Uniform-computation-of-the-squared-logarithmic-k-server-bound",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Uniform-computation-of-the-squared-logarithmic-k-server-bound-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Uniform-computation-of-the-squared-logarithmic-k-server-bound-September-24-2026/Uniform-computation-of-the-squared-logarithmic-k-server-bound-September-24-2026.pdf",
+  "title": "Uniform computation of the squared-logarithmic k-server bound",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We construct a uniform randomized k -server algorithm on finite rational metrics with competitive ratio $`O(\\log^2(k+1))`$ against oblivious request sequences. Preprocessing is polynomial in the input length, and per-request bit complexity is polynomial in that length and the binary request-counter length. The additive movement constant is finite and instance-dependent, but may be enormous. The construction uses the companion squared-logarithmic existence theorem.",
+  "domain": "Theoretical computer science",
+  "published": "2026-09-24",
+  "family": "110",
+  "family_title": "Optimal-order randomized k -server on arbitrary metrics",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "online-algorithms",
+      "k-server",
+      "competitive-analysis",
+      "randomized-algorithms"
+    ],
+    "reason": "Constructs a randomized k-server algorithm with a squared-logarithmic competitive ratio on finite metrics.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

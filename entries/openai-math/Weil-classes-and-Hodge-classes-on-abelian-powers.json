@@ -1,0 +1,31 @@
+{
+  "key": "Weil-classes-and-Hodge-classes-on-abelian-powers",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Weil-classes-and-Hodge-classes-on-abelian-powers-October-6-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Weil-classes-and-Hodge-classes-on-abelian-powers-October-6-2026/paper.pdf",
+  "title": "Weil classes and Hodge classes on abelian powers",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the rational Hodge conjecture in every codimension on every self-power of a complex abelian sixfold with an imaginary-quadratic action and a compatible polarization whose rational homological Hermitian form is hyperbolic of signature $`(3,3)`$. We also prove it in every codimension on every self-power of a complex abelian variety of dimension at most five admitting an imaginary-quadratic action. Both results include nonsimple varieties and special periods with additional endomorphisms. The proof uses the companion theorem on the rational Hodge conjecture for CM abelian varieties.",
+  "domain": "Algebraic and complex geometry",
+  "published": "2026-10-06",
+  "family": "032",
+  "family_title": "The rational Hodge conjecture for CM abelian varieties",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "hodge-theory",
+      "abelian-varieties",
+      "algebraic-cycles"
+    ],
+    "reason": "Proves the rational Hodge conjecture for certain self-powers of CM abelian varieties.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

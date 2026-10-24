@@ -1,0 +1,51 @@
+{
+  "key": "PALOMAR-2026-09-30-000009",
+  "source": "palomar",
+  "url": "https://github.com/mmislan/palomar-p064-multisite-phosphorylation-oscillations/tree/99597afe8632cbd41f0ffec6c04f73a554ba9881/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-30-000009-v1.json",
+  "title": "Attracting oscillations in sequential distributive phosphorylation",
+  "authors": [
+    "Michael Mislan"
+  ],
+  "summary": "Vassena (arXiv:2608.27081v2, Section 8) left open whether sequential distributive phosphorylation cycles with three or more sites admit Hopf bifurcation under mass-action kinetics. For every n >= 3, a componentwise-affine family of positive rate constants is constructed for the n-site cycle with one kinase and one phosphatase and a fixed positive equilibrium. A family of strictly positive, nonconstant periodic orbits bifurcates from this equilibrium, with amplitudes tending to zero and periods tending to a finite positive limit. Each orbit is orbitally asymptotically stable within its…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "q-bio.MN",
+    "msc:34C23",
+    "msc:37G15",
+    "msc:34D20",
+    "msc:92C45"
+  ],
+  "published": "2026-09-30",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Attracting oscillations in sequential distributive multisite phosphorylation: dynamic enzyme sequestration and what static elimination cannot see",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/mmislan/palomar-p064-multisite-phosphorylation-oscillations",
+  "commit": "99597afe8632cbd41f0ffec6c04f73a554ba9881",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "dynamical-systems",
+      "hopf-bifurcation",
+      "phosphorylation",
+      "mass-action"
+    ],
+    "reason": "Constructs attracting periodic orbits from Hopf bifurcation in phosphorylation cycles.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

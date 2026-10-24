@@ -1,0 +1,48 @@
+{
+  "key": "PALOMAR-2026-09-25-000021",
+  "source": "palomar",
+  "url": "https://github.com/mmislan/palomar-p012-sparse-raf-exclusion/tree/324c7903021c54c3ee140637a98aef8766ec348b/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-25-000021-v1.json",
+  "title": "Linear-size autocatalytic sets are asymptotically absent in the sparse binary polymer model",
+  "authors": [
+    "Michael Mislan"
+  ],
+  "summary": "In the sparse binary-polymer model with reversible ligation and cleavage, fix the food-length bound t, a nonnegative catalysis intensity lambda, and a linear reaction budget Cn. As the maximum polymer length n tends to infinity, the probability of a nonempty reflexively autocatalytic and food-generated reaction set with at most Cn channels tends to zero. The probability that some molecule catalyses a nonempty food-generated reaction set that constructs that molecule also tends to zero. These statements address the linear-size and single-molecule self-construction questions for the sparse…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "msc:60C05",
+    "msc:05C65"
+  ],
+  "published": "2026-09-25",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Linear-size autocatalytic sets are asymptotically absent in the sparse binary polymer model",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/mmislan/palomar-p012-sparse-raf-exclusion",
+  "commit": "324c7903021c54c3ee140637a98aef8766ec348b",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "probability",
+      "autocatalytic-sets",
+      "random-graphs",
+      "reaction-networks"
+    ],
+    "reason": "Probabilistic analysis of autocatalytic sets in a sparse binary polymer model.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

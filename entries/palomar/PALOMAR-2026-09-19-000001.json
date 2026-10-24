@@ -1,0 +1,63 @@
+{
+  "key": "PALOMAR-2026-09-19-000001",
+  "source": "palomar",
+  "url": "https://github.com/CoolRmal/NKBesicovitch/tree/e12e5981d840eb5ebdc25403691b3c63a9c7aff8/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-09-19-000001-v1.json",
+  "title": "NKBesicovitch",
+  "authors": [
+    "Yongxi Lin"
+  ],
+  "summary": "Lean proofs of Hausdorff dimension at least n-(n-k)/p_c^k for all (n,k)-Besicovitch sets with 1 n. Here a Besicovitch set contains a translated unit k-disk in every k-dimensional direction, and p_c is the unique root in (2,3) of p^3-2p^2-2p+2=0. Building on Bourgain's arithmetic-combinatorial approach, Nets Hawk Katz and Terence Tao's New bounds for Kakeya problems (2002; preprint 2001) established the Minkowski-dimension bound 1+(n-1)/beta_c, where beta_c=p_c/(p_c-1)=1.67513... satisfies beta_c^3-4*beta_c+2=0. This is exactly n-(n-1)/p_c, so the numerical exponent itself is not new. They…",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA",
+    "msc:42B25",
+    "msc:28A75"
+  ],
+  "published": "2026-09-19",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "The projection estimate near 1.675",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "From Projection Inequalities to Mixed-Norm Local X-Ray Estimates",
+      "identifier": "",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "Two bounds for the X-ray transform",
+      "identifier": "doi:10.1007/s00209-009-0589-5",
+      "relationship": "adapts"
+    },
+    {
+      "title": "Bounds for Kakeya-type maximal operators associated with k-planes",
+      "identifier": "arXiv:math/0512377",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/CoolRmal/NKBesicovitch",
+  "commit": "e12e5981d840eb5ebdc25403691b3c63a9c7aff8",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "harmonic-analysis",
+      "besicovitch-sets",
+      "lean",
+      "hausdorff-dimension"
+    ],
+    "reason": "Lean proofs of Hausdorff dimension bounds for Besicovitch sets.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

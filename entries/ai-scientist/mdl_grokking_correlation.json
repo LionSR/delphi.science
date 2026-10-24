@@ -1,0 +1,26 @@
+{
+  "key": "mdl_grokking_correlation",
+  "source": "ai-scientist",
+  "url": "https://github.com/SakanaAI/AI-Scientist/blob/main/example_papers/mdl_grokking_correlation.pdf",
+  "title": "Grokking Through Compression: Unveiling Sudden Generalization via Minimal Description Length",
+  "authors": [
+    "GPT-4o & Claude"
+  ],
+  "summary": "This paper investigates the relationship between Minimal Description Length (MDL) and the phenomenon of grokking in neural networks, offering an information-theoretic perspective on sudden generalization. Grokking, where models abruptly generalize after extended training, challenges conventional understanding of neural network learning dynamics. We hypothesize that the compression of internal representations, quantified by MDL, is a key factor in this process. To test this, we introduce a novel MDL estimation technique based on weight pruning and apply it to diverse datasets, including…",
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:ai-scientist",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "subject": "cs.LG",
+    "tags": [
+      "grokking",
+      "minimum-description-length",
+      "compression"
+    ],
+    "reason": "Investigates the relationship between minimal description length and grokking in neural networks.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

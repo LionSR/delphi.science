@@ -1,0 +1,31 @@
+{
+  "key": "Critical-local-smoothing-for-the-three-dimensional-wave-equation",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Critical-local-smoothing-for-the-three-dimensional-wave-equation-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Critical-local-smoothing-for-the-three-dimensional-wave-equation-September-24-2026/paper.pdf",
+  "title": "Critical local smoothing for the three-dimensional wave equation",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the critical L 3 local smoothing estimate for the wave equation in three spatial dimensions, with every positive Sobolev loss. This resolves Sogge's Euclidean local smoothing conjecture in dimension three.",
+  "domain": "Real and complex analysis",
+  "published": "2026-09-24",
+  "family": "079",
+  "family_title": "Local smoothing in three dimensions",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "harmonic-analysis",
+      "wave-equation",
+      "local-smoothing"
+    ],
+    "reason": "Proves critical L³ local smoothing for the 3D wave equation, resolving Sogge's conjecture in dimension three.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

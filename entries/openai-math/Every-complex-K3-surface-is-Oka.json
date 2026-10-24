@@ -1,0 +1,31 @@
+{
+  "key": "Every-complex-K3-surface-is-Oka",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Every-complex-K3-surface-is-Oka-September-23-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Every-complex-K3-surface-is-Oka-September-23-2026/paper.pdf",
+  "title": "Every complex K3 surface is Oka",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove that every complex K3 surface X is Oka, resolving the K3 Oka conjecture. Equivalently, for every m ≥ 1, every holomorphic map to X from a neighborhood of a compact convex set in ℂ m can be approximated uniformly on that set by entire maps $`\\mathbb C^m\\to X`$.",
+  "domain": "Algebraic and complex geometry",
+  "published": "2026-09-23",
+  "family": "042",
+  "family_title": "Oka classification for minimal compact complex surfaces: Kodaira dimension zero and class VII",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "complex-geometry",
+      "oka-theory",
+      "k3-surfaces"
+    ],
+    "reason": "Proves every complex K3 surface is Oka, resolving the K3 Oka conjecture.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

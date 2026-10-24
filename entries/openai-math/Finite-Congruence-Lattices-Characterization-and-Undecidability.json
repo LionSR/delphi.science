@@ -1,0 +1,31 @@
+{
+  "key": "Finite-Congruence-Lattices-Characterization-and-Undecidability",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Finite-Congruence-Lattices-Characterization-and-Undecidability-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Finite-Congruence-Lattices-Characterization-and-Undecidability-September-24-2026/paper.pdf",
+  "title": "Finite congruence lattices: characterization and undecidability",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We give an explicit colored-graph characterization of the finite nonempty lattices that occur as full congruence lattices of finite algebras, and prove that deciding this representation property is undecidable. In particular, the finite lattice representation problem has a negative answer. We also prove that recognition of full subgroup intervals in finite groups is undecidable.",
+  "domain": "Algebra",
+  "published": "2026-09-24",
+  "family": "206",
+  "family_title": "Finite lattice representation and undecidability",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "universal-algebra",
+      "congruence-lattices",
+      "decidability"
+    ],
+    "reason": "Characterizes finite congruence lattices of algebras and proves the representation problem undecidable.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

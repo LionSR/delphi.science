@@ -1,0 +1,51 @@
+{
+  "key": "PALOMAR-2026-08-23-000002",
+  "source": "palomar",
+  "url": "https://github.com/rwst/Square-Roots/tree/e3184902f13967b9f20f37244b3d1c30610ca846/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-23-000002-v2.json",
+  "title": "rwst/Square-Roots",
+  "authors": [
+    "Ralf Stephan (direction, review, paper author)"
+  ],
+  "summary": "A Lean 4 / Mathlib development of a paper, which answers a problem by Dubickas. Dubickas (Glasgow Math. J. 48 (2006), 331–336) splits the reals α > 1 in two: α lies in 𝒵 when some real ξ ≠ 0 makes every integral part ⌊ξαⁿ⌋, n ≥ 1, even, and in 𝒮 otherwise. At α = 3/2 this is Mahler's question, and open; his Problem 3 asks whether √3 lies in 𝒮 or in 𝒵. This formalization settles that question and the whole square-root slice: √3 ∈ 𝒵 by an explicit ξ = 1.34160899796…, and for an integer m ≥ 2 one has √m ∈ 𝒮 exactly when m = 2. The cells √5, √6, √7, √8 put four explicit points of 𝒵 in the…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.DS",
+    "msc:11J71",
+    "msc:11K16",
+    "msc:11A63",
+    "msc:28A80",
+    "msc:11B83"
+  ],
+  "published": "2026-09-06",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Even integral parts of powers of square roots",
+      "identifier": "https://doi.org/10.13140/RG.2.2.32215.43682",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/rwst/Square-Roots",
+  "commit": "e3184902f13967b9f20f37244b3d1c30610ca846",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "diophantine-approximation",
+      "mahler-problem",
+      "lean-formalization"
+    ],
+    "reason": "Lean formalization settling Dubickas-type classification questions for square-root values.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

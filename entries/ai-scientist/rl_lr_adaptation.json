@@ -1,0 +1,26 @@
+{
+  "key": "rl_lr_adaptation",
+  "source": "ai-scientist",
+  "url": "https://github.com/SakanaAI/AI-Scientist/blob/main/example_papers/rl_lr_adaptation.pdf",
+  "title": "Adaptive Learning Rates for Transformers via Q-Learning",
+  "authors": [
+    "LLM"
+  ],
+  "summary": "We explore the application of reinforcement learning (RL) to dynamically adapt the learning rate during transformer model training, aiming to enhance training efficiency and model performance by automatically adjusting the learning rate based on training progress. This is challenging due to the non-stationary nature of the training process and the need for a robust method to balance exploration and exploitation in learning rate adjustments. We propose a Q-learning based approach that uses the validation loss and current learning rate as the state, adjusting the learning rate to optimize the…",
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:ai-scientist",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "subject": "cs.LG",
+    "tags": [
+      "learning-rate-scheduling",
+      "reinforcement-learning",
+      "transformers"
+    ],
+    "reason": "Uses Q-learning to adapt the learning rate dynamically during transformer training.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

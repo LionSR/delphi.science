@@ -1,0 +1,30 @@
+{
+  "key": "The-weak-inhomogeneous-Duffin-Schaeffer-conjecture",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/The-weak-inhomogeneous-Duffin-Schaeffer-conjecture-September-25-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/The-weak-inhomogeneous-Duffin-Schaeffer-conjecture-September-25-2026/paper.pdf",
+  "title": "The Weak Inhomogeneous Duffin–Schaeffer Conjecture",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the weak inhomogeneous Duffin–Schaeffer conjecture. For every fixed γ ∈ ℝ and finite-valued $`\\psi:\\mathbb N\\to[0,\\infty)`$, divergence of $`\\sum_{q\\ge1}\\phi(q)\\psi(q)/q`$ implies $`\\|qx-\\gamma\\|\\lt \\psi(q)`$ for infinitely many q , for almost every x . Here ϕ is Euler's totient and $`\\|\\cdot\\|`$ is distance to the nearest integer. Numerators need not be reduced, and the shift satisfies no Diophantine restriction.",
+  "domain": "Number theory",
+  "published": "2026-09-25",
+  "family": "022",
+  "family_title": "The weak inhomogeneous Duffin–Schaeffer conjecture",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "diophantine-approximation"
+    ],
+    "reason": "Proof of the weak inhomogeneous Duffin–Schaeffer conjecture in Diophantine approximation.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-10-18-000004",
+  "source": "palomar",
+  "url": "https://github.com/GregoryMorse/SelfModTamper/tree/ae5d3f621e8e8e9d6d696c49d09c97337b93bf03/lean",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-18-000004-v2.json",
+  "title": "Tamper-proofing with self-modifying code: threat model, security and necessity of the assumptions",
+  "authors": [
+    "Gregory Morse"
+  ],
+  "summary": "Formalizes Gregory Morse and Tamas Kozsik's paper \"Tamper-Proofing with Self-Modifying Code\" (arXiv:2604.12407v1). The selected statement (PalomarSMT.mathematical_result, four results T1-T4) is an abstract threat model for checksum units whose opcode state lives in the memory they checksum: a system of units with regions and code, a timeline of write, execute, check, split-view and DMA events, adversary levels L0-L4, a cost contract with lower bounds on emulation, forgery and mediation, and eight structural assumptions A1-A8 (none of the form \"the attacker is detected\"). An effective alarm…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "cs.LO",
+    "msc:68M07",
+    "msc:94A60",
+    "msc:68Q60"
+  ],
+  "published": "2026-10-19",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Tamper-Proofing with Self-Modifying Code",
+      "identifier": "arxiv:2604.12407",
+      "relationship": "adapts"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/GregoryMorse/SelfModTamper",
+  "commit": "ae5d3f621e8e8e9d6d696c49d09c97337b93bf03",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "tamper-proofing",
+      "formal-methods",
+      "security-models"
+    ],
+    "reason": "Formal threat model and proofs for tamper-proofing with self-modifying code.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

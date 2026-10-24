@@ -1,0 +1,51 @@
+{
+  "key": "PALOMAR-2026-08-27-000003",
+  "source": "palomar",
+  "url": "https://github.com/GrgAakash/factorial-hypergraph-auxiliary-erdos/tree/67b4088fc84422c84f7e5e205552757c3c0c9a71/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-27-000003-v1.json",
+  "title": "GrgAakash/factorial-hypergraph-auxiliary-erdos",
+  "authors": [
+    "Aakash Gurung"
+  ],
+  "summary": "A Lean 4 formalization of a quantitative solution to the auxiliary problem suggested by Erdos alongside Problem 1059. Conditional on an explicitly stated standard dimension-one upper-bound sieve theorem, the formalization proves that for every sufficiently large L there are at least ((L+1)!)^eta/(100 log L) integers n in (2L!, (L+1)!] whose prime factors all exceed L and for which n-k! is composite for every 1 <= k <= L. The formalization does not prove that n is prime and therefore does not solve the original Erdos prime problem.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO",
+    "msc:11N36",
+    "msc:11B65",
+    "msc:11A41",
+    "msc:05C65"
+  ],
+  "published": "2026-08-27",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Factorial-residue hypergraphs and an auxiliary problem of Erdos",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/GrgAakash/factorial-hypergraph-auxiliary-erdos",
+  "commit": "67b4088fc84422c84f7e5e205552757c3c0c9a71",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "prime-numbers",
+      "lean",
+      "erdos-problems"
+    ],
+    "reason": "Conditional Lean formalization of a quantitative auxiliary result for an Erdős prime problem.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

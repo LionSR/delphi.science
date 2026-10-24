@@ -1,0 +1,31 @@
+{
+  "key": "Generalized-ionization-energies-for-full-Coulomb-atoms",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Generalized-ionization-energies-for-full-Coulomb-atoms-September-24-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Generalized-ionization-energies-for-full-Coulomb-atoms-September-24-2026/paper.pdf",
+  "title": "Generalized ionization energies for full Coulomb atoms",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove the energy part of the generalized ionization conjecture for full nonrelativistic Coulomb atoms with two electron spin states. The energy needed to remove m electrons is asymptotic to $`a_{\\mathrm{TF}}m^{7/3}`$ whenever $`m\\to\\infty`$ and $`Z/m\\to\\infty`$, with the Thomas–Fermi constant in atomic units. We also obtain both conjectured iterated limits.",
+  "domain": "Mathematical physics",
+  "published": "2026-09-24",
+  "family": "263",
+  "family_title": "The ionization and generalized ionization conjectures",
+  "formalized": true,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "mathematical-physics",
+      "coulomb-systems",
+      "quantum-mechanics"
+    ],
+    "reason": "Proves asymptotics of energies to remove many electrons from full nonrelativistic Coulomb atoms.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "key": "Cylinder-amplitudes-and-logarithmic-bridge-length-windows-on-the-honeycomb-lattice",
+  "source": "openai-math",
+  "url": "https://github.com/openai/math/tree/main/preprints/Cylinder-amplitudes-and-logarithmic-bridge-length-windows-on-the-honeycomb-lattice-September-26-2026",
+  "pdf": "https://github.com/openai/math/blob/main/preprints/Cylinder-amplitudes-and-logarithmic-bridge-length-windows-on-the-honeycomb-lattice-September-26-2026/main.pdf",
+  "title": "Cylinder amplitudes and logarithmic bridge-length windows on the honeycomb lattice",
+  "authors": [
+    "OpenAI"
+  ],
+  "summary": "We prove a logarithmic window of critical honeycomb bridge lengths: summed through height $`2h(\\log h)^{1/64}`$, bridges of lengths between $`h^{4/3}(\\log h)^{-1/8}`$ and $`2h^{4/3}(\\log h)^{1/2}`$ have mass at least $`h^{3/4}(\\log h)^{-C}`$.",
+  "domain": "Probability and statistical mechanics",
+  "published": "2026-09-26",
+  "family": "237",
+  "family_title": "The three-quarter exponent for honeycomb self-avoiding walk",
+  "formalized": false,
+  "origin": "ai-generated",
+  "added": "2026-10-23",
+  "added_by": "harvest:openai-math",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "self-avoiding-walks",
+      "lattice-models",
+      "statistical-mechanics"
+    ],
+    "reason": "Proves a logarithmic window of critical honeycomb bridge lengths with explicit mass bounds.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

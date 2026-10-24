@@ -1,0 +1,50 @@
+{
+  "key": "PALOMAR-2026-08-25-000004",
+  "source": "palomar",
+  "url": "https://github.com/catskillsresearch/scott1976/tree/2081973122a631d34dc74f83cfc3f7495991415b/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-08-25-000004-v1.json",
+  "title": "catskillsresearch/scott1976",
+  "authors": [
+    "Lars Warren Ericson"
+  ],
+  "summary": "A partial Lean 4 / mathlib formalization of Dana Scott's 1976 paper *Data Types as Lattices* (Technical Monograph PRG-5; SIAM J. Comput. 5 (1976), 522–587). Comparator selects the six source theorems classified as fully faithful by the project audit: 1.1, 1.2, 1.4, 2.5, 4.2, and 6.1. Lean is written by AI agents under the direction and review of the author. Dana Scott did not participate in or endorse this formalization. There is no sorry outside the deliberate holes in Challenge.lean, no project-defined axiom, and Mathlib is the only Lake dependency.",
+  "domain": "math.LO",
+  "tags": [
+    "math.LO",
+    "cs.LO",
+    "msc:06B35",
+    "msc:68Q55",
+    "msc:03B70"
+  ],
+  "published": "2026-08-25",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "Data Types as Lattices",
+      "identifier": "",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-5.6-sol"
+  ],
+  "repo": "https://github.com/catskillsresearch/scott1976",
+  "commit": "2081973122a631d34dc74f83cfc3f7495991415b",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "domain-theory",
+      "lattice-theory",
+      "lean",
+      "formal-verification"
+    ],
+    "reason": "Partial Lean formalization of six theorems from Scott's 1976 paper on data types as lattices.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

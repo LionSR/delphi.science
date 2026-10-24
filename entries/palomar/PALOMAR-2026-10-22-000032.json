@@ -1,0 +1,49 @@
+{
+  "key": "PALOMAR-2026-10-22-000032",
+  "source": "palomar",
+  "url": "https://github.com/sthubbar/goldbach-lean/tree/07f4a5ff80e4d31549dddea605bd2fff3a85ca0f/entries/goldstonsuriajaya2021",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-22-000032-v1.json",
+  "title": "An exact average Goldbach representation formula, after Goldston and Suriajaya",
+  "authors": [
+    "Steve Hubbard"
+  ],
+  "summary": "A sorry-free Lean 4 proof, with no hypothesis, of Theorem 1, equation 11, of D. A. Goldston and A. I. Suriajaya, On an average Goldbach representation formula of Fujii, Nagoya Math. J. 250, 2023, 511 to 532, arXiv 2110.14250v2. With psi_2(n) the sum over m + m' = n of Lambda(m) Lambda(m'), for every integer N >= 2 the sum over n = 1 of N^{1-2k} divided by k times 2k-1, plus E(N), an exact identity with E(N) the integral of equation 12. The zero sum counts zeros with multiplicity. Derived results of this entry, not statements of the paper, show that E(N) does not depend on the radius r, that…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "msc:11P32",
+    "msc:11M26",
+    "msc:11N05"
+  ],
+  "published": "2026-10-22",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "On an average Goldbach representation formula of Fujii",
+      "identifier": "arXiv:2110.14250",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/sthubbar/goldbach-lean",
+  "commit": "07f4a5ff80e4d31549dddea605bd2fff3a85ca0f",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "number-theory",
+      "goldbach-conjecture",
+      "lean-formalization",
+      "analytic-number-theory"
+    ],
+    "reason": "Lean 4 proof of an exact identity for an average Goldbach representation formula.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "key": "PALOMAR-2026-10-09-000006",
+  "source": "palomar",
+  "url": "https://github.com/Asad-Shahab/erdos-809-lean/tree/15f8839e2a21f64fc5558714506ebba465926eda/None",
+  "json": "https://data.palomar-registry.org/entries/PALOMAR-2026-10-09-000006-v1.json",
+  "title": "Erdős Problem 809: an independent proof of the seven-cycle threshold",
+  "authors": [
+    "Asad Shahab"
+  ],
+  "summary": "For every fixed integer k >= 3, the minimum number of colors in an edge-coloring of an n-vertex simple graph with at least floor(n^2/4)+1 edges, in which every copy of C_(2k+1) is rainbow, is (1/8 + o(1))n^2. The minimum is attained. The development combines Asad Shahab's seven-cycle proof, using an exact rational five-vertex certificate, with a formalization of the Bucić-Chen-Ma argument for longer odd cycles.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "msc:05C35",
+    "msc:05C15",
+    "msc:05D10"
+  ],
+  "published": "2026-10-09",
+  "formalized": true,
+  "verified": true,
+  "trust": "high",
+  "formalizes": [
+    {
+      "title": "The Burr-Erdős-Graham-Sós conjecture for the seven-cycle",
+      "identifier": "arXiv:2609.38286v1",
+      "relationship": "formalizes"
+    },
+    {
+      "title": "On a maximal anti-Ramsey conjecture of Burr, Erdős, Graham, and Sós",
+      "identifier": "arXiv:2603.18952v1",
+      "relationship": "formalizes"
+    }
+  ],
+  "reviewer_models": [
+    "codex:gpt-6-sol"
+  ],
+  "repo": "https://github.com/Asad-Shahab/erdos-809-lean",
+  "commit": "15f8839e2a21f64fc5558714506ebba465926eda",
+  "added": "2026-10-23",
+  "added_by": "harvest:palomar",
+  "refreshed": "2026-10-23",
+  "review": {
+    "category": "research",
+    "tags": [
+      "extremal-graph-theory",
+      "erdos-problems",
+      "edge-coloring"
+    ],
+    "reason": "Combinatorial proof of a rainbow cycle edge-coloring threshold tied to an Erdős problem.",
+    "by": "claude-haiku",
+    "at": "2026-10-23"
+  }
+}

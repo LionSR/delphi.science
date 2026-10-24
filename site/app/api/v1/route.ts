@@ -2,7 +2,7 @@
 export const GET = () =>
 	Response.json({
 		search: '/api/v1/search?q=<query>&limit=20&sort=relevance|newest|oldest|title|score|day|week|month|mentions&cursor=<next_cursor>&format=json|md',
-		sorts: 'score counts every vote; day, week and month count the votes cast in that time, as on SciRate',
+		sorts: 'score counts every vote and every post or article about the record (discussed); day, week and month count the votes cast and the posts attached in that time, as on SciRate',
 		ids: 'Every id is <prefix>/<suffix>, like a DOI: the source, then its own id. /id/<id> goes to the original.',
 		prefixes: '/api/v1/prefixes',
 		record: '/api/v1/records/<id>',
@@ -14,7 +14,7 @@ export const GET = () =>
 			'ti au abs all': 'title, author, abstract, every text field (a bare word searches all)',
 			cat: 'arXiv division or subdivision: cat:math, cat:math.NT, cat:quant-ph, or a subject name in quotes',
 			'source category origin family id': 'exact values, e.g. source:openai-math id:app/APP-260923-0000',
-			is: 'formalized, verified, withdrawn, agent-ready, ai-generated, app, gone',
+			is: 'formalized, verified, withdrawn, agent-ready, ai-generated, app, gone, discussed (has posts or articles about it)',
 			published: 'published:[2026-10-01 TO *], published:2026-09',
 		},
 		operators: 'AND, OR, ANDNOT, NOT (uppercase), parentheses, "quoted phrases", word* prefixes; adjacent terms are ANDed',

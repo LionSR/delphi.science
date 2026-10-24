@@ -87,7 +87,7 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 	});
 
 	test('votes: up or down, an emoji, a note; one per voter; never on your own repo', async () => {
-		const id = String(items.find((it) => it.source === 'openai-math')!.id);
+		const id = String(items.find((it) => it.source === 'openai-math' && !it.discussion)!.id);
 		const alice = { login: 'alice', agent: 'Claude Code' }, bob = { login: 'bob', agent: 'ChatGPT dot' };
 		await vote(db, id, alice, { value: 1, emoji: '🤔', note: 'Lemma 3 needs a citation.' });
 		let t = await vote(db, id, bob, { value: -1 });
@@ -96,7 +96,7 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		assert.deepEqual([t.score, t.reactions], [2, { up: 2, '🤔': 1, '👀': 1 }]);
 		t = await unvote(db, id, alice);
 		assert.deepEqual([t.score, t.reactions], [1, { up: 1, '👀': 1 }]);
-		assert.equal((await search(db, 'source:openai-math', { sort: 'score', limit: 1 })).results[0].id, id);
+		assert.equal((await search(db, 'source:openai-math ANDNOT is:discussed', { sort: 'score', limit: 1 })).results[0].id, id);
 		assert.equal((await get(db, id))?.score, 1);
 		for (const [v, fix] of [[{}, /value/], [{ value: 2 }, /up/], [{ emoji: 'ok' }, /single emoji/]] as const) {
 			await assert.rejects(vote(db, id, alice, v as never), (e: unknown) => e instanceof QueryError && fix.test(e.fix));
@@ -106,6 +106,16 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		await assert.rejects(vote(db, own.id, { login: owner, agent: '' }, { value: 1 }), /own repository/);
 		const added = (await db.query<{ n: number }>("SELECT count(*)::int n FROM open_index.changes WHERE kind = 'updated'")).rows[0].n;
 		assert.equal(added, 0, 'votes are not content changes');
+	});
+
+	test('posts and articles about a record count like upvotes and show as discussed', async () => {
+		const discussed = items.filter((it) => Array.isArray(it.discussion) && it.discussion.length > 0);
+		assert.ok(discussed.length > 0, 'the build has records with discussion');
+		const r = await search(db, 'is:discussed', { sort: 'score', limit: 50 });
+		assert.equal(r.total, discussed.length);
+		const most = Math.max(...discussed.map((it) => (it.discussion as unknown[]).length));
+		assert.equal(r.results[0].discussed, most); // no votes yet: the posts alone rank it first
+		assert.equal((await search(db, '', { sort: 'week', limit: 1 })).results[0].discussed, most); // attached this week
 	});
 
 	test('comments and reviews; mentions count once per voter, never for the record itself', async () => {

@@ -27,5 +27,17 @@
     "reason": "Proves L = RL = BPL, resolving derandomization of randomized logarithmic space.",
     "by": "claude-haiku",
     "at": "2026-10-23"
-  }
+  },
+  "discussion": [
+    {
+      "kind": "web",
+      "url": "https://scottaaronson.blog/?p=10169#:~:text=Though%20its%20truth%20was%20never%20in%20serious%20doubt%2C%20there%20was%20a%20whole%20subcommunity%20focused%20on%20proving%20this.",
+      "title": "The Mathocalypse",
+      "site": "Shtetl-Optimized",
+      "author": "Scott Aaronson",
+      "text": "Though its truth was never in serious doubt, there was a whole subcommunity focused on proving this. The Fourier Transform and integer multiplication in less than O(n log n) time, breaking a barrier that had stood since the 1960s. The new running time, if you’re curious, is O(n log 0.9999999999999…",
+      "date": "2026-10-07",
+      "added": "2026-10-24"
+    }
+  ]
 }

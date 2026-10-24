@@ -227,6 +227,19 @@ def passage(page: str, fragment: str) -> tuple[str, str]:
     return (prefix, trim(text[i:], LINK_CHARS)) if i >= 0 else ("", "")
 
 
+YOUTUBE_HOSTS = {"www.youtube.com", "youtube.com", "m.youtube.com", "youtu.be"}
+
+
+def youtube(url: str, page: str) -> dict[str, str]:
+    """A talk on YouTube: the channel as author (oEmbed), the upload date from the page."""
+    try:
+        data = get_json("https://www.youtube.com/oembed?" + urllib.parse.urlencode({"url": url, "format": "json"}), cache=False)
+    except (NotFound, SourceError):
+        return {}
+    when = re.search(r'"publishDate":"(\d{4}-\d{2}-\d{2})', page)
+    return {"title": clean(data.get("title")), "author": clean(data.get("author_name")), "date": when[1] if when else ""}
+
+
 def discussion_link(url: str) -> dict[str, Any]:
     """The link as the page shows it. Raises NotFound when the post or page is gone. A text-fragment URL
     (page#:~:text=a%20passage) quotes that passage, and opens the page scrolled to it."""
@@ -241,9 +254,12 @@ def discussion_link(url: str) -> dict[str, Any]:
     else:
         page = get_text(urllib.parse.urlunsplit(parts._replace(fragment="")), cache=False)
         who, quoted = passage(page, parts.fragment[len(":~:text="):]) if parts.fragment.startswith(":~:text=") else ("", "")
+        if who:  # the link keeps only the passage, which browsers scroll to; the name goes in author
+            url = urllib.parse.urlunsplit(parts._replace(fragment=":~:text=" + parts.fragment.split("-,", 1)[1]))
         m = MetaParser()
         m.feed(page)
         one = m.one
+        video = youtube(url, page) if host in YOUTUBE_HOSTS else {}
         # citation_author (arXiv, journals) is "Last, First"; shown as "First Last".
         authors = [" ".join(reversed(clean(a).split(", ", 1))) for a in m.meta.get("citation_author", []) if clean(a)]
         author = who or ", ".join(authors[:4]) + (" et al." if len(authors) > 4 else "") or clean(one("author") or one("article:author"))
@@ -252,11 +268,11 @@ def discussion_link(url: str) -> dict[str, Any]:
         if not author and len(byline) > 1 and byline[-1] != clean(one("og:site_name")):
             author = byline[-1]
         link = {
-            "kind": "web", "url": url, "title": clean(one("citation_title") or one("og:title") or m.title or m.h1),
-            "site": clean(one("og:site_name")) or host.removeprefix("www."), "author": "" if "://" in author else author,
+            "kind": "web", "url": url, "title": video.get("title") or clean(one("citation_title") or one("og:title") or m.title or m.h1),
+            "site": clean(one("og:site_name")) or host.removeprefix("www."), "author": video.get("author") or ("" if "://" in author else author),
             "text": quoted or trim(one("og:description") or one("description") or m.p, LINK_CHARS),
-            "date": iso_date(one("article:published_time") or one("citation_publication_date") or one("citation_date")
-                             or one("citation_online_date") or one("date") or one("article:modified_time")),
+            "date": video.get("date") or iso_date(one("article:published_time") or one("citation_publication_date") or one("citation_date")
+                                                  or one("citation_online_date") or one("date") or one("article:modified_time")),
         }
     return {k: v for k, v in link.items() if v}
 

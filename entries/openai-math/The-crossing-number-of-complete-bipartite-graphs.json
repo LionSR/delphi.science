@@ -27,5 +27,17 @@
     "reason": "Proves the Zarankiewicz crossing-number formula for complete bipartite graphs.",
     "by": "claude-haiku",
     "at": "2026-10-23"
-  }
+  },
+  "discussion": [
+    {
+      "kind": "web",
+      "url": "https://arxiv.org/abs/2610.25204",
+      "title": "Crossing numbers of complete bipartite graphs",
+      "site": "arXiv.org",
+      "author": "József Balogh, Nicholas Layman, Bernard Lidický, Florian Pfender et al.",
+      "text": "Zarankiewicz's long standing conjecture states that the crossing number $cr(K_{m,n})$ of the complete bipartite graph is \\[ Z(m,n):=\\bigg\\lfloor{\\frac{m}{2}}\\bigg\\rfloor \\bigg\\lfloor{\\frac{m-1}{2}}\\bigg\\rfloor \\bigg\\lfloor{\\frac{n}{2}}\\bigg\\rfloor \\bigg\\lfloor{\\frac{n-1}{2}}\\bigg\\rfloor. \\] Using…",
+      "date": "2026-10-18",
+      "added": "2026-10-24"
+    }
+  ]
 }

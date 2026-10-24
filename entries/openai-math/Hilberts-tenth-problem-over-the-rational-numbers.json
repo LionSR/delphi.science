@@ -28,5 +28,17 @@
     "reason": "Shows no algorithm decides rational zeros of integer polynomials, answering Hilbert's tenth problem.",
     "by": "claude-haiku",
     "at": "2026-10-23"
-  }
+  },
+  "discussion": [
+    {
+      "kind": "web",
+      "url": "https://arxiv.org/abs/2610.20691",
+      "title": "86 unknowns for Hilbert's tenth problem over the rationals",
+      "site": "arXiv.org",
+      "author": "Zhi-Wei Sun",
+      "text": "Recently, Hilbert's Tenth Problem over the field $\\mathbb Q$ of rational numbers was solved negatively by OpenAI based on a five-contact height estimate and a pole-parity construction. In this paper, we prove further that there is no algorithm to decide for any polynomial $P(x_1,\\ldots,x_{86})$…",
+      "date": "2026-10-14",
+      "added": "2026-10-24"
+    }
+  ]
 }

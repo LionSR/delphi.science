@@ -213,18 +213,30 @@ def parse_oembed(data: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def passage(page: str, fragment: str) -> str:
+    """The passage a text-fragment URL (#:~:text=…) points at: the page's text from the fragment on."""
+    text = clean(re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", page, flags=re.S | re.I))
+    start = urllib.parse.unquote(fragment.split(",")[0])  # #:~:text=start,end (still encoded, so %2C is a literal comma)
+    i = text.lower().find(clean(start).lower())
+    return trim(text[i:], LINK_CHARS) if i >= 0 else ""
+
+
 def discussion_link(url: str) -> dict[str, Any]:
-    """The link as the page shows it. Raises NotFound when the post or page is gone."""
+    """The link as the page shows it. Raises NotFound when the post or page is gone. A text-fragment URL
+    (page#:~:text=a%20passage) quotes that passage, and opens the page scrolled to it."""
     url = url.strip()
-    host = (urllib.parse.urlsplit(url).hostname or "").lower()
+    parts = urllib.parse.urlsplit(url)
+    host = (parts.hostname or "").lower()
     if host in X_HOSTS:
         if not re.search(r"/status/\d+", url):
             raise ValueError(f"not a post: {url}")
         q = urllib.parse.urlencode({"url": url, "omit_script": "true", "dnt": "true"})
         link = parse_oembed(get_json(f"{OEMBED}?{q}", cache=False))
     else:
+        page = get_text(urllib.parse.urlunsplit(parts._replace(fragment="")), cache=False)
+        quoted = passage(page, parts.fragment[len(":~:text="):]) if parts.fragment.startswith(":~:text=") else ""
         m = MetaParser()
-        m.feed(get_text(url, cache=False))
+        m.feed(page)
         one = m.one
         # citation_author (arXiv, journals) is "Last, First"; shown as "First Last".
         authors = [" ".join(reversed(clean(a).split(", ", 1))) for a in m.meta.get("citation_author", []) if clean(a)]
@@ -232,7 +244,7 @@ def discussion_link(url: str) -> dict[str, Any]:
         link = {
             "kind": "web", "url": url, "title": clean(one("citation_title") or one("og:title") or m.title or m.h1),
             "site": clean(one("og:site_name")) or host.removeprefix("www."), "author": "" if "://" in author else author,
-            "text": trim(one("og:description") or one("description") or m.p, LINK_CHARS),
+            "text": quoted or trim(one("og:description") or one("description") or m.p, LINK_CHARS),
             "date": iso_date(one("article:published_time") or one("citation_publication_date") or one("citation_date")
                              or one("citation_online_date") or one("date") or one("article:modified_time")),
         }

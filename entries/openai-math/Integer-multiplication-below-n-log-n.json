@@ -27,5 +27,17 @@
     "reason": "Presents a faster deterministic integer multiplication algorithm in a fixed Turing machine model.",
     "by": "claude-haiku",
     "at": "2026-10-23"
-  }
+  },
+  "discussion": [
+    {
+      "kind": "web",
+      "url": "https://arxiv.org/abs/2610.14263",
+      "title": "Bipartite Carrier Compression and Machine-Certified Bounds in Sch\\\"onhage Trilinear Multiplication Tensors",
+      "site": "arXiv.org",
+      "author": "Volkan Dağlı, Zerrin Dağlı, Dağhan Dağlı",
+      "text": "Under the conditional framework breaking the longstanding O(n log n) integer multiplication barrier (originating from OpenAI Preprint #109), the asymptotic time complexity exponent T(n) = O(n (log n)^{1-κ}) is governed by bounding the second moment E[X^2] < 1 of recursive branching processes over…",
+      "date": "2026-10-09",
+      "added": "2026-10-24"
+    }
+  ]
 }

@@ -131,6 +131,14 @@ class Discussion(unittest.TestCase):
         self.assertEqual(S.passage(page, "Glas%3A%20the%20zero-free%2C"), ("", ""))  # an encoded comma is part of the text
         self.assertEqual(S.passage(page, "Nobody-,the%20zero-free%20region"), ("", ""))  # the prefix must be on the page
 
+    def test_crosslink_both_ways(self) -> None:
+        paper = {"id": "openai-math/P", "title": "P", "discussion": [{"kind": "web", "url": "https://arxiv.org/abs/2610.20058"}, {"kind": "x", "url": "https://x.com/a/status/1"}]}
+        reply = {"id": "arxiv/2610.20058", "title": "Primes between 8th powers?"}
+        index.crosslink([paper, reply, {"id": "arxiv/9999.00001", "title": "unrelated"}])
+        self.assertEqual(paper["discussion"][0]["record"], "arxiv/2610.20058")
+        self.assertNotIn("record", paper["discussion"][1])
+        self.assertEqual(reply["discusses"], [{"id": "openai-math/P", "title": "P"}])
+
     def test_discussion_is_served(self) -> None:
         e = {"key": "k", "source": "web", "url": "https://e.org/p", "title": "T", "discussion": [{"kind": "x", "url": "https://x.com/a/status/1", "text": "hi"}]}
         self.assertEqual(index.to_item(e)["discussion"], e["discussion"])

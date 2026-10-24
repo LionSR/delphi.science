@@ -45,7 +45,9 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	const back = recordPath(id);
 	const reactions = Object.entries((r.reactions ?? {}) as Record<string, number>);
 	// Posts and articles about the record, read from X's oEmbed or the page's Open Graph tags (index.py discuss).
-	const links = (Array.isArray(r.discussion) ? r.discussion : []) as { kind: string; url: string; author?: string; handle?: string; site?: string; title?: string; text?: string; date?: string }[];
+	const links = (Array.isArray(r.discussion) ? r.discussion : []) as { kind: string; url: string; author?: string; handle?: string; site?: string; title?: string; text?: string; date?: string; record?: string }[];
+	// Records whose discussion names this one (a response to a manuscript, say): the reverse of the above, set at build time.
+	const discusses = (Array.isArray(r.discusses) ? r.discusses : []) as { id: string; title: string }[];
 	const api = `/api/v1/records/${idPath(id)}`;
 	const ld = {
 		'@context': 'https://schema.org', '@type': 'ScholarlyArticle', identifier: id, name: r.title, url: `${SITE}${recordPath(id)}`,
@@ -92,6 +94,13 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 				<a href={api}>JSON</a>
 			</p>
 
+			{discusses.length > 0 && (
+				<p className="meta">
+					<span>Discusses</span>
+					{discusses.map((d) => <a key={d.id} href={recordPath(d.id)}>{tex(d.title)}</a>)}
+				</p>
+			)}
+
 			<h2>Comments and reviews</h2>
 			{thread.length === 0 && <p className="count">No comments yet.</p>}
 			{thread.map((c) => (
@@ -129,6 +138,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 								{l.site ? <span>{l.site}</span> : null}
 								{l.author ? <span>{l.author}</span> : null}
 								<span>{date(l.date)}</span>
+								{l.record ? <a href={recordPath(l.record)}>in the index</a> : null}
 							</p>
 							{l.text ? <p>{l.text}</p> : null}
 						</div>

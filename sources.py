@@ -149,7 +149,7 @@ class MetaParser(HTMLParser):
             name = (a.get("name") or a.get("property") or "").lower()
             if name:
                 self.meta.setdefault(name, []).append(a["content"] or "")
-        self._in_title = tag == "title"
+        self._in_title = tag == "title" and not self.title  # the document's title, not the SVG icons' <title>s after it
         if tag in ("h1", "p") and not getattr(self, tag) and not self._in:
             self._in = tag
 
@@ -240,6 +240,25 @@ def youtube(url: str, page: str) -> dict[str, str]:
     return {"title": clean(data.get("title")), "author": clean(data.get("author_name")), "date": when[1] if when else ""}
 
 
+STACKEXCHANGE = {"mathoverflow.net": "mathoverflow", "math.stackexchange.com": "math", "cstheory.stackexchange.com": "cstheory"}
+
+
+def stackexchange(host: str, url: str) -> dict[str, str]:
+    """A MathOverflow (or Stack Exchange) question: the asker as author, the day asked, the opening of the body."""
+    m = re.search(r"/questions/(\d+)", url)
+    if not m:
+        return {}
+    try:
+        data = get_json(f"https://api.stackexchange.com/2.3/questions/{m[1]}?site={STACKEXCHANGE[host]}&filter=withbody", cache=False)
+    except (NotFound, SourceError):
+        return {}
+    q = (data.get("items") or [{}])[0]
+    if not q:
+        raise NotFound(url)
+    return {"title": clean(q.get("title")), "author": clean((q.get("owner") or {}).get("display_name")),
+            "text": trim(q.get("body"), LINK_CHARS), "date": dt.date.fromtimestamp(q.get("creation_date", 0)).isoformat() if q.get("creation_date") else ""}
+
+
 def discussion_link(url: str) -> dict[str, Any]:
     """The link as the page shows it. Raises NotFound when the post or page is gone. A text-fragment URL
     (page#:~:text=a%20passage) quotes that passage, and opens the page scrolled to it."""
@@ -252,14 +271,14 @@ def discussion_link(url: str) -> dict[str, Any]:
         q = urllib.parse.urlencode({"url": url, "omit_script": "true", "dnt": "true"})
         link = parse_oembed(get_json(f"{OEMBED}?{q}", cache=False))
     else:
-        page = get_text(urllib.parse.urlunsplit(parts._replace(fragment="")), cache=False)
+        page = "" if host in STACKEXCHANGE else get_text(urllib.parse.urlunsplit(parts._replace(fragment="")), cache=False)  # Stack Exchange: the API only
         who, quoted = passage(page, parts.fragment[len(":~:text="):]) if parts.fragment.startswith(":~:text=") else ("", "")
         if who:  # the link keeps only the passage, which browsers scroll to; the name goes in author
             url = urllib.parse.urlunsplit(parts._replace(fragment=":~:text=" + parts.fragment.split("-,", 1)[1]))
         m = MetaParser()
         m.feed(page)
         one = m.one
-        video = youtube(url, page) if host in YOUTUBE_HOSTS else {}
+        video = youtube(url, page) if host in YOUTUBE_HOSTS else stackexchange(host, url) if host in STACKEXCHANGE else {}
         # citation_author (arXiv, journals) is "Last, First"; shown as "First Last".
         authors = [" ".join(reversed(clean(a).split(", ", 1))) for a in m.meta.get("citation_author", []) if clean(a)]
         author = who or ", ".join(authors[:4]) + (" et al." if len(authors) > 4 else "") or clean(one("author") or one("article:author"))
@@ -270,7 +289,7 @@ def discussion_link(url: str) -> dict[str, Any]:
         link = {
             "kind": "web", "url": url, "title": video.get("title") or clean(one("citation_title") or one("og:title") or m.title or m.h1),
             "site": clean(one("og:site_name")) or host.removeprefix("www."), "author": video.get("author") or ("" if "://" in author else author),
-            "text": quoted or trim(one("og:description") or one("description") or m.p, LINK_CHARS),
+            "text": quoted or video.get("text") or trim(one("og:description") or one("description") or m.p, LINK_CHARS),
             "date": video.get("date") or iso_date(one("article:published_time") or one("citation_publication_date") or one("citation_date")
                                                   or one("citation_online_date") or one("date") or one("article:modified_time")),
         }

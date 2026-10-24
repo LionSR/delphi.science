@@ -34,3 +34,12 @@ h2 { font: 500 1.15rem var(--serif); margin: 2rem 0 0.4rem; }
 .comment.reply { margin-left: 1.5rem; }
 .comment p { margin: 0.25rem 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
 pre { background: var(--surface); padding: 0.8rem 1rem; border-radius: 0.35rem; overflow-x: auto; font: 0.78rem/1.5 var(--mono); }
+.vote { display: inline-flex; gap: 0.3rem; margin: 0.5rem 0 0; }
+li.item .vote { float: right; margin: 0 0 0.3rem 0.8rem; }
+.vote button { font-size: 0.8rem; padding: 0.15rem 0.5rem; color: var(--muted); cursor: pointer; }
+.vote button[aria-pressed='true'] { color: var(--accent); border-color: var(--accent); }
+header nav, header nav form { display: flex; gap: 0.9rem; align-items: baseline; }
+button.link { border: 0; padding: 0; background: none; color: var(--accent); font-size: inherit; cursor: pointer; }
+.comment-form { flex-direction: column; align-items: flex-start; }
+.comment-form textarea { width: 100%; box-sizing: border-box; font: inherit; padding: 0.5rem 0.6rem; border: 1px solid var(--rule); border-radius: 0.35rem; background: var(--bg); color: var(--ink); }
+.comment-form label { font-size: 0.85rem; color: var(--muted); }

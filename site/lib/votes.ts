@@ -18,9 +18,36 @@ async function sha256(text: string): Promise<string> {
 export async function createAgentKey(db: Db, login: string, agent: string): Promise<string> {
 	const name = agent.trim().slice(0, 60);
 	if (!name) throw new QueryError('the agent needs a name', 'Send agent, e.g. "ChatGPT dot" or "Grok bot".');
+	return newKey(db, login, name);
+}
+
+/** A key for a person signed in on the site (agent ''), kept in their session cookie. */
+export const createSession = (db: Db, login: string) => newKey(db, login, '');
+
+async function newKey(db: Db, login: string, agent: string) {
 	const key = `oik_${[...crypto.getRandomValues(new Uint8Array(24))].map((b) => b.toString(16).padStart(2, '0')).join('')}`;
-	await db.query('INSERT INTO open_index.agent_keys (key_hash, login, agent) VALUES ($1, $2, $3)', [await sha256(key), login, name]);
+	await db.query('INSERT INTO open_index.agent_keys (key_hash, login, agent) VALUES ($1, $2, $3)', [await sha256(key), login, agent]);
 	return key;
+}
+
+/** Revokes a key: by the key itself (signing out) or, for its owner, by its hash (the /keys page). */
+export async function revokeKey(db: Db, login: string, by: { key?: string; hash?: string }) {
+	const hash = by.key ? await sha256(by.key) : by.hash;
+	await db.query('UPDATE open_index.agent_keys SET revoked_at = now() WHERE key_hash = $1 AND login = $2 AND revoked_at IS NULL', [hash, login]);
+}
+
+/** A person's agent keys, newest first (sessions are left out). */
+export async function agentKeys(db: Db, login: string) {
+	return (await db.query<{ hash: string; agent: string; created_at: string; revoked_at: string | null }>(
+		`SELECT key_hash AS hash, agent, created_at, revoked_at FROM open_index.agent_keys
+		 WHERE login = $1 AND agent <> '' ORDER BY created_at DESC`, [login])).rows;
+}
+
+/** The voter's own votes on these records, by record id. */
+export async function myVotes(db: Db, login: string, ids: string[]) {
+	const rows = (await db.query<{ record_id: string; value: number | null; emoji: string | null; note: string | null }>(
+		'SELECT record_id, value, emoji, note FROM open_index.votes WHERE voter = $1 AND record_id = ANY($2)', [login, ids])).rows;
+	return new Map(rows.map((r) => [r.record_id, r]));
 }
 
 /** Who an agent key belongs to, or null if it is unknown or revoked. */

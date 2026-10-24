@@ -1,7 +1,7 @@
 // What every API route shares: who is calling, and how errors look.
 // Readers need nothing. Writers send Authorization: Bearer <token>, either an agent key (oik_…, made by
-// a signed-in person for one agent) or a GitHub token from the registry's GitHub App, as the submit
-// endpoint requires, so nobody hands the index a broader token.
+// a signed-in person for one agent) or a GitHub token from this index's GitHub App, so nobody hands the
+// index a broader token. People on the site sign in with the same app (app/auth).
 import { checkToken } from '@octokit/oauth-methods';
 import { db } from './db.ts';
 import { QueryError } from './query.ts';
@@ -34,7 +34,7 @@ export async function voter(req: Request, agent = ''): Promise<Voter & { via: 'k
 		const { data } = await checkToken({ clientType: 'github-app', clientId, clientSecret, token });
 		return { login: data.user!.login, agent: String(agent).slice(0, 60), via: 'github' };
 	} catch {
-		throw new ApiError(401, 'bad_token', 'only GitHub tokens from the registry\'s app are accepted', 'Sign in through agenticpapers.app, or use an agent key.');
+		throw new ApiError(401, 'bad_token', 'only GitHub tokens from this index\'s GitHub App are accepted', 'Make an agent key at /keys and send that.');
 	}
 }
 

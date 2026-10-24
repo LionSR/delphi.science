@@ -44,7 +44,7 @@ class SourceError(Exception):
 # ---- HTTP: one request at a time, cached, with a per-host delay ----
 
 _last_hit: dict[str, float] = {}
-DELAY = {"data.palomar-registry.org": 0.1, "www.anthropic.com": 1.0, "aixiv.science": 1.0, "ai.vixra.org": 1.0, "jaigp.org": 1.0, "www.clawxiv.org": 0.5, "export.arxiv.org": 3.0}
+DELAY = {"data.palomar-registry.org": 0.1, "www.anthropic.com": 1.0, "export.arxiv.org": 3.0}
 TOKEN: str | None = None  # GitHub token, set by index.py
 
 
@@ -351,191 +351,6 @@ class HuggingFace(Source):
             published=iso_date(d.get("createdAt")),
             updated=iso_date(d.get("lastModified")),
         )
-
-
-class ClawXiv(Source):
-    """clawxiv.org: a preprint server for AI research agents, with a public JSON API."""
-
-    name, label, origin = "clawxiv", "clawXiv", "ai-generated"
-    patterns = [r"^(?:https?://)?(?:www\.)?clawxiv\.org/abs/(clawxiv\.[\d.]+)", r"^(clawxiv\.\d{4}\.\d+)$"]
-    API = "https://www.clawxiv.org/api/v1"
-
-    def _entry(self, p: dict[str, Any]) -> dict[str, Any]:
-        pid = p.get("id") or p["paper_id"]  # the list says "id", the single-paper route "paper_id"
-        return self.entry(
-            pid,
-            url=p.get("url") or f"https://clawxiv.org/abs/{pid}",
-            title=clean(p.get("title")),
-            authors=[clean(a.get("name")) for a in p.get("authors", [])],
-            summary=trim(p.get("abstract")),
-            tags=p.get("categories") or [],
-            domain=(p.get("categories") or [""])[0],
-            published=iso_date(p.get("created_at")),
-        )
-
-    def fetch(self, key: str) -> dict[str, Any]:
-        return self._entry(get_json(f"{self.API}/papers/{key}"))
-
-    def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
-        page = 1
-        while True:
-            d = get_json(f"{self.API}/papers?page={page}&limit=100")
-            yield from map(self._entry, d.get("papers", []))
-            if not d.get("hasMore"):
-                return
-            page += 1
-
-
-class AiXiv(Source):
-    """aixiv.science: AI- and human-authored papers; each abstract page carries citation_* tags."""
-
-    name, label = "aixiv", "aiXiv"
-    patterns = [r"^(?:https?://)?aixiv\.science/(?:abs|pdf)/(aixiv\.\d{6}\.\d+)", r"^(aixiv\.\d{6}\.\d+)$"]
-    ROW = re.compile(r'href="https://aixiv\.science/abs/(aixiv\.\d{6}\.\d+)".*?</li>', re.S)
-
-    def fetch(self, key: str, ai: bool | None = None) -> dict[str, Any]:
-        url = f"https://aixiv.science/abs/{key}"
-        f = from_citation_meta(page_meta(url))
-        if not f["title"] or f["title"].startswith("aiXiv - "):
-            raise NotFound(url)
-        # The list badges each paper "AI" or "human"; the authors' "(AI)" suffix says the same on the page.
-        ai = ai if ai is not None else any(a.endswith("(AI)") for a in f["authors"])
-        if f["summary"].startswith("aiXiv - "):  # no abstract: the page falls back to the site's tagline
-            f["summary"] = ""
-        return self.entry(
-            key, url=url, title=f["title"], authors=f["authors"], summary=f["summary"], published=f["published"],
-            **({"origin": "ai-generated"} if ai else {}),
-        )
-
-    def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
-        listing = get_text("https://aixiv.science/list", max_age=3600)
-        rows = [(m.group(1), "badge-ai" in m.group(0)) for m in self.ROW.finditer(listing)]
-        if not rows:
-            raise SourceError("https://aixiv.science/list: no papers found; the page layout may have changed")
-        for key, ai in rows[:limit]:
-            yield self.fetch(key, ai)
-
-
-class AiViXra(Source):
-    """ai.viXra.org: open archive of AI-assisted e-prints. The /all/ listing carries each abstract."""
-
-    name, label, origin = "aivixra", "ai.viXra", "ai-generated"
-    patterns = [r"^(?:https?://)?ai\.vixra\.org/(?:abs|pdf)/(\d{4}\.\d{4})", r"^(?:ai\.viXra:)?(\d{4}\.\d{4})$"]
-    BLOCK = re.compile(
-        r'<a href="/abs/(\d{4}\.\d{4})">.*?submitted on (\d{4}-\d{2}-\d{2}).*?<h3>(.*?)</h3>\s*<p><b>Authors:</b>(.*?)<br/>.*?</p>\s*<p>(.*?)<b>Category:</b>\s*<a[^>]*>(.*?)</a>',
-        re.S,
-    )
-
-    def match(self, url: str) -> str | None:
-        return super().match(url) if "vixra" in url.lower() else None  # the bare YYMM.NNNN form is arXiv's
-
-    def fetch(self, key: str) -> dict[str, Any]:
-        url = f"https://ai.vixra.org/abs/{key}"
-        page = get_text(url)
-        m = MetaParser()
-        m.feed(page)
-        f = from_citation_meta(m)
-        abstract = re.search(r'<div id="abstract">\s*<p>(.*?)</p>', page, re.S)
-        category = re.search(r'<div id="category">.*?<h2>(.*?)</h2>', page, re.S)
-        submitted = re.search(r"\[<a[^>]*>v1</a>\]\s*(\d{4}-\d{2}-\d{2})", page)
-        return self.entry(
-            key, url=url, title=f["title"], authors=f["authors"], summary=trim(abstract.group(1) if abstract else ""),
-            domain=clean(category.group(1)) if category else "",
-            published=submitted.group(1) if submitted else f["published"],  # first submission, as the listing shows
-        )
-
-    def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
-        listing = get_text("https://ai.vixra.org/all/", max_age=3600)
-        blocks = self.BLOCK.findall(listing)
-        if not blocks:
-            raise SourceError("https://ai.vixra.org/all/: no papers found; the page layout may have changed")
-        seen = set()
-        for key, date, title, authors, abstract, category in blocks:
-            if key in seen:  # replacements are listed again further down
-                continue
-            seen.add(key)
-            yield self.entry(
-                key,
-                url=f"https://ai.vixra.org/abs/{key}",
-                title=clean(title),
-                authors=[clean(a) for a in re.findall(r"<a[^>]*>(.*?)</a>", authors)] or [clean(authors)],
-                summary=trim(abstract),
-                domain=clean(category),
-                published=date,
-            )
-
-
-class Jaigp(Source):
-    """jaigp.org, the Journal for AI Generated Papers: human prompters plus AI co-authors."""
-
-    name, label, origin = "jaigp", "JAIGP", "ai-generated"
-    patterns = [r"^(?:https?://)?jaigp\.org/paper/(\d+)"]
-
-    def fetch(self, key: str) -> dict[str, Any]:
-        url = f"https://jaigp.org/paper/{key}"
-        page = get_text(url)
-        m = MetaParser()
-        m.feed(page)
-        title = re.sub(r"\s+—\s+JAIGP$", "", clean(m.one("og:title")))
-        byline = re.search(r"<!-- Author byline -->\s*<div[^>]*>(.*?)</div>", page, re.S)
-        authors = [a for a in (clean(x) for x in re.split(r"·", byline.group(1))) if a] if byline else []
-        abstract = re.search(r'<header class="paper-abstract">.*?<p>(.*?)</p>', page, re.S)
-        if not title:
-            raise NotFound(url)
-        return self.entry(
-            key, url=url, title=title, authors=authors,
-            summary=trim(abstract.group(1) if abstract else m.one("og:description")),
-            published=iso_date(m.one("article:published_time")),
-        )
-
-    def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
-        keys = re.findall(r"<loc>https://jaigp\.org/paper/(\d+)</loc>", get_text("https://jaigp.org/sitemap.xml", max_age=3600))
-        if not keys:
-            raise SourceError("https://jaigp.org/sitemap.xml: no papers found")
-        for key in sorted(set(keys), key=int, reverse=True)[:limit]:
-            try:
-                yield self.fetch(key)
-            except NotFound:
-                continue
-
-
-class AIScientist(Source):
-    """The example papers written end to end by Sakana AI's The AI Scientist (github.com/SakanaAI/AI-Scientist)."""
-
-    name, label, origin = "ai-scientist", "AI Scientist", "ai-generated"
-    REPO = "SakanaAI/AI-Scientist"
-    patterns = [r"^(?:https?://)?github\.com/SakanaAI/AI-Scientist/(?:blob|tree)/main/example_papers/([\w-]+?)(?:\.pdf)?/?$"]
-
-    def fetch(self, key: str) -> dict[str, Any]:
-        base = f"https://api.github.com/repos/{self.REPO}/contents/example_papers/{key}"
-        title, abstract, authors = key.replace("_", " ").capitalize(), "", []
-        tex = next((f for f in self._walk(base) if f["name"].endswith(".tex")), None)
-        if tex:
-            src = get_text(tex["download_url"])
-            t = re.search(r"\\title\{(.+?)\}\s*\n", src, re.S)
-            a = re.search(r"\\begin\{abstract\}(.*?)\\end\{abstract\}", src, re.S)
-            title = clean(re.sub(r"\\\\|\\[a-z]+\{|\}", " ", t.group(1))) if t else title
-            abstract = re.sub(r"\\[a-zA-Z]+\*?(\[[^\]]*\])?(\{([^}]*)\})?", r"\3", a.group(1)) if a else ""
-            # \author{GPT-4o \& Claude\\ Department …}: the names are the first line.
-            au = re.search(r"\\author\{(.*?)(?:\\\\|\})", src, re.S)
-            authors = [clean(au.group(1).replace("\\&", "&"))] if au else []
-        return self.entry(
-            key,
-            url=f"https://github.com/{self.REPO}/blob/main/example_papers/{key}.pdf",
-            title=title, authors=authors, summary=trim(abstract),
-        )
-
-    def _walk(self, url: str, depth: int = 2) -> Iterator[dict[str, Any]]:
-        for f in get_json(url):
-            if f["type"] == "file":
-                yield f
-            elif depth > 0 and f["name"] in ("latex", "paper"):
-                yield from self._walk(f["url"], depth - 1)
-
-    def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
-        names = [f["name"] for f in get_json(f"https://api.github.com/repos/{self.REPO}/contents/example_papers") if f["type"] == "dir"]
-        for key in names[:limit]:
-            yield self.fetch(key)
 
 
 class OpenAIMath(Source):
@@ -862,12 +677,23 @@ class Web(Source):
 
 
 # Order matters: the first adapter that matches wins, so specific ones come before GitHub, DOI and Web.
-SOURCES: list[Source] = [OpenAIMath(), Palomar(), AnthropicScience(), AIScientist(), ClawXiv(), AiXiv(), AiViXra(), Jaigp(), ArXiv(), Zenodo(), HuggingFace(), Formalization(), GitHub(), Doi(), Web()]
+SOURCES: list[Source] = [OpenAIMath(), Palomar(), AnthropicScience(), ArXiv(), Zenodo(), HuggingFace(), Formalization(), GitHub(), Doi(), Web()]
 BY_NAME = {s.name: s for s in SOURCES}
 
 
+# Venues whose listings are mostly pseudoscience. Their papers are not taken, not even as web pages.
+BLOCKED_HOSTS = ("vixra.org", "aixiv.science", "clawxiv.org", "jaigp.org")
+
+
+def blocked(url: str) -> bool:
+    host = (urllib.parse.urlsplit(url.strip() if "://" in url else f"https://{url.strip()}").hostname or "").lower()
+    return any(host == h or host.endswith("." + h) for h in BLOCKED_HOSTS)
+
+
 def detect(url: str) -> tuple[Source, str]:
-    """The adapter and key for a URL or bare ID. Raises ValueError if nothing matches."""
+    """The adapter and key for a URL or bare ID. Raises ValueError if nothing matches or the venue is blocked."""
+    if blocked(url):
+        raise ValueError(f"not taken: {url!r} is on a venue this index does not list")
     for s in SOURCES:
         key = s.match(url)
         if key:

@@ -1,6 +1,8 @@
 import Script from 'next/script';
 import type { ReactNode } from 'react';
+import { me } from '../lib/session.ts';
 import { SITE } from '../lib/view.ts';
+import { signOut } from './actions.ts';
 import './globals.css';
 
 export const metadata = {
@@ -12,7 +14,8 @@ export const metadata = {
 // Titles and abstracts use TeX ($…$, and GitHub's $`…`$, which the pages rewrite to $…$).
 const MATHJAX = `window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\\\(', '\\\\)']], processEscapes: true } };`;
 
-export default function Layout({ children }: { children: ReactNode }) {
+export default async function Layout({ children }: { children: ReactNode }) {
+	const who = await me();
 	return (
 		<html lang="en">
 			<head>
@@ -23,7 +26,14 @@ export default function Layout({ children }: { children: ReactNode }) {
 				<main>
 					<header>
 						<a href="/" className="name">Open Research Index</a>
-						<a href="/api/v1">API</a>
+						<nav>
+							<a href="/api/v1">API</a>
+							{who ? (
+								<form action={signOut}>
+									<a href="/keys">@{who.login}</a> <button className="link">Sign out</button>
+								</form>
+							) : <a href="/auth/github">Sign in with GitHub</a>}
+						</nav>
 					</header>
 					{children}
 				</main>

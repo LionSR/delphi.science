@@ -5,7 +5,11 @@ import { cache } from 'react';
 import { comments } from '../../../../lib/comments.ts';
 import { db } from '../../../../lib/db.ts';
 import { get } from '../../../../lib/query.ts';
+import { me } from '../../../../lib/session.ts';
 import { date, idPath, recordId, recordPath, SITE, source, tally, tex, type IdParams } from '../../../../lib/view.ts';
+import { myVotes } from '../../../../lib/votes.ts';
+import { commentOn } from '../../../actions.ts';
+import { Vote } from '../../../vote.tsx';
 
 export const dynamic = 'force-dynamic';
 
@@ -28,11 +32,15 @@ export async function generateMetadata(ctx: IdParams): Promise<Metadata> {
 	};
 }
 
-export default async function Record(ctx: IdParams) {
+export default async function Record(ctx: IdParams & { searchParams: Promise<{ notice?: string }> }) {
 	const id = await recordId(ctx);
 	const r = await record(id);
 	if (!r) notFound();
 	const thread = (await comments(await db(), id)) as { id: number; parent: number | null; voter: string; agent: string; body: string; review: boolean; at: string; mentions: string[] }[];
+	const { notice } = await ctx.searchParams;
+	const who = await me();
+	const mine = who ? (await myVotes(await db(), who.login, [id])).get(id) : undefined;
+	const back = recordPath(id);
 	const reactions = Object.entries((r.reactions ?? {}) as Record<string, number>);
 	const api = `/api/v1/records/${idPath(id)}`;
 	const ld = {
@@ -43,6 +51,7 @@ export default async function Record(ctx: IdParams) {
 	return (
 		<article>
 			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld).replaceAll('<', '\\u003c') }} />
+			{notice && <p className="count">{notice}</p>}
 			<h1>{tex(r.title)}</h1>
 			{Array.isArray(r.authors) && <p className="authors">{r.authors.join(', ')}</p>}
 			<p className="meta">
@@ -53,8 +62,9 @@ export default async function Record(ctx: IdParams) {
 				{r.origin === 'ai-generated' && <span>AI-generated</span>}
 				{r.withdrawn ? <span>withdrawn</span> : null}
 				<span>{tally(r)}</span>
-				{reactions.map(([k, n]) => <span key={k}>{k === 'up' ? '👍' : k === 'down' ? '👎' : k} {n}</span>)}
+				{reactions.filter(([k]) => k !== 'up' && k !== 'down').map(([k, n]) => <span key={k}>{k} {n}</span>)}
 			</p>
+			<Vote id={id} reactions={r.reactions} mine={mine?.value} back={back} />
 			{r.summary ? <p className="abstract">{tex(r.summary)}</p> : null}
 			<p className="meta">
 				<a href={String(r.url)}>Source</a>
@@ -76,6 +86,14 @@ export default async function Record(ctx: IdParams) {
 					<p>{c.body}</p>
 				</div>
 			))}
+
+			<form action={commentOn} className="comment-form">
+				<input type="hidden" name="id" value={id} />
+				<input type="hidden" name="back" value={back} />
+				<textarea name="body" rows={4} maxLength={4000} required placeholder={who ? 'Comment, or review the paper. Name other records by id to mention them.' : 'Sign in with GitHub to comment.'} aria-label="Comment" />
+				<label><input type="checkbox" name="review" /> This is a review</label>
+				<button>{who ? 'Post' : 'Sign in and post'}</button>
+			</form>
 
 			<h2>API</h2>
 			<pre>{`curl ${api}

@@ -2,14 +2,17 @@
 import { db } from '../lib/db.ts';
 import { QueryError, search } from '../lib/query.ts';
 import taxonomy from '../lib/taxonomy.json' with { type: 'json' };
+import { me } from '../lib/session.ts';
 import { date, recordPath, source, tally, tex } from '../lib/view.ts';
+import { myVotes } from '../lib/votes.ts';
+import { Vote } from './vote.tsx';
 
 export const dynamic = 'force-dynamic';
 
-type Params = Promise<{ q?: string; sort?: string; cursor?: string }>;
+type Params = Promise<{ q?: string; sort?: string; cursor?: string; notice?: string }>;
 
 export default async function Home({ searchParams }: { searchParams: Params }) {
-	const { q = '', sort = q ? 'relevance' : 'newest', cursor } = await searchParams;
+	const { q = '', sort = q ? 'relevance' : 'week', cursor, notice } = await searchParams;
 	let res: Awaited<ReturnType<typeof search>> | null = null;
 	let error = '';
 	try {
@@ -20,6 +23,9 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 	}
 	const sources = (await (await db()).query<{ source: string; n: number }>(
 		'SELECT source, count(*)::int AS n FROM open_index.records GROUP BY source ORDER BY n DESC')).rows;
+	const who = await me();
+	const mine = who && res ? await myVotes(await db(), who.login, res.results.map((r) => String(r.id))) : new Map();
+	const here = `/?${new URLSearchParams({ q, sort, ...(cursor ? { cursor } : {}) })}`;
 	const next = res?.next_cursor ? `/?${new URLSearchParams({ q, sort, cursor: res.next_cursor })}` : '';
 	return (
 		<>
@@ -28,7 +34,10 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 				<select name="sort" defaultValue={sort} aria-label="Sort">
 					<option value="relevance">Relevance</option>
 					<option value="newest">Newest</option>
-					<option value="score">Score</option>
+					<option value="day">Top today</option>
+					<option value="week">Top this week</option>
+					<option value="month">Top this month</option>
+					<option value="score">Top of all time</option>
 					<option value="mentions">Mentions</option>
 				</select>
 				<button>Search</button>
@@ -39,11 +48,12 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 			<nav className="subjects" aria-label="Sources">
 				{sources.map((r) => <a key={r.source} href={source(r.source).href}>{source(r.source).name} <span className="n">{r.n.toLocaleString('en')}</span></a>)}
 			</nav>
-			{error && <p className="count">{error}</p>}
+			{(error || notice) && <p className="count">{error || notice}</p>}
 			{res && <p className="count">{res.total.toLocaleString('en')} records</p>}
 			<ol>
 				{res?.results.map((r) => (
 					<li key={String(r.id)} className="item">
+						<Vote id={String(r.id)} reactions={r.reactions} mine={mine.get(String(r.id))?.value} back={here} />
 						<a className="title" href={recordPath(r.id)}>{tex(r.title)}</a>
 						{Array.isArray(r.authors) && r.authors.length > 0 && <p className="authors">{r.authors.slice(0, 8).join(', ')}</p>}
 						<p className="meta">

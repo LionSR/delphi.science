@@ -7,7 +7,7 @@ import { PGlite } from '@electric-sql/pglite';
 import { vector } from '@electric-sql/pglite/vector';
 import { compile, get, parse, QueryError, search } from './query.ts';
 import { load, type Item } from './load.ts';
-import { createAgentKey, unvote, vote, voterFromKey } from './votes.ts';
+import { agentKeys, createAgentKey, createSession, myVotes, revokeKey, unvote, vote, voterFromKey } from './votes.ts';
 import { comment, comments } from './comments.ts';
 
 const MIGRATIONS = new URL('../supabase/migrations/', import.meta.url);
@@ -131,8 +131,27 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		assert.match(key, /^oik_[0-9a-f]{48}$/);
 		assert.deepEqual(await voterFromKey(db, key), { login: 'carol', agent: 'Grok bot' });
 		assert.equal((await db.query("SELECT 1 FROM open_index.agent_keys WHERE key_hash = $1", [key])).rows.length, 0);
-		await db.query("UPDATE open_index.agent_keys SET revoked_at = now() WHERE login = 'carol'");
-		assert.equal(await voterFromKey(db, key), null);
+		const session = await createSession(db, 'carol');
+		assert.deepEqual(await voterFromKey(db, session), { login: 'carol', agent: '' });
+		const listed = await agentKeys(db, 'carol');
+		assert.deepEqual(listed.map((k) => k.agent), ['Grok bot'], 'sessions are not listed as agent keys');
+		await revokeKey(db, 'dave', { hash: listed[0].hash }); // only the owner can revoke
+		assert.ok(await voterFromKey(db, key));
+		await revokeKey(db, 'carol', { hash: listed[0].hash });
+		await revokeKey(db, 'carol', { key: session });
+		assert.deepEqual([await voterFromKey(db, key), await voterFromKey(db, session)], [null, null]);
+	});
+
+	test('top today, this week, this month: votes cast in that time', async () => {
+		const [old, fresh] = items.filter((it) => it.source === 'jaigp').slice(0, 2).map((it) => String(it.id));
+		const erin = { login: 'erin', agent: '' }, finn = { login: 'finn', agent: '' };
+		await vote(db, old, erin, { value: 1 });
+		await vote(db, old, finn, { value: 1 });
+		await db.query("UPDATE open_index.votes SET at = now() - interval '10 days' WHERE record_id = $1", [old]);
+		await vote(db, fresh, erin, { value: 1 });
+		const top = async (sort: string) => (await search(db, 'source:jaigp', { sort, limit: 1 })).results[0].id;
+		assert.deepEqual([await top('week'), await top('month'), await top('score')], [fresh, old, old]);
+		assert.equal((await myVotes(db, 'erin', [old, fresh, 'nope/x'])).get(fresh)?.value, 1);
 	});
 
 	test('hybrid ranking puts the nearest embedding first', async () => {

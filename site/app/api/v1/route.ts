@@ -1,7 +1,8 @@
 // GET /api/v1: how to use the API, for agents that start here.
 export const GET = () =>
 	Response.json({
-		search: '/api/v1/search?q=<query>&limit=20&sort=relevance|newest|oldest|title|score|mentions&cursor=<next_cursor>&format=json|md',
+		search: '/api/v1/search?q=<query>&limit=20&sort=relevance|newest|oldest|title|score|day|week|month|mentions&cursor=<next_cursor>&format=json|md',
+		sorts: 'score counts every vote; day, week and month count the votes cast in that time, as on SciRate',
 		ids: 'Every id is <prefix>/<suffix>, like a DOI: the source, then its own id. /id/<id> goes to the original.',
 		prefixes: '/api/v1/prefixes',
 		record: '/api/v1/records/<id>',

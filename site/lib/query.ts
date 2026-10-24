@@ -34,7 +34,7 @@ export const FLAGS: Record<string, string> = {
 	formalized: 'r.formalized', verified: 'r.verified', withdrawn: 'r.withdrawn', 'agent-ready': 'r.agent_ready',
 	'ai-generated': "r.origin = 'ai-generated'", app: "r.source = 'app'", gone: 'r.gone',
 };
-export const SORTS = ['relevance', 'newest', 'oldest', 'title', 'score', 'mentions'] as const;
+export const SORTS = ['relevance', 'newest', 'oldest', 'title', 'score', 'day', 'week', 'month', 'mentions'] as const;
 export const MAX_LIMIT = 100;
 const COMPACT = ['id', 'source', 'title', 'authors', 'url', 'pdf', 'published', 'subject', 'division', 'category', 'origin',
 	'agent_ready', 'formalized', 'verified', 'withdrawn', 'family', 'ai_models', 'score', 'reactions', 'comments', 'reviews', 'mentions'];
@@ -214,6 +214,10 @@ export interface SearchOptions {
 	embedding?: number[]; // the query's embedding, for hybrid ranking
 }
 
+// day, week, month: as on SciRate, the net votes cast in that many days, then the newest.
+const recent = (days: number) => `(SELECT coalesce(sum(v.value), 0) FROM open_index.votes v
+	WHERE v.record_id = r.id AND v.at > now() - interval '${days} days') DESC, r.published DESC NULLS LAST, r.id`;
+
 export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 	const t0 = performance.now();
 	const sort = opts.sort ?? 'relevance';
@@ -229,7 +233,7 @@ export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 
 	const order: Record<string, string> = { newest: 'r.published DESC NULLS LAST, r.id', oldest: 'r.published ASC NULLS LAST, r.id',
 		title: 'lower(r.title), r.id', score: 'r.score DESC, r.published DESC NULLS LAST, r.id',
-		mentions: 'r.mentions_count DESC, r.score DESC, r.id' };
+		mentions: 'r.mentions_count DESC, r.score DESC, r.id', day: recent(1), week: recent(7), month: recent(30) };
 	let sql: string;
 	let all = [...params];
 	if (sort === 'relevance' && (ranks.length || opts.embedding)) {

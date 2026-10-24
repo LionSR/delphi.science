@@ -1,0 +1,35 @@
+{
+  "key": "2610.00220",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00220v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00220v1",
+  "title": "A zero-free strip for the $L$-functions of the elliptic curves $y^2=x^3+d$",
+  "authors": [
+    "Michael Rubinstein",
+    "Mateo Restrepo Borrero"
+  ],
+  "summary": "For a nonzero integer $d$ let $E_d$ be the elliptic curve $y^2=x^3+d$ over $\\mathbb Q$. Part I adapts OpenAI's $11/12$ argument to prove that $L(E_d,s)\\ne0$ for $\\Re s>17/12$. Part II adapts OpenAI's $7/8$ argument to prove $L(s,\\overline\\alpha\\eta)\\ne0$ for $\\Re s>7/8$, where $\\eta$ is any finite-order Hecke character of $\\mathbb Q(\\sqrt{-3})$ and $\\alpha(n)=n/|n|$ on primary generators. Consequently $L(E_d,s)\\ne0$ for $\\Re s>11/8$. The analytic normalization is $L(E_d,s+\\frac12)$, so the two boundaries are $11/12$ and $7/8$ within $0<\\Re s<1$. The curve characters have infinite order, and…",
+  "domain": "math.NT",
+  "tags": [
+    "msc:11G40",
+    "msc:11M41",
+    "CM",
+    "elliptic curve",
+    "quasi Riemann Hypothesis"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "version": 1,
+  "ai_models": [
+    "Claude Opus",
+    "Codex"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

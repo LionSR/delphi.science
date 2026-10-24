@@ -4,6 +4,7 @@
     { "name": "anthropic-lean", "source": "lean", "query": "anthropics/formal-math anthropics/fermats-last-theorem", "limit": 20 },
     { "name": "anthropic-science", "source": "anthropic-science", "limit": 50 },
     { "name": "openai-math", "source": "openai-math", "limit": 1000 },
+    { "name": "hexagon", "source": "hexagon", "limit": 5000 },
     { "enabled": false, "name": "arxiv-ai-scientist", "source": "arxiv", "query": "abs:\"AI scientist\" AND (abs:autonomous OR abs:end-to-end)", "limit": 40 },
     { "enabled": false, "name": "arxiv-research-agents", "source": "arxiv", "query": "abs:\"research agent\" AND abs:\"scientific discovery\"", "limit": 40 },
     { "enabled": false, "name": "github-paper-agents", "source": "github", "query": "\"AGENTS.md\" paper reproduction in:readme stars:>5", "limit": 15 }

@@ -1,0 +1,36 @@
+{
+  "key": "2609.00142",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2609.00142v1",
+  "pdf": "https://hexagonmath.org/pdf/2609.00142v1",
+  "title": "Collapsibility of Alexander duals for shade maps",
+  "authors": [
+    "Darij Grinberg"
+  ],
+  "summary": "Let $E$ be a nonempty finite set. A shade map on $E$ is a map $T:\\mathcal{P}(E)\\rightarrow\\mathcal{P}(E)$ such that toggling an element $u\\notin T(F)$ in the input $F$ does not change $T(F)$. We prove that, if $T$ is an inclusion-reversing shade map and $G\\subseteq E$, then the simplicial complex \\[ \\{F\\subseteq E\\mid G\\subseteq T(F)\\} \\] is collapsible. Equivalently, if $S$ is an inclusion-preserving shade map, then the Alexander dual of \\[ \\{F\\subseteq E\\mid G\\not \\subseteq S(F)\\} \\] is collapsible. This is an Alexander-dual companion to the shade-map collapsibility theorem in \\emph{The…",
+  "domain": "math.CO",
+  "tags": [
+    "math.AT",
+    "msc:57Q70",
+    "msc:05B35",
+    "antimatroids",
+    "convex geometries",
+    "discrete Morse theory",
+    "graphs",
+    "simplicial complexes"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "version": 1,
+  "ai_models": [
+    "ChatGPT"
+  ],
+  "authorship": "mixed",
+  "human_understanding": "all",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

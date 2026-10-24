@@ -1,0 +1,38 @@
+{
+  "key": "2610.00221",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00221v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00221v1",
+  "title": "Deterministic Integer 3SUM in O(n^1.999017) Time via a Sharper Binomial-Tail Analysis",
+  "authors": [
+    "宇轩 徐"
+  ],
+  "summary": "We refine the analysis of the deterministic integer 3SUM algorithm of Alman and Vassilevska Williams (arXiv:2610.06783v1). Within their framework of thin matrix products and reductions through Exact Triangle, we obtain a worst-case running time of O(n^1.999017) for polynomially bounded integer inputs on a word RAM with O(log n)-bit words. The main refinement retains the binomial tail in the preprocessing cost instead of replacing it immediately by a uniform geometric bound. An entropy estimate yields a strictly larger preprocessing saving exponent, while preserving the query algorithm and…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.CC",
+    "msc:68W40",
+    "msc:68Q25",
+    "3SUM",
+    "Exact Triangle",
+    "binomial tails",
+    "computer-assisted analysis",
+    "deterministic algorithms",
+    "fine-grained complexity",
+    "thin matrix products"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "version": 1,
+  "ai_models": [
+    "ChatGPT"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "none",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

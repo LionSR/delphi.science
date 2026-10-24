@@ -1,0 +1,37 @@
+{
+  "key": "2610.00001",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00001v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00001v1",
+  "title": "A Lean Formalization of Myerson-Satterthwaite Impossibility for Continuous Bilateral Trade",
+  "authors": [
+    "Arthur",
+    "David Barros Hulak",
+    "Ruy J. G. B. de Queiroz"
+  ],
+  "summary": "We present a source-grounded account of a Lean 4 formalization of the Myerson-Satterthwaite impossibility theorem for continuous bilateral trade. Buyer values and seller costs are independent, with atomless probability measures supported on compact real intervals whose interiors overlap. The model explicitly requires restricted Lebesgue measure to be absolutely continuous with respect to each type measure, together with full support; it does not require the type measures themselves to have densities. Under allocation and transfer measurability and integrability conditions, the registered…",
+  "domain": "cs.LO",
+  "tags": [
+    "math.LO",
+    "msc:91B26",
+    "msc:68V20"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "version": 1,
+  "ai_models": [
+    "ChatGPT",
+    "Codex"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": true,
+  "formalizations": [
+    "https://palomar-registry.org/entry?id=PALOMAR-2026-09-26-000002&version=1"
+  ],
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

@@ -1,0 +1,44 @@
+{
+  "key": "2610.00279",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00279v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00279v1",
+  "title": "Pattern-avoiding binary arrays and a Stirling-type table: explicit formulas, exact recurrence orders, and non-D-finiteness",
+  "authors": [
+    "Yunkun Song"
+  ],
+  "summary": "Let $a_k(n)$ be the number of $n\\times k$ binary arrays in which no row contains $001$ or $010$ and no column contains $001$ or $011$ as three consecutive entries (OEIS A207123). Splitting the rows by parity gives $a_k(n)=U_k(\\lceil n/2\\rceil)\\,U_k(\\lfloor n/2\\rfloor)$, where $U_k(m)$ counts sequences in $\\{0,\\dots,m\\}^k$ in which every three consecutive entries $(a,b,c)$ satisfy $b=c$ or $a\\ge\\max(b,c)$; equivalently, $U_k(m)$ counts the multichains of length $m$ in a subposet $\\Lambda_k$ of the Boolean lattice. We prove three main results. First, for each $m$ the minimal order of a linear…",
+  "domain": "math.CO",
+  "tags": [
+    "cs.SC",
+    "msc:05A15",
+    "msc:33F10",
+    "msc:68V20",
+    "msc:11B73",
+    "msc:26C10",
+    "D-finite power series",
+    "Lean 4",
+    "OEIS A207123",
+    "Ore algebras",
+    "Stirling numbers",
+    "chain polynomials"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "version": 1,
+  "ai_models": [
+    "Claude Opus",
+    "Claude Sonnet",
+    "Claude Code",
+    "Codex",
+    "Python"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

@@ -1,0 +1,40 @@
+{
+  "key": "2610.00016",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00016v2",
+  "pdf": "https://hexagonmath.org/pdf/2610.00016v2",
+  "title": "An Exponent of 1.043 for the Unit Distance Problem",
+  "authors": [
+    "Eric Naslund"
+  ],
+  "summary": "Let $u(U)$ count the unordered pairs at distance one in a finite planar set $U$. We construct finite sets $U_j$ with $|U_j|\\to\\infty$ and $u(U_j)/|U_j|^{1.043171}\\to\\infty$. The largest exponent previously claimed, apart from preliminary versions of the present work, is $1.0358$, in the author's unpublished manuscript. The method is the number-field construction of OpenAI and Sawin. Here unit distances come from elements of relative norm one in quadratic extensions $K/F$ in which $F$ has both real and complex places, and the fields come from an infinite pro-$2$ tower over $\\Q(\\sqrt{241})$,…",
+  "domain": "math.CO",
+  "tags": [
+    "math.NT",
+    "msc:52C10",
+    "msc:11R37",
+    "msc:11R42",
+    "msc:11R29",
+    "msc:11H06"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-10",
+  "version": 2,
+  "ai_models": [
+    "ChatGPT",
+    "ChatGPT",
+    "Claude Opus",
+    "Muse"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": true,
+  "formalizations": [
+    "https://palomar-registry.org/entry?id=PALOMAR-2026-10-01-000018&version=2"
+  ],
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

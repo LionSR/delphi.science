@@ -1,0 +1,38 @@
+{
+  "key": "2610.00258",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00258v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00258v1",
+  "title": "An Intrinsic Formula for the Ray–West Correction Term",
+  "authors": [
+    "Donald Poindexter"
+  ],
+  "summary": "For a nonempty permutation $\\beta$ of length $m$, let $g_2(\\beta)$ denote the number of distinct permutations of length $m+2$ containing $\\beta$. Ray and West showed that $$ g_2(\\beta)=\\frac{m^4+2m^3+m^2+4m+4-2j(\\beta)}{2}, \\qquad 0\\le j(\\beta)\\le m-1, $$ but their correction term was not expressed as a statistic of $\\beta$. This was posed explicitly as Problem 3.7 by Vatter. We give a polynomial-time formula defined entirely from $\\beta$: $j(\\beta)=L(\\beta)+R(\\beta)$, where $L$ counts licensed gaps and $R$ counts anchor-free two-deletion classes containing a collision whose canonical…",
+  "domain": "math.CO",
+  "tags": [
+    "msc:05A05",
+    "msc:05A15",
+    "Ray–West correction term",
+    "Wilf equivalence",
+    "deletion classes",
+    "enumerative combinatorics",
+    "permutation patterns",
+    "permutation statistics",
+    "strong intervals"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "version": 1,
+  "ai_models": [
+    "ChatGPT",
+    "Codex"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "none",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

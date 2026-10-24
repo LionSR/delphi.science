@@ -1,0 +1,39 @@
+{
+  "key": "2610.00170",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00170v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00170v1",
+  "title": "The number of multiplicity sets of n-point plane line collections grows as exp(Theta(sqrt(n)))",
+  "authors": [
+    "Raphael DUCAY"
+  ],
+  "summary": "For a set P of n points in the plane R^2, let A(P) be the set of multiplicities of P, i.e. the sizes |ell cap P| >= 2 of the subsets of P lying on a common line ell, and let F(n) be the number of distinct multiplicity sets A(P) as P ranges over all n-point sets. Erdos problem 607 (erdosproblems.com/607) asks whether F(n) 0. The proof is a three-step reduction to a published result of Colbourn-Phelps-Rodl, \"Block sizes in pairwise balanced designs\" (Canad. Math. Bull. 27(3), 375-380, 1984): (1) the lines determined by P, restricted to P, form a pairwise balanced design (PBD) of order n -…",
+  "domain": "math.CO",
+  "tags": [
+    "math.MG",
+    "msc:51A10",
+    "msc:05B05",
+    "combinatorial-geometry",
+    "erdos-problem-607",
+    "line-geometries",
+    "multiplicity-sets",
+    "pairwise-balanced-designs"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "version": 1,
+  "ai_models": [
+    "Qwen 3.8 27B"
+  ],
+  "authorship": "mixed",
+  "human_understanding": "all",
+  "origin": "ai-generated",
+  "formalized": true,
+  "formalizations": [
+    "https://palomar-registry.org/entry?id=PALOMAR-2026-10-11-000015&version=1"
+  ],
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

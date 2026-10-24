@@ -1,0 +1,37 @@
+{
+  "key": "2610.00005",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00005v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00005v1",
+  "title": "Nash Bargaining Characterization in Lean",
+  "authors": [
+    "Arthur",
+    "David Barros Hulak",
+    "Ruy J. G. B. de Queiroz"
+  ],
+  "summary": "We describe a Lean 4 formalization of the classical two-person Nash bargaining characterization. A bargaining problem consists of a compact convex subset of the real plane, a feasible disagreement point, and a feasible outcome strictly improving both utilities. The Nash product is maximized over the individually rational part of that set. The development proves existence and uniqueness of the maximizer, verifies Pareto optimality, symmetry, positive affine invariance, and independence of irrelevant alternatives, and proves that these four axioms characterize the maximizer among feasible…",
+  "domain": "math.LO",
+  "tags": [
+    "cs.LO",
+    "msc:91A12",
+    "msc:68V20"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "version": 1,
+  "ai_models": [
+    "ChatGPT",
+    "Codex"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": true,
+  "formalizations": [
+    "https://palomar-registry.org/entry?id=PALOMAR-2026-09-25-000013&version=1"
+  ],
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

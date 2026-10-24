@@ -1,0 +1,40 @@
+{
+  "key": "2610.00157",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00157v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00157v1",
+  "title": "Nearly Minimax Rates for Functional Estimation Under Rough Random Design",
+  "authors": [
+    "P. M. Aronow",
+    "Nathan Kallus",
+    "Patrick Lopatto"
+  ],
+  "summary": "We establish nearly minimax bounds for missing-at-random means, treatment effects, and expected conditional covariances under rough random design. For two nuisance functions with average H\\\"older smoothness $s$ in dimension $d$, the minimax root-mean-square error is $n^{-2s/d+o(1)}$ when $s<d/4$ and of order $n^{-1/2}$ when $s\\ge d/4$. The first rate confirms the rough-design exponent suggested by higher-order influence function theory. In the generic model with an unknown bounded density weight, our upper and lower bounds differ by only polylogarithmic factors and identify a leading…",
+  "domain": "math.ST",
+  "tags": [
+    "msc:62G05",
+    "msc:62C20",
+    "msc:62G20",
+    "msc:62D10",
+    "msc:62D20"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "version": 1,
+  "ai_models": [
+    "Claude Opus",
+    "Claude Fable",
+    "Claude Fable",
+    "ChatGPT",
+    "ChatGPT",
+    "ChatGPT"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

@@ -1,0 +1,40 @@
+{
+  "key": "2609.00150",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2609.00150v1",
+  "pdf": "https://hexagonmath.org/pdf/2609.00150v1",
+  "title": "Finite VCG and Groves Payments in Lean",
+  "authors": [
+    "Arthur",
+    "David Barros Hulak",
+    "Ruy J. G. B. de Queiroz"
+  ],
+  "summary": "We describe a Lean 4 development of finite direct mechanisms with quasi-linear utility and unrestricted real-valued valuations. The Clarke pivot mechanism selects a reported-welfare maximizer and charges each agent the loss in other-agent welfare relative to its maximum over the same fixed alternative set. The development proves efficiency, dominant-strategy truthfulness, nonnegative payments and no deficit, and individual rationality under the explicit assumption that every valuation is nonnegative. It also proves that every efficient, dominant-strategy incentive-compatible mechanism on the…",
+  "domain": "math.OC",
+  "tags": [
+    "cs.LO",
+    "msc:91B26",
+    "msc:68V20",
+    "Clarke pivot payments",
+    "Groves characterization",
+    "Lean 4",
+    "VCG mechanism",
+    "dominant strategies",
+    "formal verification"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "version": 1,
+  "ai_models": [
+    "Codex",
+    "Codex"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

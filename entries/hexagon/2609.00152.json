@@ -1,0 +1,44 @@
+{
+  "key": "2609.00152",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2609.00152v1",
+  "pdf": "https://hexagonmath.org/pdf/2609.00152v1",
+  "title": "A Lean Formalization of the Classical Seifert van Kampen Groupoid Theorem",
+  "authors": [
+    "Arthur",
+    "David Barros Hulak",
+    "Ruy J. G. B. de Queiroz"
+  ],
+  "summary": "We explain a Lean 4 formalization of the classical Seifert van Kampen theorem for the full fundamental groupoid. For an arbitrary topological space covered by two open subsets, the inclusion-induced square of ordinary continuous-path fundamental groupoids is a pushout in the category of categories. Every point is retained as an object; no basepoint, connectedness, or separation hypothesis is required. The development identifies an auxiliary directed path category for the indiscrete preorder with Mathlib's fundamental groupoid through strictly inverse functors and naturality equalities. It…",
+  "domain": "math.AT",
+  "tags": [
+    "math.CT",
+    "msc:55Q05",
+    "msc:18B40",
+    "msc:68V20",
+    "Lean 4",
+    "Mathlib",
+    "Seifert van Kampen theorem",
+    "categorical pushout",
+    "fundamental groupoid",
+    "open cover"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "version": 1,
+  "ai_models": [
+    "Codex",
+    "Codex"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": true,
+  "formalizations": [
+    "https://palomar-registry.org/entry?id=PALOMAR-2026-09-25-000004&version=1"
+  ],
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

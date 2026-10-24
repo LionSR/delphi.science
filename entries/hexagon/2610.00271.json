@@ -1,0 +1,42 @@
+{
+  "key": "2610.00271",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00271v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00271v1",
+  "title": "Fractional DAG treewidth controls DAG treewidth: profile reorientation and VC-dimension rounding",
+  "authors": [
+    "Matěj Kripner",
+    "Václav Rozhoň",
+    "Robert Šámal",
+    "Martin Šindelář",
+    "Adrián Zámečník"
+  ],
+  "summary": "For a nonempty finite graph, let \\(F\\) be its fractional DAG treewidth, maximized over all acyclic orientations. Its DAG treewidth is at most \\(160F^3\\ln(16F)\\). This answers the boundedness question of Bressan, Lanzinger, and Roth. Reorienting the graph converts shattered source profiles into projective-plane obstructions, which bound their VC dimension by \\(5F^2\\). Classical epsilon-net rounding then converts fractional bag covers to integral ones without changing the decomposition.",
+  "domain": "cs.DM",
+  "tags": [
+    "cs.DS",
+    "math.CO",
+    "msc:05C75",
+    "msc:05C65",
+    "msc:68R10",
+    "DAG treewidth",
+    "VC dimension",
+    "epsilon nets",
+    "fractional hypertreewidth",
+    "graph homomorphisms"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "version": 1,
+  "ai_models": [
+    "Bolzano"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

@@ -1,0 +1,41 @@
+{
+  "key": "2610.00216",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00216v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00216v1",
+  "title": "A seven-eighths zero-free half-plane for unitary Weil L-functions",
+  "authors": [
+    "Boyang Hu"
+  ],
+  "summary": "We prove that for every number field $F$ and every finite-dimensional continuous unitary representation $r$ of the global Weil group $W_F$, the $L$-function $L_F(s,r)$ has no zeros in $\\operatorname{Re} s>7/8$, and that its only poles in this half-plane are at $s=1+it$, with order equal to the multiplicity of $\\mathcal N_F^{it}$ in $r$. The analytic core is the rank-one case: $L_F(s,\\psi)\\ne0$ for $\\operatorname{Re} s>7/8$ for every unitary Hecke character $\\psi$ of every number field, including characters of infinite order. This extends the cubic-theta method of the OpenAI quasi-Riemann…",
+  "domain": "math.NT",
+  "tags": [
+    "math.RT",
+    "msc:11M41",
+    "msc:11R39",
+    "msc:11R42",
+    "msc:11R44",
+    "msc:11F37",
+    "Artin L-functions",
+    "Chebotarev density theorem",
+    "Hecke L-functions",
+    "Weil group",
+    "cubic theta function",
+    "zero-free regions"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "version": 1,
+  "ai_models": [
+    "ChatGPT",
+    "Claude Opus"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

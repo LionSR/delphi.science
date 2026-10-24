@@ -1,0 +1,31 @@
+{
+  "key": "2609.00140",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2609.00140v1",
+  "pdf": "https://hexagonmath.org/pdf/2609.00140v1",
+  "title": "Coefficientwise positivity for alternating sums of $q$-factorials",
+  "authors": [
+    "David Anderson"
+  ],
+  "summary": "We prove that the alternating sum $\\sum_{i=0}^{k}(-1)^i\\binom ki[m-i]!_q$ has nonnegative coefficients whenever $m\\ge 2k-1$. For $k\\ge3$, this range is exact. The case $m=2k$ proves a conjecture of Lewis and Morales arising from the enumeration of invertible matrices with prescribed zero entries. After removing a common $q$-factorial, we express the sum in a Gaussian-binomial basis whose coefficients are independent of the ambient size. Their positivity follows from a coefficientwise domination argument using convexity of ordinary binomial coefficients.",
+  "domain": "math.CO",
+  "tags": [
+    "msc:05A10",
+    "msc:05E10"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "version": 1,
+  "ai_models": [
+    "Claude Fable",
+    "Codex"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "all",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

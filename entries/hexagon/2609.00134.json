@@ -1,0 +1,38 @@
+{
+  "key": "2609.00134",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2609.00134v1",
+  "pdf": "https://hexagonmath.org/pdf/2609.00134v1",
+  "title": "Five equations for first-order logic, modulo the structure of existential graphs",
+  "authors": [
+    "Anthony Hart"
+  ],
+  "summary": "Peirce’s existential graphs draw a first-order formula so that the order and grouping of conjuncts, the names and order of bound variables, the position of a quantifier relative to conjuncts that do not mention its variable, and how a network of equalities is written cannot be seen. We take these structural laws for granted. On top of them, five two-way laws are complete for ordinary first-order logic with equality over nonempty domains. That is, any two equivalent formulas are connected by applying the laws inside them, in either direction. The laws are double negation, deiteration X ∧ ¬(X…",
+  "domain": "math.LO",
+  "tags": [
+    "msc:03B10",
+    "msc:03G15",
+    "msc:08B05",
+    "msc:03G05",
+    "msc:68V15",
+    "cylindric algebra",
+    "existential graphs",
+    "first-order logic"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "version": 1,
+  "ai_models": [
+    "Claude Opus",
+    "Mace4",
+    "Prover9"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "all",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

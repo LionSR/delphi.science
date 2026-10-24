@@ -1,0 +1,32 @@
+{
+  "key": "2610.00156",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00156v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00156v1",
+  "title": "Modularity of elliptic curves over totally real field and CM fields not containing \\zeta_5",
+  "authors": [
+    "Bao Le Hung"
+  ],
+  "summary": "This notes tries to parse the basic structure of OpenAI's new argument proving modularity of elliptic curves over imaginary quadratic fields. The argument also proves modularity over all totally real field, and in the original form, modularity over CM fields not containing \\zeta_5. The general CM case has also now been resolved by an independent repository which improves the Caraiani-Newton modularity lifting theorem for CM field at the prime 5, which was the main reason for the extra hypothesis. I kept the argument in the totally real case separate to highlight the main new idea in the…",
+  "domain": "math.NT",
+  "tags": [
+    "math.AG",
+    "msc:11F80",
+    "Modularity"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "version": 1,
+  "ai_models": [
+    "Codex",
+    "Claude Opus"
+  ],
+  "authorship": "mixed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

@@ -1,0 +1,31 @@
+{
+  "key": "2609.00114",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2609.00114v5",
+  "pdf": "https://hexagonmath.org/pdf/2609.00114v5",
+  "title": "Under Measurables, HOD_{Ord^{\\omega}} is locally arbitrary",
+  "authors": [
+    "Elliot Glazer"
+  ],
+  "summary": "For the inner model $\\HOD_{\\Ord^{\\omega}}$, we derive an analogue for Roguski's classical result that without nontrivial assumptions on $V$, $\\HOD$ is an arbitrary model of $\\ZFC$. For any sentence $\\sigma$, letting $\\CM$ denote ``class of measurables,'' the following theories are equiconsistent: \\begin{enumerate} \\item $\\ZFC+\\CM+ [\\HOD_{\\Ord^{\\omega}}\\models (\\exists\\kappa\\,V_{\\kappa}\\models\\sigma)]$; \\item $\\ZFC+\\GCH+\\CM+ [\\HOD_{\\Ord^{\\omega}}\\models (\\SVC\\wedge\\CM\\wedge\\exists\\kappa\\,V_{\\kappa}\\models\\sigma)]$; \\item $\\ZF+\\DC+\\CM+ \\exists\\kappa\\,V_{\\kappa}\\models\\sigma$. \\end{enumerate}…",
+  "domain": "math.LO",
+  "tags": [
+    "msc:03E99",
+    "Set theory",
+    "axiom of choice"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-10-12",
+  "version": 5,
+  "ai_models": [
+    "Codex"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

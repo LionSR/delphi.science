@@ -1,0 +1,38 @@
+{
+  "key": "2610.00270",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00270v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00270v1",
+  "title": "Linear Trace-Deficit Decay for Permanents of Positive Semidefinite Contractions",
+  "authors": [
+    "Matěj Kripner",
+    "Václav Rozhoň",
+    "Robert Šámal",
+    "Martin Šindelář",
+    "Adrián Zámečník"
+  ],
+  "summary": "Every Hermitian positive semidefinite contraction \\(A\\) satisfies \\(\\operatorname{per}(A)\\leq\\exp(-\\operatorname{tr}(I-A)/68)\\). This proves the linear trace-deficit bound conjectured by Ebrahimnejad, Nagda, and Oveis Gharan, whose estimate had quadratic dependence on the normalized deficit. The proof combines a size-biased complex Gaussian representation, a block version of Hanson–Wright decoupling, and a rational Loewner majorant. The constant is uniform in the dimension and is not optimized.",
+  "domain": "math.CO",
+  "tags": [
+    "math.PR",
+    "msc:15A15",
+    "Gaussian representation",
+    "matrix inequalities",
+    "positive semidefinite permanent",
+    "trace deficit"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "version": 1,
+  "ai_models": [
+    "Bolzano"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

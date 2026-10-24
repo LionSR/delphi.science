@@ -1,0 +1,45 @@
+{
+  "key": "2610.00217",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00217v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00217v1",
+  "title": "Low-discrepancy quasi-uniform digital nets in every dimension",
+  "authors": [
+    "Leonhard Gruenschloss"
+  ],
+  "summary": "Dick, Goda and Suzuki asked for low-discrepancy digital nets that are quasi-uniform, with minimum distance $\\delta$ and covering radius both of the optimal order $N^{-1/s}$, and stated the problem as open in dimension $s\\ge3$. We construct such nets in every dimension. For every $s\\ge3$, every base $q$ whose prime factors are at least $s-1$, and every $k\\ge1$, we give explicit digital $(0,sk,s)$-nets over $\\Z/q\\Z$ with $N=q^{sk}$ points, covering radius at most $\\sqrt s\\,N^{-1/s}$, and $\\delta N^{1/s}\\ge1-a^*_s/q$ once $q\\ge5a^*_s+4$. The constant $a^*_s\\le e^{s\\log s+O(s)}$ is computed from…",
+  "domain": "math.NA",
+  "tags": [
+    "math.MG",
+    "math.NT",
+    "msc:11K38",
+    "msc:65C05",
+    "msc:11K45",
+    "msc:52C17",
+    "msc:68V20",
+    "Lean 4 formalization",
+    "covering radius",
+    "digital nets",
+    "lattices",
+    "low discrepancy"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-13",
+  "version": 1,
+  "ai_models": [
+    "Claude Fable",
+    "Claude Opus",
+    "Claude Code"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": true,
+  "formalizations": [
+    "https://palomar-registry.org/entry?id=PALOMAR-2026-10-13-000011&version=1"
+  ],
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

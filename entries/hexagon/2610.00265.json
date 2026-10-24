@@ -1,0 +1,33 @@
+{
+  "key": "2610.00265",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00265v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00265v1",
+  "title": "Rational Fourth Powers Summing to 82",
+  "authors": [
+    "Natanael Wildner Fraga"
+  ],
+  "summary": "We prove that the only primitive positive integer solutions of $x^4+y^4=82z^4$ are $(1,3,1)$ and $(3,1,1)$. An arithmetic reduction lifts every other putative solution to an elliptic curve over $K=\\mathbb{Q}(\\sqrt{41},\\sqrt{2})$. An explicit 2-descent determines its rank as 3. A logarithmic functional then excludes all nonzero parameters in the relevant 2-adic disc, including both relative sign patterns at the two places above 2. The same argument determines every point of the auxiliary quartic whose parameter is rational: only the two points at infinity occur. Exact square identities also…",
+  "domain": "math.NT",
+  "tags": [
+    "msc:11D41",
+    "msc:11G05",
+    "msc:11Y50",
+    "2-Descent",
+    "biquadratic fields",
+    "elliptic Chabauty",
+    "generalised Fermat equation",
+    "rational fourth powers"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-15",
+  "version": 1,
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "none",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

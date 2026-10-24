@@ -1,0 +1,28 @@
+{
+  "key": "2610.00141",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00141v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00141v1",
+  "title": "Constant-Time O(1) AST Reduction and Native Delegate Compilation in RICIS-III",
+  "authors": [
+    "Дмитрий Алейников"
+  ],
+  "summary": "Traditional Computer Algebra Systems (CAS) and dynamic expression interpreters evaluate critical points and mathematical singularities via runtime limit approximations, Taylor series expansions, or recursive L'Hôpital routines. These procedures incur an unresolvable computational bottleneck: dynamic tree-traversal complexity of O(N) alongside runtime branching hazards and undefined IEEE-754 states (NaN, division-by-zero traps). This paper presents a formal engineering proof of how the Recursive Indexed Calculus of Identity and Singularity (RICIS-III v7.9) enables strict constant-time O(1)…",
+  "domain": "math.AG",
+  "tags": [
+    "msc:14J60"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "version": 1,
+  "ai_models": [
+    "Gemini"
+  ],
+  "authorship": "human",
+  "human_understanding": "all",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

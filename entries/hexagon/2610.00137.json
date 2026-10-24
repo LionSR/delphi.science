@@ -1,0 +1,40 @@
+{
+  "key": "2610.00137",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00137v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00137v1",
+  "title": "Proof of the Non-existence of Perfect Cuboids via Mordell-Weil Rank Exhaustion and Minimal Polynomial Irreducibility of the Perfect Cuboid Surface",
+  "authors": [
+    "Jonathan 𝑓(n) Reed"
+  ],
+  "summary": "This manuscript establishes the non-existence of the Perfect Cuboid---a rectangular parallelepiped with integer edges, face diagonals, and space diagonal. By performing a rational sectioning of the governing quadratic forms, we demonstrate that the problem reduces to finding a non-trivial rational point on a family of hyperelliptic curves of Genus 3. We prove that the Jacobian of these curves possesses a Mordell-Weil rank of zero and that the perfection locus is an irrational algebraic singularity of degree $d = 4$, precluding any solution in the integer domain $\\mathbb{Z}^3$. The…",
+  "domain": "math.NT",
+  "tags": [
+    "math.AG",
+    "math.LO",
+    "msc:11D41",
+    "msc:11G30",
+    "msc:14G05",
+    "msc:11Y50",
+    "2-Descent",
+    "Euler Brick",
+    "Hyperelliptic Curves",
+    "Interactive Theorem Proving",
+    "Jacobian Variety",
+    "Lean 4"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "version": 1,
+  "ai_models": [
+    "Gemini"
+  ],
+  "authorship": "mixed",
+  "human_understanding": "all",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

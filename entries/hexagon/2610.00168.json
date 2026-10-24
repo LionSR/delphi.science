@@ -1,0 +1,33 @@
+{
+  "key": "2610.00168",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00168v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00168v1",
+  "title": "Mobility Edge for Sparse Complex Gaussian Matrices",
+  "authors": [
+    "Patrick Lopatto"
+  ],
+  "summary": "We consider the sparse Hermitian random matrix supported on the Erdős–Rényi graph $G(n,p/n)$, whose nonzero entries are independent complex Gaussian variables of variance $1/p$, together with its local limit, a weighted Poisson–Galton–Watson tree. We prove that for every fixed and sufficiently large $p$, the limiting operator on the tree conditioned on survival has exactly one positive mobility edge $E_c(p)$: almost surely, its spectrum is purely absolutely continuous on $(-E_c(p),0)\\cup(0,E_c(p))$ and pure point outside $[-E_c(p),E_c(p)]$. Moreover, $E_c(p)/\\sqrt p$ converges to…",
+  "domain": "math.PR",
+  "tags": [
+    "msc:60B20",
+    "msc:82B44"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-08",
+  "version": 1,
+  "ai_models": [
+    "Claude Opus",
+    "ChatGPT",
+    "ChatGPT",
+    "ChatGPT"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

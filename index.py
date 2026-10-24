@@ -286,7 +286,7 @@ def refresh(older_than: int, limit: int, dry_run: bool) -> int:
 # Entry fields served as they are; to_item adds id, tags, published, category and subject.
 PASSTHROUGH = ("source", "url", "title", "authors", "summary", "domain", "origin", "agent_ready", "gone", "stars", "pdf",
                "family", "family_title", "formalized", "withdrawn", "withdrawn_on", "verified", "trust", "ai_models",
-               "formalizes", "repo", "json")
+               "formalizes", "formalizations", "authorship", "human_understanding", "repo", "json")
 
 
 PREFIXES = json.loads((Path(__file__).resolve().parent / "site" / "lib" / "prefixes.json").read_text())["prefixes"]

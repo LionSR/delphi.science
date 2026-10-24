@@ -1,0 +1,36 @@
+{
+  "key": "2610.00249",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00249v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00249v1",
+  "title": "Explicit positive lower density for the Collatz Conjecture",
+  "authors": [
+    "Kenny Lau"
+  ],
+  "summary": "Lech Mazur proved that a positive proportion of integers $n$ reach $1$ under the Collatz map in at most $10.46\\log n$ steps. We give a quantitative refinement of his construction. For any $X\\ge 2^{2^{2^{2^{87640}}}}$, at least $X/2^{2^{2^{87640}}}$ positive integers $n<X$ reach $1$ within $\\floor{10.46\\log n}$ ordinary steps, and $\\floor{3.4881\\log n}$ accelerated steps. We also obtain results for paths that include any prescribed integer $t$ not divisible by $3$. AxiomProver was used to obtain and formalize this result in Lean.",
+  "domain": "math.NT",
+  "tags": [
+    "msc:11B83",
+    "msc:37P99",
+    "msc:60G50",
+    "Collatz conjecture",
+    "arithmetic dynamics"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "version": 1,
+  "ai_models": [
+    "AxiomProver"
+  ],
+  "authorship": "mixed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": true,
+  "formalizations": [
+    "https://palomar-registry.org/entry.html?id=PALOMAR-2026-10-15-000013&version=1"
+  ],
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

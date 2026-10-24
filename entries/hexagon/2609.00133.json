@@ -1,0 +1,36 @@
+{
+  "key": "2609.00133",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2609.00133v1",
+  "pdf": "https://hexagonmath.org/pdf/2609.00133v1",
+  "title": "A Universal Noncommutative Splitting Algebra for Polynomials",
+  "authors": [
+    "Darij Grinberg"
+  ],
+  "summary": "Let $R$ be a commutative ring. We show that every homogeneous polynomial $f\\in R[x_{1},\\ldots,x_{m}]$ of degree $n$ splits into a product of $n$ homogeneous linear forms over a suitable noncommutative ring extension $S$ of $R$ (that is, over a noncommutative $R$-algebra $S$ whose structure morphism $R\\rightarrow S$ is injective). The algebra $S$ is universal for such factorizations and is free as an $R$-module. The proof uses Bergman's Diamond Lemma: we define $S$ by generators and relations, and the relations form a terminating reduction system that has no ambiguities and thus is confluent.…",
+  "domain": "math.RA",
+  "tags": [
+    "math.AC",
+    "math.CO",
+    "msc:13P10",
+    "msc:16S15",
+    "Bergman's diamond lemma",
+    "Gröbner bases",
+    "combinatorial algebra",
+    "noncommutative polynomials"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "version": 1,
+  "ai_models": [
+    "ChatGPT"
+  ],
+  "authorship": "mixed",
+  "human_understanding": "all",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

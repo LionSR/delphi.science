@@ -1,0 +1,38 @@
+{
+  "key": "2610.00238",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00238v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00238v1",
+  "title": "A nonlinear connectivity code larger than every linear code",
+  "authors": [
+    "Matěj Kripner",
+    "Václav Rozhoň",
+    "Robert Šámal",
+    "Martin Šindelář",
+    "Adrián Zámečník"
+  ],
+  "summary": "A connectivity code on a graph $H$ is a family of edge sets of $H$ whose pairwise symmetric differences are connected spanning subgraphs. Alon asked whether a nonlinear connectivity code can ever be larger than every linear one on the same graph. We answer this affirmatively: we construct a $4$-regular graph on fifteen vertices on which the largest connectivity code has nine members and the largest linear connectivity code has eight. The code is obtained by lifting a quaternary code of length six with pairwise agreement one through clique gadgets.",
+  "domain": "math.CO",
+  "tags": [
+    "math.IT",
+    "msc:94B25",
+    "msc:05C40",
+    "connectivity codes",
+    "graph codes",
+    "nonlinear codes"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "version": 1,
+  "ai_models": [
+    "Bolzano"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

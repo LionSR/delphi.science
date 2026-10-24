@@ -1,0 +1,41 @@
+{
+  "key": "2610.00230",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00230v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00230v1",
+  "title": "A Positive Dispersion Optimum for the Rounded Sample Mean: Sufficiency and Necessity of Finite Variance",
+  "authors": [
+    "Mark R. Diamond",
+    "Angela O'Brien-Malone"
+  ],
+  "summary": "A continuous quantity, observable only after nearest-lattice rounding, is estimated by the mean of $n$ rounded readings of an imperfect instrument. Averaged over the position of the true value within a rounding cell, the mean-squared error of this estimator is a function of one dimensionless parameter: the pre-rounding standard deviation $s$, measured in cell widths. A perfectly repeatable instrument ($s=0$) returns the same rounded value on every reading, so averaging provides no additional information; its cell-averaged error is the rounding floor $1/12$. We show that this floor is never…",
+  "domain": "math.ST",
+  "tags": [
+    "msc:62F10",
+    "msc:42A16",
+    "Fourier series",
+    "characteristic functions",
+    "mean-squared error",
+    "quantization error",
+    "rounded sample mean",
+    "rounding error"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "version": 1,
+  "ai_models": [
+    "Claude Opus",
+    "Gemini",
+    "ChatGPT",
+    "Kimi",
+    "Mathematica"
+  ],
+  "authorship": "mixed",
+  "human_understanding": "all",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

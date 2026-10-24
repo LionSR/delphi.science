@@ -1,0 +1,27 @@
+{
+  "key": "2610.00257",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00257v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00257v1",
+  "title": "Sequential Games",
+  "authors": [
+    "Rajesh Dachiraju"
+  ],
+  "summary": "We formulate a time-series game in which each player chooses a hidden Markov model (HMM) as a mixed strategy. The HMM generates a finite, variable-length sequence of probability vectors, and the payoff is assigned to the completed game as the sum of its stage rewards. We prove a conditional Nash-equilibrium existence result for games with a common finite bound on output lengths. The proof applies a fixed-point argument to the best-response correspondence when each player's admissible HMM-density set is nonempty, convex, and compact in $(L^1)$, and the completed-game payoff is bounded and…",
+  "domain": "math.FA",
+  "tags": [
+    "math.CA",
+    "msc:91A10"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "version": 1,
+  "authorship": "mixed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

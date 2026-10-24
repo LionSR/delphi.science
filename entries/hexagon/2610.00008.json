@@ -1,0 +1,46 @@
+{
+  "key": "2610.00008",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00008v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00008v1",
+  "title": "Finite Nash Equilibria and Dependent Mixed Strategies in Lean",
+  "authors": [
+    "Arthur",
+    "David Barros Hulak",
+    "Ruy J. G. B. de Queiroz"
+  ],
+  "summary": "We present two complementary Lean 4 developments of finite Nash equilibrium. The pure-game layer uses player-specific legal action sets, distinguishes one-way generalized ordinal potentials from bidirectional ordinal potentials, and proves potential-maximizer certificates, a local-maximum characterization, absence of strict-improvement cycles, and weak acyclicity. The mixed-game layers use either a common finite action type or a dependent finite action type for each player. They prove payoff equalization on equilibrium supports, Dirac payoff identities, continuity of the normalized…",
+  "domain": "math.LO",
+  "tags": [
+    "cs.LO",
+    "cs.MS",
+    "msc:91A10",
+    "msc:91A11",
+    "msc:68V20",
+    "Brouwer fixed point",
+    "Lean 4",
+    "Mathlib",
+    "Nash equilibrium",
+    "dependent action types",
+    "mixed strategies",
+    "potential games"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "version": 1,
+  "ai_models": [
+    "Codex"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": true,
+  "formalizations": [
+    "https://palomar-registry.org/entry?id=PALOMAR-2026-09-07-000009&version=1",
+    "https://palomar-registry.org/entry?id=PALOMAR-2026-09-07-000014&version=1"
+  ],
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-17"
+}

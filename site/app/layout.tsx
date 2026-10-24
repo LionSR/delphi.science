@@ -1,8 +1,10 @@
 import Script from 'next/script';
 import type { ReactNode } from 'react';
+import { SITE } from '../lib/view.ts';
 import './globals.css';
 
 export const metadata = {
+	metadataBase: new URL(SITE),
 	title: 'Open Research Index',
 	description: 'Research made with or by AI. Search it here, or through the API at /api/v1.',
 };
@@ -15,6 +17,7 @@ export default function Layout({ children }: { children: ReactNode }) {
 		<html lang="en">
 			<head>
 				<link rel="alternate" type="application/json" href="/api/v1" />
+				<link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
 			</head>
 			<body>
 				<main>

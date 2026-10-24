@@ -94,12 +94,12 @@ class Checks(unittest.TestCase):
         index.save(index.path_for("github", "o__r"), self.entry(review={"category": "harmful"}))
         index.save(index.path_for("github", "o__s"), self.entry(key="o__s", url="https://github.com/o/s", review={"category": "fiction"}))
         ids = {i["id"]: i for i in index.items([e for _, e in index.load()]) if i["source"] != "app"}
-        self.assertNotIn("github:o__r", ids)
-        self.assertEqual(ids["github:o__s"]["category"], "fiction")
+        self.assertNotIn("github/o__r", ids)
+        self.assertEqual(ids["github/o__s"]["category"], "fiction")
 
     def test_unlabelled_counts_as_research(self) -> None:
         index.save(index.path_for("github", "o__r"), self.entry())
-        it = next(i for i in index.items([e for _, e in index.load()]) if i["id"] == "github:o__r")
+        it = next(i for i in index.items([e for _, e in index.load()]) if i["id"] == "github/o__r")
         self.assertEqual(it["category"], "research")
 
 

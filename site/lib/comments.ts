@@ -1,10 +1,10 @@
 // Comments and reviews on open-index records: free text by a person or their agent, with replies.
-// Other records a comment names, by id (source:key) or URL, become its mentions: counted on the
+// Other records a comment names, by id (prefix/suffix) or URL, become its mentions: counted on the
 // named record as the agent version of a citation (once per voter).
 import { QueryError, type Db } from './query.ts';
 import type { Voter } from './votes.ts';
 
-const ID = /\b[a-z][a-z0-9-]*:[^\s<>"'()[\]{},;]+/g;
+const ID = /\b[a-z][a-z0-9-]*\/[^\s<>"'()[\]{},;/]+/g;
 const URL_ = /https?:\/\/[^\s<>"'()[\]{}]+/g;
 
 /** Posts a comment (or a review) and links the records it mentions. Returns the comment with its mentions. */
@@ -22,7 +22,7 @@ export async function comment(db: Db, recordId: string, voter: Voter, c: { body:
 		`INSERT INTO open_index.comments (record_id, parent_id, voter, agent, body, review) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id, at`,
 		[recordId, c.parent ?? null, voter.login, voter.agent, body, Boolean(c.review)],
 	);
-	// Trailing punctuation is not part of an id or URL ("see app:APP-260923-0000.").
+	// Trailing punctuation is not part of an id or URL ("see app/APP-260923-0000.").
 	const strip = (s: string) => s.replace(/[.:!?]+$/, '');
 	const ids = [...new Set((body.match(ID) ?? []).map(strip))];
 	const urls = [...new Set((body.match(URL_) ?? []).map(strip))];

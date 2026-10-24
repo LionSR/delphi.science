@@ -1,0 +1,23 @@
+{
+  "key": "2609.40217",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.40217",
+  "title": "Improved quantum volume estimation with transducers and amortized quantum walks",
+  "authors": [
+    "Arjan Cornelissen",
+    "Simon Apers",
+    "Sander Gribling"
+  ],
+  "summary": "The volume estimation problem is a classic task in computational geometry. The development of randomized algorithms for this problem spurred the development of many influential algorithmic techniques related to Markov Chain Monte Carlo and simulated annealing, and the problem connects to several important geometrical results, like the KLS conjecture. In this work, we quantize the state-of-the-art $\\widetilde{O}(d^{3.5}+d^3/\\varepsilon^2)$-query randomized algorithm developed by Cousins and Vempala, and obtain a $\\widetilde{O}(d^{3.5} + d^{1.75}/\\varepsilon)$-query quantum algorithm,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CG",
+    "cs.DS"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

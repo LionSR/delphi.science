@@ -1,0 +1,23 @@
+{
+  "key": "2607.26880",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.26880",
+  "title": "Calibrated Pressure-Observable Born and Hessian Actions for Quantum-Assisted Waveform Inversion",
+  "authors": [
+    "Guanyu Li",
+    "Jiwei Jia",
+    "Yu Wang",
+    "Yuping Duan"
+  ],
+  "summary": "We construct a pressure-consistent operator-and-readout interface for Born, adjoint, and Gauss--Newton actions in constant-density acoustic full-waveform inversion (FWI) using Schrödingerised propagation. The energy variables $π=c^{-1}\\partial_t u$ and $q=\\nabla u$ yield an auxiliary-space Hamiltonian, while physical pressure $p=cπ$ depends explicitly on wavespeed. Its derivative $D(cπ)[c_0](δc)=c_0δπ+δc\\,π_0$ combines propagated wavefield sensitivity with a direct receiver-calibration term. Duhamel and receiver-row differentiation retain both contributions in the Born map, its adjoint, and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.NA"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

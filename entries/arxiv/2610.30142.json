@@ -1,0 +1,25 @@
+{
+  "key": "2610.30142",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.30142",
+  "title": "Strongly Regular Graph Construction via Quadratic Binary Optimization",
+  "authors": [
+    "D. Osorio",
+    "P. Andagana",
+    "V. González",
+    "J. Czartowski",
+    "D. Goyeneche"
+  ],
+  "summary": "Strongly regular graphs, hereafter SRGs, are highly structured combinatorial objects of central interest in algebraic graph theory and quantum information, whose explicit construction becomes rapidly intractable as the number of vertices grows; Conway's still unresolved $99$-graph problem is an emblematic example. The matrix equation defining SRGs is quadratic in the binary edge variables, so the natural penalty enforcing it, a sum of squared residuals, is quartic and lies outside quadratic unconstrained binary optimization, known as QUBO. We prove a considerably stronger obstruction, namely…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.CO",
+    "quant-ph"
+  ],
+  "published": "2026-07-31",
+  "updated": "2026-07-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

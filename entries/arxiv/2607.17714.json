@@ -1,0 +1,21 @@
+{
+  "key": "2607.17714",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.17714",
+  "title": "Formal Verification of Continuous-Variable Quantum Programs",
+  "authors": [
+    "Stefanie Muroya",
+    "Thomas A. Henzinger"
+  ],
+  "summary": "We provide a formal framework for Continuous-Variable Quantum Computing (CQC). While CQC is supported by photonic quantum hardware, we are not aware of a formal semantics for continuous-variable quantum programs nor of a unary Hoare logic for their verification. There are several technical obstacles to extending to CQC any of the formal frameworks available for Discrete-Variable Quantum Computing (DQC). Most importantly, continuous-variable quantum programs act on {\\em infinite-dimensional} Hilbert spaces; their measurement outcomes are often {\\em unbounded} and have expected values that are…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LO"
+  ],
+  "published": "2026-07-20",
+  "updated": "2026-07-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

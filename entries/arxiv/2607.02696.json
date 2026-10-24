@@ -1,0 +1,22 @@
+{
+  "key": "2607.02696",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.02696",
+  "title": "Parametrized-circuit-free quantum regression with variance regularization",
+  "authors": [
+    "Yerassyl Balkybek",
+    "Andrey Kardashin",
+    "Vladimir V. Palyulin",
+    "Konstantin Antipin"
+  ],
+  "summary": "Quantum regression tasks for predicting properties of quantum states are commonly addressed using variational quantum algorithms. While variational quantum circuits are highly expressive and allow to achieve reasonable accuracy, training these circuits may demand a considerable amount of time and resources. In this work, we propose an approach of constructing problem-specific quantum regression models with encoding relevant symmetries and regularizing the variance. The proposed method is based on finding the coefficients of the linear combination of suitably chosen observables. Although it…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-02",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2603.03776",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.03776",
+  "title": "Overflow-Safe Polylog-Time Parallel Minimum-Weight Perfect Matching Decoder: Toward Experimental Demonstration",
+  "authors": [
+    "Ryo Mikami",
+    "Hayata Yamasaki"
+  ],
+  "summary": "Fault-tolerant quantum computation (FTQC) requires fast and accurate decoding of quantum errors, which is often formulated as a minimum-weight perfect matching (MWPM) problem. A determinant-based approach has been proposed as a novel method to surpass the conventional polynomial runtime of MWPM decoding via the blossom algorithm, asymptotically achieving polylogarithmic parallel runtime. However, the existing approach requires an impractically large bit length to represent intermediate values during the computation of the matrix determinant; moreover, when implemented on a finite-bit…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-04",
+  "updated": "2026-04-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

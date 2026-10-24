@@ -1,0 +1,24 @@
+{
+  "key": "2610.06076",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06076",
+  "title": "Quantum data loading from the learned shared structure of real signals",
+  "authors": [
+    "Pablo Herrero Gómez",
+    "Antonio Jimeno Morenilla",
+    "David Muñoz-Hernández",
+    "Higinio Mora Mora"
+  ],
+  "summary": "Preparing quantum states from classical data can cost more than the computation they serve; most loaders tailor a circuit to each input. Here we show that the signals of a real dataset share structure that can be learned once and reused. Our quantum-native loader learns a low-dimensional description of a dataset and prepares every signal with one fixed circuit set by a few numbers. Across seven views of five public datasets it meets the targets of the strongest structured loader at equal gate cost with several times fewer numbers per signal. These numbers can be inferred from a random…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG",
+    "physics.comp-ph"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2610.00548",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00548",
+  "title": "A polynomial-time classical sampler for noisy quantum circuits from statistical mechanics",
+  "authors": [
+    "Jon Nelson",
+    "Joel Rajakumar",
+    "Chao Yin",
+    "Yifan F. Zhang",
+    "Michael J. Gullans"
+  ],
+  "summary": "Developing classical simulation algorithms for noisy quantum circuits is essential to delineating the limits of quantum advantage. Existing classical sampling approaches for general circuits require circuit depths to grow logarithmically with system size, so that noise drives the global output state close to a trivial state. Here we show that local accumulation of noise at a depth independent of system size is already sufficient. Specifically, we prove that any geometrically local circuit composed of unital operations and interspersed with single-qubit depolarizing noise of strength $p$…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

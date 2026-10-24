@@ -1,0 +1,20 @@
+{
+  "key": "2609.20183",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20183",
+  "title": "Fast Unitary Preparation of Surface-Code Logical States on Neutral-Atom Hardware",
+  "authors": [
+    "Ludwig Schmid",
+    "Robert Wille"
+  ],
+  "summary": "Preparing logical states is a constantly recurring primitive at the start of any surface-code-based quantum computation. The standard measurement-based protocol is expensive on neutral atoms, since measurements are orders of magnitude slower than gates and, on single-zone architectures, additionally require shuttling the atoms to a readout zone. In this work, we present a measurement-free, unitary preparation of surface-code Pauli eigenstates tailored to neutral atoms. A bidirectional stabilizer-expanding CNOT cascade grows the patch from its middle line outward in depth $(d{+}3)/2$, while…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

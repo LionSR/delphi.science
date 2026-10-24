@@ -1,0 +1,23 @@
+{
+  "key": "2607.11490",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.11490",
+  "title": "AtomFlow: An End-to-End FPGA-Based Control Architecture for Neutral Atom Quantum Computers",
+  "authors": [
+    "Xiaorang Guo",
+    "Jonas Winklmann",
+    "Vengkeat Chea",
+    "Martin Schulz"
+  ],
+  "summary": "Neutral Atom Quantum Computing (NAQC) is an emerging modality for scalable quantum computation, valued for its long coherence times and the naturally identical atomic qubits. However, one of the main drawbacks is its slow execution rate, dominated by lengthy classical processing tasks, such as fluorescence imaging, cooling, and atom rearrangement. We address this bottleneck with AtomFlow, a field-programmable gate array (FPGA)-based control architecture that consolidates fluorescence-image analysis and a newly developed atom-rearrangement algorithm onto a single Zynq UltraScale+ device. By…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AR"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

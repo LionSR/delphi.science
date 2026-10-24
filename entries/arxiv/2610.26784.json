@@ -1,0 +1,23 @@
+{
+  "key": "2610.26784",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.26784",
+  "title": "High-Accuracy Propagation-Assisted Local Decoding for Fast Transversal Clifford Circuits",
+  "authors": [
+    "Mark Webber",
+    "Simanraj Sadana",
+    "Matthew A. Lane",
+    "Lucy Jade Robson",
+    "Anthony O'Rourke"
+  ],
+  "summary": "We benchmark the Iterative Redecode Scheme (IRS) on fast transversal Clifford circuits, achieving high-accuracy correlated decoding using local memory-style detectors and decoders. On a deep random Clifford benchmark, IRS yields approximately $4\\times$ lower logical failure rates than the ghost protocol at $d=11$ with matched buffers, and $15\\times$ lower rates than logical observable matching (LOM). In three-block GHZ preparation, IRS achieves $2\\times$ lower logical error rates than reliable logical Pauli-product decoding with matched initialisation, improving to $25\\times$ at $d=19$ with…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

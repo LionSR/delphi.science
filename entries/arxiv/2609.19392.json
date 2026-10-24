@@ -1,0 +1,24 @@
+{
+  "key": "2609.19392",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.19392",
+  "title": "Transformers as Intrinsic Optimizers for Quantum Approximate Optimization Algorithm",
+  "authors": [
+    "Kuan-Cheng Chen",
+    "Xiaotian Xu",
+    "Hiromichi Matsuyama",
+    "Wei-Hao Huang",
+    "Haomu Yuan",
+    "Yu Yamashiro"
+  ],
+  "summary": "The Quantum Approximate Optimization Algorithm (QAOA) is a leading variational framework for combinatorial optimization on noisy intermediate-scale quantum hardware, but its practical performance depends strongly on the classical optimizer used to train its variational parameters. This outer-loop optimization is often nonconvex, initialization-sensitive, and costly when repeated across large families of related problem instances. In this work, we propose a Transformer-based intrinsic optimization framework for QAOA, in which the optimizer itself is learned and embedded directly into the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

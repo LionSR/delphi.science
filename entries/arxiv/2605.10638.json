@@ -1,0 +1,19 @@
+{
+  "key": "2605.10638",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.10638",
+  "title": "Quantifying the Hadamard Resilience Effect and the Coherence Gap in NISQ-Era Classifiers",
+  "authors": [
+    "Wladimir Silva"
+  ],
+  "summary": "We report on a fundamental disparity between stochastic noise models and algorithmic performance in NISQ-era classifiers. Utilizing the ibm_kingston processor, we characterize the \"Kingston Constant\" ($κ\\approx 0.07$), representing a 93% signal magnitude collapse. Despite this decay, we show via a hardware-calibrated stochastic digital twin that a Hadamard Test based Perceptron maintains a 93.9% accuracy for the MNIST dataset, validating our proposed Hadamard Resilience Effect under affine depolarization. Through parametric simulation, we establish a critical gate-noise threshold at…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

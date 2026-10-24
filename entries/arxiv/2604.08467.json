@@ -1,0 +1,26 @@
+{
+  "key": "2604.08467",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.08467",
+  "title": "Accelerating Quantum Tensor Network Simulations with Unified Path Variations and Non-Degenerate Batched Sampling",
+  "authors": [
+    "Taylor Lee Patti",
+    "Paavai Pari",
+    "Yang Gao",
+    "Azzam Haidar",
+    "Thien Nguyen",
+    "Tom Lubowe",
+    "Daniel Lowell",
+    "Brucek Khailany"
+  ],
+  "summary": "Quantum trajectory methods reduce the computational overhead of simulating noisy quantum systems, approximating them with $m$ stochastically sampled $2^n$-entry quantum statevectors rather than exact $2^{2n}$-entry density matrices. Recently, Pre-Trajectory Sampling with Batched Execution (PTSBE) has dramatically increased the data collection rate of these methods. While statevector PTSBE has demonstrated data collection speedups of over $10^6 \\times$, tensor network implementations only achieved $\\sim 15 \\times$ speedup. This comparatively modest tensor network advantage stemmed from 1)…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-09",
+  "updated": "2026-04-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2610.17017",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.17017",
+  "title": "Photon-stimulated decay of $χ$-matched ancillas causes unheralded bit flips in bosonic codes",
+  "authors": [
+    "Aleksandr Gulkanov"
+  ],
+  "summary": "Bosonic codes often read out their syndrome with a transmon ancilla whose computational levels $g$ and $f$ have equal parity and matched dispersive shifts: a decay $f\\to e$ is then heralded and leaves the code intact, while the direct $f\\to g$ is forbidden by parity. We show that the photons of the code open this decay at first order in the ancilla's decay rate. Dressing by the code mode lets the charge noise that limits the ancilla's $T_1$ drive a photon-stimulated Raman decay $|f,n\\rangle\\to|g,n+1\\rangle$, at $(n+1)(χ_{ge}/2g_{01})^2$ times the $f\\to e$ rate for a smooth noise spectrum.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.supr-con"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

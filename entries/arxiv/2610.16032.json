@@ -1,0 +1,20 @@
+{
+  "key": "2610.16032",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16032",
+  "title": "Sequential optimization for orbital-optimized variational quantum eigensolvers",
+  "authors": [
+    "Hiromichi Hayashi",
+    "Takeshi Sato"
+  ],
+  "summary": "Orbital optimization within the variational quantum eigensolver (VQE) framework is useful for improving active-space quality and accurately capturing electron correlation with shallow quantum circuits. The orbital-optimized unitary coupled cluster (OO-UCC) method [W. Mizukami et al., Phys. Rev. Res. 2, 033421 (2020)], in its original formulation, employs the orbital gradient and Hessian in a Newton--Laphson procedure. In this study, we propose sequential orbital-optimized unitary coupled cluster doubles (SOO-UCCD), extending the gradient-free sequential minimal optimization approach [K. M.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

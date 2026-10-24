@@ -1,0 +1,20 @@
+{
+  "key": "2605.17061",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.17061",
+  "title": "quantum-safe: Bridging the Post-Quantum Production Gap with a Hybrid-by-Default Python Cryptography Library",
+  "authors": [
+    "Animesh Shaw"
+  ],
+  "summary": "FIPS 203, 204 and 205 closed the algorithmic gap in post-quantum cryptography (PQC); the production gap -- hybrid combiners, conformance evidence, migration tooling, stateful signing, protocol helpers -- remains open. A methodology that scores it must not choose its own dimensions, so we anchor nine to external requirements (CNSA 2.0, CMVP, the TNO CADI survey, the IETF hybrid draft). We present quantum-safe, a hybrid-by-default Python library built against this rubric, and an audit of nine PQC libraries (September 2026). The exercise can lower our own score, and it does. Hybrid combiners…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "quant-ph"
+  ],
+  "published": "2026-05-16",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

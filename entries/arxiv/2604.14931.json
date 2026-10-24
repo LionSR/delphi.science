@@ -1,0 +1,24 @@
+{
+  "key": "2604.14931",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.14931",
+  "title": "Learning to Concatenate Quantum Codes",
+  "authors": [
+    "Nico Meyer",
+    "Christopher Mutschler",
+    "Dominik Seuß",
+    "Andreas Maier",
+    "Daniel D. Scherer"
+  ],
+  "summary": "Concatenating quantum error correction codes scales error correction capability by driving logical error rates down double-exponentially across levels. However, the noise structure shifts under concatenation, making it hard to choose an optimal code sequence. We automate this choice by estimating the effective noise channel after each level and selecting the next code accordingly. In particular, we use learning-based methods to tailor small, non-additive encoders when the noise exhibits sufficient structure, then switch to standard codes once the noise is nearly uniform. In simulations, this…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-04-16",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

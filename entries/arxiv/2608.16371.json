@@ -1,0 +1,22 @@
+{
+  "key": "2608.16371",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.16371",
+  "title": "Scalable nuclear shell model calculations on noisy quantum computers",
+  "authors": [
+    "Durgesh Pandey",
+    "Ankit Kumar Das",
+    "P. Arumugam"
+  ],
+  "summary": "The exact diagonalization of the nuclear shell model scales exponentially, leading to severe memory bottlenecks in classical high-performance computing (HPC). While hybrid quantum algorithms like the Variational Quantum Eigensolver (VQE) aim to overcome these limits, their deep quantum circuits and iterative feedback loops are susceptible to substantial noise inherent in the current Noisy Intermediate-Scale Quantum (NISQ) hardware. This noise renders several algorithms, such as the VQE, impractical for large-scale calculations despite sophisticated noise-mitigation techniques. As a pragmatic…",
+  "domain": "nucl-th",
+  "tags": [
+    "nucl-th",
+    "quant-ph"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2605.11253",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11253",
+  "title": "Low-rank compression of two-electron reduced density matrices",
+  "authors": [
+    "Kemal Atalar",
+    "Hugh G. A. Burton",
+    "Andreas Grüneis",
+    "George H. Booth"
+  ],
+  "summary": "Two-body reduced density matrices (2RDMs) encode the essential two-electron physics of electronic states, but their quartic storage cost poses a major limitation in practical workflows. We investigate a simple protocol to compress both transition and non-transition 2RDMs into a lower-rank representation that preserves their wedge-product structure and physical symmetries under truncation. The resulting decomposition couples Coulomb and exchange channels through a common set of low-rank factors, yielding a more compact rank-sparse representation than single-channel factorizations. For…",
+  "domain": "physics.chem-ph",
+  "tags": [
+    "physics.chem-ph",
+    "cond-mat.str-el",
+    "physics.comp-ph",
+    "quant-ph"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

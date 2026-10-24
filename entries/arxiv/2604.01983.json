@@ -1,0 +1,29 @@
+{
+  "key": "2604.01983",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.01983",
+  "title": "Towards Chemically Accurate and Scalable Quantum Simulations on IQM Quantum Hardware: A Quantum-HPC Hybrid Approach",
+  "authors": [
+    "Anurag K. S. V.",
+    "Ashish Kumar Patra",
+    "Manas Mukherjee",
+    "Alok Shukla",
+    "Sai Shankar P.",
+    "Ruchika Bhat",
+    "Radhika T. S. L.",
+    "Jaiganesh G"
+  ],
+  "summary": "We present a large-scale experimental study of quantum-computing-based molecular simulation carried out on IQM's Sirius 24-qubit superconducting processor, utilizing up to 16 operational qubits. The work employs Sample-based Quantum Diagonalization (SQD) together with the Local Unitary Cluster Jastrow (LUCJ) ansatz to estimate ground-state energies for a set of benchmark molecules, including H$_2$, LiH, BeH$_2$, H$_2$O, and NH$_3$. In addition, we introduce a Linear-CNOT variant of the Unitary Coupled-Cluster Singles and Doubles (LCNot-UCCSD) ansatz within the SQD workflow, trading higher…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET",
+    "physics.chem-ph",
+    "physics.comp-ph"
+  ],
+  "published": "2026-04-02",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

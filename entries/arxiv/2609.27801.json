@@ -1,0 +1,22 @@
+{
+  "key": "2609.27801",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.27801",
+  "title": "Improved Transversal Non-Clifford Gates from Cup Products",
+  "authors": [
+    "Louis Golowich",
+    "Itzhak Tamo",
+    "Guanyu Zhu"
+  ],
+  "summary": "It is a major challenge in quantum fault-tolerance to obtain low-overhead protocols for performing non-Clifford gates. In this vein, we construct quantum codes with low-weight stabilizers that support transversal (i.e. low-depth) implementations of the non-Clifford $C^{r-1}Z$ gate, for every constant $r\\geq 3$. In particular, we obtain length-$n$ quantum LDPC codes (with constant-weight stabilizers) of polynomial distance $d\\geq n^{(1-ε)/r}$ supporting transversal $C^{r-1}Z$ gates on a close-to-linear number $k\\geq n^{1-ε}$ of disjoint tuples of logical qubits, for arbitrarily small $ε>0$.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.IT"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

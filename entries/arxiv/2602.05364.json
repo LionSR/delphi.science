@@ -1,0 +1,24 @@
+{
+  "key": "2602.05364",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05364",
+  "title": "Hybrid Quantum-Classical Optimization for Multi-Objective Supply Chain Logistics",
+  "authors": [
+    "Raoul Heese",
+    "Timothée Leleu",
+    "Sam Reifenstein",
+    "Christian Nietner",
+    "Yoshihisa Yamamoto"
+  ],
+  "summary": "A multi-objective logistics optimization problem from a real-world supply chain is formulated as a Quadratic Unconstrained Binary Optimization Problem (QUBO) that minimizes cost, emissions, and delivery time, while maintaining target distributions of supplier workshare. The model incorporates realistic constraints, including part dependencies, double sourcing, and multimodal transport. Two hybrid quantum-classical solvers are proposed: a structure-aware informed tree search (IQTS) and a modular bilevel framework (HBS), combining quantum subroutines with classical heuristics. Experimental…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "quant-ph"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-02-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

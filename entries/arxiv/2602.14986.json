@@ -1,0 +1,21 @@
+{
+  "key": "2602.14986",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14986",
+  "title": "Scaling QAOA: transferring optimal adiabatic schedules from small-scale to large-scale variational circuits",
+  "authors": [
+    "Ugo Nzongani",
+    "Dylan Laplace Mermoud",
+    "Arthur Braida"
+  ],
+  "summary": "The Quantum Approximate Optimization Algorithm (QAOA) is a leading approach for combinatorial optimization on near-term quantum devices, yet its scalability is limited by the difficulty of optimizing \\(2p\\) variational parameters for a large number \\(p\\) of layers. Recent empirical studies indicate that optimal QAOA angles exhibit concentration and transferability across problem sizes. Leveraging this observation, we propose a schedule-learning framework that transfers spectral-gap-informed adiabatic control strategies from small-scale instances to larger systems. Our method extracts the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-02-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

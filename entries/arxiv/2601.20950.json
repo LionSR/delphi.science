@@ -1,0 +1,22 @@
+{
+  "key": "2601.20950",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.20950",
+  "title": "Parametric Quantum State Tomography with HyperRBMs",
+  "authors": [
+    "Simon Tonner",
+    "Viet T. Tran",
+    "Richard Kueng"
+  ],
+  "summary": "Quantum state tomography (QST) is essential for validating quantum devices but suffers from exponential scaling in system size. Neural-network quantum states, such as Restricted Boltzmann Machines (RBMs), can efficiently parameterize individual many-body quantum states and have been successfully used for QST. However, existing approaches are point-wise and require retraining at every parameter value in a phase diagram. We introduce a parametric QST framework based on a hypernetwork that conditions an RBM on Hamiltonian control parameters, enabling a single model to represent an entire family…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-01-28",
+  "updated": "2026-01-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2606.17495",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.17495",
+  "title": "Impact of Network Constraints on Fault-Tolerant Distributed Quantum Computing",
+  "authors": [
+    "Eneet Kaur",
+    "Shahrooz Pouryousef",
+    "Nitish Kumar Chandra",
+    "Hassan Shapourian",
+    "Jiapeng Zhao",
+    "Ramana Kompella",
+    "Reza Nejabati"
+  ],
+  "summary": "As we move towards scalable and modular quantum computing, quantum data centres become imperative. Existing analyses typically treat network constraints in isolation or through simplified models, leaving the interplay between error correction operations and communication resources underexplored. In this work, we present an end-to-end simulation framework that jointly models surface-code operations, internal QPU connectivity, and realistic network constraints including finite entanglement generation rates, limited communication qubits, and bandwidth contention, producing execution latency,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

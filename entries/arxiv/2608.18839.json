@@ -1,0 +1,24 @@
+{
+  "key": "2608.18839",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.18839",
+  "title": "Near-Optimal Mixedness Testing with Pauli Measurements",
+  "authors": [
+    "Jayadev Acharya",
+    "Abhilash Dharmavarapu",
+    "Yuhan Liu",
+    "Nengkun Yu"
+  ],
+  "summary": "We consider a fundamental problem of \\emph{mixedness testing}: Given $n$ copies of an $N$-qubit state $ρ$, determine whether $ρ= \\mathbb{I}_d/d$ or $\\|ρ-\\mathbb{I}_d/d\\|_1 \\geq \\varepsilon$ with high probability, where $d = 2^N$. In particular, we focus on performing this task in the practical setting of single-qubit measurements, where measurements are prepared independently on each qubit. We provide a nearly complete picture of single-qubit mixedness tesing by showing $n = \\tildeΘ\\left(\\sqrt{10}^N/\\varepsilon^2\\right)$. To establish our lower bound, we introduce a measurement-dependent…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.IT"
+  ],
+  "published": "2026-08-19",
+  "updated": "2026-09-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

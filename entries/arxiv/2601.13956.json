@@ -1,0 +1,24 @@
+{
+  "key": "2601.13956",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.13956",
+  "title": "Tensor Network Assisted Distributed Variational Quantum Algorithm for Large Scale Combinatorial Optimization Problem",
+  "authors": [
+    "Yuhan Huang",
+    "Siyuan Jin",
+    "Yichi Zhang",
+    "Qi Zhao",
+    "Jun Qi",
+    "Qiming Shao"
+  ],
+  "summary": "Although quantum computing holds promise for solving Combinatorial Optimization Problems (COPs), the limited qubit capacity of NISQ hardware makes large-scale instances intractable. Conventional methods attempt to bridge this gap through decomposition or compression, yet they frequently fail to capture global correlations of subsystems, leading to solutions of limited quality. We propose the Distributed Variational Quantum Algorithm (DVQA) to overcome these limitations, enabling the solution of 1,000-variable instances on constrained hardware. A key innovation of DVQA is its use of the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-20",
+  "updated": "2026-01-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

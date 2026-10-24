@@ -1,0 +1,22 @@
+{
+  "key": "2610.12400",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.12400",
+  "title": "Measure Now, Mitigate Later: Virtual Error Cancellation for Logical Quantum Circuits",
+  "authors": [
+    "Oles Shtanko",
+    "Saswata Roy",
+    "Shashwat Kumar",
+    "Zlatko Minev"
+  ],
+  "summary": "Early fault-tolerant quantum algorithms are a key step in scalable quantum computing, but are ultimately constrained by residual, uncorrectable logical errors. Logical quantum error mitigation can eliminate this bias, however its standard requirements include prior noise characterization, more complex experiments, and substantial sampling overhead. Although no mitigation technique can simultaneously overcome all three constraints, we demonstrate that the first two---noise learning and need for modified circuits---can be completely bypassed for logical circuits by leveraging only syndrome…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

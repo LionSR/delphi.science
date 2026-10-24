@@ -1,0 +1,23 @@
+{
+  "key": "2609.32096",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32096",
+  "title": "Learning Scattering Amplitudes with Transformer Reinforcement Learning",
+  "authors": [
+    "Philip Velie",
+    "Tianji Cai",
+    "Piyush Jha",
+    "Vijay Ganesh",
+    "Aishik Ghosh"
+  ],
+  "summary": "We introduce a transformer reinforcement learning algorithm that learns to solve high loop-level scattering amplitudes in planar N = 4 Super Yang-Mills theory. Our algorithm improves on previous transformer-only results by incorporating previously derived symmetries and relationships into the learning algorithm. This results in a greatly decreased fraction of the solution that needs to be known a priori to solve the entire problem. An additional benefit is that our algorithm also ensures that every output obeys the set of known relationships. Rather than predicting all coefficients…",
+  "domain": "hep-th",
+  "tags": [
+    "hep-th"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

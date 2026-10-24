@@ -1,0 +1,19 @@
+{
+  "key": "2606.13244",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.13244",
+  "title": "Coupling-Grouped XY-QAOA for Joint Anomaly-Feature Selection",
+  "authors": [
+    "Pauli Taipale"
+  ],
+  "summary": "Selecting anomalous samples and explanatory features under fixed cardinalities defines a coupled optimization problem: feature-first selection can overlook features whose usefulness depends on the selected samples. In the analyzed model, joint calibration-error sensitivity is sample-count independent, while the sum-column feature-first rule's sensitivity grows linearly. To optimize this formulation, we introduce Coupling-Grouped XY Quantum Approximate Optimization Algorithm (CG-XY-QAOA), with constraint-preserving mixers and block-structured phase angles. On matched sparse IBM Heron R3…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

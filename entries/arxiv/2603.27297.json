@@ -1,0 +1,22 @@
+{
+  "key": "2603.27297",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.27297",
+  "title": "NNQA: Neural-Native Quantum Arithmetic for End-to-End Polynomial Synthesis",
+  "authors": [
+    "Ziqing Guo",
+    "Jie Li",
+    "Yong Chen",
+    "Ziwen Pan"
+  ],
+  "summary": "Hybrid classical quantum learning is often bottlenecked by communication overhead and approximation error from generic variational ansatzes. In this study, we introduce Neural Native Quantum Arithmetic (NNQA), which compiles classically learned nonlinear representations into precise quantum arithmetic composed of native unitary blocks. Theoretically, we prove that the universal approximation of quantum polynomial arithmetic can be realized by transforming a classical neural network into a quantum circuit, with the resulting error arising solely from measurement shot noise, thereby extending…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-28",
+  "updated": "2026-03-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

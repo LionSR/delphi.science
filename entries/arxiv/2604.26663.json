@@ -1,0 +1,21 @@
+{
+  "key": "2604.26663",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26663",
+  "title": "Hardware-Efficient Hamiltonian Simulation via Trotter-Initialized Variational Optimization with Native Placement",
+  "authors": [
+    "F. S. Luiz",
+    "P. N. Ferreira",
+    "M. C. de Oliveira"
+  ],
+  "summary": "Compiling time-evolution operators of the form $U(t)=e^{-iHt}$ into hardware-native gate sequences is a central bottleneck for digital quantum simulation on noisy intermediate-scale quantum (NISQ) devices. Generic transpilation treats $U(t)$ as an arbitrary unitary, discarding the structure of Hamiltonian dynamics and producing circuits whose depth exceeds hardware coherence limits. We introduce a structure-aware compilation framework that treats product-formula decompositions as synthesis primitives rather than simulation approximations. The method combines (i) native placement of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

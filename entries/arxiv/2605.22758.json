@@ -1,0 +1,21 @@
+{
+  "key": "2605.22758",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.22758",
+  "title": "A sharp interaction-degree threshold for simulating QAOA",
+  "authors": [
+    "Ralfs Āboliņš",
+    "Andris Ambainis"
+  ],
+  "summary": "We identify a sharp interaction-degree threshold for the classical simulation of QAOA with $2$-local cost functions. At degree~$3$, classical sampling from depth-$1$ QAOA, even within multiplicative error $2^{n^{s}}$ for any fixed $s < 1$, would collapse the polynomial hierarchy to its third level. At degree $2$, exact classical sampling from depth-$p$ QAOA on $n$ qubits runs in time $n^{O(1)}$ whenever $p = O(\\log n)$. The hard degree-$3$ instances have trivially optimizable cost functions, so sampling hardness does not by itself imply a quantum optimization advantage.",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-05-21",
+  "updated": "2026-06-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2609.14519",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.14519",
+  "title": "Robustness of Hidden-Variable Theories and Matrix Scaling",
+  "authors": [
+    "Giulio Malavolta",
+    "Harold Nieuwboer",
+    "Akshay Ramachandran",
+    "Michael Walter"
+  ],
+  "summary": "Motivated by quantum foundations and complexity theory, Aaronson formalized a hidden-variable theory inspired by a proposal by Schrödinger. To any quantum state and unitary, this Schrödinger theory assigns a joint probability distribution via the Sinkhorn algorithm: rescale the columns and rows of the entrywise modulus of the unitary so that the marginals match the Born rule for the initial and final quantum states, respectively. He conjectured that this map is robust, i.e., inverse polynomially small perturbations in the inputs lead to inverse polynomially small perturbations of the joint…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math-ph",
+    "math.OC"
+  ],
+  "published": "2026-09-13",
+  "updated": "2026-09-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

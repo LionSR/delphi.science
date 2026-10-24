@@ -1,0 +1,21 @@
+{
+  "key": "2604.09957",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.09957",
+  "title": "Mitigating Barren Plateaus in Variational Quantum Circuits through PDE-Constrained Loss Functions",
+  "authors": [
+    "Prasad Nimantha Madusanka Ukwatta Hewage",
+    "Midhun Chakkravarthy",
+    "Ruvan Kumara Abeysekara"
+  ],
+  "summary": "The barren plateau phenomenon; where cost function gradients vanish exponentially with system size; remains a fundamental obstacle to training variational quantum circuits (VQCs) at scale. We demonstrate, both theoretically and numerically, that embedding partial differential equation (PDE) constraints into the VQC loss function provides a natural and effective mitigation mechanism against barren plateaus. We derive analytical gradient variance lower bounds showing that physics-constrained loss functions composed of local PDE residuals evaluated at spatial collocation points inherit the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-10",
+  "updated": "2026-04-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

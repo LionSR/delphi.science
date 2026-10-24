@@ -1,0 +1,30 @@
+{
+  "key": "2606.11076",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.11076",
+  "title": "Coset Ensemble Decoder for Quantum Error Correction with Algorithm-Hardware Co-Design",
+  "authors": [
+    "Shuang Liang",
+    "Jubo Xu",
+    "Giulio Bassanino",
+    "Qianzhou Wang",
+    "Yidong Zhou",
+    "Yuncheng Lu",
+    "Zhiwen Mo",
+    "Paul H. J. Kelly",
+    "Bo Yuan",
+    "Wayne Luk",
+    "Hongxiang Fan"
+  ],
+  "summary": "Reliable large-scale quantum computation relies on fault-tolerant architectures, where quantum error correction (QEC) continuously extracts and decodes error syndromes in real time. A critical component in QEC is the decoder, a classical subsystem that must simultaneously deliver high logical accuracy and ultra-low latency. This paper presents a novel algorithm-hardware co-design that improves the accuracy-latency trade-off over existing approaches such as vanilla Minimum-Weight Perfect Matching (MWPM) and Union-Find (UF) decoders. At the algorithmic level, we introduce coset ensemble…",
+  "domain": "cs.AR",
+  "tags": [
+    "cs.AR",
+    "quant-ph"
+  ],
+  "published": "2026-06-09",
+  "updated": "2026-06-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

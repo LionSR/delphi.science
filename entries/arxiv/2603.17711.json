@@ -1,0 +1,25 @@
+{
+  "key": "2603.17711",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.17711",
+  "title": "TENSO: Software Package for Numerically Exact Open Quantum Dynamics Based on Efficient Tree Tensor Network Decomposition of the Hierarchical Equations of Motion",
+  "authors": [
+    "Juan C. Rodriguez-Betancourt",
+    "Michelle C. Anderson",
+    "Luchang Niu",
+    "Xinxian Chen",
+    "Ignacio Franco"
+  ],
+  "summary": "TENSO is a versatile and powerful open-source software package for numerically exact simulations of the dynamics of quantum systems immersed in structured thermal environments. It is based on a tree tensor network decomposition of the hierarchical equations of motion (HEOM) that efficiently curbs its curse of dimensionality with bath complexity. As such, TENSO enables exact non-Markovian open quantum dynamics simulations even with complex environments typical of chemistry and quantum information science. TENSO allows for time-dependent drive in the system, and for non-commuting fluctuations.…",
+  "domain": "physics.chem-ph",
+  "tags": [
+    "physics.chem-ph",
+    "physics.optics",
+    "quant-ph"
+  ],
+  "published": "2026-03-18",
+  "updated": "2026-06-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

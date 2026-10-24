@@ -1,0 +1,20 @@
+{
+  "key": "2606.02169",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.02169",
+  "title": "Spin Hamiltonian as Matrix-Free Linear Map",
+  "authors": [
+    "Aditya Dev"
+  ],
+  "summary": "We present an algorithm that computes the action of a generic spin Hamiltonian on a state vector on the fly, entirely avoiding explicit matrix assembly. This is achieved through mixed-radix indexing of the full tensor-product basis, which translates local spin operations into simple integer offsets. The result is an explicit framework for evaluating single- and two-site terms across arbitrary spin lattices, including mixed-spin systems. Our construction bridges the basis-indexing logic familiar from exact diagonalization with the matrix-free state-update philosophy of address-based…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.comp-ph"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

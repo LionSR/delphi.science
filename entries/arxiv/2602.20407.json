@@ -1,0 +1,22 @@
+{
+  "key": "2602.20407",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.20407",
+  "title": "Measurement-Guided State Refinement for Shallow Feedback-Based Quantum Optimization Algorithm",
+  "authors": [
+    "Lucas A. M. Rattighieri",
+    "Pedro M. Prado",
+    "Marcos C. de Oliveira",
+    "Felipe F. Fanchini"
+  ],
+  "summary": "Limited circuit depth remains a central constraint for quantum optimization in the noisy intermediate-scale quantum (NISQ) regime, where shallow unitary dynamics may fail to sufficiently concentrate probability on low-energy configurations. We introduce Measurement-Guided Initialization (MGI), an iterative strategy that uses measurement outcomes from previous executions to update the initialization of subsequent runs. The method extracts single-qubit marginal probabilities from dominant measurement outcomes and prepares a biased product-state initialization, allowing information obtained…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-23",
+  "updated": "2026-02-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

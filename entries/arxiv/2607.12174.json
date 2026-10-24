@@ -1,0 +1,22 @@
+{
+  "key": "2607.12174",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12174",
+  "title": "Anticipating Decoder Side-channel Attacks in Fault-tolerant Quantum Computers",
+  "authors": [
+    "Shashvat Shukla",
+    "Dan E. Browne",
+    "Shin Nishio"
+  ],
+  "summary": "As quantum computing emerges as an applied technology, there is a growing need to protect quantum computers against information security attacks. This work identifies a new class of side-channel attacks against fault-tolerant quantum computers, in which the syndrome data that is sent to the decoder system is used to infer which computation (logical circuit) is taking place on the quantum computer. Our work introduces the concept of gate fingerprints, which describes those patterns present in syndrome data that indicate which logical operation took place on the quantum computer. We show…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

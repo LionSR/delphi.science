@@ -1,0 +1,19 @@
+{
+  "key": "2605.09909",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09909",
+  "title": "Symmetry-Protected Basin Localization in Variational Quantum Eigensolvers",
+  "authors": [
+    "Yangshuai Wang"
+  ],
+  "summary": "Variational quantum eigensolvers fail before optimization begins when strong correlation splits the molecular energy landscape into competing basins and the initial state selects a non-ground-state basin. We introduce a geometry-conditioned preconditioner $\\mathcal{P}_{\\mathrm{eq}}:\\mathbf{R}\\mapsto\\boldsymbolθ_0$ constrained by the $SE(3)$ covariance of the molecular Hamiltonian, so that nuclear geometry is mapped directly into circuit parameters in the correlated ground-state basin. This basin localization changes the relevant gradient statistics from concentration controlled to curvature…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

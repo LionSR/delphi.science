@@ -1,0 +1,27 @@
+{
+  "key": "2609.09258",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.09258",
+  "title": "Tensor Network Moral Graph Recovery of Discrete Probability Distributions",
+  "authors": [
+    "Á. Troyano Olivas",
+    "Chi-Hang Fred Fung",
+    "Hans H. Brunner",
+    "Momtchil Peev",
+    "Vicente Martin"
+  ],
+  "summary": "We present a method for recovering the moral graph of a causal DAG from a probability distribution over discrete variables, using fully connected tensor networks (FCTNs) with nuclear-norm-regularized bond corrections. Each bond matrix is parameterized as a baseline all-ones matrix plus a low-rank correction $C_{ij} = U_{ij}V_{ij}^\\top$, and the nuclear norm of the correction implemented via the variational Frobenius norm penalty on the factors drives unnecessary bonds to zero. We prove that under faithfulness, positivity, and a no-implicit-rerouting assumption on the local tensor…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.IT",
+    "cs.LG",
+    "math.PR",
+    "quant-ph"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

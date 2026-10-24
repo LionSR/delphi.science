@@ -1,0 +1,22 @@
+{
+  "key": "2604.10592",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.10592",
+  "title": "Post-Cut Metadata Inference Attacks on Quantum Circuit Cutting Pipelines",
+  "authors": [
+    "Samuel Punch",
+    "Krishnendu Guha",
+    "Utz Roedig"
+  ],
+  "summary": "Quantum cloud providers can identify a user's algorithm and secret problem structure without ever seeing actual quantum data, simply by analyzing routine metadata collected for billing and system management. Existing confidentiality tools such as blind quantum computation and quantum homomorphic encryption protect the quantum payload itself, but they do not protect this classical orchestration metadata. This leaves an unexplored security risk in the logs generated when a large quantum program is split into smaller pieces to fit onto limited hardware, a process known as circuit cutting. These…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-04-12",
+  "updated": "2026-07-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

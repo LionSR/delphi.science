@@ -1,0 +1,25 @@
+{
+  "key": "2609.05060",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.05060",
+  "title": "Impact of Data Loss in Postprocessing on Training and Inference of Quantum Neural Networks",
+  "authors": [
+    "Soraya V. Panambalom",
+    "Edoardo Altamura",
+    "Nick Chancellor",
+    "Jonte R. Hance"
+  ],
+  "summary": "As quantum hardware scales to larger devices, the classical software layers that interface with it must evolve in step. Postprocessing routines developed and tested primarily in simulator settings can encode assumptions that no longer hold on utility-scale devices, leading to data loss that can be difficult to detect from high-level model outputs alone. We present a case study of \\texttt{SamplerQNN}, the sampling-based quantum neural network class in the Qiskit Machine Learning library. Here, the postprocessing method applies a filter that assumes measurement bit-strings are in virtual qubit…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET",
+    "cs.LG",
+    "physics.comp-ph"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

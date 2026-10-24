@@ -1,0 +1,20 @@
+{
+  "key": "2604.20573",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.20573",
+  "title": "Device-independent quantum cryptography with input leakage",
+  "authors": [
+    "Víctor Zapatero",
+    "Marcos Curty"
+  ],
+  "summary": "Device-independence is the gold standard of quantum cryptography. To meet this standard, a central assumption is that no information leakage occurs during protocol execution. We relax this assumption by analyzing CHSH-based randomness certification and key distribution with partial leakage of the inputs, modeled in terms of a noisy channel. Our results quantify the certifiable local randomness and the secret key rate as a function of the magnitude of the input leakage.",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-22",
+  "updated": "2026-04-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

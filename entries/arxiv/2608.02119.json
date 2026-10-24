@@ -1,0 +1,22 @@
+{
+  "key": "2608.02119",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.02119",
+  "title": "Better accuracy with fewer qubits: Single-particle basis set optimization for quantum chemistry on quantum computers",
+  "authors": [
+    "Subimal Deb",
+    "V. S. Prasannaa"
+  ],
+  "summary": "In spite of recent advances, quantum computers are expected to be sufficiently noisy in the coming few years to the extent of limiting quantum chemical calculations to relatively small number of orbitals. However, even with reasonable quality single particle basis sets, small active spaces with limited orbitals can result in a significant fraction of correlation energy being lost, motivating the design of moderate quality qubit-efficient basis sets for quantum algorithms. We begin by reoptimizing the existing minimal basis sets using a genetic algorithm-inspired approach in conjunction with…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.atom-ph",
+    "physics.chem-ph"
+  ],
+  "published": "2026-08-03",
+  "updated": "2026-08-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

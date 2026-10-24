@@ -1,0 +1,21 @@
+{
+  "key": "2606.11759",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.11759",
+  "title": "Random Grover Search",
+  "authors": [
+    "Dekuan Dong",
+    "Yingzhou Li",
+    "Jiaxin Ma"
+  ],
+  "summary": "Grover's algorithm achieves a quadratic speedup for unstructured search given a global oracle for the target set. In many applications, however, the target set is specified as the intersection of multiple constraint sets. Constructing a global oracle for the intersection can be costly, whereas the individual constraint oracles are often much simpler to implement. We study a randomized Grover search algorithm that directly uses these constraint oracles. At each iteration, one of the corresponding Grover operators is selected at random. For the two-operator case with uniform sampling, we prove…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-10",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

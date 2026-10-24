@@ -1,0 +1,20 @@
+{
+  "key": "2607.02794",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.02794",
+  "title": "Reducing quantum measurements in qubit-based overlapping grouping methods for quantum energy estimation through better initializations",
+  "authors": [
+    "Isaac L. Huidobro-Meezs",
+    "Rodrigo A. Vargas-Hernández"
+  ],
+  "summary": "The measurement cost for estimating expectation values of Hamiltonians is a central bottleneck in variational quantum algorithms. Grouping strategies significantly reduce this cost, with overlapping techniques being the state of the art in the field. Overlapping grouping methods require i) a non-overlapping grouping of the Hamiltonian, typically obtained from the Sorted Insertion (SI) algorithm as initialization, and ii) the construction of covariance dictionaries from approximate wavefunctions to guide the optimization. It was recently shown that different initializations can potentially…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-02",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

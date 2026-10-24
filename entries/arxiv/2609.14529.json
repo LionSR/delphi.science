@@ -1,0 +1,22 @@
+{
+  "key": "2609.14529",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.14529",
+  "title": "Parameter-Efficient Quantum NLP for Paraphrase Detection: Performance, Robustness, and Entanglement",
+  "authors": [
+    "Farha Nausheen",
+    "Khandakar Ahmed",
+    "Farina Riaz"
+  ],
+  "summary": "Rigorous empirical validation of quantum machine learning on natural language tasks remains scarce. We evaluate a 10-qubit hybrid quantum-classical variational circuit (2,148 parameters) for paraphrase detection across three benchmarks: MRPC, Quora Question Pairs (QQP), and adversarial PAWS. On QQP (n = 10 seeds), the circuit achieves 75.53% +/- 0.75%. accuracy, statistically outperforming parameter-matched classical baselines (DeepMLP: p = 0.015, Cohen's d = 1.20; F1: p < 0.001, d = 2.32) and surpassing DistilBERT-4bit with 31,191 fewer parameters. On MRPC the optimal 2-layer variant…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CL"
+  ],
+  "published": "2026-09-13",
+  "updated": "2026-09-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

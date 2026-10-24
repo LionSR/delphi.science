@@ -1,0 +1,21 @@
+{
+  "key": "2609.37429",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.37429",
+  "title": "Succinct Arguments for QMA in the Quantum Random Oracle Model",
+  "authors": [
+    "Alessandro Chiesa",
+    "Zihan Hu"
+  ],
+  "summary": "Succinct arguments are a fundamental cryptographic primitive for verifying computational claims with small communication. In the classical setting, succinct arguments for NP can be constructed from unstructured hardness alone (e.g., hash functions) by compiling probabilistically checkable proofs (PCPs) or interactive oracle proofs (IOPs) for NP via the commit-and-open paradigm. In contrast, known succinct arguments for QMA rely on ``structured'' cryptographic primitives, or on the quantum PCP conjecture. We construct the first succinct argument for QMA in the quantum random oracle model…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

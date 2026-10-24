@@ -1,0 +1,25 @@
+{
+  "key": "2604.00949",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00949",
+  "title": "Two-Qubit Implementation of QAOA for MAX-CUT on an NV-Center Quantum Processor",
+  "authors": [
+    "Leon E. Röscher",
+    "Talía L. M. Lezama",
+    "Luca Cimino",
+    "Jonah vom Hofe",
+    "Riccardo Bassoli",
+    "Frank H. P. Fitzek"
+  ],
+  "summary": "We report a proof-of-principle implementation of the quantum approximate optimization algorithm (QAOA) for the smallest nontrivial MAX-CUT instance on an NV-center-based quantum processor operating at room temperature. The two-qubit register is encoded in the electron spin and the ${}^{14}\\mathrm{N}$ nuclear spin of a single NV$^-$ center. Using a minimization formulation of MAX-CUT, we implement a single-layer QAOA ansatz with native entangling and single-qubit control operations. Because the optical readout of the NV$^-$ center is not projective in the computational basis, we reconstruct…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.comp-ph"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-04-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2604.18662",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.18662",
+  "title": "Coherence-gated quantum devices via real-time weak measurement",
+  "authors": [
+    "Priyank Singh"
+  ],
+  "summary": "Single-photon routers in cavity and circuit QED direct photons by the qubit's energy eigenstate -- a projective decision that destroys coherence. We propose a different primitive: coherence-gated routing, where the decision depends on the magnitude of the qubit's quantum coherence, estimated in real time from simultaneous weak measurements of $σ_x$ and $σ_z$. A photon is accepted if the coherence score $S(T) = \\sqrt{\\langleσ_x\\rangle_c^2 + \\langleσ_y\\rangle_c^2}$, extracted from the conditional density matrix via the stochastic master equation, exceeds a tunable threshold $S_{\\mathrm{th}}$.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

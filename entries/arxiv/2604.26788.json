@@ -1,0 +1,22 @@
+{
+  "key": "2604.26788",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26788",
+  "title": "A Semantic Quantum Circuit Cache for Scalable and Distributed Quantum-Classical Workflows",
+  "authors": [
+    "Mar Tejedor",
+    "Javier Conejero",
+    "Rosa M. Badia"
+  ],
+  "summary": "Hybrid quantum--classical workflows often execute large ensembles of circuits that differ syntactically but implement identical operations, leading to substantial redundant computation. To address this, we introduce the Quantum Circuit Cache, a content-addressable system that detects semantic equivalence and reuses previously computed results across executions, backends, and workflow stages. Our approach combines ZX-calculus reduction with isomorphism-invariant Weisfeiler--Leman graph hashing to generate deterministic circuit identifiers, enabling constant-time lookup in distributed caches…",
+  "domain": "cs.DC",
+  "tags": [
+    "cs.DC",
+    "quant-ph"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

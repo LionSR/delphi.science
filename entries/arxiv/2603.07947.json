@@ -1,0 +1,20 @@
+{
+  "key": "2603.07947",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.07947",
+  "title": "Lattice: A Post-Quantum Settlement Layer",
+  "authors": [
+    "David Alejandro Trejo Pizzo"
+  ],
+  "summary": "We present Lattice (L, ticker: LAT), a peer-to-peer electronic cash system designed as a post-quantum settlement layer for the era of quantum computing. Lattice combines three independent defense vectors: hardware resilience through RandomX CPU-only proof-of-work, network resilience through LWMA-1 per-block difficulty adjustment (mitigating the Flash Hash Rate vulnerability that affects fixed-interval retarget protocols), and cryptographic resilience through ML-DSA-44 post-quantum digital signatures (NIST FIPS 204, lattice-based), enforced exclusively from the genesis block with no classical…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-03-09",
+  "updated": "2026-03-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

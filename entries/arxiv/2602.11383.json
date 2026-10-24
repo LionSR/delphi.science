@@ -1,0 +1,24 @@
+{
+  "key": "2602.11383",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.11383",
+  "title": "WSBD: Freezing-Based Optimizer for Quantum Neural Networks",
+  "authors": [
+    "Christopher Kverne",
+    "Mayur Akewar",
+    "Yuqian Huo",
+    "Tirthak Patel",
+    "Janki Bhimani"
+  ],
+  "summary": "The training of Quantum Neural Networks (QNNs) is hindered by the high computational cost of gradient estimation and the barren plateau problem, where optimization landscapes become intractably flat. To address these challenges, we introduce Weighted Stochastic Block Descent (WSBD), a novel optimizer with a dynamic, parameter-wise freezing strategy. WSBD intelligently focuses computational resources by identifying and temporarily freezing less influential parameters based on a gradient-derived importance score. This approach significantly reduces the number of forward passes required per…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "quant-ph"
+  ],
+  "published": "2026-02-11",
+  "updated": "2026-02-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

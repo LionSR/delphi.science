@@ -1,0 +1,23 @@
+{
+  "key": "2606.16221",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.16221",
+  "title": "QALM: Escaping Local Minima via Interleaved Exploration and Exploitation in Quantum Circuit Optimization",
+  "authors": [
+    "Aidan Wagner",
+    "Mingkuan Xu",
+    "Pengyu Liu",
+    "Zhihao Jia",
+    "Umut A. Acar"
+  ],
+  "summary": "Quantum circuit optimizers face a fundamental limitation in how they tolerate temporary cost increases. At one extreme, greedy rule-based optimizers immediately apply any cost-reducing transformation, achieving high efficiency but quickly becoming trapped in local minima. At the other extreme, search-based optimizers accept cost-increasing moves to explore the circuit space and escape such minima. However, because search-based optimizers cannot determine within a reasonable time budget whether a given point is promising, that is, whether its neighborhood contains a deeper local minimum, they…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-15",
+  "updated": "2026-06-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

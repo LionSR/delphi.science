@@ -1,0 +1,22 @@
+{
+  "key": "2608.03315",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.03315",
+  "title": "Harvest: Resource-Aware Quantum Compilation for Magic State Protocols",
+  "authors": [
+    "Jannik Pflieger",
+    "Aleksandra Świerkowska",
+    "Emmanouil Giortamis",
+    "Pramod Bhatotia"
+  ],
+  "summary": "Fault-tolerant quantum processors based on topological codes execute programs through lattice surgery, where operations must be mapped, routed, and supplied with magic states across a 2D grid of physical patches. Non-Clifford operations require these magic states, produced either by distillation factories or by cultivation, each trading footprint against preparation latency, and delivering a magic state to the data patches that consume it requires routing through the same shared layout as every other operation. Yet placement, routing, scheduling, and magic-state supply cannot be optimized in…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

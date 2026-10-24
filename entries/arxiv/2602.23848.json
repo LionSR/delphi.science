@@ -1,0 +1,20 @@
+{
+  "key": "2602.23848",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.23848",
+  "title": "MAFFT-inspired Quantum Shift-based Sequence Alignment and its Efficient Simulation on Decision Diagrams",
+  "authors": [
+    "Yusuke Kimura",
+    "Yutaka Takita"
+  ],
+  "summary": "Multiple sequence alignment (MSA) is a core operation for comparing genome sequences and is widely used in bio-informatics. MAFFT, a practical MSA tool, repeatedly shifts a pair of sequences and computes a distance. Because the number of sequence pairs grows quadratically with the number of sequences, this procedure can become a bottleneck. We propose Quantum Shift-based Sequence Alignment (QShift-SA), which implements this ``shift-wise score computation'' as a gate-based quantum circuit and searches over shift amounts and sequence pairs using Grover algorithm. QShift-SA constructs an oracle…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-27",
+  "updated": "2026-02-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,27 @@
+{
+  "key": "2604.01376",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.01376",
+  "title": "Resource Estimation via Efficient Compilation of Key Quantum Primitives",
+  "authors": [
+    "Colin Campbell",
+    "Rich Rines",
+    "Victory Omole",
+    "Tina Oberoi",
+    "Palash Goiporia",
+    "Rayat Roy",
+    "R. Peyton Cline",
+    "Eric B. Jones",
+    "Teague Tomesh"
+  ],
+  "summary": "Resource estimation is a significant challenge in evaluating fault tolerant quantum computers. Existing approaches often rely on either fixed architectural assumptions or coarse analytical models that fail to capture the interaction between hardware constraints and circuit compilation. This challenge is particularly acute for neutral atom quantum computers, where architectural features such as atom movement, measurement zones, and multi-species arrays introduce a broad design space for implementing fault tolerant computation. Addressing the need for a tighter feedback loop between hardware…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-04-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2603.04524",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.04524",
+  "title": "Towards Predictive Quantum Algorithmic Performance: Modeling Time-Correlated Noise at Scale",
+  "authors": [
+    "Amit Jamadagni",
+    "Gregory Quiroz",
+    "Eugene Dumitrescu"
+  ],
+  "summary": "Combining tensor network techniques with quantum autoregressive moving average models, we quantify the effects of time-correlated noise on quantum algorithms and predict their performance at scale. As a paradigmatic test case, we examine the quantum Fourier transformation. Building on our first technical result, which shows how stochastic tensor network calculations capture frequency correlations, our second result is the revelation that infidelity exponents (scaling from diffuse, to superdiffuse) are determined by the spectral features of the noise. This numerical result rigorously…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-04",
+  "updated": "2026-03-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

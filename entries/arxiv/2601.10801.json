@@ -1,0 +1,30 @@
+{
+  "key": "2601.10801",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.10801",
+  "title": "Towards Tensor Network Models for Low-Latency Jet Tagging on FPGAs",
+  "authors": [
+    "Alberto Coppi",
+    "Ema Puljak",
+    "Lorenzo Borella",
+    "Daniel Jaschke",
+    "Enrique Rico",
+    "Maurizio Pierini",
+    "Jacopo Pazzini",
+    "Andrea Triossi",
+    "Simone Montangero"
+  ],
+  "summary": "We present a systematic study of Tensor Network (TN) models $\\unicode{x2013}$ Matrix Product States (MPS) and Tree Tensor Networks (TTN) $\\unicode{x2013}$ for real-time jet tagging in high-energy physics, with a focus on low-latency deployment on Field Programmable Gate Arrays (FPGAs). Motivated by the strict requirements of the HL-LHC Level-1 trigger system, we explore TNs as compact and interpretable alternatives to deep neural networks. Using low-level jet constituent features, our models achieve competitive performance compared to state-of-the-art deep learning classifiers. We…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "hep-ex",
+    "physics.ins-det",
+    "quant-ph"
+  ],
+  "published": "2026-01-15",
+  "updated": "2026-01-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

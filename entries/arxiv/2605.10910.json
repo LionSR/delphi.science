@@ -1,0 +1,22 @@
+{
+  "key": "2605.10910",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.10910",
+  "title": "Equivariant Reinforcement Learning for Clifford Quantum Circuit Synthesis",
+  "authors": [
+    "Richie Yeung",
+    "Aleks Kissinger",
+    "Rob Cornish"
+  ],
+  "summary": "We consider the problem of synthesizing Clifford quantum circuits for devices with all-to-all qubit connectivity. We approach this task as a reinforcement learning problem in which an agent learns to discover a sequence of elementary Clifford gates that reduces a given symplectic matrix representation of a Clifford circuit to the identity. This formulation permits a simple learning curriculum based on random walks from the identity. We introduce a novel neural network architecture that is equivariant to qubit relabelings of the symplectic matrix representation, and which is size-agnostic,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

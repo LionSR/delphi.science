@@ -1,0 +1,29 @@
+{
+  "key": "2602.05154",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05154",
+  "title": "QASMTrans: An End-to-End QASM Compilation Framework with Pulse Generation for Near-Term Quantum Devices",
+  "authors": [
+    "Aaron Hoyt",
+    "Meng Wang",
+    "Fei Hua",
+    "Chunshu Wu",
+    "Chenxu Liu",
+    "Muqing Zheng",
+    "Samuel Stein",
+    "Drew Rebar",
+    "Yufei Ding",
+    "Travis S. Humble",
+    "Ang Li"
+  ],
+  "summary": "QASMTrans is a lightweight, high-performance, C++-based quantum compiler that bridges abstract quantum algorithms to device-level control and is designed for just-in-time (JIT) deployment on QPU testbeds with tightly integrated FPGAs or CPUs. We focus on achieving fast transpilation times on circuits of interest, we find more than 100x faster compilation than Qiskit in some circuits with similar circuit quality, enabling transpilation of large, high-depth circuits in seconds. Unlike existing tools, QASMTrans offers end-to-end device-pulse compilation and direct quantum control integration…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-02-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

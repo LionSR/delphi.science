@@ -1,0 +1,25 @@
+{
+  "key": "2603.06473",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.06473",
+  "title": "A Mixture-of-Experts Framework for Practical Hybrid-Quantum Models in Credit Card Fraud Detection",
+  "authors": [
+    "Rodrigo Chaves",
+    "Kunal Kumar",
+    "Bruno Chagas",
+    "Rory Linerud",
+    "Brannen Sorem",
+    "Javier Mancilla",
+    "Bryn Bell"
+  ],
+  "summary": "This paper investigates whether hybrid quantum-classical machine learning can deliver practical improvements in financial fraud detection performance for card-based and other payment transactions. Building on a Guided Quantum Compressor architecture, the approach integrates an autoencoder, a variational quantum circuit, and a classical neural head, and then embeds this hybrid model into a mixture-of-experts framework including a state-of-the-art gradient-boosted tree classifier. Using a European credit card dataset with severe class imbalance, the routed hybrid architecture with 0.6…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-06",
+  "updated": "2026-05-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

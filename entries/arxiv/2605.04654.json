@@ -1,0 +1,22 @@
+{
+  "key": "2605.04654",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04654",
+  "title": "Efficient Multi-Controlled Gate Implementation in Trapped-Ion Systems",
+  "authors": [
+    "Minhyeok Kang",
+    "Taejin Kim",
+    "Jungsoo Hong",
+    "Joonsuk Huh"
+  ],
+  "summary": "Multi-controlled gates are essential primitives in quantum algorithms, yet implementing them via standard gate-level decompositions remains resource-intensive. We develop efficient pulse-level implementations of multi-controlled gates in trapped-ion systems using the Cirac-Zoller scheme. We first show that the Cirac-Zoller construction admits a freedom in the sign choice of red-sideband (RSB) pulses, which leaves the logical operation invariant up to a local Pauli-$Z$ correction. By exploiting this freedom, we construct equivalent realizations of multi-controlled gates and develop pulse…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

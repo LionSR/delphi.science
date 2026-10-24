@@ -1,0 +1,22 @@
+{
+  "key": "2604.04137",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.04137",
+  "title": "Noise tolerance via reinforcement in the quantum search problem",
+  "authors": [
+    "Marjan Homayouni-Sangari",
+    "Abolfazl Ramezanpour"
+  ],
+  "summary": "The Grover lower bound for the unstructured search problem can be surpassed when some information about the data structure is available. Here, we numerically observe that reinforcement can exponentially reduce the number of required evolution layers from $\\sqrt{D}$ to $\\ln D$ in a $D$-dimensional system, by exploiting the information provided by the quantum state. Therefore, a reinforced quantum search is expected to exhibit a larger noise threshold compared to a standard search algorithm in a noisy environment. We use numerical simulations to characterize the level of noise tolerance via…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.dis-nn",
+    "cs.DS"
+  ],
+  "published": "2026-04-05",
+  "updated": "2026-08-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

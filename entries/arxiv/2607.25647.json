@@ -1,0 +1,29 @@
+{
+  "key": "2607.25647",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.25647",
+  "title": "KQFuzz: Knowledge-Guided Fuzzing for Quantum Libraries via Large Language Models",
+  "authors": [
+    "Fuyuan Xia",
+    "Qixin Zhang",
+    "Chenhao Ying",
+    "Haojin Zhu",
+    "Shuai Wang",
+    "Yuan Luo",
+    "Pingchuan Ma",
+    "Yuxuan Du"
+  ],
+  "summary": "As quantum computing continually improves, ensuring the reliability and correctness of quantum libraries has become increasingly critical. To this end, many LLM-based fuzzing approaches towards quantum libraries have been proposed to uncover potential bugs. However, these methods still suffer from limitations such as insufficient flexibility and low efficiency, which hinder the progress of the quantum computing field. To address these challenges, we propose KQFuzz, a novel knowledge-guided fuzzer for quantum libraries. It leverages comprehensive codebase knowledge to ground LLM-based test…",
+  "domain": "cs.SE",
+  "tags": [
+    "cs.SE",
+    "cs.AI",
+    "cs.MA",
+    "quant-ph"
+  ],
+  "published": "2026-07-28",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

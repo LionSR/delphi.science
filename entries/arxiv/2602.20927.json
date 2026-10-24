@@ -1,0 +1,26 @@
+{
+  "key": "2602.20927",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.20927",
+  "title": "Experimental Asynchronous Measurement-Device-Independent Quantum Cryptographic Conferencing",
+  "authors": [
+    "Yifeng Du",
+    "Yang Hu",
+    "Yufeng Liu",
+    "Wenhan Yan",
+    "Jinghao Zhang",
+    "Shining Zhu",
+    "Xiao-Song Ma"
+  ],
+  "summary": "The quantum cryptographic conferencing (QCC) protocol, which distributes identical secure keys to user groups, is a crucial component of the quantum network. Previous experimental works have implemented the measurement-device-independent (MDI) QCC, of which the key rate in an N-user network scales as $R\\sim O(η^N)$. Building on the MDI QCC protocol, the asynchronous MDI QCC protocol theoretically integrates the mode-pairing scheme into QCC, significantly boosting the key rate to $R\\sim O(η)$ in the ideal case, which is independent of the number of users, thus demonstrating greater…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.optics"
+  ],
+  "published": "2026-02-24",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

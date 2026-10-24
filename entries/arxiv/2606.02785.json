@@ -1,0 +1,26 @@
+{
+  "key": "2606.02785",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.02785",
+  "title": "QUIVER: Quantum-Informed Views for Enhanced Representations in Large ML Models",
+  "authors": [
+    "Aritra Bal",
+    "Michael Binder",
+    "Markus Klute",
+    "Benedikt Maier",
+    "Michael Spannowsky"
+  ],
+  "summary": "Large machine learning models benefit substantially from multimodal inputs that provide a complementary view of the same example. We introduce QUIVER (QUantum-Informed Views for Enhanced Representations, a paradigm that enriches classical data-driven features with a quantum Fisher view: a geometrically motivated, basis-independent summary of higher-order correlations captured by a variational quantum circuit (VQC) trained to perform the same task. Unlike classical feature augmentation, the quantum Fisher information matrix encodes the intrinsic geometry of the learned quantum state manifold.…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "hep-ex",
+    "physics.atom-ph",
+    "quant-ph"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

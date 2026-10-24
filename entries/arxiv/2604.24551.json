@@ -1,0 +1,25 @@
+{
+  "key": "2604.24551",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.24551",
+  "title": "GSC-QEMit: A Telemetry-Driven Hierarchical Forecast-and-Bandit Framework for Adaptive Quantum Error Mitigation",
+  "authors": [
+    "Steven Szachara",
+    "Sheeraja Rajakrishnan",
+    "Dylan Jay Van Allen",
+    "Jason Pollack",
+    "Travis Desell",
+    "Daniel Krutz"
+  ],
+  "summary": "Quantum error mitigation (QEM) is essential for extracting reliable results from near-term quantum devices, yet practical deployments must balance mitigation strength against runtime overhead under time-varying noise. We introduce \\emph{GSC-QEMit}, a telemetry-driven, \\textbf{context--forecast--bandit} framework for \\emph{adaptive} mitigation that switches between lightweight suppression and heavier intervention as drift evolves. GSC-QEMit composes three coupled modules: (G) a Growing Hierarchical Self-Organizing Map (GHSOM) that clusters streaming telemetry into operating contexts; (S) an…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-04-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

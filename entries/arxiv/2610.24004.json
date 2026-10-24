@@ -1,0 +1,21 @@
+{
+  "key": "2610.24004",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.24004",
+  "title": "Transient Heat Conduction on Quantum Hardware: Replicated Temperature-Field Reconstruction and Shot-Count Sensitivity with a Variational Quantum Linear Solver",
+  "authors": [
+    "Yijin Mao",
+    "Yuwen Zhang"
+  ],
+  "summary": "Implicit discretizations of transient heat conduction repeatedly generate sparse linear systems, making diffusion problems a natural test bed for quantum linear solvers. This study evaluates how accurately a variational quantum linear solver (VQLS) recovers the temperature field produced by one backward-Euler step of one-dimensional conduction on IBM quantum hardware. A pre-specified confirmatory experiment compares N=4 interior temperatures encoded on two qubits with N=8 temperatures encoded on three qubits using ten paired hardware blocks; a separately defined N=16, four-qubit extension is…",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "quant-ph"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,27 @@
+{
+  "key": "2603.28995",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.28995",
+  "title": "Hybrid Quantum-Classical AI for Industrial Defect Classification in Welding Images",
+  "authors": [
+    "Akshaya Srinivasan",
+    "Xiaoyin Cheng",
+    "Jianming Yi",
+    "Alexander Geng",
+    "Desislava Ivanova",
+    "Andreas Weinmann",
+    "Ali Moghiseh"
+  ],
+  "summary": "Hybrid quantum-classical machine learning offers a promising direction for advancing automated quality control in industrial settings. In this study, we investigate two hybrid quantum-classical approaches for classifying defects in aluminium TIG welding images and benchmarking their performance against a conventional deep learning model. A convolutional neural network is used to extract compact and informative feature vectors from weld images, effectively reducing the higher-dimensional pixel space to a lower-dimensional feature space. Our first quantum approach encodes these features into…",
+  "domain": "cs.CV",
+  "tags": [
+    "cs.CV",
+    "eess.IV",
+    "quant-ph"
+  ],
+  "published": "2026-03-30",
+  "updated": "2026-03-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2603.22422",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.22422",
+  "title": "Preparing Fermions via Classical Sampling and Linear Combinations of Unitaries",
+  "authors": [
+    "Erik J. Gustafson",
+    "Henry Lamm"
+  ],
+  "summary": "We present an extension of the Evolving density matrices on Qubits (E$ρ$OQ) framework that enables efficient fault-tolerant preparation of fermionic quantum states. The original method circumvents state preparation by stochastic sampling, but faces a sign problem in fermionic systems leading to a large number of circuits necessary. We resolve this by combining classical stochastic sampling with a linear combination of unitaries method that avoids the exponential circuit scaling that plagued naïve implementations. The resulting algorithm requires $\\mathcal{O}(M^2)$ $R_Z$ rotations for circuit…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "hep-lat"
+  ],
+  "published": "2026-03-23",
+  "updated": "2026-03-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

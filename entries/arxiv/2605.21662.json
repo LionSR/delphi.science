@@ -1,0 +1,26 @@
+{
+  "key": "2605.21662",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.21662",
+  "title": "Fidelity-Aware Frequency Allocation and Transpilation Co-Design for Tunable Coupler Quantum Systems",
+  "authors": [
+    "Dylan VanAllen",
+    "Evan McKinney",
+    "Israa G. Yusuf",
+    "Girgis Falstin",
+    "Gaurav Agarwal",
+    "Jason Pollack",
+    "Michael Hatridge",
+    "Alex K. Jones"
+  ],
+  "summary": "Frequency crowding is a fundamental limitation in superconducting quantum architectures, particularly in tunable-coupler systems. We present a framework that explicitly models both coherent spectator-induced errors and incoherent lifetime effects through an error budgeting approach. Using this model, we analyze how frequency crowding impacts gate fidelity as module size and connectivity scale, and formulate a constrained optimization problem to assign qubit and coupler frequencies under realistic separation and hardware constraints. We demonstrate scalable frequency allocation strategies…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-20",
+  "updated": "2026-05-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

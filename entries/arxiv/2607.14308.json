@@ -1,0 +1,23 @@
+{
+  "key": "2607.14308",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14308",
+  "title": "An end-to-end quantum algorithm for weakly nonlinear plasma physics with superquadratic speedup",
+  "authors": [
+    "Bjorn K. Berntson",
+    "David Jennings",
+    "Matteo Lostaglio",
+    "Scott Parker"
+  ],
+  "summary": "Nonlinear kinetic plasma simulation is high-dimensional and classically demanding, while quantum algorithms face different bottlenecks: embedding nonlinear dynamics into a linear computation, loading dense field-interaction data, and efficiently extracting information. We present an end-to-end quantum algorithm, with rigorous convergence guarantees, for a weakly nonlinear kinetic plasma model. The system describes a 3D electron-ion plasma with adiabatic electrons, kinetic ions, Debye screening, and Krook relaxation. After Fourier-Hermite truncation, the dynamics reduces to a high-dimensional…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.plasm-ph"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-07-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

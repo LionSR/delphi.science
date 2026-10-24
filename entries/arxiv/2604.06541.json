@@ -1,0 +1,22 @@
+{
+  "key": "2604.06541",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.06541",
+  "title": "Quantum-Inspired Tensor Network Autoencoders for Anomaly Detection: A MERA-Based Approach",
+  "authors": [
+    "Emre Gurkanli",
+    "Michael Spannowsky"
+  ],
+  "summary": "We investigate whether a multiscale tensor-network architecture can provide a useful inductive bias for reconstruction-based anomaly detection in collider jets. Jets are produced by a branching cascade, so their internal structure is naturally organised across angular and momentum scales. This motivates an autoencoder that compresses information hierarchically and can reorganise short-range correlations before coarse-graining. Guided by this picture, we formulate a MERA-inspired autoencoder acting directly on ordered jet constituents. To the best of our knowledge, a MERA-inspired autoencoder…",
+  "domain": "hep-ph",
+  "tags": [
+    "hep-ph",
+    "cs.LG",
+    "quant-ph"
+  ],
+  "published": "2026-04-08",
+  "updated": "2026-04-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

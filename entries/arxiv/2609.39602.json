@@ -1,0 +1,26 @@
+{
+  "key": "2609.39602",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.39602",
+  "title": "Warm-Start Iterative QITE for Distribution Network Reconfiguration via Branch-Exchange Encoding",
+  "authors": [
+    "Noah Crum",
+    "Pete Pritchard",
+    "Tanner Rase",
+    "Phillip C. Lotshaw",
+    "Shaked Regev",
+    "Claudio Girotto",
+    "Ananth Kaushik",
+    "Paul Smith"
+  ],
+  "summary": "We present a hybrid quantum-classical algorithm for distribution network reconfiguration, a combinatorial optimization problem on power distribution networks, that combines a radiality preserving branch-exchange encoding with iterative warm-start quantum imaginary-time evolution to minimize active line losses. The encoding uses a fixed-width binary representation of sequential branch-exchange actions, ensuring that every register outcome decodes to a radial configuration. The quantum subroutine is informed by a surrogate model fit to classically-solved alternating current power flow (ACPF)…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2609.35635",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.35635",
+  "title": "Bounding Retraining Equivalence and the Deletion Floor in Materials Machine Unlearning",
+  "authors": [
+    "Can Polat",
+    "Mustafa Kurban",
+    "Erchin Serpedin",
+    "Hasan Kurban"
+  ],
+  "summary": "In materials machine learning, closely related retained structures can sustain accurate property predictions even after removing a specific record, rendering post-deletion prediction error an ambiguous metric for machine unlearning. To resolve this ambiguity, we define the deletion floor as the expected target loss under a specified retraining procedure at the deleted request. Standard indistinguishability constraints yield a sharp interval bounding an update's target loss around this baseline reference. Theoretically, a conditional neighbor bound links a low deletion floor directly to…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cond-mat.mtrl-sci",
+    "quant-ph"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

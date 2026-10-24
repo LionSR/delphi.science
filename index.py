@@ -227,7 +227,8 @@ def label(relabel_all: bool, labeler: str, limit: int | None = None, missing_sub
     if missing_subject:
         todo = [(p, e) for p, e in load() if not TX.subject_of(e.get("domain"), e.get("review", {}).get("subject"))][:limit]
     else:
-        todo = [(p, e) for p, e in load() if relabel_all or "review" not in e][:limit]
+        # arXiv is moderated: its bulk-harvested papers are shown as research without a label.
+        todo = [(p, e) for p, e in load() if relabel_all or ("review" not in e and not e.get("added_by", "").startswith("harvest:arxiv-"))][:limit]
     done = 0
     for i in range(0, len(todo), BATCH):
         chunk = todo[i : i + BATCH]
@@ -355,8 +356,8 @@ def llms_txt(index: dict[str, Any]) -> str:
     lines = [
         "# Open research index",
         "",
-        "> Research made with or by AI: APP papers, lab releases and Lean formalizations.",
-        "> Each record names its source.",
+        "> Research made with or by AI (APP papers, lab releases, Lean formalizations), and this year's",
+        "> arXiv papers in quant-ph and hep-th. Each record names its source.",
         "",
         "Every record id is <prefix>/<suffix>, like a DOI: the source's prefix, then the source's own id.",
         "/id/<prefix>/<suffix> goes to the original; with Accept: application/json it returns the record. Prefixes: /api/v1/prefixes.",

@@ -1,0 +1,26 @@
+{
+  "key": "2602.05956",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05956",
+  "title": "Quantum Approximate Optimization of Integer Graph Problems and Surpassing Semidefinite Programming for Max-k-Cut",
+  "authors": [
+    "Anuj Apte",
+    "Sami Boulebnane",
+    "Yuwei Jin",
+    "Sivaprasad Omanakuttan",
+    "Michael A. Perlin",
+    "Ruslan Shaydulin"
+  ],
+  "summary": "Quantum algorithms for binary optimization problems have been the subject of extensive study. However, the application of quantum algorithms to integer optimization problems remains comparatively unexplored. In this paper, we study the Quantum Approximate Optimization Algorithm (QAOA) applied to integer problems on graphs, with each integer variable encoded in a qudit. We derive a general iterative formula for depth-$p$ QAOA expectation on high-girth $d$-regular graphs of arbitrary size. The cost of evaluating the formula is exponential in the QAOA depth $p$ but does not depend on the graph…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math-ph",
+    "math.OC"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-05-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

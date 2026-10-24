@@ -1,0 +1,21 @@
+{
+  "key": "2605.24501",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.24501",
+  "title": "Performance Limits of Fault-Tolerant Quantum Error Correction Schemes",
+  "authors": [
+    "Lorenzo Valentini",
+    "Diego Forlivesi",
+    "Marco Chiani"
+  ],
+  "summary": "Quantum error correction (QEC) is essential for realizing scalable quantum computation. However, when evaluating its benefits, most analyses assume idealized components, overlooking the imperfections inherent in realistic fault-tolerant (FT) implementations. In this paper, we investigate the performance of QEC schemes taking into account that quantum gates and measurements are themselves error-prone. We derive bounds for the failure probability of Shor-style FT-QEC schemes using limited structural information, such as the number of flag qubits and quantum gates. Our analysis separates and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-23",
+  "updated": "2026-05-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

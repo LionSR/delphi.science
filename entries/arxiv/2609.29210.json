@@ -1,0 +1,21 @@
+{
+  "key": "2609.29210",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.29210",
+  "title": "Representation-Dependent Recoverability in Quantum Compilation",
+  "authors": [
+    "Jinze Yang",
+    "Yangyang Li",
+    "Xiu-Hao Deng"
+  ],
+  "summary": "Fault-tolerant compilation can disperse high-level structure: schedules split an accumulated phase across rounds, gate synthesis replaces an angle by a Clifford+$T$ word, and randomized compiling spreads rotations over sign-randomized fragments. They preserve the computation but change how cheaply a downstream compiler can recover the aggregate phase data. We formalize this representation-dependent recoverability by charging two channels: output committed before the suffix arrives, and a serialized restart state crossing the cut. For an $r$-round accumulation of a commuting layer with $m$…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

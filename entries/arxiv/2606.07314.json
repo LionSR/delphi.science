@@ -1,0 +1,23 @@
+{
+  "key": "2606.07314",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.07314",
+  "title": "QBugLM: An Agentic Benchmarking Framework for LLM-based Quantum Software Debugging",
+  "authors": [
+    "An B. B. Pham",
+    "Hoa T. Nguyen",
+    "Muhammad Usman"
+  ],
+  "summary": "Quantum software bugs often yield silent, incorrect outputs rather than explicit errors, making them particularly difficult to detect and repair with conventional techniques. Although large language models (LLMs) have shown strong performance on classical software engineering tasks, their ability to debug quantum code remains largely unexplored. To bridge this gap, we propose QBugLM, a multi-agent framework that automates the quantum software debugging pipeline, from taxonomy-driven bug injection to LLM-based detection and repair, and finally to simulation-based validation, for…",
+  "domain": "cs.SE",
+  "tags": [
+    "cs.SE",
+    "cs.ET",
+    "quant-ph"
+  ],
+  "published": "2026-06-05",
+  "updated": "2026-06-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

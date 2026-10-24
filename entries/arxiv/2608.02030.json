@@ -1,0 +1,23 @@
+{
+  "key": "2608.02030",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.02030",
+  "title": "Zero-G: A Pre-Decoder-Aware Decoder for Quantum Error Correction",
+  "authors": [
+    "Peter Wegmann",
+    "Theofilos Augoustis",
+    "Aleksandra Świerkowska",
+    "Emmanouil Giortamis",
+    "Pramod Bhatotia"
+  ],
+  "summary": "Fault-tolerant quantum computing requires classical decoders that keep pace with the underlying hardware, translating syndrome measurements into corrections fast enough to avoid an exponential backlog. To meet this real-time constraint, pre-decoders have emerged as part of a hierarchical decoding approach to resolve simple, local errors before passing a sparser residual syndrome to a strong decoder. While pre-decoding should, in theory, speed up the strong decoder, in practice, the speedup is only marginal, since existing strong decoders are designed to decode dense syndromes and cannot…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-03",
+  "updated": "2026-08-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2610.23429",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.23429",
+  "title": "Cayley access models for matrix functions: reachable class and cost",
+  "authors": [
+    "Gianna M. Del Corso"
+  ],
+  "summary": "We study how to compute $f(A)b$ on a quantum computer, where $A$ is Hermitian. When $f$ is nonsmooth or has localized difficulty in the spectrum, classical numerical linear algebra approximates it with rational functions rather than polynomials. We propose the Cayley transform, parameterized by $σ\\in \\mathbb{R}$ and $γ> 0$, as an alternative to the standard quantum access model. The two parameters let one concentrate accuracy where $f$ is difficult, which standard models can achieve only by raising the polynomial degree globally. This transformation converts Hermitian matrices to unitaries,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.NA"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

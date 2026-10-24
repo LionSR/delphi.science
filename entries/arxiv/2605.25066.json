@@ -1,0 +1,21 @@
+{
+  "key": "2605.25066",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.25066",
+  "title": "QML-PipeGuard: Detecting Channel-Substitution Attacks on Quantum Machine Learning Pipelines in Untrusted Clouds",
+  "authors": [
+    "Esra Yeniaras"
+  ],
+  "summary": "As machine-learning workloads move onto quantum hardware they inherit a trust problem classical AI deployments have largely solved and quantum ones have not: quantum machine learning (QML) is already sold as a cloud service, and a customer cannot check that the circuit they paid for is actually the circuit that ran. We show the gap is exploitable. A malicious or cost-cutting provider can substitute the declared quantum channel with one that reproduces every accuracy test the customer performs, passes the single-observable checks used in practice, and still differs from the declared…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR",
+    "cs.LG"
+  ],
+  "published": "2026-05-24",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

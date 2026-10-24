@@ -1,0 +1,21 @@
+{
+  "key": "2609.12698",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.12698",
+  "title": "Extremely Low-Cost Magic State Preparation toward Fault-Tolerant Quantum Computing",
+  "authors": [
+    "Jianshuo Gao",
+    "Xiao Yuan",
+    "Yuan Yao"
+  ],
+  "summary": "Fault-tolerant preparation of non-Clifford resource states is a major contributor to the overhead of quantum computation, motivating protocols that achieve high output fidelity with minimal qubit and circuit costs. We introduce a low-cost magic-state preparation protocol in which the choice of stabilizer generators is co-designed with the flag gadgets, allowing the syndrome-extraction circuit itself to filter correlated faults across a non-Clifford layer. The protocol prepares a logical plus state in the 15-qubit quantum Reed-Muller code, applies a transversal T gate, and gauge-fixes the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-11",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2604.10543",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.10543",
+  "title": "Finite-temperature quantum Krylov method from real-time overlaps",
+  "authors": [
+    "Hiroto Yamamoto",
+    "Katsuhiro Morita"
+  ],
+  "summary": "Accurately evaluating finite-temperature properties of quantum many-body systems remains a central challenge. Many existing quantum approaches require thermal-state preparation at each target temperature, making low-temperature calculations especially demanding in terms of circuit depth and accuracy. In this work, we present the finite-temperature quantum Krylov (FTQK) method, which combines stochastic trace estimation with a Hermitian generalized eigenvalue problem based on $\\cos(\\tilde H)$. The only quantum-side input required is the temperature-independent real-time overlap sequence…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.str-el"
+  ],
+  "published": "2026-04-12",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

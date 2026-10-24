@@ -1,0 +1,25 @@
+{
+  "key": "2605.30676",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.30676",
+  "title": "Experimental Implementation of the Quantum Volunteer's Dilemma on NISQ Hardware: Noise Analysis and Digital-Twin Validation",
+  "authors": [
+    "Germán D. Díaz Agreda",
+    "Jhon Alejandro Andrade Hoyos",
+    "Carlos A. Durán Paredes",
+    "Sebastián Cajas Ordoñez",
+    "Noah Dane Hebdon",
+    "Siong Thye Goh",
+    "Dax Enshan Koh"
+  ],
+  "summary": "We present an experimental implementation of the multiplayer Quantum Volunteer's Dilemma on noisy intermediate-scale quantum (NISQ) hardware, executed on the ibm_kingston backend via Qiskit Runtime. The game is evaluated for N = 2 to 9 players under four transpiler optimization levels, with 20 independent repetitions per configuration and 2048 shots per circuit, including post-processing readout error correction via mthree. Target-state fidelity decays with system size but remains above 70% (corrected) through N = 9. With readout correction, the global average payoff reproduces the quantum…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

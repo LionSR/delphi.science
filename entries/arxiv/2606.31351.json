@@ -1,0 +1,25 @@
+{
+  "key": "2606.31351",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.31351",
+  "title": "A Quantum-Classical Surrogate Model for the Collision Operator of the Lattice Boltzmann Method",
+  "authors": [
+    "Lukas C. Birk",
+    "David M. Wawrzyniak",
+    "Josef M. Winter",
+    "Steffen J. Schmidt",
+    "Thomas Indinger",
+    "Christian F. Janßen",
+    "Nikolaus A. Adams"
+  ],
+  "summary": "We introduce a hybrid approach utilising a quantum machine learning surrogate model to approximate the non-linear collision dynamics of the LBM. It effectively offloads the non-unitary operations that challenge pure quantum solvers. The expressivity of the surrogate is built on the ability of parameterised quantum circuits to implement partial Fourier series, with data re-uploading extending the spectrum of representable frequencies. Unlike previous approaches with a fixed relaxation parameter, the surrogate recovers the complete Bhatnagar-Gross-Krook (BGK) collision dynamics across the full…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-30",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

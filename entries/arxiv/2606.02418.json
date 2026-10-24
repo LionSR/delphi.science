@@ -1,0 +1,23 @@
+{
+  "key": "2606.02418",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.02418",
+  "title": "Evolutionary Discovery of Bivariate Bicycle Codes with LLM-Guided Search",
+  "authors": [
+    "Juan Cruz-Benito",
+    "Andrew W. Cross",
+    "David Kremer",
+    "Ismael Faro"
+  ],
+  "summary": "Quantum LDPC code discovery requires searching large algebraic design spaces while reliably certifying the parameters and equivalence classes of any candidates found. We introduce an LLM-guided evolutionary workflow in which language models mutate Python programs that generate bivariate-bicycle and perturbed bivariate-bicycle code ansätze. Across five campaigns, the system performed approximately 1{,}650 evolutionary iterations, screened about $2 \\times 10^5$ candidate codes, and required ${\\sim}140$ hours of computation and ${\\sim}$US\\$400 in LLM inference cost. Candidate codes are…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

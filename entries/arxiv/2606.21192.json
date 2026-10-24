@@ -1,0 +1,24 @@
+{
+  "key": "2606.21192",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.21192",
+  "title": "Bounded-depth spacetime lattice surgery for resource-efficient fault-tolerant quantum computation",
+  "authors": [
+    "Kou Hamada",
+    "Hiroki Hamaguchi",
+    "Yosuke Ueno",
+    "Yasunari Suzuki",
+    "Teruo Tanimoto",
+    "Nobuyuki Yoshioka"
+  ],
+  "summary": "Fault-tolerant quantum computing based on lattice surgery requires place-and-route compilation with low spacetime overhead. Routing, in particular, faces a basic tension between suppressing path conflicts through greater spatial allocation and exploiting the time direction to realize ancilla-efficient spacetime routing. Existing approaches do not fully resolve this trade-off while retaining compatibility with inner factory layouts and termination guarantees. Here we introduce double-slice routing, a constant-depth spacetime-routing method that uses two consecutive time slices with a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-19",
+  "updated": "2026-06-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2601.03832",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.03832",
+  "title": "Iterative Matrix Product State Simulation for Scalable Grover's Algorithm",
+  "authors": [
+    "Mei Ian Sam",
+    "Tzu-Ling Kuo",
+    "Tai-Yue Li"
+  ],
+  "summary": "Grover's algorithm is a cornerstone of quantum search algorithm, offering quadratic speedup for unstructured problems. However, limited qubit counts and noise in today's noisy intermediate-scale quantum (NISQ) devices hinder large-scale hardware validation, making efficient classical simulation essential for algorithm development and hardware assessment. We present an iterative Grover simulation framework based on matrix product states (MPS) to efficiently simulate large-scale Grover's algorithm. Within the NVIDIA CUDA-Q environment, we compare iterative and common (non-iterative) Grover's…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-07",
+  "updated": "2026-01-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

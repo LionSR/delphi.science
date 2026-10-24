@@ -1,0 +1,20 @@
+{
+  "key": "2609.26372",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.26372",
+  "title": "Lattice Lindbladian simulation by patching and merging",
+  "authors": [
+    "Kaoru Mizuta"
+  ],
+  "summary": "Simulating the dynamics of dissipative quantum many-body systems governed by local Lindbladians is a fundamental task in quantum computation. While the near-optimal gate count has been achieved for Hamiltonian simulation, comparable results for Lindbladian simulation remain elusive. In this work, we develop quantum algorithms for lattice Lindbladians by exploiting their locality. First, we consider sparsely dissipative systems, in which the dissipation is sparsely located, including boundary-driven systems. We establish a near-optimal quantum algorithm for their dynamics with gate count…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.other"
+  ],
+  "published": "2026-09-22",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

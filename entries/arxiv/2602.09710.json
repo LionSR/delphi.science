@@ -1,0 +1,23 @@
+{
+  "key": "2602.09710",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.09710",
+  "title": "Sample- and Hardware-Efficient Fidelity Estimation by Stripping Phase-Dominated Magic",
+  "authors": [
+    "Guedong Park",
+    "Jaekwon Chang",
+    "Yosep Kim",
+    "Yong Siah Teo",
+    "Hyunseok Jeong"
+  ],
+  "summary": "Direct fidelity estimation (DFE) is a famous tool for estimating the fidelity with a target pure state. However, such a method generally requires exponentially many sampling copies due to the large magic of the target state. This work proposes a sample- and gate-efficient fidelity estimation algorithm that is affordable within feasible quantum devices. We show that the fidelity estimation with pure states close to the structure of phase states, for which sample-efficient DFE is limited by their strong entanglement and magic, can be done by using $\\mathcal{O}({\\rm poly}(n))$ sampling copies,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-10",
+  "updated": "2026-04-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

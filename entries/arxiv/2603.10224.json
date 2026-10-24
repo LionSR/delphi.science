@@ -1,0 +1,21 @@
+{
+  "key": "2603.10224",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.10224",
+  "title": "Reducing Quantum Error Mitigation Bias Using Verifiable Benchmark Circuits",
+  "authors": [
+    "Joseph Harris",
+    "Kevin Lively",
+    "Peter Schuhmacher"
+  ],
+  "summary": "We present a simple, malleable and low-overhead approach for improving generic biased quantum error mitigation (QEM) methods, achieving up to 15% fidelity improvements over standard QEM on 100-qubit circuits with up to 2000 entangling gates. We do so by constructing verifiable benchmark circuits which mirror the application circuit's native-gate structure and thus noise profile. These circuits can be used to benchmark and mitigate the bias of the underlying error mitigation method, requiring only the application circuit and hardware native gate set. We present two methods for generating…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-10",
+  "updated": "2026-03-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

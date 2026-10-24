@@ -1,0 +1,21 @@
+{
+  "key": "2609.04160",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.04160",
+  "title": "Vanilla Exact Synthesis of CNOT Circuits is NP-hard",
+  "authors": [
+    "Chenjian Li",
+    "Ji Guan"
+  ],
+  "summary": "Exact CNOT synthesis seeks a minimum-size circuit implementing a given invertible binary linear transformation. We study its vanilla formulation: synthesis from the identity on fixed labeled qubits, without ancillas and with all-to-all connectivity. We prove that this problem is NP-hard and that its bounded decision version is NP-complete. Hardness persists even for unitriangular targets that are low-rank perturbations of the identity and under near-linear gate budgets. Our proof gives a polynomial-time reduction from the NP-complete Hamiltonian path problem on grid graphs. A unary hypercube…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

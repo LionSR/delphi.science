@@ -1,0 +1,23 @@
+{
+  "key": "2609.19639",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.19639",
+  "title": "Quantum computers will not be that different: A blueprint for quantum computer architecture at scale",
+  "authors": [
+    "Torsten Hoefler",
+    "Matthias Troyer"
+  ],
+  "summary": "Quantum computers are technologically novel and unusual, but at system scale they should be engineered using many of the same principles that govern classical heterogeneous accelerators. This paper argues that utility-scale quantum architecture is primarily a cost-performance problem across a coupled quantum-classical system, leading to a blueprint for scalable quantum processing unit (QPU) design. Our architecture blueprint is organized around clean logical abstractions, hiding details and complexity of physical qubit modalities below the instruction set architecture (ISA) boundary, and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AR",
+    "cs.NI",
+    "eess.SY"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

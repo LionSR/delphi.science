@@ -1,0 +1,20 @@
+{
+  "key": "2603.19089",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.19089",
+  "title": "Practical Quantum Broadcasting",
+  "authors": [
+    "Ximing Wang",
+    "Yunlong Xiao"
+  ],
+  "summary": "Incorporating sample efficiency, by requiring the number of states consumed by broadcasting does not exceed that of a naive prepare-and-distribute strategy, gives rise to the no practical quantum broadcasting theorem. To navigate this limitation, we introduce approximate and probabilistic virtual broadcasting and derive analytic expressions for their optimal sample complexity overheads. Allowing deviations at the receivers restores sample efficiency even in the 1-to-2 approximate setting, whereas probabilistic protocols obey a stronger no-go theorem that excludes all sample efficient 1-to-2…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-19",
+  "updated": "2026-03-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

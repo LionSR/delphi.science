@@ -1,0 +1,24 @@
+{
+  "key": "2603.05464",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.05464",
+  "title": "Heuristics for Shuttling Sequence Optimization for a Linear Segmented Trapped-Ion Quantum Computer",
+  "authors": [
+    "J. Durandau",
+    "C. A. Brunet",
+    "F. Schmidt-Kaler",
+    "U. Poschinger",
+    "F. Mailhot",
+    "Y. Bérubé-Lauzière"
+  ],
+  "summary": "An algorithm for the generation of shuttling sequences is necessary for the operation of a linear segmented ion-trap quantum computer. The present work provides an implementation of an algorithm that produces sequences proved to be optimal for circuits with a quantum Fourier transform-like structure. Such optimality was proved in previous work of our group. We first present an approach for qubit mapping, i.e. determining the initial ordering of the ions, termed the common ion order, and develop a heuristic algorithm for its implementation. We explain how this heuristic is integrated in the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-05",
+  "updated": "2026-03-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

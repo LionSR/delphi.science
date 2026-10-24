@@ -1,0 +1,25 @@
+{
+  "key": "2606.29638",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.29638",
+  "title": "Characterization of Unlearnable Noise with Mid-Circuit-Measurement-Based Cycle Benchmarking",
+  "authors": [
+    "M. H. Cheng",
+    "Stefano Mangini",
+    "V. Bartsch",
+    "A. C. Medina",
+    "Sergey N. Filippov",
+    "Matteo A. C. Rossi",
+    "M. S. Kim"
+  ],
+  "summary": "Noise characterization of multi-qubit entangling Clifford operations is a key practical bottleneck for quantum error mitigation and for the calibration, validation, and optimization of quantum error-correction protocols, especially in the presence of state preparation and measurement (SPAM) errors. Although cycle benchmarking can isolate some Pauli error components, it cannot resolve the problem of coupled error parameters, which leads to unlearnable degrees of freedom even in simple noisy gates, not to mention general $n$-qubit Clifford gates. Here we introduce mid-circuit-measurement-based…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-28",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

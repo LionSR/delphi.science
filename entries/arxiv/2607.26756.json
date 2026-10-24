@@ -1,0 +1,19 @@
+{
+  "key": "2607.26756",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.26756",
+  "title": "Recovering Coherent Errors from Randomized-Compiling Labels",
+  "authors": [
+    "Kushagra Vyas"
+  ],
+  "summary": "Randomized compiling converts a coherent gate error into a stochastic one by dressing each gate with a randomly chosen Pauli operator, and the standard view is that the coherent information is lost once outcomes are averaged over these random choices. This is incorrect: an exact Fisher-information identity shows that the averaged data and the correlation between the outcome and the random choice, the twirl label, together conserve the full information, and only the label is normally discarded. Retaining it turns an unmodified randomized-compiling run into an unbiased estimator for the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

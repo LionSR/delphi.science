@@ -1,0 +1,21 @@
+{
+  "key": "2603.18110",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.18110",
+  "title": "Improved quantum circuits for division",
+  "authors": [
+    "Priyanka Mukhopadhyay",
+    "Alexandru Gheorghiu",
+    "Hari Krovi"
+  ],
+  "summary": "Arithmetic operations are an important component of many quantum algorithms. Optimizing quantum circuits for these operations therefore leads to more efficient implementations of the corresponding algorithms. In this paper, we develop new fault-tolerant quantum circuits for various integer division algorithms (both reversible and non-reversible). These circuits, when implemented in the Clifford+T gate set, achieve improvements in the asymptotic T-count and CNOT-count from $O(n^2)$ to $O(nm)$, and in the asymptotic T-depth from $O(n^2)$ to $O(n \\log m)$, where $n$ and $m$ are the bit lengths…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-18",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2604.20882",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.20882",
+  "title": "HHL with a Coherent Fourier Oracle: A Proof-of-Concept Quantum Architecture for Joint Melody-Harmony Generation",
+  "authors": [
+    "Alexis Kirke"
+  ],
+  "summary": "Quantum algorithms with a proven theoretical speedup over classical computation are rare. Among the most prominent is the Harrow-Hassidim-Lloyd (HHL) algorithm for solving sparse linear systems. Here, HHL is applied to encode melodic preference: the system matrix encodes Narmour implication-realisation and Krumhansl-Kessler tonal stability, so its solution vector is a music-cognition-weighted note-pair distribution. The key constraint of HHL is that reading its output classically cancels the quantum speedup; the solution must be consumed coherently. This motivates a coherent Fourier harmonic…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI",
+    "cs.SD"
+  ],
+  "published": "2026-04-13",
+  "updated": "2026-04-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

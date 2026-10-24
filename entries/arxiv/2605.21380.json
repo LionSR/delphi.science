@@ -1,0 +1,27 @@
+{
+  "key": "2605.21380",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.21380",
+  "title": "Modeling and Resource Optimization for Quantum Oracles",
+  "authors": [
+    "Zhihang Li",
+    "Bo Zhao",
+    "Chuanbing Han",
+    "Jie Zhao",
+    "Jinchen Xu",
+    "Guoqiang Shu",
+    "Yimin Gao",
+    "Woji He",
+    "Zheng Shan"
+  ],
+  "summary": "Quantum oracles are fundamental building blocks of many quantum algorithms, and their resource consumption directly affects performance, yet structured description and complexity analysis for their composition are still lacking. In this paper, we introduce the Framework for Oracle Recursion Modeling (FORM), a unified formal abstraction of multi-function composition in quantum oracles: it provides a structured description of the composition layer, makes its gate complexity exactly computable, and turns oracle design into an optimizable tree-construction problem. Based on this model, we…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-20",
+  "updated": "2026-08-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

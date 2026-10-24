@@ -1,0 +1,21 @@
+{
+  "key": "2605.17217",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.17217",
+  "title": "Toward Near-Real-Time Marine Oil Spill Detection in SAR Imagery using Quantum-Assisted SVM",
+  "authors": [
+    "Joseph Strauss",
+    "Jyotsna Sharma"
+  ],
+  "summary": "Marine oil spills require rapid detection to mitigate severe ecological and economic damage. While satellite-based Synthetic Aperture Radar (SAR) provides essential all-weather monitoring, analyzing this data remains challenging. Deep learning models often require massive datasets and incur high latency. To address this, a pixel-wise quantum-assisted Support Vector Machine (QSVM) bagging ensemble is developed. Quantum annealing is leveraged to optimize the support vectors of individual weak SVMs on small data subsets, which are then classically aggregated. The approach is evaluated on…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-05-17",
+  "updated": "2026-05-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

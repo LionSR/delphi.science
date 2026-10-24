@@ -1,0 +1,22 @@
+{
+  "key": "2607.27915",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.27915",
+  "title": "Iterative quantum algorithms for the minimum vertex cover problem based on continuous-time quantum walks",
+  "authors": [
+    "Ruben Pariente Bassa",
+    "Finley A. Quinton",
+    "Franz G. Fuchs",
+    "Pascal Halffmann"
+  ],
+  "summary": "We introduce a constraint-preserving hybrid quantum-classical greedy framework for the minimum vertex cover problem, which extends directly to maximum independent set by bitwise complementation. The framework uses projected Pauli-X terms whose sum preserves the feasible subspace and acts within it exactly as the adjacency matrix of a layered graph of feasible covers. This graph is connected, so every feasible cover is linked to the configuration containing all vertices by a sequence of allowed single-vertex flips. Starting from this configuration, the corresponding continuous-time quantum…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-30",
+  "updated": "2026-07-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

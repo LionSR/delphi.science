@@ -1,0 +1,20 @@
+{
+  "key": "2609.39974",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.39974",
+  "title": "The quantum query complexity of the semigroup product problem",
+  "authors": [
+    "Troy Lee",
+    "Miklos Santha"
+  ],
+  "summary": "We study the quantum query complexity of computing a semigroup product $x_1\\cdots x_n$, when one query reveals one input element and the multiplication table is given. For a finite aperiodic semigroup of size $N-1$, the argument of Aaronson, Grier, and Schaeffer gives an upper bound of $\\sqrt n\\,(N\\log(nN+2))^{O(N)}$ queries. To obtain query bounds that reflect algebraic structure, we study the product breadth $β$: the smallest bound such that every input word has a subsequence of at most $β$ letters with the same product. For nontrivial finite commutative aperiodic monoids, the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

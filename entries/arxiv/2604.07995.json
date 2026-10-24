@@ -1,0 +1,19 @@
+{
+  "key": "2604.07995",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.07995",
+  "title": "Belief Propagation Convergence Prediction for Bivariate Bicycle Quantum Error Correction Codes",
+  "authors": [
+    "Anton Pakhunov"
+  ],
+  "summary": "Decoding Bivariate Bicycle (BB) quantum error correction codes typically requires Belief Propagation (BP) followed by Ordered Statistics Decoding (OSD) post-processing when BP fails to converge. Whether BP will converge on a given syndrome is currently determined only after running BP to completion. We show that convergence can be predicted in advance by a single modulo operation: if the syndrome defect count is divisible by the code's column weight w, BP converges with high probability (100% at p = 90%. The mechanism is structural: each physical data error activates exactly w stabilizers,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-09",
+  "updated": "2026-04-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2603.24874",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.24874",
+  "title": "Adaptive Resource and Memory Control for Stability in Quantum Entanglement Distribution",
+  "authors": [
+    "Nicolò Lo Piparo",
+    "William J. Munro",
+    "Kae Nemoto"
+  ],
+  "summary": "We investigate congestion-aware control of quantum repeater nodes operating under stochastic traffic and finite memory coherence. Entanglement generation is modeled as a probabilistic process producing Werner states subject to depolarizing memory decoherence, while entanglement requests arrive according to Poisson and bursty ON--OFF processes. Using a queueing-theoretic framework, we couple physical-layer memory dynamics with congestion-dependent service behavior to analyze stability, delay, and fidelity trade-offs. Operating regimes are characterized in terms of the load parameter, showing…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-25",
+  "updated": "2026-03-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2603.21586",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.21586",
+  "title": "Distilling the knowledge with quantum neural networks",
+  "authors": [
+    "Yuxuan Yan",
+    "Sitian Qian",
+    "Qi Zhao",
+    "Xingjian Zhang"
+  ],
+  "summary": "Quantum Neural Networks (QNNs) are a promising class of quantum machine learning models with potential quantum advantages when implemented on scalable, error-corrected quantum computers. However, as system sizes increase, deploying QNNs becomes challenging. Similar to their classical counterparts, a key obstacle to their practical applications is that large-scale QNNs may not be easily deployed on smaller systems that have limited resources. Here, we tackle this challenge by compressing QNNs via knowledge distillation. We demonstrate how well-trained QNNs on large systems can be distilled…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-23",
+  "updated": "2026-03-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

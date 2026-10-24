@@ -1,0 +1,24 @@
+{
+  "key": "2605.28936",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.28936",
+  "title": "Hardware-Tailored Resource Estimation for Magic-State Distillation on Silicon Spin Qubits",
+  "authors": [
+    "Songqinghao Yang",
+    "Christopher K. Long",
+    "Rubén M. Otxoa",
+    "Prakash Murali",
+    "Crispin H. W. Barnes",
+    "David R. M. Arvidsson-Shukur"
+  ],
+  "summary": "We present a resource analysis for generating high-fidelity logical magic states on silicon spin-qubit platforms. We consider a range of architectures, including a shuttling-based SpinBus design, a dense nearest-neighbor layout, and a hybrid scheme with shuttling-connected patches. We compare surface, color, and biased error-correcting codes, and analyze the $5\\to1$ and $15\\to1$ magic-state distillation protocols. Our approach combines bottom-up and top-down methodologies. We construct a hardware-level noise model based on a silicon-processor Hamiltonian with realistic parameters and $1/f$…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-27",
+  "updated": "2026-05-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

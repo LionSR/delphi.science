@@ -1,0 +1,21 @@
+{
+  "key": "2610.09749",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.09749",
+  "title": "Automated reduction of fault-tolerant circuits",
+  "authors": [
+    "Hyeongjun Jeon",
+    "Jeonghoon Lee",
+    "Taehyun Kim"
+  ],
+  "summary": "We present an automated method for reducing fault-tolerant circuits through fault-equivalent rewrites. Starting from a known fault-tolerant circuit, the search applies non-reducing enabling rules to expose Bell-pair reductions, each of which removes an ancilla preparation and a CNOT gate. Because every search transition preserves fault equivalence, the resulting circuits inherit the fault-tolerance properties of the input circuit. Candidate circuits are evaluated using circuit-level Monte Carlo simulation. For Shor-style syndrome extraction with the $[[7,1,3]]$ code, our method reduces one…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

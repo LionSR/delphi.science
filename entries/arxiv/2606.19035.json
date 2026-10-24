@@ -1,0 +1,21 @@
+{
+  "key": "2606.19035",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.19035",
+  "title": "Quantum circuit knitting using a weak-coupling approximation",
+  "authors": [
+    "John P. T. Stenger",
+    "Daniel Gunlycke",
+    "Nikos Chrisochoides"
+  ],
+  "summary": "We present a method for performing distributed quantum computing with controlled approximations for circuits that are weakly coupled via a single qubit. Exact distributed quantum computing requires exponential classical information to reconstruct the quantum process. However, we show how the classical cost is reduced to polynomial if the quantum procedure can be partitioned between a qubit that is weakly coupled to the other qubits. We demonstrate our method for a layered circuit based on the circuits used for the quantum approximate optimization algorithm.",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-17",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,28 @@
+{
+  "key": "2603.04875",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.04875",
+  "title": "Macromux: scalable postselection for high-threshold fault-tolerant quantum computation",
+  "authors": [
+    "Patrick Birchall",
+    "Jacob Bridgeman",
+    "Christopher Dawson",
+    "Terry Farrelly",
+    "Yehua Liu",
+    "Naomi Nickerson",
+    "Mihir Pant",
+    "Sam Roberts",
+    "Karthik Seetharam",
+    "David Tuckett"
+  ],
+  "summary": "We introduce a new resource-efficient scheme for fault-tolerant quantum computation known as `macroscale multiplexing' (or simply `Macromux'), that utilizes scalable postselection to significantly improve the threshold of a given fault-tolerant protocol against both Pauli and erasure errors. Macromux is a hierarchical method for postselecting on constant-size space-time windows of a fault tolerant protocol, requiring only constant additional overheads. The method can be straightforwardly implemented for any fault-tolerant protocol and in any architecture that has access to routing and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-05",
+  "updated": "2026-03-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

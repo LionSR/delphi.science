@@ -1,0 +1,21 @@
+{
+  "key": "2601.00247",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.00247",
+  "title": "Efficient implementation of single particle Hamiltonians in exponentially reduced qubit space",
+  "authors": [
+    "Martin Plesch",
+    "Martin Friák",
+    "Ijaz Ahamed Mohammad"
+  ],
+  "summary": "Current and near-term quantum hardware is constrained by limited qubit counts, circuit depth, and the high cost of repeated measurements. We address these challenges for solid state Hamiltonians by introducing a logarithmic-qubit encoding that maps a system with $N$ physical sites onto only $\\lceil \\log_2 N \\rceil$ qubits while maintaining a clear correspondence with the underlying physical model. Within this reduced register, we construct a compatible variational circuit and a Gray-code-inspired measurement strategy whose number of global settings grows only logarithmically with system…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-01",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

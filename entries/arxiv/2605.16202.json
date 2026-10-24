@@ -1,0 +1,22 @@
+{
+  "key": "2605.16202",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.16202",
+  "title": "Performance Gains in Quantum SAT Solvers Using ESOP Encoding",
+  "authors": [
+    "Majd Assaad",
+    "Abhoy Kole",
+    "Rolf Drechsler"
+  ],
+  "summary": "The Boolean Satisfiability (SAT) problem is a canonical NP-complete problem and a natural candidate for quantum acceleration via search-based algorithms. In Grover-based quantum SAT solvers, the dominant computational cost stems from the construction of a reversible oracle that evaluates the Boolean formula, rendering the choice of SAT encoding crucial for overall quantum resource efficiency. Although SAT instances are conventionally expressed in Conjunctive Normal Form (CNF), such encodings typically translate into quantum circuits with significant qubit overhead and high non-Clifford gate…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-05-15",
+  "updated": "2026-05-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

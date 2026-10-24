@@ -1,0 +1,21 @@
+{
+  "key": "2606.18580",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.18580",
+  "title": "Separation of Statistical Complexity and Trainability in Variational Quantum Circuits",
+  "authors": [
+    "Suman Mandal",
+    "Maximillian Daughtry",
+    "Eduardo R. Mucciolo"
+  ],
+  "summary": "Variational quantum algorithms (VQAs) are among the leading approaches for near-term quantum computing, yet their performance can degrade in barren plateau regimes characterized by vanishing gradients. A widely held intuition is that increasing circuit expressivity, often associated with random-state behavior, leads to a loss of trainability. Existing results show that sufficiently random circuits can lead to barren plateaus. Here we show that standard statistical signatures of randomness can emerge well before this regime, without degrading trainability. We demonstrate this behavior in…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-17",
+  "updated": "2026-06-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

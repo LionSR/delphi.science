@@ -1,0 +1,21 @@
+{
+  "key": "2609.09407",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.09407",
+  "title": "Balancing Expressivity and Overfitting in Quantum Gaussian Process Regression",
+  "authors": [
+    "Saasha Joshi",
+    "Udson C. Mendes",
+    "Luke C. G. Govia"
+  ],
+  "summary": "Active learning is a paradigm of machine learning that can be utilized to model expensive black-box functions by training a surrogate model from actively queried training points. The performance of this framework depends heavily on the choice of the surrogate model. When the surrogate is Gaussian Process Regression (GPR), its performance is largely determined by the expressivity of the underlying kernel. In this work, we investigate the peculiarities of using a quantum kernel to change the computational dynamics of active learning with GPR, focusing on the sensitivity to regularization by…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

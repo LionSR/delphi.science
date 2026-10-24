@@ -1,0 +1,25 @@
+{
+  "key": "2609.40309",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.40309",
+  "title": "Decoupling of the QAOA into independent spin-boson systems and high-depth performance on pure and mixed spin glasses",
+  "authors": [
+    "Sami Boulebnane",
+    "Abid Khan",
+    "Pragna Subrahmanya",
+    "Dylan Herman",
+    "Edward Farhi",
+    "Benjamin Villalonga",
+    "Ruslan Shaydulin"
+  ],
+  "summary": "The Quantum Approximate Optimization Algorithm (QAOA) is regarded as a promising candidate for near-term quantum advantage in combinatorial optimization, yet our ability to study it at scale is limited. Exact recursive formulas have been introduced for predicting QAOA performance on large spin glasses, but the computational cost of evaluating them grows exponentially with the number of QAOA layers, preventing the study of QAOA in the promising high-depth regime. In this work, we show that for the task of computing QAOA energy on any mixed dense spin glass problem, spins approximately…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

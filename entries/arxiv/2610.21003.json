@@ -1,0 +1,22 @@
+{
+  "key": "2610.21003",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.21003",
+  "title": "Reducing QUBO Complexity in Drone Delivery Through Classical Feasibility Preprocessing",
+  "authors": [
+    "Silvie Illésová",
+    "Vojtěch Novák",
+    "Martin Beseda"
+  ],
+  "summary": "Drone-delivery planning combines routing decisions with operational constraints such as payload capacity and limited onboard energy, resulting in combinatorial optimization problems that can become costly to encode directly in binary form. This work investigates a hybrid quantum--classical approach in which candidate drone missions are generated and evaluated classically before constructing a quadratic unconstrained binary optimization (QUBO) model for mission selection. Payload- and energy-infeasible missions are removed during preprocessing, while the reduced QUBO is solved using exact…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

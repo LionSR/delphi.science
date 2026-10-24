@@ -1,0 +1,19 @@
+{
+  "key": "2606.08758",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.08758",
+  "title": "Neural network decoder confidence as a learned proxy for the logical gap",
+  "authors": [
+    "David Dentelski"
+  ],
+  "summary": "To utilize quantum error-correcting codes, a decoder must infer the logical sector from the measured syndrome. Beyond a hard logical decision, some decoders provide soft information estimating its reliability. For minimum-weight perfect matching (MWPM), a common confidence measure is the complementary, or logical, gap. Neural-network decoders trained with binary cross entropy naturally output a different score, the logit, whose relation to the matching gap remains unclear. Here, we test whether the logit of a graph neural network (GNN) decoder behaves as a learned proxy for the logical gap.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-07",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

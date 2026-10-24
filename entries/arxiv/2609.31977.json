@@ -1,0 +1,21 @@
+{
+  "key": "2609.31977",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.31977",
+  "title": "Learning Trotter Orderings for Heisenberg Hamiltonians with a Ranking Transformer",
+  "authors": [
+    "Shamminuj Aktar",
+    "Reuben Tate",
+    "Stephan Eidenbenz"
+  ],
+  "summary": "Trotterization approximates quantum time evolution by sequentially applying Hamiltonian terms. Because noncommuting terms introduce ordering-dependent errors, selecting an optimal term ordering is a combinatorial problem over a factorial search space. Prior approaches rely on fixed heuristics or on selection among predefined structured orderings, both of which require simulating candidates before choosing among them. For 1D and 2D Heisenberg-style Hamiltonians, we instead learn the ordering directly with a physics-aware ranking transformer that assigns a scalar score to each Hamiltonian term…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

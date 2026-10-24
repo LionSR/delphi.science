@@ -1,0 +1,20 @@
+{
+  "key": "2605.06022",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.06022",
+  "title": "Lattice fermion formulation via Physics-Informed Neural Networks: Ginsparg-Wilson relation and Overlap fermions",
+  "authors": [
+    "Tatsuhiro Misumi"
+  ],
+  "summary": "We propose a novel, machine-learning-based framework for constructing lattice fermions using Physics-Informed Neural Networks (PINNs). Our approach treats the formulation of the Dirac operator as an optimization problem guided by physical requirements, such as symmetries, locality and doubler-decoupling conditions. We first demonstrate that, when trained to satisfy the Ginsparg-Wilson (GW) relation as a soft constraint, a neural network reproduces the overlap fermion operator to high numerical accuracy and learns an effective sign-function mapping without explicitly using a prescribed…",
+  "domain": "hep-lat",
+  "tags": [
+    "hep-lat",
+    "hep-th"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-06-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

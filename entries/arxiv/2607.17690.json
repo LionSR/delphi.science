@@ -1,0 +1,22 @@
+{
+  "key": "2607.17690",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.17690",
+  "title": "Quantum Key Distribution Beyond Stationary Channels",
+  "authors": [
+    "Vaisakh Mannalath",
+    "Víctor Zapatero",
+    "Kiyoshi Tamaki",
+    "Marcos Curty"
+  ],
+  "summary": "Quantum key distribution (QKD) over non-stationary channels, such as satellite links, is characterized by short, high-loss, and strongly fluctuating transmission windows that produce sparse detection events. In many QKD protocols, these data must be analyzed using non-IID statistical inequalities, yet existing methods either become loose for small sample sizes or heavily rely on fine-tuning, yielding poor estimates when the optical channel is mis-modeled. Using mixture martingale techniques, we introduce tight concentration inequalities that retain sharpness when the channel model is…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-20",
+  "updated": "2026-08-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

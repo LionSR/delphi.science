@@ -1,0 +1,19 @@
+{
+  "key": "2604.11352",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.11352",
+  "title": "Analytical Theory of Greedy Peeling for Bivariate Bicycle Codes and Two-Shot Streaming Decoding",
+  "authors": [
+    "Anton Pakhunov"
+  ],
+  "summary": "We present an analytical theory of greedy peeling decoding for bivariate bicycle (BB) codes under circuit-level noise. The deferred greedy decoder achieves 330x latency reduction over belief propagation (BP) at p = 10^{-3} while maintaining identical logical error rate. Our main theoretical contribution is a closed-form collision resolution factor A_0 = |true collisions| / |birthday collisions|, derived from XOR syndrome analysis with no free parameters, that quantifies the fraction of detector-sharing fault pairs genuinely blocking iterative peeling. For the [[144,12,12]] Gross code, A_0 =…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-13",
+  "updated": "2026-04-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

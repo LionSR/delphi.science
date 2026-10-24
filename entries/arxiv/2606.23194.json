@@ -1,0 +1,21 @@
+{
+  "key": "2606.23194",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.23194",
+  "title": "Quantum Advantage in Tolerant Junta Testing",
+  "authors": [
+    "Avishay Tal",
+    "Weiqiang Yuan"
+  ],
+  "summary": "We establish the first super-polynomial quantum advantage for the tolerant junta testing problem in the adaptive setting. Specifically, we show that within a certain parameter regime, tolerant $k$-junta testing with high precision can be solved using $\\mathrm{poly}(k)$ quantum queries, whereas any classical algorithm requires at least $k^{Ω(\\log k)}$ queries. The problem of tolerant $k$-junta testing is as follows: given parameters $(k, ε_1, ε_2)$, with $0\\le ε_1<ε_2 \\le 1/2$, and black-box access to a Boolean function $f$ (defined on $n$ variables), distinguish whether $f$ is $ε_1$-close to…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "quant-ph"
+  ],
+  "published": "2026-06-22",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2608.06892",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.06892",
+  "title": "Architecture-Aware Reinforcement Learning for Communication-Efficient Distributed Quantum Circuit Compilation",
+  "authors": [
+    "Chien-Tung Kuo",
+    "Felix Burt",
+    "Samuel Yen-Chi Chen",
+    "Kin K. Leung",
+    "Kuan-Cheng Chen"
+  ],
+  "summary": "Distributed quantum computing provides a scalable route for executing quantum circuits beyond the capacity limits of a single quantum processing unit (QPU), but it introduces a communication-aware compilation problem involving strict hardware constraints and circuit dependencies. This paper presents an architecture-aware reinforcement-learning framework that formulates distributed quantum compilation as a constrained Markov Decision Process (MDP). The compiler-level communication actions dynamically update logical-qubit placement and enable subsequent gate execution. A heterogeneous graph…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

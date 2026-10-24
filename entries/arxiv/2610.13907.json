@@ -1,0 +1,19 @@
+{
+  "key": "2610.13907",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.13907",
+  "title": "A scalable sample-based quantum diagonalization solver for general Pauli-sum Hamiltonians",
+  "authors": [
+    "Yutaro Iiyama"
+  ],
+  "summary": "A scalable ground-state solver to be used in sample-based quantum diagonalization (SQD) is presented. The solver is built on JAX API, and is intended to be run on GPU platforms and possibly many-GPU high-performance computing facilities. It is capable of subspace diagonalization in up to $2^{30}$-dimensional subspace, with possible upgrades to enable even larger-scale operations. The two main components, a general-purpose eigensolver and an SQD-specific matrix-vector operation function, are described in detail. Efficiency of the eigensolver with respect to the GPU memory is demonstrated…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

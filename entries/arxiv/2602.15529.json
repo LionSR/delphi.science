@@ -1,0 +1,22 @@
+{
+  "key": "2602.15529",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.15529",
+  "title": "Tight Communication Bounds for Distributed Algorithms in the Quantum Routing Model",
+  "authors": [
+    "Fabien Dufoulon",
+    "Frédéric Magniez",
+    "Gopal Pandurangan"
+  ],
+  "summary": "We present new distributed quantum algorithms for fundamental distributed computing problems, namely, leader election, broadcast, Minimum Spanning Tree (MST), and Breadth-First Search (BFS) tree, in arbitrary networks. These algorithms are (essentially) optimal with respect to their communication (message) complexity in the {\\em quantum routing model} introduced in [PODC 2025]. The message complexity of our algorithms is $\\tilde{O}(n)$ for leader election, broadcast, and MST, and $\\tilde{O}(\\sqrt{mn})$ for BFS ($n$ and $m$ are the number of nodes and edges of the network, respectively).…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DC"
+  ],
+  "published": "2026-02-17",
+  "updated": "2026-03-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

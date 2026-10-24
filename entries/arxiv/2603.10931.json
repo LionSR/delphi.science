@@ -1,0 +1,21 @@
+{
+  "key": "2603.10931",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.10931",
+  "title": "Variational Adaptive Gaussian Decomposition: Scalable Quadrature-Free Time-Sliced Thawed Gaussian Dynamics",
+  "authors": [
+    "Rahul Sharma",
+    "Amartya Bose"
+  ],
+  "summary": "Time-slicing has emerged as a strategy for incorporating semiclassical propagation into real-time path integral formulation and recovering full quantum dynamics. A central step is the decomposition of a time-evolved wave function into a superposition of Gaussian wave packets (GWPs). Here we introduce a quadrature-free variational framework for GWP decomposition, reformulating it as an optimization problem in which the GWP parameters are chosen to maximize the overlap with the time-evolving wave function. An autoencoderdecoder neural network is used for this optimization, with the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.chem-ph"
+  ],
+  "published": "2026-03-11",
+  "updated": "2026-06-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

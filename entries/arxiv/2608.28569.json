@@ -1,0 +1,22 @@
+{
+  "key": "2608.28569",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.28569",
+  "title": "Quantum Fourier transform for the symmetric group",
+  "authors": [
+    "Carli Bruinsma",
+    "Dmitry Grinko",
+    "Maris Ozols"
+  ],
+  "summary": "Quantum Fourier transforms (QFT) for general groups were recognized to be fundamental already early in the field. A canonical example of non-abelian QFT for the symmetric group was outlined by Beals (1997). Later, a more detailed analysis of this algorithm was carried out by Kawano and Sekigawa (2016). In this paper, we revisit that construction. After a careful analysis, we revise their gate complexity to $\\widetilde{\\mathcal{O}}(n^{3.5})$ and circuit depth to $\\widetilde{\\mathcal{O}}(n^3)$. Moreover, we observe that their construction is not optimal in the choice of transversal elements,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.RT"
+  ],
+  "published": "2026-08-28",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2603.05156",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.05156",
+  "title": "Constant-Depth Quantum Imaginary Time Evolution Using Dynamic Fan-out Circuits",
+  "authors": [
+    "Albert Lund",
+    "Erika Magnusson",
+    "Werner Dobrautz",
+    "Laura García-Álvarez"
+  ],
+  "summary": "Dynamic quantum circuits combine mid-circuit measurement with classical feed-forward, enabling circuit constructions with reduced entangling-gate depth. Here, we investigate their use in Quantum Imaginary Time Evolution (QITE), where circuit depth and parameter growth limit practical implementations of ground-state preparation. For dense classical optimization Hamiltonians, we introduce a reduced-parameter QITE ansatz that restricts entanglement generation via a small set of control qubits, enabling each QITE layer to be implemented with constant two-qubit gate depth using fan-out-based…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-05",
+  "updated": "2026-03-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2604.16527",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.16527",
+  "title": "Late Breaking Results: Hardware-Aware Compilation Reshapes Trainability in Variational Quantum Circuits",
+  "authors": [
+    "Muhammad Kashif",
+    "Muhammad Shafique"
+  ],
+  "summary": "Variational quantum circuits (VQCs) are typically evaluated at the logical design level when analyzing trainability. However, execution on real quantum devices requires hardware-aware compilation (transpilation) to satisfy qubit connectivity and native gate-set constraints. In this paper, we examine how transpilation can alter the gradient statistics. Using parameter-shift differentiation and gradient variance estimation, we compare logical and transpiled circuits across three representative ansatz families: EfficientSU2 (dense entanglement), TTN (tree tensor network), and RealAmplitudes…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-16",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

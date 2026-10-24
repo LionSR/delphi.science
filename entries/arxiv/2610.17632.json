@@ -1,0 +1,28 @@
+{
+  "key": "2610.17632",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.17632",
+  "title": "Toward Interpretable Quantum Generators for Financial Returns through Problem-Informed Circuit Design",
+  "authors": [
+    "Huijie Guan",
+    "Xuanhao Wang",
+    "Shengbin Wang",
+    "Jiale Zhang",
+    "Jian Ding",
+    "Shuxin Xie",
+    "Dongdong Li",
+    "Jianjian Gao",
+    "Hantao Sun",
+    "Wenhao Chu"
+  ],
+  "summary": "When used as function approximators, quantum circuits often lack interpretability and face a fundamental trade-off between expressivity and trainability. We propose a problem-informed framework for financial return generation that uses relational structure and symmetry-inspired parameter sharing to guide the construction of quantum circuits with few trainable parameters and empirically testable operator roles. We evaluate three quantum generator architectures, referred to as ZZ, directed ZZ-CRX, and structured time evolution, within a hybrid Wasserstein quantum generative adversarial network…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2608.24923",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.24923",
+  "title": "Comment on 'Supervised quantum machine learning models are kernel methods'",
+  "authors": [
+    "Rajiv Krishnakumar"
+  ],
+  "summary": "We identify a few small errors in the proof of Theorem 1 in M. Schuld, 'Supervised quantum machine learning models are kernel methods' (arXiv:2101.11020v2), Appendix A. These do not affect the validity of the theorem, but do matter if one wants to use the appendix to explicitly compute the Fourier coefficients of a quantum kernel. We give the corrected derivation, and additionally show that the paper's worked cosine-kernel example contains a second, unrelated error that happens to cancel the first, thereby coincidentally yielding the correct result.",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

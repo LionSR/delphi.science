@@ -1,0 +1,23 @@
+{
+  "key": "2609.40203",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.40203",
+  "title": "Generalized Reimpell-Werner Iteration",
+  "authors": [
+    "Shihao Ru",
+    "Bikun Li",
+    "Weibo Gao",
+    "Liang Jiang"
+  ],
+  "summary": "Quantum measurements and channels determine how information is extracted, encoded, and transmitted in quantum protocols. Optimizing their performance often requires numerical methods that remain practical as Hilbert space dimensions increase. The Reimpell-Werner iteration offers a practical approach to these tasks through repeated matrix updates that respect the constraints. Here, we generalize this iteration to linear objectives with arbitrary Hermitian cost matrices. We prove that the iterates converge to a global optimum whenever the initialization satisfies suitable support overlap…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math-ph"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

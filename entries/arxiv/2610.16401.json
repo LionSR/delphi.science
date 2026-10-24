@@ -1,0 +1,21 @@
+{
+  "key": "2610.16401",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16401",
+  "title": "Magic-Free Certification of Logical Error Rates in Universal Fault-Tolerant Circuits",
+  "authors": [
+    "Gebrat Porta-San Miguel",
+    "Shahram Panahiyan",
+    "Dieter Jaksch"
+  ],
+  "summary": "As quantum hardware enters the fault-tolerant regime, algorithms are beginning to be executed on encoded qubits, yet scalable certification of how well they run remains an open problem. Here we introduce magic-free certification, a certification protocol for universal fault-tolerant circuits that consumes no magic, the resource that generally places them beyond efficient classical simulation and is by far the most expensive element of a fault-tolerant computation. The protocol is code- and decoder-agnostic, runs interleaved with the target circuit on the same device, and has a sample…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

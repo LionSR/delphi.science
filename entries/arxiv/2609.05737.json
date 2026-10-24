@@ -1,0 +1,23 @@
+{
+  "key": "2609.05737",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.05737",
+  "title": "SAQC: A SAT-Aware Compilation Framework for QAOA-Based Quantum Optimization",
+  "authors": [
+    "Till Schnittka",
+    "Julie Maria Raju",
+    "Abhoy Kole",
+    "Rolf Drechsler"
+  ],
+  "summary": "The Quantum Approximate Optimization Algorithm (QAOA) is a promising variational approach for solving Boolean satisfiability (SAT) problems. Existing SAT-to-QAOA workflows first translate Boolean formulas into penalty Hamiltonians before applying generic quantum compilation, thereby discarding SAT-specific information such as clause structure, logical operators, and variable dependencies. Consequently, subsequent compiler optimizations cannot exploit the underlying Boolean formulation. This paper presents SAQC, a SAT-aware compilation framework that introduces a SAT Intermediate…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

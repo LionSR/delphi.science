@@ -1,0 +1,21 @@
+{
+  "key": "2607.27473",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.27473",
+  "title": "Closed Timelike Curve Decoding on Quantum Hardware",
+  "authors": [
+    "Sai Nandan Morapakula",
+    "Kazuki Ikeda"
+  ],
+  "summary": "Deutsch closed timelike curves (D-CTCs) are described by a fixed-point condition for a chronology-violating register. We study a finite-dimensional circuit model that places a Hayden--Preskill/Yoshida--Kitaev recovery map inside such a consistency loop. A register-routing construction makes the Deutsch map explicit: an initial SWAP moves the incoming CTC state to an idle dump register, the scrambler and decoder act on the remaining active registers, and a final SWAP writes the recovered message back to the CTC register. When the active branch recovers the message, the induced map on the CTC…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "gr-qc"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-08-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

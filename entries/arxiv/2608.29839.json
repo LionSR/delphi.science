@@ -1,0 +1,21 @@
+{
+  "key": "2608.29839",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.29839",
+  "title": "Ancilla-mediated fixed-point quantum search using Grover iterations",
+  "authors": [
+    "Yash Prabhat",
+    "Snigdha Thakur",
+    "Ankur Raina"
+  ],
+  "summary": "Grover's quantum search algorithm provides a fundamental quadratic speedup for unstructured datasets, reducing query complexity from $\\mathcal{O}(N)$ to $\\mathcal{O}(\\sqrt{N})$. However, the algorithm's reliance on precise iteration counts leads to the ``soufflé problem,'' where over-rotation results in a sharp decline in success probability. This limitation is particularly restrictive when the number of solution states, $M$, is unknown. In this work, we present an ancilla-mediated fixed-point quantum search algorithm that achieves robust convergence by mapping the solution amplitude to a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-30",
+  "updated": "2026-08-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

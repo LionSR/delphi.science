@@ -1,0 +1,23 @@
+{
+  "key": "2610.25138",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.25138",
+  "title": "On the Complexity of Level-Synchronized Tree Automata for Quantum Circuit Verification",
+  "authors": [
+    "Michael Blondin",
+    "Samy Chady Khoumsi-Kasmi",
+    "Guillermo A. Pérez",
+    "Marnix Suilen"
+  ],
+  "summary": "Reliable quantum computation requires methods for verifying quantum circuits. Level-synchronized tree automata (LSTAs) were recently introduced to represent sets of quantum states for this purpose. We study LSTAs along two axes relevant to verification: the complexity of their decision problems and the size of their representations under circuit operations. We prove that acyclic LSTAs have NP-complete nonemptiness and $Π_2^P$-complete language inclusion, and that general language inclusion is EXPSPACE-complete. We further prove inherent quadratic representation growth under individual…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.FL"
+  ],
+  "published": "2026-10-18",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

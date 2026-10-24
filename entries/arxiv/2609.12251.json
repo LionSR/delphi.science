@@ -1,0 +1,21 @@
+{
+  "key": "2609.12251",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.12251",
+  "title": "Keyless secrecy against bounded adversaries",
+  "authors": [
+    "Anne Broadbent",
+    "Upendra Kapshikar",
+    "Denis Rochette"
+  ],
+  "summary": "We introduce a keyless coding/cryptographic primitive that asks for two guarantees at once: the receiver is never fooled into accepting a message other than the one sent, and the adversary learns nothing about the message unless the receiver aborts. Neither the sender nor the receiver holds a secret key, and no computational hardness is assumed. The only restriction is on the adversary's online computation: the receiver aborts if nothing arrives by a fixed deadline, so the adversary must forward something before it, and her map in that window is computed by a circuit of size (or depth) at…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

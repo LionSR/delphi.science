@@ -1,0 +1,23 @@
+{
+  "key": "2605.30572",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.30572",
+  "title": "Mitigating Noise-Induced Barren Plateaus Using a Non-Unitary Ansatz: Application to Molecular Electronic Transport",
+  "authors": [
+    "Sasanka Dowarah",
+    "Abeda Sultana Shamma",
+    "Yazdan Maghsoud",
+    "G. Andrés Cisneros",
+    "Michael Kolodrubetz"
+  ],
+  "summary": "Variational quantum algorithms (VQAs) offer a promising route toward simulating many-body quantum systems on noisy intermediate-scale quantum (NISQ) hardware. However, their scalability is severely limited by noise-induced barren plateaus (NIBPs), where hardware noise causes the gradients of the cost function to vanish exponentially with circuit depth, rendering optimization impossible. In this work, we demonstrate that introducing nonunitary elements into the variational ansatz can mitigate NIBPs in open-quantum systems. Using an analytically tractable infinite-range dissipative Ising…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-05-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

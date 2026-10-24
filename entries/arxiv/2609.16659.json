@@ -1,0 +1,23 @@
+{
+  "key": "2609.16659",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.16659",
+  "title": "Approximate synthesis of general single-qubit unitaries over the Clifford+$\\sqrt{T}$ gate set",
+  "authors": [
+    "Mathias Weiden",
+    "Jae Won Kim",
+    "Justin Kalloor",
+    "John Kubiatowicz",
+    "Costin Iancu"
+  ],
+  "summary": "For the standard Clifford+$T$ gate set, deterministic, ancilla-free synthesis now attains the minimal $T$-count for general single-qubit unitaries (Morisaki et al., arXiv:2510.05816). The $\\sqrt{T}$ gate rotates by half the angle of $T$, generating a finer lattice of implementable operations. It was assumed that access to this magic state lowers the cost of deterministic and ancilla-free synthesis of general single-qubit unitaries, but no direct Clifford+$\\sqrt{T}$ algorithm existed for this case. We provide one by extending the integer lattice-point enumeration method of Morisaki et al. We…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

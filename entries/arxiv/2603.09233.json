@@ -1,0 +1,21 @@
+{
+  "key": "2603.09233",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.09233",
+  "title": "Efficient Qubit Simulation of Hybrid Oscillator-Qubit Quantum Computation",
+  "authors": [
+    "Xi Lu",
+    "Bojko N. Bakalov",
+    "Yuan Liu"
+  ],
+  "summary": "We introduce a framework for simulating hybrid oscillator-qubit quantum processors on qubit-only systems through position encoding. By encoding continuous-variable position and momentum wave functions into qubit amplitudes, our method efficiently simulates all Gaussian and conditional Gaussian operations -- encompassing the phase-space instruction set (beam splitter, single-qubit rotation, conditional displacement) and extending to squeezing, conditional squeezing, conditional rotation, and conditional beam splitter -- using $O\\!\\left(\\log^2\\!\\left(Γ+ \\log(1/ε)\\right)\\right)$ qubit gates per…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-10",
+  "updated": "2026-03-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

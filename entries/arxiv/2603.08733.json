@@ -1,0 +1,21 @@
+{
+  "key": "2603.08733",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.08733",
+  "title": "Measurement-Free Ancilla Recycling via Blind Reset: A Cross-Platform Study on Superconducting and Trapped-Ion Processors",
+  "authors": [
+    "Sangkeum Lee"
+  ],
+  "summary": "Ancilla reuse in repeated syndrome extraction couples reset quality to logical-cycle latency. We evaluate blind reset -- unitary-only recycling via scaled sequence replay -- on IQM Garnet, Rigetti Ankaa-3, and IonQ under matched seeds, sequence lengths, and shot budgets. Using ancilla cleanliness F_clean=P(|0>), per-cycle latency, and a distance-3 repetition-code logical-error proxy, platform-calibrated simulation identifies candidate regions where blind reset cuts cycle latency by up to 38x under NVQLink-class feedback overhead while maintaining F_clean >= 0.86 for L = 0.84 at L=8 (1024…",
+  "domain": "cs.AR",
+  "tags": [
+    "cs.AR",
+    "cs.AI",
+    "quant-ph"
+  ],
+  "published": "2026-02-24",
+  "updated": "2026-02-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

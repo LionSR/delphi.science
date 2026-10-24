@@ -1,0 +1,20 @@
+{
+  "key": "2608.12830",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.12830",
+  "title": "Improved Measurement Cost Scaling in the Nonorthogonal Quantum Eigensolver",
+  "authors": [
+    "Mingyu Kang",
+    "K. Birgitta Whaley"
+  ],
+  "summary": "Quantum subspace diagonalization methods are promising algorithms for quantum chemistry on near-term quantum computers. These methods can estimate low-lying energies of molecular systems using shallow quantum circuits, at the cost of many circuit repetitions to estimate the projected matrix elements. Errors in these matrix elements can be converted into much larger eigenvalue errors by an ill-conditioned overlap matrix. We study this bottleneck for the nonorthogonal quantum eigensolver (NOQE), which constructs a compact multireference subspace from dressed unrestricted Hartree-Fock states.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

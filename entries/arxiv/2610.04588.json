@@ -1,0 +1,25 @@
+{
+  "key": "2610.04588",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04588",
+  "title": "Variational Quantum Attention for Molecular Graph Learning",
+  "authors": [
+    "Yu-Cheng Lin",
+    "Yu-Chao Hsu",
+    "Tai-Yue Li",
+    "Nan-Yow Chen",
+    "Samuel Yen-Chi Chen"
+  ],
+  "summary": "Molecular property prediction is central to computational drug discovery, where graph neural networks learn to weight neighboring atomic environments during message passing. Yet it remains unclear how variational quantum circuits alter learned attention behavior in molecular graphs. We introduce an edge-aware variational quantum attention mechanism for molecular graph learning, in which the receiving atom, neighboring atom, and connecting bond jointly determine the quantum attention state. Across five molecular property and bioactivity prediction tasks, QGAT achieves competitive performance…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "published": "2026-10-03",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2610.12844",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.12844",
+  "title": "Improved classical optimization of fermionic Hamiltonians beyond Gaussian states",
+  "authors": [
+    "Ojas Parekh"
+  ],
+  "summary": "We give a polynomial-time randomized classical algorithm that approximates the largest eigenvalue $λ_{\\max}$ of a traceless quartic fermionic Hamiltonian $H$ on $n$ modes. The algorithm achieves energy at least $λ_{\\max}/O(\\sqrt n)$ and outputs either a fermionic Gaussian state or a polynomially sparse state in the Fock basis. This is achieved through a new upper bound on $λ_{\\max}$ in terms of the maximum energy of a Gaussian state and $\\sqrt{2^{-n}\\operatorname{Tr}(H^2)}$.",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2609.36694",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.36694",
+  "title": "Optimized Randomized Hamiltonian Simulation via Average-Error Analysis",
+  "authors": [
+    "Hayata Morisaki",
+    "Keisuke Fujii"
+  ],
+  "summary": "Hamiltonian simulation is a central application of quantum computing. Randomized Hamiltonian simulation approximates the target dynamics by sampling quantum circuits and often allows simpler circuit implementations. We develop a framework for randomized Hamiltonian simulation in which Hamiltonian terms are sampled with arbitrary probabilities and the corresponding short-time evolutions are implemented sequentially. The leading channel error relative to ideal time evolution is governed by the variance of the sampled generators. Minimizing the variance-based upper bound on the worst-case error…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

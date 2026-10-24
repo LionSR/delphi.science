@@ -1,0 +1,23 @@
+{
+  "key": "2603.02261",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.02261",
+  "title": "Quantum AS-DeepOnet: Quantum Attentive Stacked DeepONet for Solving 2D Evolution Equations",
+  "authors": [
+    "Hongquan Wang",
+    "Hanshu Chen",
+    "Ilia Marchevsky",
+    "Zhuojia Fu"
+  ],
+  "summary": "DeepONet enables retraining-free inference across varying initial conditions or source terms at the cost of high computational requirements. This paper proposes a hybrid quantum operator network (Quantum AS-DeepOnet) suitable for solving 2D evolution equations. By combining Parameterized Quantum Circuits and cross-subnet attention methods, we can solve 2D evolution equations using only 60% of the trainable parameters while maintaining accuracy and convergence comparable to the classical DeepONet method.",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-02-28",
+  "updated": "2026-02-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

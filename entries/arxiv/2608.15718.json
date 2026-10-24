@@ -1,0 +1,19 @@
+{
+  "key": "2608.15718",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.15718",
+  "title": "Quantum Kernel k-Means for Credit-Card Fraud Detection:A Controlled Benchmark on Real Transaction Data",
+  "authors": [
+    "Muhammad Faryad"
+  ],
+  "summary": "We benchmarked quantum kernel $k$-means against classical clustering for credit-card fraud detection on real transaction data, at up to \\MaxQubits{} qubits, under a protocol with separated selection and reporting data and matched search budgets. We find no robust quantum advantage: the sign of the difference depends on register size, all effect sizes are below $0.013$ ARI, and the single significant advantage we observe is fully explained by the number of configurations searched. We further show that ordinary hyperparameter choices move performance by considerably more than the quantum…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-16",
+  "updated": "2026-08-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

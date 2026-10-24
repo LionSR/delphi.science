@@ -1,0 +1,21 @@
+{
+  "key": "2608.21166",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.21166",
+  "title": "Distributed synthesis of arbitrary graph states in quantum networks via rank-two GF(2) reduction",
+  "authors": [
+    "Xiaoyi Zheng",
+    "Lin Chen",
+    "Chan-Tong Lam"
+  ],
+  "summary": "Existing schemes for synthesizing graph states in quantum networks are essentially edge-by-edge constructions, so quantities such as the time-slot depth and the resource overhead grow significantly with the edge density of the target graph. This paper proposes a new method. Exploiting the mathematical equivalence between joint Pauli-X measurements and graph pivot operations, we formulate graph state synthesis as a rank-2 reduction process of a difference matrix over GF(2), and give an upper bound floor(N/2) on the number of steps for synthesizing an arbitrary N-node graph state, independent…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-21",
+  "updated": "2026-08-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

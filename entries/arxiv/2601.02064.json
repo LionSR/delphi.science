@@ -1,0 +1,21 @@
+{
+  "key": "2601.02064",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.02064",
+  "title": "Cutting Quantum Circuits Beyond Qubits",
+  "authors": [
+    "Manav Seksaria",
+    "Anil Prabhakar"
+  ],
+  "summary": "We extend quantum circuit cutting to heterogeneous registers comprising mixed-dimensional qudits. By decomposing non-local interactions into tensor products of local generalised Gell-Mann matrices, we enable the simulation and execution of high-dimensional circuits on disconnected hardware fragments. We validate this framework on qubit--qutrit ($2$--$3$) interfaces, achieving exact state reconstruction with a Total Variation Distance of 0 within single-precision floating-point tolerance. Furthermore, we demonstrate the memory advantage in an 8-particle, dimension-8 system, reducing memory…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DC"
+  ],
+  "published": "2026-01-05",
+  "updated": "2026-01-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

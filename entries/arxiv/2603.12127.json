@@ -1,0 +1,20 @@
+{
+  "key": "2603.12127",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.12127",
+  "title": "The Geometry of Clifford Algorithms: Bernstein-Vazirani as Classical Computation in a Rotated Basis",
+  "authors": [
+    "Bartosz Chmura"
+  ],
+  "summary": "The Bernstein-Vazirani (BV) algorithm is frequently taught as a canonical example of quantum parallelism, yet the standard interference-based explanation often obscures its underlying simplicity. We present a geometric reframing in which the Hadamard gate \"wrapping\" acts as a global basis rotation rather than a generator of computational complexity. This perspective reveals that the algorithm is effectively a classical linear computation over GF(2) performed in the conjugate Fourier basis, with the apparent parallelism arising from coordinate transformation. Building on Mermin's earlier…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.ed-ph"
+  ],
+  "published": "2026-03-12",
+  "updated": "2026-03-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

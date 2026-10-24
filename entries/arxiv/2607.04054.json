@@ -1,0 +1,21 @@
+{
+  "key": "2607.04054",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04054",
+  "title": "Frozen-Tree Sampling Refutes Quantum Advantage of Random Circuit Sampling",
+  "authors": [
+    "Sangchul Oh"
+  ],
+  "summary": "Random circuit sampling of bitstrings from a Haar-random quantum state is widely believed to be classically intractable, and has therefore been implemented as a primary benchmark for demonstrating quantum advantage. Here, we challenge this premise by proposing an efficient classical frozen-tree sampling algorithm that exploits the conditional scale invariance of Haar-random quantum states [Oh, arXiv:2602.19448]. The frozen-tree sampler draws bitstrings of $n$ qubits in $O(n)$ time per sample. Moreover, its output probability $p_F(x)$ is statistically identical to the probability $p_C(x)$ of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "math-ph"
+  ],
+  "published": "2026-07-04",
+  "updated": "2026-07-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

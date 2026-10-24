@@ -1,0 +1,20 @@
+{
+  "key": "2605.16749",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.16749",
+  "title": "Boundary-Aware QFT Block-Encoding of Fractional Laplacians",
+  "authors": [
+    "Younes Javanmard",
+    "Sina Kazemian"
+  ],
+  "summary": "We study the quantum Fourier transform (QFT) block-encoding of the semi-discrete fractional Laplacian on bounded domains with open, zero-extension boundary conditions. In the notation of the main construction, the target operator is the finite Toeplitz truncation \\(A^{(N)}_{α,h}\\) obtained from the full-lattice semi-discrete operator with symbol \\(|ξ|^α\\). A finite QFT register, however, diagonalizes circulant matrices rather than Toeplitz truncations. The native QFT circuit therefore implements a periodic surrogate \\(\\widetilde A^{(N)}_{α,h}\\), not the open-boundary operator. We identify…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-16",
+  "updated": "2026-05-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

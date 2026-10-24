@@ -1,0 +1,25 @@
+{
+  "key": "2606.20805",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20805",
+  "title": "Distribution Complexity of Electronic Structure Simulations on Quantum Supercomputers",
+  "authors": [
+    "Jason Necaise",
+    "Namit Anand",
+    "Gaurav Gyawali",
+    "K. Grace Johnson",
+    "James D. Whitfield",
+    "Masoud Mohseni"
+  ],
+  "summary": "Efficient simulation of strongly-interacting fermionic systems on quantum processing units (QPUs) is a challenging task due to nonlocal mode entanglement generation. However, it is not yet well understood how the structure of entanglement governs the hardness of large-scale quantum chemistry simulations or the scaling of distributing such workloads. Here, we introduce an algorithm for estimating the distribution complexity of hybrid quantum-classical simulation for electronic structure Hamiltonians over heterogeneous high-performance architectures. Our algorithm relies on efficient…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math-ph"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

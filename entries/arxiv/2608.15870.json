@@ -1,0 +1,19 @@
+{
+  "key": "2608.15870",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.15870",
+  "title": "A certified lower bound on the quantum-capacity threshold of the depolarizing channel",
+  "authors": [
+    "Artus Krohn-Grimberghe"
+  ],
+  "summary": "The noise threshold below which the qubit depolarizing channel retains positive quantum capacity has been studied since 1996. The classic constructions come with exact finite formulae, but in every reported threshold to date -- most recently the record of Agarwal et al. -- the final step, the sign of the coherent information at the reported point, is a floating-point evaluation. We give the first exact-arithmetic, independently machine-checkable positivity proofs in this regime: an explicit 45-copy rank-two input state $A$, published as a 1,472-byte witness, with certified $I_c > 0$ at the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-16",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

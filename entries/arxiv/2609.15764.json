@@ -1,0 +1,21 @@
+{
+  "key": "2609.15764",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.15764",
+  "title": "Low-Depth Initial-State Preparation for Ground-State Energy Estimation of Two-Dimensional Strongly Correlated Systems",
+  "authors": [
+    "Ryo Watanabe",
+    "Keisuke Fujii"
+  ],
+  "summary": "Quantum algorithms for ground-state energy estimation require initial states with non-negligible fidelity to the ground state. Guided by classical simulations, we design shallow circuits for the two-dimensional half-filled Hubbard model by first preparing an approximate Heisenberg ground state and then applying charge-fluctuation gates derived directly from the Schrieffer-Wolff (SW) generator. For the Heisenberg model, we demonstrate effective parameter transfer from a $4\\times4$ lattice to lattices up to $10\\times10$ without further optimization. We obtain promising lower bounds on the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.str-el"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,28 @@
+{
+  "key": "2610.28057",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.28057",
+  "title": "Optimal Quantum-Circuit Synthesis and Implementation of General Unitaries with Parallelized Bitstring-Conditioned Rotations",
+  "authors": [
+    "Heikki Suominen",
+    "Suman Kundu",
+    "Heidi Kivijärvi",
+    "Sasu Tuohino",
+    "Mikko Tuokkola",
+    "Eemeli Forsbom",
+    "Madhavi Chand",
+    "Vasilii Vadimov",
+    "R. Vijay",
+    "Mikko Möttönen"
+  ],
+  "summary": "We theoretically introduce a quantum-circuit synthesis protocol to realize any $n$-qubit transformation $U\\in U(2^n)$, up to a diagonal. The resulting circuit is directly native to and optimal in gate count and depth for systems where bitstring-conditioned rotations with tunable angle and axis, $C^{(n-1)}R(θ,φ)$, form the set of native operations. Subsequently, we suggest how this protocol can be implemented in a few-mode superconducting circuit, and experimentally demonstrate the method for the smallest nontrivial case, i.e., for two qubits. We report an average gate fidelity of 97.6 % for…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

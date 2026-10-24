@@ -1,0 +1,22 @@
+{
+  "key": "2604.25137",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.25137",
+  "title": "Quantum Dynamics via Score Matching on Bohmian Trajectories",
+  "authors": [
+    "Lei Wang"
+  ],
+  "summary": "We solve the time-dependent Schrödinger equation by learning the score function, the gradient of the log-probability density, on Bohmian trajectories. In Bohm's formulation of quantum mechanics, particles follow deterministic paths under the classical potential supplemented by a quantum potential depending on the score function of the evolving density. These non-crossing Bohmian trajectories form a continuous normalizing flow governed by the score. We parametrize the score with a neural network and minimize a self-consistent Fisher divergence between the network and the score of the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG",
+    "physics.chem-ph",
+    "physics.comp-ph"
+  ],
+  "published": "2026-04-28",
+  "updated": "2026-04-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

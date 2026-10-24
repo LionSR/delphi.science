@@ -1,0 +1,23 @@
+{
+  "key": "2606.12806",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.12806",
+  "title": "Quantum Reservoir Computing for Short-Term Power Load Forecasting in Resource-Constrained Energy Systems",
+  "authors": [
+    "Mansi Od",
+    "Param Pathak",
+    "Nouhaila Innan",
+    "Muhammad Shafique"
+  ],
+  "summary": "Short-term load forecasting is essential for reliable energy management, but practical deployment on edge devices requires models that remain accurate under limited memory, finite measurement budgets, and hardware noise. This work proposes a hardware-efficient Quantum Reservoir Computing (QRC) framework for energy load forecasting, where a fixed quantum reservoir transforms temporal input windows into high-dimensional features and only a classical Elastic Net readout is trained. To reduce deployment cost, the trained readout is compressed using post-training fixed-point quantization at bit…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

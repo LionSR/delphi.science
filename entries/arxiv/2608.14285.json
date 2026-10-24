@@ -1,0 +1,24 @@
+{
+  "key": "2608.14285",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.14285",
+  "title": "Qu-Trefoil: Large-Scale Quantum Circuit Simulator Working on FPGA With SATA Storages",
+  "authors": [
+    "Kaijie Wei",
+    "Hideharu Amano",
+    "Ryohei Niwase",
+    "Yoshiki Yamaguchi",
+    "Takefumi Miyoshi"
+  ],
+  "summary": "Quantum circuits are fundamental components of quantum computing, and state-vector-based quantum circuit simulation is a widely used technique for tracking qubit behavior throughout circuit evolution. However, simulating a circuit with $n$ qubits requires $2^{n+4}$ bytes of memory, making simulations of more than 40 qubits feasible only on supercomputers. To address this limitation, we propose the Qu-Trefoil, a system designed for large-scale quantum circuit simulations on an FPGA-based platform called Trefoil. Trefoil is a multi-FPGA system connected to eight storage subsystems, each…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AR"
+  ],
+  "published": "2026-08-14",
+  "updated": "2026-08-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

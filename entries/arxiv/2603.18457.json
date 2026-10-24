@@ -1,0 +1,25 @@
+{
+  "key": "2603.18457",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.18457",
+  "title": "Simulating Quantum Error Correction beyond Pauli Stochastic Errors",
+  "authors": [
+    "Jordan Hines",
+    "Corey Ostrove",
+    "Kenneth Rudinger",
+    "Stefan Seritan",
+    "Kevin Young",
+    "Robin Blume-Kohout",
+    "Timothy Proctor"
+  ],
+  "summary": "Quantum error correction (QEC), the lynchpin of fault-tolerant quantum computing (FTQC), is designed and validated against well-behaved Pauli stochastic error models. But in real-world deployment, QEC protocols encounter a vast array of other errors -- coherent and non-Pauli errors -- whose impacts on quantum circuits are vastly different than those of stochastic Pauli errors. The impacts of these errors on QEC and FTQC protocols have been largely unpredictable to date due to exponential classical simulation cost. Here, we show how to accurately and efficiently model the effects of coherent…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-19",
+  "updated": "2026-03-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

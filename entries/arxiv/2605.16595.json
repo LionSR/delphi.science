@@ -1,0 +1,20 @@
+{
+  "key": "2605.16595",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.16595",
+  "title": "qstack: Compositional End-to-End Compilation for Fault-Tolerant Quantum Programs",
+  "authors": [
+    "Andres Paz",
+    "Dan Grossman"
+  ],
+  "summary": "Compiling quantum programs for fault-tolerant execution requires transforming high-level operations through multiple abstraction layers: from logical gates to error-corrected encodings to hardware-native instructions. A key challenge is that quantum error correction turns purely quantum programs into hybrid quantum-classical programs, where classical feedback from syndrome measurements drives quantum corrections at runtime. Existing compilation frameworks handle these quantum and classical components separately, requiring manual adaptation of classical logic at each compilation stage, all…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-15",
+  "updated": "2026-05-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

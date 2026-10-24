@@ -1,0 +1,23 @@
+{
+  "key": "2602.22255",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.22255",
+  "title": "Deep Sequence Modeling with Quantum Dynamics: Language as a Wave Function",
+  "authors": [
+    "Ahmed Nebli",
+    "Hadi Saadatdoorabi",
+    "Kevin Yam"
+  ],
+  "summary": "We introduce a sequence modeling framework in which the latent state is a complex-valued wave function evolving on a finite-dimensional Hilbert space under a learned, time-dependent Hamiltonian. Unlike standard recurrent architectures that rely on gating mechanisms to suppress competing hypotheses, our framework utilizes quantum interference: the Hamiltonian steers the phases of complex amplitudes so that conflicting interpretations cancel while compatible ones reinforce. The dynamics are strictly unitary, ensuring that the state norm is preserved exactly at every time step via a Cayley…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "quant-ph"
+  ],
+  "published": "2026-02-24",
+  "updated": "2026-02-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

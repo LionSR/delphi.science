@@ -1,0 +1,21 @@
+{
+  "key": "2605.26041",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.26041",
+  "title": "Asymptotically Optimal Depth Fermionic Permutation on 2D Grid Quantum Architecture without Ancillas",
+  "authors": [
+    "Dantong Li",
+    "Shifan Xu",
+    "Yongshan Ding"
+  ],
+  "summary": "Simulating fermionic systems on qubit hardware involves many nonlocal interactions, and efficient routing of these interactions is critical to the overall cost of fermionic simulation algorithms. Recent works reduce this routing overhead to polylogarithmic depth under all-to-all connectivity, but degrade to $O(\\sqrt{N}\\log N)$ for $N$ fermionic modes on 2D nearest-neighbor architectures. We present a fermionic permutation protocol tailored to 2D grid architectures that achieves the optimal $O(\\sqrt{N})$ depth with $O(N\\sqrt{N})$ nearest-neighbor gates and no ancilla qubits, measurements, or…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-25",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2605.02465",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.02465",
+  "title": "Constraint Preserving XY-Mixers under Trotterized Adiabatic Evolution",
+  "authors": [
+    "Abhishek Awasthi",
+    "Maximilian Hess",
+    "Salome Lomadze",
+    "Francesco Bär",
+    "Christian Biefel"
+  ],
+  "summary": "Constraint handling is a central challenge for quantum algorithms applied to combinatorial optimization. Standard penalty-based approaches increase problem size, distort energy landscapes, and often degrade performance. Constraint-preserving mixers, such as XY-mixers, restrict quantum evolution to feasible subspaces, but their implementation on gate-based hardware requires Trotterization, which introduces approximation errors. In this work, we systematically investigate the interplay between constraint-preserving XY-mixers and Trotterized Adiabatic Evolution (TAE). We present a theoretical…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-04",
+  "updated": "2026-05-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

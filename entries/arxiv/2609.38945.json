@@ -1,0 +1,22 @@
+{
+  "key": "2609.38945",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38945",
+  "title": "Certified Randomness with Optimal Rate",
+  "authors": [
+    "Siddhartha Jain",
+    "Saachi Mutreja",
+    "Bhaskar Roberts"
+  ],
+  "summary": "The generation of certified random bits is an emerging near-term application of quantum computers. Potential applications, such as randomness beacons and CRS generation, require nearly uniform randomness, whose rate (the ratio of min-entropy to bitlength) is ~ 1. However, existing protocols for certified randomness either produce weakly random strings with rate o(1), or they require a trusted random seed. We show how to certify randomness with the optimal rate ~ 1 without requiring any trusted randomness from the verifier. Our protocol is secure unconditionally in the quantum random oracle…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

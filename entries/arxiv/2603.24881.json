@@ -1,0 +1,27 @@
+{
+  "key": "2603.24881",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.24881",
+  "title": "Implementation of the multigrid Gaussian-Plane-Wave algorithm with GPU acceleration in PySCF",
+  "authors": [
+    "Rui Li",
+    "Xing Zhang",
+    "Qiming Sun",
+    "Yuanheng Wang",
+    "Junjie Yang",
+    "Garnet Kin-Lic Chan"
+  ],
+  "summary": "We introduce a GPU-accelerated multigrid Gaussian-Plane-Wave density fitting (FFTDF) approach for efficient Fock builds and nuclear gradient evaluations within Kohn-Sham density functional theory, as implemented in the GPU4PySCF module of PySCF. Our CUDA kernels employ a grid-based parallelization strategy for contracting Gaussian basis function pairs and achieve up to 80% of the FP64 peak performance on NVIDIA GPUs, with no loss of efficiency for high angular momentum (up to f-shell) functions. Benchmark calculations on molecules and solids with up to 1536 atoms and 20480 basis functions…",
+  "domain": "physics.chem-ph",
+  "tags": [
+    "physics.chem-ph",
+    "cond-mat.mtrl-sci",
+    "physics.comp-ph",
+    "quant-ph"
+  ],
+  "published": "2026-03-25",
+  "updated": "2026-03-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

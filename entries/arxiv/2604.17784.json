@@ -1,0 +1,21 @@
+{
+  "key": "2604.17784",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.17784",
+  "title": "Current-State Opacity in Safe Partially Observed Quantum Petri Nets: True-Concurrency Semantics and Exact Symbolic Verification",
+  "authors": [
+    "Sichen Ding",
+    "Zhiwu Li"
+  ],
+  "summary": "Classical opacity theory for discrete-event systems relies strictly on observable event sequences, fundamentally failing to capture security breaches in hybrid architectures where an attacker exploits both classical traces and localized quantum correlations. To address this gap, we formalize current-state opacity within the framework of safe partially observed quantum Petri nets by introducing a true-concurrency semantics that represents classical observations as partially ordered multisets via unfolding configurations. Building upon this, we define quantitative posterior-state leakage as…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "quant-ph"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-04-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

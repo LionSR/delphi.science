@@ -1,0 +1,22 @@
+{
+  "key": "2603.17959",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.17959",
+  "title": "MQTE: A Measurement-Based Quantum Algorithm for Robust Energy Spectrum Estimation in the NISQ Era",
+  "authors": [
+    "Qing-Xing Xie",
+    "Yong-Kang Duan",
+    "Fa-Hui Liu",
+    "Yan Zhao"
+  ],
+  "summary": "Extracting energy spectra from quantum Hamiltonians is a fundamental task for quantum simulation, yet remains challenging on noisy intermediate-scale quantum (NISQ) devices. We propose Measured Quantum Time Evolution (MQTE), an ancilla-free algorithm that estimates energy gaps by applying real-time evolution to a reference state and measuring time-resolved probabilities via repeated projective measurements. Spectral analysis of these signals reveals oscillation frequencies corresponding to eigenvalue differences. Crucially, MQTE exhibits inherent robustness to quantum hardware noise and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-18",
+  "updated": "2026-03-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

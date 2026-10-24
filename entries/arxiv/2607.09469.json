@@ -1,0 +1,26 @@
+{
+  "key": "2607.09469",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.09469",
+  "title": "A combinatorial framework for clustering graph states: Algorithms and hardness for rank-integrity",
+  "authors": [
+    "Romain Bourneuf",
+    "Nathan Claudet",
+    "Sang Yoon Kim",
+    "Rose McCarty",
+    "Blair D. Sullivan",
+    "Stéphan Thomassé"
+  ],
+  "summary": "We introduce a new notion of distance between two graph states $|G\\rangle$ and $|G'\\rangle$ on the same set of qubits. This distance is the minimum number of ancilla qubits in a graph state $|\\widehat{G}\\rangle$ from which both $|G\\rangle$ and $|G'\\rangle$ can be ``easily prepared''. (When preparing graph states, we are only allowed to use one-qubit Clifford gates, one-qubit Pauli measurements, and classical communication.) We give a graphical description of this distance through the lens of vertex-minors. We then show how this distance yields quantum network analogs of many graph…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.DM",
+    "quant-ph"
+  ],
+  "published": "2026-07-10",
+  "updated": "2026-07-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

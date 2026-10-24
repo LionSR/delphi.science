@@ -1,0 +1,22 @@
+{
+  "key": "2602.22851",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.22851",
+  "title": "Experimental demonstration of the absence of noise-induced barren plateaus using information content landscape analysis",
+  "authors": [
+    "Sebastian Schmitt",
+    "Linus Ekstrøm",
+    "Alberto Bottarelli",
+    "Xavier Bonet-Monroig"
+  ],
+  "summary": "Variational quantum algorithms are promising candidates for near-term quantum computing but can be hindered by barren plateaus, where gradients vanish exponentially and optimization becomes intractable. Noise-Induced Barren Plateaus (NIBP) are particularly concerning because they are predicted to arise generically from noise accumulation, independent of system size, circuit structure, and observable locality. We experimentally investigate NIBP on IBM quantum hardware. Using Information Content Landscape Analysis (ICLA), we efficiently estimate gradient norms for variational circuits ranging…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-26",
+  "updated": "2026-03-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

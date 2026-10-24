@@ -1,0 +1,24 @@
+{
+  "key": "2609.16488",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.16488",
+  "title": "Error-Bounded Fixed-Point Design of Super-Sample-Rate IIR Filters for Real-Time Superconducting Qubit Flux Predistortion",
+  "authors": [
+    "Matt Huszabianlou",
+    "Angelos Ioannou",
+    "Nirmalendu Bikash Patra",
+    "Anastasiia Butko",
+    "Gang Huang",
+    "Irfan Siddiqi"
+  ],
+  "summary": "Flux-activated two-qubit gates in superconducting processors require correction of line distortion, which otherwise produces residual detuning, conditional-phase error, and leakage. Prior demonstrations of cryoscope-based distortion calibration have generally used commercial solutions that specify the filter models but not their FPGA implementation. These details matter for custom and open-source systems, where the fixed-point coefficient and datapath formats set how accurately the correction is realized, and the IIR feedback loop in its standard form does not meet timing at the required…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2601.02977",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.02977",
+  "title": "Classical Analog Emulation of Quantum Circuits via Time-Averaged Dynamic States",
+  "authors": [
+    "Mathieu Padlewski",
+    "Matias Miguel Castillo Valle",
+    "Tim Tuuva",
+    "Benjamin Apffel",
+    "Hervé Lissek",
+    "Romain Fleury"
+  ],
+  "summary": "Classical analog hardware that emulates quantum circuits at the gate level offers a route to benchmarking, prototyping, and teaching quantum algorithms. We introduce wavebits, classical wave analogs of qubits whose amplitudes are carried by physical oscillatory signals, and show that any nonseparable N-qubit state can be encoded in 2N narrowband signals that remain locally separable at every instant. The nonseparable correlations are recovered at readout by time-averaged demodulation over auxiliary carrier frequencies, referred to as nonseparability channels. We prove that any two-qubit gate…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.app-ph"
+  ],
+  "published": "2026-01-06",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

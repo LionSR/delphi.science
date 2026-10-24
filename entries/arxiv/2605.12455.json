@@ -1,0 +1,25 @@
+{
+  "key": "2605.12455",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.12455",
+  "title": "Simultaneously Minimizing Storage and Bandwidth Under Exact Repair With Quantum Entanglement",
+  "authors": [
+    "Lei Hu",
+    "Mohamed Nomeir",
+    "Alptug Aytekin",
+    "Sennur Ulukus"
+  ],
+  "summary": "We study exact-regenerating codes for entanglement-assisted distributed storage systems. Consider an $(n,k,d,α,β_{\\mathsf{q}},B)$ distributed system that stores a file of $B$ classical symbols across $n$ nodes with each node storing $α$ symbols. A data collector can recover the file by accessing any $k$ nodes. When a node fails, any $d$ surviving nodes share an entangled state, and each of them transmits a quantum system of $β_{\\mathsf{q}}$ qudits to a newcomer. The newcomer then performs a measurement on the received quantum systems to generate its storage. Recent work [1] showed that,…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "cs.NI",
+    "eess.SP",
+    "quant-ph"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

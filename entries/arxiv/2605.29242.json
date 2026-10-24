@@ -1,0 +1,20 @@
+{
+  "key": "2605.29242",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.29242",
+  "title": "Hybrid Gaussian-exponential zero-noise extrapolation for periodic circuits",
+  "authors": [
+    "Tao Wang",
+    "Yun Shang"
+  ],
+  "summary": "Zero-noise extrapolation provides a practical means of suppressing gate errors in current noisy intermediate-scale quantum hardware. The accuracy of the zero-noise estimate depends sensitively on the fidelity of the assumed noise model to the actual error scaling. This work introduces a hybrid Gaussian-exponential extrapolation scheme tailored for quantum circuits with periodic structure, which are ubiquitous in quantum algorithms. Under Pauli diagonal errors, by constructing and analyzing an approximate Markov process for the transfer of Pauli operators, we prove a central limit theorem:…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-06-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

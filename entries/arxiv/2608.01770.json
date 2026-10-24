@@ -1,0 +1,20 @@
+{
+  "key": "2608.01770",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.01770",
+  "title": "Fidelity Estimation to a Known Quantum State Is Nearly Quadratic in the Smaller Rank",
+  "authors": [
+    "Gye Jin Lee",
+    "Sunghyeon Jo"
+  ],
+  "summary": "We study the number of copies needed to estimate the root Uhlmann fidelity between an unknown quantum state and a classically known reference, under collective measurements. If the unknown state has rank at most $s$, we give an estimator using $O(s^2/\\varepsilon^2)$ copies, uniformly in the ambient dimension and reference rank. The estimator applies a random-purification channel and a covariant pure-state measurement, then rescales the observed amplitude before evaluating a weighted nuclear norm. Combined with the lower bound established independently in our first version and in concurrent…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-03",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

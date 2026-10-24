@@ -1,0 +1,24 @@
+{
+  "key": "2604.11314",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.11314",
+  "title": "Risk-aware neural pulse compilation of continuously parameterized single-qubit gates with optimal-control benchmarking and NMR hardware validation",
+  "authors": [
+    "Arash Fath Lipaei",
+    "Ebrahim Khaleghian",
+    "Gani Göral",
+    "Zidong Lin",
+    "Selin Aslan",
+    "Özgür E. Müstecaplıoğlu"
+  ],
+  "summary": "Pulse-level compilation can reduce the depth and calibration overhead associated with decomposing continuously parameterized quantum operations into fixed gate libraries, but conventional optimal control requires a new optimization for each target and can be sensitive to hardware uncertainty. We introduce a physics-informed neural compilation framework that learns a reusable map from continuously parameterized single-qubit gate targets directly to experimentally admissible control waveforms. The compiler is trained end-to-end through differentiable quantum dynamics without precomputed…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

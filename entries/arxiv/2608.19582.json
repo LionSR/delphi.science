@@ -1,0 +1,27 @@
+{
+  "key": "2608.19582",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19582",
+  "title": "Physics-guided machine learning for sim-to-real calibration of NV diamond magnetometers",
+  "authors": [
+    "Jonathan Daniel",
+    "Martin Y. Kim",
+    "Jesse Hernandez",
+    "Emanuel Suarez",
+    "Sangwoo Lee",
+    "Jinhee Lee",
+    "Je-Hyung Kim"
+  ],
+  "summary": "Ensemble nitrogen-vacancy (NV) centers in diamond enable robust vector magnetometry in unshielded environments, yet deployment remains bottlenecked by complex calibration and a reliance on external data references. Conventional statistical machine learning requires an exorbitantly large volume of training data and suffers from severe simulation-to-reality mismatches. To address this, we introduce a physics-guided hybrid machine learning framework that embeds the Zeeman splitting directly into the learning pipeline. Our physics-guided model significantly reduces the average tracking error…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.mtrl-sci",
+    "physics.app-ph"
+  ],
+  "published": "2026-08-20",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

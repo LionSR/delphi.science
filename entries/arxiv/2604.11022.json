@@ -1,0 +1,21 @@
+{
+  "key": "2604.11022",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.11022",
+  "title": "SPATE: Spiking-Phase Adaptive Temporal Encoding for Quantum Machine Learning",
+  "authors": [
+    "Nouhaila Innan",
+    "Rachmad Vidya Wicaksana Putra",
+    "Muhammad Shafique"
+  ],
+  "summary": "Most quantum machine learning (QML) pipelines still rely on static encodings such as angle and amplitude maps, and this limits their ability to handle temporal information. To address this limitation, this paper uses spike-based data representation as an effective encoding mechanism that incorporates temporal structure into quantum feature preparation. Specifically, we propose Spiking-Phase Adaptive Temporal Encoding (SPATE), a novel spike-driven temporal encoding method that converts real-valued tabular features into leaky integrate-and-fire spike trains and maps spike statistics to quantum…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-13",
+  "updated": "2026-04-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

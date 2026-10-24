@@ -1,0 +1,24 @@
+{
+  "key": "2604.00607",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00607",
+  "title": "Beyond Quantum Advantage: Improved Classical Algorithms for the Binary Paint Shop Problem",
+  "authors": [
+    "Mark Goh",
+    "Lara Caroline Pereira dos Santos",
+    "Thorge Müller",
+    "Matthias Sperl"
+  ],
+  "summary": "The binary paint shop problem (BPSP) is an APX-hard optimization problem in which, given $n$ car models that occur twice in a sequence of length $2n$, the objective is to find a colouring sequence such that each car model pair is painted differently while minimizing the number of times the paint is swapped along the sequence. A recent classical heuristic, known as the recursive star greedy (RSG) algorithm, is conjectured to achieve an expected paint swap ratio of $0.361$, thereby outperforming the Quantum Approximate Optimization Algorithm (QAOA) with circuit depth $p=7$. Since the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS",
+    "math.OC"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

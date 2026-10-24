@@ -1,0 +1,22 @@
+{
+  "key": "2609.25992",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.25992",
+  "title": "Maximum-Likelihood Amplitude Estimation for Quantum Monte Carlo Integration on Trapped-Ion Hardware: Convergence, Noise-Floor Saturation, Depth-Dependent Bias",
+  "authors": [
+    "Aditi Lal",
+    "Alex Khan",
+    "Rut Lineswala",
+    "Abhishek Chopra"
+  ],
+  "summary": "Quantum Amplitude Estimation promises to accelerate Monte Carlo integration by replacing the classical $\\varepsilon \\propto N^{-1/2}$ sampling law with the Heisenberg-limited $\\varepsilon \\propto N^{-1}$ scaling, but whether any part of that advantage survives on present-day hardware is an empirical question. We report a systematic experimental benchmark of a Maximum-Likelihood Amplitude Estimation QMC pipeline on IonQ trapped-ion processors, comprising 60 hardware trials on IonQ Forte-1 across five settings(5 & 9 qubits, 100-200 shots per depth, linear & exponential amplification schedules,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-22",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

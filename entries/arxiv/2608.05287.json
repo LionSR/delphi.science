@@ -1,0 +1,24 @@
+{
+  "key": "2608.05287",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.05287",
+  "title": "Scalable Circuit Cutting: A Framework for Combined Gate and Wire Cuts Using Gate Groups",
+  "authors": [
+    "Fiona Jiali Fröhler",
+    "Yannick Stade",
+    "Christian Ufrecht",
+    "Daniel D. Scherer",
+    "Robert Wille"
+  ],
+  "summary": "Quantum circuit cutting enables the execution of large circuits on devices with a limited number of qubits by partitioning circuits into independent subcircuits. However, this introduces a sampling overhead, which grows exponentially with the number of cuts, rendering the choice of cut placements critical for practical circuit cutting. Determining optimal cut placements remains computationally challenging, particularly as circuits grow in size. Additionally, existing circuit cutting approaches typically treat gate and wire cuts independently. Those combining both cutting approaches, however,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-08-05",
+  "updated": "2026-08-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

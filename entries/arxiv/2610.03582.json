@@ -1,0 +1,22 @@
+{
+  "key": "2610.03582",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03582",
+  "title": "Robustness of quantum spectrum estimation: weak Schur sampling under noisy inputs",
+  "authors": [
+    "Vladyslav Visnevskyi",
+    "Laura Mančinska"
+  ],
+  "summary": "We initiate the study of weak Schur sampling (WSS) under noisy inputs. Many optimal quantum learning algorithms rely on this measurement, for instance in quantum spectrum estimation (QSE) and quantum state tomography (QST). The standard analysis of WSS, QSE and QST assumes that the $n$ input copies of the target state $ρ$ are identical, i.e. $ρ^{\\otimes n}$. We study what happens when they are not, a more realistic noisy scenario that breaks the very permutation symmetry on which WSS is built. In the simplest model the input is a noisy product state: the copies are independent but not…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.IT",
+    "math.RT"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

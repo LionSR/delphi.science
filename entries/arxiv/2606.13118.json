@@ -1,0 +1,26 @@
+{
+  "key": "2606.13118",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.13118",
+  "title": "Hamiltonian-Aware ADAPT Variational Quantum Eigensolver for Molecular Ground-State Simulation",
+  "authors": [
+    "Runhong He",
+    "Chao Liu",
+    "Xin Hong",
+    "Qiaozhen Chai",
+    "Junyuan Zhou",
+    "Ji Guan",
+    "Guolong Cui",
+    "Shenggang Ying"
+  ],
+  "summary": "Designing compact ansätze in Variational Quantum Eigensolver (VQE) is crucial for solving energetic problems of practical molecules on near-term quantum devices. However, existing Adaptive Derivative-Assembled Pseudo-Trotter (ADAPT) ansätze face two challenges: improper operator selection and accumulation of degraded operators. In this paper, we propose the Hamiltonian-Aware (HA) ADAPT-VQE algorithm to address these issues. First, we establish a novel excitation operator selection criterion. It breaks the local constraint of existing criteria by incorporating Hamiltonian information,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

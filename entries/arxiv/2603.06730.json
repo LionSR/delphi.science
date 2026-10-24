@@ -1,0 +1,22 @@
+{
+  "key": "2603.06730",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.06730",
+  "title": "Decoder Dependence in Surface-Code Threshold Estimation under Digitized Hybrid Continuous-Variable and Discrete Noise",
+  "authors": [
+    "Dennis Delali Kwesi Wayo",
+    "Chinonso Onah",
+    "Leonardo Goliatt",
+    "Sven Groppe"
+  ],
+  "summary": "Surface-code threshold estimates depend on the inference pipeline, including decoder and estimator choices. We compare decoders within a single LiDMaS+ workflow under Pauli-reference and digitized hybrid continuous-variable/discrete sweeps. In the Pauli-reference mode, the matching-style backend outperforms Union-Find and yields crossing median $p_c=0.0531$ (bootstrap interval $[0.0415,0.0572]$) and collapse fit $p_c=0.052$ ($ν=1.35$). For the hybrid mode, a dense transition-window sweep at $d=3,5,7$ uses $σ\\in[0.30,0.50]$ with step $0.01$ and $3000$ trials per point. After the initial…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-06",
+  "updated": "2026-06-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

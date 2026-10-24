@@ -1,0 +1,20 @@
+{
+  "key": "2610.27768",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.27768",
+  "title": "Bidirectional Path Integral Monte Carlo Simulation of Quantum Circuits",
+  "authors": [
+    "Luis Paulo Santos",
+    "Thomas Bashford-Rogers"
+  ],
+  "summary": "We propose an approximate classical algorithm for estimating quantum circuits' transition amplitudes, $\\langle Ψ_f | \\hat{U} | Ψ_0 \\rangle$, based on Monte Carlo sums over bidirectionally sampled Feynman paths. The algorithm generates Feynman paths, i.e., sequences of intermediate computational basis states, by combining information from random walks initiated at both the input and output states, $Ψ_0$ and $Ψ_f$, respectively. It further combines this bidirectional approach with Multiple Importance Sampling, a powerful variance reduction technique that avoids variance peaks caused by…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

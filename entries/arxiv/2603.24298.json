@@ -1,0 +1,22 @@
+{
+  "key": "2603.24298",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.24298",
+  "title": "SpinGQE: A Generative Quantum Eigensolver for Spin Hamiltonians",
+  "authors": [
+    "Alexander Holden",
+    "Moinul Hossain Rahat",
+    "Nii Osae Osae Dade"
+  ],
+  "summary": "The ground state search problem is central to quantum computing, with applications spanning quantum chemistry, condensed matter physics, and optimization. The Variational Quantum Eigensolver (VQE) has shown promise for small systems but faces significant limitations. These include barren plateaus, restricted ansatz expressivity, and reliance on domain-specific structure. We present SpinGQE, an extension of the Generative Quantum Eigensolver (GQE) framework to spin Hamiltonians. Our approach reframes circuit design as a generative modeling task. We employ a transformer-based decoder to learn…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CL"
+  ],
+  "published": "2026-03-25",
+  "updated": "2026-03-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2605.30428",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.30428",
+  "title": "Graph automorphisms to obtain Clifford symmetries in open and closed qudit models",
+  "authors": [
+    "Charlie Nation",
+    "Rick P. A. Simon",
+    "Shreya Banerjee",
+    "Francesco Martini",
+    "Alessandro Ricottone",
+    "Federico Cerisola",
+    "Luca Dellantonio"
+  ],
+  "summary": "In the recent article [arXiv:2605.18966], we demonstrated that finding Clifford symmetries can be mapped to a Graph Automorphism (GA) problem. Here, we provide an algorithm to obtain such symmetries on general qudit systems, that works on the principle of encoding Clifford invariants of a Hamiltonian onto properties of a graph. Labelling Hamiltonian terms as vertices, a permutation of such vertices that respects the Clifford invariants (a GA) is both a valid Clifford, and a symmetry up to phase correction checks. We test this on multiple physical models and discuss the scaling with respect…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-05-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

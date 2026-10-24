@@ -1,0 +1,21 @@
+{
+  "key": "2601.18773",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.18773",
+  "title": "Hamiltonian Decoded Quantum Interferometry for General Pauli Hamiltonians",
+  "authors": [
+    "Kaifeng Bu",
+    "Weichen Gu",
+    "Xiang Li"
+  ],
+  "summary": "In this work, we study the Hamiltonian Decoded Quantum Interferometry (HDQI) for the general Hamiltonians $H=\\sum_ic_iP_i$ on an $n$-qubit system, where the coefficients $c_i\\in \\mathbb{R}$ and $P_i$ are Pauli operators. We show that, given access to an appropriate decoding oracle, there exist efficient quantum algorithms for preparing the state $ρ_{\\mathcal P}(H) = \\frac{\\mathcal P^2(H)}{\\text{Tr}[\\mathcal P^2(H)]}$, where $\\mathcal P(H)$ denotes the matrix function induced by a univariate polynomial $\\mathcal P(x)$. Such states can be used to approximate the Gibbs states of $H$ for…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-26",
+  "updated": "2026-01-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

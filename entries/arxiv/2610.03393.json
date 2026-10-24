@@ -1,0 +1,22 @@
+{
+  "key": "2610.03393",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03393",
+  "title": "Multivariate quantum signal processing with optimal query complexity",
+  "authors": [
+    "Mingrui Jing",
+    "Xin Wang",
+    "Zhan Yu",
+    "Lei Zhang"
+  ],
+  "summary": "Polynomial transformations of data encoded in quantum operations are a building block of quantum algorithms, and their query complexity measures how often those operations are used. For multiple variables, existing methods either realize restricted polynomial families or implement monomials separately at a query cost exponential in the number of variables. We present a quantum circuit that implements every multivariate trigonometric polynomial up to an explicit normalization. The circuit processes one variable coherently over the frequency components of the remaining variables, allowing all…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

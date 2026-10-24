@@ -1,0 +1,21 @@
+{
+  "key": "2604.23382",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23382",
+  "title": "Non-unitary extension of Grover's search algorithm",
+  "authors": [
+    "V. N. A. Lula-Rocha",
+    "M. A. S. Trindade"
+  ],
+  "summary": "We have developed a non-unitary extension of Grover's search algorithm by changing the hidden geometry of Hilbert space carried by diffusion operator. Our algorithm finds the solution for search problem by performing a unique bigger rotation rather than small rotations in order polynomial times in the size $N$ of search space. We analyze the complexity of implementing the non-unitary operation and we observed that the price paid by performing this rotation is due the normalization. In Kraus operator approach we need $O(N)$ repetition of the algorithm to have a chance of measuring a solution…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math-ph"
+  ],
+  "published": "2026-04-25",
+  "updated": "2026-04-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

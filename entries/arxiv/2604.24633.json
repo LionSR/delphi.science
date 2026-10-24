@@ -1,0 +1,29 @@
+{
+  "key": "2604.24633",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.24633",
+  "title": "Optimization Using Locally-Quantum Decoders",
+  "authors": [
+    "Noah Shutty",
+    "Avijit Mandal",
+    "Seyoon Ragavan",
+    "Quentin Buzet",
+    "André Chailloux",
+    "Nicholas C. Rubin",
+    "Abid Khan",
+    "Sami Boulebnane",
+    "Ruslan Shaydulin",
+    "John Azariah",
+    "Stephen P. Jordan"
+  ],
+  "summary": "It was pointed out in [JSW+25] that widely-studied optimization problems such as D-regular max-k-XORSAT can be reduced to decoding of LDPC codes, using quantum algorithms related to Regev's reduction. LDPC codes have very good decoders, such as Belief Propagation (BP), and this therefore makes D-regular max-k-XORSAT an enticing target for this class of quantum algorithms. However, BP was found insufficient to achieve quantum advantage. Here, we develop an intrinsically quantum decoding technique, which decodes classical LDPC codes subject to coherent superpositions of bit flip errors. For…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

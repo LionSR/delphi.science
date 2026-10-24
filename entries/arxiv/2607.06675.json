@@ -1,0 +1,25 @@
+{
+  "key": "2607.06675",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06675",
+  "title": "Spectral Born machines: classically trainable quantum generative models for discrete data",
+  "authors": [
+    "Austin Huang",
+    "William Maxwell",
+    "Vasilis Belis",
+    "Evan Peters",
+    "Jason Pye",
+    "Soran Jahangiri",
+    "Joseph Bowles"
+  ],
+  "summary": "We present \\emph{spectral Born machines}, a class of quantum generative models that results from viewing and generalizing the class of IQP Born machines through the lens of group Fourier analysis. These quantum models exploit the quantum Fourier transform to create an inductive bias that make them naturally suited to learning integer-structured data, while remaining classically hard to sample from in general. Similar to IQP Born machines, spectral Born machines can be trained efficiently at scale on classical hardware via a maximum mean discrepancy loss based on graph spectral analysis,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2607.08636",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08636",
+  "title": "GroverFigureOfMerit: An Agnostic Figure of Merit for Quantum Backend Characterization in the NISQ Era",
+  "authors": [
+    "Tiago Restucha",
+    "Marcos Guillermo Lammers",
+    "Alejandro Fernández"
+  ],
+  "summary": "The Noisy Intermediate-Scale Quantum (NISQ) era poses a challenge for developers: hardware providers expose capabilities through heterogeneous interfaces with proprietary metrics varying widely across providers, hindering informed backend selection. Static characterization metrics - coherence times T1/T2, gate error rates - exhibit limitations: they fail to capture dynamic variability across successive executions, overlook the impact of transpilation, and lack architectural comparability across physically distinct technologies. We propose a Figure of Merit (FoM) based on Grover's algorithm…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-09",
+  "updated": "2026-07-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

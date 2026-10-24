@@ -1,0 +1,20 @@
+{
+  "key": "2603.02656",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.02656",
+  "title": "Quantum Algorithms for Approximate Graph Isomorphism Testing",
+  "authors": [
+    "Prateek P. Kulkarni"
+  ],
+  "summary": "The graph isomorphism problem asks whether two graphs are identical up to vertex relabeling. While the exact problem admits quasi-polynomial-time classical algorithms, many applications in molecular comparison, noisy network analysis, and pattern recognition require a flexible notion of structural similarity. We study the quantum query complexity of approximate graph isomorphism testing, where two graphs on $n$ vertices drawn from the Erdős--Rényi distribution $\\mathcal{G} (n,1/2)$ are considered approximately isomorphic if they can be made isomorphic by at most $k$ edge edits. We present a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-03-03",
+  "updated": "2026-03-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

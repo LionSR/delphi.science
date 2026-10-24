@@ -1,0 +1,23 @@
+{
+  "key": "2610.00736",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00736",
+  "title": "Beyond Feasibility: Finite-Depth Accessibility in Constrained QAOA",
+  "authors": [
+    "Rushikesh Ubale",
+    "Gregory T. Byrd",
+    "Yasar Mulani",
+    "Sangram Deshpande"
+  ],
+  "summary": "Constraint-preserving mixers keep QAOA within a feasible subspace, but feasibility and global mixer connectivity do not determine which feasible configurations are available to a particular shallow circuit. We study constrained QAOA at the level of the circuit actually executed: a specified feasible initial state, finite depth, and finite schedule of mixer interactions. We define the finite-depth accessible set $R_p(M,x_0)$ and show that the computational-basis support of the ideal QAOA circuit is contained within it. This gives a parameter-independent objective ceiling $f_R^\\star=\\max_{x\\in…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

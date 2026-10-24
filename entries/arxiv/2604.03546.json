@@ -1,0 +1,20 @@
+{
+  "key": "2604.03546",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.03546",
+  "title": "Mitigating Precision Errors in Quantum Annealing via Coefficient Reduction of Embedded Hamiltonians",
+  "authors": [
+    "Kentaro Ohno",
+    "Nozomu Togawa"
+  ],
+  "summary": "Quantum annealing is a quantum algorithm to solve combinatorial optimization problems. In the current quantum annealing devices, the dynamic range of the input Ising Hamiltonian, defined as the ratio of the largest to the smallest coefficient, significantly affects the quality of the output solution due to limited hardware precision. Several methods have been proposed to reduce the dynamic range by reducing large coefficients in the Ising Hamiltonian. However, existing studies do not take into account minor-embedding, which is an essential process in current quantum annealers. In this study,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-04",
+  "updated": "2026-04-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

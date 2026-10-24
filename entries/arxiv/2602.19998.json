@@ -1,0 +1,21 @@
+{
+  "key": "2602.19998",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.19998",
+  "title": "A Quantum Internet Protocol Suite Beyond Layering",
+  "authors": [
+    "Angela Sara Cacciapuoti",
+    "Marcello Caleffi"
+  ],
+  "summary": "Layering, the protocol organization principle underpinning the classical Internet, is ill-suited to the Quantum Internet, built around entanglement, which is non-local and stateful. This paper proposes a quantum-native organizational principle based on dynamic composition, which replaces static layering with a distributed orchestration fabric driven by the node local state and in-band control. Each node runs a Dynamic Kernel that i) constructs a local PoA of candidate steps to advance a service intent, and ii) executes the PoA by composing atomic micro-protocols into context-aware procedures…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.NI"
+  ],
+  "published": "2026-02-23",
+  "updated": "2026-02-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

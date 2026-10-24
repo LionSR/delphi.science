@@ -1,0 +1,23 @@
+{
+  "key": "2606.16375",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.16375",
+  "title": "Scalable Graph State Generation with O(1) Local Feedforward in Quantum Networks",
+  "authors": [
+    "Xiaoyi Zheng",
+    "Chan-Tong Lam",
+    "Lin Chen",
+    "Zheng Xing"
+  ],
+  "summary": "The development of quantum networks faces a key challenge: the contradiction between probabilistic long-range entanglement generation and finite coherence time. Existing routing protocols typically focus on global state computation or path optimization. As the network scales up, classical delays accumulate and exacerbate decoherence, leading to a decrease in entanglement fidelity. To reduce routing decision delays to levels far below the coherence time of qubits, we propose a protocol based on local measurement and classical feedforward. This protocol reduces the local decision complexity to…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-06-15",
+  "updated": "2026-06-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2602.19259",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.19259",
+  "title": "Quantum Sketches, Hashing, and Approximate Nearest Neighbors",
+  "authors": [
+    "Sajjad Hashemian"
+  ],
+  "summary": "Motivated by Johnson--Lindenstrauss dimension reduction, amplitude encoding, and the view of measurements as hash-like primitives, one might hope to compress an $n$-point approximate nearest neighbor (ANN) data structure into $O(\\log n)$ qubits. We rule out this possibility in a broad quantum sketch model, the dataset $P$ is encoded as an $m$-qubit state $ρ_P$, and each query is answered by an arbitrary query-dependent measurement on a fresh copy of $ρ_P$. For every approximation factor $c\\ge 1$ and constant success probability $p>1/2$, we exhibit $n$-point instances in Hamming space…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS"
+  ],
+  "published": "2026-02-22",
+  "updated": "2026-02-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

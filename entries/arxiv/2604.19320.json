@@ -1,0 +1,19 @@
+{
+  "key": "2604.19320",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.19320",
+  "title": "Single-shot quantum neural networks with amplitude estimation",
+  "authors": [
+    "Jaemin Seo"
+  ],
+  "summary": "Quantum neural networks (QNNs) suffer from a fundamental sampling bottleneck since quantum measurements are probabilistic, requiring many circuit executions to estimate outputs with sufficient accuracy. Conventional Monte-Carlo (MC) inference exhibits an $\\mathcal{O}(1/\\sqrt{N})$ sampling error, rendering QNN inference and training costly on near-term quantum hardware, especially where each shot requires expensive qubit generation. This work introduces a \"single-shot\" QNN framework by integrating quantum amplitude estimation (AE) into the readout stage. By embedding a trained QNN as a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-21",
+  "updated": "2026-04-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

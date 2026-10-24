@@ -1,0 +1,25 @@
+{
+  "key": "2604.09756",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.09756",
+  "title": "Generative Circuit Design for Quantum-Selected Configuration Interaction",
+  "authors": [
+    "Ryota Kemmoku",
+    "Qi Gao",
+    "Shu Kanno",
+    "Kimberlee Keithley",
+    "Ikko Hamamura",
+    "Naoki Yamamoto",
+    "Kouhei Nakaji"
+  ],
+  "summary": "Quantum-selected configuration interaction (QSCI) has emerged as a feasible approach for approximating electronic ground states on noisy quantum devices toward large-system demonstrations. In QSCI, Slater determinants are sampled from a quantum-prepared state, and the Hamiltonian is then diagonalized in the sampled subspace. To create a high-quality subspace under hardware constraints, the design of the state-preparation circuit is crucial. Here, we present a Generative Quantum Eigensolver (GQE)-based framework that optimizes ansatz structures using a Transformer policy trained on the QSCI…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-10",
+  "updated": "2026-04-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

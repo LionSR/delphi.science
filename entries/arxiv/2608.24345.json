@@ -1,0 +1,20 @@
+{
+  "key": "2608.24345",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.24345",
+  "title": "Essentially optimal gate teleportation",
+  "authors": [
+    "Lukas Schmitt",
+    "David Sutter"
+  ],
+  "summary": "Gate teleportation allows us to implement a nonlocal unitary using local operations, classical communication (LOCC), and a shared entangled state. Known deterministic teleportation protocols consume at least one full ebit and achieve optimal entanglement consumption only for Clifford gates. Here, we present a deterministic LOCC protocol for implementing the two-qubit controlled-phase gate $U_φ=\\mathrm{diag}(1,1,1,e^{i φ})$ with $φ\\in [0,π]$ whose entanglement consumption is close to optimal for every $φ$. In particular, vanishing rotation angles require vanishing entanglement.",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

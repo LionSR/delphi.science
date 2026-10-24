@@ -1,0 +1,23 @@
+{
+  "key": "2602.10830",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.10830",
+  "title": "Emulation of large-scale qubit registers with a phase-space approach",
+  "authors": [
+    "Christian de Correc",
+    "Denis Lacroix",
+    "Corentin Bertrand"
+  ],
+  "summary": "A phase-space approach is used and benchmarked for the simulation of the continuous-time evolution of large registers of qubits. It is based on a statistical ensemble of independent mean-field trajectories, where mean field is introduced at the level of the qubits, substituting quantum fluctuations/correlations with classical ones. The approach only involves at worse a quadratic cost in the system size, allowing to simulate up to several thousands of qubits on a classical computer. It provides qualitatively accurate description of one-qubit observables evolutions, making it a useful…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.str-el",
+    "nucl-th"
+  ],
+  "published": "2026-02-11",
+  "updated": "2026-05-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

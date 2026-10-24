@@ -1,0 +1,20 @@
+{
+  "key": "2607.16166",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.16166",
+  "title": "Fast logical operations in quantum LDPC codes using simple resource states",
+  "authors": [
+    "Mark Webster",
+    "Nicolas Delfosse"
+  ],
+  "summary": "Quantum LPDC codes provide a substantial reduction in qubit overhead required for fault-tolerant quantum computation compared to surface code, thanks to their high encoding rate. However, operating simultaneously on multiple logical qubits encoded in the same block is more challenging and may slow down logical operations. Prior work addresses this problem by designing complex resource states to perform logical measurements in LDPC codes. Here, we propose an approach that only consumes cat states. Whereas previous work on cat-based measurements focuses on a single logical measurement, we…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-17",
+  "updated": "2026-07-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

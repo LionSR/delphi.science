@@ -1,0 +1,25 @@
+{
+  "key": "2610.00783",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00783",
+  "title": "Real-Time Adaptive Filtering and the Boxcar Limit in Superconducting Qubit Readout",
+  "authors": [
+    "Hans Johnson",
+    "Tanay Roy",
+    "Leonardo Bove",
+    "David van Zanten",
+    "Silvia Zorzetti",
+    "Jafar Saniie"
+  ],
+  "summary": "Control and readout systems for superconducting quantum computing support real-time control and high-fidelity qubit-state discrimination. We examine when additional digital processing improves readout fidelity. A common baseline for dispersive readout uses a boxcar averager to compute a uniformly weighted average over a fixed window followed by threshold-based state assignment. We evaluated an adaptive finite-impulse-response (FIR) filter trained in real time using the least-mean-squares (LMS) algorithm on a field-programmable gate array (FPGA) quantum controller. We also analyzed measured…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "eess.SP"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,30 @@
+{
+  "key": "2608.25545",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.25545",
+  "title": "Certified decoding of quantum LDPC codes",
+  "authors": [
+    "Ragavi Krishnamoorthy",
+    "Florian Gerhardt",
+    "Johannes Knaute",
+    "Thomas Klir",
+    "Stefan Raimund Maschek",
+    "Erik Schulze",
+    "Tomislav Maras",
+    "Alexander Dotterweich",
+    "Loong Kuan Lee",
+    "Christian Bauckhage",
+    "Nico Piatkowski"
+  ],
+  "summary": "Quantum low-density parity-check (qLDPC) codes reduce the qubit overhead of fault-tolerant quantum computation by an order of magnitude, but their decoding is harder than its classical counterpart: because many physical errors are equivalent up to stabilizers, the degenerate maximum-likelihood (ML) decoder must compare the probabilities of entire equivalence classes of errors, that is, partition functions, rather than single errors. The workhorse decoder BP+OSD sidesteps degeneracy heuristically and offers no guarantees. We treat degenerate decoding as probabilistic inference in an…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.IT"
+  ],
+  "published": "2026-08-26",
+  "updated": "2026-08-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

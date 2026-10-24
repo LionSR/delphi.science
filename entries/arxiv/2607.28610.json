@@ -1,0 +1,21 @@
+{
+  "key": "2607.28610",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.28610",
+  "title": "Learning Arbitrary Lindbladians from Time Evolution",
+  "authors": [
+    "Zhili Chen",
+    "Zhan Yu"
+  ],
+  "summary": "We study the problem of learning an unknown Markovian open-system generator from access to its physical time evolution. This generator, called a Lindbladian, contains Hamiltonian and dissipative coefficients indexed by an exponentially large family of possible Pauli terms. We propose an efficient algorithm that learns arbitrary Lindbladians from time evolution under minimal assumptions. For a Lindbladian of dynamical strength at most $Λ$, the algorithm estimates every coefficient to error $ε$ using $\\widetilde O(Λ^2/ε^2)$ experiments and $\\widetilde O(Λ/ε^2)$ total evolution time, together…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS"
+  ],
+  "published": "2026-07-30",
+  "updated": "2026-07-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

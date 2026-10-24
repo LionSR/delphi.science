@@ -1,0 +1,21 @@
+{
+  "key": "2604.19911",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.19911",
+  "title": "Semi-device-independent self-testing of unitary operations",
+  "authors": [
+    "Rajdeep Paul",
+    "Prabuddha Roy",
+    "A. K. Pan"
+  ],
+  "summary": "We present a hitherto unexplored semi-device-independent (SDI) self-testing protocol designed to certify unitary operations within a variant of prepare-measure framework. We consider a communication game which we refer to as a variant of $3$-bit prepare-measure random access code (PMRAC) involving two parties, Alice and Bob, who share a prior two-qubit quantum state. Alice encodes her message by applying unitary operations on her subsystem and sends it to Bob. To decode the message, Bob performs a measurement on the whole system. We demonstrate that the optimal quantum advantage of the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-21",
+  "updated": "2026-04-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

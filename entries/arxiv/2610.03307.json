@@ -1,0 +1,20 @@
+{
+  "key": "2610.03307",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03307",
+  "title": "Learning Noise-Robust Stabilizer Structure via Bell Sampling",
+  "authors": [
+    "Letian Tang",
+    "Thomas Steckmann"
+  ],
+  "summary": "Bell sampling efficiently learns the stabilizer group, and hence the stabilizer nullity, of pure states with little magic, a primitive underlying tomography and certification of low-magic states. Real devices, however, only prepare noisy images of the target, which we model as a Pauli channel acting on the ideal state; the resulting noisy state generically has no exact Pauli stabilizers. Existing structure learners for mixed states rely on such exact stabilizers. Agnostic tomography does not, but its guarantees scale exponentially in the nullity $t$. We show that the ideal stabilizer group…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

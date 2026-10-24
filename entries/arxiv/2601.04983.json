@@ -1,0 +1,24 @@
+{
+  "key": "2601.04983",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.04983",
+  "title": "Assessing the Impact of Low Resolution Control Electronics on Quantum Neural Network Performance",
+  "authors": [
+    "Rupayan Bhattacharjee",
+    "Rohit Sarma Sarkar",
+    "Sergi Abadal",
+    "Carmen G. Almudever",
+    "Eduard Alarcon"
+  ],
+  "summary": "Scaling quantum computers requires tight integration of cryogenic control electronics with quantum processors, where Digital-to-Analog Converters (DACs) face severe power and area constraints. We investigate quantum neural network (QNN) training and inference under finite DAC resolution constraints, evaluating two QNN architectures across four diverse datasets (MNIST, Fashion-MNIST, Iris, Breast Cancer). Pre-trained QNNs achieve accuracy nearly indistinguishable from infinite-precision baselines when deployed on quantum systems with 6-bit DAC control electronics, exhibiting characteristic…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-01-08",
+  "updated": "2026-02-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

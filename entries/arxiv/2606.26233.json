@@ -1,0 +1,22 @@
+{
+  "key": "2606.26233",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.26233",
+  "title": "A fidelity metric for quantum annealing benchmarked by extreme scaling quantum Monte-Carlo simulations",
+  "authors": [
+    "Gabriel Gouraud",
+    "Miha Srdinsek",
+    "Xavier Waintal"
+  ],
+  "summary": "Quantum annealers are supposed to follow adiabatically the ground state of a system as its Hamiltonian slowly interpolates between a trivial phase and a non-trivial one; the non-trivial ground state being the solution to an optimization problem. Overwhelmingly, their performances are measured in terms of how well or fast the optimization problem is solved. While pragmatic, this approach is inherently brittle as it strongly depends on the problem considered and the classical algorithm used as the reference benchmark. Here, we propose a quantity that not only measures the end result but also…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.str-el"
+  ],
+  "published": "2026-06-24",
+  "updated": "2026-07-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

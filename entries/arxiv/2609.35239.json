@@ -1,0 +1,20 @@
+{
+  "key": "2609.35239",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.35239",
+  "title": "Computational Complexity of Clifford Template Compilation: Are Quantum Computers Useful for Compiling Quantum Circuits?",
+  "authors": [
+    "Keisuke Fujii"
+  ],
+  "summary": "A Clifford template is a finite ordered family of repeatable Clifford operations, and an instantiation specifies how many times each operation is applied. The Clifford template compilation problem asks how to choose these repetition numbers so that the template realizes a target transformation of Pauli operators. This problem arises, for example, when searching for logical operations in quantum error correction using only Clifford operations permitted by physical or fault-tolerance constraints. Although forward Clifford dynamics is efficiently classically simulable, this inverse problem has…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

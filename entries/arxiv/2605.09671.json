@@ -1,0 +1,22 @@
+{
+  "key": "2605.09671",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09671",
+  "title": "Optimal Approximation of Single Qubit Rotations within a Quantum Circuit",
+  "authors": [
+    "Gilad Kishony",
+    "Avi Elazari",
+    "Ron Cohen",
+    "Lior Gazit"
+  ],
+  "summary": "Fault-tolerant quantum computing typically requires the transpilation of arbitrary quantum circuits into a finite, universal gate set, such as Clifford+T. As a baseline, Diagonal approximation can be used for synthesizing single-qubit Pauli rotations, yielding an approximating sequence with $T$-count that equals $3 \\log_2(1/ε)$ for a target precision $ε$. Magnitude Approximation can reduce the $T$-count to only $1 \\log_2(1/ε)$ by allowing large residual errors, which are rotations about orthogonal axes. Within a complete quantum circuit, these residual errors can then be absorbed into…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-10",
+  "updated": "2026-05-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

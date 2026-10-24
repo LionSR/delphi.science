@@ -1,0 +1,21 @@
+{
+  "key": "2605.09957",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09957",
+  "title": "On Scalable Pseudorandom Unitaries and the Unitary Synthesis Problem",
+  "authors": [
+    "Zvika Brakerski",
+    "Henry Yuen"
+  ],
+  "summary": "We consider the task of constructing pseudorandom unitaries (PRUs) with scalable security, i.e. families in which the security parameter may vary independently of the dimension (or input bit-length). It is not known whether scalable PRUs can be constructed. In this work we show that if scalable PRUs can be constructed via the prevailing paradigm for analyzing PRUs, then there would be a positive solution to the Aaronson-Kuperberg unitary synthesis problem, a longstanding question in quantum complexity theory about whether implementing arbitrary unitaries can be efficiently reduced to…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

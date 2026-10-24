@@ -1,0 +1,23 @@
+{
+  "key": "2602.18364",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.18364",
+  "title": "Quantum Maximum Likelihood Prediction via Hilbert Space Embeddings",
+  "authors": [
+    "Sreejith Sreekumar",
+    "Nir Weinberger"
+  ],
+  "summary": "Maximum likelihood prediction (MLP) is a core task at the heart of modern large language models. Here, we study a quantum version of this task for a simplified data model consisting of independent and identically distributed samples, as a first step. The quantum maximum likelihood predictor (QMLP) is obtained by embedding of empirical probability distributions into quantum states and performing a minimization of quantum relative entropy over a given class of states. We derive non-asymptotic performance guarantees for QMLP in terms of convergence rates and concentration inequalities, both in…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "cs.LG",
+    "quant-ph",
+    "stat.ML"
+  ],
+  "published": "2026-02-20",
+  "updated": "2026-09-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

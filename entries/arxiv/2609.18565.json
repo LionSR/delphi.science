@@ -1,0 +1,26 @@
+{
+  "key": "2609.18565",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.18565",
+  "title": "Variational Quantum Transformer Architecture for Synthetic Language Generation",
+  "authors": [
+    "Julian Hager",
+    "Michael Kölle",
+    "Gerhard Stenzel",
+    "Tobias Rohe",
+    "Jonas Stein",
+    "Claudia Linnhoff-Popien"
+  ],
+  "summary": "We propose a compact NISQ-compatible quantum transformer architecture for synthetic QNLP sequence modelling. The model preserves the autoregressive next-token interface of a classical transformer, but replaces attention and feed-forward sublayers with variational quantum encoder blocks, connector circuits, decoder blocks and a direct two-qubit measurement readout. Token contexts are angle-encoded into small quantum registers, processed by parallel variational heads and encoder integration circuits and conditioned through decoder ancillae to produce a distribution over a four-token…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CL",
+    "cs.LG"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

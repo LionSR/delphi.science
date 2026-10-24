@@ -1,0 +1,24 @@
+{
+  "key": "2604.04570",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.04570",
+  "title": "Optimal, Qubit-Efficient Quantum Vehicle Routing via Colored-Permutations",
+  "authors": [
+    "Chinonso Onah",
+    "Kristel Michielsen"
+  ],
+  "summary": "We formulate a global-position colored-permutation encoding for the capacitated vehicle routing problem. Each of the $K$ vehicles selects a disjoint partial permutation, and the sum of these $K$ color layers forms a full $n\\times n$ permutation matrix that assigns every customer to exactly one visit position. This representation uses $n^2K$ binary decision variables arranged as $K$ color layers over a common permutation structure, while vehicle capacities are enforced by weighted sums over the entries of each color class, requiring no explicit load register and hence no extra logical qubits…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.DM",
+    "cs.IT",
+    "math-ph"
+  ],
+  "published": "2026-04-06",
+  "updated": "2026-05-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

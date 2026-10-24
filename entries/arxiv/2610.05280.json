@@ -1,0 +1,21 @@
+{
+  "key": "2610.05280",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05280",
+  "title": "Quantum n-coloring is undecidable for every n $\\ge$ 3",
+  "authors": [
+    "Christian Bo Kidmose-Frederiksen",
+    "Alfred Leth Nielsen"
+  ],
+  "summary": "The quantum $n$-coloring problem, given graph $G$, asks whether there exists a perfect quantum strategy for the $n$-coloring game of $G$. Previously it was known that quantum $n$-coloring is undecidable only for $n=3$. We extend this to all $n\\geq 3$ with one elementary reduction. Letting $G'=(G\\square K_3)\\lor K_{n-3}$, we show that $G$ is quantum $3$-colorable if and only if $G'$ is quantum $n$-colorable.",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.CO"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

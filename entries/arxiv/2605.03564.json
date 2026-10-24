@@ -1,0 +1,20 @@
+{
+  "key": "2605.03564",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.03564",
+  "title": "Quantum Vault: Symmetric No-Cloning Protection for Token Issuer and User (Benchmarked on IBMQ)",
+  "authors": [
+    "Lucas Tsunaki",
+    "Boris Naydenov"
+  ],
+  "summary": "Quantum tokens are underlying primitives for quantum money and network proposals, which leverage the no-cloning theorem to realize unforgeable authentication. A relevant but overlooked type of attack to such architectures is one in which a hacker steals the classical side information about the token states from the issuing agent (e.g., a bank), enabling the forgery of fake tokens without violating the no-cloning theorem. Our proposal addresses this threat by removing the classical side information about the token states, where instead a copy of the token is stored at the bank, i.e. a quantum…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

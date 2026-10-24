@@ -1,0 +1,23 @@
+{
+  "key": "2604.25433",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.25433",
+  "title": "Ember: An Extensible Benchmark Suite for Quantum Annealing Embedding Algorithms",
+  "authors": [
+    "Zachary Macaskill-Smith",
+    "Unmol Sharma",
+    "Melissa Warner",
+    "Kálmán Varga",
+    "David A. B. Hyde"
+  ],
+  "summary": "Minor embedding is a required compilation step for quantum annealing, mapping logical problem graphs onto sparse hardware topologies. Despite its central role in determining solution quality, no standardized benchmark exists for comparing embedding algorithms: prior studies use incompatible graph libraries, inconsistent metrics, and non-reproducible experimental setups, making cross-algorithm comparisons unreliable. We present Ember (Embedding Minor Benchmark for Evaluative Reproducibility), an open-source benchmarking framework addressing this gap. Ember provides a standardized algorithm…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-28",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

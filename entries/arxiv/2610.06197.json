@@ -1,0 +1,21 @@
+{
+  "key": "2610.06197",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06197",
+  "title": "Improved Adaptive Estimation of Quantum Partition Functions with Heisenberg Scaling",
+  "authors": [
+    "Yufei Wang",
+    "Daniel Stilck França",
+    "Samuel Slezak"
+  ],
+  "summary": "We give quantum algorithms that estimate the log partition function of an $n$-qubit quantum Hamiltonian to additive error $ε$ with Heisenberg scaling, while minimizing calls to thermal-state purification preparation. The input is a block encoding of $H$, unitaries preparing thermofield-double states at chosen inverse temperatures, with their inverses and controlled versions, and an adaptive slowly-varying cooling schedule. The system-size bounds below assume $0\\preceq H\\preceq hI$ with $h=O(n)$ and block-encoding normalization $α=Θ(h)$. For constant inverse temperature, we show that such a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

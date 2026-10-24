@@ -1,0 +1,23 @@
+{
+  "key": "2606.05397",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.05397",
+  "title": "Multi-Qubit Dyadic Phase Fixing for Fault-Tolerant Quantum Compilation",
+  "authors": [
+    "Justin Kalloor",
+    "Mathias Weiden",
+    "Ed Younis",
+    "John Kubiatowicz",
+    "Costin Iancu"
+  ],
+  "summary": "Fault-tolerant quantum computing requires translating application-level quantum circuits into the Clifford+$T$ gate set, where the $T$ gate is the dominant resource cost. Phase kickback is an ancilla-based technique that can dramatically reduce $T$-count for rotations with dyadic angles, but has previously been limited to highly structured circuit families. We present Dyadic Phase Fixing (DPF), a general multi-qubit synthesis tool that extends phase kickback to general quantum circuits. DPF uses numerical unitary synthesis to greedily extract dyadic angle rotations from any input circuit.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-03",
+  "updated": "2026-06-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

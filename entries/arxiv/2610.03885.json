@@ -1,0 +1,24 @@
+{
+  "key": "2610.03885",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03885",
+  "title": "Robustness of Quantum Signal Processing and Resource-aware Polynomial Design",
+  "authors": [
+    "Thiago O. Maciel",
+    "Giancarlo Camilo",
+    "Allan Tosta",
+    "Daniel Stilck-França",
+    "Leandro Aolita",
+    "Thais de Lima Silva"
+  ],
+  "summary": "Quantum signal processing (QSP) realizes operator functions through polynomial transformations of a finite degree. In addition to function approximation errors, realistic implementations incur algorithmic errors also when encoding the input operator and in synthesizing gates into a discrete fault-tolerant gate set. We provide an end-to-end analysis of these errors and show that the input error propagation is governed by the operator-Lipschitz constant $L_\\star$ of the implemented function. We then derive an efficient classical algorithm to compute tight lower and upper bounds on $L_\\star$,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

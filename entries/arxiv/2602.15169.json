@@ -1,0 +1,21 @@
+{
+  "key": "2602.15169",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.15169",
+  "title": "Learning the S-matrix from data: Rediscovering gravity from gauge theory via symbolic regression",
+  "authors": [
+    "Nathan Moynihan"
+  ],
+  "summary": "We demonstrate that modern machine-learning methods can autonomously reconstruct several flagship analytic structures in scattering amplitudes directly from numerical on-shell data. In particular, we show that the Kawai--Lewellen--Tye (KLT) relations can be rediscovered using symbolic regression applied to colour-ordered Yang--Mills amplitudes with Mandelstam invariants as input features. Using standard feature-selection techniques, specifically column-pivoted QR factorisation, we simultaneously recover the Kleiss--Kuijf and Bern--Carrasco--Johansson (BCJ) relations, identifying a minimal…",
+  "domain": "hep-th",
+  "tags": [
+    "hep-th",
+    "cs.LG",
+    "hep-ph"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-02-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

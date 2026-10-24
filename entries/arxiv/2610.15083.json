@@ -1,0 +1,22 @@
+{
+  "key": "2610.15083",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.15083",
+  "title": "Generative learning of time series with holographic quantum circuit sampling",
+  "authors": [
+    "Bingzhi Zhang",
+    "Matthew W. Lee",
+    "Tom Finke",
+    "Quntao Zhuang"
+  ],
+  "summary": "Quantum generative models face growing qubit requirements and concentrated loss landscapes when learning long time series. Here we introduce holographic quantum circuit sampling (HQCS), which combines mid-circuit measurements, qubit reuse and independently parameterized temporal blocks to generate trajectories with a fixed number of qubits. For Haar-random HQCS and a normalized exponential kernel, we prove inverse-polynomial bounds on maximum mean discrepancy loss variance, contrasting with exponential concentration in global Haar-random generators. For generic members of a family of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-10",
+  "updated": "2026-10-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

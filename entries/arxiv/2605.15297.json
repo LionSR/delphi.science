@@ -1,0 +1,19 @@
+{
+  "key": "2605.15297",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.15297",
+  "title": "Towards Deploying Optimistic Quantum Fourier Transforms: An Architecture-Algorithm Co-Design Study",
+  "authors": [
+    "Pedro L. S. Lopes"
+  ],
+  "summary": "We present an architecture-algorithm co-design study of the Optimistic Quantum Fourier Transform (OQFT) under a surface-code fault-tolerant execution model for reconfigurable neutral-atom hardware. Analyzing the OQFT structure, particularly its reliance on phase-gradient resources and small-scale blocks, highlights architectural requirements for resource mobility and parallel execution. Guided by that, we introduce a hot-zone architecture that decouples data storage from processing and dynamically routes mobile resource packages (magic-state factories, bridge qubits, and phase-gradient…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-14",
+  "updated": "2026-05-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

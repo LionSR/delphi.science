@@ -1,0 +1,24 @@
+{
+  "key": "2604.04414",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.04414",
+  "title": "Eliminating Vendor Lock-In in Quantum Machine Learning via Framework-Agnostic Neural Networks",
+  "authors": [
+    "Poornima Kumaresan",
+    "Shwetha Singaravelu",
+    "Lakshmi Rajendran",
+    "Santhosh Sivasubramani"
+  ],
+  "summary": "Quantum machine learning (QML) stands at the intersection of quantum computing and artificial intelligence, offering the potential to solve problems that remain intractable for classical methods. However, the current landscape of QML software frameworks suffers from severe fragmentation: models developed in TensorFlow Quantum cannot execute on PennyLane backends, circuits authored in Qiskit Machine Learning cannot be deployed to Amazon Braket hardware, and researchers who invest in one ecosystem face prohibitive switching costs when migrating to another. This vendor lock-in impedes…",
+  "domain": "cs.ET",
+  "tags": [
+    "cs.ET",
+    "cs.LG",
+    "quant-ph"
+  ],
+  "published": "2026-04-06",
+  "updated": "2026-04-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

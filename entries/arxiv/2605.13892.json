@@ -1,0 +1,24 @@
+{
+  "key": "2605.13892",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.13892",
+  "title": "A QPINN Framework with Quantum Trainable Embeddings for the Lid-Driven Cavity Problem",
+  "authors": [
+    "Nahid Binandeh Dehaghani",
+    "Ban Q. Tran",
+    "Susan Mengel",
+    "Rafal Wisniewski",
+    "A. Pedro Aguiar"
+  ],
+  "summary": "The steady incompressible Navier--Stokes equations pose significant computational challenges due to their nonlinear convective terms and pressure--velocity coupling. Physics-informed neural networks (PINNs) provide a mesh-free framework for approximating such systems, but classical PINNs can experience optimization difficulties in nonlinear flow regimes. In this work, we propose a quantum physics-informed neural network (QPINN) framework with a quantum neural network (QNN)-based trainable embedding for the lid-driven cavity problem. The proposed approach uses a QNN to learn data-adaptive…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

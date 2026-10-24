@@ -1,0 +1,25 @@
+{
+  "key": "2608.06875",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.06875",
+  "title": "QCORE: A Quantum-Control-Oriented Real-Time Execution Architecture with Extensible Closed-Loop Services and Shared AI Acceleration",
+  "authors": [
+    "Heyue Li",
+    "Yanshu Guo",
+    "Qichun Liu",
+    "Tiefu Li",
+    "Zhihua Wang",
+    "Hanjun Jiang"
+  ],
+  "summary": "Scalable quantum processors require control, readout, feedback, calibration, and error correction to coexist under bounded latency and shared-resource constraints, whereas existing platforms typically optimize only a subset of these capabilities. This article presents QCORE (Quantum-Control-Oriented Real-Time Execution), a QPU-side digital control reference architecture positioned between the Host and a platform-specific analog/mixed-signal front end. QCORE separates task management, shared resources, hard-real-time execution, and long-timescale services into four hardware partitions. A…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AR"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

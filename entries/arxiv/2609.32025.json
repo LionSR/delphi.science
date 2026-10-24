@@ -1,0 +1,19 @@
+{
+  "key": "2609.32025",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32025",
+  "title": "Nonstabilizerness of the entangling layer in quantum circuit Born machines",
+  "authors": [
+    "Marcin Płodzień"
+  ],
+  "summary": "The entangling layer of a quantum circuit Born machine can supply both entanglement and nonstabilizerness. In this work we show that the entangling layer can be a Clifford circuit, which supplies no nonstabilizerness. We use an architecture in which a fixed, non-trainable entangler is reused in every layer and only single-qubit rotations are optimized. There, a Clifford entangler reaches the same Kullback--Leibler divergence as a near-Haar one at sufficient circuit depth, and entanglers spanning zero to Haar-typical nonstabilizerness reach the same loss, up to a small offset for a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

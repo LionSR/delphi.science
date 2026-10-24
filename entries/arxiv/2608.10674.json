@@ -1,0 +1,22 @@
+{
+  "key": "2608.10674",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.10674",
+  "title": "Optimal fidelity estimation when one state is pure via algorithmic Uhlmann transform",
+  "authors": [
+    "Yupan Liu",
+    "Qisheng Wang"
+  ],
+  "summary": "The Uhlmann fidelity ${\\rm F}(ρ_0,ρ_1) = {\\rm tr}|\\sqrt{ρ_0}\\sqrt{ρ_1}|$ is one of the most fundamental quantities in quantum information theory for quantifying the closeness between two quantum states. Estimating the Uhlmann fidelity to within additive error $\\varepsilon$ requires a number of copies of the states, or queries to their state-preparation circuits, that depends at least linearly on the smaller of the ranks of $ρ_0$ and $ρ_1$. Consequently, this rank dependence disappears when either state is pure, in which case the query and sample complexities depend only polynomially on…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS",
+    "cs.IT"
+  ],
+  "published": "2026-08-11",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

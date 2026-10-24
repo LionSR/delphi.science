@@ -1,0 +1,24 @@
+{
+  "key": "2604.18276",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.18276",
+  "title": "Block-encodings as programming abstractions: The Eclipse Qrisp BlockEncoding Interface",
+  "authors": [
+    "Matic Petrič",
+    "René Zander"
+  ],
+  "summary": "Block-encoding is a foundational technique in modern quantum algorithms, enabling the implementation of non-unitary operations by embedding them into larger unitary matrices. While theoretically powerful and essential for advanced protocols like Quantum Singular Value Transformation (QSVT) and Quantum Signal Processing (QSP), the generation of compilable implementations of block-encodings poses a formidable challenge. This work presents the BlockEncoding interface within the Eclipse Qrisp framework, establishing block-encodings as a high-level programming abstraction accessible to a broad…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET",
+    "cs.LG",
+    "cs.MS",
+    "cs.PL"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-04-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

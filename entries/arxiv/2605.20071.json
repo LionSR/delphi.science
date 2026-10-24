@@ -1,0 +1,22 @@
+{
+  "key": "2605.20071",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.20071",
+  "title": "Quantum Algorithms for Nonlinear Differential Equations via Pivot-Shifted Carleman Linearization",
+  "authors": [
+    "Ke Wang",
+    "Zikang Jia",
+    "Shravan Veerapaneni",
+    "Zhiyan Ding"
+  ],
+  "summary": "We develop a pivot-shifted Carleman linearization framework for quantum algorithms solving quadratic nonlinear ordinary differential equations. By shifting the dynamics by a pivot state prior to Carleman lifting, and combining this with a Lyapunov transform and rescaling, we enlarge the class of nonlinear systems that can be efficiently simulated on quantum computers. For systems that exhibit stability in the shifted coordinates, we establish long time convergence of the truncated Carleman embedding. We prove that the truncation order scales only logarithmically with the simulation time and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

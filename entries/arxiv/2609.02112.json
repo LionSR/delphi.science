@@ -1,0 +1,21 @@
+{
+  "key": "2609.02112",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.02112",
+  "title": "Summing the reciprocal of the polynomial appearing in Fermat's Last Theorem",
+  "authors": [
+    "Ariel Edery"
+  ],
+  "summary": "Consider the polynomial $f=x^N+y^N-z^N$ where $x,\\,y$ and $z$ are positive integers and $N \\ge 3$ is an integer. By Fermat's Last Theorem, $f$ is never zero so that its reciprocal, $1/f$, has no singularities. We therefore study the finite sum of the reciprocal: $S(m,N)=\\sum_{x=1}^m\\sum_{y=1}^m\\sum_{z=1}^{m}\\frac{1}{f}$. The terms $1/f$ can be positive, negative and their magnitude is less than unity. A key observation is that $S(m,N)$ can be split into two convenient parts: a dominant contribution $D(m,N)$ that has a simple analytical expression and a remainder $R(m,N)$ which is more…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "hep-th",
+    "math-ph"
+  ],
+  "published": "2026-09-02",
+  "updated": "2026-09-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

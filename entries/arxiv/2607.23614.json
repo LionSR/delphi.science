@@ -1,0 +1,22 @@
+{
+  "key": "2607.23614",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.23614",
+  "title": "DualityCert: Verifier-Gated Language-Model Repair of Broken Duality Claims in Quantum Field Theory",
+  "authors": [
+    "Xingyang Yu"
+  ],
+  "summary": "We present DualityCert, a symbolic verifier for candidate Seiberg-duality claims in four-dimensional N=1 quiver gauge theories. The verifier evaluates 't Hooft anomaly matching, superpotential R-charge consistency, central-charge matching, and a bounded chiral-ring proxy. A claim that passes receives a consistency certificate, which states that no tested inconsistency was found, not that the duality is proven. We use the verifier as a repair environment for language-model agents, which receive a deliberately broken claim and must edit it until it certifies. On a preregistered benchmark of…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "cs.AI",
+    "cs.LG",
+    "hep-th"
+  ],
+  "published": "2026-07-26",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

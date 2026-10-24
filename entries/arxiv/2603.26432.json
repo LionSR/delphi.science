@@ -1,0 +1,28 @@
+{
+  "key": "2603.26432",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.26432",
+  "title": "Reconstructing Quantum Dot Charge Stability Diagrams with Diffusion Models",
+  "authors": [
+    "Vinicius Hernandes",
+    "Joseph Rogers",
+    "Rouven Koch",
+    "Thomas Spriggs",
+    "Brennan Undseth",
+    "Anasua Chatterjee",
+    "Lieven M. K. Vandersypen",
+    "Eliska Greplova"
+  ],
+  "summary": "Efficiently characterizing quantum dot (QD) devices is a critical bottleneck when scaling quantum processors based on confined spins. Measuring high-resolution charge stability diagrams (or CSDs, data maps which crucially define the occupation of QDs) is time-consuming, particularly in emerging architectures where CSDs must be acquired with remote sensors that cannot probe the charge of the relevant dots directly. In this work, we present a generative approach to accelerate acquisition by reconstructing full CSDs from sparse measurements, using a conditional diffusion model. We evaluate our…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.mes-hall",
+    "cs.LG"
+  ],
+  "published": "2026-03-27",
+  "updated": "2026-03-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

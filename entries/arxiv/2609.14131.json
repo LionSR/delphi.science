@@ -1,0 +1,21 @@
+{
+  "key": "2609.14131",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.14131",
+  "title": "Operator Learning with Variational Quantum Circuits",
+  "authors": [
+    "Jorgen Wu",
+    "Masoud Barati",
+    "Peyman Givi"
+  ],
+  "summary": "A new methodology is developed for quantum machine learning which enables variational quantum circuits to learn linear and non-linear solution operators to differential equations. This is devised by extending the framework of the DeepONet, a technique for modeling differential equations. The branch and trunk neural networks are replaced by variational quantum circuits, leveraging the quantum universal approximation theorem. The methodology is tested on several differential equations and yields low approximation & generalization errors even with shallow circuit depths. In addition, it does…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-12",
+  "updated": "2026-09-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

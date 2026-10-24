@@ -1,0 +1,22 @@
+{
+  "key": "2601.07860",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.07860",
+  "title": "Fault-Tolerant Quantum Error Correction: Implementing Hamming-Based Codes with Advanced Syndrome Extraction Techniques",
+  "authors": [
+    "Soham Bhadra",
+    "Diyansha Singh",
+    "Angana Chowdhury"
+  ],
+  "summary": "Building reliable quantum computers requires protecting fragile quantum states from inevitable environmental noise and operational errors. While quantum error correction codes like the Steane $[\\![7,1,3]\\!]$ code provide elegant theoretical solutions, their practical success hinges critically on how we measure errors - a process called syndrome extraction. The challenge lies in the ancilla qubits used for measurement: when they fail, errors can cascade across the entire quantum system, destroying the very information we're trying to protect. We address this fundamental problem by…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-01-10",
+  "updated": "2026-01-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

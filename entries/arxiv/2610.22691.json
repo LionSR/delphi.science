@@ -1,0 +1,22 @@
+{
+  "key": "2610.22691",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.22691",
+  "title": "Quantum-Classical Neural Networks for Solving Lindblad Master Equations",
+  "authors": [
+    "Rafael Florencio Díaz",
+    "Julio Guerrero García",
+    "Elvira Romera Gutiérrez"
+  ],
+  "summary": "Variational quantum algorithms have emerged as a promising approach for simulating open quantum systems, yet their expressive power and trainability remain poorly understood. We propose a variational framework for solving Lindblad master equations by minimizing a residual cost function using a compositional ansatz obtained by combining a classical neural network with a parameterized quantum circuit. The density matrix is represented through a purification on an enlarged Hilbert space, ensuring positivity, Hermiticity, and unit trace by construction, while all gradients are evaluated exactly…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

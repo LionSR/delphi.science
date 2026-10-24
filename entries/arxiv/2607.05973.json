@@ -1,0 +1,25 @@
+{
+  "key": "2607.05973",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.05973",
+  "title": "QUBO Modeling of Module Learning With Errors: Stability and Scaling in Post-Quantum Cryptography",
+  "authors": [
+    "Ruturaj Khamitkar",
+    "Durga Pritam Suggisetti",
+    "Soujanya Chatti",
+    "Varsha Sambhaje",
+    "Durga Dasari"
+  ],
+  "summary": "Lattice-based post-quantum cryptography relies on the hardness of the Learning With Errors (LWE) and Module Learning With Errors (MLWE) problems. This work introduces a constructive framework for encoding small MLWE instances as Quadratic Unconstrained Binary Optimization (QUBO) models suitable for quantum annealing. The formulation jointly represents secret coefficients and explicit error variables within a unified binary optimization structure, enabling their simultaneous recovery from the ground-state solution. Beyond the encoding, we develop a stability analysis of the resulting…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR",
+    "math-ph"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,33 @@
+{
+  "key": "2607.08767",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08767",
+  "title": "Plaquette: A hardware-aware design platform for fault-tolerant quantum computers",
+  "authors": [
+    "Raul Conchello Vendrell",
+    "Carlos Díaz López",
+    "Ish Dhand",
+    "Kshitij Kapoor",
+    "Davide Laureti",
+    "Marcello Massaro",
+    "Pranjal Nayak",
+    "Ivan Ogloblin",
+    "Martin B. Plenio",
+    "Shreya Prasanna Kumar",
+    "Matteo Santandrea",
+    "Varun Seshadri",
+    "Antal Száva",
+    "Trevor Vincent",
+    "Raphael Weber"
+  ],
+  "summary": "Hardware teams building fault-tolerant quantum computers (FTQCs) must decide which imperfections to suppress, and that decision requires the logical performance of the architecture under the device's actual noise. Hardware noise often departs from the stochastic Pauli models used by scalable stabilizer simulators: superconducting transmons leak out of the computational subspace, neutral atoms scatter through intermediate states, trapped ions heat as their motional modes absorb phonons, and miscalibrated controls over-rotate coherently. We present Plaquette, a theoretical framework and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-09",
+  "updated": "2026-07-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

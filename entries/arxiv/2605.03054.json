@@ -1,0 +1,23 @@
+{
+  "key": "2605.03054",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.03054",
+  "title": "Closed form logical error rate approximations for surface codes",
+  "authors": [
+    "Shaked Regev",
+    "Daniel Dilley",
+    "Ryan Bennink"
+  ],
+  "summary": "We propose a novel method to calculate logical error rates in surface codes, assuming independent and identically distributed physical errors. These results fit well known scaling laws for studied physical error rates and code distances, but break down in some other regimes. Increasing the code distance still reduces logical error rates, but returns diminish quickly beyond a certain point. We show how to use our method to analyze hypothetical quantum computers with various configurations and select designs with lower error rates. Currently, this requires expensive classical simulations of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-05-04",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

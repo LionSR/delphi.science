@@ -1,0 +1,20 @@
+{
+  "key": "2603.26494",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.26494",
+  "title": "Entanglement as Memory: Mechanistic Interpretability of Quantum Language Models",
+  "authors": [
+    "Nathan Roll"
+  ],
+  "summary": "Quantum language models have shown competitive performance on sequential tasks, yet whether trained quantum circuits exploit genuinely quantum resources -- or merely embed classical computation in quantum hardware -- remains unknown. Prior work has evaluated these models through endpoint metrics alone, without examining the memory strategies they actually learn internally. We introduce the first mechanistic interpretability study of quantum language models, combining causal gate ablation, entanglement tracking, and density-matrix interchange interventions on a controlled long-range…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CL"
+  ],
+  "published": "2026-03-27",
+  "updated": "2026-03-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

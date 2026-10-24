@@ -1,0 +1,22 @@
+{
+  "key": "2605.10710",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.10710",
+  "title": "Communication-Efficient Distributed Inverse Quantum Fourier Transform",
+  "authors": [
+    "F. Javier Cardama",
+    "Jorge Vázquez-Pérez",
+    "Tomás F. Pena",
+    "Andrés Gómez"
+  ],
+  "summary": "The scalability of quantum computing is currently limited by physical, technological, and architectural constraints that hinder the integration of a large number of qubits within a single quantum processor. Distributed quantum computing (DQC) has therefore emerged as a viable alternative, aiming to interconnect multiple smaller quantum processing units (QPUs) to jointly operate on a global quantum state. While this paradigm enables scalable architectures, it introduces significant communication overhead due to the cost of non-local quantum operations across distant nodes. In this work we…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-07-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

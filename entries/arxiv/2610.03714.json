@@ -1,0 +1,24 @@
+{
+  "key": "2610.03714",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03714",
+  "title": "SpiderCSS: Scalable Fault-Tolerant CSS State Preparation",
+  "authors": [
+    "Boldizsár Poór",
+    "Andrey Boris Khesin",
+    "Sarah Meng Li",
+    "Benjamin Rodatz",
+    "John van de Wetering",
+    "Richie Yeung"
+  ],
+  "summary": "Fault-tolerant preparation of logical states is a critical primitive for the realization of large-scale fault-tolerant quantum computing. This paper introduces SpiderCSS, a scalable compilation pipeline that generates highly-optimized, fault-tolerant state preparation circuits for arbitrary Calderbank-Shor-Steane (CSS) codes. Starting from an idealized specification of a CSS state, we use the ZX-calculus and fault-equivalent rewrites to construct a diagram that prepares the given state while preserving the fault tolerance of the initial ideal ZX-diagram. From this diagram, SpiderCSS…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

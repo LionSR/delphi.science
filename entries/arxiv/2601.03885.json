@@ -1,0 +1,23 @@
+{
+  "key": "2601.03885",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.03885",
+  "title": "Efficient upsampling for tensor-network and quantum-state encoded functions",
+  "authors": [
+    "Siddhartha E. Guzman",
+    "Egor Tiunov",
+    "Leandro Aolita"
+  ],
+  "summary": "Both tensor trains (TTs) and quantum states provide compressed representations of grid-structured data with potentially exponential compression power. We present a unified framework for upsampling data encoded in vector amplitudes, with efficient realizations in both classical TT and quantum settings. Starting from an \\(n\\)-core TT or an \\(n\\)-qubit state on a coarse grid with \\(2^n\\) points, the construction produces an \\((n+m)\\)-core TT or \\((n+m)\\)-qubit state on a finer grid with \\(2^{n+m}\\) points. In the TT setting, it supports interpolation, quasi-interpolation, augmentation, and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.GR",
+    "quant-ph"
+  ],
+  "published": "2026-01-07",
+  "updated": "2026-06-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

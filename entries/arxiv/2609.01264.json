@@ -1,0 +1,20 @@
+{
+  "key": "2609.01264",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.01264",
+  "title": "DF-SQD: Deterministic Fields for Sampling-Based Quantum Diagonalization",
+  "authors": [
+    "Kushagra Agarwal",
+    "Anupama Ray"
+  ],
+  "summary": "Sampling-based quantum diagonalization method exploits Quantum-centric supercomputing platforms to sample bitstrings for Hamiltonian projection on a quantum computer, and then classically diagonalize the Hamiltonian to estimate the eigenvalues and eigenvectors. In current quantum devices an algorithm is useful when shallow quantum circuits with error mitigation support can discover better results while having either a proof of convergence or some method to explain trust in experiment. In this paper, we introduce DF-SQD, a hybrid algorithm that derives deterministic auxiliary-field circuits…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-01",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

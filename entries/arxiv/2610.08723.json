@@ -1,0 +1,21 @@
+{
+  "key": "2610.08723",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08723",
+  "title": "Efficient Learning of Structured Fermionic States under General Quadratic Evolution",
+  "authors": [
+    "Erfan Amidi",
+    "Ali Asadian",
+    "Ali Hamed Moosavian"
+  ],
+  "summary": "We prove copy-optimal learning of the full Gaussian orbit of paired magic states on $n$ fermionic modes. The unknown evolution may be any parity-preserving quadratic circuit, including pair creation and annihilation, and each copy is measured once, in a fixed basis, on a single quartic Majorana observable. A nonadaptive learner returns a Gaussian preparation within trace distance $ε$ from $Θ(n^6/ε^2)$ copies at fixed confidence, and no learner in this measurement model, adaptive or not, can do better. Measured quartic correlations certify the trace distance of the result. Our second result…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

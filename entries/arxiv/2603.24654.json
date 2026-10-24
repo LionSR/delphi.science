@@ -1,0 +1,25 @@
+{
+  "key": "2603.24654",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.24654",
+  "title": "Spectral methods: crucial for machine learning, natural for quantum computers?",
+  "authors": [
+    "Vasilis Belis",
+    "Joseph Bowles",
+    "Rishabh Gupta",
+    "Evan Peters",
+    "Maria Schuld"
+  ],
+  "summary": "This article presents an argument for why quantum computers could unlock new methods for machine learning. We argue that spectral methods, in particular those that learn, regularise, or otherwise manipulate the Fourier spectrum of a machine learning model, are often natural for quantum computers. For example, if a generative machine learning model is represented by a quantum state, the Quantum Fourier Transform allows us to manipulate the Fourier spectrum of the state using the entire toolbox of quantum routines, an operation that is usually prohibitive for classical models. At the same…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-03-25",
+  "updated": "2026-04-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

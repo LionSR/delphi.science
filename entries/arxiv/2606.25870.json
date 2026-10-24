@@ -1,0 +1,21 @@
+{
+  "key": "2606.25870",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.25870",
+  "title": "Evolving Quantum Error-Correcting Encodings for Molecular Simulation",
+  "authors": [
+    "Kenny Heitritter",
+    "James Brown",
+    "Tarini Hardikar"
+  ],
+  "summary": "Useful quantum algorithms require many coupled discrete design choices. We study LLM-driven evolutionary program synthesis -- a language model edits a program, an external verifier scores the result, and high-scoring programs are retained and re-mutated -- as a tool for quantum-computing research. As a case study, we apply this loop to the Generalized Superfast Encoding (GSE), a fermion-to-qubit encoding whose prior molecular constructions reach code distance $3$. The search discovered interpretable constructor programs whose codes have \\emph{exact} distance $5$ on the molecular instances…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-24",
+  "updated": "2026-06-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

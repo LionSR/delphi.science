@@ -1,0 +1,21 @@
+{
+  "key": "2605.19417",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.19417",
+  "title": "Towards Fair Benchmarking of Quantum Transfer Learning for Visual Classification",
+  "authors": [
+    "Nouhaila Innan",
+    "Saim Rehman",
+    "Muhammad Shafique"
+  ],
+  "summary": "Quantum Transfer Learning (QTL) offers a promising approach for visual quantum machine learning under near-term constraints, where limited qubit counts, shallow circuit depths, and costly hybrid optimization restrict end-to-end quantum training. In this setting, pretrained classical backbones can extract high-level visual features, while compact quantum modules operate as trainable classification heads. However, existing QTL results are difficult to compare because they often differ in datasets, preprocessing, backbone settings, qubit budgets, circuit designs, optimization choices, and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

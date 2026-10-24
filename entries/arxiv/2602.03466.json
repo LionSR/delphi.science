@@ -1,0 +1,21 @@
+{
+  "key": "2602.03466",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.03466",
+  "title": "Quantum Circuit Generation via test-time learning with large language models",
+  "authors": [
+    "Adriano Macarone-Palmieri",
+    "Rosario Lo Franco"
+  ],
+  "summary": "Deploying large language models (LLMs) as optimizers for black-box scientific design problems requires efficient test-time refinement under expensive evaluations and without training data. We propose a \\emph{memory-augmented test-time optimization} framework that combines episodic memory of high-scoring candidates, score-difference feedback, and restart-from-best sampling to improve iterative search. We evaluate the approach on quantum circuit synthesis, where the objective is to maximize the Meyer--Wallach (MW) global entanglement measure under an exponentially expensive black-box oracle.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "stat.ML"
+  ],
+  "published": "2026-02-03",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

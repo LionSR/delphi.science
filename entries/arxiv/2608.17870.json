@@ -1,0 +1,21 @@
+{
+  "key": "2608.17870",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17870",
+  "title": "Computationally Efficient Optimization of Per-Qubit Clifford Deformation for Non-uniform Biased Noise",
+  "authors": [
+    "Won Joon Yun",
+    "Andrew Nemec",
+    "Jonathan M. Baker"
+  ],
+  "summary": "In fault-tolerant quantum computing systems with biased noise, Clifford deformation can substantially reduce the logical error rate (LER) without additional physical hardware overhead, such as extra qubits, syndrome extraction rounds, or code distance. Although Google Willow calibration data shows that $43\\%$ of qubits exhibit strong $X/Z$ bias, existing calibration-aware deformation techniques remain impractical: (1) global searches over the $6^n$ deformation choices rely on computing-intensive simulations, and (2) local heuristics often underperform undeformed baselines. We present…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

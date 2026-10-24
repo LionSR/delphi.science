@@ -1,0 +1,20 @@
+{
+  "key": "2605.05132",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05132",
+  "title": "A Factor-Graph Formulation of CSS Syndrome Decoding: Joint BP and Four-State BP",
+  "authors": [
+    "Kenta Kasai"
+  ],
+  "summary": "For CSS syndrome decoding, the two check matrices impose binary parity-check constraints on the two Pauli error components. The posterior can therefore be written as a binary factor graph with two Tanner graphs coupled by the local joint prior at each qubit. We call the sum-product algorithm on this factorization joint belief propagation (joint BP). Joint BP retains the local channel correlation between the two Pauli components. This note compares joint BP with the four-state Pauli-label factor graph used for four-state BP. The two algorithms are shown to have the same posterior weights,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.IT"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,26 @@
+{
+  "key": "2601.12502",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.12502",
+  "title": "Semidefinite Programming for Quantum Channel Learning",
+  "authors": [
+    "Mikhail Gennadievich Belov",
+    "Victor Victorovich Dubov",
+    "Vadim Konstantinovich Ivanov",
+    "Alexander Yurievich Maslov",
+    "Olga Vladimirovna Proshina",
+    "Vladislav Gennadievich Malyshkin"
+  ],
+  "summary": "The problem of reconstructing a quantum channel from a sample of classical data is considered. When the total fidelity can be represented as a ratio of two quadratic forms (e.g., in the case of mapping a mixed state to a pure state, projective operators, unitary learning, and others), Semidefinite Programming (SDP) can be applied to solve the fidelity optimization problem with respect to the Choi matrix. A remarkable feature of SDP is that the optimization is convex, which allows the problem to be efficiently solved by a variety of numerical algorithms. We have tested several commercially…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "quant-ph"
+  ],
+  "published": "2026-01-18",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

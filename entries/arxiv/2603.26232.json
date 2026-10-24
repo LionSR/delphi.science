@@ -1,0 +1,26 @@
+{
+  "key": "2603.26232",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.26232",
+  "title": "ParaQAOA: Efficient Parallel Divide-and-Conquer QAOA for Large-Scale Max-Cut Problems Beyond 10,000 Vertices",
+  "authors": [
+    "Po-Hsuan Huang",
+    "Xie-Ru Li",
+    "Chi Chuang",
+    "Chia-Heng Tu",
+    "Shih-Hao Hung"
+  ],
+  "summary": "Quantum Approximate Optimization Algorithm (QAOA) has emerged as a promising solution for combinatorial optimization problems using a hybrid quantum-classical framework. Among combinatorial optimization problems, the Maximum Cut (Max-Cut) problem is particularly important due to its broad applicability in various domains. While QAOA-based Max-Cut solvers have been developed, they primarily favor solution accuracy over execution efficiency, which significantly limits their practicality for large-scale problems. To address the limitation, we propose ParaQAOA, a parallel divide-and-conquer QAOA…",
+  "domain": "cs.DC",
+  "tags": [
+    "cs.DC",
+    "cs.PF",
+    "cs.SE",
+    "quant-ph"
+  ],
+  "published": "2026-03-27",
+  "updated": "2026-03-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,27 @@
+{
+  "key": "2603.14425",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.14425",
+  "title": "Disentangling Tensor Network States with Deep Neural Network",
+  "authors": [
+    "Chaohui Fan",
+    "Bo Zhan",
+    "Yuntian Gu",
+    "Tong Liu",
+    "Yantao Wu",
+    "Mingpu Qin",
+    "Dingshun Lv",
+    "Tao Xiang"
+  ],
+  "summary": "We introduce Neural Tensor Network States ($ν$TNS), a variational many-body wave-function ansatz that integrates deep neural networks with tensor-network architectures. In the $ν$TNS framework, a neural network serves as a disentangler of the wave-function, transforming the physical degrees of freedom into renormalized variables with much less entanglement. The renormalized state is then efficiently encoded by a back-flow tensor network. This construction yields a compact yet highly expressive representation of strongly correlated quantum states. Using convolutional neural networks combined…",
+  "domain": "cond-mat.str-el",
+  "tags": [
+    "cond-mat.str-el",
+    "quant-ph"
+  ],
+  "published": "2026-03-15",
+  "updated": "2026-03-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

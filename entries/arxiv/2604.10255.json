@@ -1,0 +1,20 @@
+{
+  "key": "2604.10255",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.10255",
+  "title": "Model-Free Quantum Stabilization via Finite-Difference Lyapunov Control",
+  "authors": [
+    "Robert Vrabel"
+  ],
+  "summary": "We develop a model-free framework for stabilizing quantum states using only empirical finite-difference evaluations of a measurement-derived Lyapunov observable. The controller requires no knowledge of the Hamiltonian, dissipative structure, or generator of the dynamics, and relies solely on discrete measurement data. The approach combines three key elements: sign-based Lyapunov descent, adaptive gain amplification, and a finite-difference analogue of LaSalle's invariance principle. We provide rigorous conditions under which these mechanisms guarantee asymptotic stabilization along the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.OC"
+  ],
+  "published": "2026-04-11",
+  "updated": "2026-04-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

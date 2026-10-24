@@ -1,0 +1,22 @@
+{
+  "key": "2605.28845",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.28845",
+  "title": "HPC-vQPU: A Service-Export Architecture for Virtual QPUs on Batch-Scheduled HPC Systems",
+  "authors": [
+    "Shusen Liu",
+    "Pascal Jahan Elahi",
+    "Ugo Varetto"
+  ],
+  "summary": "Device-aware quantum simulation increasingly requires HPC-scale accelerators, yet secure supercomputers expose batch-scheduled execution environments rather than the interactive, backend-oriented interfaces expected by quantum software. The key obstacle is not only remote job submission: an HPC-hosted virtual QPU must preserve topology, native-gate, and calibration semantics across queue delay, scheduler allocation, compute-node isolation, and partial execution-side failures, without opening inbound paths into the cluster. We present HPC-vQPU, a service-export architecture for virtual QPUs…",
+  "domain": "cs.DC",
+  "tags": [
+    "cs.DC",
+    "quant-ph"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

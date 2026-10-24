@@ -1,0 +1,20 @@
+{
+  "key": "2605.11016",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11016",
+  "title": "Counting anticommuting Pauli pairs in linear time",
+  "authors": [
+    "Hyunho Cha",
+    "Jungwoo Lee"
+  ],
+  "summary": "Many quantum computing workflows manipulate long lists of Pauli strings. A basic classical subroutine involves taking $m$ Pauli strings on $n$ qubits, each of weight bounded by a constant, to determine if they are pairwise commuting, identify any counterexamples, or calculate the exact number of anticommuting unordered pairs. The standard general-purpose route represents Pauli strings in binary symplectic form and checks pairs in $O(m^2)$ time. Here, we provide an $O(m)$ algorithm for the bounded locality regime. It maintains counts of all labeled subpatterns of previously inserted strings…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-10",
+  "updated": "2026-05-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2601.06332",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.06332",
+  "title": "Bipartitioning of Graph States for Distributed Measurement-Based Quantum Computing",
+  "authors": [
+    "Kjell Fredrik Pettersen",
+    "Matthias Heller",
+    "Giorgio Sartor",
+    "Raoul Heese"
+  ],
+  "summary": "Measurement-Based Quantum Computing (MBQC) is inherently well-suited for Distributed Quantum Computing (DQC): once a resource state is prepared and distributed across a network of quantum nodes, computation proceeds through local measurements coordinated by classical communication. However, since non-local gates acting on different Quantum Processing Units (QPUs) are a bottleneck, it is crucial to optimize the qubit assignment to minimize inter-node entanglement of the shared resource. For graph state resources shared across two QPUs, this task reduces to finding bipartitions with minimal…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.OC"
+  ],
+  "published": "2026-01-09",
+  "updated": "2026-01-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

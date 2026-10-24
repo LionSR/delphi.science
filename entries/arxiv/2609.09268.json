@@ -1,0 +1,23 @@
+{
+  "key": "2609.09268",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.09268",
+  "title": "Reconstructing fluid velocity fields from sparse sensors using a variational quantum algorithm",
+  "authors": [
+    "Nhat-Quang Nguyen",
+    "Mohammad Mehedi Hasan Akash",
+    "Kourosh Shoele",
+    "Yanzhu Chen",
+    "Huixuan Wu"
+  ],
+  "summary": "Reconstructing fields governed by nonlinear partial differential equations (PDEs) from sparse measurements is a challenging task because the governing equations are strongly nonlinear and observations are available at only a few locations. Fluid velocity fields are a representative case. In this paper, we propose a variational quantum algorithm that reconstructs the solution over the entire spacetime domain at once. Rather than marching in time, the method encodes the full discrete spacetime solution in a single variational quantum state, so that all time points are optimized jointly. The…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

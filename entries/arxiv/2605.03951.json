@@ -1,0 +1,21 @@
+{
+  "key": "2605.03951",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.03951",
+  "title": "Factoring $2048$ bit RSA integers with a half-million-qubit modular atomic processor",
+  "authors": [
+    "Tian Xue",
+    "Jacob P. Covey"
+  ],
+  "summary": "Shor's algorithm is one of the most promising applications of quantum computers. However, since $\\sim 10^6$ physical qubits are believed to be required for established approaches, the algorithm will need to be distributed across many modules. In this paper, we provide a distributed compilation of Shor's algorithm on a modular atomic processor. We present an end-to-end compilation and optimization strategy that focuses on the interplay between the inter-module communication and the intra-module clock rate. With a half-million-qubit modular atomic processor with a communication rate of $10^5$…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.atom-ph"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-05-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

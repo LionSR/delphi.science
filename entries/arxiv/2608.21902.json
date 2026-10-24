@@ -1,0 +1,20 @@
+{
+  "key": "2608.21902",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.21902",
+  "title": "Belief Propagation-based Disentanglers for Tensor Network State Preparation",
+  "authors": [
+    "Tomasz Szołdra",
+    "Peter Schmelcher"
+  ],
+  "summary": "We develop a quantum circuit synthesis method for preparing a class of tensor network states. The scheme applies to states tractable with belief propagation (BP), a tensor network gauging scheme which recently allowed for classical simulations at large scales. The problem is reduced to independent, strictly local, classical variational optimizations: each nearest-neighbor two-qubit \"disentangler\" gate minimizes the entropy defined on an edge. Disentanglers drive the state to a product state and their Hermitian conjugate prepares the target. Each disentangling layer has depth at most $z+1$…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-22",
+  "updated": "2026-08-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

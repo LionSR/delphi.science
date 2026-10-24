@@ -1,0 +1,21 @@
+{
+  "key": "2607.09339",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.09339",
+  "title": "PCPOP.jl: A Julia package for partially commutative polynomial optimization",
+  "authors": [
+    "Moisés Bermejo Morán",
+    "Abhishek Mishra"
+  ],
+  "summary": "Here we present PCPOP, a Julia package for polynomial optimization that supports non-commutative optimization, tracial polynomial optimization, trace polynomial optimization and state polynomial optimization. PCPOP fully supports exact arithmetic computations and incorporates convenient functionalities such as algebraic reductions based on Gröbner basis methods, automatized symmetrization via Wedderburn decompositions, and Jordan algebra reductions. As a distinguished feature, PCPOP implements a specialized framework for polynomial computations in partially commutative variables that…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.OC"
+  ],
+  "published": "2026-07-10",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

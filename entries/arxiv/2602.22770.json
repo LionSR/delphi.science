@@ -1,0 +1,21 @@
+{
+  "key": "2602.22770",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.22770",
+  "title": "A matching decoder for bivariate bicycle codes",
+  "authors": [
+    "Kaavya Sahay",
+    "Dominic J. Williamson",
+    "Benjamin J. Brown"
+  ],
+  "summary": "The discovery of new quantum error-correcting codes that encode several logical qubits into relatively few physical qubits motivates the development of efficient and accurate methods of decoding these systems. Here, we adopt the minimum-weight perfect matching algorithm, a subroutine invaluable to decoding topological codes, to decode bivariate bicycle codes. Using the equivalence of bivariate bicycle codes to copies of the toric code, we propose a method we call the `cylinder trick' to rapidly find a correction using matching on code symmetries. We benchmark our decoder on the gross code…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-26",
+  "updated": "2026-06-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

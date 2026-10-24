@@ -1,0 +1,21 @@
+{
+  "key": "2601.22400",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.22400",
+  "title": "Spectral Filtering for Complex Linear Dynamical Systems",
+  "authors": [
+    "Elad Hazan",
+    "Annie Marsden"
+  ],
+  "summary": "We study the problem of learning complex-valued linear dynamical systems (CLDS) with sector-bounded spectrum. This class captures oscillatory and long-memory dynamics arising in signal processing, structured state space models, and quantum systems. We introduce a spectral filtering method based on the Slepian basis and show that learnability is governed by an effective dimension independent of the ambient state dimension. As a consequence, we obtain dimension-free regret bounds for sequence prediction in CLDS with spectrum contained in a sector of the unit disk.",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-05-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2608.28811",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.28811",
+  "title": "BAHAMAS: A Control Plane for Optimization and Execution of Variational Quantum Circuits",
+  "authors": [
+    "Amit Samanta",
+    "Mohammad Abrarul Hasanat",
+    "Jason Ludmir",
+    "Ryan Stutsman",
+    "Tirthak Patel",
+    "Rohan Basu Roy"
+  ],
+  "summary": "Variational quantum algorithms (VQAs) suffer from unstable optimization due to temporal noise drift and static qubit mappings that distort gradient signals across iterations. We present BAHAMAS, an online control framework that stabilizes noise exposure by adaptively selecting physical mappings via consensus-based fidelity estimation, without requiring simulators, offline training, or prior executions. Across real quantum devices, BAHAMAS improves optimization reliability and supports inference-time retargeting under drift through robust, per-iteration control.",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-28",
+  "updated": "2026-08-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

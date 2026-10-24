@@ -1,0 +1,19 @@
+{
+  "key": "2610.14259",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.14259",
+  "title": "Quantum Signal Processing Phase Factorization via Logarithmic Derivatives",
+  "authors": [
+    "Christopher Peng"
+  ],
+  "summary": "Quantum signal processing (QSP) requires the efficient computation of phase factors associated with a polynomial transformation. One existing stable factorization method avoids direct root finding but relies on Prony's method to recover a polynomial from weighted power sums of its roots (arXiv:2202.02671). We present a modification of this approach that eliminates Prony's method by using the logarithmic derivative of an associated polynomial. Because the logarithmic derivative has the same residue at every root after accounting for multiplicity, its Fourier coefficients directly yield the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

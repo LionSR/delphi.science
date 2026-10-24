@@ -1,0 +1,21 @@
+{
+  "key": "2605.23738",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.23738",
+  "title": "Optimizing Parallel Execution of Commuting Pauli Product Rotations",
+  "authors": [
+    "Sayam Sethi",
+    "Devika Nambisan",
+    "Jonathan Mark Baker"
+  ],
+  "summary": "Fault-Tolerant Quantum Computation (FTQC) permits parallel execution of mutually commuting Pauli Product Rotations (PPRs), but per-qubit access point/port limits (e.g. two X and two Z edges on the surface code) force commuting groups that exceed the budget to be split, inflating circuit depth. We propose two heuristics for reducing this hardware-limited depth: 1. clique reshuffling, which permutes commuting products and re-forms port-constrained groups, and 2. generator restructuring, which rewrites each group as an equivalent generating set with reduced per-qubit port pressure. On QASMBench…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-22",
+  "updated": "2026-05-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

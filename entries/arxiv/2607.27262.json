@@ -1,0 +1,24 @@
+{
+  "key": "2607.27262",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.27262",
+  "title": "LLM-Guided Initialization for Accelerated Hybrid Quantum-Classical Medical Image Classification",
+  "authors": [
+    "Riza Alaudin Syah",
+    "Irwan Alnarus Kautsar",
+    "Haza Nuzly Bin Abdull Hamed"
+  ],
+  "summary": "Variational quantum algorithms often encounter barren plateaus, where cost gradients decay rapidly with increasing circuit depth, undermining the trainability of parameterized quantum circuits. This paper evaluates AdaInit (Adaptive Initialization), proposed by Zhuang and Cunningham, which uses large language models to propose initial parameters for quantum neural networks. We study a simplified single-query AdaInit variant paired with GPU-accelerated simulation in NVIDIA CUDA-Q and apply it to binary classification on the DMR-IR mammography dataset. AdaInit delivers 14.6 times higher…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI",
+    "cs.ET",
+    "cs.LG"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

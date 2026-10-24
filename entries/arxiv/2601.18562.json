@@ -1,0 +1,23 @@
+{
+  "key": "2601.18562",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.18562",
+  "title": "Bayesian Optimization for Quantum Error-Correcting Code Discovery",
+  "authors": [
+    "Yihua Chengyu",
+    "Richard Meister",
+    "Conor Carty",
+    "Sheng-Ku Lin",
+    "Roberto Bondesan"
+  ],
+  "summary": "Quantum error-correcting codes protect fragile quantum information by encoding it redundantly, but identifying codes that perform well in practice with minimal overhead remains difficult due to the combinatorial search space and the high cost of logical error rate evaluation. We propose a Bayesian optimization framework to discover quantum error-correcting codes that improves data efficiency and scalability with respect to previous machine learning approaches to this task. Our main contribution is a multi-view chain-complex neural embedding that allows us to predict the logical error rate of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-26",
+  "updated": "2026-01-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

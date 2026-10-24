@@ -1,0 +1,22 @@
+{
+  "key": "2603.24370",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.24370",
+  "title": "soliton_solver: A GPU-based finite-difference PDE solver for topological solitons in two-dimensional non-linear field theories",
+  "authors": [
+    "Paul Leask"
+  ],
+  "summary": "This paper introduces soliton_solver, an open-source GPU-accelerated software package for the simulation and real-time visualization of topological solitons in two-dimensional non-linear field theories. The software is structured around a theory-agnostic numerical core implemented using Numba CUDA kernels, while individual physical models are introduced through modular theory components. This separation enables a single computational framework to be applied across a broad class of systems, from nanoscale magnetic spin textures in condensed matter physics to cosmic strings spanning galaxies…",
+  "domain": "hep-th",
+  "tags": [
+    "hep-th",
+    "cond-mat.mes-hall",
+    "cond-mat.supr-con",
+    "physics.comp-ph"
+  ],
+  "published": "2026-03-25",
+  "updated": "2026-03-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2610.10239",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.10239",
+  "title": "ProtocolMatch: Protocol-Dependent Model Selection for Scientific Dynamics Forecasting",
+  "authors": [
+    "Lu Wei",
+    "Yufeng Wang",
+    "Haibin Ling"
+  ],
+  "summary": "Scientific dynamics forecasting is often framed as an architecture choice, although deployment is also determined by observed history, rollout feedback, compute budget, physical objective, and test distribution. We formulate protocol-dependent model selection and introduce ProtocolMatch, a compute-matched, validation-selected, and failure-preserving evaluation framework. On driven quantum-spin dynamics, we compare recurrent, patched-attention, causal-attention, and low-rank linear predictors across three independently generated datasets. The causal-attention--recurrence ordering reverses as…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "quant-ph"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

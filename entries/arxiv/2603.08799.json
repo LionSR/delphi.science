@@ -1,0 +1,24 @@
+{
+  "key": "2603.08799",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.08799",
+  "title": "Quantum algorithm for anisotropic diffusion and convection equations with vector norm scaling",
+  "authors": [
+    "Julien Zylberman",
+    "Thibault Fredon",
+    "Nuno F. Loureiro",
+    "Fabrice Debbasch"
+  ],
+  "summary": "In this work, we tackle the resolution of partial differential equations (PDEs) on digital quantum computers. Two fundamental PDEs are addressed: the anisotropic diffusion equation and the anisotropic convection equation. We present a quantum numerical scheme consisting of three steps: quantum state preparation, evolution with diagonal operators, and measurement of observables of interest. The evolution step relies on a high-order centered finite difference and a product formula approximation, also known as Trotterization. We provide novel vector-norm analysis to bound the different sources…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math-ph",
+    "math.NA"
+  ],
+  "published": "2026-03-09",
+  "updated": "2026-03-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

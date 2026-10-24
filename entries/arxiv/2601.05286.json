@@ -1,0 +1,22 @@
+{
+  "key": "2601.05286",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.05286",
+  "title": "Investigation of Hardware Architecture Effects on Quantum Algorithm Performance: A Comparative Hardware Study",
+  "authors": [
+    "Askar Oralkhan",
+    "Temirlan Zhaxalykov"
+  ],
+  "summary": "Cloud-accessible quantum processors enable direct execution of quantum algorithms on heterogeneous hardware platforms. Unlike classical systems, however, identical quantum circuits may exhibit substantially different behavior across devices due to architectural variations in qubit connectivity, gate fidelity, and coherence times. In this work, we systematically benchmark five representative quantum algorithms - Bell state preparation, GHZ state generation, Quantum Fourier Transform (QFT), Grover's Search, and the Quantum Approximate Optimization Algorithm (QAOA) - across trapped-ion,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AR",
+    "cs.ET"
+  ],
+  "published": "2026-01-07",
+  "updated": "2026-01-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2609.38720",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38720",
+  "title": "Does the Readout Bypass Leak the Input? A Feature-Visibility Audit of Hybrid Quantum-Classical Models",
+  "authors": [
+    "Guilin Zhang",
+    "Kai Zhao",
+    "Xiquan Cui",
+    "Henry Heng",
+    "Xu Chu",
+    "Aletta Johanna Blanken"
+  ],
+  "summary": "Readout-side residual hybrids concatenate raw inputs with measured quantum features. Under single-example gradient sharing, a biased first linear layer admits standard analytic recovery of its input, so the bypass exposes raw coordinates without requiring inversion of the quantum circuit. We audit this mechanism using two tabular datasets, four architectures, and metrics conditioned on feature visibility. Iterative gradient matching gives median full-record PSNR of 73-96 dB for residual and input-only heads. Quantum-only heads score 8-11 dB on the full record but 54-96 dB on the six input…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

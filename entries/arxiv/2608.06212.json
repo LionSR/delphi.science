@@ -1,0 +1,21 @@
+{
+  "key": "2608.06212",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.06212",
+  "title": "Warm-Starting MaxCut Relaxation via Low-Depth Quantum Approximate Optimization Algorithm",
+  "authors": [
+    "Bao G. Bach",
+    "Ilya Safro",
+    "Filip B. Maciejewski"
+  ],
+  "summary": "Quantum optimization has attracted growing interest as quantum hardware continues to improve, yet state-of-the-art classical solvers remain a formidable benchmark for practical utility. Rather than seeking a fully quantum replacement for classical optimization, we propose a hybrid strategy that uses quantum information to enhance leading classical heuristics. Specifically, we introduce a warm-start method based on local correlators obtained from the Quantum Approximate Optimization Algorithm (QAOA), and use this information to initialize the Burer-Monteiro (BM) rank-two relaxation. We…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-06",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

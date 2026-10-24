@@ -1,0 +1,24 @@
+{
+  "key": "2609.10079",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10079",
+  "title": "Loss-correcting fault-tolerant quantum computing architecture for neutral atoms",
+  "authors": [
+    "Sanaa Sharma",
+    "Yutaka Hirano",
+    "Akihisa Goban",
+    "Hayata Yamasaki",
+    "Shinichi Sunami",
+    "Prakash Murali"
+  ],
+  "summary": "Neutral-atom arrays are a leading qubit technology for large-scale, fault-tolerant quantum computing (FTQC). A dominant error source on this platform is qubit loss, which accrues with every operation and movement. The presence of loss undermines the promises of existing architectural work. Standard error correction targets stochastic Pauli errors and cannot correct loss, so most FTQC performance analyses are not directly compatible with it. Moreover, compilation and routing decisions, which strongly affect overall loss, are typically optimized against Pauli-error cost models and often remain…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

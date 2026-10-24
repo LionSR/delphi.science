@@ -1,0 +1,32 @@
+{
+  "key": "2607.24947",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.24947",
+  "title": "Realizing Error Suppression in Partially Fault-Tolerant Quantum Simulations with IBM Quantum Computers",
+  "authors": [
+    "Henry Froland",
+    "Dorota M. Grabowska",
+    "Sebastian Grieninger",
+    "Jeremy Hartse",
+    "Anne L. Lashbrook",
+    "Zhiyao Li",
+    "Ziyuan Li",
+    "Sarah J. M. Powell",
+    "Martin J. Savage",
+    "Xiaojun Yao",
+    "Nikita A. Zemlevskiy"
+  ],
+  "summary": "Quantum error-detecting codes offer a near-term path for improving the performance of quantum simulations on noisy hardware. Using IBM's superconducting quantum computer ibm_boston, we show that partially fault-tolerant encoded quantum simulations of the Ising model in 1+1D and 2+1D outperform their unencoded counterparts in estimating local observables. To represent 42 logical qubits on the heavy-hex quantum processor, 21 blocks of the [[4, 2, 2]] Iceberg code and up to 136 physical qubits are used. By pairing fault-tolerant syndrome extraction with non-fault-tolerant logical operations,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "hep-lat",
+    "hep-ph",
+    "nucl-th"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

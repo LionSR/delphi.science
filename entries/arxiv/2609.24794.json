@@ -1,0 +1,21 @@
+{
+  "key": "2609.24794",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.24794",
+  "title": "Observable-targeted variational quantum simulation of Hamiltonian dynamics",
+  "authors": [
+    "Leonardo Zambrano",
+    "Luciano Pereira",
+    "Antonio Acín"
+  ],
+  "summary": "Standard variational quantum simulation seeks to reproduce the evolution of the full quantum state, although many applications require only the expectation values of a few observables. We study a variational method for pure-state Hamiltonian dynamics that updates circuit parameters to reproduce the evolution of selected expectation values. An exact error identity guides the choice of observables, motivating a construction based on repeated commutators of the target with the Hamiltonian. For Pauli observables and Pauli-rotation circuits, the update can be estimated without ancillary qubits or…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-21",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2602.21145",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.21145",
+  "title": "Reducing the Gate Count with Efficient Trotter-Suzuki Schemes",
+  "authors": [
+    "Marko Maležič",
+    "Johann Ostmeyer"
+  ],
+  "summary": "Hamiltonian formulations of lattice field theories provide access to real-time dynamics, but their simulation is difficult to implement efficiently. Trotter-Suzuki decompositions are at the center of time evolution computation, either on quantum hardware or classically, for instance with the use of tensor networks. While low-order Trotterizations remain the standard choice due to their simplicity, higher-order schemes offer the potential for improved efficiency. In this work we outline a short guide to Trotter-Suzuki schemes and their implementations in general. To help with this, we…",
+  "domain": "hep-lat",
+  "tags": [
+    "hep-lat",
+    "quant-ph"
+  ],
+  "published": "2026-02-24",
+  "updated": "2026-07-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

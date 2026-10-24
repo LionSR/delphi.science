@@ -1,0 +1,21 @@
+{
+  "key": "2602.08703",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.08703",
+  "title": "Weak forms offer strong regularisations: how to make physics-informed (quantum) machine learning more robust",
+  "authors": [
+    "Annie E. Paine",
+    "Smit Chaudhary",
+    "Antonio A. Gentile"
+  ],
+  "summary": "Physics-informed (PI) methodologies have surged to become a pillar route to solve Differential Equations (DEs), sustained by the growth of machine learning methods in scientific contexts. The main proposition of PI is to minimise variationally a loss function, formally ensuring that a neural surrogate of the solution has the DE locally satisfied. The nature of such formulation encouraged the exploration of equivalent quantum algorithms, where the surrogate solution is expressed by variational quantum architectures. The locality of typical loss functions emphasises the DE to hold at an…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-09",
+  "updated": "2026-02-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

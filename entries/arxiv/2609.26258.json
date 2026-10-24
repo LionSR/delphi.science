@@ -1,0 +1,22 @@
+{
+  "key": "2609.26258",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.26258",
+  "title": "CRT-Decomposed $Σ$-Protocols for CSIDH",
+  "authors": [
+    "I. Dey",
+    "I. Cherkaoui"
+  ],
+  "summary": "We construct a zero-knowledge proof of knowledge for the CSIDH group action that exploits the Chinese Remainder Theorem (CRT) structure of the ideal class group, available whenever the group structure is known exactly, as for CSIDH-512. We prove perfect completeness, perfect special honest-verifier zero-knowledge, and 2-special soundness, in which the secret is recovered from two accepting transcripts by one subtraction and one modular inversion per CRT component; no rewinding loop, lattice reduction, or heuristic sampling appears in the extractor. Because each round admits exactly two…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "cs.IT",
+    "quant-ph"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

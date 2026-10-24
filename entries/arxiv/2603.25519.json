@@ -1,0 +1,20 @@
+{
+  "key": "2603.25519",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.25519",
+  "title": "Kardashev scale Quantum Computing for Bitcoin Mining",
+  "authors": [
+    "Pierre-Luc Dallaire-Demers",
+    "BTQ Technologies Team"
+  ],
+  "summary": "Bitcoin already faces a quantum threat through Shor attacks on elliptic-curve signatures. This paper isolates the other component that public discussion often conflates with it: mining. Grover's algorithm halves the exponent of brute-force search, promising a quadratic edge to any quantum miner of Bitcoin. Exactly how large that edge grows depends on fault-tolerant hardware. No prior study has costed that hardware end to end. We build an open-source estimator that sweeps the full attack surface: reversible oracles for double-SHA-256 mining and RIPEMD-based address preimages, surface-code…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-26",
+  "updated": "2026-03-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

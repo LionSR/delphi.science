@@ -1,0 +1,21 @@
+{
+  "key": "2603.24717",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.24717",
+  "title": "Phased outcome-complete simulation",
+  "authors": [
+    "Vadym Kliuchnikov",
+    "Adam Paetznick",
+    "Marcus P. da Silva"
+  ],
+  "summary": "We generalize the polynomial-time outcome-complete simulation algorithm for stabilizer circuits in arXiv:2309.08676 to track global phases exactly, yielding what we call phased outcome-complete simulation. The original algorithm enabled equivalence checking of stabilizer circuits with intermediate measurements and conditional Pauli corrections for all input states and all measurement outcomes simultaneously, but it tracked quantum states only up to a global phase. Our generalization removes this limitation and enables equivalence checking for an important family of non-stabilizer circuits:…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-25",
+  "updated": "2026-03-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

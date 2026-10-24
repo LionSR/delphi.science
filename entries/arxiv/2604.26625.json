@@ -1,0 +1,19 @@
+{
+  "key": "2604.26625",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26625",
+  "title": "Tikhonov-regularised projected gradient flow for equality-constrained bilinear quantum control",
+  "authors": [
+    "Tanveer Ahmad"
+  ],
+  "summary": "We study a projection-type gradient flow for equality-constrained maximisation of a smooth bilinear control objective on $\\mathcal{H}=L^2(0,T;\\mathbb{R})$, eliminating Lagrange multipliers through an $(M{+}1)\\times(M{+}1)$ moving Gram matrix $Γ(s)_{\\ell\\ell'}=\\int_0^T S(t)\\,c_\\ell(s,t)\\,c_{\\ell'}(s,t)\\,\\mathrm{d}t$. The flow generates monotonic ascent in continuous time but becomes unstable on discretisation; existing implementations rely on heuristic step-size safeguards lacking rigorous justification. We close this gap by replacing $Γ$ with $Γ_{\\varepsilon}:=Γ+\\varepsilon^{2}I$ and prove:…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-04-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

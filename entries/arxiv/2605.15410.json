@@ -1,0 +1,24 @@
+{
+  "key": "2605.15410",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.15410",
+  "title": "Diagonal Adaptive Non-local Observables on Quantum Neural Networks",
+  "authors": [
+    "Huan-Hsin Tseng",
+    "Yan Li",
+    "Hsin-Yi Lin",
+    "Samuel Yen-Chi Chen"
+  ],
+  "summary": "Adaptive Non-local Observables (ANOs) have shown that making quantum observables dynamic can substantially enlarge the function space of Variational Quantum Algorithms, partly shifting hardware demands from circuit synthesis to measurement design. However, this advantage is accompanied by a steep increase in the number of parameters, as well as the classical optimization cost for varying general Hermitian observables. We propose a special form of ANO that significantly reduces this burden by considering only diagonal observables paired with quantum circuits. Mathematically, this is…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "published": "2026-05-14",
+  "updated": "2026-05-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

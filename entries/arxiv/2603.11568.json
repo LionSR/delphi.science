@@ -1,0 +1,20 @@
+{
+  "key": "2603.11568",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.11568",
+  "title": "Hybrid Quantum Error Correction and Mitigation by Purification",
+  "authors": [
+    "Jonathan Raghoonanan",
+    "Tim Byrnes"
+  ],
+  "summary": "Quantum error correction physically removes errors from a quantum state, while quantum error mitigation improves observable estimates by processing noisy measurement data. We introduce \\emph{purification quantum error suppression} (PQES), a hybrid approach that uses multiple noisy copies of an unknown state to combine these two ideas. The protocol uses SWAP tests to physically reduce errors by purification, while the full outcome record is used to combine all branches without postselection. In this way, PQES avoids the fixed-success-outcome requirement of standard SWAP-test purification…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-12",
+  "updated": "2026-07-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

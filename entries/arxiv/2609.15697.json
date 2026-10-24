@@ -1,0 +1,29 @@
+{
+  "key": "2609.15697",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.15697",
+  "title": "OpenQARP: a modular framework for quantum application research",
+  "authors": [
+    "Stefano Scali",
+    "Vicente P. Soloviev",
+    "Antonio Márquez Romero",
+    "Brian Coyle",
+    "Giuseppe Buonaiuto",
+    "Annie Paine",
+    "Jonathan H. Fetherolf",
+    "Marcos Diez García",
+    "Michal Krompiec",
+    "Josh Kirsopp"
+  ],
+  "summary": "We introduce OpenQARP, the Open Quantum Application Research Package: an open-source Python framework for quantum application research, built on a compiled C++ core. In OpenQARP, an application is assembled from an algorithm library that orchestrates three interchangeable layers: blocks describe circuits, primitives describe what to extract from them, and engines describe how they run. The release spans near-term through fault-tolerant methods, targeting problems from electronic structure to combinatorial optimization, with device-aware compilation, circuit cutting, and resource estimation…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.MS"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

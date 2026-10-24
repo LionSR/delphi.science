@@ -1,0 +1,25 @@
+{
+  "key": "2609.08908",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.08908",
+  "title": "A Platform-aware Compilation Framework for Fault-tolerant Quantum Computation",
+  "authors": [
+    "Srushti Patil",
+    "Susan X. Chen",
+    "Andreas Juul Bay-Smidt",
+    "Stefan Alaric Schäffer",
+    "Peter Krogstrup",
+    "Stefano Paesani",
+    "Gemma C. Solomon"
+  ],
+  "summary": "The compilation of an algorithm can vary significantly with the choice of physical hardware platform and error correction model. Yet, current compilation frameworks typically commit to a single architecture-hardware configuration, making it difficult to assess resource estimates across platforms. We present a platform-aware compilation framework that re-compiles a quantum circuit into a hardware-compatible instruction set as well as fault-tolerant operations and provides end-to-end resource estimates in terms of physical-qubit count, time-to-solution, and classical processing time. We…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

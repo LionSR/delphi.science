@@ -1,0 +1,24 @@
+{
+  "key": "2602.19722",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.19722",
+  "title": "Differentiable Maximum Likelihood Noise Estimation for Quantum Error Correction",
+  "authors": [
+    "Hanyan Cao",
+    "Dongyang Feng",
+    "Zixuan Lu",
+    "Cheng Ye",
+    "Feng Pan"
+  ],
+  "summary": "Accurate noise estimation is essential for fault-tolerant quantum computing, since decoding per formance depends critically on the fidelity of circuit-level noise parameters. We introduce a differ entiable Maximum Likelihood Estimation (dMLE) framework that learns these parameters directly from experimental syndrome data using likelihood gradients, with no decoder in the training loop. Mapping syndrome likelihoods to statistical-mechanical models enables exact and efficient evalua tion via planar solvers for repetition codes and tensor networks (TNs) for surface codes, extending the exact…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.stat-mech"
+  ],
+  "published": "2026-02-23",
+  "updated": "2026-10-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

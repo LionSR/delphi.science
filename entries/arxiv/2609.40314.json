@@ -1,0 +1,21 @@
+{
+  "key": "2609.40314",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.40314",
+  "title": "Quantum Sampling of Random Spanning Trees via Amortized Data Structures",
+  "authors": [
+    "Yassine Hamoudi",
+    "Adrian Tanasa",
+    "Shrinidhi Teganahally Sridhara"
+  ],
+  "summary": "We present a quantum algorithm that generates a uniform superposition over the spanning trees of a graph -- also known as a q-sample -- using only a sub-linear number of queries to the graph. This goes beyond previous work that focuses on generating classical samples, including a recent quantum algorithm by Apers, Gao, Ji, and Liu [ICALP 2025]. For an $n$-vertex, $m$-edge graph, our algorithm admits a pre-processing step of $\\tilde{O}(\\sqrt{mn} + m^{1-δ})$, after which each q-sample can be generated in $\\tilde{O}(n^{1+2δ})$ for any $δ$. Alternatively, $k$ independent q-samples can be…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

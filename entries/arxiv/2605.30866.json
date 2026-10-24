@@ -1,0 +1,21 @@
+{
+  "key": "2605.30866",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.30866",
+  "title": "Generative Quantum Data Embeddings for Supervised Learning",
+  "authors": [
+    "Jaewoong Heo",
+    "Daniel K. Park"
+  ],
+  "summary": "Many practically relevant applications of quantum machine learning involve classical data, for which performance depends critically on how inputs are embedded into quantum states. Yet the use of a fixed embedding circuit ansatz remains standard practice. We propose an energy-based generative learning framework that synthesizes gate sequences to optimize embedding structures and refine data-tailored parameters, using a fidelity-based surrogate objective to guide the search toward improved class distinguishability. Empirically, the method improves classification performance across diverse…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

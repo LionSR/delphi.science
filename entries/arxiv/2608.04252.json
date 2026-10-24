@@ -1,0 +1,24 @@
+{
+  "key": "2608.04252",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.04252",
+  "title": "Dynamical Lie Algebras Cannot Describe Shallow QAOA: Cragged Terrains, Barren Plateaus, and Empirical Hardness Models",
+  "authors": [
+    "Harrison Copp",
+    "Charlton Li",
+    "Anžej Margeta-Cacace",
+    "Amy Qiao"
+  ],
+  "summary": "The dynamical Lie algebraic (DLA) theory of variational quantum algorithms (VQAs) predicts commonplace exponentially vanishing loss and gradient variances for sufficiently deep parametrized circuits. In this work, we show that these predictions fail dramatically in the shallow-circuit (and particularly constant-depth) regime for the Quantum Approximate Optimization Algorithm (QAOA) applied to the maximum independent set (MIS) problem. In a large-scale numerical study across $\\sim$23,000 problem instances, we find that barren plateaus are rare, while landscapes whose variances polynomially…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET",
+    "cs.LG"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

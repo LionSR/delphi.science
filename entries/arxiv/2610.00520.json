@@ -1,0 +1,21 @@
+{
+  "key": "2610.00520",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00520",
+  "title": "Near-Optimal Ground-State Preparation without Controlled Hamiltonian Evolutions",
+  "authors": [
+    "Dhrumil Patel",
+    "Steven T. Flammia",
+    "Raul Garcia-Patron"
+  ],
+  "summary": "Ground-state preparation, energy estimation, and property estimation are fundamental tasks in quantum simulation. Existing ground-state preparation algorithms achieve near-optimal complexity using block encodings or controlled Hamiltonian evolution, raising a natural question: is controlled Hamiltonian evolution necessary, or can the same scaling be attained in the weaker access model that provides access to only uncontrolled Hamiltonian evolution? We resolve this question by giving two algorithms that access the input Hamiltonian $H$ only through queries to $U_H$ and its inverse…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

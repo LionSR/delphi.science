@@ -1,0 +1,22 @@
+{
+  "key": "2605.31248",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.31248",
+  "title": "Trainable Quantum Spectral Models for Partial Differential Equations",
+  "authors": [
+    "Gabriel Mejia",
+    "Eileen Kuehn",
+    "Melvin Strobl",
+    "Achim Streit"
+  ],
+  "summary": "This work studies trainable quantum spectral models (QSMs) for solving linear partial differential equations (PDEs). Instead of learning solutions directly in physical space, QSMs learn the inverse differential operator in a spectral representation, embedding prior knowledge of the equation's natural basis. We systematically study the expressibility and trainability of several QSM architectures, ranging from near-diagonal to fully parameterized unitaries. In particular, we introduce a family of richer spectral models that interpolate between purely diagonal operators and fully mixing…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

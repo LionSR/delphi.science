@@ -1,0 +1,24 @@
+{
+  "key": "2610.02734",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02734",
+  "title": "SMP: A General Hyperedge-Based Framework for Circuit-Level Quantum Error Correction",
+  "authors": [
+    "Siying Wang",
+    "Yue Yan",
+    "Zhixin Xia",
+    "Canwei Shi",
+    "Hannuo Yuan",
+    "Xiang-Bin Wang"
+  ],
+  "summary": "Hyperedge faults remain a major challenge in circuit-level quantum error correction. Accurately exploiting hyperedge correlations often requires substantial computational resources, which complicates real-time decoding. Matching-based decoders are fast and scalable, but their pairwise graph representation limits the use of higher-order fault information. Here, we introduce Syndrome Motif Projection (SMP), a general framework for incorporating hyperedge information into matching-based decoding. The key idea is that a hyperedge fault produces a characteristic local syndrome motif. Observing…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,29 @@
+{
+  "key": "2605.03180",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.03180",
+  "title": "Mitigating Classical Resource Costs in Quantum Error Correction via Generalized qLDPC Predecoding",
+  "authors": [
+    "Alexander Knapen",
+    "Junyi Luo",
+    "Guanchen Tao",
+    "Yuxuan Wang",
+    "Tomas Bruno",
+    "Qirui Zhang",
+    "Dennis Sylvester",
+    "Mehdi Saligane",
+    "Gokul Subramanian Ravi"
+  ],
+  "summary": "Large-scale fault-tolerant quantum computing (FTQC) will require quantum-classical interfaces (QCIs) that orchestrate real-time decoding over thousands to millions of logical qubits simultaneously. To scale FTQC systems, complex decoding resources must be shared between logical qubits, creating resource contention bottlenecks in the QCI. Mitigating this contention via optimal resource allocation remains an open problem. Lightweight predecoding techniques can reduce decoder utilization and average latency, both of which ease contention for shared decoding resources. To date, both decoder…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AR",
+    "cs.ET"
+  ],
+  "published": "2026-05-04",
+  "updated": "2026-08-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

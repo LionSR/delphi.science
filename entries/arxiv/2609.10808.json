@@ -1,0 +1,23 @@
+{
+  "key": "2609.10808",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10808",
+  "title": "Tight Time-Space Lower Bounds for Collision Finding and Element Distinctness under Label Symmetry",
+  "authors": [
+    "Frédéric Magniez",
+    "Sebastian Zur"
+  ],
+  "summary": "How much memory is needed to retain the quantum speedup for collision finding? For a uniformly random function $f:[N]\\to [N]$, the BHT algorithm finds a collision using $O(N^{1/3})$ queries and a quantumly accessible classical table containing $O(N^{1/3})$ input-output pairs, whereas a logarithmic-space Grover search uses $O(\\sqrt N)$ queries. Determining the optimal query-space tradeoff between these extremes remains a major open problem. We resolve this equation within the class of label-symmetric algorithms, which treat the function $f$'s output labels as interchangeable. We prove that…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.CR",
+    "cs.DS"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

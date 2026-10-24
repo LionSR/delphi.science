@@ -1,0 +1,24 @@
+{
+  "key": "2604.06135",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.06135",
+  "title": "Shot-based quantum encoding: a data-loading paradigm for quantum neural networks",
+  "authors": [
+    "Basil Kyriacou",
+    "Viktoria Patapovich",
+    "Maniraman Periyasamy",
+    "Alexey Melnikov"
+  ],
+  "summary": "Efficient data loading remains a bottleneck for near-term quantum machine learning. Existing schemes (angle, amplitude, and basis encoding) either underuse the exponential Hilbert-space capacity or require circuit depths that exceed the coherence budgets of noisy intermediate-scale quantum hardware. We introduce shot-based quantum encoding (SBQE), a data embedding strategy that distributes the hardware's native resource, shots, according to a data-dependent classical distribution over multiple initial quantum states. By treating the shot counts as a learnable degree of freedom, SBQE produces…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "published": "2026-04-07",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

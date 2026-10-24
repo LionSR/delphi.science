@@ -1,0 +1,20 @@
+{
+  "key": "2610.08219",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08219",
+  "title": "Post-Selection-Free Quantum Automated Learning",
+  "authors": [
+    "Junkai Wang",
+    "Jin-Peng Liu"
+  ],
+  "summary": "Quantum automated learning (QAL) trains quantum models by directly updating quantum states, offering an approach to quantum machine learning that avoids optimizing variational circuit parameters. However, post-selection constrains the probability of obtaining the final learned model. We develop a post-selection-free QAL algorithm that organizes a complete training path into a coherent quantum circuit and uses fixed-point amplitude amplification to increase the probability of obtaining the learned model. We provide theoretical guarantees on output error and learning loss, and identify…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

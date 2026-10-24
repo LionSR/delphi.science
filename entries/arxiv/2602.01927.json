@@ -1,0 +1,21 @@
+{
+  "key": "2602.01927",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.01927",
+  "title": "Numerical Error Extraction by Quantum Measurement Algorithm",
+  "authors": [
+    "Clement Ronfaut",
+    "Robin Ollive",
+    "Stephane Louise"
+  ],
+  "summary": "In quantum computing, some of the main quantum operations (i.e., gates) cannot be simply implemented and require an approximation. Major quantum algorithm routines enable the implementation of these specific quantum gates by combining basic quantum circuits with an iterative structure. In this structure, the number of repetitions of the basic circuit pattern is associated with convergence parameters. The asymptotic convergence of the gate error with respect to the number of basic pattern repetitions is known as the query complexity. The underlying convergence law is bounded, but often lacks…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-02",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

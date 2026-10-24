@@ -1,0 +1,30 @@
+{
+  "key": "2604.15895",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.15895",
+  "title": "Digital Predistortion for Flux Control of Tunable Superconducting Qubits",
+  "authors": [
+    "Dharun Venkateswaran",
+    "Felice Francesco Tafuri",
+    "Yuanzheng Paul Tan",
+    "Bruno Aznar Martinez",
+    "Alisa Danilenko",
+    "Likai Yang",
+    "Arnaud Carignan-Dugas",
+    "Christoph Hufnagel",
+    "Rainer Dumke",
+    "Philip Krantz",
+    "Eric T. Holland"
+  ],
+  "summary": "Flux-tunable superconducting qubits rely on fast flux control pulses to implement two-qubit entangling quantum gates, a key building block for quantum algorithms. However, distortion effects introduced by non-ideal control electronics, parasitic components, and the cryogenic quantum chip response can all degrade the gate fidelity. We present a digital predistortion (DPD) framework for characterizing and then compensating for these distortions using a combination of infinite impulse response (IIR) and finite impulse response (FIR) filters. Experiments on a flux-tunable quantum processing unit…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.supr-con"
+  ],
+  "published": "2026-04-17",
+  "updated": "2026-04-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

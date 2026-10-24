@@ -1,0 +1,20 @@
+{
+  "key": "2610.01024",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01024",
+  "title": "Exact $T$-counts of CCZ layers from an isotropy bound",
+  "authors": [
+    "Arul Rhik Mazumder"
+  ],
+  "summary": "The $T$-count is a dominant cost of fault-tolerant Clifford$+T$ computation. We prove that a layer of $m$ disjoint CCZ gates, the diagonal core of a parallel Toffoli layer, needs exactly $6m+1$ $T$ gates in every Hadamard-free Clifford$+T$ circuit with clean ancillas. Campbell and Howard gave the matching construction, and to our knowledge this is the first proof that it is optimal for general $m$. The proof rests on a novel isotropy bound. When a gate's phase polynomial has only cubic terms, the vectors recording which $T$ gates touch each qubit span a self-orthogonal subspace over…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

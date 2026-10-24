@@ -1,0 +1,24 @@
+{
+  "key": "2601.08930",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.08930",
+  "title": "Plutarch: Toward Scalable Operational Parallelism on Racetrack-Shaped Trapped-Ion Processors",
+  "authors": [
+    "Enhyeok Jang",
+    "Hyungseok Kim",
+    "Yongju Lee",
+    "Jaewon Kwon",
+    "Yipeng Huang",
+    "Won Woo Ro"
+  ],
+  "summary": "A recent advancement in quantum computing shows a quantum advantage of certified randomness on the racetrack processor. This work investigates the execution efficiency of this architecture for general-purpose programs. We first explore the impact of increasing zones on runtime efficiency. Counterintuitively, our evaluations using variational programs reveal that expanding zones may degrade runtime performance under the existing scheduling policy. This degradation may be attributed to the increase in track length, which increases ion circulation overhead, offsetting the benefits of enhanced…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-13",
+  "updated": "2026-01-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

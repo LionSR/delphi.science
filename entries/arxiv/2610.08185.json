@@ -1,0 +1,20 @@
+{
+  "key": "2610.08185",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08185",
+  "title": "Classical Verification of a Remote Quantum Processor via Degenerate Concordant Computations: An Application to Randomness Generation",
+  "authors": [
+    "Bishal Kumar Das",
+    "Lakshya Priyadarshi"
+  ],
+  "summary": "A client renting a cloud quantum processor cannot easily tell whether its bitstrings came from a quantum device. Certification by random circuit sampling runs on present hardware, but scoring each sample costs $O(2^n)$. We give a protocol in which the client scores each round in $O(n)$ time, based on degenerate concordant ensembles: mixed states that are classical probability distributions over a product basis, with several basis states sharing a probability. For such a state, every concordance-preserving gate factorizes into local basis changes, a relabeling of basis states, and a block…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

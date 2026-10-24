@@ -1,0 +1,23 @@
+{
+  "key": "2605.31544",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.31544",
+  "title": "More efficient Clifford+T synthesis for small-angle rotations and application to Trotterization",
+  "authors": [
+    "Marius Bothe",
+    "Christoph Sünderhauf",
+    "Michael J. Witham",
+    "Earl T. Campbell",
+    "Nick S. Blunt"
+  ],
+  "summary": "Clifford+T synthesis of rotation gates is an important routine in fault-tolerant quantum compilation. While Clifford+T synthesis is scalable, it has a high overhead of tens of T gates per rotation in practice, translating to high resource estimates for many fault-tolerant algorithms. However, these well-known results, including those using probabilistic mixtures [Quantum 7, 1208 (2023)], are independent of the rotation angle $θ$, requiring $O(\\log 1/δ)$ T gates. We show that it is possible to do much better for small angles, reducing the T cost to $\\tilde{O}(θ^2/δ)$, and returning to…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2603.18222",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.18222",
+  "title": "An HHL-Based Quantum-Classical Solver for the Incompressible Navier-Stokes Equations with Approximate QST",
+  "authors": [
+    "Moshe Inger",
+    "Steven Frankel"
+  ],
+  "summary": "In computational fluid dynamics (CFD), the numerical integration of the Navier-Stokes equations is frequently constrained by the Poisson equation to determine the pressure. Discretization of this equation often results in the need to solve a system of linear algebraic equations. This step typically represents the primary computational bottleneck. Quantum linear system algorithms such as Harrow-Hassidim-Lloyd (HHL) offer the potential for exponential speedups for solving sparse linear systems, such as those that arise from the discretized Poisson equation. In this work, we successfully couple…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.comp-ph",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-03-18",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

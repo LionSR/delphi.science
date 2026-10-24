@@ -1,0 +1,23 @@
+{
+  "key": "2610.05585",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05585",
+  "title": "Optimal and Verifiable Quantum Advantages in Communication Complexity",
+  "authors": [
+    "Ryan Anselm",
+    "Michelle Ding",
+    "Dar Gilboa",
+    "Sabee Grewal"
+  ],
+  "summary": "We establish optimal quantum-classical separations in communication complexity for search problems. We introduce a total search problem called Pelagic Fourier Fishing and show that it admits an $n$-qubit quantum one-way protocol, whereas every randomized two-way protocol requires $Ω(2^n)$ bits of communication. We then introduce a variant of this problem whose solutions can be verified in polynomial time. This variant also admits an $n$-qubit quantum one-way protocol, while every randomized one-way protocol requires $Ω(2^n)$ bits of communication. We also construct a family of efficiently…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

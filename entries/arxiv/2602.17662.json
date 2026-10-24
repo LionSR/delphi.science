@@ -1,0 +1,22 @@
+{
+  "key": "2602.17662",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.17662",
+  "title": "A Study of Entanglement and Ansatz Expressivity for the Transverse-Field Ising Model using Variational Quantum Eigensolver",
+  "authors": [
+    "Ashutosh P. Tripathi",
+    "Nilmani Mathur",
+    "Vikram Tripathi"
+  ],
+  "summary": "The Variational Quantum Eigensolver (VQE) is a leading hybrid quantum-classical algorithm for simulating many-body systems in the NISQ era. Its effectiveness, however, depends on the faithful preparation of eigenstates, which becomes challenging in degenerate and strongly entangled regimes. We study this problem using the transverse-field Ising model (TFIM) with periodic boundary conditions in one, two, and three dimensions, considering systems of up to 27 qubits. We employ different ansatzes: the hardware-efficient EfficientSU2 from Qiskit, the physics-inspired Hamiltonian Variational…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.stat-mech"
+  ],
+  "published": "2026-02-19",
+  "updated": "2026-02-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

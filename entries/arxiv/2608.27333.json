@@ -1,0 +1,21 @@
+{
+  "key": "2608.27333",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.27333",
+  "title": "Evaluating Quantum Kernel Methods for Track-Based Classification in High-Energy Physics",
+  "authors": [
+    "Emmanuel Billias",
+    "Nikos Chrisochoides"
+  ],
+  "summary": "We present a systematic design for large-scale quantum kernel classification, demonstrated through a quantum support vector classifier (QSVC) for particle-track classification using centroid-based CLAS12 drift-chamber features. Each event is encoded into a six-qubit state via a fully entangled ZZFeatureMap, whose fidelities define a quantum kernel within a standard SVM framework. By decoupling state preparation from kernel construction and distributing evaluation across a multi-node MPI-based HPC allocation, the approach scales to 1.0x10^5 training and 4.0x10^5 test events with an exactly…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.data-an"
+  ],
+  "published": "2026-08-27",
+  "updated": "2026-08-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

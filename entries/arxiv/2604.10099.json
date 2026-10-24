@@ -1,0 +1,21 @@
+{
+  "key": "2604.10099",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.10099",
+  "title": "Quantum Error Mitigation Strategies for Variational PDE-Constrained Circuits on Noisy Hardware",
+  "authors": [
+    "Prasad Nimantha Madusanka Ukwatta Hewage",
+    "Midhun Chakkravarthy",
+    "Ruvan Kumara Abeysekara"
+  ],
+  "summary": "Variational quantum circuits (VQCs) solving partial differential equations (PDEs) on near-term quantum hardware face a critical challenge: hardware noise degrades solution fidelity and disrupts convergence. We present a systematic study of three noise channels; depolarizing, amplitude damping, and bit-flip on VQCs constrained by PDE residual loss functions for the heat equation, Burgers' equation, and the Saint-Venant shallow water equations. We benchmark three error mitigation strategies: zero-noise extrapolation (ZNE) via Richardson polynomial fitting, probabilistic error cancellation…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-11",
+  "updated": "2026-04-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

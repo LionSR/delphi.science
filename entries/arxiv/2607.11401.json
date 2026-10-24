@@ -1,0 +1,28 @@
+{
+  "key": "2607.11401",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.11401",
+  "title": "From Leaves to Clusters: Depth-Efficient SAT-Oracle Synthesis Based on the HRSE Model",
+  "authors": [
+    "Zhihang Li",
+    "Wei Zi",
+    "Shuai Yang",
+    "Bei Zhou",
+    "Zongjiang Yi",
+    "Woji He",
+    "Yingjie Lin",
+    "Kaixiang Ji",
+    "Heru Du",
+    "Jinchen Xu"
+  ],
+  "summary": "Quantum oracles are a common building block of many quantum algorithms, where circuit depth is a primary cost that directly affects overall performance. Synthesizing oracles for SAT (CNF) formulas under a limited ancilla budget, however, tends to yield deep circuits, as existing methods underexploit clause-level parallelism. In this work, we present the Clustered Synthesis Tree (CST), a depth-oriented framework whose core idea is to group the individual clause leaves of a hierarchical synthesis tree into clusters, exposing instance-dependent clause-level parallelism under ancilla…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

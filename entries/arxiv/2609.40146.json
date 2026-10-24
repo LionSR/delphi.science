@@ -1,0 +1,25 @@
+{
+  "key": "2609.40146",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.40146",
+  "title": "QuLoC: Photonic Quantum-Assisted Low-Rank LLM Compression",
+  "authors": [
+    "Xiao-Hui Ni",
+    "Yu-Han Yao",
+    "Yu-Ze Zhu",
+    "Hang Song",
+    "Xiang Zhao",
+    "Lin Yang",
+    "Xian-Min Jin"
+  ],
+  "summary": "As LLMs grow in size, compression becomes increasingly important for efficient deployment. SVD-based low-rank compression reduces parameter counts but can degrade downstream performance. To improve performance after compression, we introduce QuLoC, a photonic quantum-assisted LLM compression algorithm that uses quantum circuit outputs to gate the retained low-rank components during training. Model performance is recovered through local functional reconstruction followed by end-to-end knowledge distillation. After training, the gating coefficients are absorbed into the low-rank factors,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

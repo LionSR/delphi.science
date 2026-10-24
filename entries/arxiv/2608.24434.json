@@ -1,0 +1,20 @@
+{
+  "key": "2608.24434",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.24434",
+  "title": "Nearly Optimal Amplitude Estimation at any Depth",
+  "authors": [
+    "Jona Erle",
+    "Bálint Koczor"
+  ],
+  "summary": "We develop a class of amplitude estimation algorithms with tunable circuit depth $M$ and circuit repetitions $N$, requiring neither ancilla qubits nor controlled Grover operations. For additive error $ε$ in the Grover angle, they attain the nearly optimal query-depth tradeoff $M^2N\\in\\widetilde{O}(ε^{-2})$ uniformly over $λ\\in[0,π/2]$, spanning the full range from classical sampling at $M=1$ to the Heisenberg limit at $M=Θ(ε^{-1})$. While prior depth-tunable work establishes comparable angle-accuracy guarantees only away from the boundaries $λ\\to0$ or $π/2$ or at discrete depth tradeoffs,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

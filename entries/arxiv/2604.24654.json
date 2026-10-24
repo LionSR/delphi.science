@@ -1,0 +1,23 @@
+{
+  "key": "2604.24654",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.24654",
+  "title": "SWIM: Stochastic Warm Inflation Module to generate and analyse Warm Inflationary power spectrum",
+  "authors": [
+    "Umang Kumar",
+    "Suratna Das"
+  ],
+  "summary": "Numerical analysis to determine the form of the scalar power spectrum in Warm Inflationary paradigm is inevitable. One further needs numerical techniques to analyse any Warm Inflation model with the current observational data through the MCMC codes that are available publicly, like COSMOMC or Cobaya. We present SWIM (Stochastic Warm Inflation Module) written in C++ and Python, that not only helps generate the Warm Inflationary scalar power spectrum, either semi-analytically or fully numerically, but also is integrated with Cobaya enabling the user to constrain the model parameters with…",
+  "domain": "astro-ph.CO",
+  "tags": [
+    "astro-ph.CO",
+    "gr-qc",
+    "hep-ph",
+    "hep-th"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

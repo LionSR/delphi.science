@@ -1,0 +1,24 @@
+{
+  "key": "2609.31066",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.31066",
+  "title": "Modeling quantum neural network gradient with reinforcement learning",
+  "authors": [
+    "Nhan Trong Luu",
+    "Duong Trung Luu",
+    "Nam Ngoc Pham",
+    "Thang Cong Truong"
+  ],
+  "summary": "Training quantum neural networks (QNNs) on near-term hardware remains hampered by two compounding difficulties: the exponential vanishing of gradient variance known as the barren plateau, and the $\\mathcal{O}(L \\cdot 2^n)$ time and memory cost of differentiating through an $n$-qubit, $L$-layer circuit. We propose RLQ-Grad, a reinforcement-learning-based optimizer in which a classical policy $π_φ$ (a spectrally-normalized PPO agent) learns to propose parameter updates directly, conditioned on the QNN's current parameters, loss, accuracy, and previous update. Because the surrogate gradient is…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET",
+    "cs.NE"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

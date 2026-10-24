@@ -1,0 +1,22 @@
+{
+  "key": "2605.17412",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.17412",
+  "title": "Module Lattice Security (Part IV): Probabilistic Polynomial Quantum Attack on Module-LWE over 2-Power Cyclotomics",
+  "authors": [
+    "Ming-Xing Luo"
+  ],
+  "summary": "We present a quantum attack on ML-KEM and related 2-power cyclotomic lattice schemes. Combining with Parts I-III, we provide an algorithm and verify the resulting approximation factor satisfies $γ\\le 21 < q/2=1664.5$ for ML-KEM-1024, with a success probability $\\ge 0.99$. We apply a tower decomposition of the Principal Ideal Problem (PIP) through the chain $\\Q\\subset \\Q(ζ_8)\\subset\\cdots\\subset \\Q(ζ_{2^k})$ which yields a polynomial-time quantum algorithm costing $O(n^3 \\log^2 n)$ gates, $O(n^2 \\log n)$ qubits, and poly$(n)$ classical bit operations. We extend the analysis to Falcon, Hawk,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR",
+    "math.CO",
+    "math.RA"
+  ],
+  "published": "2026-05-17",
+  "updated": "2026-05-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

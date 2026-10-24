@@ -1,0 +1,21 @@
+{
+  "key": "2606.15744",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.15744",
+  "title": "Comparative Performance Analysis of NIST PQC Standards: From STM32 Software Limitations to FPGA-SoC Acceleration",
+  "authors": [
+    "Mustafa Akif Yıldırım",
+    "Osman Tokluoglu"
+  ],
+  "summary": "The rapid advancement of quantum computing poses a significant threat to classical public-key cryptographic systems, necessitating the transition to Post-Quantum Cryptography (PQC). This study investigates the implementation challenges of NISTstandardized signature schemes on resource-constrained embedded hardware. We present a comparative analysis of SPHINCS+ and CRYSTALS-Dilithium on an ARM Cortex-M4 (STM32F407G) microcontroller. Our findings reveal that SPHINCS+ is practically unusable in this software-only environment, with impractical execution times. Furthermore, the reference…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "eess.SP"
+  ],
+  "published": "2026-06-14",
+  "updated": "2026-06-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

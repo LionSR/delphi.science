@@ -1,0 +1,22 @@
+{
+  "key": "2608.09496",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.09496",
+  "title": "Autoregressive Projective Quantum Monte Carlo: From a Hermitian to a Non-Hermitian Perspective",
+  "authors": [
+    "Lavoisier Wah",
+    "Remmy Zen",
+    "Flore K. Kunst"
+  ],
+  "summary": "Accurately determining the ground-state properties of quantum many-body systems remains a central challenge. In this work, we introduce an autoregressive projective quantum Monte Carlo (PQMC) framework that leverages recurrent neural networks (RNNs) to guide the stochastic dynamics. By incorporating autoregressive sampling into PQMC, we demonstrate substantial improvements in accuracy compared to standard unguided PQMC, while retaining polynomial computational cost. We benchmark our approach against conventional variational RNN ansätze and find that the autoregressive PQMC consistently…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.str-el"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2602.22943",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.22943",
+  "title": "A quantum feasibility preserving modeling for the min cut problem",
+  "authors": [
+    "Ali Abbassi",
+    "Yann Dujardin",
+    "Eric Gourdin",
+    "Philippe Lacomme",
+    "Caroline Prodhon"
+  ],
+  "summary": "We study the minimum cut problem in weighted undirected graphs using variational quantum algorithms in which only feasible cut configurations are explored. Although minimum cut admits efficient classical solutions, it is a fundamental component of more complex network optimization problems such as multicut and network interdiction. Our objective is to examine quantum models in which feasibility is preserved by the mixer dynamics, without introducing penalty terms in the cost Hamiltonian. We employ a ring structured XY mixer that restricts the quantum evolution to the subspace of valid cut…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-26",
+  "updated": "2026-02-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

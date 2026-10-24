@@ -1,0 +1,23 @@
+{
+  "key": "2603.14699",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.14699",
+  "title": "Learning Quantum Operator Dynamics from Short-Time Data",
+  "authors": [
+    "Jinyang Li",
+    "Satoshi Iso",
+    "Shunji Matsuura",
+    "Lingxiao Wang",
+    "Xiaoyang Wang"
+  ],
+  "summary": "Real-time dynamics of quantum observables provide direct access to excitation spectra and correlation functions in quantum many-body systems, but currently available quantum devices are limited to short evolution times due to decoherence. We propose a neural ordinary differential equation (Neural ODE) framework with a physics-driven neural network to reconstruct long-time operator dynamics from short-time quantum data. By expanding observables in the Pauli basis and exploiting locality and symmetry constraints, the operator evolution is reduced to a tractable set of coefficients whose…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-16",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

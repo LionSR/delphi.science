@@ -1,0 +1,21 @@
+{
+  "key": "2609.05250",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.05250",
+  "title": "Memory-Optimal Sequential Synthesis of Multimode Gaussian Transformations",
+  "authors": [
+    "Fucheng Guo",
+    "Frank Mueller",
+    "Yuan Liu"
+  ],
+  "summary": "In modular quantum computing architectures, communication between hardware modules is mediated by traveling qumodes sent through transmission lines. Each output qumode interacts with the emitting module only once through a beam-splitter-type interaction and becomes inaccessible to that module after emission. Information required for subsequent outputs must therefore remain in long-lived memory qumodes. For a prescribed multimode Gaussian transformation on $N$ qumodes, this work determines the minimum memory cost for any given emission order, constructs an explicit sequential protocol…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

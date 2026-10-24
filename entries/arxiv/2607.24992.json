@@ -1,0 +1,22 @@
+{
+  "key": "2607.24992",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.24992",
+  "title": "A Model Predictive Control-Inspired Quantum Algorithm",
+  "authors": [
+    "Dominic Messina",
+    "Alicia B. Magann",
+    "Mohan Sarovar",
+    "Helen Durand"
+  ],
+  "summary": "We introduce a new hybrid quantum-classical algorithm inspired by an advanced control strategy known as model predictive control (MPC). This algorithm unifies the optimization-based design of variational quantum algorithms (VQAs) with the feedback-based design of feedback-based quantum algorithms (FQAs). Variational circuit parameters are optimized using a layer-wise receding horizon strategy, where observable measurements after every layer initialize a classically simulated dynamic model used to predict quantum state evolution and optimize over future parameterized gates. This hybrid…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-08-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

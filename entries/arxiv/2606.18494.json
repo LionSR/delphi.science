@@ -1,0 +1,21 @@
+{
+  "key": "2606.18494",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.18494",
+  "title": "Towards an Optimally Distributed Quantum Fourier Transform Circuit",
+  "authors": [
+    "Zachary Vernec",
+    "Michael Silver",
+    "Hans-Arno Jacobsen"
+  ],
+  "summary": "A promising avenue for scaling quantum computing is to connect quantum processing units (QPUs) by generating entanglement between them. This requires circuit partitioning: partially rewriting quantum circuits to run on a distributed quantum system using quantum teleportation protocols, while preserving the unitary operation implemented by the circuit. The key metric to minimize when partitioning is the e-bit count, defined as the number of maximally entangled qubit pairs that must be generated between QPUs. We focus on partitioning the quantum Fourier transform (QFT) circuit, which is widely…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

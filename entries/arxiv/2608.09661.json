@@ -1,0 +1,24 @@
+{
+  "key": "2608.09661",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.09661",
+  "title": "Memory-, Circuit-, and Ansatz-Efficient VQLS for CFD on Hybrid Quantum-HPC Systems",
+  "authors": [
+    "Chao Lu",
+    "Muralikrishnan Gopalakrishnan Meena",
+    "Eduardo Antonio Coello Perez",
+    "Kalyana Chakravarthi Gottiparthi",
+    "Seongmin Kim"
+  ],
+  "summary": "Fluid dynamics workloads are dominated by repeated solves of large, structured linear systems, motivating the search for quantum acceleration. The Variational Quantum Linear Solver (VQLS) is a leading near-term candidate, but practical deployment on hybrid quantum--high--performance computing (HPC) systems faces three persistent challenges: (i) the linear-combination-of-unitaries (LCU) encoding of the system matrix explodes in memory and runtime as the problem size grows, (ii) ansatz selection is largely empirical, with no clear link between standard circuit metrics and solver convergence,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

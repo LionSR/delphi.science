@@ -1,0 +1,20 @@
+{
+  "key": "2603.02387",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.02387",
+  "title": "Barenco gate implementation using driven two- and three-qubit spin chains",
+  "authors": [
+    "Rafael Vieira",
+    "Edgard P. M. Amorim"
+  ],
+  "summary": "We propose a protocol for implementing Barenco-type multi-qubit controlled gates using short driven spin chains. Starting from an Ising interaction with a transverse drive on the last spin, we construct an effective two-qubit Hamiltonian whose time evolution implements the Barenco gate $V_2(\\varphi,ω,φ)$ and, in particular, a CNOT gate. We then embed this construction into a three-qubit $XXZ$ chain to realize the three-qubit Barenco gate $V_3(\\varphi,ω,φ)$, which includes the Toffoli gate as a special case. The derivation is fully analytical: we perform a sequence of unitary transformations,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-02",
+  "updated": "2026-03-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

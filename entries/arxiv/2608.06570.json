@@ -1,0 +1,25 @@
+{
+  "key": "2608.06570",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.06570",
+  "title": "Exact quantum circuits for a lattice Boltzmann realization of the Dirac equation",
+  "authors": [
+    "Nilesh Sawant",
+    "Ethan Young",
+    "Kevin Patrick Griffin",
+    "Michael Martin"
+  ],
+  "summary": "The quantum lattice Boltzmann scheme of Succi and Dellar advances a four-component Dirac spinor on a lattice by a fixed sequence of local, exactly norm-preserving operations: a basis rotation, a collision, a streaming shift, and the inverse rotation. While this correspondence has been noted qualitatively, it has remained unclear whether it can be realized exactly and unitarily as a gate-model quantum circuit. This unitarity is a structural property of the scheme, which should, in principle, enable an operator-by-operator port onto quantum hardware. We give a gate-level construction of every…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.stat-mech",
+    "math-ph",
+    "physics.comp-ph"
+  ],
+  "published": "2026-08-06",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

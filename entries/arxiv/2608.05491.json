@@ -1,0 +1,25 @@
+{
+  "key": "2608.05491",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.05491",
+  "title": "A Quantum Circuit Framework for Protein Ensemble-Level Energetics",
+  "authors": [
+    "Pratik Patil",
+    "Bhushan Bonde",
+    "Bhaskar Choubey"
+  ],
+  "summary": "Proteins occupy heterogeneous free-energy landscapes in which high-entropy ensembles converge toward compact, low-energy basins with multiple sub-states. Molecular dynamics can access these landscapes at atomic resolution, but exhaustive sampling remains computationally demanding. Meanwhile, most quantum approaches target only single optimal structures, leaving full ensemble energetic heterogeneity unexplored. We introduce a residue-level, gate-based quantum circuit framework for coarse-graining protein thermodynamics. Each amino acid is represented as a two-state qubit (stabilised vs.…",
+  "domain": "cs.ET",
+  "tags": [
+    "cs.ET",
+    "physics.bio-ph",
+    "q-bio.BM",
+    "q-bio.MN",
+    "quant-ph"
+  ],
+  "published": "2026-08-06",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

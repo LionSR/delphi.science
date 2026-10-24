@@ -1,0 +1,24 @@
+{
+  "key": "2605.21213",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.21213",
+  "title": "Enhanced Reinforcement Learning-based Process Synthesis via Quantum Computing",
+  "authors": [
+    "Austin Braniff",
+    "Fengqi You",
+    "Yuhe Tian"
+  ],
+  "summary": "In this work, we present quantum reinforcement learning (RL) as a solution strategy for process synthesis problems. Building on our prior work, we develop a generalized framework that formally poses process synthesis as a Markov decision process and introduces quantum-enhanced RL algorithms to solve it with improved scalability. Earlier implementations of quantum-based RL for process synthesis were limited by qubit requirements, which scaled poorly with problem complexity. This work overcomes this challenge by introducing state encoding algorithms to decouple qubit requirements from problem…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-05-20",
+  "updated": "2026-05-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

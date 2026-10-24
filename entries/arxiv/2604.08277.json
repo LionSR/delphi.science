@@ -1,0 +1,26 @@
+{
+  "key": "2604.08277",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.08277",
+  "title": "QARIMA: A Quantum Approach To Classical Time Series Analysis",
+  "authors": [
+    "Nishikanta Mohanty",
+    "Bikash K. Behera",
+    "Badshah Mukherjee",
+    "Pravat Dash",
+    "Giuseppe Sergioli",
+    "Roberto Giuntini"
+  ],
+  "summary": "We present QARIMA, a quantum state-similarity-based reconstruction of the classical ARIMA modelling pipeline. Rather than using a quantum circuit as a standalone forecaster, QARIMA preserves ARIMA's interpretable forecasting structure while reformulating its core building blocks through analogous quantum-compatible modules. The framework integrates quantum differencing assessment, QACF/QPACF lag discovery, compact-swap-test state projection, swap-test/VQC-based AR and MA coefficient estimation, and weak-lag refinement within a single ARIMA forecasting workflow. QACF and QPACF serve the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "published": "2026-04-09",
+  "updated": "2026-08-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

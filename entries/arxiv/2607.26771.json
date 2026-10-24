@@ -1,0 +1,22 @@
+{
+  "key": "2607.26771",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.26771",
+  "title": "Hybrid quantum-classical end-to-end pipeline for solving MILPs: a vehicle routing case study",
+  "authors": [
+    "Camille de Valk",
+    "Koen Reerink",
+    "Siert Sebus",
+    "Sébastian de Bon"
+  ],
+  "summary": "We demonstrate an end-to-end hybrid quantum-classical optimisation framework based on Benders decomposition, capable of solving mixed-integer linear programming (MILP) problems. The framework builds on a previously presented hybrid quantum-classical end-to-end pipeline based on Multiple Cuts via Multiple Solutions (MCMS) Benders decomposition where the cut selection step was performed on quantum annealing hardware. We extend this with gate-based QAOA implementations for both tensor network emulators and superconducting quantum hardware. The Vehicle Routing Problem (VRP) is used as a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

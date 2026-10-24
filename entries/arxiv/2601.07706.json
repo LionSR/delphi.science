@@ -1,0 +1,22 @@
+{
+  "key": "2601.07706",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.07706",
+  "title": "Assembly to Quantum Compiler",
+  "authors": [
+    "Andrew Haverly",
+    "Shahram Rahimi",
+    "Mark A. Novotny"
+  ],
+  "summary": "This research presents a novel approach in quantum computing by transforming ARM assembly instructions for use in quantum algorithms. The core achievement is the development of a method to directly map the ARM assembly language, a staple in classical computing, to quantum computing paradigms. The practical application of this methodology is demonstrated through the computation of the Fibonacci sequence. This example serves to validate the approach and underscores its potential in simplifying quantum algorithms. Grover's Algorithm was realized through the use of quantum-specific instructions.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math-ph"
+  ],
+  "published": "2026-01-12",
+  "updated": "2026-01-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

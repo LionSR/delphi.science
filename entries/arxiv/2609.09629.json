@@ -1,0 +1,22 @@
+{
+  "key": "2609.09629",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.09629",
+  "title": "A Sum-of-Squares Hierarchy with Quadratic Convergence for Quantum Channel Coding",
+  "authors": [
+    "Hoang Ta",
+    "Hoang Anh Tran"
+  ],
+  "summary": "Computing the optimal success probability for transmitting classical messages through a single use of a quantum channel is NP-hard, even for two messages. An existing semidefinite programming hierarchy based on symmetric extensions provides convergent upper bounds with an a priori error estimate that decays as the inverse square root of the extension level. In this work, we construct a Hermitian sum-of-squares hierarchy for an arbitrary number of messages and prove quadratic convergence in its level. The error bound is proportional to the advantage over random guessing. Our approach combines…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.IT",
+    "math.OC"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

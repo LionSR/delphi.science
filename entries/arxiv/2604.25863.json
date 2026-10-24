@@ -1,0 +1,28 @@
+{
+  "key": "2604.25863",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.25863",
+  "title": "MCMit: Hardware-Software Co-Design for Mid-Circuit Measurement Error Mitigation",
+  "authors": [
+    "Emmanouil Giortamis",
+    "Felix Gust",
+    "Aleksandra Świerkowska",
+    "Sandra Stankovic",
+    "Innocenzo Fulginiti",
+    "Yanbin Chen",
+    "Xiaorang Guo",
+    "Benjamin Lienhard",
+    "Martin Schulz",
+    "Pramod Bhatotia"
+  ],
+  "summary": "Distributed Quantum Computing (DQC) and Quantum Error Correction (QEC) rely on dynamic circuits that include Mid-Circuit Measurements (MCMs) and classical feedback. These operations present a major bottleneck: MCMs suffer from high error rates that lead to real-time branching errors, while MCM and classical feedback latencies amplify decoherence errors. Current hardware controllers, qubit-state discriminators, and software error mitigation techniques fail to address these challenges holistically. We propose MCMit, a hardware-software co-design to mitigate branching and latency-induced…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-28",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

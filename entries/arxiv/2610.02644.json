@@ -1,0 +1,24 @@
+{
+  "key": "2610.02644",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02644",
+  "title": "Optimal state detection without likelihood estimation",
+  "authors": [
+    "M. D. K. Lee",
+    "Z. Chai",
+    "J. Z. F. Seng",
+    "K. J. Arnold",
+    "M. ~D. ~Barrett"
+  ],
+  "summary": "We show that adaptive Bayesian estimation in fluorescence state detection reduces to a comparison of elapsed time with two arithmetic time sequences fixed by the bright and dark count rates and confidence parameters $ε_d$ and $ε_b$. No probabilities are computed in real time and the resulting implementation, which we term sequential deadline detection, is provably optimal in mean detection time. The analysis permits closed-form expressions for detection-time distributions, mean detection times, error rates of both channels accounting for miscalibrated rates, decay between the states during…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.ins-det"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

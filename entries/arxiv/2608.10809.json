@@ -1,0 +1,21 @@
+{
+  "key": "2608.10809",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.10809",
+  "title": "A Quantum Algorithm for Solving the Poisson Equation for Free Field Conditions via the Hockney Method",
+  "authors": [
+    "Hans A. Kösel",
+    "Roland Ewert",
+    "Jan W. Delfs"
+  ],
+  "summary": "For the often encountered problem of the Poisson equation, this work presents a quantum algorithm solving it based on the quantum Fourier transform (QFT) for periodic boundary conditions as well as free field conditions, where the latter is realized via the Hockney method. Besides the QFT and an initialization procedure for amplitude encoding, the algorithm just uses a procedure for multiplying the state vector by a diagonal matrix w.r.t. amplitude encoding. For the latter, two alternative implementations are considered here. The first variant is a version of the LCU method and the second is…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-11",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

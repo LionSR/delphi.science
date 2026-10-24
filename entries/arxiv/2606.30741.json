@@ -1,0 +1,28 @@
+{
+  "key": "2606.30741",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.30741",
+  "title": "Theory and practice of Trotter product formulas for quantum chemistry",
+  "authors": [
+    "Pablo A. M. Casares",
+    "William Maxwell",
+    "Danial Motlagh",
+    "Hitarth Choubisa",
+    "Zy Niu",
+    "Ignacio Loaiza",
+    "Jonathan E. Mueller",
+    "Arne-Christian Voigt",
+    "Juan Miguel Arrazola",
+    "Stepan Fomichev"
+  ],
+  "summary": "Trotter product formulas are a fundamental class of methods for Hamiltonian simulation, particularly attractive due to their low qubit requirements. However, they are often overlooked for use with fault-tolerant quantum algorithms, because of their perceived higher gate counts and the difficulty of estimating Trotter error. Here, we introduce Symmetry-Protected Randomized near-Integrable Trotter (SPRINT) formulas, a framework for building optimized product formulas for electronic structure Hamiltonians widely used in quantum chemistry. SPRINT integrates a generalization of classical…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

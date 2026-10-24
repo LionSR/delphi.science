@@ -1,0 +1,24 @@
+{
+  "key": "2603.15758",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.15758",
+  "title": "Quantum Noise Suppression at Scale with Crosstalk-Robust Gate Sets",
+  "authors": [
+    "Andy J. Goldschmidt",
+    "Emilio Peláez Cisneros",
+    "Ryan Sitler",
+    "Kevin Olsson",
+    "Kaitlin N. Smith",
+    "Gregory Quiroz"
+  ],
+  "summary": "We introduce crosstalk-robust gate sets, which are obtained using a novel, scalable optimal control problem exploiting locality. Through the suppression of pairwise quantum crosstalk, the gate sets enable robustness that extends to multi-qubit circuits. The IBM Quantum Platform devices provide a testbed for our gate sets, where we study their efficacy via error suppression protocols and randomized parallel single-qubit circuits of up to eight qubits. Furthermore, we provide the first known assessment of the impact of complete optimal control gate sets on quantum algorithms. Using a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-16",
+  "updated": "2026-03-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

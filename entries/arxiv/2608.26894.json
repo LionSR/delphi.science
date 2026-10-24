@@ -1,0 +1,24 @@
+{
+  "key": "2608.26894",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.26894",
+  "title": "Correcting Connectivity in Arc-Based QUBO Models for Fixed-Fleet Vehicle Routing",
+  "authors": [
+    "Omer Gurevich",
+    "Maor Matityahu",
+    "Tal Mor",
+    "Aryeh Lev Zabokritskiy"
+  ],
+  "summary": "We revisit a degree-only arc Hamiltonian for fixed-fleet, homogeneous, uncapacitated vehicle routing. Its local penalties define only a cycle cover, so ground states may contain customer cycles disconnected from the depot. We construct a polynomial-size quadratic unconstrained binary optimization (QUBO) repair using capped single-commodity flow and prove connected, cost-optimal ground-state routings under explicit penalty assumptions. For $N-1$ customers and $K$ nonempty routes, the unreduced encoding uses exactly $|E|(1+\\lceil\\log_2(N-K+1)\\rceil)$ logical problem qubits. A reversible…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS",
+    "math.OC"
+  ],
+  "published": "2026-08-27",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

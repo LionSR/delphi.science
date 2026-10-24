@@ -1,0 +1,21 @@
+{
+  "key": "2609.12073",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.12073",
+  "title": "Modeling Quantum Error Detection with Transition Matrices",
+  "authors": [
+    "Rohan S. Kumar",
+    "Ben Foxman",
+    "Yongshan Ding"
+  ],
+  "summary": "We construct an explicit transition matrix that exactly describes code-adapted basis-population dynamics of stabilizer codes under circuit-level stochastic Pauli noise. The matrix is expressed in a code-adapted basis that captures probability flow between logical-basis labels and syndrome sectors. For quantum error detection (QED), we incorporate post-selection by aggregating rejected outcomes into an absorbing state, so that a single transition matrix represents a full clock cycle of gates, syndrome extraction, and post-selection. Additionally, we characterize when protocol symmetries…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

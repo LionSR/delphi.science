@@ -1,0 +1,26 @@
+{
+  "key": "2605.29944",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.29944",
+  "title": "Quadratic Sums-of-Powers for Fixed-Parameter Tractable Quantum-Circuit Simulation",
+  "authors": [
+    "Alexis de Colnet",
+    "Floris Geerts",
+    "Rihan Hai",
+    "Alfons Laarman",
+    "Joon Hyung Lee",
+    "Guillermo A. Pérez"
+  ],
+  "summary": "Strongly simulating a quantum circuit, that is, computing an output amplitude, can be done by summing the circuit's Feynman paths: a weighted count over assignments to Boolean path variables. The circuit's gates induce correlations among these variables, forming a graph whose structure controls several exact simulation routes. This sum-of-powers (SOP) viewpoint underlies recent simulators built on binary decision diagrams and weighted model counting. For a quadratic SOP with $n$ variables, even modulus $r$, and a rank-decomposition of its variable graph of width $k$, our dynamic program (DP)…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS",
+    "cs.LO"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

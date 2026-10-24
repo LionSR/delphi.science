@@ -1,0 +1,22 @@
+{
+  "key": "2607.10280",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10280",
+  "title": "Scaling Adaptive Non-Local Observable Quantum Super-Resolution via Matrix Product States",
+  "authors": [
+    "Shih-Lung Yu",
+    "Ming-Kang Ho",
+    "Tai-Yue Li",
+    "Sheng Yun Wu"
+  ],
+  "summary": "This work presents a matrix product state (MPS) simulation framework for adaptive non-local observable variational quantum circuits (ANO-VQCs) in image super-resolution (SR) beyond the practical limits of statevector simulation. Runtime benchmarks on a single NVIDIA RTX 4070 GPU show that, under the tested shallow-circuit setting, MPS completes ANO-VQC forward feature extraction for individual inputs up to 16 x 16 pixels (256 qubits), whereas statevector simulation encounters a memory bottleneck at 6 x 6 inputs (36 qubits) and exact tensor-network (Exact TN) contraction becomes…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-11",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

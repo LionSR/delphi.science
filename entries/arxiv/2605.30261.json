@@ -1,0 +1,21 @@
+{
+  "key": "2605.30261",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.30261",
+  "title": "Qubit-efficient variational algorithm for nuclear structure",
+  "authors": [
+    "Chandan Sarma",
+    "Paul Stevenson"
+  ],
+  "summary": "In this work, we compare three qubit-mapping strategies to study the structure of the nuclear ground state within the shell model description employing the Variational Quantum Eigensolver (VQE) approach. Although the initial point for different mappings is a Hamiltonian matrix in many-body particle basis or Slater determinant (SD) basis, the structure of the trial wavefunction and resource counts are different for each mapping. These three mappings are tested for a mid $p$-shell nucleus $^{10}$B and compared the quantum resources required to find the ground state for each mapping. Further,…",
+  "domain": "nucl-th",
+  "tags": [
+    "nucl-th",
+    "quant-ph"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-05-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

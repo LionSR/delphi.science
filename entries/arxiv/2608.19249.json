@@ -1,0 +1,20 @@
+{
+  "key": "2608.19249",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19249",
+  "title": "Adaptive Error Budget Allocation for Fault-Tolerant Quantum Resource Estimation: A Metaheuristic Approach",
+  "authors": [
+    "Asif Akhtab Ronggon",
+    "Tasnuva Farheen"
+  ],
+  "summary": "System-level resource estimation is a key component of fault-tolerant quantum computing (FTQC) toolchains. Its efficiency depends on how global error tolerance is allocated across logical operations, T-state distillation, and rotation synthesis to minimize physical resource overhead. The commonly used uniform-allocation strategy ignores circuit-specific structure and can overprovision inactive or less critical subsystems, leading to inflated space-time estimates. Prior work aims to address this limitation using supervised models trained on offline-generated datasets. However, this approach…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-16",
+  "updated": "2026-08-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

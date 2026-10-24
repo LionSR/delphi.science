@@ -1,0 +1,24 @@
+{
+  "key": "2608.20954",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.20954",
+  "title": "Tools for Reducing Service Time in Near-Term Quantum Networks",
+  "authors": [
+    "Jake Smith",
+    "Thomas R. Beauchamp",
+    "Scarlett Gauthier",
+    "Oumayma Bouchmal",
+    "Stephanie Wehner"
+  ],
+  "summary": "Architectures have been proposed to control entanglement generation in multi-user quantum networks. To allow time for local operations and classical communication at end nodes, these architectures insert fixed separations between consecutive batches of entanglement generation attempts. This reduces network utilization when attempts fail, leaving the network idle during the scheduled separation. To address this limitation, we propose a novel method to reclaim this idle time by shortening the scheduled separation between attempts while respecting hardware constraints. The method uses an…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.NI"
+  ],
+  "published": "2026-08-21",
+  "updated": "2026-08-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

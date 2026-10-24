@@ -1,0 +1,23 @@
+{
+  "key": "2608.30860",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.30860",
+  "title": "Well-conditioned iterative methods for large open quantum systems",
+  "authors": [
+    "Gaspard Beugnot",
+    "Paul Gregory",
+    "Rémi Robin",
+    "Antoine Tilloy"
+  ],
+  "summary": "Markovian open quantum systems are well modeled by the Lindblad Master Equation (ME) $\\frac{\\mathrm{d}}{\\mathrm{d} t} ρ_t = \\mathcal{L} ρ_t$, where $\\mathcal{L}$ is a linear (super-)operator and $ρ_t$ is the system state, a positive matrix. When designing or characterizing a quantum system, one is usually interested in the steady state $ρ_\\infty$ (such that $\\mathcal{L} ρ_\\infty = 0$), the first few excited states, and trajectories $t\\mapsto ρ_t$. In finite dimension, $ρ_t$ is an $n\\times n$ matrix, $\\mathcal{L}$ thus typically costs $n^4$ to store explicitly as a dense matrix, and $O(n^6)$…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.NA"
+  ],
+  "published": "2026-08-31",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

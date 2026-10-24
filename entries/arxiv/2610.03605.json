@@ -1,0 +1,25 @@
+{
+  "key": "2610.03605",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03605",
+  "title": "Efficient fidelity simulation of high-rate magic distillation circuits",
+  "authors": [
+    "Xiao Xiao",
+    "Dominik Hangleiter",
+    "J. Pablo Bonilla Ataides",
+    "Rohan Mehta",
+    "Varun Menon",
+    "Mikhail D. Lukin",
+    "Michael J. Gullans"
+  ],
+  "summary": "Non-Clifford gates are essential for avoiding classical simulability under the Gottesman-Knill theorem. An error-corrected circuit with non-Clifford gates will therefore be an important element for realizing useful fault-tolerant quantum algorithms. However, accurately understanding the fault-tolerant performance of such circuits faces challenges due to the classical hardness of simulating these circuits. We avoid simulating logical measurements and develop exact and efficient classical methods for benchmarking circuits composed of X, CNOT, and diagonal gates in the Clifford hierarchy,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

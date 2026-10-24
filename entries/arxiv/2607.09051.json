@@ -1,0 +1,26 @@
+{
+  "key": "2607.09051",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.09051",
+  "title": "Simulation of Lindbladian dynamics via adaptive variational quantum trajectory compression",
+  "authors": [
+    "Huan-Yu Liu",
+    "Cheng Xue",
+    "Yun-Jie Wang",
+    "Xi-Ning Zhuang",
+    "Chao Wang",
+    "Yu-Chun Wu",
+    "Zhao-Yun Chen",
+    "Guo-Ping Guo"
+  ],
+  "summary": "Quantum simulation of open quantum systems in the noisy intermediate-scale quantum (NISQ) era is hindered by the non-unitary nature of dissipative dynamics and the limited quantum resources available on near-term quantum processors. In this work, we propose a resource-efficient algorithm for simulating Lindbladian dynamics on NISQ devices. For open quantum systems with Pauli dissipations, we first derive a compact and stable mixed-unitary adjoint channel that approximates the target dissipative dynamics and enables ancilla-free implementation through trajectory sampling. To further reduce…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-10",
+  "updated": "2026-07-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

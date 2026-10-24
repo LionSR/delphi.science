@@ -1,0 +1,37 @@
+{
+  "key": "2604.19481",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.19481",
+  "title": "Fault-Tolerant Quantum Computing with Trapped Ions: The Walking Cat Architecture",
+  "authors": [
+    "Felix Tripier",
+    "Woo Chang Chung",
+    "Jacob Young",
+    "Safwan Alam",
+    "Bryce Bjork",
+    "Aharon Brodutch",
+    "Finn Lasse Buessen",
+    "Nolan J. Coble",
+    "Thomas Dellaert",
+    "Dmitri Maslov",
+    "Martin Roetteler",
+    "Edwin Tham",
+    "Mark Webster",
+    "Min Ye",
+    "John Gamble",
+    "Andrii Maksymov",
+    "J. P. Marceaux",
+    "Nicolas Delfosse"
+  ],
+  "summary": "We propose a fault-tolerant quantum computer architecture for trapped-ion devices, which we call the walking cat architecture. Our blueprint includes a compiler, a detailed description of all the quantum error-correction protocols, a micro-architecture, a sufficiently fast decoder, and thorough simulations. The backbone of the architecture is a cat factory, producing cat states distributed throughout the machine, which are consumed to perform logical operations. The walking cat architecture is based entirely on a modern quantum error-correction approach called low-density parity-check (LDPC)…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-04-21",
+  "updated": "2026-04-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

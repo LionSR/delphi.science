@@ -1,0 +1,19 @@
+{
+  "key": "2606.28452",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28452",
+  "title": "Beyond Worst-Case Branching: Quantum Tree Search via Amplitude Amplification",
+  "authors": [
+    "Andreas Wichert"
+  ],
+  "summary": "In this work, we investigate quantum tree search via amplitude amplification. Amplitude amplification generalizes Grover's algorithm by replacing the Hadamard initialization with an arbitrary unitary $A$, with Grover's algorithm recovered as the special case of uniform initialization. We demonstrate the construction of a dynamic search tree of depth $m$ with query complexity $\\sqrt{\\left(b_{avg}\\right)^m}$ where $b_{avg}$ denotes the average branching factor, improving upon the commonly assumed $\\sqrt{\\left(b_{max}\\right)^m}$, where $b_{max}$ is the maximum branching factor. We further…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-26",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

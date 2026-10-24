@@ -1,0 +1,24 @@
+{
+  "key": "2607.12225",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12225",
+  "title": "Constant-Depth Multi-Product Formula for Trotter Error Mitigation in Near-Term Digital Quantum Simulation",
+  "authors": [
+    "Chan Bin Bark",
+    "Sangjin Lee",
+    "Kwang Jun Ahn",
+    "Sangmo Cheon",
+    "Moon Jip Park",
+    "Youngseok Kim"
+  ],
+  "summary": "Digital quantum simulation of many-body dynamics faces a tension between algorithmic Trotter error and physical noise that accumulates with circuit depth. Typical higher-order product formulas mitigate the algorithmic error at the cost of deeper circuits. Our benchmark shows that, within the limited physical error budget, the feasible advantage is confined to absolute errors well below the $10^{-2}$ scale, which vanishes under noise levels of current quantum hardware. In sharp contrast to the previous Trotter error mitigation methods, we introduce a constant-depth multi-product formula…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2603.30015",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.30015",
+  "title": "Noise Inference by Recycling Test Rounds in Verification Protocols",
+  "authors": [
+    "Amit Saha",
+    "Harold Ollivier"
+  ],
+  "summary": "Interactive verification protocols for quantum computations allow to build trust between a client and a service provider, ensuring the former that the instructed computation was carried out faithfully. They come in two variants, one without quantum communication that requires large overhead on the server side to coherently implement quantum-resistant cryptographic primitives, and one with quantum communication but with repetition as the only overhead on the service provider's side. Given the limited number of available qubits on current machines, only quantum communication-based protocols…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-03-31",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2607.03218",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.03218",
+  "title": "Quantum Annealing for Dynamic Portfolio Optimization under Realistic Transaction Costs",
+  "authors": [
+    "Escolástico Sánchez-Martínez",
+    "Senaida Hernandez Santana",
+    "Ventura Sarasa Laborda",
+    "Pablo Serrano Molinero",
+    "Guillermo Botella Juan",
+    "Alberto del Barrio García"
+  ],
+  "summary": "This paper investigates and compares quantum and classical investment strategies for portfolio construction under realistic trading and allocation constraints. The study considers a multi-period portfolio re-balancing setting in which asset weights are subject to lower and upper bounds, class-level exposure restrictions, and turnover limitations. On the quantum side, the portfolio selection problem is reformulated as a quadratic unconstrained binary optimization (QUBO) model through a finite binary encoding of asset weights, and subsequently embedded into a constrained quadratic model (CQM)…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-03",
+  "updated": "2026-07-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

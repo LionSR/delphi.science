@@ -1,0 +1,22 @@
+{
+  "key": "2607.00469",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.00469",
+  "title": "Dependency-Aware Circuit Scheduling for Multi-Core Quantum Systems to Minimize Makespan",
+  "authors": [
+    "Rajeswari Suance P S",
+    "Ruchika Gupta",
+    "Maurizio Palesi",
+    "John Jose"
+  ],
+  "summary": "Multi-core quantum computing architectures have emerged as a promising solution to the qubit scalability limitations of monolithic NISQ devices. Quantum algorithms are expressed as quantum circuits composed of single- and two-qubit gates. However, circuit scheduling in multi-core quantum systems remains largely unexplored. Reducing overall execution time (makespan), increasing core utilization, and hiding communication latency behind computation depends on effective scheduling. In this paper, we first introduce a layered scheduling approach as a baseline where quantum gates within the same…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

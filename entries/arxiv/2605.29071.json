@@ -1,0 +1,21 @@
+{
+  "key": "2605.29071",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.29071",
+  "title": "A hidden bottleneck in classical and quantum linear reservoir computing",
+  "authors": [
+    "Johannes Nokkala",
+    "Federico Centrone",
+    "Francesco Arzani"
+  ],
+  "summary": "We identify a hidden bottleneck in the information processing capacity of linear reservoir computers. When the measured features evolve linearly in the reservoir and the output is formed by linear readout with bias, we show that the capacity available at any fixed delay is limited by what is already present in the preprocessed input. Linear reservoir dynamics can therefore redistribute features, but cannot create new fixed-delay expressive power on their own. This limitation is hidden by global capacity measures, since contributions from different delays can accumulate even when each…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-27",
+  "updated": "2026-05-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

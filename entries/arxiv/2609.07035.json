@@ -1,0 +1,21 @@
+{
+  "key": "2609.07035",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07035",
+  "title": "Capability-Gated Conformance Testing of Quantum Error-Correction Decoder Libraries",
+  "authors": [
+    "Jiachen Shen",
+    "Hui Zhong"
+  ],
+  "summary": "A quantum error correction decoder is a library other people's results depend on, judged in one dominant way. Sample errors, decode, and count wrong logical observables. We ask what else can be checked there. Our conformance contract needs no oracle. One check asks that a returned correction explain the syndrome in the caller's index space. The other hands a decoder one instance under two presentations differing only in bookkeeping, where two feasible corrections of different weight prove the heavier is not minimum-weight. Verdicts are gated on what each library declares, so a firing…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AR"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2607.19318",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.19318",
+  "title": "SoK: Adversarial Robustness of the Variational Quantum Eigensolver via Red-Teaming",
+  "authors": [
+    "Ahmed Azaz Humdoon",
+    "Cheng Chu",
+    "Lei Jiang",
+    "Qian Lou",
+    "Mengxin Zheng"
+  ],
+  "summary": "The Variational Quantum Eigensolver (VQE) is a leading algorithm for estimating molecular ground-state energies on near-term quantum hardware, with applications spanning quantum chemistry, materials science, and drug discovery. As VQE workloads are increasingly deployed through cloud-based ``VQE-as-a-service'' pipelines, they become exposed to adversaries such as compromised service components, malicious co-tenants, or insiders in the transpilation stack, any of which can corrupt results before they reach the user. A range of attacks on variational quantum circuits has been proposed, but…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-07-21",
+  "updated": "2026-07-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

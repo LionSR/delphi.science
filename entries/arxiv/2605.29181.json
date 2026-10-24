@@ -1,0 +1,22 @@
+{
+  "key": "2605.29181",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.29181",
+  "title": "A Variational Quantum Algorithm for Nonlinear Finite Element Analysis of Hyperelastic Materials",
+  "authors": [
+    "Uditnarayan Kouskiya",
+    "Caglar Oskay"
+  ],
+  "summary": "This manuscript explores a variational quantum formulation for nonlinear elasticity problems arising from hyperelastic material models. The approach leverages the potential energy structure of hyperelasticity and employs a hybrid quantum classical framework in which the energy functional is evaluated using parameterized quantum circuits and optimized through classical routines. To enable a hybrid (classical quantum implementation), polynomial approximations of the nonlinear terms in strain energy density are introduced, yielding a representation compatible with variational quantum…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-05-27",
+  "updated": "2026-08-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

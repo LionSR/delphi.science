@@ -1,0 +1,24 @@
+{
+  "key": "2604.03445",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.03445",
+  "title": "Hybrid Quantum-HPC Middleware Systems for Adaptive Resource, Workload and Task Management",
+  "authors": [
+    "Pradeep Mantha",
+    "Florian J. Kiwit",
+    "Nishant Saurabh",
+    "Shantenu Jha",
+    "Andre Luckow"
+  ],
+  "summary": "Hybrid quantum-classical applications pose significant resource management challenges due to heterogeneity and dynamism in both infrastructure and workloads. Quantum-HPC environments integrate quantum processing units (QPUs) with diverse classical resources (CPUs, GPUs), while applications span coupling patterns from tightly coupled execution to loosely coupled task parallelism with varying resource requirements. Traditional HPC schedulers lack visibility into application semantics and cannot respond to fluctuating resource availability at runtime. This paper presents a middleware-based…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DC"
+  ],
+  "published": "2026-04-03",
+  "updated": "2026-04-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

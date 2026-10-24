@@ -1,0 +1,27 @@
+{
+  "key": "2603.12411",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.12411",
+  "title": "Distributed Quantum Computing via Adaptive Circuit Knitting",
+  "authors": [
+    "K. Grace Johnson",
+    "Aniello Esposito",
+    "Gaurav Gyawali",
+    "Xin Zhan",
+    "Rohit Ganti",
+    "Namit Anand",
+    "Raymond G. Beausoleil",
+    "Masoud Mohseni"
+  ],
+  "summary": "Distributing quantum workloads over many Quantum Processing Units (QPUs) is a crucial step in scaling up quantum computers toward practical quantum advantage due to the limitations in size of a single QPU. In the absence of high-fidelity quantum interconnects, circuit knitting could provide a path to computing certain properties of large quantum systems on many QPUs of limited size in a distributed fashion using only classical communication. Circuit knitting partitions large quantum circuits into manageable sub-circuits, however, reconstructing observables in a straightforward manner comes…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.dis-nn"
+  ],
+  "published": "2026-03-12",
+  "updated": "2026-03-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

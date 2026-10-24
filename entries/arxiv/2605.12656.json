@@ -1,0 +1,21 @@
+{
+  "key": "2605.12656",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.12656",
+  "title": "Optimal Bounds, Barriers, and Extensions for Non-Hermitian Bivariate Quantum Signal Processing",
+  "authors": [
+    "Joshua M. Courtney"
+  ],
+  "summary": "Multivariate quantum signal processing (M-QSP) has recently been shown to be applicable for non-Hermitian Hamiltonian simulation, opening several problems regarding the optimization landscape, angle-finding, and constant-factor analysis. We resolve several of these problems here. We find the anti-Hermitian query complexity $d_I = Θ(\\betaI T + \\log(1/\\varepsilon)/\\log\\log(1/\\varepsilon))$ to be tight, established via Chebyshev coefficient bounds, modified Bessel function asymptotics, and Lambert~$W$ inversion. Fast-forwarding to $d_I = \\mathcal{O}(\\sqrt{\\betaI T})$ is impossible in the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.DS"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

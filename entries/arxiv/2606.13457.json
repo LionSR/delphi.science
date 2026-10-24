@@ -1,0 +1,22 @@
+{
+  "key": "2606.13457",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.13457",
+  "title": "Reduced basis algorithm for solving nonlinear differential equations on quantum computers",
+  "authors": [
+    "Monica Lăcătuş",
+    "Matthias Möller",
+    "Sauro Succi"
+  ],
+  "summary": "As quantum computing moves toward scientific computing applications, nonlinear differential equations remain a central challenge since quantum evolution is intrinsically linear. In this work, we introduce a reduced basis algorithm (RBA) for polynomial nonlinear ordinary differential equations (ODEs) and spatially discretized partial differential equations (PDEs). After time discretization, the method composes the resulting polynomial update map over $m$ timesteps, identifies the reduced monomial basis appearing in this composed map, and constructs a linear RBA operator whose action recovers…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "quant-ph"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

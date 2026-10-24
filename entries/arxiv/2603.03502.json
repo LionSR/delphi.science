@@ -1,0 +1,20 @@
+{
+  "key": "2603.03502",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.03502",
+  "title": "Adversarial Learning Game for Intrusion Detection in Quantum Key Distribution",
+  "authors": [
+    "Noureldin Mohamed",
+    "Saif Al-Kuwari"
+  ],
+  "summary": "While Quantum Key Distribution (QKD) provides information-theoretic security, the transition from theory to physical hardware introduces side-channel vulnerabilities that traditional error metrics often fail to characterize. This paper presents a high-fidelity simulation framework for intrusion detection in decoy-state QKD, modeled as a minimax game between a learning-based defender and a physically constrained, adaptive adversary. The defender utilizes block-level telemetry (comprising decoy-state residuals, timing-histogram moments, and detector imbalances) to trigger alarms that gate key…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-03",
+  "updated": "2026-03-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

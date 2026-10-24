@@ -1,0 +1,22 @@
+{
+  "key": "2602.22241",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.22241",
+  "title": "Stochastic Neural Networks for Quantum Devices",
+  "authors": [
+    "Bodo Rosenhahn",
+    "Tobias J. Osborne",
+    "Christoph Hirche"
+  ],
+  "summary": "This work presents a formulation to express and optimize stochastic neural networks as quantum circuits in gate-based quantum computing. Motivated by a classical perceptron, stochastic artificial neurons are introduced and combined into a quantum neural network. The Kiefer-Wolfowitz algorithm in combination with simulated annealing is used for training the network weights. Several topologies and models are presented, including shallow fully connected networks, Hopfield Networks, Restricted Boltzmann Machines, Autoencoders and convolutional neural networks. We also demonstrate the combination…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-02-24",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

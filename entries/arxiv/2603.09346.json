@@ -1,0 +1,24 @@
+{
+  "key": "2603.09346",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.09346",
+  "title": "Cluster-Adaptive Sample-Based Quantum Diagonalization for Strongly Correlated Systems",
+  "authors": [
+    "Byeongyong Park",
+    "Sanha Kang",
+    "Jongseok Seo",
+    "Juhee Baek",
+    "Doyeol Ahn",
+    "Keunhong Jeong"
+  ],
+  "summary": "Sample-based quantum diagonalization (SQD) is a hybrid quantum-classical algorithm for estimating ground-state energies in electronic-structure calculations. It uses a quantum processor as a sampler to construct a variational subspace, with Hamiltonian projection and diagonalization performed classically. A critical step in SQD is self-consistent particle-number recovery guided by a global reference occupancy vector. In strongly correlated systems, however, dominant determinants can be distributed across regions of determinant space, causing this reference to become mixture-averaged and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-10",
+  "updated": "2026-04-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

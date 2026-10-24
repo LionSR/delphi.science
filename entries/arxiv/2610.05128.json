@@ -1,0 +1,24 @@
+{
+  "key": "2610.05128",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05128",
+  "title": "Training Variational Quantum Algorithms Is NP-Hard, Even Locally",
+  "authors": [
+    "Dax Enshan Koh",
+    "Triscia Mundo",
+    "Iosif Sakos",
+    "Antonios Varvitsiotis"
+  ],
+  "summary": "Variational quantum algorithms (VQAs) generally rely on classical optimization to train parameterized quantum circuits. This training seeks to minimize an objective function, and its efficiency is central to the practical success of these algorithms. However, globally minimizing such training objectives over the circuit parameters is known to be $\\mathsf{NP}$-hard, limiting the prospect of general guarantees for efficient training. In this Letter, we prove that even the weaker task of finding a local minimum of such VQA training objectives is strongly $\\mathsf{NP}$-hard, including when the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "math.OC"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

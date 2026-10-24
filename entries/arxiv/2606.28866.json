@@ -1,0 +1,25 @@
+{
+  "key": "2606.28866",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28866",
+  "title": "Quantum Variational Approaches to the Maximum Independent Set Problem at Utility Scale",
+  "authors": [
+    "Kalyan Dasgupta",
+    "Sumanta Mukherjee",
+    "Dhriti Verma",
+    "Surya Shravan Kumar Sajja",
+    "Abhishek Singh",
+    "Dzung Phan",
+    "Jayant Kalagnanam"
+  ],
+  "summary": "Near-optimal solutions to Maximum Independent Set on dense graphs sit in local optima that greedy correction and maximality extension cannot escape. We encode near-optimal seeds as a uniform quantum superposition on ancilla qubits and evolve them under an excitation-preserving variational ansatz that holds the search inside the feasible Hamming-weight subspace. A preprocessing stage of spectral reordering and distance-based sparsification, together with history-guided post-processing of the sampled bitstrings, takes the method to 200 nodes. The ansatz entangles the seed branches and the bond…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-27",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

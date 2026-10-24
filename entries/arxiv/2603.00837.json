@@ -1,0 +1,21 @@
+{
+  "key": "2603.00837",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.00837",
+  "title": "ReloQate: Transient Drift Detection and In-Situ Recalibration in Surface Code Quantum Error Correction",
+  "authors": [
+    "Maxwell Poster",
+    "Jason Chadwick",
+    "Jonathan Mark Baker"
+  ],
+  "summary": "Quantum error correction (QEC) promises to exponentially suppress qubit noise, but typically assumes spatially-uniform and temporally-constant noise rates. However, real quantum hardware exhibits variation in noise levels over time, which will be amplified by QEC if not addressed. To mitigate this drift in error rates, we leverage transient information readily available in surface code quantum error correction to predict logical error rates (LER) in real time. We infer a prediction model by sampling physical error rates from real hardware, and mapping detector fire rate (DFR), or parity of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-28",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

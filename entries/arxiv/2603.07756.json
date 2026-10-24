@@ -1,0 +1,19 @@
+{
+  "key": "2603.07756",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.07756",
+  "title": "Deterministic Discrimination of Phase-Modified Permutation Oracles via Single Qubit Measurement",
+  "authors": [
+    "Owen Root"
+  ],
+  "summary": "I study a promise problem for an unknown unitary operator acting on an $n$-qubit system. The operator is promised to take one of two forms: either it implements a fixed permutation of computational basis states, or it implements the same permutation together with a conditional sign change determined by a designated input qubit. I show that these two cases can be distinguished with certainty using a single query to the unknown operator and a measurement of only one qubit. The procedure requires no ancilla qubits and uses only $n+1$ Hadamard gates in addition to the oracle call. The promise is…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-08",
+  "updated": "2026-03-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

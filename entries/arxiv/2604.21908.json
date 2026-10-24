@@ -1,0 +1,20 @@
+{
+  "key": "2604.21908",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.21908",
+  "title": "Efficient Classical Simulation of Heuristic Peaked Quantum Circuits",
+  "authors": [
+    "David Kremer",
+    "Nicolas Dupuis"
+  ],
+  "summary": "Peaked quantum circuits, whose output distribution is sharply concentrated on a single bitstring, have emerged as a promising candidate for verifiable quantum advantage, as the correctness of the quantum output can be checked by simply comparing against the known peak. Recent work by Gharibyan et al. arXiv:2510.25838 claimed heuristic quantum advantage using peaked circuits executed on Quantinuum's 56-qubit H2 processor. These peaked circuits concentrate their output on a single hidden bitstring by training a shallow simulable circuit variationally and inserting an obfuscated permutation to…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-23",
+  "updated": "2026-04-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

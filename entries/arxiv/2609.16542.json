@@ -1,0 +1,21 @@
+{
+  "key": "2609.16542",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.16542",
+  "title": "Phantom Codes: Hardness, Rate Optimal qLDPC Constructions, and Distance Limits",
+  "authors": [
+    "Rui Mao",
+    "Weixiao Sun",
+    "Shengyu Zhang"
+  ],
+  "summary": "An $[[n,k,d]]$ stabilizer code is phantom if every in-block logical CNOT gate can be realized by a permutation of its physical qubits. This eliminates the large and complicated physical overhead normally required for logical entangling gates. Yet this symmetry is highly restrictive: phantom codes are rare, the number of logical qubits is limited to $k=O(\\log n)$, and no phantom qLDPC family with growing logical dimension was previously known. We make three contributions. 1. We prove that recognizing phantomness of a given stabilizer code is at least as hard as Graph Isomorphism, even for CSS…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

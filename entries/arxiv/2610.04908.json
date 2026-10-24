@@ -1,0 +1,21 @@
+{
+  "key": "2610.04908",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04908",
+  "title": "Custom Penalty QAOA via Walsh-Hadamard Transform",
+  "authors": [
+    "Xin Wei LEE",
+    "Siong Thye GOH",
+    "Hoong Chuin LAU"
+  ],
+  "summary": "Inequality constraints in combinatorial optimization are conventionally handled by introducing slack variables and quadratic penalties, which increase the qubit count and distort the optimization landscape. Slack-free formulations instead apply a nonlinear custom penalty function directly to the constraint, which are difficult to be implemented in quantum approximate optimization algorithm (QAOA). We show that the Walsh--Hadamard transform (WHT) removes this obstruction for any penalty function: a penalty applied to a linear constraint is exactly a weighted sum of Pauli-$Z$ strings. We…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

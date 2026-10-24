@@ -1,0 +1,21 @@
+{
+  "key": "2606.01922",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.01922",
+  "title": "Half the Interference, Most of the Answer: Approximate Quantum Simulation via Path-Sum Pruning",
+  "authors": [
+    "Sinan Pehlivanoglu",
+    "Srinivasan Iyengar",
+    "Amr Sabry"
+  ],
+  "summary": "Classical simulation of quantum circuits is expensive for two distinct reasons. The obvious one is state-space size: an n-qubit system requires exponentially many amplitudes. The less obvious one is interference: useful output distributions emerge only after many computational histories have been coherently combined at common endpoints, and this aggregation step is itself a substantial source of cost. We introduce statistical interference sampling, a framework that makes this second bottleneck explicit by treating endpoint interference as a separately schedulable computation. Using the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

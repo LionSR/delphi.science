@@ -1,0 +1,23 @@
+{
+  "key": "2606.14677",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.14677",
+  "title": "Quasilinear Equivalence Checking for Detector Error Models",
+  "authors": [
+    "Mathys Rennela"
+  ],
+  "summary": "A Detector Error Model (DEM) is a structured representation of error mechanisms in quantum circuits, which has gained popularity in quantum compilation pipelines for its ability to capture fault-tolerance at a circuit level. It lists error mechanisms as instructions targeting detectors and observables, specifying for each physical fault channel the probability that the fault fires, the detectors it triggers, and the observables it flips. In this paper, we develop an equational theory for DEMs, with its associated categorical semantics. We present a sound, terminating, confluent rewriting…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LO",
+    "cs.PL",
+    "cs.SE",
+    "math.CT"
+  ],
+  "published": "2026-06-12",
+  "updated": "2026-06-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

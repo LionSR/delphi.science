@@ -1,0 +1,20 @@
+{
+  "key": "2605.03930",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.03930",
+  "title": "Time-dependent variational Monte Carlo without bias",
+  "authors": [
+    "Wladislaw Krinitsin",
+    "Markus Schmitt"
+  ],
+  "summary": "When combined with highly expressive ansatz functions such as neural quantum states, variational Monte Carlo (VMC) constitutes a versatile numerical approach to tackle the quantum many-body problem in and out of equilibrium. However, its traditional formulation exhibits a subtle estimation bias leading to inaccuracies, which can be particularly detrimental when addressing real time dynamics. In this work, we investigate two avenues to circumvent said estimation bias. First, we propose an unbiased variant of time-dependent VMC using self-normalized importance sampling with respect to a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-05-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

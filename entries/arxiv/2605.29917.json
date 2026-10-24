@@ -1,0 +1,23 @@
+{
+  "key": "2605.29917",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.29917",
+  "title": "Evaluating Parameter Transfer in FALQON Across Graph Families",
+  "authors": [
+    "Alisson dos Passos Fumaco",
+    "Marcos Vinicius Reballo",
+    "Fernando Augusto Caletti de Barros",
+    "Gabriel Fernandes Thomaz",
+    "Eduardo I. Duzzioni"
+  ],
+  "summary": "We evaluate FALQON parameter transfer for Max-Cut, transferring sequences from small donors ($n \\in \\{8,10,12\\}$) to 14-node recipients. Using 3-regular and Erdős-Rényi families, we show that transfer success is dictated by the recipient graph, not the donor. Transfer excels for dense recipients -- achieving high approximation ratios regardless of the donor -- but remains challenging in sparse cross-family cases. Crucially, performance is highly resilient to donor size, with 8-node donors matching larger instances. Thus, cheap small graphs can provide robust parameters for larger targets,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-05-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2607.23407",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.23407",
+  "title": "Performance Analysis of QAOA Across Distributed Quantum Network Topologies Using SwitchQNet",
+  "authors": [
+    "Samanvay Sharma",
+    "Siyuan Niu",
+    "Amin Taherkhani",
+    "Michal Hajdusek",
+    "Rodney Van Meter"
+  ],
+  "summary": "Quantum data-center (QDC) architectures aim to scale distributed quantum computing (DQC) by interconnecting multiple quantum processing units (QPUs), but their performance depends strongly on how algorithmic communication patterns interact with entanglement generation, switch reconfiguration, and network topology. This paper studies the Quantum Approximate Optimization Algorithm (QAOA) as a graph-structured optimization workload for QDC-based distributed quantum computing. We adapt QAOA to SwitchQNet, a distributed quantum compiler framework that schedules communication and entanglement…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-26",
+  "updated": "2026-07-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

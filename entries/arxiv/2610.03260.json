@@ -1,0 +1,24 @@
+{
+  "key": "2610.03260",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03260",
+  "title": "Compiling Together: High-Throughput Distributed Quantum Computing via Multi-Compilation",
+  "authors": [
+    "Yipei Liu",
+    "Sen Zhang",
+    "Zebo Yang",
+    "Lei Yang"
+  ],
+  "summary": "Quantum computing is a promising paradigm for problems that are challenging for classical machines, but realizing that promise requires far more qubits than a single processor can offer. Distributed quantum computing (DQC) scales out by connecting multiple quantum processing units (QPUs), at the cost of making entanglement the scarce resource: every remote gate consumes a Bell pair, and inter-QPU links generate Bell pairs at finite rates orders of magnitude slower than local gates. Since quantum programs are executed repeatedly, this rate bounds how fast shots complete and thus how fast…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AR",
+    "eess.SY"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2605.17587",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.17587",
+  "title": "Large-Scale Quantum Kernels for Hyperspectral Data Classification",
+  "authors": [
+    "A. Delilbasic",
+    "A. Miroszewski",
+    "A. Wijata",
+    "J. Nalepa",
+    "J. Mielczarek",
+    "M. Riedel",
+    "G. Cavallaro"
+  ],
+  "summary": "Quantum kernel methods have emerged as a promising approach for leveraging high-dimensional feature spaces in machine learning, particularly in domains where classical kernel methods face scalability limitations. In this work, we present the first large-scale study of fidelity-quantum-kernel support vector machines for hyperspectral data classification without requiring heavy prior feature selection or dimensionality reduction. By simulating quantum kernels using tensor network contraction techniques and GPU acceleration, we overcome the computational bottlenecks traditionally associated…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-17",
+  "updated": "2026-05-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

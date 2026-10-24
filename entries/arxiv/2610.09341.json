@@ -1,0 +1,21 @@
+{
+  "key": "2610.09341",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.09341",
+  "title": "Building codes with transversal CCZ using projective geometry and SAT solvers",
+  "authors": [
+    "Bohan Lu",
+    "Kenneth R. Brown"
+  ],
+  "summary": "We construct CSS codes with three logical qubits whose logical CCZ gate is implemented by transversal physical $T/T^\\dagger$ gates and whose distance is at least 3. These codes start with 8-divisible $X$-stabilizers defined by projective geometry, which guarantees $d_Z \\geq 3$. A SAT solver then finds three $X$-logical operators compatible with the transversal CCZ. We build codes at thirteen block lengths from $n=48$ to $n=496$, with $d_Z=3$ or 4, and illustrate the method with the [[48,3,3]] code $Q_{48}$. Additionally, we prove that no CSS code with three logical qubits, $Z$-distance at…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.IT"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

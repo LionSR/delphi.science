@@ -1,0 +1,27 @@
+{
+  "key": "2601.20029",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.20029",
+  "title": "A Cyclic Layerwise QAOA Training",
+  "authors": [
+    "Enhyeok Jang",
+    "Zihan Chen",
+    "Dongho Ha",
+    "Seungwoo Choi",
+    "Yongju Lee",
+    "Jaewon Kwon",
+    "Eddy Z. Zhang",
+    "Yipeng Huang",
+    "Won Woo Ro"
+  ],
+  "summary": "The quantum approximate optimization algorithm (QAOA) is a hybrid quantum-classical algorithm for solving combinatorial optimization problems. Multi-angle QAOA (MA-QAOA), which assigns independent parameters to each Hamiltonian operator term, achieves superior approximation performance even with fewer layers than standard QAOA. Unfortunately, this increased expressibility can raise the classical computational cost due to a greater number of parameters. The recently proposed Layerwise MA-QAOA (LMA-QAOA) reduces this overhead by training one layer at a time, but it may suffer from obtaining…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-27",
+  "updated": "2026-01-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

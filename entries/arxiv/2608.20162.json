@@ -1,0 +1,20 @@
+{
+  "key": "2608.20162",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.20162",
+  "title": "Proper Learning of Shallow All-to-All Quantum Circuits",
+  "authors": [
+    "Steven Kordonowy",
+    "Jacob Watkins"
+  ],
+  "summary": "This work considers a variation on the problem of learning shallow quantum circuits. Given query access to the circuit, as well as knowledge of its gate layout, we consider the task of learning the specific gates used in the circuit, producing an operationally-equivalent circuit matching this structure. Building on recent work for learning Haar random brickwork circuits, we identify a meta-algorithmic framework for learning broad classes of circuits based on iterative local gate inversions at the front and back of the circuit. We apply these techniques to study random, all-to-all, two-local…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-20",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

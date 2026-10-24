@@ -1,0 +1,25 @@
+{
+  "key": "2610.28342",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.28342",
+  "title": "Quantum Broker: QoS-Aware Distribution of Quantum Computations",
+  "authors": [
+    "Giuseppe Bisicchia",
+    "Alessandro Bocci",
+    "Jose Garcia-Alonso",
+    "Juan Manuel Murillo",
+    "Antonio Brogi"
+  ],
+  "summary": "Cloud-accessible quantum computing has made heterogeneous Quantum Processing Units (QPUs) available through provider platforms that differ in qubit technology, calibration state, queueing behavior, and pricing model. This heterogeneity makes execution management a quantum-engineering concern: a quantum circuit may be executable on several backends, but the resulting cost, latency, fidelity, and reproducibility depend on backend selection and on how measurement shots are allocated. This paper presents the Quantum Broker, an open-source and provider-agnostic framework for…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET",
+    "cs.SE"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

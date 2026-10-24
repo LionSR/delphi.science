@@ -1,0 +1,23 @@
+{
+  "key": "2610.19922",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.19922",
+  "title": "Quantum Folding in Chebyshev-Based Quantum Subspace Diagonalization",
+  "authors": [
+    "Seung Park",
+    "Dongni Chen",
+    "Stefano Chesi",
+    "Kyunghyun Baek",
+    "Mahn-Soo Choi"
+  ],
+  "summary": "Quantum subspace diagonalization (QSD) with a Krylov space spanned by Chebyshev polynomials of the Hamiltonian is a natural ground-state method for fault-tolerant quantum computers, but every guarantee it offers---convergence rate, noise floor, and the cost of turning its classical output back into a physical state---is controlled by the overlap of the reference state with the true ground state, which decays exponentially with system size for any product state and non-trivial Hamiltonian. We propose quantum folding: for a system governed by a local Hamiltonian, seed the QSD with the product…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

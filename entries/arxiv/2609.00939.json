@@ -1,0 +1,20 @@
+{
+  "key": "2609.00939",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.00939",
+  "title": "Robust CZ gate against flux line memory",
+  "authors": [
+    "Yao Song",
+    "Xiu-Hao Deng"
+  ],
+  "summary": "High-fidelity CZ gates are central to superconducting quantum processors, but implementations based on flux tuning are still sensitive to pulse distortion. Conventional predistortion, typically used for an isolated gate, can recover the desired flux at the chip but it fails if the flux line memory exists, causing the fidelity of repeated CZ gates to drop rapidly. To address this issue, we model the flux line distortion as the dynamics of a stateful classical actuator coupled to a quantum system. Using a first-order Dyson expansion, we derive the error generators induced by variations in the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-01",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

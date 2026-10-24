@@ -1,0 +1,21 @@
+{
+  "key": "2605.25728",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.25728",
+  "title": "Q-LEAK: Quantum-Based LEAKage Verification for Side-Channel Countermeasures",
+  "authors": [
+    "Walid El Maouaki",
+    "Alberto Marchisio",
+    "Muhammad Shafique"
+  ],
+  "summary": "Formal verification of power side-channel leakage and its countermeasures in cryptographic algorithms is challenging, as SAT-based methods fail to scale on XOR-heavy, time-unrolled cryptographic circuits with realistic leakage models. We construct compact Conjunctive Normal Form (CNF) cases modeling one-bit leakage under two-trace conditions, linking key dependence and state evolution. Classical solvers quickly reach complexity limits, so we propose Q-LEAK, a quantum-based verification approach using Grover's algorithm, compiling each CNF into an oracle and applying amplitude amplification…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-25",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

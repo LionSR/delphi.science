@@ -1,0 +1,24 @@
+{
+  "key": "2601.19166",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.19166",
+  "title": "High-Performance Exact Synthesis of Two-Qubit Quantum Circuits",
+  "authors": [
+    "Andrew N. Glaudell",
+    "Michael Jarret",
+    "Swan Klein",
+    "Samuel S. Mendelson",
+    "T. C. Mooney",
+    "Mingzhen Tian"
+  ],
+  "summary": "Exact synthesis provides unconditional optimality and canonical structure, but is often limited to small, carefully scoped regimes. We present an exact synthesis framework for two-qubit circuits over the Clifford+$T$ gate set that optimizes $T$-count exactly. Our approach exhausts a bounded search space, exploits algebraic canonicalization to avoid redundancy, and constructs a lookup table of optimal implementations that turns synthesis into a query. Algorithmically, we combine meet-in-the-middle ideas with provable pruning rules and problem-specific arithmetic designed for modern hardware.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-27",
+  "updated": "2026-01-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

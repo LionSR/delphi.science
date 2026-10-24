@@ -1,0 +1,24 @@
+{
+  "key": "2605.17067",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.17067",
+  "title": "Near-Optimal Quantum Time Evolution Circuits via Provably Convergent Compression",
+  "authors": [
+    "Erenay Karacan",
+    "Isabel Nha Minh Le",
+    "Matteo D'Anna",
+    "Juan Carasquilla",
+    "Christian B. Mendl",
+    "Ivan Rojkov"
+  ],
+  "summary": "Variational compression can significantly lower implementation overheads for encoding the time evolution of Hamiltonians into quantum circuits. However, they usually lack global convergence guarantees and well-established scaling behavior. In this work, we provide a recipe for choosing the initial point of such variational optimizations that guarantees convergence to a quantum circuit with near-optimal gate complexity $\\mathcal{O}\\left( N \\, t \\, \\text{polylog}(N \\, t/ε) \\right)$ for all local and translationally invariant Hamiltonians. We demonstrate our method by encoding the globally…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-16",
+  "updated": "2026-05-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

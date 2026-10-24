@@ -1,0 +1,21 @@
+{
+  "key": "2605.16074",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.16074",
+  "title": "When Noisy Quantum Order Finding Remains Recoverable for Shor's Algorithm",
+  "authors": [
+    "Qingxin Yang",
+    "Stefano Markidis"
+  ],
+  "summary": "Order finding is the core subroutine of Shor's algorithm. On NISQ hardware, phase estimation output distributions are often distorted by noise, making correct order recovery difficult. We study recoverability in noisy order finding: given a measured precision-register distribution, when does standard classical post-processing still return the true order? We analyze 680 distributions from IBM quantum systems across problem instances and circuit settings. For each distribution, we apply continued-fraction post-processing with modular verification and define recoverability as whether the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-05-15",
+  "updated": "2026-05-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

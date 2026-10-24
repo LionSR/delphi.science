@@ -1,0 +1,21 @@
+{
+  "key": "2607.10414",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10414",
+  "title": "Optimal Average Success Probabilities of Binary $(n,n-1)$ and $(n,n-2)$ Quantum Random Access Codes",
+  "authors": [
+    "Shuo Tan",
+    "Syed A. Jafar"
+  ],
+  "summary": "A binary $(n,m)$ quantum random access code (QRAC) compresses an $n$-bit classical string into an $m$-qubit quantum state, from which a decoder attempts to recover a randomly selected target bit. Of particular interest is the optimal average probability of success, $P^{Q,\\mathrm{avg},\\mathrm{opt}}_{n,m}$, which was numerically conjectured to satisfy the bound $P^{Q,\\mathrm{avg},\\mathrm{opt}}_{n,m}\\leq \\frac{1}{2}+\\frac{1}{2}\\sqrt{\\frac{m}{n}}$. Recent constructions of $(n,n-1)$ QRACs by Suzuki and $(n,n-2)$ QRACs by Akibue et al. meet this bound exactly, raising the question of their strict…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.IT"
+  ],
+  "published": "2026-07-11",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

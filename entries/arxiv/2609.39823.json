@@ -1,0 +1,22 @@
+{
+  "key": "2609.39823",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.39823",
+  "title": "Improved Quantum Random Self-Reduction for Linear Problems",
+  "authors": [
+    "Vahid R. Asadi",
+    "Shuichi Hirahara",
+    "Nobutaka Shimizu"
+  ],
+  "summary": "We study quantum random self-reductions for linear problems over finite fields. Let $M\\in\\mathbb{F}^{n\\times n}$ be an arbitrary matrix, and let $\\mathcal{O}$ be an oracle that agrees with the linear map $x\\mapsto Mx$ on an $\\varepsilon$-fraction of inputs $x\\sim\\mathbb{F}^n$. Given coherent access to $\\mathcal{O}$ and coherent entry access to $M$, we give a uniform quantum reduction that computes $Mx$ on any prescribed input $x$ with probability at least $2/3$ in time $\\widetilde{O}(nT^{1/3})$, for $n\\le T\\le n^{3/2}$ and constant field size and $\\varepsilon$, where $T$ is the cost of one…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

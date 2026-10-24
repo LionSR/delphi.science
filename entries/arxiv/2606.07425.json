@@ -1,0 +1,22 @@
+{
+  "key": "2606.07425",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.07425",
+  "title": "Tomography of quantum states with bounded extent",
+  "authors": [
+    "Srinivasan Arunachalam",
+    "Arkopal Dutt"
+  ],
+  "summary": "We give a general framework for tomography of states that have bounded-extent with respect to a structured class of states. Let $\\textsf{C}$ be a family of $n$-qubit states such that: $(i)$ $\\textsf{C}$ is succinctly representable and $(ii)$ there is a weak agnostic learner of $\\textsf{C}$. We give a tomography protocol for an unknown state $|ψ\\rangle$ that is promised to admit a decomposition of the form $|ψ\\rangle = \\sum_i c_i |φ_i\\rangle$, where $|φ_i\\rangle \\in \\textsf{C}$ with bounded $\\ell_1$-norm of the coefficients (which we call extent). Our main contribution is to show that a weak…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "math.CO"
+  ],
+  "published": "2026-06-05",
+  "updated": "2026-06-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

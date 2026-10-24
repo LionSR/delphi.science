@@ -1,0 +1,26 @@
+{
+  "key": "2606.04786",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.04786",
+  "title": "Resource-efficient energy-based operator selection in fermionic ADAPT-VQE via exact Hamiltonian transformation",
+  "authors": [
+    "Emanuele Rossi",
+    "Erik Rosendahl Kjellgren",
+    "Artur F. Izmaylov",
+    "Stephan P. A. Sauer",
+    "Karl Michael Ziems",
+    "Sonia Coriani"
+  ],
+  "summary": "The energy-based approach to operator selection in ADAPT-VQE relies on reconstructing the one-parameter energy landscape for each operator in the pool. In fermionic implementations, the cost of reconstructing this energy landscape often becomes a bottleneck. We address this issue through an exact Hamiltonian transformation that reformulates the one-parameter energy landscape according to a generator-dependent fragmentation of the transformed Hamiltonian. While our method is mathematically identical to standard fermionic Rotoselect, it effectively reduces its cost by about a factor of two,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.chem-ph",
+    "physics.comp-ph"
+  ],
+  "published": "2026-06-03",
+  "updated": "2026-06-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

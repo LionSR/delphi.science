@@ -1,0 +1,21 @@
+{
+  "key": "2610.10176",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.10176",
+  "title": "Collusion-Secure Semi-Quantum Secret Sharing Scheme using a Quantum Third Party",
+  "authors": [
+    "Santanu Majhi",
+    "Nirupam Basak"
+  ],
+  "summary": "The security of a secret sharing protocol is compromised if one or more dishonest participants can reconstruct the secret by deviating from the prescribed protocol, particularly when such malicious behavior remains undetected. Semi-Quantum Secret Sharing (SQSS) is a variant of secret sharing in which the participants possess only classical capabilities, such as preparing and measuring qubits in the computational ($Z$) basis, while a quantum-capable third party assists the dealer in generating and distributing quantum shares of a classical secret. The limited quantum capabilities of the…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "quant-ph"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

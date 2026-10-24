@@ -1,0 +1,21 @@
+{
+  "key": "2602.12042",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.12042",
+  "title": "Scalable Preparation of Matrix Product States with Sequential and Brick Wall Quantum Circuits",
+  "authors": [
+    "Tomasz Szołdra",
+    "Rick Mukherjee",
+    "Peter Schmelcher"
+  ],
+  "summary": "Preparing arbitrary quantum states requires exponential resources. Matrix Product States (MPS) admit more efficient constructions, particularly when accuracy is traded for circuit complexity. Existing approaches to MPS preparation mostly rely on heuristic circuits that are deterministic but quickly saturate in accuracy, or on variational optimization methods that reach high fidelities but scale poorly. This work introduces an end-to-end MPS preparation framework that combines the strengths of both strategies within a single pipeline. Heuristic staircase-like and brick wall disentangler…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-12",
+  "updated": "2026-02-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2606.28255",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28255",
+  "title": "Efficient targeting of arbitrary excited states with quantum inverse power iteration through filtering polynomials",
+  "authors": [
+    "Srushti Patil",
+    "Nina Glaser"
+  ],
+  "summary": "In this work, we introduce a quantum inverse power iteration (QIPI) algorithm based on the quantum singular value transformation (QSVT) to target arbitrary excited states. Given an energy shift $ω$, QIPI prepares the target excited state by iteratively applying an approximation of the shifted inverse Hamiltonian $(H-ωI)^{-1}$ to a trial state. Prior quantum inverse power approaches typically relied on Fourier decompositions of the inverse Hamiltonian, with numerical quadrature used to reconstruct the transformation, but such methods are highly sensitive to hyperparameter choices and have…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.chem-ph"
+  ],
+  "published": "2026-06-26",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

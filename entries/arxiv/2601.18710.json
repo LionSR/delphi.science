@@ -1,0 +1,22 @@
+{
+  "key": "2601.18710",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.18710",
+  "title": "Analyzing Images of Blood Cells with Quantum Machine Learning Methods: Equilibrium Propagation and Variational Quantum Circuits to Detect Acute Myeloid Leukemia",
+  "authors": [
+    "A. Bano",
+    "L. Liebovitch"
+  ],
+  "summary": "This paper presents a feasibility study demonstrating that quantum machine learning (QML) algorithms achieve competitive performance on real-world medical imaging despite operating under severe constraints. We evaluate Equilibrium Propagation (EP), an energy-based learning method that does not use backpropagation (incompatible with quantum systems due to state-collapsing measurements) and Variational Quantum Circuits (VQCs) for automated detection of Acute Myeloid Leukemia (AML) from blood cell microscopy images using binary classification (2 classes: AML vs. Healthy). Key Result: Using…",
+  "domain": "cs.ET",
+  "tags": [
+    "cs.ET",
+    "cs.LG",
+    "quant-ph"
+  ],
+  "published": "2026-01-26",
+  "updated": "2026-01-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

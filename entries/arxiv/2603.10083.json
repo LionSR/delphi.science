@@ -1,0 +1,20 @@
+{
+  "key": "2603.10083",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.10083",
+  "title": "Mitigating Frequency Learning Bias in Quantum Models via Multi-Stage Residual Learning",
+  "authors": [
+    "Ammar Daskin"
+  ],
+  "summary": "Quantum machine learning models based on parameterized circuits can be viewed as Fourier series approximators. However, they often struggle to learn functions with multiple frequency components, particularly high-frequency or non-dominant ones; a phenomenon we term the quantum Fourier parameterization bias. Inspired by recent advances in classical Fourier neural operators (FNOs), we adapt the multi-stage residual learning idea to the quantum domain, iteratively training additional quantum modules on the residuals of previous stages. We evaluate our method on a synthetic benchmark composed of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-03-10",
+  "updated": "2026-05-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

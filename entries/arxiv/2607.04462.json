@@ -1,0 +1,22 @@
+{
+  "key": "2607.04462",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04462",
+  "title": "Noise-Aware Synthesis of Quantum LDPC Encoder Circuits via Two-Sided Hamming Descent",
+  "authors": [
+    "Aditya Sodhani",
+    "Keshab K. Parhi"
+  ],
+  "summary": "Quantum low-density parity-check (LDPC) codes are a promising route to fault-tolerant quantum computation, but their use requires efficient preparation of encoded states. Standard encoder constructions generate circuits through fixed algebraic procedures, yet the resulting circuit can contain substantial redundancy. We formulate LDPC encoder preparation as a circuit-resynthesis problem: given the linear-reversible matrix implemented by the encoder's CNOT block, we seek a lower-cost equivalent circuit that can be routed efficiently on the target hardware and which mitigates noise. We propose…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET",
+    "cs.IT"
+  ],
+  "published": "2026-07-05",
+  "updated": "2026-07-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

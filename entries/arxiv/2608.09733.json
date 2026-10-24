@@ -1,0 +1,25 @@
+{
+  "key": "2608.09733",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.09733",
+  "title": "Aicir: A Full-Stack Quantum Circuit Simulator with AscendNPU Support",
+  "authors": [
+    "Xian Lu",
+    "Xinying Li",
+    "Fei Wang",
+    "Shuai Hou",
+    "Chengkang Pan",
+    "Xin Yi",
+    "Yongmei Li"
+  ],
+  "summary": "Quantum computing is a promising way to study problems that are difficult for classical methods, but current quantum hardware still faces limits in scale, noise, and fidelity. Running quantum algorithms on physical machines can also be costly. Quantum circuit simulators therefore remain important because they let researchers design and test algorithms on classical computers before using quantum hardware. Most high-performance simulators provide GPU backends, while few offer native support for NPUs. This gap limits the computing platforms available for quantum-algorithm research. We developed…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2607.03340",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.03340",
+  "title": "Measurements Number Scaling in the Quantum Approximate Optimization Algorithm for MaxCut: A Statistical Analysis",
+  "authors": [
+    "Inbar Chefer",
+    "Uri Shaham",
+    "Adi Makmal"
+  ],
+  "summary": "We provide a statistical analysis of the measurement (shot) requirements of the quantum approximate optimization algorithm (QAOA) for the MaxCut problem. We derive sufficient conditions on the number of shots per cost operator evaluation to: (a) estimate the expected cost to within a relative error $δ$ and a confidence $1-ε$, and (b) ensure SGD-based parameter optimization converges to a target relative suboptimality level with high probability. In addition, we provide an explicit bound on the number of SGD iterations required to reach the target accuracy. Our analysis reveals an unexpected…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-03",
+  "updated": "2026-07-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2606.08873",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.08873",
+  "title": "SCOPE: A Syndrome-Driven Control Plane for QEC-Enabled Quantum Networks",
+  "authors": [
+    "Xiaojie Fan",
+    "Zian Wang",
+    "Ashutosh Tiwari",
+    "Himanshu Gupta"
+  ],
+  "summary": "As quantum networks evolve from experimental testbeds to fault-tolerant systems, the primary performance metric shifts from physical link fidelity to end-to-end logical error rate. However, current control planes remain ill-equipped for this transition: routing decisions are typically decoupled from Quantum Error Correction (QEC) strategies, relying on topology or scalar fidelity metrics that fail to predict how specific physical noise structures interact with logical codes. Optimizing this coupled route-and-code performance requires precise, real-time visibility into network error biases,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.NI"
+  ],
+  "published": "2026-06-07",
+  "updated": "2026-06-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

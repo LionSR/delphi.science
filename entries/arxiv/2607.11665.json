@@ -1,0 +1,21 @@
+{
+  "key": "2607.11665",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.11665",
+  "title": "The Time-Space Complexity of Checking Multiple Assertions in Quantum Programs",
+  "authors": [
+    "Shengyuan Yang",
+    "Charles Yuan"
+  ],
+  "summary": "Runtime assertions are a promising mechanism for testing and debugging quantum programs. But unlike the classical world, checking a quantum program that contains multiple assertions often requires using additional space or running the program additional times. For example, on current quantum hardware where mid-circuit measurement is restricted or costly, an assertion's pass/fail outcome cannot be revealed immediately. Instead, it is routed into an ancilla qubit during execution and read out by a terminal measurement. For a program with $n$ assertions, a naive strategy uses $n$ ancillas to…",
+  "domain": "cs.PL",
+  "tags": [
+    "cs.PL",
+    "quant-ph"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2604.11952",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.11952",
+  "title": "A Relativizing MIP for BQP",
+  "authors": [
+    "Scott Aaronson",
+    "Anand Natarajan",
+    "Avishay Tal",
+    "Agi Villanyi"
+  ],
+  "summary": "Complexity class containments involving interactive proof classes are famously nonrelativizing: although $\\mathsf{IP} = \\mathsf{PSPACE}$, Fortnow and Sipser showed that that there exists an oracle relative to which $\\mathsf{coNP} \\not\\subseteq \\mathsf{IP}$. In contrast, the question of whether the containment $\\mathsf{BQP} \\subseteq \\mathsf{IP}$ is relativizing remains wide open. In this work we make progress towards resolving this question by showing that the containment $\\mathsf{BQP} \\subseteq \\mathsf{MIP}$ holds with respect to any classical oracle. We obtain this result by constructing,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-04-13",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

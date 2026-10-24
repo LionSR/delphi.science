@@ -1,0 +1,20 @@
+{
+  "key": "2601.13258",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.13258",
+  "title": "Towards Simple and Useful One-Time Programs in the Quantum Random Oracle Model",
+  "authors": [
+    "Lev Stambler"
+  ],
+  "summary": "We construct simulation-secure one-time memories (OTM) in the random oracle model, and present a plausible argument for their security against quantum adversaries with bounded and adaptive depth. Our contributions include: (1) A simple scheme where we use only single-qubit Wiesner states and conjunction obfuscation (constructible from LPN): no complex entanglement or quantum cryptography is required. (2) A new POVM bound where e prove that any measurement achieving $(1 - ε)$ success on one basis has conjugate-basis guessing probability at most $\\frac{1}{2m} + O(ε^\\frac{1}{4})$. (3)…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-01-19",
+  "updated": "2026-03-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2602.21007",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.21007",
+  "title": "Telemetry-Based Server Selection in the Quantum Internet via Cross-Layer Runtime Estimation",
+  "authors": [
+    "Masaki Nagai",
+    "Hideaki Kawaguchi",
+    "Shin Nishio",
+    "Takahiko Satoh"
+  ],
+  "summary": "The Quantum Internet will allow clients to delegate quantum workloads to remote servers over heterogeneous networks, but choosing the server that minimizes end-to-end execution time is difficult because server processing, feedforward classical communication, and entanglement distribution can overlap in protocol-dependent ways and shift the runtime bottleneck. We propose $T_{\\max}$, a lightweight runtime score that sums coarse telemetry from multiple layers to obtain a conservative ranking for online server selection without calibrating weights for each deployment. Using NetSquid…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.NI"
+  ],
+  "published": "2026-02-24",
+  "updated": "2026-02-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

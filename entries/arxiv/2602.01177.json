@@ -1,0 +1,23 @@
+{
+  "key": "2602.01177",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.01177",
+  "title": "Privacy Implies Stability: Information-Theoretic Generalization Bounds for Quantum Learning",
+  "authors": [
+    "Ayanava Dasgupta",
+    "Naqueeb Ahmad Warsi",
+    "Masahito Hayashi"
+  ],
+  "summary": "We develop an information-theoretic framework connecting stability, privacy, and generalization for quantum learning algorithms. Learning procedures are modeled as quantum instruments with classical-quantum outputs, and losses are represented by observables. We prove that under a classical-quantum sub-Gaussian condition, an information-theoretic stability measure controls the expected generalization error. Furthermore, we establish a high-probability generalization bound using quantum Rényi divergences to manage higher-order dependencies under non-commutativity. In the trusted Data Processor…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.IT",
+    "cs.LG"
+  ],
+  "published": "2026-02-01",
+  "updated": "2026-06-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

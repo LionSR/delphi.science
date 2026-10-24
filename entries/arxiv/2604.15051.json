@@ -1,0 +1,19 @@
+{
+  "key": "2604.15051",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.15051",
+  "title": "Hardware Validation of DAGI via a Modular \"Ridge\" Signature and High-Order Synergistic Information",
+  "authors": [
+    "Petr Sramek"
+  ],
+  "summary": "We report a hardware validation of the DAGI (Directed Acyclic Graph Information) framework on IBM Quantum hardware using a small, controlled experiment whose ideal output distribution is constrained to a low-dimensional modular manifold (a \"ridge\"). For two $n$-bit registers $(u,v)$ with $n=4$ (modulus 16), each key instance $k$ induces an ideal relation $v \\equiv k \\cdot u \\pmod{16}$, producing a visually distinct ridge in the joint $(u, v)$ distribution. Executed on ibm\\_torino in a single Sampler V2 job (8 keys, 1024 shots/key, $N=8192$ total shots), the ridge persists under hardware…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-16",
+  "updated": "2026-04-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2610.01421",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01421",
+  "title": "Robust and leakage-resilient device-independent oblivious transfer in MiniQCrypt",
+  "authors": [
+    "Zhili Chen",
+    "Rahul Jain",
+    "YaoNan Zhang"
+  ],
+  "summary": "Assuming post-quantum one-way functions, we construct device-independent (DI) oblivious transfer (OT) and bit commitment: honest parties use only trusted classical computation to operate untrusted quantum devices, which may share arbitrary entanglement and behave non-IID. Security is simulation-based against quantum polynomial-time adversaries and composes sequentially with efficient simulators. One protocol skeleton serves both, in two regimes. With isolated laboratories and coordinate-local measurements in the honest receiver's device, it tolerates a constant rate of honest-device faults.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

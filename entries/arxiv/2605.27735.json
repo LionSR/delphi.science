@@ -1,0 +1,23 @@
+{
+  "key": "2605.27735",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.27735",
+  "title": "An IQP Born Machine for Calorimeter Image Generation at 64 Qubits with Compiled-IQP Deployment",
+  "authors": [
+    "Jamal Slim",
+    "Saverio Monaco",
+    "Florian Rehm",
+    "Dirk Krücker",
+    "Kerstin Borras"
+  ],
+  "summary": "The challenge to scaling quantum generative models on near-term hardware is training. Variational circuit Born machines require repeated quantum sampling and are prone to barren plateaus. Instantaneous Quantum Polynomial-time (IQP) Born machines sidestep both, since their loss is built from low-order Pauli-Z correlators that admit an unbiased classical estimator, while sampling from worst-case circuits in the class is conjectured to be classically hard. We take this train-on-classical, deploy-on-quantum workflow to a real high-energy-physics generative task, learning calorimeter shower…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

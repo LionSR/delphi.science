@@ -1,0 +1,22 @@
+{
+  "key": "2610.06815",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06815",
+  "title": "CV-QAOA: Efficient Low-Depth Quantum Optimization of Continuous Variables",
+  "authors": [
+    "Sriram Bharadwaj",
+    "Di Luo",
+    "Leo Zhou"
+  ],
+  "summary": "We study a Continuous-Variable Quantum Approximate Optimization Algorithm (CV-QAOA) for high-dimensional continuous optimization. Our formulation extends an earlier CV-QAOA proposal with a variationally optimized initial state and recovers the convergence guarantees of Quantum Hamiltonian Descent (QHD) in the high-depth limit. We prove rigorous performance guarantees of CV-QAOA on several families of cost functions. First, we show $d$-step CV-QAOA minimizes any $d$-dimensional strictly convex quadratic function with $2d$ quantum queries to the cost function. We then analyze a family of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

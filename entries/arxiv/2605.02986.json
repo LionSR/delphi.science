@@ -1,0 +1,19 @@
+{
+  "key": "2605.02986",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.02986",
+  "title": "Exploiting all ancilla outcomes in linear combinations of unitaries: low-rank recovery and quantum trapdoor functions",
+  "authors": [
+    "Ammar Daskin"
+  ],
+  "summary": "The linear combination of unitaries (LCU) is a fundamental quantum algorithm primitive that embeds non-unitary operators via post-selection on an ancilla register. In standard LCU, only the $|0\\dots0\\rangle$ ancilla outcome is retained; the remaining \"junk\" outcomes are discarded. We study these discarded parts by introducing an alternative LCU circuit which simplifies the coefficient preparation unitary with Hadamard gates and a single rotation qubit. Every computational basis measurement of the ancilla projects the system onto a different linear combination of the target unitaries.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-04",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

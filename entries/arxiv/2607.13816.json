@@ -1,0 +1,28 @@
+{
+  "key": "2607.13816",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.13816",
+  "title": "Quantum Algorithm for Elliptic Curve Discrete Logarithms with Space-Efficient Point Addition",
+  "authors": [
+    "Han Luo",
+    "Ziyi Yang",
+    "Jingquan Luo",
+    "Ziruo Wang",
+    "Yuexin Su",
+    "Xiaoming Sun",
+    "Lvzhou Li",
+    "Tongyang Li"
+  ],
+  "summary": "The Elliptic Curve Discrete Logarithm Problem (ECDLP) is a fundamental problem in cryptography, and reducing the resource requirements of quantum algorithms for solving ECDLP is an important goal. In this work, we present a space-efficient quantum algorithm for solving the ECDLP over prime fields, achieving an implementation with only $3n+6\\lfloor \\log_2 n \\rfloor+O(1)$ logical qubits and $1056n^3/\\log_2 n+O(n^2)$ Toffoli gates, where $n$ is the bit-length of the prime. For a 256-bit prime-field curve, our construction requires only 835 logical qubits, reducing the previous best estimates of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR",
+    "cs.DS"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-09-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

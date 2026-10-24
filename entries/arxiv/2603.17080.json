@@ -1,0 +1,24 @@
+{
+  "key": "2603.17080",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.17080",
+  "title": "A quadratic Grassmann manifold optimization problem arising from quantum embedding methods",
+  "authors": [
+    "Thomas Ayral",
+    "Eric Cancès",
+    "Fabian M. Faulstich",
+    "Lin Lin",
+    "Alicia Negre"
+  ],
+  "summary": "This article presents a mathematical analysis and numerical strategies for solving the optimization problem of minimizing the quadratic function $J(P) = \\text{Tr}(BP)- \\frac{1}{2} \\text{Tr}(A P A P)$, where $A,B \\in \\mathbb R^{M \\times M}_{\\rm sym}$, with $A \\succeq 0$, over the Grassmann manifold ${\\rm Gr}(m,\\mathbb R^M)$. While this problem is non-convex and typically admits non-global local minima - posing challenges for Riemannian optimization and self-consistent field (SCF) algorithms - we identify cases where the global minimizer can be obtained by solving an auxiliary convex problem.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "quant-ph"
+  ],
+  "published": "2026-03-17",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

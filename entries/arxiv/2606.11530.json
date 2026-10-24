@@ -1,0 +1,21 @@
+{
+  "key": "2606.11530",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.11530",
+  "title": "Locally Acting Grover Mixers for Constraint-Preserving QAOA",
+  "authors": [
+    "Minjin Choi",
+    "Dongkeun Lee",
+    "Junghee Ryu"
+  ],
+  "summary": "The Grover mixer quantum alternating operator ansatz (GM-QAOA) employs the Grover mixer to confine the quantum evolution to the feasible subspace defined by the problem. Its mixing unitary, however, requires a global multi-controlled phase-shift gate acting on all qubits, resulting in substantial circuit overhead on near-term quantum devices. In this work, we propose locally acting Grover mixers tailored to initial states that admit a product structure over disjoint qubit subsystems, which may be obtained by encoding only a subset of problem constraints into the initial state preparation.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-10",
+  "updated": "2026-06-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

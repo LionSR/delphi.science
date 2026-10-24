@@ -1,0 +1,20 @@
+{
+  "key": "2607.14217",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14217",
+  "title": "Analytic gradients for low-rank quantum optimal control",
+  "authors": [
+    "Leo Goutte",
+    "Vincenzo Savona"
+  ],
+  "summary": "We introduce low-rank optimal control (LROC), a method for designing control pulses in open quantum systems whose full density-matrix simulation is prohibitively expensive. The method exploits a feature of quantum computing itself: because protocols are designed to preserve purity, the density matrix is dominated by a few pure states and admits an accurate low-rank factorization. LROC propagates only this factorized form and, by deriving the corresponding adjoint equation, obtains the gradient of any differentiable objective at the same reduced cost as the simulation, leading to a quadratic…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2607.01560",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.01560",
+  "title": "Symmetry conservation with Trotterization and Quantum Phase Estimation",
+  "authors": [
+    "Edith Leal-Sánchez",
+    "Fanny Vain",
+    "Jong-Kwon Ha",
+    "Ryan J. MacDonell"
+  ],
+  "summary": "Quantum algorithms for quantum chemistry and other many-body fermionic systems work by expressing the Hamiltonian in a basis of qubits and fragmenting the Hamiltonian into a sum of products of Pauli operators whose exponentials are easily encoded on a quantum device. Applying the product of exponentials, known as Trotterization, leads to an error associated with the non-commutativity of operators. This error can lead to breaking the symmetries of the Hamiltonian because the fragments are not symmetry conserving in general. Nonetheless, many algorithms for time evolution rely on…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.chem-ph"
+  ],
+  "published": "2026-07-02",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

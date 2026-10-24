@@ -1,0 +1,21 @@
+{
+  "key": "2603.00417",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.00417",
+  "title": "Physics-Aware Learnability: From Set-Theoretic Independence to Operational Constraints",
+  "authors": [
+    "Jeongho Bang",
+    "Kyoungho Cho"
+  ],
+  "summary": "Beyond binary classification, learnability can become a logically fragile notion: in EMX, even the class of all finite subsets of $[0,1]$ is learnable in some models of ZFC and not in others. We argue the paradox is operational. The standard definitions quantify over arbitrary set-theoretic learners that implicitly assume non-operational resources (infinite precision, unphysical data access, and non-representable outputs). We introduce physics-aware learnability (PL), which defines the learnability relative to an explicit access model -- a family of admissible physical protocols.…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "quant-ph"
+  ],
+  "published": "2026-02-28",
+  "updated": "2026-02-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

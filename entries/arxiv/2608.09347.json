@@ -1,0 +1,22 @@
+{
+  "key": "2608.09347",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.09347",
+  "title": "Binary code rate bounds via classical--quantum channels",
+  "authors": [
+    "Omar Alrabiah",
+    "Venkatesan Guruswami"
+  ],
+  "summary": "We derive the four principal asymptotic rate-distance tradeoffs for binary codes---Plotkin, Elias--Bassalygo, and the two McEliece--Rodemich--Rumsey--Welch (MRRW) bounds---from one theorem, the ``pretty good criterion.'' If the bit error rate under the pretty good measurement (PGM)---the quantum analog of posterior sampling---of a binary-input output-symmetric classical--quantum (cq) channel lies below $δ$, then every length-$n$ binary code, linear or nonlinear, of relative distance $δ$ has rate at most the channel's capacity, up to an $O(n^{-1/2})$ correction. Rate--distance bounds thereby…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "math.CO",
+    "quant-ph"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

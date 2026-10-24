@@ -1,0 +1,21 @@
+{
+  "key": "2603.04548",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.04548",
+  "title": "Transversal AND in Quantum Codes",
+  "authors": [
+    "Christine Li",
+    "Lia Yeh"
+  ],
+  "summary": "The AND gate is not reversible$\\unicode{x2014}$on qubits. However, it is reversible on qutrits, making it a building block for efficient simulation of qubit computation using qutrits. We first observe that there are multiple two-qutrit Clifford+T unitaries that realize the AND gate with T-count 3, and its generalizations to $n$ qubits with T-count $3n-3$. Our main result is the construction of a novel qutrit $\\mathopen{[\\![} 6,2,2 \\mathclose{]\\!]}$ quantum error-correcting code with a transversal implementation of the AND gate. The key insight in our approach is that a symmetric T-depth one…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-03-04",
+  "updated": "2026-03-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

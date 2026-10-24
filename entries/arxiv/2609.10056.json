@@ -1,0 +1,22 @@
+{
+  "key": "2609.10056",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10056",
+  "title": "Accelerating A*-Based Algorithms for Decoding Quantum Low-Density Parity-Check Codes",
+  "authors": [
+    "Lamia Yous",
+    "Francisco Garcia Herrero",
+    "Mark F. Flanagan"
+  ],
+  "summary": "Quantum low-density parity-check (QLDPC) codes represent a promising approach for error correction in quantum computing. The recently proposed Tesseract decoder uses the A* search algorithm that guarantees finding the most likely error pattern. However, practical implementations of Tesseract often involve an extremely large graph, and the inherently sequential nature of the search results in high computational overhead and long runtime. To improve decoding efficiency, we propose a two-stage decoding framework. First, a belief propagation (BP) decoder efficiently processes the syndrome. This…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "eess.SP"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

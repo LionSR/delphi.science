@@ -1,0 +1,24 @@
+{
+  "key": "2603.05452",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.05452",
+  "title": "Local strategies are pretty good at computing Boolean properties of quantum sequences",
+  "authors": [
+    "Tathagata Gupta",
+    "Ankith Mohan",
+    "Shayeef Murshid",
+    "Vincent Russo",
+    "Jamie Sikora",
+    "Alice Zheng"
+  ],
+  "summary": "Quantum memory is a scarce and costly resource, yet little is known about which learning tasks remain feasible under severe memory constraints. We study the problem of computing global properties of quantum sequences when quantum systems must be measured individually, without storing or jointly processing them. In our setting, a bit string $x \\in \\{0,1\\}^n$ is encoded into an $n$-qubit product state $|ψ_{x_1}\\rangle \\otimes \\cdots \\otimes |ψ_{x_n}\\rangle$, and the goal is to infer $f(x) \\in \\{0,1\\}$ from measurements of this quantum encoding. We consider a simple local strategy, which we…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-05",
+  "updated": "2026-03-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

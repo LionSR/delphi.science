@@ -1,0 +1,20 @@
+{
+  "key": "2604.18495",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.18495",
+  "title": "Scaling of Quantum Resources for Simulating a Long-Range System",
+  "authors": [
+    "Tanya Keshari",
+    "Debasis Sadhukhan"
+  ],
+  "summary": "We simulate a long-range extended Ising model in one dimension using a hybrid quantum algorithm, namely Variational Quantum Eigensolver (VQE). In this quantum simulation, we investigate how quantum resources scale with system size and interaction strength. Three structure-aware ansatze incorporating nearest-neighbor (NN), next-nearest-neighbor (NNN), and next-next-nearest-neighbor (NNNN) entangling blocks are constructed by mimicking the string operators in the Hamiltonian. We show that energy fidelity alone is not a good indicator for finding the ground state of our model. To overcome this…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-04-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

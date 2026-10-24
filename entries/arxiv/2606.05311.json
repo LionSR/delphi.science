@@ -1,0 +1,37 @@
+{
+  "key": "2606.05311",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.05311",
+  "title": "Setting angles in quantum approximate optimization at utility-scale",
+  "authors": [
+    "Maosheng Guo",
+    "Joel Jurado Diaz",
+    "Anurag Ramesh",
+    "Conrad J. Haupt",
+    "Alberto Baiardi",
+    "Dimitrios Athanasakos",
+    "M. Emre Sahin",
+    "Oscar Wallis",
+    "George Pennington",
+    "Christian Arenz",
+    "Sebastian Brandhofer",
+    "Georgios Korpas",
+    "Ieva Čepaitė",
+    "J. A. Montañez-Barrera",
+    "Jakub Marecek",
+    "Davide Venturelli",
+    "Stephan Eidenbenz",
+    "David E. Bernal Neira",
+    "Daniel J. Egger"
+  ],
+  "summary": "The quantum approximate optimization algorithm (QAOA) is a powerful heuristic that seeks to solve combinatorial optimization problems using quantum hardware and classical optimization in tandem. Various methods exist to train the parameterized quantum circuits that serve as an ansatz in QAOA. However, which method works best to identify optimal angles for a given problem instance remains poorly understood, especially at utility-scale, i.e., $100$ qubits or more. In this work, we address this challenge through utility-scale benchmarks from which we distill operational guidance for QAOA…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-03",
+  "updated": "2026-09-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

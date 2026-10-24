@@ -1,0 +1,22 @@
+{
+  "key": "2601.14713",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.14713",
+  "title": "Adaptive Fidelity Estimation for Quantum Programs with Graph-Guided Noise Awareness",
+  "authors": [
+    "Tingting Li",
+    "Ziming Zhao",
+    "Jianwei Yin"
+  ],
+  "summary": "Fidelity estimation is a critical yet resource-intensive step in testing quantum programs on noisy intermediate-scale quantum (NISQ) devices, where the required number of measurements is difficult to predefine due to hardware noise, device heterogeneity, and transpilation-induced circuit transformations. We present QuFid, an adaptive and noise-aware framework that determines measurement budgets online by leveraging circuit structure and runtime statistical feedback. QuFid models a quantum program as a directed acyclic graph (DAG) and employs a control-flow-aware random walk to characterize…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI"
+  ],
+  "published": "2026-01-21",
+  "updated": "2026-01-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

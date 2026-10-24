@@ -1,0 +1,19 @@
+{
+  "key": "2605.11228",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11228",
+  "title": "Quantum Algorithm for Identifying Hidden Graphs: Spectral Theory and Numerical Evidence",
+  "authors": [
+    "Pawel Wocjan"
+  ],
+  "summary": "We give a quantum algorithm for a novel type of black-box problem: identifying a hidden $d$-regular base graph $G$ on $n$ vertices from oracle access to an obfuscated version of it, rather than traversing it. From $G$ we build the spired graph $G_{\\rm spire}$ in three steps: each vertex is lifted into an exponentially large cluster, with adjacent clusters joined by a random bipartite graph; each cluster is then crowned with a balanced spire; finally, all vertices are randomly relabelled. Specializing to $G=K_2$ recovers the welded-trees graph. Our algorithm is conceptually simple: a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

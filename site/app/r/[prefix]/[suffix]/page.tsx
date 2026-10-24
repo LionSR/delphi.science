@@ -5,7 +5,7 @@ import { cache } from 'react';
 import { comments } from '../../../../lib/comments.ts';
 import { db } from '../../../../lib/db.ts';
 import { get } from '../../../../lib/query.ts';
-import { date, idPath, recordId, recordPath, SITE, tally, tex, type IdParams } from '../../../../lib/view.ts';
+import { date, idPath, recordId, recordPath, SITE, source, tally, tex, type IdParams } from '../../../../lib/view.ts';
 
 export const dynamic = 'force-dynamic';
 
@@ -46,6 +46,7 @@ export default async function Record(ctx: IdParams) {
 			<h1>{tex(r.title)}</h1>
 			{Array.isArray(r.authors) && <p className="authors">{r.authors.join(', ')}</p>}
 			<p className="meta">
+				<a href={source(r.source).href}>{source(r.source).name}</a>
 				<code>{id}</code>
 				<span>{date(r.published)}</span>
 				{r.subject ? <code>{String(r.subject)}</code> : null}

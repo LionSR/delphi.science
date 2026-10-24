@@ -119,6 +119,13 @@ class Discussion(unittest.TestCase):
             "handle": "AndrewLott1331", "text": "Did you notice that the bound is weaker? Still gets Erdős Turán", "date": "2026-10-08",
         })
 
+    def test_passage_from_text_fragment(self) -> None:
+        page = "<html><script>x()</script><p>Intro.</p><p>Ben Green: the zero-free region to the right of 7/8 is striking. More.</p></html>"
+        self.assertEqual(S.passage(page, "the zero-free region"), "the zero-free region to the right of 7/8 is striking. More.")
+        self.assertEqual(S.passage(page, "the zero-free region,striking"), "the zero-free region to the right of 7/8 is striking. More.")
+        self.assertEqual(S.passage(page, "Green%3A%20the%20zero-free%2C"), "")  # an encoded comma is part of the text
+        self.assertEqual(S.passage(page, "nowhere"), "")
+
     def test_discussion_is_served(self) -> None:
         e = {"key": "k", "source": "web", "url": "https://e.org/p", "title": "T", "discussion": [{"kind": "x", "url": "https://x.com/a/status/1", "text": "hi"}]}
         self.assertEqual(index.to_item(e)["discussion"], e["discussion"])

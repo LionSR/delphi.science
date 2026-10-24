@@ -3,10 +3,13 @@ import prefixes from './prefixes.json' with { type: 'json' };
 
 export const SITE = process.env.SITE_URL ?? 'https://open-research-index.vercel.app';
 export const tex = (s: unknown) => String(s ?? '').replace(/\$`([^`]+)`\$/g, (_, m) => `$${m}$`);
-export const date = (iso: unknown) =>
-	typeof iso === 'string' && /^\d{4}-\d{2}-\d{2}/.test(iso)
+// Postgres returns timestamps as Date objects, records carry them as ISO strings.
+export const date = (when: unknown) => {
+	const iso = when instanceof Date ? when.toISOString() : when;
+	return typeof iso === 'string' && /^\d{4}-\d{2}-\d{2}/.test(iso)
 		? new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' }).format(new Date(iso.slice(0, 10)))
 		: '';
+};
 // Record ids are <prefix>/<suffix>, like a DOI; routes take the two parts as path segments.
 export const idPath = (id: unknown) => String(id).split('/').map(encodeURIComponent).join('/');
 const NAMES = prefixes.prefixes as Record<string, { name: string }>;

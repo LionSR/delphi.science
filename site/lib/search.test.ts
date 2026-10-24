@@ -1,7 +1,7 @@
 // The open index on real Postgres (PGlite: Postgres compiled to WebAssembly, with pgvector), using the
 // migration as written. Needs a build of the index first: python3 index.py build.
 import { strict as assert } from 'node:assert';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { before, describe, test } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
 import { vector } from '@electric-sql/pglite/vector';
@@ -10,7 +10,7 @@ import { load, type Item } from './load.ts';
 import { createAgentKey, unvote, vote, voterFromKey } from './votes.ts';
 import { comment, comments } from './comments.ts';
 
-const MIGRATION = new URL('../supabase/migrations/20261024000000_open_index.sql', import.meta.url);
+const MIGRATIONS = new URL('../supabase/migrations/', import.meta.url);
 const INDEX = new URL('../../dist/index.json', import.meta.url);
 
 describe('query syntax', () => {
@@ -40,7 +40,7 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 	const db = new PGlite({ extensions: { vector } });
 	let items: Item[] = [];
 	before(async () => {
-		await db.exec(readFileSync(MIGRATION, 'utf8'));
+		for (const f of readdirSync(MIGRATIONS).filter((f) => f.endsWith('.sql')).sort()) await db.exec(readFileSync(new URL(f, MIGRATIONS), 'utf8'));
 		items = JSON.parse(readFileSync(INDEX, 'utf8')).items;
 		assert.equal(await load(db, items), items.length);
 	});

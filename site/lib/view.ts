@@ -1,4 +1,6 @@
 // Small helpers the pages share.
+import prefixes from './prefixes.json' with { type: 'json' };
+
 export const SITE = process.env.SITE_URL ?? 'https://open-research-index.vercel.app';
 export const tex = (s: unknown) => String(s ?? '').replace(/\$`([^`]+)`\$/g, (_, m) => `$${m}$`);
 export const date = (iso: unknown) =>
@@ -7,6 +9,9 @@ export const date = (iso: unknown) =>
 		: '';
 // Record ids are <prefix>/<suffix>, like a DOI; routes take the two parts as path segments.
 export const idPath = (id: unknown) => String(id).split('/').map(encodeURIComponent).join('/');
+const NAMES = prefixes.prefixes as Record<string, { name: string }>;
+/** The source's name, linked to its records. */
+export const source = (s: unknown) => ({ name: NAMES[String(s)]?.name ?? String(s), href: `/?q=source:${String(s)}` });
 export const recordPath = (id: unknown) => `/r/${idPath(id)}`;
 export type IdParams = { params: Promise<{ prefix: string; suffix: string }> };
 export const recordId = async ({ params }: IdParams) => {

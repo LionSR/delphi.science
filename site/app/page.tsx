@@ -2,7 +2,7 @@
 import { db } from '../lib/db.ts';
 import { QueryError, search } from '../lib/query.ts';
 import taxonomy from '../lib/taxonomy.json' with { type: 'json' };
-import { date, recordPath, tally, tex } from '../lib/view.ts';
+import { date, recordPath, source, tally, tex } from '../lib/view.ts';
 
 export const dynamic = 'force-dynamic';
 
@@ -18,6 +18,8 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 		if (!(e instanceof QueryError)) throw e;
 		error = `${e.message}. ${e.fix}`;
 	}
+	const sources = (await (await db()).query<{ source: string; n: number }>(
+		'SELECT source, count(*)::int AS n FROM open_index.records GROUP BY source ORDER BY n DESC')).rows;
 	const next = res?.next_cursor ? `/?${new URLSearchParams({ q, sort, cursor: res.next_cursor })}` : '';
 	return (
 		<>
@@ -34,6 +36,9 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 			<nav className="subjects" aria-label="Subjects">
 				{taxonomy.divisions.map((d) => <a key={d.key} href={`/?q=cat:${d.key}`}>{d.name}</a>)}
 			</nav>
+			<nav className="subjects" aria-label="Sources">
+				{sources.map((r) => <a key={r.source} href={source(r.source).href}>{source(r.source).name} <span className="n">{r.n.toLocaleString('en')}</span></a>)}
+			</nav>
 			{error && <p className="count">{error}</p>}
 			{res && <p className="count">{res.total.toLocaleString('en')} records</p>}
 			<ol>
@@ -42,7 +47,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 						<a className="title" href={recordPath(r.id)}>{tex(r.title)}</a>
 						{Array.isArray(r.authors) && r.authors.length > 0 && <p className="authors">{r.authors.slice(0, 8).join(', ')}</p>}
 						<p className="meta">
-							<code>{String(r.source)}</code>
+							<a href={source(r.source).href}>{source(r.source).name}</a>
 							<span>{date(r.published)}</span>
 							{r.subject ? <code>{String(r.subject)}</code> : null}
 							{r.origin === 'ai-generated' && <span>AI-generated</span>}

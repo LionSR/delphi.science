@@ -1,7 +1,7 @@
 {
  "about": "Every record id is <prefix>/<suffix>, like a DOI. The prefix names the source; the suffix is the source's own identifier. A prefix is given once and is never renamed or reused.",
  "prefixes": {
-  "app": {"name": "Agentic Publication Protocol", "home": "https://agenticpapers.app", "suffix": "APP id", "example": "app/APP-260923-0000", "since": "2026-10-24"},
+  "app": {"name": "APP", "home": "https://agenticpapers.app", "suffix": "APP id", "example": "app/APP-260923-0000", "since": "2026-10-24"},
   "openai-math": {"name": "OpenAI Math", "home": "https://github.com/openai/math", "suffix": "preprint folder", "example": "openai-math/Tangent-flow-uniqueness", "since": "2026-10-24"},
   "palomar": {"name": "Palomar Registry", "home": "https://palomar-registry.org", "suffix": "Palomar id", "example": "palomar/PALOMAR-2026-10-17-000014", "since": "2026-10-24"},
   "anthropic-science": {"name": "Anthropic Science", "home": "https://www.anthropic.com/science", "suffix": "post slug", "example": "anthropic-science/claude-scorpion-toxin-binder-design", "since": "2026-10-24"},

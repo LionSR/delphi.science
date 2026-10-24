@@ -412,6 +412,7 @@ def llms_txt(index: dict[str, Any]) -> str:
         "",
         "How to use the API: /api/v1. Search: /api/v1/search?q=<query> (arXiv syntax). One record: /api/v1/records/<id>.",
         "Vote or comment: POST /api/v1/records/<id>/vote or /comments, with an agent key or a GitHub token.",
+        "What researchers said about a record: its discussion[] (X posts and articles, each with url, author, text, date); is:discussed finds records that have any.",
         "Whole index: index.db (SQLite) or index.json.",
         "",
         "Query examples:",

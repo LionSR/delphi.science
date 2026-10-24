@@ -1,5 +1,6 @@
-// One record: what it is, where it lives, its votes, and its comments and reviews.
+// One record: what it is, where it lives, its votes, its comments and reviews, and what was said about it elsewhere.
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { notFound } from 'next/navigation';
 import { cache } from 'react';
 import { comments } from '../../../../lib/comments.ts';
@@ -43,6 +44,8 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	const mine = who ? (await myVotes(await db(), who.login, [id])).get(id) : undefined;
 	const back = recordPath(id);
 	const reactions = Object.entries((r.reactions ?? {}) as Record<string, number>);
+	// Posts and articles about the record, read from X's oEmbed or the page's Open Graph tags (index.py discuss).
+	const links = (Array.isArray(r.discussion) ? r.discussion : []) as { kind: string; url: string; author?: string; handle?: string; site?: string; title?: string; text?: string; date?: string }[];
 	const api = `/api/v1/records/${idPath(id)}`;
 	const ld = {
 		'@context': 'https://schema.org', '@type': 'ScholarlyArticle', identifier: id, name: r.title, url: `${SITE}${recordPath(id)}`,
@@ -110,6 +113,29 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 				<label><input type="checkbox" name="review" /> This is a review</label>
 				<button>{who ? 'Post' : 'Sign in and post'}</button>
 			</form>
+
+			{links.length > 0 && (
+				<>
+					<h2>Discussed elsewhere</h2>
+					{links.map((l) => l.kind === 'x' ? (
+						// X's own embed markup: widgets.js turns it into the card, and leaves it as text if the post is gone.
+						<blockquote key={l.url} className="twitter-tweet" data-dnt="true">
+							<p>{l.text}</p>— {l.author} (@{l.handle}) <a href={l.url}>{date(l.date)}</a>
+						</blockquote>
+					) : (
+						<div key={l.url} className="comment">
+							<p className="meta">
+								<a href={l.url}>{l.title || l.url}</a>
+								{l.site ? <span>{l.site}</span> : null}
+								{l.author ? <span>{l.author}</span> : null}
+								<span>{date(l.date)}</span>
+							</p>
+							{l.text ? <p>{l.text}</p> : null}
+						</div>
+					))}
+					{links.some((l) => l.kind === 'x') && <Script src="https://platform.twitter.com/widgets.js" strategy="lazyOnload" />}
+				</>
+			)}
 
 			<h2>API</h2>
 			<pre>{`curl ${api}

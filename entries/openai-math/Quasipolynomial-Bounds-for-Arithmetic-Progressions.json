@@ -28,5 +28,25 @@
     "reason": "Proves Erdős's conjecture on arithmetic progressions in sets with divergent reciprocal sum.",
     "by": "claude-haiku",
     "at": "2026-10-23"
-  }
+  },
+  "discussion": [
+    {
+      "kind": "x",
+      "url": "https://x.com/AndrewLott1331/status/2108189504259727838",
+      "author": "Andrew Lott",
+      "handle": "AndrewLott1331",
+      "text": "Did you notice that the bound they autoformalized for Szemeredi is weaker than the advertised quasipolynomial bound (but still stronger than any power of log)? The formalized bound is e^(-c(loglogN)^(1+epsilon)). Still gets Erdos Turan but it’s not quasipolynomial",
+      "date": "2026-10-08",
+      "added": "2026-10-24"
+    },
+    {
+      "kind": "x",
+      "url": "https://x.com/thomasfbloom/status/2108191863572185473",
+      "author": "Thomas Bloom",
+      "handle": "thomasfbloom",
+      "text": "I haven't looked into the Lean code proper yet; I note that in the corresponding challenge file they just have the even weaker statement about the sum of reciprocals diverging => kAPs. Thanks for pointing this out.",
+      "date": "2026-10-08",
+      "added": "2026-10-24"
+    }
+  ]
 }

@@ -104,6 +104,26 @@ class Checks(unittest.TestCase):
         self.assertEqual(it["category"], "research")
 
 
+class Discussion(unittest.TestCase):
+    OEMBED = {
+        "url": "https://twitter.com/AndrewLott1331/status/2108189504259727838", "author_name": "Andrew Lott",
+        "author_url": "https://twitter.com/AndrewLott1331",
+        "html": '<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Did you notice that the bound is weaker?<br>'
+                'Still gets Erd&#337;s Turán</p>&mdash; Andrew Lott (@AndrewLott1331) '
+                '<a href="https://twitter.com/AndrewLott1331/status/2108189504259727838?ref_src=twsrc%5Etfw">October 8, 2026</a></blockquote>',
+    }
+
+    def test_parse_oembed(self) -> None:
+        self.assertEqual(S.parse_oembed(self.OEMBED), {
+            "kind": "x", "url": "https://x.com/AndrewLott1331/status/2108189504259727838", "author": "Andrew Lott",
+            "handle": "AndrewLott1331", "text": "Did you notice that the bound is weaker? Still gets Erdős Turán", "date": "2026-10-08",
+        })
+
+    def test_discussion_is_served(self) -> None:
+        e = {"key": "k", "source": "web", "url": "https://e.org/p", "title": "T", "discussion": [{"kind": "x", "url": "https://x.com/a/status/1", "text": "hi"}]}
+        self.assertEqual(index.to_item(e)["discussion"], e["discussion"])
+
+
 class Text(unittest.TestCase):
     def test_trim_keeps_words_whole(self) -> None:
         out = S.trim("word " * 300, 50)

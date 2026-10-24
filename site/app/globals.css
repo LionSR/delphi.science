@@ -32,6 +32,7 @@ h2 { font: 500 1.15rem var(--serif); margin: 2rem 0 0.4rem; }
 .abstract { max-width: 68ch; line-height: 1.6; }
 .comment { padding: 0.7rem 0; border-bottom: 1px solid var(--rule); }
 .comment.reply { margin-left: 1.5rem; }
+.twitter-tweet { margin: 0.7rem 0; padding: 0.7rem 1rem; border: 1px solid var(--rule); border-radius: 0.5rem; }
 .comment p { margin: 0.25rem 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
 pre { background: var(--surface); padding: 0.8rem 1rem; border-radius: 0.35rem; overflow-x: auto; font: 0.78rem/1.5 var(--mono); }
 .vote { display: inline-flex; gap: 0.3rem; margin: 0.5rem 0 0; }

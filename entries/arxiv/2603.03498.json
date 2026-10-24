@@ -1,0 +1,24 @@
+{
+  "key": "2603.03498",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.03498",
+  "title": "Distributed Parallel Structure-Aware Presolving for Arrowhead Linear Programs",
+  "authors": [
+    "Nils-Christian Kempke",
+    "Stephen J Maher",
+    "Daniel Rehfeldt",
+    "Ambros Gleixner",
+    "Thorsten Koch",
+    "Svenja Uslu"
+  ],
+  "summary": "We present a structure-aware parallel presolve framework for arrowhead linear programs (AHLPs) in high-performance computing (HPC) environments, integrated into the parallel interior point solver PIPS-IPM++. Large-scale LPs arising from automated model generation frequently contain redundancies and numerical pathologies that necessitate effective presolve, yet existing presolve techniques are primarily serial or structure-agnostic. Our presolve works on the distributed data of PIPS-IPM++, communicates only information on the linking parts of the problem, and preserves the arrowhead…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-03",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

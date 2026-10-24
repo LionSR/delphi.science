@@ -1,0 +1,20 @@
+{
+  "key": "2601.21580",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.21580",
+  "title": "On the minimum doubly resolving set problem in line graphs",
+  "authors": [
+    "Qingjie Ye"
+  ],
+  "summary": "Given a connected graph $G$ with at least three vertices, let $d_G(u,v)$ denote the distance between vertices $u,v\\in V(G)$. A subset $S\\subseteq V$ is called a doubly resolving set (DRS) of $G$ if for any two distinct vertices $u, v \\in V(G)$, there exists a pair $\\{x,y\\}\\subseteq S$ such that $d_G(u,x)-d_G(u,y)\\neq d_G(v,x)-d_G(v,y)$. This paper studies the minimum cardinality of a DRS in the line graph of $G$, denoted by $Ψ(L(G))$. First, we prove that computing $Ψ(L(G))$ is NP-hard, even when $G$ is a bipartite graph. Second, we establish that $\\lceil \\log_2 (1+Δ(G))\\rceil \\le Ψ(L(G))…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.OC"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-01-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

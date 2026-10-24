@@ -1,0 +1,24 @@
+{
+  "key": "2604.08002",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.08002",
+  "title": "Invariant Guided PINN for Fluid Flow Computation",
+  "authors": [
+    "Zheng Lu",
+    "Jiwei Jia",
+    "Bora Aniruddha",
+    "Xingyu An",
+    "Young Ju Lee"
+  ],
+  "summary": "Physics-informed neural networks (PINNs) often become difficult to optimize for incompressible flow problems with large spatial domains, multiscale stresses, or long-time invariant dynamics. We propose an invariant-guided PINN (IG-PINN) framework that uses partitioned training as a conservative preconditioning stage rather than as the final piecewise representation. A globally defined architecture is trained successively on spatial subdomains or temporal slabs; selected field traces, structural information, and conservative diagnostics are then transferred to a final global correction,…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math.NA"
+  ],
+  "published": "2026-04-09",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

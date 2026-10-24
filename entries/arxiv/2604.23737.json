@@ -1,0 +1,21 @@
+{
+  "key": "2604.23737",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23737",
+  "title": "The-Hausdorff-dimension-of-the-survivor-set",
+  "authors": [
+    "Rui Kuang",
+    "Bing Li",
+    "Yuanfen Xiao"
+  ],
+  "summary": "Let $ 1<β< 2 $, the sequence $α(β)=α(β)_1α(β)_2\\dotsb $ be the quasi-greedy $ β$-expansion of $ 1 $, and $ t\\in [0,1) $ be a bifurcation parameter. The $β$-transformation is defined to be $T_β(x)=βx (mod 1) $ for $x\\in [0,1)$. The Hausdorff dimension of the survivor set $K(t)=\\{x\\in [0,1)\\colon T_β^k(x)\\not\\in (0,t), \\forall k\\geq0\\} $ is equal to $ -\\frac{\\lnλ}{\\lnβ} $ under the condition that $ \\sum_{i=k}^{\\infty}\\frac{α(β)_i }{β^i}\\geq t $ for any $ k\\geq 1 $, where $ λ\\in (0,1) $ is the smallest positive solution of the equation $\\sum_{n=1}^{\\infty}(α(β)_n-t_n)x^n=1$ with $(t_n) $ being…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS"
+  ],
+  "published": "2026-04-26",
+  "updated": "2026-04-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

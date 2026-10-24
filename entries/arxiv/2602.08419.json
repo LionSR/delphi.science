@@ -1,0 +1,21 @@
+{
+  "key": "2602.08419",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.08419",
+  "title": "Radial Müntz-Szász Networks: Neural Architectures with Learnable Power Bases for Multidimensional Singularities",
+  "authors": [
+    "Gnankan Landry Regis N'guessan",
+    "Bum Jun Kim"
+  ],
+  "summary": "Radial singular fields, such as $1/r$, $\\log r$, and crack-tip profiles, are difficult to model with current coordinate-separable neural architectures. We formally establish this result: any $C^2$ function that is both radial and additively separable must be quadratic, establishing a fundamental obstruction for coordinate-wise power-law models. Motivated by this result, we introduce Radial Müntz-Szász Networks (RMN), which represent fields as linear combinations of learnable radial powers $r^μ$, including negative exponents, together with a limit-stable log-primitive for exact $\\log r$…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-02-09",
+  "updated": "2026-03-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

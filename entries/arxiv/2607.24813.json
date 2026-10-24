@@ -1,0 +1,20 @@
+{
+  "key": "2607.24813",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.24813",
+  "title": "Parallel Model-Based Derivative-Free Optimization via Rank-Two KKT Updates",
+  "authors": [
+    "Donghan Wu",
+    "Pengcheng Xie"
+  ],
+  "summary": "Derivative-free optimization (DFO) addresses unconstrained problems $\\min_{\\x\\in\\RR^n} f(\\x)$ where $f$ is accessed only through a zeroth-order oracle. Model-based trust-region methods construct underdetermined quadratic interpolation models from $\\mathcal{O}(n)$ points and solve a KKT system to determine model parameters, costing $\\mathcal{O}(m^3)$ operations and limiting parallel scalability. It is shown that the KKT matrix for the minimum Frobenius norm updating model depends entirely on inner products of shifted coordinates. Reflecting the interpolation set across a single coordinate…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

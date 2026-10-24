@@ -1,0 +1,20 @@
+{
+  "key": "2608.18129",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.18129",
+  "title": "Simulation-Optimization of Systems of Optimizers: Exploiting the Inner Optimization's Geometry",
+  "authors": [
+    "Zhou He"
+  ],
+  "summary": "We study simulation-optimization of systems of optimizers (SOSO): agent-based simulations in which every agent solves a structured optimization - a linear program (LP), mixed-integer program, or dynamic program - at every decision epoch. Such systems arise in supply chains, electricity markets, and logistics, yet standard simulation optimization treats the simulation as a black box, discarding the inner optimization's geometry. We formalize SOSO and develop a framework that converts this geometry into computational advantage. We prove that the inner LP's optimal basis and dual variables…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.MA"
+  ],
+  "published": "2026-07-24",
+  "updated": "2026-07-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

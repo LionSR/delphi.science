@@ -1,0 +1,21 @@
+{
+  "key": "2609.21453",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.21453",
+  "title": "A Sparse Corner-Difference MILP for Minimum Square Tiling",
+  "authors": [
+    "Zhuo Yu",
+    "Yuan Wang",
+    "Zhuo Liu"
+  ],
+  "summary": "We study the problem of tiling an $N\\times N$ square with axis-aligned squares whose side lengths are integers strictly less than $N$, with the objective of minimizing the number of tiles. The standard placement-based exact-cover MILP contains $Θ(N^5)$ placement-to-cell nonzero coefficients and is also affected by the dihedral symmetry of the square domain. We introduce a Corner-Difference MILP (CD-MILP) that represents each selected square by at most four signed corner coefficients. Two-dimensional prefix reconstruction shows that the resulting constraints are equivalent to the original…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-18",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

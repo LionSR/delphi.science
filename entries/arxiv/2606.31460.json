@@ -1,0 +1,27 @@
+{
+  "key": "2606.31460",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.31460",
+  "title": "ILPU: Iterative Laplace-Based Phase Unwrapping via Bi-Level Optimization",
+  "authors": [
+    "Michael Fedders",
+    "Jakob Schattenfroh",
+    "Yanglei Wu",
+    "Noah Jaitner",
+    "Tom Meyer",
+    "Jakob Jordan",
+    "Jing Guo",
+    "Ingolf Sack",
+    "Hossein S. Aghamiry"
+  ],
+  "summary": "Phase unwrapping is an essential preprocessing step for phase-based MRI applications, including susceptibility mapping, field mapping, thermometry, and MR elastography. We present Iterative Laplace-Based Phase Unwrapping (ILPU), a bi-level optimization algorithm. In this method, a lower-level solver recovers a continuous phase increment from an incremental Poisson equation using the discrete cosine transform (DCT), while an upper-level solver refines an integer offset map through quality-guided spatial regularization and a restricted local search. This coupling enables robust unwrapping in…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-30",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

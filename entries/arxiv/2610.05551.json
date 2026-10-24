@@ -1,0 +1,19 @@
+{
+  "key": "2610.05551",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05551",
+  "title": "Failure of entropic selection for diagonal matrix completion in deep linear networks",
+  "authors": [
+    "Rodrigo Treviño"
+  ],
+  "summary": "We study the free-energy gradient flow associated with the depth-$N$ deep linear network on the space of invertible real $d\\times d$ matrices. The loss observes only the diagonal, \\[ E_d(W)=\\frac12\\sum_{i=1}^d(W_{ii}-1)^2, \\] and the regularizer is the Boltzmann entropy of the balanced factorization fiber computed by Menon and Yu. This is a natural higher-dimensional version of a matrix-completion problem posed by Menon as a test of whether entropy selects among a noncompact family of minimizers. For diagonal completion, every width $d\\geq2$, depth $N>2$, and inverse temperature $β>0$, we…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

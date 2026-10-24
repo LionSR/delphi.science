@@ -1,0 +1,21 @@
+{
+  "key": "2605.05435",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05435",
+  "title": "Active Learning for Conditional Generative Compressed Sensing",
+  "authors": [
+    "Alexander DeLise",
+    "Nick Dexter"
+  ],
+  "summary": "Generative compressed sensing uses the range of a pretrained generator as a nonlinear model for recovering structured signals from limited measurements. We study a conditional version of this problem for image recovery from subsampled Fourier measurements using prompt-conditioned generative models. Our framework separates two roles of conditioning: the prompt used to design the sampling distribution and the prompt used to define the recovery model. For ReLU and Lipschitz conditional generators, we prove stable recovery bounds showing that prompt-matched Christoffel sampling retains the same…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

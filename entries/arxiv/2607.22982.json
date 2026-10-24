@@ -1,0 +1,22 @@
+{
+  "key": "2607.22982",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.22982",
+  "title": "Finite-Time Analysis of the Natural Policy Gradient in Finite-Horizon Markov Decision Processes",
+  "authors": [
+    "Asha Barua",
+    "Sajad Khodadadian"
+  ],
+  "summary": "Natural Policy Gradient (NPG) is a well-established Reinforcement Learning algorithm that underlies widely used methods such as Trust Region Policy Optimization and Proximal Policy Optimization, both of which have demonstrated strong empirical success. In this paper, we study exact NPG in finite-horizon Markov Decision Processes with known dynamics and horizon-dependent transition kernels. We provide the first finite-time convergence guarantees for this algorithm in this setting, for which we consider both constant and increasing step size regimes. With a constant step size $η_t=η$, we prove…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-07-25",
+  "updated": "2026-07-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

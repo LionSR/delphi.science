@@ -1,0 +1,25 @@
+{
+  "key": "2608.14506",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.14506",
+  "title": "Nodal discontinuous Galerkin methods for non-ideal equations of state: pressure equilibrium preservation and entropy correction",
+  "authors": [
+    "Jesse CHan",
+    "Hendrik Ranocha",
+    "Raymond Park",
+    "Joshua Lampert",
+    "Eric Ching",
+    "Ayaboe Edoh"
+  ],
+  "summary": "Structure-preserving discontinuous Galerkin (DG) methods typically improve the robustness of high order simulations of real fluids. In addition to conservation, key structures include the preservation of pressure equilibrium and satisfaction of at least one entropy inequality. In this work, we investigate conservative discretizations using exactly pressure equilibrium conserving (EPEC) and approximately pressure equilibrium conserving (APEC) flux differencing DG formulations, as well as entropy stable formulations through the use of minimally dissipative corrections for non-ideal equations…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.CE"
+  ],
+  "published": "2026-08-14",
+  "updated": "2026-08-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2602.07237",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.07237",
+  "title": "LCM decomposition of linear differential operators in positive characteristic",
+  "authors": [
+    "Raphaël Pagès"
+  ],
+  "summary": "We present an algorithm to compute $\\mathrm{LCLM}$-decompositions for linear differentials operators with coefficients in the rational function field of characteristic $p$, $\\mathbb{F}_{p^n}(t)$. We show that for an operator $L$ of order $r$ with coefficients of degree $d$, it finishes in polynomial time in $r$, $d$ and $p$. This algorithm proceeds in three steps. We begin by showing that the ''shape'' of the factorisation of $L$ can be easily obtained from the Frobenius normal form of its $p$-curvature, which can be efficiently computed an algorithm from Bostan, Caruso and Schost. Using…",
+  "domain": "cs.SC",
+  "tags": [
+    "cs.SC",
+    "math.RA"
+  ],
+  "published": "2026-02-06",
+  "updated": "2026-02-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

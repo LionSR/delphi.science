@@ -1,0 +1,24 @@
+{
+  "key": "2606.31535",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.31535",
+  "title": "PEERS: A Parallel and Exact Effective Resistance Solver via Implicit Inversion and Augmented Symbolic Analysis",
+  "authors": [
+    "Baiyu Chen",
+    "Lin Gan",
+    "Guangwen Yang",
+    "Wenjian Yu"
+  ],
+  "summary": "High-precision effective resistance computation is a cornerstone of Electronic Design Automation (EDA) sign-off, yet it remains a fundamental bottleneck in large-scale power grid analysis, spectral sparsification, and circuit reliability. Existing approaches face a prohibitive \"precision-memory impasse\": approximate methods lack the stringent accuracy required for high-stakes industrial sign-off, while exact methods either suffer from redundant query overheads or trigger $O(n^2)$ memory explosions. To resolve this, we propose PEERS, a Parallel and Exact Effective Resistance Solver powered by…",
+  "domain": "cs.AR",
+  "tags": [
+    "cs.AR",
+    "cs.DC",
+    "math.NA"
+  ],
+  "published": "2026-06-30",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

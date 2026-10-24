@@ -1,0 +1,20 @@
+{
+  "key": "2609.01415",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.01415",
+  "title": "Accelerated primal-dual dynamics and algorithms for convex optimization with nonlinear inequality constraints",
+  "authors": [
+    "Xin He"
+  ],
+  "summary": "We consider convex optimization with nonlinear inequality constraints and develop a primal-dual multiplier framework that is consistent in continuous and discrete time. We first propose continuous-time dynamics with Nesterov-type vanishing damping $α/t$, together with compatible extrapolations of the dual variable and the nonlinear constraint mapping. Under convexity assumptions and $α\\geq3$, we establish $\\mathcal O(t^{-2})$ convergence rates for both nonlinear feasibility and the objective residual. In the noncritical regime $α>3$, with an admissible choice of the extrapolation parameter,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-09-01",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

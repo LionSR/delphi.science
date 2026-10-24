@@ -1,0 +1,22 @@
+{
+  "key": "2609.09361",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.09361",
+  "title": "Communication-efficient ADMM over Hierarchical Networks",
+  "authors": [
+    "Binh Nguyen",
+    "Shuangqing Wei",
+    "Truong X. Nghiem"
+  ],
+  "summary": "This paper develops a novel distributed optimization algorithm based on the Alternating Direction Method of Multipliers (ADMM) to solve hierarchical optimization problems over tree-structured networks, termed hierarchical ADMM (hADMM), with a particular focus on enhancing communication efficiency across the network. By rearranging the augmented Lagrangian to establish a query-response communication mechanism between nodes that explicitly exploits the hierarchical tree structure, the proposed algorithm significantly reduces communication costs compared to existing ADMM-based methods for…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

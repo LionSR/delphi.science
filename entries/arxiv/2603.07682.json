@@ -1,0 +1,23 @@
+{
+  "key": "2603.07682",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.07682",
+  "title": "Heterogeneous Stochastic Momentum ADMM for Distributed Nonconvex Composite Optimization",
+  "authors": [
+    "Yangming Zhang",
+    "Yongyang Xiong",
+    "Jinming Xu",
+    "Keyou You",
+    "Yang Shi"
+  ],
+  "summary": "This paper investigates the distributed stochastic nonconvex and nonsmooth composite optimization problem. Existing stochastic typically rely on uniform step size strictly bounded by global network parameters, such as the maximum node degree or spectral radius. This dependency creates a severe performance bottleneck, particularly in heterogeneous network topologies where the step size must be conservatively reduced to ensure stability. To overcome this limitation, we propose a novel Heterogeneous Stochastic Momentum Alternating Direction Method of Multipliers (HSM-ADMM). By integrating a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-08",
+  "updated": "2026-03-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

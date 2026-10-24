@@ -1,0 +1,23 @@
+{
+  "key": "2604.05518",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.05518",
+  "title": "Optimal Centered Active Excitation in Linear System Identification",
+  "authors": [
+    "Kaito Ito",
+    "Alexandre Proutiere"
+  ],
+  "summary": "We propose an active learning algorithm for linear system identification with optimal centered noise excitation. Notably, our algorithm, based on ordinary least squares and semidefinite programming, attains the minimal sample complexity while allowing for efficient computation of an estimate of a system matrix. More specifically, we first establish lower bounds of the sample complexity for any active learning algorithm to attain the prescribed accuracy and confidence levels. Next, we derive a sample complexity upper bound of the proposed algorithm, which matches the lower bound for any…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "eess.SY",
+    "stat.ML"
+  ],
+  "published": "2026-04-07",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2606.05599",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.05599",
+  "title": "Mitigating the Curse of Dimensionality in Uniform Convergence of Deep Neural Networks via Smooth Activations",
+  "authors": [
+    "Yizhe Ding",
+    "Runze Li",
+    "Jia Liu",
+    "Lingzhou Xue"
+  ],
+  "summary": "This paper establishes a theoretical framework for the uniform convergence of smoothly activated deep neural network (DNN) estimators. While standard ReLU networks achieve minimax-optimal rates in the $L^2(P)$ norm for various nonparametric regression tasks, we establish a theoretical lower bound demonstrating that least-squares ReLU estimators can suffer from the curse of dimensionality in their uniform convergence behavior. Motivated by the need for reliable uniform guarantees in downstream tasks requiring worst-case reliability, we address this limitation by analyzing smoothly activated…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.ST",
+    "stat.ME",
+    "stat.ML"
+  ],
+  "published": "2026-06-04",
+  "updated": "2026-06-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

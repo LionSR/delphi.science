@@ -1,0 +1,23 @@
+{
+  "key": "2608.22663",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.22663",
+  "title": "Average-Radius List-Decodability of Random Linear Codes",
+  "authors": [
+    "Venkatesan Guruswami",
+    "Shilun Li",
+    "Mihir Singhal"
+  ],
+  "summary": "We prove that for every prime power $q$ and every $p \\in (0, 1-1/q)$, a random $\\mathbb{F}_q$-linear code of rate $1 - h_q(p) - ε$ is $(p, C_{p,q}/ε)$-average-radius list-decodable with probability at least $1 - q^{-Ω(n)}$, i.e., for every center $y \\in \\mathbb{F}_q^n$, the $C_{p,q}/ε$ codewords closest to $y$ have average fractional Hamming distance at least $p$ from $y$. This extends a similar result for (standard) list-decoding due to Guruswami, Håstad, and Kopparty (2010) to the stronger average-radius guarantee, with the same $O(1/ε)$ list size. For average-radius list-decoding, such a…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "cs.CC",
+    "math.CO"
+  ],
+  "published": "2026-08-23",
+  "updated": "2026-08-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2608.03544",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.03544",
+  "title": "Identifiability of phylogenetic networks and quintet concordance factors",
+  "authors": [
+    "Joseph Cummings",
+    "Maize Curiel",
+    "Bryan Currie",
+    "Bryson Kagy",
+    "Udani Ranasinghe",
+    "John A. Rhodes"
+  ],
+  "summary": "Several statistical methods of phylogenetic network inference and testing for non-tree-like relationships are based on assessing genomic data through quartet Concordance Factors, the frequencies of 4-taxon topological relationships on gene trees. While such an approach obviates making several undesirable modeling assumptions, it also results in non-identifiability issues for network roots and for small cycles. In this work, an algorithm and accompanying Macaulay2 implementation are provided for computing $n$-tet Concordance Factors on any phylogenetic network. We employ this algorithm on…",
+  "domain": "q-bio.PE",
+  "tags": [
+    "q-bio.PE",
+    "math.AG"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

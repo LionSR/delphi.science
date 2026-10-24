@@ -1,0 +1,22 @@
+{
+  "key": "2609.15642",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.15642",
+  "title": "Protected tails and polynomial-time enumeration of permutations avoiding a direct sum of an increasing pattern and 231",
+  "authors": [
+    "Henning Arnór Skeggi Úlfarsson"
+  ],
+  "summary": "We give an algorithm counting the permutations that avoid a fixed pattern of the following form: the direct sum of an increasing pattern and 231. The first members of the family are 1342 and 12453. For each member the algorithm uses polynomially many operations and stored integers, with degrees that grow linearly in the length of the pattern. It comes from a recurrence that reads a permutation from left to right and records the constraints that the letters read so far impose on those still unread. This recurrence has exponentially many states, but part of each state is protected: later steps…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM",
+    "cs.DS",
+    "cs.LO"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2609.38395",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38395",
+  "title": "Unified Optimality Conditions for Stochastic Optimal Control in the Rough Path and Itô Frameworks",
+  "authors": [
+    "Thomas Lew"
+  ],
+  "summary": "Stochastic differential equations (SDEs) can be studied via Itô calculus and rough path theory. For stochastic optimal control, these two frameworks give distinct Pontryagin Maximum Principle (PMP) optimality conditions with forward-backward SDEs (FBSDEs) or rough differential equations. We show that the adjoint equations of the Itô and rough PMPs are connected via the conditional expectation $p_t^{\\text{Itô}}=\\mathbb{E}[p_t^{\\text{rough}} \\mid \\mathcal{F}_t]$, where $\\mathcal{F}_t$ represents information available at time $t$. First, we derive a rough stochastic PMP for problems with…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "cs.RO",
+    "eess.SY",
+    "math.PR"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

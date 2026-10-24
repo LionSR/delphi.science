@@ -1,0 +1,20 @@
+{
+  "key": "2607.26235",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.26235",
+  "title": "Inertial Primal Dual Dynamics with Hessian-driven Damping for Saddle Point Problems",
+  "authors": [
+    "Zepeng Wang",
+    "Juan Peypouquet"
+  ],
+  "summary": "Featuring Hessian-driven damping, two inertial primal dual dynamical systems are proposed for solving smooth saddle point problems with bilinear coupling. For convex-concave functions, we establish a convergence rate $\\mathcal{O}\\left( \\frac{1}{t^2} \\right)$ for the primal dual gap; for strongly convex-strongly concave functions, we obtain an asymptotic rate $\\mathcal{O}\\left( \\frac{1}{t^{α-1}} \\right)$ ($α\\ge 3$ is the damping parameter) without knowledge of the strong convexity parameters, and an accelerated linear convergence rate when the strong convexity parameters are known. As an…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-28",
+  "updated": "2026-07-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

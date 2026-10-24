@@ -1,0 +1,22 @@
+{
+  "key": "2604.26383",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26383",
+  "title": "Drift-Free Conservative Dynamics from Quantized Interaction Rules",
+  "authors": [
+    "Park Junhu",
+    "Youngsoo Ha",
+    "Myungjoo Kang"
+  ],
+  "summary": "Conservation laws are conventionally discretized through floating-point flux evaluation, with invariants obtained by cancellation of approximate interface contributions and admissible weak solutions selected by reconstruction and Riemann solvers. Here we introduce an operator-level formulation in which conservative dynamics is realized as an exact discrete interaction rule on a quantized state space. The update is defined by an antisymmetric integer-transfer operator, which enforces conservation exactly at the arithmetic level and eliminates round-off drift from the primitive evolution. For…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-05-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

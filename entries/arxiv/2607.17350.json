@@ -1,0 +1,21 @@
+{
+  "key": "2607.17350",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.17350",
+  "title": "Black Box Recognition of the Suzuki groups",
+  "authors": [
+    "John N. Bray",
+    "Henrik Bäärnhielm"
+  ],
+  "summary": "We present a black box algorithm that constructs standard generators for the Suzuki groups $Sz(q)$, where $q = 2^{2m+1}$ for some $m > 0$. The algorithm is one-sided Monte Carlo, with no false positives. We also present a black box algorithm that performs constructive membership testing in $Sz(q)$, and writes an element as a straight line program in the standard generators. Finally, we give a presentation for $Sz(q)$ that is efficient to verify. The algorithms have been implemented in the computer algebra system Magma.",
+  "domain": "math.GR",
+  "tags": [
+    "math.GR",
+    "cs.DS"
+  ],
+  "published": "2026-07-19",
+  "updated": "2026-07-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

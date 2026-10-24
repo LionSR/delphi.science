@@ -1,0 +1,20 @@
+{
+  "key": "2608.02913",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.02913",
+  "title": "Fully discrete analysis of pressure-robust enriched Galerkin methods for the time-dependent Stokes equations",
+  "authors": [
+    "Seulip Lee",
+    "Lin Mu"
+  ],
+  "summary": "This paper presents a fully discrete analysis of pressure-robust enriched Galerkin (EG) methods for the time-dependent Stokes equations. The spatial discretization employs a velocity reconstruction operator that preserves the continuous component of the EG space while mapping its enriched discontinuous component into the lowest-order Raviart-Thomas ($\\mathcal{R}T_0$) subspace of $H(\\mathrm{div})$, ensuring strict local mass conservation and pressure-robustness. Fully discrete schemes are constructed using the backward Euler and Crank-Nicolson methods, with the reconstruction incorporated…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-03",
+  "updated": "2026-08-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

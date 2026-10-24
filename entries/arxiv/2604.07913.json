@@ -1,0 +1,23 @@
+{
+  "key": "2604.07913",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.07913",
+  "title": "Unified Precision-Guaranteed Stopping Rules for Contextual Learning",
+  "authors": [
+    "Mingrui Ding",
+    "Qiuhong Zhao",
+    "Siyang Gao",
+    "Jing Dong"
+  ],
+  "summary": "Contextual learning seeks to learn a decision policy that maps an individual's characteristics to an action through data collection. In operations management, such data may come from various sources, and a central question is when data collection can stop while still guaranteeing that the learned policy is sufficiently accurate. We study this question under two precision criteria: a context-wise criterion and an aggregate policy-value criterion. We develop unified stopping rules for contextual learning with unknown sampling variances in both unstructured and structured linear settings. Our…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-04-09",
+  "updated": "2026-04-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

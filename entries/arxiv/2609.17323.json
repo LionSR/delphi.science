@@ -1,0 +1,21 @@
+{
+  "key": "2609.17323",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.17323",
+  "title": "A derivative-free framework for capturing macroscopic behavior of incompressible turbulent flows",
+  "authors": [
+    "Jihun Han",
+    "Yoonsang Lee"
+  ],
+  "summary": "The derivative-free loss method (DFLM) is a mesh-free neural network approach for solving partial differential equations by simulating stochastic walkers rather than computing derivatives directly. Although DFLM has previously been applied to the Navier--Stokes equations, extending it to turbulent flows reveals two limitations of its simplest implementation. The walkers do not account for the swirling, directionally stretching motion of the flow, and randomly sampling the walkers used to evaluate the target introduces noise into the learned solution. We address both limitations with an…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math.NA"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

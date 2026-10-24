@@ -1,0 +1,25 @@
+{
+  "key": "2609.18416",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.18416",
+  "title": "Gradient Descent with Stochastic Subspaces via Persistence of Memory",
+  "authors": [
+    "Subhroshekhar Ghosh",
+    "Clement Z. Q. Ng",
+    "Pierre-Louis Poirion",
+    "Akiko Takeda"
+  ],
+  "summary": "Stochastic subspace methods have gained popularity as gradient descent based techniques for large scale optimisation problems, especially in distributed settings. In this paper, we introduce the technique of \"persistence of memory\" to greatly extend and improve the random subspace methods. To this end, we leverage a vector that is only weakly correlated with the gradient in order to provide a guiding structure to the generative process of the random subspace along which the descent is going to take place. This guidance vector may be fixed for a large number of iterations, only to be…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "eess.SP",
+    "stat.ML"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

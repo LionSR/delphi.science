@@ -1,0 +1,22 @@
+{
+  "key": "2605.27172",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.27172",
+  "title": "Convergence Rates of Ordering, Testing and Estimation Procedures for Graphons With Fast Boundary Decay Rates",
+  "authors": [
+    "Jeannette Janssen",
+    "Na Lin",
+    "Aaron Smith"
+  ],
+  "summary": "In latent-position random graph models (LPMs), latent vertex positions $U_{1},\\ldots,U_{n}$ are sampled from some distribution on a latent space $Ω$, then edges of an observed graph $G = ([n],E)$ are sampled with some probability $\\mathbb{P}[(i,j) \\in E ]=w(U_i,U_j)$ that depends on the unobserved latent positions. LPMs are ubiquitous in the statistical analysis of networks, offering models that have good empirical performance, strong theoretical guarantees, and tractable algorithms. The special case $Ω= [0,1]$ is important, as it corresponds to graphs with temporal or preference-based…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "math.PR"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

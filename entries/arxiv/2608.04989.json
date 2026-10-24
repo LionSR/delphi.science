@@ -1,0 +1,21 @@
+{
+  "key": "2608.04989",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.04989",
+  "title": "Data generated internal solutions for the plasma wave equation: error bounds and numerical experiments in two dimensions",
+  "authors": [
+    "Vladimir Druskin",
+    "Shari Moskow",
+    "Mikhail Zaslavsky"
+  ],
+  "summary": "We consider the computation of internal solutions for a time domain plasma wave equation with an unknown potential $q$ from boundary response data. The internal solutions are computed by transforming known background snapshots using the Cholesky decomposition of the data-driven Gramian, or mass matrix. It was recently shown that in one dimension these data generated internal solutions converge in $L^2$ at order $\\sqrtτ$ for well chosen initial waves. Here we study the internal solution reconstruction in two dimensions, where a multiple input/multiple output (MIMO) setup and a block Gramian…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-05",
+  "updated": "2026-08-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

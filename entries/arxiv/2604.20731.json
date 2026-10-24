@@ -1,0 +1,23 @@
+{
+  "key": "2604.20731",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.20731",
+  "title": "CO$_2$ sequestration hybrid solver using isogeometric alternating-directions and collocation-based robust variational physics informed neural networks (IGA-ADS-CRVPINN)",
+  "authors": [
+    "Askold Vilkha",
+    "Tomasz Służalec",
+    "Marcin Łoś",
+    "Maciej Paszyński"
+  ],
+  "summary": "This paper presents the hybrid solver for a $CO_2$ sequestration problem. The solver uses the IGA-ADS (IsoGeometric Analysis Alternating Directions solver) to compute the saturation scalar field update using the explicit method, and CRVPINN (Collocation-based Robust Variational Physics Informed Neural Networks solver) to compute the pressure scalar field. The study focuses on simulating the physical behavior of $CO_2$ in porous structures, excluding chemical reactions. The mathematical model is based on Darcy's Law. The CRVPINN is pretrained on the initial pressure configuration, and the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.NE"
+  ],
+  "published": "2026-04-22",
+  "updated": "2026-04-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

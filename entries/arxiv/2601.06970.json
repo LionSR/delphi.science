@@ -1,0 +1,21 @@
+{
+  "key": "2601.06970",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.06970",
+  "title": "Splitting Proximal Point Algorithms for the Sum of Prox-Convex Functions",
+  "authors": [
+    "Jose de Brito",
+    "Felipe Lara",
+    "Tran Van Thang"
+  ],
+  "summary": "This paper addresses the minimization of a finite sum of prox-convex functions under Lipschitz continuity of each component. We propose two variants of the splitting proximal point algorithms proposed in \\cite{Bacak,Bertsekas}: one deterministic with a fixed update order, and one stochastic with random sampling, and we extend them from convex to prox-convex functions. We prove global convergence for both methods under standard stepsize a\\-ssump\\-tions, with almost sure convergence for the stochastic variant via supermartingale theory. Numerical experiments with nonconvex quadratic functions…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-11",
+  "updated": "2026-01-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

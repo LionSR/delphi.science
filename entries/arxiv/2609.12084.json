@@ -1,0 +1,21 @@
+{
+  "key": "2609.12084",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.12084",
+  "title": "Lyapunov Functions and $R$-Linear Convergence for Quadratic Barzilai-Borwein Dynamics",
+  "authors": [
+    "Shutai Yang",
+    "Ya-xiang Yuan"
+  ],
+  "summary": "The Barzilai--Borwein (BB) method is $R$-linearly convergent on strongly convex quadratics, although neither the objective value nor the gradient norm is generally monotone. We construct an explicit current-point Lyapunov function for the quadratic dynamics after the warm-up step, assuming that both endpoints of the initial active spectrum survive this step. If $a<b$ are these endpoints and $P_a,P_b$ are the corresponding spectral projectors, then \\[ \\overline{f}(x) :=\\lVert P_a\\nabla f(x)\\rVert^{\\frac{2b}{a+b}} \\lVert P_b\\nabla f(x)\\rVert^{\\frac{2a}{a+b}} \\] satisfies, for BB1, BB2, and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

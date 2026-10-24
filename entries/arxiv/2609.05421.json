@@ -1,0 +1,20 @@
+{
+  "key": "2609.05421",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.05421",
+  "title": "Toward a Formally Verified Optimality Certificate for OGR(29): A SAT-Encoding Methods Note with Small-Case Demos",
+  "authors": [
+    "Tong Niu"
+  ],
+  "summary": "A Golomb ruler of order~$n$ is an integer set $\\{a_0<a_1<\\cdots<a_{n-1}\\}$ whose $\\binom{n}{2}$ pairwise differences $a_j-a_i$ ($i<j$) are all distinct. The optimal Golomb ruler problem asks for $\\mathrm{OGR}(n)=\\min\\{a_{n-1}-a_0\\}$ and is a classical combinatorial benchmark. The values $\\mathrm{OGR}(2),\\dots,\\mathrm{OGR}(28)$ are settled through distributed volunteer search (the Distributed.net OGR project); $\\mathrm{OGR}(29)$ is in active computation, with verification expected in late 2026 or early 2027. The recent upper bound $\\mathrm{OGR}(29)\\le 757$ of Lee, Park, and Kim…",
+  "domain": "cs.DC",
+  "tags": [
+    "cs.DC",
+    "math.CO"
+  ],
+  "published": "2026-05-20",
+  "updated": "2026-05-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

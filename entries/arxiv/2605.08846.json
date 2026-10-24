@@ -1,0 +1,19 @@
+{
+  "key": "2605.08846",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.08846",
+  "title": "Rational Base Descent: A Deterministic Algorithm for Factoring Structured Semiprimes",
+  "authors": [
+    "Sam Blake"
+  ],
+  "summary": "We present a special-purpose algorithm for factoring semiprimes $N = pq$ in which one prime factor satisfies $p \\approx c\\,(a/b)^n$ for positive integers $a, b, c, n$ with $a > b$ and $\\gcd(a,b) = 1$. Given the correct parameters $(a, b)$, the algorithm isolates a factor in ${O}(\\log^3 N)$ time when $a/b$ is bounded away from $1$, and the cofactor $q$ is unconstrained beyond a mild size bound. We describe a search strategy over $(a, b)$ using primitivity filters, give a complexity analysis showing that the method poses no threat to balanced RSA semiprimes, and provide a gmpy2-based Python…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-05-09",
+  "updated": "2026-05-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

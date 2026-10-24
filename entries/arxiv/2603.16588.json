@@ -1,0 +1,22 @@
+{
+  "key": "2603.16588",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.16588",
+  "title": "OT-DETECT: Optimal Transport-Driven Attack Detection in Cyber-Physical Systems",
+  "authors": [
+    "Souvik Das",
+    "Siddhartha Ganguly"
+  ],
+  "summary": "This letter presents an optimal-transport (OT)-driven, distributionally robust attack detection algorithm, OT-DETECT, for cyber-physical systems (CPS) modeled as partially observed linear stochastic systems. The underlying detection problem is formulated as a minmax optimization problem using 1-Wasserstein ambiguity sets constructed from observer residuals under both the nominal (attack-free) and attacked regimes, and show that the minmax detection problem can be reduced to a finite-dimensional linear program for computing the worst-case distribution (WCD). Off-support residuals are handled…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SP",
+    "eess.SY"
+  ],
+  "published": "2026-03-17",
+  "updated": "2026-07-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

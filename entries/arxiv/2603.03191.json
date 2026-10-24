@@ -1,0 +1,22 @@
+{
+  "key": "2603.03191",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.03191",
+  "title": "A Covering Framework for Offline POMDPs Learning using Belief Space Metric",
+  "authors": [
+    "Youheng Zhu",
+    "Yiping Lu"
+  ],
+  "summary": "In off policy evaluation (OPE) for partially observable Markov decision processes (POMDPs), an agent must infer hidden states from past observations, which exacerbates both the curse of horizon and the curse of memory in existing OPE methods. This paper introduces a novel covering analysis framework that exploits the intrinsic metric structure of the belief space (distributions over latent states) to relax traditional coverage assumptions. By assuming value relevant functions are Lipschitz continuous in the belief space, we derive error bounds that mitigate exponential blow ups in horizon…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-03-03",
+  "updated": "2026-03-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

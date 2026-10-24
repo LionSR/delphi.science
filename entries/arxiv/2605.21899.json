@@ -1,0 +1,24 @@
+{
+  "key": "2605.21899",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.21899",
+  "title": "Mad Props: Parallelism in Markov Chain Monte Carlo Through the Lens of the Infinite Proposal Limit",
+  "authors": [
+    "Nathan E. Glatt-Holtz",
+    "Andrew J. Holbrook",
+    "Justin A. Krometis",
+    "Cecilia F. Mondaini"
+  ],
+  "summary": "Multiproposal MCMC (MP-MCMC) algorithms use clouds of proposals to efficiently traverse state spaces and overcome complex target geometries. While MCMC methods are embarrassingly parallel by nature, the non-trivial forms of parallelism provided by the MP-MCMC formalism sometimes leads to significant improvements over a naive approach. Here, one important tuning parameter is the number of proposals p used by a single MP-MCMC iteration. While a number of computational strategies have been proposed to efficiently leverage large numbers of proposals within the MP-MCMC paradigm, much remains…",
+  "domain": "stat.CO",
+  "tags": [
+    "stat.CO",
+    "math.PR",
+    "math.ST"
+  ],
+  "published": "2026-05-21",
+  "updated": "2026-05-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

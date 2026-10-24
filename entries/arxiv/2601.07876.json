@@ -1,0 +1,21 @@
+{
+  "key": "2601.07876",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.07876",
+  "title": "NOVAK: Unified adaptive optimizer for deep neural networks",
+  "authors": [
+    "Sergii Kavun"
+  ],
+  "summary": "This work introduces NOVAK, a modular gradient-based optimization algorithm that integrates adaptive moment estimation, rectified learning-rate scheduling, decoupled weight regularization, multiple variants of Nesterov momentum, and lookahead synchronization into a unified, performance-oriented framework. NOVAK adopts a dual-mode architecture consisting of a streamlined fast path designed for production. The optimizer employs custom CUDA kernels that deliver substantial speedups (3-5 for critical operations) while preserving numerical stability under standard stochastic-optimization…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-01-11",
+  "updated": "2026-01-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

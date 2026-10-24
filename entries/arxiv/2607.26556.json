@@ -1,0 +1,21 @@
+{
+  "key": "2607.26556",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.26556",
+  "title": "Advanced EEG Source Models from the Perspective of FEM and Inverse Solutions",
+  "authors": [
+    "Santtu Söderholm",
+    "Joonas Lahtinen",
+    "Sampsa Pursiainen"
+  ],
+  "summary": "In this study, we compare forward solutions computed with finite element methods in Zeffiro Interface and DUNEuro, using the different source models they provided. We compared two of the source models from DUNEuro, called Whitney basis and Local subtraction, and the divergence-conforming model of Zeffiro Interface. For source estimation, we applied sparsity-promoting standardized hierarchical adaptive L1 regression (SHAL1R), standardized Kalman filtering (SKF), classical sLORETA, and dipole scanning. Analyses include Earth Mover's Distance, depth bias scatter plots, and qualitative…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-07-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

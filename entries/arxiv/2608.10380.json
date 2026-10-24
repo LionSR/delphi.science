@@ -1,0 +1,24 @@
+{
+  "key": "2608.10380",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.10380",
+  "title": "Multiway $f$-Cut is fixed-parameter tractable",
+  "authors": [
+    "Tony Huynh",
+    "Eun Jung Kim",
+    "Sang-il Oum",
+    "Roohani Sharma",
+    "Marek Sokołowski"
+  ],
+  "summary": "A connectivity function on a finite set $E$ is a function $f\\colon 2^E\\to\\mathbb Z$ that is submodular and symmetric, with $f(\\varnothing)=0$. Given a connectivity function $f$ via a value oracle, terminals $t_1,\\ldots,t_r\\in E$, and an integer $k$, the Multiway $f$-Cut problem asks whether $E$ has a partition $(P_1,\\ldots,P_r)$ with $t_i\\in P_i$ for every $i$ and $\\sum_{i=1}^r f(P_i)\\le k$. We prove that Multiway $f$-Cut is fixed-parameter tractable parameterized by $k$. Cut functions of graphs are connectivity functions, so as a special case we recover the classical result that Edge…",
+  "domain": "cs.DM",
+  "tags": [
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-08-11",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2609.24225",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.24225",
+  "title": "The Price of Covertness: Dual-Control Navigation in Uncertain Flows under Adversarial Sensing",
+  "authors": [
+    "Ruimeng Hu",
+    "Botao Jin",
+    "Xu Yang"
+  ],
+  "summary": "Covert navigation in an uncertain flow couples motion planning with information acquisition. A vehicle must estimate the local flow to navigate, while estimation error induces corrective maneuvers that increase statistical distinguishability, or leakage, and hence the vehicle's detectability. We model this coupling by augmenting position with the estimation-error variance, whose evolution depends on the route through the local information rate. A small-error expansion shows that estimation uncertainty contributes a leading-order correction to the expected detectability rate. The resulting…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-21",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

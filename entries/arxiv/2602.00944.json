@@ -1,0 +1,19 @@
+{
+  "key": "2602.00944",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.00944",
+  "title": "Monte-Carlo Irreducibility and Imprimitivity Detection of Polynomials over $\\mathbb{Q}$",
+  "authors": [
+    "Igor Rivin"
+  ],
+  "summary": "We study fast Monte-Carlo methods for testing irreducibility and detecting arithmetic imprimitivity of polynomials over $\\mathbb{Q}$. Building on the subset-sum criterion of Pemantle-Peres-Rivin, we develop a probabilistic irreducibility test whose expected running time, measured in the number of primes examined, is logarithmic in the degree for generic inputs. Unlike the standard modular irreducibility test, the method aggregates information from modular factorizations rather than discarding unsuccessful trials. We show that failure of this test, when combined with a standard modular…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-02-01",
+  "updated": "2026-02-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

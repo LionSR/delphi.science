@@ -1,0 +1,22 @@
+{
+  "key": "2609.37917",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.37917",
+  "title": "Search Dimension in Unlabeled Projection Pursuit: A Scaling Law for Subspace Restriction",
+  "authors": [
+    "Rares Dimitrie Grozavescu",
+    "Mark Girolami"
+  ],
+  "summary": "Projection pursuit searches for a direction along which the data look least Gaussian. When the observation space contains a large Gaussian complement, the empirical objective can be minimized by a direction that carries no signal, with empirical kurtosis as low as at the truth. Sample splitting exposes rather than repairs this failure. Appending coordinates independent of the latent regime degrades the search while leaving Bayes recoverability unchanged. Restricting the search to the column space of a known forward operator removes the failure exactly on the negative-kurtosis branch.…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

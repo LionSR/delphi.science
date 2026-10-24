@@ -1,0 +1,22 @@
+{
+  "key": "2608.28949",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.28949",
+  "title": "The information geometry of product-reference discrete diffusion: Interaction growth complexity and optimal scheduling",
+  "authors": [
+    "Martin J. Wainwright"
+  ],
+  "summary": "We study a class of product-reference diffusion algorithms for sampling from a discrete distribution. We show that their sampling performance can be characterized using a path-based measure of data geometry that we call the interaction growth complexity (IGC). We show that a bivariate IGC kernel gives an exact representation of both the KL discretization error and a simple one-step upper bound. The simpler univariate IGC density can be used to study the effect of stepsize choices on the iteration complexity required to obtain $ε$-accurate samples in KL divergence. Samplers that traverse the…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.AI",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-08-28",
+  "updated": "2026-08-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

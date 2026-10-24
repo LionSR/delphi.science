@@ -1,0 +1,23 @@
+{
+  "key": "2609.20520",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20520",
+  "title": "Sharp spectral norm concentration and regularization of sparse random tensors",
+  "authors": [
+    "Zhixin Zhou",
+    "Yizhe Zhu"
+  ],
+  "summary": "We prove sharp spectral-norm bounds and construct a mean-fitting regularization procedure for sparse random tensors of fixed order $k$. For an $n\\times\\cdots\\times n$ tensor with independentBernoulli$(p)$ entries, the centered norm is $O(\\sqrt{np})$ with polynomially high probability whenever $np\\ge c\\log n$. This removes the logarithmic loss in Zhou and Zhu (2021). We also determine the expected centered norm at every sparsity level: for every $0<p\\le1/2$, it has order $\\min\\{n^kp,\\sqrt{d_{\\mathrm{eff}}}\\}$, where $d_{\\mathrm{eff}}$ is an effective degree accounting for unusually large…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.CO",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

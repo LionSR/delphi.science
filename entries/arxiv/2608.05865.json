@@ -1,0 +1,20 @@
+{
+  "key": "2608.05865",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.05865",
+  "title": "Rothe time discretization and weak solutions for a cutoff Westervelt system",
+  "authors": [
+    "Marvin Fritz"
+  ],
+  "summary": "We study a fully implicit Rothe time discretization for a cutoff first-order formulation of the Westervelt equation. The key ingredients are the enthalpy variable and the primitive mobility variable, which turn each nonlinear time step into a uniformly monotone elliptic problem and avoid higher-order energy estimates and inverse inequalities. For every time step, the discrete problem reduces to a monotone elliptic equation, which yields well-posedness of the Rothe scheme by the Browder-Minty theorem. We derive a discrete energy inequality, establish compactness for the transformed variable…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.AP"
+  ],
+  "published": "2026-08-06",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

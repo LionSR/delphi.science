@@ -1,0 +1,20 @@
+{
+  "key": "2605.03760",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.03760",
+  "title": "Learning Dominant States in Elementary Resource Constrained Shortest Path Problems",
+  "authors": [
+    "Saverio Basso",
+    "Matteo Salani"
+  ],
+  "summary": "In this work, we investigate whether machine learning can be leveraged to identify promising states in dynamic programming algorithms, focusing on Elementary Resource Constrained Shortest Path Problems (ERCSPP). More in detail, we solved 41 single resource instances from SPPRCLIB using iterative relaxation techniques through the PathWyse library, systematically collecting all generated states (i.e. labels). We designed ad-hoc features computable in constant time and constructed two datasets: one containing all generated labels (G) and another with only those inserted into data pools (I),…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-05-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

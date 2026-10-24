@@ -1,0 +1,21 @@
+{
+  "key": "2605.16624",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.16624",
+  "title": "Long-time stability for nonlinear Maryland models",
+  "authors": [
+    "Ruijie Cui",
+    "Zhiyan Zhao"
+  ],
+  "summary": "For the $d-$dimensional nonlinear Maryland model \\begin{equation}\\label{eq-abs} \\ri\\partial_t q_n=\\tanπ(n\\cdot\\varpi+x)q_n+ε(Δq)_n+|q_n|^2q_n,\\quad n\\in{\\Z^d}, \\end{equation} with $d\\in\\N^*$, $ε\\in \\R$ and $\\varpi\\in\\R^d$ satisfying a suitable Diophantine condition, we establish polynomial long-time stability of polynomially weighted $\\ell^2$-norm $$\\|q(t)\\|_s:=\\left(\\sum_{n\\in{\\Z^d}}|q_n|^2 (1+|n|^2)^{s}\\right)^{\\frac{1}{2}},\\quad s>0. $$ More precisely, given any $M_*\\in\\N^*$, for phase parameters $x$ belonging to an almost full-measure subset of $\\R/\\Z$, if $|ε|$ is sufficiently small,…",
+  "domain": "math-ph",
+  "tags": [
+    "math-ph",
+    "math.DS"
+  ],
+  "published": "2026-05-15",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

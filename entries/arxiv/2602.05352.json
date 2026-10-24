@@ -1,0 +1,23 @@
+{
+  "key": "2602.05352",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05352",
+  "title": "Smoothness Errors in Dynamics Models and How to Avoid Them",
+  "authors": [
+    "Edward Berman",
+    "Luisa Li",
+    "Jung Yeon Park",
+    "Robin Walters"
+  ],
+  "summary": "Modern neural networks have shown promise for solving partial differential equations over surfaces, often by discretizing the surface as a mesh and learning with a mesh-aware graph neural network. However, graph neural networks suffer from oversmoothing, where a node's features become increasingly similar to those of its neighbors. Unitary graph convolutions, which are mathematically constrained to preserve smoothness, have been proposed to address this issue. Despite this, in many physical systems, such as diffusion processes, smoothness naturally increases and unitarity may be…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.SG"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-06-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

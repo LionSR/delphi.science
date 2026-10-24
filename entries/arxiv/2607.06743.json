@@ -1,0 +1,22 @@
+{
+  "key": "2607.06743",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06743",
+  "title": "VIBES -- A Two-Stage Scalable Bayesian Uncertainty Quantification Framework: Application to a Biomass Valorization Process",
+  "authors": [
+    "Poulomi Das",
+    "Angan Mukherjee",
+    "Debangsu Bhattacharyya"
+  ],
+  "summary": "This paper proposes Variational Inference-based Bayesian Estimation with Sobol screening (VIBES), a two-stage scalable framework for Bayesian uncertainty quantification (UQ). The proposed approach combines Sobol global sensitivity analysis (GSA) for screening and dimensionality reduction, followed by variational inference (VI) for UQ of kinetic, design/operational, and economic parameters. In the first stage, Sobol GSA is performed to identify dominant variables and parameters governing uncertainty in process outputs. In the second stage, Bayesian inference is performed only on the reduced…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2606.08188",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.08188",
+  "title": "Latent Structural Categorical Matrix Completion with Application to Quasispecies Analysis",
+  "authors": [
+    "Qian Zhang",
+    "Meixia Lin"
+  ],
+  "summary": "Matrix completion has been extensively studied for real-valued data, but existing methods are often limited in handling categorical variables. We propose LCMC, a double-loop optimization framework for categorical matrix completion via latent factorization based on a binary tensor representation. In this setting, each categorical entry is encoded as a one-hot vector along a third tensor mode, thereby preserving its discrete, non-ordinal nature. The outer loop adaptively estimates the latent dimension by iteratively updating it with feedback from the inner loop, while the inner loop…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-06-06",
+  "updated": "2026-06-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

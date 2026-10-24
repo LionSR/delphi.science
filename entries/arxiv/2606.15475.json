@@ -1,0 +1,20 @@
+{
+  "key": "2606.15475",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.15475",
+  "title": "Fourier Ratios of Graph Kernels: Energy Bounds, Optimal Labelings, and Recovery",
+  "authors": [
+    "Vishal Gupta",
+    "Alex Iosevich"
+  ],
+  "summary": "We study labeling-sensitive Fourier complexity for finite graph kernels. After identifying the vertices of a graph with the cyclic group $\\mathbb Z_N$, its adjacency matrix becomes a function on $\\mathbb Z_N^2$. Minimizing the quotient of the $\\ell^1$ and $\\ell^2$ norms of its two-dimensional Fourier transform over all vertex labelings gives an isomorphism invariant $\\operatorname{FR}_{\\min}(G)$. A nuclear-norm argument gives \\[\\operatorname{FR}_{\\min}(G) \\geq \\frac{\\mathcal E(G)}{\\sqrt{2s}},\\] where $s$ is the number of edges and $\\mathcal E(G)$ is the graph energy. The natural cyclic…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-06-13",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

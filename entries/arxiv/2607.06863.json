@@ -1,0 +1,22 @@
+{
+  "key": "2607.06863",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06863",
+  "title": "Jacobi-like relative value iteration algorithms for ergodic risk-sensitive control of Markov chains",
+  "authors": [
+    "Sumith Reddy Anugu",
+    "Guodong Pang",
+    "Nicola Sassone"
+  ],
+  "summary": "We propose a Jacobi-like relative value iteration (RVI) algorithm and a Gauss-Seidel-like implementation for the ergodic risk-sensitive control (ERSC) problem of a controlled discrete time Markov chain (DTMC) on a finite state space. Under the assumption that the DTMC is irreducible and recurrent under every stationary Markov policy, we prove that the iterates of the proposed RVI algorithms converge at a geometric rate. The main challenge stems from the multiplicative structure of the ERSC cost criterion and the associated Bellman-like operators, which prevents us from adapting the analogous…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.PR"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

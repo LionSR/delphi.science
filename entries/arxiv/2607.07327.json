@@ -1,0 +1,20 @@
+{
+  "key": "2607.07327",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.07327",
+  "title": "Iterative finite element approximation of non-monotone semilinear diffusion-reaction equations",
+  "authors": [
+    "Florian Spicher",
+    "Thomas P. Wihler"
+  ],
+  "summary": "We study iterative linearized finite element methods for the numerical approximation of semilinear elliptic boundary value problems with nonlinear reaction terms of asymptotically linear growth. Our approach reaches considerably beyond the classical theory by allowing for nonlinearities that are not necessarily monotone. We investigate a stabilized implicit-explicit (IMEX) iteration combined with first-order finite element discretizations on graded meshes that are able to resolve corner singularities in polygonal domains. To account for the reduced regularity of the analytical solutions, we…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

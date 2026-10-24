@@ -1,0 +1,22 @@
+{
+  "key": "2601.11145",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.11145",
+  "title": "Eigenvector-based acceleration strategies for gradient-type methods",
+  "authors": [
+    "Jean-Paul Chehab",
+    "Gaspard Kemlin",
+    "Marcos Raydan",
+    "Yousef Saad"
+  ],
+  "summary": "Several strategies are described and analyzed to speed-up gradient-type methods when applied to the minimization of strictly convex quadratics and strictly convex functions. The proposed techniques focus on relaxing the traditional optimal step length associated with gradient methods, including the steepest descent (SD) and the minimal residual (MR) methods. Such a relaxation avoids the well-known negative zigzag effect and allows the iterates to move in the entire space which in turn implies that every so often the search direction approaches some eigenvector of the underlying Hessian…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-16",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

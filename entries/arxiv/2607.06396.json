@@ -1,0 +1,21 @@
+{
+  "key": "2607.06396",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06396",
+  "title": "Some new results on Sylvester colorings of cubic graphs",
+  "authors": [
+    "Luca Ferrarini",
+    "Vahan Mkrtchyan"
+  ],
+  "summary": "If $G$ and $H$ are two cubic multi-graphs, then an $H$-coloring of $G$ is a mapping $f: E(G)\\rightarrow E(H)$, such that for every $v\\in V(G)$ there is a vertex $x\\in V(H)$, such that $f(\\partial_G(v))=\\partial_H(x)$. If $G$ admits an $H$-coloring then it is common to write $H\\prec G$. The Petersen coloring conjecture predicts that for any bridgeless cubic graph $G$ one has $P_{10}\\prec G$. Here $P_{10}$ is the Petersen graph. Let $f: E(G)\\rightarrow E(H)$ be any mapping. Define: $V(f)=\\{v\\in V(G):\\exists x\\in V(H), f(\\partial_G(v))=\\partial_H(x)\\}$. Let $S_{10}$ be the smallest cubic…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

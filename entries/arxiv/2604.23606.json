@@ -1,0 +1,24 @@
+{
+  "key": "2604.23606",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23606",
+  "title": "Hamiltonian Graph Inference Networks: Joint structure discovery and dynamics prediction for lattice Hamiltonian systems from trajectory data",
+  "authors": [
+    "Ru Geng",
+    "Panayotis Kevrekidis",
+    "Yixian Gao",
+    "Hong-Kun Zhang",
+    "Jian Zu"
+  ],
+  "summary": "Lattice Hamiltonian systems underpin models across condensed matter, nonlinear optics, and biophysics, yet learning their dynamics from data is obstructed by two unknowns: the interaction topology and whether node dynamics are homogeneous. Existing graph-based approaches either assume the graph is given or, as in $α$-separable graph Hamiltonian network, infer it only for separable Hamiltonians with homogeneous node dynamics. We introduce the Hamiltonian Graph Inference Network (HGIN), which jointly recovers the interaction graph and predicts long-time trajectories from state data alone, for…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math-ph"
+  ],
+  "published": "2026-04-26",
+  "updated": "2026-04-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

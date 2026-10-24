@@ -1,0 +1,21 @@
+{
+  "key": "2602.03118",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.03118",
+  "title": "The High Cost of Data Augmentation for Learning Equivariant Models",
+  "authors": [
+    "Henri Klintebäck",
+    "Christoph Ortner",
+    "Lior Silberman"
+  ],
+  "summary": "According to Noether's theorem the presence of a continuous symmetry in a Hamiltonian systems is equivalent to the existence of a conserved quantity, yet these symmetries are not always explicitly enforced in data-driven models. There remains a debate whether or not encoding of symmetry into a model architecture is the optimal approach. A competing approach is to target approximate symmetry through data augmentation. In this work, we study two approaches aimed at improving the symmetry properties of such an approximation scheme: one based on a quadrature rule for the Haar measure on the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-03",
+  "updated": "2026-02-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

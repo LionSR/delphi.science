@@ -1,0 +1,20 @@
+{
+  "key": "2610.19853",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.19853",
+  "title": "Does Policy Mirror Descent Converge in Policy with Non-Decomposable Mirror Maps? A Counterexample",
+  "authors": [
+    "Wenye Li",
+    "Ke Wei"
+  ],
+  "summary": "Policy mirror descent (PMD) refers to a class of policy optimization methods associated with different mirror maps. For a broad class of decomposable Legendre mirror maps encompassing many standard choices, Li and Wei [2026] show that the PMD policy sequence converges to an optimal policy from any admissible initialization under any positive constant step size, even when the optimal policy is not unique. In this note, we provide a counterexample with assistance from OpenAI's GPT-5.6 model, showing that PMD with a non-decomposable Legendre mirror map need not converge in policy.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

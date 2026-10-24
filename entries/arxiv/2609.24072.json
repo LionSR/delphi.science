@@ -1,0 +1,23 @@
+{
+  "key": "2609.24072",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.24072",
+  "title": "The Implementation Cost of Fairness in Service Policy Selection",
+  "authors": [
+    "Junjie Liu",
+    "Mingjie Hu",
+    "Kejia Hu",
+    "Siyang Gao",
+    "Jianqiang Hu"
+  ],
+  "summary": "Service organizations use simulation, pilot studies, and historical data to select service policies that balance aggregate performance and fairness. Existing work primarily evaluates the operational cost of fairness, defined as the performance loss caused by restricting the feasible policy set. In this research, we identify and study implementation cost as a distinct and equally important dimension of fairness, defined as the sampling effort required to verify fairness and reliably select the best fair policy. Specifically, we consider fixed-budget policy selection under fairness…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-21",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

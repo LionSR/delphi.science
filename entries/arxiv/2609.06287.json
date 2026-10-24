@@ -1,0 +1,20 @@
+{
+  "key": "2609.06287",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.06287",
+  "title": "Convergence rates of randomly pivoted methods for low-rank approximation",
+  "authors": [
+    "Ryan Divan",
+    "Marc Aurèle Gilles"
+  ],
+  "summary": "Randomly pivoted Cholesky, QR, and LU are iterative algorithms that form structured low-rank approximations of a matrix by sampling columns, or rows and columns, from the residual. We give convergence rates for these methods that depend on the decay of the singular values of the original matrix. The rates hold, up to a constant, when pivots are drawn from an approximation to the exact distribution. This extra degree of freedom can be used to trade exact sampling for cheaper approximations. We use it to establish rates for variants of randomly pivoted LU, including one that picks pivots using…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-05",
+  "updated": "2026-09-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

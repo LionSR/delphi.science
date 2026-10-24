@@ -1,0 +1,22 @@
+{
+  "key": "2609.32695",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32695",
+  "title": "Affine Geometry of Gaussian ReLU Networks via Conditional Kac-Rice Formulas",
+  "authors": [
+    "Recep Özkan",
+    "Christian Hirsch"
+  ],
+  "summary": "We study how the affine geometry of finite ReLU networks is created at random initialization and reorganized by supervised training. We call a sign-changing zero of a hidden preactivation an activation switch and a point where the scalar network output is nondifferentiable a scalar kink. For one-dimensional input, conditioning on the preceding layers makes each preactivation Gaussian and affine on the cells of a random finite partition. This yields an exact finite-width conditional Kac-Rice formula for the expected number of activation switches along an input interval. For fixed depth and…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

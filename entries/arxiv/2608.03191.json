@@ -1,0 +1,20 @@
+{
+  "key": "2608.03191",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.03191",
+  "title": "A semi-smooth Newton method for efficient evaluation of the inverse hysteresis operator",
+  "authors": [
+    "Herbert Egger",
+    "Felix Engertsberger"
+  ],
+  "summary": "We study the numerical evaluation of an energy-based vector hysteresis model and its incorporation into finite element simulations based on a vector potential formulation. The inherent non-smoothness of the hysteresis model poses challenges for both numerical analysis and implementation. Using tools from convex analysis, we characterize the forward and inverse hysteresis operators in terms of energy densities. This characterization yields well-posedness of the resulting models and leads to robust algorithms for their evaluation based on generalized semi-smooth Newton methods. It furthermore…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

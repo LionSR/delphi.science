@@ -1,0 +1,25 @@
+{
+  "key": "2610.06308",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06308",
+  "title": "Sharp dimensional analysis of midpoint methods for Langevin sampling",
+  "authors": [
+    "Fan Chen",
+    "Sinho Chewi",
+    "Jianfeng Lu",
+    "Matthew S. Zhang"
+  ],
+  "summary": "We study deterministic and randomized midpoint discretizations of Langevin dynamics for a target $π\\propto e^{-V}$, where $0 \\prec αI\\preceq\\nabla^2V\\preceqβI$ and $κ=β/α$. To achieve $\\sqrtα\\,W_2\\leqslant\\varepsilon$, we show that deterministic Heun uses at most $\\widetilde O(κ^{4/3}d^{1/3}\\varepsilon^{-2/3})$ gradient queries, and underdamped exponential midpoint uses $\\widetilde O(κ^{5/4}d^{1/4}\\varepsilon^{-1/2})$. The proofs exploit cancellation at stationarity and smoothing using techniques from Malliavin calculus, outperforming previous upper bounds based on standard couplings. At…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.DS",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

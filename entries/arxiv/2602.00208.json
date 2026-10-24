@@ -1,0 +1,27 @@
+{
+  "key": "2602.00208",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.00208",
+  "title": "Analyzing Shapley Additive Explanations to Understand Anomaly Detection Algorithm Behaviors and Their Complementarity",
+  "authors": [
+    "Jordan Levy",
+    "Paul Saves",
+    "Moncef Garouani",
+    "Nicolas Verstaevel",
+    "Benoit Gaudou"
+  ],
+  "summary": "Unsupervised anomaly detection is a challenging problem due to the diversity of data distributions and the lack of labels. Ensemble methods are often adopted to mitigate these challenges by combining multiple detectors, which can reduce individual biases and increase robustness. Yet building an ensemble that is genuinely complementary remains challenging, since many detectors rely on similar decision cues and end up producing redundant anomaly scores. As a result, the potential of ensemble learning is often limited by the difficulty of identifying models that truly capture different types of…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "cs.IR",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-01-30",
+  "updated": "2026-04-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

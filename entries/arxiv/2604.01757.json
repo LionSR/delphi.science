@@ -1,0 +1,31 @@
+{
+  "key": "2604.01757",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.01757",
+  "title": "Attention Mechanisms Through the Lens of Numerical Methods: Approximation Methods and Alternative Formulations",
+  "authors": [
+    "Michel Fabrice Serret",
+    "Alice Cortinovis",
+    "Yijun Dong",
+    "Diana Halikias",
+    "Anna Ma",
+    "Fabio Matti",
+    "Deanna Needell",
+    "Katherine J. Pearce",
+    "Elizaveta Rebrova",
+    "Disha Shur",
+    "Rudi Smith",
+    "Hai-Xiao Wang",
+    "Laura Grigori"
+  ],
+  "summary": "The attention mechanism is the computational core of modern Transformer architectures, but its quadratic complexity in the input sequence length is the bottleneck for large-scale inference. This has motivated a rapidly growing body of work aimed at accelerating attention through approximation and reformulation. In this survey, we revisit attention mechanisms through the lens of numerical analysis, with a particular emphasis on tools and perspectives from numerical linear algebra. Our goal is twofold: first, we aim to systematically review and classify fast approximation methods according to…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-02",
+  "updated": "2026-04-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

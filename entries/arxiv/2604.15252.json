@@ -1,0 +1,21 @@
+{
+  "key": "2604.15252",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.15252",
+  "title": "Tube-Based Robust Data-Driven Predictive Control",
+  "authors": [
+    "Chi Wang",
+    "David Angeli"
+  ],
+  "summary": "This paper presents a tractable tube-based robust data-driven predictive control scheme that uses only a single finite noisy input-state trajectory of an unknown discrete-time linear time-invariant (LTI) system. A simplex constraint is imposed on the Hankel coefficient vector, yielding explicit polyhedral bounds on the prediction mismatch induced by bounded measurement noise. Using certified initial and terminal robust positively invariant (RPI) sets, we derive a tube-tightened formulation whose online optimization problem is a strictly convex quadratic program (QP). The resulting controller…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-04-16",
+  "updated": "2026-04-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2609.15084",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.15084",
+  "title": "Shape calculus and automatic differentiation for multi-phase level-set topology optimisation with unfitted finite elements",
+  "authors": [
+    "Zachary J. Wegert",
+    "Martin Berggren",
+    "Vivien J. Challis"
+  ],
+  "summary": "We present shape calculus techniques and a scalable automatic shape differentiation framework for multi-phase topology optimisation on unfitted discretisations defined by several level-set functions. First we establish general, exact shape calculus expressions in the discrete case for multi-phase systems by leveraging concepts from convex geometry. To complement this theoretical foundation, we introduce an open-source multi-phase automatic shape differentiation framework based on polytopal cutting. This computational framework is validated against both finite differences and our established…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

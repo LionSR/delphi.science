@@ -1,0 +1,24 @@
+{
+  "key": "2606.25967",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.25967",
+  "title": "Slice Monte Carlo Integration",
+  "authors": [
+    "Johannes K. Krondorfer",
+    "Christian W. Binder",
+    "Matthias Neumann",
+    "Wolfgang von der Linden"
+  ],
+  "summary": "Numerical integration involving expensive target functions is a common bottleneck in Bayesian inference and simulation. When a cheap surrogate is available, standard approaches such as reweighting or importance sampling often suffer from high variance and inefficient use of function evaluations. We introduce Slice Monte Carlo integration (S$\\ell$MC), a method that leverages a Nested Sampling-like procedure on the surrogate to partition the space into informative strata, or slices, while generating samples in the parameter space drawn from the prior within each slice. This enables stratified…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "stat.CO"
+  ],
+  "published": "2026-06-24",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

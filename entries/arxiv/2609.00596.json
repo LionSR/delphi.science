@@ -1,0 +1,21 @@
+{
+  "key": "2609.00596",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.00596",
+  "title": "The Minimum Q-Order of BFGS with Exact Line Search Is One",
+  "authors": [
+    "Benqi Liu",
+    "Chenyi Li",
+    "Zaiwen Wen"
+  ],
+  "summary": "Powell asked whether the smoothness assumptions underlying classical superlinear convergence force a fixed power law between adjacent iterates of exact-line-search variable-metric methods. We answer this question negatively for BFGS: within the smooth strongly convex setting, the smallest possible adjacent-iterate Q-order is one, and this boundary is attained by a single nonterminating run. In every finite dimension at least two, and for any prescribed radius and Hessian tolerance, we construct an infinitely differentiable, globally strongly convex objective that equals the standard…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-01",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

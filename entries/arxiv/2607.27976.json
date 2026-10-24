@@ -1,0 +1,21 @@
+{
+  "key": "2607.27976",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.27976",
+  "title": "Load balancing in parallel infinite-server queues with action delay via phase representation",
+  "authors": [
+    "Kazuma Abe",
+    "Tuan Phung-Duc"
+  ],
+  "summary": "Spatially distributed service systems rely on state-dependent routing to allocate users, tasks, or requests to less-loaded service nodes. In practice, a routing decision does not take effect immediately: the assigned job reaches the selected node only after a lag caused by travel time, communication latency, or actuation. We call this lag the action delay. Whereas delayed-information models treat such a lag as stale information and analyze the model via a delay differential equation, the decision uses the current state and only its execution is deferred, so the job experiencing an action…",
+  "domain": "cs.PF",
+  "tags": [
+    "cs.PF",
+    "math.PR"
+  ],
+  "published": "2026-07-30",
+  "updated": "2026-07-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

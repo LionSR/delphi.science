@@ -1,0 +1,20 @@
+{
+  "key": "2608.05567",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.05567",
+  "title": "SDDmiP.jl: A Software Package with a Provably Convergent Benders Algorithm for Multi-Stage Stochastic Mixed-Integer Programming",
+  "authors": [
+    "Akul Bansal",
+    "Simge Küçükyavuz"
+  ],
+  "summary": "We present an open-source software package that implements a provably convergent Benders-type decomposition algorithm for multistage stochastic integer programs. In addition to standard cut families, such as Benders, strengthened Benders, and Lagrangian cuts, the algorithm incorporates rectified linear unit (ReLU) cuts, which provide convergence guarantees for general mixed-integer state variables. However, the dual problems used to generate these cuts often admit multiple optimal solutions. Although each solution yields a valid cut that separates the incumbent, the resulting cuts can differ…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-06",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

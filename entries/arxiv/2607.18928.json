@@ -1,0 +1,22 @@
+{
+  "key": "2607.18928",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.18928",
+  "title": "Error Bound and Stability Analysis for a Randomized Singly Diagonally Implicit Runge-Kutta Method",
+  "authors": [
+    "Monika Eisenmann",
+    "Marvin Jans",
+    "Raphael Kruse",
+    "Helmut Podhaisky"
+  ],
+  "summary": "A randomized Singly Diagonally Implicit Runge-Kutta (SDIRK) method, based on the randomized trapezoidal rule as the underlying quadrature scheme, is proposed. Every realization of the scheme is an algebraically stable SDIRK method of at least second order. The main result is the proof that the randomized scheme converges with order 2.5 in the root mean square sense under low regularity assumptions. Numerical experiments illustrate the robustness of the new scheme when applied to nonsmooth problems.",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-21",
+  "updated": "2026-07-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

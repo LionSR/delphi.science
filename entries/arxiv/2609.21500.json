@@ -1,0 +1,23 @@
+{
+  "key": "2609.21500",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.21500",
+  "title": "Model-Free Control for Residential Heating: Deployment and Simulation of Nonlinear Data-Enabled Predictive Control",
+  "authors": [
+    "Sebastian Zieglmeier",
+    "Chris Verhoek",
+    "Jaap Eising",
+    "Mathias Hudoba de Badyn"
+  ],
+  "summary": "Residential heating accounts for a large share of building energy use, and predictive control strategies can reduce it by anticipating rather than reacting to the room temperature alone. The usual manner of implementing predictive control, model predictive control (MPC), requires an accurate model of each individual residential unit for heating control. Obtaining this model is time-consuming to obtain manually or even impossible, and such models do not transfer across a heterogeneous building stock. Data-enabled predictive control (DeePC) removes this modeling step by designing the…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-09-18",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

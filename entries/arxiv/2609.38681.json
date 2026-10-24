@@ -1,0 +1,22 @@
+{
+  "key": "2609.38681",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38681",
+  "title": "A Three-Stage PCA Procedure for Sequentially Arriving High-Dimensional Data",
+  "authors": [
+    "Partha Sarkar",
+    "Sairam Rayapolu",
+    "Bhargab Chattopadhyay"
+  ],
+  "summary": "We develop a three-stage adaptive procedure for principal component analysis (PCA) when high-dimensional observations are collected sequentially and additional sampling incurs a cost. The procedure balances PCA compression loss against sampling cost while selecting the retained dimension through a prescribed explained-variance criterion. Starting from a pilot sample, an intermediate stage updates the PCA quantities before determining the final sample size, thereby avoiding reliance on unknown population eigenvalues. Under suitable regularity conditions, we establish both first- and…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

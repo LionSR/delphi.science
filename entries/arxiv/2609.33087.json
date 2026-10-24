@@ -1,0 +1,22 @@
+{
+  "key": "2609.33087",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.33087",
+  "title": "Plug-and-Play Methods Provably Converge Even with Improperly Trained Denoisers: Convergence by Architectural Design",
+  "authors": [
+    "Henry Pritchard",
+    "Rahul Parhi"
+  ],
+  "summary": "Plug-and-Play (PnP) methods replace proximal operators with learned denoisers, which produce state-of-the-art reconstruction quality, but sacrifice the variational interpretation and convergence guarantees of proximal methods. Learned Proximal Networks (LPNs) address this problem by designing the denoiser architecture so that it is exactly the proximal operator of a regularizer. In this work, we clarify the theoretical foundations of LPNs and extend the framework to a broader class of activation functions. We then study two practical mechanisms for controlling the learned prior: (i)…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SP",
+    "stat.ML"
+  ],
+  "published": "2026-09-27",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

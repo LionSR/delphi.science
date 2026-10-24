@@ -1,0 +1,24 @@
+{
+  "key": "2607.07623",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.07623",
+  "title": "Higher-Order Geometric Updates for Levenberg-Marquardt Method via Riemann Normal Coordinates",
+  "authors": [
+    "Jianing Liu",
+    "Dong H. Zhang"
+  ],
+  "summary": "Nonlinear least-squares objectives form the foundation of scientific machine-learning tasks, yet even curvature-aware optimizers remain geometrically inconsistent at finite step sizes: Levenberg-Marquardt (LM) derives its direction from local Riemannian metrics but realizes it as a straight parameter update. Here we introduce RNC-LM, which carries the LM direction along a locally constructed curved trajectory in Riemann normal coordinates. A recursive reformulation of the geodesic equation generates arbitrary finite-order corrections while reusing the same damped Gauss-Newton matrix…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "physics.chem-ph",
+    "physics.comp-ph",
+    "physics.data-an"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

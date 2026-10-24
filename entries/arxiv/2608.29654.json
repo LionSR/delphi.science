@@ -1,0 +1,22 @@
+{
+  "key": "2608.29654",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.29654",
+  "title": "Constraint Preserving AFD-WENO Schemes for Relativistic Hydrodynamics with General Equations of State",
+  "authors": [
+    "Pramodit Mishra",
+    "Shubham Upadhyay",
+    "Rakesh Kumar",
+    "Biswarup Biswas"
+  ],
+  "summary": "We develop a high-order physical-constraint-preserving (PCP) alternative finite difference weighted essentially non-oscillatory (AFD-WENO) scheme for the special relativistic hydrodynamics equations with general equations of state. The proposed scheme comprises two key limiters: a state limiter, which acts after the WENO state interpolation step, and a flux limiter, which acts on the final high-order fluxes. The state limiter ensures that the interpolated states are physically admissible, while the flux limiter ensures that the numerical fluxes are physically admissible. The resulting scheme…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-30",
+  "updated": "2026-08-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

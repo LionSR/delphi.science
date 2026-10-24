@@ -1,0 +1,20 @@
+{
+  "key": "2606.05438",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.05438",
+  "title": "Sharp First-Order Lower Bounds for Higher-Order Smooth Nonconvex Optimization",
+  "authors": [
+    "Dongruo Zhou"
+  ],
+  "summary": "We study the deterministic first-order oracle complexity of finding \\(ε\\)-stationary points in smooth nonconvex optimization when the objective satisfies higher-order smoothness assumptions. While the classical \\(ε^{-2}\\) rate is optimal under only Lipschitz gradients, higher-order smoothness leads to accelerated first-order upper bounds, most notably the \\(ε^{-7/4}\\) rate under Lipschitz Hessians and the \\(ε^{-5/3}\\) rate under Lipschitz third derivatives. The matching lower bounds, however, have remained open. We resolve this gap by proving a new dimension-free first-order lower bound for…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-06-03",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

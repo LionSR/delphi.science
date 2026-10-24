@@ -1,0 +1,20 @@
+{
+  "key": "2603.11118",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.11118",
+  "title": "A Learning-Based Superposition Operator for Non-Renewal Arrival Processes in Queueing Networks",
+  "authors": [
+    "Eliran Sherzer"
+  ],
+  "summary": "The superposition of arrival processes is a fundamental yet analytically intractable operation in queueing networks when inputs are general non-renewal streams. Classical methods either reduce merged flows to renewal surrogates, rely on computationally prohibitive Markovian representations, or focus solely on mean-value performance measures. We propose a scalable data-driven superposition operator that maps low-order moments and autocorrelation descriptors of multiple arrival streams to those of their merged process. The operator is a deep learning model trained on synthetically generated…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-03-11",
+  "updated": "2026-03-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

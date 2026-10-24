@@ -1,0 +1,27 @@
+{
+  "key": "2605.18745",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.18745",
+  "title": "SURGE: Approximation and Training Free Particle Filter for Diffusion Surrogate",
+  "authors": [
+    "Lifu Wei",
+    "Yinuo Ren",
+    "Naichen Shi",
+    "Yiping Lu"
+  ],
+  "summary": "Data assimilation (DA) addresses the problem of sequentially estimating the state of a dynamical system from noisy and incomplete observations. In this work, we employ a diffusion model as a world model to simulate and predict the system's dynamics. Recently, score-based diffusion models have learned global diffusion priors that effectively model (stochastic) dynamics, revealing strong potential for data assimilation. In this paper, we investigate how information from noisy observations can be incorporated to enable continuous correction and refinement of the predicted system state when…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.NA",
+    "math.PR",
+    "q-fin.MF",
+    "stat.CO"
+  ],
+  "published": "2026-05-18",
+  "updated": "2026-05-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

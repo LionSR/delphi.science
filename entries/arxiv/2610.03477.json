@@ -1,0 +1,21 @@
+{
+  "key": "2610.03477",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03477",
+  "title": "Partitioning an $S$-packing coloring into broadcast dominating sets",
+  "authors": [
+    "Boštjan Brešar",
+    "Jasmina Ferme",
+    "Wenjie Hu"
+  ],
+  "summary": "Given a graph $G$ and a positive integer $k$, a packing $k$-domatic coloring of $G$ is a function $f: V(G) \\to \\{1,\\ldots,t\\}$ such that (1) for any color $j \\in \\{1,\\ldots, t\\}$ and any two distinct vertices $u,v\\in V(G)$ with $f(u)=f(v)=j$ we have $d_G(u,v)>j$, and (2) $V(G)$ admits a partition into $k$ sets $A_1,\\ldots,A_k$ such that for any $v\\in V(G)$ and any $i\\in\\{1,\\ldots,k\\}$ there exists a vertex $w\\in A_i$ such that $d_G(v,w)\\le f(w)$. The minimum integer $t$ such that $G$ admits a packing $k$-domatic coloring of $G$ using colors in $\\{1,\\ldots,t\\}$ is denoted by $χ_{ρ,k}(G)$. The…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

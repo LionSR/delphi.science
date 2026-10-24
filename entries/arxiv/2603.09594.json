@@ -1,0 +1,20 @@
+{
+  "key": "2603.09594",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.09594",
+  "title": "Large-data solutions in multi-dimensional thermoviscoelasticity with temperature-dependent viscosities",
+  "authors": [
+    "Chuang Ma",
+    "Bin Guo"
+  ],
+  "summary": "This paper investigates a quasilinear parabolic system arising in thermoviscoelasticity of Kelvin-Voigt type with temperature-dependent viscosity and coupled terms. The system, given by \\begin{equation*} \\begin{cases} u_{tt}=\\nabla\\cdot\\big(γ(Θ)\\nabla u_t\\big)+aΔu-\\nabla\\cdot f(Θ), & x \\in Ω,\\ t > 0, Θ_t=ΔΘ+γ(Θ)|\\nabla u_t|^2-f(Θ)\\nabla u_t, & x \\in Ω,\\ t > 0, u=0,\\quad\\frac{\\partialΘ}{\\partialν}=0, & x \\in \\partialΩ,\\ t > 0, u(x,0)=u_0(x),\\; u_t(x,0)=u_{0t}(x),\\;Θ(x,0)=Θ_0(x), & x \\in Ω, \\end{cases} \\end{equation*} models heat generation by acoustic waves in solid materials and can be…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-03-10",
+  "updated": "2026-03-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

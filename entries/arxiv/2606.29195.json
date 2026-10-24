@@ -1,0 +1,21 @@
+{
+  "key": "2606.29195",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.29195",
+  "title": "Second-Order Area/Volume-Preserving PFEMs for Surface Diffusion via Simpson--Boole Geometric Identities",
+  "authors": [
+    "Zhiqing Pan",
+    "Jiwei Jia",
+    "Lian Zhang"
+  ],
+  "summary": "We propose second-order-in-time parametric finite element methods for surface diffusion of closed curves in two dimensions and closed surfaces in three dimensions. The construction is based on exact geometric variation identities along a quadratic temporal interpolation path. The induced area variation in 2D is evaluated exactly by Simpson's rule, while the induced volume variation in 3D is evaluated exactly by Boole's rule. The resulting fully discrete schemes preserve the enclosed area or volume exactly, without introducing an auxiliary Lagrange multiplier for the geometric constraint.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-28",
+  "updated": "2026-06-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

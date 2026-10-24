@@ -1,0 +1,22 @@
+{
+  "key": "2602.11747",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.11747",
+  "title": "High-Probability Minimax Adaptive Estimation in Besov Spaces via Online-to-Batch",
+  "authors": [
+    "Paul Liautaud",
+    "Pierre Gaillard",
+    "Olivier Wintenberger"
+  ],
+  "summary": "We study nonparametric regression over Besov spaces from noisy observations under sub-exponential noise, aiming to achieve minimax-optimal guarantees on the integrated squared error that hold with high probability and adapt to the unknown noise level. To this end, we propose a wavelet-based online learning algorithm that dynamically adjusts to the observed gradient noise by adaptively clipping it at an appropriate level, eliminating the need to tune parameters such as the noise variance or gradient bounds. As a by-product of our analysis, we derive high-probability adaptive regret bounds…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-02-12",
+  "updated": "2026-02-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

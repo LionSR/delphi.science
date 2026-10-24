@@ -1,0 +1,22 @@
+{
+  "key": "2608.10487",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.10487",
+  "title": "High-order Energy-stable and Charge-conservative Lagrangian FEM for 3D Incompressible Inductionless MHD equations with Variable Density",
+  "authors": [
+    "Lingxiao Li",
+    "Bijie Song",
+    "Haiyan Su",
+    "Jie Zhang"
+  ],
+  "summary": "In this paper, we develop a high-order, energy-stable and charge-conservative Lagrangian finite element method for variable-density incompressible inductionless magnetohydrodynamic (MHD) equations. The method utilizes the moving high-order curved tetrahedral mesh to track the material interface. Second-order Backward Differentiation Formula (BDF2) is used for the temporal discretization of material derivative, together with the second-order Adams--Bashforth method (AB2) for the update of control points of the meshes. High-order isoparametric Taylor-Hood elements with grad-div stabilization…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-11",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

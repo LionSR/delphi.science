@@ -1,0 +1,21 @@
+{
+  "key": "2602.01071",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.01071",
+  "title": "Vortex Stretching in the Navier-Stokes Equations and Information Dissipation in Diffusion Models: A Reformulation from a Partial Differential Equation Viewpoint",
+  "authors": [
+    "Tsuyoshi Yoneda"
+  ],
+  "summary": "We present a new inverse-time formulation of vortex stretching in the Navier-Stokes equations, based on a PDE framework inspired by score-based diffusion models. By absorbing the ill-posed backward Laplacian arising from time reversal into a drift term expressed through a score function, the inverse-time dynamics are formulated in a Lagrangian manner. Using a discrete Lagrangian flow of an axisymmetric vortex-stretching field, the score function is learned with a neural network and employed to construct backward-time particle trajectories. Numerical results demonstrate that information about…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "cs.AI",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-02-01",
+  "updated": "2026-02-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

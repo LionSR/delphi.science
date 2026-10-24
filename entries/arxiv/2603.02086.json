@@ -1,0 +1,21 @@
+{
+  "key": "2603.02086",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.02086",
+  "title": "Reinforcement Learning-Based Filters for Convection-Dominated Flows: Reference-Free and Reference-Guided Training",
+  "authors": [
+    "Anna Ivagnes",
+    "Maria Strazzullo",
+    "Gianluigi Rozza"
+  ],
+  "summary": "We propose a reinforcement learning (RL) framework for the dynamic selection of the filter parameter in Evolve-Filter (EF) regularization strategies for incompressible turbulent flows. Instead of prescribing the filter radius heuristically, the RL agent learns to adaptively control the filtering intensity in time, balancing numerical stability and physical accuracy. The methodology is assessed on two benchmark problems with fundamentally different dynamics: flow past a cylinder and decaying homogeneous turbulence. Both reference-guided and reference-free reward formulations are investigated.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-02",
+  "updated": "2026-03-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

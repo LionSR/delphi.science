@@ -1,0 +1,22 @@
+{
+  "key": "2609.20053",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20053",
+  "title": "Accelerating structural optimization via EIFEM: a ROM-based preconditioner",
+  "authors": [
+    "Raul Rubio",
+    "Alex Ferrer",
+    "Joaquin Alberto Hernandez",
+    "Pablo Antolin"
+  ],
+  "summary": "Topology optimization (TopOpt) is a standard tool for structural conceptual design, providing optimal structures with great design freedom. However, it has a high computational costs due to the repeated evaluation of high-fidelity finite element models and frequently produces complex geometries that require extensive interpretation for manufacturability. As an alternative, this work presents a parameterized optimization framework based on Reduced Order Modeling (ROM) and preconditioning techniques. We employ the Empirical Interscale Finite Element Method (EIFEM) coupled with the Discrete…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2605.03274",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.03274",
+  "title": "Formalizing Singer Sidon Constructions and Sidon Set Infrastructure in Lean 4",
+  "authors": [
+    "David B. Hulak",
+    "Arthur F. Ramos",
+    "Ruy J. G. B. de Queiroz"
+  ],
+  "summary": "Erdős Problem 30 asks for sharp asymptotics of the Sidon extremal function $h(N)$, and Singer's construction is the classical source of lower-bound examples matching the main term. We present a Lean 4 formalization of Singer's Sidon set construction, together with reusable Sidon-set infrastructure for additive combinatorics. For every prime power $q=p^k$, we prove the existence of a Sidon set modulo $q^2+q+1$ of cardinality $q+1$; the prime-field case $q=p$ is the base presentation. The proof proceeds through a non-trivial algebraic chain: construction of the base field and its degree-three…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

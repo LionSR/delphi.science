@@ -1,0 +1,20 @@
+{
+  "key": "2609.10813",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10813",
+  "title": "Method for Constrained Computational Guidance and Control with Application to Hypersonic Entry",
+  "authors": [
+    "Emily M. Palmer",
+    "Anil V. Rao"
+  ],
+  "summary": "A method for constrained computation guidance and control is described. The method employs guidance updates by periodically re-solving a constrained optimal control problem. Feasibility of the optimal control problem is improved by preventing constraint violations in the perturbed system. Constraint violation is prevented by augmenting the optimal control problem with a penalty term intended to increase the margin between a constraint and its limit when the perturbed system is within certain proximity of the constraint limit. The additional penalty term employs a smooth maximum approximation…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

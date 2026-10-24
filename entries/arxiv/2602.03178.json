@@ -1,0 +1,21 @@
+{
+  "key": "2602.03178",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.03178",
+  "title": "Fully Automated Adaptive Parameter Selection for 3-D High-order Nyström Boundary Integral Equation Methods",
+  "authors": [
+    "Davit Aslanyan",
+    "Constantine Sideris"
+  ],
+  "summary": "We present an adaptive Chebyshev-based Boundary Integral Equation (CBIE) solver for electromagnetic scattering from smooth perfect electric conductor (PEC) objects. The proposed approach eliminates manual parameter tuning by introducing (i) a unified adaptive quadrature strategy for automatic selection of the near-singular interaction distance and (ii) an adaptive computation of all self- and near-singular precomputation integrals to a prescribed accuracy using Gauss-Kronrod (h-adaptive) or Clenshaw-Curtis (p-adaptive) rules and singularity-resolving changes of variables. Both h-adaptive and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-02-03",
+  "updated": "2026-02-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

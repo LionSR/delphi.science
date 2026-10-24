@@ -1,0 +1,19 @@
+{
+  "key": "2609.07197",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07197",
+  "title": "On Prior-to-Posterior Stability in the Wasserstein Metric for Bayesian Inverse Problems",
+  "authors": [
+    "Lianghao Cao"
+  ],
+  "summary": "Priors in Bayesian inverse problems are often approximated through discretization, hyperparameter estimation, or generative modeling. Understanding how prior approximation errors propagate to the posterior and subsequent predictions is therefore important. In this work, we study the stability of the prior-to-posterior map where both prior and posterior perturbations are measured in the same Wasserstein metric $W_p$, $p\\geq1$. We identify verifiable conditions on likelihood regularity and admissible prior classes that ensure uniform, Hölder, and Lipschitz stability. For bounded likelihoods…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

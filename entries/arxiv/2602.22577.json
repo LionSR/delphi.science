@@ -1,0 +1,21 @@
+{
+  "key": "2602.22577",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.22577",
+  "title": "Gradient Dominance in the Linear Quadratic Regulator: A Unified Analysis for Continuous-Time and Discrete-Time Systems",
+  "authors": [
+    "Yuto Watanabe",
+    "Yang Zheng"
+  ],
+  "summary": "Despite its nonconvexity, policy optimization for the Linear Quadratic Regulator (LQR) admits a favorable structural property known as gradient dominance, which facilitates linear convergence of policy gradient methods to the globally optimal gain. While gradient dominance has been extensively studied, continuous-time and discrete-time LQRs have largely been analyzed separately, relying on slightly different assumptions, proof strategies, and resulting guarantees. In this paper, we present a unified gradient dominance property for both continuous-time and discrete-time LQRs under mild…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-02-26",
+  "updated": "2026-02-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

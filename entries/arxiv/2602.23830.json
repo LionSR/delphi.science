@@ -1,0 +1,21 @@
+{
+  "key": "2602.23830",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.23830",
+  "title": "A Flow-based Method for Problems with Vanishing Constraints",
+  "authors": [
+    "Christoph Hansknecht",
+    "Julian Niederer",
+    "Andreas Potschka"
+  ],
+  "summary": "Mathematical Programs with Vanishing Constraints (MPVCs) are a notoriously challenging class of problems owing to their lack of constraint qualification. Therefore, to tackle these problems, relaxation-based approaches are typically used. While often yielding satisfactory results, they generally require significant manual tuning and adjustment of the relaxation parameter. To circumvent these problems, we introduce a novel approach based on piecewise gradient flows leading to first-order stationary points. We demonstrate the effectiveness of our method on several real-world MPVC instances and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-27",
+  "updated": "2026-02-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

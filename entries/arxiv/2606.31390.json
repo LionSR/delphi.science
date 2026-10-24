@@ -1,0 +1,23 @@
+{
+  "key": "2606.31390",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.31390",
+  "title": "Direction-Magnitude Decomposition for Low-Rank Matrix Optimization: Faster Convergence and Saddle-to-saddle Dynamics",
+  "authors": [
+    "Yudong Wei",
+    "Liang Zhang",
+    "Bingcong Li",
+    "Niao He"
+  ],
+  "summary": "Low-rank matrix optimization is often carried out via the Burer-Monteiro (BM) formulation, but choosing the factorization rank $r$ is delicate and can substantially slow optimization. We propose a unified framework, termed direction-magnitude decomposition (DMD), that decomposes the optimization variable to improve optimization efficiency even when the target rank is unknown. We develop two DMD-based approaches and establish their theoretical advantages on the canonical problem of matrix factorization. The first, overparameterized DMD, uses a rank $r$ larger than necessary and enjoys faster…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-06-30",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

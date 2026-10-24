@@ -1,0 +1,24 @@
+{
+  "key": "2607.01128",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.01128",
+  "title": "GAIA: Geometry-Adaptive Operator Learning for Forward and Inverse Problems",
+  "authors": [
+    "Meenakshi Krishnan",
+    "Pranav Pulijala",
+    "Ke Chen",
+    "Haizhao Yang",
+    "Ramani Duraiswami"
+  ],
+  "summary": "Operator learning for partial differential equations (PDEs) on arbitrary geometries builds fast neural surrogates for large-scale simulation. Although recent geometry-adaptive neural operators have made substantial progress, they are mainly designed for forward problems in which inputs and outputs share the same spatial domain. This limits their applicability for boundary value problems (BVPs) and inverse problems, where inputs and outputs may live on different domains. We introduce the Geometry-Adaptive Integral Autoencoder (GAIA), an operator learning model that encodes the domain boundary…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

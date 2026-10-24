@@ -1,0 +1,23 @@
+{
+  "key": "2602.15242",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.15242",
+  "title": "Efficient Adjoint-based Design Optimization with Optimal Control",
+  "authors": [
+    "Sicheng He",
+    "Shugo Kaneko",
+    "Max Howell",
+    "Nan Li",
+    "Joaquim R. R. A. Martins"
+  ],
+  "summary": "Multidisciplinary engineering system design typically employs a sequential process, progressing from system dynamics to design variables and control. However, this process is inefficient and may lead to a suboptimal design. We propose formulating the optimal control and multidisciplinary design optimization (MDO) problems as a single problem with linear quadratic regulator (LQR) control. We use the coupled adjoint method to compute the design variable derivatives, which are critical for gradient-based design optimization. The computational cost of the derivative computation using the adjoint…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-02-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

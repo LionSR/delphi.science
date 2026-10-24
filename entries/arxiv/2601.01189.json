@@ -1,0 +1,23 @@
+{
+  "key": "2601.01189",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.01189",
+  "title": "Central limit theorem for a partially observed interacting system of Hawkes processes I: subcritical case",
+  "authors": [
+    "Chenguang Liu",
+    "Liping Xu",
+    "An Zhang"
+  ],
+  "summary": "We consider a system of $N$ Hawkes processes and observe the actions of a subpopulation of size $K \\le N$ up to time $t$, where $K$ is large. The influence relationships between each pair of individuals are modeled by i.i.d.Bernoulli($p$) random variables, where $p \\in [0,1]$ is an unknown parameter. Each individual acts at a {\\it baseline} rate $μ> 0$ and, additionally, at an {\\it excitation} rate of the form $N^{-1} \\sum_{j=1}^{N} θ_{ij} \\int_{0}^{t} φ(t-s)\\,dZ_s^{j,N}$, which depends on the past actions of all individuals that influence it, scaled by $N^{-1}$ (i.e. the mean-field type),…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.ST",
+    "q-fin.MF"
+  ],
+  "published": "2026-01-03",
+  "updated": "2026-01-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

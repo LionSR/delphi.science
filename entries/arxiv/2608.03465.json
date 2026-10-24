@@ -1,0 +1,21 @@
+{
+  "key": "2608.03465",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.03465",
+  "title": "A proximal difference of convex functions algorithm using Barzilai-Borwein step size with nonmonotone line search and extrapolation",
+  "authors": [
+    "Kelin Wu",
+    "Hongpeng Sun"
+  ],
+  "summary": "The paper proposes a novel proximal difference-of-convex (DC) algorithmic framework to solve general non-convex, non-smooth optimization problems. By combining Barzilai-Borwein (BB) step sizes with nonmonotone line search strategies, our approach effectively overcomes the conservative step sizes and stability issues inherent in standard proximal DC algorithms. Furthermore, we develop extrapolation mechanisms to accelerate convergence while ensuring global stability. The global convergence of the proposed algorithms is rigorously established under the Kurdyka-Łojasiewicz property. Numerical…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

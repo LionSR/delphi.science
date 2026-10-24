@@ -1,0 +1,22 @@
+{
+  "key": "2606.11820",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.11820",
+  "title": "On finding exact solutions of linear programs in the oracle model",
+  "authors": [
+    "Daniel Dadush",
+    "László A. Végh",
+    "Giacomo Zambelli"
+  ],
+  "summary": "We consider linear programming in the oracle model: $\\max\\{c^\\top x \\,:\\, x\\in P\\}$, where the polyhedron $P=\\{x\\in\\mathbb{R}^n\\,:\\, Ax\\le b\\}$ is given by a separation oracle. We present an algorithm that finds exact primal and dual solutions using $O(n^2\\log(n/δ))$ oracle calls and $O(n^4\\log(n/δ)+n^5\\log\\log(1/δ))$ arithmetic operations, where $δ$ is a geometric condition number associated with the system $(A,b)$. These bounds do not depend on the cost vector $c$ and do not require a priori knowledge of $δ$. For rational data, $\\log(1/δ)$ is polynomially bounded in the encoding size of…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DS"
+  ],
+  "published": "2026-06-10",
+  "updated": "2026-06-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2606.24703",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.24703",
+  "title": "Scheduling jobs with unknown size distribution in a M/G/1 queue: the shifted empirical Gittins",
+  "authors": [
+    "Nicolas Gast",
+    "Bruno Gaujal",
+    "Adrien Obrecht"
+  ],
+  "summary": "In this paper we consider a M/G/1 queue for which we want to minimize the expected response time. We show how to compute indices from $n$ samples of the job size distribution such that the corresponding index policy is asymptotically optimal as $n$ grows. This construction is based on a discretization of the bounded support of the job size distribution and a shift of the samples to their nearest discrete point to the right. We show that the Gittins index of the empirical distribution of these shifted samples is close to the Gittins index of the original distribution. This translates to the…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.DS",
+    "cs.PF"
+  ],
+  "published": "2026-06-23",
+  "updated": "2026-06-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

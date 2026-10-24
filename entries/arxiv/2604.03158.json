@@ -1,0 +1,20 @@
+{
+  "key": "2604.03158",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.03158",
+  "title": "Entropy correction artificial viscosity for high order DG methods using multiple artificial viscosities",
+  "authors": [
+    "Raymond Park",
+    "Jesse Chan"
+  ],
+  "summary": "Entropy stable discontinuous Galerkin (DG) methods display improved robustness for problems with shocks, turbulence, and under-resolved features by enforcing an entropy inequality. Such methods have traditionally relied on entropy conservative (EC) fluxes that are computationally expensive to evaluate. An alternative approach for enforcing an entropy inequality is through a minimally dissipative ``entropy correction\" artificial viscosity. We review how to construct such an artificial viscosity formulation and extend this approach to multiple types of viscosity (e.g., viscosity and thermal…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-03",
+  "updated": "2026-04-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

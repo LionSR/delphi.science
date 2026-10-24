@@ -1,0 +1,21 @@
+{
+  "key": "2608.22060",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.22060",
+  "title": "On Convergence of an Accelerated Modified Newton Method for Nonlinear Equations",
+  "authors": [
+    "Sanwar Ahmad",
+    "Joy Watson",
+    "Mohammad Tabanjeh"
+  ],
+  "summary": "Newton's iteration is a fundamental tool for root-finding and numerical solutions of systems of equations. The iteration rapidly refines the initial approximation to the exact root, and in general the convergence is quadratic. Since the method requires finding the function value and its derivative at each iteration, in some cases, it may not converge. This is because the value of the derivative gets close to zero. In this paper, we introduce a modified and stable algorithm of Newton's iteration method that addresses this issue, reduces computational cost, and improves efficiency. In…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-22",
+  "updated": "2026-08-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

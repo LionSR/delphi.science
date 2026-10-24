@@ -1,0 +1,20 @@
+{
+  "key": "2607.13381",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.13381",
+  "title": "Hybrid GKB Methods for X-Ray Tomography Problems with Unmatched Back Projector",
+  "authors": [
+    "Abdulmajeed Alsubhi",
+    "Rosemary Renaut"
+  ],
+  "summary": "X ray Computed Tomography (CT) is a widely used imaging modality in medical, industrial, and scientific applications. In practical CT implementations, forward, A, and back projection, B, operators are often constructed using different discretization schemes to improve computational efficiency on available software and hardware platforms. Consequently, the resulting projector pair is generally unmatched, meaning that the back projector is not the exact adjoint of the forward projector. This mismatch alters the mathematical properties of the reconstruction problem and can affect the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

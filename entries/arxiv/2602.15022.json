@@ -1,0 +1,31 @@
+{
+  "key": "2602.15022",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.15022",
+  "title": "Rethinking Diffusion Models with Symmetries through Canonicalization with Applications to Molecular Graph Generation",
+  "authors": [
+    "Cai Zhou",
+    "Zijie Chen",
+    "Zian Li",
+    "Jike Wang",
+    "Kaiyi Jiang",
+    "Pan Li",
+    "Rose Yu",
+    "Muhan Zhang",
+    "Stephen Bates",
+    "Tommi Jaakkola"
+  ],
+  "summary": "Many generative tasks in chemistry and science involve distributions invariant to group symmetries (e.g., permutation and rotation). A common strategy enforces invariance and equivariance through architectural constraints such as equivariant denoisers and invariant priors. In this paper, we challenge this tradition through the alternative canonicalization perspective: first map each sample to an orbit representative with a canonical pose or order, train an unconstrained (non-equivariant) diffusion or flow model on the canonical slice, and finally recover the invariant distribution by…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.GR",
+    "q-bio.BM"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-02-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

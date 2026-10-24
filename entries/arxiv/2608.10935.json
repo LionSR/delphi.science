@@ -1,0 +1,22 @@
+{
+  "key": "2608.10935",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.10935",
+  "title": "Robust Patrol in a Dispersed Environment",
+  "authors": [
+    "Edward Mellor",
+    "Kevin Glazebrook",
+    "Kyle Lin",
+    "Rob Shone"
+  ],
+  "summary": "We consider a patrol problem in which a patroller moves among several geographically dispersed locations to detect attackers that arrive over time. Once the patroller arrives at a location, they can spend any amount of time searching for attackers at that location---and detect an attacker there with some location-dependent instantaneous detection rate---before moving to a different location. The objective of the patroller is to minimize the expected time an attacker stays undetected at a location, regardless of where and when the attack occurs. In the special case where travel times are…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-11",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

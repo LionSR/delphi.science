@@ -1,0 +1,24 @@
+{
+  "key": "2605.07633",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.07633",
+  "title": "Distributed Seeking for Fixed Points of Biased Stochastic Operators: A Communication-Efficient Approach",
+  "authors": [
+    "Fan Li",
+    "Lei Xu",
+    "Xinlei Yi",
+    "Guanghui Wen",
+    "Yang Shi",
+    "Tao Yang"
+  ],
+  "summary": "This paper investigates the distributed fixed point seeking problem of sum-separable stochastic operators over the multi-agent network. Based on inexact Krasnosel'skiĭ--Mann iterations, the communication-efficient distributed algorithm is proposed under the relaxed growth bias and variance conditions, generalizing traditional unbiased and bounded additive variance assumptions. To enhance communication efficiency, we integrate communication compression and dynamic period skipping techniques, particularly adopting a unified compressor that allows both relative and absolute compression errors.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-08",
+  "updated": "2026-05-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

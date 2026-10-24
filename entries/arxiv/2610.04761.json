@@ -1,0 +1,19 @@
+{
+  "key": "2610.04761",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04761",
+  "title": "Instability of Gaussian elimination is exponentially rare (proof of partial result)",
+  "authors": [
+    "Lloyd N. Trefethen"
+  ],
+  "summary": "Gaussian elimination with partial pivoting is the standard algorithm for solving a dense $n\\times n$ system of linear equations $Ax=b$. The ``growth factor'' $ρ\\,$ for this process may be as large as $2^{n-1}$, and when $ρ$ is large, the algorithm is unstable. Nevertheless, long experience has shown that Gaussian elimination is resoundingly stable in practice. Experiments indicate that among random matrices with independent normally distributed entries, growth factors $ρ\\gg n^{1/2}$ are in a precise sense exponentially rare. Here we take a step toward confirming this observation by proving…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-03",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

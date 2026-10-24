@@ -1,0 +1,20 @@
+{
+  "key": "2604.09424",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.09424",
+  "title": "RKHS method for computing Koopman-based Lyapunov functions",
+  "authors": [
+    "François-Grégoire Bierwart",
+    "Alexandre Mauroy"
+  ],
+  "summary": "The Koopman operator is a powerful approach to global stability analysis of nonlinear systems, which provides a systematic procedure for Lyapunov function design. In this framework, Lyapunov functions are obtained through the eigenfunctions of the Koopman operator associated with the eigenvalues of the Jacobian matrix at the equilibrium. In practice, the eigenfunctions are approximated via a finite-dimensional representation of the operator, and there is no guarantee that the approximated spectrum accurately matches the true one. In this paper, we develop a kernel-based method to compute…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS"
+  ],
+  "published": "2026-04-10",
+  "updated": "2026-04-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2605.23550",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.23550",
+  "title": "RA-DCA: A Randomized Active-Set DCA for Directional Stationarity in Max-Structured DC Programs",
+  "authors": [
+    "Yi-Shuai Niu"
+  ],
+  "summary": "We study nonsmooth difference-of-convex programs whose subtracted convex term is a finite maximum of smooth convex functions. In this setting, standard DCA iterations may converge to critical points that are not directionally stationary, whereas exact active-vertex screening can be expensive when active sets are large or combinatorial. We propose RA-DCA, a vertex-first randomized active-set DCA that projects active gradients onto sampled directions, checks a sampled vertex residual, and uses a small linear program only as a low-residual convex-combination fallback. The method preserves the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI",
+    "math.NA"
+  ],
+  "published": "2026-05-22",
+  "updated": "2026-05-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

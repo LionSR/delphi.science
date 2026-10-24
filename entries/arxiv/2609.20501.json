@@ -1,0 +1,23 @@
+{
+  "key": "2609.20501",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20501",
+  "title": "Distributionally Robust Federated Learning with Multi-Source Data",
+  "authors": [
+    "Yingzhu Liu",
+    "Zhongkui Li",
+    "Pengcheng You",
+    "Ashish Cherukuri"
+  ],
+  "summary": "Federated learning trains a shared model from private client data. In practice, data-generating distributions may differ, and the true mixture across clients is often unknown, making the underlying group distribution difficult to specify. Existing approaches address cross-client mixture uncertainty by optimizing against the worst-case mixture, yet assume accurate client-wise distribution estimates. However, these estimates can be unreliable when based on finite samples. To handle both cross-client mixture uncertainty and within-client distributional ambiguity, we construct a global ambiguity…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

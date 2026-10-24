@@ -1,0 +1,23 @@
+{
+  "key": "2603.04232",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.04232",
+  "title": "A Multi-Fidelity Parametric Framework for Reduced-Order Modeling using Optimal Transport-based Interpolation: Applications to Diffused-Interface Two-Phase Flows",
+  "authors": [
+    "Moaad Khamlich",
+    "Niccolò Tonicello",
+    "Federico Pichi",
+    "Gianluigi Rozza"
+  ],
+  "summary": "This work introduces a data-driven, non-intrusive reduced-order modeling (ROM) framework that leverages Optimal Transport (OT) for multi-fidelity and parametric problems in two-phase flows modelling. Building upon the success of displacement interpolation for data augmentation in handling nonlinear dynamics, we extend its application to more complex and practical scenarios. The framework is designed to correct a computationally inexpensive low-fidelity (LF) model to match an accurate high-fidelity (HF) one by capturing its temporal evolution via displacement interpolation while preserving…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-03-04",
+  "updated": "2026-03-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

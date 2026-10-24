@@ -1,0 +1,23 @@
+{
+  "key": "2602.08606",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.08606",
+  "title": "Constructive conditional normalizing flows",
+  "authors": [
+    "Borjan Geshkovski",
+    "Domènec Ruiz-Balet"
+  ],
+  "summary": "Motivated by applications in conditional sampling, given a probability measure $μ$ and a diffeomorphism $φ$, we consider the problem of simultaneously approximating $φ$ and the pushforward $φ_{\\#}μ$ by means of the flow of a continuity equation whose velocity field is a perceptron neural network with piecewise constant weights. We provide an explicit construction based on a polar-like decomposition of the Lagrange interpolant of $φ$. The latter involves a compressible component, given by the gradient of a particular convex function, which can be realized exactly, and an incompressible…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "math.AP",
+    "math.PR"
+  ],
+  "published": "2026-02-09",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

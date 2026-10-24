@@ -1,0 +1,23 @@
+{
+  "key": "2609.33213",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.33213",
+  "title": "Finance-Informed Operator Learning for Option Pricing with Quantum-Compatible Realizations",
+  "authors": [
+    "Jiarui Feng",
+    "Bingyang Hu",
+    "Yu Jiang",
+    "Changhong Mou",
+    "Yeyu Zhang"
+  ],
+  "summary": "Pricing European options under local volatility requires repeatedly solving a PDE whose coefficients change with recalibration, while practitioners need both prices and sensitivities across spot-time surfaces. Neural surrogates can amortize these solves, but near expiry the solution loses regularity, making curvature difficult to learn and allowing violations of no-arbitrage bounds. We propose a finance-informed Deep Operator Network (FI-DeepONet) that decomposes the pricing operator into an input-dependent Black-Scholes carrier and a learned correction. The carrier uses strike-line…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-27",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2609.08127",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.08127",
+  "title": "A distributed-delay model for the El Niño Southern Oscillation with a minimum delay: a case study of the shifted linear chain trick",
+  "authors": [
+    "Joe Steele",
+    "Andrew Keane",
+    "Bernd Krauskopf"
+  ],
+  "summary": "When modelling a system of interest with a delay differential equation, a distributed delay may be the appropriate modelling choice when the delayed response occurs over a significant range of times rather than with a single constant delay. In systems with a minimum physical transit or processing time, however, the delay kernel should respect a fixed and positive minimum delay. A shifted Erlang kernel is a convenient choice, because the shifted linear chain trick allows one to replace the convolution associated with this type of kernel by a finite auxiliary-variable representation with one…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

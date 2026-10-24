@@ -1,0 +1,23 @@
+{
+  "key": "2608.26046",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.26046",
+  "title": "A family of second order, linear, unconditionally stable methods for the Cahn-Hilliard-Navier-Stokes equations",
+  "authors": [
+    "Daozhi Han",
+    "Nan Jiang",
+    "Jonah H. Nissan",
+    "Sayantan Sarkar"
+  ],
+  "summary": "We present a family of second-order, linear, unconditionally stable implicit-explicit (IMEX) methods for the Cahn-Hilliard-Navier-Stokes (CHNS) equations modeling matched-density two-phase flows. The proposed semi-discrete scheme combines extrapolation of the nonlinear terms with an auxiliary-variable formulation of the nonlinear free-energy term and a temporal-curvature regularization controlled by a parameter $ε$. We establish a discrete energy estimate showing unconditional long-time stability of the method for $θ\\in(1/2,1]$ and $ε\\geq0$. The resulting scheme requires only linear solves…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math-ph"
+  ],
+  "published": "2026-08-26",
+  "updated": "2026-08-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

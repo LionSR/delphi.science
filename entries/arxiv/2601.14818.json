@@ -1,0 +1,20 @@
+{
+  "key": "2601.14818",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.14818",
+  "title": "Statistical Learning Theory for Distributional Classification",
+  "authors": [
+    "Christian Fiedler"
+  ],
+  "summary": "In supervised learning with distributional inputs in the two-stage sampling setup, relevant to applications like learning-based medical screening or causal learning, the inputs (which are probability distributions) are not accessible in the learning phase, but only samples thereof. This problem is particularly amenable to kernel-based learning methods, where the distributions or samples are first embedded into a Hilbert space, often using kernel mean embeddings (KMEs), and then a standard kernel method like Support Vector Machines (SVMs) is applied, using a kernel defined on the embedding…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-01-21",
+  "updated": "2026-01-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

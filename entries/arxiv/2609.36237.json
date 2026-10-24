@@ -1,0 +1,23 @@
+{
+  "key": "2609.36237",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.36237",
+  "title": "Transversal Pooling Neural Networks",
+  "authors": [
+    "Emily J. King",
+    "Dustin G. Mixon",
+    "Michael Perlmutter",
+    "Lander Ver Hoef"
+  ],
+  "summary": "Many learning tasks require stability to small transformations while retaining sensitivity to larger ones. We introduce \\emph{transversal pooling neural networks}, which generalize spatial max pooling to affine group actions. We establish equivariance to a chosen subgroup and derive explicit stability bounds for individual pooled wavelet coefficients under affine perturbations of the input. Experimentally, we demonstrate the utility of our networks in low-data environments and for predicting tropical cyclone intensification.",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.FA"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

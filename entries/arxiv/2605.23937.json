@@ -1,0 +1,26 @@
+{
+  "key": "2605.23937",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.23937",
+  "title": "BoxLitE: A Faithful Knowledge Base Embedding Based on Convex Optimization",
+  "authors": [
+    "Bruno F. Lourenço",
+    "Hesham Morgan",
+    "Ana Ozaki",
+    "Aleksandar Pavlović",
+    "Emanuel Sallinger"
+  ],
+  "summary": "Knowledge base (KB) embeddings aim at combining the capability of classical knowledge graph embeddings to generalize the information present in facts, the ABox, with conceptual knowledge represented in an ontology language, the TBox. Several authors have recently explored the idea of mapping concepts to convex regions in a vector space. This is useful to represent hierarchies, typically present in TBoxes, since more general concepts can be mapped to larger regions, containing those regions associated with more specific concepts. However, the power of convexity is rarely leveraged during the…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.LG",
+    "cs.LO",
+    "math.OC"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

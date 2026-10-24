@@ -1,0 +1,23 @@
+{
+  "key": "2601.07492",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.07492",
+  "title": "Online Markov Decision Processes with Terminal Law Constraints",
+  "authors": [
+    "Bianca Marin Moreno",
+    "Margaux Brégère",
+    "Pierre Gaillard",
+    "Nadia Oudjane"
+  ],
+  "summary": "Traditional reinforcement learning usually assumes either episodic interactions with resets or continuous operation to minimize average or cumulative loss. While episodic settings have many theoretical results, resets are often unrealistic in practice. The infinite-horizon setting avoids this issue but lacks non-asymptotic guarantees in online scenarios with unknown dynamics. In this work, we move towards closing this gap by introducing a reset-free framework called the periodic framework, where the goal is to find periodic policies: policies that not only minimize cumulative loss but also…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-01-12",
+  "updated": "2026-01-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

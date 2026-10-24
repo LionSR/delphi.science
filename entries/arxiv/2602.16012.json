@@ -1,0 +1,28 @@
+{
+  "key": "2602.16012",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.16012",
+  "title": "Towards Efficient Constraint Handling in Neural Solvers for Routing Problems",
+  "authors": [
+    "Jieyi Bi",
+    "Zhiguang Cao",
+    "Jianan Zhou",
+    "Wen Song",
+    "Yaoxin Wu",
+    "Jie Zhang",
+    "Yining Ma",
+    "Cathy Wu"
+  ],
+  "summary": "Neural solvers have achieved impressive progress in addressing simple routing problems, particularly excelling in computational efficiency. However, their advantages under complex constraints remain nascent, for which current constraint-handling schemes via feasibility masking or implicit feasibility awareness can be inefficient or inapplicable for hard constraints. In this paper, we present Construct-and-Refine (CaR), the first general and efficient constraint-handling framework for neural routing solvers based on explicit learning-based feasibility refinement. Unlike prior…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-02-17",
+  "updated": "2026-02-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

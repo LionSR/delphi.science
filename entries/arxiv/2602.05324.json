@@ -1,0 +1,25 @@
+{
+  "key": "2602.05324",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05324",
+  "title": "A Data Driven Structural Decomposition of Dynamic Games via Best Response Maps",
+  "authors": [
+    "Mahdis Rabbani",
+    "Navid Mojahed",
+    "Shima Nazari"
+  ],
+  "summary": "Dynamic games are powerful tools to model multi-agent decision-making, yet computing Nash (generalized Nash) equilibria remains a central challenge in such settings. Complexity arises from tightly coupled optimality conditions, nested optimization structures, and poor numerical conditioning. Existing game-theoretic solvers address these challenges by directly solving the joint game, typically requiring explicit modeling of all agents' objective functions and constraints, while learning-based approaches often decouple interaction through prediction or policy approximation, sacrificing…",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "cs.MA",
+    "cs.RO",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-02-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

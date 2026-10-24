@@ -1,0 +1,20 @@
+{
+  "key": "2606.25684",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.25684",
+  "title": "Robust Multi-step Model Predictive Control with Guaranteed Stability",
+  "authors": [
+    "Sebastian Steffen",
+    "Mark Cannon"
+  ],
+  "summary": "We present a method of ensuring recursive feasibility and input-to-state stability of robust nonlinear Model Predictive Control (MPC) with multi-step predictors. Although feasibility guarantees are well-established for the case of single-step models applied recursively over a finite horizon, such guarantees are missing in naive MPC formulations that use distinct multi-step models to predict the system state at different future points in time. This issue arises because of potential inconsistencies in multi-step predictions generated at different times. Our approach performs an a priori…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-24",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

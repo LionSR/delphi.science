@@ -1,0 +1,22 @@
+{
+  "key": "2603.02103",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.02103",
+  "title": "Solving Convex Quadratic Optimization with Indicators Over Structured Graphs",
+  "authors": [
+    "Aaresh Bhathena",
+    "Salar Fattahi",
+    "Andrés Gómez",
+    "Simge Küçükyavuz"
+  ],
+  "summary": "This paper studies convex quadratic minimization problems in which each continuous variable is coupled with a binary indicator variable. We focus on the structured setting where the Hessian matrix of the quadratic term is positive definite and exhibits sparsity. We develop an exact parametric dynamic programming algorithm whose computational complexity depends explicitly on the treewidth of the Hessian's support graph, its volume growth, and an appropriate margin parameter. Under suitable structural conditions, the overall complexity scales linearly with the problem dimension. To demonstrate…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-02",
+  "updated": "2026-03-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

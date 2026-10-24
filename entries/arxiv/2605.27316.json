@@ -1,0 +1,24 @@
+{
+  "key": "2605.27316",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.27316",
+  "title": "Probabilistic Smoothing with Ratio-Monotone Transforms for Global Optimization",
+  "authors": [
+    "Kukyoung Jang",
+    "Taehyun Cho",
+    "Junrui Zhang",
+    "Ping Xu",
+    "Kyungjae Lee"
+  ],
+  "summary": "Probabilistic smoothing is a standard tool for global optimization, but existing methods rely on Gaussian kernels and specific transforms, often resulting in strong hyperparameter sensitivity and limited robustness. We propose a general smoothing framework that combines flexible symmetric unimodal kernels with monotonic ratio-based transformations. Under mild conditions, we show that the smoothed objective preserves the global maximizer and that all stationary points concentrate near the true optimum for sufficiently large amplification, without requiring a decreasing smoothing schedule. We…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

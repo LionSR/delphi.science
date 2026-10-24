@@ -1,0 +1,20 @@
+{
+  "key": "2604.13227",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.13227",
+  "title": "Inverse scattering beyond Born approximation via rotation-equivariance-aware neural network and low-rank structure",
+  "authors": [
+    "Yuyuan Zhou",
+    "Shixu Meng"
+  ],
+  "summary": "This work proposes a hybrid method (ULR) which integrates a rotation-equivariance-aware neural network and a low-rank structure to solve the two dimensional inverse medium scattering problem. The neural network is to model the data corrector which maps the full data to the Born data, and the low-rank structure is to design an inverse Born solver that finds a regularized solution from the perturbed Born data. The proposed rotation-equivariance-aware neural network naturally incorporates the reciprocity relation and the rotation-equivariance in inverse scattering, while the low-rank structure…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-14",
+  "updated": "2026-04-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

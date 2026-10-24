@@ -1,0 +1,20 @@
+{
+  "key": "2602.01627",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.01627",
+  "title": "Why Does Adaptive Zeroth-Order Optimization Work?",
+  "authors": [
+    "Haishan Ye",
+    "Luo Luo"
+  ],
+  "summary": "Zeroth-order (ZO) optimization is popular in real-world applications that accessing the gradient information is expensive or unavailable. Recently, adaptive ZO methods that normalize gradient estimators by the empirical standard deviation of function values have achieved strong practical performance, particularly in fine-tuning the large language model. However, the theoretical understanding of such strategy remains limited. In this work, we show that the empirical standard deviation is, with high probability, closely proportional to the norm of the (stochastic) gradient. Based on this…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-02",
+  "updated": "2026-02-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

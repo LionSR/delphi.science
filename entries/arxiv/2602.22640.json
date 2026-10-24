@@ -1,0 +1,21 @@
+{
+  "key": "2602.22640",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.22640",
+  "title": "Efficient exact sequential lifting algorithm for binary knapsack set",
+  "authors": [
+    "Xintong Wang",
+    "Liang Chen",
+    "Yu-Hong Dai"
+  ],
+  "summary": "Lifting is a crucial technique in mixed integer programming (MIP) for generating strong valid inequalities, which serve as cutting planes to improve the branch-and-cut algorithm. We first propose an exact sequential lifting algorithm for the binary knapsack set, which employs the dominance list structure to remove redundant storage and computation in the dynamic programming (DP) array. This structure preserves scale invariance and effectively handles constraints with non-integer coefficients. Then, a reduction method is developed for the lifting procedure under some conditions, further…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-26",
+  "updated": "2026-02-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

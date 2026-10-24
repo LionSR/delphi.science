@@ -1,0 +1,22 @@
+{
+  "key": "2609.20395",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20395",
+  "title": "Adaptive Sparse-grid Discontinuous Galerkin Approximations the Bhatnagar--Gross--Krook Model",
+  "authors": [
+    "Stefan Schnake",
+    "Miroslav Stoyanov",
+    "Eirik Endeve",
+    "Cory Hauck"
+  ],
+  "summary": "This work studies adaptive sparse-grid discontinuous Galerkin (DG) discretizations for the Bhatnagar--Gross--Krook (BGK) model, a kinetic equation posed in four- and six-dimensional phase-space. Standard DG methods are rendered impractical for the BGK model by the curse of dimensionality, motivating compressed representations that adapt to the solution in time. Using the adaptive sparse-grid DG method, we quantify accuracy and compression by comparing the adaptive degrees of freedom to full-grid DG methods and by assessing the resulting kinetic and fluid quantities in both fluid and rarefied…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

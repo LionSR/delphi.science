@@ -1,0 +1,20 @@
+{
+  "key": "2610.00033",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00033",
+  "title": "Inverse Optimal Control with Convex Features and Box Constraints",
+  "authors": [
+    "Jiguang Yu",
+    "Louis Shuo Wang"
+  ],
+  "summary": "We study an inverse optimal-control problem for identifying nonnegative weights in a convex-feature lower-level objective. The resulting model is an optimistic bilevel optimal-control problem whose lower level is a strongly convex, linearly constrained control problem with box constraints in \\(L^2\\). For the reduced response map \\(x\\mapsto (y_x,u_x)\\), we prove global single-valuedness and an explicit Lipschitz estimate, without assuming differentiability of active sets. Exploiting the affine dependence of the lower-level functional on \\(x\\), we show that the value function is concave and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-02",
+  "updated": "2026-09-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

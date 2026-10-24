@@ -1,0 +1,28 @@
+{
+  "key": "2607.06935",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06935",
+  "title": "Mathematical methods of reinforcement learning",
+  "authors": [
+    "Denis Belomestny",
+    "Alexander Gasnikov",
+    "Egor Gladin",
+    "Alexey Naumov",
+    "Artemy Rubtsov",
+    "Yuri Sapronov",
+    "Daniil Tiapkin",
+    "Nikita Yudin"
+  ],
+  "summary": "Reinforcement learning (RL) is increasingly grounded in tools from probability, optimization, and operator theory. This survey organizes the mathematical structures that underpin the design and analysis of modern algorithms in RL. We begin from Markov decision processes (MDPs) and the Bellman operators, emphasizing contraction mappings, monotonicity, and fixed-point theory that yield convergence guarantees and rates for value and policy iteration, and temporal-difference schemes. We then develop the optimization perspective: stochastic approximation and martingale methods, convex duality and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

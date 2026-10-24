@@ -1,0 +1,20 @@
+{
+  "key": "2605.09700",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09700",
+  "title": "Neural enrichment finite element method: A hybrid framework for problems with strong oscillations or interface problems",
+  "authors": [
+    "Shihan Guo",
+    "Thomas Richter"
+  ],
+  "summary": "We propose a hybrid method, the Neural Enrichment Finite Element Method (NEFEM), designed for problems involving strong oscillations or interface problems with weak discontinuities. This method is based on the stable generalized finite element method (SGFEM) framework, wherein neural networks (NNs) are introduced as enrichment functions for adaptivity, and the Ritz functional is applied for the training process. This works makes two main contributions. First, the method constructs local subspaces with superior approximation properties, significantly reducing the required number of degrees of…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-10",
+  "updated": "2026-05-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2605.12801",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.12801",
+  "title": "Fast and Stable Gradient Approximation for Bilinear Forms of Hermitian Matrix Functions",
+  "authors": [
+    "Navjot Singh",
+    "Kipton Barros",
+    "Xiaoye Sherry Li"
+  ],
+  "summary": "Objectives involving bilinear forms $u^\\top f(A(θ))v$ for Hermitian $A$ arise widely in scientific computing and probabilistic machine learning. For large matrices, Lanczos efficiently approximates these quantities, but differentiating them with respect to $θ$ is challenging. Existing approaches either backpropagate through the Lanczos recurrence, requiring reorthogonalization for stability, or apply Arnoldi to an augmented block matrix of twice the original size. Both introduce extra computation and orthogonalization costs that can limit performance on modern hardware. We propose a…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

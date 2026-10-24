@@ -1,0 +1,20 @@
+{
+  "key": "2610.08087",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08087",
+  "title": "A Logarithmic-dual-update Bregman ADMM for Optimal Transport",
+  "authors": [
+    "Di Hou",
+    "Kim-Chuan Toh"
+  ],
+  "summary": "This paper studies an entropy Bregman alternating direction method of multipliers (BADMM) with logarithmic dual update for solving discrete optimal transport (OT) problems. The algorithm uses simple row and column normalizations without inner iterations, allowing efficient CPU and GPU implementations. However, the convergence of this method for general OT problems has not been established. Starting from a strictly positive feasible primal point and a zero multiplier, here we establish the $R$-linear convergence of the primal--dual sequence for general OT costs with any fixed multiplier…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

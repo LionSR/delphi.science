@@ -1,0 +1,21 @@
+{
+  "key": "2610.18232",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.18232",
+  "title": "Sparse-group Convoluted Smoothed Quantile Regression in High Dimension",
+  "authors": [
+    "Jing Lv",
+    "Anxi Wang"
+  ],
+  "summary": "In many applications, covariates are naturally organized into groups, yet conventional group-selection methods often retain all variables within selected groups, failing to achieve within-group sparsity. To address this limitation, we propose an adaptive two-stage sparse-group selection procedure for high-dimensional quantile regression. The proposed method integrates convolution-smoothed quantile loss with $\\ell_{2,0}$ and $\\ell_0$ penalties to identify important groups and relevant variables within them, achieving sparsity at both levels. We establish theoretical guarantees for sure…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

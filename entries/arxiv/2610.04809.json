@@ -1,0 +1,21 @@
+{
+  "key": "2610.04809",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04809",
+  "title": "From Unit Interval Orders to Totally Nonnegative Matrices: Permanental Inequalities and Bruhat-Increasing Bijections",
+  "authors": [
+    "Sihong Pan",
+    "Mark Skandera",
+    "Jiayuan Wang"
+  ],
+  "summary": "Given an $n\\times n$ matrix $A=(a_{i,j})$ and subsets $I,J$ of $[1,n]:=\\{1,\\dotsc,n\\}$, let $A_{I,J}=(a_{i,j})_{i\\in I,j\\in J}$ denote the $(I,J)$-submatrix of $A$. We prove that, for every totally nonnegative matrix $A$ and every $h=1,\\dotsc,n-1$, \\begin{equation} \\operatorname{perm}(A_{[1,h],[1,h]}) \\operatorname{perm}(A_{[h+1,n],[h+1,n]}) \\;\\geq\\; \\operatorname{perm}(A_{[1,n]\\cap 2\\mathbb Z,[1,n]\\cap 2\\mathbb Z}) \\operatorname{perm}(A_{[1,n]\\smallsetminus 2\\mathbb Z,[1,n]\\smallsetminus 2\\mathbb Z}). \\label{eq:absmain} \\end{equation} In particular, these inequalities hold for the $0$-$1$…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-10-03",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

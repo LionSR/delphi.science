@@ -1,0 +1,22 @@
+{
+  "key": "2607.05935",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.05935",
+  "title": "Spectral-gauge cuts for semidefinite programming",
+  "authors": [
+    "Antonio Sasaki",
+    "Sophie Demassey",
+    "Valentina Sessa"
+  ],
+  "summary": "We use symmetric gauge theory to develop a general class of cutting-plane algorithms for semidefinite programming. We formulate a separation problem based on spectral normalizations induced by gauges and derive a closed-form separation oracle. This oracle yields an implementable cut-generation procedure that, by varying the gauge, recovers standard cut families and generates new ones with tunable spectral structure. We embed the oracle within Kelley's method and characterize convergence as a function of the chosen gauge and initial conic relaxation. Numerical experiments on small and large…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.SP"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

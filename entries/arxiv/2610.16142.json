@@ -1,0 +1,24 @@
+{
+  "key": "2610.16142",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16142",
+  "title": "Distributional Regression for Arbitrary Response Variables Using ReLU Neural Networks",
+  "authors": [
+    "Junpeng Ren",
+    "Carlos Misael Madrid Padilla",
+    "Oscar Hernan Madrid Padilla"
+  ],
+  "summary": "This paper develops a unified framework for distributional regression with arbitrary response variables. Rather than relying on scalar thresholds or Euclidean structure, we model conditional event probabilities indexed by measurable sets, which extends distributional regression to general response spaces while retaining a direct connection to classical event-based formulations. Within this framework, we study two complementary estimators: a preliminary estimator based on separate regression of event indicators, and a constrained estimator that enforces inclusion-consistent predictions…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

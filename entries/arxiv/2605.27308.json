@@ -1,0 +1,23 @@
+{
+  "key": "2605.27308",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.27308",
+  "title": "PINNsur: Physics-Informed Neural Networks for PDEs on Curved Surfaces",
+  "authors": [
+    "Pranav Jain",
+    "Navami Kairanda",
+    "Peter Yichen Chen",
+    "Oded Stein"
+  ],
+  "summary": "Partial differential equations (PDEs) on surfaces are fundamental to scientific computing and geometry processing. A popular approach to solving PDEs on surfaces is the finite element method (FEM), where the surface is divided into discrete geometric elements (usually triangles). Recently, physics-informed neural networks (PINNs) have emerged as a continuous, mesh-free alternative that does not suffer from FEM's sensitivity to mesh quality or geometric discretization errors. We present PINNSur, a simple framework for using PINNs on curved surfaces: we train a neural field to approximate the…",
+  "domain": "cs.GR",
+  "tags": [
+    "cs.GR",
+    "math.NA"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

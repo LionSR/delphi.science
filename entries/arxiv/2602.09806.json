@@ -1,0 +1,19 @@
+{
+  "key": "2602.09806",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.09806",
+  "title": "Convergence to pushed fronts and the behavior of level sets in monostable reaction-diffusion equations",
+  "authors": [
+    "Ryo Kiyono"
+  ],
+  "summary": "We study the behavior of solutions of a monostable reaction-diffusion equation $u_t=Δ_x u +u_{yy} +f(u)$ ($x \\in \\mathbb{R}^{n-1}$, $y \\in \\mathbb{R}$, $t>0$), with the unstable equilibrium point $0$ and the stable equilibrium point $1$. Under the condition that the corresponding one-dimensional equation has a pushed front $Φ_{c^*}(z)$ with $Φ_{c^*}(-\\infty)=1$, $Φ_{c^*}(\\infty)=0$, we show that the solution $u(x,y,t)$ approaches $Φ_{c^*}(y-γ(x,t))$ for some $γ(x,t)$ as $t \\to \\infty$, if initially $u(x,y,0)$ decays sufficiently fast as $y \\to \\infty$ and is bounded below by some positive…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-02-10",
+  "updated": "2026-02-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

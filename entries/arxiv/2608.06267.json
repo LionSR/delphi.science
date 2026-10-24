@@ -1,0 +1,21 @@
+{
+  "key": "2608.06267",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.06267",
+  "title": "Gradient Descent on Point Clouds and Applications in Learned Operator Correction",
+  "authors": [
+    "Andreas Hauptmann",
+    "Yury Korolev",
+    "Matthew Thorpe"
+  ],
+  "summary": "We consider the problem of minimising an energy over an unknown manifold that is given implicitly by a point cloud. For a known manifold one can define a gradient descent scheme analogously to the classical construction in Euclidean spaces. However, when the manifold is not known one has to simultaneously estimate the manifold whilst minimising the energy. We define a gradient descent scheme which remains in a neighbourhood of the manifold and, under suitable stability and sampling assumptions, converges to a neighbourhood of a local minimiser whose size vanishes as the time step and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-06",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

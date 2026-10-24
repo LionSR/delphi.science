@@ -1,0 +1,22 @@
+{
+  "key": "2607.13360",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.13360",
+  "title": "Data driven non-equilibrium moist phase exchanges for atmospheric convection within a discontinuous Galerkin model of the compressible Euler equations",
+  "authors": [
+    "David Lee",
+    "Kieran Ricardo",
+    "Junwei Lyu"
+  ],
+  "summary": "A discrete formulation of the multiphase moist compressible Euler equations is presented for which the energy and tracer variance conserving dynamics is coupled to the non-equilibrium moist phase exchanges in a thermodynamically consistent manner. A neural network is then trained to learn the mass exchanges between vapour, liquid and ice phases in atmospheric convection. The network is trained on convection resolving output from a regional configuration of the LFRic model with a multi-moment microphysics parameterisation (CASIM). The loss function for learning these phase exchanges is…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-08-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

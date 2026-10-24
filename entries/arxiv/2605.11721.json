@@ -1,0 +1,19 @@
+{
+  "key": "2605.11721",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11721",
+  "title": "A stabilized dual-SAV parametric finite element framework for constrained planar geometric flows with mesh regularization",
+  "authors": [
+    "Koya Sakakibara"
+  ],
+  "summary": "Parametric finite element discretizations of constrained geometric flows must simultaneously address high-order geometric stiffness, mesh degeneration, and nonlinear global constraints. This paper develops a stabilized dual-SAV (scalar auxiliary variable) parametric finite element framework for planar closed curves. The proposed formulation introduces separate auxiliary variables for the physical geometric energy and for an artificial mesh regularization energy. The mesh regularization is coupled only to tangential motion by projecting out its normal variation, so that mesh redistribution…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

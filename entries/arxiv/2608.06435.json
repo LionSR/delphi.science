@@ -1,0 +1,19 @@
+{
+  "key": "2608.06435",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.06435",
+  "title": "Chebyshev Bias for Largest Prime Factors",
+  "authors": [
+    "Nilotpal Kanti Sinha"
+  ],
+  "summary": "Let $P^+(n)$ be the largest prime factor of $n$, and let $χ=χ_{-4}$ be $1$ on primes $1\\pmod4$ and $-1$ on primes $3\\pmod4$. For fixed $k\\ge2$ we study \\[ D_k(x)=\\sum_{\\substack{n\\le x\\\\ Ω(n)=k}}χ(P^+(n)). \\] Thus $D_k(x)$ compares the two residue classes according to the largest prime factor of integers having exactly $k$ prime factors, counted with multiplicity. Assuming RH for $ζ(s)$ and $L(s,χ)=β(s)$, we prove a pointwise explicit formula. The main term is a fixed negative contribution plus an absolutely convergent oscillating sum over the zeros $ρ=\\frac12+iγ$ of $L(s,χ)$. The ordering…",
+  "domain": "math.GM",
+  "tags": [
+    "math.GM"
+  ],
+  "published": "2026-08-06",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

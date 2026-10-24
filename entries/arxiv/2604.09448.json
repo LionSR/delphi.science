@@ -1,0 +1,20 @@
+{
+  "key": "2604.09448",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.09448",
+  "title": "Bounding the exponential sum on squares of some sifted sequences",
+  "authors": [
+    "E. Malavika",
+    "Olivier Ramaré"
+  ],
+  "summary": "Let $\\mathfrak{B}$ denote the collection of odd primitive Gaussian integers and $n\\mapsto b(n)$ denote the characteristic function of elements of $\\mathfrak{B}$. We prove that the exponential sum $ S(α; N)=\\sum_{n\\le N}b(n)e(n^2α)$ satisfies \\begin{equation*} \\frac{S(α;N)}{N/\\sqrt{\\log N}} \\ll N^ε(q^{-1/4}+N^{-1/2}q^{1/4}+N^{-1/8}), \\end{equation*} where, $(a,q)=1$ and $|α- a/q | < 1/q^2$. Though we specialized on sums of two squares, these results extend to more general sequences.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-04-10",
+  "updated": "2026-04-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2606.28860",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28860",
+  "title": "Maximal Gaps for Dilated Lacunary Integer Sequences",
+  "authors": [
+    "Yuval Peres",
+    "Bohan Yang"
+  ],
+  "summary": "Let \\((a_n)_{n\\ge1}\\subset\\mathbb{N}\\) be a lacunary sequence, \\(a_{n+1}\\ge q a_n\\) for \\(q>1\\). For \\(x\\in\\mathbb{T}\\), we study the maximal empty circular gap \\(G_N(x)\\) of the finite orbit \\(\\{a_1x,\\ldots,a_Nx\\}\\). We prove that, for Lebesgue-almost every \\(x\\), \\[ \\frac{1}{2} \\le \\liminf_{N\\to\\infty}\\frac{NG_N(x)}{\\log N} \\le \\limsup_{N\\to\\infty}\\frac{NG_N(x)}{\\log N} \\le \\frac{q+1}{q-1}\\,. \\] If, in addition, \\(a_n\\mid a_{n+1}\\) for every \\(n\\), then this can be improved to \\[ \\lim_{N\\to\\infty}\\frac{NG_N(x)}{\\log N}=1 \\] for Lebesgue-almost every \\(x\\).",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.DS",
+    "math.PR"
+  ],
+  "published": "2026-06-27",
+  "updated": "2026-06-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

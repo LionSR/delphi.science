@@ -1,0 +1,20 @@
+{
+  "key": "2608.04360",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.04360",
+  "title": "The Refined Joint Bidiagonalization Method and an Implicitly Restarted Algorithm for Large GSVD Computations",
+  "authors": [
+    "Kaixiao Fang",
+    "Zhongxiao Jia"
+  ],
+  "summary": "We make a convergence analysis on the joint bidiagonalization (JBD) method that computes several extreme generalized singular value decomposition (GSVD) components of a regular matrix pair $\\{A,L\\}$, and show that the right and left Ritz vectors obtained by it may converge erratically and even may fail to converge, while Ritz values converge. These convergence results hold for a class of general Rayleigh--Ritz projection methods for the GSVD problem under the hypothesis that the deviation of a desired right generalized singular vector from the right subspace tends to zero. We prove the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-05",
+  "updated": "2026-08-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

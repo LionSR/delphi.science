@@ -1,0 +1,21 @@
+{
+  "key": "2601.03299",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.03299",
+  "title": "Progressive Bayesian Confidence Architectures for Cold-Start Personal Health Analytics: Formalizing Early Insight Through Posterior Contraction and Risk-Aware Interpretation",
+  "authors": [
+    "Richik Chakraborty"
+  ],
+  "summary": "Personal health analytics systems face a persistent cold-start dilemma: users expect meaningful insights early in data collection, while conventional statistical inference requires data volumes that often exceed engagement horizons. Existing approaches either delay inference until fixed statistical thresholds are met -- leading to user disengagement -- or surface heuristic insights without formal uncertainty quantification, risking false confidence. We propose a progressive Bayesian confidence architecture that formalizes early-stage inference through phased interpretation of posterior…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "q-bio.QM"
+  ],
+  "published": "2026-01-06",
+  "updated": "2026-01-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2601.08110",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.08110",
+  "title": "Efficient Incremental SLAM via Information-Guided and Selective Optimization",
+  "authors": [
+    "Reza Arablouei"
+  ],
+  "summary": "We present an efficient incremental SLAM back-end that achieves the accuracy of full batch optimization while substantially reducing computational cost. The proposed approach combines two complementary ideas: information-guided gating (IGG) and selective partial optimization (SPO). IGG employs an information-theoretic criterion based on the log-determinant of the information matrix to quantify the contribution of new measurements, triggering global optimization only when a significant information gain is observed. This avoids unnecessary relinearization and factorization when incoming data…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "cs.IT",
+    "eess.SP",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-01-13",
+  "updated": "2026-01-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2609.21071",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.21071",
+  "title": "Some freezing limits for Bessel functions and Bessel processes with drift of type $B_N$",
+  "authors": [
+    "Jan Richter",
+    "Michael Voit"
+  ],
+  "summary": "We use the series representation of the Bessel functions of type $B_N$ in terms of Jack polynomials and show that $$\\lim_{k_1\\to\\infty} J_{(k_1,k_2)}^B(x,k_1y)^{1/k_1}= 2^N\\prod\\limits_{i=1}^N \\Bigg( e^{\\sqrt{1+x_i^2 y_i^2}-1}\\cdot \\frac{1}{\\sqrt{1+x_i^2 y_i^2}+1} \\Bigg)$$ for $x,y\\in\\mathbb R^N$ and $k_2\\ge0$. Moreover, the known Laplace-type integral representations for $N\\ge1$ and $k_2=0,1/2,1,2$ and for $N=2$ and $k_2>0$ by Rösler and Demni respectively lead to related limits for $$\\lim_{k_1 \\to \\infty} \\partial_{x_j} J_{(k_1,k_2)}^B(x,k_1y) /(k_1 \\cdot J_{(k_1,k_2)}^B(x,k_1 y)) \\quad…",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA",
+    "math-ph",
+    "math.PR",
+    "math.RT"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

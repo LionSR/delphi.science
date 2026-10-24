@@ -1,0 +1,25 @@
+{
+  "key": "2602.22390",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.22390",
+  "title": "A Reduced Order Model approach for First-Principles Molecular Dynamics Computations",
+  "authors": [
+    "Siu Wun Cheung",
+    "Youngsoo Choi",
+    "Jean-Luc Fattebert",
+    "Jonas Kaufman",
+    "Daniel Osei-Kuffuor"
+  ],
+  "summary": "To leverage the redundancy between the electronic structure computed at each step of first-principles molecular dynamics, we present a data-driven modeling framework for Kohn-Sham Density Functional Theory that bypasses the explicit optimization of electronic wavefunctions. We sample a priori representative atomic configurations and construct a low-dimensional basis that efficiently approximates the electronic structure subspace. Subsequently, we employ this reduced basis in a direct solver for the electronic single particle density matrix, thereby enabling the efficient determination of…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cond-mat.mtrl-sci",
+    "physics.comp-ph"
+  ],
+  "published": "2026-02-25",
+  "updated": "2026-02-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

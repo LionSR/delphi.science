@@ -1,0 +1,20 @@
+{
+  "key": "2603.27704",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.27704",
+  "title": "Auto-Stabilized Weak Galerkin Finite Element Methods for Biot's consolidation model on Non-Convex Polytopal Meshes",
+  "authors": [
+    "Chunmei Wang",
+    "Shangyou Zhang"
+  ],
+  "summary": "This paper presents an auto-stabilized weak Galerkin (WG) finite element method for the Biot's consolidation model within the classical displacement-pressure two-field formulation. Unlike traditional WG approaches, the proposed scheme achieves numerical stability without the requirement of traditional stabilizers. Spatial discretization is performed using weak Galerkin finite elements for both displacement and pressure approximations, while a backward Euler scheme is employed for temporal discretization to ensure a fully implicit and stable formulation. We establish the well-posedness of the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-29",
+  "updated": "2026-03-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

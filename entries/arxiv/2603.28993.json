@@ -1,0 +1,21 @@
+{
+  "key": "2603.28993",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.28993",
+  "title": "Collisionless Multi-Agent Path Planning in the Hamilton-Jacobi Formulation",
+  "authors": [
+    "Christian Parkinson",
+    "Adan Baca",
+    "Huy Nguyen"
+  ],
+  "summary": "We present a method for collisionless multi-agent path planning using the Hamilton-Jacobi-Bellman equation. Because the method is rooted in optimal control theory and partial differential equations, it avoids the need for hierarchical planners and is black-box free. Our model can account for heterogeneous agents and realistic, high-dimensional dynamics. We develop a grid-free numerical method based on a variational formulation of the solution of the Hamilton-Jacobi-Bellman equation which can resolve optimal trajectories even in high-dimensional problems, and include some practical…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-30",
+  "updated": "2026-03-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2602.01136",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.01136",
+  "title": "A Unified Matrix-Spectral Framework for Stability and Interpretability in Deep Learning",
+  "authors": [
+    "Ronald Katende"
+  ],
+  "summary": "We develop a unified matrix-spectral framework for analyzing stability and interpretability in deep neural networks. Representing networks as data-dependent products of linear operators reveals spectral quantities governing sensitivity to input perturbations, label noise, and training dynamics. We introduce a Global Matrix Stability Index that aggregates spectral information from Jacobians, parameter gradients, Neural Tangent Kernel operators, and loss Hessians into a single stability scale controlling forward sensitivity, attribution robustness, and optimization conditioning. We further…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS",
+    "math.OC"
+  ],
+  "published": "2026-02-01",
+  "updated": "2026-02-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

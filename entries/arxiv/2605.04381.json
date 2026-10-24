@@ -1,0 +1,25 @@
+{
+  "key": "2605.04381",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04381",
+  "title": "Causal discovery under mean independence and linearity",
+  "authors": [
+    "Geert Mesters",
+    "Alvaro Ribot",
+    "Anna Seigal",
+    "Piotr Zwiernik"
+  ],
+  "summary": "Causal discovery methods such as LiNGAM identify causal structure from observational data by assuming mutually independent disturbances. This assumption is fragile: shared volatility, common scale effects, or other forms of dependence can cause the methods to recover the wrong causal order, even with infinite data. We introduce the Linear Mean-Independent Acyclic Model (LiMIAM), which replaces full independence with weaker one-sided mean-independence restrictions on the disturbances. Under finite-order consequences of these restrictions, source nodes are generically identifiable, and hence a…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "cs.LG",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

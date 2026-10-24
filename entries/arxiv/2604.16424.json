@@ -1,0 +1,23 @@
+{
+  "key": "2604.16424",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.16424",
+  "title": "Safety, Security, and Cognitive Risks in State-Space Models: A Systematic Threat Analysis with Spectral, Stateful, and Capacity Attacks",
+  "authors": [
+    "Manoj Parmar"
+  ],
+  "summary": "State-Space Models (SSMs) -- structured SSMs (S4, S4D, DSS, S5), selective SSMs (Mamba, Mamba-2), and hybrid architectures (Jamba) -- are deployed in safety-critical long-context applications: genomic analysis, clinical time-series forecasting, and cybersecurity log processing. Their linear-time scaling is compelling, yet the security properties of their compressed-state recurrent architectures remain unstudied. We present the first systematic treatment of SSM safety, security, and cognitive risks. Seven contributions: (1) Formal threat framework -- SSM Attack Surface (five layers), State…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-04-04",
+  "updated": "2026-04-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2606.01764",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.01764",
+  "title": "Accelerating Min-Max Optimization via Power-Law Stepsizes",
+  "authors": [
+    "Yue Wu",
+    "Weiqiang Zheng",
+    "Yang Cai",
+    "Haipeng Luo"
+  ],
+  "summary": "We revisit the convergence guarantees of the Extragradient (EG) method for unconstrained biaffine min-max optimization. It is known that EG with a fixed stepsize achieves a $Θ(T^{-1/2})$ last-iterate convergence rate, which is slower than the optimal $\\mathcal{O}(T^{-1})$ rate attainable by incorporating additional mechanisms such as anchoring. Motivated by recent advances showing that dynamic stepsizes alone can significantly accelerate gradient descent, we ask whether dynamic stepsizes can similarly accelerate the last-iterate convergence of EG. We present the first positive result in this…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.GT",
+    "cs.LG"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

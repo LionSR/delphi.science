@@ -1,0 +1,21 @@
+{
+  "key": "2602.06824",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.06824",
+  "title": "RanSOM: Second-Order Momentum with Randomized Scaling for Constrained and Unconstrained Optimization",
+  "authors": [
+    "El Mahdi Chayti",
+    "Mohamad Fakhouri"
+  ],
+  "summary": "Second-order momentum corrects the lag of momentum behind the current gradient with a Hessian-vector product (HVP), but existing corrections need either a Lipschitz Hessian or extra forward and backward passes at an auxiliary point. We show that randomizing the step length removes this trade-off: if the step is exponentially distributed with mean $η$, a Stein-type identity makes $η$ times one HVP at the new iterate an estimate of the gradient change that is unbiased in expectation over the step, and this HVP shares its forward pass with the next gradient. The resulting method, RanSOM-E,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-02-06",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

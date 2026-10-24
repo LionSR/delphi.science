@@ -1,0 +1,24 @@
+{
+  "key": "2601.17750",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.17750",
+  "title": "Multi-Criteria Inverse Robustness in Radiotherapy Planning Using Semidefinite Programming",
+  "authors": [
+    "Jan Schröeder",
+    "Yair Censor",
+    "Philipp Süss",
+    "Karl-Heinz Küfer"
+  ],
+  "summary": "Radiotherapy planning naturally leads to a multi-criteria optimization problem which is subject to different sources of uncertainty. In order to find the desired treatment plan, a decision maker must balance these objectives as well as the level of robustness towards uncertainty against each other. This paper showcases a quantitative approach to do so, which combines the theoretical model with the ability to deal with practical challenges. To this end, the uncertainty, which can be expressed via the so-called dose-influence matrix, is modelled using interval matrices. We use inverse…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA",
+    "physics.med-ph"
+  ],
+  "published": "2026-01-25",
+  "updated": "2026-01-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2603.07738",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.07738",
+  "title": "A low-dissipation central scheme for ideal MHD",
+  "authors": [
+    "Yu-Chen Cheng",
+    "Praveen Chandrashekar",
+    "Christian Klingenberg"
+  ],
+  "summary": "Central schemes for conservation laws are Riemann solver free methods which are simple and easy to implement. In recent work for Euler equations [Kurganov & Xin, J. Sci. Comput., 96:56, 2023] their accuracy has been enhanced in terms of better resolution of contact waves. In this paper, we extend this low dissipation central upwind method to the ideal MHD system in one- and two-dimensions. In the two-dimensional case, we separate the variables into two groups: hydrodynamic and magnetic, which are stored at cell centers and faces, respectively. For the the hydrodynamic variables, we apply the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-08",
+  "updated": "2026-03-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2610.14669",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.14669",
+  "title": "Stable and effective restarting of the SS--RR and SS--RRR methods for computing partial eigenpairs of Hermitian matrices",
+  "authors": [
+    "Zhongxiao Jia",
+    "Tianhang Liu"
+  ],
+  "summary": "We consider stable and effective restarts of the SS--RR and SS--RRR methods for computing the eigenpairs of a large Hermitian matrix $A\\in\\mathbb{C}^{n\\times n}$ with the $n_{ev}$ eigenvalues in a given interval. Taking the CJ--SS--RR and CJ--SS--RRR methods for instance, we prove that the commonly used restart scheme and its orthonormalized variant, named the natural restart schemes, are not numerically stable, thereby lowering attainable accuracy of approximate eigenpairs and missing some of the $n_{ev}$ desired eigenpairs. To cure these deficiencies, we propose a new restart scheme,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-10",
+  "updated": "2026-10-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

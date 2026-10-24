@@ -1,0 +1,22 @@
+{
+  "key": "2608.30419",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.30419",
+  "title": "From Metaheuristics to Exact Methods: A CP-SAT Approach for Multi-Objective Healthcare Workforce Scheduling",
+  "authors": [
+    "Vipul Patel",
+    "Anirudh Deodhar",
+    "Dagnachew Birru"
+  ],
+  "summary": "Healthcare workforce scheduling is an NP-hard optimization problem requiring simultaneous satisfaction of labor regulations, coverage requirements, employee preferences and cost objectives. Existing approaches (genetic algorithms, integer programming, constraint programming) model 6-12 constraints at shift-level granularity and cannot guarantee regulatory compliance. They also lack support for multi-role, multi-skill heterogeneity, mandatory break scheduling with midpoint control, acuity-weighted workload equity, sub-shift granularity, inter-week stability, and cross-midnight shifts. This…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-08-31",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,31 @@
+{
+  "key": "2607.20007",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.20007",
+  "title": "How Close is a Tree to a Euclidean Minimum Spanning Tree?",
+  "authors": [
+    "Todor Antić",
+    "Jiří Fiala",
+    "Jelena Glišić",
+    "Grzegorz Gutowski",
+    "Konstanty Junosza-Szaniawski",
+    "Jan Kratochvíl",
+    "Giuseppe Liotta",
+    "Morteza Saghafian",
+    "Maria Saumell",
+    "Krisztina Szilágyi",
+    "Pavel Valtr"
+  ],
+  "summary": "Let $Γ$ be a straight-line crossing-free drawing of a tree $T$. A \\emph{bad pair} in $Γ$ is a pair of non-adjacent vertices of $T$ whose Euclidean distance in $Γ$ is smaller than the length of the longest edge in the path connecting them in~$Γ$. When $Γ$ has no bad pairs, $Γ$ is a Euclidean Minimum Spanning Tree of its vertex set (or EMST-drawing for short). Deciding whether a tree of maximum degree at most six admits an EMST-drawing is known to be \\NP-hard. In contrast, we characterize those caterpillars that admit an EMST-drawing. The characterization gives rise to a linear-time algorithm…",
+  "domain": "cs.CG",
+  "tags": [
+    "cs.CG",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-07-22",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

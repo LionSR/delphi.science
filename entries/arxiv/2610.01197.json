@@ -1,0 +1,24 @@
+{
+  "key": "2610.01197",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01197",
+  "title": "On solving integer bilevel optimization problems with a non-convex quadratic follower objective function using disjunctive cuts",
+  "authors": [
+    "Kübra Tanınmış",
+    "Elisabeth Gaar",
+    "Jon Lee",
+    "Ivana Ljubić",
+    "Markus Sinnl"
+  ],
+  "summary": "In this work, we study bilevel optimization problems where all variables are integer, all constraints and the leader objective function are linear, and the follower objective function is non-convex quadratic. Relying on bilevel-free sets derived from improving directions, we develop a disjunctive cut approach to exclude bilevel-infeasible solutions within a branch-and-cut algorithm. We show that our disjunctive cuts can be obtained by solving a cut generating linear program. Furthermore, we discuss conditions that allow the number of disjuncts in the cut generating linear program to be…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DM"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

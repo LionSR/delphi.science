@@ -1,0 +1,22 @@
+{
+  "key": "2607.11023",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.11023",
+  "title": "Regret-weighted Bayes Fusion for Distributed Experimental Design",
+  "authors": [
+    "Nagananda K G",
+    "Lav R. Varshney",
+    "Pramod R. Varshney"
+  ],
+  "summary": "We study distributed experimental design with multiple candidate experiments, where local sites possess only partial information and transmit design recommendations to a fusion center. Unlike centralized design, in which the experiment that maximizes expected information gain can be selected directly, distributed design requires combining heterogeneous and potentially conflicting local recommendations. Formulating as a multi-class Bayes fusion problem, centralized oracle design is treated as an unknown label and each site is characterized by a local recommendation mechanism. The proposed…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.IT"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2602.16602",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.16602",
+  "title": "A type theory for invertibility in weak $ω$-categories",
+  "authors": [
+    "Thibaut Benjamin",
+    "Camil Champin",
+    "Ioannis Markakis"
+  ],
+  "summary": "We present a conservative extension ICaTT of the dependent type theory CaTT for weak $ω$-categories with a type witnessing coinductive invertibility of cells. This extension allows for a concise description of the \"walking equivalence\" as a context, and of a set of maps characterising $ω$-equifibrations as substitutions. We provide an implementation of our theory, which we use to formalise basic properties of invertible cells. These properties allow us to give semantics of ICaTT in marked weak $ω$-categories, building a fibrant marked $ω$-category out of every model of ICaTT.",
+  "domain": "math.CT",
+  "tags": [
+    "math.CT",
+    "cs.LO"
+  ],
+  "published": "2026-02-18",
+  "updated": "2026-02-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

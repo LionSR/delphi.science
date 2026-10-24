@@ -1,0 +1,22 @@
+{
+  "key": "2610.15106",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.15106",
+  "title": "RELAGRAM: Recursive Latent Graph Model for the Capacitated Vehicle Routing Problem",
+  "authors": [
+    "Vladimir Kirill Bickov",
+    "Neil Yorke-Smith"
+  ],
+  "summary": "Latent recursion repeatedly processes internal representations through the same neural network. Recent work has shown this approach to be effective on structured reasoning tasks such as Sudoku and maze solving. However, whether latent recursion can support neural routing remains unclear. We introduce RELAGRAM (Recursive Latent Graph Model), a novel approach that brings latent recursion to graph combinatorial optimization. RELAGRAM encodes a capacitated vehicle routing problem (CVRP) instance as edge tokens; a compact transformer recurrently updates the latent representations of these tokens.…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.NE",
+    "math.OC"
+  ],
+  "published": "2026-10-10",
+  "updated": "2026-10-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

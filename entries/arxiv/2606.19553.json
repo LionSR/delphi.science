@@ -1,0 +1,20 @@
+{
+  "key": "2606.19553",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.19553",
+  "title": "On the Limits of Biased Derivative Information for Nonconvex Stochastic Optimization",
+  "authors": [
+    "Anant Shyam",
+    "Brian Bullins"
+  ],
+  "summary": "We consider the problem of finding $δ$-stationary points for $δ> 0$, i.e., $x \\in \\mathbb{R}^d$ such that $||\\nabla F(x)|| \\le δ$, for smooth, non-convex objectives, where the derivative oracles are not only stochastic but also biased. In the first-order setting, we provide tight lower bounds for finding an $O((ε+ B^2)^{1/2})$-stationary point, for $ε> 0$ and where $B$ is a bound on the gradient bias, matching the upper bounds of Ajalloeian and Stich (2020). We then establish bias-dependent lower bounds for algorithms that use higher-order derivative information for finding $O(ε+…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-17",
+  "updated": "2026-06-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

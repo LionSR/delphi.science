@@ -1,0 +1,21 @@
+{
+  "key": "2609.20385",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20385",
+  "title": "A problem of Yang and Chen on weighted representation functions",
+  "authors": [
+    "Shuang-Shuang Li",
+    "Ya-Ting Xu",
+    "Xiao-Hui Yan"
+  ],
+  "summary": "Let $\\mathbb N$ denote the set of nonnegative integers. For an integer $k>1$ and a set $A\\subseteq\\mathbb N$, let $R_{1,k}(A,n)$ denote the number of solutions of $n=a_1+ka_2$ with $a_1,a_2\\in A$. For integers $k>1$ and $t\\ge1$, Yang and Chen defined $f_k(t)$ to be the number of sets $A\\subseteq\\mathbb N$ for which \\[ R_{1,k}(A,n)=R_{1,k}(\\mathbb N\\setminus A,n) \\] for all integers $n\\ge t$, and asked whether $f_k(t)$ and $f_l(t)$ are eventually equal for any integers $k,l>1$. We prove that \\[ f_k(t)\\asymp_k \\frac{2^t}{t^{k/2}}, \\] which gives a negative answer to their problem.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

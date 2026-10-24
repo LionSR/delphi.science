@@ -1,0 +1,20 @@
+{
+  "key": "2605.02305",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.02305",
+  "title": "A computational comparison of handling distance constraints in MINLP",
+  "authors": [
+    "Christopher Hojny",
+    "Leo Liberti"
+  ],
+  "summary": "Minimum distance constraints (minDCs) appear in many geometric optimization problems. They pose major challenges for mixed-integer nonlinear programming (MINLP) due to their reverse-convexity. We develop new algorithms for tightening variable bounds in general MINLPs with minDCs. Because many such problems exhibit substantial symmetry, we further discuss an approach for handling rotation symmetries. In a computational study, we examine the performance of the various methods and determine the scenarios in which each approach demonstrates superiority.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-04",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

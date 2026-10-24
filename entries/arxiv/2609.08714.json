@@ -1,0 +1,20 @@
+{
+  "key": "2609.08714",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.08714",
+  "title": "A large-deviation principle for the empirical distribution of a regular branching random walk",
+  "authors": [
+    "Shuxiong Zhang",
+    "Yaping Zhu"
+  ],
+  "summary": "Let \\(\\{Z_n\\}_{n\\geq0}\\) be a supercritical branching random walk with deterministic rooted \\(b\\)-ary tree, \\(b\\geq2\\), and symmetric displacements satisfying \\(\\lim_{x\\to+\\infty}x^{-α}\\log\\Pp(X>x)=-λ\\) with \\(α,λ>0\\). Set $\\overline Z_n(\\cdot):=Z_n(\\cdot)/Z_n(\\mathbb{R}),~n\\geq0.$ For a finite union \\(A\\) of intervals, we establish the following full large-deviation principle: for every Borel set \\(Γ\\subset[0,1]\\), \\begin{align*} -\\inf_{q\\inΓ^\\circ}Q_A(q) &\\leq \\liminf_{n\\to\\infty}n^{-α/2} \\log\\Pp\\!\\left(\\overline Z_n(\\sqrt n\\,A)\\inΓ\\right) &\\leq \\limsup_{n\\to\\infty}n^{-α/2}…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

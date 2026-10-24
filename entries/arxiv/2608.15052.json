@@ -1,0 +1,20 @@
+{
+  "key": "2608.15052",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.15052",
+  "title": "Andy: A Mathematical Agent for Rigorous Proof and Autonomous Research",
+  "authors": [
+    "Zi'an Wang"
+  ],
+  "summary": "Andy is an autonomous mathematical research agent that turns a mathematical problem into a traceable proof. It solves or verifies a submitted problem, formulates a literature-grounded new problem through a research-value gate, and carries it through proof construction and final verification. It organizes proof steps in an executable DAG, verifies each step independently and binds the result to a certificate, retains verified work whose interfaces remain unchanged during local repair, and records the full path from problem formulation to final proof. The system separates proof generation from…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-08-15",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

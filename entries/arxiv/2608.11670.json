@@ -1,0 +1,20 @@
+{
+  "key": "2608.11670",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.11670",
+  "title": "A statistical theory of graph regularization for RNA velocity near developmental bifurcations",
+  "authors": [
+    "Lingqi Meng",
+    "Shiruo Wang"
+  ],
+  "summary": "Graph-based regularization is widely used to stabilize noisy RNA-velocity estimates by encouraging transcriptionally similar cells to share similar velocity vectors. Near developmental bifurcations, however, proximity-based graphs may connect cells from distinct daughter lineages, reducing estimation variance at the cost of attenuating biologically meaningful lineage-specific dynamics. We formulate graph-regularized RNA velocity as a statistical estimation problem on a potentially misspecified cell-state graph and develop a theoretical framework for analyzing this trade-off. We derive an…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-08-12",
+  "updated": "2026-08-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

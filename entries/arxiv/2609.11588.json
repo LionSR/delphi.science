@@ -1,0 +1,21 @@
+{
+  "key": "2609.11588",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11588",
+  "title": "Quasilinear multiplication in the real Cayley--Dickson tower",
+  "authors": [
+    "Harrison Lemley"
+  ],
+  "summary": "Direct evaluation of the defining product in the real Cayley--Dickson algebra $A_n$, of dimension $N=2^n$, has quadratic arithmetic complexity. This paper gives a uniform algorithm for multiplication using $O(N\\log N)$ real arithmetic operations and $O(N)$ auxiliary storage. The algorithm reduces multiplication to the alternating product on the imaginary subspace, then evaluates that product by a two-call recursion over one fixed quadratic coefficient extension. For $n\\ge1$, the resulting bilinear algorithm uses at most $(9n-15)2^{n-1}+10$ input-dependent real multiplications, and for…",
+  "domain": "math.RA",
+  "tags": [
+    "math.RA",
+    "cs.SC",
+    "math.NA"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

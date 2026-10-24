@@ -1,0 +1,22 @@
+{
+  "key": "2608.22324",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.22324",
+  "title": "Gaussian process learning with flow map refinement for parameter estimation in dynamical systems",
+  "authors": [
+    "Yue Hao",
+    "Dongwei Ye"
+  ],
+  "summary": "Parameter estimation is a central task in data-driven learning of dynamical systems. It aims to recover the underlying physical parameters from observed time-series data, thereby providing interpretable insights into the physical mechanisms governing the system. Gradient/derivative matching methods based on Gaussian process provide an efficient way to perform parameter estimation. Those methods avoid repeated numerical integration and enforce local derivative consistency. However, such local matching may result in global inconsistency with the governing flow map, particularly under scarce…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.CE",
+    "math.NA"
+  ],
+  "published": "2026-08-23",
+  "updated": "2026-08-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

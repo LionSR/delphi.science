@@ -1,0 +1,20 @@
+{
+  "key": "2604.07978",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.07978",
+  "title": "Global well-posedness and flat-hump-shaped stationary solutions for degenerate chemotaxis systems with threshold density",
+  "authors": [
+    "Osuke Shibata",
+    "Tomomi Yokota"
+  ],
+  "summary": "In a smoothly bounded domain $Ω\\subset \\mathbb{R}^N$ $(N\\in \\mathbb{N})$, a no-flux initial-boundary value problem for the degenerate chemotaxis system with volume-filling effects, \\begin{align*} u_t = \\nabla \\cdot (D(u,v) \\nabla u - h(u,v) \\nabla v), \\quad v_t = Δv + g(u,v), \\quad x\\in Ω, \\ t>0, \\end{align*} is considered under the assumptions that $D(1,s)=0$ and that $h(0,s)=h(1,s)=0$. Here, initial data $u_0$ and $v_0$ have suitable regularity and satisfy $0\\le u_0\\le 1$ and $v_0\\ge 0$ with $\\nabla v_0 \\cdot ν|_{\\partial Ω} = 0$. It is proved that there exists a global weak solution such…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-04-09",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

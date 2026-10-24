@@ -1,0 +1,22 @@
+{
+  "key": "2610.00208",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00208",
+  "title": "Decentralized Safe Path Following for Multiple Quadrotors on Intersecting Paths with Theoretical Guarantees",
+  "authors": [
+    "Hamza Tariq",
+    "Adeel Akhtar"
+  ],
+  "summary": "This paper studies decentralized safe path following for multiple quadrotors on intersecting paths, where safety requires both collision avoidance and strict adherence to pre-assigned routes. The proposed controller reformulates transverse feedback linearization as a constrained quadratic program with four equality constraints: two enforce convergence to and strict adherence to the path, and two prescribe the desired speed and heading. Safety is achieved by relaxing only the along-path speed constraint, while the path and heading constraints remain hard. Under the stated assumptions, and for…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-09-20",
+  "updated": "2026-09-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

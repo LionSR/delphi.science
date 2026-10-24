@@ -1,0 +1,21 @@
+{
+  "key": "2607.24433",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.24433",
+  "title": "Justification Logic of the Lambda Calculus",
+  "authors": [
+    "Silvia Ghilezan",
+    "Paaras Padhiar"
+  ],
+  "summary": "The simply typed λ-calculus is a model of computation where typed terms correspond to proofs of intuitionistic propositional logic (IPL) via the Curry-Howard correspondence. Justification logic is an operational modal logic in which the standard box modality is replaced by an explicit proof term, allowing the logic itself to reason directly about proofs of its formulas. Standard justification logics reason about proofs of IPL by embedding Hilbert-style axiomatic proofs of IPL as proof terms of the logic. We instead introduce a justification logic of the λ-calculus, in which the proof terms…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "math.LO"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

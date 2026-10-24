@@ -1,0 +1,24 @@
+{
+  "key": "2608.15361",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.15361",
+  "title": "Model-Free Based Computations of Recursive Control Barrier Function: Ultra-Local Model Approach",
+  "authors": [
+    "Loïc Michel",
+    "Ricardo de Castro",
+    "Joseph Moyalan",
+    "Iman Ebrahimi",
+    "Jean-Pierre Barbot"
+  ],
+  "summary": "Control barrier functions (CBFs) provide a systematic framework for enforcing safety constraints in nonlinear control systems. However, their implementation typically relies on accurate system models, which can limit their applicability in the presence of significant modeling uncertainties or unknown dynamics. This paper proposes a model-free framework for the computation of recursive control barrier functions based on the ultra-local model approach that leverages online estimation of the unknown system dynamics to construct CBF constraints. This approach does not require an explicit model…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-08-15",
+  "updated": "2026-08-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

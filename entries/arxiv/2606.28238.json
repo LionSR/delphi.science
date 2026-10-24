@@ -1,0 +1,20 @@
+{
+  "key": "2606.28238",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28238",
+  "title": "Affine Option Pricing with Hawkes-Type Endogenous Jump Activity",
+  "authors": [
+    "Ziyang Fang",
+    "Shenglan Yuan"
+  ],
+  "summary": "We develop a risk-neutral option-pricing model where the activity scale of an infinite-activity jump process is endogenously driven by the asset's own realized price jumps. Jump sizes are governed by a normalized asymmetric tempered-stable Lévy shape, while a predictable activity scale controls the overall jump intensity and is normalized to coincide with the local jump-induced quadratic-variation rate. Endogenous feedback is introduced through the bounded excitation function $g(y)=1-e^{-ay^2}$, so that small realized jumps excite future activity approximately in proportion to squared jump…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS"
+  ],
+  "published": "2026-06-26",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

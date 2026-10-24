@@ -1,0 +1,19 @@
+{
+  "key": "2609.18355",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.18355",
+  "title": "A Parameter-Free Adaptive Reflected Gradient Method for Monotone Variational Inequalities",
+  "authors": [
+    "Yekini Shehu"
+  ],
+  "summary": "We analyze a one-evaluation-per-iteration method for $\\mathrm{VI}(C,B)$ with monotone $L$-Lipschitz $B$: $x_{k+1}=P_C(x_k-λB(u_k))$, $u_k=x_k+θ_k(x_k-x_{k-1})+β_k(x_k-u_{k-1})$, $θ_k+β_k=1$. For constant step and summable filter ($\\sum_kβ_k<\\infty$) we prove weak convergence via a Lyapunov function with exact rational dissipation budgets, including Malitsky's reflected gradient method. It is robust to summable operator errors; if $C$ is bounded, the constant-step range reaches $λ<(\\sqrt2-1)/L$. For unbounded $C$ this reduces to an a priori boundedness statement, certified to $λL=0.387$ by…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

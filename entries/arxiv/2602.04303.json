@@ -1,0 +1,20 @@
+{
+  "key": "2602.04303",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.04303",
+  "title": "Strong existence for SDEs with singular drifts driven by fractional Brownian motion",
+  "authors": [
+    "Jiazhen Gu",
+    "Qian Yu"
+  ],
+  "summary": "Let $B^H$ be a $d$-dimensional fractional Brownian motion with Hurst parameter $H\\in(0,1/2)$. We prove the existence of a strong solution to $$d X_t=b(t,X_t)d t+d B_t^H, X_0=x_0\\in R^d,$$when $b\\in L^q([0,T];L^p(\\mathbb R^d;\\mathbb R^d)),2\\le p,q<\\infty$ and the subcritical Ladyzhenskaya--Prodi--Serrin condition $\\frac1q+\\frac{Hd}{p}<1-H$ is satisfied. Thus, within the finite-exponent range $p,q\\ge2$, the strong-existence result covers the full subcritical region, including the regime $p<2Hd$, where a uniform strong Novikov condition may fail. The proof is based on a compactness criterion…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-02-04",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

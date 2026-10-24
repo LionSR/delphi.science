@@ -1,0 +1,22 @@
+{
+  "key": "2605.08593",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.08593",
+  "title": "Optimal Acceleration for Proximal Minimization of the Sum of Convex and Strongly Convex Functions",
+  "authors": [
+    "Govind M. Chari",
+    "Uijeong Jang",
+    "Ernest K. Ryu",
+    "Behçet Açıkmeşe"
+  ],
+  "summary": "When minimizing the sum of a convex and a strongly convex function, or when finding the zero of the sum of a monotone operator and a strongly monotone operator, Chambolle and Pock (2010) and Davis and Yin (2015) proposed accelerated mechanisms that achieve an $\\mathcal{O}(1/N^2)$ convergence rate for the squared distance to the solution, but the optimality of this rate was not established. In this work, we present Fast Douglas--Rachford Splitting (FDR), an accelerated method that improves the constants established in the prior works, and provide a complexity lower bound establishing that…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-09",
+  "updated": "2026-05-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

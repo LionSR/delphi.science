@@ -1,0 +1,22 @@
+{
+  "key": "2610.18513",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.18513",
+  "title": "Rapid Mixing of Stereographic MCMC for Heavy-Tailed Sampling",
+  "authors": [
+    "Federica Milinanni",
+    "Tyler Farghly",
+    "Jun Yang"
+  ],
+  "summary": "Sampling from high-dimensional, heavy-tailed distributions is a fundamental challenge in computational statistics, as many standard Markov chain Monte Carlo (MCMC) methods mix poorly in such settings. Recently, Stereographic MCMC [Yang et al., 2024] and the Sub-Cauchy Projection Sampler [Grazzi et al., 2026] have been shown to perform successfully on such tasks. However, establishing their non-asymptotic convergence properties remains an important open problem. In this work, we fill this gap by establishing non-asymptotic upper bounds on the mixing time of the stereographic projection and…",
+  "domain": "stat.CO",
+  "tags": [
+    "stat.CO",
+    "math.PR"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

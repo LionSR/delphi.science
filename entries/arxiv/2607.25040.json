@@ -1,0 +1,21 @@
+{
+  "key": "2607.25040",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.25040",
+  "title": "Geometric $(1+\\varepsilon)$-Spanners with Few Crossings",
+  "authors": [
+    "Kelvin Luu",
+    "Csaba D. Tóth"
+  ],
+  "summary": "For $n$ points in the plane and $\\varepsilon>0$, we construct a $(1+\\varepsilon)$-spanner with $O(n/\\varepsilon)$ edges in which every edge has $\\tilde{O}(1/\\varepsilon^3)$ crossings, the total number of crossings is $\\tilde{O}(n/\\varepsilon^4)$, and the ratio between the lengths of any two crossing edges is $O(1/\\varepsilon^2)$. Our spanner construction substantially improves on the previous upper bound for the number of crossings in a $(1+\\varepsilon)$-spanner, and it is the first spanner construction that ensures $O(1)$ crossings per edge for any constant $\\varepsilon>0$. In contrast, we…",
+  "domain": "cs.CG",
+  "tags": [
+    "cs.CG",
+    "math.CO"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-10-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

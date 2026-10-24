@@ -1,0 +1,21 @@
+{
+  "key": "2605.05134",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05134",
+  "title": "Low-Cost Black-Box Detection of LLM Hallucinations via Dynamical System Prediction",
+  "authors": [
+    "Dan Wilson",
+    "Mohamed Akrout"
+  ],
+  "summary": "Large Language Models (LLMs) frequently generate plausible but non-factual content, a phenomenon known as hallucination. While existing detection methods typically rely on computationally expensive sampling-based consistency checks or external knowledge retrieval, we propose a new method that treats the LLM as a black-box dynamical system. By projecting LLM responses into a high-dimensional manifold via an embedding model, we characterize the resulting vector sequences as observable realizations of the model's latent state-space dynamics. Leveraging Koopman operator theory, we fit the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

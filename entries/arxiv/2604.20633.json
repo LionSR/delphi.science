@@ -1,0 +1,22 @@
+{
+  "key": "2604.20633",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.20633",
+  "title": "A weighted angle distance on strings",
+  "authors": [
+    "Grant Molnar"
+  ],
+  "summary": "We define a multi-scale metric $d_ρ$ on strings by aggregating angle distances between all $n$-gram count vectors with exponential weights $ρ^n$. We benchmark $d_ρ$ in DBSCAN clustering against edit and $n$-gram baselines, give a linear-time suffix-tree algorithm for evaluation, prove metric and stability properties (including robustness under tandem-repeat stutters), and characterize isometries.",
+  "domain": "math.MG",
+  "tags": [
+    "math.MG",
+    "cs.DS",
+    "cs.LG",
+    "math.CO"
+  ],
+  "published": "2026-04-22",
+  "updated": "2026-04-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

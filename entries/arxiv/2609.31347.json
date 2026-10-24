@@ -1,0 +1,23 @@
+{
+  "key": "2609.31347",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.31347",
+  "title": "Benchmark cases for gradient-based optimization in linear elastic solid mechanics using lattice Boltzmann methods",
+  "authors": [
+    "Johannes L. Grafen",
+    "Florian Kaiser",
+    "Stephan Simonis",
+    "Shota Ito",
+    "Mathias J. Krause"
+  ],
+  "summary": "Gradient-based optimization (GBO) of problems constrained by partial differential equations is central to parameter identification and structural design in solid mechanics. Lattice Boltzmann method (LBM) schemes for linear elastic solids have only recently been derived. Combined with automatically generated discrete adjoint collision kernels, they make GBO possible with a purely LBM-based primal and adjoint solver. We propose, to our knowledge, the first optimization benchmarks for solid LBM: three inverse problems, each with a manufactured solution of the forward problem and a known…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

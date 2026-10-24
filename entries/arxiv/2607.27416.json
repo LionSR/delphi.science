@@ -1,0 +1,23 @@
+{
+  "key": "2607.27416",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.27416",
+  "title": "Exact Total Variation Minimizers as Non-Oscillatory Limiters in High-Order Methods for Conservation Laws",
+  "authors": [
+    "Gabriel P. Langlois",
+    "Jerome Darbon",
+    "Rongjie Lai",
+    "Chi-Wang Shu",
+    "Xiangxiong Zhang"
+  ],
+  "summary": "High-order numerical methods for conservation laws can generate spurious oscillations near discontinuities. We propose to suppress these oscillations by post-processing the numerical solution with a total variation (TV) denoising step that reduces the total variation of the nodal values. For a general analysis operator, the resulting discrete minimization problem need not satisfy the submodularity property that existing exact max-flow algorithms require, so we instead compute the TV minimizer exactly using a differential inclusion algorithm. In one dimension, the differential inclusion…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2607.15658",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.15658",
+  "title": "New bounds on the Graham-Pollak theorem for hypergraphs",
+  "authors": [
+    "Anand Babu"
+  ],
+  "summary": "For a fixed $r$, let $f_r(n)$ denote the minimum number of complete $r$-partite $r$-uniform hypergraphs whose edge sets partition the complete $r$-uniform hypergraph on $n$ vertices. The Graham-Pollak theorem asserts that $f_2(n)=n-1$. Let $c_r$ be the smallest constant such that $f_r(n)\\le c_r(1+o(1))\\binom{n}{\\lfloor r/2\\rfloor}$. We give two constructions that improve upper bounds for $f_r(n)$. The first partitions $E(K_4)\\times E(K_{17})$ into $44$ products of edge sets of complete bipartite graphs and yields $c_4\\le11/12$, improving the previous bound of $c_4\\le14/15$. The second gives…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM"
+  ],
+  "published": "2026-07-17",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

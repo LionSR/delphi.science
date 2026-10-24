@@ -1,0 +1,19 @@
+{
+  "key": "2610.20285",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.20285",
+  "title": "Scaled Companion Linearizations for Coefficientwise Backward Stability",
+  "authors": [
+    "Javier Pérez"
+  ],
+  "summary": "A central goal in solving a polynomial eigenvalue problem is to compute eigenpairs that are exact for a nearby polynomial, with each coefficient perturbation bounded by a modest multiple of unit roundoff times that coefficient's norm. A backward stable eigensolver for a linearization does not automatically provide this coefficientwise relative guarantee. Scaling can improve accuracy, but a single scaling may not work across a widely spread spectrum. We construct a family of scaled companion linearizations that covers the nonzero complex plane. Each linearization is paired with a region and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

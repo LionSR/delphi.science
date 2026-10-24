@@ -1,0 +1,20 @@
+{
+  "key": "2601.21635",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.21635",
+  "title": "Numerical analysis of a locking-free primal hybrid method for linear elasticity with $H(\\mathrm{div})$-conforming stress recovery",
+  "authors": [
+    "Giovanni Taraschi",
+    "Maicon Ribeiro Correa"
+  ],
+  "summary": "In this work, we study a primal hybrid finite element method for the approximation of linear elasticity problems, posed in terms of displacement, an auxiliary pressure field, and a Lagrange multiplier related to the traction. We develop a general analysis for the existence and uniqueness of the solution for the discrete problem, which is applied to the construction of stable approximation spaces on triangular and quadrilateral meshes. The use of these spaces lead to optimal convergence orders, resulting in a locking-free method capable of providing robust approximations for nearly…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-10-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

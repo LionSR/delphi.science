@@ -1,0 +1,20 @@
+{
+  "key": "2605.27290",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.27290",
+  "title": "Linear Recurrent Neural Networks as Time-Delay Embeddings",
+  "authors": [
+    "Fisher Ng",
+    "J. Nathan Kutz"
+  ],
+  "summary": "Sequence models, and particularly Linear Recurrent Neural Networks (LRNNs) of the form $\\mathbf{h}_{k+1} = \\mathbf{W} \\mathbf{h}_{k} + \\mathbf{y}_k + \\mathbf{b}$, are widely applicable in time-series analysis for dynamical systems, yet, as black-box algorithms, much is unknown about why they perform well. In this work, we leverage Takens' embedding theorem, which provides conditions under which partially observed time series organized into delay-coordinate vectors can faithfully represent the original system's dynamics, as a theoretical framework for explaining how and why sequence models…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

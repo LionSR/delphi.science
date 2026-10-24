@@ -1,0 +1,19 @@
+{
+  "key": "2608.06591",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.06591",
+  "title": "Random Triangles on Concentric Circles",
+  "authors": [
+    "Brandon M. Greenwell"
+  ],
+  "summary": "Lewis Carroll's Pillow Problem asks for the probability that three points chosen at random in the plane form an obtuse triangle. The question has no answer until the sampling scheme is pinned down, and the cleanest way to pin it down is to put the points on a circle, which gives 3/4. This paper solves the version in which the three vertices lie on three concentric circles of radii $r_1$, $r_2$, and $r_3$. The answer is a sum of three terms, each the probability that a weighted sum of two independent arcsine variables exceeds a threshold, and it collapses to 3/4 when the radii are equal.…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-08-06",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

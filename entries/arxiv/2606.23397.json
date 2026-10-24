@@ -1,0 +1,19 @@
+{
+  "key": "2606.23397",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.23397",
+  "title": "High-Order Invariant-Domain Preserving Continuous Finite Elements via Graph-Poisson Convex Limiting",
+  "authors": [
+    "Murtazo Nazarov"
+  ],
+  "summary": "We develop a high-order invariant-domain preserving continuous finite element method for nonlinear scalar conservation laws. The method combines a residual-viscosity high-order discretization with a low-order invariant-domain scheme constructed on a fine $\\mathbb P_1$ submesh induced by the high-order nodal points. This separation avoids the restrictions caused by nonpositive lumped masses and overly wide high-order graph stencils. The high- and low-order updates are connected by a graph-Poisson flux reconstruction, which represents their difference as conservative antisymmetric graph…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-22",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

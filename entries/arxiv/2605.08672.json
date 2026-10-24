@@ -1,0 +1,22 @@
+{
+  "key": "2605.08672",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.08672",
+  "title": "Posterior Concentration of Bayesian Physics-Informed Neural Networks for Elliptic PDEs",
+  "authors": [
+    "Yuxuan Zhao",
+    "Yulong Lu"
+  ],
+  "summary": "We study the posterior contraction rate of Bayesian Physics-Informed Neural Networks (PINNs) for solving a general class of elliptic partial differential equations (PDEs). We focus on learning of the elliptic equation with a non-homogeneous Dirichlet boundary condition from independent and noisy measurements collected both inside the domain and on the boundary. Assuming that the PDE admits a strong solution in a Hölder space and using with a suitably constructed prior on the neural network weights, we prove that the posterior distribution concentrates around the exact solution at a…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "math.NA",
+    "stat.ML"
+  ],
+  "published": "2026-05-09",
+  "updated": "2026-05-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

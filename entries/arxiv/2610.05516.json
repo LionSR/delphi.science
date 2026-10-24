@@ -1,0 +1,23 @@
+{
+  "key": "2610.05516",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05516",
+  "title": "Distributed Algorithms for $α$-Potential Functions in General-Sum Games",
+  "authors": [
+    "Yifei Chen",
+    "Chinmay Maheshwari"
+  ],
+  "summary": "We study the problem of computing the tightest \\(α\\)-potential approximation of a general-sum game over continuous action spaces, within a prescribed class of potential functions and when each player has access only to its own utility function. The difficulty is twofold: the approximation error involves a worst-case search over an infinite set of unilateral deviations, and the required utility information is distributed across players. For a linear-in-parameters potential class, we use an exact finite-tuple reformulation that separates the problem into a global outer search over deviation…",
+  "domain": "cs.MA",
+  "tags": [
+    "cs.MA",
+    "cs.GT",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

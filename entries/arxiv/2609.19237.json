@@ -1,0 +1,20 @@
+{
+  "key": "2609.19237",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.19237",
+  "title": "A Reachable-State Operator Formulation of Deferred Acceptance: Progress Invariants and Structural Diagnostics",
+  "authors": [
+    "Yoshiteru Ishida"
+  ],
+  "summary": "We give a reachable-state operator formulation of one-to-one deferred acceptance with strict, possibly incomplete preference lists. A local update operator is defined for each active proposer, while a scheduler selects which local update is applied. On the states reachable from the canonical empty initial state, three invariants are immediate: the set of proposed edges grows strictly, every proposer visits each acceptable receiver at most once, and every receiver holds its most-preferred proposal received so far. These invariants yield termination after at most |E| proposals and stability of…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

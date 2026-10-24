@@ -1,0 +1,26 @@
+{
+  "key": "2605.05192",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05192",
+  "title": "Almost-Orthogonality in Lp Spaces: A Case Study with Grok",
+  "authors": [
+    "Ziang Chen",
+    "Jaume de Dios Pont",
+    "Paata Ivanisvili",
+    "Jose Madrid",
+    "Haozhu Wang"
+  ],
+  "summary": "Carbery proposed the following sharpened form of triangle inequality for many functions: for any $p\\ge 2$ and any finite sequence $(f_j)_j\\subset L^p$ we have \\[ \\Big\\|\\sum_j f_j\\Big\\|_p \\ \\le\\ \\left(\\sup_{j} \\sum_{k} α_{jk}^{\\,c}\\right)^{1/p'} \\Big(\\sum_j \\|f_j\\|_p^p\\Big)^{1/p}, \\] where $c=2$, $1/p+1/p'=1$, and $α_{jk}=\\sqrt{\\frac{\\|f_{j}f_{k}\\|_{p/2}}{\\|f_{j}\\|_{p}\\|f_{k}\\|_{p}}}$. In the first part of this paper we construct a counterexample showing that this inequality fails for every $p>2$. We then prove that if an estimate of the above form holds, the exponent must satisfy $c\\le p'$.…",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA",
+    "cs.AI",
+    "math.CO",
+    "math.PR"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

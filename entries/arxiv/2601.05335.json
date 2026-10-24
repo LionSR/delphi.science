@@ -1,0 +1,22 @@
+{
+  "key": "2601.05335",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.05335",
+  "title": "Generalized Canonical Polyadic Tensor Decompositions with General Symmetry",
+  "authors": [
+    "Alex Mulrooney",
+    "David Hong"
+  ],
+  "summary": "Canonical Polyadic (CP) tensor decomposition is a workhorse algorithm for discovering underlying low-dimensional structure in tensor data. This is accomplished in conventional CP decomposition by fitting a low-rank tensor to data with respect to the least-squares loss. Generalized CP (GCP) decompositions generalize this approach by allowing general loss functions that can be more appropriate, e.g., to model binary and count data or to improve robustness to outliers. However, GCP decompositions do not explicitly account for any symmetry in the tensors, which commonly arises in modern…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-01-08",
+  "updated": "2026-01-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

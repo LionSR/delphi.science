@@ -1,0 +1,27 @@
+{
+  "key": "2604.09806",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.09806",
+  "title": "Algorithms for Standard-form ILP Problems via Komlós' Discrepancy Setting (Refined $2^{O(k)}$-analysis)",
+  "authors": [
+    "Dmitry Gribanov",
+    "Tagir Khayaleyev",
+    "Mikhail Cherniavskii",
+    "Maxim Klimenko",
+    "Dmitry Malyshev",
+    "Stanislav Moiseev"
+  ],
+  "summary": "We study the standard-form ILP problem $\\max\\{ c^\\top x \\colon A x = b,\\; x \\in Z_{\\geq 0}^n \\}$, where $A\\in Z^{k\\times n}$ has full row rank. We obtain refined FPT algorithms parameterized by $k$ and $Δ$, the maximum absolute value of a $k\\times k$ minor of $A$. Our approach combines discrepancy-based dynamic programming with matrix $\\ell_2$-discrepancy bounds in Komlós' setting. Up to polynomial factors in the input size, the optimization problem can be solved in time $2^{O(k)}Δ^2$, and the corresponding feasibility problem in time $2^{O(k)}Δ$. We would like to point out that the original…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.CC",
+    "cs.CG",
+    "math.OC"
+  ],
+  "published": "2026-04-10",
+  "updated": "2026-09-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

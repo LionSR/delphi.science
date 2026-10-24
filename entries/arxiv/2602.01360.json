@@ -1,0 +1,24 @@
+{
+  "key": "2602.01360",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.01360",
+  "title": "Minimum cost network flow with interval capacities: The worst-case scenario",
+  "authors": [
+    "Miroslav Rada",
+    "Milan Hladík",
+    "Elif Radová Garajová",
+    "Francesco Carrabs",
+    "Raffaele Cerulli",
+    "Ciriaco D'Ambrosio"
+  ],
+  "summary": "We study the problem of determining the worst optimal value and characterizing the corresponding worst-case scenarios in minimum cost network flow problems with interval uncertainty in arc capacities. In this setting, each capacity can take any value within its specified lower and upper bounds. We prove that computing the worst optimal value is a strongly NP-hard problem and remains NP-hard even when restricted to series-parallel graphs. Further, we propose a mixed-integer linear programming formulation that computes the exact worst optimal value, as well as a pseudopolynomial-time algorithm…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-01",
+  "updated": "2026-02-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2604.00415",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00415",
+  "title": "Dynamic Weight Optimization for Double Linear Policy: A Stochastic Model Predictive Control Approach",
+  "authors": [
+    "Tan Chin Hong",
+    "Chung-Han Hsieh"
+  ],
+  "summary": "The Double Linear Policy (DLP) framework guarantees a Robust Positive Expectation (RPE) under optimized constant-weight designs or admissible prespecified time-varying policies. However, the sequential optimization of these time-varying weights remains an open challenge. To address this gap, we propose a Stochastic Model Predictive Control (SMPC) framework. We formulate weight selection as a receding-horizon optimal control problem that explicitly maximizes risk-adjusted returns while enforcing survivability and predicted positive expectation constraints. Notably, an analytical gradient is…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC",
+    "q-fin.CP"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-04-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

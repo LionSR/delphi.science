@@ -1,0 +1,23 @@
+{
+  "key": "2609.12306",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.12306",
+  "title": "Grid-Free Monte Carlo for Time-Dependent Diffusion",
+  "authors": [
+    "Zihong Zhou",
+    "Rohan Sawhney",
+    "Eugene d'Eon",
+    "Wojciech Jarosz"
+  ],
+  "summary": "Many scientific applications require modeling how diffusive systems evolve over time, not merely their eventual steady states. While conventional steady-state analysis of partial differential equations (PDEs) on complex geometries is already hindered by costly volumetric meshing, transient analysis further requires sequential time stepping and careful step size selection. Grid-free Monte Carlo solvers such as walk on spheres (WoS) and walk on stars (WoSt) avoid this meshing bottleneck but remain largely limited to steady-state problems. We generalize WoS, for pure Dirichlet problems, and…",
+  "domain": "cs.GR",
+  "tags": [
+    "cs.GR",
+    "math.NA"
+  ],
+  "published": "2026-09-11",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

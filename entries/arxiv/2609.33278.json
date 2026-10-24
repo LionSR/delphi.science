@@ -1,0 +1,19 @@
+{
+  "key": "2609.33278",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.33278",
+  "title": "Prime-Detecting Identities from Dirichlet Inversion",
+  "authors": [
+    "Zhichen Liu"
+  ],
+  "summary": "For each integer k >= 1, let sigma_k(n) = sum_{d|n} d^k, let sigma_k^{-1} denote its Dirichlet inverse, and let J_k denote the kth Jordan totient function. Using established prime-power values of sigma_k^{-1}, we first obtain the elementary criterion sigma_k^{-1}(n) + J_k(n) + 2 = 0 precisely when n is prime. At k = 1, this involves Euler's totient J_1 = phi and provides a prime-only comparison for the next equation. Our main result classifies the zeros of sigma_k^{-1}(n) + mu(n) + J_k(n) + 3: for k = 1, they are precisely the primes and 18; for k >= 2, they are precisely the primes. The…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-09-27",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

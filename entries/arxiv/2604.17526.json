@@ -1,0 +1,24 @@
+{
+  "key": "2604.17526",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.17526",
+  "title": "Convergence of Langevin AIS for multimodal distributions",
+  "authors": [
+    "Akshat Agarwal",
+    "Gautam Iyer",
+    "Aidan Jameson",
+    "Seungjae Son",
+    "Wyatt Wimmer"
+  ],
+  "summary": "We study convergence rates of the annealed importance sampling algorithm (Neal '01) combined with Langevin Monte Carlo when the target is a multimodal Gibbs measure. The main result shows that for a fixed error threshold, the time complexity is quadratic in the inverse temperature. We identify a simple and useful quantity that controls the sampling error for AIS in a general setting, and then bound this quantity in our setting using spectral estimates. We also study an autonormalized version and obtain bounds for the time complexity in terms of the inverse temperature.",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.ST"
+  ],
+  "published": "2026-04-19",
+  "updated": "2026-04-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

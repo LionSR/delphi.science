@@ -1,0 +1,20 @@
+{
+  "key": "2610.22865",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.22865",
+  "title": "Geometric multigrid preconditioners for unfitted discretisations of the de Rham complex",
+  "authors": [
+    "Santiago Badia",
+    "Jordi Manyer"
+  ],
+  "summary": "We propose two families of multigrid preconditioners for unfitted finite element discretisations of the Riesz maps of the de Rham complex, in H(grad), H(curl) and H(div), stabilised by cell aggregation. The first is a geometric multigrid method applied directly to the unfitted operators, on a hierarchy of background meshes that share the same boundary representation. Its smoothers are star patches built on the aggregated mesh, so that each patch captures the kernel of the stabilisation. The second is a multilevel auxiliary-space preconditioner that combines a patch smoother localised around…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

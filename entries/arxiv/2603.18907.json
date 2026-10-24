@@ -1,0 +1,21 @@
+{
+  "key": "2603.18907",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.18907",
+  "title": "Neural Galerkin Normalizing Flow for Transition Probability Density Functions of Diffusion Models",
+  "authors": [
+    "Riccardo Saporiti",
+    "Fabio Nobile"
+  ],
+  "summary": "We propose a new Neural Galerkin Normalizing Flow framework to approximate the transition probability density function of a diffusion process by solving the corresponding Fokker-Planck equation with an atomic initial distribution, parametrically with respect to the location of the initial mass. By using Normalizing Flows, we look for the solution as a transformation of the transition probability density function of a reference stochastic process, ensuring that our approximation is structure-preserving and automatically satisfies positivity and mass conservation constraints. By extending…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-03-19",
+  "updated": "2026-06-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

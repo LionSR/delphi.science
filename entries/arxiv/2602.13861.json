@@ -1,0 +1,22 @@
+{
+  "key": "2602.13861",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.13861",
+  "title": "Min-Max Connected Multiway Cut",
+  "authors": [
+    "Hans Raj Tiwary",
+    "Petr Kolman"
+  ],
+  "summary": "We introduce a variant of the multiway cut that we call the min-max connected multiway cut. Given a graph $G=(V,E)$ and a set $Γ\\subseteq V$ of $t$ terminals, partition $V$ into $t$ parts such that each part is connected and contains exactly one terminal; the objective is to minimize the maximum weight of the edges leaving any part of the partition. This problem is a natural modification of the standard multiway cut problem and it differs from it in two ways: first, the cost of a partition is defined to be the maximum size of the boundary of any part, as opposed to the sum of all boundaries,…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO",
+    "math.OC"
+  ],
+  "published": "2026-02-14",
+  "updated": "2026-05-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,26 @@
+{
+  "key": "2610.07292",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.07292",
+  "title": "Assumption-lean logistic regression with missing covariates",
+  "authors": [
+    "Jyotishka Ray Choudhury",
+    "Kabir Aladin Verchand",
+    "Richard J. Samworth",
+    "Ashwin Pananjady"
+  ],
+  "summary": "Missing covariates are frequently encountered in supervised learning problems, and classical methods for estimation using such data use carefully chosen imputation schemes for missing data, or likelihood approximations that lead to nonconvex $M$-estimation problems. These methods and their relatives are suitable for scenarios in which the covariate distribution is known, and more broadly, have enjoyed tremendous success in linear models. But even in basic nonlinear problems such as logistic regression in moderate dimensions, such methods can experience drastic failure modes when the…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.IT",
+    "cs.LG",
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

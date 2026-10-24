@@ -1,0 +1,22 @@
+{
+  "key": "2607.20332",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.20332",
+  "title": "Shape optimization for thermoelasticity with temperature-dependent material parameters",
+  "authors": [
+    "Marc Dambrine",
+    "Helmut Harbrecht",
+    "Viacheslav Karnaev"
+  ],
+  "summary": "We consider the numerical solution of shape optimization problems for thermoelasticity with temperature-dependent material parameters. We show the existence of the shape derivative and derive an expression for generic functionals of domain integral type. Numerical results are presented for two settings: minimization of the compliance under a volume constraint, and minimization of the volume under a constraint on the $L^2$-norm of the von Mises stress. We use the finite element method for solving the underlying boundary value problems and the level set method for the representation of the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-07-22",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

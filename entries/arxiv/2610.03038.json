@@ -1,0 +1,19 @@
+{
+  "key": "2610.03038",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03038",
+  "title": "The first descent in a standard Young tableau of shape $(n,n,n)$",
+  "authors": [
+    "Tong Niu"
+  ],
+  "summary": "Let $a(n)$ be the number of standard Young tableaux of shape $(n,n,n)$ whose entry in row $2$, column $1$ is odd; equivalently, the number of those whose first descent is even. This is entry A011553 of the On-Line Encyclopedia of Integer Sequences, contributed in 1996, and after thirty years of curation it carries no formula. We supply one, $a(n) = 8\\,\\bigl(n!\\,(n+2)!\\bigr)^{-1}\\sum_{m=1}^{\\lfloor n/2\\rfloor} m(m+1)(3n-2m-1)!/(n-2m)!$, and use it to settle both of the conjectures the entry records. A creative telescoping certificate shows that $a$ satisfies a linear recurrence of order two…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

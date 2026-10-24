@@ -1,0 +1,20 @@
+{
+  "key": "2605.22808",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.22808",
+  "title": "Betti Numbers of Cut Complexes of Squared Paths and a Recurrence Conjecture",
+  "authors": [
+    "Yutong Zhang",
+    "Yaoran Yang"
+  ],
+  "summary": "For a graph $G$ on $[n]$, the $k$-cut complex $Δ_k(G)$ has facets $[n]\\setminus T$, where $T$ ranges over the $k$-subsets that induce disconnected subgraphs of $G$. Bayer, Denker, Jelić Milutinović, Sundaram, and Xue proved that $Δ_k(P_n^2)$ is shellable for $n\\ge k+3$ and conjectured a finite-difference recurrence for its top reduced Betti number along each diagonal $n-k=r$. We prove the exact formula \\[ β(k,n)=\\binom{n-1}{k-1} -\\sum_{j=0}^{\\min\\{k-1,n-k\\}}\\binom{k-1}{j}(n-k-j+1)+(n-k) \\] for $k\\ge2$ and $n\\ge k+3$. The proof rests on a complete classification of complements of cardinality…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-05-21",
+  "updated": "2026-08-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

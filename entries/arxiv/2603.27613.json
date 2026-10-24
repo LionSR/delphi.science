@@ -1,0 +1,20 @@
+{
+  "key": "2603.27613",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.27613",
+  "title": "High-Precision Computation and PSLQ Identification of Stokes Multipliers for Anharmonic Oscillators",
+  "authors": [
+    "Jian Zhou"
+  ],
+  "summary": "We present a large-scale computational study combining arbitrary-precision arithmetic, sequence acceleration, and the PSLQ integer relation algorithm to discover exact closed-form expressions for fundamental constants arising in asymptotic analysis. We compute the Stokes multipliers C_M of the one-dimensional anharmonic oscillators H = p^2/2 + x^2/2 + g x^{2M} for M = 2, 3, ..., 11, extracting 17-30 significant digits from up to 1200 perturbation coefficients computed at 300-digit working precision. The computational pipeline consists of three stages: (i) Rayleigh-Schrodinger recursion in…",
+  "domain": "cs.MS",
+  "tags": [
+    "cs.MS",
+    "math.NA"
+  ],
+  "published": "2026-03-29",
+  "updated": "2026-03-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

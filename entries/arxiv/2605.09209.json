@@ -1,0 +1,23 @@
+{
+  "key": "2605.09209",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09209",
+  "title": "Select-then-differentiate: Solving Bilevel Optimization with Manifold Lower-level Solution Sets",
+  "authors": [
+    "Saeed Masiha",
+    "Zebang Shen",
+    "Negar Kiyavash",
+    "Niao He"
+  ],
+  "summary": "We study optimistic bilevel optimization when the lower-level problem has a non-isolated manifold of minimizers. In this setting, the hyper-objective may be non-differentiable because the upper-level criterion must choose among multiple lower-level solutions. Under a local Polyak--Łojasiewicz (PŁ) condition, we show that differentiability does not require the lower-level solution set to be a singleton: uniqueness of the optimistic selection is sufficient. This yields an explicit pseudoinverse-based hyper-gradient formula extending the classical singleton-minimizer result. We further…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI"
+  ],
+  "published": "2026-05-09",
+  "updated": "2026-05-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

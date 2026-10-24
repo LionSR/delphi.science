@@ -1,0 +1,20 @@
+{
+  "key": "2604.26933",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26933",
+  "title": "Data-driven discovery of polynomial ODEs with provably bounded solutions",
+  "authors": [
+    "Albert Alcalde",
+    "Giovanni Fantuzzi"
+  ],
+  "summary": "We introduce SILAS, a data-driven framework for discovering polynomial ordinary differential equations (ODEs) with provably bounded trajectories. Boundedness is certified by compact absorbing sets defined via polynomial Lyapunov functions. We jointly identify the ODE vector field and the Lyapunov function using a well-posed nonconvex optimization problem built using polynomial optimization tools. We solve this problem using an alternating block-coordinate optimization scheme with convex subproblems, whose feasibility is ensured by a novel model-agnostic initialization that identifies a…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

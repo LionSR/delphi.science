@@ -1,0 +1,25 @@
+{
+  "key": "2607.14652",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14652",
+  "title": "Trajectory-Aware Flow Matching for Topology Optimisation",
+  "authors": [
+    "Shusheng Xiao",
+    "Jinshuai Bai",
+    "Hyogu Jeong",
+    "Yunfei Xi",
+    "Yilin Gui",
+    "YuanTong Gu"
+  ],
+  "summary": "Topology optimisation (TO) often requires repeated finite element analysis and sensitivity-based material updates, which can be costly when multiple candidate designs are needed under varying physical and design conditions. Generative TO offers a route to rapid design exploration, but existing models may rely on adversarial training, long reverse-diffusion sampling, or external guidance to maintain structural feasibility and physical consistency. This study develops a flow matching-based topology optimisation (FMTO) framework for conditional topology generation. Linear FMTO is first…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

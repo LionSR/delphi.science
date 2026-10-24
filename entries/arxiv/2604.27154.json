@@ -1,0 +1,23 @@
+{
+  "key": "2604.27154",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.27154",
+  "title": "A Scale-Shape Dual Newton Method for Entropic Least Squares",
+  "authors": [
+    "Nicholas Barnfield",
+    "James V. Burke",
+    "Michael P. Friedlander",
+    "Tim Hoheisel"
+  ],
+  "summary": "We give a damped inexact Newton method for entropy-regularized least-squares on the nonnegative orthant that converges globally at a linear rate with $O(\\logε^{-1})$ iteration complexity, locally at a superlinear-to-quadratic rate, and is immune to the finite-precision overflow that limits classical dual solvers. A scale-shape decomposition of the primal -- separating its scale from its direction -- produces a dual with a nonsingular Jacobian. Objectives and Jacobians are evaluated through stable log-sum-exp and softmax primitives. Lambert W bounds on the scale uniformly control the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2603.29330",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.29330",
+  "title": "Convergence analysis of dynamical systems for optimization by an improved Lyapunov framework",
+  "authors": [
+    "Atsushi Tabei",
+    "Ken'ichiro Tanaka"
+  ],
+  "summary": "We study the convergence analysis of continuous-time dynamical systems associated with optimization methods for strongly convex functions. Recent works have proposed systematic constructions of Lyapunov functions for such analysis, while also revealing limitations of the Lyapunov analysis. Aujol--Dossal--Rondepierre (2023) have proposed a technique to address this issue by reorganizing Lyapunov functions so as to evaluate a quantity $f(x(t)) - f_* - g(t)\\|x(t)-x_*\\|^2$ rather than $f(x(t)) - f_*$. By combining this technique with our computer-assisted framework to discover Lyapunov…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-03-31",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

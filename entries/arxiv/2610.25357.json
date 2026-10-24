@@ -1,0 +1,20 @@
+{
+  "key": "2610.25357",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.25357",
+  "title": "Studying proof data with proof theory: the case of AI-generated mathematics",
+  "authors": [
+    "Safal Raman Aryal"
+  ],
+  "summary": "I present a method for analyzing large collections of formally verified mathematical proofs (e.g. OpenAI's) grounded in some historical and philosophical musings on mathematics in the age of AI. Many of the quantities involved, such as the size of a proof term or the number of redundant steps, are already computed by work on improving automated provers, where they serve as targets. My aim is to turn them into measurements of proofs themselves: compared against a reference library and against each proof's own cut-free form, checked against theorems they must obey, and controlled for how the…",
+  "domain": "math.LO",
+  "tags": [
+    "math.LO",
+    "cs.LO"
+  ],
+  "published": "2026-10-18",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

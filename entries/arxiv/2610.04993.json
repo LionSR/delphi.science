@@ -1,0 +1,22 @@
+{
+  "key": "2610.04993",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04993",
+  "title": "Error Term Estimates for Sets of Remainders",
+  "authors": [
+    "Omkar Baraskar",
+    "Prashant Gokhale",
+    "Sarvagya Jain",
+    "Adam Kieżun"
+  ],
+  "summary": "For a positive integer $n$, let $$ S_1(n)=\\{n\\bmod k:1\\leq k\\leq\\lfloor n/2\\rfloor\\}, \\qquad s_1(n)=|S_1(n)|. $$ Baraskar and Vukusic proved $s_1(n)=Ξn+O(n/(\\log n\\log\\log n))$ for an explicit positive constant $Ξ$, and asked for a sharper error term. Their computations suggested that an $O(n^{1/3})$ bound might hold. We prove that, for every $α>\\sqrt2$, $$ \\limsup_{n\\to\\infty} \\frac{s_1(n)-Ξn}{n\\exp\\{-α\\sqrt{\\log n\\log\\log n}\\}} =\\infty, $$ and the corresponding limit inferior is $-\\infty$. In particular, no fixed power saving is possible. We also prove the complementary upper estimate $$…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

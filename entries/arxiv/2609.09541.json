@@ -1,0 +1,22 @@
+{
+  "key": "2609.09541",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.09541",
+  "title": "A Function-Space Framework for BDDC Preconditioning in Control- and State-Constrained Sparse Optimal Control",
+  "authors": [
+    "Harbir Antil",
+    "Keegan L. A. Kirk",
+    "Umarkhon Rakhimov"
+  ],
+  "summary": "We develop a Balancing Domain Decomposition by Constraints (BDDC) preconditioner for the interface systems arising from active-set semi-smooth Newton linearizations of elliptic optimal control problems with box-constrained controls, $L^1$-sparsity, and Moreau--Yosida regularized state constraints. The domain decomposition and BDDC construction are formulated directly at the infinite-dimensional level. Eliminating the interior variables yields a Schur complement for the state and adjoint traces assembled from local subdomain operators. We prove a global--local equivalence result, establish…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

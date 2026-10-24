@@ -1,0 +1,21 @@
+{
+  "key": "2610.08088",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08088",
+  "title": "A SAV Neural Network Method for Allen--Cahn and Cahn--Hilliard Equations",
+  "authors": [
+    "Tao Luo",
+    "Guihong Wang",
+    "Wei Zhao"
+  ],
+  "summary": "Phase-field equations are fundamental examples of gradient-flow systems and require numerical solvers that preserve intrinsic energy dissipation. In this work, we propose a neural network-based method that combines an SAV time discretization with a mesh-free neural representation. We establish the unconditional energy stability of the underlying SAV semi-discretization, quantify the energy defect caused by solver residuals, and derive a conditional high-probability error estimate for the Allen--Cahn equation. Numerical experiments show that our approach consistently exhibits energy-stable…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

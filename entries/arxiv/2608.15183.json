@@ -1,0 +1,21 @@
+{
+  "key": "2608.15183",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.15183",
+  "title": "Analysis of Block Jacobi/Gauss-Seidel and additive/multiplicative Schwarz preconditioning through the theory of GLT sequences, with applications to domain decomposition discretizations",
+  "authors": [
+    "Carlo Garoni",
+    "Abdessadek Rifqui",
+    "Stefano Serra-Capizzano"
+  ],
+  "summary": "When a linear differential problem is discretized by a linear numerical method characterized by a mesh fineness parameter $n$, the computation of the numerical solution reduces to solving a linear discrete problem identified by a matrix $A_n$ whose size grows with $n$. The sequence of discretization matrices $\\{A_n\\}_n$ often falls within the class of generalized locally Toeplitz (GLT) sequences, even when the numerical method belongs to the family of domain decomposition methods (DDMs), as illustrated herein through examples. Four widely used preconditioners for DDM discretization matrices…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-15",
+  "updated": "2026-08-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

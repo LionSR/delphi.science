@@ -1,0 +1,23 @@
+{
+  "key": "2609.09556",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.09556",
+  "title": "High-probability guarantees for linear accessibility in feature superposition",
+  "authors": [
+    "Enrico Vompa"
+  ],
+  "summary": "Neural networks can leverage feature superposition to encode more concepts than dimensions, but cross-feature interference constrains the linear accessibility of simultaneously active features. By framing linear accessibility as a compressed sensing problem, we derive high-probability bounds for fixed supports under subgaussian noise, proving the sufficient dimension scales linearly ($d=O_{\\varepsilon}(k \\log m)$) rather than prior worst-case quadratic limits. We characterize the asymmetry between active and inactive interference and the trade-off between interference and observation-noise…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.AI",
+    "cs.IR",
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

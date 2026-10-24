@@ -1,0 +1,19 @@
+{
+  "key": "2609.29134",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.29134",
+  "title": "Global boundedness in a Chemotaxis-May-Nowak model for virus dynamics with logistic damping",
+  "authors": [
+    "Minh Le"
+  ],
+  "summary": "This paper investigates the following May--Nowak type model for viral infection in a bounded domain $Ω\\subset \\mathbb{R}^n$, $n \\ge 2$: $\\begin{cases} u_t = Δu - χ\\nabla \\cdot (u \\nabla v) + κ- u - uw - μ\\dfrac{u^{1+α}}{\\ln^k(u+e)}, \\\\[1mm] γv_t = Δv - v + uw, \\\\[1mm] w_t = Δw - w + v, \\end{cases}$ where $χ\\in \\mathbb{R}$, $μ> 0$, $k \\in [0,1)$, $α> 0$, and $γ\\in \\{0,1\\}$. We establish the global existence and uniform-in-time boundedness of classical solutions for suitably regular initial data under one of the following conditions: (A) $γ= 1$, $n = 2$, $k \\in [0,1)$, $α= 1$, and $μ> 0$; (B)…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

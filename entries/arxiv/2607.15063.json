@@ -1,0 +1,21 @@
+{
+  "key": "2607.15063",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.15063",
+  "title": "An Adaptive and Physics-Preserving Multiscale Method for Two-Phase Flow Simulations in High-Contrast Heterogeneous Porous Media",
+  "authors": [
+    "Junhao Huang",
+    "Eric Chung",
+    "Wing Tat Leung"
+  ],
+  "summary": "In this paper, we propose an adaptive physics-preserving multiscale method for incompressible and immiscible two-phase flow in high-contrast porous media. The method couples a physics-preserving implicit-pressure explicit-saturation scheme (P-IMPES) with the mixed constraint energy minimizing generalized multiscale finite element method. The core algorithmic component is an adaptive update strategy for the saturation-dependent coefficient. Since the effective permeability \\(κ_n=λ_t(S_w^n)K\\) depends on the evolving saturation through the total mobility, we introduce an adaptive update…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

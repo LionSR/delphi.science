@@ -1,0 +1,23 @@
+{
+  "key": "2610.24431",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.24431",
+  "title": "Low-Bit Distributed Constrained Optimization with Application to Optimal Scheduling and Allocation",
+  "authors": [
+    "Mohammadreza Doostmohammadian",
+    "Sergio Pequito"
+  ],
+  "summary": "This paper proposes a distributed resource allocation algorithm in which each agent communicates only the sign of its local cost gradient, a single bit per directed link per iteration. The algorithm is based on Laplacian-gradient dynamics and preserves the equality (demand) constraint at every iterate, guaranteeing anytime feasibility irrespective of termination time. First, we provide a complete Lyapunov-based convergence analysis for the fixed-step-size regime: the iterates are shown to enter, in at most O(1/\\varepsilon^2) iterations, a neighborhood of the optimizer whose radius scales as…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.DC",
+    "cs.MA",
+    "math.OC"
+  ],
+  "published": "2026-10-17",
+  "updated": "2026-10-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

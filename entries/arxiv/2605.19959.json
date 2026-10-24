@@ -1,0 +1,22 @@
+{
+  "key": "2605.19959",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.19959",
+  "title": "Learning Orthonormal Bases for Function Spaces",
+  "authors": [
+    "Hamidreza Kamkari",
+    "Mohammad Sina Nabizadeh",
+    "Justin Solomon"
+  ],
+  "summary": "Infinite-dimensional orthonormal basis expansions play a central role in representing and computing with function spaces due to their favorable linear algebraic properties. However, common bases such as Fourier or wavelets are fixed and do not adapt to the structure of a given problem or dataset. In this paper, we aim to represent these bases with neural networks and optimize them. Our key idea is that any target infinite-dimensional orthonormal basis can be viewed either as a point on the Lie manifold of the orthogonal group, or equivalently, as the endpoint of a continuous path on that…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.FA"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

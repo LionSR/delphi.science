@@ -1,0 +1,21 @@
+{
+  "key": "2603.22460",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.22460",
+  "title": "Data-Driven Synthesis of Robust Positively Invariant Sets from Noisy Data",
+  "authors": [
+    "Chi Wang",
+    "David Angeli"
+  ],
+  "summary": "This paper develops a method to construct robust positively invariant (RPI) tube sets from finite noisy input-state data of an unknown linear time-invariant (LTI) system, yielding tubes that can be directly embedded in tube-based robust data-driven predictive control. Data-consistency uncertainty sets are constructed under process/measurement noise with polytopic/ellipsoidal bounds. In the measurement-noise case, we provide a deterministic and data-consistent procedure to certify the induced residual bound from data. Based on these sets, a robustly stabilizing state-feedback gain is…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.DS"
+  ],
+  "published": "2026-03-23",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

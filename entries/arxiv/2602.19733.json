@@ -1,0 +1,22 @@
+{
+  "key": "2602.19733",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.19733",
+  "title": "Understanding the Curse of Unrolling",
+  "authors": [
+    "Sheheryar Mehmood",
+    "Florian Knoll",
+    "Peter Ochs"
+  ],
+  "summary": "Algorithm unrolling is ubiquitous in machine learning, particularly in hyperparameter optimization and meta-learning, where Jacobians of solution mappings are computed by differentiating through iterative algorithms. Although unrolling is known to yield asymptotically correct Jacobians under suitable conditions, recent work has shown that the derivative iterates may initially diverge from the true Jacobian, a phenomenon known as the curse of unrolling. In this work, we provide a non-asymptotic analysis that explains the origin of this behavior and identifies the algorithmic factors that…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-02-23",
+  "updated": "2026-02-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

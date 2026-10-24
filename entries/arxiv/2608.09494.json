@@ -1,0 +1,23 @@
+{
+  "key": "2608.09494",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.09494",
+  "title": "Walk-on-Spheres Monte Carlo and deep neural network approximations of elliptic PDEs with drift and killing",
+  "authors": [
+    "Konrad Kleinberg",
+    "Thomas Kruse"
+  ],
+  "summary": "In this paper we provide Monte Carlo and deep neural network approximations for stochastic representations of solutions to linear elliptic partial differential equations with constant diffusion, drift and killing. Building on the modified Walk-on-Spheres algorithm of Beznea et al. (arXiv:2209.01432), we introduce Monte Carlo estimators that explicitly incorporate sampled random times arising in the analyzed stochastic representations. We establish uniform error bounds for these estimators and show that, under suitable assumptions, a prescribed approximation accuracy is achieved with sample…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG",
+    "math.AP",
+    "math.PR"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

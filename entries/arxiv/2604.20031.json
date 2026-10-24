@@ -1,0 +1,22 @@
+{
+  "key": "2604.20031",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.20031",
+  "title": "Decision-Focused Federated Learning Under Heterogeneous Objectives and Constraints",
+  "authors": [
+    "Konstantinos Ziliaskopoulos",
+    "Alexander Vinel"
+  ],
+  "summary": "We consider Decision-Focused Federated Learning (DFFL), a predict-then-optimize setting in which multiple clients collaboratively train predictive models for downstream linear optimization problems without exchanging raw data. Besides the data heterogeneity typical of standard federated learning, clients may also have different objective functions and feasible regions. Building on the SPO+ surrogate loss, we derive heterogeneity bounds that separate objective shift, measured through cost-vector distances, from feasible-set shift, measured through support-function and shape-distance terms. We…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-04-21",
+  "updated": "2026-05-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

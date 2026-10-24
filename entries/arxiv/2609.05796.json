@@ -1,0 +1,22 @@
+{
+  "key": "2609.05796",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.05796",
+  "title": "Diagonal Attenuation: A Finite-Sample Correction for PCA",
+  "authors": [
+    "Qiang Sun"
+  ],
+  "summary": "Principal component analysis (PCA) can rotate away from its population target when a covariance matrix is estimated from limited data. We introduce diagonal attenuation, which preserves sample cross-covariances while reducing coordinatewise sample variances. The method is revealed exactly by averaging a linear full-output reconstruction loss over random input masks; studying the correction directly extends it beyond the range attainable by masking. We isolate the part of the random coupling between retained and omitted population directions that is contributed by sample-variance errors, and…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-09-05",
+  "updated": "2026-09-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

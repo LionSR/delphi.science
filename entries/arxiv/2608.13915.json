@@ -1,0 +1,22 @@
+{
+  "key": "2608.13915",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.13915",
+  "title": "First-Order Optimization as Minimum-Time Control",
+  "authors": [
+    "Liraz Mudrik",
+    "Isaac Kaminer",
+    "Pramod P. Khargonekar"
+  ],
+  "summary": "We formulate first-order optimization as a minimum-time control problem. The iterate is the state, the update, a combination of the gradients observed so far, is the control, and the points with gradient norm at most a prescribed tolerance form the target set. For a fixed objective and start, the minimum number of oracle queries needed to reach the target is a value function: it measures the complexity of the instance, not the worst case over a class. On a strongly convex quadratic, the conjugate gradient iterates emerge from the discrete Pontryagin conditions, and the value is a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-08-14",
+  "updated": "2026-08-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

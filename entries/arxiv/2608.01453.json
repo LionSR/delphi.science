@@ -1,0 +1,21 @@
+{
+  "key": "2608.01453",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.01453",
+  "title": "Visiting time statistics",
+  "authors": [
+    "Maxim Kirsebom",
+    "Philipp Kunde",
+    "Tomas Persson"
+  ],
+  "summary": "Many mixing dynamical systems $(X,T,μ)$ are known to satisfy the hitting time statistics result \\[ \\lim_{r \\to 0} μ\\{\\, x : τ_{B(y,r)} (x) > t/μ(B(y,r))\\,\\} = e^{-t}, \\] for $μ$-almost every $y$, where $τ_{B(y,r)} (x)$ is the first hitting time of $x$ to the ball $B(y,r)$. Taking a different point of view, we fix $x$ and consider $τ_{B(y,r)} (x)$ as a function of $y$. We call this the visiting time of $y$ from $x$, i.e. the time it takes for $y$ to get a visit from $x$ within a neighbourhood of radius $r$. We prove that \\[ \\lim_{r \\to 0} μ\\{\\, y : τ_{B(y,r)} (x) > t/μ(B(y,r)) \\,\\} = e^{-t},…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS"
+  ],
+  "published": "2026-08-02",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

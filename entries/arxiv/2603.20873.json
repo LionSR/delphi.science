@@ -1,0 +1,22 @@
+{
+  "key": "2603.20873",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20873",
+  "title": "Incentive-Aware Federated Averaging with Performance Guarantees under Strategic Participation",
+  "authors": [
+    "Fateme Maleki",
+    "Krishnan Raghavan",
+    "Farzad Yousefian"
+  ],
+  "summary": "Federated learning (FL) is a communication-efficient collaborative learning framework that enables model training across multiple agents with private local datasets. While the benefits of FL in improving global model performance are well established, individual agents may behave strategically, balancing the learning payoff against the cost of contributing their local data. Motivated by the need for FL frameworks that successfully retain participating agents, we propose an incentive-aware federated averaging method in which, at each communication round, clients transmit both their local model…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-03-21",
+  "updated": "2026-05-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

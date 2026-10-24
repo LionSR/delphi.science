@@ -1,0 +1,23 @@
+{
+  "key": "2610.26839",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.26839",
+  "title": "Newton-Based Methods for Bilevel Optimization Beyond Lower-Level Strong Convexity",
+  "authors": [
+    "Youran Dong",
+    "Junfeng Yang",
+    "Wei Yao",
+    "Jin Zhang"
+  ],
+  "summary": "Bilevel optimization provides a framework for machine learning tasks such as hyperparameter optimization, data reweighting, and meta-learning. Existing Newton-based bilevel methods typically rely on the classical hypergradient formula, which is generally unavailable when lower-level solutions are nonunique and the lower-level Hessian is singular. We develop two Newton-based methods beyond lower-level strong convexity by exploiting curvature shared by the lower-level and multiplier updates. Newton-based GALET handles potentially singular lower-level curvature under a positive spectral-gap…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

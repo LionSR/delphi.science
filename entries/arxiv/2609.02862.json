@@ -1,0 +1,22 @@
+{
+  "key": "2609.02862",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.02862",
+  "title": "Continuous data assimilation in steady Navier-Stokes equations with unknown viscosity: robust and efficient solvers and fast parameter recovery",
+  "authors": [
+    "L. Rebholz",
+    "J. Reyes",
+    "J. Whitehead"
+  ],
+  "summary": "Recent advances in equation discovery methods such as SINDy have highlighted the growing interest in identifying governing parameters and models directly from data. In this work, we take a complementary approach grounded in analysis and numerical PDE methods: we recover an unknown viscosity in steady Navier-Stokes equations (NSE) from partial incompressible flow observations using continuous data assimilation (CDA). We propose a simple and efficient parameter recovery algorithm and also a nonlinear solver for CDA-NSE. Together, this creates a highly efficient technique for recovering an…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.AP"
+  ],
+  "published": "2026-09-02",
+  "updated": "2026-09-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

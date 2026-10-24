@@ -1,0 +1,22 @@
+{
+  "key": "2602.11080",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.11080",
+  "title": "Constrained Fiducial Inference for Gaussian Models",
+  "authors": [
+    "Hank Flury",
+    "Jan Hannig",
+    "Richard Smith"
+  ],
+  "summary": "We propose a new fiducial Markov Chain Monte Carlo (MCMC) method for fitting parametric Gaussian models. We utilize the Cayley transform to decompose the parametric covariance matrix, which in turn allows us to formulate a general data generating algorithm for Gaussian data. Leveraging constrained generalized fiducial inference, we are able to create the basis of an MCMC algorithm, which can be specified to parametric models with minimal effort. The appeal of this novel approach is the wide class of models which it permits, ease of implementation and the posterior-like fiducial distribution…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-02-11",
+  "updated": "2026-02-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

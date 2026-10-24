@@ -1,0 +1,21 @@
+{
+  "key": "2604.15921",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.15921",
+  "title": "Efficient Thermo-Viscoplastic Analysis Using a Multi-Level hp-Finite Cell Method with Non-Negative Moment Fitting",
+  "authors": [
+    "Jan Niklas Schmäke",
+    "Oliver Wege",
+    "Martin Ruess"
+  ],
+  "summary": "An extension of the multi-level hp Finite Cell Method is proposed for the simulation of thermoviscoplastic problems with temperature-dependent material behavior. The approach combines hierarchical adaptive refinement with a non-negative moment fitting (NNMF) quadrature scheme for efficient and robust integration of non-linear, history-dependent constitutive models on cut cells. The NNMF formulation yields sparse, positive quadrature rules that significantly reduce the number of integration points while maintaining stability and accuracy. An error-indicator-driven hp-refinement strategy…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-17",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

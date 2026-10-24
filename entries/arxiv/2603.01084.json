@@ -1,0 +1,22 @@
+{
+  "key": "2603.01084",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.01084",
+  "title": "Kernel-Based LMI Approaches to Solving the Hamilton-Jacobi-Bellman Equation and Nonlinear Optimal Control",
+  "authors": [
+    "Boumediene Hamzi",
+    "Umesh Vaidya"
+  ],
+  "summary": "We present a kernel-based linear matrix inequality (LMI) approach for the approximate solution of Hamilton--Jacobi--Bellman (HJB) equations arising in nonlinear optimal control. The method represents the gradient of the value function in a reproducing kernel Hilbert space (RKHS) and uses a Schur-complement reformulation to convert the quadratic HJB inequality into an LMI that is linear in the kernel coefficients, yielding a convex semidefinite program. The novel ingredient is an explicit Riccati--Hessian \\emph{equality} constraint at the equilibrium, which removes the trivial solution and…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-03-01",
+  "updated": "2026-05-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2607.06343",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06343",
+  "title": "Sharp Logarithmic Thresholds for Cut Schedules in an Abstract Branch-and-Cut Model",
+  "authors": [
+    "Hongyi Jiang"
+  ],
+  "summary": "Branch-and-cut interleaves branching with cutting-plane generation. How the two operations share the work of proving a bound is a basic theoretical question. We study an abstract model in which a tree certifies a target bound $Z$. Each branch node improves the bound by $\\ell$ on one child and by $r$ on the other, where $0 0$ defined by $e^{-λ^{\\star}\\ell}+e^{-λ^{\\star}r}=1$. We establish uniform two-sided bounds of order $e^{λ^{\\star}Z}$ on the minimal leaf count of pure branching trees. We then identify $\\log k$ as the sharp threshold scale for the power of cutting. For cut schedules with…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

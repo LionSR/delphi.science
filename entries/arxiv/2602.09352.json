@@ -1,0 +1,21 @@
+{
+  "key": "2602.09352",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.09352",
+  "title": "Quadratic irrational analogues of Ramanujan's series for $1/π$",
+  "authors": [
+    "John M. Campbell",
+    "Shaun Cooper",
+    "Dongxi Ye"
+  ],
+  "summary": "About 40 years ago Jonathan and Peter Borwein discovered the series identity $$ \\sum_{n=0}^\\infty \\frac{(-1)^n(6n)!}{(3n)!(n!)^3} \\frac{(A+nB)}{C^{n+1/2}} = \\frac{1}{12π} $$ where \\begin{align*} A&=1657145277365+212175710912\\sqrt{61},\\cr B&=107578229802750+13773980892672\\sqrt{61},\\cr C&=\\left(5280(236674+30303\\sqrt{61})\\right)^3 \\end{align*} which adds roughly 25 digits of accuracy per term. They noted that if each of the quadratic irrationals $A$, $B$ and $C$ is replaced by their conjugates, that is, each number $a+b\\sqrt{61}$ is changed to $a-b\\sqrt{61}$, then the resulting series also…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-02-10",
+  "updated": "2026-02-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

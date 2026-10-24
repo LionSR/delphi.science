@@ -1,0 +1,23 @@
+{
+  "key": "2603.26484",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.26484",
+  "title": "Speedability of computably approximable reals and their approximations",
+  "authors": [
+    "George Barmpalias",
+    "Nan Fang",
+    "Wolfgang Merkle",
+    "Ivan Titov"
+  ],
+  "summary": "An approximation of a real is a sequence of rational numbers that converges to the real. An approximation is left-c.e. if it is computable and nondecreasing and is d.c.e. if it is computable and has bounded variation. A real is computably approximable if it has some computable approximation, and left-c.e. and d.c.e. reals are defined accordingly. An approximation $\\{a_s\\}_{s \\in ω}$ is speedable if there exists a nondecreasing computable function $f$ such that the approximation $\\{a_{f(s)}\\}_{s \\in ω}$ converges in a certain formal sense faster than $\\{a_s\\}_{s \\in ω}$. This leads to various…",
+  "domain": "math.LO",
+  "tags": [
+    "math.LO",
+    "cs.LO"
+  ],
+  "published": "2026-03-27",
+  "updated": "2026-03-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

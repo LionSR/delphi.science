@@ -1,0 +1,21 @@
+{
+  "key": "2607.27438",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.27438",
+  "title": "Dynamical Low-Rank Smoothing",
+  "authors": [
+    "Youssef Marzouk",
+    "Fabio Nobile",
+    "Fabio Zoccolan"
+  ],
+  "summary": "Computational costs often make smoothing procedures prohibitive for high-dimensional data assimilation problems. To address this challenge, we propose a dynamical low-rank approximation (DLRA) methodology for smoothing concerning frameworks based on stochastic differential equations. We extend the previously developed joint mean-and-covariance optimization (JMCO) filtering setting to derive a reduced-order smoother via the Rauch--Tung--Striebel recursion and establish the corresponding Kalman--Bucy smoothing for affine drift dynamics. The resulting algorithms retain the adaptive nature of…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

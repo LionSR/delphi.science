@@ -1,0 +1,21 @@
+{
+  "key": "2601.08751",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.08751",
+  "title": "Riemannian optimization with finite-difference gradient approximations",
+  "authors": [
+    "Timothé Taminiau",
+    "Estelle Massart",
+    "Geovani Nunes Grapiglia"
+  ],
+  "summary": "Derivative-free Riemannian optimization (DFRO) aims to minimize an objective function using only function evaluations, under the constraint that the decision variables lie on a Riemannian manifold. The rapid increase in problem dimensions over the years calls for computationally cheap DFRO algorithms, that is, algorithms requiring as few function evaluations and retractions as possible. We propose a novel DFRO method based on finite-difference gradient approximations that relies on an adaptive selection of the finite-difference accuracy and stepsize that is novel even in the Euclidean…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-13",
+  "updated": "2026-01-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

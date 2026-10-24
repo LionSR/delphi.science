@@ -1,0 +1,24 @@
+{
+  "key": "2609.29242",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.29242",
+  "title": "AFT Neural Function Approximators for 1D Nonlinear Force Laws",
+  "authors": [
+    "Miriam Goldack",
+    "Johann Groß",
+    "Malte Krack",
+    "Merten Stender"
+  ],
+  "summary": "Nonlinear contacts and friction strongly influence the vibration response of assembled structures, but their accurate numerical treatment is computationally demanding. The harmonic balance method is widely used to compute periodic steady-state responses, yet the required alternating frequency-time scheme becomes costly for nonsmooth and hysteretic nonlinearities and must be repeated throughout the nonlinear solution process. Here we show that this procedure can be replaced by neural networks that directly map displacement Fourier coefficients to nonlinear force coefficients and provide the…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "cs.LG",
+    "math.DS"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

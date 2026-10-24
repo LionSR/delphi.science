@@ -1,0 +1,22 @@
+{
+  "key": "2609.34099",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.34099",
+  "title": "Constrained Nonconvex Stochastic Optimization with One Projection",
+  "authors": [
+    "Yuyang Deng",
+    "Mohammadreza M. Kalan",
+    "Eitan J. Neugut",
+    "Mehrdad Mahdavi"
+  ],
+  "summary": "Constrained nonconvex optimization has seen increasing application in modern machine learning, such as safe LLM alignment/finetuning, transfer learning and rank-constrained continual learning. The commonly used approach is Projected SGD which requires projection at every iteration. However, projection onto a functional constraint can cost substantially more than a stochastic first-order update. We study whether this operation can be deferred until the end of nonconvex stochastic optimization, and only do it once. For weakly convex, possibly nonsmooth objectives with regular convex…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2609.21271",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.21271",
+  "title": "Nested Clustered Optimization Is One End of a Schur Bridge, and the Interior Is Sometimes Provably Better",
+  "authors": [
+    "Peter Cotton"
+  ],
+  "summary": "Nested clustered optimization allocates within each cluster from the cluster's own covariance block and then across the resulting cluster portfolios. Block inversion says the unconstrained minimum-variance portfolio has the same two-tier shape, with each block replaced by its Schur complement against every other asset. Conditioning instead on one knot from each other cluster truncates the conditioning set in the manner of a Vecchia approximation, and we give the rank-one model of cross-cluster dependence under which it is exact. Damping the complement by $γ\\in[0,1]$ then gives a bridge with…",
+  "domain": "q-fin.MF",
+  "tags": [
+    "q-fin.MF",
+    "math.OC",
+    "q-fin.PM"
+  ],
+  "published": "2026-09-18",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

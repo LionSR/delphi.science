@@ -1,0 +1,23 @@
+{
+  "key": "2610.31487",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.31487",
+  "title": "Conservative Finite Element Methods for Kirchhoff-Type Equations",
+  "authors": [
+    "Benjamin Dörich",
+    "Felix Krumbiegel",
+    "Jemal Rogava",
+    "Andreas Rupp",
+    "Zurab Vashakidze"
+  ],
+  "summary": "We construct and analyse a fully discrete scheme for a Kirchhoff-type nonlinear integro-differential equation in two spatial dimensions with time-dependent coefficients. The scheme combines a symmetric three-layer time discretization of Crank--Nicolson type with a conforming finite element method of arbitrary polynomial degree $p$ and a Picard iteration for the nonlinearity. We prove that the Picard iteration is well defined and, that the iterates converge to the Ritz projection of the exact solution measured in fractional-power norms of the discrete Laplacian. Running the same energy…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

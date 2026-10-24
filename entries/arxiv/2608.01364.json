@@ -1,0 +1,20 @@
+{
+  "key": "2608.01364",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.01364",
+  "title": "U-centering as subset ANOVA: edge regression and higher-order theory",
+  "authors": [
+    "Xianyang Zhang"
+  ],
+  "summary": "The unbiased sample versions of squared distance covariance and the Hilbert-Schmidt independence criterion (HSIC) are fourth-order U-statistics, yet U-centering evaluates them from pairwise arrays in $O(n^2)$ operations. We show that U-centering is exactly the least-squares residual obtained after fitting additive endpoint effects to a symmetric hollow array. This interpretation explains the zero row sums and the denominator $n(n-3)$ through the residual degrees of freedom. The same pairwise residualization also gives useful regression identities. After endpoint effects are removed from both…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-08-02",
+  "updated": "2026-08-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

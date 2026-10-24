@@ -1,0 +1,26 @@
+{
+  "key": "2601.21470",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.21470",
+  "title": "PPI-SVRG: Unifying Prediction-Powered Inference and Variance Reduction for Semi-Supervised Optimization",
+  "authors": [
+    "Ruicheng Ao",
+    "Hongyu Chen",
+    "Haoyang Liu",
+    "David Simchi-Levi",
+    "Will Wei Sun"
+  ],
+  "summary": "We study semi-supervised stochastic optimization when labeled data is scarce but predictions from pre-trained models are available. PPI and SVRG both reduce variance through control variates -- PPI uses predictions, SVRG uses reference gradients. We show they are mathematically equivalent and develop PPI-SVRG, which combines both. Our convergence bound decomposes into the standard SVRG rate plus an error floor from prediction uncertainty. The rate depends only on loss geometry; predictions affect only the neighborhood size. When predictions are perfect, we recover SVRG exactly. When…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "econ.EM",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-01-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

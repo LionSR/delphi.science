@@ -1,0 +1,24 @@
+{
+  "key": "2608.18288",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.18288",
+  "title": "Anytime Solver Evaluation with a Normalized Signed Primal Integral and Explicit Reference Policies - Extended Version",
+  "authors": [
+    "Florian Rascoussier",
+    "Romain Billot",
+    "Lina Fahed",
+    "Christine Solnon"
+  ],
+  "summary": "Anytime solvers return usable solutions before they terminate and improve them while time remains. Their progress is commonly summarized by a primal integral, a final gap, or convergence curves. Each summary leaves consequential choices open: how to score a run before its first feasible solution, whether poor incumbents are truncated, and whether the reference value is updated after the experiment or version-frozen beforehand. These choices become visible when runs produce no valid incumbent or improve a published best-known value. We study a normalized signed primal integral built from a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.MS",
+    "cs.PF"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

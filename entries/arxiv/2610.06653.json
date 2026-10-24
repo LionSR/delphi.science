@@ -1,0 +1,23 @@
+{
+  "key": "2610.06653",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06653",
+  "title": "The Birkhoff Geometry of Manifold-Constrained Hyper-Connections: Two Channels, Vertex Viscosity, and Sinkhorn as a Retraction",
+  "authors": [
+    "Xiaoyu Li",
+    "Zhizhou Sha",
+    "Chiwun Yang"
+  ],
+  "summary": "Hyper-connections widen the residual stream of a Transformer to $n$ parallel streams. Their manifold-constrained version (mHC) mixes the streams at each layer with a doubly stochastic matrix, which it computes by Sinkhorn normalization of exponentiated logits. We give a geometric theory of this design on the Birkhoff polytope. First, a doubly stochastic mixer splits the stream into a mean channel, on which mHC is exactly a residual network, and a difference channel, which each layer contracts by its second singular value $σ_2 \\le 1 - n \\min_{ij} H_{ij}$. Thus the extra width is a fading…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

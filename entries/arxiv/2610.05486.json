@@ -1,0 +1,25 @@
+{
+  "key": "2610.05486",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05486",
+  "title": "Surrogate-powered Causal Inference with Censored Outcomes",
+  "authors": [
+    "Yaroslav Mukhin",
+    "Tereza Oprea",
+    "Arielle Anderer",
+    "Christina Lee Yu",
+    "Jelena Bradic"
+  ],
+  "summary": "Clinical trials with survival endpoints lose information when participants are censored before death is observed. We develop target-preserving estimators that use posttreatment disease history, such as recurrence or progression, to recover information lost to censoring for marginal survival and restricted mean survival effects. The difficulty is that the intermediate event is downstream of treatment: naive adjustment can change the causal estimand, and the useful information enters only through the observed coarsening. We derive observed-data influence functions with and without recurrence…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "econ.EM",
+    "stat.ME"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

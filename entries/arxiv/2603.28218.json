@@ -1,0 +1,19 @@
+{
+  "key": "2603.28218",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.28218",
+  "title": "Efficient modeling of chemotherapy regimens using mixed-integer linear programming",
+  "authors": [
+    "Alain Billionnet"
+  ],
+  "summary": "In this article, we focus on determining a minimum-cost treatment program aimed at maintaining the size of a cancerous tumor at a level that allows the patient to live comfortably. At each predetermined point in a treatment horizon, the patient either receives drug treatment or does not. In the first case, the tumor shrinks and its size is multiplied by a constant factor lower than 1; in the second, it grows following an exponential or Gompertz growth law. We first demonstrate that a simple heuristic solution provides an optimal treatment program. We then show that the Gompertz function can…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-30",
+  "updated": "2026-03-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

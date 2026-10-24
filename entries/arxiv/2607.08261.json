@@ -1,0 +1,23 @@
+{
+  "key": "2607.08261",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08261",
+  "title": "Optimal Sparsifiers for Abelian Cayley Graphs",
+  "authors": [
+    "Arpon Basu",
+    "Pravesh K. Kothari",
+    "Raghu Meka",
+    "Stefan Tudose"
+  ],
+  "summary": "We prove that for every Cayley graph $\\mathcal{G}$ over any finite abelian group $G$, there is a weighted Cayley graph with $O(\\log |G|)$ generators that is a spectral sparsifier for $\\mathcal{G}$. This bound is optimal. Applying our bound to the group $G = \\mathbb{F}_2^n$, yields, as a corollary, $O(n/\\varepsilon^2)$-sized code sparsifiers for $\\mathbb{F}_2$-linear codes, improving on the work of Khanna, Putterman and Sudan (SODA'24) who obtained a similar result with an additional $\\mathrm{polylog}(n)$ loss. Our proof is strongly inspired by a recent work of Reis and Rothvoss for the…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-07-09",
+  "updated": "2026-07-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

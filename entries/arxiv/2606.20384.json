@@ -1,0 +1,27 @@
+{
+  "key": "2606.20384",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20384",
+  "title": "Nonlinear Geotechnical Analysis Using a Polygonal Cell-Based Smoothed Finite Element Framework",
+  "authors": [
+    "Mingjiao Yan",
+    "Yang Yang",
+    "Zongliang Zhang",
+    "Yinpeng Yin",
+    "Miao Zhang",
+    "Yijia Dong",
+    "Dong Pan",
+    "Xiaozi Lin",
+    "Tiankai Yang"
+  ],
+  "summary": "Nonlinear geotechnical analysis often involves complex geometries, staged construction, local failure, and mesh-dependent stress and plastic strain responses. This study develops a polygonal cell-based smoothed finite element method (CS-FEM) for nonlinear geotechnical analysis and implements it in ABAQUS through the user element subroutine. The proposed method combines Wachspress interpolation with cell-based strain smoothing, in which the smoothed strain--displacement matrix is evaluated by boundary integration over polygonal smoothing subcells. This formulation avoids direct calculation of…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

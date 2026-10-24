@@ -1,0 +1,20 @@
+{
+  "key": "2603.08087",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.08087",
+  "title": "Stability of Two-Stage Stochastic Programs Under Problem-Dependent Costs",
+  "authors": [
+    "Nils Peyrousset",
+    "Benoît Tran"
+  ],
+  "summary": "Classical stability theory for stochastic programming relies on the Wasserstein-Fortet-Mourier duality, which requires the ground cost to be a distance. When using problem-dependent costs instead of metrics, this duality no longer yields Fortet-Mourier bounds. This paper develops a direct stability approach using the primal optimal transport formulation. We prove that under minimal regularity conditions and a regret domination property, the optimal value function remains Lipschitz continuous with respect to problem-dependent transport costs. Our approach works directly with transport…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-09",
+  "updated": "2026-03-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

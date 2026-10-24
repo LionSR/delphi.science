@@ -1,0 +1,24 @@
+{
+  "key": "2602.00684",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.00684",
+  "title": "Multi-Compartment Volume Conductor with Complete Electrode Model: Simulated Stereo-EEG Source Localization using Brainstorm-Zeffiro Plugin",
+  "authors": [
+    "Fernando Galaz Prieto",
+    "Takfarinas Medani",
+    "Chinmay Chinara",
+    "Richard M. Leahy",
+    "Sampsa Pursiainen"
+  ],
+  "summary": "This study introduces a novel integration of the Brainstorm (BST) software and the Zeffiro Interface (ZI) to enable whole-head, multi-compartment volume conductor modeling for electroencephalography (EEG) source imaging, with a particular focus on stereotactic EEG applications. We present the BST-2-ZI plugin, a MATLAB-based tool that facilitates seamless transfer of tissue segmentations and anatomical atlases from BST into ZI for finite element (FE) mesh generation as well as forward and inverse modeling. The generated FE meshes support variable spatial resolution and implement the complete…",
+  "domain": "physics.med-ph",
+  "tags": [
+    "physics.med-ph",
+    "math.OC"
+  ],
+  "published": "2026-01-31",
+  "updated": "2026-01-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

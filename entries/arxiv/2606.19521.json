@@ -1,0 +1,22 @@
+{
+  "key": "2606.19521",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.19521",
+  "title": "Interactive Pareto navigation for deep multi-task learning",
+  "authors": [
+    "Augustina C. Amakor",
+    "Konstantin Sonntag",
+    "Sebastian Peitz"
+  ],
+  "summary": "In multi-task learning, handling an increasing number of objectives can quickly become challenging, both in terms of the computational resources and the decision maker's capacity to choose appropriate trade-offs. A widely used approach is thus to aggregate the individual losses in a single loss function by a weighted sum. This often fails to capture either the decision maker's preferences as a result of the shape of the Pareto front, or requires multiple adjustments and computations which becomes prohibitively expensive in deep learning applications. To address these issues, we introduce a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-06-17",
+  "updated": "2026-06-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

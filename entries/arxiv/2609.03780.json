@@ -1,0 +1,22 @@
+{
+  "key": "2609.03780",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.03780",
+  "title": "Mini mixed finite element method for nearly incompressible linear elasticity problems",
+  "authors": [
+    "Zhijin Guan",
+    "Yue Feng",
+    "Hehu Xie",
+    "Chenguang Zhou"
+  ],
+  "summary": "This paper addresses the numerical solution of nearly incompressible linear elasticity boundary value problems and their associated eigenvalue problems. A mixed finite element formulation based on Mini element is proposed to circumvent the locking phenomenon that plagues standard low-order elements in the nearly incompressible limit. For the boundary value problem, we establish the well-posedness of mixed variational formulation and derive a priori error estimates that are uniform with respect to the Lamé constant $\\underlineλ$, thereby proving the method's locking-free property. For the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

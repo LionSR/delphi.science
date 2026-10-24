@@ -1,0 +1,21 @@
+{
+  "key": "2607.12408",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12408",
+  "title": "Efficient Path Reconstruction in Prehistoric Human Migration: An Adaptive Dijkstra's Algorithm Based on Wavelet Compression for Topographic Data",
+  "authors": [
+    "Max Brockmann",
+    "Lena Perlberg",
+    "Angela Kunoth"
+  ],
+  "summary": "The reconstruction of prehistoric migration routes requires the accurate evaluation of effective distances across complex topographies. Traditional Least-Cost Path Analyses (LCPA) using high-resolution elevation models often lead to dense computational grids, making algorithms like Dijkstra's prohibitively slow for large-scale archaeological modelling. In this paper, we present a novel approach using adaptive wavelet methods to dynamically compress topographic data. By retaining high resolution only in areas of high topographic complexity (e.g., mountain passes) and smoothing homogeneous…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

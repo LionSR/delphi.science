@@ -1,0 +1,21 @@
+{
+  "key": "2604.27705",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.27705",
+  "title": "Robust Geometric Control of Catenary Robots under Unstructured Force Uncertainties",
+  "authors": [
+    "Alexandre Anahory Simoes",
+    "Leonardo Colombo"
+  ],
+  "summary": "This paper considers the robust control of a catenary robot composed of two quadrotors connected by an inextensible cable. The system is modeled on \\(SE(3)\\), with the cable treated as a geometric subsystem induced by the UAV configuration rather than as an independent dynamical element. The catenary shape determines configuration-dependent forces that couple the translational dynamics of the vehicles. We propose a geometric tracking controller for the relative configuration of the agents and analyze its robustness with respect to unstructured uncertainties in the catenary-induced forces.…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-04-30",
+  "updated": "2026-04-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

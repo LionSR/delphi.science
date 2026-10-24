@@ -1,0 +1,20 @@
+{
+  "key": "2604.26420",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26420",
+  "title": "Accelerated Backward Forward Method for Convex Optimization",
+  "authors": [
+    "Zepeng Wang",
+    "Juan Peypouquet"
+  ],
+  "summary": "We analyze the convergence rate of an accelerated backward forward method for solving convex composite optimization problems. The method was developed by Taylor, Hendrickx and Glineur, and is different from the FISTA algorithm in its placement of the proximal operator. When the smooth part of the objective function is convex, we establish a fast convergence rate of $\\mathcal{O}\\left( \\frac{1}{k^2} \\right)$ for the function values, and prove the weak convergence of the iterates. When the smooth part is strongly convex, we propose a variant of the method, and establish an accelerated linear…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

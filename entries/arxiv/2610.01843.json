@@ -1,0 +1,21 @@
+{
+  "key": "2610.01843",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01843",
+  "title": "Optimal Stochastic Bilevel Optimization with First-Order Oracles",
+  "authors": [
+    "Linxuan Pan",
+    "Junchi Yang"
+  ],
+  "summary": "We study nonconvex--strongly-convex bilevel optimization under a stochastic first-order oracle. We introduce MRT-FD, a single-loop first-order method that simultaneously tracks the upper-level variable, the lower-level solution, and the auxiliary response arising from implicit differentiation of the hyperobjective. MRT-FD performs one update of each variable per iteration and approximates the second-order derivative actions using order-$p$ finite differences. For any fixed finite smoothness order $p\\ge1$ in the lower-level variable, MRT-FD finds an $\\varepsilon$-stationary point using…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

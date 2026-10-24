@@ -1,0 +1,21 @@
+{
+  "key": "2602.04048",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.04048",
+  "title": "Convex duality contracts for production-grade mathematical optimization",
+  "authors": [
+    "Juan Pablo Vielma",
+    "Ross Anderson",
+    "Joey Huchette"
+  ],
+  "summary": "Deploying mathematical optimization in autonomous production systems requires precise contracts for objects returned by an optimization solver. Unfortunately, conventions on dual solution and infeasibility certificates (rays) vary widely across solvers and classes of problems. This paper presents the theoretical framework used by MathOpt (a domain-specific language developed and used at Google) to unify these notions. We propose an abstract primal-dual pair based on a simplified Fenchel duality scheme that allows for the mechanical derivation of dual problems and associated contracts for all…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-03",
+  "updated": "2026-02-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

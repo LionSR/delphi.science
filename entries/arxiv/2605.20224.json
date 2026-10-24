@@ -1,0 +1,19 @@
+{
+  "key": "2605.20224",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.20224",
+  "title": "High-Precision Approximation of Riemann Zeros via the Truncated Weil Form",
+  "authors": [
+    "Akiva Groskin"
+  ],
+  "summary": "The Connes-van Suijlekom truncated Weil quadratic form, indexed by a cutoff $c$ (controlling the primes $p\\leq c$ in the operator), has a ground state whose Fourier-Mellin zeros provably lie on the critical line; whether they converge to the Riemann zeros as $c\\to\\infty$ is open (Connes 2026; Connes-Consani-Moscovici 2025). We present, to our knowledge, the first public implementation of the CvS Galerkin matrix at sixteen cutoffs ($c=13$ through $67$, plus $c=100$). Across $c=13$--$67$ at $N=100$, the first-zero error $|γ_1-γ_1^{\\mathrm{Riemann}}|$ shrinks monotonically from $\\sim 2\\times…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-08-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

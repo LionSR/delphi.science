@@ -1,0 +1,22 @@
+{
+  "key": "2603.12965",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.12965",
+  "title": "Deep Predictor-Corrector Networks for Robust Parameter Estimation in Non-autonomous System with Discontinuous Inputs",
+  "authors": [
+    "Gyeongwan Gu",
+    "Jinwoo Hyun",
+    "Hyeontae Jo",
+    "Jae Kyoung Kim"
+  ],
+  "summary": "Learning under non-smooth objectives remains a fundamental challenge in machine learning, as abrupt changes in conditioning variables can induce highly non-smooth loss landscapes and destabilize optimization. This difficulty is particularly pronounced in non-autonomous dynamical systems driven by discontinuous inputs, where widely used optimization methods, including recent neural smoothing approaches, exhibit unreliable convergence or strong hyperparameter sensitivity. To address this issue, we propose Deep Predictor-Corrector Networks (DePCoN), a multi-scale learning framework that…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-13",
+  "updated": "2026-03-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

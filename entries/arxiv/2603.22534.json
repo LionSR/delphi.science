@@ -1,0 +1,21 @@
+{
+  "key": "2603.22534",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.22534",
+  "title": "Continuous-data-assimilation-enabled fast and robust convergence of an Uzawa-based solver for Navier-Stokes equations with large Reynolds number",
+  "authors": [
+    "Victoria Luongo Fisher",
+    "Jessica C. Franklin",
+    "Leo G. Rebholz"
+  ],
+  "summary": "This paper shows how continuous data assimilation (CDA) can be used to provably enable and accelerate convergence of a (efficient at each iteration due to a physics-splitting, but generally slowly converging and not robust) nonlinear solver for incompressible Navier-Stokes equations (NSE). Herein we develop, analyze and test an Uzawa-based nonlinear solver for incompressible NSE that incorporates partial solution data into the iteration through continuous data assimilation (CDA-Uzawa). We rigorously prove that i) CDA-Uzawa will accelerate a converging Uzawa iteration, and more partial…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-23",
+  "updated": "2026-03-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2610.26967",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.26967",
+  "title": "When Weak Submodularity Meets Matroids: How Does Standard Greedy Behave?",
+  "authors": [
+    "Qixin Zhang",
+    "Shi Fu",
+    "Shengminjie Chen",
+    "Chao Qian",
+    "Dacheng Tao"
+  ],
+  "summary": "Weakly submodular maximization finds numerous applications in machine learning, data mining and statistics. In particular, under a cardinality constraint, the standard greedy algorithm is known to attain the tight $(1-e^{-γ})$-approximation guarantee, where $γ$ denotes the submodularity ratio. However, when considering general matroid constraints, \\emph{how well standard greedy can perform} has remained a longstanding open question. In this paper, we resolve this question by studying the worst-case approximation guarantee $R_{\\mathrm{gr}}(γ,r)$ of standard forward greedy, where $r$ is the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DM",
+    "cs.LG"
+  ],
+  "published": "2026-10-18",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2602.04219",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.04219",
+  "title": "Sampled-Data Wasserstein Distributionally Robust Control of Multiplicative Systems: A Convex Relaxation with Performance Guarantees",
+  "authors": [
+    "Chung-Han Hsieh"
+  ],
+  "summary": "This paper investigates the robust optimal control of sampled-data stochastic systems with multiplicative noise and distributional ambiguity. We consider a class of discrete-time optimal control problems where the controller \\emph{jointly} selects a feedback policy and a sampling period to maximize the worst-case expected concave utility of the inter-sample growth factor. Modeling uncertainty via a Wasserstein ambiguity set, we confront the structural obstacle of~``concave-max'' geometry arising from maximizing a concave utility against an adversarial distribution. Unlike standard convex…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY",
+    "q-fin.PM"
+  ],
+  "published": "2026-02-04",
+  "updated": "2026-02-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

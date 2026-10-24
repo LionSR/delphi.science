@@ -1,0 +1,26 @@
+{
+  "key": "2605.18905",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.18905",
+  "title": "Stability and Discretization Error of State Space Model Neural Operators",
+  "authors": [
+    "Abderrahim Bendahi",
+    "Adrien Fradin",
+    "Johan Peralez",
+    "Julie Digne",
+    "Madiha Nadri"
+  ],
+  "summary": "Neural operators have emerged as a powerful, discretization-invariant framework for solving partial differential equations (PDEs). Although established approaches like the Deep Operator Network (DeepONet) have successfully achieved universal approximation for operators, and architectures such as Fourier Neural Operators (FNOs) have shown algebraic convergence rates, a precise theoretical connection between the continuous theory and its discrete numerical implementation remains a challenge. Specifically, the relationship between the continuous formulation and the discrete numerical stability…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "cs.NE",
+    "math.NA"
+  ],
+  "published": "2026-05-17",
+  "updated": "2026-05-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

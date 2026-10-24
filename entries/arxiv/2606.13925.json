@@ -1,0 +1,21 @@
+{
+  "key": "2606.13925",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.13925",
+  "title": "Sorries Are Not the Hard Part: An Expert-Review Case Study of a Semi-Autonomous Formalization",
+  "authors": [
+    "Vasily Ilin",
+    "Brian Nugent"
+  ],
+  "summary": "Large language models can often close proof gaps in interactive theorem provers, but a verified theorem is not the same thing as a reusable library contribution. We study this distinction through a detailed case study: a semi-autonomous formalization of Grothendieck's vanishing theorem. The initial version compiles with no sorries, but an expert review found serious problems in definitions, theorem generality, file organization, and the API. We then ran a review-driven refactor and compression process and obtained a second expert review. The before-and-after comparison shows a sharp split:…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "math.AG"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

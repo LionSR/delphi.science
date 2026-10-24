@@ -1,0 +1,19 @@
+{
+  "key": "2608.16703",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.16703",
+  "title": "Avoidance of caldera-type dead cores in a chemotaxis system with degenerate diffusion and compactly supported initial population density",
+  "authors": [
+    "Tobias Black"
+  ],
+  "summary": "We consider a degenerate chemotaxis system of the form \\begin{align}\\label{star}\\tag{$\\star$} \\left\\lbrace \\begin{array}{r@{}l@{\\quad}l} &u_t=\\nabla\\cdot\\big(D(u)\\nabla u-uS(u)\\nabla v\\big)+f(u,v),\\\\ &v_t=Δv+g(u,v),\\end{array}\\right. \\end{align} in a bounded domain $Ω\\subset\\mathbb{R}^{N}$ with smooth boundary subjected to no-flux and homogeneous Neumann boundary conditions. Herein, the diffusion coefficient $D\\in C^0([0,\\infty))\\cap C^1((0,\\infty))$ is assumed to satisfy $D(0)=0$ and $D'(s)\\geq 0$ on $(0,\\infty)$, and there are $s_0\\in(0,1]$ and $d>0$ such that $D(s)\\geq ds^{m-1}$ on…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

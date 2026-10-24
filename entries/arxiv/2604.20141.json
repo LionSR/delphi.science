@@ -1,0 +1,22 @@
+{
+  "key": "2604.20141",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.20141",
+  "title": "Fourier Weak SINDy: Spectral Test Function Selection for Robust Model Identification",
+  "authors": [
+    "Zhiheng Chen",
+    "Urban Fasel",
+    "Anastasia Bizyaeva"
+  ],
+  "summary": "We introduce Fourier Weak SINDy, a minimal noise-robust and interpretable derivative-free equation learning method that combines weak-form sparse equation learning with spectral density estimation for data-driven test function selection. By using orthogonal sinusoidal test functions inspired by their prevalence in Modulating Function-based system identification, the weak-form sparse regression problem reduces to a regression over Fourier coefficients. Dominant frequencies are then selected via multitaper estimation of the frequency spectrum of the data. This formulation unifies weak-form…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS"
+  ],
+  "published": "2026-04-22",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

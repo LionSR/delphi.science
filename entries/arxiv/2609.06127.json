@@ -1,0 +1,22 @@
+{
+  "key": "2609.06127",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.06127",
+  "title": "PAGR: Proof-Carrying Algebraic-Geometric Retrieval: A Quiver-, Provenance-, and Sheaf-Theoretic Framework for Grounded LLM Retrieval",
+  "authors": [
+    "Xingting Wang",
+    "Min Wu"
+  ],
+  "summary": "Retrieval-augmented generation is usually formulated as a statistical information-retrieval problem. Graph-based variants add relational structure, but the mathematical status of that structure is often left underspecified. Three distinct questions tend to be conflated: which statements are certified as knowledge, which latent representations are useful for retrieval, and which multi-hop compositions are semantically admissible. We propose Proof-Carrying Algebraic-Geometric Retrieval (PAGR), a framework that separates these questions mathematically. Its symbolic layer is a many-sorted…",
+  "domain": "math.RT",
+  "tags": [
+    "math.RT",
+    "cs.AI",
+    "cs.IR"
+  ],
+  "published": "2026-09-05",
+  "updated": "2026-09-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

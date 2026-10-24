@@ -1,0 +1,20 @@
+{
+  "key": "2606.29471",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.29471",
+  "title": "Structured Proper Loss Geometries for Multiclass Classification: Theory and Controlled Empirical Evaluation",
+  "authors": [
+    "Soumyadip Sarkar"
+  ],
+  "summary": "Strictly proper scoring rules identify the true conditional class distribution at population level, but their curvature can alter optimization and finite-sample behavior. We study three multiclass objectives: a class-aware quadratic Bregman score (CAPM), a strongly convex generator with constrained log-cosh ridges (HPG), and an HPG objective with an annealed probability-margin penalty (APMS). CAPM is treated as a structured instance of established quadratic scoring-rule theory. We derive conditional-regret, curvature, range, and logit-gradient bounds for CAPM and HPG, and prove exact…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-06-28",
+  "updated": "2026-06-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

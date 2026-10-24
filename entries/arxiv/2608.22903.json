@@ -1,0 +1,19 @@
+{
+  "key": "2608.22903",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.22903",
+  "title": "A Fully Matrix-Free Three-Grid Preconditioner for the Time-Harmonic Maxwell Equations at Extreme Scale",
+  "authors": [
+    "Shubin Fu"
+  ],
+  "summary": "Three-dimensional time-harmonic Maxwell simulations generate massive complex indefinite systems whose mesh coarsening is strictly limited by phase accuracy. Although matrix-free finite element kernels utilize GPU throughput efficiently, standard multilevel solvers are ultimately bottlenecked by the memory and communication costs of exact coarse-grid factorizations. We present a fully matrix-free, factorization-free three-grid preconditioner for curl-conforming N{é}delec discretizations with perfectly matched layers (PML) and optimally blended quadrature. The method employs an outer FGMRES to…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-24",
+  "updated": "2026-08-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

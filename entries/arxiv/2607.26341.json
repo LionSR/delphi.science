@@ -1,0 +1,22 @@
+{
+  "key": "2607.26341",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.26341",
+  "title": "A Cartesian Grid Method for Advection-Diffusion Equations with Robin Boundary Conditions on Moving Domains",
+  "authors": [
+    "Han Zhou",
+    "Yoichiro Mori",
+    "Lingxing Yao"
+  ],
+  "summary": "We develop a Cartesian grid method for advection--diffusion equations with Robin boundary conditions on moving domains. The moving-domain problem is reformulated as an interface problem on a box, with an unknown density introduced on the moving interface to enforce the Robin condition. The bulk equation is discretized by a cell-centered finite-difference scheme on the Cartesian grid, while interface corrections are obtained from local problems in a narrow band around the interface. The resulting method requires only modest computational geometry, avoids remeshing and cut cells, and is…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math-ph"
+  ],
+  "published": "2026-07-28",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

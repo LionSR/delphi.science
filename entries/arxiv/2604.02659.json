@@ -1,0 +1,22 @@
+{
+  "key": "2604.02659",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.02659",
+  "title": "Low-Rank Compression of Pretrained Models via Randomized Subspace Iteration",
+  "authors": [
+    "Farhad Pourkamali-Anaraki"
+  ],
+  "summary": "The massive scale of pretrained models has made efficient compression essential for practical deployment. Low-rank decomposition based on the singular value decomposition (SVD) provides a principled approach for model reduction, but its exact computation is expensive for large weight matrices. Randomized alternatives such as randomized SVD (RSVD) improve efficiency, yet they can suffer from poor approximation quality when the singular value spectrum decays slowly, a regime commonly observed in modern pretrained models. In this work, we address this limitation from both theoretical and…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.NA",
+    "stat.ML"
+  ],
+  "published": "2026-04-03",
+  "updated": "2026-04-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

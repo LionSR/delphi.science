@@ -1,0 +1,20 @@
+{
+  "key": "2602.09996",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.09996",
+  "title": "Learning to Choose Branching Rules for Nonconvex MINLPs",
+  "authors": [
+    "Timo Berthold",
+    "Fritz Geis"
+  ],
+  "summary": "Outer-approximation-based branch-and-bound is a common algorithmic framework for solving MINLPs (mixed-integer nonlinear programs) to global optimality, with branching variable selection critically influencing overall performance. In modern global MINLP solvers, it is unclear whether branching on fractional integer variables should be prioritized over spatial branching on variables, potentially continuous, that show constraint violations, with different solvers following different defaults. We address this question using a data-driven approach. Based on a test set of hundreds of…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-10",
+  "updated": "2026-02-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

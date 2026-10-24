@@ -1,0 +1,24 @@
+{
+  "key": "2609.11712",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11712",
+  "title": "Generalization Analysis of Distributed Kernel-based Robust Gradient Descent Algorithms",
+  "authors": [
+    "Jun-Yi Meng",
+    "Zheng-Chu Guo",
+    "Yuan Mao"
+  ],
+  "summary": "In this paper, we investigate the generalization performance of distributed gradient descent algorithms in a reproducing kernel Hilbert space under a robust loss function $l_σ$. By exploiting the spectral characterization of gradient descent together with the intrinsic properties of robust loss functions, we establish optimal learning rates for the distributed kernel-based robust gradient descent (DKRGD) algorithm with an appropriately chosen scale parameter $σ$. The proposed parameter choice of $σ$ simultaneously alleviates the saturation phenomenon and guarantees statistical robustness. A…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.OA",
+    "math.PR"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

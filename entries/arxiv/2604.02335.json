@@ -1,0 +1,21 @@
+{
+  "key": "2604.02335",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.02335",
+  "title": "Convolutional Surrogate for 3D Discrete Fracture-Matrix Tensor Upscaling",
+  "authors": [
+    "Martin Špetlík",
+    "Jan Březina"
+  ],
+  "summary": "Modeling groundwater flow in three-dimensional fractured crystalline media requires accounting for strong spatial heterogeneity induced by fractures. Fine-scale discrete fracture-matrix (DFM) simulations can capture this complexity but are computationally expensive, especially when repeated evaluations are needed. To address this, we aim to employ a multilevel Monte Carlo (MLMC) framework in which numerical homogenization is used to upscale sub-resolution fracture effects when transitioning between accuracy levels. To reduce the cost of conventional 3D numerical homogenization, we develop a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-01-19",
+  "updated": "2026-01-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2604.04027",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.04027",
+  "title": "Element-based Formation Control: a Unified Perspective from Continuum Mechanics",
+  "authors": [
+    "Kun Cao",
+    "Lihua Xie"
+  ],
+  "summary": "This paper establishes a unified element-based framework for formation control by introducing the concept of the deformation gradient from continuum mechanics. Unlike traditional methods that rely on geometric constraints defined on graph edges, we model the formation as a discrete elastic body composed of simplicial elements. By defining a generalized distortion energy based on the local deformation gradient tensor, we derive a family of distributed control laws that can enforce various geometric invariances, including translation, rotation, scaling, and affine transformations. The…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.MA",
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-04-05",
+  "updated": "2026-04-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

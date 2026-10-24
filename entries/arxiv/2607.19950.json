@@ -1,0 +1,22 @@
+{
+  "key": "2607.19950",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.19950",
+  "title": "An efficient Galerkin method for high-frequency scattering problems using Wilson bases",
+  "authors": [
+    "T. Chaumont-Frelet",
+    "M. Ingremeau",
+    "F. Proust"
+  ],
+  "summary": "We propose a new Galerkin discretization scheme for wave scattering problems that is based on microlocalised basis functions. We show that the proposed method can be made uniformly accurate for large wavenumbers $k$ with a number of degrees of freedom only scaling as $k^{d-1/2}$, while leading to an essentially sparse linear system. In contrast, finite element methods are known to require a number of degrees of freedom scaling at least as $k^d$ to achieve the same property. A similar method based on a Gabor frame was previously introduced by two of the authors, but it was suffering from…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.AP"
+  ],
+  "published": "2026-07-22",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

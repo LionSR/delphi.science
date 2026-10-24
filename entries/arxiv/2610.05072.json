@@ -1,0 +1,22 @@
+{
+  "key": "2610.05072",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05072",
+  "title": "A Local Geometric Analysis of Maximal Coding Rate Reduction via Error Bounds",
+  "authors": [
+    "Peng Wang",
+    "Po Chen",
+    "Huikang Liu",
+    "Rujun Jiang"
+  ],
+  "summary": "While the maximal coding rate reduction (MCR$^2$) objective has become a useful principle for learning compact and discriminative representations, a theoretical understanding of its optimization geometry remains limited, especially regarding why first-order methods often exhibit fast convergence near its local maximizers. In this work, we show that the MCR$^2$ objective satisfies an error-bound property in a neighborhood of its local maximizers. This property guarantees that the distance to the local maximizer set can be bounded above by the gradient norm at any point in the neighborhood,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

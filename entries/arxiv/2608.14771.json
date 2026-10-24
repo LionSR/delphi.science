@@ -1,0 +1,25 @@
+{
+  "key": "2608.14771",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.14771",
+  "title": "From Errors to Proofs: Minimal-Core-Guided Repair for Neuro-Symbolic Constraint Solving",
+  "authors": [
+    "Dipankar Sarkar"
+  ],
+  "summary": "Making language models solve constraint problems reliably often means having them translate the problem into a formal specification and delegating the search to a sound solver. But the translation is itself a language-model task, and an unfaithful translation makes the solver faithfully solve the wrong problem. Existing pipelines repair only translations that crash, returning the solver's error message and falling silent when the program runs but is wrong. We replace the error message with a proof: when the generated program is unsatisfiable, we extract a minimal unsatisfiable core over the…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.LO",
+    "cs.PL",
+    "cs.SC",
+    "math.OC"
+  ],
+  "published": "2026-08-14",
+  "updated": "2026-08-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2610.20892",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.20892",
+  "title": "Learning Warm Starts for the Simplex Method from Measured Solver Cost",
+  "authors": [
+    "Felix Parker",
+    "Danielle A. Ripsman",
+    "Emmett Springer",
+    "Kimia Ghobadi"
+  ],
+  "summary": "Learned warm starts for the simplex method build starting bases using predictions of which variables will be basic at optimality. Prior work has shown that starting bases predicted by graph neural networks can sharply reduce iteration counts, but the time saved may fall well short of the iterations saved. On 25 classes of linear programs (LPs), we find that a strong supervised basis predictor removes two thirds of the dual simplex's iterations but only a third of its time. Two effects explain the gap: the iterations removed by a good start tend to be cheap, and closeness to an optimal basis…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

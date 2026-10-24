@@ -1,0 +1,21 @@
+{
+  "key": "2607.10817",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10817",
+  "title": "An Efficient Bayesian Framework for Uncertainty Quantification in Nonlinear Imaging Inverse Problems",
+  "authors": [
+    "Anuj Abhishek",
+    "Sakshi Arya",
+    "Madhu Gupta"
+  ],
+  "summary": "Bayesian methods provide a natural framework for estimating a parameter in non-linear inverse problems and quantifying uncertainty in the estimation. However, when the forward model for such non-linear inverse problems is given by some Partial Differential Equation (PDE), Bayesian inference is typically carried out by resorting to MCMC methods. Since each MCMC iteration requires solving a PDE, these methods become computationally expensive and are often impractical for large-scale imaging problems. In this work, we develop a computationally efficient Bayesian framework for two such nonlinear…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-07-12",
+  "updated": "2026-07-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

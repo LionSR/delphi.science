@@ -1,0 +1,24 @@
+{
+  "key": "2604.15761",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.15761",
+  "title": "Frenetic Cat-inspired Particle Optimization: a Markov state-switching hybrid swarm optimizer with application to cardiac digital twinning",
+  "authors": [
+    "Jorge Sánchez",
+    "Guadalupe García-Isla",
+    "Sandra Perez-Herrero",
+    "Beatriz Trenor",
+    "Javier Saiz"
+  ],
+  "summary": "Designing optimizers that remain effective under tight evaluation budgets is critical in expensive black-box settings such as cardiac digital twinning. We propose Frenetic Cat-inspired Particle Optimization (FCPO), a hybrid swarm method that couples particle swarm optimization-like dynamics with an explicit-state Markov switching controller to schedule exploration and refinement operators online. FCPO integrates (i) state-conditioned bounded motion, (ii) an elite-difference global jump operator to escape stagnation, (iii) eigen-space guided local refinement from elite covariance, and (iv)…",
+  "domain": "cs.NE",
+  "tags": [
+    "cs.NE",
+    "math.OC"
+  ],
+  "published": "2026-04-17",
+  "updated": "2026-04-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

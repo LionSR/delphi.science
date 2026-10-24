@@ -1,0 +1,20 @@
+{
+  "key": "2608.30470",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.30470",
+  "title": "A Barrier-Regularized Symmetric Nitsche Method for the Signorini Problem",
+  "authors": [
+    "Peter Hansbo",
+    "Mats G. Larson"
+  ],
+  "summary": "We introduce and analyze a barrier-regularized symmetric Nitsche method for the scalar Signorini problem. Applying a logarithmic barrier to the nonnegative slack variable in an augmented Lagrangian and then eliminating that variable yields a smooth positive-part operator and the perturbed complementarity relation on a primal-dual central path, with barrier parameter $μ=γs$. For every $s>0$, the discrete problem is continuously differentiable, uniquely solvable, and has a symmetric positive definite Newton matrix when the Nitsche parameter is sufficiently large. Under a mild…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-31",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2605.03695",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.03695",
+  "title": "Error Analysis of Time-Dependent Test Functions in the Semi-Lagrangian Discontinuous Finite Element Scheme Based on the Characteristic Galerkin Method",
+  "authors": [
+    "Zhengrong Xie"
+  ],
+  "summary": "This paper studies the time-dependent test-function error in the characteristic Galerkin-type semi-Lagrangian discontinuous finite element (CSLDG) method caused by numerical integration errors of the characteristic ODE solver, and its effect on convergence. Unlike classical finite element methods and standard DG methods, the test functions in CSLDG are constructed by characteristic backtracking. As a result, ODE errors affect not only the upstream integration region but also enter directly into the discrete weak formulation through perturbations of the test function support. Neglecting mesh…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

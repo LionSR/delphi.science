@@ -1,0 +1,21 @@
+{
+  "key": "2602.08069",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.08069",
+  "title": "Skip the Hessian, Keep the Rates: Globalized Semismooth Newton with Lazy Hessian Updates",
+  "authors": [
+    "Amal Alphonse",
+    "Pavel Dvurechensky",
+    "Clemens Sirotenko"
+  ],
+  "summary": "Second-order methods are provably faster than first-order methods, and their efficient implementations for large-scale optimization problems have attracted significant attention. Yet, optimization problems in ML often have nonsmooth derivatives, which makes the existing convergence rate theory of second-order methods inapplicable. In this paper, we propose a new semismooth Newton method (SSN) that enjoys both global convergence rates and asymptotic superlinear convergence without requiring second-order differentiability. Crucially, our method does not require (generalized) Hessians to be…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-08",
+  "updated": "2026-02-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2605.27680",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.27680",
+  "title": "A Structure-Preserving PML-Domain-Embedding Method for Acoustic Wave Scattering by Moving Objects",
+  "authors": [
+    "Xuelong Gu",
+    "Qi Wang"
+  ],
+  "summary": "We develop a structure-preserving computational framework for acoustic wave scattering by moving objects, comprising a new PML-domain-embedding model and a compatible numerical approximation. The model couples a perfectly matched layer (PML), used to truncate the acoustic wave equation, with a domain-embedding formulation that represents moving objects on a fixed computational domain. The resulting PML-domain-embedding (PML-DE) system enables moving-boundary scattering problems to be solved without remeshing. Using matched asymptotic expansions, we show that the diffuse-interface formulation…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

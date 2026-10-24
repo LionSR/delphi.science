@@ -1,0 +1,20 @@
+{
+  "key": "2610.05038",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05038",
+  "title": "Optimal Oracle Complexity for Finite-Sum Monotone Inclusions",
+  "authors": [
+    "Qihao Zhou"
+  ],
+  "summary": "We present an oracle-optimal method for finite-sum monotone inclusions under mean-square Lipschitz continuity. Our switching regularization method finds a point $y$ and a certificate $g\\in G(y)$ with $(\\mathbb{E}\\|F(y)+g\\|^2)^{1/2}\\le\\varepsilon$ using $\\mathcal{O}(n+\\sqrt{n}LR/\\varepsilon)$ expected component evaluations and resolvent evaluations. It removes the additive $n\\log n$ cost of restarting a variance-reduced solver at every regularization stage by switching to a centered stochastic proximal iteration at regularization strength $L/\\sqrt{n}$. Carrying an operator estimate between…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

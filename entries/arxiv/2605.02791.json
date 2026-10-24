@@ -1,0 +1,21 @@
+{
+  "key": "2605.02791",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.02791",
+  "title": "Risk-Averse Ensemble Control for Control-Affine Systems",
+  "authors": [
+    "Alessandro Scagliotti",
+    "Thomas M. Surowiec"
+  ],
+  "summary": "A number of important modern applications in optimal control can be formulated as open loop control problems in which the underlying dynamical systems are subject to random inputs. These so-called ensemble control problems require the corresponding optimal control to be deterministic, as it must be computed before the realization of uncertainty and the passage of time. Practical applications of ensemble control include quantum control and the training of Neural ODEs. However, the standard approach to ensemble control treats the uncertainty in the objective function via the expectation, which…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-05-04",
+  "updated": "2026-05-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

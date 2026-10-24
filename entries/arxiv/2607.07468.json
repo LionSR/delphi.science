@@ -1,0 +1,24 @@
+{
+  "key": "2607.07468",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.07468",
+  "title": "Statistical inverse learning and $\\ell^1$-regularization",
+  "authors": [
+    "Abhishake Rastogi",
+    "Tatiana A. Bubba",
+    "Tapio Helin",
+    "Luca Ratti"
+  ],
+  "summary": "We study the recovery of sparse functions from finite, noisy, and indirect observations in the framework of statistical inverse learning. The unknown is modeled as an element of $\\ell^1$, and observations are generated through a possibly nonlinear forward operator $A:\\ell^1\\to H$, where $H$ is a vector-valued reproducing kernel Hilbert space. We propose an $\\ell^1$-regularized empirical risk minimizer and develop a theoretical analysis of its statistical properties. Under mild assumptions, we establish almost-sure consistency and derive non-asymptotic high-probability convergence rates in…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

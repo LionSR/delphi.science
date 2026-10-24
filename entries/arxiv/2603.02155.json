@@ -1,0 +1,26 @@
+{
+  "key": "2603.02155",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.02155",
+  "title": "Near-Optimal Regret for KL-Regularized Multi-Armed Bandits",
+  "authors": [
+    "Kaixuan Ji",
+    "Qingyue Zhao",
+    "Heyang Zhao",
+    "Qiwei Di",
+    "Quanquan Gu"
+  ],
+  "summary": "Recent studies have shown that reinforcement learning with KL-regularized objectives can enjoy faster rates of convergence or logarithmic regret, in contrast to the classical $\\sqrt{T}$-type regret in the unregularized setting. However, the statistical efficiency of online learning with respect to KL-regularized objectives remains far from completely characterized, even when specialized to multi-armed bandits (MABs). We address this problem for MABs via a sharp analysis of KL-UCB using a novel peeling argument, which yields a $\\tilde{O}(ηK\\log^2T)$ upper bound: the first high-probability…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-03-02",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

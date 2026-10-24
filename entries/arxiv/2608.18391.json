@@ -1,0 +1,21 @@
+{
+  "key": "2608.18391",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.18391",
+  "title": "Quickest Change Detection in Parametric Models With 1-Bit Measurements",
+  "authors": [
+    "Liyan Xie",
+    "Martina Cardone"
+  ],
+  "summary": "We consider the quickest change detection from 1-bit quantized observations, where the post-change distribution is a parametric model with unknown parameters and the quantization thresholds are jointly chosen with the detection statistic. We propose an Adaptive-Quantization-Threshold CUSUM (AQuTeCUSUM) algorithm, which estimates the post-change parameter online and adaptively selects the quantization threshold to maximize the induced Kullback-Leibler divergence. Under suitable regularity conditions, we characterize the average run length and worst-case average detection delay of the…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "math.ST"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

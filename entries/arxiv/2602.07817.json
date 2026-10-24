@@ -1,0 +1,25 @@
+{
+  "key": "2602.07817",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.07817",
+  "title": "Field conserving adaptive mesh refinement (AMR) scheme on massively parallel adaptive octree meshes",
+  "authors": [
+    "Kumar Saurabh",
+    "Makrand A. Khanwale",
+    "Masado Ishii",
+    "Hari Sundar",
+    "Baskar Ganapathysubramanian"
+  ],
+  "summary": "Adaptive mesh refinement (AMR) is widely used to efficiently resolve localized features in time-dependent partial differential equations (PDEs) by selectively refining and coarsening the mesh. However, in long-horizon simulations, repeated intergrid interpolations can introduce systematic drift in conserved quantities, especially for variational discretizations with continuous basis functions. While interpolation from parent-to-child during refinement in continuous Galerkin (CG) discretizations is naturally conservative, the standard injection-based child-to-parent coarsening interpolation…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math-ph",
+    "physics.comp-ph"
+  ],
+  "published": "2026-02-08",
+  "updated": "2026-02-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

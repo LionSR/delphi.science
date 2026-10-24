@@ -1,0 +1,21 @@
+{
+  "key": "2605.20711",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.20711",
+  "title": "Augmented Lagrangian methods for convex optimization with priority constraints via an infeasibility control framework",
+  "authors": [
+    "Yuya Yamakawa",
+    "Shota Yamanaka",
+    "Nobuo Yamashita"
+  ],
+  "summary": "We consider convex optimization problems with prioritized equality constraints, which may be infeasible. In many applications, such as network optimization and image reconstruction, it is often desirable to compute solutions that satisfy higher-priority constraints as much as possible even when no feasible solution exists. To address this issue, we introduce a new solution framework based on the notion of a hierarchically optimal shift, which captures the hierarchy among constraints by sequentially minimizing constraint violations according to their priorities. Based on this concept, we…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-20",
+  "updated": "2026-05-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

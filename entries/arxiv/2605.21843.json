@@ -1,0 +1,20 @@
+{
+  "key": "2605.21843",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.21843",
+  "title": "Spectral analysis of the logit mapping and implications for stochastic user equilibrium algorithms",
+  "authors": [
+    "Debojjal Bagchi",
+    "Stephen D. Boyles"
+  ],
+  "summary": "We analyze the Jacobian of the logit mapping for stochastic user equilibrium (SUE) and use it to develop two improved algorithms for path-based SUE. We show that the Jacobian decomposes into two matrices: one that annihilates differences of feasible path flow vectors, and another whose eigenvalues are all non-positive reals, provided link costs are monotone non-decreasing and separable. Using these properties, we first show that the method of successive averages (MSA) with a small constant step-size $s$ converges linearly at a rate $1-s$, with the largest admissible step-size depending on…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-21",
+  "updated": "2026-05-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

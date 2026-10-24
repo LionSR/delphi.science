@@ -1,0 +1,21 @@
+{
+  "key": "2609.34288",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.34288",
+  "title": "Linesearch-Free Nonlinearly Preconditioned GD with Semiautomatic Geometry Design",
+  "authors": [
+    "Daiki Iwade",
+    "Shota Takahashi",
+    "Akiko Takeda"
+  ],
+  "summary": "Nonlinear preconditioning makes it possible to adapt gradient updates to the growth of the objective's curvature, but combining its design with suitable stepsize selection is challenging. We propose adaptive dual preconditioned gradient descent (adaptive DPGD), which combines curvature-based preconditioner design with a linesearch-free stepsize rule based on local information. For convex objectives, we establish linear convergence under local strong convexity of the objective. By adapting the stepsize rule, we extend the method to weakly convex objectives and establish asymptotic…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

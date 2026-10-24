@@ -1,0 +1,21 @@
+{
+  "key": "2603.14040",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.14040",
+  "title": "Pyroclast: A Modular High-Performance Python Solver for Geodynamics",
+  "authors": [
+    "Marcel Ferrari"
+  ],
+  "summary": "This monograph presents the design, implementation, and evaluation of Pyroclast, a modular high-performance Python framework for large-scale geodynamic simulations. Pyroclast addresses limitations of legacy geodynamics solvers, often implemented in monolithic Fortran, C++, or C codebases with limited GPU support and extensibility, by combining modern numerical methods, hardware-accelerated execution, and a flexible object-oriented architecture. Designed for distributed and GPU-accelerated environments, Pyroclast provides an accessible and efficient platform for simulating mantle convection…",
+  "domain": "cs.MS",
+  "tags": [
+    "cs.MS",
+    "math.NA",
+    "physics.geo-ph"
+  ],
+  "published": "2026-03-14",
+  "updated": "2026-03-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

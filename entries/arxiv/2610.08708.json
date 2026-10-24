@@ -1,0 +1,21 @@
+{
+  "key": "2610.08708",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08708",
+  "title": "Optimal bound for the polynomial Littlewood-Offord problem",
+  "authors": [
+    "Alexandr Grebennikov"
+  ],
+  "summary": "We present an exposition of an argument, discovered by GPT-6 Pro, that gives an optimal bound for the polynomial Littlewood-Offord problem. Namely, let $F$ be a degree-$d$ multilinear polynomial that contains $r$ degree-$d$ monomials involving disjoint sets of variables. Then, for i.i.d. Rademacher random variables $ξ_1, \\ldots, ξ_n$, we have $\\mathbb{P}[F(ξ_1, \\ldots, ξ_n) = 0] = O_d(r^{-1/2})$. This improves upon the previous bound of $(\\log r)^{O_d(1)} r^{-1/2}$ due to Meka, O. Nguyen, and Vu, and resolves a conjecture attributed to H. Nguyen and Vu. The key part of the proof is an…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.CC",
+    "math.PR"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

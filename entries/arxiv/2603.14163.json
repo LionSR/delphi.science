@@ -1,0 +1,21 @@
+{
+  "key": "2603.14163",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.14163",
+  "title": "Tail Bounds for Queues with Abandonment: Constant, Moderate, Large Deviations, and Efficient Concentration",
+  "authors": [
+    "Zedong Wang",
+    "Siva Theja Maguluri"
+  ],
+  "summary": "We study a heavily overloaded single-server queue with abandonment and derive bounds on stationary tail probabilities of the queue length. As the abandonment rate $γ\\downarrow 0$, the centered-scaled queue length $\\tilde{q}$ is known to converge in distribution to a Gaussian. However, such asymptotic limits do not quantify the pre-limit tail $\\mathbb{P}(\\tilde{q}>a)$ for fixed $γ>0$. Our goal is to obtain pre-limit bounds that are \\emph{efficient} across different deviation regimes. For constant deviations, efficiency means Gaussian-type decay in $a$ together with a pre-limit error that…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.PF"
+  ],
+  "published": "2026-03-15",
+  "updated": "2026-03-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

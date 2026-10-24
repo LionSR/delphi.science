@@ -1,0 +1,23 @@
+{
+  "key": "2603.19808",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.19808",
+  "title": "Two-Time-Scale Learning Dynamics: A Population View of Neural Network Training",
+  "authors": [
+    "Giacomo Borghi",
+    "Hyesung Im",
+    "Lorenzo Pareschi"
+  ],
+  "summary": "Population-based learning paradigms, including evolutionary strategies, Population-Based Training (PBT), and recent model-merging methods, combine fast within-model optimisation with slower population-level adaptation. Despite their empirical success, a general mathematical description of the resulting collective training dynamics remains incomplete. We introduce a theoretical framework for neural network training based on two-time-scale population dynamics. We model a population of neural networks as an interacting agent system in which network parameters evolve through fast noisy gradient…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.AP",
+    "stat.ML"
+  ],
+  "published": "2026-03-20",
+  "updated": "2026-03-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

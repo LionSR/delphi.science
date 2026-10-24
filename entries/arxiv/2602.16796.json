@@ -1,0 +1,25 @@
+{
+  "key": "2602.16796",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.16796",
+  "title": "Efficient Tail-Aware Generative Optimization via Flow Model Fine-Tuning",
+  "authors": [
+    "Zifan Wang",
+    "Riccardo De Santi",
+    "Xiaoyu Mo",
+    "Michael M. Zavlanos",
+    "Andreas Krause",
+    "Karl H. Johansson"
+  ],
+  "summary": "Fine-tuning pre-trained diffusion and flow models to optimize downstream utilities is central to real-world deployment. Existing entropy-regularized methods primarily maximize expected reward, providing no mechanism to shape tail behavior. However, tail control is often essential: the lower tail determines reliability by limiting low-reward failures, while the upper tail enables discovery by prioritizing rare, high-reward outcomes. In this work, we present Tail-aware Flow Fine-Tuning (TFFT), a principled and efficient distributional fine-tuning algorithm based on the Conditional…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-02-18",
+  "updated": "2026-02-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

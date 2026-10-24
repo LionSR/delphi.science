@@ -1,0 +1,20 @@
+{
+  "key": "2605.02023",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.02023",
+  "title": "A revision of Litvak's conjecture on Gaussian minima and a volumetric zone conjecture",
+  "authors": [
+    "Dmitriy Kunisky"
+  ],
+  "summary": "Litvak (2018) conjectured that, for any $p > 0$, the quantity $\\mathbb{E}[\\min_{i = 1}^n |g_i|^p]$ where $g \\sim \\mathcal{N}(0, Σ)$ is a centered Gaussian random vector is minimized among $n \\times n$ correlation matrices $Σ$ by the Gram matrix of the regular simplex in $\\mathbb{R}^{n - 1}$. We disprove this conjecture: the matrix with entries $Σ^{\\mathrm{cos}}_{ij}=\\cos(π(i - j) / n)$ already achieves a smaller moment for $p = 2$ and $n = 4$. We propose that $Σ^{\\mathrm{cos}}$ is in fact the correct minimizer of these moments for all $p > 0$ and $n \\geq 1$. Towards proving this, we…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.MG"
+  ],
+  "published": "2026-05-03",
+  "updated": "2026-05-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

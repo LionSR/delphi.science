@@ -1,0 +1,21 @@
+{
+  "key": "2603.03127",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.03127",
+  "title": "Deep Q-Learning-Based Gain Scheduling for Nonlinear Quadcopter Dynamics",
+  "authors": [
+    "Hossein Rastgoftar",
+    "Muhammad J. H. Zahed"
+  ],
+  "summary": "This paper presents a deep Q-network (DQN)-based gain-scheduling framework for safety-critical quadcopter trajectory tracking. Instead of directly learning control inputs, the proposed approach selects from a finite set of pre-certified stabilizing gain vectors, enabling reinforcement learning to operate within a structured and stability-preserving control architecture. By exploiting the isotropic structure of the translational dynamics, feedback gains are shared across spatial axes to reduce dimensionality while preserving performance. The learned policy adapts feedback aggressiveness in…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.DS"
+  ],
+  "published": "2026-03-03",
+  "updated": "2026-03-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

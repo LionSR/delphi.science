@@ -1,0 +1,19 @@
+{
+  "key": "2606.18118",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.18118",
+  "title": "Programming with Chebfun. Case study: Richards equation",
+  "authors": [
+    "Nicolae Suciu"
+  ],
+  "summary": "The Chebfun software system is a Matlab extension based on representations of (piece-wise) smooth one-variable functions by expansions in Chebyshev polynomials. One of Chebfun's attractive features is the ability to provide solutions to nonlinear boundary value problems (BVP) with accuracy close to the machine precision. This is done by the chebop class which provides automatic solutions by performing linearizations of the nonlinear BVP with a Newton method in function spaces and automatic differentiation. A drawback of chebop automatic approach is the possible lack of convergence of the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-08-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

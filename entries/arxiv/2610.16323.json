@@ -1,0 +1,20 @@
+{
+  "key": "2610.16323",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16323",
+  "title": "A Lean formalisation of the disproof of Ramaekers's conjecture",
+  "authors": [
+    "Jeremy Tan"
+  ],
+  "summary": "We describe Redhill, a Lean formalisation of the major results in Hölzl, Kleine and Stephan's \"Improved Lower Bounds for Strong $n$-Conjectures\" (arXiv:2409.13439). Design decisions regarding types and data structures are justified as enabling canonical versions of the paper's claims, and from there the most direct proofs of said claims. The formalisation process also uncovered many errors, omissions and optimisation opportunities in the informal proof, all of which are addressed in the final library. Although Redhill is meant to stand alone, a few lemmas were upstreamed to the primary Lean…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "cs.LO"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2602.09959",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.09959",
+  "title": "Statistical-Computational Trade-offs in Learning Multi-Index Models via Harmonic Analysis",
+  "authors": [
+    "Hugo Latourelle-Vigeant",
+    "Theodor Misiakiewicz"
+  ],
+  "summary": "We study the problem of learning multi-index models (MIMs), where the label depends on the input $\\boldsymbol{x} \\in \\mathbb{R}^d$ only through an unknown $\\mathsf{s}$-dimensional projection $\\boldsymbol{W}_*^\\mathsf{T} \\boldsymbol{x} \\in \\mathbb{R}^\\mathsf{s}$. Exploiting the equivariance of this problem under the orthogonal group $\\mathcal{O}_d$, we obtain a sharp harmonic-analytic characterization of the learning complexity for MIMs with spherically symmetric inputs -- which refines and generalizes previous Gaussian-specific analyses. Specifically, we derive statistical and computational…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-02-10",
+  "updated": "2026-02-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

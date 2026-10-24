@@ -1,0 +1,23 @@
+{
+  "key": "2603.15816",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.15816",
+  "title": "Efficient and Accurate Surrogate Modeling of Turbulent Flows via Space-Dependent Aggregation and Reduced Order Models",
+  "authors": [
+    "Piero Zappi",
+    "Anna Ivagnes",
+    "Niccolò Tonicello",
+    "Gianluigi Rozza"
+  ],
+  "summary": "Reynolds-Averaged Navier-Stokes (RANS) models are widely used for turbulent flow simulations due to their computational efficiency, but their accuracy strongly depends on the selected turbulence closure and may vary across the flow domain. Space-dependent model aggregation has been shown to improve RANS predictions by combining multiple turbulence models, although at the cost of repeated high-fidelity simulations. The first novelty of this work is a unified framework that combines different turbulence models, space-dependent aggregation, and non-intrusive reduced order models to achieve both…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-03-16",
+  "updated": "2026-03-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

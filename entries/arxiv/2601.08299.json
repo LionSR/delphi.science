@@ -1,0 +1,22 @@
+{
+  "key": "2601.08299",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.08299",
+  "title": "A multi-mesh adaptive finite element method for solving the Gross-Pitaevskii equation",
+  "authors": [
+    "Mingzhe Li",
+    "Yang Kuang",
+    "Zhicheng Hu"
+  ],
+  "summary": "It is found that the wave functions of the Gross-Pitaevskii equation (GPE) often vary significantly in different spatial regions, with some components exhibiting sharp variations while others remain smooth. Solving the GPE on a single mesh, even with adaptive refinement, can lead to excessive computational costs due to the need to accommodate the most oscillatory solution. To address this issue, we present a multi-mesh adaptive finite element method for solving the GPE. To this end, we first convert it into a time-dependent equation through the imaginary time propagation method. Then the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math-ph"
+  ],
+  "published": "2026-01-13",
+  "updated": "2026-01-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

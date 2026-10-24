@@ -1,0 +1,21 @@
+{
+  "key": "2601.15531",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.15531",
+  "title": "Variable Stepsize Distributed Forward-Backward Splitting Methods as Relocated Fixed-Point Iterations",
+  "authors": [
+    "Felipe Atenas",
+    "Minh N. Dao",
+    "Matthew K. Tam"
+  ],
+  "summary": "We present a family of distributed forward-backward methods with variable stepsizes to find a solution of structured monotone inclusion problems. The framework is constructed by means of relocated fixed-point iterations, extending the approach introduced in [SIAM J. Optim. 2026; 36(3):1297-1325] to conically averaged operators, thus including iteration operators for methods of forward-backward type devised by graphs. The family of methods we construct preserve the per-iteration computational cost and the convergence properties of their constant stepsize counterparts. Specifically, we show…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-21",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

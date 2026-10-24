@@ -1,0 +1,19 @@
+{
+  "key": "2607.23674",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.23674",
+  "title": "Projected-Gradient Analysis for Open-Domain Convex Optimization under Boundary Blow-Up:Application to Controllability Scoring",
+  "authors": [
+    "Kazuhiro Sato"
+  ],
+  "summary": "We study convex optimization over a compact convex set when the objective is smooth and convex only on an open domain. Under a boundary-blow-up condition, every feasible initialization yields a compact invariant sublevel set separated from the complement of the objective domain, and an optimal solution exists. For a domain-aware Armijo projected-gradient method, a safe-neighborhood analysis establishes well-defined objective evaluations, finite backtracking, sufficient decrease, and a run-specific but iteration-independent positive lower bound on the accepted step sizes. These properties…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-26",
+  "updated": "2026-07-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

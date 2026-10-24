@@ -1,0 +1,21 @@
+{
+  "key": "2606.02064",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.02064",
+  "title": "A first-optimize-then-reduce framework for optimal control with the shifted proper orthogonal decomposition",
+  "authors": [
+    "Tobias Breiten",
+    "Shubhaditya Burela",
+    "Philipp Schulze"
+  ],
+  "summary": "Overcoming the Kolmogorov barrier for constructing efficient reduced-order models (ROMs) for transport-dominated problems remains a challenge. This has impeded their use as computationally cheap surrogates for partial differential equations (PDEs) associated with optimal control problems. Since such problems require multiple computations of the full PDE, employing their reduced-order surrogates instead could speed up the overall optimal control problem. Motivated by this idea, in this paper we explore the use of a nonlinear model-order reduction technique, namely, the shifted proper…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

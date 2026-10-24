@@ -1,0 +1,25 @@
+{
+  "key": "2605.09991",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09991",
+  "title": "Optimizer-Induced Mode Connectivity: From AdamW to Muon",
+  "authors": [
+    "Fangzhao Zhang",
+    "Sungyoon Kim",
+    "Erica Zhang",
+    "Yiqi Jiang",
+    "Mert Pilanci"
+  ],
+  "summary": "Mode connectivity has been widely studied, yet the role of the optimizer remains underexplored. We revisit it through optimizer-induced implicit regularization, asking how connectivity behaves when restricted to solutions constrained by a given optimizer. For two-layer ReLU networks, we show that solutions from a single optimizer -- AdamW, Muon, or others in the Lion-$\\mathcal{K}$ family -- form a connected set at sufficiently large width, a result not implied by prior work. We then characterize how optimizer-induced regions interact: at large width two different regions can be disjoint or…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

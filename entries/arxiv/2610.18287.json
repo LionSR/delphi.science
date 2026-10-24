@@ -1,0 +1,21 @@
+{
+  "key": "2610.18287",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.18287",
+  "title": "Finite-on-Top-of-Temporal CSPs in Fixed-Point Logic",
+  "authors": [
+    "Manuel Bodirsky",
+    "Philipp A. Grzywaczyk"
+  ],
+  "summary": "We study definability in fixed-point logic with counting (FPC) for a class of constraint satisfaction problems (CSPs) that simultaneously generalises finite-domain CSPs and temporal CSPs. The templates for the CSPs are first-order expansions of the structure $([k] \\times {\\mathbb Q};<_1,\\dots,<_k,\\sim)$ where $<_i \\, := \\{((i,x),(i,x')) \\mid x<x'\\}$ and $\\sim \\, := \\{((i,x),(i,x')) \\mid i \\in [k], x,x' \\in {\\mathbb Q}\\}$, i.e., $k$ copies of $({\\mathbb Q};<)$. Such a CSP is definable in FPC precisely when the template pp-constructs neither the ternary temporal relation $X$, which holds on…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "math.LO"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

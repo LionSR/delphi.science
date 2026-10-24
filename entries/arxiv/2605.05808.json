@@ -1,0 +1,22 @@
+{
+  "key": "2605.05808",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05808",
+  "title": "Ratio-based Loss Functions",
+  "authors": [
+    "Lena Helgerth",
+    "Andreas Christmann"
+  ],
+  "summary": "Algorithms in machine learning and AI do critically depend on at least three key components: (i) the risk function, which is the expectation of the loss function, (ii) the function space, which is often called the hypothesis space, and (iii) the set of probability measures, which are allowed for the specified algorithm. This paper gives a survey of a certain class of loss functions, which we call ratio-based. In supervised learning, margin-based loss functions for classification tasks depending on the product of the output values $y_i$ and the predictions $f(x_i)$ as well as distance-based…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2601.07628",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.07628",
+  "title": "D-PDLP: Scaling PDLP to Distributed Multi-GPU Systems",
+  "authors": [
+    "Hongpei Li",
+    "Yicheng Huang",
+    "Huikang Liu",
+    "Dongdong Ge",
+    "Yinyu Ye"
+  ],
+  "summary": "We present a distributed framework of the Primal-Dual Hybrid Gradient (PDHG) algorithm for solving massive-scale linear programming (LP) problems. Although PDHG-based solvers demonstrate strong performance on single-node GPU architectures, their applicability to industrial-scale instances is often limited by single-GPU computational throughput. To overcome these challenges, we propose D-PDLP, the first Distributed PDLP framework, which extends PDHG to a multi-GPU setting via a practical two-dimensional grid partitioning of the constraint matrix. To improve load balance and computational…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DC"
+  ],
+  "published": "2026-01-12",
+  "updated": "2026-05-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

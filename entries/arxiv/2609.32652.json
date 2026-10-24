@@ -1,0 +1,22 @@
+{
+  "key": "2609.32652",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32652",
+  "title": "Prediction Limits and Koopman Closure of Geometry-Induced Soft State Abstractions",
+  "authors": [
+    "Mohit Kumar",
+    "Somayeh Kargaran"
+  ],
+  "summary": "Soft state representations assign states nonnegative class weights that sum to one, but agreement with reference labels does not guarantee accurate prediction of the next weight vector. We derive lower confidence bounds on the minimum population root-mean-square prediction error over linear predictors with a prescribed spectral-norm limit. The bounds compare within-class successor variation with retained within-class input variation, with an alternative based on reference-label deviation. They are estimated from independent transition pairs without fitting a prediction matrix to the…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.LG",
+    "math.DS"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

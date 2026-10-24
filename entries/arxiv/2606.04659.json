@@ -1,0 +1,20 @@
+{
+  "key": "2606.04659",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.04659",
+  "title": "Stacking and Clearing in Directed Graph Pebbling",
+  "authors": [
+    "Tamás Csernák",
+    "Lajos Soukup"
+  ],
+  "summary": "Suppose that pebbles are distributed on the vertices of a directed graph D. A directed pebbling step u -> v along an arc u -> v removes two pebbles from u and places one pebble on v. We study the stacking number stack(D), the least integer t >= 2 such that every configuration with t pebbles can be transformed by a finite sequence of pebbling steps into a configuration with all pebbles on a single vertex, and the clearing number clear(D), defined analogously by requiring a final configuration with one pebble. Our main result is the formula stack(C_n) = n(2^{n-1}-1)+1 for the directed n-cycle…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-06-03",
+  "updated": "2026-06-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

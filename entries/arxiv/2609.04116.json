@@ -1,0 +1,22 @@
+{
+  "key": "2609.04116",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.04116",
+  "title": "A Stochastic Riemannian Alternating Descent Ascent Method for Nonsmooth Composite Expectation Optimization on Riemannian Manifolds",
+  "authors": [
+    "Meng Xu",
+    "Bo Jiang",
+    "Ya-Feng Liu",
+    "Anthony Man-Cho So"
+  ],
+  "summary": "In this paper, we consider a class of Riemannian nonsmooth composite expectation optimization problems, which arises in various machine learning, signal processing, and statistics applications. Noting that these problems admit structured minimax reformulations, we propose an efficient algorithm, named stochastic Riemannian alternating descent ascent method with recursive momentum (StoRADA-RM), to tackle them. StoRADA-RM performs one or multiple Riemannian stochastic gradient descent steps and then a proximal gradient ascent step at each iteration. To compute the Riemannian stochastic…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

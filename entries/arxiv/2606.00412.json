@@ -1,0 +1,23 @@
+{
+  "key": "2606.00412",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.00412",
+  "title": "Verifying global identifiability of parametric linear ODE models is NP-hard",
+  "authors": [
+    "Alexey Ovchinnikov",
+    "Pedro Soto"
+  ],
+  "summary": "Global parameter identifiability is a property of a parametric ODE model to recover the parameter values uniquely from the input-output data. Not all parametric ODE models have this property, and checking for parameter identifiability is a prerequisite to perform numerical parameter estimation. There are many algorithms and software packages for global parameter identifiability, and frequently the runtime is large. However, the computational complexity for this problem has not been analyzed yet, though there are complexity results for local (finitely many values fit the data) parameter…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "eess.SY",
+    "math.AG",
+    "math.OC"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

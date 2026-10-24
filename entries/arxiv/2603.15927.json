@@ -1,0 +1,23 @@
+{
+  "key": "2603.15927",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.15927",
+  "title": "Discovery of interaction and diffusion kernels in particle-to-mean-field multi-agent systems",
+  "authors": [
+    "Giacomo Albi",
+    "Alessandro Alla",
+    "Elisa Calzola"
+  ],
+  "summary": "We propose a data-driven framework to learn interaction kernels in stochastic multi-agent systems. Our approach aims at identifying the functional form of nonlocal interaction and diffusion terms directly from trajectory data, without any a priori knowledge of the underlying interaction structure. Starting from a discrete stochastic binary-interaction model, we formulate the inverse problem as a sequence of sparse regression tasks in structured finite-dimensional spaces spanned by compactly supported basis functions, such as piecewise linear polynomials. In particular, we assume that…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS",
+    "math.NA"
+  ],
+  "published": "2026-03-16",
+  "updated": "2026-03-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

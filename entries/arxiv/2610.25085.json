@@ -1,0 +1,21 @@
+{
+  "key": "2610.25085",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.25085",
+  "title": "A sound pure type system with ranks as sorts and Type-in-Type",
+  "authors": [
+    "Pavel Sokolov",
+    "Alexander Kuklev"
+  ],
+  "summary": "We present a dependently typed pure type system that contains a circular axiom $s : s$ for a certain sort $s$ and is nonetheless strongly normalizing. Girard's paradox is avoided because our sorts are not closed under a $Π$-former: function types are placed in sorts according to their rank. Turns out that this system has a unique set of characteristics: it has similar normalization behaviour as STLC (so complexity of normalization is TOWER-complete) while at the same time allowing non-uniform representation of arbitrary elementary recursive functions; furthermore, it has a nontrivial…",
+  "domain": "math.LO",
+  "tags": [
+    "math.LO",
+    "cs.LO"
+  ],
+  "published": "2026-10-18",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

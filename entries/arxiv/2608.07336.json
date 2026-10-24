@@ -1,0 +1,20 @@
+{
+  "key": "2608.07336",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.07336",
+  "title": "Solving Monotone Linear-Quadratic Generalized Nash Equilibrium Problems via Quadratic Programming",
+  "authors": [
+    "Alberto Bemporad",
+    "Tatiana Tatarenko"
+  ],
+  "summary": "We consider generalized Nash equilibrium problems among $N$ players with convex quadratic costs and shared affine constraints, assuming only that the game's pseudogradient is merely monotone. We show that computing a variational generalized Nash equilibrium (v-GNE) is equivalent to solving a single convex quadratic program (QP) derived from the players' joint Karush--Kuhn--Tucker conditions. Building on this, we show that the regularization of such a QP yields an $\\varepsilon$-approximated v-GNE with suboptimality vanishing linearly in the regularization parameter. Next, we propose an…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

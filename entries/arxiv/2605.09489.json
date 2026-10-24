@@ -1,0 +1,19 @@
+{
+  "key": "2605.09489",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09489",
+  "title": "$\\mathit{SB}(3,n)$ has no Hamiltonian cycle when $n$ is even: a sign-of-permutation proof, with extension to all odd $m\\equiv 3\\pmod 4$",
+  "authors": [
+    "Shisheng Li"
+  ],
+  "summary": "We resolve exercise 7.2.2.4--224 of Knuth's Pre-Fascicle 8a (10 April 2026 draft, rated [46]): the digraph $\\mathit{SB}(3,n)$ has no Hamiltonian cycle when $n$ is even. The argument is a sign-of-permutation obstruction. Writing the successor map of a candidate Hamiltonian cycle as $f_S = A_b \\circ σ$, $\\operatorname{sgn}(A_b)=+1$ when $m$ is odd, so $\\operatorname{sgn}(f_S)=\\operatorname{sgn}(σ)$ for every choice set $S$. A short dihedral Burnside computation shows $\\operatorname{sgn}(σ)=-1$ on $Σ_3^n$ for even $n$, contradicting the sign $+1$ required of a single $3^n$-cycle. The same…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-05-10",
+  "updated": "2026-05-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

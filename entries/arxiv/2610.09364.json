@@ -1,0 +1,21 @@
+{
+  "key": "2610.09364",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.09364",
+  "title": "Nonmonotone Coderivative-Based Newton Methods for Nonsmooth Optimization with Machine Learning Applications",
+  "authors": [
+    "Sina Kazemdehbashi",
+    "Yanchao Liu",
+    "Boris S. Mordukhovich"
+  ],
+  "summary": "Newton-type algorithms are among the most effective methods for solving optimization problems because of their rapid local convergence. However, extending these methods to nonsmooth optimization is challenging due to the difficulty of incorporating second-order information. To address this issue, we propose a coderivative-based Newton framework for solving both unconstrained and constrained nonsmooth optimization problems using tools from variational analysis and generalized differentiation. The proposed method employs generalized Hessians, defined as coderivatives of the subgradient…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

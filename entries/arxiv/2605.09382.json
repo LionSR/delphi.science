@@ -1,0 +1,26 @@
+{
+  "key": "2605.09382",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09382",
+  "title": "Learning-Augmented Scalable Linear Assignment Problem Optimization via Neural Dual Warm-Starts",
+  "authors": [
+    "Ilay Yavlovich",
+    "Jad Agbaria",
+    "Muhamed Mhamed",
+    "Nir Weinberger",
+    "Jose Yallouz"
+  ],
+  "summary": "The Linear Assignment Problem is a fundamental combinatorial optimization task where classical exact solvers ensure optimality but suffer from an $\\mathcal{O}(N^{3})$ bottleneck, while recent neural approximations struggle with scalability and exactness. We propose a learning-augmented framework that accelerates exact solvers by predicting dual variables to warm-start the search, backed by a fallback mechanism to preserve worst-case guarantees. Central to our approach is RowDualNet, a lightweight, row-independent architecture that avoids the $\\mathcal{O}(N^{2})$ memory bottleneck of graph…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.CV",
+    "cs.DS",
+    "math.OC"
+  ],
+  "published": "2026-05-10",
+  "updated": "2026-05-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

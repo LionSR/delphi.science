@@ -1,0 +1,21 @@
+{
+  "key": "2605.23290",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.23290",
+  "title": "High-order, long-time stable and parallel decoupled GBDF$k$ SAV ensemble schemes for the Navier--Stokes--Darcy flow with random hydraulic conductivity tensors",
+  "authors": [
+    "Wei-Wei Han",
+    "Fukeng Huang",
+    "Changxin Qiu"
+  ],
+  "summary": "We develop and analyze high-order ensemble schemes for the unsteady Navier--Stokes--Darcy system with uncertain initial conditions, forcing terms, hydraulic conductivity tensors, and Lions-Beavers-Joseph-Saffman interface conditions. The proposed schemes which are called GSAV-GBDF$k$-Ensemble schemes integrate a partitioned decoupling strategy, the generalized scalar auxiliary variable (GSAV) approach, and generalized BDF$k$ discretizations. This framework achieves high-order temporal accuracy and long-time stability, permits explicit treatment of the nonlinear term, and facilitates an…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-22",
+  "updated": "2026-05-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

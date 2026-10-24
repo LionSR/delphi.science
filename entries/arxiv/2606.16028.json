@@ -1,0 +1,23 @@
+{
+  "key": "2606.16028",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.16028",
+  "title": "The Information-Theoretic Benefit of Shared Representations under Orthogonality Constraints",
+  "authors": [
+    "Thomas Dittrich",
+    "Oliver Potocki",
+    "Philipp Grohs"
+  ],
+  "summary": "Modern deep learning architectures are increasingly multi-task and multi-modal, using a pretrained foundation model combined with task-specific, fine-tuned models. Empirically, exploiting similarity across different problems, instead of solving them individually, can significantly improve overall performance. While the generalization and sample complexity properties of multitask learning have been widely studied, the parametric complexity of joint approximation in comparison to separate approximation remains less well understood. The question is particularly relevant in modern deep learning,…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.IT",
+    "math.FA"
+  ],
+  "published": "2026-06-14",
+  "updated": "2026-06-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

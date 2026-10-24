@@ -1,0 +1,22 @@
+{
+  "key": "2609.16044",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.16044",
+  "title": "Linear Programming Bounds for Locally Recovery Codes II",
+  "authors": [
+    "Ming-Hsuan Kang",
+    "Maosheng Xiong"
+  ],
+  "summary": "We give a polynomial-size linear programming bound for $q$-ary all-symbol locally recoverable codes with locality parameters $(r,δ)$, without assuming linearity. The key idea is to keep, for every ordered pair of codewords and every selected recovery view, the joint Hamming weight on the helper set, the recovered coordinate, and the rest of the code -- rather than collapsing this triple into a single distance, as earlier formulations do. Averaging this three-block distribution over recovery views of the same length yields exact identities linking it to the global distance distribution,…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-09-12",
+  "updated": "2026-09-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

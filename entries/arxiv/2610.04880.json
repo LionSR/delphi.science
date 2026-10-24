@@ -1,0 +1,21 @@
+{
+  "key": "2610.04880",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04880",
+  "title": "A general synthetic iterative scheme with high-order spatial discretization for rarefied gas mixture flows",
+  "authors": [
+    "Jianan Zeng",
+    "Wei Su"
+  ],
+  "summary": "We develop a high-order discontinuous Galerkin formulation of the general synthetic iterative scheme (GSIS) for steady rarefied gas mixture flows. The resulting GSIS-DG discretizes the mesoscopic kinetic equations for monatomic gas mixtures and the macroscopic synthetic equations with the same polynomial degree and solves them alternately. The kinetic solution supplies nonequilibrium corrections to the stress and heat flux, while the synthetic equations accelerate the convergence toward the steady state. Asymptotic analysis shows that GSIS-DG recovers the continuum limit without requiring…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

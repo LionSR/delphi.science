@@ -1,0 +1,21 @@
+{
+  "key": "2603.08992",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.08992",
+  "title": "Four-field mixed finite elements for incompressible nonlinear elasticity",
+  "authors": [
+    "Santiago Badia",
+    "Wei Li",
+    "Ricardo Ruiz-Baier"
+  ],
+  "summary": "We present a stable finite element method for incompressible nonlinear elasticity based on a four-field mixed formulation involving the displacement, displacement gradient, first Piola--Kirchhoff stress and pressure. Unlike existing four-field mixed formulations, such as the compatible strain mixed finite element method (CSFEM), the proposed approach employs a discontinuous displacement field and requires no stabilisation in either 2D or 3D. A Newton--Raphson linearisation is derived and finite element pairs satisfying the relevant inf-sup conditions are identified. To recover accurate…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-09",
+  "updated": "2026-03-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

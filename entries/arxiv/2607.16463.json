@@ -1,0 +1,20 @@
+{
+  "key": "2607.16463",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.16463",
+  "title": "Linear extremal bounds for a family of forbidden $0$-$1$ matrices",
+  "authors": [
+    "Jesse Geneson"
+  ],
+  "summary": "Fulek defined the $0$-$1$ matrix \\[ L_3=\\begin{pmatrix} 1&0&0&1&0\\\\ 0&0&0&0&1\\\\ 0&1&1&0&0 \\end{pmatrix} \\] and asked whether $\\text{ex}(n,L_3) = O(n)$. We prove that every $r\\times s$ $0$-$1$ matrix avoiding $L_3$ has at most $27r+2s$ $1$ entries. Fulek's general lower bound construction has $6n-8$ $1$ entries, so \\[ 6n-8\\leq \\text{ex}(n,L_3)\\leq29n \\] for $n\\geq5$. The same argument applies to an infinite family. If $Q_{a,b,k,\\ell}$ is the light three-row matrix with column word $1^a3^k1^b2^\\ell$, where $a,b,\\ell\\geq1$ and $k\\geq2$, then \\[ \\text{ex}(r,s,Q_{a,b,k,\\ell})…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM"
+  ],
+  "published": "2026-07-17",
+  "updated": "2026-07-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

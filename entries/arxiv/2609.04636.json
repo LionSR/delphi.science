@@ -1,0 +1,21 @@
+{
+  "key": "2609.04636",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.04636",
+  "title": "Blind Random Search with Noisy Loss Measurements: Averaging, Thresholding, and Almost Sure Convergence",
+  "authors": [
+    "Zixian Zhou",
+    "Xintong Jiang"
+  ],
+  "summary": "Blind random search repeatedly draws a candidate point and replaces the current estimate whenever the candidate has a lower loss. In the absence of noise, the true loss is observed directly. It decreases strictly at every accepted update and is monotone nonincreasing over all iterations. Measurement noise can make a worse candidate appear better and thereby break this monotonicity. To recover almost sure convergence under noise, we incorporate averaging and thresholding into the original decision criterion. These two classical tools are coupled. As the sample sizes grow, the positive…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.IT"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

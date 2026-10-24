@@ -1,0 +1,21 @@
+{
+  "key": "2607.22620",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.22620",
+  "title": "A Resolution of the SS--RS--GD Inequalities",
+  "authors": [
+    "Binghui Peng"
+  ],
+  "summary": "Yun, Sra, and Jadbabaie (COLT 2021, open question) conjectured the SS--RS--GD inequalities: for well-conditioned symmetric matrices $A_1,\\dots,A_n$, the operators $W_{ss}$, $W_{rs}$, and $W_{gd}$ that encode the expected iterate of single-shuffle SGD, random-reshuffle SGD, and gradient descent on a quadratic finite sum should satisfy \\[ \\|W_{ss}\\|\\le \\| W_{rs}\\|\\le \\|W_{gd}\\|. \\] The conjecture is resolved, $\\bullet$ SS-RS inequality fails. Already for $n=3$, $K=2$, and $d=4$, we exhibit explicit PSD matrices whose condition number is arbitrarily close to $1$, yet $\\|W_{ss}\\|>\\|W_{rs}\\|$.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

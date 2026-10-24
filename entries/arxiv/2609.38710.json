@@ -1,0 +1,24 @@
+{
+  "key": "2609.38710",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38710",
+  "title": "High-accuracy simulation of Picard HMC, part I: Gaussian cloud correction",
+  "authors": [
+    "Fan Chen",
+    "Sinho Chewi",
+    "Jianfeng Lu",
+    "Matthew S. Zhang"
+  ],
+  "summary": "We study the problem of sampling from a continuous density $π\\propto \\exp(-V)$ on $\\mathbb R^d$, where $V\\in C^2(\\mathbb R^d)$ has a $β$-Lipschitz gradient and $π$ satisfies a logarithmic Sobolev inequality with constant $α^{-1}$, and write $κ= β/α$. We introduce the Gaussian cloud sampler, which achieves total variation accuracy $\\varepsilon$ using $\\widetilde O(κd^{1/5}\\,\\text{polylog}(1/\\varepsilon))$ gradient queries in expectation. The algorithm uses first-order rejection sampling (FORS) to correct the law of smoothed Picard HMC trajectories. To do so, we represent the iterates of the…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.DS",
+    "math.NA"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

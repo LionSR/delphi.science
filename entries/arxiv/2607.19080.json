@@ -1,0 +1,23 @@
+{
+  "key": "2607.19080",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.19080",
+  "title": "The Influence Function of Transport-based Quantiles",
+  "authors": [
+    "Alberto González-Sanz",
+    "Shunan Sheng",
+    "Bohan Wu",
+    "Marco Avella Medina"
+  ],
+  "summary": "Transport-based quantiles extend univariate quantiles to multivariate distributions via optimal transport. We study the influence function of the transport quantile map $\\mathbf{Q}_P$, defined as the optimal transport map pushing a fixed reference measure $μ$ forward to a target distribution $P$. For the Huber contamination $P_t=(1-t)P+tδ_{x_0}$, we prove that the first-order limit $\\mathbf{I}(x_0;\\mathbf{Q}_P(z)) := \\lim_{t\\downarrow 0} [\\mathbf{Q}_{(1-t)P+tδ_{x_0}}(z)-\\mathbf{Q}_P(z)]/t$ exists whenever $x_0\\ne \\mathbf{Q}_P(z)$ and characterize it uniquely. Specifically,…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-07-21",
+  "updated": "2026-07-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

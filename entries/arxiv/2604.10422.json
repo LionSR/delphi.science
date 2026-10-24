@@ -1,0 +1,21 @@
+{
+  "key": "2604.10422",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.10422",
+  "title": "Distributed Optimization with Coupled Constraints over Time-Varying Digraph",
+  "authors": [
+    "Yeong-Ung Kim",
+    "Hyo-Sung Ahn"
+  ],
+  "summary": "In this paper, we develop a distributed algorithm for solving a class of distributed convex optimization problems where the local objective functions can be a general nonsmooth function, and all equalities and inequalities are network-wide coupled. This type of problem arises from many areas, such as economic dispatch, network utility maximization, and demand response. Integrating the decomposition by right hand side allocation and primal-dual methods, the proposed algorithm is able to handle the distributed optimization over networks with time-varying directed graph in fully distributed…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-04-12",
+  "updated": "2026-04-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

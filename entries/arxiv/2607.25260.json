@@ -1,0 +1,22 @@
+{
+  "key": "2607.25260",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.25260",
+  "title": "Microsecond-Class Powered-Descent Optimization via Exact Condensation and Strong Convex Regularization",
+  "authors": [
+    "Wenbo Li",
+    "Ziqi Xu",
+    "Dai Shen",
+    "Shengping Gong"
+  ],
+  "summary": "Fuel-dominant powered descent can be written as a convex program, but the usual full-state epigraph formulation still carries many state variables, fuel epigraph variables, and dynamics equalities. In addition, the pure-fuel objective provides no strong-convexity curvature. This paper combines three structural reductions. First, a dimensionally consistent low-weight energy term makes the control solution unique. Second, a terminal-state sensitivity recursion eliminates every intermediate state exactly; invertible row normalization turns the 30-node baseline with 300 primal variables and 174…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-28",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

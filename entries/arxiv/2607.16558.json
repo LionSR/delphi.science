@@ -1,0 +1,22 @@
+{
+  "key": "2607.16558",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.16558",
+  "title": "Near-Optimal Lower Bounds for Randomized Algorithms in Exact Value Zeroth-Order Convex Optimization",
+  "authors": [
+    "Haihan Zhang",
+    "Chenheng Zhang",
+    "Zhiquan Qi",
+    "Zhouchen Lin"
+  ],
+  "summary": "Whether exact scalar feedback intrinsically incurs the additional dimension $d$ paid by known zeroth-order methods remains open even for Lipschitz convex optimization. For a universal Lipschitz scale, the value only bound $O(d^2\\log(d+1)\\log(1/ε))$ and two-point bound $O(dε^{-2})$ yield the upper bound $\\widetilde O\\left(d\\min\\{d,ε^{-2}\\}\\right)$. By contrast, prior lower bounds for arbitrary randomized algorithms give only $Ω(\\min\\{d,ε^{-2}\\})$, leaving a factor $d$ unexplained. We close this gap, up to logarithmic factors, for arbitrary adaptive randomized algorithms minimizing a convex…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-18",
+  "updated": "2026-07-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

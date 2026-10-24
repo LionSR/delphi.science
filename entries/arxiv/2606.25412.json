@@ -1,0 +1,22 @@
+{
+  "key": "2606.25412",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.25412",
+  "title": "Formalization of Line Search Methods by Lean",
+  "authors": [
+    "Yiyang Zhang",
+    "Kenneth W. Shum"
+  ],
+  "summary": "This paper presents a formalization of line search methods in the Lean 4 theorem prover. Our goal is to advance machine verification of nonlinear optimization theory by translating standard textbook definitions and convergence arguments into rigorous Lean code. We formalize fundamental notions related to gradient descent and descent directions, adaptive step-size selection via backtracking line search, and several classical line search criteria, including the Armijo, Goldstein, and Wolfe conditions, as well as nonmonotone variants. We further formalize a key convergence result, namely the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.MS",
+    "math.NA"
+  ],
+  "published": "2026-06-24",
+  "updated": "2026-06-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

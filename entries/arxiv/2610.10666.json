@@ -1,0 +1,24 @@
+{
+  "key": "2610.10666",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.10666",
+  "title": "Explaining the Saliency Map Sparsity of Adversarially-Trained Neural Networks",
+  "authors": [
+    "Yannick Lunk",
+    "Atell Yehor Krasnopolsky",
+    "Damien Garreau",
+    "Leon Bungert"
+  ],
+  "summary": "Understanding why deep neural networks make a given prediction is of great importance for their safe deployment. In computer vision, saliency maps, which highlight the image region most influential for a prediction, remain a widely-used form of explanation. An empirical observation is the apparent sparsity of gradient saliency maps of adversarially-trained neural networks. In this paper, we propose a theoretical explanation of this phenomenon for two-layer ReLU networks. We build on the established equivalence of adversarial training to the minimization of the empirical risk with…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

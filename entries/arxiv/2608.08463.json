@@ -1,0 +1,25 @@
+{
+  "key": "2608.08463",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.08463",
+  "title": "Halpern Iteration Achieves $\\tilde{\\mathcal{O}}(ε^{-1/p})$ $p$th-Order Oracle Complexity for Monotone Variational Inequalities",
+  "authors": [
+    "Lesi Chen",
+    "Xinliang Zhang",
+    "Hengyu Wang",
+    "Chengchang Liu",
+    "Yongchao Chen",
+    "Jingzhao Zhang"
+  ],
+  "summary": "We study second- and higher-order methods for solving smooth monotone variational inequalities (MVI). Monteiro and Svaiter (SIAM J. Optim., 2012) showed that a second-order method, NPE, converges at the rate of $\\mathcal{O}(T^{-1.5})$. For convex-concave minimax optimization, a subset of MVI problems, Chen, Liu, Luo, and Zhang (COLT 2025) recently improved the complexity to $\\tilde{\\mathcal{O}}( T^{-1.75})$ . However, it is open whether the conjectured complexity for MVI can be improved. In this paper, by using a large-step inexact Halpern iteration, we propose a novel Halpern-NPE method…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI"
+  ],
+  "published": "2026-08-09",
+  "updated": "2026-08-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

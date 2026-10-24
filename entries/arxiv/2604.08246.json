@@ -1,0 +1,20 @@
+{
+  "key": "2604.08246",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.08246",
+  "title": "Local discontinuous Galerkin FEM for convex minimization",
+  "authors": [
+    "Carsten Carstensen",
+    "Ngoc Tien Tran"
+  ],
+  "summary": "The heart of the a priori and a posteriori error control in convex minimization problems is the sharp control of the differences of discrete and exact minimal energy. Conforming finite element discretizations for p-Laplace type minimization problems provide upper bounds of the energy difference with optimal convergence rates. Even for smooth solutions, known convergence rates for higher-order non-conforming finite element discretizations for the same problem class with $2 < p < \\infty$, however, are exclusively suboptimal. Thus the popular a posteriori error control within the two-energy…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-09",
+  "updated": "2026-04-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

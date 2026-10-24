@@ -1,0 +1,23 @@
+{
+  "key": "2607.28104",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.28104",
+  "title": "An Adaptive Finite Element Method for Marker-Driven Level-Set Transport on Hierarchical Meshes",
+  "authors": [
+    "Eugenio Aulisa",
+    "Samuele Baldini",
+    "Giacomo Barbi",
+    "Andrea Chierici",
+    "Sandro Manservisi"
+  ],
+  "summary": "This work presents a new adaptive finite-element framework for level-set transport, achieving high accuracy in kinematic interface transport problems relevant to interface-capturing methods for two-phase flows while reducing computational cost. This framework accommodates dynamic refinement and coarsening, and is compatible with standard finite-element data structures. The algorithm is applicable to both structured and unstructured discretizations in two and three dimensions. The method uses a tree-based hierarchical mesh with dynamic local refinement that tracks the evolving interface,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-30",
+  "updated": "2026-07-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

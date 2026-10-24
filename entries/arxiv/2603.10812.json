@@ -1,0 +1,21 @@
+{
+  "key": "2603.10812",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.10812",
+  "title": "Distributed Stability Certification and Control from Local Data",
+  "authors": [
+    "Surya Malladi",
+    "Nima Monshizadeh"
+  ],
+  "summary": "Most data-driven analysis and control methods rely on centralized access to system measurements. In contrast, we consider a setting in which the measurements are distributed across multiple agents and raw data are not shared. Each agent has access only to locally held samples, possibly as little as a single measurement, and agents exchange only locally computed signals. Consequently, no individual agent possesses sufficient information to identify the entire system or synthesize a controller independently. To address this limitation, we develop distributed dynamical algorithms that enable…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-03-11",
+  "updated": "2026-03-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

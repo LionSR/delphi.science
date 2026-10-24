@@ -1,0 +1,19 @@
+{
+  "key": "2609.20305",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20305",
+  "title": "On the difference between clique partition and clique covering numbers",
+  "authors": [
+    "Bo Ning"
+  ],
+  "summary": "For a graph \\(G\\), let \\(\\operatorname{cp}(G)\\) and \\(\\operatorname{cc}(G)\\) be the minimum numbers of cliques in an edge partition and a clique cover of \\(G\\), respectively. Set $σ_n = \\max_{\\lvert V(G)\\rvert=n} \\bigl(\\operatorname{cp}(G)-\\operatorname{cc}(G)\\bigr), d_n=\\left\\lfloor\\frac{n^2}{4}\\right\\rfloor-σ_n.$ In 1983, Erdős, Faudree, and Ordman asked whether \\(d_n=O(n)\\). Caccetta, Erdős, Ordman, and Pullman previously constructed graphs showing \\(d_n=O(n^{3/2})\\). We prove that $d_n=Θ(n^{4/3}),$ thereby determining the correct order of the deficit and answering their question in the…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-08-01",
+  "updated": "2026-08-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

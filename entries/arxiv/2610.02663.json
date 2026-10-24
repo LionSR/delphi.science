@@ -1,0 +1,24 @@
+{
+  "key": "2610.02663",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02663",
+  "title": "Generalization Bounds for Flow-matching Generative Models for Intrinsically Low-dimensional Data",
+  "authors": [
+    "Saptarshi Chakraborty",
+    "Quentin Berthet",
+    "Peter L. Bartlett"
+  ],
+  "summary": "Despite the remarkable empirical success of flow-matching models, their statistical generalization guarantees remain underdeveloped. Existing analyses often impose restrictive assumptions on the estimated velocity field and yield convergence rates that fail to reflect the intrinsic low-dimensional structure common in real data, such as natural images and molecular geometries. In this work, we study the statistical generalization of flow-matching models for learning an unknown distribution $P_{\\mathrm{data}}$ from finitely many samples. We derive finite-sample error bounds on the learned…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.AI",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

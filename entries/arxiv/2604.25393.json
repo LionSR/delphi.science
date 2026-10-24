@@ -1,0 +1,23 @@
+{
+  "key": "2604.25393",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.25393",
+  "title": "An uncertainty model for positive-valued parameters with application to robust optimization",
+  "authors": [
+    "Tatsuya Tanaka",
+    "Huimin Li",
+    "Shota Yamanaka",
+    "Ellen H. Fukuda",
+    "Nobuo Yamashita"
+  ],
+  "summary": "Many practical optimization problems involve uncertain parameters that are strictly positive. However, the most common uncertainty sets used in robust optimization are the box and the ellipsoidal sets, which may include non-positive values when the level of uncertainty is large. This can lead to overly conservative solutions or make the corresponding robust counterpart infeasible. To overcome this, in this paper, we propose a new uncertainty-set model that not only preserves positivity but is also computationally tractable. The proposed set uses a particular convex function that measures the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-28",
+  "updated": "2026-04-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

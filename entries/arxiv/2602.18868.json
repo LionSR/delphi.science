@@ -1,0 +1,26 @@
+{
+  "key": "2602.18868",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.18868",
+  "title": "Limits of Convergence-Rate Control for Open-Weight Safety",
+  "authors": [
+    "Domenic Rosati",
+    "Xijie Zeng",
+    "Hong Huang",
+    "Sebastian Dionicio",
+    "Subhabrata Majumdar",
+    "Frank Rudzicz",
+    "Hassan Sajjad"
+  ],
+  "summary": "Open-weight foundation models can be fine-tuned for harmful purposes after release, yet no existing training resistance methods provide theoretical guarantees. Treating these interventions as convergence-rate control problems allows us to connect optimization speed to the spectral structure of model weights. We leverage this insight to develop a novel understanding of convergence rate control through spectral reparameterization and derive an algorithm, SpecDef, that can both provably and empirically slow first- and second-order optimization in non-adversarial settings. In adversarial…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-02-21",
+  "updated": "2026-02-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

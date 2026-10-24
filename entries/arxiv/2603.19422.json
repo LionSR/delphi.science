@@ -1,0 +1,22 @@
+{
+  "key": "2603.19422",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.19422",
+  "title": "Pseudo-Labeling for Unsupervised Domain Adaptation with Kernel GLMs",
+  "authors": [
+    "Nathan Weill",
+    "Kaizheng Wang"
+  ],
+  "summary": "We propose a principled framework for unsupervised domain adaptation under covariate shift in kernel Generalized Linear Models (GLMs), encompassing kernelized linear, logistic, and Poisson regression with ridge regularization. Our goal is to minimize prediction error in the target domain by leveraging labeled source data and unlabeled target data, despite differences in covariate distributions. We partition the labeled source data into two batches: one for training a family of candidate models, and the other for building an imputation model. This imputation model generates pseudo-labels for…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-03-19",
+  "updated": "2026-03-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

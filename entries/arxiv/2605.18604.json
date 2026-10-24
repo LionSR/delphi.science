@@ -1,0 +1,23 @@
+{
+  "key": "2605.18604",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.18604",
+  "title": "Efficient Gradient Methods for Distributed Saddle Problems",
+  "authors": [
+    "Ruichen Luo",
+    "Anton Rodomanov",
+    "Sebastian U. Stich"
+  ],
+  "summary": "The distributed setting for Saddle Problems (SPs) has recently emerged as a framework for various modern applications in machine learning and multiagent systems. Despite its relevance, the theoretical foundations of this setting have not yet been thoroughly established. In this paper, we advance this research direction by formalizing the distributed setup for SPs and providing rigorous definitions of communication and computational costs. Our main result is a novel decoupled method that achieves optimal communication cost within the zero-respecting framework. Our method is based on a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DC",
+    "cs.MA"
+  ],
+  "published": "2026-05-18",
+  "updated": "2026-05-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

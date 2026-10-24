@@ -1,0 +1,23 @@
+{
+  "key": "2602.17494",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.17494",
+  "title": "Functional Analysis and Parallel Domain Decomposition for the TV-Stokes Model",
+  "authors": [
+    "Andreas Langer",
+    "Marc Runft",
+    "Talal Rahman",
+    "Xue-Cheng Tai",
+    "Bin Wu"
+  ],
+  "summary": "The TV-Stokes model is a two-step variational method for image denoising that combines the estimation of a divergence-free tangent field with total variation regularization in the first step and then uses that to reconstruct the image in the second step. Although effective in practice, its mathematical structure and potential for parallelization have remained unexplored. In this work, we establish a rigorous functional-analytic foundation for the TV-Stokes model. We formulate both steps in appropriate infinite-dimensional function spaces, derive their dual formulations, and analyze the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-19",
+  "updated": "2026-02-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

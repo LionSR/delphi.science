@@ -1,0 +1,21 @@
+{
+  "key": "2603.07882",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.07882",
+  "title": "LegONet: Plug-and-Play Structure-Preserving Neural Operator Blocks for Compositional PDE Learning",
+  "authors": [
+    "Jiahao Zhang",
+    "Yueqi Wang",
+    "Guang Lin"
+  ],
+  "summary": "Learned PDE solvers are often trained as monolithic surrogates for a specific equation, boundary condition and discretization. This makes them difficult to reuse when mechanisms change and it can limit stability under long-horizon rollout. We introduce Lego-like Operator Network (LegONet), a compositional framework that builds PDE solvers from plug-and-play, structure-preserving operator blocks defined on shared boundary-adapted spectral representations. LegONet separates boundary handling from mechanism learning, satisfying boundary conditions by construction. It also separates mechanism…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-09",
+  "updated": "2026-03-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

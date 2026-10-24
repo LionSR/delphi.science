@@ -1,0 +1,21 @@
+{
+  "key": "2606.15569",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.15569",
+  "title": "A Decision-Theoretic View of Test-Time Training: When, How Far, and Which Directions to Adapt",
+  "authors": [
+    "Tomoya Wakayama"
+  ],
+  "summary": "Test-time training (TTT) adapts a pretrained model to each prompt via parameter updates, improving accuracy under pretraining-to-test distribution shifts. Yet, its performance often suffers from instability and sensitivity to hyperparameters such as update steps and subspace. We explain this behavior through a decision-theoretic lens, treating TTT as implicit Bayesian inference in the kernel regime. Under a Gaussian process benchmark, we show that TTT reduces prediction error when updates are spectrally matched to the prompt's signal-to-noise ratio and aligned with query-relevant…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-06-14",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

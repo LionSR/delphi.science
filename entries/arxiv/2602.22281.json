@@ -1,0 +1,22 @@
+{
+  "key": "2602.22281",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.22281",
+  "title": "A kernel for the maximum agreement forest problem on multiple binary phylogenetic trees",
+  "authors": [
+    "Steven Kelk",
+    "Ruben Meuwese",
+    "Leo van Iersel"
+  ],
+  "summary": "The maximum agreement forest (MAF) problem in phylogenetics takes as input a set t >= 2 of binary phylogenetic trees T on the same set of taxa X. It asks for a partition of X into the smallest number of blocks such that the subtrees induced by these blocks are disjoint and have common topology across all the trees in T. We produce a modified version of the well-known chain reduction rule in order to prove that after exhaustive application of reduction rules each tree has O( t * r * k ) leaves, where k is the natural parameter (the number of blocks) and r=min{max{k,3},t+1}}. We prove this…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "q-bio.PE"
+  ],
+  "published": "2026-02-25",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

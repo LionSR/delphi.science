@@ -1,0 +1,20 @@
+{
+  "key": "2608.12701",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.12701",
+  "title": "Sharp proper estimation of fixed-component Gaussian location mixtures in polynomial time",
+  "authors": [
+    "Hengzhi He",
+    "Guang Cheng"
+  ],
+  "summary": "We consider a mixture of at most $k$ unit-covariance Gaussians in $\\mathbb{R}^d$ whose means belong to a fixed-radius ball, with no separation or minimum-weight condition. Doss, Wu, Yang and Zhou (2023) proved that the minimax Hellinger risk is of order $\\sqrt{d/n}\\wedge 1$ and constructed a proper polynomial-time estimator with the slower general bound $(d/n)^{1/4}$; obtaining the sharp rate in polynomial time for fixed $k\\geq 3$ was left open. We resolve this question. The key device is a moment-fiber range finder. A second-moment subspace controls the energy missed by projection. We then…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

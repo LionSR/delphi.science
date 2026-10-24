@@ -1,0 +1,22 @@
+{
+  "key": "2608.05434",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.05434",
+  "title": "Risk-Aware Quantile Learning for Personalized Dynamic Treatment Regimes",
+  "authors": [
+    "Chunyin Lei",
+    "Annie Qu"
+  ],
+  "summary": "Sequential clinical decision-making often involves more than maximizing average efficacy. Clinicians may need to simultaneously optimize clinically relevant tails of the outcome distribution, control treatment-related risk, and choose among multiple treatment options. Existing quantile dynamic treatment regime (DTR) methods capture distributional features of treatment outcomes but remain largely restricted to efficacy-only objectives and binary treatments. To address these limitations, we propose Risk-Aware Quantile Dynamic Treatment Regimes (RQDTR), a unified framework that optimizes a…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-08-05",
+  "updated": "2026-08-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

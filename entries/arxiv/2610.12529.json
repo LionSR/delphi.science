@@ -1,0 +1,27 @@
+{
+  "key": "2610.12529",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.12529",
+  "title": "Fix What's Wrong, Keep What's Right: Hallucination Repair for LLM-Based Optimization Modeling",
+  "authors": [
+    "Jiageng Wu",
+    "Chao Shen",
+    "Zihan Guo",
+    "Junyan Shao",
+    "Zongyan Zhang",
+    "Jie Song",
+    "Zhong Li",
+    "Mingyang Sun"
+  ],
+  "summary": "Large language models (LLMs) are increasingly being explored to automate operations research modeling, reduce modeling time and lower the expertise barrier to optimization based decision support. However, this process often introduces inconsistencies between generated artifacts and the original problem, which we refer to as optimization modeling hallucinations. Despite progress in general-purpose hallucination mitigation, optimization modeling poses a distinct repair challenge: restoring fidelity to the original problem through coordinated model-code updates. We introduce OPT-Kraken, a…",
+  "domain": "cs.SE",
+  "tags": [
+    "cs.SE",
+    "math.OC"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

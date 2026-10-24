@@ -1,0 +1,24 @@
+{
+  "key": "2602.06269",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.06269",
+  "title": "PurSAMERE: Reliable Adversarial Purification via Sharpness-Aware Minimization of Expected Reconstruction Error",
+  "authors": [
+    "Vinh Hoang",
+    "Sebastian Krumscheid",
+    "Holger Rauhut",
+    "Raúl Tempone"
+  ],
+  "summary": "We propose a novel deterministic purification method to improve adversarial robustness by mapping a potentially adversarial sample toward a nearby sample that lies close to a mode of the data distribution, where classifiers are more reliable. We design the method to be deterministic to ensure reliable test accuracy and to prevent the degradation of effective robustness observed in stochastic purification approaches when the adversary has full knowledge of the system and its randomness. We employ a score model trained by minimizing the expected reconstruction error of noise-corrupted data,…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "math.PR"
+  ],
+  "published": "2026-02-06",
+  "updated": "2026-02-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

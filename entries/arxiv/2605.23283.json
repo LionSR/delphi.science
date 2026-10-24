@@ -1,0 +1,21 @@
+{
+  "key": "2605.23283",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.23283",
+  "title": "Localized Turán-type inequalities for $Q$-index",
+  "authors": [
+    "M. Rajesh Kannan",
+    "Hitesh Kumar",
+    "Shivaramakrishna Pragada"
+  ],
+  "summary": "For a connected graph \\(G\\), let $q(G)$ denote the $Q$-index of $G$, i.e., the largest eigenvalue of its signless Laplacian matrix. Abreu and Nikiforov (2013) showed that \\[ q(G) \\leq 2n\\left(1-\\frac{1}{ω(G)}\\right), \\] where $ω(G)$ denotes the clique number of $G$. We first give a short algebraic proof of this result. For a vertex $v\\in V(G)$, let \\(c(v)\\) denote the order of the largest clique of \\(G\\) containing \\(v\\). Our main result is the following vertex localized bound that refines the result of Abreu and Nikiforov: \\[ q(G) \\leq 2\\sum_{v\\in V(G)}\\left(1-\\frac{1}{c(v)}\\right). \\]…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-05-22",
+  "updated": "2026-05-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

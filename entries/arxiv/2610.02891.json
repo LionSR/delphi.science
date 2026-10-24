@@ -1,0 +1,22 @@
+{
+  "key": "2610.02891",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02891",
+  "title": "Efficient and Accurate Lift-and-Decoupling Generalized Transferable Neural Networks for Elliptic and Moving Interface Problems",
+  "authors": [
+    "Tao Cheng",
+    "Junqing Jia",
+    "Lili Ju",
+    "Xiaoping Zhang"
+  ],
+  "summary": "In this paper, we propose a highly efficient and accurate method, called ``lift-and-decoupling generalized transferable neural network\" (LD-GTransNet), for numerical solution of elliptic and moving interface problems. Our method makes use of the multi-layer GTransNet approach and incorporates a novel {lift-and-decoupling} strategy, in which the hidden-layer neuron parameters are preset and the physical coordinates and the added auxiliary variable are processed by separate subnetworks. Such design enables a unified global approximation of piecewise smooth solutions without explicit domain…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

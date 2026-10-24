@@ -1,0 +1,22 @@
+{
+  "key": "2608.17464",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17464",
+  "title": "Infinite-Horizon Sparse Optimal Control: Solution through a Finite-Horizon Subproblem and Its Receding-Horizon Implementation",
+  "authors": [
+    "Yasuaki Oishi",
+    "Takumi Iwata",
+    "Masaaki Nagahara"
+  ],
+  "summary": "Sparse optimal control is considered in the infinite horizon. In the literature, sparse control has been considered mostly in a finite horizon for its formulation into a finite-dimensional optimization problem. It is shown in this paper that an optimal solution of the infinite-horizon sparse control problem can be obtained through a solution of some finite-horizon subproblem. This is due to sparsity of the optimal solution in the sense that the optimal control input is constantly equal to zero at its tail. An estimate is given on the horizon length required by this subproblem and its…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

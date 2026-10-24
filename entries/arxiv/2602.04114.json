@@ -1,0 +1,22 @@
+{
+  "key": "2602.04114",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.04114",
+  "title": "Turning mechanistic models into forecasters by using machine learning",
+  "authors": [
+    "Amit K. Chakraborty",
+    "Hao Wang",
+    "Pouria Ramazi"
+  ],
+  "summary": "The equations of complex dynamical systems may not be identified by expert knowledge, especially if the underlying mechanisms are unknown. Data-driven discovery methods address this challenge by inferring governing equations from time-series data using a library of functions constructed from the measured variables. However, these methods typically assume time-invariant coefficients, which limits their ability to capture evolving system dynamics. To overcome this limitation, we allow some of the parameters to vary over time, learn their temporal evolution directly from data, and infer a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS"
+  ],
+  "published": "2026-02-04",
+  "updated": "2026-02-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

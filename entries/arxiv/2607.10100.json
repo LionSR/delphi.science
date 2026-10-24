@@ -1,0 +1,20 @@
+{
+  "key": "2607.10100",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10100",
+  "title": "Regularity and high-order time stepping for semilinear subdiffusion equations with singular initial data beyond the $L^\\infty$ framework",
+  "authors": [
+    "Runjie Zhang",
+    "Dongling Wang"
+  ],
+  "summary": "This paper aims to analyze a numerical scheme for semilinear subdiffusion problems with singular initial data beyond the $L^\\infty$ framework. The main difficulty lies in the stronger singular behavior of the nonlinear term compared with previous analyses. Since the singular initial datum is too rough to guarantee a uniform $L^\\infty$ bound for the solution, the usual Lipschitz framework in the base space is no longer sufficient. The analysis must instead be carried out in weaker fractional Sobolev-type spaces, where nonlinear composition is more delicate and the term $f(u(t))$ may exhibit…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-11",
+  "updated": "2026-07-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

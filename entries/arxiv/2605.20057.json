@@ -1,0 +1,22 @@
+{
+  "key": "2605.20057",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.20057",
+  "title": "Quasi-optimal complexity of iterative Galerkin methods driven by an elliptic reconstruction error estimator",
+  "authors": [
+    "Maximilian Brunner",
+    "Gregor Gantner",
+    "Christoph Lietz",
+    "Dirk Praetorius"
+  ],
+  "summary": "We study an iterative Galerkin method for quasilinear elliptic problems in the Browder-Minty setting. The resulting discrete nonlinear systems are solved by linearization via a (damped) Zarantonello iteration. Unlike prior work, adaptive mesh refinement is driven by an elliptic reconstruction error estimator, which is natural in the sense that the a posteriori bounds for the linearization and discretization errors are well separated. For this setting, we present the first comprehensive convergence analysis of the corresponding algorithm. We prove unconditional full R-linear convergence of a…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

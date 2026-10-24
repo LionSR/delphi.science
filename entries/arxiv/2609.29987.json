@@ -1,0 +1,20 @@
+{
+  "key": "2609.29987",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.29987",
+  "title": "A convex numerical scheme for the Evans-Gangbo transport-density system, in one, two, and three dimensions",
+  "authors": [
+    "Babacar Mbaye Ndiaye",
+    "Diaraf Seck"
+  ],
+  "summary": "We give a constructive numerical treatment of Monge's optimal transport problem in 1D, 2D, 3D, following Evans-Gangbo: the map is built from a Kantorovich potential $u$ and density $a$ solving $-\\mathrm{div}(a\\nabla u) = f^+-f^-$, via $\\dot T = -a\\nabla u(T)/[(1-t)f^+(T)+tf^-(T)]$, $T(0,x)=x$. In 1D this gives a closed form. In 2D--left unfinished in an earlier report--we obtain $(u,a)$ via a convex Beckmann flow problem (second-order-cone programming), cross-checked against a dual LP, then build the map by direct integration or a ray-based 1D \"clock\" ODE with explicit density per ray.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

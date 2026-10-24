@@ -1,0 +1,20 @@
+{
+  "key": "2603.26620",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.26620",
+  "title": "Optimal Parlay Wagering and Whitrow Asymptotics: A State-Price and Implicit-Cash Treatment",
+  "authors": [
+    "Christopher D. Long"
+  ],
+  "summary": "For independent multi-outcome events under multiplicative parlay pricing, we give a short exact proof of the optimal Kelly strategy using the implicit-cash viewpoint. The proof is entirely eventwise. One first solves each event in isolation. The full simultaneous optimizer over the entire menu of singles, doubles, triples, and higher parlays is then obtained by taking the outer product of the one-event Kelly strategies. Equivalently, the optimal terminal wealth factorizes across events. This yields an immediate active-leg criterion: a parlay is active if and only if each of its legs is…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "q-fin.PM"
+  ],
+  "published": "2026-03-27",
+  "updated": "2026-03-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

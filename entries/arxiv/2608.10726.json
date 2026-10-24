@@ -1,0 +1,23 @@
+{
+  "key": "2608.10726",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.10726",
+  "title": "LQR Design For Formation Flying Near Halo Orbits Exploiting Quasi-Periodic Symmetry In Toroidal Coordinates",
+  "authors": [
+    "Joaquin G. Lopez-Cepero",
+    "Rafael Vazquez",
+    "Julio C. Sanchez"
+  ],
+  "summary": "This work presents the design of a Linear Quadratic Regulator for relative motion control near periodic orbits in the Circular Restricted Three-Body Problem (CR3BP), formulated in non-singular toroidal coordinates. The key result exploits the rotational quasi-periodicity of the toroidal coordinate transformation. A uniqueness argument on the stabilizing solution of the associated difference Riccati equation proves the optimal control gains need only be computed for a single orbital period. The controller is validated against the full non-linear CR3BP dynamics on an L1 Northern halo orbit in…",
+  "domain": "physics.space-ph",
+  "tags": [
+    "physics.space-ph",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-08-11",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

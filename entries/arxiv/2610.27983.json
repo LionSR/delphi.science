@@ -1,0 +1,21 @@
+{
+  "key": "2610.27983",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.27983",
+  "title": "Annealed correlation and quenched noise sensitivity in biased deep neural networks",
+  "authors": [
+    "Johan Jonasson"
+  ],
+  "summary": "In earlier work by Jonasson, Steif and Zetterqvist (2023), fully connected deep neural networks with layers of width $n$, i.i.d.\\ standard Gaussian weights, sign activations and no bias terms were shown to be annealed and quenched noise sensitive with respect to any joint probability distribution $\\mathbb{Q}^{(n)}$ on the input $\\boldsymbolω$ and its perturbation $\\boldsymbolη$ satisfying a mild positive-correlation condition and $\\mathbb{Q}^{(n)}(\\boldsymbolη \\in \\{\\boldsymbolω,-\\boldsymbolω\\}) \\to 0$. Here we add independent Gaussian biases of the natural order and show that quenched noise…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

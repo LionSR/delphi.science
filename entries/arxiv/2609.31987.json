@@ -1,0 +1,22 @@
+{
+  "key": "2609.31987",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.31987",
+  "title": "Finite element error estimates for a bilinear optimal control problem with pointwise tracking governed by a semilinear elliptic PDE",
+  "authors": [
+    "Enrique Otarola",
+    "Daniel Quero",
+    "Matias Sasso"
+  ],
+  "summary": "We study finite element approximations for an optimal control problem with pointwise tracking governed by a semilinear elliptic PDE. The control variable enters the state equation as a reaction coefficient, resulting in a bilinear control, and the cost functional includes point evaluations of the state variable. We propose two discretization schemes: a semidiscrete scheme, where the control variable is not discretized, and a fully discrete scheme, where the control variable is discretized using piecewise constant functions. In two and three dimensions, for both schemes, we establish…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

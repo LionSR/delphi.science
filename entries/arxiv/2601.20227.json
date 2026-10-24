@@ -1,0 +1,25 @@
+{
+  "key": "2601.20227",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.20227",
+  "title": "ProFlow: Zero-Shot Physics-Consistent Sampling via Proximal Flow Guidance",
+  "authors": [
+    "Zichao Yu",
+    "Ming Li",
+    "Wenyi Zhang",
+    "Difan Zou",
+    "Weiguo Gao"
+  ],
+  "summary": "Inferring physical fields from sparse observations while strictly satisfying partial differential equations (PDEs) is a fundamental challenge in computational physics. Recently, deep generative models offer powerful data-driven priors for such inverse problems, yet existing methods struggle to enforce hard physical constraints without costly retraining or disrupting the learned generative prior. Consequently, there is a critical need for a sampling mechanism that can reconcile strict physical consistency and observational fidelity with the statistical structure of the pre-trained prior. To…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.NA"
+  ],
+  "published": "2026-01-28",
+  "updated": "2026-01-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

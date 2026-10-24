@@ -1,0 +1,23 @@
+{
+  "key": "2609.20687",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20687",
+  "title": "The First-Order Oracle Complexity of Lipschitz Convex Optimization in Nondual Settings",
+  "authors": [
+    "David Martínez-Rubio",
+    "Brian Bullins",
+    "Cristóbal Guzmán",
+    "Mathieu Molina"
+  ],
+  "summary": "We study first-order black-box convex optimization over an $\\ell_p$-ball for objectives Lipschitz in the $\\ell_q$-norm, solving in the affirmative the nonsmooth version of the COLT open question (Guz15b) on whether the geometry of a smaller feasible set ($p < q$) can improve convergence rates in convex optimization, and matching prior lower bounds up to logarithmic factors. Our rates include \\(\\widetilde O(1/T)\\) for convex Euclidean-Lipschitz optimization over the $\\ell_1$-ball, improving on the $O(1/\\sqrt{T})$ classical rate under general assumptions. The key technical device is a new…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

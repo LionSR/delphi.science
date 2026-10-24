@@ -1,0 +1,23 @@
+{
+  "key": "2606.30622",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.30622",
+  "title": "A neural delta-$f$ particle-in-cell method: evolving the background with learned backward flows",
+  "authors": [
+    "Victor Fournet",
+    "Martin Campos Pinto",
+    "Emmanuel Franck",
+    "Victor Michel-Dansac"
+  ],
+  "summary": "We present a novel δf particle-in-cell (PIC) method for the kinetic simulation of electrostatic plasmas in which the bulk density, acting as a control variate, is evolved using symplectic neural networks (SympNets). The SympNets are used as an approximation of the backward flow and trained using the particle trajectories. We introduce a periodic variant of the SympNet architecture that encodes the spatial periodicity of the problem into the network itself. We validate the approach with numerical results in 1D1V and 3D3V for the Vlasov-Poisson system.",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "math.NA"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2605.15522",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.15522",
+  "title": "Stochastic Non-Smooth Convex Optimization with Unbounded Gradients",
+  "authors": [
+    "Dmitry Kovalev"
+  ],
+  "summary": "Much of the existing theory on first-order non-smooth optimization is built on a restrictive assumption that the gradients of the objective function are uniformly bounded. We introduce a much more realistic class of generalized Lipschitz functions, where the gradient norms are bounded by an affine function of the optimality gap. We then ask a natural question: what algorithm achieves the best global convergence rates for solving convex stochastic generalized Lipschitz optimization problems? To address this, we develop a new convergence analysis for several existing algorithms and find that…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-05-15",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

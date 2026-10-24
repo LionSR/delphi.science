@@ -1,0 +1,21 @@
+{
+  "key": "2601.06535",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.06535",
+  "title": "Automated dimensional analysis for PDEs",
+  "authors": [
+    "Michal Habera",
+    "Andreas Zilian"
+  ],
+  "summary": "Physical units are fundamental to scientific computing. However, many finite element frameworks lack built-in support for dimensional analysis. In this work, we present a systematic framework for integrating physical units into the Unified Form Language (UFL). We implement a symbolic \\texttt{Quantity} class to track units within variational forms. The implementation exploits the abelian group structure of physical dimensions. We represent them as vectors in $\\mathbb{Q}^n$ to simplify operations and improve performance. A graph-based visitor pattern traverses the expression tree to automate…",
+  "domain": "cs.MS",
+  "tags": [
+    "cs.MS",
+    "math.NA"
+  ],
+  "published": "2026-01-10",
+  "updated": "2026-06-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

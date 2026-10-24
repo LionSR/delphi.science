@@ -1,0 +1,21 @@
+{
+  "key": "2607.04787",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04787",
+  "title": "Pressure-robust $hp$-a posteriori error estimates of $\\boldsymbol{H}(\\mathrm{div})$-conforming discontinuous Galerkin methods for the Stokes equations",
+  "authors": [
+    "Zhaonan Dong",
+    "Zuodong Wang",
+    "Lina Zhao"
+  ],
+  "summary": "We devise and analyze a pressure-robust residual-based $hp$-a posteriori error estimator for $\\boldsymbol{H}(\\mathrm{div})$-conforming discontinuous Galerkin (dG) methods for the Stokes problem on two- and three-dimensional polytopal Lipschitz domains. The estimator provides an upper bound and a local lower bound for the velocity error in the energy norm, both robust with respect to the viscosity and independent of the pressure. Our analysis relies on a decomposition of the error into conforming and nonconforming parts. The nonconforming error is bounded using a partition-of-unity framework…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-06",
+  "updated": "2026-07-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2604.24518",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.24518",
+  "title": "Sliding Mode Control for Safe Trajectory Tracking with Moving Obstacles Avoidance: Experimental Validation on Planar Robots",
+  "authors": [
+    "Shubham Sawarkar",
+    "P Sangeerth",
+    "S Saharsh",
+    "Pushpak Jagtap"
+  ],
+  "summary": "This paper presents a unified control framework for robust trajectory tracking and moving obstacle avoidance applicable to a broad class of mobile robots. By formulating a generalized kinematic transformation, we convert diverse vehicle dynamics into a strict feedback form, facilitating the design of a Sliding Mode Control (SMC) strategy for precise and robust reference tracking. To ensure operational safety in dynamic environments, the tracking controller is integrated with a Collision Cone Control Barrier Function (C3BF) based safety filter. The proposed architecture guarantees asymptotic…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-04-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

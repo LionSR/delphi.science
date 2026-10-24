@@ -1,0 +1,19 @@
+{
+  "key": "2607.24166",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.24166",
+  "title": "Strong rate of convergence for the Euler-Maruyama scheme of additive fractional SDEs with Lipschitz drift",
+  "authors": [
+    "Tsukasa Moritoki"
+  ],
+  "summary": "We study the strong convergence rate of the Euler-Maruyama scheme for additive stochastic differential equations driven by a fractional Brownian motion with Hurst parameter $H \\in (0,1)$. Assuming the drift coefficient to be Lipschitz continuous, we show that the rate is $1$ if $H \\in (1/2,1)$, and $1/2+H-\\varepsilon$, for any $\\varepsilon>0$, if $H \\in (0,1/2]$. The main ingredient is a shifted stochastic sewing argument, which exploits the conditional Gaussian structure of fractional Brownian motion to control the noise discretization error.",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

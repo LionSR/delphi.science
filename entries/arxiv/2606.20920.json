@@ -1,0 +1,21 @@
+{
+  "key": "2606.20920",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20920",
+  "title": "$Ω$: Operator-based Mixture Ensemble for Generative Assimilation",
+  "authors": [
+    "Pouria Behnoudfar",
+    "Nan Chen"
+  ],
+  "summary": "Characterizing non-Gaussian posterior distributions in partially observed high-dimensional nonlinear systems remains a fundamental challenge in data assimilation. Ensemble Kalman filters rely on Gaussian approximations that can be inaccurate for strongly non-Gaussian posteriors, whereas particle filters suffer from severe scalability limitations. Recent score-based generative approaches improve posterior characterization but typically require supervised training with ground-truth posterior samples, which are unavailable in most practical applications. We introduce $Ω$ (Operator-based Mixture…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

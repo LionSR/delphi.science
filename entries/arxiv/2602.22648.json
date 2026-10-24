@@ -1,0 +1,21 @@
+{
+  "key": "2602.22648",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.22648",
+  "title": "A General (Non-Markovian) Framework for Covariate Adaptive Randomization: Achieving Balance While Eliminating the Shift",
+  "authors": [
+    "Hengjia Fang",
+    "Wei Ma"
+  ],
+  "summary": "Emerging applications increasingly demand flexible covariate adaptive randomization (CAR) methods that support unequal targeted allocation ratios. While existing procedures can achieve covariate balance, they often suffer from the shift problem. This occurs when the allocation ratios of some additional covariates deviate from the target. We show that this problem is equivalent to a mismatch between the conditional average allocation ratio and the target among units sharing specific covariate values, revealing a failure of existing procedures in the long run. To address it, we derive a new…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-02-26",
+  "updated": "2026-02-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

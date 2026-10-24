@@ -1,0 +1,22 @@
+{
+  "key": "2609.10727",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10727",
+  "title": "A Robust All-Mach Six-Equation Diffuse-Interface Method for Multiphase Flows with Surface Tension",
+  "authors": [
+    "Ghanshyam Bharate",
+    "J. C. Mandal"
+  ],
+  "summary": "A robust finite-volume framework is presented for the simulation of compressible multiphase flows with surface tension across a wide range of Mach numbers. The method is based on a two-pressure, six-equation diffuse interface model incorporating viscous, gravitational, and capillary effects through the continuum surface force formulation. To consistently account for capillary-induced pressure jumps, an HLLC Riemann solver is developed using generalized Riemann invariant analysis, and the instantaneous pressure relaxation procedure is modified to preserve the Laplace pressure jump during…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

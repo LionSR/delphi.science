@@ -1,0 +1,22 @@
+{
+  "key": "2610.08475",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08475",
+  "title": "Learning PDE solution operators with variable initial conditions via Latent Dynamics Networks",
+  "authors": [
+    "Stefano Maria Pizzamiglio",
+    "Stefano Pagani",
+    "Francesco Regazzoni"
+  ],
+  "summary": "In many-query scenarios, data-driven surrogate models provide an efficient alternative to high-fidelity solvers for simulating physical systems governed by Partial Differential Equations (PDEs). In this context, the Latent Dynamics Network (LDNet) has recently demonstrated remarkable performance in predicting the response of spatio-temporal systems, combining Neural Ordinary Differential Equations with nonlinear dimensionality reduction. However, the original formulation assumes a fixed initial condition, limiting its applicability to many real-world applications where a system evolves from…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2608.17307",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17307",
+  "title": "A note on the complexity of random subspace model-based methods for derivative-free optimization",
+  "authors": [
+    "Coralia Cartis",
+    "Lindon Roberts"
+  ],
+  "summary": "We demonstrate that, with a suitable rescaling, using Johnson-Lindenstrauss transforms (JLTs) in the random subspace model-based derivative-free optimization (DFO) algorithm from [Cartis & Roberts, Math. Prog. 199 (2023)] achieves an improved first-order worst-case evaluation complexity bound compared to 'unscaled' JLTs. This improved bound does not require any modification to the original algorithm or complexity analysis, and matches the best-known bound in terms of dimension dependence for model-based DFO (e.g. achieved by [Scheinberg & Chaudhry, ICM 2026] using Haar matrices in a similar…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

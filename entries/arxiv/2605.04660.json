@@ -1,0 +1,22 @@
+{
+  "key": "2605.04660",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04660",
+  "title": "A third-order multi-moment cell-centered Lagrangian scheme for hydrodynamics with an accurate 2D nodal solver",
+  "authors": [
+    "Xiaoteng Zhang",
+    "Xun Wang",
+    "Zhijun Shen",
+    "Chao Yang"
+  ],
+  "summary": "This paper presents a novel high-order cell-centered Lagrangian scheme for 2D compressible hydrodynamics by bridging the multi-moment constrained finite volume method (MCV) [16, 51, 52] with a nodal Riemann solver. This scheme (denoted by LMCV) not only maintains high-order accuracy as MCV but also inherits the conservation and robust properties of the nodal Riemann solver. On the one hand, the MCV employs and evolves both the point-values (PV) at cell vertexes and the volume-integrated averages (VIA) on computational mesh, which ensures the rigorous numerical conservation and establishes an…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

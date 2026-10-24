@@ -1,0 +1,23 @@
+{
+  "key": "2603.25279",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.25279",
+  "title": "Numerical Analysis of a Cut Finite Element Approach for Fully Eulerian Fluid-Structure Interaction with Fixed Interface",
+  "authors": [
+    "Stefan Frei",
+    "Tobias Knoke",
+    "Marc C. Steinbach",
+    "Anne-Kathrin Wenske",
+    "Thomas Wick"
+  ],
+  "summary": "This work develops and analyzes a variational-monolithic unfitted finite element formulation of a linear fluid-structure interaction problem in Eulerian coordinates with a fixed interface. The overall discretization is based on a backward Euler scheme in time and finite elements in space. For the spatial discretization we employ a cut finite element method on a mesh consisting of quadrilateral elements. We use a first-order in time formulation of the elasticity equations, inf-sup stable finite elements in the fluid part and Nitsche's method to incorporate the coupling conditions. Ghost…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-26",
+  "updated": "2026-03-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2609.21871",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.21871",
+  "title": "A filtered time stepping scheme for curve shortening flow for open and closed curves",
+  "authors": [
+    "Klaus Deckelnick",
+    "Robert Nürnberg"
+  ],
+  "summary": "We propose a filtered time stepping finite element scheme for curve shortening flow of open and closed curves in arbitrary codimension that is second-order accurate in time. Open curves are assumed to evolve inside a given domain $Ω\\subset \\mathbb R^n$, $n\\geq2$, and meet the external boundary $\\partialΩ$ orthogonally. We prove optimal error bounds for the $L^2$-- and $H^1$--norms. In practice only a single linear system needs to be solved at each time step. Numerical experiments confirm the accuracy and practicality of the introduced method, including an asymptotic equidistribution property.",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-18",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

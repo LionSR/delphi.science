@@ -1,0 +1,24 @@
+{
+  "key": "2609.13798",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.13798",
+  "title": "Resolution-Independent Analysis of Encoder--Decoder Operator Learning via Limiting Kernels",
+  "authors": [
+    "Lei Shi",
+    "Jia-Qi Yang",
+    "Ding-Xuan Zhou"
+  ],
+  "summary": "Operator learning is formulated on function spaces, but training data are typically available only through finite-dimensional representations. In encoder--decoder architectures, a matrix-valued kernel on the encoded space induces an operator-valued kernel on the original function spaces, and the corresponding reproducing kernel Hilbert spaces are isometrically isomorphic. As the input and output resolutions increase, the induced kernels converge to a limiting kernel, in the sense of operator-norm convergence of their associated integral operators, allowing regularity assumptions to be stated…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.FA",
+    "math.NA"
+  ],
+  "published": "2026-09-12",
+  "updated": "2026-09-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

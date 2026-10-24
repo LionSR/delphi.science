@@ -1,0 +1,28 @@
+{
+  "key": "2602.07997",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.07997",
+  "title": "Fast Model Selection and Stable Optimization for Softmax-Gated Multinomial-Logistic Mixture of Experts Models",
+  "authors": [
+    "TrungKhang Tran",
+    "TrungTin Nguyen",
+    "Md Abul Bashar",
+    "Nhat Ho",
+    "Richi Nayak",
+    "Christopher Drovandi"
+  ],
+  "summary": "Mixture-of-Experts (MoE) architectures combine specialized predictors through a learned gate and are effective across regression and classification, but for classification with softmax multinomial-logistic gating, rigorous guarantees for stable maximum-likelihood training and principled model selection remain limited. We address both issues in the full-data (batch) regime. First, we derive a batch minorization-maximization (MM) algorithm for softmax-gated multinomial-logistic MoE using an explicit quadratic minorizer, yielding coordinate-wise closed-form updates that guarantee monotone…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST",
+    "stat.CO",
+    "stat.ME"
+  ],
+  "published": "2026-02-08",
+  "updated": "2026-02-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,27 @@
+{
+  "key": "2605.24825",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.24825",
+  "title": "Time Segmented Beamforming via Dynamic Programming: Theory and Implementation",
+  "authors": [
+    "Manan Mittal",
+    "Ryan M. Corey",
+    "Diego Cuji",
+    "John R. Buck",
+    "Andrew C. Singer"
+  ],
+  "summary": "In dynamic acoustic environments with time-varying interferers, effective beamforming requires identifying stationary regions over time. The Capon beamformer, a whitened matched filter constrained to maintain unity gain in the desired direction, theoretically relies on the instantaneous ensemble covariance matrix. Practical implementations rely on the batch Capon (or Sample Matrix Inversion), which estimates the sample covariance matrix (SCM) by averaging over a block of snapshots. This practical approach implicitly assumes that the data within the batch window is stationary and can be…",
+  "domain": "eess.SP",
+  "tags": [
+    "eess.SP",
+    "cs.SD",
+    "eess.AS",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-05-24",
+  "updated": "2026-05-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

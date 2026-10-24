@@ -1,0 +1,20 @@
+{
+  "key": "2609.00785",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.00785",
+  "title": "Fast computation and convergence analysis of the infinite-product representation of the Schottky--Klein prime function",
+  "authors": [
+    "Shuntaro Yamamoto",
+    "Hiroyuki Miyoshi"
+  ],
+  "summary": "The Schottky--Klein prime function is a standard tool for boundary-value problems on multiply connected circular domains. Because this function is represented as an infinite product over a Schottky group, numerical evaluation requires truncation to finitely many factors. The standard word-length truncation grows exponentially in cost and becomes inefficient when the boundary circles nearly touch one another or the unit circle. To address this difficulty, we assign to each group element a cross-ratio potential measuring the size of its contribution, and retain only terms below a prescribed…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-01",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

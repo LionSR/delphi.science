@@ -1,0 +1,19 @@
+{
+  "key": "2609.23373",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.23373",
+  "title": "Global existence of classical solutions to a system modeling propagation of urban crime with quadratic logistic damping",
+  "authors": [
+    "Minh Le"
+  ],
+  "summary": "We are concerned with the following partial differential equations arising from urban crime modeling: \\begin{equation} \\label{main} \\begin{cases} u_t = Δu - χ\\nabla \\cdot \\left( u \\dfrac{\\nabla v}{v} \\right) - uv + B_1 + ru - μu^2, \\\\[4pt] v_t = Δv - v + uv + B_2, \\end{cases} \\end{equation} under no-flux boundary conditions in a smoothly bounded domain $Ω\\subset \\mathbb{R}^n$ with $n \\geq 2$, where $χ$, $r$, and $μ$ are positive constants. It is shown in this paper that if the nonnegative source terms $B_1$ and $B_2$ are sufficiently regular and \\begin{equation*} μ> \\frac{3}{n} +…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-09-20",
+  "updated": "2026-09-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

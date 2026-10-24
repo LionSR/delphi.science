@@ -1,0 +1,23 @@
+{
+  "key": "2608.14162",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.14162",
+  "title": "TOGEARI: Interaction-Space Preconditioning for Condensed Finite-Element Systems with IPC Contact",
+  "authors": [
+    "Yanlin Liu",
+    "Chao Huang",
+    "Kaixiang Yao",
+    "Yao Shen"
+  ],
+  "summary": "TOGEARI constructs a compressed contact correction for condensed finite-element equations with incremental potential contact (IPC). A core-conditioned interaction matrix ranks contact combinations by their mechanical responses; a raw-factor proxy acquires only the retained responses. For a symmetric positive-definite core, the reference analysis gives the exact spectrum, scaled inverse error and optimal worst omitted interaction. The selected responses are maintained through signed contact changes using supported operator images and a small coarse matrix. A complementary Schur spectrum and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.CE"
+  ],
+  "published": "2026-08-14",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

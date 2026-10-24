@@ -1,0 +1,20 @@
+{
+  "key": "2607.06314",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06314",
+  "title": "Gradient descent with exponentially increasing stepsizes and restarts",
+  "authors": [
+    "François Clément",
+    "Stefan Steinerberger"
+  ],
+  "summary": "Let $f:\\mathbb{R}^d \\rightarrow \\mathbb{R}$. We consider gradient descent $x_{n+1} = x_n - τ_n \\nabla f(x_n)$, where the stepsize $τ_n = τ\\cdot e^{rn}$ is exponentially growing (with $τ> 0$ and $0 < r \\ll 1$). This diverges for almost all initial values. We show that restarting the algorithm whenever $\\|x_{n+1} - x_n\\| \\geq e^r\\|x_n - x_{n-1}\\|$ has good properties: it works very well in practice; we determine the limiting convergence rate in the case of convergence to a non-degenerate local minimum: it improves on classic gradient descent even though computational cost is comparable. The…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2606.15830",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.15830",
+  "title": "MSC-CMA-ES: Structure-Aware Restarts for CMA-ES via Cyclic Nearest-Better Basin Discovery",
+  "authors": [
+    "Dimitar Nedanovski",
+    "Svetoslav Nenov",
+    "Dimitar Pilev"
+  ],
+  "summary": "CMA-ES behaves, per restart, primarily as a local optimizer; multimodal search relies on restart strategies such as IPOP and BIPOP, which draw every restart uniformly and reuse no information from previous evaluations. Multi-Start Clustering CMA-ES (MSC-CMA-ES) makes restarts structure-aware: in alternating cycles, a Sobol pre-sample is partitioned into approximate basins of attraction by nearest-better clustering, restarts are seeded basin by basin with locally scaled step-sizes and population sizes, redundant basin visits are detected and excluded, and the remaining budget is spent on a…",
+  "domain": "cs.NE",
+  "tags": [
+    "cs.NE",
+    "math.OC"
+  ],
+  "published": "2026-06-14",
+  "updated": "2026-07-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

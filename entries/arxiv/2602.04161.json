@@ -1,0 +1,21 @@
+{
+  "key": "2602.04161",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.04161",
+  "title": "Restart-Free Oracle-Efficient Methods for Strongly Convex Composite Optimization",
+  "authors": [
+    "Xinming Wu",
+    "Zi Xu",
+    "Huiling Zhang"
+  ],
+  "summary": "We consider strongly convex composite optimization problems whose objective is the sum of a general smooth component, a general nonsmooth component, and a relatively simple nonsmooth term. Although existing first-order methods can achieve optimal convergence guarantees under strong convexity, they typically rely on explicit restart schemes, leading to multiphase algorithms with increased structural and implementation complexity. To address this issue, we develop a restart-free stochastic gradient sliding method that incorporates strong convexity directly through a novel parameter selection…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-04",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

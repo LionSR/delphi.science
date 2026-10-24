@@ -1,0 +1,21 @@
+{
+  "key": "2601.21489",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.21489",
+  "title": "Fundamental Limits of Decentralized Self-Regulating Random Walks",
+  "authors": [
+    "Ali Khalesi",
+    "Rawad Bitar"
+  ],
+  "summary": "We study self-regulating random walks (SRRWs), a decentralized mechanism for maintaining a stable population of mobile tokens on a graph. Tokens move by random walks, may be lost at faulty or malicious trap nodes, and may be locally forked or terminated according to node visit ages. The goal is to prevent both extinction and runaway growth without a central coordinator. We develop a graph-aware, controller-agnostic theory for SRRWs on finite connected graphs with lazy reversible random-walk dynamics. The main technical tool is a set of node-dependent return-time tail bounds, which yield…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.IT"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

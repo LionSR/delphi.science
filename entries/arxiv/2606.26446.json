@@ -1,0 +1,24 @@
+{
+  "key": "2606.26446",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.26446",
+  "title": "Input Convex Neural Network as a Surrogate in Stability-Constrained Optimization for IBR-dominated Power Systems",
+  "authors": [
+    "Wangkun Xu",
+    "Hongyang Jia",
+    "Yi Wang",
+    "Ning Zhang",
+    "Fei Teng"
+  ],
+  "summary": "Input convex neural networks (ICNNs) are increasingly used as surrogates for stability indices and embedded as constraints in power-system optimization. This letter clarifies two recurring formulation limitations that can negate ICNN convexity benefits: (i) applying generic Big-$M$ mixed-integer reformulations introduces auxiliary binaries that are unnecessary for enforcing ICNN sublevel constraints; and (ii) reversing the stability inequality transforms a convex sublevel set into a generally nonconvex superlevel set, invalidating global-convergence guarantees of cut-based methods. After…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-06-24",
+  "updated": "2026-06-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

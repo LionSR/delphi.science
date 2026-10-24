@@ -1,0 +1,25 @@
+{
+  "key": "2604.24797",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.24797",
+  "title": "The Network Structure of Mathlib",
+  "authors": [
+    "Xinze Li",
+    "Nanyun Peng",
+    "Simone Severini",
+    "Patrick Shafto"
+  ],
+  "summary": "The ongoing development of Lean 4's Mathlib has produced a macroscopic structural complexity that interweaves logical, mathematical, and infrastructural dependencies. We present a network analysis of this library, extracting its dependency structure into a multilayer graph of 308,129 declarations, 8.4 million edges, and 7,563 modules. By introducing graph decompositions that isolate explicit edges from those synthesized by the compiler or driven by proofs, we quantify the structural properties of formalized mathematics. Our analysis reveals three findings. First, taxonomies designed by…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "cs.PL",
+    "cs.SI",
+    "math.HO"
+  ],
+  "published": "2026-04-26",
+  "updated": "2026-05-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

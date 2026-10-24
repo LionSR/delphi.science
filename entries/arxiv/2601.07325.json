@@ -1,0 +1,22 @@
+{
+  "key": "2601.07325",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.07325",
+  "title": "Robust Bayesian Inference via Variational Approximations of Generalized Rho-Posteriors",
+  "authors": [
+    "EL Mahdi Khribch",
+    "Pierre Alquier"
+  ],
+  "summary": "We introduce the $\\widetildeρ$-posterior, a modified version of the $ρ$-posterior, obtained by replacing the supremum over competitor parameters with a softmax aggregation. This modification allows a PAC-Bayesian analysis of the $\\widetildeρ$-posterior. This yields finite-sample oracle inequalities with explicit convergence rates that inherit the key robustness properties of the original framework, in particular, graceful degradation under model misspecification and data contamination. Crucially, the PAC-Bayesian oracle inequalities extend to variational approximations of the…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-01-12",
+  "updated": "2026-03-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

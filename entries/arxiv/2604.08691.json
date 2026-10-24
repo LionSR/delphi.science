@@ -1,0 +1,22 @@
+{
+  "key": "2604.08691",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.08691",
+  "title": "Planted clique detection and recovery from the hypergraph adjacency matrix",
+  "authors": [
+    "Kalle Alaluusua",
+    "B. R. Vinay Kumar"
+  ],
+  "summary": "Hypergraph data are often projected onto a weighted graph by constructing an adjacency matrix whose $(i,j)$ entry counts the number of hyperedges containing both nodes $i$ and $j$. This reduction is computationally convenient, but it can lose information: distinct hypergraphs may induce the same matrix, and the matrix entries are generally dependent because each hyperedge contributes to multiple pairs. We study the planted clique problem under this matrix-only observation model. For detection, we show that a spectral norm test is asymptotically powerful at the $\\sqrt{n}$ scale, with explicit…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.CC",
+    "math.PR"
+  ],
+  "published": "2026-04-09",
+  "updated": "2026-04-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

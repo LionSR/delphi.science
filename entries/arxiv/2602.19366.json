@@ -1,0 +1,23 @@
+{
+  "key": "2602.19366",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.19366",
+  "title": "Self-Configurable Mesh-Networks for Scalable Distributed Submodular Bandit Optimization",
+  "authors": [
+    "Zirui Xu",
+    "Vasileios Tzoumas"
+  ],
+  "summary": "We study how to scale distributed bandit submodular coordination under realistic communication constraints in bandwidth, data rate, and connectivity. We are motivated by multi-agent tasks of active situational awareness in unknown, partially-observable, and resource-limited environments, where the agents must coordinate through agent-to-agent communication. Our approach enables scalability by (i) limiting information relays to only one-hop communication and (ii) keeping inter-agent messages small, having each agent transmit only its own action information. Despite these information-access…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.MA",
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-02-22",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

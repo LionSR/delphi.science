@@ -1,0 +1,22 @@
+{
+  "key": "2601.11435",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.11435",
+  "title": "Near-Optimal Decentralized Stochastic Nonconvex Optimization with Heavy-Tailed Noise",
+  "authors": [
+    "Menglian Wang",
+    "Zhuanghua Liu",
+    "Luo Luo"
+  ],
+  "summary": "This paper studies decentralized stochastic nonconvex optimization problem over row-stochastic networks. We consider the heavy-tailed gradient noise which is empirically observed in many popular real-world applications. Specifically, we propose a decentralized normalized stochastic gradient descent with Pull-Diag gradient tracking, which achieves approximate stationary points with the optimal sample complexity and the near-optimal communication complexity. We further follow our framework to study the setting of undirected networks, also achieving the nearly tight upper complexity bounds.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-01-16",
+  "updated": "2026-01-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

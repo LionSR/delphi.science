@@ -1,0 +1,21 @@
+{
+  "key": "2605.28692",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.28692",
+  "title": "Adaptive Partitioning in Column Generation for Nested Paths",
+  "authors": [
+    "Bart van Rossum",
+    "Rolf van Lieshout",
+    "Alexandre Jacquillat"
+  ],
+  "summary": "We study a class of nested path problems, in which every path-based variable can be decomposed into a sequence of subpaths. Subpaths must satisfy local resources, while paths must satisfy additional global resources. This paper develops a new exact pricing algorithm in column generation for these problems that avoids the enumeration of non-dominated subpaths. The algorithm relies on adaptive partitioning of subpaths into buckets characterizing the consumption of global path resources. The algorithm represents each bucket by its subpath of minimum reduced cost, and iterates between…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-27",
+  "updated": "2026-05-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

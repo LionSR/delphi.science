@@ -1,0 +1,25 @@
+{
+  "key": "2604.03788",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.03788",
+  "title": "Nonlinear Model Updating of Aerospace Structures via Taylor-Series Reduced-Order Models",
+  "authors": [
+    "Nikolaos D. Tantaroudas",
+    "Jake Hollins",
+    "Konstantinos Agathos",
+    "Evangelos Papatheou"
+  ],
+  "summary": "Finite element model updating is a mature discipline for linear structures, yet its extension to nonlinear regimes remains an open challenge. This paper presents a methodology that combines nonlinear model order reduction (NMOR) based on Taylor-series expansion of the equations of motion with the projection-basis adaptation scheme recently proposed by Hollins et al. [2026] for linear model updating. The structural equations of motion, augmented with proportional (Rayleigh) damping and polynomial stiffness nonlinearity, are recast as a first-order autonomous system whose Jacobian possesses…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "eess.SY",
+    "math-ph",
+    "math.NA"
+  ],
+  "published": "2026-04-04",
+  "updated": "2026-04-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

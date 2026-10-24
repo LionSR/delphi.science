@@ -1,0 +1,22 @@
+{
+  "key": "2608.10029",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.10029",
+  "title": "A fast diagonalization algorithm to enable singular value decomposition of large matrices for efficient template matching",
+  "authors": [
+    "Matthew Giammar",
+    "Bronwyn Lucas",
+    "Alexander Strang"
+  ],
+  "summary": "Many computational problems possess the following three features: (1) the problem could be solved efficiently if a linear operator could be diagonalized, (2) direct diagonalization is infeasible due to scale, but, (3) the operator is known to commute with a permutation since the problem is (a) symmetric with respect to a change of coordinates, or (b) the operator is block circulant. For example, high-resolution template matching demands repeated convolution of large, high resolution images with an exhaustive list of related templates. The associated linear operator could be compressed, via a…",
+  "domain": "q-bio.QM",
+  "tags": [
+    "q-bio.QM",
+    "math.NA"
+  ],
+  "published": "2026-08-09",
+  "updated": "2026-08-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

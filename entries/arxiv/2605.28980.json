@@ -1,0 +1,25 @@
+{
+  "key": "2605.28980",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.28980",
+  "title": "Manifold-based Algorithms for the Hadamard Decomposition",
+  "authors": [
+    "Nicolas Gillis",
+    "Subhayan Saha",
+    "Stefano Sicilia",
+    "Arnaud Vandaele"
+  ],
+  "summary": "Given a matrix $X$, and two ranks $r_1$ and $r_2$, the Hadamard decomposition (HD) looks for two low-rank matrices, $X_1$ of rank $r_1$ and $X_2$ of rank $r_2$, both of the same size as $X$, such that $X\\approx X_1\\circ X_2$, where $\\circ$ is the Hadamard (element-wise) product. In most cases, HD is more expressive than standard low-rank approximations such as the truncated singular value decomposition (TSVD), as it can represent higher-rank matrices with the same number of parameters; this is because the rank of $X_1 \\circ X_2$ is generically equal to $r_1 r_2$. In this paper, we first…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "eess.SP",
+    "math.NA"
+  ],
+  "published": "2026-05-27",
+  "updated": "2026-05-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

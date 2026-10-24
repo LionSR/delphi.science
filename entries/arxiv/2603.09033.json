@@ -1,0 +1,20 @@
+{
+  "key": "2603.09033",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.09033",
+  "title": "Sequential learning theory for Markov genealogy processes",
+  "authors": [
+    "David J Pascall"
+  ],
+  "summary": "We introduce a filtration-based framework for studying when and why adding taxa improves phylodynamic inference, by constructing a natural ordering of observed tips and applying sequential Bayesian analysis to the resulting filtration. We decompose the expected variance reduction on taxa addition into learning, mismatch, and covariance components, classify estimands into learning classes based on the pathwise behaviour of the mismatch, and show that for absorbing estimands an oracle who knows the latent absorption status obtains event-wise learning guarantees unavailable to the analyst. The…",
+  "domain": "q-bio.QM",
+  "tags": [
+    "q-bio.QM",
+    "math.ST"
+  ],
+  "published": "2026-03-10",
+  "updated": "2026-04-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

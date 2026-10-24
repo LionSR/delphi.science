@@ -1,0 +1,21 @@
+{
+  "key": "2606.15163",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.15163",
+  "title": "Hybrid-high order method in space and implicit schemes in time for the biharmonic wave equation",
+  "authors": [
+    "Raman Kumar",
+    "Neela Nataraj",
+    "Aamir Yousuf"
+  ],
+  "summary": "This article presents the numerical analysis for the biharmonic wave equation with clamped boundary conditions employing two variants of the {hybrid high-order} method for the space discretization and two implicit time-stepping schemes for the time discretization. The Newmark scheme directly discretizes the second-order time derivative, while the Crank-Nicolson scheme discretizes a reformulated system where we introduce velocity as an independent variable to create coupled first-order equations. Optimal orders of convergence in space and time are achieved for both schemes. The numerical…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-13",
+  "updated": "2026-06-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

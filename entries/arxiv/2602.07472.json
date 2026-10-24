@@ -1,0 +1,23 @@
+{
+  "key": "2602.07472",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.07472",
+  "title": "Bandit Allocational Instability",
+  "authors": [
+    "Yilun Chen",
+    "Jiaqi Lu"
+  ],
+  "summary": "When multi-armed bandit (MAB) algorithms allocate pulls among competing arms, the resulting allocation can exhibit huge variation. This is particularly harmful in modern applications such as learning-enhanced platform operations and post-bandit statistical inference. Thus motivated, we introduce a new performance metric of MAB algorithms termed allocation variability, which is the largest (over arms) standard deviation of an arm's number of pulls. We establish a fundamental trade-off between allocation variability and regret, the canonical performance metric of reward maximization. In…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-02-07",
+  "updated": "2026-02-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

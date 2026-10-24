@@ -1,0 +1,24 @@
+{
+  "key": "2606.02841",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.02841",
+  "title": "Learning Coherent Representations: A Topological Approach to Interpretability",
+  "authors": [
+    "Sigurd Gaukstad",
+    "Melvin Vaupel",
+    "Valdemar Kargård Olsen",
+    "Erik Hermansen",
+    "Benjamin Dunn"
+  ],
+  "summary": "Deep neural networks learn representations where individual features often lack interpretable meaning; a single neuron may activate for scattered, unrelated inputs. We introduce coherence, a geometric property inspired by neural coding in the brain, where neurons like grid cells and head direction cells respond to contiguous regions of state space. A non-negative matrix is coherent if each row (sample) attends to geometrically clustered columns (features) and vice versa, and in addition every sample is well described by some feature and every feature is needed by some sample. We prove that…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.AT"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

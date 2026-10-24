@@ -1,0 +1,23 @@
+{
+  "key": "2606.10524",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.10524",
+  "title": "Multiscale modeling for problems with high contrast heterogeneous coefficients by the CEM-GMsFEM",
+  "authors": [
+    "Eric T. Chung",
+    "Yalchin Efendiev",
+    "Xingguang Jin",
+    "Wing Tat Leung",
+    "Changqing Ye"
+  ],
+  "summary": "This review paper provides a comprehensive overview of the Constrained Energy Minimizing Generalized Multiscale Finite Element Method (CEM-GMsFEM) for solving elliptic PDEs characterized by highly heterogeneous, high-contrast coefficients. We detail the construction of multiscale basis functions via spectral auxiliary spaces, combined with an oversampling strategy that enables localized computations and guarantees exponential error decay. Rigorous error estimates are outlined for reference to confirm the method's optimal convergence and robustness. Numerical simulations are provided to…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-09",
+  "updated": "2026-06-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

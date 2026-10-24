@@ -1,0 +1,21 @@
+{
+  "key": "2609.32403",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32403",
+  "title": "Acyclic orientations of mixed graphs",
+  "authors": [
+    "Jørgen Bang-Jensen",
+    "Anders Yeo"
+  ],
+  "summary": "A mixed graph $M=(V,E\\cup A)$ is acyclic if its directed part $(V,A)$ is an acyclic digraph. In this note we study the so-called orientation completion problem for the class of acyclic mixed graphs. That is, given an acyclic mixed graph $M$ and a property ${\\cal P}$; can we orient the edges of $M$ so that the resulting digraph is acyclic and has property ${\\cal P}$. We prove that one can decide in polynomial time whether $M$ can be completed to an acyclic digraph with an out-branching from a prescibed vertex $s$, while it is NP-complete to decide whether $M$ has an acyclic orientation which…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,26 @@
+{
+  "key": "2607.17066",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.17066",
+  "title": "Reduced Order Modeling of One-Dimensional Conservative PDEs via the Cumulative Distribution Transform",
+  "authors": [
+    "Harbir Antil",
+    "Rocío Díaz Martín",
+    "Ivan V. Medri",
+    "Kristofor E. Pas",
+    "Gustavo K. Rohde",
+    "Aryan Saxena",
+    "Sarswati Shah"
+  ],
+  "summary": "We propose a reduced order modeling (ROM) framework for 1D conservative PDEs based on the cumulative distribution transform (CDT). The CDT maps nonnegative, equal-mass states into a Hilbert space in which 1D Wasserstein distances become weighted $L^2$ distances and translations become affine shifts. This makes the transform especially suited for transport-dominated dynamics, where Eulerian linear-subspace ROMs often suffer from slow decay of Kolmogorov widths. We study this phenomenon for scalar conservative dynamics by analyzing the solution manifold in CDT coordinates. For linear…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "math.NA"
+  ],
+  "published": "2026-07-19",
+  "updated": "2026-07-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

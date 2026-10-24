@@ -1,0 +1,23 @@
+{
+  "key": "2602.06842",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.06842",
+  "title": "Are Deep Learning Based Hybrid PDE Solvers Reliable? Why Training Paradigms and Update Strategies Matter",
+  "authors": [
+    "Yuhan Wu",
+    "Jan Willem van Beek",
+    "Victorita Dolean",
+    "Alexander Heinlein"
+  ],
+  "summary": "Deep learning-based hybrid iterative methods (DL-HIMs) integrate classical numerical solvers with neural operators, utilizing their complementary spectral biases to accelerate convergence. Despite this promise, many DL-HIMs stagnate at false fixed points where neural updates vanish while the physical residual remains large, raising questions about reliability in scientific computing. In this paper, we provide evidence that performance is highly sensitive to training paradigms and update strategies, even when the neural architecture is fixed. Through a detailed study of a DeepONet-based…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-02-06",
+  "updated": "2026-06-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

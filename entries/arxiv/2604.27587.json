@@ -1,0 +1,24 @@
+{
+  "key": "2604.27587",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.27587",
+  "title": "Robust Constrained Optimization via Sliding Mode Control",
+  "authors": [
+    "Shyam Kamal",
+    "Baby Diana",
+    "Sunidhi Pandey",
+    "Sandip Ghosh",
+    "Thach Ngoc Dinh"
+  ],
+  "summary": "This paper develops a sliding mode control based frame work for equality constrained optimization by reformulation the first order Karush Kuhn Tucker conditions as control affine dynamical system. The optimization variables are treated as states and the Lagrange multipliers as control input, with equality constraints defined as sliding manifold. The resulting design guarantees exact constraint enforcement with finite time convergence, independent of objective convexity, and exhibits robustness to matched disturbance, structural uncertainty and bounded measurement noise. To accelerate the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-04-30",
+  "updated": "2026-04-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

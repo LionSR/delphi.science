@@ -1,0 +1,23 @@
+{
+  "key": "2608.01151",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.01151",
+  "title": "Learning-Based Stochastic Optimal Control with Infinite-Horizon Probabilistic Constraints",
+  "authors": [
+    "Francesco Cordiano",
+    "Kanghui He",
+    "Bart De Schutter"
+  ],
+  "summary": "In this paper, we consider stochastic optimal control problems with infinite-horizon joint chance constraints. By means of an appropriate state augmentation, we reformulate the original problem as a constrained Markov decision process, in which both the cost and the constraint function exhibit an additive structure. We then prove that this formulation enjoys strong duality, thereby enabling us to reformulate the problem as an equivalent unconstrained one in the Lagrange dual framework. We propose a dual-ascent algorithm to solve the resulting problem and show that it converges to a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "eess.SY"
+  ],
+  "published": "2026-08-02",
+  "updated": "2026-08-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

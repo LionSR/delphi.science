@@ -1,0 +1,24 @@
+{
+  "key": "2601.10557",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.10557",
+  "title": "Chebyshev Accelerated Subspace Eigensolver for Pseudo-hermitian Hamiltonians",
+  "authors": [
+    "Edoardo Di Napoli",
+    "Clément Richefort",
+    "Xinzhe Wu"
+  ],
+  "summary": "Studying the optoelectronic structure of materials can require the computation of several thousands of the smallest positive eigenpairs of a pseudo-hermitian Hamiltonian. Iterative eigensolvers may be preferred over direct methods for this task since their complexity is a function of the desired fraction of the spectrum. In addition, they generally rely on highly optimized and scalable kernels such as matrix-vector multiplications that leverage the massive parallelism and the computational power of modern exascale systems. The Chebyshev Accelerated Subspace iteration Eigensolver (ChASE) is…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.CE",
+    "cs.DC",
+    "physics.comp-ph"
+  ],
+  "published": "2026-01-15",
+  "updated": "2026-04-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

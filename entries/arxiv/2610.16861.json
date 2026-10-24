@@ -1,0 +1,21 @@
+{
+  "key": "2610.16861",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16861",
+  "title": "GpFlash: Maximizing Speed and Minimizing Memory for Gaussian Process Training and Prediction",
+  "authors": [
+    "Andre Marchildon"
+  ],
+  "summary": "This paper presents GpFlash, a Gaussian process library that is focused on fast training and posterior evaluations, minimal memory usage, and scalability to high-dimensional problems. GpFlash was compared to the popular GP libraries scikit-learn, GPy, GPflow, GPyTorch, and SMT on a MacBook Pro and the supercomputer Trillium. GpFlash was found to use less memory and to be faster for training and posterior evaluations relative to the other GP libraries for all cases considered. For example, when using $\\nx = 10^4$ training points in a 10-dimensional space GpFlash required 9.6 to 35 times less…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.MS",
+    "math.OC"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

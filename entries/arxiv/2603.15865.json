@@ -1,0 +1,22 @@
+{
+  "key": "2603.15865",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.15865",
+  "title": "Reachability Analysis for Design Optimization",
+  "authors": [
+    "Steven Nguyen",
+    "Jorge Cortés",
+    "Boris Kramer"
+  ],
+  "summary": "We present an approach to approximate reachable sets for linear systems with bounded L-infinity controls in finite time. Our first approach investigates the boundaries of these sets and reveals an exact characterization for single-input, planar systems with real, distinct eigenvalues. The second approach leverages convergence of the Lp-norms to L-infinity and uses Lp-norm reachable sets as an approximation of the L-infinity-norm reachable sets. Our optimal control results yield insights that make computational approximations of the Lp-norm reachable sets more tractable, and yield exact…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-03-16",
+  "updated": "2026-03-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2604.13096",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.13096",
+  "title": "Complexity scaling and optimal policy degeneracy in quantum reinforcement learning via analytically solvable unitary-control-then-measure models",
+  "authors": [
+    "Andrea Cintio",
+    "Alessandro Michelangeli",
+    "Dmitrii Tsutskov"
+  ],
+  "summary": "We propose and analyse a class of analytically solvable models of quantum reinforcement learning (QRL), formulated as finite-horizon Markov decision processes in finite-dimensional Hilbert spaces. The models are built around a `unitary-control-then-measure' protocol, in which a learning agent applies unitary transformations to a quantum state and interleaves each control step with a projective measurement onto a prescribed reference basis. Exact closed-form expressions for trajectory probabilities, rewards, and the expected return are derived for four concrete realisations: a closed-chain…",
+  "domain": "math.GM",
+  "tags": [
+    "math.GM"
+  ],
+  "published": "2026-04-09",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

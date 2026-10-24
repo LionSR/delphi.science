@@ -1,0 +1,22 @@
+{
+  "key": "2605.26977",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.26977",
+  "title": "Convergence of Spectral Descent for Non-smooth Optimization",
+  "authors": [
+    "Yixuan Yang",
+    "Yuqing He",
+    "Song Li"
+  ],
+  "summary": "The Muon optimizer has recently demonstrated remarkable empirical success in training large language models. However, the theoretical understanding of its mechanisms remains limited. Current convergence guarantees for Muon rely heavily on smoothness assumptions, leaving its non-smooth convergence behavior largely unexplored. In this work, we take a step toward bridging this gap by investigating Spectral Descent (SD), a simplified variant of Muon, together with its truncated counterpart, Truncated Spectral Descent (TSD). Under convexity, Lipschitz continuity, and sharpness conditions, we…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

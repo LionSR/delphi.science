@@ -1,0 +1,20 @@
+{
+  "key": "2610.19797",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.19797",
+  "title": "Smooth periodic extensions by extrapolation and blending for FFT-based differentiation",
+  "authors": [
+    "Ivan Méndez-Cruz",
+    "Faisal Amlani"
+  ],
+  "summary": "Non-periodic functions on closed intervals are extended into sufficiently smooth periodic functions through a continuous Hermite interpolation framework with necessary and sufficient endpoint conditions, using smooth blend-to-zero operators and short extrapolation recurrences. A matrix-free method is introduced for generating these smooth periodic extensions on the fly directly from function values at equidistant points. No precomputed continuation operator or auxiliary basis construction is required. The resulting extensions can then be used for FFT-based differentiation of non-periodic…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

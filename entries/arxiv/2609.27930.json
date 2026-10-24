@@ -1,0 +1,24 @@
+{
+  "key": "2609.27930",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.27930",
+  "title": "Dirichlet Process Mixtures of Trees with Gaussian Process Splits: A Bayesian Nonparametric Framework with Posterior Contraction Rate",
+  "authors": [
+    "Subhasish Basak",
+    "Anik Roy",
+    "Sourabh Bhattacharya"
+  ],
+  "summary": "We propose a Bayesian nonparametric mixture of regression trees with a Dirichlet process prior over tree-parameter pairs, enabling data-driven selection of ensemble size and unifying CART, BART, random forests, and boosting. A novel splitting rule driven by the posterior predictive of a Gaussian process within each terminal node generates flexible, smooth decision boundaries; remarkably, the GP density cancels exactly in the Metropolis--Hastings ratio for GROW/PRUNE moves, ensuring computational feasibility. An exact Gibbs sampler for posterior predictive inference propagates uncertainty…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "cs.LG",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-08-22",
+  "updated": "2026-08-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

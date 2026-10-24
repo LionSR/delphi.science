@@ -1,0 +1,21 @@
+{
+  "key": "2607.07778",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.07778",
+  "title": "A law of robustness for two-layer neural networks with arbitrary weights",
+  "authors": [
+    "Yitzchak Shmalo"
+  ],
+  "summary": "Bubeck, Li and Nagaraj conjectured that, for generic data, any two-layer neural network with $m$ neurons that fits $n$ noisy labels must have Lipschitz constant at least of order $\\sqrt{n/m}$, with no restriction on the size of the weights. Bubeck and Sellke proved a universal version of this law for Lipschitz-parameterized classes, but under a polynomial bound on the parameters; at depth three that boundedness hypothesis is genuinely necessary. The two-layer unbounded-weight case requires a different argument. We prove the conjectured law, up to one logarithmic factor, for every continuous…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

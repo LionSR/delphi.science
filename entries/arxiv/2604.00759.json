@@ -1,0 +1,23 @@
+{
+  "key": "2604.00759",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00759",
+  "title": "A remark on an error analysis for classical and learned Tikhonov regularization schemes",
+  "authors": [
+    "Arne Behrens",
+    "Meira Iske",
+    "Ming Jiang",
+    "Peter Maass",
+    "Sebastian Neumayer"
+  ],
+  "summary": "This paper presents an error analysis of classical and learned Tikhonov regularization schemes for inverse problems. We first demonstrate, both theoretically and numerically, that using a fixed regularization parameter across varying noise levels-which is a common miss-specification in practice-has only a mild impact on the reconstruction error. As a special case, we then investigate scenarios where the true data resides in an unknown finite-dimensional subspace. Here, our results lead to an empirically supported strategy for estimating the unknown dimension based on numerical experiments.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-04-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

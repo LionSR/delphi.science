@@ -1,0 +1,21 @@
+{
+  "key": "2610.02686",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02686",
+  "title": "Asymptotic approximation of sensitivities in finite dimensional continuous data assimilation with application to parameter estimation",
+  "authors": [
+    "Joshua Newey",
+    "Jared P. Whitehead"
+  ],
+  "summary": "We develop a rigorous justification for a parameter estimation algorithm which couples continuous data assimilation to generic optimization. For finite dimensional systems, we provide a rigorous justification of an asymptotic approximation of the sensitivity for the underlying modeled dynamical system, prove that the $L^2$ loss function satisfies an approximate Polyak-Lojasiewicz inequality, and use that result to justify convergence of gradient descent for the proposed algorithm. Numerical examples are provided that demonstrate the precision of the rigorous results.",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "math-ph"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

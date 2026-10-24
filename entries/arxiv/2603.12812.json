@@ -1,0 +1,21 @@
+{
+  "key": "2603.12812",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.12812",
+  "title": "A Level Set Method with Secant Iterations for the Least-Squares Constrained Nuclear Norm Minimization",
+  "authors": [
+    "Chiyu Ma",
+    "Jiaming Ma",
+    "Defeng Sun"
+  ],
+  "summary": "We present an efficient algorithm for least-squares constrained nuclear norm minimization, a computationally challenging problem with broad applications. Our approach combines a level set method with secant iterations and a proximal generation method. As a key theoretical contribution, we establish the nonsingularity of the Clarke generalized Jacobian for a general class of projection norm functions over closed convex sets. This property and the (strong) semismoothness of our value function yield fast local convergence of the secant method. For the resulting nuclear norm regularized…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-13",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

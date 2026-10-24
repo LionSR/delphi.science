@@ -1,0 +1,19 @@
+{
+  "key": "2603.12104",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.12104",
+  "title": "Convergence of the Frank-Wolfe Algorithm for Monotone Variational Inequalities",
+  "authors": [
+    "Matthew Hough"
+  ],
+  "summary": "We consider the Frank-Wolfe algorithm for solving variational inequalities over compact, convex sets under a monotone $C^1$ operator and vanishing, nonsummable step sizes. We introduce a continuous-time interpolation of the discrete iteration and use tools from dynamical systems theory to analyze its asymptotic behavior. This allows us to derive convergence results for the original discrete algorithm. Consequently, every cluster point of the iterates is a solution of the underlying variational inequality, the distance from the iterates to the solution set converges to zero, and the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-12",
+  "updated": "2026-04-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

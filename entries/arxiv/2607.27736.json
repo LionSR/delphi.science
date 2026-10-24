@@ -1,0 +1,22 @@
+{
+  "key": "2607.27736",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.27736",
+  "title": "An Asymptotic-Preserving Dynamical Low-Rank Semi-Lagrangian Method for Multiscale Linear Kinetic Transport Equations",
+  "authors": [
+    "Shun Li",
+    "Yan Jiang",
+    "Mengping Zhang",
+    "Tao Xiong"
+  ],
+  "summary": "In this paper, we develop an asymptotic-preserving (AP) dynamical low-rank semi-Lagrangian method for multiscale linear kinetic transport equations. The method combines the large-time-step capability of semi-Lagrangian discretizations with the storage and cost reduction provided by low-rank representations. The proposed scheme couples an approximate macroscopic density update with the basis update Galerkin integrator for the kinetic distribution. To retain the reduced complexity in the semi-Lagrangian flux evaluation, the flux derivative is computed through a sampled angular quadrature…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-30",
+  "updated": "2026-07-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

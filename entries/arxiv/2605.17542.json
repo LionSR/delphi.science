@@ -1,0 +1,23 @@
+{
+  "key": "2605.17542",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.17542",
+  "title": "Quantum circuits for the advection-diffusion equation with boundary conditions based on LCHS",
+  "authors": [
+    "Leyu Chen",
+    "Tiegang Liu",
+    "Liang Xu",
+    "Kun Wang"
+  ],
+  "summary": "This paper proposes a systematic and explicit quantum circuit framework for solving advection-diffusion equations with boundary conditions, based on the Linear Combination of Hamiltonian Simulations (LCHS) method.By employing the Finite Volume Method (FVM) combined with various flux construction schemes, we elaborate the design of quantum circuits tailored explicitly for Robin boundary conditions (including Dirichlet and Neumann boundary conditions as special cases) and periodic boundary conditions. The Robin boundary elimination is encoded by newly constructed endpoint-projector circuits,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-05-17",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

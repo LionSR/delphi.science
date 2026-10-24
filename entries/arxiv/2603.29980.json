@@ -1,0 +1,23 @@
+{
+  "key": "2603.29980",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.29980",
+  "title": "Voronoi-Based Vacuum Leakage Detection in Composite Manufacturing",
+  "authors": [
+    "Christoph Brauer",
+    "Arne Hindersmann",
+    "Timo de Wolff"
+  ],
+  "summary": "In this article, we investigate vacuum leakage detection problems in composite manufacturing. Our approach uses Voronoi diagrams, a well-known structure in discrete geometry. The Voronoi diagram of the vacuum connection positions partitions the component surface. We use this partition to narrow down potential leak locations to a small area, making an efficient manual search feasible. To further reduce the search area, we propose refined Voronoi diagrams. We evaluate both variants using a novel dataset consisting of several hundred one- and two-leak positions along with their corresponding…",
+  "domain": "math.MG",
+  "tags": [
+    "math.MG",
+    "cs.CG",
+    "math.CO"
+  ],
+  "published": "2026-03-31",
+  "updated": "2026-03-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2602.00474",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.00474",
+  "title": "Persistent-Transient Policy Evaluation for Markov Chains via Minimal Peripheral Quotients",
+  "authors": [
+    "Yang Xu",
+    "Vaneet Aggarwal"
+  ],
+  "summary": "We study fixed-policy evaluation for finite Markov chains that may be reducible and periodic. Classical evaluation methods with gain and bias decomposition are not always diagnostic: the gain records only invariant Cesàro averages, while persistent phase-dependent behavior is absorbed into the bias together with genuinely transient effects. We identify the real peripheral invariant subspace $\\mathcal{K}(P)$ of the transition matrix $P$ as the source of this ambiguity. Quotienting by $\\mathcal{K}(P)$ is the minimal exact quotient that removes all non-decaying modes and makes the remaining…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-01-31",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

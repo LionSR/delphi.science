@@ -1,0 +1,20 @@
+{
+  "key": "2602.13247",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.13247",
+  "title": "Integral Curves and Flows on Banach Manifolds in Lean",
+  "authors": [
+    "Weichen Winston Yin",
+    "Yury Kudryashov"
+  ],
+  "summary": "We present a formalisation of the existence and uniqueness theorems of integral curves of vector fields on Banach manifolds in the Lean theorem prover. First, we formalize properties of differential equations on Banach spaces (the Picard-Lindelöf theorem, the Grönwall inequality, and corollaries), and then transfer results to abstract Banach manifolds. Built upon the differential and integral calculus and Banach manifolds libraries in Mathlib, our work aims to lay the foundation for dynamical systems and differential geometry libraries that are general, robust, and friendly to classical…",
+  "domain": "math.DG",
+  "tags": [
+    "math.DG"
+  ],
+  "published": "2026-02-02",
+  "updated": "2026-02-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

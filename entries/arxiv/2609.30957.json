@@ -1,0 +1,26 @@
+{
+  "key": "2609.30957",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.30957",
+  "title": "Towards Understanding Momentum Acceleration in River-Valley Loss Landscape",
+  "authors": [
+    "Miao Lu",
+    "Zeyu Bian",
+    "Kaiyue Wen",
+    "Beining Wu",
+    "Siyu Chen",
+    "Tianhao Wang",
+    "Zhiyuan Li"
+  ],
+  "summary": "The empirical success of pretraining large language models has inspired a deeper investigation into the underlying loss landscapes and the optimization dynamics. Recent empirical and theoretical study suggest that the training loss landscape often exhibits a \"river-valley\" structure, which features a low-loss manifold (river) flanked by sharp orthogonal directions with higher loss (mountains). In the long term, the optimization progress is determined primarily by the progress along the river. Within such a landscape, gradient descent with large learning rates can move faster along the river…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

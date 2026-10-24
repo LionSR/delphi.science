@@ -1,0 +1,24 @@
+{
+  "key": "2608.10246",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.10246",
+  "title": "Towards Co-Designed Event-Triggered Extremum Seeking",
+  "authors": [
+    "Roberto Luo",
+    "Pedro Henrique Silva Coutinho",
+    "Victor Hugo Pereira Rodrigues",
+    "Tiago Roux Oliveira",
+    "Miroslav Krstic"
+  ],
+  "summary": "This paper studies event-triggered gradient-based multivariable extremum seeking for nonlinear maps with polytopic Hessian uncertainty. Unlike existing event-triggered extremum-seeking methods, which first fix the controller (typically diagonal) and then design the triggering mechanism, the proposed approach jointly synthesizes the controller and the triggering mechanism through a co-design framework that admits both diagonal and full controller gain matrices. The co-design problem is formulated as a convex optimization problem with linear matrix inequality constraints. Its solution…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2603.09682",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.09682",
+  "title": "A Globally Convergent Third-Order Newton Method via Unified Semidefinite Programming Subproblems",
+  "authors": [
+    "Yubo Cai",
+    "Wenqi Zhu",
+    "Coralia Cartis",
+    "Gioele Zardini"
+  ],
+  "summary": "We propose the Adaptive Levenberg-Marquardt Third-Order Newton Method (ALM-TON) method for unconstrained nonconvex optimization; to our knowledge, the framework provides the first globally convergent realization of the unregularized third-order Newton method. Unlike the standard Adaptive Regularization framework with third-order models (AR3), which enforces global behavior through a quartic term, ALMTON employs an adaptive Levenberg-Marquardt (quadratic) regularization. This choice preserves a cubic model at every iteration, so that every subproblem is a tractable semidefinite programming…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-03-10",
+  "updated": "2026-08-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

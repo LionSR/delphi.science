@@ -1,0 +1,20 @@
+{
+  "key": "2610.10819",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.10819",
+  "title": "Analysis and Detection of Stagnation in Floating-Point Summation",
+  "authors": [
+    "Mantas Mikaitis",
+    "William Woolfenden"
+  ],
+  "summary": "Stagnation in the summation of floating-point numbers occurs when the running sum, or the accumulator, does not change its value despite addends being greater than zero. Here we define different types of stagnation - commonly referred to as swamping or absorption, where one operand in an addition is nearly or completely rounded off---in floating-point summation, and propose algorithms for detecting it in numerical code that uses floating-point arithmetic. Whilst cancellation in floating-point arithmetic has been studied, for example by Lam et al. in `Dynamic floating point cancellation…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

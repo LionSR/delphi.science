@@ -1,0 +1,21 @@
+{
+  "key": "2603.08471",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.08471",
+  "title": "Intrinsic Sequentiality in P: Causal Limits of Parallel Computation",
+  "authors": [
+    "Jing-Yuan Wei"
+  ],
+  "summary": "We study a polynomial-time decision problem in which each input encodes a depth-$N$ causal execution in which a single non-duplicable token must traverse an ordered sequence of steps, revealing at most $O(1)$ bits of routing information at each step. The uncertainty in the problem lies in identifying the delivery path through the relay network rather than in the final accept/reject outcome, which is defined solely by completion of the prescribed execution. A deterministic Turing machine executes the process in $Θ(N)$ time. Using information-theoretic tools - specifically cut-set bounds for…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.CC",
+    "cs.IT"
+  ],
+  "published": "2026-03-09",
+  "updated": "2026-03-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

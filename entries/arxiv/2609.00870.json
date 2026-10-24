@@ -1,0 +1,25 @@
+{
+  "key": "2609.00870",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.00870",
+  "title": "Stochastic Optimization of Tree Tensor Networks",
+  "authors": [
+    "Marius Willner",
+    "Maximilian Scharf",
+    "André Uschmajew",
+    "Timo Felser",
+    "Marco Trenti"
+  ],
+  "summary": "Tensor networks, originally developed for quantum many-body physics, are promising models for machine learning. We derive stochastic Riemannian optimizers for tree tensor networks (TTNs) on both their parameter and quotient manifolds, including adaptive and learning-rate-free schemes suitable for minibatch training. Using a hybrid CNN-TTN architecture, we evaluate the methods on Fashion-MNIST, CIFAR10, and Imagenette. The proposed optimizers achieve predictive performance comparable to unconstrained optimization while enabling numerically stable downstream compression.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.CV",
+    "physics.comp-ph"
+  ],
+  "published": "2026-09-01",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

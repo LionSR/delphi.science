@@ -1,0 +1,19 @@
+{
+  "key": "2610.11120",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.11120",
+  "title": "Numerical Neural Operator: Connection Between Numerical Analysis and the Operator Learning and Building Discretized Neural Operators from Finite Element Methods",
+  "authors": [
+    "Zecheng Zhang"
+  ],
+  "summary": "Operator learning aims to learn mappings between function spaces and has been widely used for PDE-related problems. This raises two fundamental questions. First, is there a connection between standard numerical methods and neural operators, given that both are designed to approximate PDE solution operators? Second, when a neural operator is trained on numerically generated data, does it approximate the underlying infinite dimension operator, the training data themselves, or the discretized numerical scheme used to generate them? A key hypothesis in the paper is that the trained neural…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

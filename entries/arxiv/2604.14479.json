@@ -1,0 +1,24 @@
+{
+  "key": "2604.14479",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.14479",
+  "title": "Smooth perturbations of diagonally implicit Runge--Kutta methods",
+  "authors": [
+    "John Driscoll",
+    "Sigal Gottlieb",
+    "Zachary J. Grant",
+    "César Herrera",
+    "Tej Sai Kakumanu",
+    "Monica Stephens"
+  ],
+  "summary": "A mixed accuracy framework for Runge--Kutta methods presented in [Grant, JSC 2022] has been shown to speed up the computation in diagonally implicit Runge--Kutta (DIRK) methods by using less expensive low accuracy approaches for the implicit stages. This theory included both smooth and nonsmooth perturbations, and subsequent work focused primarily on the case of nonsmooth perturbations that arise from mixed precision simulations. In this work the focus is on smooth perturbations that arise from using less accurate models or under-resolved iterative solvers to simplify the implicit…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-15",
+  "updated": "2026-04-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

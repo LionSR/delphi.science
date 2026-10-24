@@ -1,0 +1,21 @@
+{
+  "key": "2607.05073",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.05073",
+  "title": "An augmented Lagrangian method with exact multipliers for non-separable composite $\\ell_0$-$\\ell_2$ regularization",
+  "authors": [
+    "Huan Ren",
+    "Guiyun Xiao"
+  ],
+  "summary": "This paper studies a non-separable composite $\\ell_0$-$\\ell_2$ regularization model that simultaneously enforces sparsity and smoothness for inverse problems. The $\\ell_0$ norm induces inherent nonconvexity and nonsmoothness, while linear transformations further introduce nonseparability, making the problem computationally challenging to solve. The existing inexact augmented Lagrangian method suffers from high computational complexity and unstable convergence. To overcome these difficulties, we develop two novel augmented Lagrangian algorithms with exact multipliers, designed respectively…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-07-06",
+  "updated": "2026-07-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

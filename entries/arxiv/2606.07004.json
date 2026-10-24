@@ -1,0 +1,21 @@
+{
+  "key": "2606.07004",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.07004",
+  "title": "A Range-Deflated Stochastic Lanczos Quadrature Method for Large-Scale Log-Determinant Estimation",
+  "authors": [
+    "Verlon Roel Mbingui",
+    "Antoine Tambue",
+    "Issa Karambal"
+  ],
+  "summary": "Estimating the logarithm of the determinant of large sparse symmetric positive definite matrices is an important problem in numerical linear algebra, machine learning, Gaussian processes, and uncertainty quantification. We propose a range-deflated stochastic Lanczos quadrature method, termed DSLQ, for matrix-free log-determinant estimation inspired by Hutch ++. The method constructs a randomized approximation space directly from products with a scaled version of the original matrix, and uses the associated orthogonal projector to decompose the trace of matrix logarithm into projected and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-05",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

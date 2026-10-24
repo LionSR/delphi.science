@@ -1,0 +1,23 @@
+{
+  "key": "2610.04405",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04405",
+  "title": "CEENs: Causality-enforced evolutional networks for solving time-dependent partial differential equations",
+  "authors": [
+    "Jeahan Jung",
+    "Heechang Kim",
+    "Hyomin Shin",
+    "Minseok Choi"
+  ],
+  "summary": "Despite the growing popularity of physics-informed neural networks (PINNs), their applicability in the long-time integration of partial differential equations (PDEs) remains constrained. We argue that this problem stems from the lack of consideration of temporal causality in the original PINN formulation, resulting in a bias towards satisfying governing equations at later times before learning the initial condition and hence leading to erroneous solutions. To this end, we propose a novel method that seamlessly integrates temporal causality into the training process. Drawing inspiration from…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-10-03",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

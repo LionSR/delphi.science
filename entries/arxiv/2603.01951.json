@@ -1,0 +1,23 @@
+{
+  "key": "2603.01951",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.01951",
+  "title": "Accelerating Single-Pass SGD for Generalized Linear Prediction",
+  "authors": [
+    "Qian Chen",
+    "Shihong Ding",
+    "Cong Fang"
+  ],
+  "summary": "We study generalized linear prediction under a streaming setting, where each iteration uses only one fresh data point for a gradient-level update. While momentum is well-established in deterministic optimization, a fundamental open question is whether it can accelerate such single-pass non-quadratic stochastic optimization. We propose the first algorithm that successfully incorporates momentum via a novel data-dependent proximal method, achieving dual-momentum acceleration. Our derived excess risk bound decomposes into three components: an improved optimization error, a minimax optimal…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-03-02",
+  "updated": "2026-03-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

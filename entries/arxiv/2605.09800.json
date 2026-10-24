@@ -1,0 +1,20 @@
+{
+  "key": "2605.09800",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09800",
+  "title": "Interface Reduction for Elliptic Interface Problems with Conservative Flux Reconstruction",
+  "authors": [
+    "C. Attanayake",
+    "So-Hsiang Chou"
+  ],
+  "summary": "We propose a low-dimensional interface reduction method for elliptic interface problems based on conservative flux reconstruction. The approach combines a fitted $P_1$ finite element discretization with a flux recovery procedure following \\cite{ChouTang2000}, yielding locally conservative fluxes that satisfy interface conditions to machine precision. A central result shows that the error of the reduced solution is controlled entirely by the approximation error of the interface data. Numerical experiments for both continuous and discontinuous interface conditions confirm that once the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-10",
+  "updated": "2026-05-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2606.29987",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.29987",
+  "title": "Dirichlet-Neumann waveform relaxation for heterogeneous heat equations: continuous and time discrete L2 analysis",
+  "authors": [
+    "Philipp Birken",
+    "Martin J. Gander",
+    "Niklas Kotarsky",
+    "Lu-di Lu"
+  ],
+  "summary": "We consider two coupled linear heat equations on different spatial domains that interact through a lower dimensional interface. This models conjugate heat transfer. The problem is solved using Dirichlet--Neumann waveform relaxation. This allows us to couple separate codes for the subproblems, a so-called partitioned approach. Our overall goal is to develop more efficient partitioned methods, and to this end, we want reliable error estimates. We use an exponentially weighted Fourier technique to derive new error estimates in $L^2$ for finite time $T$ in both continuous and time-discrete…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2603.28981",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.28981",
+  "title": "A conservative finite-volume Buckley--Leverett solver with bounded-interval multiwavelet state analysis",
+  "authors": [
+    "Christian Tantardini"
+  ],
+  "summary": "We develop a conservative finite-volume Buckley--Leverett solver equipped with a bounded-interval multiwavelet state-analysis layer. Because non-capillary Buckley--Leverett transport is a nonlinear hyperbolic conservation law with entropy-admissible shocks, the saturation equation is advanced by a conservative finite-volume method with monotone numerical fluxes. The accepted finite-volume state is then embedded in a bounded-domain multiwavelet hierarchy, reconstructed back to cell averages, and used for multiresolution diagnostics. The formal transport accuracy is therefore governed by the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-03-30",
+  "updated": "2026-07-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

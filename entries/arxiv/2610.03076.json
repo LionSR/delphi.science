@@ -1,0 +1,24 @@
+{
+  "key": "2610.03076",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03076",
+  "title": "Shapley-based Structural Analysis of Neural Calibration for Stochastic Volatility Models",
+  "authors": [
+    "Shaïn Afzali",
+    "Serena Della Corte",
+    "Antonis Papapantoleon"
+  ],
+  "summary": "Neural network-based approaches have emerged as efficient alternatives to traditional optimization-based procedures for the calibration of stochastic volatility models. However, existing work has focused primarily on predictive accuracy, with comparatively little attention devoted to understanding the structure of the learned inverse calibration mappings. In this work, we analyze neural calibration mappings for the Heston and rough Heston models across multilayer perceptron, highway, and softmax-parametrized highway architectures, using complementary Shapley-based methods from explainable…",
+  "domain": "q-fin.CP",
+  "tags": [
+    "q-fin.CP",
+    "cs.LG",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

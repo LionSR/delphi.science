@@ -1,0 +1,22 @@
+{
+  "key": "2610.14620",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.14620",
+  "title": "Dimension-independent eigenvalue approximation for sparse matrices",
+  "authors": [
+    "Natalia Hajlasz",
+    "Christopher Musco",
+    "Jonathan Weare",
+    "Robert J. Webber"
+  ],
+  "summary": "Many applications in science and engineering require solving sparse Hermitian eigenvalue problems that are so large that even algorithms whose runtime scales linearly with the matrix dimension are unacceptably slow. Responding to this challenge, there is a growing body of work on sparsified iterative methods and submatrix selection methods that often perform well in practice. However, theoretical understanding of these methods is limited. In this paper, we take a step toward better understanding sublinear-time eigenvalue computation by analyzing the sparsified power method. We prove that the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-10",
+  "updated": "2026-10-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2607.04366",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04366",
+  "title": "Complete Asymptotic Expansion of the Additive Mertens Sum $S_k(x)$",
+  "authors": [
+    "Daoyi Peng",
+    "Hao Liu"
+  ],
+  "summary": "Let $p_1, \\dotsc, p_k$ be primes not exceeding $x$ ($k \\geqslant 2$), and define the additive Mertens sum \\[ S_k(x) = \\sum_{p_1 \\leqslant x} \\cdots \\sum_{p_k \\leqslant x} \\frac{1}{p_1 + \\dotsm + p_k}. \\] In contrast to Tenenbaum's generalized (multiplicative) Mertens sum, whose leading term has order $(\\log \\log x)^k$, the sum $S_k(x)$ has leading term of order $x^{k-1}/\\log^k x$. We establish the complete asymptotic expansion \\[ S_k(x) = \\frac{x^{k-1}}{\\log^k x} \\sum_{n=0}^{N} \\frac{E_{k,n}}{\\log^n x} + O_{k,N}\\left(\\frac{x^{k-1}}{\\log^{k+N+1} x}\\right) \\quad (\\forall\\, N \\geqslant 0), \\]…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-07-05",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

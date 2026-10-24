@@ -1,0 +1,22 @@
+{
+  "key": "2604.08742",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.08742",
+  "title": "Deterministic Adam-Inspired Methods with Accelerated Convergence Rate",
+  "authors": [
+    "Yaxin Yu",
+    "Long Chen",
+    "Zeyi Xu"
+  ],
+  "summary": "Adam is widely used, but its convergence theory remains incomplete even in the deterministic full-batch setting because momentum and adaptive preconditioning are tightly coupled. For smooth convex objectives, we split the momentum variable through variable-and-operator splitting, which reveals the acceleration mechanism. We then combine a Hessian-driven correction with Adam-style feedback based on the gradient magnitude. The resulting Adam-HNAG (Hessian-driven Nesterov accelerated gradient with Adam-style adaptive preconditioning) flow admits a nonnegative energy that decays exponentially.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-04-09",
+  "updated": "2026-08-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

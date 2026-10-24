@@ -1,0 +1,22 @@
+{
+  "key": "2608.08040",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.08040",
+  "title": "A cylindrical neural approximation theorem for conditional laws of McKean-Vlasov equations with common noise",
+  "authors": [
+    "Nacira Agram",
+    "Reda Hmioui",
+    "Jan Rems"
+  ],
+  "summary": "We introduce conditional cylindrical neural networks for approximating functionals of conditional laws in McKean-Vlasov equations with common noise. Fourier moments of the initial law and truncated signatures of the time augmented common noise are mapped by a mixture density network to a Gaussian mixture approximation of the conditional law. A cylindrical neural network then evaluates the target functional through analytic integrals against this predicted measure. Rough path well posedness and stability provide a conditional law map that is continuous in the initial distribution and the…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.LG"
+  ],
+  "published": "2026-08-08",
+  "updated": "2026-08-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2607.26709",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.26709",
+  "title": "Markov Chain Approximation of Sticky Diffusions and Hamilton-Jacobi-Bellman Equations on Networks",
+  "authors": [
+    "Alessio Basti",
+    "Jules Berry",
+    "Fabio Camilli"
+  ],
+  "summary": "We propose a discrete Markov-chain approximation of diffusion processes on networks with both Kirchhoff and sticky vertex conditions. Stickiness is modeled by a probabilistic residence mechanism at the vertex, while the motion along the edges follows an Euler-Maruyama-type update at the diffusive scale. We prove that the associated time-interpolated chain converges in distribution to the limiting diffusion in the Skorokhod space using the Ethier-Kurtz framework. Based on this construction, we derive a fully discrete semi-Lagrangian scheme for Hamilton-Jacobi-Bellman equations on networks and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

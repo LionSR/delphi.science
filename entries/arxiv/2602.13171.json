@@ -1,0 +1,22 @@
+{
+  "key": "2602.13171",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.13171",
+  "title": "Complex to Rational Fast Matrix Multiplication",
+  "authors": [
+    "Yoav Moran",
+    "Oded Schwartz",
+    "Shuncheng Yuan"
+  ],
+  "summary": "Fast matrix multiplication algorithms are asymptotically faster than the classical cubic-time algorithm, but they are often slower in practice. One important obstacle is the use of complex coefficients, which increases arithmetic overhead and limits practical efficiency. This paper focuses on transforming complex-coefficient matrix multiplication schemes into equivalent real- or rational-coefficient ones. We present a systematic method that, given a complex-coefficient scheme, either constructs a family of equivalent rational algorithms or proves that no equivalent rational scheme exists.…",
+  "domain": "math.RA",
+  "tags": [
+    "math.RA",
+    "cs.CC"
+  ],
+  "published": "2026-02-13",
+  "updated": "2026-02-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2608.20531",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.20531",
+  "title": "Nyström method for symmetric indefinite matrices",
+  "authors": [
+    "Yijia Chen",
+    "Yuji Nakatsukasa",
+    "Anjali Narendran",
+    "Taejun Park"
+  ],
+  "summary": "The Nyström method approximates $A\\approx A(\\,:\\,,I)A(I,I)^{\\dagger} A(\\,:\\,,I)^{\\top}=CA(I,I)^{\\dagger} C^{\\top}$, where $C:=A(:,I)\\in\\mathbb{R}^{n\\times r}$ is a column subset matrix of $A$. When applied to symmetric but indefinite matrices, the Nyström method can fail because the core matrix $A(I,I)$ may severely underestimate the eigenvalues of $A$ and may become (nearly) singular. We address this issue by developing and analyzing an algorithm that carefully chooses $\\widehat{M}\\in\\mathbb{R}^{r\\times r}$ in place of $A(I,I)^\\dagger$ by solving the two-sided sketched least-squares problem…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-20",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

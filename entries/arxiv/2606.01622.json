@@ -1,0 +1,22 @@
+{
+  "key": "2606.01622",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.01622",
+  "title": "An alternating learning-based collocation method for solving inverse elliptic problems",
+  "authors": [
+    "Zhizhong Kong",
+    "Jerry Zhijian Yang",
+    "Cheng Yuan"
+  ],
+  "summary": "We propose the Alternating Learning-Based Collocation (ALBC) method for solving inverse elliptic problems. Our approach employs sinusoidal shallow networks as adaptive basis generators. By alternately updating the state variable and the unknown parameter, we decompose the original nonconvex joint optimization problem into a sequence of tractable linear subproblems. This strategy effectively overcomes the fixed-basis limitations of classical collocation methods while avoiding the slow convergence typically encountered in deep learning approaches. Theoretically, we establish stability…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

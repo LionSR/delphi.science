@@ -1,0 +1,22 @@
+{
+  "key": "2606.23077",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.23077",
+  "title": "Non-intrusive nonlinear reduced-order modeling with variable projection",
+  "authors": [
+    "Dimitrios Xylogiannis",
+    "Charles Poussot-Vassal",
+    "Claire Sarrat"
+  ],
+  "summary": "This work presents a method for constructing nonlinear reduced-order models from input-output time-domain data. The proposed approach, termed Mixed Interpolatory Inference with Variable Projection (MIIvp), exploits the fact that the considered class of nonlinear state-space models is linear in the output equation parameters. By applying the Variable Projection (VarPro) algorithm, the optimization is restricted to the state equation parameters alone, while the output equation parameters are recovered via linear least squares. As a consequence, the output dimension does not enter the nonlinear…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.DS"
+  ],
+  "published": "2026-06-22",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

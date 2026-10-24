@@ -1,0 +1,22 @@
+{
+  "key": "2605.04589",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04589",
+  "title": "Multiscale Euclidean Network Trajectories: Second-Moment Geometry, Attribution, and Change Points",
+  "authors": [
+    "Haruka Ezoe",
+    "Ryohei Hisano"
+  ],
+  "summary": "Understanding a dynamic network requires more than locating when it changes: we also want to know the magnitude and structural direction of change and which nodes contribute. Unfolded spectral embedding places network snapshots in a joint representation, but the underlying rectangular latent factorization is invariant under general linear transformations. Such transformations preserve edge probabilities while potentially distorting Euclidean second moments. We introduce Multiscale Euclidean Network Trajectories (MENT), whose central estimands are pairwise second-moment operators of the…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

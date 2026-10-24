@@ -1,0 +1,22 @@
+{
+  "key": "2610.21455",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.21455",
+  "title": "An Alternating Minimization Algorithm for Federated Sparse Orthogonal Nonnegative Matrix Factorization",
+  "authors": [
+    "Yanjiao Zhu",
+    "Xianchao Xiu",
+    "Yongyang Xiong",
+    "Wanquan Liu"
+  ],
+  "summary": "In this paper, we develop an alternating minimization algorithm for federated sparse orthogonal nonnegative matrix factorization (ONMF) with emphases on controlling client drift. To reduce communication frequency, clients perform multiple local updates between communication rounds, biasing updates toward their respective local objectives and giving rise to client drift, particularly under data heterogeneity. In federated sparse ONMF, global nonsmooth regularization further complicates drift control, as proximal mappings generally do not commute with averaging. To address these challenges, we…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

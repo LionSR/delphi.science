@@ -1,0 +1,20 @@
+{
+  "key": "2607.07165",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.07165",
+  "title": "Optimized Stencil Strategy for the Generalized Finite Difference Method: Application to Steady-State Non-Linear Problems",
+  "authors": [
+    "Stéphane Clain",
+    "Jorge Figueiredo"
+  ],
+  "summary": "We propose an optimized stencil strategy for the Generalized Finite Difference Method (GFDM) applied to non-linear problems. We take advantage of the flexibility of GFDM to engineer specific stencils by agglomerating nodes and balancing size with numerical accuracy. Previous work, focusing on the stencil construction for the linear convection-diffusion problem, showed that optimizing stencils and scaling parameters improves the scheme. The present study aims to investigate similar benefits for non-linear problems such as the Burgers' equations and the weakly compressible Navier-Stokes system.",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2607.07641",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.07641",
+  "title": "The $abc$ Conjecture Revisited",
+  "authors": [
+    "Patrick Letendre"
+  ],
+  "summary": "We propose a new abc-type conjecture. We motivate the conjecture and illustrate its relevance through several applications. Our main result concerns the function $$ W(x,y) := \\sum_{j = 1}^{y}ω(x+j) \\quad (y \\in \\mathbb{N},\\ x \\in \\mathbb{Z}_{\\ge 0}) $$ where $ω(n)$ denotes the number of distinct prime divisors of $n$. The new conjecture implies that, for each fixed $y \\in \\mathbb{N}$, $$ \\limsup_{x \\to \\infty} \\frac{W(x,y)\\log\\log x}{\\log x} = 1. $$",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

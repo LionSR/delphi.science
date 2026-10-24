@@ -1,0 +1,20 @@
+{
+  "key": "2603.20918",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20918",
+  "title": "Mirror-Free Proximal Methods",
+  "authors": [
+    "Abhijeet Vyas",
+    "Brian Bullins"
+  ],
+  "summary": "We present a \\emph{mirror-free} mirror prox (MFMP) algorithm, which extends the classic approach of Nemirovski (2004) to allow for proximal-like updates without the explicit need for a mirror map. We further analyze the convergence of our method under suitable notions of relative smoothness and relative Lipschitzness, for which we introduce a relaxation of the standard Bregman divergence in terms of more general potential operators. Finally, we show how a strongly monotone variant of our method allows us to solve regularized Taylor-expansion subproblems that appear in both second- and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-21",
+  "updated": "2026-03-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2609.20999",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20999",
+  "title": "Aggregated Posterior Predictive Checks for Generative Modeling",
+  "authors": [
+    "Shweta Dutta",
+    "Gemma E. Moran"
+  ],
+  "summary": "Latent variable generative models are commonly fit using simple priors over latent variables, but draws from these priors often fail to produce realistic data. This failure is due to a mismatch between the prior and the aggregated posterior, the distribution of latent variables induced by the fitted model and the data. This mismatch is often viewed as evidence that the prior is misspecified and should be replaced. Alternatively, in modern generative models, a two-stage strategy is increasingly used where first, the model is fit, and second, the aggregated posterior is estimated (van den Oord…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "cs.LG",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

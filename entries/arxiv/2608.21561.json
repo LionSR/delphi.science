@@ -1,0 +1,20 @@
+{
+  "key": "2608.21561",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.21561",
+  "title": "Loss-Parameterized Fisher Width Along Learning Trajectories",
+  "authors": [
+    "Vu Khac Ky"
+  ],
+  "summary": "Fisher width measures the Gaussian width of a probe set after deformation by the local Fisher geometry. We study its evolution along learning trajectories and ask when training loss can serve as an effective coordinate for this quantity. We first derive an exact trace--shape factorization and a deterministic stability bound for fixed compact probes. In a population Gaussian-teacher logistic model, the teacher-aligned state is extremal on every loss level below $\\log 2$: it has minimal parameter norm and maximizes both Fisher trace and Euclidean-ball Fisher width. We then show that population…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-08-21",
+  "updated": "2026-08-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

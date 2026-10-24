@@ -1,0 +1,25 @@
+{
+  "key": "2608.13382",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.13382",
+  "title": "A Dense Weisfeiler-Leman Algorithm for Deciding Bounded-Cliquewidth Homomorphism Indistinguishability",
+  "authors": [
+    "Radu Curticapean",
+    "Daniel Neuen",
+    "Amir Nikabadi",
+    "Tim Seppelt",
+    "Ben Young"
+  ],
+  "summary": "Two graphs $G$ and $H$ are homomorphism indistinguishable over a graph class $\\mathcal{F}$ if they admit the same number of homomorphisms from every graph in $\\mathcal{F}$. A wide range of relaxations of graph isomorphism arise this way: isomorphism itself over the class of all graphs [Lovász, Acta Math. Hung. 1967], equivalence under the $k$-dimensional Weisfeiler-Leman algorithm over the graphs of treewidth $\\leq k$ [Dvořák, J. Graph Theory 2010], and quantum isomorphism over planar graphs [Mančinska-Roberson, FOCS 2020]. Since the class $\\mathcal{F}$ is typically infinite, it is not clear…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "cs.CC",
+    "math.CO"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

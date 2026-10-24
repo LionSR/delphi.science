@@ -1,0 +1,27 @@
+{
+  "key": "2609.12113",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.12113",
+  "title": "Score-based Outlier Generation via Controlling the Radon-Nikodym Derivative",
+  "authors": [
+    "Amartya Mukherjee",
+    "Tristan Milne",
+    "Kry Yik-Chau Lui",
+    "Stephanie Hazlewood",
+    "Jun Liu"
+  ],
+  "summary": "Outliers are important for stress-testing algorithms and understanding system behaviour under rare conditions. Despite being commonly described as low-likelihood events, existing generative approaches rarely control likelihood explicitly. In this work, we introduce a measure-theoretic notion of outliers based on the distribution of log-likelihood values, which is guaranteed to assign higher probability mass to low-likelihood events with a specifiable magnitude. Building on this formulation, we derive how likelihood reweighting modifies the diffusion score and use this relation to motivate a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.AP",
+    "math.OC",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2607.07022",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.07022",
+  "title": "Coordinate-wise Elephant Random Walk",
+  "authors": [
+    "Denisse A. Escobar Parra"
+  ],
+  "summary": "We introduce a coordinate-wise version of the elephant random walk on the $k$-dimensional discrete hypercube $Q_k=\\{-1,1\\}^k$. At each global time step, one coordinate is selected uniformly at random and updated according to an elephant-type memory rule using only the past values of that coordinate. The resulting process is a nearest-neighbor walk with possible holding on the hypercube, but it is not Markovian on $Q_k$ because the transition probabilities depend on coordinate-wise empirical histories. We show that, when all memory parameters satisfy $p_i<1$, the coordinate-wise memory biases…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

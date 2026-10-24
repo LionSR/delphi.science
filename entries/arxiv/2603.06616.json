@@ -1,0 +1,24 @@
+{
+  "key": "2603.06616",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.06616",
+  "title": "RACER: Risk-Aware Calibrated Efficient Routing for Large Language Models",
+  "authors": [
+    "Sai Hao",
+    "Hao Zeng",
+    "Hongxin Wei",
+    "Bingyi Jing"
+  ],
+  "summary": "Efficiently routing queries to the optimal large language model (LLM) is crucial for optimizing the cost-performance trade-off in multi-model systems. However, most existing routers rely on single-model selection, making them susceptible to misrouting. In this work, we formulate LLM routing as the $α$-VOR problem to minimize expected set size while controlling the misrouting risk, and propose a novel method -- RACER, extending base routers to output model sets that can be subsequently aggregated for improved output. In particular, RACER constructs nested model sets via augmented scoring and…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.ST"
+  ],
+  "published": "2026-02-20",
+  "updated": "2026-02-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

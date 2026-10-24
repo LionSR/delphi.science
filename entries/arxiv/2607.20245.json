@@ -1,0 +1,24 @@
+{
+  "key": "2607.20245",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.20245",
+  "title": "Mixed finite element discretization of intrinsic geometrically exact beams for multiplier-free multibody dynamics",
+  "authors": [
+    "Andrea Brugnoli",
+    "Philipp L. Kinon",
+    "Francesco Sanfedino",
+    "Peter Betsch",
+    "Olivier A. Bauchau"
+  ],
+  "summary": "The Reissner-Simo and Hodges models are two equivalent continuous descriptions of finite-strain beam dynamics. The Reissner-Simo formulation uses displacements and rotations, while the Hodges formulation is intrinsic and avoids both variables. Although equivalent in theory, the two approaches behave differently after discretization and offer distinct numerical advantages. In this work, we develop a structure-preserving discretization of the intrinsic planar beam formulation. Because the intrinsic equations involve linear differential operators, both kinematic and dynamic boundary conditions…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-07-22",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

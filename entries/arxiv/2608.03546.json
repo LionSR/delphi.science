@@ -1,0 +1,23 @@
+{
+  "key": "2608.03546",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.03546",
+  "title": "Pursuing Optimal Stepsize in Adaptive Gradient-Based Quadratic Optimization",
+  "authors": [
+    "Yifan Wang",
+    "Luca Ballotta",
+    "Ruggero Carli",
+    "Xianghui Cao",
+    "Luca Schenato"
+  ],
+  "summary": "In this paper, we address the problem of achieving fast convergence in gradient descent for quadratic functions without relying on a priori knowledge of global function parameters. Inspired by adaptive stepsize algorithms for smooth convex functions, we propose a computationally lightweight strategy based on running estimates of minimal and maximal local curvatures. We prove that our proposed algorithm converges to the optimal constant stepsize which achieves the fastest convergence. Simulations show that the convergence rate achieved by our proposed algorithm is comparable or superior to…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

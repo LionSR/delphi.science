@@ -1,0 +1,26 @@
+{
+  "key": "2601.20295",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.20295",
+  "title": "Cheap2Rich: A Multi-Fidelity Framework for Data Assimilation and System Identification of Multiscale Physics -- Rotating Detonation Engines",
+  "authors": [
+    "Yuxuan Bao",
+    "Jan Zajac",
+    "Megan Powers",
+    "Venkat Raman",
+    "J. Nathan Kutz"
+  ],
+  "summary": "Bridging the sim2real gap between computationally inexpensive models and complex physical systems remains a central challenge in machine learning applications to engineering problems, particularly in multi-scale settings where reduced-order models typically capture only dominant dynamics. In this work, we present Cheap2Rich, a multi-scale data assimilation framework that reconstructs high-fidelity state spaces from sparse sensor histories by combining a fast low-fidelity prior with learned, interpretable discrepancy corrections. We demonstrate the performance on rotating detonation engines…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CE",
+    "math.DS"
+  ],
+  "published": "2026-01-28",
+  "updated": "2026-01-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

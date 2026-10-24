@@ -1,0 +1,21 @@
+{
+  "key": "2610.08987",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08987",
+  "title": "The internal model principle in reservoir computing",
+  "authors": [
+    "Danyal Saqib",
+    "Alberto Padoan"
+  ],
+  "summary": "The paper studies learning in reservoir computing systems through the lens of the internal model principle. The key idea is to model training signals as outputs of an exogenous signal generator, thus connecting reservoir computing to output regulation, observer theory, and frequency-domain interpolation. For linear signal generators, we characterize the steady-state response of a linear reservoir through invariant subspaces, establishing connections with Luenberger observers and classical frequency-domain interpolation. For nonlinear signal generators, we obtain analogous results using…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

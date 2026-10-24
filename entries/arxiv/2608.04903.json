@@ -1,0 +1,21 @@
+{
+  "key": "2608.04903",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.04903",
+  "title": "A commutant gate for spectral fitting through symmetry forced degeneracy",
+  "authors": [
+    "Stelios Savva"
+  ],
+  "summary": "Learned spectral models fail at symmetry forced degenerate sectors for two distinct reasons. Where symmetry forces levels to coincide exactly, the per level observable one would normally fit is not well defined, since every unit vector of that shared space is an eigenvector; and near a symmetry protected crossing, the eigenvector observable gradient carries a factor 1/(lambda_i - lambda_j) that is genuinely singular as the gap closes. The usual response is to regularize the divergence or threshold the gap, and both carry a real cost: a fixed gap cannot both protect a forced multiplet and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "nucl-th",
+    "physics.comp-ph"
+  ],
+  "published": "2026-08-05",
+  "updated": "2026-08-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

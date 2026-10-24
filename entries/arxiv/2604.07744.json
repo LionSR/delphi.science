@@ -1,0 +1,23 @@
+{
+  "key": "2604.07744",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.07744",
+  "title": "The Condition-Number Principle for Prototype Clustering",
+  "authors": [
+    "Romano Li",
+    "Jianfei Cao"
+  ],
+  "summary": "We develop a geometric framework that links objective accuracy to structural recovery in prototype-based clustering. The analysis is algorithm-agnostic and applies to a broad class of admissible loss functions. We define a clustering condition number that compares within-cluster scale to the minimum loss increase required to move a point across a cluster boundary. When this quantity is small, any solution with a small suboptimality gap must also have a small misclassification error relative to a benchmark partition. The framework also clarifies a fundamental trade-off between robustness and…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "econ.EM",
+    "math.ST"
+  ],
+  "published": "2026-04-09",
+  "updated": "2026-04-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

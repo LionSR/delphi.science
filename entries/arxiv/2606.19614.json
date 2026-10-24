@@ -1,0 +1,21 @@
+{
+  "key": "2606.19614",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.19614",
+  "title": "On a class of modified Cayley--Magnus methods",
+  "authors": [
+    "Sergio Blanes",
+    "Fernando Casas",
+    "Arieh Iserles"
+  ],
+  "summary": "We introduce a new class of numerical integrators for the time integration of non-autonomous linear ordinary differential equations whose coefficient matrix is sparse and evolves within a quadratic matrix Lie group. In contrast to standard Lie group integrators, the proposed methods avoid the evaluation of matrix exponentials acting on vectors and instead rely on solving a sequence of linear systems with sparse coefficient matrices. Moreover, they are well suited for problems arising from unbounded operators, as they inherently produce bounded solutions. We construct optimised schemes of…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-17",
+  "updated": "2026-06-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

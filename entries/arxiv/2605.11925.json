@@ -1,0 +1,21 @@
+{
+  "key": "2605.11925",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11925",
+  "title": "A degenerate reaction-diffusion SIR model in interconnected regions",
+  "authors": [
+    "Omar Elamraoui",
+    "Jawad Salhi",
+    "Abderrahim Zafrar"
+  ],
+  "summary": "This paper presents a novel time-space SIR (Susceptible-Infected-Recovered) model for simulating infectious disease dynamics in two interconnected regions. The model is formulated as a coupled reaction-diffusion system with boundary conditions that dynamically switch from Robin to Neumann types, effectively modelling policy-driven interventions such as lockdowns. A key innovation lies in the incorporation of degenerate diffusion, arising from vanishing population density, which significantly influences transmission behaviour near regional borders. The wellposedness of the model is rigorously…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

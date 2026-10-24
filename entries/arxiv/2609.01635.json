@@ -1,0 +1,22 @@
+{
+  "key": "2609.01635",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.01635",
+  "title": "Discretization-free exact recovery in geometric community detection",
+  "authors": [
+    "Maarten Hoeneveld",
+    "Moritz Otto",
+    "Raphaël Sala"
+  ],
+  "summary": "Geometric community detection seeks to recover latent communities in networks where connectivity depends jointly on community structure and continuous spatial geometry. Existing exact-recovery approaches typically discretize the underlying space, which can impose restrictive structural assumptions on the connectivity functions. We develop a polynomial-time, discretization-free algorithm for exact recovery in the Geometric Hidden Community Model (GHCM), operating directly on the continuous geometry. Our method succeeds even when connectivity functions coincide on a nontrivial portion of their…",
+  "domain": "cs.SI",
+  "tags": [
+    "cs.SI",
+    "math.PR"
+  ],
+  "published": "2026-08-23",
+  "updated": "2026-08-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

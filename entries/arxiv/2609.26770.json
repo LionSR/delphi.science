@@ -1,0 +1,22 @@
+{
+  "key": "2609.26770",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.26770",
+  "title": "Refining GLSDC for Orbit Determination",
+  "authors": [
+    "Abhijeet",
+    "Raja Abhishek Appana",
+    "Mrinal Kumar",
+    "Suman Chakravorty"
+  ],
+  "summary": "This paper investigates the ambiguity of noisy short-arc angles-only orbit determination for a Molniya-orbit case study. Conventional Gauss Initial Orbit Determination followed by Gaussian Least-Squares Differential Correction is first shown to be unreliable under high-noise short-arc conditions, frequently failing to converge or converging to hyperbolic local solutions. To explore the candidate solution space, a Lambert-based initialization procedure is used over a grid of assumed ranges and angular-observation pairs, and the resulting states are refined using nonlinear least-squares…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS"
+  ],
+  "published": "2026-09-22",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

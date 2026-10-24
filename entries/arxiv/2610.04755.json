@@ -1,0 +1,21 @@
+{
+  "key": "2610.04755",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04755",
+  "title": "Global Optimization of Mixed-Integer Bound-Constrained Quadratic Fractional Problems",
+  "authors": [
+    "Marco Locatelli",
+    "Veronica Piccialli",
+    "Antonio M. Sudoso"
+  ],
+  "summary": "We study mixed-integer quadratic fractional optimization problems with binary and continuous box-constrained variables. The objective is the ratio of two quadratic functions, a structure that arises naturally in portfolio selection, signal processing, and data analytics. We propose an exact algorithm based on Dinkelbach's parametric reformulation. At each Dinkelbach iteration, the fractional problem is replaced by a nonconvex mixed-integer quadratic subproblem with box constraints. This subproblem is solved globally by a specialized branch-and-bound solver. To accelerate the outer scheme, we…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-03",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2608.09870",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.09870",
+  "title": "Logarithmic-Free Moment and Generalization Bounds for Uniformly Stable Algorithms",
+  "authors": [
+    "Thanh Nguyen-Cung",
+    "Binh T. Nguyen"
+  ],
+  "summary": "Uniform stability is a classical tool for controlling the generalization error of a learning algorithm. Bousquet, Klochkov, and Zhivotovskiy (2020) showed that the problem can be reduced to a moment inequality for a sum of weakly interacting functions of independent random variables. Their bound contains an additional factor $\\log n$, and they asked whether this factor can be removed. We answer this upper-bound question affirmatively. More specifically, let $Z=(Z_1,\\ldots,Z_n)$ have independent coordinates and let $g_i(Z)$ satisfy $\\mathbb E[g_i(Z)\\mid Z_{-i}]=0, \\ \\left| \\mathbb…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.PR",
+    "math.ST"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

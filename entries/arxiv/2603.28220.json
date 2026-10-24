@@ -1,0 +1,23 @@
+{
+  "key": "2603.28220",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.28220",
+  "title": "Bundle EXTRA for Decentralized Optimization",
+  "authors": [
+    "Haijuan Liu",
+    "Zhuoqing Zheng",
+    "Cong Li",
+    "Wenying Xu",
+    "Xuyang Wu"
+  ],
+  "summary": "Decentralized primal-dual methods are widely used for solving decentralized optimization problems, but their updates often rely on the potentially crude first-order Taylor approximations of the objective functions, which can limit convergence speed. To overcome this, we replace the first-order Taylor approximation in the primal update of EXTRA, which can be interpreted as a primal-dual method, with a more accurate multi-cut bundle model, resulting in a fully decentralized bundle EXTRA method. The bundle model incorporates historical information to improve the approximation accuracy,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-30",
+  "updated": "2026-03-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

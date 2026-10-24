@@ -1,0 +1,20 @@
+{
+  "key": "2605.28757",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.28757",
+  "title": "Learning Approximate Solutions to Multiparametric Generalized Nash Equilibrium Problems",
+  "authors": [
+    "A. Bemporad",
+    "T. Tatarenko"
+  ],
+  "summary": "We propose a learning-based approach for approximating solution mappings of multiparametric generalized Nash equilibrium problems (GNEPs) with coupling in both objectives and constraints. Rather than solving a standard regression problem on a training dataset of GNEP solutions, which are expensive and possibly difficult to collect, we use the Nikaido-Isoda (NI) gap function as a training loss, which requires only best-response data. To avoid bilevel optimization, a value-function surrogate approximates each agent's optimal best-response cost and is substituted into the NI loss, yielding a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-27",
+  "updated": "2026-05-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

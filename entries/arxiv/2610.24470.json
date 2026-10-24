@@ -1,0 +1,21 @@
+{
+  "key": "2610.24470",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.24470",
+  "title": "A Gauge-Invariant Finite Element Method for the Time-Dependent Ginzburg--Landau Equations",
+  "authors": [
+    "Huadong Gao",
+    "Yuhui Huang",
+    "Wen Xie"
+  ],
+  "summary": "It is well known that the Ginzburg--Landau equations are gauge invariant. The most popular gauge choice in practical simulations is the temporal gauge, also known as the zero electric potential gauge. However, the commonly used Nédélec approximations may produce spurious giant vortices on domains with re-entrant corners. To address this issue while retaining the Nédélec approximation, we propose a finite element scheme that preserves the gauge invariance of the time-dependent Ginzburg--Landau equations at the discrete level. Under the temporal gauge, the method employs lowest-order Nédélec…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-17",
+  "updated": "2026-10-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2603.04376",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.04376",
+  "title": "Formalization in Lean of faithfully flat descent of projectivity",
+  "authors": [
+    "Liran Shaul"
+  ],
+  "summary": "We formalize in Lean the following foundational result in commutative algebra: Let $R \\to S$ be a faithfully flat map of (not necessarily noetherian) commutative rings, and let $P$ be an arbitrary $R$-module. Then $P$ is projective over $R$ if and only if $S\\otimes_R P$ is projective over $S$. This formalizes and verifies Perry's fix of a subtle gap in the classical work of Raynaud and Gruson, a result which is a key ingredient in the study of finitistic dimension of commutative noetherian rings.",
+  "domain": "math.AC",
+  "tags": [
+    "math.AC",
+    "math.RA"
+  ],
+  "published": "2026-03-04",
+  "updated": "2026-03-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

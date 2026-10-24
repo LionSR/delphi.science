@@ -1,0 +1,22 @@
+{
+  "key": "2608.06055",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.06055",
+  "title": "Simultaneous Graph Parameters and How to Bound Them",
+  "authors": [
+    "Robert Scheffler",
+    "Philipp Wolf Schleicher"
+  ],
+  "summary": "Beisegel et al. [SWAT 2024] introduced the concept of simultaneous $\\mathcal{C}$-numbers which associate a graph class $\\mathcal{C}$ with a graph parameter. Given a graph $G$, the simultaneous $\\mathcal{C}$-number is the smallest number $d$ for which there is a graph $H \\in \\mathcal{C}$ and a function $L : V(G) \\to \\mathcal{P}(\\{1,\\dots,d\\})$ such that two vertices $u$ and $v$ are adjacent in $G$ if and only if they are adjacent in $H$ and their sets $L(u)$ and $L(v)$ are not disjoint. We study the relation of these simultaneous $\\mathcal{C}$-numbers to other graph parameters. In particular,…",
+  "domain": "cs.DM",
+  "tags": [
+    "cs.DM",
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-08-06",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,27 @@
+{
+  "key": "2609.39367",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.39367",
+  "title": "A Dynamical Theory of LoRA in Continual Learning",
+  "authors": [
+    "Théo Marchetta",
+    "Filippo Alessandroni",
+    "Alessandro Breccia",
+    "Alessandro Ingrosso",
+    "Federica Gerace"
+  ],
+  "summary": "Despite the widespread use of Low-Rank Adaptation (LoRA), little is known about its dynamics in continual learning and the mechanisms by which low-rank updates affect catastrophic forgetting. We provide an asymptotically exact dynamical characterization of LoRA in a solvable two-task teacher-student model. In the high-dimensional online-learning limit, we derive a closed system of ordinary differential equations for a finite set of macroscopic order parameters, yielding exact expressions for the generalization errors throughout both the initial Task 1 learning phase and the subsequent LoRA…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cond-mat.stat-mech",
+    "cs.LG",
+    "math.PR",
+    "math.ST"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

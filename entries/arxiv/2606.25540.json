@@ -1,0 +1,23 @@
+{
+  "key": "2606.25540",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.25540",
+  "title": "Dependency-Aware Dominant Resource Fairness for Multi-Tenant Multi-Resource Systems",
+  "authors": [
+    "Braik Zeidan",
+    "Francesca Fossati",
+    "Sahar Hoteit",
+    "Stefano Secci"
+  ],
+  "summary": "Multi-resource allocation in network-congested, multi-tenant systems in which demand exceeds available capacity is challenging, as there is no straightforward way to determine how much of each resource to assign, especially when resources are interdependent. Classical approaches such as Dominant Resource Fairness (DRF), which generalizes Max-Min Fairness (MMF) to multiple resources, assume linear proportional dependencies across resources, requiring allocations to follow fixed proportions implied by tenants demands. However, this assumption may lead to inefficient allocations and resource…",
+  "domain": "cs.NI",
+  "tags": [
+    "cs.NI",
+    "math.OC"
+  ],
+  "published": "2026-06-24",
+  "updated": "2026-06-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

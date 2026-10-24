@@ -1,0 +1,24 @@
+{
+  "key": "2604.19065",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.19065",
+  "title": "Last-Iterate Guarantees for Learning in Co-coercive Games",
+  "authors": [
+    "Siddharth Chandak",
+    "Ramanan Tamizholi",
+    "Nicholas Bambos"
+  ],
+  "summary": "We establish finite-time last-iterate guarantees for vanilla stochastic gradient descent in co-coercive games under noisy feedback. This is a broad class of games that is more general than strongly monotone games, allows for multiple Nash equilibria, and includes examples such as quadratic games with negative semidefinite interaction matrices and potential games with smooth concave potentials. Prior work in this setting has relied on relative noise models, where the noise vanishes as iterates approach equilibrium, an assumption that is often unrealistic in practice. We work instead under a…",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "eess.SY",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-04-21",
+  "updated": "2026-04-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

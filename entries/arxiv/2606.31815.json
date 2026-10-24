@@ -1,0 +1,21 @@
+{
+  "key": "2606.31815",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.31815",
+  "title": "Token sliding independent set reconfiguration on graphs with few $P_4$'s",
+  "authors": [
+    "Lucia Busolini",
+    "Mario Valencia-Pabon"
+  ],
+  "summary": "We consider the INDEPENDENT SET RECONFIGURATION problem under the Token Sliding rule. Let $I$ be an independent set of a simple undirected graph $G$. Suppose that each vertex of $I$ has a token placed on it. The tokens are allowed to be moved, one at a time, by sliding along the edges of $G$, so that after each move, the vertices having tokens always form an independent set of $G$. The problem we deal is to decide if we can transform $I$ into $I'$ through a sequence of steps, each of which involves substituting a vertex in the current independent set with one of its neighbours to obtain…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-06-30",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

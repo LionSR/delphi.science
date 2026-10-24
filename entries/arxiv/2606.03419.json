@@ -1,0 +1,23 @@
+{
+  "key": "2606.03419",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.03419",
+  "title": "Optimizing Explicit Unit-Distance Lower-Bound Certificates",
+  "authors": [
+    "Michael T. M. Emmerich"
+  ],
+  "summary": "The 2026 disproof of Erdős's unit-distance conjecture and Sawin's quantitative refinement show that the maximum number $u(n)$ of unit distances among $n$ planar points can exceed $n^{1+\\varepsilon}$ for a fixed positive $\\varepsilon$. Sawin's explicit bound gives more than $n^{1.014}$ unit distances for arbitrarily large $n$ and exposes integer parameters whose choice is not fully optimized. This report treats Sawin's parameter selection as a nonlinear integer optimization problem and develops an open-source Python optimization and verification pipeline for certificates involving prime sets…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI",
+    "cs.CG",
+    "cs.NE",
+    "math.CO"
+  ],
+  "published": "2026-06-02",
+  "updated": "2026-06-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

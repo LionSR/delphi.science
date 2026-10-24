@@ -1,0 +1,20 @@
+{
+  "key": "2610.15370",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.15370",
+  "title": "A Four-by-Four Obstruction to Polynomial Removal for Ordered Binary Matrices",
+  "authors": [
+    "Zinan Wang"
+  ],
+  "summary": "We exhibit a fixed $4\\times 4$ binary matrix with no polynomial induced ordered removal bound. At depth $h\\geq 1$, let $m=2^h$. Our explicit host has order $(14h+2)m$, exactly $2m^6+\\frac{1}{2}(m-2)m^5$ induced copies, and exact editing distance $m^2$ cells. Its normalized editing distance is $Θ(h^{-2})$, while its induced-copy density is $Θ(4^{-h}h^{-8})$. The lower bound holds against arbitrary cell edits through an injective family of $m^2$ protected selections. An exhaustive arithmetic classification identifies every induced copy and proves that a matching canonical repair creates none.…",
+  "domain": "cs.DM",
+  "tags": [
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-10-11",
+  "updated": "2026-10-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

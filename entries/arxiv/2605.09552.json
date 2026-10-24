@@ -1,0 +1,26 @@
+{
+  "key": "2605.09552",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09552",
+  "title": "Phases of Muon: When Muon Eclipses SignSGD",
+  "authors": [
+    "Elliot Paquette",
+    "Noah Marshall",
+    "Lucas Benigni",
+    "Guangyuan Wang",
+    "Atish Agarwala",
+    "Courtney Paquette"
+  ],
+  "summary": "Recently, Muon and related spectral optimizers have demonstrated strong empirical performance as scalable stochastic methods, often outperforming Adam. Yet their behaviour remains poorly understood. We analyze stochastic spectral optimizers, including Muon, on a high-dimensional matrix-valued least squares problem. We derive explicit deterministic dynamics that provide a tractable framework for studying learning behaviour with a focus on (stochastic) SignSVD, which Muon approximates, and (stochastic) SignSGD, the latter serving as a proxy for Adam. Our analysis shows that for large batch…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-05-10",
+  "updated": "2026-05-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

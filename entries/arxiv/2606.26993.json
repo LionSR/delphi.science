@@ -1,0 +1,20 @@
+{
+  "key": "2606.26993",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.26993",
+  "title": "Deterministic and Efficient Ideal Arithmetic via Two-Element Representations",
+  "authors": [
+    "Qi Cheng"
+  ],
+  "summary": "Given an ideal in a number field, it is desirable in many situations to find two elements that generate the ideal over the ring of the integers of the field. Existing algorithms are either randomized, or impractical at cryptographic sizes. In the paper, we present a deterministic polynomial time algorithm to find the two-element representation of an ideal. For a monic irreducible integral polynomial \\( f(x) \\), let \\( K=\\Q[x]/(f) \\) be the number field, and \\( O_K \\) be the integral closure. Our algorithm works when the norm of the input ideal is co-prime to the index \\( [O_K:\\Z[x]/f] \\). In…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "cs.SC"
+  ],
+  "published": "2026-06-25",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

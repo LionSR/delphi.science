@@ -1,0 +1,20 @@
+{
+  "key": "2605.29294",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.29294",
+  "title": "Global optimization of quadratic root-difference minimization under elliptic annulus constraints",
+  "authors": [
+    "Meijia Yang",
+    "Yong Xia"
+  ],
+  "summary": "This paper studies the nonconvex quadratic root-difference minimization under elliptic annulus constraints {\\rm (QR)}. We first establish the Annulus Brickman theorem and equivalently reformulate {\\rm (QR)} as a 2-dimensional convex problem {\\rm (HP)} with hidden variables. We employ the Frank-Wolfe algorithm to globally solve {\\rm (HP)}. A key finding is that the solutions of the Frank-Wolfe subproblems, which are traditionally viewed as mere auxiliary updates, are proven to be $O(1/\\sqrt{k})$-approximate solutions of the original problem {\\rm (QR)}. This transforms an algorithmic…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-05-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

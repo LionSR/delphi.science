@@ -1,0 +1,23 @@
+{
+  "key": "2604.07129",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.07129",
+  "title": "A solver-in-the-loop framework for end-to-end differentiable coastal hydrodynamics",
+  "authors": [
+    "Elsa Cardoso-Bihlo",
+    "Alex Bihlo"
+  ],
+  "summary": "Numerical simulation of wave propagation and run-up is a cornerstone of coastal engineering and tsunami hazard assessment. However, applying these forward models to inverse problems, such as bathymetry estimation, source inversion, and structural optimization, remains notoriously difficult due to the rigidity and high computational cost of deriving discrete adjoints. In this paper, we introduce AegirJAX, a fully differentiable hydrodynamic solver based on the depth-integrated, non-hydrostatic shallow-water equations. By implementing the solver entirely within a reverse-mode automatic…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "cs.LG",
+    "math.NA",
+    "physics.ao-ph"
+  ],
+  "published": "2026-04-08",
+  "updated": "2026-04-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

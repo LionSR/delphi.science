@@ -1,0 +1,25 @@
+{
+  "key": "2602.11246",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.11246",
+  "title": "How Many Features Can a Language Model Store Under the Linear Representation Hypothesis?",
+  "authors": [
+    "Nikhil Garg",
+    "Jon Kleinberg",
+    "Kenny Peng"
+  ],
+  "summary": "We introduce a mathematical framework for the linear representation hypothesis (LRH), which asserts that intermediate layers of language models store features linearly. We separate the hypothesis into two claims: linear representation (features are linearly embedded in neuron activations) and linear accessibility (features can be linearly decoded). We then ask: How many neurons $d$ suffice to both linearly represent and linearly access $m$ features? Classical results in compressed sensing imply that for $k$-sparse inputs, $d = O(k\\log (m/k))$ suffices if we allow non-linear decoding…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL",
+    "cs.IT",
+    "math.CO"
+  ],
+  "published": "2026-02-11",
+  "updated": "2026-02-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

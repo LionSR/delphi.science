@@ -1,0 +1,19 @@
+{
+  "key": "2609.11070",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11070",
+  "title": "Effective estimates for exponential sums with multiplicative coefficients",
+  "authors": [
+    "Nicolas Robles"
+  ],
+  "summary": "Let $f$ be multiplicative, with $|f(p)|\\le A$ at primes and $\\sum_{n\\le x}|f(n)|^2\\le A^2x$ for every $x\\ge1$. If $|α-a/q|\\le q^{-2}$, $(a,q)=1$, and $3\\le R\\le q\\le N/R$, we prove \\[ \\sum_{n\\le N}f(n)\\operatorname{e}(nα) \\ll_A \\frac{N}{\\log N} +\\frac{N}{\\sqrt R}\\sqrt{\\log\\log(3R)} \\] with effective implied constants. Montgomery and Vaughan proved this with second term $NR^{-1/2}(\\log R)^{3/2}$, and, for $1$-bounded functions, Bachman replaced it by $NR^{-1/2}\\sqrt{\\log R\\log\\log R}$. We remove the factor $\\sqrt{\\log R}$ from Bachman's second term while retaining the original coefficient…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

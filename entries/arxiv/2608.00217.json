@@ -1,0 +1,22 @@
+{
+  "key": "2608.00217",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.00217",
+  "title": "Truncated Differentiation Through Primal-Dual Solvers for Inverse Potential Mean-Field Games",
+  "authors": [
+    "Siting Liu",
+    "Yat Tin Chow",
+    "Samy Wu Fung"
+  ],
+  "summary": "We study inverse potential mean-field games (MFGs), in which an unknown spatial inverse-cost (mobility) map is inferred from observed population densities. We solve the forward MFG with a preconditioned primal-dual hybrid gradient (PDHG) method and develop Jacobian-free backpropagation (JFB-$r$), which records only the final $r$ iterations from a detached warm start while retaining the full forward solve. To analyze this truncated differentiation method, we show that the exact-proximal dual-extrapolated PDHG map is a metric resolvent of the maximal monotone KKT operator. This resolvent view…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-07-31",
+  "updated": "2026-08-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

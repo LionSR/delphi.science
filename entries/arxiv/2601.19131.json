@@ -1,0 +1,20 @@
+{
+  "key": "2601.19131",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.19131",
+  "title": "Structural Monotonicity in Transmission Scheduling for Remote State Estimation with Hidden Channel Mode",
+  "authors": [
+    "Hampei Sasahara"
+  ],
+  "summary": "This study treats transmission scheduling for remote state estimation over unreliable channels with a hidden mode. A local Kalman estimator selects scheduling actions, such as power allocation and resource usage, and communicates with a remote estimator based on acknowledgement feedback, balancing estimation performance and communication cost. The resulting problem is naturally formulated as a partially observable Markov decision process (POMDP). In settings with observable channel modes, it is well known that monotonicity of the value function can be established via investigating…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-01-27",
+  "updated": "2026-03-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

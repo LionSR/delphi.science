@@ -1,0 +1,21 @@
+{
+  "key": "2604.23383",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23383",
+  "title": "Probabilistic analysis of dual decomposition on two-stage stochastic integer programs",
+  "authors": [
+    "Santanu S. Dey",
+    "Marco Molinaro",
+    "Jingye Xu"
+  ],
+  "summary": "Two-stage stochastic integer programs provide a powerful framework for modeling decision-making under uncertainty, but they are notoriously difficult to solve at scale due to their high dimensionality and intrinsic nonconvexity. Decomposition-based algorithms such as Benders methods and Branch-and-Price (related dual decomposition methods) have become standard computational approaches for such problems and demonstrate excellent empirical performance in practice. Despite their widespread use, however, existing theoretical guarantees are almost exclusively based on worst-case analyses, which…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-25",
+  "updated": "2026-04-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

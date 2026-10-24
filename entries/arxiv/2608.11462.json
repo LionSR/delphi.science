@@ -1,0 +1,21 @@
+{
+  "key": "2608.11462",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.11462",
+  "title": "Linear-cost Polyharmonic Spline Interpolation of Arbitrary Degree",
+  "authors": [
+    "Christopher J. Geoga",
+    "Michael O'Neil"
+  ],
+  "summary": "We introduce a simple and performant approach for rapidly and accurately performing polyharmonic spline (PHS) interpolation using a combination of the fast multipole method (FMM) from computational electrostatics and the Vecchia approximation from the Gaussian process and sparse approximate inverse literatures. Using basic properties about Hadamard products and low-rank matrices, we demonstrate that an FMM with two kernels, the logarithmic and distance kernels, results in fast PHS interpolation for all orders. Furthermore, we demonstrate the exceptional performance of sparse inverse…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "stat.CO"
+  ],
+  "published": "2026-08-11",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

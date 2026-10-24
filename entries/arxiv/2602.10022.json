@@ -1,0 +1,19 @@
+{
+  "key": "2602.10022",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.10022",
+  "title": "Acceleration for Polyak-Łojasiewicz Functions with a Gradient Aiming Condition",
+  "authors": [
+    "Julien Hermant"
+  ],
+  "summary": "It is known that when minimizing smooth Polyak-Łojasiewicz (PL) functions, momentum algorithms cannot significantly improve the convergence bound of gradient descent, contrasting with the acceleration phenomenon occurring in the strongly convex case. To bridge this gap, the literature has proposed strongly quasar-convex functions as an intermediate non-convex class, for which accelerated bounds have been suggested to persist. We show that this is not true in general: the additional structure of strong quasar-convexity does not suffice to guaranty better worst-case bounds for momentum…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-10",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

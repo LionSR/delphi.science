@@ -1,0 +1,20 @@
+{
+  "key": "2606.03651",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.03651",
+  "title": "Application of polynomial algebras to non-linear equation solvers",
+  "authors": [
+    "Jordi Canela",
+    "Daniel Pérez-Palau"
+  ],
+  "summary": "This paper presents a novel application of Jet Transport, a high-order automatic differentiation technique, to enhance classical numerical methods, with a focus on Newton's method. We prove a central theorem establishing that, under appropriate conditions, applying Jet Transport within a Newton iteration doubles the number of correct coefficients in the Taylor series approximation of the solution. This theoretical result is then extended to the practical case where the exact solution is unknown, demonstrating the expected quadratic convergence (error reduction from \\( \\varepsilon \\) to \\(…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-02",
+  "updated": "2026-06-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

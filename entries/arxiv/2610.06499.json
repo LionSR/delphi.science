@@ -1,0 +1,20 @@
+{
+  "key": "2610.06499",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06499",
+  "title": "Random independent sets in triangle-free and linear Berge-$C_4$-free hypergraphs",
+  "authors": [
+    "Jing Yu",
+    "Junchi Zhang"
+  ],
+  "summary": "We study probability distributions on independent sets of uniform hypergraphs with local constraints. For a positive vertex-weight function $w$ on an $(r+1)$-uniform hypergraph, define the weighted degree of vertex $v$ by \\[ d_w(v):= \\sum_{e\\ni v} \\left( \\prod_{u\\in e\\setminus\\{v\\}}\\dfrac{w(u)}{w(v)} \\right)^{1/r}. \\] For each fixed $r\\geq1$, our first result gives, in every triangle-free $(r+1)$-uniform hypergraph (without a linearity assumption), a random independent set $I$ satisfying \\[ \\mathbb P(v\\in I)\\geq \\left( \\frac{r}{r+1}(r(r+1))^{-1/r}+o_r(1) \\right) \\left(\\frac{\\log…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

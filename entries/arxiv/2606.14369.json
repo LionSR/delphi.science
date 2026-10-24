@@ -1,0 +1,21 @@
+{
+  "key": "2606.14369",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.14369",
+  "title": "Local high order space-time adaptive MLSDC",
+  "authors": [
+    "Erik Pfister",
+    "Matti Schulze",
+    "Jörg Stiller"
+  ],
+  "summary": "Building upon the semi-implicit multilevel spectral deferred correction (SI-MLSDC) method introduced by Pfister and Stiller [38], this work presents a 1D space-time adaptive high-order method combining discontinuous Galerkin spectral element discretizations with multilevel spectral deferred corrections. The proposed approach enables genuine arbitrary-order accuracy in space and time while dynamically balancing spatial and temporal discretization errors to reduce computational cost. A key contribution is the development of a novel temporal error estimator that in combination with a spectral…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-12",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

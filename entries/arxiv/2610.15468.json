@@ -1,0 +1,23 @@
+{
+  "key": "2610.15468",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.15468",
+  "title": "FirstFit coloring process of random bipartite graphs and an online coloring lower bound in the random order model",
+  "authors": [
+    "Yaqiao Li",
+    "Xin Li"
+  ],
+  "summary": "FirstFit colors each arriving vertex with the smallest positive integer absent from its previously colored neighborhood. We prove that this rule can require $n^{Ω(1)}$ many colors on certain bipartite graph of $n$ vertices even when the vertices arrive in a uniformly random order. This refutes the conjecture of Bosek, Gutowski, Lasoń, and Przybyło [BGLP24] that FirstFit uses a polylogarithmic expected number of colors on every bipartite graph in the random order model. We obtain the lower bound by analyzing the FirstFit coloring process on random bipartite graphs, where vertices arrive to…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.DM",
+    "math.CO",
+    "math.PR"
+  ],
+  "published": "2026-10-11",
+  "updated": "2026-10-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2605.24954",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.24954",
+  "title": "An Infeasible Method with Feasibility Safeguard for Nonsmooth Composite Optimization Over Manifolds",
+  "authors": [
+    "Xiyua Xie",
+    "Qia Li"
+  ],
+  "summary": "We study nonsmooth composite optimization over embedded submanifolds defined by nonlinear equality constraints. We propose a feasibility-safeguarded inexact proximal linearized method whose iterations require neither projection nor retraction onto the manifold. A computable smooth-dual residual certifies the approximate tangential step and controls the errors in both tangency and composite linearization consistency. The step is followed by a normal correction evaluated at the displaced trial point. To coordinate the resulting optimality and feasibility errors, a nonmonotone backtracking…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-24",
+  "updated": "2026-10-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

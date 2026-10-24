@@ -1,0 +1,23 @@
+{
+  "key": "2603.18168",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.18168",
+  "title": "ResNets of All Shapes and Sizes: Convergence of Training Dynamics in the Large-scale Limit",
+  "authors": [
+    "Louis-Pierre Chaintron",
+    "Lénaïc Chizat",
+    "Javier Maass"
+  ],
+  "summary": "We establish convergence of the training dynamics of residual neural networks (ResNets) to their joint infinite depth L, hidden width M, and embedding dimension D limit. Specifically, we consider ResNets with two-layer perceptron blocks in the maximal local feature update (MLU) regime and prove that, after a bounded number of training steps, the error between the ResNet and its large-scale limit is O(1/L + sqrt(D/(L M)) + 1/sqrt(D)). This error rate is empirically tight when measured in embedding space. For a budget of P = Theta(L M D) parameters, this yields a convergence rate O(P^(-1/6))…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-03-18",
+  "updated": "2026-03-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

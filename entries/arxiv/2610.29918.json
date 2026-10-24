@@ -1,0 +1,22 @@
+{
+  "key": "2610.29918",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.29918",
+  "title": "Preventing Model Extraction in Contextual Linear Optimization",
+  "authors": [
+    "Adam N. Elmachtoub",
+    "Tianyi Lin",
+    "Wenxuan Liu"
+  ],
+  "summary": "Consider a contextual linear optimization problem, where a predict-then-optimize (PTO) system returns optimal decisions without revealing the cost vectors used in its downstream linear program. Our focus is on how to prevent attackers, who can submit context queries, from extracting the underlying prediction model. Although the cost-to-decision map is many-to-one, observations across contexts can reveal the underlying prediction model. For linear models, we provide sufficient conditions where the attacker can learn the model up to positive scaling by only observing the decision. These…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

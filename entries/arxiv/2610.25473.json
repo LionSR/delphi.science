@@ -1,0 +1,20 @@
+{
+  "key": "2610.25473",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.25473",
+  "title": "Acceleration of Generalized Conditional Gradient Methods",
+  "authors": [
+    "Long Chen",
+    "Zeyi Xu"
+  ],
+  "summary": "We develop an adaptive acceleration of generalized conditional gradient methods for convex objectives with a strongly convex regularizer. A computable primal--dual residual certifies Lyapunov decrease without evaluating the regularizer or any Hessian. Each iteration accepts a balanced accelerated trial when the residual is nonpositive; otherwise it takes a mirror-descent step with doubling backtracking and sets the auxiliary parameter explicitly from the dual decrease and the stopping gap. Under uniform strong-convexity and smoothness bounds on the relevant sublevel set, the method converges…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-18",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2605.05474",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05474",
+  "title": "Bayesian Algorithm for Collaborative Optimization with Application to Aircraft Design",
+  "authors": [
+    "Mohamed Ali Belhafnaoui",
+    "Youssef Diouane"
+  ],
+  "summary": "Collaborative Optimization (CO) is a multidisciplinary design optimization (MDO) framework that decomposes large-scale engineering problems into parallel, independently solvable subsystems coordinated by a system-level optimizer. Its practical utility is limited by the high frequency of expensive black-box disciplinary evaluations arising from the bi-level consistency constraints. This paper introduces BACO, a Bayesian Algorithm for Collaborative Optimization, which replaces the direct black-box calls at both levels with Gaussian process (GP) surrogates and acquisition function maximization.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

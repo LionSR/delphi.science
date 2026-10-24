@@ -1,0 +1,24 @@
+{
+  "key": "2607.10930",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10930",
+  "title": "The Singularity Space: A Generative Diffusion Framework for Signal Representation",
+  "authors": [
+    "Eli Bar-Yosef",
+    "Amir Averbuch",
+    "Eli Turkel"
+  ],
+  "summary": "Generative models often represent signals as dense grids of amplitudes, blurring sharp transients that are crucial for the correctness of physical signals. We introduce Singularity Space, a generative framework that represents signals through complex-plane singularities, rooted in the classical pole-residue representation of meromorphic functions. We learn a latent space of physically constrained, per-signal singularity configurations to solve an inverse problem from degraded or partial observations. The framework has three key properties: interpretability, in which each generated…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "eess.SP",
+    "math.NA"
+  ],
+  "published": "2026-07-12",
+  "updated": "2026-07-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

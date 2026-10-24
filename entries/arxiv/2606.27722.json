@@ -1,0 +1,21 @@
+{
+  "key": "2606.27722",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.27722",
+  "title": "A Backstepping Framework for Unconstrained Accelerated Optimization Algorithms",
+  "authors": [
+    "Song Chen",
+    "Jiaxu Liu",
+    "Chao Xu"
+  ],
+  "summary": "This paper introduces a control-theoretic perspective on unconstrained optimization algorithms using the backstepping methods. We model the optimization process as an augmented strict-feedback system given by $\\dot{x}_1 = x_2$, $\\dot{x}_2 = u$, and $\\dot{z} = q(x_1,z)$, with a regulated output $y = \\nabla f(x_1)$. This formulation recasts the development of unconstrained optimization algorithms as a feedback control problem, where the goal is to design the input $u$ to ensure $y(t) \\to 0$. By employing backstepping, we recursively synthesize the actual feedback law $u$ after initially…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-26",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2605.23476",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.23476",
+  "title": "Non-normal spectral signatures of instability in neural network training dynamics",
+  "authors": [
+    "Souvik Ghosh"
+  ],
+  "summary": "Training instabilities in deep networks - loss spikes, oscillatory convergence, and gradient pathologies - are empirically prevalent but lack a rigorous operator-theoretic explanation. We show that the linearized update operators for practically used optimizers are generically non-normal: for Adam, non-normality is controlled by the commutator [H, M] between the Hessian and the diagonal adaptive preconditioner, while for SGD with momentum it arises from the augmented state-space structure of the update map. Applying non-normal stability theory to these operators, we derive a conservative…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cond-mat.dis-nn",
+    "cond-mat.mtrl-sci",
+    "math.OC"
+  ],
+  "published": "2026-05-22",
+  "updated": "2026-05-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

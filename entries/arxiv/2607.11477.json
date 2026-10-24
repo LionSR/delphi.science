@@ -1,0 +1,21 @@
+{
+  "key": "2607.11477",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.11477",
+  "title": "Polynomial-Time Evaluation of Aardal-Lenstra Denumerants via Constant Term Method",
+  "authors": [
+    "Jinlong Tang",
+    "Guoce Xin",
+    "Zihao Zhang"
+  ],
+  "summary": "Aardal and Lenstra systematically studied hard knapsack problems of the form $a_1x_1+\\cdots+a_nx_n=b$, where $a_i=p_iM+r_iN$, $(M,N)$ is a coprime pair of positive integers, and the integers $|p_i|, |r_i|$ are small relative to $M$ and $N$. We investigate the corresponding challenging denumerant problem (i.e., counting the number of nonnegative integer solutions) and present a polynomial-time algorithm. This eliminates the computational bottlenecks caused by large values of $M$, $N$ and $b$. The proposed algorithm achieves a time complexity of $O(n^4Δ^2\\log n\\logΔ)$, which depends solely on…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2609.03803",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.03803",
+  "title": "List-distance consistent vertices in trees are confined to a path",
+  "authors": [
+    "Fei-Huang Chang",
+    "Ma-Lian Chia",
+    "David Kuo",
+    "Guan-Ting Lai"
+  ],
+  "summary": "A labeling of a connected graph $G$ on $n$ vertices is a bijection $c:V(G)\\to\\{1,\\dots,n\\}$; writing $c(u,v)=|c(u)-c(v)|$, a vertex $u$ is list-distance consistent if $d(u,v)<d(u,w)$ implies $c(u,v)\\le c(u,w)$ for all $v,w$. The maximum number of such vertices over all labelings is the list-distance consistency ldc$(G)$, introduced by Casselgren and Henricsson. We prove that in a tree, the consistent vertices of any labeling lie on a single path, along which the labels form a block of consecutive integers in increasing order (with respect to a suitable orientation of the path), no vertex off…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2604.15539",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.15539",
+  "title": "Efficient and well-conditioned ghost-point discretization of boundary operators on unfitted domains",
+  "authors": [
+    "Armando Coco",
+    "Alessandro Coclite",
+    "Stéphane Clain",
+    "Rui Miguel Pereira"
+  ],
+  "summary": "Unfitted boundary methods are widely used to numerically solve partial differential equations (PDEs) on irregular domains, avoiding the computational burden of generating boundary-conforming grids. In the finite-difference framework, structured Cartesian grids offer advantages such as ease of implementation and efficient parallelization, while geometry is represented implicitly, for instance, through level-set functions. In this setting, ghost point methods are commonly employed to enforce boundary conditions by introducing additional relations between interior and ghost nodes. However,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-16",
+  "updated": "2026-04-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

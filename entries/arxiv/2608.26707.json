@@ -1,0 +1,19 @@
+{
+  "key": "2608.26707",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.26707",
+  "title": "An Exponential Lower Bound for the Permanent of Random Bernoulli Matrix",
+  "authors": [
+    "Yiming Chen"
+  ],
+  "summary": "Let $M_n$ be an $n\\times n$ matrix with independent uniform sign entries. We prove that there exist absolute constants $C,c>0$ such that, for all sufficiently large $n$, \\[ \\mathbb{P}\\!\\left( \\left|\\operatorname{Per}(M_n)\\right| \\ge e^{-Cn}\\sqrt{n!} \\right) \\ge 1-n^{-c}. \\] This establishes the exponential scale lower bound suggested by Tao and Vu. The proof bounds the cumulative logarithmic loss of the sum of squared permanents of minors under row exposure.",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-08-27",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2601.14794",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.14794",
+  "title": "RANDSMAPs: Random-Feature/multi-Scale Neural Decoders with Mass Preservation",
+  "authors": [
+    "Dimitrios G. Patsatzis",
+    "Alessandro Della Pia",
+    "Lucia Russo",
+    "Constantinos Siettos"
+  ],
+  "summary": "We introduce RANDSMAPs (Random-feature/multi-scale neural decoders with Mass Preservation), numerical analysis-informed, explainable neural decoders designed to explicitly respect conservation laws when solving the challenging ill-posed pre-image problem in manifold learning. We start by proving the equivalence of vanilla random Fourier feature neural networks to Radial Basis Function interpolation and the double Diffusion Maps (based on Geometric Harmonics) decoders in the deterministic limit. We then establish the theoretical foundations for RANDSMAP and introduce its multiscale variant to…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-01-21",
+  "updated": "2026-01-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2605.02448",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.02448",
+  "title": "The interplay of signal-to-noise ratio and variance misspecification in Gaussian mixtures",
+  "authors": [
+    "Vladimir Serov",
+    "Amnon Balanov",
+    "Tamir Bendory"
+  ],
+  "summary": "We study estimation and clustering in Gaussian mixture models under variance misspecification. Observations are generated with true variance $σ^2$, while the component means are estimated using a likelihood with variance $τ^2$, yielding a family of mismatched likelihood functions parameterized by the ratio $ρ=τ/σ$. We show that the interplay between $ρ$ and the signal-to-noise ratio (SNR) induces a sharp phase diagram. Under correct specification ($ρ=1$), maximum likelihood recovers the true means, independently of the SNR. However, once the model is misspecified, two different regimes…",
+  "domain": "eess.SP",
+  "tags": [
+    "eess.SP",
+    "math.ST"
+  ],
+  "published": "2026-05-04",
+  "updated": "2026-05-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2606.24386",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.24386",
+  "title": "Line Planning at Scale: Models, Methods, and Insights",
+  "authors": [
+    "Rolf van Lieshout",
+    "Bart van Rossum"
+  ],
+  "summary": "Line planning, the problem of deciding which lines to operate and at what frequency, is a fundamental step in public transport planning. To accurately model passenger routing, the problem is traditionally defined on a change-and-go network (CGN), which captures transfers between lines exactly. However, this network grows large quickly and is hard to solve at scale. We compare the CGN against three more compact models, differing with respect to how transfers are approximated, and characterize how they relate in terms of solution quality and modeling accuracy. We develop state-of-the-art…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-23",
+  "updated": "2026-06-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

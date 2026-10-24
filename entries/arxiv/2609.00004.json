@@ -1,0 +1,23 @@
+{
+  "key": "2609.00004",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.00004",
+  "title": "Discrete-Time MDP Modeling for Multi-Item Capacitated Lot Sizing with Stochastic Demand Timing",
+  "authors": [
+    "Léa Bayati",
+    "Mohamed Dahmoune",
+    "Melek Rodoplu"
+  ],
+  "summary": "This paper studies a finite-horizon multi-item capacitated lot-sizing problem in which demand quantities are deterministic, while demand-arrival periods are stochastic. Each demand occurs once within a known time window and must be satisfied no later than its deadline. The proposed model makes production and allocation decisions at the demand level, allowing it to represent capacity competition, demand-specific backlog, and allocation-dependent inventory dynamics. The stochastic problem is formulated as a discrete-time Markov decision process (DTMDP), including the state space, feasible…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.NE",
+    "math.OC"
+  ],
+  "published": "2026-07-05",
+  "updated": "2026-07-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

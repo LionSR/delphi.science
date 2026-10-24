@@ -1,0 +1,25 @@
+{
+  "key": "2601.01076",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.01076",
+  "title": "Scalable Data-Driven Reachability Analysis and Control via Koopman Operators with Conformal Coverage Guarantees",
+  "authors": [
+    "Devesh Nath",
+    "Haoran Yin",
+    "Glen Chou"
+  ],
+  "summary": "We propose a scalable reachability-based framework for probabilistic, data-driven safety verification of unknown nonlinear dynamics. We use Koopman theory with a neural network (NN) lifting function to learn an approximate linear representation of the dynamics and design linear controllers in this space to enable closed-loop tracking of a reference trajectory distribution. Closed-loop reachable sets are efficiently computed in the lifted space and mapped back to the original state space via NN verification tools. To capture model mismatch between the Koopman dynamics and the true system, we…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.AI",
+    "cs.LG",
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-01-03",
+  "updated": "2026-01-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

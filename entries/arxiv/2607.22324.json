@@ -1,0 +1,24 @@
+{
+  "key": "2607.22324",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.22324",
+  "title": "The Conclave Process",
+  "authors": [
+    "Itai Benjamini",
+    "Zhenhao Cai",
+    "Guanyi Chen",
+    "Shuyang Gong",
+    "Zhangsong Li"
+  ],
+  "summary": "We introduce a stochastic model for the papal conclave in which $n$ cardinals vote repeatedly among themselves until one cardinal receives all the votes. In each round, the probability that a cardinal votes for a given candidate is proportional to the $α$-th power of that candidate's vote count in the preceding round. For $α=1$, the model reduces to the Wright-Fisher model and is dual to Kingman's n-coalescent. We reveal a sharp transition in the absorption time $\\mathcal{T}$ at $α=1$. It was known that when $α=1$, $\\mathcal{T}$ is typically of order $n$. We prove that for $α>1$, it drops to…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.CO"
+  ],
+  "published": "2026-07-24",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

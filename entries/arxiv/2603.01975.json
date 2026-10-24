@@ -1,0 +1,22 @@
+{
+  "key": "2603.01975",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.01975",
+  "title": "Density-Matrix Spectral Embeddings for Categorical Data: Operator Structure and Stability",
+  "authors": [
+    "Raquel Bosch-Romeu",
+    "Antonio Falcó",
+    "osé-Antonio Rodríguez-Gallego"
+  ],
+  "summary": "We introduce a supervised dimensionality reduction methodology for categorical (and discretized mixed-type) data based on a density-matrix construction induced by class-conditional frequencies. Given a labeled dataset encoded in a one-hot survey space, we assemble a frequency matrix whose columns aggregate feature occurrences within each class, and define a normalized Gram-type operator that satisfies the axioms of a density matrix. The resulting representation admits an intrinsic rank bound controlled by the number of classes, enabling low-dimensional spectral embeddings via dominant…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "math.NA"
+  ],
+  "published": "2026-03-02",
+  "updated": "2026-03-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

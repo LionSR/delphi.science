@@ -1,0 +1,23 @@
+{
+  "key": "2605.04918",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04918",
+  "title": "Neural Discovery of Strichartz Extremizers",
+  "authors": [
+    "Nicolás Valenzuela",
+    "Ricardo Freire",
+    "Claudio Muñoz"
+  ],
+  "summary": "Strichartz inequalities are a cornerstone of the modern theory of dispersive PDEs, but their extremizers are known explicitly only in a handful of sharp cases. The non-convexity of the underlying functional makes the problem hard, and to our knowledge no systematic numerical attack has been attempted. We propose a simple neural-network-based pipeline that searches for extremizers as critical points of the Strichartz ratio, and apply it in three settings. First, on the Schrödinger group we recover the Gaussian extremizers of Foschi and Hundertmark--Zharnitsky in dimensions $d=1,2$ to within…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

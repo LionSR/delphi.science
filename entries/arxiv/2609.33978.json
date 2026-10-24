@@ -1,0 +1,24 @@
+{
+  "key": "2609.33978",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.33978",
+  "title": "Adapting neural operators for mechanics decisions under changing operating conditions",
+  "authors": [
+    "Prashant K. Jha",
+    "Koffi Enakoutsa",
+    "Ian Galloway",
+    "Henry Anderson"
+  ],
+  "summary": "Neural operators can accelerate repeated nonlinear mechanics calculations, but their accuracy can deteriorate as operating conditions move beyond the training range. This work studies whether high-fidelity solutions acquired during use can be reused to adapt a neural operator and improve subsequent mechanics-based command selection. Two hard-magnetic soft-material systems are simulated using high-fidelity finite-element (FE) models, providing reference solutions for evaluating surrogate predictions and selected commands. A neural operator predicts deformation from known material, loading,…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-09-27",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

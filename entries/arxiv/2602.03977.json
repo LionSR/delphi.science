@@ -1,0 +1,22 @@
+{
+  "key": "2602.03977",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.03977",
+  "title": "Fast Relax-and-Round Unit Commitment with Sub-hourly Mechanical and Ramp Constraints",
+  "authors": [
+    "Shaked Regev",
+    "Eve Tsybina",
+    "Slaven Peles"
+  ],
+  "summary": "We propose a novel computational method for unit commitment UC, which does not require linearized approximation and provides several orders of magnitude performance improvement over current state-of-the-art. The performance improvement is achieved by introducing a heuristic tailored for UC problems. The method can be implemented using existing continuous optimization solvers and adapted for different applications. We demonstrate value of the new method in examples of advanced UC analyses at the scale where use of current state-of-the-art tools is infeasible. We expect that the capability…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.MS"
+  ],
+  "published": "2026-02-03",
+  "updated": "2026-03-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

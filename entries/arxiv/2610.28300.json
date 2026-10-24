@@ -1,0 +1,21 @@
+{
+  "key": "2610.28300",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.28300",
+  "title": "Primal-Dual Adaptive Subgradient Methods",
+  "authors": [
+    "Karthik Prakhya",
+    "Zimeng Wang",
+    "Alp Yurtsever"
+  ],
+  "summary": "We propose adaptive primal-dual subgradient methods for constrained convex optimization. Our first method applies an AdaGrad-style step-sizes to the dual problem and recovers primal solutions by averaging the associated Fenchel-type oracle outputs. It achieves $\\widetilde{\\mathcal{O}}(T^{-1/2})$ convergence for the dual objective residual, primal objective residual, and feasibility gap in the nonsmooth regime, while automatically improving to $\\mathcal{O}(T^{-1})$ when the dual objective is smooth. We further develop an accelerated variant, which retains the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

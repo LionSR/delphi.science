@@ -1,0 +1,20 @@
+{
+  "key": "2604.13965",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.13965",
+  "title": "Understanding the Variance Dichotomy in Continuous Simulation Optimization: A Minimax Lower Bound Perspective",
+  "authors": [
+    "Jianzhong Du",
+    "L. Jeff Hong"
+  ],
+  "summary": "This paper studies the variance dichotomy in continuous simulation optimization (CSO). Existing literature shows a sharp contrast between deterministic CSO and stochastic CSO, with convergence rates in stochastic settings appearing insensitive to the magnitude of the noise variance. However, this asymptotic view does not fully explain the behavior of CSO under finite simulation budgets, especially in low-noise settings. To address this gap, this work develops a minimax lower-bound analysis and shows that the complexity is decided by the maximum of a variance-dependent term and a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-15",
+  "updated": "2026-04-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

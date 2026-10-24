@@ -1,0 +1,22 @@
+{
+  "key": "2606.18913",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.18913",
+  "title": "Riemannian Metric Preconditioning for Trajectory Tracking",
+  "authors": [
+    "Jacob R. Goodman",
+    "Hajg Jasa"
+  ],
+  "summary": "We introduce a rank-one Riemannian cometric update inducing a modification of the Riemannian metric that makes specific directions of motion cheaper to travel along. We establish basic completeness properties of this reward metric, and give an explicit characterization of its Levi--Civita connection. We propose a preconditioned trajectory-tracking strategy by adding the connection-difference term to a standard intrinsic PD control, and illustrate the construction on a connection control-affine system on the Special Euclidean group with a maze navigation experiment. When the nominal…",
+  "domain": "math.MG",
+  "tags": [
+    "math.MG",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-06-17",
+  "updated": "2026-06-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

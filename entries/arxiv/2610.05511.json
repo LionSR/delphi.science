@@ -1,0 +1,21 @@
+{
+  "key": "2610.05511",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05511",
+  "title": "Rank-one variance inflation in polynomial estimation of signal parameters with a sign-preserving fractional-power basis",
+  "authors": [
+    "Serhii Zabolotnii"
+  ],
+  "summary": "The polynomial maximization method estimates signal parameters in non-Gaussian noise from a finite description of the noise by its moments and cumulants, without a density. Known accuracy results assume that these noise characteristics are known, or use a design in which estimating them jointly costs no accuracy. In practice they are estimated from the residuals of a preliminary fit, and the effect of this substitution on accuracy is unknown. We treat the feasible scheme as a two-step estimator and, for a general smooth signal model in a fixed design, find the increment of its asymptotic…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "eess.SP",
+    "stat.ME"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

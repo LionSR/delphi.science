@@ -1,0 +1,22 @@
+{
+  "key": "2604.11192",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.11192",
+  "title": "Robust Neural Policy Distillation of Long-Horizon FCS-MPC for Flying-Capacitor Three-Level Boost Converters",
+  "authors": [
+    "Jinjian Sheng",
+    "Kazumune Hashimoto",
+    "Shuang Zhao",
+    "Mahdieh S. Sadabadi"
+  ],
+  "summary": "Long-horizon finite-control-set model predictive control (FCS-MPC) can improve transient regulation and flying-capacitor balancing in flying-capacitor three-level boost converters (FC-TLBCs). However, searching over switching sequences becomes computationally expensive at high switching frequencies. We train a feedforward neural network to imitate an $N$-step FCS-MPC expert computed with beam search. To improve robustness, expert trajectories are generated under randomized input voltage, load resistance, and component parameters, and a disagreement-based DAgger variant is used to relabel…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-13",
+  "updated": "2026-04-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2604.18997",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.18997",
+  "title": "A Data-embedded Solution Paradigm for Nonconvex Probable Event Constrained Optimization",
+  "authors": [
+    "Qifeng Li"
+  ],
+  "summary": "This paper introduces a new modeling framework for optimization under uncertainty, called Probable Event Constrained Optimization (PECO). Unlike conventional chance-constrained formulations, which only limit the probability of constraint violation, PECO also explicitly requires feasibility for all events whose probability exceeds a prescribed threshold. This guarantees that solutions remain valid across all high-probability realizations of uncertainty. To solve PECO, we proposed a data-embedded program (DEP) which directly incorporates historical measurements of the uncertain parameters to…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-21",
+  "updated": "2026-04-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

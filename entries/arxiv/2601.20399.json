@@ -1,0 +1,23 @@
+{
+  "key": "2601.20399",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.20399",
+  "title": "Convergence Analysis of Randomized Subspace Normalized SGD under Heavy-Tailed Noise",
+  "authors": [
+    "Gaku Omiya",
+    "Pierre-Louis Poirion",
+    "Akiko Takeda"
+  ],
+  "summary": "Randomized subspace methods reduce per-iteration cost; however, in nonconvex optimization, most analyses are expectation-based, and high-probability bounds remain scarce even under sub-Gaussian noise. We first prove that randomized subspace SGD (RS-SGD) admits a high-probability convergence bound under sub-Gaussian noise, achieving the same order of oracle complexity as prior in-expectation results. Motivated by the prevalence of heavy-tailed gradients in modern machine learning, we then propose randomized subspace normalized SGD (RS-NSGD), which integrates direction normalization into…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-01-28",
+  "updated": "2026-01-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

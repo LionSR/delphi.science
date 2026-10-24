@@ -1,0 +1,19 @@
+{
+  "key": "2607.02910",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.02910",
+  "title": "An Asymptotic Mean Value Characterization for the Regularized $p$-Laplacian",
+  "authors": [
+    "Behrooz Moosavi Ramezanzadeh"
+  ],
+  "summary": "We characterize solutions of the regularized $p$-Laplace equation \\[ \\operatorname{div}\\!\\left((1+|Dv|^2)^{p/2-1}Dv\\right)=0, \\qquad 1<p<\\infty, \\] in a bounded domain $Ω\\subset\\mathbb{R}^n$ by a pointwise asymptotic mean value identity. For $v\\in C^2(Ω)$, solving the equation is equivalent to \\[ v(x) = \\frac{\\widetildeα}{2} \\left( \\mathcal{S}_{\\varepsilon}^{+}[v](x) + \\mathcal{S}_{\\varepsilon}^{-}[v](x) \\right) + \\widetildeβ \\int_{B_\\varepsilon(0)} v(x+h)ρ_\\varepsilon(h)\\,dh + o(\\varepsilon^2), \\] where \\[ \\widetildeα = \\frac{p-2}{p+n+1}, \\qquad \\widetildeβ = \\frac{n+3}{p+n+1}. \\] The…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-07-03",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

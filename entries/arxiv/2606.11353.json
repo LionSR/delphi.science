@@ -1,0 +1,22 @@
+{
+  "key": "2606.11353",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.11353",
+  "title": "An Information-Theoretic Analysis of Threshold Group Testing",
+  "authors": [
+    "Remco van der Hofstad",
+    "Noela Müller",
+    "Connor Riddlesden"
+  ],
+  "summary": "We study the Threshold Group Testing (TGT) problem in the noiseless and non-adaptive setting, where the objective is to exactly recover a sparse binary vector from pooled tests, using as few tests as possible. In TGT, each test applied to a subset of items returns a positive outcome if the number of 1's (defective items) in that subset meets or exceeds a specified threshold, and has a negative outcome otherwise. We investigate how the complexity of TGT compares to that of Classical Group Testing (CGT), corresponding to the special case of the threshold equal to one, and analyse the impact of…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "math.PR"
+  ],
+  "published": "2026-06-09",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

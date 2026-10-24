@@ -1,0 +1,22 @@
+{
+  "key": "2604.23350",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23350",
+  "title": "GeoFunFlow-3D: A Physics-Guided Generative Flow Matching Framework for High-Fidelity 3D Aerodynamic Inference over Complex Geometries",
+  "authors": [
+    "Ruiling Jiang",
+    "Yong Zhang",
+    "Houbiao Li"
+  ],
+  "summary": "Deep generative models and neural operators have demonstrated significant potential for 3D aerodynamic inference. However, they often face inherent challenges in maintaining physical consistency and preserving high-frequency features, primarily due to spectral bias and gradient conflicts within the governing equations. To address these issues, we propose GeoFunFlow-3D, a physics-guided generative flow matching framework. Temporally, we utilize optimal transport theory to build the generation path, ensuring stable training dynamics. Spectrally, we introduce a high-order discrete engine…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-04-25",
+  "updated": "2026-04-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

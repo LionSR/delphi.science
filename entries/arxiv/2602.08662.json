@@ -1,0 +1,20 @@
+{
+  "key": "2602.08662",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.08662",
+  "title": "Numerical solution of the two-dimensional Calderon problem for domains close to a disk",
+  "authors": [
+    "Vladimir A. Sharafutdinov",
+    "Konstantin V. Storozhuk"
+  ],
+  "summary": "For a compact Riemannian surface $(M,g)$ with non-empty boundary $Γ$, the Dirichlet-to-Neumann operator (DtN-map) $Λ_g:C^\\infty(Γ)\\to C^\\infty(Γ)$ is defined by $Λ_gf=\\left.\\frac{\\partial u}{\\partialν}\\right|_Γ$, where $ν$ is the unit outer normal vector to the boundary and $u$ is the solution to the Dirichlet problem $Δ_gu=0,\\ u|_Γ=f$. The Calderón problem consists of recovering a Riemannian surface from its DtN-map. It is well known that $(M,g)$ is determined by $Λ_g$ uniquely up to a conformal equivalence. We suggest a method for numerical solution of the Calderón problem. The method…",
+  "domain": "math.DG",
+  "tags": [
+    "math.DG"
+  ],
+  "published": "2026-02-09",
+  "updated": "2026-02-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

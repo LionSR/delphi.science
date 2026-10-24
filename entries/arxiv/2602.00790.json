@@ -1,0 +1,21 @@
+{
+  "key": "2602.00790",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.00790",
+  "title": "Denoising deterministic networks using iterative Fourier transforms",
+  "authors": [
+    "H. Robert Frost"
+  ],
+  "summary": "We detail a novel Fourier-based approach (IterativeFT) for identifying deterministic network structure in the presence of both edge pruning and Gaussian noise. This technique involves the iterative execution of forward and inverse 2D discrete Fourier transforms on a target network adjacency matrix. The denoising ability of the method is achieved via the application of a sparsification operation to both the real and frequency domain representations of the adjacency matrix with algorithm convergence achieved when the real domain sparsity pattern stabilizes. To demonstrate the effectiveness of…",
+  "domain": "eess.SP",
+  "tags": [
+    "eess.SP",
+    "math.NA",
+    "stat.ME"
+  ],
+  "published": "2026-01-31",
+  "updated": "2026-01-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2605.04364",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04364",
+  "title": "Online Nonstochastic Prediction: Logarithmic Regret via Predictive Online Least Squares",
+  "authors": [
+    "Chih-Fan Pai",
+    "Yang Zheng"
+  ],
+  "summary": "We study online prediction for marginally stable, partially observed linear dynamical systems under nonstochastic disturbances. Our objective is to minimize the cumulative squared prediction loss and compete with the best-in-hindsight Luenberger predictor. Standard online learning methods typically rely on bounded domains/gradients, and thus their guarantees may fail to deal with potentially unbounded trajectories in marginally stable systems. In this paper, we introduce an unconstrained online least squares method that stabilizes the learning process via tailored predictive hints. With…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

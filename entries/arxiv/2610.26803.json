@@ -1,0 +1,21 @@
+{
+  "key": "2610.26803",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.26803",
+  "title": "A simplified proof of the FPRAS for counting perfect matchings",
+  "authors": [
+    "Chenghua Liu",
+    "Boning Meng"
+  ],
+  "summary": "We give a simplified, self-contained proof of OpenAI's FPRAS for counting perfect matchings in general graphs. As in the original proof, we use a restricted Poincaré inequality for two matchings to sample weighted perfect matchings and estimate their total weight. We simplify the proof of this inequality by isolating parts of alternating cycles directly on the original vertex set and controlling the resulting error terms. This avoids the auxiliary vertices and tree constructions used in the original proof. The argument preserves the required parameter bounds and yields the same FPRAS…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2603.11547",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.11547",
+  "title": "Forward and Backward Reachability Analysis of Closed-loop Recurrent Neural Networks via Hybrid Zonotopes",
+  "authors": [
+    "Yuhao Zhang",
+    "Xiangru Xu"
+  ],
+  "summary": "Recurrent neural networks (RNNs) are widely employed to model complex dynamical systems due to their hidden-state structure, which inherently captures temporal dependencies. This work presents a hybrid zonotope-based approach for computing exact forward and backward reachable sets of closed-loop RNN systems with ReLU activation functions. The method formulates state-pair sets to compute reachable sets as hybrid zonotopes without requiring unrolling. To improve scalability, a tunable relaxation scheme is proposed that ranks unstable ReLU units across all layers using a triangle-area score and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-03-12",
+  "updated": "2026-03-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

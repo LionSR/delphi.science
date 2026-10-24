@@ -1,0 +1,19 @@
+{
+  "key": "2607.04700",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04700",
+  "title": "Determining Particular Solutions for Exponential-Polynomial Forcing Terms in Linear Nonhomogeneous Recurrence Relations",
+  "authors": [
+    "Heesung Shin"
+  ],
+  "summary": "This paper develops a systematic method for determining particular solutions of the $k$th-order linear nonhomogeneous recurrence relation $$a_n + c_1 a_{n-1} + \\cdots + c_k a_{n-k} = \\sum_{j=1}^J p_j(n){r_j}^n$$ with $n \\geq k$, $c_k \\neq 0$, $r_j \\neq 0$. Here each $p_j(n)$ is a polynomial. The main result is the following: for the characteristic polynomial $c(t)=t^k+c_1t^{k-1}+\\cdots+c_k$, if $s_j$ denotes the multiplicity of $r_j$ as a root of $c(t)$ ($s_j=0$ when $r_j$ is not a root), then there exists a particular solution of the form $q_n=\\sum_{j=1}^J b_j(n)n^{s_j}r_j^n$, where each…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-07-06",
+  "updated": "2026-07-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

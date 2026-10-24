@@ -1,0 +1,23 @@
+{
+  "key": "2605.24955",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.24955",
+  "title": "Debiasing Random Oblique Projections for Subsampled OLS and Fast CUR in High Dimensions",
+  "authors": [
+    "Chengmei Niu",
+    "Sachin Garg",
+    "Michał Dereziński",
+    "Zhenyu Liao"
+  ],
+  "summary": "Random sampling is a fundamental tool in modern machine learning and numerical linear algebra for reducing the computational cost of large-scale matrix problems. Existing analyses, however, rely primarily on subspace embedding guarantees, which do not precisely characterize the statistical bias of nonlinear random oblique projections induced by sampling, which arises ubiquitously in subsampled least squares and fast low-rank approximation methods. Because (pseudo)inversion is nonlinear, these random oblique projections can be systematically biased even when the underlying sketch is unbiased,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "stat.ML"
+  ],
+  "published": "2026-05-24",
+  "updated": "2026-05-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

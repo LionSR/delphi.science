@@ -1,0 +1,25 @@
+{
+  "key": "2602.18593",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.18593",
+  "title": "Sparse Dictionary-Based Solution of Dynamic Inverse Problems",
+  "authors": [
+    "Aidan Mason-Mackay",
+    "Daniela Calvetti",
+    "Erkki Somersalo",
+    "Antti Aarnio",
+    "Mikko Kettunen",
+    "Ekaterina Paasonen Olli Gröhn",
+    "Ville Kolehmainen"
+  ],
+  "summary": "In ill-posed dynamic inverse problems expected spatial features and temporal correlation between frames can be leveraged to improve the quality of the computed solution, in particular when the available data are limited and the dimensionality of the unknown is large. One way to take advantage of the spatial and temporal traits believed to characterize the solution is to encode them into the entries of a dictionary, and to seek the solution as a sparse linear combination of the dictionary atoms. To promote a vector of coefficients with mostly vanishing entries, we consider a stochastic…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-20",
+  "updated": "2026-02-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

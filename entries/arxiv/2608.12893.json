@@ -1,0 +1,19 @@
+{
+  "key": "2608.12893",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.12893",
+  "title": "A Counterexample to Robust Second-Order Convergence of the Strang Projector-Splitting Integrator",
+  "authors": [
+    "Shiheng Zhang"
+  ],
+  "summary": "The classical Strang projector-splitting integrator is widely observed to converge with order two, whereas the error analysis that remains uniform as the smallest singular value retained in the low-rank approximation tends to zero proves only order one. We show that this gap is intrinsic under the standard assumptions. We construct $3\\times3$ matrix differential equations that are $C^2$ in time and smooth in the matrix variable, with rank-two initial data that satisfy uniform boundedness, Lipschitz, tangency-defect, and regularity bounds. Nevertheless, the exact-subflow Strang method has a…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

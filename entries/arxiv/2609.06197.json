@@ -1,0 +1,22 @@
+{
+  "key": "2609.06197",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.06197",
+  "title": "Algorithmic Optimality Guarantees for Nonsmooth $H_\\infty$ Output-Feedback Policy Search",
+  "authors": [
+    "Ashkan Soleymani",
+    "Patrick Jaillet"
+  ],
+  "summary": "We study continuous-time full-order dynamic output-feedback $H_\\infty$ policy search, a nonconvex and nonsmooth problem. Direct policy search is a central paradigm in reinforcement learning and continuous control, but rigorous guarantees remain scarce in robust output-feedback settings. The $H_\\infty$ problem is a canonical benchmark because it captures disturbance attenuation and robustness while exposing the hard nonsmooth geometry of policy-space optimization. We prove that on the exact identity-gauge slice of the extended convex lift, $\\varepsilon$-stationarity yields…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "eess.SY"
+  ],
+  "published": "2026-09-05",
+  "updated": "2026-09-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

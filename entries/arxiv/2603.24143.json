@@ -1,0 +1,22 @@
+{
+  "key": "2603.24143",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.24143",
+  "title": "Linear-Nonlinear Fusion Neural Operator for Partial Differential Equations",
+  "authors": [
+    "Heng Wu",
+    "Junjie Wang",
+    "Benzhuo Lu"
+  ],
+  "summary": "Neural operator learning directly constructs the mapping relationship from the equation parameter space to the solution space, enabling efficient direct inference in practical applications without the need for repeated solution of partial differential equations (PDEs) -- an advantage that is difficult to achieve with traditional numerical methods. In this work, we find that explicitly decoupling linear and nonlinear effects within such operator mappings leads to improved learning efficiency. This yields a novel network structure, namely the Linear-Nonlinear Fusion Neural Operator (LNF-NO),…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-03-25",
+  "updated": "2026-04-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

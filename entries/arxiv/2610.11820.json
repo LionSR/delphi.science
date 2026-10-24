@@ -1,0 +1,21 @@
+{
+  "key": "2610.11820",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.11820",
+  "title": "Finite volume discretization and normalized gradient flow for computing minimizers of the rotating Gross-Pitaevskii energy",
+  "authors": [
+    "Quentin Chauleur",
+    "Guillaume Dujardin",
+    "Robin Roussel"
+  ],
+  "summary": "We study the approximation by a finite volume scheme of the stationary Gross-Pitaevskii equation with angular momentum rotation. We prove that, under standard mesh regularity assumptions, the discrete global minimizers converge to the continuous one as the mesh diameter tends to zero. Moreover, under a spectral gap assumption on the Hessian of the discrete energy, we prove that solutions to a normalized continuous gradient flow converges exponentially fast to such discrete minimizers. Additionally, we show that this previous discrete spectral gap assumption can be derived from similar…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

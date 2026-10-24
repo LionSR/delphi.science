@@ -1,0 +1,25 @@
+{
+  "key": "2601.20060",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.20060",
+  "title": "How many times can two minimum spanning trees cross?",
+  "authors": [
+    "Todor Antić",
+    "Morteza Saghafian",
+    "Maria Saumell",
+    "Felix Schröder",
+    "Josef Tkadlec",
+    "Pavel Valtr"
+  ],
+  "summary": "Let $P$ be a generic set of $n$ points in the plane, and let $P=R\\cup B$ be a coloring of $P$ in two colors. We are interested in the number of crossings between the minimum spanning trees (MSTs) of $R$ and $B$, denoted by $\\crossAB(R,B)$. We define the \\emph{bicolored MST crossing number} of $P$, denoted by $\\cross(P)$, as $\\cross(P) = \\max_{P= R\\cup B}(\\crossAB(R,B))$. We prove a linear upper bound for $\\cross(P)$ when $P$ is generic. If $P$ is dense or in convex position, we provide linear lower bounds. Lastly, if $P$ is chosen uniformly at random from the unit square and is colored…",
+  "domain": "cs.CG",
+  "tags": [
+    "cs.CG",
+    "math.CO"
+  ],
+  "published": "2026-01-27",
+  "updated": "2026-08-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

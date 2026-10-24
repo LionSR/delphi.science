@@ -1,0 +1,23 @@
+{
+  "key": "2605.11526",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11526",
+  "title": "Efficient and provably convergent end-to-end training of deep neural networks with linear constraints",
+  "authors": [
+    "Zonglin Yang",
+    "Zhexuan Gu",
+    "Yancheng Yuan"
+  ],
+  "summary": "Training a deep neural network with the outputs of selected layers satisfying linear constraints is required in many contemporary data-driven applications. While this can be achieved by incorporating projection layers into the neural network, its end-to-end training remains challenging due to the lack of rigorous theory and efficient algorithms for backpropagation. A key difficulty in developing the theory and efficient algorithms for backpropagation arose from the nonsmoothness of the solution mapping of the projection layer. To address this bottleneck, we introduce an efficiently…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

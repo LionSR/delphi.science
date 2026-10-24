@@ -1,0 +1,21 @@
+{
+  "key": "2603.19847",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.19847",
+  "title": "Transformer Causality Regularization for Dynamic Inverse Problems",
+  "authors": [
+    "Gesa Sarnighausen",
+    "Anne Wald",
+    "Andreas Hauptmann"
+  ],
+  "summary": "We study the concept of including the causality principle as regularizer into the solution of linear time-dependent inverse problems. This is achieved by combining transformer-based predictions with classical variational regularization, resulting in what we call transformer causality regularization (TCR). The causality principle states that an object at time $t'$ depends only on its previous states at $t t'$. Since the transformer architecture represents sequence-to-sequence functions and can be equipped with a causal attention mask, transformers are the natural choice for a learned…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-20",
+  "updated": "2026-03-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

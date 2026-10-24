@@ -1,0 +1,22 @@
+{
+  "key": "2610.01662",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01662",
+  "title": "Lower Bounds for Stochastic First-Order Algorithms with Variance Reduction in Nonconvex--Concave Minimax Optimization",
+  "authors": [
+    "Jiayi Song",
+    "Zi Xu"
+  ],
+  "summary": "We establish complexity lower bounds for stochastic first-order algorithms in nonconvex--concave minimax optimization, allowing algorithms to use variance reduction. Our main contribution is a lower bound for a zero-respecting algorithm class that permits variance reduction, extending beyond the algorithmic restrictions imposed by some existing lower bounds. We consider objectives with an $L$-Lipschitz continuous joint gradient, a compact convex dual domain of Euclidean radius at most $D_Y$, and a primal value function, defined by maximizing the objective over the dual variable, with initial…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

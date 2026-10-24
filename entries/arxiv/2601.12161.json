@@ -1,0 +1,26 @@
+{
+  "key": "2601.12161",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.12161",
+  "title": "Streaming Operator Inference for Model Reduction of Large-Scale Dynamical Systems",
+  "authors": [
+    "Tomoki Koike",
+    "Prakash Mohan",
+    "Marc T. Henry de Frahan",
+    "Julie Bessac",
+    "Elizabeth Qian"
+  ],
+  "summary": "Projection-based model reduction enables efficient simulation of complex dynamical systems by constructing low-dimensional surrogate models from high-dimensional data. The Operator Inference (OpInf) approach learns such reduced surrogate models through a two-step process: constructing a low-dimensional basis via Singular Value Decomposition (SVD) to compress the data, then solving a linear least-squares (LS) problem to infer reduced operators that govern the dynamics in this compressed space, all without access to the underlying code or full model operators, i.e., non-intrusively.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG",
+    "math.DS",
+    "physics.comp-ph"
+  ],
+  "published": "2026-01-17",
+  "updated": "2026-02-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

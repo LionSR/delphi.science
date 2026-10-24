@@ -1,0 +1,21 @@
+{
+  "key": "2602.16392",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.16392",
+  "title": "Partially observed controlled Markov chains and optimal control of the Wonham filter",
+  "authors": [
+    "Fulvia Confortola",
+    "Marco Fuhrman"
+  ],
+  "summary": "We consider a class of optimal control problems, with finite or infinite horizon, for a continuous-time Markov chain with finite state space. In this case, the control process affects the transition rates. We suppose that the controlled process can not be observed, and at any time the control actions are chosen based on the observation of a related stochastic process perturbed by an exogenous Brownian motion. We describe a construction of the controlled Markov chain, having stochastic transition rates adapted to the observation filtration. By a change of probability measure of Girsanov type,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.PR"
+  ],
+  "published": "2026-02-18",
+  "updated": "2026-02-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

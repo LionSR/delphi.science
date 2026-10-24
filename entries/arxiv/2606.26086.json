@@ -1,0 +1,22 @@
+{
+  "key": "2606.26086",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.26086",
+  "title": "On the entropic convergence for piecewise deterministic samplers: speedup and obstruction",
+  "authors": [
+    "Pierre Monmarché",
+    "Lihan Wang"
+  ],
+  "summary": "For piecewise deterministic samplers such as Randomized Hamiltonian Monte Carlo (RHMC), Bouncy Particle Sampler (BPS) or Zig-Zag Process (ZZP), long-time exponential convergence rates have been established in previous works using Harris or $L^2$ hypocoercivity approaches. In particular, in the $L^2$ framework, a so-called \\emph{diffusive-to-ballistic} speedup was known for log-concave targets, according to which the convergence rates of these samplers, with suitable parameters, are quadratically improved with respect to the standard overdamped Langevin diffusion process. A recent work by…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.AP",
+    "stat.CO"
+  ],
+  "published": "2026-06-24",
+  "updated": "2026-06-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

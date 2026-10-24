@@ -1,0 +1,20 @@
+{
+  "key": "2609.10004",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10004",
+  "title": "Minimum-makespan completion and vertex selection leave the Wang-Sitters constant at 11/6",
+  "authors": [
+    "Adam Y. Shavit"
+  ],
+  "summary": "Wang and Sitters' rounding scheme for graph balancing (each job allowed on at most two machines) keeps the makespan, the busiest machine's load, within 11/6 of the optimum, and a companion note shows that no smaller constant holds. One suspected cause is Step 3's freedom to match leftover jobs to slots in any valid way. We show that removing that freedom does not improve the constant. An idealized oracle that always picks the valid matching with the smallest makespan still has worst-case constant exactly 11/6 against the optimum. Both natural 7/4 bounds for it, against the relaxation's…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.OC"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

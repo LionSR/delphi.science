@@ -1,0 +1,21 @@
+{
+  "key": "2607.17595",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.17595",
+  "title": "Concentration and Mean-Square Bounds for Contractive Stochastic Approximation: A Unified Elementary Approach",
+  "authors": [
+    "Siddharth Chandak"
+  ],
+  "summary": "We establish mean-square and concentration bounds for stochastic approximation (SA) with arbitrary norm contractive mappings, under a multiplicative noise model where the noise may scale affinely with the norm of the iterates, and the iterates are potentially unbounded. These settings arise in reinforcement learning, where operators are often contractive in the $\\ell_\\infty$ norm and the noise scales with the iterates. To address the arbitrary norm, earlier works replace the non-smooth squared norm with a smooth Lyapunov function constructed via the generalized Moreau envelope. For…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-07-20",
+  "updated": "2026-07-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

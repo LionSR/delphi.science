@@ -1,0 +1,30 @@
+{
+  "key": "2602.13871",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.13871",
+  "title": "Ensemble-Conditional Gaussian Processes (Ens-CGP): Representation, Geometry, and Inference",
+  "authors": [
+    "Sai Ravela",
+    "Jae Deok Kim",
+    "Kenneth Gee",
+    "Xingjian Yan",
+    "Samson Mercier",
+    "Lubna Albarghouty",
+    "Anamitra Saha"
+  ],
+  "summary": "We formulate Ensemble-Conditional Gaussian Processes (Ens-CGP), a finite-dimensional synthesis that centers ensemble-based inference on the conditional Gaussian law. Conditional Gaussian processes (CGP) arise directly from Gaussian processes under conditioning and, in linear-Gaussian settings, define the full posterior distribution for a Gaussian prior and linear observations. Classical Kalman filtering is a recursive algorithm that computes this same conditional law under dynamical assumptions; the conditional Gaussian law itself is therefore the underlying representational object, while…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.IT",
+    "cs.LG",
+    "math.OC",
+    "stat.AP",
+    "stat.ML"
+  ],
+  "published": "2026-02-14",
+  "updated": "2026-02-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

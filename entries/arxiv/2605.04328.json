@@ -1,0 +1,19 @@
+{
+  "key": "2605.04328",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04328",
+  "title": "The pebbling number of Fibonacci cubes",
+  "authors": [
+    "Tong Niu"
+  ],
+  "summary": "The $n$-th Fibonacci cube $Γ_n$ is the subgraph of the hypercube $Q_n$ induced by binary strings with no two consecutive ones. We determine $π(Γ_n) = 2^n$ for $n \\le 6$, so the pebbling number of $Γ_n$ equals that of the ambient hypercube $Q_n$ despite $Γ_n$ having far fewer vertices. The lower bound is a standard potential argument. For the upper bound, the Weight Function Lemma yields $2^n+1$ -- one too many -- so we close the gap by exhaustive MILP verification. We conjecture $π(Γ_n) = 2^n$ for all $n$.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-05-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

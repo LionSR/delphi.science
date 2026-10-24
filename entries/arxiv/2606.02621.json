@@ -1,0 +1,19 @@
+{
+  "key": "2606.02621",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.02621",
+  "title": "A Fibonacci theorem for Collatz trajectories via modular graph structure",
+  "authors": [
+    "Manuel-Alejandro Reyes Jiménez"
+  ],
+  "summary": "Let $T(n)=n/2$ if $n$ is even and $T(n)=(3n+1)/2$ if $n$ is odd. We prove that for each $m\\ge1$, exactly $F(m+1)$ odd integers $n$ in $\\{1,\\ldots,2^m\\}$ have the property that none of the iterates $T(n),T^2(n),\\ldots,T^{m-1}(n)$ lies in the residue class $4\\pmod6$, where $F(m+1)$ is the $(m+1)$-th Fibonacci number; the proportion decays at rate $(\\varphi/2)^m$, $\\varphi=(1+\\sqrt{5})/2$. Equivalently, these are the odd $n\\le2^m$ for which no two consecutive terms of $n,T(n),\\ldots,T^{m-1}(n)$ are even. The proof uses the directed graph $G$ of Collatz transitions modulo $6$ and its unique…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

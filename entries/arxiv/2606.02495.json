@@ -1,0 +1,21 @@
+{
+  "key": "2606.02495",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.02495",
+  "title": "Construction of Lyapunov Functions for Switched Systems using Meshfree Collocation",
+  "authors": [
+    "Jay Ward",
+    "Nicos Georgiou",
+    "Peter Giesl"
+  ],
+  "summary": "Switched systems are a family of dynamical systems where a switching rule indicates which system is \"switched on\". This rule can be dependent on time and/or position in the state space. Stability of switched systems is a property that is often investigated using the existence of one (or multiple) Lyapunov function(s). We develop an algorithm using a scattered approximation method to construct a Lyapunov function for switched systems, accompanied with stability results. The construction adapts a previous method for autonomous ODEs that uses meshfree collocation and quadratic programming.",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

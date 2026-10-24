@@ -1,0 +1,20 @@
+{
+  "key": "2610.17695",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.17695",
+  "title": "H-PDLP: GPU-Accelerated Linear Programming via Generalized PDHG and Homogeneous Self-Dual Embedding",
+  "authors": [
+    "Haihao Lu",
+    "Bo Tang"
+  ],
+  "summary": "GPU-based first-order methods are emerging as an approach for solving large-scale linear programming (LP) problems. We present H-PDLP, a GPU first-order LP solver based on a generalized primal-dual hybrid gradient (PDHG) method for a homogeneous self-dual embedding of the LP, and study its numerical performance. The solver applies the restarted reflected Halpern iteration to the generalized PDHG operator, with the embedding encoding both primal-dual optimal solutions and certificates of primal or dual infeasibility. We derive a compact embedding for LPs with two-sided constraint and variable…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

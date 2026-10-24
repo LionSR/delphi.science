@@ -1,0 +1,23 @@
+{
+  "key": "2610.01503",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01503",
+  "title": "McADMM: A Multi-Clique Augmented Lagrangian-Based Algorithm for Large-Scale Sparse SDPs with Bound Constraints",
+  "authors": [
+    "Kristo Nugraha Lian",
+    "Nehal Ahmed Shaikh",
+    "Di Hou",
+    "Xingyu Xie",
+    "Kim-Chuan Toh"
+  ],
+  "summary": "sGS-PADMM [21, 14, 6] is a powerful and versatile class of convergent multi-block ADMM solvers for implementations on moderate-sized linear semidefinite programming (SDP) problems. In this paper, we further enhance this class of algorithms for solving SDP problems by proposing a new multi-clique decomposition approach, allowing substantial improvements in applications on large-scale sparse SDPs (e.g., where $n > 1000$) with conducive aggregate sparsity patterns. Our SDP decomposition strategy mainly aims to reduce the estimated PSD projection cost after decomposition, in contrast to common…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

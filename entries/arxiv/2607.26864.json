@@ -1,0 +1,19 @@
+{
+  "key": "2607.26864",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.26864",
+  "title": "A Relaxed Gradient Step Denoiser for Splitting Methods in Poisson Inverse Problems",
+  "authors": [
+    "Alessandro Benfenati"
+  ],
+  "summary": "Plug and Play methods combine classical variational models with learned denoisers and have achieved strong results in imaging inverse problems. Their convergence has been widely studied for Gaussian data, whereas Poisson models require additional care because of the nonquadratic Kullback-Leibler fidelity. This work introduces GSDSplit+ , a splitting method built upon PnPSplit+, in which the generic denoising block is replaced by a relaxed Gradient Step Denoiser. The resulting method retains explicit Poisson fidelity updates. The denoiser is defined through the gradient of a learned convex…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

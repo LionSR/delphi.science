@@ -1,0 +1,23 @@
+{
+  "key": "2610.31540",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.31540",
+  "title": "Dispersive Tree Agreements for Multi-Robot Coordination",
+  "authors": [
+    "Shashank A. Deshpande",
+    "Blake T. Edwards",
+    "Jonathan P. How"
+  ],
+  "summary": "Multi-robot coordination of nonlinear systems is naturally formulated as joint-space optimal control subject to constraints over groups of robots. Existing methods that approach joint optimality remain largely centralized, offline, and confined to collision-free motion planning, while decentralized, real-time counterparts target safe navigation without pursuing the joint optimum. This paper develops a decentralized, real-time planner that approaches the joint optimum as an anytime process. We extend a recent single-robot framework that searches dispersive trees of forward-propagated commands…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "cs.MA",
+    "math.OC"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

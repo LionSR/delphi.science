@@ -1,0 +1,20 @@
+{
+  "key": "2605.23866",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.23866",
+  "title": "Optimal Vector Balancing for Zonotopes",
+  "authors": [
+    "Victor Reis"
+  ],
+  "summary": "A zonotope is a linear image of the cube $[-1,1]^m$ for some $m \\in \\mathbb{N}$. We show that there is a universal constant $C$ such that, for every zonotope $Z\\subset \\mathbb{R}^d$ and vectors $v_1,\\dots,v_n\\in Z$, there are signs $x_1,\\dots,x_n\\in\\{-1,1\\}$ with \\[ \\sum_{i=1}^n x_i v_i \\in C\\sqrt d\\, Z. \\] This resolves a 2002 question of Schechtman and generalizes Spencer's six standard deviations theorem, which corresponds to the case $Z=[-1,1]^d$.",
+  "domain": "math.MG",
+  "tags": [
+    "math.MG",
+    "cs.DM"
+  ],
+  "published": "2026-05-22",
+  "updated": "2026-05-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

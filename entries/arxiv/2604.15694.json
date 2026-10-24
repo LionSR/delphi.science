@@ -1,0 +1,27 @@
+{
+  "key": "2604.15694",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.15694",
+  "title": "Neural Continuous-Time Markov Chain: Discrete Diffusion via Decoupled Jump Timing and Direction",
+  "authors": [
+    "Jingyuan Li",
+    "Xiaoyi Jiang",
+    "Fukang Wen",
+    "Wei Liu",
+    "Renqian Luo",
+    "Yi Zhu",
+    "Zuoqiang Shi",
+    "Pipi Hu"
+  ],
+  "summary": "Discrete diffusion models based on continuous-time Markov chains (CTMCs) have shown strong performance on language and discrete data generation, yet existing approaches typically parameterize the reverse rate matrix monolithically -- through proxies such as concrete scores (SEDD) or clean-data predictions (MDLM, GIDD) -- rather than aligning the parameterization with the intrinsic CTMC decomposition into jump timing and jump direction. We propose \\textbf{Neural CTMC}, which exploits the underlying Poisson structure of CTMC dynamics by separately parameterizing the reverse process through an…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-04-17",
+  "updated": "2026-05-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

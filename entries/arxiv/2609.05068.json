@@ -1,0 +1,23 @@
+{
+  "key": "2609.05068",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.05068",
+  "title": "On the Delay-Constrained Maximum Concurrent Flow Problem",
+  "authors": [
+    "Walid Ben-Ameur",
+    "Guillaume Beraud-Sudreau",
+    "Hervé Kerivin",
+    "Sebastien Martin"
+  ],
+  "summary": "Real-time services, such as VoIP and large-scale neural network training, require strict transmission delay guarantees. While routing under hop constraints is tractable, real-world delays increase sharply with equipment load, typically modeled using the M/M/1 queuing function where delay is inversely proportional to available bandwidth. We investigate the resulting Delay-Constrained Maximum Concurrent Flow (DCMCF) problem, which seeks to maximize the minimum throughput across all commodities. The problem's complexity stems from the conditional and non-linear nature of the delay constraints,…",
+  "domain": "cs.NI",
+  "tags": [
+    "cs.NI",
+    "math.OC"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

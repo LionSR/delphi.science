@@ -1,0 +1,21 @@
+{
+  "key": "2605.21717",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.21717",
+  "title": "Likelihood-informed dimension reduction across tempered Bayesian posteriors",
+  "authors": [
+    "Arne Bouillon",
+    "Oliver R. A. Dunbar"
+  ],
+  "summary": "Scientific computer simulations cannot represent all scales in realistic applications. To bridge this model-data gap, parameters are injected into models and constrained with noisy data using Bayesian inversion. To reduce the number of simulator evaluations, which can be 10^5 or more, modern approaches employ dimension reduction in conjunction with emulation of the forward map (that contains the simulator). Due to scarcity of model evaluations and data, this dimension reduction becomes very important for posterior sampling performance. Recent work on likelihood-informed subspaces (LIS)…",
+  "domain": "stat.CO",
+  "tags": [
+    "stat.CO",
+    "math.NA"
+  ],
+  "published": "2026-05-20",
+  "updated": "2026-05-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

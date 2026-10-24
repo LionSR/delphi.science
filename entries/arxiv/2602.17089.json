@@ -1,0 +1,23 @@
+{
+  "key": "2602.17089",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.17089",
+  "title": "Synergizing Transport-Based Generative Models and Latent Geometry for Stochastic Closure Modeling",
+  "authors": [
+    "Xinghao Dong",
+    "Huchen Yang",
+    "Jin-long Wu"
+  ],
+  "summary": "Diffusion models recently developed for generative AI tasks can produce high-quality samples while still maintaining diversity among samples to promote mode coverage, providing a promising path for learning stochastic closure models. Compared to other types of generative AI models, such as GANs and VAEs, the sampling speed is known as a key disadvantage of diffusion models. By systematically comparing transport-based generative models on a numerical example of 2D Kolmogorov flows, we show that flow matching in a lower-dimensional latent space is suited for fast sampling of stochastic closure…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS",
+    "physics.comp-ph"
+  ],
+  "published": "2026-02-19",
+  "updated": "2026-02-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

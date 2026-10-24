@@ -1,0 +1,21 @@
+{
+  "key": "2606.17744",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.17744",
+  "title": "On the Solution of Large-scale Non-autonomous Differential Riccati Equations: a Numerical Study",
+  "authors": [
+    "Eugenio Mancinelli",
+    "Davide Palitta",
+    "Jens Saak"
+  ],
+  "summary": "We explore the numerical solution of large-scale non-autonomous Differential Riccati Equations (DREs). While we assume to discretize the differential operator using a Backward Differentiation Formula (BDF) of order s, we solve the generalized Algebraic Riccati Equation (gARE) resulting at each time step by different state-of-the-art methods. In particular, we compare the performance of the inexact Newton- Kleinman method with line search and the low-rank RADI iteration, considering for both methods two different initialization strategies: zero initialization and warm-start. A comprehensive…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

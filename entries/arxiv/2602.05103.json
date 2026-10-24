@@ -1,0 +1,21 @@
+{
+  "key": "2602.05103",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05103",
+  "title": "Learning Nonlinear Continuous-Time Systems for Formal Uncertainty Propagation and Probabilistic Evaluation",
+  "authors": [
+    "Peter Amorese",
+    "Morteza Lahijanian"
+  ],
+  "summary": "Nonlinear ordinary differential equations (ODEs) are powerful tools for modeling real-world dynamical systems. However, propagating initial state uncertainty through nonlinear dynamics, especially when the ODE is unknown and learned from data, remains a major challenge. This paper introduces a novel continuum dynamics perspective for model learning that enables formal uncertainty propagation by constructing Taylor series approximations of probabilistic events. We establish sufficient conditions for the soundness of the approach and prove its asymptotic convergence. Empirical results…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.DS"
+  ],
+  "published": "2026-02-04",
+  "updated": "2026-02-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

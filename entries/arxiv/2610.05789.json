@@ -1,0 +1,24 @@
+{
+  "key": "2610.05789",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05789",
+  "title": "Dimension-Free Decentralized Nonsmooth Nonconvex Stochastic Optimization",
+  "authors": [
+    "Yuanyu Wan",
+    "Lan Xue",
+    "Haomin Bai",
+    "Tong Wei",
+    "Mingli Song"
+  ],
+  "summary": "We investigate decentralized nonsmooth nonconvex stochastic optimization over a network of $n$ nodes, with the goal of finding an $(δ,ε)$-Goldstein stationary point. The best existing algorithm achieves $O(δ^{-1}(ε^{-3}+dε^{-1}))$ sample complexity and $\\widetilde{O}(γ^{-1/2}δ^{-1}(ε^{-3}+dε^{-1}))$ communication complexity, where $d$ is the problem dimension and $γ$ is the spectral gap of the communication matrix. However, the polynomial dependence on $d$ can be a major bottleneck in high-dimensional regimes. In this paper, we propose a novel algorithm that achieves $O(δ^{-1}ε^{-3})$ sample…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

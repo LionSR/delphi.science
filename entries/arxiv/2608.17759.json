@@ -1,0 +1,24 @@
+{
+  "key": "2608.17759",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17759",
+  "title": "Recovering protein conformations from single-particle cryo-EM data via indirect shape matching gradient flows",
+  "authors": [
+    "Erik Jansson",
+    "Jonathan Krook",
+    "Ozan Öktem",
+    "Carola-Bibiane Schönlieb"
+  ],
+  "summary": "Single-particle cryo-electron microscopy images a macromolecule as many noisy tomographic projections of its electrostatic potential. We reconstruct the protein backbone directly from such projections, as an atomic point cloud, without the intermediate step of reconstructing the 3D electrostatic potential map. We formulate this as an indirect shape matching problem: a point-cloud template of the backbone is deformed until its simulated projections agree with the data, with the structure observed only through the imaging operator. The deformation is computed via a gradient flow on a Lie…",
+  "domain": "q-bio.BM",
+  "tags": [
+    "q-bio.BM",
+    "math.DG",
+    "math.OC"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

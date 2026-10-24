@@ -1,0 +1,21 @@
+{
+  "key": "2609.06988",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.06988",
+  "title": "Almost Sharp Equivalence between Approximate Message Passing and Low-Degree Polynomials",
+  "authors": [
+    "Zhangsong Li"
+  ],
+  "summary": "We prove a sharp lower bound for growing-degree polynomial estimation in the symmetric rank-one matrix estimation problem. The observation is \\[ \\boldsymbol{Y}=\\frac{1}{\\sqrt{n}} \\boldsymbolθ \\boldsymbolθ^{\\top}+\\boldsymbol{W}, \\] where the coordinates of $\\boldsymbolθ$ are independent with a common, fixed sub-Gaussian distribution $π_Θ$ satisfying $\\mathbb E[Θ]\\neq0$, and $\\boldsymbol{W}$ is symmetric with independent standard Gaussian upper-triangular entries. For every such prior, we give an explicit finite-dimensional bound implying that every sequence of polynomial estimators of degree…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.DS",
+    "math.PR"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

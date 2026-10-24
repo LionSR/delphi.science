@@ -1,0 +1,21 @@
+{
+  "key": "2608.08431",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.08431",
+  "title": "Optimal Finite Interval Discrepancy via Binary Refinement",
+  "authors": [
+    "Arthur F. Ramos",
+    "David B. Hulak",
+    "Ruy J. G. B. de Queiroz"
+  ],
+  "summary": "DeLeo, Henderschedt, and Wells introduced a finite-horizon version of the classical de Bruijn--Erdos interval discrepancy problem. Starting from the unit interval, one repeatedly splits an existing interval into two until $n$ intervals are present, and one minimizes the largest ratio between the longest and shortest intervals over all intermediate partitions. They constructed the lex-merge strategy, whose discrepancy is $2^{1-1/\\lceil n/2\\rceil}$, and conjectured that this value is optimal for every $n$. We prove the conjecture. More generally, we establish a sharp lower bound for arbitrary…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-08-09",
+  "updated": "2026-08-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

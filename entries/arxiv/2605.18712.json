@@ -1,0 +1,21 @@
+{
+  "key": "2605.18712",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.18712",
+  "title": "Faster random walks via infrequent steering",
+  "authors": [
+    "Boris Bukh",
+    "Quentin Dubroff"
+  ],
+  "summary": "Random walks on graphs can be slow. To speed them up, imagine that at each step instead of choosing the neighbor at random, there is a small probability $\\varepsilon>0$ that we can choose it. We show that in this case, at least for graphs of bounded degree, there is a way to steer the walk so that it visits every vertex in $n^{1+o(1)}$ steps with high probability. The key to this result is a way to decompose arbitrary graphs into small-diameter pieces.",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.CO"
+  ],
+  "published": "2026-05-18",
+  "updated": "2026-05-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

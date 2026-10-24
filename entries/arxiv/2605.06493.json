@@ -1,0 +1,21 @@
+{
+  "key": "2605.06493",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.06493",
+  "title": "Confidentiality of Linear Control Systems with Quadratic Output Under Sensor Attacks [Extended Version]",
+  "authors": [
+    "Zeyad M. Manaa",
+    "Nathan van de Wouw",
+    "Michelle S. Chong"
+  ],
+  "summary": "We study the state estimation problem for linear control systems with quadratic outputs which are locally unobservable at the equilibrium. We show that, despite this inherent lack of observability, an adversary with sensor read and write capability can induce observability by injecting an appropriate signal into the measurement channel. Taking the role of an adversary, we characterize when an injected signal can or cannot induce observability and, in the successful case, construct an observer that achieves local exponential convergence of state estimates to the true states of the system. A…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2602.18210",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.18210",
+  "title": "Semiparametric Uncertainty Quantification via Isotonized Posterior for Deconvolutions",
+  "authors": [
+    "Francesco Gili",
+    "Geurt Jongbloed"
+  ],
+  "summary": "We address the problem of uncertainty quantification for the deconvolution model \\(Z = X + Y\\), where \\(X\\) and \\(Y\\) are nonnegative random variables and the goal is to estimate the signal's distribution of \\(X \\sim F_0\\) supported on~\\([0,\\infty)\\), from observations where the noise distribution is known. Existing frequentist methods often produce confidence intervals for $F_0(x)$ that depend on unknown nuisance parameters, such as the density of \\(X\\) and its derivative, which are difficult to estimate in practice. This paper introduces a novel and computationally efficient nonparametric…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-02-20",
+  "updated": "2026-02-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

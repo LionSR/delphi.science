@@ -1,0 +1,22 @@
+{
+  "key": "2606.03973",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.03973",
+  "title": "A remark on the majorizing measures theorem for general processes",
+  "authors": [
+    "Reese Pathak",
+    "Nikita Zhivotovskiy"
+  ],
+  "summary": "We show that the lower bound in the majorizing measures theorem holds for a large class of random vectors. Specifically, suppose $X \\sim μ$ is a centered random vector in $\\mathbf{R}^n$ with \\[ C_{\\mathrm{KL}}(μ) = \\sup_{\\substack{θ\\neq η\\\\ θ, η\\in \\mathbf{R}^n}} \\frac{\\mathrm{KL}(μ_θ\\| μ_η)}{\\|θ- η\\|_2^2} < \\infty, \\] where $μ_θ$ denotes the law of the translate $θ+ X$. Then, for every nonempty, bounded $T \\subset \\mathbf{R}^n$, \\[ \\sqrt{C_{\\mathrm{KL}}(μ)}\\, \\mathbf{E}_μ\\Big[\\sup_{t \\in T} \\, \\langle X, t \\rangle \\Big] \\gtrsim γ_2(T), \\] where the righthand side denotes Talagrand's generic…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.IT",
+    "math.ST"
+  ],
+  "published": "2026-06-02",
+  "updated": "2026-06-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

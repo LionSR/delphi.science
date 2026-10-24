@@ -1,0 +1,23 @@
+{
+  "key": "2606.08817",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.08817",
+  "title": "Low-Variance Randomised Numerical Linear Algebra for Finite Element Simulation",
+  "authors": [
+    "N. Polydorides",
+    "Y. Wu",
+    ". H. Noori",
+    "H. Vandierendonck",
+    "R. Woods"
+  ],
+  "summary": "We present a low-variance randomised numerical linear algebra approach for multi-query finite element systems arising from parametric elliptic partial differential equations with applications to digital twins and online model calibration. The method relies on Galerkin subspace projection for reducing the dimensionality, and then combines parameter-oblivious leverage-score Bernoulli sampling with a control variates scheme to yield a reduced-variance `forward' sketch and an invertible `inverse' sketch that are then fused to a single efficient regularised estimator. Effectively, this reduces…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-07",
+  "updated": "2026-06-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

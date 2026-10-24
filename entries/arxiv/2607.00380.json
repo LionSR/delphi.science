@@ -1,0 +1,21 @@
+{
+  "key": "2607.00380",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.00380",
+  "title": "Physics Informed Neural Networks for Nonlinear Delay Differential Equations",
+  "authors": [
+    "Stone Yao",
+    "Vipin Kumar",
+    "Roberto Guglielmi"
+  ],
+  "summary": "In this paper we propose a novel physics-informed neural network framework for solving general first-order delay differential equations. Our approach combines a differentiable history switch, a trial-solution formulation that explicitly enforces history constraints, and a segmented collocation strategy to stabilize gradient propagation across large temporal domains. The method enables a scalable and physics-consistent approximation of delay differential equation solutions while maintaining continuity across subintervals. Numerical experiments demonstrate the effectiveness of the proposed…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

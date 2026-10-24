@@ -1,0 +1,21 @@
+{
+  "key": "2608.29454",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.29454",
+  "title": "The method of ellipcenters with momentum and relaxation for convex quadratic minimization",
+  "authors": [
+    "Roger Behling",
+    "Vincent Guigues",
+    "Harry Oviedo"
+  ],
+  "summary": "The method of ellipcenters (ME) is a recent technique developed for unconstrained minimization. Its iteration relies only on first order information and consists of building a suitable two-dimensional ellipse that tries to capture intrinsic ill-conditioning of the problem. The center of the ellipse is taken as the next iterate, which justifies the name of the method. ME was already shown to converge linearly when the objective function is smooth and strongly convex. The special case when the objective is quadratic was studied in the first paper on ME and is also the subject of our work here.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-29",
+  "updated": "2026-08-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

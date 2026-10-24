@@ -1,0 +1,22 @@
+{
+  "key": "2607.19639",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.19639",
+  "title": "Beyond Ellipsoids: Semi-Algebraic Tightening for Chance Constraints Under Actuator Saturation",
+  "authors": [
+    "Carlo Karam",
+    "Mirko Fiacchini",
+    "Matteo Tacchi-Bénard"
+  ],
+  "summary": "Motivated by stochastic model predictive control applications, we develop a semialgebraic framework for constraint tightening in chance-constrained systems with unbounded additive disturbances and saturated inputs. The saturation nonlinearity is represented exactly through its semialgebraic description. A polynomial Lyapunov function satisfying a stochastic drift condition is then synthesized using sum-of-squares optimization, yielding finite-time probabilistic reachable sets and probabilistic ultimate bound. The resulting sets are further optimized through an objective tailored to…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-07-22",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

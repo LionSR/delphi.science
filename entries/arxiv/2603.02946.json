@@ -1,0 +1,22 @@
+{
+  "key": "2603.02946",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.02946",
+  "title": "Fast simulation of Volterra processes using random Fourier features with application to the log-stationary fractional Brownian motion",
+  "authors": [
+    "Othmane Zarhali",
+    "Nicolas Langrené"
+  ],
+  "summary": "A fast simulation framework for stochastic Volterra processes based on Random Fourier Features (RFF) approximation of the kernel is developed. After recalling the main properties of Volterra processes and reviewing existing numerical simulation methods, an accelerated scheme is introduced that relies on a spectral representation of the kernel. A particular attention is devoted to sampling from the kernel spectral density using Hamiltonian Monte Carlo, whose efficiency and stability bring more convenience than alternative sampling procedures. Quantitative guarantees for the proposed method…",
+  "domain": "q-fin.MF",
+  "tags": [
+    "q-fin.MF",
+    "math.NA",
+    "math.PR"
+  ],
+  "published": "2026-03-03",
+  "updated": "2026-05-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

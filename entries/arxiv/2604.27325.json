@@ -1,0 +1,20 @@
+{
+  "key": "2604.27325",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.27325",
+  "title": "A Short Note on Batch-efficient Divide-and-Conquer Algorithm for EigenDecomposition",
+  "authors": [
+    "Yue Song"
+  ],
+  "summary": "EigenDecomposition (ED) is at the heart of many computer vision algorithms and applications. One crucial bottleneck limiting its usage is the expensive computation cost, particularly for a mini-batch of matrices in deep neural networks. Our previous work proposed a dedicated QR-based ED algorithm for batched small matrices (dim${<}32$). This short paper targets the limitation and proposes a batch-efficient Divide-and-Conquer based ED algorithm for larger matrices. The numerical test shows that for a mini-batch of matrices whose dimensions are smaller than $64$, our method can be much faster…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-04-30",
+  "updated": "2026-04-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

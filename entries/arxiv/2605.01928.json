@@ -1,0 +1,22 @@
+{
+  "key": "2605.01928",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.01928",
+  "title": "Training Non-Differentiable Networks via Optimal Transport",
+  "authors": [
+    "An T. Le"
+  ],
+  "summary": "Hard thresholds, quantization, and discrete routing can produce training losses with flat regions and jumps, where ordinary gradients vanish or are undefined. We introduce PolyStep, a forward-only optimizer that evaluates rotated polytope probes and moves parameter blocks along weighted averages of the probe directions. We derive the weights from one-sided entropic transport and use its uncoupled softmax solution in our primary experiments. Our analysis explains when variation among probe costs produces motion and when that motion decreases the loss. On a regular simplex, nonconstant costs…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.NE",
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-05-03",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

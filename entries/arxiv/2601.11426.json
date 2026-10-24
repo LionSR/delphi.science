@@ -1,0 +1,22 @@
+{
+  "key": "2601.11426",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.11426",
+  "title": "Learning-Based Shrinking Disturbance-Invariant Tubes for State- and Input-Dependent Uncertainty",
+  "authors": [
+    "Abdelrahman Ramadan",
+    "Sidney Givigi"
+  ],
+  "summary": "We develop a learning-based framework for constructing shrinking disturbance-invariant tubes under state- and input-dependent uncertainty, intended as a building block for tube Model Predictive Control (MPC), and certify safety via a lifted, isotone (order-preserving) fixed-point map. Gaussian Process (GP) posteriors become $(1-α)$ credible ellipsoids, then polytopic outer sets for deterministic set operations. A two-time-scale scheme separates learning epochs, where these polytopes are frozen, from an inner, outside-in iteration that converges to a compact fixed point…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-01-16",
+  "updated": "2026-01-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

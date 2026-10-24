@@ -1,0 +1,21 @@
+{
+  "key": "2610.27127",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.27127",
+  "title": "Short Point Lists for CNFs and Stronger Constant-Depth Circuit Hardness",
+  "authors": [
+    "Xin Li",
+    "Yan Zhong"
+  ],
+  "summary": "We give a short-description decomposition of bounded-width CNFs. For every fixed $\\varepsilon>0$, every width-$b$ CNF on $m$ variables is an exact disjoint union of at most $2^{\\varepsilon m}$ width-$b$ CNFs, each determined by $2^{O_\\varepsilon(b)}\\log(m+1)$ satisfying assignments. For every fixed $d\\ge3$, we prove a worst-case size lower bound of $2^{Ω_d((n\\log n)^{1/(d-1)})}$ against depth-at-most-$d$ unbounded-fan-in AND/OR circuits with input negations for three polynomial-time Boolean families: inverse trace over binary fields, the Goldreich--Tal trilinear function, and OpenAI's…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "math.CO"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

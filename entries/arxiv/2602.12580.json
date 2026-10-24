@@ -1,0 +1,21 @@
+{
+  "key": "2602.12580",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.12580",
+  "title": "Adaptive mesh methods for hyperbolic conservation laws with bound-preserving flux limiters",
+  "authors": [
+    "Yaguang Gu",
+    "Guanghui Hu",
+    "Tao Tang"
+  ],
+  "summary": "In this paper, we develop bound-preserving (BP) finite-volume schemes for hyperbolic conservation laws on adaptive moving meshes. For scalar conservative laws, we rewrite the conventional high-order discretization as a convex combination of first-order counterparts on each sub-cell, which is mathematically equivalent to introducing a bound-preserving flux limiter. Such a limiter is inexpensive to evaluate, with a feature that the corresponding BP CFL conditions depend solely on the first-order sub-cell schemes. A mild CFL restriction is derived under which high-order spatial accuracy is…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-13",
+  "updated": "2026-02-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

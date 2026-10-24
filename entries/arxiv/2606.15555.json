@@ -1,0 +1,25 @@
+{
+  "key": "2606.15555",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.15555",
+  "title": "Service-Induced Congestion in Memory-Constrained LLM Serving",
+  "authors": [
+    "Ruicheng Ao",
+    "Jing Dong",
+    "Gan Luo",
+    "David Simchi-Levi"
+  ],
+  "summary": "In large language model (LLM) serving, each request accumulates persistent graphics processing unit (GPU) memory during service as its key-value cache grows with every generated token. Under high concurrency, aggregate memory usage therefore increases endogenously over time: the service process itself creates future capacity pressure. When memory capacity is exceeded, systems evict active requests, discarding cached state and restarting them later, which wastes computation and reduces throughput. We develop a discrete-time dynamical model of memory-constrained LLM inference that captures…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-06-14",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

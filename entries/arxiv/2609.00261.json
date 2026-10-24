@@ -1,0 +1,20 @@
+{
+  "key": "2609.00261",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.00261",
+  "title": "An Inexact Augmented Lagrangian Method for $(L_0, L_1)$-Smooth Convex Optimization",
+  "authors": [
+    "Aleksandr Vyguzov",
+    "Fedor Stonyakin"
+  ],
+  "summary": "Augmented Lagrangian methods are among the most effective approaches for solving constrained convex optimization problems. However, classical complexity analyses of first-order methods applied within the augmented Lagrangian framework usually rely on the assumption that the objective function has a Lipschitz continuous gradient. This assumption excludes an important class of generalized smooth functions whose gradients may grow unboundedly. In this paper, we study an inexact augmented Lagrangian method for solving linearly constrained convex optimization problems with $(L_0,L_1)$-smooth…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-31",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

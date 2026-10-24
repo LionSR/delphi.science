@@ -1,0 +1,23 @@
+{
+  "key": "2607.22971",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.22971",
+  "title": "On the Order-Conditional Optimality of Gaffke's Bound",
+  "authors": [
+    "George Bissias",
+    "Erik Learned-Miller"
+  ],
+  "summary": "Let $X = (X_1, \\ldots, X_n)$ be a random vector from any Borel probability law on $\\mathbb{R}_+^n$. We revisit the problem of deriving a lower confidence bound (LCB) on a scalar parameter of that law. We recast classical work, beginning with Buehler, in purely probabilistic terms to form a more accessible and extensible framework. We then specialize the framework to the case where the components of $X$ are independent. In this context, we prove that Gaffke's bound is Buehler optimal for the order that it induces with respect to the maximum marginal mean parameter: $max_{i \\in [n]} E_Q[X_i]$,…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.LG",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-07-25",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

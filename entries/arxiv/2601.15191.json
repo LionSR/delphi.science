@@ -1,0 +1,22 @@
+{
+  "key": "2601.15191",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.15191",
+  "title": "Parareal algorithm for coupled elliptic-parabolic problems",
+  "authors": [
+    "Iñigo Jimenez-Ciga",
+    "Francisco Gaspar",
+    "Kundan Kumar",
+    "Florin A. Radu"
+  ],
+  "summary": "We present a convergence analysis of the parallel-in-time integration method known as the Parareal algorithm for degenerate differential-algebraic systems arising from quasi-static Biot models, which govern coupled flow and deformation in porous media. The underlying system exhibits a saddle-point structure and degeneracy due to the quasi-static assumption. We extend the Parareal algorithm to this setting and propose three coarse propagators: monolithic, fixed-stress, and multirate fixed-stress schemes. For each, we derive sufficient conditions for convergence and establish explicit time…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-21",
+  "updated": "2026-01-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

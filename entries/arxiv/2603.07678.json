@@ -1,0 +1,21 @@
+{
+  "key": "2603.07678",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.07678",
+  "title": "Numerical Approach for On-the-Fly Active Flow Control via Flow Map Learning Method",
+  "authors": [
+    "Xinyu Liu",
+    "Qifan Chen",
+    "Dongbin Xiu"
+  ],
+  "summary": "We present a data-driven numerical approach for on-the-fly active flow control and demonstrate its effectiveness for drag reduction in two-dimensional incompressible flow past a cylinder. The method is based on flow map learning (FML), a recently developed framework for modeling unknown dynamical systems that is particularly effective for partially observed systems. For active flow control, we construct an FML dynamical model for the quantities of interest (QoIs), namely the drag and lift forces. During offline learning, training data are generated for the responses of drag and lift to the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-08",
+  "updated": "2026-03-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

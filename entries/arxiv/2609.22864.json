@@ -1,0 +1,22 @@
+{
+  "key": "2609.22864",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.22864",
+  "title": "Asymptotic-Preserving Exponential Integrators applied to the Hyperbolic Korteweg-de Vries System",
+  "authors": [
+    "Abhijit Biswas",
+    "Sebastiano Boscarino",
+    "David I. Ketcheson",
+    "Giovanni Russo"
+  ],
+  "summary": "We study the application of exponential time integration methods, coupled with Fourier pseudospectral space discretization, to the hyperbolic Korteweg-de Vries (KdVH) system. We investigate the asymptotic preserving (AP) properties of such discretizations, showing that, in general, Lawson methods are not asymptotic preserving, because the auxiliary (derivative-approximating) variables do not satisfy the limit equilibrium manifold, whereas exponential time differencing (ETD) methods are AP for all components, including both the solution variable and the auxiliary variables. We also present an…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-19",
+  "updated": "2026-09-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

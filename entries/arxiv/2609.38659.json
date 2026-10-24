@@ -1,0 +1,27 @@
+{
+  "key": "2609.38659",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38659",
+  "title": "Bandits with Multiple Optimal Arms: Minimax Regret and Non-Adaptivity",
+  "authors": [
+    "Kaixuan Ji",
+    "Qiwei Di",
+    "Qingyue Zhao",
+    "Heyang Zhao",
+    "Quanquan Gu"
+  ],
+  "summary": "We study multi-armed bandits (MAB) with multiple optimal arms, motivated by the fact that many practical decision making problems admit multiple correct answers. For $K$-armed bandits with $A$ optimal arms, we first provide a sharper analysis of previous sub-sampling algorithms (De Heide et al., 2021; Zhu and Nowak, 2020), establishing a $\\tilde{O}\\Big(\\frac{K-A}{\\sqrt{KA}}\\sqrt{T} \\Big)$ minimax regret, where $T$ is the total number of interactions and $\\tilde O(\\cdot)$ drops all constant and logarithmic factors, improving the previous $\\tilde{O}(\\sqrt{KT/A})$ regret. We then provide a…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.AI",
+    "cs.LG",
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2607.09939",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.09939",
+  "title": "Robust Decentralized Optimization under Node Failures via Adaptive Regularization",
+  "authors": [
+    "Ilya Kuruzov",
+    "Anastasiia Murzina"
+  ],
+  "summary": "We study decentralized minimization of a sum of functions over a network where nodes may only leave, the remaining nodes stay connected, and the topology freezes between departures. Standard methods forget departed functions, causing a permanent bias proportional to the heterogeneity of the data. We propose Legacy Gradient Tracking (Legacy-GT): before leaving, a node compresses its function into a gradient-anchored quadratic legacy, bequeaths it to a neighbor, and provides a correction that exactly preserves the gradient-tracking invariant. We prove that the optimal legacy curvature is the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-10",
+  "updated": "2026-07-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

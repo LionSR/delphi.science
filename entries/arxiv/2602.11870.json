@@ -1,0 +1,21 @@
+{
+  "key": "2602.11870",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.11870",
+  "title": "Avoiding stabilization terms in virtual elements for eigenvalue problems: The Reduced Basis Virtual Element Method",
+  "authors": [
+    "Silvia Bertoluzza",
+    "Fabio Credali",
+    "Francesca Gardini"
+  ],
+  "summary": "We present the novel Reduced Basis Virtual Element Method (rbVEM) for solving the Laplace eigenvalue problem. This approach is based on the lowest-order virtual element method and exploits the reduced basis technique to obtain an explicit representation of the virtual (non-polynomial) contribution to the discrete space. rbVEM yields a fully conforming discretization of the considered problem, so that stabilization terms are avoided. We prove that rbVEM provides the correct spectral approximation with optimal error estimates. Theoretical results are supplemented by an exhaustive numerical…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-12",
+  "updated": "2026-08-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

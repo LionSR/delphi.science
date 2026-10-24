@@ -1,0 +1,26 @@
+{
+  "key": "2610.17074",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.17074",
+  "title": "Matching Randomized First-Order Bounds for Higher-Order Smooth Nonconvex Optimization",
+  "authors": [
+    "Haihan Zhang",
+    "Wendao Wu",
+    "Fangqing Zhang",
+    "Chenheng Zhang",
+    "Chunyuan Zheng",
+    "Cong Fang",
+    "Haoxuan Li",
+    "Zhouchen Lin"
+  ],
+  "summary": "Does randomization improve the worst-case first-order complexity of nonconvex optimization when the objective is very smooth? We prove that, for every fixed finite integer $p\\ge3$, finding an $\\eps$-stationary point requires $Ω_p(\\eps^{-5/3})$ exact value-and-gradient queries, even for $C^\\infty$ objectives with initial gap at most one and simultaneous global Lipschitz budgets of one for derivatives of orders $1,\\ldots,p$. Together with the known deterministic upper bound, this determines the accuracy exponent up to a single logarithmic factor. The lower bound holds for unrestricted adaptive…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2610.25569",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.25569",
+  "title": "A Reduced-Order Model for the High-Field Vlasov-Poisson-Fokker-Planck System Based on a Micro-Macro Decomposition",
+  "authors": [
+    "Shiheng Zhang",
+    "Jingwei Hu"
+  ],
+  "summary": "We develop a projection-based reduced-order model for the high-field Vlasov-Poisson-Fokker-Planck system. Based on a micro-macro decomposition, the proposed Micro-ROM applies proper orthogonal decomposition (POD)-Galerkin reduction only to the microscopic fluctuation while retaining the macroscopic density on the full spatial grid. The field-dependent Maxwellian and collision operator introduce additional computational costs that cannot be eliminated by Galerkin projection alone. To remove the dependence on the velocity-grid resolution during online simulations, we approximate the projected…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-18",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2604.03871",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.03871",
+  "title": "Efficient Convexification of Kolmogorov-Arnold Networks with Polynomial Functional Forms Via a Continuous Graham Scan Approach",
+  "authors": [
+    "Tianwei Li",
+    "Daniel Ovalle",
+    "Barnabas Poczos",
+    "Carl Laird",
+    "Ignacio Grossmann",
+    "Javier Pena"
+  ],
+  "summary": "Deterministic global optimization of nonlinear models is important in many scientific and engineering applications. This framework typically involves repeatedly solving convex relaxations of the nonconvex problem, meaning that the strength of the relaxations and the cost of computing them directly determine overall efficiency and solution quality. In this work, we develop a tailored continuous convexification framework for Kolmogorov-Arnold Networks in which the univariate components are polynomial functions. By exploiting the additive separable structure of this architecture, the relaxation…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-04",
+  "updated": "2026-04-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2607.15702",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.15702",
+  "title": "Non-Asymptotic Variational Learning for Monotone Nonlinear Multiscale Elliptic Equations: Scale-Robust Primal-Dual Bounds and Strong-Form Statistical Ill-Conditioning",
+  "authors": [
+    "Ronald Katende"
+  ],
+  "summary": "We develop a non-asymptotic approximation, sampling, and finite-iteration optimization theory for variational physics-informed approximation of uniformly monotone nonlinear multiscale elliptic equations. For boundary-compatible neural feature classes, the population error splits into approximation, empirical quadrature, and projected-gradient terms, with all non-approximation constants uniform in the microscopic scale \\(\\varepsilon\\). Assuming a quantitative corrected \\(H^1\\)-estimate, a two-scale state class yields \\[ \\mathcal A_m^\\varepsilon \\le…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG",
+    "math.AP"
+  ],
+  "published": "2026-07-17",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

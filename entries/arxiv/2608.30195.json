@@ -1,0 +1,26 @@
+{
+  "key": "2608.30195",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.30195",
+  "title": "Checkerboard Shells: A Position-Only Thin-Shell Discretization with Scale-Compatible Completion",
+  "authors": [
+    "Junjie Song",
+    "Xuanyu Wu",
+    "Zhifeng Zhang",
+    "Bingtao Hu",
+    "Zhaoxi Hong",
+    "Xiuju Song",
+    "Yixiong Feng",
+    "Jianrong Tan"
+  ],
+  "summary": "Checkerboard edge-midpoint geometry provides an exact planar Varignon parallelogram for every spatial quadrilateral, allowing a local tangent frame and normal to be recovered directly from nodal positions even when the raw quadrilateral is warped. Building on this property, we develop a position-only thin-shell discretization with no independent director, rotation, or strain variables. The connected edge-midpoint surface is taken as the physical midsurface: the first fundamental form is evaluated on planar B faces, while a W-centered second fundamental form is constructed from variations of…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-31",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

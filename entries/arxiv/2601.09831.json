@@ -1,0 +1,22 @@
+{
+  "key": "2601.09831",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.09831",
+  "title": "A New Convergence Analysis of Plug-and-Play Proximal Gradient Descent Under Prior Mismatch",
+  "authors": [
+    "Guixian Xu",
+    "Jinglai Li",
+    "Junqi Tang"
+  ],
+  "summary": "In this work, we provide a new convergence theory for plug-and-play proximal gradient descent (PnP-PGD) under prior mismatch where the denoiser is trained on a different data distribution to the inference task at hand. To the best of our knowledge, this is the first convergence proof of PnP-PGD under prior mismatch. Compared with the existing theoretical results for PnP algorithms, our new results removed the need for several restrictive and unverifiable assumptions. Moreover, we derive the convergence theory for equivariant PnP (EPnP) under the prior mismatch setting, proving that EPnP…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-01-14",
+  "updated": "2026-01-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2607.24138",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.24138",
+  "title": "Randomized Krylov-Projected Iterated Tikhonov Regularization for Large-Scale Ill-posed Problems Under A Posteriori Stopping Rule",
+  "authors": [
+    "Ravi Verma",
+    "Harshit Bajpai",
+    "Ankik Kumar Giri"
+  ],
+  "summary": "We introduce two novel randomized iterative regularization frameworks, termed \\texttt{RIGKT} and \\texttt{RIAT}, for solving large-scale linear ill-posed inverse problems governed by systems of equations. The proposed methods combine randomized iterated Tikhonov regularization with Krylov subspace projection techniques, utilizing Golub--Kahan bidiagonalization for general rectangular systems (\\texttt{RIGKT}) and Arnoldi decomposition for square systems (\\texttt{RIAT}). Unlike existing deterministic schemes that rely on fixed iteration counts, our framework incorporates randomized equation…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

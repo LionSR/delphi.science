@@ -1,0 +1,21 @@
+{
+  "key": "2608.20159",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.20159",
+  "title": "Numerical Study of a Surface Growth Model with Singular Noise",
+  "authors": [
+    "Dirk Blömker",
+    "David Buchberger",
+    "Johannes Rimmele"
+  ],
+  "summary": "We study a stochastic model for epitaxial thin-film growth driven by spatially rough additive noise in a regime where the noise is singular and regularization via truncation in Fourier space is used to give a meaning to the solution, leading to a vanishing nonlinearity in the limit. In order to study this phenomenon numerically, the nonlinearity is discretized by a spectral Galerkin projection, while time integration is performed with an exponential Euler scheme. For roughness stronger than space-time white noise, we derive strong error estimates in $L^p(Ω;C([0,T];\\mathcal H^1))$ that…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-20",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

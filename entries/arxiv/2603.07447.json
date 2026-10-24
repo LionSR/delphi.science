@@ -1,0 +1,25 @@
+{
+  "key": "2603.07447",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.07447",
+  "title": "Dirichlet kernel density estimation on the simplex with missing data",
+  "authors": [
+    "Sami Baraket",
+    "Hanen Daayeb",
+    "Salah Khardani",
+    "Guanjie Lyu",
+    "Frédéric Ouimet"
+  ],
+  "summary": "Nonparametric density estimation for compositional data supported on the simplex is examined under a missing at random mechanism. Rather than imputing missing values and estimating the density from a completed data set, we adopt a strategy based on inverse probability weighting. The proposed estimator uses an adaptive Dirichlet kernel, which ensures nonnegativity on the simplex and favorable behavior near the boundary. When the observation probabilities are unknown, they are estimated through a Nadaraya-Watson regression step. The large-sample properties of the estimator are derived,…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "stat.AP"
+  ],
+  "published": "2026-03-08",
+  "updated": "2026-06-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

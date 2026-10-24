@@ -1,0 +1,19 @@
+{
+  "key": "2604.27424",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.27424",
+  "title": "On the minimum number of maximal distance-$k$ independent sets in trees",
+  "authors": [
+    "Dmitrii Taletskii"
+  ],
+  "summary": "A vertex subset of a graph is called a distance-$k$ independent set if the distance between any two of its distinct vertices is at least $k + 1$. For all $n,k \\geq 1$, we determine the minimum possible number of inclusion-wise maximal distance-$k$ independent sets among all $n$-vertex trees. It equals $n$ if $n \\leq k + 1$, and $n - \\bigg\\lfloor \\frac{n - (k \\bmod 2)}{\\lfloor k/2 \\rfloor + 1} \\bigg\\rfloor + 1$ otherwise. We also completely describe the class of trees attaining this bound and determine the growth rate of the number of such $n$-vertex trees for a fixed $k \\geq 1$. If $k$ is…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-04-30",
+  "updated": "2026-04-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

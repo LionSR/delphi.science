@@ -1,0 +1,19 @@
+{
+  "key": "2607.08366",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08366",
+  "title": "Minimum modulus for the unique multiset-sum problem",
+  "authors": [
+    "José A. R. Fonollosa"
+  ],
+  "summary": "Fix n >= 2. A set A = {a_0 = 2. Both directions of the proof are elementary, resting on a sharp minimal-digit-sum estimate for representations by binary coins, and the full theorem has been machine-checked in Lean 4/Mathlib for all n (https://github.com/jarfo/min-modulus). We conjecture that no size-n residue set admits a smaller valid modulus. This validity condition is exactly what makes the permanent of an n x n matrix equal to a single coefficient of a row-product polynomial modulo x^N - 1, extractable by a size-N discrete Fourier (or number-theoretic) transform; the theorem thus…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-07-09",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

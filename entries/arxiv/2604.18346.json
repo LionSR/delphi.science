@@ -1,0 +1,22 @@
+{
+  "key": "2604.18346",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.18346",
+  "title": "Implementing the biset category of finite groups",
+  "authors": [
+    "Mohamed Barakat",
+    "Marc Talleux",
+    "Fabian Zickgraf"
+  ],
+  "summary": "We describe an implementation of the biset category of finite groups as a tower of standard categorical constructions, all of which are implemented in the software project CAP for algorithmic category theory. In particular, we describe the composition of bisets as a composition in a Kleisli category of some biadjunction monad. This composition relies on the universal property of the coequalizer completion of a group viewed as a groupoid on one object. Expressing this universal property offers an elegant categorical interpretation of the Schreier-Sims orbit algorithm. Indeed, the…",
+  "domain": "math.CT",
+  "tags": [
+    "math.CT",
+    "math.GR"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

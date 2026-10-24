@@ -1,0 +1,21 @@
+{
+  "key": "2610.09301",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.09301",
+  "title": "An energy--stable ALE--FEM with compensated tangential velocity for Navier--Stokes free--boundary flows",
+  "authors": [
+    "Nuo Lei",
+    "Weiying Zheng",
+    "Na Zhu"
+  ],
+  "summary": "We propose an energy-stable arbitrary Lagrangian-Eulerian (ALE) finite element formulation for incompressible Navier-Stokes flows with surface-tension-driven free boundaries. The key ingredient is a multiplier-free compensated tangential velocity formulation, which redistributes boundary nodes via the discrete tangential curvature residual. The relaxation parameter governing the artificial tangential velocity is scaled according to the viscous-capillary balance, yielding the natural choice $α= γ_0/ μ$, where $γ_0$ is the surface tension coefficient and $μ$ is the dynamic viscosity. We prove…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

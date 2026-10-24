@@ -1,0 +1,25 @@
+{
+  "key": "2602.13659",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.13659",
+  "title": "Zero-Order Optimization for LLM Fine-Tuning via Learnable Direction Sampling",
+  "authors": [
+    "Valery Parfenov",
+    "Grigoriy Evseev",
+    "Andrey Veprikov",
+    "Nikolay Bushkov",
+    "Stanislav Moiseev",
+    "Aleksandr Beznosikov"
+  ],
+  "summary": "Fine-tuning large pretrained language models (LLMs) is a cornerstone of modern NLP, yet its growing memory demands (driven by backpropagation and large optimizer States) limit deployment in resource-constrained settings. Zero-order (ZO) methods bypass backpropagation by estimating directional derivatives from forward evaluations, offering substantial memory savings. However, classical ZO estimators suffer from high variance and an adverse dependence on the parameter dimensionality $d$, which has constrained their use to low-dimensional problems. In this work, we propose a policy-driven ZO…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-02-14",
+  "updated": "2026-02-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

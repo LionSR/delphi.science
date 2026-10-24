@@ -1,0 +1,24 @@
+{
+  "key": "2604.12898",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.12898",
+  "title": "BEAM: Bi-level Memory-adaptive Algorithmic Evolution for LLM-Powered Heuristic Design",
+  "authors": [
+    "Chuyang Xiang",
+    "Yichen Wei",
+    "Jiale Ma",
+    "Handing Wang",
+    "Junchi Yan"
+  ],
+  "summary": "Large Language Model-based Hyper Heuristic (LHH) has recently emerged as an efficient way for automatic heuristic design. However, most existing LHHs just perform well in optimizing a single function within a pre-defined solver. Their single-layer evolution makes them not effective enough to write a competent complete solver. While some variants incorporate hyperparameter tuning or attempt to generate complex code through iterative local modifications, they still lack a high-level algorithmic modeling, leading to limited exploration efficiency. To address this, we reformulate heuristic…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "math.CO"
+  ],
+  "published": "2026-04-14",
+  "updated": "2026-04-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

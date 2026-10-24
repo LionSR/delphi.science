@@ -1,0 +1,19 @@
+{
+  "key": "2603.15073",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.15073",
+  "title": "The Evolution of Computer-Assisted Proof In Analysis",
+  "authors": [
+    "Marek Rychlik"
+  ],
+  "summary": "The intersection of numerical analysis and machine learning, particularly in the domain of Neural ODEs and Physics-Informed Neural Networks (PINNs), relies heavily on discrete approximations of continuous flows. However, in stiff systems, explicit discretization schemes can induce topological bifurcations, creating spurious attractors that do not exist in the underlying continuous dynamics. In this paper, we analyze a stiff 2D nonlinear system integrated via Heun's method, demonstrating how the discrete map undergoes a numerical bifurcation that renders the true equilibrium repelling along…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS"
+  ],
+  "published": "2026-03-16",
+  "updated": "2026-03-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

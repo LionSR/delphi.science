@@ -1,0 +1,23 @@
+{
+  "key": "2603.25622",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.25622",
+  "title": "The Geometry of Efficient Nonconvex Sampling",
+  "authors": [
+    "Santosh S. Vempala",
+    "Andre Wibisono"
+  ],
+  "summary": "We present an efficient algorithm for uniformly sampling from an arbitrary compact body $\\mathcal{X} \\subset \\mathbb{R}^n$ from a warm start under isoperimetry and a natural volume growth condition. Our result provides a substantial common generalization of known results for convex bodies and star-shaped bodies. The complexity of the algorithm is polynomial in the dimension, the Poincaré constant of the uniform distribution on $\\mathcal{X}$ and the volume growth constant of the set $\\mathcal{X}$.",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.LG",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-03-26",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

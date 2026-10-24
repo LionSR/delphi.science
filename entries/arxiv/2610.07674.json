@@ -1,0 +1,24 @@
+{
+  "key": "2610.07674",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.07674",
+  "title": "Belief-Informed Hybrid Control with Almost-Sure Target-Set Convergence",
+  "authors": [
+    "Clinton Enwerem",
+    "Saleh Kemal",
+    "John S. Baras",
+    "Calin Belta"
+  ],
+  "summary": "Controlling a hybrid system to a target set under parameter uncertainty can require informative actions that temporarily drive the system state away from the specified set. We propose a belief-informed dual-control algorithm that combines belief-space receding-horizon selection with an expected-decrease constraint on a nonnegative target-set progress function. To accommodate exploratory deviations, a scalar controller state bounds the constraint's cumulative slack. Our algorithm's two-step lookahead selection uses predicted observations to update the parameter belief before evaluating the…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

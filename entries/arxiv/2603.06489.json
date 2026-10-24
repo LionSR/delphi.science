@@ -1,0 +1,22 @@
+{
+  "key": "2603.06489",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.06489",
+  "title": "The DNA Coverage Depth Problem: Duality, Weight Distributions, and Applications",
+  "authors": [
+    "Matteo Bertuzzo",
+    "Alberto Ravagnani",
+    "Eitan Yaakobi"
+  ],
+  "summary": "The coverage depth problem in DNA data storage is about computing the expected number of reads needed to recover all encoded strands. Given a generator matrix of a linear code, this quantity equals the expected number of randomly drawn columns required to obtain full rank. While MDS codes are optimal when they exist, i.e., over large fields, practical scenarios may rely on structured code families defined over small fields. In this work, we develop combinatorial tools to solve the DNA coverage depth problem for various linear codes, based on duality arguments and the notion of extended…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "math.CO"
+  ],
+  "published": "2026-03-06",
+  "updated": "2026-03-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2605.23661",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.23661",
+  "title": "Output Feedback MPC with Adaptive Tubes",
+  "authors": [
+    "Anchita Dey",
+    "Shubhendu Bhasin"
+  ],
+  "summary": "An output feedback model predictive control (MPC) framework with adaptive tubes is proposed for linear time-invariant systems subject to parametric and additive uncertainties. An adaptive observer provides point estimates of the system state, model parameters, and initial condition, while jointly updating the corresponding sets containing the true parameters and initial state. These estimates parameterize the constrained optimal control problem, enabling constraint tightening, terminal ingredients, and tube geometry to be updated as the estimates evolve. In contrast to standard robust…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-05-22",
+  "updated": "2026-05-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

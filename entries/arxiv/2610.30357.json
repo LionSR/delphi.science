@@ -1,0 +1,22 @@
+{
+  "key": "2610.30357",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.30357",
+  "title": "A unified variational framework for augmented Lagrangian preconditioning of saddle point systems: applications to mixed-dimensional and fictitious domain methods",
+  "authors": [
+    "Michele Benzi",
+    "Marco Feder",
+    "Luca Heltai",
+    "Federica Mugnaioni"
+  ],
+  "summary": "We present a general framework to derive augmented Lagrangian preconditioners for saddle point systems arising from mixed finite element discretizations. Our approach is based on augmenting the variational formulation at the continuous level prior to discretization, providing a unified strategy for designing efficient preconditioners that are robust under mesh refinement for a broad class of problems leading to symmetric saddle point systems. The robustness of the proposed preconditioners is established through a detailed spectral analysis. This framework is applied to different model…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

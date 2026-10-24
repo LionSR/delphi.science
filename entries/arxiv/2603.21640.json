@@ -1,0 +1,23 @@
+{
+  "key": "2603.21640",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.21640",
+  "title": "Compressed Distributed Stochastic Nonconvex Optimization with Differential Privacy",
+  "authors": [
+    "Antai Xie",
+    "Xiaoqiang Ren",
+    "Xinlei Yi",
+    "Tao Yang",
+    "Xiaofan Wang"
+  ],
+  "summary": "This paper studies distributed stochastic nonconvex optimization problems with compressed communication and differential privacy, in which each agent aims to minimize the sum of all agents' cost functions by using local compressed information exchange. To this end, we propose a compressed distributed stochastic gradient descent algorithm, which is robust under a general class of compression operators that allow both relative and absolute compression errors. We then show that the proposed algorithm finds the first-order stationary point for smooth nonconvex functions with the linear speedup…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-23",
+  "updated": "2026-03-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

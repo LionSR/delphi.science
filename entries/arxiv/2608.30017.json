@@ -1,0 +1,23 @@
+{
+  "key": "2608.30017",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.30017",
+  "title": "On the suboptimality of stochastic MPC with varying constraint horizon",
+  "authors": [
+    "Allan Andre Do Nascimento",
+    "Andre Bertolace",
+    "Antonis Papachristodoulou",
+    "Kostas Margellos"
+  ],
+  "summary": "Enforcing stochastic state constraints over the full prediction horizon in Model Predictive Control (MPC) can be computationally demanding. Here we study stochastic MPC without terminal ingredients in which chance constraints are enforced only over a shorter constraint horizon. Using stochastic relaxed dynamic programming, we derive an explicit upper bound on the average expected closed-loop cost that depends on both prediction and constraint horizons. For linear quadratic problems with affine chance constraints and bounded uniform disturbances, we provide a deterministic reformulation via…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-08-30",
+  "updated": "2026-08-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

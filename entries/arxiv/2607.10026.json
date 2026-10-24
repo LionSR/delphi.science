@@ -1,0 +1,23 @@
+{
+  "key": "2607.10026",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10026",
+  "title": "Robustly Invertible Nonlinear Dynamics and the BiLipREN: From Inversion-Based Control to Generative Trajectory Modelling",
+  "authors": [
+    "Yurui Zhang",
+    "Ruigang Wang",
+    "Ian R. Manchester"
+  ],
+  "summary": "This paper proposes a new notion of robust invertibility for nonlinear dynamical systems, and introduces constructive parameterizations of recurrent neural network which are robustly invertible by design. We define robust invertibility as the existence of a causal inverse system such that both the forward and inverse systems are contracting and have bounded incremental input-output gains (the system is bi-Lipschitz), implying that both forward prediction and input reconstruction are robust to signal perturbations and initial-state mismatch. We construct robustly invertible recurrent models…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-07-10",
+  "updated": "2026-07-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2605.19306",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.19306",
+  "title": "A Two-Phase Adaptive Balanced Penalty Method for Controllable Pareto Front Learning under Split Feasibility Conditions",
+  "authors": [
+    "Nguyen Viet Hoang",
+    "Dung D. Le",
+    "Tran Ngoc Thang"
+  ],
+  "summary": "We address the open problem of training hypernetworks for Controllable Pareto Front Learning (CPFL) under split feasibility conditions with rigorous theoretical guarantees. We reformulate the constrained Pareto problem as a Bi-Level Scalarized Split Problem (BSSP) and propose the Adaptive Balanced Penalty (ABP) algorithm, whose three gradient components -- optimality, set feasibility, and image feasibility -- are blended through an adaptive indicator driven by a computable lower bound. Using a novel convex surrogate technique, we prove full-sequence convergence under standard convexity and…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

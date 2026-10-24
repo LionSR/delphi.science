@@ -1,0 +1,25 @@
+{
+  "key": "2602.10233",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.10233",
+  "title": "ImprovEvolve: Basin-Hopping Meets LLM-Guided Evolutionary Search",
+  "authors": [
+    "Alexey Kravatskiy",
+    "Valentin Khrulkov",
+    "Ivan Oseledets"
+  ],
+  "summary": "LLM-guided evolutionary computation, most notably AlphaEvolve, has been remarkably successful in discovering novel mathematical constructions by solving challenging optimization problems. The standard approach is to evolve a monolithic program that directly outputs a candidate solution. We present ImprovEvolve, an algorithmic alternative that drastically reduces cognitive load on the LLM. Instead of prompting the model for an end-to-end optimizer, we evolve a program with three specialized operators of initialization, local improvement, and perturbation. We then approach the optimum by…",
+  "domain": "cs.NE",
+  "tags": [
+    "cs.NE",
+    "cs.AI",
+    "math.CA",
+    "math.MG",
+    "math.OC"
+  ],
+  "published": "2026-02-10",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

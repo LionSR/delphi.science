@@ -1,0 +1,23 @@
+{
+  "key": "2610.11619",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.11619",
+  "title": "Randomized Transport Maps for Model-Free Policy-Gradient Mean-Field Control",
+  "authors": [
+    "Adonis Jamal",
+    "Samy Mekkaoui",
+    "Yadh Hafsi",
+    "Huyên Pham"
+  ],
+  "summary": "We develop a model-free policy gradient method for discrete-time mean-field control (MFC). In MFC, the policy affects the objective both through the controlled dynamics and through the population distribution. Standard REINFORCE estimators capture the first effect but not the second. We introduce Transport REINFORCE, a transport map-based approach that perturbs a suitable transformation of the population distribution to estimate this missing mean-field contribution. The method applies to both finite and continuous state spaces. In finite state spaces, we perturb the population distribution…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

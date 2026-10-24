@@ -1,0 +1,22 @@
+{
+  "key": "2610.11900",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.11900",
+  "title": "Reach-Stabilize Control of Control-Affine Systems with Unknown Affine Parameters",
+  "authors": [
+    "Alexander Dorsey",
+    "Kunal Garg",
+    "Ankit Goel"
+  ],
+  "summary": "This paper considers the reach-stabilize prob- lem for a class of nonlinear control-affine systems with unknown parametric uncertainties, where the system states must remain in a safe set at all times, or enter a safe set in finite time and then remain in it, and converge to a goal point. An estimator is designed that generates a parameter estimate and a computable, nonincreasing bound on the estimation error from a known initial error bound, without requiring persistence of excitation. The bound defines margins that are added to a control barrier and a control Lyapunov function condition,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

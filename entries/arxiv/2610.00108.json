@@ -1,0 +1,20 @@
+{
+  "key": "2610.00108",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00108",
+  "title": "Counting Weight-$k$ Italian Dominating Sets on Trees and Cycles",
+  "authors": [
+    "Pingping Shao",
+    "Chengye Zhao"
+  ],
+  "summary": "We study the problem of counting \\emph{Italian dominating functions} (IDFs) of each possible weight on paths, trees, and cycles. An Italian dominating function on a graph $G=(V,E)$ is a function $f\\colon V\\to\\{0,1,2\\}$ such that every vertex $v$ with $f(v)=0$ satisfies $\\sum_{u\\in N(v)}f(u)\\ge 2$; the \\emph{Italian domination polynomial} $D_I(G,x)=\\sum_k d_I(G,k)\\,x^k$ records the number $d_I(G,k)$ of such functions of weight~$k$. This polynomial is the Italian analogue of the well-studied domination and Roman domination polynomials, and computing its coefficients on a fixed graph class is,…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

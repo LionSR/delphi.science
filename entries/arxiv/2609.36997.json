@@ -1,0 +1,21 @@
+{
+  "key": "2609.36997",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.36997",
+  "title": "Acceleration for Affine-coupling problems",
+  "authors": [
+    "Clement Lezane",
+    "Sophie Langer",
+    "Wouter M. Koolen"
+  ],
+  "summary": "Saddle-point problems play an important role in modern machine learning, including robust optimization and algorithmic fairness. We investigate structured convex--concave minimax problems where the primal variable lies in a high-dimensional, unconstrained space $\\mathbb{R}^d$, while the dual variable is confined to a constrained, low-dimensional space $\\mathbb{R}^J$, with $J\\ll d$. Although existing theoretical frameworks establish that an accelerated rate of $\\mathcal{O}(L/T^2)$ is possible, solving the associated subproblems efficiently can become a computational bottleneck in high…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

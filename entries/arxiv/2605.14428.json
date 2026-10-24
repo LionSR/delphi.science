@@ -1,0 +1,22 @@
+{
+  "key": "2605.14428",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.14428",
+  "title": "Branch-width of represented matroids in matrix multiplication time",
+  "authors": [
+    "Mujin Choi",
+    "Tuukka Korhonen",
+    "Sang-il Oum"
+  ],
+  "summary": "For an $n$-element matroid $M$ given by an $n \\times n$ matrix representation over a finite field $\\mathbb F$ and an integer $k$, we present an algorithm with running time $O_{k,\\mathbb F}(n^2)+O(n^ω)$ that either finds a branch-decomposition of $M$ of width at most $k$, or confirms that the branch-width of $M$ is more than $k$, where $ω< 2.3714$ is the matrix multiplication exponent, and the $O_{k,\\mathbb F}(\\cdot)$-notation hides factors that depend on $k$ and $\\mathbb F$ in a computable manner. All previous algorithms, including Hliněný and Oum [SIAM J. Comput. (2008)] and Jeong, Kim, and…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-05-14",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

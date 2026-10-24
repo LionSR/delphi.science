@@ -1,0 +1,19 @@
+{
+  "key": "2606.24139",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.24139",
+  "title": "Arithmetic Progression-Free Subset-Sum Sets",
+  "authors": [
+    "Samuel Korsky"
+  ],
+  "summary": "For a finite set $A$ of positive integers, let $H(A)$ be its set of subset sums, including the empty sum, and let $g_k(n)$ be the least $N$ for which some $n$-element set $A\\subseteq[N]$ has $H(A)$ free of nonconstant $k$-term arithmetic progressions. The problem of determining $g_k(n)$ was posed by Erdős and Sárkőzy. In the three-term case, we prove a lower bound equal to the exact bandwidth of the ternary grid. If $T_m=[x^m](1+x+x^2)^m$ is the central trinomial coefficient, then \\[ g_3(n)\\ge \\frac{T_n-1}{2}+\\sum_{j=0}^{n-1}T_j…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-06-23",
+  "updated": "2026-06-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

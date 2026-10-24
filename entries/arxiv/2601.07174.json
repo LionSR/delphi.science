@@ -1,0 +1,20 @@
+{
+  "key": "2601.07174",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.07174",
+  "title": "The MAC scheme for linear elasticity in displacement-stress formulation on non-uniform staggered grids",
+  "authors": [
+    "Hongxing Rui",
+    "Weijie Wang"
+  ],
+  "summary": "A marker-and-cell finite difference method is developed for solving the two dimensional and three dimensional linear elasticity in the displacement-stress formulation on staggered grids. The method employs a staggered grid arrangement, where the displacement components are approximated on the midpoints of cell edges, the normal stresses are defined at the cell centers, and the shear stresses are defined at the grid points. This structure ensures local conservation properties and avoids spurious oscillations in stress approximation. A rigorous mathematical analysis is presented, establishing…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-12",
+  "updated": "2026-01-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

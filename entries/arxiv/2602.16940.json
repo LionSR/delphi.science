@@ -1,0 +1,21 @@
+{
+  "key": "2602.16940",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.16940",
+  "title": "Self-similar extinction for a fast diffusion equation with weighted absorption",
+  "authors": [
+    "Razvan Gabriel Iagar",
+    "Diana-Rodica Munteanu"
+  ],
+  "summary": "Finite time extinction of any bounded solution to the fast diffusion equation with spatially inhomogeneous absorption $$ \\partial_tu=Δu^m-|x|^σu^p, \\quad (x,t)\\in\\mathbb{R}^N\\times(0,\\infty), $$ with $N\\geq1$ and exponents $$ p>1, \\quad m_c=\\frac{(N-2)_+}{N} σ_*:=\\frac{2(p-1)}{1-m}, $$ is established. Moreover, the existence of self-similar solutions of the form $$ U(x,t)=(T-t)^αf(|x|(T-t)^β), \\quad α=\\frac{σ+2}{(1-m)(σ-σ_*)}, \\ β=\\frac{p-m}{(1-m)(σ-σ_*)}, $$ with $f(0)>0$, $f'(0)=0$ and $$ \\lim\\limits_{ξ\\to\\infty}ξ^{(σ+2)/(p-m)}f(ξ)=L\\in(0,\\infty). $$ is proved, together with some unbounded…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "math.DS"
+  ],
+  "published": "2026-02-18",
+  "updated": "2026-02-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

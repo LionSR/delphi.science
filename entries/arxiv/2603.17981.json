@@ -1,0 +1,21 @@
+{
+  "key": "2603.17981",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.17981",
+  "title": "A Convex Formulation of the Multi-Commodity Dynamic Traffic Assignment",
+  "authors": [
+    "Davide Sipione",
+    "Giacomo Como",
+    "Gustav Nilsson"
+  ],
+  "summary": "We consider a multi-commodity Dynamic Traffic Assignment (DTA) problem formulated as a network flow control problem on the Cell Transmission Model (CTM). The objective is to design optimal control policies using variable speed limits, ramp metering, and dynamic routing to regulate traffic evolution over time on a given limited-capacity transportation network. Even simple instances of DTA problems on the CTM are known to give rise to non-convex optimal control formulations. Nevertheless, a single-commodity DTA formulation has recently been proposed that admits a tight convex relaxation,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-18",
+  "updated": "2026-03-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

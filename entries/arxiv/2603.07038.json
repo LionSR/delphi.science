@@ -1,0 +1,26 @@
+{
+  "key": "2603.07038",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.07038",
+  "title": "Full-Scale GPU-Accelerated Transient EM-Thermal-Mechanical Co-Simulation for Early-Stage Design of Advanced Packages",
+  "authors": [
+    "Hongyang Liu",
+    "Tejas Kulkarni",
+    "Ganesh Subbarayan",
+    "Cheng-Kok Koh",
+    "Dan Jiao"
+  ],
+  "summary": "In the early-stage design of advanced electronic packages, designers face a critical trade-off between simulation fidelity and computational turnaround time. Conventional early-stage methodologies typically achieve speed by relying on steady-state assumptions and structural homogenization. While computationally efficient, these approximations fundamentally fail to capture dynamic thermal events and stress concentrations at fine-grained internal interfaces, effectively masking failure mechanisms driven by transient signal bursts. In this work, we present a GPU-accelerated transient coupled…",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "cs.CE",
+    "math.NA",
+    "physics.app-ph"
+  ],
+  "published": "2026-03-07",
+  "updated": "2026-03-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

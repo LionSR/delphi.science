@@ -1,0 +1,21 @@
+{
+  "key": "2602.08528",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.08528",
+  "title": "Automatic regularization parameter choice for tomography using a double model approach",
+  "authors": [
+    "Chuyang Wu",
+    "Samuli Siltanen"
+  ],
+  "summary": "Image reconstruction in X-ray tomography is an ill-posed inverse problem, particularly with limited available data. Regularization is thus essential, but its effectiveness hinges on the choice of a regularization parameter that balances data fidelity against a priori information. We present a novel method for automatic parameter selection based on the use of two distinct computational discretizations of the same problem. A feedback control algorithm dynamically adjusts the regularization strength, driving an iterative reconstruction toward the smallest parameter that yields sufficient…",
+  "domain": "cs.CV",
+  "tags": [
+    "cs.CV",
+    "math.OC"
+  ],
+  "published": "2026-02-09",
+  "updated": "2026-02-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

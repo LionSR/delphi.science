@@ -1,0 +1,24 @@
+{
+  "key": "2605.28341",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.28341",
+  "title": "Identification and Inference for Structural Accelerated Failure Time Models via Instrument Interactions",
+  "authors": [
+    "Qiushi Bu",
+    "Wen Su",
+    "Xinyu Zhang",
+    "Xingqiu Zhao",
+    "Zhonghua Liu"
+  ],
+  "summary": "We study causal inference for time-to-event outcomes under right censoring in the presence of unmeasured confounding. Focusing on structural accelerated failure time models, we develop an identification and inference framework that exploits interactions among instrumental variables. The proposed approach does not rely on classical instrumental variable validity and yields valid causal inference under both valid and invalid instruments, provided that the interaction-based identification condition holds. To accommodate right censoring, we construct a censoring-adjusted observed data moment…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-05-27",
+  "updated": "2026-05-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

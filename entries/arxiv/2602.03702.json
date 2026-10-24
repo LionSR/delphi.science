@@ -1,0 +1,26 @@
+{
+  "key": "2602.03702",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.03702",
+  "title": "Anytime Pretraining: Horizon-Free Learning-Rate Schedules with Weight Averaging",
+  "authors": [
+    "Alexandru Meterez",
+    "Pranav Ajit Nair",
+    "Depen Morwani",
+    "Cengiz Pehlevan",
+    "Sham Kakade"
+  ],
+  "summary": "Large language models are increasingly trained in continual or open-ended settings, where the total training horizon is not known in advance. Despite this, most existing pretraining recipes are not anytime: they rely on horizon-dependent learning rate schedules and extensive tuning under a fixed compute budget. In this work, we provide a theoretical analysis demonstrating the existence of anytime learning schedules for overparameterized linear regression, and we highlight the central role of weight averaging - also known as model merging - in achieving the minimax convergence rates of…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-02-03",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

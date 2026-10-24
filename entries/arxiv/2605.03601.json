@@ -1,0 +1,22 @@
+{
+  "key": "2605.03601",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.03601",
+  "title": "Most ReLU Networks Admit Identifiable Parameters",
+  "authors": [
+    "Moritz Grillo",
+    "Guido Montúfar"
+  ],
+  "summary": "We study the realization map of deep ReLU networks, focusing on when a function determines its parameters up to scaling and permutation. To analyze hidden redundancies beyond these standard symmetries, we introduce a framework based on weighted polyhedral complexes. Our main result shows that for every architecture whose input and hidden layers have width at least two, there exists an open set of identifiable parameters. This implies that the functional dimension of every such architecture is exactly the number of parameters minus the number of hidden neurons. We further show that minimal…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

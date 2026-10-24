@@ -1,0 +1,20 @@
+{
+  "key": "2610.01504",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01504",
+  "title": "An Unfitted Hybrid High-Order Method for the Elastodynamics Problem with Imperfect Interface",
+  "authors": [
+    "Peiqi Huang",
+    "Erik Burman"
+  ],
+  "summary": "We design and analyse an unfitted hybrid high-order (HHO) method for the elastic wave equation in a medium made of two components separated by an imperfect interface of linear slip type, across which the traction is continuous and the displacement jump is proportional to the traction through a compliancy tensor $\\bK=α\\bI+(β-α)\\bn\\otimes\\bn$. The mesh is not fitted to the interface: the discrete unknowns are doubled in the cut cells, the small cuts are cured by a cell agglomeration procedure, and no unknown is attached to the interface. The two specific ingredients of the method are a local…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

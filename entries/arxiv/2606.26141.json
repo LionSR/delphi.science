@@ -1,0 +1,20 @@
+{
+  "key": "2606.26141",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.26141",
+  "title": "Classifying the Groups of Order $p^3$ in Lean",
+  "authors": [
+    "Li Xiang"
+  ],
+  "summary": "This note discusses our formalisation in Lean 4 of the classification of groups of order $p^3$ for a prime number $p$, using mathlib4. We present the five isomorphism classes and give a detailed account of the formalisation, with particular emphasis on the non-abelian case, which requiring the most substantial formal development. For odd~$p$, the non-abelian groups are the Heisenberg group $\\Heis(\\Z/p\\Z)$ and the semidirect product $\\Z/p^2\\Z\\rtimes\\Z/p\\Z$; for $p=2$, they are $D_4$ and $Q_8$. We describe the construction of these concrete groups, the structural lemmas about centers,…",
+  "domain": "math.HO",
+  "tags": [
+    "math.HO",
+    "math.GR"
+  ],
+  "published": "2026-06-20",
+  "updated": "2026-06-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

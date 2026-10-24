@@ -1,0 +1,23 @@
+{
+  "key": "2607.04215",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04215",
+  "title": "Anytime Plug-and-Play Control with Contract-Based Distributed MPC",
+  "authors": [
+    "Sabrina Bodmer",
+    "Danilo Saccani",
+    "Melanie N. Zeilinger",
+    "Andrea Carron"
+  ],
+  "summary": "A central challenge in many mobile multi-robot applications is that communication topologies are inherently time-varying. Agents may enter or exit the network and such changes cannot generally be restricted a priori. This work introduces a distributed multi-agent control algorithm based on local communication that supports anytime agent joining and leaving the communication network without centralized coordination. The method scales efficiently with the number of agents by relying on a distance-based neighbor definition and on contracts derived from predicted trajectories. The resulting…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.RO"
+  ],
+  "published": "2026-07-05",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2605.18786",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.18786",
+  "title": "Unbiased Gradients for a Class of Conditional Stochastic Optimization Problems",
+  "authors": [
+    "Miguel Alvarez",
+    "Ajay Jasra"
+  ],
+  "summary": "In this paper we consider the conditional stochastic optimization (CSO) problem. This consists of optimizing a function which can be written as the expectation of a function which is itself a function of a conditional expectation, i.e.~of the type $F(ξ) := \\mathbb{E}\\left[f\\left(Z,\\mathbb{E}[g(Z,X,ξ)|Z]\\right)\\right]$, where precise definitions are given in the main text. We address a particular class of CSO problems where the joint law of the random variables $X,Z$ cannot be exactly sampled; this case has been addressed in Goda & Kitade (2023). We introduce a method that combines Markovian…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA",
+    "stat.ME"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

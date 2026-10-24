@@ -1,0 +1,21 @@
+{
+  "key": "2607.13578",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.13578",
+  "title": "Adaptive space-time BEM for the heat equation with Neumann boundary conditions",
+  "authors": [
+    "Gregor Gantner",
+    "Helmut Harbrecht",
+    "Franz Nowakowsky"
+  ],
+  "summary": "We consider the space-time boundary element method (BEM) for the heat equation with prescribed initial and Neumann data. We propose a weighted-residual a posteriori error estimator that is an upper bound for the unknown BEM error. The possibly locally refined meshes are assumed to be parabolically scaled prismatic, i.e., their elements are tensor-products $J\\times K$ of elements in time $J$ and space $K$ with $|J| \\eqsim \\text{diam}(K)^2$. In the considered numerical experiments on two-dimensional domains in space, an adaptive algorithm steered by the derived estimator yields significantly…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2609.25460",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.25460",
+  "title": "Transformer-Informed Trajectory Optimization for Relative Motion in Cislunar Orbits",
+  "authors": [
+    "Walter J. Manuel",
+    "Yuji Takubo",
+    "Simone D'Amico"
+  ],
+  "summary": "Autonomous spacecraft guidance and control requires a fast solution to non-convex trajectory optimization, which can be accelerated by providing a near-optimal initial guess to an optimization protocol, i.e., warm-starting. A robust warm starting method is especially useful for rendezvous, proximity operations, and docking (RPOD) in cislunar space, where the underlying dynamics become severely nonlinear and chaotic compared to those in Earth orbit, especially at perilune. This paper extends the Autonomous Rendezvous Transformer (ART), a transformer-based warm-start trajectory generation…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI"
+  ],
+  "published": "2026-09-21",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

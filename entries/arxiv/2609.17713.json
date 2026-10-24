@@ -1,0 +1,21 @@
+{
+  "key": "2609.17713",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.17713",
+  "title": "A tight 1/3-approximation algorithm and fully polynomial-time approximation schemes for the Colored Knapsack Problem",
+  "authors": [
+    "Fabio Ciccarelli",
+    "Fabio Furini"
+  ],
+  "summary": "The $\\textit{Colored Knapsack Problem}$ (ColKP) generalizes the classical Knapsack Problem by partitioning the items into color classes and requiring the selected items to admit an ordering in which consecutive items have different colors. The problem is weakly $\\mathcal{NP}$-hard and admits two pseudo-polynomial dynamic programming (DP) algorithms proposed in the literature. These two DP algorithms have worst-case running times $O(b \\, n^4)$ and $O(b^2 \\, n^3)$, respectively, where $b$ is the knapsack capacity and $n$ is the number of items. We develop the first approximation algorithm for…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.OC"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

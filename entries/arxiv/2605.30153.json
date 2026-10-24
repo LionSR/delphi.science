@@ -1,0 +1,23 @@
+{
+  "key": "2605.30153",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.30153",
+  "title": "Diffusion Models Are Statistically Optimal for Learning Low-Dimensional Multi-Modal Distributions",
+  "authors": [
+    "Jingda Wu",
+    "Changxiao Cai"
+  ],
+  "summary": "Score-based diffusion models have demonstrated remarkable empirical success in learning high-dimensional distributions, particularly those exhibiting low-dimensional and multi-modal structures. However, theoretical understanding of their statistical efficiency remains limited. Existing theories typically rely on strong regularity assumptions, such as uniformly bounded densities or globally smooth score functions, which fail to capture such intrinsic structures. In this work, we study the sample complexity of diffusion models for learning distributions supported on a union of low-dimensional…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.IT",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-05-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

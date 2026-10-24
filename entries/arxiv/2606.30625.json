@@ -1,0 +1,24 @@
+{
+  "key": "2606.30625",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.30625",
+  "title": "Optimization Dynamics Imprint Semantic Specificity in Contrastive Embedding Norms",
+  "authors": [
+    "Ziwei Su",
+    "Junyu Ren",
+    "Victor Veitch"
+  ],
+  "summary": "Contrastive embedding models trained with scale-invariant losses are typically paired with distance metrics like cosine similarity, effectively ignoring embedding magnitudes. However, surprisingly, empirical studies reveal that despite this, these \"discarded\" norms seem to correlate with semantic properties such as concept specificity, token frequency, and human uncertainty. In this work, we provide a formal theoretical framework explaining this phenomenon. By analyzing the optimization dynamics, we derive an analytic formula demonstrating that embedding length naturally encodes this…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.AI",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

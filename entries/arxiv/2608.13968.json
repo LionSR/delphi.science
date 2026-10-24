@@ -1,0 +1,21 @@
+{
+  "key": "2608.13968",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.13968",
+  "title": "Nonparametric Schrödinger Bridge Time Series Generator: Algorithm, Convergence Analysis and Applications",
+  "authors": [
+    "Daili Sheng",
+    "Minghui Song",
+    "Hui Sun"
+  ],
+  "summary": "We conduct a convergence analysis for the Schrödinger Bridge Time Series (SBTS) data generator. Starting from a regularized formulation in which the data ensemble is mixed with a standard multivariate Gaussian distribution with a prescribed probability, we prove that the Euler-Maruyama discretization converges to the mixed target distribution with half-order convergence rate, provided that the ensemble size and kernel bandwidth are chosen appropriately. We further show that the regularized distribution converges to the original target distribution as the mixing probability tends to zero. The…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-14",
+  "updated": "2026-08-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

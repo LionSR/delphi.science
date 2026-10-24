@@ -1,0 +1,21 @@
+{
+  "key": "2609.30707",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.30707",
+  "title": "A Monolithic Discontinuous Galerkin Framework for Darcy Optimal Control with Radon-Measure Tracking and Pointwise Control Constraints",
+  "authors": [
+    "SeongHee Jeong",
+    "Sanghyun Lee"
+  ],
+  "summary": "We study an elliptic optimal control problem governed by Darcy's equation in heterogeneous porous media, with pointwise box constraints on the control. The objective functional is formulated via a Radon measure, which allows the desired pressure state to be tracked on observation sets of varying dimension, including points, curves, and subdomains, within a single formulation. The state and adjoint equations are discretized by a symmetric interior penalty discontinuous Galerkin method, yielding a locally mass-conservative approximation that is robust across strong permeability…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

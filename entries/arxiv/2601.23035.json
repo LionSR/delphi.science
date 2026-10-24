@@ -1,0 +1,21 @@
+{
+  "key": "2601.23035",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.23035",
+  "title": "Accelerated Inertial Gradient Algorithms with Vanishing Tikhonov Regularization",
+  "authors": [
+    "Samir Adly",
+    "Vinh Thanh Ho",
+    "Huu Nhan Nguyen"
+  ],
+  "summary": "In this paper, we study an explicit Tikhonov-regularized inertial gradient algorithm for smooth convex minimization with Lipschitz continuous gradient. The method is derived via an explicit time discretization of a damped inertial system with vanishing Tikhonov regularization. Under appropriate control of the decay rate of the Tikhonov term, we establish accelerated convergence of the objective values to the minimum together with strong convergence of the iterates to the minimum-norm minimizer. In particular, for polynomial schedules $\\varepsilon_k = k^{-p}$ with $0<p<2$, we prove strong…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-30",
+  "updated": "2026-01-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

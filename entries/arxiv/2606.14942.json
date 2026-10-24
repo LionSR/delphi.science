@@ -1,0 +1,23 @@
+{
+  "key": "2606.14942",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.14942",
+  "title": "Bayesian Variational System Identification with Weak-Form Residual Likelihoods",
+  "authors": [
+    "Chengyang Huang",
+    "Siddhartha Srivastava",
+    "Krishna Garikipati",
+    "Xun Huan"
+  ],
+  "summary": "We consider system identification for discovering parameterized operators in governing partial differential equations (PDEs) from noisy spatiotemporal data. Building on variational system identification (VSI), which identifies PDEs through Galerkin weak-form residuals, we develop a Bayesian VSI (B-VSI) framework for operator selection, parameter estimation, and uncertainty quantification. The central idea is to define the likelihood directly in weak-form residual space by propagating observation uncertainty through the weak-form residual map. The resulting likelihood captures heteroscedastic…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math-ph"
+  ],
+  "published": "2026-06-12",
+  "updated": "2026-06-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

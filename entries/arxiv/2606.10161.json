@@ -1,0 +1,20 @@
+{
+  "key": "2606.10161",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.10161",
+  "title": "Bidirectional SDDP with dimension-free complexity for solving strongly convex stochastic dynamic programming equations",
+  "authors": [
+    "Pablo Barros",
+    "Vincent Guigues"
+  ],
+  "summary": "We analyze the complexity of Bidirectional Stochastic Dual Dynamic Programming (BSDDP) algorithm applied to multistage stochastic optimization problems with strongly convex cost functions. Under standard regularity assumptions and without discount factor, we establish an explicit complexity bound on the expected number of iterations needed to obtain an epsilon-optimal policy. Our bound depends on the strong convexity constants and Lipschitz constants of the stagewise cost functions but is independent of the dimensionality of the state space. This improves upon the complexity of SDDP for…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-08",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

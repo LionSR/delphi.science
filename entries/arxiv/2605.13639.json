@@ -1,0 +1,22 @@
+{
+  "key": "2605.13639",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.13639",
+  "title": "Achieving $ε^{-2}$ Sample Complexity for Single-Loop Actor-Critic under Minimal Assumptions",
+  "authors": [
+    "Ishaq Hamza",
+    "Zaiwei Chen"
+  ],
+  "summary": "In this paper, we establish last-iterate convergence rates for off-policy actor--critic methods in reinforcement learning. In particular, under a single-loop, single-timescale implementation and a broad class of policy updates, including approximate policy iteration and natural policy gradient methods, we prove the first $\\tilde{\\mathcal{O}}(ε^{-2})$ sample complexity guarantee for finding an $ε$-optimal policy under minimal assumptions, namely, the existence of a policy that induces an irreducible Markov chain. This stands in stark contrast to the existing literature, where an…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

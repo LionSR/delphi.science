@@ -1,0 +1,22 @@
+{
+  "key": "2608.28515",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.28515",
+  "title": "Conformal Uncertainty Quantification Guarantees for Neural Operators",
+  "authors": [
+    "Tom Stent",
+    "Nicolas Boullé"
+  ],
+  "summary": "Neural operators provide fast surrogate models for approximating operators between function spaces, but their predictions often lack uncertainty quantification. We develop a split conformal framework to guarantee that a calibrated pointwise band around the neural operator output contains the true solution on at least a $1-γ$ fraction of the evaluation domain, with probability at least $1-α$ over test and calibration inputs, where $α,γ\\in(0,1)$. Our method reduces a normalized residual field to its spatial $(1-γ)$-quantile and computes a scaling factor using a held-out calibration dataset. We…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.AI",
+    "math.PR"
+  ],
+  "published": "2026-08-28",
+  "updated": "2026-08-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

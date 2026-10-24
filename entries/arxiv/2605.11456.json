@@ -1,0 +1,19 @@
+{
+  "key": "2605.11456",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11456",
+  "title": "Exactness of the DNN Relaxation for Random Standard Quadratic Programs",
+  "authors": [
+    "Xin Chen"
+  ],
+  "summary": "We study the doubly nonnegative (DNN) relaxation of the standard quadratic optimization problem \\[ \\min\\{x^\\top Qx:\\ x\\inΔ^{n-1}\\},\\qquad Δ^{n-1}:=\\{x\\in\\mathbb{R}_+^n:\\ \\mathbb{1}^\\top x=1\\}, \\] for random symmetric matrices with independent diagonal and off-diagonal entries. Let $m_n:=\\min_{1\\le i\\le n} Q_{ii}$ and set $M:=Q-m_nE$, where $E$ is the all-ones matrix. The negative off-diagonal entries of $M$ define a defect graph $G_n^-$. Under entrywise independence, absolute continuity, and the tail-decay condition $n^5\\mathbb{E}[F_O(m_n)^4]\\to 0$, where $F_O$ is the off-diagonal…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2610.05723",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05723",
+  "title": "Inferring physical fields in coupled systems with unknown parameters from incomplete observations using physics-constrained attentive neural operators",
+  "authors": [
+    "Shilun Wei",
+    "Xiaoqiang Sun",
+    "Wei Li",
+    "Kejun Tang"
+  ],
+  "summary": "Given incomplete measurements of a single physical field in a coupled system with unknown parameters, can we infer its full physical state and identify the underlying parameters? This problem is challenging because multiple coupled fields must be reconstructed simultaneously from limited observations of only one, while the system parameters are unknown. In this work, we propose a machine learning framework for full-field reconstruction and parameter identification of unknown physical systems from sparse observations of a single physical field. Specifically, the cross-attention encoder…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2609.37528",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.37528",
+  "title": "A Spatial Benders Algorithm for Delay Constrained Routing",
+  "authors": [
+    "Antonio Frangioni",
+    "Laura Galli",
+    "Luca Mencarelli",
+    "Enrico Sorbera"
+  ],
+  "summary": "We study the Delay Constrained Routing (DCR) problem arising in IP computer networks to support high bandwidth applications. The goal is to route IP packets, from source to destination, subject to quality of service constraints -- in particular, bounding the worst case delay -- while minimizing the total allocated bandwidth in the network. DCR can be formulated as a Mixed-Integer Second-Order Cone Program, and solved using standard solvers; while generally efficient, this hinges on off-the-shelf tools and does not scale to large instances. We devise a solver-free bespoke approach that uses…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

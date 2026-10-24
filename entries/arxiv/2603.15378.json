@@ -1,0 +1,19 @@
+{
+  "key": "2603.15378",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.15378",
+  "title": "FFT-accelerated computation of the Dirichlet-to-Neumann map for inhomogeneous exterior Helmholtz problems using the method of fundamental solutions",
+  "authors": [
+    "Takemi Shigeta"
+  ],
+  "summary": "An efficient numerical method is proposed for computing the Dirichlet-to-Neumann (DtN) map associated with the exterior Dirichlet problem for the two-dimensional Helmholtz equation with an inhomogeneous term. The solution in the subdomain exterior to a circular artificial boundary is approximated by the method of fundamental solutions (MFS). When the source and collocation points are equally spaced on concentric circles, the coefficient matrices arising in the discretization become circulant, which enables the efficient evaluation of the discrete DtN map by the fast Fourier transform (FFT).…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-16",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

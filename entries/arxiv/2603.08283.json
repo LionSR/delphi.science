@@ -1,0 +1,27 @@
+{
+  "key": "2603.08283",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.08283",
+  "title": "Learning efficient representations of complex constraints for scalable optimization",
+  "authors": [
+    "Yilin Wen",
+    "Yi Guo",
+    "Bo Zhao",
+    "Wei Qi",
+    "Zechun Hu",
+    "Colin Jones",
+    "Jian Sun"
+  ],
+  "summary": "Complex constraints often make real-world optimization computationally prohibitive at the scale and speed required for operational decision-making. Here we introduce PolyFormer, a PIML framework that learns compact polytopic representations of the geometry induced by complex constraints. PolyFormer captures constraint-induced geometry and transforms it into efficient polytopic reformulations, reducing the complexity of downstream optimization and enabling the use of off-the-shelf solvers. Neural parameterizations further enable rapid adaptation to varying operating conditions without…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-03-09",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

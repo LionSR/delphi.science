@@ -1,0 +1,21 @@
+{
+  "key": "2606.04864",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.04864",
+  "title": "An algebraic multiscale preconditioner for large sparse SPD matrices",
+  "authors": [
+    "Yingjie Zhou",
+    "Shubin Fu",
+    "Eric Tsz Shun Chung"
+  ],
+  "summary": "We present a two-grid algebraic multiscale preconditioner for large sparse symmetric positive definite systems arising from elliptic problems with highly heterogeneous coefficients. The coarse space is constructed directly from the system matrix by graph partitioning and local generalized eigenvalue solvers, yielding basis functions that capture the low-energy modes responsible for slow convergence. The method requires no geometric information, making it suitable for unstructured and matrix-only settings, and its construction is naturally parallelizable. Numerical results for heterogeneous…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-03",
+  "updated": "2026-06-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

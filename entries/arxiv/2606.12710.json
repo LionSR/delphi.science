@@ -1,0 +1,25 @@
+{
+  "key": "2606.12710",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.12710",
+  "title": "A Stabilized Path-Space Approach to Diffusion-Based Posterior Sampling",
+  "authors": [
+    "Evan Scope Crafts",
+    "Umberto Villa",
+    "Saviz Mowlavi",
+    "Yanting Ma",
+    "Hassan Mansour",
+    "Wael H. Ali"
+  ],
+  "summary": "Diffusion models provide expressive data-driven priors for Bayesian inverse problems, but many diffusion posterior samplers rely on heuristic guidance approximations that can fail for nonlinear operators and multimodal posteriors. In this work, we develop a stabilized path-space framework for diffusion-based posterior sampling. Starting from a base diffusion process whose terminal marginal represents the prior, we define a likelihood-weighted target measure on trajectories and cast posterior sampling as learning a controlled stochastic process whose path measure matches this target. This…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-06-10",
+  "updated": "2026-06-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2605.06375",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.06375",
+  "title": "A Unified Pair-GRPO Family: From Implicit to Explicit Preference Constraints for Stable and General RL Alignment",
+  "authors": [
+    "Hao Yu"
+  ],
+  "summary": "Large language model (LLM) alignment via reinforcement learning from human preferences (RLHF) suffers from unstable policy updates, ambiguous gradient directions, poor interpretability, and high gradient variance in mainstream pairwise preference learning paradigms. To systematically address these limitations, we establish a unified theoretical framework for preference-based RL optimization centered on the Pair-GRPO family, comprising two tightly coupled variants: Soft-Pair-GRPO and Hard-Pair-GRPO. Soft-Pair-GRPO is a minimal modification of Group Relative Policy Optimization (GRPO) that…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.ST"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

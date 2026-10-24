@@ -1,0 +1,23 @@
+{
+  "key": "2604.18511",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.18511",
+  "title": "An adaptive discretization algorithm for locally optimal experimental design with constraints",
+  "authors": [
+    "Jochen Schmid",
+    "Philipp Seufert",
+    "Jan Schwientek",
+    "Tobias Seidel",
+    "Karl-Heinz Küfer"
+  ],
+  "summary": "We develop a novel iterative algorithm for locally optimal experimental design under constraints, like budget or performance constraints. It is an adaptive discretization algorithm. In every iteration, a discretized version of the constrained-design problem is solved and then the discretization is adaptively refined by adding an approximate violator of a suitable sufficient $\\eps$-optimality condition for the current design. We prove that with $\\eps = 0$, our algorithm converges to an optimal design and that with $\\eps > 0$, our algorithm finitely terminates at an $\\eps$-optimal design.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-04-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

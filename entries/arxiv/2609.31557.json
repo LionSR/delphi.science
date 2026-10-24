@@ -1,0 +1,24 @@
+{
+  "key": "2609.31557",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.31557",
+  "title": "No Universal Remainder Rate for Chambolle-Dossal Acceleration",
+  "authors": [
+    "Yuchen Yang",
+    "Xinan Dai",
+    "Wenhao Deng",
+    "Yingdong Shi",
+    "Feng Xu",
+    "Tailin Wu"
+  ],
+  "summary": "Chambolle-Dossal acceleration guarantees $F(x_n)-F^*=o(n^{-2})$ for every fixed smooth convex loss with a minimizer. We show that this qualitative improvement admits no universal quantitative rate. For every damping parameter $α>3$ and positive nondecreasing gain $G(n)\\to\\infty$, we construct a fixed one-dimensional smooth convex loss whose exact CD orbit satisfies $\\sup_{n\\ge1} n^2G(n)\\bigl(F(x_n)-F^*\\bigr)=\\infty$. Thus no divergent gain improves the $n^{-2}$ scale for all fixed losses, even with instance-dependent constants. The construction prescribes queried gradients and realizes…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

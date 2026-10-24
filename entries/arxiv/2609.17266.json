@@ -1,0 +1,23 @@
+{
+  "key": "2609.17266",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.17266",
+  "title": "Rank-One Matrix Discrepancy and Algorithmic Kadison--Singer",
+  "authors": [
+    "Ekene Ezeunala",
+    "Haotian Jiang"
+  ],
+  "summary": "We give a deterministic polynomial-time algorithm that, given rational Hermitian matrices $H_1,\\dots,H_N$ of rank at most one, finds signs $s\\in\\{\\pm1\\}^N$ with $\\|\\sum_i s_i H_i\\|\\le 13\\|\\sum_i H_i^2\\|^{1/2}$. As a corollary, for vectors $v_i$ with $\\sum_i v_iv_i^*=I$ and $\\|v_i\\|^2\\leδ$, the signs yield a partition $[N] = S_1 \\cup S_2$ such that each part satisfies $\\|\\sum_{i \\in S_j} v_i v_i^* - \\frac{I}{2}\\| \\leq \\frac{13}{2}\\sqrtδ$ for $j = 1,2$. This gives a deterministic polynomial-time algorithm for the Kadison--Singer problem, in Weaver's equivalent discrepancy-theoretic…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.DM",
+    "math.CO",
+    "math.FA"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

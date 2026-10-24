@@ -1,0 +1,21 @@
+{
+  "key": "2609.40120",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.40120",
+  "title": "Scalable Cox Regression via Grouped Risk Sets and Sharper LogSumExp Rates",
+  "authors": [
+    "Elizaveta Iashchinskaia",
+    "Egor Gladin"
+  ],
+  "summary": "Motivated by the computational challenges of large-scale Cox regression, we study stochastic minimization of LogSumExp objectives over large sets. Mini-batch normalizer estimates generally yield biased gradients. We instead use a softplus surrogate that introduces one auxiliary scalar per normalizer and admits unbiased single-sample gradients. For smooth convex LogSumExp objectives, we prove an $O(T^{-1/2})$ averaged objective bound, improving the previous $T^{-1/4}$ analysis. With a strongly convex regularizer on the original variable, we also obtain a last-iterate squared-error rate of…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2605.24819",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.24819",
+  "title": "Random-Subspace Frank--Wolfe over Strongly Convex Sets",
+  "authors": [
+    "Pierre-Louis Poirion",
+    "Sebastian Pokutta",
+    "Akiko Takeda"
+  ],
+  "summary": "Frank--Wolfe methods avoid projections, but over curved feasible regions the full-space linear minimization oracle (LMO) can itself become the computational bottleneck. We introduce random-subspace Frank--Wolfe (RSFW), the first Frank--Wolfe framework, to our knowledge, that replaces the ambient LMO by exact LMOs over random low-dimensional affine sections of a general feasible set, while preserving feasibility in the original space. For smooth convex objectives over compact strongly convex feasible sets, we prove a dimension-explicit approximate-oracle inequality and derive the standard…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-24",
+  "updated": "2026-05-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

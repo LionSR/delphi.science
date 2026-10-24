@@ -1,0 +1,24 @@
+{
+  "key": "2607.24827",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.24827",
+  "title": "Stronger Memory-Query Tradeoffs for Convex Optimization: The Limitations of Subquadratic Memory",
+  "authors": [
+    "Michael Menart",
+    "Aleksandar Nikolov",
+    "Ohad Shamir"
+  ],
+  "summary": "We prove two lower bounds for the first order oracle complexity of minimizing a $d$-dimensional $1$-Lipschitz convex function over the unit ball with $m$ bits of memory. We first show that any such (possibly randomized) algorithm must make $\\tildeΩ(\\frac{d^2}{\\sqrt{m}})$ oracle queries. For deterministic optimization algorithms, we show that $\\tildeΩ(\\min\\{d^{1.6},\\frac{d^{8/3}}{m^{2/3}}\\})$ queries are required. For all memory regimes of interest, these improves upon the previous best known lower bounds of $\\tildeΩ(\\max\\{\\frac{d^{8/3}}{m^{4/3}},\\frac{d^{4/3}}{m^{1/6}}\\})$ and…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.CC",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-07-21",
+  "updated": "2026-07-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

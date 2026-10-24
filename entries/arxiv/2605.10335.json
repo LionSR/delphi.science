@@ -1,0 +1,26 @@
+{
+  "key": "2605.10335",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.10335",
+  "title": "PowerStep: Memory-Efficient Adaptive Optimization via $\\ell_p$-Norm Steepest Descent",
+  "authors": [
+    "Yao Lu",
+    "Dengdong Fan",
+    "Shixun Zhang",
+    "Yonghong Tian"
+  ],
+  "summary": "Adaptive optimizers such as Adam are standard for training Transformers, but storing gradient first and second moments incurs substantial memory overhead. We introduce PowerStep, a memory-efficient optimizer that achieves coordinate-wise adaptivity without storing second-moment statistics. Motivated by $\\ell_p$-norm steepest descent, PowerStep applies a signed-power transform directly to one momentum buffer. We establish a finite-horizon stationarity bound for exact, unregularized updates, with an $O(1/\\sqrt{T})$ term and a noise-dependent residual. Experiments on Transformers from 124M to…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL",
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

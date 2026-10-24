@@ -1,0 +1,21 @@
+{
+  "key": "2608.19250",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19250",
+  "title": "A fully discrete LBRFD-IPDG method for linear fourth-order parabolic equations",
+  "authors": [
+    "Hongying Huang",
+    "Hong Zhang",
+    "Yanming Zhang"
+  ],
+  "summary": "We propose a fully discrete method for linear fourth-order parabolic equations with Dirichlet boundary conditions, combining an implicit LBRFD multistep scheme in time with a mixed interior penalty discontinuous Galerkin (IPDG) method in space. The temporal discretization employs equispaced linear barycentric rational interpolants and incorporates a startup procedure. To facilitate the spatial discretization, the original problem is reformulated through an auxiliary variable. For certain parameter pairs $(n,d)$, the LBRFD method is shown to be $A(α)$-stable and to possess a wider stability…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-16",
+  "updated": "2026-08-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

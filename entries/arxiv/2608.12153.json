@@ -1,0 +1,20 @@
+{
+  "key": "2608.12153",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.12153",
+  "title": "Halving the size of skew-symmetric eigenvalue problems via the polar decomposition",
+  "authors": [
+    "Daniel Kressner",
+    "Simon Mataigne"
+  ],
+  "summary": "This paper introduces a novel algorithm for computing eigenvalues and eigenvectors of a dense real skew-symmetric matrix $A$. Its main ingredient is the computation of a polar factor of $A$ that is both skew-symmetric and orthogonal. This polar factor is then used to transform the original problem into a Hermitian eigenvalue problem of half the size, which can be solved accurately and efficiently with standard software such as LAPACK. Numerical experiments demonstrate the stability of the method and show that its running time is competitive with existing approaches for skew-symmetric…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-12",
+  "updated": "2026-08-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

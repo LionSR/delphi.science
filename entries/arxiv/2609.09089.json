@@ -1,0 +1,22 @@
+{
+  "key": "2609.09089",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.09089",
+  "title": "Sieve Estimation of Optimal Transport Maps from Paired Data in Gaussian Spaces",
+  "authors": [
+    "Xin Jin",
+    "Kit Chan",
+    "Riddhi Pratim Ghosh"
+  ],
+  "summary": "We study the estimation of infinite-dimensional optimal transport maps from noisy paired observations. The population map pushes a Gaussian reference measure forward to a target probability measure on a function space and takes the Cameron--Martin gradient form $T=I+\\nabla_{\\mathcal H}φ$. Our estimator uses cylindrical gradient sieves based on finitely many Cameron--Martin coordinates, thereby reducing the problem to finite-dimensional empirical risk minimization. A local nonasymptotic oracle inequality separates cylindrical approximation and statistical estimation errors while accounting…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

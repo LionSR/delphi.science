@@ -1,0 +1,25 @@
+{
+  "key": "2608.27118",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.27118",
+  "title": "Lunar Generalizations of the Euclidean Minimum Spanning Tree in the Plane and their Expected Costs",
+  "authors": [
+    "Ondřej Draganov",
+    "Herbert Edelsbrunner",
+    "Sophie Rosenmeier",
+    "Morteza Saghafian"
+  ],
+  "summary": "Motivated by the recent introduction of chromatic persistent homology, we generalize the Euclidean minimum spanning tree (EMST) for $n$ points in $\\mathbb{R}^2$ to the lunar EMST for the case in which the points come in $s+1$ colors. Calling the intersection of $s+1$ disks of radius $r$ centered at points with pairwise different colors a \\emph{lune}, the generalized EMST reflects the history of the union of lunes as $r$ goes from $0$ to $\\infty$, and its \\emph{cost} is twice the difference between the radii when the arcs and nodes of the tree are formed. If the points are chosen uniformly at…",
+  "domain": "cs.CG",
+  "tags": [
+    "cs.CG",
+    "math.AT",
+    "math.CO",
+    "math.PR"
+  ],
+  "published": "2026-08-27",
+  "updated": "2026-08-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

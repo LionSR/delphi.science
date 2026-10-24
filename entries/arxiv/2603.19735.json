@@ -1,0 +1,26 @@
+{
+  "key": "2603.19735",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.19735",
+  "title": "Surrogate Modeling with Low-Rank Function Representation for Electromagnetic Simulation",
+  "authors": [
+    "Mingze Sun",
+    "Liang Li",
+    "Xile Zhao",
+    "Zheng Tan",
+    "Yulu Hu",
+    "Xing Li",
+    "Bin Li"
+  ],
+  "summary": "High-fidelity electromagnetic (EM) simulations are indispensable for the design of microwave and wave devices, yet repeated full-wave evaluations over high-dimensional design spaces are often computationally prohibitive. While neural surrogates can amortize this cost, learning high-dimensional EM response mappings remains difficult under limited simulation budgets due to strong and heterogeneous parameter couplings. In this work, we introduce low-rank tensor function representations as a principled surrogate modeling paradigm for EM problems and provide a systematic study of representative…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math.NA"
+  ],
+  "published": "2026-03-20",
+  "updated": "2026-03-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

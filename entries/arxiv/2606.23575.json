@@ -1,0 +1,23 @@
+{
+  "key": "2606.23575",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.23575",
+  "title": "Solve for the Hyperparameter, Skip the Search: Kolmogorov-Optimal Scaling Laws for Spline Regression",
+  "authors": [
+    "Yong Yi Bay",
+    "Kathleen A. Yearick"
+  ],
+  "summary": "Hyperparameter tuning almost always means search: fit the model at every value on a grid, score each by cross-validation, and keep the winner. For spline regression that search is unnecessary. The optimal resolution can be solved for in closed form, to the accuracy an exhaustive search reaches, at a fraction of the compute. Three ingredients make this possible: classical approximation theory pins the squared bias to a known power of the resolution G, exactly the Kolmogorov n-width of the smoothness class; the basis dimension is an explicit polynomial in G; and leave-one-out error follows…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.NA",
+    "stat.ML"
+  ],
+  "published": "2026-06-22",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

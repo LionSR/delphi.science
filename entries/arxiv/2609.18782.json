@@ -1,0 +1,21 @@
+{
+  "key": "2609.18782",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.18782",
+  "title": "A Convergence Framework for Deep $V$-Learning: Error Propagation and Sharp Action-Gap Bounds",
+  "authors": [
+    "Yury Kolomeytsev"
+  ],
+  "summary": "We establish convergence bounds for deep $V$-learning with horizon $H$. The algorithm fits a scalar value function to targets from executed transitions and selects actions using a predictive model and the value function. For current observed-successor targets with fresh true-kernel outcomes, the conditional mean is $\\mathcal{T}^βV$, which averages over behavior-policy actions. The Bellman optimality update is $\\mathcal{T} V$. We decompose the update error into six residuals: fitting, transition reuse, target construction, replay, action selection, and exploration. Under $L^s$…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

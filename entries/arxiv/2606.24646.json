@@ -1,0 +1,22 @@
+{
+  "key": "2606.24646",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.24646",
+  "title": "The lymph 2.0 library: p-adaptive algorithms and parallel assembly strategies for polytopal DG methods",
+  "authors": [
+    "Paola F. Antonietti",
+    "Mattia Corti",
+    "Caterina B. Leimer Saglio",
+    "Stefano Pagani"
+  ],
+  "summary": "This work presents a new release of the lymph 2.0 library, an open-source MATLAB framework for high-order discontinuous Galerkin discretizations on general polytopal meshes. The lymph 2.0 version is extended to support discretizations with element-wise polynomial approximation degrees, which allows the design of $p$-adaptive strategies based on a posteriori error indicators. In addition, the library introduces a unified assembly framework that abstracts the construction of discrete operators from the underlying physical model, improving code modularity, parallelism, maintainability, and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-23",
+  "updated": "2026-06-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

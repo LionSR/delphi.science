@@ -1,0 +1,19 @@
+{
+  "key": "2607.22206",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.22206",
+  "title": "Shape optimisation for adaptive $r$-refinement: the one-dimensional case with residual based error estimators",
+  "authors": [
+    "Philip J. Herbert"
+  ],
+  "summary": "We consider $r$-refinement for the finite element discretisation of a Poisson problem. The goal of $r$-refinement is to reposition the nodes of a computational mesh in order to better approximate the finite element error. Since the mesh is being moved, it naturally becomes linked to shape optimisation methods. We propose a standard optimisation algorithm for this $r$-refinement procedure and show that if one seeks to minimise the actual error - which one cannot generally calculate - one has an algorithm which will terminate. The most novel aspect of this work is to apply shape optimisation…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-24",
+  "updated": "2026-07-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

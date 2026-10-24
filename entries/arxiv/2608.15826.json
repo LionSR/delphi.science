@@ -1,0 +1,21 @@
+{
+  "key": "2608.15826",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.15826",
+  "title": "Robust Block Preconditioning for 3D nonlinear steady-state radiation transport equations",
+  "authors": [
+    "Yunpan Ma",
+    "Lingxiao Li",
+    "Changhui Yao"
+  ],
+  "summary": "In this work, based on the discrete ordinate method, we propose a robust block preconditioning strategy for the 3D nonlinear steady-state radiation transport equation with heat diffusion term. The presence of the diffusive term of the temperature equation prevents its elimination into a single equation for the radiation intensity. To overcome this difficulty, all physical variables are assembled into a single monolithic linear system. The heat flux and temperature are treated as independent variables in a mixed $H(\\mathrm{div})$-conforming finite element formulation. The equation for…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-16",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

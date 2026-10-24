@@ -1,0 +1,24 @@
+{
+  "key": "2610.24441",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.24441",
+  "title": "Transformers as Adaptive Kernel Learners across Tasks for In-Context Learning",
+  "authors": [
+    "Zhaiming Shen",
+    "Alexander Cloninger",
+    "Rongjie Lai",
+    "Wenjing Liao"
+  ],
+  "summary": "Transformers have emerged as a dominant architecture in modern machine learning, with in-context learning (ICL) enabling models to adapt to new tasks by conditioning on prompts, without any parameter updates. To understand the attention mechanism in transformer blocks, a growing line of theoretical work interprets ICL through the lens of classical statistical estimators. Recent works have established a connection between the attention mechanism and kernel methods, while the kernel function is usually assumed to be fixed. In practice, the query and key matrices in the attention mechanism are…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "math.ST"
+  ],
+  "published": "2026-10-17",
+  "updated": "2026-10-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

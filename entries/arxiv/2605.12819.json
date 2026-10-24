@@ -1,0 +1,22 @@
+{
+  "key": "2605.12819",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.12819",
+  "title": "Accuracy and Relationships of Quadratic Models in Derivative-free Optimization",
+  "authors": [
+    "Yiwen Chen",
+    "Warren Hare",
+    "Lindon Roberts"
+  ],
+  "summary": "We study three quadratic models in model-based derivative-free optimization: the minimum norm (MN), minimum Frobenius norm (MFN), and quadratic generalized simplex derivative (QS) models. Despite their widespread use, their approximation accuracy and relationships have not been systematically explored. We establish fully linear error bounds for all three models, removing the uniformly bounded model Hessian assumption required in existing MN analyses and deriving the first such results for the QS model. We further analyze Hessian approximation accuracy via directional error bounds, showing…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

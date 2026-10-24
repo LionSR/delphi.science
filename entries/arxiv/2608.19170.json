@@ -1,0 +1,23 @@
+{
+  "key": "2608.19170",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19170",
+  "title": "Constrained minmax density transportation for linear parabolic PDEs: a numerical optimal control perspective",
+  "authors": [
+    "Siddhartha Ganguly",
+    "Vaibhav Upadhyay",
+    "Kenji Kashima",
+    "Debasish Chatterjee"
+  ],
+  "summary": "This article introduces a numerical optimal control framework for minmax constrained density control for a class of noisy linear parabolic partial differential equations (PDEs), in particular the noisy heat equation. The goal is to transport an initial density to a target density while minimizing a specified cost with respect to control actions and maximizing it with respect to disturbances, all within a fixed time horizon while satisfying given convex path constraints. To address this, the spatial derivatives in the PDE are discretized using finite-difference approximations, transforming…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-08-19",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

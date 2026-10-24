@@ -1,0 +1,20 @@
+{
+  "key": "2610.16295",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16295",
+  "title": "On the Complexity of Finding Stationary Points of p-th Order Hölder Smooth Functions in One Dimension",
+  "authors": [
+    "Huanjian Zhou",
+    "Taiji Suzuki"
+  ],
+  "summary": "We study the query complexity of finding an an $\\varepsilon$-stationary points of a one-dimensional non-convex function whose $p$-th derivative is $β_p$-Hölder continuous. We determine the optimal complexity for deterministic and randomized algorithms and for oracles that return only derivatives, only function values, or full local information. Randomness provably helps when only derivatives are available, function values help in all cases, and higher-order derivatives never do. Together with known results in higher dimensions, this shows how these benefits depend on the dimension. Our…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

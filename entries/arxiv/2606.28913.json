@@ -1,0 +1,20 @@
+{
+  "key": "2606.28913",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28913",
+  "title": "Distributed recursive binary identification under tampering and non-persistent excitation",
+  "authors": [
+    "Jian Guo",
+    "Ji-Feng Zhang"
+  ],
+  "summary": "In this paper, we consider distributed parameter estimation with binary observations under measurement-side tampering: each node observes a thresholded output whose label may be flipped and exchanges information over a communication graph. We develop a distributed recursive projection algorithm based on the diffusion strategy. Without imposing independence, stationarity, or Gaussian assumptions, we establish almost sure upper bounds of both the accumulated regrets of the adaptive predictor and the distributed estimation error. Under a mild cooperative excitation condition, all nodes'…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-27",
+  "updated": "2026-08-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

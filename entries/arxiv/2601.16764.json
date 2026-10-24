@@ -1,0 +1,22 @@
+{
+  "key": "2601.16764",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.16764",
+  "title": "ReLU Networks for Model Predictive Control: Network Complexity and Performance Guarantees",
+  "authors": [
+    "Xingchen Li",
+    "Keyou You"
+  ],
+  "summary": "Recent years have witnessed a resurgence in using ReLU neural networks (NNs) to represent model predictive control (MPC) policies. However, determining the required network complexity to ensure closed-loop performance remains a fundamental open problem. This involves a critical precision-complexity trade-off: undersized networks may fail to capture the MPC policy, while oversized ones may outweigh the benefits of ReLU network approximation. In this work, we propose a projection-based method to enforce hard constraints and establish a state-dependent Lipschitz continuity property for the…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-01-23",
+  "updated": "2026-01-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

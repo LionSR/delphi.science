@@ -1,0 +1,20 @@
+{
+  "key": "2608.00260",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.00260",
+  "title": "Approximating the Fourier Transform from Non-equispaced Discrete Samples",
+  "authors": [
+    "Daniel Potts",
+    "Laura Weidensager"
+  ],
+  "summary": "We study the approximation of the Fourier transform of a function from finitely many samples. Departing from the equispaced setting, we sample the function at deterministic non-equispaced nodes obtained by transforming equispaced points on $[0,1]$ through the inverse cumulative distribution function of a probability density. This change of variables compactifies the real line, so that no truncation of the space domain is necessary. Combining an exact aliasing identity for the midpoint rule with stationary-phase estimates for the transformed oscillatory integrals, we derive deterministic…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-31",
+  "updated": "2026-07-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

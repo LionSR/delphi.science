@@ -1,0 +1,21 @@
+{
+  "key": "2608.17880",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17880",
+  "title": "A Kernel-Checked Exclusion Certificate for Erdős Problem 647",
+  "authors": [
+    "Ibrahim Mian",
+    "Shayaan Siddique"
+  ],
+  "summary": "Erdős problem 647 asks whether any $n > 24$ satisfies $\\max_{m<n}(m + τ(m)) \\le n + 2$, where $τ$ is the divisor-count function. Computational searches have excluded solutions up to $10^{12}$ by direct sieve and up to roughly $9.17 \\times 10^{18}$ within a modular reduction whose Lean component relies on native_decide; those computations sit outside any proof kernel. We give the first exclusion checked end to end by one: no solution exists with $24 < n \\le 10^9$, proved in Lean 4 with axiom closure exactly {propext, Classical.choice, Quot.sound} -- no sorry, no native_decide, no…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "math.NT"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2604.22512",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.22512",
+  "title": "A New Adaptive Deep Learning based Reduced Order Model for Hybrid-Type Parabolic PDEs: Rigorous Error Analysis and Applications",
+  "authors": [
+    "Dawid Kotowski",
+    "Mario Ohlberger"
+  ],
+  "summary": "This contribution proposes novel data-driven surrogate modeling approaches for parameterized parabolic PDEs, where the parameter dependence can be split into two parts with different decay behavior of the Kolmogorov $N$-width. Such problems naturally arise in many industrial flow processes with dominant advection or traveling fronts in the solution trajectories. To tackle this challenge, we extend the Deep Orthogonal Decomposition (DOD) method, recently introduced for related stationary problems, to the time-dependent setting. We introduce and rigorously analyze two DOD based approaches: Our…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-24",
+  "updated": "2026-04-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

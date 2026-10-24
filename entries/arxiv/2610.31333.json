@@ -1,0 +1,20 @@
+{
+  "key": "2610.31333",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.31333",
+  "title": "Sketching Outside the Hilbert Space for the Infinite-Dimensional Randomised SVD",
+  "authors": [
+    "Morgan Lynch-Davies",
+    "Marcus Webb"
+  ],
+  "summary": "In randomised numerical linear algebra, common choices for distributions of sketch vectors $ω\\in \\mathbb R^n$ are isotropic, so that $\\mathbb E[ωω^T]=I_n$. Unfortunately, the natural extension of an isotropic vector in $(\\mathbb R^n, \\|\\cdot \\|_{2})$ to an infinite-dimensional separable Hilbert space $\\mathcal H$ may not exist as an element of the space, posing an obstacle for any attempt to lift the randomised SVD to infinite-dimensional target operators $A$. Current workarounds either forego isotropy and take $ω$ to be a continuous Gaussian process with trace-class covariance operators, or…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

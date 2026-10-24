@@ -1,0 +1,21 @@
+{
+  "key": "2609.13674",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.13674",
+  "title": "Constructive recurrences for determinants and permanents of banded Toeplitz matrices",
+  "authors": [
+    "Max A. Alekseyev",
+    "Dmitry I. Khomovsky"
+  ],
+  "summary": "For fixed nonnegative integers $m_1,m_2$, let $A_n=(a_{j-i})_{i,j=1}^n$ be the leading $n\\times n$ section of a Toeplitz matrix with lower and upper semibandwidths $m_1$ and $m_2$. We give two constructive Laplace-expansion methods for scalar recurrences of $\\det A_n$ and $\\perm A_n$. The increasing-rows method eliminates a fixed family of boundary cofactors and gives recurrence order at most $d=\\binom{m_1+m_2}{m_1}$ for both sequences. The row-column method closes normalized boundary minors recursively and packages them in a sparse transfer matrix. Its reachable states are classified…",
+  "domain": "math.RA",
+  "tags": [
+    "math.RA",
+    "math.CO"
+  ],
+  "published": "2026-09-12",
+  "updated": "2026-09-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

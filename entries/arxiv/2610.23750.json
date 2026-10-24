@@ -1,0 +1,23 @@
+{
+  "key": "2610.23750",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.23750",
+  "title": "Exact Tail Laws for Nonlinear SGD with Infinite-Variance Gradients",
+  "authors": [
+    "Xiaoli Li",
+    "Qianqian Lei",
+    "Ziyang Wei",
+    "Wei Biao Wu"
+  ],
+  "summary": "With infinite-variance gradient noise, SGD can have infinite expected excess objective even when most iterates are close to the optimum. We characterize its accuracy through exact first-order tail probabilities for the last iterate of nonlinear, constant-stepsize SGD. For regularly varying innovations of index $t\\in(1,2)$, the leading measure transports one large gradient shock through the local Hessian flow. This is the same measure that governs the central stable Ornstein--Uhlenbeck limit; we prove its relative accuracy at shrinking tolerances above the central scale, with state-dependent…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

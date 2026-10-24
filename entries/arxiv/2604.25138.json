@@ -1,0 +1,21 @@
+{
+  "key": "2604.25138",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.25138",
+  "title": "Accelerating Regularized Attention Kernel Regression for Spectrum Cartography",
+  "authors": [
+    "Liping Tao",
+    "Chee Wei Tan"
+  ],
+  "summary": "Spectrum cartography reconstructs spatial radio fields from sparse and heterogeneous wireless measurements, underpinning many sensing and optimization tasks in wireless networks. Attention mechanisms have recently enabled adaptive measurement aggregation via attention kernel-based formulations. However, the resulting exponential kernels exhibit severe spectral imbalance, inducing large condition numbers that render standard iterative solvers ineffective for regularized attention kernel regression. This paper proposes a Learning-based Attention Kernel Regression (LAKER) algorithm for…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-04-28",
+  "updated": "2026-04-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

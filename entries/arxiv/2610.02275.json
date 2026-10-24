@@ -1,0 +1,21 @@
+{
+  "key": "2610.02275",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02275",
+  "title": "Maximum Edge Open Packing on AT-Free, Chordal, and Convex Bipartite Graphs",
+  "authors": [
+    "Gautam K. Das",
+    "Kamal Santra"
+  ],
+  "summary": "An edge open packing is a set of edges whose endpoints induce a disjoint union of stars. We study the problem of finding a maximum edge open packing in AT-free, chordal, and convex bipartite graphs. For AT-free graphs, we use the oriented star-conflict graph $A_G$, introduced by Das and Santra, for which $ρ_e^o(G)=α(A_G)$, and prove that $A_G$ is AT-free whenever $G$ is AT-free. Consequently, a known maximum independent set algorithm for AT-free graphs yields an $O(n^2+m^4)$-time algorithm for Maximum Edge Open Packing, where $n$ and $m$ denote the numbers of vertices and edges of $G$,…",
+  "domain": "cs.DM",
+  "tags": [
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

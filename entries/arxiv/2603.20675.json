@@ -1,0 +1,22 @@
+{
+  "key": "2603.20675",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20675",
+  "title": "Approximation Analysis of a Parabolic-Parabolic Chemotaxis Model with Logarithmic Nonlinearity",
+  "authors": [
+    "Shijun Li",
+    "Yashuang Zhao",
+    "Shaopeng Xu",
+    "Shengjun Li"
+  ],
+  "summary": "We consider the Keller-Segel system with logical source \\begin{align*} \\begin{cases} u_t = \\nabla \\cdot (φ(u)\\nabla u) - \\nabla \\cdot (ψ(u)\\nabla v)+f(u), & x \\in Ω, \\; t > 0, v_t = Δv - v + u, & x \\in Ω, \\; t > 0, \\end{cases} \\end{align*} in a smooth bounded domain \\(Ω\\subset \\mathbb{R}^n\\) with \\(n \\geq 2\\), the Neumann initial-boundary value problem admits a globally defined, uniformly bounded classic solution for all sufficiently regular non-negative initial data \\(u_0\\) and \\(v_0\\). In the first equation, assume that \\(φ\\) and \\(ψ\\) are dominated by a logarithmic function and a…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-03-21",
+  "updated": "2026-03-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2610.08508",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08508",
+  "title": "Budget-Constrained Multi-Consensus Decentralized Gradient Descent",
+  "authors": [
+    "Shuyi Ren",
+    "Nicol`o Michelusi",
+    "Erik G. Larsson"
+  ],
+  "summary": "We investigate decentralized gradient descent (DGD) with emphasis on efficient communication and computation resource utilization under budget constraints. As a first step toward the broader communication-computation allocation problem, we consider and analyze a \\textit{multi-consensus decentralized gradient descent} (mcDGD) scheme, where the number of consensus rounds and the stepsize are allowed to vary across iterations. Building on a unified analytical framework for DGD, we derive finite-time convergence bounds that explicitly characterize the interaction between consensus quality and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

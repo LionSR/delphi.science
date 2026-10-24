@@ -1,0 +1,23 @@
+{
+  "key": "2604.23101",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23101",
+  "title": "Compressed Traffic Assignment with the Augmented Lagrangian Method",
+  "authors": [
+    "Xuesong Zhou",
+    "Peiheng Li",
+    "Yajun Liu",
+    "Yuchao Li",
+    "Dimitri Bertsekas"
+  ],
+  "summary": "We consider large-scale traffic assignment problems and develop a path-based compression framework. In particular, we partition paths into major and minor paths according to nominal path flows and a prescribed threshold, and retain the major paths explicitly. For the minor paths, we use reference flows derived from nominal-flow information and represent deviations using a truncated singular value decomposition of the minor path-link incidence matrix. The resulting compressed formulation preserves convexity, and a simple scaling of the nominal minor flows ensures feasibility under changes in…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

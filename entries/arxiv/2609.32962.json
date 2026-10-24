@@ -1,0 +1,27 @@
+{
+  "key": "2609.32962",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32962",
+  "title": "Clipped or Unclipped? Finite-Sample Trade-offs for Averaged SGD under Heavy-Tailed Noise",
+  "authors": [
+    "Alexandra Suvorikova",
+    "Egor Gladin",
+    "Darina Dvinskikh",
+    "Artem Agafonov",
+    "Mohammad Alkousa",
+    "Yuriy Dorn",
+    "Vladislav Matyukhin",
+    "Alexander Gasnikov"
+  ],
+  "summary": "Gradient clipping is widely used to stabilize training, but it need not improve the statistical accuracy of averaged SGD, even under heavy-tailed noise. We derive a finite-sample comparison of clipped and unclipped Polyak-Ruppert averaged SGD under finite conditional $p$-th moments, $p\\ge2$. Our main result gives explicit accuracy and confidence conditions under which, for $p>2$, the Gaussian term dominates the unclipped deviation bound, so clipping need not improve its leading order. By balancing clipping bias and concentration, we obtain a bound in which the heavy-tail correction depends…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

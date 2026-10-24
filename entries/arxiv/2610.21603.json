@@ -1,0 +1,20 @@
+{
+  "key": "2610.21603",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.21603",
+  "title": "On the stability of basis construction in extended Krylov subspace methods",
+  "authors": [
+    "Kathryn Lund",
+    "Marcel Schweitzer"
+  ],
+  "summary": "Extended Krylov subspace methods (EKSMs) are a well known approach for approximating the action of a matrix function on a vector $f(A)\\mathbf{b}$, and their block versions are often used for solving Lyapunov and Sylvester matrix equations. EKSMs produce Laurent approximations to the underlying operator, which are generally more accurate per iteration than polynomial KSMs, without requiring a pole selection procedure as rational KSMs do. At the same time, due to the expansion of the search space by not only $A$ but also by its inverse, a number of implementation choices must be made that can…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

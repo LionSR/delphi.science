@@ -1,0 +1,24 @@
+{
+  "key": "2608.15667",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.15667",
+  "title": "Scalable Pontryagin-Guided Adjoint-to-Control Recovery for Constrained Dynamic Portfolio Choice",
+  "authors": [
+    "Jaegi Jeon",
+    "Jeonggyu Huh",
+    "Hyeng Keun Koo",
+    "Byung Hwa Lim"
+  ],
+  "summary": "We study continuous-time multi-asset portfolio choice and consumption under smooth pointwise constraints, including state-dependent feasible sets. The method separates dynamic information acquisition from local constrained recovery. A pointwise-feasible neural actor generates reference rollouts; after training, its realized latent outputs are frozen and first- and second-order adjoints are harvested from a fixed-latent open-loop backpropagation-through-time graph. Feedback therefore generates the reference trajectory without restricting the adjoint formulation to Markov controls. Conditional…",
+  "domain": "q-fin.PM",
+  "tags": [
+    "q-fin.PM",
+    "math.OC",
+    "q-fin.MF"
+  ],
+  "published": "2026-08-16",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

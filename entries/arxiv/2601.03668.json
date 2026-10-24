@@ -1,0 +1,24 @@
+{
+  "key": "2601.03668",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.03668",
+  "title": "Discontinuous Galerkin finite element operator network for solving non-smooth PDEs",
+  "authors": [
+    "Kapil Chawla",
+    "Youngjoon Hong",
+    "Jae Yong Lee",
+    "Sanghyun Lee"
+  ],
+  "summary": "We introduce Discontinuous Galerkin Finite Element Operator Network (DG--FEONet), a data-free operator learning framework that combines the strengths of the discontinuous Galerkin (DG) method with neural networks to solve parametric partial differential equations (PDEs) with discontinuous coefficients and non-smooth solutions. Unlike traditional operator learning models such as DeepONet and Fourier Neural Operator, which require large paired datasets and often struggle near sharp features, our approach minimizes the residual of a DG-based weak formulation using the Symmetric Interior Penalty…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "published": "2026-01-07",
+  "updated": "2026-01-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

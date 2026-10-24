@@ -1,0 +1,23 @@
+{
+  "key": "2603.16808",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.16808",
+  "title": "Exponential stability of data-driven nonlinear MPC based on input/output models",
+  "authors": [
+    "Lea Bold",
+    "Irene Schimperna",
+    "Karl Worthmann",
+    "Johannes Köhler"
+  ],
+  "summary": "We consider nonlinear model predictive control (MPC) schemes without stabilizing terminal conditions, where the model used in the optimization step is generated based on input-output data only. We establish exponential stability for sufficiently long prediction horizons assuming exponential stabilizability and a proportional error bound. Moreover, we verify the imposed condition on the approximation using kernel interpolation and demonstrate the practical applicability to nonlinear systems by numerical simulations.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-03-17",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

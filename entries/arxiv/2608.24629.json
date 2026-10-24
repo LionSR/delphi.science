@@ -1,0 +1,23 @@
+{
+  "key": "2608.24629",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.24629",
+  "title": "Dual-Based Weight Selection for Approximate Linear Programming",
+  "authors": [
+    "Su Li",
+    "Andre A. Cire",
+    "Adam Diamant",
+    "Vahid Sarhangian"
+  ],
+  "summary": "Approximate Linear Programming (ALP) is widely used for large-scale Markov Decision Processes (MDPs), but its performance can be sensitive to the choice of state-relevance weights, which are typically selected heuristically. Performance bounds suggest aligning these weights with the discounted occupancy measure of the induced policy, and existing primal approaches address this through repeated greedy-policy construction. Nonetheless, they lack convergence guarantees and are computationally expensive. We propose a dual-based method that uses projected occupancy information from the ALP dual…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

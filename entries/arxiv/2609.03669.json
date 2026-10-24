@@ -1,0 +1,19 @@
+{
+  "key": "2609.03669",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.03669",
+  "title": "Volterra Integral Reduction for Boundary Diffusion Problems",
+  "authors": [
+    "Danila Shabalin"
+  ],
+  "summary": "This paper addresses a class of integral representations of the form \\begin{equation} f(t,x)=g(t,x)+\\int_0^t k(t,s)\\, p(t-s,x,y)\\, \\partial_x f(s,y^+)\\,ds, \\qquad 0 \\le t \\le T, \\end{equation} where $f$ is unknown, $p$ is the transition density of a diffusion process, and $g, k$ are prescribed functions. For an arbitrary diffusion process with sufficiently regular coefficients, we prove that this problem is equivalent to a Volterra integral equation of the second kind. This reduction provides a unified framework for both theoretical analysis and numerical approximation. An example of the…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

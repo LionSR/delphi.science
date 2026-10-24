@@ -1,0 +1,21 @@
+{
+  "key": "2610.10484",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.10484",
+  "title": "A finite element exterior-to-interior reconstruction in the fractional conductivity inverse problem",
+  "authors": [
+    "Mukul Dwivedi",
+    "Jesse Railo",
+    "Andreas Rupp"
+  ],
+  "summary": "We develop a regularized finite element method for the fractional conductivity equation, recovering the conductivity on an exterior observation region from noisy Dirichlet-to-Neumann measurements and using this reconstruction to determine the interior conductivity. Mesh-localized inputs and mass-lumped Tikhonov regularization discretize the exterior determination principle of Covi--Railo--Zimmermann (2026, Calc. Var. PDE). We prove exterior \\(L^2\\)- and \\(L^\\infty\\)-convergence with error estimates, including the logarithmic correction at the critical Hölder exponent. The exterior…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

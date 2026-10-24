@@ -1,0 +1,26 @@
+{
+  "key": "2610.16771",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16771",
+  "title": "Matching Full-Hessian Oracle Complexity for Nonconvex--Strongly-Concave Minimax Optimization",
+  "authors": [
+    "Fangqing Zhang",
+    "Haihan Zhang",
+    "Wendao Wu",
+    "Chenheng Zhang",
+    "Chunyuan Zheng",
+    "Cong Fang",
+    "Haoxuan Li",
+    "Zhouchen Lin"
+  ],
+  "summary": "We characterize the oracle complexity of finding first-order stationary points in smooth nonconvex--strongly-concave (NC--SC) minimax optimization when each query provides the full Hessian in addition to the function value and gradient. For $Φ(x)=\\max_y f(x,y)$, assume that $f$ has an $L$-Lipschitz gradient, a $ρ$-Lipschitz Hessian, and is $μ$-strongly concave in $y$. Let $κ=L/μ$, let $Δ$ denote the initial value gap, and define $r=ρκ^{3/2}\\varepsilon/L^2$. We establish matching deterministic upper bounds and randomized lower bounds, up to logarithmic factors and additive initialization…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

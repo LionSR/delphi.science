@@ -1,0 +1,21 @@
+{
+  "key": "2606.08175",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.08175",
+  "title": "Quaternion Maximum-Volume Submatrix Selection with Applications to Multichannel Imaging and Visual Data",
+  "authors": [
+    "Vsevolod Kliushev",
+    "Junjun Pan",
+    "Valentin Leplat"
+  ],
+  "summary": "Low-rank approximation based on selected rows and columns is a useful alternative to singular value decompositions when the goal is an interpretable and compact matrix representation. A standard way to choose these rows and columns is the maximum-volume principle: it selects submatrices with large volume, which usually leads to stable interpolation coefficients and accurate CUR-type approximations. In this paper, we study this idea for quaternion matrices. This setting is natural for color images, three-dimensional motion data, and multi-channel signals, but requires care because quaternion…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-06",
+  "updated": "2026-06-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

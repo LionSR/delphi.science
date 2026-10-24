@@ -1,0 +1,24 @@
+{
+  "key": "2603.16481",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.16481",
+  "title": "Optimal uncertainty bounds for multivariate kernel regression under bounded noise: A Gaussian process-based dual function",
+  "authors": [
+    "Amon Lahr",
+    "Anna Scampicchio",
+    "Johannes Köhler",
+    "Melanie N. Zeilinger"
+  ],
+  "summary": "Non-conservative uncertainty bounds are essential for making reliable predictions about latent functions from noisy data, and thus, a key enabler for safe learning-based control. In this domain, kernel methods such as Gaussian process regression are established techniques, thanks to their inherent uncertainty quantification mechanism. Still, existing bounds either pose strong assumptions on the underlying noise distribution, are conservative, do not directly apply in the multi-output case, or are difficult to integrate into downstream tasks. This paper addresses these limitations by…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-03-17",
+  "updated": "2026-07-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

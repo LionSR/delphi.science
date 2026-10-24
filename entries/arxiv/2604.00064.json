@@ -1,0 +1,23 @@
+{
+  "key": "2604.00064",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00064",
+  "title": "Forecast collapse of transformer-based models under squared loss in financial time series",
+  "authors": [
+    "Pierre Andreoletti"
+  ],
+  "summary": "We study trajectory forecasting under squared loss for time series with weak conditional structure, using highly expressive prediction models. Building on the classical characterization of squared-loss risk minimization, we emphasize regimes in which the conditional expectation of future trajectories is effectively degenerate, leading to trivial Bayes-optimal predictors (flat for prices and zero for returns in standard financial settings). In this regime, increased model expressivity does not improve predictive accuracy but instead introduces spurious trajectory fluctuations around the…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.PR",
+    "math.ST",
+    "q-fin.CP"
+  ],
+  "published": "2026-03-31",
+  "updated": "2026-03-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2610.29166",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.29166",
+  "title": "A Shadow Sequence Technique for Last-Iterate Convergence Analysis of the Random Reshuffling Method: Relaxed Stepsize Conditions and Beyond",
+  "authors": [
+    "Hai Liu",
+    "Tiande Guo",
+    "Congying Han"
+  ],
+  "summary": "We prove two last-iterate convergence bounds of the random reshuffling (RR) method in the smooth general convex finite-sum optimization. In the proved results, the stepsize sequence $\\{η_{k}\\}_{k}$ of RR is an arbitrary positive non-increasing sequence with $η_{1}\\lesssim 1/(\\operatorname{polylog}(n)L)$, where $n$ is the number of components of the finite-sum objective and $L$ is the smoothness parameter. Specifically, a last-iterate convergence rate $\\widetilde{\\mathcal{O}}\\left(\\frac{\\Vert…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

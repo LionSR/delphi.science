@@ -1,0 +1,22 @@
+{
+  "key": "2609.21327",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.21327",
+  "title": "Deep Reinforcement Learning with Buffered Quantile Objectives",
+  "authors": [
+    "Mohammad Alipour-vaezi",
+    "Sajad Khodadadian"
+  ],
+  "summary": "Quantile-based reinforcement learning provides an interpretable approach to risk-sensitive decision-making by optimizing a prescribed quantile of the cumulative-return distribution. Despite this appeal, learning under a point quantile objective is challenging: quantiles can change abruptly under small perturbations of the return distribution, and exact quantile-sensitive planning requires computationally demanding distributional optimization. Lower-buffered quantiles alleviate the former difficulty by averaging neighboring quantiles immediately below the target level, providing a smoother…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-09-18",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

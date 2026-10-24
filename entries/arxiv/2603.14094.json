@@ -1,0 +1,27 @@
+{
+  "key": "2603.14094",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.14094",
+  "title": "Maximin Robust Bayesian Experimental Design",
+  "authors": [
+    "Hany Abdulsamad",
+    "Sahel Iqbal",
+    "Christian A. Naesseth",
+    "Takuo Matsubara",
+    "Adrien Corenflos"
+  ],
+  "summary": "We address the brittleness of Bayesian experimental design under model misspecification by formulating the problem as a max--min game between the experimenter and an adversarial nature subject to information-theoretic constraints. We demonstrate that this approach yields a robust objective governed by Sibson's $α$-mutual information (MI), which identifies the $α$-tilted posterior as the robust belief update and establishes the Rényi divergence as the appropriate measure of conditional information gain. To mitigate the bias and variance of nested Monte Carlo estimators needed to estimate…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST",
+    "stat.CO",
+    "stat.ME"
+  ],
+  "published": "2026-03-14",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

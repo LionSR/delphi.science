@@ -1,0 +1,34 @@
+{
+  "key": "2603.29877",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.29877",
+  "title": "Mathematical Foundations of Modeling ETL Process Chains",
+  "authors": [
+    "Levin Maier",
+    "Lucas Schulze",
+    "Robert Lilow",
+    "Lukas Hahn",
+    "Nikola Krasowski",
+    "Arnulf Barth",
+    "Sebastian Gaebel",
+    "Ferdi Güran",
+    "Oliver Hanau",
+    "Giovanni Wagner",
+    "Falk Borgmann",
+    "Oleg Arenz",
+    "Jan Peters"
+  ],
+  "summary": "Extract-Transform-Load (ETL) processes are core components of modern data processing infrastructures. The throughput of processed data records can be adjusted by changing the amount of allocated resources, i.e.~the number of parallel processing threads for each of the three ETL phases, but also depends on stochastic variations in the per-record processing times. In chains of multiple consecutive ETL processes, the relation between allocated resources and overall throughput is further complicated, for example by the occurrence of bottlenecks affecting all subsequent ETL processes. We develop…",
+  "domain": "cs.DC",
+  "tags": [
+    "cs.DC",
+    "cs.DB",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-02-09",
+  "updated": "2026-02-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

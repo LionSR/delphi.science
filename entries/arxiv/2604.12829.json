@@ -1,0 +1,23 @@
+{
+  "key": "2604.12829",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.12829",
+  "title": "Variable Bregman Majorization-Minimization algorithms for nonconvex nonsmooth optimization, with application to Poisson imaging",
+  "authors": [
+    "Maxence Adly",
+    "Alix Chazottes",
+    "Emilie Chouzenoux",
+    "Jean-Christophe Pesquet",
+    "Florent Sureau"
+  ],
+  "summary": "In this work, we introduce a unifying Bregman-based majorization-minimization (MM) framework for solving nonconvex nonsmooth optimization problems. The proposed approach leverages Bregman divergences, possibly varying across iterations, to construct tailored surrogate functions that majorize the objective. We establish the convergence of the iterates of the resulting variable Bregman MM algorithm to critical points under the Kurdyka-Lojasiewicz property, relaxing standard assumptions such as the Lipschitz smoothness of the nonconvex objective function. We derive a constructive methodology to…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-14",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

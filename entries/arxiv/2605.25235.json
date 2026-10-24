@@ -1,0 +1,21 @@
+{
+  "key": "2605.25235",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.25235",
+  "title": "Constraint-Anchored Attribution: Feasibility-Certified Counterfactuals and Bonferroni-PAC Sufficient Subsets for Neural CO Policies",
+  "authors": [
+    "Sohaib Lafifi"
+  ],
+  "summary": "We give an attribution method for neural combinatorial-optimisation (CO) policies that (i) decomposes a decision by constraint families via LP-relaxation duals, (ii) certifies counterfactuals through a combinatorial feasibility model (implemented as a CSP feasibility-decision model), and (iii) bounds the size of a PAC-sufficient explanation with a Bonferroni-corrected Hoeffding sufficient-subset test along a greedy ordering. Across three CO problems and three seeds, our LP-anchored $Λ$-attribution matches the CF-derived signal at 96.5% on CVRPTW (n_cert=344) and 77.2% on the Orienteering…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-05-24",
+  "updated": "2026-05-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

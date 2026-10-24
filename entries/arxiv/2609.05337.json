@@ -1,0 +1,24 @@
+{
+  "key": "2609.05337",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.05337",
+  "title": "Variational Continuation for Double Pendulum Periodic Orbits",
+  "authors": [
+    "Leo Yao",
+    "Ziming Liu",
+    "Max Tegmark"
+  ],
+  "summary": "We present a Hessian-based approach to numerically continue periodic orbits in dynamical systems. A loop (periodic orbit candidate) is parametrized as a Fourier series; a loss function is defined based on the deviation of the loop from the physical differential equations. Unlike previous work relying on hand-derived Jacobians, our method automates the process by leveraging automatic differentiation, a common machine learning technique. The continuation direction can be determined by the flat directions of the loss landscapes (directions with zero eigenvalues), making the search of periodic…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math-ph",
+    "nlin.CD",
+    "physics.class-ph"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

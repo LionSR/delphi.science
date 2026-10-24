@@ -1,0 +1,26 @@
+{
+  "key": "2602.20306",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.20306",
+  "title": "Shape-informed cardiac mechanics surrogates in data-scarce regimes via geometric encoding and generative augmentation",
+  "authors": [
+    "Davide Carrara",
+    "Marc Hirschvogel",
+    "Francesca Bonizzoni",
+    "Stefano Pagani",
+    "Simone Pezzuto",
+    "Francesco Regazzoni"
+  ],
+  "summary": "High-fidelity computational models of cardiac mechanics provide mechanistic insight into the heart function but are computationally prohibitive for routine clinical use. Surrogate models can accelerate simulations, but generalization across diverse anatomies is challenging, particularly in data-scarce settings. We propose a two-step framework that decouples geometric representation from learning the physics response, to enable shape-informed surrogate modeling under data-scarce conditions. First, a shape model learns a compact latent representation of left ventricular geometries. The learned…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.NA"
+  ],
+  "published": "2026-02-23",
+  "updated": "2026-02-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

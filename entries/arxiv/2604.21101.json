@@ -1,0 +1,28 @@
+{
+  "key": "2604.21101",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.21101",
+  "title": "A Hybridizable Neural Time Integrator for Stable Autoregressive Forecasting",
+  "authors": [
+    "Brooks Kinch",
+    "Xiaozhe Hu",
+    "Yilong Huang",
+    "Martine Dyring Hansen",
+    "Sunniva Meltzer",
+    "Nathaniel Donald Hamlin",
+    "David Sirajuddin",
+    "Eric C. Cyr",
+    "Nathaniel Trask"
+  ],
+  "summary": "For autoregressive modeling of chaotic dynamical systems over long time horizons, the stability of both training and inference is a major challenge in building scientific foundation models. We present a hybrid technique in which an autoregressive transformer is embedded within a novel shooting-based mixed finite element scheme, exposing topological structure that enables provable stability. For forward problems, we prove preservation of discrete energies, while for training we prove uniform bounds on gradients, provably avoiding the exploding gradient problem. Combined with a vision…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-04-22",
+  "updated": "2026-04-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

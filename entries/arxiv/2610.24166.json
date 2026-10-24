@@ -1,0 +1,22 @@
+{
+  "key": "2610.24166",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.24166",
+  "title": "Margin Certificates for Voting Classifiers under Mixing Dependence",
+  "authors": [
+    "Adria Binte Habib",
+    "Ibne Farabi Shihab"
+  ],
+  "summary": "Margin bounds explain why weighted votes generalize after training error vanishes, but dependent observations require concentration arguments that keep the dependence model and failure budget explicit. We study stationary mixing streams without treating dependence as a formal substitution of an \"effective sample size.\" For a finite base class, we combine independent-block Rademacher theory for stationary $β$-mixing processes with a clipped margin loss to obtain an explicit uniform voting-margin certificate, whose dependence penalty is set by the number of approximately independent blocks and…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2605.22950",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.22950",
+  "title": "Diffusion-based Denoising Beats Vanilla Score Matching in Parameter Estimation: A Theoretical Explanation",
+  "authors": [
+    "Benedikt Lütke Schwienhorst",
+    "Nadja Klein",
+    "Johannes Lederer"
+  ],
+  "summary": "Score matching is an alternative to maximum likelihood estimation when the normalizing constant is unknown or too costly to evaluate. However, vanilla score matching has shown to be inefficient relative to maximum likelihood estimation for multimodal distributions with well-separated modes, which are commonly encountered in practical applications. We compare a novel diffusion-based denoising score matching estimator (DDSME) to the vanilla score matching estimator (SME) in this scenario. In particular, we prove statistical guarantees for both estimators, showing that the error bound for the…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-05-21",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

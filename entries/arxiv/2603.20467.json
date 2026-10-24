@@ -1,0 +1,23 @@
+{
+  "key": "2603.20467",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20467",
+  "title": "Goal-oriented learning of stochastic differential equations using error bounds on path-space observables",
+  "authors": [
+    "Joanna Zou",
+    "Han Cheng Lie",
+    "Youssef Marzouk"
+  ],
+  "summary": "Stochastic differential equations (SDEs), which serve as the governing equations for dynamical systems in a broad range of applications, can become cost-prohibitive for numerical simulation at scales necessary for quantifying key properties. Surrogate models of the drift function of an SDE, learned from data of the high-fidelity system, are routinely used to increase the efficiency of simulation and prediction of properties. However, standard choices of loss function for learning the surrogate model fail to provide error guarantees in certain path-dependent observables, such as transition…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "cs.LG",
+    "math.DS"
+  ],
+  "published": "2026-03-20",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

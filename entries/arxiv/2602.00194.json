@@ -1,0 +1,24 @@
+{
+  "key": "2602.00194",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.00194",
+  "title": "On the calibration of survival models with competing risks",
+  "authors": [
+    "Julie Alberge",
+    "Tristan Haugomat",
+    "Gaël Varoquaux",
+    "Judith Abécassis"
+  ],
+  "summary": "Survival analysis deals with modeling the time until an event occurs, and accurate probability estimates are crucial for decision-making, particularly in the competing-risks setting where multiple events are possible. While recent work has addressed calibration in standard survival analysis, the competing-risks setting remains under-explored as it is harder (the calibration applies to both probabilities across classes and time horizon). We show that existing calibration measures are not suited to the competing-risk setting and that recent models do not give well-behaved probabilities. To…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "cs.AI",
+    "math.ST"
+  ],
+  "published": "2026-01-30",
+  "updated": "2026-01-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

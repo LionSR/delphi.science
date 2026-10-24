@@ -1,0 +1,21 @@
+{
+  "key": "2603.00383",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.00383",
+  "title": "A divide-and-conquer strategy for fast elastodynamic simulation of earthquakes and aseismic slip on fault networks",
+  "authors": [
+    "Federico Ciardo",
+    "Pierre Romanet"
+  ],
+  "summary": "Simulating long-term, fully dynamic sequences of earthquakes and aseismic slip (SEAS) on geometrically complex fault networks remains computationally demanding due to the cost of resolving elastodynamic interactions. Although high-performance computing improves feasibility, simulations remain expensive, particularly for multicycle evolution, motivating the widespread use of quasi-dynamic approximations based on radiation damping. Here we present an efficient numerical framework for fully elastodynamic SEAS simulations on complex fault networks. The method adopts a divide-and-conquer strategy…",
+  "domain": "physics.geo-ph",
+  "tags": [
+    "physics.geo-ph",
+    "math.NA"
+  ],
+  "published": "2026-02-27",
+  "updated": "2026-02-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2603.19702",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.19702",
+  "title": "Enhancing Future Prediction of Linear and Nonlinear Reduced-Order Models for Transport-Dominated Problems Using Lagrangian Data",
+  "authors": [
+    "Meng Li",
+    "Yang Xiang",
+    "Zhichao Peng"
+  ],
+  "summary": "Designing effective reduced-order models (ROMs) for parametrized transport-dominated problems remains challenging because of the well-known Kolmogorov barrier. Autoencoder-based nonlinear ROMs have been developed to improve the compression ability for such systems. However, despite their stronger compression ability, autoencoder-based ROMs constructed in the Eulerian frame may fail to accurately predict future solutions, due to the poor coherence between historical and future solutions in the Eulerian frame. In contrast, we show that representing transport-dominated dynamics in the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-20",
+  "updated": "2026-03-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

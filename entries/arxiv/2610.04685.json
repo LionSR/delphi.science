@@ -1,0 +1,21 @@
+{
+  "key": "2610.04685",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04685",
+  "title": "On randomized batch-sampling coordinate descent methods for solving linear least-squares problems",
+  "authors": [
+    "Dong-Yue Xie",
+    "Xi Yang"
+  ],
+  "summary": "This paper refines randomized block coordinate descent by introducing a coordinate-level batch-sampling distribution characterization, yielding a fine-grained randomized batch-sampling coordinate descent framework, which applies to any block coordinate descent method under an arbitrary static stochastic sampling rule for solving large-scale linear least-squares problems. Based on this framework, we derive new linear convergence rate bounds that are invariant to the column scaling of data matrices. Theoretical analysis and numerical experiments validate that the new bounds are significantly…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-10-03",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

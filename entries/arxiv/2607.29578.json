@@ -1,0 +1,22 @@
+{
+  "key": "2607.29578",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.29578",
+  "title": "Error of randomized Milstein scheme for scalar SDEs with noisy information about coefficients and Wiener process",
+  "authors": [
+    "Paweł M. Morkisz",
+    "Paweł Przybyłowicz",
+    "Martyna Wiącek"
+  ],
+  "summary": "We investigate the strong approximation of scalar stochastic differential equations when the available standard information about the drift coefficient, the diffusion coefficient, the derivative of the diffusion coefficient, and the observed Wiener path is corrupted by noise. The precision of the drift, diffusion-information, and Wiener-path observations is described by three nonnegative parameters $δ_1,δ_2,δ_3$, where $δ_2$ controls both the noisy diffusion coefficient and the separate noisy derivative oracle required in the Milstein correction. We analyze a randomized Milstein scheme based…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.PR"
+  ],
+  "published": "2026-07-31",
+  "updated": "2026-07-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

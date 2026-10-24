@@ -1,0 +1,20 @@
+{
+  "key": "2610.12353",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.12353",
+  "title": "Asymptotically Vanishing Excitation Without Loss of Parameter Convergence",
+  "authors": [
+    "Parham Oveissi",
+    "Ankit Goel"
+  ],
+  "summary": "Parameter convergence in recursive identification requires persistent excitation, which is typically enforced with a probing signal that degrades performance if retained indefinitely. Regulating the probing amplitude with the one-step prediction error is insufficient, since a small prediction error does not imply parameter convergence. This paper proposes a self-regulating excitation law that scales the probing amplitude with the associated covariance matrix, so that the excitation vanishes only as fast as the estimator's own measure of remaining parameter uncertainty allows. The key idea is…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

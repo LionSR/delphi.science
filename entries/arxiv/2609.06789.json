@@ -1,0 +1,22 @@
+{
+  "key": "2609.06789",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.06789",
+  "title": "Improved Degree Tables for Secure Distributed Matrix Multiplication",
+  "authors": [
+    "John Byrne",
+    "Rafael G. L. D'Oliveira",
+    "Michael Tait"
+  ],
+  "summary": "In secure distributed matrix multiplication, a user wishes to compute the product of two matrices with the assistance of servers, in such a way that any $T$ colluding servers learn nothing about either matrix. Degree tables are a combinatorial tool for constructing polynomial codes for this problem and underlie several state-of-the-art schemes, including $\\mathsf{GASP}_r$, $\\mathsf{GASP}_{r,s}$, and $\\mathsf{DOG}_{r,s}$. We introduce a periodic-gap framework for constructing degree tables that contains these three families as special cases and leads to two new constructions,…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "math.CO"
+  ],
+  "published": "2026-09-06",
+  "updated": "2026-09-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

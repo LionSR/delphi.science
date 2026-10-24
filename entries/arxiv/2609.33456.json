@@ -1,0 +1,22 @@
+{
+  "key": "2609.33456",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.33456",
+  "title": "Sharp training-conditional coverage for conformal prediction under covariate shift",
+  "authors": [
+    "Mehrdad Pournaderi"
+  ],
+  "summary": "Weighted split conformal prediction reweights calibration scores by the likelihood ratio between the test and training covariate distributions and guarantees marginal coverage under covariate shift. We study its coverage conditional on the calibration data. An elementary argument, based on a single concentration inequality at a fixed population quantile, gives explicit training-conditional bounds without unspecified constants, and shows that the relevant scale is not the supremum of the likelihood ratio but a variance proxy built from the chi-squared divergence of the shift and from the…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-09-27",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

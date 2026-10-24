@@ -1,0 +1,22 @@
+{
+  "key": "2608.25519",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.25519",
+  "title": "Inertial Primal-Dual Dynamics Methods Featuring Implicit Hessian-Driven Damping for Convex Optimization Problems in Continuous and Discrete Time",
+  "authors": [
+    "Xiangkai Sun",
+    "Zeying Gao",
+    "Liang He",
+    "Kok Lay Teo"
+  ],
+  "summary": "This paper investigates inertial primal-dual dynamics with implicit Hessian-driven damping for strongly convex optimization problems with linear equality constraints. We first establish fast convergence rates for the objective function value error, the feasibility measure, and both the trajectory and its corresponding velocity vector. By appropriately adjusting parameters, we show that the proposed system achieves exponential convergence rates. Through implicit time discretization of the dynamical system, we derive an inertial accelerated primal-dual algorithm for solving the strongly convex…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-26",
+  "updated": "2026-08-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

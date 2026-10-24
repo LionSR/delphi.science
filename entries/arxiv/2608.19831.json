@@ -1,0 +1,20 @@
+{
+  "key": "2608.19831",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19831",
+  "title": "Causal Reasoning with Bipartite Graphical Causal Models",
+  "authors": [
+    "Joris M. Mooij"
+  ],
+  "summary": "Causal Bayesian networks (CBNs) and structural causal models (SCMs) are the dominant frameworks for graphical causal reasoning, but they cannot adequately represent all real-world causal systems. In particular, systems at equilibrium---where feedback mechanisms create cyclic causal dependencies---can exhibit causal semantics that are fundamentally incompatible with these frameworks: different interventions that enforce the same variable value may have different effects, rendering the standard ``perfect intervention'' do($X = x$) ambiguous. We propose bipartite graphical causal models…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "math.PR"
+  ],
+  "published": "2026-08-20",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

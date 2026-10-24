@@ -1,0 +1,21 @@
+{
+  "key": "2604.22519",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.22519",
+  "title": "Ablation and the Meno: Tools for Empirical Metamathematics",
+  "authors": [
+    "Zhengqin Fan",
+    "Simon DeDeo"
+  ],
+  "summary": "We present the results from Meno, a simple autoformalizer that proves theorems in Lean by systematically exploring the space of both formal and informal proofs, and tactic ablation, a new method for exploring mathematical creativity under constraint. We show these tools in action on simple theorems found in Terrence Tao's Analysis I, selectively ablating solution paths associated with non-constructive proofs, and analyze the properties of the resulting population using Goedel Prover embeddings. Among other things, our analysis of this novel population reveals that they lie on low (one or…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "math.HO"
+  ],
+  "published": "2026-04-24",
+  "updated": "2026-04-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

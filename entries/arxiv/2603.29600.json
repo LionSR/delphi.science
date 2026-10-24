@@ -1,0 +1,20 @@
+{
+  "key": "2603.29600",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.29600",
+  "title": "Uniform optimal-order Wasserstein quantisation",
+  "authors": [
+    "Maja Gwozdz"
+  ],
+  "summary": "We address Steinerberger's Wasserstein transport problem on the cube $Q=[0,1]^d$. For every $d\\ge2$, we consider a dyadic digital sequence $(x_n)\\subset Q$ and prove that every prefix $\\{x_1,\\dots,x_N\\}$ admits an exact equal-mass transport partition at the optimal scale. More precisely, for every $N\\in\\mathbb{N}$, there exist pairwise disjoint Borel sets $A_1,\\dots,A_N\\subset Q$ such that \\[ λ_d(A_n)=\\frac1N,\\qquad A_n\\subset B(x_n,6\\sqrt d\\,N^{-1/d})\\qquad(1\\le n\\le N), \\] and $λ_d\\!\\bigl(Q\\setminus\\bigcup_{n=1}^N A_n\\bigr)=0$. In other terms, every prefix of the sequence supports an exact…",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA",
+    "math.NT"
+  ],
+  "published": "2026-03-31",
+  "updated": "2026-03-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2609.20556",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20556",
+  "title": "Incremental Column Subset Selection via Conditional Determinantal Point Processes",
+  "authors": [
+    "Laura Grigori",
+    "Zhipeng Xue"
+  ],
+  "summary": "Column subset selection aims to seek a small set of representative columns that accurately approximates a given matrix. We study this problem from the perspective of determinantal point processes (DPPs) and their relation to several existing algorithms. To support incremental column selection, we introduce conditional DPPs, which can be applied to any column selection strategy. In particular, we combine it with adaptive randomized pivoting(ARP), and develop a multi-stage ARP (MSARP) algorithm. We establish theoretical guarantees on the expected Frobenius-norm approximation errors for these…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2602.14765",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14765",
+  "title": "Hierarchical parameter estimation for distributed networked systems: a dynamic consensus approach",
+  "authors": [
+    "Ariana R. Mendez-Castillo",
+    "Rodrigo Aldana-Lopez",
+    "Antonio Ramirez-Trevino",
+    "Rosario Aragues",
+    "David Gomez-Gutierrez"
+  ],
+  "summary": "This work introduces a novel two-stage distributed framework to globally estimate constant parameters in a networked system, separating shared information from local estimation. The first stage uses dynamic average consensus to aggregate agents' measurements into surrogates of centralized data. Using these surrogates, the second stage implements a local estimator to determine the parameters. By designing an appropriate consensus gain, the persistence of excitation of the regressor matrix is achieved, and thus, exponential convergence of a local Gradient Estimator (GE) is guaranteed. The…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2601.20970",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.20970",
+  "title": "The hyper-scaled NLP bound for maximum-entropy remote sampling",
+  "authors": [
+    "Gabriel Ponte",
+    "Marcia Fampa",
+    "Jon Lee"
+  ],
+  "summary": "The maximum-entropy remote sampling problem (MERSP) is to select a subset of $s$ random variables from a set of $n$ random variables, so as to maximize the information concerning a set of target random variables that are not directly observable. We assume that the set of all of these random variables follows a joint Gaussian distribution, and that we have the covariance matrix available. Finally, we measure information using Shannon's differential entropy. The main approach for exact solution of moderate-sized instances of MERSP has been branch-and-bound (B\\&B), and so previous work…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.IT",
+    "cs.LG"
+  ],
+  "published": "2026-01-28",
+  "updated": "2026-06-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

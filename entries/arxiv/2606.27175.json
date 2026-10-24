@@ -1,0 +1,21 @@
+{
+  "key": "2606.27175",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.27175",
+  "title": "Signed Total Roman Domination and Domatic Numbers: Degree Three and Complete Multipartite Graphs",
+  "authors": [
+    "Arie M. C. A. Koster",
+    "Lutz Volkmann",
+    "Moritz Wehrmann"
+  ],
+  "summary": "Signed total Roman domination is a variant of the classic Roman domination-problem in graphs. A signed total Roman dominating function (STRD function) on a graph $G=(V,E)$ is a function $f: V \\to \\{-1,1,2\\}$ such that (i) $\\sum_{u \\in N(v)} f(u) \\geq 1$ for all $v \\in V$, where $N(v)$ denotes the neighborhood of $v$, and (ii) every vertex $v$ with $f(v) = -1$ is adjacent to a vertex $u$ with $f(u) = 2$. The weight of $f$ is $\\sum_{v \\in V} f(v)$. The signed total Roman domination number of $G$ is the minimum weight among all its STRD functions. A signed total Roman dominating family (STRD…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-06-25",
+  "updated": "2026-06-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

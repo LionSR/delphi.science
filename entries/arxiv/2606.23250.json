@@ -1,0 +1,20 @@
+{
+  "key": "2606.23250",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.23250",
+  "title": "Sparse Feedback Implementation for Sender-Receiver Transportation Linear-Quadratic Control",
+  "authors": [
+    "Anders Hansson",
+    "Johan Löfberg"
+  ],
+  "summary": "We study a sparse linear-quadratic problem for transportation dynamics. The sparsity pattern has a natural directed-graph representation in which vertices are storage locations and edges are transportation links. The goal is to compute the optimal control signal without applying the usually dense optimal feedback gain directly. We show that the optimal feedback gain can be factorized as the product of a sparse matrix and the inverse of another sparse matrix from the right. In contrast to an existing factorization that uses an inverse from the left, the proposed factors use graph-adapted…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-22",
+  "updated": "2026-08-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

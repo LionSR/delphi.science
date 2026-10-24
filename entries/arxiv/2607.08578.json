@@ -1,0 +1,24 @@
+{
+  "key": "2607.08578",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08578",
+  "title": "Robust Dynamic Operating Envelopes in Unbalanced Three-Phase Distribution Systems",
+  "authors": [
+    "Wilhiam de Carvalho",
+    "Florin Capitanescu",
+    "Cyril Rasic",
+    "Jean-François Toubeau",
+    "François Vallée"
+  ],
+  "summary": "This paper proposes a robust optimization formulation to calculate dynamic operating envelopes (DOEs) to safely operate unbalanced three-phase distribution systems. Unlike conventional formulations that satisfy network constraints only at the envelope bound, the robust formulation covers the entire envelope range. We formulate a robust non-linear programming (NLP) problem with the full AC power flow equations, as well as an approximate linear programming (LP) model. Numerical simulations are run with real-world data from Belgium and two different distribution test feeders. The paper compares…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-07-09",
+  "updated": "2026-07-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

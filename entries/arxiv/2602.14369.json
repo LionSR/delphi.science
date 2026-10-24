@@ -1,0 +1,21 @@
+{
+  "key": "2602.14369",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14369",
+  "title": "Mixed precision and mixed accuracy explicit two-derivative Runge--Kutta methods",
+  "authors": [
+    "Sigal Gottlieb",
+    "Zachary J. Grant",
+    "Cesar Herrera"
+  ],
+  "summary": "Mixed precision Runge--Kutta methods have been recently developed and used for the time-evolution of partial differential equations. Two-derivative Runge--Kutta schemes may offer enhanced stability and accuracy properties compared to classical one-derivative methods, making them attractive in a wide variety of problems. However, their computational cost can be significant, motivating the use of a mixed-precision paradigm that employs different floating-point precisions for different function evaluations to balance efficiency and accuracy. To ensure that the perturbations introduced by the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-02-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

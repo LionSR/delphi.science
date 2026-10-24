@@ -1,0 +1,22 @@
+{
+  "key": "2602.11948",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.11948",
+  "title": "Insights on Muon from Simple Quadratics",
+  "authors": [
+    "Antoine Gonon",
+    "Andreea-Alexandra Muşat",
+    "Nicolas Boumal"
+  ],
+  "summary": "Muon updates weight matrices along (approximate) polar factors of the gradients and has shown strong empirical performance in large-scale training. Existing attempts at explaining its performance largely focus on single-step comparisons (on quadratic proxies) and worst-case guarantees that treat the inexactness of the polar-factor as a nuisance ``to be argued away''. We show that already on simple strongly convex functions such as $L(W)=\\frac12\\|W\\|_{\\text{F}}^2$, these perspectives are insufficient, suggesting that understanding Muon requires going beyond local proxies and pessimistic…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-02-12",
+  "updated": "2026-02-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

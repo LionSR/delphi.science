@@ -1,0 +1,21 @@
+{
+  "key": "2606.16671",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.16671",
+  "title": "Chebyshev-Exact Acceleration under Hessian Variation, I: Sine-Jacobi Method",
+  "authors": [
+    "Dmitry Pasechnyuk-Vilensky",
+    "Martin Takáč"
+  ],
+  "summary": "We study finite-horizon one-gradient realizations with the Chebyshev minimax terminal residual on $[μ,L]$. Under time-dependent Hessian perturbations, the terminal first variation is governed by a time-ordered spectral kernel $K_s(λ,ν)$; its sharp $\\ell_2$ gain is $A_N$. For the prefix-exact Chebyshev recurrence, $$A_N^{pref}=\\frac4{\\sqrt3}\\frac{N^{3/2}}{L-μ}ε_N^\\star(1+o(1)),$$ and this is sharp in the causal two-term class with Chebyshev exactness at every prefix. For terminal-only exactness, Jacobi coordinates give $P_N=2^{1-N}T_N$: the spectrum is fixed at the midpoint Chebyshev nodes,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-06-15",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

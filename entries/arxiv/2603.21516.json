@@ -1,0 +1,21 @@
+{
+  "key": "2603.21516",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.21516",
+  "title": "Optimal local linear convergence of Nesterov's accelerated gradient method for $C^2$ functions under the Polyak--Łojasiewicz inequality",
+  "authors": [
+    "Zixu Feng",
+    "Hao Yuan"
+  ],
+  "summary": "In this work, we establish that Nesterov's accelerated gradient method, applied to $C^2$ functions satisfying the Polyak--Łojasiewicz inequality around local minimizers, achieves the optimal local linear convergence rate $ρ=\\frac{\\sqrt{3L+μ}-2\\sqrtμ}{\\sqrt{3L+μ}}+\\varepsilon$, where $\\varepsilon$ is an arbitrarily small constant. Our analysis requires neither higher-order smoothness beyond $C^2$ of the objective function nor any additional geometric regularity of the submanifold of local minimizers. The key novelty lies in a two-stage argument: we first establish a coarse yet valid local…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-03-23",
+  "updated": "2026-03-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2609.20327",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20327",
+  "title": "Near-Optimal Single-Loop Predictor--Corrector Extragradient Method for Strongly Convex--Strongly Concave Minimax Optimization",
+  "authors": [
+    "Minhao Zhang",
+    "Zi Xu"
+  ],
+  "summary": "We study smooth strongly convex--strongly concave minimax optimization in the deterministic unconstrained setting, without assuming a bilinear or separable structure. Although existing multi-loop methods attain near-optimal condition-number dependence, standard single-loop methods generally exhibit a substantial complexity gap. To close this gap, we propose the Single-Loop Predictor--Corrector Extragradient Method with Damped Momentum (PCE-DM), which combines an extragradient prediction--correction scheme with a novel auxiliary feedback recursion for the weaker-curvature variable. PCE-DM…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

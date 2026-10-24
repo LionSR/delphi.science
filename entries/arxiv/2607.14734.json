@@ -1,0 +1,20 @@
+{
+  "key": "2607.14734",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14734",
+  "title": "A Slow-Fast Stochastic Framework for Zeroth-Order Distributed Time-Varying Optimization",
+  "authors": [
+    "Wanying Li",
+    "Nan-jing Huang"
+  ],
+  "summary": "This paper investigates the distributed time-varying optimization of stochastic multi-agent systems (SMASs) using only zero-order information. Unlike existing methods that directly couple gradient estimation and optimization updates on a single time scale, this paper constructs a novel stochastic singular perturbation framework by introducing auxiliary fast systems. The proposed scheme naturally forms a slow-fast coupling structure: by introducing auxiliary variables and constructing fast subsystems to generate smooth gradient estimates, while the agent's state evolution, as the slow…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

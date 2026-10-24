@@ -1,0 +1,23 @@
+{
+  "key": "2605.17394",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.17394",
+  "title": "Stochastic Zeroth-Order Optimization Under Heavy-Tailed Noise",
+  "authors": [
+    "Taha El Bakkali",
+    "El Mahdi Chayti",
+    "Qiuyi Zhang",
+    "Imane Rahali",
+    "Omar Saadi"
+  ],
+  "summary": "We study stochastic zeroth-order (ZO) optimization of smooth nonconvex objectives under heavy-tailed sample-gradient noise. This regime is motivated by empirical evidence that gradient noise in modern machine learning can violate the bounded-variance assumptions used in classical ZO theory. While first-order methods have optimal rates under bounded $p$-th moment noise for $p\\in(1,2]$, analogous high-probability guarantees for nonconvex ZO methods are much less understood. The ZO setting is not a direct corollary of first-order theory. First-order methods observe stochastic gradients, whereas…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-17",
+  "updated": "2026-05-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

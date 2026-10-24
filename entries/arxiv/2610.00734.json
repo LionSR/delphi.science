@@ -1,0 +1,20 @@
+{
+  "key": "2610.00734",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00734",
+  "title": "Exact volume computation for Boolean quadric polytopes of series-parallel graphs",
+  "authors": [
+    "Jon Lee"
+  ],
+  "summary": "For a graph G, the Boolean quadric polytope P(G) is the convex hull of the binary solutions of $y_{ij}=x_ix_j$ for $ij\\in E(G)$, and Q(G) is its standard linear relaxation. For series-parallel graphs, Q(G) together with the odd-cycle inequalities describes P(G). Lee and Skipper showed vol(Q(G)) is polynomial-time computable for bounded treewidth and gave a closed formula for vol(P(G)) when G is a cycle. We resolve their question of giving an efficient algorithm for vol(P(G)) on series-parallel graphs. With $d=|V(G)|+|E(G)|$, we compute it with $O(d^7)$ arithmetic operations, and $O(d^5)$ if…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.CO"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

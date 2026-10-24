@@ -1,0 +1,20 @@
+{
+  "key": "2605.07581",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.07581",
+  "title": "A Deterministic Cryptographic Prime Generation Chain over Monogenic Cubic Number Fields and their Generalizations",
+  "authors": [
+    "Anuj Jakhar",
+    "Ravi Kalwaniya"
+  ],
+  "summary": "Generating primes is a fundamental problem in modern cryptography. Deterministic primality tests work well for special integers such as Mersenne or Proth primes, but these forms are quite restrictive. In this paper, we give a direct method to construct new primes from known ones. Starting with a seed prime $q \\equiv 1 \\pmod{3}$, we construct an integer $N \\equiv 1 \\pmod{3}$ satisfying $(2N + 1)^2 \\equiv -3 \\pmod{q}$. We then prove that $N$ is prime using the structure of monogenic pure cubic fields $K = \\mathbb{Q}(\\sqrt[3]{d})$. The resulting test requires only a single modular…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-05-08",
+  "updated": "2026-06-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

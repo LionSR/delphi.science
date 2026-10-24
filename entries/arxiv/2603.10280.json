@@ -1,0 +1,21 @@
+{
+  "key": "2603.10280",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.10280",
+  "title": "Avoiding Semi-Infinite Programming in Distributionally Robust Control Based on Mean-Variance Metrics",
+  "authors": [
+    "Yuma Shida",
+    "Yuji Ito"
+  ],
+  "summary": "Conventional stochastic control methods have several limitations. They focus on optimizing the average performance and, in some cases, performance variability; however, their problem settings still require an explicit specification of the probability distributions that determine the system's stochastic behavior. Distributionally robust control (DRC) methods have recently been developed to address these challenges. However, many DRC approaches involve handling infinitely many inequalities. For instance, DRC problems based on the Wasserstein distance are commonly obtained by solving…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-03-10",
+  "updated": "2026-03-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

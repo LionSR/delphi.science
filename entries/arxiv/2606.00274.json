@@ -1,0 +1,21 @@
+{
+  "key": "2606.00274",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.00274",
+  "title": "Error bounds for approximate posteriors from likelihood-informed reduced-order models",
+  "authors": [
+    "Han Cheng Lie",
+    "Jakob Scheffels",
+    "Elisabeth Ullmann"
+  ],
+  "summary": "In the design of computational methods for Bayesian inverse problems, costly forward model evaluations make it difficult to sample from or compute the posterior. This motivates the need for approximate forward models that are cheaper to evaluate. We consider reduced-order forward models which exploit the lower-dimensional structure in the Bayesian inverse problem by projecting to the \"likelihood-informed subspace\" of the parameter space where the prior-to-posterior update is significant. However, the theoretical properties of these reduced-order forward models and their impact on the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2606.29186",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.29186",
+  "title": "Computing Lewis weights to high precision using local relative smoothness",
+  "authors": [
+    "Sander Gribling",
+    "Aaron Sidford",
+    "Chenyi Zhang"
+  ],
+  "summary": "We provide algorithms that compute $ε$-estimates of the $\\ell_p$-Lewis weights of a matrix $A \\in \\mathbb{R}^{m \\times n}$ for $p \\geq 4$ using $O(p^2 \\log(m/ε))$ rounds of leverage score computation, where $\\ell_p$-Lewis weights and leverage scores are both standard measures of row importance. This improves upon the state-of-the-art round complexity of $O(p^3 \\log(m/ε))$ due to Fazel, Lee, Padmanabha, and Sidford (2022). We obtain our results by carefully applying a local variant of relatively smooth gradient descent to primal and dual forms of the $\\ell_p$-Lewis weight optimization problem…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.OC"
+  ],
+  "published": "2026-06-28",
+  "updated": "2026-06-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

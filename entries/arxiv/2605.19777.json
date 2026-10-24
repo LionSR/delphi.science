@@ -1,0 +1,20 @@
+{
+  "key": "2605.19777",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.19777",
+  "title": "Funnel control with input filter for nonlinear systems with arbitrary relative degree",
+  "authors": [
+    "Janina Schaa",
+    "Thomas Berger"
+  ],
+  "summary": "This paper addresses output reference tracking with prescribed transient performance for unknown nonlinear multi-input multi-output systems of arbitrary relative degree. We propose a novel derivative-free extension of funnel control based on a set of auxiliary filter variables that estimate the output derivatives. The resulting controller ensures that the tracking error evolves within prescribed performance bounds, while avoiding differentiation of the output signal and maintaining a simple structure with only a small number of tuning parameters. The effectiveness of the proposed approach is…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

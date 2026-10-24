@@ -1,0 +1,22 @@
+{
+  "key": "2609.18678",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.18678",
+  "title": "Minimax optimality for sequential gradient-free minimization of smooth functions and their derivatives",
+  "authors": [
+    "Théo Paquier",
+    "Alexandre B Tsybakov",
+    "François Portier",
+    "Mohammadreza M Kalan"
+  ],
+  "summary": "We consider the problem of noisy gradient-free minimization of the k-th order partial derivative of a $β$-H{ö}lder function supported on a d-dimensional cube. We show that T ^{($β$+d+k)/(2$β$+d)} log(T )^{(β-k)/(2β+d)} is a non-asymptotic minimax rate of the T step cumulative regret for all $β$ \\ge 0. In the special case k = 0, our results cover the problem of noisy gradient-free minimization of $β$-H{ö}lder functions, closing the existing gap between the known upper and lower bounds. We show that a minimizer of a suitably chosen local polynomial estimator is rate-optimal. The minimax…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

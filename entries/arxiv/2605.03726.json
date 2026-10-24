@@ -1,0 +1,23 @@
+{
+  "key": "2605.03726",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.03726",
+  "title": "Global exponential stabilization of a force- and torque-actuated unicycle by flexible-step MPC",
+  "authors": [
+    "Ala Kolsi",
+    "Christian Ebenbauer",
+    "Bahman Gharesifard",
+    "Raik Suttner"
+  ],
+  "summary": "We study the problem of global exponential stabilization of a force- and torque-controlled unicycle model in discrete time. To this end, we extend a recently introduced approach to model predictive control (MPC) in which a flexible number of inputs is implemented in every iteration. We present the first flexible-step MPC protocol with state-dependent weights for average descent. Notably, the proposed method relies neither on a suitable design of running or terminal cost functions nor on a suitable choice of terminal constraints. Instead, stability is guaranteed through a generalized…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-05-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

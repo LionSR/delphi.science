@@ -1,0 +1,23 @@
+{
+  "key": "2609.35483",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.35483",
+  "title": "Universal Approximation of Measure-to-Measure Operators by Pushforwards",
+  "authors": [
+    "Takashi Furuya",
+    "Nicholas H. Nelsen",
+    "Frank Cole"
+  ],
+  "summary": "Many learning tasks map an input distribution to an output distribution. A natural way to model such an operator is to transform each input sample using a continuous function that may depend on the entire input distribution, and then take the distribution of the transformed samples. This defines a measure-dependent pushforward model and includes measure-theoretic formulations of transformers. We ask when such models can approximate arbitrary continuous operators between spaces of probability measures. We first show that universal approximation fails when atomic inputs are allowed: some…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "stat.ML"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2609.36390",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.36390",
+  "title": "Finite-Sample Theory for Fitted Q-Iteration When Actions Are Functions",
+  "authors": [
+    "Gefei Lin",
+    "Rui Miao",
+    "Xiaoke Zhang"
+  ],
+  "summary": "Offline reinforcement learning seeks optimal decision rules from previously collected data. In some applications, a decision can be an entire function, such as a fluence map in radiation therapy or a smooth movement trajectory in robotics. In this paper, we study the finite-sample theory for fitted Q-iteration (FQI) with functional actions in a discounted infinite-horizon setting. Three major difficulties arise in this setting: first, the absence of a Lebesgue probability density for functional actions complicates coverage descriptions; second, conventional coverage requirements can be…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "cs.LG",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

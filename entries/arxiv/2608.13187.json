@@ -1,0 +1,20 @@
+{
+  "key": "2608.13187",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.13187",
+  "title": "Performance Evaluation of an Adaptive Quadrature and a Double Exponential Formula Using Arbitrary-Precision Floating-Point Arithmetic",
+  "authors": [
+    "Tomonori Kouya"
+  ],
+  "summary": "Using arbitrary-precision arithmetic provided by the GNU Multiple Precision Floating-Point Reliable Library, we implement AQE11D---that is, Ninomiya's adaptive 9-point Newton--Cotes rule extended with a sequence of higher-order rules---and Takahasi and Moris' double exponential (DE) formula. We evaluate them for Kahaner's 21 test problems. For both absolute tolerances $10^{-50}$ and $10^{-100}$, AQE11D attains target accuracy on all 21 problems; however, for strong endpoint singularity such as $1/\\sqrt{x}$, it requires about $5.4\\times10^{7}$ function evaluations at $10^{-100}$, roughly…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.PF"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

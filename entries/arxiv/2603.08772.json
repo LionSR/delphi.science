@@ -1,0 +1,19 @@
+{
+  "key": "2603.08772",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.08772",
+  "title": "An efficient predictor-corrector approach with orthogonal spline collocation finite element technique for FitzHugh-Nagumo problem",
+  "authors": [
+    "Eric Ngondiep"
+  ],
+  "summary": "This paper constructs a predictor-corrector technique with orthogonal spline collocation finite element method for simulating a FitzHugh-Nagumo system subject to suitable initial and boundary conditions. The developed computational technique approximates the exact solution in time using variable time steps at the predictor phase and a constant time step at the corrector stage while the orthogonal spline collocation finite element method is employed in the space discretization. The new algorithm presents several advantages: (i) the errors increased at the predictor phase are balanced by the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-09",
+  "updated": "2026-03-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

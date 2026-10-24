@@ -1,0 +1,24 @@
+{
+  "key": "2609.29790",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.29790",
+  "title": "Budget-Constrained Graph Augmentation for Robust Network Design via Kirchhoff Index Minimization",
+  "authors": [
+    "Omkar Bhoite",
+    "V Sateeshkrishna Dhuli",
+    "Stefan Werner",
+    "Kimmo Kansanen"
+  ],
+  "summary": "Enhancing the robustness of deployed networks against failures and disruptions is critical for reliable operation. This requires deciding which new links to install and how strongly to weight them under limited resources. We study this problem through the Kirchhoff index, or total effective resistance, a spectral measure of global connectivity. The resulting augmentation problem couples discrete candidate-edge selection with continuous weight allocation under heterogeneous per-unit deployment costs, a total budget, and an exact-cardinality constraint. For a fixed weighted base graph, this…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.SI",
+    "eess.SP"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

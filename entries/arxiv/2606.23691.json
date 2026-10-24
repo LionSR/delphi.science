@@ -1,0 +1,20 @@
+{
+  "key": "2606.23691",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.23691",
+  "title": "Exact vs approximate second-order derivatives in vertically-integrated ice sheet models",
+  "authors": [
+    "Trystan Surawy-Stepney",
+    "Stephen L. Cornford"
+  ],
+  "summary": "Second order derivatives of model outputs with respect to input parameters are key to several applications in ice sheet modelling. For example, the ability to compute Hessian-vector products broadens the list of available optimisation methods, and facilitates certain kinds of parametric uncertainty quantification. Some modern ice sheet models are built on frameworks supporting algorithmic differentiation (AD), allowing for the computation of higher order derivatives with relative ease. However, many of our most widely-used models are not. A natural alternative might be to follow common…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-04-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2610.02395",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02395",
+  "title": "FlashSinkhorn 2: Block-Sparse Entropic Optimal Transport",
+  "authors": [
+    "Felix X. -F. Ye",
+    "Yu Chin Fabian Lim",
+    "Naigang Wang",
+    "Davis Wertheimer"
+  ],
+  "summary": "Streaming GPU solvers for entropic optimal transport (EOT), such as FlashSinkhorn, avoid storing the dense kernel but still evaluate all $n\\times m$ point pairs in every Sinkhorn iteration. We present \\textbf{FlashSinkhorn~2} (FS2), a solver for squared-Euclidean cost on low-dimensional point clouds that solves large discrete EOT problems to a prescribed marginal residual on a single GPU by coupling two stages. A coarse stage solves on cell centroids, lifts the potentials to every point and, when a sampled marginal check rejects the lift, continues on the centroids, replacing most…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "astro-ph.IM",
+    "math.NA"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

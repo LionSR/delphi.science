@@ -1,0 +1,21 @@
+{
+  "key": "2601.18969",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.18969",
+  "title": "A Local Discontinuous Galerkin Method for Dirichlet Boundary Control Problems",
+  "authors": [
+    "Peter Benner",
+    "Michael Hinze",
+    "Hamdullah Yücel"
+  ],
+  "summary": "In this paper, we consider control constrained $L^2-$Dirichlet boundary control of a convection-diffusion equation on a two dimensional convex polygonal domain. We discretize the control problem based on the local discontinuous Galerkin method with piecewise linear ansatz functions for the flux and potential. We derive a priori error estimates for the full as well as for the variational discrete control approximation. We present a selection of numerical results to demonstrate the performance of our approach and to underpin the theoretical findings.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-26",
+  "updated": "2026-06-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

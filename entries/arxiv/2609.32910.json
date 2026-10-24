@@ -1,0 +1,25 @@
+{
+  "key": "2609.32910",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32910",
+  "title": "The Complexity of Convex Optimization with Mismatched Geometry",
+  "authors": [
+    "Timofei Loginov",
+    "Alexander Gasnikov",
+    "Yuriy Dorn",
+    "Aleksandr Shestakov",
+    "Nazarii Tupitsa",
+    "Osman Osmanov",
+    "Darina Dvinskikh"
+  ],
+  "summary": "Optimal first-order methods on non-Euclidean domains such as the $\\ell_1$ ball $B_1^n(R)=\\{x\\in\\mathbb R^n:\\|x\\|_1\\le R\\}$ pair the prox-function with the norm in which smoothness is measured. When the gradient is $L$-Lipschitz in the Euclidean norm only, the accelerated method with a Euclidean prox-setup reduces the functional gap $f(x_N)-\\min_{B_1^n(R)}f$ to $O(LR^2/N^2)$ after $N$ first-order queries (an entropic $\\ell_1$ prox-setup replaces $L$ by the $\\ell_1\\to\\ell_\\infty$ constant $L_1\\le L$, at the cost of a factor $\\log n$ and with the same exponent). The lower bound of Guzmán and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

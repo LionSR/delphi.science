@@ -1,0 +1,25 @@
+{
+  "key": "2607.12582",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12582",
+  "title": "A 2.5D NURBS-Trace Infinite-Element Method for Moving-Load Wave Propagation and Soil--Structure Interaction in Semi-Infinite Ground",
+  "authors": [
+    "Yanhui Zhong",
+    "Hao Hong",
+    "Bei Zhang",
+    "Quansheng Zang",
+    "Hussein Rappel",
+    "Stephane P. A. Bordas"
+  ],
+  "summary": "For moving-load problems whose geometry and material properties are approximately invariant along the traveling direction, 2.5D analysis retains three displacement components at lower cost than full three-dimensional discretization. We present a 2.5D Non-Uniform Rational B-spline (NURBS)-trace infinite-element method (NBIEM), formulated as a coupled finite/infinite-element scheme, for wave propagation in linear viscoelastic semi-infinite geotechnical media. The bounded near field is discretized by isogeometric analysis, while the exterior is represented by tensor products of the boundary…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math.NA"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

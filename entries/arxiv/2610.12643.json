@@ -1,0 +1,21 @@
+{
+  "key": "2610.12643",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.12643",
+  "title": "Median randomized quasi-Monte Carlo for nested integration",
+  "authors": [
+    "Arved Bartuska",
+    "Yang Liu",
+    "Raúl Tempone"
+  ],
+  "summary": "Nested integrals $\\int f\\left(\\int g(\\boldsymbol{y},\\boldsymbol{x})\\mathrm{d}{}\\boldsymbol{x}\\right)\\mathrm{d}{}\\boldsymbol{y}$ where $\\boldsymbol{y}\\in[0,1]^{d_1}$ and $\\boldsymbol{x}\\in[0,1]^{d_2}$ frequently arise in Bayesian experimental design, medical decision making, and computational finance. Statistical estimators for nested integrals are more computationally demanding than for standard integrals. Recent studies demonstrate that the median randomized quasi-Monte Carlo (mRQMC) method achieves super-polynomial convergence rates for analytic integrands. We extend mRQMC methods to…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

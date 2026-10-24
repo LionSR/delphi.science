@@ -1,0 +1,21 @@
+{
+  "key": "2606.14041",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.14041",
+  "title": "A Semismooth Newton-Based Proximal Augmented Lagrangian Method for Joint Estimation of Multiple Gaussian Graphical Models with Clustered Structure",
+  "authors": [
+    "Han Wang",
+    "Yue Liu",
+    "Yong-Jin Liu"
+  ],
+  "summary": "In this paper, we consider a class of convex composite optimization problems arising from the joint estimation of clustered multiple Gaussian graphical models. The resulting model combines a log-determinant loss term with a nonsmooth sparse clustered regularizer, which encourages both similar sparsity patterns and consistent edge values across different graphs. We first establish a necessary and sufficient condition under which the solution is block diagonal, enabling a large-scale problem to be decomposed into smaller independent subproblems and substantially reducing computational…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-12",
+  "updated": "2026-06-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

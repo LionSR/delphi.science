@@ -1,0 +1,23 @@
+{
+  "key": "2606.27459",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.27459",
+  "title": "Geometry-Conditioned Fourier Neural Operators for Cubic Nonlinear Schrodinger Dynamics on Periodic Domains",
+  "authors": [
+    "Emmanuel E. Oguadimma",
+    "Victory C. Obieke",
+    "Xueying Yu"
+  ],
+  "summary": "We consider the cubic nonlinear Schrödinger (NLS) equation on two-dimensional flat tori with varying aspect ratios. In this formulation, the choice of aspect ratio governs the Fourier resonance structure, so rational and irrational geometries can exhibit different high-frequency cascade behaviors. We present a geometry-conditioned Fourier neural operator (FNO) for the cubic defocusing NLS equation, where the input consists of the real and imaginary parts of the solution together with the aspect-ratio parameter \\(ω^2\\). The model is trained to approximate the one-step solution operator and is…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.AP",
+    "math.NA"
+  ],
+  "published": "2026-06-25",
+  "updated": "2026-07-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2602.06175",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.06175",
+  "title": "Optimal rates for density and mode estimation with expand-and-sparsify representations",
+  "authors": [
+    "Kaushik Sinha",
+    "Christopher Tosh"
+  ],
+  "summary": "Expand-and-sparsify representations are a class of theoretical models that capture sparse representation phenomena observed in the sensory systems of many animals. At a high level, these representations map an input $x \\in \\mathbb{R}^d$ to a much higher dimension $m \\gg d$ via random linear projections before zeroing out all but the $k \\ll m$ largest entries. The result is a $k$-sparse vector in $\\{0,1\\}^m$. We study the suitability of this representation for two fundamental statistical problems: density estimation and mode estimation. For density estimation, we show that a simple linear…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.AI",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-03-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

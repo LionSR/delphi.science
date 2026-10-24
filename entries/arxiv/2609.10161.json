@@ -1,0 +1,23 @@
+{
+  "key": "2609.10161",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10161",
+  "title": "Boundary-Level-Constrained Refinement for Suppressing Trimming-Induced High-Frequency Outliers in Explicit Isogeometric Analysis",
+  "authors": [
+    "Christoph Hollweck",
+    "Lukas Leidinger",
+    "Stefan Hartmann",
+    "Marcus Wagner",
+    "Roland Wüchner"
+  ],
+  "summary": "In explicit dynamics, the critical time step is governed by the maximum eigenfrequency of the semi-discrete system. In Isogeometric Analysis (IGA), open knot vectors introduce a characteristic spectral boundary effect that can lead to high-frequency outliers and restrict the admissible time step. In the row-sum-lumped setting considered here, extending the computational patch and trimming away the exterior boundary functions mitigates this time-step penalty, but does not necessarily prevent boundary-adjacent basis functions from governing the maximum eigenfrequency. We show that…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

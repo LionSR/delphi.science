@@ -1,0 +1,23 @@
+{
+  "key": "2605.17149",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.17149",
+  "title": "QPLEX Decision Processes: Formulation via Nonlinear Markov Chains and Optimization via Policy Gradients",
+  "authors": [
+    "Antonius B. Dieker",
+    "Steven T. Hackman",
+    "Zitong Wang",
+    "Yunhao Yan"
+  ],
+  "summary": "We introduce a QPLEX Decision Process (QDP) as a model for dynamic control of queueing systems with non-stationary arrivals, general service distributions, and service-level chance constraints. QDPs integrate QPLEX, a computational modeling methodology for transient analysis of stochastic systems, into a nonlinear Markov decision framework. Since QPLEX approximations use nonlinear transition probabilities with orders-of-magnitude smaller state spaces, QDPs circumvent the curse of dimensionality associated with general service times. Via forward and backward iterative schemes, we can rapidly…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.PR"
+  ],
+  "published": "2026-05-16",
+  "updated": "2026-05-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

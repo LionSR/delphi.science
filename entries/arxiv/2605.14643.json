@@ -1,0 +1,23 @@
+{
+  "key": "2605.14643",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.14643",
+  "title": "Unbiased and Second-Order-Free Training for High-Dimensional PDEs",
+  "authors": [
+    "Jaemin Seo",
+    "Surin Lee",
+    "Jae Yong Lee"
+  ],
+  "summary": "Deep learning methods based on backward stochastic differential equations (BSDEs) have emerged as competitive alternatives to physics-informed neural networks (PINNs) for solving high-dimensional partial differential equations (PDEs). By leveraging probabilistic representations, BSDE approaches can avoid the curse of dimensionality and often admit second-order-free training objectives that do not require explicit Hessian evaluations. It has recently been established that the commonly used Euler-Maruyama (EM) time discretization induces an intrinsic bias in BSDE training losses. While…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-05-14",
+  "updated": "2026-05-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2603.00373",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.00373",
+  "title": "Sparse optimal control in the Wasserstein space",
+  "authors": [
+    "Enrico Sartor",
+    "Florian Dörfler",
+    "Nicolas Lanzetti"
+  ],
+  "summary": "We study sparse optimal control of a non-local continuity equation, where the goal is to steer a distribution via finitely many controllable agents or actuators. This model arises naturally in mean-field multi-agent systems and takes the form of a coupled PDE-ODE system where the PDE describes the evolution of the distribution and the controlled ODE captures the dynamics of the controllable agents. A natural objective is distribution steering via terminal costs based on optimal transport, such as the squared Wasserstein distance. These costs are problematic for finite-agent formulations due…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-27",
+  "updated": "2026-02-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

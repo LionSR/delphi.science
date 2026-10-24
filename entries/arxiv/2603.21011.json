@@ -1,0 +1,28 @@
+{
+  "key": "2603.21011",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.21011",
+  "title": "ALL-FEM: Agentic Large Language models Fine-tuned for Finite Element Methods",
+  "authors": [
+    "Rushikesh Deotale",
+    "Adithya Srinivasan",
+    "Yuan Tian",
+    "Tianyi Zhang",
+    "Pavlos Vlachos",
+    "Hector Gomez"
+  ],
+  "summary": "Finite element (FE) analysis guides the design and verification of nearly all manufactured objects. It is at the core of computational engineering, enabling simulation of complex physical systems, from fluids and solids to multiphysics systems. However, implementing FE codes and analyzing simulation results demands expertise across numerical analysis, continuum mechanics, and programming. Conventional Large Language Models (LLMs) can generate FE code, but they hallucinate, lack awareness of variational structures, and cannot close the loop from problem statement to a verified solution. Here,…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "cs.AI",
+    "cs.LG",
+    "cs.MS",
+    "math.NA"
+  ],
+  "published": "2026-01-08",
+  "updated": "2026-04-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

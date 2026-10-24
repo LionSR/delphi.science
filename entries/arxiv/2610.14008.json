@@ -1,0 +1,25 @@
+{
+  "key": "2610.14008",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.14008",
+  "title": "Generalized PINN-Based Inverse Estimation of Spatially Varying Heat Transfer Coefficients with Transfer Learning",
+  "authors": [
+    "Pradipan Maitra",
+    "Jariful Hassan",
+    "Arijit Hazra"
+  ],
+  "summary": "This study investigates generalized boundary representations and transfer learning for physics-informed neural-network (PINN) estimation of spatially varying convective heat transfer coefficients (HTCs) in jet impingement cooling. Piecewise-linear (PWL) and neural-network boundary estimators are inferred from transient interior-temperature measurements and evaluated against CFD-CHT reference HTC profiles at Reynolds numbers of 5000, 10000 and 15000. A discrete Adjoint-FEM formulation with gradient regularization based on the $H^1$-seminorm provides an independent inverse-method comparison.…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.CE",
+    "math.NA",
+    "math.OC",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

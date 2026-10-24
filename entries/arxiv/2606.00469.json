@@ -1,0 +1,22 @@
+{
+  "key": "2606.00469",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.00469",
+  "title": "Constructive interpolation and generalization rates for neural ODEs: a control perspective",
+  "authors": [
+    "Antonio Álvarez-López",
+    "Lorenzo Liverani",
+    "Enrique Zuazua"
+  ],
+  "summary": "We study supervised regression with neural ODEs (NODEs) from a control-theoretic perspective to derive explicit population-risk bounds. We focus on a widely used class of non-autonomous models with constant parameters and explicit time dependence, which we call semi-autonomous NODEs (SA-NODEs). We constructively prove that SA-NODEs are capable of \\emph{exact} interpolation of admissible finite datasets, and even satisfy a stronger property that we call \\emph{simultaneous cell controllability} (SCC): their flows can map prescribed disjoint cells into arbitrarily small target balls. This…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-05-30",
+  "updated": "2026-06-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

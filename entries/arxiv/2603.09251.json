@@ -1,0 +1,23 @@
+{
+  "key": "2603.09251",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.09251",
+  "title": "A Generative Sampler for distributions with possible discrete parameter based on Reversibility",
+  "authors": [
+    "Lei Li",
+    "Zhen Wang",
+    "Lishuo Zhang"
+  ],
+  "summary": "Learning to sample from complex unnormalized distributions is a fundamental challenge in computational physics and machine learning. While score-based and variational methods have achieved success in continuous domains, extending them to discrete or mixed-variable systems remains difficult due to ill-defined gradients or high variance in estimators. We propose a unified, target-gradient-free generative sampling framework applicable across diverse state spaces. Building on the fact that detailed balance implies the time-reversibility of the equilibrium stochastic process, we enforce this…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-03-10",
+  "updated": "2026-03-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

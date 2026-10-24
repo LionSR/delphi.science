@@ -1,0 +1,19 @@
+{
+  "key": "2607.23229",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.23229",
+  "title": "Mechanics-trained neural coordinate mapping for B-spline analysis of crack-tip and corner singularities",
+  "authors": [
+    "Hyunju Kim"
+  ],
+  "summary": "Near a crack tip or re-entrant corner, fractional radial powers can have unbounded derivatives and slow the convergence of high-order splines. A singular mapping grades the computational radius so that the pulled-back field is smoother without changing the physical domain. Classical maps require the singular exponent and grading in advance. Here the radial coordinate is trained from the mechanics problem. It is the normalized integral of a positive neural density, which fixes both radial boundaries and ensures r'(s)>0 away from the collapsed tip. The radial grading exponent and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-25",
+  "updated": "2026-07-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

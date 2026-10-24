@@ -1,0 +1,21 @@
+{
+  "key": "2605.13106",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.13106",
+  "title": "Hypernetwork-Conditioned WENO5 Conservative-Form CNNs for One-Dimensional Conservation Laws",
+  "authors": [
+    "Yongsheng Chen",
+    "Wei Guo",
+    "Xinghui Zhong"
+  ],
+  "summary": "We study a conservative data-driven discretization for one-dimensional hyperbolic conservation laws based on the classical fifth-order WENO finite-volume scheme and a hypernetwork architecture. In the proposed Hyper--WENO5 Conservative-Form Convolutional Neural Network (Hyper--CFCNN), a lightweight target network predicts the nonlinear WENO weights on each stencil, while a hypernetwork generates the target-network parameters from problem metadata, including the mesh spacing, mesh layout, and coarse descriptors of the initial condition. The construction preserves the standard polynomial…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

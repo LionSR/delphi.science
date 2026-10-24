@@ -1,0 +1,21 @@
+{
+  "key": "2608.19840",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19840",
+  "title": "Applying the Spectral Method for Modeling Linear Filters: Bessel, Papoulis, and Legendre Filters",
+  "authors": [
+    "Konstantin A. Rybakov"
+  ],
+  "summary": "This paper proposes a new technique for computer simulation of linear filters. It allows simulating continuous-time linear filters based on the spectral method for analyzing linear control systems. Applying the spectral method implies that the input and output signals are represented by ordered sets of expansion coefficients in a chosen basis, and the filter itself is specified by a two-dimensional nonstationary transfer function. The described technique is tested on Bessel, Papoulis, and Legendre filters of various orders. For each filter, the corresponding two-dimensional nonstationary…",
+  "domain": "eess.SP",
+  "tags": [
+    "eess.SP",
+    "eess.SY",
+    "math.NA"
+  ],
+  "published": "2026-08-20",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

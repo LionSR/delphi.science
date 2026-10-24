@@ -1,0 +1,24 @@
+{
+  "key": "2606.31992",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.31992",
+  "title": "GQL-Based Physical-Constraint-Preserving High-Order Finite Difference Schemes for Special Relativistic Hydrodynamics in Arbitrary Dimensions",
+  "authors": [
+    "Linfeng Xu",
+    "Shengrong Ding",
+    "Kailiang Wu"
+  ],
+  "summary": "High-order accurate simulations of special relativistic hydrodynamics (RHD) are prone to numerical breakdown if intrinsic physical constraints (positive rest-mass density/pressure and subluminal velocity) are violated near strong discontinuities. In this work, we develop a robust and efficient physical-constraint-preserving (PCP) flux-limiting framework for high-order schemes, using finite-difference WENO as a representative example. By leveraging the geometric quasilinearization (GQL) representation, which equivalently reformulates the nonlinear RHD constraints into a family of linear…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "astro-ph.IM",
+    "physics.comp-ph",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-06-30",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

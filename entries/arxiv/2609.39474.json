@@ -1,0 +1,24 @@
+{
+  "key": "2609.39474",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.39474",
+  "title": "A macroscopic-shadow-corrected lattice Boltzmann method for fast, time-accurate simulation of low-Reynolds-number transient flows",
+  "authors": [
+    "Yanhui Ding",
+    "Yaolong Yu",
+    "Yuan Yu",
+    "Hao Zhang"
+  ],
+  "summary": "Explicit lattice Boltzmann simulations of slow transient flows are constrained by the acoustic time step. Dual-time stepping can remove this restriction, but slow inner convergence has limited reported wall-clock gains to roughly four- to tenfold, without a mechanism that strengthens under refinement. We present the macroscopic-shadow-corrected lattice Boltzmann method (MSC-LBM), which applies defect correction to the unsplit kinetic residual. At each Fourier wavenumber, a Stokes-like system is solved exactly for the conserved residual moments while preserving the second-order…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math-ph",
+    "physics.comp-ph"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

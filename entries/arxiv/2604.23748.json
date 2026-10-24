@@ -1,0 +1,21 @@
+{
+  "key": "2604.23748",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23748",
+  "title": "Enforcing TSP-Optimality in Fair Vehicle Routing by Cutting Planes",
+  "authors": [
+    "Bart van Rossum",
+    "Rui Chen",
+    "Andrea Lodi"
+  ],
+  "summary": "We study the fair capacitated vehicle routing problem, in which a fleet of vehicles must serve a set of customers such that the difference between the longest and shortest route, the range, is minimized. A key challenge is that the range objective is non-monotonic: it can be reduced by artificially lengthening routes, leading to solutions that violate TSP-optimality of individual routes. Existing exact methods struggle to handle this efficiently. We propose a branch-price-and-cut framework that enforces TSP-optimality through TSP-optimality cuts, which forbid TSP-dominated arc sequences. We…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-26",
+  "updated": "2026-04-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

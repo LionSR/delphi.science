@@ -1,0 +1,21 @@
+{
+  "key": "2609.13341",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.13341",
+  "title": "GrassTop: Grassmannian k-mer Topology for Viral Classification and Phylogenetic Analysis",
+  "authors": [
+    "Xiang Xiang Wang",
+    "Guo-Wei Wei"
+  ],
+  "summary": "We introduce GrassTop, a genome representation that integrates Grassmann manifolds and algebraic topology for viral classification and phylogenetic analysis. The framework begins by constructing multiscale topological and spectral descriptors of (k)-mer positional patterns. It then extracts a low-rank subspace that summarizes variation across the filtration and compares genomes using a Grassmannian distance. Although the reported implementation uses the chordal distance, the framework is not restricted to this particular choice. We evaluate GrassTop on four families of viral classification…",
+  "domain": "q-bio.PE",
+  "tags": [
+    "q-bio.PE",
+    "math.AG"
+  ],
+  "published": "2026-09-11",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

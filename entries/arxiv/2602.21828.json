@@ -1,0 +1,21 @@
+{
+  "key": "2602.21828",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.21828",
+  "title": "TV over Bernoulli products: the small parameter regime",
+  "authors": [
+    "Ariel Avital",
+    "Aryeh Kontorovich",
+    "George Salafatinos"
+  ],
+  "summary": "We study the total variation distance (TV) between two $n$-fold Bernoulli product measures parametrized by $\\vec p=(p_1,\\ldots,p_n)$ and $\\vec q=(q_1,\\ldots,q_n)$, respectively, in the \\emph{tiny} and \\emph{small} regimes. In the tiny regime, we have $p_i,q_i\\lesssim 1/n^2$, and in the small regime, $p_i,q_i\\lesssim 1/n$. We discover that in the tiny regime, the TV distance behaves as $\\|\\vec p-\\vec q\\|_1$, while in the small regime, it behaves as \\[ \\sum_{i=1}^n \\Big| p_i\\prod_{j\\neq i}(1-p_j) - q_i\\prod_{j\\neq i}(1-q_j) \\Big|, \\] both up to absolute constants. Along the way we discover…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-02-25",
+  "updated": "2026-02-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

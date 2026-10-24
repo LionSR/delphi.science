@@ -1,0 +1,19 @@
+{
+  "key": "2608.10799",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.10799",
+  "title": "High-order $L^2$-Galerkin schemes for the decoupled potential integral equations",
+  "authors": [
+    "David Scott Winterrose"
+  ],
+  "summary": "We prove Sobolev space well-posedness of the decoupled potential integral equations. Using basic pseudo-differential techniques, discrete stability is obtained for the standard $L^2$-pairing, and we deduce spectral convergence for a high-order scheme employing discontinuous basis functions, or with additional element-wise tangential continuity imposed in the vectorial part of the system. The scheme is shown to be much better conditioned than a mature commercial EFIE/CFIE solver. In many cases appearing almost independent of wavenumber, mesh density, and the order.",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-11",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

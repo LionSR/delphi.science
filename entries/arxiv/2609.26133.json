@@ -1,0 +1,20 @@
+{
+  "key": "2609.26133",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.26133",
+  "title": "A rate for the average vacancy of uniformly random matchings in linear hypergraphs",
+  "authors": [
+    "Anish Gupta"
+  ],
+  "summary": "Let $M$ be chosen uniformly from all matchings of a finite linear $k$-uniform hypergraph $H$, and let $\\overline{q}(H)$ be the average probability that a vertex is left uncovered. If $H$ has maximum degree $D$ and normalized average degree $β=k|E(H)|/(|V(H)|D)$, then, for every fixed $k\\geq 2$ and uniformly in the order, $\\overline{q}(H) \\leq 1-β+(βk+o_D(1))\\log\\log D/\\log D$. The underlying estimate is the order-uniform count $\\log Z(H)\\geq (|E(H)|/D)(\\log D-(k+o_D(1))\\log\\log D)$, and it also counts matchings of size $(1-o_D(1))|E(H)|/D$. We prove this by sampling edges, deleting those…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.PR"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2601.01311",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.01311",
+  "title": "Concave Certificates: Geometric Framework for Distributionally Robust Risk and Complexity Analysis",
+  "authors": [
+    "Hong T. M. Chu"
+  ],
+  "summary": "Distributionally Robust (DR) optimization aims to certify worst-case risk within a Wasserstein uncertainty set. Current certifications typically rely either on global Lipschitz bounds, which are often conservative, or on local gradient information, which provides only a first-order approximation. This paper introduces a novel geometric framework based on the least concave majorants of the growth rate functions. Our proposed concave certificate establishes a tight bound on DR risk that remains applicable to non-Lipschitz and non-differentiable losses. We extend this framework to complexity…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-01-04",
+  "updated": "2026-04-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2609.20221",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20221",
+  "title": "Exact fast factorizations of the AR(1) Karhunen-Loeve transform",
+  "authors": [
+    "Yuriy A. Reznik"
+  ],
+  "summary": "We derive a fast factorization of the exact Karhunen--Loève transform (KLT) of an AR(1) source by mapping it onto the Discrete Cosine Transform. For even $N$ and every $ρ\\in(0,1)$, the KLT factors exactly into Chen's fast DCT-II structure---butterfly plus fixed half-size DCT-II and DCT-IV cores---completed by two orthogonal corrections: eigenvector matrices of diagonal-plus-rank-one matrices carrying the entire $ρ$-dependence. Fast DCT factorizations are reused unchanged; as $ρ\\to1$ the corrections become identities, recovering Chen's algorithm. At short lengths the design is explicit: at…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.IT"
+  ],
+  "published": "2026-07-26",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2605.05432",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05432",
+  "title": "Direct Estimation of Schrödinger Bridge Time-Series Drifts: Finite-Sample, Asymptotic, and Adaptive Guarantees",
+  "authors": [
+    "Othmane Mazhar",
+    "Huyên Pham"
+  ],
+  "summary": "We study nonparametric estimation of Schrödinger bridge (SB) drifts from i.i.d.\\ data observed on a single time interval. Starting from the conditional-ratio form of the Schrödinger bridge time-series (SBTS) drift formula, we analyze a direct Nadaraya--Watson plug-in estimator built from kernelized numerator and denominator terms. Unlike recent SB analyses based on entropic-OT potentials, Sinkhorn iterations, or iterative bridge solvers, our approach works directly at the drift level and isolates \\emph{statistical error} from optimization, approximation, and discretization error. Under…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

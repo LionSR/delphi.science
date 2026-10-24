@@ -1,0 +1,24 @@
+{
+  "key": "2604.20188",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.20188",
+  "title": "Structure-Aware Variational Learning of a Class of Generalized Diffusions",
+  "authors": [
+    "Yubin Lu",
+    "Xiaofan Li",
+    "Chun Liu",
+    "Qi Tang",
+    "Yiwei Wang"
+  ],
+  "summary": "Learning the underlying potential energy of stochastic gradient systems from partial and noisy observations is a fundamental problem arising in physics, chemistry, and data-driven modeling. Classical approaches often rely on direct regression of governing equations or velocity fields, which can be sensitive to noise and external perturbations and may fail when observations are incomplete. In this work, we propose a structure-aware, energy-based learning framework for inferring unknown potential functions in generalized diffusion processes, grounded in the energetic variational approach.…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS"
+  ],
+  "published": "2026-04-22",
+  "updated": "2026-04-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

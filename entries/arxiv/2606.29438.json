@@ -1,0 +1,21 @@
+{
+  "key": "2606.29438",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.29438",
+  "title": "A samplewise backpropagation method for neural networks driven by fractional Brownian motion",
+  "authors": [
+    "Yuecai Han",
+    "Jianming Xu"
+  ],
+  "summary": "In this paper, we develop a fractional stochastic neural network with residual dynamics driven by fractional Brownian motion. By introducing a discrete stochastic maximum principle for the network, we construct the corresponding adjoint recursion. For deterministic network parameters, we prove mean square convergence of projected samplewise stochastic gradient descent. Numerical experiments include a closed form convergence test, noisy regression with uncertainty quantification, long memory time series generation and image classification under structured perturbations. The results identify…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-06-28",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

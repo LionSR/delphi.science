@@ -1,0 +1,19 @@
+{
+  "key": "2608.16035",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.16035",
+  "title": "Blocking Amalgamations, Maximal Arcs, and Generalized Crowns",
+  "authors": [
+    "Mahesh Ramani"
+  ],
+  "summary": "Let $C^r_{1,k}$ be the $r$-uniform $k$-crown and put $h=r-k+2$. For a finite linear intersecting $r$-uniform hypergraph $G$, let $τ_h(G)$ be the minimum size of a set meeting every edge of $G$ in at least $h$ vertices, and define \\[ ρ_{r,k}=\\sup_G\\frac{|E(G)|}{τ_h(G)}. \\] We prove that every fixed pair $(G,B)$, with $B$ an $h$-fold transversal, yields \\[ \\operatorname{ex}^{\\mathrm{lin}}_r(n,C^r_{1,k}) \\ge \\frac{|E(G)|}{|B|}n-O_{G,B}(\\sqrt n) \\] for all sufficiently large $n$. Incidence counting gives $ρ_{r,k}\\le r/h$, and equality is characterized after dualization by a pairwise balanced…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

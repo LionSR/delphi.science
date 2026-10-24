@@ -1,0 +1,20 @@
+{
+  "key": "2610.18740",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.18740",
+  "title": "Selecting the 7th Smallest of 16 Elements Takes Exactly 28 Comparisons",
+  "authors": [
+    "Jonathan Cremer"
+  ],
+  "summary": "Let $V_i(n)$ denote the minimum worst-case number of comparisons needed to find the $i$-th smallest of $n$ distinct elements. We construct algorithms showing $V_7(16)\\le28$ and $V_8(16)\\le29$, improving the previously reported upper bounds of 30 and 31. Together with known lower bounds, these results establish $V_7(16)=28$ and leave $V_8(16)\\in\\{28,29\\}$. For 17 elements, we establish $V_5(17)=27$ and improve the upper bounds for ranks 6 through 9 to 29, 30, 31, and 31, respectively. Every new upper bound has an explicit decision-graph certificate verified by a static checker developed…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

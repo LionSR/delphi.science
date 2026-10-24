@@ -1,0 +1,24 @@
+{
+  "key": "2609.21878",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.21878",
+  "title": "Application of Optimal Inexact Second-Order Acceleration to Distributed Stochastic Optimization under Statistical Similarity",
+  "authors": [
+    "Yury A. Sokolov",
+    "Maxim K. Mashtaler",
+    "Alexander V. Gasnikov",
+    "Martin Takáč",
+    "Dmitry I. Kamzolov",
+    "Artem D. Agafonov"
+  ],
+  "summary": "We consider distributed stochastic convex optimization with a fixed budget of $N$ independent samples split among $m$ workers. Sample average approximation reduces the problem to a regularized finite-sum problem whose local Hessians are statistically similar. This allows the Hessian of the local objective at the server to be used as an inexact Hessian of the global objective, while the workers communicate only gradients. We apply the optimal accelerated inexact Newton extragradient method of (Chen et al., 2026) and propose its distributed restarted variant for the strongly convex empirical…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-18",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

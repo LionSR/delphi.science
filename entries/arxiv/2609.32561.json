@@ -1,0 +1,21 @@
+{
+  "key": "2609.32561",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32561",
+  "title": "Formalising Linear Elliptic PDE Theory in Lean 4",
+  "authors": [
+    "Alejandro José Soto Franco",
+    "Kobe Marshall-Stevens"
+  ],
+  "summary": "We formalise in Lean 4, on top of Mathlib, the solvability of the Dirichlet problem for second-order linear elliptic operators in divergence form. The machine-verified results, with no sorry in the development, include the Poincaré inequality, the existence of weak solutions by the Lax-Milgram theorem, Rellich-Kondrachov compactness, the Fredholm alternative, the spectral theorem, interior regularity estimates, and the Sobolev embedding theorem. From these results we obtain a formalisation of classical solvability for sufficiently regular coefficients and data. Our Lean library includes a…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "cs.LO"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2605.25107",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.25107",
+  "title": "Leveraging Gauge Freedom for Learning Non-Gradient Population Dynamics of Stochastic Systems",
+  "authors": [
+    "Jules Berman",
+    "Tobias Blickhan",
+    "Benjamin Peherstorfer"
+  ],
+  "summary": "Existing work on population dynamics inference often focuses on flows arising from vector fields that are the gradients of scalar potentials. Among all admissible flows that are compatible with the population dynamics, gradient flows are optimal in a specific sense: they minimize kinetic energy. The selection of fields based on different criteria corresponds to a gauge freedom when determining population dynamics, which we leverage in this work. We propose Non-Gradient Inference Flows (NGIF), an algorithm to infer non-gradient population dynamics using a weak formulation of the continuity…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.NA"
+  ],
+  "published": "2026-05-24",
+  "updated": "2026-05-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

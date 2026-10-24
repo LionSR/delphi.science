@@ -1,0 +1,19 @@
+{
+  "key": "2610.15914",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.15914",
+  "title": "An Efficient, Lean 4 Verified Necessary and Sufficient Condition for Membership in Pedigree Polytopes",
+  "authors": [
+    "T. S. Arthanari"
+  ],
+  "summary": "The set \\(P_{n}\\) consists of the characteristic vectors of pedigrees, which are combinatorial encodings in one-to-one correspondence with Hamiltonian cycles. For \\(n \\geq 4\\) and \\(τ_{n} = \\binom{n}{3}-1\\), the Membership Problem for the Pedigree Polytope (M3P) asks whether a given vector \\(X \\in \\mathbb{Q}^{τ_{n}}\\) belongs to \\(\\mathrm{conv}(P_n)\\). This paper gives a complete account, with the full proof statements and machine-verified Lean~4 certificates, of the necessary and sufficient (\\NS) condition established in Chapter~5 of \\emph{Pedigree Polytopes: New Insights on Computational…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-11",
+  "updated": "2026-10-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

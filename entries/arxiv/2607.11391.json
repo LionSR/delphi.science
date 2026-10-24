@@ -1,0 +1,20 @@
+{
+  "key": "2607.11391",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.11391",
+  "title": "Performance evaluation of branch-free fused multiply-add algorithms for multi-component-type multiple-precision floating-point arithmetic",
+  "authors": [
+    "Tomonori Kouya"
+  ],
+  "summary": "Multicomponent multiple-precision arithmetic is constructed from existing floating-point operations using error-free transformations (EFTs). Its performance can be improved by employing branch-free algorithms that eliminate conditional branches. Zhang and Aiken proposed branch-free addition and multiplication algorithms for double-word (DW), triple-word (TW), and quad-word (QW) arithmetic. We implemented their TW and QW algorithms, for which substantial performance improvements over conventional algorithms were expected, and demonstrated their effectiveness. In this paper, we propose…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.MS"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

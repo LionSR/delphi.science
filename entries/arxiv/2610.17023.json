@@ -1,0 +1,21 @@
+{
+  "key": "2610.17023",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.17023",
+  "title": "Edge-preserving Bayesian neural networks via hierarchical sparsity-promoting priors",
+  "authors": [
+    "Jan Habscheid",
+    "Jan Glaubitz"
+  ],
+  "summary": "Recovering piecewise-smooth functions with jump discontinuities from noisy, indirect, and incomplete data is a central task in computational inverse problems. Bayesian neural networks (BNNs) with heavy-tailed weight priors have emerged as effective edge-preserving priors for such problems. However, posterior inference for these models remains computationally challenging, and existing approaches settle for point estimates obtained by directly optimizing heavy-tailed log-densities. We propose GSBL-BNNs, which model the neural network parameters hierarchically using sparsity-promoting priors…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

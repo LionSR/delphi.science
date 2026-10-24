@@ -1,0 +1,21 @@
+{
+  "key": "2606.07976",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.07976",
+  "title": "A Measure-Consistent Operator Learning Method for Infinite-Dimensional Master Equations",
+  "authors": [
+    "Chenyao Wang",
+    "Hongyu Liu",
+    "Hui Liang"
+  ],
+  "summary": "Master equations in mean field game theory characterize feedback value functions that depend on time, state (space), and the population distribution. Their numerical approximation is challenging because the unknown is defined on a space of probability measures and the equation involves intrinsic measure derivatives and nonlocal population terms. This paper proposes a measure-consistent operator learning method (MCOL) for infinite-dimensional master equations. The population distribution is represented by an empirical measure and encoded through a symmetric pooling structure, so that the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-06",
+  "updated": "2026-06-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

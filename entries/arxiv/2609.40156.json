@@ -1,0 +1,22 @@
+{
+  "key": "2609.40156",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.40156",
+  "title": "Partial identification with entropy regularized optimal transport",
+  "authors": [
+    "Bruno N. Costa",
+    "Florian F. Gunsilius"
+  ],
+  "summary": "In many statistical settings, the available data and maintained assumptions do not suffice to uniquely identify the model parameters of interest. In such cases, one can only identify sets which are guaranteed to contain the true parameters. These are often characterized through linear programs that optimize over models compatible with the observed data. These programs can be infinite-dimensional in the optimizer and the number of constraints. We provide a unified way to characterize and solve such optimization problems by phrasing them as optimal transport problems on path spaces. This…",
+  "domain": "econ.EM",
+  "tags": [
+    "econ.EM",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

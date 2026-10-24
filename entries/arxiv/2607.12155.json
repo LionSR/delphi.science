@@ -1,0 +1,25 @@
+{
+  "key": "2607.12155",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12155",
+  "title": "fkcompute: an efficient $F_K$ invariant calculator",
+  "authors": [
+    "Paul Orland",
+    "Davide Passaro",
+    "Lara San Martín Suárez",
+    "Toby Saunders-A'Court",
+    "Josef Svoboda"
+  ],
+  "summary": "We introduce fkcompute, an open-source package for computing the Gukov--Manolescu invariant of links from a braid presentation. fkcompute implements Park's inverted state sum through a three-phase pipeline. First, a search is performed for a suitable braid presentation and for an additional inversion data on the braid. Then, the state space of the inverted sum is encoded as a polytope, bounded by the associated linear constraint system. Finally, the invariant is constructed by multiplication of R-matrices associated to the states. Benchmarks show that prime knots up to 12 crossings, and…",
+  "domain": "math.GT",
+  "tags": [
+    "math.GT",
+    "cs.MS",
+    "math.QA"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

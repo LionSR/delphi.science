@@ -1,0 +1,21 @@
+{
+  "key": "2607.14403",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14403",
+  "title": "Upwind embedded boundary SBP operators: New high order numerical schemes for arbitrarily shaped domains with Cartesian grids",
+  "authors": [
+    "Conner Dailey"
+  ],
+  "summary": "Embedded boundary summation by parts (SBP) methods define finite differencing based derivative operators with the added feature that the boundary need not coincide with a grid cell, allowing a boundary to be embedded on a regular Cartesian grid. This is achieved by the introduction of interpolation/extrapolation operators that match the accuracy of the boundary closure. These methods have been used to perform black hole excision simulations on a domain with a spherical boundary embedded in a regular Cartesian grid, demonstrating their usefulness for nonlinear problems. In this work, new…",
+  "domain": "gr-qc",
+  "tags": [
+    "gr-qc",
+    "math-ph",
+    "math.NA"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

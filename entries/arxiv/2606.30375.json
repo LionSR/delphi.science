@@ -1,0 +1,21 @@
+{
+  "key": "2606.30375",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.30375",
+  "title": "Multiple testing with the horseshoe",
+  "authors": [
+    "Sayantan Banerjee",
+    "Ismaël Castillo",
+    "Fanny Villers"
+  ],
+  "summary": "We study multiple testing under continuous global--local shrinkage priors, with a focus on the horseshoe prior in high-dimensional sparse settings. While such priors provide adaptive shrinkage and computational scalability, they do not induce exact zeros and hence do not directly yield posterior inclusion probabilities, making principled false discovery control nontrivial. We propose posterior--based decision rules for signal detection that are applicable across a broad class of continuous shrinkage priors and are calibrated to control the false discovery rate (FDR) while retaining high…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

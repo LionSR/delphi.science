@@ -1,0 +1,23 @@
+{
+  "key": "2609.18689",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.18689",
+  "title": "Zeros of the Spectrogram of Colored Noise",
+  "authors": [
+    "Luis Alberto Escudero",
+    "Günther Koliander",
+    "José Luis Romero"
+  ],
+  "summary": "We study the expected number of zeros of the Short-Time Fourier Transform (STFT) with a Gaussian window for signals degraded by complex Gaussian colored noise. We provide an exact formula for this quantity and investigate its asymptotic behavior. From a computational perspective, we propose an algorithmic method to recover a smoothed power spectral density (PSD) directly from the spatial distribution of the transform's zeros. Our results formalize the commonly-held heuristic that detection algorithms based on spectrogram zeros, though designed for white noise, also perform adequately under…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.IT",
+    "math.CA"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

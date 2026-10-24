@@ -1,0 +1,22 @@
+{
+  "key": "2605.19705",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.19705",
+  "title": "i-DEQ: A stable inertial deep equilibrium model for image restoration",
+  "authors": [
+    "Antonin Clerc",
+    "Marien Renaud",
+    "Baudouin Denis De Senneville",
+    "Nicolas Papadakis"
+  ],
+  "summary": "Deep Equilibrium Models (DEQs) are an established framework for image restoration that learn a problem-adapted regularization by solving a fixed-point (i.e. equilibrium) problem. While flexible and expressive, DEQs are often hindered by high computational cost and training instability. We propose an inertial DEQ (i-DEQ) that learns an explicit nonconvex regularization within the DEQ formulation. By using momentum within the fixed-point iterations, i-DEQ has convergence guarantees and accelerated rates. Moreover, we observe that i-DEQ is significantly more stable during the training and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

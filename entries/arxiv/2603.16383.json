@@ -1,0 +1,22 @@
+{
+  "key": "2603.16383",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.16383",
+  "title": "Exact Cost-Increment Formula for Optimal Control of Semilinear Evolution Equations",
+  "authors": [
+    "Roman Chertovskih",
+    "Nikolay Pogodaev",
+    "Maxim Staritsyn",
+    "A. Pedro Aguiar"
+  ],
+  "summary": "We address optimal control of semilinear evolution equations on Banach spaces with finitely many control channels, a framework encompassing a broad class of infinite-dimensional dynamical systems, arising in many applications. For this setting, we derive an exact and global formula quantifying the increment of the cost functional with respect to an arbitrary reference control. This identity enables the design of monotone descent algorithms that require no linearization or step-size tuning. We further establish the existence of optimal controls and propose a practical sample-and-hold…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-17",
+  "updated": "2026-03-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

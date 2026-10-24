@@ -1,0 +1,22 @@
+{
+  "key": "2610.07236",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.07236",
+  "title": "Well-posed by Design: Learning Constitutive Laws from Velocity Data using Convex Neural Network Potentials",
+  "authors": [
+    "Gonzalo G. de Diego",
+    "Georg Stadler"
+  ],
+  "summary": "Learning constitutive laws of complex fluids from velocity data (i.e. indirect observations) is a PDE-constrained inverse problem in which expressive neural parameterizations risk breaking the well-posedness of the forward physics model. We address this tension by learning, rather than the constitutive law itself, the dissipation potential: a scalar function whose convexity, frame-indifference, and dissipativity propagate into the underlying continuum mechanics and guarantee the structural properties needed for a well-posed and generalizable forward PDE. We introduce ICNNE, an input-convex…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

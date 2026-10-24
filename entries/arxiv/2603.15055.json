@@ -1,0 +1,23 @@
+{
+  "key": "2603.15055",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.15055",
+  "title": "Spatio-temporal probabilistic forecast using MMAF-guided learning",
+  "authors": [
+    "Leonardo Bardi",
+    "Imma Valentina Curato",
+    "Lorenzo Proietti"
+  ],
+  "summary": "We present a theory-guided generalized Bayesian methodology for spatio-temporal raster data, which we use to train an ensemble of stochastic feed-forward neural networks with Gaussian-distributed weights. The methodology incorporates the dependence and causal structure of a spatio-temporal Ornstein-Uhlenbeck process into training and inference by enforcing constraints on the design of the data embedding and the related optimization routine. In inference mode, the networks are employed to generate causal ensemble forecasts by applying different initial conditions at different horizons. We…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-03-16",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

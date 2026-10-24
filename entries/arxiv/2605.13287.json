@@ -1,0 +1,22 @@
+{
+  "key": "2605.13287",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.13287",
+  "title": "Delightful Exploration",
+  "authors": [
+    "Ian Osband"
+  ],
+  "summary": "Most exploration algorithms search broadly until uncertainty is resolved. When the action space is too large to resolve within budget, practitioners default to $\\varepsilon$-greedy, which bounds disruption but spends its override blindly. We introduce \\textit{Delight-gated exploration} (DE), a host--override rule that spends exploratory actions only when their prospective delight (expected improvement times surprisal) exceeds a gate price. This practical heuristic recovers a classical result: Pandora's reservation-value rule for costly search, with surprisal setting the effective inspection…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

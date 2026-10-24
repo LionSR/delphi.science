@@ -1,0 +1,25 @@
+{
+  "key": "2602.03674",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.03674",
+  "title": "When Should Agents Coordinate in Differentiable Sequential Decision Problems?",
+  "authors": [
+    "Caleb Probine",
+    "Su Ann Low",
+    "David Fridovich-Keil",
+    "Ufuk Topcu"
+  ],
+  "summary": "Multi-robot teams must coordinate to operate effectively. When a team operates in an uncoordinated manner, and agents choose actions that are only individually optimal, the team's outcome can suffer. However, in many domains, coordination requires costly communication. We explore the value of coordination in a broad class of differentiable motion-planning problems. In particular, we model coordinated behavior as a spectrum: at one extreme, agents jointly optimize a common team objective, and at the other, agents make unilaterally optimal decisions given their individual decision variables,…",
+  "domain": "cs.MA",
+  "tags": [
+    "cs.MA",
+    "cs.GT",
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-02-03",
+  "updated": "2026-02-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

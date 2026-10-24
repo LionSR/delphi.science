@@ -1,0 +1,24 @@
+{
+  "key": "2609.15723",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.15723",
+  "title": "Solving Finite-sum Coupled Compositional Optimization via Multi-block-Single-probe Estimator",
+  "authors": [
+    "Wei Jiang",
+    "Sifan Yang",
+    "Yibo Wang",
+    "Lijun Zhang",
+    "Zechao Li"
+  ],
+  "summary": "Traditional variance reduction methods (e.g., SPIDER, SARAH, STORM) have been extensively investigated for improving the convergence rates of stochastic optimization. These techniques typically maintain a sequence of estimators for a single function (or gradient) across iterations. However, what if we need to track multiple functions, but can only access stochastic samples of $\\mathcal{O}(1)$ functions at each iteration? This scenario arises in an important emerging family of finite-sum coupled compositional optimization (FCCO) problems of the form $\\frac{1}{m}\\sum_{i=1}^m…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

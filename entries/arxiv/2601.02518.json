@@ -1,0 +1,24 @@
+{
+  "key": "2601.02518",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.02518",
+  "title": "Diffusion Computation versus Quantum Computation: A Comparative Model for Order Finding and Factoring",
+  "authors": [
+    "Carlos A. Cadavid",
+    "Paulina Hoyos",
+    "Jay Jorgenson",
+    "Lejla Smajlović",
+    "J. D. Vélez"
+  ],
+  "summary": "We study a hybrid computational model for integer factorization in which the only non-classical resource is access to an \\emph{iterated diffusion process} on a finite graph. Concretely, a \\emph{diffusion step} is defined to be one application of a symmetric stochastic matrix (the half-lazy walk operator) to an $\\ell^{1}$--normalized state vector, followed by an optional readout of selected coordinates. Let $N\\ge 3$ be an odd integer which is neither prime nor a prime power, and let $b\\in(\\mathbb{Z}/N\\mathbb{Z})^\\ast$ have odd multiplicative order $r={\\rm ord}_N(b)$. We construct, without…",
+  "domain": "math.SP",
+  "tags": [
+    "math.SP",
+    "cs.CR"
+  ],
+  "published": "2026-01-05",
+  "updated": "2026-01-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2608.10389",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.10389",
+  "title": "Efficient Weak-Entropy PINN for Solving Hyperbolic Conservation Laws",
+  "authors": [
+    "Qi Gao",
+    "Kuang Huang",
+    "Xuan Di"
+  ],
+  "summary": "In recent years, neural networks have significantly advanced numerical solutions of partial differential equations (PDEs). However, solving PDEs with discontinuous solutions, such as hyperbolic conservation laws, remains challenging for neural network-based methods such as physics-informed neural networks (PINNs). Existing methods often rely on strong prior assumptions such as knowledge of discontinuity locations, or they introduce artificial smoothing terms that degrade accuracy. However, accurately solving these conservation laws and predicting the formation and propagation of…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-08-11",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

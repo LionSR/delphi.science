@@ -1,0 +1,24 @@
+{
+  "key": "2607.28413",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.28413",
+  "title": "Windowed thinning and query complexity for the bouncy particle and Zigzag samplers",
+  "authors": [
+    "Jianfeng Lu",
+    "Yinchen Luo"
+  ],
+  "summary": "Let $μ(d x)\\propto e^{-U(x)} d x$ on $\\R^d$, where $U$ is $m$-strongly convex and $L$-smooth, and denote by $κ=L/m$ the condition number. We consider windowed thinning, an exact simulation method for the bouncy particle sampler and the coordinate Zigzag process. The method divides a trajectory into deterministic windows and uses a gradient evaluation at the beginning of each window to construct a tractable local envelope for the event rate. Combining this construction with quantitative mixing estimates and finite-time bounds on the expected numbers of bounces and flips yields query…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG",
+    "math.PR",
+    "math.ST",
+    "stat.CO"
+  ],
+  "published": "2026-07-30",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

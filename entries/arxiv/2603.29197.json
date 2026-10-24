@@ -1,0 +1,20 @@
+{
+  "key": "2603.29197",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.29197",
+  "title": "QOCO-GPU: A Quadratic Objective Conic Optimizer with GPU Acceleration",
+  "authors": [
+    "Govind M. Chari",
+    "Behçet Açıkmeşe"
+  ],
+  "summary": "We present a GPU-accelerated backend for QOCO, a C-based solver for quadratic objective second-order cone programs (SOCPs) based on a primal-dual interior point method. Our backend uses NVIDIA's cuDSS library to perform a direct sparse LDL factorization of the KKT system at each iteration. We also develop custom CUDA kernels for cone operations and show that parallelizing these operations is essential for achieving peak performance. Additionally, we refactor QOCO to introduce a modular backend abstraction that decouples solver logic from the underlying linear algebra implementations,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-31",
+  "updated": "2026-03-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

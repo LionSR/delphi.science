@@ -1,0 +1,28 @@
+{
+  "key": "2601.21668",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.21668",
+  "title": "A Hybrid semi-Lagrangian Flow Mapping Approach for Vlasov Systems: Combining Iterative and Compositional Flow Maps",
+  "authors": [
+    "Philipp Krah",
+    "Zetao Lin",
+    "R. -Paul Wilhelm",
+    "Fabio Bacchini",
+    "Jean-Christophe Nave",
+    "Virginie Grandgirard",
+    "Kai Schneider"
+  ],
+  "summary": "We propose a hybrid semi-Lagrangian scheme for the Vlasov--Poisson equation that combines the Numerical Flow Iteration (NuFI) method with the Characteristic Mapping Method (CMM). Both approaches exploit the semi-group property of the underlying diffeomorphic flow, enabling the reconstruction of solutions through flow maps that trace characteristics back to their initial positions. NuFI builds this flow map iteratively, preserving symplectic structure and conserving invariants, but its computational cost scales quadratically with time. Its advantage lies in a compact, low-dimensional…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph",
+    "physics.flu-dyn",
+    "physics.plasm-ph"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-01-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

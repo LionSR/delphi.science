@@ -1,0 +1,21 @@
+{
+  "key": "2606.21137",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.21137",
+  "title": "A Sudakov--Fernique proof of Lehner-type edge bounds for matrix-valued GUE sums",
+  "authors": [
+    "Benoit Collins",
+    "Yuta Yamagishi"
+  ],
+  "summary": "Let $A_0,A_1,\\ldots,A_n\\in M_N(\\mathbb{C})$ be Hermitian matrices and let $G_1,\\ldots,G_n$ be independent $M\\times M$ GUE matrices normalized so that $\\|M^{-1/2}G_i\\|\\to 2$ almost surely as $M\\to\\infty$. We study the spectral edges and operator norm of $H_M = A_0\\otimes I_M + \\frac{1}{\\sqrt{M}}\\sum_{i=1}^n A_i\\otimes G_i$. Lehner's formula identifies the right and left edges of the corresponding free semicircular operator as $ρ_+ = \\inf_{Z\\succ 0}λ_{\\max}(A_0+Z+\\sum_{i=1}^n A_iZ^{-1}A_i)$ and $ρ_- = \\sup_{Z\\prec 0}λ_{\\min}(A_0+Z+\\sum_{i=1}^n A_iZ^{-1}A_i)$. Assuming $A_i\\succeq 0$ for $i\\ge…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.OA"
+  ],
+  "published": "2026-06-19",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

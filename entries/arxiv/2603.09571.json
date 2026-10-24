@@ -1,0 +1,22 @@
+{
+  "key": "2603.09571",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.09571",
+  "title": "An Optimal Control Approach To Transformer Training",
+  "authors": [
+    "Kağan Akman",
+    "Naci Saldi",
+    "Serdar Yüksel"
+  ],
+  "summary": "In this paper, we develop a rigorous optimal control-theoretic approach to Transformer training that respects key structural constraints such as (i) realized-input-independence during execution, (ii) the ensemble control nature of the problem, and (iii) positional dependence. We model the Transformer architecture as a discrete-time controlled particle system with shared actions, exhibiting noise-free controlled McKean--Vlasov dynamics, and we show that lifting the dynamics to probability measures produces a fully-observed Markov decision process (MDP). Positional encodings are incorporated…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-03-10",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

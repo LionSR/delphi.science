@@ -1,0 +1,21 @@
+{
+  "key": "2608.16271",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.16271",
+  "title": "Stochastic Gradient Tracking over Time-Varying Networks: One-Step Lyapunov Analysis",
+  "authors": [
+    "Sulaiman A. Alghunaim"
+  ],
+  "summary": "We study decentralized stochastic gradient tracking over a time-varying network of $N$ agents under a uniform window-mixing condition. Products of $τ$ consecutive doubly stochastic mixing matrices contract disagreement by a factor $λ<1$, although individual matrices need not contract disagreement strictly and individual communication graphs may be disconnected. We construct a time-varying quadratic norm that turns this window contraction into an exact one-step Lyapunov identity. This leads to coupled one-step recursions for the centroid and disagreement errors, without unrolling the dynamics…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DC",
+    "eess.SY"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2606.24212",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.24212",
+  "title": "Path-Space Robust Bayesian Portfolio Selection",
+  "authors": [
+    "Andy Au"
+  ],
+  "summary": "A Bayesian investor learns an unknown asset drift by Kalman--Bucy filtering and trades using the resulting estimate, but the observation model used for learning may itself be misspecified. We make the portfolio robust to an adversary who distorts the law of observed prices and pays a relative-entropy penalty. A single distortion affects both trading returns and learning, since wealth and the drift estimate respond to the same observed prices. The observation market is complete, so the fixed-target problem becomes an optimization over terminal tracking errors. Entropy duality removes the…",
+  "domain": "q-fin.MF",
+  "tags": [
+    "q-fin.MF",
+    "math.OC"
+  ],
+  "published": "2026-06-23",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

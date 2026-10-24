@@ -1,0 +1,20 @@
+{
+  "key": "2607.29034",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.29034",
+  "title": "On the Oja-Flow-Based Low-Rank Approximation of Kalman-Bucy Filters for Linear Time-Varying Systems",
+  "authors": [
+    "Kentaro Ohki"
+  ],
+  "summary": "This paper studies a low-rank Kalman-Bucy filtering framework for linear time-varying systems through the tracking analysis of Oja's principal component flow. Under structured assumptions on the eigenspaces and their time variation, we show that the Oja flow can remain in a neighborhood of the time-varying dominant subspace by tuning a parameter of the flow, rather than tracking it exactly. These restrictive assumptions identify a tractable class of linear time-varying systems and provide a theoretical basis for low-rank filtering, as illustrated by a numerical experiment.",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-07-31",
+  "updated": "2026-07-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

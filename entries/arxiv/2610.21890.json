@@ -1,0 +1,20 @@
+{
+  "key": "2610.21890",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.21890",
+  "title": "GPU Parallel Pareto Local Search for Multi-objective QUBO",
+  "authors": [
+    "Stephanie Riedmüller",
+    "Thorsten Koch"
+  ],
+  "summary": "We revisit Pareto Local Search (PLS) for multi-objective quadratic unconstrained binary optimization (QUBO) problems. Multi-objective QUBO formulations have gained increasing attention as a universal modeling method and natural input for quantum optimization. While exact methods exist, their unconstrained binary structure makes them well-suited for heuristics such as PLS. At the same time, GPUs offer a powerful classical alternative to quantum-inspired optimization. We develop an efficient GPU-based parallel implementation of PLS for multi-objective QUBO problems. Our approach combines…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

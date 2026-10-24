@@ -1,0 +1,22 @@
+{
+  "key": "2607.27432",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.27432",
+  "title": "Dynamical Low-Rank Filters for Data Assimilation",
+  "authors": [
+    "Yoshihito Kazashi",
+    "Youssef Marzouk",
+    "Fabio Nobile",
+    "Fabio Zoccolan"
+  ],
+  "summary": "We propose dynamical low-rank (DLRA) filters for data-assimilation problems based on stochastic differential equations (SDEs). We first consider a Kalman filter applied to a Euler-Maruyama discretization of the SDE and observation processes, and derive a DLRA Kalman-type filter, named DLRA-JMCO, by minimizing jointly the error on the mean and covariance. We then obtain a time continuous DLRA-JMCO filter as the continuous limit of the time discrete one, and introduce a corresponding particle approximation. We also propose a strategy to enrich the DLRA-JMCO filter with a simple Gaussian…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

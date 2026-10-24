@@ -1,0 +1,23 @@
+{
+  "key": "2601.01061",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.01061",
+  "title": "A UCB Bandit Algorithm for General ML-Based Estimators",
+  "authors": [
+    "Yajing Liu",
+    "Erkao Bao",
+    "Linqi Song"
+  ],
+  "summary": "We present ML-UCB, a generalized upper confidence bound algorithm that integrates arbitrary machine learning models into multi-armed bandit frameworks. A fundamental challenge in deploying sophisticated ML models for sequential decision-making is the lack of tractable concentration inequalities required for principled exploration. We overcome this limitation by directly modeling the learning curve behavior of the underlying estimator. Specifically, assuming the Mean Squared Error decreases as a power law in the number of training samples, we derive a generalized concentration inequality and…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.PR"
+  ],
+  "published": "2026-01-03",
+  "updated": "2026-01-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2601.14933",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.14933",
+  "title": "Rank-one Riemannian Subspace Descent for Nonlinear Matrix Equations",
+  "authors": [
+    "Yogesh Darmwal",
+    "Ketan Rajawat"
+  ],
+  "summary": "We propose a rank-one Riemannian subspace descent algorithm for computing symmetric positive definite (SPD) solutions to nonlinear matrix equations arising in control theory, dynamic programming, and stochastic filtering. For solution matrices of size $n\\times n$, standard approaches for dense matrix equations typically incur $\\mathcal{O}(n^3)$ cost per-iteration, while the efficient $\\mathcal{O}(n^2)$ methods either rely on sparsity or low-rank solutions, or have iteration counts that scale poorly. The proposed method entails updating along the dominant eigen-component of a transformed…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "eess.SY"
+  ],
+  "published": "2026-01-21",
+  "updated": "2026-01-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2606.26399",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.26399",
+  "title": "Geometry-Aware MCTS for Extremal Problems in Combinatorial Geometry",
+  "authors": [
+    "Luoning Zhang",
+    "Xu Zhuang",
+    "Tianhao Wang",
+    "Nathan Kaplan"
+  ],
+  "summary": "We study certain extremal problems in combinatorial geometry that ask about configurations of points in an $n \\times n$ grid that satisfy strict, global geometric constraints. Classical exact solvers suffer from combinatorial explosion for these types of problems, and standard reinforcement learning and transformer-based models struggle with the sparse reward \"validity cliff\" and quadratic token-consumption limits. To overcome these bottlenecks, we propose a Geometry-Aware Monte Carlo Tree Search (MCTS) framework. Our approach strictly enforces geometric constraints through incremental…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.CG",
+    "cs.LG",
+    "math.CO"
+  ],
+  "published": "2026-06-24",
+  "updated": "2026-06-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

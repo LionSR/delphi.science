@@ -1,0 +1,21 @@
+{
+  "key": "2608.10079",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.10079",
+  "title": "Thread Scaling of Hexaly on the TDVRPTW across Two Model Encodings. An Experimental Report: Binding Choice, Slice-Count Choice, and Two Thread Ladders",
+  "authors": [
+    "Florian Rascoussier"
+  ],
+  "summary": "Thread scaling in Hexaly on the Time-Dependent Vehicle Routing Problem with Time Windows (TDVRPTW) depends on modeling, and on the language binding through which the model reaches the solver. We compare two encodings, both reaching the solver through its C++ binding: one evaluates continuous travel-time functions exactly through external callbacks, which that binding evaluates concurrently, while the other approximates them with time slices evaluated natively by the solver. Independent CPU accounting confirms that both use the cores they are allocated, but they respond differently to width.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DC",
+    "cs.MS"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

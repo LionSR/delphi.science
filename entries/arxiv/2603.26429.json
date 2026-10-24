@@ -1,0 +1,21 @@
+{
+  "key": "2603.26429",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.26429",
+  "title": "Adaptive low-rank exponential integrators for large-scale differential Riccati equation",
+  "authors": [
+    "Jinyi Li",
+    "Dongping Li",
+    "Hua Yang"
+  ],
+  "summary": "Matrix differential Riccati equation (DRE) typically exhibits transient and steady-state phases, posing challenges for fixed-step time integration methods, which may lack accuracy during transients or oversample in steady regimes. In this work, we propose adaptive low-rank matrix-valued exponential integrators for large-scale stiff DRE. The methods combine embedded exponential Rosenbrock-type schemes and adaptive step-size control, enabling an automatic adjustment to the evolving solution dynamics. This improves the accuracy during rapid transient phases while maintaining high accuracy in…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-27",
+  "updated": "2026-03-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

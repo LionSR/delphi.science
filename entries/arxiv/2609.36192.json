@@ -1,0 +1,22 @@
+{
+  "key": "2609.36192",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.36192",
+  "title": "Feasibility Correction in Linear Programs",
+  "authors": [
+    "Pedro Abdalla",
+    "Roman Vershynin",
+    "Guangyi Zou"
+  ],
+  "summary": "We study feasibility correction for linear programs. Suppose an initial point satisfies most of the constraints. Can it be moved into the feasible region without changing the objective value? Our main deterministic result says that this is possible if the constraint matrix satisfies a restricted isometry property (RIP). We apply the correction theorem to obtain lower bounds for random linear programs with finite-moment or sub-Weibull entries. We complement these with matching-order upper bounds under a uniform $p$th-moment bound for some $p>2$ and a delocalization condition on the objective…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.PR"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

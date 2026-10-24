@@ -1,0 +1,24 @@
+{
+  "key": "2605.06341",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.06341",
+  "title": "CoupleEvo: Evolving Heuristics for Coupled Optimization Problems Using Large Language Models",
+  "authors": [
+    "Thomas Bömer",
+    "Bastian Amberg",
+    "Max Disselnmeyer",
+    "Anne Meyer"
+  ],
+  "summary": "Many real-world optimization problems consist of multiple tightly coupled subproblems whose solutions must be coordinated to achieve high overall performance. However, existing large language model driven automated heuristic design approaches are limited to single-problem settings. In this paper, we propose CoupleEvo. CoupleEvo proposes three evolutionary coordination strategies to evolve heuristics for coupled optimization problems: the sequential strategy evolves heuristics for one subproblem after the other; the iterative strategy alternates the evolution of heuristics for different…",
+  "domain": "cs.NE",
+  "tags": [
+    "cs.NE",
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

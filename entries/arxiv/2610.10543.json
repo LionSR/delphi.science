@@ -1,0 +1,22 @@
+{
+  "key": "2610.10543",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.10543",
+  "title": "The Quality of Lattice Sequences for Arbitrary Sample Size",
+  "authors": [
+    "Larysa Matiukha",
+    "Yuhan Ding",
+    "Fred J. Hickernell"
+  ],
+  "summary": "Extensible lattices are a common choice of nodes for approximating multidimensional integrals by a sample mean, typically using sample sizes of the form $n = b^m$ for a prime base $b$ and non-negative integer $m$. However, a computational time budget or early termination due to hardware failure may prevent us from choosing the preferred number of samples. In this paper, we establish an upper bound on the figure of merit $P_α$ for extensible lattice sequences \\emph{with arbitrary $n$}, derived as a worst-case error in a Banach space setting. We show that although the upper bound on $P_α$ can…",
+  "domain": "stat.CO",
+  "tags": [
+    "stat.CO",
+    "math.NA"
+  ],
+  "published": "2026-06-27",
+  "updated": "2026-06-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

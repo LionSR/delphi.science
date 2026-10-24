@@ -1,0 +1,20 @@
+{
+  "key": "2606.18770",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.18770",
+  "title": "Computing resonances of perturbed Schrödinger equations: Application to Reissner-Norsdtröm-de Sitter black holes",
+  "authors": [
+    "Valentin Arrigoni",
+    "Geneviève Dusson"
+  ],
+  "summary": "We present a numerical method for computing resonances of one-dimensional Schrödinger equations perturbed by a compactly supported potential, via finding zeros of the Wronskian associated with Jost solutions of the reference equation, computed through the resolution of Cauchy problems. All resonances located in a given domain are found efficiently using a defeated Newton algorithm. A key ingredient of the method is the choice of reference potential for which Jost solutions are known, which removes spurious resonances often encountered numerically. We test this method on three types of…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-17",
+  "updated": "2026-06-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

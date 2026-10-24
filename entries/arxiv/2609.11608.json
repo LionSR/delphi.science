@@ -1,0 +1,20 @@
+{
+  "key": "2609.11608",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11608",
+  "title": "Dynamical Clustering and its Limiting Differential Equations",
+  "authors": [
+    "Paul A. Milewski",
+    "Esteban G. Tabak"
+  ],
+  "summary": "A novel, non-parametric clustering algorithm is developed, based on flows in the space of soft assignments $P_k^i$, representing the probability that point $x^i$ belongs to class $k$. These flows have two drivers: a nonlinear reaction component that relaxes $P$ to an evolving Bayesian-like posterior, and a diffusive component that relaxes $P$ to its local average, with a diffusivity $ν$ that adapts dynamically so as to balance the two components. The methodology extends to semi-supervised classification, where a subset of the labels are known. In the limit of infinitely many observations, it…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

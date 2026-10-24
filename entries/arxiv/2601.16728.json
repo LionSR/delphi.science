@@ -1,0 +1,20 @@
+{
+  "key": "2601.16728",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.16728",
+  "title": "A locking-free nodal-based polytopal method for linear elasticity",
+  "authors": [
+    "Jerome Droniou",
+    "Raman Kumar"
+  ],
+  "summary": "This work presents a Discrete de Rham (DDR) numerical scheme for solving linear elasticity problems on general polyhedral meshes, with a focus on preventing volumetric locking in the quasi-incompressible regime. The method is formulated as a nodal-based approach using the lowest-order gradient space of the DDR complex, enriched with scalar face bubble degrees of freedom that effectively capture the normal flux across element faces. This face-bubble enrichment is crucial for ensuring sufficient approximation flexibility of the divergence field, thereby eliminating the {volumetric locking}…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-23",
+  "updated": "2026-01-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

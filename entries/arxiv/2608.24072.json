@@ -1,0 +1,19 @@
+{
+  "key": "2608.24072",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.24072",
+  "title": "Regularized Subjective-Surface Flow with Monotone Reaction: Viscosity Well-Posedness and Convergence",
+  "authors": [
+    "Markjoe O. Uba"
+  ],
+  "summary": "We study the vanishing-regularization limit of the regularized subjective-surface model introduced for touching and dividing cell nuclei and previously analyzed for fixed positive regularization parameters. On a smooth bounded domain $Ω\\subset\\mathbb R^d$, the model is \\[ \\begin{aligned} \\partial_tu^{\\eps,ν} ={}&νΔu^{\\eps,ν} +A_\\eps(\\nabla u^{\\eps,ν}) \\operatorname{div}\\!\\left( G(x)\\frac{\\nabla u^{\\eps,ν}} {A_\\eps(\\nabla u^{\\eps,ν})} \\right) -μR_η(x,u^{\\eps,ν}),\\\\ &A_\\eps(p)=\\sqrt{\\eps^2+|p|^2}, \\qquad R_η(x,r)=Λ(x)H_η(r-q), \\end{aligned} \\] subject to homogeneous Dirichlet data and a…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2610.12336",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.12336",
+  "title": "asdex: Automatic Sparse Differentiation in JAX",
+  "authors": [
+    "Adrian Hill",
+    "Guillaume Dalle"
+  ],
+  "summary": "Many tasks in scientific computing and machine learning require the Jacobian or Hessian matrix of a function. Automatic differentiation (AD) computes these derivatives to machine precision, but materializing a dense $m \\times n$ Jacobian requires $n$ forward-mode or $m$ reverse-mode AD passes, one per column or row. For a large class of functions, each output depends on only a few inputs, making the derivative matrix sparse. Automatic sparse differentiation (ASD) exploits this structure in four steps: detection of the input-agnostic sparsity pattern, coloring of a graph to group columns or…",
+  "domain": "cs.MS",
+  "tags": [
+    "cs.MS",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

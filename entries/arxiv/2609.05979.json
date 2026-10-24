@@ -1,0 +1,21 @@
+{
+  "key": "2609.05979",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.05979",
+  "title": "Robust high-dimensional integration using medians of coarsely scrambled Sobol' sequences",
+  "authors": [
+    "Ziyang Ye",
+    "Chaokun Zhu",
+    "Zexin Pan"
+  ],
+  "summary": "We study the numerical approximation of high-dimensional integrals using randomized quasi-Monte Carlo (RQMC) methods, with a focus on scrambled Sobol' sequences. While asymptotically faster than Monte Carlo, classical RQMC suffers from error bounds that grow exponentially in the dimension $s$, and its root mean squared error (RMSE) convergence rate is generally no better than $O(N^{-3/2})$. To overcome these limitations, we combine two recent developments: Suzuki's coarse scrambling and the median trick. Coarse scrambling randomizes Sobol' sequences according to their generating base…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-05",
+  "updated": "2026-09-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

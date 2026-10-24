@@ -1,0 +1,20 @@
+{
+  "key": "2601.15252",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.15252",
+  "title": "Automating Idealness Proofs for Binary Programs with Application to Rectangle Packing",
+  "authors": [
+    "Jamie Fravel",
+    "Robert Hildebrand"
+  ],
+  "summary": "An integer program is called ideal if its continuous relaxation coincides with its convex hull allowing the problem to be solved as a continuous program and offering substantial computational advantages. Proving idealness analytically can be extraordinarily tedious -- even for small formulations -- such proofs often span many pages of intricate case analysis which motivates the development of automated verification methods. We develop a general-purpose framework for certifying idealness in Mixed Binary Linear Programs (MBLPs), formulating the verification problem as a linear program when the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-21",
+  "updated": "2026-09-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

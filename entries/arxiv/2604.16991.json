@@ -1,0 +1,20 @@
+{
+  "key": "2604.16991",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.16991",
+  "title": "Semi-definite programs for online control of nonlinear systems with stability guarantees",
+  "authors": [
+    "Xiaoyan Dai"
+  ],
+  "summary": "This paper develops a semidefinite-programming-based method for online feedback control of nonlinear systems using a state-dependent representation. We formulate sequences of time-varying SDPs whose optimal solutions jointly yield a stabilizing feedback controller and a Lyapunov certificate satisfying stability conditions and quadratic performance specifications. We further establish compact conditions certifying recursive feasibility of the resulting SDP sequences and derive estimates of the region of attraction. Numerical examples on representative nonlinear systems illustrate the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-04-18",
+  "updated": "2026-04-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

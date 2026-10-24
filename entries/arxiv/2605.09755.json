@@ -1,0 +1,23 @@
+{
+  "key": "2605.09755",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09755",
+  "title": "Accelerating Power Method with Fast Sketching for Stronger Low-Rank Approximation",
+  "authors": [
+    "Shabarish Chenakkod",
+    "Michał Dereziński"
+  ],
+  "summary": "The power method is one of the most fundamental tools for extracting top principal components from data through low-rank matrix approximation. Yet, when the target rank is large, the cost of matrix multiplication associated with this procedure becomes a major bottleneck. We develop an algorithmic and theoretical framework for accelerating the power method using fast sketching, which is a popular paradigm in randomized linear algebra. Our framework leads to simple and provably efficient methods for singular value decomposition, low-rank factorization, and Nyström approximation, which attain…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.DS",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-05-10",
+  "updated": "2026-05-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

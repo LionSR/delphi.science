@@ -1,0 +1,22 @@
+{
+  "key": "2605.30845",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.30845",
+  "title": "MATRO: Metric-Aware Trust-Region Optimization with Fully Quadratic Models",
+  "authors": [
+    "Wei Hu",
+    "Pengcheng Xie",
+    "Ya-Xiang Yuan",
+    "Li Zhang"
+  ],
+  "summary": "Model-based derivative-free trust-region methods build local interpolation models and restrict trial steps to regions where those models are reliable. This paper studies the shape of that region. When an objective is poorly scaled or locally anisotropic, a Euclidean ball can be governed by the steepest local direction and can restrict progress along directions of slow variation. We propose MATRO (Metric-Aware Trust-Region Optimization), a fully quadratic interpolation framework in which the trust region is the ellipsoid s^T M_k s <= Delta_k^2. For any positive definite metric M_k, the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

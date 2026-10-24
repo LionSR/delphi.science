@@ -1,0 +1,28 @@
+{
+  "key": "2601.18592",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.18592",
+  "title": "Global Optimization of Atomic Clusters via Physically-Constrained Tensor Train Decomposition",
+  "authors": [
+    "Konstantin Sozykin",
+    "Nikita Rybin",
+    "Andrei Chertkov",
+    "Anh-Huy Phan",
+    "Ivan Oseledets",
+    "Alexander Shapeev",
+    "Ivan Novikov",
+    "Gleb Ryzhakov"
+  ],
+  "summary": "The global optimization of atomic clusters represents a fundamental challenge in computational chemistry and materials science due to the exponential growth of local minima with system size (i.e., the curse of dimensionality). We introduce a novel framework that overcomes this limitation by exploiting the low-rank structure of potential energy surfaces through Tensor Train (TT) decomposition. Our approach combines two complementary TT-based strategies: the algebraic TTOpt method, which utilizes maximum volume sampling, and the probabilistic PROTES method, which employs generative sampling. A…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cond-mat.mtrl-sci",
+    "cs.NE"
+  ],
+  "published": "2026-01-26",
+  "updated": "2026-01-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

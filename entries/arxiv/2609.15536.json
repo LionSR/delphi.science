@@ -1,0 +1,22 @@
+{
+  "key": "2609.15536",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.15536",
+  "title": "Physics-Guided Conditional Flow Matching with Energy Regularization for Robust PDE Inverse Problems",
+  "authors": [
+    "Yongsheng Chen",
+    "Shuo Lu",
+    "Wei Guo",
+    "Xinghui Zhong"
+  ],
+  "summary": "We consider partial differential equation (PDE) inverse problems from sparse, noisy, and corrupted observations, with the aim of recovering unknown coefficient fields and associated state variables in a mesh-free setting. Under such sparse and corrupted observations, standard physics-informed and generative approaches typically treat all samples indiscriminately and therefore lack a principled mechanism for reconciling physical laws with contaminated data. We address this difficulty with a two-stage flow-matching framework. In the first stage, we develop physics-guided conditional flow…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2605.25395",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.25395",
+  "title": "EMA-Nesterov: Stabilizing Nesterov's Lookahead for Accelerated Deep Learning Optimization",
+  "authors": [
+    "Chung-Yiu Yau",
+    "Dawei Li",
+    "Athanasios Glentis",
+    "Valentyn Boreiko",
+    "Hoi-To Wai",
+    "Mingyi Hong"
+  ],
+  "summary": "Lookahead-based acceleration methods, such as Nesterov's momentum, are widely used in optimization, but they often become unreliable in deep learning training mainly due to stochastic gradient noise and non-convex loss landscapes. In particular, standard lookahead relies on short-horizon update signals (e.g., differences between consecutive iterates), which are inherently noisy and can lead to unstable extrapolation directions. This work revisits Nesterov's acceleration from a trajectory perspective and argues that effective acceleration in deep learning should harness the low-frequency…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-05-25",
+  "updated": "2026-05-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

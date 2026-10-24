@@ -1,0 +1,19 @@
+{
+  "key": "2608.19702",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19702",
+  "title": "Exact hierarchical algorithms for accelerating particle--mesh coupling in sparse-grid particle-in-cell methods",
+  "authors": [
+    "Clément Guillet"
+  ],
+  "summary": "In this paper, we propose two hierarchical algorithms for charge deposition and electric-field interpolation that apply to both the sparse-grid combination technique (SGCT-PIC) and hierarchical sparse-grid (HSG-PIC) particle-in-cell methods. The two algorithms are inspired by the fast multipole method (FMM) and exploit clusters of particles associated with a directed acyclic graph (DAG) of particle-populated boxes to reduce the number of particle--mesh interactions. The particle--mesh interactions are governed by piecewise-polynomial kernels, so that the associated multipole expansions are…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-20",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

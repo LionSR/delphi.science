@@ -1,0 +1,23 @@
+{
+  "key": "2609.32995",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32995",
+  "title": "AltGDA Achieves Global $O(1/T)$ Ergodic Convergence in Matrix Games",
+  "authors": [
+    "Tianlong Nan",
+    "Garud Iyengar",
+    "Christian Kroer",
+    "Shuvomoy Das Gupta"
+  ],
+  "summary": "Alternating gradient descent-ascent (AltGDA) is a simple and practically effective method for solving finite two-player zero-sum matrix games. However, the theory of AltGDA remains limited: existing results either apply only to unconstrained settings or require restrictive assumptions on the equilibrium in constrained settings. We show that AltGDA converges globally at an $O(1/T)$ ergodic rate in every finite two-player zero-sum matrix game. Unlike prior results, our guarantee holds for every initialization and every horizon $T$: the uniform averages of the AltGDA iterates satisfy an…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.GT"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

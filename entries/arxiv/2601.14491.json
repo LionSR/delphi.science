@@ -1,0 +1,21 @@
+{
+  "key": "2601.14491",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.14491",
+  "title": "Certified Real Eigenvalue Location",
+  "authors": [
+    "Baran Solmaz",
+    "Tulay Ayyildiz"
+  ],
+  "summary": "The location of real eigenvalues provides critical insights into the stability and resonance properties of physical systems. This paper presents a hybrid symbolic numeric approach for certified real eigenvalue localization. Our method combines Gershgorin disk analysis with Hermite matrix certification to compute certified intervals that enclose the real eigenvalues. These intervals can be further refined through bisectionlike procedures to achieve the desired precision. The proposed approach delivers reliable interval certifications while preserving computational efficiency. The…",
+  "domain": "cs.SC",
+  "tags": [
+    "cs.SC",
+    "math.AG"
+  ],
+  "published": "2026-01-20",
+  "updated": "2026-01-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

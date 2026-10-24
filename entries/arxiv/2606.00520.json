@@ -1,0 +1,21 @@
+{
+  "key": "2606.00520",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.00520",
+  "title": "In-Expectation Convergence of Stochastic Gradient Methods under Heavy-Tailed Noise",
+  "authors": [
+    "Zijian Liu"
+  ],
+  "summary": "Many stochastic gradient methods are believed not to converge when the noise in stochastic gradients has only a finite $p$-th moment for $p\\in\\left(1,2\\right)$, a setting known as the heavy-tailed noise assumption. However, some recent studies have found that Stochastic Gradient Descent ($\\textsf{SGD}$), without any modification to its update rule, can surprisingly converge in expectation for convex problems with bounded domains, highlighting the potential of classical stochastic gradient methods. Inspired by this recent progress, we provide a comprehensive study of stochastic optimization…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-05-30",
+  "updated": "2026-05-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

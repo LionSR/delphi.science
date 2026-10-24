@@ -1,0 +1,20 @@
+{
+  "key": "2602.16874",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.16874",
+  "title": "Domain Decomposition for Mean Curvature Flow of Surface Polygonal Meshes",
+  "authors": [
+    "Lenka Ptackova",
+    "Michal Outrata"
+  ],
+  "summary": "We examine the use of domain decomposition for potentially more efficient mean curvature flow of surface meshes, whose faces are arbitrary simple polygons. We first test traditional domain decomposition methods with and without overlap of deconstructed domains. And we present adapted Robin transmission conditions of optimized Schwarz method. We then analyze the resulting smoothing from the point of view of shape quality and texture deformation. By decomposing the initial mesh into two sub-meshes, we solve two smaller boundary value problems instead of one big problem, and we can process…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-18",
+  "updated": "2026-02-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

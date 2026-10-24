@@ -1,0 +1,21 @@
+{
+  "key": "2603.25657",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.25657",
+  "title": "Instance-optimal stochastic convex optimization: Can we improve upon sample-average and robust stochastic approximation?",
+  "authors": [
+    "Liwei Jiang",
+    "Ashwin Pananjady"
+  ],
+  "summary": "We study the unconstrained minimization of a smooth and strongly convex population loss function under a stochastic oracle that introduces both additive and multiplicative noise; this is a canonical and widely-studied setting that arises across operations research, signal processing, and machine learning. We begin by showing that standard approaches such as sample average approximation and robust (or averaged) stochastic approximation can lead to suboptimal -- and in some cases arbitrarily poor -- performance with realistic finite sample sizes. In contrast, we demonstrate that a carefully…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-03-26",
+  "updated": "2026-03-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2608.20633",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.20633",
+  "title": "A new analysis of the randomly pivoted Cholesky algorithm",
+  "authors": [
+    "Ethan N. W. Epperly"
+  ],
+  "summary": "The randomly pivoted Cholesky algorithm is one of the leading methods for computing a low-rank approximation to a large positive-semidefinite matrix. However, while it consistently achieves accuracy comparable to or better than competing methods of its type in experiments, its theoretical analysis lags somewhat behind other methods. This paper closes this gap, proving that randomly pivoted Cholesky produces an approximation with expected error within a $1+\\varepsilon$ factor of the optimal rank-$r$ approximation in $\\mathcal{O}(r/\\varepsilon + r\\sqrt{\\log r})$ steps. This result nearly…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.DS",
+    "stat.CO"
+  ],
+  "published": "2026-08-21",
+  "updated": "2026-08-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

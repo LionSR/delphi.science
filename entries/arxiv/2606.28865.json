@@ -1,0 +1,21 @@
+{
+  "key": "2606.28865",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28865",
+  "title": "Fast unified evaluation of layer and volume potentials for the 2D modified Helmholtz equation",
+  "authors": [
+    "Edith Frisk Gärtner",
+    "Fredrik Fryklund",
+    "Anna-Karin Tornberg"
+  ],
+  "summary": "We present a fast and accurate potential theory-based method for the two-dimensional modified Helmholtz equation, treating the involved singular and nearly singular layer evaluations together with volume potentials within a single computational framework. The method is based on a decomposition of the free-space Green's function into a short-range local part and a smooth long-range part. The long-range contribution is evaluated efficiently using the non-uniform fast Fourier transform (NUFFT), while the local contribution is treated by asymptotic expansions. For the layer potentials, an…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-27",
+  "updated": "2026-06-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2603.04637",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.04637",
+  "title": "Elliptic integral identities derived from Coxeter's integrals",
+  "authors": [
+    "Jean-Christophe Pain"
+  ],
+  "summary": "We revisit the classical integrals introduced by Coxeter, not to recalculate their well-known exact values, but to use them as a tool to derive elliptic integral identities. By embedding Coxeter's first integral into a one-parameter family $$ I(λ)=\\int_{0}^{π/2} \\arccos\\!\\left(\\frac{\\cosθ}{1+λ\\cosθ}\\right)\\,dθ, $$ and differentiating with respect to the parameter \\(λ\\), we show that the derivative $I'(λ)$ can be expressed as an elliptic-type integral. Integrating $I'(λ)$ between 0 and 2 yields the identity $$ \\int_0^2 \\int_0^{π/2} \\frac{\\cos^2θ} {(1+s\\cosθ)\\sqrt{(1+s\\cosθ)^2-\\cos^2θ}} \\,dθ\\,…",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA"
+  ],
+  "published": "2026-03-04",
+  "updated": "2026-03-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

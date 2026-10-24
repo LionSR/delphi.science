@@ -1,0 +1,24 @@
+{
+  "key": "2601.15500",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.15500",
+  "title": "Low-Dimensional Adaptation of Rectified Flow: A Diffusion and Stochastic Localization Perspective",
+  "authors": [
+    "Saptarshi Roy",
+    "Alessandro Rinaldo",
+    "Purnamrita Sarkar"
+  ],
+  "summary": "In recent years, Rectified flow (RF) has gained considerable popularity largely due to its generation efficiency and state-of-the-art performance. In this paper, we investigate the degree to which RF automatically adapts to the intrinsic low dimensionality of the support of the target distribution to accelerate sampling. We show that, using a carefully designed choice of the time-discretization scheme and with sufficiently accurate drift estimates, the RF sampler enjoys an iteration complexity of order $O(k/\\varepsilon)$ (up to log factors), where $\\varepsilon$ is the precision in total…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.AI",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-01-21",
+  "updated": "2026-02-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

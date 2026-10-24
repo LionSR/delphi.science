@@ -1,0 +1,22 @@
+{
+  "key": "2605.07634",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.07634",
+  "title": "Robust stochastic first order methods in heavy-tailed noise via medoid mini-batch gradient sampling",
+  "authors": [
+    "Manojlo Vukovic",
+    "Dusan Jakovetic"
+  ],
+  "summary": "We consider a first order stochastic optimization framework where, at each iteration, $K$ independent identically distributed (i.i.d.) data point samples are drawn, based on which stochastic gradients can be queried. We allow gradient noise to be heavy-tailed, with possibly infinite variances. For the considered heavy-tailed setting, many algorithmic variants have recently been proposed based on gradient clipping or other nonlinear operators (e.g., normalization) applied over noisy gradients. In this paper, we take an alternative approach and propose a novel stochastic first order method…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-05-08",
+  "updated": "2026-05-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

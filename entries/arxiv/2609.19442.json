@@ -1,0 +1,24 @@
+{
+  "key": "2609.19442",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.19442",
+  "title": "Site-scale, Multi-resolution WRF Wind Modeling with Observational Nudging for Methane Emission Monitoring in the Permian Basin",
+  "authors": [
+    "Ehsan Kharazmi",
+    "Erin Menezes",
+    "George Karniadakis",
+    "Anantha Sundaram",
+    "Arash Fathi"
+  ],
+  "summary": "Accurate methane source localization and emission-rate estimation at oil and gas facilities require wind fields that resolve site-scale spatial and temporal variability, which cannot be characterized by a single anemometer or coarse operational weather products. We develop a multiscale Weather Research and Forecasting (WRF) framework for a Permian Basin facility that dynamically downscales hourly, 3 km High-Resolution Rapid Refresh (HRRR) fields through four nested domains with grid spacings of 3 km, 1 km, 200 m, and 40 m. The two outer domains use planetary-boundary-layer parameterization,…",
+  "domain": "math-ph",
+  "tags": [
+    "math-ph",
+    "math.NA"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

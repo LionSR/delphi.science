@@ -1,0 +1,23 @@
+{
+  "key": "2601.13519",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.13519",
+  "title": "Small Gradient Norm Regret for Online Convex Optimization",
+  "authors": [
+    "Wenzhi Gao",
+    "Chang He",
+    "Madeleine Udell"
+  ],
+  "summary": "This paper introduces a new problem-dependent regret measure for online convex optimization with smooth losses. The notion, which we call the $G^\\star$ regret, depends on the cumulative squared gradient norm evaluated at the decision in hindsight. We show that the $G^\\star$ regret strictly refines the existing $L^\\star$ (small loss) regret, and that it can be arbitrarily sharper when the losses have vanishing curvature around the hindsight decision. We establish upper and lower bounds on the $G^\\star$ regret and extend our results to dynamic regret and bandit settings. As a byproduct, we…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-01-20",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

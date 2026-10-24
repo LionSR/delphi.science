@@ -1,0 +1,24 @@
+{
+  "key": "2607.09309",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.09309",
+  "title": "A Polynomial-Time Algorithm for Coloring Perfect Graphs Based on Walk Counting",
+  "authors": [
+    "Amir Ali Ahmadi",
+    "Pravesh K. Kothari",
+    "Yukai Tang"
+  ],
+  "summary": "We present a polynomial-time algorithm for optimally coloring perfect graphs that is based entirely on graph-theoretic operations. At its core, the algorithm decides whether a perfect graph contains a clique of a given size by iteratively counting walks in the graph with certain weights assigned to its edges and nonedges. These weights are initialized according to a uniform scheme and then updated in each iteration based on the walk counts from the previous iteration.",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.DM",
+    "math.CO",
+    "math.OC"
+  ],
+  "published": "2026-07-10",
+  "updated": "2026-07-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2606.30829",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.30829",
+  "title": "Joint Chance Constrained Safe-Optimal Control",
+  "authors": [
+    "Niklas Schmid",
+    "Jared Miller",
+    "Tristan Zeller",
+    "Marta Fochesato",
+    "Tobias Sutter",
+    "John Lygeros"
+  ],
+  "summary": "We consider the finite-time optimal control of stochastic systems subject to a probabilistic constraint on the trajectories' safety. Such formulations are known as joint chance constrained optimal control problems. The common practice is to jointly minimise the expected cost of all trajectories, safe and unsafe. This leads to policies which invite constraint violations to exploit low-cost unsafe trajectories. When constraints represent states of critical failure, such behaviour is undesirable. We demonstrate that this behaviour can be overcome by only minimizing the expected cost of safe…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

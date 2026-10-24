@@ -1,0 +1,21 @@
+{
+  "key": "2606.25169",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.25169",
+  "title": "Laplace-Fisher Gate Identities for Optimal Matrix-Gated Blended Score Estimation",
+  "authors": [
+    "Alois Duston",
+    "Tan Bui-Thanh"
+  ],
+  "summary": "Sampling from an unnormalized target density by reversing an Ornstein-Uhlenbeck diffusion requires the score of each noise-perturbed marginal law. Two exact identities are available: Tweedie's identity and a target-score identity, each yielding unbiased finite-reference score estimators for the OU-marginal score. Score estimators induced by scalar blends of Tweedie and TSI score estimators can reduce variance, but they are too rigid for singular or strongly anisotropic targets. We formulate blended score estimation as a conditional risk-minimization problem over matrix valued blending…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.LG"
+  ],
+  "published": "2026-06-23",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

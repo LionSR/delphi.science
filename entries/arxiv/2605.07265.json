@@ -1,0 +1,23 @@
+{
+  "key": "2605.07265",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.07265",
+  "title": "EPTAS for Hard Graph Cut Problems for Dense Graphs",
+  "authors": [
+    "Kaisei Deguchi",
+    "Ken-ichi Kawarabayashi",
+    "Hiroaki Mori"
+  ],
+  "summary": "Everywhere-$δ$-dense graphs are defined as graphs on $n$ vertices in which every vertex has degree at least $δn$ for some constant $δ> 0$. Approximation schemes are vital for handling NP-hard optimization problems, but for many graph cut problems, existing PTAS algorithms often suffer from running times of $n^{f(1/\\varepsilon)}$. In this paper, we bring PTASs down to EPTASs for several fundamental minimization problems on everywhere-$Ω(1)$-dense graphs. Specifically, we present the first Efficient Polynomial-Time Approximation Scheme (EPTAS), running in time $f(1/\\varepsilon)n^{O(1)}$, for…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-05-08",
+  "updated": "2026-05-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

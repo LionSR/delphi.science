@@ -1,0 +1,22 @@
+{
+  "key": "2602.06931",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.06931",
+  "title": "On micromodes in Bayesian posterior distributions and their implications for MCMC",
+  "authors": [
+    "Sanket Agrawal",
+    "Sebastiano Grazzi",
+    "Gareth O. Roberts"
+  ],
+  "summary": "We investigate the existence and severity of local modes in posterior distributions from Bayesian analyses. These are known to occur in posterior tails resulting from heavy-tailed error models such as those used in robust regression. To understand this phenomenon clearly, we consider in detail location models with Student-$t$ errors in dimension $d$ with sample size $n$. For sufficiently heavy-tailed data-generating distributions, extreme observations become increasingly isolated as $n \\to \\infty$. We show that each such observation induces a unique local posterior mode with probability…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.CO"
+  ],
+  "published": "2026-02-06",
+  "updated": "2026-02-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

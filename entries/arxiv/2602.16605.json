@@ -1,0 +1,24 @@
+{
+  "key": "2602.16605",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.16605",
+  "title": "Fast Shortest Path in Graphs With Sparse Signed Tree Models and Applications",
+  "authors": [
+    "Édouard Bonnet",
+    "Colin Geniet",
+    "Eun Jung Kim",
+    "Sungmin Moon"
+  ],
+  "summary": "A signed tree model of a graph $G$ is a compact binary structure consisting of a rooted binary tree whose leaves are bijectively mapped to the vertices of $G$, together with 2-colored edges $xy$, called transversal pairs, interpreted as bicliques or anti-bicliques whose sides are the leaves of the subtrees rooted at $x$ and at $y$. We design an algorithm that, given such a representation of an $n$-vertex graph $G$ with $p$ transversal pairs and a source $v \\in V(G)$, computes a shortest-path tree rooted at $v$ in $G$ in time $O(p \\log n)$. A wide variety of graph classes are such that for…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-02-18",
+  "updated": "2026-02-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

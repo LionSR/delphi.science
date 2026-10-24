@@ -1,0 +1,21 @@
+{
+  "key": "2610.16986",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16986",
+  "title": "A quantitative CLT for the zeros of random trigonometric polynomials",
+  "authors": [
+    "Ao Huang",
+    "Zhonggen Su",
+    "Xiaolin Wang"
+  ],
+  "summary": "Let $X_N(t)$, $t\\in[0,π]$, be a stationary Gaussian trigonometric polynomial, and let $\\mathcal Z_N$ denote the number of zeros of the rescaled process $X_N(t/N)$ on $[0,Nπ]$. We establish the quantitative central limit theorem \\[ d_{\\mathrm W}\\left( \\frac{\\mathcal Z_N-\\mathbb E[\\mathcal Z_N]} {\\sqrt{\\operatorname{Var}(\\mathcal Z_N)}},Z\\right) \\le C\\frac{(\\log N)^2}{\\sqrt N}, \\] where $Z$ is standard Gaussian and $d_{\\mathrm W}$ denotes the Wasserstein-1 distance. The proof combines Ornstein--Uhlenbeck regularization of the singular Kac representation with direct estimates of the covariance…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

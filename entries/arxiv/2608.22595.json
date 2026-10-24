@@ -1,0 +1,24 @@
+{
+  "key": "2608.22595",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.22595",
+  "title": "Sparse Additive Off-Policy Evaluation for Reinforcement Learning with Potentially Limited Number of Trajectories",
+  "authors": [
+    "Tuoyi Zhao",
+    "Chengchun Shi",
+    "Zhengling Qi",
+    "Lan Wang"
+  ],
+  "summary": "We develop a new framework for flexible, nonlinear, and interpretable off-policy evaluation for infinite-horizon reinforcement learning. To handle large state spaces and support transparent decision-making, we model the Q-function using a nonlinear function class with a sparse additive structure. We derive high-probability finite-sample error bounds for estimating the value function of a target policy and show that the bounds depend only logarithmically on the ambient dimension $d$, thereby alleviating the curse of dimensionality. In contrast to most existing theory for off-policy…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-08-23",
+  "updated": "2026-08-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

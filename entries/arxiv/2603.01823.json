@@ -1,0 +1,22 @@
+{
+  "key": "2603.01823",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.01823",
+  "title": "On a fractional stochastic heat equation arising from the disordered pinning model",
+  "authors": [
+    "Zi'an Li",
+    "Jian Song",
+    "Ran Wei",
+    "Hang Zhang"
+  ],
+  "summary": "We study the mild Skorohod solution to the following fractional stochastic heat equation on $\\mathbb{R}$: \\begin{equation} \\begin{cases} \\partial_t u(t,x)=-(-Δ)^{ρ/2} u(t,x) +βu(t,x)δ_0(x)ξ(t),\\\\ u(0,\\cdot)=u_0(x), \\end{cases} \\end{equation} where $-(-Δ)^{ρ/2}$ with $ρ\\in(0,2]$ is the fractional Laplacian and $ξ$ is a Gaussian noise with covariance $\\mathbb{E}[ξ(t) ξ(s)]=|t-s|^{2H-2}$ for $H\\in(\\frac12, 1]$. This equation with $ρ\\in(1,2]$ arises naturally in the study of the disordered pinning model. We show that the equation admits a local $L^2$-solution when $ρ= 2$, whereas, for $ρ\\in…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-03-02",
+  "updated": "2026-03-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

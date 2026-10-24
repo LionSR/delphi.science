@@ -1,0 +1,21 @@
+{
+  "key": "2605.09968",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09968",
+  "title": "Consolidation-Expansion Operator Mechanics:A Unified Framework for Adaptive Learning",
+  "authors": [
+    "Debashis Guha"
+  ],
+  "summary": "Every adaptive learning system must alternate between two operations: consolidating what it already knows and expanding into new evidence. We propose \\emph{Consolidation-Expansion Operator Mechanics} (OpMech), a framework that makes this structure precise. The central object is the \\emph{order-gap} $\\Ogap(θ; e)$, the degree to which a consolidation operator~$Q$ and an expansion operator~$P_e$ fail to commute at a given knowledge state. Because the order-gap is computable from the system's own trajectory, it serves as a real-time control signal: large values indicate that the system is still…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

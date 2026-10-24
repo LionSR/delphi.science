@@ -1,0 +1,21 @@
+{
+  "key": "2603.14193",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.14193",
+  "title": "A Robust Learning-Based Method for the Helmholtz Equation in Dissipative Media and Complex Domains",
+  "authors": [
+    "Lifu Song",
+    "Tingyue Li",
+    "Jin Cheng"
+  ],
+  "summary": "To mitigate pollution effects in high-frequency Helmholtz problems, Learning-based Numerical Methods (LbNM) reconstruct solution operators using complete systems of exact solutions. However, the previously used fundamental-solution (FS) basis suffers from instability in dissipative media and requires sensitive geometric tuning. In this paper, we propose a robust alternative using a Bessel basis (BB). From a learning theory perspective, the BB forms a complete hypothesis space of standing waves, ensuring immunity to dissipation-induced signal loss. We establish a convergence result that…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-15",
+  "updated": "2026-03-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

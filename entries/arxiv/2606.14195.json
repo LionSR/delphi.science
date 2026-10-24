@@ -1,0 +1,22 @@
+{
+  "key": "2606.14195",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.14195",
+  "title": "Structured Noise Adaptation for Sequential Bayesian Filtering with Embedded Latent Transfer Operators",
+  "authors": [
+    "Naichang Ke",
+    "Pongpisit Thanasutives",
+    "Yoshinobu Kawahara"
+  ],
+  "summary": "Kalman filters based on the Embedded Latent Transfer Operators (ELTO) emerge as novel statistical tools for sequential state estimation. However, a critical limitation stems from their use of simplified noise models, which fail to dynamically adapt to non-stationary processes. To address this limitation, we introduce an ELTO-based Bayesian filtering approach with a new structured parameterization for the filter's noise model. This parameterization enables structured noise adaptation, which couples the data-driven learning of an optimal time-invariant noise model with dynamic parameter…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-06-12",
+  "updated": "2026-06-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

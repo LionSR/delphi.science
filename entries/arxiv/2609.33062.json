@@ -1,0 +1,21 @@
+{
+  "key": "2609.33062",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.33062",
+  "title": "A Spectral Model-Informed Neural Network for Inverse Source Problems",
+  "authors": [
+    "Dinh-Liem Nguyen",
+    "Nhung H. Nguyen",
+    "Aravinth Ravi"
+  ],
+  "summary": "In this paper, we propose an unsupervised, two-step model-informed deep learning framework for solving the inverse source problem. In the first step, boundary measurement data are transformed into an imaging function that encodes information about the shape and location of the unknown source. Leveraging this information, we derive a Fourier-based model equation in the spectral domain that relates the imaging function to the Fourier coefficients of the source function. In the second step, this model equation is incorporated into the training of a model-informed neural network to recover the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-27",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

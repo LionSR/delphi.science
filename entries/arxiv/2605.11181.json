@@ -1,0 +1,31 @@
+{
+  "key": "2605.11181",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11181",
+  "title": "Muon is Not That Special: Random or Inverted Spectra Work Just as Well",
+  "authors": [
+    "Zakhar Shumaylov",
+    "Nathaël Da Costa",
+    "Peter Zaika",
+    "Bálint Mucsányi",
+    "Alex Massucco",
+    "Yoav Gelberg",
+    "Carola-Bibiane Schönlieb",
+    "Yarin Gal",
+    "Philipp Hennig"
+  ],
+  "summary": "The recent empirical success of the Muon optimizer has renewed interest in non-Euclidean optimization, typically justified by similarities with second-order methods, and linear minimization oracle (LMO) theory. In this paper, we challenge this geometric narrative through three contributions, demonstrating that precise geometric structure is not the key factor affecting optimization performance. First, we introduce Freon, a family of optimizers based on Schatten (quasi-)norms, powered by a novel, provably optimal QDWH-based iterative approximation. Freon naturally interpolates between SGD and…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.NA",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

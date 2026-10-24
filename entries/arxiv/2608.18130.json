@@ -1,0 +1,23 @@
+{
+  "key": "2608.18130",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.18130",
+  "title": "Online Bipartite Matching with Reusable Capacity under Non-Stationary Rewards",
+  "authors": [
+    "Xi Chen",
+    "Shixin Wang",
+    "Bingkun Zhou",
+    "Yuan Zhou"
+  ],
+  "summary": "We study online bipartite matching with reusable server capacity and non-stationary rewards. Jobs arrive sequentially, reveal compatible servers, reward rates, and processing durations, and must be accepted or rejected irrevocably. An accepted job occupies one unit of server capacity only during its processing interval, so an assignment may displace an unknown sequence of future jobs. Existing guarantees are typically calibrated by a global reward range, which can become arbitrarily large when rewards drift over a long horizon. We instead impose a locally bounded reward condition: reward…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-07-24",
+  "updated": "2026-07-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

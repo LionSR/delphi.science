@@ -1,0 +1,27 @@
+{
+  "key": "2603.20587",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20587",
+  "title": "Neural collapse in the orthoplex regime",
+  "authors": [
+    "James Alcala",
+    "Rayna Andreeva",
+    "Vladimir A. Kobzar",
+    "Dustin G. Mixon",
+    "Sanghoon Na",
+    "Shashank Sule",
+    "Yangxinyu Xie"
+  ],
+  "summary": "When training a neural network for classification, the feature vectors of the training set are known to collapse to the vertices of a regular simplex, provided the dimension $d$ of the feature space and the number $n$ of classes satisfies $n\\leq d+1$. This phenomenon is known as neural collapse. For other applications like language models, one instead takes $n\\gg d$. Here, the neural collapse phenomenon still occurs, but with different emergent geometric figures. We characterize these geometric figures in the orthoplex regime where $d+2\\leq n\\leq 2d$. The techniques in our analysis primarily…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.IT",
+    "math.MG"
+  ],
+  "published": "2026-03-21",
+  "updated": "2026-03-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

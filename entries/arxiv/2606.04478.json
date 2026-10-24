@@ -1,0 +1,21 @@
+{
+  "key": "2606.04478",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.04478",
+  "title": "A novel class of high-order uniformly accurate exponential integrators with local linear extension for the charged-particle dynamics under strong magnetic field",
+  "authors": [
+    "Lina Wang",
+    "Bin Wang",
+    "Beibei Zhu"
+  ],
+  "summary": "In this paper, we develop a novel class of high-order uniformly accurate exponential integrators for charged-particle dynamics under a strong magnetic field. The small parameter $0<\\varepsilon\\ll 1$ induces rapid temporal oscillations, rendering traditional numerical methods prohibitively expensive due to severe step-size restrictions. To address this issue, a linearization technology that introduces auxiliary polynomial variables is employed to recast the original charged-particle dynamics as a higher-dimensional system. Classical exponential integrators are subsequently applied to this…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-03",
+  "updated": "2026-06-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

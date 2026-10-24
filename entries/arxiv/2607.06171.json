@@ -1,0 +1,21 @@
+{
+  "key": "2607.06171",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06171",
+  "title": "The singleton hypergraph is extremal for the Isolation Lemma",
+  "authors": [
+    "Vance Faber",
+    "David G. Harris"
+  ],
+  "summary": "Let $H$ be an inclusion-free hypergraph on $n$ vertices. A weight assignment $w:[n]\\to[d]$ is isolating if there is a unique edge $e$ whose weight $w(e) = \\sum_{i \\in e} w(i)$ is minimum. We show that the number of isolating weight assignments is at least $$ n\\sum_{j=0}^{d-1} j^{n-1}, $$ a bound which is attained with equality by the hypergraph consisting of the $n$ singleton edges. This proves the conjecture stated in Faber & Harris (2018). We also prove the bound for a more general class of edge-weight objectives, including arbitrary edge offsets.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DS"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

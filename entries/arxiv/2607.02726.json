@@ -1,0 +1,20 @@
+{
+  "key": "2607.02726",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.02726",
+  "title": "Mitigating Numerical Stiffness in Least-Squares Formulations of Elliptic PDEs for Physics-Informed Neural Networks",
+  "authors": [
+    "Phil-Alexander Hofmann",
+    "Michael Hecht"
+  ],
+  "summary": "We present theoretical insights into $H^{-1}$ residual loss formulations of physics-informed neural networks (PINNs) for learning solutions of partial differential equations (PDEs). Standard PINN formulations use a multi-term loss functional consisting of interior and boundary loss terms that are based on $L^2$-residuals and discretized as mean square errors (MSE). Imbalanced magnitudes of these terms cause numerical stiffness phenomena, resulting in ill-conditioning and slow convergence. In this work, we analyze discretizations of the $H^{-1}$-norm that are used in the context of elliptic…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-02",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

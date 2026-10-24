@@ -1,0 +1,21 @@
+{
+  "key": "2609.18026",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.18026",
+  "title": "MLegS: A modern mapped Legendre spectral method solver for unbounded domains with parallelization",
+  "authors": [
+    "Sangjoon Lee",
+    "Jinge Wang"
+  ],
+  "summary": "MLegS is an open-source Modern Fortran code package for solving linear and nonlinear time-dependent partial differential equations on radially unbounded domains. It builds on an earlier in-house prototype, recasting it as a modular solver with a unified interface for fields, transforms, and spectral operators. Within this framework, the numerical formulation maps $0\\leq r<\\infty$ onto a finite interval, where associated Legendre functions provide the radial basis, while Fourier series represent the periodic azimuthal and axial directions. The mapped radial basis represents radial infinity…",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "math.NA"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

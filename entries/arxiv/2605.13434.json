@@ -1,0 +1,24 @@
+{
+  "key": "2605.13434",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.13434",
+  "title": "Rescaled Asynchronous SGD: Optimal Distributed Optimization under Data and System Heterogeneity",
+  "authors": [
+    "Ammar Mahran",
+    "Artavazd Maranjyan",
+    "Peter Richtárik"
+  ],
+  "summary": "Asynchronous stochastic gradient descent (ASGD) is a standard way to exploit heterogeneous compute resources in distributed learning: instead of forcing fast workers to wait for slow ones, the server updates the model whenever a gradient arrives. Vanilla ASGD applies each arriving gradient with the same weight. When local data distributions are heterogeneous, this becomes problematic: faster workers contribute more updates, and we show theoretically that the method is biased toward a frequency-weighted average of the local objectives rather than the desired global objective. Existing…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.DC",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

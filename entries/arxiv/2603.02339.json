@@ -1,0 +1,21 @@
+{
+  "key": "2603.02339",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.02339",
+  "title": "A Computationally Efficient and Human Implementable Minimum-lap-time Control Policy for Energy-limited Race Cars",
+  "authors": [
+    "Erik van den Eshof",
+    "Wytze de Vries",
+    "Mauro Salazar"
+  ],
+  "summary": "This paper presents a provably optimal, real-time capable energy management policy for race cars that provides simple human-driver-implementable control cues. Specifically, we first formulate the energy-constrained minimum-lap-time control problem via Pontryagin's Minimum Principle (PMP) and derive the optimal policy and costate dynamics using Karush-Kuhn-Tucker (KKT) optimality conditions. We show that the optimal control policy follows a bang-bang structure that is easily implementable by a human driver, eliminating the need for potentially dangerous active throttle pedal overwrites or…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-02",
+  "updated": "2026-03-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

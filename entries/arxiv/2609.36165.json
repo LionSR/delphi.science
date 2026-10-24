@@ -1,0 +1,22 @@
+{
+  "key": "2609.36165",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.36165",
+  "title": "Tensor-Train Compressed Separable PINNs: A Curvature-Aware Optimization Framework for Parametric PDEs in High Dimensions",
+  "authors": [
+    "Denis Korolev",
+    "Martin Eigel"
+  ],
+  "summary": "In this work, we develop a second-order optimization framework for physics-informed neural networks (PINNs) applied to high-dimensional parametric partial differential equations (PDEs). The framework is built on the Gauss--Newton pullback metric, which provides an operator-informed notion of curvature in parameter space and connects the method to the broader family of natural gradient schemes. We show that, for coordinate-separable neural architectures and linear differential operators (or linearized operators in the nonlinear case) admitting a finite separable representation, the residual…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

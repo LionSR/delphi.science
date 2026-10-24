@@ -1,0 +1,22 @@
+{
+  "key": "2607.10809",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10809",
+  "title": "A compact simple HWENO scheme with ADER time discretization for hyperbolic conservation laws II: triangular meshes",
+  "authors": [
+    "Dongmi Luo",
+    "Zhuang Zhao",
+    "Jianxian Qiu",
+    "Yibing Chen"
+  ],
+  "summary": "A compact and high order HWENO scheme using ADER (Arbitrary high order using DERivatives) time discretization is developed for hyperbolic conservation laws on the triangular mesh, which is the extension of the work on the structured mesh (Luo et. al. (2024) \\cite{luo2023}). The Lax-Wendroff procedure is employed to convert time derivatives to spatial derivatives. Thanks to this, the cell averages of the derivatives of the solution can be obtained by the time accurate solution as Gaussian points along the cell interfaces through the Green-Gauss theorem instead of by the evolution solution…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-12",
+  "updated": "2026-07-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

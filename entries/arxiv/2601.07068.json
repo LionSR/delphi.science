@@ -1,0 +1,21 @@
+{
+  "key": "2601.07068",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.07068",
+  "title": "The Greedy Algorithm for Dissociated Sets",
+  "authors": [
+    "Sayan Dutta"
+  ],
+  "summary": "A set $\\mathcal S\\subset \\mathbb N$ is said to be a subset-sum-distinct or dissociated if all of its finite subsets have different sums. Alternately, an equivalent classification is if any equality of the form $$\\sum_{s\\in \\mathcal S} \\varepsilon_s \\cdot s =0$$ where $\\varepsilon_s \\in \\{-1,0,+1\\}$ implies that all the $\\varepsilon_s$'s are $0$. For a dissociated set $\\mathcal S$, we prove that for $c_\\ast = \\frac 12 \\log_2 \\left(\\frac π2\\right)$ and any $c_\\ast-1<C<c_\\ast$, we have $$\\mathcal S(n) \\,:=\\, \\mathcal S\\cap [1,n] \\,\\le\\, \\log_2 n +\\frac 12 \\log_2\\log_2 n + C$$ for all $n\\in…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.NT",
+    "math.PR"
+  ],
+  "published": "2026-01-11",
+  "updated": "2026-02-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

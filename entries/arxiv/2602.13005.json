@@ -1,0 +1,19 @@
+{
+  "key": "2602.13005",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.13005",
+  "title": "Optimizing Initial Feature-Mapping Variables from Given Designs via Tracking",
+  "authors": [
+    "Patrick Jung"
+  ],
+  "summary": "A feature-mapping framework for inverse reconstruction of density-based topology optimization results is proposed. Unlike SIMP, whose voxelized outputs are hard to interpret or reuse, the method represents designs with high-level geometric primitives mapped to a fixed analysis grid. Capsule-shaped bars (endpoints plus radius) are used, with closed-form signed distances and smooth transition functions providing derivatives up to second order. Differentiable pseudo-densities are aggregated with smooth operators, enabling gradient-based optimization with exact Hessians. Robustness is improved…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-13",
+  "updated": "2026-02-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

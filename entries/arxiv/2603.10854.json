@@ -1,0 +1,23 @@
+{
+  "key": "2603.10854",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.10854",
+  "title": "Numerical analysis for leaky-integrate-fire networks under Euler-Maruyama",
+  "authors": [
+    "Xu'an Dou",
+    "Frank Chen",
+    "Kevin K Lin",
+    "Zhuo-Cheng Xiao"
+  ],
+  "summary": "Leaky integrate-and-fire (LIF) networks are standard reduced models for spike-based neural dynamics and a natural substrate for neuromorphic computation. We study time-driven Euler--Maruyama simulation of current-based LIF networks with exponentially decaying synapses and instantaneous resets. Because diffusion acts through the synaptic current rather than directly through the voltage, numerical error is concentrated at threshold events. It is therefore driven by spike-time perturbations and by grid-induced spike-count mismatch. For layered feedforward networks, under suitable density, rate,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.PR"
+  ],
+  "published": "2026-03-11",
+  "updated": "2026-04-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

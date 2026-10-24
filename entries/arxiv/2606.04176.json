@@ -1,0 +1,22 @@
+{
+  "key": "2606.04176",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.04176",
+  "title": "Low-rank Distributional Matrix Completion",
+  "authors": [
+    "Jiayi Wang",
+    "Raymond K. W. Wong"
+  ],
+  "summary": "We study a distributional generalization of the matrix completion problem in which each entry of the target matrix is a probability distribution rather than a scalar. In this setting, only a subset of matrix entries is observed, and even for observed entries, the underlying distributions are not directly accessible; instead, we observe finitely many samples drawn from them. To represent distributional entries, we employ kernel mean embeddings and introduce a notion of Tucker rank for distribution-valued matrices to capture their low-rank structure. The infinite-dimensional nature of kernel…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-06-02",
+  "updated": "2026-06-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

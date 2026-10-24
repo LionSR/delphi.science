@@ -1,0 +1,23 @@
+{
+  "key": "2609.09295",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.09295",
+  "title": "Support Discovery With Iteratively Reweighted Least Squares for Fixed-Charge Network Flow",
+  "authors": [
+    "Sindura Saraswathi",
+    "Christian Kümmerle"
+  ],
+  "summary": "The fixed-charge network flow problem (FCNFP) couples continuous flow allocation with discrete arc-activation decisions, making it a canonical but computationally challenging model for a variety of network design and resource allocation problems. Exact mixed-integer linear programming formulations capture the fixed-charge structure faithfully, but often become difficult to solve on large networks. We propose a scalable continuous-optimization algorithm for large-scale single-commodity FCNFP based on an iteratively reweighted least-squares (IRLS) framework. The method replaces the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

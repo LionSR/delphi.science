@@ -1,0 +1,21 @@
+{
+  "key": "2607.24600",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.24600",
+  "title": "Adaptive Multiphysics Coupling for Hyperbolic Systems",
+  "authors": [
+    "Simon Candelaresi",
+    "Erik Faulhaber",
+    "Michael Schlottke-Lakemper"
+  ],
+  "summary": "For the discontinuous Galerkin code Trixi$.$jl we implement capabilities for adaptively coupling arbitrarily many domains with different physics. The coupling of the systems is realized through the exchange of boundary information and user-definable coupling functions. This gives us the ability to couple systems that do not share a single variable or have a very different number of variables. This is particularly useful when we have a hierarchy of systems. Our implementation is such that we can adaptively select the model of the coupled systems in the course of the simulation. This allows…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2606.15452",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.15452",
+  "title": "PHINN: Persistent Homology Inspired Neural Network for Rare-Event Time Series Generation",
+  "authors": [
+    "Emre Yusuf",
+    "Ren Takahashi",
+    "Jayabrata Bhaduri"
+  ],
+  "summary": "Rare events in time series are critical to model but hard to learn due to data scarcity. Current generative models struggle with extreme values. We observe that rare events leave distinct topological fingerprints - transitions in Betti numbers from point-cloud embeddings - that are more stable and discriminative than statistical moments. We introduce PHINN, a flow-matching framework using dynamic Betti curves as conditioning signals and a persistence landscape loss for homology consistency. It scales to multivariate data, includes a natural-language interface to set Betti targets, supports…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.AT",
+    "q-fin.RM",
+    "stat.ML"
+  ],
+  "published": "2026-06-13",
+  "updated": "2026-06-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

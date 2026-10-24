@@ -1,0 +1,20 @@
+{
+  "key": "2608.27676",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.27676",
+  "title": "An Adaptive Augmented Lagrangian Method for Deterministic and Stochastic Nonconvex Optimization",
+  "authors": [
+    "Tianzhu Liu",
+    "Michael J. O'Neill"
+  ],
+  "summary": "We present an inexact Augmented Lagrangian algorithm for solving nonlinear, non-convex optimization problems. Unlike most recently proposed Augmented Lagrangian methods with worst-case complexity guarantees, we utilize adaptive penalty parameter updates and full dual stepsizes. We show that the method matches the best known worst-case complexity results for Augmented Lagrangian methods (up to logarithmic factors) when both the function and constraints are deterministic, when the function is stochastic and the constraints are deterministic, and when both are stochastic. Experiments on CUTEst…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-27",
+  "updated": "2026-08-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

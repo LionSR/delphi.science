@@ -1,0 +1,22 @@
+{
+  "key": "2605.22929",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.22929",
+  "title": "An optimal first-order method for smooth and strongly convex composite optimization and its stationary limit",
+  "authors": [
+    "Manu Upadhyaya",
+    "Daniel Berg Thomsen",
+    "Aymeric Dieuleveut",
+    "Adrien B. Taylor"
+  ],
+  "summary": "We introduce Prox-ITEM, an optimal proximal gradient method for minimizing $f+g$, where $f$ is smooth and strongly convex, and $g$ is convex, proper, and lower semicontinuous. In the smooth case $g=0$, Prox-ITEM reduces to the information-theoretic exact method (ITEM). We prove an exact distance-to-solution bound for Prox-ITEM with the same distance-convergence rate as ITEM, and show that this rate is minimax optimal among span-based first-order methods using the same number of gradient-oracle calls for $f$ and an arbitrary number of proximal-oracle calls for $g$. We also identify the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-21",
+  "updated": "2026-08-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

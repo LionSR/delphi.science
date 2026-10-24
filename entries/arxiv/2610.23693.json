@@ -1,0 +1,22 @@
+{
+  "key": "2610.23693",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.23693",
+  "title": "Toward Spectral Deferred Correction Methods for Stochastic Differential Equations",
+  "authors": [
+    "Lisa Binkowski",
+    "Matthew R. Christian",
+    "Sebastian Götschel",
+    "Michael L. Minion"
+  ],
+  "summary": "The numerical solution of stochastic differential equations is computationally very demanding. Often it is of interest to evaluate certain moments, e.g., the expectation, by Monte Carlo sampling, thus requiring the computation of numerous realizations. The discretization error of the numerical scheme induces bias in the computed Monte Carlo estimator. As popular numerical schemes, like Euler-Maruyama or Milstein, are low-order, even reasonably coarse error bounds for the simulation are costly to achieve. While the evaluation of moments requires only weak convergence, in other applications…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

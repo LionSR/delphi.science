@@ -1,0 +1,22 @@
+{
+  "key": "2604.04365",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.04365",
+  "title": "Attributed Network Alignment: Statistical Limits and Efficient Algorithm",
+  "authors": [
+    "Dong Huang",
+    "Chenyang Tian",
+    "Pengkun Yang"
+  ],
+  "summary": "This paper studies the problem of recovering a hidden vertex correspondence between two correlated graphs when both edge weights and node features are observed. While most existing work on graph alignment relies primarily on edge information, many real-world applications provide informative node features in addition to graph topology. To capture this setting, we introduce the featured correlated Gaussian Wigner model, where two graphs are coupled through an unknown vertex permutation, and the node features are correlated under the same permutation. We characterize the optimal…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-04-06",
+  "updated": "2026-04-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

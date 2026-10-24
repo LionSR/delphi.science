@@ -1,0 +1,19 @@
+{
+  "key": "2608.11837",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.11837",
+  "title": "On Arithmetic Cordial Labeling of Product Graphs",
+  "authors": [
+    "Jason D. Andoyo"
+  ],
+  "summary": "Let $η$ be a fixed positive integer. Let $S$ be a subset of $\\mathbb{Z}$, $\\star:S\\times S\\to \\mathbb{Z}$ be a binary function, and $ζ_η:\\{ξ\\in \\mathbb{Z}:\\gcd(ξ,η)=1\\}\\to \\{0,1\\}$ be a function. For a simple graph $G$ of order $n$, a bijective function $f:V(G)\\to S$ (where $|S|=n$) is called an arithmetic cordial labeling modulo $η$ under the arithmetic structure $\\langle S,ζ_η,\\star\\rangle$ if the induced function $f_η^*:E(G)\\to \\{0,1\\}$, defined by $f_η^*(ab)=1$ whenever $\\gcd(f(a)\\star f(b),η)= 1$ and $ζ_η(f(a)\\star f(b))=1$; otherwise, $f_η^*(ab)=0$, satisfies the condition…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-08-12",
+  "updated": "2026-08-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

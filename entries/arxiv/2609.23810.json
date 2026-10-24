@@ -1,0 +1,21 @@
+{
+  "key": "2609.23810",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.23810",
+  "title": "Blind error estimation for CUR approximation",
+  "authors": [
+    "Lorenzo Lazzarino",
+    "Katherine J. Pearce",
+    "Nathaniel Pritchard"
+  ],
+  "summary": "Low-rank approximation is a fundamental tool for scalable matrix computations. While such approximations have classically been formed via the truncated SVD, recent advances in randomized numerical linear algebra have produced methods of comparable accuracy at a fraction of the cost. A key advantage of these approaches is their ability to operate with limited access to the full matrix. A prominent example is the CUR decomposition, which builds an approximation from only a subset of columns and rows, making it particularly well-suited to settings where global matrix access is unavailable, such…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-20",
+  "updated": "2026-09-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

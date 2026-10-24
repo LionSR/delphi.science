@@ -1,0 +1,21 @@
+{
+  "key": "2606.18194",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.18194",
+  "title": "Ergodic Deviation-Robust Equilibrium under Mirror Descent Learning in Finite Games",
+  "authors": [
+    "Joshua Steier"
+  ],
+  "summary": "We introduce Ergodic Deviation-Robust Equilibrium (EDRE), a dynamics-relative equilibrium concept for repeated finite games in which agents learn via entropic mirror descent (EMD). EDRE requires three properties to hold simultaneously for the same profile and learning run: (E1) the limit profile is an $\\varepsilon$-Nash equilibrium at a product distribution; (E2) along the entire learning trajectory, every fixed coalition's cumulative aggregate (summed-unilateral) deviation gain is $\\tilde{\\mathcal{O}}(\\sqrt{T})$ with high probability; and (E3) the limit profile is a fixed point of the EMD…",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "math.DS",
+    "math.OC"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

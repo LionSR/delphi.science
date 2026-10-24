@@ -1,0 +1,23 @@
+{
+  "key": "2607.10751",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10751",
+  "title": "The VC dimension of partial concept classes via Radon's theorem",
+  "authors": [
+    "Grigory Ivanov",
+    "Attila Jung",
+    "Márton Naszódi"
+  ],
+  "summary": "Following Alon, Hanneke, Holzman, and Moran (FOCS 2021), we define a partial concept class (PCC) as a family of partial functions \\(f: V\\to\\{0,1,\\ast\\}\\); equivalently, its concepts partition the ground set into black ($f^{-1}(1)$), grey ($f^{-1}(\\ast)$), and white parts ($f^{-1}(0)$). Its VC dimension is defined by shattering sets on which the value $\\ast$ is not taken. We study two geometric PCCs in real Banach spaces, both with a margin \\(δ>0\\): expanded half-spaces, where the grey part is a strip of width at least \\(δ\\) adjacent to a half-space, and expanded balls, where the grey part is…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.CO",
+    "math.FA"
+  ],
+  "published": "2026-07-12",
+  "updated": "2026-07-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

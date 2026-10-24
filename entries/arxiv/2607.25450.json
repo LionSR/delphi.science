@@ -1,0 +1,20 @@
+{
+  "key": "2607.25450",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.25450",
+  "title": "Exact discrete-adjoint optimization of trap timing and placement in a Stieltjes-time reaction-diffusion model: A Galicia case study",
+  "authors": [
+    "Francisco J. Fernández",
+    "Iván Area"
+  ],
+  "summary": "Seasonal population models must combine diffusion, inactive periods and abrupt biological transfers while remaining differentiable with respect to localized interventions. We formulate a finite-dimensional timing-and-placement control problem for a Stieltjes-time reaction--diffusion model and derive the exact adjoint of the fully discrete residual. Continuous finite elements and an implicit Stieltjes--Euler scheme represent propagation, compartment replacement, resets and historical phase averages. For the resulting box-constrained penalized problem, we prove well-posedness and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-28",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2603.12299",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.12299",
+  "title": "Regenerative Rejection Sampling",
+  "authors": [
+    "Tommaso Bozzi"
+  ],
+  "summary": "This thesis presents Regenerative Rejection Sampling (RRS), a novel approximate sampling algorithm inspired by classical Rejection Sampling and Markov Chain Monte Carlo methods. The method constructs a continuous-time regenerative process whose stationary distribution coincides with a target density known only up to a normalizing constant. Unlike standard Rejection Sampling, RRS does not require the existence of a finite constant that upper-bounds the likelihood ratio. As a result, its total variation convergence rate remains exponential for a larger class of scenarios compared to, for…",
+  "domain": "stat.CO",
+  "tags": [
+    "stat.CO",
+    "math.PR"
+  ],
+  "published": "2026-03-12",
+  "updated": "2026-03-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

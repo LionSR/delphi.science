@@ -1,0 +1,20 @@
+{
+  "key": "2610.13931",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.13931",
+  "title": "Constructive Bounds for the Topological Expressivity of Neural Networks",
+  "authors": [
+    "Kosio Beshkov"
+  ],
+  "summary": "The expressivity of a neural network $Φ$ describes the class of functions that a network can express. The term topological expressivity refers to a family of measures particularly suited to understand binary classification and is often formulated in terms of the Betti numbers of a decision boundary $β(Φ^{-1}(0))$. Despite its popularity, this measure is not as useful for regression and other problems that do not involve a decision boundary. Instead, we propose to study topological expressivity in terms of the Betti numbers of the output of a neural network $β(Φ(X))$. We formally prove that a…",
+  "domain": "math.AT",
+  "tags": [
+    "math.AT",
+    "cs.LG"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

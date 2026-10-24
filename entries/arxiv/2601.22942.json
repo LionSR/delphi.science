@@ -1,0 +1,23 @@
+{
+  "key": "2601.22942",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.22942",
+  "title": "FNWoS: Fractional Neural Walk-on-Spheres Methods for High-Dimensional PDEs Driven by $α$-stable Lévy Process on Irregular Domains",
+  "authors": [
+    "Ling Guo",
+    "Mingxin Qin",
+    "Changtao Sheng",
+    "Hao Wu",
+    "Fanhai Zeng"
+  ],
+  "summary": "In this paper, we develop a highly parallel and derivative-free fractional neural walk-on-spheres method (FNWoS) for solving high-dimensional fractional Poisson equations on irregular domains. We first propose a simplified fractional walk-on-spheres (FWoS) scheme that replaces the high-dimensional normalized weight integral with a constant weight and adopts a correspondingly simpler sampling density, substantially reducing per-trajectory cost. To mitigate the slow convergence of standard Monte Carlo sampling, FNWoS is then proposed via integrating this simplified FWoS estimator, derived from…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-30",
+  "updated": "2026-01-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

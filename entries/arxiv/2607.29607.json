@@ -1,0 +1,19 @@
+{
+  "key": "2607.29607",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.29607",
+  "title": "Recursive rounding of sample size estimation for multi-fidelity Monte Carlo",
+  "authors": [
+    "Jiaxing Liang"
+  ],
+  "summary": "In multifidelity Monte Carlo (MFMC), optimal sample allocations are typically derived from a continuous relaxation of a variance minimization problem, with integer solutions obtained through post hoc rounding. Such rounding procedures may fail to fully exploit the available cost budget, particularly under tight cost budgets or when model costs vary significantly. In this work, we reformulate the MFMC allocation problem as a variance-constrained cost minimization problem that is equivalent to the standard budget-constrained formulation at the continuous level. This reformulation admits a…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-31",
+  "updated": "2026-07-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

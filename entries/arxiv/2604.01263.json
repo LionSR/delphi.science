@@ -1,0 +1,24 @@
+{
+  "key": "2604.01263",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.01263",
+  "title": "Near-Optimal Parallel Approximate Counting via Sampling",
+  "authors": [
+    "David G. Harris",
+    "Vladimir Kolmogorov",
+    "Hongyang Liu",
+    "Yitong Yin",
+    "Yiyao Zhang"
+  ],
+  "summary": "The computational equivalence between approximate counting and sampling is well established for polynomial-time algorithms. The most efficient general reduction from counting to sampling is achieved via simulated annealing, where the counting problem is formulated in terms of estimating the ratio $Q={Z(β_{\\max})}/{Z(β_{\\min})}$ between partition functions $Z(β)=\\sum_{x\\in Ω} \\exp(βH(x))$ of Gibbs distributions $μ_β$ over $Ω$ with Hamiltonian $H$, given access to a sampling oracle that produces samples from $μ_β$ for $β\\in [β_{\\min}, β_{\\max}]$. The best bound achieved by known annealing…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.PR"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-07-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

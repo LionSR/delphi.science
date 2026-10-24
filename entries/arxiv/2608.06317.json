@@ -1,0 +1,20 @@
+{
+  "key": "2608.06317",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.06317",
+  "title": "Sharp Tail Bounds Beyond Twice the Mean",
+  "authors": [
+    "Philipp Strack",
+    "Jannik M. Westermann"
+  ],
+  "summary": "Consider $n$ independent, non-negative, mean at most one random variables, $X_1,X_2,\\ldots$. We show the following bound on the probability of their sum exceeding a threshold $t$: \\[ \\mathbb{P}\\left[\\sum_{i=1}^n X_i\\ge t\\right] \\leq 1-\\left(1-\\frac{1}{t}\\right)^n \\text{ for all } t\\ge 2n+1 \\,. \\] To prove this, we consider a relaxed optimization problem over a set of sequences of ordered, but non-independent random variables. This allows us to reformulate it recursively as dynamic programming problem. The bound becomes an equality for the binary i.i.d.~random variables satisfying…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-08-06",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

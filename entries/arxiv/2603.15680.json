@@ -1,0 +1,19 @@
+{
+  "key": "2603.15680",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.15680",
+  "title": "A fixed-point iteration method for the number Pi with arbitrary odd order of convergence based on the sine function",
+  "authors": [
+    "Alois Schiessl"
+  ],
+  "summary": "In this paper, we present a fixed point method for high-precision computation of number $π$ based on the sine function. Let $P\\in \\mathbb{N}$. We define the function: \\[ S\\left(x\\right) =x+\\sum_{k=1}^{P}\\left(\\prod_{\\ell=1}^{k-1}\\frac {2\\,\\ell-1}{2\\,\\ell}\\right)\\frac{\\sin\\left(x\\right)^{2\\,k-1}}{2\\,k-1}\\,. \\] For every initial value $x_0$ sufficiently close to $π$, the sequence \\[x_{n+1}=x_n+S\\left(x_{n}\\right)\\;;\\,n=0,1,\\ldots\\] is converging to $π$ with order of convergence exactly $\\left(2\\,P+1\\right)$. The computational tests we performed demonstrate the efficiency of the method. \\[\\]…",
+  "domain": "math.GM",
+  "tags": [
+    "math.GM"
+  ],
+  "published": "2026-03-14",
+  "updated": "2026-03-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

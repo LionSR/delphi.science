@@ -1,0 +1,19 @@
+{
+  "key": "2609.02713",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.02713",
+  "title": "On divergence related to Riemann--von Mangoldt's explicit formula of the prime-counting function",
+  "authors": [
+    "Harald Grobner"
+  ],
+  "summary": "An explicit formula for the prime-counting function $π(x)$, usually attributed to Riemann and von Mangoldt, is prominently stated as the equation $π(x)=R(x)-\\sum_ρR(x^ρ)$, where the sum runs over all zeros $ρ$ of the Riemann $ζ$-function, the non-trivial ones being ordered by increasing absolute value of their imaginary parts and counted with multiplicity. This particularly entails the claim that the partial sums over the non-trivial zeros, $ΣR_T(x):=\\sum_{0 1$ and every $θ<Θ$, the sums $ΣR_T(x)$ are not $O(T^θ)$. As a consequence, $\\limsup_{T\\to\\infty}|ΣR_T(x)|=\\infty$ and $\\sum_ρR(x^ρ)$…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-09-02",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

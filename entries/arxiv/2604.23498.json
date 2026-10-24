@@ -1,0 +1,22 @@
+{
+  "key": "2604.23498",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23498",
+  "title": "When Does Dynamic Preconditioning Preserve the Polyak-Ruppert CLT? A Stabilization Threshold",
+  "authors": [
+    "Sunyoung An",
+    "Xiaoming Huo"
+  ],
+  "summary": "Polyak-Ruppert averaging yields an asymptotically normal estimator with sandwich covariance $H^{-1}SH^{-1}$, the foundation of online inference. When the gradient step is preconditioned by a data-driven matrix $P_t$, we ask how fast $P_t$ must stabilize for the central limit theorem (CLT) to remain valid. We resolve this via an exact preconditioner-isolating decomposition of the averaged error that confines $P_t$ to a dynamic remainder $R_n$, leaving the martingale and Taylor terms preconditioner-free. Let $M_t = (P_t H)^{-1}$ denote the effective inverse drift matrix, with $\\|M_t -…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-04-26",
+  "updated": "2026-04-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

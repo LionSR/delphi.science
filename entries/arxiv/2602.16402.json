@@ -1,0 +1,22 @@
+{
+  "key": "2602.16402",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.16402",
+  "title": "Primal-dual dynamical systems with closed-loop control for convex optimization in continuous and discrete time",
+  "authors": [
+    "Huan Zhang",
+    "Xiangkai Sun",
+    "Shengjie Li",
+    "Kok Lay Teo"
+  ],
+  "summary": "This paper develops a primal-dual dynamical system where the coefficients are designed in closed-loop way for solving a convex optimization problem with linear equality constraints. We first introduce a ``second-order primal\" + ``first-order dual'' continuous-time dynamical system, in which both the time scaling and Hessian-driven damping are governed by a feedback control of the gradient for the Lagrangian function. This system achieves the fast convergence rates for the primal-dual gap, the feasibility violation, and the objective residual along its trajectory. Subsequently, by time…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-18",
+  "updated": "2026-02-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

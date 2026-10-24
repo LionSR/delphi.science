@@ -1,0 +1,20 @@
+{
+  "key": "2608.30933",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.30933",
+  "title": "Goldfarb-Idnani Revisited:Invariants, Certificates, and the Limits of Guessing",
+  "authors": [
+    "Thomas Schmelzer",
+    "Martin Stoll"
+  ],
+  "summary": "The dual active-set method of Goldfarb and Idnani solves the strictly convex quadratic program by adding and dropping one constraint at a time, requiring no phase one. Primal--dual active set and block principal pivoting skip the walk altogether: they guess an entire active set at once and repair it from returning signs. For bound constraints the guess is safe. The system solved on a candidate set is a principal submatrix of $G^{-1}$, positive definite regardless of the guess; this $P$-matrix property guarantees finite termination. For $C^\\top x \\ge b$ that hypothesis fails, which is our…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-31",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

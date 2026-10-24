@@ -1,0 +1,19 @@
+{
+  "key": "2606.01506",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.01506",
+  "title": "An arc-search BFGS algorithm for unconstrained nonlinear optimization problems",
+  "authors": [
+    "Yaguang Yang"
+  ],
+  "summary": "The classical BFGS algorithm performs excellently for convex optimization problems. However, for non-convex problems, the classical BFGS method may fail to converge reliably. To overcome this limitation, researchers have developed modified BFGS methods that are applicable to both convex and non-convex optimization problems. Among these methods, a robust BFGS algorithm has been shown to achieve global convergence and fast local convergence, with a superlinear convergence rate, for both convex and non-convex nonlinear optimization problems under mild assumptions. In this paper, we propose an…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

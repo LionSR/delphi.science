@@ -1,0 +1,22 @@
+{
+  "key": "2606.06839",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.06839",
+  "title": "Adaptive multiscale model reduction for linear elasticity equation in perforated domains",
+  "authors": [
+    "Wei Xie",
+    "Eric Chung",
+    "Yin Yang",
+    "Yunqing Huang"
+  ],
+  "summary": "In this paper, we develop a Constraint Energy Minimizing Generalized Multiscale Finite Element Method (CEM-GMsFEM) for solving linear elasticity problems in heterogeneous perforated domains. The presence of numerous perforations introduces multiple scales into the computational domain, making direct fine-grid simulations computationally expensive. The proposed method follows the standard offline--online decomposition of CEM-GMsFEM. In the offline stage, local spectral problems are solved on coarse elements to construct auxiliary spaces, and localized energy-minimizing basis functions are…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-05",
+  "updated": "2026-06-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2606.30486",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.30486",
+  "title": "An entropic analogue of the MMS conjecture",
+  "authors": [
+    "Jianhang Ai",
+    "Ondřej Kuželka",
+    "Christos Pelekis"
+  ],
+  "summary": "Let $P=\\{x_1,\\ldots,x_n\\}$ be a multiset consisting of $n\\ge 2$ real numbers such that $\\sum_{i=1}^{n}x_i=0$ and $\\sum_{i=1}^{n}|x_i|>0$, and let $k <n$ be a positive integer. We sample $k$ elements from $P$ without replacement and set $X_P$ be the sum of the elements in our sample. It is shown that the Shannon entropy of $X_P$ satisfies \\[ \\mathbf{H}(X_P) \\ge \\mathbf{H}(\\text{Ber}(k/n)) \\, , \\] where $\\text{Ber}(k/n)$ is a Bernoulli random variable of mean $k/n$. The result is sharp, and may be seen as an entropic analogue of the Manickam-Miklós-Singhi (MMS) conjecture.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

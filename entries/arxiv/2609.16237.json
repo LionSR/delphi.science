@@ -1,0 +1,23 @@
+{
+  "key": "2609.16237",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.16237",
+  "title": "Improving Reduced-Order Rotating Detonation Engine Models with Data Assimilation and Machine Learning",
+  "authors": [
+    "Ashwin Suriyanarayanan",
+    "Romit Maulik"
+  ],
+  "summary": "Rotating detonation engines (RDEs) exhibit strongly nonlinear, multiscale wave dynamics that set the observed thermal field. High-fidelity simulations (DNS/LES) resolve these structures but remain computationally prohibitive, while low-order models such as the one-dimensional Koch-Kutz model capture circumferential wave motion yet lack the expressivity for high-frequency content. We use continuous data assimilation (nudging) to synchronize the Koch-Kutz solver with processed high-fidelity temperature data, introducing the prediction-observation mismatch as a relaxation source in the…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "cs.LG",
+    "math.DS",
+    "physics.comp-ph"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

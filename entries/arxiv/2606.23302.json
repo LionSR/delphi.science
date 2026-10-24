@@ -1,0 +1,21 @@
+{
+  "key": "2606.23302",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.23302",
+  "title": "On Runge-Kutta convolution quadrature based fractional variational integrators",
+  "authors": [
+    "Khaled Hariz Belgacem",
+    "Sina Ober-BlÖbaum",
+    "Fernando JimÉnez"
+  ],
+  "summary": "Lagrangian systems subject to fractional damping can be incorporated into a variational framework by doubling the state variables and introducing fractional derivatives. Fractional variational integrators based on backward-differentiation convolution quadrature (BD-FCQ), combined with higher-order Galerkin methods, saturate at second-order accuracy because the multistep structure of BDFCQ does not take into account the internal stages of the Galerkin discretization. The main objective of this paper is to develop fractional variational integrators (FVIs) by combining Runge-Kutta convolution…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-22",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

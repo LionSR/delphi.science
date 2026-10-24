@@ -1,0 +1,20 @@
+{
+  "key": "2609.15605",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.15605",
+  "title": "Asynchronous Jacobi and randomized Gauss--Seidel methods in shared and distributed memory: A unified convergence-rate analysis",
+  "authors": [
+    "Erin Carson",
+    "Yuxin Ma"
+  ],
+  "summary": "Asynchronous iterative methods are attractive for large-scale parallel computing because they reduce synchronization and communication overhead. Existing convergence-rate analyses, however, have primarily focused on shared memory implementations, whereas distributed memory systems introduce more general and potentially inconsistent communication delays. In this work, we revisit asynchronous Jacobi and randomized Gauss--Seidel (RGS) methods for symmetric positive definite linear systems from a unified perspective. We first introduce a general asynchronous model that encompasses both shared…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2606.04065",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.04065",
+  "title": "Finite-Iteration Local Dynamics and Warm Starts for Alternating Power Iteration in Spiked Tensor PCA",
+  "authors": [
+    "Yanjin Xiang",
+    "Zhihua Zhang"
+  ],
+  "summary": "We study simultaneous alternating power iteration for fixed-order asymmetric rank-one spiked tensor models. Our main contribution is a finite-iteration local theory that is independent of any particular initialization. Once the iterates enter a sufficiently small neighborhood of the planted rank-one direction, their error decomposes into a geometrically decaying transient and an intrinsic noise floor caused by fixed orthogonal noise contractions at the planted point. The deterministic finite-sample conditions are stated explicitly, but under a coarse fixed-order multilinear noise event they…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-06-02",
+  "updated": "2026-06-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

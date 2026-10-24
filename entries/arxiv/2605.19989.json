@@ -1,0 +1,22 @@
+{
+  "key": "2605.19989",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.19989",
+  "title": "Error Bounds for Importance Sampling with Estimated Proposal Distributions",
+  "authors": [
+    "Cathrine Aeckerle-Willems",
+    "Ilja Klebanov",
+    "Simon Weissmann"
+  ],
+  "summary": "Importance sampling with data-driven proposal distributions is widely used in practice. A common workflow first generates an auxiliary sample of size $N$ from an approximation of the target distribution, constructs a density estimate $\\hat q$ such as a kernel density estimator (KDE), and then draws $n$ importance samples from this learned proposal. Despite its practical relevance, the theoretical properties of this hierarchical procedure remain poorly understood, since classical importance sampling theory assumes a fixed proposal. We address this gap by deriving non-asymptotic error bounds…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "math.NA"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

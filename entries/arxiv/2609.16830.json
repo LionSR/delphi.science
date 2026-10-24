@@ -1,0 +1,20 @@
+{
+  "key": "2609.16830",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.16830",
+  "title": "Bilinearity Preserving Algebraic Flux Correction",
+  "authors": [
+    "Sarthak Sourav Dash",
+    "Abhinav Jha"
+  ],
+  "summary": "Algebraic flux correction schemes for convection--diffusion--reaction equations rely on linearity preservation to avoid unnecessary artificial diffusion: the limiter is inactive whenever the discrete solution is affine. On quadrilateral and hexahedral meshes, this is insufficient, since the finite element space also contains bilinear functions that are reproduced exactly on axis-aligned meshes. We show that a mesh patch admits bilinearity preservation if and only if the central node lies in the convex hull of its neighbours after lifting each neighbour by the product of its coordinate…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

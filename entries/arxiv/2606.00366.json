@@ -1,0 +1,22 @@
+{
+  "key": "2606.00366",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.00366",
+  "title": "GLENS: Global Search via Learning from Solver Iterates with Diffusion Models",
+  "authors": [
+    "Anjian Li",
+    "Bartolomeo Stellato",
+    "Ryne Beeson"
+  ],
+  "summary": "We consider the problem of generating a large collection of initial guesses for local minima of multimodal non-convex continuous optimization problems. The goal is for these initial guesses to be high-quality (i.e., a numerical solver converges quickly) and diverse (i.e., represent many different local minima). Identifying multiple locally optimal solutions enables flexible downstream decision-making, but typically requires expensive global search. Existing data-driven methods predict initial guesses using only the final converged optima from offline solver runs, which discards information…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

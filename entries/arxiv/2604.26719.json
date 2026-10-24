@@ -1,0 +1,21 @@
+{
+  "key": "2604.26719",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26719",
+  "title": "Probabilistic representation of solutions to the parabolic $p$-Laplace equation",
+  "authors": [
+    "Viorel Barbu",
+    "Michael Röckner"
+  ],
+  "summary": "This work is concerned with the probabilistic representation of solutions to the $p$-Laplace evolution equation $\\frac{\\partial u}{\\partial t}={\\rm div}(|\\nabla u|^{p-2}\\nabla u)$ in $(0,\\infty)\\times\\mathbb{R}^d$, $u(0,x)=u_0(x),$ $x\\in\\mathbb{R}^d$. One proves that, if $p\\geq 4$, and if $u_0$ is a probability density with compact support and $u_0\\in L^2$, $|\\nabla u_0|\\in L^\\infty$, then $u$ can be represented as $u(t,x)dx=\\mathscr L_{X(t)}(dx)$, where $\\mathscr L_{X(t)}$ denotes the time marginal law of $X$ at time $t$ with $X$ being a probabilistically weak solution to a corresponding…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "math.PR"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2603.00738",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.00738",
+  "title": "Exploratory Randomization for Discrete-Time Risk-Sensitive Benchmarked Investment Management with Reinforcement Learning",
+  "authors": [
+    "Sebastien Lleo",
+    "Wolfgang Runggaldier"
+  ],
+  "summary": "This paper bridges reinforcement learning (RL) and risk-sensitive stochastic control by introducing a tractable exploration mechanism for policy search in risk-sensitive portfolio management, with known and unknown model parameters, that yields an endogenous relative-entropy regularization. We construct a discrete-time risk-sensitive benchmarked investment model. This model combines a factor-based asset universe with periodic portfolio rebalancing. Exploration is incorporated through user-specified Gaussian perturbations to baseline (exploitative) controls. The risk-sensitive stochastic…",
+  "domain": "q-fin.PM",
+  "tags": [
+    "q-fin.PM",
+    "math.OC"
+  ],
+  "published": "2026-02-28",
+  "updated": "2026-02-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

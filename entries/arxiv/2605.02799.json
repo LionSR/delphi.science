@@ -1,0 +1,24 @@
+{
+  "key": "2605.02799",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.02799",
+  "title": "Two-scale Neural Networks for Singularly Perturbed Dynamical Systems with Multiple Parameters",
+  "authors": [
+    "Qiao Zhuang",
+    "Taorui Wang",
+    "Rita Wanjiku",
+    "Majid Bani-Yaghoub",
+    "Zhongqiang Zhang"
+  ],
+  "summary": "We extend our two-scale neural-network method for scalar singularly perturbed problems with one small parameter to dynamical systems with multiple small parameters. To accommodate multiple small parameters, we use a single effective scale parameter defined as the geometric mean of all parameters. We thus augment the network input with a scale-aware feature, enabling it to capture sharp solution transitions intrinsically. Numerical experiments across a range of dynamical systems demonstrate that the proposed framework can handle coupled systems with multiple and high-contrast small parameters…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-05-04",
+  "updated": "2026-05-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

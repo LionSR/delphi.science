@@ -1,0 +1,23 @@
+{
+  "key": "2610.05938",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05938",
+  "title": "Rank and Invertibility of Dense Signed Random Regular Matrices",
+  "authors": [
+    "Huaijin Liang",
+    "Yuxiao Shi",
+    "Kexin Yu",
+    "Tingzhou Yu"
+  ],
+  "summary": "Let $A$ be the (non-symmetric) adjacency matrix of a uniformly random $d$-regular directed graph on $n$ vertices, and let $Ξ$ be independent of $A$ with i.i.d. Rademacher entries. Suppose that $\\min(d,n-d)\\geλn$ for some fixed $λ\\in(0,1/2]$. We show that there exists $c > 0$, depending only on $λ$, such that \\[ \\mathbf P_{A,Ξ}\\{\\operatorname{rank}(A\\circΞ)\\le n-k\\}\\le e^{-c nk},\\qquad 1\\le k\\le n. \\] As an ingredient in the proof of the rank bound, we use the case $κ=0$ of the following quantitative smallest singular value estimate: \\[ \\mathbf P_{A,Ξ}\\{s_n(A\\circΞ)\\leκ\\} \\le Cκ\\sqrt n+e^{-c'…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.CO"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

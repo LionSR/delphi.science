@@ -1,0 +1,22 @@
+{
+  "key": "2608.29271",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.29271",
+  "title": "Nechvile-Transformed Spacecraft Dynamics and Propellant Computation in the 3-Body Problem",
+  "authors": [
+    "Michael J. Dixon",
+    "Isaac M. Ross"
+  ],
+  "summary": "The uncontrolled equations of motion in the Nechvile frame for the restricted three-body problem have been well-known since at least the 1960s. It would seem that adding an external force to these equations is quite trivial: simply add an external force per mass term to the acceleration equations. Here we show that the last statement is not true. In fact, we show that the additive generic external force must be multiplied by the inverse of $(1 + e \\cosθ)^3$ where $e$ is the relative eccentricity of the primaries and $θ$ is the true anomaly of the rotating frame located at the barycenter.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY",
+    "math.NA"
+  ],
+  "published": "2026-08-29",
+  "updated": "2026-08-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

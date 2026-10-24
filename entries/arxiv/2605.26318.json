@@ -1,0 +1,21 @@
+{
+  "key": "2605.26318",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.26318",
+  "title": "Sparse symmetric generalized inverses for sparse symmetric matrices",
+  "authors": [
+    "Ananias Machado",
+    "Marcia Fampa",
+    "Jon Lee"
+  ],
+  "summary": "Generalized inverses play a fundamental role in numerical linear algebra, particularly when matrices are rectangular, singular, or rank deficient. Even when the input matrix is sparse, generalized inverses such as the M-P pseudoinverse are typically dense, leading to high storage requirements, expensive matrix-vector multiplications, and reduced efficiency. We investigate computing sparse symmetric generalized inverses for sparse symmetric matrices, extending previous work on sparse generalized inverses for rectangular rank-deficient matrices. We consider minimizing the vector 1-norm over…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-25",
+  "updated": "2026-05-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

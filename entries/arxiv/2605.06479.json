@@ -1,0 +1,24 @@
+{
+  "key": "2605.06479",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.06479",
+  "title": "Risk-Controlled Post-Processing of Decision Policies",
+  "authors": [
+    "Sunay Joshi",
+    "Tao Wang",
+    "Hamed Hassani",
+    "Edgar Dobriban"
+  ],
+  "summary": "Predictive models are often deployed through existing decision policies that stakeholders are reluctant to change unless a risk constraint requires intervention. We study risk-controlled post-processing: given a deterministic baseline policy, choose a new policy that maximizes agreement with the baseline subject to a chance constraint on a user-specified loss. At the population level, we show that the optimal policy has a threshold structure: it follows the baseline except on contexts where switching to the oracle fallback policy yields a large reduction in conditional violation risk. At the…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

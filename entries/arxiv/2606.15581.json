@@ -1,0 +1,26 @@
+{
+  "key": "2606.15581",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.15581",
+  "title": "Phase Transition in Convex Relaxations for Graph Alignment",
+  "authors": [
+    "Laurent Massoulié",
+    "Sushil Mahavir Varma",
+    "Louis Vassaux",
+    "Irène Waldspurger"
+  ],
+  "summary": "We study the graph alignment problem for correlated Gaussian Orthogonal Ensemble (GOE) matrices, where the goal is to recover a hidden vertex permutation given two correlated symmetric Gaussian matrices $(A, B)$ with correlation $1/\\sqrt{1+σ^2}$. While the maximum likelihood estimator is information-theoretically optimal, its computation, which reduces to a quadratic assignment problem, is intractable. Motivated by this, we analyze convex relaxations based on minimizing $\\|AX - XB\\|_F$ over the set of doubly stochastic matrices and the unit hypercube. We show that when the correlation…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.PR",
+    "math.SP",
+    "math.ST"
+  ],
+  "published": "2026-06-14",
+  "updated": "2026-06-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

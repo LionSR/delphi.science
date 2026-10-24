@@ -1,0 +1,23 @@
+{
+  "key": "2609.27765",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.27765",
+  "title": "The Type-II Error of Test Supermartingales: e-Power versus the Chernoff-Stein Exponent",
+  "authors": [
+    "Patrick Forré"
+  ],
+  "summary": "In safe hypothesis testing with test supermartingales, Ville's inequality provides anytime-valid type-I error guarantees for every significance level $α\\in(0,1]$, if one rejects the null hypothesis whenever the wealth process first exceeds $1/α$. Due to an inherent asymmetry, the type-II error behaves differently. We prove two things about the latter, for a simple null and alternative. First, the mean growth rate $\\mathbb{E}_{P_1}[\\log E]$, the e-power, that Kelly betting and growth-rate-optimal e-variables maximise, bounds nothing on its own. For every level $c>0$, every $α$ and horizon $t$…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.IT",
+    "cs.LG",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-08-19",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

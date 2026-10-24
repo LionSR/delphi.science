@@ -1,0 +1,22 @@
+{
+  "key": "2608.19617",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19617",
+  "title": "Adaptive Time Windows for Discrete Adjoint Topology Optimization of Unsteady Flows",
+  "authors": [
+    "Zongyuan Liu",
+    "Kentaro Yaji",
+    "Musaddiq Al Ali",
+    "Shengfeng Zhu"
+  ],
+  "summary": "Rather than prescribing an evaluation interval a priori, the proposed framework characterizes each evolving unsteady flow using a sequence of time windows. A consecutive-window convergence criterion is introduced to automatically identify a representative time window within its fully developed stage. The objective evaluation and discrete adjoint analysis are then carried out consistently over the identified representative time window. The framework is implemented using a regularized lattice Boltzmann method-based large-eddy simulation (LBM-LES) solver together with a partial bounce-back…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-20",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

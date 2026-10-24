@@ -1,0 +1,21 @@
+{
+  "key": "2605.14642",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.14642",
+  "title": "Distributionally Robust Model Predictive Control for Virtual Power Plants",
+  "authors": [
+    "Nikolas Recke",
+    "Mathias Hudoba de Badyn"
+  ],
+  "summary": "This paper presents a distributionally robust model predictive control (DRMPC) framework for the optimal Virtual Power Plant (VPP) operation under electricity price uncertainty. A unified VPP model is formulated that captures the interaction between buildings, battery storage, and renewable generation, all influenced by exogenous weather and market signals. The proposed approach integrates data-driven forecasting with quantile-based uncertainty quantification to construct time-varying Wasserstein ambiguity sets that adapt to forecast dispersion and distributional shifts. This yields a…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-05-14",
+  "updated": "2026-05-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

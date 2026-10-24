@@ -1,0 +1,25 @@
+{
+  "key": "2602.16142",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.16142",
+  "title": "Ratio Covers of Convex Sets and Optimal Mixture Density Estimation",
+  "authors": [
+    "Spencer Compton",
+    "Gábor Lugosi",
+    "Jaouad Mourtada",
+    "Jian Qian",
+    "Nikita Zhivotovskiy"
+  ],
+  "summary": "We study density estimation in Kullback-Leibler divergence: given an i.i.d. sample from an unknown density $p^\\star$, the goal is to construct an estimator $\\widehat{p}$ such that $\\mathrm{KL}(p^\\star,\\widehat{p})$ is small with high probability. We consider two fundamental settings involving a finite dictionary of densities: (i) model aggregation, where $p^\\star$ belongs to the dictionary, and (ii) convex aggregation (mixture density estimation), where $p^\\star$ is a mixture of densities from the dictionary. Crucially, we make no assumption on the base densities: their ratios may be…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.CG",
+    "cs.LG"
+  ],
+  "published": "2026-02-18",
+  "updated": "2026-04-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

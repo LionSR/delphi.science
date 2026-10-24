@@ -1,0 +1,20 @@
+{
+  "key": "2601.00399",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.00399",
+  "title": "A weak Galerkin least squares finite element method for linear convection equations in non-divergence form",
+  "authors": [
+    "Chunmei Wang",
+    "Shangyou Zhang"
+  ],
+  "summary": "This article develops a weak Galerkin least-squares (WG--LS) finite element method for first-order linear convection equations in non-divergence form. The method is formulated using discontinuous finite element functions and does not require any coercivity assumption on the convection vector or reaction coefficient. The resulting discrete problem leads to a symmetric and positive definite linear system and is applicable to general polygonal and polyhedral meshes. Under minimal regularity assumptions on the coefficients, optimal-order error estimates are established for the WG--LS…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-01",
+  "updated": "2026-01-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

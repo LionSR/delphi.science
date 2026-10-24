@@ -1,0 +1,22 @@
+{
+  "key": "2602.09585",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.09585",
+  "title": "On Euler Paths and the Maximum Degree Growth of Iterated Higher Order Line Graphs",
+  "authors": [
+    "Aryan Sanghi",
+    "Anubhav Dhar",
+    "Sudeshna Kolay"
+  ],
+  "summary": "Given a simple graph $G$, its line graph, denoted by $L(G)$, is obtained by representing each edge of $G$ as a vertex, with two vertices in $L(G)$ adjacent whenever the corresponding edges in $G$ share a common endpoint. By applying the line graph operation repeatedly, we obtain higher order line graphs, denoted by $L^{r}(G)$. In other words, $L^{0}(G) = G$, and for any integer $r \\ge 1$, $L^{r}(G) = L(L^{r-1}(G))$. Given a graph $G$ on $n$ vertices, we wish to efficiently find out (i) if $L^k(G)$ has an Euler path, (ii) the value of $Δ(L^k(G))$. Note that the size of a higher order line…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM"
+  ],
+  "published": "2026-02-10",
+  "updated": "2026-02-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

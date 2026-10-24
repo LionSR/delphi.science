@@ -1,0 +1,23 @@
+{
+  "key": "2607.14453",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14453",
+  "title": "Simply Typed Reverse-Mode Automatic Differentiation with Variants: Denotational Correctness via Idempotent Completion",
+  "authors": [
+    "Fernando Lucatelli Nunes",
+    "Diogo Simm",
+    "Matthijs Vákár"
+  ],
+  "summary": "Reverse-mode automatic differentiation is commonly given a denotational account in which each source type has a single cotangent type. Variant types obstruct this simply typed representation because the valid cotangent space depends on the branch selected at run time. Existing correctness results therefore use primal-indexed families of cotangent spaces, whose natural internal language is dependently typed. We show that the same dependency can be represented in an ordinary nondependent target. The cotangent fibres of each source type are embedded in a common ambient type, and a…",
+  "domain": "cs.PL",
+  "tags": [
+    "cs.PL",
+    "cs.LO",
+    "math.CT"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

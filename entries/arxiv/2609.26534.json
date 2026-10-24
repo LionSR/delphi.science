@@ -1,0 +1,20 @@
+{
+  "key": "2609.26534",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.26534",
+  "title": "Error Analysis for Solving Elliptic Interface Problems with Randomized Neural Networks",
+  "authors": [
+    "Jun Hu",
+    "Sidi Wu"
+  ],
+  "summary": "This paper presents a unified error analysis of randomized neural networks (RaNNs) for elliptic interface problems. We first derive an integral representation of Barron functions using the standard $\\tanh$ activation, which yields a $C^2$-approximation bound valid for any hidden-parameter distribution supported on a cube with strictly positive density. We then establish a quantitative $\\mathcal{O}(n^{-1})$ generalization bound for the composite loss that enforces the partial differential equation, boundary, and interface conditions simultaneously, where $n$ denotes the number of training…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-22",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

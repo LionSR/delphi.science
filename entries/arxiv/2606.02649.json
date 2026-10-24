@@ -1,0 +1,21 @@
+{
+  "key": "2606.02649",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.02649",
+  "title": "Temporal Matrix Scale Invariance and the Classification of Tipping Points",
+  "authors": [
+    "Alejandro Frank",
+    "Laurence A. Jacobs"
+  ],
+  "summary": "We introduce temporal matrix scale invariance (tMSI), a mathematical structure for the two-time correlation kernel of a multivariate observable. A kernel $C(t,t')$ satisfies tMSI of order $α$ if $C(kt, kt') = k^{-α}C(t,t')$ for all $k>0$; this condition holds near a tipping point, where the divergence of the coherence time produces temporal scale freedom. By a kernel factorization theorem, every tMSI kernel separates into a power-law envelope $(tt')^{-α/2}$ and a shape function $F(t/t')$ diagonalized by the Mellin transform. This reveals a decoupling of two independent exponents: the…",
+  "domain": "nlin.CD",
+  "tags": [
+    "nlin.CD",
+    "math-ph"
+  ],
+  "published": "2026-05-31",
+  "updated": "2026-05-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

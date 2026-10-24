@@ -1,0 +1,21 @@
+{
+  "key": "2606.26900",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.26900",
+  "title": "Incremental Tensor-Train Compression from Streaming TT-Formatted Data with Applications to Reduced-Order Modeling of Linear Kinetic Equations",
+  "authors": [
+    "Shuyuan Shang",
+    "Wei Guo",
+    "Zhichao Peng"
+  ],
+  "summary": "To mitigate the computational burden due to the high dimensionality of linear kinetic equations, low-rank solvers and data-driven reduced order models (ROMs) have been developed. Low-rank solvers based on matrix or tensor compression exploit phase-space low-rank structures within individual solutions, while data-driven ROMs exploit low-rank structures of the solution manifold across parameters of parametric multi-query applications such as sensitivity analysis and uncertainty quantification. It is attractive to combine them to exploit their complementary strengths. A key challenge is to…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-25",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

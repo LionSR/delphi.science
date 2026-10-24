@@ -1,0 +1,19 @@
+{
+  "key": "2609.30808",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.30808",
+  "title": "Optimal Sample Exponents for Direct Discrete-Gaussian SVP Search on Haar Random Lattices",
+  "authors": [
+    "Masahiro Kaminaga"
+  ],
+  "summary": "We determine the optimal sample exponent for direct discrete Gaussian SVP search on Haar random unimodular lattices, counting zero outputs. The output is one sampled vector, optionally divided by the greatest common divisor of its lattice coordinates. For every fixed approximation factor $1\\leqγ<\\sqrt e$, the exponent is $γ^2/(2e)-\\logγ$ in natural logarithmic units; it is zero for $γ\\geq\\sqrt e$. For exact SVP this gives $0.2653689\\ldots$ in base two. The converse permits arbitrary positive widths chosen from the lattice and all previous outputs, and a fixed width attains every exponent…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

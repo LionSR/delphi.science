@@ -1,0 +1,27 @@
+{
+  "key": "2604.12771",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.12771",
+  "title": "Asymptotic Theory for Graphical SLOPE: Precision Estimation and Pattern Convergence",
+  "authors": [
+    "Ivan Hejný",
+    "Giovanni Bonaccolto",
+    "Philipp Kremer",
+    "Sandra Paterlini",
+    "Małgorzata Bogdan",
+    "Jonas Wallin"
+  ],
+  "summary": "This paper studies Graphical SLOPE for precision matrix estimation, with emphasis on its ability to recover both sparsity and clusters of edges with equal or similar strength. In a fixed-dimensional regime, we establish that the root-$n$ scaled estimation error converges to the unique minimizer of a strictly convex optimization problem defined through the directional derivative of the SLOPE penalty. We also establish convergence of the induced SLOPE pattern, thereby obtaining an asymptotic characterization of the clustering structure selected by the estimator. A comparison with GLASSO shows…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.AP",
+    "stat.ME",
+    "stat.ML"
+  ],
+  "published": "2026-04-14",
+  "updated": "2026-04-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

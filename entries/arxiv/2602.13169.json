@@ -1,0 +1,22 @@
+{
+  "key": "2602.13169",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.13169",
+  "title": "Operator Learning for Families of Finite-State Mean-Field Games",
+  "authors": [
+    "William Hofgard",
+    "Asaf Cohen",
+    "Mathieu Laurière"
+  ],
+  "summary": "Finite-state mean-field games (MFGs) arise as limits of large interacting particle systems and are governed by an MFG system, a coupled forward-backward differential equation consisting of a forward Kolmogorov-Fokker-Planck (KFP) equation describing the population distribution and a backward Hamilton-Jacobi-Bellman (HJB) equation defining the value function. Solving MFG systems efficiently is challenging, with the structure of each system depending on an initial distribution of players and the terminal cost of the game. We propose an operator learning framework that solves parametric…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-02-13",
+  "updated": "2026-02-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

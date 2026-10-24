@@ -1,0 +1,22 @@
+{
+  "key": "2608.04944",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.04944",
+  "title": "A geometry-based deep equilibrium model for image restoration under multiplicative Gamma noise",
+  "authors": [
+    "Shengkun Yang",
+    "Luca Ratti",
+    "Zhichang Guo"
+  ],
+  "summary": "We propose a deep learning framework for image restoration from images degraded by both multiplicative Gamma noise and blur. Unlike conventional deep equilibrium (DEQ) models that rely on implicit neural regularization, the proposed method learns an explicit and interpretable regularizer parameterized by geometric priors associated with surface area and mean curvature. To minimize the resulting variational model, we develop a mirror descent algorithm tailored to the commonly used Gamma-noise fidelity terms. Leveraging the Kurdyka-Lojasiewicz property for functions defined in $o$-minimal…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-08-05",
+  "updated": "2026-08-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2603.18283",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.18283",
+  "title": "Turnpike with Uncertain Measurements: Triangle-Equality ILP with a Deterministic Recovery Guarantee",
+  "authors": [
+    "C. S. Elder",
+    "Guillaume Marçais",
+    "Carl Kingsford"
+  ],
+  "summary": "We study Turnpike with uncertain measurements: reconstructing a one-dimensional point set from an unlabeled multiset of pairwise distances under bounded noise and rounding. We give a combinatorial characterization of realizability via a multi-matching that labels interval indices by distinct distance values while satisfying all triangle equalities. This yields an ILP based on the triangle equality whose constraint structure depends only on the two-partition set $\\mathcal{P}_y=\\{(r,s,t): y_r+y_s=y_t\\}$ and a natural LP relaxation with $\\{0,1\\}$-coefficient constraints. Integral solutions…",
+  "domain": "cs.CG",
+  "tags": [
+    "cs.CG",
+    "cs.DS",
+    "math.OC"
+  ],
+  "published": "2026-03-18",
+  "updated": "2026-03-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

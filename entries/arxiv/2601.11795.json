@@ -1,0 +1,22 @@
+{
+  "key": "2601.11795",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.11795",
+  "title": "Projected Stochastic Momentum Methods for Nonlinear Equality-Constrained Optimization for Machine Learning",
+  "authors": [
+    "Qi Wang",
+    "Christian Piermarini",
+    "Yunlang Zhu",
+    "Frank E. Curtis"
+  ],
+  "summary": "Two algorithms are proposed, analyzed, and tested for solving continuous optimization problems with nonlinear equality constraints. Each is an extension of a stochastic momentum-based method from the unconstrained setting to the setting of a stochastic Newton-SQP-type algorithm for solving equality-constrained problems. One is an extension of the heavy-ball method and the other is an extension of the Adam optimization method. Convergence guarantees for the algorithms for the constrained setting are provided that are on par with state-of-the-art guarantees for their unconstrained…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-16",
+  "updated": "2026-01-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

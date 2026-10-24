@@ -1,0 +1,21 @@
+{
+  "key": "2605.20898",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.20898",
+  "title": "Continuous-Time Analysis for Minimax and Bilevel Problems",
+  "authors": [
+    "Hyunwoo Lee",
+    "Jeongyeol Kwon",
+    "Dohyun Kwon"
+  ],
+  "summary": "We study single-loop gradient-flow dynamics for nested optimization, where the outer variable evolves while auxiliary variables track the inner solution map. While existing analyses typically rely on problem- and condition-specific Lyapunov constructions, we propose, to our knowledge, the first unified Lyapunov template for continuous-time analysis that covers minimax, bilevel via a lifted penalty formulation, and min--min--max. Our proof is modular, built from reusable lemmas that yield a unified characterization of time-scale separation. This characterization bridges regimes from strong…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-20",
+  "updated": "2026-05-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

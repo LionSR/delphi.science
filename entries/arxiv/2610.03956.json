@@ -1,0 +1,27 @@
+{
+  "key": "2610.03956",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03956",
+  "title": "Latent Score-Based Bayesian Cramér-Rao Bound Estimation for High-Dimensional Imaging Systems",
+  "authors": [
+    "Evan Scope Crafts",
+    "Thomas Wynn",
+    "Seonyeong Park",
+    "Mark Anastasio",
+    "Umberto Villa"
+  ],
+  "summary": "We propose a data-driven framework for estimating the Bayesian Cramér-Rao bound (CRB) in high-dimensional imaging systems with complex, analytically intractable priors. Direct CRB computation is challenging in this setting due to the need to model the prior score and to form and invert the Bayesian Fisher information matrix in very high dimensions. To address these issues, we first reformulate the inverse problem in the latent space of a pre-trained variational autoencoder, thereby dramatically reducing the dimensionality of the bound estimation problem while preserving the spatial structure…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.IT",
+    "cs.LG",
+    "math-ph",
+    "math.NA"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2610.04264",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04264",
+  "title": "Adaptive Bregman Alternating Projections for Feasible Gromov-Wasserstein Learning",
+  "authors": [
+    "Aoran Zhang",
+    "César A. Uribe"
+  ],
+  "summary": "The Gromov-Wasserstein (GW) problem compares structured distributions without requiring a shared feature space or known correspondences, but its nonconvex objective and coupled marginal constraints make computation challenging. Bregman alternating projected gradient (BAPG) uses inexpensive alternating row and column updates, yet its fixed-penalty relaxation leaves a persistent feasibility gap. We propose Adaptive KL-BAPG (A-KL-BAPG), which combines a finite fixed-penalty burn-in with a guarded increasing-penalty phase. At each tail iteration, the method reuses BAPG's alternating updates and…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.CG",
+    "math.OC"
+  ],
+  "published": "2026-10-03",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

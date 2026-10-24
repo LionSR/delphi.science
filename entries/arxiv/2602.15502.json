@@ -1,0 +1,20 @@
+{
+  "key": "2602.15502",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.15502",
+  "title": "MMPersistence: A mathematical morphology-oriented software library for computing persistent homology on cubical complexes",
+  "authors": [
+    "Chuan-Shen Hu"
+  ],
+  "summary": "Mathematical morphology (MM) is a powerful and widely used framework in image processing. Through set-theoretic and discrete geometric principles, MM operations such as erosion, dilation, opening, and closing effectively manipulate digital images by modifying local structures via structuring elements (SEs), while cubical homology captures global topological features such as connected components and loop structures within images. Building on the GUDHI package for persistent homology (PH) computation on cubical complexes, we propose the MMPersistence library, which integrates MM operations…",
+  "domain": "cs.SE",
+  "tags": [
+    "cs.SE",
+    "math.AT"
+  ],
+  "published": "2026-02-17",
+  "updated": "2026-02-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

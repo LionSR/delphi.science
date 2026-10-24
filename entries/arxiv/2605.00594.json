@@ -1,0 +1,23 @@
+{
+  "key": "2605.00594",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.00594",
+  "title": "On the Distribution of Unweighted Minimum Knapsack Instances with Large SOS Rank",
+  "authors": [
+    "Adam Kurpisz",
+    "Lucas Slot",
+    "Mikhail Zaytsev"
+  ],
+  "summary": "We analyze the sum-of-squares rank of unweighted instances of the Minimum Knapsack (MK) problem, i.e., minimization of $\\sum_{i=1}^n x_i$ for 0/1 variables under the constraint $\\sum_{i=1}^n x_i \\geq q$, with $q \\in \\mathbb{R}$. Such instances have long served as a testbed for understanding the limitations of lift-and-project methods in Boolean optimization. For example, both the Lovász-Schrijver and Sherali-Adams hierarchies require (maximal) rank $n$ to solve them, already when $q=1/2$ is constant. The SOS hierarchy requires only \\emph{sublinear} rank $O(\\sqrt{n})$ to solve unweighted MK…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.CC",
+    "cs.DS"
+  ],
+  "published": "2026-05-01",
+  "updated": "2026-05-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2610.22255",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.22255",
+  "title": "The ReLU Matrix Decomposition: NP-Hardness, Ill-Posedness, and ReLU-Rank",
+  "authors": [
+    "Giovanni Seraghiti",
+    "Arnaud Vandaele",
+    "Nicolas Gillis"
+  ],
+  "summary": "The ReLU Matrix Decomposition (RMD) approximates a sparse, nonnegative m-by-n matrix X by max(0, WH), where W is an m-by-r matrix, H is an r-by-n matrix, and r is the rank of the decomposition. The most common formulation, referred to as Fro-RMD, minimizes the Frobenius norm of X - max(0, WH) over W and H. We prove that Fro-RMD is NP-hard, even for binary matrices and r = 1; to the best of our knowledge, this is the first complexity result for RMD. We also show that Fro-RMD is ill-posed, in the sense that its infimum may not be attained. We then turn to exact RMD, that is, X = max(0, WH),…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

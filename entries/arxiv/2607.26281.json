@@ -1,0 +1,22 @@
+{
+  "key": "2607.26281",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.26281",
+  "title": "Concise $(\\varepsilon,r)$-representations of a path",
+  "authors": [
+    "Emilio Ferrucci",
+    "Oliver Perrée",
+    "Terry Lyons"
+  ],
+  "summary": "Paths $X \\colon [0,T] \\to \\mathbb R^d$ are traditionally stored in finite memory as time series. Recent research has underscored the benefits of instead representing them as collections of iterated integrals $\\{\\int_{0 < u_1 < \\ldots < u_n < T} \\mathrm{d} X_{u_1} \\otimes \\cdots \\otimes \\mathrm{d} X_{u_n}\\}_{n = 0}^N$. These two encodings can be viewed as the extrema on a two-parameter spectrum of representations of the path as degree-$N$ signatures on $m$ intervals in a partition of $[0,T]$. We ask the question of which such representation takes up the least amount of memory, measured as…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.PR"
+  ],
+  "published": "2026-07-28",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

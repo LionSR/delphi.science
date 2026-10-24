@@ -1,0 +1,25 @@
+{
+  "key": "2609.31363",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.31363",
+  "title": "Brenier Meets Adversarial Training: Optimal Transport Geometry for Robust Learning",
+  "authors": [
+    "Alireza Abdollahpoorrostam",
+    "Ehsan Sharifian",
+    "Buse Şen",
+    "Marco Cuturi",
+    "Daniel Kuhn"
+  ],
+  "summary": "Distributionally robust optimization (DRO) provides a principled framework for learning under distribution shift, but its practical use is hindered by the difficulty of evaluating worst-case risks for nonconvex loss functions. We study a penalized DRO formulation in which the adversary may choose any distribution but incurs a Wasserstein penalty for deviating from the empirical distribution. We show that the adversary's problem can be reformulated as an optimization problem over transport maps that push empirical samples to adversarial ones, and we prove that optimal maps are cyclically…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

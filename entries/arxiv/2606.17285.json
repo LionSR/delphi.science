@@ -1,0 +1,20 @@
+{
+  "key": "2606.17285",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.17285",
+  "title": "An Adaptive Proximal Framework for Stochastic Weakly Convex Optimization",
+  "authors": [
+    "Miaolan Xie"
+  ],
+  "summary": "Many nonsmooth, nonconvex objectives in learning and signal recovery are $ρ$-weakly convex. We minimize such a function when the weak-convexity parameter $ρ$ is unknown and only stochastic candidate and function-difference information is available. We propose the Adaptive Prox-Guided Scheme (APS), a single-trial framework that adapts the proximal parameter online and bidirectionally through a noisy descent test. APS attains a high-probability $O(\\varepsilon^{-2})$ iteration bound for Moreau-envelope stationarity. The result allows biased, heavy-tailed function-difference estimates, while the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DS"
+  ],
+  "published": "2026-06-15",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

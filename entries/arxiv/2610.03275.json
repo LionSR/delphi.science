@@ -1,0 +1,21 @@
+{
+  "key": "2610.03275",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03275",
+  "title": "How suboptimal is my stochastic network controller allowed to be? Completion certificates with application to power grids hosting AI data centers",
+  "authors": [
+    "Michael Chertkov"
+  ],
+  "summary": "Power grids are beginning to host AI data centers whose demand can change abruptly and in a correlated way, and operators and planners must decide whether existing controllers can absorb the resulting transients and where new flexibility is worth installing. We cast this as a question in stochastic control: how far from optimal is an implementable controller? For controlled diffusions with affine, state-independent actuation, additive and possibly degenerate noise and quadratic control cost, any Hamilton-Jacobi-Bellman (HJB) subsolution bounds the optimal cost from below and simulation…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.DS",
+    "physics.soc-ph"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

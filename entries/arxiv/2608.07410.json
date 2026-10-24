@@ -1,0 +1,21 @@
+{
+  "key": "2608.07410",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.07410",
+  "title": "Extreme least singular values of random row submatrices with bounded-density subgaussian entries",
+  "authors": [
+    "Xiufan Yang",
+    "Shu Wen",
+    "Yitzchak Shmalo"
+  ],
+  "summary": "Let $ξ$ be a centered real subgaussian random variable with positive variance and a bounded Lebesgue density, and let $A_m\\in\\mathbb{R}^{N_m\\times m}$ have independent entries distributed as $ξ$, where $N_m/m\\toγ>1$. For each set $I\\subset[N_m]$ with $|I|=m$, let $(A_m)_I$ denote the row submatrix indexed by $I$, and define $M_m(A_m):=\\min_{I\\subset[N_m],\\,|I|=m}σ_{\\min}((A_m)_I)$. We determine its exponential scale: $\\frac{1}{m}\\log M_m(A_m)\\xrightarrow{\\mathbb{P}}-h(γ)$, where $h(γ):=γ\\logγ-(γ-1)\\log(γ-1)$. This extends the corresponding real Gaussian result. The main new ingredient is an…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

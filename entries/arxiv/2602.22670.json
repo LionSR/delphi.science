@@ -1,0 +1,20 @@
+{
+  "key": "2602.22670",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.22670",
+  "title": "Robust Distributed Nonconvex Optimization Enabling Communication Acceleration and Privacy Protection",
+  "authors": [
+    "Zichong Ou",
+    "Jie Lu"
+  ],
+  "summary": "This paper addresses a distributed nonconvex optimization problem over multi-agent networks, where each agent exchanges its local information solely with its neighbors. Given that most existing distributed nonconvex optimization algorithms are susceptible to information leakage during inter agent communications, we propose a Robust Proximal Primal dual algorithm, referred to as RPP, to enhance the security of information transmission. In contrast to many existing approaches that directly transmit local variables throughout the network, we introduce carefully designed random noises to…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-26",
+  "updated": "2026-02-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

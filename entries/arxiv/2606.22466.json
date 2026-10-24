@@ -1,0 +1,21 @@
+{
+  "key": "2606.22466",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.22466",
+  "title": "Federated learning with heavy-tailed gradient noise and communication noise: a variance-reduction based algorithm",
+  "authors": [
+    "Shengchao Zhao",
+    "Yongchao Liu"
+  ],
+  "summary": "Federated learning (FL) is an emerging distributed machine learning paradigm that enables local devices to jointly train a global model while keeping data decentralized and private. We propose a variance-reduction based algorithm, VRA-FedSGD, for FL in the presence of heavy-tailed gradient noise and communication noise, where these noises are prevalent in large-scale machine learning over wireless networks and Internet of Things deployments. VRA-FedSGD employs a momentum variance reduction technique together with a nonlinear mapping to mitigate heavy-tailed gradient noise, and uses a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-06-21",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

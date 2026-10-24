@@ -1,0 +1,22 @@
+{
+  "key": "2604.24054",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.24054",
+  "title": "Analysis of Stability and Performance of Economic Model Predictive Control with State-Independent Costs",
+  "authors": [
+    "Alireza Arastou",
+    "Ye Wang",
+    "Erik Weyer"
+  ],
+  "summary": "This paper studies economic model predictive Control (EMPC) schemes, where the stage cost depends only on control inputs. Such problems arise in applications like water distribution networks and differ from standard EMPC since multiple steady states can correspond to the unique optimal steady input. We show that, under a strict dissipativity assumption related to the set of optimal steady states, the closed-loop trajectories converge asymptotically to this set, ensuring convergence of the economic cost to the optimal steady state cost. To enhance Lyapunov stability, we propose a modified…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-04-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2609.33383",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.33383",
+  "title": "Local LMO is Secretly a Projection Method!",
+  "authors": [
+    "Peter Richtárik",
+    "Ammar Mahran"
+  ],
+  "summary": "The local linear minimization oracle (Ferris and Zavriev, 1996; arXiv:2605.08850), or Local LMO, solves constrained convex problems without having to compute a projection: it minimizes a linear model over the intersection of the feasible set with a ball around the current iterate. We show that, whenever the ball radius does not exceed the Polyak radius, the Local LMO step is the Euclidean projection of the current iterate onto the intersection of the feasible set with a half-space that separates the iterate from the solution set; this projection is nonetheless computable by a linear oracle…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-09-27",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

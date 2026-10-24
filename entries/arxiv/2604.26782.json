@@ -1,0 +1,23 @@
+{
+  "key": "2604.26782",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26782",
+  "title": "Deep Policy Iteration for High-Dimensional Mean-Field Games with Regenerative Reformulation",
+  "authors": [
+    "Shuixin Fang",
+    "Shupeng Wang",
+    "Zhen Wu",
+    "Hui Zhang",
+    "Tao Zhou"
+  ],
+  "summary": "This paper develops a deep policy iteration method for high-dimensional finite-horizon mean-field games (MFG). We reformulate the game as a regenerative problem with deterministic cycles, which allows policy evaluation (PE), policy improvement (PI), and population measure estimation to be carried out cycle by cycle. Within this formulation, we approximate the population measure by a particle system and update it using a one-step random mapping induced by the Euler-Maruyama discretization of the state dynamics. This update transports a mini-batch of particles from one cycle to the next,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-05-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

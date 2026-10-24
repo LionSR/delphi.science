@@ -1,0 +1,22 @@
+{
+  "key": "2601.01462",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.01462",
+  "title": "Convergence Analysis of PINNs for Fractional Diffusion Equations in Bounded Domains",
+  "authors": [
+    "Elie Abdo",
+    "Lihui Chai",
+    "Ruimeng Hu",
+    "Xu Yang"
+  ],
+  "summary": "We establish the convergence of physics-informed neural networks (PINNs) for time-dependent fractional diffusion equations posed on bounded domains. The presence of fractional Laplacian operators introduces nonlocal behavior and regularity constraints, and standard neural network approximations do not naturally enforce the associated spectral boundary conditions. To address this challenge, we introduce a spectrally-defined mollification strategy that preserves the structure of the nonlocal operator while ensuring boundary compatibility. This enables the derivation of rigorous energy…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-04",
+  "updated": "2026-01-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2610.26555",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.26555",
+  "title": "Beyond Finite-Sum Optimization: A Primal-Dual Method for Decentralized Finite-Max Optimization",
+  "authors": [
+    "Zhouxing Luo",
+    "Lei Wang",
+    "Xin Liu"
+  ],
+  "summary": "Many decentralized systems are judged by their worst-performing agents rather than their average performance. We study finite-max optimization over a connected undirected network, where each agent knows only its own smooth, possibly nonconvex objective. Quadratic regularization yields a smooth finite-sum representation with a scalar dual variable and locally computable clipped weights. We develop an alternating primal-dual gradient tracking (APDGT) method, using neighbor communication without any global or centralized projections. Under smoothness and level-boundedness assumptions, a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

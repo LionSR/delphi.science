@@ -1,0 +1,20 @@
+{
+  "key": "2608.10654",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.10654",
+  "title": "Fixed forests in the minimum spanning tree and cubic volume growth",
+  "authors": [
+    "Luca Makowiec"
+  ],
+  "summary": "Let $M_n$ be the minimum spanning tree of the complete graph $K_n$ with i.i.d.\\ uniform edge weights. For a fixed forest $F$ with connected components $T_1, \\ldots, T_d$, we show that there exists a function $Ψ$ on finite trees such that $$ n^{|E(F)|} \\mathbb{P}_n(F \\subseteq M_n) \\longrightarrow \\prod_{i=1}^d Ψ(T_i). $$ We give a recursive description of $Ψ$ and calculate it explicitly for several small trees. For the star $S_k$ and the path $P_k$, we prove that $Ψ(S_k) \\sim ζ(2)^k$ and $Ψ(P_k) \\sim k^2/12$, respectively. We also show that the expected size of a ball of radius $r$ is…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.CO"
+  ],
+  "published": "2026-08-11",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2606.08953",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.08953",
+  "title": "Self-Consistent Generative Paths via Admissible Random Variational Transport",
+  "authors": [
+    "Lei Luo",
+    "Yingzhen Zhang",
+    "Jian Yang"
+  ],
+  "summary": "Modern generative models often define an entire probability path from a simple prior to the data law, rather than only an endpoint map. Diffusion models follow stochastic denoising paths, flow matching learns transport fields, consistency and distillation methods compress paths into one or a few steps, adversarial models match terminal distributions, and VAEs generate through latent kernels. Existing unifying views mainly describe how such paths are constructed. We study a complementary question: when is a generated probability path self-consistent? We define a self-consistent generative…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.FA"
+  ],
+  "published": "2026-06-08",
+  "updated": "2026-06-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

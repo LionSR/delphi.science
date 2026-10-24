@@ -1,0 +1,20 @@
+{
+  "key": "2605.11108",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11108",
+  "title": "Empirical Convergence of Even-Order Gromov-Wasserstein Functionals",
+  "authors": [
+    "Vasyl Paliy"
+  ],
+  "summary": "We study the sample complexity of empirical plug-in estimation for the powered even-order Gromov-Wasserstein functional between compactly supported probability measures on $\\mathbb{R}^{d_x}$ and $\\mathbb{R}^{d_y}$. For every fixed pair of integers $r,k\\geq 1$, we prove that the two-sample empirical error is bounded at the rate $n^{-2/\\max\\{\\min\\{d_x,d_y\\},4\\}}$, up to a logarithmic factor in the critical case $\\min\\{d_x,d_y\\}=4$. This extends the known quadratic Euclidean upper rate to the full powered even-order family. The proof uses a polynomial decomposition of the even-order GW…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.ST"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

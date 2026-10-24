@@ -1,0 +1,23 @@
+{
+  "key": "2602.08018",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.08018",
+  "title": "Sinkhorn Distributionally Robust State Estimation via System Level Synthesis",
+  "authors": [
+    "Yulin Feng",
+    "Xianyu Li",
+    "Steven X. Ding",
+    "Hao Ye",
+    "Chao Shang"
+  ],
+  "summary": "In state estimation tasks, the usual assumption of an exactly known disturbance distribution is often unrealistic and renders the estimator fragile in practice. The recently emerging Wasserstein distributionally robust state estimation (DRSE) design can partially mitigate this fragility; however, its worst-case distribution is provably discrete, which deviates from the inherent continuity of real-world distributions and results in over-pessimism. In this work, we develop a new Sinkhorn DRSE design within the system level synthesis scheme with the aim of shaping the closed-loop errors under…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-08",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2610.16514",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16514",
+  "title": "An Algebraic Matching Algorithm for the Genus of Grid Diagrams",
+  "authors": [
+    "Jun Wang",
+    "Shasha Yang"
+  ],
+  "summary": "Grid diagrams encode knots and links combinatorially through an (n,n) winding matrix W(G). A fundamental invariant of the grid diagram is its genus g(G), which records essential topological information about the underlying knot. We give an algebraic algorithm that computes g(G) directly from W(G). The method repurposes the Hungarian algorithm ,after a column normalization that makes the matrix non-negative, it applies row-column reductions and minimum-vertex-cover corrections until the zero entries admit a perfect matching, equivalently until the minimum marking number equals n. By Konig's…",
+  "domain": "math.GT",
+  "tags": [
+    "math.GT"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2601.05398",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.05398",
+  "title": "Markovian Compression: Looking to the Past Helps Accelerate the Future",
+  "authors": [
+    "Andrey Veprikov",
+    "Vladimir Solodkin",
+    "Mikhail Rudakov",
+    "Petr Babkin",
+    "Aleksandr Beznosikov"
+  ],
+  "summary": "This paper deals with distributed optimization problems that use compressed communication to achieve efficient performance and mitigate communication bottleneck. We propose a family of compression schemes in which operators transform vectors fed to their input according to a Markov chain, i.e. the stochasticity of the compressors depends on previous iterations. The compressors are implemented in the vanilla Quantized Stochastic Gradient Descent algorithm (QSGD), and, to further improve the efficiency and convergence rate, in the momentum accelerated QSGD. We provide convergence results for…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-08",
+  "updated": "2026-01-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

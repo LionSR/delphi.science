@@ -1,0 +1,25 @@
+{
+  "key": "2609.39466",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.39466",
+  "title": "T-ARC: Topology-Aware Randomized Clustering via Distributionally Robust Stochastic Block Models",
+  "authors": [
+    "Serena Grazia De Benedictis",
+    "Andersen Ang",
+    "Nicoletta Del Buono",
+    "Flavia Esposito",
+    "Laura Selicato"
+  ],
+  "summary": "In this work, we introduce a new clustering method, namely T-ARC (Topology-Aware Randomized Clustering), that corrects the geometric bias of K-means by embedding topological information directly into the optimization objective. Building on the assumption that the data admits an underlying hidden structure modeled via a latent graph, the idea is to uncover this information through the interplay between the standard K-means data-fidelity term and a graph-cut penalty, which discourages cluster assignments inconsistent with the connectivity structure of the data. To render this coupling…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.AT",
+    "math.OC"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

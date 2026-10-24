@@ -1,0 +1,25 @@
+{
+  "key": "2609.28543",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.28543",
+  "title": "Stochastic Inertial Krasnosel'skii-Mann Iteration Achieves Near-Optimal Sample Complexity",
+  "authors": [
+    "Tong Yang",
+    "Tao Jiang",
+    "Yuejie Chi",
+    "Ashok Cutkosky",
+    "Lin Xiao"
+  ],
+  "summary": "We analyze a simple stochastic inertial Krasnosel'skii--Mann (iKM) method for finding a fixed point of a nonexpansive operator in a real Hilbert space. Our method is obtained simply by adding two inertial extrapolations to stochastic KM [Bravo and Cominetti, 2024], and it retains one call to a possibly biased stochastic oracle per update and achieves sharp rates in both the stochastic and deterministic regimes. Specifically, with our proposed parameter schedule, we prove the following last-iterate fixed-point residual bound: \\[ {O}\\!\\left(\\frac{1}{K} +\\frac{σ\\log K}{\\sqrt K} +\\frac{B_K\\log…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-09-22",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

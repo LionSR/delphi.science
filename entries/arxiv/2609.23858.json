@@ -1,0 +1,19 @@
+{
+  "key": "2609.23858",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.23858",
+  "title": "Linear Independence of Random Boolean Tensor Powers at the Dimension Threshold",
+  "authors": [
+    "Kyle Luh"
+  ],
+  "summary": "Let $d \\geq 1$ be fixed and let \\[ D(n,d) := \\sum_{j=0}^{d} \\binom{n-1}{j}. \\] We show that if $x^{(1)}, \\dots, x^{(m)}$ are independent uniform points of $\\{\\pm 1\\}^n$ then uniformly for $m \\leq D(n,d)$, there exists a constant $C_d > 0$ such that \\[ \\mathbb{P}((x^{(1)})^{\\otimes d}, \\dots, (x^{(m)})^{\\otimes d} \\text{ are linearly independent}) = 1 - O_d\\left(\\frac{\\log^{C_d} n}{n^{1/2}} \\right). \\] This achieves the exact dimensional threshold and answers a question asked by Baldi and Vershynin. We discuss applications of the result to the semidefinite relaxation of the cut-polytope and…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-09-20",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

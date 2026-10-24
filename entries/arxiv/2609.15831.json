@@ -1,0 +1,21 @@
+{
+  "key": "2609.15831",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.15831",
+  "title": "Superconvergence of Centered Finite Difference Approximations",
+  "authors": [
+    "Mario J. Bencomo",
+    "Joseph Igot",
+    "Emma Maltes"
+  ],
+  "summary": "The finite difference (FD) method is commonly used to approximate derivatives of smooth functions, with accuracy typically determined by stencil size and derivative order. However, certain centered stencils exhibit unexpectedly higher accuracy, a phenomenon known as superconvergence, which has been observed in practice but lacks rigorous explanation. We present a mathematical framework for superconvergence in centered FD approximations based on Taylor expansions of the truncation error and the resulting linear system for the FD coefficients. By analyzing symmetry properties of these…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

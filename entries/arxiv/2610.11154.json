@@ -1,0 +1,20 @@
+{
+  "key": "2610.11154",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.11154",
+  "title": "Exact Convex Reformulations of Binary Quadratic Programs from Facially Reduced Semidefinite Relaxations",
+  "authors": [
+    "Hao Hu",
+    "Mingming Xu"
+  ],
+  "summary": "We develop MIQCR-FR, a framework for exact convex reformulation from facially reduced semidefinite relaxations of equality-constrained binary quadratic problems. Standard mixed-integer quadratic convex reformulation (MIQCR) uses dual multipliers of the original relaxation. Facial reduction (FR) reduces the semidefinite matrix order, but recovery of the original dual multipliers is not guaranteed in general. For this class of problems, we identify how retaining the linear equalities and their products with each binary variable enables this recovery. An established dual recovery formula gives…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

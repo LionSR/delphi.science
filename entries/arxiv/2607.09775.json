@@ -1,0 +1,23 @@
+{
+  "key": "2607.09775",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.09775",
+  "title": "WINT: A Novel Weighted Integer Representation with Improved Error Characteristics",
+  "authors": [
+    "Cheng-Yen Lee",
+    "Zach Assad",
+    "Gautham Nemani",
+    "Sunil P. Khatri"
+  ],
+  "summary": "In computing, there is a need for number representation schemes that provide large dynamic range with low error. Many applications, including embedded systems and edge machine learning, have stringent memory constraints yet require large dynamic range for data representation. We present Weighted Integer (WINT), a simple and configurable mantissa exponent number format with user-selectable mantissa (m) and exponent (e) bit allocations (also referred to as configurations) that enables application-specific precision versus range tradeoffs at design time. We develop a complete analytical…",
+  "domain": "cs.AR",
+  "tags": [
+    "cs.AR",
+    "math.NA"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

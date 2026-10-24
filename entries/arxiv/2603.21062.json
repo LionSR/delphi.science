@@ -1,0 +1,22 @@
+{
+  "key": "2603.21062",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.21062",
+  "title": "Gradient Descent with Projection Finds Over-Parameterized Neural Networks for Learning Low-Degree Polynomials with Nearly Minimax Optimal Rate",
+  "authors": [
+    "Yingzhen Yang",
+    "Ping Li"
+  ],
+  "summary": "We study the problem of learning a low-degree spherical polynomial of degree $k_0 = Θ(1) \\ge 1$ defined on the unit sphere in $\\RR^d$ by training an over-parameterized two-layer neural network with augmented feature in this paper. Our main result is the significantly improved sample complexity for learning such low-degree polynomials. We show that, for any regression risk $\\eps \\in (0, Θ(d^{-k_0})]$, an over-parameterized two-layer neural network trained by a novel Gradient Descent with Projection (GDP) requires a sample complexity of $n \\asymp Θ( \\log(4/δ) \\cdot d^{k_0}/\\eps)$ with…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-03-22",
+  "updated": "2026-03-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

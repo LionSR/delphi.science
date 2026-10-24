@@ -1,0 +1,19 @@
+{
+  "key": "2608.22451",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.22451",
+  "title": "Deficit bounds and equality cases in the Tu--Deng problem",
+  "authors": [
+    "Kaimin Cheng"
+  ],
+  "summary": "Let $N=2^k-1$, and let $S_{t,k}$ consist of the pairs $0\\le a,b<N$ such that $a+b\\equiv t\\pmod N$ and $\\wt(a)+\\wt(b)<k$. The Tu--Deng bound $|S_{t,k}|\\le 2^{k-1}$ has recently been proved. In this paper, we give a combinatorial proof of the equality criterion. If the $k$-bit cyclic word of $t$ has $Z$ zeros and $g_1,\\ldots,g_Z$ are the numbers of ones between successive zeros, then $$|S_{t,k}|=2^{k-1} \\quad\\Longleftrightarrow\\quad g_i\\ge Z-1\\quad(1\\le i\\le Z).$$ Moreover, we recover the resulting enumeration of the equality parameters. Beyond equality, if $R\\ge Z\\ge2$, where $R$ is the…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-08-23",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

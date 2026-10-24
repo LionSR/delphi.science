@@ -1,0 +1,22 @@
+{
+  "key": "2604.09325",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.09325",
+  "title": "A reduced-order model for parametrized Optimal Transport problems",
+  "authors": [
+    "Elise Bonnet-Weill",
+    "Virginie Ehrlacher",
+    "Luca Nenna"
+  ],
+  "summary": "In this work, we aim at efficiently solving a parametrized family of optimal transport problems by using model order reduction methods. We propose a reduced-order model by adding to the primal (respectively dual) version of the high-fidelity model the additional constraint to live in a non negative sub cone (resp. in subspaces) of small dimension. The reduced-order model then reads as a linear program with a small number of degrees of freedom and constraints. We identify explicit conditions under which this reduced-order model has at least one solution. We propose two a posteriori error…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-04-10",
+  "updated": "2026-04-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

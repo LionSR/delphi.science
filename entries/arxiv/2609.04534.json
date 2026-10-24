@@ -1,0 +1,19 @@
+{
+  "key": "2609.04534",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.04534",
+  "title": "Adaptive Multilevel Discontinuous Galerkin Methods on GPUs",
+  "authors": [
+    "Michał Wichrowski"
+  ],
+  "summary": "I present a matrix-free symmetric interior penalty discontinuous Galerkin method for adaptively refined Cartesian meshes on GPUs. At non-matching interfaces, auxiliary \\emph{shadow cells} represent the adjacent coarse polynomial on the fine level. This approach converts non-matching interfaces into matching faces, permitting uniform face evaluation throughout the mesh. I prove that this construction is equivalent to the standard non-matching formulation. Furthermore, this representation yields a local geometric multigrid method in which frozen shadows provide inter-level boundary data and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

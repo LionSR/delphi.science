@@ -1,0 +1,21 @@
+{
+  "key": "2607.00686",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.00686",
+  "title": "Goal-oriented space-time adaptivity for the Navier--Stokes equations based on the dual weighted residual method",
+  "authors": [
+    "Marius Paul Bruchhäuser",
+    "Nils Margenberg",
+    "Markus Bause"
+  ],
+  "summary": "This work presents a goal-oriented a posteriori error estimator based on the Dual Weighted Residual (DWR) method together with space-time mesh adaptivity for the Navier--Stokes equations. The resulting nonlinear algebraic systems on the space-time slabs are solved by Newton's method with GMRES, preconditioned by a slab-wise geometric multigrid method. This combination yields reliable control of target quantities on computationally feasible space-time meshes together with a robust and efficient solution of the algebraic systems. The implementation is based on a MPI-parallel programming model…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

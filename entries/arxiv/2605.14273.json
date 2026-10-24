@@ -1,0 +1,20 @@
+{
+  "key": "2605.14273",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.14273",
+  "title": "Generalized Dual Decomposition",
+  "authors": [
+    "Pengyu Zhang",
+    "Ruiwei Jiang"
+  ],
+  "summary": "We study two-stage stochastic optimization models with mixed-integer decision variables appearing in both stages. For these models, dual decomposition enables parallel computing implementation and can quickly provide a lower bound for the optimal value. However, the lower bound thus obtained is not exact in general due to the lack of strong duality. In this paper, we propose a generalized dual decomposition (GDD) that extends the linear regularizer used in dual decomposition to a general nonlinear one, which still admits parallelization while exhibiting strong duality. By encoding the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-14",
+  "updated": "2026-05-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

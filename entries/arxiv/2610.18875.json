@@ -1,0 +1,24 @@
+{
+  "key": "2610.18875",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.18875",
+  "title": "A Boson-informed neural network for Ground States of Many-Body Schrödinger equations",
+  "authors": [
+    "Zhizhong Kong",
+    "Jerry Zhijian Yang",
+    "Cheng Yuan",
+    "Xiaofei Zhao"
+  ],
+  "summary": "We propose a symmetry-preserving Boson-informed neural network (BINN) for the variational Monte Carlo computation of interacting-boson ground states in continuous space. The framework explicitly separates the two dominant physical scales of the system. At the microscopic interaction scale, a cell Jastrow factor absorbs the leading near-contact stiffness, while at the macroscopic scale, a potential-aware envelope encodes the external confinement, leaving the neural network to capture a smoother many-body residual. Across both two- and three-dimensional tests, the BINN approaches the Hartree…",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "cond-mat.quant-gas",
+    "math-ph"
+  ],
+  "published": "2026-09-05",
+  "updated": "2026-09-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2601.18417",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.18417",
+  "title": "A Jacobian-free Newton-Krylov method for high-order cell-centred finite volume solid mechanics",
+  "authors": [
+    "Ivan Batistic",
+    "Pablo Castrillo",
+    "Philip Cardiff"
+  ],
+  "summary": "This work extends the application of Jacobian-free Newton-Krylov (JFNK) methods to higher-order cell-centred finite-volume formulations for solid mechanics. While conventional schemes are typically limited to second-order accuracy, we present third- and fourth-order formulations employing local least-squares reconstructions for gradient evaluation and Gaussian quadrature at cell faces. These schemes enable accurate resolution of complex stress and deformation fields in linear and nonlinear solids while retaining the flexibility of finite-volume methods. A key contribution is a JFNK solution…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-26",
+  "updated": "2026-01-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

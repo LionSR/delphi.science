@@ -1,0 +1,22 @@
+{
+  "key": "2606.01729",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.01729",
+  "title": "A Unified Variational Design of Predictive Mirror Descent in Convex Games under Stochastic Feedback",
+  "authors": [
+    "Yunian Pan",
+    "Tao Li",
+    "Quanyan Zhu"
+  ],
+  "summary": "Mirror descent provides a geometric framework for learning in games, but its last-iterate behavior can fail in weakly stable regimes, where the dynamics may exhibit rotational or recurrent transients. Predictive mirror methods mitigate this issue by modifying the feedback entering the mirror update, yet standard predictive variants are typically introduced algorithmically and analyzed one at a time. This letter gives a variational route to predictive feedback by constructing a stochastic mirror differential game with an auxiliary memory state. Its stage cost couples two Fenchel terms: a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.GT"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

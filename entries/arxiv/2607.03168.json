@@ -1,0 +1,23 @@
+{
+  "key": "2607.03168",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.03168",
+  "title": "Entropy Regularization Improves Policy Robustness in Continuous-Time Reinforcement Learning",
+  "authors": [
+    "Jialun Cao",
+    "Fernando Acero",
+    "David Šiška",
+    "Yufei Zhang"
+  ],
+  "summary": "Entropy regularization is widely used in continuous-time reinforcement learning (RL) to reduce sensitivity to environmental perturbations, yet its robustness benefits lack a rigorous theoretical foundation. This paper establishes the first robustness guarantees for entropy-regularized continuous-time Markov decision processes. We show that maximizing an entropy-regularized objective yields a lower bound on a worst-case robust RL problem with joint reward and transition perturbations. We analytically characterize the induced robust sets and prove that they expand monotonically with the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-07-03",
+  "updated": "2026-07-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

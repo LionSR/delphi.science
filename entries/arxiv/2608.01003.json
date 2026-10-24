@@ -1,0 +1,20 @@
+{
+  "key": "2608.01003",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.01003",
+  "title": "An Integral-Based Framework for Preconditioning $f(A)b$",
+  "authors": [
+    "Gustavo Ramirez-Hidalgo"
+  ],
+  "summary": "The computation of the action of a matrix function on a vector, $f(A)b$, is a major computational bottleneck for large, sparse matrices, particularly when unfavorable spectral distributions cause standard Krylov subspace methods to stagnate. In this work, we propose a unified framework for preconditioning $f(A)b$ based on the Cauchy integral representation of the matrix function. By exploiting shift-invariance properties, we decouple the preconditioner evaluation from the Krylov subspace generation. We develop this framework in two distinct directions. First, for rational shift-and-invert…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "hep-lat"
+  ],
+  "published": "2026-08-02",
+  "updated": "2026-08-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

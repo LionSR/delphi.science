@@ -1,0 +1,21 @@
+{
+  "key": "2602.23467",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.23467",
+  "title": "On the Limits of Interpretable Machine Learning in Quintic Root Classification",
+  "authors": [
+    "Rohan Thomas",
+    "Majid Bani-Yaghoub"
+  ],
+  "summary": "Can Machine Learning (ML) autonomously recover interpretable mathematical structure from raw numerical data? We aim to answer this question using the classification of real-root configurations of polynomials up to degree five as a structured benchmark. We tested an extensive set of ML models, including decision trees, logistic regression, support vector machines, random forest, gradient boosting, XGBoost, symbolic regression, and neural networks. Neural networks achieved strong in-distribution performance on quintic classification using raw coefficients alone (84.3% + or - 0.9% balanced…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-02-26",
+  "updated": "2026-02-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

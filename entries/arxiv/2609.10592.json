@@ -1,0 +1,20 @@
+{
+  "key": "2609.10592",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10592",
+  "title": "Tag-system computation using only powers and principal logarithms",
+  "authors": [
+    "Trevor Cappallo"
+  ],
+  "summary": "I show that one exact step of any tag system can be written as a single fixed expression using only powers and logarithms. A tag state is represented as an integer; evaluating the expression yields the integer encoding of the next configuration, and feeding the answer back into the same expression follows the computation step by step. The discrete part of the update comes from leveraging the wraparound in the principal complex logarithm, which effectively serves the same purpose as floor, mod, or sin in comparable approaches. The iterating expressions use only $x^y$ and $\\log_b a$: it turns…",
+  "domain": "math.LO",
+  "tags": [
+    "math.LO",
+    "cs.LO"
+  ],
+  "published": "2026-09-06",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

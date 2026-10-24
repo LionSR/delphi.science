@@ -1,0 +1,20 @@
+{
+  "key": "2604.01835",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.01835",
+  "title": "Goal oriented error estimation for adaptive sampling of PINNS",
+  "authors": [
+    "Medard Govoeyi",
+    "Thomas Richter"
+  ],
+  "summary": "Physics-Informed Neural Networks (PINNs) are mesh-free approaches for the numerical approximation of partial differential equations, where a neural network is trained by minimizing a loss function derived from the governing equations and boundary conditions. The Deep Ritz method can be interpreted as a particular variational form of a PINN, where the loss corresponds to the minimization of an energy functional associated with a symmetric positive definite problem. In this work, we study the approximation of the Laplace equation using both the classical PINN formulation and its variational…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-02",
+  "updated": "2026-04-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

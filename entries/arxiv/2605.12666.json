@@ -1,0 +1,20 @@
+{
+  "key": "2605.12666",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.12666",
+  "title": "Newton methods beyond Hessian Lipschitz continuity: A nonlinear preconditioning approach",
+  "authors": [
+    "Alexander Bodard",
+    "Panagiotis Patrinos"
+  ],
+  "summary": "Newton-type methods are typically analyzed under Lipschitz continuity of the Hessian, an assumption that can fail for objectives with higher-order or polynomial growth. We introduce a class of nonlinearly preconditioned Newton methods that apply Newton's root-finding scheme to a transformed optimality mapping, thereby extending recent nonlinear preconditioning ideas from first-order methods to the second-order setting. The resulting methods are naturally analyzed under Lipschitz continuity of a preconditioned Hessian, a condition that significantly relaxes the classical Hessian Lipschitz…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

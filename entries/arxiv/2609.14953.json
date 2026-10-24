@@ -1,0 +1,22 @@
+{
+  "key": "2609.14953",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.14953",
+  "title": "Distributed Fast Fixed-Point Algorithms for Composite Monotone Inclusions over Networks",
+  "authors": [
+    "Nghia Nguyen-Trung",
+    "Ion Necoara",
+    "Quoc Tran-Dinh"
+  ],
+  "summary": "This paper aims to develop new and efficient distributed algorithms for solving a class of monotone inclusions, $0 \\in \\sum_{i=1}^n (G_ix + T_ix)$, over a connected network of $n$ agents, where the single-valued operator $G_i$ and the possibly multivalued operator $T_i$ remain private to agent $i$. Existing distributed algorithms for this problem class are primarily non-accelerated, and their exact convergence rates in the original primal space are largely unexplored. To bridge this gap, we propose two Decentralized Fast Fixed-Point-based algorithms, \\texttt{ND-DFFP} and \\texttt{NI-DFFP},…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

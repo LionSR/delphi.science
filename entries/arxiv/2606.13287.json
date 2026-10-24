@@ -1,0 +1,22 @@
+{
+  "key": "2606.13287",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.13287",
+  "title": "Clipping Makes Distributed and Federated Asynchronous SGD Robust to Stragglers",
+  "authors": [
+    "Samuel Erickson",
+    "Mikael Johansson"
+  ],
+  "summary": "In modern machine learning, parallelization of training is an important strategy for increasing scale. Asynchronous stochastic gradient descent (ASGD), which maximizes the utilization of available hardware by avoiding waiting for slow workers. However, with constant step sizes, the convergence of ASGD is nonetheless affected negatively by slow workers due to large delays in updates. At the same time, it has been empirically observed in asynchronous training of deep learning models that gradient clipping \"stabilizes\" training. In this work, we provide a theoretical justification for this…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.DC",
+    "math.OC"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

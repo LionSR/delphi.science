@@ -1,0 +1,23 @@
+{
+  "key": "2607.06532",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06532",
+  "title": "GraphBU: MILP Instance Generation with Graph-Native Block Units",
+  "authors": [
+    "Xiaolei Guo",
+    "Chenyu Zhou",
+    "Jianghao Lin",
+    "Dongdong Ge"
+  ],
+  "summary": "Mixed-integer linear programming (MILP) instances used for solver development are hard to obtain when models come from private or application-specific pipelines. A generator must keep the structure that solvers and learned policies rely on. Existing general generators usually choose their generation unit from a formulation template, summary statistics, local graph edits, or blocks found after recombination. These units do not explicitly record how a local part of the MILP is coupled to the rest of the instance. We propose GraphBU, a graph-native generator whose basic unit is a local…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

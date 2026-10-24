@@ -1,0 +1,19 @@
+{
+  "key": "2602.18794",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.18794",
+  "title": "Statistical Error Bounds for Generative Solvers of Chaotic PDEs: Wasserstein Stability, Generalization, and Turbulence",
+  "authors": [
+    "Victor Armegioiu"
+  ],
+  "summary": "Statistical solutions of incompressible Euler describe turbulent dynamics as time-parameterized laws on $L^2$ whose multi-point correlations satisfy an infinite hierarchy of weak identities. Modern generative samplers for PDE forecasting (flow matching, rectified flows, diffusion via probability-flow ODEs) are measure-transport mechanisms and therefore induce Markov operators on laws. We develop a law-level analysis compatible with the correlation-measure framework of Lanthaler--Mishra--Parés-Pulido (LM): convergence in $d_T(μ,ν)=\\int_{0}^{T} W_{1}\\!\\bigl(μ_t,ν_t\\bigr)\\,\\mathrm{d}t$,…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-02-21",
+  "updated": "2026-02-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2609.04794",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.04794",
+  "title": "Policy Iteration for Domain Randomized Linear Quadratic Systems",
+  "authors": [
+    "Abbas Pasdar",
+    "Farnaz Adib Yaghmaie"
+  ],
+  "summary": "In this work, we study policy optimization under domain randomization for linear quadratic control, focusing on learning a single state-feedback controller that minimizes the average cost across systems with uncertain dynamics. We propose a policy iteration algorithm with a step-size rule that preserves stability across all sampled systems at each iteration. We show that the method yields monotonic improvement of the sample-average objective and that a stabilizing step size always exists. Under standard smoothness assumptions, the iterates converge subsequentially to stationary points, and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

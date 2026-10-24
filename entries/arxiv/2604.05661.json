@@ -1,0 +1,23 @@
+{
+  "key": "2604.05661",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.05661",
+  "title": "Improved Space-Time Tradeoffs for Permutation Problems via Extremal Combinatorics",
+  "authors": [
+    "Afrouz Jabal Ameli",
+    "Jesper Nederlof",
+    "Shengzhe Wang"
+  ],
+  "summary": "We provide improved space-time tradeoffs for permutation problems over additively idempotent semi-rings. In particular, there is an algorithm for the Traveling Salesperson Problem that solves $N$-vertex instances using space $S$ and time $T$ where $S\\cdot T \\leq 3.1861^{N}$. This improves a previous work by Koivisto and Parviainen [SODA'10] where $S\\cdot T \\leq 3.9271^N$, and overcomes a barrier they identified, as their bound was shown to be optimal within their framework. To get our results, we introduce a new parameter of a set system that we call the chain efficiency. This relates the…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-04-07",
+  "updated": "2026-07-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

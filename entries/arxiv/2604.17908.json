@@ -1,0 +1,22 @@
+{
+  "key": "2604.17908",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.17908",
+  "title": "A Coupling Method of Mixed and Lagrange Finite Elements for Linear Elasticity Problem",
+  "authors": [
+    "Wei Chen",
+    "Jun Hu",
+    "Limin Ma",
+    "Mingyan Zhang"
+  ],
+  "summary": "This paper proposes a finite element method that couples mixed and Lagrange finite elements to efficiently capture stress concentrations in elasticity problems. The method employs conforming mixed finite elements in regions with stress concentration, while standard Lagrange elements are used elsewhere, achieving a balance between stress accuracy and computational efficiency. The well-posedness of the coupled formulation and optimal a priori error estimates are established, even when the size of the mixed finite element subregion is $O(h)$. Numerical experiments are presented to verify the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-04-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

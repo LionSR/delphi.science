@@ -1,0 +1,24 @@
+{
+  "key": "2610.30852",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.30852",
+  "title": "Stiff source terms inside ADER-DG method",
+  "authors": [
+    "I. S. Popov",
+    "A. P. Popova"
+  ],
+  "summary": "ADER-DG numerical method with the LST-DG predictor, when used to solve hyperbolic equations with stiff source terms, exhibits properties characteristic of IMEX computational schemes. With increasing stiffness, characterized by the parameter $z = ν{Δt}^{n} < 0$, the maximum of the Courant number $\\mathrm{CFL}_{\\rm max}$ of the ADER-DG numerical method increases. In the region of strong stiffness $|z| \\gg 1$, a linear increase in the Courant number $\\mathrm{CFL}_{\\rm max}(z) \\sim |z|$ occurs. In the region of small source terms $|z| \\ll 1$, the results $\\mathrm{CFL}_{\\rm max}(z)$ transform…",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "math-ph",
+    "math.NA",
+    "physics.app-ph",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

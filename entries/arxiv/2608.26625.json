@@ -1,0 +1,20 @@
+{
+  "key": "2608.26625",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.26625",
+  "title": "A stable DG-POD reduced-order method for dynamic linear viscoelasticity",
+  "authors": [
+    "Byeong-Chun Shin",
+    "Yongseok Jang"
+  ],
+  "summary": "We present a reduced-order modeling framework based on proper orthogonal decomposition for dynamic linear viscoelasticity governed by generalized Maxwell models. The hereditary constitutive law is reformulated using internal variables, and the resulting problem is discretized in space by a symmetric interior penalty discontinuous Galerkin method and in time by either the backward Euler or Crank--Nicolson scheme. The reduced model is obtained by projecting the fully discrete system onto low-dimensional spaces constructed from displacement snapshots. For the full-order discontinuous Galerkin…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-27",
+  "updated": "2026-08-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

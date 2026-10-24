@@ -1,0 +1,23 @@
+{
+  "key": "2607.02843",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.02843",
+  "title": "Voltage Stability Kernel: A Cofactor Theory of Voltage Stability in Lossy Power Systems",
+  "authors": [
+    "Takayuki Ishizaki",
+    "Jigen Koizumi",
+    "Hiroo Yashiba",
+    "Boqiang Sun"
+  ],
+  "summary": "This paper introduces the voltage stability kernel (VSK), a cofactor-based bus-wise representation of voltage stability in lossy power systems. The VSK is defined as the vector of principal cofactors of the voltage stability Laplacian (VSL), a reduced Jacobian that retains voltage source internal angles while eliminating the other variables. We show that the VSK constitutes the left kernel of the VSL, which is typically nonsymmetric in lossy power systems. We also define the voltage stability margin (VSM) as the sum of all VSK components and show that it is equal to the product of all…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "eess.SY"
+  ],
+  "published": "2026-07-03",
+  "updated": "2026-07-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2606.19871",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.19871",
+  "title": "Semiglobal Input-Delay Tolerance Algorithm for Distributed Nonconvex Optimization of Networked Nonlinear Systems",
+  "authors": [
+    "Jing-Zhe Xu",
+    "Zhi-Wei Liu",
+    "Ming-Feng Ge",
+    "Yan-Wu Wang",
+    "Dinxin He"
+  ],
+  "summary": "This paper studies a class of distributed optimization problems in networked nonlinear systems (NNSs) subject to input delays and consensus constraints. It introduces input-delay tolerant semiglobal convergence (IDTSC), meaning that for any prescribed compact initial set there exists an admissible delay bound under which the optimal solution is computed within consensus constraints and all node states converge to the solution. Building on a hierarchical design and input-to-state stability analysis, a new semiglobal input-delay tolerant (SIDT) algorithm is developed that practically achieves…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.MA",
+    "eess.SY"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2610.04285",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04285",
+  "title": "Amortized Score-Hamiltonian Policy Iteration: A Grid-Free Scheme for Relaxed Stochastic Control Problems",
+  "authors": [
+    "Qi Feng",
+    "Gu Wang"
+  ],
+  "summary": "We develop an amortized, grid-free implementation of continuous Langevin dynamics based policy-value iteration for entropy-regularized, infinite-horizon relaxed stochastic control problems. The improvement rate of the exact iteration is a discounted aggregate of relative Fisher information between the policy and the Gibbs law of its Hamiltonian. The associated score residual is the velocity with which the control's Langevin dynamics transport its law. We project this velocity onto a conditional sampler shared across states, instead of one Langevin dynamics per state, and the value dynamics…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-10-03",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

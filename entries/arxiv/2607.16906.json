@@ -1,0 +1,19 @@
+{
+  "key": "2607.16906",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.16906",
+  "title": "Neural operator preconditioning from mixed dataset for the Helmholtz equations: Application to transcranial ultrasound",
+  "authors": [
+    "Yanfei Xiang"
+  ],
+  "summary": "This work develops a neural operator preconditioned subspace method for sequences of linear systems arising from the discretization of the two-dimensional Helmholtz equation in transcranial ultrasound applications. The problem involves strongly heterogeneous, patient-dependent velocity fields that induce severe wave distortion and pose significant challenges for standard iterative solvers. Building on neural network preconditioning framework of Giraud et al. (HAL RR-9593, 2025) and the idealized skull dataset used for the learned optimizer of Stanziola et al. (JCP 441, 2021), neural operator…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-18",
+  "updated": "2026-07-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

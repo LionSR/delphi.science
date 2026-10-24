@@ -1,0 +1,22 @@
+{
+  "key": "2609.29950",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.29950",
+  "title": "Domain preserving splitting schemes for a class of SPDEs driven by a standard Brownian motion",
+  "authors": [
+    "Charles-Edouard Bréhier",
+    "David Cohen",
+    "Gijs Custers"
+  ],
+  "summary": "We consider a class of SPDEs driven by a standard real-valued Brownian motion, with drift and diffusion coefficients such that there exists a unique mild solution taking values in the interval $[-1,1]$ almost surely. To preserve this qualitative property of the exact solution, we propose a domain preserving Lie--Trotter splitting scheme: for any choice of the time-step size, the numerical solution takes values in the interval $[-1,1]$ almost surely. Furthermore, we prove mean-square convergence with rate $1/2-$ for the domain preserving Lie--Trotter scheme. These theoretical results are…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.PR"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

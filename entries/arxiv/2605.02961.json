@@ -1,0 +1,23 @@
+{
+  "key": "2605.02961",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.02961",
+  "title": "Analytic Bridge Diffusions for Controlled Path Generation",
+  "authors": [
+    "Michael Chertkov"
+  ],
+  "summary": "Most modern bridge-diffusion methods achieve finite-time transport by specifying an interpolation, Schrodinger-bridge, or stochastic-control objective and then learning the associated score or drift field with a neural network. In contrast, we identify a restricted but sufficiently broad analytically solvable class in which, for a deterministic source and a Gaussian-mixture target, the score and all intermediate marginals are explicit and protocol objectives of the type used in this paper can be differentiated without inner stochastic simulation loops. We recast the classical…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cond-mat.stat-mech",
+    "cs.AI",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-05-03",
+  "updated": "2026-08-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

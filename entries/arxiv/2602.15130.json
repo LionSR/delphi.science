@@ -1,0 +1,24 @@
+{
+  "key": "2602.15130",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.15130",
+  "title": "Code-Verification Techniques for Particle-in-Cell Simulations with Direct Simulation Monte Carlo Collisions",
+  "authors": [
+    "Brian A. Freno",
+    "William J. McDoniel",
+    "Christopher H. Moore",
+    "Neil R. Matula"
+  ],
+  "summary": "Particle-in-cell methods with stochastic collision models are commonly used to simulate collisional plasma dynamics, with applications ranging from hypersonic flight to semiconductor manufacturing. Code verification of such methods is challenging due to the interaction between the spatial- and temporal-discretization errors, the statistical sampling noise, and the stochastic nature of the collision algorithm. In this paper, we introduce our code-verification approaches to apply the method of manufactured solutions to plasma dynamics, and we derive expected convergence rates for the different…",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "math.NA",
+    "physics.plasm-ph"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-06-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

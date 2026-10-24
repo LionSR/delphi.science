@@ -1,0 +1,19 @@
+{
+  "key": "2603.29280",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.29280",
+  "title": "Graph Eigenvalues and Projection Constants",
+  "authors": [
+    "Tanay Wakhare"
+  ],
+  "summary": "Let $λ_1(G)\\ge λ_2(G)\\ge \\cdots \\ge λ_n(G)$ denote the adjacency eigenvalues of a graph $G$ of order $n$. We prove that for every $k\\geq 2$ and every graph $G$ on $n\\geq k$ vertices, $$ λ_k(G)\\le \\frac{λ_{\\mathbb{R}}(k-1)}{2(k-1)}\\,n-1, $$ where $$ λ_{\\mathbb{R}}(r)=\\sup_{N\\ge r}\\frac1N \\max_{Q\\in \\mathcal P_r(N)}\\sum_{i,j=1}^N |q_{ij}| $$ and $\\mathcal P_r(N)$ denotes the set of rank-$r$ orthogonal projections in $\\mathbb{R}^{N\\times N}$. In Banach space theory, $λ_{\\mathbb{R}}(r)$ is well known as the maximal absolute projection constant, which has been shown to equal the quasimaximal…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-03-31",
+  "updated": "2026-03-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

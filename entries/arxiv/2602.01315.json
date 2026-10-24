@@ -1,0 +1,21 @@
+{
+  "key": "2602.01315",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.01315",
+  "title": "Finite element theta schemes for the viscous Burgers' equation with nonlinear Neumann boundary feedback control",
+  "authors": [
+    "Shishu Pal Singh",
+    "Sudeep Kundu"
+  ],
+  "summary": "In this article, we develop a fully discrete numerical scheme for the one-dimensional (1D) and two-dimensional (2D) viscous Burgers equations with nonlinear Neumann boundary feedback control. The temporal discretization employs a $θ$-scheme, while a conforming finite element method is used for the spatial approximation. The existence and uniqueness of the fully discrete solution are established. We further prove that the scheme is unconditionally exponentially stable for $θ\\in [1/2, 1]$, thereby ensuring that the stabilization property of the continuous model is retained at the discrete…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-02-01",
+  "updated": "2026-02-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

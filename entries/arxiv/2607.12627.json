@@ -1,0 +1,25 @@
+{
+  "key": "2607.12627",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12627",
+  "title": "Learning Forced Multibody Dynamics on Lie Groups",
+  "authors": [
+    "Martine Dyring Hansen",
+    "Marta Ghirardelli",
+    "Elena Celledoni",
+    "David Martin de Diego",
+    "Brynjulf Owren"
+  ],
+  "summary": "We propose an architecture for learning the dynamics of mechanical systems based on discrete forced Euler-Lagrange equations on Lie groups using only position data. By formulating the dynamics directly on manifold-valued configuration spaces, the method naturally respects the geometric structure of the systems and preserves geometric invariants and conservation laws. The reliance on position measurements alone makes the framework applicable in settings where velocity data are unavailable or noisy. The approach extends naturally to multibody systems, accommodates external control inputs, and…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS",
+    "math.SG"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

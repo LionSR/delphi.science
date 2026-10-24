@@ -1,0 +1,22 @@
+{
+  "key": "2610.16765",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16765",
+  "title": "Globally Convergent Block Coordinate Descent Algorithms for Semi-Nonnegative Independent Component Analysis",
+  "authors": [
+    "Zhenyu Cai",
+    "Wentao Ding",
+    "Jianze Li",
+    "Wen Huang"
+  ],
+  "summary": "We propose a subgradient-based block coordinate descent (BCD-SubG) framework for nonconvex optimization over products of probability simplices and a closed feasible set, motivated by semi-nonnegative independent component analysis (Semi-NNICA). Elementary column transformations are used to preserve simplex feasibility, while first-order information guides block and pair selection. We establish the global convergence of BCD-SubG using a constrained Lojasiewicz inequality; additional eventual-interiority conditions yield stationary limits and convergence rates. We then specialize BCD-SubG to…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

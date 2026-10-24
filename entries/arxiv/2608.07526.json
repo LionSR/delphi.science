@@ -1,0 +1,20 @@
+{
+  "key": "2608.07526",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.07526",
+  "title": "A Mean-Informed Low-Rank Monolithic Stochastic Galerkin Solver for the Unsteady Navier-Stokes Equations",
+  "authors": [
+    "Ahmet Kaan Aydin",
+    "Bedřich Sousedík"
+  ],
+  "summary": "We study a low-rank solver for the stochastic unsteady incompressible Navier--Stokes equations with uncertain viscosity. The problem is discretized by a stochastic Galerkin method and written in an all-at-once (monolithic) form where the time steps are informed by a sequential solve of the mean problem. The solution vector is represented in Tensor Train (TT) format, while the system matrices are represented in CANDECOMP/PARAFAC (CP) format as needed. We propose preconditioners based on the low-rank CP approximations that retain additional stochastic and nonlinear information compared to…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-18",
+  "updated": "2026-07-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

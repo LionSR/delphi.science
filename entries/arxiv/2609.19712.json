@@ -1,0 +1,20 @@
+{
+  "key": "2609.19712",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.19712",
+  "title": "(Cheap) Stochastic Policy Gradient Converges with High Probability for Linear Quadratic Regulator",
+  "authors": [
+    "Yan Li",
+    "Chengze Xie"
+  ],
+  "summary": "We study the convergence of the vanilla stochastic policy gradient method applied to the linear quadratic regulator (LQR) problem. The method is cheap in the following sense: (1) at each iteration only $\\tilde{O}(1)$ interactions with the environment are needed, therefore allowing frequent policy improvement steps, and (2) to ensure stability throughout and convergence to an $ε$-optimal policy with probability $1-δ$, only $O(\\mathtt{Polylog}(1/δ)/ε)$ interactions are needed. To the best of our knowledge, this appears to be the first time that a stochastic model-free policy optimization…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

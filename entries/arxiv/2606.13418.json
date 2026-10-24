@@ -1,0 +1,21 @@
+{
+  "key": "2606.13418",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.13418",
+  "title": "Coordinate-wise Polyhedral Method for Eliciting Multivariate Linear Utility and Univariate Nonlinear Utility Functions",
+  "authors": [
+    "Jiaxin Wei",
+    "Jia Liu",
+    "Huifu Xu"
+  ],
+  "summary": "In this paper, we propose a coordinate-wise polyhedral method (CPM) for cutting polyhedra with theoretical guarantees of convergence. Unlike the existing polyhedral method, which designs pairwise comparison queries by solving coupled optimization problems and performs cuts subsequently, CPM specifies coordinate-wise cuts in advance and then designs corresponding pairwise comparison queries by solving a linear system of equations. Under this framework, we show that CPM reduces the diameter of the polyhedron at a linear convergence rate. Moreover, we extend CPM to a univariate piecewise-linear…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

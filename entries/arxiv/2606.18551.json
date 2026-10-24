@@ -1,0 +1,20 @@
+{
+  "key": "2606.18551",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.18551",
+  "title": "SAV Schemes with Decomposition-Induced Pullback Corrections for Gradient Flows",
+  "authors": [
+    "Shiheng Zhang",
+    "Jie Shen"
+  ],
+  "summary": "The scalar auxiliary variable (SAV) method constructs linear, unconditionally energy-stable time discretizations of gradient flows. Eliminating the auxiliary variable in a first-order SAV step shows that the state equation is a semi-implicit update augmented by a rank-one positive semidefinite correction from the previous nonlinear force. The multiple-SAV (MSAV) method produces this correction componentwise, with rank up to the number of energy components. This separates two mechanisms usually coupled in MSAV: the number of scalar variables tracking the nonlinear energy and the rank of the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-17",
+  "updated": "2026-09-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

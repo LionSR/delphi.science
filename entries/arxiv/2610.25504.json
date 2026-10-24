@@ -1,0 +1,22 @@
+{
+  "key": "2610.25504",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.25504",
+  "title": "TIGER: Tunable-Geometry Accelerated Gradient Sliding with Adaptive Safeguards under Similarity",
+  "authors": [
+    "Darina M. Dvinskikh",
+    "Anton G. Novitskii",
+    "Ewsey R. Obzherin",
+    "Alexander V. Gasnikov"
+  ],
+  "summary": "We study distributed composite optimization under function similarity when synchronized gradient queries dominate local computation. We propose TIGER, an accelerated gradient-sliding method in problem-adapted Bregman geometry. The method applies to constrained non-Euclidean domains, allows the communicated correction term to be nonconvex, and terminates each local subproblem using a computable stationarity residual. Each iteration reuses one synchronized correction gradient during the local solve and makes a second query to construct the composite subgradient for the mirror step. Under…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-18",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

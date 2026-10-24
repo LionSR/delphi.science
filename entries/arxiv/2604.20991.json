@@ -1,0 +1,22 @@
+{
+  "key": "2604.20991",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.20991",
+  "title": "Accuracy and stability of Artificial Neural Networks for HP-Splines frequency parameter selection",
+  "authors": [
+    "Vittoria Bruni",
+    "Paola Erminia Calabrese",
+    "Rosanna Campagna",
+    "Domenico Vitulano"
+  ],
+  "summary": "This paper explores the use of artificial neural networks for the stable and data-driven selection of the frequency parameter in hyperbolic polynomial penalized splines (HP-splines). This parameter defines the underlying spline space and is essential for adapting the model to exponential patterns in the data, such as those encountered in signal processing. The theoretical approximation properties of deep neural network architectures are investigated to establish a connection between classical spline-based regression and modern data-driven learning methods. Based on this analysis, a neural…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-22",
+  "updated": "2026-04-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2601.17392",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.17392",
+  "title": "Fluctuations and Long-Time Stability of Multivariate Ensemble Kalman Filters",
+  "authors": [
+    "Pierre Del Moral",
+    "Bouchra Nasri",
+    "Bruno Rémillard"
+  ],
+  "summary": "We develop a self contained stochastic perturbation theory for discrete generation and multivariate Ensemble Kalman filters. Unlike their continuous-time counterparts, discrete EnKF algorithms are defined through a two steps prediction update mechanism and exhibit non Gaussian fluctuations, even in linear settings. In the multivariate case, these fluctuations take the form of non central Wishart type perturbations, which significantly complicate the mathematical analysis. We establish non asymptotic, time-uniform stability and error estimates for the ensemble covariance matrix processes…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-01-24",
+  "updated": "2026-01-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

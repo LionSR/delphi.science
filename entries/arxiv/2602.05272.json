@@ -1,0 +1,22 @@
+{
+  "key": "2602.05272",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05272",
+  "title": "Asymptotically optimal sequential change detection for bounded means",
+  "authors": [
+    "Ashwin Ram",
+    "Aaditya Ramdas"
+  ],
+  "summary": "We consider the problem of quickest changepoint detection under the Average Run Length (ARL) constraint where the pre-change and post-change laws lie in composite families $\\mathscr{P}$ and $\\mathscr{Q}$ respectively. In such a problem, a massive challenge is characterizing the best possible detection delay when the \"hardest\" pre-change law in $\\mathscr{P}$ depends on the unknown post-change law $Q\\in\\mathscr{Q}$. And typical simple-hypothesis likelihood-ratio arguments for Page-CUSUM and Shiryaev-Roberts do not at all apply here. To that end, we derive a universal sharp lower bound in full…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-02-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

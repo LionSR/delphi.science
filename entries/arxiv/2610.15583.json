@@ -1,0 +1,20 @@
+{
+  "key": "2610.15583",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.15583",
+  "title": "Explicit Bounds for Restricted Invertibility with Prescribed Group Cardinalities",
+  "authors": [
+    "Xinyu Chen",
+    "Bochen Liu"
+  ],
+  "summary": "We prove an explicit lower spectral bound for independent random vectors with prescribed group multiplicities. Let $v_{ij}\\in\\mathbb C^d$, $1\\le i\\le l$, $1\\le j\\le k_i$, be independent random vectors with finite support and $\\mathbb E v_{ij}v_{ij}^*=A_i$, where $\\sum_{i=1}^l A_i=I_d$ and $\\operatorname{Tr}(A_i)\\geε$. Set $k=\\max_i k_i$, $n=\\max_i\\operatorname{rank}(A_i)$, and $K=\\sum_{i=1}^l k_i$. If $n>(6+4\\sqrt2)k$ and $2\\sqrt{nk}-k<ε\\le n/2$, then, with positive probability, \\[ λ_K\\left(\\sum_{i=1}^l\\sum_{j=1}^{k_i}v_{ij}v_{ij}^*\\right) \\ge n-(\\sqrt{k}+\\sqrt{n-ε})^2. \\] As a consequence,…",
+  "domain": "math.FA",
+  "tags": [
+    "math.FA"
+  ],
+  "published": "2026-10-11",
+  "updated": "2026-10-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

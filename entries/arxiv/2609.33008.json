@@ -1,0 +1,20 @@
+{
+  "key": "2609.33008",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.33008",
+  "title": "A statistical theory for blind denoising: minimax estimation of the noise level from a single sample",
+  "authors": [
+    "Zhuoer Shen"
+  ],
+  "summary": "Motivated by blind denoising in diffusion models, we study estimation of an unknown Gaussian noise level from a single high-dimensional observation, assuming the signal law P is known. We characterize the minimax mean-squared error under two structural assumptions on P. For signals with covering complexity k, the minimax rate is $\\widetildeΘ_Λ(\\min\\{Δ_Λ^2,d^{-1}+k^2d^{-2}\\})$, and the constrained MLE attains it up to logarithmic factors. For $α$-strongly log-concave signals, the rate is $Θ_Λ(\\min\\{Δ_Λ^2,(1+α^{-1})^2d^{-1}\\})$, attained up to constants by a $P$-centered norm estimator. These…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2610.18837",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.18837",
+  "title": "Fully discrete multi-entropy-stable compact Runge--Kutta discontinuous Galerkin methods for hyperbolic conservation laws",
+  "authors": [
+    "Zheng Sun"
+  ],
+  "summary": "We develop fully discrete multi-entropy-stable high-order compact Runge--Kutta discontinuous Galerkin (cRKDG) methods for hyperbolic conservation laws. Our main result is a weak cell entropy inequality for multi-dimensional systems after one full high-order Runge--Kutta (RK) time step. The proof exploits the cell-local intermediate stages of cRKDG: their perturbations are controlled by the initial in-cell variation. The analysis does not require a strong stability preserving decomposition or stagewise entropy correction. For a sufficiently dissipative Lax--Friedrichs flux and explicit RK…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

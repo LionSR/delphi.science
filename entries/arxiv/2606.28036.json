@@ -1,0 +1,21 @@
+{
+  "key": "2606.28036",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28036",
+  "title": "A robust mixed finite element formulation for third medium contact",
+  "authors": [
+    "M. Vorwerk",
+    "J. Schröder",
+    "P. Wriggers"
+  ],
+  "summary": "Third medium contact provides a smooth continuum alternative to classical contact algorithms by replacing explicit contact constraints with a highly compliant fictitious medium. In this work, an auxiliary-field stabilization is introduced in which a deformation-gradient-like field is treated as an independent unknown in the third medium and coupled to the physical deformation gradient by a penalty term. A gradient contribution acting on the auxiliary field provides the regularization mechanism without requiring a direct evaluation of higher displacement derivatives. Linear and quadratic…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-26",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

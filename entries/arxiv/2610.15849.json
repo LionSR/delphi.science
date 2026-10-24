@@ -1,0 +1,20 @@
+{
+  "key": "2610.15849",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.15849",
+  "title": "Universal Shift Congruences for Weighted Permutation Sequences",
+  "authors": [
+    "Ahaan Kallat"
+  ],
+  "summary": "The involution numbers $1,1,2,4,10,26,\\ldots$ repeat modulo $3$, $5$ and $7$. We explain this, and many similar patterns, by one rule. Many sequences count permutations in which every cycle of length $m$ carries a weight $w_m$ (involutions, derangements, \"sets of lists\", and many others in the OEIS). Writing $A(n)$ for such a count, the rule is $A(n+k)\\equiv A(n)A(k)$ modulo $\\mathrm{lcm}(n,k)$. It generalizes our earlier proof of the case modulo $k$ for one such sequence, but now it holds for all weights at once, as a coefficientwise congruence between universal polynomials, and we find the…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.NT"
+  ],
+  "published": "2026-10-11",
+  "updated": "2026-10-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

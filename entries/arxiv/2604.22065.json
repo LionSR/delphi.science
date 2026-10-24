@@ -1,0 +1,21 @@
+{
+  "key": "2604.22065",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.22065",
+  "title": "SNGR: Selective Non-Gaussian Refinement for Ambiguous SLAM Factor Graphs",
+  "authors": [
+    "Anushka Kulkarni",
+    "Sarthak Dubey"
+  ],
+  "summary": "We present Selective Non-Gaussian Refinement (SNGR), a SLAM framework that augments iSAM2 with targeted nested sampling on windows where Gaussian approximations are likely to fail. We detect such regions using the condition number of joint marginal covariances and selectively refine them using the full nonlinear factor graph likelihood, with a gating mechanism to avoid degradation in multimodal cases. Experiments on range-only SLAM with wrong data association show that SNGR achieves high-precision failure detection and consistent local likelihood improvements while reducing computational…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "math.NA"
+  ],
+  "published": "2026-04-23",
+  "updated": "2026-04-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

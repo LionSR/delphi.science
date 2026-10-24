@@ -1,0 +1,27 @@
+{
+  "key": "2610.02081",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02081",
+  "title": "Wasserstein Gradient Flows and Forward-Only Diffusion Are Not Enough for Multimodal Sampling",
+  "authors": [
+    "Daniel McBride",
+    "Pratik Khandagale",
+    "Cristina Garcia-Cardona",
+    "Yen Ting Lin"
+  ],
+  "summary": "There has been a proliferation of sampling algorithms based on Wasserstein gradient flows (WGF) and forward-only diffusion processes (FODP), often accompanied by theoretical guarantees of exponentially fast convergence to the target distribution. These guarantees are frequently interpreted as evidence that such methods can efficiently sample complex multimodal distributions, often supported by empirical results. In this work, we argue that this interpretation is fundamentally misleading. By invoking the Jordan-Kinderlehrer-Otto (JKO) scheme and Otto calculus, we establish that the canonical…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math-ph",
+    "math.DS",
+    "math.PR",
+    "math.SP"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

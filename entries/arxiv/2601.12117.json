@@ -1,0 +1,24 @@
+{
+  "key": "2601.12117",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.12117",
+  "title": "Offline Policy Learning with Weight Clipping and Heaviside Composite Optimization",
+  "authors": [
+    "Jingren Liu",
+    "Hanzhang Qin",
+    "Junyi Liu",
+    "Mabel C. Chou",
+    "Jong-Shi Pang"
+  ],
+  "summary": "Offline policy learning aims to use historical data to learn an optimal personalized decision rule. In the standard estimate-then-optimize framework, reweighting-based methods (e.g., inverse propensity weighting or doubly robust estimators) are widely used to produce unbiased estimates of policy values. However, when the propensity scores of some treatments are small, these reweighting-based methods suffer from high variance in policy value estimation, which may mislead the downstream policy optimization and yield a learned policy with inferior value. In this paper, we systematically develop…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-01-17",
+  "updated": "2026-01-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

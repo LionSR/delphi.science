@@ -1,0 +1,22 @@
+{
+  "key": "2604.09175",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.09175",
+  "title": "Generalization and Scaling Laws for Mixture-of-Experts Transformers",
+  "authors": [
+    "Mansour Zoubeirou a Mayaki"
+  ],
+  "summary": "We develop a theory of generalization and scaling for Mixture-of-Experts (MoE) Transformers that cleanly separates \\emph{active} per-input capacity from routing combinatorics. By conditioning on fixed routing patterns and union-bounding across them, we derive a sup-norm covering-number bound whose metric entropy scales with the active parameter budget and incurs a MoE-specific routing overhead. Combined with a standard ERM analysis for squared loss, this yields a generalization bound under a $d$-dimensional manifold data model and $C^β$ targets, showing that approximation and estimation…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-04-10",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

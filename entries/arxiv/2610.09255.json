@@ -1,0 +1,21 @@
+{
+  "key": "2610.09255",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.09255",
+  "title": "The Symbol of the Surrogate: Measuring Numerical Provenance in Neural PDE Solvers",
+  "authors": [
+    "Ridham Patel"
+  ],
+  "summary": "Neural PDE surrogates are trained on numerical solver outputs that contain both physical evolution and solver-specific discretization errors. Because surrogates are also evaluated against held-out trajectories from the same solver, standard benchmarks cannot distinguish fidelity to the exact evolution from imitation of the numerical scheme. We introduce an empirical Fourier-symbol diagnostic that probes a trained surrogate's linearized one-step operator with individual Fourier modes and compares it with both exact-evolution and training-scheme references. To address architectural spectral…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.AP",
+    "stat.ML"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

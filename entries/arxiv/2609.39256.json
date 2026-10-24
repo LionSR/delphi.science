@@ -1,0 +1,23 @@
+{
+  "key": "2609.39256",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.39256",
+  "title": "Stochastic Knothe-Rosenblatt: Light-speed Calibration of Stochastic Local Volatility Models",
+  "authors": [
+    "Mathias Beiglböck",
+    "Manuel Hasenbichler",
+    "Gudmund Pammer"
+  ],
+  "summary": "European option smiles determine the risk-neutral marginal laws of an asset, but not their intertemporal coupling, which is decisive for many applications. The Bass martingale construction selects, among all calibrated martingales, the one closest to Bachelier dynamics; it permits fast calibration at discrete maturities and recovers the Dupire local-volatility (LV) model as the maturity grid is refined. This article develops a modular calibration overlay for existing stochastic and path-dependent volatility models. We sequentially construct a martingale that matches all prescribed marginals…",
+  "domain": "q-fin.PR",
+  "tags": [
+    "q-fin.PR",
+    "math.PR",
+    "q-fin.CP"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

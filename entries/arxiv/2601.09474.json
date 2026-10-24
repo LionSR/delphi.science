@@ -1,0 +1,22 @@
+{
+  "key": "2601.09474",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.09474",
+  "title": "Terminally constrained flow-based generative models from an optimal control perspective",
+  "authors": [
+    "Weiguo Gao",
+    "Ming Li",
+    "Qianxiao Li"
+  ],
+  "summary": "We address the problem of sampling from terminally constrained distributions with pre-trained flow-based generative models through an optimal control formulation. Theoretically, we characterize the value function by a Hamilton-Jacobi-Bellman equation and derive the optimal feedback control as the minimizer of the associated Hamiltonian. We show that as the control penalty increases, the controlled process recovers the reference distribution, while as the penalty vanishes, the terminal law converges to a generalized Wasserstein projection onto the constraint manifold. Algorithmically, we…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-01-14",
+  "updated": "2026-01-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

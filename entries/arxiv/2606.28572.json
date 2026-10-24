@@ -1,0 +1,22 @@
+{
+  "key": "2606.28572",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28572",
+  "title": "Geometric Measurements of the Axiom of Choice in Neural Proof Embeddings",
+  "authors": [
+    "Rodrigo Mendoza-Smith"
+  ],
+  "summary": "The axiom of choice has divided the foundations of mathematics for over a century, but the distinction between classical and constructive proofs has remained a philosophical and methodological one. We use Lean 4's kernel-level tracking of axiom dependence to show that the axiom of choice has a measurable geometric correlate in proof space that obeys a one-parameter mixture law and has operational consequences for neural theorem provers. To do this, we partition $471{,}260$ declarations of Mathlib by transitive dependence on the axiom of choice and represent a filtered population of…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "cs.LO",
+    "math.LO"
+  ],
+  "published": "2026-06-26",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

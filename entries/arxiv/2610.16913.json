@@ -1,0 +1,20 @@
+{
+  "key": "2610.16913",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16913",
+  "title": "Simultaneous Matrix-Free HSS Compression and Factorization with Adaptive Ranks",
+  "authors": [
+    "Elly Do",
+    "Chao Chen"
+  ],
+  "summary": "Many dense matrices in scientific computing have hierarchically low-rank off-diagonal structure but are accessible only through routines that apply the matrix and, in general, its transpose or adjoint to vectors, that is, through matrix--vector products (matvecs). We present a fully matrix-free algorithm that compresses such a matrix into Hierarchically Semi-Separable (HSS) form and factorizes it simultaneously with the off-diagonal ranks chosen adaptively from a prescribed tolerance. The method uses $\\mathcal{O}(k)$ matvecs with each operator, where $k$ is the largest off-diagonal rank…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

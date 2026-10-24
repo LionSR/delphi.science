@@ -1,0 +1,23 @@
+{
+  "key": "2605.00456",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.00456",
+  "title": "Deep-Picard Iteration for Space-time Fractional Diffusion PDEs",
+  "authors": [
+    "Zhijun Zeng",
+    "Zhitong Chen",
+    "Ling Qin",
+    "Yi Zhu"
+  ],
+  "summary": "We propose a Deep-Picard iteration framework for high-dimensional nonlinear space-time fractional diffusion equations.The method is based on a nonlinear fractional Feynman--Kac fixed-point formulation, which replaces direct discretization of the Caputo memory term and the nonlocal fractional Laplacian by Monte Carlo simulation of the associated fractional dynamics. Each Picard update is approximated by stochastic label generation and realized through supervised neural-network regression, thereby avoiding residual minimization involving fractional differential operators. The fractional…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.PR"
+  ],
+  "published": "2026-05-01",
+  "updated": "2026-05-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

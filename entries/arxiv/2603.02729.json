@@ -1,0 +1,26 @@
+{
+  "key": "2603.02729",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.02729",
+  "title": "The power of small initialization in noisy low-tubal-rank tensor recovery",
+  "authors": [
+    "ZHiyu Liu",
+    "Haobo Geng",
+    "Xudong Wang",
+    "Yandong Tang",
+    "Zhi Han",
+    "Yao Wang"
+  ],
+  "summary": "We study the problem of recovering a low-tubal-rank tensor $\\mathcal{X}\\_\\star\\in \\mathbb{R}^{n \\times n \\times k}$ from noisy linear measurements under the t-product framework. A widely adopted strategy involves factorizing the optimization variable as $\\mathcal{U} * \\mathcal{U}^\\top$, where $\\mathcal{U} \\in \\mathbb{R}^{n \\times R \\times k}$, followed by applying factorized gradient descent (FGD) to solve the resulting optimization problem. Since the tubal-rank $r$ of the underlying tensor $\\mathcal{X}_\\star$ is typically unknown, this method often assumes $r < R \\le n$, a regime known as…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-03-03",
+  "updated": "2026-03-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

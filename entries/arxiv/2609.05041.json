@@ -1,0 +1,22 @@
+{
+  "key": "2609.05041",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.05041",
+  "title": "Reconciling Universal and Uniform Learning with $Q$-Aggregation",
+  "authors": [
+    "Mikael Møller Høgsgaard",
+    "Patrick Rebeschini",
+    "Tobias Wegel"
+  ],
+  "summary": "We study regression under bounded responses in terms of excess mean squared error. When the comparator class is finite, this setting is known as model selection aggregation, and achieving minimax excess risk requires improper learning algorithms. Contrary to this, in the universal learning framework no improperness is needed, as simple empirical risk minimization achieves the best-possible exponential learning rate. Hence, the two frameworks suggest different optimal algorithmic principles. This poses the question of best-of-both-worlds guarantees: Are minimax and universal exponential rates…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

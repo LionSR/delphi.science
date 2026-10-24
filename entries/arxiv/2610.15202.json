@@ -1,0 +1,24 @@
+{
+  "key": "2610.15202",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.15202",
+  "title": "Adaptive two-points zero-order accelerated methods for stochastic convex optimization problems",
+  "authors": [
+    "Yuriy Dorn",
+    "Osman Osmanov",
+    "Timofei Loginov",
+    "Nazarii Tupitsa",
+    "Darina Dvinskikh",
+    "Alexander Gasnikov"
+  ],
+  "summary": "We study stochastic convex optimization, where each sampled function can be evaluated at two arbitrary points. Our accelerated method chooses step sizes, batch sizes and smoothing radii from function values. A forward difference between smoothing scales controls the radius; we account for changes in the smoothed objective. Under the stated regularity and second-moment assumptions, exact function evaluations give \\begin{multline*} \\mathbb{E}\\bigl[f(x_N)-f(x^\\star)\\bigr] \\le \\widetilde{O}\\biggl( \\frac{\\sqrt{d}\\,M_2 D}{\\sqrt{T}} +\\min\\biggl( \\frac{L D^2}{N^2},\\; \\frac{d^{1/4} M…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-10",
+  "updated": "2026-10-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

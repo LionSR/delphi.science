@@ -1,0 +1,22 @@
+{
+  "key": "2605.13120",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.13120",
+  "title": "D-Optimized Sampling Design for System Identification",
+  "authors": [
+    "Enrico Dozzi",
+    "Tom Oomen",
+    "Rodrigo A. González"
+  ],
+  "summary": "Traditional system identification with multisine inputs relies on uniform sampling and periodic excitation to preserve Fourier orthogonality and avoid spectral leakage, limiting its use in scenarios with irregular sampling or nonperiodic inputs. This work investigates continuous-time system identification under nonperiodic multisine excitation and nonuniform sampling. We develop a nonparametric frequency response function estimator suited to such conditions and design irregular sampling schemes that enhance the informativeness of measurements and reduce spectral leakage. The proposed…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

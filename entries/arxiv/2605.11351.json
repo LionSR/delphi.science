@@ -1,0 +1,19 @@
+{
+  "key": "2605.11351",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11351",
+  "title": "A short proof of Mathar's 2020 recurrence conjecture for the generalized-Stirling sequence A001711",
+  "authors": [
+    "Tong Niu"
+  ],
+  "summary": "For the OEIS sequence A001711, contributed by N. J. A. Sloane long before the on-line era and identified there as the diagonal $T(n+4, 4)$ of a generalized-Stirling triangle, R. J. Mathar contributed in February 2020 the conjectured order-2 P-recursive recurrence \\[ a(n) - (2n+5)\\,a(n-1) + (n+2)^{2}\\,a(n-2) \\;=\\; 0,\\qquad n \\ge 2. \\] We give a one-page proof. Detlefs's harmonic-number closed form $a(n) = \\tfrac{1}{4}(n+3)!\\,(2 H_{n+3} - 3)$ collapses the left-hand side, after dividing through by $(n+1)!/4$, to a polynomial identity of $n$ with coefficient $H_{n+2}$. The harmonic-number…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

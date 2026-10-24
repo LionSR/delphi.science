@@ -1,0 +1,21 @@
+{
+  "key": "2603.06062",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.06062",
+  "title": "Estimation of Lévy-driven CARMA models under renewal sampling",
+  "authors": [
+    "Frank Bosserhoff",
+    "Giacomo Francisci",
+    "Robert Stelzer"
+  ],
+  "summary": "Continuous-time autoregressive and moving average (CARMA) models are extensively used to model high-frequency and irregularly sampled data. We study Whittle estimation for the model parameters when the process is observed at renewal times. The driving noise is assumed to be a Lévy process allowing for more flexibility including heavy-tailed marginal distributions and jumps in the sample paths. We show that the Whittle estimator based on the integrated periodogram is consistent and asymptotically normal under very mild conditions. To obtain these results, we establish the asymptotic normality…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-03-06",
+  "updated": "2026-03-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

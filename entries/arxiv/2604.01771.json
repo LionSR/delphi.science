@@ -1,0 +1,23 @@
+{
+  "key": "2604.01771",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.01771",
+  "title": "Improving Operational Feasibility in Large-Scale Power System Planning",
+  "authors": [
+    "Gereon Recht",
+    "Oussama Alaya",
+    "Benedikt Jahn",
+    "Karl-Kiên Cao",
+    "Hendrik Lens"
+  ],
+  "summary": "Large-scale power system planning mostly uses linearized, active power only approximations of the power flow equations, ignores many operational constraints, and tests the operational feasibility of the resulting systems only under strongly simplifying assumptions. We propose an approach to obtain solutions to large instances of the alternating current capacity expansion problem via redispatch and reinforcement of an initial solution. The problem formulation considers simultaneous expansion of generators, reactive compensation devices, storage systems, and transmission. Furthermore, it…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-02",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

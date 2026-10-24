@@ -1,0 +1,21 @@
+{
+  "key": "2607.07538",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.07538",
+  "title": "Avoiding unsafe sets when training with Langevin Dynamics",
+  "authors": [
+    "Adam M. Oberman"
+  ],
+  "summary": "Training a model with noisy gradient descent can be idealized as overdamped Langevin dynamics, and a natural safety question is to bound the probability $ν_t(\\mathcal{A}_H) = \\mathbb{P}(Q_t \\in \\mathcal{A}_H)$ that the trajectory lies in a designated failure region $\\mathcal{A}_H$. We study this for a smooth, strongly convex loss in $d$ dimensions, with $\\mathcal{A}_H$ separated from the minimizer by an energy gap. At the end of training, the equilibrium mass $π(\\mathcal{A}_H)$ is exponentially small in $d$, with a complementary energy-barrier rate when the noise is small. Along the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.AP",
+    "stat.ML"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

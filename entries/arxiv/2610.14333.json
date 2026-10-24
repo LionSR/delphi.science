@@ -1,0 +1,21 @@
+{
+  "key": "2610.14333",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.14333",
+  "title": "Decentralized Bandit Learning of Markov Perfect Equilibria",
+  "authors": [
+    "Felix Höfer",
+    "H. Mete Soner"
+  ],
+  "summary": "We study decentralized bandit learning in discounted infinite-horizon, general-sum Markov games with continuous actions. Agents observe the public state, but only their own realized rewards, and use simultaneous perturbation stochastic approximation to update their actions. Under strong monotonicity of the negative running-reward gradients and sufficiently small time steps, we prove that the fully decentralized procedure converges almost surely to the unique stationary Markov perfect equilibrium. We obtain an $O(n^{-1/2})$ convergence rate and present a natural extension to episodic…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

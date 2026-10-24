@@ -1,0 +1,24 @@
+{
+  "key": "2604.16802",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.16802",
+  "title": "A Stackelberg Game Framework with Drainability Guardrails for Pricing and Scaling in Multi-Tenant GPU Cloud Platforms",
+  "authors": [
+    "Junji Yan",
+    "Asrin Efe Yorulmaz",
+    "Hanchen Zhou",
+    "Tamer Başar"
+  ],
+  "summary": "Modern Graphics Processing Unit (GPU)-backed services must satisfy strict latency service-level objectives (SLOs) while controlling spare-capacity costs. In multi-tenant GPU cloud platforms, this trade-off is inherently dynamic because workload demand is endogenous; specifically, pricing shapes the submissions of heterogeneous tenants, which subsequently impact congestion and delay. We formulate the joint pricing-and-scaling problem as a large-population Stackelberg game problem, and we derive an explicit equilibrium demand map. The resulting closed-loop model reveals a structural failure…",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-04-18",
+  "updated": "2026-08-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2610.25928",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.25928",
+  "title": "Gaussian equivalence for CNN with non-Gaussian weights",
+  "authors": [
+    "Federico Bassetti",
+    "Vassili De Palma"
+  ],
+  "summary": "We study the infinite-width limit of convolutional neural networks with random weights and show that the Gaussian process limit does not require Gaussian priors. Assuming that the weights are i.i.d., centered, and have sufficiently many finite moments, converges weakly in the space of continuous functions on the compact input set to independent copies of a centered Gaussian process. Our framework accommodates activation functions of polynomial growth together with a broad class of patch-extraction operators, covering standard convolutions, padding, stride, and common pooling mechanisms.",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

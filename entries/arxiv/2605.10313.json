@@ -1,0 +1,22 @@
+{
+  "key": "2605.10313",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.10313",
+  "title": "Signature Approach for Contextual Bandits with Nonlinear and Path-dependent Rewards",
+  "authors": [
+    "Xin Guo",
+    "Grace He",
+    "Xinyu Li"
+  ],
+  "summary": "We study contextual bandits with nonlinear and path-dependent rewards through a novel signature-transform-based approach. Leveraging the universal nonlinearity property of signatures, we approximate continuous path-dependent reward functionals by linear functionals in the signature space. This representation enables the use of efficient linear contextual bandit methods while preserving expressive sequential structure. Building on this framework, we propose \\texttt{DisSigUCB}, a signature-based disjoint upper confidence bound (UCB) algorithm. Under boundedness and non-degeneracy assumptions,…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

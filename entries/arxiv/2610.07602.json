@@ -1,0 +1,25 @@
+{
+  "key": "2610.07602",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.07602",
+  "title": "A Neural JKO Scheme for Hellinger-Kantorovich Gradient Flows via Monge-Growth Pairs",
+  "authors": [
+    "Geuntaek Seo",
+    "Cheolhyeong Kim",
+    "Hwijae Son",
+    "Hyung Ju Hwang"
+  ],
+  "summary": "We develop a mesh-free neural JKO scheme for advection-reaction-diffusion equations with a gradient-flow structure in the Hellinger-Kantorovich (HK) geometry of unbalanced optimal transport. Each update is parametrized by a spatial map and a mass-changing factor, allowing spatial redistribution and local mass creation or loss to be treated jointly within a single variational step. Their cone action bounds the squared HK distance from above, yielding a sufficient condition for discrete energy dissipation through comparison with the identity pair. Minimizing the pair objective over all…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG",
+    "math.AP",
+    "math.OC"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

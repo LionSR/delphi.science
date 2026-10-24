@@ -1,0 +1,22 @@
+{
+  "key": "2605.30841",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.30841",
+  "title": "BUP-TR: Bayesian Underdetermined Projection Trust-Region Methods for Derivative-Free Optimization",
+  "authors": [
+    "Wei Hu",
+    "Pengcheng Xie",
+    "Ya-Xiang Yuan",
+    "Li Zhang"
+  ],
+  "summary": "Underdetermined quadratic interpolation is a central model-construction tool in model-based derivative-free trust-region methods: it limits sampling costs but leaves an affine family of interpolating quadratics. Classical solvers select one element of this family by prescribing a fixed norm or model-change measure, such as the least-Frobenius-change Hessian update in Powell-type methods. We introduce BUP-TR (Bayesian Underdetermined Projection Trust-Region), which instead completes the model by projecting a prior quadratic onto the affine interpolation set in the precision norm supplied by…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-06-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

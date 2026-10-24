@@ -1,0 +1,20 @@
+{
+  "key": "2607.11140",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.11140",
+  "title": "Learning Subgroup Relations Using Siamese Graph Neural Networks",
+  "authors": [
+    "Tal Weissblat"
+  ],
+  "summary": "Determining whether one finite group is isomorphic to a subgroup of another is a fundamental problem in computational group theory. In this work, we propose a Siamese Graph Neural Network (Siamese GNN) for subgroup prediction using Cayley graph representations of finite groups. Each input group is represented by its undirected Cayley graph and encoded by one branch of a Siamese GNN to produce a graph embedding. The resulting graph embeddings are combined with algebraic features derived directly from the input groups to construct a joint feature vector, which is processed by a fully connected…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.GR"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-09-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

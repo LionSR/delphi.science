@@ -1,0 +1,20 @@
+{
+  "key": "2604.23784",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23784",
+  "title": "Unbounded logarithmic limsup in Erdős Problem 684 via shifted carry scheduling",
+  "authors": [
+    "Ji Ho Bae"
+  ],
+  "summary": "For $1\\leq k\\leq n$, let $u(n,k)=\\prod_{p\\leq k}p^{ν_p\\binom nk}$ and $f(n)=\\min\\{1\\leq k\\leq n:u(n,k)>n^2\\}$. The minimum is interpreted as $+\\infty$ if the set is empty. Here $ν_p(m)$ denotes the exponent of the prime $p$ in $m$. Erdős Problem 684 asks for bounds on $f(n)$. We prove $\\limsup_{n\\to\\infty} \\frac{f(n)}{\\log n}\\frac{\\log\\log\\log n}{\\log\\log n}\\geq\\frac12$. In particular, $\\limsup_{n\\to\\infty}f(n)/\\log n=\\infty$, so no uniform estimate $f(n)=O(\\log n)$ is possible. The proof constructs integers $n=tL_M-h-1$, where $L_M=\\operatorname{lcm}(1,\\ldots,M)$. Product-cell coding yields…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO"
+  ],
+  "published": "2026-04-26",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

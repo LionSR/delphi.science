@@ -1,0 +1,20 @@
+{
+  "key": "2608.22592",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.22592",
+  "title": "Error attribution in gradient random walk methods for parabolic equations",
+  "authors": [
+    "Stephen Abkin",
+    "Prabir Daripa"
+  ],
+  "summary": "Gradient random walk (GRW) methods represent a solution's spatial derivative by weighted particles and recover the solution by cumulative summation. We examine their accuracy for the one-dimensional heat, scalar cubic reaction-diffusion, and Burgers' equations. Thirty-seed ensembles, paired reconstructions, and deterministic controls identify the sources of two apparent accuracy limits. For the heat equation, comparing cumulative bin sums at bin centers introduces a first-order alignment error, which the exact reflected-particle distribution predicts and bin-edge comparison removes. An…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-23",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2607.04361",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04361",
+  "title": "Approximate Feedback Linearization for a Nonlinear Hyperbolic PDE Class -- Part I: Volterra Truncation",
+  "authors": [
+    "Miroslav Krstic"
+  ],
+  "summary": "Backstepping for nonlinear PDEs yields exact feedback linearizing laws in the form of infinite Volterra series -- elegant in theory, but with challenges for implementation. This paper shows that even very low-order truncations of such controllers, no longer exactly linearizing, retain the stabilizing power. The key insight is that higher-order terms become negligible near the origin, so stability is recovered for any fixed truncation order by restricting the initial condition size. We establish spatial sup-norm results: finite-time practical stability and asymptotic stability characterized…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-07-05",
+  "updated": "2026-07-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

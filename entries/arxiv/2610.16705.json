@@ -1,0 +1,22 @@
+{
+  "key": "2610.16705",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16705",
+  "title": "Averaged Annealed Markov Chains Achieve the Algorithmic Threshold for Tensor PCA, Part I: Glauber Dynamics",
+  "authors": [
+    "Aniket Das",
+    "Tselil Schramm"
+  ],
+  "summary": "In the tensor principal components analysis (tensor PCA) problem, we are asked to recover an unknown vector in $\\{\\pm1\\}^N$ from a noisy observation of its $k$-th tensor power, for a fixed $k\\ge3$. Tensor PCA exhibits a well-studied information-computation gap: global algorithms such as spectral methods and sum-of-squares work above an algorithmic threshold, below which we know matching lower bounds (against these and some other restricted models of computation). In contrast, local algorithms such as Markov chains were only known to succeed from a random initialization at a polynomially…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

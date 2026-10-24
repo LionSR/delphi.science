@@ -1,0 +1,21 @@
+{
+  "key": "2609.05263",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.05263",
+  "title": "Shallow neural network approximation in mixed Sobolev spaces",
+  "authors": [
+    "Yuwen Li",
+    "Guozhi Zhang"
+  ],
+  "summary": "We investigate the best $L_2$ approximation of mixed Sobolev spaces by shallow neural networks with $n$ neurons and general activation functions. We first establish an activation-independent Fourier-block principle: if an activation has univariate approximation order $ρ$ in the sense of the Fourier-block property, then the global approximation rate has algebraic order $\\min\\{α,ρ\\}$ for target functions of mixed smoothness $α$, up to explicit logarithmic factors. To verify this property for concrete activations, we introduce a structured univariate approximation condition that implies the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

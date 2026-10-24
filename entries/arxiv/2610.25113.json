@@ -1,0 +1,24 @@
+{
+  "key": "2610.25113",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.25113",
+  "title": "Self-organizing reinforcement learning: a learner-free swarm approaches the explore-exploit optimum",
+  "authors": [
+    "Galen J. Wilkerson"
+  ],
+  "summary": "The explore/exploit trade-off is the core problem of reinforcement learning (RL). We show that a minimal foraging swarm approaches its optimum - the ideal-free / Nash allocation of a multi-agent resource-sharing game (an equilibrium, not a return maximum) - with no learner and no reward signal. Agents explore by heavy-tailed (Levy) flights, recruit neighbours to a discovery through a threshold cascade on their proximity network, and disperse as a patch crowds; this cascade cycle balances exploration and exploitation and drives foragers toward the ideal free distribution. The swarm attains…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "cs.SI",
+    "math-ph",
+    "nlin.AO",
+    "physics.bio-ph"
+  ],
+  "published": "2026-10-18",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

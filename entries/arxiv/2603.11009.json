@@ -1,0 +1,22 @@
+{
+  "key": "2603.11009",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.11009",
+  "title": "Linear-Scaling Tensor Train Sketching",
+  "authors": [
+    "Paul Cazeaux",
+    "Mi-Song Dupuy",
+    "Rodrigo Figueroa Justiniano"
+  ],
+  "summary": "We introduce the TTStack sketch, a structured random projection tailored to the tensor train (TT) format that unifies existing TT-adapted sketching operators. By varying two integer parameters $P$ and $R$, TTStack interpolates between the Khatri-Rao sketch ($R=1$) and the Gaussian TT sketch ($P=1$). We prove that TTStack satisfies an oblivious subspace embedding (OSE) property with parameters $R = \\mathcal{O}(d(r+\\log 1/δ))$ and $P = \\mathcal{O}(\\varepsilon^{-2})$, and an oblivious subspace injection (OSI) property under the condition $R = \\mathcal{O}(d)$ and $P =…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.DS"
+  ],
+  "published": "2026-03-11",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

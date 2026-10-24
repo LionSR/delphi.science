@@ -1,0 +1,20 @@
+{
+  "key": "2607.08378",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08378",
+  "title": "Why Constants Matter in Distribution Testing: From Uniformity to Calibration",
+  "authors": [
+    "Alon Kipnis"
+  ],
+  "summary": "Distribution goodness-of-fit testing has developed a powerful rate-level theory: we often know how the required sample size scales with the alphabet size, the separation from the null, and the target error probability. Uniformity testing is the canonical example. One can distinguish the uniform distribution on $N$ categories from alternatives at total-variation distance at least $ε$ with far fewer than $N$ samples, and the optimal scaling is now well understood. But rate-level theory leaves an important question unresolved: among several tests with the same sample-complexity order, which one…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "math.ST"
+  ],
+  "published": "2026-07-09",
+  "updated": "2026-07-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

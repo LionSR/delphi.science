@@ -1,0 +1,19 @@
+{
+  "key": "2604.28006",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.28006",
+  "title": "Frank-Wolfe Beyond 1/t Convergence",
+  "authors": [
+    "Sebastian Pokutta"
+  ],
+  "summary": "We consider smooth convex minimization over compact convex sets, i.e., $\\min_{x \\in C} f(x)$ with the (vanilla) Frank-Wolfe algorithm. Well-known lower bounds establish a worst-case $Ω(1/t)$ primal-gap barrier in the general smooth convex case, and faster convergence usually requires favorable function properties such as Hölder error bounds or strong convexity. We present a new Local Dual Sharpness (LDS) condition, essentially a property of the feasible region and its LMO, under which the Frank-Wolfe algorithm converges in $o(1/t)$ for any smooth convex function, ruling out an $Ω(1/t)$ lower…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-30",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

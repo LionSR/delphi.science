@@ -1,0 +1,21 @@
+{
+  "key": "2609.05458",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.05458",
+  "title": "Assessing Nonlinear Elimination Preconditioning for Trust-Region Phase-Field Fracture",
+  "authors": [
+    "Tianchen Hu"
+  ],
+  "summary": "Each quasi-static load step of phase-field fracture is a bound-constrained minimization of a nonconvex, coupled displacement-damage energy under an irreversibility bound on the damage. Monolithic Newton stalls once the nonlinearity localizes at the advancing crack front, and staggered (alternate-minimization) schemes converge slowly there. We present an on-demand nonlinear-elimination preconditioned trust-region Newton method: an energy Steihaug-Toint trust region, a primal-dual active set for irreversibility, and a bound-constrained field-split sweep that eliminates an…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math.AP",
+    "math.NA"
+  ],
+  "published": "2026-08-09",
+  "updated": "2026-08-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

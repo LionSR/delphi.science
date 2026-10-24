@@ -1,0 +1,22 @@
+{
+  "key": "2601.04456",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.04456",
+  "title": "Categorical Belief Propagation: Sheaf-Theoretic Inference via Descent and Holonomy",
+  "authors": [
+    "Enrique ter Horst",
+    "Sridhar Mahadevan",
+    "Juan Diego Zambrano"
+  ],
+  "summary": "We develop a categorical foundation for belief propagation on factor graphs. We construct the free hypergraph category \\(\\Syn_Σ\\) on a typed signature and prove its universal property, yielding compositional semantics via a unique functor to the matrix category \\(\\cat{Mat}_R\\). Message-passing is formulated using a Grothendieck fibration \\(\\int\\Msg \\to \\cat{FG}_Σ\\) over polarized factor graphs, with schedule-indexed endomorphisms defining BP updates. We characterize exact inference as effective descent: local beliefs form a descent datum when compatibility conditions hold on overlaps. This…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "math.CT"
+  ],
+  "published": "2026-01-08",
+  "updated": "2026-01-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

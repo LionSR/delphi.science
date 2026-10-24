@@ -1,0 +1,22 @@
+{
+  "key": "2603.29275",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.29275",
+  "title": "A Unified Model for Thermo- and Multiple-Network Poroelasticity with a Global-in-Time Iterative Decoupling Scheme",
+  "authors": [
+    "Huipeng Gu",
+    "Mingchao Cai",
+    "Jingzhi Li",
+    "Yu Jiang"
+  ],
+  "summary": "This paper introduces a unified model for thermo-poroelasticity and multiple-network poroelasticity, reformulated into a total-pressure-based system. We first establish the well-posedness of the problem via a Galerkin-based argument and subsequently introduce a robust space-time finite element approximation. To efficiently solve the fully coupled system, we propose a global-in-time iterative algorithm that sequentially decouples the mechanics from the transport equations, while incorporating necessary stabilization terms. We explicitly analyze the convergence rate and provide a rigorous…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-31",
+  "updated": "2026-03-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

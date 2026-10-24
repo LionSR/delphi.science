@@ -1,0 +1,21 @@
+{
+  "key": "2603.11953",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.11953",
+  "title": "Mixed precision thin SVD algorithms based on the Gram matrix",
+  "authors": [
+    "Erin Carson",
+    "Yuxin Ma",
+    "Meiyue Shao"
+  ],
+  "summary": "In this work, we present a mixed precision algorithm that leverages the Gram matrix and Jacobi methods to compute the singular value decomposition (SVD) of tall-and-skinny matrices. By constructing the Gram matrix in higher precision and coupling it with a Jacobi algorithm, our theoretical analysis and numerical experiments both indicate that the singular values computed by this mixed precision thin SVD algorithm attain high relative accuracy. In practice, our mixed precision thin SVD algorithm yields speedups of over 10x on a single CPU and about 2x on distributed memory systems when…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-12",
+  "updated": "2026-03-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

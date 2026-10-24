@@ -1,0 +1,25 @@
+{
+  "key": "2606.20082",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20082",
+  "title": "Beyond Averaging in John Ellipsoid Approximation: High-Accuracy Algorithms in the Leverage-Score Model",
+  "authors": [
+    "Xiaoyu Li",
+    "Junwei Yu",
+    "Jiaojiao Jiang",
+    "Junbin Gao",
+    "Andi Han"
+  ],
+  "summary": "The John ellipsoid of a symmetric polytope $P=\\{\\mathbf{x}\\in\\mathbb{R}^d:\\|\\mathbf{A}\\mathbf{x}\\|_\\infty\\le1\\}$, $\\mathbf{A}\\in\\mathbb{R}^{n\\times d}$, is computed by a long line of leverage-score algorithms, from Cohen, Cousins, Lee and Yang (COLT 2019) to its successors [WY24, CLS+25], all reaching a $(1+\\varepsilon)$-approximation in $Θ(\\varepsilon^{-1}\\log(n/d))$ iterations. We separate this complexity into three costs the modern line conflates (certification, identification, and accuracy) and locate the historical $\\varepsilon^{-1}$ in the first alone. In the equivalent…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DS",
+    "cs.LG"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

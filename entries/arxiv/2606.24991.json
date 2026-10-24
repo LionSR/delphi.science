@@ -1,0 +1,24 @@
+{
+  "key": "2606.24991",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.24991",
+  "title": "Solving Markov Decision Processes with Future Information via MPC",
+  "authors": [
+    "Shambhuraj Sawant",
+    "Akhil S Anand",
+    "Dirk Reinhardt",
+    "Sebastien Gros"
+  ],
+  "summary": "Model Predictive Control (MPC) is widely used in industrial and robotic systems for enforcing constraints and embedding domain knowledge through finite-horizon optimization-based planning. However, despite these strengths, an MPC scheme typically does not yield optimal policies for sequential decision-making problems formulated as Markov Decision Processes (MDPs). Recent combinations of MPC with Reinforcement Learning (RL) alleviate this issue by treating MPC as a parameterized model of the optimal policy of an MDP and adjusting its parameters using data. While these approaches typically…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-06-23",
+  "updated": "2026-06-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

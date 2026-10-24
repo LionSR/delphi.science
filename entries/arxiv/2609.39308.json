@@ -1,0 +1,20 @@
+{
+  "key": "2609.39308",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.39308",
+  "title": "On bounds for rank growth of iterands in conjugate gradients for Lyapunov equation",
+  "authors": [
+    "Jana Lungová",
+    "Martin Plešinger"
+  ],
+  "summary": "We focus on solving the Lyapunov equation $AX + XA^T = F$, where $A$, $X$ and $F$ are square matrices, $A$ is symmetric positive definite (SPD) and sparse, and $F$ is symmetric and of a low-rank. The solution $X$ is then also symmetric and in general dense, but it can be approximated by a low-rank matrix. If $n$ is large, $X$ cannot be computed directly, but it is accessible by using the so-called low-rank arithmetics (LRA). The equation is solved by matrix reformulation of the method of conjugate gradients (MCG). We are interested in the behavior of ranks of the solution approximations…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

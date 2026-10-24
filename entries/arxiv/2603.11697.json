@@ -1,0 +1,23 @@
+{
+  "key": "2603.11697",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.11697",
+  "title": "Cayley Commutator-free Methods for Krotov-Type Algorithms in Quantum Optimal Control",
+  "authors": [
+    "Boris Wembe",
+    "Usman Ali",
+    "Torsten Meier",
+    "Sina Ober-Blöbaum"
+  ],
+  "summary": "This paper presents a class of structure-preserving numerical methods for quantum optimal control problems, based on commutator-free Cayley integrators. Starting from the Krotov framework, we reformulate the forward and backward propagation steps using Cayley-type schemes that preserve unitarity and symmetry at the discrete level. This approach eliminates the need for matrix exponentials and commutators, leading to significant computational savings while maintaining higher-order accuracy. We first recall the standard linear setting and then extend the formulation to nonlinear Schrödinger and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-03-12",
+  "updated": "2026-03-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

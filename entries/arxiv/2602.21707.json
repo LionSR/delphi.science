@@ -1,0 +1,26 @@
+{
+  "key": "2602.21707",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.21707",
+  "title": "Learning spatially adaptive sparsity level maps for arbitrary convolutional dictionaries",
+  "authors": [
+    "Joshua Schulz",
+    "David Schote",
+    "Christoph Kolbitsch",
+    "Kostas Papafitsoros",
+    "Andreas Kofler"
+  ],
+  "summary": "State-of-the-art learned reconstruction methods often rely on black-box modules that, despite their strong performance, raise questions about their interpretability and robustness. Here, we build on a recently proposed image reconstruction method, which is based on embedding data-driven information into a model-based convolutional dictionary regularization via neural network-inferred spatially adaptive sparsity level maps. By means of improved network design and dedicated training strategies, we extend the method to achieve filter-permutation invariance as well as the possibility to change…",
+  "domain": "eess.IV",
+  "tags": [
+    "eess.IV",
+    "cs.CV",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-02-25",
+  "updated": "2026-05-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

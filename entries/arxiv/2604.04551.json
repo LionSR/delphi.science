@@ -1,0 +1,20 @@
+{
+  "key": "2604.04551",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.04551",
+  "title": "A Near-Optimal Total Complexity for the Inexact Accelerated Proximal Gradient Method via Quadratic Growth",
+  "authors": [
+    "Hongda Li",
+    "Xianfu Wang"
+  ],
+  "summary": "We consider the optimization problem $\\min_{x\\in \\mathbb R^n}{F(x):=f(x)+ω(Ax)}$, where $f$ is an $L$-Lipschitz smooth function, and $ω$ is a proper, lower semicontinuous, and convex function. We prove in this paper that when $ω$ is a conic polyhedral function, the inexact accelerated proximal gradient method (IAPG), employed in a double-loop structure, achieves a total complexity of $\\mathcal O(\\ln(1/\\varepsilon)/\\sqrt{\\varepsilon})$ measured by the total number of calls to the proximal operator of the convex conjugate $ω^\\star$ and the gradient of $f$ to achieve $\\varepsilon$-optimality in…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-06",
+  "updated": "2026-04-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

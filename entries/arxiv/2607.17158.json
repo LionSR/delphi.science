@@ -1,0 +1,20 @@
+{
+  "key": "2607.17158",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.17158",
+  "title": "A Parallel Evolutionary Algorithm Framework for Graph $k$-CUT Problems",
+  "authors": [
+    "Sihong Shao",
+    "Chuan Yang"
+  ],
+  "summary": "Graph k-CUT problems include many important variants whose objectives combine cut value, volume, and cardinality terms in different ways. Most existing algorithms are designed for individual formulations, which limits their transferability across related models. In this paper, we organize a broad family of graph partitioning problems into two classes, MaxGCP and MinGCP, according to their optimization orientation and balance-related structure. Based on this classification, we propose a unified Parallel Evolutionary Algorithm Framework (PEAF). This framework combines structure-inheriting…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-19",
+  "updated": "2026-07-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

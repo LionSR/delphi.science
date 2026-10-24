@@ -1,0 +1,21 @@
+{
+  "key": "2606.02176",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.02176",
+  "title": "Relax and Follow: L0-Path Computation with L0-Bregman Relaxations",
+  "authors": [
+    "Mhamed Essafri",
+    "Luca Calatroni",
+    "Emmanuel Soubies"
+  ],
+  "summary": "This work introduces L0PathBrex, a novel method for estimating the solution path of L0-regularized problems through the use of L0 Bregman relaxations (B-rex). Recently introduced and analyzed in the literature, these relaxations provide continuous reformulations of the original objective, are applicable to possibly non-quadratic data fidelity terms, and depend on a family of functions designed to preserve the global minimizers while eliminating part of the undesirable local minima. Given any numerical solver for the relaxation, the proposed approach dynamically constructs a collection of…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2601.01895",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.01895",
+  "title": "An unstructured second-order subgrid method for the shallow water equations",
+  "authors": [
+    "Max Ebstrup Bitsch",
+    "Irene Torpe Heilmann",
+    "Allan Peter Engsig-Karup",
+    "Ole Rene Sørensen",
+    "Jesper Grooss"
+  ],
+  "summary": "We propose a new unstructured numerical subgrid method for solving the shallow water equations using a finite volume method with enhanced bathymetry resolution. The method employs an unstructured triangular mesh with support for triangulation of elements to form finer subgrids locally. The bathymetry is represented on the fine mesh, allowing the incorporation of small-scale features, while velocities are defined on the coarse mesh. The governing equations are solved numerically on the coarse mesh, making the method computationally cheaper compared to a traditional fine mesh computation. To…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-05",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

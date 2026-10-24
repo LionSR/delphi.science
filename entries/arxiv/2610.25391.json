@@ -1,0 +1,22 @@
+{
+  "key": "2610.25391",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.25391",
+  "title": "Rapid Mixing for Sampling Colorings of Random Graphs up to Tree Uniqueness Threshold",
+  "authors": [
+    "Zhidan Li",
+    "Kuan Yang"
+  ],
+  "summary": "We study the mixing time of the single-site Glauber dynamics for sampling proper \\(q\\)-colorings on sparse Erdős-Rényi random graphs \\(\\mathcal{G}(n, d/n)\\). We prove that, whenever \\(q \\ge (1 + o_d(1))d\\), Glauber dynamics mixes in polynomial time with high probability over \\(\\mathcal{G}(n, d/n)\\) for all sufficiently large integer \\(n\\). This improves the previous bound \\(q = (α^* + o_d(1))d\\) where \\(α^* = 1.7632...\\) is the unique solution of \\(x = \\exp(1/x)\\) on \\([1, \\infty)\\) by Efthymiou, Hayes, Štefankovič, and Vigoda (SODA, 2018) and asymptotically matches the uniqueness threshold…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.DM",
+    "cs.DS"
+  ],
+  "published": "2026-10-18",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

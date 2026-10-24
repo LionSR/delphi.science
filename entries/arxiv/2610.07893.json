@@ -1,0 +1,21 @@
+{
+  "key": "2610.07893",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.07893",
+  "title": "Time-Efficient Active Bearing-Only Localization with Reception and Coverage Guarantees",
+  "authors": [
+    "Ao Xiao",
+    "Fangfang Zhou",
+    "Qiteng Guo"
+  ],
+  "summary": "We consider the localization and removal of a stationary omnidirectional radio source using a mobile sensor with bounded bearing errors and an unknown reception radius within known bounds. The objective is to minimize expected remaining action time under a fixed continuation policy while guaranteeing reception and source removal under the sensing model. A three-disk filter ensures reception, and a minimum enclosing circle certifies coverage of all bearing-consistent source positions. Monte Carlo sample-average search ranks a finite candidate set by complete mission time, including travel,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

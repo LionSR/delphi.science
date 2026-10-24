@@ -1,0 +1,20 @@
+{
+  "key": "2603.00896",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.00896",
+  "title": "Unbiasing symmetric monoidal categories in Lean",
+  "authors": [
+    "Robin Carlier"
+  ],
+  "summary": "We present a formalization in Lean 4, within the framework of the mathematical library Mathlib, of the unbiasing process for symmetric monoidal categories. This is realized by extending the data of a symmetric monoidal category to a Cat-valued pseudofunctor from the (2,1)-category of spans of finite sets, encoding tensor products of higher arities and their coherences. The construction relies on a formalization of Mac Lane's coherence theorem using Piceghello's presentation of free symmetric monoidal categories as symmetric lists, and uses an encoding of universal formulas via an appropriate…",
+  "domain": "math.CT",
+  "tags": [
+    "math.CT",
+    "cs.LO"
+  ],
+  "published": "2026-03-01",
+  "updated": "2026-03-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

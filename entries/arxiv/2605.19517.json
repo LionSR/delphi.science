@@ -1,0 +1,20 @@
+{
+  "key": "2605.19517",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.19517",
+  "title": "Two determinant evaluations in Sun's conjectures involving Legendre symbols",
+  "authors": [
+    "Yaoran Yang",
+    "Yutong Zhang"
+  ],
+  "summary": "We prove two determinant evaluations attached to Sun's conjectures on matrices of Legendre symbols. The first one resolves the \\(p\\equiv1\\pmod4\\) part of Conjecture 4.8(i) by reducing the determinant with four indeterminates to a four-entry inverse package for the adjacent minor \\([χ(j-k+1)]_{0\\le j,k<(p-1)/2}\\). The core evaluation is \\[ \\det H=\\leg{2}{p}(b'_p-a'_p),\\qquad U^TH^{-1}U= \\begin{pmatrix} \\leg{2}{p}\\dfrac{pb'_p-a'_p}{b'_p-a'_p}&1\\\\[2mm] \\dfrac{b'_p-a'_p-1}{b'_p-a'_p}&1 \\end{pmatrix}, \\] where \\(U=(\\mathbf1,η)\\) and \\(η_j=χ(j)\\). The proof uses Vsemirnov's factorisation of…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-05-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

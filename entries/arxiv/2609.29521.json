@@ -1,0 +1,20 @@
+{
+  "key": "2609.29521",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.29521",
+  "title": "Envelopt: Constrained Convex Composite Optimization",
+  "authors": [
+    "Alberto De Marchi",
+    "Dominique Orban"
+  ],
+  "summary": "We introduce Envelopt, a globally convergent iterative framework for a broad class of structured optimization problems where a smooth objective is augmented by a nonsmooth convex regularizer composed with a smooth mapping, and the variables are subject to general smooth constraints. All smooth functions may be nonconvex. The method is akin to an augmented-Lagrangian method in which partial minimization with respect to a lifting variable results in smooth subproblems involving the Moreau envelope of the nonsmooth regularizer, and the original constraints are retained explicitly. Only the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

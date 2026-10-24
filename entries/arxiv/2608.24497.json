@@ -1,0 +1,24 @@
+{
+  "key": "2608.24497",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.24497",
+  "title": "Computing an e-net of a closed hyperbolic surface",
+  "authors": [
+    "Vincent Delecroix",
+    "Vincent Despré",
+    "Camille Lanuel",
+    "Hugo Parlier",
+    "Monique Teillaud"
+  ],
+  "summary": "Hyperbolic surfaces are a fundamental object in mathematics and play an increasingly important role in computational geometry and topology. A key ingredient in the design of efficient algorithms on such surfaces is the availability of a geometric discretization of controlled complexity. In this paper, we present the first algorithm for constructing e-nets on hyperbolic surfaces starting from a fundamental polygon representation. Our approach is based on Delaunay refinement and relies on maintaining Delaunay triangulations through edge flips. The size of an e-net cannot be bounded solely as a…",
+  "domain": "cs.CG",
+  "tags": [
+    "cs.CG",
+    "math.GT"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

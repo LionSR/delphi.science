@@ -1,0 +1,23 @@
+{
+  "key": "2605.00786",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.00786",
+  "title": "Recursive Maximum Likelihood Estimation for Interacting Particle Systems using Virtual Particles",
+  "authors": [
+    "Louis Sharrock",
+    "Nikolas Kantas",
+    "Grigorios A. Pavliotis"
+  ],
+  "summary": "We study recursive maximum likelihood estimation for stochastic interacting particle systems based on continuous observation of a single particle. In this regime, consistent estimation of the finite-particle log-likelihood is not possible, even in the limit as the number of particles $N\\rightarrow\\infty$ and the time horizon $t\\rightarrow\\infty$. We thus seek to optimise the stationary log-likelihood of the limiting mean-field system. We achieve this via a form of stochastic gradient estimate in continuous time, with stochastic gradient estimates computed using the continuous trajectory of…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-05-01",
+  "updated": "2026-05-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

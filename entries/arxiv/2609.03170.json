@@ -1,0 +1,23 @@
+{
+  "key": "2609.03170",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.03170",
+  "title": "Gradient-Free Optimization for Matrix functions",
+  "authors": [
+    "Sawyer Allen",
+    "Cash Cherry",
+    "Aidan Eck",
+    "Stephen Becker",
+    "Daniel McKenzie"
+  ],
+  "summary": "We consider the task of optimizing smooth, possibly non-convex functions of a matrix variable given access only to directional derivatives rather than full gradients. This setting arises when fine-tuning large neural networks on consumer-grade hardware: the network's weights are matrices, memory constraints rule out backward-mode automatic differentiation, but directional derivatives remain available through forward mode. We frame gradient estimation in this setting as a structured recovery problem, in the spirit of signal processing. From this perspective we provide three contributions.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-02",
+  "updated": "2026-09-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

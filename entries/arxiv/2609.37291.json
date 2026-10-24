@@ -1,0 +1,21 @@
+{
+  "key": "2609.37291",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.37291",
+  "title": "Learning Universal Costs via Multi-Observation Inverse Optimal Transport",
+  "authors": [
+    "Chenglong Bao",
+    "Zanyu Li",
+    "Defeng Sun"
+  ],
+  "summary": "Classical Inverse Optimal Transport (IOT) typically infers a cost function from a single observed transport plan, which may be sensitive to noise and observational biases in practice. To address this limitation, we propose the Multi-Observation Inverse Optimal Transport (M-IOT) framework, which learns a universal cost function from multiple transport plans. We reformulate the resulting bilevel optimization problem into a tractable single-level convex program and characterize the existence and geometric structure of the optimal solution set. Moreover, we propose a Block Coordinate Descent…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

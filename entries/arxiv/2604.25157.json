@@ -1,0 +1,26 @@
+{
+  "key": "2604.25157",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.25157",
+  "title": "A Continuous-Time Ensemble Kalman-Bucy Smoother for Causal Inference and Model Discovery",
+  "authors": [
+    "Zhang Jiang",
+    "Marios Andreou",
+    "Sebastian Reich",
+    "Nan Chen"
+  ],
+  "summary": "Data assimilation (DA) integrates observational information with model predictions to improve state estimation in complex systems. While filtering provides the basis for online forecasts by using only past and present observations, it can exhibit delays and biases when the underlying dynamics evolve rapidly or undergo regime transitions. Smoothing, which additionally incorporates future observations, provides a natural pipeline for hindcasting and reanalysis that yields an uncertainty reduction beyond the filter. This paper introduces an ensemble Kalman--Bucy smoother (EnKBS) for…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "eess.SY",
+    "physics.ao-ph",
+    "stat.ME",
+    "stat.ML"
+  ],
+  "published": "2026-04-28",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2604.10600",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.10600",
+  "title": "Nonconforming $hp$-FE/BE coupling on unstructured meshes based on Nitsche's method",
+  "authors": [
+    "Alexey Chernov",
+    "Peter Hansbo",
+    "Erik Marc Schetzke"
+  ],
+  "summary": "We construct and analyse a $hp$-FE/BE coupling on non-matching meshes, based on Nitsche's method. Both the mesh size and the polynomial degree are changed to improve accuracy. Nitsche's method leads to a positive definite formulation, thus, unlike the mortar method, it does not require the Babuška-Brezzi condition for stability. The method is stable provided the stabilization function is larger than a certain threshold. We obtain an explicit bound for the threshold and derive a priori error estimates. Our analysis can be easily extended to the pure FE or the pure BE decomposition as well as…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-12",
+  "updated": "2026-04-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

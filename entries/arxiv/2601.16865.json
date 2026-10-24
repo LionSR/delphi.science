@@ -1,0 +1,22 @@
+{
+  "key": "2601.16865",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.16865",
+  "title": "Distributional Instruments: Identification and Estimation with Quantile Least Squares",
+  "authors": [
+    "Rowan Cherodian",
+    "Guy Tchuente"
+  ],
+  "summary": "We study instrumental-variable designs where policy reforms strongly shift the distribution of an endogenous variable but only weakly move its mean. We formalize this by introducing distributional relevance: instruments may be purely distributional. Within a triangular model, distributional relevance suffices for nonparametric identification of average structural effects via a control function. We then propose Quantile Least Squares (Q-LS), which aggregates conditional quantiles of X given Z into an optimal mean-square predictor and uses this projection as an instrument in a linear IV…",
+  "domain": "econ.EM",
+  "tags": [
+    "econ.EM",
+    "math.ST",
+    "stat.AP"
+  ],
+  "published": "2026-01-23",
+  "updated": "2026-02-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

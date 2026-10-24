@@ -1,0 +1,22 @@
+{
+  "key": "2609.31065",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.31065",
+  "title": "A thermodynamically compatible semi-implicit finite volume scheme for the compressible Euler equations",
+  "authors": [
+    "M. Dumbser",
+    "G. Puppo",
+    "S. Rinaldi",
+    "A. Thomann"
+  ],
+  "summary": "In this work we construct a new semi-implicit (SI) hyperbolic and thermodynamically compatible (HTC) scheme for the compressible Euler equations of gasdynamics. The challenge therein lies in solving the entropy inequality as the primary evolution equation instead of the total energy conservation law, which in our framework is an additional conservation law that needs to be fulfilled by the numerical scheme as the consequence of a compatible discretization. The proposed method has a predictor-corrector character, where we first solve the isentropic problem without considering the entropy…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

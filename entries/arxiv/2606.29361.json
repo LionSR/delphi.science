@@ -1,0 +1,20 @@
+{
+  "key": "2606.29361",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.29361",
+  "title": "A sharp 5/8 bound for an Erdős-Sós pairwise-sums problem",
+  "authors": [
+    "Ricky Cipollini"
+  ],
+  "summary": "Let $f_3(N)$ be the least integer such that every set $A\\subseteq\\{1,\\ldots,N\\}$ of size at least $f_3(N)$ contains distinct elements $a,b,c\\in A$ such that $a+b\\in A$, $a+c\\in A$, and $b+c\\in A$. We prove that $f_3(N)\\le 5N/8+O(1)$. Together with the standard construction $[N/8,N/4]\\cup[N/2,N]$, this gives $f_3(N)=5N/8+O(1)$, resolving Erdős Problem 865. The proof is self-contained. An earlier conditional version of the reduction has also been formalized in Lean 4/Mathlib with no sorries and no added axioms.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.NT"
+  ],
+  "published": "2026-06-28",
+  "updated": "2026-06-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2607.12564",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12564",
+  "title": "Power-law and log-periodic degree tails for a family of probability generating function equations arising in evolving networks",
+  "authors": [
+    "Qunqiang Feng",
+    "Xiao-Ming Fu",
+    "Tianyang Sun"
+  ],
+  "summary": "For a fixed integer $j\\ge1$ and $0<p<1$, we study the probability generating function (pgf) equation \\[ (1+2p)\\,g(x)=2p\\,x^{j}+g\\bigl(x-px+px^{2}\\bigr),\\qquad 0\\le x\\le1 , \\] which governs the limiting degree distribution $\\{p_k\\}$ of a family of evolving network models. The cases $j=1$ and $j=2$ are the treelike fast-growth model of Feng and Hu and the homogeneous evolving network of Feng, Li and Hu. We prove that for every $j$ the equation has a unique pgf solution, of mean $2j$, and we determine its coefficient tail exactly: \\[ p_k=k^{-1-ρ}\\,Ψ_j(\\log_λk)+o\\bigl(k^{-1-ρ}\\bigr), \\] where…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2605.17963",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.17963",
+  "title": "Wasserstein Saddle-Free Newton: Saddle Escape and Local Spectral Convergence",
+  "authors": [
+    "Razvan-Andrei Lascu",
+    "Taiji Suzuki"
+  ],
+  "summary": "Extending saddle-free Newton methods to Wasserstein space requires controlling Hessian dependent operators along nonlinear transport trajectories and accounting for a Hessian spectrum that may accumulate at zero. We address these challenges through Wasserstein Saddle-Free Newton (WSFN), a second-order method for nonconvex optimization over Wasserstein space that preconditions the Wasserstein gradient by a regularized inverse square root Hessian operator. The dynamics exploit curvature magnitude while maintaining negative curvature repulsion and positive curvature attraction, avoiding key…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-05-18",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

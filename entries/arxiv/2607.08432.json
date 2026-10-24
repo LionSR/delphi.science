@@ -1,0 +1,20 @@
+{
+  "key": "2607.08432",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08432",
+  "title": "An Iterative Method for Transient Finite Element Simulations of Non-Linear Eddy Current Problems",
+  "authors": [
+    "Karl Hollaus",
+    "Haik Silm"
+  ],
+  "summary": "A method is presented to carry out a transient simulation of eddy current problems with nonlinear materials. Coils are voltage-driven. The magnetic field due to currents in coils are considered by their Biot-Savart-fields. The magnetic vector potential is used in the finite element formulation. The time stepping method is based on implicit Euler. The arising nonlinear equation system is split into two parts, the common finite element system and a circuit equation. Each part is solved separately by Newton's method. Additionally, a line search is used to solve the nonlinear field equations.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-09",
+  "updated": "2026-07-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

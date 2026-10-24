@@ -1,0 +1,21 @@
+{
+  "key": "2607.23069",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.23069",
+  "title": "Geometry-aware LegONet for PDE Learning on Arbitrary Domains",
+  "authors": [
+    "Jiahao Zhang",
+    "Yueqi Wang",
+    "Guang Lin"
+  ],
+  "summary": "Learned PDE solvers often entangle governing operators with the geometry, boundary conditions, and discretization used for training. This limits reuse when the same physics is posed on new domains, and it also makes physical-law discovery geometry-dependent. We introduce Geometry-aware LegONet (gLegONet), a boundary-manifold extension of Lego-like operator learning. Physical mechanisms are pretrained once as modular variational blocks on an ambient spectral domain. For a target geometry, sampled boundary constraints define an affine admissible manifold. Its mass-orthonormal tangent…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-25",
+  "updated": "2026-07-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

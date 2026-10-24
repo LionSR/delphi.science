@@ -1,0 +1,22 @@
+{
+  "key": "2602.21138",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.21138",
+  "title": "Complexity of Classical Acceleration for $\\ell_1$-Regularized PageRank",
+  "authors": [
+    "Kimon Fountoulakis",
+    "David Martínez-Rubio"
+  ],
+  "summary": "We study the degree-weighted work required to compute $\\ell_1$-regularized PageRank using the standard accelerated proximal-gradient method (FISTA). For non-accelerated methods (ISTA), the best known worst-case work is $\\widetilde{O}((αρ)^{-1})$, where $α$ is the teleportation parameter and $ρ$ is the $\\ell_1$-regularization parameter. It is not known whether classical acceleration methods can improve $1/α$ to $1/\\sqrtα$ while preserving the $1/ρ$ locality scaling, or whether they can be asymptotically worse. For FISTA, we show a negative result by constructing a family of instances for…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DS",
+    "cs.LG"
+  ],
+  "published": "2026-02-24",
+  "updated": "2026-04-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

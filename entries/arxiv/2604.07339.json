@@ -1,0 +1,21 @@
+{
+  "key": "2604.07339",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.07339",
+  "title": "Spectral Difference Method with a Posteriori Limiting: III- Navier-Stokes Equations with Arbitrary High-Order Accuracy",
+  "authors": [
+    "David A. Velasco-Romero",
+    "Romain Teyssier"
+  ],
+  "summary": "We incorporate an arbitrarily high-order method for the Laplacian operator into the Spectral Difference method (SD). The resulting method is capable of capturing shocks thanks to its a-posteriori limiting methodology, and therefore it is able to survive scenarios in which the dissipative scales (viscous and diffusive) are not properly described. Moreover, it is capable of capturing these scales at lower resolution compared to lower-order methods and therefore attains convergence at lower resolution. We show that the method at hand has exponential convergence when describing smooth solutions…",
+  "domain": "astro-ph.IM",
+  "tags": [
+    "astro-ph.IM",
+    "math.NA"
+  ],
+  "published": "2026-04-08",
+  "updated": "2026-04-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

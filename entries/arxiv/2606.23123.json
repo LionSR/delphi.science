@@ -1,0 +1,20 @@
+{
+  "key": "2606.23123",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.23123",
+  "title": "The Fractal Neural Operator: Overcoming Spectral Bias in Chaotic Attractors via Prime-Harmonic Weierstrass Encodings",
+  "authors": [
+    "Kanishk Awadhiya"
+  ],
+  "summary": "Deep learning models, particularly Transformers and Neural Operators, exhibit a well-documented \"spectral bias,\" effectively acting as low-pass filters that smooth out high-frequency information. While benign in fluid dynamics, this bias is catastrophic for Chaotic Dynamical Systems, where the underlying strange attractor is characterized by fractal geometry and infinite spectral density. We introduce the Fractal Neural Operator (FNO), a novel architecture that utilizes a non-resonant prime number basis to approximate continuous dynamical systems. Unlike geometric encodings ($2^k$), which…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.AP"
+  ],
+  "published": "2026-06-22",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

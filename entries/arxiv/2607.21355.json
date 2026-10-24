@@ -1,0 +1,22 @@
+{
+  "key": "2607.21355",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.21355",
+  "title": "A free boundary problem driven by boundary distance in the coincidence set",
+  "authors": [
+    "Amal Alphonse",
+    "Marcelo Bongarti",
+    "Enrico Valdinoci"
+  ],
+  "summary": "We study a free boundary problem of minimising a functional containing a non-local term rewarding depth into the zero phase: for $u\\geqslant 0$ on a bounded, open set $Ω\\subset\\mathbb R^d$, we minimise $$J(u) = \\int_Ω\\left(\\frac12|\\nabla u|^2 - fu\\right) \\;-\\; \\int_{\\{u=0\\}} F\\big(\\mathrm{dist}(x,\\partial \\{u=0\\})\\big)\\;\\mathrm{d}x. $$ This kind of functional arises, for example, from a two-membranes problem with an adhesive contact energy. We first address a well-definedness issue caused by the non-local, boundary-sensitive nature of the functional and prove existence of minimisers,…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "math.OC"
+  ],
+  "published": "2026-07-23",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

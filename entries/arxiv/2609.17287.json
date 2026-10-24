@@ -1,0 +1,20 @@
+{
+  "key": "2609.17287",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.17287",
+  "title": "Same Flow, Different Paths: Variance Reduction in Flow Matching",
+  "authors": [
+    "Alexander Tyurin"
+  ],
+  "summary": "In flow matching (FM), a velocity model $v_θ$ is trained using a predefined path $g_t$ that connects data and noise samples (e.g., $g_t(x_0, x_1) = (1 - t) x_0 + t x_1$). In this work, we study the choice of this path from an optimization perspective by analyzing the variance of stochastic gradients. We consider the class $G(p_t,v^\\star_t)$ of paths that induce the same marginal distributions $p_t$ and marginal velocity field $v^\\star_t$, and therefore the same FM objective. Our main finding is that the choice of path $g_t$ can fundamentally change the convergence rate of SGD, even when the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

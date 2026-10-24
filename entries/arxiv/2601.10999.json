@@ -1,0 +1,24 @@
+{
+  "key": "2601.10999",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.10999",
+  "title": "Exact Constraint Enforcement in Physics-Informed Extreme Learning Machines using Null-Space Projection Framework",
+  "authors": [
+    "Rishi Mishra",
+    "Smriti",
+    "Balaji Srinivasan",
+    "Sundararajan Natarajan",
+    "Ganapathy Krishnamurthi"
+  ],
+  "summary": "Physics-informed extreme learning machines (PIELMs) typically impose boundary and initial conditions through penalty terms, yielding only approximate satisfaction that is sensitive to user-specified weights and can propagate errors into the interior solution. This work introduces Null-Space Projected PIELM (NP-PIELM), achieving exact constraint enforcement through algebraic projection in coefficient space. The method exploits the geometric structure of the admissible coefficient manifold, recognizing that it admits a decomposition through the null space of the boundary operator. By…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-01-16",
+  "updated": "2026-01-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

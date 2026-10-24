@@ -1,0 +1,21 @@
+{
+  "key": "2605.07184",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.07184",
+  "title": "Convergence of Stochastic Gradient Descent with mini-batching and infinite variance",
+  "authors": [
+    "Bartosz Glowacki",
+    "Rafal Kulik",
+    "Philippe Soulier"
+  ],
+  "summary": "Stochastic gradient descent (SGD) with mini-batching is a standard tool in large-scale optimization, yet its theoretical properties under heavy-tailed gradient noise remain largely unexplored. In this paper we study SGD with increasing batch sizes when the gradient noise belongs to the domain of attraction of an $α$-stable law with $α\\in(1,2)$. Building on existing results for the finite-variance regime and for heavy-tailed SGD without batching, we establish three main results. First, we derive $L^p$ moment bounds for the SGD error and show that increasing batch sizes lead to faster…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-05-08",
+  "updated": "2026-05-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

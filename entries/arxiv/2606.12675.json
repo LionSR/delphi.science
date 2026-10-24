@@ -1,0 +1,21 @@
+{
+  "key": "2606.12675",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.12675",
+  "title": "A Communication Complexity Lower Bound for Nonuniformly Convex Consensus Optimization",
+  "authors": [
+    "Demyan Yarmoshik",
+    "Maxim Klimenko"
+  ],
+  "summary": "We study the communication complexity of convex decentralized optimization over time-varying networks, where $n$ nodes hold private functions and must agree on the global minimizer using only synchronous exchanges with neighbors. The cost is the number of communication rounds to reach accuracy $\\varepsilon$ -- a measure akin to round complexity in the LOCAL model, but constrained by nodes sharing only oracle responses. We prove a new lower bound of $Ω\\!\\left(χ_{\\mathcal G} \\sqrt{κ_g}\\,\\log\\frac{n}{χ_{\\mathcal G}}\\log\\frac1\\varepsilon\\right)$ communication rounds, where $χ_{\\mathcal G}$ is…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DC"
+  ],
+  "published": "2026-06-10",
+  "updated": "2026-06-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

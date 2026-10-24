@@ -1,0 +1,22 @@
+{
+  "key": "2607.06373",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06373",
+  "title": "Error Propagation in Spectral Functionals of Shrinkage Covariance Estimators: Perturbation Bounds and Calibrated Inference",
+  "authors": [
+    "Ahmad Koman"
+  ],
+  "summary": "Rolling covariance estimates feed two objects that are routinely treated as market structure. The first is the dominant eigenspace, monitored through the projector movement $\\widehat D_{K,t}=\\|\\widehat P_{K,t}-\\widehat P_{K,t-1}\\|_F$; the second comprises scalar spectral functionals such as the absorption ratio and the leading-eigenvalue share. Both fluctuate under estimation noise, and shrinkage changes the law of that noise, so reading their movements as structural change requires calibration. For the eigenspace, we derive a first-order null law for $\\widehat D_{K,t}$ between overlapping…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "q-fin.ST",
+    "stat.CO"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

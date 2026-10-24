@@ -1,0 +1,21 @@
+{
+  "key": "2606.15842",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.15842",
+  "title": "A small noise approximation for Muller's Ratchet",
+  "authors": [
+    "Carola Sophia Heinzel",
+    "Peter Pfaffelhuber",
+    "Anton Wakolbinger"
+  ],
+  "summary": "We consider an infinite system of SDEs with Fleming-Viot noise indexed by $k=0,1,2,\\dots$, whose parameters $α,λ$, and $ν$ are the (deleterious) selection coefficient, the (uni-directional) mutation rate, and a quantity which determines the size of the system's fluctuations. The SDE's unique weak solution $X(t) = (X_k(t))_{k=0,1,2,...}$ models what is known in population genetics as Muller's ratchet. Here, $X_k(t)$ stands for the frequency of individuals carrying $k$ deleterious mutations. Since the mutation process is uni-directional, $t\\mapsto \\inf\\{k: X_k(t)> 0\\}$ is non-decreasing for…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-06-14",
+  "updated": "2026-06-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

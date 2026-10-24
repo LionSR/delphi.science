@@ -1,0 +1,23 @@
+{
+  "key": "2603.16829",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.16829",
+  "title": "Conditional Distributional Treatment Effects: Doubly Robust Estimation and Testing",
+  "authors": [
+    "Saksham Jain",
+    "Alex Luedtke"
+  ],
+  "summary": "Beyond conditional average treatment effects, treatments may impact the entire outcome distribution in covariate-dependent ways, for example, by altering the variance or tail risks for specific subpopulations. We propose a novel estimand to capture such conditional distributional treatment effects, and develop a doubly robust estimator that is minimax optimal in the local asymptotic sense. Using this, we develop a test for the global homogeneity of conditional potential outcome distributions that accommodates discrepancies beyond the maximum mean discrepancy (MMD), has provably valid type 1…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-03-17",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

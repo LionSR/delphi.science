@@ -1,0 +1,22 @@
+{
+  "key": "2606.16793",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.16793",
+  "title": "Decay estimates for the two-dimensional Beam equation with potentials",
+  "authors": [
+    "Shuangshuang Chen",
+    "Han Cheng",
+    "Zijun Wan",
+    "Xiaohua Yao"
+  ],
+  "summary": "This paper establishes time decay estimates for the following two-dimensional beam (plate) equation with a decaying real-valued potential $V$: \\begin{equation*} \\partial_t^2 u + (Δ^2 + V) u = 0, \\qquad u(0,x)=f(x),\\quad \\partial_t u(0,x)=g(x). \\end{equation*} When zero is a regular point or a first-kind resonance of $H=Δ^2+V$, we first prove sharp $L^1\\to L^\\infty$ estimates for the solution operators: \\begin{align*} \\left\\|\\cos(t\\sqrt{H})P_{\\mathrm{ac}}(H)\\right\\|_{L^1\\to L^\\infty} + \\left\\|\\frac{\\sin(t\\sqrt{H})}{t\\sqrt{H}}P_{\\mathrm{ac}}(H)\\right\\|_{L^1\\to L^\\infty} \\lesssim \\frac{1}{|t|},…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-06-15",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

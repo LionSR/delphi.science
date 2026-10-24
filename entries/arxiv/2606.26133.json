@@ -1,0 +1,19 @@
+{
+  "key": "2606.26133",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.26133",
+  "title": "Faà di Bruno is Taylor Composition",
+  "authors": [
+    "Heinrich Hartmann"
+  ],
+  "summary": "We approach Faà di Bruno as a composition theorem for Taylor polynomials. For $C^k$ maps $φ: E \\to F$ and $ψ: F \\to G$ between Banach spaces, let $T^k_\\ast(φ; x)$ denote the reduced Taylor polynomial of $φ$ at $x$, obtained by removing the constant term. We show that $$T^k_\\ast(ψ\\circ φ; x) = π_{\\le k}\\bigl(T^k_\\ast(ψ; φ(x)) \\circ T^k_\\ast(φ; x)\\bigr).$$ The proof is an elementary estimate of the Peano remainder and does not use partitions or combinatorial enumeration. Expanding this composition identity recovers the classical Faà di Bruno formulas. Polarization gives the multivariate…",
+  "domain": "math.GM",
+  "tags": [
+    "math.GM"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

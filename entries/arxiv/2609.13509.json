@@ -1,0 +1,23 @@
+{
+  "key": "2609.13509",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.13509",
+  "title": "Global convergence of an efficient splitting method for the defocusing Gross--Pitaevskii ground state problem",
+  "authors": [
+    "Jiaxing Li",
+    "Shixin Zheng",
+    "Xiangxiong Zhang"
+  ],
+  "summary": "For computing the ground state of the defocusing Gross--Pitaevskii energy, we propose and analyze two efficient schemes based on the Davis--Yin three-operator splitting, which treats the potential and interaction terms explicitly, and the kinetic energy by a resolvent. One iteration costs one inversion of $I-γΔ$ for the first scheme, and of $I-γΔ+γV_1$ for the second, with $V_1$ denoting the separable part of the potential, and on structured meshes both operators can be inverted by simple fast GPU solvers. For monotone discrete Laplacians, including the second-order finite difference scheme…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC",
+    "physics.comp-ph"
+  ],
+  "published": "2026-09-11",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

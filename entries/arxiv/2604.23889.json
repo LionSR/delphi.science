@@ -1,0 +1,20 @@
+{
+  "key": "2604.23889",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23889",
+  "title": "Learning to Control Stabilization in Column Generation",
+  "authors": [
+    "Olivia Wang",
+    "Reem Khir"
+  ],
+  "summary": "Column generation is a widely used decomposition technique for large-scale linear programs, but it often suffers from slow convergence due to poor initial dual estimates and dual oscillations. Stabilization techniques such as smoothing and penalization can mitigate these issues, but their effectiveness depends heavily on parameter selection, which requires careful tuning to avoid degrading performance. This paper presents a common framework for smoothing and penalization, showing that despite their different mechanisms, both are governed by two design choices: a reference point in the dual…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-26",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

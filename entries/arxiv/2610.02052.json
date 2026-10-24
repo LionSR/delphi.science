@@ -1,0 +1,21 @@
+{
+  "key": "2610.02052",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02052",
+  "title": "Analysis of grid instabilities in particle-in-cell codes based on a meshfree approach",
+  "authors": [
+    "J. M. Finn",
+    "E. G. Evstatiev"
+  ],
+  "summary": "A new method of analyzing grid, or aliasing, instabilities is described, in particle-in-cell (PIC) codes for plasma kinetic theory. It starts with a meshfree approach with $N_{p}$ macroparticles, with $N_{p}<\\infty$. Linearization of these equations is done about a uniform density non-drifting equilibrium prescribed by macroparticles on a uniform \\emph{lattice}. Macroparticle positions perturbations are induced about this lattice. The resulting linear equations are analyzed for stability and dispersion relations. The linearized equations are then discretized on a grid of $N_{g}$ points with…",
+  "domain": "physics.plasm-ph",
+  "tags": [
+    "physics.plasm-ph",
+    "math-ph"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

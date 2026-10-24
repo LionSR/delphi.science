@@ -1,0 +1,20 @@
+{
+  "key": "2602.19080",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.19080",
+  "title": "$2$-limited broadcast domination in cubic graphs",
+  "authors": [
+    "Myungho Choi",
+    "Boram Park"
+  ],
+  "summary": "For a graph $G$, a function $f:V(G) \\to \\{0,1,2\\}$ is called a $2$-limited dominating broadcast on $G$ if for every vertex $u$, there exists a vertex $v$ such that $f(v)>0$ and the distance between $u$ and $v$ in $G$ is at most $f(v)$. The {\\it cost} of $f$ means the value $\\sum_{v\\in V(G)}f(v)$, and the {\\it $2$-limited broadcast domination number} of $G$, denoted by $γ_{b,2}(G)$, is the cost of a $2$-limited dominating broadcast on $G$ with minimum cost. Henning, MacGillivray, and Yang (2020) conjectured that $γ_{b,2}(G)\\leq \\frac{|V(G)|}{3}$ for every cubic graph $G$. In this paper, we…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-02-22",
+  "updated": "2026-02-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

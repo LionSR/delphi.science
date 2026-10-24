@@ -1,0 +1,27 @@
+{
+  "key": "2605.20514",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.20514",
+  "title": "Fast Reconstruction of Exact Maxwell Dynamics from Sparse Data",
+  "authors": [
+    "Dan DeGenaro",
+    "Xin Li",
+    "Obed Amo",
+    "Michael Pokojovy",
+    "Sarah Adel Bargal",
+    "Markus Lange-Hegermann",
+    "Bogdan Raiţă"
+  ],
+  "summary": "We introduce FLASH-MAX, a shallow, exact-by-construction neural network architecture for predicting homogeneous electromagnetic fields from sparse pointwise observations. Each hidden neuron represents a separate exact solution to Maxwell's equations, so that the network satisfies the governing equations symbolically by construction and can be trained end-to-end from sparse data within seconds. We prove a universal approximation result showing that this exact model class remains universal on arbitrary domains. FLASH-MAX reaches sub-1% relative validation error from about 1K sparse pointwise…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "stat.ML"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

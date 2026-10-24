@@ -1,0 +1,21 @@
+{
+  "key": "2604.27731",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.27731",
+  "title": "An adaptive Deep Ritz framework for second-order fully nonlinear partial differential equations",
+  "authors": [
+    "Alexandre Caboussat",
+    "Martin T. Leclercq",
+    "Anna Peruso"
+  ],
+  "summary": "As an alternative to PINNs, a Deep Ritz framework is proposed to solve fully nonlinear PDEs. A least-squares algorithm is advocated to decouple the nonlinearities from the variational features of several fully nonlinear PDEs. A splitting method allows to iteratively solve local nonlinear problems and linear variational problems at each iteration. While existing nonlinear solvers are applied to solve for nonlinearities, we propose a novel coupling with a Deep Ritz neural network approach that is well-suited to the variational flavor of the linear variational problems. An adaptive sampling…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-30",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

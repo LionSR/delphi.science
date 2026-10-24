@@ -1,0 +1,21 @@
+{
+  "key": "2609.03264",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.03264",
+  "title": "Certified Spherical MUSIC for 3D Localization under Adversarial Subspace Perturbations",
+  "authors": [
+    "Albert Fannjiang",
+    "Chuong Nguyen"
+  ],
+  "summary": "We study an oracle subspace-perturbation model for 3D localization. The procedure is given an $s$-dimensional subspace $\\widetilde{\\mathcal U}$ and a deterministic error bound \\[ \\varepsilon_{\\mathrm{sub}} = \\left\\|P_{\\widetilde{\\mathcal U}}-P_{\\mathcal U}\\right\\|_2, \\] where $\\mathcal{U}$ is an $s$-dimensional subspace of far-field patterns with wavenumber $κ$, and $P_{\\mathcal{V}}$ denotes orthogonal projection onto a subspace $\\mathcal{V}$. Under explicit separation and conditioning hypotheses for arbitrary point clouds, we prove that the perturbed spherical MUSIC objective \\[…",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA",
+    "cs.IT"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

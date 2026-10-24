@@ -1,0 +1,21 @@
+{
+  "key": "2606.03484",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.03484",
+  "title": "Optimizing Proof-Search via Linearization for Gödel-Löb Logic with Tree-Hypersequents",
+  "authors": [
+    "Tim S. Lyon",
+    "Omar Y. A. A. Taher"
+  ],
+  "summary": "We answer a question posed by Poggiolesi concerning a syntactic decidability proof for GL in the tree-hypersequent system CSGL, and resolve a challenge identified by Maggesi and Perini Brogi, who sought a PSPACE proof-search algorithm for GL in expressive sequent-based formalisms. We work with a notational variant of CSGL formulated in terms of (labeled) tree sequents. Our answer is complexity-optimal: we present a proof-search algorithm that decides the (in)validity of formulae and runs in PSPACE, matching the known PSPACE-completeness of GL. To achieve this, we introduce a \"linearization…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "math.LO"
+  ],
+  "published": "2026-06-02",
+  "updated": "2026-10-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2609.38412",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38412",
+  "title": "Local polynomial density ratio estimation",
+  "authors": [
+    "Hajo Holzmann",
+    "Alexander Meister"
+  ],
+  "summary": "We propose a novel local-polynomial estimator of the ratio $r=f/g$ of two $d$-dimensional densities $f$ and $g$, from which independent samples are available. The estimator is shown to achieve pointwise minimax optimal rates over Hölder classes of arbitrary smoothness index without additional logarithmic factors, and with smoothness being only assumed of $r$ but not of $f$ nor $g$. Our analysis remains valid for points on the boundary of the support of the distribution associated to $g$ under a mild geometric assumption on the (unknown) boundary. We also derive a concentration inequality for…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

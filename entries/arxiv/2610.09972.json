@@ -1,0 +1,21 @@
+{
+  "key": "2610.09972",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.09972",
+  "title": "A deterministic polynomial-time algorithm for the Bilu--Linial signing problem on bipartite graphs",
+  "authors": [
+    "Zhiqiang Xu"
+  ],
+  "summary": "We give a deterministic polynomial-time algorithm for the Bilu--Linial signing problem on bipartite graphs. For every finite simple bipartite graph of maximum degree at most an integer $Δ\\ge3$, the algorithm assigns signs to its edges so that the signed adjacency matrix has operator norm strictly less than $2\\sqrt{Δ-1}$. Our algorithm builds on the randomized recursive repair framework of Jadbabaie, Saberi, and Sra~\\cite{JSS26}, with deterministic rules for sign selection and vertex deletion.",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.CC",
+    "math.CO"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

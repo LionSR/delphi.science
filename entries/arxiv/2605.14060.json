@@ -1,0 +1,19 @@
+{
+  "key": "2605.14060",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.14060",
+  "title": "Quantitative Soft-to-Hard Terminal Constraint Convergence for the Heat Equation",
+  "authors": [
+    "Sung-Sik Kwon"
+  ],
+  "summary": "We study an optimal control problem for the heat equation with a prescribed terminal state. To circumvent the difficulty of enforcing a hard terminal constraint, we analyze a penalized formulation and prove that the corresponding optimal controls and terminal states converge to the exact constrained solution as the penalty parameter \\(α\\to \\infty\\). We establish explicit quantitative convergence estimates of order \\(O(α^{-θ})\\), including the sharp \\(O(1/α)\\) rate under stronger modal summability assumptions on the terminal mismatch. A finite-dimensional prototype is used to illustrate the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

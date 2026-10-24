@@ -1,0 +1,24 @@
+{
+  "key": "2607.05157",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.05157",
+  "title": "Variance reduction with probing and Multilevel Monte Carlo in Lattice QCD",
+  "authors": [
+    "Andreas Frommer",
+    "Jose Jimenez-Merchan",
+    "Bruno Lang",
+    "Mario Papace",
+    "Gustavo Ramirez-Hidalgo"
+  ],
+  "summary": "Trace estimation is central in many lattice QCD computations, but the accuracy of the standard, stochastic Hutchinson method improves only with the square root of the sample size, making precise results expensive. We investigate two complementary variance reduction strategies. First, multigrid multilevel Monte Carlo uses a multigrid hierarchy to construct an unbiased multilevel estimator via recursive coarse grid corrections available from the multigrid hierarchy of the solver. Second, stochastic probing uses distance-$d$ graph colorings; we propose a torus based coloring that requires…",
+  "domain": "hep-lat",
+  "tags": [
+    "hep-lat",
+    "math.NA"
+  ],
+  "published": "2026-07-06",
+  "updated": "2026-07-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

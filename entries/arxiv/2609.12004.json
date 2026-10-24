@@ -1,0 +1,25 @@
+{
+  "key": "2609.12004",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.12004",
+  "title": "Learning Interaction Kernels from Collective Steady States",
+  "authors": [
+    "Baoli Hao",
+    "Mauro Maggioni",
+    "Ming Zhong"
+  ],
+  "summary": "We propose a learning procedure for system identification in interacting particle systems from single-snapshot observations of collective behaviors, unlike existing approaches that rely on observations of trajectories. This setting leads to a fundamentally ill-posed inverse problem, which we solve by using a regularization strategy based on the empirical distribution of observed configurations, drawn from different, unobserved initial conditions. We test our learning procedure on a variety of representative models with steady-state and quasi-stationary patterns, where collective behaviors…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.DS",
+    "math.NA",
+    "nlin.AO"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2609.40150",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.40150",
+  "title": "adapol: Adaptive pole-fitting for quantum many-body physics",
+  "authors": [
+    "Zhen Huang",
+    "Chia-Nan Yeh",
+    "Lin Lin",
+    "Nils Wentzell",
+    "Jason Kaye",
+    "Hugo U. R. Strand"
+  ],
+  "summary": "We describe adapol, a Python package for fitting Matsubara Green's functions, self-energies, and hybridization functions by a compact sum of simple poles with real pole locations and matrix-valued residues. This pole-fitting step arises in many contexts, including hybridization fitting for quantum impurity solvers based on exact diagonalization, perturbation theory, and tensor networks, the compression of existing pole expansions such as the discrete Lehmann representation, diagrammatic methods based on discrete pole representations, and the analytic continuation of Matsubara Green's…",
+  "domain": "cond-mat.str-el",
+  "tags": [
+    "cond-mat.str-el",
+    "math.NA"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

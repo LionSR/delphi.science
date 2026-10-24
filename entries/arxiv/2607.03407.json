@@ -1,0 +1,21 @@
+{
+  "key": "2607.03407",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.03407",
+  "title": "Optimal mean-time path planning for unmanned underwater vehicles: a Hamilton-Jacobi approach",
+  "authors": [
+    "Jonathan Valyou",
+    "Jeremy Brandman",
+    "Sanghyun Lee"
+  ],
+  "summary": "Unmanned underwater vehicles (UUV) integrate ocean forecasts with path planning algorithms in order to identify energy- or time-minimizing paths that enable mission completion. Typically, a well-defined deterministic ocean forecast is assumed to be available for path planning; however, in practice, different ocean forecasts can disagree. In this paper, we extend previous work on deterministic optimal path planning to identify optimal mean-time paths when presented with an ensemble of possible ocean forecasts. In particular, we formulate a system of time-independent Hamilton-Jacobi partial…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-03",
+  "updated": "2026-07-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

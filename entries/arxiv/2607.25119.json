@@ -1,0 +1,22 @@
+{
+  "key": "2607.25119",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.25119",
+  "title": "Score-Based Stabilization for Time-Dependent Problems",
+  "authors": [
+    "Eshed Gal",
+    "Eldad Haber",
+    "Uri Ascher"
+  ],
+  "summary": "We propose a score-based stabilization framework for numerical simulation of partial differential equations, in which a learned score model defines a stabilization operator applied to provisional numerical updates. This operator augments standard time-stepping schemes by enforcing structure and physical consistency through a correction that drives iterates toward the manifold of admissible states. We show that the stabilization operator acts as a contraction toward this manifold, yielding a correction mechanism with basin-conditional stability. Numerical experiments on Advection, Korteweg-de…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

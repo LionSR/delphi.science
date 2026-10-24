@@ -1,0 +1,23 @@
+{
+  "key": "2609.10516",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10516",
+  "title": "Subexponential Approximation of the Permanent in Deterministic Polynomial Time",
+  "authors": [
+    "Sergei Kudria",
+    "Jason Luo",
+    "Mahbod Majid"
+  ],
+  "summary": "We give the first deterministic polynomial time algorithm that approximates the permanent of arbitrary nonnegative rational matrices within a subexponential factor. For a matrix of order $n$, the approximation factor is \\[ \\exp\\!\\left(O\\!\\left(\\frac{n(\\log\\log n)^2}{\\log n}\\right)\\right)=\\exp(o(n)). \\] All previously known deterministic polynomial time guarantees for unrestricted inputs had approximation factors $\\exp(Ω(n))$. Our proof uses convex optimization to tighten an upper bound on the permanent. The bound is based on weighted sums over all matchings in a bipartite graph representing…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.CC",
+    "math.CO"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

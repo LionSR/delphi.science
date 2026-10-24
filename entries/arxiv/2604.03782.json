@@ -1,0 +1,27 @@
+{
+  "key": "2604.03782",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.03782",
+  "title": "An Improved Last-Iterate Convergence Rate for Anchored Gradient Descent Ascent",
+  "authors": [
+    "Anja Surina",
+    "Arun Suggala",
+    "George Tsoukalas",
+    "Anton Kovsharov",
+    "Sergey Shirobokov",
+    "Francisco J. R. Ruiz",
+    "Pushmeet Kohli",
+    "Swarat Chaudhuri"
+  ],
+  "summary": "We analyze the last-iterate convergence of the Anchored Gradient Descent Ascent algorithm for smooth convex-concave min-max problems. While previous work established a last-iterate rate of $\\mathcal{O}(1/t^{2-2p})$ for the squared gradient norm, where $p \\in (1/2, 1)$, it remained an open problem whether the improved exact $\\mathcal{O}(1/t)$ rate is achievable. In this work, we resolve this question in the affirmative. This result was discovered autonomously by an AI system capable of writing formal proofs in Lean. The Lean proof can be accessed at…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI"
+  ],
+  "published": "2026-04-04",
+  "updated": "2026-04-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

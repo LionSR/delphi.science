@@ -1,0 +1,21 @@
+{
+  "key": "2609.12352",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.12352",
+  "title": "Spatial Mixing and Deterministic Approximate Counting of Multi-spin Systems beyond Bounded Degree Graphs",
+  "authors": [
+    "Zhidan Li",
+    "Kuan Yang"
+  ],
+  "summary": "We develop a framework for deterministic approximate counting of multi-spin systems beyond bounded-degree graphs. The algorithm recursively constructs rational polytopes containing the true marginal vectors and uses linear-fractional programming to obtain certified bounds on marginal ratios. For positive interactions on graphs of polynomial connective constant $D$, we establish strong spatial mixing and a fully polynomial-time approximation scheme (\\textbf{FPTAS}) whenever $Dc<1$, where $c$ bounds the Birkhoff contraction coefficients of the interactions. We further extend the framework to…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.PR"
+  ],
+  "published": "2026-09-11",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

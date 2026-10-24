@@ -1,0 +1,19 @@
+{
+  "key": "2609.09221",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.09221",
+  "title": "The density of long runs of non-$r$-free integers",
+  "authors": [
+    "Xinyang Jiang"
+  ],
+  "summary": "Fix $r\\ge2$ and let $D_k$ be the natural density of the $n$ such that none of $n+1,\\dots,n+k$ is $r$-free. We prove that $\\log(1/D_k)=\\frac{r-1}{ζ(r)}k\\log k+\\frac{r}{ζ(r)}k\\log\\log k-C_rk+o(k)$, where $C_r=\\frac{1}{ζ(r)}((r-1)\\logζ(r)+r-1+r\\log\\fracπ{r\\sin(π/r)})$; for $r=2$ this is $C_2=\\frac{6}{π^2}(1+\\log\\frac{π^4}{24})=1.4595513\\dots$. This determines Mirsky's constant $α(h)$, the density of the $n$ with $s_{n+1}-s_n=h$ in the squarefree numbers, to the same precision. Previously the only known estimate was $\\logα(h)\\le-\\frac54 h\\log\\log h+O(h)$; ours improves this by a factor of order…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

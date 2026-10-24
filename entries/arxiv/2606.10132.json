@@ -1,0 +1,21 @@
+{
+  "key": "2606.10132",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.10132",
+  "title": "WING: A Simple Windowed Nonorthogonalized Initial Guess Procedure for Repeated Matrix Solves",
+  "authors": [
+    "David Wells",
+    "Matthew G. Knepley",
+    "Boyce E. Griffith"
+  ],
+  "summary": "Many numerical methods require solution of a sequence of linear systems with the same matrix and similar right-hand sides. Krylov subspace methods are a common tool for solving such linear systems, and a carefully chosen initial guess for the solution can reduce the total number of iterations, and thereby the total computational cost, required for convergence to a specified numerical tolerance. This paper introduces the WING algorithm, a modification of Fischer's second algorithm, which lowers the cost of forming an acceptably close initial guess by skipping orthogonalization and solving the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-08",
+  "updated": "2026-06-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2604.08997",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.08997",
+  "title": "Scale-invariant projection optimization in tomographic volumetric additive manufacturing",
+  "authors": [
+    "Seungpyo Woo",
+    "Sangyup Lee",
+    "Hayden K. Taylor"
+  ],
+  "summary": "Tomographic volumetric additive manufacturing (TVAM) requires projection patterns that achieve high in-part fidelity while suppressing unintended exposure outside the target. We present a scale-invariant projection optimization framework (SiPO) that decouples projection shape from absolute dose scaling. The method formulates projection design as a linear-fractional program based on normalized conformity and spillage metrics, which is converted into a linear program via the Charnes-Cooper transformation. Two practical deterministic cases are introduced for process control: minimizing dose…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math.OC"
+  ],
+  "published": "2026-04-10",
+  "updated": "2026-04-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

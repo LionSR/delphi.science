@@ -1,0 +1,23 @@
+{
+  "key": "2606.21236",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.21236",
+  "title": "Physics-Informed Neural Networks for coupled stiff transport systems",
+  "authors": [
+    "Laetitia Laguzet",
+    "Gabriel Turinici"
+  ],
+  "summary": "Purpose: Physics-Informed Neural Networks (PINNs) struggle with stiff, regime-changing transport equations due to instability, loss imbalance, and violations of physical consistency. This paper investigates these failures through the Marshak wave equations - a canonical benchmark from radiative transport - where initial and boundary conditions differ by up to 12 orders of magnitude, and proposes targeted modifications to the standard PINN framework to overcome them. Design/methodology/approach: Three modifications are introduced: (1) a ScaledSigmoid final activation enforcing physical bounds…",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "math.NA",
+    "math.OC",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-06-19",
+  "updated": "2026-06-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

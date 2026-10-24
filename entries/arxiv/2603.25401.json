@@ -1,0 +1,20 @@
+{
+  "key": "2603.25401",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.25401",
+  "title": "High-Resolution Inertial Dynamics with Time-Rescaled Gradients for Nonsmooth Convex Optimization",
+  "authors": [
+    "Manh Hung Le",
+    "Andrea Simonetto"
+  ],
+  "summary": "We study nonsmooth convex minimization through a continuous-time dynamical system that can be seen as a high-resolution ODE of Nesterov Accelerated Gradient (NAG) adapted to the nonsmooth case. We apply a time-varying Moreau envelope smoothing to a proper convex lower semicontinuous objective function and introduce a controlled time-rescaling of the gradient, coupled with a Hessian-driven damping term, leading to our proposed inertial dynamic. We provide a well-posedness result for this dynamical system, and construct a Lyapunov energy function capturing the combined effects of inertia,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-26",
+  "updated": "2026-03-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

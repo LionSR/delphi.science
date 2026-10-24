@@ -1,0 +1,23 @@
+{
+  "key": "2610.14338",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.14338",
+  "title": "STREGO: A Scalable Implementation of a Trust-Region Framework for Noisy Bayesian Optimization",
+  "authors": [
+    "Youssef Diouane",
+    "Issmail El Hallaoui",
+    "Meisseme Kadri",
+    "Amina Lamghari"
+  ],
+  "summary": "TREGO, a trust-region Bayesian optimization (BO) method for expensive blackbox problems, has convergence guarantees, but only for exact function values. In high dimension, its performance tends to deteriorate. This paper asks whether a trust-region BO method can be extended to handle noisy evaluations while being competitive in high dimension. We first generalize TREGO into a trust-region framework for noisy BO and extend its convergence analysis to noisy function estimates that are sufficiently accurate with sufficiently high probability. We then propose STREGO, a scalable implementation of…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

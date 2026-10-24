@@ -1,0 +1,20 @@
+{
+  "key": "2607.09350",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.09350",
+  "title": "The Cost of Discretization in Functional Linear Regression: Minimax Rates and Adaptation",
+  "authors": [
+    "T. Tony Cai",
+    "Yicheng Li"
+  ],
+  "summary": "We study scalar-on-function linear regression when each covariate curve is observed only through finitely many noisy point evaluations. Our goal is to characterize the minimax estimation and prediction risks as joint functions of the number of trajectories $n$ and the within-trajectory resolution $m$. Working in a fixed trigonometric eigenbasis, with covariance eigenvalues decaying at rate $α$ and slope function of Sobolev smoothness $s$, we derive matching minimax upper and lower bounds under two canonical sampling schemes. Under an independent random design, the minimax prediction rate is…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-07-10",
+  "updated": "2026-07-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

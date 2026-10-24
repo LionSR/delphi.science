@@ -1,0 +1,21 @@
+{
+  "key": "2607.25967",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.25967",
+  "title": "Quasi-SVD: Learning a Lie-constrained matrix factorisation for real-time imaging",
+  "authors": [
+    "Christopher Hahne"
+  ],
+  "summary": "Singular Value Decomposition (SVD) underlies matrix factorisation tasks across many fields, with imaging applications demanding real-time processing. Yet SVD algorithms are inherently sequential, constraining real-time GPU throughput and limit online deployment in imaging pipelines. This study introduces a fully parallelized matrix factorization framework for GPUs by enforcing matrix orthogonality on left singular vectors via Lie-parametrised algebra and recovering the remaining components through soft constraints. This asymmetric constraint design enables an efficient parallel and provably…",
+  "domain": "cs.CV",
+  "tags": [
+    "cs.CV",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-07-28",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

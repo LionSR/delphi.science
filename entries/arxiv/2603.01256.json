@@ -1,0 +1,23 @@
+{
+  "key": "2603.01256",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.01256",
+  "title": "On the most reliable graphs with fixed redundancy",
+  "authors": [
+    "Rotem Brand",
+    "Reuven Cohen",
+    "Simi Haber",
+    "Baruch Barzel"
+  ],
+  "summary": "The all-terminal reliability of a graph $G$ is the probability that $G$ remains connected when each edge fails independently with probability $p$. For fixed $n$ and $m$, the uniformly most reliable problem asks which graph with $n$ vertices and $m$ edges maximizes reliability for all $p \\in [0,1]$. Although such graphs do not always exist, optimal graphs in the regime $p \\to 0$ always do and are determined by the structure of their minimal cut sets. We establish a structural characterization of graphs that are most reliable near $p=0$. Our results partially resolve a conjecture of Bourel et…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM"
+  ],
+  "published": "2026-03-01",
+  "updated": "2026-03-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

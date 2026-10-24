@@ -1,0 +1,23 @@
+{
+  "key": "2604.11155",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.11155",
+  "title": "Tensor-Network Population Annealing",
+  "authors": [
+    "Takumi Oshima",
+    "Yuma Ichikawa",
+    "Koji Hukushima"
+  ],
+  "summary": "We propose a hybrid sampling method, tensor-network population annealing (TNPA), which combines tensor-network (TN) initialization with population annealing (PA). We apply this method to the two-dimensional Edwards-Anderson Ising spin glass. The approach is motivated by the limitations of existing methods: TN-based samplers can become numerically unstable in frustrated spin systems at low temperatures, whereas conventional PA requires a long annealing schedule when started from the high-temperature limit. In TNPA, TN contractions are used only within a reliable temperature range to generate…",
+  "domain": "cond-mat.stat-mech",
+  "tags": [
+    "cond-mat.stat-mech",
+    "cond-mat.dis-nn",
+    "math.PR"
+  ],
+  "published": "2026-04-13",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

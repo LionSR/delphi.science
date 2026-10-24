@@ -1,0 +1,29 @@
+{
+  "key": "2601.06388",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.06388",
+  "title": "Supervised and Unsupervised Neural Network Solver for First Order Hyperbolic Nonlinear PDEs",
+  "authors": [
+    "Zakaria Baba",
+    "Alexandre M. Bayen",
+    "Alexi Canesse",
+    "Maria Laura Delle Monache",
+    "Martin Drieux",
+    "Zhe Fu",
+    "Nathan Lichtlé",
+    "Zihe Liu",
+    "Hossein Nick Zinat Matin",
+    "Benedetto Piccoli"
+  ],
+  "summary": "We present a neural network-based method for learning scalar hyperbolic conservation laws. Our method replaces the traditional numerical flux in finite volume schemes with a trainable neural network while preserving the conservative structure of the scheme. The model can be trained both in a supervised setting with efficiently generated synthetic data or in an unsupervised manner, leveraging the weak formulation of the partial differential equation. We provide theoretical results that our model can perform arbitrarily well, and provide associated upper bounds on neural network size.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-01-10",
+  "updated": "2026-01-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

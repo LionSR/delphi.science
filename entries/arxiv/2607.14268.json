@@ -1,0 +1,21 @@
+{
+  "key": "2607.14268",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14268",
+  "title": "NGMRES convergence analysis and proof of acceleration for contractive and noncontractive iterations",
+  "authors": [
+    "Y. He",
+    "L. Rebholz",
+    "M. Xiao"
+  ],
+  "summary": "This paper gives the first convergence analysis and proof of acceleration for nonlinear GMRES (NGMRES) applied to contractive and noncontractive fixed point iterations (FPIs) for solving general nonlinear systems. Our main results are that in both the contractive and noncontractive cases, the ratio gain of the optimization problem is the mechanism responsible for accelerating (or enabling) convergence. Our analysis also reveals a second important quantity related to the optimization problem, which directly predicts the linear convergence rate at each iteration and proves it is at most 1;…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

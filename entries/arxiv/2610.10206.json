@@ -1,0 +1,24 @@
+{
+  "key": "2610.10206",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.10206",
+  "title": "Computations of the slice genus and the unknotting number of links via machine learning",
+  "authors": [
+    "Yutong Dai",
+    "Oliver Hayman",
+    "András Juhász",
+    "Ludovico Morellato"
+  ],
+  "summary": "Links are disjoint unions of circles smoothly embedded in $S^3$. We use reinforcement learning and Bayesian optimisation to obtain new upper bounds on several link invariants that are not known to be algorithmically computable: the slice genus and the unknotting number for links, and the strong slice genus for algebraically split links. We also compute lower bounds using known invariants. Combining the upper and lower bounds, we obtain new exact values in many cases. Our unknotting agents can reproduce the non-additivity of the unknotting number for several counterexamples due to Brittenham…",
+  "domain": "math.GT",
+  "tags": [
+    "math.GT",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

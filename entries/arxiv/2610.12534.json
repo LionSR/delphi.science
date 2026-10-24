@@ -1,0 +1,21 @@
+{
+  "key": "2610.12534",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.12534",
+  "title": "Quaternion Gaussian Probes for Tensor Frobenius-Norm Estimation",
+  "authors": [
+    "Yannan Chen",
+    "Hailin Sun",
+    "Min Xi"
+  ],
+  "summary": "Large-scale tensors arising in science and engineering are often too large to form or store explicitly. Their multilinear contractions, however, can frequently be evaluated efficiently, which makes randomized Frobenius-norm estimation a practical alternative to exact computation. In this paper, we study estimation of the squared Frobenius norm of a real order-$d$ tensor from such contractions using independent real, complex, or quaternion Gaussian probes. For a rank-one tensor, one normalized sample is a product of $d-1$ independent Gamma variables. This gives exact relative-variance factors…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

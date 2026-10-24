@@ -1,0 +1,20 @@
+{
+  "key": "2605.05043",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05043",
+  "title": "Finding accurate eigenvalues and eigenvectors of positive semi-definite matrices given a subspace",
+  "authors": [
+    "Yuji Nakatsukasa",
+    "Zheng Tang"
+  ],
+  "summary": "We revisit a classical problem in numerical linear algebra: given an $k$-dimensional subspace $\\mathcal{Q}$ that approximates the leading eigenspace of an $n\\times n$ positive semi-definite matrix $A$, the goal is to extract high-accuracy eigenvalues. The Rayleigh-Ritz (RR) method is the standard algorithm for the task, which has been shown to be optimal in several ways (when $A$ is symmetric, not necessarily positive semi-definite $A\\succeq 0$). In this paper, we show that when $A \\succeq 0$, alternative methods can outperform RR, while having the same computational complexity, that is, the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

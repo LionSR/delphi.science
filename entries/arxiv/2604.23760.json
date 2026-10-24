@@ -1,0 +1,20 @@
+{
+  "key": "2604.23760",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23760",
+  "title": "Regret-Optimal Control for Finite-State Systems",
+  "authors": [
+    "Yishay Polatov",
+    "Oron Sabag"
+  ],
+  "summary": "We study the control of finite-state systems driven by exogenous disturbances, and design causal policies that track the performance of a lookahead benchmark controller. This objective is formalized through dynamic regret, so that favorable disturbance sequences are compared against a strong benchmark, while under adverse disturbance sequences the comparison accounts for the benchmark's degraded performance. This benchmark-relative framework provides an alternative to classical MDP formulations, which assume i.i.d. disturbances, and to robust control approaches, which optimize against…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-26",
+  "updated": "2026-04-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

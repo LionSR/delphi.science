@@ -1,0 +1,23 @@
+{
+  "key": "2609.13609",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.13609",
+  "title": "Assumption-Lean Inference for Spectral Differential Network Analysis of High-Dimensional Time Series",
+  "authors": [
+    "Michael Hellstern",
+    "Byol Kim",
+    "Ali Shojaie"
+  ],
+  "summary": "Network analysis for multivariate time series is popular in many fields, from neuroscience to seismology. The inverse spectral density is a common choice for time series network analysis due to its representation of the frequency domain correlation between two variables after removing the best linear predictor of all other variables. In many applications, the goal is to study how these networks change across different conditions. For example, in neuroscience, one might be interested in how the brain connectivity network changes before and after stimulation. Towards this goal, we develop an…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-09-11",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

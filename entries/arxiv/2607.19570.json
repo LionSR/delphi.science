@@ -1,0 +1,25 @@
+{
+  "key": "2607.19570",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.19570",
+  "title": "Optimization models and algorithms for the Unit Commitment problem",
+  "authors": [
+    "Javal Vyas",
+    "Carl Laird",
+    "Ignacio E. Grossmann",
+    "Ricardo M. Lima",
+    "Iiro Harjunkoski",
+    "Jan Poland"
+  ],
+  "summary": "The unit commitment problem determines the optimal strategy to meet the electricity demand at minimum cost by committing power generation units at each point of time. Solving the unit commitment problem gives rise to a challenging optimization problem due to its combinatorial complexity and potentially long solution time requirements. Our proposed solution approach utilizes a decomposition method in conjunction with alternative models from the EGRET library. Results of this decomposition approach tested against four benchmarking systems show that significant computational speed ups are…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-07-21",
+  "updated": "2026-07-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

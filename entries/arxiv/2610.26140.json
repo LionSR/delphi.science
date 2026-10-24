@@ -1,0 +1,21 @@
+{
+  "key": "2610.26140",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.26140",
+  "title": "Dual Quaternion Discrete Linear Canonical Transforms: FFT-Based Fast Algorithms and Joint Rotation--Translation Pose Denoising",
+  "authors": [
+    "Yi Wu",
+    "Xuan Chen",
+    "Kit Ian Kou"
+  ],
+  "summary": "Rigid-body pose signals couple rotation and translation, yet most existing denoising pipelines treat them separately and analyse them only in the Fourier domain. We show that this separation is unnecessary and often suboptimal. We fuse dual quaternions, which encode rotation and translation in a single singularity-free algebra, with linear canonical transforms, which supply flexible quadratic-phase analysis, to develop one- and two-dimensional dual quaternion discrete linear canonical transforms (DQ-DLCTs) with an explicit kernel ordering. We establish inverse and energy-preservation…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

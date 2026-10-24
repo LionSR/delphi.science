@@ -1,0 +1,21 @@
+{
+  "key": "2607.13627",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.13627",
+  "title": "The Value of Perfect Endpoint Forecasts for Offshore-Wind Thermal Firming",
+  "authors": [
+    "Arash Khojaste",
+    "Geoffrey Pritchard",
+    "Golbon Zakeri"
+  ],
+  "summary": "Forecast value depends not only on accuracy but also on the information structure available to the operating model. We study a diagnostic current-endpoint-only forecast for offshore-wind thermal firming: at hour t, the controller observes the current net-demand state z_t and one perfect future target z_{t+h}, but not the intermediate path or earlier endpoint messages. Unlike rolling path forecasts, these endpoint information sets are not nested in h. We embed the signal in a cyclostationary MDP using quantile Fourier regression states estimated from ISO New England load and offshore wind…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

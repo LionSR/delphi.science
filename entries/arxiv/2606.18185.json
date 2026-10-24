@@ -1,0 +1,20 @@
+{
+  "key": "2606.18185",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.18185",
+  "title": "An Encoder-Transformer Architecture for Recognition of the Jordan Structure of a Matrix",
+  "authors": [
+    "Michał Trojanowski",
+    "Michał Wojtylak"
+  ],
+  "summary": "We propose a machine-learning framework for detecting whether a given matrix is a perturbation of a matrix with a large Jordan block. The proposed model achieves high classification accuracy on synthetically generated, robustly perturbed data and outperforms a classical numerical baseline. Moreover, we demonstrate that the learned model generalizes to several classes of matrices not seen during training. These results suggest that the architecture captures structural properties associated with matrix defectiveness.",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

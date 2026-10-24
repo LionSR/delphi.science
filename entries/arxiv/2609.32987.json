@@ -1,0 +1,22 @@
+{
+  "key": "2609.32987",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32987",
+  "title": "Maximum Likelihood Estimation for Entity Ranking under Iterative Synthetic Data Augmentation",
+  "authors": [
+    "Yiqiao Jin",
+    "Mengxin Yu"
+  ],
+  "summary": "We study entity ranking and inference under the Bradley--Terry--Luce (BTL) model using pairwise comparisons collected over sparse comparison graphs. In practice, collecting high-quality human judgments can be expensive and time-consuming, motivating the use of synthetic data augmentation in model training. We analyze an iterative synthetic augmentation workflow in which synthetic comparisons generated from fitted models are successively added to the original dataset. In this process, the proportion of real data may vanish as the number of iterations grows. However, emerging literature has…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

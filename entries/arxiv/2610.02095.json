@@ -1,0 +1,21 @@
+{
+  "key": "2610.02095",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02095",
+  "title": "Randomized Matvec Lower Bounds for Simplex-Based Matrix Games",
+  "authors": [
+    "Wendao Wu",
+    "Cong Fang"
+  ],
+  "summary": "We prove randomized matrix-vector query lower bounds for two normalized matrix-game geometries: a Euclidean unit ball against a probability simplex, with row norms at most one, and two probability simplices, with entries of absolute value at most one. Each query returns $(Ax,A^\\top y)$ for arbitrary real vectors. The algorithm must return a feasible pair with full saddle-point gap at most $\\varepsilon$, with probability at least $2/3$ on every admissible matrix. For sufficiently small $\\varepsilon$, the worst-case query complexities are…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DS"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

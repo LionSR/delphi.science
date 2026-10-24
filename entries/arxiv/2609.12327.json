@@ -1,0 +1,22 @@
+{
+  "key": "2609.12327",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.12327",
+  "title": "LoRA-RC: Reservoir Computing with Low-Rank Adaptation",
+  "authors": [
+    "Wenbin Wan"
+  ],
+  "summary": "Reservoir computing (RC) trains only a linear readout over a fixed recurrent layer, making it fast and data-efficient for online prediction. However, a static reservoir degrades under system drift, readout-only adaptation is then insufficient, and unconstrained reservoir adaptation can destroy the echo-state and incremental stability properties that make RC reliable. This paper proposes LoRA-RC, which adapts the recurrent matrix through a low-rank correction driven by streaming prediction errors. The base reservoir and adaptation bases are fixed offline; a small core matrix is adapted…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.LG",
+    "eess.SY",
+    "math.DS"
+  ],
+  "published": "2026-09-11",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

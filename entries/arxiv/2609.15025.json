@@ -1,0 +1,23 @@
+{
+  "key": "2609.15025",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.15025",
+  "title": "Matrix Spencer: Eight Standard Deviations Suffice and an Almost-Linear Time Algorithm for Dense Input",
+  "authors": [
+    "Zhao Song",
+    "Lichen Zhang"
+  ],
+  "summary": "The Matrix Spencer conjecture asserts that for all symmetric matrices $A_1,\\ldots,A_n\\in\\mathbb{R}^{n\\times n}$ with $\\|A_i\\|\\le1$ there are signs $\\varepsilon_1,\\ldots,\\varepsilon_n\\in\\{-1,1\\}$ with $\\|\\sum_{i=1}^n\\varepsilon_iA_i\\|=O(\\sqrt n)$. We prove it: a signing of discrepancy below $8\\sqrt n$ always exists. We also give a randomized algorithm that finds a signing of discrepancy below $12\\sqrt n$ with failure probability at most $p$. The algorithm uses $n^{3+o(1)}\\operatorname{polylog}(1/p)$ arithmetic operations in the real-arithmetic model. This matches the size $n^3$ of the dense…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.FA",
+    "math.OC",
+    "math.PR"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

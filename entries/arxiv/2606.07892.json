@@ -1,0 +1,20 @@
+{
+  "key": "2606.07892",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.07892",
+  "title": "Verification Framework for the Union of Control Barrier Functions",
+  "authors": [
+    "Chuanrui Jiang",
+    "Andrew Clark"
+  ],
+  "summary": "Control Barrier Functions (CBFs) have been proposed to ensure safety of autonomous systems. This paper considers control policies that switch between CBF constraints. Under this approach, we represent a complex non-convex safe region as a union of sets that are computationally tractable to verify. We denote this framework as union-CBFs and make the following contributions. First, considering switching CBF-QP controllers, we propose a sufficient condition that ensures (i) the system undergoes a finite number of switches in any finite time interval and ensures (ii) the forward invariance of…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-05",
+  "updated": "2026-06-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

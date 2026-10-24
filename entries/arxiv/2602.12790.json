@@ -1,0 +1,22 @@
+{
+  "key": "2602.12790",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.12790",
+  "title": "A Stabilized Numerical Framework for Necrotic Tumor Growth via Coupled Boundary Integral and Obstacle Solvers",
+  "authors": [
+    "Yu Feng",
+    "Shuo Ling",
+    "Wenjun Ying",
+    "Zhennan Zhou"
+  ],
+  "summary": "We present a robust computational framework for Hele-Shaw tumor growth with necrotic cores, a problem identified as the incompressible limit of the Porous Media Equation. Simulating this system presents a fundamental challenge: while the outer boundary evolves via advection, the inner necrotic interface is defined by an obstacle problem and lacks an explicit advection structure, causing standard schemes to fail. To address this, we introduce a stabilized predictor-corrector strategy that iteratively resolves the bidirectional coupling between the nutrient-pressure fields and the domain…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-13",
+  "updated": "2026-02-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

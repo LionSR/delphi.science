@@ -1,0 +1,20 @@
+{
+  "key": "2610.25863",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.25863",
+  "title": "On Multi-label radio Labelings of Graphs",
+  "authors": [
+    "Olivier Togni"
+  ],
+  "summary": "We propose and study a multi-labeling generalization of the $k$-radio labeling problem of graphs: given a graph $G$ and integers $k$ and $m$, assign to each vertex of $G$ a set of $m$ integer labels such that distinct labels assigned to a vertex differ by at least $k+1$, and the labels of any two distinct vertices $x$ and $y$ pairwise differ by at least $k+1-d(x,y)$, with $d(x,y)$ being the distance between vertices $x$ and $y$. We prove general bounds on the minimum span of such a labeling and more refined results for the case $k=1$. For paths and cycles, we derive sharp bounds on the…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

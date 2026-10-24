@@ -1,0 +1,23 @@
+{
+  "key": "2607.12502",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12502",
+  "title": "Symbolic Weak-form Recovery of 2-D Stochastic Generators",
+  "authors": [
+    "Sai Sathvik Gullipalli",
+    "Eshwar R A"
+  ],
+  "summary": "Recovering two-dimensional Ito generators from trajectory data is difficult because drift increments have low signal-to-noise, bivariate weak designs can be ill-conditioned, and unconstrained tensor estimates need not be positive semidefinite. We study WG-SINDy estimator combining covariance-shaped spatial kernels, a ridge-stabilized local-polynomial projection, adaptive-LASSO/STLSQ selection, one in-sample per-component feasible diagonal GLS pass, and a PSD projection--Cholesky read-out with mild isotropic shrinkage. The released estimator uses a data-dependent full-cloud smoother and one…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "cs.CE",
+    "math.PR",
+    "physics.data-an"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

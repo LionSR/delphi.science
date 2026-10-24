@@ -1,0 +1,23 @@
+{
+  "key": "2610.13805",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.13805",
+  "title": "Warm-IP: A Path-Following ADMM Warm Start for Interior-Point Quadratic Programming",
+  "authors": [
+    "Babak Aslani",
+    "Mojtaba Tefagh",
+    "Gourav Jhanwar",
+    "Masoud Zarepisheh"
+  ],
+  "summary": "Interior-point (IP) methods are powerful second-order optimization algorithms but can make slow progress during early iterations. We propose Warm-IP, a hybrid framework that combines a path-following variant of the alternating direction method of multipliers (ADMM) with a primal--dual IP method. The ADMM phase generates a warm start that remains close to the central path, enabling the subsequent IP phase to rapidly refine the solution to high accuracy. We evaluate Warm-IP on a diverse collection of real-world and synthetic quadratic programming (QP) instances and compare it with leading…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "physics.med-ph"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

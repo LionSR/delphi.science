@@ -1,0 +1,21 @@
+{
+  "key": "2605.09960",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09960",
+  "title": "Total Generalized Variation regularization closes the gap between neural-eld and classical methods in seismic travel-time tomography",
+  "authors": [
+    "Isao Kurosawa"
+  ],
+  "summary": "Travel-time tomography forces a trade-off between mesh resolution and stability in which the regularizer choice dominates what can be recovered. We introduce MIMIR, a differentiable framework that represents the 2D velocity field as a Fourier-feature neural network, replacing the grid-based slowness vector with a continuous, infinitely differentiable function. Prior neural-field tomography has staircased smooth fields under total-variation (TV) priors or oscillated near interfaces under $L^2$ Laplacian smoothing. We adopt second-order total generalized variation (TGV$^2$) and parametrize its…",
+  "domain": "physics.geo-ph",
+  "tags": [
+    "physics.geo-ph",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2610.24567",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.24567",
+  "title": "Rapid convergence of Langevin AIS for multimodal distributions on $\\mathbb{R}^d$",
+  "authors": [
+    "Seungjae Son"
+  ],
+  "summary": "We study annealed importance sampling (AIS) driven by the overdamped Langevin diffusion, targeting a multimodal Gibbs measure $π_\\varepsilon \\propto e^{-U/\\varepsilon}$ on $\\mathbb{R}^d$ at low temperature $\\varepsilon$. For a potential $U$ with nondegenerate critical points, finitely many wells of comparable mass, and at least quadratic growth at infinity, we show that AIS with a harmonically spaced temperature schedule produces a weighted empirical measure that approximates $π_\\varepsilon$ to accuracy $δ$ at a total cost of order $\\varepsilon^{-2}δ^{-2}$, up to logarithmic factors, and the…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-10-17",
+  "updated": "2026-10-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

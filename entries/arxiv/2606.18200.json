@@ -1,0 +1,21 @@
+{
+  "key": "2606.18200",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.18200",
+  "title": "PDECheck: A Diagnostic Software Suite for Auditing Learned PDE Simulators",
+  "authors": [
+    "Lennon J. Shikhman"
+  ],
+  "summary": "PDECheck audits learned PDE simulators through callable propagators or saved predictions. It evaluates relative $L^2$ error, temporal composition, finite-difference generators, and equation-specific physical residuals, retaining horizons and missing prerequisites. Analytic and manufactured defects verify the kernels. A heat-equation sweep quantifies generator sensitivity to timestep, frequency, grid, and precision. A three-equation, five-seed FNO study compares supervised, PINO-style, and composition-regularized training. An accuracy-matched advection comparison has state errors below 0.3%…",
+  "domain": "cs.MS",
+  "tags": [
+    "cs.MS",
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

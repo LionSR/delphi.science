@@ -1,0 +1,22 @@
+{
+  "key": "2605.31309",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.31309",
+  "title": "Non-Asymptotic Convergence of Stochastic Iterative Algorithms: A Lyapunov Framework",
+  "authors": [
+    "Zaiwei Chen",
+    "Siva Theja Maguluri"
+  ],
+  "summary": "We survey Lyapunov-based techniques for the finite-time analysis of stochastic iterative algorithms, also known as stochastic approximation (SA) algorithms, for solving fixed-point equations $\\bar{F}(x)=x$, where the operator $\\bar{F}(\\cdot)$ can only be accessed through a noisy oracle. We first focus on the standard setting in which $\\bar{F}(\\cdot)$ is contractive with respect to some norm and the noise is i.i.d., and explain how generalized Moreau envelopes serve as universal Lyapunov functions, regardless of the underlying norm. We then show how this framework yields mean-square…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

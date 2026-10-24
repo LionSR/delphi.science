@@ -1,0 +1,20 @@
+{
+  "key": "2607.04185",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04185",
+  "title": "The Complexity of Weak Saturation for Complete Graphs and Balanced Complete Bipartite Graphs",
+  "authors": [
+    "Yihan Chen",
+    "Tianying Xie"
+  ],
+  "summary": "For graphs $F$ and $H$, a spanning subgraph $G$ of $F$ is weakly $H$-saturated in $F$ if the edges in $E(F)\\setminus E(G)$ can be added one at a time, each addition creating a new copy of $H$. Recently, Tancer and Tyomkyn proved that, given an $n$-vertex graph $F$, deciding whether $\\mathrm{wsat}(F,K_3)=n-1$ is NP-hard. In this paper, we study the decision version of the weak saturation problem and show that, for every fixed integer $r\\ge 3$, given a graph $F$ and an integer $k$, deciding whether $\\mathrm{wsat}(F,H)\\le k$ is NP-complete when $H\\in\\{K_r,K_{r,r}\\}$. Our approach uses novel…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-07-05",
+  "updated": "2026-07-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

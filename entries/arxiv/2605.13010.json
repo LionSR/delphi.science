@@ -1,0 +1,23 @@
+{
+  "key": "2605.13010",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.13010",
+  "title": "Image AID via continuous-time reinforcement learning",
+  "authors": [
+    "Yilie Huang",
+    "Xun Yu Zhou"
+  ],
+  "summary": "We study image inpainting with generative diffusion models. Existing methods typically either train dedicated task-specific models, or adapt a pretrained diffusion model separately for each masked image at deployment. We introduce a middle-ground model, termed Amortized Inpainting with Diffusion (AID), which keeps a pretrained diffusion backbone fixed, trains a small reusable guidance module offline, and then reuses it across masked images without per-instance optimization. We formulate it as a deterministic guidance problem with a supervised terminal objective. To make this problem…",
+  "domain": "cs.CV",
+  "tags": [
+    "cs.CV",
+    "cs.AI",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

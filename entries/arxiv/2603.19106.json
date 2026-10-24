@@ -1,0 +1,21 @@
+{
+  "key": "2603.19106",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.19106",
+  "title": "Stochastic Virtual Power Plant Dispatch via Temporally Aggregated Distributed Predictive Control with Performance Guarantees",
+  "authors": [
+    "Luca Santosuosso",
+    "Fei Teng",
+    "Sonja Wogrin"
+  ],
+  "summary": "This paper addresses the energy dispatch of a virtual power plant comprising renewable generation, energy storage, and thermal units under uncertainty in renewable output, energy prices, and energy demand. The nonlinear dynamics and multiple sources of uncertainty render traditional stochastic model predictive control (MPC) computationally intractable as the dispatch horizon, scenario set, and asset portfolio expand. To overcome this limitation, we propose a novel controller that seamlessly integrates MPC with time series aggregation and distributed optimization, simultaneously reducing the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-19",
+  "updated": "2026-08-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

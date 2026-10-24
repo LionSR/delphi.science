@@ -1,0 +1,24 @@
+{
+  "key": "2609.36421",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.36421",
+  "title": "Sample Complexity of Equivariant Reinforcement Learning",
+  "authors": [
+    "Rayan Mazouz",
+    "Haibo Zhao",
+    "Chris Hillar",
+    "Christian Shewmake"
+  ],
+  "summary": "Reinforcement learning (RL) is a powerful framework for robotic control, yet its practical application is often hindered by high sample complexity. This is particularly restrictive in physical domains where interaction data is costly. While the world often exhibits geometric and physical symmetries, standard RL algorithms typically fail to exploit this structure. In this paper, we demonstrate that exploiting group symmetries significantly reduces the sample complexity of RL. Focusing on finite-horizon Markov decision processes, we find that leveraging homomorphisms induced by group…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "cs.LG",
+    "math.GR"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

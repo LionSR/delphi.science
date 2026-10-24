@@ -1,0 +1,23 @@
+{
+  "key": "2606.14382",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.14382",
+  "title": "Predictive Concordance for Parameter Optimisation and Mixture Synthesis",
+  "authors": [
+    "Tobias Adrian",
+    "Domenico Giannone",
+    "Matteo Luciani",
+    "Mike West"
+  ],
+  "summary": "We discuss probabilistic measures of concordance between two probability distributions based on the expected misclassification rate (EMR). The focus is on comparing a given reference distribution with other distributions in a parametrised class, and optimising concordance by identifying parameter values maximising EMR or a regularised variant. EMR is a practical and decision-theoretically meaningful measure, and its optimisation has direct interpretation as a Bayesian decision analysis with a bounded utility function. We explore theoretical properties of EMR, discuss relationships with other…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-06-12",
+  "updated": "2026-06-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

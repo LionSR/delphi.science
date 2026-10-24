@@ -1,0 +1,24 @@
+{
+  "key": "2606.30930",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.30930",
+  "title": "SGD at the Edge of Stability: Stochastic Stabilization with Large Learning Rates",
+  "authors": [
+    "Konstantinos Emmanouilidis",
+    "Lachlan MacDonald",
+    "Salma Tarmoun",
+    "Rene Vidal"
+  ],
+  "summary": "Modern deep learning has been shown to operate at the edge of stability, routinely using learning rates far larger than those justified by classical optimization theory. Most prior analyses of the edge of stability phenomenon focus on deterministic gradient descent, leaving the stochastic setting largely unexplored. In this work, we provide sharp convergence guarantees for Stochastic Gradient Descent (SGD) applied to the multiclass cross-entropy loss, for both linear classifiers and two-layer neural networks. We show that the stochasticity of SGD may cause the dynamics to alternate between…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

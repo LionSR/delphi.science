@@ -1,0 +1,20 @@
+{
+  "key": "2610.09338",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.09338",
+  "title": "Fully Deterministic Shallow Neural Networks with Localized Activations. Part I: Construction and Optimal Sobolev Approximation",
+  "authors": [
+    "Ran Bi",
+    "Weibing Deng"
+  ],
+  "summary": "We construct shallow neural networks with fixed Gaussian and tanh-difference activations on bounded Lipschitz domains $Ω\\subset\\mathbb{R}^d$, $d\\ge2$. For each $s>0$, explicit deterministic rules prescribe all hidden parameters independently of the target $u\\in H^s(Ω)$. At frequency resolution $M$, the $N_M\\asymp M^d$ prescribed features span a linear space $V_M$. For every sufficiently large integer $N$, we choose $M\\asymp N^{1/d}$ with $N_M\\le N$ and construct a bounded linear operator $A_N:H^s(Ω)\\to V_M$ such that \\[ \\|u-A_Nu\\|_{H^m(Ω)} \\le C N^{-(s-m)/d}\\|u\\|_{H^s(Ω)} \\] for every $u\\in…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2604.04417",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.04417",
+  "title": "An Alternating Primal Heuristic for Nonconvex MIQCQP with Dynamic Convexification and Parallel Local Branching",
+  "authors": [
+    "Yongzheng Dai",
+    "Chen Chen"
+  ],
+  "summary": "We develop a novel primal heuristic for nonconvex Mixed-Integer Quadratically Constrained Quadratic Programs (MIQCQPs). The method is built around a convex approximation that is dynamically adjusted within a feasibility-pump-style alternating heuristic. Approximations are adjusted based on the structure of the MIQCQP instance. Additionally, parallelized local branching is incorporated to further refine detected solutions. This paper builds upon the second-place finalist submission in the 2025 Land-Doig MIP Computational Competition. Our results are validated with computational experiments on…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-06",
+  "updated": "2026-04-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

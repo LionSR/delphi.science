@@ -1,0 +1,23 @@
+{
+  "key": "2603.12060",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.12060",
+  "title": "Chemical Reaction Networks Learn Better than Spiking Neural Networks",
+  "authors": [
+    "Sophie Jaffard",
+    "Ivo F. Sbalzarini"
+  ],
+  "summary": "We mathematically prove that chemical reaction networks without hidden layers can solve tasks for which spiking neural networks require hidden layers. Our proof uses the deterministic mass-action kinetics formulation of chemical reaction networks. Specifically, we prove that a certain reaction network without hidden layers can learn a classification task previously proved to be achievable by a spiking neural network with hidden layers. We provide analytical regret bounds for the global behavior of the network and analyze its asymptotic behavior and Vapnik-Chervonenkis dimension. In a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-03-12",
+  "updated": "2026-03-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

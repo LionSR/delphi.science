@@ -1,0 +1,20 @@
+{
+  "key": "2610.07750",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.07750",
+  "title": "PLADOS: A Parameter-free Landing Algorithm for Decentralized Optimization on the Stiefel Manifold",
+  "authors": [
+    "Shu Li",
+    "Jiang Hu"
+  ],
+  "summary": "Decentralized optimization on the Stiefel manifold has broad applications in machine learning and signal processing. We propose PLADOS, a parameter-free landing algorithm for decentralized optimization on the Stiefel manifold. Each iteration combines local stochastic gradient updates with a single retraction-free communication step over the communication graph. A key convex-like property of the intersection of the nonconvex Stiefel manifold and consensus constraints is characterized through a restricted secant inequality for the penalty-only scheme, ensuring local contraction of the manifold…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

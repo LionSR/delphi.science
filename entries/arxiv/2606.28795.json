@@ -1,0 +1,24 @@
+{
+  "key": "2606.28795",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28795",
+  "title": "On design-unbiased algorithmic Machine Learning",
+  "authors": [
+    "Li-Chun Zhang",
+    "Siu-Ming Tam",
+    "Luis Sanguiao-Sande",
+    "Wesley Yung",
+    "Anders Holmberg"
+  ],
+  "summary": "Machine Learning (ML) algorithms, such as k-Nearest Neighbours (kNN) or random forest, eschew the ideal of true data models in favour of predictive performance. However, minimising the MSE or F-score cannot lead to unbiasedness directly, which is important in many situations such as official statistics. We study the conditions of algorithmic ML, other than the existence and knowledge of true data models, which lead to unbiased prediction or classification for a given finite population, including how the training data may be sampled from the population, how a trained prediction algorithm can…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-06-27",
+  "updated": "2026-06-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

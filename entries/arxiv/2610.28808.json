@@ -1,0 +1,23 @@
+{
+  "key": "2610.28808",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.28808",
+  "title": "Deflation-Based Spectral Preconditioning for the Conjugate Gradient Method on Perturbed Systems",
+  "authors": [
+    "Youssef Diouane",
+    "Selime Gürol",
+    "Oussama Mouhtal",
+    "Dominique Orban"
+  ],
+  "summary": "We consider sequences of large symmetric positive-definite linear systems in which spectral information from a reference matrix $A$ is reused to accelerate the solution of a nearby system with perturbed matrix $A(t)=A+tE$, where $E$ is symmetric, $\\|E\\|_F=1$, and $t\\geq0$ is the perturbation size. We compare deflated conjugate gradient (deflated CG) with preconditioned CG (PCG) equipped with a scaled spectral preconditioner constructed from the same spectral information of $A$. First, we derive an energy-norm error characterization of deflated CG. We then use perturbation analysis to show…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

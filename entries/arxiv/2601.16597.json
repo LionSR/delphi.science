@@ -1,0 +1,23 @@
+{
+  "key": "2601.16597",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.16597",
+  "title": "Efficient Learning of Stationary Diffusions with Stein-type Discrepancies",
+  "authors": [
+    "Fabian Bleile",
+    "Sarah Lumpp",
+    "Mathias Drton"
+  ],
+  "summary": "Learning a stationary diffusion amounts to estimating the parameters of a stochastic differential equation whose stationary distribution matches a target distribution. We build on the recently introduced kernel deviation from stationarity (KDS), which enforces stationarity by evaluating expectations of the diffusion's generator in a reproducing kernel Hilbert space. Leveraging the connection between KDS and Stein discrepancies, we introduce the Stein-type KDS (SKDS) as an alternative formulation. We prove that a vanishing SKDS guarantees alignment of the learned diffusion's stationary…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-01-23",
+  "updated": "2026-01-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

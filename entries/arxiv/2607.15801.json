@@ -1,0 +1,24 @@
+{
+  "key": "2607.15801",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.15801",
+  "title": "Polynomial-Based Solutions to Targeting Problems for Onboard Applications",
+  "authors": [
+    "Adam Evans",
+    "Alberto Fossa",
+    "Roberto Armellin",
+    "Didier Henrion",
+    "Renato Zanetti"
+  ],
+  "summary": "This paper solves the targeting problem focusing on accuracy, computational efficiency, and reliability. The trajectory optimization problem is first recast as a polynomial optimization problem (POP) by leveraging differential algebra to compute high-order Taylor expansions of the nonlinear dynamics and constraints. Moment-sum-of-squares (SOS) optimization is then utilized to solve this POP. A convex formulation based on a second-order expansion of the dynamics is also proposed. For impulsive targeting, the moment-SOS and convex approaches are compared against traditional nonlinear…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-07-17",
+  "updated": "2026-07-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

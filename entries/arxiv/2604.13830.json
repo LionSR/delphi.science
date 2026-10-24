@@ -1,0 +1,25 @@
+{
+  "key": "2604.13830",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.13830",
+  "title": "Randomized Neural Networks for Integro-Differential Equations with Application to Neutron Transport",
+  "authors": [
+    "Haoning Dang",
+    "Fei Wang",
+    "Yifan Chen",
+    "Zhouyu Liu",
+    "Dong Liu",
+    "Hongchun Wu"
+  ],
+  "summary": "Integro-differential equations arise in a wide range of applications, including transport, kinetic theory, radiative transfer, and multiphysics modeling, where nonlocal integral operators couple the solution across phase space. Such nonlocality often introduces dense coupling blocks in deterministic discretizations, leading to increased computational cost and memory usage, while physics-informed neural networks may suffer from expensive nonconvex training and sensitivity to hyperparameter choices. In this work, we present randomized neural networks (RaNNs) as a mesh-free collocation…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-04-15",
+  "updated": "2026-04-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2601.23104",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.23104",
+  "title": "Series-Parallel and Planar Graphs for Efficient Broadcasting",
+  "authors": [
+    "David Evangelista",
+    "Hovhannes A. Harutyunyan",
+    "Aram Khanlari"
+  ],
+  "summary": "The broadcasting problem concerns the efficient dissemination of information in graphs. In classical broadcasting, a single originator vertex initially has a message to be transmitted to all vertices. Every vertex which has received the message informs at most one uninformed neighbor at each discrete time unit. In this paper, we introduce infinite families of series-parallel graphs with efficient broadcast times: graphs on $n$ vertices with broadcast time at most $\\lceil\\log_2 n \\rceil + 1$ for any $n$, graphs on $n$ vertices with broadcast time $\\lfloor \\frac{3 \\lceil \\log_2 n \\rceil}{2}…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-01-30",
+  "updated": "2026-01-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2603.23835",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.23835",
+  "title": "Beyond Consistency: Inference for the Relative risk functional in Deep Nonparametric Cox Models",
+  "authors": [
+    "Sattwik Ghosal",
+    "Xuran Meng",
+    "Yi Li"
+  ],
+  "summary": "There remain theoretical gaps in deep neural network estimators for the nonparametric Cox proportional hazards model. In particular, it is unclear how gradient-based optimization error propagates to population risk under partial likelihood, how pointwise bias can be controlled to permit valid inference, and how ensemble-based uncertainty quantification behaves under realistic variance decay regimes. We develop an asymptotic distribution theory for deep Cox estimators that addresses these issues. First, we establish nonasymptotic oracle inequalities for general trained networks that link…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-03-25",
+  "updated": "2026-03-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2605.03711",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.03711",
+  "title": "One-Dimensional Nonnegative Spline Smoothing via Convex Semi-Infinite Programming with a Cutting-Plane Method",
+  "authors": [
+    "Hiroki Arai",
+    "Daichi Kitahara"
+  ],
+  "summary": "Spline functions are smooth piecewise polynomials widely used for interpolation and smoothing, and nonnegative spline smoothing is also studied for nonnegative data. Previous research used sufficient conditions for the nonnegativity of spline functions because necessary and sufficient conditions for the nonnegativity are infinitely many linear inequalities, which are difficult to handle in optimization algorithms. This conventional method quickly computes a nonnegative spline function via quadratic programming (QP), but the optimal solution may be slightly degraded by using the sufficient…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SP",
+    "math.NA"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-05-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

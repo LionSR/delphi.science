@@ -1,0 +1,21 @@
+{
+  "key": "2608.08318",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.08318",
+  "title": "Stability of MIMO PID With Backward Differences Under Fast Sampling: An Exact Spectral Criterion",
+  "authors": [
+    "Zhaobo Liu",
+    "Yanyi Wu",
+    "Peng Zhang"
+  ],
+  "summary": "Backward differences are a standard digital realization of derivative action in proportional-integral-derivative control. This note proves that, for multivariable state-space plants, this implementation can be unstable no matter how small the sampling period is. The exact lifted model reveals fast eigenvalues created by the stored previous output sample. Away from boundary spectra, stability is equivalent to ideal loop stability plus Schur stability of the product of the output, input, and derivative gain matrices.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-08",
+  "updated": "2026-08-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

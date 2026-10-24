@@ -1,0 +1,24 @@
+{
+  "key": "2603.06941",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.06941",
+  "title": "Demonstration Experiments",
+  "authors": [
+    "Guido Imbens",
+    "Lorenzo Masoero",
+    "Alexander Rakhlin",
+    "Thomas S. Richardson",
+    "Suhas Vijaykumar"
+  ],
+  "summary": "Adaptive experiments are used extensively in online platforms, healthcare and biotechnology, and the social sciences. Often, the primary goal is not to precisely estimate a treatment effect but to demonstrate that at least one candidate intervention yields a positive effect, for some subpopulation and on some measured outcome. We formalize this objective as testing the global null in a threshold bandit framework, and develop two inference procedures that are valid under general adaptive sampling: one that pools information across promising arms, and one based on time-uniform multiple testing…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-03-06",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

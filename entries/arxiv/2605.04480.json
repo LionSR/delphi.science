@@ -1,0 +1,20 @@
+{
+  "key": "2605.04480",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04480",
+  "title": "Geometric Milstein Scheme for Stochastic Differential Equations on SO(n) and SE(n)",
+  "authors": [
+    "Xi Wang",
+    "Victor Solo"
+  ],
+  "summary": "In the paper, we propose a higher-order geometry-preserving numerical method for stochastic differential equations (SDEs) evolving on the Lie groups SO(n) and SE(n). Most existing Lie group integrators rely on Magnus expansion of the exponential map, which makes the construction of higher-order stochastic schemes difficult. To overcome this limitation, we develop a tangent-space parameterization corrected Milstein method (TaSP-CM), extending the tangent space parameterization (TaSP) framework from Lie-group ODEs to the stochastic setting. Although TaSP is a well-established method for Lie…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

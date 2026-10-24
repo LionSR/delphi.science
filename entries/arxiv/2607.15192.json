@@ -1,0 +1,21 @@
+{
+  "key": "2607.15192",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.15192",
+  "title": "Efficient higher-order local time integration for Friedrichs' systems",
+  "authors": [
+    "Marlis Hochbruck",
+    "Jonas Köhler",
+    "Malik Scheifinger"
+  ],
+  "summary": "In this paper, we construct an efficient higher-order local time integration scheme for spatially discretized linear Friedrichs' systems. In particular, our interest is in problems where only a few of the mesh elements are small while the majority of the elements is much larger. The special combination of two methods like the leapfrog method on the coarse part of the mesh and the Crank-Nicolson method on the fine part as was done in Hochbruck, Sturm 2016 and Hochbruck, Köhler 2022 is not suitable for higher-order time integration. Therefore, we suggest to approximate the solution of the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

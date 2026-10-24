@@ -1,0 +1,21 @@
+{
+  "key": "2606.07153",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.07153",
+  "title": "No-Harm Physics-Informed Inverse Learning with Residual-Calibrated Uncertainty",
+  "authors": [
+    "Ronald Katende"
+  ],
+  "summary": "Physics-informed learning is increasingly used for partial differential equation (PDE)-governed inverse problems, but its reliability remains difficult to certify. This paper develops a no-harm certification-and-selection framework for physics-informed inverse learning. A learned reconstruction is accepted only when its residual-calibrated radius is no worse than the baseline radius, namely when $$R_{\\mathrm{learn}}\\le R_{\\mathrm{base}}+\\varepsilon_{\\mathrm{safe}};$$otherwise, the method returns the baseline. The certificate combines data, physics, boundary or initial-condition, and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-06-05",
+  "updated": "2026-06-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

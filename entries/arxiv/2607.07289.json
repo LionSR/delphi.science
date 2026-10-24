@@ -1,0 +1,25 @@
+{
+  "key": "2607.07289",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.07289",
+  "title": "Bayesian Optimization of Genetic Algorithm Hyperparameters in a Multi-Fidelity Framework for Efficient Lattice Material Design",
+  "authors": [
+    "Sergei Zorkaltsev",
+    "Maciej Haranczyk",
+    "Christina Schenk"
+  ],
+  "summary": "This study presents a multi-fidelity framework for the systematic optimization of genetic algorithm (GA) hyperparameters. The framework integrates three fidelity levels: high-fidelity Fast Fourier Transform (FFT) homogenization for validation, a medium-fidelity 3D convolutional neural network surrogate for rapid property evaluation, and a low-fidelity Gaussian process (GP) surrogate within a Bayesian optimization (BO) framework to guide the hyperparameter search. Various acquisition functions are evaluated, with logNEI achieving the best performance by effectively accounting for the noise…",
+  "domain": "cond-mat.mtrl-sci",
+  "tags": [
+    "cond-mat.mtrl-sci",
+    "cond-mat.dis-nn",
+    "cs.AI",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

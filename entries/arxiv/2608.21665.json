@@ -1,0 +1,24 @@
+{
+  "key": "2608.21665",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.21665",
+  "title": "A Sparse-Group Pliable Lasso",
+  "authors": [
+    "Mohammad Javad Davoudabadi",
+    "Minh Long Nguyen",
+    "Amirhossein Ghatari",
+    "Mina Aminghafari",
+    "Kerrie Mengersen"
+  ],
+  "summary": "The sparse-group pliable Lasso (SGPL) extends the pliable Lasso and group pliable Lasso by combining sparse-group regularization with a predictor-level coupling penalty, enabling simultaneous group-level selection, within-group sparsity, and hierarchical structure between main effects and interactions. We propose a blockwise coordinate descent algorithm for fitting the SGPL that exploits the convexity and structure of the objective function, establish convexity and Karush--Kuhn--Tucker optimality conditions, and prove that the algorithm converges to a global minimizer. Simulation studies…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-08-21",
+  "updated": "2026-08-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

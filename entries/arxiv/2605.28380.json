@@ -1,0 +1,22 @@
+{
+  "key": "2605.28380",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.28380",
+  "title": "Preconditioned Reconstructed Discontinuous Approximation For Elliptic Interface Problem on Unfitted Mesh",
+  "authors": [
+    "Ruo Li",
+    "Qicheng Liu",
+    "Fanyi Yang",
+    "Shuhai Zhao"
+  ],
+  "summary": "In this paper, we develop an efficient preconditioned unfitted finite element method for the elliptic interface problem, based on the reconstructed discontinuous approximation. The key idea is to impose suitable constraints on the local least squares reconstruction. These constraints ensure the stability near cut interface elements and, more importantly, establish a norm equivalence between the high-order space and the lowest-order piecewise constant space. This result allows us to construct an optimal preconditioner directly from the lowest-order system on the same unfitted mesh for any…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-27",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

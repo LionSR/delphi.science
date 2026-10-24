@@ -1,0 +1,23 @@
+{
+  "key": "2603.12955",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.12955",
+  "title": "Numerically stable variants of overrelaxation for operator Sinkhorn iteration",
+  "authors": [
+    "Henrik Eisenmann",
+    "Tasuku Soma",
+    "Xun Tang",
+    "André Uschmajew"
+  ],
+  "summary": "We consider accelerated versions of the operator Sinkhorn iteration (OSI) for solving scaling problems for completely positive maps. Based on the interpretation of OSI as alternating fixed point iteration, it has been recently proposed to achieve acceleration by means of nonlinear successive overrelaxation (SOR), e.g.~with respect to geodesics in Hilbert metric. The direct implementation of the proposed SOR algorithms, however, can be numerically unstable for ill-conditioned instances, limiting the achievable accuracy. Here we derive equivalent versions of OSI with SOR where, similar to the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-03-13",
+  "updated": "2026-03-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

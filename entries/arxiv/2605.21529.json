@@ -1,0 +1,20 @@
+{
+  "key": "2605.21529",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.21529",
+  "title": "A Matrix-Theoretic Exact Formula for Counting Primes in Intervals Between Consecutive Odd Squares",
+  "authors": [
+    "Wujie Shi"
+  ],
+  "summary": "Matrix $B=(b_{ij})$ with $b_{ij}=(2j+1)(2j+2i-1)$ was introduced in \\cite{Shi2024} as an additive sieve for odd primes. In this paper we introduce the minimal-anchor function $\\pmin(d)$, the least odd prime $p$ such that $p+d$ is prime (sequence A020483 of the OEIS at index $d/2$), whose finiteness for all even $d$ is exactly the weak Polignac (Maillet) conjecture, i.e.\\ the statement that every row of $B$ contains a semiprime. We prove that for each fixed $z$ the set $\\{d\\ \\text{even}:\\pmin(d)\\le z\\}$ has density zero, with the asymptotic $(π(z)-1)X/\\log X$; consequently no fixed finite set…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

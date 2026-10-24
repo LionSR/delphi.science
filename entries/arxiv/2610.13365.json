@@ -1,0 +1,20 @@
+{
+  "key": "2610.13365",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.13365",
+  "title": "Short Recurrences and Straight-Line Programs for Primes",
+  "authors": [
+    "Joseph M. Shunia",
+    "Mihai Prunescu"
+  ],
+  "summary": "We give a short autonomous recurrence that generates every odd prime, in increasing order, from the single initial value $8$. Its integer state determines both its output and its next update: the lowest set bit gives the next prime, while the highest set bit determines the sieve period. The same state also determines the following prime gap. A related recurrence represents the prime-counting function as the $2$-adic valuation of a single integer. Independently, a direct packing of a finite divisor sieve yields fixed arithmetic constructions for the $n$-th prime, the prime-counting function,…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

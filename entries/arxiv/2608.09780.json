@@ -1,0 +1,21 @@
+{
+  "key": "2608.09780",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.09780",
+  "title": "Algorithmic Asymmetry in Zero-Sum Games: Unilateral Recovery of Fast Convergence Against a Slow Opponent",
+  "authors": [
+    "James P. Bailey",
+    "Soham Das"
+  ],
+  "summary": "Learning dynamics in zero-sum games are typically analyzed under algorithmic symmetry: both agents use the same update rule, or methods from a common algorithmic family. This is at odds with the nature of zero-sum games; competing agents need not coordinate on algorithm selection. This paper studies algorithmic asymmetry in learning dynamics in zero-sum games. In particular, we ask whether fast convergence can be recovered when one agent is fixed to vanilla gradient descent, whose standard regret-based analysis certifies, at best, $O(1/\\sqrt{T})$ ergodic convergence. We show that the slow…",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "math.OC"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

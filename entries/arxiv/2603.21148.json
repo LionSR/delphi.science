@@ -1,0 +1,22 @@
+{
+  "key": "2603.21148",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.21148",
+  "title": "Fast Nearest Neighbor Search for $\\ell_p$ Metrics",
+  "authors": [
+    "Robert Krauthgamer",
+    "Nir Petruschka"
+  ],
+  "summary": "The Nearest Neighbor Search (NNS) problem asks to design a data structure that preprocesses an $n$-point dataset $X$ lying in a metric space $\\mathcal{M}$, so that given a query point $q \\in \\mathcal{M}$, one can quickly return a point of $X$ minimizing the distance to $q$. The efficiency of such a data structure is evaluated primarily by the amount of space it uses and the time required to answer a query. We focus on the fast query-time regime, which is crucial for modern large-scale applications, where datasets are massive and queries must be processed online, and is often modeled by query…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.CG",
+    "math.MG"
+  ],
+  "published": "2026-03-22",
+  "updated": "2026-03-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

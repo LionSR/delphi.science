@@ -1,0 +1,21 @@
+{
+  "key": "2601.08979",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.08979",
+  "title": "Space-time spectral element summation-by-parts method for heterogeneous transient heat conduction arising in topology optimization",
+  "authors": [
+    "Sarah Nataj",
+    "Magnus Appel",
+    "Joe Alexandersen"
+  ],
+  "summary": "We develop a stable space-time spectral element method for transient heat conduction in heterogeneous multi-material domains, motivated by topology optimization. The method treats space and time simultaneously, using summation-by-parts (SBP) operators in both directions and simultaneous approximation terms (SATs) to impose boundary, initial, terminal, and material-interface conditions weakly, yielding a stable monolithic space-time scheme on heterogeneous domains. Stability is proven under specific conditions on the SAT parameters, scaled with the spatial mesh resolution and material…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-13",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

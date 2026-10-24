@@ -1,0 +1,20 @@
+{
+  "key": "2607.07552",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.07552",
+  "title": "Weak convergence rate for the Cox-Ingersoll-Ross process",
+  "authors": [
+    "Alexandros Pavlis",
+    "Umut Cetin"
+  ],
+  "summary": "We study the weak convergence rate of a drift-implicit discretisation scheme for the Cox-Ingersoll-Ross (CIR) process in the regime where the process remains strictly positive. Specifically, we consider scheme~(4) of Alfonsi~\\cite{A}, which arises naturally from applying a drift-implicit Euler step to the SDE satisfied by the square root of the CIR process and admits a unique positive closed-form solution at each time step. Using a PDE approach combined with a continuous-time SDE representation of the discretised process, we prove that the weak convergence rate is $\\mathcal{O}(1/N)$ under…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

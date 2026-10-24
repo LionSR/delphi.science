@@ -1,0 +1,23 @@
+{
+  "key": "2602.20126",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.20126",
+  "title": "Adaptation to Intrinsic Dependence in Diffusion Language Models",
+  "authors": [
+    "Yunxiao Zhao",
+    "Changxiao Cai"
+  ],
+  "summary": "Diffusion language models (DLMs) have recently emerged as a promising alternative to autoregressive (AR) approaches, enabling parallel token generation beyond a rigid left-to-right order. Despite growing empirical success, the theoretical understanding of how unmasking schedules -- which specify the order and size of unmasked tokens during sampling -- affect generation quality remains limited. In this work, we introduce a distribution-agnostic unmasking schedule for DLMs that adapts to the (unknown) dependence structure of the target data distribution, without requiring any prior knowledge…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.IT",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-02-23",
+  "updated": "2026-02-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

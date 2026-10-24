@@ -1,0 +1,23 @@
+{
+  "key": "2605.03869",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.03869",
+  "title": "On Adaptivity in Zeroth-Order Optimization",
+  "authors": [
+    "Hassan Dbouk",
+    "Nidham Gazagnadou",
+    "Matthias Reisser",
+    "Christos Louizos"
+  ],
+  "summary": "We investigate the effectiveness of adaptive zeroth-order (ZO) optimization for memory-constrained fine-tuning of large language models (LLMs). Contrary to prior claims, we show that adaptive ZO methods such as ZO-Adam offer no convergence advantage over well-tuned ZO-SGD, while incurring significant memory overhead. Our analysis reveals that in high dimensions, ZO gradients lack coordinate-wise heterogeneity, rendering adaptive mechanisms memory inefficient. Leveraging this insight, we propose MEAZO, a memory-efficient adaptive ZO optimizer that tracks only a single scalar for global step…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-05-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

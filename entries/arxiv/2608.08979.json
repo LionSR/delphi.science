@@ -1,0 +1,20 @@
+{
+  "key": "2608.08979",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.08979",
+  "title": "Direct Search Methods for Online Nonconvex Optimization Under Inexact Bandit Feedback",
+  "authors": [
+    "Gaspar Robert",
+    "Gianluca Bianchin"
+  ],
+  "summary": "Optimization under zeroth-order (i.e., bandit) feedback is central to many engineering problems where the analytic forms of objectives and/or constraints are unavailable. In modern applications, such as online control and online learning, optimization problems often evolve with time, requiring adaptive optimization methodologies. Yet, existing methods in this seting are largely confined to adaptations of methodologies developed for time-invariant or first-order optimization, and thus often rely on gradient surrogates that fail to fully exploit the zeroth-order structure of the available…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-08-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

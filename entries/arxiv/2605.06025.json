@@ -1,0 +1,21 @@
+{
+  "key": "2605.06025",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.06025",
+  "title": "Fourier coefficients of continuous functions with sparse spectrum",
+  "authors": [
+    "Aleksei Kulikov",
+    "Miquel Saucedo",
+    "Sergey Tikhonov"
+  ],
+  "summary": "Let $(r_k)$ be an increasing sequence and $(w_k)$ a positive sequence. We study the following question: is it true that for every sequence $(a_k)$ satisfying $\\sum_{k=0}^\\infty |a_k|^2 w_k^2 < \\infty$ there exists a function $f\\in C(\\mathbb{T})$ such that $\\hat{f}(2^k) = a_k$ and $\\hat{f}(n) = 0$ for $n\\notin \\cup_k [2^k-r_k,2^k+r_k]$? We show that this is possible if and only if $\\sup_{k\\in\\mathbb{N}}\\sum_{n=[\\log_2 r_k]}^k w_k^{-2} < \\infty$.",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

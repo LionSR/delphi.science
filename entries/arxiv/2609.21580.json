@@ -1,0 +1,22 @@
+{
+  "key": "2609.21580",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.21580",
+  "title": "Tilt as a Certified Resource: Preserving Motor Wrench-Rate Authority on Articulated Multirotors",
+  "authors": [
+    "Giuseppe Silano",
+    "Martin Saska"
+  ],
+  "summary": "Fully-actuated multirotor aerial vehicles must not only track nominal wrenches but retain the \"readiness\" to modulate them rapidly under disturbances. Classical effort-minimizing allocators ignore this dynamic limit, whereas maximizing readiness leads to topologically disconnected optimal sheets demanding physically impossible actuator rates. Enforcing a readiness safety floor on fixed-geometry symmetric platforms further encounters a zero-sum degeneracy: motor-speed redistribution cannot improve authority without conceding wrench tracking. This paper uses active morphology to break the…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-09-18",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

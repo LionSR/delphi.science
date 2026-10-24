@@ -1,0 +1,21 @@
+{
+  "key": "2610.04385",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04385",
+  "title": "Largest Rashomon sets of decision trees for robust contextual optimization",
+  "authors": [
+    "Lorenzo Bonasera",
+    "David Pisinger"
+  ],
+  "summary": "Many decision trees fit the same data almost equally well, yet they can route a query point to different leaves and induce different local empirical distributions. We study decisions that meet prescribed cost, shortage or risk targets despite this predictive multiplicity. We propose the joint Rashomon and robustness optimization framework for optimal decision trees. It jointly selects an operational decision and the largest Rashomon set of trees, so that the targets hold under the local empirical distribution that every tree in this set induces at the query point. We specialize the framework…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-10-03",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

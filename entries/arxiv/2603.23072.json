@@ -1,0 +1,24 @@
+{
+  "key": "2603.23072",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.23072",
+  "title": "Generalization Bounds for Physics-Informed Neural Networks for the Incompressible Navier-Stokes Equations",
+  "authors": [
+    "Sebastien Andre-Sloan",
+    "Dibyakanti Kumar",
+    "Alejandro F Frangi",
+    "Anirbit Mukherjee"
+  ],
+  "summary": "This work establishes rigorous first-of-its-kind upper bounds on the generalization error for the method of approximating solutions to the (d+1)-dimensional incompressible Navier-Stokes equations by training depth-2 neural networks trained via the unsupervised Physics-Informed Neural Network (PINN) framework. This is achieved by bounding the Rademacher complexity of the PINN risk. For appropriately weight bounded net classes our derived generalization bounds do not explicitly depend on the network width and our framework characterizes the generalization gap in terms of the fluid's kinematic…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.AP",
+    "math.NA"
+  ],
+  "published": "2026-03-24",
+  "updated": "2026-03-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

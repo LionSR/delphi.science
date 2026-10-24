@@ -1,0 +1,24 @@
+{
+  "key": "2602.08963",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.08963",
+  "title": "Reduced-order Control and Geometric Structure of Learned Lagrangian Latent Dynamics",
+  "authors": [
+    "Katharina Friedl",
+    "Noémie Jaquier",
+    "Seungyeon Kim",
+    "Jens Lundell",
+    "Danica Kragic"
+  ],
+  "summary": "Model-based controllers can offer strong guarantees on stability and convergence by relying on physically accurate dynamic models. However, these are rarely available for high-dimensional mechanical systems such as deformable objects or soft robots. While neural architectures can learn to approximate complex dynamics, they are either limited to low-dimensional systems or provide only limited formal control guarantees due to a lack of embedded physical structure. This paper introduces a latent control framework based on learned structure-preserving reduced-order dynamics for high-dimensional…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-02-09",
+  "updated": "2026-02-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

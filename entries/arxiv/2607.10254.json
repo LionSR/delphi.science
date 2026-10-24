@@ -1,0 +1,23 @@
+{
+  "key": "2607.10254",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10254",
+  "title": "Neural feedback approximation for stochastic control with degenerate diffusions: error estimates and numerical analysis",
+  "authors": [
+    "Olivier Bokanowski",
+    "Jean-François Chassagneux",
+    "Marco Scaratti",
+    "Xavier Warin"
+  ],
+  "summary": "We study finite-horizon stochastic optimal control problems and approximate the resulting time-discrete formulation by a direct policy-learning problem over neural-network feedback maps. We prove a quantitative convergence estimate, in an averaged sense, for the error between the time-discrete value and the value induced by an approximately optimized neural policy. The bound separates the approximation of near-optimal feedback policies, the localization of stochastic trajectories on compact sets, and the optimization tolerance in training. The analysis does not require transition-density…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-07-11",
+  "updated": "2026-07-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

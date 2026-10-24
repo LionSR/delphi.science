@@ -1,0 +1,22 @@
+{
+  "key": "2603.19928",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.19928",
+  "title": "High order ghost-FEM for incompressible Navier-Stokes equations on moving domains",
+  "authors": [
+    "Hridya Dilip",
+    "Clarissa Astuto",
+    "Armando Coco",
+    "Giovanni Russo"
+  ],
+  "summary": "We develop a new numerical technique for approximating solutions of the Navier-Stokes equations on moving domains. The method aims at simulating an incompressible fluid past an object whose motion is assigned a priori using a level-set function. The proposed approach relies on a space discretization based on the ghost finite element method (ghost-FEM), which allows computations on unfitted meshes and avoids costly remeshing as the domain evolves in time. Time integration is performed using an IMplicit-EXplicit (IMEX) scheme to address the nonlinearity of the convective term, ensuring…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-20",
+  "updated": "2026-03-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

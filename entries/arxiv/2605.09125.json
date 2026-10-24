@@ -1,0 +1,22 @@
+{
+  "key": "2605.09125",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09125",
+  "title": "Transfer Learning of Multiobjective Indirect Low-Thrust Trajectories Using Diffusion Models and Markov Chain Monte Carlo",
+  "authors": [
+    "Jannik Graebner",
+    "Ryne Beeson"
+  ],
+  "summary": "Preliminary low-thrust spacecraft mission design is a global search problem characterized by a complex solution landscape, multiple objectives, and numerous local minima. During this phase, mission parameters are often not yet fully defined, requiring new solutions to be generated at a high cadence across varying parameter values. When combined with the indirect approach to optimal control, diffusion models can accelerate this search by learning distributions that represent high-quality initial costates. However, generating training data remains expensive, and opportunities exist to better…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-05-09",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2608.18514",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.18514",
+  "title": "Exact SAT Solving for the Two-Dimensional Bandwidth Minimization Problem",
+  "authors": [
+    "Pham Quang Minh",
+    "Dao Xuan Nghia",
+    "To Van Khanh"
+  ],
+  "summary": "The two-dimensional bandwidth minimization problem (2DBMP) seeks an injective embedding of a guest graph into a square grid that minimizes the maximum Manhattan distance over its edges. Heuristic methods can provide strong upper bounds, but these bounds do not by themselves certify optimality. We present an efficient exact SAT-based approach for 2DBMP that incrementally searches for the minimum feasible bandwidth and certifies optimality through satisfiability and unsatisfiability results. On the standard $\\lceil\\sqrt n\\rceil \\times \\lceil\\sqrt n\\rceil$ host grid, under a 3600 s time limit,…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-08-19",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

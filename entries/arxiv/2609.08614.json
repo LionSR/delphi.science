@@ -1,0 +1,20 @@
+{
+  "key": "2609.08614",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.08614",
+  "title": "McCormick relaxations for PDE-constrained optimization on multi-dimensional domains",
+  "authors": [
+    "Mariia Pokotylo",
+    "Paul Manns"
+  ],
+  "summary": "We are interested in computing approximate dual bounds for nonconvex optimal control problems using McCormick inequalities. To handle the numerical burden concerned with the tightening of these inequalities, we locally average the bilinear term in the PDE constraint. We extend recent theory in this area to elliptic PDEs on multidimensional domains that involve bilinear terms. As an additional result, we also generalize the necessary assumptions to allow for more flexibility in the choice of the discretization for the total variation penalty term from the underlying control problem.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

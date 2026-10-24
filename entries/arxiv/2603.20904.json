@@ -1,0 +1,25 @@
+{
+  "key": "2603.20904",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20904",
+  "title": "Weak-Form Recovery of Stochastic Generators",
+  "authors": [
+    "Eshwar R A",
+    "Gajanan V. Honnavar"
+  ],
+  "summary": "Data-driven discovery of governing equations is well developed for deterministic systems but much less so for stochastic ones. We present a sparse-symbolic algorithm that recovers both the drift $b(x)$ and the diffusion $a(x)$ of a stochastic differential equation from a single discretely sampled trajectory. It replaces the time-indexed test functions of weak-form SINDy with state-dependent spatial kernels. Fixed-width time-window weighting induces a persistent endogeneity bias: for the Ornstein-Uhlenbeck process it erases the drift coefficient entirely, whatever the window shape. Spatial…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math-ph",
+    "math.DS",
+    "nlin.CD",
+    "physics.data-an",
+    "stat.ML"
+  ],
+  "published": "2026-03-21",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2610.30496",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.30496",
+  "title": "Entropy bounded compact stencil Runge-Kutta discontinuous Galerkin method for hyperbolic conservation laws",
+  "authors": [
+    "Deepak Kumar",
+    "Pratima Rai",
+    "Arvind Patel"
+  ],
+  "summary": "In this paper we introduce a compact stencil Runge-Kutta discontinuous Galerkin method for the Euler equations of compressible gas dynamics, which preserves a minimum entropy principle similar to that introduced by Tadmor for entropy solution of the Euler equations [4]. Compact stencil RKDG, introduced by Chen et al. in [15], is a variant of standard RKDG method which is known for its smaller stencil size and parallel efficiency. The main challenge is that the cRKDG method has to be expressed in Butcher form and not every Runge-Kutta method of this form is a convex combination of…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math-ph",
+    "math.AP"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

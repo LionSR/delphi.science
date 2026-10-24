@@ -1,0 +1,21 @@
+{
+  "key": "2601.03465",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.03465",
+  "title": "Security Parameter Analysis of the LINEture Post-Quantum Digital Signature Scheme",
+  "authors": [
+    "Yevgen Kotukh",
+    "Gennady Khalimov"
+  ],
+  "summary": "This paper presents a comprehensive cryptographic analysis of the security parameters of the LINEture post-quantum digital signature scheme, which is constructed using matrix algebra over elementary abelian 2-groups. We investigate the influence of three principal parameters. First, the word size m (exhibiting quadratic impact), the second is a vector dimension l, and the third is a number of submatrices in the session key q (exhibiting linear impact) on cryptographic strength. Our analysis reveals a dualistic nature of the parameter l. According to the previous analysis, it does not affect…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "math.GR"
+  ],
+  "published": "2026-01-06",
+  "updated": "2026-01-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

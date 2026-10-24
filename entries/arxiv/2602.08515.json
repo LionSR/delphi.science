@@ -1,0 +1,24 @@
+{
+  "key": "2602.08515",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.08515",
+  "title": "Do physics-informed neural networks (PINNs) need to be deep? Shallow PINNs using the Levenberg-Marquardt algorithm",
+  "authors": [
+    "Muhammad Luthfi Shahab",
+    "Imam Mukhlash",
+    "Hadi Susanto"
+  ],
+  "summary": "This work investigates shallow physics-informed neural networks (PINNs) for solving forward and inverse problems governed by nonlinear partial differential equations (PDEs). By formulating PINN training as a nonlinear least-squares problem, the Levenberg-Marquardt (LM) algorithm is used to efficiently optimize the network parameters. Exact analytical expressions for neural-network derivatives with respect to the input variables are derived, revealing the relationships between the network output and its spatial and temporal derivatives and providing a clearer interpretation of the PINN…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG",
+    "cs.NE",
+    "math.OC"
+  ],
+  "published": "2026-02-09",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

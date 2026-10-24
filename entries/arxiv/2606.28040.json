@@ -1,0 +1,24 @@
+{
+  "key": "2606.28040",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28040",
+  "title": "High-Order Asymptotic-Preserving Schemes for Kinetic Equations from Rarefied to Incompressible Regimes",
+  "authors": [
+    "Giacomo Dimarco",
+    "Axel Klar",
+    "Theresa Köfler",
+    "Lorenzo Pareschi",
+    "Tiwari Sudarshan"
+  ],
+  "summary": "This work introduces a novel high-order numerical framework for solving kinetic equations, designed to remain uniformly valid across all regimes of the mean free path, spanning from the rarefied kinetic scale to the incompressible hydrodynamic limit. The method is built upon a micro-macro decomposition, which reformulates the underlying kinetic equation into a coupled system consisting of a macroscopic part, representing the fluid-dynamic evolution, and a microscopic part, describing the non-equilibrium deviations. The proposed framework ensures high-order temporal accuracy through the use…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math-ph"
+  ],
+  "published": "2026-06-26",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

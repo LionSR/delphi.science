@@ -1,0 +1,21 @@
+{
+  "key": "2607.15290",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.15290",
+  "title": "Matrix-Free FFT-HSS Preconditioning for Periodic Landau-Lifshitz-Gilbert Saddle-Point Systems",
+  "authors": [
+    "Hang Qi",
+    "Changqing Ye",
+    "Xiaofei Guan"
+  ],
+  "summary": "In this paper, a matrix-free Hermitian/skew-Hermitian splitting (HSS) preconditioner is proposed for periodic Landau--Lifshitz--Gilbert (LLG) saddle-point systems. The main contributions are threefold. (1) The coupled skew/constraint block has an explicit \\(4\\times4\\) nodal inverse and requires no local factorization. Combining this local inverse with FFT inversion of the shifted exchange block gives \\(O(N_g\\log N_g)\\) work and \\(O(N_g)\\) temporary storage per application. (2) We establish well-posedness and an even-step GMRES residual bound, with an iteration estimate uniform in the mesh…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-24",
+  "updated": "2026-08-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

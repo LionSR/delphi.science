@@ -1,0 +1,24 @@
+{
+  "key": "2608.09218",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.09218",
+  "title": "Online Learning of Scale Parameters in Score-Driven Filters",
+  "authors": [
+    "Fabrizio Lillo",
+    "Giulia Livieri",
+    "Gianluca Palmari"
+  ],
+  "summary": "A score-driven filter multiplies its scaled log-likelihood score by a scale parameter. We call this coefficient the gain and learn it online. Given the current state and realised scaled score, each admissible gain selects a reachable next state and predictive density. A scalar gain moves along a line; diagonal gains control coordinatewise transmission and may change direction. We evaluate gain selection using a one-step predictive Kullback-Leibler objective. In the scalar unscaled case, the negative consecutive-score product is a stochastic gradient; the positive product used in accelerated…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.ST",
+    "stat.ME",
+    "stat.ML"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

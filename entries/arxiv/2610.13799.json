@@ -1,0 +1,22 @@
+{
+  "key": "2610.13799",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.13799",
+  "title": "Adaptive Variance Reduction without Knowing Oracle Smoothness",
+  "authors": [
+    "Wei Jiang",
+    "Yibo Wang",
+    "Zechao Li"
+  ],
+  "summary": "Variance reduction improves the convergence rate of stochastic non-convex optimization under the average smoothness condition. Existing adaptive variance reduction methods are especially designed for average smoothness and do not adapt to standard smoothness. In this paper, we study how one algorithm can adapt to these two settings and the noiseless setting without knowing the smoothness constants or the variance bound. Given the gradient budget $T$, we develop a two-phase method. The first phase compares two independent gradients and switches to normalized momentum when their difference…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

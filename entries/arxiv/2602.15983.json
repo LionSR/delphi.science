@@ -1,0 +1,27 @@
+{
+  "key": "2602.15983",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.15983",
+  "title": "ReLoop: Structured Modeling and Behavioral Verification for Reliable LLM-Based Optimization",
+  "authors": [
+    "Junbo Jacob Lian",
+    "Yujun Sun",
+    "Huiling Chen",
+    "Chaoyu Zhang",
+    "Hanzhang Qin",
+    "Chung-Piaw Teo"
+  ],
+  "summary": "Large language models (LLMs) can translate natural-language problem descriptions into optimization code, but the code is prone to silent failures: it executes and returns a solver-feasible solution while encoding a semantically incorrect formulation. On compositional problems, the resulting feasibility-correctness gap reaches 90 percentage points. We introduce ReLoop, which combines two mechanisms. Structured generation decomposes code production into a four-stage reasoning chain (understand, formalize, synthesize, verify) to reduce formulation errors during generation. Behavioral…",
+  "domain": "cs.SE",
+  "tags": [
+    "cs.SE",
+    "cs.AI",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-02-17",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

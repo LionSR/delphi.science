@@ -1,0 +1,20 @@
+{
+  "key": "2605.31416",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.31416",
+  "title": "Second-order PACF asymptotics and discrimination between fractional Gaussian noise and $\\FARIMA(0,d,0)$",
+  "authors": [
+    "Chunhao Cai"
+  ],
+  "summary": "Fractional Gaussian noise and $\\FARIMA(0,d,0)$ have the same long-memory pole $|θ|^{-2d}$ and hence the same leading PACF law $α(n)\\sim d/n$. We show that this agreement breaks at the first non-universal order. For $0<d<1/2$, the pure fGn PACF satisfies $$ α_{\\fGn}(n)=\\frac d n+\\frac{C_{\\fGn}(d)}{n^2}+o(n^{-2}), \\qquad C_{\\fGn}(d)<d^2, $$ The proof uses the Bingham--Inoue--Kasahara representation, a phase-coefficient expansion for fGn, and a Hankel-operator perturbation argument. Thus the fGn spectral envelope is invisible at first order but visible in second-order finite prediction,…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "math.PR"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-06-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

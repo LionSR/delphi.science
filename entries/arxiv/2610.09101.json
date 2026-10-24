@@ -1,0 +1,23 @@
+{
+  "key": "2610.09101",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.09101",
+  "title": "Improving Learning of Green's Functions Through Kernel Decomposition",
+  "authors": [
+    "Beiji Chen",
+    "Qiang Du",
+    "Kui Ren",
+    "Tian-Yi Zhou"
+  ],
+  "summary": "This work analyzes a framework for learning the solution operator, or equivalently, the Green's function, of a general self-adjoint second-order elliptic operator $\\cL$. Subtracting the singular part of the Green's function, either known analytically or supplied by an explicit Laplace parametrix, recasts the learning of $\\cL^{-1}$ as learning an $\\cL$-harmonic extension operator on the boundary. We formulate the process as operator learning between reproducing kernel Hilbert spaces (RKHSs) to show that the kernel decomposition strategy raises the algebraic input rate by two orders and, under…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.AP"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

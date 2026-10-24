@@ -1,0 +1,19 @@
+{
+  "key": "2610.26670",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.26670",
+  "title": "Convergence of the critical probabilities for stopping near the top of a random walk",
+  "authors": [
+    "José Ángel Islas"
+  ],
+  "summary": "Let \\((S_n)_{n\\ge0}\\) be a Bernoulli random walk with \\(P(X_i=1)=p\\) and \\(P(X_i=-1)=q=1-p\\), and let \\(M_n=\\max\\{S_0,\\ldots,S_n\\}\\). We consider the semi-best selection problem of maximizing \\(P(M_N-S_τ\\le1)\\) over stopping times \\(τ\\le N\\). Allaart showed that the optimal decision in the critical state \\((n,1)\\) is determined by critical probabilities \\(p_n\\), and conjectured that \\(p_n\\to1/2\\). In this note, we prove this conjecture. For every fixed \\(p<1/2\\), the stopping value converges to \\(ν=1-(p/q)^2\\), while the continuation value converges to \\(2pν\\). Since \\(2pν<ν\\), stopping is…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

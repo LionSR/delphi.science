@@ -1,0 +1,24 @@
+{
+  "key": "2606.17419",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.17419",
+  "title": "Generalization Guarantees for Multi-Input Neural Operator Learning in Sobolev Spaces",
+  "authors": [
+    "Yahong Yang",
+    "Zecheng Zhang",
+    "Wei Zhu",
+    "Wenjing Liao",
+    "Hao Liu"
+  ],
+  "summary": "We develop approximation and generalization error estimates for multi-input neural operators, with the output error measured in Sobolev norms. In contrast to standard operator-learning settings with a single input function, our framework allows multiple input functions defined on possibly different domains, with different dimensions and Sobolev regularities. The derived rates explicitly quantify the contribution of each input space to the final error bound. In particular, in the balanced regime, the approximation and generalization rates are governed by the interaction between the input…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

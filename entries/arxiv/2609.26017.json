@@ -1,0 +1,22 @@
+{
+  "key": "2609.26017",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.26017",
+  "title": "Sample-Based Prophet Inequalities for Random Walks",
+  "authors": [
+    "Pieter Kleer",
+    "Johan van Leeuwaarden",
+    "Daan Noordenbos"
+  ],
+  "summary": "We study prophet inequalities for a random walk reward stopping problem with sample-based information. The goal is to stop as close as possible to the maximum of a random walk with i.i.d. increments, measuring performance by the ratio between the expected reward when stopping and the expected true maximum. We consider a sample-based model in which the increment distribution is unknown and the decision maker has access to $K$ independent sample paths of the reward process. For the infinite-horizon setting, we establish a sharp prophet inequality with constant $(K/(K+1))^{K+1}$. The guarantee…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DS"
+  ],
+  "published": "2026-09-22",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2604.07924",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.07924",
+  "title": "Analysis of Chaos and Bifurcation in Nonlinear two-delay differential equation",
+  "authors": [
+    "Pragati Dutta",
+    "Sachin Bhalekar"
+  ],
+  "summary": "This paper studies how complicated and irregular behavior, known as chaos, can arise in a simple mathematical model that includes time delays. The model is a delay differential equation in which the present rate of change depends not only on the current state but also on past states at two different delay times. The system is described by \\begin{equation} \\dot{x}(t) = -γx(t) + g\\big(x(t - τ_1)\\big) - e^{-γτ_2}\\, g\\big(x(t - τ_1 - τ_2)\\big), \\end{equation} where $g(x)=k \\sin{x}, \\; k\\in\\mathbf{R}$. Here, the delays $τ_1$ and $τ_2$ represent memory effects in the system, while the sine terms…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS"
+  ],
+  "published": "2026-04-09",
+  "updated": "2026-08-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

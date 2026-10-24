@@ -1,0 +1,21 @@
+{
+  "key": "2608.02614",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.02614",
+  "title": "Near-Optimal Algorithms for Maximal Clique Enumeration in Structurally Sparse Graphs",
+  "authors": [
+    "Jianfeng Hou",
+    "Hongbin Zhao"
+  ],
+  "summary": "We study the exact enumeration of maximal cliques in graph classes defined by excluded clique minors and excluded clique immersions. For n-vertex K_t-minor-free graphs, we give an algorithm that lists all maximal cliques in n * 4^(2t/5+o(t)) time, significantly improving the previous n * 2^O(t log log t) bound of Eppstein, Löffler, and Strash. For n-vertex K_t-immersion-free graphs, we establish the first exact enumeration algorithm parameterized by immersion number, achieving a running time of n * 3^(t/3+o(t)). While both algorithms employ a common degeneracy-based root-assignment scheme,…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-05-21",
+  "updated": "2026-05-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

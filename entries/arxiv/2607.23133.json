@@ -1,0 +1,24 @@
+{
+  "key": "2607.23133",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.23133",
+  "title": "A Comparison of Active Flux Methods for the Vlasov-Poisson System",
+  "authors": [
+    "Lukas Hensel",
+    "Yanick Kiechle",
+    "Rainer Grauer",
+    "Gudrun Grünwald",
+    "Christiane Helzel",
+    "Katharina Kormann"
+  ],
+  "summary": "Active Flux is a third-order accurate, fairly novel finite volume method for hyperbolic conservation laws that is becoming increasingly popular. It evolves additional nodal degrees of freedom (DOF) located on cell interfaces and shared by neighboring cells. The numerical fluxes are then computed from these DOFs. A crucial component of Active Flux methods is the evolution operator of the point values, which enables the natural use of semi-Lagrangian ideas and makes Active Flux an attractive candidate for a grid-based approach to the Vlasov equation. Here, we compare two recently proposed…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-25",
+  "updated": "2026-07-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

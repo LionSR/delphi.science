@@ -1,0 +1,22 @@
+{
+  "key": "2606.22894",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.22894",
+  "title": "Sparsity-Cone SDP Relaxations and Applications to Variable Fixing for Sparse Quadratic Programs",
+  "authors": [
+    "Di Hou",
+    "Thai P. D. Nguyen",
+    "Kim-Chuan Toh",
+    "Guanyi Wang"
+  ],
+  "summary": "Quadratic programs (QPs) with sparsity constraint are generally NP-hard, and their efficient global solution depends crucially on tractable tight convex relaxations. In this paper, we propose a sparsity-cone semidefinite programming (SC-SDP) relaxation for sparse (indefinite) QPs. Unlike standard SDP liftings, such as the SDP--RLT relaxation, which involve a $(2n+1)$-dimensional semidefinite matrix, the proposed SC-SDP formulation uses only a $(n+1)$-dimensional matrix together with a single sparsity-cone constraint $\\mathcal{K}$ to handle the relaxation of the $\\ell_0$-norm constraint. We…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-22",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

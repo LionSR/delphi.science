@@ -1,0 +1,25 @@
+{
+  "key": "2602.13960",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.13960",
+  "title": "Constant-Stepsize Stochastic Approximation: Finite-Time Convergence, Gaussian Approximation, and Tail Bounds",
+  "authors": [
+    "Zedong Wang",
+    "Yuyang Wang",
+    "Ijay Narang",
+    "Felix Wang",
+    "Yuzhou Wang",
+    "Siva Theja Maguluri"
+  ],
+  "summary": "Constant-stepsize stochastic approximation (SA) is widely used in learning for computational efficiency, yet the distribution of the iterates is typically intractable. Classical asymptotics results give $X_k^{(α)} \\approx X^{(α)} \\approx x^\\star+\\sqrtαY$, where $X^{(α)}$ is the steady state and $Y$ is an appropriate Gaussian limit, by progressively taking the time $k\\uparrow\\infty$ and stepsize $α\\downarrow0$. Such limit results, however, do not quantify finite-time, finite-stepsize errors. We develop an explicit pre-limit characterization for SA with i.i.d.\\ and Markovian noise. We…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-02-15",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

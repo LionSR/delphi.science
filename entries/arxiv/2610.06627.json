@@ -1,0 +1,22 @@
+{
+  "key": "2610.06627",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06627",
+  "title": "On the Cardinality of Optimal Representations in the Binary-Source Information Bottleneck",
+  "authors": [
+    "Dier Tang",
+    "Jun Chen"
+  ],
+  "summary": "The information bottleneck (IB) seeks a representation $U$ of a source $X$ that retains as much information as possible about a target $Y$, subject to a constraint on $I(U;X)$. A classical argument shows that it suffices to consider representations with at most $|\\mathcal{X}|+1$ symbols, and this bound is known to be tight whenever $|\\mathcal{X}| \\geq 3$. We show that the binary case behaves differently: if $X$ is binary and $Y$ is finite, then for every joint distribution of $(X,Y)$ and every rate constraint, the IB optimum is attained by a binary $U$. Hence the bound $|\\mathcal{U}| \\leq…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

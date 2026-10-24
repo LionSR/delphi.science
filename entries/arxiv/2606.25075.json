@@ -1,0 +1,20 @@
+{
+  "key": "2606.25075",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.25075",
+  "title": "Solver Exactness, Learned Flexibility: Equivariant Boundary-Correction Operators for Stokes Flow",
+  "authors": [
+    "Denis Gueyffier"
+  ],
+  "summary": "Computing the viscous Stokes flow around a shape requires solving a boundary-integral equation, and for a new shape the solve must begin from scratch. Learned operators promise to spread this cost across shapes, but it is not clear what such an operator retains of the solver it replaces, or what determines whether it transfers to shapes it was not trained on. We make both questions answerable by choosing a problem which is exactly solvable except for a single term: a second-kind boundary-integral problem is solved exactly using a kernel-independent fast summation, while the boundary…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math.NA"
+  ],
+  "published": "2026-06-23",
+  "updated": "2026-07-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

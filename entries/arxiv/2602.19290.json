@@ -1,0 +1,22 @@
+{
+  "key": "2602.19290",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.19290",
+  "title": "Distributional Discontinuity Design",
+  "authors": [
+    "Kyle Schindl",
+    "Larry Wasserman"
+  ],
+  "summary": "Regression discontinuity and kink designs are typically analyzed through mean effects, even when treatment changes the shape of the entire outcome distribution. To address this, we introduce distributional discontinuity designs, a framework for estimating causal effects for a scalar outcome at the boundary of a discontinuity in treatment assignment. Our estimand is the Wasserstein distance between limiting conditional outcome distributions; a single scale-interpretable measure of distribution shift. We show that this weakly bounds the average treatment effect, where equality holds if and…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "econ.EM",
+    "math.ST"
+  ],
+  "published": "2026-02-22",
+  "updated": "2026-02-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

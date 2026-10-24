@@ -1,0 +1,23 @@
+{
+  "key": "2606.20496",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20496",
+  "title": "Coarse Solvers for Exascale Solution of Poisson Problems",
+  "authors": [
+    "Thilina Ratnayaka",
+    "Paul Fischer",
+    "Luke Olson"
+  ],
+  "summary": "We present a two-level Schwarz method as an alternative to Algebraic Multigrid method(AMG) used as the last level (coarse) solver of the p-multigrid pMG preconditioner for pressure Poisson equation resulting from Spectral/Finite element descretization of incompressible Navier-Stokes equation. Proposed Schwarz method consits of a local problem in the original pMG coarse space and a global coarse problem. Main contribution of the paper is a novel, structured and a non-nested coarse space for the global coarse problem. Structured nature of the proposed global coarse space enable…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.DC",
+    "cs.MS"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2607.04649",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04649",
+  "title": "Subcritical-mass global solvability in a doubly degenerate Keller-Segel system with signal production",
+  "authors": [
+    "Tobias Black",
+    "Genglin Li"
+  ],
+  "summary": "We consider the initial-boundary value problem for a variant of the Keller-Segel chemotaxis system with doubly degenerate diffusion, i.e. we study \\[ \\left\\{ \\begin{array}{ll} u_t = \\nabla \\cdot (uv\\nabla u) - \\nabla \\cdot (u^2v\\nabla v),\\\\ v_t = Δv + u - v,\\\\ (uv\\nabla u-u^2v\\nabla v)\\cdotν=\\nabla v\\cdotν=0,\\\\ u(x,0)=u_0(x),\\quad v(x,0)=v_0(x), \\end{array} \\right. \\] in a smoothly bounded domain $Ω\\subset\\mathbb{R}^2$. Crucially, we only assume the sufficiently regular initial data to be nonnegative, but allow those functions to be zero at non-trivial parts of the domain. We show that,…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-07-06",
+  "updated": "2026-07-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

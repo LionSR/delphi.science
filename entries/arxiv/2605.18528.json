@@ -1,0 +1,21 @@
+{
+  "key": "2605.18528",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.18528",
+  "title": "Tight Complexity of Muon under Heavy-Tailed Noise",
+  "authors": [
+    "Jiayu Zhang",
+    "Tianyi Lin"
+  ],
+  "summary": "A growing lesson from neural network optimization is that optimizer design should respect how the model is parametrized. The layerwise input-output structure of neural networks motivates Muon and Scion, whose updates also support hyperparameter transfer. At the same time, stochastic gradient noise in deep learning is often far from sub-Gaussian and may exhibit heavy tails. These observations have shaped recent algorithmic principles for training neural networks, yet their joint theoretical consequences are underexplored. In particular, it is unclear what dimension dependence is unavoidable…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-05-18",
+  "updated": "2026-10-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

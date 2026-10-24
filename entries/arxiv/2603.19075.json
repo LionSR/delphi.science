@@ -1,0 +1,20 @@
+{
+  "key": "2603.19075",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.19075",
+  "title": "A conservative, discontinuous Galerkin, tracer transport scheme using compatible finite elements",
+  "authors": [
+    "Timothy C. Andrews",
+    "Thomas M. Bendall"
+  ],
+  "summary": "This paper outlines a conservative transport scheme for scalar tracers within a compatible finite element model for geophysical fluid equations. Instead of using the advective transport equation for a mixing ratio, a conservative transport equation is solved for the tracer density of the mixing ratio multiplied by the dry density. This ensures mass conservation in the continuous equations, which can be preserved in the discrete equations with a discontinuous Galerkin transport scheme. Our method is designed to work for two placements of the mixing ratio in a Charney-Phillips vertical…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-19",
+  "updated": "2026-03-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

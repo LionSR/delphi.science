@@ -1,0 +1,20 @@
+{
+  "key": "2609.16027",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.16027",
+  "title": "Formalization of Sullivan's No Wandering Domains Theorem in Lean",
+  "authors": [
+    "Ziang Li",
+    "Yusheng Luo"
+  ],
+  "summary": "We report on a Lean 4 formalization of Sullivan's No Wandering Domains theorem: every Fatou component of a rational self-map of the Riemann sphere of degree at least two is eventually periodic. The project formalizes the relevant background in normal families, the Montel-Carathéodory theorem, Julia and Fatou sets, local Sobolev regularity and Wirtinger derivatives, the Cauchy and Beurling transforms, the equivalence of analytic and geometric quasiconformality, and the measurable Riemann mapping theorem. This paper describes the translation of this mathematics into Lean, the proof…",
+  "domain": "math.HO",
+  "tags": [
+    "math.HO"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

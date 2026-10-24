@@ -1,0 +1,21 @@
+{
+  "key": "2609.28412",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.28412",
+  "title": "A second-order structure- and positivity-preserving convex limiting method for the Vlasov equations",
+  "authors": [
+    "Katharina Kormann",
+    "Murtazo Nazarov",
+    "Junjie Wen"
+  ],
+  "summary": "In this paper, we introduce a novel second-order, positivity-preserving finite element method for the Vlasov equations using a convex limiting algorithm. The method employs strong-stability-preserving (SSP) Runge-Kutta time integration and a tensor-product construction of the phase-space mesh for efficient high-dimensional implementations. The convex limiting algorithm combines the robust first-order positivity-preserving graph viscosity approach with high-order residual-based viscosity stabilization to obtain a high-order positivity-preserving scheme. Both novel first-order and high-order…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-23",
+  "updated": "2026-09-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

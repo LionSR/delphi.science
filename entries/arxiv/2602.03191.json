@@ -1,0 +1,21 @@
+{
+  "key": "2602.03191",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.03191",
+  "title": "Bivariate Hardy-Sobolev Inequality and Its Sharp Stability",
+  "authors": [
+    "Yingfang Zhang",
+    "Xuexiu Zhong",
+    "Wenming Zou"
+  ],
+  "summary": "This paper establishes a bivariate Hardy-Sobolev inequality. Let $Ω\\subset \\mathbb{R}^N$ ($N \\geq 3$) be an open domain, $s \\in (0,2)$, $α> 1$, $β> 1$ with $α+ β= 2^*(s)$, and $κ\\in \\mathbb{R}$. For any functions $u, v \\in D_0^{1,2}(Ω)$, we prove the inequality: \\begin{multline*} \\int_Ω |\\nabla u|^2 \\, \\mathrm{d}x + \\int_Ω |\\nabla v|^2 \\, \\mathrm{d}x \\ge S_{α,β,λ,μ}(Ω) \\left( \\int_Ω \\Big( λ\\frac{|u|^{2^*(s)}}{|x|^s} + μ\\frac{|v|^{2^*(s)}}{|x|^s} + 2^*(s) κ\\frac{|u|^α|v|^β}{|x|^s} \\Big)\\, \\mathrm{d}x \\right)^{\\frac{2}{2^*(s)}}. \\end{multline*} We derive the best constant $S_{α,β,λ,μ}(Ω)$ and…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-02-03",
+  "updated": "2026-02-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

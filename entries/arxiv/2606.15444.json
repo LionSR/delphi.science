@@ -1,0 +1,22 @@
+{
+  "key": "2606.15444",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.15444",
+  "title": "A Conservation Law for Equilibrium Propagation and Coupled Learning",
+  "authors": [
+    "Joshua A. McGinnis",
+    "Adam G. Kline",
+    "Yoichiro Mori"
+  ],
+  "summary": "In this paper we show that the physical learning methods known as coupled learning (CL) and equilibrium propagation (EP) conserve a mass-like quantity in the trainable parameters in the continuous-time, small-nudging limit. We prove that this conservation holds in a broad range of physically relevant settings. We then show that the conservation law constrains the training dynamics in a way that makes convergence reliable in important settings for linear circuits. We conclude by discussing some practical implications of this conservation law.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-06-13",
+  "updated": "2026-06-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

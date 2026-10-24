@@ -1,0 +1,19 @@
+{
+  "key": "2607.00731",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.00731",
+  "title": "Sharp Asymptotics for the Largest Component in the Subcritical Regime of Preferential Attachment Without Vertex Growth",
+  "authors": [
+    "Yiming Chen"
+  ],
+  "summary": "We study the size of the largest component in Pittel's preferential attachment process without vertex growth. Starting from the empty graph on a fixed vertex set $[n]$, edges are added one by one with probabilities proportional to $(d_u+α)(d_v+α)$, where $d_u$ and $d_v$ are the current degrees of $u$ and $v$, and $α>0$. Let $L_1$ denote the size of the largest component, and set $m_c:=\\frac{αn}{2(α+1)}.$ We prove that if $m=m_c(1-\\varepsilon), \\varepsilon=\\varepsilon(n)\\to0, \\varepsilon^3 n\\to\\infty,$ then \\[ L_1=(1+o_p(1))\\frac{2(α+2)}{α+1}\\varepsilon^{-2}\\log(\\varepsilon^3 n) \\] for every…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

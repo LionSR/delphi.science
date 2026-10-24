@@ -1,0 +1,19 @@
+{
+  "key": "2601.07017",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.07017",
+  "title": "The Ill-Posed Foundations of Physics-Informed Neural Networks and Their Finite-Difference Variants",
+  "authors": [
+    "Andreas Langer"
+  ],
+  "summary": "Physics-informed neural networks based on automatic differentiation (AD-PINNs) and their finite-difference counterparts (FD-PINNs) are widely used for solving partial differential equations (PDEs), yet their analytical properties remain poorly understood. This work provides a unified mathematical foundation for both formulations. Under mild regularity assumptions on the activation function and for sufficiently wide neural networks of depth at least two, we prove that both the AD- and FD-PINN optimization problems are ill-posed: whenever a minimizer exists, there are in fact infinitely many,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-11",
+  "updated": "2026-01-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

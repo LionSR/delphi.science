@@ -1,0 +1,20 @@
+{
+  "key": "2610.11747",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.11747",
+  "title": "Robust second-order time integration of tree tensor networks",
+  "authors": [
+    "Jonas Kusch",
+    "Dominik Sulz"
+  ],
+  "summary": "We propose and analyze two second-order basis-update \\& Galerkin (BUG) time integration methods for dynamical low-rank approximation on Tucker tensors and tree tensor networks. Both are built from a sequential pre-computation sweep, after which the differential equations for all basis matrices and connecting tensors are evolved by a Galerkin method. Further, the proposed methods are rank-adaptive by construction. The first, the second-order parallel BUG integrator, solves all these differential equations fully in parallel, which is favorable on parallel architectures, followed by a…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

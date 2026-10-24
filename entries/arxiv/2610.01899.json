@@ -1,0 +1,19 @@
+{
+  "key": "2610.01899",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01899",
+  "title": "Square products of factorials and a conjecture of Erdős and Graham",
+  "authors": [
+    "Fedir Yudin"
+  ],
+  "summary": "For $n\\ge2$ let $F(n)$ be the least $k\\ge2$ such that $n!$ is the largest factor in a product of $k$ distinct factorials that is a perfect square, and let $D_k(X)$ be the number of $n\\le X$ with $F(n)=k$. Erdos and Graham asked for the order of growth of $D_k(X)$ for $3\\le k\\le6$, and conjectured that $D_6(X)\\gg X$. We prove that $D_3(X)=κ_3\\sqrt X+O_\\varepsilon(X^{2/5+\\varepsilon})$ with an explicit constant $κ_3=2.7097\\ldots$, and that $D_5(X)\\asymp D_6(X)\\asymp X$. Together with classical facts, this determines the order of growth of $D_k(X)$ for every $k$. The exponent $2/5$ comes from…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

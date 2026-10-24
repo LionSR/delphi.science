@@ -1,0 +1,27 @@
+{
+  "key": "2602.00862",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.00862",
+  "title": "Towards Multiscale Graph-based Protein Learning with Geometric Secondary Structural Motifs",
+  "authors": [
+    "Shih-Hsin Wang",
+    "Yuhao Huang",
+    "Taos Transue",
+    "Justin Baker",
+    "Jonathan Forstater",
+    "Thomas Strohmer",
+    "Bao Wang"
+  ],
+  "summary": "Graph neural networks (GNNs) have emerged as powerful tools for learning protein structures by capturing spatial relationships at the residue level. However, existing GNN-based methods often face challenges in learning multiscale representations and modeling long-range dependencies efficiently. In this work, we propose an efficient multiscale graph-based learning framework tailored to proteins. Our proposed framework contains two crucial components: (1) It constructs a hierarchical graph representation comprising a collection of fine-grained subgraphs, each corresponding to a secondary…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.NA"
+  ],
+  "published": "2026-01-31",
+  "updated": "2026-01-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

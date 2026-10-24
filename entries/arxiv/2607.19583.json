@@ -1,0 +1,20 @@
+{
+  "key": "2607.19583",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.19583",
+  "title": "Density-Dependent McKean--Vlasov Diffusions: Subgaussian Occupancy Bounds and Polynomial Propagation of Chaos",
+  "authors": [
+    "Denis Belomestny",
+    "Ekaterina Morozova"
+  ],
+  "summary": "We study the local density-dependent diffusion $dY_t=-Ξ(p_t(Y_t))\\nablaΦ(Y_t)\\,dt+\\sqrt2\\,dW_t$ and a clipped, randomly shifted histogram particle approximation on $\\mathbb{R}^d$. The central difficulty is that the empirical density is evaluated at the particles' locations and re-enters their drift, while the confining force $\\nablaΦ$ may be unbounded. We provide a path-space entropy proof under two verifiable analytic conditions: a uniform pointwise Gaussian envelope for the true density $p_t$, and a Gaussian--polynomial bound for its spatial gradient $\\nabla p_t$. The potential is allowed…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-07-21",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

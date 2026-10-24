@@ -1,0 +1,25 @@
+{
+  "key": "2604.07069",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.07069",
+  "title": "Controller Design for Structured State-space Models via Contraction Theory",
+  "authors": [
+    "Muhammad Zakwan",
+    "Vaibhav Gupta",
+    "Alireza Karimi",
+    "Efe C. Balta",
+    "Giancarlo Ferrari-Trecate"
+  ],
+  "summary": "This paper presents an indirect data-driven output feedback controller synthesis for nonlinear systems, leveraging Structured State-space Models (SSMs) as surrogate models. SSMs have emerged as a compelling alternative in modelling time-series data and dynamical systems. They can capture long-term dependencies while maintaining linear computational complexity with respect to the sequence length, in comparison to the quadratic complexity of Transformer-based architectures. The contributions of this work are threefold. We provide the first analysis of controllability and observability of SSMs,…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.LG",
+    "math.DS"
+  ],
+  "published": "2026-04-08",
+  "updated": "2026-04-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

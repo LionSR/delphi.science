@@ -1,0 +1,21 @@
+{
+  "key": "2602.23505",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.23505",
+  "title": "How to recover a permutation group amidst errors",
+  "authors": [
+    "Taylor Brysiewicz",
+    "Juhee Kim"
+  ],
+  "summary": "We consider the problem of recovering a permutation group $G \\leq S_n$ from an error-prone sampling process $X$. We model $X$ as an $S_n$-valued random variable, defined as a mixture of the uniform distributions on $G$ and $S_n$ . Our suite of tools recovers properties of $G$ from $X$ and bolsters our main method for recovering $G$ itself. Our algorithms are motivated by the numerical computation of monodromy groups, a setting where such error-prone sampling procedures occur organically.",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "math.GR"
+  ],
+  "published": "2026-02-26",
+  "updated": "2026-02-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2608.05666",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.05666",
+  "title": "Potential Matching Optimal Transport: Continuous Normalizing Flows for Exact $p$-Wasserstein Dynamics",
+  "authors": [
+    "Lishuo Zhang",
+    "Ruizhi Huang",
+    "Yang Yu",
+    "Lei Li"
+  ],
+  "summary": "We introduce Potential Matching Optimal Transport (PMOT), a potential-flow framework for general $p$-cost optimal transport with $c_p(x,y)=\\|x-y\\|^p$. PMOT parameterizes the CNF velocity field with a scalar potential in the generalized Benamou--Brenier form for the chosen exponent $p$. It trains the potential gradient with a self-induced matching loss along straight bridges determined by the model's own endpoints, while allowing flexible terminal distribution matching. Our main result establishes zero-loss exactness: under the stated regularity, exact terminal matching, and uniqueness…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-08-06",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

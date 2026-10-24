@@ -1,0 +1,20 @@
+{
+  "key": "2609.28489",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.28489",
+  "title": "Projective blowups: a formal and multicentered proof",
+  "authors": [
+    "A. Mayeux"
+  ],
+  "summary": "We give a machine-checked proof, in Lean 4, of the universal property of multicentered blowups: given a finite family $Z$ of closed subschemes of a scheme $X$, presented on each chart by ideals, there is a scheme $\\Bl_Z X$ over $X$, terminal among $X$-schemes on which every member of the family becomes an effective Cartier divisor. To the best of our knowledge this is the first formalisation of blowups, single- or multicentered, in any theorem prover. The proof is organised around the universal property of the multicentered dilatation of a ring: the initial algebra in which a finite family…",
+  "domain": "math.AG",
+  "tags": [
+    "math.AG",
+    "cs.LO"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

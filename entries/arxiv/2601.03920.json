@@ -1,0 +1,20 @@
+{
+  "key": "2601.03920",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.03920",
+  "title": "Adaptive thresholding for wavelet-based nonparametric heteroskedastic variance estimation on the sphere",
+  "authors": [
+    "Claudio Durastanti",
+    "Radomyra Shevchenko"
+  ],
+  "summary": "This paper addresses the nonparametric estimation of a spatially varying, heteroskedastic variance function on the unit sphere within a regression framework. While adaptive regression estimation is well-established on manifolds, characterizing localized noise structures presents unique theoretical obstacles due to bias propagation from the unknown mean function. To circumvent this, we propose a fully data-driven, multiresolution estimator based on localized spherical frames, namely, needlets, combined with a hard-thresholding protocol and a sample-splitting scheme. The approach exploits the…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-01-07",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

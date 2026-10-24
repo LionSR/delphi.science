@@ -1,0 +1,23 @@
+{
+  "key": "2604.02380",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.02380",
+  "title": "VeloTree: Inferring single-cell trajectories from RNA velocity fields with varifold distances",
+  "authors": [
+    "Elodie Maignant",
+    "Tim Conrad",
+    "Christoph von Tycowicz"
+  ],
+  "summary": "Trajectory inference is a critical problem in single-cell transcriptomics, which aims to reconstruct the dynamic process underlying a population of cells from sequencing data. Of particular interest is the reconstruction of differentiation trees. One way of doing this is by estimating the path distance between nodes -- labeled by cells -- based on cell similarities observed in the sequencing data. Recent sequencing techniques make it possible to measure two types of data: gene expression levels, and RNA velocity, a vector that quantifies variation in gene expression. The sequencing data then…",
+  "domain": "q-bio.GN",
+  "tags": [
+    "q-bio.GN",
+    "math.MG",
+    "stat.ME"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-04-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2606.07855",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.07855",
+  "title": "Path Planning Using Deep Deterministic Policy Gradient: A Reinforcement Learning Approach",
+  "authors": [
+    "Qiang Le",
+    "Yaguang Yang",
+    "Isaac E. Weintraub"
+  ],
+  "summary": "Path-planning for autonomous vehicles in threat-laden environments is a fundamental challenge because the problem is nonlinear and nonconvex even in simplest scenarios. While traditional optimal control methods can be used to find ideal paths, the computational time is often too slow for real-time decision-making. To solve this challenge, we propose a method based on Deep Deterministic Policy Gradient (DDPG) and model the threat as possibly multiple circular 'no-go' zones. A mission is regarded as a failure if the vehicle enters this restricted zone at any time or does not reach a…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-06-05",
+  "updated": "2026-06-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

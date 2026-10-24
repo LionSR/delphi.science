@@ -1,0 +1,24 @@
+{
+  "key": "2601.18276",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.18276",
+  "title": "Functional Large Deviations for Wide Deep Neural Networks with Gaussian Initialization and Lipschitz Activations",
+  "authors": [
+    "Claudio Macci",
+    "Barbara Pacchiarotti",
+    "Katerina Papagiannouli",
+    "Giovanni Luca Torrisi",
+    "Dario Trevisan"
+  ],
+  "summary": "We establish a functional large deviation principle for fully connected multi-layer perceptrons with i.i.d. Gaussian weights (LeCun initialization) and general Lipschitz activation functions, including therefore the popular case of ReLU. The large deviation principle holds for the entire network output process on any compact input set. The proof combines exponential tightness for recursively defined processes, finite-dimensional large deviations, and the Dawson-Gärtner theorem, extending existing results beyond finite input sets and less general activations.",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.ST"
+  ],
+  "published": "2026-01-26",
+  "updated": "2026-01-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

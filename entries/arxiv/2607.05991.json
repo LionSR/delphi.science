@@ -1,0 +1,22 @@
+{
+  "key": "2607.05991",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.05991",
+  "title": "A Semismooth Newton Augmented Lagrangian Method for Sparse Spectral Risk Optimization",
+  "authors": [
+    "Rufeng Xiao",
+    "Rujun Jiang",
+    "Xudong Li",
+    "Defeng Sun"
+  ],
+  "summary": "Empirical risk minimization is a standard and effective paradigm for learning predictive models by minimizing average loss. In high-stakes decision-making, however, an average-loss criterion may underrepresent rare but severe losses. Spectral risk measures (SRMs) provide a principled framework by incorporating weighted order statistics of losses, but the induced nonsmoothness and nonseparability from sorting make the resulting optimization problems challenging. We propose a relative inexact proximal augmented Lagrangian method with a semismooth Newton subproblem solver for solving SRM-based…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

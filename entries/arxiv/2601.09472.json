@@ -1,0 +1,19 @@
+{
+  "key": "2601.09472",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.09472",
+  "title": "Estimates on binomial sums of partition functions",
+  "authors": [
+    "Dietrich Burde"
+  ],
+  "summary": "Let $p(n)$ denote the partition function and define $p(n,k)=\\sum_{j=0}^{k}\\binom{n-j}{k-j}p(j)$ where $p(0)=1$. We prove that $p(n,k)$ is unimodal and satisfies $p(n,k) < \\frac{2.825}{\\sqrt{n}}\\, 2^n $ for fixed $n\\ge 1$ and all $1\\le k\\le n$. This result has an interesting application: the minimal dimension of a faithful module for a $k$-step nilpotent Lie algebra of dimension $n$ is bounded by $p(n,k)$ and hence by $\\frac{3}{\\sqrt{n}}\\, 2^n $, independently of $k$. So far only the bound $n^{n-1}$ was known. We will also prove that $p(n,n-1)<\\sqrt{n}\\exp(π\\sqrt{2n/3})$ for $n\\ge 1$ and…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-01-14",
+  "updated": "2026-01-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

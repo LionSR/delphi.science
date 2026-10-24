@@ -1,0 +1,23 @@
+{
+  "key": "2604.22287",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.22287",
+  "title": "Closed Form Relations and Higher-Order Approximations of First and Second Derivatives of the Tangent Operator on SE(3)",
+  "authors": [
+    "Andreas Mueller"
+  ],
+  "summary": "The Lie group SE(3) of isometric orientation preserving transformation is used for modeling multibody systems, robots, and Cosserat continua. The use of these models in numerical simulation and optimization schemes necessitates the exponential map, its right-trivialized differential (often referred to as tangent operator), as well as higher derivatives in closed form. The $6\\times 6$ matrix representation of the differential, $\\mathbf{dexp}_{\\mathbf{X}}:se\\left( 3\\right) \\rightarrow se\\left( 3\\right) $ , and its first derivative were reported using a $3\\times 3$ block partitioning. In this…",
+  "domain": "math.GR",
+  "tags": [
+    "math.GR",
+    "cs.RO",
+    "math.DG",
+    "math.DS",
+    "physics.comp-ph"
+  ],
+  "published": "2026-04-24",
+  "updated": "2026-04-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

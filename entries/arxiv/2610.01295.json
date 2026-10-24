@@ -1,0 +1,25 @@
+{
+  "key": "2610.01295",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01295",
+  "title": "Petrov-Galerkin operator inference with application to stability-encouraging identification",
+  "authors": [
+    "Johannes Rettberg",
+    "Jonas Nicodemus",
+    "Harsh Sharma",
+    "Boris Kramer",
+    "Jörg Fehr",
+    "Benjamin Unger"
+  ],
+  "summary": "Data-driven model order reduction methods such as operator inference enable the efficient construction of reduced-order models directly from high-dimensional time-domain data. Standard operator inference typically seeks a Galerkin-type reduced model in a prescribed low-dimensional subspace by identifying its reduced operators from projected snapshot data. The resulting inference problem is formulated as a least-squares problem admitting an efficient closed-form solution. However, it is well known from intrusive model order reduction for linear time-invariant systems that Petrov-Galerkin…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

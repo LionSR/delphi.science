@@ -1,0 +1,20 @@
+{
+  "key": "2609.25394",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.25394",
+  "title": "Three-dimensional blind deconvolution by CP-parameterized kernels",
+  "authors": [
+    "Fatoumata Sanogo",
+    "Stefan Kindermann"
+  ],
+  "summary": "We consider the problem of reconstructing a kernel $k$ and image $u$ in a blind deconvolution problem from convolutional data $g = k*u$. We particularly focus on the 3D case, i.e., on volumetric images. The problem is approached by imposing a semiparametric CP decomposition for the kernel and a variational TV penalty for the image. We also discuss a motion blur ambiguity effect, i.e., a nonuniqueness issue of the kernel in the blind deconvolution problem that may appear in certain videos of moving objects. The blind deconvolution algorithm uses an alternating minimization approach with TV…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-21",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

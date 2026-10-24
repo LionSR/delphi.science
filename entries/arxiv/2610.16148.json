@@ -1,0 +1,21 @@
+{
+  "key": "2610.16148",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16148",
+  "title": "A ghost-cell immersed boundary method for the shallow water equations on Cartesian grids: mass conservation and wetting and drying over variable topography",
+  "authors": [
+    "Yuta Yaegashi"
+  ],
+  "summary": "A ghost-cell immersed boundary method is proposed for the two-dimensional shallow water equations with a variable bed (topography), solved with an explicit Godunov-type finite volume scheme (unsplit second-order MUSCL, HLLC flux, hydrostatic reconstruction) on Cartesian grids. Ghost-cell methods leak mass through the wall. To find a robust and conservative treatment, eight constructions of the ghost values and a cut-cell form of the continuity equation were applied to seven test problems, which include wetting and drying on sloping beds and a laboratory dam break. In the resulting scheme,…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

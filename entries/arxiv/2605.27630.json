@@ -1,0 +1,22 @@
+{
+  "key": "2605.27630",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.27630",
+  "title": "OptiLoop: Coordination-in-the-Loop Verification and Repair for LLM-Generated Optimization Agents",
+  "authors": [
+    "Yujia Xu",
+    "Zhiheng Wang",
+    "Thi Dinh"
+  ],
+  "summary": "Many decentralized decision problems require multiple parties to coordinate on shared decisions while keeping objectives, constraints, and data private. Large language models (LLMs) offer a promising way to lower the barrier to participation by generating local optimization agents from natural-language specifications. In coordination settings, however, executability is not enough: a generated agent may compile, solve, and pass local checks while still being semantically wrong, for example by misrepresenting costs, mis-scoping constraints, or responding incorrectly to incentives. Such errors…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.SE"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

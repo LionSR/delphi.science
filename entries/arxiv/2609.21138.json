@@ -1,0 +1,25 @@
+{
+  "key": "2609.21138",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.21138",
+  "title": "Diverse and Adaptable Arm Coordination for Octopus-Crawling via Diffusion-Based Uncertainty-Aware Optimization",
+  "authors": [
+    "Seung Hyun Kim",
+    "Heng-Sheng Chang",
+    "Kimia Kazemi",
+    "Prashant Mehta",
+    "Mattia Gazzola"
+  ],
+  "summary": "Octopus crawling motivates soft robots that exploit redundancy, yet discovering and organizing diverse coordination modes for adaptation remains challenging. To address this, we introduce a Diffusion-based Uncertainty-aware Optimization (DUO) algorithm that learns demonstration-free crawling controllers for a simulated, muscle-actuated CyberOctopus. This work represents the first application of diffusion-based control to soft multi-arm robots in contact-rich simulations. By embedding a variety of locomotion behaviors within a shared control distribution, this approach enables the simulated…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2605.19131",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.19131",
+  "title": "Limit Laws for Consensus Protocols on the Complete Graph",
+  "authors": [
+    "Julian Becker",
+    "Konstantinos Panagiotou"
+  ],
+  "summary": "We study a distributed consensus problem on a complete communication network of $n$ vertices, each holding one of two opinions. The vertices communicate in rounds, possibly in the presence of adversarial noise, and exchange information until they all agree on a single opinion. We consider a general class of protocols, where the vertices randomly sample neighbors and update their own opinion according to an update function $f$ depending on the sampled opinions. A prominent example is the $k$-maj protocol, where every vertex adopts the majority opinion of $k$ randomly sampled neighbors,…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.PR"
+  ],
+  "published": "2026-05-18",
+  "updated": "2026-06-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

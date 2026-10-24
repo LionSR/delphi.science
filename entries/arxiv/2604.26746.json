@@ -1,0 +1,21 @@
+{
+  "key": "2604.26746",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26746",
+  "title": "Induced Stackelberg Equilibrium Seeking via Iterative Tikhonov Regularization",
+  "authors": [
+    "Silvia Cianchi",
+    "Anibal Sanjab",
+    "Sergio Grammatico"
+  ],
+  "summary": "Existing methods for learning Stackelberg equilibria typically assume that the followers' (variational, generalized) Nash equilibrium is unique. However, in the presence of multiple equilibria, without a selection convention, the problem may become ill-posed, thus leading standard algorithms to potentially fail to converge. This paper addresses this issue by introducing an optimal selection at the lower-level game, hereby defining a Stackelberg game with induced equilibrium selection. To this end, we enable the leader to augment the followers' game with an additional vanishing term that acts…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

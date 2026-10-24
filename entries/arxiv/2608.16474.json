@@ -1,0 +1,21 @@
+{
+  "key": "2608.16474",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.16474",
+  "title": "Convergence and variational structure of a staggered scheme for mean field games with individual noise on graphs",
+  "authors": [
+    "Jianbo Cui",
+    "Tonghe Dang"
+  ],
+  "summary": "We propose and analyze a time-staggered numerical scheme for mean field game (MFG) systems with individual noise on finite graphs. Numerically solving such coupled forward--backward systems is delicate because the density evolves in the open probability simplex and the coefficients may degenerate at its boundary. The scheme preserves mass and satisfies a discrete fundamental identity compatible with the Lasry--Lions monotonicity argument, leading to uniqueness of the numerical solution. By establishing a timestep-uniform positive lower bound for the density and uniform bounds for the value…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-08-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

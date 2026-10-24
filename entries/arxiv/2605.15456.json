@@ -1,0 +1,24 @@
+{
+  "key": "2605.15456",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.15456",
+  "title": "DIPA: Distilled Preconditioned Algorithms for Solving Imaging Inverse Problems",
+  "authors": [
+    "Romario Gualdrón-Hurtado",
+    "Roman Jacome",
+    "Leon Suarez",
+    "Henry Arguello"
+  ],
+  "summary": "Solving imaging inverse problems has usually been addressed by designing proper prior models of the underlying signal. However, minimizing the data fidelity term poses significant challenges due to the ill-conditioned sensing matrix caused by physical constraints in the acquisition system. Thus, preconditioning techniques have been adopted in classical optimization theory to address ill-conditioned data-fidelity minimization by transforming the algorithm gradient step to achieve faster convergence and better numerical stability. We extend the preconditioning concept beyond convergence…",
+  "domain": "eess.IV",
+  "tags": [
+    "eess.IV",
+    "cs.CV",
+    "math.OC"
+  ],
+  "published": "2026-05-14",
+  "updated": "2026-05-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2604.11356",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.11356",
+  "title": "Numerical analysis for the Stokes problem with non-homogeneous Dirichlet boundary condition",
+  "authors": [
+    "Thomas Apel",
+    "Katharina Lorenz",
+    "Johannes Pfefferer"
+  ],
+  "summary": "The Stokes problem with non-homogeneous Dirichlet boundary condition is solved numerically using conforming discretizations and an approximation of the boundary datum in the corresponding trace space. Optimal discretization error estimates in various norms are derived. In the case of a homogeneous differential equation, all estimates of the velocity error are uniformly valid in the viscosity parameter for all conforming inf-sup stable discretizations. The theory accounts for the influence of corner singularities in the case of a non-convex domain. Several variants of the boundary data…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-13",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

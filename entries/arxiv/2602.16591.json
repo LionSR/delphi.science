@@ -1,0 +1,21 @@
+{
+  "key": "2602.16591",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.16591",
+  "title": "Fast Ewald Summation using Prolate Spheroidal Wave Functions",
+  "authors": [
+    "Erik Boström",
+    "Anna-Karin Tornberg",
+    "Ludvig af Klinteberg"
+  ],
+  "summary": "Fast Ewald summation efficiently evaluates Coulomb interactions and is widely used in molecular dynamics simulations. It is based on a split into a short-range and a long-range part, where evaluation of the latter is accelerated using the fast Fourier transform (FFT). The accuracy and computational cost depend critically on the mollifier in the kernel split and the window function used in the spreading and interpolation steps that enable the use of the FFT. The first prolate spheroidal wavefunction (PSWF) has optimal concentration in real and Fourier space simultaneously, and is used when…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-18",
+  "updated": "2026-04-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

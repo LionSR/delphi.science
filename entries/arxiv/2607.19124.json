@@ -1,0 +1,24 @@
+{
+  "key": "2607.19124",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.19124",
+  "title": "Fast reconstruction of tensor tomographic X-ray scattering data for real-time applications",
+  "authors": [
+    "André M. Antunes",
+    "Daniël M. Pelt",
+    "K. Joost Batenburg"
+  ],
+  "summary": "X-ray scattering tensor tomography reveals nanoscale structural orientation in 3D, but its reliance on slow iterative reconstruction limits real-time use. We introduce an extension of a direct reconstruction approach for parallel-beam geometries that computes algebraic filters approximating multiple iterative updates with a single filtering and back-projection step. By explicitly separating the tomographic projector from a view-dependent mixing operator, the method generalizes across tensor representations and modes of (small-angle) X-ray scattering measurement. Simulated and experimental…",
+  "domain": "eess.IV",
+  "tags": [
+    "eess.IV",
+    "math.NA",
+    "physics.app-ph",
+    "physics.ins-det"
+  ],
+  "published": "2026-07-21",
+  "updated": "2026-07-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

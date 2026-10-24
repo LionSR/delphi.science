@@ -1,0 +1,24 @@
+{
+  "key": "2610.01591",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01591",
+  "title": "Stable and Online Algorithms for Random Matrix Discrepancy",
+  "authors": [
+    "Eren C. Kızıldağ",
+    "Shuangping Li"
+  ],
+  "summary": "We study the average-case matrix discrepancy problem: given independent normalized $d\\times d$ Gaussian orthogonal ensemble matrices $A_1,\\dots,A_N$ and a fixed margin $κ>0$, find signs $σ_1,\\dots,σ_N\\in\\{-1,1\\}$ such that the operator norm of $\\sum_{i=1}^N σ_i A_i$ is at most $κ\\sqrt{N}$. Focusing on the proportional regime $N/d^2\\to τ\\in(0,\\infty)$ as $d\\to\\infty$ followed by the small-margin limit $κ\\downarrow 0$, we characterize the density required by stable offline algorithms and by online algorithms. In the offline setting, we construct a polynomial-time \\emph{recenter-and-round}…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.CC",
+    "cs.DM",
+    "math.CO",
+    "math.PR"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2603.25233",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.25233",
+  "title": "Highly Efficient Rank-Adaptive Sweep-based SI-DSA for the Radiative Transfer Equation via Mild Space Augmentation",
+  "authors": [
+    "Wei Guo",
+    "Zhichao Peng"
+  ],
+  "summary": "Low-rank methods have emerged as a promising strategy for reducing the memory footprint and computational cost of discrete-ordinates discretizations of the radiative transfer equation (RTE). However, most existing rank-adaptive approaches rely on rank-proportional space augmentation, which can negate efficiency gains when the effective solution rank becomes moderately large. To overcome this limitation, we develop a rank-adaptive sweep-based source iteration with diffusion synthetic acceleration (SI-DSA) for the first-order steady-state RTE. The core of our method is a sweep-based low-rank…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-26",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

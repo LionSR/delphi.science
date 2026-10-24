@@ -1,0 +1,21 @@
+{
+  "key": "2603.02823",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.02823",
+  "title": "Extremum Seeking with Double Integrators in the Presence of Local Extrema",
+  "authors": [
+    "Raik Suttner",
+    "Christian Ebenbauer",
+    "Sergey Dashkovskiy"
+  ],
+  "summary": "We study the problem of global extremum seeking in the presence of local extrema. We investigate two different perturbation-based methods: 1) a well-known classical extremum seeking scheme for steady-state output optimization, and 2) a source seeking scheme for a two-dimensional point mass. In each of these two scenarios, the closed-loop system involves a damped double integrator subject to an oscillatory force. An averaging analysis reveals that the respective averaged system is again a damped double integrator, but now subject to a potential force. The potential force is given by the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-03",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

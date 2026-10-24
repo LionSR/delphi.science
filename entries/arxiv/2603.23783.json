@@ -1,0 +1,24 @@
+{
+  "key": "2603.23783",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.23783",
+  "title": "Probabilistic Geometric Alignment via Bayesian Latent Transport for Domain-Adaptive Foundation Models",
+  "authors": [
+    "Aueaphum Aueawatthanaphisut",
+    "Kuepon Auewattanapisut"
+  ],
+  "summary": "Adapting large-scale foundation models to new domains with limited supervision remains a fundamental challenge due to latent distribution mismatch, unstable optimization dynamics, and miscalibrated uncertainty propagation. This paper introduces an uncertainty-aware probabilistic latent transport framework that formulates domain adaptation as a stochastic geometric alignment problem in representation space. A Bayesian transport operator is proposed to redistribute latent probability mass along Wasserstein-type geodesic trajectories, while a PAC-Bayesian regularization mechanism constrains…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-03-24",
+  "updated": "2026-03-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

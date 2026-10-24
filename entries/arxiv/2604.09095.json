@@ -1,0 +1,23 @@
+{
+  "key": "2604.09095",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.09095",
+  "title": "Geometric Probing for Algorithm Selection in Continuous Black-Box Optimization",
+  "authors": [
+    "Jiabao Brad Wang",
+    "Xiang Shi",
+    "Yiliang Yuan",
+    "Mustafa Mısır"
+  ],
+  "summary": "Automated algorithm selection for continuous black-box optimization depends on what information is acquired from a problem under a limited probing budget and how that information is represented. We introduce a geometric probing framework that samples multi-scale two-dimensional restrictions across location, orientation, and scale, and encodes their normalized objective-value maps with validity-aware convolutional processing and permutation-invariant aggregation. We compare our method with classical ELA and Deep-ELA under matched budgets, within-problem and problem-level transfer, fusion,…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-04-10",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

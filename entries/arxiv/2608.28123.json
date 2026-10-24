@@ -1,0 +1,23 @@
+{
+  "key": "2608.28123",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.28123",
+  "title": "A high-order polynomial-corrected shifted boundary method for simulating fully nonlinear water waves",
+  "authors": [
+    "Jens Visbech",
+    "Allan P. Engsig-Karup",
+    "Harry B. Bingham",
+    "Mario Ricchiuto"
+  ],
+  "summary": "We present a novel unfitted computational framework for simulating fully nonlinear potential flow-based water waves. Focusing on wave propagation, we describe the core methodology, which involves a high-order polynomial-corrected shifted-boundary approximation on unfitted spectral elements. This approach allows for the simulation of a curved, highly time-dependent (moving and deforming) free surface affected by bathymetric changes. All that on a simple Cartesian background mesh without re-meshing or further approximations of non-affine geometric features. In addition, we highlight the…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math.NA"
+  ],
+  "published": "2026-08-28",
+  "updated": "2026-08-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

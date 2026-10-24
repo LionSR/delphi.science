@@ -1,0 +1,22 @@
+{
+  "key": "2603.22924",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.22924",
+  "title": "Positive Observers Revisited",
+  "authors": [
+    "David Ohlin",
+    "Anders Rantzer",
+    "Emma Tegling"
+  ],
+  "summary": "The paper shows that positive linear systems can be stabilized using positive Luenberger-type observers. This is achieved by structuring the observer as monotonically converging upper and lower bounds on the state. Analysis of the closed-loop properties under linear observer feedback gives conditions that cover a larger class than previous observer designs. The results are applied to nonpositive systems by enforcing positivity of the dynamics using feedback from the upper bound observer. The setting is expanded to include stochastic noise, giving conditions for convergence in expectation…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-03-24",
+  "updated": "2026-04-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

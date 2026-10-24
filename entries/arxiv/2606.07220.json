@@ -1,0 +1,21 @@
+{
+  "key": "2606.07220",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.07220",
+  "title": "An adaptive Dual-Primal Isogeometric Tearing and Interconnecting (IETI-DP) method for multi-patch structured Kirchhoff--Love plates",
+  "authors": [
+    "Mario Kapl",
+    "Aljaž Kosmač",
+    "Vito Vitrih"
+  ],
+  "summary": "We present a novel adaptive isogeometric method for solving the Kirchhoff-Love plate problem for plates whose mid-surface is defined by a planar multi-patch domain with possibly extraordinary vertices, parametrized by an analysis-suitable $G^1$ multi-patch geometry. The proposed technique relies on the concept of Dual-Primal Isogeometric Tearing and Interconnecting (IETI-DP), which enforces the required $C^1$-smoothness of the solution across a common edge of two neighboring patches by imposing appropriate continuity conditions by means of Lagrange multipliers. The resulting saddle point…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-05",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

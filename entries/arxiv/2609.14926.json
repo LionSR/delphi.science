@@ -1,0 +1,21 @@
+{
+  "key": "2609.14926",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.14926",
+  "title": "Linearized PINN with pretrained nonlinear layers",
+  "authors": [
+    "Wenhao Chen",
+    "Alexandre M. Tartakovsky"
+  ],
+  "summary": "We propose a linearized Physics-Informed Neural Network (lPINN), a reduced-order neural basis method for forward and inverse differential equations. In an offline stage, lPINN learns operator-compatible continuous neural basis functions from an ensemble of numerical solutions. The basis functions are differentiable through automatic differentiation and are pretrained using solution data together with either derivative information or physics residuals. For each new problem instance, the basis functions are frozen and the solution is obtained by minimizing the governing-equation residual…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "cs.LG"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

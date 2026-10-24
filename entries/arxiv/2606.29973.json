@@ -1,0 +1,21 @@
+{
+  "key": "2606.29973",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.29973",
+  "title": "Factorized low-rank matrix recovery problem, Schatten-$q$ quasi-norm, Error bound for critical point, Kurdyka-Łojasiewicz property, Inexact proximal alternating linearized minimization",
+  "authors": [
+    "Yongjun Chen",
+    "Defeng Sun",
+    "Liping Zhang"
+  ],
+  "summary": "The Schatten-$q$ quasi-norm is a widely used nonconvex rank surrogate and matrix factorization is an effective approach to reduce computational cost. In this paper, we consider the equivalent group-sparse factorized reformulation of Schatten-$q$ norm regularized low-rank matrix recovery problem. Though this factorized model exhibits favorable performance, two issues remain: (i) the error bound of critical points is unexplored; (ii) the proximal operator of $\\|\\cdot\\|_2^q$ lacks a closed-form solution for general $q$, limiting algorithms to adopt fixed $q$ like $1/2$ or $2/3$. This paper…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

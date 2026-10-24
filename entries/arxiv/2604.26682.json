@@ -1,0 +1,21 @@
+{
+  "key": "2604.26682",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26682",
+  "title": "Model-Free Dynamic Mode Adaptive Control for Data-Driven Control Synthesis",
+  "authors": [
+    "Parham Oveissi",
+    "Ankit Goel"
+  ],
+  "summary": "This paper presents a model-free, data-driven control synthesis method called dynamic mode adaptive control (DMAC) for systems whose mathematical models are unavailable or unsuitable for classical control design. The proposed approach combines data-driven dynamics approximation with adaptive control synthesis to enable online controller design using measured system data. DMAC comprises two main components: a dynamics-approximation module and a controller-synthesis module. The dynamics approximation module estimates a local linear representation of the system dynamics directly from…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

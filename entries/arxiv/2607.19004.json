@@ -1,0 +1,24 @@
+{
+  "key": "2607.19004",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.19004",
+  "title": "The Tractability Landscape of Sampling with Inexact Scores",
+  "authors": [
+    "Anming Gu",
+    "Kevin Tian",
+    "Hubert Yang",
+    "Yusong Zhu"
+  ],
+  "summary": "We provide a simple and tight characterization of the types of inexact score oracle access that permit sampling with vanishing total variation bias, for a standard, well-behaved target family. Our main result shows that any weaker error than the sub-Gaussian assumption used by [YW26] rules out the tractability of unbiased sampling. This strengthens the conclusion of [CCSW26] to be algorithm-agnostic, and to hold for a wider range of error assumptions.",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-07-21",
+  "updated": "2026-07-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

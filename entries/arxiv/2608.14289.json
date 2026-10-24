@@ -1,0 +1,22 @@
+{
+  "key": "2608.14289",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.14289",
+  "title": "Diffusion-Based Policies for Dynamic Control of Stochastic Processing Networks",
+  "authors": [
+    "Baris Ata",
+    "Jin Guang",
+    "J. Michael Harrison",
+    "Nian Si"
+  ],
+  "summary": "We consider a processing network model with $m$ job classes or buffers, exogenous input flows into some classes, $n$ processing activities, and $p$ servers. Each activity is either a specified server processing jobs of a specified class, or a fictional input server delivering jobs of a specified class; jobs change class in Markovian fashion after completing service. A standard multiclass queueing network, with its one-to-one correspondence between job classes and activities, is a special case, but our general model allows two or more ways to process a given class, and some or all input flows…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-14",
+  "updated": "2026-08-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

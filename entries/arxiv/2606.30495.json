@@ -1,0 +1,24 @@
+{
+  "key": "2606.30495",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.30495",
+  "title": "McMg: A Learned Phase-Space Multi-channel Multigrid Preconditioner for Helmholtz Equation",
+  "authors": [
+    "Jiwei Jia",
+    "Xinliang Liu",
+    "Juntao Wang",
+    "Jinchao Xu"
+  ],
+  "summary": "Solving heterogeneous Helmholtz equations at high wavenumbers remains challenging because the discretized operator is indefinite, pollution degrades phase accuracy, and scalar coarse-grid correction can discard the local phase and propagation-direction information carried by oscillatory errors. We propose Multi-channel Multigrid (McMg), a learned phase-space multigrid preconditioner for heterogeneous Helmholtz equations. Rather than predicting the solution directly, McMg maps residuals to corrections within an iterative framework. Its central idea is to coarsen physical space while retaining…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.AI",
+    "math-ph"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

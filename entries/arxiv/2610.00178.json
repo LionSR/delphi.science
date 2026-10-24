@@ -1,0 +1,20 @@
+{
+  "key": "2610.00178",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00178",
+  "title": "Data-to-Certificates (D2C): Koopman Supereigenfunctions for Stability, Safety, and Control",
+  "authors": [
+    "Umesh Vaidya"
+  ],
+  "summary": "Traditional dynamical system models, including Koopman operator representations, are fundamentally equality-based, whereas many analysis and control tools rely on inequalities. This mismatch motivates representations that are intrinsically aligned with certification tasks involved in the analysis and control synthesis problems. In this paper, we propose a \\emph{data-to-certificates (D2C)} paradigm that bypasses explicit model construction and directly learns certificates from data. We introduce \\emph{supereigenfunctions} of the Koopman operator as an inequality-based generalization of…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

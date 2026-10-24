@@ -1,0 +1,22 @@
+{
+  "key": "2607.29584",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.29584",
+  "title": "A Thresholding Based Operator-Splitting Method for Curvature-Regularized Surface Reconstruction",
+  "authors": [
+    "Yang Hu",
+    "Hao Liu",
+    "Dong Wang",
+    "Tieyong Zeng"
+  ],
+  "summary": "Surface reconstruction from point clouds is a fundamental problem in computational geometry with broad applications in computer graphics, medical imaging, and manufacturing. In this paper, we propose an efficient method for solving a curvature-regularized surface reconstruction model. To avoid the computational cost associated with reinitialization in traditional level set methods, we represent the reconstructed surface by an indicator function. By introducing an auxiliary variable, we reformulate the original optimization problem as the computation of the steady-state solution of an initial…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-31",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

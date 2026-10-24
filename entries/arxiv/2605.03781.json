@@ -1,0 +1,21 @@
+{
+  "key": "2605.03781",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.03781",
+  "title": "Safe and Sharp Honest Inference for Nonparametric Estimation via Empirical Bernstein Calibration",
+  "authors": [
+    "Zihao Yuan",
+    "Sven Klaassen",
+    "Holger Dette"
+  ],
+  "summary": "Constructing honest confidence intervals often depends on reliable bias control and accurate calibration based on asymptotic normality, including standard-normal and folded-normal calibration. Substantial progress has been made in correcting or controlling smoothing bias, including robust bias correction and bias-aware inference. We first show that, even after smoothing bias has been well corrected or controlled, asymptotic-normality-based calibration may still be a binding source of finite-sample undercoverage. Thus, the resulting intervals may struggle to achieve the minimax shrinkage rate…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

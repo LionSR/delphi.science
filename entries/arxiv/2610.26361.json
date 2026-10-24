@@ -1,0 +1,25 @@
+{
+  "key": "2610.26361",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.26361",
+  "title": "Simulation-free approximate Bayesian computation for stochastic reaction networks",
+  "authors": [
+    "Zekai Li",
+    "Mauricio Barahona",
+    "Philipp Thomas"
+  ],
+  "summary": "Uncovering stochastic reaction networks from data is central to single-cell biology. Simulation-based inference has evolved into a flexible paradigm for this purpose, circumventing the computational intractability of the likelihood. Notably, approximate Bayesian computation performs this inference by carrying out extensive Gillespie simulations, usually at a high computational cost. Here, we propose a simulation-free approximate Bayesian computation (SFABC) framework that avoids both simulation and explicit likelihood solutions of the network dynamics. Instead, SFABC exploits the Chemical…",
+  "domain": "q-bio.QM",
+  "tags": [
+    "q-bio.QM",
+    "math.DS",
+    "math.OC",
+    "physics.bio-ph",
+    "stat.ME"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2610.02253",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02253",
+  "title": "Approximation Property of Dropout Neural Networks: Sobolev Rates and Confidence Bounds",
+  "authors": [
+    "Jia-He Yao"
+  ],
+  "summary": "The universal approximation property of dropout neural networks does not by itself describe the network size required for an accurate random realization. In this work, we study approximation of the unit ball of $W^{n,\\infty}([0,1]^d)$ by ReLU networks whose edges are retained independently with probability $p$. The approximation error is measured uniformly over the input domain, and the guarantee holds with probability at least $1-δ$ for a single sampled network. We construct networks of constant depth and size $\\widetilde O_{n,d}(p^{-9}\\varepsilon^{-\\max\\{d/n,2\\}} \\log(1/δ))$. The…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

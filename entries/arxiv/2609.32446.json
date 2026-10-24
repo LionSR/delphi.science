@@ -1,0 +1,21 @@
+{
+  "key": "2609.32446",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32446",
+  "title": "Annealed Underdamped Langevin Dynamics",
+  "authors": [
+    "Laurenz Nagler",
+    "Alexander Falk",
+    "Andreas Habring"
+  ],
+  "summary": "In sampling, different flavours of annealing, tempering, or other successive approximation approaches are widely used and studied. In this work we investigate annealed underdamped Langevin sampling for logconcave distributions of the form $π(x) \\propto e^{-Ψ(x)}$ for a potential $Ψ:\\mathbb{R}^d \\rightarrow \\mathbb{R}$. That is, we assume access to the score of a general approximating family of distributions $(π_τ)_{τ\\in [0,1]}$ with $π_0=π$. This family is used in a time-inhomogeneous underdamped Langevin process with moving target $π_{τ(t)}$ and an appropriate annealing schedule $t\\mapsto…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2609.29961",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.29961",
+  "title": "A Contraction Framework for Stochastic Operators with Bootstrapping: Application to TD Learning",
+  "authors": [
+    "Ids van der Werf",
+    "Sergio Rozada",
+    "Antonio G. Marques"
+  ],
+  "summary": "Many iterative algorithms rely on bootstrapping. A variable is updated using a second, frozen copy as a target, which is periodically replaced with the updated variable. Majorize-minimize and inexact proximal-point methods share this structure, as does temporal-difference (TD) learning. However, existing convergence guarantees for scenarios that combine sampled updates with targets refreshed only every $K$ steps rely on the specific structure of the update, such as linear approximation or gradient-based inner steps, and on uniformly bounded sampling error. We instead model the sampled update…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "eess.SP",
+    "math.OC"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

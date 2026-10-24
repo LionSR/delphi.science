@@ -1,0 +1,21 @@
+{
+  "key": "2609.32997",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32997",
+  "title": "A Riemannian Inertial Adaptive Gradient Method with Momentum Restart",
+  "authors": [
+    "Lateef O. Jolaoso",
+    "Professer V. Ndlovu",
+    "Maggie Aphane"
+  ],
+  "summary": "We propose RIAG-R, a Riemannian Inertial Adaptive Gradient method with gradient-triggered Restart, for optimization on Riemannian manifolds. RIAG-R combines three ingredients: an AdaGrad-type adaptive step-size that requires no knowledge of the Lipschitz constant; inertial extrapolation in the tangent space via the exponential map to accelerate convergence; and a restart rule, costing only one extra inner product per iteration, that detects and corrects the momentum-saturation pathology induced by manifold curvature. We establish a per-iteration descent inequality, an optimal…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

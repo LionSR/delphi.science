@@ -1,0 +1,21 @@
+{
+  "key": "2607.27837",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.27837",
+  "title": "On the distinct maximal-clique sizes in $k$-uniform hypergraphs",
+  "authors": [
+    "Jiabao Yang",
+    "Lixiang Yu",
+    "Leilei Zhang"
+  ],
+  "summary": "Let $g(n,k)$ be the maximum number of distinct sizes of maximal cliques in an $n$-vertex $k$-uniform hypergraph, and let $f(n,k)=n-g(n,k)$. We determine the asymptotic order of $f(n,k)$ for every fixed integer $k\\ge 3$. Define $L_2(x)=\\max\\{2,\\log_2(\\max\\{1,x\\})\\}$, and, for $j\\ge 3$, let $L_j(x)$ be the least number of iterations of $L_{j-1}$ needed to reach a value at most $16$. We prove that $$ f(n,k)=Θ_k(L_k(n)).$$ In particular, $f(n,3)=Θ(\\log^{*}n)$, where $\\log^{*}n$ denotes the iterated logarithm. We also determine the asymptotic behaviour of the layered-tree threshold $c(n,k)$…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-07-30",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2607.16891",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.16891",
+  "title": "Certified-Gap Dual-Price Policies for Real-Time Truckload Bid Acceptance with Relocating, Clock-Constrained Resources",
+  "authors": [
+    "Aswin Chandrasekaran"
+  ],
+  "summary": "A truckload carrier must accept or reject each load tender within seconds. The decision depends on fleet state, hours-of-service (HOS) clocks, and appointment windows. We model this as a weakly coupled dynamic program in which the resources relocate and carry clocks: serving a request moves the truck to a new market and depletes its clocks, and whether a truck can serve a request depends on its state. Occupancy-based reusable-resource models do not cover this setting. We build a real-time dual-price policy from the same Lagrangian relaxation that gives the problem's upper bound. Policy and…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-07-18",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

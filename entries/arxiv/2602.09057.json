@@ -1,0 +1,23 @@
+{
+  "key": "2602.09057",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.09057",
+  "title": "SVD-Preconditioned Gradient Descent Method for Solving Nonlinear Least Squares Problems",
+  "authors": [
+    "Zhipeng Chang",
+    "Wenrui Hao",
+    "Nian Liu"
+  ],
+  "summary": "This paper introduces a novel optimization algorithm designed for nonlinear least-squares problems. The method is derived by preconditioning the gradient descent direction using the Singular Value Decomposition (SVD) of the Jacobian. This SVD-based preconditioner is then integrated with the first- and second-moment adaptive learning rate mechanism of the Adam optimizer. We establish the local linear convergence of the proposed method under standard regularity assumptions and prove global convergence for a modified version of the algorithm under suitable conditions. The effectiveness of the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-02-07",
+  "updated": "2026-02-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

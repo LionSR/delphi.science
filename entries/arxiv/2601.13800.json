@@ -1,0 +1,21 @@
+{
+  "key": "2601.13800",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.13800",
+  "title": "A Hybridizable Discontinuous Galerkin Method for the non--local Camassa--Holm--Kadomtsev--Petviashvili equation",
+  "authors": [
+    "Mukul Dwivedi",
+    "Ruben Gutendorf",
+    "Andreas Rupp"
+  ],
+  "summary": "This paper develops a hybridizable discontinuous Galerkin method for the two-dimensional Camassa--Holm--Kadomtsev--Petviashvili equation. The method employs Cartesian meshes with tensor-product polynomial spaces, enabling separate treatment of \\(x\\) and \\(y\\) derivatives. The non-local operator \\(\\partial_{x}^{-1}u_{y}\\) is localized through an auxiliary variable \\(v\\) satisfying \\(v_x = u_y\\), allowing efficient element-by-element computations. We prove energy stability of the semi-discrete scheme and derive \\(\\mathcal{O}(h^{k+1/2})\\) convergence in space. Numerical experiments validate the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-20",
+  "updated": "2026-01-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

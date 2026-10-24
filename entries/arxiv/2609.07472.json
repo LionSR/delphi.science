@@ -1,0 +1,22 @@
+{
+  "key": "2609.07472",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07472",
+  "title": "A Comparative Study of Finite-Volume-based Coupled and Segregated Reduced-Order Models for Incompressible Flows in Parametrized Domains",
+  "authors": [
+    "Andrea Buffolini",
+    "Davide Oberto",
+    "Gianluigi Rozza"
+  ],
+  "summary": "This work presents a comparative analysis of Reduced-Order Models (ROMs) applied to incompressible fluid dynamics within geometrically parametrized domains. Two distinct reduced-order solution strategies are investigated and compared: a monolithic coupled solver and a segregated SIMPLE-based algorithm. Their performance is assessed on two steady, two-dimensional benchmark cases: a lid-driven cavity flow and a flow past a cylindrical obstacle. The two algorithms are compared in terms of fields evaluation and aerodynamic coefficients prediction. The computational results highlight a…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math.NA"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

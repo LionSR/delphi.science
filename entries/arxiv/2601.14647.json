@@ -1,0 +1,23 @@
+{
+  "key": "2601.14647",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.14647",
+  "title": "TRSVR: An Adaptive Stochastic Trust-Region Method with Variance Reduction",
+  "authors": [
+    "Yuchen Fang",
+    "Xinshou Zheng",
+    "Javad Lavaei"
+  ],
+  "summary": "We propose a stochastic trust-region method for unconstrained nonconvex optimization that incorporates stochastic variance-reduced gradients (SVRG) to accelerate convergence. Unlike classical trust-region methods, the proposed algorithm relies solely on stochastic gradient information and does not require function value evaluations. The trust-region radius is adaptively adjusted based on a radius-control parameter and the stochastic gradient estimate. Under mild assumptions, we establish that the algorithm converges in expectation to a first-order stationary point. Moreover, the method…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-01-21",
+  "updated": "2026-01-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

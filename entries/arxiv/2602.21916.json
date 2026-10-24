@@ -1,0 +1,21 @@
+{
+  "key": "2602.21916",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.21916",
+  "title": "Robust Kaczmarz methods for nearly singular linear systems",
+  "authors": [
+    "Yunying Ke",
+    "Hao Luo"
+  ],
+  "summary": "The Kaczmarz method is an efficient iterative algorithm for large-scale linear systems. However, its linear convergence rate suffers from ill-conditioned problems and is highly sensitive to the smallest nonzero singular value. In this work, we aim to extend the classical Kaczmarz to nearly singular linear systems that are row rank-deficient. We introduce a new concept of nearly singular property by treating the row space as an unstable subspace in the Grassman manifold. We then define a related important space called the approximate kernel, based on which a robust kernel-augmented Kaczmarz…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-02-25",
+  "updated": "2026-02-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

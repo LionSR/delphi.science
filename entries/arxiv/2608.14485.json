@@ -1,0 +1,19 @@
+{
+  "key": "2608.14485",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.14485",
+  "title": "Effective Bialynicki-Birula-Brosnan motivic decompositions",
+  "authors": [
+    "Charles De Clercq"
+  ],
+  "summary": "Let $G$ be an isotropic reductive group and $X$ be a projective $G$-homogeneous variety. Using results from Bialynicki-Birula, Hesselink and Iversen, Brosnan showed that if $G$ is of inner type, the motive of $X$ can be expressed as a direct sum of Tate twists of motives of projective homogeneous varieties for the anisotropic kernel of $G$. We provide a SageMath implementation of this decomposition, based on a depth-first search of the Cayley graph of the Weyl group of $G$, ensuring the complexity scales with the size of the motive rather than the full Weyl group. As applications, we provide…",
+  "domain": "math.AG",
+  "tags": [
+    "math.AG"
+  ],
+  "published": "2026-08-14",
+  "updated": "2026-08-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

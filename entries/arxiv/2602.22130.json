@@ -1,0 +1,24 @@
+{
+  "key": "2602.22130",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.22130",
+  "title": "Sample Complexity Bounds for Robust Mean Estimation with Mean-Shift Contamination",
+  "authors": [
+    "Ilias Diakonikolas",
+    "Giannis Iakovidis",
+    "Daniel M. Kane",
+    "Sihan Liu"
+  ],
+  "summary": "We study the basic task of mean estimation in the presence of mean-shift contamination. In the mean-shift contamination model, an adversary is allowed to replace a small constant fraction of the clean samples by samples drawn from arbitrarily shifted versions of the base distribution. Prior work characterized the sample complexity of this task for the special cases of the Gaussian and Laplace distributions. Specifically, it was shown that consistent estimation is possible in these cases, a property that is provably impossible in Huber's contamination model. An open question posed in earlier…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.DS",
+    "math.ST"
+  ],
+  "published": "2026-02-25",
+  "updated": "2026-02-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

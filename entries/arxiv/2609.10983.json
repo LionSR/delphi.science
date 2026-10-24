@@ -1,0 +1,22 @@
+{
+  "key": "2609.10983",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10983",
+  "title": "A variational physics-informed graph neural network for heterogeneous solid mechanics",
+  "authors": [
+    "Aashay Rajan Yadav",
+    "Amiya Prakash Das",
+    "Ratna Kumar Annabattula"
+  ],
+  "summary": "Stress localization in heterogeneous solids is governed by the bimaterial interface, where the displacement field remains $C^0$-continuous, while in-plane stresses jump due to the stiffness mismatch. Coordinate-based physics-informed neural networks (PINNs) represent this jump via a prescribed regularization width or a weighted interface penalty, making their accuracy sensitive to how phase-contrast changes are handled. This work presents a variational, label-free physics-informed graph neural network (PI-GNN) in which the heterogeneity is carried by the discretization rather than by the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

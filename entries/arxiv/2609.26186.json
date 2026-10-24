@@ -1,0 +1,20 @@
+{
+  "key": "2609.26186",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.26186",
+  "title": "A Plasmode Benchmark Can Refute but Cannot Certify: Projection and Regularity in Causal-Inference Simulation",
+  "authors": [
+    "M. Ehsan Karim"
+  ],
+  "summary": "Plasmode simulation - resampling covariates, and often treatment, from a real cohort and regenerating the outcome from a model with an injected effect - is a standard tool for comparing causal-inference estimators. We argue that its validity turns on two separable design choices, and that separating them clarifies a recent debate over resampling versus regenerating the treatment. Our central message limits what such a benchmark can show: a plasmode can refute a universal claim about an estimator but cannot certify one. Refuting needs only that the simulated data genuinely belong to the class…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

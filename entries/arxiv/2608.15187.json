@@ -1,0 +1,22 @@
+{
+  "key": "2608.15187",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.15187",
+  "title": "MiNO: Cotangent-bundle propagator learning for PDEs",
+  "authors": [
+    "Gnankan Landry Regis N'guessan",
+    "Bum Jun Kim"
+  ],
+  "summary": "Scientific machine learning for partial differential equations commonly targets solution fields, as in physics-informed neural networks, or solution maps, as in neural operators. We study a third target: the propagator itself, a phase and amplitude in phase space. The motivation is a gap in regularity. A transported discontinuity is nonsmooth in space and time, yet the rule that moves it can be a polynomial phase carrying unit amplitude, so the object that generates an evolution can be far smoother than the field it generates. The microlocal neural operator (MiNO) learns that object, using…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.CE",
+    "math.NA"
+  ],
+  "published": "2026-08-15",
+  "updated": "2026-08-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

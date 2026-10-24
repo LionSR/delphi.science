@@ -1,0 +1,21 @@
+{
+  "key": "2603.01200",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.01200",
+  "title": "Non-Local Extremum Seeking Based on the Divergence Theorem",
+  "authors": [
+    "Raik Suttner",
+    "Christian Ebenbauer",
+    "Sergey Dashkovskiy"
+  ],
+  "summary": "We propose a new design strategy for extremum seeking control for a multi-dimensional single-integrator system in the presence of local extrema. The proposed method employs suitably designed sinusoidal dither signals, which force the single-integrator to a spherical motion. Over time, this spherical motion gives approximate access to an integral of the objective function over a sphere. Using the divergence theorem, we identify the integral over the sphere as the gradient of an integral over the enclosed ball. This integral over the ball defines a locally averaged objective function. The…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-01",
+  "updated": "2026-03-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

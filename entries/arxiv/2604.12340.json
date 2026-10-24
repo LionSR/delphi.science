@@ -1,0 +1,23 @@
+{
+  "key": "2604.12340",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.12340",
+  "title": "Information-Geometric Decomposition of Generalization Error in Unsupervised Learning",
+  "authors": [
+    "Gilhan Kim"
+  ],
+  "summary": "We decompose the Kullback--Leibler generalization error (GE) -- the expected KL divergence from the data distribution to the trained model -- of unsupervised learning into three non-negative components: model error, data bias, and variance. The decomposition is exact for any e-flat model class and follows from two identities of information geometry: the generalized Pythagorean theorem and a dual e-mixture variance identity. As an analytically tractable demonstration, we apply the framework to $ε$-PCA, a regularized principal component analysis in which the empirical covariance is truncated…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cond-mat.stat-mech",
+    "cs.IT",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-04-14",
+  "updated": "2026-04-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2610.12713",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.12713",
+  "title": "SDDP has polynomial iteration complexity in the horizon",
+  "authors": [
+    "Vincent Leclere"
+  ],
+  "summary": "Stochastic dual dynamic programming (SDDP) and its variants are run in practice with forward passes that sample the noise at random. Recent iteration-complexity results favour another choice: when the trial points are selected deterministically, for instance along the scenario with the largest gap, the number of iterations is polynomial in the horizon $T$, whereas every bound we know of for randomly sampled forward passes is exponential in $T$. We show that this is not intrinsic to random sampling, for a broad class of trajectory-following dynamic programming algorithms, which includes SDDP,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

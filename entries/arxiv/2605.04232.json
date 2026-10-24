@@ -1,0 +1,24 @@
+{
+  "key": "2605.04232",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04232",
+  "title": "Probabilistic Floating-Point Round-Off Analysis via Concentration Inequalities",
+  "authors": [
+    "Yichen Tao",
+    "Hongfei Fu",
+    "Jiawei Chen",
+    "Jean-Baptiste Jeannin"
+  ],
+  "summary": "Floating-point round-off errors are ubiquitous in numerically intensive programs arising in fields such as scientific computing and optimization. As floating-point errors potentially lead to unexpected and catastrophic program failures, one must derive guaranteed round-off thresholds to ensure the correctness of these programs. However, deterministic round-off thresholds tend to be too conservative to be usable in practice, since they often involve large round-off errors that occur with small probability. Probabilistic thresholds relax deterministic ones by specifying that the probability of…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "cs.PL",
+    "math.NA"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-05-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

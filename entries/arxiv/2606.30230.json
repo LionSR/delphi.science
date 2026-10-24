@@ -1,0 +1,23 @@
+{
+  "key": "2606.30230",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.30230",
+  "title": "A Distributionally Robust Framework for Learned Reconstructions in Inverse Problems",
+  "authors": [
+    "Floor van Maarschalkerwaart",
+    "Subhadip Mukherjee",
+    "Christoph Brune",
+    "Marcello Carioni"
+  ],
+  "summary": "Learned reconstruction operators for inverse problems are typically trained under a fixed noise model, and generalize poorly when the distribution during testing differs from the one assumed during training. Distributionally robust optimization (DRO) addresses this by optimizing against the worst-case distribution within a prescribed ambiguity set, but standard Wasserstein DRO perturbs the full joint distribution uniformly, which can be overly conservative and ignores the physics of the measurement process. We develop a structured DRO framework in which the ambiguity set is restricted to…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

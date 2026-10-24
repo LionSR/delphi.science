@@ -1,0 +1,21 @@
+{
+  "key": "2607.12208",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12208",
+  "title": "The Benjamini--Hochberg Procedure Can Fail to Control the FDR for Correlated Two-Sided Gaussian Tests",
+  "authors": [
+    "Edgar Dobriban"
+  ],
+  "summary": "We show that the Benjamini--Hochberg procedure can fail to control the false discovery rate (FDR) at its nominal level for correlated two-sided Gaussian $p$-values. We construct a factor model for which, at level $α=0.01$, a rigorous interval-arithmetic certificate proves $FDR>0.0104$ for all sufficiently large numbers of hypotheses. This disproves a conjecture widely believed to be true for twenty years. Monte Carlo experiments are consistent with the theoretical result. The proof was obtained by GPT-5.6 Pro and carefully checked by the author.",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.AI",
+    "stat.ME"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

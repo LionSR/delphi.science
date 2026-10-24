@@ -1,0 +1,24 @@
+{
+  "key": "2609.28297",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.28297",
+  "title": "Contraction and Statistical Inference under Privacy for Uniformly Bounded Distributions",
+  "authors": [
+    "Leonhard Grosse",
+    "Sara Saeidian",
+    "Tobias J. Oechtering",
+    "Mikael Skoglund"
+  ],
+  "summary": "We investigate $c$-interior pointwise maximal leakage (PML) as a tool for contraction analyses and disclosure control. Based on the strong adversarial threat models from maximal leakage, $c$-interior PML generalizes local differential privacy (LDP) to data-generating distributions with densities uniformly bounded away from zero by $c>0$. Viewing $c$-interior PML as an algebraic constraint on a kernel yields more flexible (and often tighter) contraction analyses than standard LDP. We provide tight bounds on the Dobrushin coefficient, and bound the contraction coefficient of the…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "cs.CR",
+    "math.ST"
+  ],
+  "published": "2026-09-23",
+  "updated": "2026-09-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

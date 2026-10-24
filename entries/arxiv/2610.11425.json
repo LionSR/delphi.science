@@ -1,0 +1,21 @@
+{
+  "key": "2610.11425",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.11425",
+  "title": "Accelerated Proximal Gradient Method for Non-Strongly Convex Time-Varying Optimization",
+  "authors": [
+    "Tomoya Kamijima",
+    "Naoki Marumo",
+    "Akiko Takeda"
+  ],
+  "summary": "This paper studies time-varying composite optimization problems with convex but not necessarily strongly convex objective functions, on compact domains and with bounded temporal variability. As a baseline, we first analyze the time-varying proximal gradient (TV-PG) method. We show that its asymptotic function value gap is bounded by $O(δ^{1/2})$ as $δ\\to0$, where $δ$ measures the temporal variability of the objective function. This dependence on $δ$ is tight in the worst case for TV-PG. Our main contribution is a time-varying accelerated proximal gradient method that improves the asymptotic…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

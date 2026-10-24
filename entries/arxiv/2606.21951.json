@@ -1,0 +1,25 @@
+{
+  "key": "2606.21951",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.21951",
+  "title": "On the Curse of Dimensionality in Private Sparse Covariance Estimation and PCA",
+  "authors": [
+    "Syamantak Kumar",
+    "Shourya Pandey",
+    "Purnamrita Sarkar",
+    "Kevin Tian"
+  ],
+  "summary": "We study high-dimensional differentially private (DP) covariance estimation in the operator norm, and principal component analysis (PCA), under $k$-row-column sparsity ($k$-RCS) of the covariance matrix. In the non-private setting, it is known that $\\mathsf{poly}(k, \\log d)$ samples suffice to solve both of these problems. However, the only comparable result known under DP (Wang et al. 2021) requires $Ω(d)$ samples under standard parameterizations of the problem. We investigate when this curse of dimensionality is inherent for sparse covariance estimation tasks under DP. On the upper bound…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.CR",
+    "cs.DS",
+    "math.ST"
+  ],
+  "published": "2026-06-20",
+  "updated": "2026-06-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

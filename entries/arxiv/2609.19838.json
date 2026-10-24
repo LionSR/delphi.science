@@ -1,0 +1,21 @@
+{
+  "key": "2609.19838",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.19838",
+  "title": "Entropy-Based Local Characteristic Decomposition",
+  "authors": [
+    "Shaoshuai Chu",
+    "Michael Herty",
+    "Alexander Kurganov"
+  ],
+  "summary": "Local characteristic decomposition (LCD) is widely used in high-order numerical methods for hyperbolic systems of conservation laws to reduce spurious oscillations appearing in the computed solutions. The LCD implementation requires a representative average interface state, typically obtained using arithmetic or Roe-type averages of the nearly grid values. We propose an entropy-based LCD (ELCD), in which the states in the two cells adjacent to an interface are considered together with several nearby states in phase space. Among these candidates, we select the state that locally minimizes the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

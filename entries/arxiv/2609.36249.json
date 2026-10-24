@@ -1,0 +1,20 @@
+{
+  "key": "2609.36249",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.36249",
+  "title": "LDPC Fractus Codes: Sparse Codes with Recursive Structure",
+  "authors": [
+    "Jesús Carrillo-Pacheco"
+  ],
+  "summary": "We introduce a new family of recursively constructed sparse matrices, termed Fractus matrices, and investigate their use in constructing low-density parity-check (LDPC) codes. Generated through a self-similar recursive process, these matrices yield regular sparse parity-check matrices while preserving key structural properties across successive iterations. This recursive structure enables an efficient encoding algorithm with computational complexity that is nearly linear in the block length. Decoding is performed using standard iterative message-passing algorithms, thereby retaining the…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "math.CO"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

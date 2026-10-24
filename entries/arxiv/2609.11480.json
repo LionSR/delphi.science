@@ -1,0 +1,20 @@
+{
+  "key": "2609.11480",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11480",
+  "title": "Global Linear Convergence of the Proximal Bundle Method under Unknown Piecewise Smoothness and Quadratic Growth",
+  "authors": [
+    "Zhenwei Lin",
+    "Zhe Zhang"
+  ],
+  "summary": "We study why the proximal bundle method (PBM) can perform better in practice when it retains more cutting planes. We consider convex objectives with quadratic growth and an unknown piecewise-smooth structure. Our key observation is that retaining sufficiently many cutting planes allows PBM to exploit the objective's piecewise-smooth structure and behave as if it were optimizing a smooth function. We provide a theoretical explanation for the observed linear convergence of PBM on piecewise-smooth objectives when it retains sufficiently many cutting planes.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2604.23874",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23874",
+  "title": "Deep Learning of Solver-Aware Turbulence Closures from Nudged LES Dynamics",
+  "authors": [
+    "Ashwin Suriyanarayanan",
+    "Dibyajyoti Chakraborty",
+    "Romit Maulik"
+  ],
+  "summary": "The differentiable physics paradigm may be leveraged as an a-posteriori approach for discovering turbulence closure models by embedding a neural network parameterization directly inside the solver and optimizing it given potentially sparse target data. This addresses a key limitation of a-priori learning where direct numerical simulation (DNS) data is used to approximate the subgrid stress with the assumption of a low-pass filter. Closures trained in this a-priori manner frequently lead to unstable deployments due to the mismatch between the assumed filter and the effect of numerical…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "cs.LG",
+    "math.DS",
+    "physics.comp-ph",
+    "physics.geo-ph"
+  ],
+  "published": "2026-04-26",
+  "updated": "2026-06-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

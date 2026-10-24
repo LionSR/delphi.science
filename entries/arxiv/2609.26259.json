@@ -1,0 +1,20 @@
+{
+  "key": "2609.26259",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.26259",
+  "title": "Online Line Aggregation with Deadlines: Randomized Guarantees and Learning-Augmented Tradeoffs",
+  "authors": [
+    "Tianhang Lu"
+  ],
+  "summary": "We study online line aggregation with deadlines, where requests arrive over time on the positive half-line and a service at location $y$ clears all pending requests in $[0,y]$ at cost $y$. In the classical adversarial setting, we propose an $e$-competitive randomized algorithm against an oblivious adversary and prove a matching lower bound. Thus $e$ is the optimal randomized competitive ratio. We then consider advice in the form of an offline feasible solution. For every confidence parameter $λ\\in(0,1]$, our deterministic learning-augmented algorithm is $(1+3/λ)$-robust and…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.OC"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

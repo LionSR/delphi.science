@@ -1,0 +1,24 @@
+{
+  "key": "2608.06774",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.06774",
+  "title": "Bridging Balancing Weights and Augmentation in Covariate-adjusted Analyses with Time-to-Event Endpoints: Theory and Practical Recommendations",
+  "authors": [
+    "Baoshan Zhang",
+    "Yi Chen",
+    "Yu Du",
+    "Tuo Wang"
+  ],
+  "summary": "Covariate adjustment improves the efficiency of treatment-effect analyses in randomized clinical trials, provided the adjustment targets the correct quantity. For time-to-event endpoints, two marginal targets are of primary interest: the log-rank test for the presence of a treatment effect and the marginal hazard ratio for its magnitude. Existing covariate adjustment approaches reach these targets by different ways. Augmentation adjusts the log-rank score by regressing derived outcomes on the baseline covariates within each arm. Weighting instead reweights the two arms to balance the…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "stat.AP"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

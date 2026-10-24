@@ -1,0 +1,19 @@
+{
+  "key": "2609.05681",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.05681",
+  "title": "Stack Sorting on Words with Bounded-Repetition",
+  "authors": [
+    "Fayzan Khan"
+  ],
+  "summary": "We consider the family of operators of stack sorting (s_m)_{m >= 1} acting on words according to the following rule: s_m(w) is the output produced by the usual West algorithm of stack sorting on the input word w, but allowing for at most m repetitions of the same letter stacked in succession. Our first main theorem gives an explicit formula for the action of the operator s_m on binary words w = a^p b a^q (with distinct letters a > b): s_m(a^p b a^q) = a^max(p-m,0) b a^min(p,m)+q, d_m(a^k b) = ceil(k/m). From the above formulas it follows that for every m = d_{m'}(w) for binary words w = a^k…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

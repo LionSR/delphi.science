@@ -1,0 +1,21 @@
+{
+  "key": "2601.08498",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.08498",
+  "title": "A Structure Preserving Finite Volume Scheme for the Navier-Stokes-Korteweg Equations",
+  "authors": [
+    "Jan Giesselmann",
+    "Philipp Öffner",
+    "Robert Sauerborn"
+  ],
+  "summary": "We present a semi-discrete finite volume scheme for the local NavierStokes-Korteweg and Euler-Korteweg systems. Our scheme is applicable for equidistant Cartesian meshes in one and two space dimensions. In contrast to other works, which employ, for example, hyperbolic approximations of the equations or auxiliary-variable approaches leading to extended systems, our scheme operates directly on the original system. We prove that it conserves mass and momentum and is energy stable. Numerical experiments complement our theoretical findings, showing that the scheme is convergent of order one if…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-13",
+  "updated": "2026-01-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

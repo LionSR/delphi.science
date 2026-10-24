@@ -1,0 +1,22 @@
+{
+  "key": "2609.14834",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.14834",
+  "title": "Local Resilience for Containment of Bounded Degree Spanning Subgraphs",
+  "authors": [
+    "Peter Allen",
+    "Julia Böttcher",
+    "Yoshiharu Kohayakawa",
+    "Mihir Neve"
+  ],
+  "summary": "We prove that for all $Δ\\geq 2$ and $γ> 0$, there exists a constant $C = C(Δ, γ)$ such that for $p\\geq C(\\log n/n)^{1/Δ}$, asymptotically almost surely, every spanning subgraph $G$ of $G(n,p)$ with minimum degree at least $(1-1/(2Δ)+γ)pn$ contains every $n$-vertex graph $H$ with maximum degree at most $Δ$ and with at least $Cp^{-2}$ vertices not in any triangles of $H$. This is a 'sparse local resilience version' of a classical theorem of Sauer and Spencer. The condition that $H$ should contain some vertices not in triangles is necessary, and in fact, the quantity $p^{-2}$ is asymptotically…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-09-13",
+  "updated": "2026-09-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

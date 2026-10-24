@@ -1,0 +1,24 @@
+{
+  "key": "2607.08538",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08538",
+  "title": "High-Dimensional Procrustes Matching via Tree Counts",
+  "authors": [
+    "Xiaochun Niu",
+    "Tselil Schramm",
+    "Jiaming Xu"
+  ],
+  "summary": "Suppose we observe two sets of $n$ Gaussian vectors in $\\mathbb{R}^d$, with the promise that, after applying a permutation of $[n]$ and a rotation of $\\mathbb{R}^d$, the two sets are $ρ$-correlated. The Procrustes matching problem asks us to recover the unknown permutation of $[n]$ that aligns the two sets. The problem is well-studied in the low-dimensional regime $d=O(\\log n)$, but the high-dimensional regime $d\\gg \\log n$ has remained largely uncharted: prior matching guarantees require nearly perfect correlation $ρ=1-o(1)$, even for information-theoretic recovery. Our main result is a…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.IT",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-07-09",
+  "updated": "2026-07-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

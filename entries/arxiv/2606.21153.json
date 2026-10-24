@@ -1,0 +1,24 @@
+{
+  "key": "2606.21153",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.21153",
+  "title": "DUET: Decentralized Bilevel Optimization without Lower-Level Strong Convexity",
+  "authors": [
+    "Zhen Qin",
+    "Zhuqing Liu",
+    "Songtao Lu",
+    "Yingbin Liang",
+    "Jia Liu"
+  ],
+  "summary": "Decentralized bilevel optimization (DBO) provides a powerful framework for multi-agent systems to solve local bilevel tasks in a decentralized fashion without the need for a central server. However, most existing DBO methods rely on lower-level strong convexity (LLSC) to guarantee unique solutions and a well-defined hypergradient for stationarity measure, hindering their applicability in many practical scenarios not satisfying LLSC. To overcome this limitation, we introduce a new single-loop DBO algorithm called diminishing quadratically-regularized bilevel decentralized optimization (DUET),…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-06-19",
+  "updated": "2026-06-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

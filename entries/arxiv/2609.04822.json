@@ -1,0 +1,23 @@
+{
+  "key": "2609.04822",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.04822",
+  "title": "Minimax Lower Bound for Estimating Diffusion-based Local Intrinsic Dimension",
+  "authors": [
+    "Jaehee Seo",
+    "Wontae Jeong",
+    "Jisu Kim"
+  ],
+  "summary": "While diffusion-based methods have recently emerged as effective tools for probing the intrinsic geometry of high-dimensional data, their statistical difficulty remains largely unexplored. We study estimation of the finite-scale population functional underlying FLIPD (Kamkari et al., 2024; arXiv:2406.03537), a diffusion-based local intrinsic dimension (LID) quantity defined through the logarithmic scale derivative of a Gaussian-smoothed density. Intuitively, Gaussian smoothing turns local dimension into a scale law: near a $d$-dimensional manifold, the kernel mass grows like $σ^d$, so…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

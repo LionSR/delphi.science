@@ -1,0 +1,21 @@
+{
+  "key": "2605.00396",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.00396",
+  "title": "Riemannian Optimization over Symmetric Positive Definite Matrices with the Alpha-Procrustes Geometry",
+  "authors": [
+    "Derun Zhou",
+    "Keisuke Yano",
+    "Mahito Sugiyama"
+  ],
+  "summary": "In Riemannian optimization, it is well known that the condition number of the Riemannian Hessian at an optimum strongly influences the asymptotic convergence behavior of optimization algorithms. On the manifold of symmetric positive definite (SPD) matrices, several commonly used metrics for optimization, such as the Affine-Invariant (AI) and Bures--Wasserstein (BW) metrics, tend to become ill-conditioned as the underlying SPD matrix becomes ill-conditioned. As a result, even when the Euclidean Hessian remains uniformly well-conditioned on the SPD manifold, optimization may still become…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-01",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2604.26134",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26134",
+  "title": "Reachability-Based Design Optimization for Aircraft Maneuverability",
+  "authors": [
+    "Steven Nguyen",
+    "Nicholas Orndorff",
+    "Jorge Cortés",
+    "Boris Kramer"
+  ],
+  "summary": "This paper presents a method for incorporating control analysis into design optimization for highly-maneuverable aircraft. By studying reachable sets for aircraft dynamics, we ensure that the optimizer will take the aircraft's controlled capabilities into account. We compute reachable sets of linear dynamics for computational efficiency, and account for aircraft trim points to factor in asymmetric magnitude bounds on the input signals. We demonstrate the proposed method in design optimization of a blended-wing-body aircraft. Considering its wing half-span and center half-span as design…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-28",
+  "updated": "2026-04-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

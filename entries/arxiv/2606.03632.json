@@ -1,0 +1,21 @@
+{
+  "key": "2606.03632",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.03632",
+  "title": "Optimal Finite-Horizon LQR Control for Traffic Flow via Variable Speed Limits",
+  "authors": [
+    "Brian Block",
+    "Stephanie Stockar"
+  ],
+  "summary": "This article presents a finite-horizon linear quadratic regulator for the control of the first-order Lighthill-Whitham-Richards traffic model with a triangular fundamental diagram. The in-domain control action is realized through variable speed limits implemented as a source term in the governing hyperbolic partial differential equation. Unlike prior studies on infinite-horizon formulations, this article develops a finite-horizon LQR framework, deriving a space and time varying state feedback function for hyperbolic PDEs. The solution to the finite time optimal control problem relies on the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-06-02",
+  "updated": "2026-06-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

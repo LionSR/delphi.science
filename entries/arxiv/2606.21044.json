@@ -1,0 +1,20 @@
+{
+  "key": "2606.21044",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.21044",
+  "title": "An Asynchronous multi-rate Taylor method for Delay Differential Equations",
+  "authors": [
+    "Avinash Malik"
+  ],
+  "summary": "The numerical simulation of high-dimensional, multi-rate Delay Differential Equations (DDEs) is fundamentally bottlenecked by synchronous time-stepping and the dynamic memory allocation required for continuous history tracking. In this paper, we introduce the Asynchronous Adaptive Taylor Solver (AATS), an event-driven integration framework designed to overcome these high-performance computing limitations. By assigning independent local clocks to individual coordinates and advancing them using high-order Taylor polynomials generated via compile-time Automatic Differentiation, AATS restricts…",
+  "domain": "cs.MS",
+  "tags": [
+    "cs.MS",
+    "math.NA"
+  ],
+  "published": "2026-06-19",
+  "updated": "2026-06-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2607.07742",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.07742",
+  "title": "Discrete Faà di Bruno via Möbius Inversion",
+  "authors": [
+    "Heinrich Hartmann"
+  ],
+  "summary": "We approach discrete and differential Faà di Bruno formulas from a Möbius inversion angle. On the Boolean cube, Newton's discrete Taylor formula and the definition of iterated forward differences form a zeta--Möbius dual pair, and composing two Taylor expansions and inverting once yields a closed discrete Faà di Bruno formula at a fixed basepoint: for arbitrary maps $f, g$ between abelian groups, $$ Δ(f \\circ g;\\,x;\\,u_1,\\dots,u_k) = \\sum_{H \\in \\mathrm{Cov}(k)} Δ(f;\\,g(x);\\,(Δ(g;x;u_T))_{T\\in H}), $$ where $\\mathrm{Cov}(k)$ denotes the coverings of $[k]$ by nonempty subsets. Grouping…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

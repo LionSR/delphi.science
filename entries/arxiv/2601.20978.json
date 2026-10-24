@@ -1,0 +1,20 @@
+{
+  "key": "2601.20978",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.20978",
+  "title": "Characteristic Based Physics Informed Neural Networks for Advection Equations with a Focus on Discontinuous Solutions",
+  "authors": [
+    "Omid Khosravi",
+    "Mehdi Tatari"
+  ],
+  "summary": "This paper presents a characteristic-based loss function for physics-informed neural networks (PINNs) that circumvents automatic differentiation and significantly reduces training cost for advection equations. However, standard PINNs often fail to accurately resolve discontinuous solutions, as their global smoothness prior and spectral bias lead to smeared shocks or spurious oscillations near sharp gradients. To accurately capture these discontinuities, the density of sampling points in their vicinity must be sufficiently high, and an appropriate sampling strategy must be employed. For…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-28",
+  "updated": "2026-09-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2607.29470",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.29470",
+  "title": "iSMART: An Iterative Sampling-and-Regression Technique for Solving Martingale-Based PDEs",
+  "authors": [
+    "Tiejun Li",
+    "Xiaoguang Li",
+    "Fugui Ma"
+  ],
+  "summary": "We propose the {\\bf i}terative {\\bf S}a{\\bf M}pling-{\\bf A}nd-{\\bf R}egression {\\bf T}echnique (iSMART) for high-dimensional martingale-based partial differential equations (PDEs) in this paper. By leveraging the $L^2$-projection property of conditional expectation and adopting the stop-gradient technique, iSMART reformulates the continuous martingale condition derived from PDEs into a sequence of tractable sampling-regression problems within an iterative framework. This approach relies solely on standard SDE path simulation and plain squared-error loss minimization, completely bypassing the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-31",
+  "updated": "2026-07-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

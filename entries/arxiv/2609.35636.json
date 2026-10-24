@@ -1,0 +1,23 @@
+{
+  "key": "2609.35636",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.35636",
+  "title": "Isogeometric multi-patch preconditioner for time-dependent electromagnetic problems",
+  "authors": [
+    "Bernard Kapidani",
+    "Gabriele Loli",
+    "Giancarlo Sangalli",
+    "Mattia Tani",
+    "Rafael Vázquez"
+  ],
+  "summary": "We build upon recent developments in high-order spline-based geometric methods for the three-dimensional initial boundary value problem of Maxwell's equations. Previous schemes were limited to single-patch geometries. To address the computational challenges associated with inverting mass matrices in multi-patch settings, we extend existing techniques for 0-forms mass and stiffness matrices to 1-forms mass matrices. Our approach leverages the tensor-product structure of spline spaces to construct a spectrally equivalent preconditioner for the 1-forms mass matrices. Specifically, we design an…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2608.06642",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.06642",
+  "title": "The error estimate of entropy-stable discontinuous Galerkin methods for hyperbolic conservation laws",
+  "authors": [
+    "Xu-Kun Chen",
+    "Yong Liu",
+    "Chi-Wang Shu"
+  ],
+  "summary": "Entropy inequalities are fundamental to the well-posedness of hyperbolic conservation laws, providing the essential criterion for selecting the physically admissible solution among infinitely many weak solutions. Chen and Shu [J. Comput. Phys. 345 (2017)] proposed a unified framework for constructing high-order discontinuous Galerkin (DG) methods that satisfy entropy inequalities for any given entropy via specific numerical quadrature; however, their accompanying error analysis was limited to the truncation error level, leaving a critical gap in the rigorous convergence theory for these…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-06",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

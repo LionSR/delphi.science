@@ -1,0 +1,20 @@
+{
+  "key": "2606.04030",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.04030",
+  "title": "Reduced order modeling for spatio-temporal pattern approximation in diffusive Lotka-Volterra equations",
+  "authors": [
+    "Bülent Karasözen",
+    "Murat Uzunca"
+  ],
+  "summary": "This paper presents an efficient reduced order modeling (ROM) framework for simulating spatio-temporal pattern formation in three-species diffusive Lotka-Volterra systems. To alleviate the high computational cost associated with long-time simulations of the high-dimensional full order model (FOM), we apply proper orthogonal decomposition (POD) to project the solution onto a low-dimensional subspace. Further efficiency is achieved through tensorial POD (TPOD), which preserves the quadratic nonlinear structure and enables offline-online decomposition. Numerical experiments demonstrate that…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

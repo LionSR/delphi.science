@@ -1,0 +1,21 @@
+{
+  "key": "2609.06146",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.06146",
+  "title": "Low-rank matrix recovery landscapes beyond RIP with application to rank-one measurements",
+  "authors": [
+    "Andrew D. McRae"
+  ],
+  "summary": "We study the problem of low-rank matrix recovery from linear measurements via the global nonconvex landscape of a low-rank factored formulation of the matrix LASSO (nuclear-norm--regularized least-squares). If the landscape is benign, that is, has no bad local optima, then practical and scalable algorithms can compute good statistical estimates. Previous state-of-the-art landscape guarantees have typically assumed that the linear measurement operator has the restricted isometry property, that is, the operator is approximately an isometry over all low-rank matrices. This is an unrealistic…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.IT",
+    "math.ST"
+  ],
+  "published": "2026-09-05",
+  "updated": "2026-09-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

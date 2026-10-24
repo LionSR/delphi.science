@@ -1,0 +1,21 @@
+{
+  "key": "2601.05056",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.05056",
+  "title": "ZIVR: An Incremental Variance Reduction Technique For Zeroth-Order Composite Problems",
+  "authors": [
+    "Silan Zhang",
+    "Yujie Tang"
+  ],
+  "summary": "This paper investigates zeroth-order (ZO) finite-sum composite optimization. Recently, variance reduction techniques have been applied to ZO methods to mitigate the non-vanishing variance of 2-point estimators in constrained/composite optimization, yielding improved convergence rates. However, existing ZO variance reduction methods typically involve batch sampling of size at least $Θ(n)$ or $Θ(d)$, which can be computationally prohibitive for large-scale problems. In this work, we propose a general variance reduction framework, Zeroth-Order Incremental Variance Reduction (ZIVR), which…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-01-08",
+  "updated": "2026-01-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

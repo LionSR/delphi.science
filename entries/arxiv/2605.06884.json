@@ -1,0 +1,24 @@
+{
+  "key": "2605.06884",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.06884",
+  "title": "Muon with Nesterov Momentum: Heavy-Tailed Noise and (Randomized) Inexact Polar Decomposition",
+  "authors": [
+    "Sayantan Choudhury",
+    "Xiaoran Cheng",
+    "Martin Takáč",
+    "Sen Na",
+    "Mladen Kolar"
+  ],
+  "summary": "Most first-order optimizers treat matrix-valued parameters as vectors, ignoring the intrinsic geometry of hidden-layer weights in neural networks. Muon addresses this mismatch by updating along the polar factor of a momentum matrix, but its theoretical understanding has lagged behind practice. In particular, practical implementations incorporate Nesterov momentum, compute the polar factor only approximately, and operate with stochastic gradients that may be heavy-tailed. We close this gap by developing a convergence theory for Muon with Nesterov momentum and inexact polar decomposition in…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

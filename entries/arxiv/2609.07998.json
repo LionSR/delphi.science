@@ -1,0 +1,21 @@
+{
+  "key": "2609.07998",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07998",
+  "title": "Mini-Batch Risk-Averse Deep Q-Learning: A Robot Navigation Case Study",
+  "authors": [
+    "Aayush Patel",
+    "Andrzej Ruszczyński"
+  ],
+  "summary": "We study the control of Markov decision processes in which the quality of a policy is evaluated by a dynamic, time-consistent Markov risk measure rather than by an expected discounted cost. The main obstacle to combining such measures with reinforcement learning is that a transition risk mapping depends on the transition kernel in a nonlinear way, and therefore cannot be estimated from a single observed transition. We remove this obstacle by employing mini-batch transition risk mappings: the mapping is applied to the empirical measure of $N$ independent next-state samples, and the result is…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

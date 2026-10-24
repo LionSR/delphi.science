@@ -1,0 +1,21 @@
+{
+  "key": "2601.16640",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.16640",
+  "title": "Convergent adaptive iterative schemes for solving multi-physics problems",
+  "authors": [
+    "Jakob S. Stokke",
+    "Kundan Kumar",
+    "Florin A. Radu"
+  ],
+  "summary": "In this paper, we derive a practical, general framework for creating adaptive iterative (linearization or splitting) algorithms to solve multi-physics problems. This means that, given an iterative method, we derive \\textit{a posteriori} estimators to predict the success or failure of the method. Based on these estimators, we propose adaptive algorithms, including adaptively switching between methods, adaptive time-stepping methods, and the adaptive tuning of stabilization parameters. We apply this framework to two-phase flow in porous media, surfactant transport in porous media, and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-23",
+  "updated": "2026-09-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

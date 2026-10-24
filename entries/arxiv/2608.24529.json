@@ -1,0 +1,27 @@
+{
+  "key": "2608.24529",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.24529",
+  "title": "Randomized Block Davidson Eigensolvers for Plane-Wave Density-Functional Theory",
+  "authors": [
+    "Moritz Gubler",
+    "Taejun Park",
+    "Augustin Bussy",
+    "Johannes Laute",
+    "Nicola Marzari",
+    "Iurii Timrov",
+    "Laura Grigori"
+  ],
+  "summary": "Iterative diagonalization is the dominant cost of plane-wave density-functional theory (DFT), with search-space orthogonalization scaling particularly quickly with problem size and the number of target states. We present a randomized block Davidson-type eigensolver that replaces Euclidean orthogonalization with randomized Gram-Schmidt in a sketched inner product, requiring only a single pass over the basis while keeping its conditioning bounded independently of the input vectors. This modification changes only the Rayleigh-Ritz step, which becomes a definite generalized Hermitian…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cond-mat.mtrl-sci",
+    "physics.comp-ph"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

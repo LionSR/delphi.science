@@ -1,0 +1,23 @@
+{
+  "key": "2607.02247",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.02247",
+  "title": "Aggregation with Exponential Weights is Optimal in Expectation",
+  "authors": [
+    "Mikael Møller Høgsgaard",
+    "Patrick Rebeschini",
+    "Tobias Wegel"
+  ],
+  "summary": "The aggregation with exponential weights (AEW) estimator is not fully understood in the basic setting of model selection aggregation with squared loss. In particular, whether it is minimax-rate optimal in expectation for large enough fixed temperatures and under random design has been an open problem since its introduction, which was explicitly posed by Lecué and Mendelson (2013). In this paper, we settle this problem by showing that \\emph{without} requiring a Bernstein-type assumption, the AEW indeed achieves the excess risk $T \\log (M) / (n+1)$ in expectation, whenever the temperature $T$…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-07-02",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

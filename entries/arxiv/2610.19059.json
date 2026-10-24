@@ -1,0 +1,20 @@
+{
+  "key": "2610.19059",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.19059",
+  "title": "First-order Optimization Methods with Generalized Smoothness for Low-rank Matrix Factorization",
+  "authors": [
+    "A. V. Bidanets",
+    "F. S. Stonyakin"
+  ],
+  "summary": "This paper studies several first-order methods for low-rank matrix minimization in the Burer--Monteiro form, where the target matrix is represented as the product of a nonnegative factor matrix and its transpose. Such a factorization destroys convexity of the objective function and global Lipschitz continuity of the gradient. We prove that for a quadratic objective function that is strongly convex only on the subspace of symmetric matrices, the Burer-Monteiro factorized objective possesses generalized smoothness with a fractional exponent 2/3. For a quadratic objective, the generalized…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

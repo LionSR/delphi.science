@@ -1,0 +1,21 @@
+{
+  "key": "2610.00738",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00738",
+  "title": "Q-MINO: A Minimal-Norm Method for Quantization-Aware Training",
+  "authors": [
+    "Don Li"
+  ],
+  "summary": "The Straight-Through Estimator (STE) is a widely used heuristic for Quantization-Aware Training (QAT), but its surrogate gradients can exhibit substantial mismatch with the underlying quantized objective, leading to noisy updates and parameter oscillations, particularly in ultra-low-bit regimes. We propose the Quantization-Aware Minimal-Norm Optimizer (Q-MINO), a temporal bundle method that combines gradient consensus, state-drift regularization, and an alignment constraint to construct stabilized, minimum-norm update directions from recent optimization states. Q-MINO solves the resulting…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AR",
+    "cs.LG"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

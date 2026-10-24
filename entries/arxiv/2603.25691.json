@@ -1,0 +1,20 @@
+{
+  "key": "2603.25691",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.25691",
+  "title": "Fast and Accurate CP-HIFI Tensor Decompositions: Exploiting Kronecker Structure",
+  "authors": [
+    "Johannes J. Brust",
+    "Tamara G. Kolda"
+  ],
+  "summary": "Tensor decompositions are a fundamental tool in scientific computing and data analysis. In many applications -- such as simulation data on irregular grids, surrogate modeling for parameterized PDEs, or spectroscopic measurements -- the data has both discrete and continuous structure, and may only be observed at scattered sample points. The CP-HIFI (hybrid infinite-finite) decomposition generalizes the Canonical Polyadic (CP) tensor decomposition to settings where some factors are finite-dimensional vectors and others are functions drawn from infinite-dimensional spaces. The decomposition can…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-26",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

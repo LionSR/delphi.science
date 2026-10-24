@@ -1,0 +1,24 @@
+{
+  "key": "2608.17173",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17173",
+  "title": "Policy Optimization and Statistical Inference for Online Contextual Matrix Games",
+  "authors": [
+    "Liner Xiang",
+    "Yixin Wang",
+    "Hengrui Cai"
+  ],
+  "summary": "Online decision making often requires navigating a landscape shaped by both dynamic contexts and strategic interactions. In competitive pricing, for example, hotels must account for both dynamic contextual factors and rivals' strategic responses. Existing approaches address only part of this challenge: contextual bandits optimize single-agent decisions using observable features but ignore multi-player interactions, while online matrix games capture strategic behavior through Nash equilibrium but assume fixed payoffs, ignoring contextual information. How should agents act then when strategic…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

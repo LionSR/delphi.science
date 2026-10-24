@@ -1,0 +1,21 @@
+{
+  "key": "2604.14765",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.14765",
+  "title": "Wasserstein Formulation of Reinforcement Learning. An Optimal Transport Perspective on Policy Optimization",
+  "authors": [
+    "Mathias Dus"
+  ],
+  "summary": "We present a geometric framework for Reinforcement Learning (RL) that views policies as maps into the Wasserstein space of action probabilities. First, we define a Riemannian structure induced by stationary distributions, providing rigorous guarantees for their existence in a general context. We then define the tangent space of policies and characterize the geodesics, specifically addressing the measurability of vector fields mapping from the state space to the tangent space of probability measures over the action space. Next, we formulate a general RL optimization problem and construct a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "math.PR"
+  ],
+  "published": "2026-04-16",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2610.26504",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.26504",
+  "title": "On the Linear Convergence of SISTA for Entropic Martingale Optimal Transport",
+  "authors": [
+    "Giorgia Bifronte",
+    "Armand Ley",
+    "Maxime Sylvestre"
+  ],
+  "summary": "We prove a linear convergence rate of a Sinkhorn-type algorithm for entropic martingale optimal transport in arbitrary dimension. The algorithm follows a block-coordinate ascent scheme, alternating exact Sinkhorn updates for the marginal potentials with an explicit gradient step for the potential associated with the martingale constraint. Under irreducibility and non-degeneracy assumptions on the compactly supported marginals, we establish linear convergence of the dual objective values and iterates. Our analysis relies on a pointwise coercivity estimate involving the gradient of the dual…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

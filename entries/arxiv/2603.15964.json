@@ -1,0 +1,19 @@
+{
+  "key": "2603.15964",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.15964",
+  "title": "Unifying Finite Differences and Semi-Lagrangian Schemes via Localized Matrix Exponentials",
+  "authors": [
+    "Víctor Bayona"
+  ],
+  "summary": "We present a unified framework for the construction of localized exponential integrators that bypasses the traditional trade-off between the accuracy of global spectral methods and the efficiency of sparse finite differences. By evaluating the matrix exponential of a discrete operator strictly within a local stencil of size $n$, we \"harvest\" integration weights that naturally incorporate high-order temporal corrections. We prove that this Local Matrix Exponential Propagator (LMEP) is algebraically isomorphic to optimal semi-Lagrangian transport for advection and provides algebraically exact…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-16",
+  "updated": "2026-03-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

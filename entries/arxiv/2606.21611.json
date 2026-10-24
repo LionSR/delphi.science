@@ -1,0 +1,30 @@
+{
+  "key": "2606.21611",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.21611",
+  "title": "The Two-Hump Problem: Bridging the Difficulty Gap in Mathematical Reinforcement Learning",
+  "authors": [
+    "Lucas Fagan",
+    "Michele Tarquini",
+    "Ali Shehper",
+    "Maksymilian Manko",
+    "Angus Gruen",
+    "Coco Huang",
+    "Giorgi Butbaia",
+    "Davide Passaro",
+    "Sergei Gukov"
+  ],
+  "summary": "Mathematical search problems present a unique challenge for Reinforcement Learning (RL) due to vast search spaces and sparse rewards. In previous works, the Andrews-Curtis (AC) conjecture was established as an illustrative example of such problems. In this work, we identify a critical structural barrier in the AC landscape: a \"Two-Hump\" distribution, where problem instances are either trivially solvable or effectively impossible, with a scarcity of intermediate \"hard-but-solvable\" instances required for effective learning. We tackle this challenge through two primary avenues: novel data…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.GR",
+    "math.GT"
+  ],
+  "published": "2026-06-19",
+  "updated": "2026-06-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2606.20356",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20356",
+  "title": "Robust $Q$-learning for mean-field control under Wasserstein uncertainty in common noise",
+  "authors": [
+    "Mathieu Laurière",
+    "Ariel Neufeld",
+    "Kyunghyun Park"
+  ],
+  "summary": "In this article, we present a robust $Q$-learning algorithm for discrete-time mean-field control problems under Wasserstein uncertainty in the common noise law. The algorithm combines a quantization-and-projection scheme with a Wasserstein dual reformulation on the common-noise space. We establish its convergence together with finite-time iteration bounds for both synchronous and asynchronous learning schemes. Numerical experiments on systemic risk and epidemic models compare the asynchronous implementation with an idealized Bellman iteration, illustrate the robustness-performance tradeoff…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI",
+    "cs.LG",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

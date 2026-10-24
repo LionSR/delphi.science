@@ -1,0 +1,22 @@
+{
+  "key": "2609.13526",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.13526",
+  "title": "A family of spectral conjugate gradient algorithms derived by least-squares approximations based on a modified quasi--Newton update with application to a revised robust binary classification model",
+  "authors": [
+    "Saman Babaie-Kafaki",
+    "Maryam Khoshsimaye-Bargard",
+    "Ahmad Mousavi"
+  ],
+  "summary": "We develop a spectral three-term modification of the classic Hestenes--Stiefel conjugate gradient algorithm, preserving its anti-jamming characteristic and, simultaneously, taking care of the sufficient descent property. We discuss how a modified secant equation can be extracted from our modification scheme, yielding a memoryless BFGS updating formula. Then, the spectral parameter of our method is obtained by steering its direction toward the given BFGS direction within a least-squares context. Using our technical improvements, we outline the general framework of our algorithm and discuss…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-09-11",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

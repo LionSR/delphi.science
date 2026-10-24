@@ -1,0 +1,19 @@
+{
+  "key": "2606.24791",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.24791",
+  "title": "LAMG+: A Robust Lean Algebraic Multigrid Solver for Graph Laplacians",
+  "authors": [
+    "Oren E. Livne"
+  ],
+  "summary": "Graph-Laplacian systems $Lφ=b$ underlie spectral clustering, semi-supervised learning, finite-element analysis, and network-flow solvers. We present LAMG+, a lean, parameter-free, empirically linear-time algebraic multigrid solver: a Julia re-derivation of Lean Algebraic Multigrid (LAMG) with two targeted refinements. We establish three facts. (1) Benchmarking against approximate-Cholesky (AC) and four other solvers (BoomerAMG, PETSc GAMG, pyAMG, CMG): LAMG+ and AC are complementary peers -- AC is faster on social/citation graphs; LAMG+ is faster on finite-element/structural matrices…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-23",
+  "updated": "2026-06-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

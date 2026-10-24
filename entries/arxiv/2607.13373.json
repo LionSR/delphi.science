@@ -1,0 +1,23 @@
+{
+  "key": "2607.13373",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.13373",
+  "title": "Learned Pairwise Deep Dual-Optimal Inequalities for Stabilizing Column Generation",
+  "authors": [
+    "Zhengzhong Ricky You",
+    "Bo Tang",
+    "Haoran Liu",
+    "Baichuan Mo"
+  ],
+  "summary": "Column generation (CG) is central to many large-scale optimization algorithms, including branch-price-and-cut methods for vehicle routing problems, but unstable dual solutions can substantially slow its convergence. Existing deep dual-optimal inequalities can reduce this instability by restricting the dual space. Their construction, however, typically relies on problem-specific exchange arguments that are difficult to establish for routing problems with capacity limits, time windows, and other resource constraints. We introduce learned pairwise deep dual-optimal inequalities (L-PDDOIs), a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2606.01742",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.01742",
+  "title": "Large deviation principles for SPDEs with locally Lipschitz coefficients",
+  "authors": [
+    "Beibei Zhang",
+    "Bin Qian"
+  ],
+  "summary": "Consider the stochastic partial differential equation, \\begin{align*} \\partial_t u^{\\varepsilon}(t\\,,x) = \\frac{1}{2} \\partial^2_x u^{\\varepsilon}(t\\,,x) + b(t\\,,u^{\\varepsilon}(t\\,,x)) + \\sqrt{\\varepsilon}σ(t\\,,u^{\\varepsilon}(t\\,,x)) \\dot{W}(t\\,,x), \\end{align*} where $(t\\,,x)\\in(0\\,,\\infty)\\times\\mathbb{R}$, and $\\dot{W}$ denotes space-time white noise. Foondun, Khoshnevisan, and Nualart \\cite{FKN24} showed that this stochastic partial differential equation is well-posed under the assumptions that the initial condition $u(0)$ is bounded and measurable, while $b$ and $σ$ are locally…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

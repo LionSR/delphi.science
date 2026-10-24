@@ -1,0 +1,22 @@
+{
+  "key": "2610.08701",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08701",
+  "title": "Large Growth Happens: Gaussian Elimination with Partial Pivoting on Random Matrices",
+  "authors": [
+    "Daniel A. Spielman",
+    "Xifan Yu"
+  ],
+  "summary": "We prove that the probability that Gaussian elimination with partial pivoting on $n \\times n$ random matrices has growth $ρ$ is at least inverse quasi-polynomial: $Ω(\\exp(-c \\log^2 (ρ)\\log(n)))$ for some constant $c > 0$. This lower bound breaks standard conjectures in the smoothed and average-case analysis of Gaussian elimination. To the best of our knowledge, it is the first non-trivial lower bound on the probability of large growth for Gaussian random matrices.",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.DS",
+    "math.PR"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

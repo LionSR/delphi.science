@@ -1,0 +1,23 @@
+{
+  "key": "2604.17213",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.17213",
+  "title": "Symplectic Inductive Bias for Data-Driven Target Reachability in Hamiltonian Systems",
+  "authors": [
+    "Zhuo Ouyang",
+    "Jixian Liu",
+    "Enrique Mallada"
+  ],
+  "summary": "Inductive bias refers to restrictions on the hypothesis class that enable a learning method to generalize effectively from limited data. A canonical example in control is linearity, which underpins low sample-complexity guarantees for stabilization and optimal control. For general nonlinear dynamics, by contrast, guarantees often rely on smoothness assumptions (e.g., Lipschitz continuity) which, when combined with covering arguments, can lead to data requirements that grow exponentially with the ambient dimension. In this paper we argue that data-efficient nonlinear control demands…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY",
+    "stat.ML"
+  ],
+  "published": "2026-04-19",
+  "updated": "2026-04-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

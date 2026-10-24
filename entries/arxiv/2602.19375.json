@@ -1,0 +1,21 @@
+{
+  "key": "2602.19375",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.19375",
+  "title": "Parametric charge-conservative mixed finite element method for 3D incompressible inductionless MHD equations on curved domains",
+  "authors": [
+    "Xue Jiang",
+    "Lei Li",
+    "Lingxiao Li"
+  ],
+  "summary": "This paper develops a charge-conservative mixed finite element method with optimal convergence rates for the stationary incompressible inductionless MHD equations on three-dimensional curved domains. The discretization employs the isoparametric Taylor-Hood elements with grad-div stabilization for the velocity-pressure pair, and parametric Brezzi-Douglas-Marini elements for the current density. For sufficiently small meshsize, the discrete inf-sup conditions for both the velocity-pressure and current density-electric potential finite element pairs are established on curved meshes. Utilizing…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-22",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2602.18382",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.18382",
+  "title": "Incremental Input-to-State Stability and Equilibrium Tracking for Stochastic Contracting Dynamics",
+  "authors": [
+    "Yu Kawano",
+    "Simone Betteti",
+    "Alexander Davydov",
+    "Francesco Bullo"
+  ],
+  "summary": "In this paper, we study the contractivity of nonlinear stochastic differential equations (SDEs) driven by deterministic inputs and Brownian motions. Given a weighted $\\ell_2$-norm for the state space, we show that an SDE is incrementally noise- and input-to-state stable if its vector field is uniformly contracting in the state and uniformly Lipschitz in the input. This result is applied to error estimation for time-varying equilibrium tracking in the presence of noise affecting both the system dynamics and the input signals. We consider both Ornstein-Uhlenbeck processes modeling unbounded…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-02-20",
+  "updated": "2026-02-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

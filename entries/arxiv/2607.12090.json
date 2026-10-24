@@ -1,0 +1,24 @@
+{
+  "key": "2607.12090",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12090",
+  "title": "Induced-Minor-Closed Classes have Linear, Square-Root, or Sub-Polynomial Tree-Independence",
+  "authors": [
+    "Maria Chudnovsky",
+    "Julien Codsi",
+    "Ajaykrishnan E S",
+    "Daniel Lokshtanov"
+  ],
+  "summary": "An independent set in a graph $G$ is a set of pairwise non-adjacent vertices. A tree decomposition of $G$ is a pair $(T, χ)$ where $T$ is a tree and $χ: V(T) \\rightarrow 2^{V(G)}$ is a function satisfying two axioms: for every edge $uv \\in E(G)$ there is an $x \\in V(T)$ such that $\\{u,v\\} \\subseteq χ(x)$, and for every vertex $u \\in V(G)$ the set $\\{x \\in V(T) | u \\in χ(x)\\}$ induces a non-empty and connected subtree of $T$. The sets $χ(x)$ for $x \\in V(T)$ are called the bags of the tree decomposition. The tree-independence number of $G$ is the minimum taken over all tree decompositions of…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM",
+    "cs.DS"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

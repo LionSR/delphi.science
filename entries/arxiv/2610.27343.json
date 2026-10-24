@@ -1,0 +1,25 @@
+{
+  "key": "2610.27343",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.27343",
+  "title": "Upper Bounds on the de Bruijn-Newman constant for Dirichlet $L$-functions with primitive real-valued characters",
+  "authors": [
+    "Ricardo Freire",
+    "Cristian González-Riquelme",
+    "Claudio Muñoz",
+    "Felipe Poblete",
+    "Vicente Salinas"
+  ],
+  "summary": "Let $χ_m$ be a primitive real-valued Dirichlet character of conductor $m\\ge3$, let $L(s)=L(s,χ_m)$ be the associated Dirichlet $L$-function, and let $ξ_L(s)$ denote its completed form. For each $t \\in \\mathbb R,$ we define the entire function \\[ H^L_t(z) := \\int_{-\\infty}^{\\infty} e^{tu^2}\\, Φ_L(u)\\, e^{izu}\\, du, \\] where $Φ_L$ is the superexponentially decaying density \\[ Φ_L(u) := \\frac{1}{2π}\\int_{-\\infty}^{\\infty} ξ_L\\!\\left(\\frac{1+is}{2}\\right) e^{-isu}\\, ds. \\] The family $\\{H_t^L\\}_{t \\in \\mathbb R}$ describes the heat-flow evolution of $ξ_L$ and solves a backward heat equation. By…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.AP",
+    "math.CV"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

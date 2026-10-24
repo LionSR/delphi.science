@@ -1,0 +1,21 @@
+{
+  "key": "2607.13271",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.13271",
+  "title": "Reproducing the k-copwin Algorithm: Theory vs. Implementation",
+  "authors": [
+    "Meagan Mann",
+    "Christian Muise",
+    "Erin Meger"
+  ],
+  "summary": "Cops and Robbers is a well-studied pursuit-evasion game that provides insights into graph theory and theoretical computing. A central question is determining the minimum number of cops required to capture the robber, known as the cop number. We focus on reproducing an algorithm proposed by Petr, Portier, and Versteegen in 2022, which efficiently determines whether a graph is $k$-copwin. This paper presents a Python implementation of the $k$-copwin algorithm. In this work, we present our implementation in detail, clarify key aspects of the algorithm, and discuss its implications for future…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

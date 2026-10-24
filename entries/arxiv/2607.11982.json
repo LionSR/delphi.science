@@ -1,0 +1,20 @@
+{
+  "key": "2607.11982",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.11982",
+  "title": "Contraction Certification from Streaming Data: Wasserstein Robustness and Compositional Stability for Interconnected Nonlinear System",
+  "authors": [
+    "Faegheh K Moazeni"
+  ],
+  "summary": "Streaming contraction certificates, which determine in real time whether observed data is sufficient to certify a safe control action, face two structural challenges: the disturbance distribution shifts during operation, and the system consists of coupled subsystems whose joint model is unavailable. This paper addresses both. First, we develop a Wasserstein-robust certificate beta_cert(t,epsilon) = beta_hat(t) - rho(t)(1+2epsilon(t)), where epsilon(t) is estimated online from the empirical excess kurtosis of recent residuals, so the certificate degrades gracefully under distributional shift…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.DS"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

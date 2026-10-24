@@ -1,0 +1,22 @@
+{
+  "key": "2603.06937",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.06937",
+  "title": "A Note on the Gradient-Evaluation Sequence in Accelerated Gradient Methods",
+  "authors": [
+    "Yan Wu",
+    "Yipeng Zhang",
+    "Lu Liu",
+    "Yuyuan Ouyang"
+  ],
+  "summary": "Nesterov's accelerated gradient descent method (AGD) is a seminal deterministic first-order method known to achieve the optimal order of iteration complexity for solving convex smooth optimization problems. Two distinct sequences of iterates are included in the description of AGD: gradient evaluations are performed at one sequence, while approximate solutions are selected from the other. The iteration complexity on minimizing objective function value has been well-studied in the literature, but such analysis is almost always performed only at the approximate solution sequence. To the best of…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-06",
+  "updated": "2026-03-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

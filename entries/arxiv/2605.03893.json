@@ -1,0 +1,25 @@
+{
+  "key": "2605.03893",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.03893",
+  "title": "Optimal Hardness of Online Algorithms for Large Common Induced Subgraphs",
+  "authors": [
+    "David Gamarnik",
+    "Miklós Z. Rácz",
+    "Gabe Schoenbach"
+  ],
+  "summary": "We study the problem of efficiently finding large common induced subgraphs of two independent Erdős--Rényi random graphs $G_1, G_2 \\sim \\mathbb{G}(n,1/2)$. Recently, Chatterjee and Diaconis showed that the largest common induced subgraph of $G_1$ and $G_2$ has size $(4-o(1))\\log_2 n$ with high probability. We first show that a simple greedy online algorithm finds a common induced subgraph of $G_1$ and $G_2$ of size $(2-o(1)) \\log_2 n$ with high probability. Our main result shows that no online algorithm can find a common induced subgraph of $G_1$ and $G_2$ of size at least $(2+\\varepsilon)…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.CC",
+    "cs.DM",
+    "math.CO",
+    "math.PR"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-05-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

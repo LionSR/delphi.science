@@ -1,0 +1,23 @@
+{
+  "key": "2605.13260",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.13260",
+  "title": "Unified generalization analysis for physics informed neural networks",
+  "authors": [
+    "Yuka Hashimoto",
+    "Tomoharu Iwata"
+  ],
+  "summary": "Physics-Informed Neural Networks (PINNs) and their variational counterparts (VPINNs) are neural networks that incorporate physical laws, making them useful for scientific problems. Existing generalization analyses for PINNs and VPINNs remain limited, often requiring restrictive assumptions such as stability conditions or linear ellipticity. In this paper, we derive generalization bounds for neural networks that involve differentiation with respect to input variables, covering PINNs and VPINNs under a unified framework. We apply Taylor expansion to represent nonlinear differential operators…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.AP",
+    "math.FA",
+    "stat.ML"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

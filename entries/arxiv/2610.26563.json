@@ -1,0 +1,20 @@
+{
+  "key": "2610.26563",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.26563",
+  "title": "Simultaneous Matrix Multiplication by Tensor Contraction Aggregation",
+  "authors": [
+    "Edgar Solomonik",
+    "Markus Bläser"
+  ],
+  "summary": "We present an interpretation of the fast matrix multiplication algorithms of Coppersmith and Winograd as aggregations of tensor contractions. This point of view provides a direct connection to older constructions by Pan and to more recent work on bilinear algorithms for symmetric tensor contraction. Further, we provide a simple explicit approach for exact aggregation of tensor contractions, each one yielding an independent matrix-matrix product. These constructions and border rank adaptations thereof do not come close to improving the best known bounds on $ω$ (the matrix multiplication…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

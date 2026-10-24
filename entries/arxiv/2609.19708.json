@@ -1,0 +1,22 @@
+{
+  "key": "2609.19708",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.19708",
+  "title": "Federated multiple testing with quantized p-values under family-wise error control",
+  "authors": [
+    "Prasanjit Dubey",
+    "Xiaoming Huo"
+  ],
+  "summary": "Several institutions test one family of hypotheses under family-wise error control but cannot pool their data, so each site releases only a quantized report of its p-value for each hypothesis, such as whether the p-value is significant. The report's resolution is the number of values it can take. We quantify the power lost to such reports relative to the most powerful centralized procedure given all p-values (the oracle), with reports and combining rule chosen optimally. A report from which the p-value can be recovered loses no power, so the loss is due to compression, not decentralization.…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "cs.IT",
+    "math.ST"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

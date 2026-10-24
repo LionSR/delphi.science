@@ -1,0 +1,25 @@
+{
+  "key": "2605.19823",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.19823",
+  "title": "Smooth Piecewise Cutting for Neural Operator to Handle Discontinuities and Sharp Transitions",
+  "authors": [
+    "Ha Dang",
+    "Sebastian Schmidt",
+    "Juergen Hesser"
+  ],
+  "summary": "Neural operators have achieved strong performance in learning solution operators of partial differential equations (PDEs), but their inherently continuous representations struggle to capture discontinuities and sharp transitions. Existing approaches typically approximate such features within continuous function spaces, often requiring increased model capacity and high-resolution data. In this work, we propose Cut-DeepONet, a two-stage training framework that explicitly models discontinuities while reducing learning complexity. Our approach reformulates the problem via a lifting strategy,…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.AP",
+    "math.DS",
+    "stat.ML"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

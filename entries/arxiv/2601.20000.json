@@ -1,0 +1,22 @@
+{
+  "key": "2601.20000",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.20000",
+  "title": "New Adaptive Numerical Methods Based on Dual Formulation of Hyperbolic Conservation Laws",
+  "authors": [
+    "Alina Chertock",
+    "Qingcheng Fu",
+    "Alexander Kurganov",
+    "Lorenzo Micalizzi"
+  ],
+  "summary": "In this paper, we propose an adaptive high-order method for hyperbolic systems of conservation laws. The proposed method is based on a dual formulation approach: Two numerical solutions, corresponding to conservative and nonconservative formulations of the same system, are evolved simultaneously. Since nonconservative schemes are known to produce nonphysical weak solutions near discontinuities, we exploit the difference between these two solutions to construct a smoothness indicator (SI). In smooth regions, the difference between the conservative and nonconservative solutions is of the same…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-27",
+  "updated": "2026-01-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

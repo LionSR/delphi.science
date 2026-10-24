@@ -1,0 +1,22 @@
+{
+  "key": "2607.08051",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08051",
+  "title": "Elliptic curves, Fourier ratio, and sampling complexity",
+  "authors": [
+    "W. Burstein",
+    "A. Iosevich",
+    "A. Sant"
+  ],
+  "summary": "We study the normalized Frobenius trace associated with the Legendre family of elliptic curves over $\\mathbb F_p$ from the point of view of Fourier complexity. If \\[ f(t)=\\frac{a_p(E_t)}{\\sqrt p}, \\qquad E_t:\\ y^2=x(x-1)(x-t), \\] with $f(0)=f(1)=0$, then \\[ \\frac{\\|\\widehat f\\|_1}{\\|\\widehat f\\|_2}\\asymp \\sqrt p. \\] More precisely, the Fourier transform of $f$ has squared $\\ell^2$ norm of order $p$ while its individual coefficients remain uniformly bounded. It follows that no Fourier model supported on fewer than a sufficiently small constant multiple of $p$ frequencies can approximate $f$…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CA"
+  ],
+  "published": "2026-07-09",
+  "updated": "2026-07-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

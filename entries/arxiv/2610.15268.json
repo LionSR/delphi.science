@@ -1,0 +1,23 @@
+{
+  "key": "2610.15268",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.15268",
+  "title": "Moment-Calibrated Conformal Prediction with Side Information",
+  "authors": [
+    "Guanghui Wang",
+    "Liuhua Peng",
+    "Liu Liu",
+    "Changliang Zou"
+  ],
+  "summary": "For a fixed conformal score function, standard split conformal prediction calibrates a prediction set using the empirical distribution of the conformal scores, without using available side information about the data. We propose a moment-calibrated approach that uses such information to reduce variability across calibration data sets. Side information involving the covariates, the response, or both is expressed as moment restrictions, which are enforced through empirical likelihood weights on the calibration data points. The resulting weighted empirical distribution of the scores determines…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-10-11",
+  "updated": "2026-10-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

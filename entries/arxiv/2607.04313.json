@@ -1,0 +1,24 @@
+{
+  "key": "2607.04313",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04313",
+  "title": "Exploiting Variable Implications in Presolve for Mixed Integer Programming",
+  "authors": [
+    "Wei-Kun Chen",
+    "Chang-Long Li",
+    "Zhao-Wei Wang",
+    "Yu-Hong Dai",
+    "Zi-Shuo Li",
+    "Meng Lu"
+  ],
+  "summary": "Presolve for mixed integer programming (MIP) problems aims to eliminate redundant information, strengthen the formulation, and extract useful structural information for the subsequent branch-and-cut process. An important type of such structural information is the variable implications (VIs), which describe how a bound on a variable depends on a bound of a binary variable. In this paper, we develop two new presolve techniques that exploit VIs to derive reductions for MIP problems. The first technique, called VI aggregation, aggregates multiple VIs into a single inequality by using…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-05",
+  "updated": "2026-07-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

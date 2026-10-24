@@ -1,0 +1,20 @@
+{
+  "key": "2602.21753",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.21753",
+  "title": "A dual lumping procedure for static condensation in mixed NURBS-based isogeometric elements with optimal convergence rates for arbitrary open knot vectors",
+  "authors": [
+    "Lisa Stammen",
+    "Wolfgang Dornisch"
+  ],
+  "summary": "Locking is a common effect in finite element and isogeometric analysis. In the case of plates, transverse shear locking is most prominent, for shells several other types of locking exist. A common cure are mixed methods that introduce additional fields of unknowns into the variational formulation. These fields reduce constraints and thus alleviate locking significantly. As a drawback, the discretized additional fields increase computational costs significantly. These fields are often eliminated by static condensation, which requires the inverse of a part of the stiffness matrix. In…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-25",
+  "updated": "2026-02-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2610.00830",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00830",
+  "title": "Matrix-Free Moment-Matching Method for Reduced-Order Modeling of Quadratic-Bilinear Descriptor Systems with Multiple Inputs",
+  "authors": [
+    "Zeyuan Gao",
+    "Cheol W. Lee",
+    "Oleg Zikanov"
+  ],
+  "summary": "This paper develops a new moment-matching order reduction method for multi-input quadratic-bilinear descriptor systems. The proposed approach accommodates multiple inputs acting on both the differential and algebraic equations and constructs separate projection spaces associated with different input channels and input combinations. The method uses a matrix-free algorithm, allowing the reduced-order matrices and tensors to be computed without explicitly assembling or storing the full-order system matrices and tensors. This feature makes the proposed method particularly suitable for…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

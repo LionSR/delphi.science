@@ -1,0 +1,26 @@
+{
+  "key": "2603.28938",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.28938",
+  "title": "Optimistic Online LQR via Intrinsic Rewards",
+  "authors": [
+    "Marcell Bartos",
+    "Bruce D. Lee",
+    "Lenart Treven",
+    "Andreas Krause",
+    "Florian Dörfler",
+    "Melanie N. Zeilinger"
+  ],
+  "summary": "Optimism in the face of uncertainty is a popular approach to balance exploration and exploitation in reinforcement learning. Here, we consider the online linear quadratic regulator (LQR) problem, i.e., to learn the LQR corresponding to an unknown linear dynamical system by adapting the control policy online based on closed-loop data collected during operation. In this work, we propose Intrinsic Rewards LQR (IR-LQR), an optimistic online LQR algorithm that applies the idea of intrinsic rewards originating from reinforcement learning and the concept of variance regularization to promote…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-03-30",
+  "updated": "2026-08-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

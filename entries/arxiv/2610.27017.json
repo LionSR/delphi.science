@@ -1,0 +1,20 @@
+{
+  "key": "2610.27017",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.27017",
+  "title": "Data-driven accelerated multigrid method for Riesz space fractional diffusion equations",
+  "authors": [
+    "Yang Hu",
+    "Juan Zhang"
+  ],
+  "summary": "The multigrid method is one of the most efficient iterative methods for solving large structured linear systems, and its efficiency stems from the complementarity between the smoother and the coarse grid correction. In this paper, we consider the block Toeplitz linear system obtained by discretizing time dependent Riesz space fractional diffusion equations, and employ the weighted Jacobi iterative method as a smoother. The weighted Jacobi smoother features a simple structure and low computational cost, yet its smoothing property is highly dependent on the relaxation parameter. We adopt…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

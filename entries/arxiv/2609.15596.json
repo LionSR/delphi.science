@@ -1,0 +1,25 @@
+{
+  "key": "2609.15596",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.15596",
+  "title": "An improved bound on the treewidth of planar graphs excluding a grid minor",
+  "authors": [
+    "Wouter Cames van Batenburg",
+    "Quentin Claus",
+    "Gwenaël Joret",
+    "Robin Petit",
+    "Jean-Florent Raymond",
+    "Eileen Robinson"
+  ],
+  "summary": "We show that every planar graph with no $t \\times t$ grid minor has treewidth at most $4t +4$. This improves on the previously best known bound of $\\frac{9}{2}t - \\frac{11}{2}$, due to Gu and Tamaki (2012), and is within a factor $2$ of optimal. A key step in the proof is showing the following result, which might be of independent interest: Every $2$-connected plane graph $G$ with radius $d$ and faces of size at most $k$ has a tree-decomposition of width at most $\\max\\{3d+ k+5, 2d+2k+1\\}$ such that the vertex set of every face of $G$ is contained in some bag.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

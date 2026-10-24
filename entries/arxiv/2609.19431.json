@@ -1,0 +1,20 @@
+{
+  "key": "2609.19431",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.19431",
+  "title": "Wideband Directional $\\mathcal{H}^2$-Matrix Compression for the Electric Field Integral Equation with Geometry-Adaptive Cluster Trees",
+  "authors": [
+    "Joshua M. Tetzner",
+    "Simon B. Adrian"
+  ],
+  "summary": "We present an efficient wideband construction of directional $\\mathcal{H}^2$-matrices for the electrical field integral equation that, in contrast to existing constructions, supports not only box trees but also geometry-adaptive cluster trees. To accommodate geometry-adaptive cluster trees, we determine the number of directions from the electrical size of each cluster (instead of the level of a box tree), construct the directions using Spherical-Fibonacci points, and establish a hierarchy between the direction sets of a cluster and its children through an angular nearest-neighbor mapping. We…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

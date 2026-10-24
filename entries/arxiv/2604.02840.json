@@ -1,0 +1,19 @@
+{
+  "key": "2604.02840",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.02840",
+  "title": "Iterative Refinement for Diagonalizable Non-Hermitian Eigendecompositions",
+  "authors": [
+    "Takeshi Terao"
+  ],
+  "summary": "This paper develops matrix-multiplication-based iterative refinement for diagonalizable non-Hermitian eigendecompositions. The main theory concerns simple eigenvalues and distinguishes two input regimes. In the right-only regime, where only approximate right eigenvectors and eigenvalues are available, a first-order derivation selects the update and the resulting post-update residual identity is exact, yielding a quadratic residual bound. In the left-right regime, where approximate left and right eigenvectors are both available, the computable driving matrix is an exact perturbation of the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-03",
+  "updated": "2026-04-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

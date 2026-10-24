@@ -1,0 +1,20 @@
+{
+  "key": "2608.24576",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.24576",
+  "title": "Efficient Hermitian and skew-Hermitian splitting methods for linear systems in micromagnetic simulations",
+  "authors": [
+    "Yingxi Miao",
+    "Changjian Xie"
+  ],
+  "summary": "For the Landau-Lifshitz equation, the discrete linear systems obtained by our semi-implicit method possess the following properties: they are large-sparse systems with non-Hermitian yet positive-definite coefficient matrices. To solve these systems efficiently, we apply the Hermitian/skew-Hermitian splitting (HSS) method and its inexact variant (IHSS). Numerical experiments in one and three dimensions show that the spectral radius of the HSS iteration remains below its theoretical upper bound and strictly below one for the tested grid resolutions and damping parameters. Moreover, the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

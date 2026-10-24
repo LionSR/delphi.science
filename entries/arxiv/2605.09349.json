@@ -1,0 +1,22 @@
+{
+  "key": "2605.09349",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09349",
+  "title": "Mutual Information Optimal Density Control of Linear Systems and Generalized Schrödinger Bridges with Reference Refinement",
+  "authors": [
+    "Shoju Enami",
+    "Kenji Kashima"
+  ],
+  "summary": "We consider a mutual information (MI) regularized optimal density control of a discrete-time linear system. MI optimal control has been utilized for exploration in reinforcement learning and privacy protection in control. MI regularization induces stochasticity in the policy, which poses challenges for applications of MI optimal control in safety-critical scenarios. To remedy this situation, we impose Gaussian density constraints at specified times to directly control state uncertainty. For this MI optimal density control problem, we propose an alternating optimization algorithm and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "eess.SY"
+  ],
+  "published": "2026-05-10",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

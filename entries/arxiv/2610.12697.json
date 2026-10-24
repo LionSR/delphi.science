@@ -1,0 +1,23 @@
+{
+  "key": "2610.12697",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.12697",
+  "title": "Toward Maximizing Algebraic Connectivity via Density-Dependent Backbone Construction and Reinforcement Learning Completion",
+  "authors": [
+    "Zeru Zhu",
+    "Marco Gamarra",
+    "Ji Liu"
+  ],
+  "summary": "This paper studies an open network design problem of constructing graph topologies with maximum algebraic connectivity under fixed numbers of vertices and edges. A density-dependent approach is proposed that decomposes the design task into two stages: a high-quality, low-cost structural backbone construction and a reinforcement learning completion stage. The method selects the backbone based on density, using complete multipartite graphs in dense regimes and Cayley graphs in low-to-intermediate regimes, and then refines the remaining edges through a learning-based procedure. Numerical…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "math.CO"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

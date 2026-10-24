@@ -1,0 +1,22 @@
+{
+  "key": "2607.15141",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.15141",
+  "title": "Perfectly equidistributed Quasi-Monte Carlo sequences from Artin-Schreier polynomials",
+  "authors": [
+    "Nicolas Bonneel",
+    "David Coeurjolly",
+    "Victor Ostromoukhov"
+  ],
+  "summary": "To numerically integrate a function, one may resort to Quasi-Monte Carlo estimators, that average integrand values at pseudo-random well-distributed uniform sampling locations. Better uniformity improves the worst-case integration-error bound. A standard measure of uniformity is given by an integer $t$ value, where $t=0$ yields the best uniformity. Producing sequences of samples with bounded $t$ values can be achieved with Sobol' recursive construction, that uses coefficients of irreducible polynomials. While $b$-dimensional sequences with $t=0$ can be obtained by taking $b$ polynomials of…",
+  "domain": "cs.DM",
+  "tags": [
+    "cs.DM",
+    "math.NA"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

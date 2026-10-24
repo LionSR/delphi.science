@@ -1,0 +1,20 @@
+{
+  "key": "2604.02137",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.02137",
+  "title": "Flux-equilibrated based a posteriori error analysis for an interface problem with CutFEM",
+  "authors": [
+    "Daniela capatina",
+    "Aimene Gouasmi"
+  ],
+  "summary": "This paper addresses the local recovery of conservative fluxes and the a posteriori error analysis for an elliptic interface problem with discontinuous coefficients. The transmission conditions on the interface are imposed by means of Nitsche's method and the discretization is carried out using conforming finite elements on unfitted meshes via the CutFEM method. A flux is subsequently defined in the global Raviart-Thomas space, ensuring that it satisfies the natural conservation property on the cut cells, and is then employed in the a posteriori error analysis. We prove here the sharp…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-02",
+  "updated": "2026-04-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

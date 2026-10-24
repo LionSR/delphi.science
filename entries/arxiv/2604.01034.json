@@ -1,0 +1,21 @@
+{
+  "key": "2604.01034",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.01034",
+  "title": "Stein Variational Uncertainty-Adaptive Model Predictive Control",
+  "authors": [
+    "Hrishikesh Sathyanarayan",
+    "Ian Abraham"
+  ],
+  "summary": "We propose a Stein variational distributionally robust controller for nonlinear dynamical systems with latent parametric uncertainty. The method is an alternative to conservative worst-case ambiguity-set optimization with a deterministic particle-based approximation of a task-dependent uncertainty distribution, enabling the controller to concentrate on parameter sensitivities that most strongly affect closed-loop performance. Our method yields a controller that is robust to latent parameter uncertainty by coupling optimal control with Stein variational inference, and avoiding restrictive…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-07-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

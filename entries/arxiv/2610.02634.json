@@ -1,0 +1,23 @@
+{
+  "key": "2610.02634",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02634",
+  "title": "A hybrid CNN-adjoint optimization framework for reconstruction of viscoelastic tissue properties in magnetic resonance elastography",
+  "authors": [
+    "Anwesa Dey",
+    "Johann Rudi",
+    "Elena Cherkaev"
+  ],
+  "summary": "Magnetic resonance elastography (MRE) is a noninvasive imaging modality for quantifying the viscoelastic properties of soft tissues from shear wave propagation. Recovering the complex-valued shear modulus from measured displacement fields leads to a severely ill-posed inverse problem, particularly in the presence of noise and limited boundary excitations. We investigate adjoint-based optimization, convolutional neural network (CNN) reconstruction, and a hybrid framework combining both approaches. The forward model is based on a scalar form of the modified stationary Stokes system with a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

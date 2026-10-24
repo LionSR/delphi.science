@@ -1,0 +1,24 @@
+{
+  "key": "2605.30617",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.30617",
+  "title": "Exploiting Chordal Sparsity for Globally Optimal Estimation with Factor Graphs",
+  "authors": [
+    "Avinash Subramanian",
+    "Connor Holmes",
+    "Timothy D. Barfoot",
+    "Frank Dellaert",
+    "Frederike Dümbgen"
+  ],
+  "summary": "Robust and efficient state estimation is crucial for perception, navigation, and control in robotics. State estimation problems are conveniently modeled using the factor-graph framework as enabled by modern software packages such as GTSAM or g2o. However, the standard solvers included in such frameworks are local and may converge to poor local minima, posing significant safety concerns. Conversely, techniques based on convex relaxations have been shown to provide a means of globally solving or certifying many state estimation problems. However, these relaxations 1) often require substantial…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-05-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

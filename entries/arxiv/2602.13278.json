@@ -1,0 +1,20 @@
+{
+  "key": "2602.13278",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.13278",
+  "title": "NP-hardness of p-adic linear regression",
+  "authors": [
+    "Gregory D. Baker"
+  ],
+  "summary": "$p$-adic linear regression is the problem of finding coefficients $β$ that minimise $\\sum_i |y_i - x_i^\\topβ|_p$. We prove that computing an optimal solution is NP-hard via a polynomial-time reduction from Max Cut using a regularisation gadget.",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "math.NT"
+  ],
+  "published": "2026-02-06",
+  "updated": "2026-02-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

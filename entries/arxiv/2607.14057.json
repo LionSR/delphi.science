@@ -1,0 +1,21 @@
+{
+  "key": "2607.14057",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14057",
+  "title": "Adaptivity in Local Kernel Based Methods for Approximating Solutions to the Poisson Equation",
+  "authors": [
+    "Jonah A. Reeger",
+    "Anders R. Johnson",
+    "Shelby W. Woodrum"
+  ],
+  "summary": "Expanding on the recent development of adaptive local kernel methods for approximating the action of linear operators, a local estimate of the error and an adaptive procedure for approximating solutions to the Poisson equation is developed. The error estimate is used in the midst of the adaptive procedure to determine locations in the solution domain where decreasing the spacing between nodes can decrease the error in the solution. The approach described here is essentially \"meshless\", with only local Delaunay triangulations leveraged as a convenience to provide information on the local…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

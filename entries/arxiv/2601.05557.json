@@ -1,0 +1,20 @@
+{
+  "key": "2601.05557",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.05557",
+  "title": "Difference of Convex (DC) approach for neural network approximation with uniform loss function",
+  "authors": [
+    "Vinesha Peiris",
+    "Nadezda Sukhorukova"
+  ],
+  "summary": "Neural networks (NNs) can be viewed as approximation tools. Traditionally, NNs are relying on gradient and stochastic gradient (SG) methods. There are a number of available computational packages for constructing least squares approximations, while uniform (minimax) approximations are hard due to their nonsmooth nature. It was recently demonstrated that a difference convex (DC) programming approach is an efficient alternative optimiser for NNs. In this paper, we demonstrate that a DC programming approach is also efficient for minimax approximation. In our numerical experiments, we compare a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-09",
+  "updated": "2026-01-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

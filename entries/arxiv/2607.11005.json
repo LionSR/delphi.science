@@ -1,0 +1,25 @@
+{
+  "key": "2607.11005",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.11005",
+  "title": "Actor-Critic Learning for Extended Mean Field Control with Deterministic Policies",
+  "authors": [
+    "Ziheng Cheng",
+    "Xin Guo",
+    "Huyên Pham",
+    "Yufei Zhang"
+  ],
+  "summary": "This paper develops a model-free reinforcement learning framework for continuous--time extended mean field control problems, where both the dynamics and reward may depend on the joint distribution of states and controls. We adopt deterministic feedback policies, under which the state--action distribution is induced directly as a push--forward of the state law. This avoids optimization over stochastic kernels and bypasses key limitations of existing approaches in extended mean field settings. We first establish a model--free sensitivity formula for parameterized McKean--Vlasov dynamics and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

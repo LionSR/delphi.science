@@ -1,0 +1,23 @@
+{
+  "key": "2601.16598",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.16598",
+  "title": "A robust and stable hybrid neural network/finite element method for 2D flows that generalizes to different geometries",
+  "authors": [
+    "Robert Jendersie",
+    "Nils Margenberg",
+    "Christian Lessig",
+    "Thomas Richter"
+  ],
+  "summary": "The deep neural network multigrid solver (DNN-MG) combines a coarse-grid finite element simulation with a deep neural network that corrects the solution on finer grid levels, thereby improving the computational efficiency. In this work, we discuss various design choices for the DNN-MG method and demonstrate significant improvements in accuracy and generalizability when applied to the solution of the nonstationary Navier-Stokes equations. We investigate the stability of the hybrid simulation and show how the neural networks can be made more robust with the help of replay buffers. After an…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-01-23",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

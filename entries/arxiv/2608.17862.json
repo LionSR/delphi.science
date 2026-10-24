@@ -1,0 +1,21 @@
+{
+  "key": "2608.17862",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17862",
+  "title": "Idealizing Useful Fictions in Omega Grounded Arithmetic",
+  "authors": [
+    "Bryan Ford"
+  ],
+  "summary": "Grounded arithmetic is a family of formal systems for reasoning about computation in which a statement may be asserted only when a terminating computation backs it; the logics are paracomplete - for a sentence whose backing computation never settles, neither the sentence nor its negation is derivable, so paradoxes like the Liar are harmless rather than explosive. The reflective member of the family, RGA, can quantify over its own computations, but cannot certify that its own unbounded searches have definite yes-or-no answers. This paper studies what happens when that openness is closed by…",
+  "domain": "math.LO",
+  "tags": [
+    "math.LO",
+    "cs.LO",
+    "cs.PL"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

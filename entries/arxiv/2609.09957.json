@@ -1,0 +1,24 @@
+{
+  "key": "2609.09957",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.09957",
+  "title": "Beyond Verified Answers: Solver-Informed Self-Distillation for Bootstrapping Operations Research Language Models",
+  "authors": [
+    "Rui Zhu",
+    "Minglong Cao",
+    "Chenyu Zhou",
+    "Jianghao Lin",
+    "Dongdong Ge"
+  ],
+  "summary": "Modern large language models (LLMs) can translate natural-language descriptions into operations research (OR) formulations. Post-training techniques including reinforcement learning and on-policy self-distillation have further improved this capability. However, three limitations remain in training LLMs for OR formulations. First, training commonly relies on synthetic formulations validated by human experts or stronger models, constraining scalable supervision. Second, credit assignment is either coarse or costly: outcome rewards score an entire trajectory without locating the responsible…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

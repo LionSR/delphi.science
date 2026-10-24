@@ -1,0 +1,21 @@
+{
+  "key": "2604.26085",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26085",
+  "title": "Spectral Selection in Symmetric Self-Attention Dynamics",
+  "authors": [
+    "Christian Kuehn",
+    "Jaeyoung Yoon"
+  ],
+  "summary": "We study self-attention dynamics on the unit sphere as an interacting particle system arising from an idealized Transformer-type update. Under a symmetry assumption on weight matrices given by $Q^\\top K=V=V^\\top$, the flow admits a gradient-flow structure and an exact reformulation in the eigenbasis of $V$, revealing a spectral mode-selection mechanism. We show that the dynamics exhibits two distinct asymptotic scenarios: homogeneous alignment toward the dominant eigendirection when one positive eigenvalue strictly dominates all others in modulus, and sign-split polarization toward the most…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "math.CA"
+  ],
+  "published": "2026-04-28",
+  "updated": "2026-04-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

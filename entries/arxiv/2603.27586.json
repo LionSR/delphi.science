@@ -1,0 +1,20 @@
+{
+  "key": "2603.27586",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.27586",
+  "title": "Huber-based Robust System Identification with Near-Optimal Guarantees Across Independent and Adversarial Regimes",
+  "authors": [
+    "Jihun Kim",
+    "Javad Lavaei"
+  ],
+  "summary": "Dynamical systems can confront one of two extreme types of disturbances: persistent zero-mean independent noise, and sparse nonzero-mean adversarial attacks, depending on the specific scenario being modeled. While mean-based estimators like least-squares are well-suited for the former, a median-based approach such as the $\\ell_1$-norm estimator is required for the latter. In this paper, we propose a Huber-based estimator, characterized by a threshold constant $μ$, to identify the governing matrix of a linearly parameterized nonlinear system from a single trajectory of length $T$. This…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-29",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

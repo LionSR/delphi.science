@@ -1,0 +1,21 @@
+{
+  "key": "2607.00619",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.00619",
+  "title": "Hermite Semi-Lagrangian schemes on triangular meshes for advection equations",
+  "authors": [
+    "Ali Elarif",
+    "Michel Mehrenberger",
+    "Laurent Navoret"
+  ],
+  "summary": "High-order Hermite semi-Lagrangian schemes on unstructured triangular grids are proposed for advection equations, based on Bell and Argyris finite elements. Nodal semi-Lagrangian schemes transport point values together with gradients and Hessians, while projection semi-Lagrangian schemes are basically semi-Lagrangian Discontinuous Galerkin schemes (SLDG) with straight remaining backward triangles and shared degrees of freedoms. Stability and convergence studies of the different schemes are carried out numerically.",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

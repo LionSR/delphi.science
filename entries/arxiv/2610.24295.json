@@ -1,0 +1,22 @@
+{
+  "key": "2610.24295",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.24295",
+  "title": "PICKLES: Covariance-Preconditioned Kinetic Langevin Ensemble Sampler",
+  "authors": [
+    "Hong Ye Tan",
+    "Stanley Osher",
+    "Yifan Chen"
+  ],
+  "summary": "We propose a covariance-preconditioned kinetic Langevin ensemble sampler named PICKLES. This is a kinetic analogue of the affine invariant interacting Langevin dynamics (ALDI). PICKLES uses a rectangular covariance square root as a preconditioner to avoid computing matrix inverses or square roots, leading to position and momentum variables of different dimensions. Theoretically, the continuous-time dynamics are ergodic under mild regularity and growth conditions on the potential, assuming $N>d+1$ particles and a full-rank initial ensemble. We discretize PICKLES using BAOAB or OBABO…",
+  "domain": "stat.CO",
+  "tags": [
+    "stat.CO",
+    "math.OC"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

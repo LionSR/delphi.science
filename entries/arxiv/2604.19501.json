@@ -1,0 +1,20 @@
+{
+  "key": "2604.19501",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.19501",
+  "title": "Scalable Multigrid Solver for the Helmholtz Equation: Real-Shifted Coarse Grid Correction",
+  "authors": [
+    "Rachel Yovel",
+    "Eran Treister"
+  ],
+  "summary": "We present a convergent and scalable multigrid solver for high-frequency Helmholtz equations. Standard multigrid methods do not converge for high-frequency Helmholtz problems, and a common cure is adding a complex shift and using the shifted operator as a preconditioner. Nevertheless, the complex shift prevents scalability. In this work we present a new method that achieves scalable convergence of a 3-level cycle without a complex shift. Our key idea is real-shifting the coarsest grid Galerkin operator, to correct the numerical dispersion between the grids. We show that this real-shifted…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-21",
+  "updated": "2026-04-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

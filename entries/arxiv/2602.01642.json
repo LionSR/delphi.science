@@ -1,0 +1,24 @@
+{
+  "key": "2602.01642",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.01642",
+  "title": "The Effect of Mini-Batch Noise on the Implicit Bias of Adam",
+  "authors": [
+    "Matias D. Cattaneo",
+    "Boris Shigida"
+  ],
+  "summary": "With limited high-quality data and growing compute, multi-epoch training is gaining back its importance across sub-areas of deep learning. Adam(W), versions of which are go-to optimizers for many tasks such as next token prediction, has two momentum hyperparameters $(β_1, β_2)$ controlling memory and one very important hyperparameter, batch size, controlling (in particular) the amount mini-batch noise. We introduce a theoretical framework to understand how mini-batch noise influences the implicit bias of memory in Adam (depending on $β_1$, $β_2$) towards sharper or flatter regions of the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC",
+    "stat.CO",
+    "stat.ML"
+  ],
+  "published": "2026-02-02",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

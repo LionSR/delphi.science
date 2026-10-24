@@ -1,0 +1,21 @@
+{
+  "key": "2606.14913",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.14913",
+  "title": "Structure-Informed Neural Operators for Long-Time Prediction of Parametric Hamiltonian PDEs",
+  "authors": [
+    "Victory C. Obieke",
+    "Christopher Chukwuemeka",
+    "Emmanuel E. Oguadimma"
+  ],
+  "summary": "Hamiltonian partial differential equations (PDEs) often exhibit long-time dynamics governed by conserved quantities such as mass, momentum, and Hamiltonian energy. Standard Fourier neural operators (FNOs) provide efficient data-driven approximations of solution operators, but may not preserve these invariants during autoregressive rollout, and can develop drift in conserved quantities, phase error, and loss of qualitative accuracy. We propose an energy-projection Fourier neural operator (EP-FNO), a structure-informed operator learning architecture that combines a residual FNO time-stepping…",
+  "domain": "math-ph",
+  "tags": [
+    "math-ph"
+  ],
+  "published": "2026-06-12",
+  "updated": "2026-07-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

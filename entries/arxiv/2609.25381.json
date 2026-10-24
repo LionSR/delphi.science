@@ -1,0 +1,23 @@
+{
+  "key": "2609.25381",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.25381",
+  "title": "Penalized Nonreversible Langevin for Constrained Sampling",
+  "authors": [
+    "Pervez Ali",
+    "Weihao Dong",
+    "Xiaoyu Wang"
+  ],
+  "summary": "We propose penalized nonreversible Langevin algorithms for sampling from $π(x)\\propto e^{-f(x)}\\mathbf 1_{\\mathcal C}(x)$, where $\\mathcal C\\subset\\mathbb R^d$ is a compact convex set. The algorithms combine a squared distance penalty with constant or compatible state dependent skew symmetric perturbations that preserve the penalized Gibbs distribution. For smooth, possibly nonconvex $f$, we derive nonasymptotic total variation bounds for the full gradient algorithm under a log Sobolev inequality. When unbiased stochastic gradients are available, we establish $2$-Wasserstein bounds under…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-09-21",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

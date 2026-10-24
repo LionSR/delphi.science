@@ -1,0 +1,22 @@
+{
+  "key": "2609.16478",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.16478",
+  "title": "A Matrix-free Augmented High Order Compact Solver for Variable-Coefficient Biharmonic Problems",
+  "authors": [
+    "Jin Li",
+    "Kejia Pan",
+    "Xu Qian",
+    "Li-Lian Wang"
+  ],
+  "summary": "We propose an augmented high-order compact finite difference method for biharmonic equations with clamped boundary conditions and variable coefficients. Standard mixed-type formulations introduce an auxiliary variable, but its boundary values are unavailable, leaving the resulting discrete systems globally coupled and difficult to solve at large scales. Our key contribution is the development of a new augmented formulation that treats these unavailable boundary values as additional unknowns, reduces the global coupling to a lower-dimensional Schur complement system, and yields decoupled…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

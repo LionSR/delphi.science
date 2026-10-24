@@ -1,0 +1,24 @@
+{
+  "key": "2604.02256",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.02256",
+  "title": "A virtual-variable-length method for robust inverse kinematics of multi-segment continuum robots",
+  "authors": [
+    "Weiting Feng",
+    "Federico Renda",
+    "Yunjie Yang",
+    "Francesco Giorgio-Serchi"
+  ],
+  "summary": "This paper proposes a new, robust method to solve the inverse kinematics (IK) of multi-segment continuum manipulators. Conventional Jacobian-based solvers, especially when initialized from neutral/rest configurations, often exhibit slow convergence and, in certain conditions, may fail to converge (deadlock). The Virtual-Variable-Length (VVL) method proposed here introduces fictitious variations of segments' length during the solution iteration, conferring virtual axial degrees of freedom that alleviate adverse behaviors and constraints, thus enabling or accelerating convergence.…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "eess.SY",
+    "math.NA"
+  ],
+  "published": "2026-04-02",
+  "updated": "2026-04-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

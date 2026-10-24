@@ -1,0 +1,23 @@
+{
+  "key": "2603.28969",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.28969",
+  "title": "A Spectral Preconditioner for the Conjugate Gradient Method with Iteration Budget",
+  "authors": [
+    "Youssef Diouane",
+    "Selime Gürol",
+    "Oussama Mouhtal",
+    "Dominique Orban"
+  ],
+  "summary": "We study the solution of large symmetric positive-definite linear systems in a matrix-free setting with a limited iteration budget. We focus on the preconditioned conjugate gradient (PCG) method with spectral preconditioning. Spectral preconditioners map a subset of eigenvalues to a positive cluster via a scaling parameter, and leave the remainder of the spectrum unchanged, in hopes to reduce the number of iterations to convergence. We formulate the design of the spectral preconditioners as a constrained optimization problem. The optimal cluster placement is defined to minimize the error in…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-03-30",
+  "updated": "2026-03-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

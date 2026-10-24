@@ -1,0 +1,23 @@
+{
+  "key": "2606.02223",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.02223",
+  "title": "Network Learning with Semi-relaxed Gromov-Wasserstein",
+  "authors": [
+    "Charles Dufour",
+    "Ulysse Naepels",
+    "Leonardo V. Santoro"
+  ],
+  "summary": "Estimating the generative mechanism of large-scale networks is a fundamental challenge in statistical machine learning. It requires the identification of the latent connectivity structure, which is in general an NP-hard combinatorial problem due to the absence of canonical node labels. We address this challenge by allowing for probabilistic couplings, thereby relaxing the assignment problem. Our estimation framework can be formulated as a semi-relaxed Gromov-Wasserstein objective and provides a low-dimensional representation of the generative structure. We solve this via a block-coordinate…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

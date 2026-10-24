@@ -1,0 +1,20 @@
+{
+  "key": "2608.30121",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.30121",
+  "title": "Structure-Preserving Detailed-Balance Master-Equation Discretizations for Fokker--Planck Equations",
+  "authors": [
+    "Satish Chandran",
+    "Yiwei Wang"
+  ],
+  "summary": "We develop a variational--Markov construction of detailed-balance master-equation discretizations for Fokker--Planck equations directly from their energy--dissipation laws. Rather than discretizing the differential operator, we represent mass transfer between neighboring grid points by two directional jump rates. On each edge, the discrete energy--dissipation law determines the net flux, while detailed balance fixes the rate ratio; a local reconstruction of edge quantities from neighboring grid-point values then uniquely determines both rates. A logarithmic-mean reconstruction recovers the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-31",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2609.18325",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.18325",
+  "title": "A sequential regularized piecewise affine algorithm for nonconvex nonsmooth multicomposite optimization in RNN training",
+  "authors": [
+    "Lingzi Jin",
+    "Xiao Wang",
+    "Xiaojun Chen"
+  ],
+  "summary": "This paper focuses on a class of nonconvex nonsmooth multicomposite optimization problems for training RNNs (Recurrent Neural Networks). We first establish easily verifiable conditions under which an approximate first-order d-stationary point of the problem is guaranteed to be an approximate second-order d-stationary point. Subsequently, we propose a sequential regularized piecewise affine algorithm, SRPA, that minimizes a regularized piecewise affine function at each iteration, where the idea of active-set strategy is incorporated to reduce the computational cost per iteration. Leveraging…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

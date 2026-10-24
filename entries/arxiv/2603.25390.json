@@ -1,0 +1,22 @@
+{
+  "key": "2603.25390",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.25390",
+  "title": "Computing Saddle Points in Stiff Problems via a Preconditioned High-index Saddle Dynamics Method",
+  "authors": [
+    "Bingzhang Huang",
+    "Hua Su",
+    "Lei Zhang",
+    "Jin Zhao"
+  ],
+  "summary": "High-index saddle dynamics (HiSD) is an effective approach for computing saddle points of a prescribed Morse index and constructing solution landscapes for complex nonlinear systems. However, for problems with ill-conditioned Hessians arising from fine discretizations or stiff potentials, the efficiency of standard HiSD deteriorates as its convergence rate worsens with the spectral condition number $κ$. To address this issue, we propose a preconditioned HiSD (p-HiSD) framework that reformulates the continuous dynamics within a Riemannian metric induced by a symmetric positive definite…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-26",
+  "updated": "2026-05-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

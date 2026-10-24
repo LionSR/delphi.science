@@ -1,0 +1,21 @@
+{
+  "key": "2609.31994",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.31994",
+  "title": "Efficient and Adaptive Estimation of Portfolio Weights with Spectral Risk Measures",
+  "authors": [
+    "Kangjie Zhou",
+    "Ming Yuan"
+  ],
+  "summary": "Spectral risk measures, including conditional value-at-risk (CVaR), generate a family of convex criteria for portfolio estimation. We study how the criterion should be chosen when different criteria share the same population minimizer, and whether the efficient criterion can itself be learned from data. We develop a general asymptotic theory for empirical spectral-risk minimization under estimated linear constraints. Under normal scale-mixture elliptical returns, all spectral risk measures identify the same population efficient portfolio, but their empirical minimizers have different…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

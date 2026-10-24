@@ -1,0 +1,20 @@
+{
+  "key": "2609.34865",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.34865",
+  "title": "A priori error analysis for one-parameter Lagrange and POD reduced order methods",
+  "authors": [
+    "Antti Hannukainen",
+    "Vigdis Toresen"
+  ],
+  "summary": "This work deals with the numerical solution of parametric linear elliptic partial differential equations using the finite element method for spatial discretization and a proper orthogonal decomposition or Lagrange subspace method based ROM for treating the parameter dependency. We study a simple one-parameter model problem and prove an error estimate for these ROMs as a function of the snapshot point set. Sub-exponential convergence with respect to the number of snapshot points is established under very mild assumptions on the point set. Exponential convergence is proven for structured point…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

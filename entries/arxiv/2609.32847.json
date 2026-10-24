@@ -1,0 +1,23 @@
+{
+  "key": "2609.32847",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32847",
+  "title": "Sliced Orlicz-Wasserstein",
+  "authors": [
+    "Binh Thuan Tran",
+    "Khai Nguyen"
+  ],
+  "summary": "We propose sliced Orlicz-Wasserstein (SOW) distance which is a generalization of sliced Wasserstein (SW) distance. SOW replaces the $L^p$ norm in SW with a Luxemburg norm cost induced by an Orlicz function $φ$. First, we prove that SOW distance is a metric on the space of measures with finite Orlicz norm, and show that it recovers the SW distance when the Orlicz function is $φ(x)=x^p$. Next, we derive the topological properties of the SOW distance. In particular, we show that convergence under SOW implies weak convergence, and the converse is true under the compact support condition. We then…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST",
+    "stat.CO"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

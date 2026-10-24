@@ -1,0 +1,19 @@
+{
+  "key": "2606.17934",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.17934",
+  "title": "Multigrid Preconditioning for FEEC using Mass-Lumping and Transforming Smoothers",
+  "authors": [
+    "Radovan Dabetić"
+  ],
+  "summary": "For PDEs naturally posed in the de Rham complex, structure-preserving mixed and saddle-point finite element discretizations typically produce indefinite linear systems. We propose a multigrid preconditioning framework that combines mass-lumped (explicitly invertible) FEEC mass matrices with transforming smoothers that map the operator to a block form with positive definite diagonal blocks, enabling Gauss-Seidel-type relaxation on the transformed system. Under mild h-uniform norm-equivalence assumptions (and for trivial topology), we prove stability of the mass-lumped systems, and by…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2606.10295",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.10295",
+  "title": "$k$-Nearest Neighbors in Gromov--Wasserstein Space",
+  "authors": [
+    "Kaitlyn Hohmeier",
+    "Nicolas Fraiman",
+    "Caroline Moosmueller"
+  ],
+  "summary": "The Gromov--Wasserstein (GW) distance provides a framework for comparing metric measure spaces, regardless of their underlying structure or geometry. For network-based data, it enables direct comparisons of graphs with different numbers of nodes, without requiring an embedding or other abstraction. Furthermore, through a variant of GW known as fused Gromov--Wasserstein (fGW), it is also possible to incorporate node features in addition to graph structure. In this work, we implement $k$-nearest neighbors ($k$-NN) classification using the GW and fGW distances. We prove the universal…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-06-09",
+  "updated": "2026-06-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

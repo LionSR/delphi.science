@@ -1,0 +1,22 @@
+{
+  "key": "2609.20785",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20785",
+  "title": "Boolean Small-Ball Inequalities for Discrepancy Theory",
+  "authors": [
+    "Emrullah Akbas",
+    "Suvrit Sra"
+  ],
+  "summary": "We prove new small-ball inequalities for boolean matrix-series. The leading example is $\\mathbb E_s[{\\text{det}(I-S^2)^β\\,\\mathbf 1_{\\{\\|S\\|<1\\}}}]\\ge e^{-O(βτ)}$, which holds for boolean matrix-series $S=\\sum_i s_iA_i$ formed using symmetric matrices $A_1,\\dots,A_n$ and uniformly random signs $s\\in\\{\\pm1\\}^n$. Specifically, this inequality holds for all $β\\ge1$ with $τ=\\sum_i\\text{Tr} A_i^2$, as soon as the maximum of $(\\text{Tr} A_i^2)_{i=1}^n$ and a certain variance term are bounded above by universal constants. The proof combines the Gaussian reciprocal estimate of (Akbas and Sra 2026),…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.CO",
+    "math.FA"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

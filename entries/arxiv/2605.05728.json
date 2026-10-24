@@ -1,0 +1,24 @@
+{
+  "key": "2605.05728",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05728",
+  "title": "WARP: A Benchmark for Primal-Dual Warm-Starting of Interior-Point Solvers",
+  "authors": [
+    "Dhruv Suri",
+    "Helgi Hilmarsson",
+    "Shourya Bose"
+  ],
+  "summary": "Solving AC Optimal Power Flow (AC-OPF) is of central importance in electricity market operations, where interior-point methods (IPMs) such as IPOPT are the standard solvers. A growing body of work uses machine learning to predict primal warm-start iterates, reporting iteration reductions of 30-46\\%. We show that these reported gains rest on an inappropriate evaluation baseline: prior methods benchmark against the flat start $V_m = 1, V_a = 0$, whereas the solver's actual default - the variable-bound midpoint $(l+u)/2$ - is near-optimal for log-barrier centrality. Against this corrected…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

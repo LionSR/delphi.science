@@ -1,0 +1,20 @@
+{
+  "key": "2606.05156",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.05156",
+  "title": "Temporal Cliques Admit Linear Spanners",
+  "authors": [
+    "Julia Baligacs"
+  ],
+  "summary": "A temporal graph is a graph in which every edge carries a non-empty set of time labels, and it is temporally connected if for every two vertices $u$ and $v$, there exists a $u$-$v$-path with non-decreasing time labels. A spanner is a subset of its edges preserving temporal connectivity. Unlike static graphs, temporally connected graphs need not admit sparse spanners; nonetheless, minimizing spanner size is a central and widely studied problem. A particularly intriguing question is whether temporal cliques admit spanners of linear size. Despite considerable effort over the past years, the…",
+  "domain": "cs.DM",
+  "tags": [
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-06-03",
+  "updated": "2026-06-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

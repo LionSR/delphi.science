@@ -1,0 +1,22 @@
+{
+  "key": "2610.07126",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.07126",
+  "title": "CUDA-MPQS: A GPU-Resident Self-Initializing Quadratic Sieve, and the Factorization of RSA-155",
+  "authors": [
+    "Fabian Januszewski",
+    "Christoph Heinrichs"
+  ],
+  "summary": "The quadratic sieve (QS) is an irregular, cache-hostile, branch-heavy integer factorization algorithm; prior GPU work accelerates individual stages of it. We present \\swname{}, a self-initializing quadratic sieve in which \\emph{every} stage --- polynomial initialization, sieving, relation post-processing, large-prime matching, \\GFtwo{} matrix construction, Block Wiedemann linear algebra and the square root --- executes on the GPU, the CPU restricted to orchestration, setup and I/O, the sieve window 99.9\\% GPU-busy with no device-wide or event synchronization and no synchronous copy. With it…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "cs.DC",
+    "cs.MS"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

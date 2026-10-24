@@ -1,0 +1,22 @@
+{
+  "key": "2610.10214",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.10214",
+  "title": "RoBART: Bayesian Additive Regression Trees with Tree-Specific Rotations",
+  "authors": [
+    "Jeongung Heo",
+    "Seonghyun Jeong"
+  ],
+  "summary": "Bayesian additive regression trees (BART) can require many splits to approximate boundaries misaligned with the predictor axes. RoBART assigns each tree a rotation shared by all internal nodes, retaining axis-aligned splits in rotated coordinates and constant leaves. We jointly propose a Givens rotation sequence and cutpoints on the resulting grid by Metropolis-Hastings and establish reversibility with respect to the conditional posterior with leaf means integrated out. For additive functions with component-specific rotations and anisotropic Hölder smoothness, we prove posterior contraction…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

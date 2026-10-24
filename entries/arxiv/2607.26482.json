@@ -1,0 +1,21 @@
+{
+  "key": "2607.26482",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.26482",
+  "title": "A Receding Horizon Control For General Assembly Line Balancing Problems",
+  "authors": [
+    "Ali Mohamed Ali",
+    "Luca Tirel"
+  ],
+  "summary": "This paper introduces a novel approach to the General Assembly Line Balancing Problem (GALBP) by utilizing a receding horizon optimal control framework. The proposed discrete model for the assembly line offers a flexible representation, avoiding assumptions about specific line configurations. The control actions aim to optimize the industrial assembly line by minimizing the completion time while adhering to constraints such as task precedence, workstation capacity, and resource requirements. Control actions are represented through task assignment and resource allocation matrices, assigning…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

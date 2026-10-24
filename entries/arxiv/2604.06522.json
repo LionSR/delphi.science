@@ -1,0 +1,28 @@
+{
+  "key": "2604.06522",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.06522",
+  "title": "Constrained Policy Optimization for Provably Fair Order Matching",
+  "authors": [
+    "Zehua Cheng",
+    "Zhipeng Wang",
+    "Wei Dai",
+    "Wenhu Zhang",
+    "Vadzim Mahilny",
+    "David Shi",
+    "Elena Jia",
+    "Jiahao Sun"
+  ],
+  "summary": "Automated matching engines execute millions of orders per session, yet systematic asymmetries in latency, order size, and market access compound into persistent execution disparities that erode participant trust. We formulate provably fair order matching as a Constrained Markov Decision Process and propose CPO-FOAM (Constrained Policy Optimization with Feedback-Optimized Adaptive Margins). An inner loop computes an analytic trust-region step on the Fisher information manifold; a PID-controlled outer loop dynamically tightens safety margins, suppressing the sawtooth oscillations endemic to…",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "math.DS",
+    "math.OC"
+  ],
+  "published": "2026-04-07",
+  "updated": "2026-04-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

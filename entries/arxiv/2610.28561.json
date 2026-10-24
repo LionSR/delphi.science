@@ -1,0 +1,23 @@
+{
+  "key": "2610.28561",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.28561",
+  "title": "Convergence of stochastic gradient descent for learning linear neural networks",
+  "authors": [
+    "Gabin Maxime Nguegnang",
+    "Bubacarr Bah",
+    "Holger Rauhut",
+    "Ulrich Terstiege"
+  ],
+  "summary": "Stochastic gradient descent (SGD) is the cornerstone of modern deep learning, yet its theoretical convergence properties remain poorly understood in non-convex settings. To address this gap, we study SGD dynamics in deep linear neural networks - simplified models that retain key non-convex characteristics while remaining analytically tractable. Building on recent results for gradient descent, we extend convergence guarantees to SGD under regularized squared loss. We establish almost sure boundedness of SGD iterates. Using the framework of asymptotic pseudotrajectories from stochastic…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

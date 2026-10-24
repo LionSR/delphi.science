@@ -1,0 +1,21 @@
+{
+  "key": "2609.07067",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07067",
+  "title": "Optimal central limit theorem for bounded random variables in high dimensions",
+  "authors": [
+    "P. M. Aronow",
+    "Patrick Lopatto"
+  ],
+  "summary": "Let $W=n^{-1/2}\\sum_{i=1}^n X_i$, where the $X_i$ are independent centered random vectors in ${\\mathbb R}^p$ with $|X_{ij}|\\le B$ almost surely. Suppose that $\\text{Cov}(W)$ has unit diagonal and smallest eigenvalue at least $b^2>0$. We prove that the distance between $W$ and a Gaussian vector with the same covariance, uniformly over axis-aligned rectangles, is at most $C\\min\\{1,b^{-2}Bn^{-1/2}\\log^{3/2}(ep)\\}$. For fixed $b$, the dependence on summand size and dimension matches known lower bounds in growing-dimensional regimes. The proof combines a concentration estimate near rectangle…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.ST"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

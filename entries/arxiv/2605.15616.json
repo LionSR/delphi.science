@@ -1,0 +1,20 @@
+{
+  "key": "2605.15616",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.15616",
+  "title": "Entropy stable finite difference schemes for One-Fluid Two-Temperature Euler Non-equilibrium Hydrodynamics",
+  "authors": [
+    "Chetan Singh",
+    "Harish Kumar"
+  ],
+  "summary": "One-Fluid Two-Temperature Euler (OFTT-Euler) equations are used for modeling non-equilibrium hydrodynamics and form a system of nonlinear hyperbolic partial differential equations with non-conservative products. The model decomposed the total pressure into two scalar components: one for electrons and one for ions. In this work, we design entropy-stable finite difference numerical schemes for the model. This is achieved by introducing a novel reformulation of the equations, ensuring that the new non-conservative terms do not contribute to the entropy evolution. For this novel reformulation of…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-15",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

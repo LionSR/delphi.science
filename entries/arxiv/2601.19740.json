@@ -1,0 +1,24 @@
+{
+  "key": "2601.19740",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.19740",
+  "title": "Error estimates of a training-free diffusion model for high-dimensional sampling",
+  "authors": [
+    "Pengjun Wang",
+    "Zezhong Zhang",
+    "Minglei Yang",
+    "Feng Bao",
+    "Yanzhao Cao",
+    "Guannan Zhang"
+  ],
+  "summary": "Score-based diffusion models are a powerful class of generative models, but their practical use often depends on training neural networks to approximate the score function. Training-free diffusion models provide an attractive alternative by exploiting analytically tractable score functions, and have recently enabled supervised learning of efficient end-to-end generative samplers. Despite their empirical success, the training-free diffusion models lack rigorous and numerically verifiable error estimates. In this work, we develop a comprehensive error analysis for a class of training-free…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-27",
+  "updated": "2026-01-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

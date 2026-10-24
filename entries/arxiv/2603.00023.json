@@ -1,0 +1,22 @@
+{
+  "key": "2603.00023",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.00023",
+  "title": "Riemannian Dueling Optimization",
+  "authors": [
+    "Yuxuan Ren",
+    "Abhishek Roy",
+    "Shiqian Ma"
+  ],
+  "summary": "Dueling optimization considers optimizing an objective with access to only a comparison oracle of the objective function. It finds important applications in emerging fields such as recommendation systems and robotics. Existing works on dueling optimization mainly focused on unconstrained problems in the Euclidean space. In this work, we study dueling optimization over Riemannian manifolds, which covers important applications that cannot be solved by existing dueling optimization algorithms. In particular, we propose a Riemannian Dueling Normalized Gradient Descent (RDNGD) method and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-02-03",
+  "updated": "2026-02-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2610.30486",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.30486",
+  "title": "Comb Tensor Network Finite-Difference Time-Domain Algorithms for 2D and 3D Electromagnetic Simulations",
+  "authors": [
+    "Jonathan Tabares",
+    "Erika Ye",
+    "Yang Liu"
+  ],
+  "summary": "This paper presents efficient 2D and 3D finite-difference time-domain (FDTD) algorithms augmented by the comb tensor network (CTN) representation of the field and auxiliary quantities. The proposed CTN-FDTD algorithm leverages superior compressibility of CTN compared with quantized tensor train (QTT), and rank-reduction strategies including local and global smoothing techniques to achieve logarithmic memory requirement and computation (per time step) cost. Numerical examples validate these complexities and demonstrate the applicability of CTN-FDTD using a variety of source excitation,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

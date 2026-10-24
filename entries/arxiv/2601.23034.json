@@ -1,0 +1,21 @@
+{
+  "key": "2601.23034",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.23034",
+  "title": "Breaking the Stochasticity Barrier: An Adaptive Variance-Reduced Method for Variational Inequalities",
+  "authors": [
+    "Yungi Jeong",
+    "Takumi Otsuka"
+  ],
+  "summary": "Stochastic non-convex non-concave optimization, formally characterized as Stochastic Variational Inequalities (SVIs), presents unique challenges due to rotational dynamics and the absence of a global merit function. While adaptive step-size methods (like Armijo line-search) have revolutionized convex minimization, their application to this setting is hindered by the Stochasticity Barrier: the noise in gradient estimation masks the true operator curvature, triggering erroneously large steps that destabilize convergence. In this work, we propose VR-SDA-A (Variance-Reduced Stochastic…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-01-30",
+  "updated": "2026-10-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

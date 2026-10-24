@@ -1,0 +1,19 @@
+{
+  "key": "2609.19195",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.19195",
+  "title": "Lean-Certified Infinite Counterexamples to Written on the Wall II Conjecture 194",
+  "authors": [
+    "Cameron Beeley"
+  ],
+  "summary": "For a finite simple graph G, let alpha(G) denote its independence number and let l_avg(G) = (1 / |V(G)|) sum_{v in V(G)} alpha(G[N_G(v)]) be the average independence number of its open neighbourhoods. Written on the Wall II Conjecture 194 asserts that every simple connected graph on n > 1 vertices satisfying alpha(G) = 1 and t >= 3 it has (s + 1)t^2 vertices, independence number t + 1, l_avg(G) = t, and minimum degree s, but has no Hamiltonian path. This entire infinite subfamily is machine-checked in Lean 4: one universally quantified theorem certifies its order, connectivity, independence…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2603.22824",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.22824",
+  "title": "Towards The Implicit Bias on Multiclass Separable Data Under Norm Constraints",
+  "authors": [
+    "Shengping Xie",
+    "Zekun Wu",
+    "Quan Chen",
+    "Kaixu Tang"
+  ],
+  "summary": "Implicit bias induced by gradient-based algorithms is essential to the generalization of overparameterized models, yet its mechanisms can be subtle. This work leverages the Normalized Steepest Descent} (NSD) framework to investigate how optimization geometry shapes solutions on multiclass separable data. We introduce NucGD, a geometry-aware optimizer designed to enforce low rank structures through nuclear norm constraints. Beyond the algorithm itself, we connect NucGD with emerging low-rank projection methods, providing a unified perspective. To enable scalable training, we derive an…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-03-24",
+  "updated": "2026-03-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

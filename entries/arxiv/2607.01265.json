@@ -1,0 +1,19 @@
+{
+  "key": "2607.01265",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.01265",
+  "title": "$λ_\\infty$: A New Mathematical Constant from the Spectral Theory of the Prime LCM Matrix",
+  "authors": [
+    "Alessandro Munari"
+  ],
+  "summary": "We introduce a new mathematical constant $λ_\\infty = 0.674036183193696139936660007576508455780\\ldots$ (OEIS A396695), defined as the unique solution in $(1/4,+\\infty)$ of $h(x) := \\sum_{p \\text{ prime}} 1/(xp^2-p+1) = 1$. This equation arises as the $n\\to\\infty$ limit of the secular equation of rank-$n$ truncations of the infinite prime LCM matrix $\\mathcal{L}[p_i,p_j]=1/\\mathrm{lcm}(p_i,p_j)$, where $\\mathcal{L}=D+vv^T$. Viewed as a compact self-adjoint operator on $\\ell^2(\\mathcal{P})$, $\\mathcal{L}$ has spectral radius $ρ(\\mathcal{L})=λ_\\infty$ (Theorem 5.4). The corresponding integer LCM…",
+  "domain": "math.GM",
+  "tags": [
+    "math.GM"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

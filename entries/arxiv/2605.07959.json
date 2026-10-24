@@ -1,0 +1,25 @@
+{
+  "key": "2605.07959",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.07959",
+  "title": "Convergent Stochastic Training of Multi-Headed Attention and Understanding LoRA",
+  "authors": [
+    "Zhengkai Sun",
+    "Dibyakanti Kumar",
+    "Alejandro F Frangi",
+    "Anirbit Mukherjee",
+    "Mingfei Sun"
+  ],
+  "summary": "Transformers have revolutionized machine learning and deploying attention layers in the model is increasingly standard across a myriad of applications. Further, for large models, it is common to implement Low Rank Adaptation (LoRA), whereby a factorized parameterization of them is trained, to achieve a surprisingly beneficial accuracy-size trade-off. In this work, via a unified framework we rigorously establish trainability of such models under stochastic methods. We prove that for a class of mild regularizations, the empirical regression loss on a attention layer and LoRA on a shallow…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.FA",
+    "math.PR"
+  ],
+  "published": "2026-05-08",
+  "updated": "2026-09-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

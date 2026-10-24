@@ -1,0 +1,23 @@
+{
+  "key": "2609.26435",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.26435",
+  "title": "One-Step Generative Surrogate Models via Block-Triangular Joint Drifting",
+  "authors": [
+    "Nicholas Geissler",
+    "Shreya Jha",
+    "Ricardo Baptista",
+    "Benjamin Peherstorfer"
+  ],
+  "summary": "Drifting provides a direct route to one-step generative models, but applying it directly to stochastic transition modeling requires multiple samples of the next state conditioned on the same current state. Standard trajectory data, however, typically provide only one realized next state for each observed current state and therefore do not provide an empirical approximation of the corresponding conditional distribution over possible next states. We introduce block-triangular joint drifting, which instead applies a projected drift field to the empirically accessible joint distribution of…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-09-22",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2602.19143",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.19143",
+  "title": "Incremental Learning of Sparse Attention Patterns in Transformers",
+  "authors": [
+    "Oğuz Kaan Yüksel",
+    "Rodrigo Alvarez Lucendo",
+    "Nicolas Flammarion"
+  ],
+  "summary": "This paper studies simple transformers trained on a high-order Markov chain, where the model must incorporate information from multiple past positions, each with different statistical importance. We show that transformers learn the task incrementally, with each stage corresponding to learning how to copy information from a subset of positions via a sparse attention pattern. Notably, the learning dynamics transition from a competitive phase, where all heads focus on the statistically most important positions, to a cooperative phase, where different heads specialize in different patterns. We…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-02-22",
+  "updated": "2026-07-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

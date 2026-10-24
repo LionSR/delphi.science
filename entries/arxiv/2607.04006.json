@@ -1,0 +1,22 @@
+{
+  "key": "2607.04006",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04006",
+  "title": "Finite-Sample Closed-Loop Stability of Model Predictive Path Integral Control for Linear Time-Invariant Systems",
+  "authors": [
+    "Hyung-Jin Yoon",
+    "Hunmin Kim"
+  ],
+  "summary": "We establish finite-sample closed-loop stability guarantees for Model Predictive Path Integral (MPPI) control applied to discrete-time Linear Time-Invariant (LTI) systems with additive Gaussian process disturbances. The key observation is that, for unconstrained LTI/quadratic systems with the DARE terminal cost, the exact finite-horizon MPC law has the same first control action as the infinite-horizon LQR law for every planning horizon. Thus, finite-sample MPPI can be analyzed as a stochastic perturbation of LQR. First, we show that the MPPI control law approximates the LQR feedback with…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.RO",
+    "eess.SY"
+  ],
+  "published": "2026-07-04",
+  "updated": "2026-07-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

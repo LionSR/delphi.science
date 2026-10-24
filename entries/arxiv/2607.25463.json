@@ -1,0 +1,22 @@
+{
+  "key": "2607.25463",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.25463",
+  "title": "Optimal Parameter Design for DIGing on Minimizing Unweighted Sum of Squares",
+  "authors": [
+    "Qiuchen Tian",
+    "Li Chai",
+    "Jinming Xu"
+  ],
+  "summary": "There is no general method for designing proper parameters to achieve faster convergence in distributed optimization algorithms. In this paper, we consider the distributed inexact gradient tracking (DIGing) algorithm with the objective function being the unweighted sum of squares. By representing the iteration algorithm as a dynamical linear system, we decompose it into different graph frequencies and obtain a set of decoupled subsystems, on which we can easily analyze the convergence rate. By using Routh stability criterion from control theory, we derive the explicit formula of the optimal…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-07-28",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

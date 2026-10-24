@@ -1,0 +1,20 @@
+{
+  "key": "2605.29186",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.29186",
+  "title": "Modal-Rectification-Based Directional Edge Diffusion for Cartesian Convection--Diffusion Problems",
+  "authors": [
+    "Gossrin Jean-Marc Bomisso",
+    "Ali Ouattara Kouma"
+  ],
+  "summary": "Centered finite-difference discretizations of convection--diffusion equations may oscillate when convection dominates at the mesh scale. For homogeneous Dirichlet problems with constant coefficients on uniform Cartesian grids, we derive ADSC (Adaptive Directional Sparse Correction), a local directional edge-diffusion correction guided by modal rectification of the centered-stencil Fourier symbol. The ideal modal reference damps modes independently, but its exact nodal action is nonlocal; ADSC replaces it by a nearest-neighbor positive semidefinite correction. For a regularized operator with…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-27",
+  "updated": "2026-05-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

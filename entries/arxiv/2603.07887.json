@@ -1,0 +1,29 @@
+{
+  "key": "2603.07887",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.07887",
+  "title": "Reject, Resample, Repeat: Understanding Parallel Reasoning in Language Model Inference",
+  "authors": [
+    "Noah Golowich",
+    "Fan Chen",
+    "Dhruv Rohatgi",
+    "Raghav Singhal",
+    "Carles Domingo-Enrich",
+    "Dylan J. Foster",
+    "Akshay Krishnamurthy"
+  ],
+  "summary": "Inference-time methods that aggregate and prune multiple samples have emerged as a powerful paradigm for steering large language models, yet we lack any principled understanding of their accuracy-cost tradeoffs. In this paper, we introduce a route to rigorously study such approaches using the lens of *particle filtering* algorithms such as Sequential Monte Carlo (SMC). Given a base language model and a *process reward model* estimating expected terminal rewards, we ask: *how accurately can we sample from a target distribution given some number of process reward evaluations?* Theoretically,…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-03-09",
+  "updated": "2026-03-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

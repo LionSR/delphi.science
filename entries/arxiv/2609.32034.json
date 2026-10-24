@@ -1,0 +1,22 @@
+{
+  "key": "2609.32034",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32034",
+  "title": "Tight Convergence Bounds for the Classical Kaczmarz Method",
+  "authors": [
+    "Runbo Yu",
+    "Jelena Diakonikolas"
+  ],
+  "summary": "The classical method of Kaczmarz, introduced in 1937, is a textbook iterative method for solving linear systems $A x = b.$ Despite its widespread use, particularly in the context of solving inverse problems where it is commonly included in software packages within Matlab, Python, and Julia, the precise characterization of convergence has long been deemed difficult to obtain. While different bounds on convergence rates have been established, they are largely unsatisfying as they cannot explain the classical, cyclic-update method's efficient convergence in practice. In this work, we obtain a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DS",
+    "math.NA"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

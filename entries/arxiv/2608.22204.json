@@ -1,0 +1,21 @@
+{
+  "key": "2608.22204",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.22204",
+  "title": "Antagonistic Control: Foundations, Scalability and Nonlinearity",
+  "authors": [
+    "Sribalaji C. Anand",
+    "André M. H. Teixeira"
+  ],
+  "summary": "This paper studies the worst-case impact of constrained control inputs: an input seeks to maximize the average cost of some outputs, measured in the $L_2$ or $L_1$ norm, while remaining bounded in terms of other outputs. This problem template subsumes classical metrics such as the $H_\\infty$ norm and the output-to-output gain, and arises in adversarial control, security assessment, and robust control. For linear time-invariant systems, we provide an exact semi-definite program (SDP) when there is a single constraint, and SDPs computing upper bounds when there are multiple constraints. We…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-08-23",
+  "updated": "2026-08-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

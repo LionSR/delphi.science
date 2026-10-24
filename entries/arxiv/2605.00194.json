@@ -1,0 +1,22 @@
+{
+  "key": "2605.00194",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.00194",
+  "title": "The speed of convergence in the Cooper-Dutle dueling game",
+  "authors": [
+    "Jeffrey Shallit"
+  ],
+  "summary": "In 2013 Cooper and Dutle invented a dueling scenario where Alice and Bob shoot at each other until one is hit. Each shot is successful with some fixed probability $p$, $0 < p < 1$. The shooting order is given by a greedy algorithm, where at each step a shot is assigned to the player whose current probability of success is smaller. Cooper and Dutle observed that as $p \\rightarrow 0$, the resulting sequence of shots (by Alice or Bob) converges to the infinite Thue-Morse sequence $\\mathbf{t}$, but left the speed of convergence as an open problem. In this note we determine the speed of this…",
+  "domain": "cs.FL",
+  "tags": [
+    "cs.FL",
+    "cs.DM",
+    "math.CO",
+    "math.PR"
+  ],
+  "published": "2026-04-30",
+  "updated": "2026-09-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

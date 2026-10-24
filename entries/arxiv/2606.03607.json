@@ -1,0 +1,22 @@
+{
+  "key": "2606.03607",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.03607",
+  "title": "On multi-fidelity methods for a tumor growth model with uncertainties",
+  "authors": [
+    "Huimin Yu",
+    "Liu Liu",
+    "Yu Feng",
+    "Te Qi"
+  ],
+  "summary": "We develop a hierarchical multi-fidelity (MF) framework for efficient uncertainty quantification of porous-medium equation (PME) tumor growth models with moving free boundaries. The proposed approach combines coarse-grid PME solvers, level-set approximations of the Hele--Shaw limit, and fine-grid asymptotic-preserving PME discretizations, thereby integrating both discretization-based and asymptotic-model-based fidelity reduction. To guide the selection of high-fidelity samples, we introduce a residual-based farthest-point sampling (RFPS) criterion that combines projection residual…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-02",
+  "updated": "2026-06-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

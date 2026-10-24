@@ -1,0 +1,20 @@
+{
+  "key": "2607.14918",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14918",
+  "title": "A C++ implementation of the G-Scheme stiff ODE solver with multi-resolution sparse hash-table kernel lookup",
+  "authors": [
+    "Riccardo Malpica Galassi",
+    "Mauro Valorani"
+  ],
+  "summary": "The G-Scheme is an explicit, adaptive integration framework for stiff systems of ordinary differential equations that exploits a local time-scale decomposition provided by the eigensystem of the Jacobian (the kernel set). Its computational cost is dominated by the evaluation of a new kernel set at each time step. In a recent paper [R.Malpica Galassi and M.Valorani, Combust. Theory Model. 2025], we introduced a multi-resolution sparse hash-table strategy that replaces online kernel computation with retrieval from a precomputed lookup table, demonstrated in Python. Here we present cpp-gscheme,…",
+  "domain": "math-ph",
+  "tags": [
+    "math-ph"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2610.02500",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02500",
+  "title": "Proving at Scale for Universal Algebra",
+  "authors": [
+    "João Araújo",
+    "Jan Hůla",
+    "Mikoláš Janota",
+    "Edmond W. H. Lee",
+    "Bartosz Naskręcki"
+  ],
+  "summary": "We introduce SemiBase, a project that computes and formally certifies finite identity bases for small semigroups. Deciding finite basability is undecidable for finite algebras and remains open for finite semigroups. The task requires a proof that a candidate basis is complete, or a proof that none exists, rather than a single first-order validity query. LLM-guided agents search for these proofs; a referee agent rebuilds them from source, and the Lean kernel checks the resulting corpus in a final audit. Humans choose targets and approve final outcomes. We certify every semigroup of order at…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "math.GR"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

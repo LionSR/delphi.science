@@ -1,0 +1,22 @@
+{
+  "key": "2605.16529",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.16529",
+  "title": "Multiscale Supervised Unbalanced Optimal Transport Flow Matching",
+  "authors": [
+    "Qiangwei Peng",
+    "Lezhi Chen",
+    "Peijie Zhou"
+  ],
+  "summary": "Unbalanced optimal transport (UOT) provides a principled framework for modeling single-cell transitions and birth-death dynamics, but its high computational cost limits scalability to large-scale datasets. Although single-cell data often contain hierarchical annotations and known transition priors, existing UOT approximations rarely exploit this multiscale structure or prior knowledge. We introduce Multiscale Supervised Unbalanced Optimal Transport Flow Matching (MUST-FM), a simulation-free framework that scales UOT by leveraging hierarchical data structure. MUST-FM further supports an…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-05-15",
+  "updated": "2026-05-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

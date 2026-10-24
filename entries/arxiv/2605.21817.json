@@ -1,0 +1,20 @@
+{
+  "key": "2605.21817",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.21817",
+  "title": "A linear upper bound on the $\\mathbb{Z}_p$-Ramsey number of graphs with sufficiently large $2$-packing",
+  "authors": [
+    "Emily Heath",
+    "Andrew Simmons"
+  ],
+  "summary": "Given a positive integer $k$ and graph $G$, the $\\mathbb{Z}_k$-Ramsey number $R(G,\\mathbb{Z}_k)$ is the least $N$ (if it exists) such that every coloring $f:E(K_N)\\rightarrow \\mathbb{Z}_k$ contains a copy $G'$ of $G$ such that $\\sum_{e\\in E(G')}f(e)=0$. Motivated by a question of Caro and Mifsud, we study the $\\mathbb{Z}_k$-Ramsey number of graphs with a sufficiently large 2-packing, i.e. a set of vertices $S\\subseteq V(G)$ such that $N[u]\\cap N[v]=\\emptyset$ for all distinct $u,v\\in S$. In particular, we prove that $R(G,\\mathbb{Z}_p)\\leq n+6p-9$ for all $n$-vertex graphs $G$ and all primes…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-05-20",
+  "updated": "2026-05-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

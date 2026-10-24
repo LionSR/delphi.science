@@ -1,0 +1,20 @@
+{
+  "key": "2609.11050",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11050",
+  "title": "Picard-Based Acceleration of Newton Continuation for Mean Field Game PDE Systems",
+  "authors": [
+    "Mathieu Lauriere",
+    "Andrew Shi"
+  ],
+  "summary": "We develop a method that uses Picard iterations to accelerate Newton continuation for the semi-implicit finite-difference discretization of forward-backward partial differential equation (PDE) systems arising in mean field games (MFGs). We first investigate the computational properties of the Picard and Newton methods, which are widely used separately in the MFG literature but whose comparative cost and robustness across different regimes remain insufficiently explored and documented. The Picard method uses an outer fixed-point iteration that alternates a forward Fokker-Planck solve and a…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

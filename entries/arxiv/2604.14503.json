@@ -1,0 +1,22 @@
+{
+  "key": "2604.14503",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.14503",
+  "title": "PANOC-lite: A simpler and more efficient algorithm for composite minimization",
+  "authors": [
+    "Alexander Bodard",
+    "Pieter Pas",
+    "Andreas Themelis",
+    "Panagiotis Patrinos"
+  ],
+  "summary": "This work introduces a simple and efficient linesearch method for composite minimization that accelerates proximal-gradient iterations with fast Newton-type directions. Our algorithm is based on simple operations and only requires the standard proximal-gradient oracle, similar to PANOC and ZeroFPR, provided that the nonsmooth term is convex. Noteworthy improvements include a cheaper backtracking procedure, in the sense that no additional gradients need to be evaluated, and an enlarged range of permitted stepsizes. Global subsequential convergence and local superlinear convergence are…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-16",
+  "updated": "2026-04-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

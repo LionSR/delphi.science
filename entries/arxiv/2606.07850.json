@@ -1,0 +1,22 @@
+{
+  "key": "2606.07850",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.07850",
+  "title": "PDE-Agents: An LLM-Orchestrated Multi-Agent Framework for Automated Finite Element Simulations with Knowledge Graph-Augmented Reasoning",
+  "authors": [
+    "Sayan Adhikari",
+    "Gulshan Noorsumar",
+    "Øyvind Jensen"
+  ],
+  "summary": "We present PDE-Agents, a multi-agent ecosystem that automates the full lifecycle of partial differential equation (PDE) and finite element method (FEM) simulations through natural-language interaction. Three large language model agents, Simulation, Analytics, and Database, are orchestrated by a LangGraph supervisor and run locally using Qwen3-Coder-Next and Llama 4 Scout on dual NVIDIA RTX PRO 6000 Blackwell GPUs. The model-agnostic architecture is validated across two generations of open-source LLMs. A GraphRAG knowledge base using Neo4j and 768-dimensional vector embeddings provides…",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "math-ph"
+  ],
+  "published": "2026-06-05",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

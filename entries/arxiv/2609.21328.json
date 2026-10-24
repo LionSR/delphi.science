@@ -1,0 +1,22 @@
+{
+  "key": "2609.21328",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.21328",
+  "title": "History-Compatible Energy-Stable Finite Element Schemes for Variable-Density Cahn--Hilliard--Navier--Stokes Flows on Evolving Meshes",
+  "authors": [
+    "Wenbin Wang",
+    "Yunqing Huang",
+    "Yin Yang",
+    "Huayi Wei"
+  ],
+  "summary": "We consider variable-density Cahn--Hilliard--Navier--Stokes (CHNS) discretizations on finite element meshes that may change between accepted time levels through fixed-topology motion or topology-changing remeshing. When the discrete spaces vary in time, the phase, kinetic, and pressure histories entering a multistep scheme are measured in different discrete structures and cannot, in general, be transferred by a single operator. We develop decoupled backward Euler (BE) and second-order backward differentiation formula (BDF2) schemes by combining exact physical cross-mesh pairings with history…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-18",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

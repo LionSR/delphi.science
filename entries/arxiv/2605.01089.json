@@ -1,0 +1,22 @@
+{
+  "key": "2605.01089",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.01089",
+  "title": "Learning Discriminators for Resampling in the Ensemble Gaussian Mixture Filter through a Normalizing Flow Approach",
+  "authors": [
+    "Zain Jabbar",
+    "Andrey A. Popov"
+  ],
+  "summary": "The ensemble Gaussian mixture filter (EnGMF) is a powerful, convergent particle filter capable of medium-to-high dimensional non-linear filtering. The EnGMF relies on a resampling step that can generate physically unrealistic posterior samples, that would subsequently produce physically meaningless forecasts. This work introduces the discriminator-informed resampling procedure, that augments the posterior resampling step with a discriminator that accepts or rejects candidate particles based on their physical plausibility. In this work these discriminators are learned through a normalizing…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.PR",
+    "stat.CO"
+  ],
+  "published": "2026-05-01",
+  "updated": "2026-05-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

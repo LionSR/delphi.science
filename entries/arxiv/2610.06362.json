@@ -1,0 +1,23 @@
+{
+  "key": "2610.06362",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06362",
+  "title": "Explicit Nonlinear Functions beyond the Fourier bound",
+  "authors": [
+    "Swastik Kopparty",
+    "Rishabh Kothary",
+    "Shanthanu S. Rai"
+  ],
+  "summary": "We study the problem of constructing highly nonlinear vectorial maps $F: \\mathbb F_2^n \\to \\mathbb F_2^m$. Concretely, we want an $F$ and an $A = A(m,n)> 0$ as small as possible, so that for every affine map $L: \\mathbb F_2^n \\to \\mathbb F_2^m$ (of the form $L(x) = M x + b $) we have: $$\\mathrm{agree}(F, L) := |\\{ x \\in \\mathbb F_2^n \\mid F(x) = L(x) \\}| \\leq A.$$ Such questions have been studied by Nyberg (1991,1993), Carlet and Ding (2004,2007), Liu, Mesnager and Chen (2017), Nagy (2025), and Biryukov, Turecek, and Udovenko (2026). There is a classical method of constructing such functions…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "cs.CC",
+    "math.CO"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

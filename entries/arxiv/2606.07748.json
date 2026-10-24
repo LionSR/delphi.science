@@ -1,0 +1,29 @@
+{
+  "key": "2606.07748",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.07748",
+  "title": "Decomposing tournaments into comparability graphs",
+  "authors": [
+    "Pierre Aboulker",
+    "Logan Crew",
+    "Julien Duron",
+    "Xinyue Fan",
+    "Hugo Jacob",
+    "Rémy Kimbrough",
+    "Hidde Koerts",
+    "Benjamin Moore",
+    "Sophie Spirkl",
+    "Stéphan Thomassé"
+  ],
+  "summary": "In this note, we introduce the \\emph{partial order decomposition number} of a digraph $D$, denoted $pod(D)$, defined as the minimum integer $k$ such that $A(D)=A(P_1)\\cup\\cdots\\cup A(P_k)$, where $P_1,\\ldots,P_k$ are partial orders on $V(D)$. We prove that $\\dic(D)\\le \\diomega(D)^{pod(D)}$ for every digraph $D$. In particular, every class of digraphs with bounded $pod$ is polynomially $\\dic$-bounded. We apply this to tournaments, showing that if $\\mathcal C$ is a class of tournaments with bounded dichromatic number, then the closure of $\\mathcal C$ under substitution is polynomially…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM"
+  ],
+  "published": "2026-06-05",
+  "updated": "2026-06-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

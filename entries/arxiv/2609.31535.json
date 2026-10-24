@@ -1,0 +1,22 @@
+{
+  "key": "2609.31535",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.31535",
+  "title": "Discounted Hitting Domination on Graphs with Submodularity, Complexity and Exact Algorithms",
+  "authors": [
+    "Julian D. Allagan",
+    "Kevin Pereyra",
+    "William A. Massey"
+  ],
+  "summary": "On a network with a fixed set of verified sources, discounted averaging induces an equilibrium support $h_i^S=\\mathbb{E}_i[λ^{T_S}]$, the discounted probability that a random walk reaches $S$ before attenuation. We define the \\emph{discounted hitting domination number} $δ_{λ,τ}(G)$ as the minimum number of sources required to guarantee $h_i^S\\geτ$ at every vertex. Although this potential is known through penalized and group hitting probabilities, the associated minimum-cardinality uniform-coverage problem appears to be new. Aggregate support is monotone submodular, while the uniform-floor…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.OC"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

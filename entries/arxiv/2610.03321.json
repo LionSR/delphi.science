@@ -1,0 +1,22 @@
+{
+  "key": "2610.03321",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03321",
+  "title": "Information Limits of Low-Rank Approximation Certification",
+  "authors": [
+    "Kang Liu",
+    "Bohao Qu"
+  ],
+  "summary": "Low-rank approximation can require additional matrix--vector products to verify that its error meets a prescribed tolerance. We characterize this certification cost for both relative matrix error and mean-square output error. For a single approximation matrix candidate, we determine the exact dimension-uniform minimax query constant as the allowed failure probability vanishes. Our main result concerns reusing validation responses as the approximation space expands. For a candidate family constructed independently of validation, one batch supports an entire nested path without increasing the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI",
+    "cs.IT"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

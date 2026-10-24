@@ -1,0 +1,22 @@
+{
+  "key": "2610.05915",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05915",
+  "title": "Large Stepsizes Federated Learning on Logistic Regression with Linearly Separable Data: The Case of Heterogeneous Devices",
+  "authors": [
+    "Hok Fong Wong",
+    "Hoi-To Wai",
+    "Chung-Yiu Yau"
+  ],
+  "summary": "This paper revisits the distributed learning problem for training a multinomial logistic regression model with the Federated Averaging ($\\texttt{FedAvg}$) algorithm. We concentrate on a scenario with arbitrarily large stepsizes and heterogeneous update rules where the devices may perform a different number of local updates in each round. We show that, with linearly separable data, $\\texttt{FedAvg}$ is stable with any stepsizes and the objective values converge to zero at the rate of ${\\cal O}(1/R)$, where $R$ is the number of communication rounds. Our result also demonstrates that the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2607.15470",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.15470",
+  "title": "pyoptexplain: A Python Library for Post-Optimality Analysis and Explanation of Optimization Models",
+  "authors": [
+    "Hussein Fellahi"
+  ],
+  "summary": "Optimization models are built in a variety of modeling languages and solved by a variety of solvers, but once a solution exists, the information needed to understand it is fragmented: each solver exposes a partial, differently named set of native diagnostics, and the modeling language has already canonicalized the formulation the user wrote. We present pyoptexplain, a practitioner-first Python library for post-optimality analysis of optimization models that sits above this layer. It adapts a model authored in any of five modeling front ends, namely cvxpy, Pyomo, gurobipy, docplex, and…",
+  "domain": "cs.MS",
+  "tags": [
+    "cs.MS",
+    "math.OC"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,26 @@
+{
+  "key": "2609.18230",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.18230",
+  "title": "Near-Optimal Deterministic Exact-Value Complexity for Smooth Convex Optimization",
+  "authors": [
+    "Wendao Wu",
+    "Haihan Zhang",
+    "Chenheng Zhang",
+    "Yanyi Li",
+    "Chunyuan Zheng",
+    "Cong Fang",
+    "Haoxuan Li",
+    "Zhouchen Lin"
+  ],
+  "summary": "We study the deterministic oracle complexity of smooth convex optimization when the algorithm receives only exact function values. The objective is a globally $β$-smooth convex function, all queries and the final output are restricted to the Euclidean ball of radius $R$, and the unique minimizer lies in the ball of radius $R/2$. We establish an upper bound of $O(d\\sqrt{βR^2/ε})$ using coordinate finite differences together with an error-robust accelerated projected method. Our main contribution is a matching lower bound, up to the high-accuracy saturation of the construction: any…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

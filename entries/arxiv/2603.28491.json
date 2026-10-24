@@ -1,0 +1,19 @@
+{
+  "key": "2603.28491",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.28491",
+  "title": "A proof of a permutation-inverse bent-function conjecture",
+  "authors": [
+    "Kaimin Cheng"
+  ],
+  "summary": "Let $q=2^e$ with $e$ even, and let $\\mathbb F_{q^2}$ be the finite field of order $q^2$. Put $d=(q^2+q+1)/3$, and consider the permutation polynomial $$ σ(X)=X+X^d+X^{dq}\\in\\mathbb F_{q^2}[X].$$ For $α\\in\\mathbb F_q^*$, define $$f_α(x)=\\operatorname{Tr}_{q^2}\\bigl(α(σ^{-1}(x))^3\\bigr),\\qquad x\\in\\mathbb F_{q^2}.$$ We prove that $f_α$ is bent if and only if $α$ is not a cube in $\\mathbb F_q$, thereby proving a conjecture of Li, Li, Helleseth, and Qu. The proof computes the Walsh values on $\\mathbb F_q$ directly and treats the complementary parameters by reducing them to a two-variable…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-03-30",
+  "updated": "2026-06-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

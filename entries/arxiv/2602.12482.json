@@ -1,0 +1,20 @@
+{
+  "key": "2602.12482",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.12482",
+  "title": "Geometric separation and constructive universal approximation with two hidden layers",
+  "authors": [
+    "Chanyoung Sung"
+  ],
+  "summary": "We give a geometric construction of neural networks that separate disjoint compact subsets of $\\Bbb R^n$, and use it to obtain a constructive universal approximation theorem. Specifically, we show that networks with two hidden layers and either a sigmoidal activation (i.e., strictly monotone bounded continuous) or the ReLU activation can approximate any real-valued continuous function on an arbitrary compact set $K\\subset\\Bbb R^n$ to any prescribed accuracy in the uniform norm. For finite $K$, the construction simplifies and yields a sharp depth-2 (single hidden layer) approximation result.",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.CA"
+  ],
+  "published": "2026-02-12",
+  "updated": "2026-02-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

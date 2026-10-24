@@ -1,0 +1,23 @@
+{
+  "key": "2603.10960",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.10960",
+  "title": "Ranking Reasoning LLMs under Test-Time Scaling",
+  "authors": [
+    "Mohsen Hariri",
+    "Michael Hinczewski",
+    "Jing Ma",
+    "Vipin Chaudhary"
+  ],
+  "summary": "Test-time scaling evaluates reasoning LLMs by sampling multiple outputs per prompt, but ranking models in this regime remains underexplored. We formalize dense benchmark ranking under test-time scaling and introduce Scorio, a library that implements statistical ranking methods such as paired-comparison models, item response theory (IRT) models, voting rules, and graph- and spectral-based methods. Across $20$ reasoning models on four Olympiad-style math benchmarks (AIME'24, AIME'25, HMMT'25, and BrUMO'25; up to $N=80$ trials), most full-trial rankings agree closely with the Bayesian gold…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-03-11",
+  "updated": "2026-03-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

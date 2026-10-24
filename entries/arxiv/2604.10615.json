@@ -1,0 +1,23 @@
+{
+  "key": "2604.10615",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.10615",
+  "title": "Unified Communication Compression Beyond Global Error Bounds for Distributed Nonconvex Optimization",
+  "authors": [
+    "Haonan Wang",
+    "Minghui Liwang",
+    "Yiguang Hong",
+    "Karl H. Johansson",
+    "Xinlei Yi"
+  ],
+  "summary": "In this paper, we propose a unified compression algorithm for distributed nonconvex opitmization with both the locally- and globally-bounded communication compressors, including 1-bit compressors, saturating quantizers, and the globally-bounded compressors with both relative and absolute compression errors, as well as additional arbitrary bounded noise. We provide a rigorous convergence analysis in nonconvex settings and establish linear convergence under the Polyak-Lojasiewicz (P-L) condition. Notably, we establish an $\\mathcal{O}(1/\\sqrt{T})$ convergence rate for the locally-bounded class…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-12",
+  "updated": "2026-06-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

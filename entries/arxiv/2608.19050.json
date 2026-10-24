@@ -1,0 +1,23 @@
+{
+  "key": "2608.19050",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19050",
+  "title": "Online Permutation Embedding: Optimal Stopping and Scaling Laws",
+  "authors": [
+    "Dylan J. Altschuler",
+    "Quentin Dubroff",
+    "Konstantin Tikhomirov"
+  ],
+  "summary": "We study optimal online algorithms for embedding a permutation $π$ of $[k]$ into an iid stream of uniform $[0,1]$ random variables. This problem is a broad generalization of the classical online monotone subsequence selection problem, recovered in the special case $π=\\mathrm{Id}_k$. Our first contribution is an efficiently solvable dynamic program for the optimal embedding time of any $k$-permutation $π$. This dynamic program also yields an explicit optimal online embedding algorithm. We then investigate the asymptotic scaling of the optimal embedding time for uniformly random target…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-08-19",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2608.08134",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.08134",
+  "title": "Rational neural networks for tracking complex singularities of nonlinear PDEs",
+  "authors": [
+    "Nadiia Derevianko",
+    "Hans-Joachim Bungartz",
+    "Felix Dietrich"
+  ],
+  "summary": "We present a neural network-based method for numerical analytic continuation of solutions of nonlinear partial differential equations (PDEs) and detection of their complex singularities. The proposed framework employs \"unsafe\" Padé activation units (PAUs) as activation functions, together with a novel backpropagation-free method for computing the weights and biases of the hidden layers. The training procedure is designed specifically for learning meromorphic functions with pole-type singularities. Unlike existing methods with fixed hidden-layer parameters, the proposed approach treats the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.AP"
+  ],
+  "published": "2026-08-08",
+  "updated": "2026-08-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

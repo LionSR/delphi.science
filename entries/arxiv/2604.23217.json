@@ -1,0 +1,20 @@
+{
+  "key": "2604.23217",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23217",
+  "title": "Secure estimator design for Lur'e-type systems with nonuniformly and synchronously sampled measurements under attacks [extended version]",
+  "authors": [
+    "Julian Gootzen",
+    "Michelle S. Chong"
+  ],
+  "summary": "Motivated by the need for real-time health monitoring of power distribution grids, we propose a secure state estimator design for continuous time Lur'e type systems with non-uniformly and synchronously sampled outputs which have potentially been maliciously corrupted. The secure state estimator provides state estimates with accuracy independent of the sensor attack, when less than half of the sensors are under attack and when all inter-sample times are upper bounded. We show convergence of the state estimation error under an impulsive system framework and provide an upper bound on the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-25",
+  "updated": "2026-04-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

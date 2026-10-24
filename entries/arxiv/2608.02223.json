@@ -1,0 +1,22 @@
+{
+  "key": "2608.02223",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.02223",
+  "title": "Discontinuous Galerkin Semidiscretization of the Information Geometric Regularized Compressible Euler Equations",
+  "authors": [
+    "Brook Eyob",
+    "Jesus Arias",
+    "Spencer H. Bryngelson",
+    "Florian Schäfer"
+  ],
+  "summary": "Shock stabilization in compressible Euler flows remains a central challenge for high-order numerical methods. Existing shock-capturing approaches, including limiters, artificial viscosity, and reconstruction-based methods, involve tradeoffs between robustness, accuracy, preservation of fine-scale flow features, and computational complexity. In this work, we develop a discontinuous Galerkin (DG) discretization of the information geometric regularization (IGR) framework introduced by Cao and Schäfer for the compressible Euler equations. The method regularizes shocks at the PDE level by…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-03",
+  "updated": "2026-08-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

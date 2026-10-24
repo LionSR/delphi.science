@@ -1,0 +1,23 @@
+{
+  "key": "2604.24612",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.24612",
+  "title": "NeSyCat: A Monad-Based Categorical Semantics of the Neurosymbolic ULLER Framework",
+  "authors": [
+    "Daniel Romero Schellhorn",
+    "Till Mossakowski"
+  ],
+  "summary": "ULLER (Unified Language for LEarning and Reasoning) offers a unified first-order logic (FOL) syntax, enabling its knowledge bases to be used directly across a wide range of neurosymbolic systems. The original specification endows this syntax with three pairwise independent semantics: classical, fuzzy, and probabilistic, each accompanied by dedicated semantic rules. We show that these seemingly disparate semantics are all instances of one categorical framework based on monads, the very construct that models side effects in functional programming. This enables the modular addition of new…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.LO",
+    "math.CT",
+    "math.LO"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-04-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

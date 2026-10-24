@@ -1,0 +1,23 @@
+{
+  "key": "2610.08410",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08410",
+  "title": "Decoy and disclosure radii of invariant shape descriptors",
+  "authors": [
+    "Tanush Shaska",
+    "Lubjana Beshaj"
+  ],
+  "summary": "A recognizer that compares rotation-invariant descriptors sees a surface only up to the fiber of the descriptor. We measure this fiber by its radius in the orbit distance from the enrolled surface. A large radius admits decoys, that is, distant shapes that pass the matcher. A small radius discloses the enrolled shape to anyone who captures the stored value. For star-shaped surfaces truncated to spherical harmonics of degree at most $L$, with $n$ coefficients, a descriptor of generic rank $r$ has generic fibers of dimension $n-3-r$ modulo rotations. The standard pool of band powers, even…",
+  "domain": "cs.CV",
+  "tags": [
+    "cs.CV",
+    "astro-ph.EP",
+    "cs.CR",
+    "math.AG"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2605.15082",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.15082",
+  "title": "Average Gradient Outer Product in kernel regression provably recovers the central subspace for multi-index models",
+  "authors": [
+    "Libin Zhu",
+    "Damek Davis",
+    "Dmitriy Drusvyatskiy",
+    "Maryam Fazel"
+  ],
+  "summary": "We study a prototypical situation when a learned predictor can discover useful low-dimensional structure in data, while using fewer samples than are needed for accurate prediction. Specifically, we consider the problem of recovering a multi-index polynomial $f^*(x)=h(Ux)$, with $U\\in\\mathbb{R}^{r\\times d}$ and $r\\ll d$, from finitely many data/label pairs. Importantly, the target function depends on input $x$ only through the projection onto an unknown $r$-dimensional central subspace. The algorithm we analyze is appealingly simple: fit kernel ridge regression (KRR) to the data and compute…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-05-14",
+  "updated": "2026-05-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

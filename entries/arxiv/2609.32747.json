@@ -1,0 +1,22 @@
+{
+  "key": "2609.32747",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32747",
+  "title": "Path Invariance of a Quadrotor System under Cyber Attacks with Theoretical Guarantees",
+  "authors": [
+    "Hamza Mahmood",
+    "Usman Ali",
+    "Adeel Akhtar"
+  ],
+  "summary": "This paper presents a path-following controller for a quadrotor system to guarantee safe maneuvers, in terms of forward path invariance, in the presence of cyber-physical attacks. We assume that an adversarial agent can control any one of the rotors through a false data injection (FDI) type of attack. A feedback controller is designed using transverse feedback linearization which guarantees that the system follows a class of smooth curves under FDI attacks. Our proposed controller is computationally efficient, with a closed-form analytical expression, that not only mitigates the effect of…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2605.24898",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.24898",
+  "title": "Convergence analysis of structure-preserving schemes for the multicomponent compressible Euler flows",
+  "authors": [
+    "Jaya Agnihotri",
+    "Philipp Öffner"
+  ],
+  "summary": "We present a convergence analysis of a finite volume (FV) scheme for the multicomponent compressible Euler system in the framework of dissipative weak (DW) solutions. DW solutions were introduced as a generalized solution framework in computational fluid dynamics and have recently gained considerable attention. They extend the well-known Lax Equivalence Theorem to nonlinear settings, meaning that if a numerical scheme is both consistent and stable, it will also converge. The FV scheme under consideration preserves key physical properties of the fluid mixture, in particular, positivity of…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-24",
+  "updated": "2026-05-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

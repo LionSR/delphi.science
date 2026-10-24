@@ -1,0 +1,19 @@
+{
+  "key": "2606.09689",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.09689",
+  "title": "Low-Rank Acceleration of the Operator Fourier Transform",
+  "authors": [
+    "Jack Kelley"
+  ],
+  "summary": "We develop a numerical algorithm for the efficient solution or approximation of solutions to the Helmholtz equation on a structured grid in two dimensions. We make use of the Operator Fourier Transform (OFT) and a low-rank cross approximation scheme (Cross-DEIM) to decompose the problem into an integral over a pseudo-time of solutions to the Schrödinger equation. The OFT is a framework for solving operator equations like fractional Laplacian equations or the Helmholtz equation, when the latter is written as a product of two paraxial operators. The main computational cost in the OFT is the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-08",
+  "updated": "2026-06-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

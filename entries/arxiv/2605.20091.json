@@ -1,0 +1,21 @@
+{
+  "key": "2605.20091",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.20091",
+  "title": "Reliable sampling-based RKHS norm estimation via superconvergence",
+  "authors": [
+    "Tizian Wenzel",
+    "Abdullah Tokmak",
+    "Christian Fiedler"
+  ],
+  "summary": "Kernel methods are one of the cornerstones of learning-based control, modern system identification, surrogate modelling, and related fields. A key advantage of this class of learning and function approximation methods is the availability of quantitative error bounds, which in turn play a key role in guaranteeing the safety of learned controllers and related learning-based algorithms. However, these error bounds rely on a particular property of the target function -- its reproducing kernel Hilbert space (RKHS) norm -- which is usually impossible to obtain in practice. Motivated by this severe…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

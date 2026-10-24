@@ -1,0 +1,20 @@
+{
+  "key": "2608.24194",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.24194",
+  "title": "Testing for Stable Intervals in Non-Stationary Time Series",
+  "authors": [
+    "Florian Heinrichs"
+  ],
+  "summary": "Many time series are not stable over their full observation horizon, but may contain scientifically meaningful periods during which a signal remains stable up to a prescribed tolerance. We formulate this as an existence test for stable intervals in a non-stationary regression model with dependent, locally stationary errors. For a signal $d$ derived from the mean function, including deviations from reference levels and derivatives, stability over duration $δ$ is encoded by $d_\\infty=\\inf_{t\\in[0,1-δ]}\\sup_{s\\in[t,t+δ]}|d(s)|$. The hypothesis $d_\\infty\\geΔ$ states that no interval of length…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

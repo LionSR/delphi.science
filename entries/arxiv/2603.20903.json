@@ -1,0 +1,23 @@
+{
+  "key": "2603.20903",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20903",
+  "title": "Unfolding with a Wasserstein Loss",
+  "authors": [
+    "Katy Craig",
+    "Benjamin Faktor",
+    "Benjamin Nachman"
+  ],
+  "summary": "Data unfolding -- the removal of noise or artifacts from measurements -- is a fundamental task across the experimental sciences. Of particular interest are applications in physics, where the dominant approach is Richardson-Lucy (RL) deconvolution. The classical RL approach aims to find denoised data that, once passed through the noise model, is as close as possible to the measured data in terms of Kullback-Leibler (KL) divergence. This requires that the support of the measured data overlaps with the output of the noise model, a hypothesis typically enforced by binning, which introduces…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "hep-ph",
+    "stat.ML"
+  ],
+  "published": "2026-03-21",
+  "updated": "2026-04-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

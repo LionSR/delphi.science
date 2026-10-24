@@ -1,0 +1,20 @@
+{
+  "key": "2603.21394",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.21394",
+  "title": "Arbitrarily High-Order Convergence of Wavelet-based Galerkin Scheme for 1D Elliptic Interface Problems",
+  "authors": [
+    "Bin Han",
+    "Michelle Michelle"
+  ],
+  "summary": "The solution $u$ of an elliptic interface problem in a domain $Ω$ is often smooth away from the interface $Γ\\subset Ω$, but its gradient is discontinuous across $Γ$. Consequently, $u$ has low global regularity and generally does not belong to $H^{3/2}(Ω)$. This paper studies 1D elliptic interface problems using wavelet methods. We propose a Galerkin method based on compactly supported biorthogonal wavelet bases on bounded intervals with approximation order $m$, for any integer $m \\ge 2$. Our approach involves incorporating wavelet basis functions from higher scale levels to capture the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-22",
+  "updated": "2026-08-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

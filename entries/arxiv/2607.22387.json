@@ -1,0 +1,21 @@
+{
+  "key": "2607.22387",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.22387",
+  "title": "Super-Brownian limits and the $k$-point function for high-dimensional percolation",
+  "authors": [
+    "Arthur Blanc-Renaudie",
+    "Tom Hutchcroft"
+  ],
+  "summary": "We prove that there exist positive constants $A$ and $V$ such that the high-dimensional critical percolation $k$-point function is given by \\[ T_{p_c}(x_1,x_2,\\ldots,x_{k}) \\sim V^{k-2} A^{2k-3} \\sum_{T\\in \\mathsf{Tr}(k)} \\sum_{\\substack{Φ:V(T)\\to \\mathbb{Z}^d \\\\ Φ(i)=x_i \\forall 1\\leq i \\leq k}} \\prod_{\\substack{u,v\\in V(T)\\\\u\\sim v}}G(Φ(u),Φ(v)) \\] as $\\min_{i\\neq j}\\|x_i-x_j\\|\\to \\infty$, where $\\mathsf{Tr}(k)$ is a set of isomorphism class representatives of trees with $k$ labelled leaves $\\{1,\\ldots,k\\}$ and unlabelled internal vertices all of which have degree $3$ and $G$ is the…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math-ph"
+  ],
+  "published": "2026-07-24",
+  "updated": "2026-07-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

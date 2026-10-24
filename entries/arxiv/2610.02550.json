@@ -1,0 +1,21 @@
+{
+  "key": "2610.02550",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02550",
+  "title": "The Prime Wavelet Tree: Compressing the Carmichael Numbers",
+  "authors": [
+    "Ankur Gupta",
+    "Jonathan Webster",
+    "Sylvia Webster"
+  ],
+  "summary": "We present two number-theoretic compression techniques. The first is \\textit{local}, and compresses individual numbers. The second is \\textit{global}, and compresses the entire set of numbers using a \\textit{prime wavelet tree}, which is a data structure of independent interest. Our techniques apply to any set of numbers satisfying a Korselt-like criterion. We demonstrate our compression techniques using the recently completed tabulation of all $308{,}279{,}939$ Carmichael numbers less than $10^{24}$ that occupies $18.4$ gigabytes as text. When combined with standard compression techniques…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

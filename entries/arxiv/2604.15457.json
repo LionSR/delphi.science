@@ -1,0 +1,21 @@
+{
+  "key": "2604.15457",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.15457",
+  "title": "Adaptive Regularization within Trust Region Methods for Stochastic Nonconvex Optimization",
+  "authors": [
+    "Yunsoo Ha",
+    "Sara Shashaani",
+    "Quoc Tran-dinh"
+  ],
+  "summary": "We propose a stochastic nonconvex optimization algorithm that achieves almost sure $\\tilde{\\mathcal{O}}(ε^{-1.5})$ iteration complexity for problems with smooth objective functions and gradients only observable with noise. The mean-zero stochastic noise is decision-dependent and has unbounded support with subexponential tail, allowing our framework to cover a broad class of problems. The improved almost sure iteration complexity is achieved with a new variant of the adaptive sampling trust-region optimization (ASTRO) augmented with an adaptively regularized local model, which we term…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-16",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

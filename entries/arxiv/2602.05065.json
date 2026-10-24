@@ -1,0 +1,24 @@
+{
+  "key": "2602.05065",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05065",
+  "title": "Does SGD Seek Flatness or Sharpness? An Exactly Solvable Model",
+  "authors": [
+    "Yizhou Xu",
+    "Pierfrancesco Beneventano",
+    "Isaac Chuang",
+    "Liu Ziyin"
+  ],
+  "summary": "A large body of theory and empirical work hypothesizes a connection between the flatness of a neural network's loss landscape during training and its performance. However, there have been conceptually opposite pieces of evidence regarding when SGD prefers flatter or sharper solutions during training. In this work, we partially but causally clarify the flatness-seeking behavior of SGD by identifying and exactly solving an analytically solvable model that exhibits both flattening and sharpening behavior during training. In this model, the SGD training has no \\textit{a priori} preference for…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-02-04",
+  "updated": "2026-02-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

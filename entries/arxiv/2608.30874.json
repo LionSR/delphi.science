@@ -1,0 +1,23 @@
+{
+  "key": "2608.30874",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.30874",
+  "title": "Provably Safe Decentralized Contingency MPC under State-Only Information and Limited Sensing for Nonlinear Multi-agent Systems",
+  "authors": [
+    "Max Studt",
+    "Georg Schildbach"
+  ],
+  "summary": "This paper considers decentralized contingency MPC for multi-agent control under a state-only information pattern, with particular focus on limited sensing and plug-and-play operation. The objective is to retain recursive feasibility, safety, and Lyapunov-type convergence while reducing conservatism in local interaction handling. The framework relies on agent-wise fallback regions (safe sets) in which a feasible contingency maneuver to a safe equilibrium is always available. A novel safe-set update mechanism is introduced that supports less conservative decentralized interaction while…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.MA",
+    "cs.RO",
+    "eess.SY"
+  ],
+  "published": "2026-08-31",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

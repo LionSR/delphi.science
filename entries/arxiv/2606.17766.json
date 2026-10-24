@@ -1,0 +1,21 @@
+{
+  "key": "2606.17766",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.17766",
+  "title": "Operator Learning for PDE Backstepping Control of Parabolic Equations on Time-Varying Domains",
+  "authors": [
+    "Jinrun Yan",
+    "Kai Liu",
+    "Zhong-Jie Han"
+  ],
+  "summary": "This paper develops a learning-based boundary control framework for stabilizing a parabolic equation defined on time-varying spatial domain. Although the partial differential equation (PDE) backstepping method provides a systematic theoretical framework for such moving-boundary systems, its real-time implementation is hindered by the need to repeatedly solve time-varying kernel PDEs on evolving domains. To overcome this limitation, we first formulate the time-varying backstepping design as an operator that maps the moving-boundary trajectory to the corresponding backstepping kernel. By…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2608.22493",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.22493",
+  "title": "A Jin--Xin Relaxation Gradual Convergence Method for Conservation-Law PINNs",
+  "authors": [
+    "Emmanuel Lorin",
+    "Yuchong Tang",
+    "Xu Yang",
+    "Yi Zhu"
+  ],
+  "summary": "The Jin--Xin relaxation of a nonlinear hyperbolic conservation law introduces a relaxation parameter that controls the width of the internal layer resolving a shock; the discontinuity of the limiting conservation law emerges only in the singular limit as this width vanishes. Physics-informed neural networks (PINNs) use smooth network approximations and are therefore not well suited to this limit, while relaxation PINNs with a fixed parameter resolve only a single scale and cannot follow the multiscale transition toward the limiting solution. We propose the Jin--Xin relaxation gradual…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-23",
+  "updated": "2026-08-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

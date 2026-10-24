@@ -1,0 +1,21 @@
+{
+  "key": "2606.31856",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.31856",
+  "title": "Low-dimensional topology of deep neural networks",
+  "authors": [
+    "Junyu Ren",
+    "Lek-Heng Lim"
+  ],
+  "summary": "We study layered models, including feedforward networks, ResNets, and transformers, by limiting each layer to a width of $d = 3$, i.e., $\\mathbb{R}^3$ as representation space. This allows us to track how a neural network changes low-dimensional topological invariants through its layers. Just about any topological structure may be simplified or even trivialized by simply increasing dimension; e.g., any knot is equivalent to an unknot in $\\mathbb{R}^4$. By restricting to $\\mathbb{R}^3$, we not only isolate the effects of activation and depth from that of width, we work in a space that lends…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.GT"
+  ],
+  "published": "2026-06-30",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

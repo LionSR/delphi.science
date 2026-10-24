@@ -1,0 +1,26 @@
+{
+  "key": "2605.31346",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.31346",
+  "title": "Wall-Clock Complexity for Zeroth-Order Optimization with Tunable Oracle Fidelity",
+  "authors": [
+    "Alexandra Suvorikova",
+    "Igor Pavlov",
+    "Artem Vasin",
+    "Georgii Bychkov",
+    "Anastasia Antsiferova",
+    "Darina Dvinskikh",
+    "Alexander Gasnikov"
+  ],
+  "summary": "Zeroth-order (black-box) optimization is applied when gradients are unavailable and objective evaluations rely on expensive simulations. In many such applications, the oracle fidelity is tunable: higher-accuracy queries reduce noise but incur higher computational costs. To capture this trade-off, we study an accuracy-aware wall-clock model where each query with fidelity $δ$ has a cost $c(δ)$, and we minimize the total time $T_{\\mathrm{total}} = \\sum_{k=1}^{N} c(δ_k)$, subject to a target accuracy constraint. We show how the choice of oracle type, noise model, and optimization scheme induces…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

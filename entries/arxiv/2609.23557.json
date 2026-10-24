@@ -1,0 +1,26 @@
+{
+  "key": "2609.23557",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.23557",
+  "title": "Optimal High-Order Methods for Solving Monotone Variational Inequalities",
+  "authors": [
+    "Xinliang Zhang",
+    "Lesi Chen",
+    "Linxuan Pan",
+    "Chengchang Liu",
+    "Junchi Yang",
+    "Jingzhao Zhang"
+  ],
+  "summary": "We study second- and higher-order methods for solving smooth monotone variational inequalities (MVI). Monteiro and Svaiter (SIAM J. Optim., 2012) showed that a second-order method, NPE, converges at a rate of $\\mathcal{O}(T^{-1.5})$. For convex-concave minimax optimization, a subclass of MVI problems, Chen, Liu, Luo, and Zhang (COLT 2025) recently improved this rate to $\\tilde{\\mathcal{O}}( T^{-1.75})$. However, the result has a substantial gap compared to the lower bound of $Ω(T^{-2.5})$ established by Chen et al. (2026). In this paper, we propose a novel second-order method that achieves…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.GT",
+    "stat.ML"
+  ],
+  "published": "2026-09-20",
+  "updated": "2026-09-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

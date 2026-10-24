@@ -1,0 +1,21 @@
+{
+  "key": "2607.00713",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.00713",
+  "title": "A linear, decoupled and positivity-preserving time-staggered block-centered finite difference method for the multi-species Keller-Segel chemotaxis system",
+  "authors": [
+    "Ao Zhang",
+    "Bingyin Zhang",
+    "Hongfei Fu"
+  ],
+  "summary": "In this paper, we present a linearly implicit, second-order block-centered finite difference (BCFD) prediction-then-projection scheme for the multi-species Keller-Segel chemotaxis system on non-uniform spatio-temporal grids. The proposed scheme integrates a standard Crank-Nicolson time-marching algorithm with an $L^2$ projection step to enforce positivity and mass conservation. The use of variable time stepsize and time-staggered discretization fully decouples the solutions of the multi-species cell density variables and the chemoattractant concentration variable while facilitating…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

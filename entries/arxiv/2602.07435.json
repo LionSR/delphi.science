@@ -1,0 +1,25 @@
+{
+  "key": "2602.07435",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.07435",
+  "title": "Cops and robber in graphs with bounded vertex cover number",
+  "authors": [
+    "Prosenjit Bose",
+    "Louis Esperet",
+    "Jędrzej Hodor",
+    "Gwenaël Joret",
+    "Piotr Micek",
+    "Clément Rambaud"
+  ],
+  "summary": "Meyniel's conjecture states that $n$-vertex connected graphs have cop number $O(\\sqrt{n})$. The current best known upper bound is $n/2^{(1-o(1))\\sqrt{\\log n}}$, proved independently by Lu and Peng (2011), and by Scott and Sudakov (2011). In this paper, we extend their result by showing that every connected graph with vertex cover number $k$ has cop number at most $k/2^{(1-o(1))\\sqrt{\\log k}}$. This is the first sublinear upper bound on the cop number in terms of the vertex cover number.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM"
+  ],
+  "published": "2026-02-07",
+  "updated": "2026-02-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

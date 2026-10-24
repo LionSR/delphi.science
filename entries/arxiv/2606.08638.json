@@ -1,0 +1,21 @@
+{
+  "key": "2606.08638",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.08638",
+  "title": "Parameter Tuning with Generalization Guarantees for GPU-Accelerated Linear Programming",
+  "authors": [
+    "Siddharth Prasad",
+    "Dravyansh Sharma"
+  ],
+  "summary": "Recent research has developed practical, parallelizable first-order methods for large scale linear programming, but performance is highly dependent on hyperparameter selection. We derive generalization guarantees for hyperparameter tuning within (cu)PDLP, a state-of-the-art first-order LP solver designed for modern hardware. First, we pin down the behavior of PDHG, the primal-dual hybrid gradient algorithm that underlies PDLP, as a function of its step size and primal weight, leading to linear sample complexity guarantees for learning those parameters. We then conduct a structural analysis…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-06-07",
+  "updated": "2026-06-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

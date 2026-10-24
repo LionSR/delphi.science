@@ -1,0 +1,24 @@
+{
+  "key": "2610.17655",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.17655",
+  "title": "textGrain watermarking is harder to detect: can sum-tests still do it optimally?",
+  "authors": [
+    "Swapnaneel Bhattacharyya",
+    "Soham Bonnerjee"
+  ],
+  "summary": "Watermarking embeds an imperceptible signal in text from large language models that is statistically detectable with a secret key. The recent textGrain watermark (Li et. al. (2026b)) calibrates this signal against the model's sampling entropy through an explicit entropy budget, combining the stochasticity of Red-Green and the unbiasedness of Gumbel-max watermarks, and its accompanying report proposes a detector that sums pivotal statistics. We study when, and how efficiently, textGrain can be detected after human edits, modeled as a sparse mixture in which a fraction $\\varepsilon_n\\asymp…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.IT",
+    "cs.LG",
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

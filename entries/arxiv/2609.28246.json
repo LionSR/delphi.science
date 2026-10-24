@@ -1,0 +1,26 @@
+{
+  "key": "2609.28246",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.28246",
+  "title": "Near-Optimal Higher-Order Oracle Complexity for Convex--Concave Minimax Optimization",
+  "authors": [
+    "Yanyi Li",
+    "Haihan Zhang",
+    "Chenheng Zhang",
+    "Wendao Wu",
+    "Chunyuan Zheng",
+    "Cong Fang",
+    "Haoxuan Li",
+    "Zhouchen Lin"
+  ],
+  "summary": "For smooth convex--concave minimax optimization, the higher-order lower bound of Chen et al. (2026) applies to a restricted tensor-algorithm class with prescribed regularized Taylor-model updates. We establish the same bound for arbitrary adaptive deterministic and randomized algorithms, matching, up to logarithmic factors, the upper bound of Zhang et al. (2026). Fix an integer $p\\ge 2$ and let $L_p>0$ bound the Lipschitz constant of the objective's $p$-th derivative on a compact convex product domain of diameter at most $D_Z>0$. Each feasible query returns the objective value and all…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-23",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

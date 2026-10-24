@@ -1,0 +1,21 @@
+{
+  "key": "2609.03819",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.03819",
+  "title": "Stochastic damped wave and Euler-Bernoulli equations with singular locally Hölder continuous drift",
+  "authors": [
+    "Davide Addona",
+    "Davide Augusto Bignamini"
+  ],
+  "summary": "Let $U$ and $H$ be two separable Hilbert spaces and $T>0$. We consider a stochastic differential equation which evolves in the Hilbert space $H$ of the form \\begin{align} \\label{SDEa} dX(t)=AX(t)dt+B(t,X(t))dt+GdW(t), \\quad t\\in[0,T], \\quad X(0)=x \\in H, \\end{align} where $A:D(A)\\subseteq H\\to H$ is the infinitesimal generator of a strongly continuous semigroup $(e^{tA})_{t\\geq0}$, $W=(W(t))_{t\\geq0}$ is a $U$-cylindrical Wiener process defined on a normal filtered probability space $(Ω,\\mathcal{F},\\{\\mathcal{F}_t\\}_{t\\in [0,T]},\\mathbb{P})$, $G:U\\to H$ is a linear bounded operator and…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.AP"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

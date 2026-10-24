@@ -1,0 +1,23 @@
+{
+  "key": "2601.10531",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.10531",
+  "title": "Coarsening Causal DAG Models",
+  "authors": [
+    "Francisco Madaleno",
+    "Pratik Misra",
+    "Alex Markham"
+  ],
+  "summary": "Directed acyclic graphical (DAG) models are a powerful tool for representing causal relationships among jointly distributed random variables, especially concerning data from across different experimental settings. However, it is not always practical or desirable to estimate a causal model at the granularity of given features in a particular dataset. There is a growing body of research on causal abstraction to address such problems. We contribute to this line of research by (i) providing novel graphical identifiability results for practically-relevant interventional settings, (ii) proposing…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.CO"
+  ],
+  "published": "2026-01-15",
+  "updated": "2026-04-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2606.02464",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.02464",
+  "title": "Using memory to control admission to unobservable queues",
+  "authors": [
+    "Refael Hassin",
+    "Liron Ravner"
+  ],
+  "summary": "We study admission control to an unobservable M/M/1 queue. A memoryless controller can only randomly thin arrivals (random routing, RR). We show that a gated admission (GA) policy, blocking arrivals for a fixed period after each admission, stochastically dominates RR at equal throughput, improving social welfare under any sojourn-based cost. We characterize the welfare-maximizing threshold and define the Price of Forgetting as the welfare ratio. This ratio is unbounded even though the absolute welfare gain stays uniformly bounded.",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

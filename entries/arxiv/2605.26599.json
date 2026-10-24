@@ -1,0 +1,21 @@
+{
+  "key": "2605.26599",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.26599",
+  "title": "Reducing Internal State in Eigenvalue-Only Divide-and-Conquer Tridiagonal Eigensolvers",
+  "authors": [
+    "Ruiyi Zhan",
+    "Shaoshuai Zhang"
+  ],
+  "summary": "Divide and Conquer (D&C) is a widely used algorithmic strategy for symmetric eigenvalue decomposition. Its natural parallelism makes D&C attractive on modern multicore CPUs and GPUs, but existing eigenvalue-only routines often default to QR-based methods because conventional D&C still materializes or replays large transformation matrices during the conquer phase. This paper proposes a boundary-row D&C algorithm for eigenvalue-only computation. The key observation is that the conquer phase only needs selected boundary rows/columns rather than the full accumulated eigenvector matrix. By…",
+  "domain": "cs.DC",
+  "tags": [
+    "cs.DC",
+    "math.NA"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

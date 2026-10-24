@@ -1,0 +1,23 @@
+{
+  "key": "2604.21174",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.21174",
+  "title": "Making Gaussian Kolmogorov-Arnold Networks Reliable and Accurate",
+  "authors": [
+    "Amir Noorizadegan",
+    "Sifan Wang",
+    "Leevan Ling"
+  ],
+  "summary": "Kolmogorov-Arnold Networks (KANs) replace fixed activations with learnable univariate edge functions whose behavior depends strongly on the chosen basis. Gaussian radial basis functions provide a simple and efficient alternative to splines, but their accuracy and stability are highly sensitive to the scale parameter \\(ε\\), which has not been studied systematically. We analyze this dependence through the geometry and conditioning of the first-layer feature matrix. Because the first layer is defined directly on the input domain, any loss of feature distinguishability introduced there…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "cs.AI",
+    "math.AP"
+  ],
+  "published": "2026-04-23",
+  "updated": "2026-08-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

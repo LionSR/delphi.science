@@ -1,0 +1,24 @@
+{
+  "key": "2605.24666",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.24666",
+  "title": "Finding Koopman Invariant Subspaces via Personalized PageRank",
+  "authors": [
+    "Hyukpyo Hong",
+    "Qin Li",
+    "Matthew J. Colbrook",
+    "Hanbaek Lyu"
+  ],
+  "summary": "Selecting a finite dictionary of observables whose span is Koopman-invariant is a central challenge in data-driven Koopman operator approximation. We address this problem by exploiting zero-block structure in Extended Dynamic Mode Decomposition (EDMD) matrices. We show that any sub-dictionary whose span is Koopman-invariant induces an exact zero block in the EDMD matrix, even for finite data. We then show that such blocks can be detected by applying PageRank to a row-normalized EDMD matrix constructed from a large initial dictionary. The theory extends to approximately invariant subspaces…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "math.NA",
+    "stat.ML"
+  ],
+  "published": "2026-05-23",
+  "updated": "2026-05-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

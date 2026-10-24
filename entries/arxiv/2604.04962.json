@@ -1,0 +1,23 @@
+{
+  "key": "2604.04962",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.04962",
+  "title": "Geometric Integrators for Nonholonomic Systems on Lie Groups",
+  "authors": [
+    "Viyom Vivek",
+    "David Martin de Diego",
+    "Ravi N. Banavar"
+  ],
+  "summary": "We present a general framework for constructing structure-preserving numerical integrators for nonholonomically constrained mechanical systems evolving on Lie groups using retraction maps. Retraction maps generalize the exponential map and provide a convenient tool for performing numerical integration on manifolds. In nonholonomic mechanics, the constraints restrict the dynamics to a nonintegrable distribution rather than the entire tangent bundle. Using the Hamel formulation, the equations of motion can be expressed in local coordinates adapted to this constraint distribution. We then…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.DG",
+    "math.SG"
+  ],
+  "published": "2026-04-03",
+  "updated": "2026-04-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

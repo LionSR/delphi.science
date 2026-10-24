@@ -1,0 +1,22 @@
+{
+  "key": "2606.15942",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.15942",
+  "title": "Stability Analysis in Multi-Constraint Safety Filters for Linear Systems",
+  "authors": [
+    "Shima Sadat Mousavi",
+    "Pol Mestres",
+    "Aaron D. Ames"
+  ],
+  "summary": "Multi-constraint safety filters based on control barrier functions for linear systems with affine state constraints yield continuous piecewise-affine closed-loop dynamics and may introduce boundary equilibria and unstable active-set modes. Although these filters guarantee forward invariance, they can change nominal stability, and it remains unclear when unstable modes cause divergence versus bounded, convergent behavior. This paper develops a geometric framework to analyze these cases: leveraging explicit active-set realizations, we show that equilibria associated with nonempty active sets…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-06-14",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2607.04531",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04531",
+  "title": "Lyapunov-Guided Training for Hardware-Safe Neural Networks Under Fixed-Point Arithmetic",
+  "authors": [
+    "Anis Hamadouche",
+    "Amir Hussain"
+  ],
+  "summary": "Low-precision neural networks are attractive for resource-constrained hardware, but fixed-point arithmetic introduces failure modes that are often hidden by idealised quantisation models. In particular, two's-complement overflow wrapping can corrupt hidden activations by changing both their magnitude and sign, leading to unstable numerical error propagation and severe accuracy degradation. This paper proposes a Lyapunov-stabilised quantisation framework for low-precision neural networks operating under hardware-style wrapping arithmetic. The hidden-state energy is monitored through a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "eess.SP",
+    "math.NA"
+  ],
+  "published": "2026-07-05",
+  "updated": "2026-07-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2605.25176",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.25176",
+  "title": "Arnoldi-Enhanced Multivariate Hermite Interpolation of Manifold-Valued Data",
+  "authors": [
+    "Yuxuan Li",
+    "Qiang Niu",
+    "Wubin Zhou"
+  ],
+  "summary": "This paper integrates the multivariate Arnoldi process into tangent space Hermite interpolation for manifold-valued data. A G-Arnoldi recurrence constructs a discrete orthogonal polynomial basis, improving numerical conditioning for high-degree approximation. The analysis uses a Markov inequality with a geometry-dependent exponent r; for the convex parameter domains considered here, r = 2 is available. Under suitable regularity and sampling assumptions, we establish C^0 and C^1 error bounds and analyze their propagation through the exponential map. When only function values are sampled,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-24",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

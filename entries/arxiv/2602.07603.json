@@ -1,0 +1,21 @@
+{
+  "key": "2602.07603",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.07603",
+  "title": "Escaping Spectral Bias without Backpropagation: Fast Implicit Neural Representations with Extreme Learning Machines",
+  "authors": [
+    "Woojin Cho",
+    "Junghwan Park"
+  ],
+  "summary": "Training implicit neural representations (INRs) to capture fine-scale details typically relies on iterative backpropagation and is often hindered by spectral bias when the target exhibits highly non-uniform frequency content. We propose ELM-INR, a backpropagation-free INR that decomposes the domain into overlapping subdomains and fits each local problem using an Extreme Learning Machine (ELM) in closed form, replacing iterative optimization with stable linear least-squares solutions. This design yields fast and numerically robust reconstruction by combining local predictors through a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-02-07",
+  "updated": "2026-02-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

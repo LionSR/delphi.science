@@ -1,0 +1,19 @@
+{
+  "key": "2607.29333",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.29333",
+  "title": "LA-MOKA: A Combinatorial Discretization Algorithm for the Braid Monodromy of Line Arrangements",
+  "authors": [
+    "Benoît Guerville-Ballé"
+  ],
+  "summary": "Computing braid monodromy is a key tool for studying the topology of algebraic curves in the complex projective plane $\\mathbb{P}^2$. We present an algorithm, named LA-MOKA, to compute this invariant in the specific case of complex line arrangements. To safely manage the problem of floating-point approximations when working over number fields, we translate the continuous geometry into a discrete combinatorial structure. We establish explicit conditions on this discretization that guarantee the topological correctness of the computed braid monodromy.",
+  "domain": "math.GT",
+  "tags": [
+    "math.GT"
+  ],
+  "published": "2026-07-31",
+  "updated": "2026-07-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

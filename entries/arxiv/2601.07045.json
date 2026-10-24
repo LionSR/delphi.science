@@ -1,0 +1,20 @@
+{
+  "key": "2601.07045",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.07045",
+  "title": "From Continuous to Discrete: a No-U-Turn Sampler for Permutations",
+  "authors": [
+    "Nawaf Bou-Rabee",
+    "Zichu Wang"
+  ],
+  "summary": "We introduce a discrete-space analogue of the No-U-Turn sampler on the symmetric group $S_n$, yielding a locally adaptive and reversible Markov chain Monte Carlo method for $\\mathrm{Mallows}(d,σ_0)$. Here $d:S_n\\times S_n\\to[0,\\infty)$ is any fixed distance on $S_n$, $σ_0\\in S_n$ is a fixed reference permutation, and the target distribution on $S_n$ has mass function $π(σ)\\propto e^{-βd(σ,σ_0)}$ where $β>0$ is the inverse temperature. The construction replaces Hamiltonian trajectories with measure-preserving group-orbit exploration. A randomized dyadic expansion is used to explore a…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-01-11",
+  "updated": "2026-01-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

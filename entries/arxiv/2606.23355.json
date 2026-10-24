@@ -1,0 +1,23 @@
+{
+  "key": "2606.23355",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.23355",
+  "title": "A Relaxed Quadratic-Program-based Framework for Trajectory Tracking of Unicycle Robots with Singularity Avoidance",
+  "authors": [
+    "Hamza Tariq",
+    "Usman Ali",
+    "Adeel Akhtar"
+  ],
+  "summary": "Dynamic feedback linearization (DFL) is a classical technique for trajectory tracking of unicycle-type mobile robots, but the resulting DFL-based controller becomes singular when the linear velocity vanishes, rendering standard DFL-based controllers unsuitable for stop-and-reverse maneuvers. This paper proposes a quadratic-program (QP)-based optimal control framework that avoids this singularity, while establishing local Lipschitz continuity of the resulting feedback law. Our approach reformulates the DFL constraints as an equality-constrained QP with a slack variable, ensuring feasibility…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-06-22",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

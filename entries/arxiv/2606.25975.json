@@ -1,0 +1,25 @@
+{
+  "key": "2606.25975",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.25975",
+  "title": "Tensorion: A Tensor-Aware Generalization of the Muon Optimizer",
+  "authors": [
+    "Vladimir Bogachev",
+    "Vladimir Aletov",
+    "Alexander Molozhavenko",
+    "Sergei Kudriashov",
+    "Maxim Rakhuba"
+  ],
+  "summary": "Common first-order optimizers, such as Adam, implicitly treat each parameter block as an unstructured vector, which disregards the multilinear weight structure present in many modern machine learning models. Recent work has shown that exploiting matrix structure can improve optimization dynamics. A notable example is Muon, which performs steepest descent under the spectral norm constraint. We take the next step and introduce Tensorion, a tensor-aware optimizer that extends Muon's constrained optimization perspective from matrices to higher-order tensors. Tensorion is built around a linear…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.CV",
+    "math.NA"
+  ],
+  "published": "2026-06-24",
+  "updated": "2026-08-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

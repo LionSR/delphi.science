@@ -1,0 +1,21 @@
+{
+  "key": "2603.11668",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.11668",
+  "title": "Compact LABFM: a framework for meshless methods with spectral-like resolving power",
+  "authors": [
+    "Henry M. Broadley",
+    "Steven J. Lind",
+    "Jack R. C. King"
+  ],
+  "summary": "Meshless methods are often used in numerical simulations of systems of partial differential equations (PDEs), particularly those which involve complex geometries or free surfaces. Here we present a novel compact scheme based on the local anisotropic basis function method (LABFM), a meshless method which provides approximations to spatial operators to arbitrary polynomial consistency. Our approach mimics compact finite-differences by using implicit stencils to optimise the resolving power of each operator, whilst retaining diagonal dominance of the resulting global sparse linear system. The…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-12",
+  "updated": "2026-03-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

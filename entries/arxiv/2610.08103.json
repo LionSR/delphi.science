@@ -1,0 +1,19 @@
+{
+  "key": "2610.08103",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08103",
+  "title": "The mixing time of Mean-Field Gibbs-Ornstein-Uhlenbeck processes",
+  "authors": [
+    "Johan Jonasson"
+  ],
+  "summary": "We introduce mean-field Gibbs--Ornstein--Uhlenbeck (MFGOU) processes, a class of discrete-time Markov processes with increments of order $1/n$, whose conditional means approximate a smooth vector field. If the field has a unique attracting zero and satisfies a global Lyapunov condition, we prove \\[ τ_{\\mathrm{mix}} = \\frac{1}{λ_1}n\\log n+O(n), \\] where $λ_1$ is the smallest eigenvalue of the drift Jacobian at the attractor. Mean-field block measures form an important subclass encompassing mean-field spin systems and projected Gibbs samplers for Latent Dirichlet Allocation (LDA) and related…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

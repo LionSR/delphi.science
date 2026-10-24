@@ -1,0 +1,20 @@
+{
+  "key": "2604.13889",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.13889",
+  "title": "A Two-Level Additive Schwarz Method for Computing Interior Multiple and Clustered Eigenvalues of Symmetric Elliptic Operators",
+  "authors": [
+    "Qigang Liang",
+    "Xuejun Xu"
+  ],
+  "summary": "In this paper, we propose an efficient two-level additive Schwarz method for solving large-scale eigenvalue problems arising from the finite element discretization of symmetric elliptic operators, which may compute efficiently more interior multiple and clustered eigenvalues other than only the first several smallest eigenvalues. The proposed method is parallel in two ways: one is to solve the preconditioned Jacobi-Davidson correction equations by the two-level additive Schwarz preconditioner, the other is to solve different clusters of eigenvalues (see Figure 1 in Introduction)…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-15",
+  "updated": "2026-04-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

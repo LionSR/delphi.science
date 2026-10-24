@@ -1,0 +1,22 @@
+{
+  "key": "2603.11964",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.11964",
+  "title": "Asymptotically Efficient Recursive Identification Under One-Bit Communications Achieving Original CRLB",
+  "authors": [
+    "Xingrui Liu",
+    "Jieming Ke",
+    "Mingjie Shao",
+    "Yanlong Zhao"
+  ],
+  "summary": "This paper develops an asymptotically efficient recursive identification algorithm for autoregressive systems with exogenous inputs under one-bit communications. In particular, the proposed method asymptotically achieves the Cramer-Rao lower bound (CRLB) based on the original data before quantization (original CRLB), whereas existing approaches typically attain only the CRLB corresponding to the quantized observations. The primary reason is that the existing methods quantize only the current system output, resulting in non-negligible information loss under one-bit quantization. To overcome…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-12",
+  "updated": "2026-08-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

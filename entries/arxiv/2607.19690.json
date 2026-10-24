@@ -1,0 +1,22 @@
+{
+  "key": "2607.19690",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.19690",
+  "title": "A phase-field neural solver for moving contact line problems with dynamic boundary conditions",
+  "authors": [
+    "Ziyan Chen",
+    "Jinpeng Zhang",
+    "Pai Zhang",
+    "Li Luo"
+  ],
+  "summary": "Phase-field models based on the Cahn--Hilliard equation coupled with dynamic boundary conditions provide a thermodynamically consistent framework for moving contact line (MCL) problems. Although physics-informed neural networks (PINNs) offer a mesh-free approach for solving partial differential equations, their direct application to MCL problems remains challenging due to long-time error accumulation, sharp interfacial profiles, localized contact line dynamics, and complex contact angle evolution. In this work, we propose MCL-PINNs, a specialized phase-field neural solver designed for MCL…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-22",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

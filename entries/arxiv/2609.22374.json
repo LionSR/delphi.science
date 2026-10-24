@@ -1,0 +1,21 @@
+{
+  "key": "2609.22374",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.22374",
+  "title": "Monogenic Fields of Cryptographic Size",
+  "authors": [
+    "Swechchha Adhikari",
+    "Daphne Plott",
+    "Parker Torgersen"
+  ],
+  "summary": "For a monic irreducible $f \\in \\mathbb{Z}[x]$ of degree $n$ and an integer $c$, we study the palindromic transform $F(x) = x^n f(x + x^{-1} + c)$, which produces a polynomial of degree $2n$. We give a discriminant formula $\\operatorname{disc}(F) = f(c+2)f(c-2)\\operatorname{disc}(f)^2$, sufficient conditions for the irreducibility of $F$, and a criterion showing that $F$ is monogenic when $f$ is monogenic and $f(c+2)f(c-2)$ is squarefree, together with a matching non-monogenicity criterion. Iterating the transform yields monogenic number fields of degree $2^k n$ from a fixed base polynomial.…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

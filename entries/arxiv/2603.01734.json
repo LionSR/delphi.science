@@ -1,0 +1,21 @@
+{
+  "key": "2603.01734",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.01734",
+  "title": "Block-coordinate Plug-And-Play Methods with Armijo-like line-search for Image Restoration",
+  "authors": [
+    "Federica Porta",
+    "Simone Rebegoldi",
+    "Andrea Sebastiani"
+  ],
+  "summary": "In this paper, we develop a class of block-coordinate forward-backward methods for solving non-convex and non-separable composite optimization problems, and specialize them to imaging inverse problems within the Plug-and-Play (PnP) framework based on Gradient Step (GS) denoisers. The block-coordinate strategy is designed to reduce the high memory consumption associated with the computation of GS denoisers, whose implementation typically requires storing large computational graphs. The proposed methods allow for the joint use of inertial acceleration, variable metric strategies, inexact…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-02",
+  "updated": "2026-09-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2602.16342",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.16342",
+  "title": "Markov processes forced on a subspace by a large drift, with applications to population genetics",
+  "authors": [
+    "Samuel Ayomide Adeosun",
+    "Peter Pfaffelhuber"
+  ],
+  "summary": "Consider a sequence of Markov processes $X^1, X^2,...$ with state space $E$, where $X^N$ has a strong drift to $D \\subseteq E$, such that $Φ(X^N)$ is slow for some appropriate $Φ: E\\to D$. Using the method of martingale problems, we give a limit result, such that $Φ(X^N) \\xRightarrow{N\\to\\infty} Z$ in the space of càdlàg paths, and $X^N \\xRightarrow{N\\to\\infty} X$ in measure. \\\\ We apply the general limit result to models for copy number variation of genetic elements in a diploid Moran model of size $N$. The population by time $t$ is described by $X^N \\in \\mathcal P(\\mathbb N_0)$, where…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-02-18",
+  "updated": "2026-02-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

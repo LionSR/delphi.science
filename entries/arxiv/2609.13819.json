@@ -1,0 +1,22 @@
+{
+  "key": "2609.13819",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.13819",
+  "title": "Benchmarking Optimizers to Solve Inverse Problems with Differentiable Physics Simulators",
+  "authors": [
+    "Xiang Chen",
+    "Huanhuan Xia"
+  ],
+  "summary": "Solving inverse problems with differentiable physics simulators holds the potential to revolutionize scientific discovery and engineering design, as it enjoys both the strict physical correctness from rigorous numerical physics simulators, and the high efficiency and effectiveness from automatic differentiation and gradient-based optimization. However, currently, this paradigm faces performance issues in optimization. In this work, we target benchmarking the performance of different optimizers to solve various inverse problems. We construct 12 differentiable physics simulators spanning…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "physics.comp-ph"
+  ],
+  "published": "2026-09-12",
+  "updated": "2026-09-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

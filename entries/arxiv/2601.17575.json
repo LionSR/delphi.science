@@ -1,0 +1,19 @@
+{
+  "key": "2601.17575",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.17575",
+  "title": "An approximate version of Brouwer's Laplacian conjecture",
+  "authors": [
+    "Alan Lew"
+  ],
+  "summary": "Let $G=(V,E)$ be an $n$-vertex graph, $L(G)\\in \\mathbb{R}^{n\\times n}$ its Laplacian matrix, and let $λ_1(L(G))\\ge λ_2(L(G))\\ge \\cdots\\ge λ_n(L(G))=0$ denote its eigenvalues. For $1\\le k\\le n$, let $\\varepsilon_k(G)= \\sum_{i=1}^k λ_i(L(G)) -|E|$. We show that for every $1\\le k\\le n$, \\[ \\varepsilon_k(G) \\le \\max_{U\\subset V,\\, |U|=k} |E_G(U)| + (4k-2)\\sqrt{k}, \\] where $E_G(U)$ is the set of edges of $G$ contained in $U$. As an immediate consequence, we obtain that $\\varepsilon_k(G)\\le \\binom{k}{2}+(4k-2)\\sqrt{k}$. This improves upon previously known bounds for large values of $k$, and may…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-01-24",
+  "updated": "2026-01-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

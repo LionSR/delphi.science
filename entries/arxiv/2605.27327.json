@@ -1,0 +1,19 @@
+{
+  "key": "2605.27327",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.27327",
+  "title": "A collocation scheme that is equivalent to discontinuous Galerkin discretizations",
+  "authors": [
+    "Jason Hicken"
+  ],
+  "summary": "A spectral collocation operator with the summation-by-parts property was introduced by Chan to develop entropy-stable discontinuous Galerkin (DG) semi-discretizations (https://doi.org/10.1016/j.jcp.2018.02.033). The present work shows that semi-discretizations based on this collocation operator produce solutions that are equivalent to solutions of a DG semi-discretization using the same underlying quadrature. The equivalence holds regardless of the number of degrees of freedom in the collocation scheme and when the quadrature is not strictly positive. Extraneous degrees of freedom in the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

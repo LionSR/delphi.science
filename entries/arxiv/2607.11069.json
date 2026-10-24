@@ -1,0 +1,20 @@
+{
+  "key": "2607.11069",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.11069",
+  "title": "Sharp Ternary Martingale Isoperimetry and $n$-adic Takagi-Type Lower Bounds",
+  "authors": [
+    "Natanael Alpay"
+  ],
+  "summary": "Let $S_1$ be the one-variation associated with the regular $n$-adic martingale filtration on $[0,1)$. We study the martingale isoperimetric profile \\[ V_n(x):= \\inf_{\\substack{A\\subset[0,1)\\ {\\rm measurable}\\\\ |A|=x}} \\|S_1(\\mathbbm 1_A)\\|_1 . \\] For the ternary filtration we determine this profile exactly. Namely, \\[ V_3(x)=T_3(x):= \\sum_{j=0}^{\\infty}3^{-j}ψ_3(\\{3^j x\\}), \\] where \\[ ψ_3(t)= \\min\\left\\{ \\frac{1+2\\left|t-\\frac12\\right|}{3}, \\frac{2-4\\left|t-\\frac12\\right|}{3} \\right\\}, \\qquad 0\\le t\\le1 . \\] Thus the sharp ternary profile is a Takagi-type Bellman function. It is, however,…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.CA"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

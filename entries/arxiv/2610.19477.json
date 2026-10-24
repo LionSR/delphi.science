@@ -1,0 +1,21 @@
+{
+  "key": "2610.19477",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.19477",
+  "title": "Convergence Rates of Factorized Gradient Descent for Overparameterized Asymmetric Matrix Sensing with Balancing Regularization",
+  "authors": [
+    "Yongjun Chen",
+    "Jiaming Zhang",
+    "Liping Zhang"
+  ],
+  "summary": "We study factorized gradient descent (FGD) for overparameterized asymmetric matrix sensing with the balancing regularizer $\\frac18\\|L^\\top L-R^\\top R\\|_F^2$. An exact indefinite lifting of the population objective decomposes the dynamics of FGD into positive, negative, and null spectral subspaces. The first two components have linear restoring terms, whereas the null component contracts only quadratically. For independent isotropic sub-Gaussian sensing matrices and independent centered sub-Gaussian noise with scale proxy $σ$, we prove the local bound \\[ \\|L_tR_t^\\top-X^\\star\\|_2…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2607.02349",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.02349",
+  "title": "A PDE-Based Framework for Generative Modeling Beyond Classical Score-Based Diffusion",
+  "authors": [
+    "Horacio Tettamanti",
+    "Michael Herty"
+  ],
+  "summary": "We introduce an alternative generative framework based on a nonlinear modification of the classical Ornstein--Uhlenbeck dynamics. The proposed dynamics admits both a microscopic description through an interacting particle system and, in the mean-field limit, a macroscopic formulation given by a nonlinear Fokker--Planck equation with a superlinear drift term. We show that, for suitable choices of the model parameters and sufficiently large initial mass, the forward dynamics exhibits condensation phenomena by proving the loss of $L^2$ regularity of the solution in finite time. Building upon…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.PR"
+  ],
+  "published": "2026-07-02",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

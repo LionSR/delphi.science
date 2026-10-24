@@ -1,0 +1,24 @@
+{
+  "key": "2607.00263",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.00263",
+  "title": "Determining the Complexity of Chromatic Sum in Classes Defined by a Set of Forbidden Graphs",
+  "authors": [
+    "Clément Dallard",
+    "Daniël Paulusma",
+    "Erik Jan van Leeuwen"
+  ],
+  "summary": "The Chromatic Sum problem asks, given a graph $G$ and an integer $k$, whether $G$ admits a colouring $c$ with sum $\\sum_{v\\in V}c(v) \\leq k$. We study the complexity of Chromatic Sum on graph classes defined by some set of forbidden graphs. First, we show that three known frameworks fully classify the complexity of Chromatic Sum on $HH$-minor-free graphs and $HH$-topological-minor-free graphs for any set of graphs $HH$, and on $HH$-subgraph-free graphs for any finite set of graphs $HH$. To show this, we prove a new NP-completeness result for Chromatic Sum on certain subdivisions of planar…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.CC",
+    "cs.DM",
+    "cs.DS"
+  ],
+  "published": "2026-06-30",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

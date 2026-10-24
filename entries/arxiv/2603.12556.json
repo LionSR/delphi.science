@@ -1,0 +1,21 @@
+{
+  "key": "2603.12556",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.12556",
+  "title": "Scaling Laws and Pathologies of Single-Layer PINNs: Network Width and PDE Nonlinearity",
+  "authors": [
+    "Faris Chaudhry"
+  ],
+  "summary": "We establish empirical scaling laws for Single-Layer Physics-Informed Neural Networks on canonical nonlinear PDEs. We identify a dual optimization failure: (i) a baseline pathology, where the solution error fails to decrease with network width, even at fixed nonlinearity, falling short of theoretical approximation bounds, and (ii) a compounding pathology, where this failure is exacerbated by nonlinearity. We provide quantitative evidence that a simple separable power law is insufficient, and that the scaling behavior is governed by a more complex, non-separable relationship. This failure is…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-03-13",
+  "updated": "2026-03-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,26 @@
+{
+  "key": "2604.24663",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.24663",
+  "title": "Dual Control of Linear Systems from Bilinear Observations with Belief Space Model Predictive Control",
+  "authors": [
+    "Daniel Cao",
+    "Beixi Du",
+    "Andrew Lowitt",
+    "Sunmook Choi",
+    "Sarah Dean",
+    "Yahya Sattar"
+  ],
+  "summary": "We study finite-horizon quadratic control of linear systems with bilinear observations, in which the control input affects not only the state dynamics but also the partial observations of the state. In this setting, the separation principle can fail because control inputs influence the future quality of state estimates. State estimation requires an input-dependent Kalman filter whose gain and error covariance evolve as functions of the control inputs. To address this challenge, we propose a belief-space model predictive control ($\\texttt{B-MPC}$) method that plans directly over both the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "eess.SY"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-04-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2610.13591",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.13591",
+  "title": "Preconditioning proximal Galerkin: mesh and degree robust solvers for variational inequalities",
+  "authors": [
+    "Ioannis P. A. Papadopoulos",
+    "Pablo D. Brubeck"
+  ],
+  "summary": "The proximal Galerkin algorithm is a structure-preserving solver for variational inequalities that results in discretization-independent nonlinear iteration counts. However, in large three-dimensional simulations, the arising Newton saddle point systems cannot be feasibly solved by direct methods. To leverage an iterative linear solver, we propose a robust and scalable block preconditioner. Instead of using the usual dual Schur complement that acts on the latent variable, we design a preconditioner for the primal Schur complement. This leads to a block preconditioner that requires two…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

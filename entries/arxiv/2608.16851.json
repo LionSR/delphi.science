@@ -1,0 +1,23 @@
+{
+  "key": "2608.16851",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.16851",
+  "title": "Lyapunov Constructions for System Interconnections Arising from Adaptation in Some Optimization Methods",
+  "authors": [
+    "Qixu Wang",
+    "Patrick McNamee",
+    "Zahra Nili Ahmadabadi",
+    "Miroslav Krstić"
+  ],
+  "summary": "Interconnected systems have been widely studied, with a focus on interconnected systems whose subsystems are solely input-to-state stable (ISS) or passive systems. The focus of this work is on the interconnected systems that appear in adaptive gradient methods. In adaptive gradient methods, one subsystem seeks to move parameters of a cost function towards a minimizer while the other subsystem works to estimate some derivative information about the cost function to help determine the direction of the parameter update. This work studies instances of such interconnected systems and gives…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

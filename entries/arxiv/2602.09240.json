@@ -1,0 +1,26 @@
+{
+  "key": "2602.09240",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.09240",
+  "title": "Optimal Estimation in Orthogonally Invariant Generalized Linear Models: Spectral Initialization and Approximate Message Passing",
+  "authors": [
+    "Yihan Zhang",
+    "Hong Chang Ji",
+    "Ramji Venkataramanan",
+    "Marco Mondelli"
+  ],
+  "summary": "We consider the problem of parameter estimation from a generalized linear model with a random design matrix that is orthogonally invariant in law. Such a model allows the design have an arbitrary distribution of singular values and only assumes that its singular vectors are generic. It is a vast generalization of the i.i.d. Gaussian design typically considered in the theoretical literature, and is motivated by the fact that real data often have a complex correlation structure so that methods relying on i.i.d. assumptions can be highly suboptimal. Building on the paradigm of…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.IT",
+    "cs.LG",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-02-09",
+  "updated": "2026-02-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

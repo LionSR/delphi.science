@@ -1,0 +1,22 @@
+{
+  "key": "2604.26819",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26819",
+  "title": "Sharp One-Dimensional Sub-Gaussian Comparison in Convex Order",
+  "authors": [
+    "Yihan Zhang"
+  ],
+  "summary": "We prove that any random variable $X$ whose moment generating function is point-wise upper bounded by that of $ G \\sim \\mathcal{N}(0,1) $ must be dominated by $ G/\\mathbb{E}[|G|] $ in convex order, meaning $ \\mathbb{E}[f(X)] \\le \\mathbb{E}[f(G/\\mathbb{E}[|G|])] $ for all convex $f$. This is sharp as witnessed by $ X \\sim \\mathrm{Unif}(\\{-1,1\\}) $ and $ f(x) = |x| $.",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.IT",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-06-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

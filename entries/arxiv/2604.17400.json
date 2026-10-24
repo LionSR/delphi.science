@@ -1,0 +1,20 @@
+{
+  "key": "2604.17400",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.17400",
+  "title": "Phase-Scheduled Multi-Agent Systems for Token-Efficient Coordination",
+  "authors": [
+    "Mohit Dubey"
+  ],
+  "summary": "Multi-agent systems (MAS) powered by large language models suffer from severe token inefficiency arising from two compounding sources: (i) unstructured parallel execution, where all agents activate simultaneously irrespective of input readiness; and (ii) unrestricted context sharing, where every agent receives the full accumulated context regardless of relevance. Existing mitigation strategies - static pruning, hierarchical decomposition, and learned routing - treat coordination as a structural allocation problem and fundamentally ignore its temporal dimension. We propose Phase-Scheduled…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "math.AT"
+  ],
+  "published": "2026-04-19",
+  "updated": "2026-04-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

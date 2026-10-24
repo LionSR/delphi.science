@@ -1,0 +1,23 @@
+{
+  "key": "2601.06321",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.06321",
+  "title": "Multi-fidelity constraints in blackbox optimization",
+  "authors": [
+    "Stéphane Alarie",
+    "Charles Audet",
+    "Miguel Diago",
+    "Sébastien Le Digabel",
+    "Xavier Lebeuf"
+  ],
+  "summary": "This work studies constrained blackbox optimization problems that cannot be solved in reasonable time due to prohibitive computational costs. This challenge is especially prevalent in industrial applications, where blackbox evaluations are costly. However, constraints can be evaluated at various fidelities at a lower computational cost. More specifically, this work targets situations in which the infeasibility of each individual constraint can be detected at lower fidelities, and where a large discrete number of fidelities are available. Moreover, highly discontinuous problems which may fail…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-09",
+  "updated": "2026-01-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

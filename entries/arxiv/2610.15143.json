@@ -1,0 +1,19 @@
+{
+  "key": "2610.15143",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.15143",
+  "title": "When Is Local Time Stepping Worthwhile? A Cost Analysis for Nested Adaptive Mesh Refinement",
+  "authors": [
+    "James M. Hyman"
+  ],
+  "summary": "In deep hierarchies of adaptive mesh refinement, the update work that subcycling avoids is set mainly by the dimension of what is refined, not of the space. Subcycling (local time stepping) does less work than global stepping, advancing each level with the finest step, provided its extra coordination cost stays below an overhead budget $β=1-1/\\Sid$ as a fraction of the global-stepping work. Here $\\Sid$ is the ideal speedup that the cell counts give for equal update costs. When each level follows a feature of box-counting dimension $δ$ and the counts grow geometrically, the budget of a code…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-10",
+  "updated": "2026-10-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

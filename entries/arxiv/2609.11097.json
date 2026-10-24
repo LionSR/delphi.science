@@ -1,0 +1,21 @@
+{
+  "key": "2609.11097",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11097",
+  "title": "Additive reduced basis preconditioners for large-scale parametrized PDEs",
+  "authors": [
+    "Xinnan Fan",
+    "Qixiao Hu",
+    "Shiquan Zhang"
+  ],
+  "summary": "We introduce a class of additive reduced basis preconditioners designed to accelerate the iterative solution of large-scale linear systems arising from discretized parametrized PDEs. The main idea is to regularize the inherently singular reduced-order approximation by adding simple correction terms: either a scaled identity correction or a projected correction based on a basic preconditioner. This yields nonsingular preconditioners under explicit and easily checked conditions. The construction and application of the preconditioners are integrated into an FGMRES framework through an offline…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

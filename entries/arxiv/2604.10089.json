@@ -1,0 +1,22 @@
+{
+  "key": "2604.10089",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.10089",
+  "title": "A Bifidelity Proximal Quasi-Newton Method for Dense Rigid Body Suspension Collision Resolution",
+  "authors": [
+    "Nicholas Rummel",
+    "Tyler Jensen",
+    "Stephen Becker",
+    "Eduardo Corona"
+  ],
+  "summary": "Direct numerical simulation of dense rigid body suspensions poses significant computational challenges. A popular approach to resolve collisions necessitates solving a linear complementary problem (LCP) per time step. Each matrix vector product (MVP) inside the LCP requires solving an expensive partial differential equation. In this work, we show the LCP can be solved efficiently, often in only three to four MVPs. Specifically, we develop a custom monofidelity proximal quasi-Newton (Mono-PQN) method and a bi-fidelity variant (Bi-PQN). Our approach is validated through an application to…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-11",
+  "updated": "2026-04-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2603.23249",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.23249",
+  "title": "A Learning Method with Gap-Aware Generation for Heterogeneous DAG Scheduling",
+  "authors": [
+    "Ruisong Zhou",
+    "Haijun Zou",
+    "Li Zhou",
+    "Chumin Sun",
+    "Zaiwen Wen"
+  ],
+  "summary": "Efficient scheduling of directed acyclic graphs (DAGs) is a core problem in large-scale data-intensive computing systems, where query plans, data-processing workloads, and computation graphs consist of dependent tasks competing for limited heterogeneous resource pools. In practice, achieving high-performance execution requires schedulers to adapt across environments with varying resource pools and task types, while generating schedules under tight runtime budgets. We propose WeCAN, an end-to-end reinforcement learning framework for heterogeneous DAG scheduling that addresses task-pool…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-03-24",
+  "updated": "2026-06-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

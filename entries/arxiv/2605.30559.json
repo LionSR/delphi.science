@@ -1,0 +1,20 @@
+{
+  "key": "2605.30559",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.30559",
+  "title": "Entropy-stable and energy-conservative fully-discrete finite element method for non-isothermal phase-field models",
+  "authors": [
+    "Aaron Brunk",
+    "Dennis Höhn"
+  ],
+  "summary": "This work presents a conforming finite-element scheme for non-isothermal phase-field systems coupled to the incompressible Navier-Stokes equations. The proposed numerical scheme preserves entropy production and total energy conservation exactly by variable transformations using entropy as main variable instead of temperature. Convergence tests in space are conducted, and representative examples are provided to demonstrate the scheme's effectiveness.",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-05-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

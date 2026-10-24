@@ -1,0 +1,21 @@
+{
+  "key": "2605.10668",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.10668",
+  "title": "A Spectral Framework for Closed-Form Relative Density Estimation",
+  "authors": [
+    "Francis Bach"
+  ],
+  "summary": "We propose a closed-form spectral framework for relative log-density estimation in linearly parameterized probabilistic models, including unnormalized and conditional models. This is achieved by representing the Kullback-Leibler (KL) divergence as an integral of weighted chi-squared divergences, converting KL estimation into a family of least-squares problems. We derive an explicit spectral formula based only on first- and second-order feature moments, yielding closed-form estimators of both divergences and log-density potentials for fixed features. The framework extends to a broad class of…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "math.ST"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

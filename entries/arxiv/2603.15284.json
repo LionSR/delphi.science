@@ -1,0 +1,21 @@
+{
+  "key": "2603.15284",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.15284",
+  "title": "Multilevel Sparse Tensor Approximation for High-Dimensional Parametric PDEs",
+  "authors": [
+    "Martin Eigel",
+    "Philipp Trunschke",
+    "Dana Wrischnig"
+  ],
+  "summary": "In this paper the efficiency of multilevel sparse tensor approximation methods for high-dimensional affine parametric diffusion equations is investigated. Methodologically, the recently presented Sparse Alternating Least Squares (SALS) algorithm is employed to construct adaptive tensor train (TT) approximations of quantities of interest (QoI). By combining this tensor-based approach with a multilevel Galerkin discretization strategy, the solution's regularity can be exploited to significantly reduce computational costs by level-adapted sample sizes. A rigorous theoretical analysis is…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-16",
+  "updated": "2026-03-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

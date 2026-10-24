@@ -1,0 +1,23 @@
+{
+  "key": "2602.09882",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.09882",
+  "title": "Spinel: A Post-Quantum Signature Scheme Based on $\\mathrm{SL}_n(\\mathbb{F}_p)$ Hashing",
+  "authors": [
+    "Asmaa Cherkaoui",
+    "Faraz Heravi",
+    "Delaram Kahrobaei",
+    "Siamak F. Shahandashti"
+  ],
+  "summary": "The advent of quantum computation compels the cryptographic community to design digital signature schemes whose security extends beyond the classical hardness assumptions. In this work, we introduce Spinel, a post-quantum digital signature scheme that combines the proven security of SPHINCS+ (CCS 2019) with a new family of algebraic hash functions (Adv. Math. Commun. 2025) derived from the Tillich-Zemor paradigm (Eurocrypt 2008) with security rooted in the hardness of navigating expander graphs over $\\mathrm{SL}_n(\\mathbb{F}_p)$, a problem believed to be hard even for quantum adversaries. We…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "math.GR"
+  ],
+  "published": "2026-02-10",
+  "updated": "2026-02-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

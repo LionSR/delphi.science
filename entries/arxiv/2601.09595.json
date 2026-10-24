@@ -1,0 +1,21 @@
+{
+  "key": "2601.09595",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.09595",
+  "title": "Two continuous extensions of the Neural Approximated Virtual Element Method",
+  "authors": [
+    "Stefano Berrone",
+    "Moreno Pintore",
+    "Gioana Teora"
+  ],
+  "summary": "We propose two globally continuous neural-based variants of the Neural Approximated Virtual Element Method (NAVEM), termed B-NAVEM and P-NAVEM. Both approaches construct local basis functions using pre-trained fully connected neural networks while ensuring exact continuity across adjacent mesh elements. B-NAVEM leverages a Physics-Informed Neural Network to approximately solve the local Laplace problem that defines the virtual element basis functions, whereas P-NAVEM directly enforces polynomial reproducibility via a tailored loss function, without requiring harmonicity within the element…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-14",
+  "updated": "2026-01-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

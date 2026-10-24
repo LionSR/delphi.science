@@ -1,0 +1,20 @@
+{
+  "key": "2602.16312",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.16312",
+  "title": "An agglomeration-based multigrid solver for the discontinuous Galerkin discretization of cardiac electrophysiology",
+  "authors": [
+    "Marco Feder",
+    "Pasquale Claudio Africa"
+  ],
+  "summary": "This work presents a novel agglomeration-based multilevel preconditioner designed to accelerate the convergence of iterative solvers for linear systems arising from the discontinuous Galerkin discretization of the monodomain model in cardiac electrophysiology. The proposed approach exploits general polytopic grids at coarser levels, obtained through the agglomeration of elements from an initial, potentially fine, mesh. By leveraging a robust and efficient agglomeration strategy, we construct a nested hierarchy of grids suitable for multilevel solver frameworks. The effectiveness and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-18",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

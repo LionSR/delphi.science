@@ -1,0 +1,22 @@
+{
+  "key": "2601.01940",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.01940",
+  "title": "Policy Optimization with Differentiable MPC: Convergence Analysis under Uncertainty",
+  "authors": [
+    "Riccardo Zuliani",
+    "Efe C. Balta",
+    "John Lygeros"
+  ],
+  "summary": "Model-based policy optimization is a well-established framework for designing reliable and high-performance controllers across a wide range of control applications. Recently, this approach has been extended to model predictive control policies, where explicit dynamical models are embedded within the control law. However, the performance of the resulting controllers, and the convergence of the associated optimization algorithms, critically depends on the accuracy of the models. In this paper, we demonstrate that combining gradient-based policy optimization with recursive system identification…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-01-05",
+  "updated": "2026-04-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

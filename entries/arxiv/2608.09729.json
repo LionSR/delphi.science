@@ -1,0 +1,27 @@
+{
+  "key": "2608.09729",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.09729",
+  "title": "On the self-intersection time of non-backtracking random walks",
+  "authors": [
+    "Ferenc Bencs",
+    "Leslie Ann Goldberg",
+    "Matthew Jenssen",
+    "Mark Jerrum",
+    "Gabor Pete",
+    "Guus Regts",
+    "Yitong Yin"
+  ],
+  "summary": "We study the self-intersection time of the non-backtracking random walk on connected undirected graphs. For every fixed $Δ\\geq 3$ we show that the expected self-intersection time is $O(\\sqrt{n} \\log n)$ on $n$-vertex graphs with minimum degree at least $3$ and maximum degree at most $Δ$. For regular graphs with a uniform spectral gap, we improve this to $O(\\sqrt{n})$. We also show an $Ω(\\sqrt{n})$ lower bound on a class of regular expanders. Our upper bound on the expected self-intersection time implies an improved mixing time bound on Glauber dynamics for the Ising model on $Δ$-regular…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

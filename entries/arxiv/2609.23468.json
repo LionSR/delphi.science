@@ -1,0 +1,19 @@
+{
+  "key": "2609.23468",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.23468",
+  "title": "Exact Sign Recovery for PCA Connectivity Analysis in Mixture Models",
+  "authors": [
+    "Kohei Kawamoto"
+  ],
+  "summary": "We study exact sign recovery for PCA connectivity analysis in mixture models, using the projection onto the first $(K-1)$ principal components. For any fixed number of components with affinely independent means, we derive the oracle signal projection explicitly. Under anisotropic sub-Gaussian noise, with a random number of observations in each component, a rowwise eigenspace bound yields a sufficient condition, governed by the weakest signal direction, for recovering all connectivity signs without requiring a bounded condition number of the nonzero signal spectrum. Under isotropic Gaussian…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-09-20",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

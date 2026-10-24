@@ -1,0 +1,20 @@
+{
+  "key": "2606.18171",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.18171",
+  "title": "On independent sets in uncrowded uniform hypergraphs",
+  "authors": [
+    "Jing Yu",
+    "Junchi Zhang"
+  ],
+  "summary": "We prove an average-degree lower bound on the independence number of uncrowded uniform hypergraphs. For every fixed $r\\geq 2$ and every $η>0$, there exists $d_*=d_*(r,η)$ such that any uncrowded $(r+1)$-uniform hypergraph $G$ with $n$ vertices and average degree $d\\geq d_*$ satisfies \\[ α(G)\\geq (1-η)r^{-1/r}\\left(\\frac{\\log d}{d}\\right)^{1/r}n. \\] The proof combines a cleaning procedure, which reduces the maximum top-layer degree to the average scale, with a random nibble procedure that repeatedly extracts independent vertices while controlling all lower-order degrees created by the…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-07-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

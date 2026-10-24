@@ -1,0 +1,21 @@
+{
+  "key": "2609.11962",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11962",
+  "title": "Exact ReLU realization of binary affine refinement iterates via reflection folding and cone switching",
+  "authors": [
+    "Boldsaikhan Bolorkhuu",
+    "Tsogtgerel Gantumur"
+  ],
+  "summary": "We study vector-valued binary affine refinement operators with finitely supported matrix masks and compactly supported continuous piecewise linear input and forcing data. We prove that every finite refinement iterate admits an exact ReLU realization of fixed width and depth linear in the number of iterations. No separation of the forcing profile from the binary cell seams is required. The main mechanism is universal reflection doubling. Pairing each residual profile with its reflection replaces the two binary transition matrices by one fixed block matrix together with a fixed swap…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-08-12",
+  "updated": "2026-08-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

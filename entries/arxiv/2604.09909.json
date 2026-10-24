@@ -1,0 +1,23 @@
+{
+  "key": "2604.09909",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.09909",
+  "title": "Last-Iterate Convergence of Randomized Kaczmarz and SGD with Greedy Step Size",
+  "authors": [
+    "Michał Dereziński",
+    "Xiaoyu Dong"
+  ],
+  "summary": "We study last-iterate convergence of SGD with greedy step size over smooth quadratics in the interpolation regime, a setting which captures the classical Randomized Kaczmarz algorithm as well as other popular iterative linear system solvers. For these methods, we show that the $t$-th iterate attains an $O(1/t^{3/4})$ convergence rate, addressing a question posed by Attia, Schliserman, Sherman, and Koren, who gave an $O(1/t^{1/2})$ guarantee for this setting. In the proof, we introduce the family of stochastic contraction processes, whose behavior can be described by the evolution of a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-04-10",
+  "updated": "2026-04-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

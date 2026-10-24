@@ -1,0 +1,21 @@
+{
+  "key": "2607.06928",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06928",
+  "title": "Coloring digraphs with $Δ-b$ colors",
+  "authors": [
+    "Ken-ichi Kawarabayashi",
+    "Lucas Picasarri-Arrieta"
+  ],
+  "summary": "The dichromatic number of a digraph is the minimum number of colors needed to partition its vertex set into acyclic subdigraphs. A biclique is a set of vertices inducing all possible pairs of opposite arcs. For a digraph $D$, define $Δ(D) = \\max_{v\\in V(D)} \\sqrt{d^+(v) \\cdot d^-(v)}$. We prove that, for every fixed integer $b\\in\\mathbb{N}$, every digraph $D$ with $Δ(D) = Δ$ being sufficiently large with respect to $b$ either contains a biclique whose size exceeds $Δ-2b$ or has dichromatic number at most $Δ-b$. This extends a classical result of Reed to the directed setting and supports a…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

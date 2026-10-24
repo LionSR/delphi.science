@@ -1,0 +1,21 @@
+{
+  "key": "2610.19514",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.19514",
+  "title": "A Stabilized CR-CR Method for Fourth-Order Elliptic Problems",
+  "authors": [
+    "Yule Sun",
+    "Shudan Tian",
+    "Qian Zhang"
+  ],
+  "summary": "We present a CR-CR method for strain gradient elasticity and prove its robustness with respect to the Lame parameter $λ$ and the length scale $ι$. The method introduces the strain as an independent symmetric tensor and discretizes both the strain and the displacement using CR elements. The commuting properties of the CR interpolation operator with the relevant differential operators leads the robustness with respect to $λ$. A stabilization term weakly imposes the relation between the strain and the symmetric gradient of the displacement. The method also applies directly to the biharmonic…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

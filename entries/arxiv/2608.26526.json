@@ -1,0 +1,22 @@
+{
+  "key": "2608.26526",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.26526",
+  "title": "High Probability Derivative Bounds for Random tanh Neural Networks on a Hypercube",
+  "authors": [
+    "Josef Dick",
+    "Michael Feischl",
+    "Fabian Zehetgruber"
+  ],
+  "summary": "We establish high-probability bounds for mixed input derivatives of wide random neural networks whose activation derivatives satisfy a factorial growth bound. Our main result specializes these estimates to $\\tanh$ networks with Xavier initialization. A direct deterministic analysis based on Euclidean operator norms of the weight matrices yields derivative bounds that generally grow exponentially with the depth. We show that this growth can be substantially improved for sufficiently wide Gaussian networks by isolating the term that is linear in the highest-order derivative and controlling the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-08-27",
+  "updated": "2026-08-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2602.14757",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14757",
+  "title": "Solving Inverse Parametrized Problems via Finite Elements and Extreme Learning Networks",
+  "authors": [
+    "Erik Burman",
+    "Mats G. Larson",
+    "Karl Larsson",
+    "Jonatan Vallin"
+  ],
+  "summary": "We develop an interpolation-based modeling framework for parameter-dependent partial differential equations arising in control, inverse problems, and uncertainty quantification. The solution is discretized in the physical domain using finite element methods, while the dependence on a finite-dimensional parameter is approximated separately. We establish existence, uniqueness, and regularity of the parametric solution and derive rigorous error estimates that explicitly quantify the interplay between spatial discretization and parameter approximation. In low-dimensional parameter spaces,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-04-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2608.12044",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.12044",
+  "title": "Model-Consistent Structured-Hankel Matrix Completion for 3D Sparse Multi-frequency Electromagnetic Source Reconstruction",
+  "authors": [
+    "Shujaat Khan",
+    "Abdul Wahab"
+  ],
+  "summary": "Reconstruction of 3D electromagnetic currents from sparse, multi-frequency, far-field radiation data is severely ill-posed because sparse sampling masks specific current Fourier modes and the missing spectrum enlarges the null space of the forward operator. Although structured-Hankel completion can recover missing spectrum by exploiting the finite rate of innovations structure of a compactly supported geometrically sparse source, it treats current components independently without guaranteeing compatibility with the model. This often renders non-physical solutions that violate model…",
+  "domain": "math-ph",
+  "tags": [
+    "math-ph",
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-08-12",
+  "updated": "2026-08-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

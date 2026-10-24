@@ -1,0 +1,24 @@
+{
+  "key": "2602.10949",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.10949",
+  "title": "Optimal Initialization in Depth: Lyapunov Initialization and Limit Theorems for Deep Leaky ReLU Networks",
+  "authors": [
+    "Constantin Kogler",
+    "Tassilo Schwarz",
+    "Samuel Kittle"
+  ],
+  "summary": "Effective initialization in deep networks requires an understanding of random neural networks. In this work, a rigorous probabilistic analysis of deep bias-free random Leaky ReLU networks is provided. We prove a Law of Large Numbers and a Central Limit Theorem for the logarithm of the norm of network activations, establishing that, as the number of layers increases, their growth is governed by a parameter called the Lyapunov exponent. This parameter characterizes a sharp phase transition between vanishing and exploding activations, and we calculate the Lyapunov exponent explicitly for…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.DS",
+    "math.PR"
+  ],
+  "published": "2026-02-11",
+  "updated": "2026-06-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

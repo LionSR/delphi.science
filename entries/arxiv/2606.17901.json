@@ -1,0 +1,20 @@
+{
+  "key": "2606.17901",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.17901",
+  "title": "The Erdős-Hajnal High-Girth Subgraph Conjecture Holds in the Polynomial Chromatic-Sparsity Regime",
+  "authors": [
+    "Eric Li"
+  ],
+  "summary": "For a graph $G$ put $h_r(G)=\\max{χ(H):H\\subseteq G,\\operatorname{girth}(H)\\ge r}.$ Erdős and Hajnal asked whether $h_r(G)\\to\\infty$ as $χ(G)\\to\\infty$, for every fixed $r\\ge4$. We prove this in every fixed polynomial edge-density regime: for all $r\\ge4$, $k\\ge2$, $P,C>0$, there is $M=M_{r,k}(P,C)$ such that $χ(G)\\ge M,\\ e(G)\\le Cχ(G)^P\\Longrightarrow h_r(G)\\ge k.$ Quantitatively, after replacing $P$ by $P\\vee2$ and $C$ by $C\\vee2$, $M_{r,k}(P,C)\\le \\exp!\\left(O_{r,k}\\bigl((P+2+\\log(C\\vee2))^2\\bigr)\\right),$ and consequently the same conclusion holds throughout the quasi-polynomial range…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.PR"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

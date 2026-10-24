@@ -1,0 +1,20 @@
+{
+  "key": "2602.11640",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.11640",
+  "title": "On the convergence rates of generalized conditional gradient method for fully discretized Mean Field Games",
+  "authors": [
+    "Haruka Nakamura",
+    "Norikazu Saito"
+  ],
+  "summary": "We study convergence rates of the generalized conditional gradient (GCG) method applied to fully discretized Mean Field Games (MFG) systems. While explicit convergence rates of the GCG method have been established at the continuous PDE level, a rigorous analysis that simultaneously accounts for time-space discretization and iteration errors has been missing. In this work, we consider an MFG system with a quadratic Hamiltonian including an advection term. We employ the GCG method to construct an iterative algorithm in which the HJB and FP equations are solved separately. At each iteration, we…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-12",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

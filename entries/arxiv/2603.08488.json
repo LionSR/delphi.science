@@ -1,0 +1,23 @@
+{
+  "key": "2603.08488",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.08488",
+  "title": "NN-OpInf: an operator inference approach using structure-preserving composable neural networks",
+  "authors": [
+    "Eric Parish",
+    "Anthony Gruber",
+    "Patrick Blonigan",
+    "Irina Tezaur"
+  ],
+  "summary": "We propose neural network operator inference (NN-OpInf): a structure-preserving, composable, and minimally restrictive operator inference framework for the non-intrusive reduced-order modeling of dynamical systems. The approach learns latent dynamics from snapshot data, enforcing local operator structure such as skew-symmetry, (semi-)positive definiteness, and gradient preservation, while also reflecting complex dynamics by supporting additive compositions of heterogeneous operators. We present practical training strategies and analyze computational costs relative to linear and quadratic…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS"
+  ],
+  "published": "2026-03-09",
+  "updated": "2026-03-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

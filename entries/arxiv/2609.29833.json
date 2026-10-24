@@ -1,0 +1,23 @@
+{
+  "key": "2609.29833",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.29833",
+  "title": "Shrinking-Tube Concentration for Adaptive Markovian Stochastic Approximation",
+  "authors": [
+    "Jin Li",
+    "Ye Luo",
+    "Xiaowei Zhang"
+  ],
+  "summary": "Adaptive algorithms increasingly make decisions while reshaping the dynamics that generate their future data. We establish a shrinking-tube concentration bound for projected stochastic approximation driven by an adaptive Markov chain. The bound guarantees, with high probability, that every iterate after a chosen time remains within a tolerance around the target that tightens over time. The probability of any exit after the chosen time admits a polynomially decaying upper bound, and a matching lower bound shows that its polynomial exponent cannot be improved in general under finite second…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "stat.ME",
+    "stat.ML"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2609.07238",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07238",
+  "title": "A Proof of Bala's Congruence Conjectures for A158690",
+  "authors": [
+    "Ahaan Kallat"
+  ],
+  "summary": "Let $a(n)$ be the sequence A158690 in the On-Line Encyclopedia of Integer Sequences (OEIS), defined by the exponential generating function $\\sum_{n\\ge0} a(n)t^n/n! = 1+\\sum_{m\\ge1}\\prod_{j=1}^m(1-e^{-(2j-1)t})$. We prove two congruence conjectures of Peter Bala. The first states that, for every integer $k\\ge1$, the sequence $a(n)$ modulo $k$ is eventually periodic with period dividing $\\varphi(k)$. We prove the stronger statement that the Carmichael function $λ(k)$ is an eventual period. The second conjecture asserts the shifted Gauss congruences $a(np^r+i)\\equiv a(np^{r-1}+i)\\pmod{p^r}$ for…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2604.07574",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.07574",
+  "title": "Mathematical Analysis of Image Matching Techniques",
+  "authors": [
+    "Oleh Samoilenko"
+  ],
+  "summary": "Image matching is a fundamental problem in Computer Vision with direct applications in robotics, remote sensing, and geospatial data analysis. We present an analytical and experimental evaluation of classical local feature-based image matching algorithms on satellite imagery, focusing on the Scale-Invariant Feature Transform (SIFT) and the Oriented FAST and Rotated BRIEF (ORB). Each method is evaluated through a common pipeline: keypoint detection, descriptor extraction, descriptor matching, and geometric verification via RANSAC with homography estimation. Matching quality is assessed using…",
+  "domain": "cs.CV",
+  "tags": [
+    "cs.CV",
+    "math.NA"
+  ],
+  "published": "2026-04-08",
+  "updated": "2026-04-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

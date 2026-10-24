@@ -1,0 +1,21 @@
+{
+  "key": "2604.04607",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.04607",
+  "title": "Bootstrap percolation of extension hypergraphs",
+  "authors": [
+    "Weichan Liu",
+    "Bjarne Schülke",
+    "Xin Zhang"
+  ],
+  "summary": "For $k$-graphs $F$ and $H_0$ the $F$-bootstrap percolation process (or $F$-process) starting with $H_0$ is a sequence $(H_i)_{i\\geq0}$ of $k$-graphs such that $H_{i+1}$ is obtained from $H_i$ by adding all those $e\\in V(H_0)^{(k)}\\setminus E(H_i)$ as edges that complete a new copy of $F$. The running time of this $F$-process, denoted by $M_F(H_0)$, is the smallest $i$ with $H_i=H_{i+1}$. Bollobás proposed the problem of determining the maximum running time for $n\\in\\mathbb{N}$, i.e., $$M_F(n)=\\max_{\\vert V(H_0)\\vert=n}M_F(H_0)\\,.$$ Recently, Noel and Ranganathan initiated the study of this…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-04-06",
+  "updated": "2026-04-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

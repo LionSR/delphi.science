@@ -1,0 +1,19 @@
+{
+  "key": "2605.16553",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.16553",
+  "title": "An explicit algebraic generating function for OEIS A348410",
+  "authors": [
+    "Tong Niu"
+  ],
+  "summary": "For the OEIS sequence A348410, P. Bala recorded in February 2022 two equivalent closed forms, $a(n) = [x^{n}] ((1-x)(1-x^2))^{-n}$ and a single-index binomial sum. R. J. Mathar (October 2021) and V. Kotesovec (November 2021) each contributed a conjectured P-recursive recurrence -- Mathar's of order $4$, Kotesovec's of order $2$. We apply Lagrange-Bürmann inversion to Bala's $[x^n]$ form to derive the parametric expression $A(t) = (1 - y^2)/(1 - y - 4 y^2)$, where $y = y(t)$ is implicit by $y(1-y)^2(1+y) = t$. Eliminating $y$ via resultant gives the explicit algebraic equation $P(t, A) = 0$…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-05-15",
+  "updated": "2026-05-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

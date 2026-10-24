@@ -1,0 +1,21 @@
+{
+  "key": "2607.17355",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.17355",
+  "title": "Venn diagrams as forbidden hypergraph traces",
+  "authors": [
+    "Adam Džavoronok",
+    "Tymofii Reizin",
+    "Jakub Šošovička"
+  ],
+  "summary": "We study the maximum size of a set system that contains no $k$-Venn diagram, denoted by $VD_k$, as a trace. For every fixed $k\\ge 3$, we prove $\\text{ex}_{tr}(n,VD_k)=O_k(n^{2^k-2k+1})$, improving the direct Sauer-Shelah bound $O_k(n^{2^k-1})$. In particular, for $k=4$ the exponent decreases from $15$ to $9$. The proof starts from the theorem of Keevash, Leader, Long and Wagner for $VD_3$ and uses induction on $k$ in which two new Venn regions are forced for free at each added edge. We also record lower-bound constructions for Venn diagrams in fixed uniformity, explicit bounds for the…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-07-19",
+  "updated": "2026-07-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

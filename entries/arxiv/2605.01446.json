@@ -1,0 +1,22 @@
+{
+  "key": "2605.01446",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.01446",
+  "title": "Sequential Minimal Optimization for $\\varepsilon$-SVR with MAPE Loss and Sample-Dependent Box Constraints",
+  "authors": [
+    "Pablo Benavides-Herrera",
+    "Riemann Ruiz-Cruz",
+    "Juan Diego Sánchez-Torres"
+  ],
+  "summary": "Support vector regression with Mean Absolute Percentage Error (MAPE) loss is theoretically well-motivated for forecasting applications where accuracy is evaluated in relative terms, but the sample-dependent dual box constraints it induces have not been addressed in the published SMO literature. We derive a Sequential Minimal Optimization algorithm for this setting and prove a structural-invariance result: the MAPE modification affects exactly two components of the SMO iteration -- working-set selection and analytic-update clipping -- leaving gradient bookkeeping and curvature computation…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "stat.ML"
+  ],
+  "published": "2026-05-02",
+  "updated": "2026-06-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

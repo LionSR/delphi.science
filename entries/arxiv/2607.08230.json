@@ -1,0 +1,21 @@
+{
+  "key": "2607.08230",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08230",
+  "title": "Selecting Interpretable Circular Coordinates from Data",
+  "authors": [
+    "Vincent P. Grande",
+    "Marina Meila"
+  ],
+  "summary": "Circular coordinates obtained from persistent cohomology reveal loop structure in data, but they usually remain abstract: A detected circle does not tell us which measured angle, phase, torsion, or decoder explains it. We propose a method for selecting interpretable circle-valued coordinates from a user-supplied dictionary of scientifically meaningful candidates explaining the detected cohomology. In the continuous setting, each candidate is represented by the cohomology class of its pulled-back angular form, and selecting a minimum-energy set of candidates spanning the relevant $H^1$…",
+  "domain": "math.AT",
+  "tags": [
+    "math.AT",
+    "stat.ML"
+  ],
+  "published": "2026-07-09",
+  "updated": "2026-07-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

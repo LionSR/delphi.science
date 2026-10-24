@@ -1,0 +1,21 @@
+{
+  "key": "2607.20192",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.20192",
+  "title": "On Optimization Complexity of Second-Order Certified Unlearning",
+  "authors": [
+    "Nikita Doikov",
+    "Anastasia Koloskova"
+  ],
+  "summary": "We study machine unlearning: the removal of memorized training data from a trained model. Specifically, we investigate the algorithmic complexity of certified unlearning from an optimization perspective. We formalize the goal of an unlearning algorithm as simultaneously achieving certified unlearning and optimization accuracy. Utilizing the notion of uniformly convex regularizers, we prove new bounds on the distance between initial and unlearned models using a novel substitute for generalization error. Thus we theoretically demonstrate that if the removed data is well-predicted by the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-07-22",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

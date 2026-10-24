@@ -1,0 +1,22 @@
+{
+  "key": "2609.37140",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.37140",
+  "title": "BandPC: Learning Residual-Band Preconditioner Combinations for Flexible Conjugate Gradient Solvers",
+  "authors": [
+    "D. M. Li",
+    "Shang-Tian Yang",
+    "Xin Qiu"
+  ],
+  "summary": "The conjugate gradient (CG) method is a classical iterative solver for sparse symmetric positive definite (SPD) linear systems, but its convergence strongly depends on the spectral properties of the system matrix. Preconditioning can improve these properties; however, designing preconditioners that generalize across diverse and irregular sparsity patterns remains challenging. We propose BandPC (Band Preconditioner Combinations, where \"Band\" denotes residual-norm bands), a data-driven framework that leverages graph neural networks (GNNs) to predict multi-stage preconditioning strategies for…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

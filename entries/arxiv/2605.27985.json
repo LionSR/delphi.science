@@ -1,0 +1,23 @@
+{
+  "key": "2605.27985",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.27985",
+  "title": "Online Sketched Newton-Raphson",
+  "authors": [
+    "Jean-Luc Lupien",
+    "Yuen-Man Pun",
+    "Youssef Diouane",
+    "Iman Shames",
+    "Antoine Lesage-Landry"
+  ],
+  "summary": "In online convex optimization (OCO), a decision-maker is confronted with an unknown environment and seeks to play an optimal sequence of decisions on a short time-scale using only past information. Recent advances in second-order OCO methods have demonstrated tighter regret bounds and improved empirical performance over traditional first-order methods. However, this performance comes at a cost: a matrix inversion is now required, which scales with the cube of the size of the problem. In this work, we propose sketching to mitigate this limitation. Specifically, we present the online sketched…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-27",
+  "updated": "2026-05-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

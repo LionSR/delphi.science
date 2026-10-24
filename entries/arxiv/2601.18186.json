@@ -1,0 +1,21 @@
+{
+  "key": "2601.18186",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.18186",
+  "title": "Trajectory-Based RBF Collocation Method via Closest-Point Embedding for Surface Advection-Diffusion Equations",
+  "authors": [
+    "Xiaobin Li",
+    "Leevan Ling",
+    "Yizhong Sun"
+  ],
+  "summary": "We introduce a Trajectory-Based RBF Collocation (TBRBF) method for solving surface advection-diffusion equations on smooth, compact manifolds. TBRBF decouples advection and diffusion by applying a characteristic treatment with a Kansa-type RBF collocation method for diffusion PDE, which yields an operator-split characteristic (OSC) system comprising a characteristic ODE and a diffusion PDE. We rigorously prove the equivalence between the OSC system and the original surface PDE on manifolds by embedding the latter into a narrow band domain through the closest point mapping and its…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-26",
+  "updated": "2026-06-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

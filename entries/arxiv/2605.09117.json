@@ -1,0 +1,24 @@
+{
+  "key": "2605.09117",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09117",
+  "title": "Rao-Blackwellized Markov chain Monte Carlo Light Transport",
+  "authors": [
+    "Sascha Holl",
+    "Gurprit Singh",
+    "Hans-Peter Seidel"
+  ],
+  "summary": "In light transport simulation, Markov chain Monte Carlo methods are particularly effective at exploring regions with complex lighting characteristics. However, estimator variance is a central concern across Monte Carlo methods in general. In light transport, high variance directly manifests as increased noise or, equivalently, longer rendering times at fixed image quality. Variance reduction techniques based on Rao-Blackwellization have proven particularly effective. In practice, however, the RB approach traditionally used in light transport, waste-recycling, can yield little to no…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math.FA",
+    "math.NA",
+    "math.PR"
+  ],
+  "published": "2026-05-09",
+  "updated": "2026-05-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

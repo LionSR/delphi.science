@@ -1,0 +1,25 @@
+{
+  "key": "2607.19335",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.19335",
+  "title": "1-Lipschitz Neural Networks on Hadamard Manifolds",
+  "authors": [
+    "Davide Murari",
+    "Marta Ghirardelli",
+    "Ben Adcock",
+    "Elena Celledoni",
+    "Brynjulf Owren",
+    "Carola-Bibiane Schönlieb"
+  ],
+  "summary": "Controlling the Lipschitz constant of a neural network is a standard way to promote robustness and stability. Most existing constraining strategies are designed for Euclidean spaces. In this work, we construct and analyze a class of 1-Lipschitz neural networks on Hadamard manifolds. Our layers are of gradient-descent type, $1$-Lipschitz, and quasi-$α$-firmly nonexpansive. The core building blocks of the proposed architecture are Busemann functions, and we exploit the properties of Busemann gradient flows to design $1$-Lipschitz geometry-preserving layers. We provide explicit constructions…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-07-21",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

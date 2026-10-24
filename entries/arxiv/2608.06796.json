@@ -1,0 +1,24 @@
+{
+  "key": "2608.06796",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.06796",
+  "title": "Online Multi-Level Aggregation with Per-Batch Maximum Delay",
+  "authors": [
+    "Tianhang Lu",
+    "Runtian Ren",
+    "Shengcai Liu",
+    "Ke Tang"
+  ],
+  "summary": "We study online multi-level aggregation on finite rooted trees with a per-batch maximum-delay objective. A service pays for a rooted subtree and for the maximum waiting time among the requests cleared by that service. We show that the offline optimum admits a consecutive-arrival-block normal form and can be computed by a polynomial-time dynamic program. The same dynamic program defines the deadlines of a family of online algorithms, which we call DP-Envelope. Its deterministic endpoint is $2$-competitive. Sampling one global parameter with density $e^θ/(e-1)$ leads to an…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.DM",
+    "math.OC"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

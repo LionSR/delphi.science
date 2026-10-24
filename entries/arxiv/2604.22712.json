@@ -1,0 +1,20 @@
+{
+  "key": "2604.22712",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.22712",
+  "title": "Statistical Analysis of Markovian Generative Modeling",
+  "authors": [
+    "Eddie Aamari",
+    "Arthur Stéphanovitch"
+  ],
+  "summary": "These lecture notes introduce the statistical analysis of continuous-time generative models built from Markov dynamics. We begin with the stochastic-calculus foundations of score-based diffusion models, including time reversal, score matching, and sampling from learned scores. We then present the broader framework of generator matching, which describes flows, diffusions, jump processes, and discrete generative models through their infinitesimal generators. We then focus on finite-sample guarantees. We explain how errors in the learned drift or generator propagate to the final generated…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-04-24",
+  "updated": "2026-04-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

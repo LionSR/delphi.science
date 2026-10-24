@@ -1,0 +1,23 @@
+{
+  "key": "2602.04795",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.04795",
+  "title": "Maximum-Volume Nonnegative Matrix Factorization",
+  "authors": [
+    "Olivier Vu Thanh",
+    "Nicolas Gillis"
+  ],
+  "summary": "Nonnegative matrix factorization (NMF) is a popular data embedding technique. Given a nonnegative data matrix $X$, it aims at finding two lower dimensional matrices, $W$ and $H$, such that $X\\approx WH$, where the factors $W$ and $H$ are constrained to be element-wise nonnegative. The factor $W$ serves as a basis for the columns of $X$. In order to obtain more interpretable and unique solutions, minimum-volume NMF (MinVol NMF) minimizes the volume of $W$. In this paper, we consider the dual approach, where the volume of $H$ is maximized instead; this is referred to as maximum-volume NMF…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "eess.SP",
+    "math.NA",
+    "stat.ML"
+  ],
+  "published": "2026-02-04",
+  "updated": "2026-08-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

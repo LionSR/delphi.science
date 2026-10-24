@@ -1,0 +1,21 @@
+{
+  "key": "2609.07997",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07997",
+  "title": "Sharp Structure-Agnostic Minimax Risk for Partial Linear Models",
+  "authors": [
+    "Haichen Hu",
+    "David Simchi-Levi"
+  ],
+  "summary": "We characterize the sharp structure-agnostic minimax risk for coefficient estimation in the partial linear model when the outcome and treatment nuisances are learned by two distinct black-box learners, which resolves the open problem in double machine learning posed by Gu (2025). For each nuisance \\(q\\in\\{μ,π\\}\\), we characterize the available learner by an approximation-error budget \\(a_q\\) and a stochastic-error budget \\(s_q\\), with the latter controlled through localized Rademacher complexity. Writing \\(\\mathcal E_n\\) for the minimax mean-squared error, we show that \\[\\mathcal…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

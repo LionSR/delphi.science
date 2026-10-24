@@ -1,0 +1,23 @@
+{
+  "key": "2603.20728",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20728",
+  "title": "Tackling heavy-tailed noise in distributed estimation: Asymptotic performance and tradeoffs",
+  "authors": [
+    "Dragana Bajovic",
+    "Dusan Jakovetic",
+    "Soummya Kar",
+    "Manojlo Vukovic"
+  ],
+  "summary": "We present an algorithm for distributed estimation of an unknown vector parameter $\\boldsymbolθ^\\ast \\in {\\mathbb R}^M$ in the presence of heavy-tailed observation and communication noises. Heavy-tailed noises frequently appear, e.g., in densely deployed Internet of Things (IoT) or wireless sensor network systems. The presented algorithm falls within the class of \\emph{consensus+innovation} estimators and combats the effect of the heavy-tailed noises by adding general nonlinearities in the consensus and innovations update parts. We present results on almost sure convergence and asymptotic…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "math.OC"
+  ],
+  "published": "2026-03-21",
+  "updated": "2026-03-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

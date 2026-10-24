@@ -1,0 +1,25 @@
+{
+  "key": "2609.26406",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.26406",
+  "title": "SuperPCA: subspace analysis and an efficient algorithm for high-dimensional PCA",
+  "authors": [
+    "Irina-Beatrice Haas",
+    "Maike Meier",
+    "Yuji Nakatsukasa",
+    "Taejun Park"
+  ],
+  "summary": "Principal component analysis (PCA) is a fundamental tool to reduce the dimensionality of the data in many applications. PCA finds a few signal directions that contain most of the variability of the data by computing the eigenvectors of the sample covariance matrix. In this work, we focus on the spiked covariance model, in which the data vectors are defined by a few orthogonal signals plus an isotropic Gaussian noise, and our goal is to estimate one or more of the leading signals. Our main theoretical finding is that the subspace spanned by several leading eigenvectors of the sample…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.NA",
+    "stat.CO"
+  ],
+  "published": "2026-09-22",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2604.20172",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.20172",
+  "title": "Cover meets Robbins while Betting on Bounded Data: $\\ln n$ Regret and Almost Sure $\\ln\\ln n$ Regret",
+  "authors": [
+    "Shubhada Agrawal",
+    "Aaditya Ramdas"
+  ],
+  "summary": "Consider betting against a sequence of $[0,1]$-valued observations using bets that are fair if the data have a conditional mean $m_0 \\in (0,1)$. Cover's universal portfolio algorithm achieves a worst-case regret of $O(\\ln n)$ compared to the best constant bet in hindsight, and this logarithmic order is unimprovable against adversarial data. We construct an explicit full-support Robbins mixture that combines insights from Robbins and Cover. It retains $O(\\ln n)$ regret on every path while also eventually satisfying $R_n\\le(1+o(1))\\ln\\ln V_n$ on every path with bounded mixture wealth and…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-04-22",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

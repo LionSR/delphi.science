@@ -1,0 +1,26 @@
+{
+  "key": "2608.25890",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.25890",
+  "title": "Scalable Multi-GPU Simulation of 3D Multicellular Growth with RNN-Based Workload Balancing",
+  "authors": [
+    "Matvey Moisseyev",
+    "Huijing Du",
+    "Dandan Zheng",
+    "Chi Zhang",
+    "Hongfeng Yu"
+  ],
+  "summary": "Detailed multicellular growth simulations based on subcellular element models (SEMs) can capture complex tissue development, but their element-level interactions impose substantial computational cost. This work presents a scalable multi-GPU framework for 3D multicellular growth simulation that combines GPU acceleration, spatial binning, domain decomposition, and workload-aware partitioning. Cell movement, growth, and division continuously reshape the spatial workload distribution, causing initially balanced partitions to become inefficient over time. To address this, we introduce an…",
+  "domain": "cs.DC",
+  "tags": [
+    "cs.DC",
+    "cs.CE",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-08-26",
+  "updated": "2026-08-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2607.16347",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.16347",
+  "title": "Moore's Greedy Algorithm for Minimizing the Number of Late Jobs: Structure and Implementation",
+  "authors": [
+    "Dean Matthew Menezes",
+    "C. Gregory Plaxton"
+  ],
+  "summary": "Scheduling $n$ jobs with deadlines and processing times on a single resource to minimize late jobs equates to finding a maximum-cardinality feasible subset. Moore (1968) proposed a natural greedy algorithm for this: process jobs in nondecreasing order of processing time, adding each if the set remains feasible. While Zhao and Yuan recently matched the $O(n\\log n)$ time of the classic Moore-Hodgson algorithm via amortized $O(\\log n)$ feasibility queries, our first contribution is a simpler augmented BST data structure that achieves worst-case $O(\\log n)$ query time. Moore's greedy algorithm…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.OC"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

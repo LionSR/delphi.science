@@ -1,0 +1,19 @@
+{
+  "key": "2607.05233",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.05233",
+  "title": "Exact enumeration of lozenge tilings of a triangular region",
+  "authors": [
+    "Jun Yan"
+  ],
+  "summary": "We prove that the number of lozenge tilings of a certain triangular region $\\mathcal{T}_n$ is given by the formula \\[T_n=\\prod_{\\substack{1\\leq a<b\\leq 3n+2\\\\(a,b)\\not=(n+1,2n+2)}}\\left|1+ζ^a+ζ^b\\right|^{1/3},\\] where $ζ=e^{2πi/(3n+3)}$. This answers a question of Ciucu and Krattenthaler, both by finding the exact formula and by explaining why $T_n$ has many prime factors. The proof reduces the lozenge tiling enumeration problem to evaluating the determinant of the bipartite adjacency matrix $M_n$ of the dual graph of $\\mathcal{T}_n$, and then evaluates this determinant by diagonalising $M_n$.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-07-06",
+  "updated": "2026-08-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

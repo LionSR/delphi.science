@@ -1,0 +1,20 @@
+{
+  "key": "2601.04496",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.04496",
+  "title": "Adaptive Multi-Grade Deep Learning for Highly Oscillatory Fredholm Integral Equations of the Second Kind",
+  "authors": [
+    "Jie Jiang",
+    "Yuesheng Xu"
+  ],
+  "summary": "This paper studies the use of Multi-Grade Deep Learning (MGDL) for solving highly oscillatory Fredholm integral equations of the second kind. We provide rigorous error analyses of continuous and discrete MGDL models, showing that the discrete model retains the convergence and stability of its continuous counterpart under sufficiently small quadrature error. We identify the DNN training error as the primary source of approximation error, motivating a novel adaptive MGDL algorithm that selects the network grade based on training performance. Numerical experiments with highly oscillatory…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-08",
+  "updated": "2026-01-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

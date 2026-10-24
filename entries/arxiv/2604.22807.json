@@ -1,0 +1,23 @@
+{
+  "key": "2604.22807",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.22807",
+  "title": "Sliced Wasserstein Steering between Gaussian Measures",
+  "authors": [
+    "Kaito Ito",
+    "Anqi Dong"
+  ],
+  "summary": "Optimal transport with quadratic cost provides a geometric framework for steering an ensemble, modeled by a probability law, with minimal effort. Yet ambient-space formulations become unwieldy in high dimensions, and sensing or actuation in practice often reveals only linear views of the state -- camera silhouettes, LiDAR beams, tomographic slices. We develop a sliced feedback controller for distribution steering: the evolving law is projected onto one-dimensional directions on the sphere, the optimal one-dimensional velocity is synthesized in each projection, and these velocities are…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "eess.SY",
+    "stat.ML"
+  ],
+  "published": "2026-04-14",
+  "updated": "2026-04-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

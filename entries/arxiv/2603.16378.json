@@ -1,0 +1,22 @@
+{
+  "key": "2603.16378",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.16378",
+  "title": "A complexity analysis of the F4 Gröbner basis algorithm with tracer data",
+  "authors": [
+    "Robin Kouba",
+    "Vincent Neiger",
+    "Mohab Safey El Din"
+  ],
+  "summary": "We provide a new complexity bound for the computation of grevlex Gröbner bases in the generic zero-dimensional case, relying on Moreno-Socías' conjecture. We first formalize a property of regular sequences that implies a well-known folklore consequence, which we call the increasing degree property. We then derive a new understanding of the selection of pairs in the F4 algorithm based on Moreno-Socías' conjecture. Moreover, we obtain an exact formula for the number of elements in the grevlex Gröbner basis of a given degree, for half of the relevant degrees. Combining these results, we derive…",
+  "domain": "cs.SC",
+  "tags": [
+    "cs.SC",
+    "math.AC"
+  ],
+  "published": "2026-03-17",
+  "updated": "2026-03-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

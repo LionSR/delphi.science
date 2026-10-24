@@ -1,0 +1,23 @@
+{
+  "key": "2603.07055",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.07055",
+  "title": "Integrating Heterogeneous Information in Randomized Experiments: A Unified Calibration Framework",
+  "authors": [
+    "Wei Ma",
+    "Zeqi Wu",
+    "Zheng Zhang"
+  ],
+  "summary": "In modern randomized experiments, large-scale data collection increasingly yields rich baseline covariates and auxiliary information from multiple sources. Such information offers opportunities for more precise treatment effect estimation, but it also raises the challenge of integrating heterogeneous information coherently without compromising validity. Covariate-adaptive randomization (CAR) is widely used to improve covariate balance at the design stage, but it typically balances only a small set of covariates used to form strata, making covariate adjustment at the analysis stage essential…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "econ.EM",
+    "math.ST"
+  ],
+  "published": "2026-03-07",
+  "updated": "2026-03-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2603.29622",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.29622",
+  "title": "Certified Return-Word Induction for a Perturbed Hofstadter Recursion",
+  "authors": [
+    "Marco Mantovanelli"
+  ],
+  "summary": "We study the parity-perturbed Hofstadter recursion $$ Q(1)=Q(2)=1,\\qquad Q(n)=Q(n-Q(n-1))+Q(n-Q(n-2))+(-1)^n. $$ We prove that it is well-defined for every $n\\ge 1$ by a computer-assisted return-word induction. The recurrence is first reduced to a binary sequence $s_n$ together with two backward cursor heads. Its local semantics is encoded by 13 return-word types, 92 synchronized cursor states, and 122 exact two-source transition rules. Exhaustive finite checks verify the local recurrence identity, cursor synchronization, rule selection, and exclusion of the unique configuration that could…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.NT"
+  ],
+  "published": "2026-03-31",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

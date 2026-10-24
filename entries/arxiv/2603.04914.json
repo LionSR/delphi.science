@@ -1,0 +1,25 @@
+{
+  "key": "2603.04914",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.04914",
+  "title": "U-OBCA: Uncertainty-Aware Optimization-Based Collision Avoidance via Wasserstein Distributionally Robust Chance Constraints",
+  "authors": [
+    "Zehao Wang",
+    "Yuxuan Tang",
+    "Han Zhang",
+    "Jingchuan Wang",
+    "Weidong Chen"
+  ],
+  "summary": "Uncertainties arising from localization error, trajectory prediction errors of the moving obstacles and environmental disturbances pose significant challenges to robot's safe navigation. Existing uncertainty-aware planners often approximate polygon-shaped robots and obstacles using simple geometric primitives such as circles or ellipses. Though computationally convenient, these approximations substantially shrink the feasible space, leading to overly conservative trajectories and even planning failure in narrow environments. In addition, many such methods rely on specific assumptions about…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-03-05",
+  "updated": "2026-03-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

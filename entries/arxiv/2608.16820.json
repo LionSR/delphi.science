@@ -1,0 +1,23 @@
+{
+  "key": "2608.16820",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.16820",
+  "title": "Battery-Swapping Station Operation Under Forecast Uncertainty: A Scenario-Based Stochastic MPC Framework",
+  "authors": [
+    "Zhiyuan Guo",
+    "Siyang Gao",
+    "Zhichao Chen",
+    "Zhankun Sun",
+    "Jiaze Ma"
+  ],
+  "summary": "Battery-swapping stations (BSSs) can shorten electric-vehicle energy replenishment while using centrally managed battery inventories as flexible grid-connected storage. Realizing both benefits requires the station to schedule charging, grid discharge, and swapping service before future customer demand and electricity prices are known. This paper develops a forecast-aware rolling-horizon operating framework for this problem. A lightweight DLinear model predicts 24-hour price and demand trajectories, Stein variational gradient descent quantifies their uncertainty through representative…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

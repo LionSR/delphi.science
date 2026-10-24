@@ -1,0 +1,24 @@
+{
+  "key": "2606.04845",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.04845",
+  "title": "Bayesian learning for the stochastic shortest path problem",
+  "authors": [
+    "Chon Wai Ho",
+    "Sumeetpal S. Singh",
+    "Jiaqi Guo"
+  ],
+  "summary": "Sequential decision-making problems are often modelled as a Markov decision process (MDP). We focus on the stochastic shortest path (SSP) problem, which is an infinite-horizon undiscounted MDP with absorbing terminal states. We develop a Bayesian framework to learn the optimal decision strategy through interactions with the decision-making task. Specifically, we learn the optimal action-value function $Q^*$, but unlike many existing Bayesian approaches, we do not rely on unrealistic modelling assumptions and ad-hoc approximations. Our approach is to directly construct the posterior beliefs…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST",
+    "stat.CO"
+  ],
+  "published": "2026-06-03",
+  "updated": "2026-06-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

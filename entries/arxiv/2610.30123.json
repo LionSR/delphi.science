@@ -1,0 +1,24 @@
+{
+  "key": "2610.30123",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.30123",
+  "title": "Temporal Exploration and Rendezvous via Weisfeiler-Leman Colorings",
+  "authors": [
+    "Frank Kammer",
+    "Sandra Kiefer",
+    "Johannes Meintrup"
+  ],
+  "summary": "Temporal graphs are graphs whose edge relation changes in discrete time steps. The Temporal Exploration Problem (TEXP) asks for a temporal walk that visits all vertices. We show that every connected temporal graph with $n$ vertices can be explored in $O(qn\\log^3(n))$ time steps, where $q$ is the number of vertex color classes induced by the 2-dimensional Weisfeiler-Leman (2-WL) coloring. For small $q$, our bound substantially improves on the known worst-case bound of $Θ(n^2)$ in general connected temporal graphs. A corresponding walk can be constructed in deterministic polynomial time. The…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.CC",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

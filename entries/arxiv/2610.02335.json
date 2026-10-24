@@ -1,0 +1,19 @@
+{
+  "key": "2610.02335",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02335",
+  "title": "A Lean~4 Framework for the Radii Polynomial Method",
+  "authors": [
+    "Fengyang Wang"
+  ],
+  "summary": "Computer-assisted proofs in dynamics establish results about nonlinear systems by rigorous numerical computation. Their correctness rests on a trusted base of interval-arithmetic libraries and analytic estimates checked by hand. We formalize in Lean~4 a framework for the radii polynomial method, which certifies an exact solution near a numerical approximation by verifying four norm bounds and the resulting polynomial inequality. Weighted coefficient algebras provide the common setting for polynomial equations and initial value problems in Taylor and Chebyshev series. Their universal…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

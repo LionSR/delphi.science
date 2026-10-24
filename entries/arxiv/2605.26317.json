@@ -1,0 +1,20 @@
+{
+  "key": "2605.26317",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.26317",
+  "title": "A Jacobi-like algorithm for normal matrices by the skew-symmetric part",
+  "authors": [
+    "Simon Mataigne",
+    "P. -A. Absil"
+  ],
+  "summary": "We present a fast Jacobi-like algorithm for computing the eigenvalues, and optionally the eigenvectors, of a real normal matrix. The method gains a computational advantage by using Paardekooper's method for skew-symmetric matrices The method is most efficient for matrices where most eigenvalues are complex, such as random orthogonal matrices arising in the context of statistics on manifolds. In this case, the method is faster than the other Jacobi-like algorithms. In the last section of this paper, we also give explicit formulas for the nearest symmetric skew-Hamiltonian and the nearest…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-25",
+  "updated": "2026-05-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

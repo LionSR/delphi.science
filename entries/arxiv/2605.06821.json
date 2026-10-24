@@ -1,0 +1,23 @@
+{
+  "key": "2605.06821",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.06821",
+  "title": "A Rod Flow Model for Adam at the Edge of Stability",
+  "authors": [
+    "Eric Regis",
+    "Sinho Chewi"
+  ],
+  "summary": "Cohen et al. (arXiv:2207.14484) observed that adaptive gradient methods such as Adam operate at the edge of stability. While there has been significant work on continuous-time modeling of gradient descent at the edge of stability, extending these models to momentum methods remains underdeveloped. In the gradient descent setting, Regis et al. (arXiv:2602.01480) introduced rod flow, which models consecutive iterates as an extended one-dimensional object -- a \"rod.\" Here we extend rod flow to Adam by working in the joint phase space of parameters and first moment $(w, m)$ and treating the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

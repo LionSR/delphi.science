@@ -1,0 +1,24 @@
+{
+  "key": "2607.28036",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.28036",
+  "title": "Learning features from Newton's algorithm: a way to accelerate nonlinear parametrized PDE solvers",
+  "authors": [
+    "Rémy Vallot",
+    "Florian de Vuyst",
+    "Thibault Dairay",
+    "Mathilde Mougeot"
+  ],
+  "summary": "It is well known that Newton's method converges faster when the initial guess is closer to a root of a system of nonlinear equations. In this paper, a two-stage Newton initial guess strategy is proposed by learning features from a parameter-space sampling and a database of precomputed solutions. The method uses discrete Newton trajectories to construct two complementary reduced spaces: a solution feature space, built from converged states, and a corrective search direction feature space, built from intermediate Newton increments. For an unseen parameter, a regression model is used to predict…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.AP",
+    "math.NA"
+  ],
+  "published": "2026-07-30",
+  "updated": "2026-07-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

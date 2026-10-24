@@ -1,0 +1,21 @@
+{
+  "key": "2609.24021",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.24021",
+  "title": "Cost-Accuracy Trade-offs: Neural Operator vs Classical Numerical Solver",
+  "authors": [
+    "Daniel Zhengyu Huang",
+    "Andrew M. Stuart"
+  ],
+  "summary": "Neural operators are data-driven models that learn mappings from inputs that parameterize partial differential equations, such as spatially varying coefficients, initial conditions, forcing terms, boundary conditions, or geometries, to solution fields or quantities of interest. Once trained, they can serve as surrogates for classical numerical solvers in many-query settings that require repeated evaluations for varying inputs. We address the question of when, and then why, neural operator surrogates outperform classical numerical solvers, in terms of cost for a given accuracy. We focus on…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-09-21",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

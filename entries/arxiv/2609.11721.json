@@ -1,0 +1,23 @@
+{
+  "key": "2609.11721",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11721",
+  "title": "Verified Linear Programming through Tolerance-Aware Precision Boosting",
+  "authors": [
+    "Ernesto Casablanca",
+    "Martin Sidaway",
+    "Paolo Zuliani",
+    "Sadegh Soudjani"
+  ],
+  "summary": "Linear programming plays a fundamental role in computer science, with applications in optimization, formal verification, SMT solving, and numerous other domains. When exactness guarantees are required, numerical inaccuracies arising from floating-point arithmetic can compromise soundness, whereas exact rational arithmetic often incurs significant computational overhead. In this paper, we investigate the numerical stability of the simplex algorithm and establish conditions under which a precision-boosting floating-point implementation provably produces the same pivot decisions and final basis…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2606.11911",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.11911",
+  "title": "From Persistence to Survival: Hypothesis Testing, Effect Sizes and Vectorisation for Topological Features",
+  "authors": [
+    "Juliette Murris",
+    "Bernadette Stolz",
+    "Karsten Borgwardt"
+  ],
+  "summary": "Persistence diagrams are common representations in topological data analysis, but they do not naturally live in a vector space, and the statistical tools developed for comparing them have largely evolved separately from those used for downstream prediction. We introduce STRAND (Survival Topological Representation ANalysis of Diagrams), which treats (collections of) PDs as survival data: each topological feature with persistence value $p = d - b$ is a fully observed time-to-event, and the persistence survival function $S(t) = \\mathbb{P}(p > t)$ is the central object for comparing diagrams.…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.AT"
+  ],
+  "published": "2026-06-10",
+  "updated": "2026-06-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

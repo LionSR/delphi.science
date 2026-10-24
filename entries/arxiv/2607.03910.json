@@ -1,0 +1,22 @@
+{
+  "key": "2607.03910",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.03910",
+  "title": "Accelerated iterative method for solving the steady-state Boltzmann equation",
+  "authors": [
+    "Pei Zhang",
+    "Zhenning Cai",
+    "Yanli Wang"
+  ],
+  "summary": "The efficient simulation of steady-state rarefied gas flows remains a significant computational challenge due to the high dimensionality of the collision integral and the severe numerical stiffness in the near-continuum regime. In this work, we propose a modified Newton method equipped with a macroscopic synthetic system (Newton-MS) for the steady-state Boltzmann equation with the quadratic collision operator. In Newton-MS, the modified Newton iteration is utilized as the outer nonlinear solver, while each Newton correction equation is solved by an inner source iteration, where the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-07-04",
+  "updated": "2026-07-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

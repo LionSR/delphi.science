@@ -1,0 +1,20 @@
+{
+  "key": "2603.19647",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.19647",
+  "title": "On-the-Fly ROM-Based Acceleration of SI-DSA for Implicit Time Marching of the Radiative Transfer Equation",
+  "authors": [
+    "Ningxin Liu",
+    "Zhichao Peng"
+  ],
+  "summary": "In implicit time marching of the radiative transfer equation (RTE), the resulting linear systems are commonly solved using source iteration with diffusion synthetic acceleration (SI-DSA). Despite its widespread success, the performance of the DSA preconditioner may deteriorate when the RTE cannot be well approximated by its diffusion limit. Moreover, classical SI-DSA does not exploit low-rank structures of the solution manifold across time steps when the solution evolves smoothly. To address these limitations, we develop an on-the-fly reduced-order-model (ROM)-based acceleration for SI-DSA…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-20",
+  "updated": "2026-03-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

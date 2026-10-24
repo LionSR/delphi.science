@@ -1,0 +1,21 @@
+{
+  "key": "2601.01894",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.01894",
+  "title": "An explicit scheme for stochastic Allen-Cahn equations with space-time white noise near the sharp interface limit",
+  "authors": [
+    "Yingsong Jiang",
+    "Chenxu Pang",
+    "Xiaojie Wang"
+  ],
+  "summary": "This article investigates time-discrete approximations of Allen-Cahn type SPDEs driven by space-time white noise near the sharp interface limit $ε\\to 0$, where the small parameter $ε$ is the diffuse interface thickness. We propose an explicit and easily implementable exponential integrator with a modified nonlinearity for the considered problem. Uniform-in-time and uniform-in-$ε$ moment bounds of the scheme are established and the convergence in total variation distance of order $O(T\\cdot\\text{Poly}(ε^{-1})τ^γ),γ<\\tfrac12$ is established, between the law of the numerical scheme and that of…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-05",
+  "updated": "2026-01-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

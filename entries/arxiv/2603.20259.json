@@ -1,0 +1,21 @@
+{
+  "key": "2603.20259",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20259",
+  "title": "Polynomial Updates for the Unscented Kalman Filter",
+  "authors": [
+    "Chiran Cherian",
+    "Simone Servadio"
+  ],
+  "summary": "Most nonlinear filters used in spacecraft navigation are based on a linear approximation of the optimal minimum mean square error estimator. The Unscented Kalman Filter (UKF) handles nonlinear dynamics through a sigma-point transform, but the resulting state estimate remains a linear function of the measurement. This paper proposes a polynomial approximation of the optimal Bayesian update, leading to a Polynomial Unscented Kalman Filter that retains the structure of the standard UKF but enriches the measurement update with higher-order (polynomial) terms. To compute the moments required by…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.PR"
+  ],
+  "published": "2026-03-11",
+  "updated": "2026-03-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

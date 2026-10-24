@@ -1,0 +1,22 @@
+{
+  "key": "2606.28184",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28184",
+  "title": "A fast sum-of-Gaussians algorithm for the high-dimensional fractional Fokker-Planck equation",
+  "authors": [
+    "Shidong Jiang",
+    "Dong Wang",
+    "Qi Zhou"
+  ],
+  "summary": "We present a fast, high-order algorithm for the free-space fractional Fokker-Planck equation (FFPE) in arbitrary spatial dimension. Its fundamental solution, corresponding to a Dirac-delta initial condition, is obtained from the explicit Fourier representation by applying a sum-of-Gaussians (SOG) approximation to the nonseparable stretched exponential, using its complete monotonicity as the Laplace transform of a one-sided $α$-stable density. Each Gaussian term is an ordinary heat kernel and therefore factorizes across spatial coordinates. On a tensor-product grid, the separated form can be…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-06-26",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2605.06278",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.06278",
+  "title": "PACE: Prune-And-Compress Ensemble Models",
+  "authors": [
+    "Fabian Akkerman",
+    "Julien Ferry",
+    "Théo Guyard",
+    "Thibaut Vidal"
+  ],
+  "summary": "Ensemble models achieve state-of-the-art performance on prediction tasks, but usually require aggregating a large number of weak learners. This can hinder deployment, interpretability, and downstream tasks such as robustness verification. Remedies to this issue fall into two main camps: pruning, which discards redundant learners, and compression, which generates new ones from scratch. We introduce PACE, a framework that interleaves these paradigms in a two-phase strategy. First, new learners are actively generated via a theoretically grounded procedure to enhance the diversity of the initial…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

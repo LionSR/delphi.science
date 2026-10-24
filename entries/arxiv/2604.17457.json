@@ -1,0 +1,21 @@
+{
+  "key": "2604.17457",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.17457",
+  "title": "Beyond the Bellman Fixed Point: Geometry and Fast Policy Identification in Value Iteration",
+  "authors": [
+    "Donghwan Lee"
+  ],
+  "summary": "Q-value iteration (Q-VI) is usually analyzed through the \\(γ\\)-contraction of the Bellman operator. This argument proves convergence to \\(Q^*\\), but it gives only a coarse account of when the induced greedy policy becomes optimal. We study discounted Q-VI as a switching system and focus on the practically optimal solution set (POSS), the set of \\(Q\\)-functions whose tie-broken greedy policies are optimal. The main result shows that Q-VI reaches the optimal action class in finite time by entering an invariant tube around \\(\\mathcal X_1=Q^*+\\operatorname{span}(\\mathbf 1)\\), which is contained…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI",
+    "eess.SY"
+  ],
+  "published": "2026-04-19",
+  "updated": "2026-05-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

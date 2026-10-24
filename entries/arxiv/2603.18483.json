@@ -1,0 +1,23 @@
+{
+  "key": "2603.18483",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.18483",
+  "title": "Precise Performance of Linear Denoisers in the Proportional Regime",
+  "authors": [
+    "Reza Ghane",
+    "Danil Akhtiamov",
+    "Babak Hassibi"
+  ],
+  "summary": "In the present paper we study the performance of linear denoisers for noisy data of the form $\\mathbf{x} + \\mathbf{z}$, where $\\mathbf{x} \\in \\mathbb{R}^d$ is the desired data with zero mean and unknown covariance $\\mathbfΣ$, and $\\mathbf{z} \\sim \\mathcal{N}(0, \\mathbfΣ_{\\mathbf{z}})$ is additive noise. Since the covariance $\\mathbfΣ$ is not known, the standard Wiener filter cannot be employed for denoising. Instead we assume we are given samples $\\mathbf{x}_1,\\dots,\\mathbf{x}_n \\in \\mathbb{R}^d$ from the true distribution. A standard approach would then be to estimate $\\mathbfΣ$ from the…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-03-19",
+  "updated": "2026-03-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

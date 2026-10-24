@@ -1,0 +1,21 @@
+{
+  "key": "2603.20759",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20759",
+  "title": "Derivative-Free Bilevel Optimization with Inexact Lower-Level Solutions",
+  "authors": [
+    "Edoardo Cesaroni",
+    "Giampaolo Liuzzi",
+    "Stefano Lucidi"
+  ],
+  "summary": "In this work, we propose derivative-free framework for bilevel optimization. We consider both the upper and lower-level problems with bound constraints on the variables, as well as general nonlinear constraints, assuming that first-order information (in the upper-level) is not available or it is impractical to obtain. The lower-level problem is solved with an accuracy that is progressively refined throughout the optimization process. We first analyze the case in which the upper-level problem is subject only to bound constraints, establishing convergence to Clarke-Jahn stationary points when…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-21",
+  "updated": "2026-03-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

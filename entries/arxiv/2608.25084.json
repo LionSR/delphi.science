@@ -1,0 +1,24 @@
+{
+  "key": "2608.25084",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.25084",
+  "title": "The Frame Kernel Method for Multiscale Operator Learning",
+  "authors": [
+    "Branden Frieden",
+    "Ryan Whitehead",
+    "M. Keith Ballard",
+    "Robert M. Kirby",
+    "Varun Shankar"
+  ],
+  "summary": "We present a natively multiscale operator learning method for the surrogate modeling of (numerical solvers for) multiscale partial differential equations (PDEs). The primary novelty of our method lies in a novel multiscale kernel frame function approximation technique. Leveraging this new kernel frame technique, we cast the operator learning problem as one of learning frame coefficients of output functions as a function of frame coefficients of input functions. The generalization step then automatically allows for a multiscale decomposition of the output functions. Our method is applicable…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

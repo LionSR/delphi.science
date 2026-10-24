@@ -1,0 +1,21 @@
+{
+  "key": "2608.02108",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.02108",
+  "title": "Finite element discretization of Yang--Mills connections",
+  "authors": [
+    "Geir Bogfjellmo",
+    "Charles Curry",
+    "Andreas Myklebust"
+  ],
+  "summary": "We propose a finite element method for Yang--Mills connections on nontrivial principal bundles with abelian structure group. Local connection forms satisfy internal jump conditions induced by the transition functions of the bundle. We discretize these forms in broken finite element exterior calculus spaces and enforce the jump conditions weakly by Lagrange multipliers. We prove well-posedness of the resulting saddle-point problem and derive an a priori convergence estimate. A numerical experiment for the Hopf fibration illustrates the method and exhibits linear convergence when the sphere is…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-03",
+  "updated": "2026-08-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

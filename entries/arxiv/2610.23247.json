@@ -1,0 +1,21 @@
+{
+  "key": "2610.23247",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.23247",
+  "title": "A configurational numerical viscosity for thermodynamically compatible finite volume schemes of compressible multiphase flows",
+  "authors": [
+    "Davide Ferrari",
+    "Ilya Peshkov",
+    "Michael Dumbser"
+  ],
+  "summary": "We consider the fluid subsystem of a variationally derived hyperbolic thermodynamically compatible (HTC) model of compressible multiphase flows. Its total energy is in general not convex in the natural state variables, so a scalar numerical viscosity acting on them need not produce non-negative entropy. Reformulating the equations in terms of the volume fractions separates changes in the amount of each phase from changes in its intrinsic state. This guides the construction of a configurational numerical viscosity in phase variables, in which the energy is convex, while the scheme retains the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

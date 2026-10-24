@@ -1,0 +1,19 @@
+{
+  "key": "2609.04468",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.04468",
+  "title": "Consensus times for monotone aggregation dynamics",
+  "authors": [
+    "Elchanan Mossel"
+  ],
+  "summary": "We study an asynchronous consensus dynamics on $N$ agents: at each step a uniformly chosen agent replaces its state by $f(Y_1,\\dots,Y_r)$, where $f$ is a fixed monotone aggregation rule and $Y_1,\\dots,Y_r$ are the states of $r$ agents sampled uniformly with replacement. Let $T$ be the first time at which all agents agree. Let $f:\\{0,1\\}^r\\to\\{0,1\\}$ be monotone and non-constant. The expected consensus time is governed by the two \\emph{endpoint degrees} $D_0(f)=\\#\\{i:f(e_i)=1\\}$ and $D_1(f)=\\#\\{i:f(\\mathbf{1}-e_i)=0\\}$, where $e_i$ is the $i$th standard basis vector and $\\mathbf{1}$ the…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

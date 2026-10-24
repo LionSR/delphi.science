@@ -1,0 +1,20 @@
+{
+  "key": "2605.09545",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09545",
+  "title": "Diagnostic Certificates of Data Quality and Regression Identifiability for Koopman Identification",
+  "authors": [
+    "Yue Wu"
+  ],
+  "summary": "Classical persistent excitation criteria usually assess whether an input or regressor signal is sufficiently rich. In Koopman and EDMD with control (EDMDc), however, data quality is determined by the concatenation of lifted state features and control inputs. Input-rich data can still visit a narrow state region, well-spread state samples can still produce degenerate lifted features, and both can fail to condition the final regression problem. This paper develops a diagnostic certificate framework for locating these failures. The certificates separate state-space coverage and clustering,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-05-10",
+  "updated": "2026-05-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

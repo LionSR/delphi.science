@@ -1,0 +1,20 @@
+{
+  "key": "2607.02613",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.02613",
+  "title": "Counting Unlabeled Chordal Graphs by Equivariant Evaporation",
+  "authors": [
+    "Matthew Sun"
+  ],
+  "summary": "We compute the number of unlabeled chordal graphs on $n$ vertices, both the total count (OEIS A048193) and the connected count (OEIS A048192), extending two sequences whose published values had remained at $n=15$. The method is a Polya-Burnside enumeration: the number of unlabeled graphs in a class closed under relabeling is the average over $S_n$ of the number of labeled graphs fixed by each permutation. The technical core is the evaluation, for an arbitrary permutation $π$, of the number of $π$-invariant labeled chordal graphs. We give a dynamic program for this quantity that lifts the…",
+  "domain": "cs.DM",
+  "tags": [
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

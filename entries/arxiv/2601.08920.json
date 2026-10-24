@@ -1,0 +1,21 @@
+{
+  "key": "2601.08920",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.08920",
+  "title": "W-DUALMINE: Reliability-Weighted Dual-Expert Fusion With Residual Correlation Preservation for Medical Image Fusion",
+  "authors": [
+    "Md. Jahidul Islam"
+  ],
+  "summary": "Medical image fusion integrates complementary information from multiple imaging modalities to improve clinical interpretation. However, existing deep learningbased methods, including recent spatial-frequency frameworks such as AdaFuse and ASFE-Fusion, often suffer from a fundamental trade-off between global statistical similaritymeasured by correlation coefficient (CC) and mutual information (MI)and local structural fidelity. This paper proposes W-DUALMINE, a reliability-weighted dual-expert fusion framework designed to explicitly resolve this trade-off through architectural constraints and…",
+  "domain": "eess.IV",
+  "tags": [
+    "eess.IV",
+    "cs.CV",
+    "math.NA"
+  ],
+  "published": "2026-01-13",
+  "updated": "2026-02-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2602.19462",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.19462",
+  "title": "Zero Variance Portfolio",
+  "authors": [
+    "Jinyuan Chang",
+    "Yi Ding",
+    "Zhentao Shi",
+    "Bo Zhang"
+  ],
+  "summary": "When the number of assets is larger than the sample size, the minimum variance portfolio interpolates the training data, delivering pathological zero in-sample variance. We show that if the weights of the zero variance portfolio are learned by a novel ``Ridgelet'' estimator, in a new test data this portfolio enjoys out-of-sample generalizability. It exhibits the double descent phenomenon and can achieve optimal risk in the overparametrized regime when the number of assets dominates the sample size. In contrast, a ``Ridgeless'' estimator which invokes the pseudoinverse fails in-sample…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "stat.AP"
+  ],
+  "published": "2026-02-23",
+  "updated": "2026-02-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

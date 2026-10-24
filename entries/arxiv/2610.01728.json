@@ -1,0 +1,24 @@
+{
+  "key": "2610.01728",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01728",
+  "title": "Removing spurious minima for planar features by skip connections",
+  "authors": [
+    "Jakob Paul Zimmermann",
+    "Andrei Balakin",
+    "Moritz Grillo",
+    "Georg Loho"
+  ],
+  "summary": "Understanding loss landscapes is central to explaining neural-network training, yet their structure remains only partially understood even in simple models. We study the Gaussian population loss of shallow, bias-free ReLU networks in the teacher--student setting. This provides a simple model for studying essential aspects such as feature learning and overparameterization. For teacher networks with positive output weights and planar features, we show that including a learned linear skip removes all spurious local minima with non-negative student output weights once the student network is at…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2609.17252",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.17252",
+  "title": "Quasi-Helmholtz Calderón Multiplicative Preconditioning for Higher-Order Global Multi-Trace Integral Equations",
+  "authors": [
+    "Cedric Münger",
+    "Alessandro Zuccotti",
+    "Van Chien Le",
+    "Kristof Cools"
+  ],
+  "summary": "The paper presents a higher-order global multi-trace integral equation for time-harmonic electromagnetic scattering by composite objects. The higher-order multi-trace formulation is preconditioned with a Calderón multiplicative preconditioner using higher-order quasi-Helmholtz projectors. The higher-order quasi-Helmholtz projectors separate the solenoidal and non-solenoidal components of the basis functions. Separate access to the Helmholtz components circumvents the explicit inversion of an ill-conditioned mixed Gram matrix. This enables the application of Calderón multiplicative…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math.NA"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2604.13478",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.13478",
+  "title": "Deepbullwhip: An Open-Source Simulation and Benchmarking for Multi-Echelon Bullwhip Analyses",
+  "authors": [
+    "Mansur M. Arief"
+  ],
+  "summary": "The bullwhip effect remains operationally persistent despite decades of analytical research. Two computational deficiencies hinder progress: the absence of modular open-source simulation tools for multi-echelon inventory dynamics with asymmetric costs, and the lack of a standardized benchmarking protocol for comparing mitigation strategies across shared metrics and datasets. This paper introduces deepbullwhip, an open-source Python package that integrates a simulation engine for serial supply chains (with pluggable demand generators, ordering policies, and cost functions via abstract base…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.CE",
+    "econ.GN",
+    "stat.AP"
+  ],
+  "published": "2026-04-15",
+  "updated": "2026-04-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

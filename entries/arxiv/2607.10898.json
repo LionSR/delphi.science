@@ -1,0 +1,25 @@
+{
+  "key": "2607.10898",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10898",
+  "title": "Design Choices in Splitting-Based Self-Supervised Sparse-View CT Reconstruction",
+  "authors": [
+    "Nadja Gruber",
+    "Lukas Neumann",
+    "Ander Biguri",
+    "Gyeongha Hwang",
+    "Markus Haltmeier",
+    "Johannes Schwab"
+  ],
+  "summary": "Self-supervised data splitting has emerged as a promising paradigm for sparse-view CT reconstruction, enabling training from incomplete measurements without fully sampled ground truth. However, the influence of key design choices, including partitioning strategy, preprocessing, and inference, remains insufficiently understood. In this work, we introduce a unified framework that decomposes splitting-based reconstruction into these three components, enabling controlled comparison of existing methods and two incremental extensions: multi-partition splitting and an alternative inference…",
+  "domain": "cs.CV",
+  "tags": [
+    "cs.CV",
+    "math.NA"
+  ],
+  "published": "2026-07-12",
+  "updated": "2026-07-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

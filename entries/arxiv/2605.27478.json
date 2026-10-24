@@ -1,0 +1,21 @@
+{
+  "key": "2605.27478",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.27478",
+  "title": "Triangular-Reference Schrödinger Bridges for Time Series Generation",
+  "authors": [
+    "Gabriele Bocchi"
+  ],
+  "summary": "Schrödinger bridges for time series (SBTS) generate synthetic paths by projecting, in relative entropy, a Brownian reference onto the path laws that match the joint distribution of the data on the observation grid. The Brownian reference, however, fixes the quadratic variation of the generated paths, which is restrictive when stochastic volatility, correlated noise, or rank-deficient covariance structures must be reproduced. We introduce \"Triangular-Reference Schrödinger Bridges for Time Series\" (TR-SBTS), which keeps the entropy-projection backbone of SBTS but replaces the Brownian…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-06-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

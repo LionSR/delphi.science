@@ -1,0 +1,26 @@
+{
+  "key": "2602.18718",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.18718",
+  "title": "Stochastic Gradient Variational Inference with Price's Gradient Estimator from Bures-Wasserstein to Parameter Space",
+  "authors": [
+    "Kyurae Kim",
+    "Qiang Fu",
+    "Yi-An Ma",
+    "Jacob R. Gardner",
+    "Trevor Campbell"
+  ],
+  "summary": "For approximating a target distribution given only its unnormalized log-density, stochastic gradient-based variational inference (VI) algorithms are a popular approach. For example, Wasserstein VI (WVI) and black-box VI (BBVI) perform gradient descent in measure space (Bures-Wasserstein space) and parameter space, respectively. Previously, for the Gaussian variational family, convergence guarantees for WVI have shown superiority over existing results for black-box VI with the reparametrization gradient, suggesting the measure space approach might provide some unique benefits. In this work,…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.OC",
+    "stat.CO"
+  ],
+  "published": "2026-02-21",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

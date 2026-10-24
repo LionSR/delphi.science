@@ -1,0 +1,22 @@
+{
+  "key": "2603.18454",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.18454",
+  "title": "Fundamental Limits for Sensor-Based Control via the Gibbs Variational Principle",
+  "authors": [
+    "Vincent Pacelli",
+    "Evangelos A. Theodorou"
+  ],
+  "summary": "Fundamental limits on the performance of feedback controllers are essential for benchmarking algorithms, guiding sensor selection, and certifying task feasibility -- yet few general-purpose tools exist for computing them. Existing information-theoretic approaches overestimate the information a sensor must provide by evaluating it against the uncontrolled system, producing bounds that degrade precisely when feedback is most valuable. We derive a lower bound on the minimum expected cost of any causal feedback controller under partial observations by applying the Gibbs variational principle to…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.RO",
+    "eess.SY"
+  ],
+  "published": "2026-03-19",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

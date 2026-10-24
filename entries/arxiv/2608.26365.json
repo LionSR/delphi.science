@@ -1,0 +1,23 @@
+{
+  "key": "2608.26365",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.26365",
+  "title": "A complex-analytic proof of square-restricted stable phase retrieval in Fock space",
+  "authors": [
+    "Cynthia Bortolotto",
+    "João P. G. Ramos"
+  ],
+  "summary": "We give a short complex-analytic proof of a square-restricted form of local stable phase retrieval at the Gaussian in one-dimensional Fock space. The main estimate is a coercivity inequality for the map $F\\mapsto F^2$: \\[ \\|F^2-F(0)^2|_{\\mathcal{F}^2(\\mathbb{C})} \\lesssim \\inf_{c\\in\\mathbb{R}}\\||F|^2-c\\|_{L^2(d γ)}. \\] The proof uses a weighted derivative norm, two integrations by parts, and a weighted Cauchy inequality. The proof has been completely verified in Lean with the aid of Large Language Models.",
+  "domain": "math.CV",
+  "tags": [
+    "math.CV",
+    "math.AP",
+    "math.CA",
+    "math.FA"
+  ],
+  "published": "2026-08-26",
+  "updated": "2026-08-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

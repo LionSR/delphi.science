@@ -1,0 +1,19 @@
+{
+  "key": "2610.03811",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03811",
+  "title": "A Divisor-Weighted Golomb Sequence: Zeta Asymptotics and Arithmetic Fluctuations",
+  "authors": [
+    "Marco Mantovanelli"
+  ],
+  "summary": "We study a divisor-weighted version of Golomb's self-description: the nondecreasing sequence $A$ in which each positive integer $m$ occurs $\\sum_{d\\mid m}A(d)$ times. This rule has a unique solution, and $$ A(n)\\sim Cn^{\\varphi-1},\\quad C=\\left(\\frac{\\varphi}{ζ(\\varphi)}\\right)^{2-\\varphi},\\quad \\varphi=\\frac{1+\\sqrt{5}}{2}. $$ The golden-ratio exponent of Golomb's sequence survives, while divisor weighting changes the leading constant. We prove the asymptotic without assuming regular variation, by a contraction of upper and lower power envelopes. The argument applies to every nonnegative…",
+  "domain": "math.GM",
+  "tags": [
+    "math.GM"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

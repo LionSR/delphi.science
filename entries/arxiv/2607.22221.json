@@ -1,0 +1,24 @@
+{
+  "key": "2607.22221",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.22221",
+  "title": "Convergence analysis of a family of Zermelo-type iterations for the Bradley--Terry model",
+  "authors": [
+    "Ruijian Han",
+    "Ding Lu",
+    "Yiming Xu"
+  ],
+  "summary": "Zermelo's algorithm is a classical method for computing the maximum likelihood estimator in the Bradley--Terry (BT) model, but its convergence can be slow in practice. To accelerate computation, Newman introduced a family of Zermelo-type fixed-point iterations parameterized by $α$, with Zermelo's algorithm recovered at $α=1$. Empirical evidence suggests that the choice $α=0$ often converges substantially faster, making it a promising alternative, yet the mechanism underlying this acceleration remains elusive. This paper provides theoretical insight into this phenomenon through a systematic…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.NA",
+    "stat.CO"
+  ],
+  "published": "2026-07-24",
+  "updated": "2026-07-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

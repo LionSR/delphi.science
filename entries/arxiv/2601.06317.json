@@ -1,0 +1,19 @@
+{
+  "key": "2601.06317",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.06317",
+  "title": "Estimation of the intercept parameter in integrated Galton-Watson processes",
+  "authors": [
+    "Yang Lu"
+  ],
+  "summary": "We study estimation of the intercept parameter in an integrated Galton-Watson process, a basic building-block for many count-valued time series models. In this unit root setting, the ordinary least squares estimator is inconsistent, whereas an existing weighted least squares (WLS) estimator is consistent only in the case where the process is transient, a condition that depends on the unknown intercept parameter . We propose an alternative WLS estimator based on the new weight function of $1/t$, and show that it is consistent regardless of whether the process is transient or null recurrent,…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-01-09",
+  "updated": "2026-01-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2604.02806",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.02806",
+  "title": "Computing the Pareto Front by Polynomial Elimination, With an Application From System Identification",
+  "authors": [
+    "Hans van Rooij",
+    "Christof Vermeersch",
+    "Marie Deferme",
+    "Bart De Moor"
+  ],
+  "summary": "We propose a novel numerical approach to compute the Pareto front in multivariate polynomial multi-objective optimization problems. When the objective functions and (equality) constraints are multivariate polynomials, the Pareto front, which describes the efficient points of the multiple (often conflicting) objective functions, can be interpreted as a subset of a positive-dimensional algebraic variety. By combining the objective functions with weights and considering the weights as additional decision variables, we can eliminate all variables except the objective values and obtain one (or…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-03",
+  "updated": "2026-04-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

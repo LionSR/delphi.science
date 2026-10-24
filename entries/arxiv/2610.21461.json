@@ -1,0 +1,22 @@
+{
+  "key": "2610.21461",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.21461",
+  "title": "Descending Everest with First-Order Oracles: Oracle Complexity of Convex Optimization under $(L_0,L_1)$-Smoothness",
+  "authors": [
+    "Mikhail Rudomanov",
+    "Ivan Fomin",
+    "Alexander V. Gasnikov",
+    "Fedor S. Stonyakin"
+  ],
+  "summary": "For convex $(L_0,L_1)$-smooth functions, the curvature may grow together with the gradient norm. Therefore, even when $\\|x^0-x^*\\|\\le R$, the gradient and the optimality gap at the starting point may be exponentially large in $L_1R$, and the bound $\\sqrt{L_0R^2/\\varepsilon}$, known for the accelerated method on functions with Lipschitz gradient, no longer describes the complexity of the problem. We determine the oracle complexity of this class for arbitrary deterministic first-order methods: for $L_0R^2/\\varepsilon\\ge1$, the optimal number of oracle calls $N$ satisfies…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

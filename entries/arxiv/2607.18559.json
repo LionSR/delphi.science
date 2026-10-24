@@ -1,0 +1,22 @@
+{
+  "key": "2607.18559",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.18559",
+  "title": "Mixing-Free and Signal-Optimal Learning of Gaussian Graphical Models from Glauber Dynamics",
+  "authors": [
+    "Vignesh Tirukkonda",
+    "Gautam Dasarathy"
+  ],
+  "summary": "Gaussian graphical model selection is usually studied under independent sampling, but in many applications the data arise as a single trajectory of a dependent stochastic process. We study exact recovery of the graph from one trajectory of random-scan Gaussian Glauber dynamics. Existing techniques for this problem either inherit the mixing time of the chain, which can be super-polynomial in the dimension $p$ without strong assumptions, or are suboptimal in the minimum normalized edge strength $κ$. We propose two algorithms that are mixing-free and attain the $κ^{-2}$ dependence of the…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-07-20",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

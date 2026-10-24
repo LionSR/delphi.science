@@ -1,0 +1,23 @@
+{
+  "key": "2609.03190",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.03190",
+  "title": "Coupled Tensor-Tensor Completion Method with Applications in Drug Repurposing",
+  "authors": [
+    "Maryam Bagherian",
+    "Albert Hung",
+    "Ivo Dinov",
+    "Joshua Welch"
+  ],
+  "summary": "Many biomedical challenges can be posed as tensor completion problems where the observed entries of a multidimensional array (a tensor) are used to impute the missing values. In such settings, incorporating side information about the modes of the tensor, such as gene-gene similarity, can significantly enhance the solutions of the completion problem. Most existing tensor completion methods can only incorporate side information in the form of matrices. In this study, we introduce a novel framework to incorporate side information in the form of tensors. Our new approach, called Coupled…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-09-02",
+  "updated": "2026-09-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2602.16300",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.16300",
+  "title": "Randomized Zero Forcing",
+  "authors": [
+    "Jesse Geneson",
+    "Illya Hicks",
+    "Noah Lichtenberg",
+    "Alvin Moon",
+    "Nicolas Robles"
+  ],
+  "summary": "We introduce randomized zero forcing (RZF), a stochastic color-change process on directed graphs in which a white vertex turns blue with probability equal to the fraction of its incoming neighbors that are blue. Unlike probabilistic zero forcing, RZF is governed by in-neighborhood structure and can fail to propagate globally due to directionality. The model extends naturally to weighted directed graphs by replacing neighbor counts with incoming weight proportions. We study the expected propagation time of RZF, establishing monotonicity properties with respect to enlarging the initial blue…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM"
+  ],
+  "published": "2026-02-18",
+  "updated": "2026-02-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

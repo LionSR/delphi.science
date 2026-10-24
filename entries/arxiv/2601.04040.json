@@ -1,0 +1,23 @@
+{
+  "key": "2601.04040",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.04040",
+  "title": "Trade-off between spread and width for tree decompositions",
+  "authors": [
+    "Hans L. Bodlaender",
+    "Carla Groenland",
+    "Sergey Norin",
+    "Neil Rahman"
+  ],
+  "summary": "The spread of a vertex $v$ in a tree decomposition is the number of bags that contain $v$. We study the trade-off between spread and width in tree decompositions, answering every open question from Wood [arXiv:2509.01140]. First, Wood asked for the infimum of $c > 0$ such that there exists $c'$ such that each graph $G$ has a tree decomposition of width $c \\cdot tw(G)$ in which each vertex $v$ has spread at most $c'(d(v)+1)$. We show that the answer is $3$. Second, we prove a conjecture of Wood, stating that every tree-decomposition of the $(n \\times n)$-grid with width $n$ has a vertex with…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM"
+  ],
+  "published": "2026-01-07",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

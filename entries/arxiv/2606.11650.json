@@ -1,0 +1,25 @@
+{
+  "key": "2606.11650",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.11650",
+  "title": "Structure-Preserving Neural Surrogates with Tractable Uncertainty Quantification",
+  "authors": [
+    "Handi Zhang",
+    "Adrienne M. Propp",
+    "Brooks Kinch",
+    "Houman Owhadi",
+    "Nathaniel Trask"
+  ],
+  "summary": "Recent advances in scientific machine learning provide a means of near-real-time solution to partial differential equations (PDEs), but lack the theoretical underpinnings of conventional simulators that support contemporary verification and validation. In this work, we construct data-driven reduced-order models that serve as structure-preserving, real-time surrogates. Remarkably, the exterior calculus that imposes physical conservation structure also exposes topological structure that we use to build a Gaussian process (GP) representation of uncertainty in state-flux relationships,…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-06-10",
+  "updated": "2026-06-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

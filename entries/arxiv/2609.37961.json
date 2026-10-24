@@ -1,0 +1,21 @@
+{
+  "key": "2609.37961",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.37961",
+  "title": "Tight bounds for positive discrepancy via eigenvalues",
+  "authors": [
+    "Oliver Janzer",
+    "István Tomon",
+    "Fredy Yip"
+  ],
+  "summary": "Given an $n\\times n$ symmetric matrix $M$ with largest eigenvalue $λ_1\\geq 0$, it is easy to show that the solution of the optimisation problem $\\max_{v\\in [-1,1]^n}v^TMv$ is at most $λ_1 n$. We prove the following converse: if every $n'\\times n'$ principal submatrix of $M$ has maximal eigenvalue at least $λ$, then $\\max_{v\\in [-1,1]^n}v^TMv\\geq λ(n-n'+1)$. This allows us to lift results about the second largest and the smallest eigenvalue of graphs to the (a priori more difficult) setting of positive discrepancy and MaxCut. Using this new connection, we prove that every $n$-vertex $m$-edge…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-10-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

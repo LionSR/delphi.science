@@ -1,0 +1,23 @@
+{
+  "key": "2608.11486",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.11486",
+  "title": "Stability of Finite-Batch Particle Mean-Field Variational Inference Beyond Strong Convexity",
+  "authors": [
+    "Vinh Nguyen",
+    "Truong Vu"
+  ],
+  "summary": "We study the implementable finite-batch particle algorithm for mean-field variational inference as a fully discrete stochastic approximation of the projected Wasserstein dynamics. The target potential is globally smooth but need not be strongly convex. The departure from contractivity is quantified by the curvature defect \\[ \\mathfrak d_α(x,y) = \\bigl[α\\|x-y\\|^2- \\langle\\nabla V(x)-\\nabla V(y),x-y\\rangle\\bigr]_+, \\] which is the additive loss in the one-step Euler contraction estimate. We prove a non-asymptotic Wasserstein stability bound that separates initialization, product-empirical…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-08-11",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

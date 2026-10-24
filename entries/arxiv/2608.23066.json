@@ -1,0 +1,21 @@
+{
+  "key": "2608.23066",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.23066",
+  "title": "Convergence of time-discrete finite particle consensus based optimization in Hilbert spaces",
+  "authors": [
+    "Michael Herty",
+    "Hui Huang",
+    "Hicham Kouhkouh"
+  ],
+  "summary": "We study a time-discrete, finite-particle Consensus-Based Optimization (CBO) algorithm in a separable Hilbert space. Our analysis provides convergence guarantees directly for the computable particle system, complementing recent continuous-time and mean-field results in infinite dimensions. Using a common-noise formulation with trace-class covariance, we first establish quantitative pairwise contraction, exponential decay of the expected swarm variance, and almost-sure convergence of all particles to a common consensus state. We then combine estimates on the exponentiated objective functional…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-24",
+  "updated": "2026-08-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

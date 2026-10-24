@@ -1,0 +1,23 @@
+{
+  "key": "2604.11584",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.11584",
+  "title": "Computation of Least Trimmed Squares: A Branch-and-Bound framework with Hyperplane Arrangement Enhancements",
+  "authors": [
+    "Xiang Meng",
+    "Andrés Gómez",
+    "Rahul Mazumder"
+  ],
+  "summary": "We study computational aspects of a key problem in robust statistics -- the penalized least trimmed squares (LTS) regression problem, a robust estimator that mitigates the influence of outliers in data by capping residuals with large magnitudes. Although statistically attractive, penalized LTS is NP-hard, and existing mixed-integer optimization (MIO) formulations scale poorly due to weak relaxations and exponential worst-case complexity in the number of observations. We propose a new MIO formulation that embeds hyperplane arrangement logic into a perspective reformulation, explicitly…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-04-13",
+  "updated": "2026-04-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

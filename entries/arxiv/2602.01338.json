@@ -1,0 +1,24 @@
+{
+  "key": "2602.01338",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.01338",
+  "title": "High-accuracy sampling for diffusion models and log-concave distributions",
+  "authors": [
+    "Fan Chen",
+    "Sinho Chewi",
+    "Constantinos Daskalakis",
+    "Alexander Rakhlin"
+  ],
+  "summary": "We present algorithms for diffusion model sampling which obtain $δ$-error in $\\mathrm{polylog}(1/δ)$ steps, given access to $\\widetilde O(δ)$-accurate score estimates in $L^2$. This is an exponential improvement over all previous results. Specifically, under minimal data assumptions, the complexity is $\\widetilde O(d_\\star \\mathrm{polylog}(1/δ))$ where $d_\\star$ is the intrinsic dimension of the data. Further, under a non-uniform $L$-Lipschitz condition, the complexity reduces to $\\widetilde O(L \\mathrm{polylog}(1/δ))$. Our approach also yields the first $\\mathrm{polylog}(1/δ)$ complexity…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-02-01",
+  "updated": "2026-04-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2608.20671",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.20671",
+  "title": "Bootstrapping Mutual Attestation with Kleene's Second Recursion Theorem",
+  "authors": [
+    "Takuma Imamura"
+  ],
+  "summary": "Remote attestation is a procedure by which a system (such as a Trusted Execution Environment) proves its own configuration to a remote peer. Here, the configuration includes the measurements (hash digests) of software components. When multiple nodes perform mutual attestation, each node must maintain the reference values for its peers' measurements. We refer to this as the reference-value bootstrapping problem for mutual attestation. In this paper, we formulate the problem as a fixed-point equation and solve it directly using Kleene's second recursion theorem. In our approach, nodes can…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "math.LO"
+  ],
+  "published": "2026-08-21",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

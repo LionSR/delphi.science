@@ -1,0 +1,22 @@
+{
+  "key": "2606.00725",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.00725",
+  "title": "Eulerian-spanning set and coboundary operator: An investigation of maxcut beyond planar graphs",
+  "authors": [
+    "Qiming Fang",
+    "Sihong Shao",
+    "Yuxuan Wu"
+  ],
+  "summary": "Using the concepts of Eulerian-spanning set and coboundary operator, we generalize Hadlock's conversion of the maxcut problem on planar graphs to one on general graphs with non-negative weights. Using our conversion, we can explore algorithms for maxcut beyond the class of planar graphs. We obtain a Fixed-Parameter Tractable algorithm for $k$-contraction apex graphs. Specifically, our algorithm can be applied to graphs with crossing number $k$, giving an $O(2^k(n+k)^{3/2}\\log (n+k))$-time algorithm that matches the best known results when restricted to non-negative weights.",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-05-30",
+  "updated": "2026-05-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2605.10727",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.10727",
+  "title": "Kernel-Gradient Drifting Models",
+  "authors": [
+    "Maria Esteban-Casadevall",
+    "Jorge Carrasco-Pollo",
+    "Max Welling",
+    "Jan-Willem van de Meent",
+    "Erik J. Bekkers",
+    "Floor Eijkelboom"
+  ],
+  "summary": "We propose kernel-gradient drifting, a one-step generative modeling framework that replaces the fixed Euclidean displacement direction in drifting models with directions induced by the kernel itself. Standard drifting is attractive because it enables fast, high-quality generation without distilling a large pretrained diffusion model, but its theory is currently understood mainly for Gaussian kernels, where the drift coincides with smoothed score matching and is identifiable. Our gradient-based reformulation exposes this score-based structure for general kernels: the resulting drift is the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DG"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

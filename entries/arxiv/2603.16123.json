@@ -1,0 +1,22 @@
+{
+  "key": "2603.16123",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.16123",
+  "title": "Functorial Neural Architectures from Higher Inductive Types",
+  "authors": [
+    "Karen Sargsyan"
+  ],
+  "summary": "Neural networks often learn the parts of a task but fail on novel combinations of those parts. We argue that this failure is architectural: a decoder generalizes compositionally only when it respects the algebraic laws of the task, i.e. when it descends from freely generated sequences to the quotient determined by those laws. We make this principle constructive by compiling Higher Inductive Type (HIT) specifications into neural architectures. Basepoints, path constructors, and 2-cells are mapped to base constraints, generator networks, structural concatenation, and learned homotopies. The…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.AT",
+    "math.CT"
+  ],
+  "published": "2026-03-17",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

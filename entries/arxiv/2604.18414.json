@@ -1,0 +1,23 @@
+{
+  "key": "2604.18414",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.18414",
+  "title": "Balance-Guided Sparse Identification of Multiscale Nonlinear PDEs with Small-coefficient Terms",
+  "authors": [
+    "Zhenhua Dang",
+    "Lei Zhang",
+    "Long Wang",
+    "Guowei He"
+  ],
+  "summary": "Data-driven discovery of governing equations has advanced significantly in recent years; however, existing methods often struggle in multiscale systems where dynamically significant terms may have small coefficients. Therefore, we propose Balance-Guided SINDy (BG-SINDy) inspired by the principle of dominant balance, which reformulates $\\ell_0$-constrained sparse regression as a term-level $\\ell_{2,0}$-regularized problem and solves it using a progressive pruning strategy. Terms are ranked according to their relative contributions to the governing equation balance rather than their absolute…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-04-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

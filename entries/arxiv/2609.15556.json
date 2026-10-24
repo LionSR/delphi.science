@@ -1,0 +1,21 @@
+{
+  "key": "2609.15556",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.15556",
+  "title": "A sharp bound for sampling widths in the uniform norm: kernel $D$-optimal designs and oversampling",
+  "authors": [
+    "Sebastian Neumayer",
+    "Tino Ullrich"
+  ],
+  "summary": "For every reproducing kernel Hilbert space $\\mathcal{H}_K$ with bounded kernel $K$, we prove that the linear sampling widths $g_m^{\\text{lin}}$ and Gelfand widths $c_n$ in the uniform norm satisfy $$ g_m^{\\text{lin}}(B_{\\mathcal H_K})_\\infty \\leq \\frac{m+1}{m-n+1}\\, c_n(B_{\\mathcal H_K})_\\infty\\quad , \\quad m\\ge n. $$ In a certain sense, the leading factor $(m+1)/(m-n+1)$ on the right-hand side is sharp. We transfer the problem into the selection of a maximal volume subset of kernel translates (kernel $D$-optimal design). Apart from basic linear algebra, our proof employs low rank…",
+  "domain": "math.FA",
+  "tags": [
+    "math.FA",
+    "math.NA"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2607.02335",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.02335",
+  "title": "Coalesced Matrix-Free Finite Elements in Cell-Wise Storage",
+  "authors": [
+    "Michał Wichrowski"
+  ],
+  "summary": "We present a GPU-oriented formulation of continuous high-order finite elements in which the redundant, cell-wise (element-local) vector is the persistent primary representation of all field data, rather than a transient stage of matrix-free operator evaluation. We prove that, given a preconditioner whose image is continuous, the entire flexible conjugate gradient iteration can be carried out exactly on this unassembled representation: a simple primal-dual pairing identity shows that all Krylov scalars computed from local data coincide with those of the assembled solve, so inter-element…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-02",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

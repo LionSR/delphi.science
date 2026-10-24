@@ -1,0 +1,22 @@
+{
+  "key": "2607.27514",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.27514",
+  "title": "Sample Complexity for the 2-Gromov-Wasserstein Distance",
+  "authors": [
+    "Pui Kuen Leung",
+    "Riku Okada",
+    "Samuel Lok-Hei Wong"
+  ],
+  "summary": "In this paper, we study the sample complexity of the empirical plug-in estimator for the $2$-Gromov-Wasserstein distance $D_2$ between compactly supported probability measures on Euclidean spaces. Let $μ$ and $ν$ be supported on compact subsets of $\\mathbb{R}^{d_x}$ and $\\mathbb{R}^{d_y}$, respectively, and let $\\widehatμ_n$ and $\\widehatν_n$ be their empirical measures based on independent samples of size $n$. We prove that \\[ \\mathbb{E}\\left|D_2^2(\\widehatμ_n,\\widehatν_n)-D_2^2(μ,ν)\\right| \\lesssim n^{-2/((d_x\\wedge d_y)\\vee 4)} (\\log n)^{\\mathbf 1_{\\{d_x\\wedge d_y=4\\}}}. \\] This rate is…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "math.PR"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

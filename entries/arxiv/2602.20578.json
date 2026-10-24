@@ -1,0 +1,25 @@
+{
+  "key": "2602.20578",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.20578",
+  "title": "Upper-Linearizability of Online Non-Monotone DR-Submodular Maximization over Down-Closed Convex Sets",
+  "authors": [
+    "Yiyang Lu",
+    "Haresh Jadav",
+    "Mohammad Pedramfar",
+    "Ranveer Singh",
+    "Vaneet Aggarwal"
+  ],
+  "summary": "We study online maximization of non-monotone Diminishing-Return(DR)-submodular functions over down-closed convex sets, a regime where existing projection-free online methods suffer from suboptimal regret and limited feedback guarantees. Our main contribution is a new structural result showing that this class is $1/e$-linearizable under carefully designed exponential reparametrization, scaling parameter, and surrogate potential, enabling a reduction to online linear optimization. As a result, we obtain $O(T^{1/2})$ static regret with a single gradient query per round and unlock adaptive and…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-02-24",
+  "updated": "2026-07-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

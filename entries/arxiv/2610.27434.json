@@ -1,0 +1,25 @@
+{
+  "key": "2610.27434",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.27434",
+  "title": "Beyond exponential tilting: sharp asymptotics and improved importance sampling for rare events",
+  "authors": [
+    "Mingxin Li",
+    "Hans Reimann",
+    "Timo Schorlepp",
+    "Georg Stadler"
+  ],
+  "summary": "A classical approach for importance sampling (IS) of a rare event is to tilt the measure using its large deviation minimizer, thereby shifting the proposal mean towards the event set. While this tilt is log-efficient, we show that the coefficient of variation of the resulting estimator still grows like $\\varepsilon^{-1/4}$ in the small-noise limit $\\varepsilon\\downarrow0$. Motivated by sharp large deviation asymptotics and the local geometry of the event set at the minimizer, we propose improvements using a control variate or an anisotropic, non-Gaussian proposal. We prove, up to truncations…",
+  "domain": "stat.CO",
+  "tags": [
+    "stat.CO",
+    "math.NA",
+    "math.PR",
+    "math.ST"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

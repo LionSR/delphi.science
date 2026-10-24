@@ -1,0 +1,24 @@
+{
+  "key": "2605.12965",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.12965",
+  "title": "U-HNO: A U-shaped Hybrid Neural Operator with Sparse-Point Adaptive Routing for Non-stationary PDE Dynamics",
+  "authors": [
+    "Yingzhe Ma",
+    "Xiao Yang",
+    "Yuxin Xie",
+    "Zihan Xiong",
+    "Jinliang Liu"
+  ],
+  "summary": "Solutions to many partial differential equations (PDEs) display coexisting smooth global transport and localized sharp features within a single trajectory: shock fronts, thin interfaces, and concentrated high-frequency content sit on top of slowly varying backgrounds. This poses a challenge for neural operators: Fourier-based architectures mix nonlocal interactions efficiently but tend to under-resolve localized non-smooth features, whereas spatially local architectures recover fine detail at the cost of long-range propagation and rollout stability. Existing hybrid operators paper over this…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

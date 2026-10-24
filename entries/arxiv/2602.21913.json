@@ -1,0 +1,20 @@
+{
+  "key": "2602.21913",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.21913",
+  "title": "A fully iterative adaptive energy-based approach for monotone elliptic problems",
+  "authors": [
+    "Raphael Leu",
+    "Thomas P. Wihler"
+  ],
+  "summary": "We present a fully iterative adaptive algorithm for the numerical minimization of strongly convex energy functionals in Hilbert spaces. The proposed approach, which we first present in abstract form, generates a hierarchical sequence of adaptively refined finite-dimensional approximation spaces and employs a (nonlinear) conjugate gradient (CG) method to compute suitable approximations on each space. A core novelty of our approach is that all components of the algorithm are consistently driven by energy reduction principles rather than by classical a posteriori estimators. In particular,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-25",
+  "updated": "2026-02-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2607.24325",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.24325",
+  "title": "Fifth-order finite volume derivative-based Hermite WENO scheme with unified stencils for hyperbolic conservation laws",
+  "authors": [
+    "Peiwen Chen",
+    "Zhuang Zhao"
+  ],
+  "summary": "In this paper, we propose a derivative-based finite volume Hermite WENO (HWENO) scheme for hyperbolic conservation laws, where both the solution and its first-order derivatives are evolved in time and utilized in spatial reconstructions. The key challenge for solving hyperbolic conservation laws is the possible emergence of discontinuities in the numerical solutions. When facing discontinuities, the derivatives can become excessively large, which may compromise the robustness of HWENO schemes. In the first HWENO scheme, different sets of stencils were adopted for reconstructing the governing…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

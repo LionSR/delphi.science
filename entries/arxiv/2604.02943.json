@@ -1,0 +1,21 @@
+{
+  "key": "2604.02943",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.02943",
+  "title": "Stabilized Proximal Point Method via Trust Region Control",
+  "authors": [
+    "Hanmin Li",
+    "Kaja Gruntkowska",
+    "Peter Richtárik"
+  ],
+  "summary": "The Proximal Point Method (PPM) (Rockafellar, 1976) is a fundamental tool for nonsmooth convex optimization. However, its convergence is not linear under general convexity in the absence of strong convexity or other structural assumptions. To address this limitation, we study a trust-region stabilized proximal point scheme in which each proximal update is computed over a localized feasible region. We show that this simple stabilization enforces non-vanishing steps and yields a linear decrease in objective values outside any prescribed neighborhood, without assuming smoothness or strong…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-03",
+  "updated": "2026-04-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

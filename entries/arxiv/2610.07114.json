@@ -1,0 +1,26 @@
+{
+  "key": "2610.07114",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.07114",
+  "title": "Sample-Optimal Estimation of the Fréchet Inception Distance",
+  "authors": [
+    "Ziyun Chen",
+    "Jerry Li",
+    "Kevin Tian",
+    "Yusong Zhu"
+  ],
+  "summary": "The Fréchet Inception Distance (FID) is widely used to evaluate generative models, but its empirical plug-in estimator suffers from finite-sample bias [BSAG18, CF20]. We study the sample complexity $n$ of estimating FID to error $ε$ between $d$-dimensional Gaussians with bounded mean distance and covariances, when one distribution is known. Our contributions are threefold. (1) We establish tight finite-sample $Θ(\\frac{d^2}{n})$ bias and $Θ(\\frac{d}{n} + \\frac {d^2} {n^2})$ variance bounds for the empirical plug-in estimator, establishing a $\\gtrsim d^2$ sample complexity. (2) To debias the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.CV",
+    "cs.DS",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

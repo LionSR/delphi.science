@@ -1,0 +1,22 @@
+{
+  "key": "2608.13782",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.13782",
+  "title": "The Sharp Dimension Bound in the Johnson--Lindenstrauss Lemma",
+  "authors": [
+    "Vishesh Jain"
+  ],
+  "summary": "The Johnson--Lindenstrauss lemma asserts that every set of $n$ points in $d$-dimensional Euclidean space embeds into $O(\\varepsilon^{-2}\\log n)$-dimensional Euclidean space with distortion at most $1+\\varepsilon$. Larsen and Nelson conjectured that the optimal target dimension throughout the full range of the parameters $n,d, \\varepsilon$ is \\[ Θ\\left(\\min\\left\\{d,n-1,\\frac{\\log(2+\\varepsilon^2n)}{\\varepsilon^2}\\right\\}\\right). \\] We resolve this conjecture in the affirmative. In fact, we prove the stronger statement that the upper bound is attained by a linear map. The matching lower bound,…",
+  "domain": "cs.CG",
+  "tags": [
+    "cs.CG",
+    "cs.DS",
+    "math.MG",
+    "math.PR"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-08-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

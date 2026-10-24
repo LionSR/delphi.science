@@ -1,0 +1,19 @@
+{
+  "key": "2609.35844",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.35844",
+  "title": "A Branch-Free General Renormalization Scheme for Pair Arithmetic and Its Performance Evaluation",
+  "authors": [
+    "Tomonori Kouya"
+  ],
+  "summary": "Pair arithmetic omits the renormalization stage performed at the end of each operation of multi-component multiple-precision arithmetic, reducing the operation count and, by eliminating conditional branches, easing SIMD vectorization. Renormalization cannot be omitted entirely, however, because iterative solvers may then fail to converge. We propose RenormBF-pair, a branch-free fixed-trip-count renormalizer parameterized by the word count \\(K\\) and the input length \\(n\\): a VecSum sweep, a tail fold, and \\(r\\) rounds of a FastTwoSum chain, costing \\(6(n-1)+(n-K)+3r(K-1)\\) flops. Over…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

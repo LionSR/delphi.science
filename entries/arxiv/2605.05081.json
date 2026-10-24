@@ -1,0 +1,24 @@
+{
+  "key": "2605.05081",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05081",
+  "title": "Provable imitation learning for control of instability in partially-observed Vlasov--Poisson equations",
+  "authors": [
+    "Xiaofan Xia",
+    "Qin Li",
+    "Wenlong Mou"
+  ],
+  "summary": "We consider the stabilization of Vlasov--Poisson plasma dynamics, a central control problem in nuclear fusion. Our focus is the gap between what an ideal controller would use and what experiments can actually observe: while optimal policy may rely on the full phase-space state, practical feedback is typically limited to sparse macroscopic diagnostics. We therefore study imitation learning methods that distill a fully observed expert policy into controllers operating only on macroscopic measurements. We show the stability guarantees of the learned policy, where the error floor depends on the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.AP",
+    "math.OC",
+    "physics.plasm-ph"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

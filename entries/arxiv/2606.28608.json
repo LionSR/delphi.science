@@ -1,0 +1,21 @@
+{
+  "key": "2606.28608",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28608",
+  "title": "An Adaptive Fast Algorithm for Periodic Coulomb Lattice Sums in Arbitrary Unit Cells",
+  "authors": [
+    "Xuanzhao Gao",
+    "Leslie Greengard",
+    "Shidong Jiang"
+  ],
+  "summary": "We present a fast algorithm for evaluating conditionally convergent Coulomb lattice sums, governed by the Laplace equation with periodic boundary conditions on arbitrary unit cells (oblique in 2D, triclinic in 3D) and arbitrary particle distributions. The algorithm extends the dual-space multilevel kernel-splitting (DMK) framework to this context. The root of the adaptive tree is now a rectangular grid of cubes consisting of an inner block covering the unit cell and a surrounding halo of image cubes, rather than a single cube, and the smooth top-level periodic kernel -- the only term that…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-26",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

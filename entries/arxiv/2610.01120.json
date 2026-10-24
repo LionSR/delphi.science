@@ -1,0 +1,20 @@
+{
+  "key": "2610.01120",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01120",
+  "title": "Sign-switched antithetic coupling in gradient random-walk methods for convection-diffusion equations",
+  "authors": [
+    "Stephen Abkin",
+    "Prabir Daripa"
+  ],
+  "summary": "We propose an antithetic coupling that reduces the computational cost of gradient random-walk methods for one-dimensional convection-diffusion equations. The methods represent the solution's spatial derivative by particles with positive or negative masses, whose cumulative sums reconstruct the solution, and model diffusion by Gaussian displacements. The particles reorder and, for a nonlinear flux, interact. Antithetic sampling negates the displacements of a second simulation, which positively correlates the contributions of particles matched by position when their masses have opposite signs.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

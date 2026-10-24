@@ -1,0 +1,21 @@
+{
+  "key": "2605.09615",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09615",
+  "title": "Discrete positivity and maximum principles for a finite element discretization of the Richards equation",
+  "authors": [
+    "Abderrahmane Benfanich",
+    "Yves Bourgault",
+    "Abdelaziz Beljadid"
+  ],
+  "summary": "Standard finite element discretizations of the Richards equation may violate the discrete minimum principle, producing unphysical negative saturations. While existing bound-preserving methods typically rely on computationally expensive fully implicit solvers, we propose a novel semi-implicit finite element framework utilizing a bounded continuous auxiliary variable. Our approach treats the gravity-driven advective term using a linearly implicit technique, which improves the time-step restrictions required by explicit gravity methods near the degenerate limit. We provide rigorous mathematical…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-10",
+  "updated": "2026-05-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

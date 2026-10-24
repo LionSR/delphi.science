@@ -1,0 +1,20 @@
+{
+  "key": "2602.21574",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.21574",
+  "title": "Convergence Analysis of a Linear, Unconditionally Energy-Stable SAV Finite Element Method for the Cahn-Hilliard Equation",
+  "authors": [
+    "Na Li",
+    "Yongchao Zhao"
+  ],
+  "summary": "This paper proposes a finite element scheme, based on the Scalar Auxiliary Variable (SAV) approach, for the Cahn-Hilliard equation--a model that possesses significant physical relevance and a rich mathematical structure. A convergence analysis of the fully discrete scheme is conducted under suitable regularity assumptions, confirming optimal-order convergence in both time and space for the phase variable, chemical potential, and auxiliary variable in the H1-norm. Furthermore, the scheme is proven to be unconditionally energy stable. Finally, a numerical example is presented to demonstrate…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-25",
+  "updated": "2026-02-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

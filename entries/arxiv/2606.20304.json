@@ -1,0 +1,20 @@
+{
+  "key": "2606.20304",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20304",
+  "title": "Diagonal Hessian Approximation Based on Conjugacy Condition for Noisy Derivative-Free Optimization Problems in High Dimensions",
+  "authors": [
+    "Morteza Kimiaei",
+    "Saman Babaie--Kafaki"
+  ],
+  "summary": "We consider large-scale noisy derivative-free optimization (DFO) problems in which only function values are available and gradient or subgradient information cannot be reliably estimated. Matrix-adaptation evolution strategies (MAES) and their limited-memory variants are among the most robust DFO methods under noise; however, their performance may deteriorate when the noise level is large. In such regimes, sorting and selection may misidentify informative sampled points, making the recombination step less reliable and weakening the scaling information used by affine or matrix-adaptation…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

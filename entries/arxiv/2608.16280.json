@@ -1,0 +1,24 @@
+{
+  "key": "2608.16280",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.16280",
+  "title": "PANDA: A Matrix-Free Differentiable NMPC Solver via Proximal Averaged Quasi-Newton with Adaptive Linesearch Algorithm",
+  "authors": [
+    "Yuankun Chen",
+    "Zifei Nie",
+    "Xun Gong",
+    "Yunfeng Hu",
+    "Hong Chen"
+  ],
+  "summary": "Differentiable nonlinear model predictive control (NMPC) provides a principled way to embed optimal control structure into end-to-end learning paradigms, but its practical use is often limited by the computational and memory costs of both forward optimization and backward sensitivity propagation. This brief proposes PANDA, a matrix-free solver for differentiable NMPC. In the forward pass, PANDA combines proximal-gradient iterations with quasi-Newton acceleration and introduces an adaptive stepsize enlargement mechanism to mitigate the conservativeness of monotone stepsize reduction. The…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2604.06115",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.06115",
+  "title": "A Neural-Enhanced Weak Galerkin Method for Second-Order Elliptic Problems with Low-Regularity Solutions",
+  "authors": [
+    "Chunmei Wang"
+  ],
+  "summary": "We propose a neural-enhanced weak Galerkin (WG) finite element method for second-order elliptic problems with low-regularity solutions. The method augments the classical WG approximation space with neural network functions constructed via a residual-driven Galerkin enrichment procedure. This approach preserves the variational structure, symmetry, and stability of the WG formulation while enhancing its ability to approximate non-smooth and singular solution components. We establish a quasi-optimal error estimate in a discrete WG energy norm, incorporating both projection and consistency…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-07",
+  "updated": "2026-04-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

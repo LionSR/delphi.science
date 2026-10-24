@@ -1,0 +1,21 @@
+{
+  "key": "2607.27602",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.27602",
+  "title": "Scalable Graph Coreset Selection via Greedy Sampling",
+  "authors": [
+    "Zhaiming Shen",
+    "Alexander Cloninger"
+  ],
+  "summary": "Sampling representative nodes from large graphs is fundamental to graph signal processing and network analysis, yet existing methods require access to the full graph Laplacian, making them impractical at scale. We propose a simple and effective column-selective graph sampling algorithm based on a minimum inner product greedy selection rule. At each iteration, the algorithm accesses only a small random subset of Laplacian columns, requiring no eigendecomposition or global graph traversal, making it well-suited for large-scale graphs where the full Laplacian cannot be stored in memory. We…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "stat.ML"
+  ],
+  "published": "2026-07-30",
+  "updated": "2026-07-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

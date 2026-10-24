@@ -1,0 +1,26 @@
+{
+  "key": "2605.30319",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.30319",
+  "title": "Improved Guarantees for Heterogeneous Treatment-Effect Estimation via Matrix Completion",
+  "authors": [
+    "Anay Mehrotra",
+    "Phuc Tran",
+    "Van H. Vu",
+    "Manolis Zampetakis"
+  ],
+  "summary": "A central goal of modern causal inference is estimating heterogeneous treatment effects to answer questions like \"how does an intervention affect each unit,\" rather than only on average. We study this problem with panel-data where we observe $n$ units across $m$ times under unknown, non-uniform treatment assignments. The data in this setting is naturally represented as a matrix of all unit--time treatment effects. Estimating heterogeneous treatment effects can then be expressed as obtaining a good estimation of each row's average in this matrix. This allows us to formulate the problem as…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.AI",
+    "cs.DS",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-05-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

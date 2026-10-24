@@ -1,0 +1,22 @@
+{
+  "key": "2602.02549",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.02549",
+  "title": "Error Analysis of Matrix Multiplication Emulation Using Ozaki-II Scheme",
+  "authors": [
+    "Yuki Uchino",
+    "Katsuhisa Ozaki",
+    "Toshiyuki Imamura"
+  ],
+  "summary": "The Ozaki-II scheme is an emulation method that leverages the Chinese Remainder Theorem to compute high-precision matrix multiplication via a sequence of low-precision matrix multiplications. In this scheme, the attainable numerical accuracy improves as the number of low-precision matrix multiplications increases. Previous numerical studies have shown that single- and double-precision matrix multiplication using the Ozaki-II scheme achieves higher throughput than that of standard BLAS routines on modern AI hardware equipped with fast INT8 matrix multiply-accumulate units with INT8 inputs and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.DC"
+  ],
+  "published": "2026-01-30",
+  "updated": "2026-01-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

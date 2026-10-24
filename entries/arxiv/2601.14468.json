@@ -1,0 +1,23 @@
+{
+  "key": "2601.14468",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.14468",
+  "title": "All-Pass Fractional OPF: A Solver-Friendly, Physics-Preserving Approximation of AC OPF",
+  "authors": [
+    "Milad Hasanzadeh",
+    "Amin Kargarian",
+    "Javad Lavaei"
+  ],
+  "summary": "This paper presents a fractional approximation of the AC optimal power flow (AC OPF) problem based on an all-pass approximation of the exponential power flow kernel. The classical AC OPF relies on trigonometric coupling between bus voltage phasors, which yields a nonconvex program with oscillatory derivatives that can slow, or in some cases destabilize, interior-point methods. We replace the trigonometric terms with an all-pass fractional (APF) approximation whose real and imaginary components act as smooth surrogates for the cosine and sine functions, and we introduce a pre-rotation to…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-01-20",
+  "updated": "2026-01-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

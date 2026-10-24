@@ -1,0 +1,25 @@
+{
+  "key": "2609.19529",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.19529",
+  "title": "Next-token functional estimation",
+  "authors": [
+    "Milind Nakul",
+    "Vidya Muthukumar",
+    "Ashwin Pananjady"
+  ],
+  "summary": "Suppose we observe the first $n$ points of a sequence of random variables having length $n+1$, and wish to estimate a functional of the unobserved final point and the empirical measure of the $n$ observed training points. Such next-token functionals include the probability that the next token is novel (also known as the surprise probability), the tail probability of the minimum distance between the next token and training points, and the test error of a classifier trained on the observed points. All of these quantities are classically estimated by the leave-one-out method, which is…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.IT",
+    "cs.LG",
+    "math.PR",
+    "math.ST"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

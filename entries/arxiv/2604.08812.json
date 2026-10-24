@@ -1,0 +1,22 @@
+{
+  "key": "2604.08812",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.08812",
+  "title": "Sensor Placement for Tsunami Early Warning via Large-Scale Bayesian Optimal Experimental Design",
+  "authors": [
+    "Sreeram Venkat",
+    "Stefan Henneking",
+    "Omar Ghattas"
+  ],
+  "summary": "Real-time tsunami early warning relies on distributed sensor networks to infer seismic sources and seafloor motion. Optimizing these networks via Bayesian optimal experimental design (OED) is exceptionally challenging for systems governed by hyperbolic partial differential equations, which lack the spectral decay required by standard low-rank approximations. We present a scalable Bayesian OED framework for linear time-invariant systems. By reformulating the inverse problem in the data space, we transform OED into dense matrix subset selection. We propose a multi-GPU,…",
+  "domain": "cs.DC",
+  "tags": [
+    "cs.DC",
+    "math.NA"
+  ],
+  "published": "2026-04-09",
+  "updated": "2026-09-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

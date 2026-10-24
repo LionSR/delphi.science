@@ -1,0 +1,21 @@
+{
+  "key": "2609.24232",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.24232",
+  "title": "An Implementation-Friendly SDG Scheme based on Cartesian Grids for Stokes Equations with Pressure Robustness and Superconvergence",
+  "authors": [
+    "Bohan Yang",
+    "Eric Chung"
+  ],
+  "summary": "This paper develops a staggered discontinuous Galerkin (SDG) scheme based on Cartesian grids for Stokes equations that is simple to implement, intrinsically pressure-robust, and superconvergent for all variables. Instead of the composite meshes used in standard SDG, we construct staggered quadrilateral meshes from Cartesian grids. The scheme takes velocity, pressure, and velocity gradient as unknowns, and employs piecewise-constant spaces with carefully designed staggered continuity. The additional gradient unknowns are locally eliminated via static condensation and can be further removed by…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math-ph"
+  ],
+  "published": "2026-09-21",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

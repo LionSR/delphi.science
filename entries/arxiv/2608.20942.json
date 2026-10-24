@@ -1,0 +1,23 @@
+{
+  "key": "2608.20942",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.20942",
+  "title": "LHMCF-Net: A Learned Hyperbolic Mean Curvature Flow Network for Medical Images Segmentation",
+  "authors": [
+    "Shuangshuang Duan",
+    "Chunlei He",
+    "Shoujun Huang",
+    "Dexing Kong"
+  ],
+  "summary": "Motivated by the classical Chan-Vese model and the ability of deep priors to capture complex spatial structures, we develop a segmentation model that leverages learned hyperbolic mean curvature flow (LHMCF) as a mathematical foundation for integrating feature space data fidelity and deep structural priors within a unified high-dimensional framework. The proposed LHMCF model is governed by a second-order dissipative hyperbolic PDE, where the introduction of a velocity field provides inertia and momentum to the evolving interface. This hyperbolic mechanism enables the contour to bypass…",
+  "domain": "cs.CV",
+  "tags": [
+    "cs.CV",
+    "math-ph"
+  ],
+  "published": "2026-08-21",
+  "updated": "2026-08-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

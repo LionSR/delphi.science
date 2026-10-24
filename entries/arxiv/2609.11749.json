@@ -1,0 +1,24 @@
+{
+  "key": "2609.11749",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11749",
+  "title": "Sparsity Regularized and Robust Mean Variance Portfolio Selection Under Ellipsoidal Uncertainty",
+  "authors": [
+    "Deniz Akkaya",
+    "Emre Can Yayla",
+    "Buse Şen",
+    "Mustafa Ç. Pınar"
+  ],
+  "summary": "We investigate mean-variance portfolio selection with an $\\ell_0$-penalty to promote sparsity in asset allocations. Uncertainty in the mean return vector is incorporated through an ellipsoidal uncertainty set, yielding a robust sparse optimization framework. We characterize the structure of both local and global minimizers and exploit these properties in the risk minimization and return maximization formulations. Building on this structural insight, we develop a branch-and-bound algorithm tailored to the resulting robust sparse portfolio problems, together with a new pruning rule that can…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

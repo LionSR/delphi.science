@@ -1,0 +1,25 @@
+{
+  "key": "2605.19830",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.19830",
+  "title": "Set-Valued Policy Learning",
+  "authors": [
+    "Laura Fuentes-Vicente",
+    "Mathieu Even",
+    "Gaëlle Dormion",
+    "Antoine Chambaz",
+    "Uri Shalit",
+    "Julie Josse"
+  ],
+  "summary": "Conventional treatment policies map patient covariates to a single recommended intervention in order to maximize expected clinical outcomes. However, when multiple treatments yield statistically indistinguishable outcomes or when treatment has no effect, recommending a single intervention may result in somewhat arbitrary interventions, undermining clinical adoption and trust. To address this, we propose a set-valued policy learning paradigm. By outputting sets of valuable treatments whose cardinality reflects the recommendation's ambiguity, our approach better supports clinical…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

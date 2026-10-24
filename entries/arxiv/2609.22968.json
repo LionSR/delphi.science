@@ -1,0 +1,20 @@
+{
+  "key": "2609.22968",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.22968",
+  "title": "Searching for Primes: A Neural AlphaZero Approach to a Factoring Game",
+  "authors": [
+    "Marcel Crasmaru"
+  ],
+  "summary": "We study a one-player token game on an $N\\times N$ board where tokens slide along diagonals or duplicate onto neighbouring ones to form a combinatorial rectangle $R\\times S$. A conserved integer weight $W'$ and a strict monovariant guarantee $O(N^2)$-length solutions, placing the game in $\\mathsf{NP}$. We prove that reaching a final position factors this $2N$-bit $W'$ into two $N$-bit factors $V,M < 2^N$ that encode the rectangle's rows and columns. Consequently, solving the game for a balanced-semiprime target is equivalent to integer factoring. However, if the target rectangle is known,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.CR"
+  ],
+  "published": "2026-09-19",
+  "updated": "2026-09-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

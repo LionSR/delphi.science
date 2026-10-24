@@ -1,0 +1,23 @@
+{
+  "key": "2604.16906",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.16906",
+  "title": "Distributed Optimization with Nesterov Momentum and Finite-Time Quantized Consensus",
+  "authors": [
+    "Ruochen Wu",
+    "Xu Du",
+    "Karl H. Johansson",
+    "Apostolos I. Rikos"
+  ],
+  "summary": "In modern large-scale networked systems, rapidly solving optimization problems while utilizing communication resources efficiently is critical for addressing complex tasks. In this paper, we consider an unconstrained distributed optimization problem in which information exchange among nodes is governed by a directed communication graph. In our setup we focus on two key challenges. The first is the zigzag phenomenon caused by the objective functions of individual nodes having significantly different curvature along different directions. The second is that the communication channels among…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-04-18",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

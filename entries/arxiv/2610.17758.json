@@ -1,0 +1,21 @@
+{
+  "key": "2610.17758",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.17758",
+  "title": "POD-accelerated high-order multiscale method with corrected-basis reconstruction for transient multi-continuum problems",
+  "authors": [
+    "Jiayuan Peng",
+    "Hao Dong",
+    "Jiale Linghu"
+  ],
+  "summary": "Multi-continuum models provide an effective macroscopic description of transient flow in fractured and highly heterogeneous porous media by introducing several interacting state variables at each macroscale location. Although high-order multiscale (HOMS) methods reduce the cost of resolving microscopic heterogeneities while recovering local oscillatory features, repeated solution of the coupled homogenized system and repeated high-order reconstruction remain expensive in long-time and large-scale three-dimensional simulations. This work develops a proper orthogonal decomposition (POD)…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2606.31480",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.31480",
+  "title": "Constrained Online Convex Optimization without Slater's Condition",
+  "authors": [
+    "Kihyun Yu",
+    "Junehee Lee",
+    "Dabeen Lee"
+  ],
+  "summary": "We study constrained online convex optimization with adversarial losses and stochastic or adversarial constraints. For stochastic constraints, existing algorithms that achieve nearly optimal regret and constraint violation bounds typically rely on regularity assumptions such as Slater's condition, while adversarial-constraint algorithms avoid these assumptions by using a rather restrictive round-wise feasible comparator. We bridge this gap with an anytime primal-dual framework that incorporates an adaptive regularizer into the dual update. The regularizer stabilizes the dual process without…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-06-30",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

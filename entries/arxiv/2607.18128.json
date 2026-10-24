@@ -1,0 +1,21 @@
+{
+  "key": "2607.18128",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.18128",
+  "title": "Feedback Cycles in Exploratory Equilibria",
+  "authors": [
+    "Chen-Hung Wu"
+  ],
+  "summary": "Entropy regularization smooths equilibrium policies in time-inconsistent stochastic control. At low temperature, the same Gibbs response can strongly amplify errors in learned rewards and dynamics. We show that the derivative of an exploratory equilibrium is governed by a backward Volterra-parabolic resolvent. Along an aligned positive mode, a lower bound has the same exponential order. A block decomposition identifies the source of the amplification: causal paths contribute powers of 1/tau, whereas a positive feedback cycle can produce exponential growth. At fixed temperature, a local…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA",
+    "math.PR"
+  ],
+  "published": "2026-07-20",
+  "updated": "2026-07-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

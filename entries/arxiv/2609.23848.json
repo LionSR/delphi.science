@@ -1,0 +1,22 @@
+{
+  "key": "2609.23848",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.23848",
+  "title": "Anytime-Feasible Gradient Descent for Constrained Optimization Under Gradient Uncertainty",
+  "authors": [
+    "Sina Sharifi",
+    "Jiarui Wang",
+    "Mahyar Fazlyab"
+  ],
+  "summary": "Constrained optimization is central to many engineering systems in which decisions must satisfy strict safety and operational requirements, especially in real-time settings with limited computational budgets. In such scenarios, optimization algorithms are often terminated before full convergence, making *anytime feasibility* essential for safe deployment. Existing methods that guarantee feasibility at every iterate typically rely on exact gradient information, an assumption that is often violated in practice due to measurement noise, stochastic approximations, or model mismatch. We develop…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-09-20",
+  "updated": "2026-09-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

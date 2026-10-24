@@ -1,0 +1,21 @@
+{
+  "key": "2609.12805",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.12805",
+  "title": "Data-Adaptive Grassmann Manifold Representations for Spatial Transcriptomics Alignment",
+  "authors": [
+    "Xiang Xiang Wang",
+    "Sean Cottrell",
+    "Guo-Wei Wei"
+  ],
+  "summary": "Spatial transcriptomics measures gene expression together with spatial coordinates, but many existing analysis methods represent each spot primarily by a single feature vector. We propose GrassST, a subspace method for spatial transcriptomics analysis and cross-slice alignment. For each spatial spot, GrassST constructs a neighborhood from tissue coordinates, fits a low-dimensional subspace to the embedded expression profiles in that neighborhood, and represents the spot by the resulting subspace. These representations are points on a Grassmann manifold and can be compared using distances…",
+  "domain": "math.AG",
+  "tags": [
+    "math.AG"
+  ],
+  "published": "2026-09-11",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

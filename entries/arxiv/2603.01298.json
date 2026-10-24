@@ -1,0 +1,28 @@
+{
+  "key": "2603.01298",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.01298",
+  "title": "Single-Asset Adaptive Leveraged Volatility Control",
+  "authors": [
+    "Nikhil Devanathan",
+    "Dylan Rueter",
+    "Stephen Boyd",
+    "Emmanuel Candès",
+    "Trevor Hastie",
+    "Mykel J. Kochenderfer",
+    "Arpit Apoorv",
+    "David Soronow",
+    "Igor Zamkovsky"
+  ],
+  "summary": "This paper introduces a methodology for constructing a market index composed of a liquid risky asset and a liquid risk-free asset that achieves a fixed target volatility. Existing volatility-targeting strategies typically scale portfolio exposure inversely with a variance forecast, but such open-loop approaches suffer from high turnover, leverage spikes, and sensitivity to estimation error -- issues that limit practical adoption in index construction. We propose a proportional-control approach for setting the index weights that explicitly corrects tracking error through feedback. The method…",
+  "domain": "q-fin.PM",
+  "tags": [
+    "q-fin.PM",
+    "math.OC"
+  ],
+  "published": "2026-03-01",
+  "updated": "2026-03-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

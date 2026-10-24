@@ -1,0 +1,19 @@
+{
+  "key": "2609.27952",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.27952",
+  "title": "A Lean 4 Verification Report for Completing the Arakawa--Moreau Conjecture on Maximal Ideals of Affine Vertex Algebras",
+  "authors": [
+    "Sihai Jin"
+  ],
+  "summary": "We report a Lean 4 formal audit accompanying the paper \"Completing the Arakawa--Moreau Conjecture on Maximal Ideals of Affine Vertex Algebras\" (arXiv:2607.25249). In a single Lean source, the development kernel-checks the paper-local deductive architecture used for the new maximal-ideal cases: affine-kernel detection and lifting, extremal PBW-line deductions, finite Ramond--Casimir arithmetic and case enumerations, reduced-simplicity contradiction schemes, and the case-level affine conclusions for the level -1 D_l family and the positive-parameter cases of D4, E6, E7, and E8. It also audits…",
+  "domain": "math.QA",
+  "tags": [
+    "math.QA"
+  ],
+  "published": "2026-08-23",
+  "updated": "2026-08-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

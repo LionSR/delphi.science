@@ -1,0 +1,23 @@
+{
+  "key": "2601.13256",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.13256",
+  "title": "Deep Neural networks for solving high-dimensional parabolic partial differential equations",
+  "authors": [
+    "Wenzhong Zhang",
+    "Zheyuan Hu",
+    "Wei Cai",
+    "George EM Karniadakis"
+  ],
+  "summary": "The numerical solution of high dimensional partial differential equations (PDEs) is severely constrained by the curse of dimensionality (CoD), rendering classical grid--based methods impractical beyond a few dimensions. In recent years, deep neural networks have emerged as a promising mesh free alternative, enabling the approximation of PDE solutions in tens to thousands of dimensions. This review provides a tutorial--oriented introduction to neural--network--based methods for solving high dimensional parabolic PDEs, emphasizing conceptual clarity and methodological connections. We organize…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-01-19",
+  "updated": "2026-01-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2605.18598",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.18598",
+  "title": "Pointwise Generalization in Deep Neural Networks",
+  "authors": [
+    "Shaojie Li",
+    "Yunbei Xu"
+  ],
+  "summary": "We address the fundamental question of why deep neural networks generalize by establishing a pointwise generalization theory for fully connected networks. This framework resolves long-standing barriers to characterizing the rich nonlinear feature-learning regime and builds a new statistical foundation for representation learning. For each trained model, we characterize the hypothesis via a pointwise Riemannian Dimension, derived from the eigenvalues of the learned feature representations across layers. This establishes a principled framework for deriving hypothesis-dependent,…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cond-mat.stat-mech",
+    "math.FA",
+    "math.PR",
+    "math.ST"
+  ],
+  "published": "2026-05-18",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

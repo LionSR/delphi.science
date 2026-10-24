@@ -1,0 +1,26 @@
+{
+  "key": "2606.05131",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.05131",
+  "title": "Deep Embedded Multiplicative DMD for Algebra-Preserving Koopman Learning",
+  "authors": [
+    "Kelan Gray",
+    "Finlay Brown",
+    "Nicolas Boullé",
+    "Matthew J. Colbrook"
+  ],
+  "summary": "Koopman theory turns nonlinear dynamics into a linear spectral problem. In computation, however, everything depends on a hard finite-dimensional choice: the observables must be expressive, nearly invariant under the dynamics, and, ideally, compatible with composition. Deep Koopman methods learn flexible coordinates, whereas structure-preserving methods enforce operator identities on fixed dictionaries. We combine these ideas by introducing Deep Embedded Multiplicative Dynamic Mode Decomposition (DeepMDMD), a method that learns a latent space and a partition of it, while enforcing the Koopman…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS",
+    "math.NA",
+    "math.OC",
+    "math.SP"
+  ],
+  "published": "2026-06-03",
+  "updated": "2026-06-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

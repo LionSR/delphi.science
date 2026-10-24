@@ -1,0 +1,29 @@
+{
+  "key": "2607.24959",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.24959",
+  "title": "Amortising Trajectory Optimisation for Residual MPC via Implicit Contact Differentiation",
+  "authors": [
+    "Daniel Layeghi",
+    "Thomas Corbères",
+    "Calum Arnott",
+    "Aditya Kamireddypalli",
+    "Hashim Al-Obaidi",
+    "Steve Tonneau",
+    "Michael Mistry"
+  ],
+  "summary": "Differentiable simulation can accelerate contact-rich trajectory optimisation by exposing local sensitivities of task outcomes to controls. Existing approaches either use finite differences, which are expensive and step-size sensitive; differentiate iterative contact solvers by unrolling automatic differentiation (AD), which stores a growing computation trace; or require intricate, solver-specific KKT sensitivity derivations. We introduce an AD-assisted implicit derivative for regularised smooth contacts and apply it to Mujoco MJX, based on the Implicit Function Theorem (IFT). The method…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "cs.DC",
+    "cs.LG",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

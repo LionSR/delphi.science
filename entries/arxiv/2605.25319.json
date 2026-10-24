@@ -1,0 +1,22 @@
+{
+  "key": "2605.25319",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.25319",
+  "title": "A Scalable Bundle Method for Exact Reformulation of SDP in Three-Phase Power Flow Feasibility",
+  "authors": [
+    "Bohang Fang",
+    "Lijun Ding",
+    "Cong Chen"
+  ],
+  "summary": "Power flow feasibility assessment is computationally challenging for unbalanced three-phase distribution networks. This paper develops a vectorized semidefinite program (SDP) based on the bus injection model (BIM) and reformulates its dual as an exact-penalty problem, enabling us to develop a scalable three-cut proximal bundle method for feasibility assessment. The proposed bundle method is numerically over 400 times faster than MOSEK with less than 1/2000 of its memory; on the decomposed BIM-SDP, approximately 2 times faster with 75% less memory.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-05-25",
+  "updated": "2026-05-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

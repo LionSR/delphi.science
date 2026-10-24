@@ -1,0 +1,22 @@
+{
+  "key": "2606.12450",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.12450",
+  "title": "Forward-Time Black-Scholes Reconstruction via Regularized Legendre Reduction",
+  "authors": [
+    "Phuong M. Nguyen",
+    "Matt Nguyen",
+    "Loc H. Nguyen"
+  ],
+  "summary": "We study a forward-time formulation of the Black-Scholes equation with state-dependent volatility. In contrast to the classical terminal-value pricing problem, where the option payoff is prescribed at maturity and the price is computed backward in time, the present problem prescribes the current option-price profile and seeks to recover the option-price profile at the expiration date T. This formulation is ill-posed, since the equation evolves in the unstable direction of the parabolic operator and high-frequency perturbations in the initial data may be strongly amplified. To address this…",
+  "domain": "q-fin.CP",
+  "tags": [
+    "q-fin.CP",
+    "math.NA"
+  ],
+  "published": "2026-05-30",
+  "updated": "2026-05-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

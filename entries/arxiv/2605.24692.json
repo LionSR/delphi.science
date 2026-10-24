@@ -1,0 +1,19 @@
+{
+  "key": "2605.24692",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.24692",
+  "title": "Sharp Convergence Rates and Optimal Weights for Cimmino's Reflection Algorithm",
+  "authors": [
+    "Hemant Sharma"
+  ],
+  "summary": "In this paper, Cimmino's classical reflection algorithm for solving the $n\\times n$ nonsingular linear system $A\\bx=\\bb$ is analysed through the lens of spectral theory. Reformulating the weighted iteration as $\\e^{(ν+1)}=M_w\\,\\e^{(ν)}$, where $M_w = I - A^\\top D_w A$, the error is shown to contract by the spectral radius $\\sprad(M_w)$ at every step, with a sharp, asymptotically tight bound. For $n=2$, a closed-form expression for the contraction factor is derived, \\[ \\sprad(M_w) \\;=\\; |1-μ| + \\tfrac{1}{2}\\sqrt{(w_1-w_2)^2 + 4w_1w_2\\cos^2\\!θ}, \\] where $μ=(w_1+w_2)/2$ and $θ$ denotes the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-23",
+  "updated": "2026-05-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

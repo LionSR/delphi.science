@@ -1,0 +1,22 @@
+{
+  "key": "2606.06046",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.06046",
+  "title": "Learning solution operators of PDEs with sparse approximation methods",
+  "authors": [
+    "Sebastian Neumayer",
+    "Daniel Potts",
+    "Fabian Taubert"
+  ],
+  "summary": "We investigate the approximation of solution operators for partial differential equations (PDEs) using sparse high-dimensional techniques. Building on a dimension-incremental framework, we combine product basis expansions with sparse recovery methods, specifically orthogonal matching pursuit (OMP), to substantially reduce the required sample size compared with a previously considered cubature-based approach. We evaluate the resulting method numerically on several examples, comparing it against both cubature-based sparse approximation and Fourier neural operators in terms of accuracy,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-06-04",
+  "updated": "2026-06-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

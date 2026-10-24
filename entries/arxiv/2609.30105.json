@@ -1,0 +1,21 @@
+{
+  "key": "2609.30105",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.30105",
+  "title": "On the SoS Certifiability of Log-Concave Distributions",
+  "authors": [
+    "Aleksandr Storozhenko"
+  ],
+  "summary": "We prove that for every isotropic log-concave distribution $P$ on $\\mathbb{R}^d$ and every even $m\\ge2$, the polynomial $(Cm)^m\\|v\\|_2^m - \\mathbb{E}_{X\\sim P}\\langle X,v\\rangle^m$ is a sum of squares, where $C>0$ is a universal constant. This improves on the Poincaré-dependent bounds (Kothari and Steinhardt, 2017), recovering the optimal moment bounds for log-concave distributions. As an immediate corollary, we obtain computationally efficient algorithms with dimension-free error guarantees for a wide range of statistical estimation problems. Our proof proceeds by using stochastic…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.CC",
+    "math.PR"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

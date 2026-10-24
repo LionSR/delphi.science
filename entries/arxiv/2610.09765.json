@@ -1,0 +1,21 @@
+{
+  "key": "2610.09765",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.09765",
+  "title": "Operator preconditioning of the Costabel FEM-BEM coupling for the time-harmonic Maxwell transmission problem",
+  "authors": [
+    "Quang Huy Nguyen",
+    "Van Chien Le",
+    "Kristof Cools"
+  ],
+  "summary": "This paper derives an equivalent formulation of the Costabel FEM-BEM coupling for the time-harmonic Maxwell transmission problem with a Lipschitz interface, and constructs a block-diagonal preconditioner for the resulting discrete system. The reformulated coupling is posed on a product of trace spaces and is obtained by introducing a trace lifting operator and the Steklov--Poincar{\\' e} operator. At the algebraic level, it corresponds to eliminating the interior FEM unknowns, resulting in a discrete system that involves the Schur complement of the interior FEM block. Assuming that the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

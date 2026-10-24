@@ -1,0 +1,20 @@
+{
+  "key": "2610.30804",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.30804",
+  "title": "Numerical Solution of Large-Scale Low-Rank Coupled Generalized Sylvester Equations",
+  "authors": [
+    "Umair Zulfiqar"
+  ],
+  "summary": "This paper develops projection methods for computing low-rank solutions to large-scale coupled generalized Sylvester equations. The dominant subspaces of these solutions are shown to be spanned by specific resolvent directions, motivating a Petrov--Galerkin projection framework. Conditions for the unique solvability of the projected coupled generalized Sylvester equations are also discussed. Based on these dominant subspaces, two algorithms are proposed: an extended Krylov-based projection algorithm and a rational Krylov-based projection algorithm. The former uses fixed shifts, whereas the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "eess.SY"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2606.01596",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.01596",
+  "title": "Second-order consistency for learning chaotic dynamics via randomized Jacobian matching",
+  "authors": [
+    "Shinhoo Kang",
+    "Hai V. Nguyen",
+    "Tan Bui-Thanh"
+  ],
+  "summary": "Short-horizon accuracy does not ensure that a learned chaotic system has correct long-time dynamics. Trajectory (zeroth-order) matching constrains vector-field values, and Jacobian (first-order) matching constrains local tangent dynamics, but neither determines how the Jacobian varies away from supervised states, so a model can be locally accurate while drifting toward spurious attractors and distorting long-time statistics. We show that second-order supervision mitigates these failures. Because forming full Hessian tensors is computationally prohibitive in high dimensions, we propose…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

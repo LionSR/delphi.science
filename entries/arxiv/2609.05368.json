@@ -1,0 +1,21 @@
+{
+  "key": "2609.05368",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.05368",
+  "title": "Integrality Gap Bounds for the Goemans-Linial SDP on Finite Abelian Cayley Graphs",
+  "authors": [
+    "Georgios Stamoulis"
+  ],
+  "summary": "In the uniform sparsest cut problem we are asked to find a vertex set that cuts few edges relative to the number of vertex pairs it separates. The Goemans-Linial SDP coupled with the Arora-Rao-Vazirani rounding gives an $\\mathcal{O}(\\sqrt{\\log n})$ approximation on arbitrary graphs on $n$ vertices. We study this relaxation on finite Abelian Cayley graphs. First we show that when the second normalized Laplacian eigenvalue of $G= \\mathrm{Cayley}(Γ, S)$ is realized by a Fourier character with image size at most four then $λ_2(G)=\\mathrm{SDP}_{\\mathrm{GL}}(G)=ψ(G)$. Geometrically, a character…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM",
+    "cs.DS"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

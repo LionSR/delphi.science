@@ -1,0 +1,25 @@
+{
+  "key": "2609.36594",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.36594",
+  "title": "Optimal detection of general moment changes: Simultaneous mean and covariance change detection and beyond",
+  "authors": [
+    "Xiaokai Luo",
+    "Chenghao Xu",
+    "Haotian Xu",
+    "Carlos Misael Madrid Padilla",
+    "Daren Wang"
+  ],
+  "summary": "We study multiple change-point detection in multivariate time series whose distributions change in a piecewise constant manner. Distributional changes can manifest across different moment orders, from shifts in the mean and covariance to changes in higher-order moments. Higher-order moments capture increasingly rich distributional features but become difficult to estimate in high dimensions. Our tensor representation unifies moments of different orders within a common linear algebraic framework, enabling a new method to detect changes in moments of all orders up to a prescribed fixed order…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2608.23013",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.23013",
+  "title": "CED-EF: Compressed Exact Diffusion with Error Feedback for Multi-Agent Learning",
+  "authors": [
+    "Sulaiman A. Alghunaim",
+    "Kun Yuan"
+  ],
+  "summary": "We study decentralized stochastic optimization over a network of $N$ agents under compressed communication. We propose CED-EF, an exact diffusion-based method with error feedback that directly accommodates biased $δ$-contractive compressors while communicating one compressed model-sized vector per node per iteration. For smooth nonconvex objectives with unbiased stochastic gradients whose variance is bounded by $σ^2$, where $σ\\geq0$, we establish a convergence rate whose leading stochastic term is $\\mathcal O(σ/\\sqrt{NK})$. For $σ>0$, the dominant dependence of the corresponding transient…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DC"
+  ],
+  "published": "2026-08-24",
+  "updated": "2026-08-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

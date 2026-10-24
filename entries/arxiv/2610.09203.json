@@ -1,0 +1,21 @@
+{
+  "key": "2610.09203",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.09203",
+  "title": "FlexGrad: a root-free approach to adaptive step sizes",
+  "authors": [
+    "Pablo Barros",
+    "Aaron Defazio",
+    "Vincent Guigues"
+  ],
+  "summary": "We introduce the FlexGrad optimizer, an adaptive gradient method that addresses a key limitation of classical AdaGrad-type methods: their inability to exploit correlations between gradients. By scaling steps using both cumulative gradients and cumulative squared gradients, FlexGrad preserves AdaGrad-like behavior in noisy regimes while allowing substantially larger steps when gradient directions are persistent. The method is fully online, horizon-free, and avoids any auxiliary search procedure during optimization. For convex Lipschitz objectives, we prove that FlexGrad attains the optimal…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

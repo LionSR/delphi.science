@@ -1,0 +1,22 @@
+{
+  "key": "2606.06809",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.06809",
+  "title": "Multiscale Nudging: From Macroscopic Observations to Microscopic Dynamics",
+  "authors": [
+    "Liyao Lyu",
+    "Xinyue Yu",
+    "Hayden Schaeffer"
+  ],
+  "summary": "We introduce a measure-based nudging framework for assimilating macroscopic observations into microscopic mean-field particle dynamics. The central difficulty is a representation mismatch: the forecast is a labeled particle system, while the observations specify only a smoothed, permutation-invariant density. To address this mismatch, we define the forecast-observation discrepancy as a quadratic functional on probability measures after applying the same smoothing operator used by the observation process. The Wasserstein gradient of this functional induces a transport velocity on state space,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-06-05",
+  "updated": "2026-06-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

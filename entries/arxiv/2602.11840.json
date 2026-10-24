@@ -1,0 +1,21 @@
+{
+  "key": "2602.11840",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.11840",
+  "title": "Improved Universal Graphs for Trees",
+  "authors": [
+    "Julian Becker",
+    "Konstantinos Panagiotou",
+    "Matija Pasch"
+  ],
+  "summary": "A graph $G$ is universal for a class of graphs $\\mathcal{C}$, if, up to isomorphism, $G$ contains every graph in $\\mathcal{C}$ as a subgraph. In 1978, Chung and Graham asked for the minimal number $s(n)$ of edges in a graph with $n$ vertices that is universal for all trees with $n$ vertices. The currently best bounds assert that $n\\ln n-O(n)\\le s(n) \\le C n\\ln n+O(n)$, where $C = \\frac{14}{5\\ln 2} \\approx 4.04$. We improve the upper bound to $c n\\ln n + O(n)$, where $c = \\frac{19}{6\\ln 3} \\approx 2.88$. In the proof we develop a strategy that, broadly speaking, is based on separating trees…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-02-12",
+  "updated": "2026-03-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

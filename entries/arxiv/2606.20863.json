@@ -1,0 +1,21 @@
+{
+  "key": "2606.20863",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20863",
+  "title": "Multiword Arithmetic and Parallel Computing",
+  "authors": [
+    "Jan Verschelde"
+  ],
+  "summary": "In many applications, the precision by the available hardware arithmetic is insufficient to guarantee accurate results. Multiword arithmetic is a special type of multiprecision arithmetic where a multiple double is an unevaluated sum of 64-bit doubles, or where a multiple integer is an unevaluated sum of 64-bit integers. Parallel computing is applied to compensate for the cost overhead of multiword arithmetic. This type of arithmetic exploits naturally the optimized hardware, allows for efficient type conversions, memory layouts, all favorable for parallel computing. For example, storing a…",
+  "domain": "cs.MS",
+  "tags": [
+    "cs.MS",
+    "cs.DC",
+    "math.NA"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

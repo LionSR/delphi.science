@@ -1,0 +1,22 @@
+{
+  "key": "2604.28144",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.28144",
+  "title": "Global Optimality for Constrained Exploration via Penalty Regularization",
+  "authors": [
+    "Florian Wolf",
+    "Ilyas Fatkhullin",
+    "Niao He"
+  ],
+  "summary": "Efficient exploration is a central problem in reinforcement learning and is often formalized as maximizing the entropy of the state-action occupancy measure. While unconstrained maximum-entropy exploration is relatively well understood, real-world exploration is often constrained by safety, resource, or imitation requirements. This constrained setting is particularly challenging because entropy maximization lacks additive structure, rendering Bellman-equation-based methods inapplicable. Moreover, scalable approaches require policy parameterization, inducing non-convexity in both the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-04-30",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

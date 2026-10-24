@@ -1,0 +1,23 @@
+{
+  "key": "2607.28259",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.28259",
+  "title": "TopoFormer: Topology Meets Attention for Graph Learning",
+  "authors": [
+    "Md Joshem Uddin",
+    "Astrit Tola",
+    "Cuneyt Gurcan Akcora",
+    "Baris Coskunuzer"
+  ],
+  "summary": "We introduce Topoformer, a lightweight and scalable framework for graph representation learning that encodes topological structure into attention-friendly sequences. At the core of our method is Topo-Scan, a novel module that decomposes a graph into a short, ordered sequence of topological tokens by slicing over node or edge filtrations. These sequences capture multi-scale structural patterns, from local motifs to global organization, and are processed by a Transformer to produce expressive graph-level embeddings. Unlike traditional persistent homology pipelines, Topo-Scan is parallelizable,…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.AT"
+  ],
+  "published": "2026-07-30",
+  "updated": "2026-07-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

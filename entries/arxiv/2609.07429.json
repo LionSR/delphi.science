@@ -1,0 +1,23 @@
+{
+  "key": "2609.07429",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07429",
+  "title": "Algorithms for Finite Group Epimorphism Testing",
+  "authors": [
+    "Joshua A. Grochow",
+    "Pranjal Srivastava",
+    "Dhara Thakkar"
+  ],
+  "summary": "The Group Epimorphism Problem (GpEpi) asks, given two finite groups $G_1$ and $G_2$, whether there exists a surjective group homomorphism, or epimorphism, from $G_1$ to $G_2$. When the input groups are given by their multiplication (Cayley) tables, the problem admits a quasipolynomial-time algorithm in general, but little is known about its complexity for structured classes of finite groups. In this paper, we study the computational complexity of GpEpi for several well-studied classes of finite groups. Our main results are polynomial-time epimorphism tests for several classes of groups for…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.CC",
+    "math.GR"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2607.08458",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08458",
+  "title": "Building confidence regions for Reeb graphs using the interleaving distance",
+  "authors": [
+    "Matteo Pegoraro",
+    "Alberto Conforti",
+    "Mathieu Carrière"
+  ],
+  "summary": "We develop confidence regions for Reeb graphs from finite samples using the interleaving distance. Given a point cloud equipped with a filter function, we construct a finite proximity graph, extend the filter linearly, and use the Reeb cosheaf of the resulting filtered graph as the primary estimator. Mapper graphs are then treated as controlled cover-based coarsenings of this estimator, separating the statistical approximation problem from the visualization problem. We prove stability bounds for the Reeb estimators obtained both using intrinsic and extrinsic metrics, the latter under…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "math.AT"
+  ],
+  "published": "2026-07-09",
+  "updated": "2026-07-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

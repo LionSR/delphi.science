@@ -1,0 +1,21 @@
+{
+  "key": "2609.15806",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.15806",
+  "title": "Revisiting Proximal Bundle Methods: Improved Rates under H{ö}lder Smoothness",
+  "authors": [
+    "Feng-Yi Liao",
+    "Yang Zheng"
+  ],
+  "summary": "Proximal bundle methods (PBMs) are classical algorithms for nonsmooth convex optimization. Existing analyses of the classical PBM couple the null steps with the descent test. This coupling obscures how the bundle updates approximate the proximal subproblem. In this work, we consider composite objectives $F=f+h$ and view each null-step cycle as an inner bundle subroutine, called $\\mathtt{ProxBundle}$. We analyze $\\mathtt{ProxBundle}$ independently of any stopping criterion under general bundle model conditions and show that it automatically adapts to H{ö}lder smoothness. Combining this…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

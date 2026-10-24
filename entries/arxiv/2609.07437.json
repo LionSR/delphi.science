@@ -1,0 +1,26 @@
+{
+  "key": "2609.07437",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07437",
+  "title": "A Systematic Analysis of Automatic Differentiation versus Discretization-based Constraints for Physics-Informed PDE Solvers",
+  "authors": [
+    "Xing Guo",
+    "Hongwei Tang",
+    "Zewei Meng",
+    "Yidong Zhang",
+    "Shaoqiu Xiao",
+    "Feng Liu"
+  ],
+  "summary": "Physics-informed neural networks (PINNs) represent a growing frontier in using artificial intelligence to solve partial differential equations (PDEs). Automatic differentiation (AD) plays a central role in this paradigm, which is mesh-free and replaces traditional iterative solvers with gradient-based optimization in continuous space. However, the inherent limitations of AD, particularly in handling higher-order derivatives and discontinuous solutions, pose significant challenges for complex problems. This has motivated a growing number of researchers to explore discretization-based…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

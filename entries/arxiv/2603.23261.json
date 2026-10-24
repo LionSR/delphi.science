@@ -1,0 +1,20 @@
+{
+  "key": "2603.23261",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.23261",
+  "title": "Enclosing minima in nonsmooth optimization via trust regions of higher-order cutting-plane models",
+  "authors": [
+    "Bennet Gebken",
+    "Michael Ulbrich"
+  ],
+  "summary": "We propose a globally convergent trust-region bundle method for minimizing lower-$C^2$ functions using higher-order cutting-plane models. Under certain growth assumptions on the objective around its minimum, the method is able to compute infinitely many trust regions of decreasing size that contain the minimum. We show that these growth assumptions are satisfied for certain finite max-type functions with sharp or quadratic growth. Enclosing the minimum in this way can be used to initialize local superlinearly convergent methods, which we demonstrate in numerical experiments.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-24",
+  "updated": "2026-03-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

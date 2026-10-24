@@ -1,0 +1,24 @@
+{
+  "key": "2603.02404",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.02404",
+  "title": "Stochastic Optimization for Resource Adequacy in Capacity Markets with Storage and Renewables",
+  "authors": [
+    "Baptiste Rabecq",
+    "Andy Sun",
+    "Feng Zhao",
+    "Tongxin Zheng",
+    "Xiaochu Wang",
+    "Yufan Zhang"
+  ],
+  "summary": "The integration of storage and renewable resources fundamentally alters resource-adequacy analysis. Because storage couples decisions across time, it invalidates the traditional reliability models that are based on time-independent capacity demand curves. Moreover, renewables introduce temporally correlated intermittency. To address this, we formulate the capacity procurement problem as a two-stage stochastic program, where the capacity decision is made in the first stage, while the expected unserved energy is evaluated by a second-stage dispatch problem that considers uncertainties such as…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-02",
+  "updated": "2026-03-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

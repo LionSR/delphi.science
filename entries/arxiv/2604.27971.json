@@ -1,0 +1,20 @@
+{
+  "key": "2604.27971",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.27971",
+  "title": "Flexible GMRES converges in two phases",
+  "authors": [
+    "Stefan Güttel",
+    "Lauri Nyman"
+  ],
+  "summary": "We derive a sharp upper bound on the residuals produced by the flexible GMRES (FGMRES) method. The bound shows that FGMRES exhibits two phases of convergence depending on the residual tolerance of the inner preconditioner. For small tolerances, the convergence of FGMRES is practically geometric with a constant rate throughout, while for looser tolerances the two-phase behavior becomes more pronounced. We also show that the derived bound cannot be improved and construct an example for which it becomes an equality.",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-30",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

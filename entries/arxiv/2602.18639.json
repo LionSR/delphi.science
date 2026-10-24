@@ -1,0 +1,27 @@
+{
+  "key": "2602.18639",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.18639",
+  "title": "JEPA-Bisim: Learning Robust Visual Representations for Planning with Joint-Embedding Predictive World Models",
+  "authors": [
+    "Leonardo F. Toso",
+    "Davit Shadunts",
+    "Yunyang Lu",
+    "Gloria Geng",
+    "Nihal Sharma",
+    "Donglin Zhan",
+    "Nam H. Nguyen",
+    "James Anderson"
+  ],
+  "summary": "World models learned from high-dimensional visual observations allow agents to make decisions and plan directly in latent space, avoiding pixel-level reconstruction. However, recent latent predictive architectures (JEPAs), including the DINO world model (DINO-WM), display a degradation in test time robustness due to their sensitivity to ``slow features\". These include visual variations such as background changes and distractors that are irrelevant to the task being solved. We address this limitation by augmenting the predictive objective with a bisimulation encoder that enforces…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-02-20",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

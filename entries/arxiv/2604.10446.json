@@ -1,0 +1,21 @@
+{
+  "key": "2604.10446",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.10446",
+  "title": "Least singular values of shifted sparse random combinatorial matrices",
+  "authors": [
+    "Dongbin Li",
+    "Alexander E. Litvak",
+    "Tingzhou Yu"
+  ],
+  "summary": "Let $M_n$ be an $n\\times n$ random matrix with entries in $\\{0, 1\\}$, where each row is independently and uniformly sampled from the set of all vectors in $\\{0, 1\\}^n$ containing exactly $d$ ones. we establish quantitative lower bounds on the smallest singular value of the shifted matrices $M_n-z \\mathbf{I}_n$ whenever $|z| \\leq \\sqrt{d}\\, \\log\\log d$ and $ C \\log n \\leq d \\leq n/2$ for some absolute positive constant $C$. As an application, we show that the empirical spectral distribution of the appropriately rescaled matrix $M_n$ converges in probability to the circular law provided that…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-04-12",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2602.20007",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.20007",
+  "title": "Order-Induced Variance in the Moving-Range Sigma Estimator: A Total-Variance Decomposition",
+  "authors": [
+    "Andrew T. Karl"
+  ],
+  "summary": "I--MR charts commonly estimate the process standard deviation $σ$ via the span-2 average moving range divided by the unbiasing constant $d_2$; unlike the unbiased sample standard deviation ($S/c_4$), this estimator depends on ordering through adjacency, so permuting a fixed sample changes it. We formalize this by introducing an independent uniformly random permutation and applying the law of total variance, yielding an exact decomposition into a values component (variance of the permutation mean) and an adjacency component (expected conditional variance over permutations). The permutation…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-02-23",
+  "updated": "2026-07-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

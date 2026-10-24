@@ -1,0 +1,21 @@
+{
+  "key": "2602.06581",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.06581",
+  "title": "The Fractional-Logarithmic Laplacian: Fundamental Properties and Eigenvalues",
+  "authors": [
+    "Huyuan Chen",
+    "Rui Chen",
+    "Daniel Hauer"
+  ],
+  "summary": "In this paper, we introduce the fractional--logarithmic Laplacian \\( (-Δ)^{s+\\log} \\), defined as the derivative of the fractional Laplacian \\( (-Δ)^t \\) at \\(t=s\\). It is a singular integral operator with Fourier symbol \\( |ξ|^{2s}\\log|ξ|^2 \\). We derive its pointwise integral representation \\[ (-Δ)^{s+\\log}u(x) = c_{n,s}\\,\\operatorname{PV}\\int_{\\mathbb{R}^n} \\frac{u(x)-u(y)}{|x-y|^{n+2s}} \\bigl(-2\\log|x-y|\\bigr)\\,dy + b_{n,s}(-Δ)^s u(x), \\] where \\(c_{n,s}\\) is the normalization constant of the fractional Laplacian and \\(b_{n,s}:=\\frac{d}{ds}\\log c_{n,s}\\). We also establish equivalent…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-02-06",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

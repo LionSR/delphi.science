@@ -1,0 +1,25 @@
+{
+  "key": "2601.16250",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.16250",
+  "title": "Distributional Computational Graphs: Error Bounds",
+  "authors": [
+    "Olof Hallqvist Elias",
+    "Michael Selby",
+    "Phillip Stanley-Marbell"
+  ],
+  "summary": "We study a general framework of distributional computational graphs: computational graphs whose inputs are probability distributions rather than point values. We analyze the discretization error that arises when these graphs are evaluated using finite approximations of continuous probability distributions. Such an approximation might be the result of representing a continuous real-valued distribution using a discrete representation or from constructing an empirical distribution from samples (or might be the output of another distributional computational graph). We establish non-asymptotic…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.CE",
+    "cs.LG",
+    "math.NA",
+    "math.PR"
+  ],
+  "published": "2026-01-22",
+  "updated": "2026-02-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2603.13178",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.13178",
+  "title": "Locally Irregular Total Colorings of Graphs",
+  "authors": [
+    "Anna Flaszczyńska",
+    "Aleksandra Gorzkowska",
+    "Igor Grzelec",
+    "Alfréd Onderko",
+    "Mariusz Woźniak"
+  ],
+  "summary": "A total graph is an ordered triple $(V_0, V_1, E)$, where $V_0, V_1$ are the sets of empty and full vertices, respectively, $V_0 \\cap V_1 = \\emptyset$, and the set of edges $E$ is a subset of \\(\\binom{V_0 \\cup V_1}{2}\\) $(E\\cap(V_0 \\cup V_1)=\\emptyset)$. A simple graph is a total graph in which all vertices are full. We say that a total graph $G$ is locally irregular if every two adjacent vertices have different total degrees, where by the total degree of a vertex $v$ in $G$ we mean the number of edges in $G$ that contain $v$ plus 1 if $v$ is full, or plus 0 if $v$ is empty. A total coloring…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-03-13",
+  "updated": "2026-03-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

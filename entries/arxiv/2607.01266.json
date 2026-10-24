@@ -1,0 +1,22 @@
+{
+  "key": "2607.01266",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.01266",
+  "title": "Fast approximation and learning of binary classification tasks in o-minimal structures using ReLU neural networks",
+  "authors": [
+    "Clemens Kinn",
+    "Philipp Petersen"
+  ],
+  "summary": "We study binary classification problems whose decision sets are given by definable sets in o-minimal expansions of the real field. Motivated by cell decomposition of definable sets, we introduce traceable sets as a classical proxy for definable decision regions and analyze their approximation by ReLU neural networks. Under uniform bounds on the number of connected components and suitable $C^m$ extensions for the boundary functions, we prove that characteristic functions of traceable subsets of $[-1/2,1/2]^n$ can be approximated in $L^p$ to accuracy $\\varepsilon>0$ by ReLU neural networks of…",
+  "domain": "math.LO",
+  "tags": [
+    "math.LO",
+    "cs.LG",
+    "math.FA"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

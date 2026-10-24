@@ -1,0 +1,21 @@
+{
+  "key": "2603.13503",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.13503",
+  "title": "A Discrete Radon Transform Based on the Area of Cube-Plane Intersection",
+  "authors": [
+    "Robert Beinert",
+    "Jonas Bresch",
+    "Michael Quellmalz"
+  ],
+  "summary": "The Radon transform is a fundamental tool for analyzing data in tomographic imaging, optimal transport, crystallography, and geometric analysis. Numerical computations require an accurate discretization. To deal with voxelized images and objects, we derive a closed-form, piecewise polynomial expression for the Radon transform of an axis-aligned cube in arbitrary dimension $d$. Building on this formula, we propose a discrete Radon transform in $\\mathbb{R}^d$ that is both analytically exact for voxelized data and computationally efficient. For improved numerical stability, we introduce a…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-13",
+  "updated": "2026-03-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

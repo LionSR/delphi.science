@@ -1,0 +1,21 @@
+{
+  "key": "2602.12604",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.12604",
+  "title": "Differentially Private Two-Stage Empirical Risk Minimization with Applications to Individualized Treatment Rule",
+  "authors": [
+    "Joowon Lee",
+    "Guanhua Chen"
+  ],
+  "summary": "Differential privacy provides a formal framework for releasing statistical estimators that limit how much any single observation can influence the output, by injecting calibrated random noise. We study differentially private estimation in two-stage procedures common in causal inference and individualized treatment rule (ITR) learning, in which data-dependent weights are first estimated to enforce covariate balance and a parameter of interest is then obtained by weighted empirical risk minimization. We propose Differentially Private Two-Stage Empirical Risk Minimization (DP-2ERM), which…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-02-13",
+  "updated": "2026-05-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

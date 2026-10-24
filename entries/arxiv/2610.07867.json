@@ -1,0 +1,20 @@
+{
+  "key": "2610.07867",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.07867",
+  "title": "quantum-group: Exact symbolic verification of R-matrix and Yang--Baxter identities for $U_q(\\mathfrak{sl}_2)$ and $GL_q(2|1)$",
+  "authors": [
+    "Taha Berk Terekli"
+  ],
+  "summary": "Explicit R-matrices of quantum groups are routinely transcribed from the literature, yet whether they satisfy an identity depends on basis order, tensor placement, the coproduct and, for superalgebras, the Koszul sign rule. quantum-group is a Python package that builds such matrices exactly with SymPy and returns every identity as an exact residual matrix, whose nonzero entries locate the convention that disagrees. It covers U_q(sl_2) modules, tensor products and the fundamental R-matrix, and the graded Yang--Baxter equation for GL_q(2|1). Applied to the thesis it was written for, it exposed…",
+  "domain": "math.QA",
+  "tags": [
+    "math.QA",
+    "cs.MS"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

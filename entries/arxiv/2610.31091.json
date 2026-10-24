@@ -1,0 +1,20 @@
+{
+  "key": "2610.31091",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.31091",
+  "title": "Finite Element Approximation of Rotating MHD-Boussinesq Flows with Nonlinear Power-Law Viscosity",
+  "authors": [
+    "Akash Ashirbad Panda",
+    "Evana Islam Sarkar"
+  ],
+  "summary": "We propose and analyse a fully discrete finite element approximation of the three-dimensional incompressible rotating MHD-Boussinesq system with nonlinear power-law ($p$-Laplace) viscosity. Conforming elements are used for the velocity and temperature, $\\mathbf H(\\operatorname{curl})$-conforming Nédélec elements for the magnetic induction, and a semi-implicit backward Euler scheme in time. The discretisation preserves the principal energy structure: the Lorentz and induction terms cancel exactly, while the Coriolis force remains energy neutral. This yields well-posedness and mesh-independent…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2608.28292",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.28292",
+  "title": "Characteristic localization, sharp lifespan asymptotics and global dynamics for a one-dimensional derivative wave equation",
+  "authors": [
+    "Firas Kaabi"
+  ],
+  "summary": "We study the Cauchy problem $$ v_{tt}-v_{xx}=\\abs{v_t+v_x}^{m}\\abs{v_t}^{n}, \\qquad v(x,0)=η\\varphi(x),\\quad v_t(x,0)=ηψ(x), $$ on $\\R$, with compactly supported profiles $\\varphi\\in C_0^2(\\R)$, $ψ\\in C_0^1(\\R)$, exponents $m,n>1$, and amplitude $η>0$. We show that the sign of $P_0=ψ+\\varphi'$ decides the behaviour of small solutions, whatever the sign of $ψ-\\varphi'$. If $P_0$ is positive at some point, the lifespan $T(η)$ obeys explicit two-sided bounds of order $η^{-(m+n-1)}$ for every $η>0$, and $$ \\lim_{η\\to0^+}η^{m+n-1}T(η)=\\frac{2^{n}}{(m+n-1)\\,(\\max_{\\R}P_0)^{m+n-1}} . $$ If…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-08-28",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

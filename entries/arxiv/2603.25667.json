@@ -1,0 +1,22 @@
+{
+  "key": "2603.25667",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.25667",
+  "title": "A Quasicontinuum Method with Optimized Local Maximum-Entropy Interpolation and Heaviside Enrichment for Heterogeneous Lattices",
+  "authors": [
+    "Benjamin Werner",
+    "Ondřej Rokoš",
+    "Jan Zeman"
+  ],
+  "summary": "Lattice systems are effective for modeling heterogeneous materials, but their computational cost is often prohibitive. The QuasiContinuum (QC) method reduces this cost by interpolating the lattice response over a coarse finite-element mesh, yet material interfaces in heterogeneous systems still require fine discretizations. Enrichment strategies from the eXtended Finite Element Method (XFEM) address this by representing interfaces on nonconforming meshes. In this work, we combine Heaviside enrichment with meshless Local Maximum Entropy (LME) interpolation in the QC framework for…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cond-mat.mtrl-sci"
+  ],
+  "published": "2026-03-26",
+  "updated": "2026-03-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

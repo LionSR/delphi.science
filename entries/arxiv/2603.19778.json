@@ -1,0 +1,21 @@
+{
+  "key": "2603.19778",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.19778",
+  "title": "Uniform Maximum Projection Designs for Computer Experiments",
+  "authors": [
+    "Miroslav Vořechovský",
+    "Jan Mašek"
+  ],
+  "summary": "Space-filling experimental designs are widely used in engineering computer experiments, where only a limited number of expensive model evaluations can be afforded. Distance-based designs such as Maximin or Minimax ensure global space-filling, while Latin hypercube sampling enforces uniform one-dimensional projections, yet neither guarantees uniformity in lowdimensional subspaces. Maximum Projection (MaxPro) designs were introduced to improve uniformity in low-dimensional subspaces, yet their original formulation relies on the Euclidean distance and may induce systematic density distortions…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math.ST"
+  ],
+  "published": "2026-03-20",
+  "updated": "2026-03-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

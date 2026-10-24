@@ -1,0 +1,20 @@
+{
+  "key": "2609.06505",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.06505",
+  "title": "Lie bracket approximations of RMSprop for Extremum Seeking Control",
+  "authors": [
+    "Victoria Grushkovskaya",
+    "Christian Ebenbauer"
+  ],
+  "summary": "This paper presents novel extremum seeking algorithms inspired by RMSProp dynamics and based on Lie bracket approximation techniques. To inherit the behavior of the classical continuous-time RMSProp algorithm, we introduce an extremum seeking scheme that exploits second-order Lie brackets, allowing the excitation of squared gradient terms in the resulting Lie bracket system. Moreover, we propose two modified RMSProp-type algorithms that can be implemented using only first-order Lie bracket approximations, thereby reducing the complexity of the extremum seeking control design. The three…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-06",
+  "updated": "2026-09-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

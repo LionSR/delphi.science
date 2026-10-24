@@ -1,0 +1,23 @@
+{
+  "key": "2606.14954",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.14954",
+  "title": "Representation Costs in Data Science: Foundations and the Quasi-Banach Spaces of Deep Neural Networks",
+  "authors": [
+    "Greg Ongie",
+    "Rahul Parhi"
+  ],
+  "summary": "We develop a general framework for analyzing representation costs induced by parameter-space regularizers in data-fitting methods. For an arbitrary parametric method, we define its representation cost and native function space, prove existence, and identify conditions under which parameter-space and function-space problems have equal infimal values and minimizers transfer between them. This framework yields representer theorems and recovers classical formulations---including kernel methods and RKHSs, wavelets and Besov spaces, and shallow neural networks and variation spaces---as special…",
+  "domain": "math.FA",
+  "tags": [
+    "math.FA",
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-06-12",
+  "updated": "2026-09-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

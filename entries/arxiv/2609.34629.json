@@ -1,0 +1,25 @@
+{
+  "key": "2609.34629",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.34629",
+  "title": "DisKO: Deep Koopman Learning in Distribution Space from Unpaired Snapshots",
+  "authors": [
+    "He Ma",
+    "Xiaochen Liu",
+    "Wanfeng Lu",
+    "Ying Wang",
+    "Wei Lin",
+    "Qunxi Zhu"
+  ],
+  "summary": "Many complex systems are observed only through temporally unpaired distribution snapshots, making trajectory-based dynamical learning difficult without additional assumptions. We therefore formulate the problem directly in distribution space, treating the distribution itself as the dynamical state. The challenge is that distribution space is infinite-dimensional, making compact and approximately closed representations difficult to learn from finite snapshots. We introduce DisKO, which extends deep Koopman learning to distribution dynamics by jointly learning predictive distributional…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2605.04183",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04183",
+  "title": "Nearly-Tight Bounds for Zonotope Containment and Beyond",
+  "authors": [
+    "Friedrich Eisenbrand",
+    "Thomas Rothvoss",
+    "Matteo Russo",
+    "Ruben Skorupinski"
+  ],
+  "summary": "We investigate the convex-body containment problem $\\max\\{s >0 : s Z \\subseteq Q\\}$, where the outer body $Q \\subseteq \\mathbb R^d$ is described by a membership oracle and the inner body $Z \\subseteq \\mathbb R^d$ is a zonotope. Our main result is a sampling-based $O(\\sqrt{d})$-approximation algorithm for this problem that almost matches the lower bound of $Ω(\\sqrt{d/\\log d})$ by Khot and Naor in the oracle model. Assuming zonotopes can be sparsified by a linear number of generators, which is referred to as Talagrand conjecture, our approach attains the optimal approximation factor of…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.MG"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-05-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

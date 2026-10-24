@@ -1,0 +1,20 @@
+{
+  "key": "2606.22492",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.22492",
+  "title": "Optimal $hp$-error estimates and $p$-multigrid convergence for Hybrid High-Order discretizations of the Poisson equation",
+  "authors": [
+    "Daniele A. Di Pietro",
+    "Emil Hössjer"
+  ],
+  "summary": "This paper presents two new theoretical results for Hybrid High-Order (HHO) methods applied to elliptic problems. First, we establish $hp$-error estimates for the HHO discretization of the Poisson problem that achieve optimal approximation rates with respect to both the mesh size $h$ and the polynomial degree $k$. These results improve upon previous analyses of hybrid methods, whose convergence estimates were suboptimal in $k$. Second, building on these estimates, we develop and analyze a non-inherited $p$-multigrid solver for the statically condensed HHO system. We prove results that…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-21",
+  "updated": "2026-06-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

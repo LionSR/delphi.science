@@ -1,0 +1,20 @@
+{
+  "key": "2605.09471",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09471",
+  "title": "The Statistical Cost of Adaptation in Multi-Source Transfer Learning",
+  "authors": [
+    "Abhinav Chakraborty",
+    "Subha Maity"
+  ],
+  "summary": "Multi-source transfer learning can improve target-domain estimation by leveraging related source data, but its benefits depend on unknown source-to-target biases. This raises a fundamental question: can a bias-agnostic estimator perform as well as an oracle that knows the true bias configuration? To study this, we introduce the intrinsic cost of adaptation, defined as the smallest worst-case ratio between the risk of any bias-agnostic estimator and the oracle risk. An intrinsic cost of one means oracle performance is achievable without knowing the biases, whereas a larger cost quantifies the…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-05-10",
+  "updated": "2026-05-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

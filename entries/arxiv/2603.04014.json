@@ -1,0 +1,20 @@
+{
+  "key": "2603.04014",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.04014",
+  "title": "Non-Derivability Results in Polymorphic Dependent Type Theory",
+  "authors": [
+    "Herman Geuvers"
+  ],
+  "summary": "In the pure Calculus of Constructions (CC) one can define data types and function over these, and there is a powerful higher order logic to reason over these functions and data types. This is due to the combination of impredicativity and dependent types, and most of these features can already be observed in polymorphic (second order) dependent type theory $λ$P2. The impredicative encoding of data types (in $λ$P2 or CC) is powerful but not fully satisfactory: for example, the induction principle is not provable. As a matter of fact, it can be shown that induction is not provable for whatever…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "math.LO"
+  ],
+  "published": "2026-03-04",
+  "updated": "2026-03-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

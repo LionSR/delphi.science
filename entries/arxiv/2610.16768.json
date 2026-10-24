@@ -1,0 +1,24 @@
+{
+  "key": "2610.16768",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16768",
+  "title": "On the Stability of Power Systems with AI Data Centers: A Multi-Equilibrium Switched DAE Framework",
+  "authors": [
+    "Vishal Shenoy",
+    "Damola Ajeyemi",
+    "Mahmoud Abdelgalil",
+    "Guido Cavraro",
+    "Emiliano Dall'Anese",
+    "Jorge I. Poveda"
+  ],
+  "summary": "The rapid growth of Artificial Intelligence (AI) data centers is introducing dynamic loads into power transmission systems as GPU clusters switch between computational phases with distinct power demands. These dynamics are naturally modeled by switched affine differential-algebraic equations (DAEs), where each mode induces a different equilibrium and consistency space. We study their stability using control and hybrid systems tools. Differential projectors derived from the quasi-Weierstrass form yield an equivalent hybrid representation, from which we characterize the $ω$-limit set and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

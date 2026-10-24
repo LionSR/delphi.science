@@ -1,0 +1,22 @@
+{
+  "key": "2608.17203",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17203",
+  "title": "Expressivity In Multimodal Contrastive Learning",
+  "authors": [
+    "Andrew Stuart",
+    "Florian Wolf"
+  ],
+  "summary": "Contrastive learning has become a cornerstone of modern representation learning, powering CLIP-style models that underpin text-to-image generation, vision-language models, and retrieval across a rapidly growing range of modalities. Despite this empirical success, the expressive power of these architectures remains poorly understood. To gain insight, we study expressivity by adopting a population-level, density-estimation viewpoint: each architecture comprises a parameterized set of densities whose parameters may be chosen to approximate the joint distribution of the modalities. This isolates…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

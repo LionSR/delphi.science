@@ -1,0 +1,22 @@
+{
+  "key": "2606.26061",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.26061",
+  "title": "Deviance-style normalization for jointly overdispersed counts",
+  "authors": [
+    "Akshay Balsubramani"
+  ],
+  "summary": "We introduce a Dirichlet--multinomial (DM) deviance residualization for sparse, jointly overdispersed count matrices, the regime that dominates sequencing-based biochemical assays. The DM null treats each sample's count vector as a fixed-total composition with a single scalar concentration $α_0$ governing overdispersion, and arises exactly by conditioning independent negative-binomial feature counts on the observed sample total -- making the DM the joint conditional analogue of standard feature-wise overdispersed count models. The resulting transform preserves exact sparsity, evaluates in…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "q-bio.QM",
+    "stat.ML"
+  ],
+  "published": "2026-06-24",
+  "updated": "2026-06-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

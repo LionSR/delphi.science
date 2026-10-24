@@ -1,0 +1,19 @@
+{
+  "key": "2607.07566",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.07566",
+  "title": "Practical Computations of the Mertens Function: $M(10^{24})$ and $M(10^{25})$",
+  "authors": [
+    "Greg Hurst"
+  ],
+  "summary": "The Mertens function is defined as $M(x)=\\sum_{n\\leq x}μ(n)$, where $μ(n)$ is the Möbius function. This paper describes a practical implementation of the classical $O(x^{2/3+\\varepsilon})$ algorithm for computing $M(x)$ at isolated values, together with the segmented Möbius and Mertens sieve on which it relies. The implementation was used to compute $M(10^{24}) = 7189337839$ and $M(10^{25}) = -258560632948$, taking $7.0$ days and $34.6$ days, respectively. These computations extend the previous record of $M(10^{23})$ by two orders of magnitude. Run standalone, the segmented sieve computed…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2601.01306",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.01306",
+  "title": "Towards a Principled Muon under $μ\\mathsf{P}$: Ensuring Spectral Conditions throughout Training",
+  "authors": [
+    "John Zhao"
+  ],
+  "summary": "The $μ$-parameterization ($μ$P) provides a principled foundation for large language model (LLM) training by prescribing width-independent learning dynamics, which in turn enables predictable scaling behavior and robust hyperparameter transfer across model sizes. A central requirement of $μ$P is the satisfaction of certain spectral conditions on weight matrices, which ensure consistent feature learning and optimization behavior as model width grows. While these conditions are well understood in theory, guaranteeing their validity in practical training for matrix-based optimizers such as Muon…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-01-04",
+  "updated": "2026-01-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

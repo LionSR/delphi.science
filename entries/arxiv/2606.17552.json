@@ -1,0 +1,23 @@
+{
+  "key": "2606.17552",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.17552",
+  "title": "An Adaptive Algorithm for the Approximation of General Linear-Parametric Optimization Problems",
+  "authors": [
+    "Levin Nemesch",
+    "Stefan Ruzika",
+    "Clemens Thielen",
+    "Alina Wittmann"
+  ],
+  "summary": "Linear-multi-parametric optimization problems are a widely studied class of optimization problems. The objective function in such a problem is affine linear dependent on a parameter vector, and the goal is to compute a set of solutions that contains an optimal solution for every fixed parameter vector. However, this is known to be computationally challenging: The underlying non-parametric problem might be NP-hard, and, in addition, optimal solution sets might have exponential cardinality. Parametric approximation aims at providing polynomial-time algorithms that overcome these challenges.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DM"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

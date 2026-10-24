@@ -1,0 +1,22 @@
+{
+  "key": "2610.04374",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04374",
+  "title": "Geometric Realizations of Capability Spaces of Large Models and Zigzag Persistent Homology",
+  "authors": [
+    "Yu-Zhe Liu",
+    "Shengda Liu",
+    "Jianyong Pi",
+    "Chao Zhang"
+  ],
+  "summary": "We propose a topological model for capability changes during large-model training. The model represents knowledge states and preregistered capability probes as subcomplexes of a finite regular CW complex. We prove that attaching a single $n$-cell can only create a class in $\\mathrm H_n$ or kill a class in $\\mathrm H_{n-1}$. With the reliability threshold and the training checkpoint as two parameter axes, capability gains and losses make the spaces along the training axis nonnested. Union or intersection bridges produce zigzag persistence modules, and we distinguish checkpoint, transition,…",
+  "domain": "math.AT",
+  "tags": [
+    "math.AT"
+  ],
+  "published": "2026-10-03",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

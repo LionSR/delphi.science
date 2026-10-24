@@ -1,0 +1,20 @@
+{
+  "key": "2606.18724",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.18724",
+  "title": "Fast primal-dual methods for convex-concave bilinear saddle point problems: continuous-time dynamics and discrete algorithms",
+  "authors": [
+    "Xin He",
+    "Ya-Ping Fang"
+  ],
+  "summary": "This paper studies Nesterov accelerated methods for continuously differentiable convex-concave bilinear saddle point problems. For the continuous-time model, we analyze a second-order primal-dual dynamical system with vanishing damping $α/t$, where $α\\geq 3$. Under the merely convex-concave setting, we prove convergence of the primal-dual trajectory to a saddle point. In the noncritical regime $α>3$, we further obtain the improved rate $o(1/t^{2})$ for the primal-dual gap and $o(1/t)$ for the velocity, and, under an additional Lipschitz gradient assumption, $o(1/t)$ for the stationarity…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-17",
+  "updated": "2026-06-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

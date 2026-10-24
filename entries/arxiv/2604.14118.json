@@ -1,0 +1,22 @@
+{
+  "key": "2604.14118",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.14118",
+  "title": "Complex Interpolation of Matrices with an application to Multi-Manifold Learning",
+  "authors": [
+    "Adi Arbel",
+    "Stefan Steinerberger",
+    "Ronen Talmon"
+  ],
+  "summary": "Given two symmetric positive-definite matrices $A, B \\in \\mathbb{R}^{n \\times n}$, we study the spectral properties of the interpolation $A^{1-x} B^x$ for $0 \\leq x \\leq 1$. The presence of `common structures' in $A$ and $B$, eigenvectors pointing in a similar direction, can be investigated using this interpolation perspective. Generically, exact log-linearity of the operator norm $\\|A^{1-x} B^x\\|$ is equivalent to the existence of a shared eigenvector in the original matrices; stability bounds show that approximate log-linearity forces principal singular vectors to align with leading…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.SP"
+  ],
+  "published": "2026-04-15",
+  "updated": "2026-04-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

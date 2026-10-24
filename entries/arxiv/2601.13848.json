@@ -1,0 +1,20 @@
+{
+  "key": "2601.13848",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.13848",
+  "title": "Derivative free data-driven stabilization of continuous-time linear systems from input-output data",
+  "authors": [
+    "Corrado Possieri"
+  ],
+  "summary": "This letter presents a data-driven framework for the design of stabilizing controllers from input-output data in the continuous-time, linear, and time-invariant domain. Rather than relying on measurements or reliable estimates of input and output time derivatives, the proposed approach uses filters to derive a parameterization of the system dynamics. This parameterization is amenable to the application of linear matrix inequalities enabling the design of stabilizing output feedback controllers from input-output data and the knowledge of the order of the system.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.DS"
+  ],
+  "published": "2026-01-20",
+  "updated": "2026-02-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

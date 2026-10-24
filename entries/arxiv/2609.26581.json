@@ -1,0 +1,23 @@
+{
+  "key": "2609.26581",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.26581",
+  "title": "Polyak-Type Extragradient Methods for Monotone Root-Finding Problems",
+  "authors": [
+    "TaeHo Yoon",
+    "Sayantan Choudhury",
+    "Ezra Greenberg",
+    "Nicolas Loizou"
+  ],
+  "summary": "We study Polyak-type step-size selection for extragradient methods for solving deterministic and stochastic monotone root-finding problems. We show that the known projection-type correction for deterministic extragradient arises from minimizing an upper bound on the distance to a solution, paralleling the classical Polyak step-size construction. Using this viewpoint, we provide a unified deterministic analysis of the Polyak-type Extragradient Method (PolyakEG), based on a local critical condition controlling the variation of operator $F$ along the extrapolation direction. This analysis does…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-09-22",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

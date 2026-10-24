@@ -1,0 +1,21 @@
+{
+  "key": "2607.06237",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06237",
+  "title": "ResiPhy-MDNF: A Residual-Based Physics-Aware Multilevel Discrete Neural Field Framework for PDE-Constrained Inverse Problems",
+  "authors": [
+    "Zheng Lu",
+    "Jiwei Jia",
+    "Young Ju Lee"
+  ],
+  "summary": "Inverse problems governed by partial differential equations are difficult when observations are sparse and the unknown coefficient field contains both large- and small-scale structures. We introduce a residual-based, physics-aware multilevel discrete neural field framework, ResiPhy-MDNF, for such problems. The method couples a coarse-to-fine discrete neural field (DNF) optimizer with a residual-based graph neural network (GNN) transfer operator, called ResiPhy-GNN. At each level, the DNF directly optimizes trainable grid- or mesh-based state and coefficient arrays using the prescribed…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

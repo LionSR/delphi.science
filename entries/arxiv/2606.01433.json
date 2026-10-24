@@ -1,0 +1,20 @@
+{
+  "key": "2606.01433",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.01433",
+  "title": "Four-Level Overlapping Schwarz as Multigrid Coarse Solver for Incompressible Non-Newtonian Flow in Complex Geometries",
+  "authors": [
+    "Stephan Köhler",
+    "Oliver Rheinbach"
+  ],
+  "summary": "For complex geometries, the coarse problem of geometric multigrid can be too large to be solved by a direct solver. Here, we report on the use of domain decomposition applied to the multigrid coarse problem. Additive overlapping Schwarz methods are domain decomposition methods for the iterative solution of partial differential equations whose numerical and parallel scalability can be improved by the addition of coarse levels. A successful coarse space for such methods, inspired by iterative substructuring, is the generalized Dryja--Smith--Widlund (GDSW) space. A monolithic two-level…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-31",
+  "updated": "2026-05-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2603.09546",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.09546",
+  "title": "ADMM-based Bilevel Descent Aggregation Algorithm for Sparse Hyperparameter Selection",
+  "authors": [
+    "Yunhai Xiao",
+    "Anqi Liu",
+    "Peili Li",
+    "Yanyun Ding"
+  ],
+  "summary": "It is widely acknowledged that hyperparameter selection plays a critical role in the effectiveness of sparse optimization problems. The bilevel optimization provides a robust framework for addressing this issue, but these existing methods depend heavily on the lower-level singleton (LLS) assumption, which greatly limits their practical applicabilities. To tackle this technical challenge, this paper focus on a particular type of nonsmooth convex sparse optimization problem and presents a new bilevel optimization framework. This framework effectively integrates the alternating direction method…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-10",
+  "updated": "2026-03-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

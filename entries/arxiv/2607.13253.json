@@ -1,0 +1,21 @@
+{
+  "key": "2607.13253",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.13253",
+  "title": "A linear, fully decoupled, and unconditionally energy-stable SAV-FEM for the Cahn--Hilliard--Navier--Stokes model",
+  "authors": [
+    "Jinting Yang",
+    "Nianyu Yi",
+    "Peimeng Yin"
+  ],
+  "summary": "In this paper, we develop a linear, fully decoupled, and unconditionally energy-stable fully discrete finite element scheme for the Cahn--Hilliard--Navier--Stokes (CHNS) system by employing the scalar auxiliary variable (SAV) approach. Unlike existing SAV-based formulations that typically introduce multiple auxiliary variables or additional techniques to handle different nonlinearities, we introduce only one scalar auxiliary variable together with a novel update of the auxiliary variable to reformulate all nonlinear terms arising from the Cahn--Hilliard and Navier--Stokes equations, yielding…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

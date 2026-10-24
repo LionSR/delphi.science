@@ -1,0 +1,21 @@
+{
+  "key": "2610.19960",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.19960",
+  "title": "Nonlinear fixed-distance codes via real lifts of moment configurations",
+  "authors": [
+    "Sergey Yekhanin"
+  ],
+  "summary": "Let $A_q(n,d)$ denote the largest size of a code of length $n$ and minimum Hamming distance $d$ over an alphabet of $q$ symbols. For fixed $q\\ge2$ and $d\\ge4$ we construct codes with redundancy $n-\\log_q A_q(n,d)\\le(d-3)\\log_q n+O(\\sqrt{\\log n})$ for all large $n$. No algebraic structure is imposed on the alphabet, and the codes are not linear. For $d=4$ and $d=5$ the coefficient of $\\log_q n$ matches the Hamming bound, so the redundancy is determined up to lower-order terms. At distance four the codes are provably better than every linear code: by the polynomial-method bound for cap sets,…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2605.21737",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.21737",
+  "title": "Escaping Chaos in Random Multiplicative Functions",
+  "authors": [
+    "Max Wenqiang Xu"
+  ],
+  "summary": "Let $f(n)$ be a Steinhaus random multiplicative function. Let $A\\subset [1, N]$ be a finite set of integers. We show that \\[\\frac{1}{\\sqrt{|A|}} \\sum_{n\\in A} f(n) \\xrightarrow[]{d} \\mathcal{CN}(0,1)\\] forces that $|A|=o(N)$. We prove that the $o(1)$ density is sharp by showing that for most sets $A$, and thus confirm the existence, with density $ρ$ such that $(1-ρ)^{-1} =o((\\log \\log N)^{1/2})$, we have \\[ \\frac{1}{\\sqrt{(1-ρ) |A|}} \\sum_{n\\in A} f(n) \\xrightarrow{d} \\mathcal{CN}(0,1). \\] The extra factor $\\sqrt{1-ρ}$ makes a difference as long as the density $ρ>0$.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.PR"
+  ],
+  "published": "2026-05-20",
+  "updated": "2026-05-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

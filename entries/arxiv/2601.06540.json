@@ -1,0 +1,25 @@
+{
+  "key": "2601.06540",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.06540",
+  "title": "Self-Organizing Dual-Buffer Adaptive Clustering Experience Replay (SODACER) for Safe Reinforcement Learning in Optimal Control",
+  "authors": [
+    "Roya Khalili Amirabadi",
+    "Mohsen Jalaeian Farimani",
+    "Omid Solaymani Fard"
+  ],
+  "summary": "This paper proposes a novel reinforcement learning framework, named Self-Organizing Dual-buffer Adaptive Clustering Experience Replay (SODACER), designed to achieve safe and scalable optimal control of nonlinear systems. The proposed SODACER mechanism consisting of a Fast-Buffer for rapid adaptation to recent experiences and a Slow-Buffer equipped with a self-organizing adaptive clustering mechanism to maintain diverse and non-redundant historical experiences. The adaptive clustering mechanism dynamically prunes redundant samples, optimizing memory efficiency while retaining critical…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.AI",
+    "cs.LG",
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-01-10",
+  "updated": "2026-04-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

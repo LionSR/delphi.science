@@ -1,0 +1,21 @@
+{
+  "key": "2609.18660",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.18660",
+  "title": "Polyconvexity for incompressible inversion-symmetric energies of Valanis-Landel type",
+  "authors": [
+    "Ionel-Dumitrel Ghiba",
+    "Maximilian P. Wollner",
+    "Patrizio Neff"
+  ],
+  "summary": "{Let $λ_i = ν_i(F)$ denote the three singular values of the deformation gradient $F \\in {\\rm GL}^+(3)$.} We consider the family of incompressible isotropic energies $ W_ψ(F)=\\sum_i ψ\\left(|\\!\\logλ_i|\\right)$ with $ψ:[0,\\infty)\\mapsto\\mathbb{R}$. Set $g(s)=ψ\\left({\\rm arcosh}\\frac{s}{2}\\right)$ for all $s\\geq2$. If $g$ has a convex and non-decreasing extension $\\bar g$ to $[0,\\infty)$, then $W_ψ$ is the restriction to ${\\rm SL}(3)$ of the explicit polyconvex function \\ {$ F\\mapsto\\sum_i \\bar g\\left(ν_i(F+{\\rm Cof} F)\\right). $} The proof uses the identity $ν_i(F+{\\rm Cof} F)=λ_i+λ_i^{-1}$, up…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

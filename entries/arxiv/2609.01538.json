@@ -1,0 +1,22 @@
+{
+  "key": "2609.01538",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.01538",
+  "title": "Generalized Semi-Infinite Programming for Robust Optimal Control with Decision-Dependent Uncertainty",
+  "authors": [
+    "J. Wehbeh",
+    "E. C. Kerrigan",
+    "E. Scaccia"
+  ],
+  "summary": "Generalized semi-infinite programs (GSIPs) arise in robust optimal control whenever the admissible uncertainty depends on the state or controls. Existing GSIP methods either impose restrictive structural assumptions or require global optimization that scales poorly to control problems. We present a general framework that reformulates any GSIP with mild regularity as an existence-constrained semi-infinite program, smoothing its disjunctive feasibility condition into differentiable existence constraints over a fixed index superset. The resulting program is solved by established adaptive…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-09-01",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

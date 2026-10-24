@@ -1,0 +1,22 @@
+{
+  "key": "2606.28230",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28230",
+  "title": "A Fletcher's Augmented Lagrangian-Based Stochastic First-Order Method for Nonconvex Equality-Constrained Optimization",
+  "authors": [
+    "Yawen Cui",
+    "Qiankun Shi",
+    "Xiao Wang",
+    "Xiantao Xiao"
+  ],
+  "summary": "In this paper, we study nonconvex equality-constrained optimization problems in which only stochastic first-order approximations of the objective and constraint functions are available. Owing to the stochasticity in both objective and constraints, most existing stochastic first-order methods incur relatively high oracle complexity, particularly in terms of stochastic constraint function evaluations. To address this issue, we develop a stochastic first-order method based on a decomposed stochastic search direction, and employ Fletcher's augmented Lagrangian as a smooth merit function for…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-26",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,27 @@
+{
+  "key": "2607.21716",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.21716",
+  "title": "A Defense of the Quadratic Model",
+  "authors": [
+    "Alexandru Meterez",
+    "Pranav Ajit Nair",
+    "Depen Morwani",
+    "Cengiz Pehlevan",
+    "Sham Kakade",
+    "Alex Damian"
+  ],
+  "summary": "Due to the complexity of neural network loss landscapes, optimization theory is forced to rely on idealized models, and there is generally a tradeoff between how theoretically tractable the model is, and how accurately it describes the true optimization dynamics. In this work, we stress test the simplest possible model of optimization -- the quadratic model -- and show that it can be surprisingly predictive in an LLM setting with 150M parameters and 3B training tokens. Specifically, we show that Taylor expanding the model and the loss function at intermediate checkpoints through training can…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-07-23",
+  "updated": "2026-07-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

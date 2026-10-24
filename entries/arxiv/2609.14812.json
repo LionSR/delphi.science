@@ -1,0 +1,26 @@
+{
+  "key": "2609.14812",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.14812",
+  "title": "Learning Long-Term Stable Operator Inference Reduced-Order Models of Fluid Flows through Online Spatial Filtering",
+  "authors": [
+    "Ian Moore",
+    "Ping-Hsuan Tsai",
+    "Anthony Gruber",
+    "Ionuţ Farcaş",
+    "Christopher Wentland",
+    "Irina Tezaur",
+    "Traian Iliescu"
+  ],
+  "summary": "This paper introduces an online evolve--filter--relax (EFR) strategy for long-term stability of Operator Inference (OpInf) reduced-order models (ROMs) of complex fluid flow simulations. The main novelty of the new EFR-OpInf strategy is the use of online (i.e., at the learned ROM online evaluation level) spatial filtering inspired from large eddy simulation to significantly improve long-term stability and predictive performance of standard OpInf. Furthermore, the EFR-OpInf strategy reduces, and in some cases even eliminates, the need for standard $L^2$ regularization, while providing physical…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-09-13",
+  "updated": "2026-09-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2608.08861",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.08861",
+  "title": "Simultaneous Group-Envelope Bounds for $Γ$-Robust Multiple-Choice Knapsack Problems",
+  "authors": [
+    "Zi Yuan Eric Shao"
+  ],
+  "summary": "Many robust planning problems are solved by checking a family of ordinary optimization problems, one for each uncertainty threshold. Repeatedly building and solving those relaxations can dominate runtime. We show that, when a decision chooses exactly one option from each group, the entire threshold family of multiple-choice knapsack relaxations can instead be bounded together. A cancellation removes threshold-specific baselines and reduces each group's contribution to two simple envelopes. After sorting, one multiplier is evaluated across all thresholds in time linear in their number and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-09",
+  "updated": "2026-08-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

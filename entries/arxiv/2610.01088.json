@@ -1,0 +1,21 @@
+{
+  "key": "2610.01088",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01088",
+  "title": "Polylogarithmic Sparsity of Randomly Reweighted NPMLEs for Gaussian Mixtures",
+  "authors": [
+    "Hansheng Jiang"
+  ],
+  "summary": "The nonparametric maximum likelihood estimator (NPMLE) of a Gaussian location mixture maximizes the likelihood over the infinite-dimensional space of mixing distributions. The maximizing mixing distribution can be nonunique, and the classical bound on its number of atoms grows linearly with the sample size $n$. We show that a vanishingly small random perturbation of the likelihood yields exact polylogarithmic sparsity. The resulting randomly reweighted NPMLE maximizes a weighted likelihood whose independent weights, taken to be Gamma in our analysis, concentrate around one as $n$ grows. With…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

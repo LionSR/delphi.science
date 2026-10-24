@@ -1,0 +1,21 @@
+{
+  "key": "2610.14457",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.14457",
+  "title": "Convergence of Least Squares Methods for PDEs on R^d with Shallow ReLU^k Networks",
+  "authors": [
+    "Tong Mao",
+    "Lei Shi",
+    "Hanfei Zhou"
+  ],
+  "summary": "We establish inverse inequalities in Gaussian Sobolev norms for shallow $\\mathrm{ReLU}^k$ trial spaces. The estimates identify the sharp regularity threshold and quantify the dependence on parameter separation and bias magnitude. Based on these estimates, we prove convergence of weighted least squares discretizations of linear PDEs on $\\mathbb R^d$ using shallow networks with prescribed inner parameters and finitely many residual samples in an expanding ball. Under suitable stability and regularity assumptions, we obtain an error bound of order $h^{k+(d+1)/2-r}δ_\\pm^{-(S-r)}$ in the Gaussian…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-10",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

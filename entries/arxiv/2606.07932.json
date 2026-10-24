@@ -1,0 +1,26 @@
+{
+  "key": "2606.07932",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.07932",
+  "title": "LEGS: Laplacian-Enhanced Gaussian Splatting with a Nonlinear Weighted Loss",
+  "authors": [
+    "Yongfei Guo",
+    "Qizhou Huo",
+    "Xuan Sun",
+    "Yuanhao Gong"
+  ],
+  "summary": "3D Gaussian Splatting (3DGS) has become an efficient explicit representation for radiance field reconstruction and real-time novel view synthesis. However, its standard photometric loss treats flat and structure-rich regions similarly, which may limit the recovery of sharp contours and fine details. Edge-Guided Gaussian Splatting (EGGS) improves structure awareness through edge-guided weighting, but mainly relies on first-order gradient responses and linear weighting. In this paper, we propose LEGS, a Laplacian-Enhanced Gaussian Splatting method with a nonlinearly weighted loss. LEGS…",
+  "domain": "cs.CV",
+  "tags": [
+    "cs.CV",
+    "cs.GR",
+    "cs.MM",
+    "eess.IV",
+    "math.OC"
+  ],
+  "published": "2026-06-06",
+  "updated": "2026-06-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

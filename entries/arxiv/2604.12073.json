@@ -1,0 +1,20 @@
+{
+  "key": "2604.12073",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.12073",
+  "title": "Resilience Quantification and its Support for Operational Resilience",
+  "authors": [
+    "Ion Matei",
+    "Maksym Zhenirovskyy"
+  ],
+  "summary": "We present a method to quantify a system's resilience capacity, i.e., the set of degradation magnitudes for which all functional requirements remain satisfied. These requirements come from human stakeholders (e.g., operators, planners) who define the acceptable performance envelope. By representing the resilience capacity in degradation space, we obtain an application -- agnostic resilience metric (e.g., capacity volume). To approximate the capacity efficiently in high-dimensional spaces, we pair machine-learning classifiers with entropy-based active sampling, reducing costly feasibility…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-13",
+  "updated": "2026-04-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2604.11105",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.11105",
+  "title": "Nesterov Acceleration with Operator Decomposition",
+  "authors": [
+    "Jaewook Lee",
+    "Ernest K. Ryu",
+    "Chulhee Yun"
+  ],
+  "summary": "We propose Nesterov acceleration with Operator Decomposition (NOD), which extends Nesterov's accelerated gradient descent (NAG) from smooth strongly convex optimization to the broader setting of strongly monotone, Lipschitz operators. The key insight is to decompose the operator into cyclically monotone and monotone components, with the Asplund decomposition providing the tightest such representation, and to have the algorithm utilize the decomposed oracles. NOD and its analysis subsume the classical theory of Nesterov acceleration and yield an iteration complexity for finding an…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-13",
+  "updated": "2026-04-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2604.17947",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.17947",
+  "title": "Adaptive finite element methods with optimally preconditioned GMRES guarantee optimal complexity",
+  "authors": [
+    "Thomas Führer",
+    "Paula Hilbert",
+    "Ani Miraçi",
+    "Dirk Praetorius"
+  ],
+  "summary": "We analyze optimal complexity of adaptive finite element methods (AFEMs) for general second-order linear elliptic partial differential equations (PDEs) in the Lax-Milgram setting. To this end, we formulate an adaptive algorithm which steers the local mesh-refinement as well as the termination of a generalized minimal residual solver (GMRES) with optimal preconditioner to solve the arising non-symmetric finite element systems. Algorithmic interplay of mesh-refinement and iterative solver is shown to be optimal: A natural and fully computable quasi-error monitoring discretization error and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-04-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

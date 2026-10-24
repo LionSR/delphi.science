@@ -1,0 +1,21 @@
+{
+  "key": "2607.08999",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08999",
+  "title": "Pareto-Optimal Scheduling in the Half-batch Multiserver-job Model",
+  "authors": [
+    "Ziyuan Wang",
+    "Izzy Grosof"
+  ],
+  "summary": "In large-scale computing systems, jobs often demand heterogeneous server allocations: large jobs that occupy a substantial fraction of the servers are of high importance and are thus latency-sensitive, while small jobs fill in the remaining capacity to maintain throughput. To model this dynamic, we introduce the half-batch multiserver-job (MSJ) framework, a queueing model in which large jobs arrive according to a Poisson process and require all servers simultaneously, while small jobs, each needing only one server, are always available. We prove that, in the half-batch MSJ model, the Pareto…",
+  "domain": "cs.PF",
+  "tags": [
+    "cs.PF",
+    "math.PR"
+  ],
+  "published": "2026-07-10",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

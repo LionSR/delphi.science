@@ -1,0 +1,21 @@
+{
+  "key": "2605.28503",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.28503",
+  "title": "Birkhoff interpolation models for optimization with some available derivatives",
+  "authors": [
+    "Jeffrey Larson",
+    "Matt Menickelly",
+    "Evan Toler"
+  ],
+  "summary": "We consider interpolation-based derivative-free optimization in settings where only some derivatives are available. Such situations arise in scientific computing applications involving simulations, adjoint-enabled components, legacy software, or partially differentiable models. We introduce a Birkhoff interpolation framework that permits arbitrary patterns of derivative availability and enables the construction of local polynomial models using mixtures of function values and partial derivative information. In contrast to Hermite interpolation approaches, the proposed framework does not…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-27",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

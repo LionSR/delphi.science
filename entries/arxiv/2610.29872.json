@@ -1,0 +1,24 @@
+{
+  "key": "2610.29872",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.29872",
+  "title": "Recovering Plausible Transmission Outage Scenarios",
+  "authors": [
+    "Karen Ji",
+    "Cameron Khanpour",
+    "Samuel Talkington",
+    "J. Kyle Skolfield",
+    "Daniel K. Molzahn"
+  ],
+  "summary": "Expansion planning for extreme weather needs outage scenarios that specify which transmission branches fail. However, public outage records often only report customers without power by county, making it unclear how to exploit this information to create outage scenarios. We propose a method to recover sets of outaged branches that most closely match regional load shed data. This gives us sets of plausible outages for a given hazard event. We formulate a bilevel problem with a load shedding DC optimal power flow in the lower level. We relax the binary branch states to differentiate the lower…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2608.01069",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.01069",
+  "title": "Sharp Characterization of Bias in Post-Bandit Inference",
+  "authors": [
+    "Lisu Wang",
+    "Yilun Chen",
+    "Jiaqi Lu"
+  ],
+  "summary": "Bandit algorithms generate data for downstream inference, but adaptive sampling biases post-bandit sample means. We analyze this bias for stable index algorithms, including UCB1 and its generalizations, and derive sharp leading-order expressions for the sample-mean bias and expected $Z$-statistic, in bandit experiments of fixed horizon $T$. Our characterization reveals the algorithmic origin of bias through a key index-function-dependent quantity, which we term effective exploration rate. For example, under UCB1, the effective exploration rate is of order $\\sqrt{\\log T}$, and the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-08-02",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

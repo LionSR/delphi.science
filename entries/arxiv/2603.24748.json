@@ -1,0 +1,24 @@
+{
+  "key": "2603.24748",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.24748",
+  "title": "Distributed MPC For Coordinated Path-Following",
+  "authors": [
+    "Lusine Poghosyan",
+    "Anna Manucharyan",
+    "Mikayel Aramyan",
+    "Naira Hovakimyan",
+    "Tigran Bakaryan"
+  ],
+  "summary": "In this paper, we consider a distributed model predictive control (MPC) algorithm for coordinated path-following. Relying on the time-critical cooperative path-following framework, which decouples space and time and reduces the coordination problem to a one-dimensional setting, we formulate a distributed MPC scheme for time coordination. Leveraging properties of the normalized Laplacian, we decouple the MPC dynamics into independent modes and derive a recursive relation linking current and predicted states. Using this structure, we prove that, for prediction horizon $K=1$ and a fixed…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "math.OC"
+  ],
+  "published": "2026-03-25",
+  "updated": "2026-03-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

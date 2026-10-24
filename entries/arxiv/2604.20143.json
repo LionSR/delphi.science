@@ -1,0 +1,21 @@
+{
+  "key": "2604.20143",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.20143",
+  "title": "Machine learning moment closure models for the radiative transfer equation IV: enforcing symmetrizable hyperbolicity in two dimensions",
+  "authors": [
+    "Juntao Huang"
+  ],
+  "summary": "This is our fourth work in the series on machine learning (ML) moment closure models for the radiative transfer equation (RTE). In the first three papers of this series, we considered the RTE in slab geometry in 1D1V (i.e. one dimension in physical space and one dimension in angular space), and introduced a gradient-based ML moment closure [1], then enforced the hyperbolicity through a symmetrizer [2], or together with physical characteristic speeds by learning the eigenvalues of the Jacobian matrix [3]. Here, we extend our framework to the RTE in 2D2V (i.e. two dimensions in physical space…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG",
+    "physics.comp-ph"
+  ],
+  "published": "2026-04-22",
+  "updated": "2026-04-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

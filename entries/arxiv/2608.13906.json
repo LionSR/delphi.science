@@ -1,0 +1,20 @@
+{
+  "key": "2608.13906",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.13906",
+  "title": "New lower bounds for constant-weight codes via seeded bit-swap tabu search",
+  "authors": [
+    "William Echols"
+  ],
+  "summary": "A binary constant-weight code is a set of binary words of length $n$ such that each word has exactly weight $w$ and is at least Hamming distance $d$ from every other word in the set. $A(n,d,w)$ denotes the maximum size of a binary constant-weight code with parameters $(n,d,w)$. Using seeded initialization with bit-swap tabu search, we found 124 new constructions that improve existing lower bounds for $A(n,d,w)$. As a corollary of stronger bounds on $A(n,8,8)$ for $n \\in \\{ 32,33,34,37 \\}$, we also improve lower bounds on kissing numbers $τ_{32}$, $τ_{33}$, $τ_{34}$, and $τ_{37}$.",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "math.CO"
+  ],
+  "published": "2026-08-14",
+  "updated": "2026-08-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2605.01903",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.01903",
+  "title": "The Control Plant as A Communication Channel: Implicit Communication for Decentralized LQG Control",
+  "authors": [
+    "Gongpu Chen",
+    "Deniz Gündüz"
+  ],
+  "summary": "We study a decentralized linear quadratic Gaussian control problem, in which a leader and a follower must steer a linear system to a target state. The target state is known only to the leader, and no explicit communication channel exists between the agents. To address the challenge posed by this asymmetric information structure, we propose an integrated communication and control (ICoCo) framework in which the control plant itself serves as a communication channel: the leader encodes the target state into its control input through an additive communication term, and the follower decodes it…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-05-03",
+  "updated": "2026-05-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

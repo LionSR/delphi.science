@@ -1,0 +1,24 @@
+{
+  "key": "2602.05813",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05813",
+  "title": "Where Does Warm-Up Come From? Adaptive Scheduling for Norm-Constrained Optimizers",
+  "authors": [
+    "Artem Riabinin",
+    "Andrey Veprikov",
+    "Arman Bolatov",
+    "Martin Takáč",
+    "Aleksandr Beznosikov"
+  ],
+  "summary": "We study adaptive learning rate scheduling for norm-constrained optimizers (e.g., Muon and Lion). We introduce a generalized smoothness assumption under which local curvature decreases with the suboptimality gap and empirically verify that this behavior holds along optimization trajectories. Under this assumption, we establish convergence guarantees under an appropriate choice of learning rate, for which warm-up followed by decay arises naturally from the proof rather than being imposed heuristically. Building on this theory, we develop a practical learning rate scheduler that relies only on…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-05-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

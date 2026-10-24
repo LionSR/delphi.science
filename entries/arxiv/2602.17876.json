@@ -1,0 +1,22 @@
+{
+  "key": "2602.17876",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.17876",
+  "title": "Interactive Learning of Single-Index Models via Stochastic Gradient Descent",
+  "authors": [
+    "Nived Rajaraman",
+    "Yanjun Han"
+  ],
+  "summary": "Stochastic gradient descent (SGD) is a cornerstone algorithm for high-dimensional optimization, renowned for its empirical successes. Recent theoretical advances have provided a deep understanding of how SGD enables feature learning in high-dimensional nonlinear models, most notably the \\textit{single-index model} with i.i.d. data. In this work, we study the sequential learning problem for single-index models, also known as generalized linear bandits or ridge bandits, where SGD is a simple and natural solution, yet its learning dynamics remain largely unexplored. We show that, similar to the…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-02-19",
+  "updated": "2026-02-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

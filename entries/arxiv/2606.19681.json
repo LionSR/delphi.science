@@ -1,0 +1,19 @@
+{
+  "key": "2606.19681",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.19681",
+  "title": "A Moment-Based Eulerian Method for Variance-Based Finite-Time Lyapunov Exponent Computation in Stochastic Flows",
+  "authors": [
+    "Shingyu Leung"
+  ],
+  "summary": "Variance-based finite-time Lyapunov exponents (vFTLEs) provide a stochastic analogue of deterministic FTLE by measuring the covariance of stochastic arrival locations. Existing PDF-based formulations compute this covariance by solving a Fokker--Planck equation for each initial point, which becomes expensive when the diagnostic is required on a dense grid. In this work, we develop a moment-based Eulerian approximation to vFTLE in the small-noise regime. Starting from a stochastic trajectory expansion about the deterministic flow, we derive a closed covariance equation for the leading…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

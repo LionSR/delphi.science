@@ -1,0 +1,21 @@
+{
+  "key": "2608.22290",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.22290",
+  "title": "Approximate counting of vertices of 0/1 polytopes: a stronger hardness result",
+  "authors": [
+    "Heng Guo",
+    "Mark Jerrum"
+  ],
+  "summary": "We show that approximately counting the vertices of a bounded 0/1 polytope, presented as a system of rational linear inequalities, is, informally speaking, NP-hard. In particular, there is no FPRAS for this problem unless RP=NP. The proof is by a reduction from approximately counting homomorphisms from a given graph to a particular four-vertex graph. The main proof ideas were found using GPT-5.6 Sol Ultra.",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "math.CO"
+  ],
+  "published": "2026-08-23",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

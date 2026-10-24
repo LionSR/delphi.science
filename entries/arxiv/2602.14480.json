@@ -1,0 +1,21 @@
+{
+  "key": "2602.14480",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14480",
+  "title": "Graph-Guided Fused Regularization for Single- and Multi-Task Regression on Spatiotemporal Data",
+  "authors": [
+    "Meixia Lin",
+    "Ziyang Zeng",
+    "Yangjing Zhang"
+  ],
+  "summary": "Spatiotemporal matrix-valued data arise frequently in modern applications, yet performing effective regression analysis remains challenging due to complex, dimension-specific dependencies. In this work, we propose a regularized framework for spatiotemporal matrix regression that characterizes temporal and spatial dependencies through tailored penalties. Specifically, the model incorporates a fused penalty to capture smooth temporal evolution and a graph-guided penalty to promote spatial similarity. The framework also extends to the multi-task setting, enabling joint estimation across related…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-02-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2604.00742",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00742",
+  "title": "Delayed logistic equation as a limit of long memory Markov chains",
+  "authors": [
+    "Eldon Barros",
+    "Dirk Erhard",
+    "Tertuliano Franco",
+    "Milton Jara"
+  ],
+  "summary": "We introduce and analyze a long-memory continuous-time Markov chain on $\\mathbb{R}_{+}$ whose jump mechanism depends explicitly on a state in the past. From the present state $x_0$, the process jumps to $x_0\\left(1+\\frac{1}{N}\\right)$ or $x_0\\left(1-\\frac{x_{-\\lfloor τN \\rfloor}}{N^2}\\right)$, each at rate $\\tfrac{1}{2}$, where $x_{-\\lfloor τN \\rfloor}$ denotes the state located $\\lfloor τN \\rfloor$ jumps backward in time. Here the delay $τ> 0$ is fixed and $N$ is the scaling parameter. The initial condition is prescribed by a vector of length $\\lfloor τN \\rfloor + 1$, all of whose entries…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-04-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

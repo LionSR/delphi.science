@@ -1,0 +1,20 @@
+{
+  "key": "2607.13611",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.13611",
+  "title": "Error Analysis of a Fully-Discrete Implicit $θ$-Scheme with WG-FEM for Parabolic Singularly Perturbed Boundary Turning Point Problems",
+  "authors": [
+    "Aayushman Raina",
+    "Srinivasan Natesan"
+  ],
+  "summary": "In this article, we introduce a weak Galerkin finite element method (WG-FEM) for a class of parabolic singularly perturbed boundary turning point problems (SPBTPPs). The proposed numerical scheme employs an implicit $θ$-scheme for temporal discretization over a uniform mesh and applies WG-FEM spatial discretization on a layer-adapted Shishkin mesh. Rigorous stability estimates are established for both the semi-discrete and fully-discrete formulations. Furthermore, we derive error estimates in the energy norm and prove that the convergence of the scheme is uniform with respect to the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

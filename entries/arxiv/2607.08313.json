@@ -1,0 +1,20 @@
+{
+  "key": "2607.08313",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08313",
+  "title": "Adaptive Row Selection Meets Asynchrony in Randomized Kaczmarz",
+  "authors": [
+    "Evan Coleman"
+  ],
+  "summary": "Randomized Kaczmarz is a natural fit for large sparse least-squares and tomographic reconstruction, and adaptive row selection can reduce iteration counts. However, deploying adaptive selection on a shared-memory machine means sampling from a residual that lock-free workers are concurrently modifying, often using stale data. We present the first systematic study of this regime: residual-weighted and greedy Kaczmarz under asynchronous execution, measured across 339 runs on a 96-core node with realized (not injected) delays. Four findings carry directly to practice. (i) Stability is governed…",
+  "domain": "cs.DC",
+  "tags": [
+    "cs.DC",
+    "math.NA"
+  ],
+  "published": "2026-07-09",
+  "updated": "2026-08-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2606.19878",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.19878",
+  "title": "On the Oracle Complexity of Interpolation-Based Gradient Descent",
+  "authors": [
+    "Dongmin Lee",
+    "William Lu",
+    "Anuran Makur"
+  ],
+  "summary": "Recent work on first-order optimizers for empirical risk minimization (ERM) has suggested that smoothness of ERM loss functions in the training data, rather than in the optimization parameters, can be leveraged to improve the oracle complexity of gradient descent (GD) methods. In this paper, we propose an inexact gradient method, piecewise polynomial interpolation-based gradient descent (PPI-GD), which approximates the full gradient in each iteration by querying the first-order oracle at equidistant points in the data domain to construct polynomial interpolants of the resulting gradient…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

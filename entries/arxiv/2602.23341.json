@@ -1,0 +1,26 @@
+{
+  "key": "2602.23341",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.23341",
+  "title": "Mean Estimation from Coarse Data: Characterizations and Efficient Algorithms",
+  "authors": [
+    "Alkis Kalavasis",
+    "Anay Mehrotra",
+    "Manolis Zampetakis",
+    "Felix Zhou",
+    "Ziyu Zhu"
+  ],
+  "summary": "Coarse data arise when learners observe only partial information about samples; namely, a set containing the sample rather than its exact value. This occurs naturally through measurement rounding, sensor limitations, and lag in economic systems. We study Gaussian mean estimation from coarse data, where each true sample $x$ is drawn from a $d$-dimensional Gaussian distribution with identity covariance, but is revealed only through the set of a partition containing $x$. When the coarse samples, roughly speaking, have ``low'' information, the mean cannot be uniquely recovered from observed…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.DS",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-02-26",
+  "updated": "2026-02-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

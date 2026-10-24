@@ -1,0 +1,23 @@
+{
+  "key": "2605.29095",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.29095",
+  "title": "Asymptotics of the Number of Components of Random Polynomial Lemniscates",
+  "authors": [
+    "Subhajit Ghosh",
+    "Koushik Ramachandran",
+    "Atul Shekhar"
+  ],
+  "summary": "Consider a sequence of random polynomials $P_n(z) = \\prod_{k=1}^{n}(z - X_k)$, where $\\{X_k\\}_k$ are i.i.d. random variables distributed uniformly on the unit disc $\\mathbb{D}$. Let $Λ_n = \\{z \\in \\mathbb{C}: |P_n(z)| < 1\\}$ be the lemniscate of $P_n$, and let $\\mathscr{C}(Λ_n)$ be the number of connected components of $Λ_n$. In this paper, we prove that $\\lim_{n\\to\\infty}\\frac{\\mathbb{E}[\\mathscr{C}(Λ_n)]}{\\sqrt{n}}= γ$, and identify the constant $γ$.",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.CA",
+    "math.CV"
+  ],
+  "published": "2026-05-27",
+  "updated": "2026-05-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

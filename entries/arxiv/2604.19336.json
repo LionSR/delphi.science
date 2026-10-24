@@ -1,0 +1,22 @@
+{
+  "key": "2604.19336",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.19336",
+  "title": "FedSEA: Achieving Benefit of Parallelization in Federated Online Learning",
+  "authors": [
+    "Harekrushna Sahu",
+    "Pratik Jawanpuria",
+    "Pranay Sharma"
+  ],
+  "summary": "Online federated learning (OFL) has emerged as a popular framework for decentralized decision-making over continuous data streams without compromising client privacy. However, the adversary model assumed in standard OFL typically precludes any potential benefits of parallelization. Further, it fails to adequately capture the different sources of statistical variation in OFL problems. In this paper, we extend the OFL paradigm by integrating a stochastically extended adversary (SEA). Under this framework, the loss function remains fixed across clients over time. However, the adversary…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-04-21",
+  "updated": "2026-04-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

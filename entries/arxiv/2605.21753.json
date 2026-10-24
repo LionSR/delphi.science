@@ -1,0 +1,20 @@
+{
+  "key": "2605.21753",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.21753",
+  "title": "Finding a Solution to the Erdős-Ginzburg-Ziv Theorem in Linear Time",
+  "authors": [
+    "Sunghyeon Jo"
+  ],
+  "summary": "The Erdős-Ginzburg-Ziv theorem states that every sequence of 2n - 1 integers contains a subsequence of length n whose sum is divisible by n. Choi, Kang, and Lim gave a simple deterministic O(n log n) algorithm for finding such a subsequence, and Leung recently improved this to O(n log log log n). We give a deterministic linear-time algorithm. The core is a linear-time algorithm for the following prime target subset-sum problem: given p - 1 nonzero residues in Z_p and a target residue, find a subset with the prescribed sum. Our algorithm maintains a compact arithmetic-progression…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-05-20",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

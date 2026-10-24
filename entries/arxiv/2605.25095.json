@@ -1,0 +1,25 @@
+{
+  "key": "2605.25095",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.25095",
+  "title": "RECTOR: Priority-Aware Rule-Based Reranking for Compliance-Aware Autonomous Driving Trajectory Selection",
+  "authors": [
+    "Hadi Hajieghrary",
+    "Benedikt Walter",
+    "Chaitanya Shinde",
+    "Paul Schmitt",
+    "Miguel Hurtado"
+  ],
+  "summary": "Autonomous driving stacks must pick one trajectory from a multi-modal candidate set; choosing by model confidence ignores safety, traffic-law, and comfort constraints. We present \\textsc{RECTOR} (Rule-Enforced Constrained Trajectory Orchestrator), a post-generation reranking layer that scores candidates against a tiered rulebook (Safety~$\\succ$~Legal~$\\succ$~Road~$\\succ$~Comfort) via differentiable proxies and a scene-conditioned applicability mechanism, then selects with a deterministic $\\varepsilon$-lexicographic rule that preserves cross-tier priority by construction -- without retraining…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-05-24",
+  "updated": "2026-05-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

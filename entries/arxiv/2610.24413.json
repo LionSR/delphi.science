@@ -1,0 +1,20 @@
+{
+  "key": "2610.24413",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.24413",
+  "title": "Asymptotic Normality of the Hill Estimator in Linear Preferential Attachment",
+  "authors": [
+    "Tiandong Wang"
+  ],
+  "summary": "We prove asymptotic normality of the Hill estimator based on the largest $k_n$ degrees in a homogeneous linear preferential attachment graph with $n$ vertices. Each new vertex sends a fixed number $m\\ge1$ of edges sequentially to older vertices, with attachment weight $d+δ$ and fixed $δ>-m$. Let $α=m/(2m+δ)$. For every deterministic sequence $k_n\\to\\infty$ satisfying $\\sqrt{k_n}(k_n/n)^α\\to0$, the estimator, centered at $α$ and multiplied by $\\sqrt{k_n}$, converges to a centered normal law with an explicit variance strictly smaller than $α^2$. The reduction relative to the Hill variance for…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "math.PR"
+  ],
+  "published": "2026-10-17",
+  "updated": "2026-10-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

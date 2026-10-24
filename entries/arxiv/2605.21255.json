@@ -1,0 +1,19 @@
+{
+  "key": "2605.21255",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.21255",
+  "title": "The generating function of A348410 in OEIS using the diagonal method and another sequence (A001008) from OEIS",
+  "authors": [
+    "Helmut Prodinger"
+  ],
+  "summary": "$a_n=[x^n](1-x)^{-n}(1-x^2)^{-n}$ is the sequence A348410 in the Encyclopedia of Integer Sequences. Using a method from Hautus and Klarner from 1971 and the software \\textsf{Gfun} we find an algebraic equation for the generating function $g(z)=\\sum_na_nz^n$. The second identity uses the \\emph{generalized binomial series}, popularized in the textbook \\emph{Concrete mathematics}.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-05-20",
+  "updated": "2026-05-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

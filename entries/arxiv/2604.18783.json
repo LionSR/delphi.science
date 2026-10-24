@@ -1,0 +1,22 @@
+{
+  "key": "2604.18783",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.18783",
+  "title": "A Dynamic Mode Decomposition Approach to Parameter Identification",
+  "authors": [
+    "Moad Abudia",
+    "Opeyemi Owolabi",
+    "Rushikesh Kamalapurkar"
+  ],
+  "summary": "This paper develops a data-driven algorithm for simultaneous system and parameter identification in control-affine nonlinear systems. Parameter identification is achieved by training a data-driven predictive model using measurements collected across a prescribed set of known parameter values. The predictive model is then used to estimate unknown parameter values from measured trajectories by minimizing the trajectory prediction error using multi-start Nelder-Mead. Numerical experiments on the controlled Duffing oscillator with unknown damping, stiffness, and nonlinearity coefficients…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

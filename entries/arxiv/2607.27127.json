@@ -1,0 +1,26 @@
+{
+  "key": "2607.27127",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.27127",
+  "title": "Divertor topology and vacuum vessel design for stellarators",
+  "authors": [
+    "Andrew Giuliani",
+    "Raffael Wendlinger",
+    "Misha Padidar",
+    "Robert Davies",
+    "Shibabrat Naik",
+    "Calvin Lowe",
+    "Georg Harrer"
+  ],
+  "summary": "We present stellarator optimization algorithms for designing the edge magnetic structure in vacuum fields, together with the vacuum vessel. First, we introduce a numerical method that robustly computes periodic-orbit fixed points of any type (elliptic, hyperbolic, or parabolic), which could form the basis of a divertor. To couple divertor and vacuum vessel design, we introduce parametric families of vacuum vessels for which point-to-vessel distances, and their derivatives, can be computed efficiently. The resulting algorithms use signed distance functions to enforce coil-vessel clearance…",
+  "domain": "physics.plasm-ph",
+  "tags": [
+    "physics.plasm-ph",
+    "math-ph"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2609.02978",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.02978",
+  "title": "SparseStack Is an Optimal Oblivious Subspace Embedding",
+  "authors": [
+    "Diar Heidary"
+  ],
+  "summary": "We prove that fully independent SparseStack achieves the oblivious subspace embedding parameters conjectured by Nelson and Nguyen (FOCS 2013): $m=O((d+\\log(1/δ))/\\varepsilon^2)$ rows and $s=O(\\log(d/δ)/\\varepsilon)$ nonzero entries per column for distortion $\\varepsilon$ and failure probability $δ$ on any fixed $d$-dimensional subspace, with explicit constants. The proof turns random-matrix concentration into a problem in finite-dimensional linear algebra. A coupling first reduces the moment estimates to a model with independent finite-valued entries. We represent these variables by…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.NA"
+  ],
+  "published": "2026-09-02",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

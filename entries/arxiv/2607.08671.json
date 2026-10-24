@@ -1,0 +1,21 @@
+{
+  "key": "2607.08671",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08671",
+  "title": "Low-Rank Matrix Recovery via Heavy-Tailed Quadratic Sampling",
+  "authors": [
+    "Gao Huang",
+    "Song Li"
+  ],
+  "summary": "The problem of recovering an (approximately) low-rank Hermitian matrix $\\pmb{M}_0 \\in \\mathbb{C}^{n \\times n}$ of rank $r$ from quadratic sampling matrices of the form $\\{\\pmb{a}_k \\pmb{a}_k^*\\}_{k=1}^m$ arises in a variety of applications, including phase retrieval. To obtain rigorous recovery guarantees, the sampling vectors $\\{\\pmb{a}_k\\}_{k=1}^m$ are typically modeled probabilistically. However, most existing theoretical results rely on Gaussian or sub-Gaussian assumptions, which may not accurately capture practical data models. In many applications, sampling vectors exhibit heavier…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.IT"
+  ],
+  "published": "2026-07-09",
+  "updated": "2026-07-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

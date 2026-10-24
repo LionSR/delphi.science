@@ -1,0 +1,24 @@
+{
+  "key": "2607.17526",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.17526",
+  "title": "FlowSonic: Stable Zero-Shot Music Editing via High-Order Trajectory Integration",
+  "authors": [
+    "Ali Boudaghi",
+    "Hadi Zare"
+  ],
+  "summary": "Zero-shot text-guided editing of real-world music recordings requires balancing semantic modification with faithful preservation of the original musical structure. Although recent diffusion transformers trained with rectified flow have achieved remarkable success in text-to-music generation, extending them to edit existing recordings remains challenging because editing requires accurate deterministic inversion, reliable structural preservation, and numerically stable integration throughout the inversion and generation processes. We present FlowSonic, a zero-shot music editing framework built…",
+  "domain": "cs.SD",
+  "tags": [
+    "cs.SD",
+    "cs.LG",
+    "eess.AS",
+    "eess.SP",
+    "math.NA"
+  ],
+  "published": "2026-07-20",
+  "updated": "2026-07-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2607.14193",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14193",
+  "title": "Operator-Informed Gaussian Processes for Complex Helmholtz Wavefields: From Synthetic Benchmarks to In Vivo Brain Elastography",
+  "authors": [
+    "Boyuan Deng",
+    "Kshitiz Upadhyay",
+    "Michael Shields"
+  ],
+  "summary": "The Helmholtz equation governs time-harmonic wave propagation, and in dissipative media a complex modulus renders its squared wavenumber $κ^2$ complex. Inferring such fields from sparse, noisy data calls for solvers that also quantify their own uncertainty. Physics-informed Gaussian-process (GP) regression supplies this by returning a posterior over the solution, yet operator-conditioned formulations have been developed almost exclusively for real-valued fields. We extend operator-informed GP regression to complex-valued Helmholtz problems by realifying the complex operator into an…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.NA",
+    "physics.med-ph"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-09-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

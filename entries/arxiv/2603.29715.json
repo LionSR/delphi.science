@@ -1,0 +1,25 @@
+{
+  "key": "2603.29715",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.29715",
+  "title": "Nonnegative Matrix Factorization in the Component-Wise L1 Norm for Sparse Data",
+  "authors": [
+    "Giovanni Seraghiti",
+    "Kévin Dubrulle",
+    "Arnaud Vandaele",
+    "Nicolas Gillis"
+  ],
+  "summary": "Nonnegative matrix factorization (NMF) approximates a nonnegative matrix, X, by the product of two nonnegative factors, WH, where W has r columns and H has r rows. In this paper, we consider NMF using the component-wise L1 norm as the error measure (L1-NMF), which is suited for data corrupted by heavy-tailed noise, such as Laplace noise or salt and pepper noise, or in the presence of outliers. Our first contribution is an NP-hardness proof for L1-NMF, even when r=1, in contrast to the standard NMF that uses least squares. Our second contribution is to analyze, under simplified probabilistic…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "eess.SP",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-03-31",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

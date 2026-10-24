@@ -1,0 +1,21 @@
+{
+  "key": "2601.03906",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.03906",
+  "title": "Exact Continuous Reformulations of Logic Constraints in Nonlinear Optimization and Optimal Control Problems",
+  "authors": [
+    "Jad Wehbeh",
+    "Eric C. Kerrigan"
+  ],
+  "summary": "Many nonlinear optimal control and optimization problems involve constraints that combine continuous dynamics with discrete logic conditions. Standard approaches typically rely on mixed-integer programming, which introduces scalability challenges and requires specialized solvers. This paper presents an exact reformulation of broad classes of logical constraints as binary-variable-free expressions whose differentiability properties coincide with those of the underlying predicates, enabling their direct integration into nonlinear programming models. Our approach rewrites arbitrary logical…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-01-07",
+  "updated": "2026-01-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

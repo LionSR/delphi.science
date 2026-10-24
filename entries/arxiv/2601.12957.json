@@ -1,0 +1,21 @@
+{
+  "key": "2601.12957",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.12957",
+  "title": "Random tree Besov priors: Data-driven regularisation parameter selection",
+  "authors": [
+    "Hanne Kekkonen",
+    "Andreas Tataris"
+  ],
+  "summary": "We develop a data-driven algorithm for automatically selecting the regularisation parameter in Bayesian inversion under random tree Besov priors. One of the key challenges in Bayesian inversion is the construction of priors that are both expressive and computationally feasible. Random tree Besov priors, introduced in Kekkonen et al. (2023), provide a flexible framework for capturing local regularity properties and sparsity patterns in a wavelet basis. In this paper, we extend this approach by introducing a hierarchical model that enables data-driven selection of the wavelet density…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "math.PR"
+  ],
+  "published": "2026-01-19",
+  "updated": "2026-01-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

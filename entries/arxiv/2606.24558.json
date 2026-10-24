@@ -1,0 +1,21 @@
+{
+  "key": "2606.24558",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.24558",
+  "title": "Decomposition-Based Constructive Heuristics for the Linear Ordering Problem",
+  "authors": [
+    "Kazutoshi Ando",
+    "Tatsuya Sugimoto",
+    "Noriyoshi Sukegawa"
+  ],
+  "summary": "The linear ordering problem (LOP) is a classical NP-hard combinatorial optimization problem. In this paper, we study constructive heuristics for the LOP. We propose a unified recursive framework in which the index set is heuristically partitioned into smaller subsets, sufficiently small subproblems are solved exactly, and the resulting permutations are concatenated. Within this framework, we investigate three different recursive partitioning principles: a rule based on strongly connected components (the level graph method), a cut-based rule (the minimum cut method), and a score-based rule…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-23",
+  "updated": "2026-06-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

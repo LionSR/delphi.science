@@ -1,0 +1,21 @@
+{
+  "key": "2609.24300",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.24300",
+  "title": "A Nonlinear Physics-based Reduced Order Model with Convolutional-based Operator Compression",
+  "authors": [
+    "Anna Ivagnes",
+    "Giovanni Stabile",
+    "Gianluigi Rozza"
+  ],
+  "summary": "Reduced-order models (ROMs) are widely used to accelerate the solution of parametrized partial differential equations, with projection-based methods relying on a linear representation of the governing equations in a low-dimensional space. Their efficiency, however, is fundamentally limited by the Kolmogorov N-width of the solution manifold: when the N-width decays slowly, accurate approximations require a large number of linear modes. This limitation has motivated nonlinear ROMs, which typically replace the linear representation of the solution field with nonlinear latent representations…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-21",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

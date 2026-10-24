@@ -1,0 +1,20 @@
+{
+  "key": "2608.15322",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.15322",
+  "title": "Iterative State- and Control-Dependent Model Predictive Control: A Jacobian-Free Formulation for Constrained Nonlinear Systems",
+  "authors": [
+    "Mohammadreza Kamaldar"
+  ],
+  "summary": "This paper presents an iterative model predictive control algorithm that stabilizes constrained nonlinear systems without evaluating a single plant derivative. By factoring the exact nonlinear dynamics into a pseudo-linear form using state- and control-dependent coefficients (SCDCs), we replace the standard nonconvex optimization with a sequence of constrained linear-quadratic programs. Refreezing the coefficient matrices along the previously predicted trajectory drives the iteration. Near the origin, we prove this sequence contracts to a unique fixed point. We explicitly bound the number of…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-08-15",
+  "updated": "2026-08-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

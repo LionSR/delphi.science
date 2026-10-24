@@ -1,0 +1,22 @@
+{
+  "key": "2610.18231",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.18231",
+  "title": "Composite and Stochastic Smoothed Decentralized Bregman Proximal-Gradient Methods",
+  "authors": [
+    "Shengze Xu",
+    "Chenhan Jin",
+    "Qingsong Wang",
+    "Tieyong Zeng"
+  ],
+  "summary": "Smoothed decentralized Bregman proximal-gradient (SDBPG) methods combine relative-smoothness geometry with edge-dual consensus. We extend SDBPG to node-specific convex nonsmooth regularizers and unbiased stochastic local gradients while retaining its Bregman primal-dual smoothing mechanism. The analysis isolates temporal subgradient motion and aggregation mismatch as two defect sequences. For trajectories in a forward-invariant compact subset of the kernel domain and admissible parameters, finite accumulated defects yield an $O(T^{-1})$ bound on the squared best-iterate proximal residual…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

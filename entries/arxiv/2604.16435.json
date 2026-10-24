@@ -1,0 +1,23 @@
+{
+  "key": "2604.16435",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.16435",
+  "title": "Beyond the Flat-Spike: Adaptive Sparse CCA for Decaying and Unbalanced Signals",
+  "authors": [
+    "Mengchu Xu",
+    "Jian Wang",
+    "Yonina C. Eldar"
+  ],
+  "summary": "Sparse Canonical Correlation Analysis (SCCA) is a fundamental statistical tool for identifying linear relationships in high-dimensional, multi-view data. While minimax theory establishes an optimal sample complexity scaling additively with the sparsity levels of the canonical vectors, computationally efficient algorithms typically suffer from a suboptimal multiplicative dependence. This computational-statistical gap is intrinsically tied to worst-case ``flat'' signal assumptions. In practice, however, multi-view signals frequently exhibit structured energy concentration, such as a power-law…",
+  "domain": "eess.SP",
+  "tags": [
+    "eess.SP",
+    "cs.IT",
+    "math.ST"
+  ],
+  "published": "2026-04-06",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

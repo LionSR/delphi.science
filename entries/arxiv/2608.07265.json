@@ -1,0 +1,22 @@
+{
+  "key": "2608.07265",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.07265",
+  "title": "Finite-Sample Metric Non-Collapse for Geometrically Supervised Latent World Models in Control",
+  "authors": [
+    "Alain Bensoussan",
+    "Minh-Nhat Phung",
+    "Minh-Binh Tran"
+  ],
+  "summary": "We establish a finite-sample learning-to-control theory for geometrically supervised latent models of nonlinear deterministic systems. Geometric supervision is used only during training: simulator state, proprioception, or state estimates with independently validated metric and directional error bounds supply observable-state distances and tangent directions, while deployment remains observation- and action-conditioned. We introduce an encoder-only local--global metric hinge that enforces directional resolution and separated-state discrimination. Under regular observable-factor, coverage,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-08-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

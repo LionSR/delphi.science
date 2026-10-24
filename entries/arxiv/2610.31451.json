@@ -1,0 +1,21 @@
+{
+  "key": "2610.31451",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.31451",
+  "title": "A Fast Algorithm for Quaternion Tensor Singular Value Decomposition under the T-product",
+  "authors": [
+    "Daochang Zhang",
+    "Yue Zhao",
+    "Jingqian Li"
+  ],
+  "summary": "Quaternion tensor singular value decomposition (T-SVD) under the T-product provides a framework for analyzing multidimensional quaternion data. However, the T-SVD construction of Pan and Ng (SIAM J. Matrix Anal. Appl., 2024) \\cite{PanNg2024} contains a structural gap: an unrestricted quaternion matrix SVD need not preserve the paired Fourier block structure required for tensor factor recovery, potentially leading to loss of T-unitarity and inaccurate reconstruction. To address this issue, we develop a structure-preserving construction that transforms each paired quaternion block into a…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

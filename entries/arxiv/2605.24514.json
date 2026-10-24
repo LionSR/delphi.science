@@ -1,0 +1,20 @@
+{
+  "key": "2605.24514",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.24514",
+  "title": "Incremental SVD for Large-Scale Dynamic Matrices: Accuracy, Subspace Stability, Refresh Strategies, and Financial Factor-Based Risk Models",
+  "authors": [
+    "Stilyan Staykov"
+  ],
+  "summary": "Return panels, covariances, and large feature matrices evolve one observation or one entry at a time, yet downstream models require an up-to-date low-rank factorization $A_t \\approx U_t Σ_t V_t^\\top$ on every tick -- a regime where full SVD is prohibitive and existing alternatives sacrifice either singular vectors, singular values, or long-horizon stability. We present a practical, metric-driven study of Brand-style incremental SVD, built around a unified engine that handles row appends, column appends, rank-1 entry updates, and metrics tracking within a single framework, with two core…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "q-fin.RM"
+  ],
+  "published": "2026-05-23",
+  "updated": "2026-05-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

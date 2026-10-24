@@ -1,0 +1,21 @@
+{
+  "key": "2606.17594",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.17594",
+  "title": "Low-Thrust Orbital Differential Games with Speed Constraint Enforcement Using Cost Weighting",
+  "authors": [
+    "Yahli Drucker",
+    "Vitaly Shaferman"
+  ],
+  "summary": "This paper considers the problem of a low-thrust spacecraft pursuit-evasion differential game with an arbitrary terminal relative speed constraint. It addresses the terminal phase of the engagement for two relatively close spacecraft near a circular orbit. The problem is formulated as a linear-quadratic zero-sum differential game, with soft constraints on the terminal relative position and velocity, and running costs on the players' control efforts. An analytical, closed-loop, minimum-fuel-consumption optimal guidance law is derived for each player, forming a saddle-point solution. It is…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

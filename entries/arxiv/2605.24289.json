@@ -1,0 +1,19 @@
+{
+  "key": "2605.24289",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.24289",
+  "title": "An Exact Continuous Conductance Formulation of the Hamiltonian Path Problem",
+  "authors": [
+    "A. Sadovsky"
+  ],
+  "summary": "The Hamiltonian Path Problem is formulated as a continuous minimization problem on conductances assigned to an Ohmic network associated with the given graph. The objective function is a sum of two penalty terms that collectively enforce a set of conditions sufficient for a subgraph of the original graph to be a Hamiltonian path. The objective function is nonconvex. The main result (Theorem 1) shows that, provided the graph has a Hamiltonian path from $h^{start}$ to $h^{end}$, a conductance configuration is a global minimizer of the objective if and only if it corresponds to a Hamiltonian path.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-22",
+  "updated": "2026-05-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

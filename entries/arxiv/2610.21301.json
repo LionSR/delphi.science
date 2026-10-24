@@ -1,0 +1,21 @@
+{
+  "key": "2610.21301",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.21301",
+  "title": "Reconstructing constant point heat sources from few temperature sensors: sparse selection and spatial resolution",
+  "authors": [
+    "Xiaomei Yang",
+    "Zhiliang Deng"
+  ],
+  "summary": "Thermal diffusion and measurement noise can obscure the number and individual parameters of localized heat sources. We study the reconstruction of constant positive point sources from temperature histories at a few sensors, without prescribing the source count. Orthogonal matching pursuit or least angle regression selects candidate locations from a unit-response dictionary. These candidates initialize continuous constrained fits, and a noise-based discrepancy rule selects the smallest accepted model among the attempted fits. The response analysis distinguishes rejection of a merged…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.NA"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

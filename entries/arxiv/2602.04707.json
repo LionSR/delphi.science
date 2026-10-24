@@ -1,0 +1,21 @@
+{
+  "key": "2602.04707",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.04707",
+  "title": "Exact Volumes of Semi-Algebraic Convex Bodies",
+  "authors": [
+    "Lakshmi Ramesh",
+    "Nicolas Weiss"
+  ],
+  "summary": "We compute the volumes of convex bodies that are given by inequalities of concave polynomials. These volumes are found to arbitrary precision thanks to the representation of periods by linear differential equations. Our approach rests on work of Lairez, Mezzarobba, and Safey El Din. We present a novel method to identify the relevant critical values. Convexity allows us to reduce the required number of creative telescoping steps by an exponential factor. We provide an implementation based on the ore_algebra package in SageMath. We present examples computed with our implementation in 2, 3 and…",
+  "domain": "math.AG",
+  "tags": [
+    "math.AG",
+    "cs.SC"
+  ],
+  "published": "2026-02-04",
+  "updated": "2026-05-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

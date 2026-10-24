@@ -1,0 +1,22 @@
+{
+  "key": "2603.13872",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.13872",
+  "title": "On Interpolation Formulas Describing Neural Network Generalization",
+  "authors": [
+    "Jin Guo",
+    "Roy Y. He",
+    "Jean-Michel Morel"
+  ],
+  "summary": "In 2020 Domingos introduced an interpolation formula valid for \"every model trained by gradient descent\". He concluded that such models behave approximately as kernel machines. In this work, we extend the Domingos formula to stochastic training. We introduce a stochastic gradient kernel that extends the deterministic version via a continuous-time diffusion approximation. We prove stochastic Domingos theorems and show that the expected network output admits a kernel-machine representation with optimizer-specific weighting. It reveals that training samples contribute through loss-dependent…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS"
+  ],
+  "published": "2026-03-14",
+  "updated": "2026-03-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

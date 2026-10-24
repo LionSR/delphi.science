@@ -1,0 +1,22 @@
+{
+  "key": "2607.23502",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.23502",
+  "title": "Learning switched non-linear dynamical systems from a single trajectory",
+  "authors": [
+    "Sunny G. W. Wang",
+    "Hemant Tyagi"
+  ],
+  "summary": "We study empirical risk minimization for learning non-linear dynamical systems whose transition dynamics may switch over time. Under stability assumptions, and i.i.d switching over a set of $K$ modes, we derive non-asymptotic bounds on the prediction risk expressed in terms of the metric entropy of the underlying function class. We instantiate our general result for Hölder and linear function classes, obtaining explicit convergence rates that depend on the effective sample size $Tp_i$, where $T$ is the trajectory length and $p_i$ is the probability of observing mode $i$. Numerical…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-07-26",
+  "updated": "2026-07-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,26 @@
+{
+  "key": "2607.18758",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.18758",
+  "title": "A Second-Moment Theory for Floating-Point Reduction Trees",
+  "authors": [
+    "Piyush Sao",
+    "Narasinga Miniskar",
+    "Pedro Valero-Lara",
+    "Keita Teranishi",
+    "Sudip Seal"
+  ],
+  "summary": "Summation error depends on partial-sum order, which standard worst-case bounds omit. To capture this dependence, we derive an exact mean-square error (MSE) recurrence for a binary reduction tree T under conditionally unbiased rounding. With unit roundoff u, the constant-nu model sets the local variance at pre-rounding value x to nu u^2 x^2. Its leading tree-dependent cost for the input vector p is p^T K_T p, where the common-ancestor kernel K_T counts the internal ancestors shared by each pair of leaves. For i.i.d. inputs of mean mu and variance tau^2, this expected cost is tau^2 Lambda_1(T)…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.DC",
+    "cs.IT",
+    "cs.MS"
+  ],
+  "published": "2026-07-21",
+  "updated": "2026-07-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

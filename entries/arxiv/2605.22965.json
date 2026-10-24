@@ -1,0 +1,21 @@
+{
+  "key": "2605.22965",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.22965",
+  "title": "Occupation-Weighted Performance Bounds for Rollout Policies in Stochastic Shortest Path Problems",
+  "authors": [
+    "Anders Hansson",
+    "Bo Wahlberg"
+  ],
+  "summary": "We study rollout policies constructed from an approximate value function for stochastic shortest path problems with an absorbing terminal state. Our main bound weights how much the selected action exceeds the optimal one-step value by expected state visits before termination; the uniform hitting-time estimate follows as a corollary. The bound separates value-approximation and numerical-optimization errors from the error caused by replacing an expectation with a nominal disturbance, and uses approximation errors only at states that can occur after one transition from states visited by the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-05-21",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

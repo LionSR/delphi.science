@@ -1,0 +1,21 @@
+{
+  "key": "2606.17050",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.17050",
+  "title": "Optimal Bounded Thrust Powered Descent with Analytical Ground-Collision Avoidance",
+  "authors": [
+    "Or Nataf",
+    "Vitaly Shaferman"
+  ],
+  "summary": "The paper proposes a new approach to address the bounded-thrust powered-descent problem while ensuring ground-collision avoidance. A time-dependent polynomial approximation of the mass is employed to formulate a bounded linear-quadratic optimal-control problem that minimizes the thrust-acceleration control effort, terminal miss, and terminal velocity error. The resulting approximation is used to impose a hard constraint on the horizontal thrust profile while keeping the vertical thrust profile unconstrained. The key idea is a hierarchical separation of the thrust allocation, which enables…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-06-15",
+  "updated": "2026-06-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2602.00517",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.00517",
+  "title": "A Cayley-free Two-Step Algorithm for Inverse Singular Value Problems",
+  "authors": [
+    "Jiechang Fan",
+    "Weiping Shen",
+    "Yusong Luo",
+    "Enping Lou"
+  ],
+  "summary": "In this paper, we investigate numerical solutions for inverse singular value problems (for short, ISVPs) arising in various applications. Inspired by the methodologies employed for inverse eigenvalue problems, we propose a Cayley-free two-step algorithm for solving the ISVP. Compared to the existing two-step algorithms for the ISVP, our algorithm eliminates the need for Cayley transformations and consequently avoids solving $2(m+n)$ linear systems during the computation of approximate singular vectors at each outer iteration. Under the assumption that the Jacobian matrix at a solution is…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.FA",
+    "math.OC"
+  ],
+  "published": "2026-01-31",
+  "updated": "2026-01-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

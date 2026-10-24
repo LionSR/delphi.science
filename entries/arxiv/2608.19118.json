@@ -1,0 +1,21 @@
+{
+  "key": "2608.19118",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19118",
+  "title": "A Near-Optimal Linear Range for the Erdős Matching Conjecture",
+  "authors": [
+    "Mengyu Cao",
+    "Hong Liu",
+    "Haixiang Zhang"
+  ],
+  "summary": "The Erdős Matching Conjecture is governed by two competing ways of excluding $s+1$ disjoint edges: one may concentrate all edges on fewer than $k(s+1)$ vertices, or force every edge to meet a fixed $s$-set. We determine a near-optimal range in which the second construction is extremal. For every fixed $k\\ge2$, there is $s_0(k)$ such that, whenever $s\\ge s_0(k)$ and $n\\ge(k+1)s$, every $\\mathcal{F}\\subseteq\\binom{[n]}k$ with $ν(\\mathcal{F})\\le s$ satisfies \\[ |\\mathcal{F}|\\le\\binom nk-\\binom{n-s}k, \\] with equality only for the family of all $k$-sets meeting a fixed $s$-set. This improves the…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-08-19",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

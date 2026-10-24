@@ -1,0 +1,21 @@
+{
+  "key": "2608.19603",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19603",
+  "title": "An adaptive and conservative low-rank IMEX solver for the hybrid ion Vlasov-Fokker-Planck and fluid electron system",
+  "authors": [
+    "Joseph Nakao",
+    "Dylan T. Jacobs",
+    "William Taitano"
+  ],
+  "summary": "We present a macroscopically conservative, rank-adaptive method for solving a hybrid Vlasov-Fokker-Planck (VFP) equation in which the ions are treated kinetically, and the electrons are treated as a fluid. Solving this system poses several coupled computational challenges: the curse of dimensionality, conservation of macroscopic quantities, stiffness arising from the multiscale nature of the model, and structure preservation. To address these challenges, we combine several established methods, each targeting a specific difficulty, into a unified framework for solving this nonlinear system.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-20",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

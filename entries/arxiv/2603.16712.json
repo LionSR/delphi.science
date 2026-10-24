@@ -1,0 +1,25 @@
+{
+  "key": "2603.16712",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.16712",
+  "title": "High-dimensional estimation with missing data: Statistical and computational limits",
+  "authors": [
+    "Kabir Aladin Verchand",
+    "Ankit Pensia",
+    "Saminul Haque",
+    "Rohith Kuditipudi"
+  ],
+  "summary": "We consider computationally-efficient estimation of population parameters when observations are subject to missing data. In particular, we consider estimation under the realizable contamination model of missing data in which an $ε$ fraction of the observations are subject to an arbitrary (and unknown) missing not at random (MNAR) mechanism. When the true data is Gaussian, we provide evidence towards statistical-computational gaps in several problems. For mean estimation in $\\ell_2$ norm, we show that in order to obtain error at most $ρ$, for any constant contamination $ε\\in (0, 1)$,…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.DS",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-03-17",
+  "updated": "2026-03-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

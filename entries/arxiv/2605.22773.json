@@ -1,0 +1,24 @@
+{
+  "key": "2605.22773",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.22773",
+  "title": "Deep Reinforcement Learning for Flexible Job Shop Scheduling with Random Job Arrivals",
+  "authors": [
+    "Yu Tang",
+    "Muhammad Zakwan",
+    "Efe Balta",
+    "John Lygeros",
+    "Alisa Rupenyan"
+  ],
+  "summary": "The Flexible Job Shop Scheduling Problem (FJSP) is the optimal allocation of a set of jobs to machines. Two primary challenges persist in FJSP: the unpredictable arrival of future jobs and the combinatorial complexity of the problem, rendering it intractable for conventional mixed-integer linear programming solvers. This paper proposes an event-based \\gls{DRL} approach to solve FJSP with random job arrivals. Specifically, we employ the Proximal Policy Optimization algorithm and use lightweight Multi-Layer Perceptrons to train the \\gls{DRL} agent for minimizing the total completion time of…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-05-21",
+  "updated": "2026-05-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

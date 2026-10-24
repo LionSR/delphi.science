@@ -1,0 +1,23 @@
+{
+  "key": "2606.25323",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.25323",
+  "title": "Physics-Informed Neural Networks for the Time-Domain Maxwell Equations with Split-Field Perfectly Matched Layers",
+  "authors": [
+    "Xiaodong Liu",
+    "Lingquan Li",
+    "Gregory Moss",
+    "Scott Langdon"
+  ],
+  "summary": "Physics informed neural networks (PINNs) incorporate Maxwell's equations, initial conditions, boundary conditions, and measurement data directly into the learning process, transforming the solution of partial differential equations into a constrained optimization problem. As such, PINNs are attracting increased attention in computational electromagnetics as an alternative to traditional time-domain solvers. This paper presents a PINN formulation for the time-domain Maxwell's equations incorporating split-field perfectly matched layers (PMLs). A key advantage of the split-field PML…",
+  "domain": "math-ph",
+  "tags": [
+    "math-ph",
+    "physics.comp-ph"
+  ],
+  "published": "2026-06-24",
+  "updated": "2026-06-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

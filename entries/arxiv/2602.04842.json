@@ -1,0 +1,23 @@
+{
+  "key": "2602.04842",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.04842",
+  "title": "The matrix-vector complexity of $Ax=b$",
+  "authors": [
+    "Michał Dereziński",
+    "Ethan N. Epperly",
+    "Raphael A. Meyer"
+  ],
+  "summary": "Matrix--vector algorithms, particularly Krylov subspace methods, are widely viewed as the most effective algorithms for solving large systems of linear equations. This paper establishes lower bounds on the worst-case number of matrix--vector products needed by such an algorithm to approximately solve a general linear system. The first main result is that, for any matrix--vector algorithm which is allowed the use of randomization and can perform products with both a matrix and its transpose, $Ω(κ\\log(1/\\varepsilon))$ matrix--vector products are necessary to solve a linear system with…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-02-04",
+  "updated": "2026-07-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

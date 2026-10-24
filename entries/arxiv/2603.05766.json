@@ -1,0 +1,23 @@
+{
+  "key": "2603.05766",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.05766",
+  "title": "A Lock-Free Work-Stealing Algorithm for Bulk Operations",
+  "authors": [
+    "Raja Sai Nandhan Yadav Kataru",
+    "Danial Davarnia",
+    "Ali Jannesari"
+  ],
+  "summary": "Work-stealing is a widely used technique for balancing irregular parallel workloads, and most modern runtime systems adopt lock-free work-stealing deques to reduce contention and improve scalability. However, existing algorithms are designed for general-purpose parallel runtimes and often incur overheads that are unnecessary in specialized settings. In this paper, we present a new lock-free work-stealing queue tailored for a master-worker framework used in the parallelization of a mixed-integer programming optimization solver based on decision diagrams. Our design supports native bulk…",
+  "domain": "cs.DC",
+  "tags": [
+    "cs.DC",
+    "cs.CE",
+    "math.OC"
+  ],
+  "published": "2026-03-05",
+  "updated": "2026-03-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

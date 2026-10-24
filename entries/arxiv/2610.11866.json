@@ -1,0 +1,23 @@
+{
+  "key": "2610.11866",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.11866",
+  "title": "Understanding Latent-Dimension Scaling in Dynamical-System Learning through Spectral Reliability",
+  "authors": [
+    "Itsushi Sakata",
+    "Yuta Miyauchi",
+    "Yoshinobu Kawahara"
+  ],
+  "summary": "In deep learning, approximation theory motivates increasing representation size. We ask whether this benefit extends to dynamics learning through autoregressive prediction. We analyze the learned time evolution through the eigenstructure of Koopman operators, using relative residuals to detect spurious eigenpairs arising even as one-step error falls. For bounded Koopman operators, we show that minimal residuals over learned dictionary spaces converge pointwise to their full-space counterparts as these spaces approximate the observable space in $L^2$. Our hypothesis is that Koopman spectral…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS",
+    "nlin.CD"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

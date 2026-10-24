@@ -1,0 +1,19 @@
+{
+  "key": "2606.12561",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.12561",
+  "title": "Compression Covariance and Tangent kernels",
+  "authors": [
+    "James Tian"
+  ],
+  "summary": "Let $A\\geq0$ be self-adjoint on a Hilbert space $H$, let $T_{t}=e^{-tA}$, and let $P$ be an orthogonal projection. Relative to the decomposition $H=PH\\oplus P^{\\perp}H$, write \\[ T_{t}=\\begin{pmatrix}C_{t} & V^{*}_{t}\\\\ V_{t} & D_{t} \\end{pmatrix}, \\] where $C_{t}=PT_{t}P|_{PH}$, $V_{t}=P^{\\perp}T_{t}P|_{PH}$, and $D_{t}=P^{\\perp}T_{t}P^{\\perp}|_{P^{\\perp}H}$. The compressed family $\\left(C_{t}\\right)$ consists of positive contractions but need not form a semigroup. Its defect is given by \\[ C_{s+t}-C_{s}C_{t}=V^{*}_{s}V_{t} \\] while the complementary block satisfies \\[…",
+  "domain": "math.FA",
+  "tags": [
+    "math.FA"
+  ],
+  "published": "2026-06-10",
+  "updated": "2026-06-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

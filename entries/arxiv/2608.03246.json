@@ -1,0 +1,20 @@
+{
+  "key": "2608.03246",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.03246",
+  "title": "Optimal Deterministic Oracle Complexity for Weakly Convex Optimization",
+  "authors": [
+    "Jiajin Li",
+    "Siyu Pan"
+  ],
+  "summary": "We study the oracle complexity of finding $ε$-stationary points of $ρ$-weakly convex and $G$-Lipschitz functions, where stationarity is measured by the gradient of the Moreau envelope. We consider a first-order oracle that returns both the function value and the full subdifferential at every query point. We prove that every deterministic first-order algorithm requires $ Ω({ρG^2Δ}/{ε^4})$ oracle queries whenever $Δ\\leq {G^2}/ρ$, where $f(\\bz)-\\inf f \\leq Δ$. This lower bound matches the best known deterministic and stochastic first-order upper bounds, up to universal constants, and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

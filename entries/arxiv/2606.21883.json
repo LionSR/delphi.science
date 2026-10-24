@@ -1,0 +1,22 @@
+{
+  "key": "2606.21883",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.21883",
+  "title": "A modified projected walk on spheres method for elliptic equations on high-dimensional embedded manifolds: algorithm and error estimates",
+  "authors": [
+    "Zhiyuan Hui",
+    "Changtao Sheng",
+    "Bihao Su",
+    "Tao Zhou"
+  ],
+  "summary": "In this paper, we propose a modified projected Walk on Spheres method (MPWoS) for screened Poisson equations on embedded manifolds. The method employs local extensions together with the Green representation in local Euclidean balls, coupled with a closest-point projection that maps the boundary samples back to the manifold. This formulation yields a meshfree and highly parallelizable stochastic recursion in the ambient Euclidean space, rather than a direct discretization of the Laplace-Beltrami operator on the manifold. The proposed approach can be viewed as a high-dimensional extension and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-20",
+  "updated": "2026-07-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2603.28636",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.28636",
+  "title": "Optimal bounds for an Erdős problem on matching integers to distinct multiples",
+  "authors": [
+    "Wouter van Doorn",
+    "Yanyang Li",
+    "Quanyu Tang"
+  ],
+  "summary": "Let $f(m)$ be the largest integer such that for every set $A = \\{a_1 < \\cdots < a_m\\}$ of $m$ positive integers and every open interval $I$ of length $2a_m$, there exist at least $f(m)$ disjoint pairs $(a, b)$ with $a \\in A$ dividing $b \\in I$. Solving a problem of Erdős, we determine $f(m)$ exactly, and show $$ f(m)=\\min\\bigl(m,\\lceil 2\\sqrt{m}\\,\\rceil\\bigr) $$ for all $m$. The proof was obtained through an AI-assisted workflow: the proof strategy was first proposed by ChatGPT, and the detailed argument was subsequently made fully rigorous and formally verified in Lean by Aristotle. The…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.NT"
+  ],
+  "published": "2026-03-30",
+  "updated": "2026-03-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

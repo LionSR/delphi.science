@@ -1,0 +1,25 @@
+{
+  "key": "2610.05530",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05530",
+  "title": "Optimal Dynamic Resource Allocation for Multicore Real-time Systems",
+  "authors": [
+    "Georgiy A. Bondar",
+    "Abigail Eisenklam",
+    "Ripon C. Sarker",
+    "Linh Thi Xuan Phan",
+    "Abhishek Halder"
+  ],
+  "summary": "We formulate a novel optimal control problem for data-driven dynamic resource allocation in multicore real-time systems. The proposed formulation accounts for hard deadline constraints and resource bounds. Under mild assumptions, we prove several results on the feasibility and existence of optimal solution for the proposed formulation. Building on these analyses, we design an algorithm to solve the multi-core dynamic resource allocation problem. We demonstrate the practical use of this new algorithm by experimentally evaluating it on a real multicore platform using four benchmarks from the…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.OS",
+    "math.OC"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

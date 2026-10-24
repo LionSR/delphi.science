@@ -1,0 +1,22 @@
+{
+  "key": "2609.24153",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.24153",
+  "title": "Quantifying Long-Range Dependence in Object-Valued Time Series",
+  "authors": [
+    "Won-Ki Seo",
+    "Jiazhen Xu",
+    "Han Lin Shang"
+  ],
+  "summary": "Object-valued time series, including distributions, covariance matrices, networks, and compositions, lack the linear structure required by conventional autocovariance-based definitions of long memory. We develop an intrinsic framework for defining and estimating long memory in metric spaces of negative type. An isometric embedding yields a centered Hilbert-valued process, and the trace of its lag-covariance operator provides a signed, additive measure of temporal dependence. Crucially, this trace equals the difference between the marginal mean pairwise distance and expected lagged distance,…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-09-21",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

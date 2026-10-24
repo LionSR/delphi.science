@@ -1,0 +1,21 @@
+{
+  "key": "2610.27172",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.27172",
+  "title": "Structure-Preserving Numerical Schemes for a Time-Fractional Porous Medium Equation with Nonlocal Pressure",
+  "authors": [
+    "Łukasz Płociniczak",
+    "Hubert Woszczek"
+  ],
+  "summary": "In this work, we study numerical approximations of the equation \\begin{equation} \\partial_t^αu-\\nabla\\cdot\\left(u^{m-1}\\nabla(-Δ)^{-σ}u\\right)=0, \\end{equation} where $0 1$. The Caputo derivative is discretized by the L1 formula, while the nonlinear nonlocal flux is approximated by a conservative upwind finite-difference scheme. We establish several structural properties of the implicit scheme in arbitrary space dimension, including a discrete maximum principle, non-negativity, mass conservation, $\\ell^\\infty$ and $\\ell^2$ stability, existence of non-negative discrete solutions, and a…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.AP"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

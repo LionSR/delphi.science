@@ -1,0 +1,22 @@
+{
+  "key": "2605.05989",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05989",
+  "title": "Verifiable Model-Free Safety Filters via Reinforcement Learning",
+  "authors": [
+    "Bihui Yin",
+    "Yiwen Lu",
+    "Yuchen Jiang",
+    "Yilin Mo"
+  ],
+  "summary": "This paper presents a reinforcement learning approach of a model-free safety filter, drawing inspiration from the framework of model-based Predictive Safety Filters (PSFs). Similar to conventional PSFs, our method adopts a Quadratic Programming (QP) formulation by representing the filter as an unrolled QP solver network. However, unlike existing PSFs that derive QP parameters explicitly from system models, we learn these parameters directly through Deep Reinforcement Learning (DRL), thereby eliminating the dependency on accurate system identification. Furthermore, compared to traditional…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

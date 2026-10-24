@@ -1,0 +1,21 @@
+{
+  "key": "2601.18425",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.18425",
+  "title": "Stochstic Sampling for Generative Diffusion Models: From Euler-Maruyama to Higher-Order Schemes",
+  "authors": [
+    "Emanuel Pfarr",
+    "Radu Timofte",
+    "Frank Werner"
+  ],
+  "summary": "We develop a convergence analysis for generative diffusion models that simultaneously accounts for the three principal sources of error in stochastic sampling: initialization error, score-matching error, and discretization of the reverse-time SDE. Our central tool is the notion of a general strong scheme, a broad class of discretization methods for the reverse dynamics defined via explicit, index-wise tolerances on their Itô-Taylor coefficients. This notion extends the classical strong-scheme framework of Kloeden and Platen to an iterate-wise formulation, which is strictly stronger and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-26",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

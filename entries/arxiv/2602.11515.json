@@ -1,0 +1,22 @@
+{
+  "key": "2602.11515",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.11515",
+  "title": "Algorithms and Differential Game Representations for Exploring Nonconvex Pareto Fronts in High Dimensions",
+  "authors": [
+    "Shanqing Liu",
+    "Paula Chen",
+    "Youngkyu Lee",
+    "Jerome Darbon"
+  ],
+  "summary": "We develop a new Hamiton-Jacobi (HJ) and differential game approach for exploring the Pareto front of (constrained) multi-objective optimization (MOO) problems. Given a preference function, we embed the scalarized MOO problem into the value function of a parameterized zero-sum game, whose upper value solves a first-order HJ equation that admits a Hopf-Lax representation formula. For each parameter value, this representation yields an inner minimizer that can be interpreted as an approximate solution to a shifted scalarization of the original MOO problem. Under mild assumptions, the resulting…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-12",
+  "updated": "2026-02-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2608.11397",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.11397",
+  "title": "A Probabilistic Interpretation of the Ball Mapper Graph",
+  "authors": [
+    "John Rick Manzanares",
+    "Jay-Anne Bulauan"
+  ],
+  "summary": "We introduce Probabilistic Ball Mapper, a formulation of Ball Mapper in which each data point is assigned a probability distribution supported only on the metric balls that contain it. This assignment defines both a partition subordinate to the Ball Mapper cover and a Markov kernel from the finite data space to the cover. We study two assignment schemes: a uniform-on-support rule and a localized radial-basis rule that incorporates distance to landmarks while preserving the underlying cover. Pushing the empirical data distribution through the kernel produces a probability distribution over…",
+  "domain": "cs.CG",
+  "tags": [
+    "cs.CG",
+    "math.AT"
+  ],
+  "published": "2026-08-11",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

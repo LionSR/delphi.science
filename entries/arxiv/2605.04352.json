@@ -1,0 +1,20 @@
+{
+  "key": "2605.04352",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04352",
+  "title": "Probing Structural Mathematical Reasoning in Language Models with Algebraic Trapdoors",
+  "authors": [
+    "Igor Rivin"
+  ],
+  "summary": "We introduce a benchmark suite for evaluating structural mathematical reasoning in language models, built on subgroup-construction problems in SL(3, Z) with cryptographic-style verifier-prover asymmetry. Each instance presents a finitely generated subgroup as a list of integer matrices and asks for an arithmetic invariant -- index, surjection-at-prime, or membership -- that the construction-time information (N, K) pins down in O(1) closed form, but that the solver, lacking that information, must derive by either Aschbacher-classification analysis or by a membership query in SL(3, Z) of…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.GR"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-05-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

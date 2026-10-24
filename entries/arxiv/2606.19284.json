@@ -1,0 +1,20 @@
+{
+  "key": "2606.19284",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.19284",
+  "title": "Online Feedback Optimization for Constrained Stochastic Problems with Decision-Dependent Distributions",
+  "authors": [
+    "Caio Kalil Lauand",
+    "Emiliano Dall'Anese"
+  ],
+  "summary": "Online feedback optimization (OFO) leverages real-time output measurements to optimize the operation of networked systems without requiring full knowledge of system dynamics or disturbances. We develop an OFO approach for constrained stochastic optimization problems in which the distribution of the system's random parameters shifts in response to the control actions. We propose a projected primal-dual algorithm where the true dual constraint sets are replaced by surrogate sets. Our main result is an upper bound on the mean-square tracking error, which decomposes into four interpretable terms…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-17",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

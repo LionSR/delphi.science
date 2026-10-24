@@ -1,0 +1,19 @@
+{
+  "key": "2604.22991",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.22991",
+  "title": "Optimal strategies in the all-heads coin game",
+  "authors": [
+    "Peter Pfaffelhuber"
+  ],
+  "summary": "We study a sequential coin-flipping game: a player starts with $n$~coins, each heads with probability~$p$, and in each round flips all remaining coins and must set aside at least one head, losing if none shows. The player wins once all coins have been set aside. The optimal winning probability~$w_{n,p}$ obeys a Bellman equation with a nonlinear suffix-maximum operator. For $p=\\tfrac12$ every strategy achieves $w_{n,1/2}=\\tfrac12$. For $p>\\tfrac12$ the strategy~\\One{} (set aside a single head) is optimal, $n\\mapsto w_{n,p}$ is strictly increasing, and the limit $W(p):=\\lim_n w_{n,p}$ has an…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-04-24",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

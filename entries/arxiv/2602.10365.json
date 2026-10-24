@@ -1,0 +1,23 @@
+{
+  "key": "2602.10365",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.10365",
+  "title": "Solving Geodesic Equations with Composite Bernstein Polynomials for Trajectory Planning",
+  "authors": [
+    "Nick Gorman",
+    "Gage MacLin",
+    "Maxwell Hammond",
+    "Venanzio Cichella"
+  ],
+  "summary": "This work presents a trajectory planning method based on composite Bernstein polynomials for autonomous systems navigating complex environments. The method is implemented in a symbolic optimization framework that enables continuous paths and precise control over trajectory shape. Trajectories are planned over a cost surface that encodes obstacles as continuous fields rather than discrete boundaries. Regions near obstacles are assigned higher costs, naturally encouraging the trajectory to maintain a safe distance while still allowing efficient routing through constrained spaces. The use of…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-02-10",
+  "updated": "2026-02-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

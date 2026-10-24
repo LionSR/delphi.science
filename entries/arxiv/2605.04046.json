@@ -1,0 +1,23 @@
+{
+  "key": "2605.04046",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04046",
+  "title": "A Closed-Form Adaptive-Landmark Kernel for Certified Point-Cloud and Graph Classification",
+  "authors": [
+    "Sushovan Majhi",
+    "Atish Mitra",
+    "Žiga Virk",
+    "Pramita Bagchi"
+  ],
+  "summary": "We introduce PALACE (Persistence Adaptive-Landmark Analytic Classification Engine), the data-adaptive companion to PLACE, paying a small cross-validation tier on three knobs (budget, radii, bandwidth; $\\leq 5$ choices each). A cover-theoretic core (Lebesgue-number criterion on the landmark cover) yields four closed-form guarantees. (i) A structural lower distortion bound $λ(τ;ν)$ on $\\mathcal{D}_n$ under cross-diagram non-interference, with a $(D/L)^2$ budget reduction over the uniform grid when diagrams concentrate. (ii) Equal weights $w_k = K^{-1/2}$ maximizing $λ$, and…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.AT"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-05-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2610.26420",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.26420",
+  "title": "A Deep Backward Scheme for Reflected BSDEs via Penalization : Approximation and Convergence Analysis",
+  "authors": [
+    "E. H. Essaky",
+    "M. A. Jalal",
+    "Y. Ouknine"
+  ],
+  "summary": "We propose and analyze a deep backward numerical scheme for Markovian reflected backward stochastic differential equations with a generator independent of the control variable, based on the penalization method. The reflection constraint is replaced by penalized BSDEs, which are approximated backward in time by neural networks, with particular attention to the dependence of the errors on the penalization parameter \\(λ\\). We derive quantitative error estimates for both the value process \\(Y\\) and the control process \\(Z\\). A key ingredient is an \\(L^2\\)-regularity estimate for the control…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

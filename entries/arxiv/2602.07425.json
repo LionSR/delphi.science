@@ -1,0 +1,25 @@
+{
+  "key": "2602.07425",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.07425",
+  "title": "Sign-Based Optimizers Are Effective Under Heavy-Tailed Noise",
+  "authors": [
+    "Dingzhi Yu",
+    "Hongyi Tao",
+    "Yuanyu Wan",
+    "Luo Luo",
+    "Lijun Zhang"
+  ],
+  "summary": "While adaptive gradient methods are the workhorse of modern machine learning, sign-based optimization algorithms such as Lion and Muon have recently demonstrated superior empirical performance over AdamW in training large language models (LLM). However, a theoretical understanding of why sign-based updates outperform variance-adapted methods remains elusive. In this paper, we aim to bridge the gap between theory and practice through the lens of heavy-tailed gradient noise, a phenomenon frequently observed in language modeling tasks. Theoretically, we introduce a novel generalized…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.CL",
+    "math.OC"
+  ],
+  "published": "2026-02-07",
+  "updated": "2026-05-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

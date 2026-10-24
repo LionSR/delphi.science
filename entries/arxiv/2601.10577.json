@@ -1,0 +1,23 @@
+{
+  "key": "2601.10577",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.10577",
+  "title": "Jordan-Segmentable Masks: A Topology-Aware definition for characterizing Binary Image Segmentation",
+  "authors": [
+    "Serena Grazia De Benedictis",
+    "Amedeo Altavilla",
+    "Nicoletta Del Buono"
+  ],
+  "summary": "Image segmentation plays a central role in computer vision. However, widely used evaluation metrics, whether pixel-wise, region-based, or boundary-focused, often struggle to capture the structural and topological coherence of a segmentation. In many practical scenarios, such as medical imaging or object delineation, small inaccuracies in boundary, holes, or fragmented predictions can result in high metric scores, despite the fact that the resulting masks fail to preserve the object global shape or connectivity. This highlights a limitation of conventional metrics: they are unable to assess…",
+  "domain": "cs.CV",
+  "tags": [
+    "cs.CV",
+    "math.AT",
+    "math.NA"
+  ],
+  "published": "2026-01-15",
+  "updated": "2026-01-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

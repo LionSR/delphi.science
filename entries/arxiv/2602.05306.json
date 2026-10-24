@@ -1,0 +1,21 @@
+{
+  "key": "2602.05306",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05306",
+  "title": "Inverse Optimization Without Inverse Optimization: Direct Solution Prediction with Transformer Models",
+  "authors": [
+    "Macarena Navarro",
+    "Willem-Jan van Hoeve",
+    "Karan Singh"
+  ],
+  "summary": "We present an end-to-end framework for generating solutions to combinatorial optimization problems with unknown components using transformer-based sequence-to-sequence neural networks. Our framework learns directly from past solutions and incorporates the known components, such as hard constraints, via a constraint reasoning module, yielding a constrained learning scheme. The trained model generates new solutions that are structurally similar to past solutions and are guaranteed to respect the known constraints. We apply our approach to three combinatorial optimization problems with unknown…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-02-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

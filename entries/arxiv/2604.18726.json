@@ -1,0 +1,22 @@
+{
+  "key": "2604.18726",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.18726",
+  "title": "CCOpt: an Open-Source Solver for Large-Scale Mathematical Programs with Complementarity Constraints",
+  "authors": [
+    "Anton Pozharskiy",
+    "François Pacaud",
+    "Moritz Diehl",
+    "Armin Nurkanović"
+  ],
+  "summary": "This paper presents the Julia package CCOpt, built on top of the interior-point solver MadNLP. CCOpt implements a suite of algorithms for Mathematical Programs with Complementarity Constraints (MPCCs). The solver additionally comes with interfaces for use in Matlab, Python, and C++. MPCCs have recently gained renewed attention in engineering optimization, as complementarity provides a powerful modeling tool for nonsmooth functions and logical conditions. These problems are inherently challenging since their nonlinear programming reformulations violate classical regularity conditions at all…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-04-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

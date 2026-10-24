@@ -1,0 +1,24 @@
+{
+  "key": "2605.13348",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.13348",
+  "title": "Adequate Losses via Quantitative Linear Logic",
+  "authors": [
+    "Matteo Capucci",
+    "Robert Atkey",
+    "Charles Grellois",
+    "Ekaterina Komendantskaya",
+    "Matthew Daggitt"
+  ],
+  "summary": "As neural components are increasingly embedded in existing symbolic software -- including safety-critical systems -- the question arises of how to specify and enforce the safety of the newly introduced neural parts. Unlike traditional logical specifications, these must be amenable not only to the standard Boolean interpretation, but also to training and optimisation. The latter calls for a quantitative interpretation of the logical syntax, subject to further requirements such as smoothness and differentiability. Moreover, the qualitative and quantitative sides of the logic must share a…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "math.LO"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2606.06439",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.06439",
+  "title": "Temporal matching in trees",
+  "authors": [
+    "Márk Hunor Juhász",
+    "Péter Madarasi"
+  ],
+  "summary": "We study maximum matching problems in temporal graphs whose underlying graph is a tree. We consider two temporal models. In a $Δ$-matching, selected time edges sharing an endpoint must have time ticks differing by at least $Δ$. In a $γ$-matching, the selected objects are blocks of $γ$ consecutive appearances of the same underlying edge. We also consider the related ordered static problem of $d$-distance matchings. We show that maximum $Δ$-matching remains NP-hard on temporal trees for every $Δ\\geq 2$, even in the sparse case where each edge appears at most twice. Using a reduction between…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-06-04",
+  "updated": "2026-06-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

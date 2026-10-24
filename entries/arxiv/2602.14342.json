@@ -1,0 +1,25 @@
+{
+  "key": "2602.14342",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14342",
+  "title": "High-accuracy log-concave sampling with stochastic queries",
+  "authors": [
+    "Fan Chen",
+    "Sinho Chewi",
+    "Constantinos Daskalakis",
+    "Alexander Rakhlin"
+  ],
+  "summary": "We show that high-accuracy guarantees for log-concave sampling -- that is, iteration and query complexities which scale as $\\mathrm{poly}\\log(1/δ)$, where $δ$ is the desired target accuracy -- are achievable using stochastic gradients with subexponential tails. Notably, this exhibits a separation with the problem of convex optimization, where stochasticity (even additive Gaussian noise) in the gradient oracle incurs $\\mathrm{poly}(1/δ)$ queries. We also give an information-theoretic argument that light-tailed stochastic gradients are necessary for high accuracy: for example, in the bounded…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.DS",
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-02-15",
+  "updated": "2026-05-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2602.08374",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.08374",
+  "title": "Schrödinger bridge problem via empirical risk minimization",
+  "authors": [
+    "Denis Belomestny",
+    "Alexey Naumov",
+    "Nikita Puchkin",
+    "Denis Suchkov"
+  ],
+  "summary": "We study the Schrödinger bridge problem when the endpoint distributions are available only through samples. Classical computational approaches estimate Schrödinger potentials via Sinkhorn iterations on empirical measures and then construct a time-inhomogeneous drift by differentiating a kernel-smoothed dual solution. In contrast, we propose a learning-theoretic route: we rewrite the Schrödinger system in terms of a single positive transformed potential that satisfies a nonlinear fixed-point equation and estimate this potential by empirical risk minimization over a function class. We…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.PR",
+    "math.ST"
+  ],
+  "published": "2026-02-09",
+  "updated": "2026-02-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

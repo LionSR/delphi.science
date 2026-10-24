@@ -1,0 +1,20 @@
+{
+  "key": "2602.23260",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.23260",
+  "title": "Efficient Interior-Point Methods for Hyperbolic Programming via Straight-Line Programs",
+  "authors": [
+    "Mehdi Karimi",
+    "Levent Tuncel"
+  ],
+  "summary": "Hyperbolic (HB) programming generalizes many popular convex optimization problems, including semidefinite and second-order cone programming. Despite substantial theoretical progress on HB programming, efficient computational tools for solving large-scale hyperbolic programs remain limited. This paper presents DDS 3.0, a new release of the Domain-Driven Solver, which provides an efficient interior-point implementation tailored for hyperbolic programming. A key innovation lies in a new straight-line program (SLP) representation that enables compact representation and efficient computation of…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-26",
+  "updated": "2026-02-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

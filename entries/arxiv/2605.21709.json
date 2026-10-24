@@ -1,0 +1,21 @@
+{
+  "key": "2605.21709",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.21709",
+  "title": "Stable full-field simulation of a multiscale elliptic equation by means of Quantized Tensor Trains",
+  "authors": [
+    "Marc Josien",
+    "Anas El Hachimi",
+    "Isabelle Ramière"
+  ],
+  "summary": "In this article, we design an original solver based on Quantized Tensor Trains (QTT) for linear elliptic equations with heterogeneous coefficient field, that allows for extremely fine meshes. It can achieve full-field simulations in dimensions $d=2$ and $d=3$ with a number of Degrees of Freedom (DoFs) up to $20$ orders of magnitude beyond the classical solvers, recovering accurately the solution as well as its gradient in the $\\LL^2$ norm. For treating such an enormous amount of data, the solver crucially relies on the exponential compression properties of QTTs. This significantly improves…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-20",
+  "updated": "2026-06-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

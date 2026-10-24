@@ -1,0 +1,20 @@
+{
+  "key": "2608.11689",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.11689",
+  "title": "A Wolfe-Type Spectral Conjugate Gradient Method for Nonsmooth Convex Optimization Problems",
+  "authors": [
+    "Jauny",
+    "Gourav Kumar"
+  ],
+  "summary": "This paper proposes a Wolfe-type spectral conjugate gradient method for nonsmooth convex optimization, built on the Moreau-Yosida regularization of the objective function. The method combines a safeguarded spectral parameter with a Dai-Kou-type conjugate parameter, and uses a Wolfe-type line search compatible with the inexact gradients that the regularization produces. We establish global convergence of the method, together with an R-linear convergence rate under an additional strong-convexity assumption. The method is evaluated on standard nonsmooth optimization benchmarks and on…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-12",
+  "updated": "2026-08-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

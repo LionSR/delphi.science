@@ -1,0 +1,21 @@
+{
+  "key": "2604.05913",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.05913",
+  "title": "Overview of Bayesian Solvers in EEG Distributed Source Models: Prior Selection, Algorithmic Implementation, and Depth Bias Reduction",
+  "authors": [
+    "Joonas Lahtinen",
+    "Alexandra Koulouri"
+  ],
+  "summary": "Electroencephalography (EEG) source imaging aims to reconstruct the spatial distribution of neural activity within the brain from non-invasive scalp measurements. This inverse problem is severely ill-posed due to the low spatial resolution of EEG and the presence of measurement noise, necessitating robust regularization techniques. Bayesian approaches provide a principled framework for incorporating prior knowledge into the solution, where regularization naturally arises through prior distributions and their associated hyperparameters. In this work, we provide an overview of key Bayesian…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-04-07",
+  "updated": "2026-04-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

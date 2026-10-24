@@ -1,0 +1,24 @@
+{
+  "key": "2609.32730",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32730",
+  "title": "Domain Adaptation with Target Information via Doubly-Anchored Distributionally Robust Optimization",
+  "authors": [
+    "David Kepplinger",
+    "Anand N. Vidyashankar"
+  ],
+  "summary": "Domain Adaptation (DA) often lacks worst-case guarantees, while Distributionally Robust Optimization (DRO) based only on source data centers its ambiguity set at the source law and ignores available target structure. To bridge this gap, we introduce a doubly-anchored DRO framework whose ambiguity set is the intersection of $φ$-divergence balls centered at the source law and a source-completed target reference law, the latter pairing the target covariate law with the source conditional law. We derive dual-induced adversarial bridge geometries for symmetric and asymmetric divergence pairings,…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.IT",
+    "cs.LG",
+    "math.PR",
+    "math.ST"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

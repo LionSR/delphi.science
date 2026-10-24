@@ -1,0 +1,20 @@
+{
+  "key": "2609.04003",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.04003",
+  "title": "Closure complexity of longest-edge bisection for triangular meshes",
+  "authors": [
+    "Yuwen Li",
+    "Zhiyuan Yang"
+  ],
+  "summary": "On triangular meshes, we analyze local mesh refinement based on longest-edge bisection equipped with the serial longest-edge propagation-path closure. Ties are resolved by terminal priority: if the incoming shared edge is a longest edge of the neighboring triangle, the pair is declared terminal and that edge is bisected. For every adaptive mesh sequence $\\mathcal{T}_0, \\mathcal{T}_1, \\ldots, \\mathcal{T}_L$ with a sequence of marked sets $\\mathcal{M}_0, \\mathcal{M}_1, \\ldots, \\mathcal{M}_{L-1}$, we prove the cumulative closure estimate $$\\#\\mathcal{T}_L-\\#\\mathcal{T}_0…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

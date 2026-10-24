@@ -1,0 +1,22 @@
+{
+  "key": "2605.11979",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11979",
+  "title": "Optimized Two-Step Coarse Propagators in Parareal Algorithms",
+  "authors": [
+    "Guanglian Li",
+    "Qingle Lin",
+    "Kai Zhang",
+    "Zhi Zhou"
+  ],
+  "summary": "In this work, we propose a novel framework for accelerating the parareal algorithm, in which the coarse propagator is formulated as a two-step method and optimized with respect to the convergence factor.} We derive a rigorous error estimate for the proposed two-step parareal algorithm, yielding an explicit bound on the linear convergence factor. This estimate is not only of theoretical interest: it provides a quantitative guideline for selecting and designing coarse propagators. Guided by this estimate, we {consider the linear parabolic equation as an illustrative example and }construct an…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-05-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

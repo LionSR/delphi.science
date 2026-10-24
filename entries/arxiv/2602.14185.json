@@ -1,0 +1,22 @@
+{
+  "key": "2602.14185",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14185",
+  "title": "Smoothing Meets Perturbation: Unified and Tight Analysis for Nonconvex-Concave Minimax Optimization",
+  "authors": [
+    "Jiajin Li",
+    "Mahesh Nagarajan",
+    "Siyu Pan",
+    "Nanxi Zhang"
+  ],
+  "summary": "This paper studies smooth nonconvex-concave minimax optimization and two acceleration mechanisms for single-loop first-order methods: dual perturbation and smoothing. Although both techniques improve convergence guarantees, their relative advantages remain unclear due to the distinction between game stationarity (GS) and optimization stationarity (OS). We provide a tight characterization of their iteration complexities under both notions. We show that smoothing accelerates convergence to both GS and OS, whereas dual perturbation improves the rate only for GS and does not accelerate OS.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-15",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

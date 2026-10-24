@@ -1,0 +1,22 @@
+{
+  "key": "2610.09356",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.09356",
+  "title": "Global Exponential Convergence of Two-Layer Linear Network Training",
+  "authors": [
+    "Stephen Y Zhang",
+    "Gabriel Peyré"
+  ],
+  "summary": "We prove global exponential (linear) convergence with an explicit rate in the rich scaling for wide two-layer linear networks trained with smooth Polyak-Lojasiewicz predictor losses. Gradient flow in the factors closes exactly in terms of a finite-dimensional Bures flow of the neuron law covariance, in which the predictor dynamics are preconditioned by hidden covariance blocks. Mean-field conservation laws provide uniform spectral lower bounds on the hidden preconditioning blocks when the initial covariance satisfies a spectral support gap condition. This condition encompasses positive…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

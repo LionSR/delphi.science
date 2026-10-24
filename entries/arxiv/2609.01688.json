@@ -1,0 +1,24 @@
+{
+  "key": "2609.01688",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.01688",
+  "title": "On the discretization of the object space in inverse problems with application to cryo-electron microscopy",
+  "authors": [
+    "Gilles Mordant",
+    "Luke Evans",
+    "David Silva-Sánchez",
+    "Pilar Cossio",
+    "Roy Lederman"
+  ],
+  "summary": "In many inverse problems, the aim is to recover a probability distribution on a latent (or object state) space from indirect, noisy observations. When the observations can be modelled as noisy samples from the mixing latent distribution, the recovery problem is a deconvolution problem on the space of probability measures. A common strategy is to fix a finite set of candidate points and estimate a weight for each, turning the problem into a finite-dimensional concave maximum likelihood problem on the simplex. We study the combined effect of this discretization and of the noise in the context…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-09-01",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

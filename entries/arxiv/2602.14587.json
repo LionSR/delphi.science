@@ -1,0 +1,22 @@
+{
+  "key": "2602.14587",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14587",
+  "title": "Decoupled Continuous-Time Reinforcement Learning via Hamiltonian Flow",
+  "authors": [
+    "Minh Nguyen"
+  ],
+  "summary": "Many real-world control problems, ranging from finance to robotics, evolve in continuous time with non-uniform, event-driven decisions. Standard discrete-time reinforcement learning (RL), based on fixed-step Bellman updates, struggles in this setting: as time gaps shrink, the $Q$-function collapses to the value function $V$, eliminating action ranking. Existing continuous-time methods reintroduce action information via an advantage-rate function $q$. However, they enforce optimality through complicated martingale losses or orthogonality constraints, which are sensitive to the choice of test…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC",
+    "math.ST"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-02-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

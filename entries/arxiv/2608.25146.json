@@ -1,0 +1,24 @@
+{
+  "key": "2608.25146",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.25146",
+  "title": "Entropy-stable moving-wall boundary conditions for the ALE formulation of the compressible Navier-Stokes equations",
+  "authors": [
+    "Luca Galimberti",
+    "Roberto Nuca",
+    "Lisandro Dalcin",
+    "Alberto Guardone",
+    "Matteo Parsani"
+  ],
+  "summary": "We present a high-order entropy-stable framework for the compressible Euler and Navier-Stokes equations on moving domains. The space-time mapping describing the domain motion is recast in an arbitrary Lagrangian Eulerian (ALE) formulation, in which the physical inviscid fluxes and the contributions induced by mesh motion are treated in a unified manner. At the continuous level, we prove that the proposed moving-wall boundary conditions are entropy conservative for the Euler equations and entropy stable for the Navier-Stokes equations. The no-slip condition is formulated in terms of the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.AP"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

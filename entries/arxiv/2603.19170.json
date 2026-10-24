@@ -1,0 +1,25 @@
+{
+  "key": "2603.19170",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.19170",
+  "title": "ADMM-Based Distributed MPC with Control Barrier Functions for Safe Multi-Robot Quadrupedal Locomotion",
+  "authors": [
+    "Yicheng Zeng",
+    "Ruturaj S. Sambhus",
+    "Basit Muhammad Imran",
+    "Jeeseop Kim",
+    "Vittorio Pastore",
+    "Kaveh Akbari Hamed"
+  ],
+  "summary": "This paper proposes a fully decentralized model predictive control (MPC) framework with control barrier function (CBF) constraints for safety-critical trajectory planning in multi-robot legged systems. The incorporation of CBF constraints introduces explicit inter-agent coupling, which prevents direct decomposition of the resulting optimal control problems. To address this challenge, we reformulate the centralized safety-critical MPC problem using a structured distributed optimization framework based on the alternating direction method of multipliers (ADMM). By introducing a novel node-edge…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-03-19",
+  "updated": "2026-03-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

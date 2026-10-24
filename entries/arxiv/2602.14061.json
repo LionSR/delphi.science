@@ -1,0 +1,20 @@
+{
+  "key": "2602.14061",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14061",
+  "title": "MPL-HMC: A Tunable Parameterized Leapfrog Framework for Robust Hamiltonian Monte Carlo",
+  "authors": [
+    "Sourabh Bhattacharya"
+  ],
+  "summary": "This article introduces the Modified Parameterized Leapfrog Hamiltonian Monte Carlo (MPL-HMC) method, a novel extension of HMC addressing key limitations through tunable integration parameters $α(δt)$ and $β(δt)$, enabling controlled perturbations to Hamiltonian dynamics. Theoretical analysis demonstrates MPL-HMC maintains approximate detailed balance. Extensive empirical evaluation reveals systematic performance improvements. The damping variant ($α_2=-0.1$, $β_2=-0.05$) achieves a 14-fold increase in effective sample size for Neal's funnel and 27\\% better efficiency for pharmacokinetic…",
+  "domain": "stat.CO",
+  "tags": [
+    "stat.CO",
+    "math.NA"
+  ],
+  "published": "2026-02-15",
+  "updated": "2026-02-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

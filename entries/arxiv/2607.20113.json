@@ -1,0 +1,20 @@
+{
+  "key": "2607.20113",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.20113",
+  "title": "Forward-Reflected-Backward algorithm with Linesearch",
+  "authors": [
+    "Fernando Muñoz García",
+    "Fernando Roldán"
+  ],
+  "summary": "In this article, we aim to solve a monotone inclusion problem involving the sum of a maximally monotone operator and a continuous operator. While several algorithms exist to solve this problem when the continuous operator is cocoercive or Lipschitz continuous, they typically require the estimation of the global Lipschitz constant, which can be computationally expensive and often imposes overly restrictive step-sizes. To avoid these limitations and to handle merely continuous operators, linesearch subroutines are employed. A popular method in this context is the forward-backward-forward (FBF)…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-22",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

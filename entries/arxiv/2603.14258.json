@@ -1,0 +1,22 @@
+{
+  "key": "2603.14258",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.14258",
+  "title": "Sampling Boltzmann distributions via normalizing flow approximation of transport maps",
+  "authors": [
+    "Zia Ur Rehman",
+    "Gero Friesecke"
+  ],
+  "summary": "In a celebrated paper \\cite{noe2019boltzmann}, Noé, Olsson, Köhler and Wu introduced an efficient method for sampling high-dimensional Boltzmann distributions arising in molecular dynamics via normalizing flow approximation of transport maps. Here, we place this approach on a firm mathematical foundation. We prove the existence of a normalizing flow between the reference measure and the true Boltzmann distribution up to an arbitrarily small error in the Wasserstein distance. This result covers general Boltzmann distributions from molecular dynamics, which have low regularity due to the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "math.PR"
+  ],
+  "published": "2026-03-15",
+  "updated": "2026-03-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

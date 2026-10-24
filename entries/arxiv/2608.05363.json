@@ -1,0 +1,21 @@
+{
+  "key": "2608.05363",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.05363",
+  "title": "Contour integral methods and model order reduction for parametric linear control systems",
+  "authors": [
+    "Serkan Gugercin",
+    "Mattia Manucci"
+  ],
+  "summary": "This paper introduces a contour integral method (CIM) for efficiently computing outputs of parametric linear systems in control form over specified time intervals and to a user-prescribed accuracy. The CIM approximates the inverse Laplace transform via a quadrature rule applied along a modified integration contour. For parametric systems, we show how CIM integrates effectively with projection-based model order reduction (MOR) where a greedy algorithm builds the projection spaces following an error estimate we derive for this setting. We additionally demonstrate that the developed projection…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-08-05",
+  "updated": "2026-08-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2608.03909",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.03909",
+  "title": "Microlocal analysis of a non-linear cone transform and applications to Compton camera imaging",
+  "authors": [
+    "James W. Webber",
+    "Sean Holman"
+  ],
+  "summary": "We present a novel method to recover the source intensity, $f : \\mathbb{R}^n \\to \\mathbb{R}$, and attenuation coefficient, $μ: \\mathbb{R}^n \\to \\mathbb{R}$, in Compton camera imaging. We apply a non-linear model, which accounts for ray attenuation. We show that the data, $h$, can be modeled $h = \\mathcal{R}(f,μ) = R(fg)$, where $g = \\exp(-Gμ)$ models attenuation, $G$ is a (linear) divergent beam transform, and $R$ is a linear operator which defines the integrals of $fg$ over cones. Commonly in the literature, $μ$ is set to zero, and the data $h = Rf$ is linear. We address the case when…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.FA"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

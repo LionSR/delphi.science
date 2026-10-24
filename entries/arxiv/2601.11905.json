@@ -1,0 +1,24 @@
+{
+  "key": "2601.11905",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.11905",
+  "title": "LIBRA: Language Model Informed Bandit Recourse Algorithm for Personalized Treatment Planning",
+  "authors": [
+    "Junyu Cao",
+    "Ruijiang Gao",
+    "Esmaeil Keyvanshokooh",
+    "Jianhao Ma"
+  ],
+  "summary": "We introduce a unified framework that seamlessly integrates algorithmic recourse, contextual bandits, and large language models (LLMs) to support sequential decision-making in high-stakes settings such as personalized medicine. We first introduce the recourse bandit problem, where a decision-maker must select both a treatment action and a feasible, minimal modification to mutable patient features. To address this problem, we develop the Generalized Linear Recourse Bandit (GLRB) algorithm. Building on this foundation, we propose LIBRA, a Language Model-Informed Bandit Recourse Algorithm that…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-01-17",
+  "updated": "2026-01-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2609.11949",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11949",
+  "title": "Solving Large-Scale Sparse Linear Complementarity Problems Using a Relaxed Shifted Matrix-Splitting Modulus-Based Iteration Method",
+  "authors": [
+    "Abhishek Kumar Singh Sengar",
+    "Bharat Kumar",
+    "Deepmala"
+  ],
+  "summary": "A relaxed shifted matrix-splitting modulus-based iteration method is proposed for solving large-scale sparse linear complementarity problems. The method extends the classical modulus-based matrix-splitting framework by introducing two shift parameters into the matrix splitting while preserving the original coefficient matrix. Different choices of the splitting lead to shifted Jacobi, Gauss-Seidel, SOR, and AOR-type schemes. Sufficient convergence conditions are established for \\(P\\)-matrices and \\(H_+\\)-matrices. For structured sparse matrices, practical AOR-type conditions and explicit…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-07-28",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

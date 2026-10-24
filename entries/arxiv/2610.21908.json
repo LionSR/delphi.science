@@ -1,0 +1,22 @@
+{
+  "key": "2610.21908",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.21908",
+  "title": "The Tilted Sampling Problem: Optimism, Posterior Sampling, and Logarithmic Regret",
+  "authors": [
+    "Mohammad Pedramfar",
+    "Siamak Ravanbakhsh"
+  ],
+  "summary": "Many modern learning systems are used not to select a single best action, but to sample diverse high-quality outputs. Examples include entropy-regularized reinforcement learning, RLHF, and reward-guided generative modeling. Motivated by these settings, we study tilted sampling: an online learning problem in which the goal is to sample from the Gibbs distribution induced by an unknown reward function. We define sampling regret as the temperature-normalized cumulative KL divergence between the learner's distribution and the Gibbs target, corresponding to the suboptimality gap in…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

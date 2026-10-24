@@ -1,0 +1,23 @@
+{
+  "key": "2609.05494",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.05494",
+  "title": "Verification, Sensitivity, and Operating Limits of a GPU-Accelerated Planar WCSPH Model for Hydrodynamic Ram",
+  "authors": [
+    "Md Mujahid Alam",
+    "Debojit Biswas",
+    "Sukanta Chakraborty"
+  ],
+  "summary": "Hydrodynamic ram (HRAM) loading remains a persistent challenge in impact mechanics, less due to exotic physics than to the difficulty of achieving convincing quantitative agreement in reduced-order representations. Prevailing studies typically employ a single mesh and boundary treatment validated against one experimental dataset, leaving unresolved whether agreement reflects genuine fidelity or compensating discretization errors. This work presents a planar 2D, GPU-accelerated WCSPH solver employing an Adami-type ghost-particle boundary condition, extended for the first time to a moving,…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math.NA",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-08-26",
+  "updated": "2026-08-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

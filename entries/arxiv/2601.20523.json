@@ -1,0 +1,21 @@
+{
+  "key": "2601.20523",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.20523",
+  "title": "Necessary and Sufficient Conditions for Existence of a Unique Solution to Gamma Moment Closure for the Stochastic Ricker Equation",
+  "authors": [
+    "Haiyan Wang",
+    "Melinda Wang"
+  ],
+  "summary": "This paper investigates the stochastic Ricker difference equation $X_{n+1} = X_n \\exp(r(1-X_n)) \\varepsilon_n$, where $X_n$ is a random variable representing the population size and $\\{\\varepsilon_n\\}$ denotes independent random perturbations with $E[\\varepsilon_n] = 1$ and $E[\\varepsilon_n^2] = v > 1$. We derive a closed system of difference equations for the mean and variance of $X_n$ using the Gamma moment-closure technique and numerically verify the validity of the Gamma moment-closure approximation. By constructing an auxiliary function, we establish the necessary and sufficient…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.DS"
+  ],
+  "published": "2026-01-28",
+  "updated": "2026-01-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

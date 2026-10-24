@@ -1,0 +1,21 @@
+{
+  "key": "2608.20437",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.20437",
+  "title": "A note on efficient k-limited broadcast domination in graphs",
+  "authors": [
+    "Bharadwaj",
+    "A. Senthil Thilak"
+  ],
+  "summary": "An efficient $k$-limited dominating broadcast, or $k$-ELDB, is a $k$-limited broadcast in which every vertex is dominated exactly once. This notion brings together efficient domination and limited broadcast domination in a common framework. For a graph $G$, we write $mcr(G)$ for the smallest integer $k$ for which $G$ admits a $k$-ELDB. For an admissible value $k\\ge mcr(G)$, we denote by $γ_{ebk}(G)$ the minimum cost of a $k$-ELDB on $G$, and is called the $k$-efficient broadcast domination number of $G$. In this paper, we study these parameters from an algorithmic perspective with complexity…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-08-20",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

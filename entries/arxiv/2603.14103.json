@@ -1,0 +1,23 @@
+{
+  "key": "2603.14103",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.14103",
+  "title": "Scorio.jl: A Julia package for ranking stochastic responses",
+  "authors": [
+    "Mohsen Hariri",
+    "Michael Hinczewski",
+    "Vipin Chaudhary"
+  ],
+  "summary": "Scorio.jl is a Julia package for evaluating and ranking systems from repeated responses to shared tasks. It provides a common tensor-based interface for direct score-based, pairwise, psychometric, voting, graph, and listwise methods, so the same benchmark can be analyzed under multiple ranking assumptions. We describe the package design, position it relative to existing Julia tools, and report pilot experiments on synthetic rank recovery, stability under limited trials, and runtime scaling.",
+  "domain": "cs.MS",
+  "tags": [
+    "cs.MS",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-03-14",
+  "updated": "2026-03-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

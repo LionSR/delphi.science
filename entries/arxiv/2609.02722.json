@@ -1,0 +1,21 @@
+{
+  "key": "2609.02722",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.02722",
+  "title": "An Adaptive Projected-Gradient Algorithm for Sample-Average Approximations of Stochastic Multi-Objective Optimization",
+  "authors": [
+    "Yiyang Li",
+    "Lei Wang",
+    "Xiaojun Chen"
+  ],
+  "summary": "We consider stochastic multi-objective optimization over a nonempty closed convex set, where every objective is an expectation and only sample-gradient information is available. We develop a line-search-free and function-value-free adaptive projected-gradient algorithm for the sample-average approximation (SAA) problem. Each iteration computes a feasible regularized multi-gradient step and updates the regularization parameter from the projected step length. A normal-cone-based certificate yields descent estimates and an explicit complexity bound for the Pareto-stationarity residual of the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-02",
+  "updated": "2026-09-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

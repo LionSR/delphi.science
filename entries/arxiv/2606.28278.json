@@ -1,0 +1,21 @@
+{
+  "key": "2606.28278",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28278",
+  "title": "Sharp First-Order Lower Bounds under $α$-Polyak-Lojasiewicz Conditions",
+  "authors": [
+    "Saeed Masiha",
+    "Negar Kiyavash",
+    "Patrick Thiran"
+  ],
+  "summary": "We study first-order oracle complexity under the $α$-Polyak-Lojasiewicz condition $f(x)-f_\\star\\leq τ\\|\\nabla f(x)\\|^α$ for $α\\in[1,2]$. For $α<2$, we first show that global $L$-smoothness together with a global $α$-Polyak-Lojasiewicz inequality forces the objective to be constant. This motivates a nontrivial model in which smoothness remains global but the inequality is required only on the initial sublevel set. On this class, we establish sharp minimax lower bounds for every $α\\in[1,2)$. Deterministic first-order methods require $Ω(Lτ^{2/α}\\varepsilon^{-(2-α)/α})$ oracle calls, matching…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-26",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2607.20205",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.20205",
+  "title": "Statistical Inference for Rank Allocation in Low-Rank Adaptation",
+  "authors": [
+    "Yihang Gao",
+    "Vincent Y. F. Tan"
+  ],
+  "summary": "Low-rank adaptation (LoRA) has become a widely used parameter-efficient fine-tuning method for large language models. Since different modules and layers may contribute unequally to downstream adaptation, allocating rank resources under a fixed parameter budget is an important problem for balancing efficiency, expressiveness, and generalization. Existing adaptive rank methods address this problem mainly through carefully designed importance scores constructed from gradient-derived sensitivity and uncertainty measures, without an explicit statistical interpretation. In this paper, we formulate…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-07-22",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

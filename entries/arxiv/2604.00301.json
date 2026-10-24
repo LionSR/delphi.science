@@ -1,0 +1,19 @@
+{
+  "key": "2604.00301",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00301",
+  "title": "EPO: A Unified Framework for Entropy Stability, Positivity, and Oscillation Suppression",
+  "authors": [
+    "Kailiang Wu"
+  ],
+  "summary": "High-order finite volume and discontinuous Galerkin methods are often stabilized by separate nonlinear devices for admissibility, entropy control, and oscillation suppression. This separation hides a simple geometric fact: all three act on the same cellwise candidate state. We propose a general framework (termed EPO) unifying fully discrete entropy stability, positivity/bound preservation, and spurious oscillation elimination. Starting from a candidate update, we scale along the ray anchored at its updated cell average. The admissible-state constraint, the entropy constraint, and the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-31",
+  "updated": "2026-03-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

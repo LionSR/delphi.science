@@ -1,0 +1,25 @@
+{
+  "key": "2605.29351",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.29351",
+  "title": "Attention as In-Context Empirical Bayes: A Two-Stage View via Particle Dynamics",
+  "authors": [
+    "Matthew Smart",
+    "Soumya Ganguly",
+    "Nilava Metya",
+    "Alexandre V. Morozov",
+    "Anirvan M. Sengupta"
+  ],
+  "summary": "We study minimal attention-only transformers under all-token corruption and show they admit a two-stage empirical Bayes interpretation. A single attention step computes a kernel-weighted posterior mean with respect to the empirical distribution defined by the context. Depth refines this distribution through particle dynamics (Stage 1), while a long-range skip-connection carries the noisy input as a query for posterior inference (Stage 2), revealing distinct statistical roles for depth and attention residuals. The framework isolates a minimal setting in which the context itself induces a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS",
+    "stat.ML"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-05-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

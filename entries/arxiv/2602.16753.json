@@ -1,0 +1,23 @@
+{
+  "key": "2602.16753",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.16753",
+  "title": "Structured Analytic Mappings for Point Set Registration",
+  "authors": [
+    "Wei Feng",
+    "Tengda Wei",
+    "Haiyong Zheng"
+  ],
+  "summary": "We present an analytic approximation model for non-rigid point set registration, grounded in the multivariate Taylor expansion of vector-valued functions. By exploiting the algebraic structure of Taylor expansions, we construct a structured function space spanned by truncated basis terms, allowing smooth deformations to be represented with low complexity and explicit form. To estimate mappings within this space, we develop a quasi-Newton optimization algorithm that progressively lifts the identity map into higher-order analytic forms. This structured framework unifies rigid, affine, and…",
+  "domain": "eess.IV",
+  "tags": [
+    "eess.IV",
+    "math.NA",
+    "math.RA"
+  ],
+  "published": "2026-02-18",
+  "updated": "2026-07-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

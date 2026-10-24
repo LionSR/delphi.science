@@ -1,0 +1,21 @@
+{
+  "key": "2606.20239",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20239",
+  "title": "Optimizing Agricultural Drone Operations: From Launch and Recovery Siting to Tiered Routing Strategies",
+  "authors": [
+    "Ethan Kolby",
+    "Josh Noble",
+    "Max Z. Li"
+  ],
+  "summary": "Drones are increasingly used in agriculture, where tight margins demand efficient planning. Current optimization tools suffer from exponential runtimes as problem sizes grow, necessitating practical heuristics for daily operations. This paper presents an operational framework and benchmarking analysis for drone spraying operations. We evaluate the trade-offs between facility siting methods and tiered routing parameters. For facility siting, comparing a Mixed-Integer Program (MIP) baseline against a $p$-Median heuristic shows that the heuristic reduces runtime by three orders of magnitude,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2605.28706",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.28706",
+  "title": "Robust Markov Decision Processes on Continuous State Spaces",
+  "authors": [
+    "Mengmeng Li",
+    "Yifan Hu",
+    "Daniel Kuhn",
+    "Yan Li"
+  ],
+  "summary": "We study infinite-horizon robust Markov decision processes (MDPs) on continuous state spaces with structured rectangular ambiguity set. The proposed ambiguity set falls within the convex hull of unknown generating kernels. We utilize the dynamic formulation of the corresponding robust MDPs, and subsequently introduce a stochastic first-order method for robust policy evaluation. We establish its high probability convergence to the robust value function, which in turn leads to an $\\widetilde{\\mathcal O}(1/ε^2)$ sample complexity. This high probability accuracy certificate is then used in an…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-27",
+  "updated": "2026-05-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

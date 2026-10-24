@@ -1,0 +1,20 @@
+{
+  "key": "2609.05939",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.05939",
+  "title": "A structure-preserving implicit-explicit method for a hyperbolic approximation of fourth-order PDEs",
+  "authors": [
+    "Rahul Barthwal",
+    "Rahuldev Ghorai"
+  ],
+  "summary": "We introduce a novel structure-preserving numerical method for a first-order hyperbolic approximation system, which approximates the solutions of general fourth-order partial differential equations. By employing an implicit-explicit (IMEX) splitting between the stiff and non-stiff terms, we rigorously prove that the proposed scheme is energy-consistent and positivity-preserving under a CFL-type condition. Furthermore, we show that the method remains robustly stable in asymptotic regimes, with a time-step restriction that is entirely independent of the relaxation parameters. Finally, we…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-05",
+  "updated": "2026-09-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

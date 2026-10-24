@@ -1,0 +1,22 @@
+{
+  "key": "2604.28116",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.28116",
+  "title": "The proportion of permutations fixing a $k$-set",
+  "authors": [
+    "Ben Green",
+    "Mehtaab Sawhney"
+  ],
+  "summary": "Denote by $p(k)$ the limit, as $n \\rightarrow \\infty$, of the probability that a random permutation on a set of size $n$ has an invariant set of size $k$. We give an asymptotic formula for $p(k)$, showing that it is asymptotically $f(\\{\\log_2 k\\}) k^{-δ} (\\log k)^{-3/2}$ where $δ= 1 - \\frac{1 + \\log \\log 2}{\\log 2} \\approx 0.086$ and $f$ is a smooth, positive, function on $\\mathbb{R}/\\mathbb{Z}$, which we will describe explicitly. The function $f$ satisfies $\\frac{\\max f}{\\min f} < 1 + 2 \\times 10^{-7}$ and we conjecture that it is not constant. Estimating $p(k)$ is a model for the more…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.NT",
+    "math.PR"
+  ],
+  "published": "2026-04-30",
+  "updated": "2026-04-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

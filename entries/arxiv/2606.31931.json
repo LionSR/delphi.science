@@ -1,0 +1,20 @@
+{
+  "key": "2606.31931",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.31931",
+  "title": "Hidden Accuracy and Superconvergence Analysis of Central Discontinuous Galerkin Methods on Overlapping Meshes",
+  "authors": [
+    "Manting Peng",
+    "Kailiang Wu"
+  ],
+  "summary": "This paper establishes the first rigorous superconvergence theory for semidiscrete and fully discrete central discontinuous Galerkin (CDG) methods for linear hyperbolic equations on overlapping meshes. While the optimal $L^2$ convergence of $\\mathbb{Q}^k$ CDG schemes was established on uniform Cartesian meshes by Liu, Shu, and Zhang [ SIAM J. Numer. Anal.}, 56 (2018), pp. 520--541], their observed $\\mathcal{O}(h^{k+2})$ pointwise superconvergence has remained unproven, due to the loss of standard single-mesh Galerkin orthogonality inherent in the CDG overlapping structure. To overcome this…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-30",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

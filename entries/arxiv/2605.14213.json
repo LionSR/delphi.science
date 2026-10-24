@@ -1,0 +1,19 @@
+{
+  "key": "2605.14213",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.14213",
+  "title": "A short proof of Mathar's 2013 recurrence conjecture for the reversible-binary-string sequence A032123",
+  "authors": [
+    "Tong Niu"
+  ],
+  "summary": "For the OEIS sequence A032123, the number of length-$2n$ black-and-white strings with $n$ black beads, considered up to reversal, R. J. Mathar contributed in November 2013 the conjectured order-5 P-recursive recurrence \\[ \\begin{aligned} &n(n-1)\\,a(n) - 2(n-1)(3n-4)\\,a(n-1) + 4(2n^{2}-14n+19)\\,a(n-2) &\\qquad + 8(n^{2}+5n-19)\\,a(n-3) - 16(n-3)(3n-10)\\,a(n-4) &\\qquad + 32(n-4)(2n-9)\\,a(n-5) \\;=\\; 0, \\qquad n \\ge 6. \\end{aligned} \\] We give a short proof. Burnside's lemma applied to the reversal action gives the closed form $a(n) = \\tfrac{1}{2}\\bigl(\\binom{2n}{n} + [n \\text{…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-05-14",
+  "updated": "2026-05-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

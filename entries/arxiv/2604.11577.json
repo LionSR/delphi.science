@@ -1,0 +1,20 @@
+{
+  "key": "2604.11577",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.11577",
+  "title": "Risk-Constrained Kelly for Mutually Exclusive Outcomes: CRRA Support Invariance and Logarithmic One-Dimensional Calibration",
+  "authors": [
+    "Christopher D. Long"
+  ],
+  "summary": "We study the finite mutually exclusive outcome version of risk-constrained Kelly optimization with explicit state prices. The market has outcome probabilities $p_i>0$, state prices $q_i>0$, terminal wealths $W_i=c+x_i/q_i$, and a drawdown-surrogate constraint \\[ \\sum_{i=1}^n p_i W_i^{-λ}\\le 1,\\qquad λ>0. \\] For constant relative risk aversion utility, we work primarily in the standard overround regime $\\sum_i q_i>1$, where every optimizer is necessarily non-full-support. Under the usual unique likelihood-ratio prefix hypothesis for the unconstrained problem, we prove that the constrained…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "q-fin.PM"
+  ],
+  "published": "2026-04-13",
+  "updated": "2026-04-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

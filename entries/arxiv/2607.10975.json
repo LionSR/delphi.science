@@ -1,0 +1,24 @@
+{
+  "key": "2607.10975",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10975",
+  "title": "Real-Time Rulebook-Aware Nonlinear MPC for Autonomous Driving with Priority-Biased Tiered Slacks",
+  "authors": [
+    "Hadi Hajieghrary",
+    "Benedikt Walter",
+    "Chaitanya Shinde",
+    "Paul Schmitt",
+    "Miguel Hurtado"
+  ],
+  "summary": "Autonomous-vehicle motion planners must resolve conflicts among safety, regulation, comfort, and efficiency in real time while exposing those decisions for audit. We present W-SQP, a weighted tiered-slack nonlinear model predictive controller (NMPC) that compiles nine driving-rule families into a four-tier shared-slack nonlinear program solved online with CasADi and IPOPT; the name denotes the weighted quadratic slack penalty, not a sequential-quadratic-programming solver. Strongly separated tier penalties bias residual violations toward lower-priority rules while leaving actuation bounds…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

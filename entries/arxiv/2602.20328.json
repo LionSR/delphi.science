@@ -1,0 +1,24 @@
+{
+  "key": "2602.20328",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.20328",
+  "title": "GSNR: Graph Smooth Null-Space Representation for Inverse Problems",
+  "authors": [
+    "Romario Gualdrón-Hurtado",
+    "Roman Jacome",
+    "Rafael S. Suarez",
+    "Henry Arguello"
+  ],
+  "summary": "Inverse problems in imaging are ill-posed, leading to infinitely many solutions consistent with the measurements due to the non-trivial null-space of the sensing matrix. Common image priors promote solutions on the general image manifold, such as sparsity, smoothness, or score function. However, as these priors do not constrain the null-space component, they can bias the reconstruction. Thus, we aim to incorporate meaningful null-space information in the reconstruction framework. Inspired by smooth image representation on graphs, we propose Graph-Smooth Null-Space Representation (GSNR), a…",
+  "domain": "cs.CV",
+  "tags": [
+    "cs.CV",
+    "eess.IV",
+    "math.OC"
+  ],
+  "published": "2026-02-23",
+  "updated": "2026-04-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

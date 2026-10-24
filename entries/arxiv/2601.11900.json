@@ -1,0 +1,20 @@
+{
+  "key": "2601.11900",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.11900",
+  "title": "A separable and asymptotic-preserving dynamical low-rank method for the Vlasov-Poisson-Fokker-Planck system",
+  "authors": [
+    "Shiheng Zhang",
+    "Jingwei Hu"
+  ],
+  "summary": "We present a dynamical low-rank (DLR) method for the Vlasov-Poisson-Fokker-Planck (VPFP) system. Our main contributions are two-fold: (i) a conservative spatial discretization of the Fokker-Planck operator that factors into velocity-only and space-only components, enabling efficient low-rank projection, and (ii) a time discretization within the DLR framework that properly handles stiff collisions. We propose both first-order and second-order low-rank IMEX schemes. For the first-order scheme, we prove an asymptotic-preserving (AP) property when the field fluctuation is small. Numerical…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-17",
+  "updated": "2026-05-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

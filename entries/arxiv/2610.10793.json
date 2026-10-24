@@ -1,0 +1,23 @@
+{
+  "key": "2610.10793",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.10793",
+  "title": "Calibrating Ambiguity Set via Diagnostic Transport for Distributionally Robust Optimization",
+  "authors": [
+    "Wenbin Zhou",
+    "Elizabeth Cucuzzella",
+    "Shixiang Zhu"
+  ],
+  "summary": "Distributionally robust optimization (DRO) protects decisions against distributional uncertainty by optimizing over an ambiguity set, but poorly aligned set geometry can require large radii and yield overly conservative decisions. We introduce diagnostic-transport DRO (DT-DRO), which uses held-out calibration data to adapt the ambiguity-set geometry to observed predictive errors. DT-DRO uses the conditional probability integral transform cumulative distribution function to diagnose systematic probability misallocation and translates this information into an outcome-level transport that…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

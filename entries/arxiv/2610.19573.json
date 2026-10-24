@@ -1,0 +1,22 @@
+{
+  "key": "2610.19573",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.19573",
+  "title": "On Inherent Privacy of Posterior Sampling: A Unified Rényi-Divergence Framework",
+  "authors": [
+    "Ruyu Zhou",
+    "Fang Liu"
+  ],
+  "summary": "Differential Privacy (DP) provides a rigorous framework for quantifying privacy guarantees. While most methods achieve DP by injecting calibrated random noise, the intrinsic randomness of certain procedures such as sampling can yield DP guarantees ``for free''. In this work, we develop a unified Rényi divergence framework to characterize the inherent DP guarantees of sampling from a Bayesian posterior distribution. We show that the privacy loss incurred by One-Posterior-Sampling (OPS) is governed by posterior exponential moments of the single-record log-likelihood ratio, and establish…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

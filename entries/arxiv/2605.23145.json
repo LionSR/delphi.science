@@ -1,0 +1,25 @@
+{
+  "key": "2605.23145",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.23145",
+  "title": "Operationalizing Individual Fairness via Gradient Descent and Bradley-Terry Models",
+  "authors": [
+    "Conlan Olson",
+    "Linjun Zhang",
+    "Zhun Deng",
+    "Pragya Sur"
+  ],
+  "summary": "Individual fairness, the notion that \"similar individuals should be treated similarly,\" provides a strong and flexible fairness guarantee for algorithmic decision makers. However, a barrier to implementing individual fairness in practice is the difficulty of learning the similarity metric over individuals. In this work, we present an algorithm for learning a Mahalanobis similarity metric from triplet queries of the form \"is individual $i$ more similar to individual $j$ or $k$?\" We work in the standard Bradley-Terry model for pairwise comparisons. Our algorithm consists of a spectral…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-05-22",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

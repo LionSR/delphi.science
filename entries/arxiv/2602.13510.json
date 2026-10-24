@@ -1,0 +1,25 @@
+{
+  "key": "2602.13510",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.13510",
+  "title": "Stochastic variance reduced extragradient methods for solving hierarchical variational inequalities",
+  "authors": [
+    "Pavel Dvurechensky",
+    "Andrea Ebner",
+    "Johannes Carl Schnebel",
+    "Shimrit Shtern",
+    "Mathias Staudigl"
+  ],
+  "summary": "We are concerned with optimization in a broad sense through the lens of solving variational inequalities (VIs) -- a class of problems that are so general that they cover as particular cases minimization of functions, saddle-point (minimax) problems, Nash equilibrium problems, and many others. The key challenges in our problem formulation are the two-level hierarchical structure and finite-sum representation of the smooth operators in each level. For this setting, we are the first to prove convergence rates and complexity statements for variance-reduced stochastic algorithms approaching the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.GT",
+    "cs.LG"
+  ],
+  "published": "2026-02-13",
+  "updated": "2026-02-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

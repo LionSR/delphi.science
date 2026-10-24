@@ -1,0 +1,22 @@
+{
+  "key": "2604.02735",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.02735",
+  "title": "Error Estimates of the Gain Approximation by Hermite-Galerkin Method in Feedback Particle Filter",
+  "authors": [
+    "Ruoyu Wang",
+    "Peng Sun",
+    "Xue Luo"
+  ],
+  "summary": "The feedback particle filter (FPF) is a promising nonlinear filtering (NLF) method, but its practical implementation is hindered by the intractability of the gain function, which satisfies a boundary value problem (BVP). This paper proposes a novel two-step Hermite-Galerkin spectral method to address this challenge. First, the unknown density in the BVP is approximated by a kernel density estimator, whose error bounds are well-established in the literature. Second, rather than directly approximating the gain function, we approximate an auxiliary variable via the Galerkin spectral method…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-04-03",
+  "updated": "2026-04-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

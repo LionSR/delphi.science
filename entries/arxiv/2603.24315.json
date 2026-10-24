@@ -1,0 +1,20 @@
+{
+  "key": "2603.24315",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.24315",
+  "title": "Counting (and Randomly Generating) Hamiltonian Cycles in Rectangular Grids",
+  "authors": [
+    "Pablo Blanco",
+    "Doron Zeilberger"
+  ],
+  "summary": "We first fully implement, in Maple, the ingenious method of Robert Stoyan and Volker Strehl from 1995 to automatically derive generating functions for the number of Hamiltonian cycles in an m by n grid graph ,for a fixed width m, but general length n, and actually compute these generating functions for all m up to ten. We also show how to generate a uniformly-at-random such Hamiltonian cycle, and also derive more informative generating functions for other parameters besides the length of the grid graph.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-03-25",
+  "updated": "2026-03-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

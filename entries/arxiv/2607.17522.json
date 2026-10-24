@@ -1,0 +1,22 @@
+{
+  "key": "2607.17522",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.17522",
+  "title": "One-step lowest-variance selection in a Gaussian random-field model motivated by masked diffusion: Total correlation and a square root collision threshold",
+  "authors": [
+    "Linjun Li"
+  ],
+  "summary": "Motivated by confidence-guided parallel unmasking in masked discrete diffusion, we study a single selection step in a stylized Gaussian random-field model. A locally dependent nonnegative score field represents position wise uncertainty, and the scheduler selects the K positions with the smallest scores. Dependence among the selected positions is measured through a distance-dependent Gaussian correlation model. This separation provides a tractable framework for quantifying how the geometry of low-score locations affects the dependence cost of factorized parallel decoding. We establish two…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "cs.IT",
+    "math.PR"
+  ],
+  "published": "2026-07-20",
+  "updated": "2026-07-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

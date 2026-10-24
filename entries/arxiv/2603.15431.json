@@ -1,0 +1,26 @@
+{
+  "key": "2603.15431",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.15431",
+  "title": "Physics-informed fine-tuning of foundation models for partial differential equations",
+  "authors": [
+    "Vlad Medvedev",
+    "Leon Armbruster",
+    "Christopher Straub",
+    "Georg Kruse",
+    "Andreas Rosskopf"
+  ],
+  "summary": "Foundation models for partial differential equations (PDEs) have emerged as powerful surrogates pre-trained on diverse physical systems, but adapting them to new downstream tasks remains challenging due to limited task-specific data and distribution shifts. While fine-tuning has proven transformative in natural language processing, best practices for adapting PDE foundation models remain underexplored. Although physics-informed training has successfully trained accurate solvers across a wide range of PDE problems, its potential for fine-tuning data-based foundation models has not been…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.AP",
+    "math.NA"
+  ],
+  "published": "2026-03-16",
+  "updated": "2026-03-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

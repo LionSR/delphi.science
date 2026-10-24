@@ -1,0 +1,25 @@
+{
+  "key": "2609.07294",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07294",
+  "title": "Constitutive State-Space Modeling of Path-Dependent Plasticity: A Resolution-Consistent and Parallelizable Computational Framework",
+  "authors": [
+    "Rui Barreira",
+    "Taylan Soydan",
+    "Francesco Scipione",
+    "Miguel A. Bessa",
+    "Dirk Mohr"
+  ],
+  "summary": "Data-driven constitutive models for path-dependent plasticity are commonly formulated using nonlinear recurrent neural networks, whose sequential state evolution limits parallel training and whose predictions may depend on the discretization of the applied strain path. We introduce a Constitutive State Space (CSS) model that reformulates structured state-space dynamics as an incremental constitutive operator. The strain increment is decomposed into magnitude and direction: the loading direction drives the latent state-space system, while the increment magnitude enters the zero-order-hold…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

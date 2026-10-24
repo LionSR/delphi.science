@@ -1,0 +1,24 @@
+{
+  "key": "2610.24323",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.24323",
+  "title": "Computing Multi-Slot First-Price Pacing Equilibria at Scale via Entropic Smoothing",
+  "authors": [
+    "Yuchen Xie",
+    "Shenyinying Tu",
+    "Yuan Gao",
+    "Yi Zhang",
+    "Deepak Kumar"
+  ],
+  "summary": "Pacing equilibria describe how budget-constrained advertisers clear an ad market, but computing one at production scale is hard when every request fills several slots: the allocation jumps whenever two campaigns' scores cross. We consider the first-price pacing equilibrium (FPPE) of auctions with $K$ homogeneous slots and unit-demand campaigns, whose Eisenberg-Gale dual reduces, via a TopK identity, to a convex program over bids. Regularizing each request's allocation with the binary (Fermi-Dirac) entropy gives a smooth, strictly convex dual whose gradient is exactly spend minus budget and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.GT"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

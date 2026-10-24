@@ -1,0 +1,23 @@
+{
+  "key": "2601.01190",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.01190",
+  "title": "A Modified Bayesian Criterion for Model Selection in Mixed and Hierarchical Frameworks",
+  "authors": [
+    "Diogenes de Jesus Ramirez",
+    "Anderson Melchor Hernandez",
+    "Isabel Cristina Ramirez",
+    "Luis Raúl Pericchi"
+  ],
+  "summary": "In this work, we propose a modified Bayesian Information Criterion (BIC) specifically designed for mixture models and hierarchical structures. This criterion incorporates the determinant of the Hessian matrix of the log-likelihood function, thereby refining the classical Bayes Factor by accounting for the curvature of the likelihood surface. Such geometric information introduces a more nuanced penalization for model complexity. The proposed approach improves model selection, particularly under small-sample conditions or in the presence of noise variables. Through theoretical derivations and…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.PR"
+  ],
+  "published": "2026-01-03",
+  "updated": "2026-01-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

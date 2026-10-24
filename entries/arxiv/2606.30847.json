@@ -1,0 +1,21 @@
+{
+  "key": "2606.30847",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.30847",
+  "title": "$\\texttt{bucket-graph-spprc}$: an extensible C++ library for the shortest path problem with resource constraints",
+  "authors": [
+    "Simon Spoorendonk"
+  ],
+  "summary": "We present $\\texttt{bucket-graph-spprc}$ ($\\texttt{bgspprc}$ for short), an open-source, header-only C++23 library for the shortest path problem with resource constraints (SPPRC), the pricing subproblem at the heart of branch-cut-and-price for vehicle routing and related problems. The library implements the bucket-graph labelling algorithm of Sadykov, Uchoa and Pessoa (2021), with bidirectional labelling, across-arc concatenation, bucket fixing and arc elimination, and a structure-of-arrays label store with SIMD-accelerated dominance. Its central design feature is a compile-time resource…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DS",
+    "cs.MS"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

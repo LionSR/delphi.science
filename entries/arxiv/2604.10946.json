@@ -1,0 +1,22 @@
+{
+  "key": "2604.10946",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.10946",
+  "title": "Learning to Adapt: In-Context Learning Beyond Stationarity",
+  "authors": [
+    "Zhen Qin",
+    "Jiachen Jiang",
+    "Zhihui Zhu"
+  ],
+  "summary": "Transformer models have become foundational across a wide range of scientific and engineering domains due to their strong empirical performance. A key capability underlying their success is in-context learning (ICL): when presented with a short prompt from an unseen task, transformers can perform per-token and next-token predictions without any parameter updates. Recent theoretical efforts have begun to uncover the mechanisms behind this phenomenon, particularly in supervised regression settings. However, these analyses predominantly assume stationary task distributions, which overlook a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-04-13",
+  "updated": "2026-04-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

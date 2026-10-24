@@ -1,0 +1,23 @@
+{
+  "key": "2607.02130",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.02130",
+  "title": "An algorithmic approach for computing fundamental domains of crystallographic groups",
+  "authors": [
+    "Reymond Akpanya",
+    "Alice C. Niemeyer",
+    "Lukas Schnelle"
+  ],
+  "summary": "A crystallographic group is a discrete subgroup of the Euclidean group $\\operatorname{E}(n)$ that has a compact fundamental domain. Since such a crystallographic group $Γ$ is infinite, computing fundamental domains of $Γ$ is algorithmically challenging. We address this difficulty by targeting the computation of Dirichlet cells that can form fundamental domains of $Γ$. We show that the half-spaces defining such a Dirichlet cell can be derived from elements of $Γ$ acting on $\\mathbb{R}^n$ that can be expressed as words of bounded length in a suitable generating set. Based on these results, we…",
+  "domain": "math.MG",
+  "tags": [
+    "math.MG",
+    "cs.CG",
+    "math.GR"
+  ],
+  "published": "2026-07-02",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

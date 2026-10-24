@@ -1,0 +1,21 @@
+{
+  "key": "2601.02094",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.02094",
+  "title": "Horizon Activation Mapping for Neural Networks in Time Series Forecasting",
+  "authors": [
+    "Krupakar Hans",
+    "V A Kandappan"
+  ],
+  "summary": "Neural networks for time series forecasting have relied on error metrics and architecture-specific interpretability approaches for model selection that don't apply across models of different families. To interpret forecasting models agnostic to the types of layers across state-of-the-art model families, we introduce Horizon Activation Mapping (HAM), a visual interpretability technique inspired by grad-CAM that uses gradient norm averages to study the horizon's subseries where grad-CAM studies attention maps over image data. We introduce causal and anti-causal modes to calculate gradient…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.FA"
+  ],
+  "published": "2026-01-05",
+  "updated": "2026-05-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

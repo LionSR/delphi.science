@@ -1,0 +1,22 @@
+{
+  "key": "2603.17438",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.17438",
+  "title": "An error bound-based convergence analysis framework for a class of randomized algorithms",
+  "authors": [
+    "Zhichun Yang",
+    "Li Jiang",
+    "Tianxiang Liu",
+    "Man-Chung Yue"
+  ],
+  "summary": "Classical analyses show that randomized coordinate descent (RCD) and gradient descent (GD) share the same convergence rates in terms of objective gap under convexity and specific global EB-type assumptions. However, this rate preservation phenomenon does not extend to iterate rates, almost-sure rates, or general local error bound conditions. In this paper, we study this phenomenon systematically, not only for RCD but also for a much broader class of algorithms that share the same structures. Specifically, we introduce an abstract class of algorithms, called monotone randomized algorithms…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-18",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

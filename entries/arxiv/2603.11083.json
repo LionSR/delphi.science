@@ -1,0 +1,21 @@
+{
+  "key": "2603.11083",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.11083",
+  "title": "Probabilistic Disjunctive Normal Forms in Temporal Logic and Automata Theory",
+  "authors": [
+    "Alexander Kuznetsov"
+  ],
+  "summary": "This article introduces probabilistic disjunctive normal forms (PDNFs) as a framework for representing and reasoning about uncertainty in logical systems. Unlike classical DNFs, PDNFs assign real-valued weights to variables, encoding probabilistic information about their presence, absence, or negation. Then we construct a vector space of PDNFs that allows algebraic evidence combination. PDNFs are interpreted as probability distributions over venjunctions (temporal logic constructs) and as integrable functions over partitioned intervals, where the integrals determine variable probabilities.…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "cs.FL",
+    "math.PR"
+  ],
+  "published": "2026-03-11",
+  "updated": "2026-03-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2601.13230",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.13230",
+  "title": "Towards Matrix-Free Patch Smoothers for the Stokes Problem: Evaluating Local p-Multigrid Solvers",
+  "authors": [
+    "Michał Wichrowski"
+  ],
+  "summary": "Vertex-patch smoothers offer an effective strategy for achieving robust geometric multigrid convergence for the Stokes equations, particularly in the context of high-order finite elements. However, their practical efficiency is often limited by the computational cost of solving the local saddle-point problems, especially when explicit matrix factorizations are not feasible. We explore a fully iterative, matrix-free-compatible approach to the local patch solve using $p$-multigrid techniques. We evaluate different local solver configurations: Braess-Sarazin and block-triangular…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-19",
+  "updated": "2026-01-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

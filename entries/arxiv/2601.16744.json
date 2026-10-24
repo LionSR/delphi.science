@@ -1,0 +1,20 @@
+{
+  "key": "2601.16744",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.16744",
+  "title": "On the analysis of spectral deferred corrections for differential-algebraic equations of index one",
+  "authors": [
+    "Matthias Bolten",
+    "Lisa Wimmer"
+  ],
+  "summary": "In this paper, we present a new spectral deferred corrections (SDC) method to solve semi-explicit differential-algebraic equations (DAEs) with the ability to be parallelized. The new scheme restricts numerical integration to differential equations. In Y. Xia et al. (2007), it was shown that each correction elevates the order of the solution by one. We show that this carries over to the new SDC scheme. The derivation of the method combines the approach of SDC and the idea to enforce the algebraic constraints without numerical integration as shown in the $\\varepsilon$-embedding method by E.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-23",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

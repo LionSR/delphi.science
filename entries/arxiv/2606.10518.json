@@ -1,0 +1,22 @@
+{
+  "key": "2606.10518",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.10518",
+  "title": "Two Integral Sliding-Window Inequalities for Maximal Convolutions",
+  "authors": [
+    "Gangsong Leng",
+    "Cheng Li"
+  ],
+  "summary": "We prove two sliding-window inequalities for maximal convolutions. The first concerns the multiplicative maximal convolution. If $f$ and $g$ are nonnegative continuous functions on $[0,A]$ and $[0,B]$, respectively, define \\[ h(x)=\\max_{\\substack{0\\le u\\le A\\\\0\\le x-u\\le B}} f(u)g(x-u),\\qquad 0\\le x\\le A+B. \\] Then there exists a window $[a,a+B]$ of length $B$ such that \\[ \\frac1B\\int_a^{a+B}h(x)\\,dx\\ge \\left(\\frac1A\\int_0^A f(x)\\,dx\\right) \\left(\\frac1B\\int_0^B g(x)\\,dx\\right). \\] The second concerns the additive maximal convolution. Let $f$ and $g$ be nonnegative continuous functions on…",
+  "domain": "math.FA",
+  "tags": [
+    "math.FA",
+    "math.CA",
+    "math.MG"
+  ],
+  "published": "2026-06-09",
+  "updated": "2026-06-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

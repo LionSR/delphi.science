@@ -1,0 +1,21 @@
+{
+  "key": "2604.00140",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00140",
+  "title": "Adaptive Fast-Slow Operator Splitting for Multiscale Biochemical Stochastic Dynamics",
+  "authors": [
+    "Yuming Zeng",
+    "Wei Xie",
+    "Keqi Wang"
+  ],
+  "summary": "Stochastic reaction networks governed by Chemical Langevin Equations (CLE) exhibit pronounced multiscale dynamics spanning fast molecular reactions, intermediate transport, and slow cellular regulation, posing significant challenges for efficient and accurate simulation. Although operator splitting naturally decouples fast and slow subsystems, a rigorous error characterization for CLE splitting schemes has been lacking. We propose a modular operator-splitting framework with adaptive discretization that enables reliable and efficient simulation across fast-slow dynamics with explicit control…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-31",
+  "updated": "2026-03-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2609.32517",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32517",
+  "title": "LocalProp: Neuro-Localized Memory-Efficient Backpropagation",
+  "authors": [
+    "Diana-Nicoleta Grigore",
+    "Iuliana Georgescu",
+    "Radu Tudor Ionescu"
+  ],
+  "summary": "The current deep learning training paradigm employs end-to-end backpropagation, regardless of the training stage, i.e. pre-training or fine-tuning. However, backpropagating through the entire model is neither biologically plausible nor memory efficient, since learning inside the brain is highly localized. Therefore, we propose LocalProp, a training procedure that locally updates the weights of a model. Our neuro-localized weight updates follow the \"pre-training then fine-tuning\" paradigm, where the pre-training is based on I-JEPA. After locally updating the weights, a pruning operation is…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.CV",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

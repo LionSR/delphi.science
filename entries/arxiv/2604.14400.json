@@ -1,0 +1,23 @@
+{
+  "key": "2604.14400",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.14400",
+  "title": "Bivariate range functions with superior convergence order",
+  "authors": [
+    "Bingwei Zhang",
+    "Thomas Chen",
+    "Kai Hormann",
+    "Chee Yap"
+  ],
+  "summary": "Range functions are a fundamental tool for certified computations in geometric modeling, computer graphics, and robotics, but traditional range functions have only quadratic convergence order ($m=2$). For ``superior'' convergence order (i.e., $m>2$), we exploit the Cornelius--Lohner framework in order to introduce new bivariate range functions based on Taylor, Lagrange, and Hermite interpolation. In particular, we focus on practical range functions with cubic and quartic convergence order. We implemented them in Julia and provide experimental validation of their performance in terms of…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.CG"
+  ],
+  "published": "2026-04-15",
+  "updated": "2026-04-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

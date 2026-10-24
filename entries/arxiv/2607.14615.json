@@ -1,0 +1,20 @@
+{
+  "key": "2607.14615",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14615",
+  "title": "Gradient-enhanced spline dimensional decomposition for uncertainty quantification with limited training samples",
+  "authors": [
+    "Eunho Heo",
+    "Dongjin Lee"
+  ],
+  "summary": "A spline dimensional decomposition (SDD) surrogate effectively represents high-dimensional engineering responses with localized features and complex nonlinearities in uncertainty quantification (UQ). However, limited training data can make coefficient estimation from function values severely ill-conditioned. We propose gradient-enhanced SDD (GE-SDD), which trains the surrogate using function values and partial derivatives. A diagonal row-weight matrix balances the function and derivative blocks by their Frobenius norms. We solve the balanced system through ridge regression in…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

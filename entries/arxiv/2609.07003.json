@@ -1,0 +1,22 @@
+{
+  "key": "2609.07003",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07003",
+  "title": "Optimizer as Detector: Stochastic Gradient Descent for Latent Mixture Models",
+  "authors": [
+    "Ye Shi",
+    "Xiao Jin",
+    "Chung-Piaw Teo"
+  ],
+  "summary": "Pooling latent subpopulations can obscure relationships and yield misleading regression conclusions, including Simpson's paradox (SP). We propose a detector based on the steady-state dynamics of constant-step stochastic gradient descent (SGD). Unlike likelihood-based mixture tests and confounder-search methods, it requires neither a normal-mixture specification nor observed candidate confounders. Two linear pieces compete under a winner-take-all squared-error loss, and their normalized terminal separation forms the test statistic. Using diffusion approximations, we derive its asymptotic null…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.OC"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

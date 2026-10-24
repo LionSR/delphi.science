@@ -1,0 +1,22 @@
+{
+  "key": "2607.20751",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.20751",
+  "title": "Local permutation tests for conditional independence: an adaptive binning perspective",
+  "authors": [
+    "David Chen",
+    "Rohan Hore",
+    "Rina Foygel Barber"
+  ],
+  "summary": "In this work, we study the problem of testing conditional independence between random variables $X$ and $Y$ given a confounder $Z$. The local permutation test (LPT) offers a principled approach to this problem by partitioning the $Z$-space into pre-specified bins, and permuting the $X$ and $Y$ data within each bin, to assess the significance of an observed test statistic. However, when the partitions are pre-fixed, the resulting partition can be poorly balanced, as some bins may contain most of the samples while others contain only a few. This motivates the use of data-adaptive binning…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-07-22",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

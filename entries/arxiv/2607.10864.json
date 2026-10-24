@@ -1,0 +1,22 @@
+{
+  "key": "2607.10864",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10864",
+  "title": "Multilevel Preconditioning Strategies for Convex Optimization Methods in Image Deblurring",
+  "authors": [
+    "Stefano Aleotti",
+    "Claudia Binda",
+    "Marco Donatelli",
+    "Rolf Krause"
+  ],
+  "summary": "Proximal gradient methods are widely used in imaging, and their speed of convergence can be accelerated by incorporating variable metrics and/or extrapolation steps. Recent works have shown that preconditioning strategies can significantly enhance this acceleration, in particular, for image deblurring problems. In parallel, a multilevel framework has been introduced to speed up inertial and inexact forward-backward schemes for image restoration problems. In this paper, we combine preconditioning and multilevel strategies to design a robust and consistent acceleration framework for both…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-12",
+  "updated": "2026-07-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2601.06688",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.06688",
+  "title": "The Sample Complexity of Lossless Data Compression",
+  "authors": [
+    "Terence Viaud",
+    "Ioannis Kontoyiannis"
+  ],
+  "summary": "A new framework is introduced for examining and evaluating the fundamental limits of lossless data compression, that emphasizes genuinely non-asymptotic results. The {\\em sample complexity} of compressing a given source is defined as the smallest blocklength at which it is possible to compress that source at a specifically constrained rate and to within a specified excess-rate probability. This formulation parallels corresponding developments in statistics and computer science, and it facilitates the use of existing results on the sample complexity of various hypothesis testing problems. For…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "math.ST"
+  ],
+  "published": "2026-01-10",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

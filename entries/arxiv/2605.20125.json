@@ -1,0 +1,26 @@
+{
+  "key": "2605.20125",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.20125",
+  "title": "Federated Learning with Incomplete Data: When to Use Complete Cases and When to Weight",
+  "authors": [
+    "Jesus E. Vazquez",
+    "Yicheng Shen",
+    "Jason Akulian",
+    "Chad Hochberg",
+    "Theodore J. Iwashyna",
+    "Elizabeth A. Stuart",
+    "Jiayi Tong"
+  ],
+  "summary": "Privacy constraints have driven the rise of federated learning (FL), which enables multi-site analyses without sharing individual participant data. Existing FL estimators largely assume complete data, whereas multi-site studies often face missingness. We develop a framework for FL with missing data, identifying conditions under which the complete case (CC) estimator is preferred over the inverse probability weighting (IPW) estimator. For settings where the CC estimator leads to bias, we introduce a calibrated weight estimation approach that combines candidate weighting models across sites…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

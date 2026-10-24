@@ -1,0 +1,22 @@
+{
+  "key": "2610.07589",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.07589",
+  "title": "Vine Copula VAR:From Recursive Margins to Joint Forecast Inference",
+  "authors": [
+    "Hunter Ng",
+    "Yubo Tao"
+  ],
+  "summary": "Joint-event forecasts combine an estimated dependence model with current marginal forecasts. Retaining historical transforms at the marginal fits available when each outcome arrived creates overlapping estimation errors. We derive their joint influence with the terminal estimates in a stable Vine Copula VAR with normal innovation margins and a fixed, correctly specified Gaussian or positive Clayton vine. An intercept identity and the stable VAR filter reduce the historical correction to harmonically weighted innovation moments. Terminal slope uncertainty remains in the forecast gradient. A…",
+  "domain": "econ.EM",
+  "tags": [
+    "econ.EM",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

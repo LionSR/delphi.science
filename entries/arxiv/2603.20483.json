@@ -1,0 +1,22 @@
+{
+  "key": "2603.20483",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20483",
+  "title": "Convergence Analysis of the Random Bisection Method",
+  "authors": [
+    "Ludovick Bouthat",
+    "Philippe-André Luneau",
+    "Philippe Petitclerc"
+  ],
+  "summary": "We propose a generalized version of the bisection method where the cutting point between the two subintervals is chosen at random following an arbitrary distribution. We compute expected convergence rates with respect to any arbitrary a priori distribution for the position of the root in the initial interval and proved that it depends only on the the expectation $\\mathbb{E}[c(1-c)]$ of the cut $c$. We also provide a generalization of the method for $K$ random cuts and study its convergence properties. Most probabilistic derivations are kept fairly simple for the ease of understanding of a…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.PR"
+  ],
+  "published": "2026-03-20",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

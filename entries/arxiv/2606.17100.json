@@ -1,0 +1,23 @@
+{
+  "key": "2606.17100",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.17100",
+  "title": "Theory and internal structure of ADER-DG method for partial differential equations",
+  "authors": [
+    "I. S. Popov"
+  ],
+  "summary": "Highly accurate stability boundary values for the ADER-DG method are obtained for arbitrary degrees $N$ of basis polynomials. In the linear case, stability is violated precisely when one of the matrix eigenvalues reaches $λ= -1$, regardless of the phase $θ$. A rigorous mathematical framework for the stability is developed. The stability condition is significantly simplified, reducing it to the problem of calculating the roots of polynomials in the Courant number $\\mathrm{CFL}$. The maximum of the Courant numbers $\\mathrm{CFL}_{\\rm max}(N)$ are calculated. These results are new and very…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math.AP",
+    "math.NA",
+    "physics.app-ph",
+    "physics.comp-ph"
+  ],
+  "published": "2026-06-14",
+  "updated": "2026-06-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

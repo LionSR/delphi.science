@@ -1,0 +1,22 @@
+{
+  "key": "2608.02924",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.02924",
+  "title": "Calibrated Bayesian Inference for Stochastic Intervention Effects",
+  "authors": [
+    "Tyler M. Schmidt",
+    "Nathan B. Wikle"
+  ],
+  "summary": "Causal inference increasingly extends beyond classical causal effects defined by deterministic treatment assignments, such as the average treatment effect, to stochastic intervention effects that can weaken positivity requirements and offer greater policy relevance. Nonparametric Bayesian models are attractive for estimating these effects due to their flexibility and inherent uncertainty propagation, but this posterior uncertainty need not be well calibrated for the causal effect of interest. We develop a simple post-processing correction that can be applied to posterior samples without…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-08-03",
+  "updated": "2026-08-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

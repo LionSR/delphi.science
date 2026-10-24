@@ -1,0 +1,22 @@
+{
+  "key": "2606.14128",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.14128",
+  "title": "Designing Efficient and Reachable Routes: The $k$-Step-Central Shortest Path Problem",
+  "authors": [
+    "Johnson Phosavanh",
+    "Dmytro Matsypura"
+  ],
+  "summary": "Designing rapid transportation routes requires balancing efficiency and reachability. Shortest-path models ensure direct, cost-efficient routes but ignore coverage, while centrality-based approaches maximize accessibility but do not enforce operational constraints. We study the problem of selecting a shortest path that maximizes reachability, measured as the number of nodes within a fixed distance of the path. To do this, we introduce the $k$-Step-Central Shortest Path problem and analyse its structural properties. We show that optimal solutions on unweighted graphs can be found in…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO",
+    "math.OC"
+  ],
+  "published": "2026-06-12",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

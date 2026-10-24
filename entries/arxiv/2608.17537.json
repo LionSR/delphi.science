@@ -1,0 +1,21 @@
+{
+  "key": "2608.17537",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17537",
+  "title": "Energy dissipation and stability of a finite-volume scheme for two-phase flow models with dynamic capillary pressure",
+  "authors": [
+    "Ansgar Jüngel",
+    "Josipa-Pina Milišić",
+    "Sara Xhahysa"
+  ],
+  "summary": "An implicit Euler finite-volume scheme for degenerate pseudo-parabolic cross-diffusion equations is proposed and analyzed. The system describes the dynamics of an unsaturated two-phase flow mixture with dynamic capillary pressure in a porous medium. The numerical scheme is based on a two-point flux approximation that preserves the energy structure, ensures the conservation of total mass, and guarantees strict positivity and boundedness of the water saturation. These properties rely on carefully selected mean functions for the nonlinear components. The existence and uniqueness of a discrete…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

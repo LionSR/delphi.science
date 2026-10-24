@@ -1,0 +1,22 @@
+{
+  "key": "2601.01575",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.01575",
+  "title": "A MINRES-based Linesearch Algorithm for Nonconvex Optimization with Non-positive Curvature Detection",
+  "authors": [
+    "Hanfeng Zeng",
+    "Yang Liu",
+    "Wenqing Ouyang",
+    "Andre Milzarek"
+  ],
+  "summary": "We propose a MINRES-based Newton-type algorithm for solving unconstrained nonconvex optimization problems. Our approach uses the minimal residual method (MINRES), a well-known solver for indefinite symmetric linear systems, to compute descent directions that leverage second-order and non-positive curvature (NPC) information. Comprehensive asymptotic convergence properties are derived under standard assumptions. In particular, under the Kurdyka-Łojasiewicz inequality and a mild NPC-detectability condition, we prove that our algorithm can avoid strict saddle points and converge to second-order…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-04",
+  "updated": "2026-01-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

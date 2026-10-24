@@ -1,0 +1,21 @@
+{
+  "key": "2606.21575",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.21575",
+  "title": "Nonsmooth Obstacles and Killed Resolvents in Reflected Stochastic Control",
+  "authors": [
+    "Louis Shuo Wang",
+    "Jiguang Yu"
+  ],
+  "summary": "We study an infinite-horizon optimal stopping problem for a normally reflected two-dimensional diffusion in the quadrant with nonsmooth max-type payoff \\(G(x_1,x_2)=x_1\\veeαx_2\\). The main novelty is a measure-valued variational formulation: the stopping gain \\(Γ=c+rG-\\mathcal LG\\) is shown to be a signed Radon measure whose singular component is supported on the kink diagonal \\(\\{x_1=αx_2\\}\\), and this component is computed explicitly. We prove that the value admits the killed-resolvent representation \\[ V=G-R_r^{\\mathcal C}Γ, \\] where the reflected diffusion is killed upon entry into the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.PR"
+  ],
+  "published": "2026-06-19",
+  "updated": "2026-09-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

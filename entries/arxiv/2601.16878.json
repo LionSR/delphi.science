@@ -1,0 +1,20 @@
+{
+  "key": "2601.16878",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.16878",
+  "title": "A Lyapunov-tamed Euler method for singular SDEs",
+  "authors": [
+    "Tim Johnston",
+    "Pierre Monmarché"
+  ],
+  "summary": "Many applications, such as systems of interacting particles in physics, require the simulation of diffusion processes with singular coefficients. Standard Euler schemes are then not convergent, and theoretical guarantees in this situation are scarce. In this work we introduce a Lyapunov-tamed Euler scheme, for drift coefficients for which the weak derivative is dominated by a function that obeys a certain generic Lyapunov-type condition. This allows for a range of coefficients that explode to infinity on a bounded set. We establish that, in terms of Lp-strong error, the Lyapunov-tamed scheme…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-01-23",
+  "updated": "2026-01-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

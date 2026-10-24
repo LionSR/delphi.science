@@ -1,0 +1,19 @@
+{
+  "key": "2607.06449",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06449",
+  "title": "Sparse space-time spectral methods can time-step by peel and pass",
+  "authors": [
+    "Timon S. Gutleb"
+  ],
+  "summary": "Global space-time spectral methods give spectral accuracy in time but typically require the whole space-time history to be resolved and stored on a single tensor-product domain $T \\times Ω$. We record that in an endpoint-benign Legendre or Chebyshev-$T$ time basis, whose polynomials all equal one at the right endpoint, the final time slice of a space-time block is recovered exactly by summing the stored coefficients along the time index. This peel-and-pass step is a special case of a Jacobi endpoint identity, which also gives derivative formulae for higher-order equations. Writing such…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2610.17563",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.17563",
+  "title": "Boundary Control of a Modified Timoshenko-Ehrenfest Beam via Reduced-Order Reinforcement Learning",
+  "authors": [
+    "Leonardo R S Rodrigues"
+  ],
+  "summary": "In this paper, we study the active vibration control of an elastic beam using reinforcement learning (RL). The physical system is modeled by a modified Timoshenko-Ehrenfest type linear partial differential equation with simply supported boundary conditions. The dynamics are approximated by a reduced-order model (ROM) obtained through eigenvalue expansion and truncated Galerkin projection. Control is applied through boundary actuation. The resulting finite-dimensional system is formulated as a continuous-time Markov decision process and solved numerically using the Proximal Policy…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

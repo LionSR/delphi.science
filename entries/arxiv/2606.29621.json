@@ -1,0 +1,20 @@
+{
+  "key": "2606.29621",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.29621",
+  "title": "Hypocoercivity-preserving space-time Galerkin methods for kinetic Fokker-Planck equations",
+  "authors": [
+    "Zhaonan Dong",
+    "Emmanuil H. Georgoulis"
+  ],
+  "summary": "We design and analyse a family of hypocoercivity-preserving fully discrete Galerkin methods for the (inhomogeneous) kinetic Fokker--Planck (kFP) equations, a class of evolution PDEs with degenerate diffusion. The proposed methods mimic Villani's framework of enhanced quadratic forms [23], yielding a coercive bilinear form in an exponentially weighted norm that admits a spectral gap/Poincaré inequality despite the degeneracy. The problem is formulated as a fourth-order-in-space evolution PDE on the whole space $\\mathbb{R}^{d}\\times\\mathbb{R}^d$. The spatial discretisation employs continuous…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-28",
+  "updated": "2026-06-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

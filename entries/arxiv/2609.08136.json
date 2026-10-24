@@ -1,0 +1,25 @@
+{
+  "key": "2609.08136",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.08136",
+  "title": "GPU-Enabled Large-Scale Optimization Using Randomized Linear Algebra",
+  "authors": [
+    "Pratik Rathore",
+    "Zachary Frangella",
+    "Parth Nobel",
+    "Xuning Hu",
+    "Madeleine Udell"
+  ],
+  "summary": "This paper introduces rlaopt, a PyTorch-based package for large-scale optimization and scientific computing using randomized numerical linear algebra (RandNLA). Despite substantial progress in RandNLA-based algorithms, few implementations combine GPU acceleration with a simple interface for specifying optimization problems. rlaopt addresses this gap by providing GPU-enabled solvers for positive-definite linear systems and convex empirical risk minimization with constraints and regularizers. These solvers use RandNLA to accelerate conjugate gradient (NystromPCG), operator splitting (NysADMM),…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

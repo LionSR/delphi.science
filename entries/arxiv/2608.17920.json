@@ -1,0 +1,20 @@
+{
+  "key": "2608.17920",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17920",
+  "title": "Antiferromagnetic models are clique-minimizing",
+  "authors": [
+    "Joonkyung Lee",
+    "Jaehyeon Seo"
+  ],
+  "summary": "An edge-weighted graph $H$, possibly with loops, is antiferromagnetic if its adjacency matrix is entrywise nonnegative and has at most one positive eigenvalue, counted with multiplicity. We show that, for any graph $G$ with $d_v:=\\operatorname{deg}_G(v)$, $$\\operatorname{hom}(G,H) \\ge \\prod_{v\\in V(G)} \\operatorname{hom}(K_{d_v+1},H)^{\\frac{1}{d_v+1}},$$ whenever $H$ is antiferromagnetic. In fact, we prove a vertex-inhomogeneous strengthening of this inequality, allowing a different fugacity vector at each vertex of $G$. This gives a common generalization of the lower-bound inequalities of…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

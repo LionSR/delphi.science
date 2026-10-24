@@ -1,0 +1,22 @@
+{
+  "key": "2609.32478",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32478",
+  "title": "Agnostic Smoothed Online Regression with Adversarial Responses",
+  "authors": [
+    "Xuanyu Chen",
+    "Yue Yu"
+  ],
+  "summary": "We study smoothed online prediction with bounded adversarial responses. This widely studied framework bridges i.i.d. sampling and adversarial covariate selection through a smoothness parameter $\\textsf{C}_{\\textsf{cov}}$, which bounds conditional covariate densities relative to a fixed, unknown base measure. We propose \\textsc{Hedge-Cover}, an information-theoretic algorithm that achieves sublinear regret $\\widetilde{O}(\\sqrt{\\text{Pdim}(\\mathcal{F}) \\textsf{C}_{\\textsf{cov}} T})$ for function classes with bounded pseudo-dimension. The algorithm aggregates a carefully constructed family of…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

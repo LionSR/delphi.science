@@ -1,0 +1,22 @@
+{
+  "key": "2605.13448",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.13448",
+  "title": "On the Limits of Latent Reuse in Diffusion Models",
+  "authors": [
+    "Yifeng Yu",
+    "Lu Yu"
+  ],
+  "summary": "Diffusion models are often trained in low-dimensional latent spaces, which are then reused for related but shifted datasets. In this work, we study when such latent reuse remains reliable under distribution shift. We consider a source-target setting in which both datasets are approximately low-dimensional but may lie near different subspaces. We show that freezing and reusing a source latent space induces a target-domain score error governed by two quantities: the principal-angle misalignment between the source and target subspaces, and the target ambient noise amplified by the diffusion…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

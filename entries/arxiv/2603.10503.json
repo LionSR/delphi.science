@@ -1,0 +1,23 @@
+{
+  "key": "2603.10503",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.10503",
+  "title": "A New Tensor Network: Tubal Tensor Train and Its Applications",
+  "authors": [
+    "Salman Ahmadi-Asl",
+    "Valentin Leplat",
+    "Anh-Huy Phan",
+    "Andrzej Cichocki"
+  ],
+  "summary": "We introduce the tubal tensor train (TTT) decomposition, a tensor-network model that combines the t-product algebra of the tensor singular value decomposition (T-SVD) with the low-order core structure of the tensor train (TT) format. For an order-$(N+1)$ tensor with a distinguished tube mode, the proposed representation consists of two third-order boundary cores and $N-2$ fourth-order interior cores linked through the t-product. As a result, for bounded tubal ranks, the storage scales linearly with the number of modes, in contrast to direct high-order extensions of T-SVD. We present two…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-03-11",
+  "updated": "2026-03-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2610.31419",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.31419",
+  "title": "A hybrid finite-volume scheme with learned rational reconstructions and exact nonlocal fluxes for the space-fractional Burgers equation",
+  "authors": [
+    "Zeyuan Song",
+    "Zheyu Jiang"
+  ],
+  "summary": "On coarse grids, fronts of fractional conservation laws can be narrower than one cell, while the flux through each face depends on the whole domain. For the forced space-fractional Burgers equation, we write the finite-volume defect exactly, with the Riesz flux acting as a nonlocal interface flux. Our proposed closure, NRC, is decoder-only, since the encoder is the exact cell-average projection and a small network only maps cell averages to a sub-cell reconstruction. The decoder adds rational atoms with learned complex poles to a trigonometric histopolant, preserves every cell average, and…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

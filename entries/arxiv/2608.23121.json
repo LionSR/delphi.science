@@ -1,0 +1,26 @@
+{
+  "key": "2608.23121",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.23121",
+  "title": "A variational framework for bond-based peridynamics with spatially varying horizons and its asynchronous time integration",
+  "authors": [
+    "Prateek Prateek",
+    "Giuseppe Capobianco",
+    "Kai Partmann",
+    "Kerstin Weinberg",
+    "Michael Ortiz",
+    "Sigrid Leyendecker"
+  ],
+  "summary": "Bond-based peridynamics provides a non-local framework for modelling fracture without requiring spatial derivatives of the displacement field. However, when spatially varying horizons are used together with non-uniform discretisations, the classical single-horizon bond-based peridynamics formulation leads to asymmetric interactions between material points. These asymmetric interactions violate balance laws and can introduce non-physical artefacts such as ghost forces and spurious wave reflections. In this work, we develop a variational formulation for bond-based peridynamics with spatially…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-08-24",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

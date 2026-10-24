@@ -1,0 +1,25 @@
+{
+  "key": "2601.23239",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.23239",
+  "title": "Graph Attention Network for Node Regression on Random Geometric Graphs with Erdős--Rényi contamination",
+  "authors": [
+    "Somak Laha",
+    "Suqi Liu",
+    "Morgane Austern"
+  ],
+  "summary": "Graph attention networks (GATs) are widely used and often appear robust to noise in node covariates and edges, yet rigorous statistical guarantees demonstrating a provable advantage of GATs over non-attention graph neural networks~(GNNs) are scarce. We partially address this gap for node regression with graph-based errors-in-variables models under simultaneous covariate and edge corruption: responses are generated from latent node-level covariates, but only noise-perturbed versions of the latent covariates are observed; and the sample graph is a random geometric graph created from the node…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.IT",
+    "cs.LG",
+    "cs.SI",
+    "math.ST"
+  ],
+  "published": "2026-01-30",
+  "updated": "2026-01-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

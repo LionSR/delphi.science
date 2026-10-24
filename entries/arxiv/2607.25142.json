@@ -1,0 +1,26 @@
+{
+  "key": "2607.25142",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.25142",
+  "title": "An adaptive phase field framework for large-scale interface evolution problems using a strong-form gradient smoothing approach",
+  "authors": [
+    "Zirui Mao",
+    "Alice Xu",
+    "Shenyang Hu",
+    "Panos Stinis",
+    "Yuyan Shao",
+    "Ang Li",
+    "Yulan Li"
+  ],
+  "summary": "Multiscale problems with evolving interfaces are ubiquitous in science and engineering. Phase-field models are a powerful tool for simulating interface-dominated phenomena in computational mechanics and materials modeling, but their application to large-scale problems is often constrained by the high computational cost of resolving thin diffuse interfaces over the entire domain. This paper presents an efficient strong-form phase-field solver that couples the Gradient Smoothing Method (GSM) with a hierarchical adaptive and moving structured mesh, enabling automatic localization of resolution…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math-ph"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

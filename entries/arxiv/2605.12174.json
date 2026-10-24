@@ -1,0 +1,22 @@
+{
+  "key": "2605.12174",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.12174",
+  "title": "Expected Batch Optimal Transport Plans and Consequences for Flow Matching",
+  "authors": [
+    "Samuel Boïté",
+    "Julie Delon",
+    "Kimia Nadjahi"
+  ],
+  "summary": "Solving optimal transport (OT) on random minibatches is a common surrogate for exact OT in large-scale learning. In flow matching (FM), this surrogate is used to obtain OT-like couplings that can straighten probability paths and reduce numerical integration cost. Yet, the population-level coupling induced by repeated minibatch OT remains only partially understood. We formalize this coupling as the expected batch OT plan $\\overlineπ_{k}$, obtained by averaging empirical OT plans over independent minibatches of size $k$. We then establish its large-batch consistency and, in the semidiscrete…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

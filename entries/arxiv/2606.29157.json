@@ -1,0 +1,22 @@
+{
+  "key": "2606.29157",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.29157",
+  "title": "On the Complexity of Counting Orderings in Graphs",
+  "authors": [
+    "Marcelo Arenas",
+    "María Alejandra Schild",
+    "Bernardo Subercaseaux"
+  ],
+  "summary": "We study the computational complexity of several counting problems on graphs. Each of these problems consists of counting orderings of the vertices or edges with adjacency constraints. We show $\\#P$-completeness for all of them via a common new technique. Given a counting function $C$ of interest, we define a parameterized family of instances $G_q$, where the parameter $q$ controls the amplification of a simple gadget. After multiplying by an explicit factor $f(q)$, we show that the values of $f(q) \\cdot C(G_q)$, for positive integers $q$, agree with a rational function in $q$ whose…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "math.CO"
+  ],
+  "published": "2026-06-28",
+  "updated": "2026-06-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2602.11835",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.11835",
+  "title": "Global Convergence to Nash Equilibrium in Nonconvex General-Sum Games under the $n$-Sided PL Condition",
+  "authors": [
+    "Yutong Chao",
+    "Jalal Etesami"
+  ],
+  "summary": "We consider the problem of finding a Nash equilibrium (NE) in a general-sum game, where player $i$'s objective is $f_i(x)=f_i(x_1,...,x_n)$, with $x_j\\in\\mathbb{R}^{d_j}$ denoting the strategy variables of player $j$. Our focus is on investigating first-order gradient-based algorithms and their variations, such as the block coordinate descent (BCD) algorithm, for tackling this problem. We introduce a set of conditions, called the $n$-sided PL condition, which extends the well-established gradient dominance condition a.k.a Polyak-Łojasiewicz (PL) condition and the concept of multi-convexity.…",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "cs.MA",
+    "math.NA"
+  ],
+  "published": "2026-02-12",
+  "updated": "2026-02-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

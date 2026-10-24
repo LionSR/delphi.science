@@ -1,0 +1,24 @@
+{
+  "key": "2601.23280",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.23280",
+  "title": "Decoupled Diffusion Sampling for Inverse Problems on Function Spaces",
+  "authors": [
+    "Thomas Y. L. Lin",
+    "Jiachen Yao",
+    "Lufang Chiang",
+    "Julius Berner",
+    "Anima Anandkumar"
+  ],
+  "summary": "We propose a data-efficient, physics-aware generative framework in function space for inverse PDE problems. Existing plug-and-play diffusion posterior samplers represent physics implicitly through joint coefficient-solution modeling, requiring substantial paired supervision. In contrast, our Decoupled Diffusion Inverse Solver (DDIS) employs a decoupled design: an unconditional diffusion learns the coefficient prior, while a neural operator explicitly models the forward PDE for guidance. This decoupling enables superior data efficiency and effective physics-informed learning, while naturally…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-01-30",
+  "updated": "2026-03-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2607.17134",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.17134",
+  "title": "A Lowest-Order Robust Mixed Finite Element Method with a Third-Order Tensor Variable for Strain Gradient Elasticity",
+  "authors": [
+    "Xuehai Huang",
+    "Zheqian Tang"
+  ],
+  "summary": "A lowest-order mixed finite element method is developed for the strain gradient elasticity (SGE) model in arbitrary dimensions. We take the physically meaningful third-order double stress tensor $\\boldsymbolΦ:=ι^2\\operatorname{grad}\\boldsymbolσ(\\boldsymbol{u})\\in\\mathbb{S}\\otimes\\mathbb{R}^d$ as a primary variable and derive a distributional mixed formulation. The double stress is approximated by an $\\mathbb{S}\\otimes\\mathbb{R}^d$-valued extension of the lowest-order Raviart--Thomas element, while the displacement is approximated by the vector-valued linear Crouzeix--Raviart element. Thus,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-19",
+  "updated": "2026-07-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

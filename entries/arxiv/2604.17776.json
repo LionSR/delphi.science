@@ -1,0 +1,23 @@
+{
+  "key": "2604.17776",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.17776",
+  "title": "Trajectory-Based Optimization for Air Traffic Control in the Terminal Maneuvering Area",
+  "authors": [
+    "Yutian Pang",
+    "Daniel Delahaye",
+    "John-Paul Clarke"
+  ],
+  "summary": "We present a trajectory-based optimization framework for arrival sequencing and scheduling in the terminal maneuvering area (TMA). Unlike node-link scheduling models that reduce trajectories to time-delay variables, the proposed method computes implementable per-aircraft speed profiles and path extensions that achieve required landing separation through terminal air traffic control actions. The framework combines an analytic TMA path model, consisting of a tangent leg, a radius-to-fix turn, and a final-approach segment, with a nonlinear program (NLP) that jointly optimizes path stretch and…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC",
+    "math.PR"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-04-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

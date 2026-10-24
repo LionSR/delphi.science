@@ -1,0 +1,22 @@
+{
+  "key": "2606.09688",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.09688",
+  "title": "A space-time sparse-grid method for the wave equation",
+  "authors": [
+    "Matteo Ferrari",
+    "Andrea Moiola",
+    "Chiara Perinati",
+    "Ilaria Perugia"
+  ],
+  "summary": "We develop a fast space-time numerical scheme for approximating solutions to the linear wave equation. The approach is based on the sparse-grid combination technique applied to a coercive space-time discretization. Designed for tensor-product space-time discretizations, the method enables efficient parallelization of the resulting solver. We provide a rigorous theoretical analysis establishing convergence rates and computational complexity estimates. Numerical experiments validate the theoretical estimates and demonstrate the efficiency of the proposed method.",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-08",
+  "updated": "2026-06-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2609.01559",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.01559",
+  "title": "Erlang Loss Model with Energy Constrained Servers",
+  "authors": [
+    "Elijah Kulikov",
+    "Eliezer Fuentes-Quezada",
+    "Jamol Pender"
+  ],
+  "summary": "In this paper, we study an Erlang-type loss system with energy-constrained servers. Each server is equipped with a finite battery and becomes temporarily unavailable for service when its energy is depleted, entering a charging phase before returning to operation upon full recharge. Customers who arrive to find all servers unavailable are blocked and lost immediately. We characterize the steady-state behavior of this two-dimensional Markov process by extending classical truncation results for Jackson networks to incorporate energy dynamics. This yields a closed-form product-form stationary…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-09-01",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

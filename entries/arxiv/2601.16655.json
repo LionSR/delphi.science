@@ -1,0 +1,20 @@
+{
+  "key": "2601.16655",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.16655",
+  "title": "A Thermo-Kinematic Operator Splitting Framework for Stefan Problems Based on Extreme Learning Machines",
+  "authors": [
+    "Siyuan Lang",
+    "Zhiyue Zhang"
+  ],
+  "summary": "Solving Stefan problems via neural networks is challenging because of the nonlinear coupling between the solution and the free boundary, which generally leads to a non-convex optimization problem when they are parameterized and optimized simultaneously. To address this difficulty, we propose a thermo-kinematic operator splitting framework based on Extreme Learning Machines (ELMs) to decouple the solution reconstruction from the free boundary evolution. Both the solution and the complete free-boundary trajectory are represented over the full space-time domain. At each outer iteration, the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-23",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

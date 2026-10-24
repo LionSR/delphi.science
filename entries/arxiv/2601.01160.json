@@ -1,0 +1,23 @@
+{
+  "key": "2601.01160",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.01160",
+  "title": "Gradient-Free Approaches is a Key to an Efficient Interaction with Markovian Stochasticity",
+  "authors": [
+    "Boris Prokhorov",
+    "Semyon Chebykin",
+    "Alexander Gasnikov",
+    "Aleksandr Beznosikov"
+  ],
+  "summary": "This paper deals with stochastic optimization problems involving Markovian noise with a zero-order oracle. We present and analyze a novel derivative-free method for solving such problems in strongly convex smooth and non-smooth settings with both one-point and two-point feedback oracles. Using a randomized batching scheme, we show that when mixing time $τ$ of the underlying noise sequence is less than the dimension of the problem $d$, the convergence estimates of our method do not depend on $τ$. This observation provides an efficient way to interact with Markovian stochasticity: instead of…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-01-03",
+  "updated": "2026-01-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

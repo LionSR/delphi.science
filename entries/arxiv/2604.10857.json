@@ -1,0 +1,24 @@
+{
+  "key": "2604.10857",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.10857",
+  "title": "Query Lower Bounds for Diffusion Sampling",
+  "authors": [
+    "Zhiyang Xun",
+    "Eric Price"
+  ],
+  "summary": "Diffusion models generate samples by iteratively querying learned score estimates. A rapidly growing literature focuses on accelerating sampling by minimizing the number of score evaluations, yet the information-theoretic limits of such acceleration remain unclear. In this work, we establish the first score query lower bounds for diffusion sampling. We prove that for $d$-dimensional distributions, given access to score estimates with polynomial accuracy $\\varepsilon=d^{-O(1)}$ (in any $L^p$ sense), any sampling algorithm requires $\\widetildeΩ(\\sqrt{d})$ adaptive score queries. In particular,…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "cs.DS",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-04-12",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

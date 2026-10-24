@@ -1,0 +1,22 @@
+{
+  "key": "2607.19553",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.19553",
+  "title": "Online Optimization of Difference-of-Convex Compositions with Smooth Mappings",
+  "authors": [
+    "Jingwei Ji",
+    "Jong-Shi Pang",
+    "Renyuan Xu"
+  ],
+  "summary": "We study online optimization for a broad class of structured non-convex non-smooth problems where each loss is a composition of a difference-of-convex function with a smooth mapping, and the feasible region is defined by constraint functions of the same kind. We propose a time-smoothed proximal linear algorithm and a local-regret measure based on a proximal residual mapping. We show that this residual is a proper stationarity measure for the original problem: its fixed-point condition implies first-order stationarity. Our analysis relies on a tangent-cone characterization for a feasible…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-07-21",
+  "updated": "2026-07-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

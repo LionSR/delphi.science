@@ -1,0 +1,23 @@
+{
+  "key": "2610.07299",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.07299",
+  "title": "Model-Based Galerkin Lifting with Exact LTI Decomposition for Guaranteed $\\mathcal{H}_\\infty$ Output Feedback Control of Nonlinear Systems",
+  "authors": [
+    "Burak Kurkcu",
+    "Christopher Phan",
+    "Aleksandar Zecevic",
+    "Maryam Khanbaghi"
+  ],
+  "summary": "In this paper, we present a model-based Galerkin framework for output-feedback control of nonlinear systems with known dynamics. With a suitable actuator augmentation, the finite-dimensional realization preserves the actuator dynamics and the constant input matrix. We retain finite-order nonclosure as an explicit additive residual. The LTI part and this residual describe the lifted nonlinear dynamics exactly. The decomposition does not require an invariant subspace of observables and also applies to non-control-affine systems. We use regional bounds on the closure residual,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

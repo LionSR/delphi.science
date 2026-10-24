@@ -1,0 +1,21 @@
+{
+  "key": "2610.04847",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04847",
+  "title": "Network inference for SDEs with diverging dimension under small noise",
+  "authors": [
+    "Francesco Iafrate",
+    "Nakahiro Yoshida",
+    "Stefano M. Iacus"
+  ],
+  "summary": "We consider inference for network stochastic differential equations in a small-noise, high-dimensional regime, where the diffusion coefficient vanishes with $\\ep\\to0$ while the network size and parameter dimension may diverge. We develop a minimum-distance estimation framework based on a deterministic measurement model that may omit nuisance terms in the drift, and derive a non-asymptotic error bound decomposing the estimation error into stochastic fluctuation, nuisance discrepancy, and identifiability terms. For a linearly parametrized interaction model under repeated measurements, we…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2601.09337",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.09337",
+  "title": "On the unmapped tent pitching for the heterogeneous wave equation",
+  "authors": [
+    "Marcella Bonazzoli",
+    "Gabriele Ciaramella",
+    "Ilario Mazzieri"
+  ],
+  "summary": "The Unmapped Tent Pitching (UTP) algorithm is a space--time domain decomposition method for the parallel solution of hyperbolic problems. It was originally introduced for the homogeneous one-dimensional wave equation in [Ciaramella, Gander, Mazzieri, 2024]. UTP is inspired by the Mapped Tent Pitching (MTP) algorithm [Gopalakrishnan, Sch{ö}berl, Wintersteiger, 2017], which constructs the solution by iteratively building polytopal space--time subdomains, referred to as tents. In MTP, each physical tent is mapped onto a space--time rectangle, where local problems are solved before being mapped…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-14",
+  "updated": "2026-06-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

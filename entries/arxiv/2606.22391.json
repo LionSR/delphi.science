@@ -1,0 +1,23 @@
+{
+  "key": "2606.22391",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.22391",
+  "title": "On the Asymptotic Inadmissibility of Double Machine Learning Estimators Under Structure-Agnostic Models",
+  "authors": [
+    "Lin Liu",
+    "Rajarshi Mukherjee",
+    "James M Robins"
+  ],
+  "summary": "Structure-agnostic (SA) models introduced by Balakrishnan et al. (2026) aim to reflect the general lack of knowledge of structural assumptions on data-generating laws such as smoothness or sparsity in practice. Roughly speaking, SA models restrict the observed-data generating law to be in some rn-neighborhood of (black-box machine learning) estimates, treated as given and fixed, where rn encodes the convergence rates of the estimates to the truth. Under SA models, Balakrishnan et al. (2026) show that the popular Double Machine Learning (DML) estimators for three functionals, the quadratic…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "econ.EM",
+    "stat.ML"
+  ],
+  "published": "2026-06-21",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

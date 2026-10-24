@@ -1,0 +1,21 @@
+{
+  "key": "2608.25718",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.25718",
+  "title": "Estimation of a regression function from dependent data by over-parametrized deep neural networks learned by gradient descent",
+  "authors": [
+    "Michael Kohler",
+    "Adam Krzyżak",
+    "Vincent Molinero Römer"
+  ],
+  "summary": "Estimation of a regression function from exponentially $β$-mixing data is considered. The $L_2$ error with integration with respect to the design is used as the error criterion. Deep neural network estimates with logistic activation function are defined, where all parameters are learned by gradient descent. The rate of convergence of the expected $L_2$ error is analyzed for $(p,C)$-smooth regression functions. In the special case that the design is concentrated on a $d^*$-dimensional manifold, it is shown that the expected $L_2$ error of the estimate achieves a rate of convergence which…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-08-26",
+  "updated": "2026-08-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

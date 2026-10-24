@@ -1,0 +1,19 @@
+{
+  "key": "2606.15041",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.15041",
+  "title": "Dense finite Sidon sets on arithmetic progressions",
+  "authors": [
+    "Yuchen Ding"
+  ],
+  "summary": "Let $S\\subset \\{1,2,\\ldots,n\\}$ be a Sidon set with $|S|=n^{1/2}+O(n^{1/2-δ})$ for some fixed $δ>0$. This article provides the following expected asymptotic formula $$ \\sum_{\\substack{a\\in S\\\\ a\\equiv r\\pmod{m}}} a^\\ell =\\frac{1}{m(\\ell+1)}n^{\\ell+1/2} +o\\left(n^{\\ell+1/2}\\right), $$ where $m\\geq 1$, $0\\leq r<m$, and $\\ell\\geq 0$ are three integers. This removes the additional hypothesis in a previous residue class asymptotic formula by the author. The proof uses the Fourier uniformity of extremal Sidon sets due to Ortega and Prendiville.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-06-13",
+  "updated": "2026-06-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

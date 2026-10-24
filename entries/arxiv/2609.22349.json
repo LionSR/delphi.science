@@ -1,0 +1,24 @@
+{
+  "key": "2609.22349",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.22349",
+  "title": "Domain-decomposed Evolutional Deep Neural Network with Random Features for Transient Pressure Diffusion with Discontinuous and High-Contrast Coefficients",
+  "authors": [
+    "Peiqi Li",
+    "Jie Chen",
+    "Hui Zhang",
+    "Simon Hands"
+  ],
+  "summary": "Transient pressure diffusion in heterogeneous porous media becomes difficult to resolve efficiently when permeability is discontinuous and spans several orders of magnitude. We develop a domain-decomposed random-feature evolutional deep neural network (DD RF-EDNN) that separates spatial approximation from temporal evolution. Permeability-informed random features are compressed into an orthonormal pressure space, and a conservative finite-volume operator is projected onto this space so that only the reduced coordinates are advanced in time. This formulation retains the dissipative structure…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG",
+    "math-ph"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

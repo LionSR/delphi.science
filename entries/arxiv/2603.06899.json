@@ -1,0 +1,23 @@
+{
+  "key": "2603.06899",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.06899",
+  "title": "A Gauss-Newton Method with No Additional PDE Solves Beyond Gradient Evaluation for Large-Scale PDE-Constrained Inverse Problems",
+  "authors": [
+    "Cash Cherry",
+    "Samy Wu Fung",
+    "Luis Tenorio",
+    "Ebru Bozdağ"
+  ],
+  "summary": "Partial Differential Equation (PDE)-constrained optimization problems often take the form of an optimization of an objective function given as a sum of loss terms. Each function or gradient evaluation requires one or more PDE solves, which render these problems computationally demanding. While Gauss-Newton methods are well-suited for large-scale PDE-constrained optimization, their application to settings such as Full-Waveform Inversion (FWI) is hindered by the need for additional PDE solves to compute Jacobian-vector products. This paper proposes a Gauss-Newton approach that eliminates the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-03-06",
+  "updated": "2026-03-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2601.01962",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.01962",
+  "title": "Efficient spectral bounds on the chromatic number of Hamming, Johnson, and Kneser graph powers",
+  "authors": [
+    "Finn A. Steinke",
+    "Luis M. B. Varona"
+  ],
+  "summary": "We investigate spectral lower bounds on the chromatic number $χ$ of Hamming graph powers $H(n, q)^p$, Johnson graph powers $J(n, k)^p$, and Kneser graph powers $K(n, k)^p$ providing the first computationally feasible nontrivial results. While the classical Hoffman bound on $χ$ can, in principle, be applied to any graph, naïve computation requires $O(q^{3n})$ time for $H(n, q)^p$ and $O(({}_nC_k)^3)$ time for both $J(n, k)^p$ and $K(n, k)^p$. We thus express the adjacency eigenvalues of these graphs in terms of hypergeometric orthogonal polynomials, exploiting recurrence relations that arise…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-01-05",
+  "updated": "2026-01-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

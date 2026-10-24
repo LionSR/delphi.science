@@ -1,0 +1,23 @@
+{
+  "key": "2606.23627",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.23627",
+  "title": "Diffusion Models Adapt to Low-Dimensional Structure Under Flexible Coefficient Choices",
+  "authors": [
+    "Changxiao Cai",
+    "Yuchen Jiao",
+    "Gen Li"
+  ],
+  "summary": "Diffusion models are known to exploit unknown low-dimensional structure to accelerate sampling. However, existing convergence theory under low-dimensional data structure has largely focused on update rules with narrowly prescribed coefficient choices. This raises a fundamental question: is adaptation to low-dimensional structure sensitive to the precise choice of update coefficients? In this paper, we show that such adaptation is a robust property of diffusion models. For a broad class of update coefficients, we prove that $\\widetilde{O}(k/\\varepsilon)$ iterations suffice to generate an…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-06-22",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

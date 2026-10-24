@@ -1,0 +1,25 @@
+{
+  "key": "2605.19263",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.19263",
+  "title": "From Simple to Complex: Curriculum-Guided Physics-Informed Neural Networks via Gaussian Mixture Models",
+  "authors": [
+    "Jianan Yang",
+    "Yiran Wang",
+    "Shuai Li",
+    "Fujun Cao",
+    "Xuefei Yan",
+    "Junmin Liu"
+  ],
+  "summary": "Physics-informed neural networks (PINNs) offer a mesh-free framework for solving partial differential equations (PDEs), yet training often suffers from gradient pathologies, spectral bias, and poor convergence, especially for problems with strong nonlinearity, sharp gradients, or multiscale features. We propose the Curriculum-Guided Gaussian Mixture Physics-Informed Neural Network (CGMPINN), which integrates Gaussian mixture modeling with dynamic curriculum learning. Specifically, a GMM is periodically fitted to the PDE residual distribution to quantify spatially varying learning difficulty.…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

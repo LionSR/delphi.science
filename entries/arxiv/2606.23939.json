@@ -1,0 +1,24 @@
+{
+  "key": "2606.23939",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.23939",
+  "title": "Constrained Variable Projection for Structured Problems",
+  "authors": [
+    "Emanuele Zangrando",
+    "Sara Venturini",
+    "Francesco Rinaldi",
+    "Francesco Tudisco"
+  ],
+  "summary": "Variable projection is a classical technique for separable nonlinear least-squares problems, in which variables that enter linearly are eliminated exactly, yielding a reduced nonlinear problem. By expressing this framework as a particular instance of a broader class of bilevel optimization problems, we develop a constrained variable-projection framework for data-science models, where the remaining variables are subject to convex constraints and the eliminated variables arise from a lower-level least-squares problem. In particular, by interpreting variable projection as a collapsed bilevel…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-06-22",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

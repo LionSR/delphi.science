@@ -1,0 +1,19 @@
+{
+  "key": "2601.08431",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.08431",
+  "title": "Exploring an Alternative Line-Search Method for Lagrange-Newton Optimization",
+  "authors": [
+    "Ralf Möller"
+  ],
+  "summary": "In the Lagrange-Newton method, where Newton's method is applied to a Lagrangian function that includes equality constraints, all stationary points are saddle points. It is therefore not possible to use a line-search method based on the value of the objective function; instead, the line search can operate on merit functions. In this report, we explore an alternative line-search method which is applicable to this case; it particulary addresses the damping of the step length in tight valleys. We propose a line-search criterion based on the divergence of the field of Newton step vectors. The…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-13",
+  "updated": "2026-01-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

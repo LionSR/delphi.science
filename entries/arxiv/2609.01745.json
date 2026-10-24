@@ -1,0 +1,20 @@
+{
+  "key": "2609.01745",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.01745",
+  "title": "The directional localization game on graphs",
+  "authors": [
+    "John Jones",
+    "William B. Kinnersley"
+  ],
+  "summary": "In the localization game on a graph $G$, a team of cops searches for an invisible, mobile robber on $G$ by \"probing\" vertices; each probe tells the cops the distance from the probed vertex to the robber. The cops win if they can uniquely determine the robber's location. In this paper, we introduce a related game: the directional localization game. In this game, instead of probes returning distances, they return directions: when the cops probe a vertex $v$, the robber must respond with one or more neighbors of $v$ that lie on a shortest path from $v$ to the robber's location. The minimum…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-09-01",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

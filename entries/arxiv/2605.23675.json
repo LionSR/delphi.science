@@ -1,0 +1,22 @@
+{
+  "key": "2605.23675",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.23675",
+  "title": "Simulation Strategies for an Efficient Local Search to solve Stochastic Scheduling Problems",
+  "authors": [
+    "Philip de Bruin",
+    "Bram Elderhorst",
+    "Marjan van den Akker",
+    "Han Hoogeveen"
+  ],
+  "summary": "In scheduling problems, deterministic task durations are often assumed. This usually does not capture reality and may lead to schedules that are not robust to (small) changes to these task lengths. The use of stochastic task durations therefore seems preferable. Including these in local search, which is the way to find good solutions for difficult scheduling problems, is not straightforward, though. The objective value becomes stochastic then too, and computing the expected value is often not possible. One way out of this it to approximate this value by using simulation. This is quite easy…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-22",
+  "updated": "2026-05-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

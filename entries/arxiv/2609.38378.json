@@ -1,0 +1,22 @@
+{
+  "key": "2609.38378",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38378",
+  "title": "An energy-based discontinuous Galerkin method for wave equations on complex geometric domains",
+  "authors": [
+    "Yangxin Fu",
+    "Yan Jiang",
+    "Siyang Wang",
+    "Lu Zhang"
+  ],
+  "summary": "This paper develops a high-order cut energy-based discontinuous Galerkin (CutEDG) method for second-order acoustic wave equations on complex domains and across stationary material interfaces. The method employs unfitted Carte- sian meshes and addresses the small-cut-cell problem by introducing ghost-penalty stabilization directly into the local bilinear forms defining the EDG energy, while leaving the original spatial coupling and numerical-flux structure unchanged. We establish semidiscrete energy stability and a priori error estimates showing that high-order accuracy is retained. The…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

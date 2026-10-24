@@ -1,0 +1,21 @@
+{
+  "key": "2609.21603",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.21603",
+  "title": "Certificates for short extending words in a finite automaton",
+  "authors": [
+    "Michele Miccinesi"
+  ],
+  "summary": "Let $\\mathcal A$ be a complete deterministic finite automaton on a state set $Q$ of size $n$ with $k$ letters, and for a proper nonempty subset $S$ of $Q$ let $\\mathrm{minext}(S)$ be the length of a shortest word $u$ with $|Su^{-1}|>|S|$, where $Su^{-1}=\\{q: q\\cdot u\\in S\\}$. To each state $q$ attach the integer $β^{\\ast}_q=\\sum_{t=1}^{n-1}k^{\\,n-1-t}(\\mathrm{indeg}_t(q)-k^{t})$, where $\\mathrm{indeg}_t(q)$ counts the pairs $(p,u)$ with $|u|=t$ and $p\\cdot u=q$, and let $B(S)=\\sum_{q\\in S}β^{\\ast}_q$. On every synchronizing automaton, $B(S)\\ge0$ implies $\\mathrm{minext}(S)\\le n-1$, so, as…",
+  "domain": "cs.FL",
+  "tags": [
+    "cs.FL",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-09-18",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

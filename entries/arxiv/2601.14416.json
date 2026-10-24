@@ -1,0 +1,23 @@
+{
+  "key": "2601.14416",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.14416",
+  "title": "Event-Triggered Newton Extremum Seeking for Multivariable Optimization",
+  "authors": [
+    "Victor Hugo Pereira Rodrigues",
+    "Tiago Roux Oliveira",
+    "Miroslav Krstic",
+    "Paulo Tabuada"
+  ],
+  "summary": "This paper presents a static event-triggered control strategy for multivariable Newton-based extremum seeking. The proposed method integrates event-triggered actuation into the Newton-based optimization framework to reduce control updates while maintaining rapid convergence to the extremum. Unlike traditional gradient-based extremum seeking, where the convergence rate depends on the unknown Hessian of the cost function, the proposed approach employs a dynamic estimator of the Hessian inverse, formulated as a Riccati equation, enabling user-assignable convergence rates. The event-triggering…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-01-20",
+  "updated": "2026-01-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

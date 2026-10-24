@@ -1,0 +1,21 @@
+{
+  "key": "2604.02404",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.02404",
+  "title": "Almost Golomb Sequences",
+  "authors": [
+    "Benoit Cloitre",
+    "Gandhar Joshi"
+  ],
+  "summary": "Golomb's sequence $(G(n))$ is the unique nondecreasing sequence of positive integers in which each $n$ appears exactly $G(n)$ times. It satisfies the global self-referential rule $G(G(n)+G(n-1)+\\cdots+G(1))=n$, grows smoothly like a power of $n$ governed by the golden ratio, and is not $k$-regular for any $k\\ge 2$. We introduce almost Golomb sequences, obtained by truncating the cumulative sum to a fixed size sliding window $r$: $a(a(n)+a(n-1)+\\cdots+a(n-r+1))=n$. This finite-memory truncation completely changes the nature of the sequence. The smooth power law gives way to oscillatory linear…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO"
+  ],
+  "published": "2026-04-02",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

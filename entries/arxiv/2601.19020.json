@@ -1,0 +1,19 @@
+{
+  "key": "2601.19020",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.19020",
+  "title": "AAA least squares solution of Helmholtz problems",
+  "authors": [
+    "Stefano Costa"
+  ],
+  "summary": "This paper presents an adaptive numerical framework for solving exterior \"sound-soft\" scattering problems governed by the Helmholtz equation. By interpreting the Method of Fundamental Solutions through the lens of rational approximation, we introduce an automated strategy for singularity placement based on the analytic continuation of boundary data. The proposed AAALS-Helmholtz algorithm leverages a \"continuum\" variant of the AAA algorithm to identify the singularities limiting analytic extension, and to ensure an optimal source distribution even for complex, non star-shaped geometries.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-26",
+  "updated": "2026-01-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

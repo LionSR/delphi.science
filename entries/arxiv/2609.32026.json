@@ -1,0 +1,23 @@
+{
+  "key": "2609.32026",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32026",
+  "title": "Continuous-Time Trajectory Generation from Discrete Observations with Stochasticity",
+  "authors": [
+    "Ruifeng Shang",
+    "Shu Liu",
+    "Yuhua Zhu"
+  ],
+  "summary": "Physical systems evolve continuously in time, yet their states are typically observed only at discrete times. Generating trajectories consistent with their probability densities from such observations therefore requires capturing the continuous-time evolution rather than only learning transition mappings between consecutive observations. We propose PhiBE-Flow, a framework that directly estimates the probability velocity field induced by the stochastic differential equation (SDE) which governs this continuous-time distributional evolution. PhiBE-Flow learns from discrete observations using a…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.DS"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

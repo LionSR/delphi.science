@@ -1,0 +1,26 @@
+{
+  "key": "2601.10459",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.10459",
+  "title": "The Wiener Wintner Theorem Along the Primes",
+  "authors": [
+    "Jan Fornal",
+    "Anastasios Fragkos",
+    "Ben Krause",
+    "Michael Lacey",
+    "Hamed Mousavi",
+    "Yu-Chen Sun"
+  ],
+  "summary": "We prove the following Wiener-Wintner Theorem along the sequence of prime times, the first extension of the Wiener-Wintner Theorem to arithmetic sequences: for every probability space, $(X, ν),$ equipped with a measure-preserving transformation, $T : X \\to X,$ and every $f \\in L^p(X), 1 < p \\leq \\infty$, there exists a set of full probability, $X_f \\subset X$ with $ν(X_f) = 1,$ so that for all $ω\\in X_f$, \\[ \\frac{1}{N} \\sum_{n \\leq N} e^{ 2 πi p_n θ} f(T^{p_n} ω) \\] converges for all $θ\\in [0,1]$; above, $\\{2 = p_1 < p_2 < \\dots\\}$ are an enumeration of the primes. Our proof lives at the…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "math.CA",
+    "math.NT"
+  ],
+  "published": "2026-01-15",
+  "updated": "2026-07-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

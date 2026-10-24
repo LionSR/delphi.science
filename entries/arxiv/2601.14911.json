@@ -1,0 +1,21 @@
+{
+  "key": "2601.14911",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.14911",
+  "title": "Generalized preconditioned conjugate gradients for adaptive FEM with optimal complexity",
+  "authors": [
+    "Paula Hilbert",
+    "Ani Miraçi",
+    "Dirk Praetorius"
+  ],
+  "summary": "We consider adaptive finite element methods (AFEMs) with inexact algebraic solvers for second-order symmetric linear elliptic diffusion problems. Optimal complexity of AFEM, i.e., optimal convergence rates with respect to the overall computational cost, hinges on two requirements on the solver. First, each solver step is of linear cost with respect to the number of degrees of freedom. Second, each solver step guarantees uniform contraction of the solver error with respect to the PDE-related energy norm. Both properties must be ensured robustly with respect to the local mesh size h (i.e.,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-21",
+  "updated": "2026-04-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

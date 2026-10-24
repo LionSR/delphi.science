@@ -1,0 +1,23 @@
+{
+  "key": "2603.24913",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.24913",
+  "title": "Geometry-Aware Langevin Sampling for Matrix-Valued Graph Learning",
+  "authors": [
+    "Papri Dey"
+  ],
+  "summary": "Bayesian inference over positive semidefinite (PSD) matrix-valued parameters arises in structured covariance estimation, graph-Laplacian precision models, and multi-output graph learning, but Euclidean proposals often mix poorly near the cone boundary. We propose \\ConeMALA, a geometry-aware Metropolis-adjusted Langevin algorithm whose proposal geometry is induced by the model's log-determinant structure. For a PSD-weighted graph with edge kernels $W_e\\succeq 0$, block Laplacian $L(W)$ , and stabilizer $R\\succ 0$, the lifted precision matrix $X(W)=L(W)+R\\in \\mathbb S_{++}^{md}$ defines the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.DG",
+    "math.DS",
+    "math.PR",
+    "math.ST"
+  ],
+  "published": "2026-03-26",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

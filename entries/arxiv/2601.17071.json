@@ -1,0 +1,23 @@
+{
+  "key": "2601.17071",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.17071",
+  "title": "Superpixel-Based Image Segmentation Using Squared 2-Wasserstein Distances",
+  "authors": [
+    "Jisui Huang",
+    "Andreas Alpers",
+    "Ke Chen",
+    "Na Lei"
+  ],
+  "summary": "We present an efficient method for image segmentation in the presence of strong inhomogeneities. The approach can be interpreted as a two-level clustering procedure: pixels are first grouped into superpixels via a linear least-squares assignment problem, which can be viewed as a special case of a discrete optimal transport (OT) problem, and these superpixels are subsequently greedily merged into object-level segments using the squared 2-Wasserstein distance between their empirical distributions. In contrast to conventional superpixel merging strategies based on mean-color distances, our…",
+  "domain": "cs.CV",
+  "tags": [
+    "cs.CV",
+    "math.PR"
+  ],
+  "published": "2026-01-22",
+  "updated": "2026-01-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

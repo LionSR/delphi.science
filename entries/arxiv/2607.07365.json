@@ -1,0 +1,24 @@
+{
+  "key": "2607.07365",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.07365",
+  "title": "Improving greenhouse fruit-production control by integrating reinforcement learning into short-horizon model predictive control",
+  "authors": [
+    "Bart van Laatum",
+    "Salim Msaad",
+    "Eldert J. van Henten",
+    "Robert D. McAllister",
+    "Sjoerd Boersma"
+  ],
+  "summary": "Greenhouse fruit-production control aims to maximize the economic performance (fruit revenue minus operating costs) while operating within system constraints under external weather disturbances. Control methods need to balance the delayed economic benefit of fruit yield with current operating costs. For such problems, model predictive control (MPC) can explicitly handle system constraints under future weather disturbances, but can become computationally demanding when using sufficiently long prediction horizons for (relatively large) nonlinear greenhouse fruit production models. In contrast,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

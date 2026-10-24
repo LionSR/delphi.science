@@ -1,0 +1,20 @@
+{
+  "key": "2607.12803",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12803",
+  "title": "A Least Squares Weak Galerkin Finite Element Method for Fokker-Planck Type Equations",
+  "authors": [
+    "Chunmei Wang",
+    "Shangyou Zhang"
+  ],
+  "summary": "This paper presents a least squares weak Galerkin (LS-WG) finite element method for a class of second order elliptic equations of Fokker-Planck type. To address the numerical challenges arising from non-smooth diffusion tensors, the proposed method utilizes a least-squares formulation that yields a symmetric positive definite (SPD) discrete system. The numerical scheme is designed by employing locally constructed weak second order partial derivatives and the weak divergence commonly used within the weak Galerkin framework. A rigorous theoretical foundation is provided, establishing the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

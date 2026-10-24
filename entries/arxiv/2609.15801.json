@@ -1,0 +1,25 @@
+{
+  "key": "2609.15801",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.15801",
+  "title": "When Should a World Model Move? Loss-Conditioned State Execution",
+  "authors": [
+    "Jintao Xu",
+    "Zhengyu Chen",
+    "Ben Zhang",
+    "Yongzhi Qi",
+    "Jianshen Zhang"
+  ],
+  "summary": "We introduce loss-conditioned state execution, a model-agnostic method that decides whether to execute a world model's fixed feasible proposal or retain the current state. Predictive informativeness alone, however, does not establish whether an update will reduce downstream loss. Occurrence ranking can approach perfection while persistence remains the unique absolute-loss Bayes action. Two transition laws can also share occurrence information and conditional variance yet require opposite absolute-loss decisions. We formalize state movability as the existence of a loss-reducing feasible…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

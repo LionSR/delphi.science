@@ -1,0 +1,23 @@
+{
+  "key": "2605.07104",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.07104",
+  "title": "Almost Sure Convergence Rates of Stochastic Approximation and Reinforcement Learning via a Poisson-Moreau Drift",
+  "authors": [
+    "Xinyu Liu",
+    "Zixuan Xie",
+    "Shangtong Zhang"
+  ],
+  "summary": "Establishing almost sure convergence rates for stochastic approximation and reinforcement learning under Markovian noise is a fundamental theoretical challenge. We make progress towards this challenge for a class of stochastic approximation algorithms whose expected updates are contractive, a setting that arises in many reinforcement learning algorithms such as $Q$-learning and linear temporal difference learning. Specifically, for a power-law learning rate $O(n^{-η})$ with $η\\in (1/2, 1)$, we obtain an almost sure convergence rate arbitrarily close to $o(n^{1 - 2η})$. For a harmonic…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-05-08",
+  "updated": "2026-05-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2610.08210",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08210",
+  "title": "Anytime-valid simulation-based hypothesis testing",
+  "authors": [
+    "Patrick Forré",
+    "Lydia Brenner"
+  ],
+  "summary": "For a given data distribution $(X_t)_{t \\in \\mathbb{N}} \\sim Q$ i.i.d., we investigate the hypothesis testing problem: $H_0: Q = P_0$ vs. $H_1: Q = P_1$, for two different model probability distributions $P_0$ and $P_1$. In contrast to the standard setting, where analytic densities $p_0$ and $p_1$ are given, here, we consider the density-free setting, where we only have access to i.i.d. simulations $(Z^0_t)_{t \\in \\mathbb{N}} \\sim P_0$ and $(Z^1_t)_{t \\in \\mathbb{N}} \\sim P_1$. For this simulation-based hypothesis testing setting, we construct an e-test martingale, resulting in a sequential…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

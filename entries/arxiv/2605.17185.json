@@ -1,0 +1,22 @@
+{
+  "key": "2605.17185",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.17185",
+  "title": "Numerical Instabilities in the Kaczmarz Method and Stabilization by Iterative Refinement",
+  "authors": [
+    "Michał Dereziński",
+    "Ethan N. Epperly",
+    "Deanna Needell",
+    "Alexander Xue"
+  ],
+  "summary": "The randomized Kaczmarz method and its accelerated variants are a powerful class of iterative methods for solving large-scale linear systems, offering guaranteed convergence with low per-iteration cost. However, their numerical stability remains poorly understood. In this work, we investigate the stability properties of both classical and accelerated randomized Kaczmarz methods, with an emphasis on how error propagates across iterations and interacts with acceleration. We show that both classical and accelerated randomized Kaczmarz fail to be forward stable. To address this issue, we propose…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-16",
+  "updated": "2026-05-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

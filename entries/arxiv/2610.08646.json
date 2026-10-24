@@ -1,0 +1,21 @@
+{
+  "key": "2610.08646",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08646",
+  "title": "Distributed Model-Free Turbine Repositioning for Wake Overlap Minimization in Floating Offshore Wind Farms",
+  "authors": [
+    "Zekai Chen",
+    "Ryozo Nagamune"
+  ],
+  "summary": "This paper presents a model-free method for turbine repositioning control in floating offshore wind farms. The method uses a distributed online optimization framework to mitigate the wake effect. Conventional approaches rely on centralized, model-based control architectures, which suffer from poor practical feasibility. To overcome this limitation and address nonconvexity and inaccessible gradient information, we incorporate physics-informed knowledge of wake dynamics into the control system design. We demonstrate the effectiveness of the proposed method by comparing it with a centralized,…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.DS"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

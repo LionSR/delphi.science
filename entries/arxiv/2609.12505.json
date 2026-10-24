@@ -1,0 +1,26 @@
+{
+  "key": "2609.12505",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.12505",
+  "title": "LettuceVisSim: A Simulator That Generates Lettuce Image Time-series for Vision-Based Reinforcement Learning",
+  "authors": [
+    "Ziye Zhu",
+    "Bert van 't Ooster",
+    "Congcong Sun",
+    "Eldert van Henten",
+    "Sjoerd Boersma"
+  ],
+  "summary": "Vision-based reinforcement learning holds strong potential for decision-making in controlled environment agriculture (CEA). However, its development is hindered by the scarcity of labelled crop images. To address this gap, LettuceVisSim, a lettuce growth simulator that generates labelled time series of crop images, was developed and validated. The simulator contains a process-based model (PBM) for shoot dry weight dynamics, a canopy layout algorithm for deriving canopy layout representations from shoot dry weight, and a Unity rendering engine for image generation. Five findings support the…",
+  "domain": "cs.CV",
+  "tags": [
+    "cs.CV",
+    "cs.AI",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-09-11",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

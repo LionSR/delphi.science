@@ -1,0 +1,23 @@
+{
+  "key": "2609.06314",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.06314",
+  "title": "A review of weakly enforced Dirichlet boundary conditions in computational flow analysis",
+  "authors": [
+    "Ming-Chen Hsu",
+    "Monu Jaiswal",
+    "Yuri Bazilevs"
+  ],
+  "summary": "Strongly enforced Dirichlet boundary conditions require highly refined near-wall meshes to resolve steep velocity and thermal gradients. This introduces high computational costs, especially for practical flow simulations. Weakly enforced boundary conditions alleviate this burden by acting as a variationally consistent near-wall model. By allowing a controlled slip at the solid wall, weak enforcement recovers accurate flow quantities on coarse boundary-layer meshes across both incompressible and compressible regimes. Furthermore, weak boundary conditions serve as the fundamental enabling…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.CE",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-09-06",
+  "updated": "2026-09-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

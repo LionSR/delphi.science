@@ -1,0 +1,23 @@
+{
+  "key": "2606.29878",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.29878",
+  "title": "Decision-Value Attribution in Predict-then-Optimize Systems",
+  "authors": [
+    "Konstantinos Ziliaskopoulos",
+    "Alexander Vinel",
+    "Alice E. Smith"
+  ],
+  "summary": "Predictive models are increasingly embedded in operational decision-making, yet standard explanation methods typically explain forecasts rather than the decisions those forecasts induce. This distinction is important in predict-then-optimize systems: large forecast changes may leave the optimizer's action unchanged, while small changes can alter the selected decision and its realized value. We propose Decision Value Attribution (DVA), a Shapley-based framework for attributing the value of a fixed prediction--optimization pipeline. The framework defines cooperative games whose payoff is the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

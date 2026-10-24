@@ -1,0 +1,22 @@
+{
+  "key": "2606.19811",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.19811",
+  "title": "Second order explicit splitting scheme for fluid-poroelastic structure interaction problems",
+  "authors": [
+    "Yifan Wang",
+    "Jeonghun Lee",
+    "Suncica Canic"
+  ],
+  "summary": "Efficient and provably accurate partitioned methods for fluid-poroelastic structure interaction remain challenging because explicit treatment of the Stokes-Biot interface coupling condition can compromise stability. In this work, we develop and analyze a fully discrete, second-order, explicit splitting scheme for the time-dependent Stokes-Biot problem on fixed domains. The method combines BDF2 time stepping with second-order Adams-Bashforth extrapolation of interface data through a Robin reformulation, yielding a partitioned algorithm in which the Stokes and Biot subproblems are solved…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math-ph"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

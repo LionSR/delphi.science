@@ -1,0 +1,20 @@
+{
+  "key": "2601.03363",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.03363",
+  "title": "Total isolation game in graphs",
+  "authors": [
+    "Michael A. Henning",
+    "Douglas F. Rall"
+  ],
+  "summary": "The total isolation game is played on a graph $G$ by two players who take turns playing a vertex such that if $S$ is the set of already played vertices, then a vertex can be selected only if it is adjacent to a vertex that belongs to a (nontrivial) component of the graph $G - N_G(S)$ of order at least $2$ or a vertex that is isolated in $G - N_G(S)$ and belongs to the set $S$, where $N_G(S)$ is the set of vertices adjacent to a vertex in $S$. Dominator wishes to finish the game with the minimum number of played vertices, while Staller has the opposite goal. The game total isolation number…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-01-06",
+  "updated": "2026-01-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

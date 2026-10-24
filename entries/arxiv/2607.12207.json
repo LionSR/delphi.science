@@ -1,0 +1,23 @@
+{
+  "key": "2607.12207",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12207",
+  "title": "Rzk: a Proof Assistant for Synthetic $\\infty$-Categories",
+  "authors": [
+    "Nikolai Kudasov",
+    "Violetta Sim",
+    "Benedikt Ahrens"
+  ],
+  "summary": "Homotopy type theory (HoTT) is a type theory that allows for synthetic reasoning about $\\infty$-groupoids. Several proof assistants (such as Rocq and Agda) implement variants of HoTT. Directed type theory is a type theory for synthetic reasoning about $\\infty$-categories, where morphisms (or paths) of dimension 1 are not necessarily invertible. Among the proposals for directed type theory, the most developed is Riehl and Shulman's simplicial type theory (RSTT), based on simplicial shapes such as directed intervals and triangles. We present Rzk, a proof assistant implementing (a refinement…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "cs.PL",
+    "math.CT"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2604.00988",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00988",
+  "title": "A Discontinuous Galerkin Scheme for the Cahn-Hilliard Equations with Discrete Maximum Principle for Arbitrary Polynomial Order",
+  "authors": [
+    "Jimmy Kornelije Gunnarsson",
+    "Robert Klöfkorn"
+  ],
+  "summary": "We propose a structure-preserving discontinuous Galerkin scheme for the Cahn--Hilliard equations with degenerate mobility based on the Symmetric Weighted Interior Penalty formulation. By evaluating the mobility at cell averages rather than as a piecewise polynomial, the proposed scheme preserves strict degeneracy and yields a coercivity constant that is independent of the mobility, removing the need for regularization. Moreover, we establish existence of discrete solutions even with degeneracy via a Leray--Schauder fixed-point argument, and show that the scheme satisfies a provable discrete…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

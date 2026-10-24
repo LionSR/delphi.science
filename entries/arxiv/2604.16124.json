@@ -1,0 +1,21 @@
+{
+  "key": "2604.16124",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.16124",
+  "title": "A numerical approach to the co-design of PID controllers and low-pass filters for time-delay systems",
+  "authors": [
+    "Diego Torres-García",
+    "Wim Michiels"
+  ],
+  "summary": "This paper addresses the numerical optimization of proportional-integral-derivative (PID) controllers for linear time-invariant systems with delays, where the derivative action is implemented using a low-pass filter. While performance assessment is often based on the spectral abscissa of the ideal PID-controlled system, the inclusion of a derivative filter fundamentally alters the closed-loop spectral properties and cannot be treated as a post-processing step. In particular, the spectral abscissa of the filtered closed-loop system may differ significantly from that of its unfiltered…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-04-17",
+  "updated": "2026-04-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

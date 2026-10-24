@@ -1,0 +1,21 @@
+{
+  "key": "2602.20793",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.20793",
+  "title": "Implicit Decision Diagrams",
+  "authors": [
+    "Isaac Rudich",
+    "Louis-Martin Rousseau"
+  ],
+  "summary": "Decision Diagrams (DDs) have emerged as a powerful tool for discrete optimization, with rapidly growing adoption. DDs are directed acyclic layered graphs; restricted DDs are a generalized greedy heuristic for finding feasible solutions, and relaxed DDs compute combinatorial relaxed bounds. There is substantial theory that leverages DD-based bounding, yet the complexity of constructing the DDs themselves has received little attention. Standard restricted DD construction requires $O(w \\log(w))$ per layer; standard relaxed DD construction requires $O(w^2)$, where $w$ is the width of the DD.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DS"
+  ],
+  "published": "2026-02-24",
+  "updated": "2026-02-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

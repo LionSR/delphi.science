@@ -1,0 +1,20 @@
+{
+  "key": "2604.14391",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.14391",
+  "title": "Log-Concavity and Infinite Log-Concavity of Linear Recurrent Sequences with Linear Coefficients via Companion Matrix Methods",
+  "authors": [
+    "Piero Giacomelli"
+  ],
+  "summary": "We study log-concavity properties of real sequences $(a_n)_{n \\ge 0}$ satisfying a $d$-th order linear recurrence whose coefficients are linear functions of $n$; the so-called P-recursive (or holonomic) sequences. Writing the recurrence in companion-matrix form $\\mathbf{v}_{n+1} = M_n\\,\\mathbf{v}_n$ with $M_n = nA + B$, we show that the log-concave operator value $\\mathcal{L}(a_n) = b_n \\coloneqq a_n^2 - a_{n+1}a_{n-1}$ is a quadratic form in the state vector $\\mathbf{v}_n$, and identify the matrix $Q_n = Q^{(0)} + nQ^{(1)}$ whose positive semi-definiteness gives a sufficient condition for…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.NT"
+  ],
+  "published": "2026-04-15",
+  "updated": "2026-04-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

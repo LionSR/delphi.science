@@ -1,0 +1,22 @@
+{
+  "key": "2610.09510",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.09510",
+  "title": "Physics-Informed Neural Plasticity: PDE Solvers That Reshape Themselves",
+  "authors": [
+    "Chun-Wun Cheng",
+    "Bingcheng Hu",
+    "Angelica I. Aviles-Rivero"
+  ],
+  "summary": "Physics-informed neural PDE solvers adapt their parameters to satisfy governing equations, yet their representational structure typically remains fixed throughout training. This rigidity is poorly matched to PDE solutions with strongly heterogeneous complexity across space and space--time, leaving capacity insufficient where the physics is difficult and redundant where it is simple. We introduce physics-informed neural plasticity, a paradigm in which the representation itself reshapes during optimization in response to unresolved physics. We instantiate this principle with Representation…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

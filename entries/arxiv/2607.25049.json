@@ -1,0 +1,22 @@
+{
+  "key": "2607.25049",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.25049",
+  "title": "FIRMGrasp: A Friction-Informed Risk Margin for Robust Grasp Synthesis",
+  "authors": [
+    "Clinton Enwerem",
+    "John S. Baras",
+    "Calin Belta"
+  ],
+  "summary": "Classical grasp quality metrics assume one deterministic friction coefficient and therefore cannot assess whether a grasp maintains force closure across plausible friction values. We present FIRMGrasp, a family of grasp quality metrics that incorporates friction uncertainty through Conditional Value-at-Risk (CVaR). At confidence level $β$, we evaluate the force-closure margin at the mean of the adverse friction tail. This evaluation defines the risk-adjusted margin $\\varepsilon^{(β)}$, the inscribed-ball radius of the corresponding grasp wrench space. We prove that $\\varepsilon^{(β)}$ varies…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2601.05583",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.05583",
+  "title": "Learn to Evolve: Self-supervised Neural JKO Operator for Wasserstein Gradient Flow",
+  "authors": [
+    "Xue Feng",
+    "Li Wang",
+    "Deanna Needell",
+    "Rongjie Lai"
+  ],
+  "summary": "The Jordan-Kinderlehrer-Otto (JKO) scheme provides a stable variational framework for computing Wasserstein gradient flows, but its practical use is often limited by the high computational cost of repeatedly solving the JKO subproblems. We propose a self-supervised approach for learning a JKO solution operator without requiring numerical solutions of any JKO trajectories. The learned operator maps an input density directly to the minimizer of the corresponding JKO subproblem, and can be iteratively applied to efficiently generate the gradient-flow evolution. A key challenge is that only a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-01-09",
+  "updated": "2026-01-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

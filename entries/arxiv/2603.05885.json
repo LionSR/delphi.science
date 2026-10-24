@@ -1,0 +1,20 @@
+{
+  "key": "2603.05885",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.05885",
+  "title": "Bayesian Linear Programming under Learned Uncertainty: Posterior Feasibility Guarantees, Scenario Certification, and Applications",
+  "authors": [
+    "Debashis Chatterjee"
+  ],
+  "summary": "Linear programming is widely used for decision-making in science, engineering, and operations research, yet in many modern applications the coefficients entering the constraints and objective are not known exactly and must be learned from data. Classical stochastic and robust optimization offer two influential paradigms for handling such uncertainty, but they typically treat the underlying uncertainty description as given and do not directly integrate priors and updated to posteriors guarantees. This paper develops a Bayesian framework for linear programming in which uncertain quantities are…",
+  "domain": "stat.OT",
+  "tags": [
+    "stat.OT",
+    "math.OC"
+  ],
+  "published": "2026-03-06",
+  "updated": "2026-03-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

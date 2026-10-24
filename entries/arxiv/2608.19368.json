@@ -1,0 +1,19 @@
+{
+  "key": "2608.19368",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19368",
+  "title": "A High-Order Rank-Adaptive Implicit Algorithm for Solving High Dimensional Diffusion Equations using the Hierarchical Tucker Decomposition",
+  "authors": [
+    "Paolo Bosques-Paulet"
+  ],
+  "summary": "This paper presents a high-order rank-adaptive implicit integrator for the tensor solution of high-dimensional diffusion equations. We extend the 3D version of this method from the Tucker decomposition to higher dimensions using the hierarchical Tucker (HT) decomposition, since the storage complexity for the Tucker decomposition increases exponentially with the number of dimensions $d>3$. The HT format avoids this issue by decomposing the solution according to a binary tree consisting of bases for each dimension and core tensors which connect the bases. Spectral methods are considered for…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-19",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

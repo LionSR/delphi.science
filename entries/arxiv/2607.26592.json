@@ -1,0 +1,25 @@
+{
+  "key": "2607.26592",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.26592",
+  "title": "Graph k-Coloring in Average Sublinear Time",
+  "authors": [
+    "Cassandra Marcussen",
+    "Edward Pyne",
+    "Ronitt Rubinfeld",
+    "Asaf Shapira",
+    "Shlomo Tauber"
+  ],
+  "summary": "Graph $k$-coloring is one of the classic NP-complete problems. Previous work has studied its average time complexity, defined to be the average runtime of computing a $k$-coloring over the set of all $k$-colorable graphs on $n$ vertices. A highly influential result of Dyer-Frieze from 1989 gave an algorithm with $O(n^2)$ average runtime for constant $k$. This quadratic runtime appeared natural (and possibly even optimal) since almost all $k$-colorable graphs have $Θ(n^2)$ edges, so one needs at least this time in order to read the (entire) input. However, this was later improved by Kučera in…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.CC",
+    "math.CO"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,26 @@
+{
+  "key": "2605.08505",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.08505",
+  "title": "Scaling Limits of Long-Context Transformers",
+  "authors": [
+    "Giuseppe Bruno",
+    "Shi Chen",
+    "Zhengjiang Lin",
+    "Yury Polyanskiy",
+    "Philippe Rigollet"
+  ],
+  "summary": "We study the long-context limit of softmax self-attention with a fixed query and a random context of $n$ i.i.d. keys on the sphere, viewing the inverse temperature $β_n$ as the scaling parameter that decides whether attention degenerates into uniform averaging or collapses onto the single closest key. We show that the critical scale at which selectivity emerges is determined by the local exponent of the distance-to-query distribution near zero rather than by global features of the context, and scales like $β_n^\\ast \\asymp n^{2/(d-1)}$ for uniform keys on $\\mathbb{S}^{d-1}$. Furthermore, we…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.PR",
+    "math.ST"
+  ],
+  "published": "2026-05-08",
+  "updated": "2026-05-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

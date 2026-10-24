@@ -1,0 +1,22 @@
+{
+  "key": "2609.25935",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.25935",
+  "title": "A structure-preserving staggered semi-implicit four-split finite volume scheme for continuum mechanics on unstructured meshes",
+  "authors": [
+    "M. Dumbser",
+    "W. Boscheri",
+    "M. Tavelli",
+    "A. Thomann"
+  ],
+  "summary": "We present a new semi-implicit structure-preserving (SP) finite volume discretization for a unified first-order hyperbolic model of continuum mechanics. This framework provides a common mathematical description for fluids and solids and incorporates transport, viscous effects, heat conduction, and elastic deformations within a single system of hyperbolic partial differential equations. The coexistence of several physical mechanisms gives rise to multiple characteristic wave speeds, resulting in severe time-step restrictions for fully explicit discretizations. To overcome this difficulty, we…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-22",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

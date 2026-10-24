@@ -1,0 +1,22 @@
+{
+  "key": "2605.19942",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.19942",
+  "title": "A second-order product-type implicit-explicit Runge-Kutta method preserving unit length and energy dissipation structures for gradient flows of vector fields",
+  "authors": [
+    "Jianan Li",
+    "Shuang Liu",
+    "Tao Tang",
+    "Jiang Yang"
+  ],
+  "summary": "Gradient flows of unit vector fields arise in a wide range of physical models such as harmonic map heat flows, nematic liquid crystals, and magnetization dynamics. Designing numerical schemes that simultaneously preserve the unit length constraint and dissipate energy is essential for reliable simulations of such systems. Although projection methods can effectively enforce the unit length constraint, ensuring energy dissipation under projection, especially in high-order schemes, remains challenging. Unlike traditional implicit-explicit Runge-Kutta (IMEX-RK) methods, in this work we propose a…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

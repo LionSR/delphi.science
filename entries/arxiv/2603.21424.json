@@ -1,0 +1,22 @@
+{
+  "key": "2603.21424",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.21424",
+  "title": "Tiny but uniform improvements of adaptive BH procedures via compound e-values",
+  "authors": [
+    "Nikolaos Ignatiadis",
+    "Ruodu Wang",
+    "Aaditya Ramdas"
+  ],
+  "summary": "After the seminal Benjamini--Hochberg (BH) procedure for controlling the false discovery rate (FDR) was proposed, dozens of papers have attempted to improve its power by adapting to the unknown proportion of nulls. We observe that most null-proportion estimates are simply compound e-values in disguise, and thus most adaptive FDR procedures can be interpreted as instances of the e-weighted BH (ep-BH) procedure of Ignatiadis, Wang, and Ramdas [2024], i.e., the BH procedure weighted by compound e-values. This lens helps us show that most existing procedures are inadmissible, and we provide…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-03-22",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

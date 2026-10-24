@@ -1,0 +1,21 @@
+{
+  "key": "2610.24569",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.24569",
+  "title": "Energy-minimized interpolatory B-spline lofting for sequences of closed contours",
+  "authors": [
+    "Shutao Tang",
+    "Zixuan Zhao"
+  ],
+  "summary": "B-spline lofting through closed cross-sections is common in reverse engineering, but interpolating each section on its own knot vector can produce an unnecessarily large control net. We construct a common-knot method for closed section curves of odd and even degree by minimizing the strain energy of each section subject to its interpolation constraints. Feasibility for closed section data and uniqueness of the resulting saddle-point solution require full row rank of the periodic collocation matrices, a property that a previously proposed periodic Schoenberg-Whitney window condition does not…",
+  "domain": "cs.GR",
+  "tags": [
+    "cs.GR",
+    "math.NA"
+  ],
+  "published": "2026-10-17",
+  "updated": "2026-10-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

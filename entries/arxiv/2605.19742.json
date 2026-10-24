@@ -1,0 +1,22 @@
+{
+  "key": "2605.19742",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.19742",
+  "title": "The Privacy Subsidy in Glosten-Milgrom: Bid-Ask Spread and Welfare under Flip-Noise Direction Observation",
+  "authors": [
+    "Yuki Nakamura"
+  ],
+  "summary": "We derive a closed-form bid-ask spread and welfare decomposition for the Glosten-Milgrom 1985 sequential-trading model when the market maker observes the trade direction perturbed by a binary flip channel of probability $η$ -- a natural information-theoretic model of privacy mechanisms acting on the direction signal. Under a committed Bayesian market-maker pricing rule, the equilibrium spread is $μ(1-2η)Δ$, where $μ$ is the informed-trader fraction and $Δ= v_H - v_L$ the value range. The welfare decomposition identifies a per-trade transfer $μηΔ$ from the protocol's liquidity pool to traders…",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "cs.CR",
+    "math.PR",
+    "q-fin.TR"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-05-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

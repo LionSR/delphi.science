@@ -1,0 +1,22 @@
+{
+  "key": "2610.18502",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.18502",
+  "title": "Two-level additive Schwarz preconditioners with GDSW coarse spaces for high-order discretizations in 2D",
+  "authors": [
+    "Tommaso Bevilacqua",
+    "Axel Klawonn",
+    "Martin Lanser",
+    "Adam Wasiak"
+  ],
+  "summary": "Two-level overlapping Schwarz preconditioners with Generalized Dryja-Smith-Widlund (GDSW) and Reduced GDSW (RGDSW) coarse spaces for high-order finite element methods (FEM) and virtual element methods (VEM) are investigated and applied to the Poisson problem in 2D. The GDSW coarse space is a well-established robust choice for preconditioners in domain decomposition, while the RGDSW coarse space offers a competitive alternative by reducing the coarse problem dimension while maintaining robustness. On the theoretical side, a condition number bound for both preconditioners is proved for…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

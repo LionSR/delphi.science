@@ -1,0 +1,26 @@
+{
+  "key": "2606.10944",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.10944",
+  "title": "Express Language Modeling",
+  "authors": [
+    "Albert Gong",
+    "Annabelle Michael Carrell",
+    "Raaz Dwivedi",
+    "Lester Mackey"
+  ],
+  "summary": "We introduce a new tool, Express, for converting a non-causal attention approximation into a causal approximation with matching approximation guarantees. When combined with the state-of-the-art Thinformer approximation, Express improves upon the best known causal attention guarantees, delivering $\\log^{3/2}(n)/s$ approximation error with only $O(s)$ memory and $O(s^2 \\log^2(n))$ compression overhead for a sequence of length $n$. We pair these developments with an efficient I/O-aware Triton implementation, demonstrate substantial speedups over FlashAttention 2, and use Express to overcome…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.DS",
+    "math.ST",
+    "stat.ME",
+    "stat.ML"
+  ],
+  "published": "2026-06-09",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2602.04283",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.04283",
+  "title": "Distance spectral radius conditions for perfect $k$-matching, generalized factor-criticality (bicriticality) and $k$-$d$-criticality of graphs",
+  "authors": [
+    "Kexin Yang",
+    "Ligong Wang",
+    "Zhenhao Zhang"
+  ],
+  "summary": "Let $G$ be a simple connected graph with vertex set $V(G)$ and edge set $E(G)$. A $k$-matching of a graph $G$ is a function $f:E(G)\\rightarrow \\{0,1,\\ldots, k\\}$ satisfying $\\sum_{e \\in E_G(v)} f(e) \\leq k$ for every vertex $v \\in V(G)$, where $E_G(v)$ is the set of edges incident with $v$ in $G$. A $k$-matching of a graph $G$ is perfect if $ \\sum_{e \\in E_G(v) } f(e) = k $ for any vertex $v \\in V(G)$. The $k$-Berge-Tutte-formula of a graph $G$ is defined as: \\[ \\defk(G) = \\max_{S \\subseteq V(G)} \\begin{cases} k \\cdot i(G - S) - k|S|, & k \\text{ is even;} \\\\[6pt] \\odd(G - S) + k \\cdot i(G -…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-02-04",
+  "updated": "2026-02-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

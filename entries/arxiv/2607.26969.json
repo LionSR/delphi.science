@@ -1,0 +1,20 @@
+{
+  "key": "2607.26969",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.26969",
+  "title": "Normalized First-Order Methods for Convex (L0, L1)-Smooth Optimization with Inexact Gradients",
+  "authors": [
+    "Evgeniy Kovalev",
+    "Fedor Stonyakin"
+  ],
+  "summary": "Generalized smoothness, such as (L0, L1)-smoothness, have recently attracted considerable attention due to their ability to model optimization problems arising in modern machine and deep learning, where the classical Lipschitz assumptions of the gradient is often violated. At the same time, computing exact gradients may be impractical or computationally expensive in many applications. In this work, we study convex (L0, L1)-smooth optimization (for normalized gradient method we consider quasi-convex problems too) under access only to a normalized approximation recently proposed Comparison…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

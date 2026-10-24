@@ -1,0 +1,22 @@
+{
+  "key": "2610.07653",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.07653",
+  "title": "Low-rank SI-DSA and GMRES-DSA for Radiative Transfer Equation with Adaptive Accuracy Control",
+  "authors": [
+    "Chenxi Han",
+    "Lukas Einkemmer",
+    "Wei Guo",
+    "Zhichao Peng"
+  ],
+  "summary": "Recently, efficient sweep-based low-rank iterative solvers have been developed to reduce the computational costs of steady-state solves and implicit time integration of the radiative transfer equation (RTE). In particular, angular sampling based on the discrete empirical interpolation method (DEIM) or on error-indicated randomized greedy selection enables efficient, non-intrusive reuse of existing transport sweep implementations. However, randomized-greedy low-rank source iteration with diffusion synthetic acceleration (SI--DSA) enforces uniformly tight accuracy tolerances across all source…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

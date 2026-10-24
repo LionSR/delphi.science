@@ -1,0 +1,19 @@
+{
+  "key": "2609.40006",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.40006",
+  "title": "A Reduced Coupling-Space Multigrid Schur Preconditioner for Fictitious-Domain Interface Problems",
+  "authors": [
+    "Najwa Alshehri"
+  ],
+  "summary": "We study a reduced multigrid Schur preconditioner for the fictitious-domain method with distributed Lagrange multipliers applied to elliptic interface problems. The method replaces the costly background solve by a multigrid approximation and treats the resulting correction only in the multiplier coupling space through a Woodbury formula. Numerical experiments show a marked improvement over the baseline preconditioner and consistently rapid convergence under mesh refinement and coefficient contrast.",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

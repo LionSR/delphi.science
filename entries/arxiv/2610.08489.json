@@ -1,0 +1,22 @@
+{
+  "key": "2610.08489",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08489",
+  "title": "Topology Design for Distributed Consensus with Relay-Assisted Communication",
+  "authors": [
+    "Shuyi Ren",
+    "Zheng Chen",
+    "Erik G. Larsson"
+  ],
+  "summary": "This paper focuses on relay-assisted topology optimization to accelerate the convergence of distributed consensus algorithms over weakly connected networks. Instead of permanently adding a fixed set of relay links, we introduce a time-sharing framework where multiple relay configurations are activated in a probabilistic manner. An ActiveSet-based algorithm incrementally constructs candidate relay edge sets and jointly optimizes the mixing matrices and the associated relay set activation probabilities, allowing adaptive relay selection in the optimization process. Simulation results…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

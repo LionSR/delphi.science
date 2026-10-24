@@ -1,0 +1,20 @@
+{
+  "key": "2606.04204",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.04204",
+  "title": "An Energy-Stable Implicit Convex-Splitting BDF2 Scheme for the Cahn-Hilliard-Navier-Stokes Equations",
+  "authors": [
+    "Xuelong Gu",
+    "Qi Wang"
+  ],
+  "summary": "We develop an energy-stable implicit convex-splitting BDF2 discretization (CS-BDF2) of the Cahn--Hilliard--Navier--Stokes equations. For the Cahn--Hilliard equation, BDF2 analyses can establish energy stability by testing the phase equation in the (H^{-1}) metric. For CHNS, this test is not compatible with the coupled energy estimate: the momentum equation is tested by (\\bfu^{n+1}), while the transported phase equation is tested by (μ^{n+1}) so that transport cancels capillary work. The chemical-potential relation must then be paired with the BDF2 phase increment ((3φ^{n+1}-4φ^n+φ^{n-1})/2);…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-02",
+  "updated": "2026-06-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

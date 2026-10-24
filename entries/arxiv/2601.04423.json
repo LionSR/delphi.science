@@ -1,0 +1,28 @@
+{
+  "key": "2601.04423",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.04423",
+  "title": "Learning Multinomial Logits in $O(n \\log n)$ time",
+  "authors": [
+    "Flavio Chierichetti",
+    "Mirko Giacchini",
+    "Ravi Kumar",
+    "Silvio Lattanzi",
+    "Alessandro Panconesi",
+    "Erasmo Tani",
+    "Andrew Tomkins"
+  ],
+  "summary": "A Multinomial Logit (MNL) model is composed of a finite universe of items $[n]=\\{1,..., n\\}$, each assigned a positive weight. A query specifies an admissible subset -- called a slate -- and the model chooses one item from that slate with probability proportional to its weight. This query model is also known as the Plackett-Luce model or conditional sampling oracle in the literature. Although MNLs have been studied extensively, a basic computational question remains open: given query access to slates, how efficiently can we learn weights so that, for every slate, the induced choice…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.LG",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-01-07",
+  "updated": "2026-01-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

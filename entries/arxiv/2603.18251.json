@@ -1,0 +1,21 @@
+{
+  "key": "2603.18251",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.18251",
+  "title": "Christoffel Adaptive Sampling for Sparse Random Feature Expansions",
+  "authors": [
+    "Ben Adcock",
+    "Khiem Can",
+    "Xuemeng Wang"
+  ],
+  "summary": "Random Feature Models (RFMs) have become a powerful tool for approximating multivariate functions and solving partial differential equations efficiently. Sparse Random Feature Expansions (SRFE) improve traditional RFMs by incorporating sparsity, making it particularly effective in data-scarce settings. In this work, we integrate active learning with sparse random feature approximations to improve sampling efficiency. Specifically, we incorporate the Christoffel function to guide an adaptive sampling process, dynamically selecting informative sample points based on their contribution to the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-18",
+  "updated": "2026-03-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

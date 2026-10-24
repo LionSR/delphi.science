@@ -1,0 +1,24 @@
+{
+  "key": "2606.28123",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28123",
+  "title": "Dangerous Liaisons of Convex Learning and Non-Affine Aggregation",
+  "authors": [
+    "Thomas Boudou",
+    "Batiste Le Bars",
+    "Nirupam Gupta",
+    "Aurélien Bellet"
+  ],
+  "summary": "Last-iterate convergence and generalization guarantees in first-order convex learning hinge on the monotonicity of the update operator. While linear averaging preserves the monotonicity of gradient updates, this property is often violated when gradients are aggregated non-affinely, as in modern pipelines enforcing constraints like adaptivity, privacy, robustness or fairness. Whether it is possible to design non-affine aggregation rules that maintain monotonicity has remained an open question. We answer this question negatively: we prove that the monotonicity of aggregated gradients is…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-06-26",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

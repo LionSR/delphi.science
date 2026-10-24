@@ -1,0 +1,20 @@
+{
+  "key": "2605.30905",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.30905",
+  "title": "A Unifying View of Anchoring via Operator-Side Tikhonov Regularization",
+  "authors": [
+    "Zihao Chen"
+  ],
+  "summary": "Anchored fixed point and monotone equation methods, including Halpern iteration, extra anchored gradient, and their relatives, add a vanishing pull toward a reference point to obtain last-iterate guarantees. Existing anchored variants often achieve sharp last-iterate guarantees, but from the update-level perspective the placement of the anchor can be algorithm-specific and conceptually opaque. We show that anchoring admits a single operator-side construction: regularize the operator queried by the base method with a vanishing Tikhonov term, then run the unmodified base method. Applied to the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2606.29284",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.29284",
+  "title": "A Turán Theorem for Cayley Graphs",
+  "authors": [
+    "Wei Li",
+    "Kai Yang"
+  ],
+  "summary": "In this note, we give a Turán theorem for Cayley graphs $\\Cay(\\Z_p,S)$ over prime cyclic groups $\\Z_p$. For a graph $F$ and a finite abelian group $G$, define the Cayley--Turán number by \\[ \\exCay(F,G) = \\max\\{|S|:S=-S\\subseteq G\\setminus\\{0\\},\\ \\Cay(G,S)\\text{ is }F\\text{-free}\\}. \\] Using a polynomial method, we prove that for every odd prime $p$ and every $1\\le r\\le p-1$, \\[ \\exCay(K_{r+1},\\Z_p) = p-1-2\\left\\lfloor\\frac{p}{r+1}\\right\\rfloor . \\] The extremal construction is the complement of the short-difference interval \\[ D_0=\\{0,\\pm1,\\ldots,\\pm\\lfloor p/(r+1)\\rfloor\\}. \\] We also…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-06-28",
+  "updated": "2026-06-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

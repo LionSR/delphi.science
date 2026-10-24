@@ -1,0 +1,24 @@
+{
+  "key": "2608.00400",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.00400",
+  "title": "Modeling Unknown Nonlocal PDE Systems via Flow Map Learning",
+  "authors": [
+    "Zhongshu Xu",
+    "Ying Li",
+    "Yanzhi Zhang",
+    "Dongbin Xiu"
+  ],
+  "summary": "Nonlocal partial differential equations arise in many applications but are often difficult to model and learn because of the presence of nonlocal operators. We present a flow-map learning (FML) framework for modeling unknown nonlocal PDEs directly from solution data. Rather than learning or approximating the underlying nonlocal operators, the proposed approach learns the finite-time evolution operator in either modal or nodal space. Two complementary formulations are developed for spectral and grid-based solution representations. Numerical experiments on one- and two-dimensional fractional…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS",
+    "math.NA"
+  ],
+  "published": "2026-08-01",
+  "updated": "2026-08-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

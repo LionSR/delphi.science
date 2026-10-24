@@ -1,0 +1,23 @@
+{
+  "key": "2610.15689",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.15689",
+  "title": "When do explicit penalties improve flow matching?",
+  "authors": [
+    "Lea Kunkel",
+    "Alberto González-Sanz",
+    "Sophie Langer"
+  ],
+  "summary": "Flow matching can learn structure directly from data, raising the question of when additional constraints improve generation. We study penalties that encode such constraints, with physics-informed flow matching as a motivating example. Satisfying a constraint more closely need not make the generated distribution more accurate. We therefore compare penalised and unpenalised generative modelling through their expected squared $2$-Wasserstein error. Our analysis covers both vector-valued and functional data in a Hilbert-space setting. We first derive geometric criteria that account for…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-10-11",
+  "updated": "2026-10-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

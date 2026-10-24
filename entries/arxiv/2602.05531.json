@@ -1,0 +1,22 @@
+{
+  "key": "2602.05531",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05531",
+  "title": "Solving Stochastic Variational Inequalities without the Bounded Variance Assumption",
+  "authors": [
+    "Ahmet Alacaoglu",
+    "Jun-Hyun Kim"
+  ],
+  "summary": "We analyze algorithms for solving stochastic variational inequalities (VI) without the bounded variance or bounded domain assumptions, where our main focus is min-max optimization with possibly unbounded constraint sets. We focus on two classes of problems: monotone VIs; and structured nonmonotone VIs that admit a solution to the weak Minty VI. The latter assumption allows us to solve structured nonconvex-nonconcave min-max problems. For both classes of VIs, to make the expected residual norm less than $\\varepsilon$, we show an oracle complexity of $\\widetilde{O}(\\varepsilon^{-4})$, which is…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-02-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

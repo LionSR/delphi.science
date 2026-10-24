@@ -1,0 +1,19 @@
+{
+  "key": "2610.17188",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.17188",
+  "title": "A Generalisation of Maximal $(k,b)$-Linear-Free Sets of Integers",
+  "authors": [
+    "Minh Quang Nguyên"
+  ],
+  "summary": "Fix integers $k,b,q$ with $k\\ge 2,b\\ge 0,q\\ge 2$. Define the function $p$ to be: $p(x)=kx+b$. We call a set $S$ of integers $(k,b,q)$-linear-free if $x\\in S$ implies $p^i (x)\\notin S$ for all $i=1,2,\\dots,q-1$, where $p^i (x)=p\\left(p^{i-1}(x)\\right)$ and $p^0 (x)=x$. Such a set $S$ is maximal in $[n]:=\\{1,2,\\dots,n\\}$ if $S\\cup \\{t\\},\\forall t\\in [n]\\backslash S$ is not $(k,b,q)$-linear-free. Let $M_{k,b,q} (n)$ be the set of all maximal $(k,b,q)$-linear-free subsets of $[n]$, and define $g_{k,b,q} (n)=\\min_{S\\in M_{k,b,q} (n)}|S|$ and $f_{k,b,q} (n)=\\max_{S\\in M_{k,b,q} (n)}|S|$. In this…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

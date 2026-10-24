@@ -1,0 +1,22 @@
+{
+  "key": "2603.01838",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.01838",
+  "title": "Time discretization of BSDEs with singular terminal condition using asymptotic expansion",
+  "authors": [
+    "Thomas Kruse",
+    "Julia Ackermann",
+    "Alexandre Popier"
+  ],
+  "summary": "We consider a class of backward stochastic differential equations (BSDEs) with singular terminal condition and develop a numerical scheme to approximate their solution. To this end, we extend an asymptotic development of the BSDE solution known from the power case, which arises from optimal liquidation problems, to more general generators. This expansion allows to obtain a suitable approximation of the BSDE solution close to the terminal time. Using this as a terminal condition, we analyze the error of a backward Euler implicit scheme and detail its dependence on the terminal condition.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.PR"
+  ],
+  "published": "2026-03-02",
+  "updated": "2026-03-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

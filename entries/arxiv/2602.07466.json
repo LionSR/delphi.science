@@ -1,0 +1,25 @@
+{
+  "key": "2602.07466",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.07466",
+  "title": "Learned Finite Element-based Regularization of the Inverse Problem in Electrocardiographic Imaging",
+  "authors": [
+    "Manuel Haas",
+    "Thomas Grandits",
+    "Thomas Pinetz",
+    "Thomas Beiert",
+    "Simone Pezzuto",
+    "Alexander Effland"
+  ],
+  "summary": "Electrocardiographic imaging (ECGI) seeks to reconstruct cardiac electrical activity from body-surface potentials noninvasively. However, the associated inverse problem is severely ill-posed and requires robust regularization. While classical approaches primarily employ spatial smoothing, the temporal structure of cardiac dynamics remains underexploited despite its physiological relevance. We introduce a space-time regularization framework that couples spatial regularization with a learned temporal Fields-of-Experts (FoE) prior to capture complex spatiotemporal activation patterns. We derive…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-02-07",
+  "updated": "2026-02-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

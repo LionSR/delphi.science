@@ -1,0 +1,19 @@
+{
+  "key": "2606.04259",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.04259",
+  "title": "An indefinite LOBPCG type of algorithm for detecting a definite Hermitian matrix pair",
+  "authors": [
+    "Marija Miloloža Pandur"
+  ],
+  "summary": "A Hermitian matrix pair $(A,B)$ is called definite if some real linear combination of the matrices $A$ and $B$ is a positive definite matrix. Detection of the definiteness is not straightforward. We propose a basic subspace algorithm for detecting a large definite matrix pair $(A,B)$ with indefinite $B$. The proposed subspace algorithm is based on iterative testing of small projected Hermitian matrix pairs formed by using subspaces of small dimensions. Furthermore, we propose a specialized algorithm with parameter $m$, and its preconditioned variant. In the specialized algorithm with $m=3$…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-02",
+  "updated": "2026-06-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

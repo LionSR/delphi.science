@@ -1,0 +1,21 @@
+{
+  "key": "2602.10461",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.10461",
+  "title": "Unlocked Backpropagation using Wave Scattering",
+  "authors": [
+    "Christian Pehle",
+    "Jean-Jacques Slotine"
+  ],
+  "summary": "Both the backpropagation algorithm in machine learning and the maximum principle in optimal control theory are posed as a two-point boundary problem, resulting in a \"forward-backward\" lock. We derive a reformulation of the maximum principle in optimal control theory as a hyperbolic initial value problem by introducing an additional \"optimization time\" dimension. We introduce counter-propagating wave variables with finite propagation speed and recast the optimization problem in terms of scattering relationships between them. This relaxation of the original problem can be interpreted as a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-02-11",
+  "updated": "2026-02-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

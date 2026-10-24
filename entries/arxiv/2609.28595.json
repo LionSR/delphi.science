@@ -1,0 +1,23 @@
+{
+  "key": "2609.28595",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.28595",
+  "title": "Permutation binomials of the form $X^r(X^{q-1}+a)$ over finite fields",
+  "authors": [
+    "Junna Ni",
+    "Xuan Pang",
+    "Jianhua Yu",
+    "Pingzhi Yuan"
+  ],
+  "summary": "This paper is devoted to studying permutation binomial $F_{r,a}(X)=X^r(X^{q-1}+a)\\in\\mathbb F_{q^e}[X]$ with $a\\in\\mathbb F_{q^e}^*$. We present a complete characterization for $F_{r,a}$ to be a permutation of $\\mathbb{F}_{q^e}$. This yields a complete proof of the conjecture proposed by Masuda--Rubio--Santiago \\cite{masuda2022permutation}. More precisely, we show that \\(F_{r,a}\\) permutes \\(\\mathbb F_{q^e}\\) if and only if $(-a)^{(q^e-1)/(q-1)}\\ne1, \\gcd(r,q-1)=1$, and there exists \\(1\\le h<e\\) with \\(\\gcd(h,e)=1\\) such that $r(q^h-1)\\equiv q-1\\pmod{q^e-1}.$",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO"
+  ],
+  "published": "2026-09-23",
+  "updated": "2026-09-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2606.10218",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.10218",
+  "title": "A Virtual Element Method for elliptic problems on trimmed background meshes",
+  "authors": [
+    "L. Beirão da Veiga",
+    "C. Canuto",
+    "R. H. Nochetto",
+    "G. Vacca",
+    "M. Verani"
+  ],
+  "summary": "We consider a two-dimensional piecewise $C^2$ domain that cuts through a quasi-uniform fixed polygonal background mesh, for instance made of quadrilaterals. A simple procedure based on convex hulls gives rise to a rather small number of polygonal boundary elements of various shapes, including elements with small edges and large aspect ratios; this is the computational mesh for a virtual element method (VEM), a trimmed background mesh. We classify all possible geometric configurations and study their stability and approximability properties. This entails deriving robust stabilization…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-08",
+  "updated": "2026-06-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2608.19058",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19058",
+  "title": "The Position-wise Prime Digit Distribution Theorem: A Formal Proof of Position-wise Digit Equidistribution in the Prime Numbers",
+  "authors": [
+    "Mahadee Al Mobin",
+    "Md. Shariful Islam"
+  ],
+  "summary": "We state and prove the Theorem: for primes $p < 10^n$ with base-$10$ expansion $p = \\sum_{k=0}^{n(p)-1} d_k(p) 10^k$, the positional digit probabilities $P_n(d \\mid k)$ satisfy \\[ \\lim_{n \\to \\infty} P_n(d \\mid k) = \\begin{cases} 1/10, & k \\ge 1,\\ d \\in \\{0,\\dots,9\\}, \\\\[4pt] 1/9, & k = \\mathrm{lead},\\ d \\in \\{1,\\dots,9\\}. \\end{cases} \\] The limiting behavior splits cleanly into two distinct mechanisms: an arithmetic regime for interior digits and an Archimedean regime for the leading digit. For fixed interior positions ($k \\ge 1$), digit extraction modulo $10^{k+1}$ reduces the problem to…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-08-19",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

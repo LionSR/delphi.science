@@ -1,0 +1,20 @@
+{
+  "key": "2606.22451",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.22451",
+  "title": "Exact Nonnegative Matrix Factorization via Cone-Ray Witnesses: Certificates, a One-Sided Solver, and a Findability Phase Transition",
+  "authors": [
+    "Mithil Ramteke"
+  ],
+  "summary": "We study exact nonnegative matrix factorization (NMF) of small exact-rank-r matrices through the polyhedral cones of nonnegative preimages of the truncated SVD. Restricting each factor to an r-subset of a cone's extreme rays collapses the factorization constraint to the entrywise nonnegativity of a single r x r witness matrix; witness feasibility is a certificate that an exact size-r NMF exists, decided in one matrix inverse. A single-coupling completeness theorem shows every size-r NMF is representable this way, for every m, and a one-sided relaxation gives a closed-form solver that…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.CG"
+  ],
+  "published": "2026-06-21",
+  "updated": "2026-08-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

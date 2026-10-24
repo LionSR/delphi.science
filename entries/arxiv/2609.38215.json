@@ -1,0 +1,20 @@
+{
+  "key": "2609.38215",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38215",
+  "title": "Moment-based approximation of cell and face integrals in THINC/QQ reconstruction on unstructured grids",
+  "authors": [
+    "Young-Lin Yoo"
+  ],
+  "summary": "On unstructured grids, the tangent of hyperbola for interface capturing (THINC) method with quadratic surface representation and Gaussian quadrature (THINC/QQ) requires topology-dependent numerical quadrature for cell and face integrals and Newton iteration for the surface constant. This study introduces a quadratic moment-matched sigmoid (QMMS) approximation that evaluates these quantities from the mean and variance of the quadratic field while retaining the hyperbolic-tangent reconstruction profile and the boundary variation diminishing (BVD) formulation. A slope-matched Gaussian…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

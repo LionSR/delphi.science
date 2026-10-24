@@ -1,0 +1,26 @@
+{
+  "key": "2602.07970",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.07970",
+  "title": "Learning-guided Kansa collocation for forward and inverse PDEs beyond linearity",
+  "authors": [
+    "Zheyuan Hu",
+    "Weitao Chen",
+    "Cengiz Öztireli",
+    "Chenliang Zhou",
+    "Fangcheng Zhong"
+  ],
+  "summary": "Partial Differential Equations are precise in modelling the physical, biological and graphical phenomena. However, the numerical methods suffer from the curse of dimensionality, high computation costs and domain-specific discretization. We aim to explore pros and cons of different PDE solvers, and apply them to specific scientific simulation problems, including forwarding solution, inverse problems and equations discovery. In particular, we extend the recent CNF (NeurIPS 2023) framework solver to coupled and non-linear settings, together with down-stream applications. The outcomes include…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "cs.AI",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-02-08",
+  "updated": "2026-03-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

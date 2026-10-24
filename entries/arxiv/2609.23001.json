@@ -1,0 +1,22 @@
+{
+  "key": "2609.23001",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.23001",
+  "title": "NeSTR: Neural S-Transform Reconstruction for Gaussian SPDEs",
+  "authors": [
+    "Nacira Agram",
+    "Fred Espen Benth",
+    "Jan Rems"
+  ],
+  "summary": "We introduce Neural $S$-Transform Reconstruction (NeSTR) for Gaussian stochastic partial differential equations (SPDEs). The learned object is not the random solution itself, but its $S$-Transform on a finite dimensional subspace of the white noise test space. For Wick type SPDEs, NeSTR yields a deterministic parametric PDE for the restricted $S$-Transform, and the stochastic solution is recovered from the Taylor coefficients of this transform at the origin. Thus the neural approximation is tied directly to the Wiener chaos expansion of the solution. The main novelty of NeSTR is an inverse…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.PR"
+  ],
+  "published": "2026-09-19",
+  "updated": "2026-09-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

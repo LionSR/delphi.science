@@ -1,0 +1,22 @@
+{
+  "key": "2609.26950",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.26950",
+  "title": "Geometric mean quantization via adaptive approximation",
+  "authors": [
+    "Marc Kesseböhmer",
+    "Aljoscha Niemann"
+  ],
+  "summary": "Let $ν$ be a compactly supported Borel probability measure on $\\mathbb R^{d}$ with $ν(B(x,r))\\leq Cr^{a}$ for some $a>0$. Refine a dyadic cube exactly when its mass is at least $t$, and let $\\mathcal{L}_ν(t)$ be the mean depth at which this refinement stops. We show that the lower and upper geometric-mean quantization dimensions of $ν$ are the lower and upper limits of $\\log(1/t)/\\mathcal{L}_ν(t)$. The dimension exists precisely when $(q-1)\\sum_{Q}ν(Q)^{q}$, summed over all dyadic cubes, converges as $q\\downarrow1$, and it is then determined by this limit. The mass-threshold formula yields…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.IT",
+    "math.OC"
+  ],
+  "published": "2026-09-22",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

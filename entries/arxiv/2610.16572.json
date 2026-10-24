@@ -1,0 +1,19 @@
+{
+  "key": "2610.16572",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16572",
+  "title": "New tools for sparse graph embeddings: Hybrid expanders and application to nested cycles",
+  "authors": [
+    "Nemanja Draganić"
+  ],
+  "summary": "We introduce \\emph{hybrid expanders}, sparse graphs which combine sublinear expansion across all scales with strong constant-factor expansion on smaller, polylogarithmic sets. We show that every $n$-vertex graph of average degree at least $2^{ω(\\log^*n)}$ contains such a subgraph, and use this local expansion to bring into the sparse setting tree-embedding and rollback tools more commonly associated with random or pseudorandom graphs. As an application, for fixed $k\\in\\mathbb N$, we prove that every graph satisfying this average-degree condition contains $k$ pairwise edge-disjoint cycles…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

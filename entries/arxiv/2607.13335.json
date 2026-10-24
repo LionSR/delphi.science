@@ -1,0 +1,20 @@
+{
+  "key": "2607.13335",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.13335",
+  "title": "Closing the Oracle-Complexity Gap in Derivative-Free Convex Optimization: A Near-Quadratic Lower Bound from Exact Function Values",
+  "authors": [
+    "Phillip Kerger"
+  ],
+  "summary": "We study the deterministic query complexity of minimizing a convex Lipschitz function over a $d$-dimensional Euclidean ball using only exact function values. At accuracy $Θ(d^{-1/2})$, the previously applicable lower bound was $Ω(d)$, inherited from the stronger full first-order oracle, while an upper bound from Protasov's value-only method requires $O(d^2\\log^2 d)$ evaluations. By providing a lower bound of $Ω(\\,\\frac{d^2}{\\log(d+1)})$ on the oracle complexity in this setting, we thereby close this gap dating back to 1996, up to polylogarithmic factors. Furthermore, we are able to lift this…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.CC"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

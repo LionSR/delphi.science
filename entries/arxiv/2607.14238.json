@@ -1,0 +1,23 @@
+{
+  "key": "2607.14238",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14238",
+  "title": "Online Beck--Fiala Down to Logarithmic Sparsity",
+  "authors": [
+    "Dylan J. Altschuler",
+    "Konstantin Tikhomirov"
+  ],
+  "summary": "The Beck--Fiala conjecture asserts that every matrix $A\\in\\{0,1\\}^{n\\times T}$ with at most $d$ nonzero entries in each column has discrepancy $O(\\sqrt d)$. A major breakthrough result of Bansal and Jiang recently established the validity of the conjecture for $d \\ge \\log(T)^2$. The present article extends the validity of the classical \\textit{offline} Beck--Fiala conjecture to $d \\ge \\log(T)^{1+o(1)}$; moreover, the main thrust of the result is that it is actually obtained by an efficient \\textit{online} algorithm that minimizes prefix discrepancy. The result is also essentially optimal,…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM",
+    "cs.DS",
+    "math.PR"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

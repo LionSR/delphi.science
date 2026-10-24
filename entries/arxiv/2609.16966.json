@@ -1,0 +1,19 @@
+{
+  "key": "2609.16966",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.16966",
+  "title": "Powers of the Thue--Morse Series: 2-Adic Valuations and Automatic Odd Parts",
+  "authors": [
+    "Zhao Shen"
+  ],
+  "summary": "Let $T(x)=\\prod_{j\\ge 0}(1-x^{2^j})=\\sum_{n\\ge 0}t(n)x^n$ be the Thue--Morse generating function, and write $T(x)^m=\\sum_{n\\ge 0}t_m(n)x^n$ for a positive integer $m$. For a nonzero integer $a$, let $ν_2(a)$ be the exponent of $2$ in $a$ and put $\\operatorname{odd}(a)=a/2^{ν_2(a)}$. For every $s\\ge 1$, we prove that the sequence $(\\operatorname{odd}(t_m(n))\\bmod 2^s)_{n\\ge 0}$ is $2$-automatic when $m=2^r$, $r\\ge 1$, or $m=3\\cdot 2^r$, $r\\ge 2$. In both families, $ν_2(t_m(n))=ν_2\\binom{n+m-1}{m-1}$. The valuation identity for $m=2^r$ is known; our proof recovers it and also establishes the…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

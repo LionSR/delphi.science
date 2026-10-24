@@ -1,0 +1,19 @@
+{
+  "key": "2604.18181",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.18181",
+  "title": "Spectral approximation for the separable covariance mixture model",
+  "authors": [
+    "Ben Deitmar"
+  ],
+  "summary": "This paper introduces the separable covariance mixture model, which assumes a data-matrix $Y$ to be of the form $$ \\sum\\limits_{r=1}^R A_r X B_r $$ for one random $(d \\times n)$-matrix $X$ with independent centered variance-one entries, and for two families of deterministic matrices $A_1,\\dots,A_R \\in \\mathbb{C}^{d \\times d}$ and $B_1,\\dots,B_R \\in \\mathbb{C}^{n \\times n}$. Under certain assumptions, it is shown that the resolvents $(\\frac{1}{n} Y Y^* - z \\operatorname{Id}_d)^{-1}$ and $(\\frac{1}{n} Y^* Y - z \\operatorname{Id}_n)^{-1}$ respectively approximate the deterministic matrices $$…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-04-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

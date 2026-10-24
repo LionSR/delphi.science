@@ -1,0 +1,19 @@
+{
+  "key": "2602.07245",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.07245",
+  "title": "Computing with Continued Logarithms",
+  "authors": [
+    "Michael J. Collins"
+  ],
+  "summary": "Gosper developed an algorithm for performing arithmetic on continued fractions (CFs), and introduced continued logarithms (CLs) as a variant of continued fractions better suited to representing extremely large (or small) numbers. CLs are also well-suited to efficient hardware implementation. Here we present the algorithm for arithmetic on CLs, then extend it to the novel contribution of this paper, an algorithm for computing trigonometric, exponential, and log functions on CLs. These methods can be extended to other transcendental functions. As with the corresponding CF algorithms,…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-02-06",
+  "updated": "2026-02-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

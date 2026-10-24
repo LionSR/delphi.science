@@ -1,0 +1,24 @@
+{
+  "key": "2607.23116",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.23116",
+  "title": "KAYROS: An Anytime and Exact Open-Source Solver for Duration-Minimization Time-Dependent Vehicle Routing. A Technical Report and a Case Study in Human-AI Engineering",
+  "authors": [
+    "Florian Rascoussier",
+    "Romain Billot",
+    "Lina Fahed",
+    "Christine Solnon"
+  ],
+  "summary": "Time-dependent routing recognizes that the same journey can take a different time depending on when it begins. Under duration minimization, even the departure time of each vehicle becomes a decision. Exact methods for this setting exist in the literature, but researchers and practitioners have lacked a ready-to-use open solver that combines rich piecewise-linear travel times, early feasible solutions and optimality claims. KAYROS fills this gap with two modes on one checker-consistent engine: an Iterated Local Search that streams improving solutions and a Branch-Price-and-Cut method that can…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI",
+    "cs.MS"
+  ],
+  "published": "2026-07-25",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

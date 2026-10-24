@@ -1,0 +1,23 @@
+{
+  "key": "2610.12370",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.12370",
+  "title": "Bilevel optimization for data-driven learning of Koopman embeddings using kernel-based autoencoders",
+  "authors": [
+    "Joel-Pascal Ntwali N'konzi",
+    "Feliks Nüske",
+    "Stefan Klus"
+  ],
+  "summary": "Koopman operator theory provides a linear framework for analyzing nonlinear dynamical systems and has become a major tool for data-driven modeling. A central challenge, however, is that finite-dimensional approximations computed by methods such as extended dynamic mode decomposition (EDMD) require the dictionary to be specified a priori. Recent machine-learning approaches address this limitation by learning the dictionary from data, predominantly using artificial neural network (ANN) autoencoder architectures. Although kernel methods offer an alternative with greater interpretability and…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS",
+    "stat.ML"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

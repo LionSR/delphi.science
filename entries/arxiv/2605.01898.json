@@ -1,0 +1,20 @@
+{
+  "key": "2605.01898",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.01898",
+  "title": "Fast Newton methods for linear-quadratic dynamic games with application to autonomous vehicle platooning and intersection crossing",
+  "authors": [
+    "Reza Rahimi Baghbadorani",
+    "Sergio Grammatico"
+  ],
+  "summary": "We consider constrained linear-quadratic dynamic games arising in autonomous vehicle platooning, intersection crossing and other cooperative driving scenarios. Infinite-horizon Nash equilibria are reformulated as receding-horizon affine variational inequalities with special structure. Exploiting this formulation, we design Newton-type algorithms with local quadratic convergence. The resulting methods achieve extremely fast convergence, making them well suited for real-time and embedded receding-horizon control in safety-critical traffic applications. Simulations of platooning and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-03",
+  "updated": "2026-05-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

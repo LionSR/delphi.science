@@ -1,0 +1,22 @@
+{
+  "key": "2609.13091",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.13091",
+  "title": "A Unified Two-Grid Framework for Anderson Acceleration and Nonlinear GMRES",
+  "authors": [
+    "James Adler",
+    "Yunhui He",
+    "Xiaozhe Hu",
+    "Satchel Lefebvre"
+  ],
+  "summary": "In this work, we recast two widely used acceleration methods for fixed-point iterations, Anderson acceleration (AA) and the nonlinear generalized minimal residual method (NGMRES), as two-grid methods. By explicitly deriving the error propagation matrices for AA and NGMRES on linear problems, we show that both methods, together with several of their existing variants, can be reformulated as two-grid methods with a single pre- or postsmoothing step and a coarse-grid correction given by a projection with respect to a suitable inner product. This reformulation not only unifies AA, NGMRES, and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-11",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

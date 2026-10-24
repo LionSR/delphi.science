@@ -1,0 +1,23 @@
+{
+  "key": "2610.06348",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06348",
+  "title": "IGA-KAN: Isogeometric Analysis with Physics-Informed Closed-Form Kolmogorov-Arnold Networks for Forward and Inverse PDEs",
+  "authors": [
+    "Sima Naraghi",
+    "Kourosh Parand",
+    "Amirhossein Sadr",
+    "Dara Rahmati"
+  ],
+  "summary": "Isogeometric analysis (IGA) solves partial differential equations accurately on exact NURBS geometry, whereas neural solvers are mesh-free but often orders of magnitude less accurate and typically trained by non-convex optimization without error control. We propose IGA-KAN, which uses local Kolmogorov-Arnold networks, fitted in closed form, to improve the IGA solution instead of replacing it. An IGA Galerkin solve produces u_h; on every knot-vertex patch a Kolmogorov-Arnold ridge model is fitted to the strong form of the equation, the exact boundary data and u_h, and the models are blended…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

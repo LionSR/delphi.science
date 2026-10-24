@@ -1,0 +1,24 @@
+{
+  "key": "2604.01321",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.01321",
+  "title": "Risk Control of Traffic Flow Through Chance Constraints and Large Deviation Approximation",
+  "authors": [
+    "Rui Xu",
+    "Shanyin Tong",
+    "Xuan Di"
+  ],
+  "summary": "We develop a rare chance-constrained optimal control framework for autonomous traffic management, with traffic dynamics governed by stochastic partial differential equations. To efficiently enforce these probabilistic safety specifications, we exploit a large deviation theory (LDT) based approximation method, which converts the original highly non-convex, sampling-heavy stochastic optimization problem into a tractable deterministic nonlinear programming problem. The proposed LDT-based reformulation exhibits superior computational scalability, as its computational cost remains approximately…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY",
+    "math.NA",
+    "stat.CO"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

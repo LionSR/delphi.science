@@ -1,0 +1,20 @@
+{
+  "key": "2610.22153",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.22153",
+  "title": "Event-Triggered Funnel Control for Output Reference Tracking of Unknown Nonlinear Systems",
+  "authors": [
+    "Janina Schaa",
+    "Thomas Berger"
+  ],
+  "summary": "We propose an event-triggered zero-order hold implementation of the funnel controller for output reference tracking of unknown nonlinear systems. The control input is updated only when the deviation between the current and the last transmitted input exceeds a prescribed threshold, reducing the number of input updates while maintaining closed-loop performance guarantees by incorporating an auxiliary integral state to compensate for the error introduced by the zero-order-hold input. We establish a uniform lower bound on the inter-event intervals excluding Zeno behavior, and show that the same…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

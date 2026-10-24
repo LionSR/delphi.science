@@ -1,0 +1,23 @@
+{
+  "key": "2606.00436",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.00436",
+  "title": "Weighted Conformal Clustering",
+  "authors": [
+    "Anirban Nath",
+    "YoonHaeng Hur",
+    "Genevera I. Allen"
+  ],
+  "summary": "Clustering is a central tool for discovering latent structure in unlabeled data; yet modern clustering pipelines often end with a hard assignment of each observation to a cluster without rigorous measures of assignment uncertainty. We propose a novel weighted conformal approach for constructing valid confidence sets for cluster labels. The key difficulty is that the labels available for calibration are not observed ground-truth labels, but synthetic labels produced by a data-dependent clustering algorithm. Our method develops a conformal inference algorithm that corrects the resulting…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

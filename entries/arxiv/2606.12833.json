@@ -1,0 +1,19 @@
+{
+  "key": "2606.12833",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.12833",
+  "title": "A Quaternion--BCH Framework for the Local Accuracy of SIDER Interpolation",
+  "authors": [
+    "Shingyu Leung"
+  ],
+  "summary": "Spherical Interpolation of orDER $n$ (SIDER-$n$) is a recursive high-order interpolation method for data on the unit sphere $\\mathbb{S}^2$, built from repeated spherical linear interpolation (SLERP). This paper develops a quaternion--Lie algebra framework for proving the local consistency of SIDER for smooth spherical curves sampled at equally spaced parameter values. Points on $\\mathbb{S}$ are represented as pure unit quaternions, and interpolation errors are measured in fixed-base quaternion logarithmic coordinates. In this setting, each SLERP operation admits an exact…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

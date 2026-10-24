@@ -1,0 +1,22 @@
+{
+  "key": "2603.11138",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.11138",
+  "title": "Deep regression learning from dependent observations with minimum error entropy principle",
+  "authors": [
+    "William Kengne",
+    "Modou Wade"
+  ],
+  "summary": "This paper considers nonparametric regression from strongly mixing observations. The proposed approach is based on deep neural networks with minimum error entropy (MEE) principle. We study two estimators: the non-penalized deep neural network (NPDNN) and the sparse-penalized deep neural network (SPDNN) predictors. Upper bounds of the expected excess risk are established for both estimators over the classes of Hölder and composition Hölder functions. For the models with Gaussian error, the rates of the upper bound obtained match (up to a logarithmic factor) with the lower bounds established…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-03-11",
+  "updated": "2026-03-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

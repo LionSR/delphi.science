@@ -1,0 +1,20 @@
+{
+  "key": "2601.17432",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.17432",
+  "title": "An algorithmic approach to direct spline products: procedures and computational aspects",
+  "authors": [
+    "Francesco Patrizi",
+    "Alessandra Sestini"
+  ],
+  "summary": "We introduce an efficient algorithmic procedure for implementing the direct formula that represents the product of splines in the B-spline basis. We first demonstrate the relevance of this direct approach through numerical evidence showing that implicit methods, such as collocation, may fail in some instances due to severe ill-conditioning of the associated system matrices, whereas the direct formula remains robust. We then recast the direct formula into an algorithmic framework based on the Oslo Algorithm and subsequently enhance it, through a factorization of the terms to be computed, to…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-24",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

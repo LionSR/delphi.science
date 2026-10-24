@@ -1,0 +1,22 @@
+{
+  "key": "2603.24314",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.24314",
+  "title": "A High-Order Finite Volume GENO Scheme with Implicit Time Integration for Three-Temperature Radiation Diffusion Equations",
+  "authors": [
+    "Fengxiang Zhao",
+    "Yaqing Yang",
+    "Yibing Chen",
+    "Kun Xu"
+  ],
+  "summary": "This study presents a high-order finite volume scheme capable of large time-step integration for three-temperature radiation diffusion (3TRD) equations, where conservation is naturally achieved through energy update. To handle local large gradients and discontinuities in temperature, a central generalized ENO (GENO) reconstruction is developed for diffusion systems, which achieves essentially non-oscillatory reconstruction for discontinuous solutions. Compared to conventional nonlinear reconstruction methods, its most distinctive feature is the central-type symmetric sub-stencils, which…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-25",
+  "updated": "2026-03-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

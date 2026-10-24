@@ -1,0 +1,23 @@
+{
+  "key": "2610.27265",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.27265",
+  "title": "Solving the Ho--Nguyen Conjecture for Gaussian Mixtures: Applications to Mixtures of Experts",
+  "authors": [
+    "Yuyang Zhang",
+    "Qihuang Zhang"
+  ],
+  "summary": "Over-fitted Gaussian mixtures can contain many parameter configurations with nearly the same density, making the order of density cancellation central to their parameter-learning rates. Ho and Nguyen encoded these cancellations in a polynomial system and conjectured its exact order as a function of cluster size. The key to resolving the conjecture is a common positive-variance shift that turns the coefficient equations into Gaussian moment matching. For every cluster size $\\Mhn\\ge2$, we prove that the real, nonzero-weight system has order $2\\Mhn$: a sharp sign-change bound forces rigidity at…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.PR",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

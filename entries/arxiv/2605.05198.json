@@ -1,0 +1,22 @@
+{
+  "key": "2605.05198",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05198",
+  "title": "S-LCG: Structured Linear Congruential Generator-Based Deterministic Algorithm for Search and Optimization",
+  "authors": [
+    "Ahmed Qasim Mohammed",
+    "Haider Banka",
+    "Anamika Singh"
+  ],
+  "summary": "This study presents a novel deterministic optimization algorithm based on a special variant of the Linear Congruential Generator (LCG). While conventional algorithms generally operate within the search space, the introduced technique follows a two-level architecture. In particular, an external loop that adaptively balances between exploration and exploitation, while the internal loop evaluates solutions. It is motivated by the intrinsic structure of the generator, the reason behind naming it the Structured Linear Congruential Generator (S- LCG). which enjoys a number of unique…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.NE"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

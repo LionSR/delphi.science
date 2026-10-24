@@ -1,0 +1,19 @@
+{
+  "key": "2608.24930",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.24930",
+  "title": "On the sum of least prime factors in short intervals",
+  "authors": [
+    "Xu Zhang"
+  ],
+  "summary": "Let $p(n)$ denote the least prime factor of $n$ and $L_C(x)=Cx^{1/2}(\\log x)^2$ with $C>0$. The sum of $p(n)/n$ over composite $n$ lying in the short interval $[x,\\,x+L_C(x)]$, a question raised by Erdős and Graham, is studied. (i) The constant $c=8$ in the mean asymptotic is estimated \\[ S(x)=\\sum_{n 0$, the window sums $μ_C(x):=\\sum_{x\\le n\\le x+L_C(x)}p(n)/n$ over composites have mean $4C$: $\\frac1X\\sum_{x\\le X}μ_C(x)=4C+O_C(1/\\log X)$, and second moment $\\frac1X\\sum_{x\\le X}(μ_C(x)-4C)^2=O_C(1)$. (iii)Under the Maier-consistent bounded-fluctuation hypothesis, $μ_C(x)=4C+O_C(1)$ holds…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-08-22",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

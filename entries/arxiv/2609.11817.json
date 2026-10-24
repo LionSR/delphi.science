@@ -1,0 +1,20 @@
+{
+  "key": "2609.11817",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11817",
+  "title": "Constrained Deep Inventory Management Using Forward-Backward SDEs",
+  "authors": [
+    "Keunwoo Lim",
+    "Michael Bloem"
+  ],
+  "summary": "We study multi-product replenishment subject to aggregate operating limits imposed pathwise in place of expectation. On-hand and in-transit inventory, warehouse capacity and an emission allowance define a safe set, and the resulting multi-product lost-sales problem is posed as a safe stochastic optimal control problem. The Hamilton--Jacobi--Bellman (HJB) equation is represented as a system of forward--backward stochastic differential equations (FBSDEs) and solved by learning the value function and its gradient, with a quadratic program derived by control barrier function (CBF) is solved at…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

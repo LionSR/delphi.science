@@ -1,0 +1,22 @@
+{
+  "key": "2605.04550",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04550",
+  "title": "Neural-Guided Domain Restriction to Accelerate Pseudospectra Computation for Structured Non-normal Banded Matrices",
+  "authors": [
+    "Amit Punia",
+    "Rakesh Kumar",
+    "Madan Lal"
+  ],
+  "summary": "Computing pseudospectra of non-normal matrices is essential for understanding the stability and transient behavior of dynamical systems. Such analysis is critical in applications including fluid dynamics, control systems, and differential operators, where non-normality can lead to significant transient amplification and sensitivity to perturbations that are not captured by eigenvalue analysis alone. At large scales, commonly used numerical approaches for pseudospectra computation can become computationally demanding, as they require repeated auxiliary computations to identify spectrally…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

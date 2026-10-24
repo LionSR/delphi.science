@@ -1,0 +1,21 @@
+{
+  "key": "2607.12107",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12107",
+  "title": "LipschitzSaturation: A Macaulay2 Package for Computing Lipschitz Saturations of Modules and Toric Varieties",
+  "authors": [
+    "Guilherme Schultz Netto",
+    "Thiago da Silva"
+  ],
+  "summary": "We introduce \\verb|LipschitzSaturation|, a package for the computer algebra system \\textit{Macaulay2} that implements algorithms for computing Lipschitz saturations of modules and toric varieties. In the module setting, the package handles three distinct saturation notions for an $\\mathcal{O}_{X}$-submodule $\\mathcal{M}\\subseteq\\mathcal{O}_{X}^{p}$: the 1-, 2-, and 3-Lipschitz saturations $\\mathcal{M}_{S_{1}}$, $\\mathcal{M}_{S_{2}}$ and $\\mathcal{M}_{S_{3}}$, together with the auxiliary construction of the double module $\\mathcal{M}_{D}$. To bypass the computationally intractable…",
+  "domain": "math.AG",
+  "tags": [
+    "math.AG",
+    "math.AC"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

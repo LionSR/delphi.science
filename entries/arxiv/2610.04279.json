@@ -1,0 +1,23 @@
+{
+  "key": "2610.04279",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04279",
+  "title": "Computing Equilibria in Integer Programming Games with Shared Constraints",
+  "authors": [
+    "Bainian Hao",
+    "Hyunwoo Lee",
+    "Robert Hildebrand",
+    "Carla Michini"
+  ],
+  "summary": "We develop a cutting-plane algorithm for computing pure Nash equilibria in finite integer games with shared constraints, where a deviation may be feasible against one opponent profile and infeasible against another. Conditional equilibrium inequalities capture this dependence through an explicit activation term. We give affine encodings of costs and activation conditions and prove that the resulting inequalities characterize the equilibrium set exactly. Embedded as lazy constraints in branch-and-cut, they yield the Generalized Zero-Regret algorithm for optimizing a linear objective over…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.GT"
+  ],
+  "published": "2026-10-03",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

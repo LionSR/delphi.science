@@ -1,0 +1,20 @@
+{
+  "key": "2609.28263",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.28263",
+  "title": "Resource-Adaptive Stochastic Gradient Descent for Online Linear Programming without Re-solving",
+  "authors": [
+    "Jiameng Lyu"
+  ],
+  "summary": "The growth of large language model (LLM) inference and search services increases the scale of online linear programming problems, motivating computationally efficient algorithms. We develop resource-adaptive stochastic gradient descent (RASGD) for stochastic online linear programming. The algorithm uses one request and current inventory to update resource prices, requiring O(m) operations for m resources and memory per arrival and no LP or sample-average optimization. The central idea is to express the current-resource pricing logic of re-solving through a first-order SGD update: each…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-09-23",
+  "updated": "2026-09-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

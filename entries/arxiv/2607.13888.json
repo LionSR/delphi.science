@@ -1,0 +1,19 @@
+{
+  "key": "2607.13888",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.13888",
+  "title": "An Order-One Lower Bound on the Error of Scalable Generalized Multiscale Finite Element Space Constructions",
+  "authors": [
+    "Changqing Ye"
+  ],
+  "summary": "Several coefficient-adapted methods provide optimal-order approximation for elliptic equations with rough coefficients. Prominent examples include localized orthogonal decomposition, multiscale spectral GFEM, and constraint energy-minimizing GMsFEM. Their proven accuracy, however, is obtained by allowing the localization radius or the local spectral dimension to grow as the coarse scale \\(H\\) tends to zero. Classical MsFEM has an FEM-like local construction, but its available analysis does not give a coefficient-uniform \\(\\bigO(H)\\) energy estimate over the full bounded-contrast measurable…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

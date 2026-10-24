@@ -1,0 +1,23 @@
+{
+  "key": "2606.31961",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.31961",
+  "title": "A Beckmann boundary form of Talagrand's conjecture on the discrete cube",
+  "authors": [
+    "Paata Ivanisvili",
+    "Xinyuan Xie",
+    "Haonan Zhang"
+  ],
+  "summary": "We introduce the Beckmann boundary of a Boolean function \\[ \\mathsf{B}(f)=\\inf_{\\operatorname{div} V=Lf}\\mathbb E\\|V(x)\\|_2. \\] Here \\[ L=\\sum_iD_i,\\qquad D_i f(x)=\\frac{f(x)-f(x^{\\oplus i})}{2}, \\] and $\\operatorname{div} V(x)=\\sum_i (V_{i}(x)-V_{i}(x^{\\oplus i}))$. This nonlocal quantity is no larger than the usual two-sided, one-sided, colored, optimized colored, or optimized fractional colored boundaries. Nevertheless, every nonconstant Boolean $f$ satisfies \\[ \\mathsf{B}(f)\\gtrsim \\operatorname{Var}(f) \\sqrt{\\log\\!\\left(1+\\frac{1}{\\sum_i\\operatorname{Inf}_i(f)^2}\\right)}. \\] We also…",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA",
+    "math.FA",
+    "math.PR"
+  ],
+  "published": "2026-06-30",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,26 @@
+{
+  "key": "2602.09006",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.09006",
+  "title": "ARO: A New Lens On Matrix Optimization For Large Models",
+  "authors": [
+    "Wenbo Gong",
+    "Javier Zazo",
+    "Qijun Luo",
+    "Puqian Wang",
+    "James Hensman",
+    "Chao Ma"
+  ],
+  "summary": "Matrix-based optimizers have attracted growing interest for improving LLM training efficiency, with significant progress centered on orthogonalization/whitening based methods. While yielding substantial performance gains, a fundamental question arises: can we develop new paradigms beyond orthogonalization, pushing the efficiency frontier further? We present \\textbf{Adaptively Rotated Optimization (ARO}, a new matrix optimization framework that treats gradient rotation as a first class design principle. ARO accelerates LLM training by performing normed steepest descent in a rotated coordinate…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-02-09",
+  "updated": "2026-02-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

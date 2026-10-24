@@ -1,0 +1,26 @@
+{
+  "key": "2602.14450",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14450",
+  "title": "Mixed precision solvers with half-precision floating point numbers for Lattice QCD on A64FX processor",
+  "authors": [
+    "Issaku Kanamori",
+    "Hideo Matsufuru",
+    "Tatsumi Aoyama",
+    "Kazuyuki Kanaya",
+    "Yusuke Namekawa",
+    "Hidekatsu Nemura",
+    "Keigo Nitadori"
+  ],
+  "summary": "We investigate the use of half-precision floating-point numbers (FP16) in mixed-precision linear solvers for lattice QCD simulations. Since the emergence of GPUs for general-purpose, mixed-precision algorithms that combine single-precision (FP32) with double-precision (FP64) arithmetics have become widely used in this field and others. While FP32-based methods are now well established, we examine the practicality of using FP16. In this work, we introduce rescaling steps in both the outer iterative refinement step and the inner BiCGStab solver to avoid numerical instability. In our…",
+  "domain": "hep-lat",
+  "tags": [
+    "hep-lat",
+    "math.NA"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-02-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

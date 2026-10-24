@@ -1,0 +1,21 @@
+{
+  "key": "2606.21823",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.21823",
+  "title": "Local-to-Global Exactness of SDP Relaxations for Sparse QCQPs",
+  "authors": [
+    "Masakazu Kojima",
+    "Sunyoung Kim",
+    "Naohiko Arima"
+  ],
+  "summary": "We study exact semidefinite programming (SDP) relaxation for a given sparse quadratically constrained quadratic program (QCQP). The SDP relaxation is exact if, whenever it has an optimal solution, it admits a rank-at-most-one optimal solution that corresponds to an optimal solution of the QCQP. Using the maximal cliques of a chordal extension of the aggregate sparsity pattern graph of the data matrices, we formulate the SDP relaxation in terms of clique-wise matrix variables and develop a local-to-global framework for certifying exactness. For each clique-wise matrix variable, we introduce a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-20",
+  "updated": "2026-06-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

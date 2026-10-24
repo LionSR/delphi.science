@@ -1,0 +1,21 @@
+{
+  "key": "2607.22660",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.22660",
+  "title": "Generalized Fine-Tuning of Diffusion Models via Stochastic Control and FBSDEs",
+  "authors": [
+    "Zirui Wang",
+    "Lu Wang"
+  ],
+  "summary": "We propose a generalized fine-tuning framework for diffusion models from the perspective of stochastic control. Beyond entropy-regularized formulations, we introduce a general running cost that induces a relative generalized path cost, encompassing both Kullback-Leibler divergence and optimal transport metrics as special cases. This leads to a fully nonlinear Hamilton-Jacobi-Bellman equation. We characterize the value function through a forward-backward stochastic differential equation system and establish existence and uniqueness under standard regularity conditions. The optimal control…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.PR"
+  ],
+  "published": "2026-06-28",
+  "updated": "2026-06-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

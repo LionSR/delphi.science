@@ -1,0 +1,20 @@
+{
+  "key": "2603.27172",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.27172",
+  "title": "On the Convergence Rate of the One-Hop Transfer Algorithm",
+  "authors": [
+    "Ruichao Jiang",
+    "Long Wen"
+  ],
+  "summary": "The transfer algorithm~\\cite{jiang} solves the on-chain one-hop swap routing problem. In \\cite{jiang}, the convergence is proved but the convergence rate is left open. We prove that the algorithm terminates in at most $\\mathcal{O}(Nκ\\log\\frac{1}{\\varepsilon})$ rounds, where $N$ is the number of AMMs, $κ$ a liquidity heterogeneity parameter and $\\varepsilon$ a tolerance parameter.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-28",
+  "updated": "2026-03-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

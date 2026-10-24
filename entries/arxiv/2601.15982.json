@@ -1,0 +1,21 @@
+{
+  "key": "2601.15982",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.15982",
+  "title": "Real-Time Inviscid Fluid Dynamics and Aero-acoustics on a Sphere",
+  "authors": [
+    "Madhusraba Sinha",
+    "Jan Stratmann"
+  ],
+  "summary": "Real-time fluid and aeroacoustic simulation on complex surfaces can have interactive applications - from globe-based weather visualizations to immersive computer games with physically accurate wind and sound. However, conventional grid-based solvers struggle with numerical instability near surface singularities, and mesh-based approaches lack a straightforward path to solving partial differential equations (PDEs) with stable, high-order accuracy. Our model presents a unified framework for real-time inviscid fluid simulation and aeroacoustics on spherical surfaces with embedded obstacles,…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-01-22",
+  "updated": "2026-01-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

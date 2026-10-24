@@ -1,0 +1,20 @@
+{
+  "key": "2610.07044",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.07044",
+  "title": "The compress-with-another threshold of Szykuła's Figure 3 family",
+  "authors": [
+    "Qichao Wang"
+  ],
+  "summary": "We give a self-contained pair-automaton proof of the exact compress-with-another threshold of the corrected Figure 3 family from a recent survey of open problems in synchronizing automata. For every $p \\geq 3$, the automaton has $n = 3p$ states and $μ(q_0) = 4p = 4n/3$. The word $(ba)^p(ab)^p$ attains this value. Two entrance potentials and an excluded region yield the lower bound, with the endpoint exception at $p = 3$ treated explicitly. A separate reset construction proves $\\operatorname{rt}(A_p) \\leq 3p^2 + 4p - 1$ for every parameter. Reproducible computations verify the transition and…",
+  "domain": "cs.FL",
+  "tags": [
+    "cs.FL",
+    "math.CO"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

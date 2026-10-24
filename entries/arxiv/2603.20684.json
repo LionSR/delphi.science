@@ -1,0 +1,21 @@
+{
+  "key": "2603.20684",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20684",
+  "title": "Centrality-Based Pruning for Efficient Echo State Networks",
+  "authors": [
+    "Sudip Laudari"
+  ],
+  "summary": "Echo State Networks (ESNs) are a reservoir computing framework widely used for nonlinear time-series prediction. However, despite their effectiveness, randomly initialized reservoirs often contain redundant nodes, leading to unnecessary computational overhead and reduced efficiency. In this work, we propose a graph centrality-based pruning approach that interprets the reservoir as a weighted directed graph and removes structurally less important nodes using centrality measures. Experiments on Mackey-Glass time-series prediction and electric load forecasting demonstrate that the proposed…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-03-21",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

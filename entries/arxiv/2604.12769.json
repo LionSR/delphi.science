@@ -1,0 +1,20 @@
+{
+  "key": "2604.12769",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.12769",
+  "title": "Pressure-Robust Fortin-Soulie Elements of the Stokes Equation on Curved Domains",
+  "authors": [
+    "Wei Chen",
+    "Zhen Liu"
+  ],
+  "summary": "This paper presents a pressure-robust and element-wise divergence-free nonconforming finite element method for the Stokes problem on curved domains. The discrete element is constructed by mapping the Fortin-Soulie element from a reference triangle using an isoparametric mapping for the geometry and a Piola transform for the function space. The inf-sup condition and the error estimate with optimal convergence rate are proved. Pressure-robustness is obtained by replacing the discrete velocity test functions with the first-order Raviart-Thomas functions. Numerical examples are provided to…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-14",
+  "updated": "2026-04-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

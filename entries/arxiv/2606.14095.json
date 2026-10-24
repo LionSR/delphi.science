@@ -1,0 +1,25 @@
+{
+  "key": "2606.14095",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.14095",
+  "title": "Lyapunov-Based Sample Complexity Analysis for Weakly-Coupled MDPs",
+  "authors": [
+    "Tianhao Wu",
+    "Matthew Zurek",
+    "Weina Wang",
+    "Qiaomin Xie"
+  ],
+  "summary": "We study the sample complexity of learning in average-reward weakly-coupled Markov decision processes (WCMDPs) and Restless Bandits (RBs) under a generative model. Naive reduction to a tabular MDP leads to high complexity bounds as the state-action space is exponentially large in the number of arms $N$. By exploiting the weakly coupled structure, we show that near-optimal policies can be learned with sample and computational complexities that are polynomial in $N$. Specifically, we analyze the plug-in approach, which applies an efficient planning algorithm to an empirical model estimated…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-06-12",
+  "updated": "2026-06-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

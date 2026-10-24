@@ -1,0 +1,21 @@
+{
+  "key": "2610.26748",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.26748",
+  "title": "Gradient descent reaches arbitrary accuracy in a fixed number of large steps on multiclass logistic regression",
+  "authors": [
+    "Andreea-Alexandra Musat",
+    "Nicolas Boumal"
+  ],
+  "summary": "We show that gradient descent (GD) with step size $η$ can achieve $\\varepsilon$ optimality gap on the multiclass logistic regression loss in a number of iterations $T$ that is independent of $\\varepsilon$. To do so, the step size $η$ must be chosen large enough as a function of $\\varepsilon$ (and properties of the linearly separable dataset), while $T$ is a constant that only depends on the data. The relevant properties of the data include the number of points and their margin (for $T$), and one additional quantity (for $η$) that turns out to be necessary in dimension $d \\geq 3$. The proofs…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2610.14893",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.14893",
+  "title": "Description Complexity Bounds for Analytic Approximations of Lipschitz Functions",
+  "authors": [
+    "Artem Vozmishchev"
+  ],
+  "summary": "We study how many bits are needed to write down an elementary analytic expression that uniformly approximates a Lipschitz function. Expressions are finite trees over the basis $\\{+,-,\\times,÷,\\exp\\}$ with the variables and rational constants, and their size is $\\dc(f)$, the length of the shortest description of $f$ in a fixed binary description language. For functions of one variable we prove that every $L$-Lipschitz $F:[0,1]\\to[0,1]$ has an everywhere-defined approximant of accuracy $Δ$ with $\\dc(f)\\le C\\,(L/Δ+\\lg(1/Δ+2))$ for all $L,Δ>0$, by a linear spline smoothed with logistic ramps in…",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA",
+    "cs.CL"
+  ],
+  "published": "2026-10-10",
+  "updated": "2026-10-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

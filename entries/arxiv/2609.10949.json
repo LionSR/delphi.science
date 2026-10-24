@@ -1,0 +1,21 @@
+{
+  "key": "2609.10949",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10949",
+  "title": "Full-window branch discovery and loss-selected EnKF continuation for data assimilation",
+  "authors": [
+    "Angxiu Ni"
+  ],
+  "summary": "We develop a framework for offline full-window branch discovery, optionally followed by online continuation with an ensemble Kalman filter (EnKF). Three mechanisms drive the branch search: adjoint path-kernel (APK) differentiation balances kernel differentiation and correction-stabilized path perturbation, shifting the optimization from exploration to exploitation; an optimized Gaussian initial law broadens the search over initial-state basins; and loss-weighted mixing across independent runs recombines successful path components. We may then select an interior state using a local loss and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.DS",
+    "nlin.CD"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

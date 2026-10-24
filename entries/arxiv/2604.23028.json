@@ -1,0 +1,20 @@
+{
+  "key": "2604.23028",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23028",
+  "title": "Computational Method for Desensitized Optimal Guidance Using Direct Collocation",
+  "authors": [
+    "Katrina Winkler",
+    "Anil Rao"
+  ],
+  "summary": "A computational method is developed for desensitized optimal guidance using adaptive Gaussian quadrature collocation. The method computes a reference trajectory that reduces the sensitivity to uncertainties in the dynamic model by augmenting the objective functional to explicitly penalize the sensitivity of the state with respect to uncertain parameters. Using this desensitized reference trajectory as a starting point, the desensitized optimal guidance method developed in this paper computes a new optimal control on the remaining horizon at specified guidance update times. This shrinking…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-24",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2608.25312",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.25312",
+  "title": "Accelerated Gradient Flow with Endogenous Gradient-Memory Anchor: Selection and Restoring Damping",
+  "authors": [
+    "Chinedu Izuchukwu",
+    "Ernest Obini",
+    "Jen-Chih Yao",
+    "Shengda Zeng"
+  ],
+  "summary": "We introduce an accelerated gradient flow with an endogenous gradient-memory anchor and a nonlinear restoring--damping feedback. The anchor evolves from a weighted history of the gradients, while the nonlinear feedback is modulated by the squared coordinatewise displacement from the anchor. The resulting dynamics uses only first-order information from the objective function and does not involve explicit Hessian information. Under suitable assumptions, we establish global existence and uniqueness of strong solutions. A Lyapunov analysis yields the accelerated objective-value estimate…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-26",
+  "updated": "2026-08-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

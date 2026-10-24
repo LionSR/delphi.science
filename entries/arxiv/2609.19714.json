@@ -1,0 +1,22 @@
+{
+  "key": "2609.19714",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.19714",
+  "title": "Improved Algorithms for Beck--Fiala with Bounded Sets",
+  "authors": [
+    "Dylan J. Altschuler"
+  ],
+  "summary": "We give an efficient algorithm with improved algorithmic guarantees for the (offline) Beck--Fiala problem when the sets have bounded size. Let $A$ be an arbitrary matrix $A\\in\\{0,1\\}^{m\\times n}$ with at most $d$ ones per column and at most $s$ ones per row. Let $\\log^*$ denote the iterated logarithm and $\\ell_j$ denote the $j$-fold composition of log. Assume $s\\le\\exp(O(\\sqrt d))$. We provide an efficient algorithm that, for arbitrary sparsity $d$, gives $O(\\sqrt d(1+\\log^*n))$ discrepancy. Moreover, if $d\\ge\\ell_j(n)$ for a fixed integer $j\\ge1$, the algorithm gives $O_j(\\sqrt d)$…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.DM",
+    "math.CO",
+    "math.PR"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2605.30891",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.30891",
+  "title": "A General Recipe for Parameter-Free Nonconvex Optimization via Higher-Order Regularization",
+  "authors": [
+    "Naoki Marumo",
+    "Akiko Takeda"
+  ],
+  "summary": "We develop a systematic framework for constructing parameter-free algorithms for smooth nonconvex optimization. The framework is based on higher-order regularization: each step is computed from a regularized local model whose regularization exponent exceeds the order of the model error. This design makes the resulting method robust to misspecification of the regularization parameter and yields complexity bounds without backtracking or other acceptance tests. We apply the framework to gradient descent, Newton's method, the Gauss--Newton method, stochastic gradient descent, and PAGE. Without…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2609.08002",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.08002",
+  "title": "A New Perspective on Clustering: A Mixed-norm Model and its Solution by Progressive Integer Programming",
+  "authors": [
+    "Junyi Liu",
+    "Yulin Peng",
+    "Yao Xie",
+    "Yancheng Yuan",
+    "Jong-Shi Pang"
+  ],
+  "summary": "Extending the classical $K$-means and $K$-medians models, this paper introduces an $\\ell_{p,q}$ mixed-norm clustering model where the centroid updates and cluster assignments are under the $\\ell_p$ and $\\ell_q$ norms, respectively. The model is formulated as a mixed-integer program (MIP) with Heaviside composite constraints that describe the nearest-center assignments. The framework recovers $K$-means and $K$-medians when $p=q=2$ and $p=q=1$, respectively, and yields new models when $p\\ne q$. To address the computational challenges, we develop a progressive integer programming (PIP) method…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

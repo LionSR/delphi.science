@@ -1,0 +1,25 @@
+{
+  "key": "2608.03640",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.03640",
+  "title": "Analysis of Moment Closures Using $\\varphi$-Divergences for Rarefied Dynamics with Binary Collisions and Their Galerkin Discretizations",
+  "authors": [
+    "Michael R. A. Abdelmalik",
+    "Irene M. Gamba",
+    "Torsten Keßler",
+    "Sergej Rjasanow"
+  ],
+  "summary": "This work introduces a robust deterministic framework for approximating solutions of the Boltzmann equation with binary collisions by discretizing their dependence on time, position, and velocity using Galerkin methods. By employing a family of parametric Galerkin closures based on $\\varphi$-divergences in velocity space, we derive rigorous hierarchies of moment equations that govern fluid dynamic variables. Addressing the limitation that these closures alone do not guarantee dissipation of a $\\varphi$-divergence entropy for the true binary collision operator, we restore this property by…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.AP",
+    "physics.comp-ph",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

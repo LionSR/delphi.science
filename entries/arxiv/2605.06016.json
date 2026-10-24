@@ -1,0 +1,20 @@
+{
+  "key": "2605.06016",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.06016",
+  "title": "A Unified Zeroth-Order Proximal Newton-Type Framework for Composite Optimization",
+  "authors": [
+    "Zekun Liu",
+    "Jinyan Fan"
+  ],
+  "summary": "We propose a unified derivative-free proximal Newton-type algorithm framework for solving composite optimization problems formulated as the sum of a black-box function and a known regularization term. We establish the iteration and oracle complexity bounds for the algorithm to attain an $ε$-optimal solution under both nonconvex and strongly convex settings. We also establish its local R-superlinear convergence based on the Dennis--Moré condition, and theoretically address an open problem by showing that the BFGS scheme is more compatible with finite-difference gradient estimators than with…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

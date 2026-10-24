@@ -1,0 +1,22 @@
+{
+  "key": "2608.20638",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.20638",
+  "title": "Adam at the Edge of Stability: Adaptive Feedback, Provable Oscillation, and Gradient Reversal",
+  "authors": [
+    "Yiman Fong",
+    "Heng Yang"
+  ],
+  "summary": "The edge-of-stability (EoS) phenomenon of full-batch Adam has been widely observed, yet its underlying dynamical mechanism remains poorly understood. In this paper, we identify Adam's second-moment adaptation as a negative-feedback mechanism that drives the dynamics toward the stability boundary. We characterize this mechanism through the *active curvature*, namely, the preconditioned curvature along the preconditioned gradient direction, and establish rigorous characterizations in progressively richer settings: rank-one quadratics with momentum, diagonal quadratics, on which the active…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-08-21",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

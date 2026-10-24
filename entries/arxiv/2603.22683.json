@@ -1,0 +1,21 @@
+{
+  "key": "2603.22683",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.22683",
+  "title": "Simple but not Simpler: A Surface-Sliding Method for Finding the Minimum Distance between Two Ellipsoids",
+  "authors": [
+    "Dariush Amirkhani",
+    "Junfeng Zhang"
+  ],
+  "summary": "We propose a novel iterative process to establish the minimum separation between two ellipsoids. The method maintains one point on each surface and updates their locations in the theta-phi parametric space. The tension along the connecting segment between the two surface points serves as the guidance for the sliding direction, and the distance between them decreases gradually. The minimum distance is established when the connecting segment becomes perpendicular to the ellipsoid surfaces, at which point the net effect of the segment tension disappears and the surface points no longer move.…",
+  "domain": "cs.CG",
+  "tags": [
+    "cs.CG",
+    "math.NA"
+  ],
+  "published": "2026-03-24",
+  "updated": "2026-03-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2605.09445",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09445",
+  "title": "Barrier Certificates for Uncertain Temporal Specifications",
+  "authors": [
+    "Mohammad H. Mamduhi",
+    "Sadegh Soudjani"
+  ],
+  "summary": "This paper studies satisfying temporal logic specifications on stochastic dynamical systems, where the predicates evolve randomly over time. Such randomness may arise from uncertain environment models or external stochastic processes causing the sets associated with predicate satisfaction to vary in a non-deterministic manner. As a result, verifying whether a stochastic dynamical system satisfies a temporal specification depends also on the uncertainty in the predicates. We develop a certificate-based framework to bound the probability of satisfying temporal logic specifications with…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LO",
+    "eess.SY"
+  ],
+  "published": "2026-05-10",
+  "updated": "2026-05-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

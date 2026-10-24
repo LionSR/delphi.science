@@ -1,0 +1,19 @@
+{
+  "key": "2609.25828",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.25828",
+  "title": "Anisotropic Kernel-based Multilevel Interpolation of High-Dimensional Functions on Sparse Grids",
+  "authors": [
+    "Rüdiger Kempf"
+  ],
+  "summary": "The tensor product multilevel method (TPML) approximates high-dimensional functions from scattered data on general bounded domains by combining Smolyak's sparse grid construction with the kernel-based multilevel interpolation, coupling the kernel scale to the fill distance at each level so that condition numbers stay uniformly bounded. Its original formulation depended only implicitly on the target function, which precluded numerical evaluation. Using a recent nodal representation of the low-dimensional multilevel operators, we derive an explicit, computable representation of the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-22",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

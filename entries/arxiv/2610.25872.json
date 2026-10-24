@@ -1,0 +1,20 @@
+{
+  "key": "2610.25872",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.25872",
+  "title": "Distributed Algorithm for Linear Least Squares Problems via Iteratively Preconditioning by Successive Over-Relaxation",
+  "authors": [
+    "Tianchen Liu",
+    "Kushal Chakrabarti"
+  ],
+  "summary": "This paper focuses on a novel distributed optimization algorithm for solving multi-agent linear least squares problems within a server-agent framework. Distributed methods are particularly suited to large-scale systems. The computational tasks can be partitioned across agents, while local data of one agent remain inaccessible to others. The proposed approach employs an iterative preconditioning scheme with the successive over-relaxation technique, leading to a substantial reduction of the number of iterations required for convergence, which presents a critical advantage where server-agent…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

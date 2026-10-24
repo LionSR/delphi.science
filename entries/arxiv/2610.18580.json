@@ -1,0 +1,20 @@
+{
+  "key": "2610.18580",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.18580",
+  "title": "A two-level preconditioner for discontinuous virtual element methods with irregular subdomains",
+  "authors": [
+    "Juan G. Calvo",
+    "César Herrera"
+  ],
+  "summary": "We introduce and analyze a two-level overlapping additive Schwarz preconditioner for discontinuous Galerkin discretizations of virtual element spaces on general polygonal meshes in two dimensions, for a second-order elliptic problem whose coefficient is constant on each subdomain and may have large jumps across the interface. The discretization is a weighted symmetric interior penalty formulation: the averages carry the coefficient and the penalty is scaled by its harmonic mean across each edge, which keeps the method consistent and makes the constants of the analysis independent of the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

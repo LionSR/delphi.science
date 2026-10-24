@@ -1,0 +1,23 @@
+{
+  "key": "2606.24465",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.24465",
+  "title": "History estimation in random recursive trees: Pointwise approach via iterated Jordan centralities",
+  "authors": [
+    "Johannes Bäumler",
+    "Simon Briend",
+    "Joost Jorritsma"
+  ],
+  "summary": "We study the problem of estimating the arrival times of vertices in a uniform random recursive tree from its unlabeled structure. We adopt a pointwise perspective and analyze the distribution of the relative estimation error, and derive tail bounds that are uniform in both the vertex and the tree size. For the ranking induced by Jordan centrality, the probability that the estimate exceeds the true arrival time by a factor $S$ decays on the order of $1/S$, while the probability of underestimating the arrival time by a factor $1/S$ decays exponentially in $S$. We introduce a refined centrality…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-06-23",
+  "updated": "2026-06-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

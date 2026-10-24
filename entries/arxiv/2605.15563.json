@@ -1,0 +1,21 @@
+{
+  "key": "2605.15563",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.15563",
+  "title": "Direct Data-Driven Linear Quadratic Tracking via Policy Optimization",
+  "authors": [
+    "Shubo Kang",
+    "Keyou You"
+  ],
+  "summary": "Direct data-driven optimal control provides an elegant end-to-end paradigm, yet its real-time applicability is often hindered by the growing dimensionality of online decision variables. Recent breakthroughs, notably Data-EnablEd Policy Optimization (DeePO), overcome this bottleneck for the Linear Quadratic Regulator (LQR) through sample-covariance parameterization; however, extending this paradigm to Linear Quadratic Tracking (LQT) poses a fundamental challenge. The core difficulty stems from the intricate coupling between time-varying references and the feedback-feedforward policy…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-05-15",
+  "updated": "2026-05-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

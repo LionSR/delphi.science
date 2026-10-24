@@ -1,0 +1,25 @@
+{
+  "key": "2609.20717",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20717",
+  "title": "An $\\widetilde{O}(n^3)$-time FPRAS for the Permanent",
+  "authors": [
+    "Xiaoyu Chen",
+    "Heng Guo",
+    "Eric Vigoda",
+    "Xiongxin Yang"
+  ],
+  "summary": "We give an FPRAS for the permanent of an $n\\times n$ $0/1$ matrix with running time $\\widetilde O(n^3)$. Our algorithm extends to a strongly polynomial FPRAS for arbitrary nonnegative matrices with the same running-time bound (but in the unit-cost arithmetic model). Jerrum, Sinclair, and Vigoda (2004) gave the first FPRAS for the permanent of a nonnegative matrix. The running time was subsequently improved to $\\widetilde{O}(n^7)$ by Bezáková, Štefankovič, Vazirani, and Vigoda (2008), and recently to $\\widetilde{O}(n^6)$ by Chen, Vigoda, and Yang (2026). We introduce a multicommodity-flow…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.DM",
+    "math.CO",
+    "math.PR"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

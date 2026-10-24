@@ -1,0 +1,20 @@
+{
+  "key": "2606.26818",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.26818",
+  "title": "Optimizing Experimental Design for Causal Effect Estimation with Partial Measurements",
+  "authors": [
+    "Leopold Mareis"
+  ],
+  "summary": "Instrumental variable regression quantifies causal effects between a possibly confounded treatment variable $ X_2 $ and a response variable $ X_3 $ by leveraging an instrument $ X_1 $. Our work considers the setting where some prior information of the joint distribution of $ X_{123} $ is given, potentially through an initial dataset. However, further samples must be gathered to improve the accuracy of the estimation. We show that under specific parameter configurations in a Gaussian graphical model, taking partial samples from, e.g., $ X_{12} $ can reduce the asymptotic variance of a…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-06-25",
+  "updated": "2026-06-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

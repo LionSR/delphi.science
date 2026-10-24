@@ -1,0 +1,26 @@
+{
+  "key": "2602.01094",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.01094",
+  "title": "High-order DLM-ALE discretizations with robust operator preconditioning for fluid-rigid-body interaction",
+  "authors": [
+    "Qi Xin",
+    "Shihua Gong",
+    "Lingyue Shen",
+    "Pinjing Wen",
+    "Yumiao Zhang",
+    "Yan Chen",
+    "Jiarui Han",
+    "Jinchao Xu"
+  ],
+  "summary": "Motivated by the design of deterministic lateral displacement (DLD) microfluidic devices, we develop a high-order numerical framework for fluid-rigid-body interaction on fitted moving meshes. Rigid-body motion is enforced by a distributed Lagrange multiplier (DLM) formulation, while the moving fluid domain is treated by an arbitrary Lagrangian-Eulerian (ALE) mapping. In space, we use isoparametric Taylor-Hood elements to achieve high-order accuracy and to represent curved boundaries and the fluid-particle interface. In time, we employ a high-order partitioned Runge-Kutta strategy in which…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-01",
+  "updated": "2026-02-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

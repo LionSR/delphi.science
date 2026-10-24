@@ -1,0 +1,24 @@
+{
+  "key": "2604.02644",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.02644",
+  "title": "Conditional Sampling via Wasserstein Autoencoders and Triangular Transport",
+  "authors": [
+    "Mohammad Al-Jarrah",
+    "Michele Martino",
+    "Marcus Yim",
+    "Bamdad Hosseini",
+    "Amirhossein Taghvaei"
+  ],
+  "summary": "We present Conditional Wasserstein Autoencoders (CWAEs), a framework for conditional simulation that exploits low-dimensional structure in both the conditioned and the conditioning variables. The key idea is to modify a Wasserstein autoencoder to use a (block-) triangular decoder and impose an appropriate independence assumption on the latent variables. We show that the resulting model gives an autoencoder that can exploit low-dimensional structure while simultaneously the decoder can be used for conditional simulation. We explore various theoretical properties of CWAEs, including their…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-04-03",
+  "updated": "2026-04-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

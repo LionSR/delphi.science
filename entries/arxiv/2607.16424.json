@@ -1,0 +1,22 @@
+{
+  "key": "2607.16424",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.16424",
+  "title": "Weighted Counting Formula and $2n/21$ Lower Bound for Induced Subgraphs with Prescribed Degree Parities",
+  "authors": [
+    "Gregory Gutin",
+    "Yiming Hao",
+    "Yacong Zhou"
+  ],
+  "summary": "Let $G=(V,E)$ be a finite simple graph of order $n\\geq 1$, and let $\\ell:V\\to\\{0,1\\}$ be a prescribed parity labeling. A set $S\\subseteq V$ is called $\\ell$-admissible if $d_S(v)\\equiv \\ell(v)\\pmod 2$ for every $v\\in S$, where $d_S(v)=|N_G(v)\\cap S|$. Let $h_\\ell(G)$ be the maximum order of an $\\ell$-admissible set and let $f_{\\rm oe}(G)=\\min_\\ell h_\\ell(G)$. For $x\\in\\mathbb R$, define the weighted counting polynomial $$ M_{\\ell,x}(G)=\\sum_{S\\in {\\cal A}_\\ell(G)}x^{|S|}, $$ where ${\\cal A}_\\ell(G)$ is the collection of all $\\ell$-admissible sets in $G$. For $R\\subseteq V$, let $z_\\ell(R)$…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM"
+  ],
+  "published": "2026-07-17",
+  "updated": "2026-07-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

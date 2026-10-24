@@ -1,0 +1,23 @@
+{
+  "key": "2603.19326",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.19326",
+  "title": "Mathematical Modeling of Cancer-Bacterial Therapy: Analysis and Numerical Simulation via Physics-Informed Neural Networks",
+  "authors": [
+    "Ayoub Farkane",
+    "David Lassounon"
+  ],
+  "summary": "Bacterial cancer therapy exploits anaerobic bacteria's ability to target hypoxia tumor regions, yet the interactions among tumor growth, bacterial colonization, oxygen levels, immunosuppressive cytokines, and bacterial communication remain poorly quantified. We present a mathematical model of five coupled nonlinear reaction-diffusion equations in a two-dimensional tissue domain. We proved the global well-posedness of the model and identified its steady states to analyze stability. Furthermore, a physics-informed neural network (PINN) solves the system without a mesh and without requiring…",
+  "domain": "q-bio.QM",
+  "tags": [
+    "q-bio.QM",
+    "cs.LG",
+    "math.AP",
+    "math.NA"
+  ],
+  "published": "2026-03-18",
+  "updated": "2026-03-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

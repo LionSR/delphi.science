@@ -1,0 +1,24 @@
+{
+  "key": "2609.32832",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32832",
+  "title": "Over-the-Air Federated Learning in Heterogeneous Mobile Wireless Networks",
+  "authors": [
+    "Ming Xiang",
+    "Nicolò Michelusi",
+    "Yonina C. Eldar",
+    "Lili Su"
+  ],
+  "summary": "Over-the-air computation has emerged as a scalable and efficient solution for deploying federated learning algorithms in wireless networks by exploiting waveform superposition for simultaneous model aggregation. Most existing work struggles with heterogeneous fading channels. These approaches either enforce unbiased updates from all devices or allow partial device contributions, requiring careful tuning of the convergence bound to mitigate bias under specific fading models. However, the former significantly amplifies receiver noise due to the weakest channel, whereas the latter is sensitive…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.DC",
+    "math.OC"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2609.28729",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.28729",
+  "title": "Error analysis of penalized $H({\\rm div})$-conforming finite element methods for surface Stokes problems",
+  "authors": [
+    "Alan Demlow",
+    "Orsan Kilicer"
+  ],
+  "summary": "In recent years a number of finite element methods have been developed for the surface Stokes equations. Constructing standard conforming surface finite element methods for the velocity-pressure formulation of this problem would require simultaneously enforcing $H^1$ conformity and tangentiality of the velocity field, which is not possible on the generalized polyhedral approximating surfaces on which surface FEM are typically posed. Thus methods for this problem weakly enforce either tangentiality or $H^1$ conformity of the velocity field. In this paper we provide an error analysis for an…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-23",
+  "updated": "2026-09-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

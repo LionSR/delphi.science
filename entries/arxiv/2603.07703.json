@@ -1,0 +1,20 @@
+{
+  "key": "2603.07703",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.07703",
+  "title": "Step-Size Decay and Structural Stagnation in Greedy Sparse Learning",
+  "authors": [
+    "Pablo M. Berná"
+  ],
+  "summary": "Greedy algorithms are central to sparse approximation and stage-wise learning methods such as matching pursuit and boosting. It is known that the Power-Relaxed Greedy Algorithm with step sizes $m^{-α}$ may fail to converge when $α>1$ in general Hilbert spaces. In this work, we revisit this phenomenon from a sparse learning perspective. We study realizable regression problems with controlled feature coherence and derive explicit lower bounds on the residual norm, showing that over-decaying step-size schedules induce structural stagnation even in low-dimensional sparse settings. Numerical…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-03-08",
+  "updated": "2026-03-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2609.30750",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.30750",
+  "title": "Sparsely connected rank-inspired neural network",
+  "authors": [
+    "Yunqing Huang",
+    "Wu Su",
+    "Nianyu Yi",
+    "Peimeng Yin"
+  ],
+  "summary": "We propose a Sparsely Connected Rank-Inspired Neural Network (SCRINN) for function approximation and the numerical solution of partial differential equations (PDEs). By introducing a structured sparse connectivity architecture and an orthogonality- and normalization-guided loss function, SCRINN constructs an approximately orthonormal neural basis while promoting progressive rank growth of its evaluation matrix and reducing the number of trainable parameters. A two-stage framework is developed, in which an approximately orthonormal neural basis is first constructed, and the output weights are…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

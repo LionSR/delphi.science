@@ -1,0 +1,21 @@
+{
+  "key": "2610.25762",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.25762",
+  "title": "Hadamard Transforms for Dimension Reduction",
+  "authors": [
+    "Mingxuan Sun",
+    "Zhiqiang Xu"
+  ],
+  "summary": "Using the Hadamard matrix for dimension reduction can accelerate the computation due to the fast Hadamard transform. However, the previous target dimension bounds in terms of the Gaussian width depend on the ambient dimension. In this paper, we obtain the following ambient dimension free bound using three Hadamard-diagonal blocks. Let $H\\in\\mathbb R^{d\\times d}$ be the normalized Walsh-Hadamard matrix, and let $D_1,D_2,D_3\\in\\mathbb R^{d\\times d}$ be independent Rademacher diagonal matrices. We prove that for any symmetric set $T\\subset \\mathbb{S}^{d-1}$, \\[ \\mathbb P\\left\\{\\sup_{\\boldsymbol…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.PR"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

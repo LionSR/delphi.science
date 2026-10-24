@@ -1,0 +1,21 @@
+{
+  "key": "2610.03666",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03666",
+  "title": "Bayesian Operator Learning: Posterior Existence and Convergence of Point Estimates for Gaussian Priors",
+  "authors": [
+    "Niklas Reinhardt",
+    "Jakob Zech"
+  ],
+  "summary": "We develop a Bayesian framework for learning nonlinear operators between infinite-dimensional spaces. Given a map $g_0:\\mathcal{X}\\to\\mathcal{Y}$ between separable Hilbert spaces, we study the recovery of $g_0$ from $n\\in\\mathbb{N}$ noisy input-output pairs $(\\boldsymbol{X},\\boldsymbol{Z})=(X_i,Z_i)_{i=1}^n$ with $Z_i= g_0 (X_i ) + E_i$. Here the $X_i\\in\\mathcal{X}$ are randomly drawn 'design' points in a compact subset of $\\mathcal X$, and the $E_i$ are assumed to be i.i.d. draws from a Gaussian white noise process indexed by $\\mathcal{Y}$. For any 'operator-valued' prior $\\mathbb{P}_G$…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "math.NA"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

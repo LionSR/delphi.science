@@ -1,0 +1,23 @@
+{
+  "key": "2608.27863",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.27863",
+  "title": "A Massively Parallel Hybridizable Discontinuous Galerkin Solver for Direct Numerical Simulation of Compressible Flows on GPUs",
+  "authors": [
+    "Andrew Welter",
+    "Thea Collin",
+    "Ngoc Cuong Nguyen",
+    "Jaime Peraire"
+  ],
+  "summary": "Direct numerical simulation (DNS) of compressible transitional and turbulent flows requires numerical methods that combine high-order accuracy, robustness, and computational efficiency to resolve a broad range of spatial and temporal scales. This paper presents a massively parallel hybridizable discontinuous Galerkin (HDG) solver for DNS of the compressible Navier-Stokes equations on GPU-accelerated high-performance computing systems. The proposed solver combines high-order HDG discretization with robust shock capturing, diagonally implicit Runge-Kutta (DIRK) time integration, and an…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-08-28",
+  "updated": "2026-08-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

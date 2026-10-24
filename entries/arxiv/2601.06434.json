@@ -1,0 +1,23 @@
+{
+  "key": "2601.06434",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.06434",
+  "title": "On a Gradient Approach to Chebyshev Center Problems with Applications to Function Learning",
+  "authors": [
+    "Abhinav Raghuvanshi",
+    "Mayank Baranwal",
+    "Debasish Chatterjee"
+  ],
+  "summary": "We introduce $\\textsf{gradOL}$, the first gradient-based optimization framework for solving Chebyshev center problems, a fundamental challenge in optimal function learning and geometric optimization. $\\textsf{gradOL}$ hinges on reformulating the semi-infinite problem as a finitary max-min optimization, making it amenable to gradient-based techniques. By leveraging automatic differentiation for precise numerical gradient computation, $\\textsf{gradOL}$ ensures numerical stability and scalability, making it suitable for large-scale settings. Under strong convexity of the ambient norm,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "published": "2026-01-10",
+  "updated": "2026-01-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

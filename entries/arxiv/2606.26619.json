@@ -1,0 +1,21 @@
+{
+  "key": "2606.26619",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.26619",
+  "title": "Ergodicity of stochastic reaction-diffusion equations on unbounded domains driven by space-time white noise",
+  "authors": [
+    "Shijie Shang",
+    "Jianliang Zhai",
+    "Tusheng Zhang"
+  ],
+  "summary": "We consider the stochastic reaction-diffusion equation on the whole space: \\begin{align*} \\left\\{ \\begin{aligned} du(t,x) &=\\frac{1}{2}\\partial_{xx} u(t,x) dt+b(u(t,x))dt+ σ(u(t,x)) W(dt,dx),\\quad t\\geq 0,\\ x\\in \\mathbb{R},\\\\ u(0,x)&=u_0(x), \\quad x\\in \\mathbb{R}, \\end{aligned} \\right. \\end{align*} where $W(dt,dx)$ is a space-time white noise, $b$, $σ$ are measurable coefficients. We first show that the solution is not strong Feller, and then establish the existence and uniqueness of invariant measures, exponential mixing as well as irreducibility for the solutions. To overcome the…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-06-25",
+  "updated": "2026-06-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

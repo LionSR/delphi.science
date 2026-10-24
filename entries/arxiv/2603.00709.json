@@ -1,0 +1,25 @@
+{
+  "key": "2603.00709",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.00709",
+  "title": "A Closed-loop Framework to Discriminate Models Using Optimal Control",
+  "authors": [
+    "Laurent Pagnier",
+    "Melvyn Tyloo",
+    "Akshita Jindal",
+    "Pragati Thakur",
+    "Kyle C. A. Wedgwood"
+  ],
+  "summary": "Predicting the response of an observed system to a known input is a fruitful first step to accurately control the system's dynamics. Despite the recent advances in fully data-driven algorithms, the most interpretable way to reach this goal is through mechanistic mathematical modeling. Here, we leverage optimal control and propose a closed-loop iterative method to choose among a set of candidate models the one that most accurately predict an observed system. We assume that one has control over an input of the observed system and access to measurements of its response. Our approach is to…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "eess.SY",
+    "q-bio.QM"
+  ],
+  "published": "2026-02-28",
+  "updated": "2026-02-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

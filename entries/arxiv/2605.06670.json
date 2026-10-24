@@ -1,0 +1,25 @@
+{
+  "key": "2605.06670",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.06670",
+  "title": "Stochastic Policy Gradient Methods in the Uncertain Volatility Model",
+  "authors": [
+    "Lokman A Abbas-Turki",
+    "Jean-François Chassagneux",
+    "Jean-Philippe Lemor",
+    "Grégoire Loeper",
+    "Simon Sananes"
+  ],
+  "summary": "The multidimensional Uncertain Volatility Model leads to robust option pricing problems under joint volatility and correlation uncertainty. Their numerical resolution quickly becomes challenging because the associated stochastic control problem is high-dimensional. We propose a backward actor-critic stochastic policy-gradient scheme tailored to this setting. The method combines a discrete dynamic programming principle with Proximal Policy Optimization and one-hidden-layer neural-network approximations of both the value function and the control policy. A key ingredient is the policy…",
+  "domain": "q-fin.CP",
+  "tags": [
+    "q-fin.CP",
+    "math.PR",
+    "q-fin.PR"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

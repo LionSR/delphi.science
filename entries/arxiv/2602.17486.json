@@ -1,0 +1,24 @@
+{
+  "key": "2602.17486",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.17486",
+  "title": "Linear Convergence in Games with Delayed Feedback via Extra Prediction",
+  "authors": [
+    "Yuma Fujimoto",
+    "Kenshi Abe",
+    "Kaito Ariu"
+  ],
+  "summary": "Feedback delays are inevitable in real-world multi-agent learning. They are known to severely degrade performance, and the convergence rate under delayed feedback is still unclear, even for bilinear games. This paper derives the rate of linear convergence of Weighted Optimistic Gradient Descent-Ascent (WOGDA), which predicts future rewards with extra optimism, in unconstrained bilinear games. To analyze the algorithm, we interpret it as an approximation of the Extra Proximal Point (EPP), which is updated based on farther future rewards than the classical Proximal Point (PP). Our theorems…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.GT",
+    "cs.MA",
+    "math.OC"
+  ],
+  "published": "2026-02-19",
+  "updated": "2026-02-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

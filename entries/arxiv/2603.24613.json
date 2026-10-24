@@ -1,0 +1,25 @@
+{
+  "key": "2603.24613",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.24613",
+  "title": "Persistence-based topological optimization: a survey",
+  "authors": [
+    "Mathieu Carriere",
+    "Yuichi Ike",
+    "Théo Lacombe",
+    "Naoki Nishikawa"
+  ],
+  "summary": "Computational topology provides a tool, persistent homology, to extract quantitative descriptors from structured objects (images, graphs, point clouds, etc). These descriptors can then be involved in optimization problems, typically as a way to incorporate topological priors or to regularize machine learning models. This is usually achieved by minimizing adequate, topologically-informed losses based on these descriptors, which, in turn, naturally raises theoretical and practical questions about the possibility of optimizing such loss functions using gradient-based algorithms. This has been…",
+  "domain": "cs.CG",
+  "tags": [
+    "cs.CG",
+    "math.AT",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-03-24",
+  "updated": "2026-03-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

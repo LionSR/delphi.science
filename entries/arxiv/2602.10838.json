@@ -1,0 +1,21 @@
+{
+  "key": "2602.10838",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.10838",
+  "title": "Mirror descent actor-critic methods for entropy regularised MDPs in general spaces: stability and convergence",
+  "authors": [
+    "Denis Zorba",
+    "David Šiška",
+    "Lukasz Szpruch"
+  ],
+  "summary": "We provide theoretical guarantees for convergence of discrete-time policy mirror descent with inexact advantage functions updated using temporal difference (TD) learning for entropy regularised MDPs in Polish state and action spaces. We rigorously derive sufficient conditions under which the single-loop actor-critic scheme is stable and convergent. To weaken these conditions, we introduce a variant that performs multiple TD steps per policy update and derive an explicit lower bound on the number of TD steps required to ensure stability. Finally, we establish sub-linear convergence when the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-11",
+  "updated": "2026-02-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2609.13693",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.13693",
+  "title": "Beyond Kruskal: Polynomial-Time Tensor Decomposition under the Lovitz-Petrov Condition",
+  "authors": [
+    "Shiri Sivan"
+  ],
+  "summary": "Identifiability criteria certify that a given tensor decomposition is a unique rank decomposition. Kruskal's classical condition is one of the best-known deterministic criteria for identifiability. However, no polynomial-time decomposition algorithm is known under the Kruskal condition, and verifying the condition itself is NP-hard. Lovitz and Petrov introduced a strictly more general identifiability condition which, in contrast, is polynomial-time verifiable, but no polynomial-time decomposition algorithm was previously known under this condition. We give a polynomial-time algorithm for…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-09-12",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

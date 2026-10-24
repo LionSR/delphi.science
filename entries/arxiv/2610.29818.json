@@ -1,0 +1,20 @@
+{
+  "key": "2610.29818",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.29818",
+  "title": "A Super-Convergent Quasi-Discontinuous Galerkin Method for Advection-Diffusion Problems",
+  "authors": [
+    "Daniel Y Le Roux"
+  ],
+  "summary": "The aim of the present study is to develop discontinuous Galerkin and nonconforming finite-element methods for solving the 2D advection-diffusion equation. The discrete formulations are stabilized by means of a family of numerical fluxes and the dispersion relations are constructed via a Fourier/stability analysis. The linear discontinuous P1DG and non conforming P1NC Galerkin discretizations are studied. A long time stability result is proven for the P1NC and P1DG schemes and fluxes examined here by inspecting the discrete frequencies, solutions of the dispersion relations. A…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "math.NA"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

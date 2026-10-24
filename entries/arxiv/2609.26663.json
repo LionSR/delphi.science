@@ -1,0 +1,22 @@
+{
+  "key": "2609.26663",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.26663",
+  "title": "Verified Length Spectrum and Margulis number for Hyperbolic 3-Manifolds",
+  "authors": [
+    "Matthias Goerner",
+    "Robert C. Haraway",
+    "Neil R. Hoffman",
+    "Maria Trnkova"
+  ],
+  "summary": "We present a new algorithm to compute a stream for the length spectrum of an oriented, finite-volume hyperbolic 3-manifold $M$. The advantage over the existing algorithm by Hodgson-Weeks is that our algorithm does not require finding a Dirichlet domain and thus can use interval arithmetic to verify the result. Our algorithm is also significantly faster in some cases. We also present a new algorithm to compute the optimal Margulis number of $M$. The authors have made these algorithms available in SnapPy.",
+  "domain": "math.GT",
+  "tags": [
+    "math.GT"
+  ],
+  "published": "2026-09-22",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

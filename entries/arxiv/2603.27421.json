@@ -1,0 +1,22 @@
+{
+  "key": "2603.27421",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.27421",
+  "title": "Error analysis of an asymptotic-preserving, energy-stable finite volume method for barotropic Euler equations",
+  "authors": [
+    "Megala Anandan",
+    "K. R. Arun",
+    "Amogh Krishnamurthy",
+    "Mária Lukáčová-Medvid'ová"
+  ],
+  "summary": "We propose and analyse an energy-stable and asymptotic-preserving finite volume scheme for the compressible Euler system. Using the relative energy framework, we establish rigorous error estimates that yield convergence of the numerical solutions in two distinct regimes. For a fixed Mach number $\\varepsilon>0$, we derive error estimates between the numerical solutions and a strong solution of the compressible Euler system that are uniform with respect to the discretisation parameters, ensuring convergence as the underlying mesh is refined. In the low Mach number regime, we analyse the error…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-28",
+  "updated": "2026-08-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

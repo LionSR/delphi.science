@@ -1,0 +1,19 @@
+{
+  "key": "2607.06249",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06249",
+  "title": "Extreme least singular values of Gaussian row submatrices and a phase retrieval stability problem",
+  "authors": [
+    "Yitzchak Shmalo"
+  ],
+  "summary": "Let $\\mathbb F\\in\\{\\mathbb R,\\mathbb C\\}$ and $d_{\\mathbb F}=\\dim_{\\mathbb R}\\mathbb F$. If $A_m\\in\\mathbb F^{N_m\\times m}$ has independent standard Gaussian entries and $N_m/m\\toγ>1$, then \\[ \\min_{\\substack{T\\subset[N_m]\\\\ |T|=m}} σ_{\\min}(A_{m,T}) = \\left(\\frac{γ^γ}{(γ-1)^{γ-1}}\\right)^{-m/d_{\\mathbb F}+o_P(m)} . \\] If $N_m=γm+O(1)$, the convergence of $m^{-1}\\log M_m^{\\mathbb F}$ has probability error $O(m^{-1})$. In particular, at the real phase-retrieval threshold $N=2m-1$, \\[ ω(A_m)=4^{-m+o_P(m)}, \\] so the Gaussian Balan--Wang critical exponential base is $1/4$.",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

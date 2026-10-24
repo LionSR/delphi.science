@@ -1,0 +1,23 @@
+{
+  "key": "2604.10013",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.10013",
+  "title": "Toward Exact Convergence in Byzantine-Robust Decentralized Learning: A Statistical Identification Approach",
+  "authors": [
+    "Siyuan Zhang",
+    "Chengde Qian",
+    "Xin Liu",
+    "Changliang Zou"
+  ],
+  "summary": "To defend against Byzantine attacks in decentralized learning, most existing methods rely on robust aggregation rules to mitigate the influence of malicious machines. However, these strategies inherently introduce bias, leading to inexact convergence with non-vanishing steady-state errors. In this paper, we propose a strategic shift from passive aggregation to active identification by introducing the Decentralized Rescaled Stochastic Gradient Descent with Byzantine Machine Identification (DRSGD-ByMI) framework. The core of our approach is an identification-based ``detect-then-optimize''…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.OC"
+  ],
+  "published": "2026-04-11",
+  "updated": "2026-04-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

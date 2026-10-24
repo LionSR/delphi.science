@@ -1,0 +1,24 @@
+{
+  "key": "2605.13766",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.13766",
+  "title": "Elastica++: A high-performance, multiphysics framework for large interacting assemblies of Cosserat rods",
+  "authors": [
+    "Tejaswin Parthasarathy",
+    "Seung Hyun Kim",
+    "Songyuan Cui",
+    "Mattia Gazzola"
+  ],
+  "summary": "Soft, slender structures are ubiquitous in natural and engineered systems, with broad application potential from biomimetic materials to soft robotics. However, there is a notable lack of computational tools that simultaneously preserve high-fidelity continuum rod mechanics, scale to large interacting ensembles, and remain flexible across diverse biophysical settings. Here we introduce Elastica++, an open-source, high-performance implementation of the Cosserat-rod model for large-scale simulations of slender-body dynamics. Elastica++ combines performance-oriented kernels with shared-memory…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-06-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

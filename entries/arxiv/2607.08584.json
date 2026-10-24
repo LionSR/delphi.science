@@ -1,0 +1,21 @@
+{
+  "key": "2607.08584",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08584",
+  "title": "DP vertex-arboricity of sparse graphs",
+  "authors": [
+    "Peter Bradshaw",
+    "Alexandr Kostochka",
+    "Zimu Xiang"
+  ],
+  "summary": "The vertex arboricity $\\mathrm{va}(G)$ of a multigraph $G$ is the minimum number $k$ for which $V(G)$ can be partitioned into $k$ subsets, each of which induces an acyclic subgraph of $G$. By definition, if $\\mathrm{va}(G)= k$, then the chromatic number, $χ(G)$, satisfies $k\\leq χ(G)\\leq 2k$. Fundamental results by Borodin from 1976 and Bollobás and Manvel from 1979 imply an analog of Gallai's lower bound on the number of edges in a $(2k-1)$-critical graph. We consider a slight generalization of vertex arboricity in the setting of DP-coloring. Using this framework, we derive lower bounds on…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-07-09",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

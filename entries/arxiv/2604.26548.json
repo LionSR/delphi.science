@@ -1,0 +1,23 @@
+{
+  "key": "2604.26548",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26548",
+  "title": "Projections for handling uncertainties and enabling domain truncation in diffuse optical tomography",
+  "authors": [
+    "Aada Hakula",
+    "Pauliina Hirvi",
+    "Nuutti Hyvönen",
+    "Altti Jääskeläinen",
+    "Ville Kolehmainen"
+  ],
+  "summary": "This paper presents a projection-based technique to mitigate the impact of modeling errors related to domain truncation, changes in the optode coupling coefficients, and misspecified optical parameters of different tissue types in diffuse optical tomography. The approach considers the primary Jacobian matrix of the forward map in the image reconstruction scheme, linking the primary unknown, i.e., the per-voxel absorption coefficient changes in the region of interest, to the optode measurements, as well as the nuisance Jacobians that do the same for the auxiliary unknown parameters of…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

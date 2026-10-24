@@ -1,0 +1,21 @@
+{
+  "key": "2607.14527",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14527",
+  "title": "Riesz-Kernel Stein Variational Gradient Descent: Renormalized Entropy and Long-Time Particle Limits",
+  "authors": [
+    "Trevor Teolis",
+    "Maarten V. de Hoop"
+  ],
+  "summary": "Stein variational gradient descent (SVGD) transports interacting particles toward a target distribution through deterministic kernelized dynamics. Singular Riesz kernels are attractive because they can provide quantitative population-level convergence, but at the finite-particle level the corresponding Stein energy has infinite self-interaction. We study periodic Riesz SVGD with self-interaction removed and prove a many-particle, long-time sampling theorem. Throughout the range in which the singular Stein energy is locally integrable, under a uniform bound on the initial relative entropy per…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "cs.LG"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

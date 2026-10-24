@@ -1,0 +1,23 @@
+{
+  "key": "2605.06281",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.06281",
+  "title": "INEUS: Iterative Neural Solver for High-Dimensional PIDEs",
+  "authors": [
+    "Jean-Loup Dupret",
+    "Davide Gallon",
+    "Patrick Cheridito"
+  ],
+  "summary": "In this paper, we introduce INEUS, a meshfree iterative neural solver for partial integro-differential equations (PIDEs). The method replaces the explicit evaluation of nonlocal jump integrals with single-jump sampling and reformulates PIDE solving as a sequence of recursive regression problems. Like Physics-Informed Neural Networks (PINNs), INEUS learns global solutions over the entire space-time domain, yet it offers a more efficient treatment of nonlocal terms and avoids the computationally expensive differentiation of full PIDE residuals. These features make INEUS particularly well…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "q-fin.CP"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

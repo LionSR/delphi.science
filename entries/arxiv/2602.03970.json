@@ -1,0 +1,25 @@
+{
+  "key": "2602.03970",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.03970",
+  "title": "Statistical Guarantees for Reasoning Probes on Looped Boolean Circuits",
+  "authors": [
+    "Anastasis Kratsios",
+    "Giulia Livieri",
+    "A. Martina Neuman"
+  ],
+  "summary": "We study the statistical behavior of reasoning probes in a stylized model of iterative computation inspired by neural algorithmic reasoning. The underlying computation is given by a looped Boolean circuit whose graph is a perfect $ν$-ary tree ($ν\\ge 2$), with outputs recursively fed back as inputs across computation rounds. A probe observes a sampled subset of internal nodes and seeks to infer the latent operation at each node, represented as a probability distribution over a finite set of admissible Boolean gates. This partial observability induces a transductive generalization problem on a…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "cs.NE",
+    "math.MG",
+    "math.ST"
+  ],
+  "published": "2026-02-03",
+  "updated": "2026-05-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

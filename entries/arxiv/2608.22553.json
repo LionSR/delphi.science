@@ -1,0 +1,21 @@
+{
+  "key": "2608.22553",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.22553",
+  "title": "Non-asymptotic Analysis of Matérn Regression: The Roles of Target and Kernel Lengthscales",
+  "authors": [
+    "Daniel Sanz-Alonso"
+  ],
+  "summary": "Theoretical guarantees for kernel regression are typically formulated in terms of smoothness, but practical accuracy depends critically on how the design resolution compares with the target and kernel lengthscales. We develop a finite-sample theory for Matérn regression on periodic domains with quasi-uniform designs, covering noiseless interpolation and noisy kernel ridge regression. Our minimax result shows that accurate recovery requires a design dense enough to resolve the target lengthscale and sufficient information at that scale to overcome noise. We prove that Matérn interpolation…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "math.NA",
+    "stat.CO"
+  ],
+  "published": "2026-08-23",
+  "updated": "2026-08-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

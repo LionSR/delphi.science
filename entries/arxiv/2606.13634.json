@@ -1,0 +1,21 @@
+{
+  "key": "2606.13634",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.13634",
+  "title": "Operads for compositional reasoning in LLMs",
+  "authors": [
+    "Nathaniel Bottman",
+    "Kyle Richardson"
+  ],
+  "summary": "Question decomposition, i.e. breaking a complex query into simpler sub-queries whose answers are composed to produce a final answer, is a widely used strategy for improving LLM reasoning, yet it currently lacks a rigorous mathematical foundation. In this paper, we propose operads, mathematical structures that model many-in, one-out operations and compositions thereof, as a natural framework for describing question decomposition. We define the questions operad $Q$, in which operations correspond to question templates and composition corresponds to substitution of sub-answers, and show how QA…",
+  "domain": "cs.CL",
+  "tags": [
+    "cs.CL",
+    "math.CT"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

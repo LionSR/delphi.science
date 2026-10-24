@@ -1,0 +1,23 @@
+{
+  "key": "2610.01344",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01344",
+  "title": "Reachability-Informed Reinforcement Learning for Multi-Impulse Interplanetary Transfers",
+  "authors": [
+    "Yashdeep Chaudhary",
+    "Roberto Armellin",
+    "Harry Holt"
+  ],
+  "summary": "Reinforcement learning offers the prospect of a reusable sequential decision-making mechanism for spacecraft trajectory design, motivating policy interfaces that connect learned decisions to the underlying maneuver geometry. This paper develops Reachability Analysis-Informed Reinforcement Learning (RARL) for deterministic multi-impulse interplanetary transfers, placing intermediate waypoint selection at the center of the learned decision process. Local first-order reachability maps bounded velocity perturbations into an ellipsoidal set of next-node positions, within which the policy selects…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "eess.SY"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2603.02356",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.02356",
+  "title": "Learning Optimal Search Strategies",
+  "authors": [
+    "Stefan Ankirchner",
+    "Maximilian Philipp Thiel"
+  ],
+  "summary": "We explore the question of how to learn an optimal search strategy within the example of a parking problem where parking opportunities arrive according to an unknown inhomogeneous Poisson process. The optimal policy is a threshold-type stopping rule characterized by an indifference position. We propose an algorithm that learns this threshold by estimating the integrated jump intensity rather than the intensity function itself. We show that our algorithm achieves a logarithmic regret growth, uniformly over a broad class of environments. Moreover, we prove a logarithmic minimax regret lower…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-03-02",
+  "updated": "2026-03-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2602.23572",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.23572",
+  "title": "Characterising SJT reducibility",
+  "authors": [
+    "Noam Greenberg",
+    "Andre Nies",
+    "Dan Turetsky"
+  ],
+  "summary": "SJT reducibility between sets $A,B \\subseteq \\mathbb N$ is defined by $A \\le_{SJT} B$ if for each computable function $h$ that is unbounded and nondecreasing, there is an $h$-bounded uniformly $B$-c.e.\\ trace $(T_n)_{n \\in \\mathbb N} $ such that for each $n$, the value $J^A(n)$ of the jump is in $T_n$, if defined. This reducibility is slightly weaker than Turing reducibility. We study SJT reducibility, and as a main result give several characterisations of it on the $K$-trivial sets. This is the first case of extending the three lowness paradigms, weak as an oracle, computed by many, and…",
+  "domain": "math.LO",
+  "tags": [
+    "math.LO"
+  ],
+  "published": "2026-02-27",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

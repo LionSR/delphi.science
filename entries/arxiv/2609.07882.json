@@ -1,0 +1,21 @@
+{
+  "key": "2609.07882",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07882",
+  "title": "LoCCA: Localized Chebyshev Cross Approximation for Kernel Matrix Factorization via Nodal Perturbation Stability",
+  "authors": [
+    "Sumit Singh",
+    "Shrirup Dutta",
+    "Sivaram Ambikasaran"
+  ],
+  "summary": "We propose Local Chebyshev Cross-Approximation (LoCCA), a data-driven framework that bridges smooth polynomial interpolation with flexible matrix factorizations. LoCCA dynamically maps ideal grid nodes to their nearest physical neighbors within unstructured point sets. We support this framework with a new perturbation theory, proving that displacing Chebyshev nodes onto physical data points retains mathematical stability and accuracy without explosive error growth. Numerically, LoCCA provides strict, reliable error control even on irregular geometries where standard grid-based methods fail,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

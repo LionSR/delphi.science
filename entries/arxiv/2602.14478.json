@@ -1,0 +1,23 @@
+{
+  "key": "2602.14478",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14478",
+  "title": "Constrained and Composite Sampling via Proximal Sampler",
+  "authors": [
+    "Thanh Dang",
+    "Jiaming Liang"
+  ],
+  "summary": "We study two log-concave sampling problems: constrained sampling and composite sampling. First, we consider sampling from a target distribution with density proportional to $\\exp(-f(x))$ supported on a convex set $K \\subset \\mathbb{R}^d$, where $f$ is convex. The main challenge is enforcing feasibility without degrading mixing. Using an epigraph transformation, we reduce this task to sampling from a nearly uniform distribution over a lifted convex set in $\\mathbb{R}^{d+1}$. We then solve the lifted problem using a proximal sampler. Assuming only a separation oracle for $K$ and a subgradient…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.DS",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-02-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

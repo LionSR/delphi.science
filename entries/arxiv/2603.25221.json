@@ -1,0 +1,22 @@
+{
+  "key": "2603.25221",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.25221",
+  "title": "Gap Safe Screening Rules for Fast Training of Robust Support Vector Machines under Feature Noise",
+  "authors": [
+    "Tan-Hau Nguyen",
+    "Thu-Le Tran",
+    "Kien Trung Nguyen"
+  ],
+  "summary": "Robust Support Vector Machines (R-SVMs) address feature noise by adopting a worst-case robust formulation that explicitly incorporates uncertainty sets into training. While this robustness improves reliability, it also leads to increased computational cost. In this work, we develop safe sample screening rules for R-SVMs that reduce the training complexity without affecting the optimal solution. To the best of our knowledge, this is the first study to apply safe screening techniques to worst-case robust models in supervised machine learning. Our approach safely identifies training samples…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-03-26",
+  "updated": "2026-03-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

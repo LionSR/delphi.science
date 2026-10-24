@@ -1,0 +1,21 @@
+{
+  "key": "2610.07082",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.07082",
+  "title": "A Column-Wise Reflection Method with Safeguarded Anderson Acceleration for the Continuous Sylvester Matrix Equation",
+  "authors": [
+    "Yinglian Jin",
+    "Hailong Zhu",
+    "Wenyue Feng"
+  ],
+  "summary": "We propose the safeguarded Anderson-accelerated reflection (SAAR) method, a two-level iterative method for the continuous Sylvester matrix equation $AX+XB=C$. The core of the method is a fixed-point reformulation: at each outer iteration, the associated linear matrix equation is decomposed into independent column-wise linear systems, which are solved approximately by a reflection iteration. For nonsingular \\(A\\) and \\(n\\ge 2\\), we prove the convergence of the reflection inner iteration by a spectral-radius argument and extend the result to the matrix equation setting. Since only finitely…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

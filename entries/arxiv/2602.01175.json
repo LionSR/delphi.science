@@ -1,0 +1,21 @@
+{
+  "key": "2602.01175",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.01175",
+  "title": "Novel linear, decoupled, and energy dissipative schemes for the Navier-Stokes-Darcy model and extension to related two-phase flow",
+  "authors": [
+    "Xiaoli Li",
+    "Jie Shen",
+    "Xinhui Wang"
+  ],
+  "summary": "We construct efficient original-energy-dissipative schemes for the Navier-Stokes-Darcy model and related two-phase flows using a prediction-correction framework. A new relaxation technique is incorporated in the correction step to guarantee dissipation of the original energy, thereby ensuring unconditional boundedness of the numerical solutions for velocity and hydraulic head in the $l^{\\infty}(L^2)$ and $l^2(H^1)$ norms. At each time step, the schemes require solving only a sequence of linear equations with constant coefficients. We rigorously prove that the schemes dissipate the original…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-01",
+  "updated": "2026-02-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

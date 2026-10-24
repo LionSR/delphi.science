@@ -1,0 +1,21 @@
+{
+  "key": "2608.15904",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.15904",
+  "title": "A Finite-order Characterization of Entrywise Positivity Preservers",
+  "authors": [
+    "Ludovick Bouthat",
+    "Dominique Guillot"
+  ],
+  "summary": "Fix $I = (0,ρ)$, where $0<ρ\\leq\\infty$, and let $\\mathbb{P}_n(I)$ be the set of positive semidefinite $n\\times n$ matrices with entries in $I$. A longstanding problem in matrix theory is to characterize the functions $f: I \\to \\mathbb{R}$ for which the entrywise calculus $f[A] = [f(a_{ij})]_{i,j = 1}^{n}$ preserves positive semidefiniteness for all $A \\in \\mathbb{P}_n(I)$. We characterize these functions exactly: if $f\\in C^{2n-2}(I)$ and $\\mathcal{E} = x\\frac{d}{dx}$, then this holds if and only if $$ f^{(k)}(x)\\geq 0 \\quad (0\\leq k\\leq n-1) \\qquad\\text{and}\\qquad…",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA",
+    "math.FA"
+  ],
+  "published": "2026-08-16",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

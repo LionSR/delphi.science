@@ -1,0 +1,25 @@
+{
+  "key": "2607.03339",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.03339",
+  "title": "CSympNet-ID: conformal-symplectic map learning for linearly damped Hamiltonian systems",
+  "authors": [
+    "Jiale Gong",
+    "Pengzhan Jin",
+    "Dongyang Kuang",
+    "Lu Li",
+    "Yifa Tang"
+  ],
+  "summary": "Learning dissipative dynamics from discrete observations is essential for reliable long-horizon prediction and physically meaningful parameter identification. For linearly damped Hamiltonian systems, the exact flow is generally not symplectic but conformally symplectic, contracting the canonical symplectic form by a scalar factor that reflects the net dissipation. We propose Conformal Symplectic Networks with damping identification (CSympNet-ID), a discrete-time map-learning framework that learns the one-step flow map directly from snapshot pairs while enforcing exact discrete conformal…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-07-03",
+  "updated": "2026-07-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

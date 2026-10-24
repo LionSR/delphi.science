@@ -1,0 +1,23 @@
+{
+  "key": "2606.00055",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.00055",
+  "title": "Viability of Tensor Train Methods for Geophysical Fluid Dynamics",
+  "authors": [
+    "Jeremy Lilly",
+    "Derek DeSantis",
+    "Mark R. Petersen"
+  ],
+  "summary": "Tensor train (TT) methods have recently gained popularity for accelerating the solving of systems of PDEs. Here, we evaluate the performance of TT methods in the context of geophysical fluid dynamics (GFD) using the shallow water equations and a discretization scheme employed by the ocean component of the Energy Exascale Earth System Model (E3SM). Through a suite of four test cases of increasing complexity, we evaluate TT methods in terms of how much TT is able to compress the model state, the error incurred by the TT approximation, and the speedup obtained by TT versus an optimal standard…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math.NA",
+    "physics.ao-ph"
+  ],
+  "published": "2026-05-18",
+  "updated": "2026-05-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

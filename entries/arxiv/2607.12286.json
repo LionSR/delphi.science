@@ -1,0 +1,19 @@
+{
+  "key": "2607.12286",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12286",
+  "title": "Structured Preconditioning in Affine-Invariant Geometry: Projection, Certificates, and Kronecker Separation",
+  "authors": [
+    "Zavier Li"
+  ],
+  "summary": "Nearest structured approximation and best structured preconditioning solve different matrix optimization problems. We determine their exact relation for Kronecker positive-definite matrices under the affine-invariant Riemannian metric. The Kronecker family is closed and geodesically convex, so every full matrix has a unique affine-invariant projection. Its logarithmic residual satisfies partial-trace normal equations and yields certified point and objective errors for an Armijo projection solver. Our central result shows that this unique projection is also a minimizer of the Hessian-relative…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

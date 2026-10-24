@@ -1,0 +1,20 @@
+{
+  "key": "2606.07820",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.07820",
+  "title": "A note on rounding fractional matchings with constant-factor strong negative correlation",
+  "authors": [
+    "David G. Harris"
+  ],
+  "summary": "We describe new dependent-rounding algorithms for bipartite graphs. Given a fractional matching $x$ of graph $G = (U \\cup V, E)$, the algorithms return an integral solution $X$ such that each right-node $v \\in V$ has at most one edge, and where the variables $X_e$ also satisfy broad non-positive correlation properties. In particular, for any edges $e_1, e_2$ sharing a left-node $u \\in U$, the variables $X_{e_1}, X_{e_2}$ have *strong* negative-correlation, i.e. the expectation of $X_{e_1} X_{e_2}$ is significantly below $x_{e_1} x_{e_2}$. Dependent rounding schemes with these properties have…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.PR"
+  ],
+  "published": "2026-06-05",
+  "updated": "2026-07-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

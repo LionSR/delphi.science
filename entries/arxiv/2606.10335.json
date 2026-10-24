@@ -1,0 +1,24 @@
+{
+  "key": "2606.10335",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.10335",
+  "title": "A Physics-Informed B-Spline Framework for Continuous Approximation of Flow Data",
+  "authors": [
+    "Junoh Jung",
+    "David Lenz",
+    "Emil Constantinescu",
+    "Tom Peterka"
+  ],
+  "summary": "Continuous approximations of flow data are useful for downstream analysis, differentiation, and visualization, but purely data-driven reconstructions do not, in general, preserve the governing physics. This limitation becomes particularly important when input data are physically inconsistent, whether due to low-fidelity discretizations or unmodeled discrepancies. In such cases, reconstructed fields may exhibit inaccurate PDE residuals, violated balance laws, or unreliable derived quantities. To address this, we propose a physics-informed B-spline framework that embeds physical constraints…",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "math.NA",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-06-09",
+  "updated": "2026-06-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

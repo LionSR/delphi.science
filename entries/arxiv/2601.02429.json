@@ -1,0 +1,23 @@
+{
+  "key": "2601.02429",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.02429",
+  "title": "Thrust Regulation in a Solid Fuel Ramjet using Dynamic Mode Adaptive Control",
+  "authors": [
+    "Parham Oveissi",
+    "Gohar T. Khokhar",
+    "Kyle Hanquist",
+    "Ankit Goel"
+  ],
+  "summary": "This paper presents the application of a novel data-driven adaptive control technique, called dynamic mode adaptive control (DMAC), for regulating thrust in a solid fuel ramjet (SFRJ). A high-fidelity computational model incorporating compressible flow theory and equilibrium chemistry is used to simulate the combustion dynamics. An adaptive tracking controller is designed using the DMAC framework, which leverages dynamic mode decomposition to approximate the local system behavior, followed by a tracking controller synthesized around the identified model. Simulation results demonstrate that…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "physics.comp-ph"
+  ],
+  "published": "2026-01-04",
+  "updated": "2026-01-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2605.10151",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.10151",
+  "title": "Learning to Sparsify Stochastic Linear Bandits",
+  "authors": [
+    "Zhengmiao Wang",
+    "Ming Chi",
+    "Zhi-Wei Liu",
+    "Lintao Ye",
+    "Carla Fabiana Chiasserini"
+  ],
+  "summary": "This paper addresses the problem of learning to sparsify stochastic linear bandits, where a decision-maker sequentially selects actions from a high-dimensional space subject to a sparsity constraint on the number of nonzero elements in the action vector. The key challenge lies in minimizing cumulative regret while tackling the potential NP-hardness of finding optimal sparse actions due to the inherent combinatorial structure of the problem. We propose an adaptively phased exploration and exploitation algorithmic framework, utilizing ordinary least squares for parameter learning and…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

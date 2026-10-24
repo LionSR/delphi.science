@@ -1,0 +1,21 @@
+{
+  "key": "2609.22990",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.22990",
+  "title": "On attention heads and bilinear forms",
+  "authors": [
+    "Andrew O'Desky"
+  ],
+  "summary": "We study the symmetric and antisymmetric parts of bilinear forms in the attention heads of trained large language models. We introduce an orthogonally invariant profile map from real bilinear forms to a three-dimensional simplex and observe that profiles of trained bilinear forms accumulate near profiles of rank-one bilinear forms. We prove that the symmetric part of a bilinear form in an attention head is the sum of a hyperbolic form and a zero form for a Zariski-dense subset of query-key matrices.",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.SP",
+    "stat.ML"
+  ],
+  "published": "2026-09-19",
+  "updated": "2026-09-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

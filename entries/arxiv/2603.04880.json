@@ -1,0 +1,22 @@
+{
+  "key": "2603.04880",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.04880",
+  "title": "A class of stochastic control problems with state constraints",
+  "authors": [
+    "Tiziano De Angelis",
+    "Erik Ekström"
+  ],
+  "summary": "We obtain a probabilistic solution to linear-quadratic optimal control problems with state constraints. Given a closed set $\\mathcal{D}\\subseteq [0,T]\\times\\mathbb{R}^d$, a diffusion $X$ in $\\mathbb{R}^d$ must be linearly controlled in order to keep the time-space process $(t,X_t)$ inside the set $\\mathcal{C}:=([0,T]\\times\\mathbb{R}^d)\\setminus\\mathcal{D}$, while at the same time minimising an expected cost that depends on the state $(t,X_t)$ and is quadratic in the speed of the control exerted. We find a probabilistic representation for the value function and an optimal control under a set…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.PR",
+    "q-fin.MF"
+  ],
+  "published": "2026-03-05",
+  "updated": "2026-03-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

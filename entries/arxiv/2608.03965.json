@@ -1,0 +1,21 @@
+{
+  "key": "2608.03965",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.03965",
+  "title": "Asymptotically attaining the Moore bound",
+  "authors": [
+    "Wouter Cames van Batenburg",
+    "Samuel Korsky"
+  ],
+  "summary": "For positive integers $d$ and $k$, let $n_k(d)$ be the maximum order of a graph of maximum degree at most $d$ and diameter at most $k$. We prove that $$ \\lim_{d\\to\\infty}\\frac{n_k(d)}{d^k}=1$$ for every fixed $k$, thereby resolving the asymptotic degree-diameter problem for fixed diameter and proving a conjecture of Bollobás. The lower bound comes from regular graphs $H_{k,q}$, indexed by prime powers $q$, whose vertices are partial flags in $\\mathbb{F}_q^{\\,2k+1}$. These graphs have diameter $k$ and order $|V(H_{k,q})| =(1+o(1))Δ(H_{k,q})^k$. We also construct, for every fixed $\\ell \\ge 2$,…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

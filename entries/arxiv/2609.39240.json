@@ -1,0 +1,20 @@
+{
+  "key": "2609.39240",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.39240",
+  "title": "Boundary Geometry and Global Rates of Cyclic Coordinate Descent for SVM Duals",
+  "authors": [
+    "Egor Gladin",
+    "Eva Ibodova"
+  ],
+  "summary": "Cyclic coordinate descent is widely used to train support vector machines, but global linear convergence alone gives limited guidance about the rate on a particular instance. We study exact cyclic coordinate minimization for box-constrained convex quadratics and develop global contraction bounds that capture both coordinate order and boundary geometry. Our convergence certificate combines two ingredients: interactions between successive coordinate updates, encoded by the triangular part of the normalized Hessian, and objective growth, captured by a matrix lower bound on the optimality gap.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

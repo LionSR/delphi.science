@@ -1,0 +1,26 @@
+{
+  "key": "2607.14122",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14122",
+  "title": "Generalized Neural Distributional Regression",
+  "authors": [
+    "Natan Hilario da Silva",
+    "Vicente Garibay Cancho",
+    "Adriano Kamimura Suzuki"
+  ],
+  "summary": "We introduce the Generalized Neural Distributional Regression (GNDR) framework, which seamlessly embeds deep neural networks into the parameter space of classical probability distributions. To reconcile the inherent non-identifiability of deep architectures with maximum likelihood theory, we propose a two-step semi-parametric estimation procedure. By isolating the terminal prediction heads and treating the upstream network as a fixed, non-linear basis expansion, GNDR enables the extraction of analytical Fisher Information matrices. This facilitates rigorous uncertainty quantification,…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST",
+    "stat.AP",
+    "stat.CO",
+    "stat.ME"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

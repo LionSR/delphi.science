@@ -1,0 +1,22 @@
+{
+  "key": "2602.07507",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.07507",
+  "title": "A Taylor-Bernstein Inner Approximation Algorithm for Path-Constrained Dynamic Optimization",
+  "authors": [
+    "Yuan Chang",
+    "Lizhong Jiang",
+    "Tai-Fang Li",
+    "Jun Fu"
+  ],
+  "summary": "A novel inner approximation algorithm is proposed for dynamic optimization problems to ensure strict satisfaction of path constraints. Distinct from traditional methods relying on interval analysis, the proposed algorithm leverages the convex hull property of Bernstein polynomials to tightly bound the polynomial components of the Taylor expansion, while incorporating the Log-Sum-Exp technique to smooth the non-differentiability arising from coefficient maximization. This approach yields a tighter upper bound function compared to interval methods, with a smaller approximation error.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-07",
+  "updated": "2026-02-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

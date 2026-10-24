@@ -1,0 +1,22 @@
+{
+  "key": "2603.25832",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.25832",
+  "title": "A Neural Score-Based Particle Method for the Vlasov-Maxwell-Landau System",
+  "authors": [
+    "Vasily Ilin",
+    "Jingwei Hu"
+  ],
+  "summary": "Plasma modeling is central to the design of nuclear fusion reactors, yet simulating collisional plasma kinetics from first principles remains a formidable computational challenge: the Vlasov-Maxwell-Landau (VML) system describes six-dimensional phase-space transport under self-consistent electromagnetic fields together with the nonlinear, nonlocal Landau collision operator. A recent deterministic particle method for the full VML system estimates the velocity score function via the blob method, a kernel-based approximation with $O(n^2)$ cost. In this work, we replace the blob score estimator…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG",
+    "math.AP"
+  ],
+  "published": "2026-03-26",
+  "updated": "2026-03-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

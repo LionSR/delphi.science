@@ -1,0 +1,24 @@
+{
+  "key": "2604.26588",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26588",
+  "title": "Median-of-Means for Nash Equilibrium Seeking in Heavy-Tailed Games",
+  "authors": [
+    "Chao Sun",
+    "Huiming Zhang",
+    "Bo Chen",
+    "Jianzheng Wang",
+    "Zheming Wang",
+    "Li Yu"
+  ],
+  "summary": "This paper studies the Nash equilibrium seeking problem for stochastic games under heavy-tailed noise. The gradient noise is considered to have a finite $δ$-th moment ($1<δ\\le 2$), which generalizes the Gaussian noise and covers cases with infinite variance. In this work, we employ the classic method Median-of-Means (MoM) in robust estimation. MoM works by dividing samples into blocks, taking the average of each block, and then taking the median of these block averages, achieving a breakdown point of up to $1/2$. This makes the final estimate reliable even when some samples are very noisy or…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

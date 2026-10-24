@@ -1,0 +1,22 @@
+{
+  "key": "2604.15526",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.15526",
+  "title": "Safeguarded Accelerated Adaptive Search under Unreliable Gradient Oracles",
+  "authors": [
+    "Shunzhi Zhang",
+    "Shichen Liao",
+    "Congying Han",
+    "Tiande Guo"
+  ],
+  "summary": "From the probabilistic-model viewpoint, stochastic adaptive search can require any fraction $θ\\in(0,1)$ of the predicted model reduction for acceptance. Classical backtracking with Nesterov acceleration pairs its momentum construction with a test certifying $1/2$ of this reduction. In stochastic search, however, rejection entails a fresh oracle query without updating the iterates. We therefore separate the fraction required by the search from that used to construct momentum, allowing smaller search fractions to ease acceptance and potentially reduce the oracle cost of reaching a target…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-16",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

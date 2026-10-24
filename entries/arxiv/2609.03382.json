@@ -1,0 +1,21 @@
+{
+  "key": "2609.03382",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.03382",
+  "title": "SurgeGen: A Hybrid Generative Diffusion Framework for Storm Surge Scenario Synthesis",
+  "authors": [
+    "Shunan Zheng",
+    "John J. Hasenbein"
+  ],
+  "summary": "Predicting storm surge induced by landfalling tropical cyclones is crucial for flood mitigation and coastal risk management. Traditionally, physics-based numerical models simulate storm surge by solving the Navier--Stokes equations using numerical methods, but these simulations are computationally expensive. Generative models are promising for storm surge emulation because they can generate diverse realizations rather than producing a single deterministic prediction. However, their use for storm surge emulation remains largely unexplored. In this paper, we leverage diffusion models for storm…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "cs.LG"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

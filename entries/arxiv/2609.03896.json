@@ -1,0 +1,23 @@
+{
+  "key": "2609.03896",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.03896",
+  "title": "The Prime Clockwork: A Dynamic Representation of Modular and Multiplicative Arithmetic",
+  "authors": [
+    "Michael T. M. Emmerich"
+  ],
+  "summary": "The way numbers are represented strongly influences which arithmetic structures are easy to see. The \\emph{prime clockwork} is a recursively growing discrete dynamical system: a list of autonomous two-hand clocks driven by one common $+1$ signal. No primes or primality labels are supplied. Starting empty, the process appends a clock of period $n$ whenever none already present rings; the primes are generated internally as its growth times. For each installed prime $p$, the seconds reading $R_p$ advances through $0,\\ldots,p-1$, and each return to zero increments the minutes reading $M_p$,…",
+  "domain": "math.HO",
+  "tags": [
+    "math.HO",
+    "cs.DM",
+    "math.DS",
+    "math.NT",
+    "nlin.CG"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

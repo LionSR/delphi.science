@@ -1,0 +1,21 @@
+{
+  "key": "2608.24592",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.24592",
+  "title": "Optimal Allocation of Embedding Dimensions under Finite-Sample Constraints",
+  "authors": [
+    "Vasileios E. Papageorgiou"
+  ],
+  "summary": "The embedding dimension of categorical predictors is usually selected through heuristic tuning, although it directly affects model complexity, approximation quality, and finite-sample generalization. This paper formulates embedding dimension selection as a constrained allocation problem. The main contribution is to show that embedding capacity can be allocated across heterogeneous categorical predictors according to an explicit approximation-estimation tradeoff. We characterize approximation error through the singular-value tail of the latent category representation, while estimation error…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "stat.ME",
+    "stat.ML"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

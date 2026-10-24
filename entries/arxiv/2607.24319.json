@@ -1,0 +1,21 @@
+{
+  "key": "2607.24319",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.24319",
+  "title": "The Convergence and Error Analysis of Coordinate Descent Methods with Compression for Full Configuration Interaction",
+  "authors": [
+    "Yingzhou Li",
+    "Qiang Wu"
+  ],
+  "summary": "We study the effect of compression in Coordinate Descent Full Configuration Interaction (CDFCI) within an unconstrained optimization formulation of the full configuration interaction ground-state problem. Under suitable local assumptions, we prove that the compressed iteration converges linearly to the solution of an associated restricted problem. We also characterize the convergence point of the compressed algorithm. Under an additional exponential decay assumption on the target eigenvector, we show that the resulting eigenvalue error is of order $τ^2$, where $τ$ denotes the compression…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

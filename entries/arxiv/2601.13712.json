@@ -1,0 +1,22 @@
+{
+  "key": "2601.13712",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.13712",
+  "title": "Nonlinear compressive reduced basis approximation : when Taylor meets Kolmogorov",
+  "authors": [
+    "Joubine Aghili",
+    "Hassan Ballout",
+    "Yvon Maday",
+    "Christophe Prud'homme"
+  ],
+  "summary": "This paper investigates model reduction methods for efficiently approximating the solution of parameter-dependent PDEs with a multi-parameter vector $\\vecμ \\in \\mathbb{R}^p$. In cases where the Kolmogorov $N$-width decays fast enough, it is effective to approximate the solution as a sum of $N$ separable terms, each being the product of a parameter-dependent coefficient and a space-dependent function. This leads to reduced-order models with $N$ degrees of freedom and complexity of order ${\\mathcal O}(N^3)$. However, when the $N$-width decays slowly, $N$ must be large to achieve acceptable…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-20",
+  "updated": "2026-01-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

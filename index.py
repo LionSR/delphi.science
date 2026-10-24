@@ -9,6 +9,7 @@ copied: they are read from registry/entries/ at build time and shown with the AP
     python index.py harvest [--source NAME] [--limit N] [--dry-run]
     python index.py label [--all] [--labeler claude|none|canned:<file.json>]
     python index.py refresh [--older-than DAYS] [--limit N] [--dry-run]
+    python index.py discuss <record id> <url>... [--drop] [--dry-run]
     python index.py build            # writes dist/: index.json, index.db, llms.txt
 """
 
@@ -270,6 +271,8 @@ def refresh(older_than: int, limit: int, dry_run: bool) -> int:
         keep = {k: e[k] for k in ("added", "added_by", "review") if k in e}
         updated = {**e, **_drop_empty(fresh), **keep, "refreshed": S.today()}
         updated.pop("gone", None)
+        if e.get("discussion"):
+            updated["discussion"] = recheck(e["discussion"])
         if any(updated.get(k) != e.get(k) for k in ("title", "summary")):
             updated.pop("review", None)  # the text changed: label it again
             changed += 1
@@ -280,13 +283,58 @@ def refresh(older_than: int, limit: int, dry_run: bool) -> int:
     return 0
 
 
+# ---- discuss ----
+
+
+def recheck(links: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Each link read again: edits come through, a deleted post or page drops out, an unreachable one is kept."""
+    out = []
+    for d in links:
+        try:
+            out.append({**S.discussion_link(d["url"]), "added": d.get("added", "")})
+        except S.NotFound:
+            print(f"dropped  {d['url']}")
+        except (ValueError, S.SourceError) as err:
+            print(f"kept     {d['url']}: {err}", file=sys.stderr)
+            out.append(d)
+    return out
+
+
+def discuss(record: str, urls: list[str], drop: bool, dry_run: bool) -> int:
+    """Attach posts and articles about a record: X posts through oEmbed, anything else through its Open Graph tags.
+    Only voices with a public scholarly record are taken (see README); --drop removes links again."""
+    source, _, key = record.partition("/")
+    path = path_for(source, key)
+    if not path.exists():
+        print(f"no entry {record}")
+        return 2
+    e = json.loads(path.read_text())
+    links = e.get("discussion", [])
+    if drop:
+        gone = {u.strip().replace("twitter.com/", "x.com/").split("?")[0] for u in urls}
+        links = [x for x in links if x["url"] not in gone]
+        print(f"{len(e.get('discussion', [])) - len(links)} dropped")
+    for url in [] if drop else urls:
+        try:
+            d = S.discussion_link(url)
+        except (ValueError, S.NotFound, S.SourceError) as err:
+            print(f"skipped {url}: {err}", file=sys.stderr)
+            continue
+        links = [x for x in links if x["url"] != d["url"]] + [{**d, "added": S.today()}]
+        print(f"+ {d.get('author') or d.get('site')}: {(d.get('text') or d.get('title', ''))[:90]}")
+    e["discussion"] = sorted(links, key=lambda d: d.get("date", ""))
+    if not dry_run:
+        save(path, e)
+    return 0
+
+
 # ---- build ----
 
 
 # Entry fields served as they are; to_item adds id, tags, published, category and subject.
 PASSTHROUGH = ("source", "url", "title", "authors", "summary", "domain", "origin", "agent_ready", "gone", "stars", "pdf",
                "family", "family_title", "formalized", "withdrawn", "withdrawn_on", "verified", "trust", "ai_models",
-               "formalizes", "repo", "json")
+               "formalizes", "repo", "json", "discussion")
 
 
 PREFIXES = json.loads((Path(__file__).resolve().parent / "site" / "lib" / "prefixes.json").read_text())["prefixes"]
@@ -393,6 +441,7 @@ def main(argv: Iterable[str] | None = None) -> int:
     h = sub.add_parser("harvest"); h.add_argument("--source"); h.add_argument("--limit", type=int); h.add_argument("--dry-run", action="store_true")
     lb = sub.add_parser("label"); lb.add_argument("--all", action="store_true"); lb.add_argument("--labeler", default="claude"); lb.add_argument("--limit", type=int); lb.add_argument("--missing-subject", action="store_true")
     r = sub.add_parser("refresh"); r.add_argument("--older-than", type=int, default=7); r.add_argument("--limit", type=int, default=200); r.add_argument("--dry-run", action="store_true")
+    d = sub.add_parser("discuss"); d.add_argument("record"); d.add_argument("urls", nargs="+"); d.add_argument("--drop", action="store_true"); d.add_argument("--dry-run", action="store_true")
     sub.add_parser("build")
     args = ap.parse_args(list(argv) if argv is not None else None)
     S.TOKEN = github_token()
@@ -404,6 +453,8 @@ def main(argv: Iterable[str] | None = None) -> int:
         return label(args.all, args.labeler, args.limit, args.missing_subject)
     if args.cmd == "refresh":
         return refresh(args.older_than, args.limit, args.dry_run)
+    if args.cmd == "discuss":
+        return discuss(args.record, args.urls, args.drop, args.dry_run)
     return build()
 
 

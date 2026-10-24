@@ -179,6 +179,55 @@ def from_citation_meta(m: MetaParser) -> dict[str, Any]:
     }
 
 
+# ---- Discussion: posts and articles about a record ----
+
+# What a record's page shows under "Discussed elsewhere". Nothing is typed in: an X post comes from
+# X's oEmbed endpoint (free, no key, and X's own way to republish a post), anything else from the
+# page's Open Graph tags. A link whose source answers 404 is dropped on refresh, which is how a
+# deleted post or a takedown leaves the index.
+OEMBED = "https://publish.twitter.com/oembed"
+X_HOSTS = {"x.com", "www.x.com", "twitter.com", "www.twitter.com", "mobile.twitter.com"}
+LINK_CHARS = 300
+
+
+def parse_oembed(data: dict[str, Any]) -> dict[str, Any]:
+    """An X post from its oEmbed record: who wrote it, the text, the day."""
+    h = data.get("html", "")
+    body = re.search(r"<p[^>]*>(.*?)</p>", h, re.S)
+    when = re.search(r">([A-Z][a-z]+ \d{1,2}, \d{4})</a>\s*</blockquote>", h)
+    handle = (data.get("author_url") or "").rstrip("/").rsplit("/", 1)[-1]
+    post = re.search(r"/status/(\d+)", data.get("url") or "")
+    return {
+        "kind": "x", "url": f"https://x.com/{handle}/status/{post[1]}" if handle and post else data.get("url", ""),
+        "author": clean(data.get("author_name")), "handle": handle,
+        "text": clean(re.sub(r"<br\s*/?>", " ", body[1])) if body else "",
+        "date": dt.datetime.strptime(when[1], "%B %d, %Y").date().isoformat() if when else "",
+    }
+
+
+def discussion_link(url: str) -> dict[str, Any]:
+    """The link as the page shows it. Raises NotFound when the post or page is gone."""
+    url = url.strip()
+    host = (urllib.parse.urlsplit(url).hostname or "").lower()
+    if host in X_HOSTS:
+        if not re.search(r"/status/\d+", url):
+            raise ValueError(f"not a post: {url}")
+        q = urllib.parse.urlencode({"url": url, "omit_script": "true", "dnt": "true"})
+        link = parse_oembed(get_json(f"{OEMBED}?{q}", cache=False))
+    else:
+        m = MetaParser()
+        m.feed(get_text(url, cache=False))
+        one = m.one
+        author = clean(one("author") or one("article:author"))
+        link = {
+            "kind": "web", "url": url, "title": clean(one("og:title") or m.title), "site": clean(one("og:site_name")) or host,
+            "author": "" if "://" in author else author,
+            "text": trim(one("og:description") or one("description"), LINK_CHARS),
+            "date": iso_date(one("article:published_time") or one("citation_publication_date") or one("date")),
+        }
+    return {k: v for k, v in link.items() if v}
+
+
 # ---- Adapters ----
 
 

@@ -57,5 +57,6 @@ jobs:
         if: env.SUPABASE_DB_URL != ''
         working-directory: site
         run: |
+          python3 ../index.py build  # again, after the rebase: main may have gained entries (or discussion links) during the run
           npm ci
           node --experimental-strip-types scripts/load-open-index.ts ../dist/index.json

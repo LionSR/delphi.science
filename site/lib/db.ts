@@ -1,10 +1,10 @@
 // The database: Supabase Postgres when DATABASE_URL is set (its connection pooler, transaction mode),
 // otherwise Postgres in-process (PGlite) loaded with the last local build, for development.
-import { readFileSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import type { Db } from './query.ts';
 
-const MIGRATION = 'supabase/migrations/20261024000000_open_index.sql';
+const MIGRATIONS = 'supabase/migrations';
 const BUILD = '../dist/index.json';
 
 async function open(): Promise<Db> {
@@ -17,7 +17,8 @@ async function open(): Promise<Db> {
 	const { vector } = await import('@electric-sql/pglite/vector');
 	const { load } = await import('./load.ts');
 	const pg = new PGlite({ extensions: { vector } });
-	await pg.exec(readFileSync(join(process.cwd(), MIGRATION), 'utf8'));
+	const dir = join(process.cwd(), MIGRATIONS);
+	for (const f of readdirSync(dir).filter((f) => f.endsWith('.sql')).sort()) await pg.exec(readFileSync(join(dir, f), 'utf8'));
 	await load(pg, JSON.parse(readFileSync(join(process.cwd(), BUILD), 'utf8')).items);
 	return pg;
 }

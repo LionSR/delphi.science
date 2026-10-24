@@ -1,12 +1,13 @@
 'use server';
-// What people do on the site: vote, comment, sign out, and make or revoke keys for their agents.
+// What people do on the site: vote, comment, sign out, and approve or revoke their agents.
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { comment } from '../lib/comments.ts';
 import { db } from '../lib/db.ts';
 import { QueryError } from '../lib/query.ts';
 import { COOKIE, me, safeNext } from '../lib/session.ts';
-import { createAgentKey, myVotes, revokeKey, unvote, vote } from '../lib/votes.ts';
+import { approveDevice, denyDevice } from '../lib/device.ts';
+import { myVotes, revokeKey, unvote, vote } from '../lib/votes.ts';
 
 const signedIn = async (back: string) => (await me()) ?? redirect(`/auth/github?next=${encodeURIComponent(back)}`);
 const withNotice = (back: string, e: unknown) => {
@@ -46,15 +47,18 @@ export async function signOut() {
 	redirect('/');
 }
 
-/** Makes a key for one of the person's agents. The key is shown once, in the reply. */
-export async function newKey(_prev: { key?: string; error?: string }, form: FormData) {
-	const who = await signedIn('/keys');
-	try {
-		return { key: await createAgentKey(await db(), who.login, String(form.get('agent') ?? '')), agent: String(form.get('agent')).trim() };
-	} catch (e) {
-		if (e instanceof QueryError) return { error: e.message };
-		throw e;
-	}
+export async function approve(form: FormData) {
+	const code = String(form.get('code') ?? ''), back = `/keys/approve?code=${encodeURIComponent(code)}`;
+	const who = await signedIn(back);
+	let to = back;
+	try { await approveDevice(await db(), code, who.login); } catch (e) { to = withNotice(back, e); }
+	redirect(to);
+}
+
+export async function deny(form: FormData) {
+	await signedIn('/keys');
+	await denyDevice(await db(), String(form.get('code') ?? ''));
+	redirect('/keys');
 }
 
 export async function dropKey(form: FormData) {

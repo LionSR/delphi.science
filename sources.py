@@ -213,12 +213,18 @@ def parse_oembed(data: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def passage(page: str, fragment: str) -> str:
-    """The passage a text-fragment URL (#:~:text=…) points at: the page's text from the fragment on."""
+def passage(page: str, fragment: str) -> tuple[str, str]:
+    """What a text-fragment URL (#:~:text=prefix-,start,end,-suffix) points at: (prefix, the page's text from
+    start on). On a page that collects many people's remarks, the prefix names the one quoted, as in
+    #:~:text=Jakob%20Glas-,But%20when%20I%20saw. The fragment is still URL-encoded, so %2C is a literal comma."""
     text = clean(re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", page, flags=re.S | re.I))
-    start = urllib.parse.unquote(fragment.split(",")[0])  # #:~:text=start,end (still encoded, so %2C is a literal comma)
-    i = text.lower().find(clean(start).lower())
-    return trim(text[i:], LINK_CHARS) if i >= 0 else ""
+    parts = [urllib.parse.unquote(x) for x in fragment.split(",")]
+    prefix = clean(parts.pop(0)[:-1]) if parts[0].endswith("-") else ""
+    start = clean(parts[0]) if parts else ""
+    low = text.lower()
+    after = low.find(prefix.lower()) if prefix else 0
+    i = low.find(start.lower(), after) if start and after >= 0 else -1  # a prefix that is not on the page matches nothing
+    return (prefix, trim(text[i:], LINK_CHARS)) if i >= 0 else ("", "")
 
 
 def discussion_link(url: str) -> dict[str, Any]:
@@ -234,13 +240,17 @@ def discussion_link(url: str) -> dict[str, Any]:
         link = parse_oembed(get_json(f"{OEMBED}?{q}", cache=False))
     else:
         page = get_text(urllib.parse.urlunsplit(parts._replace(fragment="")), cache=False)
-        quoted = passage(page, parts.fragment[len(":~:text="):]) if parts.fragment.startswith(":~:text=") else ""
+        who, quoted = passage(page, parts.fragment[len(":~:text="):]) if parts.fragment.startswith(":~:text=") else ("", "")
         m = MetaParser()
         m.feed(page)
         one = m.one
         # citation_author (arXiv, journals) is "Last, First"; shown as "First Last".
         authors = [" ".join(reversed(clean(a).split(", ", 1))) for a in m.meta.get("citation_author", []) if clean(a)]
-        author = ", ".join(authors[:4]) + (" et al." if len(authors) > 4 else "") or clean(one("author") or one("article:author"))
+        author = who or ", ".join(authors[:4]) + (" et al." if len(authors) > 4 else "") or clean(one("author") or one("article:author"))
+        # Personal blogs often sign only in the window title: "Post title | Asaf Karagila".
+        byline = re.split(r"\s+[|–—]\s+", clean(m.title))
+        if not author and len(byline) > 1 and byline[-1] != clean(one("og:site_name")):
+            author = byline[-1]
         link = {
             "kind": "web", "url": url, "title": clean(one("citation_title") or one("og:title") or m.title or m.h1),
             "site": clean(one("og:site_name")) or host.removeprefix("www."), "author": "" if "://" in author else author,

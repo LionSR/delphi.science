@@ -123,11 +123,13 @@ class Discussion(unittest.TestCase):
         })
 
     def test_passage_from_text_fragment(self) -> None:
-        page = "<html><script>x()</script><p>Intro.</p><p>Ben Green: the zero-free region to the right of 7/8 is striking. More.</p></html>"
-        self.assertEqual(S.passage(page, "the zero-free region"), "the zero-free region to the right of 7/8 is striking. More.")
-        self.assertEqual(S.passage(page, "the zero-free region,striking"), "the zero-free region to the right of 7/8 is striking. More.")
-        self.assertEqual(S.passage(page, "Green%3A%20the%20zero-free%2C"), "")  # an encoded comma is part of the text
-        self.assertEqual(S.passage(page, "nowhere"), "")
+        page = "<html><script>x()</script><p>Intro.</p><p>Jakob Glas: the zero-free region to the right of 7/8 is striking. More.</p></html>"
+        quote = "the zero-free region to the right of 7/8 is striking. More."
+        self.assertEqual(S.passage(page, "the%20zero-free%20region"), ("", quote))
+        self.assertEqual(S.passage(page, "the%20zero-free%20region,striking"), ("", quote))  # start,end
+        self.assertEqual(S.passage(page, "Jakob%20Glas-,the%20zero-free%20region"), ("Jakob Glas", quote))  # prefix-,start names the person
+        self.assertEqual(S.passage(page, "Glas%3A%20the%20zero-free%2C"), ("", ""))  # an encoded comma is part of the text
+        self.assertEqual(S.passage(page, "Nobody-,the%20zero-free%20region"), ("", ""))  # the prefix must be on the page
 
     def test_discussion_is_served(self) -> None:
         e = {"key": "k", "source": "web", "url": "https://e.org/p", "title": "T", "discussion": [{"kind": "x", "url": "https://x.com/a/status/1", "text": "hi"}]}

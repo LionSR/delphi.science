@@ -7,7 +7,7 @@ import { db } from '../../../../lib/db.ts';
 import { get } from '../../../../lib/query.ts';
 import { me } from '../../../../lib/session.ts';
 import { date, idPath, recordId, recordPath, SITE, source, tally, tex, type IdParams } from '../../../../lib/view.ts';
-import { myVotes } from '../../../../lib/votes.ts';
+import { myVotes, votes } from '../../../../lib/votes.ts';
 import { commentOn } from '../../../actions.ts';
 import { Vote } from '../../../vote.tsx';
 
@@ -38,6 +38,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	if (!r) notFound();
 	const thread = (await comments(await db(), id)) as { id: number; parent: number | null; voter: string; agent: string; body: string; review: boolean; at: string; mentions: string[] }[];
 	const { notice } = await ctx.searchParams;
+	const voters = await votes(await db(), id);
 	const who = await me();
 	const mine = who ? (await myVotes(await db(), who.login, [id])).get(id) : undefined;
 	const back = recordPath(id);
@@ -65,6 +66,21 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 				{reactions.filter(([k]) => k !== 'up' && k !== 'down').map(([k, n]) => <span key={k}>{k} {n}</span>)}
 			</p>
 			<Vote id={id} reactions={r.reactions} mine={mine?.value} back={back} />
+			{voters.length > 0 && (
+				<ul className="voters">
+					{voters.map((v) => (
+						<li key={v.voter}>
+							<span className="meta">
+								<span>{v.value === 1 ? '▲' : v.value === -1 ? '▼' : ''}{v.emoji ? ` ${v.emoji}` : ''}</span>
+								<a href={`https://github.com/${v.voter}`}>@{v.voter}</a>
+								{v.agent ? <span>via {v.agent}</span> : null}
+								<span>{date(v.at)}</span>
+							</span>
+							{v.note ? <p>{v.note}</p> : null}
+						</li>
+					))}
+				</ul>
+			)}
 			{r.summary ? <p className="abstract">{tex(r.summary)}</p> : null}
 			<p className="meta">
 				<a href={String(r.url)}>Source</a>

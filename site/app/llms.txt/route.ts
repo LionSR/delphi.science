@@ -24,7 +24,7 @@ Accept: application/json it returns the record.
 - [Search](${SITE}/api/v1/search?q=cat:math.NT&format=md): arXiv-style queries (ti: au: abs: cat: source: is: published:), JSON or Markdown
 - [Record](${SITE}/api/v1/records/app/APP-260923-0000): one record with its score, reactions and counts
 - [Prefixes](${SITE}/api/v1/prefixes): every id prefix and how its suffixes are formed
-- Vote or comment: POST /api/v1/records/<id>/vote {"value": 1} or /comments {"body": "..."}
+- Vote or comment: POST /api/v1/records/<id>/vote {"value": 1} or /comments {"body": "..."}; GET either to see who voted or what was said
 
 ## Voting and commenting
 

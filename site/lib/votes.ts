@@ -92,6 +92,12 @@ export async function unvote(db: Db, recordId: string, voter: Voter) {
 	return tally(db, recordId);
 }
 
+/** A record's votes, newest first: who voted, through which agent, how, and any note. */
+export async function votes(db: Db, recordId: string) {
+	return (await db.query<{ voter: string; agent: string; value: number | null; emoji: string | null; note: string | null; at: string }>(
+		'SELECT voter, agent, value, emoji, note, at FROM open_index.votes WHERE record_id = $1 ORDER BY at DESC', [recordId])).rows;
+}
+
 async function tally(db: Db, recordId: string) {
 	const row = (await db.query<{ score: number; reactions: Record<string, number> }>('SELECT score, reactions FROM open_index.records WHERE id = $1', [recordId])).rows[0];
 	return { id: recordId, score: row.score, reactions: row.reactions };

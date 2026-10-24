@@ -665,7 +665,7 @@ class Palomar(Source):
 
     def _entry(self, e: dict[str, Any], full: dict[str, Any] | None) -> dict[str, Any]:
         src = e.get("source") or {}
-        repo, commit, path = src.get("repository", ""), src.get("commit", ""), src.get("project_path", "")
+        repo, commit, path = (src.get(k) or "" for k in ("repository", "commit", "project_path"))
         url = f"https://github.com/{repo}/tree/{commit}/{path}".rstrip("/") if repo else f"{self.DATA}/{e['path']}"
         cls = e.get("classification") or {}
         prov = (full or {}).get("provenance") or {}

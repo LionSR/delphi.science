@@ -184,7 +184,7 @@ def harvest(only: str | None, limit: int | None, dry_run: bool) -> int:
                 entry.update(added=S.today(), added_by=f"harvest:{name}", refreshed=S.today())
                 n_new += 1
                 if dry_run:
-                    print(f"  + {entry['source']}:{entry['key']}  {entry['title'][:80]}")
+                    print(f"  + {rid(entry)}  {entry['title'][:80]}")
                 else:
                     save(path_for(entry["source"], entry["key"]), entry)
         except (S.SourceError, S.NotFound) as e:
@@ -260,12 +260,12 @@ def refresh(older_than: int, limit: int, dry_run: bool) -> int:
             fresh = src.refetch(e)
         except S.NotFound:
             gone += 1
-            print(f"gone     {e['source']}:{e['key']}")
+            print(f"gone     {rid(e)}")
             if not dry_run:
                 save(path, {**e, "gone": True, "refreshed": S.today()})
             continue
         except S.SourceError as err:
-            print(f"skipped  {e['source']}:{e['key']}: {err}", file=sys.stderr)
+            print(f"skipped  {rid(e)}: {err}", file=sys.stderr)
             continue
         keep = {k: e[k] for k in ("added", "added_by", "review") if k in e}
         updated = {**e, **_drop_empty(fresh), **keep, "refreshed": S.today()}
@@ -273,7 +273,7 @@ def refresh(older_than: int, limit: int, dry_run: bool) -> int:
         if any(updated.get(k) != e.get(k) for k in ("title", "summary")):
             updated.pop("review", None)  # the text changed: label it again
             changed += 1
-            print(f"changed  {e['source']}:{e['key']}  {updated['title'][:70]}")
+            print(f"changed  {rid(e)}  {updated['title'][:70]}")
         if not dry_run:
             save(path, updated)
     print(f"checked {len(stale)}: {changed} changed, {gone} gone")
@@ -289,6 +289,14 @@ PASSTHROUGH = ("source", "url", "title", "authors", "summary", "domain", "origin
                "formalizes", "repo", "json")
 
 
+PREFIXES = json.loads((Path(__file__).resolve().parent / "site" / "lib" / "prefixes.json").read_text())["prefixes"]
+
+
+def rid(e: dict[str, Any]) -> str:
+    """A record's id, <prefix>/<suffix> like a DOI: the source's prefix, then the source's own key."""
+    return f"{e['source']}/{e['key']}"
+
+
 def to_item(e: dict[str, Any]) -> dict[str, Any] | None:
     """What the page, index.json and the API serve for one entry. None for entries labelled harmful,
     which are left out; their files keep the label for editors."""
@@ -297,7 +305,7 @@ def to_item(e: dict[str, Any]) -> dict[str, Any] | None:
         return None
     subject = TX.subject_of(e.get("domain"), r.get("subject"))
     return _drop_empty({
-        "id": f"{e['source']}:{e['key']}", **{k: e.get(k) for k in PASSTHROUGH},
+        "id": rid(e), **{k: e.get(k) for k in PASSTHROUGH},
         "tags": list(dict.fromkeys([*(e.get("tags") or []), *(r.get("tags") or [])]))[:10],
         "published": e.get("published") or e.get("added"), "category": r.get("category", "research"),
         "subject": subject, "division": TX.division_of(subject) if subject else None,
@@ -326,6 +334,8 @@ def dumps(obj: Any) -> str:
 def build() -> int:
     entries = [e for _, e in load()]
     all_items = items(entries)
+    if unknown := {it["source"] for it in all_items} - PREFIXES.keys():
+        raise SystemExit(f"no prefix for {', '.join(sorted(unknown))}: add it to site/lib/prefixes.json (prefixes are never renamed)")
     counts = Counter(it["source"] for it in all_items)
     names = labels()
     index = {"generated": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "labels": names,
@@ -335,7 +345,7 @@ def build() -> int:
     (DIST / "index.json").write_text(data)
     (DIST / "llms.txt").write_text(llms_txt(index))
     TX.write_json()
-    dates = {f"{e['source']}:{e['key']}": (e.get("added", ""), e.get("refreshed", "")) for e in entries}
+    dates = {rid(e): (e.get("added", ""), e.get("refreshed", "")) for e in entries}
     query.build_db(DIST / "index.db", all_items, dates, {"generated": index["generated"], "labels": names})
     print(f"built dist/: {len(all_items)} items " + ", ".join(f"{names.get(k, k)} {v}" for k, v in counts.most_common()))
     return 0
@@ -347,6 +357,9 @@ def llms_txt(index: dict[str, Any]) -> str:
         "",
         "> Research made with or by AI: APP papers, lab releases, Lean formalizations, and papers from",
         "> AI-paper repositories. Each record names its source.",
+        "",
+        "Every record id is <prefix>/<suffix>, like a DOI: the source's prefix, then the source's own id.",
+        "/id/<prefix>/<suffix> goes to the original; with Accept: application/json it returns the record. Prefixes: /api/v1/prefixes.",
         "",
         "How to use the API: /api/v1. Search: /api/v1/search?q=<query> (arXiv syntax). One record: /api/v1/records/<id>.",
         "Vote or comment: POST /api/v1/records/<id>/vote or /comments, with an agent key or a GitHub token.",

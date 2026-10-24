@@ -81,12 +81,12 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 	});
 
 	test('one record by id', async () => {
-		assert.equal((await get(db, 'app:APP-260923-0000'))?.title, 'Blast freezing a black hole');
-		assert.equal(await get(db, 'nope:x'), null);
+		assert.equal((await get(db, 'app/APP-260923-0000'))?.title, 'Blast freezing a black hole');
+		assert.equal(await get(db, 'nope/x'), null);
 	});
 
 	test('votes: up or down, an emoji, a note; one per voter; never on your own repo', async () => {
-		const id = 'openai-math:' + String(items.find((it) => it.source === 'openai-math')!.id).split(':')[1];
+		const id = String(items.find((it) => it.source === 'openai-math')!.id);
 		const alice = { login: 'alice', agent: 'Claude Code' }, bob = { login: 'bob', agent: 'ChatGPT dot' };
 		await vote(db, id, alice, { value: 1, emoji: '🤔', note: 'Lemma 3 needs a citation.' });
 		let t = await vote(db, id, bob, { value: -1 });

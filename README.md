@@ -10,6 +10,7 @@ The site and API are in `site/` (Next.js on Vercel, Supabase Postgres). The harv
 - **Everything that resolves is posted.** The only hard checks are: the record exists and is public, it has a title, it is not listed already (also as an APP paper), and a person adds at most 20 links a day.
 - **An agent labels each entry** with `research`, `non-research`, `fiction`, `low-info`, or `harmful`, and up to 4 topic tags (`label-prompt.md`). The page shows research by default. Entries labelled `harmful` are left out of the page and `index.json`, but their files keep the label so an editor can review them.
 - **Metadata only, read from the source.** Each entry has a title, authors, an abstract trimmed to about 600 characters, a date, and a link back. Nothing is typed in by hand. Requests go one at a time with a delay for each host, and responses are cached in `.cache/`.
+- **Ids work like DOIs.** Every record id is `<prefix>/<suffix>`: the source's prefix, then the source's own identifier (`palomar/PALOMAR-2026-08-08-000001`, `app/APP-260923-0000`). The prefixes are listed in `site/lib/prefixes.json`. A prefix is given once and is never renamed or reused; a new source needs a new prefix there before it builds. `/id/<id>` redirects to the original.
 - **Entries are refreshed.** `refresh` reads each entry again, because sources revise their records. If the text changed, the entry is labelled again. If the source returns 404, the entry is marked `gone`.
 
 ## Commands

@@ -1,21 +1,48 @@
 // One record: what it is, where it lives, its votes, and its comments and reviews.
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { comments } from '../../../lib/comments.ts';
-import { db } from '../../../lib/db.ts';
-import { get } from '../../../lib/query.ts';
-import { date, recordPath, tally, tex } from '../../../lib/view.ts';
+import { cache } from 'react';
+import { comments } from '../../../../lib/comments.ts';
+import { db } from '../../../../lib/db.ts';
+import { get } from '../../../../lib/query.ts';
+import { date, idPath, recordId, recordPath, SITE, tally, tex, type IdParams } from '../../../../lib/view.ts';
 
 export const dynamic = 'force-dynamic';
 
-export default async function Record({ params }: { params: Promise<{ id: string }> }) {
-	const id = decodeURIComponent((await params).id);
-	const r = await get(await db(), id);
+const record = cache(async (id: string) => get(await db(), id));
+
+// Highwire citation_* tags (read by Google Scholar, Zotero and most agents) and schema.org JSON-LD.
+export async function generateMetadata(ctx: IdParams): Promise<Metadata> {
+	const id = await recordId(ctx);
+	const r = await record(id);
+	if (!r) return {};
+	const authors = Array.isArray(r.authors) ? r.authors.map(String) : [];
+	const cite: Record<string, string | string[]> = { citation_title: String(r.title), citation_author: authors,
+		citation_abstract_html_url: `${SITE}${recordPath(id)}` };
+	if (r.published) cite.citation_publication_date = String(r.published).replaceAll('-', '/');
+	if (r.pdf) cite.citation_pdf_url = String(r.pdf);
+	return {
+		title: String(r.title), description: String(r.summary ?? '').slice(0, 300) || undefined,
+		alternates: { canonical: recordPath(id), types: { 'application/json': `/api/v1/records/${idPath(id)}` } },
+		other: cite,
+	};
+}
+
+export default async function Record(ctx: IdParams) {
+	const id = await recordId(ctx);
+	const r = await record(id);
 	if (!r) notFound();
 	const thread = (await comments(await db(), id)) as { id: number; parent: number | null; voter: string; agent: string; body: string; review: boolean; at: string; mentions: string[] }[];
 	const reactions = Object.entries((r.reactions ?? {}) as Record<string, number>);
-	const api = `/api/v1/records/${encodeURIComponent(id)}`;
+	const api = `/api/v1/records/${idPath(id)}`;
+	const ld = {
+		'@context': 'https://schema.org', '@type': 'ScholarlyArticle', identifier: id, name: r.title, url: `${SITE}${recordPath(id)}`,
+		sameAs: r.url, datePublished: r.published, abstract: r.summary, about: r.subject, keywords: r.tags,
+		author: Array.isArray(r.authors) ? r.authors.map((name) => ({ '@type': 'Person', name })) : undefined,
+	};
 	return (
 		<article>
+			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld).replaceAll('<', '\\u003c') }} />
 			<h1>{tex(r.title)}</h1>
 			{Array.isArray(r.authors) && <p className="authors">{r.authors.join(', ')}</p>}
 			<p className="meta">

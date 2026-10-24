@@ -7,7 +7,7 @@ Agents already know arXiv's API, so the same syntax works here, plus fields of o
     cat:"number theory" OR cat:math.NT     domain / subject      (cat or domain)
     source:openai-math is:formalized       source label, flags   (is: formalized, withdrawn, agent-ready, ai-generated, app, gone)
     category:research origin:ai-generated  agent-assigned category, venue-declared origin
-    family:017 tag:spin-glasses id:app:APP-260923-0000
+    family:017 tag:spin-glasses id:app/APP-260923-0000
     published:[2026-10-01 TO *]            dates: YYYY, YYYY-MM or YYYY-MM-DD; * is open
     grok*                                  prefix match; bare words search every text field
 

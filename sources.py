@@ -314,9 +314,19 @@ class ArXiv(Source):
     patterns = [r"^(?:https?://)?(?:www\.)?arxiv\.org/(?:abs|pdf|html)/([\w./-]+?)(?:v\d+)?(?:\.pdf)?/?$", r"^(?:arXiv:)?(\d{4}\.\d{4,5})(?:v\d+)?$"]
     NS = {"a": "http://www.w3.org/2005/Atom", "x": "http://arxiv.org/schemas/atom"}
 
+    PAGE = 1000
+
+    def _feed(self, params: str, cache: bool = True) -> tuple[int, list[ET.Element]]:
+        """The total hits and this page's entries. The API reports its own failures as an entry."""
+        root = ET.fromstring(get(f"https://export.arxiv.org/api/query?{params}", cache=cache))
+        entries = root.findall("a:entry", self.NS)
+        if any("/api/errors" in e.findtext("a:id", "", self.NS) for e in entries):
+            raise SourceError(f"arXiv API error for {params}")
+        total = int(root.findtext("{http://a9.com/-/spec/opensearch/1.1/}totalResults", "0"))
+        return total, [e for e in entries if e.find("a:title", self.NS) is not None]
+
     def _query(self, params: str) -> list[ET.Element]:
-        root = ET.fromstring(get(f"https://export.arxiv.org/api/query?{params}"))
-        return [e for e in root.findall("a:entry", self.NS) if e.find("a:title", self.NS) is not None]
+        return self._feed(params)[1]
 
     def _entry(self, e: ET.Element) -> dict[str, Any]:
         t = lambda p: (e.findtext(p, "", self.NS) or "").strip()  # noqa: E731
@@ -342,8 +352,23 @@ class ArXiv(Source):
 
     def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
         q = urllib.parse.quote(query or "")
-        for e in self._query(f"search_query={q}&sortBy=submittedDate&sortOrder=descending&max_results={limit}"):
-            yield self._entry(e)
+        start, total = 0, limit
+        while start < min(limit, total):
+            params = f"search_query={q}&sortBy=submittedDate&sortOrder=descending&start={start}&max_results={min(self.PAGE, limit - start)}"
+            for attempt in range(3):  # the API now and then answers with an error or an empty page: ask again, uncached
+                try:
+                    total, page = self._feed(params, cache=attempt == 0)
+                except SourceError:
+                    page = []
+                if page or start >= total:
+                    break
+                time.sleep(10)
+            if not page:
+                if start >= total:
+                    return
+                raise SourceError(f"arXiv returned nothing at {start} of {total} for {query!r}")
+            yield from map(self._entry, page)
+            start += len(page)
 
 
 class Zenodo(Source):

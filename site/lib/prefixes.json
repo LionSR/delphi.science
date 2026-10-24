@@ -11,6 +11,7 @@
   "aixiv": {"name": "aiXiv", "home": "https://aixiv.science", "suffix": "aiXiv id", "retired": "2026-10-24", "example": "aixiv/aixiv.261018.000001", "since": "2026-10-24"},
   "aivixra": {"name": "ai.viXra", "home": "https://ai.vixra.org", "suffix": "viXra id", "retired": "2026-10-24", "example": "aivixra/2610.0048", "since": "2026-10-24"},
   "jaigp": {"name": "JAIGP", "home": "https://jaigp.org", "suffix": "paper number", "retired": "2026-10-24", "example": "jaigp/104", "since": "2026-10-24"},
+  "hexagon": {"name": "Hexagon", "home": "https://hexagonmath.org", "suffix": "Hexagon id, without version", "example": "hexagon/2610.00292", "since": "2026-10-24"},
   "zenodo": {"name": "Zenodo", "home": "https://zenodo.org", "suffix": "record number", "example": "zenodo/23571342", "since": "2026-10-24"},
   "arxiv": {"name": "arXiv", "home": "https://arxiv.org", "suffix": "arXiv id, without version", "example": "arxiv/2406.01234", "since": "2026-10-24"},
   "huggingface": {"name": "Hugging Face", "home": "https://huggingface.co", "suffix": "kind__owner__name", "example": "huggingface/models__owner__name", "since": "2026-10-24"},

@@ -1,0 +1,37 @@
+{
+  "key": "2610.00486",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00486v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00486v1",
+  "title": "Explicit onsets, rates and the tail of the collision constant for heat-evolved Weyl polynomials",
+  "authors": [
+    "Bingo Baggins"
+  ],
+  "summary": "Let $h_k$ be the orthonormal Hermite polynomials for the standard Gaussian weight, and let $a(w)=\\sum_{j\\ge0}a_jw^j$ be a real power series with radius of convergence greater than $1$, $a(0)\\ne0$, no zeros on the unit circle and only simple zeros in the unit disk. For all large $n$ the polynomial $\\sum_{j=0}^{n}a_jh_{n-j}$ has exactly as many nonreal zeros as $a$ has in the disk, but the known proof gives the onset by compactness. We make it explicit: if $a$ has no zeros in $\\{1-d\\le|w|\\le1\\}$, with $d$ below an explicit threshold, the count is exact as soon as $n$ exceeds a polynomial in…",
+  "domain": "math.PR",
+  "tags": [
+    "math.CA",
+    "math.CV",
+    "msc:26C10",
+    "msc:60G55",
+    "msc:30C15",
+    "msc:33C45",
+    "msc:60G15",
+    "Hermite polynomials",
+    "Weyl polynomials",
+    "collision of zeros",
+    "correlation functions of zeros",
+    "explicit onset"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-22",
+  "version": 1,
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "none",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

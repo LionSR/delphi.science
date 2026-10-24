@@ -1,0 +1,39 @@
+{
+  "key": "2610.00408",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00408v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00408v1",
+  "title": "On the irrationality of the $3$-adic zeta value $\\zeta_3(5)$",
+  "authors": [
+    "Antti Hippeläinen"
+  ],
+  "summary": "We give a proof that the $3$-adic zeta value $\\zeta_3(5)$ is irrational. The proof adapts to $p=3$ a Hankel-determinant method that a recent preprint applies to $\\zeta_2(7)$. A Volkenborn integral of an explicit rational function defines a linear functional with values in $\\mathbb{Q}+\\mathbb{Q}\\,\\zeta_3(5)$, and its Hankel determinants are the values at $\\zeta_3(5)$ of polynomials with rational coefficients. We bound the $3$-adic valuation of these values and the size and the denominators of the coefficients. The new ingredients at $p=3$ are a triangular basis of the polynomials that are…",
+  "domain": "math.NT",
+  "tags": [
+    "msc:11J72",
+    "msc:11S40",
+    "msc:11S80",
+    "msc:11F33",
+    "Hankel determinants",
+    "Kubota-Leopoldt L-function",
+    "Volkenborn integral",
+    "irrationality",
+    "overconvergent modular forms",
+    "p-adic zeta values"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "version": 1,
+  "ai_models": [
+    "Claude Opus",
+    "Python 3.12, python-flint 0.9.0, SymPy 1.14.0, NumPy 2.5.4"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "none",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

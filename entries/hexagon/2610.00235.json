@@ -1,0 +1,31 @@
+{
+  "key": "2610.00235",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00235v2",
+  "pdf": "https://hexagonmath.org/pdf/2610.00235v2",
+  "title": "An Arbor Polytope with Nonreal Ehrhart Roots",
+  "authors": [
+    "YURAN XIU"
+  ],
+  "summary": "We construct a singleton-labeled arbor on 243 vertices whose Ehrhart polynomial has a nonreal root. This disproves the conjecture that the Ehrhart roots of every arbor polytope are real and lie in $[-1,0]$. The polynomial factors as $(m+1)^{230}(7m+2)^8 f(m)/6144$, where $f$ is an explicit quintic. We derive this identity by counting lattice points for every nonnegative integer dilation, using three moments of subtree deficits. A negative value of $f'^2-ff''$ at $-3/10$ gives an exact nonreal-root certificate. The lattice-count identity and the resulting counterexample have been formalized…",
+  "domain": "math.CO",
+  "tags": [
+    "msc:52B20",
+    "Ehrhart polynomials",
+    "Lean formalization",
+    "arbor polytopes",
+    "counterexample",
+    "real-rootedness"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-18",
+  "version": 2,
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "none",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2610.00344",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00344v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00344v1",
+  "title": "Image Reconstruction from Projections using Fourier Slice Theorem",
+  "authors": [
+    "Rajesh Dachiraju"
+  ],
+  "summary": "We study the problem of image reconstruction from projection data by combining the Fourier Slice Theorem with scattered-data approximation in the Fourier domain. The unknown image is assumed to belong to the space of functions of bounded variation (BV), allowing discontinuities that naturally arise in practical tomography. In contrast to conventional band-limited formulations, no assumption is imposed that the image itself is band-limited. Instead, the finite bandwidth is attributed to the image acquisition system through the detector response, finite sampling resolution, and associated…",
+  "domain": "math.CA",
+  "tags": [
+    "msc:42B99"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-18",
+  "version": 1,
+  "authorship": "human",
+  "human_understanding": "all",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

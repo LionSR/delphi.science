@@ -1,0 +1,38 @@
+{
+  "key": "2610.00243",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00243v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00243v1",
+  "title": "Steinhaus Piercing with Slack: The Exact Asymptotic Constant",
+  "authors": [
+    "Anton Joha"
+  ],
+  "summary": "Let s(d) be the largest order N for which the first n + d points of a sequence in [0,1) meet every uniform n-cell for all n ≤ N. We prove s(d) = d/(1 − log 2) + O(√d), determining the limit asked for by Anholcer et al. and disproving their conjectured coefficient. For strong piercing, which requires meeting every interval of length 1/n, we obtain an exact finite harmonic capacity and rational constructions. A Dirichlet covering lemma and a packing estimate for disjoint gaps transfer the capacity bound to ordinary grids. We also solve the finite largest-gap minimax problem, establish rigidity…",
+  "domain": "math.NT",
+  "tags": [
+    "math.CO",
+    "msc:11K38",
+    "msc:05D99",
+    "Steinhaus problem",
+    "entropy",
+    "harmonic capacity",
+    "interval refinement",
+    "irregularities of distribution",
+    "piercing sequences"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "version": 1,
+  "ai_models": [
+    "Claude Fable",
+    "ChatGPT"
+  ],
+  "authorship": "mixed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

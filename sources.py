@@ -44,7 +44,7 @@ class SourceError(Exception):
 # ---- HTTP: one request at a time, cached, with a per-host delay ----
 
 _last_hit: dict[str, float] = {}
-DELAY = {"data.palomar-registry.org": 0.1, "www.anthropic.com": 1.0, "export.arxiv.org": 3.0}
+DELAY = {"data.palomar-registry.org": 0.1, "www.anthropic.com": 1.0, "export.arxiv.org": 3.0, "hexagonmath.org": 0.5}
 TOKEN: str | None = None  # GitHub token, set by index.py
 
 
@@ -727,6 +727,81 @@ class AnthropicScience(Source):
             yield self.fetch(key)
 
 
+class Hexagon(Source):
+    """hexagonmath.org: an arXiv-style archive for LLM-assisted mathematics, with a JSON API.
+
+    It screens deposits for scholarly content but not for correctness, so each record keeps the
+    deposit's own declarations (authorship, how much of it a human understood) for readers to judge.
+    """
+
+    name, label = "hexagon", "Hexagon"
+    API = "https://hexagonmath.org/api/v1/works"
+    # The bare form is arXiv's too, so a bare id needs the hexagon: prefix.
+    patterns = [r"^(?:https?://)?(?:www\.)?hexagonmath\.org/(?:abs/|pdf/|src/|api/v1/works/)?(\d{4}\.\d{4,5})(?:v\d+)?/?$", r"^hexagon:(\d{4}\.\d{4,5})(?:v\d+)?$"]
+
+    def _entry(self, w: dict[str, Any]) -> dict[str, Any]:
+        links = w.get("links") or {}
+        formal = [f.get("url") for f in w.get("formalizations") or [] if f.get("url")]
+        formal += [w[k] for k in ("mathlibCommitUrl", "palomarUrl", "prove2Url") if w.get(k) and w[k] not in formal]
+        return self.entry(
+            w["identifier"],
+            url=links.get("record") or f"https://hexagonmath.org/abs/{w['identifier']}",
+            pdf=links.get("pdf", ""),
+            title=clean(w.get("title")),
+            authors=[clean(a.get("name")) for a in w.get("authors", [])],
+            summary=trim(w.get("abstract")),
+            domain=w.get("subject") or "",
+            tags=[*(w.get("crossListSubjects") or []), *(f"msc:{m}" for m in w.get("mscCodes") or []), *(w.get("tags") or [])][:12],
+            published=iso_date(w.get("publishedAt") or w.get("createdAt")),
+            updated=iso_date(w.get("versionCreatedAt")),
+            version=w.get("versionNumber"),
+            doi=w.get("doi") or "",
+            ai_models=[t["name"] for t in w.get("tools") or [] if t.get("name") and t["name"] != "Lean"],
+            authorship=w.get("authorshipMode") or "",
+            human_understanding=w.get("humanUnderstanding") or "",
+            **({"origin": "ai-generated"} if w.get("authorshipMode") != "human" else {}),
+            formalized=bool(formal),
+            formalizations=formal,
+            withdrawn=bool(w.get("withdrawnAt")) or w.get("status") == "withdrawn",
+            withdrawn_on=iso_date(w.get("withdrawnAt")),
+        )
+
+    def _detail(self, versioned: str) -> dict[str, Any]:
+        return get_json(f"{self.API}/{versioned}")["work"]
+
+    def fetch(self, key: str) -> dict[str, Any]:
+        try:
+            return self._entry(self._detail(key))
+        except (NotFound, SourceError):
+            pass
+        latest, v = None, 1  # if the API wants a version, the latest is the last that answers
+        while v <= 50:
+            try:
+                latest = self._detail(f"{key}v{v}")
+            except NotFound:
+                break
+            v += 1
+        if latest is None:
+            raise NotFound(f"Hexagon {key}")
+        return self._entry(latest)
+
+    def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
+        """Newest first, one record per work (its latest version). The detail record adds the
+        formalization links that the list leaves out."""
+        cursor = None
+        while True:
+            page = get_json(f"{self.API}?limit=100" + (f"&cursor={urllib.parse.quote(cursor)}" if cursor else ""), max_age=3600)
+            for w in page.get("works", []):
+                try:
+                    w = {**w, **self._detail(w["id"].removeprefix("hexagon:"))}
+                except (NotFound, SourceError):
+                    pass  # the list record is enough to index it
+                yield self._entry(w)
+            cursor = (page.get("page") or {}).get("next_cursor")
+            if not (page.get("page") or {}).get("has_more") or not cursor:
+                return
+
+
 class Doi(Source):
     """Any DOI, resolved through doi.org content negotiation (Crossref, DataCite, …)."""
 
@@ -774,7 +849,7 @@ class Web(Source):
 
 
 # Order matters: the first adapter that matches wins, so specific ones come before GitHub, DOI and Web.
-SOURCES: list[Source] = [OpenAIMath(), Palomar(), AnthropicScience(), ArXiv(), Zenodo(), HuggingFace(), Formalization(), GitHub(), Doi(), Web()]
+SOURCES: list[Source] = [OpenAIMath(), Palomar(), AnthropicScience(), Hexagon(), ArXiv(), Zenodo(), HuggingFace(), Formalization(), GitHub(), Doi(), Web()]
 BY_NAME = {s.name: s for s in SOURCES}
 
 

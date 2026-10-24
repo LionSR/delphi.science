@@ -1,0 +1,40 @@
+{
+  "key": "2610.00458",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00458v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00458v1",
+  "title": "A 15/16 zero-free half-plane for angular Hecke L-functions over the Eisenstein field",
+  "authors": [
+    "Troy Winarski"
+  ],
+  "summary": "We describe the argument recorded in a frozen Lean development for nonvanishing of the unit-compatible angular Hecke L-functions over \\(\\mathbb Q(\\sqrt{-3})\\) in the strict half-plane \\(\\Re(s)>15/16\\), apart from the genuine principal pole. The family includes imprimitive finite parts, every integer angular type allowed by the unit relation, and real unitary norm twists. The proof route passes through a mean-square estimate for the actual sextic rows, sixth-power averaging, a smoothed Möbius estimate with a totient factor, and Mellin continuation. We reconstruct the angular reflection,…",
+  "domain": "math.NT",
+  "tags": [
+    "math.CV",
+    "math.LO",
+    "msc:11R42",
+    "msc:11M41",
+    "msc:68V20",
+    "Eisenstein integers",
+    "Hecke L-functions",
+    "Lean",
+    "analytic number theory",
+    "angular Hecke characters",
+    "formal verification",
+    "xenoproof"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "version": 1,
+  "ai_models": [
+    "Codex"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

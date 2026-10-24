@@ -1,0 +1,37 @@
+{
+  "key": "2610.00389",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00389v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00389v1",
+  "title": "Linear-size autocatalytic sets are asymptotically absent in the sparse binary polymer model",
+  "authors": [
+    "Michael Mislan"
+  ],
+  "summary": "In the sparse binary polymer model with reversible ligation and cleavage, we prove that for every fixed food horizon, fixed nonnegative catalysis intensity and fixed linear reaction budget, the probability of a nonempty reflexively autocatalytic and food-generated set within that budget tends to zero, at rate O(1/n). The probability that a single molecule catalyses a self-constructing reaction set also vanishes, cleavage included. A productive-prefix argument excludes bounded catalyst counts, while an injective acyclic dependency encoding supplies a factorial saving in the count of…",
+  "domain": "math.PR",
+  "tags": [
+    "math.CO",
+    "msc:60C05",
+    "msc:05C65",
+    "Lean formalization",
+    "RAF sets",
+    "binary polymer model",
+    "minimum RAF size",
+    "probabilistic combinatorics",
+    "sparse catalysis"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-19",
+  "version": 1,
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": true,
+  "formalizations": [
+    "https://palomar-registry.org/entry?id=PALOMAR-2026-09-25-000021&version=1"
+  ],
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

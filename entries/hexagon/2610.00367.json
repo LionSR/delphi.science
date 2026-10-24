@@ -1,0 +1,37 @@
+{
+  "key": "2610.00367",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00367v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00367v1",
+  "title": "A critical-point criterion for D-stability in every dimension",
+  "authors": [
+    "Michael Mislan"
+  ],
+  "summary": "A real square matrix A is D-stable if DA is Hurwitz for every positive diagonal matrix D. Applying the critical-point method to Johnson’s contact variety establishes that, in every dimension and for every positive choice of barrier weights, D-stability is equivalent to Hurwitz stability and absence of positive solutions of an explicit principal-minor Fritz–John system. In dimension five the system separates into Lagrange and tangency branches; both equivalences are registered in Lean. Further results treat regular-contact persistence, the boundary of the D-stable set, stability under bounded…",
+  "domain": "math.DS",
+  "tags": [
+    "msc:15A18",
+    "msc:34D20",
+    "msc:14P10",
+    "D-stability",
+    "Fritz-John conditions",
+    "Lean formalization",
+    "critical-point method",
+    "diagonal scaling",
+    "time-scale robustness"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-18",
+  "version": 1,
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": true,
+  "formalizations": [
+    "https://palomar-registry.org/entry?id=PALOMAR-2026-09-30-000020&version=1"
+  ],
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

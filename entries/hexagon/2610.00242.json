@@ -1,0 +1,40 @@
+{
+  "key": "2610.00242",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00242v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00242v1",
+  "title": "Average-radius list decoding of random linear matrix codes at rank-metric capacity",
+  "authors": [
+    "Matěj Kripner",
+    "Václav Rozhoň",
+    "Robert Šámal",
+    "Martin Šindelář",
+    "Adrián Zámečník"
+  ],
+  "summary": "We show that for every fixed prime power $q$ and $0<p<1$, a uniformly random $\\mathbb F_q$-linear rank-metric code in $\\mathbb F_q^{n\\times n}$ of rate $(1-p)^2-\\varepsilon$ is, with high probability, average-radius list-decodable at radius $pn$ with list size $O_{p,q}(1/\\varepsilon)$. This answers a question of Guruswami, Li and Singhal; the case $q=2$ was known. The failure probability is explicit and remains small when $\\varepsilon$ depends on $n$ with $\\varepsilon n^2\\to\\infty$. The proof combines a weighted affine extraction, span estimates for matrices from nearby rank shells, and…",
+  "domain": "math.IT",
+  "tags": [
+    "cs.IT",
+    "msc:94B35",
+    "msc:94B05",
+    "msc:94B65",
+    "average-radius list decoding",
+    "capacity",
+    "random linear codes",
+    "rank metric"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "version": 1,
+  "ai_models": [
+    "Bolzano"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

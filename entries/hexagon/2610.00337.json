@@ -1,0 +1,37 @@
+{
+  "key": "2610.00337",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00337v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00337v1",
+  "title": "An Approximate Solution to the Minimum Vertex Cover Problem: The Salvador Algorithm",
+  "authors": [
+    "Frank Vega"
+  ],
+  "summary": "Minimum Vertex Cover has a classical linear-time ratio of $2$, and under the Unique Games Conjecture no polynomial-time algorithm achieves a fixed ratio below $2$ unless $\\mathrm{P}=\\mathrm{NP}$. We present version 0.1.4 of \\textsc{Salvador}, a linear-time ensemble of seventeen strategies, numbered in the order in which they are computed: twelve base strategies (component amplification before a maximal matching, the maximal matching itself, degree and weight heuristics, reductions to auxiliary problems that are solved exactly, a decomposition into bipartite layers, a weighted subdivision…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.DS",
+    "msc:05C69",
+    "msc:05C70",
+    "msc:68Q25",
+    "msc:90C27",
+    "Approximation Algorithm",
+    "Bipartite Layers",
+    "Ensemble Heuristics",
+    "Linear Time",
+    "Maximal Matching",
+    "P versus NP",
+    "Split Graph"
+  ],
+  "published": "2026-10-18",
+  "updated": "2026-10-18",
+  "version": 1,
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "all",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

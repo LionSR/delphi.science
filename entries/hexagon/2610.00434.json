@@ -1,0 +1,29 @@
+{
+  "key": "2610.00434",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00434v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00434v1",
+  "title": "Counterexamples to the Two-Bases Conjecture for the Tutte Polynomial",
+  "authors": [
+    "Jungang Chen"
+  ],
+  "summary": "We disprove the two-bases conjecture of Chávez-Lomelí, Merino, Noble, and Ramírez-Ibañez (Conjecture 5.8 in *Some Inequalities for the Tutte Polynomial*), which asserts that \\(\\max\\{T_M(2,0),T_M(0,2)\\}\\ge T_M(1,1)\\) whenever a matroid contains two disjoint bases or its ground set is the union of two bases. We construct a connected, self-dual, rationally representable matroid \\(M\\) of rank \\(32\\) on \\(64\\) elements whose ground set is partitioned into two bases, but for which \\[ T_M(2,0)=T_M(0,2)=263656235940864 <275621102802945=T_M(1,1). \\] The construction extends to an explicit infinite…",
+  "domain": "math.CO",
+  "tags": [
+    "msc:05B35"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "version": 1,
+  "ai_models": [
+    "ChatGPT"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

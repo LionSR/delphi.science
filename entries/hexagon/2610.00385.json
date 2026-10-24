@@ -1,0 +1,30 @@
+{
+  "key": "2610.00385",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00385v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00385v1",
+  "title": "Convolution Smoothing in the Turán Hierarchy: The Blind Zone Extends from Order 43 to Order 61, and Empirically to Order 68",
+  "authors": [
+    "Changxia Lin"
+  ],
+  "summary": "Let Xi(t)=xi(1/2+it) be the Riemann xi-function on the critical line, Xi(t)=sum_{k>=0}(-1)^k c_k t^{2k} its even Taylor expansion, and D(n,r)=det[c_{n+i-j}]_{i,j=0}^{r-1} the associated Toeplitz minors. Writing G(z)=sum_{k>=0}c_k z^k and beta_j=-1/z_j for the zeros of G, the dual Jacobi-Trudi identity gives D(n,r)=c_0^r s_{(r^n)}(beta), the Schur function of the rectangular partition (r^n) in the alphabet beta. Positivity of D(n,r) for all n>=0 and all r>=1 is equivalent to the Riemann hypothesis (RH) by the Schoenberg-Edrei characterisation of Polya frequency sequences; for each fixed r,…",
+  "domain": "math.NT",
+  "tags": [
+    "msc:11M26",
+    "msc:05E05",
+    "msc:33C45",
+    "msc:15B48",
+    "msc:11Y16",
+    "Riemann zeta function / xi-function / Turan inequalities /"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-19",
+  "version": 1,
+  "authorship": "human",
+  "human_understanding": "all",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

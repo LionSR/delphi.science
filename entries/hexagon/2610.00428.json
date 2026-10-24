@@ -1,0 +1,29 @@
+{
+  "key": "2610.00428",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00428v2",
+  "pdf": "https://hexagonmath.org/pdf/2610.00428v2",
+  "title": "Every algebraic number is a critical value of an integer polynomial",
+  "authors": [
+    "RJ Acuna"
+  ],
+  "summary": "We arrived at an independent proof of Petrov's theorem. For every irreducible $f \\in \\mathbb{Z}[x]$ of positive degree there are $g \\in \\mathbb{Z}[x]$ and an irreducible $F \\in \\mathbb{Z}[x]$ of positive degree with $F \\mid g'$ and $F^{2} \\mid f \\circ g$. Equivalently, every algebraic number is a critical value of an integer polynomial, so the set of critical values of $\\mathbb{Z}[x]$ is exactly $\\overline{\\mathbb{Q}}$. The construction is explicit. We classify $g \\in \\mathbb{Z}[x]$ with critical value $\\alpha$, and find a lower bound for $\\deg g$. The proof was assisted by AI, and has been…",
+  "domain": "math.NT",
+  "tags": [
+    "msc:11R04"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "version": 2,
+  "ai_models": [
+    "Claude Fable"
+  ],
+  "authorship": "mixed",
+  "human_understanding": "all",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

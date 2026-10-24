@@ -1,0 +1,38 @@
+{
+  "key": "2610.00369",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00369v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00369v1",
+  "title": "Counterexamples to the D-unstable-core conjecture for parameter-rich and elementary mass-action networks",
+  "authors": [
+    "Michael Mislan"
+  ],
+  "summary": "Two exact four-species counterexamples refute necessity of a D-unstable core for instability of a positive equilibrium. The first has five reactions, parameter-rich kinetics, an explicit generalized-mass-action equilibrium, and a rational Jacobian with eigenvalue 1/500 + (51/500)i. The second has six reactions, at most two molecules on each side of every reaction, no catalysts, and classical mass-action kinetics with fixed integer kinetic orders. At a positive rational equilibrium its Jacobian has integer entries and an unstable nonreal eigenvalue with real part between 0 and 5, certified by…",
+  "domain": "math.DS",
+  "tags": [
+    "msc:15A18",
+    "msc:34D20",
+    "D-unstable cores",
+    "Lean formalization",
+    "chemical reaction networks",
+    "classical mass action",
+    "counterexample",
+    "elementary bimolecular reactions",
+    "generalized mass action",
+    "parameter-rich kinetics"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-18",
+  "version": 1,
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": true,
+  "formalizations": [
+    "https://palomar-registry.org/entry?id=PALOMAR-2026-09-25-000012&version=1"
+  ],
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

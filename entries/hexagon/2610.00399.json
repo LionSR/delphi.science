@@ -1,0 +1,38 @@
+{
+  "key": "2610.00399",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00399v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00399v1",
+  "title": "A covering-strip and moment certificate for Korenblum's constant",
+  "authors": [
+    "Ricardo Pinho"
+  ],
+  "summary": "We give an explicit certificate for c_2>=54/125=0.432, where c_2 is Korenblum's constant for the Bergman space. This is an unrefereed preprint. The construction combines an elementary two-zero Schwarz estimate on the covering strip of an annulus, the classical hyperbolic Jung inequality, and Wikström's moment-duality criterion. A rational twelve-atom measure with a Lebesgue tail satisfies the required inequalities for every moment index. Two independently implemented exact checkers, one using Arb and one using only integer interval arithmetic, verify the quantitative hypotheses. The best…",
+  "domain": "math.CV",
+  "tags": [
+    "msc:30H20",
+    "msc:30C80",
+    "msc:65G30",
+    "Bergman space",
+    "Korenblum's constant",
+    "computer-assisted proof",
+    "hyperbolic Jung inequality",
+    "interval arithmetic",
+    "moment duality"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-19",
+  "version": 1,
+  "ai_models": [
+    "Codex",
+    "Arb ball arithmetic (python-flint)"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

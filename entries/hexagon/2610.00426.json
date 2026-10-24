@@ -1,0 +1,36 @@
+{
+  "key": "2610.00426",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00426v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00426v1",
+  "title": "An explicit upper-bound certificate for the essential minimum of the Zhang–Zagier height",
+  "authors": [
+    "Ricardo Pinho"
+  ],
+  "summary": "We give an exact certificate proving $C_{82}<0.2534449$ for the essential minimum of $h(\\alpha)+h(1-\\alpha)$, where $h$ is the absolute logarithmic Weil height. We use Doche's limit-point method, building on Grinsztajn's factor library and, in particular, Épi's unequal-multiplicity construction. We retain Épi's denominator factors, add Doche's $P_7$, and add 25 numerator factors found by LP-dual-weighted evaluation lattices with LLL. Joint linear-program re-optimisation is followed by exact rational rounding. Two separately written ball-arithmetic checkers certify the bound; a further…",
+  "domain": "math.NT",
+  "tags": [
+    "math.OC",
+    "msc:11G50",
+    "msc:11R06",
+    "msc:65G30",
+    "Doche limit-point method",
+    "LLL",
+    "Weil height",
+    "Zhang-Zagier height",
+    "computer-assisted proof",
+    "essential minimum",
+    "linear programming"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "version": 1,
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

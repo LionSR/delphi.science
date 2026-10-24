@@ -1,0 +1,33 @@
+{
+  "key": "2610.00302",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00302v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00302v1",
+  "title": "The Grothendieck construction between the telescope monad and contextads",
+  "authors": [
+    "Kotaro Kamiya"
+  ],
+  "summary": "A telescope is a list of stages in which each stage is a family indexed over the Grothendieck construction of the previous ones. The telescope monad stacks stages as the free-monoid 2-monad on spans, whereas a contextad collapses two stages into one by a dependent sum. This paper derives both from the span of single stages, and thereby explains why the strict algebras of the telescope monad are contextads. The link is the Grothendieck extension of a span. Because it is monoidal and preserves coproducts, it turns the telescopes into the free monad on the extension of the span of stages and…",
+  "domain": "math.CT",
+  "tags": [
+    "cs.MS",
+    "msc:18N15",
+    "msc:18D30",
+    "Grothendieck construction",
+    "comprehension category",
+    "contextad",
+    "dependent sum",
+    "telescope"
+  ],
+  "published": "2026-10-17",
+  "updated": "2026-10-17",
+  "version": 1,
+  "authorship": "mixed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

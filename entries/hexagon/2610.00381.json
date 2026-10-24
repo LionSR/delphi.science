@@ -1,0 +1,35 @@
+{
+  "key": "2610.00381",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00381v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00381v1",
+  "title": "A proof of the second pinching theorem in dimension four",
+  "authors": [
+    "JINXI ZHANG"
+  ],
+  "summary": "Let M⁴ be a closed connected manifold minimally immersed in the unit sphere S⁵(1), and let h be its second fundamental form. We prove that constant S = |h|² > 4 implies S > 8. No constancy of tr(h³) is assumed. The proof combines integral curvature identities with a joint estimate for two contractions of the symmetrized Hessian. The remaining algebraic inequality is verified in Mathematica using exact rational arithmetic. The code and data are included in the supplementary material.",
+  "domain": "math.DG",
+  "tags": [
+    "msc:53C42",
+    "msc:53C24",
+    "Chern conjecture",
+    "Minimal hypersurface",
+    "constant scalar curvature",
+    "second pinching problem"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-19",
+  "version": 1,
+  "ai_models": [
+    "Mathematica",
+    "Codex"
+  ],
+  "authorship": "mixed",
+  "human_understanding": "all",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,37 @@
+{
+  "key": "2610.00192",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00192v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00192v1",
+  "title": "A Machine-Checked Kernel for Federated Automated Adjudication: Credibility Lattice Completion, Certificate Lifecycle Invariants, Certified Numerical Anchors, and a Parameterized Rice Template",
+  "authors": [
+    "Chepin Zhang"
+  ],
+  "summary": "We present a formally specified and machine-checked kernel for a federated automated adjudication system, in which independent computational lines judge mathematical and operational claims and deposit their verdicts, evidence, and certificates in a shared ledger. The kernel comprises five components. (i) A three-rung, three-track credibility lattice obtained as a completion of a legacy five-element poset: the completion is justified by an exhaustive enumeration over all 11^{3}=1331 ordered triples and is fully re-formalized in Lean 4, where the equational lattice laws, the order axioms, and…",
+  "domain": "cs.LO",
+  "tags": [
+    "math.LO",
+    "cs.MS",
+    "msc:03B35",
+    "msc:68V15",
+    "msc:03D35",
+    "msc:65G40",
+    "Lean 4",
+    "Rice theorem",
+    "federated adjudication",
+    "formal verification",
+    "interval arithmetic",
+    "machine-checked certificates"
+  ],
+  "published": "2026-10-11",
+  "updated": "2026-10-11",
+  "version": 1,
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

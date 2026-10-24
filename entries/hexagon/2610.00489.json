@@ -1,0 +1,40 @@
+{
+  "key": "2610.00489",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00489v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00489v1",
+  "title": "On the tightness of the Parthasarathy and Schmidt rank bounds for extremal tracial couplings",
+  "authors": [
+    "Dipankar Dey",
+    "Somnath Jana",
+    "Soumyashant Nayak"
+  ],
+  "summary": "Let $2 \\le a \\le b$, and let $\\rho_A, \\rho_B$ be density operators on $\\C^a$ and $\\C^b$, respectively. Let $\\mathcal{C}(\\rho_A, \\rho_B)$ denote the set of bipartite couplings on $\\C^a \\otimes \\C^b$ with these marginals. Parthasarathy showed that every extreme coupling has rank at most $\\KRP(a,b) := \\lfloor\\sqrt{a^2+b^2-1}\\rfloor$. It is not known for which dimension pairs $(a, b)$ this bound is tight. We restrict attention to the tracial case $\\rho_A = I_a/a$, $\\rho_B = I_b/b$. For the Parthasarathy bound, we construct extreme couplings of rank $r$ from pairs of length-$r$ finite unit-norm…",
+  "domain": "math.OA",
+  "tags": [
+    "math.FA",
+    "quant-ph",
+    "msc:81P45",
+    "msc:42C15",
+    "msc:15B48",
+    "Completely positive maps",
+    "Extremal tracial coupling",
+    "Finite unit-norm tight frames (FUNTFs)",
+    "Kraus operators",
+    "Quantum marginal problem"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "version": 1,
+  "ai_models": [
+    "Kimi",
+    "Gemini"
+  ],
+  "authorship": "human",
+  "human_understanding": "all",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

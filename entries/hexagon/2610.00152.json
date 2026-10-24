@@ -1,0 +1,40 @@
+{
+  "key": "2610.00152",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00152v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00152v1",
+  "title": "A Verified Constructive Reduction of the Cook-Levin Theorem in Lean 4: Bridging the Gap Between Complexity Theory and Formal SAT Encodings",
+  "authors": [
+    "Jonathan 𝑓(n) Reed"
+  ],
+  "summary": "While the Cook-Levin theorem is fundamental to computational complexity, formalizations in proof assistants often rely on high-level arguments rather than constructing the concrete SAT formula. Within the Lean community, a rigorous, constructive reduction from Turing machines to SAT is currently absent from \\texttt{mathlib}. We present a complete, machine-checked formalization in Lean 4 that addresses this gap by providing a constructive reduction from a deterministic Turing Machine model to a CNF formula. By rigorously defining the interface between the high-level computation model and the…",
+  "domain": "cs.CC",
+  "tags": [
+    "math.LO",
+    "cs.DM",
+    "cs.FL",
+    "cs.LO",
+    "msc:68Q15",
+    "msc:68V15",
+    "msc:03D15",
+    "msc:03D10",
+    "msc:03F65",
+    "Conjunctive Normal Form",
+    "Constructive Reduction",
+    "Cook-Levin Theorem"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-07",
+  "version": 1,
+  "ai_models": [
+    "Gemini"
+  ],
+  "authorship": "mixed",
+  "human_understanding": "all",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

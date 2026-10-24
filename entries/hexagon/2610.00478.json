@@ -1,0 +1,38 @@
+{
+  "key": "2610.00478",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00478v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00478v1",
+  "title": "The Number of Terms in Greedy Fibonacci--Lucas Representations",
+  "authors": [
+    "Deep Bhattacharjee",
+    "Ushashi Bhattacharya"
+  ],
+  "summary": "We prove Kimberling's conjecture on greedy representations by Fibonacci and Lucas numbers: the ratio of the number of Zeckendorf summands of $1,\\dots,n$ to the number of terms of their greedy representations tends to a limit in $(1.2,1.4)$, and the limit is $(5-\\sqrt5)/2$. We also prove the conjectures of Greathouse and Kurkov on the number of terms of the greedy representation.",
+  "domain": "math.NT",
+  "tags": [
+    "msc:11B39",
+    "msc:11A67",
+    "msc:68V15",
+    "Fibonacci numbers",
+    "Lucas numbers",
+    "Zeckendorf representation",
+    "formal verification",
+    "greedy algorithm",
+    "summatory function"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "version": 1,
+  "ai_models": [
+    "Claude Code"
+  ],
+  "authorship": "mixed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

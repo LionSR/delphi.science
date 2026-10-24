@@ -1,0 +1,33 @@
+{
+  "key": "2610.00297",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00297v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00297v1",
+  "title": "Bounds for Erdős Problem #188: $7\\le k\\le 60$",
+  "authors": [
+    "Carson Crocker"
+  ],
+  "summary": "Let $\\ell_k$ denote $k$ collinear points with consecutive distances $1$. Erdős Problem #188 asks for the least $k$ such that the plane can be colored red and blue with no two red points at distance $1$ and no blue copy of $\\ell_k$. Previous work gives $6\\le k\\le 6330$, with the lower bound due to Tsaturian and the upper bound due to Currier, Mody, Xie and Zhang. We prove $7\\le k\\le 60$. For the lower bound we show that every red/blue coloring of the plane contains two red points at distance $1$ or a blue $\\ell_6$, following the skeleton of Arman and Tsaturian's proof in three dimensions;…",
+  "domain": "math.CO",
+  "tags": [
+    "msc:05D10",
+    "DRAT",
+    "Erdős problems",
+    "Euclidean Ramsey theory",
+    "SAT",
+    "interval arithmetic",
+    "periodic coloring",
+    "unit distance"
+  ],
+  "published": "2026-10-17",
+  "updated": "2026-10-17",
+  "version": 1,
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

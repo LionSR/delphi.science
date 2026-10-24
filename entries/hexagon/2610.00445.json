@@ -1,0 +1,38 @@
+{
+  "key": "2610.00445",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00445v2",
+  "pdf": "https://hexagonmath.org/pdf/2610.00445v2",
+  "title": "Vanishing of Higher Magnitude Homology for Finite Prefix Models",
+  "authors": [
+    "Ryoji Hirayama"
+  ],
+  "summary": "Bradley and Vigneaux define a generalized distance on a finite prefix poset using next-token probabilities. They conjecture that its higher magnitude homology vanishes. Motivated by their expression of magnitude as a weighted sum of homological Euler characteristics, we verify this conjecture for their explicit complex, in which both endpoint faces are zero. For each finite length, the homology groups in degrees two and above are zero. The degree-one homology group is free abelian, with one generator for each positive-probability edge of that length. The proof constructs a contracting…",
+  "domain": "math.CT",
+  "tags": [
+    "math.AT",
+    "msc:18G90",
+    "msc:18D20",
+    "msc:55N35",
+    "enriched categories",
+    "language models",
+    "magnitude homology",
+    "prefix posets"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-23",
+  "version": 2,
+  "ai_models": [
+    "Codex",
+    "Codex",
+    "Rocq"
+  ],
+  "authorship": "mixed",
+  "human_understanding": "all",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,40 @@
+{
+  "key": "2610.00388",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00388v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00388v1",
+  "title": "Exact interfaces for modular autocatalytic networks",
+  "authors": [
+    "Michael Mislan"
+  ],
+  "summary": "We study which information about an autocatalytic reaction network suffices for exact composition with other modules. For the maximum amplification factor, threshold-indexed species-price cones compose by exact set operations, while scalar optima do not. Autocatalytic child-selection cores are reconstructed from complete, uniquely matched ordinary-core anchors using alternating exchange paths and certified rational semipositivity tests. For irreducible unary diluted source networks, positive-composition certificates characterize growth, criticality and extinction under arbitrary species…",
+  "domain": "math.OC",
+  "tags": [
+    "math.CO",
+    "msc:92C42",
+    "msc:15A39",
+    "msc:05C70",
+    "msc:15B48",
+    "Lean formalization",
+    "autocatalytic networks",
+    "boundary traces",
+    "child-selection cores",
+    "degradation",
+    "maximum amplification factor",
+    "modular composition"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-19",
+  "version": 1,
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": true,
+  "formalizations": [
+    "https://palomar-registry.org/entry?id=PALOMAR-2026-09-25-000027&version=1"
+  ],
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

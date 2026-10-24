@@ -1,0 +1,38 @@
+{
+  "key": "2610.00368",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00368v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00368v1",
+  "title": "Deciding D-stability is coNP-hard",
+  "authors": [
+    "Michael Mislan"
+  ],
+  "summary": "The computational difficulty of D-stability, raised by Chen, Fan and Yu (1995, doi:10.1016/0167-6911(94)00036-U), is addressed by an explicit integer-matrix reduction from PARTITION. For positive weights of total 2T, the construction produces a matrix of order m + 4 that is D-stable exactly when no subset has weight T. When an equal split exists, some positive diagonal scaling has an eigenvalue with strictly positive real part. A Pell recursion supplies the parameters, with a logarithmic search bound and an explicit bound on every matrix entry. These bounds give polynomial binary output…",
+  "domain": "cs.CC",
+  "tags": [
+    "math.DS",
+    "msc:15A18",
+    "msc:68Q17",
+    "msc:93D09",
+    "D-stability",
+    "Lean formalization",
+    "PARTITION",
+    "Pell equation",
+    "coNP-hardness",
+    "diagonal scaling"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-18",
+  "version": 1,
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": true,
+  "formalizations": [
+    "https://palomar-registry.org/entry?id=PALOMAR-2026-09-30-000019&version=1"
+  ],
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

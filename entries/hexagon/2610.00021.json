@@ -1,0 +1,42 @@
+{
+  "key": "2610.00021",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00021v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00021v1",
+  "title": "A Fourier Consequence for Lattice Kissing Numbers and Average Contacts",
+  "authors": [
+    "Scott Kominers"
+  ],
+  "summary": "We deduce a new asymptotic upper bound $K_{\\mathrm{lat}}(n)\\leq\\left(\\sqrt{2e/\\pi}+o(1)\\right)^n$ on the maximal lattice kissing number $K_{\\mathrm{lat}}(n)$ in dimension $n$, using the explicit auxiliary functions constructed in OpenAI's \"Ten Advances\" preprint. The same bound holds for the average contact degree of a finite packing of congruent balls. The bound's base-$2$ exponential rate rounds to $0.3956$, matching the value extrapolated empirically by Afkhami-Jeddi, Cohn, Hartman, de Laat, and Tajdini in 2020.",
+  "domain": "math.MG",
+  "tags": [
+    "math.CO",
+    "math.NT",
+    "msc:11H31",
+    "msc:52C17",
+    "msc:42B10",
+    "Contact numbers",
+    "Discrete geometry",
+    "Euclidean lattices",
+    "Fourier linear programming bounds",
+    "Geometry of numbers",
+    "Kissing numbers",
+    "Sphere packing"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "version": 1,
+  "ai_models": [
+    "GPT",
+    "Claude Fable",
+    "Poe"
+  ],
+  "authorship": "mixed",
+  "human_understanding": "all",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

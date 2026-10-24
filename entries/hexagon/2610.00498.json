@@ -1,0 +1,37 @@
+{
+  "key": "2610.00498",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00498v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00498v1",
+  "title": "Upper $k$-star-forming sets and $k$-independence in bipartite graphs",
+  "authors": [
+    "Deep Bhattacharjee"
+  ],
+  "summary": "Sahbi conjectured that the $k$-independence number $\\beta_k$ and the upper $k$-star-forming number $\\SF_k$ agree on bipartite graphs, and in particular on chain graphs, and asked whether $\\beta_3=\\SF_3$ on triangle-free graphs. For every $k\\ge3$ we give a connected bipartite graph on $3k+3$ vertices with $\\beta_k=2k+2$ and $\\SF_k\\ge3k$. On chain graphs, however, $\\beta_k=\\SF_k$ for every $k$. We also show, answering another of his questions, that deciding whether a bipartite graph has a minimal $2$-star-forming set with at least $t$ vertices is NP-complete.",
+  "domain": "math.CO",
+  "tags": [
+    "msc:05C69",
+    "msc:68Q17",
+    "$k$-independence",
+    "$k$-star-forming set",
+    "NP-completeness",
+    "bipartite graph",
+    "chain graph",
+    "formal verification",
+    "upper domination"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "version": 1,
+  "ai_models": [
+    "Claude Code"
+  ],
+  "authorship": "mixed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

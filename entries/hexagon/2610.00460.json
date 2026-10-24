@@ -1,0 +1,40 @@
+{
+  "key": "2610.00460",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00460v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00460v1",
+  "title": "Two conjectures of Wormald on Hamilton cycles in tournaments",
+  "authors": [
+    "Deep Bhattacharjee"
+  ],
+  "summary": "For a regular tournament on $d$ vertices with skew adjacency matrix $S$, the Hessian determinant $H$ that Wormald attached to its random blow-ups equals $d\\det(d^2I+S^2)/\\det(d^2I-S^2)$. Hence $H\\neq0$ and $d/H$ is the square of a rational number, as Wormald conjectured. For the cyclic tournament it gives $\\sqrt{d/H}=\\bigl((d+1)^d+(d-1)^d\\bigr)/\\bigl((d+i)^d+(d-i)^d\\bigr)$, so the associated constants tend to $\\cosh 1/\\cos 1=2.8559578925\\ldots$; this proves a second conjecture of Wormald and identifies his numerical constant.",
+  "domain": "math.CO",
+  "tags": [
+    "math.RA",
+    "msc:05C20",
+    "msc:05C45",
+    "msc:05C50",
+    "msc:05C80",
+    "msc:15A15",
+    "Hamilton cycle",
+    "Hessian determinant",
+    "formal verification",
+    "random blow-up",
+    "skew-symmetric matrix",
+    "tournament"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "version": 1,
+  "ai_models": [
+    "Claude Code"
+  ],
+  "authorship": "mixed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

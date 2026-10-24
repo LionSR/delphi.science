@@ -1,0 +1,35 @@
+{
+  "key": "2610.00461",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00461v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00461v1",
+  "title": "An explicit elementary proof of no Landau--Siegel zeros",
+  "authors": [
+    "Victor Z. Guo"
+  ],
+  "summary": "We give an elementary proof of the absence of Landau--Siegel zeros with the explicit constant $c=1/100$. For every primitive quadratic Dirichlet character $\\chi$ of conductor $q\\ge3$, each real zero $\\beta\\in(0,1)$ of $L(s,\\chi)$ satisfies $(1-\\beta)\\log q>c$. The proof combines integer coefficient counting, polynomial congruences, a paired-tail hyperbola estimate, and a logarithmically weighted comparison of positive sums. All required constants are explicit, and one choice of parameters covers every conductor. The argument uses elementary arithmetic and real summation and integration,…",
+  "domain": "math.NT",
+  "tags": [
+    "msc:11M20",
+    "msc:11N05",
+    "Frobenius congruences",
+    "Landau--Siegel zeros",
+    "elementary methods",
+    "explicit estimates",
+    "quadratic characters"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "version": 1,
+  "ai_models": [
+    "ChatGPT"
+  ],
+  "authorship": "mixed",
+  "human_understanding": "all",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,38 @@
+{
+  "key": "2610.00240",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00240v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00240v1",
+  "title": "A cubic variance bound for matching deficiency",
+  "authors": [
+    "Matěj Kripner",
+    "Václav Rozhoň",
+    "Robert Šámal",
+    "Martin Šindelář",
+    "Adrián Zámečník"
+  ],
+  "summary": "Let $M$ be a uniformly random matching of a finite graph, let $D=\\nu-\\mathbb E|M|$ be its expected deficiency from a maximum matching, and let $V=\\operatorname{Var}(|M|)$. Kahn showed that $D$ and $V$ tend to infinity together, proved $D=O(V^4)$ when $V$ is bounded below, and conjectured $D=O(V^3)$. We prove $D\\le41V+104V^2+64V^3$ for every graph, confirming the conjecture, and show that the exponent is attained by connected bipartite graphs with perfect matchings. The proof combines alternating-path identities for monomer probabilities with the sharp estimate $|V(G)-V(G-v)|\\le1/4$.",
+  "domain": "math.CO",
+  "tags": [
+    "math.PR",
+    "msc:05C70",
+    "msc:60C05",
+    "matching deficiency",
+    "matchings",
+    "variance"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "version": 1,
+  "ai_models": [
+    "Bolzano"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

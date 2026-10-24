@@ -1,0 +1,31 @@
+{
+  "key": "2610.00448",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00448v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00448v1",
+  "title": "A polynomial algorithm for general d-position in trees",
+  "authors": [
+    "Daniel Adam Pyle"
+  ],
+  "summary": "A vertex set is in general $d$-position if no three of its vertices lie on a shortest path of length at most $d$. We give an exact algorithm for an $n$-vertex tree in $O(n(D+2)^4)$ time and $O(n(D+2)^2)$ space, where $D=\\min\\{d,n-1\\}$. In particular, the problem is polynomial-time solvable when the threshold is part of the input. This answers the tree-complexity question posed by Klav\\v zar, Rall, and Yero in 2021 and retained in the August 2026 version of the general position survey. The dynamic program uses two truncated distances at each rooted boundary: the nearest selected vertex and…",
+  "domain": "math.CO",
+  "tags": [
+    "msc:05C12",
+    "msc:05C85",
+    "msc:68R10"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-21",
+  "version": 1,
+  "ai_models": [
+    "Lyra (OpenAI-powered assistant; underlying model version not specified)"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "none",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

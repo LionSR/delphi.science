@@ -1,0 +1,28 @@
+{
+  "key": "2610.00504",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00504v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00504v1",
+  "title": "Minimum Prime Bound in Square Intervals",
+  "authors": [
+    "Min Min Oo Oo"
+  ],
+  "summary": "This paper presents a proof of Legendre’s Conjecture by analyzing the distribution of odd composite and their elimination through odd composite sequences. The odd integer sequence is expressed as 𝑂≥3 = 3 + 2𝑟𝑂, while odd composite numbers are represented as 𝑂𝑝 = 𝑝2 + 2𝑝𝑟𝑝, where 𝑝 is prime and 𝑟𝑝 ≥ 0. Each prime-square sequence introduces a systematic elimination of odd composite numbers, reducing the density of primes in the sequence. By sequentially applying elimination factors (𝑞 − 1)/𝑞 for primes 𝑞 ≥ 3, we derive a lower bound for prime density: d/(dr_O ) N_p≥2/p Considering the…",
+  "domain": "math.NT",
+  "tags": [
+    "math.GM",
+    "msc:11A41",
+    "Legendre's Conjecture",
+    "Prime Numbers"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "version": 1,
+  "authorship": "human",
+  "human_understanding": "all",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

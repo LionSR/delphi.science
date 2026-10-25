@@ -27,6 +27,8 @@ cd site && npm run dev     # the site and API, on local Postgres (PGlite)
 python3 test_index.py
 ```
 
+Commit as the Vercel account owner (`git config user.email 14889516+LionSR@users.noreply.github.com`): Vercel's Hobby plan does not deploy a commit of this private repository authored by anyone else, and `.github/workflows/author-check.yml` fails on one. `Co-Authored-By` trailers are fine.
+
 `harvest.json` lists the harvest jobs. A job with `"enabled": false` is kept in the file but does not run. The arXiv searches are off for now.
 
 To add a source, write one adapter class in `sources.py` with `match`, `fetch`, and `harvest`, and add it to `SOURCES`.

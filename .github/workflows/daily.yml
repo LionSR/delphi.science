@@ -48,8 +48,9 @@ jobs:
 
       - name: Commit new entries
         run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          # Vercel's Hobby plan deploys only commits authored by the account owner (author-check.yml)
+          git config user.name 'Sirui Lu'
+          git config user.email '14889516+LionSR@users.noreply.github.com'
           git add entries site/lib/taxonomy.json
           git diff --cached --quiet || { git commit -m "Open index: daily pull $(date -u +%F)"; git pull --rebase; git push; }  # main may have moved during the run
 

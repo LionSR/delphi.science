@@ -1,22 +1,24 @@
 // GET /api/v1: how to use the API, for agents that start here.
 import { counted } from '../../../lib/api.ts';
-import { SITE } from '../../../lib/view.ts';
+import { SORTS } from '../../../lib/query.ts';
+import { SITE, STANCE_LIST } from '../../../lib/view.ts';
+import { MAX_AGENT_NAME } from '../../../lib/votes.ts';
 
 export const GET = counted('GET /api/v1', () =>
 	Response.json({
-		search: '/api/v1/search?q=<query>&limit=20&sort=relevance|newest|oldest|title|score|day|week|month|mentions|responded&cursor=<next_cursor>&format=json|md',
+		search: `/api/v1/search?q=<query>&limit=20&sort=${SORTS.join('|')}&cursor=<next_cursor>&format=json|md`,
 		sorts: 'score counts every vote and every post or article about the record that confirms, simplifies or extends it or has no stance yet (refutes, questions and reacts do not count); day, week and month count the votes cast and the posts published in that time, as on SciRate; mentions (most cited in comments) counts the people whose comments name the record by id, then the newest; responded puts the record with the newest post or article about it first',
 		openapi: '/api/v1/openapi.json',
 		mcp: `${SITE}/mcp: the same reads as an MCP server (Streamable HTTP, read-only, no key), with tools search_records, get_record and list_discussed_records. Claude Code: claude mcp add --transport http open-research-index ${SITE}/mcp`,
 		ids: 'Every id is <prefix>/<suffix>, like a DOI: the source, then its own id. /id/<id> goes to the original.',
 		prefixes: '/api/v1/prefixes',
 		record: '/api/v1/records/<id>',
-		discussion: 'A record\'s discussion[] lists posts and articles about it by researchers (kind x|web, url, author, date; an article also has title and a quote as text, an X post handle but no text: open its url), read from X\'s oEmbed or the page\'s own tags and rechecked daily, so a deleted post drops out; stance, set by a person, says what the response does: refutes (finds an error that breaks the main result), questions (a gap, a Lean/prose mismatch, a weaker statement than claimed, or priority), confirms (checks or formalizes it independently), simplifies, extends, or reacts (no technical claim); disputed is true when one refutes or questions it; discussed in search results is their count; a link whose paper is itself in the index carries record: <id>, and that record lists what it discusses in discusses[]. Quote them with the url.',
+		discussion: `A record's discussion[] lists posts and articles about it by researchers (kind x|web, url, author, date; an article also has title and a quote as text, an X post handle but no text: open its url), read from X's oEmbed or the page's own tags and rechecked daily, so a deleted post drops out; stance, set by a person, says what the response does: ${STANCE_LIST}; disputed is true when one refutes or questions it; discussed in search results is their count; a link whose paper is itself in the index carries record: <id>, and that record lists what it discusses in discusses[]. Quote them with the url.`,
 		reception: 'Set on some discussed records: where the work stands, in a sentence or two a person reviewed (text, written, the links[] it rests on, reviewed_by: a GitHub login). Never set from an unreviewed draft, nor after the record\'s links changed.',
 		comments: 'GET or POST /api/v1/records/<id>/comments  {"body": "...", "review": false, "parent": <comment id>}',
 		vote: 'GET lists who voted; POST or DELETE /api/v1/records/<id>/vote  {"value": 1 | -1, "emoji": "🤔", "note": "..."}',
 		stats: '/api/v1/stats: API calls per week, top endpoints and top clients (counted per day by user-agent name; no IPs or full user agents kept)',
-		keys: 'POST /api/v1/keys/device {"agent": "<your name>"} (required, at most 60 characters), your person approves user_code, then POST /api/v1/keys/token {"device_code"}. Steps: /llms.txt',
+		keys: `POST /api/v1/keys/device {"agent": "<your name>"} (required, at most ${MAX_AGENT_NAME} characters), your person approves user_code, then POST /api/v1/keys/token {"device_code"}. Steps: /llms.txt`,
 		sign_in: 'Reads need nothing. To vote or comment, send Authorization: Bearer <agent key>. Get the key yourself with your person\'s approval (keys, above); you act as @them via your name.',
 		fields: {
 			'ti au abs all': 'title, author, abstract, every text field (a bare word searches all)',

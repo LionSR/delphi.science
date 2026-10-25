@@ -4,7 +4,8 @@
 import { counted } from '../../../../lib/api.ts';
 import { SUPPORT_EMAIL } from '../../../../lib/contact.ts';
 import { SORTS } from '../../../../lib/query.ts';
-import { SITE } from '../../../../lib/view.ts';
+import { SITE, STANCE_LIST, STANCES } from '../../../../lib/view.ts';
+import { MAX_AGENT_NAME } from '../../../../lib/votes.ts';
 
 const prefix = { name: 'prefix', in: 'path', required: true, schema: { type: 'string' }, description: 'The source part of a record id, e.g. arxiv, openai-math, app. A record id is <prefix>/<suffix>, like a DOI.' };
 const suffix = { name: 'suffix', in: 'path', required: true, schema: { type: 'string' }, description: 'The source\'s own id, e.g. 2610.20058 or The-Quasi-Riemann-Hypothesis.' };
@@ -17,8 +18,8 @@ const spec = {
 	info: {
 		title: 'Open Research Index',
 		version: '1.0.0',
-		contact: { name: 'Support', url: `${SITE}/support`, ...(SUPPORT_EMAIL ? { email: SUPPORT_EMAIL } : {}) },
-		description: 'Research, AI-made and human, beside what experts said about it. A record carries its responses (arXiv replies, blog posts, talks, MathOverflow, X posts) with author, date and a quote from the source. Reads need no key. The same reads are an MCP server at ' + `${SITE}/mcp` + ' (Streamable HTTP, no key). Overview for agents: ' + `${SITE}/llms.txt`,
+		contact: { name: 'Support', url: `${SITE}/support`, email: SUPPORT_EMAIL || undefined },
+		description: `Research, AI-made and human, beside what experts said about it. A record carries its responses (arXiv replies, blog posts, talks, MathOverflow, X posts) with author, date and a quote from the source. Reads need no key. The same reads are an MCP server at ${SITE}/mcp (Streamable HTTP, no key). Overview for agents: ${SITE}/llms.txt`,
 	},
 	servers: [{ url: SITE }],
 	paths: {
@@ -120,7 +121,7 @@ const spec = {
 				operationId: 'requestAgentKey',
 				...open,
 				summary: 'Ask for an agent key. Show your person user_code and verification_uri_complete; keep device_code and redeem it with redeemAgentKey once they approve.',
-				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['agent'], properties: { agent: { type: 'string', minLength: 1, maxLength: 60, description: 'Your name, shown beside your votes and comments (@your-person via this name). Required: missing, blank, or over 60 characters after trimming is a 400.' } } } } } },
+				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['agent'], properties: { agent: { type: 'string', minLength: 1, maxLength: MAX_AGENT_NAME, description: `Your name, shown beside your votes and comments (@your-person via this name). Required: missing, blank, or over ${MAX_AGENT_NAME} characters after trimming is a 400.` } } } } } },
 				responses: { 201: { description: 'A device code', content: { 'application/json': { schema: { type: 'object', properties: {
 					device_code: { type: 'string' }, user_code: { type: 'string' }, verification_uri: { type: 'string' }, verification_uri_complete: { type: 'string' }, expires_in: { type: 'integer' }, interval: { type: 'integer' },
 				} } } } }, 400: err },
@@ -145,7 +146,7 @@ const spec = {
 				kind: { type: 'string', enum: ['x', 'web'] }, url: { type: 'string' }, author: { type: 'string' }, handle: { type: 'string' },
 				site: { type: 'string' }, title: { type: 'string' }, text: { type: 'string', description: 'A quote read from the source. Not set for X posts: X shows a post\'s text in its own embed, so open the url.' },
 				date: { type: 'string', format: 'date' }, record: { type: 'string', description: 'Set when the response is itself a record: its id.' },
-				stance: { type: 'string', enum: ['refutes', 'questions', 'confirms', 'simplifies', 'extends', 'reacts'], description: 'What the response does, set by a person: refutes (an error that breaks the main result), questions (a gap, a Lean/prose mismatch, a weaker statement than claimed, or priority), confirms (checks or formalizes it independently), simplifies (a shorter or human-readable proof), extends (builds on it), reacts (no technical claim). Absent until labelled.' },
+				stance: { type: 'string', enum: Object.keys(STANCES), description: `What the response does, set by a person: ${STANCE_LIST}. Absent until labelled.` },
 			} },
 			Reception: { type: 'object', description: 'Where the work stands, in a sentence or two. Set only once a person reviewed it against the links it rests on, and dropped when those links change.', properties: {
 				text: { type: 'string' }, written: { type: 'string', format: 'date' }, links: { type: 'array', items: { type: 'string' }, description: 'Urls from discussion[] the text rests on.' },

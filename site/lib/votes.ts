@@ -109,5 +109,6 @@ export async function votes(db: Db, recordId: string) {
 
 async function tally(db: Db, recordId: string) {
 	const row = (await db.query<{ score: number; reactions: Record<string, number> }>('SELECT score, reactions FROM open_index.records WHERE id = $1', [recordId])).rows[0];
+	if (!row) throw new QueryError(`no record ${JSON.stringify(recordId)}`, 'Use an id from a search result.'); // unvote on an unknown id
 	return { id: recordId, score: row.score, reactions: row.reactions };
 }

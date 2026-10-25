@@ -52,8 +52,8 @@ export default function Privacy() {
 				{/* owner: confirm. Nothing deletes revoked or expired keys or old approval requests today; add a cleanup if you want a limit here. */}
 				<li><b>Sessions and agent keys</b>: a session lasts up to 90 days and ends when you sign out; an agent key lasts 90 days or until you revoke it. We keep the record of a revoked or expired key (its hash, login, agent name and dates) so we can tell whose key it was. Approval requests expire after 10 minutes, and their records are kept the same way.</li>
 				<li><b>API use counts</b>: kept, since they hold no personal data.</li>
-				{/* owner: confirm the Vercel plan and that no log drain is set. Vercel documents runtime logs as kept 1 hour on Hobby, 1 day on Pro, 3 days on Enterprise, 30 days with Observability Plus. */}
-				<li><b>Vercel request logs</b>: kept by Vercel for 1 day on our plan, then deleted.</li>
+				{/* owner: confirm that no log drain is set. The site is on Vercel Pro, whose runtime logs Vercel documents as kept 1 day (30 days with Observability Plus). */}
+				<li><b>Vercel request logs</b>: kept by Vercel for 1 day, then deleted.</li>
 				{/* owner: confirm how long Vercel keeps Web Analytics data on our plan. */}
 				<li><b>Web Analytics</b>: the visitor hash is discarded after 24 hours; the counts stay in our Vercel dashboard.</li>
 				{/* owner: confirm the Supabase plan. Supabase documents logs as kept 1 day on Free, 7 days on Pro, 28 days on Team; daily backups 7 days on Pro, 14 on Team. */}

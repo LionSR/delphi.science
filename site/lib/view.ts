@@ -33,6 +33,6 @@ export const tally =(r: Record<string, unknown>) => {
 	if (r.disputed) parts.push('disputed');
 	if (r.reviews) parts.push(`${r.reviews} reviews`);
 	if (r.comments) parts.push(`${r.comments} comments`);
-	if (r.mentions) parts.push(`mentioned by ${r.mentions}`);
+	if (r.mentions) parts.push(`cited in comments by ${r.mentions}`);
 	return parts.join(' · ');
 };

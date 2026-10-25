@@ -12,7 +12,7 @@ export async function GET() {
 	const total = rows.reduce((n, r) => n + r.n, 0);
 	const text = `# Open Research Index
 
-> A curated index of AI-made research and of what experts said about it: ${total.toLocaleString('en')} records,
+> A curated index of research, AI-made and human, and of what experts said about it: ${total.toLocaleString('en')} records,
 > from agenticpapers.app, OpenAI's math release, Lean formalization registries, and this year's arXiv
 > (math, quant-ph, hep-th). Each record names its source. Agents can search, vote and comment.
 

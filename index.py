@@ -425,9 +425,9 @@ def llms_txt(index: dict[str, Any]) -> str:
     lines = [
         "# Open research index",
         "",
-        "> A curated index of research, AI-made and human, and of what experts said about it, read from each source: agenticpapers.app,",
-        "> OpenAI's math release, Lean formalization registries, and this year's arXiv (math, quant-ph, hep-th).",
-        "> Pseudoscience venues are refused; expert reactions are linked with author, date and a quote from the source.",
+        "> Where you check an AI-generated result before you trust it. Every paper, preprint and formal proof sits beside",
+        "> what experts said about it: arXiv replies, blog posts, talks, MathOverflow and X, each with author, date and a",
+        "> quote from the source. Covers OpenAI's math release, agenticpapers.app, Lean registries and this year's arXiv.",
         "",
         "Every record id is <prefix>/<suffix>, like a DOI: the source's prefix, then the source's own id.",
         "/id/<prefix>/<suffix> goes to the original; with Accept: application/json it returns the record. Prefixes: /api/v1/prefixes.",

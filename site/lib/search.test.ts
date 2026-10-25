@@ -212,6 +212,11 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		assert.ok(got !== 'pending');
 		assert.deepEqual(await voterFromKey(db, got.key), { login: 'gina', agent: 'Claude Code' });
 		await assert.rejects(redeemDevice(db, d.device_code), /used/);
+		for (const [agent, fix] of [[undefined, /your name/], ['', /your name/], ['   ', /your name/], [42, /your name/], ['x'.repeat(61), /at most 60/]] as const) {
+			await assert.rejects(startDevice(db, agent), (e: unknown) => e instanceof QueryError && fix.test(e.fix), String(agent));
+		}
+		await assert.rejects(createAgentKey(db, 'gina', 'y'.repeat(61)), /more than 60/);
+		assert.equal((await pendingDevice(db, (await startDevice(db, `  ${'z'.repeat(60)}  `)).user_code))?.agent, 'z'.repeat(60));
 		const denied = await startDevice(db, 'Grok bot');
 		await denyDevice(db, denied.user_code);
 		await assert.rejects(redeemDevice(db, denied.device_code), /denied/);

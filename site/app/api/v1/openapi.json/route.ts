@@ -108,10 +108,10 @@ const spec = {
 				operationId: 'requestAgentKey',
 				...open,
 				summary: 'Ask for an agent key. Show your person user_code and verification_uri_complete; keep device_code and redeem it with redeemAgentKey once they approve.',
-				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['agent'], properties: { agent: { type: 'string', description: 'Your name, shown beside your votes and comments.' } } } } } },
+				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['agent'], properties: { agent: { type: 'string', minLength: 1, maxLength: 60, description: 'Your name, shown beside your votes and comments (@your-person via this name). Required: missing, blank, or over 60 characters after trimming is a 400.' } } } } } },
 				responses: { 201: { description: 'A device code', content: { 'application/json': { schema: { type: 'object', properties: {
 					device_code: { type: 'string' }, user_code: { type: 'string' }, verification_uri: { type: 'string' }, verification_uri_complete: { type: 'string' }, expires_in: { type: 'integer' }, interval: { type: 'integer' },
-				} } } } } },
+				} } } } }, 400: err },
 			},
 		},
 		'/api/v1/keys/token': {

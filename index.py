@@ -10,6 +10,7 @@ copied: they are read from registry/entries/ at build time and shown with the AP
     python index.py label [--all] [--labeler claude|none|canned:<file.json>]
     python index.py refresh [--older-than DAYS] [--limit N] [--dry-run]
     python index.py discuss <record id> <url>... [--drop] [--dry-run]
+    python index.py discuss --recheck [<record id>...] [--dry-run]   # daily: deleted posts drop out
     python index.py build            # writes dist/: index.json, index.db, llms.txt
 """
 
@@ -287,12 +288,16 @@ def refresh(older_than: int, limit: int, dry_run: bool) -> int:
 # ---- discuss ----
 
 
+# A link's fields that a person set, not the source: kept when the link is read again.
+KEPT = ("added",)
+
+
 def recheck(links: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """Each link read again: edits come through, a deleted post or page drops out, an unreachable one is kept."""
     out = []
     for d in links:
         try:
-            out.append({**S.discussion_link(d["url"]), "added": d.get("added", "")})
+            out.append({**S.discussion_link(d["url"]), **{k: d[k] for k in KEPT if k in d}})
         except S.NotFound:
             print(f"dropped  {d['url']}")
         except (ValueError, S.SourceError) as err:
@@ -301,9 +306,27 @@ def recheck(links: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return out
 
 
+def recheck_all(records: list[str], dry_run: bool) -> int:
+    """Every record's links read again (or only the named records'), apart from the weekly refresh, so a
+    deleted post leaves the index within a day. The daily workflow runs it."""
+    todo = [(p, e) for p, e in load() if e.get("discussion") and (not records or rid(e) in records)]
+    n = dropped = 0
+    for path, e in todo:
+        links = recheck(e["discussion"])
+        n += len(e["discussion"])
+        dropped += len(e["discussion"]) - len(links)
+        if links != e["discussion"] and not dry_run:
+            save(path, {**e, "discussion": links})
+    print(f"rechecked {n} links on {len(todo)} records: {dropped} dropped")
+    return 0
+
+
 def discuss(record: str, urls: list[str], drop: bool, dry_run: bool) -> int:
     """Attach posts and articles about a record: X posts through oEmbed, anything else through its Open Graph tags.
     Only voices with a public scholarly record are taken (see README); --drop removes links again."""
+    if not urls:
+        print("name the links to attach, or use --recheck")
+        return 2
     source, _, key = record.partition("/")
     path = path_for(source, key)
     if not path.exists():
@@ -322,7 +345,7 @@ def discuss(record: str, urls: list[str], drop: bool, dry_run: bool) -> int:
             print(f"skipped {url}: {err}", file=sys.stderr)
             continue
         links = [x for x in links if x["url"] != d["url"]] + [{**d, "added": S.today()}]
-        print(f"+ {d.get('author') or d.get('site')}: {(d.get('text') or d.get('title', ''))[:90]}")
+        print(f"+ {d.get('author') or d.get('site')}: {(d.get('text') or d.get('title') or d['url'])[:90]}")
     e["discussion"] = sorted(links, key=lambda d: d.get("date", ""))
     if not dry_run:
         save(path, e)
@@ -335,7 +358,7 @@ def discuss(record: str, urls: list[str], drop: bool, dry_run: bool) -> int:
 # Entry fields served as they are; to_item adds id, tags, published, category and subject.
 PASSTHROUGH = ("source", "url", "title", "authors", "summary", "domain", "origin", "agent_ready", "gone", "stars", "pdf",
                "family", "family_title", "formalized", "withdrawn", "withdrawn_on", "verified", "trust", "ai_models",
-               "formalizes", "formalizations", "authorship", "human_understanding", "repo", "json", "discussion")
+               "formalizes", "formalizations", "authorship", "human_understanding", "repo", "json")
 
 
 PREFIXES = json.loads((Path(__file__).resolve().parent / "site" / "lib" / "prefixes.json").read_text())["prefixes"]
@@ -346,6 +369,15 @@ def rid(e: dict[str, Any]) -> str:
     return f"{e['source']}/{e['key']}"
 
 
+# What is served of an X post: who, when and where. Its text is X's to show, in its own embed (the
+# record page renders one from the url), so it is never served, even from an entry file that still has it.
+X_FIELDS = ("kind", "url", "author", "handle", "date", "added")
+
+
+def served_link(d: dict[str, Any]) -> dict[str, Any]:
+    return {k: d[k] for k in X_FIELDS if k in d} if d.get("kind") == "x" else dict(d)
+
+
 def to_item(e: dict[str, Any]) -> dict[str, Any] | None:
     """What the page, index.json and the API serve for one entry. None for entries labelled harmful,
     which are left out; their files keep the label for editors."""
@@ -354,7 +386,7 @@ def to_item(e: dict[str, Any]) -> dict[str, Any] | None:
         return None
     subject = TX.subject_of(e.get("domain"), r.get("subject"))
     return _drop_empty({
-        "id": rid(e), **{k: e.get(k) for k in PASSTHROUGH},
+        "id": rid(e), **{k: e.get(k) for k in PASSTHROUGH}, "discussion": [served_link(d) for d in e.get("discussion") or []],
         "tags": list(dict.fromkeys([*(e.get("tags") or []), *(r.get("tags") or [])]))[:10],
         "published": e.get("published") or e.get("added"), "category": r.get("category", "research"),
         "subject": subject, "division": TX.division_of(subject) if subject else None,
@@ -434,7 +466,7 @@ def llms_txt(index: dict[str, Any]) -> str:
         "",
         "How to use the API: /api/v1. Search: /api/v1/search?q=<query> (arXiv syntax). One record: /api/v1/records/<id>.",
         "Vote or comment: POST /api/v1/records/<id>/vote or /comments, with an agent key or a GitHub token.",
-        "What researchers said about a record: its discussion[] (X posts and articles, each with url, author, text, date); is:discussed finds records that have any.",
+        "What researchers said about a record: its discussion[] (X posts with url, author and date; articles also with a quote as text); is:discussed finds records that have any.",
         "Whole index: index.db (SQLite) or index.json.",
         "",
         "Query examples:",
@@ -465,7 +497,8 @@ def main(argv: Iterable[str] | None = None) -> int:
     h = sub.add_parser("harvest"); h.add_argument("--source"); h.add_argument("--limit", type=int); h.add_argument("--dry-run", action="store_true")
     lb = sub.add_parser("label"); lb.add_argument("--all", action="store_true"); lb.add_argument("--labeler", default="claude"); lb.add_argument("--limit", type=int); lb.add_argument("--missing-subject", action="store_true")
     r = sub.add_parser("refresh"); r.add_argument("--older-than", type=int, default=7); r.add_argument("--limit", type=int, default=200); r.add_argument("--dry-run", action="store_true")
-    d = sub.add_parser("discuss"); d.add_argument("record"); d.add_argument("urls", nargs="+"); d.add_argument("--drop", action="store_true"); d.add_argument("--dry-run", action="store_true")
+    d = sub.add_parser("discuss"); d.add_argument("record", nargs="?"); d.add_argument("urls", nargs="*"); d.add_argument("--drop", action="store_true"); d.add_argument("--dry-run", action="store_true")
+    d.add_argument("--recheck", action="store_true", help="read every link again (or the named records' links); a deleted post drops out")
     sub.add_parser("build")
     args = ap.parse_args(list(argv) if argv is not None else None)
     S.TOKEN = github_token()
@@ -478,6 +511,10 @@ def main(argv: Iterable[str] | None = None) -> int:
     if args.cmd == "refresh":
         return refresh(args.older_than, args.limit, args.dry_run)
     if args.cmd == "discuss":
+        if args.recheck:
+            return recheck_all([x for x in [args.record, *args.urls] if x], args.dry_run)
+        if not args.record:
+            ap.error("discuss needs a record id, or --recheck")
         return discuss(args.record, args.urls, args.drop, args.dry_run)
     return build()
 

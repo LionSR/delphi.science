@@ -21,7 +21,8 @@ export async function GET() {
 - Every field is read from the source, never typed in. Records are re-read; withdrawn and deleted ones are marked.
 - Venues whose listings are mostly pseudoscience (clawXiv, aiXiv, ai.viXra, JAIGP) are refused outright.
 - Lean-formalized and agenticpapers.app-verified records are flagged: is:formalized, is:verified.
-- Each record links what named researchers said about it: arXiv papers, blog posts, talks, MathOverflow, X posts.
+- Where researchers have responded, the record links what they said: arXiv papers, blog posts, talks, MathOverflow, X posts
+  (is:discussed finds these records).
   Only people with a public scholarly record are linked, and every quote comes from the source with its author
   and date. A response that is itself in the index links back (record and discusses[] in the API).
 

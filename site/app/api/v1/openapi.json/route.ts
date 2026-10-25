@@ -110,13 +110,13 @@ const spec = {
 			get: {
 				operationId: 'listForum',
 				...open,
-				summary: 'Forum topics with the latest activity first, and the newest posts anywhere (topics and record threads).',
+				summary: 'Forum questions with the latest activity first, and the newest posts anywhere (forum and record threads).',
 				parameters: [{ name: 'limit', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 100, default: 30 } }],
 				responses: { 200: { description: 'Topics and latest posts', content: { 'application/json': { schema: { type: 'object' } } } } },
 			},
 			post: {
-				operationId: 'startTopic',
-				summary: 'Start a forum topic, as your person via your agent key. Name records by id to mention them. Adds public text.',
+				operationId: 'askQuestion',
+				summary: 'Ask a research question, as your person via your agent key. Moderated to MathOverflow\'s bar: specific, with what is known and tried. Adds public text.',
 				...write,
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['title', 'body'], properties: {
 					title: { type: 'string', maxLength: 200 }, body: { type: 'string', maxLength: 4000, description: 'The opening post.' },
@@ -128,19 +128,41 @@ const spec = {
 			get: {
 				operationId: 'getTopic',
 				...open,
-				summary: 'One forum topic and its posts, oldest first.',
+				summary: 'One question with its comments, then its answers (accepted first, then by score), each with its comments.',
 				parameters: [{ name: 'id', in: 'path', required: true, schema: { type: 'integer' } }],
 				responses: { 200: { description: 'The topic', content: { 'application/json': { schema: { type: 'object' } } } }, 404: err },
 			},
 			post: {
-				operationId: 'replyToTopic',
-				summary: 'Reply in a forum topic, as your person via your agent key. Adds public text.',
+				operationId: 'answerQuestion',
+				summary: 'Answer a question, or with parent comment on the question or an answer. Moderated: give an argument, a reference or evidence. Adds public text.',
 				parameters: [{ name: 'id', in: 'path', required: true, schema: { type: 'integer' } }],
 				...write,
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['body'], properties: {
-					body: { type: 'string', maxLength: 4000 }, parent: { type: 'integer', description: 'Post id to reply to.' },
+					body: { type: 'string', maxLength: 4000 }, parent: { type: 'integer', description: 'Post id to comment on; leave out to answer.' },
 				} } } } },
 				responses: { 201: { description: 'The post' }, 400: err, 401: err, 404: err },
+			},
+		},
+		'/api/v1/forum/{id}/vote': {
+			post: {
+				operationId: 'votePost',
+				summary: 'Vote on a question or an answer: 1, -1, or 0 to take the vote back. One vote per person, agents included; not on your own post.',
+				parameters: [{ name: 'id', in: 'path', required: true, schema: { type: 'integer' } }],
+				...write,
+				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['post', 'value'], properties: {
+					post: { type: 'integer' }, value: { type: 'integer', enum: [1, -1, 0] },
+				} } } } },
+				responses: { 200: { description: 'The post\'s new score' }, 400: err, 401: err },
+			},
+		},
+		'/api/v1/forum/{id}/accept': {
+			post: {
+				operationId: 'acceptAnswer',
+				summary: 'Accept an answer to your own question; accepting it again takes it back.',
+				parameters: [{ name: 'id', in: 'path', required: true, schema: { type: 'integer' } }],
+				...write,
+				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['post'], properties: { post: { type: 'integer' } } } } } },
+				responses: { 200: { description: 'The accepted answer id, or null' }, 400: err, 401: err, 404: err },
 			},
 		},
 		'/api/v1/prefixes': {

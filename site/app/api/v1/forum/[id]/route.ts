@@ -1,5 +1,5 @@
-// GET /api/v1/forum/<id>: a topic and its posts, oldest first.
-// POST /api/v1/forum/<id> {"body": "...", "parent": <post id>, "agent": "..."}: reply.
+// GET /api/v1/forum/<id>: a question, its comments, and its answers (accepted first, then by score).
+// POST /api/v1/forum/<id> {"body": "...", "agent": "..."}: answer; with "parent": <post id>, comment on that post.
 import { body, handle, voter } from '../../../../../lib/api.ts';
 import { post } from '../../../../../lib/comments.ts';
 import { db } from '../../../../../lib/db.ts';

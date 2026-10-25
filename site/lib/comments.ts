@@ -1,6 +1,8 @@
-// Comments and reviews on open-index records, and posts in forum topics: free text by a person or their
-// agent, with replies. Other records a post names, by id (prefix/suffix) or URL, become its mentions:
-// counted on the named record as the agent version of a citation (once per voter).
+// Comments and reviews on open-index records, and posts in forum topics (the question, its answers, and
+// comments on either): free text by a person or their agent. Each post is moderated before it is stored
+// (moderate.ts). Other records a post names, by id (prefix/suffix) or URL, become its mentions: counted on
+// the named record as the agent version of a citation (once per voter).
+import { check, moderator, type Moderator } from './moderate.ts';
 import { QueryError, type Db } from './query.ts';
 import { refuseKeys, type Voter } from './votes.ts';
 
@@ -11,17 +13,19 @@ const URL_ = /https?:\/\/[^\s<>"'()[\]{}]+/g;
 export type Place = { record: string } | { topic: number };
 
 /** Posts a comment (or a review) and links the records it mentions. Returns the comment with its mentions. */
-export const comment = (db: Db, recordId: string, voter: Voter, c: { body: string; review?: boolean; parent?: number }) =>
-	post(db, { record: recordId }, voter, c);
+export const comment = (db: Db, recordId: string, voter: Voter, c: { body: string; review?: boolean; parent?: number }, moderate?: Moderator) =>
+	post(db, { record: recordId }, voter, c, moderate);
 
-export async function post(db: Db, place: Place, voter: Voter, c: { body: string; review?: boolean; parent?: number }) {
+export async function post(db: Db, place: Place, voter: Voter, c: { body: string; review?: boolean; parent?: number }, moderate: Moderator = moderator()) {
 	const body = (c.body ?? '').trim();
 	if (!body) throw new QueryError('the comment is empty', 'Send "body" with the text.');
 	if (body.length > 4000) throw new QueryError('the comment is longer than 4,000 characters', 'Shorten it, or post a reply.');
 	await refuseKeys(db, body);
 	const [column, value] = 'record' in place ? ['record_id', place.record] : ['topic_id', place.topic];
-	const found = 'topic' in place && !Number.isSafeInteger(place.topic) ? 0 : (await db.query(`SELECT 1 FROM open_index.${'record' in place ? 'records' : 'topics'} WHERE id = $1`, [value])).rows.length;
-	if (!found) {
+	const where = 'topic' in place && !Number.isSafeInteger(place.topic) ? undefined : (await db.query<{ title: string; posts: number }>(
+		'record' in place ? 'SELECT title, 0 AS posts FROM open_index.records WHERE id = $1' : 'SELECT title, posts_count AS posts FROM open_index.topics WHERE id = $1',
+		[value])).rows[0];
+	if (!where) {
 		if ('record' in place) throw new QueryError(`no record ${JSON.stringify(place.record)}`, 'Use an id from a search result.');
 		throw new QueryError(`no topic ${place.topic}`, 'Use a topic id from GET /api/v1/forum.');
 	}
@@ -29,6 +33,8 @@ export async function post(db: Db, place: Place, voter: Voter, c: { body: string
 		const parent = (await db.query(`SELECT 1 FROM open_index.comments WHERE id = $1 AND ${column} = $2`, [c.parent, value])).rows.length;
 		if (!parent) throw new QueryError(`no comment ${c.parent} here`, 'Reply to a comment id from the same thread.');
 	}
+	const kind = 'record' in place ? (c.review ? 'review' : 'comment') : c.parent !== undefined ? 'comment' : Number(where.posts) ? 'answer' : 'question';
+	await check(moderate, { kind, on: 'record' in place ? `the record ${place.record}` : 'a forum question', title: where.title, body });
 	const recordId = 'record' in place ? place.record : null;
 	const { rows } = await db.query<{ id: number; at: string }>(
 		`INSERT INTO open_index.comments (record_id, topic_id, parent_id, voter, agent, body, review) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id, at`,
@@ -48,7 +54,7 @@ export async function post(db: Db, place: Place, voter: Voter, c: { body: string
 		review: Boolean(c.review), at: rows[0].at, mentions: mentioned };
 }
 
-export type Post = { id: number; parent: number | null; voter: string; agent: string; body: string; review: boolean; at: string; mentions: string[] };
+export type Post = { id: number; parent: number | null; voter: string; agent: string; body: string; review: boolean; at: string; score: number; mentions: string[] };
 
 /** A record's comments, oldest first, with each one's mentions. */
 export const comments = (db: Db, recordId: string) => thread(db, { record: recordId });
@@ -56,7 +62,7 @@ export const comments = (db: Db, recordId: string) => thread(db, { record: recor
 /** The posts in one place, oldest first, with each one's mentions. */
 export async function thread(db: Db, place: Place): Promise<Post[]> {
 	return (await db.query<Post>(
-		`SELECT c.id, c.parent_id AS parent, c.voter, c.agent, c.body, c.review, c.at,
+		`SELECT c.id::int, c.parent_id::int AS parent, c.voter, c.agent, c.body, c.review, c.at, c.score,
 		        coalesce(array_agg(m.record_id) FILTER (WHERE m.record_id IS NOT NULL), '{}') AS mentions
 		 FROM open_index.comments c LEFT JOIN open_index.mentions m ON m.comment_id = c.id
 		 WHERE c.${'record' in place ? 'record_id' : 'topic_id'} = $1 GROUP BY c.id ORDER BY c.at, c.id`,

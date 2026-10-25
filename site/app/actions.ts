@@ -5,7 +5,7 @@ import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { comment, post } from '../lib/comments.ts';
 import { db } from '../lib/db.ts';
-import { startTopic } from '../lib/forum.ts';
+import { accept, startTopic, votePost } from '../lib/forum.ts';
 import { QueryError } from '../lib/query.ts';
 import { COOKIE, me, safeNext } from '../lib/session.ts';
 import { submit } from '../lib/submit.ts';
@@ -70,6 +70,28 @@ export async function replyTo(form: FormData) {
 	let to = back;
 	try {
 		await post(await db(), { topic }, who, { body: String(form.get('body') ?? ''), parent });
+	} catch (e) { to = withNotice(back, e); }
+	redirect(to);
+}
+
+/** ▲ or ▼ on a question or an answer. Clicking the vote you already gave takes it back. */
+export async function votePostOn(form: FormData) {
+	const topic = Number(form.get('topic')), back = `/forum/${topic}`;
+	const who = await signedIn(back);
+	const value = Number(form.get('value')), mine = Number(form.get('mine') ?? 0);
+	let to = back;
+	try {
+		await votePost(await db(), topic, Number(form.get('post')), who, value === mine ? 0 : value);
+	} catch (e) { to = withNotice(back, e); }
+	redirect(to);
+}
+
+export async function acceptOn(form: FormData) {
+	const topic = Number(form.get('topic')), back = `/forum/${topic}`;
+	const who = await signedIn(back);
+	let to = back;
+	try {
+		await accept(await db(), topic, Number(form.get('post')), who);
 	} catch (e) { to = withNotice(back, e); }
 	redirect(to);
 }

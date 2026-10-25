@@ -7,7 +7,7 @@ import { comments } from '../../../../lib/comments.ts';
 import { db } from '../../../../lib/db.ts';
 import { get } from '../../../../lib/query.ts';
 import { me } from '../../../../lib/session.ts';
-import { date, idPath, reception, recordId, recordPath, SITE, source, tally, tex, type IdParams } from '../../../../lib/view.ts';
+import { date, idPath, reception, recordId, recordPath, SITE, source, STANCES, tally, tex, type IdParams } from '../../../../lib/view.ts';
 import { myVotes, votes } from '../../../../lib/votes.ts';
 import { commentOn } from '../../../actions.ts';
 import { Vote } from '../../../vote.tsx';
@@ -16,13 +16,8 @@ export const dynamic = 'force-dynamic';
 
 const record = cache(async (id: string) => get(await db(), id));
 
-// What a response says about the record, set by a person (index.py discuss --stance).
-const STANCES: Record<string, string> = {
-	refutes: 'finds an error that breaks the main result', questions: 'raises a gap, a mismatch, a weaker statement than claimed, or a priority issue',
-	confirms: 'checks the result or formalizes it independently', simplifies: 'a shorter or human-readable proof', extends: 'builds on it',
-	reacts: 'a general reaction, no technical claim',
-};
-const Stance = ({ stance }: { stance: string }) => <span className={`stance ${stance}`} title={STANCES[stance]}>{stance}</span>;
+// What a response does to the record, if a person has labelled it.
+const Stance = ({ stance }: { stance?: string }) => (stance ? <span className={`stance ${stance}`} title={STANCES[stance]}>{stance}</span> : null);
 
 // Highwire citation_* tags (read by Google Scholar, Zotero and most agents) and schema.org JSON-LD.
 export async function generateMetadata(ctx: IdParams): Promise<Metadata> {
@@ -163,7 +158,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 					) : (
 						<div key={l.url} className="comment">
 							<p className="meta">
-								{l.stance ? <Stance stance={l.stance} /> : null}
+								<Stance stance={l.stance} />
 								<a href={l.url}>{l.title || l.url}</a>
 								{l.site ? <span>{l.site}</span> : null}
 								{l.author ? <span>{l.author}</span> : null}

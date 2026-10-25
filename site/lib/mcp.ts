@@ -36,26 +36,23 @@ const newest = (rec: Record<string, unknown>) => {
 };
 
 /** A search result: the API's compact record, with its page on the site instead of the API's relative link. */
-const listed = (rec: Record<string, unknown>) => {
-	const { links: _api, ...out } = compact(rec);
-	return { ...out, page: SITE + recordPath(rec.id) };
-};
+const listed = (rec: Record<string, unknown>) => ({ ...compact(rec), page: SITE + recordPath(rec.id) });
 
-export type SearchArgs = { query?: string; sort?: (typeof SORTS)[number]; limit?: number; cursor?: string };
+type SearchArgs = { query?: string; sort?: (typeof SORTS)[number]; limit?: number; cursor?: string };
 
-export async function searchRecords(db: Db, { query = '', sort, limit, cursor }: SearchArgs) {
+async function searchRecords(db: Db, { query = '', sort, limit, cursor }: SearchArgs) {
 	const res = await search(db, query, { sort, limit, cursor });
 	return { query: res.query, sort: res.sort, total: res.total, count: res.count, results: res.results.map(listed), next_cursor: res.next_cursor };
 }
 
-export async function getRecord(db: Db, { id }: { id: string }) {
+async function getRecord(db: Db, { id }: { id: string }) {
 	const rec = await get(db, id);
 	if (!rec) throw new QueryError(`no record ${JSON.stringify(id)}`, 'Use an id from a search_records result, e.g. openai-math/The-Quasi-Riemann-Hypothesis.');
 	const { discussion: _, ...out } = rec;
 	return { ...out, page: SITE + recordPath(rec.id), discussion: links(rec).map(response), discusses: Array.isArray(rec.discusses) ? rec.discusses : [] };
 }
 
-export async function listDiscussedRecords(db: Db, { query = '', limit, cursor }: Omit<SearchArgs, 'sort'>) {
+async function listDiscussedRecords(db: Db, { query = '', limit, cursor }: Omit<SearchArgs, 'sort'>) {
 	if (query.trim()) parse(query); // on its own first, so its parentheses cannot reach past the filter below
 	const res = await search(db, query.trim() ? `is:discussed AND (${query})` : 'is:discussed', { sort: 'responded', limit, cursor, fields: 'full' });
 	return {
@@ -67,8 +64,10 @@ export async function listDiscussedRecords(db: Db, { query = '', limit, cursor }
 // ---- Schemas ----
 
 const query = z.string().max(2000).describe('arXiv-style query. Fields: ti: au: abs: all: cat: (cat:math.NT, cat:quant-ph) source: (openai-math, arxiv, app, palomar, hexagon) id: published: (published:2026-10, published:[2026-10-01 TO *]) is: (formalized, verified, withdrawn, ai-generated, discussed). Operators AND, OR, ANDNOT (uppercase), parentheses, "quoted phrases", word* prefixes; bare words search every text field.');
-const limit = z.number().int().min(1).max(MAX_LIMIT).describe(`Results per page, 1 to ${MAX_LIMIT}; 20 if left out.`);
-const cursor = z.string().max(200).describe('next_cursor from the previous page, unchanged, for the next page of the same query.');
+const paging = {
+	limit: z.number().int().min(1).max(MAX_LIMIT).describe(`Results per page, 1 to ${MAX_LIMIT}; 20 if left out.`).optional(),
+	cursor: z.string().max(200).describe('next_cursor from the previous page, unchanged, for the next page of the same query.').optional(),
+};
 
 const Link = z.looseObject({
 	url: z.string(), author: z.string().optional(), date: z.string().optional().describe('When it was published, YYYY-MM-DD.'),
@@ -89,17 +88,17 @@ const Page = { total: z.number().int(), count: z.number().int(), next_cursor: z.
 
 type Result = { content: { type: 'text'; text: string }[]; structuredContent?: Record<string, unknown>; isError?: boolean };
 
-/** Runs a tool: its result as structured content and as JSON text; a query error as a message with its fix. */
-async function run(work: () => Promise<Record<string, unknown>>): Promise<Result> {
+/** A tool's handler: its result as structured content and as JSON text; a query error as a message with its fix. */
+const tool = <A>(db: () => Promise<Db>, work: (db: Db, args: A) => Promise<Record<string, unknown>>) => async (args: A): Promise<Result> => {
 	try {
-		const out = await work();
+		const out = await work(await db(), args);
 		return { content: [{ type: 'text', text: JSON.stringify(out) }], structuredContent: out };
 	} catch (e) {
 		if (e instanceof QueryError) return { content: [{ type: 'text', text: `${e.message}. ${e.fix}` }], isError: true };
 		console.error('mcp tool failed', e);
 		return { content: [{ type: 'text', text: 'The index could not answer just now. Try again shortly.' }], isError: true };
 	}
-}
+};
 
 export function server(db: () => Promise<Db>): McpServer {
 	const s = new McpServer({ name: 'open-research-index', title: 'Open Research Index', version: '1.0.0', websiteUrl: SITE }, { instructions: INSTRUCTIONS });
@@ -110,11 +109,11 @@ export function server(db: () => Promise<Db>): McpServer {
 		inputSchema: {
 			query: query.optional(),
 			sort: z.enum(SORTS).optional().describe('relevance (the default with a query), newest (the default without), oldest, title, score (votes plus linked responses, all time), day, week, month (votes and responses in that window), mentions, responded (the newest expert response first).'),
-			limit: limit.optional(), cursor: cursor.optional(),
+			...paging,
 		},
 		outputSchema: { query: z.string(), sort: z.string(), ...Page, results: z.array(Listed) },
 		annotations: READ_ONLY,
-	}, async (args) => run(async () => searchRecords(await db(), args)));
+	}, tool(db, searchRecords));
 
 	s.registerTool('get_record', {
 		title: 'Get a record',
@@ -125,15 +124,15 @@ export function server(db: () => Promise<Db>): McpServer {
 			discusses: z.array(z.looseObject({ id: z.string(), title: z.string() })).describe('Records this one responds to.'),
 		}),
 		annotations: READ_ONLY,
-	}, async (args) => run(async () => getRecord(await db(), args)));
+	}, tool(db, getRecord));
 
 	s.registerTool('list_discussed_records', {
 		title: 'List discussed records',
 		description: 'List the records of the Open Research Index that have expert responses linked to them, the one with the newest response first. Each result has the record\'s id, title, authors, date, links, the number of responses (discussed) and the latest one (author, date, quote, url); get_record returns all of them. An optional query in search_records syntax narrows the list, e.g. source:openai-math or cat:math.NT. Only responses the index has linked are counted.',
-		inputSchema: { query: query.optional().describe('Optional, in search_records syntax, to narrow the list, e.g. source:openai-math or cat:math.NT.'), limit: limit.optional(), cursor: cursor.optional() },
+		inputSchema: { query: query.optional().describe('Optional, in search_records syntax, to narrow the list, e.g. source:openai-math or cat:math.NT.'), ...paging },
 		outputSchema: { query: z.string(), ...Page, results: z.array(Listed.extend({ latest_response: Link.optional() })) },
 		annotations: READ_ONLY,
-	}, async (args) => run(async () => listDiscussedRecords(await db(), args)));
+	}, tool(db, listDiscussedRecords));
 
 	return s;
 }

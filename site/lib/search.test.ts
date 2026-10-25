@@ -47,6 +47,10 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		items = JSON.parse(readFileSync(INDEX, 'utf8')).items;
 		assert.equal(await load(db, items), items.length);
 	});
+	// Sets a record's links (record.discussion), as index.py discuss does; pair queries two palomar records.
+	const discuss = (id: string, links: object[]) =>
+		db.query("UPDATE open_index.records SET record = jsonb_set(record, '{discussion}', $2::jsonb) WHERE id = $1", [id, JSON.stringify(links)]);
+	const pair = (a: string, b: string) => `source:palomar AND (id:${JSON.stringify(a)} OR id:${JSON.stringify(b)})`;
 
 	test('records are stored as JSON objects', async () => {
 		const t = (await db.query<{ t: string }>('SELECT DISTINCT jsonb_typeof(record) AS t FROM open_index.records')).rows.map((r) => r.t);
@@ -140,10 +144,10 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		const [a, b] = items.filter((it) => it.source === 'palomar').slice(2, 4).map((it) => String(it.id));
 		const ago = (days: number) => new Date(Date.now() - days * 86400000).toISOString().slice(0, 10);
 		const today = ago(0);
-		const links = (dates: string[]) => JSON.stringify(dates.map((date, i) => ({ kind: 'web', url: `https://e.org/${i}`, date, added: today })));
-		await db.query("UPDATE open_index.records SET record = jsonb_set(record, '{discussion}', $2::jsonb) WHERE id = $1", [a, links([ago(20), ago(21)])]);
-		await db.query("UPDATE open_index.records SET record = jsonb_set(record, '{discussion}', $2::jsonb) WHERE id = $1", [b, links([today])]);
-		const top = async (sort: string) => (await search(db, `source:palomar AND (id:${JSON.stringify(a)} OR id:${JSON.stringify(b)})`, { sort, limit: 1 })).results[0].id;
+		const links = (dates: string[]) => dates.map((date, i) => ({ kind: 'web', url: `https://e.org/${i}`, date, added: today }));
+		await discuss(a, links([ago(20), ago(21)]));
+		await discuss(b, links([today]));
+		const top = async (sort: string) => (await search(db, pair(a, b), { sort, limit: 1 })).results[0].id;
 		assert.deepEqual([await top('week'), await top('month'), await top('score')], [b, a, a]); // both were linked today
 		assert.equal(await top('responded'), b);
 	});
@@ -161,10 +165,10 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 	test('only responses that confirm, simplify or extend count as upvotes; refutes and questions mark it disputed', async () => {
 		const [a, b] = items.filter((it) => it.source === 'palomar').slice(4, 6).map((it) => String(it.id));
 		const today = new Date().toISOString().slice(0, 10);
-		const links = (stances: (string | null)[]) => JSON.stringify(stances.map((stance, i) => ({ kind: 'web', url: `https://e.org/s${i}`, date: today, ...(stance ? { stance } : {}) })));
-		await db.query("UPDATE open_index.records SET record = jsonb_set(record, '{discussion}', $2::jsonb) WHERE id = $1", [a, links(['refutes', 'questions', 'reacts'])]);
-		await db.query("UPDATE open_index.records SET record = jsonb_set(record, '{discussion}', $2::jsonb) WHERE id = $1", [b, links(['confirms', null])]);
-		const both = `source:palomar AND (id:${JSON.stringify(a)} OR id:${JSON.stringify(b)})`;
+		const links = (stances: (string | null)[]) => stances.map((stance, i) => ({ kind: 'web', url: `https://e.org/s${i}`, date: today, ...(stance ? { stance } : {}) }));
+		await discuss(a, links(['refutes', 'questions', 'reacts']));
+		await discuss(b, links(['confirms', null]));
+		const both = pair(a, b);
 		for (const sort of ['score', 'day', 'week']) assert.equal((await search(db, both, { sort, limit: 1 })).results[0].id, b, sort);
 		assert.deepEqual((await search(db, `${both} is:disputed`)).results.map((x) => x.id), [a]);
 		assert.equal((await search(db, `${both} is:discussed`)).total, 2); // a refutation is still a response

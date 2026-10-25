@@ -1,5 +1,6 @@
 // Small helpers the pages share.
 import prefixes from './prefixes.json' with { type: 'json' };
+import stances from './stances.json' with { type: 'json' };
 
 export const SITE = process.env.SITE_URL ?? 'https://open-research-index.vercel.app';
 export const tex = (s: unknown) => String(s ?? '').replace(/\$`([^`]+)`\$/g, (_, m) => `$${m}$`);
@@ -27,12 +28,9 @@ export const reception = (r: Record<string, unknown>): Reception | null => {
 	const x = r.reception as Partial<Reception> | undefined;
 	return x && typeof x.text === 'string' && x.text ? (x as Reception) : null;
 };
-// What a response does to the record, set by a person (index.py discuss --stance): the record page's tooltips,
-// and discussion[].stance in /api/v1 and its OpenAPI document.
-export const STANCES: Record<string, string> = {
-	refutes: 'finds an error that breaks the main result', questions: 'a gap, a Lean/prose mismatch, a weaker statement than claimed, or priority',
-	confirms: 'checks or formalizes it independently', simplifies: 'a shorter or human-readable proof', extends: 'builds on it', reacts: 'no technical claim',
-};
+// What a response does to the record, set by a person (index.py discuss --stance), from stances.json: the record
+// page's tooltips, and discussion[].stance in /api/v1 and its OpenAPI document.
+export const STANCES: Record<string, string> = stances.stances;
 /** The stances with their meanings, for the API docs: "refutes (…), questions (…), …". */
 export const STANCE_LIST = Object.entries(STANCES).map(([s, d]) => `${s} (${d})`).join(', ');
 export const tally = (r: Record<string, unknown>) => {

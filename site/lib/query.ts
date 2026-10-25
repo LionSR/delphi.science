@@ -10,6 +10,7 @@
 // Operators AND, OR, ANDNOT, NOT (uppercase), parentheses; adjacent terms are ANDed. Text terms rank by
 // ts_rank_cd (title weighted highest); with an embedding, keyword and vector ranks merge by reciprocal-rank
 // fusion. Everything the caller sends becomes a bound parameter: no user text is spliced into SQL.
+import stances from './stances.json' with { type: 'json' };
 import taxonomy from './taxonomy.json' with { type: 'json' };
 
 export class QueryError extends Error {
@@ -224,6 +225,10 @@ export interface SearchOptions {
 // When a link (an element d of record.discussion) was posted: its own date, or the day it was attached when the
 // source gives none.
 const LINK_DATE = "coalesce(nullif(d->>'date', ''), d->>'added')";
+// A link d that counts like an upvote, as stances.json says: an upvoting stance, or none yet. The names go into
+// the SQL as literals, so they must be plain words.
+if (!stances.upvoting.every((s) => /^[a-z]+$/.test(s))) throw new Error('stances.json: every stance is a lowercase word');
+const UPVOTE = `(${stances.unlabelled_upvotes ? "d->>'stance' IS NULL OR " : ''}d->>'stance' IN (${stances.upvoting.map((s) => `'${s}'`).join(', ')}))`;
 
 // day, week, month: as on SciRate, the net votes cast in that many days plus the posts and articles posted in
 // them that count as upvotes, then the newest.
@@ -240,7 +245,7 @@ const recent = (days: number): Ranked => (where) => ({
 				UNION ALL
 				SELECT r.id, (SELECT count(*) FROM jsonb_array_elements(r.record->'discussion') d
 					WHERE ${LINK_DATE}::date > current_date - ${days}
-					AND coalesce(d->>'stance', 'confirms') IN ('confirms', 'simplifies', 'extends'))::int -- as index.py UPVOTING
+					AND ${UPVOTE})::int
 				FROM open_index.records r WHERE r.discussed > 0
 			) x GROUP BY id HAVING sum(points) <> 0),`,
 	hot: `SELECT r.*, h.points FROM open_index.records r JOIN hot h ON h.id = r.id WHERE ${where}`,

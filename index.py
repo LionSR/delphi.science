@@ -324,28 +324,31 @@ def refresh(older_than: int, limit: int, dry_run: bool) -> int:
 # A link's fields that a person set, not the source: kept when the link is read again.
 KEPT = ("added", "stance")
 
-# What a response says about the record, set by a person (discuss --stance). Only the last three count as
-# upvotes in the popularity sorts, and so does a link with no stance yet; refutes or questions mark the
-# record disputed (is:disputed).
-STANCES = {
-    "refutes": "finds an error that breaks the main result",
-    "questions": "raises a gap: a mismatch (Lean against prose), a weaker statement than claimed, or a priority issue",
-    "reacts": "a general reaction, no technical claim",
-    "confirms": "checks the result, or formalizes it independently",
-    "simplifies": "a shorter or human-readable proof",
-    "extends": "builds on it",
-}
-UPVOTING = {"confirms", "simplifies", "extends"}
-DISPUTING = {"refutes", "questions"}
+# What a response says about the record, set by a person (discuss --stance): names and meanings, which count as
+# upvotes in the popularity sorts (and whether a link with no stance yet does), and which mark the record disputed
+# (is:disputed). Shared with the site, which reads the same file.
+STANCE_FILE = json.loads((Path(__file__).resolve().parent / "site" / "lib" / "stances.json").read_text())
+STANCES: dict[str, str] = STANCE_FILE["stances"]
+UPVOTING = set(STANCE_FILE["upvoting"])
+DISPUTING = set(STANCE_FILE["disputing"])
+
+
+def counts_as_upvote(link: dict[str, Any]) -> bool:
+    return link["stance"] in UPVOTING if "stance" in link else STANCE_FILE["unlabelled_upvotes"]
 
 
 def upvoting(links: list[dict[str, Any]]) -> int:
     """How many responses count as upvotes: the ones that support the result, and those not yet labelled."""
-    return sum(1 for d in links if d.get("stance", "confirms") in UPVOTING)
+    return sum(1 for d in links if counts_as_upvote(d))
 
 
 def disputed(links: list[dict[str, Any]]) -> bool:
     return any(d.get("stance") in DISPUTING for d in links)
+
+
+def either(words: list[str]) -> str:
+    """["a", "b", "c"] as "a, b or c"."""
+    return " or ".join(filter(None, [", ".join(words[:-1]), words[-1]]))
 
 
 def unlabelled(e: dict[str, Any]) -> list[dict[str, Any]]:
@@ -699,7 +702,7 @@ def llms_txt(index: dict[str, Any]) -> str:
         "How to use the API: /api/v1. Search: /api/v1/search?q=<query> (arXiv syntax). One record: /api/v1/records/<id>.",
         "Vote or comment: POST /api/v1/records/<id>/vote or /comments, with an agent key or a GitHub token.",
         "What researchers said about a record: its discussion[] (X posts with url, author and date; articles also with a quote as text); is:discussed finds records that have any.",
-        "Each response may carry a stance, set by a person: refutes, questions, confirms, simplifies, extends or reacts. is:disputed finds records with a response that refutes or questions them.",
+        f"Each response may carry a stance, set by a person: {either(list(STANCES))}. is:disputed finds records with a response that {either(STANCE_FILE['disputing'])} them.",
         "A record's reception, when present, says in a sentence or two where the work stands (text, written, the links it rests on, reviewed_by); a person reviewed it.",
         "Whole index: index.db (SQLite) or index.json.",
         "",
@@ -733,7 +736,7 @@ def main(argv: Iterable[str] | None = None) -> int:
     r = sub.add_parser("refresh"); r.add_argument("--older-than", type=int, default=7); r.add_argument("--limit", type=int, default=200); r.add_argument("--dry-run", action="store_true")
     d = sub.add_parser("discuss"); d.add_argument("record", nargs="?"); d.add_argument("urls", nargs="*"); d.add_argument("--drop", action="store_true"); d.add_argument("--dry-run", action="store_true")
     d.add_argument("--recheck", action="store_true", help="read every link again (or the named records' links); a deleted post drops out")
-    d.add_argument("--stance", choices=[*STANCES, "none"], help="what the links say about the record (see STANCES); set on links already attached without reading them again")
+    d.add_argument("--stance", choices=[*STANCES, "none"], help="what the links say about the record (see site/lib/stances.json); set on links already attached without reading them again")
     d.add_argument("--propose-stances", action="store_true", help="the labelling agent proposes stances for unlabelled links (or the named records'); prints them as commands, writes nothing")
     d.add_argument("--labeler", default="claude", help="for --propose-stances: claude, or canned:<file.json>")
     rc = sub.add_parser("reception"); rc.add_argument("record", nargs="?"); rc.add_argument("--draft", action="store_true"); rc.add_argument("--text")

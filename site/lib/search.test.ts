@@ -10,6 +10,7 @@ import { load, type Item } from './load.ts';
 import { agentKeys, createAgentKey, createSession, myVotes, revokeKey, unvote, vote, voterFromKey } from './votes.ts';
 import { comment, comments } from './comments.ts';
 import { approveDevice, denyDevice, pendingDevice, redeemDevice, startDevice } from './device.ts';
+import { fileCount, MAX_URLS, sitemapFile, sitemapFiles } from './sitemap.ts';
 
 const MIGRATIONS = new URL('../supabase/migrations/', import.meta.url);
 const INDEX = new URL('../../dist/index.json', import.meta.url);
@@ -79,6 +80,23 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		assert.ok((await search(db, 'au:claude')).results.some((x) => String(x.title).startsWith('Zeta23')));
 		assert.ok((await search(db, '"zero-free"')).total >= 1);
 		assert.ok((await search(db, 'lattice*')).total >= r.total);
+	});
+
+	test('the sitemap lists every record once, at most 50,000 URLs a file, each with its last change', async () => {
+		const files = await sitemapFiles(db);
+		assert.equal(files, fileCount(items.length));
+		const seen = new Set<string>();
+		for (let n = 0; n < files; n++) {
+			const urls = await sitemapFile(db, 'https://x.org', n);
+			assert.ok(urls.length <= MAX_URLS, `file ${n} has ${urls.length} URLs`);
+			for (const u of urls.filter((u) => u.loc.startsWith('https://x.org/r/'))) {
+				assert.match(String(u.lastmod), /^\d{4}-\d{2}-\d{2}T/);
+				assert.ok(!seen.has(u.loc), `${u.loc} is listed twice`);
+				seen.add(u.loc);
+			}
+		}
+		assert.equal(seen.size, items.length);
+		assert.equal((await sitemapFile(db, 'https://x.org', files)).length, 0);
 	});
 
 	test('one record by id', async () => {

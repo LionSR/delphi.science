@@ -184,6 +184,17 @@ class Entries(unittest.TestCase):
             return index.main(list(argv))
 
 
+class Drop(Entries):
+    """discuss --drop takes a link off by the URL it was attached with, as a takedown asks."""
+
+    def test_drop_finds_a_page_whose_query_matters_and_an_x_post_in_any_form(self) -> None:
+        self.entry("k", [{"kind": "web", "url": "https://www.youtube.com/watch?v=abc", "added": "2026-10-09"},
+                         {"kind": "x", "url": "https://x.com/a/status/1", "added": "2026-10-09"},
+                         {"kind": "web", "url": "https://e.org/kept", "added": "2026-10-09"}])
+        self.cmd("discuss", "web/k", "https://www.youtube.com/watch?v=abc", "https://twitter.com/a/status/1?s=20", "--drop")
+        self.assertEqual([d["url"] for d in self.read()["discussion"]], ["https://e.org/kept"])
+
+
 class Recheck(Entries):
     """discuss --recheck reads every link again: a deleted post drops out, an unreachable one is kept."""
 

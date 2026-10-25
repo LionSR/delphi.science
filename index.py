@@ -442,7 +442,8 @@ def discuss(record: str, urls: list[str], drop: bool, dry_run: bool, stance: str
     path, e = found
     links = e.get("discussion", [])
     if drop:
-        gone = {link_url(u) for u in urls}
+        attached = {x["url"] for x in links}
+        gone = {link_url(u, attached) for u in urls}
         links = [x for x in links if x["url"] not in gone]
         print(f"{len(e.get('discussion', [])) - len(links)} dropped")
     for url in [] if drop else urls:

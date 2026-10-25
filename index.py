@@ -52,6 +52,10 @@ def _drop_empty(d: dict[str, Any]) -> dict[str, Any]:
     return {k: v for k, v in d.items() if v not in (None, "", [], {})}
 
 
+def pick(d: dict[str, Any], keys: Iterable[str]) -> dict[str, Any]:
+    return {k: d[k] for k in keys if k in d}
+
+
 def github_token() -> str | None:
     """GITHUB_TOKEN, GH_TOKEN, or `gh auth token`, for GitHub's API rate limit."""
     import os
@@ -85,6 +89,16 @@ def path_for(source: str, key: str) -> Path:
 def load(source: str | None = None) -> list[tuple[Path, dict[str, Any]]]:
     pattern = f"{source}/*.json" if source else "*/*.json"
     return [(p, json.loads(p.read_text())) for p in sorted(ENTRIES.glob(pattern))]
+
+
+def read_entry(record: str) -> tuple[Path, dict[str, Any]] | None:
+    """One record's entry file and its contents; None, saying so, when there is no such record."""
+    source, _, key = record.partition("/")
+    path = path_for(source, key)
+    if not path.exists():
+        print(f"no entry {record}")
+        return None
+    return path, json.loads(path.read_text())
 
 
 def save(path: Path, entry: dict[str, Any]) -> None:
@@ -232,10 +246,19 @@ def ask_claude(prompt_file: str, name: str, data: Any, reply: str = r"\[.*\]") -
     return json.loads(m.group(0))
 
 
+# How an ask_claude call fails: the agent errs or gives no JSON, gives broken JSON, or hangs.
+LABELER_ERRORS = (RuntimeError, json.JSONDecodeError, subprocess.TimeoutExpired)
+
+
+def canned_replies(labeler: str) -> Any:
+    """For --labeler canned:<file.json>, the replies in that file, standing in for the agent's (tests); else None."""
+    return json.loads(Path(labeler.split(":", 1)[1]).read_text()) if labeler.startswith("canned:") else None
+
+
 def label(relabel_all: bool, labeler: str, limit: int | None = None, missing_subject: bool = False) -> int:
-    canned: dict[str, Any] = {}
+    canned: dict[str, Any] = canned_replies(labeler) or {}
     if labeler.startswith("canned:"):
-        canned, labeler = json.loads(Path(labeler.split(":", 1)[1]).read_text()), "canned"
+        labeler = "canned"
     if missing_subject:
         todo = [(p, e) for p, e in load() if not TX.subject_of(e.get("domain"), e.get("review", {}).get("subject"))][:limit]
     else:
@@ -246,7 +269,7 @@ def label(relabel_all: bool, labeler: str, limit: int | None = None, missing_sub
         chunk = todo[i : i + BATCH]
         try:
             replies = label_batch([e for _, e in chunk], labeler, canned)
-        except (RuntimeError, json.JSONDecodeError, subprocess.TimeoutExpired) as err:
+        except LABELER_ERRORS as err:
             print(f"batch {i // BATCH + 1}: {err}", file=sys.stderr)
             continue
         for path, e in chunk:
@@ -325,15 +348,21 @@ def disputed(links: list[dict[str, Any]]) -> bool:
     return any(d.get("stance") in DISPUTING for d in links)
 
 
+def unlabelled(e: dict[str, Any]) -> list[dict[str, Any]]:
+    return [d for d in e.get("discussion") or [] if "stance" not in d]
+
+
 def with_stance(link: dict[str, Any], stance: str) -> dict[str, Any]:
     """The link with that stance; "none" clears it."""
     out = {k: v for k, v in link.items() if k != "stance"}
     return out if stance == "none" else {**out, "stance": stance}
 
 
-def link_url(url: str) -> str:
-    """A link as it is stored, to find it among a record's links without reading it again."""
-    return url.strip().replace("twitter.com/", "x.com/").split("?")[0]
+def link_url(url: str, attached: Iterable[str] = ()) -> str:
+    """A link as it is stored, to find it among a record's links without reading it again: as given when it is
+    attached so (a page whose query matters), else as an X post is stored (x.com, no query)."""
+    url = url.strip()
+    return url if url in attached else url.replace("twitter.com/", "x.com/").split("?")[0]
 
 
 def recheck(links: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -341,7 +370,7 @@ def recheck(links: list[dict[str, Any]]) -> list[dict[str, Any]]:
     out = []
     for d in links:
         try:
-            out.append({**S.discussion_link(d["url"]), **{k: d[k] for k in KEPT if k in d}})
+            out.append({**S.discussion_link(d["url"]), **pick(d, KEPT)})
         except S.NotFound:
             print(f"dropped  {d['url']}")
         except (ValueError, S.SourceError) as err:
@@ -354,8 +383,8 @@ def propose_stances(records: list[str], labeler: str) -> int:
     """The labelling agent proposes a stance for each link that has none (stance-prompt.md); a person decides.
     Nothing is written: each proposal is printed as the discuss command that sets it, to run after reading the
     link. --labeler canned:<file.json> reads {url: {stance, reason}} instead, for tests."""
-    canned: dict[str, Any] | None = json.loads(Path(labeler.split(":", 1)[1]).read_text()) if labeler.startswith("canned:") else None
-    todo = [e for _, e in load() if (not records or rid(e) in records) and any("stance" not in d for d in e.get("discussion") or [])]
+    canned = canned_replies(labeler)
+    todo = [e for _, e in load() if (not records or rid(e) in records) and unlabelled(e)]
     batches: list[list[dict[str, Any]]] = [[]]
     for e in todo:  # whole records, about BATCH links to a batch
         if sum(len(x["discussion"]) for x in batches[-1]) >= BATCH:
@@ -363,12 +392,11 @@ def propose_stances(records: list[str], labeler: str) -> int:
         batches[-1].append(e)
     n = 0
     for batch in filter(None, batches):
-        data = [{"id": rid(e), "title": e["title"], "summary": e.get("summary", ""), "responses": [
-                    {k: d[k] for k in ("url", "kind", "author", "title", "text") if k in d} for d in e["discussion"] if "stance" not in d]}
-                for e in batch]
+        data = [{"id": rid(e), "title": e["title"], "summary": e.get("summary", ""),
+                 "responses": [pick(d, ("url", "kind", "author", "title", "text")) for d in unlabelled(e)]} for e in batch]
         try:
             replies = canned if canned is not None else {r["url"]: r for r in ask_claude("stance-prompt.md", "RECORDS", data) if isinstance(r, dict) and "url" in r}
-        except (RuntimeError, json.JSONDecodeError, subprocess.TimeoutExpired) as err:
+        except LABELER_ERRORS as err:
             print(f"skipped {len(batch)} records: {err}", file=sys.stderr)
             continue
         for r in data:
@@ -381,7 +409,7 @@ def propose_stances(records: list[str], labeler: str) -> int:
                           f"   # {str(p.get('reason', ''))[:120]}")
                 else:
                     print(f"# no proposal, open it: {d['url']}")
-    print(f"\n{n} stances proposed for {sum('stance' not in d for e in todo for d in e['discussion'])} unlabelled links on {len(todo)} records; nothing written."
+    print(f"\n{n} stances proposed for {sum(len(unlabelled(e)) for e in todo)} unlabelled links on {len(todo)} records; nothing written."
           " Run the commands you agree with.")
     return 0
 
@@ -409,19 +437,17 @@ def discuss(record: str, urls: list[str], drop: bool, dry_run: bool, stance: str
     if not urls:
         print("name the links to attach, or use --recheck")
         return 2
-    source, _, key = record.partition("/")
-    path = path_for(source, key)
-    if not path.exists():
-        print(f"no entry {record}")
+    if not (found := read_entry(record)):
         return 2
-    e = json.loads(path.read_text())
+    path, e = found
     links = e.get("discussion", [])
     if drop:
         gone = {link_url(u) for u in urls}
         links = [x for x in links if x["url"] not in gone]
         print(f"{len(e.get('discussion', [])) - len(links)} dropped")
     for url in [] if drop else urls:
-        old = next((x for x in links if x["url"] in (url.strip(), link_url(url))), None)
+        attached = {x["url"]: x for x in links}
+        old = attached.get(link_url(url, attached))
         if old and stance:
             links = [with_stance(x, stance) if x is old else x for x in links]
             print(f"= {stance:<10} {old['url']}")
@@ -431,8 +457,7 @@ def discuss(record: str, urls: list[str], drop: bool, dry_run: bool, stance: str
         except (ValueError, S.NotFound, S.SourceError) as err:
             print(f"skipped {url}: {err}", file=sys.stderr)
             continue
-        old = old or next((x for x in links if x["url"] == d["url"]), {})
-        new = {**d, "added": S.today(), **{k: old[k] for k in KEPT if k in old}}  # read again: keeps its stance
+        new = {**d, "added": S.today(), **pick(old or attached.get(d["url"], {}), KEPT)}  # read again: keeps its stance
         links = [x for x in links if x["url"] != d["url"]] + [with_stance(new, stance) if stance else new]
         print(f"+ {d.get('author') or d.get('site')}: {(d.get('text') or d.get('title') or d['url'])[:90]}")
     e["discussion"] = sorted(links, key=lambda d: d.get("date", ""))
@@ -467,8 +492,7 @@ def reception_state(e: dict[str, Any]) -> str | None:
 
 
 def published_reception(e: dict[str, Any]) -> dict[str, Any] | None:
-    r = e.get("reception") or {}
-    return {k: r[k] for k in ("text", "written", "links", "reviewed_by") if k in r} if reception_state(e) == "published" else None
+    return pick(e["reception"], ("text", "written", "links", "reviewed_by")) if reception_state(e) == "published" else None
 
 
 def draft_reception(e: dict[str, Any], labeler: str) -> dict[str, Any]:
@@ -476,11 +500,12 @@ def draft_reception(e: dict[str, Any], labeler: str) -> dict[str, Any]:
     labelled = [d for d in e.get("discussion") or [] if d.get("stance")]
     if not labelled:
         raise ValueError("no labelled links: label them first (discuss --stance, or --propose-stances)")
-    if labeler.startswith("canned:"):
-        reply = json.loads(Path(labeler.split(":", 1)[1]).read_text()).get(rid(e)) or {}
+    canned = canned_replies(labeler)
+    if canned is not None:
+        reply = canned.get(rid(e)) or {}
     else:
         data = {"id": rid(e), "title": e["title"], "summary": e.get("summary", ""), "withdrawn": e.get("withdrawn_on") or bool(e.get("withdrawn")),
-                "responses": [{k: d[k] for k in ("url", "kind", "author", "site", "date", "stance", "title", "text") if k in d} for d in labelled]}
+                "responses": [pick(d, ("url", "kind", "author", "site", "date", "stance", "title", "text")) for d in labelled]}
         reply = ask_claude("reception-prompt.md", "RECORD", data, reply=r"\{.*\}")
     if not isinstance(reply, dict):
         raise ValueError("the labeler did not reply with an object")
@@ -489,24 +514,25 @@ def draft_reception(e: dict[str, Any], labeler: str) -> dict[str, Any]:
         raise ValueError("the labeler gave no text")
     urls = {d["url"] for d in labelled}
     return {"text": text[:RECEPTION_CHARS], "links": [u for u in reply.get("links", []) if u in urls] or sorted(urls),
-            "drafted_by": labeler if labeler.startswith("canned:") else "claude-haiku"}
+            "drafted_by": labeler if canned is not None else "claude-haiku"}
+
+
+def list_receptions() -> int:
+    rows = [(rid(e), reception_state(e), e["reception"]) for _, e in load() if e.get("reception")]
+    for i, state, r in rows:
+        print(f"{state:<9} {i}  {r.get('text', '')[:80]}  {'@' + r['reviewed_by'] if r.get('reviewed_by') else ''}")
+    print(f"{len(rows)} receptions: {sum(s == 'published' for _, s, _ in rows)} published")
+    return 0
 
 
 def reception(record: str | None, draft: bool, text: str | None, reviewed_by: str | None, links: list[str] | None,
               labeler: str, dry_run: bool) -> int:
     """Draft, write or review a record's reception; with no record, list every reception and its state."""
     if not record:
-        rows = [(rid(e), reception_state(e), e["reception"]) for _, e in load() if e.get("reception")]
-        for i, state, r in rows:
-            print(f"{state:<9} {i}  {r.get('text', '')[:80]}  {'@' + r['reviewed_by'] if r.get('reviewed_by') else ''}")
-        print(f"{len(rows)} receptions: {sum(s == 'published' for _, s, _ in rows)} published")
-        return 0
-    source, _, key = record.partition("/")
-    path = path_for(source, key)
-    if not path.exists():
-        print(f"no entry {record}")
+        return list_receptions()
+    if not (found := read_entry(record)):
         return 2
-    e = json.loads(path.read_text())
+    path, e = found
     attached = e.get("discussion") or []
     old = e.get("reception") or {}
     if reviewed_by and not LOGIN.match(reviewed_by):
@@ -528,15 +554,15 @@ def reception(record: str | None, draft: bool, text: str | None, reviewed_by: st
         elif text is not None:
             new = {"text": S.clean(text), "links": old.get("links") or [d["url"] for d in attached]}
         else:
-            new = {k: old[k] for k in ("text", "links", "drafted_by") if k in old}
+            new = pick(old, ("text", "links", "drafted_by"))
             if not new.get("text"):
                 raise ValueError("nothing to review: draft it (--draft) or write it (--text) first")
-    except (ValueError, RuntimeError, json.JSONDecodeError, subprocess.TimeoutExpired) as err:
+    except (ValueError, *LABELER_ERRORS) as err:
         print(f"no reception written: {err}")
         return 2
     urls = {d["url"] for d in attached}
     if links:
-        new["links"] = [u.strip() if u.strip() in urls else link_url(u) for u in links]
+        new["links"] = [link_url(u, urls) for u in links]
     if missing := [u for u in new["links"] if u not in urls]:
         print(f"not among {record}'s links: {', '.join(missing)}")
         return 2
@@ -575,7 +601,7 @@ X_FIELDS = ("kind", "url", "author", "handle", "date", "added", "stance")
 
 
 def served_link(d: dict[str, Any]) -> dict[str, Any]:
-    return {k: d[k] for k in X_FIELDS if k in d} if d.get("kind") == "x" else dict(d)
+    return pick(d, X_FIELDS) if d.get("kind") == "x" else dict(d)
 
 
 def to_item(e: dict[str, Any]) -> dict[str, Any] | None:
@@ -585,9 +611,10 @@ def to_item(e: dict[str, Any]) -> dict[str, Any] | None:
     if r.get("category") == "harmful":
         return None
     subject = TX.subject_of(e.get("domain"), r.get("subject"))
+    links = e.get("discussion") or []
     return _drop_empty({
-        "id": rid(e), **{k: e.get(k) for k in PASSTHROUGH}, "discussion": [served_link(d) for d in e.get("discussion") or []],
-        "disputed": disputed(e.get("discussion") or []) or None, "reception": published_reception(e),
+        "id": rid(e), **{k: e.get(k) for k in PASSTHROUGH}, "discussion": [served_link(d) for d in links],
+        "disputed": disputed(links) or None, "reception": published_reception(e),
         "tags": list(dict.fromkeys([*(e.get("tags") or []), *(r.get("tags") or [])]))[:10],
         "published": e.get("published") or e.get("added"), "category": r.get("category", "research"),
         "subject": subject, "division": TX.division_of(subject) if subject else None,

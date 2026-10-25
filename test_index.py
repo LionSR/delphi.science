@@ -78,10 +78,14 @@ class Checks(unittest.TestCase):
         self.tmp.cleanup()
 
     def entry(self, **kw: object) -> dict:
-        return {"key": "o__r", "source": "github", "url": "https://github.com/o/r", "title": "r", **kw}
+        return {"key": "o__r", "source": "github", "url": "https://github.com/o/r", "title": "r", "stars": 120, **kw}
 
     def test_new_entry_passes(self) -> None:
         self.assertEqual(index.check(self.entry()), [])
+
+    def test_repository_needs_stars_or_a_citation_file(self) -> None:
+        self.assertIn("CITATION.cff", index.check(self.entry(stars=3))[0])
+        self.assertEqual(index.check(self.entry(stars=3, citation_cff=True)), [])
 
     def test_duplicate_is_rejected(self) -> None:
         index.save(index.path_for("github", "o__r"), self.entry())

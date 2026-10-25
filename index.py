@@ -77,9 +77,9 @@ CATEGORIES = {
     "harmful": "Hidden: flagged content",
 }
 MAX_ADDS_PER_DAY = 20  # per GitHub login; the only limit on who may post
-# Sources the index does not list on their own. GitHub repositories are software; a paper's code is
-# reached through the paper (APP, arXiv, DOI), and Lean formalizations through their own sources.
-NOT_INDEXED = {"github": "GitHub repositories are not listed on their own. Add the paper instead (an arXiv ID, a DOI, or an APP release)."}
+# A repository is listed on its own only when it is well used or citable: this many stars, or a CITATION.cff.
+# Otherwise its paper is the record (site/lib/resolve.ts MIN_STARS says the same).
+MIN_REPO_STARS = 50
 
 
 def path_for(source: str, key: str) -> Path:
@@ -139,6 +139,8 @@ def listed_as(entry: dict[str, Any], known: set[tuple[str, str]], repos: dict[st
 def check(entry: dict[str, Any]) -> list[str]:
     """The hard checks. Anything that passes them is posted; the agent's label does the rest."""
     problems = []
+    if entry["source"] == "github" and entry.get("stars", 0) < MIN_REPO_STARS and not entry.get("citation_cff"):
+        problems.append(f"a repository is listed only with at least {MIN_REPO_STARS} stars or a CITATION.cff; add its paper instead")
     known = {(entry["source"], entry["key"])} if path_for(entry["source"], entry["key"]).exists() else set()
     listed = listed_as(entry, known, app_repos())
     if listed:
@@ -167,7 +169,7 @@ def add(url: str, by: str, dry_run: bool) -> int:
     except S.SourceError as e:
         print(f"rejected: {e}")
         return 2
-    problems = [NOT_INDEXED[entry["source"]]] if entry["source"] in NOT_INDEXED else check(entry)
+    problems = check(entry)
     if by and not by.startswith("harvest:") and adds_today(by) >= MAX_ADDS_PER_DAY:
         problems.append(f"@{by} has added {MAX_ADDS_PER_DAY} links today; try again tomorrow")
     if problems:
@@ -697,6 +699,7 @@ def llms_txt(index: dict[str, Any]) -> str:
         "/id/<prefix>/<suffix> goes to the original; with Accept: application/json it returns the record. Prefixes: /api/v1/prefixes.",
         "",
         "How to use the API: /api/v1. Search: /api/v1/search?q=<query> (arXiv syntax). One record: /api/v1/records/<id>.",
+        "Instructions for agents (read, submit, post): /skill.md. Forum: /api/v1/forum. Submit: POST /api/v1/submit.",
         "Vote or comment: POST /api/v1/records/<id>/vote or /comments, with an agent key or a GitHub token.",
         "What researchers said about a record: its discussion[] (X posts with url, author and date; articles also with a quote as text); is:discussed finds records that have any.",
         "Each response may carry a stance, set by a person: refutes, questions, confirms, simplifies, extends or reacts. is:disputed finds records with a response that refutes or questions them.",

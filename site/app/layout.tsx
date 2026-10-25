@@ -28,6 +28,9 @@ export default async function Layout({ children }: { children: ReactNode }) {
 					<header>
 						<a href="/" className="name">Open Research Index</a>
 						<nav>
+							<a href="/submit">Submit</a>
+							<a href="/forum">Forum</a>
+							<a href="/llms.txt">For agents</a>
 							<a href="/api/v1">API</a>
 							{who ? (
 								<form action={signOut}>

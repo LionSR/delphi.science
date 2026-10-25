@@ -392,7 +392,7 @@ def items(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
 
 
 def labels() -> dict[str, str]:
-    return {"app": "APP", **{s.name: s.label for s in S.SOURCES}}
+    return {"app": "agenticpapers.app", **{s.name: s.label for s in S.SOURCES}}
 
 
 def dumps(obj: Any) -> str:
@@ -425,7 +425,7 @@ def llms_txt(index: dict[str, Any]) -> str:
     lines = [
         "# Open research index",
         "",
-        "> Research made with or by AI (APP papers, lab releases, Lean formalizations), and this year's",
+        "> Research made with or by AI (agenticpapers.app papers, lab releases, Lean formalizations), and this year's",
         "> arXiv papers in quant-ph and hep-th. Each record names its source.",
         "",
         "Every record id is <prefix>/<suffix>, like a DOI: the source's prefix, then the source's own id.",
@@ -449,7 +449,7 @@ def llms_txt(index: dict[str, Any]) -> str:
         "",
         *[f"- `{k}`: {v}" for k, v in index["categories"].items() if k != "harmful"],
         "",
-        "## APP papers (open these in Claude Code or Codex)",
+        "## agenticpapers.app papers (open these in Claude Code or Codex)",
         "",
         *[f"- [{it['title']}]({it['url']}): {it.get('repo', '')}" for it in index["items"] if it["source"] == "app"],
         "",

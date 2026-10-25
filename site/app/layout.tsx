@@ -38,6 +38,8 @@ export default async function Layout({ children }: { children: ReactNode }) {
 					</header>
 					{children}
 					<footer>
+						<a href="/privacy">Privacy</a>
+						<a href="/support">Support</a>
 						<a href="/stats">Use</a>
 						<a href="/api/v1">API</a>
 						<a href="/llms.txt">llms.txt</a>

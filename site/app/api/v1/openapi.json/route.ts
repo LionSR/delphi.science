@@ -2,6 +2,7 @@
 // from one (LangChain, LlamaIndex, Semantic Kernel and others). Summaries stay under 300 characters and
 // parameter descriptions under 700, the limits tool importers commonly enforce.
 import { counted } from '../../../../lib/api.ts';
+import { SUPPORT_EMAIL } from '../../../../lib/contact.ts';
 import { SORTS } from '../../../../lib/query.ts';
 import { SITE } from '../../../../lib/view.ts';
 
@@ -16,6 +17,7 @@ const spec = {
 	info: {
 		title: 'Open Research Index',
 		version: '1.0.0',
+		contact: { name: 'Support', url: `${SITE}/support`, ...(SUPPORT_EMAIL ? { email: SUPPORT_EMAIL } : {}) },
 		description: 'Research, AI-made and human, beside what experts said about it. A record carries its responses (arXiv replies, blog posts, talks, MathOverflow, X posts) with author, date and a quote from the source. Reads need no key. Overview for agents: ' + `${SITE}/llms.txt`,
 	},
 	servers: [{ url: SITE }],

@@ -5,7 +5,7 @@ import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { before, describe, test } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
 import { vector } from '@electric-sql/pglite/vector';
-import { compile, get, parse, QueryError, search } from './query.ts';
+import { compile, get, IS, parse, QUERY_FIELDS, QUERY_HELP, QueryError, search, SORT_HELP, SORTS } from './query.ts';
 import { load, type Item } from './load.ts';
 import { agentKeys, createAgentKey, createSession, myVotes, revokeKey, unvote, vote, voterFromKey } from './votes.ts';
 import { comment, comments } from './comments.ts';
@@ -36,6 +36,12 @@ describe('query syntax', () => {
 		assert.match(compile('cat:math.NT').where, /r\.subject = \$1/);
 		assert.deepEqual(compile('cat:"number theory"').params[0], 'math.NT');
 		assert.match(compile('cat:"something else"').where, /r\.domain/);
+	});
+	test('the docs describe the language as it compiles: every field, flag and sort they name is real', () => {
+		for (const f of Object.keys(QUERY_FIELDS).flatMap((g) => g.split(' '))) assert.doesNotThrow(() => compile(`${f}:${f === 'is' ? 'discussed' : '2026'}`), f);
+		for (const flag of Object.keys(IS)) assert.doesNotThrow(() => compile(`is:${flag}`), flag);
+		for (const s of SORTS) assert.match(SORT_HELP, new RegExp(`(^|, )${s}\\b`), s);
+		assert.ok(QUERY_HELP.length < 700, `${QUERY_HELP.length} characters`);
 	});
 });
 

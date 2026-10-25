@@ -11,6 +11,7 @@ copied: they are read from registry/entries/ at build time and shown with the AP
     python index.py refresh [--older-than DAYS] [--limit N] [--dry-run]
     python index.py discuss <record id> <url>... [--stance STANCE] [--drop] [--dry-run]
     python index.py discuss --recheck [<record id>...] [--dry-run]   # daily: deleted posts drop out
+    python index.py discuss --propose-stances [<record id>...] [--labeler claude|canned:<file.json>]
     python index.py build            # writes dist/: index.json, index.db, llms.txt
 """
 
@@ -21,6 +22,7 @@ import itertools
 import datetime as dt
 import json
 import re
+import shlex
 import subprocess
 import sys
 from pathlib import Path
@@ -210,16 +212,22 @@ def label_batch(batch: list[dict[str, Any]], labeler: str, canned: dict[str, Any
         return {e["key"]: canned[e["key"]] for e in batch if e["key"] in canned}
     data = [{"key": e["key"], "source": e["source"], "title": e["title"], "authors": e.get("authors", [])[:6],
              "summary": e.get("summary", ""), "tags": e.get("tags", [])[:8]} for e in batch]
-    prompt = (HERE / "label-prompt.md").read_text() + "\n\nBEGIN_ENTRIES\n" + json.dumps(data, ensure_ascii=False) + "\nEND_ENTRIES\n"
+    replies = ask_claude("label-prompt.md", "ENTRIES", data)
+    return {r["key"]: r for r in replies if isinstance(r, dict) and r.get("category") in CATEGORIES}
+
+
+def ask_claude(prompt_file: str, name: str, data: Any, reply: str = r"\[.*\]") -> Any:
+    """The labelling agent's JSON reply to a prompt file, with the data between BEGIN_<name> and END_<name>.
+    It runs without tools: the data is third-party text, and the prompt says to treat it as such."""
+    prompt = (HERE / prompt_file).read_text() + f"\n\nBEGIN_{name}\n" + json.dumps(data, ensure_ascii=False) + f"\nEND_{name}\n"
     out = subprocess.run(
         ["claude", "-p", "--model", "haiku", "--output-format", "text", "--disallowedTools", "Bash,Edit,Write,WebFetch,WebSearch,Read"],
         input=prompt, capture_output=True, text=True, timeout=300,
     )
-    m = re.search(r"\[.*\]", out.stdout, re.S)
+    m = re.search(reply, out.stdout, re.S)
     if out.returncode or not m:
         raise RuntimeError(f"labeler failed: {out.stderr.strip() or out.stdout.strip()[:300]}")
-    replies = json.loads(m.group(0))
-    return {r["key"]: r for r in replies if isinstance(r, dict) and r.get("category") in CATEGORIES}
+    return json.loads(m.group(0))
 
 
 def label(relabel_all: bool, labeler: str, limit: int | None = None, missing_subject: bool = False) -> int:
@@ -338,6 +346,42 @@ def recheck(links: list[dict[str, Any]]) -> list[dict[str, Any]]:
             print(f"kept     {d['url']}: {err}", file=sys.stderr)
             out.append(d)
     return out
+
+
+def propose_stances(records: list[str], labeler: str) -> int:
+    """The labelling agent proposes a stance for each link that has none (stance-prompt.md); a person decides.
+    Nothing is written: each proposal is printed as the discuss command that sets it, to run after reading the
+    link. --labeler canned:<file.json> reads {url: {stance, reason}} instead, for tests."""
+    canned: dict[str, Any] | None = json.loads(Path(labeler.split(":", 1)[1]).read_text()) if labeler.startswith("canned:") else None
+    todo = [e for _, e in load() if (not records or rid(e) in records) and any("stance" not in d for d in e.get("discussion") or [])]
+    batches: list[list[dict[str, Any]]] = [[]]
+    for e in todo:  # whole records, about BATCH links to a batch
+        if sum(len(x["discussion"]) for x in batches[-1]) >= BATCH:
+            batches.append([])
+        batches[-1].append(e)
+    n = 0
+    for batch in filter(None, batches):
+        data = [{"id": rid(e), "title": e["title"], "summary": e.get("summary", ""), "responses": [
+                    {k: d[k] for k in ("url", "kind", "author", "title", "text") if k in d} for d in e["discussion"] if "stance" not in d]}
+                for e in batch]
+        try:
+            replies = canned if canned is not None else {r["url"]: r for r in ask_claude("stance-prompt.md", "RECORDS", data) if isinstance(r, dict) and "url" in r}
+        except (RuntimeError, json.JSONDecodeError, subprocess.TimeoutExpired) as err:
+            print(f"skipped {len(batch)} records: {err}", file=sys.stderr)
+            continue
+        for r in data:
+            print(f"\n# {r['id']}: {r['title'][:90]}")
+            for d in r["responses"]:
+                p = replies.get(d["url"]) or {}
+                if p.get("stance") in STANCES:
+                    n += 1
+                    print(f"python3 index.py discuss {shlex.quote(r['id'])} {shlex.quote(d['url'])} --stance {p['stance']}"
+                          f"   # {str(p.get('reason', ''))[:120]}")
+                else:
+                    print(f"# no proposal, open it: {d['url']}")
+    print(f"\n{n} stances proposed for {sum('stance' not in d for e in todo for d in e['discussion'])} unlabelled links on {len(todo)} records; nothing written."
+          " Run the commands you agree with.")
+    return 0
 
 
 def recheck_all(records: list[str], dry_run: bool) -> int:
@@ -545,6 +589,8 @@ def main(argv: Iterable[str] | None = None) -> int:
     d = sub.add_parser("discuss"); d.add_argument("record", nargs="?"); d.add_argument("urls", nargs="*"); d.add_argument("--drop", action="store_true"); d.add_argument("--dry-run", action="store_true")
     d.add_argument("--recheck", action="store_true", help="read every link again (or the named records' links); a deleted post drops out")
     d.add_argument("--stance", choices=[*STANCES, "none"], help="what the links say about the record (see STANCES); set on links already attached without reading them again")
+    d.add_argument("--propose-stances", action="store_true", help="the labelling agent proposes stances for unlabelled links (or the named records'); prints them as commands, writes nothing")
+    d.add_argument("--labeler", default="claude", help="for --propose-stances: claude, or canned:<file.json>")
     sub.add_parser("build")
     args = ap.parse_args(list(argv) if argv is not None else None)
     S.TOKEN = github_token()
@@ -557,10 +603,13 @@ def main(argv: Iterable[str] | None = None) -> int:
     if args.cmd == "refresh":
         return refresh(args.older_than, args.limit, args.dry_run)
     if args.cmd == "discuss":
+        named = [x for x in [args.record, *args.urls] if x]
         if args.recheck:
-            return recheck_all([x for x in [args.record, *args.urls] if x], args.dry_run)
+            return recheck_all(named, args.dry_run)
+        if args.propose_stances:
+            return propose_stances(named, args.labeler)
         if not args.record:
-            ap.error("discuss needs a record id, or --recheck")
+            ap.error("discuss needs a record id, or --recheck or --propose-stances")
         return discuss(args.record, args.urls, args.drop, args.dry_run, args.stance)
     return build()
 

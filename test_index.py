@@ -6,6 +6,8 @@
 
 from __future__ import annotations
 
+import contextlib
+import io
 import json
 import sys
 import tempfile
@@ -239,6 +241,39 @@ class Stance(unittest.TestCase):
         with self.assertRaises(SystemExit):
             index.main(["discuss", "web/k", "https://x.com/a/status/1", "--stance", "likes"])
 
+    def test_proposals_are_printed_as_commands_and_nothing_is_written(self) -> None:
+        index.main(["discuss", "web/k", "https://e.org/a#:~:text=a%20gap", "https://e.org/b"])
+        index.main(["discuss", "web/k", "https://e.org/b", "--stance", "extends"])
+        before = index.path_for("web", "k").read_text()
+        canned = Path(self.tmp.name) / "stances.json"
+        canned.write_text(json.dumps({"https://e.org/a#:~:text=a%20gap": {"stance": "questions", "reason": "Lean states less"},
+                                      "https://e.org/b": {"stance": "refutes"}, "https://x.com/a/status/1": {"stance": "likes"}}))
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            index.main(["discuss", "--propose-stances", "--labeler", f"canned:{canned}"])
+        text = out.getvalue()
+        self.assertIn("python3 index.py discuss web/k 'https://e.org/a#:~:text=a%20gap' --stance questions   # Lean states less", text)
+        self.assertNotIn("e.org/b", text)  # already labelled by a person
+        self.assertIn("# no proposal, open it: https://x.com/a/status/1", text)  # not a stance
+        self.assertEqual(index.path_for("web", "k").read_text(), before)
+
+    def test_the_labeler_gets_the_responses_as_data(self) -> None:
+        seen = {}
+
+        def run(cmd: list, input: str, **kw: object) -> object:
+            seen["prompt"] = input
+            return type("Done", (), {"returncode": 0, "stderr": "", "stdout": 'Sure. [{"url": "https://x.com/a/status/1", "stance": null}]'})()
+
+        saved, index.subprocess.run = index.subprocess.run, run
+        try:
+            with contextlib.redirect_stdout(io.StringIO()):
+                index.main(["discuss", "--propose-stances"])
+        finally:
+            index.subprocess.run = saved
+        data = json.loads(seen["prompt"].split("BEGIN_RECORDS\n")[1].split("\nEND_RECORDS")[0])
+        self.assertEqual(data, [{"id": "web/k", "title": "K", "summary": "", "responses": [
+            {"url": "https://x.com/a/status/1", "kind": "x", "author": "A"}]}])
+
     def test_counts_and_flags(self) -> None:
         links = [{"url": "1"}, {"url": "2", "stance": "confirms"}, {"url": "3", "stance": "reacts"}, {"url": "4", "stance": "questions"}]
         self.assertEqual(index.upvoting(links), 2)  # unlabelled and confirms
@@ -260,6 +295,7 @@ class Stance(unittest.TestCase):
         db = query.connect(path)
         ids = lambda q: sorted(r["id"] for r in query.search(db, q)["results"])  # noqa: E731
         self.assertEqual((ids("is:disputed"), ids("is:discussed"), ids("T ANDNOT is:discussed")), (["web/a"], ["web/a", "web/b"], ["web/c"]))
+        db.close()
 
 
 class Text(unittest.TestCase):

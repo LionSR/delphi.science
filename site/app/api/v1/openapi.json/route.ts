@@ -26,7 +26,7 @@ const spec = {
 				summary: 'Search the index with arXiv-style queries. Use it to find a paper and see whether experts responded to it (discussed > 0, or is:discussed in the query).',
 				parameters: [
 					{ name: 'q', in: 'query', schema: { type: 'string' }, description: 'arXiv-style query. Fields: ti: au: abs: all: cat: (cat:math.NT) source: (source:openai-math) id: family: published: ([2026-10-01 TO *]) is: (formalized, verified, withdrawn, ai-generated, discussed). Operators AND OR ANDNOT, parentheses, "phrases", word* prefixes. Empty lists everything.' },
-					{ name: 'sort', in: 'query', schema: { type: 'string', enum: [...SORTS] }, description: 'relevance (default with a query), newest (default without), oldest, title, score (votes plus linked responses, all time), day, week, month (votes and responses published in that window), mentions.' },
+					{ name: 'sort', in: 'query', schema: { type: 'string', enum: [...SORTS] }, description: 'relevance (default with a query), newest (default without), oldest, title, score (votes plus linked responses, all time), day, week, month (votes and responses published in that window), mentions, responded (the newest expert response first).' },
 					{ name: 'limit', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 100, default: 20 } },
 					{ name: 'cursor', in: 'query', schema: { type: 'string' }, description: 'next_cursor from the previous page, unchanged.' },
 					{ name: 'fields', in: 'query', schema: { type: 'string', enum: ['compact', 'full'], default: 'compact' }, description: 'full returns each record whole, with discussion[].' },

@@ -313,6 +313,31 @@ class Stance(Entries):
         db.close()
 
 
+class StanceCopies(unittest.TestCase):
+    """site/lib/stances.json is the one list of stances. The migration's generated columns and the labelling
+    prompt cannot read it, so they must name the same stances, with the same upvoting/disputing split."""
+
+    ROOT = Path(__file__).resolve().parent
+
+    def test_the_migration_counts_and_disputes_the_same_stances(self) -> None:
+        import re
+        sql = next(t for f in sorted((self.ROOT / "site" / "supabase" / "migrations").glob("*.sql"), reverse=True)
+                   if "upvoting integer generated" in (t := f.read_text()))  # the latest migration that defines them
+        column = lambda name: re.search(rf"add column {name} \w+ generated always as \((.*?)\) stored", sql, re.S).group(1)  # noqa: E731
+        named = lambda path: set(re.findall(r'@\.stance == "(\w+)"', path))  # noqa: E731
+        upvoting, disputing = column("upvoting"), column("disputed")
+        self.assertEqual(named(upvoting), index.UPVOTING)
+        self.assertEqual("!(exists(@.stance))" in upvoting, index.STANCE_FILE["unlabelled_upvotes"])
+        self.assertEqual(named(disputing), index.DISPUTING)
+        self.assertNotIn("exists(@.stance)", disputing)  # an unlabelled link disputes nothing
+        self.assertLessEqual(index.UPVOTING | index.DISPUTING, set(index.STANCES))
+
+    def test_the_labelling_prompt_offers_the_same_stances(self) -> None:
+        import re
+        prompt = (self.ROOT / "stance-prompt.md").read_text()
+        self.assertEqual(re.findall(r"^- `(\w+)`:", prompt, re.M), list(index.STANCES))
+
+
 class Reception(Entries):
     """Where the work stands: drafted by the agent from labelled links, published only once a person reviews it,
     and no longer published once the links change."""

@@ -10,6 +10,8 @@ import { load, type Item } from './load.ts';
 import { agentKeys, createAgentKey, createSession, myVotes, revokeKey, unvote, vote, voterFromKey } from './votes.ts';
 import { comment, comments } from './comments.ts';
 import { approveDevice, denyDevice, pendingDevice, redeemDevice, startDevice } from './device.ts';
+import { handle as mcp } from './mcp.ts';
+import { fileCount, MAX_URLS, sitemapFile, sitemapFiles } from './sitemap.ts';
 
 const MIGRATIONS = new URL('../supabase/migrations/', import.meta.url);
 const INDEX = new URL('../../dist/index.json', import.meta.url);
@@ -45,6 +47,10 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		items = JSON.parse(readFileSync(INDEX, 'utf8')).items;
 		assert.equal(await load(db, items), items.length);
 	});
+	// Sets a record's links (record.discussion), as index.py discuss does; pair queries two palomar records.
+	const discuss = (id: string, links: object[]) =>
+		db.query("UPDATE open_index.records SET record = jsonb_set(record, '{discussion}', $2::jsonb) WHERE id = $1", [id, JSON.stringify(links)]);
+	const pair = (a: string, b: string) => `source:palomar AND (id:${JSON.stringify(a)} OR id:${JSON.stringify(b)})`;
 
 	test('records are stored as JSON objects', async () => {
 		const t = (await db.query<{ t: string }>('SELECT DISTINCT jsonb_typeof(record) AS t FROM open_index.records')).rows.map((r) => r.t);
@@ -79,6 +85,23 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		assert.ok((await search(db, 'au:claude')).results.some((x) => String(x.title).startsWith('Zeta23')));
 		assert.ok((await search(db, '"zero-free"')).total >= 1);
 		assert.ok((await search(db, 'lattice*')).total >= r.total);
+	});
+
+	test('the sitemap lists every record once, at most 50,000 URLs a file, each with its last change', async () => {
+		const files = await sitemapFiles(db);
+		assert.equal(files, fileCount(items.length));
+		const seen = new Set<string>();
+		for (let n = 0; n < files; n++) {
+			const urls = await sitemapFile(db, 'https://x.org', n);
+			assert.ok(urls.length <= MAX_URLS, `file ${n} has ${urls.length} URLs`);
+			for (const u of urls.filter((u) => u.loc.startsWith('https://x.org/r/'))) {
+				assert.match(String(u.lastmod), /^\d{4}-\d{2}-\d{2}T/);
+				assert.ok(!seen.has(u.loc), `${u.loc} is listed twice`);
+				seen.add(u.loc);
+			}
+		}
+		assert.equal(seen.size, items.length);
+		assert.equal((await sitemapFile(db, 'https://x.org', files)).length, 0);
 	});
 
 	test('one record by id', async () => {
@@ -121,11 +144,37 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		const [a, b] = items.filter((it) => it.source === 'palomar').slice(2, 4).map((it) => String(it.id));
 		const ago = (days: number) => new Date(Date.now() - days * 86400000).toISOString().slice(0, 10);
 		const today = ago(0);
-		const links = (dates: string[]) => JSON.stringify(dates.map((date, i) => ({ kind: 'web', url: `https://e.org/${i}`, date, added: today })));
-		await db.query("UPDATE open_index.records SET record = jsonb_set(record, '{discussion}', $2::jsonb) WHERE id = $1", [a, links([ago(20), ago(21)])]);
-		await db.query("UPDATE open_index.records SET record = jsonb_set(record, '{discussion}', $2::jsonb) WHERE id = $1", [b, links([today])]);
-		const top = async (sort: string) => (await search(db, `source:palomar AND (id:${JSON.stringify(a)} OR id:${JSON.stringify(b)})`, { sort, limit: 1 })).results[0].id;
+		const links = (dates: string[]) => dates.map((date, i) => ({ kind: 'web', url: `https://e.org/${i}`, date, added: today }));
+		await discuss(a, links([ago(20), ago(21)]));
+		await discuss(b, links([today]));
+		const top = async (sort: string) => (await search(db, pair(a, b), { sort, limit: 1 })).results[0].id;
 		assert.deepEqual([await top('week'), await top('month'), await top('score')], [b, a, a]); // both were linked today
+		assert.equal(await top('responded'), b);
+	});
+
+	test('responded: the record with the newest response first, then the ones without', async () => {
+		const latest = (it: Item) => Math.max(...(it.discussion as { date?: string; added: string }[]).map((d) => Date.parse(d.date || d.added)));
+		const discussed = items.filter((it) => it.source === 'openai-math' && Array.isArray(it.discussion) && it.discussion.length);
+		const r = await search(db, 'source:openai-math', { sort: 'responded', limit: 20 });
+		const byId = new Map(items.map((it) => [it.id, it]));
+		assert.deepEqual(r.results.map((x) => latest(byId.get(String(x.id))!)), discussed.map(latest).sort((x, y) => y - x).slice(0, 20));
+		const after = await search(db, 'source:openai-math', { sort: 'responded', limit: 1, cursor: btoa(JSON.stringify({ o: discussed.length, t: r.total })) });
+		assert.ok(!after.results[0].discussed);
+	});
+
+	test('only responses that confirm, simplify or extend count as upvotes; refutes and questions mark it disputed', async () => {
+		const [a, b] = items.filter((it) => it.source === 'palomar').slice(4, 6).map((it) => String(it.id));
+		const today = new Date().toISOString().slice(0, 10);
+		const links = (stances: (string | null)[]) => stances.map((stance, i) => ({ kind: 'web', url: `https://e.org/s${i}`, date: today, ...(stance ? { stance } : {}) }));
+		await discuss(a, links(['refutes', 'questions', 'reacts']));
+		await discuss(b, links(['confirms', null]));
+		const both = pair(a, b);
+		for (const sort of ['score', 'day', 'week']) assert.equal((await search(db, both, { sort, limit: 1 })).results[0].id, b, sort);
+		assert.deepEqual((await search(db, `${both} is:disputed`)).results.map((x) => x.id), [a]);
+		assert.equal((await search(db, `${both} is:discussed`)).total, 2); // a refutation is still a response
+		const rec = await get(db, a);
+		assert.deepEqual([rec?.discussed, rec?.disputed, (await get(db, b))?.disputed], [3, true, false]);
+		await db.query("UPDATE open_index.records SET record = record - 'discussion' WHERE id = ANY($1)", [[a, b]]); // leave the later rankings alone
 	});
 
 	test('comments and reviews; mentions count once per voter, never for the record itself', async () => {
@@ -145,6 +194,23 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		assert.equal((await search(db, 'source:app', { sort: 'mentions', limit: 1 })).results[0].id, app.id);
 		await assert.rejects(comment(db, a, bob, { body: ' ' }), /empty/);
 		await assert.rejects(comment(db, a, bob, { body: 'x', parent: 999999 }), /no comment/);
+	});
+
+	test('most cited in comments: the records comments name, by how many people, then the newest', async () => {
+		const ids = async (o: { limit: number; cursor?: string | null; sort?: string }) => {
+			const r = await search(db, 'source:palomar', { sort: 'mentions', ...o });
+			return { ids: r.results.map((x) => String(x.id)), next: r.next_cursor };
+		};
+		const newest = (await ids({ sort: 'newest', limit: 13 })).ids;
+		assert.deepEqual((await ids({ limit: 10 })).ids, newest.slice(0, 10), 'nothing cited yet: the newest');
+		const [x, y, z] = newest.slice(5, 8);
+		const host = String(items.find((it) => it.source === 'hexagon')!.id);
+		await comment(db, host, { login: 'ivan', agent: 'Claude Code' }, { body: `Compare ${z} and ${x}.` });
+		await comment(db, host, { login: 'judy', agent: 'Codex' }, { body: `See ${z} and ${y}.` });
+		const expected = [z, x, y, ...newest.filter((id) => ![x, y, z].includes(id))]; // ties go to the newer
+		const first = await ids({ limit: 5 });
+		assert.deepEqual(first.ids, expected.slice(0, 5));
+		assert.deepEqual((await ids({ limit: 5, cursor: first.next })).ids, expected.slice(5, 10));
 	});
 
 	test('agent keys: created once, stored as a hash, revocable', async () => {
@@ -177,6 +243,11 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		assert.ok(got !== 'pending');
 		assert.deepEqual(await voterFromKey(db, got.key), { login: 'gina', agent: 'Claude Code' });
 		await assert.rejects(redeemDevice(db, d.device_code), /used/);
+		for (const [agent, fix] of [[undefined, /your name/], ['', /your name/], ['   ', /your name/], [42, /your name/], ['x'.repeat(61), /at most 60/]] as const) {
+			await assert.rejects(startDevice(db, agent), (e: unknown) => e instanceof QueryError && fix.test(e.fix), String(agent));
+		}
+		await assert.rejects(createAgentKey(db, 'gina', 'y'.repeat(61)), /more than 60/);
+		assert.equal((await pendingDevice(db, (await startDevice(db, `  ${'z'.repeat(60)}  `)).user_code))?.agent, 'z'.repeat(60));
 		const denied = await startDevice(db, 'Grok bot');
 		await denyDevice(db, denied.user_code);
 		await assert.rejects(redeemDevice(db, denied.device_code), /denied/);
@@ -194,6 +265,49 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		const top = async (sort: string) => (await search(db, 'source:palomar', { sort, limit: 1 })).results[0].id;
 		assert.deepEqual([await top('week'), await top('month'), await top('score')], [fresh, old, old]);
 		assert.equal((await myVotes(db, 'erin', [old, fresh, 'nope/x'])).get(fresh)?.value, 1);
+	});
+
+	test('MCP at /mcp: initialize, list the tools, call each, over Streamable HTTP', async () => {
+		const rpc = async (method: string, params: object = {}) => {
+			const req = new Request('http://localhost/mcp', { method: 'POST', body: JSON.stringify({ jsonrpc: '2.0', id: 1, method, params }),
+				headers: { 'Content-Type': 'application/json', Accept: 'application/json, text/event-stream' } });
+			const res = await mcp(req, async () => db);
+			assert.equal(res.status, 200);
+			return (await res.json()).result;
+		};
+		const call = async (name: string, args: object) => rpc('tools/call', { name, arguments: args });
+		const init = await rpc('initialize', { protocolVersion: '2025-06-18', capabilities: {}, clientInfo: { name: 'test', version: '0' } });
+		assert.equal(init.serverInfo.name, 'open-research-index');
+		const tools = (await rpc('tools/list')).tools as { name: string; annotations: object; outputSchema?: object }[];
+		assert.deepEqual(tools.map((t) => t.name), ['search_records', 'get_record', 'list_discussed_records']);
+		for (const t of tools) {
+			assert.deepEqual(t.annotations, { readOnlyHint: true, destructiveHint: false, openWorldHint: false, idempotentHint: true });
+			assert.ok(t.outputSchema, t.name);
+		}
+
+		const total = async (q: string) => (await search(db, q, { limit: 1 })).total; // earlier tests link posts to some records
+		const found = (await call('search_records', { query: 'is:discussed', sort: 'score', limit: 2 })).structuredContent;
+		assert.equal(found.total, await total('is:discussed'));
+		assert.ok(found.results.every((r: Record<string, unknown>) => r.page && !r.links && r.discussed));
+		assert.ok(!('took_ms' in found));
+
+		const it = items.find((x) => x.source === 'openai-math' && Array.isArray(x.discussion) && x.discussion.length > 2)!;
+		const rec = (await call('get_record', { id: it.id })).structuredContent;
+		assert.equal(rec.discussion.length, (it.discussion as unknown[]).length);
+		assert.ok(rec.discussion.every((l: Record<string, unknown>) => l.url && l.quote && !('added' in l) && !('kind' in l)));
+		assert.ok(Array.isArray(rec.discusses));
+
+		const list = (await call('list_discussed_records', { limit: 3 })).structuredContent;
+		assert.equal(list.total, await total('is:discussed'));
+		assert.ok(list.results.every((r: Record<string, unknown>) => r.latest_response));
+		assert.equal((await call('list_discussed_records', { query: 'source:openai-math', limit: 1 })).structuredContent.total,
+			await total('is:discussed source:openai-math'));
+
+		for (const [name, args, text] of [['get_record', { id: 'nope/x' }, /no record/], ['search_records', { query: 'foo:bar' }, /Use one of/],
+			['list_discussed_records', { query: 'a) OR (b' }, /Balance/], ['search_records', { limit: 0 }, /limit/]] as const) {
+			const r = await call(name, args);
+			assert.ok(r.isError && text.test(r.content[0].text), name);
+		}
 	});
 
 	test('hybrid ranking puts the nearest embedding first', async () => {

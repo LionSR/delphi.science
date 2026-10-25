@@ -259,6 +259,11 @@ def stackexchange(host: str, url: str) -> dict[str, str]:
     if kind == "answers":  # an answer carries no title: use its question's
         qq = get_json(f"https://api.stackexchange.com/2.3/questions/{q['question_id']}?site={STACKEXCHANGE[host]}", cache=False)
         q["title"] = "Answer to: " + ((qq.get("items") or [{}])[0].get("title") or "")
+    return stackexchange_item(q)
+
+
+def stackexchange_item(q: dict[str, Any]) -> dict[str, str]:
+    """A Stack Exchange API question or answer (filter=withbody) as a link shows it."""
     return {"title": clean(q.get("title")), "author": clean((q.get("owner") or {}).get("display_name")),
             "text": trim(q.get("body"), LINK_CHARS), "date": dt.date.fromtimestamp(q.get("creation_date", 0)).isoformat() if q.get("creation_date") else ""}
 

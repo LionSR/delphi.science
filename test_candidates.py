@@ -29,9 +29,12 @@ class Matching(unittest.TestCase):
     def test_unrelated_abstract_matches_nothing(self):
         self.assertEqual(self.m.match("Large language models as tutors in undergraduate calculus: a survey from OpenAI users"), [])
 
-    def test_urls_normalise(self):
-        self.assertEqual(C.norm("http://www.arxiv.org/pdf/2610.01234v3.pdf"), "https://arxiv.org/abs/2610.01234")
-        self.assertEqual(C.norm("https://mathoverflow.net/questions/1/x?r=1#a2"), "https://mathoverflow.net/questions/1/x")
+    def test_a_candidate_already_linked_or_listed_is_seen(self):
+        entries = [{**ENTRIES[0], "discussion": [{"url": "https://arxiv.org/abs/2610.01234v2"}, {"url": "https://mathoverflow.net/questions/1/x#a2"}]}]
+        known = C.seen(entries)
+        self.assertIn(C.ident("http://www.arxiv.org/pdf/2610.01234v3.pdf"), known)
+        self.assertIn(C.ident("https://mathoverflow.net/questions/1/x?r=1"), known)
+        self.assertNotIn(C.ident("https://arxiv.org/abs/2610.09999"), known)
 
     def test_report_lists_commands_and_survives_a_source_down(self):
         cands = [{"url": "https://arxiv.org/abs/2610.00001", "title": "Siegel zeros after OpenAI", "authors": ["A. Person"], "date": "2026-10-20",

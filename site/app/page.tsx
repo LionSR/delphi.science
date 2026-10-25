@@ -38,7 +38,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 					<option value="week">Top this week</option>
 					<option value="month">Top this month</option>
 					<option value="score">Top of all time</option>
-					<option value="mentions">Mentions</option>
+					<option value="mentions">Most cited in comments</option>
 				</select>
 				<button>Search</button>
 			</form>

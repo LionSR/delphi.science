@@ -2,7 +2,7 @@
 export const GET = () =>
 	Response.json({
 		search: '/api/v1/search?q=<query>&limit=20&sort=relevance|newest|oldest|title|score|day|week|month|mentions&cursor=<next_cursor>&format=json|md',
-		sorts: 'score counts every vote and every post or article about the record (discussed); day, week and month count the votes cast and the posts published in that time, as on SciRate',
+		sorts: 'score counts every vote and every post or article about the record (discussed); day, week and month count the votes cast and the posts published in that time, as on SciRate; mentions (most cited in comments) counts the people whose comments name the record by id, then the newest',
 		openapi: '/api/v1/openapi.json',
 		ids: 'Every id is <prefix>/<suffix>, like a DOI: the source, then its own id. /id/<id> goes to the original.',
 		prefixes: '/api/v1/prefixes',

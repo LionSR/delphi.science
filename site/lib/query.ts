@@ -10,6 +10,7 @@
 // Operators AND, OR, ANDNOT, NOT (uppercase), parentheses; adjacent terms are ANDed. Text terms rank by
 // ts_rank_cd (title weighted highest); with an embedding, keyword and vector ranks merge by reciprocal-rank
 // fusion. Everything the caller sends becomes a bound parameter: no user text is spliced into SQL.
+import stances from './stances.json' with { type: 'json' };
 import taxonomy from './taxonomy.json' with { type: 'json' };
 
 export class QueryError extends Error {
@@ -34,13 +35,48 @@ const EXACT: Record<string, string> = { source: 'source', src: 'source', categor
 // stored count). Those that confirm, simplify or extend it, or have no stance yet (r.upvoting), count like an
 // upvote in the popularity sorts: all of them in score, the ones posted in the window in day, week and month.
 // One that refutes or questions it marks the record disputed instead.
-export const FLAGS: Record<string, string> = {
-	formalized: 'r.formalized', verified: 'r.verified', withdrawn: 'r.withdrawn', 'agent-ready': 'r.agent_ready',
-	'ai-generated': "r.origin = 'ai-generated'", app: "r.source = 'app'", gone: 'r.gone', discussed: 'r.discussed > 0',
-	disputed: 'r.disputed',
+const IS_FLAGS: Record<string, [sql: string, meaning: string]> = {
+	formalized: ['r.formalized', 'has a Lean formalization'],
+	verified: ['r.verified', 'Lean checked it at Palomar, or it passed APP verification'],
+	withdrawn: ['r.withdrawn', 'withdrawn at its source'],
+	'agent-ready': ['r.agent_ready', 'ships instructions for agents, on agenticpapers.app'],
+	'ai-generated': ["r.origin = 'ai-generated'", 'the source says AI made it'],
+	app: ["r.source = 'app'", 'from agenticpapers.app'],
+	gone: ['r.gone', 'its source no longer serves it'],
+	discussed: ['r.discussed > 0', 'has posts or articles about it'],
+	disputed: ['r.disputed', 'a response refutes or questions it'],
 };
+export const FLAGS: Record<string, string> = Object.fromEntries(Object.entries(IS_FLAGS).map(([k, [sql]]) => [k, sql]));
 export const SORTS = ['relevance', 'newest', 'oldest', 'title', 'score', 'day', 'week', 'month', 'mentions', 'responded'] as const;
 export const MAX_LIMIT = 100;
+export const DEFAULT_LIMIT = 20;
+
+// ---- The language as the docs tell it ----
+// One description of the query language for every place that explains it: the OpenAPI document's q and sort
+// parameters (lib/openapi.ts), /api/v1, /llms.txt, and the MCP tools. search.test.ts checks that every field and
+// flag named here compiles, and that every sort is described.
+
+/** Each is: value and what it means. */
+export const IS: Record<string, string> = Object.fromEntries(Object.entries(IS_FLAGS).map(([k, [, meaning]]) => [k, meaning]));
+/** "formalized (a Lean formalization exists), verified (…), …" */
+export const IS_LIST = Object.entries(IS).map(([k, meaning]) => `${k} (${meaning})`).join(', ');
+/** The fields, a group per entry, with what they match. */
+export const QUERY_FIELDS: Record<string, string> = {
+	'ti au abs all': 'title, author, abstract, every text field (a bare word searches all)',
+	cat: 'arXiv division or subdivision: cat:math, cat:math.NT, cat:quant-ph, or a subject name in quotes',
+	'source category origin family id': 'exact values, e.g. source:openai-math id:app/APP-260923-0000',
+	is: IS_LIST,
+	published: 'published:[2026-10-01 TO *], published:2026-09',
+};
+export const OPERATORS = 'AND, OR, ANDNOT, NOT (uppercase), parentheses, "quoted phrases", word* prefixes; adjacent terms are ANDed';
+const fieldNames = (group: string) => group.split(' ').map((f) => `${f}:`).join(' ');
+/** The language in one paragraph, is: values by name only: under the 700 characters tool importers allow a parameter. */
+export const QUERY_HELP = `arXiv-style query. ${Object.entries(QUERY_FIELDS).map(([f, about]) =>
+	`${fieldNames(f)} ${f === 'is' ? Object.keys(IS).join(', ') : about}`).join('; ')}. ${OPERATORS}. Empty lists everything.`;
+/** The language in full, as a Markdown list: every field, every is: value with its meaning, the operators. */
+export const QUERY_GUIDE = [...Object.entries(QUERY_FIELDS).map(([f, about]) => `- ${fieldNames(f)} ${about}`), `- Operators: ${OPERATORS}`].join('\n');
+/** Every sort and what it ranks by. */
+export const SORT_HELP = 'relevance (default with a query), newest (default without), oldest, title, score (votes plus linked responses that confirm, simplify or extend it or have no stance yet, all time), day, week, month (votes and such responses published in that window), mentions (most cited in comments: how many people\'s comments name the record by id, then the newest; not linked posts, which count in score), responded (the newest expert response first, whatever its stance).';
 const COMPACT = ['id', 'source', 'title', 'authors', 'url', 'pdf', 'published', 'subject', 'division', 'category', 'origin',
 	'agent_ready', 'formalized', 'verified', 'withdrawn', 'disputed', 'family', 'ai_models', 'score', 'reactions', 'comments', 'reviews', 'mentions', 'discussed'];
 
@@ -224,6 +260,10 @@ export interface SearchOptions {
 // When a link (an element d of record.discussion) was posted: its own date, or the day it was attached when the
 // source gives none.
 const LINK_DATE = "coalesce(nullif(d->>'date', ''), d->>'added')";
+// A link d that counts like an upvote, as stances.json says: an upvoting stance, or none yet. The names go into
+// the SQL as literals, so they must be plain words.
+if (!stances.upvoting.every((s) => /^[a-z]+$/.test(s))) throw new Error('stances.json: every stance is a lowercase word');
+const UPVOTE = `(${stances.unlabelled_upvotes ? "d->>'stance' IS NULL OR " : ''}d->>'stance' IN (${stances.upvoting.map((s) => `'${s}'`).join(', ')}))`;
 
 // day, week, month: as on SciRate, the net votes cast in that many days plus the posts and articles posted in
 // them that count as upvotes, then the newest.
@@ -240,7 +280,7 @@ const recent = (days: number): Ranked => (where) => ({
 				UNION ALL
 				SELECT r.id, (SELECT count(*) FROM jsonb_array_elements(r.record->'discussion') d
 					WHERE ${LINK_DATE}::date > current_date - ${days}
-					AND coalesce(d->>'stance', 'confirms') IN ('confirms', 'simplifies', 'extends'))::int -- as index.py UPVOTING
+					AND ${UPVOTE})::int
 				FROM open_index.records r WHERE r.discussed > 0
 			) x GROUP BY id HAVING sum(points) <> 0),`,
 	hot: `SELECT r.*, h.points FROM open_index.records r JOIN hot h ON h.id = r.id WHERE ${where}`,
@@ -273,7 +313,7 @@ export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 	if (!(SORTS as readonly string[]).includes(sort)) throw new QueryError(`unknown sort ${JSON.stringify(sort)}`, `Use sort=${SORTS.join(', sort=')}.`);
 	const fields = opts.fields ?? 'compact';
 	if (fields !== 'compact' && fields !== 'full') throw new QueryError(`unknown fields ${JSON.stringify(fields)}`, 'Use fields=compact (default) or fields=full.');
-	const limit = Math.max(1, Math.min(Math.trunc(opts.limit ?? 20), MAX_LIMIT));
+	const limit = Math.max(1, Math.min(Math.trunc(opts.limit ?? DEFAULT_LIMIT), MAX_LIMIT));
 	const { offset, total: known } = decode(opts.cursor);
 	// An empty query lists everything (the front page, or an agent reading the newest records).
 	const { where, params, ranks } = q.trim() ? compile(q) : { where: 'true', params: [] as unknown[], ranks: [] as string[] };

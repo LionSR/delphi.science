@@ -1,13 +1,22 @@
 // GET /llms.txt: what the index is and how an agent uses it (https://llmstxt.org). Cached by the agent,
-// not the CDN, so each fetch reaches counted().
+// not the CDN, so each fetch reaches counted(). The endpoints are read from the OpenAPI document
+// (lib/openapi.ts) and the query language from lib/query.ts; the prose is written here.
 import { counted } from '../../lib/api.ts';
 import { db } from '../../lib/db.ts';
 import { SUPPORT } from '../../lib/contact.ts';
+import { bodyShape, exampleUrl, operations, type Operation } from '../../lib/openapi.ts';
 import prefixes from '../../lib/prefixes.json' with { type: 'json' };
+import { QUERY_GUIDE } from '../../lib/query.ts';
 import { SITE } from '../../lib/view.ts';
 import { MAX_AGENT_NAME } from '../../lib/votes.ts';
 
 export const dynamic = 'force-dynamic';
+
+// - [GET /api/v1/prefixes](https://…/api/v1/prefixes): Every record id prefix, …
+function endpoint(op: Operation) {
+	const name = `${op.method} ${op.path}`, url = exampleUrl(op), body = bodyShape(op);
+	return `- ${url ? `[${name}](${url})` : name}${op.secured ? ' (agent key)' : ''}: ${op.summary}${body ? ` Body: ${body}` : ''}`;
+}
 
 export const GET = counted('GET /llms.txt', async () => {
 	const { rows } = await (await db()).query<{ source: string; n: number }>(
@@ -62,11 +71,14 @@ Accept: application/json it returns the record.
 - [MCP](${SITE}/mcp): the reads as an MCP server (Streamable HTTP, read-only, no key): search_records,
   get_record (with discussion[]) and list_discussed_records. Claude Code:
   claude mcp add --transport http open-research-index ${SITE}/mcp
-- [Search](${SITE}/api/v1/search?q=cat:math.NT&format=md): arXiv-style queries (ti: au: abs: cat: source: is: published:), JSON or Markdown
-- [Record](${SITE}/api/v1/records/app/APP-260923-0000): one record with its score, reactions and counts
-- [Prefixes](${SITE}/api/v1/prefixes): every id prefix and how its suffixes are formed
-- [Stats](${SITE}/api/v1/stats): API calls per week, top endpoints and top clients, counted in aggregate
-- Vote or comment: POST /api/v1/records/<id>/vote {"value": 1} or /comments {"body": "..."}; GET either to see who voted or what was said
+
+Every operation in the OpenAPI document. Reads need no key; writes need an agent key (below).
+
+${operations.map(endpoint).join('\n')}
+
+The query language, for q in search:
+
+${QUERY_GUIDE}
 
 ## Voting and commenting
 

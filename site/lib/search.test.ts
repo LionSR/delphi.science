@@ -5,7 +5,7 @@ import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { before, describe, test } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
 import { vector } from '@electric-sql/pglite/vector';
-import { compile, get, parse, QueryError, search } from './query.ts';
+import { compile, get, IS, parse, QUERY_FIELDS, QUERY_HELP, QueryError, search, SORT_HELP, SORTS } from './query.ts';
 import { load, type Item } from './load.ts';
 import { agentKeys, createAgentKey, createSession, myVotes, revokeKey, unvote, vote, voterFromKey } from './votes.ts';
 import { comment, comments } from './comments.ts';
@@ -36,6 +36,12 @@ describe('query syntax', () => {
 		assert.match(compile('cat:math.NT').where, /r\.subject = \$1/);
 		assert.deepEqual(compile('cat:"number theory"').params[0], 'math.NT');
 		assert.match(compile('cat:"something else"').where, /r\.domain/);
+	});
+	test('the docs describe the language as it compiles: every field, flag and sort they name is real', () => {
+		for (const f of Object.keys(QUERY_FIELDS).flatMap((g) => g.split(' '))) assert.doesNotThrow(() => compile(`${f}:${f === 'is' ? 'discussed' : '2026'}`), f);
+		for (const flag of Object.keys(IS)) assert.doesNotThrow(() => compile(`is:${flag}`), flag);
+		for (const s of SORTS) assert.match(SORT_HELP, new RegExp(`(^|, )${s}\\b`), s);
+		assert.ok(QUERY_HELP.length < 700, `${QUERY_HELP.length} characters`);
 	});
 });
 
@@ -286,7 +292,7 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		}
 
 		const total = async (q: string) => (await search(db, q, { limit: 1 })).total; // earlier tests link posts to some records
-		const found = (await call('search_records', { query: 'is:discussed', sort: 'score', limit: 2 })).structuredContent;
+		const found = (await call('search_records', { q: 'is:discussed', sort: 'score', limit: 2 })).structuredContent;
 		assert.equal(found.total, await total('is:discussed'));
 		assert.ok(found.results.every((r: Record<string, unknown>) => r.page && !r.links && r.discussed));
 		assert.ok(!('took_ms' in found));
@@ -303,7 +309,7 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		assert.equal((await call('list_discussed_records', { query: 'source:openai-math', limit: 1 })).structuredContent.total,
 			await total('is:discussed source:openai-math'));
 
-		for (const [name, args, text] of [['get_record', { id: 'nope/x' }, /no record/], ['search_records', { query: 'foo:bar' }, /Use one of/],
+		for (const [name, args, text] of [['get_record', { id: 'nope/x' }, /no record/], ['search_records', { q: 'foo:bar' }, /Use one of/],
 			['list_discussed_records', { query: 'a) OR (b' }, /Balance/], ['search_records', { limit: 0 }, /limit/]] as const) {
 			const r = await call(name, args);
 			assert.ok(r.isError && text.test(r.content[0].text), name);

@@ -7,7 +7,7 @@ import { PGlite } from '@electric-sql/pglite';
 import { vector } from '@electric-sql/pglite/vector';
 import { compile, get, parse, QueryError, search } from './query.ts';
 import { load, type Item } from './load.ts';
-import { agentKeys, createAgentKey, createSession, myVotes, revokeKey, unvote, vote, voterFromKey } from './votes.ts';
+import { agentKeys, createAgentKey, createSession, myVotes, personFromSession, revokeKey, unvote, vote, voterFromKey } from './votes.ts';
 import { comment, comments } from './comments.ts';
 import { approveDevice, denyDevice, pendingDevice, redeemDevice, startDevice } from './device.ts';
 
@@ -154,6 +154,8 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		assert.equal((await db.query("SELECT 1 FROM open_index.agent_keys WHERE key_hash = $1", [key])).rows.length, 0);
 		const session = await createSession(db, 'carol');
 		assert.deepEqual(await voterFromKey(db, session), { login: 'carol', agent: '' });
+		assert.equal((await personFromSession(db, session))?.name, 'carol', 'no profile name: the login');
+		assert.equal((await personFromSession(db, await createSession(db, 'carol', 'Carol Chen')))?.name, 'Carol Chen');
 		const listed = await agentKeys(db, 'carol');
 		assert.deepEqual(listed.map((k) => k.agent), ['Grok bot'], 'sessions are not listed as agent keys');
 		await revokeKey(db, 'dave', { hash: listed[0].hash }); // only the owner can revoke

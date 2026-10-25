@@ -1,0 +1,20 @@
+{
+  "key": "2608.00830",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.00830",
+  "title": "Measurement-Based Loss Tolerance in Graph-GKP Codes through Syndrome-Resolved Pauli-Frame Decoding",
+  "authors": [
+    "Seid Koudia",
+    "Symeon Chatzinotas"
+  ],
+  "summary": "Graph codes offer multiple physical representatives of logical observables, while Gottesman-Kitaev-Preskill (GKP) codes retain analog information about bosonic displacement noise. We develop a causal framework that unifies these mechanisms for measurement-based loss tolerance under pure loss followed by quantum-limited amplification. In this framework, each local GKP recovery produces a refreshed logical block, a continuous syndrome record, and a confidence score for the inferred Pauli class. Low-confidence outcomes are deliberately converted into located erasures, so the availability…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-01",
+  "updated": "2026-08-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

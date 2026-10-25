@@ -1,0 +1,23 @@
+{
+  "key": "2602.07607",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.07607",
+  "title": "Determining the Outerthickness of Graphs Is NP-Hard",
+  "authors": [
+    "Pin-Hsian Lee",
+    "Te-Cheng Liu",
+    "Meng-Tsung Tsai"
+  ],
+  "summary": "We give a short, self-contained, and easily verifiable proof that determining the outerthickness of a general graph is NP-hard. This resolves a long-standing open problem on the computational complexity of outerthickness. Moreover, our hardness result applies to a more general covering problem $P_F$, defined as follows. Fix a proper graph class $F$ whose membership is decidable. Given an undirected simple graph $G$ and an integer $k$, the task is to cover the edge set $E(G)$ by at most $k$ subsets $E_1,\\ldots,E_k$ such that each subgraph $(V(G),E_i)$ belongs to $F$. Note that if $F$ is…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-02-07",
+  "updated": "2026-02-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

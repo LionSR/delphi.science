@@ -1,0 +1,24 @@
+{
+  "key": "2606.12573",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.12573",
+  "title": "Implementation of Linear Regression and Linear Interpolation using Reaction Networks",
+  "authors": [
+    "Aryan Kumar",
+    "Amey Choudhary",
+    "Jiaxin Jin",
+    "Chittaranjan Hens",
+    "Abhishek Deshpande"
+  ],
+  "summary": "Statistical inference is a fundamental component of data science. In this work, we focus on two classical inference techniques: regression and interpolation. We propose a reaction-network-based framework for implementing linear regression, including both univariate and multivariate settings, as well as linear interpolation. Our approach encodes the outputs of these inference techniques in the steady-state concentrations of species within the reaction network. A key ingredient of the construction is a novel generalized division module capable of handling division involving negative numbers.…",
+  "domain": "q-bio.MN",
+  "tags": [
+    "q-bio.MN",
+    "math.DS"
+  ],
+  "published": "2026-06-10",
+  "updated": "2026-09-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,36 @@
+{
+  "key": "2610.00503",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00503v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00503v1",
+  "title": "Polynomial Fault Detection Without Bounded Width: Exact Reachable Sets in Priority Controllers",
+  "authors": [
+    "Idris Ali Shaik"
+  ],
+  "summary": "Circuit-width restrictions explain several polynomial cases of automatic test pattern generation. We give a different explanation for an arbitrary-size extension of the c432 priority controller, including a subfamily with linear treewidth and net cut-width in its native layout. For a specified first-stage bridge fault, we characterize exactly the reachable qualifier sets and construct a primary input realizing each one. On drive-one inputs where the first selector flag changes, the healthy set is the target singleton; the faulty sets are precisely the target-containing sets with one request…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.DS",
+    "cs.LO",
+    "msc:68Q25",
+    "Boolean satisfiability",
+    "automatic test pattern generation",
+    "fault detection",
+    "priority controllers",
+    "proof complexity"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "version": 1,
+  "authorship": "mixed",
+  "human_understanding": "all",
+  "origin": "ai-generated",
+  "formalized": true,
+  "formalizations": [
+    "https://palomar-registry.org/entry?id=PALOMAR-2026-10-19-000010&version=1"
+  ],
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

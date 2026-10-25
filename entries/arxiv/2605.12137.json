@@ -1,0 +1,23 @@
+{
+  "key": "2605.12137",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.12137",
+  "title": "NPAP: Network Partitioning and Aggregation Package for Python",
+  "authors": [
+    "Marco Anarmo",
+    "Benjamin Stöckl",
+    "Yannick Werner",
+    "Sonja Wogrin"
+  ],
+  "summary": "NPAP (Network Partitioning and Aggregation Package) is an open-source Python library for reducing the spatial complexity of network graphs. Built on NetworkX, it provides an accessible standalone package designed to be readily integrated with other software and frameworks. Instead of treating the spatial reduction process as a single action, NPAP explicitly splits it into two distinct steps: partitioning, which assigns vertices (nodes) to groups (clusters), and aggregation, which reduces the network based on a given assignment. NPAP's strategy pattern architecture allows users to employ and…",
+  "domain": "cs.SI",
+  "tags": [
+    "cs.SI",
+    "math.OC"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

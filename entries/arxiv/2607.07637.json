@@ -1,0 +1,23 @@
+{
+  "key": "2607.07637",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.07637",
+  "title": "An optimal control approach for neural network architecture adaptation with a posteriori error estimation",
+  "authors": [
+    "C G Krishnanunni",
+    "Thomas Scott",
+    "Tan Bui-Thanh"
+  ],
+  "summary": "This work presents a novel approach for adapting neural network architecture along the depth based on a posteriori error estimation. By formulating neural network training as a continuous-time optimal control problem, we derive rigorous error estimates that quantify how approximation error distributes across network layers. This error decomposition enables a principled depth adaptation strategy: new layers are inserted at locations of maximum estimated error, allowing the network to efficiently capture complex, nonlinear variations in the underlying problem. Our framework introduces a novel…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

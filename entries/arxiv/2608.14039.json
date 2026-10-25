@@ -1,0 +1,20 @@
+{
+  "key": "2608.14039",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.14039",
+  "title": "Second-Order Departure of the Gigli--Mantegazza Flow from Ricci Flow",
+  "authors": [
+    "Dongwoo Gang"
+  ],
+  "summary": "For a closed connected Riemannian manifold $(M,g)$, the Gigli--Mantegazza construction pulls back the quadratic Wasserstein metric under the heat kernel embedding $x\\mapsto p_t(x,\\cdot)\\,d\\operatorname{vol}_g$. The resulting family $\\widetilde{g}_t$ agrees with Ricci flow to first order in $t$, but in general not to second order. We prove that $$ \\widetilde{g}_t =g-2t\\operatorname{Ric}_g +t^2\\left(-Δ\\operatorname{Ric}_g +2\\operatorname{Ric}_g^2-\\frac{2}{3}\\mathcal{Q}_g\\right) +O_{C^0}(t^3), $$ where $\\mathcal{Q}_g$ is quadratic in the full curvature tensor. The term $-Δ\\operatorname{Ric}_g$…",
+  "domain": "math.DG",
+  "tags": [
+    "math.DG",
+    "math.MG"
+  ],
+  "published": "2026-08-14",
+  "updated": "2026-08-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

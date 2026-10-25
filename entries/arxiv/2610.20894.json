@@ -1,0 +1,24 @@
+{
+  "key": "2610.20894",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.20894",
+  "title": "Stochastic Gradient Descent: A Nonlinear Time Series Perspective",
+  "authors": [
+    "Jiaqi Li",
+    "Zhipeng Lou",
+    "Stefan Richter",
+    "Wei Biao Wu"
+  ],
+  "summary": "This paper investigates the statistical behavior of Stochastic Gradient Descent (SGD) with constant step size under the framework of iterated random functions. Compared to previous studies establishing the convergence of SGD in probability measure, e.g., Wasserstein distance, our approach directly provides the convergence in Euclidean distance by showing the Geometric Moment Contraction (GMC) of SGD. This new convergence can address the non-stationarity of SGD due to fixed initial points and can provide a more refined asymptotic analysis of SGD. Specifically, we prove quenched central limit…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2602.20154",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.20154",
+  "title": "Quantum simulation in the Heisenberg picture via vectorization",
+  "authors": [
+    "Shao-Hen Chiew",
+    "Armando Angrisani",
+    "Zoë Holmes",
+    "Giuseppe Carleo"
+  ],
+  "summary": "We present a general framework for simulating quantum systems in the Heisenberg picture on quantum hardware. Based on the vectorization map, our framework fully exploits the mapping between operators and quantum states, allowing any task defined on Heisenberg operators to be mapped to standard Schrödinger-picture tasks that are naturally accessible via quantum computers and simulators. This yields new or improved protocols for tasks such as operator sampling, the computation of OTOCs/superoperator expectation values and their higher order moments, two-point correlators, and operator…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-23",
+  "updated": "2026-02-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

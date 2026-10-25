@@ -1,0 +1,21 @@
+{
+  "key": "2608.26765",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.26765",
+  "title": "Characterizing Client-Independent Stationary Bias for SCAFFOLD and FedAvg in Federated Learning",
+  "authors": [
+    "Yi-Ping Tang",
+    "Guan-Ju Peng"
+  ],
+  "summary": "Even when all clients optimize the same strongly convex objective, the global model parameters produced by constant-step federated learning may still have a stationary mean that differs from the minimizer. Does increasing the number of clients eliminate this bias, or can some components persist? Answering this question clarifies the limits of client averaging. To this end, we study two federated learning algorithms, \\Scaf{} and matched \\FedAvg{}, under full participation, a sufficiently smooth objective, and independent bounded additive gradient noise. Analyzing global stationary balance and…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-08-27",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

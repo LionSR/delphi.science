@@ -1,0 +1,22 @@
+{
+  "key": "2610.21673",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.21673",
+  "title": "A Second-Order Descent Algorithm for Nonlinear Equality Constrained Optimization",
+  "authors": [
+    "Yonggang Pei",
+    "Jingyi Wang",
+    "Shuowen Fu",
+    "Zhuohan Li"
+  ],
+  "summary": "In this paper, an adaptive second-order descent algorithm (ASODA) is proposed for solving nonlinear equality constrained optimization problems. By integrating a sequential quadratic programming approach with the homogeneous second-order descent framework (HSODF: He et al., Math. Program. 215, 575--636, 2026), each iteration of ASODA decomposes the trial step into a normal step and a tangential step. The latter is computed by converting the linearly constrained subproblem into an unconstrained one via the reduced-Hessian technique and then solving it using a generalized homogeneous model. The…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2608.24493",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.24493",
+  "title": "Optimal Lower Bound for Ground-State Energy Estimation with a Guiding State",
+  "authors": [
+    "Rolando D. Somma",
+    "Ronald de Wolf"
+  ],
+  "summary": "Suppose we can apply the unitary $U=e^{i H}$ for some Hamiltonian $H$, and are given access to a unitary that prepares a guiding state promised to have overlap at least $γ>0$ with the ground space of $H$. Our goal is to estimate the ground-state energy of $H$ within additive error $δ> 0$ and success probability at least $1-\\varepsilon$, $\\varepsilon>0$. How many applications of $U$ and its inverse $U^{-1}$ are necessary and sufficient? This quantity corresponds to the total Hamiltonian-simulation time needed. An upper bound $O(\\log(1/\\varepsilon)\\log(1/γ)/γδ)$ was known, and was improved to…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.DS"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

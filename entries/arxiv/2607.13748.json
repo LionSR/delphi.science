@@ -1,0 +1,22 @@
+{
+  "key": "2607.13748",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.13748",
+  "title": "Load Balancing with Individually Heterogeneous Servers",
+  "authors": [
+    "Burak Büke",
+    "Arpan Mukhopadhyay",
+    "Özge Tekin"
+  ],
+  "summary": "In this paper, we analyze the diffusion limit of Join-the-Shortest-Queue (JSQ) load balancing policies for a system with many parallel queues where each queue is being served by a server with a potentially different service rate. Prior asymptotic analyses of JSQ policies assumed servers to have service rates from a finite set which does not capture scenarios in modern data centers where service rates can vary at the level of individual servers. For systems with individually heterogeneous servers, tracking the empirical queue length distribution for each possible service rate becomes…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.OC"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

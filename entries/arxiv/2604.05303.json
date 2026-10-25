@@ -1,0 +1,25 @@
+{
+  "key": "2604.05303",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.05303",
+  "title": "Jeffreys Flow: Robust Boltzmann Generators for Rare Event Sampling via Parallel Tempering Distillation",
+  "authors": [
+    "Guang Lin",
+    "Christian Moya",
+    "Di Qi",
+    "Xuda Ye"
+  ],
+  "summary": "Sampling physical systems with rough energy landscapes is hindered by rare events and metastable trapping. While Boltzmann generators already offer a solution, their reliance on the reverse Kullback--Leibler divergence frequently induces catastrophic mode collapse, missing specific modes in multi-modal distributions. Here, we introduce the Jeffreys Flow, a robust generative framework that mitigates this failure by distilling empirical sampling data from Parallel Tempering trajectories using the symmetric Jeffreys divergence. This formulation effectively balances local target-seeking…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "physics.comp-ph",
+    "stat.ML"
+  ],
+  "published": "2026-04-07",
+  "updated": "2026-04-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

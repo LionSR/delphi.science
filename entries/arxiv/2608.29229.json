@@ -1,0 +1,22 @@
+{
+  "key": "2608.29229",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.29229",
+  "title": "Entropy-Stable and Physical-Constraint-Preserving DGSEM for Symmetry-Reduced General-Relativistic Hydrodynamics on Stationary Spacetimes",
+  "authors": [
+    "Guosheng Fu",
+    "Jian-Guo Liu"
+  ],
+  "summary": "We develop an entropy-stable and physical-constraint-preserving discontinuous Galerkin spectral element method for symmetry-reduced general-relativistic hydrodynamics on prescribed stationary spacetimes. Using a local orthonormal transformation, the fluid variables are expressed in a form for which the relativistic hydrodynamic algebra and the admissible set are independent of the spatial metric, while the spacetime geometry enters through stationary coefficients. This separation allows entropy-conservative special-relativistic fluxes to be combined with a compatible discretization of the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "gr-qc",
+    "physics.comp-ph"
+  ],
+  "published": "2026-08-29",
+  "updated": "2026-08-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

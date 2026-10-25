@@ -1,0 +1,20 @@
+{
+  "key": "2607.01424",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.01424",
+  "title": "Utilizing Smoothing Techniques to Bound $|ζ(1+it)|$",
+  "authors": [
+    "Andrew Christensen",
+    "Kyle Pratt"
+  ],
+  "summary": "We demonstrate an improved explicit upper bound of $|ζ(1+it)|$ for $3 \\leq t \\leq 10^9$ using smoothing techniques. Our method sharpens previous bounds relying on the Riemann--Siegel formula and the triangle inequality. In particular, we prove that for $t\\geq 3$, \\begin{align*} |ζ(1+it)| \\leq \\frac{1}{2}\\log t + 1.57 \\end{align*} and for $t \\geq 10^8$, \\[ |ζ(1+it)|\\leq \\frac{1}{3}\\log t + 2\\log \\log t -1.16 . \\]",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

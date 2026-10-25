@@ -1,0 +1,24 @@
+{
+  "key": "2608.22810",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.22810",
+  "title": "Numerical Evaluation of ZX Calculus Optimization for Solovay Kitaev Quantum Circuit Synthesis",
+  "authors": [
+    "Dulari De Silva",
+    "Anuradha Mahasinghe",
+    "Chon-Fai Kam",
+    "Kaushika De Silva",
+    "Frederic Cadet",
+    "Jingbo Wang"
+  ],
+  "summary": "Fault-tolerant architectures implement non-Clifford T gates through magic-state distillation, so the T-count of a synthesized circuit dominates its physical cost. The Solovay-Kitaev algorithm approximates any single-qubit unitary from a finite gate set with a sequence length that grows only polylogarithmically in the inverse target error, but it optimizes for numerical convergence rather than circuit economy, and its output carries structural redundancy that a gate-level compiler cannot see. We report a measurement of what diagrammatic post-processing recovers from that redundancy. Twelve…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-24",
+  "updated": "2026-08-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

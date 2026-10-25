@@ -1,0 +1,22 @@
+{
+  "key": "2610.01071",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01071",
+  "title": "Coloring 3-colorable graphs with $O(n^{4/23})$ colors via a Gaussian-cover recursion",
+  "authors": [
+    "Emile Anand"
+  ],
+  "summary": "We give a randomized polynomial-time algorithm that colors any promised $3$-colorable graph on $n$ vertices with $\\smash{O(n^{4/23}) = O(n^{0.17391\\ldots})}$ colors, improving on the recent bounds of $O(n^{0.19539})$ by Bansal, Huang, and Lee and Narang and Tang who obtained $O(n^{(13-\\sqrt{97})/18+ε})=O(n^{0.17506\\dots + ε})$ colors for every fixed $\\smash{ε>0}$. To prove our result, we start from a fixed-level semidefinite relaxation, where we use a finite-depth recursion on Gaussian covers. Fixing a root vertex, we group vertices by correlation with the root vector. Here, each step…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.CC",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

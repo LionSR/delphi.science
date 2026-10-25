@@ -1,0 +1,21 @@
+{
+  "key": "2606.05155",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.05155",
+  "title": "High-Order Summation-By-Parts Schemes for First-Order Hyperbolic Systems in Curvilinear Coordinates with Singularities",
+  "authors": [
+    "Stamatis Vretinaris",
+    "Erik Schnetter"
+  ],
+  "summary": "Formulating stable numerical methods for hyperbolic systems in curvilinear coordinate with singularities, e.g. spherical coordinates, is complicated by the presence of these singularities. We present a method for constructing high-order accurate, energy-stable finite difference operators satisfying the Summation-by-Parts (SBP) property on spherical domains, extending ideas presented by [C. Gundlach, J. M. Martín-García, and D. Garfinkle, CQG 30, 145003 (2013)]. We define discrete gradient and divergence operators that mirror the continuous integration-by-parts principle, even though there is…",
+  "domain": "gr-qc",
+  "tags": [
+    "gr-qc",
+    "math.NA"
+  ],
+  "published": "2026-06-03",
+  "updated": "2026-06-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

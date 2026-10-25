@@ -1,0 +1,21 @@
+{
+  "key": "2610.26966",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.26966",
+  "title": "A noise-level-free parameter-choice rule for iterated Lavrentiev regularization of nonlinear potential monotone ill-posed problems",
+  "authors": [
+    "Ankit singh",
+    "Hemant Sharma"
+  ],
+  "summary": "We consider nonlinear ill-posed operator equations $F(x)=y$ in a Hilbert space, where $F$ is monotone with a Lipschitz continuous Fréchet derivative that is self-adjoint near the solution $x^\\dg$ (a locally \\emph{potential} operator), and only noisy data $y^δ$ with unknown noise norm $δ:=\\|y-y^δ\\|$ is available. For the nonstationary iterated Lavrentiev regularization \\[ x_{k+1}^δ=x_k^δ-\\bigl(F'(x_k^δ)+α_kI\\bigr)^{-1}\\bigl(F(x_k^δ)-y^δ+α_k(x_k^δ-x_0)\\bigr), \\] all classical stopping rules require $δ$. We analyze a \\emph{noise-level-free} parameter-choice rule of retrospective type, selecting…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.FA"
+  ],
+  "published": "2026-10-18",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

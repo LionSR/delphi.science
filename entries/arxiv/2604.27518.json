@@ -1,0 +1,21 @@
+{
+  "key": "2604.27518",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.27518",
+  "title": "lpviz: Interactive Linear Programming Visualization",
+  "authors": [
+    "Evan Grand",
+    "Michael Klamkin"
+  ],
+  "summary": "This paper presents lpviz, a browser-based visualization tool for linear programming. lpviz is deeply interactive, offering an intuitive interface where users can directly draw and edit the feasible region and objective vector, without requiring cumbersome manipulation of raw numerical coefficients. lpviz lets users compare the behavior of several classes of linear programming algorithms, namely Simplex, Interior-Point, Primal-Dual Hybrid Gradient, and Central Path. In the 3D mode, lpviz places iterates at heights corresponding to important solver metadata such as complementarity gap or KKT…",
+  "domain": "cs.HC",
+  "tags": [
+    "cs.HC",
+    "math.OC"
+  ],
+  "published": "2026-04-30",
+  "updated": "2026-04-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

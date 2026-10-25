@@ -1,0 +1,23 @@
+{
+  "key": "2605.14149",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.14149",
+  "title": "The Mean-Field Limit of Online Stochastic Vector Balancing",
+  "authors": [
+    "Christian Fiedler",
+    "Joe Jackson",
+    "Daniel Lacker",
+    "Jonathan Niles-Weed"
+  ],
+  "summary": "We study an online vector balancing problem, in which $n$ independent Gaussian random vectors $\\boldsymbolζ(1),\\dots,\\boldsymbolζ(n) \\sim \\mathcal{N}(0, I_n)$, each of dimension $n$, arrive one at a time. The goal is to choose signs $\\varepsilon(1),\\dots,\\varepsilon(n) \\in \\{\\pm 1\\}$ with $\\varepsilon(k)$ depending only on $\\boldsymbolζ(1),\\dots,\\boldsymbolζ(k)$, so as to minimize the expected $\\ell^{\\infty}$ norm of the signed sum $\\frac{1}{\\sqrt{n}}\\sum_{k = 1}^n \\varepsilon(k) \\boldsymbolζ(k)$. Prior work showed that the optimal value $V^n$ is $O(1)$, at least for Rademacher…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.OC"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

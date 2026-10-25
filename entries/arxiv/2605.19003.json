@@ -1,0 +1,23 @@
+{
+  "key": "2605.19003",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.19003",
+  "title": "Scalable iterative Gramian synthesis for control-affine systems",
+  "authors": [
+    "Zongxi Yu",
+    "Cyprien Tamekue",
+    "Ruiqi Chen",
+    "ShiNung Ching"
+  ],
+  "summary": "This article presents a scalable implementation of nonlinear Gramian-based control synthesis for control-affine systems, including a minimum energy control construction. These synthesis advances are achieved by addressing key computational bottlenecks inherent to iterative synthesis map formulations, yielding a computational scheme that exhibits rapid convergence and high-precision. The efficacy of this synthesis framework is demonstrated across five canonical nonlinear control systems and 100-dimensional recurrent neural network models, including underactuated systems. Empirical scaling…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-05-18",
+  "updated": "2026-05-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

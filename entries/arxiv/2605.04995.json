@@ -1,0 +1,23 @@
+{
+  "key": "2605.04995",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04995",
+  "title": "Adaptivity Under Realizability Constraints: Comparing In-Context and Agentic Learning",
+  "authors": [
+    "Anastasis Kratsios",
+    "A. Martina Neuman",
+    "Philipp Petersen"
+  ],
+  "summary": "We compare in-context learning with fixed queries and agentic learning with adaptive queries for uniform approximation of task families. We consider two settings: an unrestricted regime, where querying and approximation are arbitrary functions, and a realizable regime, where we require these operations to be implemented by ReLU neural networks. In both settings, adaptivity never hinders approximation performance. However, this advantage can change when one passes from the unrestricted regime to the realizable regime. We identify four distinct approximation scenarios, each witnessed by an…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

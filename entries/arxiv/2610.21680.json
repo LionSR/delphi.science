@@ -1,0 +1,22 @@
+{
+  "key": "2610.21680",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.21680",
+  "title": "Projection-Based Parareal for Nonlinear Initial-Value Problems",
+  "authors": [
+    "Chenyi Tan",
+    "Yuncheng Xu",
+    "Yehao Zhang",
+    "Yangfeng Su"
+  ],
+  "summary": "Parareal is a parallel-in-time method for initial-value problems that has found extensive applications and given rise to many variants. Krylov-enhanced parareal is a variant of parareal that uses projection techniques to accelerate convergence substantially for linear problems. In this paper, we study a projection-based parareal algorithm for nonlinear initial-value problems with a modified iteration scheme and an arbitrary orthogonal projection. For a general nonlinear problem, we prove a convergence estimate for each iteration step on a fixed time grid. We analyze the errors of the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

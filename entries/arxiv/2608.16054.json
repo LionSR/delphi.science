@@ -1,0 +1,21 @@
+{
+  "key": "2608.16054",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.16054",
+  "title": "On the Local Linear Convergence of Operator Splitting Methods for Conic Programming",
+  "authors": [
+    "Lijun Ding",
+    "Haihao Lu",
+    "Jinwen Yang"
+  ],
+  "summary": "Operator-splitting methods such as the primal-dual hybrid gradient method (PDHG) and the alternating direction method of multipliers (ADMM) often exhibit linear convergence on conic programs, although general theory guarantees only sublinear rates. We identify two geometric conditions -- strict complementarity and quadratic facial violation -- that explain this local behavior: under these conditions, PDHG and ADMM converge linearly to an optimal solution when initialized sufficiently close to the converging strictly complementary solution. We establish this result through a unified and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

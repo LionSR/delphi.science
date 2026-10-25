@@ -1,0 +1,22 @@
+{
+  "key": "2604.26280",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26280",
+  "title": "Structure-Aware Tensorial Model Reduction",
+  "authors": [
+    "Arjun Vijaywargiya",
+    "Eric C. Cyr",
+    "Anthony Gruber"
+  ],
+  "summary": "This work investigates a two-stage method for constructing projection-based reduced-order models (ROMs) of parameterized partial differential equations (PDEs). Based on established tensorial ROM methodology, the proposed approach reduces dimensionality offline by encoding solution snapshots using a multi-linear Tucker factorization, so that a reduced basis which varies nonlinearly with PDE parameters can be rapidly constructed online and used in a Galerkin ROM. Two novel extensions of this strategy, tailored to the cases of structured PDEs and sparse parameter sampling, are presented: the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.DS"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-06-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

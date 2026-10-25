@@ -1,0 +1,22 @@
+{
+  "key": "2606.14976",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.14976",
+  "title": "Real-time nonlinear model predictive control framework for event-triggered switching in industrial batch polymerization process",
+  "authors": [
+    "Chenchen Zhou",
+    "Zuzhen Ji",
+    "Jose Matias"
+  ],
+  "summary": "Controlling batch polymerization is challenging because the absence of a steady operating point prevents standard linearization; the dynamics are intrinsically nonlinear; and multi-phase operation induces state-triggered switching. This study systematically combines four established real-time NMPC ingredients, smooth mode blending, advanced-step warm starts, variable scaling, and a capped iteration budget, to attain real-time feasibility without ad hoc switching heuristics. We provide practice-oriented guidance for selecting smoothing gains and locating switching surfaces, and we make…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-06-12",
+  "updated": "2026-06-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

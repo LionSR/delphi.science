@@ -1,0 +1,26 @@
+{
+  "key": "2603.07778",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.07778",
+  "title": "Lindbladian Learning with Neural Differential Equations",
+  "authors": [
+    "Timothy Heightman",
+    "Roman Aseguinolaza Gallo",
+    "Edward Jiang",
+    "JRM Saavedra",
+    "Antonio Acín",
+    "Marcin Płodzień"
+  ],
+  "summary": "Inferring the dynamical generator of a many-body quantum system from measurement data is essential for the verification, calibration, and control of quantum processors. When the system is open, this task becomes considerably harder than in the purely unitary case, because coherent and dissipative mechanisms can produce similar measurement statistics and long-time data can be insensitive to coherent couplings. Here we tackle this so-called Lindbladian learning problem of open-system characterisation with maximum-likelihood on Pauli measurements at multiple experimentally friendly…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.dis-nn",
+    "cs.LG"
+  ],
+  "published": "2026-03-08",
+  "updated": "2026-03-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2607.09167",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.09167",
+  "title": "Understanding Schedule-Free Methods in Nonconvex Optimization: Rate Guarantees and Escaping Saddles",
+  "authors": [
+    "Jiseok Chae",
+    "Donghwan Kim"
+  ],
+  "summary": "Schedule-Free methods have attracted growing interest for alleviating the burden of designing and tuning a learning rate scheduler, while matching and sometimes even outperforming optimizers with tuned schedulers. Despite their strong empirical results, their convergence theory in nonconvex optimization, where modern machine learning objectives typically arise, has remained largely unexplored. In this paper, we provide worst-case analyses of Schedule-Free gradient descent and Schedule-Free stochastic gradient descent, in their standard form and without auxiliary modifications or restrictive…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-07-10",
+  "updated": "2026-07-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

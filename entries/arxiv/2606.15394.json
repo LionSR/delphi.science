@@ -1,0 +1,22 @@
+{
+  "key": "2606.15394",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.15394",
+  "title": "Dominant Zeros of Nekrasov--Okounkov Polynomials",
+  "authors": [
+    "Bernhard Heim",
+    "Markus Neuhauser",
+    "with an appendix by Ken Ono"
+  ],
+  "summary": "We give an exact finite-dimensional Perron--Frobenius realization of the dominant zero of the Nekrasov--Okounkov polynomials $\\nop _n(z)$. For a normalized positive sequence $h=(h(n))_{n\\ge 1}$ with $h(1)=1$, define $\\pol _0^h(z)=1$ and, for $n\\ge 1$, \\[ \\pol _n^h(z)=\\frac{z}{h(n)}\\sum_{k=1}^n σ(k)\\pol _{n-k}^h(z),\\] where $σ(k)$ denotes the sum of divisors of $k$. The Nekrasov--Okounkov polynomials are obtained from the specialization $h(n)=n$ by the shift $\\nop _n(z)=\\pol _n^h(z+1)$. We derive a Hessenberg determinant representation for $\\pol _n^h(z)$. After separating the trivial zero at…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.NT"
+  ],
+  "published": "2026-06-13",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

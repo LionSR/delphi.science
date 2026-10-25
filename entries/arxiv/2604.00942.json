@@ -1,0 +1,23 @@
+{
+  "key": "2604.00942",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00942",
+  "title": "Differentially Private Manifold Denoising",
+  "authors": [
+    "Jiaqi Wu",
+    "Yiqing Sun",
+    "Zhigang Yao"
+  ],
+  "summary": "We introduce a differentially private manifold denoising framework that allows users to exploit sensitive reference datasets to correct noisy, non-private query points without compromising privacy. The method follows an iterative procedure that (i) privately estimates local means and tangent geometry using the reference data under calibrated sensitivity, (ii) projects query points along the privately estimated subspace toward the local mean via corrective steps at each iteration, and (iii) performs rigorous privacy accounting across iterations and queries using $(\\varepsilon,δ)$-differential…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.CR",
+    "math.ST"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-04-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

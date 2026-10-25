@@ -1,0 +1,22 @@
+{
+  "key": "2602.08094",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.08094",
+  "title": "Energy-Controllable Time Integration for Elastodynamic Contact",
+  "authors": [
+    "Kevin You",
+    "Juntian Zheng",
+    "Minchen Li"
+  ],
+  "summary": "Dynamic simulation of elastic bodies is a longstanding task in engineering and computer graphics. In graphics, numerical integrators like implicit Euler and BDF2 are preferred due to their stability at large time steps, but they tend to dissipate energy uncontrollably. In contrast, symplectic methods like implicit midpoint can conserve energy but are not unconditionally stable and fail on moderately stiff problems. To address these limitations, we propose a general class of numerical integrators for Hamiltonian problems which are symplectic on linear problems, yet have superior stability on…",
+  "domain": "cs.GR",
+  "tags": [
+    "cs.GR",
+    "math.NA"
+  ],
+  "published": "2026-02-08",
+  "updated": "2026-02-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

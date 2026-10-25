@@ -1,0 +1,21 @@
+{
+  "key": "2601.07759",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.07759",
+  "title": "The value of random zero-sum games",
+  "authors": [
+    "Romain Cosson",
+    "Laurent Massoulié"
+  ],
+  "summary": "We study the value of a two-player zero-sum game on a random matrix $M\\in \\mathbb{R}^{n\\times m}$, defined by $v(M) = \\min_{x\\inΔ_n}\\max_{y\\in Δ_m}x^T M y$. In the setting where $n=m$ and $M$ has i.i.d. standard Gaussian entries, we prove that the standard deviation of $v(M)$ is of order $\\frac{1}{n}$. This confirms an experimental conjecture dating back to the 1980s. We also investigate the case where $M$ is a rectangular Gaussian matrix with $m = n+λ\\sqrt{n}$, showing that the expected value of the game is of order $\\fracλ{n}$, as well as the case where $M$ is a random orthogonal matrix.…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.GT"
+  ],
+  "published": "2026-01-12",
+  "updated": "2026-01-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

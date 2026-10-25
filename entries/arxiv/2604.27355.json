@@ -1,0 +1,25 @@
+{
+  "key": "2604.27355",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.27355",
+  "title": "Over-Approximating Minimizer Sets of Constrained Convex Programs with Parametric Uncertainty via Reachability Analysis",
+  "authors": [
+    "Brendan Gould",
+    "Chih-Yuan Chiu",
+    "Antoine P. Leeman",
+    "Kyriakos G. Vamvoudakis",
+    "Samuel Coogan",
+    "Glen Chou"
+  ],
+  "summary": "We study the set of solutions to a parameterized, strongly convex optimization problem whose cost depends on uncertain, bounded parameters. We compute a certified outer approximation of the corresponding set of optimizers, using convergence properties of the projected gradient descent (PGD) algorithm for convex programs. Concretely, by treating the cost parameter as constant but unknown, we interpret the PGD iterates as an uncertain dynamical system and analyze its forward reachable sets. Since PGD converges exponentially to the unique optimizer for each fixed parameter, these reachable sets…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-04-30",
+  "updated": "2026-04-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

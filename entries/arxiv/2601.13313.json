@@ -1,0 +1,21 @@
+{
+  "key": "2601.13313",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.13313",
+  "title": "Synthesis of Fault-tolerant State Preparation Circuits using Steane-type Error Detection",
+  "authors": [
+    "Erik Weilandt",
+    "Tom Peham",
+    "Robert Wille"
+  ],
+  "summary": "Fault-tolerant state preparation is essential for reliable quantum error correction, particularly in Steane-type error correction, which relies on robust ancilla states for syndrome readout. One method of fault-tolerant state preparation is to initialize multiple ancilla states and check them against each other to detect problematic errors. In the worst case, the number of states required for successful initialization grows polynomially with the code distance, but it has been shown that this can be reduced to constant ancilla overhead-in the best case, only four states are required. However,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-19",
+  "updated": "2026-01-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

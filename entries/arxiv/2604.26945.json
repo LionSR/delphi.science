@@ -1,0 +1,22 @@
+{
+  "key": "2604.26945",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26945",
+  "title": "Simulating dynamics of RLC circuits with a quantum differential-algebraic equations solver",
+  "authors": [
+    "Arkopal Dutt",
+    "Anirban Chowdhury",
+    "Kristan Temme",
+    "Hari Krovi"
+  ],
+  "summary": "We introduce a quantum algorithm for simulating the dynamics of electrical circuits consisting of resistors, inductors and capacitors (aka RLC circuits) along with power sources. Given oracle access to the connectivity of the circuit and values of the electrical elements, our algorithm prepares a quantum state that encodes voltages and current values either at a specified time or the history of their evolution over a time-interval. For an RLC circuit with $N$ components, our algorithm runs in time $\\textsf{polylog}(N)$ under mild assumptions on the connectivity of the circuit and values of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

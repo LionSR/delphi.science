@@ -1,0 +1,24 @@
+{
+  "key": "2602.09303",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.09303",
+  "title": "Stabilizing Physics-Informed Consistency Models via Structure-Preserving Training",
+  "authors": [
+    "Che-Chia Chang",
+    "Chen-Yang Dai",
+    "Te-Sheng Lin",
+    "Ming-Chih Lai",
+    "Chieh-Hsin Lai"
+  ],
+  "summary": "We propose a physics-informed consistency modeling framework for solving partial differential equations (PDEs) via fast, few-step generative inference. We identify a key stability challenge in physics-constrained consistency training, where PDE residuals can drive the model toward trivial or degenerate solutions, degrading the learned data distribution. To address this, we introduce a structure-preserving two-stage training strategy that decouples distribution learning from physics enforcement by freezing the coefficient decoder during physics-informed fine-tuning. We further propose a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-02-10",
+  "updated": "2026-06-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

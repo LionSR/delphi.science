@@ -1,0 +1,22 @@
+{
+  "key": "2605.04469",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04469",
+  "title": "Augmented transfer regression learning for completely missing covariates",
+  "authors": [
+    "Huali Zhao",
+    "Tianying Wang"
+  ],
+  "summary": "Large-scale population-level datasets, such as the UK Biobank and the All of Us Research Program, often lack covariates needed for a specific analysis, such as genetic or lifestyle measures, while related studies measure them. This creates a cross-population missing data problem in which covariates are completely unobserved in the target population, rather than partially missing within one dataset. We propose an augmented transfer regression learning method for this setting. The key identifying condition is a sub-population shift assumption: the joint distribution of the outcome and observed…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-08-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

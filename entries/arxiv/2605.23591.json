@@ -1,0 +1,23 @@
+{
+  "key": "2605.23591",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.23591",
+  "title": "Asymmetric Scaling Laws from Sparse Features",
+  "authors": [
+    "John Sous",
+    "Michael Winer"
+  ],
+  "summary": "We introduce a model for neural scaling laws under sparse activations. In the model, test loss is often dominated by rare coordinates that are never observed in the training input. This mechanism induces a novel bottleneck absent from dense models. We derive the asymptotic population loss in both the underparameterized and overparameterized regimes, and show that the loss exhibits a double-descent peak near the interpolation threshold -- where the number of parameters is just sufficient to fit the training data -- resulting in a loss curve governed by two distinct scaling exponents -- one…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cond-mat.dis-nn",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-05-22",
+  "updated": "2026-05-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

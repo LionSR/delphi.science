@@ -1,0 +1,20 @@
+{
+  "key": "2610.01683",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01683",
+  "title": "A Code-Agnostic Graph Neural Network Decoder from the Detection Error Model",
+  "authors": [
+    "Federico Alberto Astolfi",
+    "Guido Pupillo"
+  ],
+  "summary": "We present POLYMECHANON, a graph neural network (GNN) decoder for quantum error correction whose only input is the detection error model (DEM) of a quantum code under a given noise model. We represent the DEM as a tripartite graph of detectors, error mechanisms and logical observables, where every input feature is computed by using the quantum code as data rather than design choice. In this way, the same architecture decodes in principle any stabiliser code, under any noise model that can be expressed as a detection error model, once trained on the DEM. We test this approach along four…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

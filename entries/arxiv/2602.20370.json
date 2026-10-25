@@ -1,0 +1,24 @@
+{
+  "key": "2602.20370",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.20370",
+  "title": "Quantitative Approximation Rates for Group Equivariant Learning",
+  "authors": [
+    "Jonathan W. Siegel",
+    "Snir Hordan",
+    "Hannah Lawrence",
+    "Ali Syed",
+    "Nadav Dym"
+  ],
+  "summary": "The universal approximation theorem establishes that neural networks can approximate any continuous function on a compact set. Later works in approximation theory provide quantitative approximation rates for ReLU networks on the class of $α$-Hölder functions $f: [0,1]^N \\to \\mathbb{R}$. The goal of this paper is to provide similar quantitative approximation results in the context of group equivariant learning, where the learned $α$-Hölder function is known to obey certain group symmetries. While there has been much interest in the literature in understanding the universal approximation…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-02-23",
+  "updated": "2026-04-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

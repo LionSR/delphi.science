@@ -1,0 +1,24 @@
+{
+  "key": "2607.25279",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.25279",
+  "title": "Many-body Tipping Dynamics of ChatGPT-like AIs",
+  "authors": [
+    "Frank Yingjie Huo",
+    "Neil F. Johnson"
+  ],
+  "summary": "Why do ChatGPT-like AIs, despite major architectural and training differences, unexpectedly tip to undesirable content (e.g. harmful, misleading, repetitive) even under deterministic greedy decoding? We show that a broad class of such tippings is caused by the many-body interactions between tokens (spins) as they cross the finite-layer system. Tipping emerges as a dynamical first passage process between competing output basins. Attention disorder controls the transport toward, away from, or along the basins' boundary. A few-basin reduction yields a closed finite-layer threshold, whose…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cond-mat.dis-nn",
+    "math-ph",
+    "nlin.AO",
+    "physics.soc-ph"
+  ],
+  "published": "2026-07-28",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2603.06440",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.06440",
+  "title": "Toward Generative Quantum Utility via Correlation-Complexity Map",
+  "authors": [
+    "Chen-Yu Liu",
+    "Leonardo Placidi",
+    "Eric Brunner",
+    "Enrico Rinaldi"
+  ],
+  "summary": "We study a practical question in generative quantum machine learning: given a classical dataset, can we determine, before training, whether it is well suited to a quantum generative model? We focus on a class of quantum circuits known as instantaneous quantum polynomial-time (IQP) circuits, whose output distributions are widely believed to be difficult to sample from using classical methods. These circuits are used to build our quantum generative models. We introduce a Correlation-Complexity Map, a simple diagnostic built from two quantities computed from data samples. The first measures how…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "quant-ph"
+  ],
+  "published": "2026-03-06",
+  "updated": "2026-05-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

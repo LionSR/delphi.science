@@ -1,0 +1,23 @@
+{
+  "key": "2608.06545",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.06545",
+  "title": "Robust Average-Reward Markov Decision Processes: Minimax-Optimal Learning via Plug-in Reductions",
+  "authors": [
+    "Yuepeng Yang",
+    "Yuxin Chen",
+    "Yuejie Chi"
+  ],
+  "summary": "Distributionally robust Markov decision processes provide a principled framework for sequential decision making under model uncertainty. We study how many samples are necessary and sufficient to learn an $\\varepsilon$-optimal robust policy under the average-reward criterion. A generative model provides samples from the nominal transition kernel, whereas policy performance is evaluated over $(s,a)$-rectangular total-variation uncertainty sets of radius at most $σ$. Let $H_0$ and $H_σ$ denote the nominal and robust optimal bias spans, respectively. We identify $σH_0$ as the perturbation scale…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-08-06",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

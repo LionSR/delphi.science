@@ -1,0 +1,21 @@
+{
+  "key": "2610.14295",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.14295",
+  "title": "Cost-Aware Iteration Allocation for Sequential Multi-Fidelity First-Order Optimization",
+  "authors": [
+    "Amir Ardestani-Jaafari",
+    "Warren Hare",
+    "Zhongda Huang"
+  ],
+  "summary": "Optimization can be expensive when evaluating the objective and its gradient requires a large dataset or a costly simulation. A cheaper approximation (i.e., a surrogate) can provide a useful initial point, but the work spent on that surrogate must be justified by the saving on the original problem. We study how many iterations to perform on each surrogate before switching to a more accurate objective. For a given sequence of smooth, strongly convex objectives, we use convergence bounds and distances between minimizers to construct a model of the total iteration cost. We derive closed-form…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

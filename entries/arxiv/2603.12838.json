@@ -1,0 +1,24 @@
+{
+  "key": "2603.12838",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.12838",
+  "title": "A New Kernel Regularity Condition for Distributed Mirror Descent: Broader Coverage and Simpler Analysis",
+  "authors": [
+    "Junwen Qiu",
+    "Ziyang Zeng",
+    "Leilei Mei",
+    "Junyu Zhang"
+  ],
+  "summary": "Existing convergence analyses of distributed optimization methods in non-Euclidean geometries typically rely on kernel assumptions: (i) global Lipschitz smoothness and (ii) bi-convexity of the associated Bregman divergence function. Unfortunately, these conditions are violated by nearly all kernels used in practice, leaving a huge theory-practice gap. This work closes this gap by developing a unified analytical tool that guarantees convergence under mild conditions. Specifically, we introduce Hessian relative uniform continuity (HRUC), a regularity satisfied by nearly all standard kernels.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DC",
+    "stat.ML"
+  ],
+  "published": "2026-03-13",
+  "updated": "2026-09-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

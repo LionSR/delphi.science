@@ -1,0 +1,21 @@
+{
+  "key": "2610.20346",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.20346",
+  "title": "On Partial Optimality in QUBO via Quadratic Posiform Autarkies",
+  "authors": [
+    "Lucas Fabian Naumann",
+    "Bjoern Andres"
+  ],
+  "summary": "Partially optimal assignments (also called persistencies) allow combinatorial optimization problems to be reduced by fixing a subset of variables to values consistent with at least one optimal solution. For the quadratic unconstrained binary optimization (QUBO) problem, such assignments can be computed efficiently via autarkies of quadratic posiforms. However, the largest autarky domain and thus the number of fixed variables can depend on the specific posiform representation. We show that every quadratic posiform with the greatest possible constant term (the roof-dual bound) yields the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DM"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

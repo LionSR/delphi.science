@@ -1,0 +1,20 @@
+{
+  "key": "2604.18481",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.18481",
+  "title": "Physics-Informed Neural Networks: A Didactic Derivation of the Complete Training Cycle",
+  "authors": [
+    "Abdeladhim Tahimi"
+  ],
+  "summary": "This paper is a step-by-step, self-contained guide to the complete training cycle of a Physics-Informed Neural Network (PINN) -- a topic that existing tutorials and guides typically delegate to automatic differentiation libraries without exposing the underlying algebra. Using a first-order initial value problem with a known analytical solution as a running example, we walk through every stage of the process: forward propagation of both the network output and its temporal derivative, evaluation of a composite loss function built from the ODE residual and the initial condition, backpropagation…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-04-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

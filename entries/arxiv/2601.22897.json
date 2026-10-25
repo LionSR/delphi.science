@@ -1,0 +1,19 @@
+{
+  "key": "2601.22897",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.22897",
+  "title": "Grassmannian Geometry and Global Convergence of Variable Projection for Neural Networks",
+  "authors": [
+    "Mathias Dus"
+  ],
+  "summary": "Training deep neural networks and Physics-Informed Neural Networks (PINNs) often leads to ill-conditioned and stiff optimization problems. A key structural feature of these models is that they are linear in the output-layer parameters and nonlinear in the hiddenlayer parameters, yielding a separable nonlinear least-squares formulation. In this work, we study the classical variable projection (VarPro) method for such problems in the context of deep neural networks. We provide a geometric formulation on the Grassmannian and analyze the structure of critical points and convergence properties of…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-30",
+  "updated": "2026-01-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

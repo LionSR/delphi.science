@@ -1,0 +1,24 @@
+{
+  "key": "2606.20443",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20443",
+  "title": "Topological Data Analysis for High-Dimensional Dynamic Process Monitoring",
+  "authors": [
+    "Angan Mukherjee",
+    "Tyler A. Soderstrom",
+    "Michael J. Kurtz",
+    "Victor M. Zavala"
+  ],
+  "summary": "Real-time process monitoring requires methods that extract actionable information from high-dimensional time-series data. In this work, we present a new approach for process monitoring that combines tools of topological data analysis (TDA) and machine learning. In the proposed approach, we represent multivariate time-series data as manifolds and use topological descriptors to summarize the structure of such data; we then use a neural ordinary differential equation to learn the dynamic evolution of the topological structure of the system. Using real data from an industrial process, we show…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.LG",
+    "math.AT"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

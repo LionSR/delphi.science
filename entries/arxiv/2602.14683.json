@@ -1,0 +1,20 @@
+{
+  "key": "2602.14683",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14683",
+  "title": "Joint Majorization-Minimization for Nonnegative CP and Tucker Decompositions under $β$-Divergences: Unfolding-Free Updates",
+  "authors": [
+    "Valentin Leplat"
+  ],
+  "summary": "We study majorization-minimization methods for nonnegative tensor decompositions under the $β$-divergence family, focusing on nonnegative CP and Tucker models. Our aim is to avoid explicit mode unfoldings and large auxiliary matrices by deriving separable surrogates whose multiplicative updates can be implemented using only tensor contractions (einsum-style operations). We present both classical block-MM updates in contraction-only form and a joint majorization strategy, inspired by joint MM for matrix $β$-NMF, that reuses cached reference quantities across inexpensive inner updates. We…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-03-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

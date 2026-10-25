@@ -1,0 +1,23 @@
+{
+  "key": "2605.16262",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.16262",
+  "title": "Mirror Descent-Type Algorithms for the Variational Inequality Problem with Functional Constraints",
+  "authors": [
+    "Mohammad S. Alkousa",
+    "Fedor S. Stonyakin",
+    "Belal A. Alashqar",
+    "Seydamet S. Ablaev"
+  ],
+  "summary": "Variational inequalities play a key role in machine learning research, such as generative adversarial networks, reinforcement learning, adversarial training, and generative models. This paper is devoted to the constrained variational inequality problems with functional constraints (inequality-type constraints). We propose some mirror descent-type algorithms that switch between productive and non-productive steps depending on the values of the functional constraints at iterations, with many different step size rules and stopping criteria. We analyze the proposed algorithms and prove their…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-02-24",
+  "updated": "2026-02-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

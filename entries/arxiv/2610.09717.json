@@ -1,0 +1,31 @@
+{
+  "key": "2610.09717",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.09717",
+  "title": "Pareto-optimal quantum kernel selection for unsupervised anomaly detection on real malware beaconing data",
+  "authors": [
+    "Boaz Micah",
+    "Nadia Milazzo",
+    "Maissa Beji",
+    "Borja Aizpurua",
+    "Llorenç Espinosa-Portalés",
+    "Esteban Payares",
+    "Ghada Ben Slama",
+    "Luc Andrea",
+    "Michel Kurek",
+    "Thomas Cope",
+    "Olivier Salomon"
+  ],
+  "summary": "Quantum kernel methods are leading candidates for a practical quantum advantage in machine learning, but assessing that potential requires two quantities usually reported separately: how well a kernel performs on the task, and how far its geometry departs from the classical kernels available for the same problem. We introduce a fully unsupervised, multi-objective protocol that optimises simultaneously the normalised pseudo discrepancy (NPD), a label-free proxy for anomaly detection quality, and the geometric difference (GD) to a tuned classical reference kernel, selecting models from the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR",
+    "cs.LG"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

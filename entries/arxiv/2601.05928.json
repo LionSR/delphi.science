@@ -1,0 +1,20 @@
+{
+  "key": "2601.05928",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.05928",
+  "title": "Universal Dilation of Linear Itô SDEs: Quantum Trajectories and Lindblad Simulation of Second Moments",
+  "authors": [
+    "Hsuan-Cheng Wu",
+    "Xiantao Li"
+  ],
+  "summary": "We present a universal framework for simulating $N$-dimensional linear Itô stochastic differential equations (SDEs) on quantum computers with additive or multiplicative noises. Building on a unitary dilation technique, we establish a rigorous mapping from the general linear SDEs \\[ dX_t = A(t) X_t\\,dt + \\sum_{j=1}^J B_j(t)X_t\\,dW_t^j \\] to stochastic Schrödinger equations (SSE) on a dilated Hilbert space. Crucially, this embedding is pathwise exact in that the classical solution is recovered as a projection of the dilated quantum state for each fixed noise realization. We demonstrate that…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-09",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

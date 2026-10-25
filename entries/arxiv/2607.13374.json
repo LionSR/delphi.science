@@ -1,0 +1,20 @@
+{
+  "key": "2607.13374",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.13374",
+  "title": "A Physics-Grounded QUBO Encoding of Irrigation Scheduling for QAOA",
+  "authors": [
+    "Alisher Ortikov",
+    "Alisher Ilhamov"
+  ],
+  "summary": "Rotational irrigation scheduling in water-scarce Central Asia is a densely coupled combinatorial problem: soil-moisture memory links each irrigation decision to all later days within a zone, field adjacency couples zones on overlapping window days, and rigid canal rotations quantize water delivery in time. We formulate it as a Quadratic Unconstrained Binary Optimization (QUBO) by linearizing the root-zone water balance, so the quadratic crop-stress objective generates the physical couplings as 2-local Ising interactions with no higher-order terms; only the water-budget constraint requires an…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

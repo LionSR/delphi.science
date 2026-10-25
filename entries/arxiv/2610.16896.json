@@ -1,0 +1,22 @@
+{
+  "key": "2610.16896",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16896",
+  "title": "Quantitative asymptotic error analysis and Richardson extrapolation for exponential Euler approximations of stochastic wave equations",
+  "authors": [
+    "Jianbo Cui",
+    "Diancong Jin",
+    "Huagui Liu",
+    "Derui Sheng"
+  ],
+  "summary": "We establish quantitative weak convergence for the joint terminal law of the solution to a stochastic wave equation and the normalized error of its exponential Euler approximation. For multiplicative trace-class noise and spatial regularity $α\\in(1,2]$, the normalized error converges to its limiting distribution at rate $O(m^{-(α-1)})$, where $m$ is the number of time steps. This estimate identifies the leading weak bias and yields a first-order weak-error expansion with remainder $O(m^{-α})$. Moreover, by canceling the leading weak-error term, we construct a Richardson extrapolation scheme…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

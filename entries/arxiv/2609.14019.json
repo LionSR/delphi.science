@@ -1,0 +1,22 @@
+{
+  "key": "2609.14019",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.14019",
+  "title": "Conditional Quantum Flow Matching for Data-Scarce Physiological Signal Augmentation",
+  "authors": [
+    "Chi-Sheng Chen",
+    "Samuel Yen-Chi Chen"
+  ],
+  "summary": "Generative augmentation is a standard remedy for label scarcity in physiological signal classification, but existing quantum generative models start from uninformative noise, ignoring class structure that is already available. We propose Conditional Quantum Flow Matching (CQFM): a single 306-parameter circuit, conditioned on both flow time and class label, transports a compact class-conditional prior toward the target distribution. Quantum flow matching as published is unconditional, so this is to our knowledge the first conditional one, and the first EEG augmentation on a parameterized…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG",
+    "cs.MM"
+  ],
+  "published": "2026-09-12",
+  "updated": "2026-09-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

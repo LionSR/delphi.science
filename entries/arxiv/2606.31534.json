@@ -1,0 +1,25 @@
+{
+  "key": "2606.31534",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.31534",
+  "title": "Machine Learning based Optimization of CV-QKD Under Practical Constraints",
+  "authors": [
+    "Svitlana Matsenko",
+    "Amirhossein Ghazisaeidi",
+    "Marcin Jarzyna",
+    "Mateusz Kucharczyk",
+    "Mikkel Schmidt",
+    "Konrad Banaszek",
+    "Darko Zibar"
+  ],
+  "summary": "Practical hardware limitations, including finite transmitter and receiver filter lengths as well as the finite resolution of digital-to-analog and analog-to-digital converters, lead to mode mismatch and degrade the performance of continuous-variable quantum key distribution systems. To address this, we develop a machine learning-based end-to-end optimization framework that jointly optimizes transmitter pulse shaping and receiver matched filtering. The approach employs reinforcement learning under realistic hardware constraints, including a limited number of filter taps, finite…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-30",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

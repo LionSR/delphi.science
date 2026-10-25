@@ -1,0 +1,21 @@
+{
+  "key": "2608.02849",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.02849",
+  "title": "Computing with traceable tensor networks",
+  "authors": [
+    "Sarah Ellwein",
+    "Daniele Venturi"
+  ],
+  "summary": "We introduce a new SVD-based tensor decomposition method for tensor networks with arbitrary graph topologies, extending classical hierarchical SVD-based techniques to networks with cycles and general connectivity. We also introduce addition and rounding procedures for traceable tensor graphs, enabling step-rounding time integration of high-dimensional PDEs directly in graph format, with rank truncation controlled to a prescribed tolerance at every time step. We demonstrate the new method on the decomposition of multivariate functions and on the numerical solution of the Fokker-Planck…",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "math.NA"
+  ],
+  "published": "2026-08-03",
+  "updated": "2026-08-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

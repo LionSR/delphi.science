@@ -1,0 +1,23 @@
+{
+  "key": "2608.03996",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.03996",
+  "title": "Reduced-order modeling for electromagnetic inverse problems: a layered medium benchmark",
+  "authors": [
+    "Konstantinos Alexopoulos",
+    "Josselin Garnier"
+  ],
+  "summary": "We study reduced-order modeling for inverse problems in layered media, focusing on the recovery of impedance profiles from time-domain measurements. Using the Goupillaud structure, we formulate the forward problem as a discrete dynamical system and introduce a ROM-based objective defined at the level of reduced operators. Through numerical experiments on a 5-layer medium under various structured perturbations, we compare the ROM-based objective with a classical data misfit. The results show that the ROM-based inversion provides a more favorable reconstruction in the clean setting and in…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math-ph",
+    "math.AP",
+    "physics.comp-ph"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2601.00938",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.00938",
+  "title": "Rate-Distortion Analysis of Compressed Query Delegation with Low-Rank Riemannian Updates",
+  "authors": [
+    "Faruk Alpay",
+    "Bugra Kilictas"
+  ],
+  "summary": "Bounded-context agents fail when intermediate reasoning exceeds an effective working-memory budget. We study compressed query delegation (CQD): (i) compress a high-dimensional latent reasoning state into a low-rank tensor query, (ii) delegate the minimal query to an external oracle, and (iii) update the latent state via Riemannian optimization on fixed-rank manifolds. We give a math-first formulation: CQD is a constrained stochastic program with a query-budget functional and an oracle modeled as a noisy operator. We connect CQD to classical rate-distortion and information bottleneck…",
+  "domain": "cs.CL",
+  "tags": [
+    "cs.CL",
+    "math.OC"
+  ],
+  "published": "2026-01-02",
+  "updated": "2026-01-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

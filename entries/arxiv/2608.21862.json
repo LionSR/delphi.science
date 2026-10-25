@@ -1,0 +1,20 @@
+{
+  "key": "2608.21862",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.21862",
+  "title": "Centered Weak Discrete Riemannian Gradients: A Unified Framework for Riemannian Optimization",
+  "authors": [
+    "Derun Zhou",
+    "Mahito Sugiyama"
+  ],
+  "summary": "We introduce the centered weak discrete Riemannian gradient (c-wDRG) framework for the unified analysis of optimization methods on Riemannian manifolds. The framework uses a center point to represent the relevant logarithmic differences in a common tangent space and covers Riemannian steepest descent, proximal point, proximal gradient, implicit midpoint, geodesic average-vector-field, Gonzalez, and Itoh--Abe methods. We derive c-wDRG certificates for these schemes and establish convergence bounds with explicit curvature-dependent step-size conditions. Under suitable c-wDRG parameter and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-22",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

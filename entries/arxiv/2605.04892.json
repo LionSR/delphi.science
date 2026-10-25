@@ -1,0 +1,30 @@
+{
+  "key": "2605.04892",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04892",
+  "title": "Real-time Surface-Code Error Correction Using an FPGA-based Neural-Network Decoder",
+  "authors": [
+    "Xiaohan Yang",
+    "Xuandong Sun",
+    "Zhiyi Wu",
+    "Jiawei Zhang",
+    "Ji Jiang",
+    "Xiayu Linpeng",
+    "Yuxuan Zhou",
+    "Ji Chu",
+    "Jingjing Niu",
+    "Youpeng Zhong",
+    "Song Liu",
+    "Dapeng Yu"
+  ],
+  "summary": "Quantum error correction (QEC) is essential for achieving low error rates required for fault-tolerant quantum computation. In stabilizer-based codes such as the surface code, errors are inferred from repeated syndrome measurements and corrected by a classical decoder. To prevent error accumulation, decoding must be performed with both high throughput and low latency to keep pace with the QEC cycle and enable real-time feedback for universal logical operations. Here we report a hardware-integrated control architecture featuring an FPGA-based neural-network (NN) decoder and experimentally…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

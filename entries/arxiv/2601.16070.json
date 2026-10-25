@@ -1,0 +1,22 @@
+{
+  "key": "2601.16070",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.16070",
+  "title": "On damage of interpolation to adversarial robustness in regression",
+  "authors": [
+    "Jingfu Peng",
+    "Yuhong Yang"
+  ],
+  "summary": "Deep neural networks (DNNs) typically involve a large number of parameters and are trained to achieve zero or near-zero training error. Despite such interpolation, they often exhibit strong generalization performance on unseen data, a phenomenon that has motivated extensive theoretical investigations. Comforting results show that interpolation indeed may not affect the minimax rate of convergence under the squared error loss. In the mean time, DNNs are well known to be highly vulnerable to adversarial perturbations in future inputs. A natural question then arises: Can interpolation also…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-01-22",
+  "updated": "2026-01-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

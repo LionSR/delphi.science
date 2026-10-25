@@ -1,0 +1,20 @@
+{
+  "key": "2605.29185",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.29185",
+  "title": "Records, drift, and the longest increasing subsequence of biased Gaussian random walks",
+  "authors": [
+    "J. Ricardo G. Mendonça"
+  ],
+  "summary": "The longest increasing subsequence (LIS) of a random walk has been studied mainly for zero-mean, symmetric step increments. We numerically investigate the LIS of biased Gaussian random walks, with unit-variance increments and positive drift $μ_{p} = Φ^{-1}(p)$, where $p = P(ξ>0)$. In contrast with the symmetric case, we find that for every fixed $p>1/2$ the mean LIS length grows linearly, $\\langle L_{n}(p)\\rangle \\sim a(p)n$, with $a(p)$ increasing from $0$ at $p=1/2$ to $1$ as $p \\to 1$. The record count is also linear, with coefficient $λ(p)$ fixed by Spitzer's formula for the ascending…",
+  "domain": "cond-mat.stat-mech",
+  "tags": [
+    "cond-mat.stat-mech",
+    "math.PR"
+  ],
+  "published": "2026-05-27",
+  "updated": "2026-06-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

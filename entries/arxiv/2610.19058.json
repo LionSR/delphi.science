@@ -1,0 +1,21 @@
+{
+  "key": "2610.19058",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.19058",
+  "title": "Conformalized Physics-Informed Weak Regression for Parameter Estimation in Epidemic Models",
+  "authors": [
+    "Allan Peter Engsig-Karup"
+  ],
+  "summary": "Compartment models of infectious diseases are often linear in coefficients that are physical parameters or products or ratios of them. We exploit this with closed-form least squares and equip the estimates with distribution-free uncertainty. Physics-informed regression (PIR) fits the parameters to finite-difference derivatives of the data; we introduce physics-informed weak regression (PIWR), which integrates the model in time instead, needs no derivatives of the data, estimates the initial state jointly and is high-order accurate. To quantify uncertainty we wrap both estimators in split…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math-ph"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

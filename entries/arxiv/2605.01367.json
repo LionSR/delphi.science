@@ -1,0 +1,26 @@
+{
+  "key": "2605.01367",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.01367",
+  "title": "From Characterization To Construction: Generative Quantum Circuit Synthesis from Gate Set Tomography Data",
+  "authors": [
+    "King Yiu Yu",
+    "Aritra Sarkar",
+    "Erbing Hua",
+    "Maximilian Rimbach-Russ",
+    "Ryoichi Ishihara",
+    "Sebastian Feld"
+  ],
+  "summary": "High-fidelity circuit execution on noisy intermediate-scale quantum devices is bottlenecked by compilation pipelines that disregard complex, correlated noise. To address this, this methodology article proposes a quantum machine learning control (QMLC) framework for generative quantum circuit synthesis from gate-set tomography (GST) data that bypasses the traditional two-step pipeline of characterizing native quantum gates via GST followed by unitary decomposition algorithms. Instead, a generative concept space is directly learnt from GST data, enabling conditional synthesis of quantum…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG",
+    "eess.SY"
+  ],
+  "published": "2026-05-02",
+  "updated": "2026-05-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

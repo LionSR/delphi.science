@@ -1,0 +1,21 @@
+{
+  "key": "2609.33164",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.33164",
+  "title": "Notes on Generative Modeling for Feedback Control and Planning",
+  "authors": [
+    "Karthik Elamvazhuthi"
+  ],
+  "summary": "In these notes, we view control as a dynamically constrained sampling problem on the state-space of a control system. With this viewpoint, we extend methods from generative modeling, such as flow matching, normalizing flows and denoising diffusions to control problems. Concepts such as controllability, optimal control and trajectory planning play an important role in guiding the extension and understanding well-posedeness of the corresponding algorithms, with application to steering systems to target states or distributions and sampling from reachable sets. The notes are intended as an…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "eess.SY"
+  ],
+  "published": "2026-09-27",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

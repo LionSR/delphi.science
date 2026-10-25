@@ -1,0 +1,29 @@
+{
+  "key": "2610.00405",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00405v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00405v1",
+  "title": "Quaternionic Heisenberg-Robertson-Schrodinger and Maccone-Pati Uncertainty Principles",
+  "authors": [
+    "K. MAHESH KRISHNA"
+  ],
+  "summary": "Let $\\mathcal{Q}$ be a quaternionic Hilbert space. Let $A: \\mathcal{D}(A)\\subseteq \\mathcal{Q}\\to \\mathcal{Q}$ and $B:\\mathcal{D}(B)\\subseteq \\mathcal{Q}\\to \\mathcal{Q}$ be possibly unbounded self-adjoint linear operators. Then for all $h \\in \\mathcal{D}(AB)\\cap \\mathcal{D}(BA)$ with $\\|h\\|=1$, we show that \\begin{align*} (1) \\quad \\quad \\quad \\Delta _h(A)\\Delta _h(B)\\geq \\frac{\\sqrt{|\\langle \\{A,B\\}h, h \\rangle -2\\langle Ah, h \\rangle\\langle Bh, h \\rangle|^2+|\\langle [A,B]h, h \\rangle |^2}}{2} \\end{align*} and \\begin{align*} (2) \\quad \\quad \\quad \\Delta _h(A)^2+ \\Delta _h(B)^2 \\geq…",
+  "domain": "math.MP",
+  "tags": [
+    "math.FA",
+    "msc:46S10",
+    "msc:46C05",
+    "Quaternionic Hilbert space.",
+    "Uncertainty Principle"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "version": 1,
+  "authorship": "human",
+  "human_understanding": "all",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

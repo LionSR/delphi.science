@@ -1,0 +1,22 @@
+{
+  "key": "2608.14087",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.14087",
+  "title": "Unconditionally stable and energy conserving discretization of the dynamic von Kármán equations",
+  "authors": [
+    "Carsten Carstensen",
+    "Neela Nataraj",
+    "Ricardo Ruiz-Baier",
+    "Aamir Yousuf"
+  ],
+  "summary": "A fully discrete approximation of the dynamic von Kármán equations combines nonconforming Morley finite element methods for spatial discretization with an energy conserving modified unconditionally stable Newmark second- order time-stepping scheme. Brouwer's fixed-point theorem establishes existence of a solution to the fully discrete scheme and further uniqueness and stability estimates follow for small loads. Optimal order a priori error estimates in the piecewise energy norm with quadratic convergence in time are derived for the fully discrete scheme. The results of the numerical…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-14",
+  "updated": "2026-08-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

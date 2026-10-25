@@ -1,0 +1,20 @@
+{
+  "key": "2610.25398",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.25398",
+  "title": "A data-based conservative reduced collision model for the Boltzmann equation",
+  "authors": [
+    "Pei Zhang",
+    "Yanli Wang"
+  ],
+  "summary": "The evaluation of the quadratic collision operator is one of the major computational bottlenecks in solving the Boltzmann equation owing to the high dimensionality and the nonlinear structure of the collision term. In this work, a conservative reduced collision (RC) model is developed within the discrete velocity framework. The bilinear collision operator is approximated through a kernel tensor preassembled with the problem-dependent reduced bases for the distribution function and the collision term. Consequently, online evaluation of the quadratic collision operator is reduced to tensor…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-18",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

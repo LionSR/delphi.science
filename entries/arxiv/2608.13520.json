@@ -1,0 +1,23 @@
+{
+  "key": "2608.13520",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.13520",
+  "title": "The data geometry of masking diffusion: Certified-optimal schedules via unmasking growth complexity",
+  "authors": [
+    "Martin J. Wainwright"
+  ],
+  "summary": "We study masking diffusion for discrete sampling and introduce a path-resolved measure of data geometry called the \\emph{unmasking growth complexity} ({\\textsf{UGC}\\xspace}). Its local increments directly control Kullback--Leibler (KL) discretization error, yielding a unified analysis of Bernoulli-subset and fixed-cardinality unmasking schemes. In log-reveal-odds coordinates, this structure yields optimized single-block and multi-block schedules, and quantifies the gains from adapting computational effort to data geometry. Crucially, we show how {\\textsf{UGC}\\xspace} increments can be…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "cs.IT",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

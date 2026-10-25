@@ -1,0 +1,21 @@
+{
+  "key": "2609.18537",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.18537",
+  "title": "A mixed finite element method for the Babuška paradox using only discrete geometry",
+  "authors": [
+    "Pengjie Tian",
+    "Shuonan Wu",
+    "Hao Zhou"
+  ],
+  "summary": "The classical Babuška paradox shows that solutions of simply supported plate problems on polygonal approximations of a curved domain may converge to an unintended limit. We develop a boundary-corrected $H({\\rm divdiv};\\mathbb S)$-$L^2$ mixed finite element method for the simply supported Kirchhoff-Love plate problem. The correction uses only the discrete boundary geometry. Introducing the bending moment as an independent unknown allows the condition $M_{nn}=0$ to be imposed directly, while an edgewise mean constraint on the effective shear suppresses the leading geometric inconsistency. This…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

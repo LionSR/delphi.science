@@ -1,0 +1,24 @@
+{
+  "key": "2610.24518",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.24518",
+  "title": "Exact Quantum Query Complexity of the Five-Bit Symmetric Boolean Function $\\Exact^5_{3,4}$",
+  "authors": [
+    "Guoliang Xu",
+    "Haoran Zhang",
+    "Mengfan Wu",
+    "Songyao Xue",
+    "Mingke Liu"
+  ],
+  "summary": "Let \\(f = \\text{EXACT}^5_{3,4}\\) be the Boolean function that equals 1 exactly on inputs of Hamming weight 3 or 4. Earlier numerical studies reported success probabilities close to one using three queries, but the existence of an exact three-query algorithm had remained unresolved. This paper settles this problem by proving that the exact quantum query complexity of \\(f\\) is \\(4\\). For the lower bound, we express every three-query algorithm through layer-by-layer Gram matrices of low-degree Fourier coefficients. We then construct a fixed rational dual certificate whose slack matrices are all…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-10-17",
+  "updated": "2026-10-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

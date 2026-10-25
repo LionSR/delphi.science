@@ -1,0 +1,21 @@
+{
+  "key": "2610.02791",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02791",
+  "title": "Finding Stationary Points under Higher-Order Smoothness: Trapping Algorithms and First-Order Lower Bounds",
+  "authors": [
+    "Huanjian Zhou",
+    "Masashi Sugiyama",
+    "Taiji Suzuki"
+  ],
+  "summary": "We study the query complexity of finding approximate stationary points under higher-order smoothness using only function values or only gradients. Our results cover different dimensions, oracle models, randomization, and constraints. For constant dimension $d$ and $C^{p,β_p}$ objectives, with $ν:=p+β_p$, we give deterministic function-value gradient trapping algorithms with query complexities $O(\\varepsilon^{-(d-1)})$ on $\\mathbb R^d$ and $O(\\varepsilon^{-(d-1)/ν})$ on $[0,1]^d$. High-order line integration enables gradient-only trapping. For two-dimensional $C^{1,1}$ objectives, randomized…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

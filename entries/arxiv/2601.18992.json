@@ -1,0 +1,22 @@
+{
+  "key": "2601.18992",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.18992",
+  "title": "Mixture-Weighted Ensemble Kalman Filter with Quasi-Monte Carlo Transport",
+  "authors": [
+    "Ilja Klebanov",
+    "Claudia Schillings",
+    "Dana Wrischnig"
+  ],
+  "summary": "The Bootstrap Particle Filter (BPF) and the Ensemble Kalman Filter (EnKF) are two widely used methods for sequential Bayesian filtering: the BPF is asymptotically exact but can suffer from weight degeneracy, while the EnKF scales well in high dimension (typically with localization) yet is exact only in the linear-Gaussian case. We combine these approaches by retaining the EnKF transport step and adding a principled importance-sampling correction. Our first contribution is a general importance-sampling theory for mixture targets and proposals, including variance comparisons between…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.NA"
+  ],
+  "published": "2026-01-26",
+  "updated": "2026-06-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

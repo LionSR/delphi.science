@@ -1,0 +1,20 @@
+{
+  "key": "2607.06177",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06177",
+  "title": "Using Tanner Spectral Reduction to Improve Multi-Layer Optical Lattice Routing for Hypergraph-Product and Bivariate Bicycle qLDPC Codes",
+  "authors": [
+    "Joshua M. Courtney"
+  ],
+  "summary": "We characterize the Tanner graph spectrum of hypergraph-product (HGP) / lifted-product (LP) codes and bivariate-bicycle (BB) codes, informing qubit routing for three-dimensional reconfigurable qubit architectures. Syndrome-extraction routing depth on HGP/LP Tanner graphs reduces to a single SVD on the base parity-check matrix, using a spectral ratio $β_\\text{HGP} = (1 + β_\\text{base})/2$ where $β_\\text{base} = σ_2(H)/σ_1(H)$ for the base parity-check matrix, and a diameter identity $D_T = 2 D_\\text{base}$ where $D_\\text{base}$ is the base Tanner graph diameter. Fourier spectral reduction…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

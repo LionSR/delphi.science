@@ -1,0 +1,22 @@
+{
+  "key": "2609.14337",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.14337",
+  "title": "Convex Pursuit-Evasion Games for Spacecraft Proximity Operations on Circular and Elliptical Orbits",
+  "authors": [
+    "Omer Burak Iskender"
+  ],
+  "summary": "Inspecting or servicing a non-cooperative spacecraft is a two-player game: the target can thrust to defeat the inspector's plan. Hamilton-Jacobi-Isaacs reachability answers such games exactly but its cost grows exponentially with state dimension, while learning-based controllers scale yet certify nothing. Convex formulations are the usual escape, typically cast as convex-concave saddle-point problems. That framing fails in the terminal-distance orbital game: with effort regularization, the payoff is convex in both controls, so no pure open-loop saddle point need exist. In its place we derive…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "astro-ph.IM",
+    "eess.SY",
+    "math.DS"
+  ],
+  "published": "2026-09-13",
+  "updated": "2026-09-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

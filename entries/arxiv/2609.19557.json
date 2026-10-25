@@ -1,0 +1,20 @@
+{
+  "key": "2609.19557",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.19557",
+  "title": "PDNQP: A GPU-based Factorization-free Method for Large-scale Nonconvex Quadratic Programming",
+  "authors": [
+    "Zixi Chen",
+    "Haihao Lu"
+  ],
+  "summary": "Large-scale nonconvex quadratic programming remains challenging because the sparse matrix factorizations used by many existing solvers can incur substantial computational and memory costs and are difficult to parallelize efficiently on GPUs. We present PDNQP, a factorization-free first-order solver for finding stationary points of large-scale nonconvex quadratic programs. The method combines a proximal augmented-Lagrangian framework with restarted accelerated primal--dual hybrid gradient to solve the resulting strongly convex QP subproblems. Its key ingredients are a residual-form…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2606.12108",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.12108",
+  "title": "Constrained Lyapunov Stabilization based on Gauss Variational Equations: From Spacecraft Orbital Transfers to Rendezvous",
+  "authors": [
+    "Ilya Kolmanovsky",
+    "Emanuele Garone",
+    "Grant Touchette"
+  ],
+  "summary": "Lyapunov feedback laws can be constructed for performing orbital transfer maneuvers based on Gauss Variational Equations, or GVEs, while satisfying specified state and control constraints. These state and control constraints are enforced using barrier functions and saturation, respectively, while the reference governor, employed as a convergence governor, is used to avoid getting stuck at spurious equilibria that may be created by barrier functions. In this article, these Lyapunov feedback laws are extended to rendezvous maneuvers where not only five orbital elements are matched to…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-10",
+  "updated": "2026-06-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

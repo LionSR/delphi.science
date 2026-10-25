@@ -1,0 +1,23 @@
+{
+  "key": "2605.24752",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.24752",
+  "title": "A computational phase transition for learning-to-sample from Ising models",
+  "authors": [
+    "Andrej Risteski",
+    "Thuy-Duong Vuong"
+  ],
+  "summary": "We study \\emph{learning-to-sample} -- a basic algorithmic task underlying generative modeling -- for Ising models, a standard testbed for algorithmic ideas in both theoretical computer science and machine learning. Given i.i.d. samples of an unknown target distribution, the goal of learning-to-sample is to learn a computationally efficient generation procedure that produces new samples following approximately the same distribution. We construct a family of Ising models of constantly bounded-width which lie just beyond the spectral threshold $λ_{\\max}(J)-λ_{\\min}(J)=1$, and show that…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.CC",
+    "cs.DS",
+    "math.PR"
+  ],
+  "published": "2026-05-23",
+  "updated": "2026-05-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

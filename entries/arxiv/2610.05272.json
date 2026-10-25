@@ -1,0 +1,20 @@
+{
+  "key": "2610.05272",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05272",
+  "title": "Curvature, Scaling, and Complexity in Riemannian Projection-Free Optimization",
+  "authors": [
+    "Binh T. Nguyen"
+  ],
+  "summary": "Projection-free methods replace projections by linear minimization oracles, making their convergence fundamentally sensitive to the geometry of the feasible region. We develop a geometric framework for this dependence in Riemannian Frank--Wolfe optimization. A power-type double-geodesic modulus quantifies the intrinsic geometry of the feasible set, and an exact transfer principle shows that this modulus induces a Frank--Wolfe scaling margin modulated by the differential of the Riemannian logarithm map. The resulting factorization separates the contributions of feasible-set geometry and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.DG"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

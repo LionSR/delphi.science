@@ -1,0 +1,21 @@
+{
+  "key": "2608.19384",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19384",
+  "title": "A high-order, meshless, Lagrangian--Eulerian RBF-FD method for advection--diffusion--reaction on moving manifolds",
+  "authors": [
+    "Matthew Lowery",
+    "Grady B. Wright",
+    "Varun Shankar"
+  ],
+  "summary": "We present a high-order radial basis function-generated finite difference (RBF-FD) method for partial differential equations on moving manifolds $\\mathcal M(t)\\subset\\mathbb R^3$ of co-dimension one. Our method builds on the tangent-plane formulation of surface RBF-FD and combines Lagrangian and Eulerian treatments: the manifold and material derivative are evolved in a Lagrangian fashion, while the remaining surface differential operators are reconstructed on the instantaneous point cloud and stabilized, when necessary, by a quasi-analytical hyperviscosity formulation. Lagrangian marker…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-19",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

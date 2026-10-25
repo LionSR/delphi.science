@@ -1,0 +1,20 @@
+{
+  "key": "2610.10427",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.10427",
+  "title": "Design-Time Conformance Checking for Pulse-Level Quantum Control",
+  "authors": [
+    "Rylan Malarchick"
+  ],
+  "summary": "A pulse-level quantum control program is written against a device whose limits are recorded, if at all, in vendor documentation and source code. A program that exceeds them can be refused at compile time. It can also be accepted and silently altered, or compile and then fail at the board. In the last two cases the experiment runs, and the data does not correspond to the program that was written. We present qconform, a checker that decides whether a pulse program is realizable on a device, given a versioned capability descriptor for that device. Every constraint in a descriptor cites the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.SE"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

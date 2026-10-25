@@ -1,0 +1,22 @@
+{
+  "key": "2608.00952",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.00952",
+  "title": "Randomized iterative methods with Polyak step-size for solving generalized absolute value equations",
+  "authors": [
+    "Jiayun Chen",
+    "Qiye Zhang",
+    "Deren Han",
+    "Jiaxin Xie"
+  ],
+  "summary": "In this paper, we systematically incorporate the Polyak step-size into the randomized iterative method to improve its efficiency for solving generalized absolute value equations. In particular, we adopt the Polyak step-size within a stochastic iterative setting where the objective function updates dynamically at every step, unlike the classical Polyak step-size designed for deterministic optimization with fixed objective functions. Consequently, this novel implementation differs from the conventional Polyak scheme and demands a dedicated convergence analysis. We rigorously analyze the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-02",
+  "updated": "2026-08-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2605.14256",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.14256",
+  "title": "Worst-Case Sample Complexity Bounds for Distributed Inner Product Estimation with Local Randomized Measurements",
+  "authors": [
+    "Zhenyuan Huang",
+    "Kun Wang",
+    "Ping Xu"
+  ],
+  "summary": "We study distributed inner product estimation for $n$-qubit states using local randomized measurements, for which rigorous worst-case guarantees are less understood. We first reduce the minimax kernel optimization to Hamming-distance kernels. Within this class, unbiasedness fixes a unique kernel. For this kernel under local Clifford sampling, we prove a sharp fourth-moment bound using the single-qubit Clifford commutant. This yields worst-case sample complexity $\\mathcal{O}(\\sqrt{4.5^n})$, attained by identical pure product stabilizer states. For the same kernel under local Haar sampling, we…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-14",
+  "updated": "2026-05-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

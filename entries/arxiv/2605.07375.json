@@ -1,0 +1,24 @@
+{
+  "key": "2605.07375",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.07375",
+  "title": "QuadNorm: Resolution-Robust Normalization for Neural Operators",
+  "authors": [
+    "Bum Jun Kim",
+    "Makoto Kawano",
+    "Yusuke Iwasawa",
+    "Yutaka Matsuo"
+  ],
+  "summary": "Normalization layers in neural operators usually compute statistics by uniformly averaging discrete grid values, making the normalization itself discretization-dependent and thereby a source of transfer error across different resolutions or meshes. To enable discretization robustness, we introduce a quadrature normalization family that replaces existing uniform averaging in normalization layers with numerical quadrature: QuadNorm and BlendQuadNorm. On endpoint-inclusive uniform grids, the proposed quadrature moments are $O(h^2)$-consistent across discretizations, meaning that their…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.CE",
+    "math.NA"
+  ],
+  "published": "2026-05-08",
+  "updated": "2026-05-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2610.06735",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06735",
+  "title": "Isomorphism Criterion of Monomial Digraphs over Prime Fields",
+  "authors": [
+    "Alexander M. Kodess",
+    "Felix Lazebnik",
+    "Mikhail Muzychuk"
+  ],
+  "summary": "For any Galois field $\\mathbb{F}_q$ with $q$ elements and any positive integers $m$ and $n$, the directed graph $D(q;m,n)$ has vertex set $\\mathbb{F}_q\\times\\mathbb{F}_q$, and there is an arc from vertex $(x_1,x_2)$ to vertex $(y_1,y_2)$ if and only if $x_2+y_2=x_1^my_1^n$. It was conjectured in earlier work that two digraphs $D(q;m_1,n_1)$ and $D(q;m_2,n_2)$ are isomorphic if and only if there exists an integer $k$ relatively prime to $q-1$ such that $m_2\\equiv km_1$ and $n_2 \\equiv kn_1$, where both congruences are modulo $q-1$. We prove this conjecture over prime fields and construct an…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

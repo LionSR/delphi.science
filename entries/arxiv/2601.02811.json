@@ -1,0 +1,23 @@
+{
+  "key": "2601.02811",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.02811",
+  "title": "Decision-Theoretic Robustness for Network Models",
+  "authors": [
+    "Marios Papamichalis",
+    "Regina Ruane",
+    "Simon Lunagomez",
+    "Swati Chandna"
+  ],
+  "summary": "Bayesian network models (Erdos Renyi, stochastic block models, random dot product graphs, graphons) are widely used in neuroscience, epidemiology, and the social sciences, yet real networks are sparse, heterogeneous, and exhibit higher-order dependence. How stable are network-based decisions, model selection, and policy recommendations to small model misspecification? We study local decision-theoretic robustness by allowing the posterior to vary within a small Kullback-Leibler neighborhood and choosing actions that minimize worst-case posterior expected loss. Exploiting low-dimensional…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-01-06",
+  "updated": "2026-01-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

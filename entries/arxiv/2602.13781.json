@@ -1,0 +1,21 @@
+{
+  "key": "2602.13781",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.13781",
+  "title": "Internally-disjoint directed pendant Steiner trees with three terminal vertices in Cartesian product digraphs",
+  "authors": [
+    "Shanshan Yu",
+    "Yuefang Sun"
+  ],
+  "summary": "Let $D=(V(D),A(D))$ be a digraph with a terminal vertex subset $S\\subseteq V(D)$ such that $|S|=k\\geq 2$. An out-tree $T$ of $D$ rooted at $r$ is called a directed pendant $(S,r)$-Steiner tree (or, pendant $(S,r)$-tree for short) if $r\\in S\\subseteq V(T)$ and $d_{T}^{+}(r)=d_{T}^{-}(u)=1$ for each $u\\in S\\backslash \\{r\\}$. Two pendant $(S,r)$-trees $T_{1}$ and $T_{2}$ are internally-disjoint if $A(T_{1})\\cap A(T_{2})=\\varnothing$ and $V(T_{1})\\cap V(T_{2})=S$. The pendant-tree $k$-connectivity $τ_{k}(D)$ of $D$ is defined as $$τ_{k}(D)=\\min\\{τ_{S,r}(D)\\mid S\\subseteq V(D),|S|=k,r\\in S\\},$$…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM"
+  ],
+  "published": "2026-02-14",
+  "updated": "2026-02-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

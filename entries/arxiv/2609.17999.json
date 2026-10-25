@@ -1,0 +1,20 @@
+{
+  "key": "2609.17999",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.17999",
+  "title": "Drift Inference for Unit-Root Galton-Watson Processes with Immigration",
+  "authors": [
+    "Yang Lu"
+  ],
+  "summary": "We study inference on the drift of a critical Galton--Watson process with immigration, a count time series with a unit root. Climate change motivates such nonstationary models for weather-related disaster counts. The drift is the expected increase in the count per period. Ordinary least squares is inconsistent for the drift, so we study state-weighted least squares, giving greater weight to observations following small counts, where conditional variance is lower. Under strict recurrence, we apply null-recurrent regenerative limit theory to obtain a polynomial convergence rate and a standard…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

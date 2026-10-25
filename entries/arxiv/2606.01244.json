@@ -1,0 +1,24 @@
+{
+  "key": "2606.01244",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.01244",
+  "title": "Variation Spaces for Encoder--Decoder Neural Operators: Approximation and Generalization",
+  "authors": [
+    "Jia-Qi Yang",
+    "Lei Shi"
+  ],
+  "summary": "Inspired by the function-space theory of neural networks, we formulate and analyze a variation space for nonlinear operators between Hilbert spaces, defined through vector-valued Borel measures of bounded variation. We characterize its unit ball as the closed convex hull of a vector-valued single-neuron dictionary in Bochner spaces. For the ReLU activation, the bounded linear operators in this space are precisely the Schatten-$1$ operators, with equivalent norms. For operators in this space, we establish encoder--decoder approximation bounds in the Bochner $L^q$-norm, where the error…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.FA",
+    "math.NA",
+    "math.ST"
+  ],
+  "published": "2026-05-31",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

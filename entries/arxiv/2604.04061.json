@@ -1,0 +1,22 @@
+{
+  "key": "2604.04061",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.04061",
+  "title": "A Geometry-Aware Operator Learning Framework for Interface Problems on Varying Domains",
+  "authors": [
+    "Shanshan Xiao",
+    "Ye Li",
+    "Zhongyi Huang",
+    "Hao Wu"
+  ],
+  "summary": "Solving Partial Differential Equation (PDE) interface problems on varying domains is a critical task in design and optimization, yet it remains computationally prohibitive for traditional solvers. Although operator learning has shown promise on fixed geometries, its potential for geometry-dependent interface problems has been largely unexplored. To bridge this gap, we propose an extension-based neural operator framework applicable to general linear interface problems. A key innovation of our method is the integration of the Tailored Finite Point Method (TFPM) with our base network, which…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-05",
+  "updated": "2026-04-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

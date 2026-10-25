@@ -1,0 +1,21 @@
+{
+  "key": "2610.25726",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.25726",
+  "title": "Iterative Truncated SVD for Inverse Scattering Problems",
+  "authors": [
+    "Zhinan Han",
+    "Ying Liang",
+    "Hongkai Zhao"
+  ],
+  "summary": "We propose an iterative truncated SVD (iTSVD) algorithm based on a nonlinear least squares formulation for Newton's method for inverse scattering problems. The key idea is to estimate the effective rank of the corresponding linearized operator (or the Jacobian matrix after discretization), which defines the dimension of the signal space of the associated forward operator. Once the effective rank is estimated, truncated SVD (TSVD) reconstruction in the signal space can be computed efficiently based on fast random SVD (RSVD) -- only requiring matrix-vector multiplication which can be…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

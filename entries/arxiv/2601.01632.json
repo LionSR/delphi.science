@@ -1,0 +1,20 @@
+{
+  "key": "2601.01632",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.01632",
+  "title": "Learning Stiff Dynamical Operators: Scaling, Fast-Slow Excitation, and Eigen-Consistent Neural Models",
+  "authors": [
+    "Mauro Valorani"
+  ],
+  "summary": "Stiff dynamical systems represent a central challenge in multi scale modeling across combustion, chemical kinetics, and nonlinear dynamical systems. Neural operator learning has recently emerged as a promising approach to approximate dynamical generators from data, yet stiffness imposes severe obstacles: training errors concentrate on slow manifold states, collapse of fast dynamics occurs, and the learned operator may fail to reproduce the true eigenstructure. We demonstrate three key advances enabling accurate learning of stiff operators and preserving spectral fidelity: (i) stiffness aware…",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "math-ph"
+  ],
+  "published": "2026-01-04",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

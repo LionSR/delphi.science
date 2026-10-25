@@ -1,0 +1,23 @@
+{
+  "key": "2603.09449",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.09449",
+  "title": "Exponential Convergence of $hp$-FEM for the Integral Fractional Laplacian on cuboids",
+  "authors": [
+    "Björn Bahr",
+    "Markus Faustmann",
+    "Carlo Marcati",
+    "Jens Markus Melenk",
+    "Christoph Schwab"
+  ],
+  "summary": "For the Dirichlet integral fractional Laplacian, we prove root exponential convergence of tensor-product $hp$-finite element approximations on $(0,1)^3$, for forcing $f$ that is analytic in $[0,1]^3$. Exploiting analytic regularity estimates in weighted Sobolev spaces, we prove for $hp$-GLL interpolation approximations with $N$ degrees of freedom the energy norm error bound $\\lesssim \\exp(-b\\sqrt[6]{N})$. Tensor product mesh families which are geometrically refined towards all sides of $(0,1)^3$ are used. Numerical experiments with $hp$-Galerkin FEM confirm the bound.",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-10",
+  "updated": "2026-03-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

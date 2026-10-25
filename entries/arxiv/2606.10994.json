@@ -1,0 +1,24 @@
+{
+  "key": "2606.10994",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.10994",
+  "title": "Adaptive identification of low-degree polynomials in quantum singular value transformation: application to nonlinear quantum properties estimation",
+  "authors": [
+    "Jumpei Kato",
+    "Akira Tanji",
+    "Hiroyuki Harada",
+    "Kaito Wada",
+    "Kosuke Ito",
+    "Naoki Yamamoto"
+  ],
+  "summary": "Estimating properties of unknown quantum states via quantum singular value transformation (QSVT) often requires high-degree polynomials to handle small eigenvalues of density matrices. Specifically, the existing approaches determine the polynomial degree by relying on overly conservative worst-case bounds based on the minimum non-zero eigenvalue or the rank of the density matrices. In this work, we propose a spectral cutoff method that truncates the negligible eigenvalue tail depending on the task, the target accuracy, and the state, which enables the use of significantly lower-degree…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-09",
+  "updated": "2026-06-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

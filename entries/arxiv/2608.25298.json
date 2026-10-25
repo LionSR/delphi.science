@@ -1,0 +1,20 @@
+{
+  "key": "2608.25298",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.25298",
+  "title": "Sequential Euclidean connections with exponential memory: distributional performance and adversarial robustness",
+  "authors": [
+    "Pedro M. M. de Castro"
+  ],
+  "summary": "Points in the unit ball of $\\mathbb R^d$ are processed sequentially. Each new point $p_i$ is connected to a state $x_{i-1}$ that summarizes earlier observations, after which $x_i=γx_{i-1}+(1-γ)p_i$, with $0\\leqγ\\leq1$. The cost is the sum of the $α$-powers of the connection lengths. This constant-gain rule interpolates between the input-order path and the star centered at the initial point. For independent uniform points, we establish the stationary insertion-length distribution and prove that it decreases in stochastic order as $γ$ increases. If $d+α>2$, or if $(d,α)=(1,1)$, the optimal…",
+  "domain": "cs.CG",
+  "tags": [
+    "cs.CG",
+    "math.OC"
+  ],
+  "published": "2026-08-26",
+  "updated": "2026-08-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

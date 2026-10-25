@@ -1,0 +1,20 @@
+{
+  "key": "2610.26540",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.26540",
+  "title": "Lightning Algorithm for Inhomogeneous Modified Helmholtz Equations on Cornered Domains and Their Applications",
+  "authors": [
+    "Desong Kong",
+    "Jie Shen"
+  ],
+  "summary": "We develop in this paper an efficient solver for the inhomogeneous modified Helmholtz equations in two-dimensional complex domains with particular attention to resolving corner singularities. We represent the solution as a summation of a particular solution and the solution of the modified Helmholtz equation. Built upon suitable domain embedding methods, we compute the particular solution using the Fourier spectral method and/or Legendre--Fourier spectral method. To treat the corner singularities, we develop a lightning algorithm by employing an expansion of the modified Bessel functions of…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

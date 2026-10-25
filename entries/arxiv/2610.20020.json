@@ -1,0 +1,21 @@
+{
+  "key": "2610.20020",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.20020",
+  "title": "MCMC Can See Can't See",
+  "authors": [
+    "Daniel Matsui Smola"
+  ],
+  "summary": "It is folklore that passing \"convergence\" diagnostics does not guarantee that a Markov chain has converged. We prove this as an impossibility for any finite checklist of diagnostics. Running more chains, longer chains, and smarter diagnostics does not avoid this impossibility in certifying convergence. Under regularity assumptions, we determine how the worst-case undetected non-convergence decays as more diagnostics are added, and how to choose diagnostics optimally. Folklore suggests that the sampler's slowest mixing modes are the \"dangerous\" ones that must be monitored; we prove that the…",
+  "domain": "stat.CO",
+  "tags": [
+    "stat.CO",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

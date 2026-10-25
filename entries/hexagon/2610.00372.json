@@ -1,0 +1,40 @@
+{
+  "key": "2610.00372",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00372v2",
+  "pdf": "https://hexagonmath.org/pdf/2610.00372v2",
+  "title": "χ₂(1/3) and χ₂(1/5) are irrational",
+  "authors": [
+    "Shawn Krisman"
+  ],
+  "summary": "Let $\\chi_2(z)=\\sum_{n\\ge0}z^{2n+1}/(2n+1)^2$ be Legendre's chi function. We prove that $\\chi_2(1/3)$ and $\\chi_2(1/5)$ are irrational. Equivalently, $\\mathrm{Li}_2(1/q)-\\mathrm{Li}_2(-1/q)\\notin\\mathbb{Q}$ for $q=3,5$. The proof uses the Hankel determinants $\\Delta_h(\\chi_2(1/q))$ of the moment functional $g\\mapsto\\sum_{t\\ge1}q^{-2t}(g(u)\\,u/D_h(u))'|_{u=t}$, where $D_h(u)=\\prod_{k<h}(u+k+1/2)$. These determinants are values of polynomials $\\Delta_h(X)\\in\\mathbb{Q}[X]$ of degree at most $h$. We bound the denominators of $\\Delta_h(X)$ prime by prime: a bound adapted to residue classes for…",
+  "domain": "math.NT",
+  "tags": [
+    "msc:11J72",
+    "msc:41A21",
+    "msc:31A15",
+    "msc:68V20",
+    "Hankel determinants",
+    "Lean",
+    "Legendre chi function",
+    "Padé approximation",
+    "dilogarithm",
+    "formal verification",
+    "irrationality",
+    "logarithmic potential theory"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-22",
+  "version": 2,
+  "ai_models": [
+    "Claude Opus"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "none",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

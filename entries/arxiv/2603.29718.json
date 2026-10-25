@@ -1,0 +1,21 @@
+{
+  "key": "2603.29718",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.29718",
+  "title": "Adaptive Multilevel Methods for the Maxwell Eigenvalue Problem",
+  "authors": [
+    "Qigang Liang",
+    "Xuejun Xu",
+    "Qingquan Zhang"
+  ],
+  "summary": "In this paper, we propose an adaptive multilevel preconditioned Helmholtz-Jacobi-Davidson (PHJD) method for the Maxwell eigenvalue problem with singularities. The key idea in this work is to employ the local multilevel method for preconditioning the Jacobi-Davidson correction equation. It is shown that our convergence factor is quasi-optimal, which means the convergence factor is independent of mesh sizes and mesh levels provided the coarse mesh is sufficiently fine. Numerical experiments on complex domains are carried out to confirm the theoretical results and demonstrate the efficiency of…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-31",
+  "updated": "2026-03-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

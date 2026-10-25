@@ -1,0 +1,22 @@
+{
+  "key": "2604.07404",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.07404",
+  "title": "Score Shocks: The Burgers Equation Structure of Diffusion Generative Models",
+  "authors": [
+    "Krisanu Sarkar"
+  ],
+  "summary": "We analyze the score field of a diffusion generative model through a Burgers-type evolution law. For VE diffusion, the heat-evolved data density implies that the score obeys viscous Burgers in one dimension and the corresponding irrotational vector Burgers system in $\\R^d$, giving a PDE view of \\emph{speciation transitions} as the sharpening of inter-mode interfaces. For any binary decomposition of the noised density into two positive heat solutions, the score separates into a smooth background and a universal $\\tanh$ interfacial term determined by the component log-ratio; near a regular…",
+  "domain": "cond-mat.stat-mech",
+  "tags": [
+    "cond-mat.stat-mech",
+    "cs.LG",
+    "math.AP",
+    "stat.ML"
+  ],
+  "published": "2026-04-08",
+  "updated": "2026-04-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

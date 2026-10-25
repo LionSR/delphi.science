@@ -1,0 +1,21 @@
+{
+  "key": "2608.08633",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.08633",
+  "title": "Exact Finite-Horizon Memory, Conditioning, and Dissipative Decay in Coarse Upwind Finite-Volume Prediction",
+  "authors": [
+    "Antonis Polemitis",
+    "Nicholas Christakis",
+    "Dimitris Drikakis"
+  ],
+  "summary": "Coarse finite-volume averages do not generally form a predictive state: realized interface fluxes close a conservative update, but distinct fine-grid states with identical parent averages can generate different future coarse histories. We analyze this failure for periodic scalar advection discretized by a first-order upwind finite-volume method with forward Euler time integration. We derive a finite-horizon observation-rank law: each additional observation exposes one new child-cell layer and contributes one fewer independent direction than the number of parent cells, until the unresolved…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-09",
+  "updated": "2026-08-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

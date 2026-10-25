@@ -1,0 +1,23 @@
+{
+  "key": "2606.17531",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.17531",
+  "title": "Non-negative Matrix Factorisation with Topological Regularisation",
+  "authors": [
+    "Matias de Jong van Lier",
+    "Shizuo Kaji",
+    "Keunsu Kim"
+  ],
+  "summary": "Non-negative matrix factorisation (NMF) learns additive representations from data, but non-negativity alone does not ensure interpretable basis functions. We introduce Top-NMF, which guides basis learning through general topological preferences without prescribing the detailed form of the components. Observations and basis vectors are treated as non-negative functions on structured domains. Discrete topological conditions are difficult to optimise directly. Our guiding viewpoint is that persistent homology provides a stable, continuous relaxation of ordinary homological invariants: it tracks…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.CG",
+    "math.AT"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

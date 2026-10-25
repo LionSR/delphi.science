@@ -1,0 +1,30 @@
+{
+  "key": "2610.00307",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00307v2",
+  "pdf": "https://hexagonmath.org/pdf/2610.00307v2",
+  "title": "Set Cover by Cyclic Rotations Is NP-Complete",
+  "authors": [
+    "YURAN XIU"
+  ],
+  "summary": "Given an explicitly listed binary pattern of positive length $n$ and a nonnegative integer $b$ in binary, can at most $b$ cyclic rotations of the pattern cover all $n$ positions? We prove that this decision problem is NP-complete. The reduction constructs a pattern in a cyclic group of polynomial order and outputs its entire indicator word. Its principal ingredient is a replicated-marker construction: a cover within the budget must choose one translate in every layer, and each failed difference constraint leaves a block of more holes than the remaining translates can cover. Combining this…",
+  "domain": "cs.CC",
+  "tags": [
+    "msc:68Q17",
+    "Lean formalization",
+    "NP-completeness",
+    "cyclic rotations",
+    "set cover"
+  ],
+  "published": "2026-10-17",
+  "updated": "2026-10-19",
+  "version": 2,
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "none",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

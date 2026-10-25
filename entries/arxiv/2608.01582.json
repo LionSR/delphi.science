@@ -1,0 +1,25 @@
+{
+  "key": "2608.01582",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.01582",
+  "title": "LieStoNet: Learning Lie Symmetries from Spatiotemporal Data for Stochastic Dynamical Systems",
+  "authors": [
+    "Shida Liu",
+    "Abhishek Gupta",
+    "Sumit Sinha",
+    "L. Mahadevan"
+  ],
+  "summary": "Symmetry is central to modern machine learning and physics: invariances and equivariances improve sample efficiency, robustness, and out-of-distribution generalization, while symmetry principles guide scientific modeling. Yet for stochastic dynamical systems the relevant continuous symmetries are rarely known, and symmetry discovery for SDEs has remained essentially unexplored. We introduce \\textit{LieStoNet}, an end-to-end, \\emph{template-free} framework for discovering Lie-point symmetries of SDEs directly from spatiotemporal trajectories, without prespecifying symmetry groups, templates,…",
+  "domain": "cond-mat.stat-mech",
+  "tags": [
+    "cond-mat.stat-mech",
+    "cond-mat.dis-nn",
+    "cs.LG",
+    "math-ph"
+  ],
+  "published": "2026-08-03",
+  "updated": "2026-08-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

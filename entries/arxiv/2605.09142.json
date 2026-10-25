@@ -1,0 +1,21 @@
+{
+  "key": "2605.09142",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09142",
+  "title": "DART-Q : A Deadline-Driven Framework for Real-Time QLDPC Decoding",
+  "authors": [
+    "Ameya S. Bhave",
+    "Navnil Choudhury",
+    "Kanad Basu"
+  ],
+  "summary": "Real-time quantum error correction places the classical decoder inside the fault-tolerant control loop under strict timing and memory constraints. For quantum low-density parity-check (QLDPC) codes, practical deployment therefore depends not only on correction performance, but also on timely decoding under deadlines, finite on-chip memory, and time-varying load. However, existing decoder studies primarily emphasize correction performance without exposing operational viability under these constraints. We present DART-Q, a real-time QLDPC decoding framework that treats windowed workloads as…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-09",
+  "updated": "2026-05-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2609.07457",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07457",
+  "title": "Real-rootedness of the $τ$-polynomial under graph joins",
+  "authors": [
+    "Mingyang Kang",
+    "Zhixin Liu",
+    "Sophie C. C. Sun",
+    "Philip B. Zhang"
+  ],
+  "summary": "For a simple graph $G$ with $n$ vertices, write its chromatic polynomial in the rising factorial basis as $$ χ_G(x)=\\sum_{i=0}^{n}(-1)^{n-i}c_i(G)\\langle x\\rangle_i,$$ where $ \\langle x\\rangle_i=x(x+1)\\cdots(x+i-1).$ The associated $τ$-polynomial $$ τ_G(x)=\\sum_{i=0}^{n}c_i(G)x^i $$ was defined and systematically investigated by Brenti in 1992. In this paper, we prove that if the $τ$-polynomials of two vertex-disjoint simple graphs $G$ and $H$ have only real zeros, then the $τ$-polynomial of their join $G\\vee H$ has only real zeros. This settles a conjecture posed by Brenti, Royle and Wagner…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2609.22576",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.22576",
+  "title": "Scalable Incremental Robustness Analysis of Neural Network Feedback Systems",
+  "authors": [
+    "Zichen Wang",
+    "Peter Seiler",
+    "Geir Dullerud",
+    "Bin Hu"
+  ],
+  "summary": "Semidefinite programming (SDP) certificates for feedback systems containing deep neural networks (NNs) typically scale with the total number of neurons, whereas small-gain tests are scalable but can be highly conservative. This paper develops a unified and scalable framework for incremental robust stability and performance analysis of feedback interconnections involving high-dimensional NNs and unmodeled dynamics. By combining a structured decomposition of the full-order SDP condition with scalable Lipschitz constant estimation algorithms, we derive reduced verification conditions that…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "eess.SY"
+  ],
+  "published": "2026-09-18",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2609.09515",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.09515",
+  "title": "Global Optimization Framework for Automated Low-Thrust Gravity-Assist Trajectory Design",
+  "authors": [
+    "Ryo Iijima",
+    "Kenshiro Oguri",
+    "Toshinori Kuwahara"
+  ],
+  "summary": "Gravity-assist trajectory design requires searching numerous leg combinations, but applying nonlinear programming (NLP) for low-thrust trajectory optimization to all combinations is computationally prohibitive. Therefore, conventional frameworks first perform broad search using lightweight trajectory models such as Lambert-based calculation and simplified deep-space maneuver models, while pruning infeasible candidates. However, to maintain efficiency, conventional approaches handle only low-dimensional formulations with limited constraints such as up to a couple of impulse maneuvers per leg.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

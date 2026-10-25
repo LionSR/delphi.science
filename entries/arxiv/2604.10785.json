@@ -1,0 +1,20 @@
+{
+  "key": "2604.10785",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.10785",
+  "title": "Extremal chromatic bounds for distance Laplacian eigenvalues",
+  "authors": [
+    "Bilal Ahmad Rather"
+  ],
+  "summary": "For a connected simple graph $G$ on $n$ vertices with chromatic number $χ$, the distance Laplacian matrix is $\\DL(G)=\\operatorname{diag}(\\Tr_G(v_1),\\dots,\\Tr_G(v_n))-D(G)$, where $D(G)$ is the distance matrix and $\\Tr_G(v)=\\sum_{u\\in V(G)} d_G(u,v)$ is the transmission. The eigenvalues of $\\DL(G)$ are ordered as $\\partial^{L}_1(G)\\ge \\partial^{L}_2(G)\\ge \\cdots \\ge \\partial^{L}_n(G)=0$. Building on the chromatic lower bound $\\partial^{L}_1(G)\\ge n+\\ceil{n/χ}$ and subsequent developments, we prove a \\emph{color-class majorization principle}: if $(\\ell_1,\\dots,\\ell_χ)$ are the color-class…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM"
+  ],
+  "published": "2026-04-12",
+  "updated": "2026-05-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

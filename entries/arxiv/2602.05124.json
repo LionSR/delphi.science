@@ -1,0 +1,20 @@
+{
+  "key": "2602.05124",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05124",
+  "title": "Scalable Fixed-Point Framework for High-Dimensional Hamilton-Jacobi Equations",
+  "authors": [
+    "Yesom Park",
+    "Stanley Osher"
+  ],
+  "summary": "We propose a novel, mesh-free, and gradient-free fixed-point approach for computing viscosity solutions of high-dimensional Hamilton-Jacobi (HJ) equations. By leveraging the Hopf-Lax formula, our approach iteratively solves the associated variational problem via a Picard iteration, enabling efficient evaluation of both the solution and its corresponding control without relying on grids, characteristics, or differentiation. We demonstrate the practical efficacy and scalability of the approach through numerical experiments in up to 100 dimensions, including control problems and non-smooth…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-04",
+  "updated": "2026-02-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

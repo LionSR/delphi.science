@@ -1,0 +1,20 @@
+{
+  "key": "2607.04023",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04023",
+  "title": "Termination of Binary Trust-Gossip Dynamics: A Constructive No-Limit-Cycles Theorem",
+  "authors": [
+    "Nicholas Boichuk"
+  ],
+  "summary": "In the binary trust-gossip dynamics, $n$ agents each hold a directed binary opinion, trust or distrust, of every other agent, and a gossip step lets one agent copy another agent's opinion of a third whenever the copier trusts the source. We prove that under any fair schedule of such steps, every trajectory reaches an absorbing state in finitely many steps, one in which no gossip step changes any opinion; in particular, there are no limit cycles. The proof is constructive and rests on a single descent measure: the number of ordered pairs of distinct agents linked by a chain of trust.…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.DS"
+  ],
+  "published": "2026-07-04",
+  "updated": "2026-07-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

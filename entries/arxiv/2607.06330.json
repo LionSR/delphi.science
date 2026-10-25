@@ -1,0 +1,22 @@
+{
+  "key": "2607.06330",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06330",
+  "title": "Estimation of Linear Functionals in Multilayer Panels under Staggered Adoption",
+  "authors": [
+    "Alberto Bordino",
+    "Thomas B. Berrett",
+    "Olga Klopp"
+  ],
+  "summary": "We study the estimation of bilinear forms from noisy, partially observed multilayer data. The signal follows a Tucker2 model, with shared unit and time factors across tensor layers and slice-specific cores. The missingness pattern is structured and motivated by staggered adoption designs, which are common in causal inference and related applications. We first analyze the four-block missingness pattern, the basic building block for general staggered adoption, and propose a spectral algorithm that pools information across layers and targets the functional directly. We prove a non-asymptotic…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

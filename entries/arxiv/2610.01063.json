@@ -1,0 +1,22 @@
+{
+  "key": "2610.01063",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01063",
+  "title": "Positivity-preserving scalar auxiliary variable schemes for gradient flows via a quadratic reformulation",
+  "authors": [
+    "Qiong-Ao Huang",
+    "Zhi-Hao Liu",
+    "Ying-Wei Wang",
+    "Li-Na Yan"
+  ],
+  "summary": "The scalar auxiliary variable (SAV) method replaces the nonlinear part of the free energy by a positive scalar $r(t)=\\sqrt{\\mathcal{E}_{_\\mathcal{N}}[φ]+C}>0$, thereby yielding linear, unconditionally energy-stable schemes for gradient flows. At the discrete level, however, the standard backward Euler and Crank--Nicolson discretizations provide no guarantee that the computed $r^{n+1}$ remains positive, an inconsistency with the continuous definition that contradicts the square-root ansatz and may compromise long-time robustness. Although the SAV method has been widely applied, this subtle…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2603.27379",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.27379",
+  "title": "Multidimensional Gradient-MUSIC: A Global Nonconvex Optimization Framework for Optimal Resolution",
+  "authors": [
+    "Albert Fannjiang",
+    "Weilin Li"
+  ],
+  "summary": "We develop a multidimensional version of Gradient-MUSIC for estimating the frequencies of a nonharmonic signal from noisy samples. The guiding principle is that frequency recovery should be based only on the signal subspace determined by the data. From this viewpoint, the MUSIC functional is an economical nonconvex objective encoding the relevant information, and the problem becomes one of understanding the geometry of its perturbed landscape. Our main contribution is a general structural theory showing that, under explicit conditions on the measurement kernel and the perturbation of the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.IT"
+  ],
+  "published": "2026-03-28",
+  "updated": "2026-03-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

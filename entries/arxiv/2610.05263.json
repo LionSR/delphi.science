@@ -1,0 +1,27 @@
+{
+  "key": "2610.05263",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05263",
+  "title": "A Logic for Minor-Free Graph Classes: Model Checking, Dependence, and Combinatorial Reconfiguration",
+  "authors": [
+    "Nikolas Mählmann",
+    "Patrice {Ossona de Mendez}",
+    "Nicole Schirrmacher",
+    "Sebastian Siebertz",
+    "Giannos Stamoulis",
+    "{Dimitrios M. } Thilikos",
+    "Alexandre Vigny"
+  ],
+  "summary": "We introduce \\emph{sub-connectivity logic}, denoted by $\\textsf{FOscon}$, an extension of first-order logic for graphs with a specified set $Z$ of admissible edges. Its additional atom $\\textsf{scon}(x,y;\\bar z)$ asserts that $x$ and $y$ are connected by a path using only edges of $Z$ and avoiding the vertices in $\\bar z$. Our main structural result states that, for every weakly sparse graph class $\\mathscr C$, the class of all expansions of graphs in $\\mathscr C$ by rooted spanning forest orders has bounded twin-width if and only if $\\mathscr C$ excludes a fixed minor. When $\\mathscr C$…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "cs.DM",
+    "math.LO"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

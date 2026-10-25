@@ -1,0 +1,21 @@
+{
+  "key": "2609.04997",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.04997",
+  "title": "Learning unknown stabilizer codes using product measurements",
+  "authors": [
+    "Heather Leitch",
+    "Sri. S. Tirukkovalluri",
+    "Yingkai Ouyang"
+  ],
+  "summary": "Efficiently characterizing quantum error correcting codes is a key challenge on the path to fault-tolerant quantum computation. Stabilizer codes, a central class of such codes, are defined by a set of stabilizer generators. Here, we present an algorithm that uses random single-qubit measurements to learn the stabilizer generators of any stabilizer code from $N$ copies of stabilizer states in its codespace, requiring no prior knowledge of the code's structure. This also enables verification that a device implements its intended code. We derive a lower bound on $N$ needed to recover the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

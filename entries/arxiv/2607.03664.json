@@ -1,0 +1,21 @@
+{
+  "key": "2607.03664",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.03664",
+  "title": "A Structural Interpretation of GELU and Threshold-Transmission Activations via the First-Order Loss Function",
+  "authors": [
+    "Roberto Rossi"
+  ],
+  "summary": "The Gaussian Error Linear Unit is usually motivated as the expected output of an input-dependent Bernoulli gate. This work gives an alternative interpretation: GELU is the expected output of a hard linear gate with a Gaussian random threshold. This view provides a generative interpretation for the Bernoulli gate: the gate opens once the input clears a latent Gaussian threshold. This interpretation stems from a decomposition based on well-known results in stochastic inventory theory and leads to a threshold-transmission family that includes ReLU, GELU, SiLU/Swish, and hard swish as special…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-07-04",
+  "updated": "2026-07-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

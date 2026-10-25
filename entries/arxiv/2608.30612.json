@@ -1,0 +1,21 @@
+{
+  "key": "2608.30612",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.30612",
+  "title": "Efficient measurement schemes for the Monte Carlo projective quantum eigensolver",
+  "authors": [
+    "Divye Baid",
+    "Maria-Andreea Filip"
+  ],
+  "summary": "The Monte Carlo Projective Quantum Eigensolver (MC-PQE) was recently introduced as an alternative to hybrid algorithms like the variational quantum eigensolver (VQE). By using a quantum Monte Carlo-inspired scheme for energy estimation, MC\\nobreakdash-PQE was found to decrease the required measurement cost relative to comparable conventional approaches. However, in the context of VQE, numerous techniques have been developed to reduce the measurement overhead by joint measurement of multiple observables. In this work, we extend these approaches to the asymmetric expectation values required in…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.chem-ph"
+  ],
+  "published": "2026-08-31",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2606.25194",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.25194",
+  "title": "Hodge Spectral Surrogates for Topology-Constrained Optimization",
+  "authors": [
+    "Satoshi Kanno",
+    "Yoshi-aki Shimada"
+  ],
+  "summary": "Topology-constrained optimization arises in applications such as medical image segmentation, geometric design, and network generation, where global structural correctness matters. Yet Betti numbers and persistent homology are discrete and combinatorial, making them difficult to control directly by gradient-based optimization. We propose a differentiable framework that replaces discrete topological counting with a soft spectral relaxation of the Hodge Laplacian. Candidate simplices are embedded in a fixed ambient complex, while simplex inclusion is represented by continuous activations,…",
+  "domain": "math.AT",
+  "tags": [
+    "math.AT",
+    "cs.CG",
+    "math-ph",
+    "quant-ph"
+  ],
+  "published": "2026-06-23",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

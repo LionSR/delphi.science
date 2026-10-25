@@ -1,0 +1,23 @@
+{
+  "key": "2610.10366",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.10366",
+  "title": "Koopman Observers for Diffusion Acceleration: Correcting Feature Forecasts with Shallow Measurements",
+  "authors": [
+    "Hanru Bai",
+    "Yuanchao Xu",
+    "Fengyi Li"
+  ],
+  "summary": "Feature caching accelerates diffusion sampling by replacing expensive network evaluations with predictions from previously computed activations. However, forecasts based only on past features cannot directly incorporate changes in the current denoising state. We investigate whether inexpensive, freshly computed features can serve as observations for correcting these predictions. We introduce an observation-corrected Koopman framework for accelerating frozen diffusion models. Using calibration trajectories, we identify finite-dimensional, time-dependent Koopman approximations that jointly…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS",
+    "stat.ML"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

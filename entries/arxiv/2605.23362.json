@@ -1,0 +1,26 @@
+{
+  "key": "2605.23362",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.23362",
+  "title": "Instance-Optimal Estimation with Multiple LLM Judges on a Budget",
+  "authors": [
+    "Junghyun Lee",
+    "Sanghwa Kim",
+    "Yassir Jedra",
+    "Alexandre Proutière",
+    "Se-Young Yun"
+  ],
+  "summary": "Evaluating large language models increasingly relies on LLM-as-a-judge protocols, but such evaluations remain costly: different judges have different prices and reliabilities, and the difficulty of each prompt-response pair can vary substantially. This raises a basic allocation question: under a fixed budget, how should one distribute evaluation queries across heterogeneous judges and instances to obtain the most accurate score estimates? We formalize this question as *budgeted heteroskedastic multi-judge estimation*. Given $K$ prompt-response pairs, $J$ judges with known costs, and unknown…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.IT",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-05-22",
+  "updated": "2026-05-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

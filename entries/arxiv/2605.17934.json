@@ -1,0 +1,22 @@
+{
+  "key": "2605.17934",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.17934",
+  "title": "Conditional Predictive Inference for General Structured Data with Group Symmetries",
+  "authors": [
+    "Yichen Shen",
+    "Mengxin Yu"
+  ],
+  "summary": "We study distribution-free predictive inference for data with group symmetries, aiming to establish near-conditional coverage guarantees beyond exchangeability for structured data. While many predictive inference methods achieve a target coverage level, most provide marginal coverage. In practice, conditional predictive inference is often preferred, as it quantifies uncertainty for black-box predictions given observed attributes, thereby accommodating heterogeneity. Although many efforts have pursued efficient conditional coverage, existing methods rely on the i.i.d. or exchangeable…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-05-18",
+  "updated": "2026-05-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

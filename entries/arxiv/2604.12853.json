@@ -1,0 +1,21 @@
+{
+  "key": "2604.12853",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.12853",
+  "title": "Coupling Markov chains with a common image chain",
+  "authors": [
+    "Edward Crane",
+    "Alexander E. Holroyd",
+    "Erin Russell"
+  ],
+  "summary": "Consider time-homogeneous discrete-time Markov chains $X$, $Y$, and $Z$ on countable state spaces, considered as stochastic processes with specified initial distributions. Suppose for maps $f$ and $g$ that $(f(X_t))_{t \\ge 0}$ and $(g(Y_t))_{t \\ge 0}$ are both equal in law to $Z$. We prove that $X$ and $Y$ can be coupled so that $(X_t, Y_t)_{t \\ge 0}$ is a homogeneous Markov chain with $f(X_t) = g(Y_t)$ for all $t \\ge 0$. Without the assumption that $Z$ is Markov, no such Markov coupling exists in general, even an inhomogeneous one. Moreover, we give an explicit construction of such a…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-04-14",
+  "updated": "2026-04-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

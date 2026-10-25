@@ -1,0 +1,24 @@
+{
+  "key": "2602.13174",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.13174",
+  "title": "Learning functional components of PDEs from data using neural networks",
+  "authors": [
+    "Torkel E. Loman",
+    "Yurij Salmaniw",
+    "Antonio Leon Villares",
+    "Jose A. Carrillo",
+    "Ruth E. Baker"
+  ],
+  "summary": "Partial differential equation (PDE) models frequently contain unknown functional terms that cannot be measured directly, limiting their predictive utility. While data-driven methods for estimating scalar PDE parameters are well established, the recovery of unknown functions remains comparatively underexplored. Here, we show that standard parameter estimation workflows can be extended to infer functional components of PDEs directly from data. Our approach embeds neural networks within the PDE framework, allowing unknown functions to be learned during training with high accuracy. Using…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.AP"
+  ],
+  "published": "2026-02-13",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

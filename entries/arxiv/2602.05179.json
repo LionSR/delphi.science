@@ -1,0 +1,24 @@
+{
+  "key": "2602.05179",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05179",
+  "title": "From Sequential to Parallel: Reformulating Dynamic Programming as GPU Kernels for Large-Scale Stochastic Combinatorial Optimization",
+  "authors": [
+    "Jingyi Zhao",
+    "Linxin Yang",
+    "Haohua Zhang",
+    "Qile He",
+    "Tian Ding"
+  ],
+  "summary": "A major bottleneck in scenario-based Sample Average Approximation (SAA) for stochastic programming (SP) is the cost of solving an exact second-stage problem for every scenario, especially when each scenario contains an NP-hard combinatorial structure. This has led much of the SP literature to restrict the second stage to linear or simplified models. We develop a GPU-based framework that makes structured integer recourse operators tractable at scale. The key innovation is a set of hardware-aware, scenario-batched GPU kernels that expose parallelism across scenarios, dynamic-programming (DP)…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DC"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-05-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

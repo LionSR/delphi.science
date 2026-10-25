@@ -1,0 +1,22 @@
+{
+  "key": "2605.25859",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.25859",
+  "title": "Minimax Limits of k-Fold Cross-Validation via Majority",
+  "authors": [
+    "Ido Nachum",
+    "Rüdiger Urbanke",
+    "Thomas Weinberger"
+  ],
+  "summary": "We study the mean-squared error of $k$-fold cross-validation as a risk estimator, with particular emphasis on how its accuracy depends on the number of folds $k$. Despite the widespread use of cross-validation, principled guidance for choosing $k$ is largely absent, mainly due to the complex dependence between fold-wise error estimates. To obtain sharp and interpretable results, we focus on the majority algorithm in binary classification, a minimal yet nontrivial empirical risk minimization procedure. We provide a fine-grained analysis of its cross-validation behavior, showing that even this…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.LG"
+  ],
+  "published": "2026-05-25",
+  "updated": "2026-06-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

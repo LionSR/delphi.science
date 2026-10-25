@@ -1,0 +1,20 @@
+{
+  "key": "2606.17497",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.17497",
+  "title": "Design principles for stable and generalizable data-driven discretizations for solving linear hyperbolic conservation laws",
+  "authors": [
+    "Antoine-Alexis Nasser",
+    "Alistair Adcroft"
+  ],
+  "summary": "We investigate data-driven finite-volume discretizations of the linear advection equation in one dimension. Neural networks for use as numerical advection schemes are constructed adhering to first principles of numerical analysis, allowing us to examine how normalization, training data, and architectural choices influence stability, accuracy, and shape preservation. (i) We show that reconstruction based solely on cell averages leads to a multi-valued learning problem, explaining limited generalization when training data includes widely different curvature regimes. (ii) Numerical stability…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

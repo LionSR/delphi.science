@@ -1,0 +1,22 @@
+{
+  "key": "2609.22950",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.22950",
+  "title": "CLEAR: Complex Learned Explicit Analytical Regularization for Ultra-Accelerated 4D Flow CMR Reconstruction",
+  "authors": [
+    "German Shâma Wache",
+    "Sebastian Neumayer"
+  ],
+  "summary": "While compressed-sensing regularizers enable interpretable reconstruction of 4D Flow CMR through transparent variational objectives, their hand-crafted nature is too restrictive under high acceleration. State-of-the-art learning-based approaches mitigate this, but typically encode regularization implicitly through unrolled network modules, which limits their interpretability. To address this limitation, we propose CLEAR, designed to combine the interpretability of compressed sensing with the flexibility of learned models. To the best of our knowledge, it is the first learned regularizer for…",
+  "domain": "cs.CV",
+  "tags": [
+    "cs.CV",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-09-19",
+  "updated": "2026-09-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

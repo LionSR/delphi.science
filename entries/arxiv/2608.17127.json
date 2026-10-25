@@ -1,0 +1,19 @@
+{
+  "key": "2608.17127",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17127",
+  "title": "A Log-Free Lower Bound for the Number of Facets of $0/1$-Polytopes",
+  "authors": [
+    "Omer Friedland"
+  ],
+  "summary": "Let $g(n)$ denote the largest number of facets of a full-dimensional $0/1$-polytope in $\\R^n$. We prove that there are absolute constants $c>0$ and $n_0$ such that $$ g(n)\\ge (cn)^{n/2}\\quad(n\\ge n_0). $$ This removes the logarithmic factor from the lower bound $\\bigl(cn/\\log n\\bigr)^{n/2}$ of Gatzouras, Giannopoulos, and Markoulakis. The proof compares a random sign polytope with two Rademacher rate bodies separated by a fixed level gap. Facets missing the inner body have uniformly small footprints on a flat patch of the outer body. A facet entering the inner body forces an empty buffered…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-08-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

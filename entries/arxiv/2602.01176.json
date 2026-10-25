@@ -1,0 +1,23 @@
+{
+  "key": "2602.01176",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.01176",
+  "title": "When Does Cheap Physics Help? Gated Multi-Fidelity Physics-Informed Networks with Provable Sample Savings and Conformal Guarantees",
+  "authors": [
+    "laf Yunus Laitinen Imanov",
+    "Rana Irem Turhan",
+    "Isgandar Jafarli"
+  ],
+  "summary": "High-fidelity (HF) simulations of parametric partial differential equations are expensive, whereas low-fidelity (LF) models such as coarse grids or simplified physics are cheap but biased. Multi-fidelity physics-informed neural networks combine the two, yet it remains unclear when cheap physics actually reduces the number of HF solves, and existing methods silently fail when the LF model is misleading and offer no guaranteed uncertainty. We answer the first question with a sharp sample-complexity bound: learning the HF field through its discrepancy from the LF model reduces the number of HF…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-02-01",
+  "updated": "2026-10-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

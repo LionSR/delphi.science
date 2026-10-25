@@ -1,0 +1,25 @@
+{
+  "key": "2605.16913",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.16913",
+  "title": "A Fourier perspective on the learning dynamics of neural networks: from sample complexities to mechanistic insights",
+  "authors": [
+    "Fabiola Ricci",
+    "Claudia Merger",
+    "Sebastian Goldt"
+  ],
+  "summary": "Neural networks trained with gradient-based methods exhibit a strong simplicity bias: they learn simpler statistical features of their data before moving to more complex features. Previous analyses of this phenomenon have largely focused on settings with (quasi-)isotropic inputs. In this work, we study the simplicity bias from a Fourier perspective, which allows us to include two key features of natural images in the analysis: approximate translation-invariance and power-law spectra. We first show experimentally that simple neural networks trained on image classification tasks first rely on…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cond-mat.dis-nn",
+    "cond-mat.stat-mech",
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-05-16",
+  "updated": "2026-05-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

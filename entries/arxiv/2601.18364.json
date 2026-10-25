@@ -1,0 +1,21 @@
+{
+  "key": "2601.18364",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.18364",
+  "title": "Symplecticity-Preserving Prediction of Hamiltonian Dynamics by Generalized Kernel Interpolation",
+  "authors": [
+    "Robin Herkert",
+    "Tobias Ehring",
+    "Bernard Haasdonk"
+  ],
+  "summary": "In this work, a kernel-based surrogate for integrating Hamiltonian dynamics that is symplectic by construction and tailored to large prediction horizons is proposed. The method learns a scalar potential whose gradient enters a symplectic-Euler update, yielding a discrete flow map that exactly preserves the canonical symplectic structure. Training is formulated as a gradient Hermite--Birkhoff interpolation problem in a reproducing kernel Hilbert space, providing a systematic framework for existence, uniqueness, and error control. Algorithmically, the symplectic kernel predictor is combined…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-26",
+  "updated": "2026-01-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

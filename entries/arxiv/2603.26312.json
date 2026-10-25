@@ -1,0 +1,22 @@
+{
+  "key": "2603.26312",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.26312",
+  "title": "Rigidity of the structured singular value and applications",
+  "authors": [
+    "Sourav Pal",
+    "Nitin Tomar"
+  ],
+  "summary": "The structured singular value $μ_E$ for a linear subspace $E$ of $M_n(\\mathbb C)$ is defined by \\[ μ_E(A)=1 / \\inf\\{\\|X\\| \\ : \\ X \\in E, \\ \\det(I_n-AX)=0 \\} \\quad (A \\in M_n(\\mathbb{C})), \\] and $μ_E(A)=0$ if there is no $X \\in E$ with $\\det(I_n-AX)=0$. It is well-known that $μ_E(A)$ coincides with the spectral radius $r(A)$ when $E=\\{cI_n: c \\in \\mathbb C \\}$ and $μ_E(A)=\\|A\\|$ when $E=M_n(\\mathbb C)$, for all $A\\in M_n(\\mathbb C)$. Also, for any linear subspace $E$ satisfying $\\{cI_n: c \\in \\mathbb C \\} \\subseteq E \\subseteq M_n(\\mathbb C)$, we have $r(A)\\leq μ_E(A) \\leq \\|A\\|$. We prove…",
+  "domain": "math.FA",
+  "tags": [
+    "math.FA",
+    "math.CV",
+    "math.OA"
+  ],
+  "published": "2026-03-27",
+  "updated": "2026-03-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

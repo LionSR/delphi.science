@@ -1,0 +1,25 @@
+{
+  "key": "2603.20421",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20421",
+  "title": "Hawkeye: Reproducing GPU-Level Non-Determinism",
+  "authors": [
+    "Erez Badash",
+    "Dan Boneh",
+    "Ilan Komargodski",
+    "Megha Srivastava"
+  ],
+  "summary": "We present Hawkeye, a system for analyzing and reproducing GPU-level arithmetic operations. Using our framework, anyone can re-execute on a CPU the exact matrix multiplication operations underlying a machine learning model training or inference workflow that was executed on an NVIDIA GPU, without any precision loss. This is in stark contrast to prior approaches to verifiable machine learning, which either introduce significant computation overhead to the original model owner, or suffer from non-robustness and quality degradation. The main technical contribution of Hawkeye is a systematic…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "cs.AR",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-03-20",
+  "updated": "2026-05-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

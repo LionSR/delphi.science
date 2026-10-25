@@ -1,0 +1,21 @@
+{
+  "key": "2606.06268",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.06268",
+  "title": "Error Analysis of Tr-PINNs Algorithm for 2D Incompressible Navier-Stokes Equations with Non-Homogeneous Boundary Conditions",
+  "authors": [
+    "Dongjie Liu",
+    "Xuebo Li",
+    "Rong Yang"
+  ],
+  "summary": "Physics-informed neural networks (PINNs) have been widely applied to solve Navier-Stokes equations by enforcing outputs and gradients of deep models to satisfy target equations. However, conventional PINNs only constrain the boundary terms by means of the $L^2$-norm when addressing the equations with non-homogeneous boundary conditions. This single constraint strategy may cause inaccurate boundary simulation, further resulting in the decline of prediction accuracy. To resolve this critical issue, this paper proposes an improved physics-informed neural network by correcting the error of the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-04",
+  "updated": "2026-06-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

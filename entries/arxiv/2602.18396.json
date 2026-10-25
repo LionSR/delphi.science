@@ -1,0 +1,25 @@
+{
+  "key": "2602.18396",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.18396",
+  "title": "Communication-Efficient Byzantine-Robust Federated Conformal Prediction via Partial Sharing",
+  "authors": [
+    "Ehsan Lari",
+    "Reza Arablouei",
+    "Stefan Werner"
+  ],
+  "summary": "We propose PRISM-FCP (Partial shaRing and robust calIbration with Statistical Margins for Federated Conformal Prediction), a communication-efficient Byzantine-robust federated conformal prediction framework that uses partial model sharing to mitigate stochastic model-poisoning attacks during training and histogram-based filtering to mitigate adversarial calibration submissions. Existing robust FCP approaches primarily address adversarial behavior during calibration, leaving training-stage poisoning to separate robust-training mechanisms. PRISM-FCP instead considers the coupling between the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "eess.SP",
+    "math.PR",
+    "stat.AP",
+    "stat.ML"
+  ],
+  "published": "2026-02-20",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

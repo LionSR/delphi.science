@@ -1,0 +1,22 @@
+{
+  "key": "2609.01115",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.01115",
+  "title": "32-point DFT Approximations Based on Minimal Frobenius Error and DFT Symmetries",
+  "authors": [
+    "L. Andrade-Silva",
+    "W. A. S. Aleixo",
+    "R. J. Cintra"
+  ],
+  "summary": "This work introduces low-complexity, multiplierless approximations for the 32-point discrete Fourier transform. The proposed methods are obtained by minimizing the Frobenius error compared against the DFT matrix over a set of trivial multipliers. A row-wise, symmetry-constrained parameterization is employed to reduce the search space size, rendering the task computationally tractable. The resulting approximations could outperform the reference method in the literature according to energy-based error measurements. A sparse matrix factorization is provided for efficient computation; the…",
+  "domain": "eess.SP",
+  "tags": [
+    "eess.SP",
+    "math.NA"
+  ],
+  "published": "2026-09-01",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2610.17541",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.17541",
+  "title": "Convex-Analytic View of Query Selection for Safety Verification of Markov Decision Processes",
+  "authors": [
+    "Han Bao",
+    "Shinsaku Sakaue",
+    "Kazuki Watanabe"
+  ],
+  "summary": "Safety verification of a Markov decision process (MDP) asks whether the probabilities of reaching several failure states jointly lie in a convex safe region under every scheduler. Watanabe and Unno (2026) prove safety by refining an outer approximation of the failure probabilities, where each query bounds a nonnegative weighted sum of the probabilities. Their rule selects weights by the largest Euclidean violation. We present a unified framework to measure violation in an explicitly chosen error unit: directions are scored by the support-function gap between the outer approximation and the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI",
+    "cs.LO"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2601.05404",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.05404",
+  "title": "Fast Algorithms for Optimal Damping in Mechanical Systems",
+  "authors": [
+    "Qingna Li",
+    "Françoise Tisseur"
+  ],
+  "summary": "Optimal damping aims at determining a vector of damping coefficients $ν$ that maximizes the decay rate of a mechanical system's response. This problem can be formulated as the minimization of the trace of the solution of a Lyapunov equation whose coefficient matrix depends on $ν$. For physical relevance, the damping coefficients must be nonnegative and the resulting system must be asymptotically stable. We identify conditions under which the system is never stable or may lose stability for certain choices of $ν$. In the latter case, we propose replacing the constraint $ν\\ge 0$ with $ν\\ge d$,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-08",
+  "updated": "2026-01-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

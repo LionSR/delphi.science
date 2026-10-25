@@ -1,0 +1,20 @@
+{
+  "key": "2609.15023",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.15023",
+  "title": "From torpid to rapid mixing: group averaging for a weakly interacting Ising star",
+  "authors": [
+    "Michael C. H. Choi"
+  ],
+  "summary": "We study lazy single-site Metropolis dynamics $P_β$ at inverse temperature $β\\geq 0$ on $\\{-1,+1\\}^d$ for an Ising star with additional signed interactions among the leaves. If the absolute row sums of the leaf-interaction matrix are at most $κ\\le1/2$, the worst-case total-variation mixing time of $P_β$ is at least of order $d\\exp\\{cβ(d-1)\\}$ for $β\\ge1$, with universal $c>0$. Averaging over global spin reversal reduces the mixing time to $\\mathcal O(d^2(1+β))$ for both $GP_βG$ and $(P_β+G)/2$, where $G$ is the Gibbs kernel induced by the partition of the state space into spin-reversal…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "stat.CO"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2604.05607",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.05607",
+  "title": "Forbidding Exactly One Hamming Distance",
+  "authors": [
+    "József Balogh",
+    "Ce Chen",
+    "Bowen Li"
+  ],
+  "summary": "Addressing questions raised in recent papers, we study the $r$-distance graph $H_r(n)$ on the Boolean cube $\\{0,1\\}^n$, where two vertices are adjacent if their Hamming distance is exactly $r$. For fixed integers $s \\ge 2$ and even $r \\ge 2$, we determine the asymptotic order of the $s$-independence number $α_s(H_r(n))$, showing that \\[ α_s\\left(H_r(n)\\right)=Θ\\left(\\frac{2^n}{n^{r/2}}\\right). \\] The upper bound is derived via a reduction to extremal problems for sunflower-free set systems, while the lower bound is obtained using algebraic constructions based on BCH codes and constant-weight…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-04-07",
+  "updated": "2026-04-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

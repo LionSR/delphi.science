@@ -1,0 +1,23 @@
+{
+  "key": "2607.03431",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.03431",
+  "title": "Pointwise Error Estimates for Numerical Physics-Informed Neural Networks",
+  "authors": [
+    "Nivar Anwer",
+    "Marien Chenaud",
+    "José Alves",
+    "Frédéric Magoulès"
+  ],
+  "summary": "Physics-informed neural networks are often evaluated by residual losses sampled at finitely many points, which do not by themselves certify pointwise values of a partial differential equation solution. In this work, deterministic pointwise error intervals are developed for mesh-based, piecewise-linear numerical physics-informed neural networks. The proposed error estimation is given for a compatible field, which is the finite-element reconstruction of an admissible prediction on a mesh. The certifying residual is then obtained by applying the finite-dimensional numerical system to this…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math-ph"
+  ],
+  "published": "2026-07-03",
+  "updated": "2026-07-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2601.19958",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.19958",
+  "title": "Deep Neural Networks as Iterated Function Systems and a Generalization Bound",
+  "authors": [
+    "Jonathan Vacher"
+  ],
+  "summary": "Deep neural networks (DNNs) achieve remarkable performance on a wide range of tasks, yet their mathematical analysis remains fragmented: stability and generalization are typically studied in disparate frameworks and on a case-by-case basis. Architecturally, DNNs rely on the recursive application of parametrized functions, a mechanism that can be unstable and difficult to train, making stability a primary concern. Even when training succeeds, there are few rigorous results on how well such models generalize beyond the observed data, especially in the generative setting. In this work, we…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-01-27",
+  "updated": "2026-01-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

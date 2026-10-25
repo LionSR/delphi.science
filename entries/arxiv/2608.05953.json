@@ -1,0 +1,21 @@
+{
+  "key": "2608.05953",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.05953",
+  "title": "Stabilizer Design for Policy Iteration in Stochastic Linear Quadratic Control: A Spectrum-Assignment Approach",
+  "authors": [
+    "Xinyu Cao",
+    "Bing-Chang Wang",
+    "Ying Cao"
+  ],
+  "summary": "Policy iteration (PI) is an important reinforcement learning tool for solving optimal control problems which includes an initialization stage, i.e., the search for an initial stabilizing controller. However, the initialization stage typically relies on complete model information, thereby imposing substantial constraints on the initialization of model-free PI. For stochastic systems with multiplicative noise dependent on state and control, the stability is not ensured by Hurwitz conditions as in the deterministic case, but rather by a Lyapunov-type inequality that incorporates both drift and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-06",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

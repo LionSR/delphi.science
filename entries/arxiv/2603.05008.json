@@ -1,0 +1,22 @@
+{
+  "key": "2603.05008",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.05008",
+  "title": "Nitsche methods for constrained problems in mechanics",
+  "authors": [
+    "Tom Gustafsson",
+    "Antti Hannukainen",
+    "Vili Kohonen",
+    "Juha Videman"
+  ],
+  "summary": "We present guidelines for deriving new Nitsche Finite Element Methods to enforce equality and inequality constraints that act on the value of the unknown mechanical quantity. We first formulate the problem as a stabilized finite element method for the saddle point formulation where a Lagrange multiplier enforces the underlying constraint. The Nitsche method is then presented in a general minimization form, suitable for adding constraints to nonlinear finite element methods and allowing straightforward computational implementation with automatic differentation. This extends the method beyond…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-05",
+  "updated": "2026-04-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

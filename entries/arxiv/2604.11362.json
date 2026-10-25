@@ -1,0 +1,23 @@
+{
+  "key": "2604.11362",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.11362",
+  "title": "How to reconstruct (anonymously) a secret cellular automaton",
+  "authors": [
+    "Luca Mariot",
+    "Federico Mazzone",
+    "Luca Manzoni",
+    "Alberto Leporati"
+  ],
+  "summary": "We consider threshold secret sharing schemes based on cellular automata (CA) that allows for anonymous reconstruction, meaning that the secret can be recovered only as a function of the shares, without knowing the participants' identities. To this end, we revisit the basic characterization of $(2,n)$ threshold schemes based on CA in terms of Mutually Orthogonal Latin Squares (MOLS), and redefine the secret space as the MOLS family itself, showing that the new resulting scheme enables anonymous reconstruction of secret CA rules. Finally, we discuss the trade-off between the number of secret…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "math.CO"
+  ],
+  "published": "2026-04-13",
+  "updated": "2026-04-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2609.03802",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.03802",
+  "title": "Quantum Query Complexity of Finding a Tarski Fixed Point on a High-Dimensional Grid",
+  "authors": [
+    "Tongyang Li",
+    "Weiran Ma",
+    "Ziyi Yang",
+    "Xingyu Zhao"
+  ],
+  "summary": "The Knaster-Tarski fixed-point theorem states that every monotone function over a complete lattice has a fixed point. Beyond its fundamental role in order theory, the theorem and its algorithmic variants have found broad applications in areas such as economics, game theory, and programming languages. While the query complexity of finding a Tarski fixed point has been extensively studied in classical models, comparatively little is known in the quantum setting. We prove an $Ω(k\\log n)$ quantum query lower bound for finding a fixed point of a monotone function on $[n]^k$, using the nonnegative…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.DS"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

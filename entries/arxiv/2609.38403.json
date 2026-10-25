@@ -1,0 +1,23 @@
+{
+  "key": "2609.38403",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38403",
+  "title": "Advantage of Sample Complexity in Quantum PAC Learning Requires Inverse Access to State-Preparation Unitaries",
+  "authors": [
+    "Natsuto Isogai",
+    "Satoshi Yoshida",
+    "Mio Murao"
+  ],
+  "summary": "Whether quantum computation can reduce the amount of data sampled from an unknown probability distribution required to learn a prediction rule is a fundamental question in quantum machine learning. Quantum PAC learning studies this question using quantum data as a quantum state whose squared amplitudes encode the unknown distribution from which classical learning data are sampled. With only copies of such quantum data, the optimal worst-case sample complexity asymptotically matches that of classical PAC learning. In contrast, access to both a state-preparation unitary for this state and its…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

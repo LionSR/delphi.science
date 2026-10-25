@@ -1,0 +1,21 @@
+{
+  "key": "2601.20007",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.20007",
+  "title": "Alternating ZX Circuit Extraction for Hardware-Adaptive Compilation",
+  "authors": [
+    "Ludwig Schmid",
+    "Korbinian Staudacher",
+    "Robert Wille"
+  ],
+  "summary": "We present a novel quantum circuit extraction scheme that tightly integrates graph-like ZX diagrams with hardware-adaptive routing. The method utilizes the degrees of freedom during the conversion from a ZX diagram to a quantum circuit (extraction). It alternates between generating multiple extraction options and evaluating them based on hardware constraints, allowing the routing algorithm to inform and guide the extraction process. This feedback loop extends existing graph-like ZX extraction and supports modular integration of different extraction algorithms, routing strategies, and target…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-27",
+  "updated": "2026-01-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

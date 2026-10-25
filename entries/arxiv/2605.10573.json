@@ -1,0 +1,23 @@
+{
+  "key": "2605.10573",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.10573",
+  "title": "A Riemannian quasi-Newton algorithm for optimization with Euclidean bounds",
+  "authors": [
+    "Mateusz Baran",
+    "Ronny Bergmann",
+    "Patryk Przybysz"
+  ],
+  "summary": "We propose a Riemannian limited-memory BFGS method for optimization problems with Euclidean bounds. The method combines a limited-memory quasi-Newton update in the tangent space with a Riemannian adaptation of the generalized Cauchy point strategy from classical L-BFGS-B, enabling efficient handling of Euclidean bounds while exploiting the geometric structure of the optimization domain. This setting is important in several applications, including covariance matrix estimation with bounded variance, neuroimaging, EEG signal classification, and other signal processing or computer-vision tasks…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.MS",
+    "math.DG"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

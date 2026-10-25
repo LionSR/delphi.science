@@ -1,0 +1,20 @@
+{
+  "key": "2605.10811",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.10811",
+  "title": "Switching-Geometry Analysis of Deflated Q-Value Iteration",
+  "authors": [
+    "Donghwan Lee"
+  ],
+  "summary": "This paper develops a joint spectral radius (JSR) framework for analyzing rank-one deflated Q-value iteration (Q-VI) in discounted Markov decision process control. Focusing on an all-ones residual correction, we interpret the resulting algorithm through the geometry of switching systems and, to the best of our knowledge, give the first JSR-based convergence analysis of deflated Q-VI for policy optimization problems. Our analysis reveals that the standard Q-VI switching system model has JSR exactly the discount factor $γ\\in (0,1)$, since all admissible subsystems share the all-ones vector as…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

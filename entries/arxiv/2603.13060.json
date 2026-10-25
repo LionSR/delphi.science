@@ -1,0 +1,23 @@
+{
+  "key": "2603.13060",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.13060",
+  "title": "Noise mitigation of quantum observables via learning from Hamiltonian symmetry decays",
+  "authors": [
+    "Javier Oliva del Moral",
+    "Olatz Sanz Larrarte",
+    "Joana Fraxanet",
+    "Dmytro Mishagli",
+    "Josu Etxezarreta Martinez"
+  ],
+  "summary": "We present a new quantum error mitigation technique (QEM), called GUiding Extrapolations from Symmetry decayS (GUESS), which exploits Hamiltonian symmetries to improve accuracy of noisy quantum computations. This method is explicitly designed for quantum algorithms that estimate expectation values of observables and consists in learning the extrapolation coefficients from a symmetry observable of the system to then estimate the value of a target observable. Furthermore, we propose a Hamiltonian impurity technique to enforce symmetries allowing the mitigation of local observables of interest.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-13",
+  "updated": "2026-03-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

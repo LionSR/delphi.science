@@ -1,0 +1,21 @@
+{
+  "key": "2609.34121",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.34121",
+  "title": "Online Stochastic Allocation with Increasing Returns",
+  "authors": [
+    "Shuo Sun",
+    "Yunduan Lin"
+  ],
+  "summary": "Online resource allocation is a fundamental problem in revenue management, sponsored search, and platform operations. Most prior work assumes nonincreasing assignment rewards, capturing diminishing returns. We instead study increasing returns, where assigning more customers to the same product can unlock larger value through scale, visibility, or network effects. We consider capacity-limited products assigned to sequentially arriving customers, where the reward of each product depends on the total number of customers assigned to it. We focus on full compatibility, where every product can be…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.OC"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

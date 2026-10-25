@@ -1,0 +1,25 @@
+{
+  "key": "2606.28059",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28059",
+  "title": "Fast and Feasible: Permutation-based Constrained Reranking for Revenue Maximization",
+  "authors": [
+    "Svetlana Shirokovskikh",
+    "Anastasiia Soboleva",
+    "Ekaterina Solodneva",
+    "Aleksandr Katrutsa",
+    "Roman Loginov",
+    "Egor Samosvat"
+  ],
+  "summary": "Search and recommender systems have produced highly relevant search results. A natural next step in the development of such systems in e-commerce is to rerank these results to increase the platform's revenue from paid promotion products. However, maximizing revenue alone may degrade the user experience by reducing relevance or increasing fraud risk. To avoid this, we state the reranking problem as an integer linear program ($ILP$) that maximizes revenue subject to per-query constraints on other metrics, e.g., relevance. Since solving $ILP$ exactly for every query is slow for deployment to…",
+  "domain": "cs.IR",
+  "tags": [
+    "cs.IR",
+    "math.OC"
+  ],
+  "published": "2026-06-26",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2606.18463",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.18463",
+  "title": "Mixed-Precision Communication-Avoiding SGD for Generalized Linear Models on GPUs",
+  "authors": [
+    "Aditya Devarakonda",
+    "Irene Simó Muñoz",
+    "Giulia Guidi"
+  ],
+  "summary": "Distributed stochastic gradient descent (SGD) is limited by communication rather than computation, since each iteration requires an AllReduce across processes. Communication-avoiding SGD (CA-SGD) amortizes communication over $s$ iterations by replacing $s$ consecutive AllReduces with a single AllReduce of an $sb\\times sb$ Gram matrix, trading more computation and bandwidth for fewer synchronization points. Modern GPUs with matrix hardware and reduced-precision formats offset this by accelerating the Gram GEMM and shrinking BF16 traffic. We study mixed-precision CA-SGD for generalized linear…",
+  "domain": "cs.DC",
+  "tags": [
+    "cs.DC",
+    "cs.LG",
+    "math.NA",
+    "stat.ML"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2606.28236",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28236",
+  "title": "Qudit extension of parameterized IQP circuits: A generative quantum machine learning approach to integer data",
+  "authors": [
+    "Robert J. Banks",
+    "Arianna Crippa",
+    "Matthias Traube",
+    "Josua Unger",
+    "Christian Ertler",
+    "Wolfgang Lechner"
+  ],
+  "summary": "Parameterized Instantaneous Quantum Polynomial (IQP) circuits have proven useful in quantum generative learning models, particularly for binary distributions. However, when applied to non-binary datasets, they exhibit notable limitations: mapping integer values into qubit-compatible binary representations often destroys the original metric structure of the data. In this paper we aim to extend them to a qudits formulation operating on an integer mapping of the data. The IQP quantum circuit is adapted to encode each integer valued pixel into a bit-string of fixed length and quantum gates are…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "hep-ex"
+  ],
+  "published": "2026-06-26",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

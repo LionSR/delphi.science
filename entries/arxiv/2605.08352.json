@@ -1,0 +1,23 @@
+{
+  "key": "2605.08352",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.08352",
+  "title": "Convergence Analysis of Newton's Method for Neural Networks in the Overparameterized Limit",
+  "authors": [
+    "Konstantin Riedl",
+    "Konstantinos Spiliopoulos",
+    "Justin Sirignano"
+  ],
+  "summary": "A convergence analysis is developed for the regularized Newton method for training neural networks (NNs) in the overparameterized limit. As the number of hidden units tends to infinity, the NN training dynamics converge in probability to the solution of a deterministic limit equation involving a \"Newton neural tangent kernel\" (NNTK). Explicit rates characterizing this convergence are provided and, in the infinite-width limit, we prove that the NN converges exponentially fast to the target data (i.e., a global minimizer with zero loss). We show that this convergence is uniform across the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-05-08",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

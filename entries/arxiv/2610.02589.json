@@ -1,0 +1,20 @@
+{
+  "key": "2610.02589",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02589",
+  "title": "Static Output Feedback Control for Multi-Agent Systems Using Nash Equilibrium",
+  "authors": [
+    "Paul Serna-Torre",
+    "Patricia Hidalgo-Gonzalez"
+  ],
+  "summary": "This work proposes a semidefinite programming (SDP) model that synthesizes static output control feedback for networked linear time-invariant multi-agent systems (MAS). We theoretically prove that the output feedback control of MAS can be constructed using the Nash equilibrium previously derived for state-feedback control. The Nash equilibrium considers that agents seek to minimize their individual cost functions subject to the system dynamics of the MAS. The resulting control from the pro- posed SDP model ensures the stability of the closed-loop system and dissipativity when a disturbance…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

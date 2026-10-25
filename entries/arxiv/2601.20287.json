@@ -1,0 +1,20 @@
+{
+  "key": "2601.20287",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.20287",
+  "title": "Fingerprints of classical memory in quantum hysteresis",
+  "authors": [
+    "Francesco Caravelli"
+  ],
+  "summary": "We present a simple framework for classical and quantum ``memory'' in which the Hamiltonian at time $t$ depends on past values of a control Hamiltonian through a causal kernel. This structure naturally describes finite-bandwidth or filtered control channels and provides a clean way to distinguish between memory in the control and genuine non-Markovian dynamics of the state. We focus on models where $H(t)=H_0+\\int_{-\\infty}^{t}K(t-s)\\,H_1(s)\\,ds$, and illustrate the framework on single-qubit examples such as $H(t)=σ_z+Φ(t)σ_x$ with $Φ(t)=\\int_{-\\infty}^{t}K(t-s)\\,u(s)\\,ds$. We derive basic…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.other"
+  ],
+  "published": "2026-01-28",
+  "updated": "2026-01-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

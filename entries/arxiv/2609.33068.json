@@ -1,0 +1,19 @@
+{
+  "key": "2609.33068",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.33068",
+  "title": "Counting Reachable Positions in a Simplified Model of Connect Four",
+  "authors": [
+    "Alistair Folster"
+  ],
+  "summary": "By eliminating the win condition in the game of Connect Four and extending the board to infinite height, a rich state space of positions is obtained. We investigate the number of positions reachable on an $n$-column board after $k$ color-alternating moves. For fixed $k$ we demonstrate polynomiality, derive a partial formula for the polynomial coefficients, and precisely characterize the asymptotic behavior as $n \\to \\infty$. We then turn our attention to the fixed-$n$ case and show that, under a natural addition operation, positions reachable in an even number of moves form a monoid with a…",
+  "domain": "math.GM",
+  "tags": [
+    "math.GM"
+  ],
+  "published": "2026-09-27",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

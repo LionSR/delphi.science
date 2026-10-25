@@ -1,0 +1,25 @@
+{
+  "key": "2601.20738",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.20738",
+  "title": "SA-PEF: Step-Ahead Partial Error Feedback for Efficient Federated Learning",
+  "authors": [
+    "Dawit Kiros Redie",
+    "Reza Arablouei",
+    "Stefan Werner"
+  ],
+  "summary": "Biased gradient compression with error feedback (EF) reduces communication in federated learning (FL), but under non-IID data, the residual error can decay slowly, causing gradient mismatch and stalled progress in the early rounds. We propose step-ahead partial error feedback (SA-PEF), which integrates step-ahead (SA) correction with partial error feedback (PEF). SA-PEF recovers EF when the step-ahead coefficient $α=0$ and step-ahead EF (SAEF) when $α=1$. For non-convex objectives and $δ$-contractive compressors, we establish a second-moment bound and a residual recursion that guarantee…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.DC",
+    "eess.SP",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-01-28",
+  "updated": "2026-01-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,26 @@
+{
+  "key": "2608.08662",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.08662",
+  "title": "Kernel Methods for Refined Prophet Inequalities",
+  "authors": [
+    "Patrick Loiseau",
+    "Mathieu Molina",
+    "Vianney Perchet",
+    "Sebastian Perez-Salazar",
+    "Victor Verdugo"
+  ],
+  "summary": "The single-selection prophet inequality is a canonical Bayesian online selection problem in which independent nonnegative values arrive sequentially and the decision-maker must irrevocably select at most one. Classical single-threshold guarantees are tight in the worst case, but the hard instances that prove tightness are highly irregular: the prophet's advantage is driven by rare, very large realizations of the maximum. We refine this worst-case picture by imposing a bound on the relative variance of the prophet's value, $\\mathrm{Var}(\\max_{i\\in[n]}X_i)/\\mathbb E[\\max_{i\\in[n]}X_i]^2$. This…",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "cs.DS",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-08-09",
+  "updated": "2026-08-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

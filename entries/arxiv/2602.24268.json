@@ -1,0 +1,23 @@
+{
+  "key": "2602.24268",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.24268",
+  "title": "Virtual Constraint for a Quadrotor UAV Enforcing a Body-Axis Pointing Direction",
+  "authors": [
+    "Alexandre Anahory Simoes",
+    "Leonardo Colombo",
+    "Juan Giribet",
+    "Efstratios Stratoglou"
+  ],
+  "summary": "We propose a geometric control framework on $SE(3)$ for quadrotors that enforces pointing-driven missions without completing a full attitude reference. The mission is encoded through virtual constraints defining a task manifold and an associated set of admissible velocities, and invariance is achieved by a feedback law obtained from a linear system in selected inputs. Under a transversality condition with the effective actuation distribution, the invariance-enforcing input is uniquely defined, yielding a constructive control law and, for relevant tasks, closed-form expressions. We further…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-02-27",
+  "updated": "2026-02-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

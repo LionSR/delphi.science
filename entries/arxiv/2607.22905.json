@@ -1,0 +1,23 @@
+{
+  "key": "2607.22905",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.22905",
+  "title": "AlgMortar: a fully algebraic multiscale mortar preconditioner",
+  "authors": [
+    "Luan F. Santos",
+    "Fabricio S. Sousa",
+    "Roberto F. Ausas",
+    "Rafael T. Guiraldello",
+    "Felipe Pereira"
+  ],
+  "summary": "The solution of large-scale symmetric positive definite (SPD) linear systems arising from discretizations of second-order elliptic equations is challenging, especially in applications with highly heterogeneous coefficients, such as flow in porous media, which can lead to severely ill-conditioned systems. In this context, multiscale methods have recently been used to accelerate Krylov subspace methods, owing to their favorable parallel scalability. In this work, we present AlgMortar, a fully algebraic realization of the Multiscale Mortar Mixed Finite Element Method (MMMFEM). The method uses…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-24",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2608.15561",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.15561",
+  "title": "Sharp asymptotics for triangle independence and covering numbers",
+  "authors": [
+    "Zhen Liu",
+    "Qinghou Zeng"
+  ],
+  "summary": "For a graph $G$, let $α_1(G)$ be the maximum size of an edge set containing at most one edge from every triangle, and let $τ_1(G)$ be the minimum size of an edge set meeting every triangle. Erdős, Gallai, and Tuza proved that $α_1(G)+τ_1(G)=Ω(m^{2/3})$ for every $m$-edge graph and asked for the optimal asymptotic constant. We prove $$\\lim_{m\\to\\infty} \\min_{G,\\,|E(G)|=m} \\frac{α_1(G) + τ_1(G)}{m^{2/3}} = \\frac{3}{2},$$ thereby establishing that the sharp constant is $3/2$ and solving the problem.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-08-16",
+  "updated": "2026-08-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

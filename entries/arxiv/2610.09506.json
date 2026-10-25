@@ -1,0 +1,21 @@
+{
+  "key": "2610.09506",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.09506",
+  "title": "Mixing Times of Switch Chains via High-Dimensional Expansion",
+  "authors": [
+    "Sawyer Jack Robertson"
+  ],
+  "summary": "The switch chain is a Markov chain defined on the set of labelled realizations of a given graphical degree sequence. At each step, a pair of vertex-disjoint edges is chosen at random and the process attempts to replace them with a uniformly chosen perfect matching of the same four vertices, rejecting any proposal that would create a multiple edge. The resulting process is reversible with respect to the uniform distribution on all realizations. We investigate the mixing time of this chain by viewing realizations as the facets of a simplicial complex and studying a variant of the original…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

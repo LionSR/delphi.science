@@ -1,0 +1,27 @@
+{
+  "key": "2608.19868",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19868",
+  "title": "Resource-Efficient Bio-Molecular Docking on a NISQ-era Digital Quantum Computer",
+  "authors": [
+    "Tianqi Chen",
+    "Adrian M. Mak",
+    "Jianguo Li",
+    "Jian Feng Kong",
+    "Chandra Verma",
+    "Sebastian Maurer-Stroh"
+  ],
+  "summary": "Molecular docking is a vital computational task in drug discovery, wherein the objective is to efficiently identify optimal binding poses between a ligand and a target receptor protein. Due to the combinatorial explosion of possible binding configurations, docking of large and flexible molecules remains a computationally intensive problem, especially at scale. Early studies have revealed that the molecular docking can be re-cast as a maximum vertex-weighted clique problem (MVWCP) problem on a compatibility graph to be solved classically. In this work, we proposed a hybrid quantum-classical…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.soft",
+    "physics.chem-ph",
+    "q-bio.BM"
+  ],
+  "published": "2026-08-20",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

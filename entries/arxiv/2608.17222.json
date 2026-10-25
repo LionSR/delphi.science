@@ -1,0 +1,22 @@
+{
+  "key": "2608.17222",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17222",
+  "title": "Feedback approaches for set-point stabilization of interacting particle systems",
+  "authors": [
+    "Daniel Jannik Happ",
+    "Birgit Jacob",
+    "Claudia Totzeck"
+  ],
+  "summary": "We explore the problem of asymptotically stabilizing a class of interacting particle systems to a prescribed particle configuration with zero velocity. The class of interacting particle systems is motivated by the Cucker-Smale model on the mean-field level. Rather than designing a feedback by manually solving an IDA-PBC matching equation, we derive a feedback using an instantaneous rolling horizon control algorithm. We show that this feedback preserves the port-Hamiltonian structure of the interacting particle system and therefore allows for an interpretation in the IDA-PBC framework.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.DS"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

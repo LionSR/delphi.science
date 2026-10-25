@@ -1,0 +1,21 @@
+{
+  "key": "2609.38915",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38915",
+  "title": "Semi-Quantum Cryptography with Certified Deletion",
+  "authors": [
+    "Yael Tauman Kalai",
+    "Justin Raizes"
+  ],
+  "summary": "Certified deletion allows a client to upload encrypted data to a server as a quantum state, then later request that the server delete their data and detect whether the server complies. If verification passes, then the data on the server will remain hidden even if the decryption key is later leaked. In publicly verifiable certified deletion, the verification key is published so that anyone may check for deletion compliance. In this work, we give a general compiler to publicly verifiable certified deletion that allows the client to initially upload the *quantum* ciphertext using purely…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "quant-ph"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

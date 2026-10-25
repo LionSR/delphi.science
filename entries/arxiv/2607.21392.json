@@ -1,0 +1,19 @@
+{
+  "key": "2607.21392",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.21392",
+  "title": "Gaussian Convexity Principles for Sharp Moderate Deviations of Gaussian Maxima and Critical SK Free Energy Variance",
+  "authors": [
+    "Yiming Chen"
+  ],
+  "summary": "In this paper, we establish a moderate deviation bound for Gaussian maxima and the variance asymptotics of the Sherrington-Kirkpatrick free energy at criticality based on Gaussian convexity. First, let $(X_1,\\ldots,X_N)$ be centered Gaussian vector with $\\operatorname{Var}(X_i)\\leq 1$. Suppose that, for fixed $α\\in(0,\\sqrt 2)$ and $κ>0$, $\\mathbb{E}\\max_iX_i\\geqα\\sqrt{\\log N}$ and $\\mathbb{E}\\max_iX_i+κ\\sqrt{\\log N}\\leq\\sqrt{2\\log N}$. We prove that $$ \\mathbb{P}\\left(\\max_iX_i\\geq \\mathbb{E}\\max_iX_i+κ\\sqrt{\\log N}\\right) \\leq N^{-κ^2/(2-α^2)+o(1)}. $$ This answers a question of Ding, Eldan…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-07-23",
+  "updated": "2026-07-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

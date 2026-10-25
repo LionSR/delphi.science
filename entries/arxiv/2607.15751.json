@@ -1,0 +1,22 @@
+{
+  "key": "2607.15751",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.15751",
+  "title": "Trainable Spline Representations for Physics-Informed Learning",
+  "authors": [
+    "Giovanni Canali",
+    "Nicola Demo",
+    "Gianluigi Rozza"
+  ],
+  "summary": "This work introduces Physics-Informed Splines (PI-Splines), a structured spline-based architecture for physics-informed learning. Instead of representing the solution of a differential equation with a neural network, PI-Splines directly parametrize the unknown field through a tensor-product B-spline expansion with trainable control coefficients. This formulation preserves the residual-based training paradigm of Physics-Informed Neural Networks while providing compact support, explicit smoothness control, analytical derivatives, and a direct geometric interpretation of the trainable…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-07-17",
+  "updated": "2026-07-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

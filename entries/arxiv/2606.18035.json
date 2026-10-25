@@ -1,0 +1,19 @@
+{
+  "key": "2606.18035",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.18035",
+  "title": "Approximately Decoding the Colour Code",
+  "authors": [
+    "Mark Walters"
+  ],
+  "summary": "Recently we showed that minimum weight decoding in the (6.6.6 planar) colour code is NP-hard. However, it remained an open question as to whether it was possible to approximate the minimum weight decoding arbitrarily closely in polynomial time. In this paper we prove that it is possible: for any $\\varepsilon>0$ there is an polynomial time algorithm that, given a syndrome, can find an error-set generating that syndrome whose weight is at most $1+\\varepsilon$ times the weight of the minimum weight decoding. As a consequence we see that, for any $\\varepsilon>0$, there is a polynomial time…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

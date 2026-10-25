@@ -1,0 +1,21 @@
+{
+  "key": "2606.06785",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.06785",
+  "title": "Empirical Transfer Operators and Finite-Sample Change Detection for Noisy Expanding Interval Maps",
+  "authors": [
+    "Aparna Rajput"
+  ],
+  "summary": "We study finite-sample change detection for one-dimensional noisy dynamical systems using partition-based empirical approximations of stationary behaviour. Given observations from an interval-valued process, we partition the state space, estimate a finite transition matrix from observed transitions between partition elements, and apply a small Doeblin-type regularisation to ensure a unique stationary distribution. From an initial reference segment, we compute a baseline empirical stationary distribution \\(\\widehatπ_{0,ρ}\\). For each later sliding window, we compute \\(\\widehatπ_{t,ρ}\\) and…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.DS"
+  ],
+  "published": "2026-06-05",
+  "updated": "2026-06-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

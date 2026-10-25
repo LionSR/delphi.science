@@ -1,0 +1,20 @@
+{
+  "key": "2606.25643",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.25643",
+  "title": "An economic cascadic tensor multigrid method for solving high dimensional elliptic linear partial differential problems",
+  "authors": [
+    "Jingyu Huang",
+    "Chenliang Li"
+  ],
+  "summary": "In this paper, based on the tensor form, we propose a class of economic cascadic tensor multigrid method(ECTMG) for solving high dimensional elliptic linear partial differential problems. Compared with traditional methods, the new method not only reduces the storage space but also lowers the computational complexity from $\\mathcal{O}(n^{3})$ to $\\mathcal{O}(n^{2})$. We analyze the convergence rate of the conjugate gradient method which is based on the tensor form($\\mathrm{CG}\\_\\mathrm{BTF}$), and then provide the convergence analysis for the new method. Finally, the effectiveness of the new…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-24",
+  "updated": "2026-06-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

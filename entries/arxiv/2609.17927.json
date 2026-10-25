@@ -1,0 +1,24 @@
+{
+  "key": "2609.17927",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.17927",
+  "title": "Day-ahead Coordination of Virtual Power Plants within Active Distribution Networks using Deterministic Bi-Level Optimization",
+  "authors": [
+    "Laura M. Barajas-Arguello",
+    "Rafael A. Núñez-Rodríguez",
+    "Daniel Gebbran",
+    "Clodomiro Unsihuay-Vila"
+  ],
+  "summary": "This paper proposes a deterministic bilevel optimization framework for the coordinated operation of Virtual Power Plants (VPPs) embedded in an active distribution network. The Distribution System Operator (DSO) acts as the upper-level leader, minimizing a weighted combination of expenditure, active losses and voltage deviation subject to nonlinear AC power flow constraints, while each VPP operates as a lower-level follower that maximizes its profit under the uniform price signal issued by the DSO. Unlike most existing formulations, which linearize the lower-level subproblem to obtain a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.CE",
+    "eess.SY"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

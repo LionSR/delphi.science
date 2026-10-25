@@ -1,0 +1,23 @@
+{
+  "key": "2610.28999",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.28999",
+  "title": "Optimal Rényi and Logarithmic Additive Functional Entropy Estimation",
+  "authors": [
+    "Arman Adibi",
+    "Piotr Krysta"
+  ],
+  "summary": "We characterize the minimax sample complexity of estimating Rényi entropy from independent samples on an alphabet of size at most $k$, when the known order $α>1$ may vary with $k$. For every fixed additive accuracy $\\varepsilon\\in(0,1/2)$ and success probability $2/3$, we prove matching bounds with constants independent of $k$ and $α$. For $1 0$ for $x>0$, and $f(x)\\sim ax^r$ at zero, with $a>0$ and $r>1$, estimating $-β^{-1}\\log\\sum_i f(p_i)$ at fixed accuracy, for fixed $β>0$, has sample complexity $Θ(k^{1-1/r})$ for integer $r$ and $Θ(k/\\log k)$ otherwise. A replication reduction…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "cs.CC",
+    "eess.SP",
+    "math.ST"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

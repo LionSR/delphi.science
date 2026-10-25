@@ -1,0 +1,39 @@
+{
+  "key": "2609.00149",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2609.00149v1",
+  "pdf": "https://hexagonmath.org/pdf/2609.00149v1",
+  "title": "Deferred Acceptance in Lean for Finite Strict Preference Markets",
+  "authors": [
+    "Arthur",
+    "David Barros Hulak",
+    "Ruy J. G. B. de Queiroz"
+  ],
+  "summary": "We describe a Lean 4 development of men-proposing deferred acceptance for finite one-to-one markets with complete strict preferences and optional partners. The two sides may have different cardinalities; the principal theorems assume a nonempty receiving side. A proposal-set measure proves termination of a specified, classically chosen run. Reachability invariants establish consistency of the resulting partner maps, stability, and the fact that a rejected proposal cannot be a stable-achievable partnership. The public optimality theorem is conditional on a man receiving a partner; an internal…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.LO",
+    "msc:91B68",
+    "msc:68V20",
+    "Gale-Shapley",
+    "Lean 4",
+    "deferred acceptance",
+    "formalization",
+    "stable matching"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "version": 1,
+  "ai_models": [
+    "Codex",
+    "Codex"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

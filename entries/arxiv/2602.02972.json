@@ -1,0 +1,27 @@
+{
+  "key": "2602.02972",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.02972",
+  "title": "Learning Fast Monomial Orders for Gröbner Basis Computations",
+  "authors": [
+    "R. Caleb Bunch",
+    "Alperen A. Ergür",
+    "Melika Golestani",
+    "Jessie Tong",
+    "Malia Walewski",
+    "Yunus E. Zeytuncu"
+  ],
+  "summary": "The efficiency of Gröbner basis computation, the standard engine for solving systems of polynomial equations, depends on the choice of monomial ordering. Despite a near-continuum of possible monomial orders, most implementations rely on static heuristics such as GrevLex, guided primarily by expert intuition. We address this gap by casting the selection of monomial orderings as a reinforcement learning problem over the space of admissible orderings. Our approach leverages domain-informed reward signals that accurately reflect the computational cost of Gröbner basis computations and admits…",
+  "domain": "cs.SC",
+  "tags": [
+    "cs.SC",
+    "cs.LG",
+    "math.AC",
+    "math.AG"
+  ],
+  "published": "2026-02-03",
+  "updated": "2026-08-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

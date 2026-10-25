@@ -1,0 +1,21 @@
+{
+  "key": "2610.26509",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.26509",
+  "title": "First-Order Primal-Dual Repairs for Scalable Branch and Bound",
+  "authors": [
+    "Francesco Pivi",
+    "Jiachang Liu",
+    "Andrea Lodi"
+  ],
+  "summary": "Mixed-integer programs have found applications in many real-world problems but remain difficult to solve at scale. To improve scalability, there has been increasing interest in incorporating first-order methods as subroutines for solving node relaxations, with success primarily on problems involving specific types of constraints. However, when more general constraints are considered, first-order methods cannot be directly applied because, at finite iterations, they typically produce infeasible primal and dual solutions, preventing their direct integration into branch-and-bound. To overcome…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

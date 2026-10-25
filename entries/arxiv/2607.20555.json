@@ -1,0 +1,23 @@
+{
+  "key": "2607.20555",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.20555",
+  "title": "Double-Scoring: Reliable Extraction of Strong Lottery Tickets",
+  "authors": [
+    "Bryce A. Christopherson",
+    "Jack Baretz",
+    "Darian Colgrove",
+    "Salah Dandan"
+  ],
+  "summary": "The lottery ticket hypothesis proposes that large random neural networks contain sparse subnetworks that can match the performance of dense models after comparable training. A stronger version asserts that sufficiently overparameterized random networks contain subnetworks that are already accurate before any weight training. Existing theory establishes that such strong lottery tickets exist, but reliable extraction remains difficult. We revisit edge-popup, a frozen-weight score-training method for extracting strong tickets, and identify layerwise sparsity selection as a central bottleneck.…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

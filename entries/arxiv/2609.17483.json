@@ -1,0 +1,20 @@
+{
+  "key": "2609.17483",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.17483",
+  "title": "Bridging the Gap Between Homogeneous and Heterogeneous Asynchronous Optimization Is Surprisingly Difficult",
+  "authors": [
+    "Alexander Tyurin"
+  ],
+  "summary": "Modern large-scale machine learning tasks often require multiple workers, devices, CPUs, or GPUs to compute stochastic gradients in parallel and asynchronously to train model weights. Theoretical results typically distinguish between two settings: (i) the homogeneous setting, where all workers have access to the same data distribution, and (ii) the heterogeneous setting, where each worker operates on different data distributions. Known optimal time complexities in these settings reveal a significant gap, with far more pessimistic guarantees in the heterogeneous case. In this work, we…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2603.12134",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.12134",
+  "title": "Global and local helicity-preservation in the finite element discretization of magnetic relaxation",
+  "authors": [
+    "Patrick E. Farrell",
+    "Mingdong He",
+    "Kaibo Hu",
+    "Ganghui Zhang"
+  ],
+  "summary": "Magnetic relaxation drives plasma toward lower-energy equilibria under helicity constraints. In ideal magnetohydrodynamics (MHD), helicity is locally conserved, while resistive theories such as Taylor relaxation preserve only global helicity. This distinction has important implications for structure-preserving numerical methods. We compare three finite element formulations: an unconstrained scheme that does not conserve helicity, a mixed method based on finite element exterior calculus that preserves discrete local helicity on magnetically closed subdomains, and a Lagrange multiplier…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-12",
+  "updated": "2026-07-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2604.18441",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.18441",
+  "title": "Conformal Robust Set Estimation",
+  "authors": [
+    "Alejandro Cholaquidis",
+    "Emilien Joly",
+    "Leonardo Moreno"
+  ],
+  "summary": "We introduce a robust conformal prediction method based on the half-mass radius $\\dP(x):=\\inf\\{r>0:P(B(x,r))>1/2\\}$. Its empirical version is exactly the distance from a point to its $\\mathbf{k}$-th nearest neighbour, with $\\mathbf{k}=\\lfloor n/2\\rfloor+1$. The resulting conformal sets retain finite-sample marginal validity and asymptotically target the robust population central set $\\Qba:=\\{x\\in\\R^d:\\dP(x)\\leβ_α\\}$. We prove consistency in symmetric-difference probability, derive non-asymptotic exponential bounds and obtain the rate $O((\\log n/n)^{1/2})$ under a local mass condition. Under…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

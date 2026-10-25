@@ -1,0 +1,20 @@
+{
+  "key": "2608.17290",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17290",
+  "title": "Universal Approximation of Maximal Lyapunov Functions with Anchored Neural Networks",
+  "authors": [
+    "Jun Liu"
+  ],
+  "summary": "Maximal Lyapunov functions encode the entire domain of attraction of an asymptotically stable equilibrium, but preserving strict decrease under neural approximation is difficult because its margin vanishes at the equilibrium. For systems locally dominated by an asymptotically stable homogeneous vector field, we construct a continuously differentiable maximal target and an anchored, positivity-preserving neural family. We prove semiglobal universal approximation: strict neural Lyapunov functions and their first derivatives can approximate the target on nested invariant sublevel sets that…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

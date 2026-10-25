@@ -1,0 +1,25 @@
+{
+  "key": "2607.17083",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.17083",
+  "title": "Optimal Combinatorial Testing with Constraints: The Balancing Act",
+  "authors": [
+    "Thiago Serra",
+    "Changkun Guan",
+    "Hunter Gehman",
+    "Sumit Dhar",
+    "Mikey Ferguson",
+    "John Hooker",
+    "Marcel Schoppers"
+  ],
+  "summary": "Imagine that you are in front of a cockpit with several on-off buttons. If you were to thoroughly test it, you would need to try a prohibitive number of configurations. But since most bugs in practice can be isolated to interactions among few components, having tests that cover every possible pairwise configuration is a good start. However, this is a problem that goes from easy to NP-hard as soon as some pairwise configurations are forbidden. In this paper, we revisit unconstrained combinatorial testing with pairwise coverage on binary parameters and contrast it with the constrained case,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-19",
+  "updated": "2026-07-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

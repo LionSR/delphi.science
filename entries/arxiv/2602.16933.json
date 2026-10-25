@@ -1,0 +1,22 @@
+{
+  "key": "2602.16933",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.16933",
+  "title": "M-estimation under Two-Phase Multiwave Sampling with Applications to Prediction-Powered Inference",
+  "authors": [
+    "Dan M. Kluger",
+    "Stephen Bates"
+  ],
+  "summary": "In two-phase multiwave sampling, inexpensive measurements are collected on a large sample and expensive, more informative measurements are adaptively obtained on subsets of units across multiple waves. Adaptively collecting the expensive measurements can increase efficiency but complicates statistical inference. We give valid estimators and confidence intervals for M-estimation under adaptive two-phase multiwave sampling. We focus on the case where proxies for the expensive variables -- such as predictions from pretrained machine learning models -- are available for all units and propose a…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-02-18",
+  "updated": "2026-03-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

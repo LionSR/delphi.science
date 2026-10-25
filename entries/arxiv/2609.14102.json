@@ -1,0 +1,21 @@
+{
+  "key": "2609.14102",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.14102",
+  "title": "On the Number of Distinct Topological Bases of a Finite Set of Size $N$",
+  "authors": [
+    "Lars Warren Ericson"
+  ],
+  "summary": "For a finite set $S$ with $\\lvert S\\rvert = N$, the number of families $\\mathcal{B} \\subseteq \\mathcal{P}(S)$ that are topological bases is $\\#(N) = \\sum_{\\mathcal{T} \\in \\operatorname{Top}(S)} 2^{\\lvert\\mathcal{T}\\rvert - \\lvert\\mathcal{M}_{\\mathcal{T}}\\rvert}$, where $\\mathcal{M}_{\\mathcal{T}}$ is the canonical minimal basis of minimal open neighborhoods. The identity is proved in Lean 4 / Mathlib (`CARDB.lean`): bases generating $\\mathcal{T}$ are exactly the sets with $\\mathcal{M}_{\\mathcal{T}} \\subseteq \\mathcal{B} \\subseteq \\mathcal{T}$. The small-$N$ table and the discrete-dominance…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.LO",
+    "math.GN"
+  ],
+  "published": "2026-09-12",
+  "updated": "2026-09-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

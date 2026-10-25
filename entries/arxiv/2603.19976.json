@@ -1,0 +1,20 @@
+{
+  "key": "2603.19976",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.19976",
+  "title": "Constrained Nonnegative Gram Feasibility is $\\exists\\mathbb{R}$-Complete",
+  "authors": [
+    "Angshul Majumdar"
+  ],
+  "summary": "We study the computational complexity of constrained nonnegative Gram feasibility. Given a partially specified symmetric matrix together with affine relations among selected entries, the problem asks whether there exists a nonnegative matrix $H \\in \\mathbb{R}_+^{n\\times r}$ such that $W = HH^\\top$ satisfies all specified entries and affine constraints. Such factorizations arise naturally in structured low-rank matrix representations and geometric embedding problems. We prove that this feasibility problem is $\\exists\\mathbb{R}$-complete already for rank $r=2$. The hardness result is obtained…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.CC"
+  ],
+  "published": "2026-03-20",
+  "updated": "2026-03-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

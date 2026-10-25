@@ -1,0 +1,24 @@
+{
+  "key": "2601.12213",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.12213",
+  "title": "One-Sided Matrix Completion from Ultra-Sparse Samples",
+  "authors": [
+    "Hongyang R. Zhang",
+    "Zhenshuo Zhang",
+    "Huy L. Nguyen",
+    "Guanghui Lan"
+  ],
+  "summary": "Matrix completion is a classical problem that has received recurring interest across a wide range of fields. In this paper, we revisit this problem in an ultra-sparse sampling regime, where each entry of an unknown, $n\\times d$ matrix $M$ (with $n \\ge d$) is observed independently with probability $p = C / d$, for a fixed integer $C \\ge 2$. This setting is motivated by applications involving large, sparse panel datasets, where the number of rows far exceeds the number of columns. When each row contains only $C$ entries -- fewer than the rank of $M$ -- accurate imputation of $M$ is…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-01-18",
+  "updated": "2026-01-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

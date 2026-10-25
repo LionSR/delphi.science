@@ -1,0 +1,19 @@
+{
+  "key": "2603.16055",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.16055",
+  "title": "Strategies in POMDPs with Stage Duration",
+  "authors": [
+    "Ivan Novikov"
+  ],
+  "summary": "Partially observable Markov decision processes (POMDPs) with stage duration provide a framework for approximating continuous-time behavior by scaling transition probabilities with a stage duration parameter $h \\in (0,1]$. While previous literature has primarily focused on the limit of the discounted value as the stage duration $h$ vanishes, this paper investigates the global behavior of the asymptotic value, $V(h)$, across varying stage durations. Our main result demonstrates that any strategy in a POMDP with stage duration $h$ can be mimicked in the base POMDP ($h=1$). Specifically, we…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-17",
+  "updated": "2026-06-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

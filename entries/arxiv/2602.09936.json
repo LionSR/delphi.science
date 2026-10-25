@@ -1,0 +1,26 @@
+{
+  "key": "2602.09936",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.09936",
+  "title": "The Catastrophic Failure of The k-Means Algorithm in High Dimensions, and How Hartigan's Algorithm Avoids It",
+  "authors": [
+    "Roy R. Lederman",
+    "David Silva-Sánchez",
+    "Ziling Chen",
+    "Gilles Mordant",
+    "Amnon Balanov",
+    "Tamir Bendory"
+  ],
+  "summary": "Lloyd's k-means algorithm is one of the most widely used clustering methods. We prove that in high-dimensional, high-noise settings, the algorithm exhibits catastrophic failure: with high probability, essentially every partition of the data is a fixed point. Consequently, Lloyd's algorithm simply returns its initial partition - even when the underlying clusters are trivially recoverable by other methods. In contrast, we prove that Hartigan's k-means algorithm does not exhibit this pathology. Our results show the stark difference between these algorithms and offer a theoretical explanation…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-02-10",
+  "updated": "2026-02-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

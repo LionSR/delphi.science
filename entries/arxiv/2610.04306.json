@@ -1,0 +1,20 @@
+{
+  "key": "2610.04306",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04306",
+  "title": "Exact distances and measurement allocation for logical Pauli readout",
+  "authors": [
+    "Shuoming An",
+    "Fusheng Yang"
+  ],
+  "summary": "The minimum fault weight of a logical readout depends jointly on data-error persistence, check redundancy and time-boundary constraints. For any binary check matrix $H$ and nonzero parity support $w$, we prove that a repeated-readout model with a zero-syndrome endpoint has exact distance $\\min_{w\\cdot y=1}[\\operatorname{wt}(y)+q\\operatorname{wt}(Hy)]$ for at least $q$ wrong readouts. This reduces the search over fault histories to one weighted spatial minimum and gives the minimum repetition count for each adjacent-column check in square Bacon--Shor and generalized Shor readouts. Combining…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-03",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

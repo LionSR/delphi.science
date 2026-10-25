@@ -1,0 +1,20 @@
+{
+  "key": "2609.35147",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.35147",
+  "title": "A Sharper Theory of Ball-Proximal Optimization: Convergence and Radius Selection",
+  "authors": [
+    "Peter Richtárik",
+    "Hanmin Li"
+  ],
+  "summary": "We study the exact Euclidean ball-proximal point method for proper, closed, convex functions, where each iteration minimizes the objective over a ball centered at the current point. Retaining the objective gap in the decrease of squared distance yields sharper bounds on objective values, stationarity, and the symmetric Bregman distance to a minimizer. For constant radius $t>0$ and initial distance $D_0>0$ to the solution set, the objective gap after $K$ iterations is at most its initial value multiplied by $\\exp(-2K^2t^2/D_0^2)$. We characterize convergence for arbitrary positive radius…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

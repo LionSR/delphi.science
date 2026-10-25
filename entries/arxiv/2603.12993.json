@@ -1,0 +1,22 @@
+{
+  "key": "2603.12993",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.12993",
+  "title": "Augmented Lagrangian preconditioners for fictitious domain formulations of elliptic interface problems",
+  "authors": [
+    "Michele Benzi",
+    "Marco Feder",
+    "Luca Heltai",
+    "Federica Mugnaioni"
+  ],
+  "summary": "We present a novel augmented Lagrangian (AL) preconditioner for the solution of linear systems arising from finite element discretizations of elliptic interface problems with jump coefficients. The method is based on the Fictitious Domain with Distributed Lagrange Multipliers formulation and it is designed to improve the convergence of the Flexible Generalized Minimal Residual (FGMRES) method in the presence of large coefficient jumps. To reduce the computational cost, we also introduce a cheaper block-triangular variant of the preconditioner. We prove eigenvalue clustering for the ideal AL…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-13",
+  "updated": "2026-07-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

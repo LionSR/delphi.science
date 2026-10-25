@@ -1,0 +1,20 @@
+{
+  "key": "2609.02479",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.02479",
+  "title": "Accelerated Convergence of a Second-Order Dynamical System and its Application to Splitting Algorithms for Comonotone Inclusions",
+  "authors": [
+    "Yan Tang",
+    "Jun Dong"
+  ],
+  "summary": "This paper introduces a novel second-order dynamical system driven by a forward-backward splitting operator for solving the structured inclusion $0\\in(A+B)(x)$ in a real Hilbert space, where $A$ is a maximal $ρ$-comonotone operator and $B$ is a $ν$-cocoercive operator. The well-posedness of the system is established, and Lyapunov analysis yields accelerated convergence rates of order $o(\\frac{1}{t})$ for the velocity and $o(\\frac{1}{t^2})$ for the forward-backward residual, together with weak convergence of the trajectories to $\\operatorname{zer}(A+B)$. Temporal discretization further leads…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-02",
+  "updated": "2026-09-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

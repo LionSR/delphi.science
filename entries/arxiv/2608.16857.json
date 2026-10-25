@@ -1,0 +1,23 @@
+{
+  "key": "2608.16857",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.16857",
+  "title": "Fault-Tolerant Quantum Computation with Adversarial Errors",
+  "authors": [
+    "Nikolas P. Breuckmann",
+    "Louis Golowich",
+    "Umesh Vazirani"
+  ],
+  "summary": "We prove a fault-tolerance theorem for quantum computation against adversarial noise. For every quantum circuit on $\\bar{N}$ logical qudits of depth $\\bar{T}$, we construct a fault-tolerant circuit on $N=\\text{poly}(\\bar{N})$ physical qudits of depth $\\bar{T}\\cdot\\bar{N}^{o(1)}$, which is robust against an adversary who may arbitrarily choose and corrupt an almost-linear number $N^{1-o(1)}$ of physical qudits at each time step. This robustness significantly improves upon prior fault-tolerance theorems, which assumed corruptions were either local and stochastic, or else only act on a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.IT"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

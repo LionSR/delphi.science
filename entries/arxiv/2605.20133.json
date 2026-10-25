@@ -1,0 +1,21 @@
+{
+  "key": "2605.20133",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.20133",
+  "title": "Quantum algorithm for Discrete Gaussian Sampling",
+  "authors": [
+    "Clémence Chevignard",
+    "Yixin Shen",
+    "André Schrottenloher"
+  ],
+  "summary": "Discrete Gaussian Sampling on lattices is a fundamental problem in lattice-based cryptography. It appears both in basic cryptographic primitives such as digital signatures and as an important cryptanalysis building block for solving hard lattice problems. In this paper, we show a quantum algorithm based on the quantum rejection sampling technique whose complexity is asymptotically quadratically faster than its classical counterpart in [Wang & Ling, IEEE Trans. Inf. Theory 2019]. Our sampler outputs a quantum state which can either be measured to get the desired distribution or be used…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2607.06429",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06429",
+  "title": "Nested Volume-Surface Integral Equations for Acoustics",
+  "authors": [
+    "Danilo Aballay",
+    "Elwin van 't Wout"
+  ],
+  "summary": "The simulation of high-frequency acoustic wave propagation in unbounded domains with local heterogeneous materials and high-contrast interfaces poses significant challenges to numerical methods. The volume-surface integral equation (VSIE) method is an attractive approach as it automatically satisfies the radiation condition at infinity via Green's functions, handles heterogeneous materials via Newton potentials, and models scattering at high-contrast interfaces via surface integral operators. However, its effectiveness in practical simulations has been limited by high computational costs,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

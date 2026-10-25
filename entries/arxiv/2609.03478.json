@@ -1,0 +1,21 @@
+{
+  "key": "2609.03478",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.03478",
+  "title": "AutoGraphForge: Towards Automated Graph Theory Discovery",
+  "authors": [
+    "Ján Pastorek"
+  ],
+  "summary": "We report on our ongoing project to develop a computational pipeline, AutoGraphForge, for an automated graph-theoretic conjecturing-refuting-formalizing-proving system. Conjecture generation is counterexample-guided and runs in rounds: a Graffiti3 generator proposes conjectures over a small, evolving snapshot table $T$ (initially a few hundred graphs with their computed invariants) that grows only by counterexamples to its own conjectures. A novelty filter of $559$ classical and folklore relations, closed under transitive composition and linear identity substitution, decides via a linear…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.LO",
+    "math.CO"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2605.27339",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.27339",
+  "title": "Learning to reoptimize: a GNN-aided fix-and-optimize approach and an application to the Lot Sizing problem",
+  "authors": [
+    "Mathieu Lerouge",
+    "Andrea Lodi",
+    "Enrico Malaguti",
+    "Michele Monaci",
+    "Filippo Focacci"
+  ],
+  "summary": "In many operational contexts, solutions to NP-hard combinatorial optimization problems, modeled by means of Mixed-Integer Linear Programming (MILP), may become infeasible due to unpredictable disruptions. Typically, reoptimizing by solving the MILP formulation on the perturbed instance is not possible as new solutions must be obtained in a very short computing time, while simple repairing heuristics may result in low-quality solutions. To bridge this gap, we propose a learning-to-reoptimize framework, and apply it to the Lot Sizing Problem (LSP) under machine breakdown disruptions. We design…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2609.28510",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.28510",
+  "title": "A Measure-Theoretic Derivation of Zadeh Fuzzy Logic",
+  "authors": [
+    "Angshul Majumdar"
+  ],
+  "summary": "Zadeh fuzzy logic is normally introduced by assigning scalar membership degrees and postulating standard complement, minimum conjunction, and maximum disjunction. We derive this calculus from a strictly positive atomless normalized Boolean measure algebra. Equality of measure sends Boolean complement uniquely to $1-x$, but it cannot send meet to a single-valued operation: the exact scalar image of conjunction is the overlap interval $[(x+y-1)^+,\\min\\{x,y\\}]$. We quantify the information lost under scalarization, prove that no nontrivial measure-preserving compression can retain meet, and…",
+  "domain": "math.GM",
+  "tags": [
+    "math.GM"
+  ],
+  "published": "2026-09-21",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

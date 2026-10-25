@@ -1,0 +1,20 @@
+{
+  "key": "2607.08551",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08551",
+  "title": "Weighted-threshold Coupon Collection",
+  "authors": [
+    "Sebastian Müller",
+    "Stjepan Šebek"
+  ],
+  "summary": "We study a weighted-threshold version of the coupon collector problem in continuous time. Each type $i$ is discovered at rate $λp_i$ and, once discovered, contributes weight $w_i$, where $p$ and $w$ are probability vectors. The stopping time when the total weight of the discovered types first exceeds a fixed threshold $θ\\in (0,1)$ is called the quorum time. We first prove concentration estimates and compare the quorum time with the corresponding deterministic threshold time obtained from the mean discovered weight. When all discovery rates are equal and the largest individual weight tends to…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-07-09",
+  "updated": "2026-07-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

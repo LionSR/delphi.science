@@ -1,0 +1,27 @@
+{
+  "key": "2607.06602",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06602",
+  "title": "Real-Time VPN Traffic over ETSI GS QKD 014 Key Delivery with a LuxQuanta NOVA QKD Platform",
+  "authors": [
+    "Felipe Paixão",
+    "Anderson Altair Tomkelski",
+    "Marcus Elias Silva Freire",
+    "Isys Nogueira de Sant'Anna",
+    "Adriano Humberto de Oliveira Maia",
+    "Reinan da Silva Salazar",
+    "Ney Ricardo Lopez Junior",
+    "João Marcelo Silva Souza"
+  ],
+  "summary": "This report presents a prototype VPN that uses QKD-derived keys delivered through the ETSI GS QKD 014 API. The VPN encrypts IP traffic with AES-256-GCM, transports ETSI key identifiers in-band, and retrieves matching keys from local KMEs. After validation with a controlled KME simulator, the system was tested on two Jetson Xavier NX devices connected to a LuxQuanta NOVA QKD platform. The experiment successfully transmitted bidirectional real-time audio and video traffic through the VPN for eight continuous hours, demonstrating the feasibility of integrating classical VPN applications with…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

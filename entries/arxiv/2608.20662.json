@@ -1,0 +1,23 @@
+{
+  "key": "2608.20662",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.20662",
+  "title": "Physics-Informed Bayesian Optimization Warm-Starts for Sequential Convex Programming in Asteroid Surface Hopping",
+  "authors": [
+    "Baran Ekşi",
+    "Tufan Kumbasar"
+  ],
+  "summary": "Surface hopping is an attractive mobility mode for small-body exploration, but designing fuel-optimal hops on asteroid 433~Eros requires solving a nonconvex optimal control problem with an irregular polyhedral gravity field, thrust--mass coupling, and collision-avoidance constraints. We show that a physics-informed Bayesian Optimization (BO) warm-start---a Gaussian-process search over a single Bézier control point that requires no offline training---provides a more reliable initialization for Sequential Convex Programming (SCP) than the standard straight-line guess. The straight chord…",
+  "domain": "astro-ph.EP",
+  "tags": [
+    "astro-ph.EP",
+    "astro-ph.IM",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-08-21",
+  "updated": "2026-08-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2610.08394",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08394",
+  "title": "Generating and generalizing MSTD sets through Markov processes",
+  "authors": [
+    "Frank He",
+    "Karol Daniewski",
+    "Steven J. Miller"
+  ],
+  "summary": "The classical More Sums Than Differences (MSTD) problem studies finite sets $A\\subset\\{0,1,\\ldots,n\\}$ for which $|A+A|>|A-A|$, where $A+A=\\{a_1+a_2:a_1,a_2\\in A\\}$ and $A-A=\\{a_1-a_2:a_1,a_2\\in A\\}$. As addition is commutative and subtraction is not, it was conjectured that as $n\\to\\infty$ almost all subsets $A$ chosen uniformly from the power set of $\\{0,1,\\ldots,n\\}$ are difference-dominated, and it was thus a surprise when Martin and O'Bryant proved a positive percentage of sets are sum-dominant. We greatly generalize this model by introducing a Markov-chain framework, where the…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2601.16266",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.16266",
+  "title": "Post-processing optimization and optimal bounds for non-adaptive shadow tomography",
+  "authors": [
+    "Andrea Caprotti",
+    "Joshua Morris",
+    "Borivoje Dakić"
+  ],
+  "summary": "Informationally overcomplete POVMs are known to outperform minimally complete measurements in many tomography and estimation tasks, and they also leave a purely classical freedom in shadow tomography: the same observable admits infinitely many unbiased linear reconstructions from identical measurement data. We formulate the choice of reconstruction coefficients as a convex minimax problem and give an algorithm with guaranteed convergence that returns the tightest state-independent variance bound achievable by post-processing for a fixed POVM and observable. Numerical examples show that the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-22",
+  "updated": "2026-01-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2607.21584",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.21584",
+  "title": "Flow-based Phase-space Tomography of Continuous-variable Quantum States",
+  "authors": [
+    "Owen Dugan",
+    "Rumen Dangovski",
+    "Peter Y. Lu",
+    "Di Luo"
+  ],
+  "summary": "Continuous-variable quantum state tomography is limited by the cost of resolving non-Gaussian structure in high-dimensional phase space. We introduce QST-Flow, a quantum state tomography framework via flow-based generative modeling that represents experimentally accessible phase-space quasiprobability distributions with normalized, samplable neural densities rather than a truncated density matrix. The framework has two variants: QST-QFlow models the positive Husimi-$Q$ function with a single normalizing flow, while QST-WFlow models sign-changing Wigner functions as a trainable difference of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-23",
+  "updated": "2026-07-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

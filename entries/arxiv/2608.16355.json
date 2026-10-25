@@ -1,0 +1,19 @@
+{
+  "key": "2608.16355",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.16355",
+  "title": "An Inexact Riemannian Proximal Momentum Variance-Reduced Method: Complexity Bounds and KL Sequential Convergence",
+  "authors": [
+    "Na Zhang"
+  ],
+  "summary": "We develop a unified analysis of inexact stochastic Riemannian proximal optimization for finite-sum nonsmooth composite problems over compact embedded submanifolds. The framework accommodates variance-reduced gradient estimators, projected momentum, and inexact tangent-space proximal solves under a single conditional error-dissipation condition, verified for projection-based SVRG, SARAH/SPIDER, SAGA, and SAG. A computable Fenchel-dual residual criterion, with tolerance prescribed before sampling and inner iterations, enables explicit control of the inner work. We establish conditional…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

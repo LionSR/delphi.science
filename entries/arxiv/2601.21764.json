@@ -1,0 +1,22 @@
+{
+  "key": "2601.21764",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.21764",
+  "title": "Solving Hamilton-Jacobi equations by residual minimization of monotone finite-difference discretizations",
+  "authors": [
+    "Olivier Bokanowski",
+    "Carlos Esteve-Yagüe",
+    "Richard Tsai"
+  ],
+  "summary": "We introduce a method for solving Hamilton--Jacobi equations, both inviscid and viscous, by minimizing the squared residuals of monotone finite-difference discretizations on grids of varying resolution. The method is designed to leverage neural networks and modern GPUs to solve these equations in higher dimensions; consequently, the setting for our analysis is the minimization of the residual functionals via gradient-based optimization. We establish a well-posedness theory for this approach: any critical point of the finite-difference loss solves the monotone scheme together with the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-07-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

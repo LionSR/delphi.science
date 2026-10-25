@@ -1,0 +1,26 @@
+{
+  "key": "2604.00340",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00340",
+  "title": "Extended State Observer for Localized Fault Awareness in RF Accelerating Structures",
+  "authors": [
+    "Luke S. Baker",
+    "Sungil Kwon",
+    "Kwame Jyamfi",
+    "Quinten Cole",
+    "Isaac Roybal",
+    "AJ Garcia",
+    "Phil Torrez",
+    "Lawrence Castellano"
+  ],
+  "summary": "An observer framework is presented for robust regulation of RF cavity fields and localized identification of disturbances in RF systems. A standard cavity field observer is augmented with additional states to estimate the evolution of cavity detuning and phase drifts induced by the drive and receiver chains. Monte Carlo simulations are performed to assess the performance of the proposed estimator under realistic conditions for the intended high-power linear accelerator operation. Results showcase precise cavity field regulation and the reliability with which the observer assigns deviations…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-04-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

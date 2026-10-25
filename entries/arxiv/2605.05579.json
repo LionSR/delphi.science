@@ -1,0 +1,23 @@
+{
+  "key": "2605.05579",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05579",
+  "title": "Numerical Analysis of Space-Time Dependent Source Identification in Subdiffusion Equations",
+  "authors": [
+    "Siyu Cen",
+    "Bangti Jin",
+    "Yavar Kian",
+    "Zhi Zhou"
+  ],
+  "summary": "In this work, we propose an easy-to-implement fixed-point algorithm for reconstructing a space-time dependent source in a subdiffusion model from lateral boundary measurements. The numerical scheme combines a Galerkin finite element method for spatial discretization with a finite difference method for temporal discretization. We establish the linear convergence of the fixed-point iteration and derive an error bound that depends explicitly on the discretization parameters and the noise level. The error analysis relies on stability properties of the continuous inverse problem and technical…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.AP"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

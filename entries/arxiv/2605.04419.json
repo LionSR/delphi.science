@@ -1,0 +1,22 @@
+{
+  "key": "2605.04419",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04419",
+  "title": "A Numerical Investigation of Extremum-Seeking-Based Command Generation for Adaptively Controlled Systems",
+  "authors": [
+    "Jhon Manuel Portella Delgado",
+    "Aidan Rice",
+    "Jacob C. Vander Schaaf",
+    "Dennis S. Bernstein"
+  ],
+  "summary": "We develop an adaptive feedback control technique that combines an extremum-seeking-based command generator (ECG) with indirect adaptive control. In particular, ECG is used to generate commands that asymptotically optimize a cost function that is measured but whose functional form is unknown. For feedback control with command following and stabilization, the present paper combines ECG with predictive cost adaptive control (PCAC), which is an indirect adaptive control extension of model predictive control (MPC). PCAC extends generalized predictive control (GPC) by using quadratic programming…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

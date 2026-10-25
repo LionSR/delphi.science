@@ -1,0 +1,20 @@
+{
+  "key": "2606.21482",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.21482",
+  "title": "Unified Ergodic Primal-Dual Gap Rates with Unhalved Primal Stepsizes",
+  "authors": [
+    "Sirong Dai",
+    "Ming Yan"
+  ],
+  "summary": "We study ergodic primal-dual gap rates for first-order primal-dual methods applied to \\[ \\min_x f(x)+g(x)+h(Ax), \\] where $f$ is smooth and convex, $g$ and $h$ are proper, closed, convex functions, and $A$ is linear. Standard gap-rate proofs often impose the halved smooth-stepsize condition $τ\\le 1/L$, even though the corresponding convergence theory allows the larger range $τ<2/L$. We introduce a residual-to-gap transfer principle: positive residual terms in the one-step gap inequality are controlled by the decrease of a Lyapunov function. This yields $O(1/K)$ ergodic primal-dual gap bounds…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-19",
+  "updated": "2026-06-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

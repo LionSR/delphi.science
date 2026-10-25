@@ -1,0 +1,25 @@
+{
+  "key": "2606.18730",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.18730",
+  "title": "Two-Phase Bilevel Search for the Moving-Target Traveling Salesman Problem with Moving Obstacles",
+  "authors": [
+    "Allen George Philip",
+    "Anoop Bhat",
+    "Sivakumar Rathinam",
+    "Howie Choset"
+  ],
+  "summary": "The Moving-Target Traveling Salesman Problem (MT-TSP) seeks a minimum cost trajectory for an agent that departs from a static depot, visits a set of moving targets, each within one of their assigned time windows, and returns to the depot. In this article, we study the Moving-Target Traveling Salesman Problem with Moving Obstacles (MT-TSP-MO), a generalization of the MT-TSP where the agent trajectory must avoid moving obstacles. We present a Mixed-Integer Conic Programming (MICP) formulation that can be solved using off-the-shelf solvers, as well as a fast and scalable Two-Phase Bilevel…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "cs.AI",
+    "math.CO",
+    "math.OC"
+  ],
+  "published": "2026-06-17",
+  "updated": "2026-06-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

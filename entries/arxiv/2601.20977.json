@@ -1,0 +1,21 @@
+{
+  "key": "2601.20977",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.20977",
+  "title": "The dual-path fixing strategy and its application to the set-covering problem",
+  "authors": [
+    "Paulo Michel F. Yamagishi",
+    "Marcia Fampa",
+    "Jon Lee"
+  ],
+  "summary": "We introduce the dual-path fixing strategy to exploit dual algorithms for solving relaxations of mixed-integer nonlinear-optimization problems. Such dual algorithms are naturally applied in the context of branch-and-bound, and eventual impact on the success of branch-and-bound is our strong motivation. Our fixing strategy aims to be more powerful than the common strategy of fixing variables based on a single dual-feasible solution (e.g., standard reduced-cost fixing for mixed-integer linear optimization), but to be much faster than ``strong fixing'', essentially requiring no more time than…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-28",
+  "updated": "2026-01-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

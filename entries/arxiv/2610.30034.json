@@ -1,0 +1,22 @@
+{
+  "key": "2610.30034",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.30034",
+  "title": "Dual Effect and Certainty Equivalence Revisited for a Linear-Gaussian Dual Control Problem",
+  "authors": [
+    "Ying Wang",
+    "Yue Ju",
+    "Håkan Hjalmarsson"
+  ],
+  "summary": "This paper revisits the relation between dual effect and certainty equivalence (CE) through a scalar linear-Gaussian model. In dual control, the current input affects not only the immediate cost but also the information available for future decisions, and hence the future cost. Dynamic programming (DP) provides a natural framework for formulating dual control problems. At each step of the Bellman recursion, an optimal input minimizes the sum of the stage cost and the expected cost-to-go. We restrict attention to stage costs minimized by the CE input. However, CE may not minimize the Bellman…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

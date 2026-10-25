@@ -1,0 +1,21 @@
+{
+  "key": "2602.02445",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.02445",
+  "title": "Finite-Sample Wasserstein Error Bounds and Concentration Inequalities for Nonlinear Stochastic Approximation",
+  "authors": [
+    "Seo Taek Kong",
+    "R. Srikant"
+  ],
+  "summary": "Stochastic approximation methods such as stochastic gradient descent and temporal-difference learning return either the last iterate or the Polyak--Ruppert average. We establish finite-sample Wasserstein-$p$ Gaussian approximation bounds for both outputs under a common framework combining moment bounds for the normalized iterates with quantitative Gaussian approximation of the appropriately weighted driving noise. These bounds yield convergence of admissible moments and high probability bounds with Gaussian leading terms: heavier dependence on the confidence level is confined to a correction…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-02-02",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2604.24567",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.24567",
+  "title": "A correction adaptive two-grid finite element method for nonselfadjoint or indefinite elliptic problems",
+  "authors": [
+    "Fei Li",
+    "Qingguo Hong",
+    "Ming Tang",
+    "Liuqiang Zhong"
+  ],
+  "summary": "We propose, analyze, and numerically validate a correction adaptive two-grid finite element method (CAT-GFEM) for nonselfadjoint or indefinite elliptic problems. In contrast to the adaptive two-grid finite element method (ATGFEM) of Li and Zhang [SIAM J. Sci. Comput., 43 (2021), pp. A908-A928], which is restricted to symmetric positive-definite problems, the proposed method introduces an additional correction step that solves a small-scale discrete residual problem on the coarse mesh. This step entails negligible additional computational cost and allows us to show that the L2-norm error of…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-04-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

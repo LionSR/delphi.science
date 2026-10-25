@@ -1,0 +1,21 @@
+{
+  "key": "2607.25046",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.25046",
+  "title": "Derivative-free optimization approach for structured symmetric matrices with fixed eigenvalues",
+  "authors": [
+    "Carmo P. Brás",
+    "Evelin H. M. Krulikovski",
+    "Marcos Raydan"
+  ],
+  "summary": "A Derivative-Free Optimization (DFO) model is developed and analyzed for solving inverse structured symmetric matrix problems for which the eigenvalues are specified. Some (zero and nonzero) entries are preassigned and cannot be changed, while others should be nonzero but their values are not given. The rest of the entries are completely free. The obtained matrix must meet these criteria and have the specified eigenvalues. This specialized inverse eigenvalue problem is relevant to various applications and is linked to determining the graph, with weights on the undirected edges, of the matrix…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

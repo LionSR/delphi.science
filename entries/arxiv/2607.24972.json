@@ -1,0 +1,20 @@
+{
+  "key": "2607.24972",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.24972",
+  "title": "A Kernel-Based Density of States Estimator for Quantum Computing",
+  "authors": [
+    "Julio Cesar Siqueira Rocha"
+  ],
+  "summary": "The density of states (DoS) encodes the thermodynamic and spectral properties of quantum many-body systems, yet its reconstruction becomes intractable for Hilbert spaces too large to diagonalize. Classically, the kernel polynomial method (KPM) addresses this by combining stochastic trace estimation with a smoothing kernel. Here we show that the Rodeo algorithm---one of the simplest eigenvalue-location protocols for near-term quantum hardware---provides a direct quantum analogue of this approach. Averaging the Rodeo response over Haar-random input states yields the DoS convolved with a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.stat-mech"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

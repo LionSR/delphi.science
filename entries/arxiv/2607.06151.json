@@ -1,0 +1,25 @@
+{
+  "key": "2607.06151",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06151",
+  "title": "Leveraging Extragradient for Effective Sharpness-Aware Minimization in Deep Learning",
+  "authors": [
+    "Yao Fu",
+    "Chunxia Zhang",
+    "Junmin Liu",
+    "Yihang Jin",
+    "Haishan Ye",
+    "Yuanao Yang"
+  ],
+  "summary": "Generalization remains a pivotal challenge in deep learning, where traditional optimizers like Stochastic Gradient Descent (SGD) often converge to sharp minima, leading to overfitting and reduced performance on unseen data. Building on Sharpness-Aware Minimization (SAM), for seeking flat minima associated with improved generalization, we propose the Extragradient-Inspired Sharpness-Aware Minimization (EISAM), a novel optimizer that enhances generalization via the extragradient technique. EISAM uses a two-step update process: a prediction step investigating the geometry of the loss landscape…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

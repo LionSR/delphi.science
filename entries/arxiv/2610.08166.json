@@ -1,0 +1,24 @@
+{
+  "key": "2610.08166",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08166",
+  "title": "AdHImEx: Adaptively High-Order Implicit-Explicit Transport for Large Time Steps",
+  "authors": [
+    "Amber J. te Winkel",
+    "Hilary Weller",
+    "Christian Kühnlein",
+    "James Kent"
+  ],
+  "summary": "Adaptively Implicit-Explicit (AdImEx) time stepping provides stability for large time steps for mass-conservative transport, making it attractive for the numerical representation of advection in weather and climate prediction. Existing AdImEx transport schemes become first-order accurate in the large-time-step, implicit regime and may require multiple sparse matrix solutions per time step. This work introduces AdHImEx, a new AdImEx scheme that addresses both limitations simultaneously. AdHImEx provides second-order accuracy for large Courant numbers while requiring only a single matrix…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

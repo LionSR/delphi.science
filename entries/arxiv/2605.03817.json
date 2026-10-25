@@ -1,0 +1,22 @@
+{
+  "key": "2605.03817",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.03817",
+  "title": "Data-driven Initial Gap Identification of Piecewise-linear Systems using Sparse Regression and Universal Approximation Theorem",
+  "authors": [
+    "Ryosuke Kanki",
+    "Akira Saito"
+  ],
+  "summary": "This paper proposes a method for identifying an initial gap in piecewise-linear systems from data. Piecewise-linear systems appear in many engineered systems such as degraded mechanical systems and infrastructures, and are known to show strong nonlinearities. To analyze the behavior of such piecewise-linear systems, it is necessary to identify the initial gap, at which the system behavior switches. The proposed method identifies the initial gap by discovering the governing equations using sparse regression and calculating the gap based on the universal approximation theorem. A key step to…",
+  "domain": "physics.app-ph",
+  "tags": [
+    "physics.app-ph",
+    "math.DS",
+    "physics.data-an"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-05-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

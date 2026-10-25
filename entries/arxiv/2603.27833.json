@@ -1,0 +1,25 @@
+{
+  "key": "2603.27833",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.27833",
+  "title": "Separation is Optimal for LQR under Intermittent Feedback",
+  "authors": [
+    "Abdullah Y. Etcibasi",
+    "C. Emre Koksal",
+    "Eylem Ekici"
+  ],
+  "summary": "We study finite-horizon linear-quadratic regulation of a scalar linear system with intermittent state feedback under an average communication-rate constraint. In this setting, the scheduling policy and controller are generally coupled through the dual effect: transmission decisions shape future estimation errors, while control actions influence the information available for scheduling. Existing treatments often recover tractability by restricting attention to symmetric scheduling policies, but the optimality of this restriction has remained unclear. We show that, for i.i.d. zero-mean…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.IT",
+    "cs.MA",
+    "cs.RO",
+    "eess.SY"
+  ],
+  "published": "2026-03-29",
+  "updated": "2026-06-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

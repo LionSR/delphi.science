@@ -1,0 +1,19 @@
+{
+  "key": "2606.30225",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.30225",
+  "title": "Fast Adaptive Tensor Methods Under Local Smoothness",
+  "authors": [
+    "Sadok Jerad"
+  ],
+  "summary": "A new, fast adaptive regularization methods is proposed and analyzed under local Lipschitz smoothness of the $p$-th order tensor. For nonconvex problems, it achieves the optimal $\\mathcal{O}\\!\\left(|\\log(ε)|ε^{-(p+1)/p}\\right)$ complexity to obtain first-order $ε$-stationary points and in the convex case, it yields $\\mathcal{O}\\!\\left(|\\log(ε)|ε^{-1/p}\\right)$ iterations to drive the optimality gap below $ε$, thus matching the complexity bounds of standard tensor methods under global Lipschitz smoothness yp to logarithmic terms. The proposed algorithm follows the line of standard tensor…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2607.19782",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.19782",
+  "title": "A Multiclass Quantum Aligned Centroid Kernel",
+  "authors": [
+    "Kilian Tscharke",
+    "Pascal Debus"
+  ],
+  "summary": "Kernel methods are powerful tools in machine learning but commonly used full-Gram kernels face three key limitations: (1) quadratic scaling with training set size; (2) the use of fixed, non-trainable kernels; and (3) the absence of an intrinsic formulation for multiclass classification. We present McQuack, a trainable quantum kernel method for multiclass problems that achieves linear scaling in the number of training samples. This is accomplished by replacing the full training-set Gram matrix with a trainable sample-to-(class-centroid) fidelity matrix. We evaluate the model in simulation and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-07-22",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

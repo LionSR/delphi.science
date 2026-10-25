@@ -1,0 +1,21 @@
+{
+  "key": "2610.26473",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.26473",
+  "title": "A Simple and Unified Method for Gradient-Variation Regret",
+  "authors": [
+    "Hang Yu",
+    "Peng Zhao"
+  ],
+  "summary": "Gradient-variation online learning has attracted increasing attention for its connections to game theory and optimization. It has been studied in both non-stationary online learning, which aims to minimize dynamic regret against time-varying comparator sequences, and universal online learning, which seeks to adapt to unknown loss curvature. Prior work obtained gradient-variation bounds using different techniques tailored to each setting. We propose a simple and unified method based on surrogate losses with a quadratic penalty on decision movement, yielding gradient-variation bounds in both…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

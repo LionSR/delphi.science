@@ -1,0 +1,21 @@
+{
+  "key": "2605.23181",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.23181",
+  "title": "High-order Conservative Discontinuous Galerkin Methods via Implicit Penalization for the Generalized Korteweg-de Vries Equation and the Hirota-Satsuma KdV System",
+  "authors": [
+    "M. Shan Tariq",
+    "Yanlai Chen",
+    "Bo Dong"
+  ],
+  "summary": "We develop new conservative discontinuous Galerkin (DG) methods for nonlinear wave problems, focusing on the generalized Korteweg-de Vries (gKdV) equation and the coupled Hirota-Satsuma KdV (HS-KdV) system. The proposed methods preserve mass through the single-valued structure of numerical traces, while energy and Hamiltonian conservation are enforced by implicitly determining penalty parameters in the numerical traces through auxiliary conservation constraints. In our previous work [11], we developed a conservative DG method for the gKdV equation; however, that formulation involves the time…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-22",
+  "updated": "2026-05-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2604.23063",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23063",
+  "title": "Efficient primal-dual algorithm for imaging applications with matrix stacking, applied to DBT image reconstruction",
+  "authors": [
+    "Emil Y. Sidky",
+    "John Paul Phillips",
+    "Zheng Zhang",
+    "Dan Xia",
+    "Ingrid S. Reiser",
+    "Xiaochuan Pan"
+  ],
+  "summary": "The primal-dual hybrid gradient (PDHG) algorithm for solving convex optimization problems that arise in tomographic imaging is revisited. In particular, simplification of the selection of step-size parameters is developed for optimization problems with multiple terms, each containing a linear transform subject to splitting. This simplification maintains algorithm efficiency while avoiding massive grid searches for the optimal parameter settings. The PDHG framework is demonstrated on an image reconstruction problem for wide-angle digital breast tomosythesis (DBT); use of the proposed…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "physics.med-ph"
+  ],
+  "published": "2026-04-24",
+  "updated": "2026-04-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

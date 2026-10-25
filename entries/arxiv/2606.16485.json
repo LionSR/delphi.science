@@ -1,0 +1,24 @@
+{
+  "key": "2606.16485",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.16485",
+  "title": "Robust Koopman MPC with Sets Updates for Time Delayed Systems",
+  "authors": [
+    "Xinglong Zhang",
+    "Xinxin Yao",
+    "Xin Xu",
+    "Keyou You",
+    "Dewen Hu"
+  ],
+  "summary": "Koopman operators have shown significant potential in designing linear model predictive control (MPC) schemes for nonlinear systems on a lifted observable space. Recent advances have tackled the robust Koopman MPC design issue in the presence of modeling errors, relying on the prior estimation of the modeling uncertainty set. However, deriving a robust positively invariant set using a precalculated uncertainty set can be conservative because the uncertainty set bound is time-varying and dependent on the state and control. Additionally, no existing Koopman MPC design has addressed the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-06-15",
+  "updated": "2026-06-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

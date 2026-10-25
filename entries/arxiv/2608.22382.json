@@ -1,0 +1,21 @@
+{
+  "key": "2608.22382",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.22382",
+  "title": "Distributed model predictive control via finite-step control Lyapunov functions",
+  "authors": [
+    "Navid Noroozi",
+    "Maryam Sharifi"
+  ],
+  "summary": "As opposed to classical converse Lyapunov theorems, finite-step converse results are constructive and offer a different starting point: for sufficiently large finite step ahead, say $M$, in an explicit sense, any scaled norm can serve as a converse finite-step Lyapunov function. As for interconnected discrete-time systems, similar lines of argument lead to ``non-conservative'' small-gain conditions. Motivated by this viewpoint, this paper develops a distributed model predictive control framework for constrained interconnected nonlinear discrete-time systems. Each subsystem solves one local…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.DS"
+  ],
+  "published": "2026-08-23",
+  "updated": "2026-08-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

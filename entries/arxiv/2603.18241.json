@@ -1,0 +1,21 @@
+{
+  "key": "2603.18241",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.18241",
+  "title": "Splitting-strategies for arbitrary-order fully mixed finite element discretizations of the Biot equations",
+  "authors": [
+    "Fleurianne Bertrand",
+    "Jakub Wiktor Both",
+    "Tugay Dağlı"
+  ],
+  "summary": "We study the fully-mixed formulation of the Biot equations which is characterized by a symmetric coupling between flow and deformation while each subphysics has internally a saddle point structure. This enables the use of stable mixed finite elements for each subproblem without a strong compatibility condition across the two subphysics. To exploit this flexibility while preserving the conservation structure of both subproblems, we consider fully mixed finite element methods in which the symmetry of the elastic stress tensor is enforced weakly, often referred to as a five-field formulation.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-18",
+  "updated": "2026-08-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

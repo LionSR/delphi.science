@@ -1,0 +1,22 @@
+{
+  "key": "2607.19786",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.19786",
+  "title": "A Structure-Adaptive Random Feature Method for High-Dimensional Elliptic PDEs",
+  "authors": [
+    "Jiale Linghu",
+    "Hao Dong",
+    "Yangshuai Wang"
+  ],
+  "summary": "Random-feature methods reduce high-dimensional elliptic PDE collocation to linear coefficient problems, but full-dimensional trial spaces overlook lower-dimensional structure. We introduce the Hierarchical Analysis-of-Variance Random Feature Method (HA-RFM), which selects coordinate blocks using closed Sobol indices of the PDE residual, identifies oblique low-rank features from fitted-predictor gradients, and couples all retained features in one regularized least-squares solve. Under structural and stability hypotheses, we establish an $L^2$ error bound that links solution and residual…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-07-22",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

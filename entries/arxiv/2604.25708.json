@@ -1,0 +1,22 @@
+{
+  "key": "2604.25708",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.25708",
+  "title": "Polynomial Resource Classification of Quantum Circuit Familes via Classical Shadows",
+  "authors": [
+    "Andrew Maciejunes",
+    "Ross Gore",
+    "Sachin Shetty",
+    "Barry Ezell"
+  ],
+  "summary": "We compare four polynomial-resource measurement strategies, (I) $Z$-basis-only, (II) nearest-neighbor $ZZ$ (NN), (III) multi-basis ($Z$, $X$, $Y$), and (IV) classical shadows, for classifying three quantum circuit families: IQP, Clifford, and Clifford$+T$. We find $Z$-only measurements outperform multi-basis and classical shadows across all qubit counts and all four classifiers evaluated, and the $O(\\nqubits)$-feature NN strategy matches $Z$-only to within $0.02$ in Random Forest accuracy. The best result is a Random Forest accuracy of $0.91$ at 4--5 qubits under $Z$-only ($0.89$ for NN,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-28",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,28 @@
+{
+  "key": "2606.00401",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.00401",
+  "title": "Data-Driven Spectral Prediction for Accelerating Large-Scale Electronic Structure Calculations",
+  "authors": [
+    "Abhiram Badrinarayanan",
+    "Davor Davidovic",
+    "Edoardo Di Napoli",
+    "Jurica Novak",
+    "Luigi Genovese",
+    "Gustavo Ramirez-Hidalgo",
+    "Xinzhe Wu"
+  ],
+  "summary": "Simulating large molecular systems comprising thousands of atoms requires highly scalable methodologies. While modern Density Functional Theory (DFT) codes exhibit linear scaling, solving the associated large, sparse generalized eigenproblems remains a critical computational bottleneck on exascale architectures. In the context of the LimitX project, we propose a data-driven framework to accelerate these calculations. By shifting the machine learning target from discrete eigenvalues to the coefficients of an interpolating Chebyshev polynomial, and by comparing both all-atom and fragment-based…",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "cond-mat.mtrl-sci",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

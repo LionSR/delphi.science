@@ -1,0 +1,26 @@
+{
+  "key": "2602.13646",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.13646",
+  "title": "Riemannian Momentum Tracking: Distributed Optimization with Momentum on Compact Submanifolds",
+  "authors": [
+    "Jun Chen",
+    "Tianyi Zhu",
+    "Haishan Ye",
+    "Lina Liu",
+    "Guang Dai",
+    "Yong Liu",
+    "Yunliang Jiang",
+    "Ivor W. Tsang"
+  ],
+  "summary": "Gradient descent with momentum has been widely applied in various signal processing and machine learning tasks, demonstrating a notable empirical advantage over standard gradient descent. However, momentum-based distributed Riemannian algorithms have been only scarcely explored. In this paper, we propose Riemannian Momentum Tracking (RMTracking), a decentralized optimization algorithm with momentum over a compact submanifold. Given the non-convex nature of compact submanifolds, the objective function, composed of a finite sum of smooth (possibly non-convex) local functions, is minimized…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-14",
+  "updated": "2026-02-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

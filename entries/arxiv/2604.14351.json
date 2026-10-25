@@ -1,0 +1,20 @@
+{
+  "key": "2604.14351",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.14351",
+  "title": "Complexity of an inexact stochastic SQP algorithm for equality constrained optimization",
+  "authors": [
+    "Michael J. O'Neill",
+    "Aoji Tang"
+  ],
+  "summary": "In this paper, we consider nonlinear optimization problems with a stochastic objective function and deterministic equality constraints. We propose an inexact two-stepsize stochastic sequential quadratic programming (SQP) algorithm and analyze its worst-case complexity under mild assumptions. The method utilizes a step decomposition strategy and handles stochastic gradient estimates by assigning different stepsizes to different components of the search direction. We establish the first known $\\mathcal{O}(ε_c^{-2})$ worst-case complexity with respect to the infeasibility measure when no…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-15",
+  "updated": "2026-04-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

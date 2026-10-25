@@ -1,0 +1,24 @@
+{
+  "key": "2607.09026",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.09026",
+  "title": "Geometric planted matchings in high dimensions: The power of multiple views",
+  "authors": [
+    "Timothy L. H. Wee",
+    "Kaylee Y. Yang",
+    "Zhou Fan",
+    "Cheng Mao"
+  ],
+  "summary": "We study the problem of recovering the correspondence between a collection of $n$ points in $\\mathbb{R}^d$ and a noisy, permuted version of those points. In the high-dimensional regime $d=ω(\\log n)$, under a Gaussian model with noise variance $σ^2=d/(b\\log n)$, prior work identifies $b=2$ as the threshold for almost exact recovery. We prove that this threshold is all-or-nothing: for every fixed $b K/(K-1)$. Thus multiple views can break the impossibility barrier $b=2$ for the original matching problem: in particular, for $3/2 < b < 2$, the two-view model has no nontrivial recovery, but a…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.DS",
+    "math.PR"
+  ],
+  "published": "2026-07-10",
+  "updated": "2026-07-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

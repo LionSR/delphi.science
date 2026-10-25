@@ -1,0 +1,21 @@
+{
+  "key": "2603.10962",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.10962",
+  "title": "Convergence Analysis of a Fully Discrete Observer For Data Assimilation of the Barotropic Euler Equations",
+  "authors": [
+    "Aidan Chaumet",
+    "Jan Giesselmann"
+  ],
+  "summary": "We study the convergence of a discrete Luenberger observer for the barotropic Euler equations in one dimension, for measurements of the velocity only. We use a mixed finite element method in space and implicit Euler integration in time. We use a modified relative energy technique to show an error bound comparing the discrete observer to the original system's solution. The bound is the sum of three parts: an exponentially decaying part, proportional to the difference in initial value, a part proportional to the grid sizes in space and time and a part that is proportional to the size of the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-03-11",
+  "updated": "2026-03-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

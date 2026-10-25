@@ -1,0 +1,26 @@
+{
+  "key": "2602.16568",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.16568",
+  "title": "Separating Oblivious and Adaptive Models of Variable Selection",
+  "authors": [
+    "Ziyun Chen",
+    "Jerry Li",
+    "Kevin Tian",
+    "Yusong Zhu"
+  ],
+  "summary": "Sparse recovery is among the most well-studied problems in learning theory and high-dimensional statistics. In this work, we investigate the statistical and computational landscapes of sparse recovery with $\\ell_\\infty$ error guarantees. This variant of the problem is motivated by \\emph{variable selection} tasks, where the goal is to estimate the support of a $k$-sparse signal in $\\mathbb{R}^d$. Our main contribution is a provable separation between the \\emph{oblivious} (``for each'') and \\emph{adaptive} (``for all'') models of $\\ell_\\infty$ sparse recovery. We show that under an oblivious…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.DS",
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-02-18",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

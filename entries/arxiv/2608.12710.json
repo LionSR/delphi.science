@@ -1,0 +1,21 @@
+{
+  "key": "2608.12710",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.12710",
+  "title": "Federated Compositional Muon Optimizer for Matrix-Wise Models",
+  "authors": [
+    "Wang Yan",
+    "Feihu Huang"
+  ],
+  "summary": "Muon, a more recently developed optimizer, is useful for matrix-wise models in AI areas. Although many works have studied Muon and its variants, these methods are still not particularly well-suited for hierarchical structured problems. To fill this gap, we propose an effective federated compositional Muon (FedCoMuon) optimizer to solve distributed matrix-wise compositional optimization problems. Specifically, our FedCoMuon optimizer builds on compositional gradient tracking and orthogonalized momentum. Moreover, we propose a variance reduced variant of FedCoMuon (FedCoMuon-VR) based on a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

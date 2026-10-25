@@ -1,0 +1,23 @@
+{
+  "key": "2605.19488",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.19488",
+  "title": "A parallel wakeup problem and multi-room light switch strategies",
+  "authors": [
+    "John Haslegrave",
+    "Paul A. Russell",
+    "Mark Walters"
+  ],
+  "summary": "The wakeup problem in distributed computing asks for a symmetric protocol that enables one of several processors to eventually guarantee that all (or, in a more general setting, enough) other processors have acted, using a shared register but no global clock. Dropping the symmetry requirement gives a well-known exercise often phrased in terms of prisoners entering, in an unknown sequence, a room equipped with a single binary switch, and using it to communicate. Kane and Kominers recently analysed a more general version of the latter with multiple parallel and indistinguishable rooms. We…",
+  "domain": "cs.DC",
+  "tags": [
+    "cs.DC",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

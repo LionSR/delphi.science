@@ -1,0 +1,20 @@
+{
+  "key": "2608.22774",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.22774",
+  "title": "An Inexact Riemannian Gradient Descent Algorithm on the Stiefel Manifold with One Newton-Schulz Iteration",
+  "authors": [
+    "Yuqiu Su",
+    "Wen Huang"
+  ],
+  "summary": "In this paper, we propose an inexact Riemannian gradient descent algorithm on the Stiefel manifold (IRGS-StieONS) using an adaptive step size, where the ``inexact'' refers to the inexactness of retraction. It is proven that one single Newton-Schulz iteration for the retraction is sufficient for global convergence and local linear convergence. Compared to the landing and augmented Lagrangian-based algorithms, the proposed algorithm is the first infeasible algorithm that permits adaptive step sizes with a practical initial step size and guarantees global convergence and local linear…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-24",
+  "updated": "2026-08-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

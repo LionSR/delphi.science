@@ -1,0 +1,19 @@
+{
+  "key": "2607.23391",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.23391",
+  "title": "The symmetric V-cycle can diverge under the multigrid axioms for cell-centred discretisations",
+  "authors": [
+    "Ming Hei Wong"
+  ],
+  "summary": "The axiomatic convergence theory for multigrid methods applied to cell-centred finite-difference and finite-volume discretisations rests on two hypotheses: an imbalanced Galerkin condition (G3), which states that $R_{\\ell-1}A_\\ell P_{\\ell-1}=2A_{\\ell-1}$ with $R_{\\ell-1}=\\frac{1}{2}P_{\\ell-1}^T$, and a weak approximation property $(A2)_α$ of Bramble type. Under these hypotheses, together with Richardson smoothing, the symmetric W-cycle and the variable V-cycle are known to be uniformly convergent, while the uniform convergence of the standard symmetric V-cycle has remained open. We answer…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-25",
+  "updated": "2026-07-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

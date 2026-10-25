@@ -1,0 +1,22 @@
+{
+  "key": "2603.07998",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.07998",
+  "title": "Drag-Aware Aerodynamic Manipulability for Torque-Limited Redundant Multirotors: Aerodynamic Promptness based on the Symmetric Acceleration Capacity",
+  "authors": [
+    "Antonio Franchi"
+  ],
+  "summary": "Aerodynamic promptness quantifies how rotor-speed variations generate multirotor wrench variations, but its Euclidean formulation assigns the same local cost to a given rotor acceleration at every operating speed. This work develops a capacity-aware extension for redundant multirotors with arbitrary numbers of heterogeneous rotors and wrench components. Under bounded motor torque and aerodynamic drag, each generally asymmetric instantaneous rotor-acceleration interval contains a largest zero-centered subset whose radius defines the symmetric acceleration capacity (SAC). The SAC induces a…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "cs.AI",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-03-09",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

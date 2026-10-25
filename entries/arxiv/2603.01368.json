@@ -1,0 +1,19 @@
+{
+  "key": "2603.01368",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.01368",
+  "title": "Triangular cutoff threshold for the inversion walk on tournaments and the state space of restricted inversions",
+  "authors": [
+    "Jiangdong Ai"
+  ],
+  "summary": "Given a labelled tournament on $[n]$, \\emph{inverting} a vertex subset $X$ means reversing every edge with both endpoints in $X$. Alon, Powierski, Savery, Scott, and Wilmer~\\cite{AlonPowierskiSaveryScottWilmer2024} asked for the mixing time of the Markov chain that repeatedly inverts a uniformly random subset of $[n]$. We show that this \\emph{inversion walk} has a triangular cutoff threshold. Let $T(s):=\\binom{s+1}{2}$. For every integer sequence $s_n\\in[0,n]$, $$ d_n(n-s_n)\\longrightarrow \\begin{cases} 1,& T(s_n)-n\\to+\\infty, 0,& T(s_n)-n\\to-\\infty. \\end{cases} $$ Consequently, for every…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-03-02",
+  "updated": "2026-07-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

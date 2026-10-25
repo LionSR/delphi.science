@@ -1,0 +1,19 @@
+{
+  "key": "2603.16505",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.16505",
+  "title": "Clash of MINLP Relaxations: Piecewise Linear vs. Global Parabolic",
+  "authors": [
+    "Adrian Göß"
+  ],
+  "summary": "Solving mixed-integer nonlinear programs (MINLPs) typically relies on constructing relaxations that are easier to tackle than the original problem. Recently, global parabolic (PARA) relaxations were introduced, featuring separable quadratic functions -- paraboloids -- as global under- or overestimators of general nonlinear constraint functions. So far, the paraboloids are all computed at once by solving a mixed-integer linear program (MIP). For small tolerances or wide function domains, the corresponding MIP grows in size and is eventually intractable, reventing a meaningful comparison with…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-17",
+  "updated": "2026-03-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

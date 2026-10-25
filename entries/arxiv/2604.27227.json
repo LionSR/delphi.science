@@ -1,0 +1,25 @@
+{
+  "key": "2604.27227",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.27227",
+  "title": "Designing sparse temporal graphs satisfying connectivity requirements",
+  "authors": [
+    "Thomas Bellitto",
+    "Jules Bouton Popper",
+    "Justine Cauvi",
+    "Bruno Escoffier",
+    "Raphaëlle Maistre-Matus"
+  ],
+  "summary": "Connectivity of temporal graphs has been widely studied both as graph theory and as gossip theory. In particular, it is well known that in order to connect every vertex to every other, a temporal graph needs to have at least $2n-4$ edges where $n$ is the number of vertices. This paper investigates the optimal number of edges required to satisfy partial connectivity requirements. We introduce the problem of Connectivity Request Satisfaction where we are given a directed graph that we call the request graph, where an arc from $u$ to $v$ means that we need to be able to go from $u$ to $v$. Our…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

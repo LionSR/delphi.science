@@ -1,0 +1,26 @@
+{
+  "key": "2605.30253",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.30253",
+  "title": "Wasserstein Contraction of Coordinate Ascent Variational Inference",
+  "authors": [
+    "Rocco Caprio",
+    "Adrien Corenflos",
+    "Sam Power"
+  ],
+  "summary": "We study the non-asymptotic contraction in Wasserstein distance of the sequential, parallel, and random-scan coordinate ascent variational inference algorithms. This is shown to hold under a functional smoothness condition of the optimality maps and a transportation-information inequality at their fixed points. Our results are sharp and general, and as opposed to those based on global strong log-concavity assumptions, they allow for local convergence on smooth, non-smooth, and discrete manifolds, including within the context of data augmentation. We consider many applications in statistical…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.FA",
+    "math.OC",
+    "math.PR",
+    "stat.CO"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

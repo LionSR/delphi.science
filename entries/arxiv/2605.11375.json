@@ -1,0 +1,23 @@
+{
+  "key": "2605.11375",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11375",
+  "title": "TuniQ: Autotuning Compilation Passes for Quantum Workloads at Scale for Effectiveness and Efficiency",
+  "authors": [
+    "Mohammad Abrarul Hasanat",
+    "Jason Ludmir",
+    "Tirthak Patel",
+    "Rohan Basu Roy"
+  ],
+  "summary": "Quantum processors are being integrated into HPC ecosystems as co-processors, where compilation of quantum circuits into hardware-executable form determines both output fidelity and runtime. Current compilers use a fixed pass sequence and ignore the fact that optimal pass selection varies with circuit, hardware, and noise conditions. We present TuniQ, a reinforcement learning-based system that selects compilation passes at each pipeline stage, adapting to circuit, backend, and current noise profile. TuniQ introduces several novel design components like a dual-encoder for stage-aware…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

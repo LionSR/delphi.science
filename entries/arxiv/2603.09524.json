@@ -1,0 +1,20 @@
+{
+  "key": "2603.09524",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.09524",
+  "title": "A Unifying Primal-Dual Proximal Framework for Distributed Nonconvex Optimization",
+  "authors": [
+    "Zichong Ou",
+    "Jie Lu"
+  ],
+  "summary": "We consider distributed nonconvex optimization over an undirected network, where each node privately possesses its local objective and communicates exclusively with its neighboring nodes, striving to collectively achieve a common optimal solution. To handle the nonconvexity of the objective, we linearize the augmented Lagrangian function and introduce a time-varying proximal term. This approach leads to a Unifying Primal-Dual Proximal (UPP) framework that unifies a variety of existing first-order and second-order methods. Building on this framework, we further derive two specialized…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-10",
+  "updated": "2026-03-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2606.28443",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28443",
+  "title": "A New $L2-1_σ$-Interior Penalty Method for Variable-Order Time-Fractional Subdiffusion Interface Problem with Curved Interface",
+  "authors": [
+    "Hongying Huang",
+    "Chanchan Hao",
+    "Changmu Yu",
+    "Huili Zhang"
+  ],
+  "summary": "This paper treats variable-order time-fractional subdiffusion with discontinuous coefficients across a curved interface using $L2\\!-\\!1_σ$ time stepping on graded meshes and a symmetric interior penalty FEM on body-fitted meshes. Stability and optimal a priori error estimates in a discrete-in-time $L^2$ norm are established, yielding second-order temporal accuracy. While analysis typically assumes $α_n$ at $t_{n-σ_n}$ lies in the range of $α(t)$ on $[t_{n-1},t_n]$ and $α_n\\le α(t_{n-α_n/2})$, experiments indicate the second inequality can be relaxed or omitted, enabling straightforward…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-26",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

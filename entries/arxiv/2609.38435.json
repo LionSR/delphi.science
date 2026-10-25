@@ -1,0 +1,20 @@
+{
+  "key": "2609.38435",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38435",
+  "title": "Low-Rank and Lifted Semidefinite Programming for Mixed-Integer Polynomial Power Grid Optimization",
+  "authors": [
+    "Samuel Chevalier"
+  ],
+  "summary": "Can a local solver return the guaranteed globally optimal solution to a nonconvex mixed-integer polynomial power grid optimization problem? By mixing low-rank semidefinite programming (SDP) and moment-based lifting in the Lasserre hierarchy, this paper provides anecdotal evidence in the affirmative. Specifically, we iteratively tighten a moment-based relaxation of the AC Optimal Transmission Switching (AC-OTS) problem, including higher order moment-based constraints, rooted in the Lasserre hierarchy, until it is tight (i.e., primal feasible). We then re-solve this problem using a local,…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

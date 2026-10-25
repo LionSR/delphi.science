@@ -1,0 +1,21 @@
+{
+  "key": "2607.22906",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.22906",
+  "title": "Learning from the Descent Direction: Adaptive Gradient Descent under One-Sided Hölder Regularity",
+  "authors": [
+    "Arzu Ahmadova",
+    "Ismail Huseynov"
+  ],
+  "summary": "We study adaptive gradient descent for continuously differentiable, possibly nonconvex objectives under one-sided Hölder regularity. Unlike classical Hölder- or Lipschitz-gradient assumptions, which control the full gradient variation, our condition bounds only the directional term appearing in the descent inequality. This can allow less conservative step sizes when large gradient changes are orthogonal to, or favorable along, the update direction. We propose an adaptive scalar-step method based on an estimate of positive one-sided Hölder curvature, combined with a simple sufficient-decrease…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-07-24",
+  "updated": "2026-07-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

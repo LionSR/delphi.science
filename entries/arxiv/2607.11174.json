@@ -1,0 +1,20 @@
+{
+  "key": "2607.11174",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.11174",
+  "title": "Lie-Algebraic Subspace Quantization for Zero-Shot Quantum Learning and Barren-Plateau Mitigation",
+  "authors": [
+    "Yuhan Yao",
+    "Yoshihiko Hasegawa"
+  ],
+  "summary": "The barren plateau phenomenon severely limits the scalability of parameterized quantum circuits (PQCs). We present an analytical framework for zero-shot classical-to-quantum parameter transfer and manifold-based model merging without quantum-side optimization. Our parameter transfer map converts classical neural-network weights into low-dimensional quantum evolutions using Stiefel subspace selection, nearest-unitary polar projection, and logarithmic generator extraction. We prove a Subspace Quantization Theorem that bounds the reconstruction error by geometric truncation and exact…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

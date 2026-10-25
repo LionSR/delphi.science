@@ -1,0 +1,24 @@
+{
+  "key": "2606.22636",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.22636",
+  "title": "Spectral Gap for the Binary Fixed-Margin Swap Chain",
+  "authors": [
+    "Weibo Fu",
+    "Qian Qin",
+    "Guanyang Wang"
+  ],
+  "summary": "We prove an explicit spectral-gap lower bound for the lazy swap chain on binary matrices with prescribed row and column sums. This chain is a standard sampler for fixed-margin null models in ecology, statistics, and network analysis. Kannan, Tetali, and Vempala (KTV) conjectured that it mixes rapidly for all feasible margins \\citep{kannan1997simple}. We show that for every feasible set of margins on an $m\\times n$ binary matrix, the lazy swap chain has spectral gap at least $$\\binom{m}{2}^{-1}\\binom{n}{2}^{-1}.$$ The bound is tight in the worst case. Thus, our result proves this KTV…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.DS",
+    "math.CO",
+    "stat.CO"
+  ],
+  "published": "2026-06-21",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

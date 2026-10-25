@@ -1,0 +1,21 @@
+{
+  "key": "2608.12838",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.12838",
+  "title": "Weighted Nuclear Elastic Net Estimation of (Near-) Low-Rank Drift Matrices in Ornstein-Uhlenbeck Processes",
+  "authors": [
+    "Dmytro Marushkevych",
+    "Francisco Pina",
+    "Mark Podolskij"
+  ],
+  "summary": "We study estimation of the drift matrix in a continuously observed high-dimensional Ornstein-Uhlenbeck process when the drift is exactly or approximately low rank. In this setting, exact low rank induces non-stable directions and hence a non-ergodic regime, resulting in a poorly conditioned empirical covariance matrix. To address this difficulty, we introduce a Weighted Nuclear Elastic Net Estimator that combines ridge regularization with a nuclear-norm penalty expressed in the empirical likelihood geometry. Under a general diagonalizable spectral framework, we establish oracle inequalities…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

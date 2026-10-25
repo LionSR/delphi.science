@@ -1,0 +1,21 @@
+{
+  "key": "2604.06094",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.06094",
+  "title": "Pixel-Translation-Equivariant Quantum Convolutional Neural Networks via Fourier Multiplexers",
+  "authors": [
+    "Dmitry Chirkov",
+    "Igor Lobanov"
+  ],
+  "summary": "Convolutional neural networks owe much of their success to hard-coding translation equivariance. Quantum convolutional neural networks (QCNNs) have been proposed as near-term quantum analogues, but the relevant notion of translation depends on the data encoding. For address/amplitude encodings such as FRQI, a pixel shift acts as modular addition on an index register, whereas many MERA-inspired QCNNs are equivariant only under cyclic permutations of physical qubits. We formalize this mismatch and construct QCNN layers that commute exactly with the pixel cyclic shift (PCS) symmetry induced by…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-04-07",
+  "updated": "2026-04-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

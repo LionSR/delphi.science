@@ -1,0 +1,22 @@
+{
+  "key": "2605.03617",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.03617",
+  "title": "Pressure-equilibrium-preserving and fully conservative discretization of compressible flow equations for real and thermally perfect gases",
+  "authors": [
+    "Gennaro Coppola",
+    "Alessandro Aiello",
+    "Carlo De Michele"
+  ],
+  "summary": "Numerical simulations of compressible real-fluid flows are notoriously plagued by spurious pressure oscillations arising in regions of abrupt flow variations. As a possible remedy, several numerical formulations enforce the pressure equilibrium condition for the compressible Euler equations, typically at the cost of spoiling the correct conservation of total energy or by overspecifying the thermodynamical variables. This study proposes for the first time a numerical discretization procedure which is able to discretely preserve the full conservation of the linear invariants (mass, momentum…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math.NA"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

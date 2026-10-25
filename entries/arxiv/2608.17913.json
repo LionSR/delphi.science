@@ -1,0 +1,21 @@
+{
+  "key": "2608.17913",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17913",
+  "title": "Where Atom Loss Lands Matters: Decoder-Aware Risk Deposition in Neutral-Atom QEC",
+  "authors": [
+    "Xinyi Li",
+    "Yifeng Peng",
+    "Ying Wang"
+  ],
+  "summary": "Neutral-atom arrays are emerging as a leading platform for scalable quantum error correction (QEC). Qubits are routed and reused across the array, while detected loss is reported to the decoder as erasure information. Existing neutral-atom compilers optimize this movement, including routing, shuttling, and reuse, and often model loss through scalar exposure costs. Yet total exposure is an incomplete statistic for erasure-corrected QEC. It captures how much loss occurs, but not where it lands on the code, which we call its deposition. Under the same expected atom-loss budget, different…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

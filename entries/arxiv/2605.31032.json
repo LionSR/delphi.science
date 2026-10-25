@@ -1,0 +1,22 @@
+{
+  "key": "2605.31032",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.31032",
+  "title": "On the Application of Hybrid Mixed Domain Decomposition Methods to Permanent Magnet Synchronous Machines",
+  "authors": [
+    "Timon Seibel",
+    "Sebastian Schöps",
+    "Kersten Schmidt"
+  ],
+  "summary": "In this work, we study the application of a hybrid mixed domain decomposition(HMDD) method for the rotor-stator coupling of a permanent magnet synchronous machine. For this, we derive a variational formulation on the electric machine inspired by hybridized discontinuous Galerkin methods using a mixed magnetostatics problem, an affine material law and boundary conditions respecting the symmetry of the motor. We are then able to locate the resulting finite element method within the HMDD framework. This enables us naturally to transfer the well-posedness results and error estimates for the HMDD…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math.NA"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

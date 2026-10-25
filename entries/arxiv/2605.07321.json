@@ -1,0 +1,26 @@
+{
+  "key": "2605.07321",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.07321",
+  "title": "TREA: Low-precision Time-Multiplexed, Resource-Efficient Edge Accelerator for Object Detection and Classification",
+  "authors": [
+    "Vijay Pratap Sharma",
+    "Mukul Lokhande",
+    "Ratko Pilipovic",
+    "Omkar Kokane",
+    "Santosh Kumar Vishvakarma"
+  ],
+  "summary": "This work presents TREA, a low-precision time-multiplexed and resource-efficient edge-AI accelerator for object detection and classification, targeting stringent area-power-latency constraints of edge vision platforms. The proposed architecture integrates a dual-precision (4/8-bit) SIMD multiply-accumulate (DQ-MAC) unit based on most-significant-digit-first (MSDF) shift-and-add computation with run-time bit truncation, eliminating conventional multiplier overhead and reducing accumulator bit-width. The DQ-MAC supports 4x FxP4 or 1x FxP8 operations per cycle, achieving up to 4x throughput…",
+  "domain": "cs.AR",
+  "tags": [
+    "cs.AR",
+    "cs.DC",
+    "eess.IV",
+    "math.NA"
+  ],
+  "published": "2026-05-08",
+  "updated": "2026-05-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

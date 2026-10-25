@@ -1,0 +1,23 @@
+{
+  "key": "2609.23170",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.23170",
+  "title": "Conformal Robustness in Prediction-Driven Decision-Making",
+  "authors": [
+    "Lingjie Zhao",
+    "Hansheng Jiang",
+    "Wei Qi"
+  ],
+  "summary": "Modern prediction-driven decision systems often rely on black-box predictors, but a point forecast alone does not provide the uncertainty scale required for robust downstream decision-making. We build a score-calibrated robustness framework that converts any fixed point predictor into a decision-relevant uncertainty representation through distribution-free conformal calibration. We use the conformal score, rather than a particular uncertainty set, as the primitive unit of robustness. The same score determines coverage-calibrated uncertainty sets for reliability-based robust optimization and…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-09-19",
+  "updated": "2026-09-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

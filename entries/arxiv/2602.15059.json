@@ -1,0 +1,24 @@
+{
+  "key": "2602.15059",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.15059",
+  "title": "Certified Reduced-Order Surrogates and Stability Margins in Viscous Incompressible Flow and Fluid--Structure Interaction",
+  "authors": [
+    "Chandrasekhar Gokavarapu",
+    "Naveen Kumar Kakumanu",
+    "Anjali Datla",
+    "Githa Harshitha Noolu"
+  ],
+  "summary": "Let $(u,p)$ solve the incompressible Navier--Stokes equations in a regime in which an energy inequality is available and each constant in that inequality is computable from declared data. We construct a reduced-order model $u_n$ constrained so that its discrete evolution satisfies a certified energy inequality. This certificate yields global-in-time boundedness of the ROM energy and a regime-of-validity test that fails when a stated hypothesis fails. It follows that one can attach a computable residual functional $\\mathcal{R}_n$ to the ROM trajectory. We prove an a posteriori bound of the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.AP",
+    "math.RA"
+  ],
+  "published": "2026-02-13",
+  "updated": "2026-02-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

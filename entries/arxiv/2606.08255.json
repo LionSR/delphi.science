@@ -1,0 +1,20 @@
+{
+  "key": "2606.08255",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.08255",
+  "title": "Exactness Certificates for Closed-Form CBF Safety-Filter Projections",
+  "authors": [
+    "Ankit Goel"
+  ],
+  "summary": "For control-affine systems, standard and high-order control barrier function conditions are affine in the control input and are commonly enforced through quadratic-program-based safety filters. Although convex, these optimization problems may be undesirable in embedded, high-rate, or resource-limited implementations. This letter characterizes when the corresponding Euclidean projection can be recovered from the affine inequalities violated by a nominal control input. Given a nominal input, we form the violated set and compute the minimum-norm correction that enforces the violated…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-06-06",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

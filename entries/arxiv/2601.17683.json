@@ -1,0 +1,20 @@
+{
+  "key": "2601.17683",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.17683",
+  "title": "Composite Adaptive Control Barrier Functions for Safety-Critical Systems with Parametric Uncertainty",
+  "authors": [
+    "Mohammadreza Kamaldar"
+  ],
+  "summary": "Control barrier functions guarantee safety but require accurate system models; parametric uncertainty invalidates these guarantees. Existing robust methods maintain safety via worst-case bounds at the cost of performance, while modular learning schemes decouple estimation from safety and risk constraint violations during transients. This paper presents the composite adaptive control barrier function (CaCBF) algorithm for nonlinear control-affine systems with linear parametric uncertainty. The adaptation law is derived from a composite energy function integrating a logarithmic safety barrier,…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-01-25",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

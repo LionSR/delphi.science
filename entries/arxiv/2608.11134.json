@@ -1,0 +1,22 @@
+{
+  "key": "2608.11134",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.11134",
+  "title": "Mastering Stochastic OLG Models in Continuous Time",
+  "authors": [
+    "Yves Achdou",
+    "Johannes Brumm",
+    "Lukas Frank"
+  ],
+  "summary": "We propose a comprehensive framework for solving overlapping-generations (OLG) models in continuous time with both idiosyncratic and aggregate risk. Our general characterization of equilibrium through the master equation operates on the joint distribution over the continuous idiosyncratic states, age and wealth. Our computational strategy is to take a finite-dimensional representation of this distribution as an input of a neural net which in turn outputs a finite-difference representation of the (conditional) value function. This idea can be applied generally to heterogeneous agent models…",
+  "domain": "econ.GN",
+  "tags": [
+    "econ.GN",
+    "math.OC"
+  ],
+  "published": "2026-08-11",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

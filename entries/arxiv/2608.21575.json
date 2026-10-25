@@ -1,0 +1,21 @@
+{
+  "key": "2608.21575",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.21575",
+  "title": "A Data-Driven Computational Framework for Incompressible Flow in Hydraulic Networks",
+  "authors": [
+    "Pedro B. Bazon",
+    "Cristian G. Gebhardt",
+    "Roberto F. Ausas"
+  ],
+  "summary": "The classical procedure for solving hydraulic networks relies on the assumption of constitutive equations, which state the relationship between the pressure gradient and fluxes along an edge. In this paper, we propose a data-driven framework that bypasses these constitutive models, formulating the incompressible flow problem directly on the graph topology. By assigning discrete measured data points to network edges, the problem is cast as a mixed-integer quadratic optimization over nodal pressures, edgewise states, and data assignments, accommodating both laminar (convex) and turbulent…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-21",
+  "updated": "2026-08-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

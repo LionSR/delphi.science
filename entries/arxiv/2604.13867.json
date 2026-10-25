@@ -1,0 +1,30 @@
+{
+  "key": "2604.13867",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.13867",
+  "title": "Robust parameter inference for Taiji via time-frequency contrastive learning and normalizing flows",
+  "authors": [
+    "Tian-Yang Sun",
+    "Bo Liang",
+    "Ji-Yu Song",
+    "Song-Tao Liu",
+    "Shang-Jie Jin",
+    "He Wang",
+    "Ming-Hui Du",
+    "Jing-Fei Zhang",
+    "Xin Zhang"
+  ],
+  "summary": "Transient noise artifacts, commonly referred to as glitches, pose a major challenge to parameter inference for space-based gravitational-wave (GW) observations. We develop a glitch-robust amortized inference framework for massive black hole binaries in the Taiji detector configuration by combining conditional normalizing flows, a time-frequency multimodal fusion encoder, and contrastive learning. To enable large-scale training on contaminated data, we further introduce a neural glitch generator that produces high-fidelity synthetic transients at substantially reduced computational cost.…",
+  "domain": "gr-qc",
+  "tags": [
+    "gr-qc",
+    "astro-ph.CO",
+    "hep-ph",
+    "hep-th"
+  ],
+  "published": "2026-04-15",
+  "updated": "2026-04-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,36 @@
+{
+  "key": "2610.00469",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00469v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00469v1",
+  "title": "A truncated theta-type series with triangular weights",
+  "authors": [
+    "Manjil Saikia"
+  ],
+  "summary": "Merca (2026) recently introduced the two-block odd partition function $a(n)$, proved that its generating function factors as $A(q)=P(q)S(q)$, where $P(q)$ is the generating function of partitions whose odd parts are distinct and whose even parts are unrestricted and $S(q)$ is a theta-type series with triangular-number weights, and conjectured that for $N\\equiv1,2\\pmod 4$ the truncation $P(q)S_N(q)$ of this product has nonnegative coefficients, positive from $q^{3}$ onward. We prove the conjecture in the stronger form $P(q)S_N(q)-A(q)\\in\\NN[[q]]$.",
+  "domain": "math.NT",
+  "tags": [
+    "math.CO",
+    "msc:11P81",
+    "msc:05A17",
+    "msc:05A20",
+    "msc:11P84",
+    "msc:11B65"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "version": 1,
+  "ai_models": [
+    "Claude Fable",
+    "ChatGPT",
+    "Mathematica"
+  ],
+  "authorship": "mixed",
+  "human_understanding": "all",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

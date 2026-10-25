@@ -1,0 +1,22 @@
+{
+  "key": "2606.16575",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.16575",
+  "title": "RepNN: Tackling spectral bias in deep neural networks for regression and PDE problems via parameter reparameterization",
+  "authors": [
+    "Yong Wang",
+    "Tao Zhou",
+    "Xuhui Meng"
+  ],
+  "summary": "Deep neural networks (DNNs) have achieved remarkable success in scientific computing, yet they often suffer from spectral bias in capturing oscillatory and multiscale behaviors. In this study, we investigate this limitation by examining the failure of shallow ReLU neural networks in fitting high-frequency functions. This observation identifies two important factors in resolving rapid oscillations: the initial slope scale and the distribution of partition points induced by the networks. Motivated by this analysis, we propose RepNN, a reparameterized neural network model with ReLU or tanh…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math-ph"
+  ],
+  "published": "2026-06-15",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

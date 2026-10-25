@@ -1,0 +1,21 @@
+{
+  "key": "2605.25544",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.25544",
+  "title": "A semi-implicit two dimensional solver for a covariant formulation of the shallow water equations",
+  "authors": [
+    "Maurizio Tavelli",
+    "Olindo Zanotti"
+  ],
+  "summary": "In this paper we combine a flexible covariant formulation of the shallow water equations with the semi-implicit numerical scheme developed over the years by Casulli and collaborators. After adopting an orthogonal, but non-orthonormal, coordinate basis on two dimensional manifolds, and by writing the divergence of symmetric tensors in a way that avoids the introduction of Christoffel symbols, the shallow water equations preserve a very close resemblance to the usual one expressed in Cartesian coordinates. In this way, a stable semi-implicit scheme can be derived by using an implicit…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math.NA"
+  ],
+  "published": "2026-05-25",
+  "updated": "2026-05-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

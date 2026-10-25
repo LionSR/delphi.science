@@ -1,0 +1,19 @@
+{
+  "key": "2608.19832",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19832",
+  "title": "Sharp Convex Concentration for Symmetric Random Tensors with Subgaussian Coordinates",
+  "authors": [
+    "Xuanang Hu"
+  ],
+  "summary": "Let $X=(X_1,\\ldots,X_n)$ have independent coordinates with mean zero, variance one, and $\\|X_i\\|_{ψ_2}\\le K$, and let $H_d=(\\mathbb R^n)^{\\otimes_2 d}$. Let $L>0$ and let $f:H_d\\to\\mathbb R$ be convex and $L$-Lipschitz. We prove that, for $0\\le t\\le c_KLn^{d/2}$, \\[ \\textsf{P}\\left\\{ \\left\\lvert f(X^{\\otimes d})-\\textsf{E}f(X^{\\otimes d})\\right\\rvert >t \\right\\} \\le C\\exp\\left[-c_K\\mathcal I_{n,d}\\left( \\frac{t}{L n^{(d-1)/2}} \\right)\\right], \\] where \\[ \\mathcal I_{n,d}(s)= \\min\\left\\{ \\frac{s^2}{d^2}, \\frac{s^2}{d\\log(e+nd/s^2)} \\right\\},\\qquad s>0, \\qquad \\mathcal I_{n,d}(0)=0. \\] The…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-08-20",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2609.39242",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.39242",
+  "title": "A differentiability framework for zigzag persistent homology via linear interpolation",
+  "authors": [
+    "Enrico Maria Ferrari",
+    "Clemens Bannwart",
+    "Matteo Biagetti"
+  ],
+  "summary": "Persistent homology can be differentiated and incorporated into learning pipelines, but no analogous framework exists for zigzag persistence, which is needed when the underlying topological structure evolves non-monotonically over time. We develop such a framework for sequences of simplicial complexes obtained by thresholding time-dependent filtering values on a fixed complex. By assigning persistence diagram endpoints the real-valued times at which linearly interpolated filtering values cross the threshold, we transfer the continuity of the filtering values to the diagram points. This…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.CG",
+    "math.AT"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

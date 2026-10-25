@@ -1,0 +1,23 @@
+{
+  "key": "2609.22143",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.22143",
+  "title": "Using Composition Operators to Linearize LLM Semantic Transformations",
+  "authors": [
+    "Afjal Chowdhury",
+    "James Chen",
+    "Alan Edelman"
+  ],
+  "summary": "Machine learning learns functions: prompt to response, image to caption. What these functions are mathematically remains hard to say. We present a method to approximate these kinds of transformations using techniques from dynamical systems that fall under the umbrella of Koopmanism. We introduce the use of composition operators, which generalize the Koopman operator and, crucially, can map between distinct spaces, motivating the perspective that LLM transformations are rectangular infinite-dimensional operators. This formalism reveals useful structure: under natural assumptions on the prompt…",
+  "domain": "cs.CL",
+  "tags": [
+    "cs.CL",
+    "cs.LG",
+    "math.FA"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

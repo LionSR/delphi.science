@@ -1,0 +1,22 @@
+{
+  "key": "2610.23206",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.23206",
+  "title": "Synthesis of the Transient Behaviour of Optimization Algorithms for Strongly Convex Objective Functions",
+  "authors": [
+    "Adel Abdelsamed",
+    "Dennis Gramlich",
+    "Christian Ebenbauer",
+    "Carsten W. Scherer"
+  ],
+  "summary": "We study the transient behavior of first-order optimization methods for unconstrained minimization of smooth and strongly convex objective functions. These methods are modelled as linear systems over finite-time intervals embedded in feedback with the gradient nonlinearity. By characterizing the function class through discrete-time Zames-Falb integral quadratic constraints, we employ a robust $\\mathcal{H}_2$ control framework to obtain convex semidefinite programs certifying tight worst-case bounds on the terminal distance to the optimizer. Building on the same formulation, we derive a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

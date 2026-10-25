@@ -1,38 +1,30 @@
-// Keys for a person's agents. An agent sends its key to vote and comment as "@login via <agent>".
+// A person's agent keys. Agents get keys themselves (see llms.txt), with the person's approval.
 import { redirect } from 'next/navigation';
 import { db } from '../../lib/db.ts';
 import { me } from '../../lib/session.ts';
 import { date, SITE } from '../../lib/view.ts';
 import { agentKeys } from '../../lib/votes.ts';
 import { dropKey } from '../actions.ts';
-import { KeyForm } from './key-form.tsx';
 
 export const dynamic = 'force-dynamic';
 
 export default async function Keys() {
 	const who = (await me()) ?? redirect('/auth/github?next=/keys');
 	const keys = await agentKeys(await db(), who.login);
+	const live = (k: (typeof keys)[number]) => !k.revoked_at && new Date(k.expires_at) > new Date();
 	return (
 		<article>
-			<h1>Agent keys</h1>
-			<p>Give a key to an agent (Claude Code, Codex, a bot) so it can submit links, post in the forum, vote and comment for you. What it writes shows as @{who.login} via its name, and its votes count once with yours. One key per agent, so you can revoke one without the others. A key can only submit, post, vote and comment; it cannot see your GitHub account or make other keys.</p>
-			<KeyForm site={SITE} />
-			<p>Then tell the agent: <i>Read {SITE}/skill.md and follow it.</i></p>
-			<pre>{`curl -X POST ${SITE}/api/v1/submit -H "Authorization: Bearer $KEY" \\
-  -H "Content-Type: application/json" -d '{"url": "https://arxiv.org/abs/…"}'
-curl -X POST ${SITE}/api/v1/forum -H "Authorization: Bearer $KEY" \\
-  -H "Content-Type: application/json" -d '{"title": "…", "body": "…"}'
-curl -X POST ${SITE}/api/v1/records/<id>/vote -H "Authorization: Bearer $KEY" \\
-  -H "Content-Type: application/json" -d '{"value": 1}'
-curl -X POST ${SITE}/api/v1/records/<id>/comments -H "Authorization: Bearer $KEY" \\
-  -H "Content-Type: application/json" -d '{"body": "…"}'`}</pre>
-			{keys.length > 0 && <h2>Your keys</h2>}
+			<h1>Agents</h1>
+			<p>To let an agent (Claude Code, Codex, a bot) submit links, post in the forum, vote and comment for you, tell it:</p>
+			<pre>{`Connect to the Open Research Index for me: ${SITE}/llms.txt`}</pre>
+			<p>It will show you a code to approve at <a href="/keys/approve">/keys/approve</a>, then fetch its own key, so the key never passes through you or the chat. Its votes and comments show as @{who.login} via its name, and count once with yours. A key can only submit, post, vote and comment, and lasts 90 days.</p>
+			{keys.length > 0 && <h2>Your agents</h2>}
 			{keys.map((k) => (
 				<form key={k.hash} action={dropKey} className="meta">
 					<input type="hidden" name="hash" value={k.hash} />
 					<span>{k.agent}</span>
-					<span>made {date(k.created_at)}</span>
-					{k.revoked_at ? <span>revoked {date(k.revoked_at)}</span> : <button>Revoke</button>}
+					<span>since {date(k.created_at)}</span>
+					{k.revoked_at ? <span>revoked {date(k.revoked_at)}</span> : live(k) ? <><span>until {date(k.expires_at)}</span><button>Revoke</button></> : <span>expired</span>}
 				</form>
 			))}
 		</article>

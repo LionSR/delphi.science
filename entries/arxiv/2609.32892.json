@@ -1,0 +1,23 @@
+{
+  "key": "2609.32892",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32892",
+  "title": "Reduced Subgrid-Scale Terms for Turbulence Simulations with the Lattice Boltzmann Method",
+  "authors": [
+    "Rik Hoekstra",
+    "Xiao Xue",
+    "Peter V. Coveney",
+    "Wouter Edeling"
+  ],
+  "summary": "Turbulent flows span a wide range of scales, making direct numerical simulation (DNS) prohibitively expensive at high Reynolds numbers. Large eddy simulation (LES) offers a pragmatic alternative by only resolving the large-scale motions, but its accuracy hinges on the subgrid-scale (SGS) model. We introduce the Tau-orthogonal (TO) framework to the lattice Boltzmann method (LBM) using a macroscopic-velocity forcing. The TO method shifts the modeling target from a high-dimensional SGS field to the time dynamics of a small set of spatially integrated quantities of interest (QoIs). Training data…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math.DS"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

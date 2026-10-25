@@ -1,0 +1,26 @@
+{
+  "key": "2604.15094",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.15094",
+  "title": "QLLVM: A Scalable Quantum-Classical Co-Compilation Framework based on LLVM",
+  "authors": [
+    "Yu Zhu",
+    "Qiming Du",
+    "Yuqiong Jin",
+    "Woji He",
+    "Hang Lian",
+    "Xin Zhou",
+    "Jinchen Xu",
+    "Zheng Shan"
+  ],
+  "summary": "To address the urgent need in the NISQ era for high-performance, scalable quantum compilers and to advance the integration of classical and quantum computing, we present QLLVM, an advanced Quantum-Classical co-compilation framework built on LLVM. To our knowledge, QLLVM delivers an end-to-end, LLVM-based compilation workflow that unifies the build of classical high-performance programs, including CUDA, MPI, and C++, together with quantum programs into a single executable. For quantum program compilation, QLLVM adopts a three-stage design: high-level optimizations are implemented in the MLIR…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-16",
+  "updated": "2026-04-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

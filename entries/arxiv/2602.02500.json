@@ -1,0 +1,27 @@
+{
+  "key": "2602.02500",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.02500",
+  "title": "IFNSO: Iteration-Free Newton-Schulz Orthogonalization",
+  "authors": [
+    "Chen Hu",
+    "Qianxi Zhao",
+    "Xiaochen Yuan",
+    "Hong Zhang",
+    "Ding Yuan",
+    "Yanbin Wu",
+    "Xiying Li"
+  ],
+  "summary": "The Newton-Schulz (NS) iteration has become a key technique for orthogonalization in optimizers such as Muon and for optimization on the Stiefel manifold. Despite its effectiveness, the conventional NS iteration incurs significant computational overhead due to repeated high-dimensional matrix multiplications. To overcome these limitations, we propose Iteration-Free Newton-Schulz Orthogonalization (IFNSO), a novel framework that consolidates the traditional iterative structure into a unified and Iteration-Free formulation. By analyzing the contribution of individual matrix powers, we…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.NA"
+  ],
+  "published": "2026-01-18",
+  "updated": "2026-03-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

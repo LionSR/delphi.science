@@ -1,0 +1,21 @@
+{
+  "key": "2609.17096",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.17096",
+  "title": "A Reynolds-Semi-Robust, Globally Divergence-Free E-HDG/IMEX-SAV Method for Variational Initial-State Data Assimilation of the Navier-Stokes Equations",
+  "authors": [
+    "Ya Min",
+    "Xian Zhang",
+    "Xiaoping Xie"
+  ],
+  "summary": "This paper develops an embedded-hybridized discontinuous Galerkin (E-HDG) method combined with a first-order implicit-explicit scalar auxiliary variable (IMEX-SAV) time discretization for variational initial-state data assimilation governed by the unsteady incompressible Navier-Stokes equations. We adopt an optimize-then-discretize strategy. The spatial discretization uses discontinuous piecewise polynomials of degrees $k$ and $k-1$ for the element velocity and pressure, respectively, a continuous degree-$k$ velocity trace, and a discontinuous degree-$k$ pressure trace. The resulting state…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

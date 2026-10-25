@@ -1,0 +1,22 @@
+{
+  "key": "2601.07025",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.07025",
+  "title": "A Relaxed Direct-insertion Downscaling Method For Discrete-in-time Data Assimilation",
+  "authors": [
+    "Emine Celik",
+    "Eric Olson"
+  ],
+  "summary": "This paper improves the spectrally-filtered direct-insertion downscaling method for discrete-in-time data assimilation by introducing a relaxation parameter that overcomes a constraint on the observation frequency. Numerical simulations demonstrate that taking the relaxation parameter proportional to the time between observations allows one to vary the observation frequency over a wide range while maintaining convergence of the approximating solution to the reference solution. Under the same assumptions we analytically prove that taking the observation frequency to infinity results in the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.AP",
+    "math.DS"
+  ],
+  "published": "2026-01-11",
+  "updated": "2026-01-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

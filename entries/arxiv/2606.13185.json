@@ -1,0 +1,20 @@
+{
+  "key": "2606.13185",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.13185",
+  "title": "Lyapunov Stability and Optimal Error Estimates for an SIPG Method for Weakly Damped Semilinear Wave Equations",
+  "authors": [
+    "Ajeet Singh",
+    "Abhinav Jha"
+  ],
+  "summary": "We develop and analyze a fully discrete scheme for the weakly damped semilinear wave equation that combines a Symmetric Interior Penalty Discontinuous Galerkin (SIPG) spatial discretization with a hybrid Crank--Nicolson/second-order Backward Differentiation Formula (CN--BDF2) time integrator. A chord-slope linearization of the nonlinear reaction term is employed, which preserves an exact discrete gradient structure and, crucially, requires {no global Lipschitz continuity assumption} on the nonlinearity. Stability of the fully discrete solution is established through a Lyapunov-based…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

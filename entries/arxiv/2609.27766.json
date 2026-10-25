@@ -1,0 +1,23 @@
+{
+  "key": "2609.27766",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.27766",
+  "title": "Type-II Error Bounds for Test Supermartingales from Lower-Tail Hypotheses",
+  "authors": [
+    "Patrick Forré"
+  ],
+  "summary": "In safe hypothesis testing with test supermartingals, Ville's inequality provides anytime-valid type-I error guarantees for every significance level $α\\in(0,1]$, if one rejects the null hypothesis whenever the wealth process first exceeds $\\frac{1}α$. Due to an inherent asymmetry, the type-II error does not have such guarantees: a heavy concentration of the probability on the lower tail of the log-increments can lead to one catastrophic bet that undoes any amount of accumulated evidence. This paper studies how different hypotheses on those lower-tail probabilities lead to different bounds on…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.IT",
+    "cs.LG",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-08-19",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

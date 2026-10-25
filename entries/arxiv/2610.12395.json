@@ -1,0 +1,25 @@
+{
+  "key": "2610.12395",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.12395",
+  "title": "A neural characteristic mapping method: Lagrangian PINNs based on flow maps for transport-dominated problems",
+  "authors": [
+    "Martin Campos Pinto",
+    "Victor Fournet",
+    "Emmanuel Franck",
+    "Philipp Krah",
+    "Victor Michel-Dansac"
+  ],
+  "summary": "We propose a novel numerical method for transport-dominated problems using Physics-Informed Neural Networks (PINNs). In such problems, the solution can develop large gradients and fine structures over time. This is particularly challenging for classical PINNs, which represent the solution itself. In our approach, rather than the solution, we choose to approximate the flow map of the equation. The solution is then recovered by pulling back the exact initial condition, so that its fine structures are produced by the map rather than represented by the network. Our method is constructed by…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph",
+    "physics.plasm-ph"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

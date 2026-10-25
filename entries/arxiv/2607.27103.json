@@ -1,0 +1,23 @@
+{
+  "key": "2607.27103",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.27103",
+  "title": "Numerical approach to the London Equation of superconductivity",
+  "authors": [
+    "Nicolás Barnafi",
+    "Ignacio Labarca-Figueroa",
+    "Carlos Román"
+  ],
+  "summary": "In this work, we propose a general discretization strategy for solving the London equation for type-II superconductors in the whole space $\\mathbb{R}^3$. To compute the magnetic field $H_0$, we reformulate the problem for the magnetic potential as a transmission problem and discretize it through a nonstandard FEM-BEM coupling. This formulation accounts for both the bounded interior domain and the unbounded exterior domain without introducing an artificial truncation. We then compute the vector field $B_0$, which arises from the Helmholtz-Hodge decomposition of the magnetic potential in the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math-ph",
+    "math.AP"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

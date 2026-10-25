@@ -1,0 +1,22 @@
+{
+  "key": "2609.17137",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.17137",
+  "title": "Latent Inversion of Material Coefficients from Boundary Data via Finite Tests and Neural Surrogates",
+  "authors": [
+    "Erik Burman",
+    "Mats G. Larson",
+    "Karl Larsson",
+    "Jonatan Vallin"
+  ],
+  "summary": "We reconstruct a spatially varying material coefficient in a scalar elliptic equation from finitely many boundary excitations, each producing a full Dirichlet trace. To mitigate the ill-posedness and the cost of repeated PDE solves, we restrict the coefficient to a low-dimensional family, specified analytically or learned from samples, and solve the inverse problem in its latent coordinates. We consider a \\(C^1\\) parametrization with \\(m\\) latent coordinates and full-rank derivative at a reference point. If the continuous linearized Neumann-to-Dirichlet map is injective on the corresponding…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

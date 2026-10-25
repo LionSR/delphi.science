@@ -1,0 +1,22 @@
+{
+  "key": "2603.08220",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.08220",
+  "title": "Caveats on formulating finite elasto-plasticity in curvilinear coordinates",
+  "authors": [
+    "Giuliano Pretti",
+    "Robert E. Bird",
+    "William M. Coombs",
+    "Charles E. Augarde"
+  ],
+  "summary": "Tensor analysis provides a frame-invariant foundation for continuum mechanics, yet numerical implementations rely on matrix representations expressed in user-selected bases. When these bases are non-Cartesian and non-orthonormal, additional terms arise that are normally absent or implicit in Cartesian formulations. Using cavity expansion as an initial model problem, this paper clarifies the roles of the deformation gradient, Jacobian, and shifter in finite-strain kinematics under axisymmetry. These quantities, typically straightforward in Cartesian frames, require more careful treatment in…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-09",
+  "updated": "2026-03-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

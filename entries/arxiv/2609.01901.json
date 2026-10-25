@@ -1,0 +1,21 @@
+{
+  "key": "2609.01901",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.01901",
+  "title": "Need One Bell-pair Only (NOBOL) for Low-Overhead Fault-Tolerant Quantum Computing",
+  "authors": [
+    "Sean Grzenda",
+    "Shahram Babaie",
+    "Chunming Qiao"
+  ],
+  "summary": "Fault-tolerant quantum computation fundamentally relies on encoding a logical qubit into a structured block of physical qubits, typically in the tens to hundreds. As a trade-off for improved fault-tolerance, logical gate operations will incur a linear overhead in terms of both the amount of time and quantum resources than before. For example, in monolithic quantum computing, performing a gate operation on two distant logical qubits will first require using a linear number of SWAP operations in order to move the logical qubits next to each other; while in distributed quantum computing, doing…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-01",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

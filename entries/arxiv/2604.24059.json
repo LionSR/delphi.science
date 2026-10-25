@@ -1,0 +1,23 @@
+{
+  "key": "2604.24059",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.24059",
+  "title": "Beyond Monolithic Scaling: Modularity and Heterogeneity as an Architectural Imperative for Utility-Scale Quantum Computing",
+  "authors": [
+    "Bo Fan",
+    "Renzhou Fang",
+    "Yuntao Zhang",
+    "Xiaolong Yuan",
+    "Dafa Zhao"
+  ],
+  "summary": "Scalable quantum computing is fundamentally bottlenecked not by qubit count or fabrication yield, but by a rigid temporal mismatch: macroscopic classical coordination latency ($τ_c$) inevitably grows with system diameter, while microscopic quantum coherence ($τ_q$) remains strictly bounded. Beyond a critical scale, this mismatch breaches the classical control light cone, triggering a superlinear geometric penalty ($ε> 0$) that renders monolithic synchronization physically impossible. We formalize the resulting structural phase transition through a governing scaling law, $1+ε> γ$, which…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

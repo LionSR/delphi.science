@@ -1,0 +1,20 @@
+{
+  "key": "2609.19567",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.19567",
+  "title": "An interior penalty nonconforming finite element method for strain gradient elasticity",
+  "authors": [
+    "Xuehai Huang",
+    "Zheqian Tang"
+  ],
+  "summary": "An interior penalty nonconforming finite element method is developed for a strain gradient elasticity (SGE) model in arbitrary dimensions, using an $H^1$-nonconforming displacement element built from vector-valued quadratic polynomials enriched by divergence-free face bubbles. Rigorous analysis establishes optimal and robust error estimates with respect to both the Lamé coefficient $λ$ and the size parameter $ι$. The underlying divergence-commuting structure further leads to nonconforming finite element Stokes complexes in two and three dimensions. Numerical experiments support the predicted…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

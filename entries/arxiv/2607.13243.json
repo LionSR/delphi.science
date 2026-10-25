@@ -1,0 +1,22 @@
+{
+  "key": "2607.13243",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.13243",
+  "title": "MCMC Methods for Parameter Inference in Structurally Nonidentifiable Models",
+  "authors": [
+    "Xuyuan Wang",
+    "Donglin Han",
+    "Michael Y. Li"
+  ],
+  "summary": "We consider the problem of parameter inference for ordinary differential equation (ODE) models with structural non-identifiability. Such models arise in a wide range of scientific fields, including control theory, systems biology, and public health. Structural non-identifiability occurs when distinct parameter values provide identical model outputs, resulting in lower-dimensional manifolds of observationally equivalent solutions in the parameter space. This poses challenges for Bayesian inference and Markov chain Monte Carlo (MCMC) methods, often leading to poor mixing and slow convergence.…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.NA"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

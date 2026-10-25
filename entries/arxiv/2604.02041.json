@@ -1,0 +1,20 @@
+{
+  "key": "2604.02041",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.02041",
+  "title": "Stable Hermite transforms via the Golub-Welsch algorithm",
+  "authors": [
+    "Marcus Webb",
+    "Georg Maierhofer"
+  ],
+  "summary": "We introduce an efficient stable algorithm for transforms associated with expansions in Hermite functions interpolated at Hermite polynomial roots. The Hermite transform matrix can be factorised into a diagonal component and an orthogonal matrix, leading to a form which allows both the forward and inverse Hermite transforms to be computed stably. Our novel algorithm computes this factorisation based on the eigendecomposition of the Jacobi matrix associated with Hermite functions. Through numerical experiments, we demonstrate the stability and efficiency gains of this novel method over prior…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-02",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

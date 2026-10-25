@@ -1,0 +1,20 @@
+{
+  "key": "2602.10628",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.10628",
+  "title": "Queues with Rechargeable Servers",
+  "authors": [
+    "Eliezer Fuentes-Quezada",
+    "Jamol Pender"
+  ],
+  "summary": "We introduce an Erlang-S$^*$ queue with stochastic server unavailability motivated by charging dynamics in drone delivery systems. Servers enter a charging state after service with probability $p$ and return at rate $γ$, while customers may abandon. We develop fluid and diffusion approximations for the joint process $(Q,S)$. In strictly underloaded and overloaded regimes, the diffusion limits reduce to Ornstein Uhlenbeck processes, enabling closed-form moment approximations and tractable staffing rules. At the critical boundary, however, the drift becomes non-smooth, and the limiting…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-02-11",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

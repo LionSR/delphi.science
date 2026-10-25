@@ -1,0 +1,21 @@
+{
+  "key": "2610.23131",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.23131",
+  "title": "Information-Geometric Blind Spots of Conformal Test Martingales",
+  "authors": [
+    "Johan Hallberg Szabadváry"
+  ],
+  "summary": "Conformal test martingales (CTMs) are e-processes for sequentially testing exchangeability via p-values produced by a conformity function $A$. However, any distribution shift that preserves the push-forward $P\\circ A^{-1}$ leaves the p-value distribution invariant, rendering it invisible to every CTM based on $A$. We formalise this blind spot through the \\emph{$A$-equivalence class} $[P]_A$ and show that, for any target distribution $T$, there is a unique closest element $Q^\\ast\\in[P]_A$ in KL divergence---the \\emph{$A$-cryptic I-projection}---with explicit density $q^\\ast(z) =…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

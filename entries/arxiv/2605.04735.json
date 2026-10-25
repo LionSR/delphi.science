@@ -1,0 +1,24 @@
+{
+  "key": "2605.04735",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04735",
+  "title": "Sequential topology optimization: SIMP initialization for level-set boundary refinement",
+  "authors": [
+    "Ondřej Ježek",
+    "Ján Kopačka",
+    "Martin Isoz",
+    "Dušan Gabriel"
+  ],
+  "summary": "Density-based topology optimization methods such as SIMP enable efficient topological exploration but produce diffuse material boundaries that require interpretation before manufacturing. Level-set methods maintain sharp interfaces but are sensitive to the initial design. This paper presents a sequential framework that addresses these complementary limitations through a signed distance function (SDF)-based geometry transfer, formulated for three-dimensional meshes. The SIMP density distribution is converted into an SDF that initializes subsequent level-set boundary refinement. From the…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

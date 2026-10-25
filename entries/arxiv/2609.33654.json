@@ -1,0 +1,21 @@
+{
+  "key": "2609.33654",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.33654",
+  "title": "Nonlinear Participation Factor-based Power System Model Reduction Addressing Near-Resonance Conditions",
+  "authors": [
+    "Mahsa Sajjadi",
+    "Kai Sun"
+  ],
+  "summary": "This paper proposes an adaptive model reduction approach based on nonlinear participation factors (NPFs) which determines the most effective selection of unimportant generators in a power system to be linearized to accelerate time-domain simulation for the entire system. The method enables a dynamic transition between the full-order model, and a hybrid reduced model. It uses modal energies to rank system modes under contingencies, and computes NPFs for highly energized modes based on Normal Form theory. To accelerate the computation of NPFs and make it achievable online, a tensor contraction…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.DS"
+  ],
+  "published": "2026-09-27",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

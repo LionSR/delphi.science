@@ -1,0 +1,21 @@
+{
+  "key": "2609.02347",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.02347",
+  "title": "A Stream-Function Formulation for the Surface Stokes-Helfrich Model - Surface Finite Element Discretization and Validation",
+  "authors": [
+    "Enno Igel",
+    "Maik Porrmann",
+    "Axel Voigt"
+  ],
+  "summary": "We introduce a stream-function formulation for the Surface Stokes-Helfrich model and study an Arbitrary Lagrangian-Eulerian (ALE) Surface Finite Element (SFEM) discretization in space and a semi-implicit discretization in time of these equations. In contrast with special cases of a surface Stokes model on stationary or prescribed evolving surfaces the surface pressure remains as an unknown and needs to be reconstructed in each time step. As for the surface Stokes model on a prescribed evolving surface the formulation also requires an additional gradient potential. A detailed computational…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-02",
+  "updated": "2026-09-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

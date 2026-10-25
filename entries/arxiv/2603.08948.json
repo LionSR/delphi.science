@@ -1,0 +1,24 @@
+{
+  "key": "2603.08948",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.08948",
+  "title": "Random layers for quantum optimal control with exponential expressivity",
+  "authors": [
+    "Marco Dall'Ara",
+    "Martin Koppenhöfer",
+    "Florentin Reiter",
+    "Thomas Wellens",
+    "Simone Montangero",
+    "Walter Hahn"
+  ],
+  "summary": "A long-standing problem in quantum optimal control is finding an optimal pulse structure that leads to an efficient exploration of the unitary space with a minimal number of optimization parameters. We solve this problem by constructing parametrized pulse sequences from random-amplitude pulses grouped in layers with one optimization parameter per layer. We show that, when increasing the number of pulses, the resulting random unitaries converge exponentially fast to the uniform Haar-random ensemble, thus providing for an efficient exploration of the unitary space. Grouping the pulses into…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-09",
+  "updated": "2026-03-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

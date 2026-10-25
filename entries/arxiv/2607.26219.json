@@ -1,0 +1,25 @@
+{
+  "key": "2607.26219",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.26219",
+  "title": "Retrospective Orthogonal Design: Response-Surface Reconstruction from Observational Data",
+  "authors": [
+    "Lawrence Fulton",
+    "Christopher Fulton",
+    "Arvind Sharma",
+    "Aleksandar Tomic"
+  ],
+  "summary": "Regression estimates from observational data can depend on specification under multicollinearity, while sequential sums of squares (SS) depend on term order. We introduce Retrospective Orthogonal Design (ROD), which reconstructs conditional mean surfaces on a probability-balanced lattice. ROD preserves observed cell means, completes unsupported cells, applies weighted tensor-product contrasts, and evaluates the reconstructed surface through piecewise-affine interpolation over Freudenthal polyhedra. Resolution and completion are selected jointly by validation among rank-admissible candidates,…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "cs.LG",
+    "math.DG",
+    "stat.AP"
+  ],
+  "published": "2026-07-28",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

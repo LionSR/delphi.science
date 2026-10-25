@@ -1,0 +1,19 @@
+{
+  "key": "2605.04863",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04863",
+  "title": "Update-Magnitude State Redistribution (UM-SRD): A Shut-off Extension of Weighted SRD for Cut-Cell Methods",
+  "authors": [
+    "Justo E. Karell"
+  ],
+  "summary": "Berger & Giuliani (2024) developed a provably stable weighted state redistribution (SRD) algorithm for cut-cell meshes. A key limitation of their method is that, although flux redistribution naturally vanishes when updates are small, SRD continuously applies redistribution even when the flux balance is zero, preventing exact steady-state preservation and potentially introducing unnecessary dissipation in smooth regions. This work introduces Update-Magnitude State Redistribution (UM-SRD), which blends the SRD operator with the identity operator via a smooth, locally-defined scalar indicator…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

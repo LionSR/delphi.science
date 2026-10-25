@@ -1,0 +1,23 @@
+{
+  "key": "2603.06287",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.06287",
+  "title": "Learning Where the Physics Is: Probabilistic Adaptive Sampling for Stiff PDEs",
+  "authors": [
+    "Akshay Govind Srinivasan",
+    "Balaji Srinivasan"
+  ],
+  "summary": "Modeling stiff partial differential equations (PDEs) with sharp gradients remains a significant challenge for scientific machine learning. While Physics-Informed Neural Networks (PINNs) struggle with spectral bias and slow training times, Physics-Informed Extreme Learning Machines (PIELMs) offer a rapid, closed-form linear solution but are fundamentally limited by physics-agnostic, random initialization. We introduce the Gaussian Mixture Model Adaptive PIELM (GMM-PIELM), a probabilistic framework that learns a probability density function representing the ``location of physics'' for…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "cs.AI",
+    "cs.LG",
+    "math.AP"
+  ],
+  "published": "2026-03-06",
+  "updated": "2026-03-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

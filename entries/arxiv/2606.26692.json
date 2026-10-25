@@ -1,0 +1,20 @@
+{
+  "key": "2606.26692",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.26692",
+  "title": "TVD and TVB preservation without TVD time discretization for discontinuous Galerkin methods",
+  "authors": [
+    "Ziyao Xu",
+    "Zheng Sun"
+  ],
+  "summary": "Total variation diminishing (TVD) and total variation bounded (TVB) properties are crucial for controlling spurious oscillations in numerical solutions of conservation laws. In the classical Runge--Kutta (RK) discontinuous Galerkin (DG) framework, enforcing these properties is intrinsically tied to TVD time integrators, more commonly known today as strong-stability-preserving (SSP) methods. This reliance imposes severe structural restrictions, including order barriers and incompatibility with various fully discrete DG formulations, ranging from the recent RKDG method with compact stencils…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-25",
+  "updated": "2026-06-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

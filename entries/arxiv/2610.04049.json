@@ -1,0 +1,21 @@
+{
+  "key": "2610.04049",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04049",
+  "title": "Geometry-Dependent Approximation for Non-Monotone $k$-Submodular Maximization",
+  "authors": [
+    "Vaneet Aggarwal"
+  ],
+  "summary": "We study nonnegative, non-monotone $k$-submodular maximization with $k\\ge2$ labels under support constraints, and show how the certified approximation coefficient improves as the support region permits more uniform selection. For a compact convex down-closed support region $P\\subseteq[0,1]^n$, the diagonal level $ζ(P)=\\max\\{t\\in[0,1]:t {\\bf 1} \\in P\\}$ ranges from $ζ=0$, which carries no geometric promise, to $ζ=1$, which is unrestricted support. Our main structural result is a comparator-uniform linearization of the multilinear extension, built from an objective-independent action and a…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

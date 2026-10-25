@@ -1,0 +1,21 @@
+{
+  "key": "2607.16044",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.16044",
+  "title": "IMEX Schemes for Compressible Flow using Hybridizable Discontinuous Galerkin Methods",
+  "authors": [
+    "Jan Ellmenreich",
+    "Edmond K. Shehadi",
+    "Philip L. Lederer"
+  ],
+  "summary": "In this work, we develop a geometry-split implicit-explicit (IMEX) framework for the compressible flow equations, wherein stiff regions are treated via an implicit hybridizable discontinuous Galerkin (HDG) method, while non-stiff regions are treated via an explicit discontinuous Galerkin (DG) method. Two implicit formulations are investigated: a mixed HDG method (HDG-MX) and a primal interior-penalty HDG method (HDG-IP). The spatial coupling between the implicit and explicit solutions is achieved in a conservative manner by appropriate interface conditions, while the temporal synchronization…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-17",
+  "updated": "2026-07-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

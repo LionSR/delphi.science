@@ -1,0 +1,23 @@
+{
+  "key": "2609.13343",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.13343",
+  "title": "Stochastic Gradient Descent over P2",
+  "authors": [
+    "Maria Oprea",
+    "Qin Li",
+    "Yunan Yang"
+  ],
+  "summary": "Stochastic gradient descent (SGD) admits diffusion approximations that replace the complicated randomness of stochastic gradients by Gaussian noise, providing a powerful tool for understanding its dynamics and long-time behavior. We investigate whether an analogous approximation principle holds for optimization over probability measures, where the objective is a functional defined on the Wasserstein space P2. The nonlinear geometry and infinite-dimensional nature of P2 prevent a direct extension of the classical Euclidean theory. Using Lions differentiability, we lift the problem to a linear…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-09-11",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

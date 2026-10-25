@@ -1,0 +1,22 @@
+{
+  "key": "2605.25631",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.25631",
+  "title": "The Privacy Subsidy in Continuous-Time Kyle: Cumulative Welfare under Noise-Perturbed Order-Flow Observation",
+  "authors": [
+    "Yuki Nakamura"
+  ],
+  "summary": "We extend the closed-form privacy-subsidy result of Nakamura~(2026, arXiv:2605.15746) from the single-period Kyle model to continuous-time. A committed Bayesian automated market maker observes the aggregate order flow perturbed by an independent Brownian privacy channel of diffusion intensity $σ_\\varepsilon$. Under the Markovian linear equilibrium, the price-impact coefficient is $λ= σ_v / \\sqrt{σ_u^2 + σ_\\varepsilon^2}$ -- constant in time -- and the cumulative expected transfer from the protocol's liquidity pool to traders over $[0,1]$ is $|Π_M| = σ_v σ_\\varepsilon^2 / \\sqrt{σ_u^2 +…",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "cs.CR",
+    "math.PR",
+    "q-fin.TR"
+  ],
+  "published": "2026-05-25",
+  "updated": "2026-05-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

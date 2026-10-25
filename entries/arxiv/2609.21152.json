@@ -1,0 +1,22 @@
+{
+  "key": "2609.21152",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.21152",
+  "title": "ReFINE: Scheduling of Distillation and Coding for Rate-Fidelity Tradeoff in Quantum Networks",
+  "authors": [
+    "Narges Alavisamani",
+    "Matthieu Bloch",
+    "Moinuddin Qureshi"
+  ],
+  "summary": "In quantum networks, nodes are connected via sharing of Einstein-Podolsky-Rosen (EPR) pairs, ideally with high fidelity and high rate. However, the fidelity of EPR pairs degrades due to imperfect generation and decoherence errors. Entanglement Distillation is a method that increases the fidelity but operates probabilistically and may destroy all involved EPR pairs upon failure. This failure reduces available EPR pairs for application use, thereby decreasing the service rate. Quantum Error Correction (QEC) is another mechanism to protect EPR pairs against error by forming what we term as…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

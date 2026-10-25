@@ -1,0 +1,21 @@
+{
+  "key": "2607.19188",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.19188",
+  "title": "Numerical methods for Langevin-type SPDE: an implicit Milstein approach and multilevel Monte Carlo techniques",
+  "authors": [
+    "Sascha Portaro",
+    "Carlos Vázquez"
+  ],
+  "summary": "In this work, we investigate the numerical approximation of degenerate Langevin-type stochastic partial differential equations (SPDEs) in two spatial dimensions. These SPDEs arise in stochastic dynamics and mathematical finance, among other applications. In order to handle the mixed deterministic-stochastic structure of the equation and the degeneracy of the differential operator, we propose a semi-implicit Milstein finite difference scheme for the numerical solution. Through the Fourier analysis of the mean-square stability and convergence, we derive explicit conditions on the coefficients…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.PR"
+  ],
+  "published": "2026-07-21",
+  "updated": "2026-07-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

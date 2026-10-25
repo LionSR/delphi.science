@@ -1,0 +1,23 @@
+{
+  "key": "2602.18760",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.18760",
+  "title": "Locating-dominating coalitions in graphs",
+  "authors": [
+    "M. Chellali",
+    "A. A. Dobrynin",
+    "F. Foucaud",
+    "H. Golmohammadi",
+    "J. C. Valenzuela-Tripodoro"
+  ],
+  "summary": "A set $D$ of vertices in a graph $G = (V, E)$ is a locating-dominating set (LD-set) if it is dominating and every two vertices $u$, $v$ of $V\\setminus D$ satisfy $N(u) \\cap D \\neq N(v) \\cap D$. Two disjoint sets $A,B\\subset V(G)$ form a locating-dominating coalition (for short, an LD-coalition) in $G$ if none of them is an LD-set in $G$ but their union $A\\cup B$ is an LD-set. A locating-dominating coalition partition (for short, an LDC-partition) is a vertex partition $Π$ such that every set of $Π$ is not an LD-set in $G,$ but forms an LD-coalition with another set of $Π$. The…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-02-21",
+  "updated": "2026-02-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

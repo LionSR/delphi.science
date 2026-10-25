@@ -27,5 +27,76 @@
     "reason": "Claims an upper bound of 9/4 on the matrix multiplication exponent.",
     "by": "claude-haiku",
     "at": "2026-10-23"
-  }
+  },
+  "discussion": [
+    {
+      "kind": "web",
+      "url": "https://arxiv.org/abs/2610.10494",
+      "title": "Rectangular matrix multiplication from polynomial products",
+      "site": "arXiv.org",
+      "author": "Przemyslaw Uznanski",
+      "text": "In this note, we extend the matrix-multiplication analysis by OpenAI to rectangular products and prove $ω(1,k,1)\\le2$ for $0\\le k\\le\\frac{1}{2}$, and $ω(1,k,1)\\le1+k+\\frac{1}{4k}$ for $k\\ge\\frac{1}{2}$. In particular, $ω(1, \\frac{1}{2},1)=2$ and the dual exponent satisfies $α\\ge\\frac{1}{2}$. The…",
+      "date": "2026-10-07",
+      "added": "2026-10-24"
+    },
+    {
+      "kind": "web",
+      "url": "https://scottaaronson.blog/?p=10169#:~:text=a%20completely%20different%20approach%20than%20was%20used%20for",
+      "title": "The Mathocalypse",
+      "site": "Shtetl-Optimized",
+      "author": "Scott Aaronson",
+      "text": "a completely different approach than was used for O(n 2.373 ) and so forth Ω ( n 3 ) \\Omega(n^3) lower bound on the determinantal complexity of the permanent , improving the previous best bound which was quadratic. A randomized polytime algorithm to approximately count the number of perfect…",
+      "date": "2026-10-07",
+      "added": "2026-10-24"
+    },
+    {
+      "kind": "web",
+      "url": "https://gilkalai.wordpress.com/2026/10/07/updates-sharing-ai-progress-on-mathematics-amazing-and-my-lecture-plans/#:~:text=The%20new%20bound%20is%20over%20the%20complex%20numbers",
+      "title": "Updates: Sharing AI progress on mathematics (amazing!); and my lecture plans",
+      "site": "Combinatorics and more",
+      "author": "Gil Kalai",
+      "text": "The new bound is over the complex numbers , a substantial advance toward the conjecture . Percolation: criticality and nonuniqueness. The release includes absence of infinite critical clusters for bond percolation on infinite connected locally finite quasi-transitive graphs with , extending the…",
+      "date": "2026-10-07",
+      "added": "2026-10-24"
+    },
+    {
+      "kind": "web",
+      "url": "https://arxiv.org/abs/2610.18914",
+      "title": "Polynomial Separation of a Shared Tensor Leg and Matrix Multiplication in Arbitrary Characteristic",
+      "site": "arXiv.org",
+      "author": "Houxi Lü",
+      "text": "We improve the shared-leg separation construction in Proposition 3.1 of OpenAI, *An Upper Bound of $9/4$ for the Matrix Multiplication Exponent* (October 2, 2026). If $M$ tensor blocks have a common first space and independent matched sectors on their other two spaces, then $M+n-1$ copies of their…",
+      "date": "2026-10-12",
+      "added": "2026-10-24"
+    },
+    {
+      "kind": "web",
+      "url": "https://arxiv.org/abs/2610.28627",
+      "title": "Matrix Multiplication from Polynomial Packings: A Constructive and Elementary Proof of $\\omega\\le9/4$",
+      "site": "arXiv.org",
+      "author": "Rafael Pass",
+      "text": "We give a self-contained constructive proof that the matrix multiplication exponent satisfies $ω\\le9/4$. This bound was recently claimed by OpenAI~\\cite{original} through non-constructive arguments in Strassen's asymptotic spectral framework, counting exact scalar arithmetic operations over the…",
+      "date": "2026-10-20",
+      "added": "2026-10-24"
+    },
+    {
+      "kind": "x",
+      "url": "https://x.com/13SergeyGusev/status/2112373928802799741",
+      "author": "Sergey Gusev",
+      "handle": "13SergeyGusev",
+      "text": "Recently, OpenAI showed that matrix multiplication algorithms with exponent near 2.25 exist, but not what they actually are. We then shared an AI-written paper that builds them explicitly. That first version was really bad: even at exponent 2.67, it needed matrices with about…",
+      "date": "2026-10-20",
+      "added": "2026-10-24"
+    },
+    {
+      "kind": "web",
+      "url": "https://arxiv.org/abs/2610.30054",
+      "title": "Multiplying matrices via polynomials: exposition and barriers",
+      "site": "arXiv.org",
+      "author": "Alimzhan Amanov, Maxim van den Berg, Jeroen Zuiddam",
+      "text": "We give an exposition of OpenAI's recent proof that the exponent $ω_\\mathbb{C}$ of matrix multiplication over the complex numbers satisfies $ω_\\mathbb{C}\\leq9/4$. Our version of the proof gives $ω_\\mathbb{F}\\leq9/4$ over every field $\\mathbb{F}$. We also treat the rectangular matrix multiplication…",
+      "date": "2026-10-21",
+      "added": "2026-10-24"
+    }
+  ]
 }

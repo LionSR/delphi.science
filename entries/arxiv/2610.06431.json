@@ -1,0 +1,19 @@
+{
+  "key": "2610.06431",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06431",
+  "title": "Direct Vertex-Derivative Coefficient Propagation forHomogeneous Numerical Integration (HNI)",
+  "authors": [
+    "Jean B Lasserre"
+  ],
+  "summary": "Homogeneous numerical integration (HNI) combines Euler's identity and Stokes' theorem to integrate homogeneous polynomials over a polytope $P$. Existing algorithms return scalar integrals or reusable moment families. Any resulting moment table can be recoded afterward: once all degree-$q$ moments are known, integration on $\\mathcal H\\_q$ (degree-$q$ forms) has a trivial representation by a pure order-$q$ distribution supported at any single arbitrary point. Our contribution is instead to propagate functionals through the face complex, once for $(P,q)$ and without first forming the moment…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2610.13723",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.13723",
+  "title": "List chromatic number of $G(n,r,s)$ graphs",
+  "authors": [
+    "M. Koshelev"
+  ],
+  "summary": "We study the list chromatic number of generalized Johnson graphs. Recall that the vertices of such graphs are all possible $r$-element subsets of $[n] = \\{1, \\dotsc, n\\}$ and an edge is drawn between two vertices if and only if corresponding sets have exactly $s$ common elements. We prove that for any fixed $s \\geq 1$ and $r \\geq 2s + 2$ we have $χ_L(G(n,r,s)) = Θ(n^{s+1}\\ln n)$. In case where $s = 0$ we prove that for all $4\\ln n \\leq r \\leq n/20$ we have $χ_L(G(n,r,0)) \\geq \\frac{n}{120}\\ln\\left(\\frac{en}{r}\\right)$. Together with previous results of Bulankina, Inozemtsev and Kupavskii…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

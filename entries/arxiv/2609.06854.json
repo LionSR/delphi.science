@@ -1,0 +1,25 @@
+{
+  "key": "2609.06854",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.06854",
+  "title": "Cluster-Based Dimensionality Reduction by Nonparametric Distributional Screening",
+  "authors": [
+    "Sanoja Jha",
+    "Rishikesh Muralimohan",
+    "Praveen Athauda Arachchi",
+    "Abhishek Bhattacharjee"
+  ],
+  "summary": "We consider dimensionality reduction for high-dimensional observations accompanied by a supplied partition into two or more clusters. The objective is not to construct a low-rank projection, but to retain an interpretable subset of the original coordinates that preserves the distributional information distinguishing the clusters. For each coordinate, the proposed procedure compares the cluster-specific empirical distribution functions through a several-sample Kolmogorov-Smirnov separation statistic. We formalize the resulting marginal cluster support and establish simultaneous finite-sample…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "stat.AP",
+    "stat.ML"
+  ],
+  "published": "2026-09-06",
+  "updated": "2026-09-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

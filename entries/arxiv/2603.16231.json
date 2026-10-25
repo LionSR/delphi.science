@@ -1,0 +1,24 @@
+{
+  "key": "2603.16231",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.16231",
+  "title": "Featurized Occupation Measures for Structured Global Search in Numerical Optimal Control",
+  "authors": [
+    "Qi Wei",
+    "Jianfeng Tao",
+    "Haoyang Tan",
+    "Hongyu Nie"
+  ],
+  "summary": "Numerical optimal control is split between globally structured but dimensionally intractable Hamilton--Jacobi--Bellman (HJB) methods and scalable but local trajectory optimization. We introduce Featurized Occupation Measures (FOM), a finite-dimensional primal--dual interface where HJB subsolutions guide primal search and primal occupation data can inform certificate refinement. Explicit and implicit realizations, based on finite Liouville tests and rollout-sampled residuals, are proved asymptotically consistent with the exact occupation-measure LP. FOM also identifies when HJB-type…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.RO",
+    "eess.SY"
+  ],
+  "published": "2026-03-17",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

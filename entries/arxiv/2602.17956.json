@@ -1,0 +1,24 @@
+{
+  "key": "2602.17956",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.17956",
+  "title": "A variational framework for modal estimation",
+  "authors": [
+    "Tâm LeMinh",
+    "Julyan Arbel",
+    "Florence Forbes",
+    "Hien Duy Nguyen"
+  ],
+  "summary": "Multivariate mode estimation arises in many statistical problems such as inverse problems, multimodal sampling, and density-based clustering, but becomes challenging in moderate to high dimensions, especially when the underlying density is not directly evaluable. We introduce GERVE (Gibbs-measure Entropy-Regularized Variational Estimation), a sample-based method for estimating multivariate modes by approximating Gibbs distributions directly from samples, without estimating or evaluating the density. GERVE uses Gaussian-mixture variational annealing and natural-gradient optimization,…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "stat.CO"
+  ],
+  "published": "2026-02-20",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

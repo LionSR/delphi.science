@@ -1,0 +1,21 @@
+{
+  "key": "2607.08415",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08415",
+  "title": "An Exact Distribution-Free Test for Means of Nonnegative Random Variables",
+  "authors": [
+    "Nikos Vlassis",
+    "Philip S. Thomas"
+  ],
+  "summary": "Let $X=(X_1,\\ldots,X_n)$ be independent nonnegative random variables, not necessarily identically distributed. Let $D=(D_0,D_1,\\ldots,D_n)\\sim\\operatorname{Dir}(1,\\ldots,1)$ be independent of $X$, and define $K(x)=\\mathbb{P}\\{\\sum_{i=1}^n x_iD_i\\le1\\}$. We prove that, for every $n\\ge1$, whenever $\\mathbb{E} X_i\\le1$ for every $i$, $\\mathbb{P}\\{K(X)\\leα\\}\\leα$ for all $0\\leα\\le1$. Thus $K(X)$ is a finite-sample, distribution-free $p$-value for testing the null hypothesis $\\mathbb{E}X_i \\le 1$ for all $i$. This proves a conjecture of Gaffke (2005).",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "math.PR"
+  ],
+  "published": "2026-07-09",
+  "updated": "2026-07-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2605.13437",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.13437",
+  "title": "Revisiting CUR Perturbation Analysis: A Local Tangent-Space Expansion",
+  "authors": [
+    "Longxiu Huang"
+  ],
+  "summary": "CUR decompositions approximate a matrix using selected columns, rows, and their intersection. Classical CUR theory provides exactness results for low-rank matrices and perturbation bounds controlled by the size of the noise. In this work we develop a local perturbation expansion for a fixed-index rank-truncated CUR map near an admissible rank-\\(r\\) matrix. We show that the Fréchet derivative of the rank-truncated CUR map is a sampling-induced oblique tangent-space projector determined by the selected rows and columns. Consequently, the local recovery error for an underlying low-rank matrix…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.IT"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2601.14201",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.14201",
+  "title": "Convergence analysis and a novel Lagrange multiplier partitioned method for fluid-poroelastic interaction",
+  "authors": [
+    "Amy de Castro",
+    "Hyesuk Lee"
+  ],
+  "summary": "We propose a partitioned method for the monolithic formulation of the Stokes-Biot system that incorporates Lagrange multipliers enforcing the interface conditions. The monolithic system is discretized using finite elements, and we establish convergence of the resulting approximation. A Schur complement based algorithm is developed together with an efficient preconditioner, enabling the fluid and poroelastic structure subproblems to be decoupled and solved independently at each time step. The Lagrange multipliers approximate the interface fluxes and act as Neumann boundary conditions for the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-20",
+  "updated": "2026-01-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

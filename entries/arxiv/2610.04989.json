@@ -1,0 +1,20 @@
+{
+  "key": "2610.04989",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04989",
+  "title": "When Is a Graph a Covariance? Bayesian Residual Propagation under Covariance Uncertainty",
+  "authors": [
+    "Robert Richardson"
+  ],
+  "summary": "Observing a prediction error at one node can help correct predictions elsewhere, but the benefit depends on the residual dependence between nodes. A graph suggests where that dependence might occur, yet does not establish its sign or strength. We develop a Bayesian model of residual covariance to determine how revealed errors should update a fixed feature-based predictor. For a fixed set of revealed nodes, we derive an exact identity for the change in expected squared error under linear residual propagation. The identity characterizes the optimal linear update and expresses the excess error…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

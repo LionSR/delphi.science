@@ -1,0 +1,25 @@
+{
+  "key": "2604.26172",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26172",
+  "title": "Co-Learning Port-Hamiltonian Systems and Optimal Energy-Shaping Control",
+  "authors": [
+    "Ankur Kamboj",
+    "Biswadip Dey",
+    "Vaibhav Srivastava"
+  ],
+  "summary": "We develop a physics-informed learning framework for energy-shaping control of port-Hamiltonian (pH) systems from trajectory data. The proposed approach co-learns a pH system model and an optimal energy-balancing passivity-based controller (EB-PBC) through alternating optimization with policy-aware data collection. At each iteration, the system model is refined using trajectory data collected under the current control policy, and the controller is re-optimized on the updated model. Both components are parameterized by neural networks that embed the pH dynamics and EB-PBC structure, ensuring…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.AI",
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-04-28",
+  "updated": "2026-05-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

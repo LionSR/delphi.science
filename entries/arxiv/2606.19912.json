@@ -1,0 +1,22 @@
+{
+  "key": "2606.19912",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.19912",
+  "title": "Structure-Oriented Randomized Neural Networks for Poisson-Nernst-Planck and Poisson-Nernst-Planck-Navier-Stokes Systems",
+  "authors": [
+    "Yunlong Li",
+    "Fei Wang"
+  ],
+  "summary": "We develop a structure-oriented randomized neural network framework, termed SO-RaNN, for the Poisson-Nernst-Planck (PNP) system and the Poisson-Nernst-Planck-Navier-Stokes (PNP-NS) system. The decoupled linearized subproblems are solved iteratively by randomized neural networks in a space-time framework. For the concentration variables, a pointwise cut-off is used to enforce positivity at the value level, and discrete mass-scaling factors are computed at selected correction instants and interpolated in time, so as to ensure exact mass matching at those instants and to promote approximate…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG",
+    "physics.comp-ph"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

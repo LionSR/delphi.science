@@ -1,0 +1,20 @@
+{
+  "key": "2605.01481",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.01481",
+  "title": "On the redundancy of transitivity constraints in the clique partitioning problem",
+  "authors": [
+    "Noriyoshi Sukegawa"
+  ],
+  "summary": "In this study, we identify a class of redundant transitivity constraints in a 0-1 integer linear programming formulation of the clique partitioning problem. The transitivity constraints in this class can be removed from the formulation without changing the optimal solution set, although each transitivity constraint defines a facet of the associated polytope. This leads to a smaller formulation that is particularly effective for instances arising from correlation clustering, where edge weights are drawn from $\\{-1,1\\}$. Our computational experiments show that the resulting formulation…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DM"
+  ],
+  "published": "2026-05-02",
+  "updated": "2026-05-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

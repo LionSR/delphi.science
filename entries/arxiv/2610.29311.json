@@ -1,0 +1,22 @@
+{
+  "key": "2610.29311",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.29311",
+  "title": "Interpretable Cutting Plane Selection for Mixed-Integer Linear Programming Using Genetic Programming",
+  "authors": [
+    "Gwen maudet",
+    "Mathis Da Cunha",
+    "Grégoire Danoy"
+  ],
+  "summary": "Cutting planes (cuts) remove fractional solutions from mixed-integer linear programs (MILPs) without excluding any feasible integer solutions, making them a key ingredient in modern MILP solvers. Current state-of-the-art solvers rely on fine-tuned handcrafted cut strategies, which, despite their effectiveness, remain inherently static and can be suboptimal. More recently, learning-based approaches have been proposed to design adaptive cut strategies; however, most of these methods are based on neural networks, offering limited interpretability and providing no guarantees of convergence. In…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

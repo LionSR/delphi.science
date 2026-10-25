@@ -1,0 +1,21 @@
+{
+  "key": "2609.28794",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.28794",
+  "title": "On the Minimum Number of Linear Pieces Required to Approximate Nonlinear Functions under an Accuracy Constraint",
+  "authors": [
+    "Aloïs Duguet",
+    "Sandra Ulrich Ngueveu",
+    "François Lamothe"
+  ],
+  "summary": "The approximation of nonlinear functions by piecewise linear functions is a tool commonly used when dealing with mixed-integer nonlinear problems. Typically, by replacing nonlinearities by piecewise linear functions one can transform the problem into a mixed-integer linear problem, which may be substantially easier to solve. However, using approximate functions can produce solutions that are infeasible for the original problem or far from optimal. To control these errors it is useful to bound the error created during the function approximation process. Moreover, obtaining a piecewise linear…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-23",
+  "updated": "2026-09-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

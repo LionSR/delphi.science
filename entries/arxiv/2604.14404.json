@@ -1,0 +1,24 @@
+{
+  "key": "2604.14404",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.14404",
+  "title": "Early-stopped aggregation: Adaptive inference with computational efficiency",
+  "authors": [
+    "Ilsang Ohn",
+    "Shitao Fan",
+    "Jungbin Jun",
+    "Lizhen Lin"
+  ],
+  "summary": "When considering a model selection or, more generally, an aggregation approach for adaptive statistical inference, it is often necessary to compute estimators over a wide range of model complexities including unnecessarily large models even when the true data-generating process is relatively simple, due to the lack of prior knowledge. This requirement can lead to substantial computational inefficiency. In this work, we propose a novel framework for efficient model aggregation called the early-stopped aggregation (ESA): instead of computing and aggregating estimators for all candidate models,…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME",
+    "stat.ML"
+  ],
+  "published": "2026-04-15",
+  "updated": "2026-04-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

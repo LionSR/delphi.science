@@ -1,0 +1,25 @@
+{
+  "key": "2607.16178",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.16178",
+  "title": "Cluster-Aware Matching via Laplacian Optimal Transport",
+  "authors": [
+    "Gabriel Samberg",
+    "YoonHaeng Hur",
+    "Yuehaw Khoo",
+    "Nir Sharon"
+  ],
+  "summary": "In many applications of matching, the point clouds to be matched are not merely unstructured sets of points but rather samples from distributions with an intrinsic cluster structure. In such cases, as individual points are often interchangeable within a coherent region, finding a robust region-to-region alignment is more desirable than establishing a precise point-to-point correspondence. To this end, we propose a novel approach for cluster-aware matching based on Laplacian Optimal Transport (LapOT). The key idea is to regularize the optimal transport problem with quadratic Laplacian terms…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.NA",
+    "stat.ME"
+  ],
+  "published": "2026-07-17",
+  "updated": "2026-07-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

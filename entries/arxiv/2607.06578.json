@@ -1,0 +1,21 @@
+{
+  "key": "2607.06578",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06578",
+  "title": "Zeros of GKP sequences of polynomials",
+  "authors": [
+    "Antonio J. Durán",
+    "Mario Pérez",
+    "Juan L. Varona"
+  ],
+  "summary": "Given two sequences $φ=(φ_i)_{i\\ge 1}$ and $ψ=(ψ_i)_{i\\ge 1}$ and numbers $a,b,c$, we introduce the GKP sequence of polynomials $(p_n)_n$ using the following recurrence formula: $p_0 = 1$ and for $n\\ge 1$ \\[ p_{n}(x) = (ax^2+bx+c) p_{n-1}'(x) + (φ_{n} + ψ_{n} x)p_{n-1}(x), \\] where we assume that $ax^2+bx+c$ has two different real zeros. Tangent, Secant, Eulerian or Jacobi polynomials are examples of GKP sequences of polynomials. In this paper, under mild assumptions we prove that the zeros of the polynomials $p_n$ are real, simple and live between the zeros of $ax^2+bx+c$. Moreover, the…",
+  "domain": "math.GM",
+  "tags": [
+    "math.GM"
+  ],
+  "published": "2026-07-02",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

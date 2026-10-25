@@ -1,0 +1,28 @@
+{
+  "key": "2607.20943",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.20943",
+  "title": "An Analytically Trained Variational Surrogate for Quantum Phase Estimation on NISQ Hardware",
+  "authors": [
+    "Mousumi Kundu",
+    "Ashish Kumar Patra",
+    "Anurag K. S. V.",
+    "Ruchika Bhat",
+    "Sai Shankar P.",
+    "Alok Shukla",
+    "Jaiganesh G"
+  ],
+  "summary": "Quantum Phase Estimation (QPE) is a foundational algorithm for molecular ground-state energy estimation, but its deep circuit requirements make direct hardware execution impractical on Noisy Intermediate-Scale Quantum (NISQ) devices. We present an analytically grounded variational surrogate framework in which a shallow Variational Quantum Circuit (VQC) is trained to reproduce the QPE measurement distribution without any quantum circuit simulation. The training target is computed entirely classically via the Dirichlet kernel, evaluated directly from the Full Configuration Interaction (FCI)…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET",
+    "cs.LG",
+    "physics.chem-ph"
+  ],
+  "published": "2026-07-23",
+  "updated": "2026-07-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

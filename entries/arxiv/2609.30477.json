@@ -1,0 +1,21 @@
+{
+  "key": "2609.30477",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.30477",
+  "title": "Scaffold-Constrained Subset Dynamic Programming for Exact SSE Clustering",
+  "authors": [
+    "Yordan P. Raykov",
+    "Max A. Little"
+  ],
+  "summary": "Exact Euclidean \\(K\\)-means partitions \\(n\\) observations into \\(K\\) unlabelled clusters, but the unrestricted search is generally exponential. We use data-derived geometric graphs to precondition an exact subset dynamic program: as a result only connected vertex subsets are admitted as clusters, while sum-of-squared-errors (SSE) loss is unchanged. A remaining-set recurrence minimises fixed-\\(K\\) or penalised SSE, with exact factorisation over the connected components of each remaining set. The central question we study is how much computational support can be removed while preserving an…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.LG"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,29 @@
+{
+  "key": "2609.29018",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.29018",
+  "title": "Decoder Model Compatibility Provides Information beyond the Logical Gap under Drifting and Correlated Quantum Noise",
+  "authors": [
+    "Aaron C. Hoyt",
+    "Chunshu Wu",
+    "Shuwen Kan",
+    "Sean Garner",
+    "Avimita Chatterjee",
+    "Drew Rebar",
+    "Norman M. Tubman",
+    "Katherine Klymko",
+    "Chenxu Liu",
+    "Ang Li",
+    "Samuel Stein"
+  ],
+  "summary": "Quantum error-correcting decoders provide both corrections and confidence estimates for the logical-error risk of individual measurement records. Such confidence can guide postselection, but it depends on the accuracy of the decoder noise model. When the physical device drifts away from that model, confidence measures such as the logical gap can become miscalibrated. We show that this mismatch can itself provide useful information. On IBM quantum hardware, syndrome statistics drift across consecutive acquisition windows, and the resulting detector histories differ substantially from those…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

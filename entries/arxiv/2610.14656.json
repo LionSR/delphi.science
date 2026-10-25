@@ -1,0 +1,22 @@
+{
+  "key": "2610.14656",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.14656",
+  "title": "Euler Cutting Planes for Fractional CVaR Programming",
+  "authors": [
+    "Pranay Seshadri",
+    "Hubert Dzieciol",
+    "Zhe Feng",
+    "Alan Tua"
+  ],
+  "summary": "We maximise expected reward per unit of marginal tail risk, a reward-to-CVaR ratio against a baseline. The standard Dinkelbach route re-solves a Rockafellar--Uryasev LP or QP with one auxiliary variable per tail scenario at each multiplier update. Our method eliminates the multiplier iteration and keeps scenario auxiliaries out of the master, while still evaluating tail risk to generate cuts. A Charnes--Cooper/Schaible homogenisation removes the reward/risk multiplier, and the remaining convex constraint is separated on demand: each cut coefficient is an Euler allocation vector, read off a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-10",
+  "updated": "2026-10-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

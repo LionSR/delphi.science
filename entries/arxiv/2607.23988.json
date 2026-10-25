@@ -1,0 +1,21 @@
+{
+  "key": "2607.23988",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.23988",
+  "title": "Scaling a CUDA-Q GQE + QSCI pipeline to 40 qubits for EUV photoresist chemistry",
+  "authors": [
+    "Karim Elgammal",
+    "Marc Maußner"
+  ],
+  "summary": "We scale a CUDA-Q-native pipeline coupling a generative quantum eigensolver (GQE) to quantum-selected configuration interaction (QSCI) across active spaces of 14 to 44 qubits, applied to the extreme-ultraviolet (EUV) photoresist chemistry of monoalkyltin oxo-hydroxides. A GPT-2 policy emits UCCSD operator sequences; sampled bitstrings become determinants, diagonalised classically, and a cross-circuit generalised-eigenvalue refinement makes every reported GQE+QSCI energy a variational upper bound. Every rung from 14 to 40 qubits carries an exact CASCI or FCI reference, up to 166 million…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.chem-ph"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

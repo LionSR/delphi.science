@@ -1,0 +1,19 @@
+{
+  "key": "2609.29883",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.29883",
+  "title": "Existence and uniqueness of global weak solutions to degenerate volume-filling chemotaxis systems with source terms",
+  "authors": [
+    "Osuke Shibata"
+  ],
+  "summary": "This paper is concerned with a no-flux initial-boundary value problem for the degenerate volume-filling chemotaxis system with source terms, \\begin{align*} u_t = \\nabla \\cdot (D(u,v) \\nabla u - h(u,v) \\nabla v) + f(x, u, v), \\quad v_t = Δv + g(u,v), \\quad x\\in Ω, \\ t>0 \\end{align*} in a smoothly bounded domain $Ω\\subset \\mathbb{R}^N$ $(N \\in \\mathbb{N})$. It is shown that when $D$, $h$, $f$ and $g$ satisfy suitable assumptions involving $D(1,\\cdot)=h(0,\\cdot)=h(1,\\cdot)=f(\\cdot,0,\\cdot) = f(\\cdot,1,\\cdot) = 0$, for nonnegative initial data $u_0$ and $v_0$ with $u_0\\le 1$, there exists a…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

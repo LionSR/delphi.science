@@ -1,0 +1,21 @@
+{
+  "key": "2608.31061",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.31061",
+  "title": "Structural Corrections to the Bethe Approximation of the Permanent",
+  "authors": [
+    "Ijay Narang",
+    "Will Perkins"
+  ],
+  "summary": "We study deterministic approximation algorithms for the permanent of a nonnegative matrix through the Bethe permanent, an approximation computable in polynomial time. The tight analysis of Anari and Rezaei gives a universal comparison between the permanent and the Bethe permanent within a factor $(\\sqrt 2)^n$. The simple example of the unweighted $4$-cycle $C_4$ (or a union of disjoint $C_4$'s) shows that this bound is tight. We show that such $4$-cycle obstructions can be identified and exploited algorithmically. Given a Bethe optimizer, our algorithm identifies nearly isolated weighted…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-08-31",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

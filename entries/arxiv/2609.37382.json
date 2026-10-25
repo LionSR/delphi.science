@@ -1,0 +1,21 @@
+{
+  "key": "2609.37382",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.37382",
+  "title": "Debiased and Simultaneous Inference for Heterogeneous Factorial Effect Modifiers via Residualized Walsh-Hadamard Scores",
+  "authors": [
+    "Tomoshige Nakamura",
+    "Ryo Emoto"
+  ],
+  "summary": "In factorial randomized experiments with $K$ binary treatment components, we study which baseline covariates modify component main effects and interactions. We define effect-modifier cells $(j,S)$, $j\\in[p]$ and $\\emptyset\\neq S\\subseteq[K]$, through the coefficients $θ^\\ast_{jS}$ of population linear projections of conditional Walsh--Hadamard contrasts $τ_{S}$ onto standardized covariates. Using baseline-robust direct scores, we develop frequentist inference for all $p(2^K-1)$ cells. First, we prove a debiased central limit theorem with global insensitivity: the residualization baseline…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

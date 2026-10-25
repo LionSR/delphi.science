@@ -1,0 +1,23 @@
+{
+  "key": "2605.13669",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.13669",
+  "title": "Bounded-Input True Proportional Navigation for Impact-Time Control",
+  "authors": [
+    "Lohitvel Gopikannan",
+    "Shashi Ranjan Kumar",
+    "Abhinav Sinha"
+  ],
+  "summary": "This paper proposes a nonlinear guidance strategy capable of intercepting a constant-velocity, non-maneuvering target while strictly satisfying the prescribed bounds on the control input (commanded acceleration). Unlike conventional strategies that estimate time-to-go using linearization or small-angle approximations, the proposed strategy employs true proportional-navigation guidance (TPNG) as a baseline, which utilizes an exact time-to-go formulation and is applicable over a wide range of target motions. In contrast to most existing strategies, which do not incorporate control input bounds…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.RO",
+    "math.DS"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

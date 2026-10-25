@@ -1,0 +1,21 @@
+{
+  "key": "2602.16508",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.16508",
+  "title": "A Fully Discrete Nonnegativity-Preserving FEM for a Stochastic Heat Equation",
+  "authors": [
+    "Owen Hearder",
+    "Claude Le Bris",
+    "Ana Djurdjevac"
+  ],
+  "summary": "We consider a stochastic heat equation with nonlinear finite-rank space-coloured multiplicative noise that admits a unique nonnegative solution when given nonnegative initial data. Inspired by existing results for fully discrete finite difference schemes and building on the convergence analysis of semi-discrete mass-lumped finite element approximations, a fully discrete numerical method is introduced that combines mass-lumped finite elements with a Lie-Trotter splitting strategy. This discretization preserves nonnegativity at the discrete level and is shown to be convergent under suitable…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-18",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

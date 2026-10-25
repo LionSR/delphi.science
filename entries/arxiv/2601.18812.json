@@ -1,0 +1,23 @@
+{
+  "key": "2601.18812",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.18812",
+  "title": "A framework to evaluate the performance of Variational Quantum Algorithms",
+  "authors": [
+    "Ernesto Mamedaliev",
+    "Vladyslav Libov",
+    "Albert Nieto-Morales",
+    "Oskar Słowik",
+    "Arit Kumar Bishwas"
+  ],
+  "summary": "Variational Quantum Algorithms (VQAs) are promising methods for solving combinatorial optimization problems on noisy intermediate-scale quantum (NISQ) devices. However, benchmarking VQAs is difficult due to their stochastic behavior and the lack of standardized performance criteria. This work introduces a general framework for evaluating VQAs applied to Quadratic Unconstrained Binary Optimization (QUBO) problems. The framework uses three complementary metrics: feasibility, quality, and reproducibility. It also introduces a quality diagram that visualizes trade-offs between success…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-21",
+  "updated": "2026-01-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

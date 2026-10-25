@@ -1,0 +1,21 @@
+{
+  "key": "2609.09804",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.09804",
+  "title": "Small-Bias Quantum Approximate Counting via the Multiplicative Adversary Method",
+  "authors": [
+    "Albert Lin",
+    "Han-Hsuan Lin"
+  ],
+  "summary": "We study the two-weight decision version of quantum approximate counting: given oracle access to $x\\in\\{0,1\\}^N$, distinguish $|x|=M$ from $|x|=M+Δ$ with success probability $1/2+ζ$. Using the multiplicative adversary method, we prove $Ω\\left(\\max\\left\\{ζ\\sqrt{(N-M)(M+Δ)}/Δ,\\sqrt{ζN/Δ}\\right\\}\\right)$. The same parameter dependence follows from the polynomial-method characterization of the two-layer symmetric function by Podder, Yao, and Ye. Our contribution is a multiplicative-adversary derivation that tracks the progress produced by individual oracle queries. For the first term, after…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

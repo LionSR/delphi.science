@@ -1,0 +1,21 @@
+{
+  "key": "2601.22349",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.22349",
+  "title": "Forward-KL Convergence of Time-Inhomogeneous Langevin Diffusions",
+  "authors": [
+    "Andreas Habring",
+    "Martin Zach"
+  ],
+  "summary": "Many practical samplers rely on time-dependent drifts -- often induced by annealing or tempering schedules -- to improve exploration and stability. This motivates a unified non-asymptotic analysis of the corresponding Langevin diffusions and their discretizations. We provide a convergence analysis that includes non-asymptotic bounds for the continuous-time diffusion and its Euler--Maruyama discretization in the forward-Kullback--Leibler divergence under a single set of abstract conditions on the time-dependent drift. The results apply to many practically-relevant annealing schemes, including…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

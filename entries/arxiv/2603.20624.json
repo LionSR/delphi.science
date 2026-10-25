@@ -1,0 +1,20 @@
+{
+  "key": "2603.20624",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20624",
+  "title": "Cross-Correlation Periodograms with Decaying Noise Floor for Power Spectral Density Estimation",
+  "authors": [
+    "Mark Magsino"
+  ],
+  "summary": "We present a statistical analysis of a variant of the periodogram method that forms power spectral density estimates by cross-correlating the discrete Fourier transforms of adjacent time windows. The proposed estimator is closely related to cross-power spectral methods and to a technique introduced by Nelson, which has been observed empirically to improve detection of sinusoidal components in noise. We show that, under a white Gaussian noise model, the expected contribution of noise to the proposed estimator is zero and that the estimator is unbiased under certain window alignment…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "eess.SP"
+  ],
+  "published": "2026-03-21",
+  "updated": "2026-03-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

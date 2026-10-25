@@ -1,0 +1,21 @@
+{
+  "key": "2601.18689",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.18689",
+  "title": "Function estimation in the empirical Bayes setting",
+  "authors": [
+    "Benjamin Kang",
+    "Yury Polyanskiy",
+    "Anzo Teh"
+  ],
+  "summary": "We study function estimation in the empirical Bayes setting for Poisson and normal means. Specifically, given observations $X_i\\sim f(\\cdot; θ_i)$ with latent parameters $θ_i\\sim π$, the goal is to estimate $\\mathbb{E}_π[\\ell(θ)|X = x]$. This task lies between classical deconvolution (recovering the full prior $π$), and standard empirical Bayes mean estimation. While the minimax risk for estimating $π$ in the Wasserstein distance is known to decay only logarithmically, we show that estimating the corresponding posterior smooth functionals admits dramatically faster rates. In particular, for…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-01-26",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

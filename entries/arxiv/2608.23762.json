@@ -1,0 +1,20 @@
+{
+  "key": "2608.23762",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.23762",
+  "title": "Transport based embeddings with topological guarantees",
+  "authors": [
+    "Erik Carlsson",
+    "John Carlsson"
+  ],
+  "summary": "Point clouds arising in image collections, samples from Markov chain Monte Carlo, or states of a random walk, often have a simple underlying geometry which is obscured by noise, high ambient dimension, and the failure of Euclidean distance to reflect similarity. Methods such as UMAP and t-SNE condense such data into usable form, but rely on heuristic choices and provide no guarantee that the output reflects the topology of the input. We introduce a condensation method that comes with such a guarantee. Encoding the data as a positive $m\\times n$ stochastic matrix $Q=(q_{ij})$, for instance…",
+  "domain": "math.AT",
+  "tags": [
+    "math.AT"
+  ],
+  "published": "2026-08-24",
+  "updated": "2026-08-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2606.20557",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20557",
+  "title": "Optimal Deterministic Multicalibration and Omniprediction",
+  "authors": [
+    "Georgy Noarov",
+    "Aaron Roth"
+  ],
+  "summary": "A model is multicalibrated on a collection of group weights $G$ if it is calibrated -- i.e. unbiased even conditional on its prediction -- not just overall, but also after reweighting contexts by each $g \\in G$. It is a useful property for many downstream applications and is a basic desideratum of trustworthy machine learning. Before this work, all predictors known to attain the minimax-optimal $\\widetilde O(\\varepsilon^{-3})$ sample complexity rate for $\\varepsilon$-multicalibration were randomized, while deterministic predictors were known only with substantially worse sample complexity.…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

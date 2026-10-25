@@ -1,0 +1,27 @@
+{
+  "key": "2604.17489",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.17489",
+  "title": "Approximate Hamiltonian Simulation Algorithm for Efficient Fluid Quantum Simulations",
+  "authors": [
+    "Zhiyuan Zhang",
+    "Bolin Zhang",
+    "Yongguang Lv",
+    "Ruiqing He",
+    "Hengliang Guo",
+    "Jiandong Shang",
+    "Qiang Chen"
+  ],
+  "summary": "This work aims to address the bottleneck issues of hardware resource limitation and decoherence error in the Hamiltonian simulation of quantum fluids, which are caused by the standard quantum Fourier transform and the evolution of momentum operators, resulting in excessively deep circuits and excessive two-qubit gates. We propose an approximate operator optimization scheme aimed at reducing the circuit depth in Hamiltonian evolution. The proposed scheme successfully reduces the depth of analog circuits from $O(n^2)$ to $O(nlogn)$ or even $O(n)$ by eliminating $O(n^2)$ redundant two-qubit…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.comp-ph",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-04-19",
+  "updated": "2026-04-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

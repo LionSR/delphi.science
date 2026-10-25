@@ -1,0 +1,20 @@
+{
+  "key": "2607.24502",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.24502",
+  "title": "Self-Attention Dynamics with Rotary Position Embeddings: Twisted States and Explicit Consensus Rates on the Sphere",
+  "authors": [
+    "Hao Ye"
+  ],
+  "summary": "Rotary position embeddings (RoPE) modify attention scores through position-dependent rotations, but their effect on normalized token dynamics is not captured by the vanilla spherical self-attention model. We study the continuous-time dynamics obtained when queries and keys are rotated while values remain on the unit sphere. The resulting attention kernel is reversible and admits a sharp uniform softmax floor, yet the natural RoPE interaction energy has derivatives of both signs within one fixed nontrivial system. Every consensus state remains an equilibrium, and its transverse linearization…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "cs.LG"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

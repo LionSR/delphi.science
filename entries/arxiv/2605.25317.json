@@ -1,0 +1,20 @@
+{
+  "key": "2605.25317",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.25317",
+  "title": "Fault-Tolerant QLDPC Syndrome Measurement via LDGM Encoding",
+  "authors": [
+    "Eren Guttentag",
+    "Anthony Gómez-Fonseca"
+  ],
+  "summary": "We propose the use of certain low-density generator-matrix (LDGM) codes as syndrome measurement (SM) codes for quantum low-density parity check (QLDPC) codes. We use an efficient progressive-edge-growth-like algorithm to create LDGM SM codes with column and row weights that result in measured stabilizers that have constant weight, thus preserving the desirable properties of the underlying QLDPC code. This process allows for control over stabilizer weights and SM code distance, resulting in significantly better performance than repeated syndrome extraction and allowing for both higher…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-25",
+  "updated": "2026-05-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

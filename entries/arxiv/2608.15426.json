@@ -1,0 +1,22 @@
+{
+  "key": "2608.15426",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.15426",
+  "title": "Scalable dynamical inference of phase-field fracture from sparse and partial measurements",
+  "authors": [
+    "Hanfeng Zhai",
+    "Zisheng Zhang"
+  ],
+  "summary": "Evolving crack fields in structural health monitoring and fracture assessment must often be inferred from sparse mechanical measurements rather than dense full-field observations. We develop CNN2D--ConvGRU, a convolutional-recurrent framework for measurement-conditioned reconstruction of time-dependent phase-field brittle fracture. At each load step, the model maps a fixed-length history of phase and displacement fields and sparse current-step displacement measurements to the current full-field state. New measurements are assimilated during sequential deployment, making the framework a…",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "cond-mat.mtrl-sci",
+    "math-ph"
+  ],
+  "published": "2026-08-15",
+  "updated": "2026-08-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

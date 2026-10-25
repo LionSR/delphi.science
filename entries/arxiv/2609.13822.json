@@ -1,0 +1,20 @@
+{
+  "key": "2609.13822",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.13822",
+  "title": "Domain splitting with localized implicit prediction for wave equations",
+  "authors": [
+    "Tim Buchholz",
+    "Roland Maier"
+  ],
+  "summary": "We propose and analyze a non-iterative domain decomposition time integrator for the linear acoustic wave equation. The method is based on an overlapping decomposition in space and uses a localized implicit prediction to provide artificial boundary data at the interfaces. We use conforming finite elements of arbitrary order to discretize in space and allow spatially varying material coefficients. We prove an error bound relative to the global Crank--Nicolson approximation that decays exponentially with the size of both the subdomain and prediction overlaps. Compared to earlier work, this new…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-12",
+  "updated": "2026-09-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

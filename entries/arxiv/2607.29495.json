@@ -1,0 +1,25 @@
+{
+  "key": "2607.29495",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.29495",
+  "title": "Fast Mixing for Low-Temperature Potts Models via Poisson Trees",
+  "authors": [
+    "Zongchen Chen",
+    "Andreas Galanis",
+    "Leslie Ann Goldberg",
+    "Xandru Mifsud",
+    "Paulina Smolarova",
+    "Xusheng Zhang"
+  ],
+  "summary": "The $q$-state ferromagnetic Potts model on a graph $G$ is a probability distribution on all $q$-colourings of $G$ that favours many monochromatic edges. Approximate sampling from the Potts model is a central problem in the study of spin systems on sparse graphs, especially in the low-temperature regime, where the model strongly favours ordered configurations, often creating bottlenecks that make Markov-chain sampling inefficient or difficult to analyse. We focus on the sparse random graph $G(n,d/n)$. The local neighbourhoods of $G(n,d/n)$ are tree-like, but the relevant underlying graph is a…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.DM"
+  ],
+  "published": "2026-07-31",
+  "updated": "2026-07-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

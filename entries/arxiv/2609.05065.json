@@ -1,0 +1,21 @@
+{
+  "key": "2609.05065",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.05065",
+  "title": "Convex order and preservation of convexity for Bayesian posterior updates",
+  "authors": [
+    "Erhan Bayraktar",
+    "Yuqiong Wang"
+  ],
+  "summary": "We study how the response of a Bayesian posterior statistic to future observations changes as information accumulates. For a non-decreasing function $T$, define $Π_n^T=\\E[T(Θ)\\vert \\mathcal F_n]$, where $Θ$ has an arbitrary prior and the observations come from a one-parameter exponential family. Conditioning on the same current value of $Π^T$, we show that the posterior statistic after additional observations is larger in convex order when the current posterior is based on fewer observations. We also prove preservation of convexity: the expected value of a convex function of the future…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "math.PR"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

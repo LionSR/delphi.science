@@ -1,0 +1,19 @@
+{
+  "key": "2604.25033",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.25033",
+  "title": "A polynomial-time solvable class of sparse box-constrained polynomial optimization problems",
+  "authors": [
+    "Aida Khajavirad"
+  ],
+  "summary": "We study the problem of minimizing a multivariate polynomial function over the unit hypercube. Exploiting sparsity in the interaction graph or hypergraph, we identify variables that can be restricted to binary values at optimality and eliminate the remaining continuous variables component-wise, reducing the problem to structured binary polynomial optimization. For quadratic objectives, we obtain exact polynomial-time solvability in the standard Turing bit model under conditions involving treewidth and the nonconvexity of the continuous components. For higher-degree objectives, we obtain an…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

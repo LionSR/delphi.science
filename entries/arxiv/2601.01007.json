@@ -1,0 +1,20 @@
+{
+  "key": "2601.01007",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.01007",
+  "title": "On solving nonlinear simultaneous equations arising from the double-exponential Sinc-collocation method for initial value problems",
+  "authors": [
+    "Yusaku Yamamoto",
+    "Ken'ichiro Tanaka"
+  ],
+  "summary": "The double-exponential Sinc-collocation method is known as a super-accurate method for solving initial value problems of ordinary differential equations, for which the error decreases almost exponentially as a function of the number of sample points in the temporal direction, $N$. However, this method requires solving nonlinear simultaneous equations in $nN$ variables when the problem dimension is $n$. Recently, Ogata pointed out that Gauss-Seidel type fixed-point iteration works surprisingly well for solving these equations, typically reducing the error by one or two orders of magnitude at…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-03",
+  "updated": "2026-04-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

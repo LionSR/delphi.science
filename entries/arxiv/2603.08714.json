@@ -1,0 +1,24 @@
+{
+  "key": "2603.08714",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.08714",
+  "title": "On the Multi-Commodity Flow with convex objective function: Column-Generation approaches",
+  "authors": [
+    "Guillaume Beraud-Sudreau",
+    "Lucas Létocart",
+    "Youcef Magnouche",
+    "Sébastien Martin"
+  ],
+  "summary": "The purpose of this work is to develop an algorithmic optimization approach for a capacitated Multi-Commodity flow problem, where the objective is to minimize the total link costs, where the cost of each arc increases convexly with its utilization. This objective is particularly relevant in telecommunication networks, where device performance can deteriorate significantly as the available bandwidth on a link becomes limited. By optimizing this convex function, traffic is efficiently distributed across the network, ensuring optimal use of available resources and preserving capacity for future…",
+  "domain": "cs.NI",
+  "tags": [
+    "cs.NI",
+    "cs.DM",
+    "math.OC"
+  ],
+  "published": "2026-02-03",
+  "updated": "2026-02-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

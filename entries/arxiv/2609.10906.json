@@ -1,0 +1,20 @@
+{
+  "key": "2609.10906",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10906",
+  "title": "Preserving Structure in Variational Data Assimilation of Hyperbolic Conservation Laws via Regularization",
+  "authors": [
+    "Yao Xiao",
+    "Anne Gelb"
+  ],
+  "summary": "Hyperbolic conservation laws pose a challenging setting for variational data assimilation, since the Gaussian assumption imposes a smoothness that smears jump discontinuities. A sparsity promoting regularization can help to mitigate this problem by incorporating a structural prior into the variational objective. Care must be taken when choosing this prior because it serves to counterbalance both a structurally misspecified background-error covariance, which introduces spurious oscillations over smooth regions, as well as spatially sparse observations, which leave too little data to constrain…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

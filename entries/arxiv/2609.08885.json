@@ -1,0 +1,21 @@
+{
+  "key": "2609.08885",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.08885",
+  "title": "A $(\\log n)^{1/4}$ Bound for the Komlós Problem",
+  "authors": [
+    "Eren Ercan"
+  ],
+  "summary": "Let $A\\in\\mathbb{R}^{m\\times n}$ have columns of Euclidean norm at most one. We prove that $\\operatorname{disc}(A)\\le2395\\left(1+\\log_+\\frac n9\\right)^{1/4}+2\\sqrt2$. Here $\\log_+t=\\max\\{0,\\log t\\}$. Building on Bansal and Jiang's affine spectral independence framework, we remove the $(\\log\\log n)^{7/4}$ factor from their bound. The fourth root comes from balancing the logarithmic decrease in the alive dimension against the fourth power of the row thresholds. Historical exponential sums control the covariance budget across size classes with summable thresholds. An exact threshold-sum…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM",
+    "cs.DS"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

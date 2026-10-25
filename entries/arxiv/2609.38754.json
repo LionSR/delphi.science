@@ -1,0 +1,20 @@
+{
+  "key": "2609.38754",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38754",
+  "title": "Reclassified to Conform",
+  "authors": [
+    "Chris Martin"
+  ],
+  "summary": "A company's financial statements over many years must be assembled from many filings. Each filing may rename, combine, split or move its lines, and restates only the last two or three years to match. Filings provide no consistent, machine-readable mapping between successive statements, and neither a line's label nor its XBRL tag is fixed. We treat the reconstruction as an optimization problem. A tag that keeps its numbers from one filing to the next is taken to be the same line, and such runs are joined into strands before any edit is weighed. At each boundary between filings, the candidate…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.CE"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

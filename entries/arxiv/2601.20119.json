@@ -1,0 +1,21 @@
+{
+  "key": "2601.20119",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.20119",
+  "title": "Improving Smoothed Aggregation AMG Robustness on Stretched Mesh Applications",
+  "authors": [
+    "Chris Siefert",
+    "Raymond Tuminaro",
+    "Daniel Sunderland"
+  ],
+  "summary": "Strength-of-connection algorithms play a key role in algebraic multigrid (AMG). Specifically, they determine which matrix nonzeros are classified as weak and so ignored when coarsening matrix graphs and defining interpolation sparsity patterns. The general goal is to encourage coarsening only in directions where error can be smoothed and to avoid coarsening across sharp problem variations. Unfortunately, developing robust and inexpensive strength-of-connection schemes is challenging. The classification of matrix nonzeros involves four aspects: (a) choosing a strength-of-connection matrix,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-27",
+  "updated": "2026-04-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

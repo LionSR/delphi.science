@@ -1,0 +1,21 @@
+{
+  "key": "2606.06093",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.06093",
+  "title": "A tensor-train multidimensional inverse Laplace transform",
+  "authors": [
+    "Martin Mikkelsen",
+    "Michael Kastoryano"
+  ],
+  "summary": "Laplace transforms and their numerical inverses arise throughout applied mathematics, physics, finance, and probability theory. Numerical inversion, however, quickly becomes intractable in high dimensions because the number of quadrature evaluations grows exponentially with dimension. We develop a tensor train (TT) formulation of the multidimensional inverse Laplace transform. The method constructs a TT approximation of the transformed function on the complex quadrature grid and then performs the inversion through a sequence of tensor contractions. Under suitable low-rank assumptions, this…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-06-04",
+  "updated": "2026-06-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

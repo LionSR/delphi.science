@@ -1,0 +1,21 @@
+{
+  "key": "2607.03590",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.03590",
+  "title": "Tightening Control in Neyman--Pearson Linear Classification",
+  "authors": [
+    "Yijian Huang"
+  ],
+  "summary": "Neyman--Pearson classification prioritizes one class by constraining its accuracy above a prespecified level, and then takes the accuracy of the other class as the utility objective. This paradigm is well suited for disease screening and diagnosis, among other applications. Statistical learning under this framework is complicated since classifier performance determines its acceptability. Furthermore, no learned classifier that is consistent for the oracle classifier can guarantee satisfaction of the control constraint in finite samples. Classical learning theory targets a control-relaxed…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME",
+    "stat.ML"
+  ],
+  "published": "2026-07-03",
+  "updated": "2026-07-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

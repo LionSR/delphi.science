@@ -1,0 +1,20 @@
+{
+  "key": "2609.39121",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.39121",
+  "title": "Metachecks in Bivariate Bicycle Codes: Syndrome Distance, Measurement Faults, and Repair Limits",
+  "authors": [
+    "Mohammad Rowshan"
+  ],
+  "summary": "Faulty syndrome measurements can corrupt an otherwise correct quantum-error correction step. Bivariate bicycle (BB) codes contain dependent stabilizer checks, so every valid syndrome obeys additional parity constraints, or metachecks. We study how far this built-in redundancy can identify measurement faults and when the remaining ambiguity is unavoidable, while separately checking the code's logical structure. A logical decomposition is used as a preliminary safety check: it identifies a $k/2$-dimensional annihilator subspace and a $k/2$-dimensional colon quotient, and the minimum-weight…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.IT"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

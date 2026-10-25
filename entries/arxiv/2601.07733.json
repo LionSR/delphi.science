@@ -1,0 +1,20 @@
+{
+  "key": "2601.07733",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.07733",
+  "title": "Backward Reconstruction of the Chafee--Infante Equation via Physics-Informed WGAN-GP",
+  "authors": [
+    "Joseph L. Shomberg"
+  ],
+  "summary": "We present a physics-informed Wasserstein GAN with gradient penalty (WGAN-GP) for solving the inverse Chafee--Infante problem on two-dimensional domains with Dirichlet boundary conditions. The objective is to reconstruct an unknown initial condition from a near-equilibrium state obtained after 100 explicit forward Euler iterations of the reaction-diffusion equation \\[ u_t - γΔu + κ\\left(u^3 - u\\right)=0. \\] Because this mapping strongly damps high-frequency content, the inverse problem is severely ill-posed and sensitive to noise. Our approach integrates a U-Net generator, a PatchGAN critic…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "cs.LG"
+  ],
+  "published": "2026-01-12",
+  "updated": "2026-01-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

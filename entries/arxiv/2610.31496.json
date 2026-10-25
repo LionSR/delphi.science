@@ -1,0 +1,19 @@
+{
+  "key": "2610.31496",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.31496",
+  "title": "Mixed-Precision Coalesced Matrix-Free Multigrid with Vertex-Patch Smoothing",
+  "authors": [
+    "Michał Wichrowski"
+  ],
+  "summary": "I present a geometric multigrid solver for the Poisson equation with continuous cubic elements in three dimensions, smoothed by a multiplicative vertex-patch Schwarz method with exact local solves. All fields are kept in persistent cell-wise storage, where every cell holds its own copy of each shared degree of freedom. The patch smoother yields a continuous solution without any exchange between cells. On the GPU, the patch update is computed in registers, one cell per thread, and the cells of a patch exchange data by warp shuffles, so shared memory is avoided almost entirely. Despite the low…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

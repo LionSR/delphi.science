@@ -1,0 +1,23 @@
+{
+  "key": "2604.14135",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.14135",
+  "title": "Temporary Power Adjusting Withholding Attack",
+  "authors": [
+    "Mustafa Doger",
+    "Sennur Ulukus"
+  ],
+  "summary": "We consider the block withholding attacks on pools, more specifically the state-of-the-art Power Adjusting Withholding (PAW) attack. We propose a generalization called Temporary PAW (T-PAW) where the adversary withholds a fPoW from pool mining at most $T$-time even when no other block is mined. We show that PAW attack corresponds to $T\\to\\infty$ and is not optimal. In fact, the extra reward of T-PAW compared to PAW improves by an unbounded factor as adversarial hash fraction $α$, pool size $β$ and adversarial network influence $γ$ decreases. For example, the extra reward of T-PAW is 22 times…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "cs.DC",
+    "cs.IT",
+    "math.PR"
+  ],
+  "published": "2026-04-15",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

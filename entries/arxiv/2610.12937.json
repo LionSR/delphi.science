@@ -1,0 +1,24 @@
+{
+  "key": "2610.12937",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.12937",
+  "title": "Sequential Conformal Calibration under Recursive Selection",
+  "authors": [
+    "Yuning Yang",
+    "Zexuan Liu",
+    "Tianci Wang",
+    "Danlin Li"
+  ],
+  "summary": "Conformal prediction provides finite-sample, distribution-free coverage guarantees that can support decision-making in specific settings. In multistage problems, earlier decisions determine the populations relevant to later calibration. When later scores are refit using earlier calibration results, reusing those cases for ranking need not preserve exchangeability with a surviving test case. We study sequential conformal calibration with a fresh fold at each stage: conditional on earlier folds, the selected fold scores and the surviving test score are exchangeable. This yields finite-sample…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.OC",
+    "stat.AP"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

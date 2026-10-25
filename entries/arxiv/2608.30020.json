@@ -1,0 +1,20 @@
+{
+  "key": "2608.30020",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.30020",
+  "title": "Second-Order Accuracy from Large Local Errors in Interface Problems: A Discrete Green's Function Analysis",
+  "authors": [
+    "So-Hsiang Chou",
+    "Patrick Nyadjo Fonga"
+  ],
+  "summary": "Finite difference methods for interface problems often exhibit large local truncation errors near the interface, particularly when discontinuities in coefficients or solution derivatives are present. Nevertheless, many such schemes achieve second-order accuracy, a phenomenon not fully explained by standard pointwise consistency arguments. In this work, we provide a precise explanation of this behavior through the structure of the discrete Green's function associated with the underlying conservative difference operator. An explicit representation of the Green's function reveals a two-plateau…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-30",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

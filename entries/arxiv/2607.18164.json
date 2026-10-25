@@ -1,0 +1,26 @@
+{
+  "key": "2607.18164",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.18164",
+  "title": "A Continual Validation, Updating, and Decision-Making Framework for Self-Adaptive Digital Twins via Robust Model Predictive Control: A Case Study in Additive Manufacturing",
+  "authors": [
+    "Yi-Ping Chen",
+    "Ying-Kuan Tsai",
+    "Vispi Karkaria",
+    "Seul Lee",
+    "Daniel Apley",
+    "Wei Chen"
+  ],
+  "summary": "Digital Twins rely on surrogate models to mirror physical systems in real time, yet these models can degrade as operating conditions evolve, a phenomenon known as concept drift. Maintaining surrogate fidelity under drift, particularly when models must also capture aleatoric uncertainty, remains an open challenge. Existing adaptive frameworks lack principled mechanisms for detecting when updates are needed, for efficiently adapting models from limited streaming data, and for certifying that updates genuinely improve predictive performance. Here we present an adaptive Digital Twin framework…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.ST"
+  ],
+  "published": "2026-07-20",
+  "updated": "2026-07-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

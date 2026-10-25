@@ -1,0 +1,22 @@
+{
+  "key": "2603.22871",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.22871",
+  "title": "Dynamical Systems Theory Behind a Hierarchical Reasoning Model",
+  "authors": [
+    "Vasiliy A. Es'kin",
+    "Mikhail E. Smorkalov"
+  ],
+  "summary": "Current large language models (LLMs) primarily rely on linear sequence generation and massive parameter counts, yet they severely struggle with complex algorithmic reasoning. While recent reasoning architectures, such as the Hierarchical Reasoning Model (HRM) and Tiny Recursive Model (TRM), demonstrate that compact recursive networks can tackle these tasks, their training dynamics often lack rigorous mathematical guarantees, leading to instability and representational collapse. We propose the Contraction Mapping Model (CMM), a novel architecture that reformulates discrete recursive reasoning…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.LG",
+    "math.DS"
+  ],
+  "published": "2026-03-24",
+  "updated": "2026-03-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

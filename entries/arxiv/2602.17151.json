@@ -1,0 +1,23 @@
+{
+  "key": "2602.17151",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.17151",
+  "title": "ARCANE: Scalable high-degree cubature formulae for simulating SDEs without Monte Carlo error",
+  "authors": [
+    "Peter Koepernik",
+    "Thomas Coxon",
+    "James Foster"
+  ],
+  "summary": "Monte Carlo sampling is the standard approach for estimating properties of solutions to stochastic differential equations (SDEs), but accurate estimates require huge sample sizes. Lyons and Victoir (2004) proposed replacing independently sampled Brownian driving paths with \"cubature formulae\", deterministic weighted sets of paths that match Brownian \"signature moments\" up to some degree $D$. They prove that cubature formulae exist for arbitrary $D$, but explicit constructions are difficult and have only reached $D=7$, too small for practical use. We present ARCANE, an algorithm that…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.MS",
+    "math.PR"
+  ],
+  "published": "2026-02-19",
+  "updated": "2026-02-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

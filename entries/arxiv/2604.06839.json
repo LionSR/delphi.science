@@ -1,0 +1,19 @@
+{
+  "key": "2604.06839",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.06839",
+  "title": "Extremal Mostar Index of Graphs with Given Number of Cut Edges",
+  "authors": [
+    "Sunilkumar M. Hosamani"
+  ],
+  "summary": "The Mostar index of a connected graph \\(G\\) is defined as \\[ Mo(G)=\\sum_{uv\\in E(G)}\\bigl|n_u(uv)-n_v(uv)\\bigr|, \\] where for an edge \\(e=uv\\), \\(n_u(e)\\) denotes the number of vertices of \\(G\\) that are closer to \\(u\\) than to \\(v\\). In this paper, we determine the maximum possible Mostar index among all connected graphs of order \\(n\\) with exactly \\(k\\) cut edges, where \\(1\\le k\\le n-1\\). We prove that the maximum value is given by \\(k(n-2)+(n-k-1)k\\), and the unique extremal graph is \\(K_{n-k}^k\\) (a complete graph on \\(n-k\\) vertices with \\(k\\) pendant edges attached to a single vertex).…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-04-08",
+  "updated": "2026-04-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

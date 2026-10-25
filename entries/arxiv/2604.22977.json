@@ -1,0 +1,22 @@
+{
+  "key": "2604.22977",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.22977",
+  "title": "A Reinforcement-learning-based Column Generation Algorithm for Integrated Operating Room Planning and Scheduling",
+  "authors": [
+    "Mahdi Dolatkhah",
+    "Hossein Hashemi Doulabi",
+    "Walter Rei",
+    "Michel Gendreau"
+  ],
+  "summary": "In this paper, we propose a novel mixed integer programming model to formulate integrated operating room planning and scheduling problems, where several mandatory and elective surgeries are to be assigned and scheduled in operating rooms on different days. We consider both overtime in operating rooms and surgeons' daily availability limits. We propose a column generation (CG) algorithm to solve large-scale instances. In order to enhance the CG, we integrate the Reinforcement Learning Algorithm and the Genetic Algorithm and develop a hybrid algorithm to generate initial columns for the CG…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-24",
+  "updated": "2026-04-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

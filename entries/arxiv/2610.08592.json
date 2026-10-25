@@ -1,0 +1,21 @@
+{
+  "key": "2610.08592",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08592",
+  "title": "CNet: A Complex-Valued Deep Learning Framework with Wirtinger Autodifferentiation and FFT--Hadamard Convolution",
+  "authors": [
+    "Marcel Crasmaru"
+  ],
+  "summary": "CNet is a C++/CUDA framework for deep complex-valued neural networks (CVNNs), trained by gradient descent with explicit Wirtinger (CR-calculus) derivatives. Complex models are underexplored yet natural where data is intrinsically complex -- RF/IQ, MRI k-space, radar/SAR, audio spectra -- and phase carries information real networks discard. CNet is physics-native: a network is a cascade of complex (often unitary) operations on an amplitude vector, and classification is a Born-rule measurement p_k = |z_k|^2 / ||z||^2 rather than a softmax over real logits. Every layer ships a CPU reference and…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.MS",
+    "math.OC"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

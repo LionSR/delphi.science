@@ -1,0 +1,22 @@
+{
+  "key": "2603.14383",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.14383",
+  "title": "Geometric Mode-Selection Scores for Delay-Coordinates Dynamic Mode Decomposition",
+  "authors": [
+    "Yoav Harris",
+    "Hadas Benisty",
+    "Ronen Talmon"
+  ],
+  "summary": "Delay-coordinates dynamic mode decomposition (DC-DMD) is widely used to extract coherent spatiotemporal modes from high-dimensional time series. A central challenge is distinguishing dynamically meaningful modes from spurious modes induced by noise and order overestimation. We frame this as a mode-selection scoring problem: each mode receives a score that ranks it as true or spurious; any hard selection (threshold or clustering) is a downstream choice. We show that mode selection in DC-DMD is fundamentally a problem of subspace geometry. True modes are characterized by concentration within a…",
+  "domain": "eess.SP",
+  "tags": [
+    "eess.SP",
+    "math.DS"
+  ],
+  "published": "2026-03-15",
+  "updated": "2026-07-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

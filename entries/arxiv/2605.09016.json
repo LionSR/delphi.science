@@ -1,0 +1,24 @@
+{
+  "key": "2605.09016",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09016",
+  "title": "CATO: Charted Attention for Neural PDE Operators",
+  "authors": [
+    "Chun-Wun Cheng",
+    "Sifan Wang",
+    "Carola-Bibiane Schönlieb",
+    "Angelica I. Aviles-Rivero"
+  ],
+  "summary": "Neural operators have emerged as powerful data-driven solvers for PDEs, offering substantial acceleration over classical numerical methods. However, existing transformer-based operators still face critical challenges when modeling PDEs on complex geometries: directly processing over massive mesh points is computationally expensive, while operating in raw discretization coordinates may obscure the intrinsic geometry where physical interactions are more naturally expressed. To address these limitations, we introduce the Charted Axial Transformer Operator (CATO), a geometry-adaptive and…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-05-09",
+  "updated": "2026-05-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2609.14975",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.14975",
+  "title": "The threshold for online balancing of i.i.d. binary vectors",
+  "authors": [
+    "Dylan J. Altschuler",
+    "Konstantin Tikhomirov"
+  ],
+  "summary": "Consider the task of online vector balancing for stochastic arrivals $X_1,\\ldots,{X_T}$, where the $X_i$ are independent uniformly random $d$--sparse binary vectors in $\\{0,1\\}^n$. This is a random analogue of the online Beck--Fiala problem. We show that uniformly for $2\\le d\\le n/2$ and $T = Θ(n)$, the optimal online prefix discrepancy $\\max\\limits_{t\\leq T}\\left\\|\\sum_{i=1}^tσ_i X_i\\right\\|_\\infty$ is of order \\[ Θ\\big(\\max\\{\\sqrt d,\\log\\log n\\}\\big). \\] The upper bound is achieved by an efficient online algorithm. Thus, for $d\\le(\\log\\log n)^2$, the optimal discrepancy is $Θ(\\log\\log n)$…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

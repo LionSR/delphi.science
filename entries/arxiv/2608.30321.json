@@ -1,0 +1,21 @@
+{
+  "key": "2608.30321",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.30321",
+  "title": "Optimal Block Time for AMM Liquidity Providers under Jump-Diffusion Prices",
+  "authors": [
+    "Nils Bundi"
+  ],
+  "summary": "Loss-versus-Rebalancing (LVR) is the dominant adverse-selection cost borne by liquidity providers on automated market makers. Under geometric Brownian motion, arbitrage profit scales with the probability of a profitable block, which vanishes as the block time $Δt \\to 0$; this is the standing argument for ever-shorter blocks. Modeling the reference price instead as a jump-diffusion, I show that the constant-product LVR rate splits into a diffusion channel carrying the known multiplier $F(γ/(σ\\sqrt{Δt}))$ and a jump channel $λV \\cdot G(γ;m,δ^2)$ carrying no $Δt$, the two interacting only…",
+  "domain": "q-fin.MF",
+  "tags": [
+    "q-fin.MF",
+    "math.PR",
+    "q-fin.TR"
+  ],
+  "published": "2026-08-31",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

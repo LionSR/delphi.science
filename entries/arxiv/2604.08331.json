@@ -1,0 +1,20 @@
+{
+  "key": "2604.08331",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.08331",
+  "title": "Metacat: a categorical framework for formal systems",
+  "authors": [
+    "Paul Wilson"
+  ],
+  "summary": "We present a categorical framework for formal systems in which inference rules with $m$ metavariables over a category of syntax $\\mathscr{S}$, taken to be a cartesian PROP, are represented by operations of arity $k \\to n$ equipped with spans $k \\leftarrow m \\to n$ in $\\mathscr{S}$, encoding the hypotheses and conclusions in a common metavariable context. Composition is by substitution of metavariables, which is the sole primitive operation, as in Metamath. Proofs in this setting form a symmetric monoidal category whose monoidal structure encodes the combination and reuse of hypotheses. This…",
+  "domain": "math.CT",
+  "tags": [
+    "math.CT",
+    "cs.LO"
+  ],
+  "published": "2026-04-09",
+  "updated": "2026-04-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

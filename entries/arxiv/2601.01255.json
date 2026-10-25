@@ -1,0 +1,23 @@
+{
+  "key": "2601.01255",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.01255",
+  "title": "A Blueprint for the Formalization of Seymour's Matroid Decomposition Theorem",
+  "authors": [
+    "Ivan Sergeev",
+    "Martin Dvorak",
+    "Cameron Rampell",
+    "Mark Sandey",
+    "Pietro Monticone"
+  ],
+  "summary": "This document is a blueprint for the formalization in Lean of the structural theory of regular matroids underlying Seymour's decomposition theorem. We present a modular account of regularity via totally unimodular representations, show that regularity is preserved under $1$-, $2$-, and $3$-sums, and establish regularity for several special classes of matroids, including graphic, cographic, and the matroid $R_{10}$. The blueprint records the logical structure of the proof, the precise dependencies between results, and their correspondence with Lean declarations. It is intended both as a guide…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-01-03",
+  "updated": "2026-01-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

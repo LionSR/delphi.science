@@ -1,0 +1,23 @@
+{
+  "key": "2605.23571",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.23571",
+  "title": "Accelerating an ensemble of variational data assimilations with randomized preconditioning",
+  "authors": [
+    "I. Daužickaitė",
+    "S. Gürol",
+    "M. Destouches",
+    "L. Berre",
+    "A. T. Weaver"
+  ],
+  "summary": "Ensembles of variational data assimilations (EDA) require solving systems of linear equations with iterative methods. The solution process can be accelerated using a limited memory preconditioner constructed with approximations of the leading eigenpairs of the Hessian matrix. Randomized methods for low-rank matrix approximations provide a feasible approach for computing these eigenpairs. These methods use a random sketching matrix to obtain a low-rank representation of the Hessian matrix, which is then used for computing the eigendecomposition. The sketching matrix highly influences the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-22",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

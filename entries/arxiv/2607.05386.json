@@ -1,0 +1,19 @@
+{
+  "key": "2607.05386",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.05386",
+  "title": "Logical Spectroscopy: Lifted-Product Codes with Addressable Bases",
+  "authors": [
+    "Jong Yeon Lee"
+  ],
+  "summary": "Quantum LDPC memories can encode many logical qubits, but that alone does not make them usable: applications need to know where the logical operators are supported, how they are labeled, and how conjugate $X/Z$ partners pair. For hypergraph-product codes this information follows from row reduction over $\\mathbb{F}_2$. For Abelian lifted-product codes, which include prominent high-rate constructions, it does not: the entries of the defining seed matrices live in a group algebra rather than a field, so pivots need not be invertible and row reduction can fail. To address this problem, we…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-06",
+  "updated": "2026-07-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

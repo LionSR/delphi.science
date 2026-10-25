@@ -1,0 +1,21 @@
+{
+  "key": "2605.22514",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.22514",
+  "title": "A Symbolic Homotopy Algorithm for Solving Composable Polynomial Systems",
+  "authors": [
+    "Thi Xuan Vu"
+  ],
+  "summary": "We study the problem of computing the isolated regular solutions of a system \\((f_1,\\ldots,f_n)\\) of \\(n\\) polynomial equations in \\(n\\) variables \\((X_1, \\dots, X_n)\\) over a field of characteristic zero \\(k\\). We focus on systems with a \\emph{composable structure}, where each polynomial \\(f_i\\) can be expressed as a composition \\( f_i = h_i(g_1,\\dots,g_n)\\). Exploiting this structure allows us to reduce the original system to one in the \\(g_j\\) variables, thereby significantly improving the efficiency of symbolic solution algorithms. We present a probabilistic algorithm that computes all…",
+  "domain": "cs.SC",
+  "tags": [
+    "cs.SC",
+    "math.AC",
+    "math.AG"
+  ],
+  "published": "2026-05-21",
+  "updated": "2026-05-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

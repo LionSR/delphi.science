@@ -28,5 +28,103 @@
     "reason": "Proves a uniform lower bound on how far real zeros of Dirichlet L-functions lie from one.",
     "by": "claude-haiku",
     "at": "2026-10-23"
-  }
+  },
+  "discussion": [
+    {
+      "kind": "web",
+      "url": "https://arxiv.org/abs/2610.15483",
+      "title": "On the OpenAI proof that Landau-Siegel zeros do not exist",
+      "site": "arXiv.org",
+      "author": "William D. Banks",
+      "text": "A recent manuscript of OpenAI asserts that Landau-Siegel zeros do not exist. Here, we give a detailed account of its argument, arranged as a direct proof with explicit constants. There are absolute constants $q_0$ and $δ_0>0$ such that, for every primitive real Dirichlet character $χ$ of conductor…",
+      "date": "2026-10-11",
+      "added": "2026-10-24"
+    },
+    {
+      "kind": "web",
+      "url": "https://arxiv.org/abs/2610.21099",
+      "title": "A simpler proof that there are no Landau--Siegel zeros",
+      "site": "arXiv.org",
+      "author": "Bryce Kerr",
+      "text": "This paper simplifies the recent OpenAI proof that there are no Landau--Siegel zeros.",
+      "date": "2026-10-15",
+      "added": "2026-10-24"
+    },
+    {
+      "kind": "x",
+      "url": "https://x.com/thomasfbloom/status/2111718525685334277",
+      "author": "Thomas Bloom",
+      "handle": "thomasfbloom",
+      "text": "This is, it seems, much simpler than the original OpenAI paper (Ben found this by 'vibemathsing' with GPT starting from that original paper).",
+      "date": "2026-10-18",
+      "added": "2026-10-24"
+    },
+    {
+      "kind": "x",
+      "url": "https://x.com/jdlichtman/status/2111619107074592993",
+      "author": "Jared Duker Lichtman",
+      "handle": "jdlichtman",
+      "text": "Amazing!! Bryce Kerr has found a simpler proof of no Siegel zeros, in only 6 pages. This is perhaps the Proof from the Book: Number fields play a key role again, in this case the bi-quatratic extension \\Q(\\sqrt{2},\\sqrt{q}). The proof leverages a classical result of Masser on… https://t.co/EtiR9C5NbZ pic.twitter.com/kx2HMkgr1Y",
+      "date": "2026-10-18",
+      "added": "2026-10-24"
+    },
+    {
+      "kind": "web",
+      "url": "https://terrytao.wordpress.com/2026/10/19/a-sketch-of-the-proof-of-non-existence-of-siegel-zeroes/#:~:text=there%20was%20a%20third%20paper%20in%20the%20same%20release%20that%20did%20not%20establish%20the%20quasi-Riemann%20hypothesis",
+      "title": "A sketch of the proof of non-existence of Siegel zeroes",
+      "site": "What's new",
+      "author": "Terence Tao",
+      "text": "there was a third paper in the same release that did not establish the quasi-Riemann hypothesis, but instead excluded Siegel zeroes directly. This paper was significantly shorter (nine pages) and proceeded almost entirely via algebraic number theory and the geometry of numbers. Recently, various…",
+      "date": "2026-10-19",
+      "added": "2026-10-24"
+    },
+    {
+      "kind": "x",
+      "url": "https://x.com/ivanswzhang/status/2112421999800992169",
+      "author": "Shaowu Zhang",
+      "handle": "ivanswzhang",
+      "text": "[ #Mathgazing ] at @OpenAI ’s proofs · Day 07/21 · Part 1/3 [👍 Uniform Exclusion of Landau–Siegel Zeros] This is a nice manuscript with genuinely new mathematical ideas and a good use of existing techniques. For nearly a century, the possible existence of Landau–Siegel zeros has… pic.twitter.com/39YfKYpUXR",
+      "date": "2026-10-20",
+      "added": "2026-10-24"
+    },
+    {
+      "kind": "web",
+      "url": "https://terrytao.wordpress.com/2026/10/20/an-experimental-ai-math-challenge-using-tenth-discriminant-bounds-to-explore-arguments-ruling-out-siegel-zeroes/#:~:text=new%20%28and%20effective%29%20ways%20to%20rule%20out%20Siegel%20zeroes%2C%20either%20by%20establishing%20a%20quasi-Riemann%20hypothesis",
+      "title": "An experimental AI-math challenge: using tenth discriminant bounds to explore arguments ruling out Siegel zeroes",
+      "site": "What's new",
+      "author": "Terence Tao",
+      "text": "new (and effective) ways to rule out Siegel zeroes, either by establishing a quasi-Riemann hypothesis, or by some version of the argument in this previous post . In principle, each version of these arguments should also give a bound on the tenth discriminant (without using Heegner’s solution to…",
+      "date": "2026-10-20",
+      "added": "2026-10-24"
+    },
+    {
+      "kind": "web",
+      "url": "https://arxiv.org/abs/2610.30476",
+      "title": "An explicit elementary proof of no Landau--Siegel zeros",
+      "site": "arXiv.org",
+      "author": "Victor Zhenyu Guo",
+      "text": "We give an elementary proof of the absence of Landau--Siegel zeros with the explicit constant $c=1/100$. For every primitive quadratic Dirichlet character $χ$ of conductor $q\\ge3$, each real zero $β\\in(0,1)$ of $L(s,χ)$ satisfies $(1-β)\\log q>c$. The proof combines integer coefficient counting,…",
+      "date": "2026-10-21",
+      "added": "2026-10-24"
+    },
+    {
+      "kind": "web",
+      "url": "https://arxiv.org/abs/2610.31402",
+      "title": "Landau-Siegel zeros over a base field and effective Brauer-Siegel",
+      "site": "arXiv.org",
+      "author": "William D. Banks",
+      "text": "Let k be a number field. We prove that for every quadratic extension F/k, every real zero beta of L(s, chi_{F/k}) satisfies (1 - beta) log d_F >= c(k) with an effective constant c(k) > 0, and we deduce (through a reduction of Stark) that the Brauer-Siegel theorem holds effectively and uniformly…",
+      "date": "2026-10-22",
+      "added": "2026-10-24"
+    },
+    {
+      "kind": "x",
+      "url": "https://x.com/LukeBailey181/status/2113346230046822641",
+      "author": "Luke Bailey",
+      "handle": "LukeBailey181",
+      "text": "Finally, we find Pseudo-Formal proofs easier to read and understand than AI written proofs. You can explore Pseudo-Formalizations of openai/math proofs at https://t.co/ouotAImXiV . Below is the no Siegel zeros proof pseudo-formalized. pic.twitter.com/6XH8IoGdN7",
+      "date": "2026-10-22",
+      "added": "2026-10-24"
+    }
+  ]
 }

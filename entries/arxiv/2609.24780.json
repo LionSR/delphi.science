@@ -1,0 +1,21 @@
+{
+  "key": "2609.24780",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.24780",
+  "title": "Improved polynomial-time algorithms for detecting and recovering planted $Θ(\\sqrt{n})$-cliques",
+  "authors": [
+    "Dmitriy Kunisky",
+    "Songtao Mao"
+  ],
+  "summary": "In the planted clique problem, one observes either an Erdős--Rényi graph on $n$ vertices or such a graph with a clique added to $k = k(n)$ vertices, and seeks to detect or recover the clique. It is widely believed that $k = Θ(\\sqrt{n})$ is the smallest clique size for which polynomial-time algorithms exist for these tasks. We develop new algorithms in this regime using color-coding to estimate signed subgraph counts, further accelerated with fast matrix multiplication. We first show that, for each $t \\geq 1$, for $c(t)$ a constant associated to the order of growth of the number of connected…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.ST"
+  ],
+  "published": "2026-09-21",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

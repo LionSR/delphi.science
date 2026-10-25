@@ -1,0 +1,23 @@
+{
+  "key": "2607.01323",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.01323",
+  "title": "Noisy quantum circuit simulation with the tensor jump method",
+  "authors": [
+    "Maximilian Fröhlich",
+    "Aaron Sander",
+    "Martin Eigel",
+    "Robert Wille",
+    "Michael Hintermüller"
+  ],
+  "summary": "Classical simulation of noisy quantum circuits is essential for validating algorithms, benchmarking hardware, and assessing error-mitigation strategies, but remains limited by the exponential cost of density-matrix methods and the high variance of standard trajectory sampling. We introduce a variance-aware tensor network framework that combines the tensor jump method with local TDVP gate evolution on matrix product states and sparse Pauli-Lindblad hardware noise models. Gates are applied as short variational evolutions on the MPS manifold, while noise is sampled per circuit window from…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

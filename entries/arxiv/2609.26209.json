@@ -1,0 +1,28 @@
+{
+  "key": "2609.26209",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.26209",
+  "title": "When Unpaired Sets Support Shared-Corruption Calibration: Moment Geometry and Two-Sample Precision",
+  "authors": [
+    "Shuheng Cao",
+    "Zhenhao Zhang",
+    "Ruiqi Chen",
+    "Renjie Cao",
+    "Siyu Zhang",
+    "Zhaoxiang Feng",
+    "Lingwei Dang",
+    "Haoyang Wu"
+  ],
+  "summary": "Collections of diverse observations often share one acquisition, processing, geometric, or channel corruption, while only an unpaired clean reference set is available. For a prescribed low-dimensional correction shared across observations, the observed and clean reference sets support inference only through the response of fixed moments. We formulate this problem as two-sample moment calibration and report a rank-aware information state combining local rank, scaled moment sensitivity, source-separated covariance, and a moment compatibility residual. Full rank gives local moment…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "cs.AI",
+    "math.ST"
+  ],
+  "published": "2026-08-11",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

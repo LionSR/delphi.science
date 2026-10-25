@@ -1,0 +1,24 @@
+{
+  "key": "2606.16567",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.16567",
+  "title": "TNODEV: Toolbox for Neural ODE Verification",
+  "authors": [
+    "Abdelrahman Sayed Sayed",
+    "Pierre-Jean Meyer",
+    "Mohamed Ghazel"
+  ],
+  "summary": "Neural ordinary differential equations (neural ODE) gained attention in safety critical settings such as continuous-time controllers for cyber-physical systems and classifiers integrated into automated decision pipelines, raising the question whether their behavior can be formally verified. Existing tools dedicated to neural ODE provide only a single reachability call without iterative input-set refinement, limiting the precision of their verdicts to whatever one reachability call can deliver. We present TNODEV, the first formal verifier for neural ODE that integrates a falsification…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.LG",
+    "eess.SY",
+    "math.DS"
+  ],
+  "published": "2026-06-15",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

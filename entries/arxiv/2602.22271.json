@@ -1,0 +1,25 @@
+{
+  "key": "2602.22271",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.22271",
+  "title": "Support Tokens, Stability Margins, and a New Foundation for Robust LLMs",
+  "authors": [
+    "Deepak Agarwal",
+    "Dhyey Dharmendrakumar Mavani",
+    "Suyash Gupta",
+    "Karthik Sethuraman",
+    "Tejas Dharamsi"
+  ],
+  "summary": "Self-attention is usually described as a flexible, content-adaptive way to mix a token with information from its past. We reinterpret causal self-attention transformers, the backbone of modern foundation models, within a probabilistic framework, much as classical PCA is extended to probabilistic PCA. This reformulation reveals a key structural consequence of the underlying change of variables: a barrier constraint emerges on the parameters of self-attention. The resulting geometry exposes a degeneracy boundary where the attention-induced mapping becomes locally ill-conditioned, yielding a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.PR",
+    "math.ST"
+  ],
+  "published": "2026-02-25",
+  "updated": "2026-03-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

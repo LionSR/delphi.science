@@ -1,0 +1,26 @@
+{
+  "key": "2610.09648",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.09648",
+  "title": "An asymptotically tight bound on oriented diameter",
+  "authors": [
+    "Jiangdong Ai",
+    "Yaojun Chen",
+    "Yaokun Feng",
+    "Hui Lei",
+    "Jifu Lin",
+    "Zijian Ren",
+    "Xiaolin Wang",
+    "Ruilin Zheng"
+  ],
+  "summary": "Let $f(d)$ be the smallest integer such that every finite connected bridgeless simple graph of diameter $d$ admits a strong orientation of diameter at most $f(d)$. Chvátal and Thomassen (1978) proved $\\lceil d^2/2\\rceil+d\\le f(d)\\le2d^2+2d$. In this paper, we prove that $\\lceil d^2/2\\rceil+d\\le f(d)\\le\\lceil d^2/2\\rceil+d+18$ for every $d\\ge2$, which shows that $f(d)=\\lceil d^2/2\\rceil+d+O(1)$ and determines both the quadratic and linear terms up to a bounded additive error. The key method of our proof is to construct a central subgraph $H$ that admits a strong orientation of diameter $O(d)$…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

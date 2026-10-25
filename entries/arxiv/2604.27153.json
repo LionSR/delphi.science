@@ -1,0 +1,21 @@
+{
+  "key": "2604.27153",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.27153",
+  "title": "Formulating Subgroup Discovery as a Quantum Optimization Problem for Network Security",
+  "authors": [
+    "Samuel Spell",
+    "Chi-Ren Shyu"
+  ],
+  "summary": "While current network intrusion detection systems achieve satisfactory accuracy, they often lack explainability. Subgroup Discovery (SD) addresses this by building interpretable rules that characterize feature interactions associated with attack traffic. With large datasets, classical heuristic beam search methods struggle with exponentially scaling search spaces and can prune critical multi-feature interactions. This paper introduces a quantum-enhanced pipeline for SD applied to network intrusion detection using NSL-KDD, formulating SD as quantum optimization for the first time. By encoding…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

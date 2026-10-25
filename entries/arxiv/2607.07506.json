@@ -1,0 +1,20 @@
+{
+  "key": "2607.07506",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.07506",
+  "title": "Structure-Guided Gauss-Newton Method: Linear Advection-Reaction Equation",
+  "authors": [
+    "Zhiqiang Cai",
+    "César Herrera"
+  ],
+  "summary": "The least-squares neural network (LSNN) method introduced in [5] for linear advection-reaction equations is capable of accurately approximating discontinuous solutions without a priori knowledge of the interface location. However, the resulting discretization is a non-convex optimization problem that is computationally intensive and complex. In this paper, we propose a structure-guided Gauss-Newton (SgGN) method that alternates between the linear (output) and the nonlinear (hidden layer) parameters. At each outer iteration, the linear parameters are computed by a linear solver, and the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

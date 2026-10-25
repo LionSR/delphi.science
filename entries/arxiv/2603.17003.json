@@ -1,0 +1,22 @@
+{
+  "key": "2603.17003",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.17003",
+  "title": "Constricting Tubes for Prescribed-Time Safe Control",
+  "authors": [
+    "Darshan Gadginmath",
+    "Ahmed Allibhoy",
+    "Fabio Pasqualetti"
+  ],
+  "summary": "We propose a constricting Control Barrier Function (CBF) framework for prescribed-time control of control-affine systems with input constraints. Given a system starting outside a target safe set, we construct a time-varying safety tube that shrinks from a relaxed set containing the initial condition to the target set at a user-specified deadline. Any controller rendering this tube forward invariant guarantees prescribed-time recovery by construction. The constriction schedule is bounded and tunable by design, in contrast to prescribed-time methods where control effort diverges near the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-03-17",
+  "updated": "2026-06-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

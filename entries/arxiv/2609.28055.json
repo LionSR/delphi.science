@@ -1,0 +1,21 @@
+{
+  "key": "2609.28055",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.28055",
+  "title": "Asymptotic Growth of Optimal Stabilization Prefactors for the Schrödinger Equations",
+  "authors": [
+    "Shanlin Huang",
+    "Changqin Quan",
+    "Gengsheng Wang"
+  ],
+  "summary": "We study the asymptotic behavior of the optimal stabilization prefactor for the free Schrödinger equation, optimized over all bounded stationary linear feedbacks. For a prescribed decay rate $δ>0$, let $\\widehat{C}_S(δ)$ denote this optimal prefactor. Assuming that the uncontrolled region contains a nonempty open set and that the observability cost satisfies $C(T)\\le C_0e^{C_0/T}$ for small $T>0$, we prove $$ e^{c\\sqrtδ}\\le \\widehat{C}_S(δ)\\le e^{C\\sqrtδ}, \\qquad δ\\gg1. $$ The lower bound is based on the uncontrolled open hole and a quantitative cutoff construction adapted to the Laplacian,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-23",
+  "updated": "2026-09-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

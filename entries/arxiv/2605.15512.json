@@ -1,0 +1,21 @@
+{
+  "key": "2605.15512",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.15512",
+  "title": "Auto-Conditioned Frank-Wolfe Algorithms",
+  "authors": [
+    "Khanh-Hung Giang-Tran",
+    "Soroosh Shafiee",
+    "Nam Ho-Nguyen"
+  ],
+  "summary": "Frank-Wolfe methods are projection-free algorithms for constrained optimization whose practical performance often depends critically on the choice of step size. Classical closed-loop step-size rules typically require prior knowledge of a global smoothness constant, while line-search variants avoid this requirement at the cost of additional function evaluations and implementation overhead. In this paper, we develop a fully auto-conditioned framework for Frank-Wolfe-type methods. The framework replaces the global Lipschitz constant in closed-loop step sizes with a local Lipschitz estimator…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-15",
+  "updated": "2026-05-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

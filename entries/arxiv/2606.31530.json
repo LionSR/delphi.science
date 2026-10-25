@@ -1,0 +1,21 @@
+{
+  "key": "2606.31530",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.31530",
+  "title": "Graph Scheduling with Group Completion Times",
+  "authors": [
+    "Lars Rohwedder",
+    "Leander Schnaars"
+  ],
+  "summary": "In the Graph Scheduling problem we schedule a given multiset of edges on discrete time steps, such that at each step the set of edges forms a matching. The goal is to minimize the sum of weighted group completion times, where a group is a set of edges and it completes when the last edge has been scheduled. Two popular variants of this problem are Coflow Scheduling and Data Migration. Our main result is extending a recent iterated rounding approach from Coflow Scheduling, roughly corresponding to the bipartite case, to the general Graph Scheduling problem. This yields an essentially tight…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.OC"
+  ],
+  "published": "2026-06-30",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

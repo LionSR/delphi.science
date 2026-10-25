@@ -1,0 +1,21 @@
+{
+  "key": "2609.28391",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.28391",
+  "title": "Quantum score matching with applications to learning thermal states",
+  "authors": [
+    "Yulong Dong",
+    "Jiaqi Leng"
+  ],
+  "summary": "Score matching has driven major advances in classical generative learning by enabling models to learn from data without evaluating intractable normalization constants, or partition functions. Yet, extending this principle to quantum learning requires rethinking its foundations, as quantum states are described by noncommuting density operators rather than scalar probabilities. The noncommutativity creates fundamental challenges not only in defining quantum scores, but also in developing a training framework with efficient circuit implementations and rigorous theoretical guarantees. In this…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-09-23",
+  "updated": "2026-09-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

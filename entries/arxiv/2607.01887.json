@@ -1,0 +1,22 @@
+{
+  "key": "2607.01887",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.01887",
+  "title": "LUCI on IBM Hardware: Error Suppression with Almost Half Syndrome Density",
+  "authors": [
+    "Younghun Kim",
+    "Spiro Gicev",
+    "Martin Sevior",
+    "Muhammad Usman"
+  ],
+  "summary": "Long-lived logical qubits are essential for fault-tolerant quantum computation. However, the practical performance of traditional error correction protocols relies on performing specific syndrome circuits, causing vulnerability to hardware defects and imposing rigid connectivity constraints. Recent theoretical findings have proposed that flexible subroutine circuits within the LUCI framework can maintain space-time distance in the presence of isolated or broken components, albeit at the expense of temporal distance. However, these approaches have solely targeted defect avoidance and have not…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-02",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

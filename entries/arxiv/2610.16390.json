@@ -1,0 +1,28 @@
+{
+  "key": "2610.16390",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16390",
+  "title": "QBFF: Deep Quantum Bottleneck for Automatic Speaker Verification Anti-Spoofing",
+  "authors": [
+    "Anton Firc",
+    "Nouhaila Innan",
+    "Vojtěch Staněk",
+    "Kamil Malinka",
+    "Martin Perešini",
+    "Zbyněk Lička",
+    "Walid El Maouaki",
+    "Alberto Marchisio",
+    "Muhammad Shafique"
+  ],
+  "summary": "A central goal of quantum machine learning is to identify applications in which small quantum circuits can improve task performance while remaining executable on real hardware. We investigate deepfake (synthetic) speech detection, a largely unexplored application in this area, where reliable confidence scores are as important as discrimination performance because deployment decisions are made at fixed thresholds and overconfident errors can be costly. We introduce QBFF, which routes a compressed speech representation through a small 8-qubit variational circuit (VQC) used as a drop-in…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

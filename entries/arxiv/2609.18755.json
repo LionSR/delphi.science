@@ -1,0 +1,22 @@
+{
+  "key": "2609.18755",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.18755",
+  "title": "A Highly Scalable Quantized Tensor-Train FDTD Framework for the Simulation of Three-Dimensional Electromagnetic Scattering Problems",
+  "authors": [
+    "Daan Vanhaecke",
+    "Emile Vanderstraeten",
+    "Dries Vande Ginste"
+  ],
+  "summary": "In this letter, a novel 3-D Finite-Difference Time-Domain (FDTD) framework is proposed that circumvents the costly volumetric scaling of conventional FDTD methods. By representing the electromagnetic fields as low-rank Quantized Tensor Trains (QTT), the memory requirements scale logarithmically with system size. Moreover, the various numerical operations that constitute the FDTD scheme can be efficiently implemented in this format, with their computational cost also exhibiting a logarithmic complexity. The simulation of systems in open space is enabled by the inclusion of a uniaxial PML. A…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

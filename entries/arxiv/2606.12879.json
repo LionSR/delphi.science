@@ -1,0 +1,22 @@
+{
+  "key": "2606.12879",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.12879",
+  "title": "Diffusion-Network Alignment: An Efficient Algorithm and Explicit Probability Bounds",
+  "authors": [
+    "Ziao Wang",
+    "Lei Ying"
+  ],
+  "summary": "This paper studies a variation of the classic network alignment problem, named diffusion-network alignment. The goal is to align the vertices of a rooted diffusion tree to the vertices of a network, where the diffusion tree could be from a communication trace or contact tracing, and the network could be an online or offline social network. Different from the classic network alignment where both networks are fully observed, this model captures the information asymmetry of two networks. To solve this problem, this paper presents an efficient algorithm based on tree correlation tests to extract…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

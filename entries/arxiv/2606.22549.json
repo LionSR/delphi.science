@@ -1,0 +1,21 @@
+{
+  "key": "2606.22549",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.22549",
+  "title": "A Robust Cell-Centered Nodal Integral Method (RCCNIM) for Nonlinear Burgers' Equation: Accurate Formulation, Efficient Implementation, and Validation",
+  "authors": [
+    "Nadeem Ahmed",
+    "Ram Prakash Bharti"
+  ],
+  "summary": "An improved formulation of the recently developed cell-centered nodal integral method (MCCNIM) is proposed for the numerical solution of the nonlinear Burgers' equation. The improved scheme, referred to as RCCNIM, reformulates the nonlinear convection term prior to discretization by evaluating the convective velocity using cell-averaged values from the previous time level, rather than the present-time approximation used in the original MCCNIM formulation. This reformulation leads to a fully algebraic system whose coefficients depend only on known quantities and are therefore evaluated once…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-06-21",
+  "updated": "2026-06-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2604.18432",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.18432",
+  "title": "Real-Time Algorithms for Model Predictive Control of Hybrid Dynamical Systems",
+  "authors": [
+    "Armin Nurkanović",
+    "Anton Pozharskiy",
+    "Moritz Diehl"
+  ],
+  "summary": "Model predictive control (MPC) of hybrid dynamical systems is challenging because the associated optimization problem is nonsmooth and the resulting feedback law is discontinuous. This paper develops real-time MPC algorithms for nonlinear hybrid systems modeled as dynamical complementarity systems. The resulting optimal control problems are formulated as mathematical programs with complementarity constraints (MPCCs). We show that the solution map of parametric MPCCs is discontinuous, and that standard nonlinear-programming-based approaches may become infeasible when the hybrid system…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-04-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

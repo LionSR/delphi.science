@@ -1,0 +1,21 @@
+{
+  "key": "2602.04122",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.04122",
+  "title": "New Outer Approximation Algorithms for Nonsmooth Convex MINLP Problems",
+  "authors": [
+    "Zhou Wei",
+    "He-Yi Liu",
+    "Bo Zeng"
+  ],
+  "summary": "This paper presents a novel outer approximation algorithm for nonsmooth mixed-integer nonlinear programming (MINLP) problems. The method proceeds by fixing the integer variables and solving the resulting nonlinear convex subproblem. When the subproblem is feasible, valid linear cuts are derived by computing suitable subgradients of the objective and constraint functions at the optimal solution, utilizing KKT optimality conditions. A new parameter, defined through the nonlinear constraint functions, is introduced to facilitate the generation of these cuts. For infeasible subproblems, a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-04",
+  "updated": "2026-02-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

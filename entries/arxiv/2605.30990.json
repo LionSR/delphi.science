@@ -1,0 +1,23 @@
+{
+  "key": "2605.30990",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.30990",
+  "title": "Hybrid System Identification of Electric Freight Transition Dynamics via SINDy and Neural ODEs",
+  "authors": [
+    "Alessandro Carli",
+    "Maret Clement",
+    "Jonas Mårtensson",
+    "Anna Pernestål",
+    "Matthieu Barreau"
+  ],
+  "summary": "The transition to electric heavy-duty freight is constrained by a strong interdependence between vehicle adoption and charging infrastructure deployment. While system dynamics models are well-suited to simulate these socio-technical feedback loops, their reliance on conditional logic and heuristic rules makes the underlying dynamics difficult to interpret mathematically. This limits the direct application of formal systems and control theory. This paper proposes a solution to that problem through a general hybrid system identification framework that extracts a continuous-time analytical…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

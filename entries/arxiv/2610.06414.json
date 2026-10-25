@@ -1,0 +1,23 @@
+{
+  "key": "2610.06414",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06414",
+  "title": "A Mixed-Precision Model for Matrix-Splitting Methods",
+  "authors": [
+    "Neil Lindquist",
+    "David Appelhans",
+    "Chales W. Jackson",
+    "Joseph M. Derlaga"
+  ],
+  "summary": "The performance of stationary iterative methods is memory-bound, due to the low arithmetic intensity. So, we propose a mixed-precision technique to reduce the amount of data movement in matrix-splitting iterative methods. We demonstrate both theoretically and experimentally that this technique will generally converge at a similar rate as an exact-precision iteration, depending on the precision used and the conditioning of the $M$ matrix. Furthermore, we demonstrate that iterative refinement can be used to refine the solution to full double-precision accuracy. Using this approach, we mixed…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.CE"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

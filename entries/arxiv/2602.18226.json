@@ -1,0 +1,21 @@
+{
+  "key": "2602.18226",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.18226",
+  "title": "A Parametric Finite Element Approach for an Anisotropic Multi-Phase Mullins-Sekerka Problem with Kinetic Undercooling",
+  "authors": [
+    "Tokuhiro Eto",
+    "Harald Garcke",
+    "Robert Nürnberg"
+  ],
+  "summary": "We consider a sharp interface formulation for an anisotropic multi-phase Mullins-Sekerka problem with kinetic undercooling. The flow is characterized by a cluster of surfaces evolving such that the total surface energy plus a weighted sum of the volumes of the enclosed phases decreases in time. Upon deriving a suitable variational formulation, we introduce a fully discrete unfitted finite element method. In this approach, the approximations of the moving interfaces are independent of the triangulations used for the equations in the bulk. Our method can be shown to be unconditionally stable.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-20",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

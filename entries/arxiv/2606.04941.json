@@ -1,0 +1,21 @@
+{
+  "key": "2606.04941",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.04941",
+  "title": "A decoupled energy-stable mixed finite element method for Poisson-Nernst-Planck-Navier-Stokes equations",
+  "authors": [
+    "Yanmei Peng",
+    "Ying Yang",
+    "Yi Zhang"
+  ],
+  "summary": "We propose a novel linearized mixed finite element method for the Poisson-Nernst-Planck-Navier-Stokes (PNPNS) system. Specifically, the method combines a staggered time discretization that eliminates the need for expensive nonlinear solvers by carefully treating nonlinear terms in a time-staggered manner, with a mimetic spatial discretization that preserves the exact structure of the discrete de Rham complex. Both semi-discrete scheme and its fully discrete counterpart are developed, which preserve key physical properties, including conservation of the total mass and energy stability. Under…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-03",
+  "updated": "2026-06-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

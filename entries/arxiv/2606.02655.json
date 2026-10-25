@@ -1,0 +1,22 @@
+{
+  "key": "2606.02655",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.02655",
+  "title": "Coherent Swap Regret and Channel-Proof Learning",
+  "authors": [
+    "Sohail Sarkar"
+  ],
+  "summary": "External regret certifies stability only against replacing one's behavior by a fixed alternative. In a quantum game, this misses a natural physical move: a player can apply a local completely positive trace-preserving (CPTP) map to the state it actually received or prepared. We introduce coherent swap regret as the regret benchmark against all such local CPTP deviations, and give an algorithm achieving $O(\\sqrt{dT\\log d})$ coherent swap regret via entropic mirror ascent on the CPTP Choi slice with a fixed-point play rule. The main result is a three-level deviation-class landscape.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.GT",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

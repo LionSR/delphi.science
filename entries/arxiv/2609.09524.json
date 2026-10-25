@@ -1,0 +1,24 @@
+{
+  "key": "2609.09524",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.09524",
+  "title": "Oracle Complexity of Stochastic Fixed-Point Equations with Nonexpansive Maps",
+  "authors": [
+    "Jelena Diakonikolas",
+    "Cristóbal Guzmán",
+    "David Martínez-Rubio"
+  ],
+  "summary": "We study the oracle complexity of computing a point with small fixed-point residual $\\|T(x)-x\\| \\leq ε$, for a general norm $\\|\\cdot\\|$ and a self-map $T$ of a compact convex set. We study this problem in the setting where $T$ is nonexpansive with respect to the same norm $\\|\\cdot\\|$ and accessed via an unbiased stochastic oracle with bounded variance $σ^2$. We provide an algorithm that solves such instances for any norm with a weak Rademacher type $q > 1$, with high probability. The algorithm is based on a recursive anchoring technique. For type-$2$ spaces, such as $\\ell_p$-spaces for $p…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DS",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

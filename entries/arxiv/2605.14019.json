@@ -1,0 +1,22 @@
+{
+  "key": "2605.14019",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.14019",
+  "title": "Regret Equals Covariance: A Closed-Form Characterization for Stochastic Optimization",
+  "authors": [
+    "Irene Aldridge"
+  ],
+  "summary": "Quantifying regret typically involves repeatedly re-solving a stochastic optimization problem across simulated scenarios. Such an approach is costly: the cost scales with the number of scenarios and the cost of each solve. We propose that regret can instead be measured using the joint moments of the cost vector $c$ and the optimal decision $π^*(c)$. Working with the optimal concave and Lipschitz under only a feasible region value function $v(c) = \\min_{z\\in Z} c^\\top z$, we show that regret always decomposes as $\\mathrm{Regret} = -\\mathrm{Cov}(c,π^*(c)) - R(c)$ for a residual $R(c)$. We…",
+  "domain": "econ.EM",
+  "tags": [
+    "econ.EM",
+    "cs.LG",
+    "math.ST",
+    "stat.CO"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2602.00351",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.00351",
+  "title": "Efficiency-Reward Trade-Off in Queues with Dynamic Arrivals",
+  "authors": [
+    "Tianze Qu",
+    "Sushil Mahavir Varma"
+  ],
+  "summary": "Motivated by applications in online marketplaces such as ride-hailing platforms and payment channel networks, we study a single server queue with service rate $μ$ and queue-length-dependent arrival rate $λ(q) \\in [0, λ_{\\max}]$. The system operator receives a reward $F(λ)$ by setting an arrival rate $λ$, where $F$ can represent objectives such as throughput, revenue, or social welfare. The goal is to characterize the Pareto frontier between long-run average reward and expected queue length ($\\mathbb{E}[q]$). We first establish a fluid upper bound on the reward achievable under any control…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.PR"
+  ],
+  "published": "2026-01-30",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

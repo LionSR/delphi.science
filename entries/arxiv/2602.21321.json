@@ -1,0 +1,25 @@
+{
+  "key": "2602.21321",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.21321",
+  "title": "Dynamic Symmetric Point Tracking: Tackling Non-ideal Reference in Analog In-memory Training",
+  "authors": [
+    "Quan Xiao",
+    "Jindan Li",
+    "Zhaoxian Wu",
+    "Tayfun Gokmen",
+    "Tianyi Chen"
+  ],
+  "summary": "Analog in-memory computing (AIMC) performs computation directly within resistive crossbar arrays, offering an energy-efficient platform to scale large vision and language models. However, non-ideal analog device properties make the training on AIMC devices challenging. In particular, its update asymmetry can induce a systematic drift of weight updates towards a device-specific symmetric point (SP), which typically does not align with the optimum of the training objective. To mitigate this bias, most existing works assume the SP is known and pre-calibrate it to zero before training by setting…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AR",
+    "math.OC"
+  ],
+  "published": "2026-02-24",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

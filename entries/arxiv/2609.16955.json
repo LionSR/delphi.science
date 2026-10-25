@@ -1,0 +1,21 @@
+{
+  "key": "2609.16955",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.16955",
+  "title": "The Aldous chain on cladograms mixes in order $n^2$ steps",
+  "authors": [
+    "Valentin Féray",
+    "Lucas Teyssier"
+  ],
+  "summary": "Cladograms of size $n$ are unrooted binary trees whose leaves are labelled from 1 to $n$. Aldous introduced in 2000 a Markov chain on cladograms, a step of which consists of removing a leaf uniformly at random and reinserting it on a uniformly chosen edge. We introduce a coupling for this walk, which follows multiple colored subtrees in parallel. We go around the lack of independence of the colored components by finding a relevant statistic, namely the sum of the squares of the sizes of all colored components, which we prove has a drift. We deduce that the mixing time of the walk is of order…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.CO"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2609.13755",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.13755",
+  "title": "Row-Polar LP-Newton for Linear Programming with Corral Repair",
+  "authors": [
+    "Yanfei Li",
+    "Yuki Matsuno",
+    "Jianming Shi"
+  ],
+  "summary": "LP-Newton solves a linear program through a sequence of nearest-point problems. Given an interior feasible point for an inequality-form LP, we construct the compact hull formed by the origin and its normalized constraint rows. Polar LP-Newton (P-LPN) follows the objective ray to the boundary of this row-polar hull, where it recovers a primal-dual optimum or a recession direction proving unboundedness. For rational row-polar data, we prove an outer-iteration bound quadratic in dimension and linear in binary input length, excluding inner Wolfe work. Restarting Wolfe at every outer iteration…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.MS",
+    "math.NA"
+  ],
+  "published": "2026-09-12",
+  "updated": "2026-09-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

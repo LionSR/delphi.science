@@ -1,0 +1,21 @@
+{
+  "key": "2604.08969",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.08969",
+  "title": "Online Quantile Regression for Nonparametric Additive Models",
+  "authors": [
+    "Haoran Zhan"
+  ],
+  "summary": "This paper introduces a projected functional gradient descent algorithm (P-FGD) for training nonparametric additive quantile regression models in online settings. This algorithm extends the functional stochastic gradient descent framework to the pinball loss. An advantage of P-FGD is that it does not need to store historical data while maintaining $O(J_t\\ln J_t)$ computational complexity per step where $J_t$ denotes the number of basis functions. Besides, we only need $O(J_t)$ computational time for quantile function prediction at time $t$. These properties show that P-FGD is much better…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-04-10",
+  "updated": "2026-04-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

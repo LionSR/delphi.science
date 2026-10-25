@@ -1,0 +1,24 @@
+{
+  "key": "2603.12982",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.12982",
+  "title": "RUNNs: Ritz-Uzawa Neural Networks for Solving Variational Problems",
+  "authors": [
+    "Pablo Herrera",
+    "Jamie M. Taylor",
+    "Carlos Uriarte",
+    "Ignacio Muga",
+    "David Pardo",
+    "Kristoffer G. van der Zee"
+  ],
+  "summary": "Solving Partial Differential Equations (PDEs) using neural networks presents different challenges, including integration errors and spectral bias, often leading to poor approximations. In addition, standard neural network-based methods, such as Physics-Informed Neural Networks (PINNs), often lack stability when dealing with PDEs characterized by low-regularity solutions. To address these limitations, we introduce the Ritz--Uzawa Neural Networks (RUNNs) framework, an iterative methodology to solve strong, weak, and ultra-weak variational formulations. Rewriting the PDE as a sequence of…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-13",
+  "updated": "2026-04-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

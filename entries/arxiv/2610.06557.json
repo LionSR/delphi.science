@@ -1,0 +1,19 @@
+{
+  "key": "2610.06557",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06557",
+  "title": "CaCuTe Meets SESOP: Better Theory and Practice with Lipschitz Hessians",
+  "authors": [
+    "Nazarii Tupitsa"
+  ],
+  "summary": "We combine CaCuTe with sequential subspace optimization (SESOP) for smooth convex minimization under Lipschitz continuity of the Hessian. The resulting method, CaCuSESOP, achieves the global rate $O(k^{-2})$ with a fixed number of Hessian--vector products per iteration, while removing key limitations of classical SESOP. In particular, exact minimization of the original objective is replaced by minimization of a low-dimensional cubic upper model, which needs only be solved to a computable accuracy. The cubic regularization parameter is selected by backtracking. If the Hessian at the minimizer…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

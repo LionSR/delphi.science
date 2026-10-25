@@ -1,0 +1,26 @@
+{
+  "key": "2603.21191",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.21191",
+  "title": "On the Role of Batch Size in Stochastic Conditional Gradient Methods",
+  "authors": [
+    "Rustem Islamov",
+    "Roman Machacek",
+    "Aurelien Lucchi",
+    "Antonio Silveti-Falls",
+    "Eduard Gorbunov",
+    "Volkan Cevher"
+  ],
+  "summary": "We study the role of batch size in stochastic conditional gradient methods under a $μ$-Kurdyka-Łojasiewicz ($μ$-KL) condition. Focusing on momentum-based stochastic conditional gradient algorithms (e.g., Scion), we derive a new analysis that explicitly captures the interaction between stepsize, batch size, and stochastic noise. Our study reveals a regime-dependent behavior: increasing the batch size initially improves optimization accuracy but, beyond a critical threshold, the benefits saturate and can eventually degrade performance under a fixed token budget. Notably, the theory predicts…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-03-22",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

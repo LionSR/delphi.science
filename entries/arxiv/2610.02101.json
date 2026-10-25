@@ -1,0 +1,22 @@
+{
+  "key": "2610.02101",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02101",
+  "title": "Lower Bounds for Preprocessing Attacks on Quantum Cryptography",
+  "authors": [
+    "Fangqi Dong",
+    "Alex Lombardi"
+  ],
+  "summary": "We prove near-optimal lower bounds for preprocessing attacks on quantum cryptography in the random oracle model. Specifically, we show that a $T$-query adversary with $S$ qubits of non-uniform advice can recover a random key $k$ from the $n$-qubit binary phase state $|ψ_k\\rangle \\propto \\sum_{x} R(k,x) |x\\rangle$ with probability at most $O(\\frac{T^2 + \\sqrt{ST}}{N})$ for $N=2^n$. In contrast, the best known bound for post-quantum one-way functions is $O(\\frac{T^2 + ST}{N})$, with a trivial attack at $S = N$. This demonstrates a new advantage of quantum cryptography over classical…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.CR"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

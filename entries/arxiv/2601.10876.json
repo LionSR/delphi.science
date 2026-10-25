@@ -1,0 +1,21 @@
+{
+  "key": "2601.10876",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.10876",
+  "title": "Efficient Quantum Circuits for the Hilbert Transform",
+  "authors": [
+    "Henry Zhang",
+    "Joseph Li"
+  ],
+  "summary": "The quantum Fourier transform and quantum wavelet transform have been cornerstones of quantum information processing. However, for non-stationary signals and anomaly detection, the Hilbert transform can be a more powerful tool, yet no prior work has provided efficient quantum implementations for the discrete Hilbert transform. This letter presents a novel construction for a quantum Hilbert transform in polylogarithmic size and logarithmic depth for a signal of length $N$, exponentially fewer operations than classical algorithms for the same mapping. We generalize this algorithm to create any…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "eess.SP"
+  ],
+  "published": "2026-01-15",
+  "updated": "2026-01-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

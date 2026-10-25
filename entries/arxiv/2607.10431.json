@@ -1,0 +1,20 @@
+{
+  "key": "2607.10431",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10431",
+  "title": "Long Intervals Without Distinct Multiples of the First $n$ Positive Integers",
+  "authors": [
+    "Scott Duke Kominers"
+  ],
+  "summary": "For positive integers $n$ and $m$, let $f(n,m)$ be the least integer $h\\ge0$ such that $(m,m+h]$ contains distinct integers $a_1,\\ldots,a_n$ satisfying $i\\mid a_i$ for $1\\le i\\le n$, and put $F(n)=\\max_{m\\in\\mathbb{N}} f(n,m)$. A recent theorem of van Doorn [INTEGERS, 2026; arXiv:2601.16972] gives $F(n)-f(n,n)>0.36\\,n\\log n/\\log\\log n$ for sufficiently large $n$. We prove \\[ \\liminf_{n\\to\\infty} \\frac{F(n)-f(n,n)}{n\\log n} \\ge \\frac{1}{\\mathrm{e}}. \\] Thus, for every fixed $c<1/\\mathrm{e}$ and all sufficiently large $n$, some interval of length $c\\,n\\log n$ contains no system of pairwise…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO"
+  ],
+  "published": "2026-07-11",
+  "updated": "2026-07-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

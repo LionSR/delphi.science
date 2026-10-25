@@ -1,0 +1,21 @@
+{
+  "key": "2604.23206",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23206",
+  "title": "A Proof of Bala's General-$m$ Representation of the Harmonic Numbers",
+  "authors": [
+    "Tong Niu"
+  ],
+  "summary": "For every nonzero integer $m$ and every integer $n \\ge 1$, the $n$\\textsuperscript{th} harmonic number $H_n = 1 + \\tfrac12 + \\dots + \\tfrac1n$ satisfies the identity \\[ H_n \\;=\\; \\frac{1}{m}\\,\\sum_{k=1}^{n} \\frac{(-1)^{k+1}}{k}\\, \\binom{m k}{k}\\binom{n + (m-1)k}{n - k}. \\] The cases $m = 1$ and $m = 2$ are classical; for general nonzero integer $m$ the identity was conjectured by P.~Bala in the OEIS entry A001008 in 2022 and remained open. We prove it here, working throughout in $\\QQ[[x]]$. The proof reduces, via a substitution $u = x/(1-x)^m$, to two formal-power-series identities: a…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-04-25",
+  "updated": "2026-04-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

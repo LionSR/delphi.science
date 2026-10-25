@@ -1,0 +1,21 @@
+{
+  "key": "2607.23010",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.23010",
+  "title": "Monte Carlo testing: non-asymptotic guarantees without joint exchangeability",
+  "authors": [
+    "Rina Foygel Barber",
+    "Aaditya Ramdas"
+  ],
+  "summary": "In hypothesis testing, Monte Carlo tests are usually justified either by exact null simulation or by joint exchangeability of the observed data and its simulated copies. This leaves a gap for common computational procedures, such as parallel MCMC sampling initialized at the observed data, where each copy may be marginally null and even pairwise exchangeable with the observation, but the full collection is not jointly exchangeable. In such cases the usual empirical p-value can be invalid when the chain has not mixed, while exactly exchangeable constructions such as the Besag--Clifford…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-07-25",
+  "updated": "2026-07-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

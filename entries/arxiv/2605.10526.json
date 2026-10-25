@@ -1,0 +1,21 @@
+{
+  "key": "2605.10526",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.10526",
+  "title": "Randomized Max-Vertex-Coverage Interdiction under Matroid Constraints",
+  "authors": [
+    "Changjun Wang",
+    "Chenhao Wang"
+  ],
+  "summary": "We study a class of bilevel interdiction problems in which the follower's optimization problem is computationally intractable. Motivated by network defense applications, we introduce the Randomized Max-Vertex-Coverage Interdiction (RMVCI) problem under matroid constraints. In this zero-sum Stackelberg game, the leader commits to a randomized interdiction strategy over feasible vertex subsets, while the follower, after observing the induced protection probabilities, chooses a matroid-constrained attack to maximize the expected coverage of network edges. The main challenge stems from the fact…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DM"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2605.01276",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.01276",
+  "title": "A class of low-rank short recurrences for nonsymmetric linear matrix equations",
+  "authors": [
+    "Davide Palitta",
+    "Catherine E. Powell",
+    "Valeria Simoncini"
+  ],
+  "summary": "We propose a new class of short matrix recurrences for the solution of nonsymmetric linear equations of the type $\\mathbf{A}_1\\mathbf{X}\\mathbf{B}_1+\\ldots+\\mathbf{A}_p\\mathbf{X}\\mathbf{B}_p=CD^T$. Building on ideas underpinning the recently introduced subspace conjugate gradient algorithm, we derive low-rank short recurrences that generalize one-dimensional subspace projection methods to the nonsymmetric matrix equation setting. To limit memory consumption and maximize computational efficiency, rank truncation strategies and modern randomization procedures are incorporated into the proposed…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-02",
+  "updated": "2026-09-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

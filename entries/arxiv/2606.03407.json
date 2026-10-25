@@ -1,0 +1,21 @@
+{
+  "key": "2606.03407",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.03407",
+  "title": "Structure-Preserving Quantum Method of Lines for Evolutionary PDEs with Mixed Boundary Conditions",
+  "authors": [
+    "Yixuan Liang",
+    "Jin-Peng Liu"
+  ],
+  "summary": "We give detailed analysis and circuit design of structure-preserving quantum algorithms for second-order linear evolutionary PDEs, including parabolic equations and hyperbolic equations with mixed Dirichlet, Neumann, and periodic boundary conditions and source terms. While prior quantum algorithms usually neglect the stability problem from the PDE-to-ODE reduction, our method-of-lines approach investigates the boundary lifting via Coons interpolation and boundary-aware discretization, so that the resulting semi-discrete systems are stable and compatible with efficient quantum ODE primitives.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.NA"
+  ],
+  "published": "2026-06-02",
+  "updated": "2026-06-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

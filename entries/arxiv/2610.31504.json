@@ -1,0 +1,21 @@
+{
+  "key": "2610.31504",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.31504",
+  "title": "Structure-preserving reduced-order models of thin panels in supersonic and hypersonic flow",
+  "authors": [
+    "Miguel A. Aguilo"
+  ],
+  "summary": "We build structure-preserving reduced-order models for both challenge problems of the AePW-4 High-Speed Working Group. They are a clamped thin panel at Mach 1.92 (RC-19) and a cantilever plate at Mach 5.85 (HyMAX). The published data for each case hold no time-resolved response and no repeated runs. The physics must therefore be carried by the form of the model. One construction gives two models per problem. A Ritz-Galerkin reference model describes the plate. A learned model keeps the reference model's exact potential, fits the remaining generalized forces, and trains only a dissipation…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

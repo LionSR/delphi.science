@@ -1,0 +1,26 @@
+{
+  "key": "2608.13691",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.13691",
+  "title": "Efficient Hamiltonian Truncation: Fast Matrix Construction and Quantum Krylov Diagonalization",
+  "authors": [
+    "Rachel Houtz",
+    "Marco Knipfer",
+    "Konstantin Matchev",
+    "Alexander Roman",
+    "Mia West"
+  ],
+  "summary": "Hamiltonian truncation offers a nonperturbative route to quantum field theory, yet its accuracy is limited by the rapid expansion of the truncated Hilbert space, which drives up computational cost. We tackle this bottleneck with a hybrid strategy that pairs classical and quantum algorithms: 1) we develop an efficient basis-generation scheme built on integer partitions; 2) we speed up the construction of the sparse Hamiltonian matrix using symmetry-aware algorithms; and 3) we explore quantum Krylov diagonalization as a route to the low-lying spectrum. Benchmarking against the free massive…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "hep-lat",
+    "hep-ph",
+    "hep-th"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

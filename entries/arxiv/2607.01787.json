@@ -1,0 +1,23 @@
+{
+  "key": "2607.01787",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.01787",
+  "title": "Structure-Aware Compilation for Scalable Neutral-Atom Quantum Computing",
+  "authors": [
+    "Dekuan Dong",
+    "Fengyu Zou",
+    "Hengzhun Chen",
+    "Guorui Zhu",
+    "Yingzhou Li"
+  ],
+  "summary": "We study the compilation of structured quantum gate families on two-dimensional neutral-atom arrays, aiming to reduce addressing and transport overhead under realistic hardware constraints. For single-qubit gates, we exploit the algebraic structures of gate families at the matrix level, enabling efficient rank-one decompositions over appropriate algebraic structures and thereby reducing the number of addressing layers. For controlled-Z (C-Z) gates, we formulate the transport scheduling problem using graph-theoretic models, leading to efficient compilation algorithms under realistic transport…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-02",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

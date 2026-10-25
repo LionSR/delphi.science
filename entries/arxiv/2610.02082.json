@@ -1,0 +1,23 @@
+{
+  "key": "2610.02082",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02082",
+  "title": "Strong Simulation of 1D Quantum Circuits via Reduced Transition Matrices",
+  "authors": [
+    "Matilde Grassi",
+    "Stefano Carignano",
+    "Luca Tagliacozzo",
+    "Jacopo De Nardis"
+  ],
+  "summary": "Tensor networks are powerful tools for simulating quantum many-body systems, but the growth of spatial entanglement severely limits the direct evolution of pure states under chaotic unitary circuits. Here we consider a more targeted task: the approximate strong simulation of a specified output probability of a 1D chaotic brick-wall circuit at finite relative precision. Given input and output bit strings $\\by$ and $\\bx$, we evaluate $p(\\bx|\\by)=|\\bra{\\bx}U(T)\\ket{\\by}|^2$ using the Sweeping RTM algorithm, a transverse tensor-network contraction based on reduced transition matrices (RTMs). The…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.stat-mech"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

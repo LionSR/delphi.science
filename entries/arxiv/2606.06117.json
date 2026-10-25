@@ -1,0 +1,23 @@
+{
+  "key": "2606.06117",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.06117",
+  "title": "$p$-adic Bi-Filtrations for Topological Machine Learning on Genomic Sequences",
+  "authors": [
+    "Tirtharaj Dash",
+    "Gunja Sachdeva"
+  ],
+  "summary": "We introduce pVR, a topological machine learning framework for alignment-free genomic sequence classification that combines $p$-adic numbers with topological data analysis. Each DNA sequence is encoded along two complementary axes: a $p$-adic distance on $k$-mer prefixes, which captures hierarchical positional structure, and a compositional $L_1$ distance on $k$-mer frequencies, which captures local sequence content. The two distances jointly parameterise a bi-filtered Vietoris--Rips complex, and per-sequence topological summaries from this bi-filtration serve as features for standard…",
+  "domain": "q-bio.QM",
+  "tags": [
+    "q-bio.QM",
+    "cs.LG",
+    "math.AT",
+    "q-bio.GN"
+  ],
+  "published": "2026-06-04",
+  "updated": "2026-06-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

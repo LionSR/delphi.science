@@ -1,0 +1,22 @@
+{
+  "key": "2610.10095",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.10095",
+  "title": "Making Every Number from 1 to N Under a Fixed Cycle of $+$, $\\times$, $-$, $÷$",
+  "authors": [
+    "Sean Lesmana",
+    "Theodore Tjugiarto"
+  ],
+  "summary": "Start with the number $2$. At each move, combine two numbers already made, but the operations must be used in the fixed repeating order $+,\\times,-,÷$. We ask for the fewest moves needed to make every integer from $1$ to $N$. Since $2$ is already one of the numbers we want and each move makes at most one new number, at least $N-1$ moves are needed. We show that $N-1$ moves are also enough for every $N\\ge 9$. Conventional induction cannot work, because a division that comes right after a completed interval $\\{1,\\dots,P\\}$ produces numbers already made. Instead we extend a completed interval…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM",
+    "math.NT"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

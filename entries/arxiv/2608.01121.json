@@ -1,0 +1,24 @@
+{
+  "key": "2608.01121",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.01121",
+  "title": "Polynomial Time Quantum Approximation Schemes for Constrained Optimisation",
+  "authors": [
+    "Chinonso Onah",
+    "Kristel Michielsen"
+  ],
+  "summary": "When does a noisy quantum sampler yield an end-to-end polynomial-time optimization algorithm with performance guarantees? Building on finite-depth and finite-shot guarantees for Constraint-Enhanced QAOA, we show that inverse-polynomial ideal probability on the optimal set, together with independent sampling, polynomial-time feasibility repair, and scoring, produces an exact-hit fully polynomial randomized approximation scheme, which we call an FPRASq. This guarantee survives device noise within an instance-dependent window. For effective circuit depth linear in the product of layer count and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.DM",
+    "math-ph",
+    "physics.app-ph"
+  ],
+  "published": "2026-08-02",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

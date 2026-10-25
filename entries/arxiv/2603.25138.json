@@ -1,0 +1,25 @@
+{
+  "key": "2603.25138",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.25138",
+  "title": "Reinforcement learning for quantum processes with memory",
+  "authors": [
+    "Josep Lumbreras",
+    "Ruo Cheng Huang",
+    "Yanglin Hu",
+    "Marco Fanizza",
+    "Mile Gu"
+  ],
+  "summary": "In reinforcement learning, an agent interacts sequentially with an environment to maximize a reward, receiving only partial, probabilistic feedback. This creates a fundamental exploration-exploitation trade-off: the agent must explore to learn the hidden dynamics while exploiting this knowledge to maximize its target objective. While extensively studied classically, applying this framework to quantum systems requires dealing with hidden quantum states that evolve via unknown dynamics. We formalize this problem via a framework where the environment maintains a hidden quantum memory evolving…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "published": "2026-03-26",
+  "updated": "2026-03-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

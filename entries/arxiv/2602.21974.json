@@ -1,0 +1,21 @@
+{
+  "key": "2602.21974",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.21974",
+  "title": "Subspace gradient descent method for linear tensor equations",
+  "authors": [
+    "Martina Iannacito",
+    "Lorenzo Piccinini",
+    "Valeria Simoncini"
+  ],
+  "summary": "The numerical solution of algebraic tensor equations is a largely open and challenging task. Assuming that the operator is symmetric and positive definite, we propose two new gradient-descent type methods for tensor equations that generalize the recently proposed Subspace Conjugate Gradient (SS-CG), D. Palitta et al, SIAM J. Matrix Analysis and Appl (2025). As our interest is mainly in a modest number of tensor modes, the Tucker format is used to efficiently represent low-rank tensors. Moreover, mixed-precision strategies are employed in certain subtasks to improve the memory usage, and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-25",
+  "updated": "2026-02-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

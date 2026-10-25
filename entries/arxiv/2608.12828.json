@@ -1,0 +1,23 @@
+{
+  "key": "2608.12828",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.12828",
+  "title": "Distribution Steering via Sliced Optimal Transport Control",
+  "authors": [
+    "Kaito Ito",
+    "Anqi Dong"
+  ],
+  "summary": "Distribution steering seeks feedback laws that drive the state law of a dynamical system between prescribed initial and terminal distributions. Optimal transport provides a natural geometric approach, but its implementation generally requires a transport map or coupling in the full state space. Sliced optimal transport avoids this full-dimensional construction through one-dimensional projections. Yet, the resulting projected maps specify only directional displacements and do not by themselves prescribe a realizable feedback law. To this end, we develop a finite-horizon control framework…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "eess.SY",
+    "stat.ML"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2606.25849",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.25849",
+  "title": "A resolution of Erdős Problem 1061 on the sum-of-divisors function",
+  "authors": [
+    "Eric Li"
+  ],
+  "summary": "We resolve Erdős Problem 1061, the question whether the number \\[ S(x)=\\#\\{(a,b)\\in\\mathbb{N}^2:a+b\\le x, \\ σ(a)+σ(b)=σ(a+b)\\} \\] of ordered solutions has a linear asymptotic $S(x)\\sim cx$. In fact the opposite extreme holds at every fixed logarithmic scale: for every \\(R>0\\), \\[ \\lim_{x\\to\\infty}\\frac{S(x)}{x(\\log x)^R}=+\\infty. \\] The construction begins with three integers having the same abundancy index and reduces the divisor-sum identity to two equations in six primes. After a linear change of variables, these equations lie on a split quadric. A three-parameter rational ruling of the…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-06-24",
+  "updated": "2026-06-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

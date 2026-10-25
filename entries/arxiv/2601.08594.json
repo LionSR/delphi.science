@@ -1,0 +1,23 @@
+{
+  "key": "2601.08594",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.08594",
+  "title": "Differentiating through Stochastic Differential Equations: A Primer",
+  "authors": [
+    "Rishi Leburu",
+    "Levon Nurbekyan",
+    "Lars Ruthotto"
+  ],
+  "summary": "Dynamical systems are essential to model various phenomena in physics, finance, economics, and are also of current interest in machine learning. A central modeling task is investigating parameter sensitivity, whether tuning atmospheric coefficients, computing financial Greeks, or optimizing neural networks. These sensitivities are mathematically expressed as derivatives of an objective function with respect to parameters of interest and are rarely available analytically, necessitating numerical methods for approximating them. While the literature for differentiation of deterministic systems…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC",
+    "math.PR"
+  ],
+  "published": "2026-01-13",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

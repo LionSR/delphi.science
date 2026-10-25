@@ -1,0 +1,19 @@
+{
+  "key": "2601.06849",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.06849",
+  "title": "Analysis and Efficient Sylvester-Based Implementation of a Dimension-Split ETD2RK Scheme for Multidimensional Reaction-Diffusion Equations",
+  "authors": [
+    "Ibrahim O. Sarumi"
+  ],
+  "summary": "We propose and analyze a second-order, dimension-split exponential time differencing Runge--Kutta scheme (ETD2RK-DS) for multidimensional reaction--diffusion equations in two and three spatial dimensions. Under mild assumptions on the nonlinear source term, we establish uniform stability bounds and prove second-order temporal convergence for the underlying dimension-split scheme. To enable efficient implementation, we employ Padé approximations of the matrix exponential, converting each required matrix-exponential--vector product into the solution of a shifted linear system. A convergence…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-11",
+  "updated": "2026-01-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

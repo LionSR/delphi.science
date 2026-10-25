@@ -1,0 +1,24 @@
+{
+  "key": "2609.36574",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.36574",
+  "title": "Shared Phase Arithmetic for Parallel Quantum Rotations",
+  "authors": [
+    "Anbang Wu",
+    "Liqiang Lu",
+    "Pu Pang",
+    "Jianwei Yin",
+    "Jingwen Leng",
+    "Minyi Guo"
+  ],
+  "summary": "A layer of diagonal quantum gates can be specified by an integer-valued function on computational basis states. This description suggests implementing the layer by evaluating that function reversibly and translating its value into a phase using a shared quantum register. We develop this viewpoint for parallel phase kickback (PPK): the weighted sum of several rotation parameters is computed coherently, added once to a phase-gradient state, and then uncomputed. The construction separates the cost of representing a phase function from the cost of applying it. We prove correctness, give explicit…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

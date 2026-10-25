@@ -1,0 +1,20 @@
+{
+  "key": "2607.25442",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.25442",
+  "title": "On an asymmetric additive energy inequality",
+  "authors": [
+    "Akshat Mudgal"
+  ],
+  "summary": "Let $d \\geq 1$ be an integer, $G$ be an abelian group and $ν, w_1, \\dots, w_{2d}: G \\to [0, \\infty)$ be functions with finite, non-empty supports. Define the generalised additive energy \\[ E_{2d, ν}(w_1, \\dots, w_{2d}) = \\sum_{y,y' \\in G}\\sum_{a_1, \\dots, a_{2d} \\in G } w_1(a_1) \\dots w_{2d}(a_{2d}) ν(y) ν(y') 1_{\\sum_{i=1}^d (a_i - a_{i+d}) = y-y'} .\\] Moreover, for every $1 \\leq i \\leq 2d$, let $E_{2d, ν}(w_i) = E_{2d, ν}(w_i, \\dots, w_i)$. A standard Fourier analytic argument delivers the estimate \\[ E_{2d,ν}(w_1, \\dots, w_{2d}) \\leq \\prod_{1 \\leq i \\leq 2d} E_{2d, ν}(w_i)^{1/2d}.\\] In…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO"
+  ],
+  "published": "2026-07-28",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

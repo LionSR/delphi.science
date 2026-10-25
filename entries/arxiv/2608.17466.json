@@ -1,0 +1,22 @@
+{
+  "key": "2608.17466",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17466",
+  "title": "Online Generalized Sparse Regression: How Does Overparametrization Help?",
+  "authors": [
+    "Shuoguang Yang",
+    "Qiang Sun"
+  ],
+  "summary": "Regularized sparse regression has been extensively studied in the offline setting, but online formulation remains relatively under-explored. This gap stems from four key challenges: (i) the infeasibility of dynamically updating the regularization parameter in every online round, (ii) managing storage and memory complexity, (iii) enabling real-time computation via closed-form updates rather than solving full optimization problems at each round, and (iv) achieving optimal statistical guarantees under realistic assumptions. In this paper, we propose an online generalized-sparsity-constrained…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

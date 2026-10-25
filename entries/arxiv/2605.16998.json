@@ -1,0 +1,22 @@
+{
+  "key": "2605.16998",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.16998",
+  "title": "$\\mathcal{O}(n)$ alternative to Quantum Fourier Transform with efficient neural net classical post-processing",
+  "authors": [
+    "Kaiming Bian",
+    "Zujin Wen",
+    "Oscar Dahlsten"
+  ],
+  "summary": "The Quantum Fourier Transform (QFT) is employed by hidden subgroup problem (HSP) algorithms, including Shor's algorithm for factoring. The circuit depth of the QFT remains challenging for near-term hardware. To find shallower alternatives we identify two properties that are exploited by the QFT to enable HSP. Firstly, the shift invariance of the QFT allows for the removal of a random overall shift. Secondly, the QFT retains information about the hidden subgroup generator accessible in the measurement outcomes. We quantify that information via the discrete Fisher information. We construct a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-05-16",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

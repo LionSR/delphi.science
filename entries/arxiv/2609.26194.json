@@ -1,0 +1,22 @@
+{
+  "key": "2609.26194",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.26194",
+  "title": "Compact Finite-Average-Moment Schemes with Single-Step Oscillation Elimination for Hyperbolic Conservation Laws",
+  "authors": [
+    "Chuan Fan",
+    "Kailiang Wu"
+  ],
+  "summary": "High-order shock-capturing schemes often face severe computational bottlenecks due to wide stencils, stagewise nonlinear weights, and expensive local characteristic decompositions. To address this, we propose a compact finite-average-moment (FAM) framework for hyperbolic conservation laws that completely decouples the formal spatial order from the number of evolved local degrees of freedom. By evolving only a $\\mathbb{P}^1$ moment state (i.e., cell averages and scaled first-order moments), we achieve up to sixth-order accuracy ($k=3, 4, 5, 6$) via compact, polynomially exact \\emph{linear}…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

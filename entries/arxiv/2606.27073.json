@@ -1,0 +1,19 @@
+{
+  "key": "2606.27073",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.27073",
+  "title": "Retention Profiles and KL Contraction Bounds in Finite Markov Chains",
+  "authors": [
+    "Saurav Jadhav"
+  ],
+  "summary": "We study Kullback-Leibler (KL) contraction in finite Markov chains through a row-wise perspective. Evaluating the SDPI ratio at point masses yields a state-indexed retention profile $r(x)=D_{\\mathrm{KL}}(P(x,\\cdot)\\|π)/\\log(1/π(x))$ and a localization ratio $L(P)=\\bar r_π/M\\in[0,1]$ (with $M=\\max_x r(x)$, $\\bar r_π=\\mathbb{E}_πr$) that distinguishes localized from global contraction obstructions. Our main contributions are (i) a convexity-gap identity showing that the gap between the row-averaged divergence and $D_{\\mathrm{KL}}(μP\\|π)$ equals the mutual information $I_μ(X;Y)$, and a derived…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-06-25",
+  "updated": "2026-06-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

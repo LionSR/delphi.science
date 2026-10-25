@@ -1,0 +1,21 @@
+{
+  "key": "2608.10899",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.10899",
+  "title": "Risk-Aware Unit Commitment in District Heating Networks: Chance-Constrained and CVaR Optimization Under Demand Uncertainty",
+  "authors": [
+    "Annika Buchholz",
+    "Janina Zittel",
+    "Thorsten Koch"
+  ],
+  "summary": "While district heating networks are a key component of the energy transition, their operational planning is challenging due to substantial uncertainty in heat demand. We study how unit-commitment schedules can account for this uncertainty and what reliability costs. By adapting chance-constrained programming (CC) and conditional value-at-risk (CVaR) optimization to the mixed-integer unit-commitment problem for district-heating networks, we can compute optimal unit-commitment schedules under demand uncertainty. We generate heat demand scenarios using a Bayesian model, which explicitly…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-11",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

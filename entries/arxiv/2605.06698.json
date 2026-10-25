@@ -1,0 +1,19 @@
+{
+  "key": "2605.06698",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.06698",
+  "title": "A fixed point iteration method for the arctangent with any odd order of convergence based on sine and cosine",
+  "authors": [
+    "Alois Schiessl"
+  ],
+  "summary": "In this paper, we present a fixed point method for the arctangent based on sine and cosine. Let $t\\in \\mathbb{R}^{+}$ and $P\\in \\mathbb{N}$. We define: \\[T\\left(x\\right)=x-\\sum_{k=1}^{P}\\,\\frac{\\left(-1\\right)^{k-1}}{2\\,k-1} \\left(\\frac {\\sin\\!\\left(x\\right)-t\\cos\\!\\left(x\\right)} {\\cos\\!\\left(x\\right)+t\\sin\\!\\left(x\\right)} \\right)^{2\\,k-1}.\\] For every initial value $x_0$ sufficiently close to $\\arctan\\left(t\\right)$, the sequence \\[x_{n+1}=T\\left(x_{n}\\right)\\;;\\,n=0,1,\\ldots\\] is converging to $\\arctan\\left(t\\right)$ with order of convergence exactly $\\left(2\\,P+1\\right)$. The…",
+  "domain": "math.GM",
+  "tags": [
+    "math.GM"
+  ],
+  "published": "2026-05-04",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

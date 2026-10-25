@@ -1,0 +1,25 @@
+{
+  "key": "2608.29603",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.29603",
+  "title": "FirstFit online coloring in the random order model",
+  "authors": [
+    "Xinyu Ye",
+    "Yuechuan Xu",
+    "Zixuan Wang",
+    "Jiaying Zheng",
+    "Yaqiao Li"
+  ],
+  "summary": "The average performance of FirstFit online coloring on trees in the random order model is completely determined in recent works of Frei et al. and Bosek et al., showing $Θ(\\log n /\\log\\log n)$ number of colors, improving the $Θ(\\log n)$ colors in the adversarial model. We provide a few further results on slightly more general graph classes. Firstly, we extend their method to obtain a simple path-counting principle for sparse graph classes, which immediately yields for example that cactus graphs and uniform hypertrees exhibit a similar improvement. We then show that FirstFit uses only $O(1)$…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-08-30",
+  "updated": "2026-08-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

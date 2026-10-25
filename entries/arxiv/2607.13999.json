@@ -1,0 +1,22 @@
+{
+  "key": "2607.13999",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.13999",
+  "title": "Edge-decomposition into Two Triangular Forests is NP-complete",
+  "authors": [
+    "Beniamin Bibrowski",
+    "Tomáš Masařík"
+  ],
+  "summary": "Let $\\mathcal F$ be a graph class that is closed under topological minors and 1-sums, has decidable membership, contains a triangle, and is not the class of all graphs. Recently, Lee, Liu, and Tsai [ICALP 2026] showed that the edge-decomposition problem into $k \\geq 3$ elements of $\\mathcal F$ is NP-hard. In particular, their general hardness reduction covers a long-standing problem on outerthickness (when $\\mathcal F$ is the class of outerplanar graphs). On the other hand, it is well known that decomposing a graph into forests is polynomial-time solvable, as implied by work of Edmonds [J.…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

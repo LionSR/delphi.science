@@ -1,0 +1,26 @@
+{
+  "key": "2602.14472",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14472",
+  "title": "Frequentist Regret Analysis of Gaussian Process Thompson Sampling via Fractional Posteriors",
+  "authors": [
+    "Somjit Roy",
+    "Prateek Jaiswal",
+    "Anirban Bhattacharya",
+    "Debdeep Pati",
+    "Bani K. Mallick"
+  ],
+  "summary": "We study Gaussian Process Thompson Sampling (GP-TS) for sequential decision-making over compact, continuous action spaces and provide a frequentist regret analysis based on fractional Gaussian process posteriors, without relying on domain discretization as in prior work. We show that the variance inflation commonly assumed in existing analyses of GP-TS can be interpreted as Thompson Sampling with respect to a fractional posterior with tempering parameter $α\\in (0,1)$. We derive a kernel-agnostic regret bound expressed in terms of the information gain parameter $γ_t$ and the posterior…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-02-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

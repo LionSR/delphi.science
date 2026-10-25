@@ -1,0 +1,19 @@
+{
+  "key": "2607.18313",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.18313",
+  "title": "A Proof of Bala's Congruence Conjecture for A028342",
+  "authors": [
+    "Ahaan Kallat"
+  ],
+  "summary": "Let $a(n)$ be the sequence A028342 in the On-Line Encyclopedia of Integer Sequences (OEIS), defined by the exponential generating function $\\sum_{n\\ge0} a(n)x^n/n! = \\prod_{i\\ge1}(1-x^i)^{-1/i}$. Equivalently, $a(n)$ counts permutations of an $n$-element labeled set in which every cycle is assigned one divisor of its length, where a cycle of length $m$ has $d(m)$ choices, $d(m)$ being the number of positive divisors of $m$. We prove a family of congruences for $a$, conjectured by Peter Bala. They state that $k \\mid a(n+k)+a(n)$ for odd $k$, that $k \\mid a(n+k)-a(n)$ for $k\\equiv 0,2,6 \\pmod…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-07-17",
+  "updated": "2026-07-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

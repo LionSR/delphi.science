@@ -1,0 +1,22 @@
+{
+  "key": "2609.22802",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.22802",
+  "title": "Exact Truncation and Radial Rigidity in Time-Optimal Control",
+  "authors": [
+    "Changqin Quan",
+    "Gengsheng Wang",
+    "Lijuan Wang",
+    "Qishu Yan"
+  ],
+  "summary": "We consider minimum-time control for the linear system $$ \\dot{z}(t)=Az(t)+Bu(t),\\qquad \\|u\\|_{L^\\infty(0,\\infty;\\mathbb{R}^m)}\\leq 1, $$ with $A\\in\\mathbb R^{n\\times n}$ and $B\\in\\mathbb R^{n\\times m}$. While the individual point-target and ball-target problems are classical, we study a different question: when are their optimal controls exactly compatible, in the sense that, for every nonzero initial state $x$ and all sufficiently small $\\varepsilon>0$, the optimal control for the tolerance ball $\\overline{B}_\\varepsilon(0)$ is precisely the restriction of the point-target optimal control?…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-19",
+  "updated": "2026-09-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

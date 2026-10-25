@@ -1,0 +1,21 @@
+{
+  "key": "2606.29084",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.29084",
+  "title": "An Approximate Conjugate Subgradient Algorithm with Matrix Parameter for Derivative-Free Nonsmooth Optimization Problems",
+  "authors": [
+    "Morteza Kimiaei",
+    "Saman Babaie-Kafaki",
+    "Zohre Aminifard"
+  ],
+  "summary": "We propose a derivative-free matrix conjugate-subgradient method for unconstrained nonsmooth optimization of locally Lipschitz functions. The method constructs discrete gradients using only function values and forms a finite sampled model of the Goldstein subdifferential. A minimal-norm element of the convex hull of the sampled discrete gradients is then computed and used both as a stationarity measure and as the reference vector for generating descent-oriented directions. To improve robustness beyond the basic steepest-descent direction, we introduce a matrix memory correction together with…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-27",
+  "updated": "2026-06-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

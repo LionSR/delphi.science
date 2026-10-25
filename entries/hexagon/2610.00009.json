@@ -1,0 +1,44 @@
+{
+  "key": "2610.00009",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00009v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00009v1",
+  "title": "A Lean Certificate for the Single Source Unsplittable Flow Cost Counterexample",
+  "authors": [
+    "Arthur",
+    "David Barros Hulak",
+    "Ruy J. G. B. de Queiroz"
+  ],
+  "summary": "We explain a standalone Lean 4 and Mathlib verification of the finite counterexample announced by Dmitry Rybin to the cost-preserving single-source unsplittable-flow conjecture. The instance has seven vertices, nine directed arcs, and three terminal demands. An exact rational path flow saturates every arc, has cost 58, and has largest demand 15. Exhaustive graph-path classification reduces every unsplittable routing to two choices per terminal. Three backbone-arc inequalities force any routing with load at most the fractional load plus 15 to use at least two paid routes, each costing 30.…",
+  "domain": "cs.DS",
+  "tags": [
+    "math.LO",
+    "msc:68R10",
+    "msc:90C27",
+    "msc:03B35",
+    "Goemans cost conjecture",
+    "Lean 4",
+    "Mathlib",
+    "Rybin counterexample",
+    "finite counterexample",
+    "formal verification",
+    "single-source unsplittable flow"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "version": 1,
+  "ai_models": [
+    "Codex"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": true,
+  "formalizations": [
+    "https://palomar-registry.org/entry?id=PALOMAR-2026-08-29-000003&version=1"
+  ],
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

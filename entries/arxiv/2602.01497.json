@@ -1,0 +1,21 @@
+{
+  "key": "2602.01497",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.01497",
+  "title": "Third-Order Geometric-Volume Conservation in Cahn--Hilliard Models",
+  "authors": [
+    "Josef Musil"
+  ],
+  "summary": "Degenerate Cahn-Hilliard phase-field models provide a robust approximation of surface-diffusion-driven interface motion without explicit front tracking. In computations, however, the geometric volume enclosed by the interface -- the region where the order parameter $φ$ is positive -- may drift at finite interface thickness, producing artificial shrinkage or growth even when the sharp-interface limit conserves volume. We revisit and extend the improved-conservation framework of Zhou et al., where one replaces classical mass conservation by the exact conservation of a designed monotone mapping…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-02-02",
+  "updated": "2026-02-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2602.19204",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.19204",
+  "title": "CBO algorithm with average drift and applications to portfolio optimization",
+  "authors": [
+    "Hyeong-Ohk Bae",
+    "Seung-Yeal Ha",
+    "Chanho Min",
+    "Jane Yoo",
+    "Jaeyoung Yoon"
+  ],
+  "summary": "We propose a consensus based optimization algorithm with average drift (in short Ad-CBO) and provide a theoretical framework for it. In the theoretical analysis, we show that particle solutions to Ad-CBO converge to a global minimizer. In numerical simulations, we examine Ad-CBO's performance in optimizing static and dynamic objective functions. As a real-time application, we test the efficiency of Ad-CBO to find the optimal portfolio given stochastically evolving multi-asset prices in a financial market. The proposed Ad-CBO exhibits higher searching speed, lower tracking errors and regret…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.DS"
+  ],
+  "published": "2026-02-22",
+  "updated": "2026-02-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

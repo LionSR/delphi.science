@@ -1,0 +1,22 @@
+{
+  "key": "2608.17495",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17495",
+  "title": "Noise Resilience of Quantum Support Vector Machine with Selected Feature Maps",
+  "authors": [
+    "Muhammad Ahsan Shakeel",
+    "Saad Muzammil",
+    "Danyal Tayyub",
+    "Muhammad Faryad"
+  ],
+  "summary": "Gate-level noise degrades the classification accuracy of Quantum Support Vector Machines (QSVMs) on Noisy Intermediate-Scale Quantum (NISQ) hardware, and the degree of degradation depends on how classical data is encoded into quantum states. We tested Z, ZZ, a Pauli, and an amplitude-inspired feature maps under depolarizing, bit-flip, and phase-flip noise channels in $52$ controlled experiments with error probabilities $p =0.01, 0.05, 0.10$, and $0.50$. The amplitude-inspired feature map had $100$\\% test accuracy up to $p = 0.10$ across all three noise channels, while other feature maps fell…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

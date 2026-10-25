@@ -1,0 +1,22 @@
+{
+  "key": "2607.09906",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.09906",
+  "title": "Depth-Efficient Quantum Topological Data Analysis for Regime-Specific Detection of Financial Stress",
+  "authors": [
+    "Arul Rhik Mazumder",
+    "Shreyan Ronit Mazumder"
+  ],
+  "summary": "We present, to our knowledge, the first adaptation of Pauli Correlation Encoding (PCE) to quantum topological data analysis, reformulating Betti number estimation as a depth-efficient variational optimization over a compressed qubit register. From a Takens embedding and Vietoris--Rips filtration of S&P~500 returns, we extract combinatorial Laplacians and recast null-space counting as a continuous-PCE Rayleigh-quotient minimization with variational deflation, encoding $n_k$ simplex indices into $O(n_k^{1/κ})$ qubits with shallow, ancilla-free circuits. Because the resulting loss is rational…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG",
+    "q-fin.ST"
+  ],
+  "published": "2026-07-10",
+  "updated": "2026-07-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

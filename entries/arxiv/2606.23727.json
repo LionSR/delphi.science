@@ -1,0 +1,20 @@
+{
+  "key": "2606.23727",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.23727",
+  "title": "Certifying Quantum Optimization and Circuit Cutting by Using Quantum-Classical Moment Duality",
+  "authors": [
+    "Ammar Daskin"
+  ],
+  "summary": "We establish a direct quantum--classical duality based on the degree-$2$ Sum-of-Squares (SoS) semidefinite programming cone: the matrix of two-qubit Pauli-$Z$ correlation functions obtained from \\textbf{any} quantum state $ρ$ is automatically a feasible point of the classical Goemans--Williamson (GW) relaxation. This observation provides a universal safety net for variational quantum optimization algorithms: applying GW random hyperplane rounding to the quantum-driven moment matrix yields a certified expected cut value bounded below by $α_{\\text{GW}} \\langle \\mathcal{H} \\rangle_ρ$, which…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS"
+  ],
+  "published": "2026-06-19",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

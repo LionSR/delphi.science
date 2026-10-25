@@ -1,0 +1,22 @@
+{
+  "key": "2608.07042",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.07042",
+  "title": "Limit Points of Reflow with Minibatch Optimal Transport",
+  "authors": [
+    "Antonin Chambolle",
+    "Johannes Hertrich"
+  ],
+  "summary": "Rectified flows, also called flow matching or stochastic interpolants, are generative models that learn a time-dependent vector field steering a probability curve between two probability distributions, usually referred to as latent and target distributions. Reflow accelerates inference by iteratively straightening the trajectories induced by this vector field. We study the asymptotic behavior of this iteration and characterize its limit points. First, we define weak rectified couplings which always exist. Next, when rectified flow updates are alternated with minibatch optimal transport steps…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

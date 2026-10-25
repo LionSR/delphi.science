@@ -1,0 +1,22 @@
+{
+  "key": "2608.07326",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.07326",
+  "title": "Comparing domain decomposition preconditioners for non-conforming Helmholtz discretizations",
+  "authors": [
+    "Moritz Gallauner",
+    "Emile Parolin",
+    "Paul Stocker",
+    "Igor Voulis"
+  ],
+  "summary": "We compare additive and multiplicative domain decomposition preconditioners, without coarse correction, for three non-conforming polynomial discretizations of Helmholtz problems: discontinuous Galerkin, embedded Trefftz discontinuous Galerkin, and hybrid discontinuous Galerkin methods. The preconditioners are studied within stationary and Krylov iterative solvers. All three discretizations lead to complex-symmetric systems and local subproblems with inherited impedance-type boundary conditions. These properties enable the use of conjugate gradients and allow the local matrices to be obtained…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

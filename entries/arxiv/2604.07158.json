@@ -1,0 +1,19 @@
+{
+  "key": "2604.07158",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.07158",
+  "title": "Deterministic sketching for Krylov subspace methods",
+  "authors": [
+    "Kai Bergermann"
+  ],
+  "summary": "Randomized sketching is currently introduced into every area of numerical linear algebra. In Krylov subspace methods, it allows runtime savings at the cost of small accuracy reductions. This work offers a different view on sketching in Krylov methods by analyzing what subspace embeddings are obtained by arbitrary sketching matrices. The analysis gives rise to a deterministic sketching approach leveraging row subset selection techniques that yield subspace embeddings holding with probability 1. We propose deterministically sketched Krylov methods for matrix functions, linear systems, and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-08",
+  "updated": "2026-04-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

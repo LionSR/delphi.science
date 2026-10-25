@@ -1,0 +1,22 @@
+{
+  "key": "2602.15706",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.15706",
+  "title": "Meta-Learning for GPU-Accelerated Quantum Many-Body Problems",
+  "authors": [
+    "Yun-Hsuan Chen",
+    "Jen-Yu Chang",
+    "Tsung-Wei Huang",
+    "En-Jui Kuo"
+  ],
+  "summary": "We explore the industrial and scientific applicability of the VQE-LSTM framework by integrating meta-learning with GPU accelerated quantum simulation using NVIDIA's CUDA-Q (CUDAQ) platform. This work demonstrates how an LSTM-FC meta-initialization module can extend the practical reach of the Variational Quantum Eigensolver (VQE) in both chemistry and physics domains. In the chemical regime, the framework predicts ground-state energies of molecular Hamiltonians derived from PySCF, achieving near FCI accuracy while maintaining favorable O(N^2) scaling with molecular size. In the physical…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-17",
+  "updated": "2026-02-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2607.21916",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.21916",
+  "title": "Estimating dynamic models by matching random features",
+  "authors": [
+    "Michael Wieck-Sosa",
+    "Cosma Rohilla Shalizi"
+  ],
+  "summary": "Scientists increasingly express their ideas as dynamic models of complex processes. It is often much easier to simulate these models than to calculate the probability of their generating a particular outcome, making likelihood-based estimation infeasible. Existing likelihood-free approaches rely either on manually chosen summary statistics or on representations learned by neural networks. The former is error-prone and laborious, while the latter is computationally intensive, leaving many scientists in a difficult position. We show that, for a large class of dynamic models, parameters can be…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "nlin.CD",
+    "physics.data-an"
+  ],
+  "published": "2026-07-24",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

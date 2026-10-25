@@ -1,0 +1,21 @@
+{
+  "key": "2609.04930",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.04930",
+  "title": "Frequency-explicit convergence analysis of a multiscale finite element method for highly heterogeneous scattering problems",
+  "authors": [
+    "T. Chaumont-Frelet",
+    "Z. Kassali"
+  ],
+  "summary": "We analyze the numerical approximation of time-harmonic scattering by highly heterogeneous penetrable obstacles. These problems are especially challenging in the high-frequency regime, where the size of the scatterer $L$ is much larger than the wavelength, i.e., the wavenumber $k$ is such that $kL \\gg 1$. Here, we further consider the situation where the scatterer contains different materials, with a characteristic size $\\varepsilon$ such that $k\\varepsilon \\ll 1$. We propose a high-order multiscale finite element method, and provide an error analysis that is explicit in both $k$ and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.AP"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

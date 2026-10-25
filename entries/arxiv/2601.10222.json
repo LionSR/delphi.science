@@ -1,0 +1,22 @@
+{
+  "key": "2601.10222",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.10222",
+  "title": "Introduction to optimization methods for training SciML models",
+  "authors": [
+    "Alena Kopaničáková",
+    "Elisa Riccietti"
+  ],
+  "summary": "Optimization is central to both modern machine learning (ML) and scientific machine learning (SciML), yet the structure of the underlying optimization problems differs substantially across these domains. Classical ML typically relies on stochastic, sample-separable objectives that favor first-order and adaptive gradient methods. In contrast, SciML often involves physics-informed or operator-constrained formulations in which differential operators induce global coupling, stiffness, and strong anisotropy in the loss landscape. As a result, optimization behavior in SciML is governed by the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-01-15",
+  "updated": "2026-06-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

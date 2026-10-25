@@ -1,0 +1,19 @@
+{
+  "key": "2609.10902",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10902",
+  "title": "Sums of distinct divisors of factorials",
+  "authors": [
+    "Scott D. Hughes"
+  ],
+  "summary": "For practical $N$ let $h(N)$ be the least $k$ such that every integer $1\\le m\\le N$ is a sum of at most $k$ distinct divisors of $N$. We prove $h(n!)\\le(2\\log2+o(1))\\,n/\\log n$. This improves the bounds of order $n/(\\log n)^{1/2-\\varepsilon}$ established in Tenenbaum-Yokota's Lemma 4 and Yokota's 1995 knapsack note. We combine their decreasing greedy construction with the sharper factorial divisor-gap estimate of Berend-Harmse. Counting the steps separately below and above $\\sqrt{n!}$, with the upper range handled through reciprocal divisors, retains the leading coefficient in the gap…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

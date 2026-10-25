@@ -1,0 +1,23 @@
+{
+  "key": "2602.22997",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.22997",
+  "title": "A Reduced Magnetic Vector Potential Approach with Higher-Order Splines",
+  "authors": [
+    "Merle Backmeyer",
+    "Laura A. M. D'Angelo",
+    "Brahim Ramdane",
+    "Sebastian Schöps"
+  ],
+  "summary": "This work presents a high-order isogeometric formulation for magnetoquasistatic eddy-current problems based on a decomposition into Biot-Savart-driven source fields and finite-element reaction fields. Building upon a recently proposed surface-only Biot-Savart evaluation, we generalize the reduced magnetic vector potential framework to the quasistatic regime and introduce a consistent high-order spline discretization. The resulting method avoids coil meshing, supports arbitrary winding paths, and enables high-order field approximation within a reduced computational domain. Beyond establishing…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.CE"
+  ],
+  "published": "2026-02-26",
+  "updated": "2026-08-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

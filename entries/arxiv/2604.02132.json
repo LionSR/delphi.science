@@ -1,0 +1,22 @@
+{
+  "key": "2604.02132",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.02132",
+  "title": "Safe Control of Feedback-Interconnected Systems via Singular Perturbations",
+  "authors": [
+    "Stefano Di Gregorio",
+    "Guido Carnevale",
+    "Giuseppe Notarstefano"
+  ],
+  "summary": "Control Barrier Functions (CBFs) have emerged as a powerful tool in the design of safety-critical controllers for nonlinear systems. In modern applications, complex systems often involve the feedback interconnection of subsystems evolving at different timescales, e.g., two parts from different physical domains (such as the electrical and mechanical parts of robotic systems) or a physical plant and an (optimization or control) algorithm. In these scenarios, safety constraints often involve only a portion of the overall system. Inspired by singular perturbations for stability analysis, we…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-04-02",
+  "updated": "2026-07-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

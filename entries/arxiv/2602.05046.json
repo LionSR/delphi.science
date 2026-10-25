@@ -1,0 +1,20 @@
+{
+  "key": "2602.05046",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05046",
+  "title": "Safe Optimal Control using Log Barrier Constrained iLQR",
+  "authors": [
+    "Abhijeet",
+    "Suman Chakravorty"
+  ],
+  "summary": "This paper presents a constrained iterative Linear Quadratic Regulator (iLQR) framework for nonlinear optimal control problems with box constraints on both states and control inputs. We incorporate logarithmic barrier functions into the stage cost to enforce box constraints (upper and lower bounds on variables), yielding a smooth interior-point formulation that integrates seamlessly with the standard iLQR backward-forward pass. The Hessian contributions from the log barriers are positive definite, preserving and enhancing the positive definiteness of the quadratic approximations in iLQR and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-04",
+  "updated": "2026-02-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

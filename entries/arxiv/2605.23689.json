@@ -1,0 +1,21 @@
+{
+  "key": "2605.23689",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.23689",
+  "title": "Optimization of randomized neural networks for transfer operator approximation",
+  "authors": [
+    "Mohammad Tabish",
+    "Stefan Klus"
+  ],
+  "summary": "RaNNDy is a randomized neural network architecture for the data-driven approximation of transfer operators associated with complex dynamical systems. The weights and biases of the hidden layers of the network are randomly initialized and kept fixed, only the output layer is trained. This has several advantages over fully optimized neural networks, notably a closed-form solution for the output layer and significantly lower training costs. Despite these advantages, RaNNDy is restricted to the initial selection of weights and biases that parametrize the basis functions required for the operator…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS"
+  ],
+  "published": "2026-05-22",
+  "updated": "2026-05-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

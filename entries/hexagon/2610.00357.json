@@ -1,0 +1,36 @@
+{
+  "key": "2610.00357",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00357v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00357v1",
+  "title": "Arithmetic coding against unknown small-prime signs",
+  "authors": [
+    "Brice Pouly"
+  ],
+  "summary": "We encode binary messages in completely multiplicative sign functions and read them along the three sequences $n^2+1$, $n^2+2$ and $n^2-2$. Two observations with the same exact cofactor remove the unknown smaller-prime signs when multiplied. Allocating shared large primes before pairing embeds ordinary binary error-correcting codes in each trace. Under an explicit large-factor mass hypothesis, a computable schedule gives one infinite encoding with positive prefix rate and a linear errors-and-erasures allowance. A first-occurrence filter makes its raw readings depend causally on a linear…",
+  "domain": "math.NT",
+  "tags": [
+    "math.IT",
+    "msc:11A25",
+    "msc:94B35",
+    "msc:94B05",
+    "arithmetic coding",
+    "causal encoding",
+    "error-correcting codes",
+    "errors and erasures",
+    "multiplicative functions",
+    "quadratic traces",
+    "unknown prime signs"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-18",
+  "version": 1,
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "none",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

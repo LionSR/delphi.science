@@ -1,0 +1,21 @@
+{
+  "key": "2607.00592",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.00592",
+  "title": "Character sums over smooth numbers",
+  "authors": [
+    "Seth Hardy",
+    "Max Wenqiang Xu"
+  ],
+  "summary": "Let $Ψ(x,y)$ denote the count of $y$-smooth numbers below $x$ and $P(n)$ denote the largest prime factor of $n$. We show that \\[ \\frac{1}{\\varphi(q)} \\sum_{χ\\bmod q} \\Bigl| \\sum_{\\substack{n \\leq x \\\\ P(n) \\leq y}} χ(n) \\Bigr| = o \\Bigl( \\sqrt{Ψ(x,y)} \\Bigr), \\] whenever $(\\log x)^6 \\leq y \\leq x^{\\frac{1}{32 \\log \\log x}}$ and $q \\geq x^{1 + \\varepsilon}$ for some small quantifiable $\\varepsilon > 0$. The saving is substantial when $\\varepsilon$ is fixed away from zero, and we prove similar results for continuous characters and completely multiplicative twists of these sums.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.PR"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

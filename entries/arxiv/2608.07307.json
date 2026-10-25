@@ -1,0 +1,27 @@
+{
+  "key": "2608.07307",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.07307",
+  "title": "GPU-Accelerated Orbit Propagation with High-Fidelity Solar Radiation Pressure Modeling",
+  "authors": [
+    "Leandro Zardaín",
+    "Ariadna Farrés",
+    "Anna Puig",
+    "Kevin Muntal",
+    "Albert Mir"
+  ],
+  "summary": "Solar Radiation Pressure (SRP), the force exerted by photons emitted by the Sun, is one of the main non-gravitational perturbations affecting spacecraft trajectories, making its accurate modeling essential for high-fidelity orbit propagation. While physically-based ray-tracing models improve SRP accuracy, their computational cost becomes a limitation during numerical integration, where the SRP force must be evaluated repeatedly throughout the trajectory propagation. This paper investigates the integration of high-fidelity SRP models into orbit propagation through two complementary…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "astro-ph.EP",
+    "astro-ph.IM",
+    "cs.GR",
+    "math.NA"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

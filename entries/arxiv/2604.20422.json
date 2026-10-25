@@ -1,0 +1,22 @@
+{
+  "key": "2604.20422",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.20422",
+  "title": "Likelihood-based inference for birth-death processes with composite birth mechanisms",
+  "authors": [
+    "Marko Lalovic",
+    "Nicos Georgiou",
+    "Istvan Z. Kiss"
+  ],
+  "summary": "We develop a likelihood-based inference for finite-state birth-death processes with composite birth rates, in which multiple distinct mechanisms contribute additively to the total birth intensity. Our main motivating example is an SIS epidemic model with pairwise and higher-order transmission. The process is observed through a single aggregate trajectory, and in the main setting of interest, birth events are unmarked. This creates a deconvolution problem in event space: the state is one-dimensional, but the mechanism underlying each birth is latent. We formulate the inference under a Doob…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "math.PR"
+  ],
+  "published": "2026-04-22",
+  "updated": "2026-04-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

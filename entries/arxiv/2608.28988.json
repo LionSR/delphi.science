@@ -1,0 +1,24 @@
+{
+  "key": "2608.28988",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.28988",
+  "title": "B$^3$-PWL: GPU-Batched Branch-and-Bound for Piecewise-Linear Optimization with SOS2 Constraints",
+  "authors": [
+    "Yilin Guan",
+    "Shuqing Luo",
+    "Pingzhi Li",
+    "Tianlong Chen",
+    "Kaidi Xu"
+  ],
+  "summary": "Piecewise-linear (PWL) optimization problems arise in many mixed-integer programming (MIP) optimization applications, including portfolio optimization, workforce scheduling, and resource allocation. But solving them to global optimality remains computationally expensive because branch-and-bound repeatedly solves LP relaxation subproblems. Existing solvers are largely CPU-centric, leaving the scalability of modern GPUs underutilized. Few prior GPU-accelerated branch-and-bound either targets neural network which is not suitable for general PWL optimization, or accelerates only auxiliary…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DC"
+  ],
+  "published": "2026-08-29",
+  "updated": "2026-08-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

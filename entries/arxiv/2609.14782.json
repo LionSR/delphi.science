@@ -1,0 +1,19 @@
+{
+  "key": "2609.14782",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.14782",
+  "title": "Fast tensor transforms and ring-valued orthogonal matrices: an application to cryptography",
+  "authors": [
+    "Jacques Peyrière"
+  ],
+  "summary": "We present a generalization of the Fast Fourier and fast Walsh transform algorithms to tensor products of $n$ arbitrary $q\\times q$ matrices over a commutative ring, reducing the cost of applying such a tensor product from $q^{2n}$ to $nq^{n}$ ring operations. We then give an explicit construction of square orthogonal matrices over a commutative unitary ring, starting from a prescribed first row, and specialize this construction to ${\\mathbb Z}/256{\\mathbb Z}$. Combining these two ingredients, we propose a symmetric cryptosystem in which the secret key determines~$n$ orthogonal matrices over…",
+  "domain": "math.RA",
+  "tags": [
+    "math.RA"
+  ],
+  "published": "2026-09-13",
+  "updated": "2026-09-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

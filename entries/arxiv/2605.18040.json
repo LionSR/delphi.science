@@ -1,0 +1,21 @@
+{
+  "key": "2605.18040",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.18040",
+  "title": "Connections between the Föllmer process and the denoising diffusion probabilistic model",
+  "authors": [
+    "Yuta Koike"
+  ],
+  "summary": "The Föllmer process is a Brownian motion conditioned to have a pre-specified distribution at time 1. This process can be interpreted as an ``augmented'' time-compressed version of the reverse stochastic differential equation (SDE) corresponding to the denoising diffusion probabilistic model (DDPM). While this fact has been indirectly used to analyze DDPM sampling errors via discretization of the reverse SDE, the connection between direct discretization of the Föllmer process and the DDPM sampler has not yet been fully explored. This paper clarifies this point while surveying relevant results…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-05-18",
+  "updated": "2026-09-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

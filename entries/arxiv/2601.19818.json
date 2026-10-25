@@ -1,0 +1,21 @@
+{
+  "key": "2601.19818",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.19818",
+  "title": "Learn and Verify: A Framework for Rigorous Verification of Physics-Informed Neural Networks",
+  "authors": [
+    "Kazuaki Tanaka",
+    "Kohei Yatabe"
+  ],
+  "summary": "The numerical solution of differential equations using neural networks has become a central topic in scientific computing, with Physics-Informed Neural Networks (PINNs) emerging as a powerful paradigm for both forward and inverse problems. However, unlike classical numerical methods that offer established convergence guarantees, neural network-based approximations typically lack rigorous error bounds. Furthermore, the non-deterministic nature of their optimization makes it difficult to mathematically certify their accuracy. To address these challenges, we propose a \"Learn and Verify\"…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-01-27",
+  "updated": "2026-01-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2606.16679",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.16679",
+  "title": "Formalizing chip-firing and Riemann--Roch for graphs in Lean 4",
+  "authors": [
+    "Dhyey Dharmendrakumar Mavani",
+    "Nathan Pflueger"
+  ],
+  "summary": "The Riemann--Roch theorem for graphs, due to Baker and Norine, is a foundational result establishing a powerful analogy between finite graphs and algebraic curves. We describe a complete formal proof of this theorem implemented in the Lean 4 theorem prover. Our formalization includes the existence and uniqueness of q-reduced divisors, a modified form of Dhar's burning algorithm, the bijection between acyclic orientations with unique source and maximal superstable configurations, and Clifford's theorem. We also include several challenges for future formalization.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-06-15",
+  "updated": "2026-06-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

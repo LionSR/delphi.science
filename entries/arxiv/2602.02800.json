@@ -1,0 +1,20 @@
+{
+  "key": "2602.02800",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.02800",
+  "title": "Decision-Focused Optimal Transport",
+  "authors": [
+    "Suhan Liu",
+    "Mo Liu"
+  ],
+  "summary": "We propose a fundamental metric for measuring the distance between two distributions. This metric, referred to as the decision-focused (DF) divergence, is tailored to stochastic linear optimization problems in which the objective coefficients are random and may follow two distinct distributions. Traditional metrics such as KL divergence and Wasserstein distance are not well-suited for quantifying the resulting cost discrepancy, because changes in the coefficient distribution do not necessarily change the optimizer of the underlying linear program. Instead, the impact on the objective value…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-02-02",
+  "updated": "2026-02-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

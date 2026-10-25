@@ -1,0 +1,22 @@
+{
+  "key": "2609.07945",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07945",
+  "title": "Promises should be taken seriously: On relativization with promise problems",
+  "authors": [
+    "David Miloschewsky",
+    "Supartha Podder",
+    "Dorian Rudolph"
+  ],
+  "summary": "Relativization is concerned with comparing computational models with black-box access to an oracle. For promise problems, black-box access is not canonical due to inputs outside of the promise being unconstrained. We study two semantics for such access. Under robust queries, a machine must correctly answer regardless of the completion of the problem,, while loose access requires that the internal choices of a machine do not change based on off-promise queries. Our first result separates the language and promise settings. Namely, we construct an oracle $O$ such that $\\mathsf{P}^O =…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "quant-ph"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

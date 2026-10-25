@@ -1,0 +1,20 @@
+{
+  "key": "2604.26867",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26867",
+  "title": "Function-free Optimization via Comparison Oracles",
+  "authors": [
+    "Katya Scheinberg",
+    "Zikai Xiong"
+  ],
+  "summary": "In this work, we study optimization specified only through a comparison oracle: given two points, it reports which one is preferred. We call it function-free optimization because we do not assume access to, nor the existence of, a canonical application-given objective function. The goal is to find the most preferred feasible point, which we call the optimal solution. This model arises in preference- and ranking-based settings where objective values and derivatives are unavailable or meaningless. Even when a representative function exists, it may be nonsmooth, nonconvex, or discontinuous. We…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-05-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

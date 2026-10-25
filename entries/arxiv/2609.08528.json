@@ -1,0 +1,21 @@
+{
+  "key": "2609.08528",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.08528",
+  "title": "Counting Residue-Class Survivor Sets: An Asymptotic Comparison with Prime-Admissible Sets",
+  "authors": [
+    "Mario Raso",
+    "Daniele Venturi"
+  ],
+  "summary": "For $n\\geq1$, choose one residue class $r_k\\pmod{k}$ for every $2\\leq k\\leq n$, and retain those $m\\in\\{2,\\ldots,n+1\\}$ for which $m\\not\\equiv r_k\\pmod{k}$ whenever $k<m$. Let $N(n)$ be the number of distinct survivor sets obtained in this way. We prove \\[ \\log 2\\leq \\liminf_{n\\to\\infty}\\frac{\\log N(n)}{n/\\log n} \\leq \\limsup_{n\\to\\infty}\\frac{\\log N(n)}{n/\\log n} \\leq2\\log 2. \\] If $A_{\\rm adm}(n)$ denotes the number of subsets of $\\{2,\\ldots,n+1\\}$ that omit at least one residue class modulo every prime, then our main comparison is \\[ \\log N(n)=\\log A_{\\rm adm}(n)+o\\!\\left(\\frac{n}{\\log…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

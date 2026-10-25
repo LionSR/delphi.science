@@ -1,0 +1,20 @@
+{
+  "key": "2610.21692",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.21692",
+  "title": "On the Complexity of Finding Stationary Points in Stochastic $(L_0, L_1)$-Smooth Nonconvex Optimization",
+  "authors": [
+    "Yanpeng Liang",
+    "Luo Luo"
+  ],
+  "summary": "We study the stochastic first-order oracle (SFO) complexity of finding $ε$-stationary points of $(L_0,L_1)$-smooth nonconvex functions. Under bounded-variance noise, existing analyses of normalized and clipped stochastic gradient descent (SGD) establish optimal dependence on $ε$ and $L_0$, but the jointly optimal dependence on $L_0$, $L_1$, and $ε$ remains unclear. We resolve this question for an unbiased SFO whose gradient noise has a $p$th central moment bounded by $σ^p$ for some $σ\\geq 0$, where $p\\in(1,2]$.Specifically, we establish an SFO lower bound of…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

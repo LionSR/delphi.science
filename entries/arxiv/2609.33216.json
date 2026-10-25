@@ -1,0 +1,22 @@
+{
+  "key": "2609.33216",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.33216",
+  "title": "Hierarchical low-rank compression exploiting symmetric boundary integral equations in transmission scattering",
+  "authors": [
+    "Yasuhiro Matsumoto",
+    "Taizo Maruyama",
+    "Qianxiang Ma",
+    "Rio Yokota"
+  ],
+  "summary": "We propose an approach using matrix symmetry to accelerate hierarchical low-rank compression for wave transmission scattering. For Helmholtz transmission problems, we introduce a symmetric Müller-like boundary integral equation formulation. Although not of the second kind, this formulation creates no difficulties for direct solvers. A one-point corrected quadrature in a Nyström discretization preserves the complex symmetry of the discretized system. This formulation is integrated into a variant of a hierarchical semiseparable direct solver. Within this framework, the computational workload…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-27",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

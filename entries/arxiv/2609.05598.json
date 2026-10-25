@@ -1,0 +1,26 @@
+{
+  "key": "2609.05598",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.05598",
+  "title": "Matrix Product Belief Propagation",
+  "authors": [
+    "Gabriel Woolls",
+    "Shahin Jahanbani",
+    "Adarsh Pashikanti",
+    "Matthew T. Fishman",
+    "Joseph Tindall",
+    "Michael P. Zaletel"
+  ],
+  "summary": "We introduce \"matrix product belief propagation\" (MP-BP) as a controlled method for the approximate contraction of two-dimensional tensor networks and graphical models, which generically leads to a quadratic reduction of errors relative to existing methods: at similar computational effort, the number of accurate digits is asymptotically doubled. For infinite systems, MP-BP can be understood as a practical implementation of Baxter's corner-transfer-matrix method; for reflection-symmetric networks, it further coincides with the boundary matrix-product-state and corner-transfer-matrix…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.str-el",
+    "physics.comp-ph"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

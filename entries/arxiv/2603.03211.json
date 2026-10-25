@@ -1,0 +1,25 @@
+{
+  "key": "2603.03211",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.03211",
+  "title": "Shape Derivative-Informed Neural Operators with Application to Risk-Averse Shape Optimization",
+  "authors": [
+    "Xindi Gong",
+    "Dingcheng Luo",
+    "Thomas O'Leary-Roseberry",
+    "Ruanui Nicholson",
+    "Omar Ghattas"
+  ],
+  "summary": "Shape optimization under uncertainty (OUU) is computationally intensive for classical PDE-based methods due to the high cost of repeated sampling-based risk evaluation across many uncertainty realizations and varying geometries, while standard neural surrogates often fail to provide accurate and efficient sensitivities for optimization. We introduce Shape-DINO, a derivative-informed neural operator framework for learning PDE solution operators on families of varying geometries, with a particular focus on accelerating PDE-constrained shape OUU. Shape-DINOs encode geometric variability through…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-03-03",
+  "updated": "2026-03-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

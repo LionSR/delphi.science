@@ -1,0 +1,22 @@
+{
+  "key": "2610.23948",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.23948",
+  "title": "Parameter misspecification in physics-informed neural networks: A closed-form audit and its limits",
+  "authors": [
+    "David McShannon",
+    "Nicholas Dietrich"
+  ],
+  "summary": "Physics-informed neural networks (PINNs) are trained to minimize the residual of a prescribed equation, so a low training loss does not indicate whether a coefficient in that equation was specified incorrectly. This study evaluates what can be inferred about the encoded parameter from the trained network alone. When the residual is linear in the parameter, written as $A - νB$, the least-squares estimate $\\hatν = A^{\\top}B/B^{\\top}B$ is obtained from a single evaluation of the frozen network, without retraining or reference data. Its accuracy depends on how closely the network satisfies its…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

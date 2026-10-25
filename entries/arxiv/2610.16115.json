@@ -1,0 +1,21 @@
+{
+  "key": "2610.16115",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16115",
+  "title": "Constraint-Lifted Sector-Constrained Guidance for Rear-Approach Interception",
+  "authors": [
+    "Jhon Manuel Portella Delgado",
+    "Dennis S Bernstein",
+    "Ankit Goel"
+  ],
+  "summary": "This paper develops a sector-constrained guidance (SCG) law for interception of a maneuvering target while maintaining a prescribed approach geometry. The line of sight is required to remain within a specified angular sector behind the target throughout the engagement, resulting in a state-constrained guidance problem. To enforce this constraint, the directional angle between the target heading and the line of sight is mapped from the prescribed sector to an unconstrained coordinate using a sigmoid diffeomorphism. A guidance law is then designed in the lifted coordinate to generate a desired…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2605.16564",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.16564",
+  "title": "A Parallel and Adaptive Mesh-Free Method for Discontinuous Coefficient Fields in Heterogeneous Porous Media",
+  "authors": [
+    "Kapil Chawla",
+    "Sanghyun Lee",
+    "Yeonjong Shin"
+  ],
+  "summary": "Discontinuous coefficient fields arise in many computational physics problems and are often represented as cellwise constant data tied to a given spatial discretization. Such representations are inherently mesh-dependent, requiring interpolation or projection whenever they are transferred to a different discretization. In this work, we develop \\emph{Parallel and Adaptive Mesh-Free Approximation (PAM)}, a mesh-independent framework that approximates discontinuous data by a continuous, closed-form function. The resulting approximation can be evaluated consistently across different geometries…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-15",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

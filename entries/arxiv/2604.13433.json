@@ -1,0 +1,21 @@
+{
+  "key": "2604.13433",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.13433",
+  "title": "PackSELL: A Sparse Matrix Format for Precision-Agnostic High-Performance SpMV",
+  "authors": [
+    "Kengo Suzuki",
+    "Takeshi Iwashita"
+  ],
+  "summary": "We propose a new sparse matrix format, PackSELL, designed to support diverse data representations and enable efficient sparse matrix-vector multiplication (SpMV) on GPUs. Building on sliced ELLPACK (SELL), PackSELL incorporates delta encoding of column indices and a novel packing scheme that stores each index-delta-value pair in a single word, thereby reducing memory footprint and data movement. This design further enables fine-grained control over the bit allocation between deltas and values, allowing flexible data representations, including non-IEEE formats. Experimental results show that,…",
+  "domain": "cs.DC",
+  "tags": [
+    "cs.DC",
+    "math.NA"
+  ],
+  "published": "2026-04-15",
+  "updated": "2026-04-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

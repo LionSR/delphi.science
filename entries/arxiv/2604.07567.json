@@ -1,0 +1,22 @@
+{
+  "key": "2604.07567",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.07567",
+  "title": "Marginal Persistence and Dynamic Copula Dependence in Sovereign Rating Migration Counts: A Discrete Interval-Likelihood MAGMAR Analysis",
+  "authors": [
+    "Marina Palaisti"
+  ],
+  "summary": "This paper develops an observed-data likelihood for applying moving-aggregate modified autoregressive (MAGMAR) copula time-series models to discrete sovereign rating-migration counts with time-varying exposure. An annual count identifies a probability-integral-transform interval rather than a unique latent point, so the likelihood integrates the latent process over the complete sequence of count intervals. A guided sequential Monte Carlo implementation incorporates the parameter-dependent stationary marginal adjustment of MAGMAR directly inside this integration. In sovereign ratings from…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.PR",
+    "q-fin.RM",
+    "q-fin.ST"
+  ],
+  "published": "2026-04-08",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

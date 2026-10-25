@@ -1,0 +1,23 @@
+{
+  "key": "2607.24520",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.24520",
+  "title": "Optimal Convex Optimization with Inexact Second-Order Oracles",
+  "authors": [
+    "Lesi Chen",
+    "Chengchang Liu",
+    "Luo Luo",
+    "John C. S. Lui",
+    "Jingzhao Zhang"
+  ],
+  "summary": "In this paper, we present a novel second-order method called Accelerated Inexact Newton Extragradient (AINE) for convex optimization using $δ$-inexact Hessians. We show that AINE can find an $ε$-solution in the inexact second-order oracle (ISO) complexity of $\\mathcal{O}( (δ/ε)^{1/2} + (L_2/ε)^{2/7} )$ when the Hessian is $L_2$-Lipschitz continuous, and a better complexity of $\\mathcal{O}( (δ/ε)^{1/2} + (L_3/ε)^{1/5} )$ when the third-order derivative is $L_3$-Lipschitz continuous. Notably, each iteration of our method can be conducted in the same running time as matrix multiplication up to…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2604.25845",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.25845",
+  "title": "Model-agnostic information transfer and fusion for classification with label noise",
+  "authors": [
+    "Zhu Guojun",
+    "Zhang Sanguo",
+    "Ren Mingyang"
+  ],
+  "summary": "Label noise presents a fundamental challenge in modern machine learning, especially when large-scale datasets are generated via automated processes. An increasingly common and important data paradigm, particularly in domains like medical imaging, involves learning from a large dataset with coarse, noisy labels supplemented by a small, expert-verified, clean dataset. This setting constitutes a typical information transfer and fusion problem. However, the significant distribution shift between the noisy and clean data violates the core overall parametric similarity assumptions of existing…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-04-28",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

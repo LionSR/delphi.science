@@ -1,0 +1,21 @@
+{
+  "key": "2609.20772",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20772",
+  "title": "Conditional Independence Testing in Time Series",
+  "authors": [
+    "Jieru Shi",
+    "Rajen D. Shah"
+  ],
+  "summary": "We consider the problem of testing Granger causality in time series, specifically, whether the future outcome $Y_{t+1}$ and the exposure history $\\bar X_t$ are conditionally independent given the history of $\\bar Y_t$ and a set of confounding variables $\\bar Z_t$ up to time $t$. This testing procedure distinguishes true causal effects from associations driven by common external processes, supporting reliable decision-makings in applications such as finance, neuroscience, and climate science. While traditional approaches assume a linear vector autoregressive (VAR) model and are vulnerable to…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

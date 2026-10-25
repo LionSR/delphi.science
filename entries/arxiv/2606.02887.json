@@ -1,0 +1,22 @@
+{
+  "key": "2606.02887",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.02887",
+  "title": "A Nonmonotone Gradient-Based Algorithm for Symmetric Nonnegative Matrix Factorization and Graph Clustering",
+  "authors": [
+    "Ryan Swart",
+    "Johannes Brust"
+  ],
+  "summary": "Symmetric nonnegative matrix factorization (Symmetric NMF) approximates a matrix as $WW^T$ with nonnegative rectangular factor $W$. It has broad applications in graph clustering and machine learning. In contrast to the NMF, projected gradient methods for the symmetric problem had been associated with slow convergence. To address this, we introduce SNMPBB, the first adaptation of nonmonotone projected Barzilai-Borwein methods to Symmetric NMF, demonstrating that gradient algorithms are significantly more effective than previously understood. We further extend SNMPBB to graph clustering using…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

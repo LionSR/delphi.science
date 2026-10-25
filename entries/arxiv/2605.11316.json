@@ -1,0 +1,23 @@
+{
+  "key": "2605.11316",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11316",
+  "title": "Error whitening: Why Gauss-Newton outperforms Newton",
+  "authors": [
+    "Maricela Best McKay",
+    "Nathan P. Lawrence",
+    "Brian Wetton",
+    "R. Bhushan Gopaluni"
+  ],
+  "summary": "The Gauss-Newton matrix is widely viewed as a positive semidefinite approximation of the Hessian, yet mounting empirical evidence shows that Gauss-Newton descent outperforms Newton's method. We adopt a function space perspective to analyze this phenomenon. We show that the generalized Gauss-Newton (GGN) matrix projects the Newton direction in function space onto the model's tangent space, while a Jacobian-only variant obtained by applying the least squares Gauss-Newton matrix to non-least squares losses projects the function space loss gradient onto this same tangent space. Both projections…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

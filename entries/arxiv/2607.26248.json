@@ -1,0 +1,25 @@
+{
+  "key": "2607.26248",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.26248",
+  "title": "Strong imposition of Dirichlet boundary velocities in structure-preserving discretizations of elastodynamics",
+  "authors": [
+    "Cristobal Ponce",
+    "Hector Ramirez",
+    "Yongxin Wu",
+    "Ning Liu",
+    "Yann Le Gorrec"
+  ],
+  "summary": "The imposition of boundary velocities in finite element models of port-Hamiltonian elastodynamics typically relies on Lagrange multipliers, yielding Differential-Algebraic Equations (DAEs). Alternatively, weak imposition methods that maintain an Ordinary Differential Equation (ODE) structure often exhibit poor accuracy at Dirichlet boundaries. To address these limitations, this paper introduces an additive kinematic decomposition at the continuous level, splitting the displacement and velocity fields into a relative dynamic component that vanishes on the boundary and a prescribed lifting…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-07-28",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

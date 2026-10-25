@@ -1,0 +1,30 @@
+{
+  "key": "2610.00409",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00409v2",
+  "pdf": "https://hexagonmath.org/pdf/2610.00409v2",
+  "title": "A Frobenius determinant proof of the non-existence of Landau–Siegel zeros",
+  "authors": [
+    "Roelof van Dijk"
+  ],
+  "summary": "We give a variant of the OpenAI proof [1] of the non-existence of Landau–Siegel zeros, following the simplifications of Kerr [2], Green [3] and Barreto [4]. The Frobenius congruence proves both divisibility and nonvanishing of the determinant. Reduction modulo the largest inert prime below the cutoff reduces nonvanishing to a polynomial root count, replacing resultants and Wronskians. The argument was discovered in discussions with GPT-6 Astra and Opus 5.5 and the new arguments should be attributed to these models.",
+  "domain": "math.NT",
+  "tags": [
+    "msc:11M20"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-21",
+  "version": 2,
+  "ai_models": [
+    "Claude Opus",
+    "ChatGPT"
+  ],
+  "authorship": "mixed",
+  "human_understanding": "none",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

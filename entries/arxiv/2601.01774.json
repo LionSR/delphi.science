@@ -1,0 +1,22 @@
+{
+  "key": "2601.01774",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.01774",
+  "title": "Can Large Language Models Solve Engineering Equations? A Systematic Comparison of Direct Prediction and Solver-Assisted Approaches",
+  "authors": [
+    "Sai Varun Kodathala",
+    "Rakesh Vunnam"
+  ],
+  "summary": "Transcendental equations requiring iterative numerical solution pervade engineering practice, from fluid mechanics friction factor calculations to orbital position determination. We systematically evaluate whether Large Language Models can solve these equations through direct numerical prediction or whether a hybrid architecture combining LLM symbolic manipulation with classical iterative solvers proves more effective. Testing six state-of-the-art models (GPT-5.1, GPT-5.2, Gemini-3-Flash, Gemini-2.5-Lite, Claude-Sonnet-4.5, Claude-Opus-4.5) on 100 problems spanning seven engineering domains,…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.CE",
+    "math.NA"
+  ],
+  "published": "2026-01-05",
+  "updated": "2026-01-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

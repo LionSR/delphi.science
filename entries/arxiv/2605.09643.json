@@ -1,0 +1,20 @@
+{
+  "key": "2605.09643",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09643",
+  "title": "Kernel Learning of PDE Solution Operators",
+  "authors": [
+    "Jianyu Hu",
+    "Juan-Pablo Ortega"
+  ],
+  "summary": "A kernel-based approach for the learning of the solution operator of general nonhomogeneous partial differential equations (PDEs) is proposed. The method incorporates physical priors, typically encoded through the PDE operator, into a kernel ridge regression framework, and employs a regularization-based formulation to construct an operator learner. This yields a closed-form estimator that is independent of the input functions that determine the underlying PDE. From the perspective of regularization theory, the resulting estimator induces a well-defined operator that links input and output…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-10",
+  "updated": "2026-05-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

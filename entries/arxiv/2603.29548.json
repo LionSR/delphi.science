@@ -1,0 +1,20 @@
+{
+  "key": "2603.29548",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.29548",
+  "title": "A SAT-based Filtering Framework for Exact Coverings of K33 by Cliques of Order 3, 4 or 5",
+  "authors": [
+    "Petr Kovař",
+    "Yifan Zhang"
+  ],
+  "summary": "We investigate the minimum number of cliques of orders $3$, $4$, and $5$ needed to cover the edges of $K_{33}$ with zero excess. General covering results yield the lower bound 57. The main result of the paper is that no decomposition of $K_{33}$ into $57$ blocks from $\\{K_3,K_4,K_5\\}$ exists. Our approach is algorithmic and relies on a layered exact-search pipeline rather than a single monolithic solver. We combine symmetry reduction, enumeration of local signatures, arithmetic profile restrictions, geometric tests for partial configurations, SAT realisation on reduced instances, and final…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-03-31",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

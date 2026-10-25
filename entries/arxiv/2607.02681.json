@@ -1,0 +1,24 @@
+{
+  "key": "2607.02681",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.02681",
+  "title": "Contaminated Multi-task Learning with Heterogeneity: Fundamental Limits and Optimal Algorithms",
+  "authors": [
+    "Ye Tian",
+    "Mengchu Li",
+    "Marco Avella Medina"
+  ],
+  "summary": "Integrating information across related tasks can improve estimation and prediction in transfer, multi-task, and federated learning, but contamination and heterogeneity make robust borrowing challenging. We study a contaminated multi-task empirical risk minimization (ERM) framework in which an $ε$ fraction of $K$ tasks, each with sample size $n$, may be arbitrarily contaminated while the remaining tasks are heterogeneous. Our goal is to estimate both the global minimizer of the average risk and the clean task-specific minimizers, thereby combining robustness and personalization. In the…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-07-02",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

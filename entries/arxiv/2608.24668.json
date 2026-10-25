@@ -1,0 +1,25 @@
+{
+  "key": "2608.24668",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.24668",
+  "title": "Scalable Lindblad Noise Learning via Stochastic Tensor-Network Simulation",
+  "authors": [
+    "Alejandro R. Ramos Ramos",
+    "Maximilian Fröhlich",
+    "Aaron Sander",
+    "Robert Wille",
+    "Martin Eigel",
+    "Patrick Gelß",
+    "Sebastian Pokutta"
+  ],
+  "summary": "Learning dissipation rates in large-scale open quantum systems is a major obstacle for near-term quantum technologies, as existing Lindblad estimation methods are typically limited to small system sizes due to the computational complexity of repeatedly solving the Lindblad equation during optimization. Here, we propose a scalable noise-learning framework for Lindblad dissipation rates that combines a stochastic simulation method, the Tensor Jump Method (TJM), with gradient-free optimization of a least-squares cost-function defined on time series of local-observable expectation values. We…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

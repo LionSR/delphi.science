@@ -1,0 +1,25 @@
+{
+  "key": "2604.04228",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.04228",
+  "title": "Robust Regression with Adaptive Contamination in Response: Optimal Rates and Computational Barriers",
+  "authors": [
+    "Ilias Diakonikolas",
+    "Chao Gao",
+    "Daniel M. Kane",
+    "Ankit Pensia",
+    "Dong Xie"
+  ],
+  "summary": "We study robust regression under a contamination model in which covariates are clean while the responses may be corrupted in an adaptive manner. Unlike the classical Huber's contamination model, where both covariates and responses may be contaminated and consistent estimation is impossible when the contamination proportion is a non-vanishing constant, it turns out that the clean-covariate setting admits strictly improved statistical guarantees. Specifically, we show that the additional information in the clean covariates can be carefully exploited to construct an estimator that achieves a…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.DS",
+    "stat.ML"
+  ],
+  "published": "2026-04-05",
+  "updated": "2026-04-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

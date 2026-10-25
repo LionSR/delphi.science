@@ -1,0 +1,25 @@
+{
+  "key": "2610.00533",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00533",
+  "title": "Admissibility-Preserving Control for Multi-Input Systems with Joint Capacity Constraints",
+  "authors": [
+    "Saurabh Kumar",
+    "Lohitvel Gopikannan",
+    "Shashi Ranjan Kumar",
+    "Abhinav Sinha"
+  ],
+  "summary": "This paper addresses the control of multi-input strict-feedback nonlinear systems subject to a joint capacity constraint, in which the admissible input set is a coupled subset of the individual actuator limits. Unlike existing constraint-handling methods that enforce actuator bounds channel by channel and may unnecessarily suppress admissible control directions, we develop an Anisotropic Joint-Admissibility-Preserving Input Realization (AJ-APIR) framework that explicitly exploits the geometry of the joint constraint. The proposed realization constructs a state-dependent gain matrix whose…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.RO",
+    "math.DS",
+    "math.OC"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

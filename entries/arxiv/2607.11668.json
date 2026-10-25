@@ -1,0 +1,24 @@
+{
+  "key": "2607.11668",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.11668",
+  "title": "Multi-Stage Mamba-Based Architecture for Fast and Scalable Superconducting Qubit Readout",
+  "authors": [
+    "Luca Otting",
+    "Xiaorang Guo",
+    "Emmanouil Giortamis",
+    "Benjamin Lienhard",
+    "Pramod Bhatotia",
+    "Martin Schulz"
+  ],
+  "summary": "Reliable qubit readout is a critical bottleneck toward fault-tolerant quantum computing (FTQC). In superconducting quantum processors, readout operations are both error-prone and high-latency. These challenges become more severe in frequency-multiplexed architectures, where signal crosstalk among neighboring qubits significantly degrades readout fidelity. Existing machine learning (ML)-based approaches rely on feed-forward neural networks (FNNs) that suffer from large parameter sizes and lack an end-to-end network that jointly addresses relaxation errors and discriminates qubit states. In…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

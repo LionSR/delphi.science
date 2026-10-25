@@ -1,0 +1,22 @@
+{
+  "key": "2606.16217",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.16217",
+  "title": "symveig: Verified eigenvalue enclosures for symmetry-decomposed Hermitian matrices",
+  "authors": [
+    "Sarang Vehale",
+    "Ritu Goel"
+  ],
+  "summary": "Exact diagonalization of quantum lattice Hamiltonians returns floating-point eigenvalues whose accuracy is not certified: rounding error, eigensolver behaviour, and ill-conditioning can corrupt a result without warning. We present \\texttt{symveig}, a pure NumPy/SciPy package that computes rigorous, machine-checkable enclosures of all eigenvalues of a Hermitian matrix, with an optional symmetry-sector decomposition. For a matrix that commutes with an abelian conserved quantity diagonal in the working basis (for example the total magnetization of a spin model), the package verifies each…",
+  "domain": "cond-mat.str-el",
+  "tags": [
+    "cond-mat.str-el",
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-06-15",
+  "updated": "2026-06-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2603.09089",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.09089",
+  "title": "Sampling on Discrete Spaces with Temporal Point Processes",
+  "authors": [
+    "Cameron A. Stewart",
+    "Maneesh Sahani"
+  ],
+  "summary": "Temporal point processes offer a powerful framework for sampling from discrete distributions, yet they remain underutilized in existing literature. We show how to construct, for any target multivariate count distribution with downward-closed support, a multivariate temporal point process whose event-count vector in a fixed-length sliding window converges in distribution to the target as time tends to infinity. Structured as a system of potentially coupled infinite-server queues with deterministic service times, the sampler exhibits a discrete form of momentum that suppresses random-walk…",
+  "domain": "stat.CO",
+  "tags": [
+    "stat.CO",
+    "math.PR",
+    "q-bio.NC"
+  ],
+  "published": "2026-03-10",
+  "updated": "2026-05-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

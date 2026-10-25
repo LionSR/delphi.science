@@ -1,0 +1,20 @@
+{
+  "key": "2605.29279",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.29279",
+  "title": "Permutation Matrix Representation for Quantum Simulation: Comparative Resource Analysis",
+  "authors": [
+    "Hriday Sabharwal",
+    "Itay Hen"
+  ],
+  "summary": "We present a comparative study of the permutation matrix representation (PMR) method for Hamiltonian simulation alongside other leading quantum algorithms. Our analysis focuses on resource costs for simulating both time-independent and time-dependent Hamiltonians. For the time-independent case, we benchmark PMR against quantum signal processing (QSP) and qubitization, using the Rydberg interaction Hamiltonian as a representative example. For the time-dependent case, we compare the time-dependent extension of PMR with the quantum highly oscillatory protocol (qHOP), applied to a Floquet-driven…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-05-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

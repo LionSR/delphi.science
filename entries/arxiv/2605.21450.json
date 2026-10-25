@@ -1,0 +1,20 @@
+{
+  "key": "2605.21450",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.21450",
+  "title": "Composite B-Spline Current Deposition and Interpolation Operators for Thin-Wire Finite-Difference Time-Domain Simulations",
+  "authors": [
+    "Cole Gruninger",
+    "Boyce E. Griffith"
+  ],
+  "summary": "Holland-Simpson thin-wire finite-difference time-domain (FDTD) simulations of obliquely oriented closed-loop antennas exhibit persistent low-frequency parasitic currents because the current-deposition operator fails to conserve charge. This deposition operator, together with an interpolation operator that samples the tangential electric field along the wire, can be realized as regularizations of distributions: the wire current is deposited as a source term by integrating it against a regularized delta function along the wire, and the electric field is sampled back to the wire by integrating…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-20",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

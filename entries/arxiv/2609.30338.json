@@ -1,0 +1,22 @@
+{
+  "key": "2609.30338",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.30338",
+  "title": "Double Descent for Random Fourier Series Models",
+  "authors": [
+    "Hang Xu",
+    "Yi Shen",
+    "Yuzhong Zhao"
+  ],
+  "summary": "We investigate the least squares linear regression problem with random partial Discrete Fourier Transform (DFT) matrices, providing a rigorous analysis of the model's generalization error. By leveraging tools from random matrix theory, we derive exact non-asymptotic bounds for the risk of the Moore-Penrose estimator, which hold for finite-dimensional problems and reveal the precise dependence on key parameters such as the sample size, dimension, and noise variance. Then we obtain a characterization of the double descent phenomenon in the linear regression context, demonstrating how the risk…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.IT"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

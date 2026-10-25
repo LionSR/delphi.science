@@ -1,0 +1,21 @@
+{
+  "key": "2603.15451",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.15451",
+  "title": "Quantized rational chip-firing",
+  "authors": [
+    "Spencer Backman",
+    "Nicholas A. Loehr",
+    "Gregory S. Warrington"
+  ],
+  "summary": "This article introduces a quantized chip-firing model with close connections to the theory of rational lattice paths and rational parking functions. Given a graph with a sink and positive integers a,b,c with gcd(a,b)=1, a set S of vertices fires by the following rule. Each vertex in S provisionally sends c chips to the sink and a/b chips to each non-sink neighbor outside of S. The novel feature is that the total number of chips leaving from or arriving at any vertex gets rounded down to the nearest integer before being finalized. We define the notions of chip configurations being…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-03-16",
+  "updated": "2026-03-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

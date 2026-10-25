@@ -1,0 +1,23 @@
+{
+  "key": "2601.00427",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.00427",
+  "title": "A Deep Learning-Enhanced Fourier Method for the Multi-Frequency Inverse Source Problem with Sparse Far-Field Data",
+  "authors": [
+    "Hao Chen",
+    "Yan Chang",
+    "Yukun Guo",
+    "Yuliang Wang"
+  ],
+  "summary": "This paper introduces a hybrid computational framework for the multi-frequency inverse source problem governed by the Helmholtz equation. By integrating a classical Fourier method with a deep convolutional neural network, we address the challenges inherent in sparse and noisy far-field data. The Fourier method provides a physics-informed, low-frequency approximation of the source, which serves as the input to a U-Net. The network is trained to map this coarse approximation to a high-fidelity source reconstruction, effectively suppressing truncation artifacts and recovering fine-scale…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "math.NA"
+  ],
+  "published": "2026-01-01",
+  "updated": "2026-01-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

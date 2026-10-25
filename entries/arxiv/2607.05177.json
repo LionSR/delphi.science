@@ -1,0 +1,22 @@
+{
+  "key": "2607.05177",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.05177",
+  "title": "CP-WSP: A Declarative CP-SAT Framework for Configurable Multi-Constraint Workforce Scheduling",
+  "authors": [
+    "Vipul Patel",
+    "Anirudh Deodhar",
+    "Dagnachew Birru"
+  ],
+  "summary": "Workforce scheduling is an NP-hard combinatorial optimization problem requiring simultaneous satisfaction of labor regulations, coverage requirements, employee preferences and operational objectives. Existing CP formulations typically model simplified instances with 6-12 constraints at shift-level granularity and critically lack explicit support for: mandatory break scheduling with midpoint placement control; acuity weighted workload equity; sub-shift temporal granularity enabling demand-driven staffing; inter-week schedule stability; and cross-midnight shift patterns common in 24-hour…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-07-06",
+  "updated": "2026-07-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

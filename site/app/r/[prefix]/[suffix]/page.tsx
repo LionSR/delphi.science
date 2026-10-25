@@ -1,5 +1,6 @@
-// One record: what it is, where it lives, its votes, and its comments and reviews.
+// One record: what it is, where it lives, its votes, its comments and reviews, and what was said about it elsewhere.
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { notFound } from 'next/navigation';
 import { cache } from 'react';
 import { comments } from '../../../../lib/comments.ts';
@@ -7,7 +8,7 @@ import { db } from '../../../../lib/db.ts';
 import { get } from '../../../../lib/query.ts';
 import { me } from '../../../../lib/session.ts';
 import { date, idPath, recordId, recordPath, SITE, source, tally, tex, type IdParams } from '../../../../lib/view.ts';
-import { myVotes } from '../../../../lib/votes.ts';
+import { myVotes, votes } from '../../../../lib/votes.ts';
 import { commentOn } from '../../../actions.ts';
 import { Vote } from '../../../vote.tsx';
 
@@ -38,10 +39,15 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	if (!r) notFound();
 	const thread = (await comments(await db(), id)) as { id: number; parent: number | null; voter: string; agent: string; body: string; review: boolean; at: string; mentions: string[] }[];
 	const { notice } = await ctx.searchParams;
+	const voters = await votes(await db(), id);
 	const who = await me();
 	const mine = who ? (await myVotes(await db(), who.login, [id])).get(id) : undefined;
 	const back = recordPath(id);
 	const reactions = Object.entries((r.reactions ?? {}) as Record<string, number>);
+	// Posts and articles about the record, read from X's oEmbed or the page's Open Graph tags (index.py discuss).
+	const links = (Array.isArray(r.discussion) ? r.discussion : []) as { kind: string; url: string; author?: string; handle?: string; site?: string; title?: string; text?: string; date?: string; record?: string }[];
+	// Records whose discussion names this one (a response to a manuscript, say): the reverse of the above, set at build time.
+	const discusses = (Array.isArray(r.discusses) ? r.discusses : []) as { id: string; title: string }[];
 	const api = `/api/v1/records/${idPath(id)}`;
 	const ld = {
 		'@context': 'https://schema.org', '@type': 'ScholarlyArticle', identifier: id, name: r.title, url: `${SITE}${recordPath(id)}`,
@@ -65,6 +71,21 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 				{reactions.filter(([k]) => k !== 'up' && k !== 'down').map(([k, n]) => <span key={k}>{k} {n}</span>)}
 			</p>
 			<Vote id={id} reactions={r.reactions} mine={mine?.value} back={back} />
+			{voters.length > 0 && (
+				<ul className="voters">
+					{voters.map((v) => (
+						<li key={v.voter}>
+							<span className="meta">
+								<span>{v.value === 1 ? '▲' : v.value === -1 ? '▼' : ''}{v.emoji ? ` ${v.emoji}` : ''}</span>
+								<a href={`https://github.com/${v.voter}`}>@{v.voter}</a>
+								{v.agent ? <span>via {v.agent}</span> : null}
+								<span>{date(v.at)}</span>
+							</span>
+							{v.note ? <p>{v.note}</p> : null}
+						</li>
+					))}
+				</ul>
+			)}
 			{r.summary ? <p className="abstract">{tex(r.summary)}</p> : null}
 			<p className="meta">
 				<a href={String(r.url)}>Source</a>
@@ -72,6 +93,13 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 				{r.repo ? <a href={String(r.repo)}>Repository</a> : null}
 				<a href={api}>JSON</a>
 			</p>
+
+			{discusses.length > 0 && (
+				<p className="meta">
+					<span>Discusses</span>
+					{discusses.map((d) => <a key={d.id} href={recordPath(d.id)}>{tex(d.title)}</a>)}
+				</p>
+			)}
 
 			<h2>Comments and reviews</h2>
 			{thread.length === 0 && <p className="count">No comments yet.</p>}
@@ -94,6 +122,30 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 				<label><input type="checkbox" name="review" /> This is a review</label>
 				<button>{who ? 'Post' : 'Sign in and post'}</button>
 			</form>
+
+			{links.length > 0 && (
+				<>
+					<h2>Discussed elsewhere</h2>
+					{links.map((l) => l.kind === 'x' ? (
+						// X's own embed markup: widgets.js turns it into the card, and leaves it as text if the post is gone.
+						<blockquote key={l.url} className="twitter-tweet" data-dnt="true">
+							<p>{l.text}</p>— {l.author} (@{l.handle}) <a href={l.url}>{date(l.date)}</a>
+						</blockquote>
+					) : (
+						<div key={l.url} className="comment">
+							<p className="meta">
+								<a href={l.url}>{l.title || l.url}</a>
+								{l.site ? <span>{l.site}</span> : null}
+								{l.author ? <span>{l.author}</span> : null}
+								<span>{date(l.date)}</span>
+								{l.record ? <a href={recordPath(l.record)}>in the index</a> : null}
+							</p>
+							{l.text ? <p>{l.text}</p> : null}
+						</div>
+					))}
+					{links.some((l) => l.kind === 'x') && <Script src="https://platform.twitter.com/widgets.js" strategy="lazyOnload" />}
+				</>
+			)}
 
 			<h2>API</h2>
 			<pre>{`curl ${api}

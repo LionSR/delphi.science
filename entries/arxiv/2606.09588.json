@@ -1,0 +1,21 @@
+{
+  "key": "2606.09588",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.09588",
+  "title": "Probabilistically Checking Quantum Proofs, with Interaction",
+  "authors": [
+    "Baocheng Sun",
+    "Thomas Vidick"
+  ],
+  "summary": "The model of interactive oracle proofs (IOP) generalizes the notion of probabilistically checkable proof (PCP), in which a static proof is verified probabilistically by querying a small number of bits, to the interactive setting: a polynomial-time verifier interacts with an unbounded prover, but is restricted to only reading a small number of bits, in total, from the messages sent by the prover. IOPs provide a relaxed setting in which to study local probabilistic verification. They have proved instrumental in devising efficient methods for verification through subsequent compilation into…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "quant-ph"
+  ],
+  "published": "2026-06-08",
+  "updated": "2026-06-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2609.19926",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.19926",
+  "title": "Validating Hexahedra through their Boundaries",
+  "authors": [
+    "Paul Zhang"
+  ],
+  "summary": "Trilinear hexahedral mesh elements are used in finite element analysis to simulate volumetric phenomena. Realism of the simulation mandates that mesh elements through the trilinear map maintain positive volume, or mathematically, that the trilinear map maintains positive Jacobian determinant (jacdet). While jacdet positivity generally needs to be verified in the full element volume, we prove Knupp's conjecture which posits that for trilinear hexahedra, jacdet positivity on the boundary of the element is sufficient to guarantee positivity in the entire element. We further prove that for any…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

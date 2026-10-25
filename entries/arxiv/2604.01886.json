@@ -1,0 +1,23 @@
+{
+  "key": "2604.01886",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.01886",
+  "title": "When does learning pay off? A study on DRL-based dynamic algorithm configuration for carbon-aware scheduling",
+  "authors": [
+    "Andrea Mencaroni",
+    "Robbert Reijnen",
+    "Yingqian Zhang",
+    "Dieter Claeys"
+  ],
+  "summary": "Deep reinforcement learning (DRL) has recently emerged as a promising tool for Dynamic Algorithm Configuration (DAC), enabling evolutionary algorithms to adapt their parameters online rather than relying on static tuned configurations. While DRL can learn effective control policies, training is computationally expensive. This cost may be justified if learned policies generalize, allowing the training effort to transfer across instance types and problem scales. Yet, for real-world optimization problems, it remains unclear whether this promise holds in practice and under which conditions the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.NE"
+  ],
+  "published": "2026-04-02",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

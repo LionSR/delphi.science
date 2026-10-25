@@ -1,0 +1,27 @@
+{
+  "key": "2609.01605",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.01605",
+  "title": "Depth-1 expanders on the unitary group and applications",
+  "authors": [
+    "Anurag Anshu",
+    "Shankar Balasubramanian",
+    "Jonas Haferkamp",
+    "Aram W. Harrow",
+    "Xinyu Tan"
+  ],
+  "summary": "We construct a constant-degree and constant-gap quantum expander on $n$ qubits where each unitary can be implemented by a depth-$1$ and 1D circuit of Pauli or CNOT gates. We provide two applications of this expander. First, we use it to construct a family of frustration-free 1D Hamiltonians whose ground states obey the entanglement-gap relation $S = Θ(Δ^{-1/2})$; this is believed to be optimal, but achieving it had been open. Second, we use it to provide a streaming protocol that tests for closeness to a class of 1D volume-law entangled states. Moreover, we extend our quantum expander to a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.str-el",
+    "cs.CC",
+    "cs.IT",
+    "math.GR"
+  ],
+  "published": "2026-09-01",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

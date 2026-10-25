@@ -1,0 +1,21 @@
+{
+  "key": "2606.12176",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.12176",
+  "title": "A Decoupled Low-Order Conforming Mixed Finite Element Method for a Three-Dimensional Fourth-Order Singularly Perturbed Problem",
+  "authors": [
+    "Yuanchun Tang",
+    "Baiju Zhang",
+    "Zhimin Zhang"
+  ],
+  "summary": "This paper develops a decoupled low-order conforming finite element method for a fourth-order elliptic singular perturbation problem in three dimensions. By means of a generalized Helmholtz decomposition, the problem is reduced to two second-order elliptic problems and a system of generalized singularly perturbed Stokes-type equations subject to a curl-free constraint. The former are discretized by standard linear finite elements. For the latter, we employ the MINI element and show that, after adding an $L^2$ term involving a Lagrange multiplier, the resulting discretization becomes robust…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-10",
+  "updated": "2026-06-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

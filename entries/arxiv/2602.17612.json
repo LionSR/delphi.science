@@ -1,0 +1,22 @@
+{
+  "key": "2602.17612",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.17612",
+  "title": "Scalable, self-verifying variational quantum eigensolver using adiabatic warm starts",
+  "authors": [
+    "Bojan Žunkovič",
+    "Marco Ballarin",
+    "Lewis Wright",
+    "Michael Lubasch"
+  ],
+  "summary": "We study an adiabatic variant of the variational quantum eigensolver (VQE) in which VQE is performed iteratively for a sequence of Hamiltonians along an adiabatic path. We derive the conditions under which gradient-based optimization successfully prepares the adiabatic ground states. These conditions show that the barren plateau problem and local optima can be avoided. Additionally, we propose using energy-standard-deviation measurements at runtime to certify eigenstate accuracy and verify convergence to the global optimum.",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-19",
+  "updated": "2026-02-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2608.25743",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.25743",
+  "title": "Learning of deep neural network regression estimates using gradient descent with pruning",
+  "authors": [
+    "Michael Kohler",
+    "Vincent Molinero Römer",
+    "Adam Krzyżak"
+  ],
+  "summary": "Estimation of a regression function from independent and identically distributed data is considered. The $L_2$ error with integration with respect to the design variable is used as the error criterion. An initially randomly pruned fully connected deep neural network with logistic squasher as activation function is fitted to the data via gradient descent, using a data-dependent choice of non-constant stepsizes during gradient descent. It is shown that this network achieves (up to a logarithmic factor) the optimal minimax rate of convergence in case that the regression function is…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-08-26",
+  "updated": "2026-08-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

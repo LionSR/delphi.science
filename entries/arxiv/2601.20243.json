@@ -1,0 +1,22 @@
+{
+  "key": "2601.20243",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.20243",
+  "title": "Element-based B-spline basis function spaces: construction and application in isogeometric analysis",
+  "authors": [
+    "Peng Yang",
+    "Maodong Pan",
+    "Falai Chen",
+    "Zhimin Zhang"
+  ],
+  "summary": "This paper develops a unified theoretical framework for constructing B-spline basis function spaces with structural equivalence to finite element spaces. The theory rigorously establishes that these bases emerge as explicit linear combinations of B-spline element bases. For any prescribed smoothness requirements, this element-wise formulation enables the Hermite interpolation at nodes, which directly utilizes function values and derivatives without solving global linear systems. By focusing on explicit interpolation properties, element-wise analysis establishes optimal approximation errors,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-28",
+  "updated": "2026-01-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2605.04106",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04106",
+  "title": "Quantum Algorithms for Magic Square Diophantine Equations",
+  "authors": [
+    "Dimitrios Thanos",
+    "Marcello Bonsangue",
+    "Alfons Laarman"
+  ],
+  "summary": "Magic-square constraints define Diophantine systems whose solutions, in several natural families, exhibit rigid periodic structure. We study this structure in an oracle setting, where a marked set of integers is given by black-box access and the goal is to decide whether it encodes a magic square. For $3\\times 3$ magic squares and weighted variants, we prove explicit periodic characterizations that reduce detection to period finding. For larger orders, we identify a class of solutions built from repeated arithmetic patterns, which can be detected via the quantum Fourier transform. We then…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-04",
+  "updated": "2026-05-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

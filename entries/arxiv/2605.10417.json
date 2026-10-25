@@ -1,0 +1,21 @@
+{
+  "key": "2605.10417",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.10417",
+  "title": "PCELM: Perturbation-Correction Extreme Learning Machine for the Stefan problem",
+  "authors": [
+    "Wenjie Liu",
+    "Siyuan Lang",
+    "Zhiyue Zhang"
+  ],
+  "summary": "For Stefan problems, characterized by moving boundaries and discontinuous coefficients due to phase changes, the inherent nonconvexity of the objective functional frequently causes optimization difficulty in randomized neural network approximations; to address this, we propose a Perturbation-Correction Extreme Learning Machine (PCELM) framework, built upon the extreme learning machine framework. This method first establishes a basic approximation during an initialization step by minimizing the original nonconvex residual, typically achieving only moderate accuracy, and then, in a subsequent…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

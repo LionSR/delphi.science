@@ -1,0 +1,20 @@
+{
+  "key": "2604.05637",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.05637",
+  "title": "Quantum Learning of Classical Correlations with continuous-domain Pauli Correlation Encoding",
+  "authors": [
+    "Vicente P. Soloviev",
+    "Bibhas Adhikari"
+  ],
+  "summary": "We propose a quantum machine learning framework for estimating classical covariance matrices using parameterized quantum circuits within the Pauli-Correlation-Encoding (PCE) paradigm. We introduce two quantum covariance estimators: the C-Estimator, which constructs the covariance matrix through a Cholesky factorization to enforce positive (semi)definiteness, and a computationally efficient E-Estimator, which directly estimates covariance entries from observable expectation values. We analyze the trade-offs between the two estimators in terms of qubit requirements and learning complexity, and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-07",
+  "updated": "2026-04-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

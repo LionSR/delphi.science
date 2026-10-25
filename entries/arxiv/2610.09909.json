@@ -1,0 +1,21 @@
+{
+  "key": "2610.09909",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.09909",
+  "title": "UnCut FEM with PHT-splines on unfitted T-meshes",
+  "authors": [
+    "Falai Chen",
+    "Nuo Lei",
+    "Buyang Li"
+  ],
+  "summary": "We propose a novel unfitted finite element method based on polynomial splines over hierarchical T-meshes (PHT-splines) for elliptic partial differential equations (PDEs) posed on domains whose boundaries are described implicitly by a level-set function. Exploiting the enhanced smoothness of the spline space, we formulate the method by minimizing the $L^2$ residual of the PDE over an extended neighborhood of the physical domain. This formulation allows the method to be implemented entirely on the background mesh using standard element-wise quadrature. It yields a symmetric positive-definite…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

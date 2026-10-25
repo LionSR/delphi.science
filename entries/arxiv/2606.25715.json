@@ -1,0 +1,20 @@
+{
+  "key": "2606.25715",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.25715",
+  "title": "Gap-Aware Exact Nonnegative Matrix Factorization: A Two-Sided SVD Gauge and a Three-Regime W-Rank Taxonomy",
+  "authors": [
+    "Mithil Ramteke"
+  ],
+  "summary": "We extend the cone-ray exact-NMF pipeline of Ramteke (arXiv:2606.22451) from the uniform-support regime r_+ = r to the gap regime r_+ > r, and classify recoverable nonnegative factorisations by the rank of the W-factor into a three-regime taxonomy. Regime A (rank(W) = r_+, full column rank): a two-sided SVD-gauge cone-ray pipeline W = U_{r+}(G) Q, H = P V_{r+}(K)^T with G, K on Stiefel manifolds and square consistency Q P = diag(S_r, 0). On 10x10 dense random gap matrices it gives 100/100 recovery at r_+ = 5 and 6. We explain this via two geometric facts: slack enclosure (the data cone has…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.ST"
+  ],
+  "published": "2026-06-24",
+  "updated": "2026-07-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

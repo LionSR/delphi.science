@@ -1,0 +1,34 @@
+{
+  "key": "2607.01037",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.01037",
+  "title": "Quantum-Informed Portfolio Selection: An End-to-End Pipeline Validated on Trapped-Ion Hardware with Real Market Data",
+  "authors": [
+    "Romina Yalovetzky",
+    "Martin J. A. Schuetz",
+    "Zichang He",
+    "Jiayu Shen",
+    "Yue Sun",
+    "Rudy Raymond",
+    "Shauna Sahay",
+    "Kishore Perla",
+    "Ruben S. Andrist",
+    "Grant Salton",
+    "Helmut G. Katzgraber",
+    "Roger Bongiovanni",
+    "Niraj Kumar",
+    "Rob Otter"
+  ],
+  "summary": "Portfolio diversification - a cornerstone of modern investment management - can be formulated as a Maximum Independent Set (MIS) problem on asset correlation graphs. Solving this problem at scale is computationally challenging, motivating the exploration of quantum algorithms for practical financial optimization. We propose an end-to-end pipeline leveraging qReduMIS, a recursive hybrid quantum-classical algorithm. Rather than using quantum optimization to directly produce a final solution, qReduMIS leverages independent set measurements from the Quantum Approximate Optimization Algorithm…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.dis-nn",
+    "math.OC"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

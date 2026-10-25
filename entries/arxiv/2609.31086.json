@@ -1,0 +1,23 @@
+{
+  "key": "2609.31086",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.31086",
+  "title": "SPPID: Saddle-Point PID for Constrained Optimization",
+  "authors": [
+    "Veronica Centorrino",
+    "Rawan Hoteit",
+    "Efe C. Balta",
+    "John Lygeros"
+  ],
+  "summary": "This paper studies constrained optimization problems through the lens of feedback control. Building on the interpretation of Lagrange multipliers as feedback controllers, we propose the \\emph{saddle-point PID (SPPID) dynamics}: a unified proportional--integral--derivative (PID) framework for continuous-time saddle-point dynamics. The proposed dynamics employ PID control for equality constraints and anti-windup PI control for inequality constraints. We show that SPPID is equivalent to a preconditioned primal--dual gradient flow of the augmented Lagrangian. This equivalence reveals the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

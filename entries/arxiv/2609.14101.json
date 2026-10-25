@@ -1,0 +1,21 @@
+{
+  "key": "2609.14101",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.14101",
+  "title": "On the Complexity of Finding Fixed Points for Set-Valued Contractions",
+  "authors": [
+    "Emmanouil-Vasileios Vlatakis-Gkaragkounis",
+    "Pucheng Xiong"
+  ],
+  "summary": "In this paper, we study the computational complexity of finding fixed points for set-valued contractions. We first formulate a computational problem for Nadler's fixed-point theorem: Projected-Nadler, and prove that it is $\\mathsf{CLS}$-complete by showing its equivalence to Continuous-LocalOpt. We then establish a stronger converse for Nadler's fixed point theorem that can be applied as a tool to analyze the convergence rate of set-valued basic iteration procedure. Finally, we reduce large-margin triplet stationarity problem to Projected-Nadler. Together with its $\\mathsf{CLS}$-hardness…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "math.GN"
+  ],
+  "published": "2026-09-12",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

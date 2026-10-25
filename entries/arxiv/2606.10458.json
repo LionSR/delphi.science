@@ -1,0 +1,22 @@
+{
+  "key": "2606.10458",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.10458",
+  "title": "Minimum Distortion Quantization with Specified Output Distribution",
+  "authors": [
+    "Aolin Xu"
+  ],
+  "summary": "We derive the optimal quantizer of a real-valued random variable $W$ with distribution $P_W$ such that 1) the distribution of the quantization output $X$ that can take $k$ values follows any specified distribution $P_X$ over $\\{1,\\ldots,k\\}$, and 2) the minimum mean squared error (MMSE) of estimating $W$ from $X$ is minimized. It is shown that the optimal quantizer takes the form $X=σ\\big(F_{σ^{-1}(X)}^{-1}(F_W(W))\\big)$, where $σ$ is the optimal permutation of $\\{1,\\ldots,k\\}$ among all permutations to minimize the MMSE, and $F$ is the cumulative distribution function. When $P_W$ is uniform…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "cs.AI",
+    "math.OC",
+    "math.ST"
+  ],
+  "published": "2026-06-09",
+  "updated": "2026-06-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

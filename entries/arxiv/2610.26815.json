@@ -1,0 +1,21 @@
+{
+  "key": "2610.26815",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.26815",
+  "title": "Tight lower bounds for Lipschitz geodesically convex optimization on hyperbolic space",
+  "authors": [
+    "Christopher Criscitiello"
+  ],
+  "summary": "We determine the dimension-independent first-order query complexity of minimizing a Lipschitz geodesically convex (g-convex) function on hyperbolic space. Given a ball of radius $r$ containing a global minimizer, we prove that $Ω(ζ_r/ε^2)$ queries are necessary to attain accuracy $εMr$, where $M$ is the Lipschitz constant and $ζ_r=r/\\tanh r$ captures the effect of curvature. This matches the known $O(ζ_r/ε^2)$ upper bound for the Riemannian subgradient method (Zhang and Sra, 2016). This is the first query-complexity result for g-convex optimization that is tight simultaneously in curvature…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.DG",
+    "math.NA"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

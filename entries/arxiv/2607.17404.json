@@ -1,0 +1,19 @@
+{
+  "key": "2607.17404",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.17404",
+  "title": "EM-based iterations for multiple instance learning on a query-value model",
+  "authors": [
+    "Ethan Levien"
+  ],
+  "summary": "In multiple instance regression (MIR) data are organized into bags (collections of instances in feature space) and the goal is to learn a mapping that assigns labels to bags. A typical assumption is that there is a so-called concept point in feature space, the proximity to which dictates the bag label. Motivated by modern MIR architectures which are based on attention, we study a softmax model that decouples the concept point and the labeling scheme. The two are respectively determined by a query direction and a value direction value in feature space. This problem isolates a basic challenge…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-07-19",
+  "updated": "2026-07-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

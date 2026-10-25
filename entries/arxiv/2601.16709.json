@@ -1,0 +1,21 @@
+{
+  "key": "2601.16709",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.16709",
+  "title": "Barotropic-Baroclinic Splitting for Multilayer Shallow Water Models with Exchanges",
+  "authors": [
+    "Nina Aguillon",
+    "Sophie Hörnschemeyer",
+    "Jacques Sainte-Marie"
+  ],
+  "summary": "This work presents the numerical analysis of a barotropic-baroclinic splitting in a nonlinear multilayer framework with exchanges between the layers in terrain-following coordinates. The splitting is formulated as an exact operator splitting. The barotropic step handles free surface evolution and depth-averaged velocity via a well-balanced one-layer model, while the baroclinic step manages vertical exchanges between layers and adjusts velocities to their mean values. We show that the barotropic-baroclinic splitting preserves total energy conservation and meets both a discrete maximum…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-23",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

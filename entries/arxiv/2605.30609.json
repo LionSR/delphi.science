@@ -1,0 +1,22 @@
+{
+  "key": "2605.30609",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.30609",
+  "title": "Rectified Linear Unit Regression",
+  "authors": [
+    "Tatsushi Oka"
+  ],
+  "summary": "This paper develops a regression framework for analyzing integrated conditional distribution and quantile functions. The proposed method, termed rectified linear unit (ReLU) regression, projects the ReLU-transformed outcome onto covariates and admits a closed-form estimator. Its population regression function is the best linear approximation to the integrated conditional distribution function of the outcome, and the corresponding convex conjugate, obtained via the Legendre-Fenchel transform, approximates the integrated conditional quantile function. Both the regression and its conjugate…",
+  "domain": "econ.EM",
+  "tags": [
+    "econ.EM",
+    "math.ST",
+    "stat.AP",
+    "stat.ME"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-08-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

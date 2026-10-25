@@ -1,0 +1,23 @@
+{
+  "key": "2609.07387",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07387",
+  "title": "Towards Heterogeneous Exascale CFD with a Single Fortran Code Base: OpenMP Target Acceleration of the High-Order Unstructured Solver UCNS3D",
+  "authors": [
+    "Panagiotis Tsoutsanis",
+    "Michal Uminski",
+    "Christopher Day",
+    "David Henty"
+  ],
+  "summary": "Heterogeneous exascale systems are reshaping computational fluid dynamics, yet rewriting mature high-order solvers for accelerators can fragment code bases and weaken reproducibility. We present a single-source OpenMP target modernisation of UCNS3D, a high-order unstructured finite-volume solver for compressible flows. The common CPU/GPU implementation preserves its numerical formulation, Fortran code base, and workflows. Rather than porting isolated kernels, we enable the complete explicit time-advancement path: high-order reconstruction, gradient evaluation, inviscid and viscous fluxes,…",
+  "domain": "math-ph",
+  "tags": [
+    "math-ph",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

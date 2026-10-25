@@ -1,0 +1,25 @@
+{
+  "key": "2605.29373",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.29373",
+  "title": "Deep Adaptive Dimension Reduction for Bayesian Inference in Inverse Problems",
+  "authors": [
+    "Yueyang Wang",
+    "Xili Wang",
+    "Kejun Tang",
+    "Xiaoliang Wan",
+    "Tao Zhou",
+    "Chao Yang"
+  ],
+  "summary": "Solving high-dimensional PDE-governed inverse problems is often challenging due to complex non-Gaussian posterior distributions, expensive forward model evaluations, and misspecified prior information. To address these issues, we propose a deep adaptive dimension-reduction Bayesian inference framework based on the Variational Flow (VF) model. Since standard normalizing flows are restricted by bijective mappings and cannot directly reduce dimensions, VF overcomes this limitation by integrating VAE-based nonlinear dimension reduction with dual normalizing flows for the latent prior and…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2604.24362",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.24362",
+  "title": "Practical lower bounds for hybrid quantum interior point methods in linear programming",
+  "authors": [
+    "Lennart Binkowski"
+  ],
+  "summary": "Quantum interior point methods (QIPMs) promise polynomial speed-ups over classical solvers for linear programming by outsourcing the solution of Newton linear systems to quantum linear solvers (QLSAs). However, asymptotic speed-ups do not necessarily translate to practical advantages on realistic problem instances. In this work, I evaluate whether practical advantage of a standard hybrid QIPM pipeline can already be excluded relative to the classical open-source solver HiGHS on a broad and diverse collection of LP instances spanning eight problem families, including public benchmark…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-04-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

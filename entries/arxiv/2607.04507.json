@@ -1,0 +1,19 @@
+{
+  "key": "2607.04507",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04507",
+  "title": "Mesh-Uniform Stability and Error Estimates for HDG Discretizations of the Helmholtz Equation",
+  "authors": [
+    "Yukun Yue"
+  ],
+  "summary": "We revisit the hybridizable discontinuous Galerkin method of Cui and Zhang for the Helmholtz equation with first-order absorbing boundary condition. Their analysis proves stability without imposing a mesh constraint coupling $h$ and $κ$, but the explicit stability bound still contains negative powers of the mesh size. We prove that this mesh-dependent blow-up is not intrinsic to the HDG discretization. Under the same geometric and mesh framework as in the reference analysis, for fixed polynomial degree and for stabilization parameters uniformly bounded above and below, we establish a…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-05",
+  "updated": "2026-07-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

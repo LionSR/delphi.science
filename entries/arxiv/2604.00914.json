@@ -1,0 +1,22 @@
+{
+  "key": "2604.00914",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00914",
+  "title": "Adaptive Polynomial Filtering for Hermitian Interior Eigenproblems: Convergence Analysis",
+  "authors": [
+    "Xiaofei Xu",
+    "Yuhui Ni",
+    "Shengguo Li",
+    "Juan Zhang"
+  ],
+  "summary": "Interior eigenvalue problems for large-scale sparse Hermitian matrices are fundamental in computational science. We propose an adaptive polynomial filtering strategy based on Chebyshev expansion of a step function, integrated into a filtered subspace iteration framework. We establish pointwise convergence bounds in both undamped and damped settings and incorporate an enhanced spurious eigenvalue detection technique to improve efficiency and robustness. At the implementation level, we employ MaSpMM to accelerate the polynomial filtering step. Numerical results demonstrate the efficiency and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-04-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

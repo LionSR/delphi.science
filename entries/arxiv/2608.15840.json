@@ -1,0 +1,22 @@
+{
+  "key": "2608.15840",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.15840",
+  "title": "How Many Samples Are Needed to Determine Causal Direction? Sharp Minimax Bounds for Bivariate LiNGAM",
+  "authors": [
+    "Jikai Jin"
+  ],
+  "summary": "We study how many observations are needed to determine the causal direction between two linearly related variables. Classical LiNGAM theory shows that independent non-Gaussian disturbances identify the direction, but does not quantify the difficulty when the causal effect is weak or the disturbances are nearly Gaussian. Let $β$ bound the absolute structural coefficient from below, let $ν$ measure each standardized disturbance's distance from Gaussianity, and let the disturbance scales lie in $[\\underlineσ,\\overlineσ]$. We prove the sharp local minimax law \\[ N_2^\\star(β,ν,δ) \\asymp…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.LG",
+    "econ.EM",
+    "stat.ML"
+  ],
+  "published": "2026-08-16",
+  "updated": "2026-08-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

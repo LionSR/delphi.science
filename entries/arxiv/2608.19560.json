@@ -1,0 +1,21 @@
+{
+  "key": "2608.19560",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19560",
+  "title": "Computing transient probabilities in Markovian queues with balking conditional on a fixed number of joined customers",
+  "authors": [
+    "Kaito Hayashi",
+    "Yoshiaki Inoue",
+    "Tetsuya Takine"
+  ],
+  "summary": "We analyze the transient behavior of a Markovian queue with balking, conditional on exactly $K$ customers joining the system in a finite time interval $[0, T]$. A key quantity of interest is the cumulative number of balking customers, for which we consider the probability generating function (PGF) and derive an equation it satisfies. This approach circumvents the computational burden arising from dealing with high-dimensional Markovian system, which arises when attempting to directly compute the joint distribution of the cumulative number of balking customers together with the total number…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-08-20",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

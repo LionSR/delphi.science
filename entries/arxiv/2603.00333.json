@@ -1,0 +1,25 @@
+{
+  "key": "2603.00333",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.00333",
+  "title": "Dynamic Proximal Gradient Algorithms for Schatten-$p$ Quasi-Norm Regularized Problems",
+  "authors": [
+    "Weiping Shen",
+    "Linglingzhi Zhu",
+    "Yaohua Hu",
+    "Chong Li",
+    "Xiaoqi Yang"
+  ],
+  "summary": "This paper investigates numerical solution methods for the Schatten-$p$ quasi-norm regularized problem with $p \\in [0,1]$, which has been widely studied for finding low-rank solutions of linear inverse problems and gained successful applications in various mathematics and applied science fields. We propose a dynamic proximal gradient algorithm that, through the use of the Cayley transformation, avoids computationally expensive singular value decompositions at each iteration, thereby significantly reducing the computational complexity. The algorithm incorporates two step size selection…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA",
+    "stat.ML"
+  ],
+  "published": "2026-02-27",
+  "updated": "2026-02-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

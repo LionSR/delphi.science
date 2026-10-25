@@ -1,0 +1,26 @@
+{
+  "key": "2606.18140",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.18140",
+  "title": "Singular Vector Finite Element Basis Functions for Tetrahedra in Complex Electromagnetic Geometries",
+  "authors": [
+    "Samuel T. Elkin",
+    "Ghazi Khan",
+    "Ebrahim Forati",
+    "Brandon W. Langley",
+    "Dogan Timucin",
+    "Reza Molavi",
+    "Thomas E. Roth"
+  ],
+  "summary": "Electromagnetic finite element method (FEM) implementations using traditional basis functions struggle to accurately represent field behavior near singular features such as conducting wedges. To combat this, specialized singular basis functions have been introduced to directly model the singular fields in these regions, leading to substantially improved performance. While these efforts have been pursued extensively in 2D, few functions have been developed for 3D elements. In this work, we develop basis functions for this in tetrahedra. Unlike prior functions, these basis functions are…",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "quant-ph"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2602.06021",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.06021",
+  "title": "Diffusion Model's Generalization Can Be Characterized by Inductive Biases toward a Data-Dependent Ridge Manifold",
+  "authors": [
+    "Ye He",
+    "Yitong Qiu",
+    "Molei Tao"
+  ],
+  "summary": "We study a data-dependent notion of diffusion-model generalization: when a model does not memorize the training set, where do its generated samples go relative to the geometry induced by the data? To answer this, we introduce a time-dependent family of log-density ridge manifolds constructed from the smoothed empirical distribution, and use it to characterize reverse-time inference. Our main result shows that generated samples evolve by a reach-align-slide mechanism: they first enter a neighborhood of the ridge, then their distance to the ridge is controlled by the normal component of…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.NA",
+    "math.PR"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

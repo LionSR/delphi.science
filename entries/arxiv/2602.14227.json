@@ -1,0 +1,21 @@
+{
+  "key": "2602.14227",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14227",
+  "title": "Nonlocal logistics and nonlinear productions in an attraction-repulsion chemotaxis model: analysis of the global well-posedness",
+  "authors": [
+    "Rafael Díaz Fuentes",
+    "María Victoria Redondo Neble",
+    "Giuseppe Viglialoro"
+  ],
+  "summary": "This paper investigates a {three-component} chemotaxis system involving both attraction and repulsion effects, as well as a nonlocal logistic-type source term. Mathematically, if $u=u(x,t)$, $v = v(x,t)$ and $w = w(x,t)$ denote the cell distribution, and the attractive and the repulsive chemical signals, the model is then described by \\begin{equation*} \\begin{cases} u_t = Δu - χ\\nabla \\cdot (u \\nabla v) + ξ\\nabla \\cdot (u \\nabla w) + a u^α- b u^α\\int_Ωu^β, & x \\in Ω, \\ t > 0, τv_t = Δv - v + f(u), & x \\in Ω, \\ t > 0, τw_t = Δw - w + g(u), & x \\in Ω, \\ t > 0. \\end{cases} \\end{equation*} Here,…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-02-15",
+  "updated": "2026-02-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

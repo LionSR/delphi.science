@@ -1,0 +1,23 @@
+{
+  "key": "2605.04715",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04715",
+  "title": "On the Complexity of Minimum Riesz s-Energy Subset Selection in Euclidean and Ultrametric Spaces",
+  "authors": [
+    "Michael T. M. Emmerich",
+    "Ksenia Pereverdieva",
+    "André Deutz"
+  ],
+  "summary": "We study the computational complexity of exact cardinality-constrained minimum Riesz $s$-energy subset selection in finite metric spaces: given $n$ points, select $k<n$ points of minimum Riesz $s$-energy. The objective sums inverse-power pair interactions and therefore promotes well-separated subsets; as $s$ becomes large, it increasingly approaches a bottleneck criterion governed by the closest selected pair, linking it to minimum pairwise distance (MPD). Building on the general-metric NP-hardness result of Pereverdieva et al. (2025), we prove that NP-hardness persists for point sets in the…",
+  "domain": "cs.CG",
+  "tags": [
+    "cs.CG",
+    "cs.CC",
+    "math.OC"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2606.16549",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.16549",
+  "title": "What does measuring one qubit reveal about another? $K$-networks as a directed diagnostic for quantum circuits",
+  "authors": [
+    "Kostas Blekos",
+    "Paulo Vitor Itaboraí"
+  ],
+  "summary": "Many-qubit circuit states are hard to inspect directly, so they are often summarized by pairwise graph weights. Common pairwise weights report symmetric correlations, while many circuit questions are directed and basis-specific: if qubit $i$ is measured in a given basis, how strongly does the outcome reshape the conditional state of qubit $j$? We define $K_{i\\to j}$, a directed, basis-conditioned edge weight for this question. It is large when the two measurement outcomes occur with comparable probability and leave qubit $j$ in clearly different conditional states; it is zero when the source…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-15",
+  "updated": "2026-06-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

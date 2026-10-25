@@ -1,0 +1,20 @@
+{
+  "key": "2610.22315",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.22315",
+  "title": "Magna: simulating magic state factories as cheaply as Clifford circuits",
+  "authors": [
+    "Yifei Wang",
+    "Yingfei Gu"
+  ],
+  "summary": "Classical simulation of magic state factories, including distillation, cultivation, and code switching, is challenging because of their substantial non-Clifford content. We introduce $\\texttt{magna}$ (magic-state-factory assessment via global network algebra), a classical simulator that simulates such protocols as cheaply as Clifford circuits. $\\texttt{magna}$ expresses the figures of merit of a protocol, namely the acceptance rate and the fidelity of the accepted states, as tensor networks, which it reduces globally by exploiting a structural correspondence with transversal gates on quantum…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,26 @@
+{
+  "key": "2609.13892",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.13892",
+  "title": "CyclOT: Learning Quadratic Optimal Transport Maps via Synchronized Forward-Backward Interpolants",
+  "authors": [
+    "Shizhou Xu",
+    "Jiachen Liu",
+    "Shih-Hsin Wang",
+    "Stefan Broecker",
+    "Yuhao Huang",
+    "Bao Wang",
+    "Thomas Strohmer"
+  ],
+  "summary": "We study the recovery of forward and reverse quadratic optimal-transport maps from unpaired samples in high dimensions. We introduce a bidirectional neural framework in which the learned maps induce forward and backward displacement interpolants, while the training objective combines bidirectional quadratic action, discriminator-restricted Jensen-Shannon endpoint objectives, and two-sided cycle consistency. The construction requires neither precomputed sample pairings nor an explicit convex-potential parameterization. For absolutely continuous probability measures supported on a compact…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-09-12",
+  "updated": "2026-09-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

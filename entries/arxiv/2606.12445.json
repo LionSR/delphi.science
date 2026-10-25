@@ -1,0 +1,23 @@
+{
+  "key": "2606.12445",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.12445",
+  "title": "SAT, MaxSAT, and SMT for QLDPC Distance Computation: A Large-Scale Empirical Study",
+  "authors": [
+    "Yu-Fang Chen",
+    "Seyed Mohammad Reza Jafari",
+    "Ching-Yi Lai"
+  ],
+  "summary": "Exact distance computation for quantum LDPC (QLDPC) codes plays a central role in validating candidate fault-tolerant quantum-code constructions, yet the computational structure of this problem remains poorly understood. Despite substantial recent progress in QLDPC design, it remains unclear which algorithmic principles govern the practical scalability of exact distance computation and which classes of exact solvers are best suited to this task. To address these questions, we conduct a systematic study of SAT- and MaxSAT-based formulations for exact QLDPC distance computation across…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.IT",
+    "cs.PL"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

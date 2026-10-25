@@ -1,0 +1,23 @@
+{
+  "key": "2602.23967",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.23967",
+  "title": "PDHCG-II: An Enhanced Version of PDHCG for Large-Scale Convex QP",
+  "authors": [
+    "Hongpei Li",
+    "Yicheng Huang",
+    "Huikang Liu",
+    "Dongdong Ge",
+    "Yinyu Ye"
+  ],
+  "summary": "Quadratic programming (QP) is a fundamental optimization model with wide-ranging applications in decision-making and machine learning, yet efficiently solving large-scale instances remains a major computational challenge. Building upon the recently developed PDHCG framework, we propose PDHCG-II, an enhanced first-order solver tailored for large-scale convex QPs. The proposed method explicitly exploits the quadratic structure of the objective and incorporates several key algorithmic innovations, including Halpern-type acceleration and a PID-controlled adaptive update of the primal-dual…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-27",
+  "updated": "2026-02-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2610.01940",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01940",
+  "title": "Optimal query complexity for fractional quantum evolution",
+  "authors": [
+    "Anthony Yuezhang Liu",
+    "Adam Wesołowski",
+    "Jayne Thompson",
+    "Mile Gu",
+    "Lirandë Pira"
+  ],
+  "summary": "Given oracle access to an unknown unitary $U=e^{iH}$ , the fractional query problem asks how many queries are required to implement a noninteger power $U^t=e^{itH}$, $0<t<1$, when the spectrum is separated from the branch cut by a gap $δ$. Quantum singular value transformation gives an upper bound of $O\\!\\left(\\frac{1}δ\\log\\frac{1}{\\varepsilon}\\right)$ queries for approximation error $\\varepsilon$. We prove a matching lower bound for arbitrary query algorithms. Our argument reduces any $N$-query circuit to the approximation of $e^{itθ}$ by a trigonometric polynomial with degree bounded by…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

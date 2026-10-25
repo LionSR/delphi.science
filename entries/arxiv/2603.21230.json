@@ -1,0 +1,27 @@
+{
+  "key": "2603.21230",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.21230",
+  "title": "A Modular Approach to Stochastic Optimisation for Inverse Problems Using the Core Imaging Library",
+  "authors": [
+    "Evangelos Papoutsellis",
+    "Margaret A. G. Duff",
+    "Jakob S. Jørgensen",
+    "Sam Porter",
+    "Claire Delplancke",
+    "Gemma Fardell",
+    "Edoardo Pasca",
+    "Kris Thielemans"
+  ],
+  "summary": "The Core Imaging Library (CIL) is an open-source versatile Python framework for solving inverse problems with special emphasis on imaging applications such as computed tomography (CT), using a plug-in architecture for data and operators, interfacing to toolboxes such as ASTRA, TIGRE and SIRF. A key component of CIL is its optimisation module enabling users to flexibly combine mathematical operators and functionals to form smooth and non-smooth optimisation problems and solve these with a range of first-order algorithms. The present work introduces an expansion of CIL with a new modular…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.MS"
+  ],
+  "published": "2026-03-22",
+  "updated": "2026-03-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,36 @@
+{
+  "key": "2610.00374",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00374v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00374v1",
+  "title": "Antimatroid characterization of RAF interior operators",
+  "authors": [
+    "Michael Mislan"
+  ],
+  "summary": "Addressing the RAF-realizability question in Section 4 of Mike Steel's Interior Operators and Their Relationship to Autocatalytic Networks (arXiv:2305.16714v4, 2023), we characterize which interior operators on the subsets of a finite set E are maxRAF operators of catalytic reaction systems whose reaction set is exactly E. An interior operator is represented by its family of fixed sets, a union-closed family containing the empty set. A same-ground realization is a system with one reaction per element of E, finitely many molecule types, a food set and a catalysis relation; it realizes the…",
+  "domain": "math.CO",
+  "tags": [
+    "msc:05B35",
+    "msc:05C20",
+    "Lean formalization",
+    "RAF sets",
+    "antimatroids",
+    "food generation",
+    "interior operators",
+    "realizability"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-18",
+  "version": 1,
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": true,
+  "formalizations": [
+    "https://palomar-registry.org/entry?id=PALOMAR-2026-09-25-000025&version=1"
+  ],
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

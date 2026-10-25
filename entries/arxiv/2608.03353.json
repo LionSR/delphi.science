@@ -1,0 +1,23 @@
+{
+  "key": "2608.03353",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.03353",
+  "title": "A Direct Route to Markov Chain Convergence via Asymptotic Equivalence with the Target",
+  "authors": [
+    "Patrick Forré"
+  ],
+  "summary": "For a Markov kernel $T$ with an invariant probability measure $π$, we give a self-contained proof of the Markov chain convergence theorem via a criterion called asymptotic equivalence with the target. It assumes two parts about the Lebesgue decompositions of $T^n_x$ and $π$ for every starting point $x$: 1.) asymptotic absolute continuity: the singular mass $\\mathrm{sing}(T^n_x \\mid π)$ tends to $0$; and, 2.) asymptotic domination of the target: the singular mass $\\mathrm{sing}(π\\mid T^n_x)$ tends to $0$, as $n \\to \\infty$. Assuming a jointly measurable density for the absolutely continuous…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.LG",
+    "math.ST",
+    "stat.CO",
+    "stat.ML"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-08-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

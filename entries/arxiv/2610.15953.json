@@ -1,0 +1,25 @@
+{
+  "key": "2610.15953",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.15953",
+  "title": "Small area learning",
+  "authors": [
+    "Katarzyna Reluga",
+    "Nicola Salvati",
+    "Setareh Ranjbar",
+    "Nikos Tzavidis",
+    "Mark van der Laan"
+  ],
+  "summary": "Small area estimation (SAE) traditionally borrows strength across domains through a prespecified working model. We introduce small area learning (SAL), a learner-agnostic framework that formulates SAE as a multi-target semi-supervised learning problem and treats outcome prediction as a nuisance task. Areas may differ through unrestricted covariate shift and structured conditional shift, with information shared through common and area-specific components. We develop standard and cross-fitted estimators for low-complexity and flexible learners, unifying synthetic, model-based, and fully…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-10-11",
+  "updated": "2026-10-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

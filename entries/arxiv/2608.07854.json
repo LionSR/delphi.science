@@ -1,0 +1,19 @@
+{
+  "key": "2608.07854",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.07854",
+  "title": "Uniform Testability Implies Asymmetric Testability",
+  "authors": [
+    "Senhan Yao"
+  ],
+  "summary": "We prove a filtration-level conversion from uniform fixed-time testing to all-sample one-sided error control and uniform future-tail control. Given an adapted deterministic binary test whose worst-case fixed-time error tends to zero, the construction selects update times with prescribed summable error budgets and holds each selected decision until the next update. For every prescribed significance level, the construction yields a test that controls Type I error at every sample size; from each update time onward, the probability of any subsequent error is bounded uniformly over each…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-08-08",
+  "updated": "2026-08-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2601.14013",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.14013",
+  "title": "Robustness for free: asymptotic size and power of max-tests in high dimensions",
+  "authors": [
+    "Anders Bredahl Kock",
+    "David Preinerstorfer"
+  ],
+  "summary": "Allowing for adversarial contamination and heavy tails, we study testing whether the mean of a high-dimensional random vector equals zero. Because standard max-tests based on sample averages are highly non-robust, we propose a max-test based on quantile-winsorized observations. The test controls asymptotic size under adversarial contamination and only requires $m>2$ moments, while allowing dimension to grow exponentially with sample size. We fully characterize its asymptotic power function. Comparing with the standard max-test, for which we also derive a power characterization as a…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-01-20",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

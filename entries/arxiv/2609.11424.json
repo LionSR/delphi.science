@@ -1,0 +1,22 @@
+{
+  "key": "2609.11424",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11424",
+  "title": "Asynchronous Replanning in Two Population Linear Quadratic Mean Field Games: Information Requirements and Stability",
+  "authors": [
+    "Yuxin Jin",
+    "Wang Yao",
+    "Xiao Zhang"
+  ],
+  "summary": "We study asynchronous continuation replanning in a two-population linear--quadratic mean field game with deterministic open-loop controls and heterogeneous, possibly erroneous initial information. At exogenous opportunities, one population recomputes its continuation response from the physical aggregate state reached, with the opponent's active plan frozen. The state--plan target needed to initialize replanning is recoverable from local aggregate observations if and only if a kernel-inclusion condition holds; full recovery of the hidden initial input is unnecessary. For revisions…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

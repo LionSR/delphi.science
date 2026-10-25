@@ -1,0 +1,20 @@
+{
+  "key": "2609.28649",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.28649",
+  "title": "Straight-line programs for the solutions of Pell's equation",
+  "authors": [
+    "Bogdan Dumitru",
+    "Mihai Prunescu"
+  ],
+  "summary": "For nonsquare $d\\ge 2$, we construct fixed straight-line programs for the least non-trivial solution $(X_1,Y_1)$ of $x^2-dy^2=1$, using addition, truncated subtraction, multiplication, integer division, exponentiation, and remainder. A geometric-sum identity recovers $(X_1,Y_1)$ from the coordinate sums of an initial segment of Pell solutions, without knowing how many solutions were summed. Weighted binary encodings make these sums accessible to arithmetic computation. Counting operations with reuse of computed values, one program uses $94$ operations, with intermediate bit lengths bounded…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-09-23",
+  "updated": "2026-09-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

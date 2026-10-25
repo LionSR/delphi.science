@@ -1,0 +1,22 @@
+{
+  "key": "2604.03947",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.03947",
+  "title": "Uniform Sampling of Proper Graph Colorings via Soft Coloring and Partial Rejection Sampling",
+  "authors": [
+    "Sarat Moka",
+    "Ava Vahedi"
+  ],
+  "summary": "We present a new algorithm for the exact uniform sampling of proper \\(k\\)-colorings of a graph on \\(n\\) vertices with maximum degree~\\(Δ\\). The algorithm is based on partial rejection sampling (PRS) and introduces a soft relaxation of the proper coloring constraint that is progressively tightened until an exact sample is obtained. Unlike coupling from the past (CFTP), the method is inherently parallelizable. We propose a hybrid variant that decomposes the global sampling problem into independent subproblems of size \\(O(\\log n)\\), each solved by any existing exact sampler. This decomposition…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.CC",
+    "math.PR"
+  ],
+  "published": "2026-04-05",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

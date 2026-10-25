@@ -1,0 +1,22 @@
+{
+  "key": "2604.00855",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00855",
+  "title": "Finite-Budget Convergence and Chaos-Aware Stopping Criteria for Time-Parallel Methods",
+  "authors": [
+    "Giancarlo Antonino Antonucci",
+    "Raphael Andreas Hauser",
+    "Debasmita Samaddar",
+    "James Buchanan"
+  ],
+  "summary": "Time-parallel algorithms, such as Parareal, are well understood for linear problems, but their convergence analysis for nonlinear, chaotic systems remains limited. This paper introduces a theoretical framework for analysing time-decomposition methods as local contraction mappings with a finite iteration budget. We derive a finite-budget guarantee linking the initial error, convergence rate, and iteration count through a geometric outer--inner-ball condition. We apply this framework to Parareal, deriving explicit estimates for the convergence factor on nonlinear problems. A frozen-Jacobian…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

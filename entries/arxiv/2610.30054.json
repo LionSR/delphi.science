@@ -1,0 +1,23 @@
+{
+  "key": "2610.30054",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.30054",
+  "title": "Multiplying matrices via polynomials: exposition and barriers",
+  "authors": [
+    "Alimzhan Amanov",
+    "Maxim van den Berg",
+    "Jeroen Zuiddam"
+  ],
+  "summary": "We give an exposition of OpenAI's recent proof that the exponent $ω_\\mathbb{C}$ of matrix multiplication over the complex numbers satisfies $ω_\\mathbb{C}\\leq9/4$. Our version of the proof gives $ω_\\mathbb{F}\\leq9/4$ over every field $\\mathbb{F}$. We also treat the rectangular matrix multiplication exponent $ω_\\mathbb{F}(a,b,c)$. Here we have $ω_\\mathbb{F}(1,k,1)=2$ for $0\\leq k\\leq1/2$ and $ω_\\mathbb{F}(1,k,1)\\leq1+k+1/(4k)$ for $k\\geq1/2$, and, for real numbers $a\\geq b\\geq c\\geq0$, $ω_\\mathbb{F}(a,b,c)=a+b$ if $c(a+b)\\leq ab$ and $ω_\\mathbb{F}(a,b,c)\\leq(a+b+c)/2+(ab/c+ac/b+bc/a)/4$…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "math.RA",
+    "math.RT"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

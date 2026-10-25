@@ -1,0 +1,25 @@
+{
+  "key": "2602.05725",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05725",
+  "title": "Muon in Associative Memory Learning: Training Dynamics and Scaling Laws",
+  "authors": [
+    "Binghui Li",
+    "Kaifei Wang",
+    "Han Zhong",
+    "Pinyan Lu",
+    "Liwei Wang"
+  ],
+  "summary": "Muon updates matrix parameters via the matrix sign of the gradient and has shown strong empirical gains, yet its dynamics and scaling behavior remain unclear in theory. We study Muon in a linear associative memory model with softmax retrieval and a hierarchical frequency spectrum over query-answer pairs, with and without label noise. In this setting, we show that Gradient Descent (GD) learns frequency components at highly imbalanced rates, leading to slow convergence bottlenecked by low-frequency components. In contrast, the Muon optimizer mitigates this imbalance, leading to faster and more…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-06-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2602.22608",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.22608",
+  "title": "Lower Bounds for Linear Minimization Oracle Methods Optimizing over Strongly Convex Sets",
+  "authors": [
+    "Benjamin Grimmer",
+    "Ning Liu"
+  ],
+  "summary": "We consider the oracle complexity of constrained convex optimization given access to a Linear Minimization Oracle (LMO) for the constraint set and a gradient oracle for the $L$-smooth, $L$-strongly convex objective. This model includes Frank-Wolfe methods and their many variants. Over the problem class of $α$-strongly convex constraint sets $S$, we demonstrate that one can construct hard ``zero-chain'' instances in the classical style of Nemirovski and Yudin. From our new approach to adversarial oracle construction, we prove that no such deterministic method can guarantee a final objective…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-26",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

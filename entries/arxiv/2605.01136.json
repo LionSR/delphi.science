@@ -1,0 +1,22 @@
+{
+  "key": "2605.01136",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.01136",
+  "title": "Spectral Graph Sparsification Preserves Representation Geometry in Graph Neural Networks",
+  "authors": [
+    "Sanjukta Krishnagopal"
+  ],
+  "summary": "Spectral graph sparsification is a classical tool for reducing graph complexity while preserving Laplacian quadratic forms. In graph neural networks (GNNs), sparsification is often used to accelerate computation while maintaining predictive performance. In this work, we study a complementary representation-level question: does sparsification preserve the geometry of learned embeddings? For polynomial-filter GNNs, we prove that any $ε$-spectral sparsifier induces $O(ε)$ perturbations in polynomial graph filters, multilayer hidden representations, and their Gram matrices. These guarantees…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.SI",
+    "math.SP",
+    "stat.ML"
+  ],
+  "published": "2026-05-01",
+  "updated": "2026-05-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

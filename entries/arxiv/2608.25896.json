@@ -1,0 +1,22 @@
+{
+  "key": "2608.25896",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.25896",
+  "title": "Distributed Trotterization with optimal time-scaling entanglement cost",
+  "authors": [
+    "Tianfeng Feng",
+    "Jinzhao Sun",
+    "Yunlong Xiao",
+    "Qi Zhao"
+  ],
+  "summary": "Distributed architectures extend quantum simulation of many-body dynamics beyond the reach of any single processor, with shared entanglement mediating interactions between spatially separated devices. Conventional implementations rely on quantum teleportation, which provides a universal realization of nonlocal operations but incurs a fixed entanglement cost per gate, irrespective of its strength. This becomes increasingly inefficient in product formula simulation, where higher accuracy requires ever more numerous, yet progressively weaker, nonlocal rotations, causing the entanglement cost to…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-26",
+  "updated": "2026-08-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

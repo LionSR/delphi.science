@@ -1,0 +1,21 @@
+{
+  "key": "2607.10867",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10867",
+  "title": "GroupFunctions.jl: computing individual entries of the irreducible representations of the unitary group U(d)",
+  "authors": [
+    "David Amaro-Alcalá",
+    "Konrad Szymański"
+  ],
+  "summary": "GroupFunctions.jl is a Julia library for computing individual matrix elements of irreducible representations of U(d). These matrix elements, called group functions, can be evaluated symbolically or numerically. For SU(2), they reduce to the Wigner D-functions. The library computes these matrix elements in a carrier-space basis enumerated by Gelfand-Tsetlin patterns. It can also compute entire representation operators, construct input unitaries from parameterisations common in quantum optics, translate Gelfand-Tsetlin patterns into occupation-number kets, and compute the associated Schur…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.MS"
+  ],
+  "published": "2026-07-12",
+  "updated": "2026-07-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

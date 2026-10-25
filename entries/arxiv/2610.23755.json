@@ -1,0 +1,20 @@
+{
+  "key": "2610.23755",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.23755",
+  "title": "The maximum number of Hamiltonian cycles in tournaments",
+  "authors": [
+    "Alexander Divoux",
+    "Shouda Wang"
+  ],
+  "summary": "Let $C(n)$ denote the maximum number of directed Hamiltonian cycles in a tournament on $n$ vertices. We prove that, as $n\\to\\infty$, $$ C(n) = \\left(\\frac{\\cosh 1}{\\cos 1}\\pm o(1)\\right)\\frac{(n-1)!}{2^n}. $$ The bound is asymptotically attained by the regular tournament with vertices $\\mathbb Z/n\\mathbb Z$ where $(i,j)$ is a directed edge if $j - i \\pmod n< n/2$. This answers a question of Alon and proves a conjecture of Wormald. Among the other implications of these results is asymptotically determining the maximum number of Hamiltonian paths in a tournament on $n$ vertices. We provide our…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2606.22669",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.22669",
+  "title": "Clipping the Price of Adaptivity at the Tail",
+  "authors": [
+    "Itai Kreisler",
+    "Yair Carmon",
+    "Oliver Hinder"
+  ],
+  "summary": "Adaptive stochastic convex optimization (SCO) methods face a fundamental ``price of adaptivity'' barrier: under the standard set of assumptions, they cannot efficiently adapt to large uncertainty in both the initial distance to optimality and the Lipschitz constant. We circumvent this barrier by requiring a small amount of additional structure common to many learning problems. Specifically, we assume that the objective decomposes into a model and a loss function, enabling us to intervene by modifying the model's output before it passes to the loss function. Under this assumption, we design a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-06-21",
+  "updated": "2026-06-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

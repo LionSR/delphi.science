@@ -1,0 +1,23 @@
+{
+  "key": "2609.17802",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.17802",
+  "title": "Approximating Measures on Function Spaces: Transport and Truncation",
+  "authors": [
+    "Ricardo Baptista",
+    "Bamdad Hosseini",
+    "Alexander W. Hsu"
+  ],
+  "summary": "Measures on function spaces arise throughout Bayesian inverse problems and generative modeling, often with low-dimensional structure relative to a tractable reference measure. We introduce the class $\\mathcal{P}_ψ(μ)$ of measures that differ from a reference measure $μ$ only through a finite-dimensional map $ψ$ while preserving the reference conditionals on its fibers. Class members are determined by their $d$-dimensional pushforwards under $ψ$ and admit convenient block-triangular transport map representations. Draws are taken from this $d$-dimensional distribution and then completed to…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.NA",
+    "stat.ML"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

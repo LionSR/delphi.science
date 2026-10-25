@@ -1,0 +1,22 @@
+{
+  "key": "2608.11151",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.11151",
+  "title": "Optimal von Neumann Entropy Estimation",
+  "authors": [
+    "Ziyun Chen",
+    "Minbo Gao",
+    "Qisheng Wang"
+  ],
+  "summary": "We show that the von Neumann entropy of an unknown $d$-dimensional quantum state $ρ$ can be estimated to within additive error $\\varepsilon$ using \\[ Θ\\!\\left(\\frac{d^2}{\\varepsilon\\log^2(d)(1+\\varepsilon\\log^2(d))} + \\frac{\\log^2(d)}{\\varepsilon^2}\\right) \\] samples of $ρ$, matching the lower bound due to Wang (2026). Our estimator is based on a high-degree approximation polynomial and the main technical challenge is bounding its variance despite the large polynomial degree. We overcome this using a quantum Hoeffding decomposition, which preserves cancellations between different polynomial…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.IT"
+  ],
+  "published": "2026-08-11",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

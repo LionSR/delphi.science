@@ -1,0 +1,22 @@
+{
+  "key": "2605.06549",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.06549",
+  "title": "Stochastic Non-Smooth Non-Convex Optimization with Decision-Dependent Distributions",
+  "authors": [
+    "Chengchang Liu",
+    "Zongqi Wan",
+    "Haishan Ye",
+    "John C. S. Lui"
+  ],
+  "summary": "We study stochastic zeroth-order optimization with decision-dependent distributions, where the sampling law depends on the current decision and only noisy function values are available. For the non-smooth non-convex setting, we establish an explicit convergence guarantee for finding a $(δ,ε)$-Goldstein stationary point with stochastic zeroth-order oracle (SZO) complexity of $\\mathcal{O}(d^2δ^{-3}ε^{-3})$. In addition, we show that the above complexity can be achieved with single SZO feedback per iteration. We further extend the analysis to smooth and Hessian-Lipschitz objectives, obtaining…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

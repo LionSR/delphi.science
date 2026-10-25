@@ -1,0 +1,20 @@
+{
+  "key": "2604.13086",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.13086",
+  "title": "A Composition Theorem for Binomially Weighted Averages",
+  "authors": [
+    "Andy Liu",
+    "Michael Reilly"
+  ],
+  "summary": "We study binomially weighted summation methods given by \\[ (x_n)_{n\\in \\mathbb{N}} \\mapsto \\left(\\sum_{k=0}^n\\binom{n}{k}r^k(1-r)^{n-k}x_k\\right)_{n\\in \\mathbb{N}} \\] for $r\\in (0,1)$, and their behavior under composition with summation methods of the form \\[ (x_n)_{n\\in \\mathbb{N}} \\mapsto \\left(\\sum_{k=0}^nλ_k x_{n-k}\\right)_{n\\in \\mathbb{N}}. \\] Our main result shows that if the binomially weighted averages of a sequence $(x_n)_{n\\in \\mathbb{N}}$ converge to a limit then the binomially weighted averages of the sequence $\\left(\\sum_{k=0}^nλ_kx_{n-k}\\right)_{n\\in \\mathbb{N}}$ converge to…",
+  "domain": "math.GM",
+  "tags": [
+    "math.GM"
+  ],
+  "published": "2026-04-03",
+  "updated": "2026-04-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

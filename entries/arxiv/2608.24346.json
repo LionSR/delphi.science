@@ -1,0 +1,20 @@
+{
+  "key": "2608.24346",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.24346",
+  "title": "A Line-Search-Free Coordinate Proximal Predictor-Corrector Method for Monotone Absolute Value Equations",
+  "authors": [
+    "Haotian Wang",
+    "Yong Xia"
+  ],
+  "summary": "We consider the absolute value equation (AVE) $Ax-|x|=b$ under residual monotonicity. We characterize this property through the symmetric part of the coefficient matrix, thereby allowing nonsymmetry, and propose a coordinate proximal predictor-corrector (CPPC) method based on an AVE-specific forward-proximal decomposition. An exact scalar proximal update on the largest proximal-residual coordinate generates a predictor point, while a positive-alignment identity certifies the ensuing full-residual separating-hyperplane correction without backtracking. With the current matrix product cached,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2608.20660",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.20660",
+  "title": "Predicting Resource Efficient Hamiltonian Decomposition for Continuous-Time Quantum Walk Simulations",
+  "authors": [
+    "Mostafa Atallah",
+    "Rebekah Herrman",
+    "Zain H. Saleem"
+  ],
+  "summary": "Simulating a continuous-time quantum walk (CTQW) on a graph in the circuit model of quantum computing requires decomposing its Hamiltonian into terms that can be Trotterized into hardware-native gates. We consider two such decompositions: the standard Pauli decomposition and the recently introduced matching decomposition. Prior work suggests that the matching decomposition uses fewer CX gates on sparse graphs, while the Pauli decomposition uses fewer on denser graphs. Since CX gates dominate error and runtime on current hardware, we train machine learning models to predict, for a given…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-08-21",
+  "updated": "2026-08-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

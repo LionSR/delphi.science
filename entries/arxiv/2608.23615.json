@@ -1,0 +1,21 @@
+{
+  "key": "2608.23615",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.23615",
+  "title": "Optimal Variance Reduction in Randomized Experiments",
+  "authors": [
+    "Amir Najmi",
+    "Michael D. Keselman"
+  ],
+  "summary": "This paper describes an approach to variance reduction in randomized experiments using side information (covariates of the response unaffected by treatment). As with Double ML[Chernozhukov 2018], models of arbitrary complexity may be employed without concern for bias due to overfitting or regularization. For additive treatment metrics, the approach minimizes variance optimally. For more complex treatment metrics (e.g., multiplicative and ratios) the Delta Method estimate of variance is minimized. Through a variety of examples, the paper also explores modeling considerations.",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-08-22",
+  "updated": "2026-08-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

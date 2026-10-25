@@ -1,0 +1,21 @@
+{
+  "key": "2605.17677",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.17677",
+  "title": "Rank Based Routing in Large Server Systems under Extreme Congestion",
+  "authors": [
+    "Sayan Banerjee",
+    "Amarjit Budhiraja",
+    "Eva Loeser"
+  ],
+  "summary": "We study $n$ parallel queues in an extreme heavy-traffic regime: each server works at rate $n$, while jobs arrive to a dispatcher at rate $n^2-(a-b)\\sqrt{n}$, with fixed $a>b>0$. Arrivals are routed by a marginal join-the-shortest-queue policy: a small stream of rate $b\\sqrt{n}$ joins the current shortest queue, while the remaining stream of rate $n^2-a\\sqrt{n}$ is routed uniformly at random. This policy greatly reduces communication cost relative to full JSQ, while improving load balancing and offering a natural mechanism for premium jobs to join shorter queues. Under diffusive scaling, we…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-05-17",
+  "updated": "2026-05-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

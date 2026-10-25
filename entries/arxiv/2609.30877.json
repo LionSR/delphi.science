@@ -1,0 +1,20 @@
+{
+  "key": "2609.30877",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.30877",
+  "title": "Tight Stochastic Condition-Number Dependence in Nonconvex-Strongly-Concave Minimax Optimization",
+  "authors": [
+    "Qihao Zhou"
+  ],
+  "summary": "We study whether the linear condition-number dependence in the stochastic complexity of SAPD+ is necessary for nonconvex-strongly-concave minimax optimization. For jointly $L$-smooth objectives with dual strong-concavity parameter $μ$, we prove a lower bound that matches the SAPD+ upper bound under the same Moreau-envelope stationarity criterion and the same primal-dual initialization gap. Specifically, when $σ\\ge\\varepsilon$, the worst-case complexity of zero-respecting algorithms is $Θ(κLGσ^2\\varepsilon^{-4})$ in the stated accuracy regime, where $κ=L/μ$, $G$ bounds the initial primal-dual…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

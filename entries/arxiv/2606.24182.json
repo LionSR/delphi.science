@@ -1,0 +1,20 @@
+{
+  "key": "2606.24182",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.24182",
+  "title": "Sufficient conditions for the existence of exponential-polynomial expansions for solutions of certain differential equations",
+  "authors": [
+    "Roland Hildebrand",
+    "Rahaf Habib"
+  ],
+  "summary": "We consider ordinary differential equations (ODE) of the form $u''u - (u')^2 = e^{-x}P(u) - 1$, where $P$ is a polynomial. In previous work, necessary conditions on $P$ have been established for certain families of solutions of these ODEs to have asymptotic expansions of the form $u(x) = \\sum_{k=0}^{\\infty} p_k(x+c)e^{-kx}$ for $Re\\,x \\to +\\infty$, where $c \\in \\mathbb C$ is an arbitrary constant parameterizing the solution family, and $p_k$ are polynomials, with $p_0(x) = x$. These conditions amount to $P(0) = 0$ and $P'(0) = \\frac12P''(0)$. Here we show that these two conditions are also…",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA"
+  ],
+  "published": "2026-06-23",
+  "updated": "2026-06-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

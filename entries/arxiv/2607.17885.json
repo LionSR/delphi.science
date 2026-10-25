@@ -1,0 +1,20 @@
+{
+  "key": "2607.17885",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.17885",
+  "title": "Hybrid-Dimensional Biot Problem with an Optimization Based Domain Decomposition Approach",
+  "authors": [
+    "Francesca Marcon",
+    "Stefano Scialò"
+  ],
+  "summary": "The present work proposes a numerical approach for solving coupled flow and mechanics problems in fractured porous media, represented as mixed-dimensional domains. In this formulation, the elements of the 3D mesh are allowed to arbitrarily intersect the fractures. Displacements are discontinuous across fractures through the use of the eXtended Finite Element Method (XFEM) on the 3D mesh. The mechanical problem is formulated as a saddle-point problem, in which Lagrange multipliers are used to enforce displacement continuity across the fractures. The resulting Lagrange multipliers represent…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-20",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

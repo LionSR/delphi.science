@@ -1,0 +1,21 @@
+{
+  "key": "2608.04283",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.04283",
+  "title": "A Weighted Upwind Vector Kinetic Lattice Boltzmann Method For Hyperbolic Conservation Laws",
+  "authors": [
+    "Michael W. Brown",
+    "Jehanzeb Chaudhry",
+    "John N. Shadid"
+  ],
+  "summary": "Vector kinetic lattice Boltzmann (VKLB) methods have recently emerged as a promising framework for solving hyperbolic partial differential equation (PDE) systems. VKLB discretizes Boltzmann-type equations using a discrete set of lattice velocities, enforces discrete moment constraints, and carefully defines equilibrium distribution functions. In this work, we introduce novel upwinded equilibrium distribution functions constructed from conservation variables and numerical fluxes derived via continuous flux vector splitting based on the eigendecomposition of the flux Jacobian. This formulation…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

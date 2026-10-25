@@ -1,0 +1,19 @@
+{
+  "key": "2606.04018",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.04018",
+  "title": "The Coercivity Gap in Neural PDE Solvers: Parameter Escape and Functional Convergence",
+  "authors": [
+    "Enrique Zuazua"
+  ],
+  "summary": "We study neural approximation of elliptic PDE solutions from a variational perspective. The central point is the distinction between the geometry of neural parameters and the convergence of the corresponding physical states. Even when the original elliptic energy is coercive and strictly convex in the natural energy space, its restriction to a nonlinear neural ansatz may fail to be coercive in parameter space. This failure is caused by non-closedness of neural approximation manifolds and by condensation of neurons, which may generate limiting profiles outside the fixed ansatz class.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-06-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

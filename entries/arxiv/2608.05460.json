@@ -1,0 +1,23 @@
+{
+  "key": "2608.05460",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.05460",
+  "title": "A proximal subgradient method for nonconvex stochastic optimization under the Kurdyka-Łojasiewicz condition",
+  "authors": [
+    "Felipe Atenas",
+    "Alejandro Jofré",
+    "Pedro Pérez-Aros",
+    "David Torregrosa-Belén"
+  ],
+  "summary": "This work introduces a proximal stochastic subgradient method for minimizing the sum of an expected cost, whose integrand is potentially nonsmooth and nonconvex, and a lower semicontinuous, prox-bounded function. We target a broad class of integrands obeying a nonsmooth, localized variant of the descent lemma in the decision variable, a structural assumption that simultaneously covers smooth losses with Lipschitz gradient and differences of such losses with convex functions. At each iteration the expected cost is replaced by a sample average that is progressively refined, and the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-08-05",
+  "updated": "2026-08-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

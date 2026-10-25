@@ -1,0 +1,19 @@
+{
+  "key": "2610.25248",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.25248",
+  "title": "Lucas' Theorem modulo $p^n$ via Harmonic sums",
+  "authors": [
+    "Suneel Kumar"
+  ],
+  "summary": "Lucas' theorem states that for a prime $p$, integers $a,b\\geq0$ and $0\\leq r,s\\leq p-1$, one has $\\binom{pa+r}{pb+s}\\equiv\\binom{a}{b}\\binom{r}{s}\\bmod p$. Let $D(p^n)$ be the set of pairs $(r,s)$ with $s\\leq r$ for which this congruence holds modulo $p^n$ for all $a,b\\geq0$. Rowland characterized $D(p^2)$ in terms of harmonic sums and symmetries of Pascal's triangle. For $n<p$, we give a criterion for a point $(r,s)$ to lie in $D(p^n)$ in terms of generalized harmonic sums of order at most $n-1$. We show that $D(p^n)$ is invariant under the reflection $(r,s)\\mapsto(r,r-s)$ and the rotation…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-10-18",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

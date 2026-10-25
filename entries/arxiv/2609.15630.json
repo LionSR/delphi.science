@@ -1,0 +1,22 @@
+{
+  "key": "2609.15630",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.15630",
+  "title": "A φ-FEM approach for time-dependent domains with unfitted meshes",
+  "authors": [
+    "Michel Duprez",
+    "Johan Marguet",
+    "Alexei Lozinski",
+    "Igor Voulis"
+  ],
+  "summary": "In this work, we propose an unfitted finite element scheme to approximate the solution of the heat equation on moving domains. We use the φ-FEM paradigm in which the computational domain is described implicitly by a level-set function φ. This function is incorporated into the variational formulation in order to enforce the boundary conditions, which allows the use of unfitted meshes in space. Such a strategy avoids the need for remeshing at each time step and makes it possible to handle complex geometrical evolutions. Moreover, the φ-FEM approach has the advantage of being simple to…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

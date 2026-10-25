@@ -1,0 +1,22 @@
+{
+  "key": "2603.16389",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.16389",
+  "title": "Chipmunq: A Fault-Tolerant Compiler for Chiplet Quantum Architectures",
+  "authors": [
+    "Peter Wegmann",
+    "Aleksandra Świerkowska",
+    "Emmanouil Giortamis",
+    "Pramod Bhatotia"
+  ],
+  "summary": "As quantum computing advances toward fault-tolerance through quantum error correction, modular chiplet architectures have emerged to provide the massive qubit counts required while overcoming fabrication limits of monolithic chips. However, this transition introduces a critical compilation gap: existing frameworks cannot handle the scale of fault-tolerant quantum circuits while managing the noisy, sparse interconnects of chiplet backends. We present Chipmunq, the first hardware-aware compiler for mapping and routing fault-tolerant circuits onto modular architectures. Chipmunq employs a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-17",
+  "updated": "2026-03-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2608.23980",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.23980",
+  "title": "Structure-preserving generalized transferable neural networks for the Cahn-Hilliard equation",
+  "authors": [
+    "Cao-Kha Doan",
+    "Thi-Thao-Phuong Hoang",
+    "Lili Ju",
+    "Shuting Wang"
+  ],
+  "summary": "This paper is concerned with a structure-preserving neural network-based framework for the Cahn-Hilliard equation in mixed form. We employ generalized transferable neural networks (GTransNet) for spatial approximation and stabilized backward differentiation formulas (BDF) for temporal discretization. The resulting first- and second-order in time GTransNet-BDF schemes are shown to conserve mass and satisfy energy stability at the time-discrete level. The schemes are implemented by a collocation-based method, in which a least-squares system with constant coefficient matrix needs to be solved…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

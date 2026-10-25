@@ -1,0 +1,23 @@
+{
+  "key": "2602.10469",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.10469",
+  "title": "Online Generalized-Mean Welfare Maximization: Achieving Near-Optimal Regret from Samples",
+  "authors": [
+    "Zongjun Yang",
+    "Rachitesh Kumar",
+    "Christian Kroer"
+  ],
+  "summary": "We study online fair allocation of $T$ sequentially arriving items among $n$ agents with heterogeneous preferences, with the objective of maximizing generalized-mean welfare, defined as the $p$-mean of agents' time-averaged utilities, with $p\\in (-\\infty, 1)$. We first consider the i.i.d. arrival model and show that the pure greedy algorithm -- which myopically chooses the welfare-maximizing integral allocation -- achieves $\\widetilde{O}(1/T)$ average regret. Importantly, in contrast to prior work, our algorithm does not require distributional knowledge and achieves the optimal regret rate…",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-02-11",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

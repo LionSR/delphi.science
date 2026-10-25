@@ -1,0 +1,19 @@
+{
+  "key": "2606.15462",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.15462",
+  "title": "A full $p^{4r}$ supercongruence tower for a level-three symmetric-cube hypergeometric sequence",
+  "authors": [
+    "Alex Shvets"
+  ],
+  "summary": "Let ${}_2F_1(1/3,1/3;1;27z)^3=\\sum_{n\\ge0}A_nz^n$. We prove the full prime-power supercongruence tower $A_{mp^r}\\equiv A_{mp^{r-1}}\\pmod{p^{4r}}$ for $p\\ge5$, $m\\ge1$, $r\\ge1$. The level-three modular expansion used below was already recorded by Moy; the contribution here is the depth-preserving modulus $p^{4r}$, extending the previously known depth-one modulus $p^4$ case to all prime powers. The proof is modular. After replacing $A_n$ by $B_n=(-1)^nA_n$, the generating function is realized on $X_0(3)$ by $\\sum_{n\\ge0}B_nt^n=η(τ)^9/η(3τ)^3$ with $t=η(3τ)^{12}/η(τ)^{12}$. The logarithmic…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-06-13",
+  "updated": "2026-06-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

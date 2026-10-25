@@ -1,0 +1,21 @@
+{
+  "key": "2602.09613",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.09613",
+  "title": "Tracking Finite-Time Lyapunov Exponents to Robustify Neural ODEs",
+  "authors": [
+    "Tobias Wöhrer",
+    "Christian Kuehn"
+  ],
+  "summary": "We investigate finite-time Lyapunov exponents (FTLEs), a measure for exponential separation of input perturbations, of deep neural networks within the framework of continuous-depth neural ODEs. We demonstrate that FTLEs are powerful organizers for input-output dynamics, allowing for better interpretability and the comparison of distinct model architectures. We establish a direct connection between Lyapunov exponents and adversarial vulnerability, and propose a novel training algorithm that improves robustness by FTLE regularization. The key idea is to suppress exponents far from zero in the…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "cs.LG"
+  ],
+  "published": "2026-02-10",
+  "updated": "2026-02-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

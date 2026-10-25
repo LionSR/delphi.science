@@ -1,0 +1,19 @@
+{
+  "key": "2610.07492",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.07492",
+  "title": "The injectivity threshold of a Gaussian ReLU layer",
+  "authors": [
+    "Xiaohui Xie"
+  ],
+  "summary": "We determine how wide a randomly initialized ReLU layer must be to distinguish every pair of inputs. For independent Gaussian weights and zero bias, as the dimensions grow at a fixed output-to-input ratio, the probability of global injectivity tends to zero below a sharp threshold and to one above it. We characterize this threshold exactly through a variational formula for the limiting minimum number of active neurons per input coordinate. The formula accounts for correlations among input directions at arbitrarily many levels. We prove this formula rigorously, establishing a prediction from…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,26 @@
+{
+  "key": "2602.05559",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05559",
+  "title": "Piecewise Deterministic Markov Processes for Bayesian Inference of PDE Coefficients",
+  "authors": [
+    "Leon Riccius",
+    "Iuri B. C. M. Rocha",
+    "Joris Bierkens",
+    "Hanne Kekkonen",
+    "Frans P. van der Meer"
+  ],
+  "summary": "We develop a general framework for piecewise deterministic Markov process (PDMP) samplers that enables efficient Bayesian inference in non-linear inverse problems with expensive likelihoods. The key ingredient is a surrogate-assisted thinning scheme in which a surrogate model provides a proposal event rate and a robust correction mechanism enforces an upper bound on the true rate by dynamically adjusting an additive offset whenever violations are detected. This construction is agnostic to the choice of surrogate and PDMP, and we demonstrate it for the Zig-Zag sampler and the Bouncy particle…",
+  "domain": "stat.CO",
+  "tags": [
+    "stat.CO",
+    "math.ST",
+    "stat.AP",
+    "stat.ML"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-02-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2604.05640",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.05640",
+  "title": "Parametric Nonconvex Optimization via Convex Surrogates",
+  "authors": [
+    "Renzi Wang",
+    "Panagiotis Patrinos",
+    "Alberto Bemporad"
+  ],
+  "summary": "This paper presents a novel learning-based approach to construct a surrogate problem that approximates a given parametric nonconvex optimization problem. The surrogate function is designed to be the minimum of a finite set of functions, given by the composition of convex and monotonic terms, so that the surrogate problem can be solved directly through parallel convex optimization. As a proof of concept, numerical experiments on a nonconvex path tracking problem confirm the approximation quality of the proposed method.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "eess.SY"
+  ],
+  "published": "2026-04-07",
+  "updated": "2026-04-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

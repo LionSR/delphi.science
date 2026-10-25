@@ -1,0 +1,21 @@
+{
+  "key": "2607.28939",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.28939",
+  "title": "Latent Lie-Poisson Neural Networks (LLPNNs): Discovering the motion of Lie-Poisson systems through observable data and latent dynamics",
+  "authors": [
+    "Vakhtang Putkaradze"
+  ],
+  "summary": "Structure-preserving neural networks are essential for the long-term prediction of Hamiltonian systems from data. Many important Hamiltonian systems in mechanics and control admit symmetry reduction to Lie--Poisson systems, including rigid bodies, underwater vehicles, fluids, plasmas, and optimal control problems. A fundamental challenge in learning such systems is that their dynamics evolve in momentum variables that are typically unobservable, while available data consist only of observable quantities such as configurations and velocities. In optimal control applications, the situation is…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS",
+    "math.OC"
+  ],
+  "published": "2026-07-31",
+  "updated": "2026-07-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2603.07075",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.07075",
+  "title": "A unified high-resolution ODE framework for first-order methods",
+  "authors": [
+    "Lixia Wang",
+    "Hao Luo"
+  ],
+  "summary": "For a generic discrete-time algorithm (DTA): $z^+=g(z,s)$, where $s$ is the step size, Lu (Math. Program., 194(1):1061--1112, 2022) proposed an $O(s^r)$-resolution ordinary differential equation (ODE) framework based on the backward error analysis, which can be used to analyze many DTAs satisfying the fixed point assumption $g(z,0)=z$ such as gradient descent, extra gradient method and primal-dual hybrid gradient (PDHG). However, most first-order methods with momentum violate this critical assumption. To address this issue, in this work, we introduce a novel $O((\\sqrt{s})^r)$-resolution ODE…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-03-07",
+  "updated": "2026-03-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

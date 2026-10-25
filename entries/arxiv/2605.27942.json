@@ -1,0 +1,24 @@
+{
+  "key": "2605.27942",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.27942",
+  "title": "Quantum principal component analysis without eigenvector recovery",
+  "authors": [
+    "Yewei Yuan",
+    "Michele Minervini",
+    "Mark M. Wilde",
+    "Nana Liu"
+  ],
+  "summary": "Principal component analysis (PCA) is traditionally implemented through a covariance or kernel matrix, leading-eigenvector extraction, and hard rank-$k$ projection. These steps can be computationally costly in high-dimensional and quantum-data settings, sensitive to small eigengaps, and unnecessary when downstream tasks only require principal-subspace scores. Such score-based objectives are important in applications such as anomaly detection, spectral-energy profiling, and other postselection tasks. To address these needs, we introduce a measurement-based soft PCA framework replacing the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS",
+    "cs.LG"
+  ],
+  "published": "2026-05-27",
+  "updated": "2026-05-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

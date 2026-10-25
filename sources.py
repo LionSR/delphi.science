@@ -44,7 +44,7 @@ class SourceError(Exception):
 # ---- HTTP: one request at a time, cached, with a per-host delay ----
 
 _last_hit: dict[str, float] = {}
-DELAY = {"data.palomar-registry.org": 0.1, "www.anthropic.com": 1.0, "aixiv.science": 1.0, "ai.vixra.org": 1.0, "jaigp.org": 1.0, "www.clawxiv.org": 0.5, "export.arxiv.org": 3.0}
+DELAY = {"data.palomar-registry.org": 0.1, "www.anthropic.com": 1.0, "export.arxiv.org": 3.0, "hexagonmath.org": 0.5}
 TOKEN: str | None = None  # GitHub token, set by index.py
 
 
@@ -133,13 +133,15 @@ def iso_date(text: str | None) -> str:
 
 
 class MetaParser(HTMLParser):
-    """Collects <meta name|property=… content=…> (repeated names become lists) and <title>."""
+    """Collects <meta name|property=… content=…> (repeated names become lists), <title>, and the first
+    <h1> and <p>, for pages that carry no metadata at all."""
 
     def __init__(self) -> None:
         super().__init__()
         self.meta: dict[str, list[str]] = {}
-        self.title = ""
+        self.title = self.h1 = self.p = ""
         self._in_title = False
+        self._in = ""  # "h1" or "p" while inside the first of each
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         a = dict(attrs)
@@ -147,14 +149,20 @@ class MetaParser(HTMLParser):
             name = (a.get("name") or a.get("property") or "").lower()
             if name:
                 self.meta.setdefault(name, []).append(a["content"] or "")
-        self._in_title = tag == "title"
+        self._in_title = tag == "title" and not self.title  # the document's title, not the SVG icons' <title>s after it
+        if tag in ("h1", "p") and not getattr(self, tag) and not self._in:
+            self._in = tag
 
     def handle_endtag(self, tag: str) -> None:
         self._in_title = False
+        if tag == self._in:
+            self._in = ""
 
     def handle_data(self, data: str) -> None:
         if self._in_title:
             self.title += data
+        if self._in:
+            setattr(self, self._in, getattr(self, self._in) + data)
 
     def one(self, name: str) -> str:
         """The first value of a meta tag, or ''."""
@@ -177,6 +185,119 @@ def from_citation_meta(m: MetaParser) -> dict[str, Any]:
         "published": iso_date(one("citation_publication_date") or one("citation_online_date") or one("citation_date")),
         "pdf": one("citation_pdf_url"),
     }
+
+
+# ---- Discussion: posts and articles about a record ----
+
+# What a record's page shows under "Discussed elsewhere". Nothing is typed in: an X post comes from
+# X's oEmbed endpoint (free, no key, and X's own way to republish a post), anything else from the
+# page's Open Graph tags. A link whose source answers 404 is dropped on refresh, which is how a
+# deleted post or a takedown leaves the index.
+OEMBED = "https://publish.twitter.com/oembed"
+X_HOSTS = {"x.com", "www.x.com", "twitter.com", "www.twitter.com", "mobile.twitter.com"}
+LINK_CHARS = 300
+
+
+def parse_oembed(data: dict[str, Any]) -> dict[str, Any]:
+    """An X post from its oEmbed record: who wrote it, the text, the day."""
+    h = data.get("html", "")
+    body = re.search(r"<p[^>]*>(.*?)</p>", h, re.S)
+    when = re.search(r">([A-Z][a-z]+ \d{1,2}, \d{4})</a>\s*</blockquote>", h)
+    handle = (data.get("author_url") or "").rstrip("/").rsplit("/", 1)[-1]
+    post = re.search(r"/status/(\d+)", data.get("url") or "")
+    return {
+        "kind": "x", "url": f"https://x.com/{handle}/status/{post[1]}" if handle and post else data.get("url", ""),
+        "author": clean(data.get("author_name")), "handle": handle,
+        "text": clean(re.sub(r"<br\s*/?>", " ", body[1])) if body else "",
+        "date": dt.datetime.strptime(when[1], "%B %d, %Y").date().isoformat() if when else "",
+    }
+
+
+def passage(page: str, fragment: str) -> tuple[str, str]:
+    """What a text-fragment URL (#:~:text=prefix-,start,end,-suffix) points at: (prefix, the page's text from
+    start on). On a page that collects many people's remarks, the prefix names the one quoted, as in
+    #:~:text=Jakob%20Glas-,But%20when%20I%20saw. The fragment is still URL-encoded, so %2C is a literal comma."""
+    text = clean(re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", page, flags=re.S | re.I))
+    parts = [urllib.parse.unquote(x) for x in fragment.split(",")]
+    prefix = clean(parts.pop(0)[:-1]) if parts[0].endswith("-") else ""
+    start = clean(parts[0]) if parts else ""
+    low = text.lower()
+    after = low.find(prefix.lower()) if prefix else 0
+    i = low.find(start.lower(), after) if start and after >= 0 else -1  # a prefix that is not on the page matches nothing
+    return (prefix, trim(text[i:], LINK_CHARS)) if i >= 0 else ("", "")
+
+
+YOUTUBE_HOSTS = {"www.youtube.com", "youtube.com", "m.youtube.com", "youtu.be"}
+
+
+def youtube(url: str, page: str) -> dict[str, str]:
+    """A talk on YouTube: the channel as author (oEmbed), the upload date from the page."""
+    try:
+        data = get_json("https://www.youtube.com/oembed?" + urllib.parse.urlencode({"url": url, "format": "json"}), cache=False)
+    except (NotFound, SourceError):
+        return {}
+    when = re.search(r'"publishDate":"(\d{4}-\d{2}-\d{2})', page)
+    return {"title": clean(data.get("title")), "author": clean(data.get("author_name")), "date": when[1] if when else ""}
+
+
+STACKEXCHANGE = {"mathoverflow.net": "mathoverflow", "math.stackexchange.com": "math", "cstheory.stackexchange.com": "cstheory"}
+
+
+def stackexchange(host: str, url: str) -> dict[str, str]:
+    """A MathOverflow (or Stack Exchange) question: the asker as author, the day asked, the opening of the body."""
+    m = re.search(r"/(questions|a|answers)/(\d+)", url)
+    if not m:
+        return {}
+    kind = "questions" if m[1] == "questions" else "answers"
+    try:
+        data = get_json(f"https://api.stackexchange.com/2.3/{kind}/{m[2]}?site={STACKEXCHANGE[host]}&filter=withbody", cache=False)
+    except (NotFound, SourceError):
+        return {}
+    q = (data.get("items") or [{}])[0]
+    if not q:
+        raise NotFound(url)
+    if kind == "answers":  # an answer carries no title: use its question's
+        qq = get_json(f"https://api.stackexchange.com/2.3/questions/{q['question_id']}?site={STACKEXCHANGE[host]}", cache=False)
+        q["title"] = "Answer to: " + ((qq.get("items") or [{}])[0].get("title") or "")
+    return {"title": clean(q.get("title")), "author": clean((q.get("owner") or {}).get("display_name")),
+            "text": trim(q.get("body"), LINK_CHARS), "date": dt.date.fromtimestamp(q.get("creation_date", 0)).isoformat() if q.get("creation_date") else ""}
+
+
+def discussion_link(url: str) -> dict[str, Any]:
+    """The link as the page shows it. Raises NotFound when the post or page is gone. A text-fragment URL
+    (page#:~:text=a%20passage) quotes that passage, and opens the page scrolled to it."""
+    url = url.strip()
+    parts = urllib.parse.urlsplit(url)
+    host = (parts.hostname or "").lower()
+    if host in X_HOSTS:
+        if not re.search(r"/status/\d+", url):
+            raise ValueError(f"not a post: {url}")
+        q = urllib.parse.urlencode({"url": url, "omit_script": "true", "dnt": "true"})
+        link = parse_oembed(get_json(f"{OEMBED}?{q}", cache=False))
+    else:
+        page = "" if host in STACKEXCHANGE else get_text(urllib.parse.urlunsplit(parts._replace(fragment="")), cache=False)  # Stack Exchange: the API only
+        who, quoted = passage(page, parts.fragment[len(":~:text="):]) if parts.fragment.startswith(":~:text=") else ("", "")
+        if who:  # the link keeps only the passage, which browsers scroll to; the name goes in author
+            url = urllib.parse.urlunsplit(parts._replace(fragment=":~:text=" + parts.fragment.split("-,", 1)[1]))
+        m = MetaParser()
+        m.feed(page)
+        one = m.one
+        video = youtube(url, page) if host in YOUTUBE_HOSTS else stackexchange(host, url) if host in STACKEXCHANGE else {}
+        # citation_author (arXiv, journals) is "Last, First"; shown as "First Last".
+        authors = [" ".join(reversed(clean(a).split(", ", 1))) for a in m.meta.get("citation_author", []) if clean(a)]
+        author = who or ", ".join(authors[:4]) + (" et al." if len(authors) > 4 else "") or clean(one("author") or one("article:author"))
+        # Personal blogs often sign only in the window title: "Post title | Asaf Karagila".
+        byline = re.split(r"\s+[|–—]\s+", clean(m.title))
+        if not author and len(byline) > 1 and byline[-1] != clean(one("og:site_name")):
+            author = byline[-1]
+        link = {
+            "kind": "web", "url": url, "title": video.get("title") or clean(one("citation_title") or one("og:title") or m.title or m.h1),
+            "site": clean(one("og:site_name")) or host.removeprefix("www."), "author": video.get("author") or ("" if "://" in author else author),
+            "text": quoted or video.get("text") or trim(one("og:description") or one("description") or m.p, LINK_CHARS),
+            "date": video.get("date") or iso_date(one("article:published_time") or one("citation_publication_date") or one("citation_date")
+                                                  or one("citation_online_date") or one("date") or one("article:modified_time")),
+        }
+    return {k: v for k, v in link.items() if v}
 
 
 # ---- Adapters ----
@@ -252,6 +373,7 @@ class GitHub(Source):
             updated=iso_date(d.get("pushed_at")),
             stars=d.get("stargazers_count", 0),
             agent_ready=bool(files & {"AGENTS.md", "CLAUDE.md"}),
+            citation_cff="CITATION.cff" in files,
         )
 
     def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
@@ -266,9 +388,19 @@ class ArXiv(Source):
     patterns = [r"^(?:https?://)?(?:www\.)?arxiv\.org/(?:abs|pdf|html)/([\w./-]+?)(?:v\d+)?(?:\.pdf)?/?$", r"^(?:arXiv:)?(\d{4}\.\d{4,5})(?:v\d+)?$"]
     NS = {"a": "http://www.w3.org/2005/Atom", "x": "http://arxiv.org/schemas/atom"}
 
+    PAGE = 1000
+
+    def _feed(self, params: str, cache: bool = True) -> tuple[int, list[ET.Element]]:
+        """The total hits and this page's entries. The API reports its own failures as an entry."""
+        root = ET.fromstring(get(f"https://export.arxiv.org/api/query?{params}", cache=cache))
+        entries = root.findall("a:entry", self.NS)
+        if any("/api/errors" in e.findtext("a:id", "", self.NS) for e in entries):
+            raise SourceError(f"arXiv API error for {params}")
+        total = int(root.findtext("{http://a9.com/-/spec/opensearch/1.1/}totalResults", "0"))
+        return total, [e for e in entries if e.find("a:title", self.NS) is not None]
+
     def _query(self, params: str) -> list[ET.Element]:
-        root = ET.fromstring(get(f"https://export.arxiv.org/api/query?{params}"))
-        return [e for e in root.findall("a:entry", self.NS) if e.find("a:title", self.NS) is not None]
+        return self._feed(params)[1]
 
     def _entry(self, e: ET.Element) -> dict[str, Any]:
         t = lambda p: (e.findtext(p, "", self.NS) or "").strip()  # noqa: E731
@@ -294,8 +426,23 @@ class ArXiv(Source):
 
     def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
         q = urllib.parse.quote(query or "")
-        for e in self._query(f"search_query={q}&sortBy=submittedDate&sortOrder=descending&max_results={limit}"):
-            yield self._entry(e)
+        start, total = 0, limit
+        while start < min(limit, total):
+            params = f"search_query={q}&sortBy=submittedDate&sortOrder=descending&start={start}&max_results={min(self.PAGE, limit - start)}"
+            for attempt in range(3):  # the API now and then answers with an error or an empty page: ask again, uncached
+                try:
+                    total, page = self._feed(params, cache=attempt == 0)
+                except SourceError:
+                    page = []
+                if page or start >= total:
+                    break
+                time.sleep(10)
+            if not page:
+                if start >= total:
+                    return
+                raise SourceError(f"arXiv returned nothing at {start} of {total} for {query!r}")
+            yield from map(self._entry, page)
+            start += len(page)
 
 
 class Zenodo(Source):
@@ -352,191 +499,6 @@ class HuggingFace(Source):
             published=iso_date(d.get("createdAt")),
             updated=iso_date(d.get("lastModified")),
         )
-
-
-class ClawXiv(Source):
-    """clawxiv.org: a preprint server for AI research agents, with a public JSON API."""
-
-    name, label, origin = "clawxiv", "clawXiv", "ai-generated"
-    patterns = [r"^(?:https?://)?(?:www\.)?clawxiv\.org/abs/(clawxiv\.[\d.]+)", r"^(clawxiv\.\d{4}\.\d+)$"]
-    API = "https://www.clawxiv.org/api/v1"
-
-    def _entry(self, p: dict[str, Any]) -> dict[str, Any]:
-        pid = p.get("id") or p["paper_id"]  # the list says "id", the single-paper route "paper_id"
-        return self.entry(
-            pid,
-            url=p.get("url") or f"https://clawxiv.org/abs/{pid}",
-            title=clean(p.get("title")),
-            authors=[clean(a.get("name")) for a in p.get("authors", [])],
-            summary=trim(p.get("abstract")),
-            tags=p.get("categories") or [],
-            domain=(p.get("categories") or [""])[0],
-            published=iso_date(p.get("created_at")),
-        )
-
-    def fetch(self, key: str) -> dict[str, Any]:
-        return self._entry(get_json(f"{self.API}/papers/{key}"))
-
-    def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
-        page = 1
-        while True:
-            d = get_json(f"{self.API}/papers?page={page}&limit=100")
-            yield from map(self._entry, d.get("papers", []))
-            if not d.get("hasMore"):
-                return
-            page += 1
-
-
-class AiXiv(Source):
-    """aixiv.science: AI- and human-authored papers; each abstract page carries citation_* tags."""
-
-    name, label = "aixiv", "aiXiv"
-    patterns = [r"^(?:https?://)?aixiv\.science/(?:abs|pdf)/(aixiv\.\d{6}\.\d+)", r"^(aixiv\.\d{6}\.\d+)$"]
-    ROW = re.compile(r'href="https://aixiv\.science/abs/(aixiv\.\d{6}\.\d+)".*?</li>', re.S)
-
-    def fetch(self, key: str, ai: bool | None = None) -> dict[str, Any]:
-        url = f"https://aixiv.science/abs/{key}"
-        f = from_citation_meta(page_meta(url))
-        if not f["title"] or f["title"].startswith("aiXiv - "):
-            raise NotFound(url)
-        # The list badges each paper "AI" or "human"; the authors' "(AI)" suffix says the same on the page.
-        ai = ai if ai is not None else any(a.endswith("(AI)") for a in f["authors"])
-        if f["summary"].startswith("aiXiv - "):  # no abstract: the page falls back to the site's tagline
-            f["summary"] = ""
-        return self.entry(
-            key, url=url, title=f["title"], authors=f["authors"], summary=f["summary"], published=f["published"],
-            **({"origin": "ai-generated"} if ai else {}),
-        )
-
-    def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
-        listing = get_text("https://aixiv.science/list", max_age=3600)
-        rows = [(m.group(1), "badge-ai" in m.group(0)) for m in self.ROW.finditer(listing)]
-        if not rows:
-            raise SourceError("https://aixiv.science/list: no papers found; the page layout may have changed")
-        for key, ai in rows[:limit]:
-            yield self.fetch(key, ai)
-
-
-class AiViXra(Source):
-    """ai.viXra.org: open archive of AI-assisted e-prints. The /all/ listing carries each abstract."""
-
-    name, label, origin = "aivixra", "ai.viXra", "ai-generated"
-    patterns = [r"^(?:https?://)?ai\.vixra\.org/(?:abs|pdf)/(\d{4}\.\d{4})", r"^(?:ai\.viXra:)?(\d{4}\.\d{4})$"]
-    BLOCK = re.compile(
-        r'<a href="/abs/(\d{4}\.\d{4})">.*?submitted on (\d{4}-\d{2}-\d{2}).*?<h3>(.*?)</h3>\s*<p><b>Authors:</b>(.*?)<br/>.*?</p>\s*<p>(.*?)<b>Category:</b>\s*<a[^>]*>(.*?)</a>',
-        re.S,
-    )
-
-    def match(self, url: str) -> str | None:
-        return super().match(url) if "vixra" in url.lower() else None  # the bare YYMM.NNNN form is arXiv's
-
-    def fetch(self, key: str) -> dict[str, Any]:
-        url = f"https://ai.vixra.org/abs/{key}"
-        page = get_text(url)
-        m = MetaParser()
-        m.feed(page)
-        f = from_citation_meta(m)
-        abstract = re.search(r'<div id="abstract">\s*<p>(.*?)</p>', page, re.S)
-        category = re.search(r'<div id="category">.*?<h2>(.*?)</h2>', page, re.S)
-        submitted = re.search(r"\[<a[^>]*>v1</a>\]\s*(\d{4}-\d{2}-\d{2})", page)
-        return self.entry(
-            key, url=url, title=f["title"], authors=f["authors"], summary=trim(abstract.group(1) if abstract else ""),
-            domain=clean(category.group(1)) if category else "",
-            published=submitted.group(1) if submitted else f["published"],  # first submission, as the listing shows
-        )
-
-    def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
-        listing = get_text("https://ai.vixra.org/all/", max_age=3600)
-        blocks = self.BLOCK.findall(listing)
-        if not blocks:
-            raise SourceError("https://ai.vixra.org/all/: no papers found; the page layout may have changed")
-        seen = set()
-        for key, date, title, authors, abstract, category in blocks:
-            if key in seen:  # replacements are listed again further down
-                continue
-            seen.add(key)
-            yield self.entry(
-                key,
-                url=f"https://ai.vixra.org/abs/{key}",
-                title=clean(title),
-                authors=[clean(a) for a in re.findall(r"<a[^>]*>(.*?)</a>", authors)] or [clean(authors)],
-                summary=trim(abstract),
-                domain=clean(category),
-                published=date,
-            )
-
-
-class Jaigp(Source):
-    """jaigp.org, the Journal for AI Generated Papers: human prompters plus AI co-authors."""
-
-    name, label, origin = "jaigp", "JAIGP", "ai-generated"
-    patterns = [r"^(?:https?://)?jaigp\.org/paper/(\d+)"]
-
-    def fetch(self, key: str) -> dict[str, Any]:
-        url = f"https://jaigp.org/paper/{key}"
-        page = get_text(url)
-        m = MetaParser()
-        m.feed(page)
-        title = re.sub(r"\s+—\s+JAIGP$", "", clean(m.one("og:title")))
-        byline = re.search(r"<!-- Author byline -->\s*<div[^>]*>(.*?)</div>", page, re.S)
-        authors = [a for a in (clean(x) for x in re.split(r"·", byline.group(1))) if a] if byline else []
-        abstract = re.search(r'<header class="paper-abstract">.*?<p>(.*?)</p>', page, re.S)
-        if not title:
-            raise NotFound(url)
-        return self.entry(
-            key, url=url, title=title, authors=authors,
-            summary=trim(abstract.group(1) if abstract else m.one("og:description")),
-            published=iso_date(m.one("article:published_time")),
-        )
-
-    def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
-        keys = re.findall(r"<loc>https://jaigp\.org/paper/(\d+)</loc>", get_text("https://jaigp.org/sitemap.xml", max_age=3600))
-        if not keys:
-            raise SourceError("https://jaigp.org/sitemap.xml: no papers found")
-        for key in sorted(set(keys), key=int, reverse=True)[:limit]:
-            try:
-                yield self.fetch(key)
-            except NotFound:
-                continue
-
-
-class AIScientist(Source):
-    """The example papers written end to end by Sakana AI's The AI Scientist (github.com/SakanaAI/AI-Scientist)."""
-
-    name, label, origin = "ai-scientist", "AI Scientist", "ai-generated"
-    REPO = "SakanaAI/AI-Scientist"
-    patterns = [r"^(?:https?://)?github\.com/SakanaAI/AI-Scientist/(?:blob|tree)/main/example_papers/([\w-]+?)(?:\.pdf)?/?$"]
-
-    def fetch(self, key: str) -> dict[str, Any]:
-        base = f"https://api.github.com/repos/{self.REPO}/contents/example_papers/{key}"
-        title, abstract, authors = key.replace("_", " ").capitalize(), "", []
-        tex = next((f for f in self._walk(base) if f["name"].endswith(".tex")), None)
-        if tex:
-            src = get_text(tex["download_url"])
-            t = re.search(r"\\title\{(.+?)\}\s*\n", src, re.S)
-            a = re.search(r"\\begin\{abstract\}(.*?)\\end\{abstract\}", src, re.S)
-            title = clean(re.sub(r"\\\\|\\[a-z]+\{|\}", " ", t.group(1))) if t else title
-            abstract = re.sub(r"\\[a-zA-Z]+\*?(\[[^\]]*\])?(\{([^}]*)\})?", r"\3", a.group(1)) if a else ""
-            # \author{GPT-4o \& Claude\\ Department …}: the names are the first line.
-            au = re.search(r"\\author\{(.*?)(?:\\\\|\})", src, re.S)
-            authors = [clean(au.group(1).replace("\\&", "&"))] if au else []
-        return self.entry(
-            key,
-            url=f"https://github.com/{self.REPO}/blob/main/example_papers/{key}.pdf",
-            title=title, authors=authors, summary=trim(abstract),
-        )
-
-    def _walk(self, url: str, depth: int = 2) -> Iterator[dict[str, Any]]:
-        for f in get_json(url):
-            if f["type"] == "file":
-                yield f
-            elif depth > 0 and f["name"] in ("latex", "paper"):
-                yield from self._walk(f["url"], depth - 1)
-
-    def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
-        names = [f["name"] for f in get_json(f"https://api.github.com/repos/{self.REPO}/contents/example_papers") if f["type"] == "dir"]
-        for key in names[:limit]:
-            yield self.fetch(key)
 
 
 class OpenAIMath(Source):
@@ -816,6 +778,81 @@ class AnthropicScience(Source):
             yield self.fetch(key)
 
 
+class Hexagon(Source):
+    """hexagonmath.org: an arXiv-style archive for LLM-assisted mathematics, with a JSON API.
+
+    It screens deposits for scholarly content but not for correctness, so each record keeps the
+    deposit's own declarations (authorship, how much of it a human understood) for readers to judge.
+    """
+
+    name, label = "hexagon", "Hexagon"
+    API = "https://hexagonmath.org/api/v1/works"
+    # The bare form is arXiv's too, so a bare id needs the hexagon: prefix.
+    patterns = [r"^(?:https?://)?(?:www\.)?hexagonmath\.org/(?:abs/|pdf/|src/|api/v1/works/)?(\d{4}\.\d{4,5})(?:v\d+)?/?$", r"^hexagon:(\d{4}\.\d{4,5})(?:v\d+)?$"]
+
+    def _entry(self, w: dict[str, Any]) -> dict[str, Any]:
+        links = w.get("links") or {}
+        formal = [f.get("url") for f in w.get("formalizations") or [] if f.get("url")]
+        formal += [w[k] for k in ("mathlibCommitUrl", "palomarUrl", "prove2Url") if w.get(k) and w[k] not in formal]
+        return self.entry(
+            w["identifier"],
+            url=links.get("record") or f"https://hexagonmath.org/abs/{w['identifier']}",
+            pdf=links.get("pdf", ""),
+            title=clean(w.get("title")),
+            authors=[clean(a.get("name")) for a in w.get("authors", [])],
+            summary=trim(w.get("abstract")),
+            domain=w.get("subject") or "",
+            tags=[*(w.get("crossListSubjects") or []), *(f"msc:{m}" for m in w.get("mscCodes") or []), *(w.get("tags") or [])][:12],
+            published=iso_date(w.get("publishedAt") or w.get("createdAt")),
+            updated=iso_date(w.get("versionCreatedAt")),
+            version=w.get("versionNumber"),
+            doi=w.get("doi") or "",
+            ai_models=[t["name"] for t in w.get("tools") or [] if t.get("name") and t["name"] != "Lean"],
+            authorship=w.get("authorshipMode") or "",
+            human_understanding=w.get("humanUnderstanding") or "",
+            **({"origin": "ai-generated"} if w.get("authorshipMode") != "human" else {}),
+            formalized=bool(formal),
+            formalizations=formal,
+            withdrawn=bool(w.get("withdrawnAt")) or w.get("status") == "withdrawn",
+            withdrawn_on=iso_date(w.get("withdrawnAt")),
+        )
+
+    def _detail(self, versioned: str) -> dict[str, Any]:
+        return get_json(f"{self.API}/{versioned}")["work"]
+
+    def fetch(self, key: str) -> dict[str, Any]:
+        try:
+            return self._entry(self._detail(key))
+        except (NotFound, SourceError):
+            pass
+        latest, v = None, 1  # if the API wants a version, the latest is the last that answers
+        while v <= 50:
+            try:
+                latest = self._detail(f"{key}v{v}")
+            except NotFound:
+                break
+            v += 1
+        if latest is None:
+            raise NotFound(f"Hexagon {key}")
+        return self._entry(latest)
+
+    def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
+        """Newest first, one record per work (its latest version). The detail record adds the
+        formalization links that the list leaves out."""
+        cursor = None
+        while True:
+            page = get_json(f"{self.API}?limit=100" + (f"&cursor={urllib.parse.quote(cursor)}" if cursor else ""), max_age=3600)
+            for w in page.get("works", []):
+                try:
+                    w = {**w, **self._detail(w["id"].removeprefix("hexagon:"))}
+                except (NotFound, SourceError):
+                    pass  # the list record is enough to index it
+                yield self._entry(w)
+            cursor = (page.get("page") or {}).get("next_cursor")
+            if not (page.get("page") or {}).get("has_more") or not cursor:
+                return
+
+
 class Doi(Source):
     """Any DOI, resolved through doi.org content negotiation (Crossref, DataCite, …)."""
 
@@ -863,12 +900,23 @@ class Web(Source):
 
 
 # Order matters: the first adapter that matches wins, so specific ones come before GitHub, DOI and Web.
-SOURCES: list[Source] = [OpenAIMath(), Palomar(), AnthropicScience(), AIScientist(), ClawXiv(), AiXiv(), AiViXra(), Jaigp(), ArXiv(), Zenodo(), HuggingFace(), Formalization(), GitHub(), Doi(), Web()]
+SOURCES: list[Source] = [OpenAIMath(), Palomar(), AnthropicScience(), Hexagon(), ArXiv(), Zenodo(), HuggingFace(), Formalization(), GitHub(), Doi(), Web()]
 BY_NAME = {s.name: s for s in SOURCES}
 
 
+# Venues whose listings are mostly pseudoscience. Their papers are not taken, not even as web pages.
+BLOCKED_HOSTS = ("vixra.org", "aixiv.science", "clawxiv.org", "jaigp.org")
+
+
+def blocked(url: str) -> bool:
+    host = (urllib.parse.urlsplit(url.strip() if "://" in url else f"https://{url.strip()}").hostname or "").lower()
+    return any(host == h or host.endswith("." + h) for h in BLOCKED_HOSTS)
+
+
 def detect(url: str) -> tuple[Source, str]:
-    """The adapter and key for a URL or bare ID. Raises ValueError if nothing matches."""
+    """The adapter and key for a URL or bare ID. Raises ValueError if nothing matches or the venue is blocked."""
+    if blocked(url):
+        raise ValueError(f"not taken: {url!r} is on a venue this index does not list")
     for s in SOURCES:
         key = s.match(url)
         if key:

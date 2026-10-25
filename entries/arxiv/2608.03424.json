@@ -1,0 +1,20 @@
+{
+  "key": "2608.03424",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.03424",
+  "title": "Adaptive RBF-multiscale approximation on bounded domains",
+  "authors": [
+    "Federico Lot",
+    "Christian Rieger"
+  ],
+  "summary": "This article addresses adaptivity in the kernel multiscale method. Adaptively compressed kernel multiscale approximations have already been presented and analyzed in (LeGia & Wendland, 2014). The main contribution of this work is to attempt to avoid using function evaluations which will be deleted in the compression step anyways. In order to work with function values, we always work in the Lagrange representation. We still assume to have all function values available to compute error norms, but we do not include those values in our approximations. Finally, we also employ local Lagrange…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

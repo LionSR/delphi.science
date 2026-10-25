@@ -1,0 +1,37 @@
+{
+  "key": "2610.00427",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00427v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00427v1",
+  "title": "Total mutual visibility in Fibonacci and Lucas cubes",
+  "authors": [
+    "Daniel Adam Pyle"
+  ],
+  "summary": "A set of vertices is total mutual-visible if every pair of graph vertices has a shortest path whose internal vertices avoid the set. We prove that the total mutual-visibility numbers of the n-dimensional Fibonacci and Lucas cubes both have order ρⁿ/n, where ρ > 1 satisfies ρ³ = ρ² + 1. The eligible Fibonacci words are exactly those avoiding 11 for which zero padding avoids 0000. Their induced graph decomposes into fibres of recognizing subsets of maximal independent sets of a path, and each fibre is a Cartesian product of smaller Fibonacci cubes. Total visibility becomes open packing in…",
+  "domain": "math.CO",
+  "tags": [
+    "msc:05C12",
+    "msc:05C69",
+    "msc:94B25",
+    "Fibonacci cube",
+    "Lucas cube",
+    "constrained code",
+    "open packing",
+    "recognizing subset",
+    "total mutual visibility"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "version": 1,
+  "ai_models": [
+    "OpenAI-powered assistant (Lyra) Python, SymPy, SciPy / HiGHS"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "none",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

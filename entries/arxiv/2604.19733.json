@@ -1,0 +1,22 @@
+{
+  "key": "2604.19733",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.19733",
+  "title": "Greedy Routing in a Sequentially Grown One-Dimensional Random Graph",
+  "authors": [
+    "Alexander Ponomarenko"
+  ],
+  "summary": "We analyze greedy routing in a random graph G_n constructed on the vertex set V = {1, 2, ..., n} embedded in Z. Vertices are inserted according to a uniform random permutation pi, and each newly inserted vertex connects to its nearest already-inserted neighbors on the left and right (if they exist). This work addresses a conjecture originating from empirical studies (Ponomarenko et al., 2011; Malkov et al., 2012), which observed through simulations that greedy search in sequentially grown graphs exhibits logarithmic routing complexity across various dimensions. While the original claim was…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DS",
+    "cs.NI",
+    "cs.SI"
+  ],
+  "published": "2026-04-21",
+  "updated": "2026-04-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

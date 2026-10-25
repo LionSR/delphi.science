@@ -1,0 +1,21 @@
+{
+  "key": "2609.35946",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.35946",
+  "title": "Gradient-Free Methods for Stochastic Convex Optimization with Stochastic Functional Constraints",
+  "authors": [
+    "Vadim Abronin",
+    "Alexander Gasnikov",
+    "Darina Dvinskikh"
+  ],
+  "summary": "We develop accelerated gradient-free methods for stochastic convex optimization with constraints defined by expectations. Our batched primal-dual sliding method uses two-point evaluations sharing a random sample and guarantees expected objective error and expected maximum constraint violation at most $\\varepsilon$. It achieves $O(\\varepsilon^{-1/2})$ sequential oracle rounds for smooth data and $O(d^{1/4}/\\varepsilon)$ for nonsmooth data in dimension $d$, recovering the accuracy and dimension dependence of the corresponding unconstrained accelerated methods. The smooth rate is optimal in…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

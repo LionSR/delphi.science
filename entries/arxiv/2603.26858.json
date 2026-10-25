@@ -1,0 +1,23 @@
+{
+  "key": "2603.26858",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.26858",
+  "title": "A Hierarchical Sheaf Spectral Embedding Framework for Single-Cell RNA-seq Analysis",
+  "authors": [
+    "Xiang Xiang Wang",
+    "Guo-Wei We"
+  ],
+  "summary": "Single-cell RNA-seq data analysis typically requires representations that capture heterogeneous local structure across multiple scales while remaining stable and interpretable. In this work, we propose a hierarchical sheaf spectral embedding (HSSE) framework that constructs informative cell-level features based on persistent sheaf Laplacian analysis. Starting from scale-dependent low-dimensional embeddings, we define cell-centered local neighborhoods at multiple resolutions. For each local neighborhood, we construct a data-driven cellular sheaf that encodes local relationships among cells.…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.SP",
+    "q-bio.GN",
+    "stat.ML"
+  ],
+  "published": "2026-03-27",
+  "updated": "2026-03-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

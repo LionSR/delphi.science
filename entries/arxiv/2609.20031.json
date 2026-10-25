@@ -1,0 +1,20 @@
+{
+  "key": "2609.20031",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20031",
+  "title": "Distributed Continuous-Time Optimization on the Special Orthogonal Group SO(3) over Tree Interaction Graphs",
+  "authors": [
+    "Dongming Wang",
+    "Wei Ren"
+  ],
+  "summary": "We study continuous-time distributed optimization on the three-dimensional rotation group over undirected tree graphs, where agents with heterogeneous local costs seek a common attitude minimizing the geodesically strongly convex sum of their costs on a geodesically convex operating ball. We propose a nonsmooth protocol with fixed gains that combines local Riemannian gradient descent with signum-based consensus feedback computed from the Lie-group logarithms of relative rotations between neighboring agents. Since geodesic strong convexity alone does not guarantee invariance, as demonstrated…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

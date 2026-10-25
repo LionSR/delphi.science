@@ -1,0 +1,21 @@
+{
+  "key": "2608.08344",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.08344",
+  "title": "PRISM: A Predictive Protocol for Permutation Optimization via Landscape Diagnostics",
+  "authors": [
+    "Blessings Mambwe"
+  ],
+  "summary": "Permutation optimization arises whenever the components of a system are fixed but their ordering affects performance. We introduce PRISM, a predictive protocol for permutation optimization that measures a fitness landscape before selecting a search strategy. PRISM uses inexpensive landscape diagnostics, including one-step move autocorrelation and fitness-distance correlation, to predict useful mutation operators, identify when structured search is likely to outperform random sampling, and detect regimes in which search provides little advantage. Across synthetic permutation landscapes,…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-08-08",
+  "updated": "2026-08-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

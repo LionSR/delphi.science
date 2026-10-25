@@ -1,0 +1,22 @@
+{
+  "key": "2604.12688",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.12688",
+  "title": "Statistical finite elements for sequential data synthesis in solid dynamics",
+  "authors": [
+    "Igor Kavrakov",
+    "Yaswanth Sai Jetti",
+    "Ahmet Oguzhan Yuksel",
+    "Fehmi Cirak"
+  ],
+  "summary": "We present an approach for synthesising observational data with elastodynamic finite element models by extending the statistical finite element method (statFEM) framework. The proposed formulation adopts a Bayesian filtering approach to account for uncertainties in the data, the finite element model, and the discrepancies between the model and the physical system. Observational data are assimilated while the state of the spatially discretised finite element problem is advanced in time using the stochastic variant of the explicit Newmark scheme. The prior probability density of the state is…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-14",
+  "updated": "2026-04-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,37 @@
+{
+  "key": "2610.00390",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00390v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00390v1",
+  "title": "Unconstrained detection of productive autocatalytic cores is NP-complete",
+  "authors": [
+    "Michael Mislan"
+  ],
+  "summary": "We prove NP-completeness of deciding whether a finite reversible reaction network contains a productive autocatalytic core when neither a target species nor an allowed-food set is specified. The input is a binary encoding of literal nonnegative integer reactant and product matrices, with a signed real flow on each reaction identity. A nonsingular square-witness characterization gives polynomial certificates. A weighted incidence construction reduces prescribed two-path directed linkage to unrestricted core detection, and an explicit constant-size switch construction reduces SAT to the…",
+  "domain": "cs.CC",
+  "tags": [
+    "math.CO",
+    "msc:68Q17",
+    "msc:92C42",
+    "Lean formalization",
+    "NP-completeness",
+    "autocatalytic cores",
+    "binary encoding",
+    "polynomial-time reductions",
+    "reaction networks"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-19",
+  "version": 1,
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": true,
+  "formalizations": [
+    "https://palomar-registry.org/entry?id=PALOMAR-2026-09-30-000027&version=1"
+  ],
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

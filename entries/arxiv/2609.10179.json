@@ -1,0 +1,22 @@
+{
+  "key": "2609.10179",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10179",
+  "title": "A Note on the Point-Clothoid Distance Algorithm",
+  "authors": [
+    "Haibin Ye",
+    "Hao Ge",
+    "Gong Cheng"
+  ],
+  "summary": "Computing the closest point on a clothoid is a recurring task in geometric design, road and railway alignment, and path planning. The efficient algorithm of Frego and Bertolazzi addresses this problem, but its candidate-selection analysis assumes at most one local minimum per search interval. We exhibit admissible configurations with two local minima, raising the question of whether the existing strategy accounts for every possible minimum. Using the geometry of the clothoid evolute, we prove that, for any query point and any proper no-inflection planar clothoid segment with tangent-angle…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.CG"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

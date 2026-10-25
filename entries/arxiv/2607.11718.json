@@ -1,0 +1,21 @@
+{
+  "key": "2607.11718",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.11718",
+  "title": "Inf-Sup Neural Networks for High Dimensional PDEs",
+  "authors": [
+    "Ziren Chen",
+    "Hailiang Liu"
+  ],
+  "summary": "Solving partial differential equations (PDEs) in high dimensions remains challenging due to the curse of dimensionality. We propose a neural-network-based framework that reformulates PDEs as inf--sup optimization problems through the introduction of a Lagrange multiplier. The primal solution and the associated Lagrange multiplier are parameterized by two networks and are computed via an iterative saddle-point optimization procedure. We prove the theoretical equivalence between the proposed optimization formulation and the original PDE problem, and we derive rigorous error estimates that…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.AP"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

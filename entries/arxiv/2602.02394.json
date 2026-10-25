@@ -1,0 +1,21 @@
+{
+  "key": "2602.02394",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.02394",
+  "title": "On the Practical Implementation of a Sequential Quadratic Programming Algorithm for Nonconvex Sum-of-squares Problems",
+  "authors": [
+    "Jan Olucak",
+    "Torbjørn Cunis"
+  ],
+  "summary": "Sum-of-squares (SOS) optimization provides a computationally tractable framework for certifying polynomial nonnegativity. If the considered problem is convex, the SOS problem can be transcribed into and solved by semi-definite programs. However, in case of nonconvex problems iterative procedures are needed. Yet tractable and efficient solution methods are still lacking, limiting their application, for instance, in control engineering. To address this gap, we propose a filter line search algorithm that solves a sequence of quadratic subproblems. Numerical benchmarks demonstrate that the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-02-02",
+  "updated": "2026-04-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

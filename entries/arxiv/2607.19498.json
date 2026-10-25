@@ -1,0 +1,27 @@
+{
+  "key": "2607.19498",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.19498",
+  "title": "A Bayesian Framework for Built-in Input Dimension Reduction for Gaussian Process Modeling",
+  "authors": [
+    "Eric Herrison Gyamfi",
+    "Emily L. Kang",
+    "Bledar A. Konomi",
+    "Guang Lin"
+  ],
+  "summary": "Gaussian process (GP) modeling is widely used in computational science and engineering. However, fitting a GP to high-dimensional inputs remains challenging due to the curse of dimensionality. While various methods have been proposed to reduce input dimensionality, they typically follow a two-stage approach, performing dimension reduction and GP fitting separately. We introduce a Bayesian framework that seamlessly integrates dimensionality reduction with GP modeling and inference. Our approach, built on a hierarchical Bayesian model with priors on the Stiefel manifold, enforces…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.PR",
+    "stat.AP",
+    "stat.CO",
+    "stat.ME"
+  ],
+  "published": "2026-07-21",
+  "updated": "2026-07-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2604.23212",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23212",
+  "title": "Learning Curves and Benign Overfitting of Spectral Algorithms in Large Dimensions",
+  "authors": [
+    "Weihao Lu",
+    "Qian Lin",
+    "Yingcun Xia",
+    "Dongming Huang"
+  ],
+  "summary": "Existing large-dimensional theory for spectral algorithms resolves either the optimally tuned point or the interpolation limit, but leaves the under-regularized regime unexplored. We study the learning curve and benign overfitting of spectral algorithms in the large-dimensional setting where the sample size and dimension are of comparable order, i.e., $n \\asymp d^γ$ for some $γ>0$. We first consider inner-product kernels on the sphere $\\mathbb{S}^{d-1}$ and establish a sharp asymptotic characterization of the excess risk across the full regularization path under various source conditions $s…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-04-25",
+  "updated": "2026-04-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

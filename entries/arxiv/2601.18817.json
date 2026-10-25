@@ -1,0 +1,22 @@
+{
+  "key": "2601.18817",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.18817",
+  "title": "Machine-Learning-Enhanced Discretize-then-Project Reduced-Order Modeling of Turbulent Flows on Collocated Grids",
+  "authors": [
+    "Nadim Rooholamin",
+    "Kabir Bakhshaei",
+    "Giovanni Stabile"
+  ],
+  "summary": "This study presents a hybrid reduced-order modeling (ROM) framework for incompressible flows on collocated finite-volume grids, combining a discretize-then-project consistent-flux formulation for velocity and pressure with a non-intrusive neural-network closure for turbulent viscosity. The intrusive formulation preserves discrete mass conservation and pressure-velocity coupling, while a reduced pressure reference-cell constraint fixes pressure gauge ambiguity. We evaluate Multilayer Perceptron (MLP), Transformer, and Long Short-Term Memory (LSTM) closures. For a three-dimensional lid-driven…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-01-23",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

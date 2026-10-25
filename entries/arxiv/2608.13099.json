@@ -1,0 +1,22 @@
+{
+  "key": "2608.13099",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.13099",
+  "title": "Formal Verification of Quantum Ancilla Safety",
+  "authors": [
+    "Jiqi Li",
+    "Jingyi Mei",
+    "Wang Fang",
+    "Ji Guan"
+  ],
+  "summary": "Ensuring ancilla safety is a critical correctness requirement for quantum compilation, since ancilla qubits are routinely introduced to implement complex operations with fewer gates and reduced depth. However, formally verifying this property is computationally hard due to state-space explosion in the number of qubits, particularly for dirty ancillae, which carry unknown initial states and must be restored after use. We propose an end-to-end verification-and-repair framework that rigorously addresses both clean and dirty ancilla safety. Our core contribution is a two-step reduction strategy:…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

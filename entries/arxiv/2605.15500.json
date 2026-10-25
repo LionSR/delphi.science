@@ -1,0 +1,19 @@
+{
+  "key": "2605.15500",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.15500",
+  "title": "Three short proofs of Mathar's 2014 conjecture for OEIS A002627",
+  "authors": [
+    "Tong Niu"
+  ],
+  "summary": "For the OEIS sequence A002627, defined by the inhomogeneous first-order recurrence $a(n) = n\\,a(n-1) + 1$ with $a(0) = 0$, R.~J.~Mathar recorded in February 2014 the conjectured second-order homogeneous recurrence \\[ a(n) - (n+1)\\,a(n-1) + (n-1)\\,a(n-2) = 0, \\qquad n \\ge 2, \\] which has remained marked as a conjecture on the OEIS for over a decade. We give three short proofs. The first is two lines: subtract the defining recurrence at adjacent indices and the constant cancels (we call this homogenisation). The second reads off the same relation from the exponential generating function $F(x)…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-05-15",
+  "updated": "2026-05-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

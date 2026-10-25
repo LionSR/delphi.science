@@ -1,0 +1,23 @@
+{
+  "key": "2606.27285",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.27285",
+  "title": "Recovering Governing Equations from Solution Data: Identifiability Bounds for Linear and Nonlinear ODEs",
+  "authors": [
+    "Yang Pan",
+    "Helmut Bölcskei"
+  ],
+  "summary": "Learning governing equations from observed solution data is a fundamental challenge in scientific machine learning, yet the theoretical conditions under which a ground-truth ODE can be uniquely and stably identified from multiple solution observations remain largely undeveloped, and no quantitative analysis of the sample complexity of such learning tasks exists in the literature. To address this gap, we introduce the Hausdorff distance on solution sets as the natural metric for comparing differential equations, since it captures the worst-case separation between two equations over all…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.IT",
+    "math.CA",
+    "math.DS"
+  ],
+  "published": "2026-06-25",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

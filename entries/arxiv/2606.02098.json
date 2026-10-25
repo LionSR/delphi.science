@@ -1,0 +1,20 @@
+{
+  "key": "2606.02098",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.02098",
+  "title": "Attention-Like Hebbian Learning from Quantum Probability Flow and Quantum-Annealer Tests",
+  "authors": [
+    "Masayuki Ohzeki"
+  ],
+  "summary": "We propose a quantum probability-flow principle for deriving local learning rules in associative memory. A transverse field defines leakage channels from data states, and minimizing the measured survival loss gives stability-driven updates. For imaginary-time, dephased dynamics, the local leakage free energy is the log-sum-exp of energy gaps; its gradient is a softmax-weighted Hebbian rule. Real-time stability instead yields a power-law weighting. D-Wave standard- and fast-anneal tests of a one-hot attention forward map are better fitted by an effective softmax than by a Lorentzian power law.",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.dis-nn"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

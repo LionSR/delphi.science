@@ -1,0 +1,20 @@
+{
+  "key": "2607.07665",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.07665",
+  "title": "Guidance Breaks the Fitted Operator: A Terminal-Fitted Repair for Classifier-Free Guidance",
+  "authors": [
+    "Shiheng Zhang"
+  ],
+  "summary": "Classifier-free guidance (CFG) is the standard way to strengthen class-conditioning in diffusion and flow-matching samplers, yet at large guidance it oversaturates and destabilizes, symptoms practitioners suppress with more steps or limited-interval schedules. We analyze CFG through an asymptotic-preserving, numerical-analysis lens. Building on a recent result that the deterministic DDIM step is the unique fitted operator for the unguided terminal layer, exact on the final small-sigma stretch of sampling, we show that guidance re-stiffens exactly the discriminative subspace to an anomalous…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

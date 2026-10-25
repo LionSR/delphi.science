@@ -1,0 +1,24 @@
+{
+  "key": "2603.29880",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.29880",
+  "title": "Convergence analysis for a finite-volume scheme for the Euler- and Navier-Stokes-Korteweg system via energy-variational solutions",
+  "authors": [
+    "Thomas Eiter",
+    "Jan Giesselmann",
+    "Robert Lasarzik",
+    "Philipp Öffner",
+    "Robert Sauerborn"
+  ],
+  "summary": "We consider a structure-preserving finite-volume scheme for the Euler-Korteweg (EK) and Navier-Stokes-Korteweg (NSK) equations. We prove that its numerical solutions converge to energy-variational solutions of EK or NSK under mesh refinement. Energy-variational solutions constitute a novel solution concept that has recently been introduced for hyperbolic conservation laws, including the EK system, and which we extend to the NSK model. Our proof is based on establishing uniform estimates following from the properties of the structure-preserving scheme, and using the stability of the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.AP"
+  ],
+  "published": "2026-03-31",
+  "updated": "2026-03-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

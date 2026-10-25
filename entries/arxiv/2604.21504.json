@@ -1,0 +1,22 @@
+{
+  "key": "2604.21504",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.21504",
+  "title": "Efficient generation of expected-degree graphs via edge-arrivals",
+  "authors": [
+    "Gianlorenzo D'Angelo",
+    "Riccardo Michielan"
+  ],
+  "summary": "We study the efficient generation of random graphs with a prescribed expected degree sequence, focusing on rank-1 inhomogeneous models in which vertices are assigned weights and edges are drawn independently with probabilities proportional to the product of endpoint weights. We adopt a temporal viewpoint, adding edges to the graph one at a time up to a fixed time horizon, and allowing for self-loops or duplicate edges in the first stage. Then, the simple projection of the resulting multigraph recovers exactly the simple Norros--Reittu random graph, whose expected degrees match the prescribed…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.MS",
+    "math.PR"
+  ],
+  "published": "2026-04-23",
+  "updated": "2026-04-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

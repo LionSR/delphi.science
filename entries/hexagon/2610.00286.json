@@ -1,0 +1,38 @@
+{
+  "key": "2610.00286",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00286v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00286v1",
+  "title": "Gallai's conjecture with two exceptional even vertices",
+  "authors": [
+    "Idris Ali Shaik"
+  ],
+  "summary": "Gallai conjectured that every connected finite simple graph on n vertices admits an edge partition into at most ⌈n/2⌉ simple paths. Botler and Sambinelli proved this when every even-degree vertex has at most three even neighbours. Fan, Hou and Zhou exempted one designated even vertex of positive degree and ensured that at least two paths ended there. Xie obtained the same endpoint conclusion for either of two adjacent designated even vertices, in separate partitions, when every other even vertex has at most three even neighbours. We prove that the same endpoint conclusion holds without…",
+  "domain": "math.CO",
+  "tags": [
+    "msc:05C38",
+    "msc:05C70",
+    "Gallai's conjecture",
+    "Lean formalization",
+    "even-degree vertices",
+    "graph theory",
+    "path decomposition"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "version": 1,
+  "ai_models": [
+    "Codex"
+  ],
+  "authorship": "mixed",
+  "human_understanding": "all",
+  "origin": "ai-generated",
+  "formalized": true,
+  "formalizations": [
+    "https://palomar-registry.org/entry?id=PALOMAR-2026-10-04-000006&version=1"
+  ],
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

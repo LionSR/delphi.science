@@ -1,0 +1,23 @@
+{
+  "key": "2607.01515",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.01515",
+  "title": "Context-Triggered Robust MPC for Temporal Logic Specifications",
+  "authors": [
+    "Arash Bahari Kordabad",
+    "Satya Prakash Nayak",
+    "Sadegh Soudjani",
+    "Anne-Kathrin Schmuck"
+  ],
+  "summary": "We consider the problem of synthesizing robust feedback controllers for discrete-time linear systems that ensure the satisfaction of context-dependent linear temporal logic specifications in the presence of additive bounded disturbances. Building on existing results that reduce context-triggered temporal logic synthesis to the realization of context-dependent reach-avoid-stay (cRAS) objectives, we focus on the corresponding low-level control synthesis problem. We first employ certificate-based conditions for the almost-sure satisfaction of RAS specifications. Based on these conditions, we…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

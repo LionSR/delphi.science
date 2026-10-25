@@ -1,0 +1,22 @@
+{
+  "key": "2602.00872",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.00872",
+  "title": "Learning Heat-based Equations in Self-similar variables",
+  "authors": [
+    "Shihao Wang",
+    "Qipeng Qian",
+    "Jingquan Wang"
+  ],
+  "summary": "We study solution learning for heat-based equations in self-similar variables (SSV). We develop an SSV training framework compatible with standard neural-operator training. We instantiate this framework on the two-dimensional incompressible Navier-Stokes equations and the one-dimensional viscous Burgers equation, and perform controlled comparisons between models trained in physical coordinates and in the corresponding self-similar coordinates using two simple fully connected architectures (standard multilayer perceptrons and a factorized fully connected network). Across both systems and both…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math-ph"
+  ],
+  "published": "2026-01-31",
+  "updated": "2026-02-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

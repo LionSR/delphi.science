@@ -1,0 +1,20 @@
+{
+  "key": "2604.17060",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.17060",
+  "title": "On convergence rates of subgradient descent on semialgebraic functions",
+  "authors": [
+    "Evgenii Chzhen",
+    "Sholom Schechtman"
+  ],
+  "summary": "We analyze the constant step size subgradient method on nonsmooth, nonconvex functions. We identify geometric assumptions on the objective function under which i) its domain admits a partition (stratification) into smooth manifolds (strata) on which the function is smooth; ii) a global projection formula for Clarke subgradients holds; and iii) quantitative curvature bounds hold on each stratum. Under these conditions, we prove that the iterates of the subgradient method locally shadow a Riemannian gradient descent on nearby strata, which we use to measure stationarity. We introduce a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-18",
+  "updated": "2026-04-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2610.12357",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.12357",
+  "title": "Improved Local Leakage Resilience of Shamir Secret Sharing and Worst-Case Optimal Polynomial Intersection",
+  "authors": [
+    "Yihang Sun",
+    "Mary Wootters"
+  ],
+  "summary": "We study two problems: Local Leakage Resilience (LLR) for Shamir secret sharing, and worst-case Optimal Polynomial Intersection (OPI). Both problems concern polynomials $Q(X)$ of degree less than $k$, over a prime-order finite field $\\mathbb{F}_p$. In LLR for Shamir secret sharing, one asks how much one can learn about $Q(0)$ given a few bits leaked from each of $Q(α_1), \\ldots, Q(α_n)$, for distinct non-zero evaluation points $α_i \\in \\mathbb{F}_p$. In OPI, one is given input list $S_1, \\ldots, S_n \\subset \\mathbb{F}_p$, and wants to find a polynomial $Q(X)$ of degree less than $k$ so that…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR",
+    "cs.DM",
+    "cs.IT"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

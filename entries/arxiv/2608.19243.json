@@ -1,0 +1,20 @@
+{
+  "key": "2608.19243",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19243",
+  "title": "The HALO Engine: $\\mathcal{O}(1)$-Step Compilation and Localized String Rupture for Lattice Gauge Theories on Quantum Hardware",
+  "authors": [
+    "Abhiroop Gohar"
+  ],
+  "summary": "Simulating real-time dynamics in lattice gauge theories (LGTs) is severely constrained by the circuit depth overhead of standard fermion-to-qubit mappings, which scale linearly or quadratically with system size. To overcome this depth-scaling bottleneck, we introduce the Hardware-Aware Lattice Optimization (HALO) compiler, an architecture executing global time-evolution in an immutable $\\mathcal{O}(1)$ circuit depth per Trotter step. By natively mapping composite gauge links to hardware topologies, HALO achieves a $91.36\\%$ reduction in entangling gate overhead compared to unoptimized…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "hep-lat"
+  ],
+  "published": "2026-08-14",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

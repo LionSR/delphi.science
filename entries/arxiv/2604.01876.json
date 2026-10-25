@@ -1,0 +1,22 @@
+{
+  "key": "2604.01876",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.01876",
+  "title": "Topology-Hiding Connectivity-Assurance for QKD Inter-Networking",
+  "authors": [
+    "Margherita Cozzolino",
+    "Stephan Krenn",
+    "Thomas Lorünser"
+  ],
+  "summary": "While QKD ensures information-theoretic security at the link level, real-world deployments depend on trusted repeaters, creating potential vulnerabilities. In this paper, we thus introduce a topology-hiding connectivity assurance protocol to enhance trust in quantum key distribution (QKD) network infrastructures. Our protocol allows network providers to jointly prove the existence of a secure connection between endpoints without revealing internal topology details. By extending graph-signature techniques to support multi-graphs and hidden endpoints, we enable zero-knowledge proofs of…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "quant-ph"
+  ],
+  "published": "2026-04-02",
+  "updated": "2026-04-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

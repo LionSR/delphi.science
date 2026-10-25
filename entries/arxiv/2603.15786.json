@@ -1,0 +1,23 @@
+{
+  "key": "2603.15786",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.15786",
+  "title": "Physics-informed neural networks for solving saddle-point equations in strong-field physics with tailored fields",
+  "authors": [
+    "Jiakang Chen",
+    "Sufia Hashim",
+    "Carla Figueira de Morisson Faria"
+  ],
+  "summary": "We develop an unsupervised physics-informed neural network to solve saddle-point equations (SPEs) governing direct above-threshold ionization (ATI) within the strong-field approximation. This setting provides a well-understood testbed in which the saddle-point structure is known for tailored driving fields, enabling systematic validation of the proposed solver. The network is trained by minimizing the residual of the SPEs and requires only the definition of the driving-field shape and its parameters, such as intensity, carrier-envelope phase, ellipticity, and relative phase. We introduce a…",
+  "domain": "physics.atom-ph",
+  "tags": [
+    "physics.atom-ph",
+    "physics.comp-ph",
+    "quant-ph"
+  ],
+  "published": "2026-03-16",
+  "updated": "2026-03-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

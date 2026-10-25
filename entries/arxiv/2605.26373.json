@@ -1,0 +1,25 @@
+{
+  "key": "2605.26373",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.26373",
+  "title": "Online Learning on Hidden-Convex Losses via Algorithmic Equivalence: Optimal Regret, Geometric Barrier, and Bandit Feedback",
+  "authors": [
+    "Anas Barakat",
+    "Andreas Kontogiannis",
+    "Vasilis Pollatos",
+    "Ioannis Panageas",
+    "Antonios Varvitsiotis"
+  ],
+  "summary": "We study adversarial online learning with hidden-convex losses, i.e., nonconvex losses that become convex after a nonlinear reparameterization. Ghai, Lu and Hazan (2022) proved that, under geometric and smoothness assumptions, online gradient descent (OGD) on such nonconvex losses approximately simulates online mirror descent (OMD) on the underlying convex losses with a suitable regularizer, yielding $\\mathcal{O}(T^{2/3})$ regret. They left open whether the optimal $Θ(\\sqrt{T})$ regret from online convex optimization can be recovered in this hidden-convex setting. We answer this question…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-05-25",
+  "updated": "2026-05-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

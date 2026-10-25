@@ -1,0 +1,22 @@
+{
+  "key": "2607.03361",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.03361",
+  "title": "Nested-Loop Trajectory-Informed Variational Quantum Solver for Interior-Point OPF",
+  "authors": [
+    "Farshad Amani",
+    "Amin Kargarian"
+  ],
+  "summary": "Optimal power flow (OPF) solved by an interior-point method (IPM) requires repeatedly solving Newton linear systems. When variational quantum linear solvers (VQLS) are used, each IPM iteration involves an additional nested inner variational optimization loop, which can significantly slow the overall quantum-assisted IPM convergence. To address this challenge, this paper proposes a dual-level trainable quantum IPM framework for OPF that leverages early solver-generated trajectories rather than relying on single-point prediction. The key observation is that early IPM iterates provide…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-07-03",
+  "updated": "2026-07-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

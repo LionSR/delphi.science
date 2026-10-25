@@ -1,0 +1,22 @@
+{
+  "key": "2605.07128",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.07128",
+  "title": "Relating the Computational and Logical Difficulty of Solving ODEs: From Polynomial to Discontinuous Right-Hand Sides",
+  "authors": [
+    "Olivier Bournez",
+    "Alonso Núñez"
+  ],
+  "summary": "When a computer algebra system fails to solve an Ordinary Differential Equation, is this a limitation of its implementation, or a genuine computational barrier? Three traditions bear on the question. Modern computer algebra algorithms can be extremely efficient: Newton-type methods solve polynomial ODEs over $\\mathbb{Q}[[X]]$ in quasi-linear time. Analog models of computation has shown that polynomial ODEs and Turing machines are two presentations of the same phenomenon, with solution length acting as time and precision as space. Computable analysis shows that ODEs can be intrinsically hard…",
+  "domain": "cs.SC",
+  "tags": [
+    "cs.SC",
+    "cs.CC",
+    "math.LO"
+  ],
+  "published": "2026-05-08",
+  "updated": "2026-05-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

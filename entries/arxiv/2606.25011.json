@@ -1,0 +1,25 @@
+{
+  "key": "2606.25011",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.25011",
+  "title": "Fast and Parallel High-Rate STAR Architecture for Megaquop Quantum Simulation",
+  "authors": [
+    "Refaat Ismail",
+    "Milan Kornjača",
+    "Hong-Ye Hu",
+    "Nishad Maskara",
+    "Sheng-Tao Wang",
+    "Hengyun Zhou",
+    "Chen Zhao"
+  ],
+  "summary": "Fault-tolerant quantum simulation is approaching a phase where encoding overhead, logical Clifford operations, magic-state preparation, and rotation synthesis must be optimized together for efficient implementation. Space-Time efficient Analog Rotation (STAR) architectures reduce two of these costs by preparing small-angle rotation magic states directly, and the transversal STAR variant further lowers the Clifford overhead. Existing concrete implementations, however, largely inherit the low $O(1/d^2)$ encoding rate of the surface code, while high-rate codes have not yet been integrated into…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-23",
+  "updated": "2026-06-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

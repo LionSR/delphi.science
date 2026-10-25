@@ -1,0 +1,21 @@
+{
+  "key": "2607.16073",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.16073",
+  "title": "The $hp$-FEM does not suffer from the pollution effect for piecewise-smooth Helmholtz problems with Gevrey regularity at boundaries",
+  "authors": [
+    "Jeffrey Galkowski",
+    "Mostafa Meliani",
+    "Euan A. Spence"
+  ],
+  "summary": "We consider the $hp$-FEM applied to the Helmholtz scattering problem with wavenumber $k$, truncated with a perfectly-matched layer. The scatterer consists of a combination of Dirichlet, Neumann, and penetrable obstacles together with variable coefficients. Provided that the Helmholtz solution operator is polynomially bounded in $k$, all coefficients are piecewise smooth, all boundary surfaces are Gevrey and all coefficients restricted to boundary surfaces are Gevrey together with all their normal derivatives, we show that the $hp$-FEM is quasioptimal when $p\\geq 1+\\varepsilon \\log k$ and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-17",
+  "updated": "2026-07-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2610.18453",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.18453",
+  "title": "The forward-loop-erased ants walk",
+  "authors": [
+    "Wilfred Armfield",
+    "Cécile Mailler"
+  ],
+  "summary": "In this paper, we study a new variant of the ants walk: a model of reinforced random walks for the phenomenon of a colony of ants being able to find the shortest path between their nest and a source of food. In this model, the nest and the source of food are two distinguished nodes in a finite graph. The ants perform successive random walks on this graph, started at the nest and stopped when they first hit the food source; the transition probabilities of each random walk depends on the trajectories of the previous ants, through some edge-weights that represent the amount pheromones deposited…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

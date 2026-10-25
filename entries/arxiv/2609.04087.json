@@ -1,0 +1,26 @@
+{
+  "key": "2609.04087",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.04087",
+  "title": "Global Multi-Maturity SPX-VIX Calibration Beyond Markovian Stitching",
+  "authors": [
+    "Atithi Acharya",
+    "Charlie Che",
+    "Yue Sun",
+    "Brandon Augustino",
+    "Shouvanik Chakrabarti",
+    "Shree Hari Sureshbabu"
+  ],
+  "summary": "We develop a global martingale optimal transport framework for joint S&P 500 (SPX)-VIX smile calibration across multiple maturities, without the conditional independence that Markovian stitching imposes between months. We prove that exact local and global feasibility are equivalent, yet the stitched laws, which carry earlier months only through the current SPX level, can form a strict subset of the global ones, so adjacent smiles cannot identify the dependence across months. We show that relative entropy against the standard Markov reference selects the stitched law, so this dependence must…",
+  "domain": "q-fin.CP",
+  "tags": [
+    "q-fin.CP",
+    "math.OC",
+    "q-fin.MF"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2605.27410",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.27410",
+  "title": "Zero-shot Quantum Neural Architecture Search",
+  "authors": [
+    "Tung Dao",
+    "Son N. Tran",
+    "Huynh Thi Thanh Binh"
+  ],
+  "summary": "Variational Quantum Algorithms (VQAs) are a leading approach to exploiting near-term quantum hardware, leveraging parameterized quantum circuits and classical optimization to achieve advantage. Despite their promise, the practical deployment of VQAs is challenged by the difficulty of designing quantum circuit architectures that balance expressivity, trainability, and hardware constraints. Existing evolutionary-based quantum neural architecture search methods address these challenges but suffer from high computational costs due to repeated training of candidate circuits. In this work, we…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG",
+    "cs.NE"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-06-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2609.09930",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.09930",
+  "title": "The Global Asymptotic Stability Problem for Linear MPC Is Undecidable",
+  "authors": [
+    "Johan Löfberg"
+  ],
+  "summary": "We prove that deciding global asymptotic stability for constrained finite-horizon linear model predictive control is undecidable. This holds at horizon one with identity state, input, and terminal weights, unique optimizers, and global feasibility. Separate reductions cover predicted-state boxes, hard input boxes, and quadratically softened input boxes. A fourth reduction fixes the state and input dimensions to three and six. Hence undecidability is not caused by long horizons, growing dimensions, failures of recursive feasibility, or nonuniqueness.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

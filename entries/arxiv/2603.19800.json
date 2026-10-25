@@ -1,0 +1,22 @@
+{
+  "key": "2603.19800",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.19800",
+  "title": "The logarithmic law of sample correlation matrices",
+  "authors": [
+    "Yanpeng Li",
+    "Zhi Liu",
+    "Jiahui Xie",
+    "Wang Zhou"
+  ],
+  "summary": "Let $\\mathbf{R}$ be the sample correlation matrix constructed from $\\mathbf{X}\\in \\mathbb{R}^{p\\times n}$, whose entries are independent and identically distributed random variables with mean zero and tail probability condition $\\lim_{x\\rightarrow \\infty}x^3\\mathbb{P}(|ξ|>x)=0$. We derive the universal logarithmic law for $\\log \\det \\mathbf{R}$, \\begin{equation*} \\frac{\\log \\det \\mathbf{R}-(p-n+1/2)\\log (1-\\frac{p-1}{n})+p-\\frac{p}{n}}{\\sqrt{-2\\log (1-\\frac{p-1}{n})-2\\frac{p}{n}}}\\stackrel{d}{\\rightarrow} {N}(0,1), \\end{equation*} if $p\\le n$ as $p,n\\rightarrow \\infty$. Moreover, under the…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-03-20",
+  "updated": "2026-03-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

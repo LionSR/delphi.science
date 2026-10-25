@@ -1,0 +1,21 @@
+{
+  "key": "2609.37546",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.37546",
+  "title": "Numerical homogenization of a linear multiscale conservation law",
+  "authors": [
+    "Claude Le Bris",
+    "Frédéric Legoll",
+    "Giulia Merlini"
+  ],
+  "summary": "We address the numerical approximation of a scalar conservation law with a highly oscillatory flux, in the linear setting. Taking advantage of the intrinsic numerical viscosity of the scheme employed that yields a parabolic regularization of the original hyperbolic equation, we use homogenization theory to derive an effective equation which in turn we solve numerically. Our numerical experiments show the performance of the approach on the example of the Lax-Friedrichs scheme.",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

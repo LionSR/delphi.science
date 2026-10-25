@@ -1,0 +1,20 @@
+{
+  "key": "2603.00014",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.00014",
+  "title": "Lipschitz-Free Mirror Descent Methods for Relatively Strongly Convex Functions with/without Absolute and Relative Inexactness",
+  "authors": [
+    "Mohammad S. Alkousa",
+    "Fedor S. Stonyakin"
+  ],
+  "summary": "In this paper, we analyze the mirror descent algorithm for non-smooth optimization problems in which the objective function is relatively strongly convex, without relying on the standard Lipschitz continuity assumption commonly used in the literature. We provide convergence analyses for both exact and inexact subgradient information. Furthermore, through numerical experiments, we compare the derived bounds on the quality of the approximate solutions with existing estimates in the literature and demonstrate the effectiveness of the proposed results.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-30",
+  "updated": "2026-01-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

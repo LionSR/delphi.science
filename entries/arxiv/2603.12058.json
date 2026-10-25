@@ -1,0 +1,21 @@
+{
+  "key": "2603.12058",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.12058",
+  "title": "Low-Rank and Sparse Drift Estimation for High-Dimensional Lévy-Driven Ornstein--Uhlenbeck Processes",
+  "authors": [
+    "Marina Palaisti"
+  ],
+  "summary": "We study drift estimation for discretely observed high-dimensional Lévy-driven Ornstein--Uhlenbeck processes when the drift admits a low-rank-plus-sparse approximation. A localized, increment-truncated pseudo-likelihood is regularized by nuclear and entrywise $\\ell_1$ norms. A weighted joint-cone argument and restricted cancellation condition yield non-asymptotic Frobenius oracle inequalities for exact and approximate structure. The stochastic complexity is $rd+s\\log d$, with explicit discretization, truncation, and Lévy-regime sample-complexity terms. We derive operator- and infinity-norm…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-03-12",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

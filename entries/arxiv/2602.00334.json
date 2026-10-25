@@ -1,0 +1,23 @@
+{
+  "key": "2602.00334",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.00334",
+  "title": "Adaptive Momentum and Nonlinear Damping for Neural Network Training",
+  "authors": [
+    "Aikaterini Karoni",
+    "Rajit Rajpal",
+    "Benedict Leimkuhler",
+    "Gabriel Stoltz"
+  ],
+  "summary": "Momentum Stochastic Gradient Descent (mSGD) relies on a fixed momentum coefficient shared across all parameters, failing to account for the heterogeneous structure of modern loss landscapes. In this work, we adopt a continuous-time formulation to introduce individual, adaptive momentum coefficients regulated by the kinetic energy of each model parameter. This mechanism automatically adjusts to evolving training dynamics to maintain stability without sacrificing convergence speed. We demonstrate that this adaptive friction is inextricably linked to cubic damping, a suppression mechanism from…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-01-30",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

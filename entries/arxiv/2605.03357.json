@@ -1,0 +1,21 @@
+{
+  "key": "2605.03357",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.03357",
+  "title": "Population-Aware Imitation Learning in Mean-field Games with Common Noise",
+  "authors": [
+    "Grégoire Lambrecht",
+    "Mathieu Laurière"
+  ],
+  "summary": "Mean Field Games (MFGs) provide a powerful framework for modeling the collective behavior of large populations of interacting agents. In this paper, we address the problem of Imitation Learning (IL) in MFGs subject to common noise, where the population distribution evolves stochastically. This stochasticity compels agents to adopt population-aware policies to respond to aggregate shocks. We formulate two distinct learning objectives: recovering a Nash equilibrium and maximizing performance against an expert population. We investigate two imitation proxies: Behavioral Cloning (BC) and…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-06-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

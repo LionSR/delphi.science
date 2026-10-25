@@ -1,0 +1,21 @@
+{
+  "key": "2601.16859",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.16859",
+  "title": "On the transportation cost norm on finite metric graphs",
+  "authors": [
+    "Georges Skandalis",
+    "Alain Valette"
+  ],
+  "summary": "For a finite metric graph $X=(V,E,\\ell)$, where $V$ is endowed with the shortest path metric, we consider the transportation cost problem associated with the distance $d$ on $V$. Namely, for $f$ a function with total sum 0 on $V$, write $f=\\sum_{a,b\\in V}P(a,b)(δ_a-δ_b)$ where the transportation plan $P$ satisfies $P(a,b)\\geq 0$ for $(a,b)\\in V\\times V$. The cost of $P$ is $W(P):=\\sum_{a,b\\in V}P(a,b)d(a,b)$ and the transportation norm of $f$ is $\\|f\\|_{TC}=\\min_P W(P)$ where $P$ runs over all transportation plans for $f$. In this semi-survey paper, we give short proofs for the following…",
+  "domain": "math.MG",
+  "tags": [
+    "math.MG",
+    "math.FA"
+  ],
+  "published": "2026-01-23",
+  "updated": "2026-01-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

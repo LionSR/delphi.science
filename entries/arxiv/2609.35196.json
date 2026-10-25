@@ -1,0 +1,22 @@
+{
+  "key": "2609.35196",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.35196",
+  "title": "GAC-PINN: Geometry-Adaptive and Constraint-Enhanced Physics-Informed Neural Networks",
+  "authors": [
+    "Yanxin Zhang",
+    "Yong Zhang",
+    "Houbiao Li"
+  ],
+  "summary": "For systems with steep gradients, sharp interfaces, or severe spatio-temporal coupling, Physics-informed neural networks (PINNs) suffer from spectral bias, geometric inflexibility, and boundary constraint conflicts, which undermine accuracy and convergence. To overcome these issues, we propose a geometry-adaptive and constraint-enhanced PINN (GAC-PINN). The framework comprises four components: a gradient-driven adaptive grid mapping (AGM) for diffeomorphic point concentration with Jacobian regularization, an adaptive bandwidth hard-constraint ansatz with spatially-varying boundary transition…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.AI"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

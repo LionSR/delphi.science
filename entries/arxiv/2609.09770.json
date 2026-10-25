@@ -1,0 +1,21 @@
+{
+  "key": "2609.09770",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.09770",
+  "title": "Optimal dimension-dependent $\\ell^p$ and $\\ell^{1,\\infty}$ estimates of the second-order discrete Riesz transforms",
+  "authors": [
+    "Hanli Tang",
+    "Zewei Xu"
+  ],
+  "summary": "In this paper we investigate the optimal dimension-dependent estimates of the second-order discrete Riesz transforms \\[ R_{\\mathrm{dis}}^{(jk)}f(n) = c_d\\sum_{m\\in\\mathbb Z^d\\setminus\\{0\\}} \\frac{m_jm_k}{|m|^{d+2}}f(n-m), \\qquad c_d=\\frac{Γ\\left(\\frac{d+2}{2}\\right)}{π^{d/2}}. \\] For $j\\neq k$ and every fixed $1<p<\\infty$, we prove that \\[ \\|R_{\\mathrm{dis}}^{(jk)}\\|_{\\ell^p\\to\\ell^p} = c_d\\left[ \\frac{2}{2^{d/2}} + \\left(\\frac83+o(1)\\right)\\frac{d}{3^{d/2}} \\right] \\] and \\[ \\frac{2c_d}{2^{d/2}} \\leq \\|R_{\\mathrm{dis}}^{(jk)}\\|_{\\ell^1\\to\\ell^{1,\\infty}} \\leq c_d\\left[ \\frac{2}{2^{d/2}} +…",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA",
+    "math.AP"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

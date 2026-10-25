@@ -1,0 +1,21 @@
+{
+  "key": "2603.20751",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20751",
+  "title": "Local Convergence Analysis of ADMM for Nonconvex Composite Optimization",
+  "authors": [
+    "Xiyuan Xie",
+    "Lihua Yang",
+    "Qia li"
+  ],
+  "summary": "In this paper, we study the local convergence of the standard ADMM scheme for a class of nonconvex composite optimization problems motivated by applications in signal processing and machine learning. The problems are constrained by a closed convex set, while their objective is the sum of a continuously differentiable, possibly nonconvex, smooth term and a polyhedral convex nonsmooth term composed with a linear mapping. Motivated by recent works of Rockafellar, we first provide an elementary proof of a local strong convexity property of the Moreau envelope of polyhedral convex functions on…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-21",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

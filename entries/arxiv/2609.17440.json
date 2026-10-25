@@ -1,0 +1,22 @@
+{
+  "key": "2609.17440",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.17440",
+  "title": "Reduced-Space Multi-Fidelity Bayesian Optimization of Process Simulation Models",
+  "authors": [
+    "Niki Triantafyllou",
+    "Andrea Bernardi",
+    "Maria M. Papathanasiou"
+  ],
+  "summary": "Optimizing industrial process flowsheets is often computationally prohibitive due to the high cost of rigorous simulations and the curse of dimensionality inherent in complex design spaces. To address these challenges, we present a reduced-space multi-fidelity Bayesian optimization (RS-MFBO) framework designed for high-dimensional, expensive black-box functions. The approach integrates Global Sensitivity Analysis (GSA) for dimensionality reduction with a fidelity-augmented Gaussian process that captures correlations between low-cost approximations and expensive high-fidelity evaluations. A…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

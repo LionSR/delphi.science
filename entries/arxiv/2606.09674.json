@@ -1,0 +1,21 @@
+{
+  "key": "2606.09674",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.09674",
+  "title": "(Auto)formalization is supposed to be easy: Trellis process semantics for spelling out rigorous proofs",
+  "authors": [
+    "Wesley Pegden"
+  ],
+  "summary": "We present Trellis: an autoformalization system that leverages LLM agents in a deterministically constrained workflow to enforce incremental progress in Lean autoformalization tasks through iterative refinement of natural language proofs. Our approach is motivated by the common mathematician's notion of what it means to have a rigorous proof in the first place: namely, that it would be routine to elaborate any part of the proof in further detail. The result is a system which aims to achieve reliable autoformalization on a modest budget and with generalist agents, with specialization to…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.LO",
+    "math.CO"
+  ],
+  "published": "2026-06-08",
+  "updated": "2026-06-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

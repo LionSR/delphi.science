@@ -1,0 +1,21 @@
+{
+  "key": "2605.25677",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.25677",
+  "title": "Tensor train methods for high-dimensional nonlinear filtering problems with correlated noise",
+  "authors": [
+    "Yuhua Meng",
+    "Stephen S. -T. Yau",
+    "Zhiwen Zhang"
+  ],
+  "summary": "Nonlinear filtering with correlated noise leads to a Duncan-Mortensen-Zakai (DMZ) equation in the form of a stochastic partial differential equation (SPDE). Unlike the independent noise case, the presence of correlation prevents the classical invertible transformation that reduces the DMZ equation to a deterministic partial differential equation, requiring a direct numerical treatment of the SPDE. This paper develops a tensor train (TT) based framework for solving medium- to high-dimensional DMZ equations with correlated noise. Spatial discretization transforms the SPDE into a…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-25",
+  "updated": "2026-05-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

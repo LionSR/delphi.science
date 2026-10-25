@@ -1,0 +1,23 @@
+{
+  "key": "2604.16730",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.16730",
+  "title": "Multitask LQG Control: Performance and Generalization Bounds",
+  "authors": [
+    "Leonardo F. Toso",
+    "Kasra Fallah",
+    "Charis Stamouli",
+    "George J. Pappas",
+    "James Anderson"
+  ],
+  "summary": "We study multitask learning for stochastic and partially observed control systems, focusing on the linear quadratic Gaussian (LQG) problem. Our goal is to learn a common stabilizing controller that generalizes across a distribution of systems and objectives. To this end, we leverage a history-dependent lifting that recasts the multitask LQG problem into an equivalent high-dimensional multitask LQR problem, allowing for the analysis of policy gradient methods. We show that learning a common lifted controller induces a heterogeneity bias which we characterize via a \"bisimulation function\". We…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-17",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

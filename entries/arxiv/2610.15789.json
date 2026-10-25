@@ -1,0 +1,24 @@
+{
+  "key": "2610.15789",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.15789",
+  "title": "Inference on the Value of Policy Improvement in Adaptive Experiments",
+  "authors": [
+    "Justin Whitehouse",
+    "Emma Brunskill",
+    "Vasilis Syrgkanis"
+  ],
+  "summary": "In this paper, we develop an asymptotically normal estimator for the value of policy improvement (VPI) under adaptively collected data. This value, which is defined as the gap between the value of the best treatment policy in a class and that of a baseline policy, gauges whether or not it is worth deploying a personalized treatment policy. Building an estimator for the VPI is naturally more difficult than estimating the value of a fixed policy. This is because, in addition to contending with the correlated data and decaying propensities associated with adaptive experiments, any estimator…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "econ.EM",
+    "math.ST"
+  ],
+  "published": "2026-10-11",
+  "updated": "2026-10-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

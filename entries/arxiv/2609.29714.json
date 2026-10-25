@@ -1,0 +1,25 @@
+{
+  "key": "2609.29714",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.29714",
+  "title": "RAPTOR: RAndom-projection Physics-informed Transient sOlveR",
+  "authors": [
+    "Petros Ellinas",
+    "Benjamin Vilmann",
+    "Spyros Chatzivasileiadis",
+    "Johanna Vorwerk"
+  ],
+  "summary": "The complexity of time-domain simulation of modern power systems has increased significantly because converter-based resources introduce control dynamics that must be simulated alongside slower system-level and fast electromagnetic dynamics. The resulting wide range of timescales may force classical time-domain solvers to use small timesteps, complicate the solution of nonlinear equations at each timestep, and reduce solver reliability under strongly nonlinear and multi-timescale transient conditions. This paper introduces RAPTOR, a first-of-its-kind time-domain simulation framework for…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.LG",
+    "cs.MS",
+    "math.NA"
+  ],
+  "published": "2026-08-31",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

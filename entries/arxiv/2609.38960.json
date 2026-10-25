@@ -1,0 +1,23 @@
+{
+  "key": "2609.38960",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38960",
+  "title": "Fast and Scalable Multi-Agent Distribution Matching via Partitioned Optimal Transport",
+  "authors": [
+    "Kooktae Lee",
+    "Ruchika Singh"
+  ],
+  "summary": "This paper presents a scalable optimal-transport-based framework for terminal distribution matching in multi-agent systems. While optimal transport provides a natural way to measure distributional mismatch and assign agents to a desired spatial distribution, global discrete transport can become computationally expensive for large-scale systems. We address this bottleneck by partitioning agents and target samples into spatially corresponding blocks and solving smaller local transport problems. Under a mass-balance condition, the resulting restricted coupling remains feasible for the global…",
+  "domain": "cs.MA",
+  "tags": [
+    "cs.MA",
+    "cs.RO",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

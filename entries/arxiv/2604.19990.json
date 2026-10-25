@@ -1,0 +1,20 @@
+{
+  "key": "2604.19990",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.19990",
+  "title": "Reinforcement Learning for Robust Calibration of Multi-Qudit Quantum Gates",
+  "authors": [
+    "Amine Jaouadi",
+    "Sahel Ashhab"
+  ],
+  "summary": "Higher-dimensional quantum systems, such as qudits, offer architectural and algorithmic advantages over qubits, but their increased spectral crowding and limited controllability render high-fidelity quantum gates particularly challenging. We propose a hybrid optimization framework that integrates optimal control theory methods with contextual deep reinforcement learning to achieve robust controlled-phase gates on two qutrits. Optimal control is first used to design high-fidelity control pulses for a nominal system model. Reinforcement learning is then employed as a calibration stage that…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-21",
+  "updated": "2026-08-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2603.03259",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.03259",
+  "title": "Physics-informed post-processing of stabilized finite element solutions for transient convection-dominated problems",
+  "authors": [
+    "Süleyman Cengizci",
+    "Ömür Uğur",
+    "Srinivasan Natesan"
+  ],
+  "summary": "The numerical simulation of convection-dominated transient transport phenomena poses significant computational challenges due to sharp gradients and propagating fronts across the spatiotemporal domain. Classical discretization methods often generate spurious oscillations, requiring advanced stabilization techniques. However, even stabilized finite element methods may require additional regularization to accurately resolve localized steep layers. On the other hand, standalone physics-informed neural networks (PINNs) struggle to capture sharp solution structures in convection-dominated regimes…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-03-03",
+  "updated": "2026-03-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

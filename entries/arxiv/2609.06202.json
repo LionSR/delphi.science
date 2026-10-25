@@ -1,0 +1,22 @@
+{
+  "key": "2609.06202",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.06202",
+  "title": "Weak Convexity and Proximal Bundle Methods for Nonsmooth Policy Optimization in Robust Control",
+  "authors": [
+    "Yuto Watanabe",
+    "Feng-Yi Liao",
+    "Yang Zheng"
+  ],
+  "summary": "We study policy optimization for discrete-time robust $\\mathcal{H}_\\infty$ control with static output-feedback, and present the first feasibility-preserving algorithm with a deterministic, non-asymptotic complexity guarantee. This problem naturally leads to a nonsmooth and nonconvex optimization over the set of stabilizing feedback gains. We first establish several structural properties of the $\\mathcal{H}_\\infty$ cost. In particular, we show that the cost is weakly convex on every convex subset of a sublevel set. For the state-feedback case, we further establish a weak Polyak--Łojasiewicz…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-09-05",
+  "updated": "2026-09-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

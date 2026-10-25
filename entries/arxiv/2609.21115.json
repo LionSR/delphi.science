@@ -1,0 +1,24 @@
+{
+  "key": "2609.21115",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.21115",
+  "title": "Hybrid quantum-classical attention for histopathology-based molecular profiling in data-limited cancers",
+  "authors": [
+    "Kahn Rhrissorrakrai",
+    "Aritra Bose",
+    "Aldo Guzman-Saenz",
+    "Filippo Utro",
+    "Laxmi Parida"
+  ],
+  "summary": "Molecular profiling from routine histopathology could expand access to precision oncology when sequencing is unavailable, tissue is limited, or training cohorts are small. We developed a hybrid quantum-classical strategy that replaces softmax attention in a transformer for histopathology-based gene expression prediction with a quantum-derived doubly stochastic matrix (QDSM). Across 29 cancer cohorts from The Cancer Genome Atlas and an independent pancreatic cancer cohort from the Clinical Proteomic Tumor Analysis Consortium, QDSM attention produced selective gains, with the largest relative…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "q-bio.GN"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2604.00861",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00861",
+  "title": "Error Estimates for Nitsche's Method on Approximate Domains",
+  "authors": [
+    "Mats G. Larson",
+    "Karl Larsson",
+    "Shantiram Mahata"
+  ],
+  "summary": "We derive a priori error estimates for Nitsche's method applied to elliptic problems on approximate domains. Such approximations arise, for example, in unfitted finite element methods, data-driven simulations, and evolving domain problems, where the computational domain does not coincide exactly with the physical one. We quantify geometric errors in terms of boundary location and normal perturbations and carry out the analysis in an abstract CutFEM framework under standard stability assumptions. In the energy norm, we obtain an estimate exhibiting an $h^{-1/2}$ amplification of the boundary…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-06-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

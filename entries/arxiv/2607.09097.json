@@ -1,0 +1,22 @@
+{
+  "key": "2607.09097",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.09097",
+  "title": "Solving Stochastic Fixed-Point Equations with High Probability",
+  "authors": [
+    "Jelena Diakonikolas"
+  ],
+  "summary": "We study stochastic fixed-point equations $\\mathbf{T}(\\mathbf{x}) = \\mathbf{x}$ over normed spaces $(\\mathcal{E}, \\|\\cdot\\|)$, where the operator $\\mathbf{T}$ is nonexpansive or contractive and is accessed only through unbiased stochastic evaluations with bounded second central moment. Given $ε> 0, δ\\in (0, 1)$, the goal is to output $\\mathbf{x} \\in \\mathcal{E}$ such that $\\|\\mathbf{T}(\\mathbf{x}) - \\mathbf{x}\\| \\leq ε$ with probability at least $1-δ$. We introduce VR-GHAL, a variance-reduced gradual Halpern method for quadratically smoothable Banach spaces. The key algorithmic ingredient is…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DS",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-07-10",
+  "updated": "2026-07-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

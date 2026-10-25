@@ -1,0 +1,20 @@
+{
+  "key": "2604.25962",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.25962",
+  "title": "Coherent Rollout Oracles for Finite-Horizon Sequential Decision Problems",
+  "authors": [
+    "Nishant Shukla"
+  ],
+  "summary": "Coherent quantum rollout for sequential decision problems requires a unitary simulator: randomness must live in explicit quantum registers, and basis-state selectors must be mapped to actions reversibly. With branch-dependent valid actions, this mapping is totalized coherent rank-select over an entangled $N$-bit validity mask: return the position of the $r$-th valid bit, or a sentinel if $r$ is out of range. We give the first reversible-circuit complexity analysis of this primitive. For selector width $w = \\lceil \\log_2(N+1) \\rceil$, rank-select admits an $O(Nw)$-gate low-ancilla…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS"
+  ],
+  "published": "2026-04-28",
+  "updated": "2026-04-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

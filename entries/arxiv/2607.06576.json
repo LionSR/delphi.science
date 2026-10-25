@@ -1,0 +1,19 @@
+{
+  "key": "2607.06576",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06576",
+  "title": "Realized Rank Certificates for Matchstick Frameworks and Insertion Edges",
+  "authors": [
+    "Mike Winkler"
+  ],
+  "summary": "We give an exact, checkable rank-certificate method for realized planar unit-distance frameworks. The method is motivated by Vogel's computations for matchstick graphs and by the insertion-edge tests used in the Matchstick Graphs Calculator. Its algebraic core is independent of geometry. A singular square matrix $M$ is replaced by a sparse perturbation $B=M+UCV^T$. If $B$ is nonsingular and the inverse satisfies $V^TB^{-1}U=C^{-1}$, then the columns of $B^{-1}U$ and the rows of $V^TB^{-1}$ form bases of the right and left kernels of $M$, and the rank defect of $M$ is certified. Applied to…",
+  "domain": "math.GM",
+  "tags": [
+    "math.GM"
+  ],
+  "published": "2026-07-02",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

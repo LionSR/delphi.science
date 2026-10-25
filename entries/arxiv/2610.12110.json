@@ -1,0 +1,23 @@
+{
+  "key": "2610.12110",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.12110",
+  "title": "Adaptive dynamic programming using Lyapunov function constraints",
+  "authors": [
+    "Thomas Göhrt",
+    "Pavel Osinenko",
+    "Stefan Streif"
+  ],
+  "summary": "This work is concerned with a stabilizing adaptive dynamic programming (ADP) approach to approximate solution of a given infinite-horizon optimal control problem. Since the latter problem cannot, in general, be solved exactly, a parametrized function approximator for the infinite-horizon cost function is introduced in ADP (so called ``critic''). This critic is used to adapt the parameters of the function approximator. The so called ``actor'' in turn derives the optimal input of the system. It is a notoriously hard problem to guarantee closed-loop stability of ADP due to the use of…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY",
+    "math.DS"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

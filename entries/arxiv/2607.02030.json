@@ -1,0 +1,23 @@
+{
+  "key": "2607.02030",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.02030",
+  "title": "Numerical analysis of the Biot equations coupled to frictional contact mechanics",
+  "authors": [
+    "Marius Nevland",
+    "Kundan Kumar",
+    "Inga Berre",
+    "Jakub Wiktor Both",
+    "Eirik Keilegavlen"
+  ],
+  "summary": "We consider a mathematical model of a poro-visco-elastic medium subject to frictional contact with a rigid obstacle, and study its numerical approximation. This model couples the Biot equations and contact conditions in the form of normal compliance and Coulomb friction. The resulting variational problem consists of a linear partial differential equation coupled to a nonlinear variational inequality. We propose and analyze a fully discrete numerical scheme for this problem, using conformal finite elements in space and the implicit Euler method in time. Existence and uniqueness of the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-02",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

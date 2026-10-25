@@ -1,0 +1,21 @@
+{
+  "key": "2609.25660",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.25660",
+  "title": "Schrödingerization for quantum linear systems problems",
+  "authors": [
+    "Yin Yang",
+    "Yue Yu",
+    "Long Zhang"
+  ],
+  "summary": "We develop a Schrödingerization algorithm for quantum linear systems problems in two higher dimensions. The earlier LC-Schrödingerization approach represents the solution as a time integral of a homogeneous convection response and implements this integral by a linear combination of unitaries (LCU) over evolution times. We instead use Duhamel's principle to incorporate the integral into an inhomogeneous convection equation with zero initial data. Fourier projection in the convection variable and Schrödingerization in a second auxiliary variable then realize the solution without the separate…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-22",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

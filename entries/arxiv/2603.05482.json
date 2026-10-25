@@ -1,0 +1,22 @@
+{
+  "key": "2603.05482",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.05482",
+  "title": "Finding Short Paths on Simple Polytopes",
+  "authors": [
+    "Alexander E. Black",
+    "Raphael Steiner"
+  ],
+  "summary": "We prove that computing a shortest monotone path to the optimum of a linear program over a simple polytope is NP-hard, thus resolving a 2022 open question of De Loera, Kafer, and Sanità. As a consequence, finding a shortest sequence of pivots to an optimal basis with the simplex method is NP-hard. In fact, we show this is NP-hard already for fractional knapsack polytopes. By applying an additional polyhedral construction, we show that computing the diameter of a simple polytope is NP-hard, resolving a 2003 open problem by Kaibel and Pfetsch. Finally, on the positive side we show that every…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO",
+    "math.OC"
+  ],
+  "published": "2026-03-05",
+  "updated": "2026-04-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

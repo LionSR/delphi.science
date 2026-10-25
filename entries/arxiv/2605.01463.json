@@ -1,0 +1,22 @@
+{
+  "key": "2605.01463",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.01463",
+  "title": "A Neural Latent Dynamics Approach for Solving Inverse Problems in Cardiac Electrophysiology",
+  "authors": [
+    "Edoardo Centofanti",
+    "Giovanni Ziarelli",
+    "Simone Scacchi",
+    "Luca Franco Pavarino"
+  ],
+  "summary": "Solving inverse problems in cardiac electrophysiology consists in the recovery of physiological parameters from surface electrocardiogram (ECG) measurements, a task which is often computationally unfeasible due to the severe ill-posedness and the prohibitive computational complexity of PDE-constrained optimization. In this work, we introduce a data-driven framework leveraging Latent Dynamics Networks (LDNets) to construct efficient surrogate models of the forward operator. By mapping low-dimensional parameters, representing ectopic activation sites or ischemic region descriptors, to the ECG…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-02",
+  "updated": "2026-05-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

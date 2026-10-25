@@ -1,0 +1,22 @@
+{
+  "key": "2607.28866",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.28866",
+  "title": "Generative IQP Circuit Learning with Physics-Informed Latent Initialization",
+  "authors": [
+    "Chen-Yu Liu",
+    "Leonardo Placidi",
+    "Marco Ballarin",
+    "Enrico Rinaldi"
+  ],
+  "summary": "Quantum generative learning based on instantaneous quantum polynomial-time (IQP) circuits can benefit from efficient classical training strategies. A recent latent adaptation framework for IQP-based generative modeling transfers shared circuit parameters across instances of the same task with different hyperparameters while adapting only a low-dimensional latent variable for each new instance. However, existing approaches initialize this latent variable randomly, which can limit optimization efficiency and performance. In this work, we introduce a physics-informed latent initialization…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-30",
+  "updated": "2026-07-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

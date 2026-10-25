@@ -1,0 +1,21 @@
+{
+  "key": "2602.13729",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.13729",
+  "title": "Semi-supervised linear regression with missing covariates",
+  "authors": [
+    "Benedict M. Risebrow",
+    "Thomas B. Berrett"
+  ],
+  "summary": "Missing values in datasets are common in applied statistics. For regression problems, theoretical work thus far has largely considered the issue of missing covariates as distinct from missing responses. However, in practice, many datasets have both forms of missingness. Motivated by this gap, we study linear regression with a labelled dataset containing missing covariates, potentially alongside an unlabelled dataset. We consider both structured (blockwise-missing) and unstructured missingness patterns, along with sparse and non-sparse regression parameters. For the non-sparse case, we…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-02-14",
+  "updated": "2026-02-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

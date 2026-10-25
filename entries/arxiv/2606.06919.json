@@ -1,0 +1,24 @@
+{
+  "key": "2606.06919",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.06919",
+  "title": "Scalable Quantum Algorithms for Gutzwiller Projection",
+  "authors": [
+    "Byungmin Kang",
+    "Hyunwoong Kwon",
+    "Vito W. Scarola",
+    "Kwon Park"
+  ],
+  "summary": "Quantum simulation requires highly accurate input states. Gutzwiller-projected Bardeen-Cooper-Schrieffer (BCS) states provide physically motivated input states for solving strongly correlated lattice models, but their preparation on a quantum computer is hindered by the non-trivial nature of the Gutzwiller projection. We construct scalable quantum algorithms for this task by combining a circuit construction for arbitrary BCS states with the amplitude amplification for Gutzwiller projection (AAGP) procedure. AAGP yields a quadratic reduction in the number of projection queries compared with…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.str-el",
+    "cond-mat.supr-con"
+  ],
+  "published": "2026-06-05",
+  "updated": "2026-06-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

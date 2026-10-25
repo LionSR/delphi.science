@@ -1,0 +1,21 @@
+{
+  "key": "2602.09833",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.09833",
+  "title": "Density estimation from batched broken random samples",
+  "authors": [
+    "Hancheng Bi",
+    "Bernhard Schmitzer",
+    "Thilo D. Stier"
+  ],
+  "summary": "The broken random sample problem was first introduced by DeGroot, Feder, and Gole (1971, Ann. Math. Statist.): in each observation (batch), a random sample of $M$ i.i.d. point pairs $ ((X_i,Y_i))_{i=1}^M$ is drawn from a joint distribution with density $p(x,y)$, but we can observe only the unordered multisets $(X_i)_{i=1}^M$ and $(Y_i)_{i=1}^M$ separately; that is, the pairing information is lost. For large $M$, inferring $p$ from a single observation has been shown to be essentially impossible. In this paper, we propose a parametric method based on a pseudo-log-likelihood to estimate $p$…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-02-10",
+  "updated": "2026-02-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2605.29964",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.29964",
+  "title": "A Neutral-Atom Quantum Compiler with Application-Specific Layout and Hub-Assisted Shuttling",
+  "authors": [
+    "Takahiko Satoh",
+    "Takaharu Yoshida"
+  ],
+  "summary": "Compiling arbitrary-connectivity NISQ circuits onto monolithic single-zone neutral-atom devices is constrained by a finite interaction range and a minimum separation between simultaneously addressable sites. Under the minimum-separation constraint, the SWAP-only configuration of our pipeline does not return a schedule within a practical time budget on a range of circuits, including circuits as small as nine qubits. We address this with hub traps, a small number of dynamically placed empty traps that serve as transit waypoints, together with a per-gate rule that chooses between SWAP-based…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-05-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2604.15161",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.15161",
+  "title": "A Robust Optimization Approach for Scheduling with Uncertain Start-Time Dependent Costs",
+  "authors": [
+    "Sofía Rodríguez-Ballesteros",
+    "Javier Alcaraz",
+    "Laura Anton-Sanchez",
+    "Marc Goerigk",
+    "Dorothee Henke"
+  ],
+  "summary": "In this work, we study a single-machine scheduling problem that aims at minimizing the total cost of a schedule subject to start-time dependent costs. This framework naturally captures scenarios where costs fluctuate throughout the day, such as time-varying energy or labor prices. To model more realistic scenarios, we assume that these costs lie within a budgeted uncertainty set and propose a two-stage robust optimization approach. In a first stage, the order in which activities should be executed is decided. After a cost scenario has been revealed, the starting times for each activity are…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-16",
+  "updated": "2026-04-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

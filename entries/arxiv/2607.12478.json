@@ -1,0 +1,20 @@
+{
+  "key": "2607.12478",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12478",
+  "title": "Extension of the safeguarding stepsize interval in Adaptive Gradient Descent",
+  "authors": [
+    "Saneatsu Kagawa",
+    "Nobuo Yamashita"
+  ],
+  "summary": "In this paper, inspired by the idea of Adaptive Gradient Descent (AdGD) by Malitsky and Mishchenko, we propose a method that adaptively provides a stepsize interval, which represents the condition for stepsizes ensuring global convergence. By projecting the Barzilai Borwein stepsize onto this interval, we can ensure global convergence and expect further acceleration of convergence. Furthermore, we propose enlarging the stepsize interval obtained by AdGD and show that global convergence can be guaranteed within this enlarged stepsize interval. This extension of the interval enables us to…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

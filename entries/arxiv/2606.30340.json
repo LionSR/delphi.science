@@ -1,0 +1,22 @@
+{
+  "key": "2606.30340",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.30340",
+  "title": "Adjoint-Based Bayesian Uncertainty Quantification for PDE-Constrained Inverse Problems with Application to Semiconductor Imaging",
+  "authors": [
+    "Hassan Yazdanian",
+    "Leila Taghizadeh",
+    "Babak Maboudi Afkham"
+  ],
+  "summary": "We formulate a Bayesian framework for reconstructing doping profiles in pn-junction semiconductor devices from boundary flux measurements. The unknown doping field is modeled as a piecewise-constant function characterized by an unknown interface and two plateau concentrations, leading to a nonlinear ill-posed inverse problem governed by a Poisson-Boltzmann-type equation. To represent this structure while enabling efficient gradient-based inference, we introduce a pushforward prior constructed by mapping a latent Gaussian field with Matérn-type covariance through a sigmoid transformation. The…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.AP"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-07-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

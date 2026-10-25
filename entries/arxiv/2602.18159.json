@@ -1,0 +1,20 @@
+{
+  "key": "2602.18159",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.18159",
+  "title": "Theoretical insights on the residual transformation from bi-conjugate gradient into bi-conjugate residual via a smoothing scheme",
+  "authors": [
+    "Arisa Kawase",
+    "Kensuke Aihara"
+  ],
+  "summary": "Bi-conjugate gradient (Bi-CG) and bi-conjugate residual (Bi-CR) methods are underlying iterative solvers for linear systems with nonsymmetric matrices. Residual smoothing is a standard technique for obtaining smooth convergence behavior of residual norms; additionally, it represents the transformation between iterative methods. For example, the residuals of the CR method can be obtained by applying a smoothing scheme to those of the CG method for symmetric linear systems. Based on this relationship, the transformation from Bi-CG residuals to Bi-CR residuals using a smoothing scheme was…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-20",
+  "updated": "2026-02-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

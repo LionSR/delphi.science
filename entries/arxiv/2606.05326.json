@@ -1,0 +1,23 @@
+{
+  "key": "2606.05326",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.05326",
+  "title": "Mean--Fluctuation Dynamics at the Edge of Stability",
+  "authors": [
+    "Antonin Chodron de Courcel"
+  ],
+  "summary": "We study the dynamics of gradient descent in the Edge of Stability regime, where the learning rate is large enough to induce persistent oscillations in the trajectory, which has been linked to better generalization performance. We introduce the mean--fluctuation dynamics, a tractable continuous-time model coupling the window-averaged trajectory to its fluctuation covariance. Among our contributions, we rigorously derive this model from gradient descent in a sharp-valley framework, characterize its stationary states and their linear stability, and establish precise connections with other…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI",
+    "cs.LG",
+    "math-ph",
+    "math.AP"
+  ],
+  "published": "2026-06-03",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2604.24012",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.24012",
+  "title": "FedSLoP: Memory-Efficient Federated Learning with Low-Rank Gradient Projection",
+  "authors": [
+    "Yutong He",
+    "Zhengyang Huang",
+    "Jiahe Geng",
+    "Kun Yuan"
+  ],
+  "summary": "Federated learning enables a population of clients to collaboratively train machine learning models without exchanging their raw data, but standard algorithms such as FedAvg suffer from slow convergence and high communication and memory costs in heterogeneous, resource-constrained environments. We introduce FedSLoP, a federated optimization algorithm that combines stochastic low-rank subspace projections of gradients, thereby reducing the dimension of communicated and stored updates while preserving optimization progress. On the theoretical side, we develop a detailed nonconvex convergence…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-06-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

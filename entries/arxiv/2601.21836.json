@@ -1,0 +1,20 @@
+{
+  "key": "2601.21836",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.21836",
+  "title": "ZOBA: An Efficient Single-loop Zeroth-order Bilevel Optimization Algorithm",
+  "authors": [
+    "Marco Rando",
+    "Samuel Vaiter"
+  ],
+  "summary": "Bilevel optimization problems consist of minimizing a value function whose evaluation depends on the solution of an inner optimization problem. These problems are typically tackled using first-order methods that require computing the gradient of the value function ({\\it the hypergradient}). In several practical settings, however, first-order information is unavailable ({\\it zeroth-order setting}), rendering these methods inapplicable. Finite-difference methods provide an alternative by approximating hypergradients using function evaluations along a set of directions. Nevertheless, such…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-01-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

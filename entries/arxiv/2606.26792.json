@@ -1,0 +1,20 @@
+{
+  "key": "2606.26792",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.26792",
+  "title": "Second-order Methods for Multiobjective Composite Optimization: Preconditioning Strategies, Subspace Variants and Inexact Solutions",
+  "authors": [
+    "Jian Chen",
+    "Xinmin Yang"
+  ],
+  "summary": "Multiobjective composite optimization problems arise in sparse regularization, constrained multiobjective models, and multi-task learning, but their numerical solution remains challenging when the smooth components are ill-conditioned. Proximal gradient methods are inexpensive per iteration but may converge slowly, while proximal Newton and quasi-Newton methods exploit curvature information at the cost of evaluating expensive metric proximal mappings. To address these issues, we propose a preconditioned proximal Barzilai--Borwein method for multiobjective composite optimization. The method…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-25",
+  "updated": "2026-06-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2608.03439",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.03439",
+  "title": "Quality Control Algorithms for Pattern Counting",
+  "authors": [
+    "Cassandra Marcussen",
+    "Ronitt Rubinfeld",
+    "Madhu Sudan"
+  ],
+  "summary": "In recent work, Marcussen, Rubinfeld, and Sudan introduced the notion of quality control problems, which aim to capture the task of determining if a given input is truly random. Formally, their goal is to accept typical inputs from the specified distribution while rejecting every input whose value of a specified statistic is far from the distributional baseline. This captures the empirical practice of using specified statistics as a proxy for the quality of randomness. Empirical algorithms, however, have not exploited the asymmetry in the definition of quality control problems, which require…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.LG",
+    "math.CO",
+    "math.PR"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

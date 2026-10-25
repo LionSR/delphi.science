@@ -1,0 +1,23 @@
+{
+  "key": "2604.07033",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.07033",
+  "title": "A Locking-free and Loosely Coupled Robin-Robin Scheme for Fluid-Poroelasticity Interaction",
+  "authors": [
+    "Wenlong He",
+    "Thomas Wick",
+    "Xiaohe Yue",
+    "Jiwei Zhang",
+    "Haibiao Zheng"
+  ],
+  "summary": "We study a fluid-poroelasticity interaction (FPSI) problem coupling the unsteady Stokes equations with the fully dynamic Biot system. A major challenge in such problems is to design partitioned schemes that remain robust in locking-related parameter regimes while preserving the physical interface coupling structure.To address this issue, we introduce two auxiliary variables and reformulate the Biot system as a four-field problem consisting of a dynamic Stokes-like system coupled with a diffusion equation. Crucially, this reformulation preserves the original interface conditions. Based on…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-08",
+  "updated": "2026-04-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

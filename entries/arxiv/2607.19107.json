@@ -1,0 +1,21 @@
+{
+  "key": "2607.19107",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.19107",
+  "title": "Space-time tensor-product finite element methods for parabolic problems",
+  "authors": [
+    "Richard Löscher",
+    "Michael Reichelt",
+    "Olaf Steinbach"
+  ],
+  "summary": "We study space-time Galerkin--Petrov formulations for parabolic evolution problems and their relation to classical implicit time-stepping schemes. Although such schemes are stable in the usual time-stepping sense, their interpretation as space-time operator equations may lead to conditional stability, with constants depending on the relation between temporal and spatial mesh sizes. We revisit this phenomenon for the continuous Galerkin method of Aziz and Monk, which yields the Crank--Nicolson scheme in the lowest-order case, and provide a detailed space-time error analysis for solutions of…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-21",
+  "updated": "2026-07-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

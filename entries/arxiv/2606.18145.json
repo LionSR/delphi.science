@@ -1,0 +1,22 @@
+{
+  "key": "2606.18145",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.18145",
+  "title": "A polynomial-time approximation scheme for minimum-weight decoding of topological codes",
+  "authors": [
+    "Shouzhen Gu",
+    "Lily Wang",
+    "Aleksander Kubica"
+  ],
+  "summary": "Two-dimensional topological translationally invariant (2D TTI) stabilizer codes lie at the heart of fault-tolerant quantum computation, but using them requires solving the decoding problem. Minimum-weight decoding of these codes was recently shown to be NP-hard, even in basic settings, such as the color code with Pauli $Z$ errors and the toric code with Pauli $X$, $Y$ and $Z$ errors. Here, we prove that minimum-weight decoding of 2D TTI codes nonetheless admits a polynomial-time approximation scheme (PTAS), i.e., for any constant $\\varepsilon>0$, a recovery operator of weight within a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

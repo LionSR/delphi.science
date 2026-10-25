@@ -1,0 +1,23 @@
+{
+  "key": "2606.14132",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.14132",
+  "title": "HSCI: Neyman-Orthogonal Causal Inference under High-Dimensional Proportional Hazards",
+  "authors": [
+    "Yingying Fan",
+    "Lan Gao",
+    "Daoji Li",
+    "Jinchi Lv"
+  ],
+  "summary": "Valid treatment effect inference in survival studies is fundamental yet challenging when the treatment assignments and outcomes are confounded by many baseline covariates. To this end, in this paper we propose a high-dimensional survival causal inference (HSCI) framework that delivers valid inference under a sparse high-dimensional Cox proportional hazards outcome model and a high-dimensional logistic propensity score working model. To mitigate the nuisance estimation bias, we develop a Neyman near-orthogonal score for the treatment effect and implement it with cross-fitting. Under doubly…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-06-12",
+  "updated": "2026-06-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

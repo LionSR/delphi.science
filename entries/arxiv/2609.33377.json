@@ -1,0 +1,21 @@
+{
+  "key": "2609.33377",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.33377",
+  "title": "Optimal Transport Dropout for Structured Predictive Uncertainty",
+  "authors": [
+    "Giacomo Lorenzon",
+    "Francesco Regazzoni"
+  ],
+  "summary": "Deterministic neural networks and neural operators provide point predictions with no intrinsic measure of reliability. Yet, predictive uncertainty may stem from irreducible outcome variability, finite data, or limitations of the chosen model class. Monte Carlo dropout offers a computationally convenient way to construct a predictive distribution through stochastic feature masking, without training multiple independent networks or explicitly inferring a posterior over model parameters. However, its perturbation law is largely prescribed a priori and typically factorised across latent…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-09-27",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2609.03628",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.03628",
+  "title": "Random Garbage Separates XOR from Forward-Only Queries",
+  "authors": [
+    "Khaled Elbassioni",
+    "Rishikesh Gajjala",
+    "Saurabh Ray"
+  ],
+  "summary": "We give exponential quantum query separations between the standard XOR interface and two forward-only interfaces that supply neither an adjoint nor an inverse oracle. Let $X=\\F_2^n$, $N=|X|$, and $f_{h,r}(x)=(h(x),x,r_x)$, where $h:X\\to X$ is promised to be either a permutation or a Simon two-to-one function, and $r$ is a fixed table of $n$-bit tags, unrestricted by the promise and reused on every query. The resulting problem is solvable with at most $n+2$ standard XOR queries, but has forward-erasing query complexity $Θ(\\sqrt N)$. This answers affirmatively open question 11 in [Scott…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "quant-ph"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

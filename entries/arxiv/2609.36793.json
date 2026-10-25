@@ -1,0 +1,20 @@
+{
+  "key": "2609.36793",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.36793",
+  "title": "Hard-Trace First-Order Residual Learning for Coupled Stokes-Brinkman-Darcy Flow",
+  "authors": [
+    "Zefeng Liu",
+    "Hongxing Rui"
+  ],
+  "summary": "Stokes-Brinkman-Darcy (SBD) models connect free flow and porous flow through a Brinkman layer of finite thickness. The proposed method for solving these coupled equations consists of a mixed first-order formulation, shared interface traces and hard traction constraints, and a pressure correction based on boundary mass balance. Independent stresses, Darcy flux and pressure-gradient auxiliaries avoid second derivatives of network outputs. Boundary liftings and shared traces impose exterior and interface kinematic conditions exactly, while a stress map enforces native Brinkman-Darcy force…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2602.10989",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.10989",
+  "title": "Variational Optimality of Föllmer Processes in Generative Diffusions",
+  "authors": [
+    "Yifan Chen",
+    "Eric Vanden-Eijnden"
+  ],
+  "summary": "We construct and analyze generative diffusions that transport a point mass to a prescribed target distribution over a finite time horizon using the stochastic interpolant framework. The drift is expressed as a conditional expectation that can be estimated from independent samples without simulating stochastic processes. We show that the diffusion coefficient can be tuned \\emph{a~posteriori} without changing the time-marginal distributions. Among all such tunings, we prove that minimizing the impact of estimation error on the path-space Kullback--Leibler divergence selects, in closed form, a…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.IT",
+    "cs.LG",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-02-11",
+  "updated": "2026-05-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

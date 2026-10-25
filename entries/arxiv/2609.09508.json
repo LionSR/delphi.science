@@ -1,0 +1,21 @@
+{
+  "key": "2609.09508",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.09508",
+  "title": "A lattice path model for the volume of the Monge polytope",
+  "authors": [
+    "William Q. Erickson",
+    "Nicholas B. Jones"
+  ],
+  "summary": "Monge matrices arise throughout combinatorial optimization and algorithm design; the Monge polytope $\\mathcal{M}_{pq}$ is the set of $p \\times q$ Monge matrices lying inside the standard simplex on the set of matrix coordinates. We find a Stanley decomposition of the associated affine semigroup, and use it to obtain a volume formula for $\\mathcal{M}_{pq}$ expressed as a sum over \"Z-avoiding\" Delannoy paths in a $p \\times q$ grid. An efficient dynamic-programming implementation of this formula computes the volume in dimensions far beyond the reach of general-purpose exact-volume algorithms…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.AC"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

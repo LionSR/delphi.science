@@ -1,0 +1,22 @@
+{
+  "key": "2608.26620",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.26620",
+  "title": "Optimal connectivity of second order iterated line graphs",
+  "authors": [
+    "Run Zou",
+    "Wei Xiong",
+    "Mingquan Zhan",
+    "Hong-Jian Lai"
+  ],
+  "summary": "The line graph $L(G)$ of a graph $G$ is defined to be the simple graph whose vertices are the edges of $G$, where two vertices in $L(G)$ are adjacent if and only if the corresponding edges in $G$ are incident with a common vertex, and define $L^2(G)=L(L(G))$. For positive integers $d$ and $k$, the function $κ_{L^2}(d,k) = \\inf\\{κ(L^2(G)): κ'(G) \\ge k \\mbox{ and } δ(G) \\ge d\\}$ has been investigated. Niepel and Knor proved that $κ_{L^2}(d,1)\\geq d-1$, for any integer $d \\ge 3$. In this research, it is proved that if $d\\geq 3$ and $k\\geq 1$, then $κ_{L^2}(d,k)= \\min\\{f(d,k), 4d-6\\}$, where…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-08-27",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

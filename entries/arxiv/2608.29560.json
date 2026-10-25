@@ -1,0 +1,22 @@
+{
+  "key": "2608.29560",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.29560",
+  "title": "Which LLM for Which Work? Budgeted Model Allocation under Uncertain Evaluation",
+  "authors": [
+    "Hamed Khosravi",
+    "Xiaoming Huo"
+  ],
+  "summary": "A company with a fixed artificial intelligence (AI) budget must decide which large language model (LLM) handles each recurring workload. What it lacks is the quality table, how well each model performs on each workload. Given that table, the decision is a multiple-choice knapsack problem and is routine to solve, so estimating it is the difficulty, and that estimation fails in two ways. Models are rarely compared on the same work, and the recorded score is usually a proxy rather than the outcome the company values. Causal and off-policy methods repair the first but condition on the second,…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-08-30",
+  "updated": "2026-08-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2607.17318",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.17318",
+  "title": "FEVessel: Mesh-Independent Analysis of 3D Pressure Vessels with the Label-Free Pretrained Finite Element Method",
+  "authors": [
+    "Yipin Sun",
+    "Yizheng Wang",
+    "Yuzhou Lin",
+    "Baiyang Zheng",
+    "Xiaoying Zhuang",
+    "Timon Rabczuk"
+  ],
+  "summary": "Pressure vessel analysis in the chemical, nuclear, and new-energy industries requires solving the same elasticity problem across many materials, geometries, and loads, where mesh quality and repeated solving govern both accuracy and cost. The finite element method (FEM) cannot amortise this repeated cost and fails on degenerate meshes, while the neural operators meant to replace it still need labelled data that FEM must generate. This paper proposes FEVessel, an adaptation of the Pretrained Finite Element Method (PFEM) to three-dimensional (3D) pressure vessels, and validates four…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-19",
+  "updated": "2026-07-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

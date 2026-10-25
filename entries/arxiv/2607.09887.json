@@ -1,0 +1,27 @@
+{
+  "key": "2607.09887",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.09887",
+  "title": "Threshold Dynamics and Correlated Prophet Inequalities",
+  "authors": [
+    "José Correa",
+    "Maximilian Fichtl",
+    "Reda Jlibene",
+    "Rida Laraki",
+    "Vasilis Livanos",
+    "Kevin Schewior",
+    "Victor Verdugo"
+  ],
+  "summary": "Prophet inequalities have become a central tool for analyzing the performance of online algorithms. However, most existing results assume that input random variables are independent, which limits their applicability. Motivated by this gap, we study prophet inequalities under two correlation models induced by a latent state of the world variable $Z$. In the common-base model, the algorithm observes the sequence $Z+X_1,\\dots,Z+X_n$. We analyze single-threshold algorithms with the constraint that they always accept the final item, guaranteeing a reward of at least $Z$. When $Z$ is chosen…",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "cs.DS",
+    "math.OC"
+  ],
+  "published": "2026-07-10",
+  "updated": "2026-07-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

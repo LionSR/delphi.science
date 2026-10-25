@@ -1,0 +1,21 @@
+{
+  "key": "2607.01329",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.01329",
+  "title": "Ravines in quantum cost landscapes: opportunities for improved VQA predictions",
+  "authors": [
+    "Felix J. Beckmann",
+    "João F. Bravo"
+  ],
+  "summary": "The geometric and topological structure of quantum cost landscapes (QCLs) governs the optimization and thus the predictive power of variational quantum algorithms (VQAs). We systematically analyze ravines - low-cost paths connecting local minima - using an adapted version of the nudged elastic band (NEB) algorithm, a method originating from theoretical chemistry. By training quantum neural networks (QNNs) to classify the concentratable entanglement of quantum states, we apply the NEB algorithm and numerically identify ravine structures in QCLs of hardware-efficient ansatzes. Beyond…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

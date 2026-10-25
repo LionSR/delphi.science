@@ -1,0 +1,22 @@
+{
+  "key": "2609.29941",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.29941",
+  "title": "MF-SCBO : Multi-fidelity Scalable Constrained Bayesian Optimization",
+  "authors": [
+    "Lucas Palazzolo",
+    "Mickaël Binois",
+    "Laëtitia Giraldi"
+  ],
+  "summary": "Many real-world optimization problems rely on expensive simulations or experiments, making the efficient use of available data essential. Multi-fidelity optimization of high-dimensional black-box functions subject to black-box constraints is increasingly relevant as the cost of objective evaluations continues to rise in applications such as machine learning, engineering, and control. To our knowledge, no existing method simultaneously addresses high-dimensionality, black-box constraints, an arbitrary number of fidelity levels, and non-nested sampling. In this work, we extend the Scalable…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

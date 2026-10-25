@@ -1,0 +1,25 @@
+{
+  "key": "2609.05258",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.05258",
+  "title": "Ask Before You Optimize: Dynamic Pre-Formulation Clarification for Interactive Optimization",
+  "authors": [
+    "Sihan Ge",
+    "Yichen Lin",
+    "Chenyu Zhou",
+    "Jianghao Lin",
+    "Tao Yao",
+    "Dongdong Ge"
+  ],
+  "summary": "Large language models (LLMs) are increasingly used to formulate optimization models from natural-language problem descriptions, yet realistic operations research (OR) requests are often incomplete: missing objectives, constraints, or business rules can change the resulting mathematical program. Existing evaluations largely assume a complete specification and therefore overlook whether an agent knows when clarification is needed before modeling. We introduce OR-Clarify, a benchmark for pre-formulation clarification. Each task presents a partial public problem description, withholds structured…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

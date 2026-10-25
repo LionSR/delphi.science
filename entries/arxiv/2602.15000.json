@@ -1,0 +1,22 @@
+{
+  "key": "2602.15000",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.15000",
+  "title": "ALiA: Adaptive Linearized ADMM",
+  "authors": [
+    "Uijeong Jang",
+    "Kaizhao Sun",
+    "Wotao Yin",
+    "Ernest K Ryu"
+  ],
+  "summary": "We propose ALiA, a novel adaptive variant of the alternating direction method of multipliers (ADMM). Specifically, ALiA is a variant of function-linearized proximal ADMM (FLiP ADMM), which generalizes the classical ADMM by leveraging the differentiable structure of the objective function, making it highly versatile. Notably, ALiA features an adaptive stepsize selection scheme that eliminates the need for backtracking linesearch. Motivated by recent advances in adaptive gradient and proximal methods, we establish point convergence of ALiA for convex and differentiable objectives. Furthermore,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-02-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

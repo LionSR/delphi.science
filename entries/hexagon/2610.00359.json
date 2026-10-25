@@ -1,0 +1,36 @@
+{
+  "key": "2610.00359",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00359v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00359v1",
+  "title": "Succinct Rabung certificates and recurrence-closed lower bounds for van der Waerden numbers",
+  "authors": [
+    "Brice Pouly"
+  ],
+  "summary": "Rabung's power-residue construction describes a large progression-free colouring by a prime, a colour count and a target length. We give six additional primitive certificates, checked by full ordinary CPU scans, which yield fourteen direct lower bounds. In colour-first notation, these include $W(3,17)>33\\,166\\,190\\,897$, $W(3,18)>100\\,289\\,348\\,022$, $W(3,19)>259\\,446\\,988\\,783$ and $W(3,20)>326\\,368\\,775\\,450$. The larger ternary primes lie outside the complete census below $2^{32}$. We prove the equivalence of the run and boundary tests with Rabung's criterion and separate pointwise…",
+  "domain": "math.CO",
+  "tags": [
+    "math.NT",
+    "msc:05D10",
+    "msc:11B25",
+    "msc:11T24",
+    "Rabung certificates",
+    "arithmetic progressions",
+    "computer-assisted proofs",
+    "lower bounds",
+    "power-residue colourings",
+    "recurrence closure",
+    "van der Waerden numbers"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-18",
+  "version": 1,
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "none",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

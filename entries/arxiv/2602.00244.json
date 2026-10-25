@@ -1,0 +1,22 @@
+{
+  "key": "2602.00244",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.00244",
+  "title": "A Bayesian Approach to Feedback Control for Hyperbolic Balance Laws",
+  "authors": [
+    "Markus Bambach",
+    "Shaoshuai Chu",
+    "Michael Herty",
+    "Yunong Lin"
+  ],
+  "summary": "We propose a Bayesian framework for feedback boundary control of hyperbolic balance laws. The method propagates a probability distribution over feedback parameters using Lyapunov decay estimates as a likelihood. For linear models, it recovers available analytical stability results and extends to nonlinear regimes where theory is limited. Using first-order local Lax-Friedrichs (LLF) discretizations, we validate the approach on the decoupled wave system and the linearized Saint-Venant equations, reproducing known stability intervals and mixed boundary couplings. We then treat nonlinear and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-30",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2603.02863",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.02863",
+  "title": "Deciding winning strategies in Yu-Gi-Oh! TCG is hard",
+  "authors": [
+    "Orazio Nicolosi",
+    "Federico Pisciotta",
+    "Lorenzo Bresolin"
+  ],
+  "summary": "Motivated by the results for Magic: The Gathering presented in [CBH20] and [Bid20], we study a (different) computability problem about winning strategies in Yu-Gi-Oh! Trading Card Game, a popular card game developed and published by Konami. We show that the problem of establishing whether, from a given game state, a given computable strategy is winning is undecidable. In particular, not only do we prove that the Halting Problem can be reduced to this problem, but also that this problem is actually $Π^1_1$-complete. We extend this last result to all strategies with a reduction on the set of…",
+  "domain": "math.LO",
+  "tags": [
+    "math.LO",
+    "cs.CC",
+    "cs.GT"
+  ],
+  "published": "2026-03-03",
+  "updated": "2026-03-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

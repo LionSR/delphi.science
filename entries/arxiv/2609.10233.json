@@ -1,0 +1,21 @@
+{
+  "key": "2609.10233",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10233",
+  "title": "On the Tightness of Standard Relaxations for Mixed-Integer Bilevel Linear Programs",
+  "authors": [
+    "Sergey S. Ketkov",
+    "Oleg A. Prokopyev"
+  ],
+  "summary": "Exact algorithms for solving mixed-integer bilevel linear programs (MIBLPs) typically rely on sequences of lower and upper bounds that converge to the optimal value. These procedures are commonly initialized using the single-level relaxation (SLR), obtained by omitting the follower's optimality condition and solving the resulting single-level optimization problem. In this paper, we investigate whether, for broad classes of MIBLPs, the resulting standard bounds admit uniform improvements that can be computed within the same computational complexity regime. For pure continuous bilevel linear…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "math.OC"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

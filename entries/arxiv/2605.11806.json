@@ -1,0 +1,20 @@
+{
+  "key": "2605.11806",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11806",
+  "title": "Adaptive Kernel Ridge Regression with Linear Structure: Sharp Oracle Inequalities and Minimax Optimality",
+  "authors": [
+    "Xin Bing",
+    "Chao Wang"
+  ],
+  "summary": "Kernel ridge regression (KRR) is a widely used nonparametric method due to its strong theoretical guarantees and computational convenience. However, standard KRR does not distinguish between linear and nonlinear components in the signal, instead applying a single functional regularization to the entire function. This may lead to unnecessary shrinkage of linear structure and consequently suboptimal prediction performance. In this paper, we propose a modified regression procedure that augments KRR with an explicit linear component. The proposed method has the same computational complexity as…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

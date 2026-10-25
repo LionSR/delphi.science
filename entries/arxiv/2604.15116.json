@@ -1,0 +1,20 @@
+{
+  "key": "2604.15116",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.15116",
+  "title": "Asymptotic gauge-invariant Hybrid High-Order method for magnetic Schrödinger equations",
+  "authors": [
+    "Joubine Aghili"
+  ],
+  "summary": "We introduce a Hybrid High-Order (HHO) method for the Schrödinger equation in the presence of a magnetic vector potential. In quantum mechanics, physical observables are invariant under continuous gauge transformations, which must be kept at the discrete level to avoid unphysical artifacts. To address this, we construct a discrete covariant gradient operator on arbitrary polyhedral meshes. We prove that the resulting discrete bilinear form guarantees gauge covariance asymptotically at the discrete level. The resulting scheme achieves optimal convergence rates and preserves a discrete Garding…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-04-16",
+  "updated": "2026-04-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

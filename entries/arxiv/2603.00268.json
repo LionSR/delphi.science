@@ -1,0 +1,21 @@
+{
+  "key": "2603.00268",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.00268",
+  "title": "An unconditionally stable hybridizable-embedded discontinuous Galerkin method for the phase field crystal equation",
+  "authors": [
+    "Giselle Saylor",
+    "Tamas L. Horvath",
+    "Natasha S. Sharma"
+  ],
+  "summary": "This paper presents a first-order convex splitting hybridizable/embedded discontinuous Galerkin method for the phase field crystal equation written in mixed form. Since the sixth-order phase field crystal equation is rewritten as a first-order system, our scheme avoids the calculation of high-order derivatives, which can be computationally expensive. The proposed method uses continuous facet unknowns and static condensation, which significantly reduces the number of coupled degrees of freedom. Using stabilization parameters that satisfy a simple and explicit relation, we show that our scheme…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-27",
+  "updated": "2026-02-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2608.30473",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.30473",
+  "title": "Bounds on the Posterior-to-Prior Ratios for Inclusion Belief under Bounded Differential Privacy",
+  "authors": [
+    "Jan Reiter Sørensen",
+    "Heidi Søgaard Christensen",
+    "Rasmus Rask Kragh Jørgensen",
+    "Martin Bøgsted"
+  ],
+  "summary": "Differential privacy has become the standard for generating privacy-protected data releases. However, differential privacy does not translate intuitively to disclosure risk. In particular, it remains unclear how much an adversary's belief about an individual's inclusion in a dataset can change after observing a protected release. To address this question, we derive upper and lower bounds on the posterior-to-prior ratios of inclusion beliefs under bounded probabilistic and approximate differential privacy. By assuming a worst-case adversary with all-but-one auxiliary information, i.e.,…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.CR"
+  ],
+  "published": "2026-08-31",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

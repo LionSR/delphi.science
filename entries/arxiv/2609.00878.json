@@ -1,0 +1,22 @@
+{
+  "key": "2609.00878",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.00878",
+  "title": "DOFFO_TR: a Decentralized Objective Function-Free Optimization method with Trust-Region",
+  "authors": [
+    "Stefania Bellavia",
+    "Greta Malaspina",
+    "Benedetta Morini"
+  ],
+  "summary": "In this paper, we propose a novel objective function-free trust-region method designed to solve optimization problems over decentralized networks. Unlike traditional approaches that often rely on stepsize tuning, our framework employs a function-free trust-region procedure that enables adaptive selection of the step length. Our approach accommodates first- and second-order models and eliminates the need to share local function values and gradients among agents, thereby enhancing privacy and computational efficiency. On the theoretical side, we establish provable iteration complexity…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-09-01",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

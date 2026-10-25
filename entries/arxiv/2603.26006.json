@@ -1,0 +1,24 @@
+{
+  "key": "2603.26006",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.26006",
+  "title": "Computing fixed point free automorphisms of graphs",
+  "authors": [
+    "Aida Abiad",
+    "Gabriel Coutinho",
+    "Emanuel Juliano",
+    "Vinicius F. dos Santos",
+    "Sjanne Zeijlemaker"
+  ],
+  "summary": "In 1981, Lubiw proved that the fixed point free automorphism problem (FPFAut) is NP-complete: given a graph G, determine whether there exists an automorphism that maps no vertex of G to itself. We revisit this problem and prove that FPFAut remains NP-complete when restricted to split, bipartite, k-subdivided, and H-free graphs, if H is not an induced subgraph of P_4. The class of P_4-free graphs receives the special name of cographs. We provide a polynomial time algorithm for three extensions of cographs: bounded modular-width graphs, tree-cographs and P_4-sparse graphs. Our approach uses…",
+  "domain": "cs.DM",
+  "tags": [
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-03-27",
+  "updated": "2026-03-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

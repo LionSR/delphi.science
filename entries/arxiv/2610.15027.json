@@ -1,0 +1,20 @@
+{
+  "key": "2610.15027",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.15027",
+  "title": "Recurrent Barycenter Encoder: Prediction, Simulation and Applications to Time Series Analysis",
+  "authors": [
+    "Javier I Almarza"
+  ],
+  "summary": "This dissertation has two parts. In the first part we theoretically develop a framework that extends the optimal transport barycenter problem from independent data with observed covariates to processes whose relevant covariate is their own history. Given a stationary stochastic process, our framework shows there exists an invertible transport map that extracts from it an iid component whose distribution is the barycenter of the conditional distributions of the input process on its own past. This extracted iid sequence thus captures the innovation or noise component of the process that is not…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-10-10",
+  "updated": "2026-10-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

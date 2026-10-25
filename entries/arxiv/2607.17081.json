@@ -1,0 +1,19 @@
+{
+  "key": "2607.17081",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.17081",
+  "title": "quchip: A Differentiable Toolkit for Modeling Quantum Devices",
+  "authors": [
+    "Ibraheem AlYousef"
+  ],
+  "summary": "Predictive modeling of a superconducting quantum chip requires more than a Hamiltonian: the model must connect device physics, control-line transformations, chosen frames and approximations, dissipation, and measured observables. We present quchip, an open-source Python toolkit that represents these parts explicitly and assembles backend-independent simulations for QuTiP or dynamiqs; with dynamiqs, device and control parameters remain differentiable through the solve. We demonstrate the resulting experimental loop on a five-device model fitted to dressed observables. Simulated phase sweeps…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-19",
+  "updated": "2026-07-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

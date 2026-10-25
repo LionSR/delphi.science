@@ -1,0 +1,26 @@
+{
+  "key": "2610.29605",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.29605",
+  "title": "Improved Training of Strong Stochastic Flow Maps",
+  "authors": [
+    "Zander W. Blasingame",
+    "Antonio Franca",
+    "Raul Minan",
+    "Christian Koke",
+    "Niklas Rindtorff",
+    "Alexander Tong"
+  ],
+  "summary": "Stochastic flow maps promise few-step sampling of stochastic differential equations (SDEs) by learning to directly jump between times along the solution path, yet training these models to learn this solution map remains difficult. The primary obstacle is the Brownian path itself: it is an infinite-dimensional object which needs to be passed to the neural network and is nowhere differentiable, which makes the implementation of derivative-based losses that power the state-of-the-art deterministic flow maps just out of reach. We identify two core design principles which address these issues: a)…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.DS"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

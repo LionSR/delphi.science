@@ -1,0 +1,19 @@
+{
+  "key": "2608.26384",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.26384",
+  "title": "Discrete dynamics of Eratosthenes sieve",
+  "authors": [
+    "Fred B. Holt"
+  ],
+  "summary": "We study Eratosthenes sieve as a discrete dynamic system. At each stage of the sieve there is a cycle of gaps ${\\mathcal G}(p^\\#)$ of length $φ(p^\\#)$ and span $p^\\#$. There is a recursion ${\\mathcal G}(p_k^\\#)\\longrightarrow {\\mathcal G}(p_{k+1}^\\#)$ that creates the next cycle from the current one. If we take initial conditions from the cycle ${\\mathcal G}(p_0^\\#)$, then for all constellations of span $|s| < 2p_1$, including gaps $g < 2p_1$, the driving terms of various lengths form Markov chains. These yield {\\it exact} models for the populations $n_s(p_k^\\#)$ for all further stages of…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-08-26",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

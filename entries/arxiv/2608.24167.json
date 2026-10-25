@@ -1,0 +1,21 @@
+{
+  "key": "2608.24167",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.24167",
+  "title": "From Relaxed Indexability to Exact Indexability: A $t$-Step Approach for Partially Observable Restless Bandits",
+  "authors": [
+    "Keqin Liu",
+    "Qizhen Jia"
+  ],
+  "summary": "Whittle index policies offer a scalable method for restless multi-armed bandits, but under partial observability even determining the indifference subsidy at a single belief requires solving an infinite-horizon belief-state problem with no closed-form value function. Liu [10] addresses this difficulty by linearizing the unknown decision boundary, leading to a linear system and a closed-form approximate Whittle index. However, the resulting threshold uses only a one-step active--passive comparison and does not account for longer-horizon continuation values. We extend this framework to a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-09-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

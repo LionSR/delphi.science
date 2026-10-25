@@ -1,0 +1,27 @@
+{
+  "key": "2607.14943",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14943",
+  "title": "Steering Robustness into World Action Models via Mechanistic Interpretability and Optimal Control",
+  "authors": [
+    "Jihoon Hong",
+    "Julian Skifstad",
+    "Qiyue Dai",
+    "Alice Chan",
+    "Glen Chou"
+  ],
+  "summary": "World Action Models (WAMs) enable semantically- and physically-informed control but are brittle under distribution shift. In this work, we use mechanistic interpretability to study how robustness-relevant perturbations are represented in WAM activation space. Comparing activations across successful and unsuccessful rollouts, we find some WAM architectures exhibit low-dimensional linear separability for robustness-critical features, while others do not. This motivates the use of contrastive activation directions for training-free WAM steering. We also show that local linearity in WAM…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "cs.AI",
+    "cs.LG",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

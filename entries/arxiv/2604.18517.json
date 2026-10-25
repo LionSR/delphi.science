@@ -1,0 +1,20 @@
+{
+  "key": "2604.18517",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.18517",
+  "title": "Low-noise Pauli-consistent ensemble Monte Carlo for graphene with electron-electron scattering",
+  "authors": [
+    "Tigran Zalinyan",
+    "Giovanni Nastasi"
+  ],
+  "summary": "We investigate Pauli-consistent ensemble Monte Carlo simulations of graphene with explicit intraband electron-electron scattering. To reduce the cost of electron-electron proposal-rate evaluation, we introduce a sampled-partner approximation that replaces the full partner-cell sum by uniform sampling from the instantaneous ensemble, while leaving the event-level collision step unchanged. Comparison with the full-sum reference shows close agreement together with a substantial reduction in computational cost, enabling large-ensemble low-noise simulations. In this regime, systematic oscillatory…",
+  "domain": "math-ph",
+  "tags": [
+    "math-ph"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

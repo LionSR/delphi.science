@@ -1,0 +1,22 @@
+{
+  "key": "2603.07850",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.07850",
+  "title": "A Lock-Free, Fully GPU-Resident Architecture for the Verification of Goldbach's Conjecture",
+  "authors": [
+    "Isaac Llorente-Saguer"
+  ],
+  "summary": "We present a device-resident, multi-GPU architecture for the large-scale computational verification of Goldbach's conjecture. In prior work, a segmented double-sieve eliminated monolithic VRAM bottlenecks but remained constrained by host-side sieve construction and PCIe transfer latency. Here we migrate the entire segment generation pipeline to the GPU using shared-memory tiling, leaving per-segment host-device communication small and independent of segment size, and schedule work across devices through a lock-free atomic counter, scaling near-linearly to two GPUs (speedup 2.03 at $N =…",
+  "domain": "cs.MS",
+  "tags": [
+    "cs.MS",
+    "cs.DC",
+    "cs.PF",
+    "math.NT"
+  ],
+  "published": "2026-03-08",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

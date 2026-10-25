@@ -1,0 +1,23 @@
+{
+  "key": "2602.13157",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.13157",
+  "title": "A Data-Driven Algorithm for Model-Free Control Synthesis",
+  "authors": [
+    "Sean Bowerfind",
+    "Matthew R. Kirchner",
+    "Gary Hewer"
+  ],
+  "summary": "Presented is an algorithm to synthesize the optimal infinite-horizon LQR feedback controller for continuous-time systems. The algorithm does not require knowledge of the system dynamics but instead uses only a finite-length sampling of input-output data. A necessary condition that relates the optimal LQR gain to any arbitrary solution trajectory of the system is presented. An algorithm using this necessary condition, based on constrained optimization, is developed that estimates the LQR gain matrix. In addition to calculating the standard feedback gain matrix, a feedforward gain can be found…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.RO",
+    "eess.SY"
+  ],
+  "published": "2026-02-13",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

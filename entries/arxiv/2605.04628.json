@@ -1,0 +1,22 @@
+{
+  "key": "2605.04628",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04628",
+  "title": "Intelligent Optimal Control of Rydberg Gates with Incremental-Update Deep Reinforcement Learning",
+  "authors": [
+    "Yue Cai",
+    "Hanlin Zhang",
+    "Keye Zhang",
+    "Jing Qian"
+  ],
+  "summary": "Deep reinforcement learning (DRL), acting as a novel and powerful paradigm for quantum optimal control, offers transformative opportunities for advancing neutral-atom quantum computing. In this work, we theoretically demonstrate a DRL-based framework for realizing Rydberg controlled-NOT gates that achieve both high speed and high fidelity through the synchronous modulation of multiple pulse parameters without any prior heuristic ansatz. By introducing an incremental-update learning policy, our framework effectively regularizes the exploration of the control landscape, ensuring the generation…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

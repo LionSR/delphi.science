@@ -1,0 +1,19 @@
+{
+  "key": "2607.22248",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.22248",
+  "title": "Lower bounds for the CNOT-complexity of linear reversible operators",
+  "authors": [
+    "Søren Fuglede Jørgensen"
+  ],
+  "summary": "The CNOT-complexity of an invertible matrix over $\\mathbb{F}_2$ is the minimum number of CNOT gates needed to synthesize the corresponding linear reversible operator. While the maximum CNOT-complexity over all $n \\times n$ matrices is known to be $Θ(n^2 / \\log n)$, no explicit family of matrices requiring a superlinear number of CNOT gates is known, and until now the hardest explicitly known family has been the cyclic permutations, with CNOT-complexity $3(n-1)$. We show that lower bounds for the additive complexity of not-necessarily-reversible linear operators can be lifted to the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-24",
+  "updated": "2026-07-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

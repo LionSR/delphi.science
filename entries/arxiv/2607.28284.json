@@ -1,0 +1,20 @@
+{
+  "key": "2607.28284",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.28284",
+  "title": "ROSA: Metric Amplification on Noisy Graphs with Theoretical Guarantees for Amplified Spectral Distances",
+  "authors": [
+    "Ben Cardoen",
+    "Fabian Spill"
+  ],
+  "summary": "In many applications, graphs are observed repeatedly, where the task is to observe and track weak localized structural perturbations under noise, such as vertex-coordinate displacements or edge-weight/attribute changes on a fixed vertex set. One-shot graph distances can miss these localized perturbations or fluctuate too strongly to support reliable monitoring, especially in large graphs where signal dilutes with scale. We propose Robust Order-aware Spectral Amplification (ROSA), a distance-amplification operator that integrates metric evaluations along an order-aware edge-removal…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-07-30",
+  "updated": "2026-07-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2604.21955",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.21955",
+  "title": "A four-player potential game for barren-plateau-aware quantum ansatz design",
+  "authors": [
+    "Rubén Darío Guerrero"
+  ],
+  "summary": "We cast the design of parameterized quantum circuits as a four-player potential game whose state is a circuit directed acyclic graph (DAG) and whose players encode trainability, non-stabilizerness, task performance, and hardware cost. Per-player restricted action sets factorize the move space into append, remove, retype, and rewire operations; a block-coordinate $\\varepsilon$-Nash residual $δ_\\text{Nash}$ certifies that no single player can improve unilaterally. A single weight sweep on MaxCut $K_4$ traces a Pareto frontier from a Clifford endpoint $(M_2/n,\\langle H\\rangle)=(0,4.00)$ to a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.MA"
+  ],
+  "published": "2026-04-23",
+  "updated": "2026-04-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

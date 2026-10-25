@@ -1,0 +1,24 @@
+{
+  "key": "2603.06387",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.06387",
+  "title": "Quantum Hamlets: Distributed Compilation of Large Algorithmic Graph States",
+  "authors": [
+    "Anthony Micciche",
+    "Naphan Benchasattabuse",
+    "Andrew McGregor",
+    "Michal Hajdušek",
+    "Rodney Van Meter",
+    "Stefan Krastanov"
+  ],
+  "summary": "We investigate the problem of compiling the generation of graph states to arbitrarily many distributed homogeneous quantum processing units (QPUs), providing a scalable partitioning algorithm and graph state generation protocol to minimize the number of Bell pairs required. Current approaches focus on the naive metric of cut edges to estimate the quantum communication cost. We show that the problem of balanced k graph partitioning, with the objective of minimizing the sizes of the maximum matchings between the partitions, leads to lower entanglement requirements across partitions. Our…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-06",
+  "updated": "2026-05-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

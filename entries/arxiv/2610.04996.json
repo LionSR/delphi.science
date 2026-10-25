@@ -1,0 +1,23 @@
+{
+  "key": "2610.04996",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04996",
+  "title": "The power of time reversal in Hamiltonian property testing",
+  "authors": [
+    "Richard R. Allen",
+    "Matthias C. Caro",
+    "Yanlin Chen",
+    "Tom Gur",
+    "Angus Lowe"
+  ],
+  "summary": "Quantum algorithms enable Heisenberg-limited scaling across many tasks in sensing and learning, achieving precision $\\varepsilon$ using $O(1/\\varepsilon)$ total evolution time. However, in Hamiltonian property testing, the best known algorithms have $O(1/\\varepsilon^2)$ total evolution time, unless it is possible to $\\textit{reverse}$ the flow of time under the Hamiltonian. In this work, we prove that time reversal is necessary to close this gap. We establish evolution time lower bounds for Hamiltonian certification and locality testing, for a continuous family of error metrics ranging from…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

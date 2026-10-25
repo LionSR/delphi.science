@@ -1,17 +1,29 @@
 // Reading a submitted link's metadata from its source, so it is listed the moment it is submitted. The
-// same rules as the harvester's adapters (sources.py), for the sources the site reads at once: arXiv,
-// GitHub, DOI, Zenodo and Hugging Face. Ids and fields match what `index.py add` writes, so the daily
-// pull, which files every submission into entries/, updates the same record instead of adding another.
-// Every other link waits for that pull, which knows all the sources.
+// same rules as the harvester's adapters (sources.py), for the sources the site reads: arXiv, GitHub, DOI,
+// Zenodo and Hugging Face. Ids and fields match what `index.py add` writes, so a record the harvester
+// also reaches is the same record, not another one.
 import taxonomy from './taxonomy.json' with { type: 'json' };
 import type { Item } from './load.ts';
 
 export class NotFound extends Error {}
+/** The record exists, but the index does not take it (a repository below the bar). */
+export class NotTaken extends Error {}
+
+// A repository is listed on its own only with this many stars or a CITATION.cff (index.py MIN_REPO_STARS).
+export const MIN_STARS = 50;
+// Venues whose listings are mostly pseudoscience, refused also as web pages (sources.py BLOCKED_HOSTS).
+const BLOCKED_HOSTS = ['vixra.org', 'aixiv.science', 'clawxiv.org', 'jaigp.org'];
+export function blocked(link: string) {
+	const url = link.trim();
+	let host = '';
+	try { host = new URL(url.includes('://') ? url : `https://${url}`).hostname.toLowerCase(); } catch { return false; }
+	return BLOCKED_HOSTS.some((h) => host === h || host.endsWith(`.${h}`));
+}
 
 const USER_AGENT = 'open-research-index/0.1 (+https://github.com/LionSR/open-research-index; metadata only)';
 const SUMMARY_CHARS = 600;
 
-// Links the harvester reads with its own adapters, though they look like GitHub or DOI links. They wait.
+// Links the harvester reads with its own adapters, though they look like GitHub links. The site leaves them.
 const DAILY = [
 	/^(?:https?:\/\/)?github\.com\/SakanaAI\/AI-Scientist\/(?:blob|tree)\/main\/example_papers\//i,
 	/^(?:https?:\/\/)?github\.com\/openai\/math\/(?:blob|tree)\/main\/preprints\//i,
@@ -43,7 +55,7 @@ function subject(domain: string) {
 	return { subject: domain, division };
 }
 
-/** An item as the build serves it (index.py to_item): empty fields left out, unlabelled until the daily pull. */
+/** An item as the build serves it (index.py to_item): empty fields left out, unlabelled (so counted as research). */
 function item(source: string, key: string, f: Record<string, unknown>): Item {
 	if (!clean(f.title)) throw new NotFound(`${source}/${key} has no title`);
 	const out: Record<string, unknown> = { id: `${source}/${key}`, source, ...f, category: 'research', ...subject(String(f.domain ?? '')) };
@@ -113,6 +125,9 @@ const SOURCES: Source[] = [
 			if (d.private) throw new NotFound(key);
 			const files = await get(`https://api.github.com/repos/${d.full_name}/contents/`, 'application/vnd.github+json')
 				.then(async (r) => new Set<string>((await r.json()).map((f: { name: string }) => f.name)), () => new Set<string>());
+			if ((d.stargazers_count ?? 0) < MIN_STARS && !files.has('CITATION.cff')) {
+				throw new NotTaken(`${d.full_name} has fewer than ${MIN_STARS} stars and no CITATION.cff`);
+			}
 			return item('github', d.full_name.replace('/', '__'), {
 				url: d.html_url, repo: d.html_url, title: String(d.name).replace(/[-_]/g, ' '), authors: [d.owner?.login],
 				summary: trim(d.description), tags: d.topics ?? [], published: isoDate(d.created_at), stars: d.stargazers_count ?? 0,
@@ -138,7 +153,7 @@ const SOURCES: Source[] = [
 	},
 ];
 
-/** The record id a link would have, if the site reads its source at once; null if it waits for the daily pull. */
+/** The record id a link would have, if the site reads its source; null if it does not. */
 export function detect(link: string): { source: Source; key: string } | null {
 	const url = link.trim();
 	if (DAILY.some((p) => p.test(url))) return null;
@@ -151,7 +166,7 @@ export function detect(link: string): { source: Source; key: string } | null {
 	return null;
 }
 
-/** A link worth keeping for the daily pull: a URL or a bare id (arXiv, DOI, owner/repo, PALOMAR-…), one word. */
+/** A link or a bare id (arXiv, DOI, owner/repo), one word. */
 export const looksLikeLink = (link: string) => /^\S{1,2000}$/.test(link.trim());
 
 /** Reads the record from its source. Throws NotFound when it does not exist or is not public. */

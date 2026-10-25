@@ -1,0 +1,27 @@
+{
+  "key": "2602.14641",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14641",
+  "title": "Quantum Reservoir Computing with Neutral Atoms on a Small, Complex, Medical Dataset",
+  "authors": [
+    "Luke Antoncich",
+    "Yuben Moodley",
+    "Ugo Varetto",
+    "Jingbo Wang",
+    "Jonathan Wurtz",
+    "Jing Chen",
+    "Pascal Jahan Elahi",
+    "Casey R. Myers"
+  ],
+  "summary": "Biomarker-based prediction of clinical outcomes is challenging due to nonlinear relationships, correlated features, and the limited size of many medical datasets. Classical machine-learning methods can struggle under these conditions, motivating the search for alternatives. In this work, we investigate quantum reservoir computing (QRC), using both noiseless emulation and hardware execution on the neutral-atom Rydberg processor \\textit{Aquila}. We evaluate performance with six classical machine-learning models and use SHAP to generate feature subsets. We find that models trained on emulated…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-02-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2606.14514",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.14514",
+  "title": "Nonparametric inference on Fokker-Plank and McKean-Vlasov models",
+  "authors": [
+    "Adriana Laurindo Monteiro",
+    "Roberto Imbuzeiro Oliveira"
+  ],
+  "summary": "We propose a kernel-based estimator of the velocity field governing the transport and diffusion of $d$-dimensional interacting particles. Assuming the initial positions are i.i.d. with law $μ_0$, we establish consistency of the estimator with an explicit mean-squared error rate of order $h^2 + N^(-2/(d+2))$, where $h$ denotes the time-discretization step and N the number of particles. The analysis covers two distinct settings: the Fokker-Planck equation, where we recover the underlying potential function, and the McKean-Vlasov equation, where we deconvolve the interaction kernel driving the…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-06-12",
+  "updated": "2026-06-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

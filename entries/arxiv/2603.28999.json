@@ -1,0 +1,24 @@
+{
+  "key": "2603.28999",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.28999",
+  "title": "Transfer Learning in Bayesian Optimization for Aircraft Design",
+  "authors": [
+    "Ali Tfaily",
+    "Youssef Diouane",
+    "Nathalie Bartoli",
+    "Michael Kokkolaras"
+  ],
+  "summary": "The use of transfer learning within Bayesian optimization addresses the disadvantages of the so-called \\textit{cold start} problem by using source data to aid in the optimization of a target problem. We present a method that leverages an ensemble of surrogate models using transfer learning and integrates it in a constrained Bayesian optimization framework. We identify challenges particular to aircraft design optimization related to heterogeneous design variables and constraints. We propose the use of a partial-least-squares dimension reduction algorithm to address design space heterogeneity,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-03-30",
+  "updated": "2026-03-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

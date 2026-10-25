@@ -1,0 +1,23 @@
+{
+  "key": "2606.21209",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.21209",
+  "title": "Arc-Length Parameterized Interpolating Splines",
+  "authors": [
+    "Dafna K. Matsegora",
+    "Stephen M. Watt"
+  ],
+  "summary": "We present an iterative algorithm to compute an arc-length parameterized spline interpolating a set of points. This differs from other methods where the computed spline either does not interpolate the original points or the parameterization is not the arc-length of the returned curves. Our method is applicable in any dimension $D \\ge 2$, and we illustrate it with numerical results for plane curves.",
+  "domain": "cs.CG",
+  "tags": [
+    "cs.CG",
+    "cs.CV",
+    "cs.MS",
+    "math.NA"
+  ],
+  "published": "2026-06-19",
+  "updated": "2026-06-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2610.22955",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.22955",
+  "title": "On the tradeoff between robustness and geometric accuracy in adversarial training",
+  "authors": [
+    "Rachel Morris",
+    "Ryan Murray",
+    "Kerrek Stinson"
+  ],
+  "summary": "For non-parametric binary classification in the presence of an adversary, we prove an optimal quantitative estimate for adversarial classifiers controlling geometric accuracy, as measured by the Hausdorff distance to the Bayes classifier, in terms or their robustness, as encoded by the adversarial budget $\\varepsilon$. This rigorously shows that robust classifiers sacrifice at most $O(\\sqrt{\\varepsilon})$ or $O(\\varepsilon)$ in accuracy, depending on the regularity of the underlying Bayes classifier. In contrast to prior work on the incompatibility of robustness and accuracy over…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.AP"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

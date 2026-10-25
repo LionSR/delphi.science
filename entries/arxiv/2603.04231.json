@@ -1,0 +1,22 @@
+{
+  "key": "2603.04231",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.04231",
+  "title": "A comparative numerical study of graph-based splitting algorithms for linear subspaces",
+  "authors": [
+    "Francisco J. Aragón-Artacho",
+    "Rubén Campoy",
+    "Irene López-Larios",
+    "César López-Pastor"
+  ],
+  "summary": "In this note, we test the performance of six algorithms from the family of graph-based splitting methods [SIAM J. Optim., 34 (2024), pp. 1569-1594] specialized to normal cones of linear subspaces. To do this, we first implement some numerical experiments to determine the best relaxation parameter for each algorithm. Then, we compare the number of iterations each algorithm requires to reach a given stopping criterion, using the previously identified best relaxation parameter. The numerical results allow us to identify some relevant patterns and provide numerical evidence that may guide…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-04",
+  "updated": "2026-03-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

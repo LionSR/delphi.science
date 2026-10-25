@@ -1,0 +1,21 @@
+{
+  "key": "2604.07715",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.07715",
+  "title": "Mathematical analysis of one-layer neural network with fixed biases, a new activation function and other observations",
+  "authors": [
+    "Fabricio Macià",
+    "Shu Nakamura"
+  ],
+  "summary": "We analyze a simple one-hidden-layer neural network with ReLU activation functions and fixed biases, with one-dimensional input and output. We study both continuous and discrete versions of the model, and we rigorously prove the convergence of the learning process with the $L^2$ squared loss function and the gradient descent procedure. We also prove the spectral bias property for this learning process. Several conclusions of this analysis are discussed; in particular, regarding the structure and properties that activation functions should possess, as well as the relationships between the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-04-09",
+  "updated": "2026-04-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2610.26117",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.26117",
+  "title": "Study of the finite element discretization of the iterated quasi-reversibility method -- The Laplacian data assimilation case",
+  "authors": [
+    "Jérémi Dardé",
+    "Jérémy Heleine"
+  ],
+  "summary": "We investigate the finite element discretization of the iterated quasi-reversibility method, in the context of the data assimilation problem for the Laplacian. We provide error estimates explicit in all the parameters appearing in the model and the method (i.e. the amplitude of noise, the size mesh, the regularization parameter and the number of iterations of the method). This allows to devise strategies to choose the aforementioned parameters, for example to guarantee convergence of the method when the level of noise goes to zero. Numerical experiments on a two-dimensional problem are…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

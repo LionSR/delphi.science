@@ -1,0 +1,22 @@
+{
+  "key": "2605.25383",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.25383",
+  "title": "Learning manifold diffusion semigroups from graph transition matrices",
+  "authors": [
+    "Xiuyuan Cheng",
+    "Nan Wu"
+  ],
+  "summary": "We consider graph diffusion processes constructed from finite i.i.d. samples drawn from an unknown manifold embedded in ambient Euclidean space, where the graph affinity is defined by an ambient Gaussian kernel matrix. We show that the manifold heat semigroup $Q_t = e^{tΔ}$ can be approximated directly by iterating the graph transition matrix $P$, under only low regularity assumptions on the test function $f$, including the case $f \\in L^\\infty$. We bound $\\| P^n f - Q_t f \\|$ in $\\infty$-norm, with the operator application to $f$ properly defined, and we recover the classical…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-05-25",
+  "updated": "2026-05-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2608.14883",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.14883",
+  "title": "A physics-informed SUPG-stabilized finite element framework with shock-capturing for simulating inviscid high-speed flows around a cylinder",
+  "authors": [
+    "Süleyman Cengizci",
+    "Ömür Uğur"
+  ],
+  "summary": "This study presents a hybrid computational framework for simulating non-reacting inviscid high-speed flows of nitrogen gas (N$_2$) around a circular cylinder. Owing to the strongly convection-dominated nature of the compressible Euler equations, the compressible-flow streamline-upwind/Petrov--Galerkin (SUPG) formulation is combined with the YZ$β$ shock-capturing technique to stabilize the finite element discretization in the presence of strong discontinuities. Building upon the stabilized solution, a physics-informed neural network (PINN) is employed as a post-processing correction stage…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math.NA"
+  ],
+  "published": "2026-08-14",
+  "updated": "2026-08-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

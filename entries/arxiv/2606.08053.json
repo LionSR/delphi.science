@@ -1,0 +1,22 @@
+{
+  "key": "2606.08053",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.08053",
+  "title": "Numerical solution of the nonlinear Dirac equation by a splitting variational quantum algorithm",
+  "authors": [
+    "Qian Zuo",
+    "Ying He",
+    "Xiaofei Zhao"
+  ],
+  "summary": "In this work, we propose an operator-splitting variational quantum algorithm, termed Dirac-sVQA, for simulating the nonlinear Dirac equation (NLDE). The main difficulty arises from the state-dependent nonlinear interaction, its time-discrete update depends explicitly on the intermediate spinor state and, in general, cannot be implemented as a fixed state-independent unitary circuit. To address this difficulty, we decompose the NLDE evolution into a structured linear Dirac substep and a nonlinear variational correction. The linear substep is implemented by a spinor-Fourier Dirac propagator on…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.NA"
+  ],
+  "published": "2026-06-06",
+  "updated": "2026-06-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

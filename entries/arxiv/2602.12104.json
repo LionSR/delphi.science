@@ -1,0 +1,22 @@
+{
+  "key": "2602.12104",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.12104",
+  "title": "Liquidation Dynamics in DeFi and the Role of Transaction Fees",
+  "authors": [
+    "Agathe Sadeghi",
+    "Zachary Feinstein"
+  ],
+  "summary": "Liquidation of collateral are the primary safeguard for solvency of lending protocols in decentralized finance. However, the mechanics of liquidations expose these protocols to predatory price manipulations and other forms of Maximal Extractable Value (MEV). In this paper, we characterize the optimal liquidation strategy, via a dynamic program, from the perspective of a profit-maximizing liquidator when the spot oracle is given by a Constant Product Market Maker (CPMM). We explicitly model Oracle Extractable Value (OEV) where liquidators manipulate the CPMM with sandwich attacks to trigger…",
+  "domain": "q-fin.MF",
+  "tags": [
+    "q-fin.MF",
+    "math.DS",
+    "q-fin.TR"
+  ],
+  "published": "2026-02-12",
+  "updated": "2026-02-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

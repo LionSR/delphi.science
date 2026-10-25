@@ -1,0 +1,25 @@
+{
+  "key": "2610.03800",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03800",
+  "title": "Exponentially Compressed and Garbage-Free Alias Sampling for Polynomial State Preparation",
+  "authors": [
+    "Diyi Liu",
+    "Hanyu Wang",
+    "Shuchen Zhu",
+    "Jason Cong",
+    "Wibe Albert de Jong",
+    "David Williams-Young",
+    "Chao Yang"
+  ],
+  "summary": "Coherent alias sampling implement an important subroutine for block encoding and qubitization based quantum simulation using quantum lookup table. Related constructions exploit data lookup and matrix structure to implement block encodings for use in quantum singular value transformation. For a state on $n$ qubits, constructing and storing the alias table requires both classical and quantum resources exponential in $n$. We show that when the amplitudes are samples of a polynomial of degree at most $d$, the table can be represented and evaluated coherently with cost polynomial in $n$, $d$,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

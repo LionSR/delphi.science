@@ -1,0 +1,24 @@
+{
+  "key": "2607.27117",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.27117",
+  "title": "The Keyl-Werner algorithm is not optimal for spectrum estimation",
+  "authors": [
+    "Angelos Pelecanos",
+    "Jack Spilecki",
+    "Ewin Tang",
+    "John Wright"
+  ],
+  "summary": "We give an algorithm which, given $n = O(d^2 \\cdot (\\log\\log(d)/\\log(d))^2)$ copies of $ρ$, estimates the eigenvalues of $ρ$ to constant error in total variation distance. Thus, we can learn the eigenvalues of a quantum state with fewer copies than the $Θ(d^2)$ needed to run full state tomography. This is the first improvement to spectrum estimation over the influential Keyl-Werner algorithm, which uses $n = Θ(d^2)$ copies, thereby resolving a question raised by Keyl and Werner in 2001 and refuting a 2016 conjecture of Wright. Our main technical tool is a new tomography guarantee, where the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.DS"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

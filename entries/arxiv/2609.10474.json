@@ -1,0 +1,19 @@
+{
+  "key": "2609.10474",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10474",
+  "title": "MaxCut for $\\mathrm{MTP}_2$ Covariances",
+  "authors": [
+    "Gleb Smirnov"
+  ],
+  "summary": "Let $X=(X_1,\\dots,X_n)\\in\\{0,1\\}^n$ have a multivariate totally positive ($\\mathrm{MTP}_2$) law. We prove that $$ \\sum_{i<j}\\mathbb{E}\\left[\\left|\\mathrm{Cov}(X_i,X_j \\mid X_{[n]\\setminus\\{i,j\\}})\\right|\\right] \\le n/2, $$ and more generally a weighted MaxCut inequality for the fully conditioned covariances. As an application, we confirm a conjecture of Allen and O'Donnell on correlation rounding for signed $\\mathrm{MTP}_2$ laws.",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

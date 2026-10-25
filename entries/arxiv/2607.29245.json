@@ -1,0 +1,23 @@
+{
+  "key": "2607.29245",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.29245",
+  "title": "Simple-regret rates and minimax optimality of fixed-prior expected improvement in Matérn and squared-exponential RKHSs",
+  "authors": [
+    "Emmanuel Vazquez",
+    "Sébastien Petit"
+  ],
+  "summary": "We study expected improvement (EI) for minimizing a deterministic function $f$ in the RKHS $\\mathcal H_k$ of a continuous positive-semidefinite kernel $k$ on a nonempty compact set $\\mathcal X\\subset\\mathbb R^d$. Function values are observed exactly, and EI is computed from a fixed zero-mean Gaussian-process model with covariance $σ^2k$, $σ>0$. A weak-EI policy queries a point whose EI is at least a fixed positive fraction of its maximum. We introduce a notion of sequential separation radius relating ranked selected-point innovation norms to Kolmogorov widths, drawing on greedy…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.NA",
+    "math.ST"
+  ],
+  "published": "2026-07-31",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

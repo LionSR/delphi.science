@@ -1,0 +1,23 @@
+{
+  "key": "2607.04746",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04746",
+  "title": "Short-Horizon Sparse Model Predictive Control for Precipitation Reduction Using Numerical Weather Prediction",
+  "authors": [
+    "Yuta Tanikawa",
+    "Yuga Tomita",
+    "Toshiyuki Ohtsuka"
+  ],
+  "summary": "This study proposes a precipitation control framework integrating a realistic Numerical Weather Prediction (NWP) model with model predictive control (MPC). At each control instant in MPC, a finite-difference sensitivity matrix is constructed from the NWP model and used as a local linear model of how perturbations to the atmospheric state affect future precipitation. A sparse convex optimization problem is then solved to compute the control input, which is implemented as a perturbation to the atmospheric state. To reduce computational cost in sensitivity analysis, multiple grid points in the…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC",
+    "physics.ao-ph"
+  ],
+  "published": "2026-07-06",
+  "updated": "2026-07-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

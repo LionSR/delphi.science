@@ -1,0 +1,21 @@
+{
+  "key": "2610.31110",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.31110",
+  "title": "On Modified Newton Methods for Unconstrained Optimization Based on Lanczos Tridiagonalization",
+  "authors": [
+    "Aban Ansari-Önnestam",
+    "Anders Forsgren",
+    "Philip E. Gill"
+  ],
+  "summary": "For a strongly convex unconstrained minimization problem, Newton's method with a line search offers rapid convergence to a minimizer by incorporating second-order information. However, for a general unconstrained problem the Hessian need not be positive definite, which can lead to the inability to find a search direction or to search directions that fail to produce descent. Modified Newton methods are designed to handle this situation. This paper considers modifications to a Newton-conjugate-gradient approach based on Lanczos tridiagonalization. Existing methods are extended using dynamic…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

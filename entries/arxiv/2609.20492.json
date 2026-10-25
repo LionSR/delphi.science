@@ -1,0 +1,19 @@
+{
+  "key": "2609.20492",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20492",
+  "title": "Nonexistence of a Leech Tree of Order 18: A Computer-Assisted Proof",
+  "authors": [
+    "Maseeh Ghodsi"
+  ],
+  "summary": "A Leech tree of order $n$ is a tree with positive integral edge weights whose $n(n-1)/2$ pairwise weighted distances are precisely $1,2,\\ldots,n(n-1)/2$. This paper gives a computer-assisted proof that no Leech tree of order $18$ exists. The argument has three layers. First, a development in Lean 4 verifies the structural facts used in the paper. These facts reduce every putative example to one of eight local configurations and justify several necessary conditions. Second, conventional mathematical arguments prove a component-pair whole-block exact-cover condition and the completeness of a…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

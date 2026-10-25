@@ -1,0 +1,24 @@
+{
+  "key": "2610.05086",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05086",
+  "title": "JAQSI: Just Another Quantum Simulator",
+  "authors": [
+    "Melvin Strobl",
+    "Maja Franz",
+    "Lukas Scheller",
+    "Eileen Kuehn",
+    "Wolfgang Mauerer",
+    "Achim Streit"
+  ],
+  "summary": "Classical simulation supports the development and validation of quantum algorithms through full-state inspection, controlled noise models and backpropagation, albeit for small quantum systems. Existing frameworks offer gate-level execution, differentiable pulse-level dynamics or optimised hardware execution. Just another quantum simulator (JAQSI) combines gate- and pulse-level simulation in one differentiable circuit model built upon JAX. Circuits are represented as pure functions of numerical inputs which support vectorised batches and JIT compilation. Within a single circuit,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

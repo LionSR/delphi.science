@@ -1,0 +1,21 @@
+{
+  "key": "2605.22281",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.22281",
+  "title": "Randomized Flexible LSQR and LSMR with applications to inverse problems",
+  "authors": [
+    "Alberto Bucci",
+    "Silvia Gazzola",
+    "Leonardo Robol"
+  ],
+  "summary": "LSQR and LSMR are iterative methods, based on the Golub-Kahan bidiagonalization algorithm, widely used for large-scale linear least squares problems. FLSQR and FLSMR are flexible variants of LSQR and LSMR, respectively, based on a flexible Golub-Kahan (Arnoldi-like) factorization algorithm, which naturally allow modifications of the solution approximation subspace and/or handling inexact matrix-vector multiplications with the (transpose of the) coefficient matrix, thereby enabling to enforce prior information into the computed solution. The goal of this paper is to introduce sFLSQR and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-21",
+  "updated": "2026-05-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2606.02599",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.02599",
+  "title": "Physics-Informed Neural Network for Diffusion-Reaction Problems with Dead-Core Formation in Catalyst Slabs",
+  "authors": [
+    "Piotr Skrzypacz",
+    "Kaisar Tangirbergen",
+    "Jan Valdman"
+  ],
+  "summary": "This work investigates a nonlinear two-point boundary value problem arising in diffusion--reaction processes in catalyst slabs with power-law kinetics and fractional reaction order. For sufficiently large Thiele modulus, the solution develops a dead-core region separated from the active region by an unknown free boundary. We propose a structured Physics-Informed Neural Network (PINN) framework that incorporates the asymptotic behavior at the dead-core interface into a hard-constrained trial solution and treats the interface location as a trainable parameter. The concentration profile and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-23",
+  "updated": "2026-08-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

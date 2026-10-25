@@ -1,0 +1,23 @@
+{
+  "key": "2610.21975",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.21975",
+  "title": "Sharp Cramér-type moderate deviation bounds for the self-normalized maximum of partial sums",
+  "authors": [
+    "Song-Hao Liu",
+    "Qi-Man Shao",
+    "Hao Shi",
+    "Jing-Yu Xu"
+  ],
+  "summary": "Let $X_1,X_2,\\ldots$ be i.i.d. random variables with zero mean and variance $σ^2\\in(0,\\infty)$. In this paper, we establish a sharp Cramér-type moderate deviation for the self-normalized maximum of partial sums under a finite $p$-th absolute moment, $2<p\\le3$. In particular, we show that $\\mathbb{P}(M_n\\ge xV_n)=2(1-Φ(x))\\{1+O(1)β_{n,p}(1+x)^p\\}$ for $0\\le x\\leβ_{n,p}^{-1/p}$, where $M_n=\\max_{1\\le k\\le n}\\sum_{j=1}^kX_j$, $V_n=(\\sum_{j=1}^nX_j^2)^{1/2}$, $β_{n,p}=\\mathbb{E}|X_1|^p/(n^{(p-2)/2}σ^p)$, and $Φ$ is the standard normal distribution function. This proves a conjecture of Shao2010.…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.ST"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

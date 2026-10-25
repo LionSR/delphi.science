@@ -1,0 +1,22 @@
+{
+  "key": "2608.20217",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.20217",
+  "title": "Schäffer's matrix inequality: the exact asymptotic constant",
+  "authors": [
+    "Samy Houache",
+    "Oleg Szehr",
+    "Rachid Zarouf"
+  ],
+  "summary": "Let $S_n$ denote the smallest constant such that \\[ |\\det T|\\|T^{-1}\\| \\leq S_n \\|T\\|^{n-1} \\] for every invertible operator $T$ on every $n$-dimensional complex Banach space. In Hilbert space the optimal constant is $1$. For arbitrary Banach spaces, J. J. Schäffer proved in 1970 that \\[S_n\\leq \\sqrt{en}. \\] Subsequent work showed that $S_n$ grows like $\\sqrt n$, but the sharp asymptotic constant has remained open for more than five decades. We resolve this problem by proving \\[ \\lim_{n\\to\\infty}\\frac{S_n}{\\sqrt n}=\\sqrt e. \\] Thus Schäffer's upper bound is asymptotically sharp, including…",
+  "domain": "math.FA",
+  "tags": [
+    "math.FA",
+    "math.SP"
+  ],
+  "published": "2026-08-20",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

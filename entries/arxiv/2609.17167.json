@@ -1,0 +1,21 @@
+{
+  "key": "2609.17167",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.17167",
+  "title": "Gauss-Newton drifting extends natural gradient descent",
+  "authors": [
+    "Théo Dumont",
+    "Théo Lacombe",
+    "François-Xavier Vialard"
+  ],
+  "summary": "Drifting methods have recently been introduced as a promising new paradigm for training generative models, and have attracted a lot of attention so far. In this work, we focus on how the optimization procedure shapes their convergence properties, shedding light on the underlying machinery that may explain their empirical success. More specifically, when the drift field is a Wasserstein gradient, optimizing the drifting loss via plain Euclidean gradient descent seems to forfeit any hope of exploiting convexity and therefore of obtaining any convergence guarantees. Changing either the drift…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

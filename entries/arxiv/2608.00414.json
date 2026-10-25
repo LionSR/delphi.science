@@ -1,0 +1,20 @@
+{
+  "key": "2608.00414",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.00414",
+  "title": "Sparse Quantum State Preparation with Sublinear T-Count",
+  "authors": [
+    "Jingquan Luo",
+    "Lvzhou Li"
+  ],
+  "summary": "We study the fault-tolerant cost of preparing sparse quantum states, measured by $T$-count in the Clifford+$T$ model. Here an $n$-qubit state is called $s$-sparse if it is supported on at most $s$ computational-basis states. For arbitrary $n$-qubit states, the optimal $T$-count is $Θ(\\sqrt{2^n\\log(1/ε)}+\\log(1/ε))$, but for $s$-sparse states the best previous upper bounds remained linear in $s$. We show that any $n$-qubit $s$-sparse state can be prepared up to error $ε$ using $\\widetilde{O}(\\min\\{s,\\ n^{3/4}\\sqrt{s}\\}+\\sqrt{s\\log(1/ε)}+\\log(1/ε))$ $T$ gates, giving the first sublinear…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-01",
+  "updated": "2026-08-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

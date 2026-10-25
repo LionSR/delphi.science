@@ -1,0 +1,21 @@
+{
+  "key": "2608.12550",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.12550",
+  "title": "On the Exponential Circuit Imbalance of the Ben-Tal Nemirovski Approximation",
+  "authors": [
+    "Jonah Bondar",
+    "Stephen Vavasis"
+  ],
+  "summary": "Dadush et al.\\ (2024) recently developed a scaling-invariant layered least squares algorithm for linear programming whose complexity depends on the optimal condition measure $\\barχ_A^*$. Their work builds on Vavasis and Ye's (1996) algorithm whose running time depends only on the constraint matrix $A$ through the condition number $\\barχ_A$. Monteiro-Tsuchiya (2003) defined the optimal condition number $\\barχ_A^*$ as the maximum $\\barχ_{AD}$ achievable over all positive diagonal column rescalings $D$. Dadush et al.\\ (2024) introduced the optimal circuit imbalance measure $κ_W^*$, which serves…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "math.OC"
+  ],
+  "published": "2026-08-12",
+  "updated": "2026-08-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

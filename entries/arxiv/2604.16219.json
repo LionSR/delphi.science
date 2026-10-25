@@ -1,0 +1,22 @@
+{
+  "key": "2604.16219",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.16219",
+  "title": "Simultaneous Inference for Covariance and Precision Matrices of Long-Range Dependent Time Series",
+  "authors": [
+    "Percy S. Zhai",
+    "Mladen Kolar",
+    "Wei Biao Wu"
+  ],
+  "summary": "For time series with long-range temporal dependence, inference for covariance and precision matrices is non-trivial. We propose a Berry-Esseen type Gaussian approximation result that gives a finite-sample bound for the Kolmogorov distance between the infinity norms of the estimation error of sample covariance matrix and the corresponding Gaussian approximation. The method utilizes martingale and m-dependent approximation and relies on constructing triadic blocks. We also establish a bootstrapping result with block sampling method, which preserves validity despite strong temporal dependence.…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-04-17",
+  "updated": "2026-04-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

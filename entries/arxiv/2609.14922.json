@@ -1,0 +1,23 @@
+{
+  "key": "2609.14922",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.14922",
+  "title": "Steady-State Convergence of Stochastic Approximation",
+  "authors": [
+    "Yixuan Zhang",
+    "Qiaomin Xie"
+  ],
+  "summary": "For constant-stepsize stochastic approximation (SA), the iterates converge in distribution to a stationary law that depends on the stepsize $α.$ Steady-state convergence (SSC) concerns the limit of the scaled stationary distribution as $α\\downarrow 0.$ Existing SSC theory requires i.i.d. or additive noise and global differentiability of the mean operator, and yields suboptimal rates. We develop a unified SSC theory for constant-stepsize contractive SA driven by Markovian, multiplicative noise, covering both locally differentiable and locally nondifferentiable mean operators. A key…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.OC",
+    "math.PR"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

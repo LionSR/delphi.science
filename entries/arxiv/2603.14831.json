@@ -1,0 +1,22 @@
+{
+  "key": "2603.14831",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.14831",
+  "title": "Neural Networks as Local-to-Global Computations",
+  "authors": [
+    "Vicente Bosca",
+    "Robert Ghrist"
+  ],
+  "summary": "We construct a cellular sheaf from any feedforward ReLU neural network by placing one vertex for each intermediate quantity in the forward pass and encoding each computational step - affine transformation, activation, output - as a restriction map on an edge. The restricted coboundary operator on the free coordinates is unitriangular, so its determinant is $1$ and the restricted Laplacian is positive definite for every activation pattern. It follows that the relative cohomology vanishes and the forward pass output is the unique harmonic extension of the boundary data. The sheaf heat equation…",
+  "domain": "math.AT",
+  "tags": [
+    "math.AT",
+    "cs.LG",
+    "math.DS"
+  ],
+  "published": "2026-03-16",
+  "updated": "2026-03-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

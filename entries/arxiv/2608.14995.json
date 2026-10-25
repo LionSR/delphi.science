@@ -1,0 +1,22 @@
+{
+  "key": "2608.14995",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.14995",
+  "title": "PAS-QFL: Personalized Ansatz Selection for Quantum Federated Learning under Client Data Heterogeneity",
+  "authors": [
+    "Jindi Wu",
+    "Qun Li"
+  ],
+  "summary": "Quantum federated learning (QFL) lets multiple quantum clients collaboratively train quantum neural networks (QNNs) without sharing private local data. However, existing QFL methods commonly assume that all clients use the same ansatz, overlooking how heterogeneous client data affects ansatz suitability. Under class-imbalanced non-IID data, different clients may favor different ansatz structures, so a fixed ansatz can lead to unstable and unfair performance across clients. In this paper, we propose PAS-QFL, a Personalized Ansatz Selection framework for QFL under client data heterogeneity.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI",
+    "cs.DC"
+  ],
+  "published": "2026-08-15",
+  "updated": "2026-08-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

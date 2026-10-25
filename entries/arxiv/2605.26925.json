@@ -1,0 +1,22 @@
+{
+  "key": "2605.26925",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.26925",
+  "title": "Adaptive Reinforcement Learning for Robust Open Quantum System Control: A Multi-Task Framework with Temporal Optimization",
+  "authors": [
+    "Haftu W. Fentaw",
+    "Steve Campbell",
+    "Simon Caton"
+  ],
+  "summary": "We present a Multi-task Soft Actor-Critic (SAC) Reinforcement Learning framework designed for open-system quantum control across diverse Hamiltonians, which learns optimal pulse sequences while simultaneously discovering problem-specific evolution time T and number of control pulse segments N. Experimental results across 51 Hamiltonian variations demonstrate that the multi-task SAC model is able to generate control pulses that can drive a system, under environment noise, from its initial state to its target state with high fidelities, establishing essential foundations for universal quantum…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

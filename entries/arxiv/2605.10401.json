@@ -1,0 +1,24 @@
+{
+  "key": "2605.10401",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.10401",
+  "title": "LLM4Branch: Large Language Model for Discovering Efficient Branching Policies of Integer Programs",
+  "authors": [
+    "Zhinan Hou",
+    "Xingchen Li",
+    "Yankai Zhang",
+    "Tianxun Li",
+    "Keyou You"
+  ],
+  "summary": "Efficient branching policies are essential for accelerating Mixed Integer Linear Programming (MILP) solvers. Their design has long relied on hand-crafted heuristics, and now machine learning has emerged as a promising paradigm to automate this process. However, existing learning-based methods are often hindered by their dependence on expensive expert demonstrations and the gap between training objectives and the solver's end-to-end performance. In this work, we propose LLM4Branch, a novel framework that leverages Large Language Models (LLMs) to automate the discovery of efficient branching…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

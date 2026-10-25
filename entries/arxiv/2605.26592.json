@@ -1,0 +1,22 @@
+{
+  "key": "2605.26592",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.26592",
+  "title": "Energy Dissipation Analysis of Implicit-Explicit Linear Multistep Methods for Gradient Flows Using a Simple Multiplier",
+  "authors": [
+    "Chaoyu Quan",
+    "Huaijin Wang",
+    "Xuping Wang",
+    "Chuanju Xu"
+  ],
+  "summary": "This paper proposes a theoretical framework for establishing the energy dissipation of general implicit-explicit linear multistep methods (IMEX-LMMs) for gradient flows, by constructing a dissipative modified energy consisting of the original energy and a non-negative quadratic modification. We first test IMEX-LMMs with a simple multiplier, the first-order time difference of numerical solutions. Then, it is shown that the associated non-negative quadratic modification can be constructed if and only if two generating polynomials (corresponding to the LMM) are positive on $[-1,1]$. Based on…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

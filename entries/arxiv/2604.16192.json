@@ -1,0 +1,19 @@
+{
+  "key": "2604.16192",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.16192",
+  "title": "Empirical Asymptotic Runtime Analysis of Linear Programming Algorithms",
+  "authors": [
+    "Edward Rothberg"
+  ],
+  "summary": "This paper takes an empirical look at asymptotic runtime growth rates for the most widely used algorithms for solving linear programming (LP) problems across a set of six optimization application areas that are known to produce large and difficult LP models. On the algorithm side, we consider the simplex method, interior-point methods, and PDHG. On the model side, we use a large language model (LLM) to create families of instances in different application areas, allowing us to study model types and sizes that are simultaneously synthetic and realistic. The results indicate that simple…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-17",
+  "updated": "2026-04-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

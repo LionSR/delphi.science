@@ -1,0 +1,20 @@
+{
+  "key": "2609.38124",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38124",
+  "title": "The Principle of Minimum Justified Correlation",
+  "authors": [
+    "John H Van Drie"
+  ],
+  "summary": "It is shown that Shannon entropy, Fisher information, and quantum-mechanical kinetic energy may all be viewed as measures of correlation. We begin with a fundamental correlation-destroying map: a joint probability density $ρ(x,y)$ is replaced by $ρ_x(x)ρ_y(y)$, the product of its marginal distributions. In the discrete case, Shannon's entropy is nondecreasing under this map. For continuous distributions, this fundamental map leads to a well-behaved, coordinate-invariant correlation measure, analogous to the discrete Shannon entropy: \\[ I[ρ] = h[ρ_x] + h[ρ_y] - h[ρ]. \\] In the continuous…",
+  "domain": "cond-mat.stat-mech",
+  "tags": [
+    "cond-mat.stat-mech",
+    "quant-ph"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

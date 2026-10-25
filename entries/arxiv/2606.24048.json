@@ -1,0 +1,20 @@
+{
+  "key": "2606.24048",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.24048",
+  "title": "An Analysis of Speculative Window Decoders for Quantum Error Correction",
+  "authors": [
+    "Jocelyn Li",
+    "Margaret Martonosi"
+  ],
+  "summary": "Fault-tolerant quantum computing is essential for realizing the substantial computational speedups that quantum computing can bring, but it requires real-time error decoding with high performance. Speculative window decoding improves performance by reducing the time spent waiting for dependencies from prior decoding windows. However, speculative decoders have only been evaluated under the regime of superconducting qubits with fast gate speeds, surface codes, and matching decoders. Since different quantum technologies can have slower gate speeds, we evaluate the performance of speculative…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-23",
+  "updated": "2026-06-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

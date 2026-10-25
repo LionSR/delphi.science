@@ -1,0 +1,22 @@
+{
+  "key": "2608.13121",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.13121",
+  "title": "Adaptive Schauder Stochastic Mirror Descent in Banach Spaces",
+  "authors": [
+    "Jinhui Bai",
+    "Shuai Lu",
+    "Lei Shi"
+  ],
+  "summary": "In this paper, we introduce an adaptive regularization strategy for stochastic mirror descent (SMD) to solve a class of risk functional minimization problems in infinite-dimensional Banach spaces. This regularization strategy centers on using a Schauder basis to construct a nested family of finite-dimensional subspaces, with the dimension chosen adaptively according to the sample size $n$. We then restrict each SMD subproblem to the corresponding subspace and project the stochastic gradient onto its dual space. This yields closed-form solutions to the SMD subproblems and coordinate-wise…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

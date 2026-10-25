@@ -1,0 +1,27 @@
+{
+  "key": "2607.24579",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.24579",
+  "title": "Denoising 3D images: robustness of persistent homology measures",
+  "authors": [
+    "Ebru Dagdelen",
+    "Aakash Karlekar",
+    "Manav Arora",
+    "Matthew Illingsworth",
+    "Jonathan Jaquette",
+    "Linda J. Cummings",
+    "Lou Kondic"
+  ],
+  "summary": "When computing sub/super-level-set persistent homology (PH), the effect of noise may introduce millions of (short-lived) topological generators, presenting an obstacle to both the computation of PH of large 3D images, and any analysis of PH that incorporates the number of generators. As such, it is often necessary to denoise the data before computing its PH. We analyze the PH of synthetic 3D images of porous media in the presence of spatially uncorrelated noise, and perform a comparative analysis of various topological measures (e.g. bottleneck distance, Wasserstein distance, persistence…",
+  "domain": "cs.CG",
+  "tags": [
+    "cs.CG",
+    "cs.CV",
+    "math.AT"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

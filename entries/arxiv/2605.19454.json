@@ -1,0 +1,21 @@
+{
+  "key": "2605.19454",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.19454",
+  "title": "A Unified Transmissibility-Based Interior Penalty DG Method for Heterogeneous and Anisotropic Diffusion",
+  "authors": [
+    "Gregory Etangsale",
+    "Vincent Fontaine",
+    "Anis Younes"
+  ],
+  "summary": "We derive a primal discontinuous Galerkin (DG) formulation for heterogeneous and anisotropic diffusion, obtained by exact algebraic elimination of the skeletal unknown in a compact hybridized interior penalty (H-IP) method. The resulting Unified Interior Penalty DG (UIP-DG) scheme involves transmissibility-based weights inherited from the hybrid formulation, together with two stabilization terms acting respectively on the primal jump and on the jump of the normal diffusive flux. These penalties scale, respectively, with the harmonic mean and with the inverse arithmetic mean of the face-wise…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

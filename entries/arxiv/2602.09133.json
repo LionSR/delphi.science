@@ -1,0 +1,20 @@
+{
+  "key": "2602.09133",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.09133",
+  "title": "Uniting Iteration Limits for Mixed-Integer Quadratic MPC",
+  "authors": [
+    "Luke Fina",
+    "Christopher Petersen"
+  ],
+  "summary": "Iteration limited model predictive control (MPC) can stabilize a feedback control system under sufficient conditions; this work explores combining a low iteration limit MPC with a high iteration limit MPC for mixed-integer quadratic programs (MIQPs) where the suboptimality is due to solver iteration limits. To combine the two MPCs a hybrid systems controller is developed that ``unites'' two MIQP-MPC solvers where the iteration limits of interest are the branch-and-bound and quadratic programming iteration limits. Asymptotic stability and robustness of the hybrid feedback control system are…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-09",
+  "updated": "2026-02-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

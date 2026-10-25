@@ -1,0 +1,19 @@
+{
+  "key": "2609.11784",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11784",
+  "title": "Constant Steps Are s-Composable: An Exact Interpolation Certificate for Gradient Descent",
+  "authors": [
+    "Jinze Zhao"
+  ],
+  "summary": "Grimmer, Shu, and Wang asked whether a balanced constant schedule is $s$-composable at every horizon. More precisely, for an integer $n\\geq 1$, let $\\bar{h}=1+r$, where $r\\in(0,1)$ is the unique solution of $$r^n\\bigl(1+n(1+r)\\bigr)=1,$$ and run gradient descent for $n$ steps with normalized stepsize $\\bar{h}$. The cases $n=1,2$ were known, while the general case $n\\geq3$ was left open. We prove the conjecture for every $n$. Our proof gives an explicit, dimension-free nonnegative linear combination of the smooth convex interpolation inequalities. The certificate is assembled from matrices…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

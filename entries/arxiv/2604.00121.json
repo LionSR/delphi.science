@@ -1,0 +1,22 @@
+{
+  "key": "2604.00121",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00121",
+  "title": "An explicit multiscale pseudo orbit-averaging time integration algorithm",
+  "authors": [
+    "Maxwell H. Rosen",
+    "Manaure Francisquez",
+    "Gregory W. Hammett"
+  ],
+  "summary": "We present an explicit multiscale algorithm for solving differential equations for problems with high-frequency modes that can be averaged over by separating and scaling the fast and slow dynamics within a single equation. We introduce a phased time integrator for cases where the boundaries of dynamical scales are known: one phase solves the unmodified equation, while the other freezes part of phase-space and slows down the evolution of the fast dynamics. This algorithm is applied to reduced kinetic models of plasmas in magnetic mirrors, which feature a distinct boundary between a region…",
+  "domain": "physics.plasm-ph",
+  "tags": [
+    "physics.plasm-ph",
+    "math.NA"
+  ],
+  "published": "2026-03-31",
+  "updated": "2026-05-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2607.29525",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.29525",
+  "title": "Physics Matters in PnP: Recovery Guarantees with the MMSE and NN Denoisers",
+  "authors": [
+    "Tobias Wolf",
+    "Jalal Fadili",
+    "Jin Guo",
+    "Roy Y. He"
+  ],
+  "summary": "We investigate the forward-backward-splitting version of the Plug and Play (PnP) method for linear ill-posed problems with MMSE estimators as denoisers. In contrast to existing literature, we consider estimators which are specialized for (degenerate) Gaussian noise with possibly non-diagonal covariance matrices. We further deviate from the classical iteration by replacing parts of the descent step with a linear operator that relates the observation noise to that of the MMSE estimator. Under mild assumptions, we derive several properties of the denoiser and prove recovery guarantees of the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.IT"
+  ],
+  "published": "2026-07-31",
+  "updated": "2026-07-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

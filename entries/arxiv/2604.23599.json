@@ -1,0 +1,21 @@
+{
+  "key": "2604.23599",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23599",
+  "title": "Partition-of-Unity Gaussian Kolmogorov-Arnold Networks",
+  "authors": [
+    "Amir Noorizadegan"
+  ],
+  "summary": "Gaussian basis functions provide an efficient and flexible alternative to spline activations in KANs. In this work, we introduce the partition-of-unity Gaussian KAN (PU-GKAN), a Shepard-type normalized Gaussian KAN in which the Gaussian basis values on each edge are divided by their local sum over fixed centers. This produces a partition-of-unity feature map with trainable coefficients, while preserving the standard edge-based KAN structure. The normalized construction gives exact constant reproduction at the edge level and admits an explicit finite-feature kernel interpretation. We…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "cs.AI",
+    "math.AP"
+  ],
+  "published": "2026-04-26",
+  "updated": "2026-05-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

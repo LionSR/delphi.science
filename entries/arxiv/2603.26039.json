@@ -1,0 +1,24 @@
+{
+  "key": "2603.26039",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.26039",
+  "title": "Achieving double-logarithmic precision dependence in optimization-based quantum unstructured search",
+  "authors": [
+    "Zhijian Lai",
+    "Dong An",
+    "Jiang Hu",
+    "Zaiwen Wen"
+  ],
+  "summary": "Grover's algorithm is a fundamental quantum algorithm that achieves a quadratic speedup for unstructured search problems of size $N$. Recent studies have reformulated this task as a maximization problem on the unitary manifold and solved it via linearly convergent Riemannian gradient ascent (RGA) methods, resulting in a complexity of $O(\\sqrt{N/M}\\log (1/\\varepsilon))$, where $M$ denotes the number of target items and $\\varepsilon$ denotes the success probability error. In this work, we adopt the Riemannian modified Newton (RMN) method to solve the quantum search problem, under the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math-ph",
+    "math.OC"
+  ],
+  "published": "2026-03-27",
+  "updated": "2026-06-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

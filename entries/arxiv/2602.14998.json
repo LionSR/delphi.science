@@ -1,0 +1,24 @@
+{
+  "key": "2602.14998",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14998",
+  "title": "Random geometric graphs with smooth kernels: sharp detection threshold and a spectral conjecture",
+  "authors": [
+    "Cheng Mao",
+    "Yihong Wu",
+    "Jiaming Xu"
+  ],
+  "summary": "A random geometric graph (RGG) with kernel $K$ is constructed by first sampling latent points $x_1,\\ldots,x_n$ independently and uniformly from the $d$-dimensional unit sphere, then connecting each pair $(i,j)$ with probability $K(\\langle x_i,x_j\\rangle)$. We study the sharp detection threshold, namely the highest dimension at which an RGG can be distinguished from its Erdős--Rényi counterpart with the same edge density. For dense graphs, we show that for smooth kernels the critical scaling is $d = n^{3/4}$, substantially lower than the threshold $d = n^3$ known for the hard RGG with…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.IT",
+    "cs.SI",
+    "math.ST"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-02-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

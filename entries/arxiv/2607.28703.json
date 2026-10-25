@@ -1,0 +1,22 @@
+{
+  "key": "2607.28703",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.28703",
+  "title": "Costs of Arbitrary Real Matrix Factorizations for Pure-DP Continual Counting",
+  "authors": [
+    "Awnon Bhowmik",
+    "Mahmudul Hasan"
+  ],
+  "summary": "Let $T_n$ be the lower-triangular prefix-sum matrix and let $c_{\\mathrm{F}}(T_n)$ and $c_2(T_n)$ be the factorization costs that govern the mean and maximum per-coordinate squared error of the Laplace matrix mechanism under pure $\\varepsilon$-differential privacy, for $\\varepsilon>0$. We prove $c_{\\mathrm{F}}(T_n),c_2(T_n)=Θ((\\log(n+1))^{3/2})$ with no sign, sparsity, or squareness restriction and with arbitrary finite inner dimension. Consequently, within the pure-$\\varepsilon$-DP matrix-mechanism class, the optimized maximum and mean squared errors are both…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "cs.DS",
+    "math.FA"
+  ],
+  "published": "2026-07-30",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

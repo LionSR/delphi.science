@@ -1,0 +1,31 @@
+{
+  "key": "2607.18184",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.18184",
+  "title": "anyakrakusuma: A Python Library for Entropic Schrödinger Bridges on Idealized Geometries",
+  "authors": [
+    "Dasapta Erwin Irawan",
+    "Sandy Hardian Susanto Herho",
+    "Agus Wahyu Jatmiko",
+    "Sito Fossy Biosa",
+    "Candrasa Surya Dharma",
+    "Edi Riawan",
+    "Astyka Pamumpuni",
+    "Rendy Dwi Kartiko",
+    "Rusmawan Suwarman",
+    "Deny Juanda Puradimaja"
+  ],
+  "summary": "We present anyakrakusuma, an open-source Python library that solves the discrete static Schrödinger bridge problem, the entropically regularized counterpart of optimal transport, through a log-domain Sinkhorn--Knopp iteration and reconstructs the entropic interpolation between two empirical point clouds. The solver is paired with a diagnostic pipeline that characterizes the optimal coupling and the intermediate distributions through information-theoretic and geometric measures. We exercise the library on four idealized planar cases spanning a circle-to-circle dilation, a spiral-to-mixture…",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "cs.MS",
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-07-20",
+  "updated": "2026-08-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

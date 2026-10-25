@@ -1,0 +1,22 @@
+{
+  "key": "2607.23276",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.23276",
+  "title": "Performance of Krotov, PRONTO and PINN for optimal control of quantum gates",
+  "authors": [
+    "Martín D. Jiménez",
+    "Murilo D. Forlevesi",
+    "Emanuel F. de Lima",
+    "Leonardo K. Castelano"
+  ],
+  "summary": "Achieving scalable quantum computing demands high-fidelity operations capable of mitigating population leakage into non-computational states. Physics-Informed Neural Networks (PINNs) have recently emerged as a powerful paradigm to unify quantum hardware characterization (inverse problems) and pulse engineering (direct problems), laying the foundational architecture for autonomous quantum processors. However, standard PINN frameworks face severe numerical bottlenecks, such as spectral bias, when attempting to simultaneously solve highly oscillatory multi-level dynamics and optimize continuous…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-25",
+  "updated": "2026-07-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

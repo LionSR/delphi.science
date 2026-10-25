@@ -1,0 +1,21 @@
+{
+  "key": "2608.09615",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.09615",
+  "title": "A novel compact scheme for second-order fluxes applied to the Spectral Difference method",
+  "authors": [
+    "Guido Lodato",
+    "Niccolò Tonicello"
+  ],
+  "summary": "The discretization of second-order (viscous) terms in Discontinuous Spectral Element Methods (DSEMs) typically relies on an auxiliary gradient variable, whose treatment at element interfaces affects the accuracy and stability of the scheme. The Bassi-Rebay (BR1) formulation is attractive for its simplicity and parameter-free character, but suffers from sub-optimal convergence at even polynomial orders and requires an extended five-element stencil. Inspired by Huynh's Flux Reconstruction formulation, we develop a compact, fully-centered scheme for second-order fluxes within the Spectral…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

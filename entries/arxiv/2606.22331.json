@@ -1,0 +1,20 @@
+{
+  "key": "2606.22331",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.22331",
+  "title": "No Reference-Free Generalization in Quantum Machine Learning",
+  "authors": [
+    "Jeongho Bang"
+  ],
+  "summary": "Quantum machine learning is often motivated by the exponentially large state space of quantum systems, but this promise leaves a basic generalization problem unresolved: how can a learner assign different meanings to unseen quantum directions when the training data provide no preferred basis, measurement frame, or other orienting structure? We address this identifiability problem by formulating supervised learning without an external quantum reference frame, so that predictions cannot depend on an arbitrary choice of Hilbert-space coordinates. This requirement forces the learned classifier…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-06-21",
+  "updated": "2026-06-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

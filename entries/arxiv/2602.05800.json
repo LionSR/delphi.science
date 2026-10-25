@@ -1,0 +1,20 @@
+{
+  "key": "2602.05800",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05800",
+  "title": "A Perturbation-Correction Method Based on Local Randomized Neural Networks for Quasi-Linear Interface Problems",
+  "authors": [
+    "Siyuan Lang",
+    "Zhiyue Zhang"
+  ],
+  "summary": "For quasi-linear elliptic interface problems with discontinuous diffusion coefficients, randomized neural network approximations may exhibit stagnation because the associated objective functional is generally nonconvex. This paper proposes a Local Randomized Neural Network (LRaNN) perturbation-correction method, denoted by LRaNN-PC, to alleviate this stagnation. The method represents the solution using an LRaNN on each subdomain, coupled through the interface conditions in a domain-decomposed framework. It consists of a primary stage and a perturbation-correction (PC) stage. The primary…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

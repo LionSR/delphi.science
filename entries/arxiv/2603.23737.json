@@ -1,0 +1,22 @@
+{
+  "key": "2603.23737",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.23737",
+  "title": "Risk-Aware LQR with Temporally Coupled States",
+  "authors": [
+    "Chuanning Wei",
+    "Kin Fung Li",
+    "Dionysis Kalogerias",
+    "Margaret P. Chapman"
+  ],
+  "summary": "We formulate and solve a discrete-time linear-quadratic regulation (LQR) problem in a finite horizon thatpenalizes temporal variability and stochastic variability of the state trajectory. Our approach enables one to strike a balance between regulating the state and reducing temporal variability, with explicit sensitivity to risk. We achieve this by extending a risk measure called predictive variance to a setting with temporally coupled states. Numerical examples demonstrate the effect of temporal coupling in both risk-aware and risk-neutral control settings.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-24",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

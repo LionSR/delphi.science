@@ -1,0 +1,22 @@
+{
+  "key": "2603.19907",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.19907",
+  "title": "Infinite-dimensional spherical-radial decomposition for probabilistic functions, with application to constrained optimal control and Gaussian process regression",
+  "authors": [
+    "Kewei Wang",
+    "Georg Stadler"
+  ],
+  "summary": "The spherical-radial decomposition (SRD) is an efficient method for estimating probabilistic functions and their gradients defined over finite-dimensional elliptical distributions. In this work, we generalize the SRD to infinite stochastic dimensions by combining subspace SRD with standard Monte Carlo methods. The resulting method, which we call hybrid infinite-dimensional SRD (hiSRD) provides an unbiased, low-variance estimator for convex sets arising, for instance, in chance-constrained optimization. We provide a theoretical analysis of the variance of finite-dimensional SRD as the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-03-20",
+  "updated": "2026-03-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

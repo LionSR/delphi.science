@@ -1,0 +1,27 @@
+{
+  "key": "2606.02993",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.02993",
+  "title": "Neural Networks Provably Learn Spectral Representations for Group Composition",
+  "authors": [
+    "Jianliang He",
+    "Leda Wang",
+    "Fengzhuo Zhang",
+    "Siyu Chen",
+    "Zhuoran Yang"
+  ],
+  "summary": "Understanding how structured internal structure emerges during neural network training is central to the study of deep learning. We investigate this phenomenon through the group composition task, where a two-layer neural network is trained to predict $g_1 \\star g_2$ for elements of a finite group $G$. By lifting the projected gradient flow to the Fourier domain, we demonstrate that the training dynamics are governed by a Riemannian gradient ascent on a representation-theoretic energy functional. We prove that, under random initialization, this flow drives each neuron to converge almost…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "math.RT",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-06-02",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2605.28599",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.28599",
+  "title": "Thermodynamic-limit dispersion relations on trapped-ion quantum hardware",
+  "authors": [
+    "Lucas Marti",
+    "Sumeet",
+    "Stefan Wolf",
+    "K. P. Schmidt",
+    "Michael J. Hartmann"
+  ],
+  "summary": "We run a numerical linked-cluster expansion with a quantum algorithm (NLCE+QA), computing ground-state energies and one quasi-particle dispersions in the thermodynamic limit using a 20-qubit trapped-ion quantum processing unit (QPU). The NLCE+QA framework extracts thermodynamic-limit properties from small-cluster calculations, making it naturally suited for near-term quantum devices. Projector-based block-diagonalization schemes such as projective cluster-additive transformation (PCAT) are essential to NLCE+QA, and they involve matrix inversion and square root operations that amplify…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.str-el"
+  ],
+  "published": "2026-05-27",
+  "updated": "2026-05-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

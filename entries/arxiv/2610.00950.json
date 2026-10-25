@@ -1,0 +1,20 @@
+{
+  "key": "2610.00950",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00950",
+  "title": "Sublinear-depth Quantum Simulation of Electrons with Atomic Orbitals",
+  "authors": [
+    "Jakob Günther",
+    "Aram W. Harrow"
+  ],
+  "summary": "Discretizing electronic degrees of freedom into atomic orbitals is the default choice to accurately model electrons in molecules in a compact and flexible way. We consider the task of simulating such electronic structure models on a quantum computer for $N$ orbitals, keeping the number of orbitals per atom constant. Atomic orbitals give rise to Hamiltonians with potentially up to $\\mathcal{O}(N^4)$ terms and little structure, which made it challenging to match the complexity of methods based on plane waves and real-space grids. In this work, we show that a Trotter step for atomic orbitals…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

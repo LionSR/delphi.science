@@ -1,0 +1,25 @@
+{
+  "key": "2610.10408",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.10408",
+  "title": "Rubix: Global Correspondence-Free Point Set Alignment through Assignment Geometry",
+  "authors": [
+    "Subhransu S. Bhattacharjee",
+    "Dylan Campbell",
+    "Rahul Shome"
+  ],
+  "summary": "Procrustes-Wasserstein alignment jointly estimates a matching and rotation without supplied correspondences, but alternating minimization can stop at suboptimal solutions. Rubix solves the equally weighted planar problem globally under squared Euclidean loss. Each matching $σ$ of two centered $n$-point sets defines a complex correlation $z_σ=\\sum_i\\bar x_i y_{σ(i)}$. Their convex hull is the permutation polygon: supporting vertices give optimal matchings at fixed rotations, and the farthest vertex gives the global alignment. We prove the sharp bound of $n(n-1)$ vertices for $n\\ge2$,…",
+  "domain": "cs.CV",
+  "tags": [
+    "cs.CV",
+    "cs.CG",
+    "cs.LG",
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

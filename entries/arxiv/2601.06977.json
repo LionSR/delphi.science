@@ -1,0 +1,20 @@
+{
+  "key": "2601.06977",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.06977",
+  "title": "Alternating Direction Method of Multipliers for nonlinear constrained convex problems and applications to distributed resource allocation and constrained machine learning",
+  "authors": [
+    "Zhengjie Xiong",
+    "Yangyang Xu"
+  ],
+  "summary": "We study a class of structured convex optimization problems, which have a two-block separable objective and nonlinear functional constraints as well as affine constraints that couple the two block variables. Such problems naturally arise from distributed resource allocation and constrained machine learning. To achieve high communication efficiency for the distributed applications, we propose a nonlinear alternating direction method of multipliers (NL-ADMM) that preserves the classical splitting structure while accommodating general convex functional constraints. Unlike existing ADMM variants…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-11",
+  "updated": "2026-02-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

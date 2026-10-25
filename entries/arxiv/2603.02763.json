@@ -1,0 +1,21 @@
+{
+  "key": "2603.02763",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.02763",
+  "title": "Local Relaxation Fast Poisson Methods on Hierarchical Meshes",
+  "authors": [
+    "Zhenli Xu",
+    "Qian Yin",
+    "Hongyu Zhou"
+  ],
+  "summary": "The local relaxation algorithm is promising for fast solution of Poisson's equations, which computes the electric field distribution in a stepwise manner via local curl-free updates while strictly enforcing Gauss's law. We propose a novel hierarchical local relaxation (HLR) method for speeding up the convergence of curl-free iterations. The local algorithm reformulates the Poisson's equation into the electric-field form and sweeps each cell to minimize the associate electric energy, avoiding the solution of linear systems. The updates with hierarchical meshes significantly accelerate the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-03",
+  "updated": "2026-03-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2610.18723",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.18723",
+  "title": "Optimal Support Size Testing",
+  "authors": [
+    "Qisheng Wang"
+  ],
+  "summary": "We present an optimal tester for support size that determines whether an unknown probability distribution is supported on $n$ elements or $\\varepsilon$-far away (in total variation distance) with sample complexity $Θ(\\frac{n}{\\varepsilon\\log(n)})$, improving the prior best $O(\\frac{n}{\\varepsilon\\log(n)} \\log(\\min\\{\\frac{1}{\\varepsilon}, n\\}))$ due to Ferreira Pinto Jr. and Harms (STOC 2025). As a generalization, we provide a pretty good lower bound on support size.",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "cs.DS",
+    "math.ST"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2603.16032",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.16032",
+  "title": "Convergence analysis of dynamically regularized Lagrange multiplier pressure correction method for the incompressible Navier-Stokes equations",
+  "authors": [
+    "Yi Shen",
+    "Rihui Lan",
+    "Hua Wang"
+  ],
+  "summary": "We propose first-order pressure-correction scheme for the incompressible Navier-Stokes equations, incorporating the recently developed the Dynamically Regularized Lagrange Multiplier (DRLM) methods. The resulting algorithms are fully decoupled and require solving only Poisson-type equations at each time step. Moreover, it exhibits unconditional energy stability. This paper provides a rigorous error analysis for the first-order scheme, establishing optimal error estimates for both velocity and pressure. Specifically, we employ mathematical induction to derive sharp velocity error bounds,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-17",
+  "updated": "2026-03-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

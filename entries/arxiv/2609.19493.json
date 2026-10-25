@@ -1,0 +1,20 @@
+{
+  "key": "2609.19493",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.19493",
+  "title": "Polynomially larger deletion codes by linear hashing of substring counts",
+  "authors": [
+    "Eyal En Gad"
+  ],
+  "summary": "We reduce the leading redundancy coefficient for binary codes correcting any fixed number $t\\ge2$ of deletions from $2t$ to $2t-1$. This is the first improvement to that coefficient since Levenshtein's 1965 bound. More generally, over every fixed alphabet of size $q\\ge2$, codes of length $n$ correcting any combination of at most $t$ insertions, deletions and substitutions exist with redundancy $(2t-1)\\log_q n+O_t(\\log_q\\log_q n)$. For two deletions, the upper-bound coefficient drops from $4$ to $3$, halving the gap to the lower-bound coefficient $2$. The leading coefficient $2t-1$ also holds…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "math.CO"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2609.14742",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.14742",
+  "title": "A Structure-Preserving Symmetric Galerkin Boundary Element Method for Anisotropic Multi-phase Mullins-Sekerka Flow",
+  "authors": [
+    "Tokuhiro Eto"
+  ],
+  "summary": "A structure-preserving symmetric Galerkin boundary element method (SGBEM) is developed for the anisotropic multi-phase Mullins-Sekerka problem in $\\mathbb R^2$. The bulk harmonic problems are eliminated through a discrete Dirichlet-to-Neumann operator assembled from region-wise SGBEM discretization, leading to a boundary-only formulation coupled to the evolution of a polygonal curve network with triple junctions. The Galerkin approximation of the resulting boundary problem is shown to be uniquely solvable, and the fully discrete scheme is unconditionally stable with respect to the time step…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-13",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2606.29385",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.29385",
+  "title": "Chain Covers in the Boolean Lattice",
+  "authors": [
+    "Zoltán Lóránt Nagy",
+    "Balázs Patkós"
+  ],
+  "summary": "For integers $1\\le r\\le n+1$, let $N(n,r)$ denote the least number of chains in the Boolean lattice $B_n=2^{[n]}$ that cover every strict $r$-term chain. The case $r=1$ is the classical chain-decomposition problem and is generalizing Dilworth's theorem and Sperner's theorem. We study two complementary regimes. First, when $r>1$ is fixed and $n\\to\\infty$. Let $$M(n,r):= \\max_{\\substack{ a_0+\\cdots+a_r=n a_0,a_r\\ge 0,\\ a_i\\ge 1\\ (1\\le i\\le r-1) }} \\binom{n}{a_0,\\ldots,a_r}.$$ We prove that lower and upper bounds which differ only by a logarithmic factor: \\[ M(n,r)\\le N(n,r)\\le \\left(\\frac…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-06-28",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2609.22729",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.22729",
+  "title": "Can Chemically Inspired Parameter Initialization Mitigate Barren Plateaus in Variational Quantum Eigensolvers?",
+  "authors": [
+    "Zhangyu Yang",
+    "Jinzhao Sun",
+    "Jianpeng Chen",
+    "Weitang Li",
+    "Zhigang Shuai"
+  ],
+  "summary": "Recent advances in the variational quantum eigensolver (VQE) have strengthened its promise for molecular electronic-structure calculations on near-term noisy intermediate-scale quantum (NISQ) devices. However, barren plateaus (BPs) remain a major obstacle to scaling VQE, as vanishing gradients can severely obstruct optimization at large scale. While most BP studies focus on randomly initialized circuits and global gradient behavior, practical quantum chemistry VQE typically uses chemically motivated initializations and local optimization around HF- or MP2-derived states. Although chemically…",
+  "domain": "physics.chem-ph",
+  "tags": [
+    "physics.chem-ph",
+    "quant-ph"
+  ],
+  "published": "2026-09-19",
+  "updated": "2026-09-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

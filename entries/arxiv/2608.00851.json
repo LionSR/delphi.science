@@ -1,0 +1,20 @@
+{
+  "key": "2608.00851",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.00851",
+  "title": "Block Sensitivity can exceed Spectral Sensitivity Squared",
+  "authors": [
+    "Alexander Meiburg"
+  ],
+  "summary": "The spectral sensitivity $λ(f)$ of a Boolean function is the largest eigenvalue of the adjacency matrix of its sensitivity graph. It lower-bounds every standard measure of query complexity, and Aaronson, Ben-David, Kothari, Rao and Tal, who introduced it, asked whether block sensitivity is at most quadratic in it: is $bs(f)=O(λ(f)^{2})$? We show that it is not. We construct a total Boolean function on $2017584$ variables with $bs(f)\\ge 14011$ and $λ(f)\\le 89.0162$, so that $bs(f)\\geλ(f)^{2.127}$, and hence by composition a family with $λ(f_n)\\to\\infty$ and $bs(f_n)=Ω(λ(f_n)^{2.127})$. The…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "math.CO"
+  ],
+  "published": "2026-08-01",
+  "updated": "2026-08-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

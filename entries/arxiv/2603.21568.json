@@ -1,0 +1,24 @@
+{
+  "key": "2603.21568",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.21568",
+  "title": "Stability and Bifurcation Analysis of Nonlinear PDEs via Random Projection-based PINNs: A Krylov-Arnoldi Approach",
+  "authors": [
+    "Gianluca Fabiani",
+    "Michail E. Kavousanakis",
+    "Constantinos Siettos",
+    "Ioannis G. Kevrekidis"
+  ],
+  "summary": "We present a numerical framework for the stability and bifurcation analysis of nonlinear partial differential equations (PDEs) in which the solutions are sought in the function space spanned by physics-informed random projection neural networks (PI-RPNNs), and discretized via a collocation approach. These are shallow, single-hidden-layer networks with randomly sampled and fixed a priori hidden-layer weights; only the linear output layer weights are optimized, reducing training to a single least-squares solve. This linear output structure enables the explicit generalized eigenvalue…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG",
+    "math.DS"
+  ],
+  "published": "2026-03-23",
+  "updated": "2026-09-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

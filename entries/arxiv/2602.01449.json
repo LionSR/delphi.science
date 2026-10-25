@@ -1,0 +1,24 @@
+{
+  "key": "2602.01449",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.01449",
+  "title": "Dimension-Free Multimodal Sampling via Preconditioned Annealed Langevin Dynamics",
+  "authors": [
+    "Lorenzo Baldassari",
+    "Josselin Garnier",
+    "Knut Solna",
+    "Maarten V. de Hoop"
+  ],
+  "summary": "Designing sampling algorithms for multimodal targets that remain stable under refinement of the finite-dimensional approximation of an underlying function-space problem is a central challenge. Annealed Langevin dynamics (ALD) is a natural alternative to classical Langevin in this context, since it is often observed to improve exploration across modes. Yet a gap remains between its empirical success and existing theory: under which conditions can ALD be guaranteed to remain stable across dimensions? In this paper, we bridge this gap by providing a uniform-in-dimension analysis of…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-02-01",
+  "updated": "2026-05-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

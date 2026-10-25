@@ -1,0 +1,20 @@
+{
+  "key": "2604.02747",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.02747",
+  "title": "A Sequential Cubic Programming Method with Second-Order Complexity Guarantees for Equality Constrained Optimization",
+  "authors": [
+    "Nikos Dimou",
+    "Michael J. O'Neill"
+  ],
+  "summary": "We develop a new method for equality constrained optimization problems based on a sequential cubic programming framework. Each iteration utilizes a step decomposition based on the Jacobian of the constraints into a normal and a tangential component, the latter of which is found by solving a subproblem involving cubic regularization. The method incorporates second-order correction steps as necessary to ensure global convergence to second-order stationary points as well as local quadratic convergence. In addition, we show that the algorithm is the first to obtain worst case complexity…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-03",
+  "updated": "2026-04-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

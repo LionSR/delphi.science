@@ -1,0 +1,19 @@
+{
+  "key": "2609.19335",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.19335",
+  "title": "Deep Learning for Singular PDEs: A Weighted Neural Network Approach",
+  "authors": [
+    "Badr Oulgiht"
+  ],
+  "summary": "We propose a deep learning framework for the numerical approximation of weakly singular semilinear elliptic equations subject to homogeneous Dirichlet boundary conditions and positivity constraints. These problems are challenging because the nonlinear source term becomes unbounded as the positive solution approaches zero near the boundary. The proposed approach combines three components. First, the Dirichlet boundary conditions are embedded directly into the neural representation through a hard-constraint formulation. Second, a Softplus transformation preserves positivity in the interior of…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2608.26961",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.26961",
+  "title": "Alignment Matters Inside and Out in Equivariant Graph Flow Matching",
+  "authors": [
+    "Moritz Piening",
+    "Christian Wald"
+  ],
+  "summary": "Graphs are invariant under node permutations, motivating permutation-equivariant architectures in generative models. In flow matching, however, symmetry also affects the source-target coupling: one must choose both which graphs to pair and which node representatives to align. We study these two forms of alignment, termed outer and inner alignment, and their effect on equivariant graph flow matching. We connect inner alignment to transport on the graph quotient space, whose Euclidean quotient metric coincides with Gromov-Monge distance, and show that quotient couplings admit aligned…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-08-27",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

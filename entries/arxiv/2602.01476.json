@@ -1,0 +1,20 @@
+{
+  "key": "2602.01476",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.01476",
+  "title": "Conformal Prediction for Early Stopping in Mixed Integer Optimization",
+  "authors": [
+    "Stefan Clarke",
+    "Bartolomeo Stellato"
+  ],
+  "summary": "Mixed-integer optimization solvers often find optimal solutions early in the search, yet spend the majority of computation time proving optimality. We exploit this by learning when to terminate solvers early on distributions of similar problem instances. Our method trains a neural network to estimate the true optimality gap from the solver state, then uses conformal prediction to calibrate a stopping threshold with rigorous probabilistic guarantees on solution quality. On five problem families from the distributional MIPLIB library, our method reduces solve time by over 60% while…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-01",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

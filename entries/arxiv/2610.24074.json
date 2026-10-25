@@ -1,0 +1,22 @@
+{
+  "key": "2610.24074",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.24074",
+  "title": "QRecoupling.jl: numerical and exact computation of classical and quantum recoupling coefficients",
+  "authors": [
+    "Seth K. Asante"
+  ],
+  "summary": "QRecoupling.jl is a Julia package for numerical, exact and symbolic evaluation of classical and quantum recoupling coefficients and generic finite sums of quantum factorials, with one interface across the classical limit, principal unitary levels and real or complex deformation. A compact factorial rule and its cyclotomic exponents expose factor cancellation, polynomial structure and level support. The package covers quantum Clebsch-Gordan coefficients, 3j and 6j symbols and user-defined sums. Its adaptive numerical evaluation is combined with exact decisions for sums that cancel to zero.…",
+  "domain": "cs.MS",
+  "tags": [
+    "cs.MS",
+    "gr-qc",
+    "math-ph",
+    "physics.comp-ph"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

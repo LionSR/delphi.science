@@ -1,0 +1,20 @@
+{
+  "key": "2609.03251",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.03251",
+  "title": "Accelerated Prox-Level Methods for Unknown Piecewise-Smooth Optimization II: Function-constrained Optimization",
+  "authors": [
+    "Zhenwei Lin",
+    "Zhe Zhang"
+  ],
+  "summary": "We introduce an anytime, almost parameter-free algorithm for convex function-constrained optimization, in which the objective and constraint functions are unknown piecewise-smooth. Our algorithm, Restarted Penalty APEX (Penalty Accelerated Prox-level method for Exploring Piecewise Smoothness), is an accelerated bundle-level method based on the penalty approach. For problems satisfying quadratic growth, the proposed method is the first to achieve optimal oracle complexity without knowing the growth modulus or the exact penalty coefficient. Furthermore, Restarted Penalty APEX generates a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

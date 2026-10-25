@@ -1,0 +1,22 @@
+{
+  "key": "2606.00960",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.00960",
+  "title": "Palindromic structure of depth-efficient quantum search algorithms",
+  "authors": [
+    "Kun Zhang",
+    "Hai-Long Shi",
+    "Xiao-Hui Wang",
+    "Vladimir Korepin"
+  ],
+  "summary": "Grover's algorithm is optimal in query complexity, but not necessarily in circuit depth. We formulate unstructured quantum search as a circuit-depth optimization problem and identify a critical depth ratio separating query optimality from depth optimality. The resulting depth-efficient search operators exhibit a palindromic structure, in which shallow diffusion-like operators symmetrically replace selected Grover diffusion layers while preserving efficient amplitude amplification. This structure yields a simple depth-efficiency criterion and an analytic expression for the minimal expected…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-31",
+  "updated": "2026-05-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

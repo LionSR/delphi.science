@@ -9,6 +9,7 @@ copied: they are read from registry/entries/ at build time and shown with the AP
     python index.py harvest [--source NAME] [--limit N] [--dry-run]
     python index.py label [--all] [--labeler claude|none|canned:<file.json>]
     python index.py refresh [--older-than DAYS] [--limit N] [--dry-run]
+    python index.py discuss <record id> <url>... [--drop] [--dry-run]
     python index.py build            # writes dist/: index.json, index.db, llms.txt
 """
 
@@ -67,6 +68,9 @@ CATEGORIES = {
     "harmful": "Hidden: flagged content",
 }
 MAX_ADDS_PER_DAY = 20  # per GitHub login; the only limit on who may post
+# A repository is listed on its own only when it is well used or citable: this many stars, or a CITATION.cff.
+# Otherwise its paper is the record (site/lib/resolve.ts MIN_STARS says the same).
+MIN_REPO_STARS = 50
 
 
 def path_for(source: str, key: str) -> Path:
@@ -116,6 +120,8 @@ def listed_as(entry: dict[str, Any], known: set[tuple[str, str]], repos: dict[st
 def check(entry: dict[str, Any]) -> list[str]:
     """The hard checks. Anything that passes them is posted; the agent's label does the rest."""
     problems = []
+    if entry["source"] == "github" and entry.get("stars", 0) < MIN_REPO_STARS and not entry.get("citation_cff"):
+        problems.append(f"a repository is listed only with at least {MIN_REPO_STARS} stars or a CITATION.cff; add its paper instead")
     known = {(entry["source"], entry["key"])} if path_for(entry["source"], entry["key"]).exists() else set()
     listed = listed_as(entry, known, app_repos())
     if listed:
@@ -224,7 +230,8 @@ def label(relabel_all: bool, labeler: str, limit: int | None = None, missing_sub
     if missing_subject:
         todo = [(p, e) for p, e in load() if not TX.subject_of(e.get("domain"), e.get("review", {}).get("subject"))][:limit]
     else:
-        todo = [(p, e) for p, e in load() if relabel_all or "review" not in e][:limit]
+        # arXiv is moderated: its bulk-harvested papers are shown as research without a label.
+        todo = [(p, e) for p, e in load() if relabel_all or ("review" not in e and not e.get("added_by", "").startswith("harvest:arxiv-"))][:limit]
     done = 0
     for i in range(0, len(todo), BATCH):
         chunk = todo[i : i + BATCH]
@@ -267,6 +274,8 @@ def refresh(older_than: int, limit: int, dry_run: bool) -> int:
         keep = {k: e[k] for k in ("added", "added_by", "review") if k in e}
         updated = {**e, **_drop_empty(fresh), **keep, "refreshed": S.today()}
         updated.pop("gone", None)
+        if e.get("discussion"):
+            updated["discussion"] = recheck(e["discussion"])
         if any(updated.get(k) != e.get(k) for k in ("title", "summary")):
             updated.pop("review", None)  # the text changed: label it again
             changed += 1
@@ -277,13 +286,58 @@ def refresh(older_than: int, limit: int, dry_run: bool) -> int:
     return 0
 
 
+# ---- discuss ----
+
+
+def recheck(links: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Each link read again: edits come through, a deleted post or page drops out, an unreachable one is kept."""
+    out = []
+    for d in links:
+        try:
+            out.append({**S.discussion_link(d["url"]), "added": d.get("added", "")})
+        except S.NotFound:
+            print(f"dropped  {d['url']}")
+        except (ValueError, S.SourceError) as err:
+            print(f"kept     {d['url']}: {err}", file=sys.stderr)
+            out.append(d)
+    return out
+
+
+def discuss(record: str, urls: list[str], drop: bool, dry_run: bool) -> int:
+    """Attach posts and articles about a record: X posts through oEmbed, anything else through its Open Graph tags.
+    Only voices with a public scholarly record are taken (see README); --drop removes links again."""
+    source, _, key = record.partition("/")
+    path = path_for(source, key)
+    if not path.exists():
+        print(f"no entry {record}")
+        return 2
+    e = json.loads(path.read_text())
+    links = e.get("discussion", [])
+    if drop:
+        gone = {u.strip().replace("twitter.com/", "x.com/").split("?")[0] for u in urls}
+        links = [x for x in links if x["url"] not in gone]
+        print(f"{len(e.get('discussion', [])) - len(links)} dropped")
+    for url in [] if drop else urls:
+        try:
+            d = S.discussion_link(url)
+        except (ValueError, S.NotFound, S.SourceError) as err:
+            print(f"skipped {url}: {err}", file=sys.stderr)
+            continue
+        links = [x for x in links if x["url"] != d["url"]] + [{**d, "added": S.today()}]
+        print(f"+ {d.get('author') or d.get('site')}: {(d.get('text') or d.get('title', ''))[:90]}")
+    e["discussion"] = sorted(links, key=lambda d: d.get("date", ""))
+    if not dry_run:
+        save(path, e)
+    return 0
+
+
 # ---- build ----
 
 
 # Entry fields served as they are; to_item adds id, tags, published, category and subject.
 PASSTHROUGH = ("source", "url", "title", "authors", "summary", "domain", "origin", "agent_ready", "gone", "stars", "pdf",
                "family", "family_title", "formalized", "withdrawn", "withdrawn_on", "verified", "trust", "ai_models",
-               "formalizes", "repo", "json")
+               "formalizes", "formalizations", "authorship", "human_understanding", "repo", "json", "discussion")
 
 
 PREFIXES = json.loads((Path(__file__).resolve().parent / "site" / "lib" / "prefixes.json").read_text())["prefixes"]
@@ -309,17 +363,38 @@ def to_item(e: dict[str, Any]) -> dict[str, Any] | None:
     })
 
 
+def crosslink(all_items: list[dict[str, Any]]) -> None:
+    """A discussion link whose paper is itself in the index points at that record ("record"), and the
+    record lists what it discusses ("discusses"), so an arXiv response and the manuscript it answers
+    link both ways. Resolved with sources.detect, so it works for every source, not only arXiv."""
+    by_id = {it["id"]: it for it in all_items}
+    for it in all_items:
+        for link in it.get("discussion") or []:
+            try:
+                src, key = S.detect(link["url"])
+            except ValueError:
+                continue
+            target = by_id.get(f"{src.name}/{key}")
+            if not target or target is it:
+                continue
+            link["record"] = target["id"]
+            discusses = target.setdefault("discusses", [])
+            if all(d["id"] != it["id"] for d in discusses):
+                discusses.append({"id": it["id"], "title": it["title"]})
+
+
 def items(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """APP papers (oldest first), then every other entry, newest first."""
     out = [to_item(e) for e in [*map(app_entry, load_entries()), *entries]]
     kept = [it for it in out if it]
+    crosslink(kept)
     apps = sorted((it for it in kept if it["source"] == "app"), key=lambda it: it.get("published", ""))
     rest = sorted((it for it in kept if it["source"] != "app"), key=lambda it: it.get("published", ""), reverse=True)
     return apps + rest
 
 
 def labels() -> dict[str, str]:
-    return {"app": "APP", **{s.name: s.label for s in S.SOURCES}}
+    return {"app": "agenticpapers.app", **{s.name: s.label for s in S.SOURCES}}
 
 
 def dumps(obj: Any) -> str:
@@ -352,15 +427,17 @@ def llms_txt(index: dict[str, Any]) -> str:
     lines = [
         "# Open research index",
         "",
-        "> An open registry of research: papers, repositories, datasets and Lean formalizations, each",
-        "> labelled by its source, with a forum where people and agents discuss them.",
+        "> Where you check an AI-generated result before you trust it. Every paper, preprint and formal proof sits beside",
+        "> what experts said about it: arXiv replies, blog posts, talks, MathOverflow and X, each with author, date and a",
+        "> quote from the source. Covers OpenAI's math release, agenticpapers.app, Lean registries and this year's arXiv.",
         "",
         "Every record id is <prefix>/<suffix>, like a DOI: the source's prefix, then the source's own id.",
         "/id/<prefix>/<suffix> goes to the original; with Accept: application/json it returns the record. Prefixes: /api/v1/prefixes.",
         "",
         "How to use the API: /api/v1. Search: /api/v1/search?q=<query> (arXiv syntax). One record: /api/v1/records/<id>.",
-        "Instructions for agents (read, submit, post): /skill.md. Forum: /api/v1/forum.",
-        "Submit: POST /api/v1/submit. Vote or comment: POST /api/v1/records/<id>/vote or /comments, with an agent key.",
+        "Instructions for agents (read, submit, post): /skill.md. Forum: /api/v1/forum. Submit: POST /api/v1/submit.",
+        "Vote or comment: POST /api/v1/records/<id>/vote or /comments, with an agent key or a GitHub token.",
+        "What researchers said about a record: its discussion[] (X posts and articles, each with url, author, text, date); is:discussed finds records that have any.",
         "Whole index: index.db (SQLite) or index.json.",
         "",
         "Query examples:",
@@ -376,7 +453,7 @@ def llms_txt(index: dict[str, Any]) -> str:
         "",
         *[f"- `{k}`: {v}" for k, v in index["categories"].items() if k != "harmful"],
         "",
-        "## APP papers (open these in Claude Code or Codex)",
+        "## agenticpapers.app papers (open these in Claude Code or Codex)",
         "",
         *[f"- [{it['title']}]({it['url']}): {it.get('repo', '')}" for it in index["items"] if it["source"] == "app"],
         "",
@@ -391,6 +468,7 @@ def main(argv: Iterable[str] | None = None) -> int:
     h = sub.add_parser("harvest"); h.add_argument("--source"); h.add_argument("--limit", type=int); h.add_argument("--dry-run", action="store_true")
     lb = sub.add_parser("label"); lb.add_argument("--all", action="store_true"); lb.add_argument("--labeler", default="claude"); lb.add_argument("--limit", type=int); lb.add_argument("--missing-subject", action="store_true")
     r = sub.add_parser("refresh"); r.add_argument("--older-than", type=int, default=7); r.add_argument("--limit", type=int, default=200); r.add_argument("--dry-run", action="store_true")
+    d = sub.add_parser("discuss"); d.add_argument("record"); d.add_argument("urls", nargs="+"); d.add_argument("--drop", action="store_true"); d.add_argument("--dry-run", action="store_true")
     sub.add_parser("build")
     args = ap.parse_args(list(argv) if argv is not None else None)
     S.TOKEN = github_token()
@@ -402,6 +480,8 @@ def main(argv: Iterable[str] | None = None) -> int:
         return label(args.all, args.labeler, args.limit, args.missing_subject)
     if args.cmd == "refresh":
         return refresh(args.older_than, args.limit, args.dry_run)
+    if args.cmd == "discuss":
+        return discuss(args.record, args.urls, args.drop, args.dry_run)
     return build()
 
 

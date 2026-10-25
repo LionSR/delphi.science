@@ -1,0 +1,23 @@
+{
+  "key": "2601.11397",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.11397",
+  "title": "Latent Space Inference via Paired Autoencoders",
+  "authors": [
+    "Emma Hart",
+    "Bas Peters",
+    "Julianne Chung",
+    "Matthias Chung"
+  ],
+  "summary": "This work describes a novel data-driven latent space inference framework built on paired autoencoders to handle observational inconsistencies when solving inverse problems. Our approach uses two autoencoders, one for the parameter space and one for the observation space, connected by learned mappings between the autoencoders' latent spaces. These mappings enable a surrogate for regularized inversion and optimization in low-dimensional, informative latent spaces. Our flexible framework can work with partial, noisy, or out-of-distribution data, all while maintaining consistency with the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-01-16",
+  "updated": "2026-01-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

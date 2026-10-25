@@ -1,0 +1,23 @@
+{
+  "key": "2607.23568",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.23568",
+  "title": "Adaptive Consistency for Mimetic Finite Differences",
+  "authors": [
+    "Yoo Jin Cha",
+    "Omar Duran",
+    "Nicola Castelletto",
+    "Victor A. P. Magri",
+    "Hamdi A. Tchelepi"
+  ],
+  "summary": "The mimetic finite difference (MFD) method provides a robust discretization for flow simulation on general polyhedral meshes, but its computational cost can become significant due to dense local operators and reduced global sparsity. While the two-point flux approximation (TPFA) offers a substantially cheaper alternative, its accuracy is generally restricted to $K$-orthogonal grids. To balance these competing considerations, we present an adaptive MFD framework based on a residual-based consistency indicator derived from the discrete constitutive equations. The indicator measures local…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-26",
+  "updated": "2026-07-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

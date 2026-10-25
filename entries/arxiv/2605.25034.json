@@ -1,0 +1,22 @@
+{
+  "key": "2605.25034",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.25034",
+  "title": "Randomized conjugate gradient least squares",
+  "authors": [
+    "Yun Zeng",
+    "Jian-Feng Cai",
+    "Deren Han",
+    "Jiaxin Xie"
+  ],
+  "summary": "We develop a novel randomized conjugate gradient least squares (RCGLS) method for solving least-squares problems, in which iterative sketching is employed at each step to reduce the dimension and hence the computational cost. In particular, we propose a new perspective on the classical CGLS method, where the next descent direction is determined via a constraint correction problem associated with the gradient. Based on this insight, we replace the gradient with a randomized coordinate gradient that naturally satisfies the variance reduction property, leading directly to the proposed RCGLS…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-24",
+  "updated": "2026-05-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

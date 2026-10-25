@@ -1,0 +1,24 @@
+{
+  "key": "2610.23379",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.23379",
+  "title": "Improved $L^p$ maximal estimates for higher-degree Weyl sums",
+  "authors": [
+    "Xuezhi Chen",
+    "Changxing Miao",
+    "Jiye Yuan",
+    "Tengfei Zhao"
+  ],
+  "summary": "For each integer $k\\ge3$, we establish the following estimate for all $1\\le p 0$: \\[ \\left\\|\\sup_{t\\in\\mathbb{T}}\\left|\\sum_{n=1}^N e(nx+n^kt)\\right|\\right\\|_{L^p(\\mathbb{T})} \\ll_{k,p,\\varepsilon} N^{\\max\\{1-1/K_k,\\,1-1/p\\}+\\varepsilon}, \\] where $K_k=\\min\\{2^{k-1},k(k+1)/2\\}$, $e(z)=e^{2πiz}$, and $\\mathbb{T}=\\mathbb{R}/\\mathbb{Z}$. For $k\\ge5$, this improves our earlier bound \\cite{chen-miao-yuan-zhao} for $1\\le p<D_k$, where $D_k=\\min\\{2^{k-1},k(k-1)\\}$, and, together with the corresponding lower bound, extends the sharp range up to $N^\\varepsilon$ from $p\\ge D_k$ to $p\\ge K_k$. The main…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.AP",
+    "math.CA"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

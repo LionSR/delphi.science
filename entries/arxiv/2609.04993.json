@@ -1,0 +1,19 @@
+{
+  "key": "2609.04993",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.04993",
+  "title": "The Right Edge of the Zero Set of the Fibonacci Zeta Function",
+  "authors": [
+    "Marco Mantovanelli"
+  ],
+  "summary": "Let $F_1=F_2=1$, $F_{n+2}=F_{n+1}+F_n$, and define the Fibonacci zeta function by $$ Z_F(s)=\\sum_{n\\ge1}F_n^{-s},\\qquad \\operatorname{Re}s>0. $$ We determine the exact right edge of the closure of the real parts of its zeros in the half-plane of absolute convergence. If $σ_F$ is the unique solution of $$ Z_F(σ_F)=4+2\\,144^{-σ_F}, $$ then $$ σ_F=0.743163398726901648\\ldots, $$ $Z_F(s)\\neq0$ for $\\operatorname{Re}s\\geσ_F$, while $$ \\overline{\\{\\operatorname{Re}ρ:Z_F(ρ)=0,\\ \\operatorname{Re}ρ>0\\}}=[0,σ_F]. $$ The edge is sharp in an almost-periodic sense: zeros occur with relatively dense…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

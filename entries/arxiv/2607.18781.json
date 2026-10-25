@@ -1,0 +1,19 @@
+{
+  "key": "2607.18781",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.18781",
+  "title": "Directional Derivatives and Error Bounds of Merit Functions in Vector Optimization",
+  "authors": [
+    "Yu Han"
+  ],
+  "summary": "This paper presents a comprehensive analysis of directional derivatives and error bounds for the merit function $θ(x)=\\sup_{a\\in A}\\bigl(-Δ_C(F(x)-F(a))\\bigr)$ associated with the vector optimization problem $\\operatorname{Min}_C\\{F(x):x\\in A\\}$, where $Δ_C$ is the oriented distance function. We first prove that $θ$ is concave and Lipschitz continuous on the whole space and derive its dual representation via the weak$^*$ compact convex set $K=\\overline{\\operatorname{co}}^{w^*}(S(C^+))$. At a weakly efficient solution $\\bar x$, we obtain the explicit formula $θ'(\\bar x;d)=\\min_{y^*\\in W(\\bar…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-21",
+  "updated": "2026-07-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

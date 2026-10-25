@@ -1,0 +1,19 @@
+{
+  "key": "2608.25151",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.25151",
+  "title": "No Free Compression in Quantum Relaxations for Optimization",
+  "authors": [
+    "Stuart Hadfield"
+  ],
+  "summary": "Qubit-efficient quantum relaxations compress classical decision variables into expectation values on substantially fewer qubits. We ask what resource tradeoffs this compression entails for quantum optimization. For the complete quadratic-Majorana encoding of $m=Θ(n^2)$ binary variables on~$n$ qubits, we define the universal margin as the smallest correlator magnitude that can be guaranteed with prescribed signs for every target sign (bit) assignment. We show that it is exactly $Δ_{\\rm Maj}(n)=\\tan\\!\\left(\\fracπ{4n}\\right)=Θ(1/n)$, whereas uniformly random sign assignments retain $Θ(1/\\sqrt…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

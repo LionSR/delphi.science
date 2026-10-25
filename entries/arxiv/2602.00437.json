@@ -1,0 +1,21 @@
+{
+  "key": "2602.00437",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.00437",
+  "title": "Exact Instance Compression for Convex Empirical Risk Minimization via Color Refinement",
+  "authors": [
+    "Bryan Zhu",
+    "Ziang Chen"
+  ],
+  "summary": "Empirical risk minimization (ERM) can be computationally expensive, with standard solvers scaling poorly even in the convex setting. We propose a novel lossless compression framework for convex ERM based on color refinement, extending prior work from linear programs and convex quadratic programs to a broad class of differentiable convex optimization problems. We develop concrete algorithms for a range of models, including linear and polynomial regression, binary and multiclass logistic regression, regression with elastic-net regularization, and kernel methods such as kernel ridge regression…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-01-31",
+  "updated": "2026-01-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

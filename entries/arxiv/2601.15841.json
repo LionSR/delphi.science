@@ -1,0 +1,19 @@
+{
+  "key": "2601.15841",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.15841",
+  "title": "Riemann-Hilbert approach for the nonlocal modified Korteweg-de Vries equation with a step-like oscillating background",
+  "authors": [
+    "Yan Rybalko"
+  ],
+  "summary": "This work focuses on the Cauchy problem for the nonlocal modified Korteweg-de Vries equation $$ u_t(x,t)+6u(x,t)u(-x,-t)u_x(x,t)+u_{xxx}(x,t)=0, $$ with the oscillating step-like boundary conditions: $u(x,t)\\to 0$ as $x\\to-\\infty$ and $u(x,t)\\backsimeq A\\cos(2Bx+8B^3t)$ as $x\\to\\infty$, where $A,B>0$ are arbitrary constants. The main goal is to develop the Riemann-Hilbert formalism for this problem, paying a particular attention to the case of the ``pure oscillating step'' initial data, that is $u(x,0)=0$ for $x \\frac{A}{4}$, and $B=\\frac{A}{4}$.",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-01-22",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

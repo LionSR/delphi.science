@@ -1,0 +1,22 @@
+{
+  "key": "2605.09569",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09569",
+  "title": "Minimax optimal submatrix detection: Sharp non-asymptotic rates",
+  "authors": [
+    "Parker Knight",
+    "Julien Chhor"
+  ],
+  "summary": "Given an observation $\\mathbf Y \\in \\mathbb{R}^{d_1\\times d_2}$ from the model $\\mathbf Y = \\mathbf X + \\mathbf E$ where $\\mathbf X$ is constant and $\\mathbf E$ has i.i.d. $N(0,1)$ entries, we consider the problem of detecting a planted submatrix in the mean matrix $\\mathbf X$. Specifically, we aim to distinguish the null hypothesis $\\mathbf X = 0$ from the alternative hypothesis in which $\\mathbf X$ is non-zero only on a submatrix of size $s_1 \\times s_2$ with elevated entries bounded below by $μ>0$. We establish a minimax lower bound characterizing how large $μ$ must be to ensure that the…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.IT",
+    "stat.ML"
+  ],
+  "published": "2026-05-10",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2605.11289",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11289",
+  "title": "Quotient-Categorical Representations for Bellman-Compatible Average-Reward Distributional Reinforcement Learning",
+  "authors": [
+    "Ege C. Kaya",
+    "Aliasghar Pourghani",
+    "Vijay Gupta",
+    "Abolfazl Hashemi"
+  ],
+  "summary": "Average-reward reinforcement learning requires estimating the gain and the bias, which is defined only up to an additive constant. This makes direct distributional analogues ill-posed on the real line. We introduce a quotient-space formulation in which state-indexed bias laws are identified up to a common translation, together with a categorical parameterization that respects this symmetry. On this quotient-categorical space, we define a projected average-reward distributional operator and show that it is well-defined, non-expansive in a coordinate Cramér metric, and admits fixed points. We…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

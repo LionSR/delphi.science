@@ -1,0 +1,27 @@
+{
+  "key": "2605.00545",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.00545",
+  "title": "Beyond Continuity: Simulation-free Reconstruction of Discrete Branching Dynamics from Single-cell Snapshots",
+  "authors": [
+    "Junda Ying",
+    "Yuxuan Wang",
+    "Bowen Yang",
+    "Peijie Zhou",
+    "Lei Zhang"
+  ],
+  "summary": "Inferring cellular trajectories from destructive snapshots is complicated by the challenges of stochasticity and non-conservative mass dynamics such as cell proliferation and apoptosis. Existing unbalanced Optimal Transport (OT) methods treat mass as a continuous fluid, performing inference at the population level. However, this macroscopic view often fails to capture the discrete, jump-like nature of birth-death events at single-cell resolution, which is essential for understanding lineage branching and fate decisions. We present Unbalanced Schrödinger Bridge (USB), a simulation-free…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math-ph",
+    "q-bio.GN",
+    "q-bio.QM"
+  ],
+  "published": "2026-05-01",
+  "updated": "2026-06-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

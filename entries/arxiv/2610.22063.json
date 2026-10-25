@@ -1,0 +1,23 @@
+{
+  "key": "2610.22063",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.22063",
+  "title": "Finite Volume Convergence for a Heat Equation with a Measure-Valued Source",
+  "authors": [
+    "Matthias Gobbert",
+    "Martin Kružík",
+    "Andreas Meister",
+    "Michael Muscedere"
+  ],
+  "summary": "Past work with Tom Seidman analyzed the spatial convergence order of the numerical finite element method applied to time-dependent diffusion-reaction equations with a measure-valued source term. For smooth source terms, the numerical method has second-order accuracy, but the non-smooth source terms introduce a limitation of the order that depends on the spatial dimension. This work in honor of Tom extends the analysis to the finite volume method in its clas- sical two-point flux form and shows that the regularity of the source term reduces the convergence order to 1 in two and 0.5 in three…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.AP"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

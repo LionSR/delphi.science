@@ -1,0 +1,21 @@
+{
+  "key": "2602.10204",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.10204",
+  "title": "Adaptive Optimization via Momentum on Variance-Normalized Gradients",
+  "authors": [
+    "Francisco Patitucci",
+    "Aryan Mokhtari"
+  ],
+  "summary": "We introduce MVN-Grad (Momentum on Variance-Normalized Gradients), an Adam-style optimizer that improves stability and performance by combining two complementary ideas: variance-based normalization and momentum applied after normalization. MVN-Grad scales each coordinate by an exponential moving average of gradient uncertainty and applies momentum to the resulting normalized gradients, removing the cross-time coupling between stale momentum and a stochastic normalizer present in standard Adam-type updates. We prove that this decoupling yields smaller one-step conditional update variance than…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-02-10",
+  "updated": "2026-08-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

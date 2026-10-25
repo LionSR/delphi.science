@@ -1,0 +1,23 @@
+{
+  "key": "2609.26195",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.26195",
+  "title": "Runge--Kutta-Aligned Oscillation Elimination: Restoring Superconvergence for Fully Discrete Shock-Capturing DG Schemes",
+  "authors": [
+    "Manting Peng",
+    "Zhuoyun Li",
+    "Kailiang Wu"
+  ],
+  "summary": "Nonlinear stabilization is indispensable for discontinuous Galerkin (DG) discretizations of hyperbolic conservation laws, yet it typically disrupts the delicate error structure required for superconvergence analysis. Consequently, existing theory has largely been restricted to linear or semi-discrete schemes lacking oscillation control. This paper bridges this gap by proposing a Runge--Kutta (RK) aligned oscillation-eliminating (OE) DG framework that restores the superconvergence properties. By synchronizing the pseudo-time step in the OE procedure with the cumulative RK stage coefficients,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-08-11",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

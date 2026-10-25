@@ -1,0 +1,22 @@
+{
+  "key": "2609.28029",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.28029",
+  "title": "Tensor Decomposition of Transformer Key-Value Caches: Spectral Structure and Format Comparison",
+  "authors": [
+    "Rahul Krishnan",
+    "Volker Schulz"
+  ],
+  "summary": "The key-value (KV) cache of autoregressive transformers can be viewed as a fourth-order tensor spanning attention heads, tokens, features, and grouped layers. We measure the singular-value spectra of all four mode unfoldings on Mistral-7B-v0.3 and LLaMA-2-13B and compare four standard tensor decompositions: Tucker, CP, tensor train, and t-SVD, at matched storage. The spectra partition the four axes into two classes. The token and feature modes carry low-rank structure, particularly for keys. The head and layer modes are nearly full-rank and resist compression at any practical error level.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.CL",
+    "cs.LG"
+  ],
+  "published": "2026-09-23",
+  "updated": "2026-09-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2605.17884",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.17884",
+  "title": "Optimizing Optimizations, Declaratively: Optimizing the Higher-Order Functions in Mathematical Optimization with egglog",
+  "authors": [
+    "Hiromi Ishii"
+  ],
+  "summary": "We present two applications of egglog to mathematical optimization in JijModeling 2, a mathematical modeller whose internal representation is based on simply typed $λ$-calculus. First, we use egglog to improve $\\LaTeX$ output for mathematical models expressed with higher-order functions. Python comprehensions are desugared into stream operations such as $\\textsf{map}$, $\\textsf{flat_map}$, and $\\textsf{filter}$; emitting these terms directly produces unnatural mathematical notation. We reconstruct comprehension syntax by \\emph{ensugaring} higher-order terms and use equality saturation with a…",
+  "domain": "cs.PL",
+  "tags": [
+    "cs.PL",
+    "cs.MS",
+    "math.OC"
+  ],
+  "published": "2026-05-18",
+  "updated": "2026-05-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2605.31430",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.31430",
+  "title": "Spectral density estimation for normal matrices",
+  "authors": [
+    "Cameron Musco",
+    "Christopher Musco",
+    "Rikhav Shah",
+    "John Urschel",
+    "Nicholas West"
+  ],
+  "summary": "The spectral density estimation problem asks for an algorithm that, given an $n\\times n$ matrix $A$, outputs a probability measure that is a good approximation to the uniform distribution on the eigenvalues of $A$, called the spectral density of $A$. This paper considers the setting where $A$ is a large normal matrix that is accessible only through matrix-vector product queries. We provide an algorithm that makes just $m$ matrix-vector queries to $A$ and returns, with high probability, a measure within earth mover's distance $O(1/m+\\log m/{\\sqrt n})$ of the true spectral density of $A$. We…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

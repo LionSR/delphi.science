@@ -1,0 +1,24 @@
+{
+  "key": "2607.24687",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.24687",
+  "title": "Sharp continuity of quantum conditional entropy",
+  "authors": [
+    "Mario Berta",
+    "Pablo Costa Rico",
+    "Gereon Kossmann",
+    "Ludovico Lami",
+    "Julius A. Zeiss"
+  ],
+  "summary": "We prove the sharp uniform continuity bound for quantum conditional entropy. If two bipartite states are at trace distance at most $δ$ and $d=\\dim A$, the optimal dimension-only modulus of continuity is $h_2(δ)+δ\\log(d^2-1)$ up to $δ=1-d^{-2}$ and $2\\log d$ thereafter, where $h_2$ denotes the binary entropy. When $\\dim B\\ge d$, this bound is tight for every $δ\\in[0,1]$. The key proof idea was developed with the assistance of ChatGPT 5.6 Sol, building on and adapting the tight classical proof of Alhejji \\& Smith [IEEE ISIT (2020)], which follows a conceptually different approach.",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math-ph"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

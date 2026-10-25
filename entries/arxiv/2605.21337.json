@@ -1,0 +1,21 @@
+{
+  "key": "2605.21337",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.21337",
+  "title": "Multicategorical Semantics for Untyped Effects",
+  "authors": [
+    "Ariel Grunfeld",
+    "Liron Cohen"
+  ],
+  "summary": "Completeness proofs in categorical semantics usually proceed by building a syntactic category whose composition is given by substitution. For untyped effectful Call-by-Value languages, this runs into a basic obstacle: there is no canonical notion of simultaneous substitution of computations, since evaluation order is semantically meaningful. We address this by taking single computation substitutions, that is, binding steps, as primitive, and representing computation substitution by finite sequential lists composed by concatenation. We formalize this idea in a one-object…",
+  "domain": "cs.PL",
+  "tags": [
+    "cs.PL",
+    "math.CT"
+  ],
+  "published": "2026-05-20",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

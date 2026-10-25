@@ -1,0 +1,22 @@
+{
+  "key": "2609.33451",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.33451",
+  "title": "DAOCP: a dual active set solver for optimal control problems",
+  "authors": [
+    "Alberto Zaupa",
+    "Samuel Erickson",
+    "Mikael Johansson"
+  ],
+  "summary": "We present DAOCP, a dual active set solver for linear quadratic optimal control problems with stage-wise equality and inequality constraints. Active set methods are leading Model Predictive Control benchmarks for full-body robotics, but existing solvers operate on dense QPs, while typical problem dimensions favor methods that exploit the optimal control structure. DAOCP combines the warm-starting capabilities of active set algorithms with the better computational scaling of structure exploiting solvers, by relying on a generalization of the relationship between the Riccati recursion and the…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-09-27",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

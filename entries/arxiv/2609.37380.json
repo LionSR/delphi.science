@@ -1,0 +1,22 @@
+{
+  "key": "2609.37380",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.37380",
+  "title": "Information Limits of Multistage Inventory Control: Learning, Valuation, and Censoring",
+  "authors": [
+    "Hanzhang Qin",
+    "David Simchi-Levi",
+    "Ruihao Zhu"
+  ],
+  "summary": "Learning how to replenish inventory and estimating the cost of doing so require different information. We establish information-theoretic lower bounds for offline multistage inventory control with independent bounded demand. For fixed additive error in total expected cost, policy learning requires cubically many scalar observations in the horizon in the worst case, even under full observation and adaptive sample allocation. This matches the known empirical-risk upper order. Stationarity permits a quadratic policy-learning guarantee, yet valuation with inherited stock can remain cubically…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

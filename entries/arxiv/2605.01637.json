@@ -1,0 +1,22 @@
+{
+  "key": "2605.01637",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.01637",
+  "title": "The Banach-Butterfly Invariant: Influence-Adaptive Walsh Geometry for Ternary Polynomial Threshold Functions",
+  "authors": [
+    "Gorgi Pavlov"
+  ],
+  "summary": "We introduce the Banach-Butterfly Invariant (BBT), an influence-adaptive Banach geometry on the Walsh-Hadamard butterfly factorization. For a Boolean function $f:\\{-1,+1\\}^n\\to\\{-1,+1\\}$ with coordinate influences $\\mathrm{Inf}_\\ell(f)$, BBT assigns exponent $p_\\ell = 1+\\mathrm{Inf}_\\ell(f)$ to butterfly layer $\\ell$, yielding the contraction invariant $μ(f)=\\prod_\\ell 2^{-\\mathrm{Inf}_\\ell/(1+\\mathrm{Inf}_\\ell)}$. We prove a Jensen lower bound $\\log_2μ(f) \\ge -I(f)/(1+I(f)/n)$ and that $μ$ is strictly Schur-convex in the influence vector (modulo permutation), giving scaling classes $μ\\sim…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.CC",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-05-02",
+  "updated": "2026-05-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

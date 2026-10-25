@@ -1,0 +1,22 @@
+{
+  "key": "2607.02688",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.02688",
+  "title": "Physics-Informed Tensor Completion with Application to Distribution System State Estimation",
+  "authors": [
+    "Alexander While",
+    "Anil Aswani",
+    "Chen Chen",
+    "William N. Caballero"
+  ],
+  "summary": "State estimation in power distribution networks often involves sparse, noisy, and heterogeneous measurements, making classical weighted least-squares methods unreliable in low-observability regimes. To meet this challenge we develop a physics-informed low-rank tensor completion method. The method encodes voltage phasor components, voltage magnitudes, and power injections over time in a low-rank tensor, while incorporating physics through convex residual penalties. For distribution network state estimation, these residuals are instantiated using linearized power-flow equations, yielding a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-02",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

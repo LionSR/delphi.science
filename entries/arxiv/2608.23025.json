@@ -1,0 +1,19 @@
+{
+  "key": "2608.23025",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.23025",
+  "title": "Full-Trajectory Learning of Open Quantum Systems: Dynamical Emulation and the Limits of Hamiltonian Identifiability",
+  "authors": [
+    "Ahmad Salmanogli"
+  ],
+  "summary": "Accurate identification of unknown quantum systems is essential for quantum computing, sensing, and control because the Hamiltonian governs quantum state evolution. This work proposes a QNN based framework for black box Hamiltonian learning and quantum system emulation using full density matrix trajectory learning. Unlike approaches based only on final states or selected observables, the method exploits the complete temporal evolution of the density matrix under Lindblad dynamics. A synthetic dataset of physically admissible Hamiltonians and dissipation parameters is generated to emulate…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-24",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

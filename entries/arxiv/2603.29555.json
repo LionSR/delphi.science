@@ -1,0 +1,20 @@
+{
+  "key": "2603.29555",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.29555",
+  "title": "Total Variation Guarantees for Sampling with Stochastic Localization",
+  "authors": [
+    "Jakob Kellermann"
+  ],
+  "summary": "Motivated by the success of score-based generative models, a number of diffusion-based algorithms have recently been proposed for the problem of sampling from a probability measure whose unnormalized density can be accessed. Among them, Grenioux et al. introduced SLIPS, a sampling algorithm based on Stochastic Localization. While SLIPS exhibits strong empirical performance, no rigorous convergence analysis has previously been provided. In this work, we close this gap by establishing the first guarantee for SLIPS in total variation distance. Under minimal assumptions on the target, our bound…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-03-31",
+  "updated": "2026-03-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

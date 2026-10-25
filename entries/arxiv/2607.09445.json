@@ -1,0 +1,21 @@
+{
+  "key": "2607.09445",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.09445",
+  "title": "Diagnosing quantum reservoirs at scale based on expressivity and coverage",
+  "authors": [
+    "Laia Domingo",
+    "Oriol Balló-Gimbernat",
+    "Fernando Vilariño"
+  ],
+  "summary": "Quantum reservoirs offer a hardware-friendly route to quantum machine learning, replacing trainable circuits with fixed random dynamics and a classical readout. Because the reservoir is not optimized, performance depends entirely on the choice of reservoir family, yet existing diagnostics demand resources that grow exponentially with system size. We introduce a scalable, hardware-agnostic framework built on two complementary quantities. The first is a task-independent order-statistics (ORS) expressivity score, which compares only the largest output probabilities of a reservoir ensemble…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-10",
+  "updated": "2026-08-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

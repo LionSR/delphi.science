@@ -1,0 +1,38 @@
+{
+  "key": "2610.00200",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00200v2",
+  "pdf": "https://hexagonmath.org/pdf/2610.00200v2",
+  "title": "A quasi-Riemann hypothesis for Dedekind zeta functions",
+  "authors": [
+    "Dean Cureton",
+    "Jesse Thorner"
+  ],
+  "summary": "Recent work on Artin's primitive root conjecture establishes a zero-free half-plane $\\mathrm{Re}\\,s>1-10^{-6}$ for finite-order Hecke $L$-functions over cyclotomic fields containing $e^{2\\pi i/12}$. Following their strategy, we prove that if $K$ is any number field, then the Dedekind zeta function $\\zeta_K(s)$ does not vanish in the half-plane $\\mathrm{Re}\\,s>31/32$. As a corollary, the $L$-function of any finite-order Hecke character defined over $K$ also does not vanish in the half-plane $\\mathrm{Re}\\,s > 31/32$, wherever it is holomorphic. These results were proved and formalized in Lean…",
+  "domain": "math.NT",
+  "tags": [
+    "msc:11R42",
+    "msc:11M26",
+    "msc:11F27",
+    "msc:11M99",
+    "msc:11F70",
+    "Dedekind zeta function",
+    "Hecke character",
+    "L-function",
+    "number field"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-14",
+  "version": 2,
+  "ai_models": [
+    "AxiomProver"
+  ],
+  "authorship": "mixed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

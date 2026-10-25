@@ -1,0 +1,23 @@
+{
+  "key": "2604.01450",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.01450",
+  "title": "Discrete-Time Event-Triggered Extremum Seeking",
+  "authors": [
+    "Victor Hugo Pereira Rodrigues",
+    "Tiago Roux Oliveira",
+    "Miroslav Krstić",
+    "Frank Allgöwer"
+  ],
+  "summary": "This paper proposes a discrete-time event-triggered extremum seeking control scheme for real-time optimization of nonlinear systems. Unlike conventional discrete-time implementations relying on periodic updates, the proposed approach updates the control input only when a state-dependent triggering condition is satisfied, reducing unnecessary actuation and communication. The resulting closed-loop system combines extremum seeking with an event-triggering mechanism that adaptively determines the input update instants. Using discrete-time averaging and Lyapunov analysis, we establish practical…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-04-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

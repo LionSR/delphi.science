@@ -1,0 +1,24 @@
+{
+  "key": "2610.15111",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.15111",
+  "title": "Energy-Guided Learning for Heat Equation with Noisy Source: Optimal Estimation and Generalization Bounds",
+  "authors": [
+    "Zixiang Zhou",
+    "Xiaohui Chen",
+    "Shanghua Teng"
+  ],
+  "summary": "Data and the governing partial differential equations (PDEs) of continuous-time dynamical systems provide rich structure for statistical learning. A central challenge is how to integrate data with PDE constraints in a principled way to improve generalization. In this paper, we characterize the statistical estimation and generalization properties of learning solutions to the heat equation with a noisy source function from finite, randomly sampled data. We first derive a novel variational formulation, which we characterize as the minimizer of loss function for an energy regularized and…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.LG",
+    "stat.ME",
+    "stat.ML"
+  ],
+  "published": "2026-10-10",
+  "updated": "2026-10-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

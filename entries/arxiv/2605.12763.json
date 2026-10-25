@@ -1,0 +1,23 @@
+{
+  "key": "2605.12763",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.12763",
+  "title": "Center-Manifold Reduction of Learning at Bifurcations: Interference and Rich Learning in Recurrent Neural Networks",
+  "authors": [
+    "James Hazelden",
+    "Eric Shea-Brown"
+  ],
+  "summary": "Rich learning in recurrent neural networks often proceeds through sudden transitions in latent dynamics, but there is little theory predicting how gradient descent behaves during these events. We study the local learning geometry near codimension-one bifurcations through the global empirical Neural Tangent Kernel (GeNTK). Under local center-manifold conditions, and when bifurcation-related sensitivity dominates bounded residual terms, we show that the global parameter-to-state Jacobian \\(D_θh\\) is approximated by a low-rank normal-form operator. The induced GeNTK and Fisher information…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS",
+    "math.OC",
+    "q-bio.NC"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2610.29039",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.29039",
+  "title": "Neural Vector Field Transformations: Learning the Flow of Autonomous Systems by Conjugation to Explicitly Integrable Reference Flows",
+  "authors": [
+    "Andrew Qing He"
+  ],
+  "summary": "We represent the flow map of an autonomous ODE $\\dot x=f(x)$ as a conjugate $Φ_t=F_θ^{-1}\\circΨ_t\\circ F_θ$ of an explicitly integrable reference flow $Ψ_t$ by an invertible neural network $F_θ$, the neural vector field transformation. The representation is an exact flow for every parameter value and inherits the phase portrait of the reference. A $C^1$ conjugacy preserves the eigenvalues of equilibria, the periods and Floquet multipliers of periodic orbits and the frequency-amplitude relation of centers, so these invariants must be learnable parameters of $Ψ$. We give parametrized reference…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "math.NA"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2608.27884",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.27884",
+  "title": "Exploiting Exact Conditionals Improves Conditioning: Provably Fast Mixing Time Bounds By Sampling from the Marginal",
+  "authors": [
+    "Abhijit Chowdhary",
+    "Federica Milinanni",
+    "Julianne Chung",
+    "Elizabeth Newman"
+  ],
+  "summary": "The problem of sampling from a probability distribution arises in many applications such as posterior sampling in hierarchical Bayesian inverse problems and Gaussian processes for machine learning. Markov chain Monte Carlo (MCMC) algorithms are often used for sampling from a target probability distribution, but implementations can be computationally expensive, especially for large-scale problems. In certain applications, the target distribution naturally factorizes into a lower dimensional marginal distribution and a conditional distribution that allows exact sampling. We describe an MCMC…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.CO"
+  ],
+  "published": "2026-08-28",
+  "updated": "2026-08-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2607.28772",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.28772",
+  "title": "Hard unknots are often easy from a different perspective",
+  "authors": [
+    "Jason Cantarella",
+    "Henrik Schumacher",
+    "Clayton Shonkwiler"
+  ],
+  "summary": "Recent attempts to train AI models to recognize knots have produced millions of ``hard'' unknot diagrams resistant to simplification by Reidemeister moves, pass moves, or random walks on the Reidemeister graph. Most are easy for the methods based on triangulations of the knot complement found in Regina and SnapPy, but more difficult for simplifiers based on diagrammatic moves. We present ReAPR (Re-embedding And Pass Rerouting), a semi-diagrammatic simplifier which alternates pass-move reduction on a knot diagram with a geometric re-embedding step. The re-embedding minimizes the total…",
+  "domain": "math.GT",
+  "tags": [
+    "math.GT"
+  ],
+  "published": "2026-07-30",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

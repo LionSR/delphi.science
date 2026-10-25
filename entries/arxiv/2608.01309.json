@@ -1,0 +1,20 @@
+{
+  "key": "2608.01309",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.01309",
+  "title": "Adaptive Confidence Sets for Binary Regression without Design Smoothness",
+  "authors": [
+    "P. M. Aronow",
+    "Patrick Lopatto"
+  ],
+  "summary": "We study honest adaptive confidence sets for the regression function in random-design binary regression under $L^2(dx)$ loss. Assuming only known bounds $0<c\\leq g\\leq C<\\infty$ on the unknown design density, we construct asymptotically honest, rate-adaptive confidence sets without requiring $g$ to be smooth. Full adaptation is possible when the range of regression-function smoothness spans at most a factor of two. Over wider smoothness ranges, adaptation is achieved on the usual separated classes at the corresponding testing rates $n^{-2s/(4s+d)}$. A lower bound under the uniform design…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-08-02",
+  "updated": "2026-08-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

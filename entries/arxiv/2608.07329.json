@@ -1,0 +1,22 @@
+{
+  "key": "2608.07329",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.07329",
+  "title": "Sampling and Optimization meet Enhanced Flows",
+  "authors": [
+    "Yuan Gao",
+    "Siming He",
+    "Eitan Tadmor"
+  ],
+  "summary": "It is well known that the computational realization of Gibbs probability measures, $e^{-\\mathbb{U}(\\mathbf{x})}/Z$, plays a central role in sampling and optimization. In this paper, we introduce two types of dynamics that exhibit rapid convergence towards these Gibbs measures. The mechanism driving this rapid convergence is the enhanced dissipation associated with these transport-diffusion dynamics. Motivated by these enhanced dynamics, we design numerical algorithms for sampling from the target Gibbs measure. Finally, we provide the corresponding particle systems that may yield other…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.AP"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

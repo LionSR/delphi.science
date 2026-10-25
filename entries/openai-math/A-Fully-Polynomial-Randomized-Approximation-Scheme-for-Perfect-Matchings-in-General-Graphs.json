@@ -27,5 +27,17 @@
     "reason": "Gives an FPRAS for counting perfect matchings in arbitrary general graphs.",
     "by": "claude-haiku",
     "at": "2026-10-23"
-  }
+  },
+  "discussion": [
+    {
+      "kind": "web",
+      "url": "https://arxiv.org/abs/2610.26803",
+      "title": "A simplified proof of the FPRAS for counting perfect matchings",
+      "site": "arXiv.org",
+      "author": "Chenghua Liu, Boning Meng",
+      "text": "We give a simplified, self-contained proof of OpenAI's FPRAS for counting perfect matchings in general graphs. As in the original proof, we use a restricted Poincaré inequality for two matchings to sample weighted perfect matchings and estimate their total weight. We simplify the proof of this…",
+      "date": "2026-10-19",
+      "added": "2026-10-24"
+    }
+  ]
 }

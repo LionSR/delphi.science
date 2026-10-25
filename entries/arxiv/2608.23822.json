@@ -1,0 +1,19 @@
+{
+  "key": "2608.23822",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.23822",
+  "title": "The PWDG-UWVF Equivalence Revisited",
+  "authors": [
+    "Shelvean Kapita"
+  ],
+  "summary": "The ultra-weak variational formulation (UWVF) is known to be the Trefftz discontinuous Galerkin scheme obtained from the standard PWDG flux family by setting \\(α=β=δ=1/2\\). We give a short structural explanation of this fact. On every interior mesh edge, the two PWDG jump terms at these parameter values are exactly one half of the sum of the squared norms of the two oriented impedance-transmission defects used by the UWVF. Thus the Trefftz-DG norm is the natural Riesz norm of the global transmission defect. In PWDG coordinates its Gramian is the anti-Hermitian part of the discrete matrix,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-24",
+  "updated": "2026-08-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

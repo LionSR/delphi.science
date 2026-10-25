@@ -1,0 +1,22 @@
+{
+  "key": "2609.18177",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.18177",
+  "title": "A Lattice Boltzmann Method with Adaptive Relaxation Parameter and Lax--Friedrichs-Type Equilibrium for Hyperbolic Systems",
+  "authors": [
+    "Yifan Zhang",
+    "Ping Lin",
+    "Jin Zhao",
+    "Weifeng Zhao"
+  ],
+  "summary": "In this paper, a lattice Boltzmann method with an adaptive relaxation parameter and a Lax--Friedrichs-type equilibrium is proposed for hyperbolic systems with source terms. The equilibrium distribution recovers the conservative variables and physical fluxes while incorporating dissipation determined by characteristic-speed bounds. To balance accuracy and robustness, the relaxation parameter is selected from a local smoothness indicator based on characteristic projections. In smooth regions, the parameter approaches the low-dissipation limit, retaining second-order accuracy; near…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

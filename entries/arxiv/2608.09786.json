@@ -1,0 +1,22 @@
+{
+  "key": "2608.09786",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.09786",
+  "title": "ADPSO-ERLS: A Hybrid Discrete PSO with Enhanced Local Search for the Traveling Salesman Problem",
+  "authors": [
+    "Anier Soria-Lorente",
+    "Jean-Marie Vilaire",
+    "Junior Michel",
+    "Lázaro Alvarado-Barrios"
+  ],
+  "summary": "The Traveling Salesman Problem is a canonical setting for studying how a population-based method should allocate a fixed search budget between exploration and progressively stronger local intensification. We propose ADPSO-ERLS, a discrete swarm algorithm that treats this allocation as an explicit, tunable design variable. It couples memory-guided swap mutation, heterogeneous initialization, selective candidate-restricted 2-opt during evolution, and an incumbent-only final refinement combining candidate-restricted and optional full 2-opt with double-bridge perturbations. The method is…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

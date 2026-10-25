@@ -1,0 +1,21 @@
+{
+  "key": "2609.11664",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11664",
+  "title": "Near-Optimal Separations of Certificate Complexity from Randomized and Quantum Query Complexity",
+  "authors": [
+    "Andris Ambainis",
+    "Jānis Iraids",
+    "Martins Kokainis"
+  ],
+  "summary": "We study how large the certificate complexity ${C}(f)$ of a total Boolean function can be relative to its randomized and quantum query complexities. We construct a total Boolean function $f$ whose randomized query complexity with one-sided error satisfies ${R}_1(f) = Θ(\\sqrt{{C}(f)})$. This separation is optimal even when two-sided error is allowed. From this construction, we obtain another total Boolean function $F$ with bounded-error quantum query complexity ${Q}(F) = \\widetilde O({C}(F)^{1/4})$, attaining the general quartic bound up to polylogarithmic factors. For the same function, both…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2609.24605",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.24605",
+  "title": "Scalable Dynamic Pricing of Substitutable Products through Structure-Guided Policy Learning",
+  "authors": [
+    "Yue Su",
+    "Antoine Désir",
+    "Axel Parmentier"
+  ],
+  "summary": "Problem definition: We study dynamic pricing of substitutable products with finite, product-specific inventories. Customer substitution couples pricing decisions across products, while the inventory state makes exact dynamic programming intractable at realistic scale. Methodology / results: We develop two MNL-guided policy-learning approaches that replace the dynamic program with a statistical mapping from inventory states to pricing decisions. The first learns prices directly, while the second learns inventory opportunity costs and converts them into prices using the optimal MNL pricing…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-21",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

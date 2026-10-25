@@ -1,0 +1,21 @@
+{
+  "key": "2606.22960",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.22960",
+  "title": "Broadcasting on Random Trees: Martingale Methods and Error Bounds",
+  "authors": [
+    "Tayfun Kardas",
+    "Vsevolod Shneer",
+    "Vitali Wachtel"
+  ],
+  "summary": "The broadcasting problem on trees concerns the transmission of binary information along the edges of a tree. In the formulation studied here, each vertex carries one of two colours, and along every edge the colour is transmitted with error probability $q$. The central question is whether the root colour can be reconstructed from the observed colours of all vertices in the tree, but crucially, without knowing which vertex is the root. We study the problem of reconstructing the root colour in a broadcasting process on random trees, focusing on the majority rule estimator. We introduce a novel…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-06-22",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

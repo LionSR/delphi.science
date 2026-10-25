@@ -1,0 +1,22 @@
+{
+  "key": "2608.22418",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.22418",
+  "title": "Optimal Condition Numbers in Low-Rank Positive Semidefinite Matrix Sensing",
+  "authors": [
+    "Mingxuan Sun",
+    "Zhiqiang Xu"
+  ],
+  "summary": "In this paper we focus on the stability of positive semidefinite matrix sensing maps $Φ_{\\mathcal{A}}(X)=(\\langle A_i,X\\rangle)_{i=1}^m$ where $A_i\\succeq 0$, $X\\succeq0$ and $\\operatorname{rank}(X)\\le r$. We introduce the bi-Lipschitz constants of $Φ_{\\mathcal{A}}(X)$ and define the global condition numbers as the ratio of upper and lower Lipschitz constants. We give deterministic universal lower bounds for these condition numbers, that depend only on the rank $r$ and on the underlying field. We then investigate the random rank-one Gaussian measurements and show that our lower bounds on…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "math.FA",
+    "math.NA"
+  ],
+  "published": "2026-08-23",
+  "updated": "2026-08-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

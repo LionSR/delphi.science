@@ -1,0 +1,24 @@
+{
+  "key": "2603.20891",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20891",
+  "title": "Auto-differentiable data assimilation: Co-learning of states, dynamics, and filtering algorithms",
+  "authors": [
+    "Melissa Adrian",
+    "Daniel Sanz-Alonso",
+    "Rebecca Willett"
+  ],
+  "summary": "Data assimilation algorithms estimate the state of a dynamical system from partial observations, where the successful performance of these algorithms hinges on costly parameter tuning and on employing an accurate model for the dynamics. This paper introduces a framework for jointly learning the state, dynamics, and parameters of filtering algorithms in data assimilation through a process we refer to as auto-differentiable filtering. The framework leverages a theoretically motivated loss function that enables learning from partial, noisy observations via gradient-based optimization using…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "eess.SP",
+    "math.DS"
+  ],
+  "published": "2026-03-21",
+  "updated": "2026-03-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

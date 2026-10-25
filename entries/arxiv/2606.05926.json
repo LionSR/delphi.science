@@ -1,0 +1,23 @@
+{
+  "key": "2606.05926",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.05926",
+  "title": "Auxiliary Gradient-Flow Solvers for Generalized Newtonian Models",
+  "authors": [
+    "Stefano Zampini",
+    "Daniele Boffi",
+    "Gurt Dovletov",
+    "Peter Markowich"
+  ],
+  "summary": "We introduce an auxiliary gradient-flow framework for variational problems with generalized Newtonian structure governed by an N-function. The key idea is to replace the nonlinear constitutive dependence on the gradient, or symmetric gradient, by an auxiliary scalar variable representing its squared magnitude. This shifts the nonlinearity from the state equation to the auxiliary variable, yielding a sequence of uniformly elliptic weighted linear problems. At the continuous level, we construct an auxiliary energy on a metric space adapted to the growth of the underlying N-function. In this…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.FA"
+  ],
+  "published": "2026-06-04",
+  "updated": "2026-06-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

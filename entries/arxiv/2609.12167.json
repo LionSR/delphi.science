@@ -1,0 +1,22 @@
+{
+  "key": "2609.12167",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.12167",
+  "title": "ADMM and Linearized ADMM for Weakly Convex Minimization",
+  "authors": [
+    "Shenghan Mei",
+    "Chengyu Ke",
+    "Yifei Lou",
+    "Miju Ahn"
+  ],
+  "summary": "We study a class of weakly convex optimization problems in which the objective is the sum of a smooth convex term and a weakly convex term that may be nonsmooth. To exploit this structure, we develop a splitting technique based on the alternating direction method of multipliers (ADMM), which decouples the minimization of the two components into tractable subproblems. Because the update associated with the smooth term may require an inner iterative solver, we further linearize this term, yielding a linearized ADMM (LADMM) scheme with an inexpensive one-step update. Under mild conditions, we…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

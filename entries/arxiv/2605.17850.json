@@ -1,0 +1,27 @@
+{
+  "key": "2605.17850",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.17850",
+  "title": "Simple Approximation and Derivative Free Inference-Time Scaling for Diffusion Models via Sequential Monte Carlo on Path Measures",
+  "authors": [
+    "Chenyang Wang",
+    "Weizhong Wang",
+    "Yinuo Ren",
+    "Jose Blanchet",
+    "Yiping Lu"
+  ],
+  "summary": "iffusion-based generative models increasingly rely on inference-time guidance, adding a drift term or reweighting mixture of experts, to improve sample quality on task-specific objectives. However, most existing techniques require repeated score or gradient evaluations, introducing bias, high computational overhead, or both. We introduce \\texttt{URGE}, Unbiased Resampling via Girsanov Estimation, a derivative-free inference-time scaling algorithm that performs path-wise importance reweighting via a Girsanov change of measure. Instead of computing gradient-based particle weights in previous…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.CV",
+    "cs.LG",
+    "math.NA",
+    "math.PR"
+  ],
+  "published": "2026-05-18",
+  "updated": "2026-05-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

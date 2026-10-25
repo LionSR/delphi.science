@@ -1,0 +1,22 @@
+{
+  "key": "2601.22194",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.22194",
+  "title": "Practical Evaluation of Quantum Kernel Methods for Radar Micro-Doppler Classification on Noisy Intermediate-Scale Quantum (NISQ) Hardware",
+  "authors": [
+    "Vikas Agnihotri",
+    "Jasleen Kaur",
+    "Sarvagya Kaushik"
+  ],
+  "summary": "This paper examines the application of a Quantum Support Vector Machine (QSVM) for radarbased aerial target classification using micro-Doppler signatures. Classical features are extracted and reduced via Principal Component Analysis (PCA) to enable efficient quantum encoding. The reduced feature vectors are embedded into a quantum kernel-induced feature space using a fully entangled ZZFeatureMap and classified using a kernel based QSVM. Performance is first evaluated on a quantum simulator and subsequently validated on NISQ-era superconducting quantum hardware, specifically the IBM Torino…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-01-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

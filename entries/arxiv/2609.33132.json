@@ -1,0 +1,22 @@
+{
+  "key": "2609.33132",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.33132",
+  "title": "Quantum Monte Carlo Tree Search with Fixed Confidence",
+  "authors": [
+    "Mingjie Hu",
+    "Jian-Qiang Hu",
+    "Enlu Zhou"
+  ],
+  "summary": "Recent advances in quantum computing are opening new opportunities for computationally intensive decision problems. This paper studies how quantum computing can improve Monte Carlo tree search (MCTS) in the fixed-confidence setting, where the goal is to identify a near-optimal move in a given game tree with high probability while minimizing query complexity. We first formulate MCTS under a quantum oracle model. We then develop a quantum MCTS algorithm (QMCTS) that combines threshold-based elimination on the search tree with quantum Monte Carlo estimation to reduce the cost of evaluating…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI"
+  ],
+  "published": "2026-09-27",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

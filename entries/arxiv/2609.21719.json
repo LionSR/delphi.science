@@ -1,0 +1,24 @@
+{
+  "key": "2609.21719",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.21719",
+  "title": "Finite Volume Element Method on Curved-Edge Meshes",
+  "authors": [
+    "Xiaoxiao Chen",
+    "Zexi Hu",
+    "Zhiming Gao",
+    "Junliang Lv",
+    "Xiang Wang",
+    "Hongtao Yang"
+  ],
+  "summary": "This paper proposes and analyzes a high-order finite volume element method on curved-edge quadrilateral meshes for elliptic equations. Unlike existing theories, which are primarily based on straight-edge meshes, this study is the first to establish an analysis of the stability and optimal convergence of the finite volume method on curved-edge meshes. By constructing a dual mesh based on Gaussian points, we overcome the accuracy degradation issues caused by geometric deformation and Jacobian non-uniformity of curved-edge meshes. We prove the coercivity of the discrete bilinear form under weak…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-18",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2608.04403",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.04403",
+  "title": "Information locality of a quantum locally recoverable code",
+  "authors": [
+    "Ryutaroh Matsumoto"
+  ],
+  "summary": "A classical linear code $C$ of length $n$ is said to have symbol locality $(r, δ)$ if for any index $j$ there exists a repair group $J_j \\subseteq \\{1, \\ldots, n\\}$ with $j\\in J_j$ and $|J_j| \\leq r+δ-1$ such that any $δ-1$ or fewer erasures in $J_j$ can be corrected by using codeword symbols only in $J_j$. Later it turned out that this way of defining $r$ overestimates the number of necessary codeword symbols for multiple-erasure correction, and information locality was proposed to define $r$ as the dimension of the punctured code of $C$ onto $J_j$. Recently locality $(r,δ)$ was proposed…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.IT"
+  ],
+  "published": "2026-08-05",
+  "updated": "2026-08-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

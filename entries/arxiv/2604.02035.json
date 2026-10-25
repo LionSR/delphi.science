@@ -1,0 +1,25 @@
+{
+  "key": "2604.02035",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.02035",
+  "title": "Reinforcement Learning for Speculative Trading under Exploratory Framework",
+  "authors": [
+    "Yun Zhao",
+    "Alex S. L. Tse",
+    "Harry Zheng"
+  ],
+  "summary": "We study a speculative trading problem within the exploratory reinforcement learning (RL) framework of Wang et al. [2020]. The problem is formulated as a sequential optimal stopping problem over entry and exit times under general utility function and price process. We first consider a relaxed version of the problem in which the stopping times are modeled by the jump times of Cox processes driven by bounded, non-randomized intensity controls. Under the exploratory formulation, the agent's randomized control is characterized via the probability measure over the jump intensities, and their…",
+  "domain": "q-fin.MF",
+  "tags": [
+    "q-fin.MF",
+    "cs.LG",
+    "math.OC",
+    "q-fin.CP",
+    "q-fin.TR"
+  ],
+  "published": "2026-04-02",
+  "updated": "2026-04-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

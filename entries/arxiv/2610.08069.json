@@ -1,0 +1,24 @@
+{
+  "key": "2610.08069",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08069",
+  "title": "Detecting a Shift Is Not Enough: Exact Minimax Limits of Linear Representation Repair",
+  "authors": [
+    "Anuar Aimoldin",
+    "Yankai Chen",
+    "Ayana Mussabayeva",
+    "Xue Liu"
+  ],
+  "summary": "A mean shift between two data sources can be easy to detect but hard to remove without substantially changing their representations. We cast its removal as a statistical decision problem: from noisy differences between paired calibration measurements in $\\mathbb{R}^d$, learn one linear map, applied to both sources under a hard distortion budget, that leaves as little of the shift as possible on fresh data. We derive the exact finite-sample minimax risk over all such maps, $(d-k) \\mathbb{E}[1/(d+2J)]$ with $J\\sim\\mathrm{Pois}(κ/2)$, where the budget allows deleting $k$ directions and $κ$ is…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

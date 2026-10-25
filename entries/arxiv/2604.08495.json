@@ -1,0 +1,22 @@
+{
+  "key": "2604.08495",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.08495",
+  "title": "Density-Driven Optimal Control: Convergence Guarantees for Stochastic LTI Multi-Agent Systems",
+  "authors": [
+    "Kooktae Lee"
+  ],
+  "summary": "This paper addresses the decentralized non-uniform area coverage problem for multi-agent systems, a critical task in missions with high spatial priority and resource constraints. While existing density-based methods often rely on computationally heavy Eulerian PDE solvers or heuristic planning, we propose Stochastic Density-Driven Optimal Control (D$^2$OC). This is a rigorous Lagrangian framework that bridges the gap between individual agent dynamics and collective distribution matching. By formulating a stochastic MPC-like problem that minimizes the Wasserstein distance as a running cost,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.MA",
+    "cs.RO",
+    "eess.SY"
+  ],
+  "published": "2026-04-09",
+  "updated": "2026-04-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

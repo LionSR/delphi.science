@@ -1,0 +1,20 @@
+{
+  "key": "2607.06372",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06372",
+  "title": "Groebner.jl: Fast Gröbner Tracing in Julia",
+  "authors": [
+    "Alexander Demin"
+  ],
+  "summary": "A standard way to control expression swell in computer algebra is to use multi-modular or evaluation-interpolation methods. In computations involving Gröbner bases, these techniques typically require repeatedly computing Gröbner bases of specializations of the same ideal. These repeated computations can be accelerated through precomputation, notably using Traverso's tracing. We present Groebner$.$jl (https://github.com/sumiya11/Groebner.jl), a Julia implementation of the F4 algorithm that exposes Traverso's tracing through a reusable public interface. The implementation supports…",
+  "domain": "cs.SC",
+  "tags": [
+    "cs.SC",
+    "math.AC"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-08-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

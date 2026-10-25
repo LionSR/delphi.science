@@ -1,0 +1,21 @@
+{
+  "key": "2608.05686",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.05686",
+  "title": "Provably Efficient Self-Calibrating Quantum Fault Tolerance",
+  "authors": [
+    "Weiyuan Gong",
+    "Hong-Ye Hu"
+  ],
+  "summary": "Quantum error correction protects logical information only when every physical operation remains below the fault-tolerance threshold, a condition that must be maintained continuously rather than only at the initial calibration. In practice, however, analog control parameters inevitably drift because of environmental fluctuations. As future fault-tolerant quantum computations are expected to run for days or even months, interrupting computation for repeated recalibration becomes fundamentally impractical. A promising alternative is to integrate calibration directly into computation by…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-08-06",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

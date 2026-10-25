@@ -1,0 +1,20 @@
+{
+  "key": "2605.11160",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11160",
+  "title": "An energy-decreasing algorithm for the finite element approximation of ferronematic equilibrium states and its numerical realization",
+  "authors": [
+    "Alexandre Ern",
+    "Ruma R. Maity"
+  ],
+  "summary": "We develop an energy-decreasing algorithm for the finite element approximation of two-dimensional ferronematic equilibrium states. The problem is formulated as the minimization of the harmonic energy of two two-dimensional vector fields, both with prescribed length, together with an additional nonlinear relation on the orientation of the two vectors. The finite element setting is based on piecewise continuous finite elements on a weakly acute triangulation. The numerical realization of the energy-decreasing algorithm employs a decomposition-coordination framework and a Uzawa-like iteration.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

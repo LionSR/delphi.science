@@ -1,0 +1,23 @@
+{
+  "key": "2604.22355",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.22355",
+  "title": "SOC-ICNN: From Polyhedral to Conic Geometry for Learning Convex Surrogate Functions",
+  "authors": [
+    "Kang Liu",
+    "Jianchen Hu",
+    "Wei Peng"
+  ],
+  "summary": "Classical ReLU-based Input Convex Neural Networks (ICNNs) are equivalent to the optimal value functions of Linear Programming (LP). This intrinsic structural equivalence restricts their representational capacity to piecewise-linear polyhedral functions. To overcome this representational bottleneck, we propose the SOC-ICNN, an architecture that generalizes the underlying optimization class from LP to Second-Order Cone Programming (SOCP). By explicitly injecting positive semi-definite curvature and Euclidean norm-based conic primitives, our formulation introduces native smooth curvature into…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-04-24",
+  "updated": "2026-05-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

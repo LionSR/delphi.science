@@ -1,0 +1,20 @@
+{
+  "key": "2609.17759",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.17759",
+  "title": "Derivative-Free Structured Updates for Muon",
+  "authors": [
+    "Pengcheng Xie"
+  ],
+  "summary": "Muon updates matrix-valued neural-network parameters by orthogonalizing a gradient-based momentum matrix. Its reliance on derivatives limits its use when gradients are unavailable or unreliable. We develop a derivative-free framework that constructs Muon-style updates from structured finite differences. Four variants are considered: full entrywise recovery, random low-rank surrogates, basis-aligned rank-one probing, and direct structured search. Exhaustive basis-aligned probing is equivalent, up to positive scaling before ideal polar orthogonalization, to coordinate finite differences.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

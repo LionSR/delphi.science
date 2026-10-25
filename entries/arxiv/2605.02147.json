@@ -1,0 +1,22 @@
+{
+  "key": "2605.02147",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.02147",
+  "title": "Sampling-Based Control via Entropy-Regularized Optimal Transport",
+  "authors": [
+    "Vincent Pacelli",
+    "Akash Ratheesh",
+    "Evangelos A. Theodorou"
+  ],
+  "summary": "Sampling-based model predictive control methods like MPPI and CEM are essential for real-time control of nonlinear robotic systems, particularly where discontinuous dynamics preclude gradient-based optimization. However, these methods derive from information-theoretic objectives that are agnostic to the geometry of the control problem, leading to pathological behaviors such as mode-averaging when the cost landscape is complex. We present OT-MPC, a sampling-based algorithm that overcomes these limitations through an entropy-regularized optimal transport formulation. By computing an optimal…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-05-04",
+  "updated": "2026-05-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

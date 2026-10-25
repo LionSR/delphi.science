@@ -1,0 +1,22 @@
+{
+  "key": "2606.24981",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.24981",
+  "title": "A Single Stepsize Suffices for Unprojected Linear TD(0): Simultaneous Robust and Fast Rates via Polyak--Ruppert Averaging",
+  "authors": [
+    "Wei-Cheng Lee",
+    "Francesco Orabona"
+  ],
+  "summary": "We study linear TD(0) under Markovian sampling, where data are generated along a single trajectory. We provide high-probability guarantees for a plain unprojected TD(0) algorithm with Polyak-Ruppert (PR) averaging, using a single stepsize schedule $η_t \\propto \\frac{1}{τ_{\\mathrm{mix}}\\log(t)\\sqrt{t}}$ that depends on the mixing time but requires no prior knowledge of the curvature parameter $ω$. Our first result shows that such a choice of the stepsize guarantees that the TD(0) iterates are automatically and uniformly bounded with high probability, without projections and without any…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-06-23",
+  "updated": "2026-06-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

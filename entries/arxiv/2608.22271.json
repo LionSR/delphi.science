@@ -1,0 +1,21 @@
+{
+  "key": "2608.22271",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.22271",
+  "title": "Exact versus unique nondeterministic automatic complexity",
+  "authors": [
+    "Bjørn Kjos-Hanssen",
+    "Travis Rivera Petit"
+  ],
+  "summary": "The exact nondeterministic automatic complexity $A_{Ne}(x)$ of a word $x$ is the minimum number of states of a nondeterministic finite automaton that accepts $x$ and no other word of length $|x|$; the unique nondeterministic automatic complexity $A_N(x)$ additionally requires the accepting computation to be unique. Chen, Kjos-Hanssen, Koswara, Richter, and Stephan (FSTTCS 2025) asked whether the two measures can differ. We answer this affirmatively: the binary word $w=1101000000100$ satisfies $A_{Ne}(w)=6<7=A_N(w)$. The separation is witnessed by a six-state automaton whose sole accepted…",
+  "domain": "cs.FL",
+  "tags": [
+    "cs.FL",
+    "math.LO"
+  ],
+  "published": "2026-08-23",
+  "updated": "2026-08-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

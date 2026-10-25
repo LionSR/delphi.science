@@ -1,0 +1,26 @@
+{
+  "key": "2602.11457",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.11457",
+  "title": "The Pinnacle Architecture: Reducing the cost of breaking RSA-2048 to 100 000 physical qubits using quantum LDPC codes",
+  "authors": [
+    "Paul Webster",
+    "Lucas Berent",
+    "Omprakash Chandra",
+    "Evan T. Hockings",
+    "Nouédyn Baspin",
+    "Felix Thomsen",
+    "Samuel C. Smith",
+    "Lawrence Z. Cohen"
+  ],
+  "summary": "The realisation of utility-scale quantum computing inextricably depends on the design of practical, low-overhead fault-tolerant architectures. We introduce the Pinnacle Architecture, which uses quantum low-density parity check (QLDPC) codes to allow for universal, fault-tolerant quantum computation with a spacetime overhead significantly smaller than that of any competing architecture. With this architecture, we show that 2048-bit RSA integers can be factored with fewer than one hundred thousand physical qubits, given a physical error rate of $10^{-3}$, code cycle time of $1$ microsecond and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-12",
+  "updated": "2026-05-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

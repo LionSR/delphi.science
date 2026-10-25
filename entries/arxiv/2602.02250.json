@@ -1,0 +1,22 @@
+{
+  "key": "2602.02250",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.02250",
+  "title": "Well-Posed KL-Regularized Control via Wasserstein and Kalman-Wasserstein KL Divergences",
+  "authors": [
+    "Viktor Stein",
+    "Adwait Datar",
+    "Nihat Ay"
+  ],
+  "summary": "Kullback-Leibler (KL) divergence regularization is widely used in reinforcement learning, but it becomes infinite under support mismatch and can degenerate in low-noise regimes. Using a unified information-geometric framework, we introduce KL analogs by replacing the Fisher-Rao geometry in the dynamical formulation of the KL with transport-based geometries, and derive closed-form expressions for common distribution families. Between elliptic distributions, these divergences remain finite for degenerating equal covariances and yield a geometric interpretation of regularization heuristics used…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-02-02",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

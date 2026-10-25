@@ -1,0 +1,22 @@
+{
+  "key": "2606.04955",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.04955",
+  "title": "Expressibility, Noise, and Error Mitigation in VQE Ansatz Selection",
+  "authors": [
+    "Peter Annis",
+    "Abe Kassem",
+    "Evan Coleman"
+  ],
+  "summary": "The variational quantum eigensolver (VQE) is a promising algorithm for near-term quantum chemistry applications, but selecting optimal ansatz circuits remains challenging. Expressibility, a metric quantifying a circuit's ability to explore the Hilbert space, has been proposed as a guide for ansatz selection, but recent work showed it inconsistently predicts VQE performance under realistic noise for $H_2$. We extend this investigation to cover both $H_2$ and $H_3^+$ under four execution scenarios: ideal, noisy, and noisy with zero-noise extrapolation (ZNE) or probabilistic error cancellation…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-06-03",
+  "updated": "2026-06-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

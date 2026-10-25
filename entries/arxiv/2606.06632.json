@@ -1,0 +1,24 @@
+{
+  "key": "2606.06632",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.06632",
+  "title": "Smooth Hard-Thresholding for Singular Values with Stein's Unbiased Risk Estimate",
+  "authors": [
+    "Guanzhong Yang",
+    "Zi Wang",
+    "Guang Yang"
+  ],
+  "summary": "Low-rank matrix denoising is a central primitive in patch-based image restoration and many other inverse problems. Classical SVD-based image denoising methods often choose a truncation rank by matching residual singular-value energy with an estimated noise energy, but this rule is not a finite-sample risk principle because a fitted low-rank approximation inevitably absorbs part of the noise. This paper develops a mathematically rigorous alternative based on Stein's unbiased risk estimate (SURE). Since singular value hard thresholding is discontinuous and does not satisfy the hypotheses of…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "eess.IV",
+    "eess.SP",
+    "math.NA"
+  ],
+  "published": "2026-06-04",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

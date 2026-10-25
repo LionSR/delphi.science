@@ -1,0 +1,24 @@
+{
+  "key": "2602.10911",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.10911",
+  "title": "Tuning the burn-in phase in training recurrent neural networks improves their performance",
+  "authors": [
+    "Julian D. Schiller",
+    "Malte Heinrich",
+    "Victor G. Lopez",
+    "Matthias A. Müller"
+  ],
+  "summary": "Training recurrent neural networks (RNNs) with standard backpropagation through time (BPTT) can be challenging, especially in the presence of long input sequences. A practical alternative to reduce computational and memory overhead is to perform BPTT repeatedly over shorter segments of the training data set, corresponding to truncated BPTT. In this paper, we examine the training of RNNs when using such a truncated learning approach for time series tasks. Specifically, we establish theoretical bounds on the accuracy and performance loss when optimizing over subsequences instead of the full…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-02-11",
+  "updated": "2026-02-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

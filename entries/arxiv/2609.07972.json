@@ -1,0 +1,21 @@
+{
+  "key": "2609.07972",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07972",
+  "title": "Quantum Wavefunction Augmentation via Variational Autoencoders",
+  "authors": [
+    "Sonaldeep Halder",
+    "Chayan Patra",
+    "Rahul Maitra"
+  ],
+  "summary": "Sample-based quantum diagonalization (SQD) has emerged as a promising route for quantum-centric supercomputing, relying on classical diagonalization of the molecular Hamiltonian within a hardware-sampled determinant subspace. However, its accuracy degrades in strongly correlated regimes where the relevant determinant space exceeds what finite-shot sampling can capture. In this work, we introduce Quantum Wavefunction Augmentation via Variational Autoencoders (Q-WAVE), a hybrid method that combines determinants sampled via SqDRIFT Krylov circuits and configuration interaction singles and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

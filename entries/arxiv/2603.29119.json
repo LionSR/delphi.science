@@ -1,0 +1,24 @@
+{
+  "key": "2603.29119",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.29119",
+  "title": "Sampling-Horizon Neural Operator Predictors for Nonlinear Control under Delayed Inputs",
+  "authors": [
+    "Luke Bhan",
+    "Peter Quawas",
+    "Miroslav Krstic",
+    "Yuanyuan Shi"
+  ],
+  "summary": "Modern control systems frequently operate under input delays and sampled state measurements. A common delay-compensation strategy is predictor feedback; however, practical implementations require solving an implicit ODE online, resulting in intractable computational cost. Moreover, predictor formulations typically assume continuously available state measurements, whereas in practice measurements may be sampled, irregular, or temporarily missing due to hardware faults. In this work, we develop two neural-operator predictor-feedback designs for nonlinear systems with delayed inputs and sampled…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-03-31",
+  "updated": "2026-03-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

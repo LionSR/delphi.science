@@ -1,0 +1,26 @@
+{
+  "key": "2603.24641",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.24641",
+  "title": "Learning Mesh-Free Discrete Differential Operators with Self-Supervised Graph Neural Networks",
+  "authors": [
+    "Lucas Gerken Starepravo",
+    "Georgios Fourtakas",
+    "Steven Lind",
+    "Ajay B. Harish",
+    "Tianning Tang",
+    "Jack R. C. King"
+  ],
+  "summary": "Mesh-free numerical methods provide flexible discretisations for complex geometries; however, classical meshless discrete differential operators typically trade low computational cost for limited accuracy or high accuracy for substantial per-stencil computation. We introduce a parametrised framework for learning mesh-free discrete differential operators using a graph neural network trained via polynomial moment constraints derived from truncated Taylor expansions. The model maps local stencils relative positions directly to discrete operator weights. The current work demonstrates that neural…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-03-25",
+  "updated": "2026-03-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

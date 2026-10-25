@@ -1,0 +1,20 @@
+{
+  "key": "2609.05847",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.05847",
+  "title": "A spectral gap for Metropolis-adjusted Langevin algorithm with a uniformly randomized step size",
+  "authors": [
+    "Qian Qin"
+  ],
+  "summary": "Let $π(\\mathrm{d} x)\\propto e^{-U(x)}\\, \\mathrm{d} x$ on $\\mathbb{R}^d$, where $U$ is continuously differentiable and $m$-strongly convex with a globally $L$-Lipschitz gradient, $0 1$, for all square-integrable functions, the ratio of the Monte Carlo asymptotic variance relative to independence sampling has an upper bound of order $\\sqrt{d \\log d}$. This contrasts with fixed-MALA, where the ratio can be as bad as $d/\\log d$ in thew worst-case scenario. The spectral gap also gives geometric convergence of the lazy kernel from every initial density in $L^2(π)$, central limit theorems, and…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "math.PR"
+  ],
+  "published": "2026-09-05",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

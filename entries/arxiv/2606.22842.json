@@ -1,0 +1,21 @@
+{
+  "key": "2606.22842",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.22842",
+  "title": "Level totients for integer mosaics",
+  "authors": [
+    "The Anh Dao",
+    "Tim Kasian",
+    "Mostafa Mirabi"
+  ],
+  "summary": "We study a level analog of Euler's totient function for integer mosaics. Let $P_i(n)$ be the set of primes appearing in the first $i$ levels of the mosaic of $n$, and let $\\varphi_i(n)$ count the integers $m\\leq n$ for which $P_i(m)\\cap P_i(n)=\\varnothing$. We prove a Möbius divisor-sum formula for $\\varphi_i(n)$ and reduce it to a sum over a set $\\mathcal{V}_{i,S}$ of powerful integers. If $S\\neq\\varnothing$, $i\\geq 2$, and $q=\\min S$, then \\[ |\\mathcal{V}_{i,S}\\cap[1,x]|\\sim C_{i,S}x^{1/q}, \\] with $C_{i,S}$ an explicit positive Euler-product constant. For fixed $S$, the density $δ_i(S)$…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-06-22",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

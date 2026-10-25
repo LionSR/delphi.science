@@ -1,0 +1,21 @@
+{
+  "key": "2608.00342",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.00342",
+  "title": "Source Reliability Weighted Observer Design for Open Client Server Networks",
+  "authors": [
+    "Amit Dutta",
+    "Marcos M. Vasconcelos",
+    "Olugbenga M. Anubi"
+  ],
+  "summary": "State estimation in open client server networks is challenging because the set of active observation sources changes over time, and active sources need not be valid sensors of the latent state. We study a client-server estimation problem in which a fixed but unknown state-consistent sensing class measures the latent state when active, while nuisance sources may arrive in the active set and generate observations from a different signal class. The server observes active sources, but it does not know which agents observe valid state measurements. We propose a source-reliability-weighted…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-31",
+  "updated": "2026-07-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

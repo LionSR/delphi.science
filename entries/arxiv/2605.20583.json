@@ -1,0 +1,20 @@
+{
+  "key": "2605.20583",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.20583",
+  "title": "Multilevel Isogeometric Projection Stabilization via Quasi-Interpolation for Advection-Dominated Problems",
+  "authors": [
+    "Zakaria El Hasnaoui",
+    "Ahmed Ratnani"
+  ],
+  "summary": "This paper presents a novel multilevel projection-based stabilization method for advection-dominated convection--diffusion problems within the framework of Isogeometric Analysis. The proposed approach extracts and penalizes fine-scale fluctuations using continuous B-spline quasi-interpolants, avoiding both the highly sensitive parameters used in residual-based stabilization methods and the discontinuous auxiliary spaces required by classical Local Projection Stabilization. Stabilization is applied hierarchically across nested levels of the discrete space via explicit mesh-dependent weights.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-20",
+  "updated": "2026-05-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2610.20537",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.20537",
+  "title": "Quantum-Aware Key Rank for Side-Channel Attacks evaluation",
+  "authors": [
+    "Yevgen Kotukh"
+  ],
+  "summary": "Side-channel attacks on block ciphers rarely recover the key outright: they leave a residual key space ordered by subkey posteriors, and evaluation laboratories report the key rank of the true key against thresholds near 2^48 and 2^60. No evaluation framework models an adversary who collects traces classically and finishes the search on a quantum computer, although quantum search with advice provides exactly that. We give such an adversary a cost model and a metric. For a device whose key has rank r, any quantum algorithm with classical access to the posteriors needs Omega(sqrt(r)) cipher…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

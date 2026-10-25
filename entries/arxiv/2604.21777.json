@@ -1,0 +1,21 @@
+{
+  "key": "2604.21777",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.21777",
+  "title": "Fast Algorithm For Solving Time-dependent Multiscale radiative transport Equation",
+  "authors": [
+    "Qinchen Song",
+    "Lei Zhang",
+    "Min Tang"
+  ],
+  "summary": "When solving the time-dependent radiative transport equation (RTE), implicit time discretization is often employed for its robustness and stability. This results in a sequence of steady-state RTEs with identical cross-sections but varying source terms, whose repeated solution is computationally costly. To address this, we first apply the adaptive tailored finite point scheme (TFPS) for spatial discretization. This scheme exploits prior knowledge of the background media's optical properties to adaptively compress the angular domain, constructing a compressed linear system. A key feature is…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-23",
+  "updated": "2026-04-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

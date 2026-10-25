@@ -1,0 +1,20 @@
+{
+  "key": "2605.12432",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.12432",
+  "title": "Stochastic block coordinate and function alternation for multi-objective optimization and learning",
+  "authors": [
+    "Trang H. Tran",
+    "Luis Nunes Vicente"
+  ],
+  "summary": "Multi-objective optimization is central to many engineering and machine learning applications, where multiple objectives must be optimized in balance. While multi-gradient based optimization methods combine these objectives in each step, such methods require computing gradients with respect to all variables at every iteration, resulting in high computational costs in large-scale settings. In this work, we propose a framework that simultaneously alternates the optimization of each objective and the (stochastic) gradient update with respect to each variable block. Our framework reduces…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2605.10566",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.10566",
+  "title": "Affine Tracing: A New Paradigm for Probabilistic Linear Solvers",
+  "authors": [
+    "Disha Hegde",
+    "Marvin Pförtner",
+    "Jon Cockayne"
+  ],
+  "summary": "Probabilistic linear solvers (PLSs) return probability distributions that quantify uncertainty due to limited computation in the solution of linear systems. The literature has traditionally distinguished between Bayesian PLSs, which condition a prior on information obtained from projections of the linear system, and probabilistic iterative methods (PIMs), which lift classical iterative solvers to probability space. In this work we show this dichotomy to be false: Bayesian PLSs are a special case of non-stationary affine PIMs. In addition, we prove that any realistic affine PIM is calibrated.…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

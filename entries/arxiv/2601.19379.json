@@ -1,0 +1,21 @@
+{
+  "key": "2601.19379",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.19379",
+  "title": "Optimal Asynchronous Stochastic Nonconvex Optimization under Heavy-Tailed Noise",
+  "authors": [
+    "Yidong Wu",
+    "Luo Luo"
+  ],
+  "summary": "This paper considers the problem of asynchronous stochastic nonconvex optimization with heavy-tailed gradient noise and arbitrarily heterogeneous computation times across workers. We propose an asynchronous normalized stochastic gradient descent algorithm with momentum. The analysis show that our method achieves the optimal time complexity under the assumption of bounded $p$th-order central moment with $p\\in(1,2]$. We also provide numerical experiments to show the effectiveness of proposed method.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-01-27",
+  "updated": "2026-01-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

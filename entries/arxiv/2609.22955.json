@@ -1,0 +1,20 @@
+{
+  "key": "2609.22955",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.22955",
+  "title": "The Zipped Finite Element Method on polyhedral meshes",
+  "authors": [
+    "Stefano Berrone",
+    "Gioana Teora"
+  ],
+  "summary": "We extend the high-order Zipped Finite Element Method to three-dimensional polyhedral elements. The construction relies on a local sub-tetrahedralization obtained by triangulating the polygonal faces and connecting the resulting vertices to a suitable interior point. High-order shape functions are constructed as linear combinations of standard finite element basis functions, with coefficients chosen to ensure exact polynomial reproduction on the faces and in the element interior while preserving global C0-conformity. We further introduce a QR-based strategy as a systematic alternative to the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-19",
+  "updated": "2026-09-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

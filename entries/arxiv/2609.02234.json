@@ -1,0 +1,22 @@
+{
+  "key": "2609.02234",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.02234",
+  "title": "A linear bound for nested cycles without geometric crossings",
+  "authors": [
+    "Jiangdong Ai",
+    "Gregory Gutin",
+    "Yiming Hao"
+  ],
+  "summary": "Cycles $C_1,\\ldots,C_k$ in a graph are called nested without geometric crossings if they are pairwise edge-disjoint, $V(C_k)\\subseteq\\cdots\\subseteq V(C_1)$, and each pair of consecutive cycles induces the same cyclic order on the vertices of the inner cycle, up to reversal. Let $f_k(n)$ be the least number of edges that forces such a family in every $n$-vertex graph. Gil Fernández, Kim, Kim and Liu proved that $f_2(n)=O(n)$, answering a question of Erdős, and asked whether $f_k(n)=O_k(n)$ for every fixed $k$. We prove this for all $k$. The proof selects the inner cycles together with a…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM"
+  ],
+  "published": "2026-09-02",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

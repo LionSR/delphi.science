@@ -1,0 +1,24 @@
+{
+  "key": "2604.19462",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.19462",
+  "title": "Solving Convex-Concave Problems with $\\tilde{\\mathcal{O}}(ε^{-4/(3p+1)})$ $p$th-Order Oracle Complexity",
+  "authors": [
+    "Lesi Chen",
+    "Xinliang Zhang",
+    "Chengchang Liu",
+    "Junru Li",
+    "Luo Luo",
+    "Jingzhao Zhang"
+  ],
+  "summary": "When the objective has Lipschitz continuous $p$th-order derivatives, it is known that convex-concave minimax problems can be solved with $\\mathcal{O}(ε^{-2/(p+1)})$ $p$th-order oracle calls. This complexity upper bound was speculated to be optimal as it is achieved by a natural generalization of the optimal first-order method. In this work, we show an improved upper bound of $\\tilde{\\mathcal{O}}(ε^{-4/(3p+1)})$ by applying the Monteiro-Svaiter acceleration. We also establish a lower complexity bound of $Ω(ε^{-2/(3p-1)})$, suggesting a gap still exists for $p \\ge 2$.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-21",
+  "updated": "2026-04-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

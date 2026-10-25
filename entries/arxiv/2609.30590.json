@@ -1,0 +1,23 @@
+{
+  "key": "2609.30590",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.30590",
+  "title": "Potential Hessian Ascent IV: Sampling the Sherrington-Kirkpatrick model at $β< 1$",
+  "authors": [
+    "Holden Lee",
+    "Juspreet Singh Sandhu",
+    "Jonathan Shi"
+  ],
+  "summary": "We give a polynomial-time algorithm to sample from the Gibbs measure of the Sherrington-Kirkpatrick (SK) model with $o_n(1)$ error in total-variation distance (TVD) at any inverse-temperature $β< 1$. The algorithm combines algorithmic stochastic localization (ASL) with rejection sampling over path-space via Jarzynski's equality (JE). The analysis extends the authors' prior $β< 1/2$ result [arXiv:2605.03718] by replacing all global regularity requirements in the stochastic differential equation (SDE) error analysis with local regularity around likely trajectories. The relaxed regularity is…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.DS",
+    "math-ph"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

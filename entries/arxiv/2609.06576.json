@@ -1,0 +1,21 @@
+{
+  "key": "2609.06576",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.06576",
+  "title": "Optimization of Quadratic Sieve Algorithm Implementation for Large Integer Factorization",
+  "authors": [
+    "Zihan Guan",
+    "Xiaodong Zhuang",
+    "Nikos E. Mastorakis"
+  ],
+  "summary": "The quadratic sieve method is a core tool in number theory. In this paper, we present two optimization methods for the Quadratic Sieve algorithm. In the sieving process, the original polynomial root value accumulation step is changed from the original di to the mdi (m is a small integer), which can change the complexity from O(n) to O(n/m). Another optimization method is that for all parameter lookup steps, the original traversal lookup can be changed to an efficient binary search, which can change the complexity of the loop from O(n) to O(logn). This enhancement reduces the computational…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-09-06",
+  "updated": "2026-09-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

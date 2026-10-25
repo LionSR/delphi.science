@@ -1,0 +1,22 @@
+{
+  "key": "2609.21920",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.21920",
+  "title": "High-Moment Stability and Error Analysis of a Fully Discrete LDG-IMEX Method for High Dimensional Nonlinear Stochastic Convection-Diffusion Equations",
+  "authors": [
+    "Yiming Chen",
+    "Yunzhang Li",
+    "Yulong Xing"
+  ],
+  "summary": "A fully discrete local discontinuous Galerkin (LDG) method coupled with an implicit-explicit (IMEX) Euler time discretization is presented and analyzed for a class of high dimensional nonlinear stochastic convection-diffusion equations driven by multiplicative $\\mathcal Q$-Wiener noise. The model allows nonlinear leading coefficients, nonlinear convection terms, dissipative source terms, and gradient-dependent noise. The diffusion operator is treated implicitly through the LDG formulation, while the nonlinear convection, lower-order drift, and stochastic terms are evaluated explicitly. The…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.PR"
+  ],
+  "published": "2026-09-18",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

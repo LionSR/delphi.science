@@ -1,0 +1,25 @@
+{
+  "key": "2609.38434",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38434",
+  "title": "TACIT: Optimization Models that Learn from Their Mistakes",
+  "authors": [
+    "Maxime Bouscary",
+    "Marco Molinaro",
+    "Sirui Li",
+    "Saurabh Amin",
+    "Ishai Menache",
+    "Konstantina Mellou"
+  ],
+  "summary": "Real-world optimization problems are difficult to model accurately because many objectives and constraints reside in domain experts' tacit knowledge, making them hard to formalize. As a result, optimization models often contain miscalibrated objectives, missing constraints, or omitted decision variables, leading to solutions that fail to reflect operational realities. We address this challenge by automatically repairing misspecified formulations using historical data consisting of past solutions and subsequent user overrides. Traditional approaches such as inverse optimization and constraint…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

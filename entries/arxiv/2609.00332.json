@@ -1,0 +1,24 @@
+{
+  "key": "2609.00332",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.00332",
+  "title": "Latent-Space No-Arbitrage Geometry of Generative Models for Implied Volatility Surfaces",
+  "authors": [
+    "Jing Wang",
+    "Shuaiqiang Liu",
+    "Cornelis Vuik"
+  ],
+  "summary": "Generative models for implied volatility surfaces must produce outputs that satisfy static no-arbitrage constraints. We study these constraints in latent space. For a fixed generator, we assign each latent code a scalar margin determined by the no-arbitrage conditions of the generated surface. The codes with nonnegative margin form the admissible latent set. We establish conditions under which strictly admissible codes remain admissible under small perturbations and the boundary of the admissible set is characterized by zero margin. For regular boundary components, we formulate a level-set…",
+  "domain": "q-fin.CP",
+  "tags": [
+    "q-fin.CP",
+    "cs.AI",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-08-31",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

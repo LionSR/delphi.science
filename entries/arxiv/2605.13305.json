@@ -1,0 +1,24 @@
+{
+  "key": "2605.13305",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.13305",
+  "title": "MPINeuralODE: Multiple-Initial-Condition Physics-Informed Neural ODEs for Globally Consistent Dynamical System Learning",
+  "authors": [
+    "Lake Yang",
+    "Antonio Malpica-Morales",
+    "Frank Ioannis Papadakis Wood",
+    "Serafim Kalliadasis"
+  ],
+  "summary": "Neural ordinary differential equations (Neural ODEs) often fit training trajectories while generalizing poorly to unseen initial conditions and long horizons. We propose MPINeuralODE, which combines a soft physics-informed residual with a Multiple-Initial-Condition (MIC) multiple-shooting curriculum whose ingredients are structurally complementary: the physics term anchors the vector-field magnitude on the support that MIC enlarges. We evaluate along three axes: out-of-sample error, long-horizon stability, and Hamiltonian drift, which together expose whether the learned dynamics recover the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS",
+    "physics.chem-ph"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-07-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

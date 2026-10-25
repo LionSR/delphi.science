@@ -1,0 +1,24 @@
+{
+  "key": "2608.21616",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.21616",
+  "title": "Prior-Informed Adaptive Shifts for Sequential Minimal Optimization in Variational Quantum Eigensolvers",
+  "authors": [
+    "Frederik Stalschus",
+    "Samuele Pedrielli",
+    "Stefan Kühn",
+    "Karl Jansen",
+    "Kim A. Nicoli",
+    "Shinichi Nakajima"
+  ],
+  "summary": "Sequential minimal optimization methods, such as the Rotosolve and the Nakanishi-Fujii-Todo algorithm (NFT), are widely used for Variational Quantum Eigensolvers (VQEs). These methods optimize one parameter direction at a time, requiring measurements at only a few locations along that direction. In the presence of measurement shot noise, however, their performance depends critically on the choice of measurement locations, and recent studies suggest that equidistant measurements are optimal. However, we often observe that equidistant measurements are not always optimal in practice. We argue…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-21",
+  "updated": "2026-08-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

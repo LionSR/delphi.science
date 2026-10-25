@@ -1,0 +1,22 @@
+{
+  "key": "2604.15393",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.15393",
+  "title": "Projected Dynamic Programming for Sequential Quantum State Discrimination",
+  "authors": [
+    "Jaehun Jeong",
+    "Donghwa Ji",
+    "Hyunjun Jang",
+    "Kabgyun Jeong"
+  ],
+  "summary": "Sequential Quantum State Discrimination (SQSD) can be naturally framed as a sequential decision-making problem: at each time step, an agent must decide whether to perform an additional measurement to gather more information or to conclude with an optimal decision based on the current belief. In this paper, we formally cast SQSD into a static-hidden-state Partially Observable Markov Decision Process (POMDP) framework. We demonstrate that this formulation precisely subsumes the conventional minimum-error discrimination (MED) scheme as a special one-step case. Furthermore, we apply a regular…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-16",
+  "updated": "2026-04-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

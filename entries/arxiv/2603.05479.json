@@ -1,0 +1,24 @@
+{
+  "key": "2603.05479",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.05479",
+  "title": "Quantum Simulation of Coupled Harmonic Oscillators: From Theory to Implementation",
+  "authors": [
+    "Viraj Dsouza",
+    "Weronika Golletz",
+    "Dimitrios Kranas",
+    "Bakhao Dioum",
+    "Vardaan Sahgal",
+    "Eden Schirman"
+  ],
+  "summary": "We investigate the quantum algorithm of Babbush et al. (arXiv:2303.13012v3) for simulating coupled harmonic oscillators, which promises exponential speedups over classical methods. Focusing on linearly connected oscillator chains, we bridge the gap between theory and implementation by developing and comparing three concrete realizations of the algorithm. First, we implement a sparse initial state preparation combined with product-formula (Suzuki-Trotter) Hamiltonian simulation. Second, we implement a fully quantum, oracle-based framework in which classical data are accessed via oracles, the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-05",
+  "updated": "2026-03-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

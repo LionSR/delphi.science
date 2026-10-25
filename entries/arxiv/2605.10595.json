@@ -1,0 +1,21 @@
+{
+  "key": "2605.10595",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.10595",
+  "title": "Curvature-Dependent Lower Bounds for Frank-Wolfe",
+  "authors": [
+    "Jannis Halbey",
+    "Christophe Roux",
+    "Sebastian Pokutta"
+  ],
+  "summary": "The Frank-Wolfe algorithm achieves a convergence rate of $\\mathcal{O}(1/T)$ for smooth convex optimization over compact convex domains, accelerating to $\\mathcal{O}(1/T^2)$ when both the objective and the feasible set are strongly convex. This acceleration extends beyond strong convexity: Kerdreux et al. (2021a) proved rates of $\\mathcal{O}(T^{-p/(p-1)})$ over $p$-uniformly convex feasible sets, a class that interpolates between strongly convex sets and more general curved domains such as $\\ell_p$ balls. In this work, we establish a matching $Ω(T^{-p/(p-1)})$ lower bound for every $p\\ge 3$…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

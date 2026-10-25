@@ -1,0 +1,23 @@
+{
+  "key": "2609.03589",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.03589",
+  "title": "Correlated initialization of deep residual networks",
+  "authors": [
+    "Felix Benning",
+    "Ivan Nourdin",
+    "Giovanni Peccati"
+  ],
+  "summary": "We study the large-depth behavior of residual networks whose weights are correlated across layers at initialization. Our results confirm and extend a conjecture of Marion et al. [2025], according to which correlated initializations should interpolate continuously between the Brownian stochastic differential equation arising from independent initialization and the ordinary differential equation arising from perfectly correlated initialization. When the initialization is obtained from the application of a feature function to a stationary Gaussian sequence with regularly varying correlation, we…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

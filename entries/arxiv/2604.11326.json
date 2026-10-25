@@ -1,0 +1,21 @@
+{
+  "key": "2604.11326",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.11326",
+  "title": "Above-Guarantee Algorithm for Properly Colored Trees",
+  "authors": [
+    "Yuhang Bai",
+    "Kristóf Bérczi"
+  ],
+  "summary": "In the Properly Colored Spanning Tree problem, we are given an edge-colored undirected graph and the goal is to find a spanning tree in which any two adjacent edges have distinct colors. Since finding such a tree is NP-hard in general, previous work often relied on minimum color degree conditions to guarantee the existence of properly colored spanning trees. While it is known that every connected edge-colored graph $G$ contains a properly colored tree of order at least $\\min\\{|V(G)|, 2δ^c(G)\\}$, where $δ^c(G)$ denotes the minimum number of colors incident to a vertex, we study the…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-04-13",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

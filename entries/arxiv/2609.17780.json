@@ -1,0 +1,19 @@
+{
+  "key": "2609.17780",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.17780",
+  "title": "The Complexity of Finding Stationary Points in Nonsmooth Nonconvex Optimization",
+  "authors": [
+    "Guy Kornowski"
+  ],
+  "summary": "We prove that first-order algorithms require $Ω(δ^{-1}ε^{-3})$ gradient queries (in the worst case) to find a $(δ,ε)$-Goldstein stationary point of a Lipschitz function, at which there is a convex combination of gradients within distance $δ$ whose norm is at most $ε$. This lower bound is tight, matching known algorithms up to absolute constants, therefore resolving the complexity of convergence to stationarity in nonsmooth nonconvex optimization. We further prove a tight lower bound of $Ω(λ^{1/2}ε^{-7/2})$ for finding points satisfying the recently proposed relaxed notion of…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

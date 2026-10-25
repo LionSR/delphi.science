@@ -1,0 +1,24 @@
+{
+  "key": "2609.32977",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32977",
+  "title": "Optimal Parameter-Free Second-order Acceleration with Inexact Hessians under Generalized Smoothness",
+  "authors": [
+    "Artem Agafonov",
+    "Aslan Ashabokov",
+    "Alexander D'yakonov",
+    "Martin Takáč",
+    "Alexander Gasnikov",
+    "Dmitry Kamzolov"
+  ],
+  "summary": "We study second-order convex optimization under generalized Hessian smoothness, where the local Hessian Lipschitz constant may grow linearly with the gradient norm. For inexact Hessians, we develop adaptive algorithms, including an accelerated Monteiro-Svaiter-type method whose complexity matches the lower bound for second-order methods with $δ$-inexact Hessians in the classical Lipschitz-Hessian setting. Our methods are parameter-free in the sense that they require no problem-specific parameters as input, including the Hessian inexactness level $δ$ and smoothness constants. Instead, their…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

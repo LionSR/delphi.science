@@ -1,0 +1,21 @@
+{
+  "key": "2605.26260",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.26260",
+  "title": "Prox-NAG-GS: A Semi-Implicit Proximal Method for Composite Optimization",
+  "authors": [
+    "Sikeh Gisele Wiykiynyuy",
+    "Kelvin Asu Ekuri",
+    "Valentin Leplat"
+  ],
+  "summary": "Composite optimization problems, where a smooth loss is combined with a nonsmooth regularizer, are common in machine learning and inverse problems. In this work, we study a proximal extension of NAG-GS, a semi-implicit accelerated method obtained from a Gauss-Seidel discretization of an inertial dynamics. The proposed method, called Prox-NAG-GS, keeps the coupled structure of NAG-GS for the smooth part and replaces the second update by a proximal step. It therefore applies to objectives of the form $F=f+r$, where $f$ is smooth and $r$ is convex and proximable. We derive deterministic…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-25",
+  "updated": "2026-05-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

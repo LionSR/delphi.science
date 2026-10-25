@@ -1,0 +1,23 @@
+{
+  "key": "2609.16198",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.16198",
+  "title": "Utility-Based Path Selection and Configuration in Quantum Networks via Layered Shortest Paths",
+  "authors": [
+    "Leonardo Bacciottini",
+    "Subhransu Maji",
+    "Don Towsley",
+    "Gayane Vardoyan"
+  ],
+  "summary": "A path in a quantum network is a chain of repeaters that distributes entanglement between two users. Selecting a path requires balancing the rate and quality (e.g., fidelity) of the delivered entanglement, but these quantities, unlike standard routing metrics, compose non-additively. The problem is compounded by link-level configuration choices (e.g., distillation rounds or emitter brightness tuning), each trading rate against fidelity, so that a path's performance depends jointly on its route and its per-link settings. We cast this joint path selection and configuration problem as a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.NI"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

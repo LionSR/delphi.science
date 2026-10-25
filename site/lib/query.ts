@@ -4,7 +4,7 @@
 //   ti:grokking AND au:openai          title, author         (arXiv: ti, au, abs, all)
 //   abs:"zero-free region" ANDNOT ti:survey
 //   cat:math  cat:math.NT  cat:"number theory"              division, subdivision, or a subject name
-//   source:openai-math is:formalized   category:research origin:ai-generated family:017 id:<id>
+//   source:openai-math is:formalized is:discussed   category:research origin:ai-generated family:017 id:<id>
 //   published:[2026-10-01 TO *]        grok*  (prefix)      bare words search every text field
 //
 // Operators AND, OR, ANDNOT, NOT (uppercase), parentheses; adjacent terms are ANDed. Text terms rank by
@@ -30,14 +30,20 @@ const TEXT: Record<string, [column: string, config: string]> = {
 	tag: ['tag_tsv', 'english'],
 };
 const EXACT: Record<string, string> = { source: 'source', src: 'source', category: 'category', origin: 'origin', id: 'id', family: 'family' };
+// Posts and articles about the record (record.discussion, attached by index.py discuss; r.discussed is their
+// stored count). Each counts like an upvote in the popularity sorts: all of them in score, the ones attached in
+// the window in day, week and month.
 export const FLAGS: Record<string, string> = {
 	formalized: 'r.formalized', verified: 'r.verified', withdrawn: 'r.withdrawn', 'agent-ready': 'r.agent_ready',
-	'ai-generated': "r.origin = 'ai-generated'", app: "r.source = 'app'", gone: 'r.gone',
+	'ai-generated': "r.origin = 'ai-generated'", app: "r.source = 'app'", gone: 'r.gone', discussed: 'r.discussed > 0',
 };
 export const SORTS = ['relevance', 'newest', 'oldest', 'title', 'score', 'day', 'week', 'month', 'mentions'] as const;
 export const MAX_LIMIT = 100;
 const COMPACT = ['id', 'source', 'title', 'authors', 'url', 'pdf', 'published', 'subject', 'division', 'category', 'origin',
-	'agent_ready', 'formalized', 'verified', 'withdrawn', 'family', 'ai_models', 'score', 'reactions', 'comments', 'reviews', 'mentions'];
+	'agent_ready', 'formalized', 'verified', 'withdrawn', 'family', 'ai_models', 'score', 'reactions', 'comments', 'reviews', 'mentions', 'discussed'];
+
+// The record as the API serves it: the stored JSON plus the live counts.
+const SERVED = `r.record || jsonb_build_object('score', r.score, 'reactions', r.reactions, 'comments', r.comments_count, 'reviews', r.reviews_count, 'mentions', r.mentions_count, 'discussed', r.discussed)`;
 
 // ---- Parsing ----
 
@@ -214,9 +220,25 @@ export interface SearchOptions {
 	embedding?: number[]; // the query's embedding, for hybrid ranking
 }
 
-// day, week, month: as on SciRate, the net votes cast in that many days, then the newest.
-const recent = (days: number) => `(SELECT coalesce(sum(v.value), 0) FROM open_index.votes v
-	WHERE v.record_id = r.id AND v.at > now() - interval '${days} days') DESC, r.published DESC NULLS LAST, r.id`;
+// day, week, month: as on SciRate, the net votes cast in that many days plus the posts and articles published in
+// them (a link's own date; the day it was attached only when the source gives none), then the newest. Almost no record has either, so only the candidates are ranked (the votes table, and the few rows with
+// links); the rest come from the published index, already in order, and only as many as the page needs.
+function recentSql(days: number, where: string, n: number): string {
+	return `WITH hot AS (
+			SELECT id, sum(points)::int AS points FROM (
+				SELECT v.record_id AS id, v.value AS points FROM open_index.votes v WHERE v.at > now() - interval '${days} days'
+				UNION ALL
+				SELECT r.id, (SELECT count(*) FROM jsonb_array_elements(r.record->'discussion') d
+					WHERE coalesce(nullif(d->>'date', ''), d->>'added')::date > current_date - ${days})::int
+				FROM open_index.records r WHERE r.discussed > 0
+			) x GROUP BY id HAVING sum(points) <> 0),
+		cand AS (
+			SELECT r.*, h.points FROM open_index.records r JOIN hot h ON h.id = r.id WHERE ${where}
+			UNION ALL
+			(SELECT r.*, 0 FROM open_index.records r WHERE ${where} AND NOT EXISTS (SELECT 1 FROM hot WHERE hot.id = r.id)
+			 ORDER BY r.published DESC NULLS LAST, r.id LIMIT $${n + 1}::int + $${n + 2}::int))
+		SELECT ${SERVED} AS record FROM cand r ORDER BY r.points DESC, r.published DESC NULLS LAST, r.id LIMIT $${n + 1} OFFSET $${n + 2}`;
+}
 
 export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 	const t0 = performance.now();
@@ -232,8 +254,9 @@ export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 	const total = known ?? Number((await db.query<{ n: number }>(`SELECT count(*)::int AS n FROM open_index.records r WHERE ${where}`, params)).rows[0].n);
 
 	const order: Record<string, string> = { newest: 'r.published DESC NULLS LAST, r.id', oldest: 'r.published ASC NULLS LAST, r.id',
-		title: 'lower(r.title), r.id', score: 'r.score DESC, r.published DESC NULLS LAST, r.id',
-		mentions: 'r.mentions_count DESC, r.score DESC, r.id', day: recent(1), week: recent(7), month: recent(30) };
+		title: 'lower(r.title), r.id', score: '(r.score + r.discussed) DESC, r.published DESC NULLS LAST, r.id', // records_top
+		mentions: 'r.mentions_count DESC, r.score DESC, r.id' };
+	const window: Record<string, number> = { day: 1, week: 7, month: 30 };
 	let sql: string;
 	let all = [...params];
 	if (sort === 'relevance' && (ranks.length || opts.embedding)) {
@@ -248,15 +271,17 @@ export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 					: 'SELECT NULL::text AS id, NULL::bigint AS k WHERE false'}),
 				vec AS (SELECT r.id, row_number() OVER (ORDER BY r.embedding OPERATOR(extensions.<=>) ${e}) AS k FROM open_index.records r
 				        WHERE ${where} AND r.embedding IS NOT NULL ORDER BY r.embedding OPERATOR(extensions.<=>) ${e} LIMIT 200)
-				SELECT r.record || jsonb_build_object('score', r.score, 'reactions', r.reactions, 'comments', r.comments_count, 'reviews', r.reviews_count, 'mentions', r.mentions_count) AS record FROM open_index.records r
+				SELECT ${SERVED} AS record FROM open_index.records r
 				JOIN (SELECT coalesce(kw.id, vec.id) AS id, coalesce(1.0 / (60 + kw.k), 0) + coalesce(1.0 / (60 + vec.k), 0) AS score
 				      FROM kw FULL JOIN vec ON kw.id = vec.id) s ON s.id = r.id
 				ORDER BY s.score DESC, r.published DESC NULLS LAST LIMIT $${n + 2} OFFSET $${n + 3}`;
 		} else {
-			sql = `SELECT r.record || jsonb_build_object('score', r.score, 'reactions', r.reactions, 'comments', r.comments_count, 'reviews', r.reviews_count, 'mentions', r.mentions_count) AS record FROM open_index.records r WHERE ${where} ORDER BY ${rank} DESC, r.published DESC NULLS LAST LIMIT $${n + 1} OFFSET $${n + 2}`;
+			sql = `SELECT ${SERVED} AS record FROM open_index.records r WHERE ${where} ORDER BY ${rank} DESC, r.published DESC NULLS LAST LIMIT $${n + 1} OFFSET $${n + 2}`;
 		}
+	} else if (window[sort]) {
+		sql = recentSql(window[sort], where, n);
 	} else {
-		sql = `SELECT r.record || jsonb_build_object('score', r.score, 'reactions', r.reactions, 'comments', r.comments_count, 'reviews', r.reviews_count, 'mentions', r.mentions_count) AS record FROM open_index.records r WHERE ${where} ORDER BY ${order[sort] ?? order.newest} LIMIT $${n + 1} OFFSET $${n + 2}`;
+		sql = `SELECT ${SERVED} AS record FROM open_index.records r WHERE ${where} ORDER BY ${order[sort] ?? order.newest} LIMIT $${n + 1} OFFSET $${n + 2}`;
 	}
 	all.push(limit, offset);
 	const rows = (await db.query<{ record: Record<string, unknown> }>(sql, all)).rows;
@@ -271,6 +296,6 @@ export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 
 export async function get(db: Db, id: string) {
 	const rows = (await db.query<{ record: Record<string, unknown> }>(
-		"SELECT record || jsonb_build_object('score', score, 'reactions', reactions, 'comments', comments_count, 'reviews', reviews_count, 'mentions', mentions_count) AS record FROM open_index.records WHERE id = $1", [id])).rows;
+		`SELECT ${SERVED} AS record FROM open_index.records r WHERE r.id = $1`, [id])).rows;
 	return rows[0]?.record ?? null;
 }

@@ -1,0 +1,23 @@
+{
+  "key": "2606.18032",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.18032",
+  "title": "INI-VPINN: A Variational Physics-Informed Neural Network with Implicit Neumann and Interface Handling for Multi-Material Domains with Geometric Singularities",
+  "authors": [
+    "Shayan Dodge",
+    "Alessandro Formisano",
+    "Sami Barmada"
+  ],
+  "summary": "We propose a new weak-form Physics-Informed Neural Network approach (named INI-VPINN). INI-VPINN naturally incorporates Neumann boundary and interface conditions into the variational formulation. It removes the need for additional loss terms or multiple subdomain networks. This framework employs compact support weighting functions and integration by parts to implicitly impose flux and continuity constraints. In this way, it implicitly ensures physical consistency across material boundaries. The proposed method is tested on Poisson and Laplace problems with sharp interfaces and complex…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG",
+    "physics.comp-ph"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

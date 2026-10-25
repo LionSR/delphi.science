@@ -1,0 +1,20 @@
+{
+  "key": "2605.03329",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.03329",
+  "title": "Table-Based Encodings for Conway's Doomsday Algorithm: Vectorized Doomsdays and Doomyears",
+  "authors": [
+    "Thomas Wollin"
+  ],
+  "summary": "Conway's Doomsday Algorithm (1973) determines the day of the week for any date in the Gregorian calendar via three additive components: a century anchor, a year offset, and a month-day offset. The century anchor is a fixed four-entry table. The other two components require live arithmetic: the year offset demands computing $y + \\lfloor y/4 \\rfloor \\pmod{7}$, and the month-day offset requires a subtraction that can produce negative intermediate values. We present two new encoding schemes that replace both arithmetic steps with structured table lookups. The first, vectorized doomsdays,…",
+  "domain": "math.HO",
+  "tags": [
+    "math.HO",
+    "math.NT"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-05-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2604.24065",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.24065",
+  "title": "An online adaptive finite-element method for nonsmooth PDE-constrained optimization",
+  "authors": [
+    "Harbir Antil",
+    "Robert J. Baraldi",
+    "Rohit Khandelwal",
+    "Drew P. Kouri"
+  ],
+  "summary": "We present a trust-region-based adaptive finite-element algorithm for numerically solving a class of nonsmooth PDE-constrained optimization problems that includes problems with sparsifying regularizers and convex constraints. In particular, we consider the class of problems whose objective function is the sum of a smooth, possibly nonconvex, function and a nonsmooth extended real-valued convex function. Our method combines the robustness of inexact trust-region algorithms for nonsmooth problems with the efficiency of adaptive finite-element discretizations. Starting from a coarse mesh, the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-04-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

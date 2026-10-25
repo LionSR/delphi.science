@@ -1,0 +1,23 @@
+{
+  "key": "2609.10904",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10904",
+  "title": "Agnostic Model-Assisted Estimation with Machine Learning for Survey Data",
+  "authors": [
+    "Ziming An",
+    "Mehdi Dagdoug",
+    "David Haziza",
+    "Yves Tillé"
+  ],
+  "summary": "Model-assisted estimation uses prediction rules to improve the efficiency of estimators of finite population parameters while retaining design-based inference. Although flexible prediction methods have been considered, existing theoretical results are largely method-specific. We develop a learner-agnostic framework that replaces separate analyses for individual learners with general conditions on the sampling design and prediction error. We connect design-aware and design-agnostic cross-fitting and characterize the sampling designs under which they yield conditional independence across…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

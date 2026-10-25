@@ -1,0 +1,21 @@
+{
+  "key": "2607.25664",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.25664",
+  "title": "Contextual Deconvolution for Variance-Stable Demand Sensing: Kernel-Modulated Operators in Promotional Retail",
+  "authors": [
+    "Mohammad Forouhesh"
+  ],
+  "summary": "Machine learning demand forecasts optimize statistical accuracy yet leave excess operational volatility that inflates safety stock and amplifies the Bullwhip effect. We introduce \\textbf{Contextual Deconvolution} (CD), a two-stage estimator that reframes demand sensing as a convex decomposition: a kernel-modulated banded operator separates transient promotion-driven shocks from a smooth structural baseline, and hierarchical partial pooling enables catalog-scale deployment without per-SKU training. The operator is data-derived, not imposed---it reduces to the identity wherever the promotional…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-07-28",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

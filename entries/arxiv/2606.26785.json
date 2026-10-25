@@ -1,0 +1,20 @@
+{
+  "key": "2606.26785",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.26785",
+  "title": "Recycling singular and projection subspaces for pseudospectra computation",
+  "authors": [
+    "Kuan Deng",
+    "Kuan Xu"
+  ],
+  "summary": "Computing matrix pseudospectra over a prescribed region requires evaluating the smallest singular value of $C-zI$ at a large number of grid points, which can be prohibitively expensive for large-scale matrices. We develop a recycling-based framework for accelerating such computations for both dense and sparse matrices. The main idea is to exploit the correlation between singular value problems at neighboring grid points by adaptively recycling singular subspaces computed at previously visited points by an iterative SVD solver. We develop fast Rayleigh-Ritz-SVD procedures for extracting Ritz…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-25",
+  "updated": "2026-06-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

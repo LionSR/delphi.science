@@ -1,0 +1,23 @@
+{
+  "key": "2603.11113",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.11113",
+  "title": "Partition-Based Functional Ridge Regression for High-Dimensional Data",
+  "authors": [
+    "Shaista Ashraf",
+    "Ismail Shah",
+    "Farrukh Javed"
+  ],
+  "summary": "This paper proposes a partition-based functional ridge regression framework to address multicollinearity, overfitting, and interpretability in high-dimensional functional linear models. The coefficient function vector \\( \\boldsymbolβ(s) \\) is decomposed into two components, \\( \\boldsymbolβ_1(s) \\) and \\( \\boldsymbolβ_2(s) \\), representing dominant and weaker functional effects. This partition enables differential ridge penalization across functional blocks, so that important signals are preserved while less informative components are more strongly shrunk. The resulting approach improves…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-03-11",
+  "updated": "2026-03-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

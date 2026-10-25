@@ -1,0 +1,22 @@
+{
+  "key": "2605.29371",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.29371",
+  "title": "Kernel-based potential mean-field games with unbiased random Fourier $U$-statistics",
+  "authors": [
+    "Yumiharu Nakano"
+  ],
+  "summary": "We study the subclass of potential mean-field games in which the running interaction cost and the terminal target cost are both expressed through reproducing-kernel maximum mean discrepancy (MMD) penalties, and develop a computational framework that exploits this kernel structure. Both costs are estimated from finite-sample empirical distributions using a random Fourier U-statistic representation that is unbiased and has linear cost in the batch size. The drift of the controlled diffusion is parametrized by a neural network and trained via stochastic gradient descent. For population…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "math.NA",
+    "stat.ML"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-09-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,26 @@
+{
+  "key": "2602.17567",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.17567",
+  "title": "Canonical labelling of random regular graphs",
+  "authors": [
+    "Mikhail Isaev",
+    "Tamás Makai",
+    "Brendan McKay",
+    "Pawel Pralat",
+    "Jane Tan",
+    "Maksim Zhukovskii"
+  ],
+  "summary": "We prove that whenever $d=d(n)\\to\\infty$ and $n-d\\to\\infty$ as $n\\to\\infty$, then with high probability for any non-trivial initial colouring, the colour refinement algorithm distinguishes all vertices of the random regular graph $\\mathcal{G}_{n,d}$. This, in particular, implies that with high probability $\\mathcal{G}_{n,d}$ admits a canonical labelling computable in time $O(\\min\\{n^ω,nd^2+nd\\log n\\})$, where $ω<2.372$ is the matrix multiplication exponent.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM",
+    "math.PR"
+  ],
+  "published": "2026-02-19",
+  "updated": "2026-02-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

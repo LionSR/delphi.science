@@ -1,0 +1,20 @@
+{
+  "key": "2605.30267",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.30267",
+  "title": "Accelerating Sinkhorn for Entropy-Regularized Optimal Transport",
+  "authors": [
+    "Zeyi Xu",
+    "Long Chen"
+  ],
+  "summary": "We propose Acc-Sinkhorn, a simple accelerated variant of Sinkhorn for entropy-regularized optimal transport (EOT). The method is derived from a bilevel optimization view: Sinkhorn row scaling solves the inner variable $u$ exactly and defines the reduced dual objective $f(v)=\\min_u F(u,v)$, while the remaining column scaling is a unit-step dual mirror descent step in $v$. This structure yields a Hessian-driven Nesterov acceleration that keeps Sinkhorn's scaling form and per-iteration cost, using only extrapolated combinations of Sinkhorn iterates. We prove an $\\mathcal{O}(1/k^2)$ rate under a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

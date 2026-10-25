@@ -1,0 +1,25 @@
+{
+  "key": "2607.26349",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.26349",
+  "title": "Hardware-Aware QUBO Reformulation of Constrained Binary Optimization via the Walsh-Fourier Transform",
+  "authors": [
+    "Loong Kuan Lee",
+    "Harsha Nagarajan",
+    "Thore Gerlach",
+    "Sascha Mücke",
+    "Ragavi Krishnamoorthy",
+    "Nico Piatkowski"
+  ],
+  "summary": "We present a novel slack-free, penalty-based framework for reformulating constrained binary optimization as Quadratic Unconstrained Binary Optimization (QUBO) on near-term quantum annealing hardware. Given a user-chosen penalty function that most naturally captures a constraint---typically non-quadratic, such as a Heaviside-function surrogate---and a target probability measure over the Boolean hypercube, our method returns the weighted least-squares projection of the chosen penalty function onto the subspace spanned by linear and quadratic Walsh--Fourier characters that correspond to…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.OC"
+  ],
+  "published": "2026-07-28",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

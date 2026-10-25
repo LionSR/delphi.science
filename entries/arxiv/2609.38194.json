@@ -1,0 +1,26 @@
+{
+  "key": "2609.38194",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38194",
+  "title": "A Moving-Horizon Approximate Branch-and-Reduce Method for Deep Classification Trees",
+  "authors": [
+    "Chenxuanyin Zou",
+    "Jiayang Ren",
+    "Qiangqiang Mao",
+    "Jing Liu",
+    "Marcus Lai",
+    "Yankai Cao"
+  ],
+  "summary": "Despite the importance for interpretability, decision trees face severe scalability challenges. Existing global optimal methods are often limited by binary feature selection and shallow tree depths, whereas traditional heuristic approaches frequently sacrifice predictive accuracy. To overcome these limitations, this paper proposes a moving-horizon approximate branch-and-reduce method to train near-optimal deep classification trees on large-scale datasets with continuous features. Built on a hierarchical root-subtree optimization framework, the method solves the root-level problem via…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-09-18",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

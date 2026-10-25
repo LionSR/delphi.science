@@ -1,0 +1,22 @@
+{
+  "key": "2604.15100",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.15100",
+  "title": "Presenting Neural Networks via Coherent Functors",
+  "authors": [
+    "Matthew Pugh",
+    "Jo Grundy",
+    "Corina Cirstea",
+    "Nick Harris"
+  ],
+  "summary": "This paper develops a methodology for representing machine learning models as models of formal theories, grounded in the perspective that machine learning models are a form of database and that databases are models of theories in coherent logic. Two intermediate results support this approach: any functorial database schema has an associated $κ$-coherent theory whose models coincide with its instances, and data may be hard-coded into a coherent category such that any model of the resulting theory necessarily contains it. These tools are used to show that any dense feed-forward neural network…",
+  "domain": "math.CT",
+  "tags": [
+    "math.CT"
+  ],
+  "published": "2026-04-16",
+  "updated": "2026-04-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2607.21096",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.21096",
+  "title": "High-Order Exponential Integrators with Improved Uniform Accuracy for Charged-Particle in a Perpendicular Strong Magnetic Field",
+  "authors": [
+    "Zhihao Qi",
+    "Weibing Deng"
+  ],
+  "summary": "This paper considers a class of charged-particle dynamics problems in which the particle is subjected to a magnetic force, with a magnetic flux density inversely proportional to a small parameter $0<\\varepsilon\\ll 1$, and a nonlinear electric force. The resulting highly oscillatory behavior poses significant challenges for numerical computation. To enhance the performance of exponential integrators (EIs), this paper employs a technique that linearizes the ordinary differential equation through a dimension-raising approach. Based on this technique, a new family of EIs is developed that…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-23",
+  "updated": "2026-07-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

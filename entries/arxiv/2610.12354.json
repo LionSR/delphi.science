@@ -1,0 +1,21 @@
+{
+  "key": "2610.12354",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.12354",
+  "title": "Brownian motion with drift conditioned to have restricted $L^2$-norm",
+  "authors": [
+    "Frank Aurzada",
+    "Yuvraj Dutta",
+    "Max Wiegand"
+  ],
+  "summary": "We study the long-time behaviour of Brownian motion with drift under a rare-event conditioning of the quadratic additive functional $Z_T=\\int_0^T W_s^2ds$, where $(W_t)_{t\\geq 0}$ is a Brownian motion with drift $μ$. More precisely, we consider the conditional law of $W$ given the event $Z_T\\le θT$, as $T\\to\\infty$, allowing the drift $μ$ to depend on $T$. We derive sharp, uniform small-deviation asymptotics for $Z_T$, including the exact prefactor, and use them to show that the conditioned process converges weakly to an Ornstein--Uhlenbeck process. Remarkably, the limiting dynamics are…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

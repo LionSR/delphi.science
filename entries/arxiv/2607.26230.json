@@ -1,0 +1,21 @@
+{
+  "key": "2607.26230",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.26230",
+  "title": "Formally certifying number field invariants",
+  "authors": [
+    "Alain Chavarri Villarello",
+    "Sander R. Dahmen"
+  ],
+  "summary": "Number fields, which generalize the rational numbers, are fundamental objects in number theory. Many of their key arithmetic properties are captured by invariants whose computation is among the central tasks of computational algebraic number theory and a focus of several computer algebra systems and databases. In this paper, we describe a Lean 4 formalization for certifying several of these number field invariants. Building on previous work on certifying rings of integers, we extend this certification approach to further invariants including the signature, the unit group modulo $p$-th…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "math.NT"
+  ],
+  "published": "2026-07-28",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

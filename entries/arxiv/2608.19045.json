@@ -1,0 +1,22 @@
+{
+  "key": "2608.19045",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19045",
+  "title": "Distributed Online Estimation of Spiked Eigenvalues with Adaptive Weighting under Persistent Aspect Ratio Heterogeneity",
+  "authors": [
+    "Lu Yan",
+    "Jiang Hu",
+    "Yonghan Zhang",
+    "Xiaoyue Li"
+  ],
+  "summary": "We study online estimation of spiked covariance eigenvalues from observations distributed across $L$ nodes with heterogeneous and persistent effective sample sizes. In the proportional high-dimensional regime, local Rayleigh statistics are deterministically distorted by node-specific aspect ratios $c_{\\ell,t}=p/N^{\\mathrm{eff}}_{\\ell,t}$, and direct aggregation of uncorrected statistics converges to the wrong limit. We propose a correct-then-aggregate framework in which each node removes its deterministic bias via an inverse Rayleigh transfer map, and the server fuses corrected estimates…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-08-19",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

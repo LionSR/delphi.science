@@ -1,0 +1,23 @@
+{
+  "key": "2607.02400",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.02400",
+  "title": "From Ham-Sandwich to Centerpoints: Semialgebraic Algorithms for Cutting Polytopal Measures",
+  "authors": [
+    "Marie-Charlotte Brandenburg",
+    "Jesús A. De Loera",
+    "Chiara Meroni"
+  ],
+  "summary": "We design exact algorithms for the ham-sandwich and centerpoint theorems for polytopal measures. Our key observation is that the cap-volume function of such a measure, i.e., the volume cut off by a halfspace, is piecewise rational on a natural decomposition of the space of oriented hyperplanes. This lets us recast prescribed-proportion cutting problems as semialgebraic feasibility problems. For fixed ambient dimension, this yields polynomial-time algorithms to decide the existence of cuts, describe the full solution set, and sample or enumerate solutions. We extend this framework to the…",
+  "domain": "cs.CG",
+  "tags": [
+    "cs.CG",
+    "math.CO",
+    "math.MG"
+  ],
+  "published": "2026-07-02",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

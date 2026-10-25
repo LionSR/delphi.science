@@ -1,0 +1,23 @@
+{
+  "key": "2605.02582",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.02582",
+  "title": "Linear Decision Tree Policies for Integer Linear Programs",
+  "authors": [
+    "Théo Guyard",
+    "Cleber Oliveira",
+    "Maximilian Schiffer",
+    "Eduardo Uchoa",
+    "Thibaut Vidal"
+  ],
+  "summary": "We study optimal decision policies, represented as linear decision trees, for integer linear programs with a fixed feasible set and varying cost vectors. Once synthesized for a given feasible set, they return an optimal solution for any queried cost vector through a sequence of linear tests. We show that there exists a policy performing this operation in a polynomial number of arithmetic operations in the worst case. In contrast, deciding whether there exists an exact policy with a prescribed maximum number of leaves is $Σ_2^p$-complete. Alongside these theoretical results, we develop a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-04",
+  "updated": "2026-07-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2606.20446",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20446",
+  "title": "High-Probability Last-Iterate Guarantees for Two-Point Gaussian Zeroth-Order Stochastic Gradient Descent",
+  "authors": [
+    "Haishan Ye"
+  ],
+  "summary": "We establish a direct high-probability last-iterate guarantee for the standard same-sample two-point Gaussian zeroth-order SGD method in smooth, strongly convex stochastic optimization. At each iteration, the method draws a fresh Gaussian direction, evaluates two symmetric perturbations with the same stochastic sample, and takes a norm-normalized stochastic approximation step. Assuming unbiased stochastic gradients and a conditional exponential-moment bound on the squared norm of the stochastic gradient noise, we prove a finite-horizon bound, valid for dimension \\(d\\ge2\\), with an explicit…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-07-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

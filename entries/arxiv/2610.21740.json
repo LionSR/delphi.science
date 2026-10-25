@@ -1,0 +1,21 @@
+{
+  "key": "2610.21740",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.21740",
+  "title": "An IMEX multi-level domain-decomposition method for the Boltzmann equation on unstructured meshes",
+  "authors": [
+    "Domenico Caparello",
+    "Lorenzo Pareschi",
+    "Thomas Rey"
+  ],
+  "summary": "We introduce a dynamically adaptive multi-level method for the multiscale Boltzmann equation on unstructured meshes, coupling the compressible Euler, Navier-Stokes, and full Boltzmann descriptions within a single asymptotic-preserving IMEX framework. Unlike standard domain-decomposition approaches, where independent solvers exchange data only through interface conditions, the three models form a unified multiregime scheme. They share the same globally stiffly accurate IMEX Runge-Kutta discretization and are synchronized at every internal stage through kinetic-to-fluid moment projections and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

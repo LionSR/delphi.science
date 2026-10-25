@@ -1,0 +1,26 @@
+{
+  "key": "2602.21797",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.21797",
+  "title": "Neural Learning of Fast Matrix Multiplication Algorithms: A StrassenNet Approach",
+  "authors": [
+    "Paolo Andreini",
+    "Alessandra Bernardi",
+    "Monica Bianchini",
+    "Barbara Toniella Corradini",
+    "Sara Marziali",
+    "Giacomo Nunziati",
+    "Franco Scarselli"
+  ],
+  "summary": "Fast matrix multiplication can be described as searching for low-rank decompositions of the matrix--multiplication tensor. We design a neural architecture, \\textsc{StrassenNet}, which reproduces the Strassen algorithm for $2\\times 2$ multiplication. Across many independent runs the network always converges to a rank-$7$ tensor, thus numerically recovering Strassen's optimal algorithm. We then train the same architecture on $3\\times 3$ multiplication with rank $r\\in\\{19,\\dots,23\\}$. Our experiments reveal a clear numerical threshold: models with $r=23$ attain significantly lower validation…",
+  "domain": "math.AG",
+  "tags": [
+    "math.AG",
+    "cs.LG"
+  ],
+  "published": "2026-02-25",
+  "updated": "2026-02-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

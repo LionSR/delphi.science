@@ -1,0 +1,23 @@
+{
+  "key": "2610.08299",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08299",
+  "title": "Pauli Decomposition by Character Theory: A Memory-Bounded Algorithm for Qubits and Qudits",
+  "authors": [
+    "Mohammadreza Khellat",
+    "Mohammad Masoumi",
+    "Saman Nasoori",
+    "Soroush Nasoori"
+  ],
+  "summary": "Pauli decomposition of an $n$-qubit operator is expensive if each of the $4^n$ Pauli strings is treated as an unstructured object. Labeling those strings by the configuration space $(\\mathbb{Z}_2)^n$ makes them displacement operators $X^{\\otimes x}Z^{\\otimes z}$ on the computational space: shifts by~$x$ and multiplications by characters $Z^{\\otimes z}$ in the computational basis. That labeling organizes the operator into $2^n$ fibers of length $2^n$, one per shift~$x$, each collecting the computational-basis amplitudes that hop by~$x$. Expanding each fiber function in the character basis of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.MS"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

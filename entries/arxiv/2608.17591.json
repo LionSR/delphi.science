@@ -1,0 +1,23 @@
+{
+  "key": "2608.17591",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17591",
+  "title": "Probabilistic Inverse Modeling of Contaminant Transport via a Conditioned-on-Design Bayesian Physics Informed Neural Network",
+  "authors": [
+    "Milad Panahi",
+    "Giovanni Michele Porta",
+    "Monica Riva",
+    "Alberto Guadagnini"
+  ],
+  "summary": "We address the inverse problem of reactive transport in heterogeneous porous media, where unknown model parameters must be inferred from sparse experimental observations. The problem is complicated by strong nonlinearities, spatial heterogeneity, and limited data availability. We propose a Conditioned-on-Design Bayesian Physics-Informed Neural Network (CoDe-BPINN), which combines a domain-decomposed PINN solver with a Bayesian inference network that learns the conditional distribution of model parameters given experimental design variables. The framework is trained by maximizing a…",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "math.PR"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

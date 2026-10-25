@@ -1,0 +1,19 @@
+{
+  "key": "2606.22374",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.22374",
+  "title": "On The Number of Irreducible FAT Colorings",
+  "authors": [
+    "Saeed Shaebani"
+  ],
+  "summary": "A vertex coloring of a graph $G$ with nonempty color classes $V_1,V_2,\\dots,V_k$ is called a \\emph{FAT $k$-coloring} if there exist real numbers $α,β\\in[0,1]$ such that for every vertex $v$ and every color class $V_i \\in \\left\\{ V_1,V_2,\\dots,V_k \\right\\} $ we have $$ \\bigl| N(v) \\cap V_i \\bigr|= \\begin{cases} α°(v) & \\text{if } v\\notin V_i,\\\\[4pt] β°(v) & \\text{if } v\\in V_i . \\end{cases} $$ \\noindent The FAT coloring concept was originally proposed and thoroughly studied by Beers and Mulas. The set of all FAT colorings of a graph is naturally ordered by the coarsening relation, in which…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-06-21",
+  "updated": "2026-06-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

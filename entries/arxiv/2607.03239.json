@@ -1,0 +1,24 @@
+{
+  "key": "2607.03239",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.03239",
+  "title": "Exact conditional simulation of Point processes: Application to pathwise market impact estimation",
+  "authors": [
+    "Joseph Leclère",
+    "Youssef Ouazzani Chahdi",
+    "Mathieu Rosenbaum",
+    "Grégoire Szymanski"
+  ],
+  "summary": "Market impact is defined as the difference between the observed price trajectory under a given execution strategy and the counterfactual trajectory that would have prevailed without it. Since this counterfactual is unobservable, estimating market impact requires simulating alternative paths under the same realized market randomness. We address this by studying the conditional simulation of point processes under perturbed intensities. Given an observed counting process whose intensity is determined by its own history, we characterize the conditional law of the latent Poisson random measure in…",
+  "domain": "q-fin.TR",
+  "tags": [
+    "q-fin.TR",
+    "math.PR",
+    "q-fin.MF"
+  ],
+  "published": "2026-07-03",
+  "updated": "2026-07-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

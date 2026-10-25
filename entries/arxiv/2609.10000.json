@@ -1,0 +1,21 @@
+{
+  "key": "2609.10000",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10000",
+  "title": "Convergence of a single-ensemble multilevel scheme for McKean-Vlasov SDEs",
+  "authors": [
+    "Arne Bouillon",
+    "Giovanni Samaey"
+  ],
+  "summary": "Numerically solving McKean-Vlasov stochastic differential equations is computationally challenging due to the compounding costs of discretizing in time and in the distribution of the solution. Multilevel ideas have been proposed to provide speed-ups. In this work, we study the multilevel Monte Carlo method proposed by Ricketson (2015) for equations whose drift and diffusion terms depend on the law of the solution $X_t$ through the expectation $E[R(X_t)]$. The scheme follows the single-ensemble paradigm, where particles interact across levels at each timestep. While cross-level feedback makes…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.PR"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

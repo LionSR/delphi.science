@@ -1,0 +1,24 @@
+{
+  "key": "2609.01656",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.01656",
+  "title": "A normal-inverse-Wishart (NIW) Bayesian synthesizer for multivariate normal data with application to polygenic risk scores",
+  "authors": [
+    "Rasmus Rask Kragh Jørgensen",
+    "Anne Krogh Nøhr",
+    "Jan Reiter Sørensen",
+    "Martin Bøgsted",
+    "Heidi Søgaard Christensen"
+  ],
+  "summary": "Bayesian synthesis, which generates synthetic data by sampling from the posterior predictive distribution, is a popular approach for privatizing sensitive personal data. However, how attribute disclosure risk is affected by feature dimensionality, the number of individuals in the original dataset, and the amount of released synthetic information remains poorly understood. We propose a mathematically tractable Bayesian synthesizer for multivariate normal data based on a conjugate normal-inverse-Wishart prior for the mean vector and covariance matrix. The conjugate structure yields closed-form…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.PR"
+  ],
+  "published": "2026-08-31",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

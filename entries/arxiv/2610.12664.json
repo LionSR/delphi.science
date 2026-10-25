@@ -1,0 +1,21 @@
+{
+  "key": "2610.12664",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.12664",
+  "title": "A Catalytic Algorithm for Transposing Unknown Qutrit Unitaries with Tight Query Bounds",
+  "authors": [
+    "Yu-Ao Chen"
+  ],
+  "summary": "We construct exact deterministic circuits for transposing and inverting an unknown qutrit unitary $U\\in\\mathrm{SU}(3)$ using only forward queries. Three queries prepare a catalyst independently of the input state. Four further queries implement transposition while returning the catalyst unchanged and uncorrelated with the output. Two uses within an antisymmetric encoding implement inversion with eight processing queries and return the same catalyst. Reusing the catalyst implements $m$ transpositions or inversions with $3+4m$ or $3+8m$ total queries, respectively. More generally, we prove…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.DS"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

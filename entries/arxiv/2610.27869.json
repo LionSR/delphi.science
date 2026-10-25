@@ -1,0 +1,23 @@
+{
+  "key": "2610.27869",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.27869",
+  "title": "Inverse domain uncertainty quantification in hemodynamics: sampling virtual patient cohorts under constraints",
+  "authors": [
+    "Francesco Romor",
+    "Jose Rodrigo Rojo-Garcia",
+    "André-Alexander Zepernick",
+    "Ana Djurdjevac",
+    "Alfonso Caiazzo"
+  ],
+  "summary": "We consider the following inverse domain uncertainty quantification problem: given a prescribed value or measurement of a hemodynamic biomarker, characterize the distribution of vascular geometries compatible with it. The problem is formulated as a Bayesian inverse problem in which a high-dimensional latent parameter encodes the cardiovascular shape and accounts for inter-patient variability. The parameter-to-observable map composes a conditional LDDMM stochastic interpolant generating the aortic surface with a high-performance numerical finite element solver for the unsteady incompressible…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

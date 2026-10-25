@@ -1,0 +1,22 @@
+{
+  "key": "2609.27805",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.27805",
+  "title": "Decoder-Prior Poisoning in Quantum Error Correction: Attacks and PriorGuard Defense",
+  "authors": [
+    "Xinyi Li",
+    "Yifeng Peng",
+    "Juntao Chen",
+    "Ying Wang"
+  ],
+  "summary": "Quantum error correction (QEC) protects quantum computations by repeatedly measuring stabilizer syndromes and using a classical decoder to infer corrections. Modern surface-code decoders are increasingly calibration-aware: they use recent device behavior to set priors such as matching-graph edge probabilities, and these priors directly shape the selected correction. We identify the prior-update path as an overlooked integrity-critical attack surface: a poisoned prior can change decoding decisions even when the syndrome stream, logical labels, and decoder implementation are unchanged. This…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

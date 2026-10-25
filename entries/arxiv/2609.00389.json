@@ -1,0 +1,21 @@
+{
+  "key": "2609.00389",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.00389",
+  "title": "Neural means and kernel corrections for operator learning",
+  "authors": [
+    "Yitzchak Shmalo"
+  ],
+  "summary": "We combine neural network means with exact Matérn kernel regressions of their residuals and of their learned features, and evaluate the pairing on two public emulation problems with published baselines: the structural-mechanics benchmark of de Hoop et al. and the OCO-2 radiative-transfer emulator of Lamminpää et al. On structural mechanics the combination reaches 4.55% test error, matching the best published architecture, and 5.38% against a published 6.49% in the low-data regime. On OCO-2 it improves on the published Gaussian-process emulator on that problem's own test points, outright on…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

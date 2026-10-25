@@ -1,0 +1,20 @@
+{
+  "key": "2602.14449",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14449",
+  "title": "On Two-Stage Householder Orthogonalization",
+  "authors": [
+    "Zhuang-Ao He",
+    "Meiyue Shao"
+  ],
+  "summary": "Two-stage orthogonalization is essential in numerical algorithms such as Krylov subspace methods. For this task we need to orthogonalize a matrix $A$ against another matrix $V$ with orthonormal columns. A common approach is to employ the block Gram--Schmidt algorithm. However, its stability largely depends on the condition number of $[V,A]$. While performing a Householder orthogonalization on $[V,A]$ is unconditionally stable, it does not utilize the knowledge that $V$ has orthonormal columns. To address these issues, we propose a two-stage Householder orthogonalization algorithm based on…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-03-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

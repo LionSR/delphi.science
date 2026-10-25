@@ -1,0 +1,20 @@
+{
+  "key": "2604.23743",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23743",
+  "title": "An architectural capacity ceiling, not a barren plateau: why a fixed-encoding variational quantum circuit cannot fit the Lorenz-63 attractor",
+  "authors": [
+    "Tushar Pandey"
+  ],
+  "summary": "Variational quantum circuits train poorly on chaotic forecasting, usually blamed on barren plateaus (exponentially vanishing gradients). Using an exactly simulable four-qubit variational quantum physics-informed circuit fit to Lorenz-63, we show the barren-plateau explanation fails: the failure is an architectural capacity ceiling fixed by the circuit time-encoding, not its trainable depth. Four measurements support this. (i) A McClean-comparable gradient-variance estimator sits at the local-cost Haar/2-design scale 2^(-2n)=3.9e-3 at n=4; on structurally live parameters it decays about…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-04-26",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

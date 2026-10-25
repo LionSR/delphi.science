@@ -1,0 +1,23 @@
+{
+  "key": "2609.21536",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.21536",
+  "title": "From sparse quantum-computing data to atomistic simulation with universal machine-learning interatomic potentials",
+  "authors": [
+    "Tuan Minh Do",
+    "Yuichiro Yoshida",
+    "Kenji Ishihara",
+    "Wataru Mizukami"
+  ],
+  "summary": "We propose a framework for incorporating quantum-computing-based electronic-structure calculations into universal machine-learning interatomic potentials (uMLIPs). Rather than constructing an interatomic potential from scratch, we refine a pretrained DFT-based uMLIP using a small set of accurate reference energies obtained from quantum computing. We demonstrate the approach for three chemically distinct applications: the Menshutkin reaction, water adsorption in the metal-organic framework HKUST-1, and CO hopping on a high-entropy-alloy nanoparticle. For the Menshutkin reaction, fine-tuning…",
+  "domain": "physics.chem-ph",
+  "tags": [
+    "physics.chem-ph",
+    "quant-ph"
+  ],
+  "published": "2026-09-18",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

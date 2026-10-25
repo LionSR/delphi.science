@@ -1,0 +1,19 @@
+{
+  "key": "2604.02386",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.02386",
+  "title": "Exact Formulas for Coprime Representations of Even Integers Avoiding a Prime",
+  "authors": [
+    "Andres M. Salazar"
+  ],
+  "summary": "Fix a prime $p \\ge 5$ and define $g(2n,p)=\\#\\{(h,k)\\in\\mathbb{Z}_{>0}^2 : h+k=2n,\\; h\\le k,\\; \\gcd(h,6p)=\\gcd(k,6p)=1\\}$. We derive explicit closed-form expressions for $g(2n,p)$ in terms of the canonical remainder operator $δ_k(x)=x-k\\lfloor x/k\\rfloor$, elementary step functions, and the minimal solutions of the congruences $6x \\equiv -1 \\pmod{p}$ and $6x \\equiv -5 \\pmod{p}$. A key ingredient is an explicit formula for the minimal solution of $δ_k(a_0 x)=b_0$ obtained via the Euclidean algorithm, which determines the excluded residue classes directly. The resulting formulas show that…",
+  "domain": "math.GM",
+  "tags": [
+    "math.GM"
+  ],
+  "published": "2026-04-02",
+  "updated": "2026-04-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2606.17643",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.17643",
+  "title": "Robust Bayesian Portfolio Optimization with Discrepancy-based Posterior Ambiguity",
+  "authors": [
+    "Zongxia Liang",
+    "Yang Liu",
+    "Xingjian Ma"
+  ],
+  "summary": "We study a continuous-time robust Bayesian portfolio optimization problem under drift uncertainty of risky assets. The investor learns unknown asset drifts through Bayesian filtering while considering uncertainty around posterior estimates via discrepancy-based ambiguity sets, including Wasserstein and $L^p$ distances. To address the resulting time inconsistency, we introduce a feedback-type ambiguity framework that reformulates ambiguity conditionally on observable states. This leads to a modified Hamilton--Jacobi--Bellman--Isaacs (HJBI) equation characterizing the value function and the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

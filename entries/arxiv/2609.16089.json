@@ -1,0 +1,24 @@
+{
+  "key": "2609.16089",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.16089",
+  "title": "Structure-Preserving Quantum Circuit Architectures for Robot Kinematics",
+  "authors": [
+    "Andrea Morghen",
+    "Pierluigi Arpenti",
+    "Roberto Schiattarella",
+    "Giovanni Acampora",
+    "Bruno Siciliano"
+  ],
+  "summary": "Structured spatial data require quantum encodings that preserve geometric relations, expose measurable observables, and remain implementable on finite-depth hardware. This work introduces a quantum representation and circuit architecture for rigid-body transformations and specializes it to Denavit--Hartenberg kinematics of serial open-chain manipulators. Each translational contribution is factorized into a classical metric magnitude and a signed unit direction encoded by a single-qubit Bloch vector, while parameterized rotations reproduce the ordered propagation of frame directions. A…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "quant-ph"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

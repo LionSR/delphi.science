@@ -1,0 +1,21 @@
+{
+  "key": "2609.17501",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.17501",
+  "title": "A Case Study on Noise Resilient Operator Selection in Adaptive Variational Quantum Algorithms",
+  "authors": [
+    "Soorya Haravu",
+    "Mafalda Ramôa",
+    "Bharath Sambasivam"
+  ],
+  "summary": "Hardware noise has been shown to significantly impact the accuracy of ADAPT-VQE, a ground state preparation algorithm. While previous work has studied the impact of noise on its parameter optimization step, its impact on the critical operator selection step remains comparatively unexplored. In this work, we examine the impact of a variety of noise channels on this step, using a linear H$_3$ molecule as a test case. We show that, despite the selection criterion's natural resilience to some noise, both coherent and incoherent noise can prevent convergence for sufficiently high noise rates. We…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

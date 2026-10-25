@@ -1,0 +1,24 @@
+{
+  "key": "2603.10589",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.10589",
+  "title": "Punctually Standard and Nonstandard Models of Natural Numbers",
+  "authors": [
+    "Nikolay Bazhenov",
+    "Ivan Georgiev",
+    "Dariusz Kalociński",
+    "Stefan Vatev",
+    "Michał Wrocławski"
+  ],
+  "summary": "Abstract models of computation often treat the successor function $S$ on $\\mathbb{N}$ as a primitive operation, even though its low-level implementations correspond to non-trivial programs operating on specific numerical representations. This behaviour can be analyzed without referring to notations by replacing the standard interpretation $(\\mathbb{N}, S)$ with an isomorphic copy ${\\mathcal A} = (\\mathbb{N}, S^{\\mathcal A})$, in which $S^{\\mathcal A}$ is no longer computable by a single instruction. While the class of computable functions on $\\mathcal{A}$ is standard if $S^{\\mathcal{A}}$ is…",
+  "domain": "math.LO",
+  "tags": [
+    "math.LO",
+    "cs.CC"
+  ],
+  "published": "2026-03-11",
+  "updated": "2026-03-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

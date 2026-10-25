@@ -1,0 +1,24 @@
+{
+  "key": "2607.18225",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.18225",
+  "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+  "authors": [
+    "Masahiro Kato",
+    "Taka Kato"
+  ],
+  "summary": "We propose one-step and two-step methods for policy learning with retrieval-augmented generation (RAG). We formulate RAG-based action selection under the potential outcome framework. In the two-step method, vector search retrieves action-specific neighboring evidence in an embedding space, the generator estimates conditional expected outcomes or their contrasts, and a plug-in rule selects an action. This formulation connects action-specific vector search with nearest-neighbor matching in causal inference. We decompose the regret of the two-step method into candidate-generation regret and…",
+  "domain": "econ.EM",
+  "tags": [
+    "econ.EM",
+    "cs.LG",
+    "math.ST",
+    "stat.ME",
+    "stat.ML"
+  ],
+  "published": "2026-07-20",
+  "updated": "2026-07-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

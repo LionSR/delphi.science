@@ -1,0 +1,21 @@
+{
+  "key": "2604.04602",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.04602",
+  "title": "Stochastic Model Predictive Control with Online Risk Allocation and Feedback Gain Selection",
+  "authors": [
+    "Filipe Marques Barbosa",
+    "Johan Löfberg"
+  ],
+  "summary": "Stochastic Model Predictive Control addresses uncertainties by incorporating chance constraints that provide probabilistic guarantees of constraint satisfaction. However, simultaneously optimizing over the risk allocation and the feedback policies leads to intractable nonconvex problems. This is due to (i) products of functions involving the feedback law and risk allocation in the deterministic counterpart of the chance constraints, and (ii) the presence of the nonconvex Gaussian quantile (probit) function. Existing methods rely on two-stage optimization, which is nonconvex. To address this,…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-04-06",
+  "updated": "2026-04-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

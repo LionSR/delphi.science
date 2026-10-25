@@ -1,0 +1,27 @@
+{
+  "key": "2609.36702",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.36702",
+  "title": "Quantum Fidelity Landscape-Guided Prior Calibration for Single-Circuit QGAN Image Generation",
+  "authors": [
+    "Xue Yang",
+    "Rigui Zhou",
+    "Dax Enshan Koh",
+    "Siong Thye Goh",
+    "Yitao Tang",
+    "ShiZheng Jia",
+    "Young-Wook Cho",
+    "Hongyu Chen"
+  ],
+  "summary": "Quantum Generative Adversarial Networks (QGANs) have emerged as representative generative models in the Noisy Intermediate-Scale Quantum (NISQ) era and have attracted increasing attention in quantum machine learning. However, most existing QGAN methods rely on patch-based decomposition strategies, which weaken the global consistency of generated images and increase quantum resource overhead. In this work, we investigate a simpler approach: pixel-level, end-to-end image generation using a single-quantum-circuit QGAN. By analyzing the structural matching relationship between the quantum prior…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CV"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

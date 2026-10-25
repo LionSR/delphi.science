@@ -1,0 +1,25 @@
+{
+  "key": "2608.08616",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.08616",
+  "title": "A Counting and Sampling Lovász Local Lemma",
+  "authors": [
+    "Hongyang Liu",
+    "Chunyang Wang",
+    "Yitong Yin",
+    "Yiyao Zhang",
+    "Can Zhou"
+  ],
+  "summary": "We establish counting and sampling analogues of the Lovász Local Lemma: we give efficient algorithms for approximately counting and exactly sampling satisfying assignments of general constraint satisfaction problems (CSPs) in the local lemma regime $$4 \\mathrm{e} p (D+1)^2\\leq 1, $$ where $p$ is the maximum constraint violation probability and $D$ is the maximum dependency degree. This condition is tight up to constant factors under $\\mathbf{NP}\\neq\\mathbf{RP}$, matching known hardness bounds for counting and sampling in natural subclasses of CSPs. Our key ingredient is a novel $2$-tree…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.DM",
+    "math.PR"
+  ],
+  "published": "2026-08-09",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

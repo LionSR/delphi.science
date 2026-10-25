@@ -1,0 +1,21 @@
+{
+  "key": "2602.14405",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14405",
+  "title": "A convergent finite element method with minimal deformation rate for mean curvature flow",
+  "authors": [
+    "Tiantian Huang",
+    "Buyang Li",
+    "Rong Tang"
+  ],
+  "summary": "We propose and analyze a fully discrete parametric finite element method with minimal deformation rate (MDR) for simulating the mean curvature flow of general closed surfaces in three dimensions. The method is formulated from a coupled system that enforces the mean curvature flow law for the normal velocity while introducing an artificial tangential velocity that minimizes the deformation-rate energy, thereby preserving mesh quality without requiring remeshing or reparametrization. An $L^{2}$-projected averaged normal vector is used in the scheme to facilitate a rigorous convergence…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-02-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

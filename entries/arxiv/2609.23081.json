@@ -1,0 +1,20 @@
+{
+  "key": "2609.23081",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.23081",
+  "title": "Recovery Limits for Eigenvector Alignment in HDLSS Spiked Covariance Models",
+  "authors": [
+    "Hubeyb Gurdogan",
+    "Alex Shkolnik"
+  ],
+  "summary": "In a spiked covariance model, let $\\mathcal{H}$ and $\\mathcal{B}$ be selected sample and population eigenvector matrices. Their alignment matrix $Ξ=\\mathcal{H}^\\top\\mathcal{B}$ is a latent oracle diagnostic of direction-specific correspondence beyond subspace overlap. We study its uniform pathwise recovery in a nested high-dimensional, low-sample-size experiment with fixed sample size and growing dimension. At every fixed model, an observable spectral contrast consistently estimates the row Gram matrix $ΞΞ^\\top$. For two or more spikes, however, no measurable estimator sequence achieves…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-09-19",
+  "updated": "2026-09-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

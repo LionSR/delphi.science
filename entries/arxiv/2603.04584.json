@@ -1,0 +1,30 @@
+{
+  "key": "2603.04584",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.04584",
+  "title": "Fault-tolerant execution of error-corrected quantum algorithms",
+  "authors": [
+    "Michael A. Perlin",
+    "Zichang He",
+    "Anthony Alexiades Armenakas",
+    "Pablo Andres-Martinez",
+    "Tianyi Hao",
+    "Dylan Herman",
+    "Yuwei Jin",
+    "Karl Mayer",
+    "Chris Self",
+    "David Amaro",
+    "Ciaran Ryan-Anderson",
+    "Ruslan Shaydulin"
+  ],
+  "summary": "Scaling up quantum algorithms to tackle high-impact problems in science and industry requires quantum error correction and fault tolerance. While progress has been made in experimentally realizing error-corrected primitives, the end-to-end execution of logical quantum algorithms using only fault-tolerant (FT) components has remained out of reach. We demonstrate the FT and error-corrected execution of two quantum algorithms, the Quantum Approximate Optimization Algorithm (QAOA) and the Harrow-Hassidim-Lloyd (HHL) algorithm applied to the Poisson equation, on Quantinuum H2 and Helios…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-04",
+  "updated": "2026-03-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

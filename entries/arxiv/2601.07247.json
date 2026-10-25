@@ -1,0 +1,23 @@
+{
+  "key": "2601.07247",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.07247",
+  "title": "Multi-environment Invariance Learning with Missing Data",
+  "authors": [
+    "Yiran Jia",
+    "Jelena Bradic"
+  ],
+  "summary": "Learning models that can handle distribution shifts is a key challenge in domain generalization. Invariance learning, an approach that focuses on identifying features invariant across environments, improves model generalization by capturing stable relationships, which may represent causal effects when the data distribution is encoded within a structural equation model (SEM) and satisfies modularity conditions. This has led to a growing body of work that builds on invariance learning, leveraging the inherent heterogeneity across environments to develop methods that provide causal explanations…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-01-12",
+  "updated": "2026-05-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

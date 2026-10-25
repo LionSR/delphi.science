@@ -1,0 +1,24 @@
+{
+  "key": "2610.26843",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.26843",
+  "title": "Quantum algorithms for optimal control: large-scale finite-horizon linear-quadratic regulation",
+  "authors": [
+    "Xiajie Huang",
+    "Cristina Álvarez Yuste",
+    "Nikita Guseynov",
+    "Nana Liu",
+    "Javier González-Conde"
+  ],
+  "summary": "We develop quantum algorithms for optimal control over a prescribed finite time interval (finite horizon), focusing on continuous-time linear-quadratic regulation (LQR). This foundational control problem often requires solving a nonlinear matrix Riccati equation, which can be costly for large systems and long control durations on conventional classical solvers. We instead work directly with the state-costate optimality equations, reformulating the LQR problem as a multiple-shooting linear system. Importantly, we prove a condition-number bound for the system that is independent of the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.OC"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2609.18118",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.18118",
+  "title": "Preservation of Log-Concavity and Convergence of Wasserstein-Fisher-Rao Gradient Flows",
+  "authors": [
+    "Francesca Romana Crucinio",
+    "Sahani Pathiraja"
+  ],
+  "summary": "We study the convergence of Wasserstein-Fisher-Rao (WFR) gradient flows for sampling from probability distributions known up to a normalisation constant. By combining Wasserstein transport with Fisher-Rao birth-death dynamics, WFR flows balance exploration and selection. These flows have been recognised as a promising mechanism to accelerate convergence beyond Langevin dynamics. We show that for a class of strongly log-concave target distributions satisfying additional curvature conditions, WFR flows preserve strong log-concavity, in contrast to Wasserstein flows which enjoy this property…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

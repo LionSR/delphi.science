@@ -1,0 +1,22 @@
+{
+  "key": "2603.17856",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.17856",
+  "title": "Toward bootstrapping tensor-network contractions",
+  "authors": [
+    "Seishiro Ono",
+    "Yanbai Zhang",
+    "Hoi Chun Po"
+  ],
+  "summary": "Accurate contraction of tensor networks beyond one dimension is essential in various fields including quantum many-body physics. Existing approaches typically rely on approximate contraction schemes and do not provide certified error bars. We introduce a numerical bootstrap framework which casts the problem of tensor-network contractions into a convex optimization problem, thereby yielding certified lower and upper bounds on expectation values of physical observables. As a proof-of-principle, we construct such constraints explicitly for translationally invariant matrix product states and…",
+  "domain": "cond-mat.str-el",
+  "tags": [
+    "cond-mat.str-el",
+    "quant-ph"
+  ],
+  "published": "2026-03-18",
+  "updated": "2026-03-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

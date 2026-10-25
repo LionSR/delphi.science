@@ -1,0 +1,24 @@
+{
+  "key": "2608.23625",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.23625",
+  "title": "Separating Time-Varying Network Composition from Predictive Dependence under Noisy Network Measurement",
+  "authors": [
+    "Marios Papamichalis",
+    "Regina Ruane",
+    "Theofanis Papamichalis"
+  ],
+  "summary": "A common question about networked time series is whether outcomes changed because shocks transmit more strongly or because the pattern of connections changed. Standard practice inserts a recorded network into an outcome regression and reads movements of the fitted coefficient as changes in transmission strength. When the network is latent, time varying, and measured with error, this reading fails: changes in strength and changes in composition can produce the same outcome distribution at a single date, and the population coefficient moves under composition changes alone. The question becomes…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "stat.AP",
+    "stat.CO"
+  ],
+  "published": "2026-08-22",
+  "updated": "2026-08-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

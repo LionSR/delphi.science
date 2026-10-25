@@ -1,0 +1,25 @@
+{
+  "key": "2610.05869",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05869",
+  "title": "Finite-Sample Distribution Theory and Efficient Large-Scale Inference for Online Quantile Regression",
+  "authors": [
+    "Ziyang Wei",
+    "Jiaqi Li",
+    "Lan Wang",
+    "Wei Biao Wu"
+  ],
+  "summary": "This paper studies online quantile regression for large-scale and streaming data using Stochastic SubGradient Descent (SSGD) with constant learning rates. Classical offline inference for quantile regression is computationally and memory intensive. Existing works of online inference for quantile regression provide only asymptotic guarantees and typically require sub-exponential tail conditions for distribution theory. To bridge these gaps, we introduce new techniques to prove a quenched central limit theorem (CLT) and finite-sample Gaussian approximation for SSGD under a finite-moment…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

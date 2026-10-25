@@ -1,0 +1,21 @@
+{
+  "key": "2607.01449",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.01449",
+  "title": "Geometry-Aware R-Structured Kolmogorov-Arnold Networks",
+  "authors": [
+    "Sergei Kucherenko",
+    "Nilay Shah"
+  ],
+  "summary": "We propose a novel hybrid neural architecture, the Geometry-aware R-Structured Kolmogorov-Arnold Network (GRS-KAN), which integrates V.L.Rvachev's R-functions into the Kolmogorov-Arnold Network (KAN) framework. The proposed approach combines two complementary modeling mechanisms: smooth nonlinear structure is learned by KAN branches, while known geometric or logical constraints are encoded analytically using differentiable R-functions. This enables explicit representation of discontinuities, feasible regions, and implicit geometric boundaries within a trainable neural architecture. The…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2609.04524",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.04524",
+  "title": "DPRQ: A Dynamic Programming-based Qubit Routing Algorithm for Collective Communication in Distributed Quantum Computing",
+  "authors": [
+    "Dhaval Vaidya",
+    "Ruozhou Yu"
+  ],
+  "summary": "Distributed quantum computing (DQC) offers a promising approach to scale quantum computing by overcoming the resource limitations of a single quantum processor. However, inter-node communication remains a major bottleneck of DQC due to inefficient and error-prone entanglement distribution. Optimizing inter-node communication can not only reduce the amount of entanglement resource needed to execute a quantum circuit but also improve execution speed and accuracy of the results. This paper proposes DPRQ, a qubit routing algorithm for minimizing inter-node communication in distributed quantum…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DC"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

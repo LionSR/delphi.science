@@ -1,0 +1,21 @@
+{
+  "key": "2608.18837",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.18837",
+  "title": "Minimizing the Makespan Approximately on Two Identical Parallel Machines with a Loading--Unloading Server",
+  "authors": [
+    "Keramat Hasani",
+    "Frank Werner"
+  ],
+  "summary": "We study makespan minimisation on two identical parallel machines that share a single server for both loading and unloading. Each job must be loaded, processed without interruption on its assigned machine, and unloaded immediately after processing, with a common positive integer duration for all loading and unloading operations. We prove that the decision problem is NP-complete for every fixed server-operation duration and strongly NP-complete when this duration is part of the input. We then analyse ordinary list scheduling and the longest-processing-time rule in the non-unit setting. List…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.OC"
+  ],
+  "published": "2026-08-19",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2607.14150",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14150",
+  "title": "Tensor Network Methods for Advection-Diffusion-Reaction Systems Using Quantum-Inspired Representations",
+  "authors": [
+    "Nahid Binandeh Dehaghani",
+    "Rafal Wisniewski",
+    "A. Pedro Aguiar"
+  ],
+  "summary": "We present a quantum-inspired tensor-network framework for solving advection-diffusion-reaction (ADR) partial differential equations. Discretized solution fields are encoded as matrix product states (MPS), while differential operators are represented as matrix product operators (MPOs). Time integration is performed entirely in tensor-network form using explicit Euler updates with controlled truncation. The method is evaluated on one- and two-dimensional ADR problems and compared with high-accuracy Runge-Kutta reference solutions. Numerical results show that the proposed representation…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "quant-ph"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

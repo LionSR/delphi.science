@@ -1,0 +1,26 @@
+{
+  "key": "2610.00449",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00449v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00449v1",
+  "title": "A quantitative refinement of Lu's elementary prime number theorem",
+  "authors": [
+    "Rajat Bhattacharjee"
+  ],
+  "summary": "We refine Lu's elementary method for the prime number theorem to obtain, for every fixed $K>400$, \\[ \\psi(X)-X=O_K\\!\\left( X\\exp\\!\\left\\{-\\frac{\\sqrt{\\log X}}{(\\log\\log X)^K}\\right\\}\\right) \\qquad(X\\to\\infty), \\] where $\\psi$ is Chebyshev's function. The main ingredient is a comparison estimate that remains uniform as the degree grows and the short-interval parameter shrinks. Combining this estimate with exponential weights in Balog's identity, a single finite energy step and positivity-based interpolation yields the stated bound, retaining the full degree tail and all arithmetic correction…",
+  "domain": "math.NT",
+  "tags": [
+    "msc:11N05"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-21",
+  "version": 1,
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "none",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

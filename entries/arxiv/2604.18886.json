@@ -1,0 +1,22 @@
+{
+  "key": "2604.18886",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.18886",
+  "title": "Matrix-Free Multigrid with Algebraically Consistent Coarsening on Adaptive Octrees",
+  "authors": [
+    "Mengdi Wang",
+    "Yuchen Sun",
+    "Bo Zhu"
+  ],
+  "summary": "We present a matrix-free GPU multigrid preconditioner with algebraically consistent coarsening for solving Poisson equations on adaptive octree grids with irregular domains. Within uniform-resolution regions, the coarsening satisfies the Galerkin principle. At T-junctions between refinement levels, we propose a flux-consistent coarse-grid correction that restores cross-level consistency while preserving the compact matrix-free representation. The coarse operators are stored in a compact matrix-free form suitable for parallel execution on GPUs. Numerical experiments demonstrate second-order…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.GR"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-04-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

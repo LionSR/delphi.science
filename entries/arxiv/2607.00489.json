@@ -1,0 +1,22 @@
+{
+  "key": "2607.00489",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.00489",
+  "title": "A Nonstandard Finite Difference Scheme for a Nonlinear Parabolic Equation with p-Laplacian-Type Diffusion",
+  "authors": [
+    "Achraf Zinihi",
+    "Matthias Ehrhardt",
+    "Moulay Rchid Sidi Ammi"
+  ],
+  "summary": "We propose and analyze a nonstandard finite difference (NSFD) scheme for nonlinear parabolic equations involving a p-Laplacian-type diffusion operator in one- and two-dimensional spatial domains. Following Mickens' design principles, the proposed discretization employs a nonlinear denominator function phi(.) together with a nonlocal approximation of the nonlinear diffusion term Delta_p, yielding a structure-preserving discrete model. The scheme is designed to retain key qualitative properties of the continuous problem, including positivity, boundedness, and stability, which may be lost by…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

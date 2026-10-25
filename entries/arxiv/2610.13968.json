@@ -1,0 +1,21 @@
+{
+  "key": "2610.13968",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.13968",
+  "title": "Reference-State Bootstrap Correction and Kernel Characterization of Residual-Based Fit Indices in Structural Equation Models",
+  "authors": [
+    "Eunjeong Song",
+    "Sehee Hong"
+  ],
+  "summary": "Sampling error affects the finite-sample values of residual-based fit indices. We show that the unweighted comparative fit index ($CFI_u$) rests on a quadratic-kernel maximum mean discrepancy and that a Gaussian-kernel comparative fit index (KCFI) converges to $CFI_u$ as bandwidth increases. Because kernel discrepancies lack an analytic sampling correction, we extend expected-discrepancy bootstrap methods to a fitted-correlation reference state: the sample is transformed to reproduce the fitted correlation matrix, then resampled and refitted to estimate the exact-fit sampling component.…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

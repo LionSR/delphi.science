@@ -1,0 +1,20 @@
+{
+  "key": "2604.12922",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.12922",
+  "title": "Convergence analysis and proof of acceleration for NGMRES applied to the Picard iteration for Navier-Stokes equations",
+  "authors": [
+    "Yunhui He",
+    "Leo G Rebholz"
+  ],
+  "summary": "We consider nonlinear GMRES (NGMRES) as an acceleration technique for the Navier-Stokes Picard iteration, a direction that has not previously been explored. We identify the optimal norm for the least squares optimization problem arising in the NGMRES algorithm, and establish a convergence analysis for NGMRES with general depth that proves NGMRES scales the Picard Lipschitz constant by the gain of the optimization problem. To our knowledge, this is the first convergence proof for NGMRES that identifies the mechanism responsible for convergence acceleration. Numerical experiments demonstrate…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-14",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

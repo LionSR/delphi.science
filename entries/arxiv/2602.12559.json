@@ -1,0 +1,22 @@
+{
+  "key": "2602.12559",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.12559",
+  "title": "Convergence Analysis of Block Newton Methods for 1D Shallow Neural Network Approximation",
+  "authors": [
+    "Zhiqiang Cai",
+    "Anastassia Doktorova",
+    "Robert D. Falgout",
+    "César Herrera"
+  ],
+  "summary": "This paper analyzes local convergence of the block Newton (BN) method introduced in [5, 6] for one-dimensional shallow neural network approximation to functions and diffusion-reaction problems. The BN method consists of the 2x2 block nonlinear Gauss-Seidel, linear Gauss-Seidel, or Jacobi method for outer iteration and the Newton method for inner iteration. The blocks are corresponding to the linear and the nonlinear parameters. Under some reasonable assumptions, we establish local convergence of the BN methods as well as the reduced BN (rBN) method for one-dimensional diffusion-reaction…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-13",
+  "updated": "2026-03-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

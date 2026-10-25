@@ -1,0 +1,20 @@
+{
+  "key": "2602.22692",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.22692",
+  "title": "Ideal random quantum circuits pass the LXEB test",
+  "authors": [
+    "Nicholas Hunter-Jones",
+    "Jonas Haferkamp"
+  ],
+  "summary": "We show that noiseless random quantum circuits pass the linear cross-entropy benchmark (LXEB) test with high probability. If the circuits are linear depth, and thus form unitary 4-designs, the LXEB test is passed with probability $1-O(1/\\sqrt{k})$, where $k$ is the number of independently drawn samples from the output distribution of the random circuit. If the circuits are of depth $\\tilde O(n^2)$, and thus form unitary $n$-designs, the LXEB test is passed with probability $1-O(e^{-k \\log(n)/n})$. In proving our results, we show strong concentration of the random circuit collision…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-26",
+  "updated": "2026-02-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

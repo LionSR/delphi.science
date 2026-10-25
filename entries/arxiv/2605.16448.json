@@ -1,0 +1,22 @@
+{
+  "key": "2605.16448",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.16448",
+  "title": "On the Expected Maximum Deficit and the Optimal Allocation of Reserves",
+  "authors": [
+    "Claude Lefevre",
+    "Pierre Zuyderhoff"
+  ],
+  "summary": "Let $L=(L_s)_{0\\le s\\le t}$ be a cumulative net-loss process and let $M_t=\\sup_{0\\le s\\le t}L_s$. For a candidate reserve $u$ and a distortion function $g$, define $D_g^{(t)}(u)=\\int_u^\\infty g(P(M_t>v))d v$. This function measures the tail-weighted residual severity of the largest cumulative loss over the horizon. We derive three monetary risk measures: its value at zero reserve and two measures based on fixed and proportional deficit tolerances. Under a concave distortion, the zero-reserve and proportional-tolerance measures are coherent, while the fixed-tolerance measure is convex. Given…",
+  "domain": "q-fin.RM",
+  "tags": [
+    "q-fin.RM",
+    "math.PR",
+    "q-fin.PM"
+  ],
+  "published": "2026-05-15",
+  "updated": "2026-08-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

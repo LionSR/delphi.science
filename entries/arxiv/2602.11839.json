@@ -1,0 +1,19 @@
+{
+  "key": "2602.11839",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.11839",
+  "title": "Single-shot GHZ characterization with connectivity-aware fanout constructions",
+  "authors": [
+    "Giancarlo Gatti"
+  ],
+  "summary": "We propose a practical recipe to transform any depth-$L$ block of CNOTs that prepares $n$-qubit GHZ states into an $n$-qubit fanout gate (multitarget-CNOT) of depth $2L-1$, without the need for ancilla qubits. Considering known logarithmic-depth circuits to prepare GHZ-states, this allows us to construct an $n$-qubit fanout gate with depth $2\\log_2(n)-1$, reproducing previous ancillaless constructions. We employ our recipe to construct $n$-qubit fanout gates under heavy-hex connectivity restrictions, obtaining a depth of $O(n^{1/2})$, again reproducing previous complexity theory…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-12",
+  "updated": "2026-02-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

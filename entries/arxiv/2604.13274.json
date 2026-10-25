@@ -1,0 +1,22 @@
+{
+  "key": "2604.13274",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.13274",
+  "title": "Sequential Change Detection for Multiple Data Streams with Differential Privacy",
+  "authors": [
+    "Lixing Zhang",
+    "Liyan Xie",
+    "Ruizhi Zhang"
+  ],
+  "summary": "Sequential change-point detection seeks to rapidly identify distributional changes in streaming data while controlling false alarms. Existing multi-stream detection methods typically rely on non-private access to raw observations or intermediate statistics, limiting their usage in privacy-sensitive settings. We study sequential change-point detection for multiple data streams under differential privacy constraints. We consider multiple independent streams undergoing a synchronized change at an unknown time and in an unknown subset of streams, and propose DP-SUM-CUSUM, a differentially…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.CR"
+  ],
+  "published": "2026-04-14",
+  "updated": "2026-04-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

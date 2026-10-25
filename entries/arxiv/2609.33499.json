@@ -1,0 +1,23 @@
+{
+  "key": "2609.33499",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.33499",
+  "title": "The cost of useful natural gradient updates",
+  "authors": [
+    "Subhransu S. Bhattacharjee",
+    "Dylan Campbell",
+    "Rahul Shome"
+  ],
+  "summary": "What information is needed to turn a natural-gradient direction into a useful finite update? Under a population Kullback-Leibler (KL) budget, we call a step useful if it is feasible and loses at most a fraction $\\varepsilon$ of the best feasible gain along the direction. We construct a four-state exponential family whose laws share their initial gradient, scalar Fisher information and natural gradient, yet two laws have disjoint useful-step sets. With these quantities supplied exactly and the law otherwise known only through draws, the family's worst-case sample complexity is…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.IT",
+    "math.OC"
+  ],
+  "published": "2026-09-27",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

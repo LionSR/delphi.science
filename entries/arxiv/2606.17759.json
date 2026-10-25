@@ -1,0 +1,19 @@
+{
+  "key": "2606.17759",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.17759",
+  "title": "Time integration as filtering: a space-time discretization-aware LES formulation",
+  "authors": [
+    "Syver Døving Agdestein"
+  ],
+  "summary": "Discretization-aware LES yields an exact expression for the discrete target flux in finite-volume LES by recognizing that a coarse finite difference is a top-hat-filtered exact derivative (the \"filter-swap\" property). That argument is purely spatial; here we observe that the forward-Euler time difference is itself a (one-sided) top-hat-filtered exact time derivative, and repeat the construction in space-time. The resulting exact discrete flux decomposition extends the spatial one with a single temporal term: a flux-quadrature error that shrinks with the quadrature order of the time…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

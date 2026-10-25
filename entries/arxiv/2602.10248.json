@@ -1,0 +1,20 @@
+{
+  "key": "2602.10248",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.10248",
+  "title": "Low-rank approximation of Rippa method for RBF interpolation",
+  "authors": [
+    "Jiawen Lyu",
+    "Maria Han Veiga"
+  ],
+  "summary": "We study the problem of selecting the shape parameter in Radial Basis function (RBF) interpolation using leave-one-out-cross-validation (LOOCV). Since the classical LOOCV formula requires repeated solves with a dense $N \\times N$ kernel matrix, we combine a Nyström approximation with the Woodbury identity to obtain an efficient surrogate objective that avoids large matrix inversions. Based on this reduced form, we compare a grid-based search with a gradient descent strategy and examine their behavior across different dimensions. Numerical experiments are performed in 1D, 2D, and 3D using the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-10",
+  "updated": "2026-02-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

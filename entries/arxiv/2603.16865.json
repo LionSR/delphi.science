@@ -1,0 +1,23 @@
+{
+  "key": "2603.16865",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.16865",
+  "title": "Prescribed-Time Distributed Generalized Nash Equilibrium Seeking",
+  "authors": [
+    "Liraz Mudrik",
+    "Isaac Kaminer",
+    "Sean Kragelund",
+    "Abram H. Clark"
+  ],
+  "summary": "Safety-critical multi-agent systems, from cooperative guidance to collision avoidance, must often reach a coordinated decision by a hard deadline rather than merely converge to one eventually. This paper proposes the first fully distributed algorithm that solves the generalized Nash equilibrium (GNE) problem, a non-cooperative game with shared coupling constraints and general cost coupling, at a user-prescribed time $T$ independent of initial conditions. The foundation is a centralized, prescribed-time result built on the optimization Lyapunov function framework and implemented via…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-03-17",
+  "updated": "2026-06-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

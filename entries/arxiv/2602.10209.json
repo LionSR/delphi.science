@@ -1,0 +1,22 @@
+{
+  "key": "2602.10209",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.10209",
+  "title": "Neural Network Quantum Field Theory from Transformer Architectures",
+  "authors": [
+    "Dmitry S. Ageev",
+    "Yulia A. Ageeva"
+  ],
+  "summary": "We propose a neural-network construction of Euclidean scalar quantum field theories from transformer attention heads, defining $n$-point correlators by averaging over random network parameters in the NN-QFT framework. For a single attention head, shared random softmax weights couple different width coordinates and induce non-Gaussian field statistics that persist in the infinite-width limit $d_k\\to\\infty$. We compute the two-point function in an attention-weight representation and show how Euclidean-invariant kernels can be engineered via random-feature token embeddings. We then analyze the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cond-mat.dis-nn",
+    "hep-th"
+  ],
+  "published": "2026-02-10",
+  "updated": "2026-02-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

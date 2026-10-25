@@ -1,0 +1,22 @@
+{
+  "key": "2606.07322",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.07322",
+  "title": "Quantum Divide-and-Conquer for the Traveling Salesman Problem: Surpassing the $2^n$ Barrier",
+  "authors": [
+    "Xujun Bai",
+    "Yun Shang",
+    "Honghong Lin"
+  ],
+  "summary": "The traveling salesman problem (TSP) is a classic NP-hard problem. Held--Karp dynamic programming~\\cite{held1962dynamic, bellman1962dynamic} solves it exactly in $O(n^2 2^n)$ time, a barrier that has stood for over six decades. Whether quantum computing can surpass $O^*(2^n)$ is a central open question. The authors of~\\cite{ambainis2019quantum}\\ (SODA~2019) claimed a query complexity of $O^*(1.727^n)$, but we identify a structural counting error: when corrected, their scheme requires $Ω^*(2^n)$ queries and offers no advantage over classical Held--Karp. We design a quantum divide-and-conquer…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-06-05",
+  "updated": "2026-07-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2608.06660",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.06660",
+  "title": "CT-PIKAN: Coordinate-Transformed Physics-Informed Kolmogorov-Arnold Network with Autograd-Based Metric Evaluation for Solving PDEs in Curvilinear Domains",
+  "authors": [
+    "Mohammad E. Heravifard",
+    "Kazem Hejranfar"
+  ],
+  "summary": "Physics-Informed Kolmogorov-Arnold Networks have recently emerged as an effective class of neural solvers for partial differential equations, combining the expressive power of spline-based Kolmogorov-Arnold representations with physics-informed learning. However, existing PIKAN formulations are primarily developed for Cartesian domains and cannot naturally accommodate the geometric complexity introduced by curvilinear domains. In this work, we propose Coordinate-Transformed Physics-Informed Kolmogorov-Arnold Networks (CT-PIKAN), a geometry-aware framework for solving PDEs on arbitrarily…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

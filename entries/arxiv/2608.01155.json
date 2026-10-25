@@ -1,0 +1,22 @@
+{
+  "key": "2608.01155",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.01155",
+  "title": "Stable and Efficient One-Way Modelling of Convective Disturbances in Laminar Boundary Layers: OWNS-Summation",
+  "authors": [
+    "Elliot J. Badcock",
+    "Shahid Mughal"
+  ],
+  "summary": "One-way spatial marching methods separate upstream- from downstream-propagating disturbances using a rational approximation of a spectral projector. Among existing one-way Navier--Stokes (OWNS) formulations, the recursive variant, OWNS-R, is the most economical, evaluating the approximation as a product of $N$ resolvent factors. This product amplifies rounding errors multiplicatively, imposing a flow-dependent upper limit on the approximation order that cannot be known in advance. We reformulate the same approximation as an additive partial-fraction sum (OWNS-Summation, OWNS-S). In exact…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math-ph",
+    "math.OC"
+  ],
+  "published": "2026-08-02",
+  "updated": "2026-08-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

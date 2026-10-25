@@ -1,0 +1,21 @@
+{
+  "key": "2603.09368",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.09368",
+  "title": "Verified delegated quantum computation requires techniques beyond cut-and-choose",
+  "authors": [
+    "Fabian Wiesner",
+    "Anna Pappa"
+  ],
+  "summary": "Delegated quantum computation enables a client with limited quantum capabilities to outsource computations to a more powerful quantum server while preserving correctness and privacy. Verification is crucial in this setting to ensure that the untrusted quantum server performs the computation honestly and returns correct results. A common verification method is the quantum cut-and-choose technique. Inspired by classical verification methods for two-party computation, the client uses the majority of the delegated rounds to test the server's honesty, while keeping the remaining ones for the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-03-10",
+  "updated": "2026-03-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

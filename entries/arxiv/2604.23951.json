@@ -1,0 +1,20 @@
+{
+  "key": "2604.23951",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23951",
+  "title": "Presolving for GPU-Accelerated First-Order LP Solvers",
+  "authors": [
+    "Daniel Cederberg",
+    "Stephen Boyd"
+  ],
+  "summary": "Recent research has focused on developing GPU-accelerated first-order solvers for linear programming (LP). This line of work, however, has largely overlooked the role of presolving, and thus prior results do not fully reflect the speedups achievable through GPU acceleration in a realistic end-to-end solver pipeline. At the same time, LP presolving has traditionally been developed for CPU-based solvers, where presolve time rarely dominates the total runtime and the emphasis has been on maximizing the reduction in problem size, even at the expense of costly presolve rules. Given the high…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-04-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

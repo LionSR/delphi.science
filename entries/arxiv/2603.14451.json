@@ -1,0 +1,22 @@
+{
+  "key": "2603.14451",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.14451",
+  "title": "How to find expressible and trainable parameterized quantum circuits?",
+  "authors": [
+    "Peter Röseler",
+    "Dennis Willsch",
+    "Kristel Michielsen"
+  ],
+  "summary": "Whether parameterized quantum circuits (PQCs) can be systematically constructed to be both trainable and expressive remains an open question. Highly expressive PQCs often exhibit barren plateaus, while several trainable alternatives admit efficient classical simulation. We address this question by deriving a finite-sample, dimension-independent concentration bound for estimating the variance of a PQC cost function, yielding explicit trainability guarantees. Across commonly used ansätze, we observe an anticorrelation between trainability and expressibility, consistent with theoretical…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-03-15",
+  "updated": "2026-03-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

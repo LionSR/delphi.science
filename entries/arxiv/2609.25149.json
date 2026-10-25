@@ -1,0 +1,21 @@
+{
+  "key": "2609.25149",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.25149",
+  "title": "Dual-GNN Multilevel Coarsening for Maximum Independent Set",
+  "authors": [
+    "Tianfeng Chen",
+    "Xianyue Li"
+  ],
+  "summary": "The maximum independent set (MIS) problem is a fundamental NP-hard combinatorial optimization problem with applications in scheduling, resource allocation, and network analysis. Exact solvers can provide high-quality solutions or optimality certificates, but their computational cost grows rapidly with graph size, while hand-crafted heuristics improve scalability at the expense of guarantees. Learning-based methods offer an alternative by exploiting structural patterns across graph instances, yet directly predicting independent sets can make global coordination difficult on large graphs. We…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.CO"
+  ],
+  "published": "2026-09-21",
+  "updated": "2026-09-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

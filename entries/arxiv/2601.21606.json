@@ -1,0 +1,22 @@
+{
+  "key": "2601.21606",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.21606",
+  "title": "A data-based image representation for continuous-time LTI systems",
+  "authors": [
+    "Amine Othmane",
+    "Philipp Schmitz",
+    "Karl Worthmann",
+    "Kathrin Flaßkamp"
+  ],
+  "summary": "We derive a numerically stable method to compute an image representation of an unknown linear system only from data, leveraging a continuous-time version of Willems et al.'s fundamental lemma. To this end, we use derivatives approximated by algebraic differentiators. Our novel image representation avoids solving differential-algebraic equations and significantly reduces computational complexity by eliminating redundant degrees of freedom corresponding to the number of unknown quantities to be identified. Simulation results confirm the effectiveness of the proposed approach, even in the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-04-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

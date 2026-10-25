@@ -1,0 +1,21 @@
+{
+  "key": "2610.17046",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.17046",
+  "title": "Discrete total variation under the multinomial, Part 2: variance under the uniform null",
+  "authors": [
+    "Nikola Banić",
+    "Neven Elezović"
+  ],
+  "summary": "For the counts $(X_1,\\dots,X_n)\\sim\\mathrm{Mult}(N;1/n,\\dots,1/n)$ of $N$ observations in $n$ ordered bins we study the variance of the discrete total variation $d=\\sum_{i=1}^{n-1}|X_{i+1}-X_i|$. An exact decomposition splits $\\mathrm{Var}(d)$ into per-edge, adjacent-pair and disjoint-pair terms and yields, for fixed $n$ as $N\\to\\infty$, $\\mathrm{Var}(d)/N=α(n)-β(n)/N+γ(n)/N^2+o(N^{-2})$. For every $n\\ge 2$, $Nα(n)$ is the classical normal-theory variance (Hoel, Kamat) of the sum of absolute successive differences of $n$ independent $N(0,N/n)$ variables; the correction $β(n)$ is obtained in…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.ST"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

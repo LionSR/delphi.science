@@ -1,0 +1,22 @@
+{
+  "key": "2610.23270",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.23270",
+  "title": "A Generalized Half-Singleton Bound for List Decoding of Insertion/Deletion Errors",
+  "authors": [
+    "Neehar Verma",
+    "Camilla Hollanti",
+    "Razane Tajeddine"
+  ],
+  "summary": "We derive an upper bound on the rate of a linear code capable of list decoding from insertion and deletion errors. Subsequently, we show that a linear code can list decode from at most $n - \\frac{L}{L+1}k + 1$ insdel errors with fixed list size $L$, and that this bound is strict when the code does not contain the all-ones vector. We also provide a simple construction of codes achieving the optimal rate for any given list size capable of correcting a single insdel error. All the results hold for linear codes over finite fields of size $q \\geq 3$.",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "math.CO"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

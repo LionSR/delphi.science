@@ -1,0 +1,26 @@
+{
+  "key": "2603.04255",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.04255",
+  "title": "Learning Read-Once Determinants and the Principal Minor Assignment Problem",
+  "authors": [
+    "Abhiram Aravind",
+    "Abhranil Chatterjee",
+    "Sumanta Ghosh",
+    "Rohit Gurjar",
+    "Roshan Raj",
+    "Chandan Saha"
+  ],
+  "summary": "A symbolic determinant under rank-one restriction computes a polynomial of the form $\\det(A_0+A_1y_1+\\ldots+A_ny_n)$, where $A_0,A_1,\\ldots,A_n$ are square matrices over a field $\\mathbb{F}$ and $rank(A_i)=1$ for each $i\\in[n]$. This class of polynomials has been studied extensively, since the work of Edmonds (1967), in the context of linear matroids, matching, matrix completion and polynomial identity testing. We study the following learning problem for this class: Given black-box access to an $n$-variate polynomial $f=\\det(A_0+A_1y_1+ \\ldots+A_ny_n)$, where $A_0,A_1,\\ldots,A_n$ are unknown…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "math.AC",
+    "math.CO"
+  ],
+  "published": "2026-03-04",
+  "updated": "2026-03-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

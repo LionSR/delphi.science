@@ -1,0 +1,22 @@
+{
+  "key": "2602.05058",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05058",
+  "title": "Learning fermionic linear optics with Heisenberg scaling and physical operations",
+  "authors": [
+    "Aria Christensen",
+    "Andrew Zhao"
+  ],
+  "summary": "We revisit the problem of learning fermionic linear optics (FLO), also known as fermionic Gaussian unitaries. Given black-box query access to an unknown FLO, previous proposals required $\\widetilde{\\mathcal{O}}(n^5 / \\varepsilon^2)$ queries, where $n$ is the system size and $\\varepsilon$ is the error in diamond distance. These algorithms also use unphysical operations (i.e., violating fermionic superselection rules) and/or $n$ auxiliary modes to prepare Choi states of the FLO. In this work, we establish efficient and experimentally friendly protocols that obey superselection, use minimal…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS",
+    "cs.LG"
+  ],
+  "published": "2026-02-04",
+  "updated": "2026-02-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

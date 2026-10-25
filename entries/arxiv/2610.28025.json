@@ -1,0 +1,22 @@
+{
+  "key": "2610.28025",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.28025",
+  "title": "Optimal aggregation in multiclass classification",
+  "authors": [
+    "Felix Abramovich",
+    "Or Davidovitch-Servadio"
+  ],
+  "summary": "This paper studies the problem of aggregation in multiclass classification, generalizing existing results for binary classification. Given a finite dictionary of score functions F={f_1,...,f_M} and a training sample, the goal is to construct a data-driven aggregate whose risk is as close as possible to that of the best aggregate (oracle) in a prescribed subset of span(F) with respect to a given loss. In particular, we investigate model selection and convex aggregation under the 0/1 and multinomial logistic losses. For the 0/1 loss, we show that the optimal aggregation rates remarkably do not…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME",
+    "stat.ML"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2610.02216",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02216",
+  "title": "Exact diameter compression for four-point sumset cardinalities",
+  "authors": [
+    "Enkai Zhang"
+  ],
+  "summary": "The least interval diameter needed to realize every attainable cardinality of an $h$-fold sumset of a four-element integer set is $\\binom{h+2}{2}+(h\\bmod2)$ for $2\\le h\\le10$ and $d_h=(h-3)(h-1)$ for $h\\ge11$. We prove the formula uniformly for $h\\ge17$ and use complete finite searches, with a relation-rank coverage argument, for the remaining orders. For the lower bound, we show that every integer four-set with $\\binom{h+3}{3}-17$ distinct $h$-fold sums has normalized diameter in $\\{d_h,d_h+1,d_h+2\\}$ when $h\\ge9$, and we construct sets attaining $d_h$. For the upper bound, a…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.NT"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

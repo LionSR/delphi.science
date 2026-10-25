@@ -1,0 +1,23 @@
+{
+  "key": "2605.09097",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09097",
+  "title": "An Overlapping Schwarz Space-Time Refinement Framework for Material Point Method",
+  "authors": [
+    "Zhaofeng Luo",
+    "Minchen Li",
+    "Yupeng Jiang"
+  ],
+  "summary": "We propose an overlapping Schwarz space-time refinement framework for the material point method (OS-MPM) to improve computational efficiency in problems with strongly localized deformation, contact, and large geometric nonlinearity. The method decomposes the domain into overlapping coarse and fine subdomains with heterogeneous spatial and temporal resolutions, while retaining standard MPM discretizations within each subdomain. Coarse-fine coupling is achieved through an MPM-specific Schwarz iteration combining mass-weighted spatial transmission and temporal interpolation for sub-cycling. In…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-05-09",
+  "updated": "2026-05-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

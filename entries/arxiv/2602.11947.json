@@ -1,0 +1,22 @@
+{
+  "key": "2602.11947",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.11947",
+  "title": "Change-Point Detection via Piecewise Linear Fitting Using MIP",
+  "authors": [
+    "Apoorva Narula",
+    "Santanu S. Dey",
+    "Yao Xie"
+  ],
+  "summary": "We present a new mixed-integer programming (MIP) approach for offline multiple change-point detection by casting the problem as a globally optimal piecewise linear (PWL) fitting problem. Our main contribution is a family of strengthened MIP formulations whose linear programming (LP) relaxations admit integral projections onto the segment-assignment variables, which encode the segment membership of each data point. This property yields provably tighter relaxations than existing formulations for offline multiple change-point detection. We further extend the framework to multi-dimensional PWL…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-02-12",
+  "updated": "2026-08-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2603.29283",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.29283",
+  "title": "Receding-Horizon Policy Gradient for Polytopic Controller Synthesis",
+  "authors": [
+    "Shiva Shakeri",
+    "Péter Baranyi",
+    "Mehran Mesbahi"
+  ],
+  "summary": "We propose the Polytopic Receding-Horizon Policy Gradient (P-RHPG) algorithm for synthesizing Parallel Distributed Compensation (PDC) controllers via Tensor Product (TP) model transformation. Standard LMI-based PDC synthesis grows increasingly conservative as model fidelity improves; P-RHPG instead solves a finite-horizon integrated cost via backward-stage decomposition. The key result is that each stage subproblem is a strongly convex quadratic in the vertex gains, a consequence of the linear independence of the HOSVD weighting functions, guaranteeing a unique global minimizer and linear…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-03-31",
+  "updated": "2026-03-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2610.06807",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06807",
+  "title": "Polynomial-time classical algorithms for mean-field models up to the glass transition",
+  "authors": [
+    "Alexander Schmidhuber",
+    "Alexander Zlokapa"
+  ],
+  "summary": "The Sachdev-Ye-Kitaev model is a strongly interacting fermionic system that has been well-studied in condensed matter and high energy physics. It is highly quantum: Gaussian states are far from the thermal state (Hastings and O'Donnell, STOC'22) and representing the thermal state requires large polynomial-size quantum circuits (Anschuetz et al., QIP'25). Very recently, it was nonetheless proven that classical algorithms can estimate local thermal expectations at sufficiently high temperature in quasipolynomial time (Zlokapa, FOCS'26). We show that classical algorithms can in fact estimate…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.dis-nn",
+    "cs.DS",
+    "math-ph"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

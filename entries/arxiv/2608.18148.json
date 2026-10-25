@@ -1,0 +1,22 @@
+{
+  "key": "2608.18148",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.18148",
+  "title": "Flux-form spatiotemporal neural operators for coarse-grained dynamics of multiscale PDEs",
+  "authors": [
+    "Junfeng Chen"
+  ],
+  "summary": "We study data-driven prediction of coarse-grained dynamics in multiscale PDE systems. Adopting a closure-free operator-learning viewpoint, we apply a linear coarse-graining map and learn a surrogate evolution operator for the resolved field directly from filtered high-fidelity trajectories. Motivated by the Mori-Zwanzig formalism, we propose a spatiotemporal neural operator mapping a resolved history slab on $Ω\\times[-T_{\\mathrm{in}},0]$ to a resolved future slab on $Ω\\times[0,T_{\\mathrm{out}}]$. Spatial mixing uses Fourier convolution, while temporal mixing uses a causal kernel operator…",
+  "domain": "nlin.CD",
+  "tags": [
+    "nlin.CD",
+    "cs.LG",
+    "math.AP",
+    "physics.comp-ph"
+  ],
+  "published": "2026-08-11",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

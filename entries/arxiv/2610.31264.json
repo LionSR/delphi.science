@@ -1,0 +1,21 @@
+{
+  "key": "2610.31264",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.31264",
+  "title": "Deep ReLU Networks Can Fail the Best Approximation Property for Continuous Target Functions",
+  "authors": [
+    "Sebastian Kassing"
+  ],
+  "summary": "We construct a continuous function on $[-1,1]^2$ for which the infimum of the $L^2$-approximation error over the class of ReLU networks with two hidden layers and architecture $(2,2,1,1)$ is not attained. This counterexample shows that deep ReLU networks do not satisfy the best approximation property in general, even for continuous target functions. Our findings contrast with existing results for shallow neural networks, where ReLU is one of the few activation functions that guarantee the existence of global minima in typical regression tasks. The proof is based on the fact that the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

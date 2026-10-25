@@ -1,0 +1,24 @@
+{
+  "key": "2605.21795",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.21795",
+  "title": "IRIS: A Compiler for Distributed Quantum Systems",
+  "authors": [
+    "Won Joon Yun",
+    "Dhilan Nag",
+    "Sneha Ballabh",
+    "Jiapeng Zhao",
+    "Eneet Kaur",
+    "Poulami Das"
+  ],
+  "summary": "Distributed Quantum Computers (DQCs) enable large system sizes by connecting smaller chips via photonic interconnects. DQCs use teleportation to relocate qubits and execute CNOTs between qubits on different chips. But, non-local CNOTs are 4.3-7.7$\\times$ slower and 4$\\times$ more error-prone than local CNOTs within a chip, which degrades program fidelities. Compilers group CNOTs with overlapping qubits into blocks and collectively optimize teleportations for each block. However, block-level scheduling suffers from two key drawbacks. First, they lack lookahead ability between blocks because…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-20",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

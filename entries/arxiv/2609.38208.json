@@ -1,0 +1,23 @@
+{
+  "key": "2609.38208",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38208",
+  "title": "CraftSPH: A high-accuracy and composable differentiable SPH solver implemented in PyTorch",
+  "authors": [
+    "Gen Matono",
+    "Shujiro Fujioka",
+    "Mayuko Nishio"
+  ],
+  "summary": "Smoothed Particle Hydrodynamics (SPH) is well suited to a range of problems, particularly those involving large deformations in fluid dynamics. In recent years, in addition to the advancement of SPH formulations, the development of differentiable solvers has also progressed. However, unified frameworks that flexibly accommodate diverse numerical schemes, including advanced and implicit methods, while supporting continuous extension and updating remain limited. In this study, a high-accuracy and composable differentiable SPH solver, CraftSPH, has been developed. In CraftSPH, major…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

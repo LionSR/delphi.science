@@ -1,0 +1,21 @@
+{
+  "key": "2606.21354",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.21354",
+  "title": "Restart and Adaptive Acceleration in Stochastic Gradient Methods",
+  "authors": [
+    "Ali Elhishi",
+    "Chistophe Roux",
+    "Alexandre d'Aspremont"
+  ],
+  "summary": "We study restart schemes in stochastic optimization problems for non-smooth and weakly convex functions that satisfy a Kurdyka-Łojasiewicz (KŁ) inequality. Using restarts allows us to leverage KŁ inequalities to achieve optimal convergence rates, with acceleration depending explicitly on the KŁ exponent. Furthermore, for stochastic gradient descent (SGD), optimal restart schedules correspond to piecewise constant (step decay) step sizes. While regularity constants such as the KŁ exponent are typically unknown in practice, we prove that restart schemes are robust to significant…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-19",
+  "updated": "2026-09-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

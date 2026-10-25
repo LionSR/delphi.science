@@ -1,0 +1,22 @@
+{
+  "key": "2607.13701",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.13701",
+  "title": "Lifting-Free Quadratic Sum-Of-Squares Programming",
+  "authors": [
+    "Gabriel F. Machado",
+    "Ross Drummond",
+    "Morgan Jones"
+  ],
+  "summary": "Quadratic Sum-Of-Squares (QSOS) optimization problems appear in system identification and machine learning, but standard Schur-complement and second-order cone liftings enlarge conic dimensions and create computational bottlenecks for interior-point methods. This paper introduces a lifting-free regularization that preserves the original conic structure by adding a norm penalty to SOS variables, yielding closed-form primal updates and an unconstrained, concave dual with Lipschitz-continuous gradient. Accelerated first-order methods efficiently maximize this dual, and convergence analysis…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

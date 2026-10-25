@@ -1,0 +1,25 @@
+{
+  "key": "2607.15208",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.15208",
+  "title": "Delocalization of bias in unadjusted Hamiltonian Monte Carlo and underdamped Langevin",
+  "authors": [
+    "Yifan Chen",
+    "Xiaoou Cheng",
+    "Jonathan Niles-Weed",
+    "Jonathan Weare"
+  ],
+  "summary": "Unadjusted samplers such as unadjusted Hamiltonian Monte Carlo and underdamped Langevin are well-known to be biased. Metropolis--Hastings adjustment has been conventionally incorporated into Hamiltonian Monte Carlo to eliminate the bias. However, this adjustment can significantly increase the iteration complexity due to the small step size required for reasonable Metropolis acceptance rates. In this work, we extend the \\emph{delocalization of bias} phenomenon, previously established for the overdamped Langevin algorithm, to these two unadjusted algorithms. We show that to control the $W_2$…",
+  "domain": "stat.CO",
+  "tags": [
+    "stat.CO",
+    "cs.LG",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

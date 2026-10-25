@@ -1,0 +1,21 @@
+{
+  "key": "2607.08928",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08928",
+  "title": "A Novel Parallel QCNN Architecture with Efficient Classical Simulability",
+  "authors": [
+    "Lawrence Nguyen",
+    "Hiu Yung Wong"
+  ],
+  "summary": "This work presents a study of an implementation of a novel Quantum Convolutional Neural Network (QCNN) for binary classification of images from the Modified National Institute of Standards and Technology (MNIST) dataset. Using a novel architecture inspired by previous QCNN and classical convolutional neural network (CNN) implementations, we use a hierarchical partitioning approach to implement a QCNN circuit that can be approximated and simulated efficiently on a classical machine for a large problem. First, the original image is partitioned such that each process handles a smaller portion…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI"
+  ],
+  "published": "2026-07-09",
+  "updated": "2026-07-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

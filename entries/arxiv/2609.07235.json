@@ -1,0 +1,22 @@
+{
+  "key": "2609.07235",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07235",
+  "title": "Asymmetric quantum error correction efficiently tackles application-specific noise effects",
+  "authors": [
+    "Abhishek Yadav",
+    "Peter K. Schuhmacher",
+    "Michael Epping"
+  ],
+  "summary": "Noise is a major challenge for current quantum computers. It can be broadly categorized into bit-flip and phase-flip errors. These two types do not necessarily affect the executed algorithm, thus also the application, in the same way. We illustrate this general effect for the example of the quantum approximate optimization algorithm (QAOA) applied to a small instance of the flight-gate assignment (FGA) problem. We compare bit-flip and phase-flip Pauli noise under both layer-level and gate-level noise models, using two circuit decompositions of the same ideal QAOA unitary: a CNOT-based…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2609.33291",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.33291",
+  "title": "The Statistical Benefits of Multiple Responses for Learning from Demonstrations",
+  "authors": [
+    "Chandramauli Chakraborty",
+    "Cong Ma"
+  ],
+  "summary": "Many generative systems return multiple candidate responses and are evaluated according to the best one. Recent work shows that, when demonstrations are optimal, pass@$k$ can reduce the sample complexity of learning from demonstrations by a logarithmic factor in $k$. We ask what happens when the demonstrator is not assumed to be optimal. We find that multiple responses provide a qualitatively stronger benefit in this setting. In a finite reward-class model with no reward feedback, moving from pass@$1$ to any pass@$k$ with $k\\ge2$ changes the worst-case dependence on target accuracy from…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.IT",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-09-27",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

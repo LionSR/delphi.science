@@ -1,0 +1,24 @@
+{
+  "key": "2605.05341",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05341",
+  "title": "Feature Starvation as Geometric Instability in Sparse Autoencoders",
+  "authors": [
+    "Faris Chaudhry",
+    "Keisuke Yano",
+    "Anthea Monod"
+  ],
+  "summary": "Sparse autoencoders (SAEs) are used to disentangle the dense, polysemantic internal representations of large language models (LLMs) into interpretable, monosemantic concepts. However, standard $\\ell_1$-regularized SAEs suffer from feature starvation (dead neurons) and shrinkage bias, often requiring computationally expensive heuristic resampling and nondifferentiable hard-masking methods to bypass these challenges. We argue that feature starvation is not merely an empirical artifact of poor data diversity, but a fundamental optimization-geometric pathology of overcomplete dictionaries: the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

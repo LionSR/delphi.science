@@ -1,0 +1,23 @@
+{
+  "key": "2607.04669",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04669",
+  "title": "Estimation of a sparse multi-qubit Hamiltonian via compressed sensing",
+  "authors": [
+    "Juntao Tu",
+    "Yuanlong Wang",
+    "Shuming Cheng",
+    "Shuixin Xiao",
+    "Zhibo Hou"
+  ],
+  "summary": "Hamiltonian estimation is an effective approach in studying the structure and dynamical evolution of quantum systems. The difficulty in estimating the Hamiltonian is that an $N$-qubit Hamiltonian has $4^N-1$ unknown parameters, requiring exponentially many equations for information extraction. In this paper we develop a method based on compressed sensing to estimate the Hamiltonian of a multi-qubit system. We identify a problem where as $N$ increases, the common sufficient condition (Restricted Isometry Property) for compressed sensing often fails, obstructing the application of compressed…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-06",
+  "updated": "2026-07-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

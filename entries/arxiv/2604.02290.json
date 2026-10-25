@@ -1,0 +1,24 @@
+{
+  "key": "2604.02290",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.02290",
+  "title": "AdamFlow: Adam-based Wasserstein Gradient Flows for Surface Registration in Medical Imaging",
+  "authors": [
+    "Qiang Ma",
+    "Qingjie Meng",
+    "Xin Hu",
+    "Yicheng Wu",
+    "Wenjia Bai"
+  ],
+  "summary": "Surface registration plays an important role for anatomical shape analysis in medical imaging. Existing surface registration methods often face a trade-off between efficiency and robustness. Local point matching methods are computationally efficient, but vulnerable to noise and initialisation. Methods designed for global point set alignment tend to incur a high computational cost. To address the challenge, here we present a fast surface registration method, which formulates surface meshes as probability measures and surface registration as a distributional optimisation problem. The…",
+  "domain": "cs.CV",
+  "tags": [
+    "cs.CV",
+    "math.OC"
+  ],
+  "published": "2026-04-02",
+  "updated": "2026-04-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

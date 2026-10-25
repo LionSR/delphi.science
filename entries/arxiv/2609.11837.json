@@ -1,0 +1,23 @@
+{
+  "key": "2609.11837",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11837",
+  "title": "Quantitative Diffusive Limits for Singular Nonlocal Transport",
+  "authors": [
+    "Andrea Agazzi",
+    "Giuseppe Bruno",
+    "Federico Pasqualotto",
+    "Philippe Rigollet"
+  ],
+  "summary": "We study the nonlocal continuity equation \\[ \\partial_tμ_b =\\operatorname{div}\\!\\left( μ_b\\nabla\\log\\bigl((I-b^2Δ)^{-1}μ_b\\bigr) \\right) \\] on a closed connected Riemannian manifold. For smooth strictly positive initial data, we prove that as $b \\to 0$, its global solution converges to heat flow $μ(t)$ at the sharp, uniform-in-time rate \\[ \\sup_{t\\ge0}\\|μ_b(t)-μ(t)\\|_{L^1}\\le Cb^2. \\] The key estimate is the uniform dissipation of a $b$-weighted higher-order resolvent energy, which yields exponential relaxation despite the absence of a Wasserstein gradient-flow structure. On the circle, we…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "stat.ML"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

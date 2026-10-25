@@ -1,0 +1,20 @@
+{
+  "key": "2609.39621",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.39621",
+  "title": "Weakly Measured Loops for Quantum Amplitude Amplification: Oracle Savings and Adaptive Search with Unknown Target Probability",
+  "authors": [
+    "Wang Fang",
+    "Chris Heunen"
+  ],
+  "summary": "We present a family of quantum amplitude amplification algorithms that interleave ordinary Grover rotations with tunable weak measurements in loops. A successful measurement yields the target state and stops the algorithm, while after a failure, the loop resumes from the post-measurement state without restarting. We express the leading costs in expected Grover iterations as $p \\to 0$. For a known target probability $p$, an exact weak measurement-conditioned loop for states near the angle $π/4$ uses $(π/8+1/4+o(1))/\\sqrt{p}$ iterations, improving on the standard Grover constant $π/4$ and on…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

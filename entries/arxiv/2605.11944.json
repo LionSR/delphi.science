@@ -1,0 +1,22 @@
+{
+  "key": "2605.11944",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11944",
+  "title": "Generative Transfer for Entropic Optimal Transport with Unknown Costs",
+  "authors": [
+    "Antoine Debouchage",
+    "Xiaozhen Wang",
+    "Zhenjie Ren",
+    "Francois Buet-Golfouse"
+  ],
+  "summary": "This paper addresses the practical challenge in Entropic Optimal Transport (EOT) where the underlying ground cost function is typically latent and unobserved. Rather than assuming a fixed geometric cost, we adopt a data-driven approach where a shared cost is revealed only through samples from a reference optimal coupling. The question is then: given samples from a reference optimal coupling, can we recover the optimal coupling for new marginals under the same latent cost? We introduce a generative transfer framework that recovers the optimal coupling for new marginals by utilizing an…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

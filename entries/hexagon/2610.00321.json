@@ -1,0 +1,40 @@
+{
+  "key": "2610.00321",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00321v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00321v1",
+  "title": "Endotactic permanence and quantitative recovery with vanishing reverse rates",
+  "authors": [
+    "Michael Mislan"
+  ],
+  "summary": "For a finite ordinary endotactic reaction network, measurable reaction rates in a fixed positive compact box admit a compact convex invariant absorbing set in every positive stoichiometric class. Global positive Carathéodory solutions are unique, and entry times are uniform over compact initial sets and all admitted rate histories. The argument combines the finite affine construction of OpenAI with an endotactic witness estimate that retains the reaction projection lengths. We then quantify what permanence permits as reverse rates shrink. For autonomous weakly reversible networks with…",
+  "domain": "math.DS",
+  "tags": [
+    "msc:34A12",
+    "msc:34D23",
+    "msc:37N25",
+    "msc:92C42",
+    "Lean formalization",
+    "endotactic reaction networks",
+    "mass-action kinetics",
+    "measurable rates",
+    "permanence",
+    "recovery time",
+    "vanishing reverse rates"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-18",
+  "version": 1,
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": true,
+  "formalizations": [
+    "https://palomar-registry.org/entry?id=PALOMAR-2026-10-09-000015&version=1",
+    "https://palomar-registry.org/entry?id=PALOMAR-2026-10-11-000020&version=1"
+  ],
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

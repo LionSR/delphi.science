@@ -1,0 +1,21 @@
+{
+  "key": "2605.25057",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.25057",
+  "title": "Random Neural Network Expressivity for Non-Linear Partial Differential Equations",
+  "authors": [
+    "Muhammed Ali Mehmood",
+    "Lukas Gonon"
+  ],
+  "summary": "Neural networks with randomly generated hidden weights (RaNNs) have been extensively studied, both as a standalone learning method and as an initialization for fully trainable deep learning methods. In this work, we study RaNN expressivity for learning solutions to non-linear partial differential equations (PDEs). Despite their widespread use in practical applications, a rigorous theoretical understanding of the approximation properties of RaNNs in this context remains limited. Here, we derive error bounds for RaNN approximations to time-dependent Sobolev functions and obtain a…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-05-24",
+  "updated": "2026-05-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

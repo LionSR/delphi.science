@@ -1,0 +1,19 @@
+{
+  "key": "2603.16316",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.16316",
+  "title": "Large deviations for the branching random walk with heavy-tailed associated random walk - a principle of one big jump",
+  "authors": [
+    "Jakob Stonner"
+  ],
+  "summary": "We prove a version of Nagaev's theorem for the branching random walk with heavy-tailed associated random walk. For a branching random walk on $\\mathbb{R}$ we consider the random measure $Z_n = \\sum_{|u|=n} e^{-V_u} δ_{V_u}$ where $V_u$, $|u| = n$ denote the positions of the particles in the $n$-th generation. Under the assumption that $\\mathbb{E}[Z_1(\\cdot)]$ is a probability distribution with regularly varying tail, we prove that $Z_n((n\\mathbb{E}[X] + t_n , \\infty)) = W n\\mathbb{P}(X > t_n )(1 + o(1))$ in $L^1$ as $n \\to \\infty$ where $W$ is a non-zero random variable, $t_n \\uparrow…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-03-17",
+  "updated": "2026-03-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2603.15494",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.15494",
+  "title": "A practical randomized trust-region method to escape saddle points in high dimension",
+  "authors": [
+    "Radu-Alexandru Dragomir",
+    "Xiaowen Jiang",
+    "Bonan Sun",
+    "Nicolas Boumal"
+  ],
+  "summary": "Without randomization, escaping the saddle points of $f \\colon \\mathbb{R}^d \\to \\mathbb{R}$ requires at least $Ω(d)$ pieces of information about $f$ (values, gradients, Hessian-vector products). With randomization, this can be reduced to a polylogarithmic dependence in $d$. The prototypical algorithm to that effect is perturbed gradient descent (PGD): through sustained jitter, it reliably escapes strict saddle points. However, it also never settles: there is no convergence. What is more, PGD requires precise tuning based on Lipschitz constants and a preset target accuracy. To improve on…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-03-16",
+  "updated": "2026-03-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

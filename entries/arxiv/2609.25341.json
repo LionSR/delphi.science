@@ -1,0 +1,20 @@
+{
+  "key": "2609.25341",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.25341",
+  "title": "Distinct exponents in the prime factorization",
+  "authors": [
+    "Mikhail R. Gabdullin",
+    "Vitalii V. Iudelevich"
+  ],
+  "summary": "Following Erdős (1982) and Sanna (2019), we study the arithmetic function $h(n)$, which is defined to be the number of distinct exponents in the prime factorization of a positive integer $n$. Among other things, we show that $$ \\sum_{n\\leq x}h(φ(n)) \\asymp x\\left(\\frac{\\log\\log x}{\\log\\log\\log x}\\right)^{1/2}, $$ where $φ$ is the Euler totient function. The key ingredient is the Poisson random model for $ω(n,T)$, the number of the prime divisors of $n$ in a given subset of primes $T$, which was introduced in a recent work of Ford.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-09-21",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

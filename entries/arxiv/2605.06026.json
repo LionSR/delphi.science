@@ -1,0 +1,24 @@
+{
+  "key": "2605.06026",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.06026",
+  "title": "Topology optimization of two-fluid turbulent heat exchangers: A Darcy flow-based multifidelity approach",
+  "authors": [
+    "Hiroki Kawabe",
+    "Kaito Ohtani",
+    "Kentaro Yaji",
+    "Ryota Fukunishi",
+    "Akira Ogawara"
+  ],
+  "summary": "This paper presents a topology optimization method for designing two-fluid heat exchangers under turbulent conditions using a Darcy flow-based low-fidelity (LF) model. The LF model is calibrated against a high-fidelity (HF) model based on the Reynolds-averaged Navier-Stokes (RANS) equations to increase the accuracy of predictions for fluid flow and heat transfer characteristics. Since the discrepancies between the LF and HF models can be significant, particularly for pressure drops, a multifidelity topology optimization framework is adopted to leverage the strengths of both models. Using the…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math.OC"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

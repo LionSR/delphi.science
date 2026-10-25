@@ -1,0 +1,22 @@
+{
+  "key": "2609.32936",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32936",
+  "title": "Adelic reduction of module lattices",
+  "authors": [
+    "Henry Bambury",
+    "Seungki Kim",
+    "Changmin Lee",
+    "Phong Q. Nguyen"
+  ],
+  "summary": "We give a strict generalization of the LLL algorithm over number fields, based on the reduction theory of $\\GL(n)$ over the adele ring of a number field. Our algorithm is free of heuristics, with rigorous bounds on output quality and complexity. As a consequence, we obtain a hierarchy of reductions from module-(H)SVP to ideal-HSVP, an example of which has runtime and approximation factors subexponential in the field degree. More importantly, we uncover a close connection between structured lattice reduction and a Diophantine approximation over number fields.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

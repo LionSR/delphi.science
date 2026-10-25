@@ -1,0 +1,22 @@
+{
+  "key": "2606.23518",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.23518",
+  "title": "DSWIM:Efficient and Stable Deterministic Computation of Warm Inflation Perturbations",
+  "authors": [
+    "Umang Kumar"
+  ],
+  "summary": "Warm inflation perturbations are sourced by both thermal and quantum fluctuations and are commonly computed through stochastic realizations of the perturbation equations, as implemented in the publicly available code SWIM. Deterministic formulations based on correlation matrix evolution provide a computationally efficient alternative, but can become numerically ill-conditioned when the perturbation variables evolve over widely different scales. In this work, we extend SWIM by introducing a deterministic module, DSWIM, based on correlation matrix evolution. We introduce a physically motivated…",
+  "domain": "astro-ph.CO",
+  "tags": [
+    "astro-ph.CO",
+    "gr-qc",
+    "hep-ph",
+    "hep-th"
+  ],
+  "published": "2026-06-22",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

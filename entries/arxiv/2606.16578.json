@@ -1,0 +1,24 @@
+{
+  "key": "2606.16578",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.16578",
+  "title": "Walking on Heat Stars for Parabolic Heat Equations with Neumann Boundary Conditions",
+  "authors": [
+    "Anchang Bao",
+    "Enya Shen",
+    "Yongjun Zhang",
+    "Zhongwei Liu",
+    "Jianmin Wang"
+  ],
+  "summary": "Monte Carlo methods have proven highly effective for elliptic partial differential equations through algorithms such as Walk on Spheres and Walk on Stars, which evaluate solutions at individual points without volumetric meshing or global linear solves. Extending these methods to the transient regime has remained an open challenge: parabolic equations couple space and time through an anisotropic scaling, requiring joint sampling of spatial displacements and backward time steps whose distribution was not previously available in a unified, exact form. We present Walk on Heat Stars, a grid-free…",
+  "domain": "cs.GR",
+  "tags": [
+    "cs.GR",
+    "math.NA"
+  ],
+  "published": "2026-06-15",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

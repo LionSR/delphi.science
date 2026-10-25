@@ -1,0 +1,24 @@
+{
+  "key": "2607.09381",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.09381",
+  "title": "COSMA: Communication-aware Optimization of Fermionic Simulation Kernels for Modular Quantum Architectures",
+  "authors": [
+    "Enrico Russo",
+    "Francesco G. Blanco",
+    "Elio Vinciguerra",
+    "Davide Patti",
+    "Giuseppe Ascia",
+    "Maurizio Palesi"
+  ],
+  "summary": "Quantum simulation is a leading application of quantum computing, but scaling to chemically relevant problems requires modular architectures composed of interconnected quantum processing units. In such systems, inter-core quantum communication becomes a major performance bottleneck. In this work, we present COSMA, a communication-aware compilation framework for fermionic simulation kernels targeting modular quantum architectures. Our approach jointly optimizes fermion-to-qubit mapping, Pauli scheduling, and qubit allocation to minimize inter-core state transfers. Evaluated on molecular…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-10",
+  "updated": "2026-07-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

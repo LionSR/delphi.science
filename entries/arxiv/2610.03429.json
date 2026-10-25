@@ -1,0 +1,21 @@
+{
+  "key": "2610.03429",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03429",
+  "title": "Fault tolerance of quantum circuits with tensor networks and symplectic geometry",
+  "authors": [
+    "Soham Ghosh",
+    "Holger Boche",
+    "Andrew Tanggara"
+  ],
+  "summary": "We develop an operator-algebraic framework for analyzing fault tolerance in quantum circuits and establish necessary and sufficient conditions for exact recovery of the ideal computation under a prescribed noise model. For prescribed circuit families and noise models, we derive a semidefinite program (SDP) based test whose infeasibility certifies that there does not exist any recovery map restoring its intended operation. For non-adaptive stabilizer circuits, analyzing the stabilizer symmetries of its components with symplectic geometry, we obtain closed-form detection and logical-effect…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2605.24937",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.24937",
+  "title": "Error estimates for tamed Euler and Randomized Euler schemes for SDEs with locally Lipschitz drift with applications to non-logconcave sampling and optimization",
+  "authors": [
+    "Iosif Lytras",
+    "Angelos Ntousis"
+  ],
+  "summary": "In this paper, we study the numerical discretization of stochastic differential equations with locally Lipschitz, super-linearly growing drift, and the resulting implications for sampling from non-log-concave distributions satisfying a logarithmic Sobolev inequality. In this regime, the classical Euler--Maruyama scheme underlying the unadjusted Langevin algorithm (ULA) is known to be unstable. We analyze the KL-accelerated tamed unadjusted Langevin algorithm (kTULA) and introduce a new tamed randomized midpoint scheme, termed tRLMC. Building on the shifted-composition approach of…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.NA",
+    "math.OC",
+    "stat.CO",
+    "stat.ML"
+  ],
+  "published": "2026-05-24",
+  "updated": "2026-05-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

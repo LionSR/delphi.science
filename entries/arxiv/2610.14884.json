@@ -1,0 +1,21 @@
+{
+  "key": "2610.14884",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.14884",
+  "title": "Are implicit schemes needed in adaptive time stepping for PDEs?",
+  "authors": [
+    "Mikhail A. Botchev"
+  ],
+  "summary": "Implicit time integration is the standard way to overcome the tight CFL time step restriction when solving nonstationary PDEs numerically. However, within an adaptive time accurate integration, the time step size selection is governed not only by stability but also by accuracy requirements. Therefore, an eligible question to ask is: is (unconditionally) stable implicit time stepping really needed if the time step is restricted by accuracy considerations anyway? And how much do we then lose (in terms of the time step size) when switching from the expensive implicit time stepping to stabilized…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.CE",
+    "physics.comp-ph"
+  ],
+  "published": "2026-10-10",
+  "updated": "2026-10-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2608.11516",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.11516",
+  "title": "Trapping Sets of Detector Error Models",
+  "authors": [
+    "Michele Pacenti",
+    "Nithin Raveendran",
+    "Bane Vasic"
+  ],
+  "summary": "Message-passing decoders are among the most promising candidates for scalable quantum error correction, yet their behavior in the low-error-rate regime remains poorly understood under realistic circuit-level noise. In this work, we introduce a systematic framework for identifying the graph structures that govern decoder failures and for using them to predict the resulting error floor. We apply exhaustive trapping-set enumeration directly to the detector error model of a bivariate bicycle code and test all low-weight fault configurations supported on the resulting structures. This converts…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-12",
+  "updated": "2026-08-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

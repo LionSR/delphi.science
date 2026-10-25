@@ -1,0 +1,24 @@
+{
+  "key": "2606.22997",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.22997",
+  "title": "A Greatest Common Divisor Criterion of Certain Binomial Coefficients",
+  "authors": [
+    "Dakai Guo",
+    "Ruichen Qiu",
+    "Yichuan Cao",
+    "Ruyong Feng",
+    "Xiao-Shan Gao"
+  ],
+  "summary": "The binomial greatest common divisor (gcd) criterion recorded as OEIS A080170 is proven. The criterion also appears as conjecture (17) in Ralf Stephan's list of OEIS conjectures. For $k\\geq 2$, put \\[ D(k)=\\gcd_{2\\leq q\\leq k+1}\\binom{qk}{k}, \\qquad n=k+1. \\] If $P$ is the largest prime-power component $p^a$ exactly dividing $n$, then the criterion asserts \\[ D(k)=1 \\quad\\Longleftrightarrow\\quad \\frac{n}{P}>P. \\] The proof is formalized in Lean and the Lean artifact is accepted as part of the Formal Conjectures project. Both the natural-language proof and the Lean formalization are generated…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "cs.LO"
+  ],
+  "published": "2026-06-22",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

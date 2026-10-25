@@ -1,0 +1,21 @@
+{
+  "key": "2610.06070",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06070",
+  "title": "Last-Iterate Convergence Rate of Normalized Gradient Descent under Hölder Smoothness",
+  "authors": [
+    "Yuki Takezawa",
+    "Eduard Gorbunov"
+  ],
+  "summary": "Normalized gradient descent is a widely studied adaptive optimization method. Most existing analyses focus on the best iterate or a weighted average of the iterates, whereas practical implementations typically return the last iterate. In this paper, we study the last-iterate convergence of normalized gradient descent for convex, $(ν,M_ν)$-Hölder-smooth objectives. For a constant stepsize, we establish an upper bound of $\\mathcal{O}\\bigl((\\log^2(T)/T)^{(1+ν)/2}\\bigr)$, which contains a logarithmic overhead relative to the known $\\mathcal{O}\\bigl(T^{-(1+ν)/2}\\bigr)$ guarantees for the best and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

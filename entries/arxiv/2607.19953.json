@@ -1,0 +1,20 @@
+{
+  "key": "2607.19953",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.19953",
+  "title": "A Third-Order Maximum-Principle-Preserving CWENO Scheme for Two-Dimensional Nonlocal Conservation Laws",
+  "authors": [
+    "Anika Beckers",
+    "Jan Friedrich"
+  ],
+  "summary": "We present a third-order finite volume central WENO scheme for systems of nonlocal conservation laws in two spatial dimensions. The CWENO reconstruction of the conservative variable provides polynomials that can be evaluated in the entire domain, which is of advantage when approximating the nonlocal terms. Moreover, this method can be augmented with a limiter that preserves the maximum-principle and especially positivity of the solution.",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-22",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

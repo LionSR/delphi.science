@@ -1,0 +1,21 @@
+{
+  "key": "2610.18419",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.18419",
+  "title": "Low-cost non-iterative Sylvester solvers for dynamical low-rank approximation of reaction-diffusion equations",
+  "authors": [
+    "Joy Saha",
+    "Jun Yang",
+    "Peimeng Yin"
+  ],
+  "summary": "In this work, we develop low-cost non-iterative Sylvester solvers for dynamical low-rank approximation of reaction-diffusion equations and incorporate them into a basis-update \\& Galerkin mass-lumped finite element method (\\mbox{BUG-MLFEM}). By incorporating mass lumping via Gauss-Lobatto quadrature, the spatial discretization yields a matrix differential equation equipped with diagonal positive-definite mass matrices. We establish the weighted dynamical low-rank approximation (WDLRA) within the Galerkin framework of the MLFEM system, proving the theoretical equivalence between the BUG…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

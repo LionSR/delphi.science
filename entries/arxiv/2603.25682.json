@@ -1,0 +1,23 @@
+{
+  "key": "2603.25682",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.25682",
+  "title": "On the Formalization of Network Topology Matrices in HOL",
+  "authors": [
+    "Kubra Aksoy",
+    "Adnan Rashid",
+    "Osman Hasan",
+    "Sofiene Tahar"
+  ],
+  "summary": "Network topology matrices are algebraic representations of graphs that are widely used in modeling and analysis of various applications including electrical circuits, communication networks and transportation systems. In this paper, we propose to use Higher-Order-Logic (HOL) based interactive theorem proving to formalize network topology matrices. In particular, we formalize adjacency, degree, Laplacian and incidence matrices in the Isabelle/HOL proof assistant. Our formalization is based on modelling systems as networks using the notion of directed graphs (unweighted and weighted), where…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "math.AT"
+  ],
+  "published": "2026-03-26",
+  "updated": "2026-03-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

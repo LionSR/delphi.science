@@ -1,0 +1,21 @@
+{
+  "key": "2607.20018",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.20018",
+  "title": "A discrete approach to the functional Zhang's projection inequality",
+  "authors": [
+    "David Alonso-Gutiérrez",
+    "Julia Sánchez-Loscertales"
+  ],
+  "summary": "In this paper, we focus our attention on the following inequality, which holds for any integrable log-concave function with positive integral $f$, and gives an inclusion between the $n$-th Ball body of the covariogram function of $f$ and its polar projection body, providing a functional version of Zhang's projection inequality in the setting of log-concave functions: $$ n\\int_0^\\infty r^{n-1}\\int_{\\mathbb{R}^n}\\min\\{f(z),f(z-re_n)\\}dzdr\\leq n!\\frac{\\left(\\int_{\\mathbb{R}^n}f(x)dx\\right)^{n+1}}{\\left(\\int_{e_n^\\perp}P_{e_n^\\perp}f(y)dy\\right)^n}. $$ Here $(e_i)_{i=1}^n$ denotes the canonical…",
+  "domain": "math.MG",
+  "tags": [
+    "math.MG",
+    "math.FA"
+  ],
+  "published": "2026-07-22",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

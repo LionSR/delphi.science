@@ -1,0 +1,23 @@
+{
+  "key": "2601.16290",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.16290",
+  "title": "Maximizing Reach-Avoid Probabilities for Linear Stochastic Systems via Control Architectures",
+  "authors": [
+    "Niklas Schmid",
+    "Jaeyoun Choi",
+    "Oswin So",
+    "Chuchu Fan"
+  ],
+  "summary": "The maximization of reach-avoid probabilities for stochastic systems is a central topic in the control literature. Yet, the available methods are either restricted to low-dimensional systems or suffer from conservative approximations. To address these limitations, we propose control architectures that combine the flexibility of Markov Decision Processes with the scalability of Model Predictive Controllers. The Model Predictive Controller tracks reference signals while remaining agnostic to the stochasticity and reach-avoid objective. Instead, the reach-avoid probability is maximized by…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-01-22",
+  "updated": "2026-01-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

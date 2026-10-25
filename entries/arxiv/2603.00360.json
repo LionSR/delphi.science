@@ -1,0 +1,22 @@
+{
+  "key": "2603.00360",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.00360",
+  "title": "KROM: Kernelized Reduced Order Modeling",
+  "authors": [
+    "Aras Bacho",
+    "Jonghyeon Lee",
+    "Houman Owhadi"
+  ],
+  "summary": "We propose KROM, a kernel-based reduced-order framework for fast solution of nonlinear partial differential equations. KROM formulates PDE solution as a minimum-norm (Gaussian-process) recovery problem in an RKHS, and accelerates the resulting kernel solves by sparsifying the precision matrix via sparse Cholesky factorization. A central ingredient is an empirical kernel constructed from a snapshot library of PDE solutions (generated under varying forcings, initial data, boundary data, or parameters). This snapshot-driven kernel adapts to problem-specific structure -- boundary behavior,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-02-27",
+  "updated": "2026-02-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

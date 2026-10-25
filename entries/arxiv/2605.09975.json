@@ -1,0 +1,23 @@
+{
+  "key": "2605.09975",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09975",
+  "title": "Chebyshev Center-Based Direction Selection for Multi-Objective Optimization and Training PINNs",
+  "authors": [
+    "Hoyeol Yoon",
+    "Seoungbin Bae",
+    "Nam Ho-Nguyen",
+    "Dabeen Lee"
+  ],
+  "summary": "Physics-informed neural networks (PINNs) are a promising approach for solving partial differential equations (PDEs). Their training, however, is often difficult because multiple loss terms induced by PDE residuals and boundary or initial conditions must be optimized simultaneously. To address this difficulty, existing approaches often construct update directions by explicitly enforcing particular desirable properties, such as scale robustness and simultaneous descent. While effective in many cases, such property-by-property designs can make it unclear which conditions are essential, what…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

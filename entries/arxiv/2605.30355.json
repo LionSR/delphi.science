@@ -1,0 +1,23 @@
+{
+  "key": "2605.30355",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.30355",
+  "title": "Cosm: orchestrated collective dynamics give rise to rapid computational search at the solution frontier",
+  "authors": [
+    "Kenneth M. Zick",
+    "Nikhil Shukla",
+    "Alexander Marakov"
+  ],
+  "summary": "We introduce Collective Switched Motion (Cosm), a heuristic optimization framework based on orchestrated collective dynamics. Cosm organizes the objective into conflict-minimized subobjectives and activates them sequentially, temporally separating competing local influences. The interplay of switching and local interactions among variables, supplemented by structured correlated perturbations, gives rise to collective search behavior including coordinated cluster motion. Using this framework, we develop and test a solver for sparse Ising optimization. On G64, a large sparse instance with a…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math.OC",
+    "physics.comp-ph"
+  ],
+  "published": "2026-04-16",
+  "updated": "2026-10-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

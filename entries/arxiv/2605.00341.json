@@ -1,0 +1,23 @@
+{
+  "key": "2605.00341",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.00341",
+  "title": "Measuring the largest coefficients of a quantum state",
+  "authors": [
+    "Nicolás Ciancaglini",
+    "Santiago Cifuentes",
+    "Guido Bellomo",
+    "Santiago Figueira",
+    "Ariel Bendersky"
+  ],
+  "summary": "We introduce a hierarchical algorithm for identifying the largest Pauli coefficients of an unknown $n$-qubit quantum state. The algorithm traverses a prefix-based tree whose nodes represent partial sums of squared Pauli coefficients, always expanding branches with the largest estimated weight and discarding the rest. Node weights are estimated using Bell sampling on two copies of the state, or alternatively via SWAP tests on subsystems. We analyze the sample complexity of each node estimation and derive bounds on the total number of nodes expanded as a function of the desired number of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-01",
+  "updated": "2026-05-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

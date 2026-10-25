@@ -1,0 +1,20 @@
+{
+  "key": "2606.27358",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.27358",
+  "title": "Cultivating logical catalysts for fault-tolerant dyadic phase rotations",
+  "authors": [
+    "Yichen Xu",
+    "Xiao Wang"
+  ],
+  "summary": "We introduce a surface-code cultivation protocol for reusable logical catalyst states that implement exact fine dyadic phase gates $Z^{2^{-b}}$ by phase kickback. The catalyst is an eigenstate of a high-period Clifford circuit $U$, with a direct construction supported on $O(2^b)$ logical qubits. Once cultivated, each invocation implements the target phase through a controlled-$U$ gadget, removing Clifford+$T$ synthesis approximation error from the online gate and making the online non-Clifford depth independent of the target logical accuracy. As a concrete demonstration, we construct a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-25",
+  "updated": "2026-06-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

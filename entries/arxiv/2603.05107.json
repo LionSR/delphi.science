@@ -1,0 +1,24 @@
+{
+  "key": "2603.05107",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.05107",
+  "title": "Solution of a bilevel optimistic scheduling problem on parallel machines",
+  "authors": [
+    "Quentin Schau",
+    "Olivier Ploton",
+    "Vincent T'kindt",
+    "Han Hoogeveen",
+    "Federico Della Croce",
+    "Jippe Hoogeveen"
+  ],
+  "summary": "We consider the uniform parallel machines scheduling problem in the context of optimistic bilevel optimization, where two speed options are considered. In this scenario, the leader aims to minimize the weighted number of tardy jobs, while the follower seeks to minimize the total completion time on a set of uniform machines. This problem has practical applications in Industry 4.0. We show that this problem is NP-hard in the strong sense by providing a reduction from the Numerical 3-Dimensional Matching problem and we provide a moderately exponential-time dynamic programming algorithm. The…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-05",
+  "updated": "2026-03-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

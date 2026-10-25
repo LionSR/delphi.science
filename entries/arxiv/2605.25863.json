@@ -1,0 +1,22 @@
+{
+  "key": "2605.25863",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.25863",
+  "title": "Linac: linear algebra with CUDA over finite fields",
+  "authors": [
+    "Giuseppe De Laurentis",
+    "Jack Franklin"
+  ],
+  "summary": "Solving linear systems of polynomial equations is a ubiquitous problem in both mathematics and physics. The standard approach, Gaussian elimination, scales cubically with system size and often constitutes a computational bottleneck. The algorithm's inherent parallelism makes it well-suited for modern computing architectures, namely graphics processing units (GPUs), which offer significantly higher throughput than CPUs. Additionally, the use of finite fields -- integers modulo a prime -- in place of floating-point arithmetic offers a scalable solution to the issue of numerical precision loss,…",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "hep-ph",
+    "hep-th"
+  ],
+  "published": "2026-05-25",
+  "updated": "2026-05-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

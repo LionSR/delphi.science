@@ -1,0 +1,27 @@
+{
+  "key": "2601.08527",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.08527",
+  "title": "Sampling via Stochastic Interpolants by Langevin-based Velocity and Initialization Estimation in Flow ODEs",
+  "authors": [
+    "Chenguang Duan",
+    "Yuling Jiao",
+    "Gabriele Steidl",
+    "Christian Wald",
+    "Jerry Zhijian Yang",
+    "Ruizhe Zhang"
+  ],
+  "summary": "We propose a novel method for sampling from unnormalized Boltzmann densities based on a probability flow ordinary differential equation (ODE) derived from linear stochastic interpolants. The key innovation of our approach is the use of a sequence of Langevin samplers to enable efficient simulation of the flow. Specifically, these Langevin samplers are employed (i) to generate samples from the interpolant distribution at intermediate times and (ii) to construct, starting from these intermediate times, a robust estimator of the velocity field governing the probability flow ODE. Theoretically,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-01-13",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

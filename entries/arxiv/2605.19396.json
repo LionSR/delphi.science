@@ -1,0 +1,22 @@
+{
+  "key": "2605.19396",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.19396",
+  "title": "Distributed Gradient-Regularized Newton Method: Scheduled Consensus and O(epsilon^{-1}) Global Iteration Complexity",
+  "authors": [
+    "Wei Hu",
+    "Pengcheng Xie",
+    "Ya-Xiang Yuan",
+    "Li Zhang"
+  ],
+  "summary": "We propose DisGrem, a fully decentralized second-order method for convex consensus optimization over networks. Each agent solves a local Newton system with vanishing gradient-norm regularization and an eigenvalue-shift stabilizer, communicating through a two-stage gossip-mixing mechanism. We introduce a reference-step framework that reduces the network-wide update to an inexact centralized regularized Newton step, replacing the static Hessian-heterogeneity assumptions of prior work with an increment-based dispersion analysis that imposes no irreducible accuracy floor. Under a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

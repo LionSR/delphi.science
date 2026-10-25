@@ -1,0 +1,22 @@
+{
+  "key": "2608.24197",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.24197",
+  "title": "Stability, Convergence, and Error Analysis of Finite Element Methods for 3D Magnetohydrodynamics with $p$-Laplacian Viscosity",
+  "authors": [
+    "Kim Ngan Le",
+    "Akash Ashirbad Panda",
+    "Evana Islam Sarkar"
+  ],
+  "summary": "This paper develops a fully discrete finite element method for three-dimensional incompressible magnetohydrodynamic (MHD) flows with nonlinear $p$-Laplace viscosity. The scheme combines spatial finite elements with a semi-implicit Euler time discretisation. Convergence to a weak solution is proved using a time-translation compactness argument together with Minty's monotonicity method. Under additional regularity assumptions, we derive unconditional error estimates for both the velocity and magnetic field, with no coupling restriction between the time step and mesh size. The framework extends…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.AP"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

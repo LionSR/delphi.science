@@ -1,0 +1,20 @@
+{
+  "key": "2607.28511",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.28511",
+  "title": "Beyond Hand-Derived Inequalities: Decision Diagrams for Cut Generation in Binary Polynomial Optimization",
+  "authors": [
+    "Martin Cooper",
+    "Margarita Castro"
+  ],
+  "summary": "We study cutting-plane generation for binary polynomial optimization (BPO), whose feasible region is the multilinear set of a hypergraph. Strong inequalities for this set---such as two-links, flowers, and odd $β$-cycles---are classically hand-derived for fixed support patterns. Instead, we propose a decision-diagram (DD) approach: for any chosen support, it separates a facet-defining cut in the local multilinear polytope and lifts it back to the original problem. We utilize a novel compact DD encoding based on a recursive formulation that represents only the vertex variables and implicitly…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-30",
+  "updated": "2026-07-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

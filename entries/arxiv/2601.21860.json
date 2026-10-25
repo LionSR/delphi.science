@@ -1,0 +1,20 @@
+{
+  "key": "2601.21860",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.21860",
+  "title": "Pathwise Learning of Stochastic Dynamical Systems with Partial Observations",
+  "authors": [
+    "Nicole Tianjiao Yang"
+  ],
+  "summary": "The reconstruction and inference of stochastic dynamical systems from data is a fundamental task in inverse problems and statistical learning. While surrogate modeling advances computational methods to approximate these dynamics, standard approaches typically require high-fidelity training data. In many practical settings, however, the data are indirectly observed through noisy and nonlinear measurements. The challenge lies not only in approximating the coefficients of the SDEs, but in simultaneously inferring the posterior updates given the observations. In this work, we present an…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-06-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

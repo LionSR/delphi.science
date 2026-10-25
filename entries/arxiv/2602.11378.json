@@ -1,0 +1,24 @@
+{
+  "key": "2602.11378",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.11378",
+  "title": "Toward Adaptive Non-Intrusive Reduced-Order Models: Design and Challenges",
+  "authors": [
+    "Amirpasha Hedayat",
+    "Alberto Padovan",
+    "Karthik Duraisamy"
+  ],
+  "summary": "Projection-based Reduced Order Models (ROMs) are often deployed as static surrogates, which limits their practical utility once a system leaves the training manifold. We formalize and study adaptive non-intrusive ROMs that update both the latent subspace and the reduced dynamics online. Building on ideas from static non-intrusive ROMs, specifically, Operator Inference (OpInf) and the recently-introduced Non-intrusive Trajectory-based optimization of Reduced-Order Models (NiTROM), we propose three formulations: Adaptive OpInf (sequential basis/operator refits), Adaptive NiTROM (joint…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.CE",
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-02-11",
+  "updated": "2026-02-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

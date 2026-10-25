@@ -1,0 +1,30 @@
+{
+  "key": "2610.28487",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.28487",
+  "title": "Geometry-Agnostic Data-Driven Discovery of Extreme Scenarios",
+  "authors": [
+    "Angeline Hu",
+    "Ava K. Tse",
+    "Kaitlyn S. Yasumura",
+    "Luciana Sarabia",
+    "Malcolm Yeung",
+    "Kavin K. Prasanna",
+    "Kai Wong",
+    "William Hammond",
+    "Ioannis G. Keverkidis",
+    "Shengkai Li",
+    "Trung V. Phan"
+  ],
+  "summary": "We introduce a two-stage data-driven neural framework for discovering dynamically admissible extreme scenarios. Rather than assuming prior knowledge of the governing equations, the first stage infers the effective dynamical constraints directly from observational data. When the underlying physical system possesses suitable symmetries, the learned dynamics can be represented in a geometry-agnostic form, independent of any fixed grid, coordinate system, dimensionality, and intrinsic curvature. In the second stage, a physics-informed neural-search uses this learned dynamics to uncover rare,…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math-ph"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

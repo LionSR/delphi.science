@@ -1,0 +1,23 @@
+{
+  "key": "2603.25280",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.25280",
+  "title": "List Estimation",
+  "authors": [
+    "Nikola Zlatanov",
+    "Amin Gohari",
+    "Farzad Shahrivari",
+    "Mikhail Rudakov"
+  ],
+  "summary": "Classical estimation outputs a single point estimate of an unknown $d$-dimensional vector from an observation. In this paper, we study \\emph{$k$-list estimation}, in which a single observation is used to produce a list of $k$ candidate estimates and performance is measured by the expected squared distance from the true vector to the closest candidate. We compare this centralized setting with a symmetric decentralized MMSE benchmark in which $k$ agents observe conditionally i.i.d.\\ measurements and each agent outputs its own MMSE estimate. On the centralized side, we show that optimal…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "math.ST"
+  ],
+  "published": "2026-03-26",
+  "updated": "2026-03-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

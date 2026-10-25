@@ -1,0 +1,24 @@
+{
+  "key": "2601.07760",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.07760",
+  "title": "Free-RBF-KAN: Kolmogorov-Arnold Networks with Adaptive Radial Basis Functions for Efficient Function Learning",
+  "authors": [
+    "Shao-Ting Chiu",
+    "Siu Wun Cheung",
+    "Ulisses Braga-Neto",
+    "Chak Shing Lee",
+    "Rui Peng Li"
+  ],
+  "summary": "Kolmogorov-Arnold Networks (KANs) offer a promising framework for approximating complex nonlinear functions, yet the original B-spline formulation suffers from significant computational overhead due to De Boor algorithm. While recent RBF-based variants improve efficiency, they often sacrifice the approximation accuracy inherent in the original spline-based design. To bridge this gap, we propose Free-RBF-KAN, an architecture that integrates adaptive learning grids and trainable smoothness parameters to enable expressive, high-resolution function approximation. Our method utilizes learnable…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-01-12",
+  "updated": "2026-02-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

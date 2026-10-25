@@ -1,0 +1,27 @@
+{
+  "key": "2601.07766",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.07766",
+  "title": "A 1-bit quantum filter for particle trajectory reconstruction",
+  "authors": [
+    "Xenofon Chiotopoulos",
+    "Davide Nicotra",
+    "George Scriven",
+    "Kurt Driessens",
+    "Marcel Merk",
+    "Jochen Schütz",
+    "Jacco de Vries",
+    "Mark H. M. Winands"
+  ],
+  "summary": "The transition to the High-Luminosity Large Hadron Collider (HL-LHC) presents a computational challenge where particle reconstruction complexity may outpace classical computing resources. While quantum computing offers potential speedups, standard algorithms like Harrow-Hassidim-Lloyd (HHL) require prohibitive circuit depths for near-term hardware. Here, we introduce the 1-Bit Quantum Filter, a domain-specific adaptation of HHL that reformulates tracking from matrix inversion to binary ground-state filtering. By replacing high-precision phase estimation with a single-ancilla spectral…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "hep-ex"
+  ],
+  "published": "2026-01-12",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

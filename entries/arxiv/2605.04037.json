@@ -1,0 +1,20 @@
+{
+  "key": "2605.04037",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04037",
+  "title": "Model order reduction for parametrized variational inequalities: application to crowd motion",
+  "authors": [
+    "Giulia Sambataro",
+    "Virginie Ehrlacher"
+  ],
+  "summary": "This work investigates model order reduction for time-dependent parametrized variational inequalities, with a focus on discrete contact problems. As a prototypical example, we consider an agent-based crowd model [Maury et al., 2011] in which agent velocities are obtained at each time step from a constrained least-squares problem. Geometric parameter variations induce significant variability in both agent positions and contact forces, leading to a slowly decaying Kolmogorov $n$-width of the solution manifold. We propose a nonlinear approach that combines a linear reduced-order model with a…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-05-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2608.01654",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.01654",
+  "title": "Approximate Message Passing with Random Initialization for Phase Retrieval",
+  "authors": [
+    "Yuchen Chen",
+    "Yandi Shen",
+    "Xingyu Xu"
+  ],
+  "summary": "We analyze approximate message passing (AMP) with an independent Gaussian initialization for noiseless phase retrieval in the proportional asymptotic regime. A random initialization has overlap of order $d^{-1/2}$ with the signal, and AMP requires a growing number of iterations to attain non-vanishing overlap. Thus, its precise behavior cannot be characterized by classical fixed-time state evolution. We prove a Gaussian decomposition of the AMP trajectory and control its error over the horizons required for recovery. The resulting analysis shows that random initialization attains the…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-08-03",
+  "updated": "2026-08-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

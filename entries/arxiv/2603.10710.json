@@ -1,0 +1,21 @@
+{
+  "key": "2603.10710",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.10710",
+  "title": "Polynomial-size encoding of all cuts of small value in integer-valued symmetric submodular functions",
+  "authors": [
+    "Sang-il Oum",
+    "Marek Sokołowski"
+  ],
+  "summary": "We study connectivity functions, that is, integer-valued symmetric submodular functions on a finite ground set attaining $0$ on the empty set. For a connectivity function $f$ on an $n$-element set $V$ and an integer $k\\ge 0$, we show that the family of all sets $X\\subseteq V$ with $f(X)=k$ admits a polynomial-size representation: it can be described by a list of at most $O(n^{4k})$ items, each consisting of a set to be included, another set to be excluded, and a partition of remaining elements, such that the union of some members of the partition and the set to be included are precisely all…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DS"
+  ],
+  "published": "2026-03-11",
+  "updated": "2026-03-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

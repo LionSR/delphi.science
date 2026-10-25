@@ -1,0 +1,22 @@
+{
+  "key": "2603.11270",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.11270",
+  "title": "On the PLS-Completeness of $k$-Opt Local Search for the Traveling Salesman Problem",
+  "authors": [
+    "Sophia Heimann",
+    "Hung P. Hoang",
+    "Stefan Hougardy"
+  ],
+  "summary": "The $k$-Opt algorithm is a local search algorithm for the traveling salesman problem. Starting with an initial tour, it iteratively replaces at most $k$ edges in the tour with the same number of edges to obtain a better tour. Krentel (FOCS 1989) showed that the traveling salesman problem with the $k$-Opt neighborhood is complete for the class PLS (polynomial time local search). However, his proof requires $k \\gg 1000$ and has a substantial gap. We provide the first rigorous proof for the PLS-completeness and at the same time drastically lower the value of $k$ to $k \\geq 15$, addressing an…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-03-11",
+  "updated": "2026-03-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

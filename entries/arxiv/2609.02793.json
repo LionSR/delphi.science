@@ -1,0 +1,21 @@
+{
+  "key": "2609.02793",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.02793",
+  "title": "Variational preparation of thermofield double states for SYK models via multi-angle QAOA: sequential angle pruning for circuit reduction",
+  "authors": [
+    "Haji Muhammad Husnain Ashfaq",
+    "Moongul Byun",
+    "Keun-Young Kim"
+  ],
+  "summary": "Variational preparation of thermofield double (TFD) states can require deep quantum circuits, particularly for interacting many-body systems. Reducing these circuits while retaining high fidelity is therefore crucial for TFD-state preparation on noisy quantum processors. We study this problem by applying the multi-angle quantum approximate optimization algorithm (ma-QAOA) to TFD-state preparation and introducing two top-down sequential angle-pruning algorithms. Starting from the optimized initial ma-QAOA circuit, both algorithms sequentially remove Pauli-string evolutions with small…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-02",
+  "updated": "2026-09-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

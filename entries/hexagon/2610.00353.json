@@ -1,0 +1,36 @@
+{
+  "key": "2610.00353",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00353v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00353v1",
+  "title": "Arithmetic reconstruction and error recovery from three quadratic traces",
+  "authors": [
+    "Brice Pouly"
+  ],
+  "summary": "We study completely multiplicative sign functions $h$ through their values at positive integers of the forms $n^2+1$, $n^2+2$ and $n^2-2$, with observed indices $1\\le n\\le N$. First occurrences of prime factors give a canonical information set and a complete, prefix-compatible family of parity relations, each involving at most $\\lfloor\\log_2N\\rfloor+3$ readings. These relations yield exact bounded-distance repair, including corrupted information coordinates, in time $N^{O(1)}(4+\\lfloor\\log_2N\\rfloor)^t$ for $t$ errors; erasures enter through an explicit rank parameter. We then construct…",
+  "domain": "math.NT",
+  "tags": [
+    "math.IT",
+    "msc:11A25",
+    "msc:11D09",
+    "msc:94B35",
+    "arithmetic reconstruction",
+    "completely multiplicative functions",
+    "error recovery",
+    "information sets",
+    "parity relations",
+    "quadratic traces",
+    "reading noise"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-18",
+  "version": 1,
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "none",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

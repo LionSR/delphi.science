@@ -1,0 +1,22 @@
+{
+  "key": "2606.03845",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.03845",
+  "title": "Embedded Trefftz DG method for reaction-diffusion problems on anisotropic meshes",
+  "authors": [
+    "Sergio Gómez",
+    "Chiara Perinati",
+    "Paul Stocker",
+    "Igor Voulis"
+  ],
+  "summary": "We present and analyze an embedded Trefftz discontinuous Galerkin method for reaction-diffusion problems on anisotropic meshes. The method is constructed by imposing a relaxed local Trefftz condition via an embedding into a tensor-product DG space, yielding a reduced global system while preserving the approximation properties of the underlying high-order discretization. We prove stability and quasi-optimality on anisotropic, possibly curved, quadrilateral elements, and derive anisotropic a priori error estimates. Numerical experiments for $h$- and $hp$-refinement, including curved-domain…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-02",
+  "updated": "2026-06-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

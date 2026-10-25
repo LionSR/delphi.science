@@ -1,0 +1,19 @@
+{
+  "key": "2608.16139",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.16139",
+  "title": "A Reconstructed-Laplacian Method for the Surface Biharmonic Equation on Parametric Meshes",
+  "authors": [
+    "Shuo Yang"
+  ],
+  "summary": "We develop and analyze a continuous/discontinuous Galerkin (CDG) method based on reconstructed surface Laplacians for the biharmonic equation on a smooth closed surface. Continuous mapped finite elements of degree $k\\ge2$ are used on fitted parametric meshes of degree $r\\ge1$, while a discontinuous degree-$(k-2)$ lifting corrects the broken Laplace-Beltrami operator for two-sided conormal-flux jumps. The resulting completed-square form is coercive on the mean-zero space for every fixed $β>0$, without requiring a sufficiently large penalty parameter. Under the standard geometric assumptions,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

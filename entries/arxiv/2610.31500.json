@@ -1,0 +1,21 @@
+{
+  "key": "2610.31500",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.31500",
+  "title": "The Impact of Markovian Errors on Random Circuits",
+  "authors": [
+    "Anthony M. Polloreno",
+    "Timothy Proctor",
+    "Robin Blume-Kohout"
+  ],
+  "summary": "Randomized benchmarking (RB) returns a single decay parameter or gate error rate, but when the noise is gate-dependent that parameter is notoriously difficult to interpret. We study RB and related random-circuit benchmarks under small gate-local Markovian noise by factorizing each noisy gate into its ideal action followed by the exponential of a small error generator and then perturbing the RB $\\mathscr{L}$ matrix, which models the RB decay. For any low-error gate set that satisfies the requirements of RB (it is a sequence-asymptotic unitary 2-design), we show that Pauli-stochastic error…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

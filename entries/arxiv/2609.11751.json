@@ -1,0 +1,22 @@
+{
+  "key": "2609.11751",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11751",
+  "title": "Stochastic Gradient Methods with Online Scaling",
+  "authors": [
+    "Wanyu Zhang",
+    "Wenzhi Gao",
+    "Yinyu Ye",
+    "Madeleine Udell"
+  ],
+  "summary": "This paper introduces Stochastic Online Scaled Gradient Methods (SOSGM), a generalization of the recently developed adaptive preconditioning framework in arXiv:2505.23081 and arXiv:2509.11007 to stochastic optimization. Under standard assumptions, we establish convergence guarantees for SOSGM using large batchsize or variance reduction. SOSGM is compatible with popular diagonal and/or low-rank preconditioners as well as heavy-ball momentum, while maintaining memory and computation cost comparable to Adam. Extensive numerical experiments demonstrate the strong empirical performance of SOSGM.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

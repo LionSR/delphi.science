@@ -1,0 +1,22 @@
+{
+  "key": "2601.12675",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.12675",
+  "title": "Physics-informed machine learning for reconstruction of dynamical systems with invariant measure score matching",
+  "authors": [
+    "Yongsheng Chen",
+    "Suddhasattwa Das",
+    "Wei Guo",
+    "Xinghui Zhong"
+  ],
+  "summary": "In this paper, we develop a novel mesh-free framework, termed physics-informed neural networks with invariant measure score matching (PINN-IMSM), for reconstructing dynamical systems from unlabeled point-cloud data that capture the system's invariant measure. The invariant density satisfies the steady-state Fokker-Planck (FP) equation. We reformulate this equation in terms of its score function (the gradient of the log-density), which is estimated directly from data via denoising score matching, thereby bypassing explicit density estimation. This learned score is then embedded into a…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-19",
+  "updated": "2026-01-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2606.30281",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.30281",
+  "title": "Quantum Lazy Sampling and Path Recording for Any Group",
+  "authors": [
+    "Ben Foxman",
+    "Alex Lombardi",
+    "Fermi Ma",
+    "Barak Nehoran",
+    "John Wright"
+  ],
+  "summary": "A central challenge in quantum algorithms and cryptography is reasoning about algorithms with oracle access to a random group element (e.g. a random function, permutation, or unitary). Can we efficiently simulate such algorithms? Can we determine what they know after t queries? A classical tool for this is lazy sampling: the oracle does not commit to the full group element upfront, but rather samples partial information about it on the fly. We study a quantum analog of lazy sampling: compressed oracles (or recording oracles). These are quantum data structures that allow on-the-fly simulation…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.CR"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

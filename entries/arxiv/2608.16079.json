@@ -1,0 +1,21 @@
+{
+  "key": "2608.16079",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.16079",
+  "title": "Finite Element Approximation of Nonlocal Problems with Heterogeneous Localization and Local Boundary Conditions",
+  "authors": [
+    "Yuyan Chang",
+    "Hui Liang",
+    "Zhonghua Qiao"
+  ],
+  "summary": "This paper studies the finite element approximation of a one-dimensional nonlocal Poisson problem with heterogeneous localization and homogeneous local Dirichlet boundary conditions. These local boundary conditions induce localization kernels with spatially varying interaction neighborhoods, which lead to substantial numerical challenges for the assembly of the singular nonlocal stiffness matrix. An asymptotically compatible conforming finite element method is developed for the variational formulation, together with an exact geometric decomposition for the singular stiffness matrix assembly.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

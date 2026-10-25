@@ -1,0 +1,21 @@
+{
+  "key": "2604.07662",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.07662",
+  "title": "Parameter-Free Non-Ergodic Extragradient Algorithms for Solving Monotone Variational Inequalities",
+  "authors": [
+    "Lingqing Shen",
+    "Fatma Kılınç-Karzan"
+  ],
+  "summary": "Monotone variational inequalities (VIs) provide a unifying framework for convex minimization, equilibrium computation, and convex-concave saddle-point problems. Extragradient-type methods are among the most effective first-order algorithms for such problems, but their performance hinges critically on stepsize selection. While most existing theory focuses on ergodic averages of the iterates, practical performance is often driven by the significantly stronger behavior of the last iterate. Moreover, available last-iterate guarantees typically rely on fixed stepsizes chosen using…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-04-09",
+  "updated": "2026-04-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

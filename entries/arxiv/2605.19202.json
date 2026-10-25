@@ -1,0 +1,25 @@
+{
+  "key": "2605.19202",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.19202",
+  "title": "Aerial Inspection Behaviors via RL-based Quadrotor Control for Under-canopy Forest Environments",
+  "authors": [
+    "Fausto Mauricio Lagos Suarez",
+    "Akshit Saradagi",
+    "Vidya Sumathy",
+    "Viswa Narayanan Sankaranarayanan",
+    "George Nikolakopoulos"
+  ],
+  "summary": "This paper addresses the problem of using a deep Reinforcement Learning (RL)-based low-level Quadrotor controller within an autonomous Quadrotor navigation stack for aerial inspection missions in under-canopy forest environments. Specifically, the article presents an end-to-end (mapping states to RPMs) Quadrotor control policy that achieves inspection view-pose tracking (simultaneous position and yaw reference tracking), which is crucial for various target inspection behaviors and point-to-point navigation in forests. To ensure safe and reliable deployment of the end-to-end RL controller in…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

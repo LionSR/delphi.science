@@ -1,0 +1,20 @@
+{
+  "key": "2606.14447",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.14447",
+  "title": "Dealing with locality in QAOA",
+  "authors": [
+    "Mithilesh Kumar",
+    "Yusuf Tahir"
+  ],
+  "summary": "Shallow-depth QAOA on sparse, high-diameter MaxCut instances faces a locality bottleneck: at depth \\(p\\), local observables can depend only on a bounded neighborhood of the circuit interaction graph. We propose a transport-augmented QAOA that keeps the MaxCut cost Hamiltonian unchanged but enriches the mixer with optimized, unweighted shortcut couplings (scheduled \\(XX+YY\\)) to collapse the effective interaction-graph diameter. Using exact finite-depth support recursions, we relate optimal shortcut placement to bounded-diameter graph augmentation, and show in benchmarks that (unlike ma-QAOA)…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-12",
+  "updated": "2026-06-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

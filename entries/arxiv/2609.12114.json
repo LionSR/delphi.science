@@ -1,0 +1,21 @@
+{
+  "key": "2609.12114",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.12114",
+  "title": "Global and Unconditional $R$-Linear Convergence of Rank-Compressed Weighted LMSD Sweeps for Strictly Convex Quadratics",
+  "authors": [
+    "Shutai Yang",
+    "Ya-xiang Yuan"
+  ],
+  "summary": "We study limited memory steepest descent (LMSD) with exact algebraic rank compression for strictly convex quadratic optimization. At each cycle, the method restricts the gradient history to its column space and applies the reciprocals of all Ritz values of the compressed projection in the next sweep. If the block-start gradient has at most $p$ active distinct eigenvalues, the delayed sweep terminates finitely. For nonterminating trajectories, a determinant and Cauchy--Binet formula for the complete-sweep polynomial yields global convergence without a full-rank history or a run-wise…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

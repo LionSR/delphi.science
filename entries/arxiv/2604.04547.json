@@ -1,0 +1,24 @@
+{
+  "key": "2604.04547",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.04547",
+  "title": "An algorithmic Polynomial Freiman-Ruzsa theorem",
+  "authors": [
+    "Davi Castro-Silva",
+    "Jop Briët",
+    "Srinivasan Arunachalam",
+    "Arkopal Dutt",
+    "Tom Gur"
+  ],
+  "summary": "We provide algorithmic versions of the Polynomial Freiman-Ruzsa theorem of Gowers, Green, Manners, and Tao (Ann. of Math., 2025). In particular, we give a polynomial-time algorithm that, given a set $A \\subseteq \\mathbb{F}_2^n$ with doubling constant $K$, returns a subspace $V \\subseteq \\mathbb{F}_2^n$ of size $|V| \\leq |A|$ such that $A$ can be covered by $2K^C$ translates of $V$, for a universal constant $C>1$. We also provide efficient algorithms for several \"equivalent\" formulations of the Polynomial Freiman-Ruzsa theorem, such as the polynomial Gowers inverse theorem, the classification…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DS"
+  ],
+  "published": "2026-04-06",
+  "updated": "2026-04-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

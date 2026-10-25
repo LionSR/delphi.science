@@ -1,0 +1,19 @@
+{
+  "key": "2606.08690",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.08690",
+  "title": "High Precision Qubit-Efficient Variational Continuous Optimization via Amplitude Estimation",
+  "authors": [
+    "Parth Danve"
+  ],
+  "summary": "Optimization of continuous-variable objectives on standard gate-based quantum computers via variational algorithms such as QAOA is typically approached by first discretizing each decision variable into a finite binary representation. This increases qubit requirements and restricts solution precision through fixed-resolution encodings. We propose a qubit-efficient variational framework for continuous optimization that instead encodes each decision variable into the squared amplitude or equivalently, the measurement probability of a single qubit state. This removes explicit discretization from…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-07",
+  "updated": "2026-06-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2605.01313",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.01313",
+  "title": "Spectral interpolation in semi-implicit semi-Lagrangian methods for shallow water equations on the sphere",
+  "authors": [
+    "Michael Chiwere",
+    "Daniel Fortunato",
+    "Grady B. Wright"
+  ],
+  "summary": "Semi-implicit semi-Lagrangian (SISL) methods are commonly used for the shallow water equations (SWE) because they allow for larger time steps than those permitted by the Courant-Friedrichs-Lewy (CFL) stability condition in Eulerian schemes. In these methods, the semi-Lagrangian treatment of advection is typically performed using lower-order interpolation, such as tensor-product Lagrange interpolation with cubic or quintic polynomials. However, operational SISL schemes routinely employ spectrally accurate spatial discretizations, such as spherical harmonics or the double Fourier sphere (DFS)…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-02",
+  "updated": "2026-05-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

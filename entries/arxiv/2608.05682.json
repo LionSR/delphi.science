@@ -1,0 +1,24 @@
+{
+  "key": "2608.05682",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.05682",
+  "title": "A Damped Subspace Splitting Algorithm for Constrained Density Functional Theory",
+  "authors": [
+    "Yuanming Su",
+    "Yukuan Hu",
+    "Xin Liu",
+    "Guanghui Hu"
+  ],
+  "summary": "Constrained density functional theory (CDFT) provides a powerful framework for describing electronically excited and charge-localized states, which underlie a broad range of physical and chemical phenomena. However, the discretized optimization problems arising from CDFT calculations remain challenging, owing to the presence of both the Stiefel manifold constraint and additional nonconvex quadratic constraints. Existing algorithms either fail to enforce the quadratic constraints with high accuracy or face convergence issues due to double-loop iterative structures. In this paper, we first…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "physics.chem-ph",
+    "physics.comp-ph"
+  ],
+  "published": "2026-08-06",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

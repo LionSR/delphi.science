@@ -1,0 +1,24 @@
+{
+  "key": "2608.12520",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.12520",
+  "title": "Weight Certificates for Convex Multi-Objective MPC: Geometric Characterization, $\\ell^1$ Construction, and $\\ell^2$ Foreclosure",
+  "authors": [
+    "Hadi Hajieghrary",
+    "Benedikt Walter",
+    "Chaitanya Shinde",
+    "Miguel Hurtadoand Jerry Lopez"
+  ],
+  "summary": "Automated-driving rulebooks rank rule violations lexicographically, and model predictive control enforces that ranking either exactly, through $L{+}1$ sequential programs per tick, or approximately, through a weighted sum tuned by the separation heuristic $w_1\\gg w_2\\gg\\cdots\\gg w_L$. We show the heuristic answers the wrong question. For a convex priority-ordered program, a weighted sum reproduces the lexicographic optimum precisely when its weight, augmented by a unit performance coefficient, supports the upper image of the achievement map at the lexicographic point; the admissible weights…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY",
+    "math.AG"
+  ],
+  "published": "2026-08-12",
+  "updated": "2026-08-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

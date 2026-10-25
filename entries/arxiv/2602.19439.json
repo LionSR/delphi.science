@@ -1,0 +1,23 @@
+{
+  "key": "2602.19439",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.19439",
+  "title": "OptiRepair: Closed-Loop Diagnosis and Repair of Supply Chain Optimization Models with LLM Agents",
+  "authors": [
+    "Ruicheng Ao",
+    "David Simchi-Levi",
+    "Xinshang Wang"
+  ],
+  "summary": "Supply chain optimization models frequently become infeasible because of modeling errors. Diagnosis and repair require scarce OR expertise: analysts must interpret solver diagnostics, trace root causes across echelons, and fix formulations without sacrificing operational soundness. Whether AI agents can perform this task remains untested. We decompose this task into two phases: a domain-agnostic feasibility phase that iteratively repairs any LP using IIS-guided diagnosis, and a domain-specific validation phase that enforces five rationality checks grounded in inventory theory. We test 22 API…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-02-23",
+  "updated": "2026-02-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

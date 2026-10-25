@@ -1,0 +1,27 @@
+{
+  "key": "2606.11814",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.11814",
+  "title": "Sparsified Kolmogorov-Arnold Networks for Interpretable Quantum State Tomography",
+  "authors": [
+    "Xinge Wu",
+    "Huaxin Wang",
+    "Jiajun Liu",
+    "Ruiqing He",
+    "Jiandong Shang",
+    "Hengliang Guo",
+    "Qiang Chen"
+  ],
+  "summary": "Machine-learning approaches to quantum state tomography can achieve high reconstruction fidelity, but the physical structure used by the trained model often remains implicit. Here we ask whether a sparsified Kolmogorov-Arnold Network (KAN) can be used not only as a regressor, but also as an inspectable reconstruction rule whose internal organization can be checked against known Pauli structure. We study a controlled three-qubit GHZ-family benchmark in which all 63 non-identity Pauli expectation values are used to reconstruct three GHZ-subspace variables: the population imbalance $z$, the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "published": "2026-06-10",
+  "updated": "2026-06-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

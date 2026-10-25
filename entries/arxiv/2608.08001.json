@@ -1,0 +1,23 @@
+{
+  "key": "2608.08001",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.08001",
+  "title": "Reinhardt's Maximum-Perimeter Polygon Problem for n=16, 32, and 64",
+  "authors": [
+    "Jizhou Guo",
+    "Yitao Luo"
+  ],
+  "summary": "A convex polygon is called small if its diameter is at most one. Reinhardt proved the universal perimeter bound $\\operatorname{perim}(P)\\le U_n:=2n\\sin(π/(2n))$, and the bound is attained whenever $n$ has a nontrivial odd divisor. The remaining power-of-two cases have resisted exact solution beyond $n=8$. We give computer-assisted proofs of the first three cases, $n=16,32,64$, and in each case prove uniqueness of the maximizing congruence class. The proof architecture is common to all three cases: pass to the difference body $P-P$; encode its reconstruction by a sign code; prove that every…",
+  "domain": "cs.CG",
+  "tags": [
+    "cs.CG",
+    "math.CO",
+    "math.MG",
+    "math.OC"
+  ],
+  "published": "2026-08-08",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

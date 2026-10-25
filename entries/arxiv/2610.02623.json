@@ -1,0 +1,22 @@
+{
+  "key": "2610.02623",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02623",
+  "title": "Data-Driven Static Output-Feedback Control for Multi-Agent Systems",
+  "authors": [
+    "Paul Serna-Torre",
+    "Adam Sedlak",
+    "Patricia Hidalgo-Gonzalez"
+  ],
+  "summary": "This work proposes a data-driven framework that synthesizes output-feedback control for linear time-invariant multi-agent systems (MAS). We first develop two algorithms that use offline data samples of state and input trajectories to determine a Nash equilibrium (NE) for MAS. Next, we formulate a semidefinite program that, given the NE solution, computes the static output-feedback controllers for the agents in MAS. Compared to prior work, virtues of our framework include weaker controllability assumptions, the absence of online information and data-driven estimation of states. Next, we use…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

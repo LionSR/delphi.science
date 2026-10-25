@@ -1,0 +1,24 @@
+{
+  "key": "2608.23554",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.23554",
+  "title": "Provably adaptive sampling with uniform and remasking discrete diffusion models",
+  "authors": [
+    "Daniil Dmitriev",
+    "Zhihan Huang",
+    "Yuting Wei"
+  ],
+  "summary": "Discrete diffusion models offer a promising alternative to autoregressive generation by enabling parallel updates, but their sampling efficiency can depend strongly on the choice of the forward process and the sampler. For the uniform forward process, existing lower bounds for the standard $τ$-leaping sampler scale linearly with the ambient dimension $d$, raising the question of whether this dependence is intrinsic to the forward process. We answer this question in the negative. We consider a first-order sampler based on the leave-one-out denoiser for uniform and remasking processes whose…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.IT",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-08-24",
+  "updated": "2026-08-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

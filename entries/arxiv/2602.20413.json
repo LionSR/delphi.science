@@ -1,0 +1,21 @@
+{
+  "key": "2602.20413",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.20413",
+  "title": "KANDy: Kolmogorov-Arnold Networks and Dynamical System Discovery",
+  "authors": [
+    "Kevin Slote",
+    "Jeremie Fish",
+    "Erik Bollt"
+  ],
+  "summary": "We introduce the Kolmogorov-Arnold Network for Dynamics (KANDy) as a zero-depth, wide neural architecture capable of discovering governing equations in chaotic and complex dynamical systems. Building on the foundation of Kolmogorov-Arnold Networks (KANs), KANDy explicitly learns governing equations by replacing sparse regression with a KAN. The synthesis of KANs and sparse regression addresses the limitations of equation discovery for KANs applied to dynamical systems and overcomes cases where sparse regression is hindered by sparsity constraints. Additionally, we show that our model,…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS"
+  ],
+  "published": "2026-02-23",
+  "updated": "2026-03-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

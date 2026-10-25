@@ -1,0 +1,21 @@
+{
+  "key": "2602.21911",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.21911",
+  "title": "A generalized Riemann problem-based compact reconstruction method for finite volume schemes",
+  "authors": [
+    "Gino I. Montecinos",
+    "Eleuterio F. Toro",
+    "Lucas O. Müller"
+  ],
+  "summary": "We present a Generalized Riemann Problem-based reconstruction method (GRPrec) for high-order finite volume schemes applied to hyperbolic partial differential equations. The method constructs spatial polynomials using cell averages at the current time level and GRP solution data from the previous time level. The resulting GRPrec stencil is as compact as that of discontinuous Galerkin (DG) schemes but unlike DG, our finite volume schemes obey a generous CFL stability condition that is independent of the order of accuracy. We assess the method's performance through test problems for smooth and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-25",
+  "updated": "2026-02-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,35 @@
+{
+  "key": "2610.00011",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00011v2",
+  "pdf": "https://hexagonmath.org/pdf/2610.00011v2",
+  "title": "A generalized Gerver sofa for angled corridors",
+  "authors": [
+    "Henrik Schou Guttesen"
+  ],
+  "summary": "The moving sofa problem asks for the maximal area of a two-dimensional object capable of being moved through a right-angled corridor of unit width. J. L. Gerver constructed a sofa of area $2.2195\\dots$, which was only recently proven to be optimal by J. Baek. Here, I consider the moving sofa problem in an angled corridor, $C_{\\varphi}$, of unit width for turn angles $0 < \\varphi \\le \\frac{\\pi}{2}$. I first generalize Hammersley's arguments to devise simple analytical lower and upper area bounds for all $0 < \\varphi \\le \\frac{\\pi}{2}$. ChatGPT-6 Astra (Codex) is prompted to derive a…",
+  "domain": "math.MG",
+  "tags": [
+    "math.HO",
+    "msc:49Q10",
+    "msc:49K15",
+    "Geometry",
+    "Gerver-sofa",
+    "moving-sofa-problem",
+    "recreational-math"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-04",
+  "version": 2,
+  "ai_models": [
+    "Codex"
+  ],
+  "authorship": "mixed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

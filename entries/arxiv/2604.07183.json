@@ -1,0 +1,19 @@
+{
+  "key": "2604.07183",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.07183",
+  "title": "Stopping on the last success with unknown odds: asymptotic minimax optimality of the plug-in rule",
+  "authors": [
+    "Davy Paindaveine"
+  ],
+  "summary": "We study the last-success problem for sequential Bernoulli trials in the homogeneous setting where $X_1,\\ldots,X_n$ are i.i.d. $\\mathrm{Bernoulli}(p)$ but the success probability $p\\in(0,1)$ is unknown to the decision maker. When $p$ is known, Bruss' sum-the-odds theorem yields an optimal threshold rule with win probability $V_n(p)$; when it is not, the odds driving this threshold must be learned from the very sequence on which one is trying to stop, which turns the problem into a genuinely statistical decision problem over the class of $p$-blind rules---those depending on the data but not…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-04-08",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

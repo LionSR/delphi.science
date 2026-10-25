@@ -1,0 +1,20 @@
+{
+  "key": "2608.18362",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.18362",
+  "title": "A new unconditional lower bound for shoreline search",
+  "authors": [
+    "Alexander Temerev"
+  ],
+  "summary": "A unit-speed searcher starts at the origin of the Euclidean plane and must hit an unknown straight line whose direction and distance from the origin are both unknown. We prove that every deterministic search path has competitive ratio at least $C_{\\log}\\approx 12.5937096701246675$. The bound is unconditional: the path need not be cyclic, self-similar, spiral-like, or monotone in angle. For each projection direction, we compare the path with a zigzag obtained by sorting its alternating record turns. The resulting completion constraints are interpreted as jobs with scale-dependent deadlines…",
+  "domain": "math.MG",
+  "tags": [
+    "math.MG",
+    "math.OC"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

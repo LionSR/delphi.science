@@ -1,0 +1,23 @@
+{
+  "key": "2604.21016",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.21016",
+  "title": "SGD at the Edge of Stability: The Stochastic Sharpness Gap",
+  "authors": [
+    "Fangshuo Liao",
+    "Afroditi Kolomvaki",
+    "Anastasios Kyrillidis"
+  ],
+  "summary": "When training neural networks with full-batch gradient descent (GD) and step size $η$, the largest eigenvalue of the Hessian -- the sharpness $S(\\boldsymbolθ)$ -- rises to $2/η$ and hovers there, a phenomenon termed the Edge of Stability (EoS). \\citet{damian2023selfstab} showed that this behavior is explained by a self-stabilization mechanism driven by third-order structure of the loss, and that GD implicitly follows projected gradient descent (PGD) on the constraint $ S(\\boldsymbolθ)\\leq 2/η$. For mini-batch stochastic gradient descent (SGD), the sharpness stabilizes below $2/η$, with the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-04-22",
+  "updated": "2026-04-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

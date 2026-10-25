@@ -1,0 +1,20 @@
+{
+  "key": "2601.13395",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.13395",
+  "title": "Generalized Adjoint Method",
+  "authors": [
+    "Andrew Zheng",
+    "Adam R. Stinchcombe"
+  ],
+  "summary": "The adjoint method is an efficient way to numerically compute gradients in optimization problems with constraints, but is only formulated to differentiable cost and constraint functions on real variables. With the introduction of complex variables, which occur often in many inverse problems in electromagnetism and signal processing problems, both the cost and constraint can become non-holomorphic and hence non-differentiable in the standard definitions. Using the notion of CR-calculus, a generalized adjoint method is introduced that can compute the direction of steepest ascent for the cost…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-19",
+  "updated": "2026-01-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

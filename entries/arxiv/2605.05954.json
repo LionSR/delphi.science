@@ -1,0 +1,22 @@
+{
+  "key": "2605.05954",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05954",
+  "title": "Label Correcting Algorithms for the Multiobjective Temporal Shortest Path Problem",
+  "authors": [
+    "Edina Marica",
+    "Clemens Thielen",
+    "Alina Wittmann"
+  ],
+  "summary": "Given a directed, discrete-time temporal graph $G=(V,R)$, a start node $s\\in V$, and $p\\geq1$ objectives, the single-source multiobjective temporal shortest path problem asks, for each $v\\in V$, for the set of nondominated images of temporal $s$-$v$-paths together with a corresponding efficient path for each image. A recent general label setting algorithm for this problem relies on two properties of the objectives - monotonicity and isotonicity. Monotonicity generalizes the nonnegativity assumption required by label setting methods for the classical additive single-objective shortest path…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.OC"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

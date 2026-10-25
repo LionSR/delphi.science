@@ -1,0 +1,25 @@
+{
+  "key": "2609.32083",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32083",
+  "title": "When Should a Human Take Back Control? Optimal Delegation under Turbulent AI Risk",
+  "authors": [
+    "Haoze Yan",
+    "Julien Roze",
+    "Ved Upadhyay",
+    "Unal Tatar",
+    "Thibaut Mastrolia"
+  ],
+  "summary": "Deploying AI systems requires deciding when to delegate tasks and when humans should intervene to monitor and mitigate risk induced by AI operations. These decisions are challenging when failures cluster: a hallucination or harmful output can trigger further errors, creating periods of elevated risk. We introduce a continuous-time framework for learning adaptive human oversight under such turbulent AI risk. Existing oversight and delegation formulations condition on history but do not model incident clustering, or its suppression by supervision effort, jointly with the delegation decision…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2603.00448",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.00448",
+  "title": "Semijoins of Annotated Relations",
+  "authors": [
+    "Phokion G. Kolaitis"
+  ],
+  "summary": "The semijoin operation is a fundamental operation of relational algebra that has been extensively used in query processing. Furthermore, semijoins have been used to formulate desirable properties of acyclic schemas; in particular, a schema is acyclic if and only if it has a full reducer, i.e., a sequence of semijoins that converts a given collection of relations to a globally consistent collection of relations. In recent years, the study of acyclicity has been extended to annotated relations, where the annotations are values from some positive commutative monoid. So far, however, it has not…",
+  "domain": "cs.DB",
+  "tags": [
+    "cs.DB",
+    "math.RA"
+  ],
+  "published": "2026-02-28",
+  "updated": "2026-02-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2603.18802",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.18802",
+  "title": "Simplest cubic fields with small class number",
+  "authors": [
+    "Akinari Hoshi",
+    "Hiroaki Iida"
+  ],
+  "summary": "Let $m\\in\\mathbb{Z}$ be an integer and $L_m=\\mathbb{Q}(α)$ be the simplest cubic field with class number $h_m$ and conductor $\\mathfrak{f}_m$ where $α$ is a root of $f_m(X)=X^3-mX^2-(m+3)X-1$. Let $\\mathcal{O}_{L_m}$ be the ring of integers of $L_m$. By using PARI/GP, we determine that if $[\\mathcal{O}_{L_m}:\\mathbb{Z}[α]]=1$ $($resp. $3$, $27$$)$, i.e. $m^2+3m+9=\\mathfrak{f}_m$ $($resp. $3\\mathfrak{f}_m$, $27\\mathfrak{f}_m$$)$, then there exist exactly $581$ (resp. $80$, $142$) integers $m\\geq -1$ such that $h_m\\leq 1000$. We also show that if $-1\\leq m\\leq 10^7$, then $h_m<16$ holds for…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-03-19",
+  "updated": "2026-08-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

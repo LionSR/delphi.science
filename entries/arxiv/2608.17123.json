@@ -1,0 +1,21 @@
+{
+  "key": "2608.17123",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17123",
+  "title": "Wavelet-based multilevel framework for $\\ell_1$-regularized image deblurring",
+  "authors": [
+    "Danyh Tolah",
+    "Malena I. Español",
+    "Misha E. Kilmer"
+  ],
+  "summary": "Solving large-scale $\\ell_1$-regularized image deblurring problems efficiently while preserving sharp edges remains a significant computational challenge. We propose a wavelet-based multilevel framework that embeds three iterative solvers, Iteratively Reweighted Least Squares (IRLS), Split Bregman (SB), and Majorization-Minimization (MM), within a multilevel V-cycle. Discrete wavelet transforms define the interlevel transfer operators, and regularization parameters are selected automatically by Generalized Cross Validation. Two information transfer strategies are introduced and compared: one…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

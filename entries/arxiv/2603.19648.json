@@ -1,0 +1,25 @@
+{
+  "key": "2603.19648",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.19648",
+  "title": "Heavy-Tailed and Long-Range Dependent Noise in Stochastic Approximation: A Finite-Time Analysis",
+  "authors": [
+    "Siddharth Chandak",
+    "Anuj Yadav",
+    "Ayfer Ozgur",
+    "Nicholas Bambos"
+  ],
+  "summary": "Stochastic approximation (SA) is a fundamental iterative framework with broad applications in reinforcement learning and optimization. Classical analyses typically rely on martingale difference or Markov noise with bounded second moments, but many practical settings, including finance and communications, frequently encounter heavy-tailed and long-range dependent (LRD) noise. In this work, we study SA for finding the root of a strongly monotone operator under these non-classical noise models. We establish the first finite-time moment bounds in both settings, providing explicit convergence…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "eess.SY",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-03-20",
+  "updated": "2026-03-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

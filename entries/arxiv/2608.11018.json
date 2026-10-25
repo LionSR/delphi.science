@@ -1,0 +1,22 @@
+{
+  "key": "2608.11018",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.11018",
+  "title": "Integrated Surgical Scheduling with Weekend Bed Occupancy Management: A Column Generation Approach",
+  "authors": [
+    "Sara Cambiaghi",
+    "Saverio Basso",
+    "Davide Duma",
+    "Matteo Salani"
+  ],
+  "summary": "This paper addresses the integrated Master Surgical Scheduling Problem and Surgical Case Assignment Problem under weekend bed capacity constraints. We propose a joint optimization framework that simultaneously determines the assignment of specialties and surgeons to Operating Room (OR) blocks, the selection and assignment of patients to these blocks, and the sequencing of surgeries, while accounting for reduced bed availability during weekends. The model is formulated as a multi-criteria Mixed-Integer Linear Program (MILP) that prioritizes the total priority-weighted amount of scheduled…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-11",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

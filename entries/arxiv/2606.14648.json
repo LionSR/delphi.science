@@ -1,0 +1,23 @@
+{
+  "key": "2606.14648",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.14648",
+  "title": "Which Directions Matter? Sparse Design for Affine Robust Optimization",
+  "authors": [
+    "Pedro Chumpitaz-Flores",
+    "My Duong",
+    "Juan S. Borrero",
+    "Kaixun Hua"
+  ],
+  "summary": "Robust machine learning and optimization rely on the uncertainty model choice. We investigate which uncertainty directions a model must cover when defined by a finite dictionary and a budget constraint. Selecting a subset forms an atomic uncertainty set with a closed form support function, yielding tractable robust programs for affine objectives. We propose a data driven selection rule based on a coverage objective over evaluation directions, including gradients, adversarial perturbations, or shifts observed on held out data. We prove this objective is monotone and submodular, supporting a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-06-12",
+  "updated": "2026-06-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2608.05680",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.05680",
+  "title": "Curvature Residual Geometry in Bregman Regression",
+  "authors": [
+    "Vu Khac Ky"
+  ],
+  "summary": "We consider linear regression models fitted by minimizing Bregman losses of the form \\[ \\frac{1}{n}\\sum_{i=1}^n \\left[ φ(y_i)-φ(x_i^\\topθ) -φ'(x_i^\\topθ) \\bigl(y_i-x_i^\\topθ\\bigr) \\right], \\] where \\(y_i\\) is the observed response and \\(x_i^\\topθ\\) is the linear prediction. Even when the generating potential \\(φ\\) is strongly convex, the resulting regression objective may be nonconvex in \\(θ\\). This creates a gap between the convexity of the generating potential and the optimization geometry of the fitted model. The Hessian can be written as a weighted Gram matrix whose weights depend on the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-06",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

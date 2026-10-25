@@ -1,0 +1,23 @@
+{
+  "key": "2604.09956",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.09956",
+  "title": "Logical Compilation for Multi-Qubit Iceberg Patches",
+  "authors": [
+    "Cordell Mazzetti",
+    "Sayam Sethi",
+    "Rich Rines",
+    "Pranav Gokhale",
+    "Jonathan Mark Baker"
+  ],
+  "summary": "Recent advancements in quantum computing have enabled practical use of quantum error detecting and correcting codes. However, current architectures and future proposals of quantum computer design suffer from limited qubit counts, necessitating the use of high-rate codes. Such codes, with their code parameters denoted as $[[n, k, d]]$, have more than $1$ logical qubit per code (i.e., $k > 1$). This leads to reduced error tolerance of the code, since $\\lceil (d-1)/2\\rceil$ errors on any of the $n$ physical qubits can affect the logical state of all $k$ logical qubits. Therefore, it becomes…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-10",
+  "updated": "2026-04-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

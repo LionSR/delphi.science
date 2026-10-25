@@ -1,0 +1,21 @@
+{
+  "key": "2608.00560",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.00560",
+  "title": "Adaptive operator-generated subspaces for effective many-body Hamiltonians",
+  "authors": [
+    "Ginanjar Utama",
+    "Hermawan Kresno Dipojono"
+  ],
+  "summary": "Electronic-structure and embedding workflows terminate in effective many-body Hamiltonians, whereas quantum eigensolver studies often start from hand-built qubit models. We present the Adaptive Clifford-Algebra Subspace Eigensolver (A-CASE), a single-reference, operator-generated Rayleigh--Ritz method. Overlap, Hamiltonian, observable, and response matrices are reconstructed from one shared Pauli-expectation bank, while adaptive growth scores overlap-aware local pencils and rejects symmetry leakage or near-linear dependence. A strict FCIDUMP adapter supplies the active-space boundary. For…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.comp-ph"
+  ],
+  "published": "2026-08-01",
+  "updated": "2026-08-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

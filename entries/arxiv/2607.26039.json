@@ -1,0 +1,24 @@
+{
+  "key": "2607.26039",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.26039",
+  "title": "Iterate Wronskians over $\\mathbb{R}^d$ as $N$-ary brackets on $\\mathbb{R}[x^1,\\ldots,x^d]$: the $N$-bonacci numbers bound the highest total degrees",
+  "authors": [
+    "Markuss G. Kenins",
+    "Arthemy V. Kiselev"
+  ],
+  "summary": "For the algebra $\\mathbb{R}[x^1,\\ldots,x^d]$ of polynomials in $d\\geqslant 1$ variables, regard the complete generalised Wronskian $W_d^k$ of differential order $k\\geqslant 1$ over $\\mathbb{R}^d$ as the $N=\\tbinom{d+k}{d}$-ary Lie bracket. Take an $N$-tuple of polynomials, calculate their Wronskian, and keep re-using the newly-created polynomials to produce more of them. The problem is: how fast do their maximal total degrees grow with the number $n$ of iterations of the bracket? Here enter the $N$-bonacci numbers defined by the recurrence $F^{(N)}_n=F^{(N)}_{n-1}+\\cdots+F^{(N)}_{n-N}\\in…",
+  "domain": "math.RA",
+  "tags": [
+    "math.RA",
+    "math-ph",
+    "math.CO",
+    "math.NT",
+    "math.QA"
+  ],
+  "published": "2026-07-28",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

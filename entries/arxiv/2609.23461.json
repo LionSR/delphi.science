@@ -1,0 +1,20 @@
+{
+  "key": "2609.23461",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.23461",
+  "title": "A Combinatorial Benders Decomposition Framework for Two-Dimensional Irregular Bin Packing Problems with Convex Polygons",
+  "authors": [
+    "Jianming Wang",
+    "Zhouwang Yang"
+  ],
+  "summary": "Two-dimensional irregular bin packing combines combinatorial bin-assignment decisions with difficult geometric feasibility constraints, making exact optimization challenging. This paper develops an exact combinatorial Benders decomposition framework for the two-dimensional irregular bin packing problem with convex polygons, coupling a pattern-based master problem with an exact single-bin geometric feasibility oracle. The dynamically strengthened Benders master is solved by a tailored exact branch-and-price procedure that incorporates objective-layered search and adaptive exact pricing.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-20",
+  "updated": "2026-09-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

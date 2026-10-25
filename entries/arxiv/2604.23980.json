@@ -1,0 +1,22 @@
+{
+  "key": "2604.23980",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23980",
+  "title": "SUDA-Muon: Structural Design Principles and Boundaries for Fully Decentralized Muon",
+  "authors": [
+    "Hengrui Zhang",
+    "Boao Kong",
+    "Jiahe Geng",
+    "Zhengyang Huang"
+  ],
+  "summary": "Fully decentralized Muon is difficult because its nonlinear matrix-sign operator does not commute with linear gossip averaging. This makes decentralized Muon a structural design problem: in designing the algorithm, one must distinguish modular components from non-modular ones. We propose \\sudamuon{}, which realizes this separation through a unified primal--dual communication template called SUDA; within this template, ED/D$^2$, EXTRA, and gradient tracking become modular backbone choices. We prove a topology-separated non-asymptotic convergence guarantee in the nuclear-norm geometry: the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-04-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

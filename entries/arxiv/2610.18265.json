@@ -1,0 +1,22 @@
+{
+  "key": "2610.18265",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.18265",
+  "title": "Improved Analysis of Adaptive Task Allocation and Non-Stationary Processing Times",
+  "authors": [
+    "Grigory Begunov",
+    "Ilgam Latypov",
+    "Yuriy Dorn",
+    "Alexander Tyurin"
+  ],
+  "summary": "We study the task allocation problem, where our goal is to develop an online algorithm that efficiently distributes tasks among workers based on their computational performance. This task is challenging since computation times are random and non-stationary in practice. Recent works have introduced different online algorithms to address this problem. One of them is Adaptive Task Allocation (ATA), a bandit-style algorithm. However, previous theoretical guarantees leave substantial room for improvement, and existing methods are designed only for stationary computation times. Using new proof…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

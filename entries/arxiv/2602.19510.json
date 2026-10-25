@@ -1,0 +1,24 @@
+{
+  "key": "2602.19510",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.19510",
+  "title": "Less is More: Convergence Benefits of Fewer Data Weight Updates over Longer Horizon",
+  "authors": [
+    "Rudrajit Das",
+    "Neel Patel",
+    "Meisam Razaviyayn",
+    "Vahab Mirrokni"
+  ],
+  "summary": "Data mixing--the strategic reweighting of training domains--is a critical component in training robust machine learning models. This problem is naturally formulated as a bilevel optimization task, where the outer loop optimizes domain weights to minimize validation loss, and the inner loop optimizes model parameters to minimize the weighted training loss. Classical bilevel optimization relies on hypergradients, which theoretically require the inner optimization to reach convergence. However, due to computational constraints, state-of-the-art methods use a finite, often small, number of inner…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-02-23",
+  "updated": "2026-02-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

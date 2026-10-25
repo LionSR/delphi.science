@@ -1,0 +1,22 @@
+{
+  "key": "2608.28571",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.28571",
+  "title": "Learning to Decode Concatenated Quantum Codes with Hierarchical Message Passing",
+  "authors": [
+    "Jiahui Wu",
+    "Chao Zhang",
+    "Zipeng Wu",
+    "Shilin Huang"
+  ],
+  "summary": "We introduce a neural message-passing framework for decoding general concatenated stabilizer codes. Soft beliefs propagate bidirectionally across concatenation levels, and lightweight neural networks learn only to aggregate incoming messages. For the concatenated $[[15,7,3]]$ quantum Hamming code, the resulting decoder achieves substantially higher thresholds than the state-of-the-art bidirectional hard-decision decoder under both bit-flip and depolarizing noise. In particular, the depolarizing pseudo-threshold nearly doubles, from $6.5\\%$ to $12.3\\%$. For many-hypercube codes, a decoder…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-28",
+  "updated": "2026-08-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2609.35668",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.35668",
+  "title": "Optimal Query Complexity for Ground-State Preparation",
+  "authors": [
+    "Boyang Chen",
+    "Minbo Gao",
+    "Xinzhao Wang",
+    "Shuo Zhou"
+  ],
+  "summary": "We determine the optimal query complexity of ground-state preparation to trace-distance error $\\varepsilon$ when an energy threshold in the spectral gap is known. Let $U_H$ be an $α$-block-encoding of a Hamiltonian with unique ground state $|ψ_0\\rangle$, and suppose $|\\langleψ_0|U_I|0\\rangle|\\geγ$ for a state-preparation oracle $U_I$. The threshold lies at least $Δ/2$ above the ground-state energy and at least $Δ/2$ below every excited-state energy. We give two algorithms that prepare a state within trace distance $\\varepsilon$ of the ground state. One uses…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.DS"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

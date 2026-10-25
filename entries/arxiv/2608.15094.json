@@ -1,0 +1,22 @@
+{
+  "key": "2608.15094",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.15094",
+  "title": "An error-mitigated quantum annealing solution for the weighted Max-Cut problem on a cubic lattice",
+  "authors": [
+    "Y. S. Yang",
+    "P. Tyson",
+    "A. B Murphy"
+  ],
+  "summary": "The weighted Max-Cut problem is an NP-hard problem with application implications. It is investigated on a cubic lattice with 113 nodes and mixed-signed random edge weights. For a fixed upper bound on edge weights, it has been demonstrated that the computational difficulty increases as the lower bound on edge weights becomes more negative. The solution time for the problem using a novel error-mitigated quantum annealing approach is compared with standard D-Wave quantum annealing (QA) and BQM hybrid solvers, as well as various classical solvers. For the QPU-embeddable weighted Max-Cut…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math-ph"
+  ],
+  "published": "2026-08-15",
+  "updated": "2026-08-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

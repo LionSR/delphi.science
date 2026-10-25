@@ -1,0 +1,20 @@
+{
+  "key": "2606.28718",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28718",
+  "title": "2-adic Valuations of Coefficients of the Fifth and Ninth Powers of the Thue--Morse Generating Function",
+  "authors": [
+    "Zhao Shen",
+    "Xinping Wang"
+  ],
+  "summary": "Let $T(x)=\\prod_{k=0}^{\\infty}(1-x^{2^k})$ be the generating function of the Thue--Morse sequence, and write $T(x)^m=\\sum_{n\\geq 0}t_m(n)x^n$. We prove exact formulas for the $2$-adic valuations of the coefficients $t_5(n)$ and $t_9(n)$: \\[ ν_2\\bigl(t_5(4n+j)\\bigr) =4\\Bigl\\lceil\\tfrac{ν_2(n+1)}{2}\\Bigr\\rceil-\\bigl(ν_2(n+1)\\bmod 2\\bigr), \\quad j\\in\\{0,1,2,3\\}, \\] \\[ ν_2\\bigl(t_9(8n+j)\\bigr) =5\\Bigl\\lceil\\tfrac{ν_2(n+1)}{2}\\Bigr\\rceil-2\\bigl(ν_2(n+1)\\bmod 2\\bigr), \\quad j\\in\\{0,1,\\ldots,7\\}. \\] These formulas confirm Conjecture~5.2 of Gawron--Miska--Ulas~\\cite{ga} for $m=5$ and $m=9$, and…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-06-27",
+  "updated": "2026-06-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

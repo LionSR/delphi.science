@@ -1,0 +1,23 @@
+{
+  "key": "2601.01965",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.01965",
+  "title": "Multigoal-oriented adaptive finite element method with convergence rates",
+  "authors": [
+    "Roland Becker",
+    "Maximilian Brunner",
+    "Paula Hilbert",
+    "Michael Innerberger",
+    "Dirk Praetorius"
+  ],
+  "summary": "We formulate and analyze a goal-oriented adaptive finite element method for a symmetric linear elliptic partial differential equation (PDE) that can simultaneously deal with multiple linear goal functionals. In each step of the algorithm, only two linear finite element systems have to be solved. Moreover, all finite element solutions are computed with respect to the same discrete space, while the underlying triangulations are adapted to resolve all inherent singularities simultaneously. Unlike available results for such a setting in the literature, we give a thorough convergence analysis and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-05",
+  "updated": "2026-01-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

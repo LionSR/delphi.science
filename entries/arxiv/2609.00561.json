@@ -1,0 +1,20 @@
+{
+  "key": "2609.00561",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.00561",
+  "title": "Comparison of Algebraic Block Multi-Coloring and Leiden Methods for Parallel Preconditioning in the ICCG Method",
+  "authors": [
+    "Tomohiro Suzuki"
+  ],
+  "summary": "In the application of incomplete Cholesky preconditioning to the incomplete Cholesky-conjugate gradient (ICCG) method, forward and backward substitutions exhibit sequential dependencies that constitute a major bottleneck for parallelization in multicore environments. To alleviate this bottleneck, the algebraic block multi-coloring (ABMC) method achieves both parallelism and data locality through block-wise coloring. However, ABMC requires the number of blocks to be specified as an input parameter in advance. This study evaluates the Leiden method as an alternative blocking approach for…",
+  "domain": "cs.DC",
+  "tags": [
+    "cs.DC",
+    "math.NA"
+  ],
+  "published": "2026-09-01",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

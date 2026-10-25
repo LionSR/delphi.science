@@ -1,0 +1,21 @@
+{
+  "key": "2610.29554",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.29554",
+  "title": "Dynamical low-rank approximations for the optimal control of matrix ODEs",
+  "authors": [
+    "Benjamin Carrel",
+    "Tommaso Vanzan"
+  ],
+  "summary": "We consider the open-loop optimal control of a dynamical system whose state is described by a time-dependent matrix $X(t)\\in\\mathbb{R}^{m\\times n}$. Gradient-based optimization methods may incur substantial computational and memory costs, particularly for large-scale systems and fine temporal discretizations. To alleviate this computational burden, we develop a mathematical framework to use Dynamical Low Rank Approximations (DLRA) in optimal control problems. We study two distinct paradigms: the first one, called Optimize-then-Project (OtP), first derives the optimality system and then…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

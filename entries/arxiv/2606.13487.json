@@ -1,0 +1,20 @@
+{
+  "key": "2606.13487",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.13487",
+  "title": "Branching-selection particle systems and inverse first passage problems",
+  "authors": [
+    "Jacob Mercer"
+  ],
+  "summary": "A generalised inverse first passage problem asks whether, given a probability measure $p$ on $[0,\\infty]$, one can find a boundary $b:[0,\\infty]\\to \\mathbb{R}$ such that the stopping time:\\[τ:=\\inf\\left\\{t:Λ\\int_0^t ω(W_s-b(s))ds \\geq U\\right\\}\\] has distribution $p$, where $U\\sim Exp(1)$, $Λ\\in(0,\\infty)$ and $ω$ is a monotonic decreasing function. We construct a branching-selection particle system whose hydrodynamic limit is governed by a free boundary problem and connect this to the generalised inverse first passage problem. In the $N$-particle system, particles move as independent…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.AP"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

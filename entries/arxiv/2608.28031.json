@@ -1,0 +1,20 @@
+{
+  "key": "2608.28031",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.28031",
+  "title": "Beyond the Bethe Approximation of the Permanent",
+  "authors": [
+    "Nima Anari"
+  ],
+  "summary": "The canonical Bethe approximation gives a deterministic approximation to the permanent of every nonnegative matrix within a factor of $(\\sqrt{2})^n$. We improve the base of this exponential factor: for some absolute constant $c<\\sqrt{2}$, there is a deterministic polynomial-time $c^n$-approximation for the permanent of every nonnegative matrix. This shows that the canonical Bethe guarantee is not a barrier for deterministic approximation of the permanent. The proof augments the Bethe lower bound with a new certificate tailored to matrices on which that lower bound loses nearly the full…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-08-28",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

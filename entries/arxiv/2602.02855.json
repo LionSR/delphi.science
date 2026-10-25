@@ -1,0 +1,23 @@
+{
+  "key": "2602.02855",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.02855",
+  "title": "When pre-training hurts LoRA fine-tuning: a dynamical analysis via single-index models",
+  "authors": [
+    "Gibbs Nwemadji",
+    "Bruno Loureiro",
+    "Jean Barbier"
+  ],
+  "summary": "Pre-training on a source task is usually expected to facilitate fine-tuning on similar downstream problems. In this work, we mathematically show that this naive intuition is not always true: excessive pre-training can computationally slow down fine-tuning optimization. We study this phenomenon for low-rank adaptation (LoRA) fine-tuning on single-index models trained under one-pass SGD. Leveraging a summary statistics description of the fine-tuning dynamics, we precisely characterize how the convergence rate depends on the initial fine-tuning alignment and the degree of non-linearity of the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cond-mat.dis-nn",
+    "math.ST"
+  ],
+  "published": "2026-02-02",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

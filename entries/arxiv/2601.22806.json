@@ -1,0 +1,22 @@
+{
+  "key": "2601.22806",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.22806",
+  "title": "Aligning the Unseen in Attributed Graphs: Interplay between Graph Geometry and Node Attributes Manifold",
+  "authors": [
+    "Aldric Labarthe",
+    "Roland Bouffanais",
+    "Julien Randon-Furling"
+  ],
+  "summary": "The standard approach to representation learning on attributed graphs -- i.e., simultaneously reconstructing node attributes and graph structure -- is geometrically flawed, as it merges two potentially incompatible metric spaces. This forces a destructive alignment that erodes information about the graph's underlying generative process. To recover this lost signal, we introduce a custom variational autoencoder that separates manifold learning from structural alignment. By quantifying the metric distortion needed to map the attribute manifold onto the graph's Heat Kernel, we transform…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "math.DG"
+  ],
+  "published": "2026-01-30",
+  "updated": "2026-01-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

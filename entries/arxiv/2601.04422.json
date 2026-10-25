@@ -1,0 +1,23 @@
+{
+  "key": "2601.04422",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.04422",
+  "title": "Implementation of Tensor Network Simulation TN-Sim under NWQ-Sim",
+  "authors": [
+    "Aaron C. Hoyt",
+    "Jonathan S. Bersson",
+    "Sean Garner",
+    "Chenxu Liu",
+    "Ang Li"
+  ],
+  "summary": "Large-scale tensor network simulations are crucial for developing robust complexity-theoretic bounds on classical quantum simulation, enabling circuit cutting approaches, and optimizing circuit compilation, all of which aid efficient quantum computation on limited quantum resources. Modern exascale high-performance computing platforms offer significant potential for advancing tensor network quantum circuit simulation capabilities. We implement TN-Sim, a tensor network simulator backend within the NWQ-Sim software package that utilizes the Tensor Algebra for Many-body Methods (TAMM) framework…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-07",
+  "updated": "2026-01-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

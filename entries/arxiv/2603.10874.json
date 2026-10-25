@@ -1,0 +1,22 @@
+{
+  "key": "2603.10874",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.10874",
+  "title": "A Physics-Informed, Global-in-Time Neural Particle Method for the Spatially Homogeneous Landau Equation",
+  "authors": [
+    "Minseok Kim",
+    "Sung-Jun Son",
+    "Yeoneung Kim",
+    "Donghyun Lee"
+  ],
+  "summary": "We propose a physics-informed neural particle method (PINN--PM) for the spatially homogeneous Landau equation. The method adopts a Lagrangian interacting-particle formulation and jointly parameterizes the time-dependent score and the characteristic flow map with neural networks. Instead of advancing particles through explicit time stepping, the Landau dynamics is enforced via a continuous-time residual defined along particle trajectories. This design removes time-discretization error and yields a mesh-free solver that can be queried at arbitrary times without sequential integration. We…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-11",
+  "updated": "2026-03-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

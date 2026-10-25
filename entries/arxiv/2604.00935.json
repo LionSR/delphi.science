@@ -1,0 +1,24 @@
+{
+  "key": "2604.00935",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00935",
+  "title": "Polynomial Parametric Koopman Operators for Stochastic MPC",
+  "authors": [
+    "Efstathios Iliakis",
+    "Wallace Gian Yion Tan",
+    "Liang Wu",
+    "Jan Drgona",
+    "Richard D. Braatz"
+  ],
+  "summary": "This paper develops a parametric Koopman operator framework for Stochastic Model Predictive Control (SMPC), where the Koopman operator is parametrized by Polynomial Chaos Expansions (PCEs). The model is learned from data using the Extended Dynamic Mode Decomposition -- Dictionary Learning (EDMD-DL) method, which preserves the convex least-squares structure for the PCE coefficients of the EDMD matrix. Unlike conventional stochastic Galerkin projection approaches, we derive a condensed deterministic reformulation of the SMPC problem whose dimension scales only with the control horizon and…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-04-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

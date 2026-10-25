@@ -1,0 +1,21 @@
+{
+  "key": "2607.10767",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10767",
+  "title": "Enhancing Presolve in Mixed Integer Programming by Combining Probing and Dual Fixing",
+  "authors": [
+    "Zhao-Wei Wang",
+    "Wei-Kun Chen",
+    "Yu-Hong Dai"
+  ],
+  "summary": "Probing and dual fixing are two powerful presolve techniques in mixed integer programming (MIP) solvers. Probing tentatively sets some binary variables to 0 or 1, applies linear constraint based domain propagation techniques to derive better variable bounds, and extracts useful information such as stronger variable implications and better global variable bounds. Dual fixing attempts to fix variables to lower or upper bounds while ensuring that at least one optimal solution is retained, as long as the problem was feasible. In this paper, we investigate how to combine the two approaches in MIP…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-12",
+  "updated": "2026-07-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2605.13343",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.13343",
+  "title": "A Neural Hierarchical-Matrix Preconditioner for Real-Time GPU Solves",
+  "authors": [
+    "Carl Osborne",
+    "Minghao Guo",
+    "Crystal Owens",
+    "Wojciech Matusik"
+  ],
+  "summary": "Interactive simulation solves Ax=b for a sparse SPD A that changes every frame, inside an 8-16 ms budget. At a few thousand unknowns, the setup of algebraic multigrid alone exceeds that budget, while Jacobi and other local preconditioners have no setup but cannot move error across the domain. We learn a preconditioner for this gap: a graph-and-attention network predicts an SPD approximate inverse in H^2-matrix format. On a spatially ordered 3D mesh, blocks of the true inverse lose rank as the clusters they couple move apart; the nested bases of the format follow that decay, so inference and…",
+  "domain": "cs.GR",
+  "tags": [
+    "cs.GR",
+    "cs.DC",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

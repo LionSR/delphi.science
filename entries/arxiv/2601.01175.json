@@ -1,0 +1,22 @@
+{
+  "key": "2601.01175",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.01175",
+  "title": "Scalable method for mean field control with kernel interactions via random Fourier features",
+  "authors": [
+    "Zhongyuan Cao",
+    "Kaustav Das",
+    "Nicolas Langrené",
+    "Mathieu Laurière"
+  ],
+  "summary": "We develop a scalable algorithm for mean field control problems with kernel interactions by combining particle system simulations with random Fourier feature approximations. The method replaces the quadratic-cost kernel evaluations by linear-time estimates, enabling efficient stochastic gradient descent for training feedback controls in large populations. We provide theoretical complexity bounds and demonstrate through crowd motion and flocking examples that the approach preserves control performance while substantially reducing computational cost. The results indicate that random feature…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-03",
+  "updated": "2026-05-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

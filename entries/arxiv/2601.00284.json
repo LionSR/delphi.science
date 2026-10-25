@@ -1,0 +1,23 @@
+{
+  "key": "2601.00284",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.00284",
+  "title": "Deep learning estimation of the spectral density of functional time series on large domains",
+  "authors": [
+    "Neda Mohammadi",
+    "Soham Sarkar",
+    "Piotr Kokoszka"
+  ],
+  "summary": "We derive an estimator of the spectral density of a functional time series that is the output of a multilayer perceptron neural network. The estimator is motivated by difficulties with the computation of existing spectral density estimators for time series of functions defined on very large grids that arise, for example, in climate compute models and medical scans. Existing estimators use autocovariance kernels represented as large $G \\times G$ matrices, where $G$ is the number of grid points on which the functions are evaluated. In many recent applications, functions are defined on 2D and…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-01-01",
+  "updated": "2026-01-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

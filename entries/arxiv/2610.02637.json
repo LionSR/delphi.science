@@ -1,0 +1,20 @@
+{
+  "key": "2610.02637",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02637",
+  "title": "Higher-Order Kolmogorov-Arnold Networks for Dynamics",
+  "authors": [
+    "Kevin Slote",
+    "Jeremie Fish"
+  ],
+  "summary": "The ability to derive the governing equations of a dynamical system from data is essential for prediction and control across many scientific fields. Two challenges, however, are the expansion of candidate terms when reducing higher-order equations to first-order form and noise from estimating derivatives. We propose Higher-Order-KANDy, which addresses both problems by using delay and derivative (\"jet\") embeddings of the original data with derivative-ordered Kolmogorov-Arnold Networks for Dynamics (KANDy) layers stacked into a machine learning architecture. Compared with SINDy and WSINDy on…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

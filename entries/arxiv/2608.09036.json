@@ -1,0 +1,22 @@
+{
+  "key": "2608.09036",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.09036",
+  "title": "Decision-Focused Learning in Network Interdiction Games",
+  "authors": [
+    "Luca M. Hartmann",
+    "Parinaz Naghizadeh"
+  ],
+  "summary": "We study decision-focused learning (DFL) in shortest-path network interdiction (SPNI) games, a Stackelberg game where an interdictor (leader) strengthens the networks' arcs against attacks, while an evader (follower) who is uncertain about costs of attacking network arcs relies on a machine-learned predictor to identify the shortest path. While DFL is highly effective as an end-to-end optimization framework, we show that it faces a fundamental structural failure when employed in this game setting: its training objective admits a broad decision-equivalence class of cost estimators that…",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

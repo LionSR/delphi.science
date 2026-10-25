@@ -1,0 +1,24 @@
+{
+  "key": "2603.11457",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.11457",
+  "title": "Bayesian Modular Inference for Copula Models with Potentially Misspecified Marginals",
+  "authors": [
+    "Lucas Kock",
+    "David T. Frazier",
+    "Michael Stanley Smith",
+    "David J. Nott"
+  ],
+  "summary": "Copula models of multivariate data are popular because they allow separate specification of marginal distributions and the copula function. These components can be treated as inter-related modules in a modified Bayesian inference approach called ''cutting feedback'' that is robust to their misspecification. Recent work uses a two module approach, where all $d$ marginals form a single module, to robustify inference for the marginals against copula function misspecification, or vice versa. However, marginals can exhibit differing levels of misspecification, making it attractive to assign each…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "econ.EM",
+    "math.ST"
+  ],
+  "published": "2026-03-12",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

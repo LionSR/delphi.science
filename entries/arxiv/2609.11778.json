@@ -1,0 +1,21 @@
+{
+  "key": "2609.11778",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11778",
+  "title": "Tolerance-driven close evaluation of the Stokes double layer potential on axisymmetric surfaces",
+  "authors": [
+    "David Krantz",
+    "Pritpal Matharu",
+    "Anna-Karin Tornberg"
+  ],
+  "summary": "We consider boundary integral methods for Stokes mobility and resistance problems involving smooth axisymmetric particles. A primary numerical challenge is the accurate and efficient evaluation of layer potentials at off-surface points close to particle surfaces. We present a tolerance-driven workflow for evaluating the Stokes double layer potential at such evaluation points (targets) to prescribed accuracy while avoiding unnecessary computational cost. For each target--particle interaction, a fast classifier selects the least costly option estimated to meet the tolerance among standard,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

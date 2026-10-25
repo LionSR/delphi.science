@@ -1,0 +1,22 @@
+{
+  "key": "2607.15293",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.15293",
+  "title": "Structure of the Circular-Dyadic Convolution Error",
+  "authors": [
+    "Ben Fauber",
+    "Alireza Moradzadeh"
+  ],
+  "summary": "Dyadic and circular convolution can both be computed in $O(N\\log N)$ time using the Hadamard transform and the FFT-computed discrete Fourier transform (DFT), respectively. The Hadamard transform is preferable for its real-valued sign flips, yet its substitution for the DFT introduces algebraic error. We present three complementary results that characterize this error. First, we identify exact error cancellation: two input and two output positions are universally error-free, and no reordering of the output can eliminate this error. Second, the error operator is nearly full rank, while its…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.NA"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

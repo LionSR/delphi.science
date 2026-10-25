@@ -1,0 +1,21 @@
+{
+  "key": "2609.08021",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.08021",
+  "title": "Bi-ZOL: Bilevel Zeroth-Order Learning with Nonsmooth Responses",
+  "authors": [
+    "Zhisen Jiang",
+    "Saverio Bolognani"
+  ],
+  "summary": "This paper studies lower-level-constrained bilevel optimization in a response-oracle setting, where lower-level model information is unavailable and the induced response mapping is locally Lipschitz but potentially nonsmooth. In this setting, the classical response Jacobian and reduced hypergradient may fail to exist. We propose Bilevel Zeroth-Order Learning (Bi-ZOL), a structure-guided zeroth-order method for finding stationary points of the nonsmooth reduced problem. Instead of estimating the gradient of a fully smoothed reduced hyperobjective, Bi-ZOL separates the bilevel chain-rule…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

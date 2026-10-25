@@ -1,0 +1,19 @@
+{
+  "key": "2610.17512",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.17512",
+  "title": "Covariance-Rank Rounding and a Sharp Integrality Gap for a Matroid Edge-Coverage Moment Lift",
+  "authors": [
+    "Navid Rezazadeh"
+  ],
+  "summary": "Selecting vertices covers their incident edges, but a matroid can prevent selecting the combinations that cover the most weight. We study whether pair-selection information improves rounding from a semidefinite relaxation of this problem. A feasible point $(x,Y)$ records individual and paired selection values. Its relaxation objective is $U$, and the matrix $Y-xx^\\top$ has rank $d$. We compare the feasible marginal vectors obtained by fixing one element as selected or excluded, then round only the best vector. For $d\\ge1$, the resulting basis has value at least $(3/4+1/(4d))U$. The procedure…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

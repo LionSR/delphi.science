@@ -1,0 +1,22 @@
+{
+  "key": "2604.22641",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.22641",
+  "title": "Preconditioning of a hybridizable discontinuous Galerkin method for the coupled Stokes--Darcy system",
+  "authors": [
+    "Esteban Henríquez",
+    "Miroslav Kuchta",
+    "Jeonghun J. Lee",
+    "Sander Rhebergen"
+  ],
+  "summary": "We propose parameter-robust preconditioners for the statically condensed linear system arising from a hybridizable discontinuous Galerkin discretization of the coupled Stokes--Darcy system. The design strategy relies on first applying the operator-preconditioning framework [Numer. Linear Algebra Appl., 18(1):1--40, 2011] to construct a preconditioner for the non-condensed discretization. This is done by proving uniform well-posedness of the scheme. Next, we prove robustness of the resulting condensed preconditioner applied to the reduced linear system using the framework we proposed in [SIAM…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-24",
+  "updated": "2026-04-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

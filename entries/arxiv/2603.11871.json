@@ -1,0 +1,21 @@
+{
+  "key": "2603.11871",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.11871",
+  "title": "An error control framework for computing the exponential of matrices arising from the finite element discretization",
+  "authors": [
+    "Fuminori Tatsuoka",
+    "Yuto Miyatake",
+    "Tomohiro Sogabe"
+  ],
+  "summary": "Several methods for computing the action of the matrix exponential $\\mathrm{e}^{\\boldsymbol{A}} \\boldsymbol{b}$ are expressed by substituting $\\boldsymbol{A}$ into a rational approximation of the scalar exponential function. The error of such methods can be estimated using the numerical range of $\\boldsymbol{A}$, which enables the computation of $\\mathrm{e}^{\\boldsymbol{A}}\\boldsymbol{b}$ with a prescribed accuracy. However, when the input matrix has the structure $\\boldsymbol{A} = τ\\boldsymbol{M}^{-1} \\boldsymbol{K}$, this approach is challenging because computing the bounding box of…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-12",
+  "updated": "2026-03-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

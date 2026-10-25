@@ -1,0 +1,19 @@
+{
+  "key": "2610.05299",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05299",
+  "title": "Calculating double-leaf coefficients in the Hecke category",
+  "authors": [
+    "Colton Sandvik"
+  ],
+  "summary": "Given a morphism of Abe-Bott-Samelson bimodules, we construct an algorithm for computing its double-leaves coefficients. The key ingredient is a modification of Bruhat upper-triangularity which allows us to use forward substitution to solve for the double-leaf coefficients. We provide a complete implementation of the algorithm in the Sage computer algebra system. We use this to compute the Zamolodchikov 3-color relation in type $H_3$ for balanced realizations. We further simplify the 3-color relation using thick Soergel calculus and express it as a difference of two thick Elias--Williamson…",
+  "domain": "math.RT",
+  "tags": [
+    "math.RT"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2607.24122",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.24122",
+  "title": "On computing Goldstein approximate second-order stationary points of structured nonsmooth nonconvex programs",
+  "authors": [
+    "Jiewen Guan",
+    "Anthony Man-Cho So"
+  ],
+  "summary": "In this paper, we exhibit a randomized first-order algorithm to compute Goldstein approximate second-order stationary points of $L$-smooth functions, using tools from randomized smoothing. The algorithm has oracle complexity $\\widetilde{O}({ n^2}/{\\varepsilon^9}+{ n^3}/{\\varepsilon^7})$, where $n=1,2,\\ldots$ is the input dimension and $\\varepsilon>0$ is the (common) tolerance. We also present extensions to weakly convex functions and applications to bilevel optimization.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

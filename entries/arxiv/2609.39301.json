@@ -1,0 +1,20 @@
+{
+  "key": "2609.39301",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.39301",
+  "title": "Generalized Geometry Block Proximal Linearized Method for Multiblock Nonconvex and Nonsmooth Optimization",
+  "authors": [
+    "Weifeng Yang"
+  ],
+  "summary": "This paper considers a class of multiblock nonconvex and nonsmooth optimization problems arising in many applications. Existing methods construct proximal linearized operators or their variants within standard Euclidean geometry to solve this class of problems, forcing their block variable updates to rely on the standard inner product and its induced norm. Nevertheless, this construction fails to capture the geometric structure of the target problem, leading to low numerical efficiency. To overcome these drawbacks, we propose a generalized geometry proximal linearized operator for updating…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

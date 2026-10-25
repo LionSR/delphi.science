@@ -1,0 +1,22 @@
+{
+  "key": "2602.03329",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.03329",
+  "title": "From Inexact Gradients to Byzantine Robustness: Acceleration and Optimization under Similarity",
+  "authors": [
+    "Renaud Gaucher",
+    "Aymeric Dieuleveut",
+    "Hadrien Hendrikx"
+  ],
+  "summary": "Standard federated learning algorithms are vulnerable to adversarial nodes, a.k.a. Byzantine failures. To solve this issue, robust distributed learning algorithms have been developed, which typically replace parameter averaging by robust aggregations. While generic conditions on these aggregations exist to guarantee the convergence of (Stochastic) Gradient Descent (SGD), the analyses remain rather ad-hoc. This hinders the development of more complex robust algorithms, such as accelerated ones. In this work, we show that Byzantine-robust distributed optimization can, under standard generic…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-02-03",
+  "updated": "2026-02-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

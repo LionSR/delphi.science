@@ -1,0 +1,26 @@
+{
+  "key": "2605.28684",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.28684",
+  "title": "History-aware adaptive reduced-order models via incremental singular value decomposition",
+  "authors": [
+    "Amirpasha Hedayat",
+    "Ali Mohaghegh",
+    "Laura Balzano",
+    "Cheng Huang",
+    "Karthik Duraisamy"
+  ],
+  "summary": "Reduced-order models (ROMs) can accelerate high-dimensional dynamical simulations, but their accuracy often deteriorates when online dynamics leave the regime represented by offline training data. We develop a projection-based adaptive ROM framework based on incremental singular value decomposition (iSVD), in which occasional full-order operator evaluations provide correction snapshots for online basis updates. The intrusive ROMs considered here are fully parameterized by the basis, so each update naturally propagates to reduced operators and hyper-reduction machinery. Through its evolving…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.CE",
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-05-27",
+  "updated": "2026-05-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

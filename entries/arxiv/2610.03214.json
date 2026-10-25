@@ -1,0 +1,20 @@
+{
+  "key": "2610.03214",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03214",
+  "title": "Quantum error-correcting code parameters, checkable by a certificate of provable size",
+  "authors": [
+    "Shuoming An",
+    "Fusheng Yang"
+  ],
+  "summary": "Quantum error correction protects quantum information by encoding it in a code described by three numbers: how many physical qubits it uses, how many logical qubits it protects, and the smallest error it cannot detect. The last is an optimum over exponentially many candidates, so it is read off a solver rather than checked. Here we show that code parameters can be certified by a short certificate, a list or a pairing or a symbolic instance, whose correctness the kernel of a proof assistant decides by computation, and whose size is itself a theorem rather than an estimate. Two published code…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

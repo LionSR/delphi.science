@@ -1,0 +1,19 @@
+{
+  "key": "2603.20766",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20766",
+  "title": "A reliability-aware randomized simheuristic for the stochastic team orienteering problem",
+  "authors": [
+    "Michele Circelli"
+  ],
+  "summary": "We study a stochastic variant of the Team Orienteering Problem with lognormal travel times and an all-or-nothing reward policy, under which the reward of a route is lost if its travel time exceeds the available budget. We propose a reliability-aware simheuristic that combines a savings-based constructive heuristic with three specific design elements: a Top-$L_{\\mathrm{top}}$ randomization mechanism, stochastic screening of the savings parameter, and an explicit reliability threshold for solution selection. Computational experiments on the Chao et al. benchmark show that the method is…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-21",
+  "updated": "2026-04-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

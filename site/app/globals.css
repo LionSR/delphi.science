@@ -32,12 +32,16 @@ h2 { font: 500 1.15rem var(--serif); margin: 2rem 0 0.4rem; }
 .abstract { max-width: 68ch; line-height: 1.6; }
 .comment { padding: 0.7rem 0; border-bottom: 1px solid var(--rule); }
 .comment.reply { margin-left: 1.5rem; }
+.twitter-tweet { margin: 0.7rem 0; padding: 0.7rem 1rem; border: 1px solid var(--rule); border-radius: 0.5rem; }
 .comment p { margin: 0.25rem 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
 pre { background: var(--surface); padding: 0.8rem 1rem; border-radius: 0.35rem; overflow-x: auto; font: 0.78rem/1.5 var(--mono); }
 .vote { display: inline-flex; gap: 0.3rem; margin: 0.5rem 0 0; }
 li.item .vote { float: right; margin: 0 0 0.3rem 0.8rem; }
 .vote button { font-size: 0.8rem; padding: 0.15rem 0.5rem; color: var(--muted); cursor: pointer; }
 .vote button[aria-pressed='true'] { color: var(--accent); border-color: var(--accent); }
+.voters { list-style: none; margin: 0.4rem 0 0; padding: 0; }
+.voters li { margin: 0.15rem 0; }
+.voters li p { margin: 0.1rem 0 0 1.4rem; font-size: 0.9rem; white-space: pre-wrap; overflow-wrap: anywhere; }
 header nav, header nav form { display: flex; gap: 0.9rem; align-items: baseline; }
 header nav { flex-wrap: wrap; row-gap: 0.3rem; }
 header nav a { white-space: nowrap; }

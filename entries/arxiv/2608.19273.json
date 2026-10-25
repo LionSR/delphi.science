@@ -1,0 +1,26 @@
+{
+  "key": "2608.19273",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19273",
+  "title": "DSLHyPE-a DSL kernel language for the Exascale Hyperbolic PDE Engine ExaHyPE",
+  "authors": [
+    "Timothy J. R. Stokes",
+    "Nick Brown",
+    "Thomas A. Flynn",
+    "Maurice Jamieson",
+    "Tobias Weinzierl"
+  ],
+  "summary": "We introduce a bilingual domain-specific language (DSL) for modelling compute kernels within a generic solver for hyperbolic partial differential equations (PDEs). Users express PDE terms, i.e.~the underlying physics, in a familiar native language such as C or C++, while the numerical scheme is specified in a Python-embedded DSL, DSLHyPE. DSLHyPE's compiler lowers the Python description to MLIR and introduces a translation pass that integrates it with native code likewise mapped to MLIR. Our approach keeps the numerical representation and the physics implementation separate for as long as…",
+  "domain": "cs.MS",
+  "tags": [
+    "cs.MS",
+    "cs.PL",
+    "gr-qc",
+    "math.NA"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

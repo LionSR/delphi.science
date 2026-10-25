@@ -1,0 +1,20 @@
+{
+  "key": "2602.19838",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.19838",
+  "title": "Optimality of the Half-Order Exponent in the Turing-Good Identities for Bayes Factors",
+  "authors": [
+    "Kensuke Okada"
+  ],
+  "summary": "Bayes factors are widely computed by Monte Carlo, yet heavy-tailed sampling distributions can make numerical validation unreliable. The Turing--Good identities provide exact moment equalities for powers of a Bayes factor (a density ratio). When these identities are used as Good-check diagnostics, the power choice becomes a statistical design parameter. We develop a nonasymptotic variance theory for Monte Carlo evaluation of the identities and show that the half-order (square-root) power is uniquely minimax-stable: it equalizes variability across the two model orientations and is the only…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-02-23",
+  "updated": "2026-02-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

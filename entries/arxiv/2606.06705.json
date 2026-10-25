@@ -1,0 +1,23 @@
+{
+  "key": "2606.06705",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.06705",
+  "title": "Estimating Evolving Functions with Dynamic Gaussian Processes",
+  "authors": [
+    "J. S. van Hulst",
+    "W. P. M. H. Heemels",
+    "D. J. Antunes"
+  ],
+  "summary": "This paper develops the Dynamic Gaussian Process (DGP), a framework for estimating functions governed by integro-difference equations (IDEs). IDEs model continuous functions that evolve with discrete-time dynamics and arise naturally from time-discretization of linear partial differential equations (PDEs). The DGP extends Gaussian process regression to time-varying functions and extends Kalman filtering to infinite-dimensional states. The DGP posterior remains a Gaussian process with closed-form mean and covariance updates, and separable kernel structure reduces the problem to a…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-06-04",
+  "updated": "2026-06-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

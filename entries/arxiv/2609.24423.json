@@ -1,0 +1,20 @@
+{
+  "key": "2609.24423",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.24423",
+  "title": "Complexities of Weak Proximal Oracle Methods for Composite Convex Optimization",
+  "authors": [
+    "Dan Garber"
+  ],
+  "summary": "We consider a standard convex composite optimization problem with either smooth or nonsmooth objective function, and under quadratic growth. In recent years, several works gave algorithms based on a \\textit{weak proximal oracle} (WPO) that essentially match in oracle complexities proximal (sub)gradient methods relying on exact prox operations. Importantly, such WPOs, which relax the strong optimality condition of the standard prox operator, may admit much more efficient implementation in terms of runtime when optimal solutions have some sparse structure. A question remained if such WPO-based…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-09-21",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

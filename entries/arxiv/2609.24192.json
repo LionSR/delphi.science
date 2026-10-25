@@ -1,0 +1,22 @@
+{
+  "key": "2609.24192",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.24192",
+  "title": "Global Exponential Stabilization of a 3D Nonholonomic Vehicle in Spherical Coordinates",
+  "authors": [
+    "Kwang Hak Kim",
+    "Velimir Todorovski",
+    "Miroslav Krstic"
+  ],
+  "summary": "Many spatial (3D) vehicles, including AUVs and fixed-wing aircraft, are effectively nonholonomic and subject to limited actuation, such that continuous time-invariant stabilization is fundamentally obstructed by Brockett's necessary condition. To overcome this obstruction, we exploit the geometric singularity of spherical coordinates to design a backstepping continuous, time-invariant feedback law that exponentially stabilizes a 3D nonholonomic vehicle actuated solely by forward surge velocity, pitch rate, and yaw rate. The resulting closed-loop region of attraction excludes only the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-09-21",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

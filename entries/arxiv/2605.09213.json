@@ -1,0 +1,23 @@
+{
+  "key": "2605.09213",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09213",
+  "title": "Kinetic theory for Transformers and the lost-in-the-middle phenomenon",
+  "authors": [
+    "Mitia Duerinckx",
+    "Borjan Geshkovski",
+    "Stefano Rossi"
+  ],
+  "summary": "We study causal self-attention dynamics -- a toy model for decoder Transformers -- which we interpret as a non-exchangeable interacting particle system. Adapting cumulant expansions to the triangular causal dependency structure of the model, and appealing to non-hierarchical methods to estimate correlations using Glauber calculus, we prove a quantitative mean-field limit result and a next-order characterization of correlations. For iid uniformly distributed tokens, the limiting correlation equation can be solved in closed form and we obtain a rigorous explanation of the empirically observed…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-05-09",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

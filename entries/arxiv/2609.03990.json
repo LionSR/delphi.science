@@ -1,0 +1,20 @@
+{
+  "key": "2609.03990",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.03990",
+  "title": "Tight Heavy-Tailed Complexity Bounds for Optimizing Polyak--Łojasiewicz Objectives",
+  "authors": [
+    "Weiming Ou",
+    "Xiao Wang"
+  ],
+  "summary": "We study optimizing $L$-smooth and $μ$-Polyak-Lojasiewicz (PL) objectives with unbiased stochastic gradients under $α$-heavy-tailed noise ($1<α\\le 2$). In the unrestricted high-dimensional setting, we establish the noise-adaptive lower bound for attaining $ε$-suboptimal function value. Under the generalized mirror-PL condition, we propose a centered-clipped mirror-descent method that achieves a high-probability upper bound matching the lower bound up to logarithmic factors. We further provide the improved tight stochastic complexity in fixed dimensions.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

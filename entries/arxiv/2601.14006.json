@@ -1,0 +1,20 @@
+{
+  "key": "2601.14006",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.14006",
+  "title": "Computing Crystalline Cohomology and p-Divisible Groups for Curves over Finite Fields",
+  "authors": [
+    "Jeremy Booher"
+  ],
+  "summary": "Let $X$ be a smooth projective curve over a finite field of characteristic $p$. We describe and implement a practical algorithm for computing the $p$-divisible group $Jac(X)[p^\\infty]$ via computing its Dieudonné module, or equivalently computing the Frobenius and Verschiebung operators on the first crystalline cohomology of $X$. We build on Tuitman's $p$-adic point counting algorithm, which computes the rigid cohomology of $X$ and requires a ``nice'' lift of $X$ to be provided.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.AG"
+  ],
+  "published": "2026-01-20",
+  "updated": "2026-01-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2608.17518",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17518",
+  "title": "Operator-based data embedding for data-driven control of continuous-time systems from noisy data",
+  "authors": [
+    "Masashi Wakaiki"
+  ],
+  "summary": "We propose a data-driven method for designing state-feedback gains that achieve stabilization, $H_2$-control, and $H_\\infty$-control for continuous-time systems. The state-input data are assumed to be corrupted by process noise, measurement noise, and input disturbances. We first characterize the set of all systems consistent with the noisy data using operator-based data embedding. This characterization yields necessary and sufficient conditions for data informativity under a certain class of noise. These conditions are formulated as linear matrix inequalities, and the feedback gains are…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

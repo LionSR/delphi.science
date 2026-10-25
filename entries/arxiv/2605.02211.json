@@ -1,0 +1,22 @@
+{
+  "key": "2605.02211",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.02211",
+  "title": "Many Hamiltonians Are Sparsifiable",
+  "authors": [
+    "Arpon Basu",
+    "Joshua Brakensiek",
+    "Aaron Putterman"
+  ],
+  "summary": "We study the problem of Hamiltonian sparsification: given a parameter $\\varepsilon \\in (0,1)$ and an $n$-qubit Hamiltonian $H$ which is the sum of $r$-local positive semi-definite (PSD) terms $H_1, \\dots H_m$, our goal is to compute a sparse set $L \\subseteq [m]$, along with weights $w: L \\rightarrow \\mathbb{R}_{\\geq 0}$ such that for every state $|ψ\\rangle\\in \\mathbb{C}^{2^n}$, $$ \\sum_{i \\in L} w(i) \\langle ψ| H_i | ψ\\rangle \\in (1 \\pm ε) \\sum_{i = 1}^m \\langle ψ| H_i | ψ\\rangle $$. When the set $L$ is significantly smaller than $m$, this reduces the number of terms in the underlying…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS"
+  ],
+  "published": "2026-05-04",
+  "updated": "2026-05-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

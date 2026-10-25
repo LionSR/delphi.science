@@ -1,0 +1,20 @@
+{
+  "key": "2604.15007",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.15007",
+  "title": "A counter-example to persistence in generalised preferential attachment trees",
+  "authors": [
+    "Tejas Iyer"
+  ],
+  "summary": "Consider a generalised preferential attachment tree with attachment function $f$, that is a random tree, where at each time-step a node connects to an existing node $v$ with probability proportional to $f(\\mathrm{deg}(v))$, where $\\mathrm{deg}(v)$ denotes the degree of the node in the existing tree. We provide a counter-example to a conjecture of the author asserting that under the assumption $\\sum_{j=1}^{\\infty} \\frac{1}{f(j)^2} < \\infty$ there is a persistent hub in the model, that is, a single node that has the maximal degree for all but finitely many time-steps. The counter-example is a…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.CO"
+  ],
+  "published": "2026-04-16",
+  "updated": "2026-04-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

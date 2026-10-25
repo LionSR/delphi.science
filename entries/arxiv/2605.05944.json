@@ -1,0 +1,20 @@
+{
+  "key": "2605.05944",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05944",
+  "title": "Universal Adaptive Proximal Gradient Methods via Gradient Mapping Accumulation",
+  "authors": [
+    "Zimeng Wang",
+    "Alp Yurtsever"
+  ],
+  "summary": "We propose an adaptive proximal gradient method for minimizing the sum of two functions, where one is a simple convex function, and the other belongs to one of the three classes: nonconvex smooth, convex nonsmooth, or convex smooth. The key feature of the method is an adaptive step size that accumulates historical gradient mapping norms in the denominator. Without any modification or knowledge of problem parameters, the method converges across all three problem classes under mild bounded-iterates and bounded-variance assumptions, with rates matching those of the proximal gradient method up…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

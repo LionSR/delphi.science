@@ -1,0 +1,22 @@
+{
+  "key": "2606.01487",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.01487",
+  "title": "Global Convergence of a Line-Search Filter Differential Dynamic Programming Method",
+  "authors": [
+    "Ming Xu",
+    "Iman Shames"
+  ],
+  "summary": "In this article, we establish the global convergence properties of the FilterDDP algorithm, which extends the discrete-time differential dynamic programming (DDP) algorithm of Mayne and Jacobson [\\emph{International Journal of Control}, 3, (1966), pp. 85-95] to handle nonlinear constraints over states and controls, in addition to the dynamics. FilterDDP adopts a line-search filter procedure for step acceptance. However, instead of a damped Newton step applied in the general nonlinear programming setting, the computation of a trial point involves applying a backward recursion and a forward…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.RO",
+    "eess.SY"
+  ],
+  "published": "2026-05-31",
+  "updated": "2026-05-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

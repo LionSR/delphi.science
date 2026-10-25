@@ -1,0 +1,21 @@
+{
+  "key": "2609.12675",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.12675",
+  "title": "An Optimal IPDG Scheme for the Biharmonic Equation",
+  "authors": [
+    "Bohua Zhang",
+    "Xia Ji",
+    "Shuo Zhang"
+  ],
+  "summary": "This paper presents an optimal interior penalty discontinuous Galerkin (IPDG) scheme for the planar biharmonic equation using piecewise polynomials of degree $k=3$ or $4$. In standard IPDG methods, large penalty parameters force the discrete solution into an overconstrained space, severely degrading accuracy---phenomenon known as numerical locking. To overcome this, our method enforces only vertex continuity and projects the jumps of the function and its normal derivative onto $\\mathcal{P}^{k-3}$ and $\\mathcal{P}^{k-2}$, respectively. Consequently, as the penalty parameters tend to infinity,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-11",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

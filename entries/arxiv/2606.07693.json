@@ -1,0 +1,23 @@
+{
+  "key": "2606.07693",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.07693",
+  "title": "Transfer learning for causal forest",
+  "authors": [
+    "Bérénice-Alexia Jocteur",
+    "Véronique Maume-Deschamps",
+    "Pierre Ribereau"
+  ],
+  "summary": "Transfer learning addresses the challenge of transfering knowledge from one domain to another. Traditional transfer learning focuses on adapting models trained on a source domain (with a lot of observations) to improve performance on a target domain (with few observations). In this work we consider the case of a model shift and we focus on the transfer learning applied to a causal forest namely HTERF. This causal forest aims to estimate the Conditional Average Treatment Effect (CATE). The approach considered is the offset method presented by Wang (2016) adapted to a causal context. This…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-06-05",
+  "updated": "2026-06-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

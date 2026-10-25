@@ -1,0 +1,25 @@
+{
+  "key": "2608.08758",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.08758",
+  "title": "Analytical Nuclear Gradients and Hessians on Quantum Hardware via Orbital-Optimized VQE with Error Mitigation",
+  "authors": [
+    "Renato Olarte Hernandez",
+    "Karl Michael Ziems",
+    "Erik Kjellgren",
+    "Jacob Kongsted",
+    "Sonia Coriani",
+    "Stephan P. A. Sauer"
+  ],
+  "summary": "Nuclear gradients and Hessians are fundamental quantities in computational chemistry, essential for a wide range of applications including geometry optimization, vibrational spectroscopy, and molecular property calculations. In this work, we present their analytical implementation on quantum hardware. The methodology is formulated within an active-space framework combining orbital optimization and linear-response theory. On the quantum-computing side, the approach employs the tiled unitary product state (tUPS) ansatz to directly evaluate the tensor elements required for solving the response…",
+  "domain": "physics.chem-ph",
+  "tags": [
+    "physics.chem-ph",
+    "quant-ph"
+  ],
+  "published": "2026-08-09",
+  "updated": "2026-08-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2609.01009",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.01009",
+  "title": "OptiXDE: A fast optical-inspired solver for differential equations",
+  "authors": [
+    "Yang Yang",
+    "Mingjiao Yan",
+    "Zongliang Zhang"
+  ],
+  "summary": "OptiXDE is a matrix-free spectral operator framework for differential equations on uniform grids and embedded domains. Inspired by angular-spectrum propagation in Fourier optics, it maps transform-diagonal spatial operators to analytical modal multipliers and composes them with physical-space operators for nonlinearities, geometry and boundary enforcement. A common transform--operator--inverse-transform backbone is demonstrated across transient diffusion, periodic and embedded-domain Poisson problems, the cubic nonlinear Schr\"odinger equation, viscous Burgers dynamics, the two-dimensional…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-01",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

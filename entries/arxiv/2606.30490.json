@@ -1,0 +1,19 @@
+{
+  "key": "2606.30490",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.30490",
+  "title": "From Frames to Features: Scalable Zigzag Persistence for Binary Video",
+  "authors": [
+    "David Lanners"
+  ],
+  "summary": "Zigzag persistence tracks topological features in spatio-temporal data through combinatorial invariants called barcodes. For binary videos, existing methods are bottlenecked by the construction of prohibitively large cubical complexes and performing Gaussian elimination on large boundary matrices, rendering high-resolution videos out of reach. We show that the $H_0$ and $H_1$ barcodes can be extracted directly from connected-component dynamics. By encoding these dynamics in a graph, we bypass cubical complexes entirely and are able to leverage the near-linear time barcode decomposition…",
+  "domain": "math.AT",
+  "tags": [
+    "math.AT"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

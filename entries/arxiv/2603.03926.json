@@ -1,0 +1,22 @@
+{
+  "key": "2603.03926",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.03926",
+  "title": "A Structurally Localized Ensemble Kalman Filtering Approach",
+  "authors": [
+    "Boujemaa Ait-El-Fquih",
+    "Ibrahim Hoteit"
+  ],
+  "summary": "State-of-the-art ensemble Kalman filtering (EnKF) algorithms require incorporating localization techniques to cope with the rank deficiency and the inherited spurious correlations in their error covariance matrices. Localization techniques are mostly ad-hoc, based on some distances between the state and observation variables, requiring demanding manual tuning. This work introduces a new ensemble filtering approach, which is inherently localized, avoiding the need for any auxiliary localization technique. Instead of explicitly applying localization on ensembles, the idea is to first localize…",
+  "domain": "physics.ao-ph",
+  "tags": [
+    "physics.ao-ph",
+    "math.OC",
+    "physics.data-an"
+  ],
+  "published": "2026-03-04",
+  "updated": "2026-03-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

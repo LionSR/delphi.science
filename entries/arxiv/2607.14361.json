@@ -1,0 +1,24 @@
+{
+  "key": "2607.14361",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14361",
+  "title": "NeuralChaos: Optimal Adapted Approximation of Square Integrable Predictable Processes",
+  "authors": [
+    "Anastasis Kratsios",
+    "Giulia Livieri",
+    "Philipp Schmocker"
+  ],
+  "summary": "We address fundamental challenges in representing and computing $\\mathbb{R}^{d}$-valued predictable square-integrable processes over $[0,T]$, collected in the space $\\mathcal{H}^2_T(\\mathbb{R}^{d})$. These processes are central to continuous-time stochastic control, reinforcement learning, and mathematical finance. Although Wiener-chaos expansions offer strong theoretical tools, traditional computational methods are hindered by the need for large chaos dictionaries and high-order iterated integrals. To overcome these obstacles, we introduce NeuralChaos -- a neural operator architecture that…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.LG",
+    "q-fin.CP",
+    "stat.ML"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

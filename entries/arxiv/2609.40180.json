@@ -1,0 +1,22 @@
+{
+  "key": "2609.40180",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.40180",
+  "title": "Improved Quantum Query Bounds for Boolean Matrix Product Verification",
+  "authors": [
+    "Amin Shiraz Gilani",
+    "François Le Gall",
+    "Xingyu Zhou"
+  ],
+  "summary": "We prove the first non-trivial upper bound for the quantum query complexity of Boolean Matrix Product Verification ($\\mathsf{BMPV}$), answering a longstanding open question in quantum query complexity. For $n\\times n$ matrices, our upper bound is $\\widetilde O(n^{17/12})$, improving on the standard $O(n^{3/2})$ bound obtained using Grover search by Buhrman and Špalek [SODA 2006]. We complement this result by showing an $Ω(n^{5/4})$ lower bound, which improves over the previous best known lower bound of $\\widetildeΩ(n^{19/18})$ by Childs, Kimmel, and Kothari [ESA 2012]. Our approach centers…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

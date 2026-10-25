@@ -1,0 +1,20 @@
+{
+  "key": "2603.16111",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.16111",
+  "title": "A Dyadic Frequency Law for a Perturbed Hofstadter $Q$-Recursion",
+  "authors": [
+    "Marco Mantovanelli"
+  ],
+  "summary": "We study the perturbed Hofstadter $Q$-recursion $$ Q(1)=Q(2)=1,\\qquad Q(n)=Q(n-Q(n-1))+Q(n-Q(n-2))+(-1)^n \\quad (n\\ge 3). $$ Cloître proved that the recursion is globally well-defined and encoded its odd- and even-indexed subsequences by exact binary arches and canonical plane forests. Since every value is odd, let $$ F(s)=\\#\\{n\\ge 1:Q(n)=2s-1\\}. $$ We prove that, for every $k\\ge 0$, $$ \\{F(s):2^k\\le s<2^{k+1}\\} = \\{3+ν_2(j):1\\le j\\le 2^k\\} $$ as multisets. Thus the theorem determines the multiplicities of the frequencies in each dyadic block, but not their order. The proof converts…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.NT"
+  ],
+  "published": "2026-03-17",
+  "updated": "2026-07-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

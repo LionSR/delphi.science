@@ -1,0 +1,22 @@
+{
+  "key": "2603.19096",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.19096",
+  "title": "GLENN: Neural network-enhanced computation of Ginzburg-Landau energy minimizers",
+  "authors": [
+    "Michael Crocoll",
+    "Christian Döding",
+    "Benjamin Dörich",
+    "Roland Maier"
+  ],
+  "summary": "In this work, we propose a neural network-enhanced finite element strategy to compute the minimizer of the Ginzburg-Landau energy based on an unsupervised deep Ritz-type strategy. We treat the parameter $κ$ as a variable input parameter to obtain possible minimizers for a large range of $κ$-values. This allows for two possible strategies: 1) The neural network may be extensively trained to work as a stand-alone solver. 2) Neural network results are used as starting values for a subsequent classical iterative minimization procedure. The latter strategy particularly circumvents the missing…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-19",
+  "updated": "2026-04-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

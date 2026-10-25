@@ -1,0 +1,23 @@
+{
+  "key": "2603.23074",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.23074",
+  "title": "Data-dependent approximation through RBF",
+  "authors": [
+    "José Kuruc",
+    "David Levin",
+    "Pep Mulet",
+    "Juan Ruiz-Álvarez",
+    "Dionisio F. Yáñez"
+  ],
+  "summary": "In this article we present a modification of classical Radial Basis Function (RBF) interpolation techniques aimed at reducing oscillations near discontinuities in one and two dimensions. Our approach introduces an adaptive mechanism by varying the shape parameter of the RBFs and making it data-dependent, forcing it to tend to infinity in the vicinity of discontinuities. This modification results in kernel functions that locally resemble %Kronecker delta functions, effectively minimizing spurious oscillations. To detect discontinuities, we employ smoothness indicators: for grid-based data,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-24",
+  "updated": "2026-03-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

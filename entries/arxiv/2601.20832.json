@@ -1,0 +1,22 @@
+{
+  "key": "2601.20832",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.20832",
+  "title": "Symplectic Optimization on Bosonic Gaussian States",
+  "authors": [
+    "Christopher Willby",
+    "Tomohiro Hashizume",
+    "Jason Crain",
+    "Dieter Jaksch"
+  ],
+  "summary": "Computing bosonic Gaussian ground states via variational optimization is challenging because the covariance matrices must satisfy the uncertainty principle, rendering constrained or Riemannian optimization costly, delicate, and thus difficult to scale, particularly in large and inhomogeneous systems. We introduce a symplectic optimization framework that addresses this challenge by parameterizing covariance matrices directly as positive-definite symplectic matrices using unit-triangular factorizations. This approach enforces all physical constraints exactly, yielding a globally unconstrained…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-28",
+  "updated": "2026-08-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

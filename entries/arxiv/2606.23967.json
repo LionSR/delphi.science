@@ -1,0 +1,24 @@
+{
+  "key": "2606.23967",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.23967",
+  "title": "Polynomial-time exact diagonalization via sparse guided eigenwalks",
+  "authors": [
+    "Zachary E. Chin",
+    "Mario Motta",
+    "Javier Robledo Moreno",
+    "Antonio Mezzacapo",
+    "Isaac L. Chuang",
+    "William Kirby"
+  ],
+  "summary": "Computing quantum ground states is generically difficult, but additional structure can sometimes allow diagonalization to be recast as a more feasible problem. For example, when the desired ground state is sparse in a given basis, diagonalization can be facilitated via graph search. We make this reformulation precise by introducing the eigenwalk problem, which seeks the support of a sparse eigenvector of a Hermitian matrix by exploring the graph induced by its nonzero entries. However, it is not obvious whether the relevant support vertices must always be efficiently reachable by a search on…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-22",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

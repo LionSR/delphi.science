@@ -1,0 +1,27 @@
+{
+  "key": "2608.19394",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19394",
+  "title": "Deep-MKV-TS: Path-Dependent McKean--Vlasov Control for Financial Time Series Generation",
+  "authors": [
+    "Samer El Boustany",
+    "Théo Basseras",
+    "Samy Mekkaoui",
+    "Alexandre Alouadi",
+    "Yadh Hafsi",
+    "Huyên Pham"
+  ],
+  "summary": "We introduce Deep-MKV-TS, a path-dependent McKean-Vlasov framework for financial scenario generation. The stochastic dynamics are chosen by matching selected path and volatility features of generated scenarios to those observed in the data. Starting from an interpretable reference model, Deep-MKV-TS preserves the reference drift and adjusts its volatility, while a regularization penalty limits unnecessary departures from the calibrated dynamics. We solve the resulting control problem using a neural, sample-based implementation of the stochastic maximum principle. We validate the method…",
+  "domain": "q-fin.CP",
+  "tags": [
+    "q-fin.CP",
+    "cs.CE",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-08-19",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

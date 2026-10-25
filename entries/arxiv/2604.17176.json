@@ -1,0 +1,22 @@
+{
+  "key": "2604.17176",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.17176",
+  "title": "Intent-aligned Autonomous Spacecraft Guidance via Reasoning Models",
+  "authors": [
+    "Yuji Takubo",
+    "Simone D'Amico"
+  ],
+  "summary": "Future spacecraft operations require autonomy that can interpret high-level mission intent while preserving safety. However, existing trajectory optimization still relies heavily on expert-crafted formulations and does not support intent-conditioned decision-making. This paper proposes an intent-aligned spacecraft guidance framework that links high-level reasoning and safe trajectory optimization through explicit intermediate abstractions, based on behavior sequences and waypoint constraints. A foundation model first predicts an intent-aligned behavior plan, a waypoint generation model then…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-04-19",
+  "updated": "2026-05-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2605.11627",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11627",
+  "title": "Proximal Limited-Memory Quasi-Newton Methods for Nonsmooth Nonconvex Optimization",
+  "authors": [
+    "Simeon vom Dahl",
+    "Alberto De Marchi",
+    "Christian Kanzow"
+  ],
+  "summary": "We introduce a proximal limited--memory quasi--Newton scheme for minimizing the sum of a continuously differentiable function and a proper, lower semicontinuous and prox-bounded, possibly nonsmooth, function. Both functions might be nonconvex. The method builds upon the computation of scaled proximal operators and is globalized by adaptively updating a regularization parameter based on a criterion of sufficient decrease. We prove global convergence under mild assumptions and then establish convergence of the entire sequence (with rates) under the Kurdyka--Lojasiewicz property. To efficiently…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

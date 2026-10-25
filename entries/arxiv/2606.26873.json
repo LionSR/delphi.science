@@ -1,0 +1,25 @@
+{
+  "key": "2606.26873",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.26873",
+  "title": "Scalable Message-Passing Quantum Graph Neural Networks in the Weisfeiler-Leman Hierarchy",
+  "authors": [
+    "Snehal Raj",
+    "Brian Coyle",
+    "Léo Monbroussou",
+    "André J. Ferreira-Martins",
+    "Renato M. S. Farias",
+    "Elham Kashefi"
+  ],
+  "summary": "Graphs provide a natural language for relational data in chemistry, biology and optimisation. Graph neural networks (GNNs) have driven much of the recent progress in learning from such data through message passing, a single primitive that generalises convolution and attention. Quantum counterparts have been proposed, but with limited connection to message passing and few guarantees on performance or scalability. More broadly, the trainability of variational quantum circuits is a recognised bottleneck for their wide applicability, and pre-training has emerged as one way to address it. Yet for…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-06-25",
+  "updated": "2026-06-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

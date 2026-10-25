@@ -1,0 +1,22 @@
+{
+  "key": "2609.29888",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.29888",
+  "title": "Randomized Branch Methods with Inexact Subproblems for Bouligand Stationarity in Linear and Quadratic Programs with Complementarity Constraints",
+  "authors": [
+    "Ziyin Hu",
+    "Xin Liu",
+    "Shangzhi Zeng",
+    "Jin Zhang"
+  ],
+  "summary": "We develop randomized branch methods for finding Bouligand-stationary (B-stationary) points of linear and quadratic programs with complementarity constraints (LPCCs and QPCCs) using only linear programming subproblems. The methods exploit the finite-union geometry of the feasible set and search for first-order descent on randomly selected compatible branches. For LPCCs, an exact method optimizes over sampled branches, while an inexact simplex method can accept an improving branch-feasible vertex before solving the sampled penalty problem to optimality. For QPCCs, including problems with…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

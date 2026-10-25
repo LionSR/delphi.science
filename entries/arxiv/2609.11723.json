@@ -1,0 +1,21 @@
+{
+  "key": "2609.11723",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11723",
+  "title": "Lifted surgery: Fast processing with QLDPC codes",
+  "authors": [
+    "Lucas Berent",
+    "Lawrence Z. Cohen",
+    "Armanda O. Quintavalle"
+  ],
+  "summary": "Quantum low-density parity-check (QLDPC) codes are a leading candidate for achieving low-overhead fault-tolerant quantum computing. However, the time overhead of logical operations in QLDPC codes remains a key challenge. Code surgery, a space-efficient technique for fault-tolerant logical measurements, incurs this overhead through repeated rounds of syndrome measurement. We introduce lifted surgery, a method for fast and parallel surgery on Abelian group algebra codes that maintains the low physical overhead that makes QLDPC codes attractive. Lifted surgery preserves the symmetries of the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2609.17966",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.17966",
+  "title": "The BAR-SOT Method: Long-term Average Cost Control as Stochastic Optimal Self-Transport",
+  "authors": [
+    "Sharan Srinivasan",
+    "Berke M. Turkay",
+    "Harsha Honnappa"
+  ],
+  "summary": "We reformulate average-cost (ergodic) control of a Markov jump process as a finite-horizon stochastic optimal transport (SOT) problem that jointly optimizes over the controlled evolution and the marginal law from which it starts and returns to (i.e., a self-transport). The constraint relating the marginal flow to the controlled generator is the basic adjoint relationship (BAR), so we call the resulting problem BAR-SOT. For any time horizon T>0, its optimal value is a constant scaling of the long-run average-cost rate. We give three equivalent formulations (through controlled processes, a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY",
+    "math.PR"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

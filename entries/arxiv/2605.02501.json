@@ -1,0 +1,20 @@
+{
+  "key": "2605.02501",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.02501",
+  "title": "Computability Limits of Sequential Hypothesis Testing",
+  "authors": [
+    "Amir Leshem"
+  ],
+  "summary": "Sequential hypothesis testing asks for decision rules that update as data arrive. A natural goal is \\emph{eventual correctness}: the rule may change its mind early on, but it should make only finitely many wrong decisions almost surely. Starting from Cover's theorem, which guarantees such behavior for membership in a countable set of candidate means, we ask a sharper question: \\emph{which sets actually admit computable sequential decision procedures with finitely many errors?} We answer this optimally by giving a complete characterization both necessary and sufficient of the subsets of $\\Q$…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "math.LO"
+  ],
+  "published": "2026-05-04",
+  "updated": "2026-05-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2610.15799",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.15799",
+  "title": "Sub-Gaussian Confidence Intervals for Heavy-Tailed Data: Characterizing the Limits of Inference",
+  "authors": [
+    "Ilyes Hammouda",
+    "Stanislav Minsker",
+    "Mohamed Ndaoud"
+  ],
+  "summary": "We investigate the problem of uncertainty quantification in the mean estimation framework. Given an i.i.d. sample from a distribution with unknown mean $μ$ and variance $σ^2$, we want to construct an estimator $\\whμ_n$ and provide a computable and size-optimal upper bound for the error $|\\wh μ_n - μ|$. While estimators possessing strong deviation guarantees are well known, no data-dependent non-asymptotic upper bounds for their performance exist in general. We show that this gap can be bridged by introducing a parameter that characterizes the ``effective sample size'' available for…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-10-11",
+  "updated": "2026-10-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

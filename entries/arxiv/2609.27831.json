@@ -1,0 +1,19 @@
+{
+  "key": "2609.27831",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.27831",
+  "title": "Ozaki Scheme II Is Fast on CPUs Too: Multiple-Precision Matrix Multiplication on Intel AMX-INT8 and Arm SVE2-i8mm",
+  "authors": [
+    "Tomonori Kouya"
+  ],
+  "summary": "We implement Ozaki Scheme II (residue number system + Chinese remainder theorem), which reduces multiple-precision dense matrix multiplication to a sequence of low-precision, high-throughput integer or floating-point GEMMs on CPUs. Two backends are built on top of a shared CRT reconstruction stage: (a) exact INT8 x INT8 -> INT32 tile products on Intel AMX, and (b) binary64 DGEMM, the CPU construction of the original Ozaki Scheme II paper. On a two-socket Xeon Gold 6526Y (Emerald Rapids, 32 cores), we evaluate significand precisions of 53-2048 bits and matrix dimensions N = 256-8192. The…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-19",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

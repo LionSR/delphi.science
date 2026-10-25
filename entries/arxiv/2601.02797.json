@@ -1,0 +1,22 @@
+{
+  "key": "2601.02797",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.02797",
+  "title": "Log-Polynomial Optimization",
+  "authors": [
+    "Jiyoung Choi",
+    "Jiawang Nie",
+    "Xindong Tang",
+    "Suhan Zhong"
+  ],
+  "summary": "We study an optimization problem in which the objective is given as a sum of logarithmic-polynomial functions. This formulation is motivated by statistical estimation principles such as maximum likelihood estimation, and by loss functions including cross-entropy and Kullback-Leibler divergence. We propose a hierarchy of moment relaxations based on the truncated $K$-moment problems to solve log-polynomial optimization. We provide sufficient conditions for the hierarchy to be tight and introduce a numerical method to extract the global optimizers when the tightness is achieved. In addition, we…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-06",
+  "updated": "2026-01-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

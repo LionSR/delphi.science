@@ -1,0 +1,21 @@
+{
+  "key": "2602.12850",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.12850",
+  "title": "Fast convolution solvers using moment-matching",
+  "authors": [
+    "Xin Liu",
+    "Qinglin Tang",
+    "Yong Zhang"
+  ],
+  "summary": "We propose two easy-to-implement fast algorithms based on moment-matching to compute the nonlocal potential $\\varphi(\\textbf{x})=(U\\ast ρ)(\\textbf{x})$ on bounded domain, where the kernel $U$ is singular at the origin and the density $ρ$ is a fast-decaying smooth function. Each method requires merely minor modifications to commonly-used existing methods, i.e., the sine spectral/Fourier quadrature method, and achieves a much better convergence rate. The key lies in the introduction of a smooth auxiliary function $ρ_1$ whose moments match those of the density up to an integer order $m$.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-13",
+  "updated": "2026-02-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

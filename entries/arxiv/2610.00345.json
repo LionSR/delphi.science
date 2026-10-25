@@ -1,0 +1,25 @@
+{
+  "key": "2610.00345",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00345",
+  "title": "Lower Bounds For Gradient-Free Convex Optimization And Convex-Concave Saddle-Point Problems",
+  "authors": [
+    "Yuriy Dorn",
+    "Darina Dvinskikh",
+    "Timofei Loginov",
+    "Osman Osmanov",
+    "Aleksandr Shestakov",
+    "Nazarii Tupitsa",
+    "Alexander Gasnikov"
+  ],
+  "summary": "We study the query complexity of optimization with exact scalar-value information. For globally $L$-smooth convex functions on $\\mathbb R^d$ with a minimizer in a Euclidean ball of radius $R$, we prove the lower bound $Ω(d\\min\\{d,\\sqrt{LR^2/\\varepsilon}\\})$ for adaptive randomized algorithms in the stated accuracy range. Queries are unrestricted, and the bound contains no logarithmic factor. It holds for quadratics and matches the minimum of two elementary upper bounds on that class. Prescribed strong convexity introduces the additional cap $\\sqrt{L/μ}$. The proof compares the mean of a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

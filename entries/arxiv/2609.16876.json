@@ -1,0 +1,22 @@
+{
+  "key": "2609.16876",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.16876",
+  "title": "Online adaptive non-intrusive model reduction via manifold interpolation and subspace updates: application to FSI convergence acceleration",
+  "authors": [
+    "Azzeddine Tiba",
+    "Florian de Vuyst",
+    "Iraj Mortazavi"
+  ],
+  "summary": "We introduce a novel online adaptive non-intrusive reduced-order modeling strategy for parameterized dynamical systems involving parameter and time-dependent reduced bases. The proposed framework is based on a unified Grassmann manifold formulation combining three key components: interpolation of local reduced subspaces for unseen parameters, geodesic online subspace updates driven by incoming high-fidelity snapshots, and a latent-space regression strategy relying on Grassmann-distance weighting and Procrustes alignment to consistently aggregate predictions from multiple local models. The…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math.NA"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2603.08762",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.08762",
+  "title": "Formally Verifying Quantum Phase Estimation Circuits with 1,000+ Qubits",
+  "authors": [
+    "Arun Govindankutty",
+    "Sudarshan K. Srinivasan"
+  ],
+  "summary": "We present a scalable formal verification methodology for Quantum Phase Estimation (QPE) circuits. Our approach uses a symbolic qubit abstraction based on quantifier-free bit-vector logic, capturing key quantum phenomena, including superposition, rotation, and measurement. The proposed methodology maps quantum circuit functional behaviour from Hilbert space to a bit-vector domain. We develop formal properties aligned with this abstraction to ensure functional correctness of QPE circuits. The method scales efficiently, verifying QPE circuits with up to 6 precision qubits and 1,024 phase…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.FL",
+    "cs.LO"
+  ],
+  "published": "2026-03-09",
+  "updated": "2026-03-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

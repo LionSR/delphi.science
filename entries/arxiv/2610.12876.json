@@ -1,0 +1,23 @@
+{
+  "key": "2610.12876",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.12876",
+  "title": "When Solvers Get Moody: Quantifying and Predicting Performance Variability in Mixed Integer Programming",
+  "authors": [
+    "Mourchid Adegbindin",
+    "Brenda Dietrich",
+    "Jamol Pender",
+    "Andrea Lodi"
+  ],
+  "summary": "Mixed-integer programming (MIP) solvers are widely used, yet their performance can vary substantially even under seemingly neutral perturbations. Such variability complicates benchmarking, and the interpretation of computational studies. We introduce the Weighted Variability Score (WVS), a robust multi-component metric that aggregates dispersion in normalized runtime, final optimality gap, LP iterations, and branch-and-bound nodes across repeated runs. On a large subset of MIPLIB 2017 instances, each solved in 100 randomized runs under a four-hour limit, WVS reveals a right-skewed…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

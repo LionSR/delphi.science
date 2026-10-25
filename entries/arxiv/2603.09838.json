@@ -1,0 +1,22 @@
+{
+  "key": "2603.09838",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.09838",
+  "title": "Self-consistent mean-field quantum approximate optimization",
+  "authors": [
+    "Maxime Dupont",
+    "Bhuvanesh Sundar",
+    "Meenambika Gowrishankar"
+  ],
+  "summary": "We introduce a self-consistent mean-field quantum optimization algorithm that approximates the ground state of classical Ising Hamiltonians. The algorithm decomposes the problem into independent subproblems and treats the interactions between them in a mean-field manner. These interactions are captured by a common environment, constructed self-consistently through a variational quantum circuit, and which modifies the subproblems to account for mutual influence while maintaining computational independence. Consequently, subproblems can be solved individually, avoiding the computational cost…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.dis-nn"
+  ],
+  "published": "2026-03-10",
+  "updated": "2026-03-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

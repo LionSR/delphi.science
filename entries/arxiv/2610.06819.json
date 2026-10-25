@@ -1,0 +1,20 @@
+{
+  "key": "2610.06819",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06819",
+  "title": "Improved bounds on stabilizer extent and Clifford rank",
+  "authors": [
+    "Pulkit Sinha",
+    "Benjamin Lovitz"
+  ],
+  "summary": "We prove that every pure state of stabilizer rank at most $k$ has stabilizer extent at most $2^{O(\\sqrt{k\\log(k+1)})}$, and establish the analogous bound for the squared Clifford coefficient norm of Clifford-rank-$k$ operators. This implies stabilizer fidelity at least $2^{-O(\\sqrt{k\\log(k+1)})}$, resolving the quantitative conjecture of (Mehraban-Tamasbi, STOC, 2025), and proves an $Ω(n^2/\\log n)$ lower bound for the approximate stabilizer rank of tensor powers of any non-stabilizer qubit state. The latter result generalizes the best-known lower bound for tensor powers of $T$-states…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

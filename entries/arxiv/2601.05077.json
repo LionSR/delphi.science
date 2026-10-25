@@ -1,0 +1,20 @@
+{
+  "key": "2601.05077",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.05077",
+  "title": "Preconditioned Multivariate Quantum Solution Extraction",
+  "authors": [
+    "Gumaro Rendon",
+    "Stepan Smid"
+  ],
+  "summary": "Numerically solving partial differential equations is a ubiquitous computational task with broad applications in many fields of science. Quantum computers can potentially provide high-degree polynomial speed-ups for solving PDEs, however many algorithms simply end with preparing the quantum state encoding the solution in its amplitudes. Trying to access explicit properties of the solution naively with quantum amplitude estimation can subsequently diminish the potential speed-up. In this work, we present a technique for extracting a smooth positive function encoded in the amplitudes of a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-08",
+  "updated": "2026-01-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2609.20444",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20444",
+  "title": "A Hybrid High-Order Method for the Elasticity Problem with Linear Slip Interface",
+  "authors": [
+    "Erik Burman",
+    "Peiqi Huang"
+  ],
+  "summary": "We design and analyse a hybrid high-order (HHO) method for the linear elasticity problem with a linear slip interface, i.e.\\ with interface conditions of spring type, in which the jump of the displacement across the interface is proportional to the traction through a compliancy tensor $\\bK=α\\bI+(β-α)\\udl{n}\\otimes\\udl{n}$. The mesh is fitted to the interface, the discrete unknowns are polynomials of degree $k\\ge 1$ on the mesh faces and of degree $k+1$ in the mesh cells, and general polytopal cells are allowed. The two novelties of the method lie in the local symmetric strain reconstruction,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

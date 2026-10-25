@@ -1,0 +1,22 @@
+{
+  "key": "2610.01700",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01700",
+  "title": "Deterministic and stochastic particle methods for the Fokker-Planck equation in S--formulation with application to point set registration",
+  "authors": [
+    "Klaas Willems",
+    "Angelo Iollo",
+    "Giovanni Russo",
+    "Tommaso Taddei"
+  ],
+  "summary": "We present two particle methods for point set registration in bounded domains based on the Fokker-Planck equation. The first method relies on a moving least squares discretization of the S--formulation, in which moving grid points (particles) are advected by the drift with the target distribution, diffusion is resolved on a dynamically evolving particle cloud. This setting naturally leads to strong compression and expansion of the particle cloud. Obstacles are handled by enforcing reflective boundary conditions through a novel ghost point method. The second method is a Monte Carlo solver for…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

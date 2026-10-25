@@ -1,0 +1,20 @@
+{
+  "key": "2603.27091",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.27091",
+  "title": "Meta-Contrastive Learning for Vision-Language Models via Task-Adaptive CLIP Training",
+  "authors": [
+    "Merham Fouladvand",
+    "Peuroly Batra"
+  ],
+  "summary": "We propose Domain-Conditioned Meta-Contrastive Learning, a framework for improving the cross-domain generalization of vision-language models. While contrastive models such as CLIP achieve strong performance through large-scale training, they rely on a global objective that does not explicitly account for domain shift. To address this limitation, we formulate multimodal learning as a bilevel meta-learning problem over domain-conditioned tasks. Specifically, we introduce domain embeddings that modulate image and text representations, and optimize the model for rapid adaptation to…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-28",
+  "updated": "2026-03-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

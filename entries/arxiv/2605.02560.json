@@ -1,0 +1,23 @@
+{
+  "key": "2605.02560",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.02560",
+  "title": "Well-Balanced Subcell Limiting for Discontinuous Galerkin Discretizations of the Shallow-Water Equations",
+  "authors": [
+    "Andrés M. Rueda-Ramírez",
+    "Patrick Ersing",
+    "Andrew R. Winters",
+    "Gregor J. Gassner"
+  ],
+  "summary": "High-order discontinuous Galerkin (DG) methods equipped with subcell finite-volume (FV) limiters provide an efficient framework for the simulation of nonlinear hyperbolic balance laws featuring shocks and complex flow structures. However, for systems with non-conservative terms, the design of hybrid DG/FV schemes that simultaneously guarantee high-order accuracy, robustness, and well-balancedness remains challenging. In particular, for the shallow water equations with variable bottom topography, standard flux-differencing formulations combined with node-wise subcell limiting generally…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-05-04",
+  "updated": "2026-05-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2604.00898",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00898",
+  "title": "Enumerating Two-Orbit Graphs",
+  "authors": [
+    "David Seka",
+    "Stefan Szeider"
+  ],
+  "summary": "We present an approach to enumerate graphs whose automorphism group has exactly two orbits. Our method exploits the observation that we can enumerate all graphs whose automorphism group contains a given this permutation group. We obtain the relevant groups via Goursat's lemma. In order to scale the enumeration, we employ additional optimizations that prune irrelevant groups. In total, we enumerate, for the first time, all connected two-orbit graphs of up to 27 vertices, totaling 10,094,721 graphs, pushing the state of the art well beyond what direct enumeration methods can achieve.",
+  "domain": "cs.DM",
+  "tags": [
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-04-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

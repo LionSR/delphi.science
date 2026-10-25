@@ -1,0 +1,21 @@
+{
+  "key": "2606.22851",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.22851",
+  "title": "Faster enumeration of primes",
+  "authors": [
+    "David Harvey"
+  ],
+  "summary": "We describe several new algorithms for finding all prime numbers up to a given bound $N$, achieving the first ever speedup by a positive power of $\\log N$ over the ancient sieve of Eratosthenes. The fastest version, which is not fully rigorous, runs in \\[ N (\\log \\log N)^{1+o(1)} \\] bit operations when analysed in the multitape Turing model. This improves on the best existing algorithms due to Pritchard (1981), Atkin--Bernstein (2004) and Sergeev (2016) by a factor of almost $\\log N$. We also present a rigorous randomised (Las Vegas) variant that is slower by a factor of $(\\log \\log…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "cs.DS",
+    "cs.SC"
+  ],
+  "published": "2026-06-22",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

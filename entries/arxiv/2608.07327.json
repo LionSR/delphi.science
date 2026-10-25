@@ -1,0 +1,20 @@
+{
+  "key": "2608.07327",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.07327",
+  "title": "Accelerating the Conjugate Gradient Method by Solving Multiple GPU-Parallelized Duplicate Systems",
+  "authors": [
+    "Andrew Xu",
+    "Shaked Regev"
+  ],
+  "summary": "We propose a method to accelerate the conjugate gradient method (CG) on parallel computing hardware by performing block conjugate gradient on one linear system. We aim to reduce the number of iterations until convergence by solving several copies of the system to explore multiple regions of the solution space at once. Although solving multiple systems requires more floating point operations than solving one, these computations are highly parallelizable, even without additional hardware resources. Our method does not replace preconditioning and can be used with any preconditioner. We…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

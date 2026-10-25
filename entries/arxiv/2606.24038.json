@@ -1,0 +1,21 @@
+{
+  "key": "2606.24038",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.24038",
+  "title": "Sim-to-Real Betting on the E-Process: Bringing \"simulators\" to anytime-valid confidence sequences",
+  "authors": [
+    "Yujia Chen",
+    "Bowen Weng"
+  ],
+  "summary": "This note describes an integration of the sim-to-real performance estimate with betting (from Chen et al.) and the safe anytime-valid inference (from Ramdas et al.). Using the scaled simulators. The method produces efficient, reliable certificates for the mean estimate, an approach that is especially valuable in robot performance testing. This note gives a primary, self-contained account of the construction; preliminaries of the respective methods are kept at a minimum, and one shall refer to the original works for full detail. Some synthetic examples demonstrating the proposed algorithm can…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "math.PR"
+  ],
+  "published": "2026-06-23",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

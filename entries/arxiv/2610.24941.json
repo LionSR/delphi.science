@@ -1,0 +1,24 @@
+{
+  "key": "2610.24941",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.24941",
+  "title": "LowNet: Looped Wavelet Neural Networks with 24 Learnable Parameters for Solving Poisson Equations",
+  "authors": [
+    "Yuanhao Gong"
+  ],
+  "summary": "Poisson equations frequently appear in various fields, such as mathematics, physics and informatics. Solving Poisson equation, however, is challenging. Traditional methods are not data-specific, although have high certainty. They require a large number of iterations due to the CFL numerical stability. In contrast, deep learning methods are data-driven and more efficient, but require accurate training data and suffer from heavy computation. To tackle these issues, we propose a wavelet-inspired Poisson solver with 24 trainable scalars. The proposed network has several advantages. First, it is…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.CV",
+    "cs.LG",
+    "eess.IV",
+    "math.AP",
+    "math.NA"
+  ],
+  "published": "2026-10-18",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2604.04987",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.04987",
+  "title": "Cactus: Accelerating Auto-Regressive Decoding with Constrained Acceptance Speculative Sampling",
+  "authors": [
+    "Yongchang Hao",
+    "Lili Mou"
+  ],
+  "summary": "Speculative sampling (SpS) has been successful in accelerating the decoding throughput of auto-regressive large language models by leveraging smaller draft models. SpS strictly enforces the generated distribution to match that of the verifier LLM. This is unnecessarily restrictive as slight variations of the verifier's distribution, such as sampling with top-$k$ or temperature, would also be acceptable. Typical acceptance sampling (TAS) alleviates this issue by accepting more tokens using entropy-based heuristics. However, this approach distorts the verifier distribution, potentially…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-04-05",
+  "updated": "2026-04-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

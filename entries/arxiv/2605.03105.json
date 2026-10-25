@@ -1,0 +1,25 @@
+{
+  "key": "2605.03105",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.03105",
+  "title": "Pose Tracking with a Foundation Pose Model and an Ensemble Directional Kalman Filter",
+  "authors": [
+    "Tianlu Lu",
+    "Asif Sijan",
+    "Thomas Noh",
+    "Huaijin Chen",
+    "Andrey A. Popov"
+  ],
+  "summary": "This paper introduces the ensemble directional Kalman filter (EnDKF), an ensemble-based Kalman filtering approach for pose tracking that jointly estimates an object's position and attitude using ideas from directional statistics. The EnDKF integrates a unit-quaternion attitude representation to move beyond canonical Kalman filter mean and covariance assumptions that poorly capture directional uncertainty. Experiments on a synthetic constant-velocity constant-angular-velocity system and a digital-twin head-tracking scenario using the FoundationPose algorithm demonstrate a significant…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DG",
+    "stat.AP"
+  ],
+  "published": "2026-05-04",
+  "updated": "2026-05-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

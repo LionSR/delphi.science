@@ -1,0 +1,21 @@
+{
+  "key": "2610.04191",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04191",
+  "title": "Consistency of penalized maximum likelihood estimation for multidimensional change-in-velocity detection",
+  "authors": [
+    "Linh Do",
+    "Dat Do",
+    "Scott A. McKinley"
+  ],
+  "summary": "We establish statistical consistency for the penalized maximum-likelihood estimator underlying CPLASS, a method for detecting changes in velocity in $d$-dimensional time-series data. The signal is modeled as a continuous piecewise-linear trajectory observed with independent Gaussian noise. Unlike classical change-in-mean models, continuity across adjacent segments couples their parameters and prevents direct application of standard segmentation arguments. Under compact parameter spaces, minimum segment-length and velocity-jump conditions, and a strengthened Schwarz information criterion…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-10-03",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2604.09484",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.09484",
+  "title": "Asymptotic-preserving deterministic particle methods for collisional plasma models",
+  "authors": [
+    "Yan Huang",
+    "Li Wang"
+  ],
+  "summary": "We develop novel asymptotic-preserving (AP) deterministic particle methods for collisional plasma models, including both Landau--Fokker--Planck and Dougherty collision operators, under hydrodynamic scaling. Our schemes treat the non-stiff transport part explicitly and the stiff collision operators fully implicitly through the energy-conserving Jordan--Kinderlehrer--Otto (JKO) schemes by exploiting their gradient flow structures. This approach extends our previous work on the space-homogeneous Landau equation [arXiv:2409.12296] and introduces a new treatment of the Dougherty operator via a…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-10",
+  "updated": "2026-04-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

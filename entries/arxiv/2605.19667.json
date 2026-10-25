@@ -1,0 +1,24 @@
+{
+  "key": "2605.19667",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.19667",
+  "title": "Convergence of Consensus-Based Particle Methods for Nonconvex Bi-Level Optimization",
+  "authors": [
+    "Yutong Chao",
+    "Xudong Sun",
+    "Konstantin Riedl",
+    "Majid Khadiv",
+    "Jalal Etesami"
+  ],
+  "summary": "In this paper, we study a consensus-based optimization method for nonconvex bi-level optimization, where the objective is to minimize an upper-level function over the set of global minimizers of a lower-level problem. The proposed approach is derivative-free, and constructs its consensus point via smooth quantile selection combined with a Gibbs-type Laplace approximation. We establish convergence guarantees for both the associated \\textit{mean-field} dynamics and its \\textit{finite-particle} approximation. In particular, under suitable assumptions on smooth quantile localization, error…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

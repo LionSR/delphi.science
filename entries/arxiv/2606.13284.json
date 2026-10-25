@@ -1,0 +1,23 @@
+{
+  "key": "2606.13284",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.13284",
+  "title": "Where a Quantum Reservoir Works: A Transferable Operating Band",
+  "authors": [
+    "Markus Baumann",
+    "Itamar Fink",
+    "Johannes Wittmann",
+    "Claudia Linnhoff-Popien",
+    "Jonas Stein"
+  ],
+  "summary": "In quantum reservoir computing, a fixed quantum system transforms an input signal, while learning reduces to training a simple linear readout on its measured outputs. Since the quantum dynamics themselves are never optimized, the method is well suited to today's hardware. Yet these dynamics must still be chosen carefully, because their settings remain fixed throughout training and inference. It therefore remains open whether useful dynamics occupy a task-transferable region of control space and whether that region can be found without target-task tuning. We address this question for a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

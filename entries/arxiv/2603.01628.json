@@ -1,0 +1,22 @@
+{
+  "key": "2603.01628",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.01628",
+  "title": "No More Hooks in the Surface Code: Distance-Preserving Syndrome Extraction for Arbitrary Layouts at Minimum Depth",
+  "authors": [
+    "Yuga Hirai",
+    "Shota Ikari",
+    "Yosuke Ueno",
+    "Yasunari Suzuki"
+  ],
+  "summary": "Hook errors are a major challenge in implementing logical operations with the surface code, because they can reduce the fault distance below the code distance. This motivates syndrome-extraction circuits that suppress hook-error effects for the stabilizer layouts that appear during logical operations. However, the existing methods either increase circuit depth or require simultaneous execution of measurements and CNOT gates, both of which introduce additional overheads and degrade the threshold. We propose the ZX interleaving syndrome extraction, which preserves the full fault distance $d$…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-02",
+  "updated": "2026-06-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

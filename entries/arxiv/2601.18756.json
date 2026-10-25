@@ -1,0 +1,24 @@
+{
+  "key": "2601.18756",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.18756",
+  "title": "Efficient Trotter-Suzuki Schemes for Long-time Quantum Dynamics",
+  "authors": [
+    "Marko Maležič",
+    "Johann Ostmeyer"
+  ],
+  "summary": "Accurately simulating long-time dynamics of many-body systems is a challenge in both classical and quantum computing due to the accumulation of Trotter errors. While low-order Trotter-Suzuki decompositions are straightforward to implement, their rapidly growing error limits access to long-time observables. We present a framework for constructing efficient high-order Trotter-Suzuki schemes by identifying their structure and directly optimizing their parameters over a high-dimensional space. This method enables the discovery of new schemes with significantly improved efficiency compared to…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.stat-mech",
+    "cond-mat.str-el",
+    "hep-lat",
+    "physics.comp-ph"
+  ],
+  "published": "2026-01-26",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

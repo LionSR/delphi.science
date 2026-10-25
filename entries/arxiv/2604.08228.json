@@ -1,0 +1,21 @@
+{
+  "key": "2604.08228",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.08228",
+  "title": "Five-Structures Preserving Algorithm for charge dynamics model",
+  "authors": [
+    "Haoran Sun",
+    "Wancheng Wu",
+    "Kun Wang"
+  ],
+  "summary": "This paper develops a family of fast, structure-preserving numerical algorithms for the nonlinear Maxwell-Ampere Nernst-Planck equations. For the first-order scheme, the Slotboom transformation rewrites the Nernst-Planck equation to enable positivity preservation. The backward Euler method and centered finite differences discretize the transformed system. Two correction strategies are introduced: one enforces Gauss's law via a displacement correction, and the other preserves Faraday's law through potential reconstruction. The fully discrete scheme exactly satisfies mass conservation,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-09",
+  "updated": "2026-08-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

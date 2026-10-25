@@ -1,0 +1,22 @@
+{
+  "key": "2607.26995",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.26995",
+  "title": "Dynamic output-feedback stabilization of uncertain linear dynamics via digital twins",
+  "authors": [
+    "Philipp A. Guth",
+    "Karl Kunisch",
+    "Sergio S. Rodrigues",
+    "Jesper Schröder"
+  ],
+  "summary": "This work presents a digital twin framework for output-feedback stabilization and parameter identification in uncertain dynamical systems. A virtual model evolves in parallel with the physical process, assimilating measurement data in real time. By design, the digital twin reconstructs the system state and generates a stabilizing feedback, while model parameters are simultaneously inferred from data of the controlled dynamics using a Bayesian approach. Numerical results for the coupled physical-virtual dynamics demonstrate how digital twins can act jointly as observers, parameter estimators,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

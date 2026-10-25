@@ -1,0 +1,23 @@
+{
+  "key": "2607.25162",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.25162",
+  "title": "Quantum Transformer BSDE Solver via Multi-Layer Fully-Connected Variational Quantum Circuits",
+  "authors": [
+    "Howard Su",
+    "Huan-Hsin Tseng",
+    "Chi-Sheng Chen",
+    "Lance Bai"
+  ],
+  "summary": "Solving high-dimensional parabolic partial differential equations (PDEs) is important in engineering, physics, and stochastic control. Deep BSDE methods reformulate semilinear PDEs as backward stochastic differential equations and admit a model-based reinforcement learning interpretation, where trajectories are generated from known stochastic dynamics while a trainable model learns the gradient-related control process. We propose a Quantum Transformer BSDE solver based on Multi-Layer Fully-Connected Variational Quantum Circuits (FC-VQC). The method treats the normalized state trajectory as…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "q-fin.CP"
+  ],
+  "published": "2026-07-28",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

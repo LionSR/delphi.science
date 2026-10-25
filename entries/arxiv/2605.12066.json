@@ -1,0 +1,27 @@
+{
+  "key": "2605.12066",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.12066",
+  "title": "Benchmarking and Resource Analysis for Augmented-Lagrangian Quantum Hamiltonian Descent",
+  "authors": [
+    "Zeguan Wu",
+    "Mingze Li",
+    "Muqing Zheng",
+    "Meng Wang",
+    "Junyu Liu",
+    "Samuel Stein",
+    "Ang Li",
+    "Yousu Chen",
+    "Chenxu Liu"
+  ],
+  "summary": "Quantum Hamiltonian Descent (QHD) is a continuous optimization algorithm based on simulating a time-dependent quantum Hamiltonian whose potential energy encodes the objective function and whose kinetic energy promotes exploration through quantum interference and tunneling. While QHD is formulated for unconstrained optimization, many real-world optimization problems are constrained and highly nonconvex. In this paper, we benchmark AL-QHD, a hybrid framework that embeds QHD within the Augmented Lagrangian Method (ALM), thereby solving a sequence of unconstrained subproblems while using ALM to…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

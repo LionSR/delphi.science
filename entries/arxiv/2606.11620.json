@@ -1,0 +1,25 @@
+{
+  "key": "2606.11620",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.11620",
+  "title": "Family-Aware Residual Architecture for Predicting Quantum Circuit Simulation Performance",
+  "authors": [
+    "Honjar Xing",
+    "Yehong Jiang",
+    "Xianbang Wang",
+    "Zehua Wang",
+    "Zhicheng Jiang"
+  ],
+  "summary": "Approximate tensor-network simulators enable classical simulation of quantum circuits beyond the reach of exact methods, but selecting optimal approximation parameters -- such as bond dimension thresholds -- remains a costly trial-and-error process. We present a family-aware neural architecture that predicts both the minimum approximation threshold required to achieve target fidelity and the expected wall-clock runtime for quantum circuit simulation, given only the circuit's OpenQASM description and execution context. Our key insight is that quantum circuits from different algorithmic…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET",
+    "cs.LG"
+  ],
+  "published": "2026-06-10",
+  "updated": "2026-06-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

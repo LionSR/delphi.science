@@ -1,0 +1,21 @@
+{
+  "key": "2610.00019",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00019",
+  "title": "Topologically Relevant Landmark Selection on Point Clouds",
+  "authors": [
+    "Kaifeng Zhang",
+    "Kai Ming Ting"
+  ],
+  "summary": "Persistent Homology (PH) is an important tool in Topological Data Analysis for point clouds, but can be prohibitively expensive for large datasets. A practical approximation is to compute PH on a smaller subset of representative points, known as landmarks. Existing landmark selection methods mainly address challenges such as outlier contamination rather than restoring the topological features of the full dataset. To select topologically relevant landmarks, we propose a landmark selection method based on Hodge Laplacian. It assigns each point a topological relevance score based on its…",
+  "domain": "cs.CG",
+  "tags": [
+    "cs.CG",
+    "math.AT"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

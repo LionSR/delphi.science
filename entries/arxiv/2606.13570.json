@@ -1,0 +1,23 @@
+{
+  "key": "2606.13570",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.13570",
+  "title": "Approximability limits for bounded-degree max-LINSAT and implications for decoded quantum interferometry",
+  "authors": [
+    "Maximilian J. Kramer",
+    "Carsten Schubert",
+    "Jens Eisert"
+  ],
+  "summary": "For general max-k-XORSAT with $k \\geq 3$, no polynomial-time algorithm can do substantially better than random guessing on worst-case instances unless $\\mathsf{P} = \\mathsf{NP}$: approximating beyond the random-assignment value of $1/2$ is $\\mathsf{NP}$-hard. The picture changes when each variable appears in at most $D$ constraints. In that bounded-degree setting, polynomial-time algorithms can provably beat the random baseline by an additive amount of order $1/\\sqrt{D}$. For Boolean instances, this scaling is known to be optimal: the matching hardness result is due to Trevisan, while the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.DS"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2601.04570",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.04570",
+  "title": "A Virtual Heat Flux Method for Simple and Accurate Neumann Thermal Boundary Imposition in the Material Point Method",
+  "authors": [
+    "Jidu Yu",
+    "Jidong Zhao"
+  ],
+  "summary": "In the Material Point Method (MPM), accurately imposing Neumann-type thermal boundary conditions, particularly convective heat flux boundaries, remains a significant challenge due to the inherent nonconformity between complex evolving material boundaries and the fixed background grid. This paper introduces a novel Virtual Heat Flux Method (VHFM) to overcome this limitation. The core idea is to construct a virtual flux field on an auxiliary domain surrounding the physical boundary, which exactly satisfies the prescribed boundary condition. This transforms the surface integral in the weak form…",
+  "domain": "math-ph",
+  "tags": [
+    "math-ph",
+    "math.NA"
+  ],
+  "published": "2026-01-08",
+  "updated": "2026-01-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

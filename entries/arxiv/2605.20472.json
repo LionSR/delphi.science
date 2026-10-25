@@ -1,0 +1,21 @@
+{
+  "key": "2605.20472",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.20472",
+  "title": "Entropy-stable discretizations for the compressible Euler equations using simple adaptive averages",
+  "authors": [
+    "Carlo De Michele",
+    "Ayaboe K. Edoh"
+  ],
+  "summary": "Entropy stabilization of the compressible Euler system is achieved by adapting the averages that are applied to the density and internal energy variables. The approach achieves non-linear robustness despite the use of simplified symmetric means (e.g., arithmetic, geometric, or harmonic evaluations), including their related expansions for asymptotic entropy conservation. The proposed formulation works via centralized convective terms and can naturally adhere to additional structures of the flow equations such as kinetic-energy- and pressure-equilibrium-preservation.",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math.NA"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

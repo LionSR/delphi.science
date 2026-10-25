@@ -1,0 +1,20 @@
+{
+  "key": "2601.21717",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.21717",
+  "title": "On sample complexity for covariance estimation via the unadjusted Langevin algorithm",
+  "authors": [
+    "Shogo Nakakita"
+  ],
+  "summary": "We establish sample complexity guarantees for estimating the covariance matrix of a strongly log-concave smooth distribution using the unadjusted Langevin algorithm (ULA). We quantitatively compare our complexity estimates on single-chain ULA with embarrassingly parallel ULA and derive that the sample complexity of the single-chain approach is smaller than that of embarrassingly parallel ULA by a logarithmic factor in the dimension and the reciprocal of the prescribed precision, with the difference arising from effective bias reduction through burn-in. The key technical contribution is a…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-02-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

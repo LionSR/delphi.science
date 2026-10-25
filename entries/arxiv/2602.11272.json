@@ -1,0 +1,23 @@
+{
+  "key": "2602.11272",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.11272",
+  "title": "Efficient Simulation of Pre-Born-Oppenheimer Dynamics on a Quantum Computer",
+  "authors": [
+    "Matthew Pocrnic",
+    "Ignacio Loaiza",
+    "Juan Miguel Arrazola",
+    "Nathan Wiebe",
+    "Danial Motlagh"
+  ],
+  "summary": "In this work, we present a quantum algorithm for direct first-principles simulation of electron-nuclear dynamics on a first-quantized real-space grid. Our algorithm achieves best-in-class efficiency for block-encoding the pre-Born-Oppenheimer molecular Hamiltonian by harnessing the linear scaling of swap networks for implementing the quadratic number of particle interactions, while using a novel alternating sign implementation of the Coulomb interaction that exploits highly optimized arithmetic routines. We benchmark our approach for a series of scientifically and industrially relevant…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-11",
+  "updated": "2026-02-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

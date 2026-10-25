@@ -1,0 +1,22 @@
+{
+  "key": "2607.23667",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.23667",
+  "title": "No Free Lunch in Flow Surrogates under Time-Varying Boundary Conditions: A Two-Regime Study",
+  "authors": [
+    "Georg Winkler",
+    "Martin Stoll"
+  ],
+  "summary": "We test whether an architecture that succeeds on a simple flow regime also succeeds on a richer one, with each trained separately on each regime. We explore two transient flows under time-varying boundary conditions: the three-dimensional slurry film in chemical-mechanical planarisation (CMP), central to semiconductor manufacturing, and the two-dimensional Kármán vortex street (KVS). Eight surrogate models on one shared pipeline differ in whether they learn the full field or a latent representation, and in whether they predict in one shot or step by step. No single architecture wins both…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-07-26",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

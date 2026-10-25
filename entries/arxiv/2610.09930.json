@@ -1,0 +1,21 @@
+{
+  "key": "2610.09930",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.09930",
+  "title": "Anchored Reversible Jump Sequential Monte Carlo",
+  "authors": [
+    "Janna van Assen",
+    "Max Hinne"
+  ],
+  "summary": "Reversible Jump Markov Chain Monte Carlo (RJMCMC) is a principled framework for Bayesian model comparison, but its practical use is often limited due to the difficulty of designing between-model proposals that reach regions of high posterior probability. In addition, its inherently sequential nature limits efficient use of modern GPU architectures. We address both challenges by introducing Anchored Reversible Jump Sequential Monte Carlo. Our approach combines RJMCMC with Sequential Monte Carlo (SMC) to explore the model space in parallel. Importantly, the particle population enables…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

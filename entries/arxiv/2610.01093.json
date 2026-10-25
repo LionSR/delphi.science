@@ -1,0 +1,24 @@
+{
+  "key": "2610.01093",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01093",
+  "title": "OrbitTAMP: Grounding Language Models for Task and Motion Planning in Spacecraft Rendezvous",
+  "authors": [
+    "Yuji Takubo",
+    "Daniele Gammelli",
+    "Marco Pavone",
+    "Simone D'Amico"
+  ],
+  "summary": "Spacecraft rendezvous and proximity operations (RPO) are currently planned through an expertise-intensive process in which engineers translate high-level operational intent into safe, dynamically feasible trajectories, creating a bottleneck to scalable operations. Large language model (LLM)-based agents could offer an intuitive interface for this process, although their outputs are not inherently grounded in orbital dynamics, operational constraints, or the structure of admissible spacecraft maneuvers. To exploit their semantic reasoning while ensuring the generated plan's physical validity,…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

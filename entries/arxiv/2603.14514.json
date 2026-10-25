@@ -1,0 +1,27 @@
+{
+  "key": "2603.14514",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.14514",
+  "title": "High-Probability Bounds for SGD under the Polyak-Lojasiewicz Condition with Markovian Noise",
+  "authors": [
+    "Avik Kar",
+    "Siddharth Chandak",
+    "Rahul Singh",
+    "Eric Moulines",
+    "Shalabh Bhatnagar",
+    "Nicholas Bambos"
+  ],
+  "summary": "We present the first uniform-in-time high-probability bound for SGD under the PL condition, where the gradient noise contains both Markovian and martingale difference components. This significantly broadens the scope of finite-time guarantees, as the PL condition arises in many machine learning and deep learning models while Markovian noise naturally arises in decentralized optimization and online system identification problems. We further allow the magnitude of noise to grow with the function value, enabling the analysis of many practical sampling strategies. In addition to the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "eess.SY",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-03-15",
+  "updated": "2026-03-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

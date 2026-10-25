@@ -1,0 +1,21 @@
+{
+  "key": "2605.17820",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.17820",
+  "title": "Solving Vlasov-Poisson system with an adaptive Hermite spectral method",
+  "authors": [
+    "Sihong Shao",
+    "Yanli Wang",
+    "Jie Wu"
+  ],
+  "summary": "We propose an adaptive Hermite spectral method for the Vlasov-Poisson system based on a recently developed frequency indicator that measures the contribution of the high-order expansion coefficients. Precisely, the symmetrically weighted Hermite basis with a scaling factor is utilized to approximate the distribution function to satisfy the increasing resolution requirement, which, for example, is induced by filamentation. To implement the scaling adjustment, a fast conservative projection operator is constructed in two steps. The first step is to formulate the projection as a constrained…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-18",
+  "updated": "2026-05-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

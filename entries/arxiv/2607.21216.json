@@ -1,0 +1,25 @@
+{
+  "key": "2607.21216",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.21216",
+  "title": "ARGON: A GNN-Empowered Compilation Framework for Scalable Neutral Atom Computing",
+  "authors": [
+    "Wenjie Sun",
+    "Xiaoyu Li",
+    "Zhigang Wang",
+    "Lianhui Yu",
+    "Geng Chen",
+    "Guowu Yang"
+  ],
+  "summary": "Neutral atom quantum systems offer a promising pathway to large-scale quantum computing due to high qubit uniformity and flexible connectivity. To exploit this architecture, compilers must coordinate dynamic atom transport alongside highly parallel entangling gates. As circuits scale, the interplay between these operations becomes a system bottleneck, introducing denser logical interactions and longer temporal dependencies. Compilers must simultaneously satisfy rigid spatial constraints and complex movement schedules. Existing joint spatiotemporal compilation methods face an exponentially…",
+  "domain": "cs.ET",
+  "tags": [
+    "cs.ET",
+    "quant-ph"
+  ],
+  "published": "2026-07-23",
+  "updated": "2026-07-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

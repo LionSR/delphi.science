@@ -1,0 +1,20 @@
+{
+  "key": "2607.10459",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10459",
+  "title": "A column generation-based fixed-point heuristic for the service-aware multi-commodity flow problem",
+  "authors": [
+    "Siv Marie Cartland Hansen",
+    "Richard Martin Lusby"
+  ],
+  "summary": "We study the Service-Aware Multi-Commodity Flow (SAMCF) problem, in which demand is elastic and governed by a logit choice model while routing is subject to hard capacity constraints. In a centralized, system-optimal setting, the network operator jointly determines how much demand to serve and how to route it. We formulate the SAMCF as a nonlinear program and propose an iterative fixed-point heuristic that alternates between solving an inelastic MCF via column generation and updating demand from the resulting service levels. Two linear approximations based on piecewise-linear demand…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-11",
+  "updated": "2026-07-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

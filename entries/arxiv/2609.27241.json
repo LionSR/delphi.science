@@ -1,0 +1,22 @@
+{
+  "key": "2609.27241",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.27241",
+  "title": "On the Sample Complexity of Active Learning with Membership Queries",
+  "authors": [
+    "Ganghua Wang",
+    "Shaddin Dughmi"
+  ],
+  "summary": "This work revisits a fundamental question in active learning: how powerful is the ability to synthesize arbitrary queries? Compared to pool-based active learning, where the learner only selects queries from a given unlabeled pool, it has been observed that this seemingly mild change in query ability may dramatically alter the difficulty of statistical learning. In particular some hypothesis classes, such as two dimensional halfspaces, permit only polynomial error decay in the number of samples when the learner must draw its labels from the pool, yet become exponentially learnable once…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-09-23",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

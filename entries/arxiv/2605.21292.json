@@ -1,0 +1,22 @@
+{
+  "key": "2605.21292",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.21292",
+  "title": "Unbiased Gradients, Moving Stability Boundaries: Exact Mini-Batch Geometry in Linear Self-Attention",
+  "authors": [
+    "Krishnakumar Balasubramanian"
+  ],
+  "summary": "Unbiased stochastic gradients can match the full gradient in expectation while changing finite-step stability. We study this effect in one-layer linear self-attention for in-context linear regression, where shared-mode mini-batch training reduces exactly to a random two-factor map. The full-batch map preserves an elliptic region, whereas sampled curvature and target correlation create batch-dependent stability boundaries. Their combined fluctuation is centered at the parameter-update level but induces a strictly outward drift of the full-batch boundary coordinate. We derive an exact one-step…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.AI",
+    "cs.LG",
+    "math.DS"
+  ],
+  "published": "2026-05-20",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

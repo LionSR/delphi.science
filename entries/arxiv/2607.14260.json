@@ -1,0 +1,26 @@
+{
+  "key": "2607.14260",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14260",
+  "title": "Emulation of Entanglement Distribution Networks on a Quantum Computer",
+  "authors": [
+    "Ashley N. Tittelbaugh",
+    "Jerry Horgan",
+    "Rohan Bali",
+    "Marco Ruffini",
+    "Daniel C. Kilper",
+    "Shelbi L. Jenkins",
+    "Boulat A. Bash"
+  ],
+  "summary": "We investigate how quantum computers can be used to emulate quantum networks and study their performance under practical impairments. In particular, we evaluate how degraded entanglement and communication latency affect teleportation-based distributed multipartite-entanglement-state construction. We model imperfect Bell-pair sources using depolarizing noise channels and classical communication delays using thermal relaxation. We implement the depolarization using Stinespring dilation, randomly applied Pauli errors, and quasi-probability decompositions, evaluating the latter two on IQM…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.NI"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-07-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

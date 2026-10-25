@@ -1,0 +1,26 @@
+{
+  "key": "2610.06709",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06709",
+  "title": "Out-of-control Hamiltonian Learning",
+  "authors": [
+    "Weiyuan Gong",
+    "Muzhou Ma",
+    "Sitan Chen",
+    "Jordan Cotler",
+    "Hsin-Yuan Huang"
+  ],
+  "summary": "Learning the Hamiltonian of a many-body system from its dynamics is a central task in quantum science, yet the algorithms with the strongest provable guarantees assume some level of quantum control--fast, arbitrary single-qubit gates interleaved with time evolution, and measurements in arbitrary bases--that is beyond the capabilities of near-term analog quantum simulators. Motivated by analog atom- and ion-based platforms, we study Hamiltonian learning under minimal access models. Uniform state preparation and measurements: We first consider the setting where in every experiment, one can…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.IT",
+    "cs.LG",
+    "physics.atom-ph"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

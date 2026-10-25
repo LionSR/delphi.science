@@ -1,0 +1,22 @@
+{
+  "key": "2609.34831",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.34831",
+  "title": "Structured Neural SDEs for Functional Calibration",
+  "authors": [
+    "Francesco Piatti",
+    "Andrea Iannucci",
+    "Thomas Cass"
+  ],
+  "summary": "Neural Stochastic Differential Equations (Neural SDEs) provide flexible continuous-time generative models, but generic neural drift and diffusion networks are costly to simulate on long horizons and can give unstable gradients when the training signal is a path functional rather than a pointwise observation. We introduce SLiSDE, a family of Neural SDE models built from structured linear stochastic layers. Parallel-in-time simulation is obtained at the layer level, while expressivity is recovered by gated in-flow stacking: previous-layer paths modulate the next layer's latent flow through…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

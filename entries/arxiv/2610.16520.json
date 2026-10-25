@@ -1,0 +1,22 @@
+{
+  "key": "2610.16520",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16520",
+  "title": "Towards learning-enhanced solvers for multi-parametric optimization",
+  "authors": [
+    "Dieter Teichrib",
+    "Fabian König",
+    "Moritz Schulze Darup"
+  ],
+  "summary": "Neural networks (NNs) have been employed in various ways to accelerate the solution of multi-parametric optimization problems (OPs), which prominently arise in model predictive control (MPC). Early approaches focused on approximating the parametric solution (e.g., the optimal control law) directly by NNs. More recently, learning-based techniques have been used to emulate or enhance solver iterations. For the direct approximation of the parametric solution, it has been demonstrated that exploiting structural properties of the underlying OP facilitates the design of suitable NN architectures.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

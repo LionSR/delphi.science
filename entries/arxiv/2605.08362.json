@@ -1,0 +1,22 @@
+{
+  "key": "2605.08362",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.08362",
+  "title": "Kernel-based linear system identification using augmented Krylov subspaces",
+  "authors": [
+    "Fabio Matti",
+    "Martin Skovgaard Andersen",
+    "Tianshi Chen",
+    "Daniel Kressner"
+  ],
+  "summary": "We propose a novel Krylov subspace method for estimating the finite impulse response (FIR) of a one-dimensional linear time-invariant systems. The method approximates the system's FIR using a kernel-based formulation combined with hyperparameter selection based on maximum likelihood estimation (MLE), which requires repeated evaluation of two terms: The data fit $\\boldsymbol{y}^{\\top} (λ\\boldsymbol{I} + \\boldsymbol{A})^{-1} \\boldsymbol{y}$ and the model complexity $\\log(\\det (λ\\boldsymbol{I} + \\boldsymbol{A}))$, where $\\boldsymbol{A}$ is a certain positive semidefinite matrix that admits fast…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-08",
+  "updated": "2026-05-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

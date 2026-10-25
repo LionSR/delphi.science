@@ -1,0 +1,20 @@
+{
+  "key": "2608.17565",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17565",
+  "title": "Sharp Quasi-Reverse Minkowski Inequality for Schatten Norms",
+  "authors": [
+    "Hongsen Qiu"
+  ],
+  "summary": "Let $\\|\\cdot\\|_p$ denote the Schatten $p$-norm and let $|A|=(A^*A)^{1/2}$. For $2\\leq p 1$ be the unique solution of $x_{p,m}^p=2x_{p,m}+m-1$, and set \\[ C_{p,m}=\\frac{\\sqrt{x_{p,m}(x_{p,m}+m-1)}}{(x_{p,m}^p+m-1)^{1/p}}. \\] We prove the sharp inequality \\[ \\|A_1+\\cdots+A_m\\|_p\\leq C_{p,m}\\bigl\\||A_1|+\\cdots+|A_m|\\bigr\\|_p \\] for arbitrary complex matrices of arbitrary size. Equivalently, if $q=p/(p-1)$ and $R,X_1,\\cdots,+X_m$ are positive semidefinite, then \\[ \\|RX_1\\|_1+\\cdots\\|RX_m\\|_1 \\leq C_{p,m}\\|R\\|_q\\|X_1+\\cdots X_m\\|_p. \\] For $1<p<2$, we also show that the formula proposed for the…",
+  "domain": "math.FA",
+  "tags": [
+    "math.FA",
+    "math.CA"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

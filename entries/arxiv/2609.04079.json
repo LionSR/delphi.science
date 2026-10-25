@@ -1,0 +1,21 @@
+{
+  "key": "2609.04079",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.04079",
+  "title": "Diffuse Gaussian Truncation For Deterministic Approximate Counting",
+  "authors": [
+    "Zihong Yi"
+  ],
+  "summary": "We give deterministic FPTASes for two dense counting problems on which the known deterministic algorithms, based on zero-free interpolation, run in quasipolynomial time. For fixed $0 0$ and $0<κ\\leq1$, the second approximates the zero-field Ising partition function $Z(J)$ for zero-diagonal real symmetric matrices $J$ satisfying $\\max_{i,j}|J_{ij}|\\leqβ/n$ and $λ_{\\max}(J)\\leq1-κ$. No separate lower-eigenvalue condition is imposed. We further prove $\\log\\mathrm{haf}(A)=h_A(G)-n/2+O_{γ,θ}(1)$ and $Z(J)=2^n\\det(I-J)^{-1/2}(1+O_{β,κ}(1/n))$. Here $h_A(G)$ is the maximum weighted…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO",
+    "math.PR"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

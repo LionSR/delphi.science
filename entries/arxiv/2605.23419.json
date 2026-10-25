@@ -1,0 +1,21 @@
+{
+  "key": "2605.23419",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.23419",
+  "title": "Generalized Stochastic Approximation of the Log-Likelihood Ratio for Robust Sequential Change-Point Detection",
+  "authors": [
+    "Serhii Zabolotnii"
+  ],
+  "summary": "Generalized stochastic approximation replaces the log-likelihood ratio of a sequential change-point problem by an affine function of a fixed feature dictionary, whose coefficients solve a normal system in the dictionary's moments under the pre- and post-change laws. The increment is a rescaled orthogonal projection of the bounded score, and the information it carries is bounded by the triangular discrimination between the laws. The dictionary decides what is detectable: a symmetry shared by both laws annihilates a whole parity at every order, and one further column raises the information by…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "eess.SP",
+    "math.ST"
+  ],
+  "published": "2026-05-22",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

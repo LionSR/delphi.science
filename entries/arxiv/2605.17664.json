@@ -1,0 +1,20 @@
+{
+  "key": "2605.17664",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.17664",
+  "title": "On a blended Anderson / NGMRES acceleration for the Navier-Stokes Picard iteration: convergence analysis and adaptive depth selection",
+  "authors": [
+    "Yunhui He",
+    "Leo Rebholz"
+  ],
+  "summary": "Anderson acceleration (AA) and nonlinear GMRES (NGMRES) have been successfully applied to improve the efficiency and robustness of many nonlinear solvers, with each being shown to have certain advantages over the other. There are two differences between the AA and NGMRES algorithms: the extrapolations are different, and AA uses fixed point residuals in the optimization problem while NGMRES uses true nonlinear residuals. Motivated by recent AA and NGMRES analyses and numerical testing, we consider a blend of AA and NGMRES that uses the AA extrapolation and the true nonlinear residuals for the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-17",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

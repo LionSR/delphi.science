@@ -1,0 +1,24 @@
+{
+  "key": "2603.00033",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.00033",
+  "title": "Iterative Data-Consistent Inversion with Multiple Push-forward Constraints",
+  "authors": [
+    "Tianyi Jiang",
+    "Troy Butler",
+    "Timothy Wildey",
+    "Tim Kutta",
+    "Haonan Wang"
+  ],
+  "summary": "A foundational challenge in uncertainty quantification involves estimating a probability measure on the space of uncertain parameters such that its push-forward through a computational model matches an observed probability measure on the output data associated with quantities of interest (QoI). When multiple, distinct sets of observational data are available, the desired parameter measure should simultaneously satisfy multiple push-forward constraints associated with various subsets of the QoI. In this work, we present a convergent measure-theoretic framework for solving this problem based…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.PR"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-04-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

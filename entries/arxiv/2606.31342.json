@@ -1,0 +1,23 @@
+{
+  "key": "2606.31342",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.31342",
+  "title": "Domain-Decomposed Randomized Neural Networks for Partial Differential Equations in Unbounded Domains",
+  "authors": [
+    "Haixin Wang",
+    "Haoning Dang",
+    "Fei Wang",
+    "Shimin Guo"
+  ],
+  "summary": "Partial differential equations on unbounded domains are challenging because the exterior region must be represented without excessive truncation error. Truncation-based methods often require problem-dependent artificial boundary conditions, while global spectral bases may be inefficient for localized structures, irregular geometries, or solutions with different near-field and far-field behaviors. We propose a domain-decomposed randomized neural network framework for such problems. Different randomized subnetworks are assigned to different spatial regimes: a near-field subnetwork captures…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-06-30",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

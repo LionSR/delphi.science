@@ -1,0 +1,19 @@
+{
+  "key": "2609.01789",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.01789",
+  "title": "Ranks and integer points on elliptic curves induced by Fibonacci triples",
+  "authors": [
+    "Andrej Dujella"
+  ],
+  "summary": "Let $F_n$ and $L_n$ denote the Fibonacci and Lucas numbers, respectively, and consider \\[ E_k:\\qquad y^2=(F_{2k}x+1)(F_{2k+2}x+1)(F_{2k+4}x+1). \\] These elliptic curves arise naturally from the regular Diophantine triples \\[ \\{F_{2k},F_{2k+2},F_{2k+4}\\}. \\] For odd $k$, we exhibit the rational point \\[ Q_k=\\left( -\\frac{F_{k-1}}{L_kF_{k+1}F_{k+2}}, \\frac{F_{2k+1}}{L_kF_{k+1}F_{k+2}} \\right). \\] For every odd $k\\geq 3$, this point is independent of the standard point $P_k=(0,1)$; in particular, $\\operatorname{rank}E_k(\\mathbb{Q})\\geq 2$. Moreover, if $k\\geq 3$ is odd and…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-09-01",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

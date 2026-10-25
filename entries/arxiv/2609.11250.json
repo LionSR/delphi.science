@@ -1,0 +1,24 @@
+{
+  "key": "2609.11250",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11250",
+  "title": "A Geometrically Parameterized Quasi-Stationary 3D Model for High-Frequency Induction Tube Welding",
+  "authors": [
+    "Dmitry Ivanov",
+    "John Inge Asperheim",
+    "Bjørnar Grande",
+    "Prerana Das"
+  ],
+  "summary": "A three-dimensional multiphysics finite element model for the simulation of high-frequency induction welding of tubes is presented. The model couples a time-harmonic $h-φ$ formulation with a stabilized quasi-stationary advection-diffusion heat transport equation, enabling accurate prediction of electromagnetic and thermal fields under industrial operating conditions. The model incorporates parameterized geometry generation and semi-automated, physics-tailored mesh construction and is implemented using the open-source tools GetDP and Gmsh. Validation against measurements from a commercial…",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "cs.CE",
+    "math.NA"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

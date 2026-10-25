@@ -1,0 +1,21 @@
+{
+  "key": "2610.30650",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.30650",
+  "title": "Adaptive Restart under Unknown KL Geometry in Stochastic Weakly-Convex Optimization",
+  "authors": [
+    "Binh T. Nguyen",
+    "Khoa D. Nguyen",
+    "Bao Thai Huynh"
+  ],
+  "summary": "KL geometry accelerates restart schedules in stochastic weakly-convex optimization, but the schedule depends jointly on an unknown and potentially nonunique geometric description. We introduce CARP-KL, a certified portfolio that adapts over valid KL descriptions while using the same primitive stochastic-subgradient oracle for both optimization and candidate selection. Over declared polynomial parameter ranges, CARP-KL competes with every affordable valid description and preserves the known-description polynomial Moreau-stationarity rate up to logarithmic factors, without objective values, an…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

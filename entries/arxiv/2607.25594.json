@@ -1,0 +1,21 @@
+{
+  "key": "2607.25594",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.25594",
+  "title": "Conditional gradient methods on unbounded feasible regions",
+  "authors": [
+    "R. Díaz Millán",
+    "Tuan Thanh Lu",
+    "Julien Ugon"
+  ],
+  "summary": "The conditional gradient method is attractive when linear minimization over the feasible region is substantially cheaper than projection. Its classical convergence theory, however, is formulated for compact feasible sets, whereas many natural convex feasible regions are closed and unbounded. This paper studies a simple compact-restriction principle for applying conditional gradient steps to unbounded feasible regions. The first scheme uses one compact convex set containing the initial objective sublevel set. The second scheme updates the restriction by intersecting compact convex sets…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-28",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

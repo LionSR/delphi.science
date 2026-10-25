@@ -1,0 +1,22 @@
+{
+  "key": "2608.07345",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.07345",
+  "title": "Mesh-Based Filtering to Alleviate Time-Step Restrictions in Runge--Kutta Discontinuous Galerkin Methods in Spherical-polar Coordinates: Application to the Euler Equations",
+  "authors": [
+    "Joseph Hunter",
+    "Eirik Endeve",
+    "Yulong Xing"
+  ],
+  "summary": "We propose a mesh-based filtering approach to alleviate the severe timestep restrictions arising in explicit Runge--Kutta discontinuous Galerkin (RKDG) methods formulated in spherical-polar coordinates. The filter enables stable evolution on the original logically Cartesian mesh while using larger time steps associated with an auxiliary merged mesh constructed to eliminate the extreme cell anisotropies produced by converging coordinate lines near coordinate singularities. The filter is implemented as a sequence of post-processing operations applied within an $s$-stage RK time integrator,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

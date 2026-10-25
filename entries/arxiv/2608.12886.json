@@ -1,0 +1,20 @@
+{
+  "key": "2608.12886",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.12886",
+  "title": "A robust and optimal method for a sixth-order elliptic singular perturbation problem",
+  "authors": [
+    "Mingqing Chen",
+    "Jianguo Huang"
+  ],
+  "summary": "In this paper we propose a robust nonconforming finite method for a gradient-elastic Kirchhoff plate (GEKP) model with a small parameter $0<ι<1$. While the method employs an $H^3$ cubic finite element for the discrete space, it employs an interpolation mapping into an $H^2$ nonconforming finite element space in both the lower-order terms of the bilinear form and the right-hand side. Notably, the numerical method is robust with respect to the parameter $ι$ and uniformly convergent to order $h$ without any stabilized terms. Finally, some numerical experiments are performed to verify the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

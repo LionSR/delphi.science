@@ -1,0 +1,22 @@
+{
+  "key": "2604.20766",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.20766",
+  "title": "A provably stable numerical method for the anisotropic diffusion equation in confined magnetic fields: Curvilinear coordinates and multi-block domains",
+  "authors": [
+    "Dean Muir",
+    "Kenneth Duru",
+    "Stuart Hudson",
+    "Matthew Hole"
+  ],
+  "summary": "We present a robust and accurate numerical method for the anisotropic diffusion equation in curvilinear coordinates. This study extends the recent work [Muir et al., Computer Physics Communications, 2025] for solving the anisotropic diffusion equation in magnetic fields from Cartesian meshes to to curvilinear coordinates and complex geometries. The method uses summation by parts with simultaneous approximation terms for computing the diffusion perpendicular to field lines. The diffusion along field lines is computed using a penalty approach, similar to a simultaneous approximation term, but…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-22",
+  "updated": "2026-04-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2607.00207",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.00207",
+  "title": "Homogenization of $\\ell_2$-Adversarial Training in High-Dimensions: Exact Dynamics under Stochastic Gradient Descent",
+  "authors": [
+    "Fabrizzio Sabelli"
+  ],
+  "summary": "We develop a framework for analyzing the learning dynamics of $\\ell_2$-adversarial training of single-index models on Gaussian mixtures in the high-dimensional limit under streaming stochastic gradient descent (SGD). We derive deterministic equivalents for a broad class of statistics of the SGD iterates, including the adversarial risk and distance to adversarial optimality, in terms of the solution to a system of ODEs. We use them to study two idealized learning rate schedules: the Polyak stepsize and exact line search. In the case of $\\ell_2$-adversarial least squares with a single class,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-06-30",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

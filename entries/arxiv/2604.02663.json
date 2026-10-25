@@ -1,0 +1,23 @@
+{
+  "key": "2604.02663",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.02663",
+  "title": "A Numerical Method for Coupling Parameterized Physics-Informed Neural Networks and FDM for Advanced Thermal-Hydraulic System Simulation",
+  "authors": [
+    "Jeesuk Shin",
+    "Donggyun Seo",
+    "Sihyeong Yu",
+    "Joongoo Jeon"
+  ],
+  "summary": "Severe accident analysis using system-level codes such as MELCOR is indispensable for nuclear safety assessment, yet the computational cost of repeated simulations poses a significant bottleneck for parametric studies and uncertainty quantification. Existing surrogate models accelerate these analyses but depend on large volumes of simulation data, while physics-informed neural networks (PINNs) enable data-free training but must be retrained for every change in problem parameters. This study addresses both limitations by developing the Parameterized PINNs coupled with FDM (P2F) method, a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-04-03",
+  "updated": "2026-04-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2610.30077",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.30077",
+  "title": "A linear, second-order, unconditionally energy-stable scalar-auxiliary-variable scheme for the CHQ viscoelastic phase-separation model",
+  "authors": [
+    "Ritesh Bhola",
+    "Michael te Vrugt"
+  ],
+  "summary": "The CHQ model describes viscoelastic phase separation in a polymer--solvent mixture: a Cahn--Hilliard equation for the polymer volume fraction $φ$ is two-way coupled, through a phase-dependent cross-diffusion flux, to a damped relaxation equation for a scalar bulk elastic stress $q$. We propose a scalar-auxiliary-variable (SAV) time discretisation of this system, combining the SAV reformulation of the double-well potential with a second-order backward differentiation formula (BDF2) and a second-order extrapolation of all phase-dependent mobilities: a linear, computationally cheaper…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cond-mat.soft"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

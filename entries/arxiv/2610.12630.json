@@ -1,0 +1,19 @@
+{
+  "key": "2610.12630",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.12630",
+  "title": "Equality Cases in the Tu-Deng Conjecture Bound",
+  "authors": [
+    "Thomas W. Cusick"
+  ],
+  "summary": "The Tu-Deng Conjecture, made in 2011, asserts that for $k\\geq2$ and $1\\leq t<2^k-1$, the set \\[ S_{t,k}=\\left\\{(a,b)\\in\\{0,1,\\ldots,2^k-2\\}^2: a+b\\equiv t\\pmod{2^k-1},\\quad \\wt(a)+\\wt(b)<k\\right\\} \\] satisfies \\[ |S_{t,k}|\\leq 2^{k-1}. \\] Proofs of the conjecture were given independently by the author and by Liu, Luo and Xie in arXiv in 2026. Let $r=\\wt(t)$, and let $z=k-r$ be the number of zeros in the $k$-bit expansion of $t$. We prove that equality holds in the Tu-Deng Conjecture if and only if every cyclic distance between consecutive zeros is at least $z$. We give several other simple…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

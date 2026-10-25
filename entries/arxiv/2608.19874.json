@@ -1,0 +1,22 @@
+{
+  "key": "2608.19874",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19874",
+  "title": "Combining Concurrent and Historical Functional Linear Regression",
+  "authors": [
+    "Alois Kneip",
+    "Dominik Liebl",
+    "Sven Otto"
+  ],
+  "summary": "We study a function-on-function linear regression model in which the response at time $t$ depends on both the past trajectory of a predictor and its concurrent value. The model combines an $L^2$-historical effect with a point-evaluation effect, and these two coefficient functions are not automatically identifiable. We characterize the resulting non-identifiability and show that the concurrent and historical effects are separately identifiable whenever the covariance eigenfunctions of the covariance operator of the predictor are not pointwise square-summable. This mild and novel condition…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-08-20",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

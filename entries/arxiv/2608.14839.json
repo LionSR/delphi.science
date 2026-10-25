@@ -1,0 +1,20 @@
+{
+  "key": "2608.14839",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.14839",
+  "title": "Optimal Transport on Graphs and Stochastically Evolving Trees",
+  "authors": [
+    "Fan Chung",
+    "Sawyer Jack Robertson"
+  ],
+  "summary": "We give an effective algorithm for determining the transportation distance between two given probability density functions defined on the vertices of a graph $G=(V,E)$ by analyzing an associated polytope. The vertices of the polytope correspond to feasible flows on spanning trees in $G$, and the $1$-skeleton of the polytope is a projection of the spanning tree state graph associated with the Glauber dynamics on $G$. The optimal value of this transportation problem, known as the $1$-Wasserstein distance, can be computed by tracing the transportation cost along the vertices of this polytope.…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-08-14",
+  "updated": "2026-08-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

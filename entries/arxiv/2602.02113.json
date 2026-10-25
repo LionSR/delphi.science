@@ -1,0 +1,22 @@
+{
+  "key": "2602.02113",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.02113",
+  "title": "Training-free score-based diffusion for parameter-dependent stochastic dynamical systems",
+  "authors": [
+    "Minglei Yang",
+    "Sicheng He"
+  ],
+  "summary": "Simulating parameter-dependent stochastic differential equations (SDEs) presents significant computational challenges, as separate high-fidelity simulations are typically required for each parameter value of interest. Despite the success of machine learning methods in learning SDE dynamics, existing approaches either require expensive neural network training for score function estimation or lack the ability to handle continuous parameter dependence. We present a training-free conditional diffusion model framework for learning stochastic flow maps of parameter-dependent SDEs, where both drift…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-02-02",
+  "updated": "2026-02-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

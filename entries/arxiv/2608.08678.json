@@ -1,0 +1,23 @@
+{
+  "key": "2608.08678",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.08678",
+  "title": "Conditionally Resampled Sliding-Window Count Kernels: Spectral-Gap Bounds and Poincaré Inequalities",
+  "authors": [
+    "Yanjin Xiang",
+    "Yuchen Xin",
+    "Zhihua Zhang"
+  ],
+  "summary": "We study the conditionally resampled sliding-window count kernel associated with the empirical counts of length-$n$ windows from a stationary finite-state reversible Markov chain. Although the resulting count process is generally not Markov, its stationary one-step conditional law defines a genuine Markov kernel. For every fixed strictly positive reversible kernel \\(P\\) on a finite state space, we present a Poincaré inequality for the induced count kernel $\\tP_n$ of length $n$. In other words, we derive the lower bound of the spectral gap $\\Gap(\\tP_n)$ of $\\tP_n$ as \\[ \\Gap(\\tP_n)\\ge…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-08-09",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

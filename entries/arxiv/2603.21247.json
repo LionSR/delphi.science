@@ -1,0 +1,25 @@
+{
+  "key": "2603.21247",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.21247",
+  "title": "Accelerate Vector Diffusion Maps by Landmarks",
+  "authors": [
+    "Sing-Yuan Yeh",
+    "Yi-An Wu",
+    "Hau-Tieng Wu",
+    "Mao-Pei Tsui"
+  ],
+  "summary": "We propose a landmark-constrained algorithm, LA-VDM (Landmark Accelerated Vector Diffusion Maps), to accelerate the Vector Diffusion Maps (VDM) framework built upon the Graph Connection Laplacian (GCL), which captures pairwise connection relationships within complex datasets. LA-VDM introduces a novel two-stage normalization that effectively address nonuniform sampling densities in both the data and the landmark sets. Under a manifold model with the frame bundle structure, we show that we can accurately recover the parallel transport with landmark-constrained diffusion from a point cloud,…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.DG",
+    "physics.data-an"
+  ],
+  "published": "2026-03-22",
+  "updated": "2026-08-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

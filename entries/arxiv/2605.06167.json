@@ -1,0 +1,20 @@
+{
+  "key": "2605.06167",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.06167",
+  "title": "Matrix encoding method in variational algorithm of calculating eigenvalues and generalized eigenvalues",
+  "authors": [
+    "Alexander I. Zenchuk",
+    "Junde Wu"
+  ],
+  "summary": "We propose a variational method for constructing the eigenvalues and generalized eigenvalues for an arbitrary $N\\times N$ complex matrix. The quantum part of our algorithm is based on encoding the matrix elements into the pure state of a quantum system and expressing the loss function with optimization parameters in terms of certain probability amplitudes in the superposition state. The principal step of this algorithm is the measurement of the ancilla state that removes all extra terms from the above superposition and allows to probabilistically construct the required loss function along…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

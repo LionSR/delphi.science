@@ -1,0 +1,23 @@
+{
+  "key": "2605.25282",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.25282",
+  "title": "Computing statistical solutions of a Mach 2000 astrophysical jet",
+  "authors": [
+    "Stephan Simonis",
+    "Gauthier Wissocq"
+  ],
+  "summary": "The multi-dimensional compressible Euler equations admit non-unique entropy solutions in turbulent regimes, and extreme-Mach astrophysical flows are a natural setting in which this breakdown of deterministic well-posedness becomes computationally visible. We compute statistical solutions of a Mach~2000 astrophysical jet, defined as the pushforward of an initial probability measure through a vectorial lattice Boltzmann method, by Monte Carlo sampling with $M=1000$ realizations on grids of up to $12.8$ million cells. Under mesh refinement the individual realizations diverge pathwise, while the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.MS",
+    "physics.comp-ph",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-05-24",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

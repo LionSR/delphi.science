@@ -1,0 +1,20 @@
+{
+  "key": "2603.15059",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.15059",
+  "title": "Muon Converges under Heavy-Tailed Noise: Nonconvex Hölder-Smooth Empirical Risk Minimization",
+  "authors": [
+    "Hideaki Iiduka"
+  ],
+  "summary": "Muon is a recently proposed optimizer that enforces orthogonality in parameter updates by projecting gradients onto the Stiefel manifold, leading to stable and efficient training in large-scale deep neural networks. Meanwhile, the previously reported results indicated that stochastic noise in practical machine learning may exhibit heavy-tailed behavior, violating the bounded-variance assumption. In this paper, we consider the problem of minimizing a nonconvex Hölder-smooth empirical risk that works well with the heavy-tailed stochastic noise. We then show that Muon converges to a stationary…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-03-16",
+  "updated": "2026-03-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

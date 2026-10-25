@@ -1,0 +1,26 @@
+{
+  "key": "2610.06810",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06810",
+  "title": "Finding Gaussian Structure in Bosonic States",
+  "authors": [
+    "Alvan Arulandu",
+    "Sitan Chen",
+    "Ziyun Chen",
+    "Jerry Li",
+    "Eric Ma"
+  ],
+  "summary": "We study agnostic tomography of pure bosonic Gaussian states: given copies of an arbitrary $n$-mode bosonic state $ρ$, the goal is to output a pure Gaussian state whose infidelity with $ρ$ is at most $\\mathrm{opt} + ε$, where $\\mathrm{opt}$ is the minimum infidelity achievable by any pure Gaussian state. We give efficient protocols achieving this in both the high and low fidelity regimes. When $\\mathrm{opt}$ is below some universal constant, our protocol has runtime and copy complexity which is strongly polynomial in $n, 1/ε$ and $\\log \\log E$, where $E$ is the energy of the closest pure…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS",
+    "cs.LG",
+    "math-ph"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

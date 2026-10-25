@@ -1,0 +1,20 @@
+{
+  "key": "2609.08122",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.08122",
+  "title": "Target-adapted Green-Bessel SVGD: uniform-in-time propagation of chaos and last-iterate consistency",
+  "authors": [
+    "Trevor Teolis",
+    "Maarten V. de Hoop"
+  ],
+  "summary": "We prove uniform-in-time propagation of chaos and last-iterate consistency for a target-adapted Stein variational gradient descent (SVGD) flow on compact connected manifolds. The target has a smooth positive density, and the particles start independently from a fixed smooth nonnegative density ratio. The construction uses the Green--Bessel operator $Q_{r,π}=A_π^{-1}(\\mathrm{Id}+A_π)^{-r}$ of the reversible target Langevin generator. Sufficient Bessel smoothing gives a scalar kernel with finite diagonal, and a positive matrix lift realizes its potential force as a Stein velocity. Population…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

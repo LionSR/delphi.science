@@ -1,0 +1,21 @@
+{
+  "key": "2601.17247",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.17247",
+  "title": "Learning Optimal Liquidation with Closing Auctions",
+  "authors": [
+    "Julius Graf",
+    "Thibaut Mastrolia"
+  ],
+  "summary": "We study liquidation when continuous trading is followed by a closing auction. The trader first sells through a limit-order book, then submits signed auction schedules to adjust the remaining inventory. A projected clearing price signal and intermediate auction feedback connect the two phases. We compare deep Q-network (DQN) policies with projected deep deterministic policy gradient (DDPG), twin delayed deep deterministic policy gradient (TD3) and soft actor-critic (SAC) policies, using synthetic rough Heston prices and historical midprice paths within a simulated market. Policies are…",
+  "domain": "q-fin.TR",
+  "tags": [
+    "q-fin.TR",
+    "math.OC"
+  ],
+  "published": "2026-01-24",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2605.07196",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.07196",
+  "title": "Counterexamples to a conjecture on graph inertia",
+  "authors": [
+    "Hongzhang Chen",
+    "Jianxi Li"
+  ],
+  "summary": "The inertia of a graph $G$ is $\\operatorname{In}(G)=(n^+(G),n^0(G),n^-(G))$, where $n^+(G),\\, n^0(G),\\, n^-(G)$ are the numbers of positive, zero and negative eigenvalues of the adjacency matrix of $G$, respectively, counted with multiplicities. Akbari, Elphick, Kumar, Pragada and Tang [Discrete Math. 349 (2026) 114953] conjectured that every graph $G$ satisfies \\[ 2n^+(G)\\le n^-(G)(n^-(G)+1). \\] In this note, we construct a family of reduced graphs $\\{W_{k}:\\,k\\ge5\\}$ with \\[ \\operatorname{In}(W_k) = \\left(\\binom{k}{2}+1,\\ 0,\\ k-1\\right), \\] each of which violates the conjectured…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-05-08",
+  "updated": "2026-05-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2610.02950",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02950",
+  "title": "Memory-Dependent Interval Markov Chain Abstractions of Stochastic Dynamics",
+  "authors": [
+    "Menno van Zutphen",
+    "Adrien Banse",
+    "Domagoj Herceg",
+    "Giannis Delimpaltadakis",
+    "Duarte Antunes"
+  ],
+  "summary": "Finite-state interval Markov-chain (IMC) abstractions provide sound verification and performance bounds for continuous-state stochastic systems by enclosing cell-to-cell transition probabilities and costs in intervals. Finite-state Markovian abstractions are generally lossy, as state aggregation often destroys the Markov property. Recently, memory-dependent Markov-chain (MC) abstractions of stochastic systems have been developed to mitigate this by recording recently visited cells. In this paper, we develop the memory-dependent extension of IMC abstractions. Building on the insight that…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.DS",
+    "math.OC"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

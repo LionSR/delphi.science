@@ -1,0 +1,23 @@
+{
+  "key": "2605.15266",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.15266",
+  "title": "Synthesis and Optimization of Encoding Circuits for Fault-Tolerant Quantum Computation",
+  "authors": [
+    "Tom Peham",
+    "Matthew Steinberg",
+    "Robert Wille",
+    "Sascha Heußen"
+  ],
+  "summary": "Preparing arbitrary logical states is a central primitive for universal fault-tolerant quantum computation and the cost of encoded-state preparation contributes directly to the overall resource overhead. This makes the synthesis of efficient general-state encoding circuits an important problem, particularly with respect to two-qubit gate count and circuit depth. Yet the synthesis of such encoders has been studied less extensively than general Clifford circuit synthesis or the preparation of specific logical Pauli-eigenstates. In this work, we develop methods for synthesizing efficient…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-05-14",
+  "updated": "2026-05-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2609.07604",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07604",
+  "title": "Quantum Approximate Counting with Bernoulli Oracles",
+  "authors": [
+    "Chengshen Gao",
+    "Yongzhen Xu",
+    "Lvzhou Li"
+  ],
+  "summary": "Quantum counting is a fundamental quantum algorithm that estimates the fraction of marked elements using a membership oracle, achieving a quadratic speedup over classical sampling. The membership oracle, however, assumes exact labeling of each element, but this assumption fails when the labels are inherently probabilistic. We study quantum counting with \\emph{Bernoulli oracles}, where given $m$ Bernoulli distributions with unknown biases $p_1,\\dots,p_m$ and a gap parameter $Δ$, the goal is to estimate the fraction $ρ$ of \\emph{positive} distributions ($p_i\\ge1/2+Δ$) to within additive error…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

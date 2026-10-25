@@ -1,0 +1,23 @@
+{
+  "key": "2610.06581",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06581",
+  "title": "Shaping double descent in quantum extreme learning through model design",
+  "authors": [
+    "Sabri Meyer",
+    "Ege Yilmaz",
+    "Aurelien Lucchi",
+    "Francesco Tacchino",
+    "Francesco Scala"
+  ],
+  "summary": "Increasing capacity can induce a machine learning model to generalize worse until it perfectly interpolates the training data, and better once it moves beyond interpolation. This inversion, known as \\emph{double descent}, is well understood for independent features. For correlated features, its shape is governed by the spectrum of the feature covariance, but existing analyses typically yield only implicit equations. We first close this gap for classical linear regression, analytically characterizing the entire risk curve through two quantities, namely the condition number of the feature…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

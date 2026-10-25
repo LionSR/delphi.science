@@ -1,0 +1,23 @@
+{
+  "key": "2604.01428",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.01428",
+  "title": "Rendezvous Planning from Sparse Observations of Optimally Controlled Targets",
+  "authors": [
+    "Thomas A. Scott",
+    "Lukas Taus",
+    "Yen-Hsi Richard Tsai",
+    "Tan Bui-Thanh",
+    "Justin G. R. Delva"
+  ],
+  "summary": "We develop a probabilistic framework for \\emph{rendezvous planning}: given sparse, noisy observations of a fast-moving target, plan rendezvous spatiotemporal coordinates for a set of significantly slower seeking agents. The unknown target trajectory is estimated under uncertain dynamics using a filtering approach that combines a kernel-based maximum a posteriori estimation with Gaussian process correction, producing a mixture over trajectory hypotheses. This estimate is used to select spatiotemporal rendezvous points that maximize the probability of successful rendezvous. Points are chosen…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-04-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

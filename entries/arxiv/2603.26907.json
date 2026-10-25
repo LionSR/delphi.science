@@ -1,0 +1,21 @@
+{
+  "key": "2603.26907",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.26907",
+  "title": "Information-Theoretic Solutions for Seedless QRNG Bootstrapping and Hybrid PQC-QKD Key Combination",
+  "authors": [
+    "Juan Antonio Vieira Giestinhas",
+    "Timothy Spiller"
+  ],
+  "summary": "This paper considers two challenges faced by practical quantum networks: the bootstrapping of seedless Quantum Random Number Generators (QRNGs) and the resilient combination of Post-Quantum Cryptography (PQC) and Quantum Key Distribution (QKD) keys. These issues are addressed using universal hash functions as strong seeded extractors, with security foundations provided by the Quantum Leftover Hash Lemma (QLHL). First, the 'randomness loop' in QRNGs -- the requirement of an initial random seed to generate further randomness -- is resolved by proposing a bootstrapping method using raw data…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-03-27",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

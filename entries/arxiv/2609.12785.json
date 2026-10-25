@@ -1,0 +1,22 @@
+{
+  "key": "2609.12785",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.12785",
+  "title": "Convergence of Stochastic Gradient Methods under Heavy-Tailed Noise and Hölder Smoothness",
+  "authors": [
+    "Misbah Uz Zaman",
+    "Anirbit Mukherjee"
+  ],
+  "summary": "Classical convergence guarantees for stochastic gradient methods typically assume Lipschitz-smooth objectives and finite-variance gradient noise, both frequently violated in practice. In contrast, we study nonconvex stochastic optimization under the joint relaxation of these assumptions: objectives with $(L,s)$-Hölder continuous gradients, $s\\in(0,1]$, and gradient noise satisfying only a bounded $α$-th moment condition for $α\\in(1,2]$. We establish three convergence results. Firstly, that standard SGD converges at rate $O(T^{-s/(1+s)})$ whenever $α\\ge1+s$, extending the classical nonconvex…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-09-11",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

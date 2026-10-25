@@ -1,0 +1,21 @@
+{
+  "key": "2610.06028",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06028",
+  "title": "Near-Exact Computation of Independent Chip Model Placement Probabilities for Thousands of Players",
+  "authors": [
+    "Wataru Inariba"
+  ],
+  "summary": "The Independent Chip Model (ICM) converts the chip stacks of the players remaining in a poker tournament into finishing-place probabilities and prize equities. It is the standard model in tournament solvers, but its definition considers all possible finishing orders, and exact computation has been regarded as intractable for large fields. The same mathematics appears in other fields; for instance, the ICM is a Plackett-Luce ranking model with stacks as weights. We present DE-ICM, a deterministic algorithm that computes the placement probabilities of all $n$ players for all paid places in…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.GT",
+    "math.NA"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

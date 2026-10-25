@@ -1,0 +1,20 @@
+{
+  "key": "2606.30050",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.30050",
+  "title": "A restart-free accelerated algorithm for nonconvex minimization: continuous- and discrete-time analysis",
+  "authors": [
+    "Kansei Ushiyama",
+    "Shun Sato"
+  ],
+  "summary": "We propose two deterministic momentum-based first-order methods for minimizing lower-bounded nonconvex functions with Lipschitz-continuous gradients and Hessians. Both methods attain an $\\varepsilon$-approximate first-order stationary point in $O(\\varepsilon^{-7/4})$ function and gradient evaluations, and their update parameters do not depend on the target accuracy or a prescribed terminal iteration. The convergence guarantees concern the best point among weighted averages of the iterates. Instead of relying on momentum-resetting restarts, both methods employ a velocity-control mechanism…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

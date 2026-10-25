@@ -1,0 +1,21 @@
+{
+  "key": "2606.08984",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.08984",
+  "title": "Not All Warm Starts Help: Benchmarking Primal-Dual Initializations for ACOPF Algorithms",
+  "authors": [
+    "Babak Taheri",
+    "Daniel K. Molzahn"
+  ],
+  "summary": "Warm starts are widely used to accelerate AC optimal power flow (ACOPF) solves, but the impact of different initialization strategies has received limited systematic study, particularly for the primal-dual interior-point methods that dominate large-scale ACOPF algorithms. This paper benchmarks initialization strategies for ACOPF solved with the interior-point solver IPOPT on 19 PGLib-OPF instances (5 to 30,000 buses), testing all 15 non-empty subsets of the primal blocks $\\{P_g, Q_g, V_m, V_a\\}$ under oracle conditions and three DC-seeded combinations in a practical setting. The experiments…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-06-08",
+  "updated": "2026-06-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2608.10874",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.10874",
+  "title": "Complexity and algorithms for proper conflict-free coloring in graphs",
+  "authors": [
+    "Dinabandhu Pradhan",
+    "Vaishali Sharma"
+  ],
+  "summary": "A proper conflict-free (PCF) $k$-coloring of a graph $G$ is a proper $k$-coloring such that there exists a color that appears exactly once in the neighborhood of every non-isolated vertex $v\\in V(G)$. The PCF chromatic number, denoted by $χ_{pcf}(G)$, is the least integer $k$ such that there exists a PCF $k$-coloring of $G$. Given a graph $G$ and a positive integer $k$, PCF $k$-COLORABILITY is to decide whether $G$ admits a PCF $k$-coloring. Ahn et al. [Discrete Appl. Math. 377 (2025) 10-17] proved that PCF $k$-COLORABILITY is NP-complete for bipartite graphs. We strengthen this result by…",
+  "domain": "cs.DM",
+  "tags": [
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-08-11",
+  "updated": "2026-08-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

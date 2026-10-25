@@ -1,0 +1,22 @@
+{
+  "key": "2606.15223",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.15223",
+  "title": "A Staggered Discontinuous Galerkin Method for linear elasticity problem on Polytopal Meshes",
+  "authors": [
+    "Long Chen",
+    "Xuehai Huang",
+    "Ruishu Wang",
+    "Ran Zhang"
+  ],
+  "summary": "This paper develops a novel staggered discontinuous Galerkin (SDG) method for linear elasticity based on the Hellinger-Reissner variational principle. We construct symmetric stress spaces with normal continuity across element boundaries on arbitrary polytopal meshes, while approximating the displacement field using piecewise polynomial functions defined on the same meshes. The method is locking-free and satisfies a local balance of linear momentum and angular momentum. We present a comprehensive theoretical analysis, including proofs of stability and error estimates. The formulation admits a…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-13",
+  "updated": "2026-06-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

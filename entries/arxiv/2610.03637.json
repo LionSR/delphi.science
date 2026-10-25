@@ -1,0 +1,20 @@
+{
+  "key": "2610.03637",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03637",
+  "title": "Polynomial-Time Algorithms for Nuclear Tensor Norms and Multipartite Separability",
+  "authors": [
+    "Martino Bernasconi",
+    "Giulio Malavolta"
+  ],
+  "summary": "We study a multilinear optimization problem for tensors with bounded Frobenius norm, where each of the $k$ local factors of dimension $d$ is chosen from a convex set. We give a deterministic algorithm running in time $d^{O(k)}$ for constant additive approximations. As applications, we obtain the first polynomial-time algorithms at constant accuracy for weak membership in the nuclear-norm unit ball of high-order tensors and for multipartite quantum separability in Frobenius norm. Our approach views tensor optimization as a cooperative multiprover game and combines this perspective with a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

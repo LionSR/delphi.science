@@ -1,0 +1,23 @@
+{
+  "key": "2606.25148",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.25148",
+  "title": "No 3D Matrices: A Unified Tensor-Product View of Matrix-Free Cartesian PDE Solvers",
+  "authors": [
+    "Yong Yi Bay",
+    "Kathleen A. Yearick"
+  ],
+  "summary": "Every Cartesian three-dimensional PDE solver hides a structural secret that production CFD codes have used for half a century and that graduate-level textbooks rarely state plainly. The derivative matrices, the compact Padé line solves, the Galerkin mass inversions, the alternating-direction-implicit substeps, and even the fast Poisson and Helmholtz diagonalization transforms all factor along the coordinate axes and collapse into repeated one-dimensional banded kernels executed along the grid lines. The three-dimensional operator exists only on paper; it is never assembled, factored, or…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.CE",
+    "physics.comp-ph",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-06-23",
+  "updated": "2026-06-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

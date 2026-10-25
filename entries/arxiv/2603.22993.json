@@ -1,0 +1,25 @@
+{
+  "key": "2603.22993",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.22993",
+  "title": "Backward Arcs in Hamilton Oriented Cycles and Paths in Directed Graphs with Independence Number Two",
+  "authors": [
+    "S. Gerke",
+    "Q. Guo",
+    "G. Gutin",
+    "Y. Hao",
+    "W. Veeranonchai",
+    "A. Yeo"
+  ],
+  "summary": "In a digraph $D=(V,A)$, an oriented path is a sequence $P=x_1x_2\\dots x_p$ of distinct vertices such that either $x_ix_{i+1}\\in A$ or $x_{i+1}x_{i}\\in A$ or both for every $i\\in [p-1]$. If $x_ix_{i+1}\\in A$ in $P$, then $x_ix_{i+1}$ is a forward arc of $P$; otherwise, $x_{i+1}x_{i}$ is a backward arc. The independence number $α(D)$ is the maximum integer $p$ such that $D$ has a set of $p$ vertices where there is no arc between any pair of vertices. A digraph is $k$-connected if its underlying undirected graph is $k$-connected. Freschi and Lo (JCT-B 2024) proved that every $n$-vertex oriented…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM"
+  ],
+  "published": "2026-03-24",
+  "updated": "2026-03-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

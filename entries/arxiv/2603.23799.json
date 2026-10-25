@@ -1,0 +1,22 @@
+{
+  "key": "2603.23799",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.23799",
+  "title": "Resolving gradient pathology in physics-informed epidemiological models",
+  "authors": [
+    "Nickson Golooba",
+    "Woldegebriel Assefa Woldegerima"
+  ],
+  "summary": "Physics-informed neural networks (PINNs) are increasingly used in mathematical epidemiology to bridge the gap between noisy clinical data and compartmental models, such as the susceptible-exposed-infected-removed (SEIR) model. However, training these hybrid networks is often unstable due to competing optimization objectives. As established in recent literature on ``gradient pathology,\" the gradient vectors derived from the data loss and the physical residual often point in conflicting directions, leading to slow convergence or optimization deadlock. While existing methods attempt to resolve…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-03-25",
+  "updated": "2026-03-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2603.16850",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.16850",
+  "title": "Unifying Optimization and Dynamics to Parallelize Sequential Computation: A Guide to Parallel Newton Methods for Breaking Sequential Bottlenecks",
+  "authors": [
+    "Xavier Gonzalez"
+  ],
+  "summary": "Massively parallel hardware (GPUs) and long sequence data have made parallel algorithms essential for machine learning at scale. Yet dynamical systems, like recurrent neural networks and Markov chain Monte Carlo, were thought to suffer from sequential bottlenecks. Recent work showed that dynamical systems can in fact be parallelized across the sequence length by reframing their evaluation as a system of nonlinear equations, which can be solved with Newton's method using a parallel associative scan. However, these parallel Newton methods struggled with limitations, primarily inefficiency,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.AI",
+    "cs.DC",
+    "math.DS",
+    "math.OC"
+  ],
+  "published": "2026-03-17",
+  "updated": "2026-03-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

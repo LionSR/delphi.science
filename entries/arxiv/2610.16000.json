@@ -1,0 +1,19 @@
+{
+  "key": "2610.16000",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16000",
+  "title": "Multiscale Sequential Auditing of Quantile Regression with Point Masses",
+  "authors": [
+    "Asad Ullah"
+  ],
+  "summary": "For discrete outcomes, a valid conditional quantile can have a hit probability different from its nominal level. Errors in different covariate groups can also cancel when residual signs are pooled. We study sequential audits that address both problems by testing the two inequalities that define quantile-set membership. The audit records whether each response falls below, equals, or exceeds its forecast. We derive the information projection for this three-outcome experiment and use continuous betting mixtures within the cells of a covariate tree. Context-tree weighting combines the resulting…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

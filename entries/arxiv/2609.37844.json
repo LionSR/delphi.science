@@ -1,0 +1,23 @@
+{
+  "key": "2609.37844",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.37844",
+  "title": "Running error bounds in finite element kernels",
+  "authors": [
+    "Michal Habera",
+    "Paul T. Kühner",
+    "Matteo Croci",
+    "Andreas Zilian"
+  ],
+  "summary": "Rounding errors in finite element computations can lead to a complete loss of accuracy, stalled convergence, and incorrect results. Moreover, the effects of rounding errors accumulated within automatically generated and compiled kernels are difficult to analyze a priori. We present the first software framework for automated rounding error estimation within finite element kernels. The proposed methodology is based on an a posteriori technique called Running Error Analysis (REA), where a forward error estimate is automatically computed concurrently with the value. An open-source implementation…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.MS"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

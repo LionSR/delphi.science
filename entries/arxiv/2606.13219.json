@@ -1,0 +1,22 @@
+{
+  "key": "2606.13219",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.13219",
+  "title": "Embedded Trefftz DG method for steady Navier-Stokes flow. Part II: Nonlinear problem",
+  "authors": [
+    "Paul Stocker",
+    "Igor Voulis",
+    "Christoph Lehrenfeld",
+    "Philip L. Lederer"
+  ],
+  "summary": "We develop and analyze an embedded Trefftz-DG method for the steady incompressible Navier-Stokes equations, based on the reduced Oseen discretization from Part I. The main difficulty is that the reduced Trefftz space depends on the convection field, so successive Picard iterates live in different discrete spaces. We address this by constructing projections between convection-dependent Trefftz spaces and using them to control the reduced Oseen solution map. Under suitable resolution and small-data assumptions, we prove existence of discrete solutions, uniqueness, and convergence of the Picard…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

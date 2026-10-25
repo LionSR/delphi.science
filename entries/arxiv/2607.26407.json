@@ -1,0 +1,21 @@
+{
+  "key": "2607.26407",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.26407",
+  "title": "Scalable Dynamic Optimal Transport via Distributed Linearized ADMM",
+  "authors": [
+    "Hari Dahal",
+    "Rongjie Lai",
+    "Yangyang Xu"
+  ],
+  "summary": "In this paper, we address two fundamental challenges in the numerical solution of dynamic opti- mal transport (OT) problems. The first challenge arises when the initial and/or terminal densities approach zero and no positive lower bound is available. In this regime, conventional methods may become unstable or computationally inefficient, since the Lipschitz constant of the objective can scale like the reciprocal of the cube of the density. As a result, near-zero regions may lead to slow convergence or even divergence. The second challenge concerns the substantial memory cost of the dynamic…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

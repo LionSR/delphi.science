@@ -1,0 +1,22 @@
+{
+  "key": "2610.04816",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04816",
+  "title": "Safe Position and Attitude Control for Landing on Small Celestial Bodies with Gravitational Uncertainty",
+  "authors": [
+    "Felipe Arenas-Uribe",
+    "T. Michael Seigler",
+    "Jesse B. Hoagg"
+  ],
+  "summary": "Landing on small celestial bodies is challenging because the spacecraft must satisfy safety and actuator constraints despite gravitational forces that are difficult to model accurately. This article presents an optimal control for safe landing with gravitational uncertainty and strict actuator limits. The approach addresses spacecraft pose control with attitude represented on SO(3), where there are actuator constraints and state constraints on position, attitude, velocity, and angular velocity. The approach combines several key techniques. First, the gravitational force uncertainty is…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-10-03",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

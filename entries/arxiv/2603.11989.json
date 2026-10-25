@@ -1,0 +1,24 @@
+{
+  "key": "2603.11989",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.11989",
+  "title": "On-Average Stability of Multipass Preconditioned SGD and Effective Dimension",
+  "authors": [
+    "Simon Vary",
+    "Tyler Farghly",
+    "Ilja Kuzborskij",
+    "Patrick Rebeschini"
+  ],
+  "summary": "We study trade-offs between the population risk curvature, geometry of the noise, and preconditioning on the generalisation ability of the multipass Preconditioned Stochastic Gradient Descent (PSGD). Many practical optimisation heuristics implicitly navigate this trade-off in different ways -- for instance, some aim to whiten gradient noise, while others aim to align updates with expected loss curvature. When the geometry of the population risk curvature and the geometry of the gradient noise do not match, an aggressive choice that improves one aspect can amplify instability along the other,…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-03-12",
+  "updated": "2026-03-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

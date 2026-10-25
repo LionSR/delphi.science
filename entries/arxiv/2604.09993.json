@@ -1,0 +1,21 @@
+{
+  "key": "2604.09993",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.09993",
+  "title": "GPU-Accelerated Continuous-Time Successive Convexification for Contact-Implicit Legged Locomotion",
+  "authors": [
+    "Samuel C. Buckner",
+    "Purnanand Elango"
+  ],
+  "summary": "Contact-implicit trajectory optimization (CITO) enables the automatic discovery of contact sequences, but most methods rely on fine time discretization to capture all contact events accurately, which increases problem size and runtime while tying solution quality to grid resolution. We extend the recently proposed sequential convex programming (SCP) approach for trajectory optimization, continuous-time successive convexification (ct-SCvx), to CITO by introducing integral cross-complementarity constraints, which eliminate the risk of missing contact events between discretization nodes while…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-04-11",
+  "updated": "2026-04-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

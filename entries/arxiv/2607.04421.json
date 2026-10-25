@@ -1,0 +1,22 @@
+{
+  "key": "2607.04421",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04421",
+  "title": "Sharpening Borel's result in Diophantine approximation",
+  "authors": [
+    "Savita S. Adhin",
+    "Ayreena Bakhtawar",
+    "Cor Kraaikamp"
+  ],
+  "summary": "In this paper, we refine Borel's 1903 result in Diophantine approximation by providing sharper bounds for the minimum of three consecutive approximation coefficients $Θ_n(x)$, defined for any real number $x$ with regular continued fraction (RCF) expansion $x=[0;a_1,a_2,\\dots]$ as $Θ_n = q_n^2\\left| x-\\frac{p_n}{q_n}\\right|$. Here $\\frac{p_n}{q_n}$ is the $n$th RCF convergent of $x$. Borel's result states that for all (irrational) $x$ and all $n\\in\\mathbb{N}$, $$ \\min \\left\\{ Θ_{n-1}(x),Θ_n(x),Θ_{n+1}(x)\\right\\} \\leq \\frac{1}{\\sqrt{5}}. $$ We focus on the situation where $a_{n+1}=1$, since…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "math.NT"
+  ],
+  "published": "2026-07-05",
+  "updated": "2026-07-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

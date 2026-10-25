@@ -1,0 +1,20 @@
+{
+  "key": "2608.18392",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.18392",
+  "title": "On Samuels' Conjecture",
+  "authors": [
+    "Zhi Ling"
+  ],
+  "summary": "Let $0\\leqμ_1\\leq\\cdots\\leqμ_n$ and let $λ>\\sum_{i=1}^nμ_i$. Let $X_1,...,X_n$ be independent nonnegative random variables satisfying $\\mathbb{E}X_i=μ_i$, and write $D_i := λ-\\sum_{k=1}^{i-1}μ_k$ for $1\\leq i\\leq n$. We prove that $$ \\inf_{X_1,...,X_n} \\mathbb{P}\\left( \\sum_{i=1}^nX_i<λ\\right) = \\min_{1\\leq i\\leq n} \\prod_{j=i}^n \\left( 1-\\frac{μ_j}{D_i} \\right). $$ The bound is sharp and is attained. This proves Samuels' conjecture. Feige's conjecture is thereby resolved, since it follows immediately from the equal-means case. The proof is self-contained.",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.CO"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

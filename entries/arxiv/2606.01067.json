@@ -1,0 +1,22 @@
+{
+  "key": "2606.01067",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.01067",
+  "title": "Approximate Quantum Linear Solvers for Hybrid CFD: End-to-End Analysis with a Chebyshev-LCU Approach",
+  "authors": [
+    "Tomer Goldfriend",
+    "Leigh Lapworth",
+    "Nadav Yoran",
+    "Amir Naveh"
+  ],
+  "summary": "Quantum linear solvers are well studied as standalone quantum algorithms; however, in hybrid classical-quantum routines, their practical value must be evaluated at the level of the full non-linear application. A central issue is whether the approximation error of the quantum linear solver remains controlled once embedded in a full iterative workflow. We study this question in the context of a hybrid computational fluid dynamics (CFD) scheme. Through numerical simulations, we analyze how an approximate quantum linear solver affects the convergence of the overall CFD iteration. We show that…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-31",
+  "updated": "2026-05-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

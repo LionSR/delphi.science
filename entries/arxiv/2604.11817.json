@@ -1,0 +1,22 @@
+{
+  "key": "2604.11817",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.11817",
+  "title": "QMC-Net: Data-Aware Quantum Representations for Remote Sensing Image Classification",
+  "authors": [
+    "Md Aminur Hossain",
+    "Ayush V. Patel",
+    "Biplab Banerjee"
+  ],
+  "summary": "Hybrid quantum-classical models offer a promising route for learning from complex data; however, their application to multi-band remote sensing imagery often relies on generic, data-agnostic quantum circuits that fail to account for channel-specific statistical variability. In this work, we propose a data-driven framework that maps band-level statistics such as Shannon Entropy, Variance, Spectral Flatness, and Edge Density to the hyperparameters of customized quantum circuits. Building on this framework, we introduce QMC-Net, a hybrid architecture that processes six data channels using…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CV"
+  ],
+  "published": "2026-04-10",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2609.08783",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.08783",
+  "title": "Improved Variance Estimation in Homoskedastic Nonparametric Random-Design Regression via a Two-Scale Approach",
+  "authors": [
+    "Edgar Dobriban",
+    "Rajarshi Mukherjee",
+    "James M. Robins",
+    "Zixiao Wang"
+  ],
+  "summary": "We study estimation of a constant conditional variance $σ^2$ in nonparametric regression with a $d$-dimensional random design. This is an important problem, and similar questions arise in causal inference. The regression function is $β_b$-Hölder smooth, the design density is $β_g$-Hölder smooth and bounded above and away from zero, and we consider the nonparametric regime $β_b>1$ and $d>4β_b$. Set $β_g^\\star=β_b(1-4β_b/d)/\\{1+2β_b/d+8(β_b/d)^2\\}$. We give an estimator whose mean squared error is upper bounded by $Cn^{-4(β_b+1)/(d+4)}$ in the low-regularity regime when $0 β_g^\\star$, a…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

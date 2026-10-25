@@ -1,0 +1,21 @@
+{
+  "key": "2609.03961",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.03961",
+  "title": "On the exponential sum over squarefree integers",
+  "authors": [
+    "Nicolas Robles",
+    "Alexandru Zaharescu",
+    "Dirk Zeindler"
+  ],
+  "summary": "Let $μ$ be the Möbius function and $e(t)=e^{2πit}$. We prove that if $N\\ge2$, $α\\in\\mathbb{R}$, $(a,q)=1$, and $|α-a/q|\\le q^{-2}$, then \\[\\bigg|\\sum_{n\\le N}μ^2(n)e(αn)\\bigg|\\ll\\left(\\frac Nq+q\\right)(\\log 2N)^5, \\] with an absolute implied constant, and we deduce the corresponding estimate on the minor arcs of the Hardy--Littlewood dissection throughout the range $Q\\le N^{1/2}$. The estimates of Schlage-Puchta [SP] and of Tolev [T] have the same dependence on $q$ and $Q$ but carry a factor $N^{\\varepsilon}$. The proof uses Heath-Brown's square sieve with sieving primes confined to an…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

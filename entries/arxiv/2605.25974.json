@@ -1,0 +1,20 @@
+{
+  "key": "2605.25974",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.25974",
+  "title": "PauLIB: A High-Performance Library for Processing Pauli Strings",
+  "authors": [
+    "Florian Krötz"
+  ],
+  "summary": "Processing large Pauli sums is a significant bottleneck in quantum chemistry, Pauli propagation, and Pauli-based compilation. Existing frameworks often suffer from Python interpreter overhead or utilize hash-map data structures that hinder SIMD vectorization and complicate multi-threaded merging. We present PauLIB, a header-only C++20 library designed to eliminate these bottlenecks through three key architectural choices. A bit-packed binary symplectic representation that encodes each qubit in two bits, reducing Pauli multiplication to a bitwise XOR and a population count; a sorted array…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-05-25",
+  "updated": "2026-05-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

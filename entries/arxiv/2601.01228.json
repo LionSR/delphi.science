@@ -1,0 +1,24 @@
+{
+  "key": "2601.01228",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.01228",
+  "title": "HyDRA: Hybrid Denoising Regularization for Measurement-Only DEQ Training",
+  "authors": [
+    "Markus Haltmeier",
+    "Lukas Neumann",
+    "Nadja Gruber",
+    "Johannes Schwab",
+    "Gyeongha Hwang"
+  ],
+  "summary": "Solving image reconstruction problems of the form \\(\\mathbf{A} \\mathbf{x} = \\mathbf{y}\\) remains challenging due to ill-posedness and the lack of large-scale supervised datasets. Deep Equilibrium (DEQ) models have been used successfully but typically require supervised pairs \\((\\mathbf{x},\\mathbf{y})\\). In many practical settings, only measurements \\(\\mathbf{y}\\) are available. We introduce HyDRA (Hybrid Denoising Regularization Adaptation), a measurement-only framework for DEQ training that combines measurement consistency with an adaptive denoising regularization term, together with a…",
+  "domain": "cs.CV",
+  "tags": [
+    "cs.CV",
+    "math.NA"
+  ],
+  "published": "2026-01-03",
+  "updated": "2026-01-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

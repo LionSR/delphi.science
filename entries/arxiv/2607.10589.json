@@ -1,0 +1,24 @@
+{
+  "key": "2607.10589",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10589",
+  "title": "Approximation of Analytic Functions by ReLU Neural Networks with Adjustable Depth and Width",
+  "authors": [
+    "Yanming Lai",
+    "Defeng Sun",
+    "Yang Wang"
+  ],
+  "summary": "In contrast to most studies on neural network approximation theory that characterize results through a single parameter, such as the total number of network parameters, \\cite{shen2020deep} pioneered the characterization of approximation rates as a joint function of the width parameter $N$ and the depth parameter $L$, thereby granting greater architectural flexibility. Existing works using the $(N,L)$-characterization focus on function classes with finite smoothness $s$, establishing a typical approximation rate of $\\mathcal{O}\\left(N^{-2s/d}L^{-2s/d}\\right)$ with $d$ denoting the input…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.IT",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-07-12",
+  "updated": "2026-07-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

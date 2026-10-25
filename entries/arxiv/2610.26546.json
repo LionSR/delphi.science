@@ -1,0 +1,22 @@
+{
+  "key": "2610.26546",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.26546",
+  "title": "On the Nonoccurrence of Gradient Restart in Nesterov Accelerated Gradient Method",
+  "authors": [
+    "Chenglong Bao",
+    "Liang Chen",
+    "Jiahong Li",
+    "Defeng Sun"
+  ],
+  "summary": "Gradient restarting often improves the practical performance of accelerated gradient methods for unconstrained convex optimization problems, but a general theoretical guarantee of such improvement remains unclear. In this paper, we construct smooth, strongly convex objectives with Lipschitz-continuous gradients and corresponding initial points for which gradient restart never occurs, both for Nesterov's accelerated gradient method and for its ordinary differential equation model. From these examples, we conclude that strong convexity and smoothness alone do not guarantee that gradient…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

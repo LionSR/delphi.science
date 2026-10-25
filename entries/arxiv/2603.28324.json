@@ -1,0 +1,24 @@
+{
+  "key": "2603.28324",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.28324",
+  "title": "LDDMM stochastic interpolants: an application to domain uncertainty quantification in hemodynamics",
+  "authors": [
+    "Sarah Katz",
+    "Francesco Romor",
+    "Jia-Jie Zhu",
+    "Alfonso Caiazzo"
+  ],
+  "summary": "We introduce a novel conditional stochastic interpolant framework for generative modeling of three-dimensional shapes. The method builds on a recent LDDMM-based registration approach to learn the conditional drift between geometries. By leveraging the resulting pull-back and push-forward operators, we extend this formulation beyond standard Cartesian grids to complex shapes and random variables defined on distinct domains. We present an application in the context of cardiovascular simulations, where aortic shapes are generated from an initial cohort of patients. The conditioning variable is…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-03-30",
+  "updated": "2026-03-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

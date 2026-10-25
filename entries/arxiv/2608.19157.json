@@ -1,0 +1,22 @@
+{
+  "key": "2608.19157",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19157",
+  "title": "An Exact-Moment Local Legendre Frame Method with Block Convolution for Caputo Fractional Differentiation",
+  "authors": [
+    "Zhenyu Zhao",
+    "Benxue Gong",
+    "Tinggang Zhao",
+    "Xianzheng Jia"
+  ],
+  "summary": "We propose a local Legendre frame method for the accurate computation of Caputo fractional derivatives of order \\(0<α<1\\). On each local subinterval, the function is represented by a restricted Legendre frame obtained from scaled Legendre polynomials on an extended interval. The local coefficients are computed from equispaced samples by an exponentially weighted GTSVD regularization. The Caputo derivative is then evaluated by applying the weakly singular fractional integral to the derivatives of the local frame basis functions. Since these derivatives are polynomials, the corresponding…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-19",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2607.12550",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12550",
+  "title": "A JoLT for the KV cache: Near-Lossless KV Cache Compression via Joint Rank-bit Allocation",
+  "authors": [
+    "Rahul Krishnan",
+    "Volker Schulz"
+  ],
+  "summary": "The key-value (KV) cache is the dominant memory bottleneck in long-context language model inference. Existing compression methods apply low-rank factorization or quantization independently, without jointly allocating rank and precision under a shared storage budget. We introduce JoLT, a training-free compressor that treats grouped prefill caches as fourth-order tensors and applies partial Tucker decomposition along the token and feature modes, the two axes that carry low-rank structure, while leaving the head and layer modes intact. A rotated low-bit quantizer captures the truncation…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.CL",
+    "math.OC"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

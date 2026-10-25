@@ -1,0 +1,19 @@
+{
+  "key": "2604.06587",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.06587",
+  "title": "A Semi-Lagrangian Spherical Essentially Non-Oscillatory (SENO) Scheme for Advection Equations of S2-valued Functions",
+  "authors": [
+    "Shingyu Leung"
+  ],
+  "summary": "We develop a numerical scheme for solving the advection equation of $\\mathbb{S}^2$-valued functions of real variables, which models the time-evolution of a $\\mathbb{S}^2$-valued mapping on the real line by a known velocity field. The idea is to extend the semi-Lagrangian method for the linear scalar advection equation. We first construct the backward flow map between two adjacent time levels and then interpolate the discrete ordered data of $\\mathbb{S}^2$. To handle $\\mathbb{S}^2$-functions which have kinks or sharp discontinuity in their components, we incorporate the \\textit{Spherical…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-08",
+  "updated": "2026-04-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

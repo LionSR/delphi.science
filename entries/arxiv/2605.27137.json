@@ -1,0 +1,21 @@
+{
+  "key": "2605.27137",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.27137",
+  "title": "Bernstein-von Mises theorem for sparse generalized linear models",
+  "authors": [
+    "Hanqing Li",
+    "Xuewen Lu"
+  ],
+  "summary": "We establish an oracle Bernstein-von Mises theorem for high-dimensional sparse generalized linear models under an outcome-independent spike-and-slab prior. The posterior consistently recovers the true active set and converges in total variation to the Gaussian law that would arise if this set were known in advance, even when the active dimension grows. The result holds for both ordinary and fractional posteriors, the latter with the expected variance inflation under tempering. In fixed-design logistic regression, a sufficient lower bound on the squared minimum signal is proportional to the…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

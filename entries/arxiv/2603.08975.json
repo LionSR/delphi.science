@@ -1,0 +1,22 @@
+{
+  "key": "2603.08975",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.08975",
+  "title": "Overlapping Schwarz Preconditioners for Pose-Graph SLAM in Robotics",
+  "authors": [
+    "Stephan Köhler",
+    "Oliver Rheinbach",
+    "Yue Xiang Tee",
+    "Sebastian Zug"
+  ],
+  "summary": "We investigate scalable two-level overlapping Schwarz domain decomposition methods with energy-minimizing coarse spaces of GDSW type (Generalized Dryja--Smith--Widlund type) as preconditioners for the sparse linear systems arising in graph-based nonlinear least-squares problems, specifically the pose-graph optimization back-end in Simultaneous Localization and Mapping (SLAM). After a brief introduction to SLAM and domain decomposition preconditioners, we describe the nonlinear least-squares formulation, its linearization, and the resulting matrix structure, to facilitate access for readers…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-09",
+  "updated": "2026-06-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

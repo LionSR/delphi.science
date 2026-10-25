@@ -1,0 +1,21 @@
+{
+  "key": "2609.30885",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.30885",
+  "title": "Retraction-Based Gradient Projection Algorithms on Manifolds",
+  "authors": [
+    "Conglong Xu",
+    "Hao Wu"
+  ],
+  "summary": "We introduce a framework for retraction-based convex optimization on Riemannian manifolds, which includes a notion of retraction-specific convex sets and retraction-based gradient projection algorithms. The standard theory of gradient projection algorithms generalizes easily to this framework. Within this framework, we establish convergence results for retraction-based gradient projection algorithms with various stepsize rules. As an application, we use our framework to study the weighted low-rank approximation. We also provide numerical validation of our convergence results on the image…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

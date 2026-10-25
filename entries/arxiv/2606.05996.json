@@ -1,0 +1,21 @@
+{
+  "key": "2606.05996",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.05996",
+  "title": "Distributionally robust shortfall risk portfolio model with moment ambiguity sets",
+  "authors": [
+    "Yi Yang",
+    "Liu Yang",
+    "Suhan Zhong"
+  ],
+  "summary": "This paper employs shortfall risk to measure portfolio risk. Assume stock returns follow polynomial relations with their influence factors. We propose a moment-based distributionally robust optimization (DRO) shortfall risk portfolio model. For piecewise linear loss functions, we show that this DRO model can be transformed into a tractable linear conic optimization problem with nonnegative polynomial cones. A Moment-SOS relaxation algorithm is proposed to solve the transformed problem. Its finite and asymptotic convergence properties are studied. For optimizers computed from our algorithm,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-04",
+  "updated": "2026-06-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

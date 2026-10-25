@@ -1,0 +1,21 @@
+{
+  "key": "2606.04548",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.04548",
+  "title": "Distributed Variational Quantum Optimisation by Entanglement-Selective Transport",
+  "authors": [
+    "Edric Matwiejew",
+    "Pascal Elahi",
+    "Ugo Varetto"
+  ],
+  "summary": "Distributed quantum optimisation is challenging because computing the problem cost function across multiple quantum processors requires non-local gates, which can incur overhead in latency and fidelity. Here we introduce QESTO, a distributed variational ansatz for graph-based discrete optimisation that requires only persistent pre-shared Bell pairs for remote operations. Using local operations, it encodes local constraint information in the Bell pairs that is leveraged to produce amplitude transfer towards globally valid distributed solution states. QESTO requires one Bell pair per…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-03",
+  "updated": "2026-06-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

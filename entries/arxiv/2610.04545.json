@@ -1,0 +1,23 @@
+{
+  "key": "2610.04545",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04545",
+  "title": "Nonlinear Density-Driven Optimal Control (D2OC) for Multi-Agent Spatial Coverage via Sequential Convex Programming",
+  "authors": [
+    "Julian Martinez",
+    "Kooktae Lee"
+  ],
+  "summary": "This paper presents a nonlinear extension of Density-Driven Optimal Control (D2OC) for multi-agent spatial coverage with prescribed density distributions. Rather than assigning individual target locations, D2OC drives the collective spatial distribution of agents toward a desired density through a Wasserstein-based objective. We extend this framework to multi-step finite-horizon control for discrete-time control-affine nonlinear systems using sequential convex programming. At each control update, the nonlinear dynamics are locally linearized over the prediction horizon, yielding a strictly…",
+  "domain": "cs.MA",
+  "tags": [
+    "cs.MA",
+    "cs.RO",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-10-03",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

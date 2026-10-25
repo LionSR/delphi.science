@@ -1,0 +1,25 @@
+{
+  "key": "2608.18536",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.18536",
+  "title": "Good Stabilizer Codes from Shallow Clifford Circuits with Random Matchings",
+  "authors": [
+    "Emile Anand",
+    "Elia Gorokhovsky",
+    "Jennifer Hritz",
+    "Jingtong Sun"
+  ],
+  "summary": "Encoding quantum information with low circuit overhead is a fundamental challenge in fault-tolerant quantum computation. Random circuits provide a natural mechanism for rapidly spreading logical information through simple gates applied in parallel. Brown and Fawzi showed that random Clifford circuits on two-qubit Clifford gates provide such encoders that achieve the quantum Gilbert-Varshamov rate-distance tradeoff with depth $O(\\log^3 n)$. We show that the same asymptotic tradeoff is attained in optimal $O(\\log n)$ depth under a gate distribution with a more restricted support. For every…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.str-el",
+    "cs.CC",
+    "cs.IT"
+  ],
+  "published": "2026-08-19",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

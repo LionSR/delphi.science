@@ -1,0 +1,19 @@
+{
+  "key": "2605.18555",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.18555",
+  "title": "Three Brillhart-Lehmer-Selfridge primality proofs for Wagstaff numbers",
+  "authors": [
+    "Alexey Dolotov"
+  ],
+  "summary": "The Wagstaff numbers $W_p = (2^p + 1)/3$ for odd primes $p$ are the natural $+1$ companions of the Mersenne numbers. Known primality proofs for $W_p$ with $p \\geq 2617$ rely on the elliptic-curve primality proving algorithm of Atkin-Morain; Chebyshev/Lucas-type tests, while available as compositeness criteria, remain conjectural on the sufficiency side. We present fully verified primality proofs of $W_{2617}$ (788 digits), $W_{10501}$ (3161 digits), and $W_{12391}$ (3730 digits), independent of ECPP and relying only on classical $N-1$ machinery. The proofs apply the…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-05-18",
+  "updated": "2026-05-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

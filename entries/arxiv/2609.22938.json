@@ -1,0 +1,20 @@
+{
+  "key": "2609.22938",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.22938",
+  "title": "Presolve heuristics in HiGHS: implementation and computational study",
+  "authors": [
+    "Simon Spoorendonk"
+  ],
+  "summary": "We present reference implementations of four published primal heuristics for mixed-integer programming inside the open-source solver HiGHS (Huangfu and Hall, 2018): Feasibility Jump (Luteberget and Sartor, 2023), fix-propagate-repair (FPR; Salvagnin, Roberti and Fischetti, 2025) with its LP-guided dive-time variant, LocalMIP (Lin, Zou and Cai, 2024), and the first-order-LP feasibility pump Scylla (Mexi et al., 2025). They share one integration interface with per-heuristic budgets and patiences, and each runs in parallel on independently seeded workers. The evaluation is on the mipfeas…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.MS"
+  ],
+  "published": "2026-09-19",
+  "updated": "2026-09-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

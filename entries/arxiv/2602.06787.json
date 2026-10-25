@@ -1,0 +1,22 @@
+{
+  "key": "2602.06787",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.06787",
+  "title": "Weisfeiler and Lehman Go Categorical",
+  "authors": [
+    "Seongjin Choi",
+    "Gahee Kim",
+    "Se-Young Yun"
+  ],
+  "summary": "While lifting map has significantly enhanced the expressivity of graph neural networks, extending this paradigm to hypergraphs remains fragmented. To address this, we introduce the categorical Weisfeiler-Lehman framework, which formalizes lifting as a functorial mapping from an arbitrary data category to the unifying category of graded posets. When applied to hypergraphs, this perspective allows us to systematically derive Hypergraph Isomorphism Networks, a family of neural architectures where the message passing topology is strictly determined by the choice of functor. We introduce two…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.CT"
+  ],
+  "published": "2026-02-06",
+  "updated": "2026-02-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

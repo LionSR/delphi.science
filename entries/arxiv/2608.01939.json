@@ -1,0 +1,24 @@
+{
+  "key": "2608.01939",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.01939",
+  "title": "Oraqle: An Empirical Analysis of Qubit Readout and Discriminators in Quantum Error Correction",
+  "authors": [
+    "Emmanouil Giortamis",
+    "Aleksandra Świerkowska",
+    "Sandra Stankovic",
+    "Felix Gust",
+    "Benjamin Lienhard",
+    "Pramod Bhatotia"
+  ],
+  "summary": "Quantum error correction (QEC) is the most promising route toward fault-tolerant quantum computing and, thus, useful quantum computers. QEC operates as a continuous measure-decode-correct cycle: ancilla qubits are read out, a decoder infers errors from the resulting syndromes, and corrections are applied before the next round begins. Within this loop, readout occupies a uniquely critical role, as it is the sole source of ground truth available to the decoder. Yet readout is also the slowest and most error-prone operation in the stack, with characteristics that vary across qubits and drift…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-03",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2605.01655",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.01655",
+  "title": "Exact Loop Controllers for ReLU Realization of Homogeneous Curve Refinements",
+  "authors": [
+    "Boldsaikhan Bolorkhuu",
+    "Tsogtgerel Gantumur"
+  ],
+  "summary": "We study homogeneous refinement operators \\((Vγ)(t)=\\sum_{j\\in\\mathbb Z}A_jγ(Mt-j)\\), acting on compactly supported continuous piecewise linear curves \\(γ:\\mathbb R\\to\\mathbb R^p\\), where \\(M\\ge2\\) and only finitely many matrices \\(A_j\\in\\mathbb R^{p\\times p}\\) are nonzero. We prove that the iterates \\(V^nγ\\) admit exact ReLU realizations of fixed width and depth \\(O(n)\\). The main new ingredient is an exact loop controller for the residual dynamics. Instead of propagating scalar residual surrogates, the construction transports the residual orbit by a forward-exact state on a polygonal loop.…",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA",
+    "cs.LG"
+  ],
+  "published": "2026-05-03",
+  "updated": "2026-05-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

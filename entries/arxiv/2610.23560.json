@@ -1,0 +1,20 @@
+{
+  "key": "2610.23560",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.23560",
+  "title": "Electrostatic Limits on Quantum Spatial Search",
+  "authors": [
+    "Weikang Li"
+  ],
+  "summary": "We prove that a quantum walker cannot search a two-dimensional lattice in Grover's $O(\\sqrt N)$ time, resolving the long-standing open question posed by Aaronson and Ambainis in 2003. A walker that hops between neighbouring sites of an $L\\times L$ lattice, $N=L^2$, needs $Ω(\\sqrt{N\\log N})$ local steps at least to find a marked vertex, even with unlimited memory and free queries. Hence, Tulsi's algorithm is asymptotically optimal. Our proof rests on a surprising correspondence with classical electrostatics. We treat the marked vertex as a point charge and weight the overlap between the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

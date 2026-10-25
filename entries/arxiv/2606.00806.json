@@ -1,0 +1,21 @@
+{
+  "key": "2606.00806",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.00806",
+  "title": "Computational Phase Transitions in Binary Compressed Sensing: Quantum Annealing Inside the Relaxation Gap",
+  "authors": [
+    "William Hahn",
+    "Natalia Romero"
+  ],
+  "summary": "We map the computational phase transition boundary in binary compressed sensing and identify a regime where D-Wave's quantum annealer recovers signals in a region where all tested classical methods fail, including Approximate Message Passing (AMP), which achieves the Bayes-optimal recovery threshold asymptotically for Gaussian matrices. In 19,775 experiments (n in {32, 64}, nine classical solvers, two D-Wave modes), we find that quantum annealing recovers sparse binary signals in the relaxation gap -- the regime below the Donoho-Tanner l1 phase transition where the l0 solution exists but…",
+  "domain": "cs.ET",
+  "tags": [
+    "cs.ET",
+    "quant-ph"
+  ],
+  "published": "2026-05-30",
+  "updated": "2026-05-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

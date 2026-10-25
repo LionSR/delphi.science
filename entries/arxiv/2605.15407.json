@@ -1,0 +1,22 @@
+{
+  "key": "2605.15407",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.15407",
+  "title": "Energy-based Transport for Amortized Bayesian Inference",
+  "authors": [
+    "Ricardo Baptista",
+    "Hojjat Kaveh",
+    "Andrew M. Stuart"
+  ],
+  "summary": "We consider amortized Bayesian inference for nonlinear inverse problems using only samples from the joint distribution of parameters and observations, including problems with unknown functions in a Banach space. Classical methods such as Markov chain Monte Carlo solve a new inference problem for each observation, making repeated posterior inference computationally prohibitive, particularly in infinite dimensions. Amortized Bayesian inversion instead learns a reusable map that rapidly generates posterior samples for new observations. We learn an observation-dependent transport map that pushes…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.AI"
+  ],
+  "published": "2026-05-14",
+  "updated": "2026-07-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2607.04513",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04513",
+  "title": "Constrained Flow Matching via Lagrangian Dual Flows",
+  "authors": [
+    "Vince Kurtz",
+    "Alexander Davydov"
+  ],
+  "summary": "Flow matching is a powerful tool for generative modeling, but emerging applications in robotics, planning, and control require inference-time constraints on generated outputs. Such constraints are often complex and highly nonlinear. As a result, methods designed for linear constraints like image inpainting are rarely sufficient, and projection or optimization-based alternatives can be prohibitively expensive. In this paper, we introduce Lagrangian Dual Flows, a new family of constrained generation techniques based on Lagrangian dual dynamics. By flowing a dual co-state alongside generated…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-07-05",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

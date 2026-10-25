@@ -1,0 +1,19 @@
+{
+  "key": "2608.15292",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.15292",
+  "title": "Space-Time Galerkin Boundary Element Method for the Wave Equation",
+  "authors": [
+    "Johannes Tausch"
+  ],
+  "summary": "The space-time Galerkin discretization of retarded layer potentials leads to a linear system where the coefficients are expressed in terms of integrals over the ansatz and test elements. They require carefully designed quadrature schemes because the kernel is singular in the origin and is discontinuous across the hyperbolicity cone. This paper introduces a new integration approach that leads to a scheme that converges exponentially with the number of quadrature points. The key here is to consider the integration domain as a convex polytope and to devise a decomposition into the convex hulls…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-15",
+  "updated": "2026-08-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

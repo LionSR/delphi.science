@@ -1,0 +1,22 @@
+{
+  "key": "2606.27159",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.27159",
+  "title": "Counting equitable $k$-colorings in graphs of bounded clique-width",
+  "authors": [
+    "Holger Dell",
+    "Thore Husfeldt",
+    "Amir Nikabadi"
+  ],
+  "summary": "For a graph $G$, a proper $k$-coloring of $G$ is \\emph{equitable} if the sizes of any two color classes differ by at most one. The \\textsc{Equitable $k$-Coloring} problem asks, for a given graph $G$ and integer $k$, whether $G$ admits an equitable $k$-coloring. Bodlaender and Fomin showed that it is polynomial-time solvable on graphs of bounded treewidth, while it remains $\\NP$-hard on cographs, and thus on graphs of constant clique-width. Fellows et al. showed that the problem becomes $\\mathsf{W[1]}$-hard when parameterized by tree-width (and hence clique-width) plus the number of…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM"
+  ],
+  "published": "2026-06-25",
+  "updated": "2026-06-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

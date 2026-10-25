@@ -1,0 +1,21 @@
+{
+  "key": "2608.02073",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.02073",
+  "title": "Accelerating Evolutionary Strategy via Rao-Blackwellizing Realization of Uncertain Input",
+  "authors": [
+    "So Nakashima",
+    "Tetsuya J. Kobayashi"
+  ],
+  "summary": "We investigate Optimization under Input Uncertainty (OIU), in which the input to the objective function, rather than the objective function itself, is subject to uncertainty. OIU appears in manufacturing processes with production tolerance, control of physical systems with actuation noise, Mixture of Experts, and Reinforcement Learning (RL). Most of the existing approaches solve OIU by using the value of the objective function but discard the information of the realized input, even though the realized input is observable in various applications. The question here is whether the discarded…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-08-03",
+  "updated": "2026-08-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

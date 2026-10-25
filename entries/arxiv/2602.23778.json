@@ -1,0 +1,22 @@
+{
+  "key": "2602.23778",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.23778",
+  "title": "Iterative Refinement for a Subset of Eigenvectors of Symmetric Matrices via Matrix Multiplications",
+  "authors": [
+    "Takeshi Terao",
+    "Katsuhisa Ozaki",
+    "Toshiyuki Imamura",
+    "Takeshi Ogita"
+  ],
+  "summary": "We develop an iterative refinement method that improves the accuracy of a user-chosen subset of $k$ eigenvectors ($k\\ll n$) of an $n\\times n$ real symmetric matrix. Using an orthogonal matrix represented in compact WY form, the method expresses the eigenvector error through a correction matrix that can be approximated efficiently from Rayleigh quotients and residuals. Unlike refinement methods for a single eigenpair or for a full eigenbasis, the proposed method refines only the selected $k$ eigenvectors using $\\mathcal{O}(nk)$ additional storage, and its dominant work can be organized as…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-27",
+  "updated": "2026-02-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

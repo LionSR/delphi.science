@@ -1,0 +1,23 @@
+{
+  "key": "2603.03017",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.03017",
+  "title": "Stability properties of Minimal Gated Unit neural networks",
+  "authors": [
+    "Stefano De Carli",
+    "Davide Previtali",
+    "Mirko Mazzoleni",
+    "Fabio Previdi"
+  ],
+  "summary": "In this work, we address the need for efficient and formally stable Recurrent Neural Networks (RNNs) in environments with limited computational resources by analyzing the stability of the Minimal Gated Unit (MGU) network, a lightweight alternative to common gated RNNs used in system identification. We derive sufficient parametric conditions for the MGU network's input-to-state stability and incremental input-to-state stability properties. These conditions enable a-posteriori validation of model stability and form the basis for novel stability-promoting training methodologies, including a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-03-03",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

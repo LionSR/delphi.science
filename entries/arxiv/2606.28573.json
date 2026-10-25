@@ -1,0 +1,21 @@
+{
+  "key": "2606.28573",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28573",
+  "title": "Replica Symmetry Breaking and Algorithmic Thresholds in Empirical Risk Minimization under Multi-Index Model",
+  "authors": [
+    "Andrea Montanari",
+    "Kangjie Zhou"
+  ],
+  "summary": "Modern machine learning models are trained by optimizing high-dimensional non-convex empirical risk functions. Such cost functions can have a multitude of local optima and yet, gradient-based optimization appears to converge to near-global optima. Within a simple supervised learning setting, we develop a precise picture of which parts of the empirical risk landscape are accessible by polynomial-time algorithms. We are given i.i.d. pairs $\\{(\\boldsymbol{x}_i,y_i):\\; 1 \\le i\\le n\\}$ with $\\boldsymbol{x}_i\\in \\mathbb{R}^d$ standard Gaussian feature vectors, and $y_i\\in\\mathbb{R}$ response…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-06-26",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

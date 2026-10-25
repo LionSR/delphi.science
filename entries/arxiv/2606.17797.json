@@ -1,0 +1,21 @@
+{
+  "key": "2606.17797",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.17797",
+  "title": "Koopman Lifting with Certified Error Bounds for Joint Inference in Nonlinear Networks",
+  "authors": [
+    "Chuansen Peng",
+    "Xiaojing Shen",
+    "Yunmin Zhu"
+  ],
+  "summary": "Jointly inferring latent node states and unknown network topology in nonlinear graphical dynamical systems is a fundamental yet largely unsolved problem, where the mutual entanglement of continuous states and discrete structure renders accurate recovery of either quantity critically dependent on the other. We propose \\textbf{Koopman-GKFA} (Koopman Group-sparse Kalman Filter--ADMM), a unified framework that lifts nonlinear network dynamics into an approximately linear system via Koopman operator embedding with a separable node-wise dictionary, enabling optimal linear filtering for state…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

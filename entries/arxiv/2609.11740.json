@@ -1,0 +1,20 @@
+{
+  "key": "2609.11740",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11740",
+  "title": "From Good Starts to Optimal Inference: Generalized Latent Factor Models with Missingness and Implicit Regularization",
+  "authors": [
+    "Chengzhu Huang",
+    "Yuqi Gu"
+  ],
+  "summary": "Generalized latent factor models provide a flexible framework for analyzing high-dimensional non-Gaussian data, but principled estimation and uncertainty quantification under missingness remain substantially less developed. We develop a theory that connects a computationally tractable nonconvex procedure directly to statistical inference for nonlinear latent factor models with exponential-family links and partially observed entries. Our procedure combines a link-aware double-SVD initialization, a unilateral refinement that achieves rowwise consistency, and vanilla gradient descent. We show…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

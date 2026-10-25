@@ -1,0 +1,20 @@
+{
+  "key": "2604.25007",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.25007",
+  "title": "A Constraint-Lifting Framework for Safe and Stable Nonlinear Control",
+  "authors": [
+    "Jhon Manuel Portella Delgado",
+    "Ankit Goel"
+  ],
+  "summary": "This paper presents a constraint-lifting control framework for designing stabilizing controllers that guarantee the forward invariance of a prescribed safe set. State-of-the-art safety-enforcing methods, such as control barrier functions (CBFs) and model predictive control (MPC), typically rely on solving constrained optimization problems in real time and therefore may not yield an explicit control law that guarantees constraint satisfaction under all conditions. In contrast, the proposed approach develops an explicit control law for a class of nonlinear systems that ensures both asymptotic…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-04-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

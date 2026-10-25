@@ -1,0 +1,22 @@
+{
+  "key": "2607.08380",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08380",
+  "title": "Dynamics of Gradient Descent with Large Step Size Near a Manifold of Flat Minima",
+  "authors": [
+    "Lachlan Ewen MacDonald",
+    "René Vidal"
+  ],
+  "summary": "An important quantity in the theory of gradient descent (GD) is the \\emph{sharpness}, defined as the largest eigenvalue of the objective Hessian. Classical analyses typically require the step size to be uniformly smaller than twice the reciprocal of the sharpness, but this condition is frequently violated in the training of deep neural networks. Recent work bridges this gap in the setting of overparametrised least-squares with a \\emph{single scalar output}, providing a normal form for large-step GD in a neighbourhood of an \\emph{isolated} flat minimum and establishing three corresponding…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS",
+    "math.OC"
+  ],
+  "published": "2026-07-09",
+  "updated": "2026-09-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

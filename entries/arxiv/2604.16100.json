@@ -1,0 +1,19 @@
+{
+  "key": "2604.16100",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.16100",
+  "title": "Existence and regularity of solutions to parabolic-elliptic nonlinear systems",
+  "authors": [
+    "Marco Picerni"
+  ],
+  "summary": "In this paper we study the existence and summability of the solutions to the following parabolic-elliptic system of partial differential equations with discontinuous coefficients: \\begin{equation*} \\begin{cases} u_t - \\operatorname{div}(A(x, t) \\nabla u) = -\\operatorname{div}(u M(x) \\nabla ψ) + f(x, t) & \\text{in } Ω_T, \\\\ -\\operatorname{div}(M(x) \\nabla ψ) = |u|^θ& \\text{in } Ω_T, \\\\ ψ(x, t) = 0 & \\text{on } \\partial Ω\\times (0, T), \\\\ u(x, t) = 0 & \\text{on } \\partial Ω\\times (0, T), \\\\ u(x, 0) = 0 & \\text{in } Ω. \\end{cases} \\end{equation*} Here, $Ω$ is an open and bounded subset of…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-04-17",
+  "updated": "2026-05-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

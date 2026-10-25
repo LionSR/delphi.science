@@ -1,0 +1,21 @@
+{
+  "key": "2609.40015",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.40015",
+  "title": "Inverting the geodesic ray transform with finite measurements: stability and reconstruction",
+  "authors": [
+    "Yernat M. Assylbekov"
+  ],
+  "summary": "We study the inversion of the geodesic ray transform from finitely many local averages of its data. Under suitable geometric assumptions, we prove Lipschitz stability on any fixed finite-dimensional reconstruction space when the measurement partition is sufficiently fine. We develop convergent reconstruction algorithms based on Steepest Gradient Descent and Conjugate Gradients and implement them using piecewise constant finite element spaces. Numerical experiments in 2D and 3D illustrate the influence of geometry and measurement discretization on reconstruction quality.",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "math.DG",
+    "math.NA"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

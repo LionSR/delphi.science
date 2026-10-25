@@ -1,0 +1,24 @@
+{
+  "key": "2608.29057",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.29057",
+  "title": "Sparse Koopman Autoencoders Identify Local Dynamical Regimes in Multibasin Systems",
+  "authors": [
+    "Aidan Li",
+    "Uday Kiran Reddy Tadipatri",
+    "Mahan Fathi",
+    "Sarath Chandar",
+    "Ross Goroshin"
+  ],
+  "summary": "Koopman autoencoders (KAEs) seek a higher-dimensional latent representation in which nonlinear dynamics evolve linearly. However, many interesting systems have multiple basins of attraction, and both theoretical and empirical work has shown these multibasin systems cannot generally admit a single finite-dimensional global Koopman embedding under standard assumptions. We posit that encoders with a sparsity-inducing objective encouraging few active latent coefficients will provide latent supports as an inspectable basin-modeling principle for Koopman autoencoders. We use these encoders…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS"
+  ],
+  "published": "2026-08-29",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

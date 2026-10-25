@@ -1,0 +1,24 @@
+{
+  "key": "2610.26418",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.26418",
+  "title": "Local data augmentation for imbalanced binary classification",
+  "authors": [
+    "Harold Gu{é}neau",
+    "Alain Celisse",
+    "Pascal Delange"
+  ],
+  "summary": "Facing imbalanced binary classification, we aim at maximizing the recall while limiting the proportion of false detections in the minority class. For doing that, the present work studies the effect of several rebalancing strategies, from the uniform subsampling of the observations from the minority class, to a more involved local data augmentation scheme. To be more specific, we establish that only rebalancing class proportions cannot modify the classification performance, whereas local data augmentation is proved to have an impact on the final results. The local augmentation scheme is…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.LG",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

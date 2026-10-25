@@ -1,0 +1,21 @@
+{
+  "key": "2610.05679",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05679",
+  "title": "Sharp Integrality Gaps in Calibration Distance",
+  "authors": [
+    "Zinan Wang",
+    "Xinhao Yang"
+  ],
+  "summary": "We study the offline gap between deterministic calibration distance C and its fractional relaxation L for binary unit-weight sequences under total absolute-change cost. We sharpen the offline comparison C = 216. The upper bound holds for every input, while each T >= 216 has a rational lower-bound input. For every input with m distinct forecasts, C <= L + m, and the unrestricted-sample worst-case sparse order is Theta(m). For rational forecasts and accuracy, with binary-encoded multiplicities of separately assignable unit identities, a grid-free polynomial-bit-time procedure returns B <= L <=…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

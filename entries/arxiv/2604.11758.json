@@ -1,0 +1,29 @@
+{
+  "key": "2604.11758",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.11758",
+  "title": "Hybrid Quantum-Classical Optimization Workflows for the Shipment Selection Problem",
+  "authors": [
+    "Miguel Angel Lopez-Ruiz",
+    "Daiwei Zhu",
+    "Jonas Hatzenbuhler",
+    "Shudian Zhao",
+    "Claudio Girotto",
+    "Willie Aboumrad",
+    "Jonas Alm",
+    "Julia Kompalla",
+    "Mena Issler",
+    "Ananth Kaushik",
+    "Martin Roetteler"
+  ],
+  "summary": "We present a quantum optimization framework for the Shipment Selection Problem (SSP) in electric freight logistics, developed jointly by IonQ and Einride. Idle gaps arising from stochastic shipment cancellations reduce fleet utilization and revenue; filling them optimally requires solving a combinatorial assignment problem with quadratic inter-gap dependencies. We formulate the SSP as a Mixed-Integer Quadratic Program, map it to an Ising cost Hamiltonian, and solve it using Iterative-QAOA, a non-variational warm-start extension of the Quantum Approximate Optimization Algorithm (QAOA) with a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-13",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

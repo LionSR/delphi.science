@@ -1,0 +1,19 @@
+{
+  "key": "2608.20242",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.20242",
+  "title": "Quantitative bounds for regular $3$-wise intersecting families",
+  "authors": [
+    "Fan Chang"
+  ],
+  "summary": "Frankston, Kahn and Narayanan proved that every regular increasing $3$-wise intersecting family of subsets of $[n]$ has cardinality $o(2^n)$ using Friedgut's junta theorem. We give a short quantitative proof using elementary tools from the analysis of Boolean functions and entropy. More precisely, if $\\mathcal{A}\\subseteq\\mathcal{P}_n$ is a nonempty $3$-wise intersecting family that is both regular and increasing, then $$ \\log\\frac{2^n}{|\\mathcal{A}|}\\ge \\frac{n}{2}\\left(\\frac{|\\mathcal{A}|}{2^n-|\\mathcal{A}|}\\right)^2, $$ and consequently $|\\mathcal{A}|\\le 2^n\\sqrt{W(n)/n}$, where $W$ is…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-08-20",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

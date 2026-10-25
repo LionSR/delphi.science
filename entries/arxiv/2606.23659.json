@@ -1,0 +1,19 @@
+{
+  "key": "2606.23659",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.23659",
+  "title": "A Resolution of Erdős Problem 550 on Tree versus Complete Multipartite Ramsey Numbers",
+  "authors": [
+    "Eric Li"
+  ],
+  "summary": "We resolve Erdős Problem 550, originally asked as question (2) of Erdős, Faudree, Rousseau, and Schelp. Precisely, for fixed integers $k\\geq 2$ and $1\\leq m_1\\leq \\cdots \\leq m_k$, we prove that, for every sufficiently large $n$ and every $n$-vertex tree $T$, $R(T,K_{m_1,\\ldots,m_k}) \\leq (k-1)(R(T,K_{m_1,m_2})-1)+m_1$. The proof combines an off-Turán tree-embedding theorem, proved by regularity and whole-edge allocation, with a compactness theorem for bounded-rank hypergraph obstructions. The full and unconditional proof has been formally verified in Lean.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-06-22",
+  "updated": "2026-08-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

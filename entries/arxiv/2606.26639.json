@@ -1,0 +1,22 @@
+{
+  "key": "2606.26639",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.26639",
+  "title": "Fast Enumeration of Minimal Removable Sets in Monotone Systems with Application to Core Collapse Analysis",
+  "authors": [
+    "Kan Shota",
+    "Kazuya Haraguchi"
+  ],
+  "summary": "In network vulnerability analysis, it is crucial to evaluate the robustness of $k$-cores against vertex removals. A $k$-core is often fragile since removing a few vertices can trigger a large reduction in the core size, a phenomenon known as core collapse. In this paper, we study the problem of enumerating all minimal removable sets (MinRSs) of a given $k$-core, where a MinRS is a minimal nonempty set of vertices whose removal results in a smaller $k$-core graph. We consider this problem within a general mathematical framework based on monotone systems. We show that, for a monotone system…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-06-25",
+  "updated": "2026-06-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

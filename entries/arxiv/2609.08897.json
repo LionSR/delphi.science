@@ -1,0 +1,21 @@
+{
+  "key": "2609.08897",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.08897",
+  "title": "On the Stability of the Independence Number in Random Distance Graphs",
+  "authors": [
+    "Vsevolod A. Pokhachevskiy",
+    "Andrei Raigorodskii"
+  ],
+  "summary": "We consider a random subgraph $G_p(n,r,<s)$ of the complete distance graph $G(n,r,<s)$ whose vertices are the $r$-element subsets of the set $\\{1,\\dots,n\\}$ and whose edges join pairs of subsets that intersect in fewer than $s$ elements; each edge survives independently of the others with probability $p$. The independence number of the graph $G(n,r,<s)$ equals $C_{n-s}^{r-s}$ -- this is the classical Erdos-Ko-Rado theorem. We prove that, for $r=r(n)\\to\\infty$, $s=s(n)\\to\\infty$, $s=o(r)$, $r^2=o(n)$ and $p\\ge 16\\,sr^2\\ln(n/r)/n$, with probability tending to 1 the independence number of the…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.PR"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

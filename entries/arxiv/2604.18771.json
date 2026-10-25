@@ -1,0 +1,23 @@
+{
+  "key": "2604.18771",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.18771",
+  "title": "Diffusion Synthetic Acceleration for polytopic discretisations of Boltzmann transport",
+  "authors": [
+    "Ansar Calloo",
+    "Matthew Evans",
+    "François Madiot",
+    "Tristan Pryer"
+  ],
+  "summary": "We present a computational study of diffusion synthetic acceleration (DSA) for the monoenergetic, isotropically scattering $S_N$ transport equations, discretised in space by a polytopic discontinuous Galerkin method. Using a discrete ordinates angular discretisation, we construct the DSA correction with an interior-penalty diffusion operator and compare a classical symmetric interior penalty (SIP) formulation with a modified interior penalty (MIP) variant, together with homogeneous Dirichlet and Marshak (Robin) diffusion boundary conditions imposed weakly in the DG framework. We quantify the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-04-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2605.05129",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05129",
+  "title": "BDF2-type integrator for Landau-Lifshitz-Gilbert equation in micromagnetics: a-priori error estimates",
+  "authors": [
+    "Michele Aldé",
+    "Dirk Praetorius",
+    "Michael Feischl"
+  ],
+  "summary": "We consider the Landau-Lifshitz-Gilbert equation (LLG), which models time-dependent micromagnetic phenomena. We analyze a fully discrete scheme that combines first-order finite elements in space with a BDF2 method in time. The method requires the solution of only one linear system of equations per time step and does not enforce the pointwise unit-length constraint of the magnetization. While unconditional weak convergence has been analyzed in an earlier work, we now prove optimal-order convergence rates under sufficient regularity assumptions on the exact solution and the external field. In…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-07-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2607.23980",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.23980",
+  "title": "Sharp small-deviation inequalities for sums of independent nonnegative random variables",
+  "authors": [
+    "Weibo Fu",
+    "Yanjun Han",
+    "Guanyang Wang",
+    "Jun Yan",
+    "Peng Zhang",
+    "Zhengqing Zhou"
+  ],
+  "summary": "Let $(X_1,\\ldots,X_n)$ be independent nonnegative random variables with $\\mathbb{E} X_i\\le1$, and write $S=\\sum_iX_i$. For $δ>0$, we prove that \\[ \\mathbb{P}\\left(S<\\mathbb{E} S+δ\\right)\\ge b_{n,δ}, \\] where $b_{n,δ}=δ(n/(n+δ))^n$ for $0<δ<1$ and $b_{n,δ}=(1-1/(n+δ))^n$ for $δ\\ge1$. The bound is sharp for every $n$ and $δ\\ge 1$. In particular, since $b_{n,δ} \\ge e^{-1}$ for $δ\\ge 1$, our result proves Feige's conjecture [Feige, 2004] in the affirmative for $δ\\ge 1$. The proof is found by ChatGPT 5.6 Pro. It combines the exact Dirichlet calibration theorem of Vlassis and Thomas [Vlassis and…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.CO"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

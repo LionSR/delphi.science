@@ -1,0 +1,20 @@
+{
+  "key": "2610.01740",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01740",
+  "title": "Toeplitz Infinite GMRES for Parameterized Linear Systems",
+  "authors": [
+    "Weiguo Gao",
+    "Feiyang Jiang"
+  ],
+  "summary": "We develop Toeplitz infinite GMRES for solving large sparse analytic parameterized systems $A(s)x(s)=z$ at many parameter values. The method exploits a block upper triangular Toeplitz structure in the companion Krylov sequence to construct the Arnoldi process and recover solution approximations without storing full Arnoldi vectors. We derive incremental recurrences requiring $\\mathcal{O}(np^2+p^3)$ arithmetic and $\\mathcal{O}(np+p^2)$ storage for $p$ Arnoldi steps, excluding factorization setup and assuming linear-cost coefficient actions and triangular solves. A dynamic generator-refreshing…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

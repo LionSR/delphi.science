@@ -1,0 +1,22 @@
+{
+  "key": "2604.08917",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.08917",
+  "title": "An unfitted finite element method for PDE-constrained shape optimization via shape gradient flow",
+  "authors": [
+    "Wei Gong",
+    "Chuwen Ma",
+    "Ziyi Zhang"
+  ],
+  "summary": "In this paper, we propose an unfitted finite element method to solve PDE-constrained shape optimization problems via shape gradient flow. The shape gradient flow system consists of the state equation, the adjoint equation, the velocity equation, as well as the flow map that generates the evolution of the boundary driven by the velocity field, which can be viewed as a limit system of the classical shape gradient descent algorithm. In \\cite{GongLiRao} the authors proposed an evolving finite element method to solve the shape gradient flow system. Instead, in this paper, we propose an unfitted…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-04-10",
+  "updated": "2026-04-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

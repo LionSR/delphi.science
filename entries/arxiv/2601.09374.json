@@ -1,0 +1,22 @@
+{
+  "key": "2601.09374",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.09374",
+  "title": "Network-Based Quantum Computing: an efficient design framework for many-small-node distributed fault-tolerant quantum computing",
+  "authors": [
+    "Soshun Naito",
+    "Yasunari Suzuki",
+    "Yuuki Tokunaga"
+  ],
+  "summary": "In fault-tolerant quantum computing, a large number of physical qubits are required to construct a single logical qubit, and a single quantum node may be able to hold only a small number of logical qubits. In such a case, the idea of distributed fault-tolerant quantum computing (DFTQC) is important to demonstrate large-scale quantum computation using small-scale nodes. However, the design of distributed systems on small-scale nodes, where each node can store only one or a few logical qubits for computation, has not been explored well yet. In this paper, we propose network-based quantum…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DC"
+  ],
+  "published": "2026-01-14",
+  "updated": "2026-01-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

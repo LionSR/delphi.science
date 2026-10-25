@@ -1,0 +1,22 @@
+{
+  "key": "2607.22567",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.22567",
+  "title": "A Formal Kinetic Theory for Zeroth-Order Newton Dynamics:Stein-Corrected Hessian Estimation and Curvature--Variance Trade-offs",
+  "authors": [
+    "Shihao Ji",
+    "Mingyu Li",
+    "Zihui Song"
+  ],
+  "summary": "Zeroth-order Newton-type methods are useful when gradients and Hessians are unavailable, but they behave quite differently from first-order gradient-free methods. We develop a kinetic framework for algorithms that estimate both gradient and Hessian from black-box function values. The naive random-direction Hessian estimator turns out to be biased even on quadratics; a Gaussian--Stein correction is needed to estimate the Hessian of the Gaussian-smoothed objective. Linearizing the inverse Hessian exposes two noise channels: gradient noise preconditioned by the inverse Hessian, and Hessian…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI"
+  ],
+  "published": "2026-05-31",
+  "updated": "2026-08-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

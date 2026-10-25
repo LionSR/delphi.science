@@ -1,0 +1,21 @@
+{
+  "key": "2607.23433",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.23433",
+  "title": "New Globalized Newton-Type Methods for Nonconvex Optimization Problems",
+  "authors": [
+    "Vo Thanh Phat",
+    "Tuyen Tran"
+  ],
+  "summary": "Newton's method is one of the most effective second-order algorithms for smooth optimization because of its fast local convergence. However, existing globally convergent Newton-type methods typically require convexity or strong convexity of the objective function, while approaches for nonconvex optimization often rely on Hessian regularization at every iteration. In this paper, we propose a general line-search Newton framework for unconstrained optimization that avoids repeated Hessian regularization by exploiting the Newton direction only when it is well-defined and suitable. The proposed…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-07-26",
+  "updated": "2026-07-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

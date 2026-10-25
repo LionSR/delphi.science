@@ -1,0 +1,19 @@
+{
+  "key": "2604.10435",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.10435",
+  "title": "Astrolabe: A Content-Addressable Hypergraph for Semantic Knowledge Management",
+  "authors": [
+    "Xinze Li"
+  ],
+  "summary": "Existing knowledge management tools either preserve prose but lose structural relationships, or capture relationships but restrict edge semantics to fixed vocabularies. We introduce Astrolabe, a content-addressable hypergraph for semantic knowledge management. Entries are identified by the SHA-256 hash of their content, carry an ordered reference list of arbitrary width, and store an opaque record string interpreted by plugins. The structure admits two orthogonal decompositions: by width and by depth. We demonstrate the framework with a plugin bridging informal and formal mathematics.",
+  "domain": "math.HO",
+  "tags": [
+    "math.HO"
+  ],
+  "published": "2026-04-12",
+  "updated": "2026-04-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

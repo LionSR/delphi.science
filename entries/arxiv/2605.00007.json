@@ -1,0 +1,21 @@
+{
+  "key": "2605.00007",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.00007",
+  "title": "Mean-Field Path-Integral Diffusion: From Samples to Interacting Agents",
+  "authors": [
+    "Michael Chertkov"
+  ],
+  "summary": "Independent sample generation is the prevailing paradigm in modern diffusion-based generative models of AI. We ask a different question: can samples \\emph{coordinate} through shared population statistics to transport probability mass more efficiently? We introduce Mean-Field Path-Integral Diffusion (MF-PID), a framework in which samples are promoted to interacting agents whose drift depends self-consistently on the evolving population density. The coupling converts distribution matching into a McKean--Vlasov extension of the stochastic optimal transport problem, unifying generative modeling…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI",
+    "stat.ML"
+  ],
+  "published": "2026-02-23",
+  "updated": "2026-02-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

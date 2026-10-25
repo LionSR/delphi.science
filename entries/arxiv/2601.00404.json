@@ -1,0 +1,19 @@
+{
+  "key": "2601.00404",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.00404",
+  "title": "Guaranteed stability bounds for second-order PDE problems satisfying a Garding inequality",
+  "authors": [
+    "T. Chaumont-Frelet"
+  ],
+  "summary": "We propose an algorithm to numerically determined whether a second-order linear PDE problem satisfying a Garding inequality is well-posed. This algorithm further provides a lower bound to the inf-sup constant of the weak formulation, which may in turn be used for a posteriori error estimation purposes. Our numerical lower bound is based on two discrete singular value problems involving a Lagrange finite element discretization coupled with an a posteriori error estimator based on flux reconstruction techniques. We show that if the finite element discretization is sufficiently rich, our lower…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-01",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2609.20641",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20641",
+  "title": "Beyond PINNs: A Unified Gauss--Newton and Petrov--Galerkin Framework for Neural and Hybrid PDE Solvers",
+  "authors": [
+    "Nilo Schwencke",
+    "Roland Maier"
+  ],
+  "summary": "Physics-informed neural networks and finite element methods provide two different paradigms for the numerical approximation of partial differential equations: the former are commonly trained by minimizing pointwise strong residuals, whereas the latter are naturally built from weak variational formulations and the finite-dimensional systems obtained after discretization. In this work, we introduce a common framework based on the discretization of functional Gauss--Newton problems by finite families of linear measurements. We show that, through an appropriate duality pairing, the linear…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

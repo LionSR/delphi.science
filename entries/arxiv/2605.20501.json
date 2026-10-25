@@ -1,0 +1,23 @@
+{
+  "key": "2605.20501",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.20501",
+  "title": "Adaptive Multi-Fidelity Structural Optimization under Fluid-Structure Interaction",
+  "authors": [
+    "Aditya Narkhede",
+    "Erick Rivas",
+    "Kevin Wang"
+  ],
+  "summary": "The design of structures and vehicles subject to fluid-structure interaction (FSI) often requires high-fidelity coupled analysis. While the design variables pertain to the structure, the computational cost is dominated by the fluid solver, making iterative optimization prohibitively expensive. This paper presents an adaptive multi-fidelity optimization method combining high-fidelity FSI analysis with a lightweight surrogate for fluid-induced loads and a decision model that selects between surrogate and high-fidelity fluid evaluations. During optimization, completed FSI analyses incrementally…",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

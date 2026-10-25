@@ -1,0 +1,21 @@
+{
+  "key": "2601.11771",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.11771",
+  "title": "Solving High-Dimensional PDEs Using Linearized Neural Networks",
+  "authors": [
+    "Tong Mao",
+    "Jinchao Xu",
+    "Xiaofeng Xu"
+  ],
+  "summary": "Linearized shallow neural networks that are constructed by fixing the hidden-layer parameters have recently shown strong performance in solving partial differential equations (PDEs). Such models, widely used in the random feature method (RFM) and extreme learning machines (ELM), transform network training into a linear least-squares problem. In this paper, we conduct a numerical study of the variational (Galerkin) and collocation formulations for these linearized networks. Our numerical results reveal that, in the variational formulation, the associated linear systems are severely…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-16",
+  "updated": "2026-01-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

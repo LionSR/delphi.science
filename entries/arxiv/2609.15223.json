@@ -1,0 +1,20 @@
+{
+  "key": "2609.15223",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.15223",
+  "title": "Structure-Preserving Augmented Lagrangian Finite Element Methods for Cavitation in Reynolds and Stokes Flows",
+  "authors": [
+    "Peter Hansbo",
+    "Mats G. Larson"
+  ],
+  "summary": "In this paper we propose augmented Lagrangian finite element methods for cavitation in the Reynolds and Stokes models of lubrication, for which the discrete complementarity conditions hold exactly and the augmentation parameter drops out of the method. For the Reynolds equation this follows from nodal quadrature in a mixed piecewise linear method, for which we prove the classical first-order error estimate. We also determine the computable stability threshold of a multiplier-free stabilised alternative. For Stokes flow we show that the constrained scalar is the mechanical pressure when the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

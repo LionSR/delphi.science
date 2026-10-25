@@ -1,0 +1,21 @@
+{
+  "key": "2607.20013",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.20013",
+  "title": "Order-2 Tightness of Block-Sparse SOS Relaxations for One-Layer ReLU Network Verification with a Matching Input-Sharing Graph",
+  "authors": [
+    "Godai Azuma",
+    "Sunyoung Kim",
+    "Makoto Yamashita"
+  ],
+  "summary": "Azuma, Kim, and Yamashita formulated the verification problem for one-layer ReLU networks as a quadratically constrained quadratic program and established tight semidefinite relaxations for the edgeless case and for one-unit settings. In this work, we represent the sharing pattern of undecided ReLUs over a box input set through an input-sharing graph and focus on the case where this graph is a matching. We then derive an explicit, checkable sufficient condition for the tightness of the order-$2$ block-sparse SOS relaxation associated with the connected-component decomposition of this graph.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-22",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2604.23995",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23995",
+  "title": "Extracting Exact Lie Derivatives Without Backpropagation: A Dual Compiler for Neural Control Barrier Functions",
+  "authors": [
+    "Mohammadreza Kamaldar"
+  ],
+  "summary": "A safety filter based on a neural control barrier function (CBF) deployed in an embedded control loop evaluates, at each control cycle, the trained network and its Lie derivatives along the system vector fields, under the memory and worst-case execution time (WCET) constraints that safety-oriented coding standards impose. Reverse-mode automatic differentiation, by which training frameworks obtain these derivatives, retains an activation cache whose size grows with the sum of the layer widths, and general-purpose differentiation runtimes allocate the computational graph from the heap at each…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.DS",
+    "math.RA"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

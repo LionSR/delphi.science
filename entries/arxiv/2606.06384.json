@@ -1,0 +1,23 @@
+{
+  "key": "2606.06384",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.06384",
+  "title": "Estimation of the sub-Gaussian Parameter",
+  "authors": [
+    "Jason Liu",
+    "Min Xu",
+    "Jinchuan Xing"
+  ],
+  "summary": "The sub-Gaussian parameter (also called the variance proxy) of a mean-zero random variable $X$ is defined as $ξ^2_\\star = \\sup_{λ\\in \\mathbb{R}} L(λ)$ where $L(λ) = \\frac{2}{λ^2} \\log \\mathbb{E} e^{λX}$ is a weighted cumulant generating function. We study the estimation of $ξ^2_\\star$ and prove that the minimax risk is governed by a non-increasing function $δ_P(C) = \\sup_{|λ| \\geq C} L(λ) - \\sup_{|λ| \\leq C} L(λ)$ which captures the influence of the tail behavior of the distribution $P$. Over the class of distributions with $δ_P \\leq r$ for a non-increasing function $r$, the minimax risk is,…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME",
+    "stat.ML"
+  ],
+  "published": "2026-06-04",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

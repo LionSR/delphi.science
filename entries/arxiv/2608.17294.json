@@ -1,0 +1,21 @@
+{
+  "key": "2608.17294",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17294",
+  "title": "Enumerating forcing and strongly forcing (0,1)-matrices",
+  "authors": [
+    "Lei Cao",
+    "Jesse Geneson"
+  ],
+  "summary": "Let $Q$ be a nonzero $s\\times t$ $(0,1)$-pattern, and let $m\\ge s$ and $n\\ge t$. An $m\\times n$ matrix is strongly $Q$-forcing if every $1$-entry belongs to an $s\\times t$ submatrix equal to $Q$. Let $F^{*}(m,n,Q)$ count these matrices. Put $H=m-s+1$ and $W=n-t+1$. We prove \\[ F^{*}(m,n,Q)\\ge 2^{HW}. \\] Writing $r$ and $c$ for the numbers of nonzero rows and columns of $Q$, equality holds if and only if \\[ (H=1\\text{ or }r=1)\\qquad\\text{and}\\qquad(W=1\\text{ or }c=1). \\] Thus the minimum over all nonzero $s\\times t$ patterns is $2^{HW}$, attained exactly by singleton patterns when $H,W>1$,…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

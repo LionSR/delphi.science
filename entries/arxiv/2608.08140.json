@@ -1,0 +1,21 @@
+{
+  "key": "2608.08140",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.08140",
+  "title": "Convergence of a CutFEM for fluid--structure interaction with a deforming interface",
+  "authors": [
+    "Miguel A. Fernández",
+    "Buyang Li",
+    "Maxim A. Olshanskii"
+  ],
+  "summary": "We present a rigorous error analysis for a semidiscrete immersed CutFEM applied to fluid--structure interaction (FSI) problems involving an incompressible viscous fluid and an elastic solid. The method employs a Lagrange multiplier to enforce the fluid-solid coupling conditions while fully accounting for the effect of the structural deformation on the fluid domain. For sufficiently regular FSI solutions and finite elements of degree $k\\geq3$, we prove convergence of order $k$ for the fluid velocity and solid displacement and convergence of order $k-1$ for the fluid pressure in the energy…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-08",
+  "updated": "2026-08-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

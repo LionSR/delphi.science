@@ -1,0 +1,26 @@
+{
+  "key": "2609.02991",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.02991",
+  "title": "TRACE: A spatiotemporal contact memory graph network simulator for granular dynamics",
+  "authors": [
+    "Changjian Zhou",
+    "Negin Yousefpour",
+    "Jie Qi",
+    "Junfeng Fang",
+    "Guillermo A. Narsilio",
+    "Hans Petter Jostad"
+  ],
+  "summary": "Learned graph simulators provide an efficient alternative to high-fidelity solvers for granular dynamics. However, granular motion depends strongly on inter-granular contact history, which is difficult to preserve when particle contacts form, break, and rearrange. Existing simulators mainly store temporal information in node features or node-level memory. Here we introduce TRACE, a graph-network simulator that stores interaction history directly on contact edges. Each edge maintains a persistent memory updated by attention-based message passing and a gated recurrent unit, while an…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "stat.ML"
+  ],
+  "published": "2026-09-02",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

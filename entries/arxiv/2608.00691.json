@@ -1,0 +1,19 @@
+{
+  "key": "2608.00691",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.00691",
+  "title": "Odd-Cycle Span Defect: A Polynomial Lower Bound and a Square-Root Upper Bound",
+  "authors": [
+    "Shuyan Chen"
+  ],
+  "summary": "For a graph $G$, let $ψ(G)=\\max\\{χ(G[V(C)]):C$ is an odd cycle of $G\\}$, with $ψ(G)=0$ when $G$ is bipartite. For positive integers $N$, set $F(N)=\\max\\{χ(G)-ψ(G):|V(G)|\\le N\\}$. The function $F$ measures the finite-order additive gap arising from an open problem of Erdos and Hajnal. We prove $N^{1/6-o(1)}\\le F(N)<\\sqrt{6N}$. The lower bound raises the finite-order scale supplied by the Cameron-Clow path-colour construction from $\\log N/\\log\\log N$ to a fixed power of $N$. Its proof constructs a palette-code graph from a binary covering code $\\mathcal{C}\\subseteq\\{0,1\\}^p$ and establishes…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-08-01",
+  "updated": "2026-08-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

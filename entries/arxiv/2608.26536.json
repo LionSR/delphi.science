@@ -1,0 +1,22 @@
+{
+  "key": "2608.26536",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.26536",
+  "title": "Posterior Consistency for Recovering Initial States in Nonlinear Subdiffusion Equations",
+  "authors": [
+    "Haoyu Lu",
+    "Shaokang Zu",
+    "Junxiong Jia"
+  ],
+  "summary": "We study the Bayesian recovery of the initial state in a semilinear time-fractional subdiffusion equation from noisy random space-time point observations. A rescaled Gaussian prior based on a Whittle--Matérn process is assigned to the unknown initial condition. We prove that the solution has \\(\\dot H^3\\)-regularity when the nonlinearity satisfies a Lipschitz condition in the Sobolev norm. We then establish posterior contraction rates for the prediction error in the \\(L^2\\)-norm and for the parameter in Sobolev norms. The rates are polynomial in the sample size, with exponent depending on the…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "math.AP"
+  ],
+  "published": "2026-08-27",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

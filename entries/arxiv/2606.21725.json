@@ -1,0 +1,22 @@
+{
+  "key": "2606.21725",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.21725",
+  "title": "Physics-Informed Neural Networks for Computing the Morse Index of the Critical Catenoid",
+  "authors": [
+    "Miraj Samarakkody"
+  ],
+  "summary": "The Morse index of a free boundary minimal surface is encoded in its Jacobi-Steklov spectrum, and we test how faithfully a physics-informed neural network (PINN) reproduces that spectrum on a problem whose answer is already known in closed form. The benchmark is the critical catenoid in the unit ball $\\mathbb{B}^3$, where it is well known that the Morse index equals $4$ and the nullity equals $2$. Separating the angular variable reduces the eigenvalue problem to a family of one-dimensional Robin problems on $[-T,T]$, one for each Fourier mode. A network that enforces the parity of each mode…",
+  "domain": "math.DG",
+  "tags": [
+    "math.DG",
+    "cs.LG",
+    "math.NA",
+    "math.SP"
+  ],
+  "published": "2026-06-19",
+  "updated": "2026-06-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

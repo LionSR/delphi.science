@@ -1,0 +1,20 @@
+{
+  "key": "2608.03256",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.03256",
+  "title": "An L-Stable Sequential Two-Stage Fourth-Order Method with ADER Trajectory Derivatives for Stiff Transport--Relaxation Systems",
+  "authors": [
+    "Zhixin Huo",
+    "Yangnan Su"
+  ],
+  "summary": "A fully implicit two-stage fourth-order two-derivative time discretization was introduced previously as a temporal method. This paper closes that sequential integrator for stiff transport--relaxation equations by pairing a conservative finite-volume residual $\\mathcal L_h$ with its discrete trajectory derivative $\\mathcal G_h^{\\rm tr}=D\\mathcal L_h\\,\\mathcal L_h$. An ADER/Cauchy--Kowalevski predictor provides interface states and physical time derivatives; differentiating the same numerical flux and taking shared face differences yields a conservative approximation $\\widetilde{\\mathcal…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2601.21471",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.21471",
+  "title": "Best Arm Identification with LLM Judges and Limited Human",
+  "authors": [
+    "Ruicheng Ao",
+    "Hongyu Chen",
+    "Siyang Gao",
+    "Hanwei Li",
+    "David Simchi-Levi"
+  ],
+  "summary": "We study fixed-confidence best-arm identification (BAI) where a cheap but potentially biased proxy (e.g., LLM judge) is available for every sample, while an expensive ground-truth label can only be acquired selectively when using a human for auditing. Unlike classical multi-fidelity BAI, the proxy is biased (arm- and context-dependent) and ground truth is selectively observed. Consequently, standard multi-fidelity methods can mis-select the best arm, and uniform auditing, though accurate, wastes scarce resources and is inefficient. We prove that without bias correction and propensity…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-01-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2607.03905",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.03905",
+  "title": "On estimating operator norm distance, with optimal trace distance estimation when one state is pure",
+  "authors": [
+    "Yupan Liu",
+    "Qisheng Wang",
+    "Zhan Yu"
+  ],
+  "summary": "We investigate the computational complexity of estimating the operator norm distance ${\\rm T}_{\\infty}(ρ_0,ρ_1)$, defined via the operator norm $\\|A\\|_{\\infty} = σ_{\\max}(A)$, given ${\\rm poly}(n)$-size state-preparation circuits of $n$-qubit quantum states $ρ_0$ and $ρ_1$. We provide efficient quantum estimators for the operator norm distance whose complexity is independent of the rank (and thus the dimension) of the states: 1. When one state is pure, we establish an optimal quantum estimator using $Θ(1/ε)$ queries to the state-preparation circuits. Consequently, for constant additive…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS",
+    "cs.IT"
+  ],
+  "published": "2026-07-04",
+  "updated": "2026-07-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

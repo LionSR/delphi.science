@@ -1,0 +1,27 @@
+{
+  "key": "2606.30805",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.30805",
+  "title": "CryoZip: An Efficient Cryogenic Compressor for Quantum Error Correction Syndromes",
+  "authors": [
+    "Guanchen Tao",
+    "Alexander Knapen",
+    "Jacob Mack",
+    "Gokul Subramanian Ravi",
+    "Qirui Zhang",
+    "Mehdi Saligane",
+    "Dennis Sylvester"
+  ],
+  "summary": "Scaling fault tolerant quantum computing is increasingly constrained by the limited bandwidth and power budget across the 4 K to room temperature (RT) interface. We present CryoZip, a cross stack cryogenic compression framework that cooperates with a lightweight cryogenic quantum error correction (QEC) predecoder to reduce 4 K to RT syndrome transmission under realistic, circuit level noise. CryoZip targets sparse syndrome vectors with a sliding window compression architecture sized under strict decoding latency constraints to maximize energy efficiency. We implement and evaluate the design…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AR",
+    "cs.ET"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

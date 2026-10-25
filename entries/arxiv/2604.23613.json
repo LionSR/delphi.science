@@ -1,0 +1,19 @@
+{
+  "key": "2604.23613",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23613",
+  "title": "High-Probability Guarantees for Random Zeroth-Order (Stochastic) Gradient Descent",
+  "authors": [
+    "Haishan Ye"
+  ],
+  "summary": "Zeroth-order optimization aims to minimize an objective function using only function evaluations, and is therefore fundamental in black-box optimization, hyperparameter tuning, bandit learning, and adversarial machine learning. While classical zeroth-order methods are well understood in expectation, much less is known about their high-probability behavior, especially for smooth and strongly convex objectives. In this paper, we establish high-probability convergence guarantees for random zeroth-order gradient descent in both deterministic and stochastic settings. For deterministic $L$-smooth…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-26",
+  "updated": "2026-06-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

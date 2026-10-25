@@ -1,0 +1,22 @@
+{
+  "key": "2608.24330",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.24330",
+  "title": "New Traffic Flow Model with Nonlinear Anticipation and Intelligent-control Boundary: Existence, Long-time Behavior and Large-relaxation-time Limit",
+  "authors": [
+    "Zhibin Hu",
+    "Songzhi Li",
+    "Ming Mei",
+    "Zejia Wang"
+  ],
+  "summary": "In this paper, we propose a novel physical model for traffic flow incorporating nonlinear anticipation effects and an intelligent-control boundary, mathematically formulated as a damping boundary condition: \\begin{align*} \\begin{cases} u_t^τ+v_x^τ=0, & x\\in(0,1),\\; t>0,\\\\[1mm] v_t^τ+g(u_x^τ)u_x^τ=\\dfrac{f(u^τ)-v^τ}τ, & x\\in(0,1),\\; t>0,\\\\[1mm] (u^τ,v^τ)(x,0)=(u_0^τ(x),v_0^τ(x)), & x\\in(0,1),\\\\[1mm] u_x^τ(0,t)=0,\\quad u_x^τ(1,t)=-ku_t^τ(1,t), & k>0,\\; t>0, \\end{cases} \\end{align*} where $f$ and $g$ are smooth functions satisfying suitable structural assumptions, and $τ>0$ is the relaxation…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

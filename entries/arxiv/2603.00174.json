@@ -1,0 +1,22 @@
+{
+  "key": "2603.00174",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.00174",
+  "title": "Automated Discovery of Improved Constant Weight Binary Codes",
+  "authors": [
+    "Christopher D. Rosin"
+  ],
+  "summary": "A constant weight binary code consists of $n$-bit binary codewords, each with exactly $w$ bits equal to 1, such that any two codewords are at least Hamming distance $d$ apart. $A(n,d,w)$ is the maximum size of a constant weight binary code with parameters $n,d,w$. We establish improved lower bounds on $A(n,d,w)$ by constructing new larger codes, for 24 values of $(n,d,w)$ with $6 \\leq d \\leq 18$ and $18 \\leq n \\leq 35$. The improved lower bounds come from two strategies. The first is a tabu search that operates at the level of bit swaps. The second is a novel greedy heuristic that repeatedly…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "cs.AI",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-02-26",
+  "updated": "2026-02-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

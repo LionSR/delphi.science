@@ -1,0 +1,22 @@
+{
+  "key": "2602.11711",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.11711",
+  "title": "Estimation of instrument and noise parameters for inverse problem based on prior diffusion model",
+  "authors": [
+    "Jean-François Giovannelli"
+  ],
+  "summary": "This article addresses the issue of estimating observation parameters (response and error parameters) in inverse problems. The focus is on cases where regularization is introduced in a Bayesian framework and the prior is modeled by a diffusion process. In this context, the issue of posterior sampling is known to be thorny, and a recent paper proposes a notably simple and effective solution. Additionally, it opens an remarkable flexibility when it comes to estimating observation parameters. The proposed strategy enables to define an optimal estimator for both observation parameters and image…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.NA",
+    "stat.AP"
+  ],
+  "published": "2026-02-12",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

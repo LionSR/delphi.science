@@ -1,0 +1,20 @@
+{
+  "key": "2610.00939",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00939",
+  "title": "Counterexamples to $R$-superlinear convergence of cyclic steepest descent",
+  "authors": [
+    "Yu Li",
+    "Qihang Wang"
+  ],
+  "summary": "The cyclic steepest descent method computes the exact steepest descent stepsize at the start of each cycle and reuses it for a fixed number $m$ of iterations. For strictly convex quadratics in $n$ variables, it has been suggested that the method converges $R$-superlinearly whenever $m\\ge(n+1)/2$. We show that this cannot hold for every initial point, already at the threshold cycle length. For $n=m=2$ we exhibit an initial point from which the method follows the classical zigzag trajectory of steepest descent: the stepsize never changes and the error is halved at every iteration. The same…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

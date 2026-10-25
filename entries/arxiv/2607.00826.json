@@ -1,0 +1,24 @@
+{
+  "key": "2607.00826",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.00826",
+  "title": "Synthesizing Compound Pulse Gadgets for Hamiltonian Simulation on Trapped-Ion Platforms",
+  "authors": [
+    "Ria Patel",
+    "Masoud Hakimi Heris",
+    "Yuan Liu",
+    "Frank Mueller"
+  ],
+  "summary": "Standard gate-level transpilation introduces significant physical noise and overhead for high-precision quantum algorithms, such as the Quantum Singular Value Transformation (QSVT), on near-term trapped-ion hardware. Current compilers treat quantum operations as discrete units, forcing the physical control layer to execute highly fragmented laser pulses. To address this hardware-software disconnect, this work introduces a holistic pulse synthesis strategy that bypasses discrete gate-stitching to compile algorithms directly into continuous compound pulse gadgets. As a proof-of-concept, we…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AR",
+    "cs.ET"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

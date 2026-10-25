@@ -1,0 +1,20 @@
+{
+  "key": "2606.25771",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.25771",
+  "title": "Pointwise Hurst Estimation via Scale Accumulation: A Noise-Robust Approach for Rough Volatility",
+  "authors": [
+    "Jokubas Petkevicius"
+  ],
+  "summary": "We introduce an estimator for the pointwise, time-varying Hölder exponent (Hurst parameter) of a stochastic process, based on the geometry accumulation integral G_Lambda(t) = integral from Lambda to 1 of |eth_s X(t)| s^{-1} ds, where eth_s X(t) = (X(t+s)-X(t))/s is the scale derivative at resolution s. We prove consistency, noise robustness with explicit threshold Lambda* = sigma^{1/H}, and a CLT at rate (log Lambda)^{-1/2}. The estimator is pointwise in time, defined at finite resolution, and eliminates microstructure noise by scale separation. Existing estimators give a global H from…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "math.PR"
+  ],
+  "published": "2026-06-24",
+  "updated": "2026-06-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

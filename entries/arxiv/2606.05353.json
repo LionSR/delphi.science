@@ -1,0 +1,24 @@
+{
+  "key": "2606.05353",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.05353",
+  "title": "Learning Implicit Feasibility Constraints for Real-World Routing and Scheduling: Application to Log Transportation",
+  "authors": [
+    "Abdelhakim Abdellaoui",
+    "Ayoub Boufous",
+    "Issmail El Hallaoui",
+    "Loubna Benabbou",
+    "Francois Aubé",
+    "Mouloud Amazouz"
+  ],
+  "summary": "Real-world vehicle routing and scheduling problems involve complex operational rules and feasibility constraints typically formulated as mixed-integer linear programs (MILP). However, optimization tools are built around a fixed set of hard-coded constraints, while in practice this set evolves as new rules or preferences emerge, seasonally or permanently. Updating it requires modeling and operations research skills that planners rarely have, so generated plans are routinely adjusted by hand based on practical knowledge. Building on recent work that uses machine learning to recover such hidden…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-03",
+  "updated": "2026-06-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

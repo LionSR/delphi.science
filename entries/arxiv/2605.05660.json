@@ -1,0 +1,24 @@
+{
+  "key": "2605.05660",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05660",
+  "title": "From Dual Tracking to Clipping: Provably Faster Distributionally Robust Multi-Objective Optimization",
+  "authors": [
+    "Yufeng Yang",
+    "Fangning Zhuo",
+    "Ziyi Chen",
+    "Heng Huang",
+    "Yi Zhou"
+  ],
+  "summary": "Multi-objective optimization (MOO) has received growing attention in applications that require learning under multiple criteria. However, most existing MOO formulations do not explicitly account for distributional shifts in the data. We introduce distributionally robust multi-objective optimization (DR-MOO), which minimizes multiple objectives under their respective worst-case distributions. We propose Pareto-type solution concepts for DR-MOO and develop multi-gradient descent algorithms (MGDA) with provable guarantees. Leveraging a Lagrangian dual reformulation, we first design a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

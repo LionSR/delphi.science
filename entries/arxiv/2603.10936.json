@@ -1,0 +1,21 @@
+{
+  "key": "2603.10936",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.10936",
+  "title": "A Formalization of Abstract Rewriting in Agda",
+  "authors": [
+    "Sam Arkle",
+    "Andrew Polonsky"
+  ],
+  "summary": "We present a constructive formalization of Abstract Rewriting Systems (ARS) in the Agda proof assistant, focusing on standard results in term rewriting. We define a taxonomy of concepts related to termination and confluence and investigate the relationships between them and their classical counterparts. We identify, and eliminate where possible, the use of classical logic in the proofs of standard ARS results. Our analysis leads to refinements and mild generalizations of classical termination and confluence criteria. We investigate logical relationships between several notions of…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "math.LO"
+  ],
+  "published": "2026-03-11",
+  "updated": "2026-03-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

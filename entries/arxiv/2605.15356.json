@@ -1,0 +1,21 @@
+{
+  "key": "2605.15356",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.15356",
+  "title": "Proposal-Guided Greedy Surrogate Refinement for PDE-Driven High-Dimensional Rare-Event Estimation",
+  "authors": [
+    "Zhiwei Gao",
+    "George Karniadakis"
+  ],
+  "summary": "Accurate surrogate construction for PDE-driven high-dimensional rare-event simulation is challenging when performance evaluations are expensive. Since a globally accurate surrogate may require many high-fidelity evaluations, adaptive importance sampling provides a natural localization tool: its evolving proposal distribution progressively identifies the failure-relevant region. Motivated by this observation, we propose a surrogate-assisted adaptive importance sampling framework that refines the surrogate locally along the evolving proposal, rather than over the entire input space. The…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "stat.ML"
+  ],
+  "published": "2026-05-14",
+  "updated": "2026-05-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

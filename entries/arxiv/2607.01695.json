@@ -1,0 +1,20 @@
+{
+  "key": "2607.01695",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.01695",
+  "title": "A Pfaffian Proof and Generalization of a Conjecture of Sun Zhiwei",
+  "authors": [
+    "Hong-Ge Chen",
+    "Fei Liu"
+  ],
+  "summary": "Let $p$ be an odd prime, let $n=(p-1)/2$, and let $χ=(\\frac{\\cdot}{p})$, with $χ(0)=0$. For $a\\in\\mathbb F_p^\\times$ define \\[ D_a(x)=\\det_{1\\le i,j\\le n}(x+χ(i^2-aj)), \\qquad D_a^{(0)}(x)=\\det_{0\\le i,j\\le n}(x+χ(i^2-aj)). \\] We prove \\[ D_a(0)=0 \\quad\\Longleftrightarrow\\quad p\\equiv 3 \\pmod 4 \\quad\\text{and}\\quad χ(a n!)=1. \\] For $p\\equiv3\\pmod4$ we also give explicit Pfaffian-square factorizations of $D_a(x)$ and $D_a^{(0)}(x)$. Let $s_p=(-1)^{\\lfloor(p+1)/8\\rfloor}$. If $χ(a n!)=1$, then $s_pD_a(x)/x=s_pD_a^{(0)}(x)$ is a positive integer square. If $χ(a n!)=-1$, then there is a…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-07-02",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2603.00018",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.00018",
+  "title": "Computing Left Eigenvalues of Quaternion Matrices",
+  "authors": [
+    "Michael Sebek"
+  ],
+  "summary": "We present a practical Newton-based method for computing left eigenvalues of quaternion matrices. It uses only standard real/complex linear-algebra kernels via embeddings and applies to matrices of any size. Extensive tests on literature examples and benchmark ensembles, together with a compact MATLAB reference implementation, demonstrate reproducible, certificate-based computations up to size 64x64, including the detection of multiple spherical components and non-generic phenomena such as more than n isolated left eigenvalues and left-spectrum deficiency.",
+  "domain": "math.RA",
+  "tags": [
+    "math.RA"
+  ],
+  "published": "2026-02-02",
+  "updated": "2026-02-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

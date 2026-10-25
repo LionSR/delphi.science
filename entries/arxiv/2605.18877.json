@@ -1,0 +1,27 @@
+{
+  "key": "2605.18877",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.18877",
+  "title": "Logical Resource Estimation for Quantum State Preparation with Compilation",
+  "authors": [
+    "Diyi Liu",
+    "Hanyu Wang",
+    "Shuchen Zhu",
+    "Jason Cong",
+    "Wibe A. de Jong",
+    "Di Fang",
+    "Zhen Huang",
+    "Costin Iancu",
+    "Chao Yang"
+  ],
+  "summary": "Quantum state preparation is a fundamental primitive in quantum algorithms for encoding classical data into quantum amplitudes. We compare the cost of preparing general $n$-qubit states with real amplitudes using two common paradigms: rotation-based methods, based on controlled rotations, and sampling-based methods, based on a structured representation of the target state. Although these approaches are often theoretically compared using CNOT count and $T$-count, their relative performance in total gate count remains less well understood practically. We compare representative rotation-based…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-15",
+  "updated": "2026-05-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

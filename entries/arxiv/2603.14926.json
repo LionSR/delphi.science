@@ -1,0 +1,20 @@
+{
+  "key": "2603.14926",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.14926",
+  "title": "Acceleration of multi-component multiple-precision arithmetic with branch-free algorithms and SIMD vectorization",
+  "authors": [
+    "Tomonori Kouya"
+  ],
+  "summary": "Multiple-precision floating-point branch-free algorithms can significantly accelerate multi-component arithmetic implemented by combining hardware-based binary64 and binary32, particularly for triple- and quadruple-precision computations. In this study, we achieved benchmark results on x86 and ARM CPU platforms to quantify the accelerations achieved in linear computations and polynomial evaluation by integrating these algorithms.",
+  "domain": "cs.MS",
+  "tags": [
+    "cs.MS",
+    "math.NA"
+  ],
+  "published": "2026-03-16",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

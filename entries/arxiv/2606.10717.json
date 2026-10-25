@@ -1,0 +1,21 @@
+{
+  "key": "2606.10717",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.10717",
+  "title": "Max-Policy Iteration, Revisited",
+  "authors": [
+    "David Monniaux",
+    "Helmut Seidl"
+  ],
+  "summary": "Max-policy iteration is an approach to computing precise numeric program invariants by successive attempts at resolving maximum operators and reduction to mathematical optimization. Mathematical optimization, though, may be expensive. Here, we show, for max-policy iteration on systems of equations over integers as well as over floating point numbers, that mathematical optimization can be replaced by plain value iteration -- which is still guaranteed to terminate. As an application, a precise bound analysis for integer or floating point variables is obtained, avoiding widening operators…",
+  "domain": "cs.PL",
+  "tags": [
+    "cs.PL",
+    "math.OC"
+  ],
+  "published": "2026-06-09",
+  "updated": "2026-06-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

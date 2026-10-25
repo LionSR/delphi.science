@@ -1,0 +1,19 @@
+{
+  "key": "2607.08980",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08980",
+  "title": "A modified static PDE-based approach for multidimensional extrapolation",
+  "authors": [
+    "Hwi Lee"
+  ],
+  "summary": "We present a modified static PDE-based extrapolation method that builds on the approach of Aslam (2014 SIAM J. Sci. Comp) for extending smooth fields across interfaces implicitly defined as zero level sets. Our approach introduces the idea of relaxed upwinding finite differences as a key modification within the fast sweeping method. Unlike existing approaches, we require function values and their normal derivatives \\emph{only} on the first grid layer inside the domain adjacent to the boundary, thereby improving computational efficiency and flexibility. To further improve accuracy, we…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-09",
+  "updated": "2026-07-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

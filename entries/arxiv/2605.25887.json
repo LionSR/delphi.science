@@ -1,0 +1,22 @@
+{
+  "key": "2605.25887",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.25887",
+  "title": "Well-Balanced Schemes for Hyperbolic Kinetic Relaxation",
+  "authors": [
+    "León Ávila",
+    "Manuel Castro",
+    "Victor Michel-Dansac",
+    "José M. Gallardo"
+  ],
+  "summary": "This work presents a novel family of well-balanced numerical schemes for hyperbolic systems of balance laws based on the kinetic relaxation approach. The method begins by transforming the original non-linear system into a linearized kinetic system with an increased number of variables. In this framework, non-linearities are shifted to the source term, and the connection to the macroscopic variables is maintained via a projection operator related to the Maxwellian equilibrium states. These relaxed systems are typically solved using splitting techniques, where the evolution is decomposed into…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-25",
+  "updated": "2026-05-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

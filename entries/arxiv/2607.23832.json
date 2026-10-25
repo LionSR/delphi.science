@@ -1,0 +1,22 @@
+{
+  "key": "2607.23832",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.23832",
+  "title": "LiFT-MPC: Language-in-the-Loop Feedback Tuning of Cost Previews for MPC",
+  "authors": [
+    "Xinyi Yi",
+    "Ioannis Lestas"
+  ],
+  "summary": "In model predictive control (MPC) with time-varying objectives, predicted signals need to be often incorporated in the cost function, such as prices in energy system operation. These are, however, often difficult to predict from the historical trajectory of these signals alone, as they may depend on other contextual events. We propose LiFT-MPC, an MPC framework that integrates a LiFT (Language-in-the-Loop Feedback Tuning) correction scheme to refine such predictions within the MPC loop. The prediction mechanism is updated online via a control-performance loss function, and we establish a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY",
+    "stat.AP"
+  ],
+  "published": "2026-07-26",
+  "updated": "2026-07-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

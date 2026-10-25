@@ -1,0 +1,23 @@
+{
+  "key": "2603.27580",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.27580",
+  "title": "Structure-Preserving Learning of Nonholonomic Dynamics",
+  "authors": [
+    "Thomas Beckers",
+    "Anthony Bloch",
+    "Leonardo Colombo"
+  ],
+  "summary": "Data-driven modeling is playing an increasing role in robotics and control, yet standard learning methods typically ignore the geometric structure of nonholonomic systems. As a consequence, the learned dynamics may violate the nonholonomic constraints and produce physically inconsistent motions. In this paper, we introduce a structure-preserving Gaussian process (GP) framework for learning nonholonomic dynamics. Our main ingredient is a nonholonomic matrix-valued kernel that incorporates the constraint distribution directly into the GP prior. This construction ensures that the learned vector…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math-ph",
+    "math.DS"
+  ],
+  "published": "2026-03-29",
+  "updated": "2026-03-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

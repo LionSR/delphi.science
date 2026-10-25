@@ -1,0 +1,20 @@
+{
+  "key": "2605.08792",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.08792",
+  "title": "A Controlled Study of Memory Hierarchy Transitions in Quantum Circuit Simulation on Apple M4 Pro Unified Memory Architecture",
+  "authors": [
+    "Gyan Pratipat"
+  ],
+  "summary": "State-vector quantum circuit simulation is memory-bandwidth bound, yet the interaction between memory hierarchy, access pattern, and hardware parallelism remains incompletely characterized. We address this using the Apple M4 Pro Unified Memory Architecture (UMA), where CPU and GPU share identical physical LPDDR5X DRAM ($\\sim$224 GB/s STREAM bandwidth for both), eliminating memory-technology and interconnect confounds. Using a thermally isolated, multi-trial methodology across 11 simulation backends on GHZ and QFT circuits from 3 to 30 qubits, we make three central contributions. First, a…",
+  "domain": "cs.PF",
+  "tags": [
+    "cs.PF",
+    "quant-ph"
+  ],
+  "published": "2026-05-09",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

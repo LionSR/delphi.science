@@ -1,0 +1,22 @@
+{
+  "key": "2601.17374",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.17374",
+  "title": "Error Analysis of Bayesian Inverse Problems with Generative Priors",
+  "authors": [
+    "Bamdad Hosseini",
+    "Ziqi Huang"
+  ],
+  "summary": "Data-driven methods for the solution of inverse problems have become widely popular in recent years thanks to the rise of machine learning techniques. A popular approach concerns the training of a generative model on additional data to learn a bespoke prior for the problem at hand. In this article we present an analysis for such problems by presenting quantitative error bounds for minimum Wasserstein-2 generative models for the prior. We show that under some assumptions, the error in the posterior due to the generative prior will inherit the same rate as the prior with respect to the…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-01-24",
+  "updated": "2026-03-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

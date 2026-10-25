@@ -1,0 +1,21 @@
+{
+  "key": "2606.06165",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.06165",
+  "title": "Young Measure Based Quantum Linear Programming Algorithms for Nonlinear/Stochastic Multiscale Partial Differential Equations and Homogenization",
+  "authors": [
+    "Siqi Chen",
+    "Shi Jin",
+    "Lei Zhang"
+  ],
+  "summary": "We study quantum algorithms for nonlinear and stochastic homogenization via a Young-measure based linear programming (LP) formulation, which lifts the nonlinear problem to a linear one in higher dimensions by treating the microscale, the gradient, and possible random variables as independent variables, thereby capturing effective macroscopic quantities without directly resolving fine-scale oscillations. The resulting LP is large but structured, and its high-dimensional nature creates regimes in which quantum LP solvers outperform direct classical solvers: in the deterministic setting,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-04",
+  "updated": "2026-06-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

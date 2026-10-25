@@ -1,0 +1,23 @@
+{
+  "key": "2601.19057",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.19057",
+  "title": "Time-series based quantum state discrimination",
+  "authors": [
+    "Samuel Jung",
+    "Neel Vora",
+    "Akel Hashim",
+    "Yilun Xu",
+    "Gang Huang"
+  ],
+  "summary": "Accurate quantum state readout is crucial for error correction and algorithms, but measurement errors are detrimental. Readout fidelity is typically limited by a poor signal-to-noise ratio (SNR) and energy relaxation ($T_1$ decay), a significant problem for superconducting qubits. While most approaches classify results using clustering algorithms on integrated readout signals, these methods cannot distinguish a qubit that was initially in the ground state from one that decayed to it during measurement. We instead propose using machine learning (ML) on the raw, non-integrated analog signal.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-27",
+  "updated": "2026-01-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

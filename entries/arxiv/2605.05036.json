@@ -1,0 +1,20 @@
+{
+  "key": "2605.05036",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05036",
+  "title": "Block Permutation Routing on Ramanujan Hypergraphs for Fault-Tolerant Quantum Computing",
+  "authors": [
+    "Joshua M. Courtney"
+  ],
+  "summary": "We analyze permutation routing of rigid blocks representing surface code patches of $d_C^2$ atoms on a reconfigurable lattice with hypergraph transformations. For a hypergraph $H$, code distance $d_C$, $s=d_C^2$, number of blocks $N_L$, and guard distance $g$, we show the block routing number $\\mathrm{rt}_B(H, s, g) = Θ(d_C \\log N_L)$. A spectral analysis of the quotient graph $Q(G_{\\mathrm{cl}}(H), B)$ (blocks as supervertices) shows that the spectral ratio $β_Q < 1$ is preserved in the high-connectivity regime. Negative association of block permutations and congestion bounds are used for…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

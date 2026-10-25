@@ -1,0 +1,25 @@
+{
+  "key": "2610.16732",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16732",
+  "title": "GROMM: Generative Risk-neutral Option Market Models",
+  "authors": [
+    "Magnus Wiese",
+    "Hans Buehler",
+    "Blanka Horvath"
+  ],
+  "summary": "We present a statically and dynamically arbitrage-free European option market model with smooth interpolation between option prices, based on the SANOS framework, and prove that its dynamics admit a unique strong solution. In spirit, it is a stochastic model for local volatility when the latter is used as a representation of a European option price surface, not as a pricing model. We illustrate the strength of our approach on S&P Index Option data from January 2022 to August 2025. We show that the model's initial state fits within bid/ask for more than 95% of relevant market option prices.…",
+  "domain": "q-fin.MF",
+  "tags": [
+    "q-fin.MF",
+    "math.PR",
+    "q-fin.CP",
+    "q-fin.PR",
+    "q-fin.ST"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

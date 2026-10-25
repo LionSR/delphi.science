@@ -1,0 +1,24 @@
+{
+  "key": "2610.00811",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00811",
+  "title": "A relaxation system for the low-Mach limit of kinetic equations: Stability and higher order asymptotic preserving scheme",
+  "authors": [
+    "Giacomo Dimarco",
+    "Axel Klar",
+    "Theresa Köfler",
+    "Lorenzo Pareschi",
+    "Sudarshan Tiwari",
+    "Yizhou Zhou"
+  ],
+  "summary": "This work introduces a hyperbolic relaxation system designed for the simulation of kinetic equations in the low-Mach number limit. The methodology is built upon a micro-macro decomposition of the scaled BGK model, which reformulates the kinetic distribution function into a coupled system consisting of a macroscopic equilibrium part and a microscopic non-equilibrium remainder. By projecting the microscopic deviations onto a set of orthogonal polynomials, we derive a closed moment relaxation system. The resulting system is a version of Grad's 13 moment system with a linear hyperbolic part and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

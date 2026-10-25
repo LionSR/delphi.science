@@ -1,0 +1,20 @@
+{
+  "key": "2603.14174",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.14174",
+  "title": "Spatial covariance of KPZ from flat initial profile",
+  "authors": [
+    "Le Chen",
+    "Juan J. Jiménez"
+  ],
+  "summary": "We study the fixed-time spatial covariance of the KPZ equation with flat initial profile. Using Malliavin calculus and a Clark-Ocone representation, we show that as $|x|\\to\\infty$, $\\mathrm{Cov}[h(t,x),h(t,0)]$ is governed by a boundary-layer regime near the initial time and satisfies $\\mathrm{Cov}[h(t,x),h(t,0)] \\sim κ(t) \\int_0^t p_{2r}(x) dr = \\frac{2κ(t)}{\\sqrtπ}t^{3/2}|x|^{-2}\\exp\\left(-\\frac{x^2}{4t}\\right),$ as $|x|\\to\\infty$, where $κ(t) = \\big(\\mathbb{E}[Z(t,0)^{-1}]\\big)^2$, $Z$ is the flat stochastic heat equation solution, and $p_t$ is the one-dimensional heat kernel. In sharp…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-03-15",
+  "updated": "2026-03-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2606.23979",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.23979",
+  "title": "Traveling profiles and control cost for a PDE describing the evolution of invasive species",
+  "authors": [
+    "Stefano Bianchini",
+    "Chiara Trifone"
+  ],
+  "summary": "We develop a detailed analysis of optimal traveling waves $U(t,x) = U(x - βt)$ for a model of invasive-species control proposed in [Bressan, Chiri, and Salehi, Math. Models Methods Appl. Sci., 2022] : the relative density $U \\in [0,1]$ of the invasive species satisfies the following reaction-diffusion equation with a positive control \\begin{equation} \\label{Equa:PDE_abstract} U_t = U_{xx} + f(U) - \\tilde α(t,x) U, \\quad U \\in [0,1], \\ \\tilde α\\geq 0. \\end{equation} The control $\\tilde α(t,x)$ represents the fraction of the population removed at $(t,x)$: the minimal control effort $E(β,f)$…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-22",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

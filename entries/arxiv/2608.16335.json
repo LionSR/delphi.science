@@ -1,0 +1,21 @@
+{
+  "key": "2608.16335",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.16335",
+  "title": "Readiness Barrier Functions: Forward-Invariant Control Authority for Overactuated Multirotor Allocation",
+  "authors": [
+    "Giuseppe Silano"
+  ],
+  "summary": "Allocation schemes that greedily maximize a readiness metric over the actuator fiber bundle of an overactuated multirotor produce commands that jump between disconnected optimal strata, demanding actuator rates no motor can deliver; effort-minimizing schemes are continuous but cannot guarantee that wrench-rate authority stays above any certified level. We reconcile the two by treating authority as a forward-invariant quantity: a control barrier function on the log-determinant of the drag-aware actuator-authority co-metric, enforced at torque level by a quadratic program in the allocation…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

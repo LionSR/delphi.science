@@ -1,0 +1,24 @@
+{
+  "key": "2606.11971",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.11971",
+  "title": "Cooperative Switched Formation Control of Autonomous Vehicles: An Event-triggered Approach to Input Saturation and Time-delay Challenges",
+  "authors": [
+    "Ziming Wang",
+    "Guanxuan Jiang",
+    "Yihuai Zhang",
+    "Karl H. Johansson",
+    "Apostolos I. Rikos"
+  ],
+  "summary": "This paper presents a collaborative adaptive formation control framework for autonomous vehicles (AVs), that explicitly handles system uncertainties, input saturation, and communication delays. To overcome the inherent physical torque limits of steering and braking actuators, an input saturation compensation mechanism is introduced to render nonlinearities tractable and improve control reliability. Additionally, a delay-compensating auxiliary system is designed to mitigate the effects of communication delays and reduce tracking errors. Our framework incorporates a dynamic-threshold…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-06-10",
+  "updated": "2026-06-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

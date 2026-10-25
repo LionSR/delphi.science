@@ -1,0 +1,20 @@
+{
+  "key": "2605.25366",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.25366",
+  "title": "A Median Version of Hardy's Inequality",
+  "authors": [
+    "Gangsong Leng"
+  ],
+  "summary": "Motivated by a discrete inequality problem proposed by Duanyang Zhang as Problem 6 of the 2022 Spring NSMO, we prove a median version of Hardy's inequality. For a nonnegative function $f\\in L^p(0,\\infty)$, $p>1$, let $A(t)$ be the average of $f$ over $(0,t)$, and let $M(t)$ be the lower median of $f$ over $(0,t)$. We show that \\[ \\int_0^\\infty |M(t)-A(t)|^p\\,dt \\leq 2^{1-p}\\left(\\frac p{p-1}\\right)^p \\int_0^\\infty f(t)^p\\,dt, \\] and that the constant is best possible. The proof is based on a pointwise rearrangement estimate coming from the half-measure property of the median, followed by the…",
+  "domain": "math.MG",
+  "tags": [
+    "math.MG",
+    "math.FA"
+  ],
+  "published": "2026-05-25",
+  "updated": "2026-05-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,36 @@
+{
+  "key": "2610.00280",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00280v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00280v1",
+  "title": "An elliptic curve of rank $\\geq 34$ and root number $-1$ over a quadratic field",
+  "authors": [
+    "Dylan T. Costa",
+    "Alvaro Lozano-Robledo"
+  ],
+  "summary": "In this article, we find a quadratic twist over $\\mathbb{Q}$ of rank $\\geq 2$ (and $\\geq 3$ assuming parity) of an elliptic curve $E/\\mathbb{Q}$ of rank $\\geq 32$, recently found by Elkies, Klagsbrun, and Li. We use a family of quadratic twists of rank $\\geq 2$ over $\\mathbb{Q}(t)$ constructed by Mestre to search for twists $E^D$ with root number $-1$, computing all root numbers without factoring the (very large) twisting parameter $D$. As a result, we exhibit an explicit integer $D$, with $411$ digits (a square times an integer with $381$ digits), such that $E^D$ has root number $-1$ and…",
+  "domain": "math.NT",
+  "tags": [
+    "msc:11G05",
+    "msc:14H52",
+    "elliptic curve",
+    "parity conjecture",
+    "quadratic field",
+    "rank"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "version": 1,
+  "ai_models": [
+    "Magma",
+    "Claude Opus"
+  ],
+  "authorship": "mixed",
+  "human_understanding": "all",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

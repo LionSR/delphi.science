@@ -1,0 +1,26 @@
+{
+  "key": "2610.22903",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.22903",
+  "title": "PINN-LPCDD: Physics-Informed Neural Network with Learnable and Physically Consistent Domain Decomposition for Compressible Multi-Medium Flows",
+  "authors": [
+    "Weiheng Zeng",
+    "Hao Wang",
+    "Jiaxin Zhu",
+    "Kun Wang",
+    "Tiegang Liu",
+    "Chengliang Feng"
+  ],
+  "summary": "The physics-informed neural network (PINN) faces significant challenges when solving compressible multi-medium flows, including the inability to locate interface positions, poor approximation of discontinuities, and difficulty in handling high-pressure-ratio problems between media with large stiffness differences. To address these issues, we propose PINN with Learnable and Physically Consistent Domain Decomposition (PINN-LPCDD), a framework that incorporates the sharp interface method (SIM) into PINNs for solving compressible multi-medium flows. Firstly, we design separate sub-networks for…",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "math.NA",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2604.23225",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23225",
+  "title": "A Layer Separation Optimization Framework for Cross-Entropy Training in Deep Learning",
+  "authors": [
+    "Yaru Liu",
+    "Michael K. Ng",
+    "Yiqi Gu"
+  ],
+  "summary": "This paper investigates the deep learning optimization problem with softmax cross-entropy loss. We propose a layer separation strategy to alleviate the strong nonconvexity encountered during training deep networks. For cross-entropy models with fully connected and convolutional neural networks, we introduce auxiliary variables associated with hidden layer outputs and construct corresponding layer separation models, which decompose the original deeply nested optimization problem into a sequence of more manageable subproblems. We also conduct theoretical analyses, proving that the new layer…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-04-25",
+  "updated": "2026-04-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

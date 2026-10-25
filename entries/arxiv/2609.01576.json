@@ -1,0 +1,22 @@
+{
+  "key": "2609.01576",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.01576",
+  "title": "Simultaneous Pointwise Majorization for Mixed Tail Processes with Applications in Gaussian Chaos and Ergodic Diffusions",
+  "authors": [
+    "Haichen Hu",
+    "David Simchi-Levi"
+  ],
+  "summary": "Classical chaining controls an indexed stochastic process through a single worst-case bound and can therefore obscure substantial variation across the index set. We develop the first simultaneous pointwise majorization theory for Banach-valued processes with finite-metric mixed-tail increments. Suppose that an anchored process $(Z_t)_{t\\in T}$ satisfies, for some integer $m\\ge1$, pseudo-metrics $d_1,\\ldots,d_m$, and orders $α_1,\\ldots,α_m>0$, \\begin{align*} \\mathbb{P}\\{\\|Z_t-Z_s\\|>\\sum_{j=1}^m u^{1/α_j}d_j(s,t)\\}\\le 2e^{-u},s,t\\in T. \\end{align*} For ambient priors $μ_1,\\ldots,μ_m$, let…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-09-01",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

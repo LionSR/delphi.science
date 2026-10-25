@@ -1,0 +1,23 @@
+{
+  "key": "2605.20619",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.20619",
+  "title": "SURF: Steering the Scalarization Weight to Uniformly Traverse the Pareto Front",
+  "authors": [
+    "Liuyuan Jiang",
+    "Chentong Huang",
+    "Lisha Chen"
+  ],
+  "summary": "Scalarization is widely used in multi-objective optimization owing to its simplicity and scalability. In many applications, the goal is to generate solutions that represent diverse user preferences, ideally with uniform coverage of the Pareto front (PF). However, uniformly sampling scalarization weights usually induces non-uniform coverage of the PF. We explain this mismatch through the geometry of the scalarization path. As the weight varies, the corresponding solutions traverse the PF at a generally nonuniform speed. Integrating this speed gives cumulative arc length. After normalization…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-05-20",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

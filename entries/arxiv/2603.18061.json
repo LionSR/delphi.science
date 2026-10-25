@@ -1,0 +1,20 @@
+{
+  "key": "2603.18061",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.18061",
+  "title": "SIREN Residual Error as a Regularity Diagnostic for Navier-Stokes Equations",
+  "authors": [
+    "Jason Burton"
+  ],
+  "summary": "We introduce a method for detecting regularity loss in solutions to the three-dimensional Navier-Stokes equations using the approximation error of Sinusoidal Representation Networks (SIRENs). SIRENs use sin() activations, producing C-infinity outputs that cannot represent non-smooth features. By classical spectral approximation theory, the SIREN error is bounded by O(N^{-s}) where s is the local Sobolev regularity. At a singularity (s to 0), the error is O(1) and localizes via the Gibbs phenomenon. We decompose the velocity field into a cheap analytical baseline (advection-diffusion) and a…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math.AP"
+  ],
+  "published": "2026-03-18",
+  "updated": "2026-03-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

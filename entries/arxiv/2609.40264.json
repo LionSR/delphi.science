@@ -1,0 +1,27 @@
+{
+  "key": "2609.40264",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.40264",
+  "title": "Two-Stage Quantum-Classical Distribution Network Reconfiguration via Cycle-Edge Encoding",
+  "authors": [
+    "Nowar Alashkar",
+    "Cade Kennedy",
+    "Phillip C. Lotshaw",
+    "Shaked Regev",
+    "Miguel Angel Lopez-Ruiz",
+    "Ananth Kaushik",
+    "Paul Smith",
+    "Claudio Girotto",
+    "Martin Roetteler"
+  ],
+  "summary": "Distribution network reconfiguration (DNR) is a combinatorial optimization problem that seeks a low-loss network topology subject to topological and electrical operating constraints. In this work, we propose a two-stage quantum-classical method for DNR. First, an iterative linear-ramp Quantum Alternating Operator Ansatz (LR-QAOA) searches topologically feasible subspaces constructed using a novel cycle-edge encoding. The encoding guarantees that every represented configuration is a spanning tree while allowing the size and coverage of each subspace to be adjusted to the available qubit…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

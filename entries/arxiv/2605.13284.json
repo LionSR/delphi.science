@@ -1,0 +1,26 @@
+{
+  "key": "2605.13284",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.13284",
+  "title": "Learning Perturbations to Extrapolate Your LLM",
+  "authors": [
+    "Zetai Cen",
+    "Chenfei Gu",
+    "Jin Zhu",
+    "Ting Li",
+    "Yunxiao Chen",
+    "Chengchun Shi"
+  ],
+  "summary": "Recent advancements in large language models demonstrate that injecting perturbations can substantially enhance extrapolation performance. However, current approaches often rely on discrete perturbations with fixed designs, which limits their flexibility. In this work, we propose a framework where token prefixes are perturbed by a learnable transformation of a continuous latent vector within an embedding space. To overcome the challenge of an intractable marginal likelihood, we derive unbiased estimating equations for model parameters and optimize them via stochastic gradient descent. We…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

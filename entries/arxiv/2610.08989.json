@@ -1,0 +1,28 @@
+{
+  "key": "2610.08989",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08989",
+  "title": "LASER: Latent Space Adjoint Matching for Support-Constrained Entropy-Regularized Offline RL",
+  "authors": [
+    "Songyuan Zhang",
+    "Oswin So",
+    "Eric Yang Yu",
+    "Matthew Cleaveland",
+    "Peter Crowley-Dolen",
+    "Chuchu Fan"
+  ],
+  "summary": "While offline reinforcement learning (RL) enables policy optimization from static datasets without costly online interaction, it remains bottlenecked by the risk of executing out-of-distribution (OOD) actions. Recent approaches mitigate this by learning a behavior-cloning policy through flow matching and then performing RL within its constrained latent space. However, naively optimizing the latent policy can easily cause the policy to collapse into a brittle mode or exploit sharp artifacts of the learned critic. In this work, we find that entropy regularization is essential in latent-space…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "cs.RO",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

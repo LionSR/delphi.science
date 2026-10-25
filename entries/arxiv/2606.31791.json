@@ -1,0 +1,20 @@
+{
+  "key": "2606.31791",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.31791",
+  "title": "Context-Verified, Error-Budget-Aware Decomposition Selection for Toffoli Networks",
+  "authors": [
+    "Karol Bartkiewicz",
+    "Patrycja Tulewicz"
+  ],
+  "summary": "Two-qubit-gate error dominates the failure budget of near-term quantum circuits, so the decomposition chosen for each Toffoli (CCX) gate should minimize hardware two-qubit infidelity, not gate count. The cheapest decompositions - relative-phase and approximate Toffolis - are only correct in context: their residual phase or bounded error must be cancelled or absorbed downstream. We present the first compiler pass that selects a per-Toffoli decomposition to minimize a two-qubit-infidelity error budget. It admits each context-dependent decomposition only when an exact, instance-specific…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-30",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

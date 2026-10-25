@@ -1,0 +1,20 @@
+{
+  "key": "2605.21162",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.21162",
+  "title": "A Least-Squares Weak Galerkin Finite Element Scheme for Cauchy Problems in Helmholtz",
+  "authors": [
+    "Chunmei Wang",
+    "Shangyou Zhang"
+  ],
+  "summary": "This paper introduces and rigorously analyzes a least-squares weak Galerkin (LS-WG) finite element method for the severely ill-posed Cauchy problem associated with the Helmholtz equation. By utilizing a weak Laplacian operator defined on a space of discontinuous functions, the proposed framework facilitates the seamless treatment of complex boundary conditions and internal interfaces. We emphasize the geometric flexibility of the LS-WG scheme on general polygonal and polyhedral partitions. Furthermore, we prove the uniqueness of the numerical solution and derive optimal-order error estimates…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-20",
+  "updated": "2026-05-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

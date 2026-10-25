@@ -1,0 +1,22 @@
+{
+  "key": "2607.17495",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.17495",
+  "title": "CADMM-Prox: A Bi-level Consensus ADMM for Non-smooth Non-convex Distributed Consensus Optimization",
+  "authors": [
+    "Xu Du",
+    "Shuting Wu",
+    "Karl H. Johansson",
+    "Apostolos I. Rikos"
+  ],
+  "summary": "Non-smooth and non-convex optimization problems are pervasive in machine learning, control, and signal processing, due to the need for sparse solutions and the inherently non-convex nature of many objective functions. In this paper, we study non-smooth and non-convex distributed optimization problems. We propose a novel bi-level Consensus Alternating Direction Method of Multipliers (ADMM) algorithm, termed CADMM-Prox. The proposed algorithm integrates classical Consensus ADMM with a proximal mechanism by introducing a sufficiently large proximal term associated with an outer-level variable.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-20",
+  "updated": "2026-07-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

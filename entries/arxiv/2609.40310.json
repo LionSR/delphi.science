@@ -1,0 +1,22 @@
+{
+  "key": "2609.40310",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.40310",
+  "title": "Planted Cliques and Quantum Symmetry-Adapted Measurements",
+  "authors": [
+    "Vojtech Havlicek",
+    "Jordan Docter",
+    "Subhash Khot"
+  ],
+  "summary": "We study how quantum encodings and symmetry-adapted measurements preserve information for planted-clique detection from one classical graph. For $k=\\lfloor n^{1/2-\\varepsilon}\\rfloor$, with fixed $0<\\varepsilon<1/2$, detection is statistically possible but conjectured hard for polynomial-time classical algorithms. For a compact binary phase encoding, we prove that constant-advantage detection requires $Ω(n^{1+2\\varepsilon}\\ln^2 n)$ copies of the phase state of the same graph, even under arbitrary joint measurements. In the large-copy limit, the optimal decision rule thresholds the total…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

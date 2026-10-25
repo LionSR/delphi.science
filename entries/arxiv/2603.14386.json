@@ -1,0 +1,23 @@
+{
+  "key": "2603.14386",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.14386",
+  "title": "Data-Enabled Policy and Value Iteration for Continuous-Time Linear Quadratic Output Feedback Control",
+  "authors": [
+    "Jun Xie",
+    "Yuan-Hua Ni",
+    "Yiqin Yang",
+    "Bo Xu"
+  ],
+  "summary": "This paper proposes efficient policy iteration and value iteration algorithms for the continuous-time linear quadratic regulator problem with unmeasurable states and unknown system dynamics, from the perspective of direct data-driven control. Specifically, by re-examining the data characteristics of input-output filtered vectors and introducing QR decomposition, an improved substitute state construction method is presented that further eliminates redundant information, ensures a full row rank data matrix, and enables a complete parameterized representation of the feedback controller.…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-03-15",
+  "updated": "2026-03-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

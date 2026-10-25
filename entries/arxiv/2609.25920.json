@@ -1,0 +1,23 @@
+{
+  "key": "2609.25920",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.25920",
+  "title": "Energy-optimal predictive control of discrete-time port-Hamiltonian systems: Closed-loop practical stability",
+  "authors": [
+    "Vaibhav Kumar Singh",
+    "Manuel Schaller",
+    "Timm Faulwasser",
+    "Karl Worthmann"
+  ],
+  "summary": "We study a dissipativity-based model predictive control (MPC) scheme for energy-optimal constrained output stabilization of a discrete-time nonlinear SISO port-Hamiltonian system described by difference and differential representation. For the optimal control problem to be solved in each MPC step, we establish a measure turnpike behavior. The turnpike set in our work is obtained from the underlying port-Hamiltonian structure without assuming existence of steady-states or periodic orbits. In particular, unlike existing results which typically establish the turnpike property w.r.t. a…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-09-22",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

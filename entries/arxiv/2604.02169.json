@@ -1,0 +1,19 @@
+{
+  "key": "2604.02169",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.02169",
+  "title": "Universal Z-only Correction for Distributing Arbitrary Graph States in Quantum Networks",
+  "authors": [
+    "Soumyojyoti Dutta"
+  ],
+  "summary": "Distributing arbitrary graph states across quantum networks is a central challenge for modular quantum computing and measurement-based quantum communication. I present a protocol converting |E| elementary two-qubit resource states -- one per edge of the target graph G = (V,E) -- into the distributed graph state |G>, using only operations local to each party (single-qubit gates, CZ gates between a party's own data and resource qubits, single-qubit measurements) and classical communication, and reaching arbitrary topologies, not just the GHZ class of prior walk-based schemes. The central…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-02",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

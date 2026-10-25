@@ -1,0 +1,20 @@
+{
+  "key": "2605.14320",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.14320",
+  "title": "Adaptive Metrics for Norm-Minimization-Based Outer Approximation in Convex Vector Optimization",
+  "authors": [
+    "Mohammed Alshahrani"
+  ],
+  "summary": "We develop an adaptive-metric framework for norm-minimization-based outer approximation algorithms in bounded convex vector optimization. The key idea is to let the scalarization metric vary across iterations while measuring approximation error in a fixed Euclidean norm. This enables the algorithm to exploit problem geometry dynamically. Our approach rests on two theoretical foundations. First, we prove that the improved Euclidean convergence rate $O(k^{2/(1-q)})$ -- previously known only for the standard $\\ell_2$-norm -- extends to all fixed inner-product norms. Second, we establish a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-05-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

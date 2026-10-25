@@ -1,0 +1,22 @@
+{
+  "key": "2605.16752",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.16752",
+  "title": "Data-Driven Linear Quadratic Control Using Output-Feedback via Non-Minimal Realization",
+  "authors": [
+    "Weijian Li",
+    "Bowen Yi",
+    "Panos J. Antsaklis",
+    "Hai Lin"
+  ],
+  "summary": "In this paper, we investigate a continuous-time linear quadratic control problem for systems with unknown matrices, where only input-output data are available. We propose an output-feedback learning framework based on a canonical nonminimal realization constructed through Kreisselmeier's adaptive filter. The filter admits an observer interpretation, which leads to an augmented system that preserves the input-output response of the realization and provides accessible state trajectories. We show that the optimal gain of this augmented system explicitly recovers the optimal gain associated with…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-16",
+  "updated": "2026-05-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

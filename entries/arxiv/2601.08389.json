@@ -1,0 +1,25 @@
+{
+  "key": "2601.08389",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.08389",
+  "title": "A dataflow programming framework for linear optical distributed quantum computing",
+  "authors": [
+    "Giovanni de Felice",
+    "Boldizsár Poór",
+    "Cole Comfort",
+    "Lia Yeh",
+    "Mateusz Kupper",
+    "William Cashman",
+    "Bob Coecke"
+  ],
+  "summary": "Photonic systems offer a promising platform for interconnecting quantum processors and enabling scalable, networked architectures. Designing and verifying such architectures requires a unified formalism that integrates linear algebraic reasoning with probabilistic and control-flow structures. In this work, we introduce a graphical framework for distributed quantum computing that brings together linear optics, the ZX-calculus, and dataflow programming. Our language supports the formal analysis and optimization of distributed protocols involving both qubits and photonic modes, with explicit…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-13",
+  "updated": "2026-01-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

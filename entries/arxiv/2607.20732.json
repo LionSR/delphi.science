@@ -1,0 +1,21 @@
+{
+  "key": "2607.20732",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.20732",
+  "title": "Algorithm librla: A library of randomized linear algebra routines",
+  "authors": [
+    "Adrianna Gillman",
+    "Zydrunas Gimbutas"
+  ],
+  "summary": "The library \\texttt{librla} is a randomized linear algebra library that is specifically designed for the intermediate-sized matrices (of dimension up to roughly 10,000) that arise in applications such as reduced order modeling, fast direct solvers, least squares solves and, in some settings, data compression. \\texttt{librla} is the first software package that is both stable and efficient in several high-level languages: MATLAB, Python and Julia. It also provides increased functionality over existing software. Specifically, it allows the user to choose to create a factorization based on a…",
+  "domain": "cs.MS",
+  "tags": [
+    "cs.MS",
+    "math.NA"
+  ],
+  "published": "2026-07-22",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2601.12383",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.12383",
+  "title": "An efficient penalty decomposition algorithm for minimization over sparse symmetric sets",
+  "authors": [
+    "Ahmad Mousavi",
+    "Morteza Kimiaei",
+    "Saman Babaie-Kafaki",
+    "Vyacheslav Kungurtsev"
+  ],
+  "summary": "This paper proposes an improved quasi-Newton penalty decomposition algorithm for the minimization of continuously differentiable functions, possibly nonconvex, over sparse symmetric sets. The method solves a sequence of penalty subproblems approximately via a two-block decomposition scheme: the first subproblem admits a closed-form solution without sparsity constraints, while the second subproblem is handled through an efficient sparse projection over the symmetric feasible set. Under a new assumption on the gradient of the objective function, weaker than global Lipschitz continuity from the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-18",
+  "updated": "2026-01-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

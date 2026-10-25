@@ -1,0 +1,22 @@
+{
+  "key": "2605.26039",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.26039",
+  "title": "Fast Quadratic Manifold Learning For Nonlinear Dimensionality Reduction in Large-scale Systems using Riemannian Optimization",
+  "authors": [
+    "Gavin Paxton",
+    "Seunghee Cheon",
+    "Rudy Geelen",
+    "Shane A. McQuarrie"
+  ],
+  "summary": "The effectiveness of dimensionality reduction with quadratic manifolds hinges on the choice of a reduced basis and the associated quadratic correction terms. Existing approaches typically rely on subspaces spanned by the leading principal components of the training data. Although optimal for linear approximation, such bases are inherently suboptimal for quadratic manifold learning. Greedy basis-selection methods can significantly improve the representational capacity of quadratic manifolds by searching over a larger pool of candidate principal components, but the combinatorial cost limits…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-25",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

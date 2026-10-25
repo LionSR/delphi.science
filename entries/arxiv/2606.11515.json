@@ -1,0 +1,23 @@
+{
+  "key": "2606.11515",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.11515",
+  "title": "Exponential Adaptive Smoothing and Importance Sampling for Optimization of the Conditional Value-at-Risk",
+  "authors": [
+    "Will Asness",
+    "Brendan Keith",
+    "Boyan Lazarov",
+    "Anton Malandii",
+    "Stan Uryasev"
+  ],
+  "summary": "We present a novel method for solving conditional value-at-risk (CVaR) optimization problems based on the dual representation of CVaR, which is defined as the worst-case expectation over a risk envelope. The method is based on the Bregman proximal point algorithm and alternates between stochastic primal and dual stages. Every (inner) primal stage involves a subproblem solved by sampling from a probability distribution updated at each dual stage (outer iteration). The likelihood ratio of the dual probability distributions relative to the distribution underlying the original problem converges…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-09",
+  "updated": "2026-06-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

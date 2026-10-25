@@ -1,0 +1,20 @@
+{
+  "key": "2605.24734",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.24734",
+  "title": "Consistent Identification of Top-$K$ Nodes in Noisy Networks",
+  "authors": [
+    "Hui Shen",
+    "Eric D. Kolaczyk"
+  ],
+  "summary": "Identifying the most influential nodes in a network, typically using centrality measures, is a central task in applied network analysis. However, real-world networks are often constructed from noisy or incomplete data, which can distort rankings and lead to errors in identifying the true top-$k$ nodes. In this paper, we study how network noise affects the recovery of the true top-$k$ node set based on degree centrality. Specifically, we consider a noisy network observation in which edges are randomly added or removed according to a probabilistic noise model, and analyze the resulting…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-05-23",
+  "updated": "2026-05-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

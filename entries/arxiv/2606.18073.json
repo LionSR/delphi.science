@@ -1,0 +1,20 @@
+{
+  "key": "2606.18073",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.18073",
+  "title": "A Sketched Generalized Krylov Subspace Method for Large-Scale Regularization",
+  "authors": [
+    "Davide Palitta",
+    "Mirjeta Pasha"
+  ],
+  "summary": "The generalized Krylov subspace (GKS) method is an effective projection technique for large-scale Tikhonov regularization with a general regularization matrix. As the subspace expands, however, two computational bottlenecks limit scalability: the thin QR factorizations of the tall projected matrices formed by the forward operator and the regularization matrix applied to the basis, and the full reorthogonalization of each new basis vector against all previous columns. We propose a sketched variant, named sGKS, that addresses both bottlenecks. The QR factorizations are performed on compressed…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

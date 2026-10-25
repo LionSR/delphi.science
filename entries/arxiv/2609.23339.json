@@ -1,0 +1,20 @@
+{
+  "key": "2609.23339",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.23339",
+  "title": "Consistent intercept estimation and inference for unit-root INAR(2) processes",
+  "authors": [
+    "Yang Lu",
+    "Márton Ispány"
+  ],
+  "summary": "\\citet{barczy2014asymptotic} showed that the ordinary least-squares (OLS) estimator of the innovation mean is inconsistent for a unit-root INAR(2) process. We construct a consistent intercept estimator using inverse-time weighted least squares (WLS) and derive its mixed-rate asymptotics: the intercept estimator is asymptotically normal at rate $\\sqrt{\\log n}$, with a Gaussian limit independent of the autoregressive limits, while the autoregressive estimators retain their OLS rates. We develop an OLS unit-root test calibrated with WLS nuisance estimates. Under the maintained unit root,…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-09-20",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

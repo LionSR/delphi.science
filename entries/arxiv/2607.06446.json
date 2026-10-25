@@ -1,0 +1,25 @@
+{
+  "key": "2607.06446",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06446",
+  "title": "FO Value Discovery and Partial Vertex Cover Discovery",
+  "authors": [
+    "Enna Gerhard",
+    "Stephanie Maaz",
+    "Pascale Schott",
+    "Sebastian Siebertz",
+    "Jan Wodkte"
+  ],
+  "summary": "We study solution discovery in the token-sliding model from a logical and cost-value optimization perspective. In solution discovery, we are given a graph, an initial placement of $k$ tokens, and a movement budget $b$. The task is to find a reachable target configuration satisfying a prescribed condition. Our results are inspired by \\textsc{Partial Vertex Cover Discovery}, where the condition is that the~$k$ tokens cover at least $t$ edges of the input graph. This objective is not merely a sum of independent occupied vertex contributions: each selected vertex contributes its degree, but…",
+  "domain": "cs.DM",
+  "tags": [
+    "cs.DM",
+    "cs.LO",
+    "math.CO"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

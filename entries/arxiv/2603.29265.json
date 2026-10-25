@@ -1,0 +1,22 @@
+{
+  "key": "2603.29265",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.29265",
+  "title": "Bilevel MPC for Linear Systems: A Tractable Reduction and Continuous Connection to Hierarchical MPC",
+  "authors": [
+    "Ryuta Moriyasu",
+    "Carmen Amo Alonso",
+    "Marco Pavone"
+  ],
+  "summary": "Model predictive control (MPC) has been widely used in many fields, often in hierarchical architectures that combine controllers and decision-making layers at different levels. However, when such architectures are cast as bilevel optimization problems, standard KKT-based reformulations often introduce nonconvex and potentially nonsmooth structures that are undesirable for real-time verifiable control. In this paper, we study a bilevel MPC architecture composed of (i) an upper layer that selects the reference sequence and (ii) a lower-level linear MPC that tracks such reference sequence. We…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-03-31",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

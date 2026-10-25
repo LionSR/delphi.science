@@ -1,0 +1,21 @@
+{
+  "key": "2601.08969",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.08969",
+  "title": "Obfuscation of Arbitrary Quantum Circuits (via Subspace-Preserving Pseudorandom Unitary)",
+  "authors": [
+    "Miryam Mi-Ying Huang",
+    "Er-Cheng Tang"
+  ],
+  "summary": "Program obfuscation aims to conceal a computer program's internal structure while preserving its functionality. A central open problem is whether an obfuscation scheme for arbitrary quantum circuits exists. Despite several efforts toward this goal, prior works have succeeded only in obfuscating quantum circuits that implement either pseudo-deterministic functions or unitary transformations. Although unitary transformations already include a broad class of quantum computations, many important quantum tasks, such as state preparation, quantum sampling, and quantum error correction, go beyond…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-01-13",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

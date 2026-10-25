@@ -1,0 +1,19 @@
+{
+  "key": "2606.23661",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.23661",
+  "title": "Prime-Power Rarefaction and a Density-One Lower Bound for Erdős Problem 400",
+  "authors": [
+    "Eric Li"
+  ],
+  "summary": "For fixed $k\\ge 2$, let $g_k(n)$ be the greatest excess $a_1+\\cdots+a_k-n$ among positive integers $a_i$ satisfying $a_1!\\cdots a_k!\\mid n!$. We prove that, for every $\\varepsilon>0$, all but $o(x)$ integers $n\\le x$ satisfy \\[ g_k(n)\\ge \\left(\\frac{3(k-1)}{\\log 12}-\\varepsilon\\right)\\log n. \\] We also prove, as $n\\to\\infty$, the pointwise upper bound \\[ g_k(n)\\le (k-1)\\log_2 n+\\log_2\\log n+O_k(1). \\] The central analytic input is uniform phase separation for one or two frequencies on fixed-prime $S$-unit progressions, deduced directly from the finite exceptional-subspace alternative of…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-06-22",
+  "updated": "2026-06-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

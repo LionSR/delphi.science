@@ -1,0 +1,42 @@
+{
+  "key": "2610.00401",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00401v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00401v1",
+  "title": "Irrationality measures for $G\\pm5\\pi^2/48$ and $L(2,\\chi_{-3})$",
+  "authors": [
+    "Sean Litsey"
+  ],
+  "summary": "Building on OpenAI's determinant method for the irrationality of Catalan's constant $G=\\sum_{j\\ge0}(-1)^j/(2j+1)^2$, we prove \\[ \\begin{gathered} \\mu\\Bigl(G-\\frac{5\\pi^2}{48}\\Bigr)\\le 38.35,\\qquad \\mu\\Bigl(G+\\frac{5\\pi^2}{48}\\Bigr)\\le 38.35,\\\\ \\mu\\bigl(L(2,\\chi_{-3})\\bigr)\\le 23.82 , \\end{gathered} \\] where $\\mu$ is the irrationality exponent. We know of no earlier irrationality measure for $G\\pm5\\pi^2/48$. For $L(2,\\chi_{-3})$, which Calegari, Dimitrov and Tang proved irrational, the previous best bound we know of is their effective bound $\\mu\\le24781$. The approximations come from…",
+  "domain": "math.NT",
+  "tags": [
+    "msc:11J82",
+    "$L(2",
+    "Andr\\'eief identity",
+    "Catalan's constant",
+    "Cauchy determinants",
+    "Darboux transformation",
+    "L\\\"owner matrices",
+    "Lean",
+    "\\chi_{-3})$",
+    "formal verification",
+    "irrationality exponent"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "version": 1,
+  "ai_models": [
+    "Claude Opus",
+    "Claude Sonnet",
+    "Claude Haiku",
+    "Claude Code"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "none",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

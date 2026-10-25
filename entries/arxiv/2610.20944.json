@@ -1,0 +1,20 @@
+{
+  "key": "2610.20944",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.20944",
+  "title": "Factor-Assisted Density Estimation: When Ambient Dimension Enables Oracle Rates",
+  "authors": [
+    "Sunrit Chakraborty",
+    "David Dunson"
+  ],
+  "summary": "We study density estimation in the high-dimensional factor model, whose fixed-dimensional latent factors have an unknown smooth density. We propose factor-assisted density estimation (FADE), a non-iterative procedure that applies kernel density estimation to spectral estimates of the latent scores. The score proxies are dependent and do not follow the latent density, so standard kernel-density arguments do not apply. A refined rowwise expansion separates error into a conditionally centered Gaussian perturbation and a uniformly controlled remainder. We show that FADE achieves the oracle rate…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

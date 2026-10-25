@@ -1,0 +1,21 @@
+{
+  "key": "2610.09030",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.09030",
+  "title": "Graph-monotone entrywise guarantees for MLE and Rank Centrality on general comparison graphs",
+  "authors": [
+    "Yuepeng Yang",
+    "Cong Ma"
+  ],
+  "summary": "Pairwise comparisons are widely used to infer latent scores and identify top-ranked items. Although sharp statistical guarantees are available under uniform sampling, real data often induce irregular comparison graphs with heterogeneous observation counts across pairs. In this paper, we study an arbitrary fixed comparison graph under the Bradley--Terry--Luce model with minimal assumptions. We prove that both the standard maximum likelihood estimator and Rank Centrality achieve a high-probability entrywise error rate of order $1/\\sqrt{λ_{\\mathcal{D}}}$ up to logarithmic and dynamic-range…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

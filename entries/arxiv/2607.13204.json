@@ -1,0 +1,27 @@
+{
+  "key": "2607.13204",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.13204",
+  "title": "Efficient Computing for Medical Image Acquisition and Reconstruction",
+  "authors": [
+    "Xiao Wang",
+    "Jayasai Rajagopal",
+    "Md Safaiat Hossain",
+    "Peng Chen",
+    "Mohamed Wahib",
+    "Enzhi Zhang",
+    "Emma J. Reid"
+  ],
+  "summary": "Medical imaging systems such as CT, MRI, PET, and SPECT do not directly acquire images. Instead, they measure physical signals that encode anatomical or physiological information, and image reconstruction recovers the underlying image by solving an inverse problem. Although these imaging modalities are governed by different imaging physics, they share a common computational framework that naturally connects medical physics, linear algebra, probability, numerical optimization, and efficient computing. As medical imaging systems acquire increasingly large and higher-dimensional datasets, image…",
+  "domain": "eess.IV",
+  "tags": [
+    "eess.IV",
+    "cs.CV",
+    "math-ph"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

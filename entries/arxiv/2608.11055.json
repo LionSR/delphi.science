@@ -1,0 +1,20 @@
+{
+  "key": "2608.11055",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.11055",
+  "title": "Diffusion Quasi-Monte Carlo",
+  "authors": [
+    "Jianlong Chen",
+    "Yifeng Yu"
+  ],
+  "summary": "We study high-dimensional numerical integration with respect to complex target measures using diffusion-based transport maps and randomized quasi-Monte Carlo (RQMC). Score-based diffusion models induce a deterministic probability flow ODE that transports a simple prior to the target, suggesting a principled way to transform low-discrepancy points on the unit cube into informative samples. We construct a cube-to-target map by composing a Gaussian base transformation (the component-wise inverse Gaussian CDF) with an Euler-discretized probability flow ODE. To retain unbiasedness under transport…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-11",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

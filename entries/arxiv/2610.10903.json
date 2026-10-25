@@ -1,0 +1,23 @@
+{
+  "key": "2610.10903",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.10903",
+  "title": "Deceptive Stochastic Patrolling via Markov Chain Lifting",
+  "authors": [
+    "Yohan John",
+    "Gilberto Diaz-Garcia",
+    "Jason R. Marden",
+    "Francesco Bullo"
+  ],
+  "summary": "In this paper we propose lifted Markov Chains (MCs) as a new paradigm for deriving patrol strategies for mobile agents on an environment represented as a graph. Lifted MCs operate on a state space that can be larger than the set of nodes of the graph, and a projection operation maps the MC state to the corresponding node of the graph. We prove bounds on the performance improvement of lifted MCs over non-lifted MCs, where the performance is measured by the Kemeny constant, and show a corresponding monotonicity for the Stackelberg game capture probability and return-time entropy. These bounds…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

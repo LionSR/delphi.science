@@ -1,0 +1,19 @@
+{
+  "key": "2601.10561",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.10561",
+  "title": "(a,b)-Fibonacci-Legendre Cordial Graphs and k-Pisano-Legendre Primes",
+  "authors": [
+    "J. D. Andoyo"
+  ],
+  "summary": "Let $p$ be an odd prime and let $F_i$ be the $i$th $(a,b)$-Fibonacci number with initial values $F_0=a$ and $F_1=b$. For a simple connected graph $G=(V,E)$, define a bijective function $f:V(G)\\to \\{0,1,\\ldots,|V|-1\\}$. If the induced function $f_p^*:E(G)\\to \\{0,1\\}$, defined by $f_p^*(uv)=\\frac{1+([F_{f(u)}+F_{f(v)}]/p)}{2}$ whenever $F_{f(u)}+F_{f(v)}\\not\\equiv 0\\pmod{p}$ and $f_p^*(uv)=0$ whenever $F_{f(u)}+F_{f(v)}\\equiv 0\\pmod{p}$, satisfies the condition $|e_{f_p^*}(0)-e_{f_p^*}(1)|\\leq 1$ where $e_{f_p^*}(i)$ is the number of edges labeled $i$ ($i=0,1$), then $f$ is called…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-01-15",
+  "updated": "2026-01-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

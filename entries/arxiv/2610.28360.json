@@ -1,0 +1,23 @@
+{
+  "key": "2610.28360",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.28360",
+  "title": "Confessions of a Masked MDP",
+  "authors": [
+    "Sebastian Reboul",
+    "Lorenzo Croissant",
+    "Hélène Halconruy"
+  ],
+  "summary": "In reinforcement learning, one presumes the action set to be known ahead of time, and, thus, one must know if any state-action pairs are not permissible ahead of computations. In some applications, determining this action mask is the main computational bottleneck. Isolating this problem to highlight its core properties, we study how to combine the search for an optimal policy with the learning of the mask itself, under a linear MDP model in which each attempted action reveals the exact value of a linear score determining its validity. In this framework, we first construct an algorithm based…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

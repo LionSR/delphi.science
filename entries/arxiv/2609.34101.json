@@ -1,0 +1,19 @@
+{
+  "key": "2609.34101",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.34101",
+  "title": "On the Optimal Linear Minimization Oracle Complexity of Active-Hull Methods for Minimizing Convex Hölder Smooth Functions",
+  "authors": [
+    "Renbo Zhao"
+  ],
+  "summary": "We consider the convex problem $(P): {\\min}_{y\\in \\mathbb{R}^n}\\, f(Ay)+g(y)$, where $A:\\mathbb{R}^n\\to \\mathbb{R}^m$ is a linear operator, $f$ is convex and $(M,ν)$-Hölder smooth on $\\mathbb{R}^m$, and $g$ is proper, closed convex on $\\mathbb{R}^n$, and admits a (generalized) linear minimization oracle (LMO). An active-hull (AH) method calls the LMO in each iteration and outputs a point that lies in the convex hull of all the past LMO returns. We show that under the Euclidean geometry (and in the high-dimensional regime), the optimal LMO complexity for the class of AH methods to solve $(P)$…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

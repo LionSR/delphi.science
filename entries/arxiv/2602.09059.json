@@ -1,0 +1,20 @@
+{
+  "key": "2602.09059",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.09059",
+  "title": "Quantum Estimation of Delay Tail Probabilities in Scheduling and Load Balancing",
+  "authors": [
+    "R. Srikant"
+  ],
+  "summary": "Estimating delay tail probabilities in scheduling and load balancing systems is a critical but computationally prohibitive task due to the rarity of violation events. Quantum Amplitude Estimation (QAE) offers a generic quadratic reduction in sample complexity 1/sqrt(p) vs 1/p, but applying it to steady-state queueing networks in challenging: classical simulations involve unbounded state spaces and random regeneration cycles, whereas quantum circuits have fixed depth and finite registers. In this paper, we develop a framework for quantum simulation of delay tail probabilities based on…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.PR"
+  ],
+  "published": "2026-02-08",
+  "updated": "2026-02-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

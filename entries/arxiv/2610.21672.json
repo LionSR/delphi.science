@@ -1,0 +1,24 @@
+{
+  "key": "2610.21672",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.21672",
+  "title": "Diffusion Language Models as Open Quantum Systems",
+  "authors": [
+    "Akinori Tanaka",
+    "Yukinao Akamatsu",
+    "Takuki Tomita",
+    "Yuji Hirono"
+  ],
+  "summary": "Diffusion language models generate text by reversing a classical diffusion process over token sequences. We show that their continuous-time forward and reverse dynamics can be embedded in the framework of open quantum systems, which describes quantum systems interacting with their environment. This connection provides a basis for extending diffusion sampling to superpositions of sentence states and for modifying the underlying generation dynamics. We construct a $τ$-leaping unraveling scheme that simulates stochastic trajectories of these states while updating multiple token positions at…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.CL",
+    "quant-ph"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2607.01895",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.01895",
+  "title": "Regularized Variational and Spectral Log-Density-Ratio Estimation in the Gaussian Location Model",
+  "authors": [
+    "Francis Bach"
+  ],
+  "summary": "We study ridge-regularized log-density-ratio estimation in the Gaussian location model with a common covariance matrix. By affine invariance, the model is written as q $\\sim$ N(0, I), p $\\sim$ N($Δ$, I), with linear features, where $Δ$ is a mean vector. The variational estimator is the empirical Kullback-Leibler (KL) log-normalized fit with a squared L2-penalty on its nonconstant coefficient, and the spectral estimator recently introduced in [1] replaces a single variational problem by a continuum of ridge-regularized least-squares problems. We derive high-dimensional deterministic…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-07-02",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

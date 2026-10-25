@@ -27,5 +27,17 @@
     "reason": "Proves list chromatic number is linearly bounded by the Hadwiger number.",
     "by": "claude-haiku",
     "at": "2026-10-23"
-  }
+  },
+  "discussion": [
+    {
+      "kind": "web",
+      "url": "https://arxiv.org/abs/2610.01946",
+      "title": "A shorter proof of the linear list Hadwiger conjecture",
+      "site": "arXiv.org",
+      "author": "Yangyan Gu, Rongxing Xu",
+      "text": "The linear list Hadwiger conjecture asserts that every $K_t$-minor-free graph is $O(t)$-choosable. Following an approach outlined by Delcourt and Postle, we recently established $O(t\\log\\log t)$-choosability. Soon afterward, OpenAI provided a proof of the conjecture. A key new ingredient of their…",
+      "date": "2026-10-01",
+      "added": "2026-10-24"
+    }
+  ]
 }

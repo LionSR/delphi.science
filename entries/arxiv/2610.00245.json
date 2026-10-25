@@ -1,0 +1,26 @@
+{
+  "key": "2610.00245",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00245",
+  "title": "Matching Lower Bounds for Randomized First-Order Methods in Hessian-Lipschitz Nonconvex Optimization",
+  "authors": [
+    "Haihan Zhang",
+    "Wendao Wu",
+    "Chenheng Zhang",
+    "Yanyi Li",
+    "Chunyuan Zheng",
+    "Cong Fang",
+    "Haoxuan Li",
+    "Zhouchen Lin"
+  ],
+  "summary": "We establish a randomized first-order lower bound for finding an $ε$-stationary point, $\\|\\nabla f(x)\\|\\le ε$, of a nonconvex function with initial gap at most $Δ$, $L_1$-Lipschitz gradient, and $L_2$-Lipschitz Hessian. Each oracle call returns the exact function value and gradient. Let $Q_{\\mathrm{rand},\\mathrm{FO}}^{\\infty}(ε;Δ,L_1,L_2)$ denote the minimax number of calls, maximized over finite dimensions, for arbitrary adaptive randomized algorithms with per-instance success probability at least $2/3$. In the regime $ε\\lesssim L_1^2/L_2$ and $ΔL_2^{1/2}ε^{-3/2}\\gtrsim 1$, we prove $…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-23",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

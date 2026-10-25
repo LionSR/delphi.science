@@ -1,0 +1,21 @@
+{
+  "key": "2606.11478",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.11478",
+  "title": "PHASE: Pauli Hierarchical Assembly on Subdivided Elements for Quantum-Compatible Operator Synthesis",
+  "authors": [
+    "Tillman Philo",
+    "Caglar Oskay"
+  ],
+  "summary": "Efficiently decomposing finite element stiffness matrices into the Pauli basis is challenging due to the exponential growth of Pauli strings with problem size. A naive Pauli expansion requires $Θ(8^{\\lceil \\log_2 N \\rceil})$ operations, where $N$ denotes the number of degrees of freedom, rendering direct decomposition infeasible for large systems. Existing approaches exploit algebraic sparsity or operator structure but do not incorporate the geometric organization intrinsic to finite element discretizations, and consequently exhibit poor scaling for stiffness matrices. To address this…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.NA"
+  ],
+  "published": "2026-06-09",
+  "updated": "2026-06-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

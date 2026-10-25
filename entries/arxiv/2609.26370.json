@@ -1,0 +1,21 @@
+{
+  "key": "2609.26370",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.26370",
+  "title": "Spiral Endgames for Computing Singular Endpoints of Homotopy Paths",
+  "authors": [
+    "Emma R. Cobian",
+    "Jonathan D. Hauenstein",
+    "Charles W. Wampler"
+  ],
+  "summary": "We develop a new endgame for numerically computing singular solutions to complex analytic systems by means of a homotopy path whose endpoint is the solution to be computed. When the solution is singular, prediction-correction path tracking may fail at the endpoint. Instead of tracking the path all the way to its end, endgames sample nonsingular points on the incoming path and approximate the endpoint by interpolating the samples with a truncated Puiseux series. By collecting sample points along a logarithmic spiral in the complex plane, the proposed spiral endgame balances between the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-22",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

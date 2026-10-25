@@ -1,0 +1,20 @@
+{
+  "key": "2603.00469",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.00469",
+  "title": "Why Not? Solver-Grounded Certificates for Explainable Mission Planning",
+  "authors": [
+    "Najeeb Khan"
+  ],
+  "summary": "Operators of Earth observation satellites need justifications for scheduling decisions: why a request was selected, rejected, or what changes would make it schedulable. Existing approaches construct post-hoc reasoning layers independent of the optimizer, risking non-causal attributions, incomplete constraint conjunctions, and solver-path dependence. We take a faithfulness-first approach: every explanation is a certificate derived from the optimization model itself: minimal infeasible subsets for rejections, tight constraints and contrastive trade-offs for selections, and inverse solves for…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-02-28",
+  "updated": "2026-02-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

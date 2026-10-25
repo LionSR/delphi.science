@@ -1,0 +1,21 @@
+{
+  "key": "2606.05690",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.05690",
+  "title": "Learning Hamiltonians at Long Times",
+  "authors": [
+    "Constantin Cedillo Vayson de Pradenne",
+    "Jordan Cotler",
+    "Hsin-Yuan Huang"
+  ],
+  "summary": "We study the problem of learning an unknown $n$-qubit Hamiltonian $H$ from $U = e^{-iHt}$ for a single time $t$, where $t$ may be arbitrarily large. For broad families of local Hamiltonians, we prove that, with high probability over $H$ and $t$, any sum of local observables $A$ that is normalized and orthogonal to $H$ satisfies $\\tfrac{1}{2^n}\\|[U(t),A]\\|_F^2 \\geq 1/\\text{poly}(n)$. The Hamiltonian is therefore the unique approximately conserved local observable, and we can efficiently recover $H$, up to scale, as the approximate null vector of a data matrix built from random product-state…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-04",
+  "updated": "2026-06-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

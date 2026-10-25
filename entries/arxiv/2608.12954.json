@@ -1,0 +1,20 @@
+{
+  "key": "2608.12954",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.12954",
+  "title": "Rainbow percolation",
+  "authors": [
+    "Peter Gracar",
+    "Benjamin Lees"
+  ],
+  "summary": "We consider the weight-dependent random connection model on a Poisson point process of intensity $λ$ on $\\mathbb{R}\\times(0,1)$ in which the vertices $(x,t)$ and $(y,s)$ are joined precisely when $(t\\vee s)|x-y|\\leβ$. Points at distance $d$ are joined with probability $\\min(1,β/d)^2$, the critical decay of one-dimensional long-range percolation, and edges sharing a vertex are dependent through the common mark. We prove that the model has a genuine phase transition: for $λβ<1$ almost surely all connected components are finite, while for $λβ\\ge31$ an infinite component exists, so at intensity…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

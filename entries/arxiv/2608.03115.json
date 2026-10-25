@@ -1,0 +1,21 @@
+{
+  "key": "2608.03115",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.03115",
+  "title": "A structure--preserving ALE--BGN--MDR method for Navier--Stokes free boundary problems with moving contact lines and gravity",
+  "authors": [
+    "Harald Garcke",
+    "Jiashun Hu",
+    "Nuo Lei"
+  ],
+  "summary": "We propose a gravity-consistent arbitrary Lagrangian--Eulerian finite element method for incompressible Navier--Stokes free-boundary problems with moving contact lines. A direct body-force discretization of gravity may fail to ensure consistency between the discrete gravitational work and the variation of the gravitational potential energy on the evolving domain, resulting in an artificial consistency error and persistent spurious velocities near equilibrium. To remove this inconsistency, we reformulate the gravitational potential energy variation as a moving-boundary integral over…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

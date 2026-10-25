@@ -1,0 +1,22 @@
+{
+  "key": "2607.26964",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.26964",
+  "title": "Feature Bagging Provides Stability",
+  "authors": [
+    "Yuheng Ma",
+    "Qiang Sun"
+  ],
+  "summary": "We study feature bagging through the lens of algorithmic stability. Feature bagging is an ensemble strategy that aggregates base learners trained on randomly subsampled feature subsets, possibly in a data-dependent manner. We introduce feature instability (FI), the feature-axis analogue of instance instability (II), which measures sensitivity to removing a single feature. Smaller values of II or FI correspond to stronger stability, and our experiments show that FI captures generalization-relevant information complementary to II. Within this framework, we analyze feature bagging in both a…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

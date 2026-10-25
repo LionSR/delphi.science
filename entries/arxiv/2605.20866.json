@@ -1,0 +1,25 @@
+{
+  "key": "2605.20866",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.20866",
+  "title": "LOSCAR-SGD: Local SGD with Communication-Computation Overlap and Delay-Corrected Sparse Model Averaging",
+  "authors": [
+    "Yassine Maziane",
+    "Ammar Mahran",
+    "Artavazd Maranjyan",
+    "Peter Richtárik"
+  ],
+  "summary": "Communication is a major bottleneck in distributed learning, especially in large-scale settings and in federated learning environments with slow links. Three standard ways to reduce this cost are communication compression, local training, and communication-computation overlap. Methods that combine these ingredients are used in practice and have been found to be effective for large-scale training, but there is little theory for methods that combine all three. We study a heterogeneous-compute setting in which different workers may take different numbers of local steps, and we propose…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.DC",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-05-20",
+  "updated": "2026-05-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

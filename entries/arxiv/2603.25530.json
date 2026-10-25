@@ -1,0 +1,22 @@
+{
+  "key": "2603.25530",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.25530",
+  "title": "Adaptive Subspace Modeling With Functional Tucker Decomposition",
+  "authors": [
+    "Noah Steidle",
+    "Joppe De Jonghe",
+    "Mariya Ishteva"
+  ],
+  "summary": "Tensors provide a structured representation for multidimensional data, yet discretization discards the underlying continuous structure when the data originate from continuous processes. We address this limitation by introducing a functional Tucker decomposition (FTD) that embeds a mode-wise continuity constraint directly into the factorization. The FTD models the continuous mode as a function in a reproducing kernel Hilbert space (RKHS), avoiding a prespecified basis while preserving the multilinear subspace structure of the Tucker model. We derive a reconstruction error bound for the…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "math.NA"
+  ],
+  "published": "2026-03-26",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

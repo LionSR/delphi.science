@@ -1,0 +1,24 @@
+{
+  "key": "2602.06847",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.06847",
+  "title": "Consensus Protocols for Entanglement-Aware Scheduling in Distributed Quantum Neural Networks",
+  "authors": [
+    "Kuan-Cheng Chen",
+    "Samuel Yen-Chi Chen",
+    "Mahdi Chehimi",
+    "Felix Burt",
+    "Kin K. Leung"
+  ],
+  "summary": "The realization of distributed quantum neural networks (DQNNs) over quantum internet infrastructures faces fundamental challenges arising from the fragile nature of entanglement and the demanding synchronization requirements of distributed learning. We introduce a Consensus-Entanglement-Aware Scheduling (CEAS) framework that co-designs quantum consensus protocols with adaptive entanglement management to enable robust synchronous training across distributed quantum processors. CEAS integrates fidelity-weighted aggregation, in which parameter updates are weighted by quantum Fisher information…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.NI"
+  ],
+  "published": "2026-02-06",
+  "updated": "2026-02-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

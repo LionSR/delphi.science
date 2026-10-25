@@ -1,0 +1,22 @@
+{
+  "key": "2608.28842",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.28842",
+  "title": "Quantum Preconditioning For Constrained Optimization Problems",
+  "authors": [
+    "Anurag Ramesh",
+    "Bhuvanesh Sundar",
+    "Maxime Dupont",
+    "David E. Bernal Neira"
+  ],
+  "summary": "We study the effect of quantum preconditioning on constrained combinatorial optimization problems, focusing on balanced graph bi-partitioning. The proposed approach uses two-point correlations between decision variables derived from the Quantum Approximate Optimization Algorithm (QAOA) to construct a modified objective function that is subsequently provided to mixed-integer programming (MIP) solvers. The preconditioned MIP formulation retains the original hard constraint, and all incumbent solutions are evaluated under the original objective. Computational experiments on dense, weighted…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-28",
+  "updated": "2026-08-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

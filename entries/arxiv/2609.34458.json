@@ -1,0 +1,25 @@
+{
+  "key": "2609.34458",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.34458",
+  "title": "Understanding Generalization Requires Universal Induction",
+  "authors": [
+    "Aram Ebtekar",
+    "Marcus Hutter",
+    "Danica J. Sutherland"
+  ],
+  "summary": "Classical statistical theory is insufficient to explain the successes of general-purpose AI models, because it depends on handcrafted inductive biases that it cannot justify. No Free Lunch (NFL) theorems force any learner that beats chance on some environments to underperform on others. We might hope that past experience informs which environments to expect, but NFL applies equally to meta-learning. Thus, any method that makes meaningful predictions necessarily begins with an inductive bias external to the data. Choosing to bias toward short programs yields Solomonoff induction (SI), whose…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.AI",
+    "cs.IT",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

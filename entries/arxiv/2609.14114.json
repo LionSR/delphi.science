@@ -1,0 +1,21 @@
+{
+  "key": "2609.14114",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.14114",
+  "title": "Parallel Policy-Gradient Methods for Parameter Optimization of Nonlinear Feedback Controllers",
+  "authors": [
+    "An Nguyen",
+    "Leilei Cui"
+  ],
+  "summary": "Structured feedback controllers provide rigorous stability guarantees, but often require manual parameter tuning to achieve good closed-loop performance. Policy-gradient methods offer a systematic approach to parameter optimization; however, conventional gradient evaluation requires sequential forward state rollout and backward costate propagation. This letter develops a time-parallel policy-gradient framework for discrete-time nonlinear control-affine systems. We derive the policy-gradient expression where the state and costate rollouts required for policy-gradient evaluation are formulated…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-09-12",
+  "updated": "2026-09-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

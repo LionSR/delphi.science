@@ -1,0 +1,23 @@
+{
+  "key": "2609.27243",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.27243",
+  "title": "From Variational Optimization to Flow-Based Transport: Posterior-Geometry Regularization for Ill-Conditioned Data Assimilation",
+  "authors": [
+    "Siming Liang",
+    "Feng Bao",
+    "Hristo G. Chipilski",
+    "Peter Jan van Leeuwen",
+    "Guannan Zhang"
+  ],
+  "summary": "Variational data assimilation computes a Bayesian update through optimization on a fixed posterior geometry, whose conditioning is determined by the prior covariance and the observation operator. In strongly anisotropic, weakly observed, or highly informative regimes, this geometry can become severely ill conditioned, leading to substantial sensitivity to solver design and preconditioning. This work investigates an alternative computational route based on flow-based transport, using the ensemble score filter as a training-free realization. Rather than repeatedly optimizing over the full…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-23",
+  "updated": "2026-09-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

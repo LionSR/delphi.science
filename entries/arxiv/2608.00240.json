@@ -1,0 +1,22 @@
+{
+  "key": "2608.00240",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.00240",
+  "title": "Regularized-Likelihood Deconvolution with Posterior-Density Reconstruction",
+  "authors": [
+    "Marco Di Marzio",
+    "Stefania Fensore",
+    "Chiara Passamonti",
+    "Serena Pulcini"
+  ],
+  "summary": "Density deconvolution is an ill-posed inverse problem because recovering the latent density amplifies high-frequency variation in the observed data. We propose a two-stage likelihood procedure. The first estimator maximizes the convolution likelihood over a regularized Gaussian-mixture sieve; the second treats this fit as an empirical prior and averages the fitted conditional latent densities. Under fixed-model misspecification, the estimators generally have different population targets. For bounded local multiplicative perturbations of the latent density, the population posterior map is…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-07-31",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2607.19965",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.19965",
+  "title": "Accelerated Stochastic Zeroth-Order Quasar-Convex Optimization",
+  "authors": [
+    "Eméric Gbaguidi",
+    "Julien Hermant"
+  ],
+  "summary": "We consider unconstrained minimization of smooth quasar-convex functions when only noisy function evaluations are accessible through a stochastic zeroth-order oracle. For these non-convex functions, the standard acceleration method relies on subspace-search mechanisms that require first-order information, being therefore unavailable in zeroth-order regimes. In contrast, the alternative and less conventional continuized method enable to avoid such mechanisms. In this work, we design a zeroth-order continuized algorithm, leading to accelerated convergence guarantees that parallel those of…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-22",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

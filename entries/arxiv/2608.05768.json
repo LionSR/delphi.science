@@ -1,0 +1,21 @@
+{
+  "key": "2608.05768",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.05768",
+  "title": "Minimization-based polynomial corrections for high-order curved boundaries on fixed and moving domains: assessment on finite volume and discontinuous Galerkin schemes",
+  "authors": [
+    "Mirco Ciallella",
+    "Walter Boscheri"
+  ],
+  "summary": "In this work, we present two novel strategies to impose high-order boundary conditions on fixed and moving curved domains, approximated with piecewise affine triangulations. Achieving high-order accuracy on curved domains requires tackling both the PDE discretization error and the geometrical error simultaneously. While the former can be reduced by employing high-order numerical methods such as finite volume and discontinuous Galerkin, the latter demands either a high-order parametrization of the physical domain or a consistent approximation of the boundary conditions. Minimization-based…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-08-06",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2609.33240",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.33240",
+  "title": "The Price of Locality: Why Forward-Forward Underperforms Backpropagation?",
+  "authors": [
+    "Zhaoxian Wu",
+    "Haichuan Liu",
+    "Tianyi Chen"
+  ],
+  "summary": "The Forward-Forward Algorithm (FFA) replaces backpropagation (BP) with layer-wise local contrastive objectives, eliminating the backward pass and the need to retain intermediate activations, yet suffers a persistent performance gap with BP that worsens with depth. This paper diagnoses two structural failure modes: an optimization floor arising from concurrent local updates; and a geometric collapse of layer representations driven by the local update mechanism. On the optimization side, we prove that the FFA loss satisfies the Polyak--Lojasiewicz inequality at each layer; however,…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-09-27",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

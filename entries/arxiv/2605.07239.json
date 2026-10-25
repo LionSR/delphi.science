@@ -1,0 +1,23 @@
+{
+  "key": "2605.07239",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.07239",
+  "title": "Sample Complexity of Stochastic Optimization with Integer Variables",
+  "authors": [
+    "Hongyu Cheng",
+    "Yinghao Zheng",
+    "Marco Molinaro",
+    "Amitabh Basu"
+  ],
+  "summary": "We establish sample complexity results for stochastic optimization over the integers, especially with a view to understand the complexity with respect to the corresponding continuous optimization problem. We show that integer optimization can sometimes require strictly more samples and sometimes strictly smaller number of samples, depending on the structure of the objective and constraints. 1. For Lipschitz objectives over subsets of the $\\ell_\\infty$ ball, the statistical complexity of general stochastic mixed-integer, nonlinear, nonconvex optimization is exactly the same as stochastic…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-05-08",
+  "updated": "2026-05-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

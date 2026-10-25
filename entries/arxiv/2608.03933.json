@@ -1,0 +1,21 @@
+{
+  "key": "2608.03933",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.03933",
+  "title": "Simulation-Based Neural Policies for Portfolio Choice: Architecture, Training, and Interpretability",
+  "authors": [
+    "Jules Viard",
+    "Alexander Michaelides",
+    "Panos Parpas"
+  ],
+  "summary": "Many economic decision problems, lifecycle consumption-saving and dynamic portfolio choice, are finite-horizon stochastic control problems with continuous states and actions. When the state is low-dimensional these problems are solved by dynamic programming on a grid. The grid cost grows exponentially in the state dimension, known as the curse of dimensionality, which motivates replacing the value-function grid with a neural policy optimized directly through simulation. Such policies are usually studied in the high-dimensional settings that motivate them, precisely where no reference…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

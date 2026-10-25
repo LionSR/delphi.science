@@ -1,0 +1,22 @@
+{
+  "key": "2608.04100",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.04100",
+  "title": "Language-Guided Hypotheses Generation for Sparse SMEFT Analyses",
+  "authors": [
+    "Ahmed Hammad",
+    "Veronica Sanz"
+  ],
+  "summary": "Global fits of the Standard Model Effective Field Theory are challenged by the large number of operators, while any given database constrains only a small subset. Selecting relevant operator hypotheses therefore requires theoretical insight into operator correlations and the sensitivity of observables. We present llm4smeft, an open source framework that addresses this problem by combining a language model, fine-tuned on the SMEFT literature, with retrieval augmented generation based on quantitative summaries of SMEFiT package global fits. Given a set of observables, the framework proposes…",
+  "domain": "hep-ph",
+  "tags": [
+    "hep-ph",
+    "hep-ex",
+    "hep-th"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2607.14503",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14503",
+  "title": "Space-Entropy Lower Bounds for Random Sampling",
+  "authors": [
+    "Thomas L. Draper",
+    "Feras A. Saad"
+  ],
+  "summary": "We prove fundamental space lower bounds for exact random sampling using an entropy source of i.i.d. uniform bits. A classic result from information theory shows that generating $n$ discrete random variables $X_1, \\dots, X_n$ requires at least $H(X_1, \\dots, X_n)$ input random bits on average, where $H$ is the Shannon entropy function. How much space must a random sampling algorithm use in order to approach this information-theoretically optimal entropy bound? We prove that any random sampling algorithm that is exact for arbitrary discrete target distributions and consumes at most…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "cs.DS",
+    "cs.IT",
+    "math.PR"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

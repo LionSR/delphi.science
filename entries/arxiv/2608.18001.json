@@ -1,0 +1,20 @@
+{
+  "key": "2608.18001",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.18001",
+  "title": "Physics-Informed Learning of Probabilistic Gegenbauer Reconstruction for Transport-Dominated Problems",
+  "authors": [
+    "Lei Yan",
+    "Yan Jiang"
+  ],
+  "summary": "Transport-dominated problems remain challenging for data-driven methods, which often exhibit severe numerical oscillations near shocks or steep gradients due to globally supported basis functions or overly smooth hypothesis spaces. Gegenbauer reconstruction has shown promise in mitigating such oscillations, but its effectiveness critically depends on the reconstruction parameters, particularly the weight parameter $λ$ and truncation order $m$. For data-driven models, variations in governing problems, training data, and model architectures make systematic parameter selection particularly…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

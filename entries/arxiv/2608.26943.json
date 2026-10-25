@@ -1,0 +1,22 @@
+{
+  "key": "2608.26943",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.26943",
+  "title": "Data-driven Koopman mode approximation: A neural power iteration algorithm",
+  "authors": [
+    "Guillaume O. Berger",
+    "Raphaël M. Jungers"
+  ],
+  "summary": "This paper proposes a novel data-driven algorithm to approximate the dominant eigenfunctions (aka.~modes) of the Koopman operator of nonlinear dynamical systems using neural networks. The relevance of learning the dominant Koopman modes is to approximate nonlinear dynamics by linear ones in a lifted space, thereby enabling simplified control and analysis. To fight the curse of dimensionality arising from using expressive templates (here neural networks) for the mode approximation, the proposed method leverages a power-iteration scheme that directly learns the dominant Koopman modes without…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-08-27",
+  "updated": "2026-09-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2605.09176",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09176",
+  "title": "Navigating LLM Valley: From AdamW to Memory-Efficient and Matrix-Based Optimizers",
+  "authors": [
+    "Aditya Ranganath"
+  ],
+  "summary": "Training large language models requires optimization algorithms that are not only statistically effective, but also computationally and memory efficient at extreme scale. Although Adam remains the dominant optimizer for large-scale language-model pretraining and fine-tuning, recent work has revisited nearly every component of the optimization stack: adaptive moment estimation, decoupled weight decay, memory footprint, curvature approximation, sign-based updates, large-batch stability, low-rank gradient structure, and matrix-wise orthogonalized updates. This survey reviews optimizer design…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-05-09",
+  "updated": "2026-05-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

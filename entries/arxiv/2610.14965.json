@@ -1,0 +1,21 @@
+{
+  "key": "2610.14965",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.14965",
+  "title": "Risk-Constrained MPPI Tuning with Update-Aware MA-ES Racing",
+  "authors": [
+    "Morteza Kimiaei",
+    "Roya Khalili-Amirabadi",
+    "Mohsen Jalaeian-Farimani"
+  ],
+  "summary": "We formulate offline tuning of Model Predictive Path Integral (MPPI) controllers as a chance-constrained black-box optimization problem and develop an update-aware framework based on Matrix Adaptation Evolution Strategy (MA-ES). We use statistical information from noisy controller evaluations to determine when the evolutionary update is sufficiently reliable. When the recombination direction is certified, a derivative-free nonmonotone line search (NMLS) is used to refine the candidate solution, and a separate validation stage assesses the final frozen controller. We establish a worst-case…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-10",
+  "updated": "2026-10-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

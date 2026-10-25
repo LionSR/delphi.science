@@ -1,0 +1,22 @@
+{
+  "key": "2602.12365",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.12365",
+  "title": "A versatile FEM framework with native GPU scalability via globally-applied AD",
+  "authors": [
+    "Mohit Pundir",
+    "Flavio Lorez",
+    "David S. Kammer"
+  ],
+  "summary": "Energy-based finite-element formulations provide a unified framework for describing complex physical systems in computational mechanics. In these energy-based methods, the governing equations can be obtained directly by considering the derivatives of a single global energy functional. While Automatic Differentiation (AD) can be used to automate the generation of these derivatives, current frameworks face a clear trade-off based primarily on the scale upon which the AD method is applied. Globally applied AD offers high expressivity but cannot currently be scaled to large problems. Locally…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cond-mat.soft"
+  ],
+  "published": "2026-02-12",
+  "updated": "2026-02-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

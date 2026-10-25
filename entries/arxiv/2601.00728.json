@@ -1,0 +1,21 @@
+{
+  "key": "2601.00728",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.00728",
+  "title": "Precision autotuning for linear solvers via contextual bandit-based RL",
+  "authors": [
+    "Erin Carson",
+    "Xinye Chen"
+  ],
+  "summary": "We propose a reinforcement learning (RL) framework for \\xy{responsive} precision tuning for linear solvers, which can be extended to general algorithms. The framework is formulated as a contextual bandit problem and solved using incremental action-value estimation with a discretized state space to select optimal precision configurations for computational steps, \\xy{retaining} precision and computational efficiency. To verify its effectiveness, we apply the framework to iterative refinement for solving linear systems $Ax = b$. In this application, our approach dynamically chooses precisions…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-01-02",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

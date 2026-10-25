@@ -1,0 +1,21 @@
+{
+  "key": "2608.26593",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.26593",
+  "title": "On identifying codes on oriented graphs",
+  "authors": [
+    "Soura Sena Das",
+    "Sagnik Sen"
+  ],
+  "summary": "This article studies identifying codes in oriented graphs from a computational complexity perspective. We investigate the $\\mathcal{F}$-Id Code problem, where given a simple graph $G$ and a vertex subset $C$, which induces a subgraph in the family $\\mathcal{F}$, as inputs and ask whether it is possible to orient $G$ in such a way that $C$ becomes its oriented identifying code. Focusing on the family $\\mathcal{F}_d$ of $d$-regular graphs, we establish a complete dichotomy by proving that the problem is polynomial-time solvable for $d\\leq1$ and NP-complete for all $d\\geq2$.",
+  "domain": "cs.DM",
+  "tags": [
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-08-27",
+  "updated": "2026-08-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

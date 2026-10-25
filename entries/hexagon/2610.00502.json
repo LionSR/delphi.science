@@ -1,0 +1,28 @@
+{
+  "key": "2610.00502",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00502v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00502v1",
+  "title": "Galois embedding problems and number field counting",
+  "authors": [
+    "Anwesh Ray"
+  ],
+  "summary": "Let $p$ be a prime number and $1\\to H\\to G\\xrightarrow{q}T\\to1$ be an exact sequence of finite groups, where $H$ is a nontrivial $p$-group. Fix a continuous surjection $\\pi:\\GQ\\twoheadrightarrow T$ and finitely many $H$-conjugation-invariant local conditions $\\cD$. Let $N_{G,\\pi,\\cD}(X)$ count the continuous surjections $\\rho:\\GQ\\twoheadrightarrow G$ satisfying $q\\circ\\rho=\\pi$ and these local conditions, with $|\\Delta_{F_\\rho}|\\leq X$, where $F_\\rho=\\overline{\\Q}^{\\ker\\rho}$. If at least one such lift exists, we prove that, for every $\\varepsilon>0$, \\[ X^{p/(|G|(p-1))} \\ll_{G,\\pi,\\cD}…",
+  "domain": "math.NT",
+  "tags": [
+    "msc:11R45",
+    "Malle's conjecture",
+    "deformation theory",
+    "embedding problems"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "version": 1,
+  "authorship": "human",
+  "human_understanding": "all",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

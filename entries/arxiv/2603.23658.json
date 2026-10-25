@@ -1,0 +1,23 @@
+{
+  "key": "2603.23658",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.23658",
+  "title": "Boost Like a (Var)Pro: Trust-Region Gradient Boosting via Variable Projection",
+  "authors": [
+    "Abhijit Chowdhary",
+    "Elizabeth Newman",
+    "Deepanshu Verma"
+  ],
+  "summary": "Gradient boosting, a method of building additive ensembles from weak learners, has established itself as a practical and theoretically-motivated approach to approximate functions, especially using decision tree weak learners. Comparable methods for smooth parametric learners, such as neural networks, remain less developed in both training methodology and theory. To this end, we introduce \\texttt{VPBoost} ({\\bf V}ariable {\\bf P}rojection {\\bf Boost}ing), a gradient boosting algorithm for separable smooth approximators, i.e., models with a smooth nonlinear featurizer followed by a final linear…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-03-24",
+  "updated": "2026-03-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

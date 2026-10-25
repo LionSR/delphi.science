@@ -1,0 +1,21 @@
+{
+  "key": "2609.04910",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.04910",
+  "title": "Fast Gauss Sums via Flash Attention",
+  "authors": [
+    "Nicolaj Rux",
+    "Sebastian Neumayer"
+  ],
+  "summary": "Gaussian kernel sums are the computational core of maximum mean discrepancies (MMDs), kernel gradient flows, Stein variational gradient descent (SVGD), and many other kernel methods. At the same time, softmax attention has received an extraordinary amount of hardware-aware code engineering, culminating in flash attention. We show that Gauss kernel sums with arbitrary, signed weights can be evaluated via flash attention: two small input augmentations turn the normalized softmax reduction into the unnormalized Gauss sum, without writing a single line of custom GPU code. For feature dimension…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2609.12740",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.12740",
+  "title": "Finite-tower bounds for Skolem functions",
+  "authors": [
+    "Andreas Weiermann"
+  ],
+  "summary": "We bound the eventual order types of Skolem functions below finite exponential towers. Writing $E_0(u)=u$, $E_{n+1}(u)=2^{E_n(u)}$, and $ω_0=1$, $ω_{k+1}=ω^{ω_k}$, the argument gives \\[ |\\Sk_{<E_n(x^m)}|<ω_{r_n},\\qquad r_n=2+\\frac{n(n+3)}2\\quad(n\\ge1,\\ m\\ge2\\text{ fixed}). \\] For triple towers we obtain the sharper bound $|\\Sk_{<E_3(x^m)}|<ω_{10}$ for every fixed $m\\ge1$. The proof combines comparisons of asymptotic expansions with finite recursive decompositions and ordinal estimates for ordered sums and products. The analytic part is developed in the classical field of…",
+  "domain": "math.LO",
+  "tags": [
+    "math.LO"
+  ],
+  "published": "2026-09-11",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

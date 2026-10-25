@@ -1,0 +1,22 @@
+{
+  "key": "2605.22251",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.22251",
+  "title": "Online Optimization with Unknown Time-Varying Parameters Using Noisy Gradient Measurements",
+  "authors": [
+    "Shivanshu Tripathi",
+    "Fabio Pasqualetti",
+    "Maziar Raissi"
+  ],
+  "summary": "We study online optimization problems in which the cost function depends on latent, time-varying parameters that are unmeasurable and governed by unknown dynamics. Specifically, we consider a strongly convex cost function whose linear term evolves according to unknown linear stochastic dynamics about an unknown nominal operating point, while the algorithm has access only to finite noisy gradient measurements. We propose a solution that uses control theoretic tools to reconstruct the latent parameters from gradient observations using a Gauss-Markov estimator, then identifies the parameter…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-05-21",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

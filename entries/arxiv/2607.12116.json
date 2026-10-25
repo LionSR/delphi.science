@@ -1,0 +1,20 @@
+{
+  "key": "2607.12116",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12116",
+  "title": "Body-fitted tracking of 2d open curves with a level set based mesh evolution method",
+  "authors": [
+    "Charles Dapogny"
+  ],
+  "summary": "This article describes a novel numerical algorithm for tracking the motion of a collection of open curves in two space dimensions. The proposed strategy combines two complementary representations of these curves at each iteration of the evolution process: on the one hand, they are meshed explicitly, as a sub-collection of the entities of a mesh of the total computational domain. Concurrently, using a variant of the Level Set Method, they are captured implicitly as algebraic combinations of the negative, zero and positive subsets of two auxiliary scalar functions, defined on the whole ambient…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

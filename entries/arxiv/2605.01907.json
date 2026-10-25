@@ -1,0 +1,23 @@
+{
+  "key": "2605.01907",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.01907",
+  "title": "Adaptive Estimation and Inference in Semi-parametric Heterogeneous Clustered Multitask Learning via Neyman Orthogonality",
+  "authors": [
+    "Hanxiao Chen",
+    "Debarghya Mukherjee"
+  ],
+  "summary": "We study clustered multitask learning in a semiparametric setting where tasks share a latent cluster structure in their target parameters but exhibit heterogeneous, potentially infinite-dimensional nuisance components. Such heterogeneity poses a major challenge for existing multitask learning methods, which typically rely on aligned feature spaces or homogeneous task structures. To address this challenge, we propose an adaptive fused orthogonal estimator that integrates Neyman-orthogonal losses with data-driven pairwise fusion penalties. Our framework leverages task-specific pilot estimates…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-05-03",
+  "updated": "2026-05-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

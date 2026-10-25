@@ -1,0 +1,20 @@
+{
+  "key": "2606.22843",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.22843",
+  "title": "When the Learning With Errors Problem Meets the Coherent Ising Machine: A Penalty-Free Algorithm-Hardware Co-Design",
+  "authors": [
+    "Shuxian Jiang"
+  ],
+  "summary": "The Learning With Errors (LWE) problem constitutes the mathematical foundation of modern Post-Quantum Cryptography (PQC). Cryptanalysis of LWE ranges from classical lattice reduction to machine learning and quantum-classical hybrids. We propose CIM-BDD, a hybrid Bounded-Distance-Decoding solver that reduces LWE to a Quadratic Unconstrained Binary Optimization (QUBO) problem through a strictly \\emph{penalty-free} mapping. An algebraic elimination of the secret embeds LWE into a $q$-ary lattice, absorbing the modular arithmetic and recasting the problem as a Closest Vector Problem (CVP). The…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-06-22",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2608.25749",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.25749",
+  "title": "Error Analysis of the Inverse Conductivity Problem with Scattered Measurements",
+  "authors": [
+    "Bangti Jin",
+    "Qimeng Quan",
+    "Wenlong Zhang"
+  ],
+  "summary": "In this work, we investigate the inverse problem of recovering the conductivity coefficient in an elliptic equation from noisy measurements collected at finitely many deterministic scattered points in the domain $Ω$, and corrupted by random noise. Inspired by the regularity analysis, we propose a numerical scheme based on the regularized least-squares formulation with a $W^{1,4}(Ω)$ penalty, and discretize the regularized problem using the Galerkin finite element method with continuous piecewise linear elements. Under suitable assumptions on the problem data, we provide an error analysis of…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-26",
+  "updated": "2026-08-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

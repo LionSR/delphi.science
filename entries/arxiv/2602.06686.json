@@ -1,0 +1,25 @@
+{
+  "key": "2602.06686",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.06686",
+  "title": "Purified Two-Relaxation-Time Lattice Boltzmann Method: Removing Ghost Modes from TRT for Enhanced Stability",
+  "authors": [
+    "Yuan Yu",
+    "Yaolong Yu",
+    "Yuting Zhou",
+    "Siwei Chen",
+    "Haizhuan Yuan",
+    "Shi Shu"
+  ],
+  "summary": "The two-relaxation-time (TRT) lattice Boltzmann model is widely adopted for its simplicity and tunable boundary accuracy. However, its collision operator relaxes the full symmetric non-equilibrium component, implicitly retaining non-hydrodynamic ghost modes that degrade stability at high Reynolds numbers. In this work, we establish a rigorous connection between ghost-mode filtering and regularization within the TRT framework. By decomposing the discrete velocity space into hydrodynamic and non-hydrodynamic subspaces, we prove that the TRT-regularized lattice Boltzmann (TRT-RLB) model is…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math-ph"
+  ],
+  "published": "2026-02-06",
+  "updated": "2026-02-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

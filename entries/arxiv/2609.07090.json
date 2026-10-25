@@ -1,0 +1,20 @@
+{
+  "key": "2609.07090",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07090",
+  "title": "Complexity Amplification from Compression in Quantum Random Access Optimization",
+  "authors": [
+    "Stuart Hadfield"
+  ],
+  "summary": "Compressed quantum encodings aim to overcome hardware limitations towards tackling challenging problems at scale, with many classical variables mapped onto noncommuting observables of fewer qubits. Classically, relaxations such as the semidefinite program formulation of MaxCut trade solution quality for computational efficiency. By contrast, quantum relaxations based on compression can amplify the worst-case complexity of the problem being solved. We study quantum random access optimization (QRAO), a special case of the Pauli correlation encoding (PCE) framework that assigns up to three…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

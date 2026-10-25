@@ -1,0 +1,22 @@
+{
+  "key": "2610.03684",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03684",
+  "title": "Single-Shot Error Correction at Optimal Spacetime Cost",
+  "authors": [
+    "Kishor Bharti",
+    "Tobias Haug",
+    "Derek Khu",
+    "Andrew Tanggara"
+  ],
+  "summary": "Recent work established that, for independent erasures, storing $K$ logical qubits for $S$ time steps with error at most $\\varepsilon$ requires a spacetime cost of $Ω(S(K+\\log(S/\\varepsilon)))$. A matching construction was also given, but assumes ideal error correction. Here we show that the same scaling can be achieved with an explicit noisy error-correction circuit and efficient decoding, counting all state-preparation, gate, measurement, and wait locations, provided that the hardware supports long-range qubit connectivity and fast, reliable classical processing. Thus, reliability adds…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

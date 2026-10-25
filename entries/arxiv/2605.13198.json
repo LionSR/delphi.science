@@ -1,0 +1,21 @@
+{
+  "key": "2605.13198",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.13198",
+  "title": "Size and spectral conditions for a graph with given minimum degree to be $k$-$d$-critical",
+  "authors": [
+    "Zhenhao Zhang",
+    "Xiaogang Liu",
+    "Ligong Wang"
+  ],
+  "summary": "A $k$-matching in a graph $G$ is defined as a function $f:E(G) \\rightarrow \\{0,1,\\ldots,k\\}$ satisfying $\\sum_{e\\in E_G(v)} f(e)$ $\\leq k$ for each vertex $v\\in V(G)$, where $E_G(v)$ denotes the set of edges incident to $v$ in $G$. For $1\\leq d\\leq k$ and $d \\equiv |V(G)|~(\\mathrm{mod}~2)$, if for any $ v \\in V(G)$, there exists a $k$-matching $f$ such that $\\sum_{e\\in E_G(v)}f(e)=k-d$ and $\\sum_{e\\in E_G(u)}f(e)=k \\text{ for any } u\\in V(G)-\\{v\\}$, then $G$ is $k$-$d$-critical. A graph $G$ of odd order (resp. even order) is generalized factor-critical (resp. generalized bicritical) if the…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-05-13",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

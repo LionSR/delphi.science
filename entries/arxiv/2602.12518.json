@@ -1,0 +1,20 @@
+{
+  "key": "2602.12518",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.12518",
+  "title": "Compressed Sensing Shadow Tomography",
+  "authors": [
+    "Joseph Barreto",
+    "Daniel Lidar"
+  ],
+  "summary": "Estimating many local expectation values over time is a central measurement bottleneck in quantum simulation and device characterization. We study the task of reconstructing the Pauli-signal matrix $S_{ij}=\\text{Tr}(O_i ρ(t_j))$ for a collection of $M$ low-weight Pauli observables $\\{O_i\\}_{i=1}^M$ over $N$ timesteps $\\{t_j\\}_{j=1}^N$, while minimizing the total number of device shots. We propose a Compressed Sensing Shadow Tomography (CSST) protocol that combines two complementary reductions. First, local classical shadows reduce the observable dimension by enabling many Pauli expectation…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-13",
+  "updated": "2026-02-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

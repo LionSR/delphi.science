@@ -1,0 +1,24 @@
+{
+  "key": "2610.03624",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03624",
+  "title": "Symmetry-preserving quantum compilation",
+  "authors": [
+    "Maryam Mudassar",
+    "Zhi-Yuan Wei",
+    "Alexander Schuckert",
+    "Michael J. Lawler",
+    "Michael J. Gullans",
+    "Daniel Gottesman"
+  ],
+  "summary": "Fault-tolerant quantum simulation requires compiling symmetry-preserving time evolutions into discrete gate sets. Standard Clifford+T synthesis can break continuous symmetries even when the target evolution preserves them, causing compiled simulations to lose essential features of the original system. We develop a fault-tolerant compilation framework that preserves SU(2) symmetry exactly. We characterize the number-theoretic obstruction preventing symmetry-preserving unitary Clifford+T circuits from approximating arbitrary SU(2)-symmetric evolutions and circumvent it using measurement and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

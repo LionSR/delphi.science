@@ -1,0 +1,24 @@
+{
+  "key": "2610.30539",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.30539",
+  "title": "Dynamics of the Liquidity Profile in Concentrated Liquidity Provision: An SPIDE Approach",
+  "authors": [
+    "Cheuk Yin Lee",
+    "Jimmy Risk",
+    "Shen-Ning Tung",
+    "Tai-Ho Wang"
+  ],
+  "summary": "We model the dynamics of the liquidity profile in Uniswap~V3 and other concentrated-liquidity automated market makers with a stochastic partial integro-differential equation (SPIDE). The profile, the aggregate of all provider positions across tick space, evolves under a degenerate Sturm--Liouville operator, which encodes mean-reverting concentration around the market price, coupled with a Hilbert--Schmidt integral operator, which captures nonlocal redistribution driven by provider repositioning. We establish existence and uniqueness of the mild solution in a weighted $L^2$ space built on the…",
+  "domain": "q-fin.MF",
+  "tags": [
+    "q-fin.MF",
+    "math.PR",
+    "q-fin.TR"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

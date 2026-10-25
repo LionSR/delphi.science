@@ -1,0 +1,22 @@
+{
+  "key": "2601.15523",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.15523",
+  "title": "Provable Quantum Speedups for Reaction-Rate Estimation in High-Dimensional Fokker-Planck Dynamics",
+  "authors": [
+    "Tyler Kharazi",
+    "Ahmad M. Alkadri",
+    "Kranthi K. Mandadapu",
+    "K. Birgitta Whaley"
+  ],
+  "summary": "The Fokker-Planck equation models rare events across sciences, but blue{direct solution of the PDE is intractable for classical computers due to } its high-dimensional nature. Classical stochastic methods circumvent this curse-of-dimensionality, and serve as the de facto standard for practicing computational scientists. Quantum algorithms for such non-unitary dynamics often suffer from exponential decay in success probability. We introduce a quantum algorithm that overcomes this bottleneck for estimating reaction rates {and dynamical correlation functions more generally}. Using a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-21",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

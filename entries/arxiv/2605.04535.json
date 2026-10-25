@@ -1,0 +1,24 @@
+{
+  "key": "2605.04535",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04535",
+  "title": "From Video-to-PDE: Data-Driven Discovery of Nonlinear Dye Plume Dynamics",
+  "authors": [
+    "Cesar Acosta-Minoli",
+    "Sayantan Sarkar"
+  ],
+  "summary": "Inferring continuum models directly from video is hampered by two facts: the recorded field is uncalibrated image intensity rather than a physical state, and direct numerical differentiation of noisy frames is unstable. We develop a video-to-PDE pipeline that converts grayscale recordings of an ink plume into a normalised scalar field $u(x,y,t)$, isolates a bulk drift $\\mathbf{v}(t)$ from intrinsic spreading via the intensity-weighted centroid, and identifies an effective transport law by weak-form sparse regression. Conditioning, threshold-sweep and random-centre diagnostics show that…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "physics.comp-ph",
+    "stat.AP",
+    "stat.ML"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

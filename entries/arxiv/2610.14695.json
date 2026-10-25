@@ -1,0 +1,21 @@
+{
+  "key": "2610.14695",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.14695",
+  "title": "The price of a weak shadow variable: inference under nonignorable missingness as relevance vanishes",
+  "authors": [
+    "Michael Bücker"
+  ],
+  "summary": "When an outcome is missing not at random, identification is commonly restored by a shadow variable: a covariate that predicts the outcome but is excluded from the response mechanism. The literature treats the first requirement, relevance, as a yes-or-no condition. We make it continuous, parametrizing it by a scalar that scales the shadow variable's entire contribution to the moment conditions, and ask what inference costs as that scalar vanishes. One functional of the inverse weight governs the answer. We characterize it exactly, show that it fixes the effective sample size, and use it to…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "stat.AP"
+  ],
+  "published": "2026-10-10",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

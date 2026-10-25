@@ -1,0 +1,25 @@
+{
+  "key": "2608.27996",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.27996",
+  "title": "Should I Use This Synthetic Dataset for Training? How to Test with Minimal Real Data",
+  "authors": [
+    "Zhenyu Tao",
+    "Wei Xu",
+    "Xiaohu You",
+    "Petar Popovski",
+    "Osvaldo Simeone"
+  ],
+  "summary": "Digital twins (DTs) and learned world models are increasingly used to generate synthetic data that augment the scarce real datasets available for training artificial intelligence (AI) models in engineering systems. Owing to the inevitable simulation-to-reality (sim-to-real) gap, however, augmentation may fail to improve the performance of the trained model on the real data distribution. This paper addresses the resulting decision problem: Given a real dataset, a candidate synthetic dataset, and a fixed learning algorithm, decide whether training on the augmented dataset improves the true,…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.IT",
+    "math.ST"
+  ],
+  "published": "2026-08-28",
+  "updated": "2026-08-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

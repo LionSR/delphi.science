@@ -1,0 +1,21 @@
+{
+  "key": "2610.23090",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.23090",
+  "title": "Concrete Functions in Private Simultaneous Quantum Messages: Quantum Advantages and Structural Limitations",
+  "authors": [
+    "Harumichi Nishimura"
+  ],
+  "summary": "Private simultaneous quantum messages (PSQM) provide a minimal model of noninteractive secure multiparty quantum computation, yet their communication complexity for concrete functions remains poorly understood. We show that familiar total functions already exhibit both genuine quantum advantages and strong structural limitations. For three-party equality on $n$-bit inputs, which determines whether the players' $n$-bit strings are identical, we construct an entanglement-assisted protocol with asymptotic communication $(1.633\\ldots)n$ qubits, whereas every perfectly correct protocol without…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.CR"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

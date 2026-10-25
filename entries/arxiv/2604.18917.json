@@ -1,0 +1,23 @@
+{
+  "key": "2604.18917",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.18917",
+  "title": "An Implicit Compact-Kernel Material Point Method for Computational Solid Mechanics",
+  "authors": [
+    "Qirui Fu",
+    "Yupeng Jiang",
+    "Minchen Li"
+  ],
+  "summary": "The numerical performance of the material point method (MPM) is strongly governed by the particle-grid kernel, which controls the trade-off among smoothness, locality, numerical diffusion, contact accuracy, and computational cost. Although wide-support smooth kernels can effectively suppress cell-crossing instability, they often introduce increased numerical diffusion, artificial contact gaps, and higher transfer cost. In contrast, the suitability of compact-kernel designs for implicit computational solid mechanics remains unclear. In this work, we develop an implicit formulation of the…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-04-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

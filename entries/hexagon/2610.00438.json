@@ -1,0 +1,38 @@
+{
+  "key": "2610.00438",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00438v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00438v1",
+  "title": "Optimal affinity of autocatalytic networks beyond gross stoichiometry",
+  "authors": [
+    "Michael Mislan"
+  ],
+  "summary": "An explicit reversible autocatalytic network has a unique global maximum of controlled production whose affinity exponential is strictly below its gross stoichiometric seed ratio. This refutes the proposed general lower bound. We identify a response-profile capacity that retains the missing kinetic information, analyze a literal recycling family approaching the source boundary and give a zero-diagonal counterexample. Under the stated rooted accessibility and response hypotheses, a local mass-action realization theorem makes the capacity sharp; an explicit power family supplies global maxima,…",
+  "domain": "math.DS",
+  "tags": [
+    "math.OC",
+    "msc:92C42",
+    "msc:80A30",
+    "msc:92C45",
+    "Lean formalization",
+    "autocatalytic networks",
+    "counterexample",
+    "mass-action kinetics",
+    "optimal affinity",
+    "response-profile capacity"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "version": 1,
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": true,
+  "formalizations": [
+    "https://palomar-registry.org/entry?id=PALOMAR-2026-10-01-000001&version=1"
+  ],
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

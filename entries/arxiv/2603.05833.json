@@ -1,0 +1,22 @@
+{
+  "key": "2603.05833",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.05833",
+  "title": "Variational Quantum Algorithm for Constrained Combinatorial Optimization Problems",
+  "authors": [
+    "Hui-Min Li",
+    "Yuan-Liang Han",
+    "Zhi-Xi Wang",
+    "Shao-Ming Fei"
+  ],
+  "summary": "While variational quantum algorithms (VQAs) have demonstrated considerable success in unconstrained optimization, their application to constrained combinatorial problems face a trade-off. Penalty-based methods, despite their circuit simplicity, suffer from a fundamental limitation: inefficient sampling in vast infeasible regions. This often results in suboptimal solutions that violate constraints and impede convergence to high-quality results. In contrast, ansatz-based approaches enforce solution feasibility by design but require complex, problem-specific circuits that are challenging to…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-06",
+  "updated": "2026-03-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

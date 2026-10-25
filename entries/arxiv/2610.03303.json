@@ -1,0 +1,21 @@
+{
+  "key": "2610.03303",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03303",
+  "title": "S$^{2}$-PINN: Stochastic Separable Physics-Informed Neural Networks",
+  "authors": [
+    "Zhendong Li",
+    "Akwum Onwunta"
+  ],
+  "summary": "Uncertainty quantification (UQ) for random partial differential equations (PDEs) is ubiquitous in computational science and engineering. However, classical spectral solvers for this class of problems face the curse of dimensionality, and existing neural solvers often ignore the stochastic structure that makes moments and calibration tractable. We introduce a stochastic separable physics-informed neural network, dubbed S$^{2}$-PINN, that represents the solution $u(t,\\mathbf{x},\\mathbf{Z})$ of a random PDE with a learnable Gaussian spatial dictionary, Fourier temporal features, and a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math-ph"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

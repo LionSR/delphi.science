@@ -1,0 +1,24 @@
+{
+  "key": "2603.04479",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.04479",
+  "title": "Bayesian Modeling of Collatz Stopping Times: A Probabilistic Machine Learning Perspective",
+  "authors": [
+    "Nicolò Bonacorsi",
+    "Matteo Bordoni"
+  ],
+  "summary": "We study the Collatz total stopping time $τ(n)$ over $n\\le 10^7$ from a probabilistic machine learning viewpoint. Empirically, $τ(n)$ is a skewed and heavily overdispersed count with pronounced arithmetic heterogeneity. We develop two complementary models. First, a Bayesian hierarchical Negative Binomial regression (NB2-GLM) predicts $τ(n)$ from simple covariates ($\\log n$ and residue class $n \\bmod 8$), quantifying uncertainty via posterior and posterior predictive distributions. Second, we propose a mechanistic generative approximation based on the odd-block decomposition: for odd $m$,…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.PR",
+    "math.ST",
+    "stat.AP"
+  ],
+  "published": "2026-03-04",
+  "updated": "2026-03-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

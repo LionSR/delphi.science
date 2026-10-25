@@ -1,0 +1,20 @@
+{
+  "key": "2603.11107",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.11107",
+  "title": "From Computational Certification to Exact Coordinates: Heilbronn's Triangle Problem on the Unit Square Using Mixed-Integer Optimization",
+  "authors": [
+    "Nathan Sudermann-Merx"
+  ],
+  "summary": "We develop a mixed-integer nonlinear programming (MINLP) approach for the classical Heilbronn triangle problem, demonstrating the capability of modern global optimization solvers to tackle challenging combinatorial geometry problems. A symmetry-breaking strategy based on boundary structure yields a substantially stronger model: for $n=9$, we compute an $\\varepsilon$-globally optimal point in 15 minutes on a standard desktop computer, improving upon the previously reported effort of approximately one day. By combining numerical certification with exact symbolic computation, we recover exact…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.CO"
+  ],
+  "published": "2026-03-11",
+  "updated": "2026-05-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

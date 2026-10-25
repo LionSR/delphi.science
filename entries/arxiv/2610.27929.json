@@ -1,0 +1,20 @@
+{
+  "key": "2610.27929",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.27929",
+  "title": "Constant-Depth Quantum Barrier Option Pricing via a Static Bivariate Oracle Framework",
+  "authors": [
+    "Ji-Hui Mo",
+    "Yuan-Hong Tao"
+  ],
+  "summary": "Quantum amplitude estimation offers a theoretical quadratic speedup over classical Monte Carlo methods for financial derivative pricing. However, extending gate-based algorithms to path-dependent barrier options has historically been hampered by sequential path discretization, where tracking price paths across $d$ monitoring dates incurs a linear escalation in qubit footprint and gate depth ($\\mathcal{O}(d)$), posing severe coherence challenges for near-term quantum processors. In this work, we present a constant-depth quantum pricing framework that fundamentally eliminates the temporal…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

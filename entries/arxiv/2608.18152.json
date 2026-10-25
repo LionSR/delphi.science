@@ -1,0 +1,19 @@
+{
+  "key": "2608.18152",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.18152",
+  "title": "Qkabrine: A Joint Architecture, Encoding, and Hyperparameter Search Framework for Quantum Machine Learning",
+  "authors": [
+    "Eric Jagwara"
+  ],
+  "summary": "Building a quantum machine learning (QML) model competitive with a classical baseline currently requires a practitioner to separately choose a circuit architecture, a data-encoding scheme, a model paradigm (kernel versus variational), and a set of training hyperparameters, then verify after the fact that the chosen circuit is even trainable. Existing QML libraries provide the primitives for this but not the search, and existing classical AutoML libraries provide the search but not the quantum-specific search space or diagnostics. We present qkabrine-automl, a Python package that treats…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-12",
+  "updated": "2026-08-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

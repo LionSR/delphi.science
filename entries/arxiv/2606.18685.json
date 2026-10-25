@@ -1,0 +1,21 @@
+{
+  "key": "2606.18685",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.18685",
+  "title": "Differential Equation Inductive Robustness Axiomatization",
+  "authors": [
+    "André Platzer",
+    "Long Qian"
+  ],
+  "summary": "This article establishes the completeness of an axiomatization for the robust safety of dynamical systems with polynomial differential equations on bounded time horizons. Safety properties of robust systems are uniformly reduced to a sound axiomatization of polynomial invariants, resulting in reliable logical proofs of correctness. Approximate decidability results are also established: there is a computable algorithm such that, given any perturbation parameter $δ$, it either produces a symbolic proof of robust safety (hence correctly decides the dynamical system to be robustly safe), or…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "math.LO"
+  ],
+  "published": "2026-06-17",
+  "updated": "2026-06-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

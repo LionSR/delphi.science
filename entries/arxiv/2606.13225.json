@@ -1,0 +1,20 @@
+{
+  "key": "2606.13225",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.13225",
+  "title": "The QR factorization of a banded-plus-semiseparable matrix is computable in linear complexity with Householder reflections",
+  "authors": [
+    "Tao Chen",
+    "Sheehan Olver"
+  ],
+  "summary": "We show that the QR factorization of a banded-plus-semiseparable (BPS) matrix is computable in optimal linear complexity with respect to the discretization size by showing that the intermediate stages of a QR factorization as computed using Householder reflection maintain a specific structure which has optimal storage. While optimal complexity QR factorizations of BPS matrices are known via Given's rotations, our Householder-based framework enables adaptive, partial QR factorizations whose computational cost depends solely on the number of upper-triangularized columns rather than the global…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-08-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

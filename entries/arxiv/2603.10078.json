@@ -1,0 +1,22 @@
+{
+  "key": "2603.10078",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.10078",
+  "title": "Stochastic Port-Hamiltonian Neural Networks: Universal Approximation with Passivity Guarantees",
+  "authors": [
+    "Luca Di Persio",
+    "Matthias Ehrhardt",
+    "Youness Outaleb"
+  ],
+  "summary": "Stochastic port-Hamiltonian systems represent open dynamical systems with dissipation, inputs, and stochastic forcing in an energy based form. We introduce stochastic port-Hamiltonian neural networks, SPH-NNs, which parameterize the Hamiltonian with a feedforward network and enforce skew symmetry of the interconnection matrix and positive semidefiniteness of the dissipation matrix. For Itô dynamics we establish a weak passivity inequality in expectation under an explicit generator condition, stated for a stopped process on a compact set. We also prove a universal approximation result showing…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-03-10",
+  "updated": "2026-03-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2602.19963",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.19963",
+  "title": "On the Spectral Properties of Van Leer and AUSM Flux-Vector Splitting Schemes",
+  "authors": [
+    "Zhengrong Xie",
+    "Zheng Li"
+  ],
+  "summary": "The flux-vector splitting scheme of Van Leer is a cornerstone of computational fluid dynamics, yet its original proof of the eigenvalue sign condition was presented in a condensed form. In this work, we provide a detailed and rigorous analysis of the eigenvalues of the Jacobian matrices associated with the Van Leer splitting for the one-dimensional Euler equations. By constructing the Sturm sequence of the discriminant, we prove that for the admissible parameter range $1 \\le γ\\le 3$, $|M| 0$, the Jacobian $\\partial F^+/\\partial U$ has one zero eigenvalue and two positive real eigenvalues,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-23",
+  "updated": "2026-02-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2608.16475",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.16475",
+  "title": "A Two-Stage Learning PINN Approach for Solving the Inverse Problem of the 1D Porous Medium Equation",
+  "authors": [
+    "Noura Al Helwani",
+    "Sophie Moufawad",
+    "Nabil Nassif"
+  ],
+  "summary": "The Porous Medium Equation (PME), given by $u_t = Δ(u^m)$ for $m > 1$, is a degenerate nonlinear parabolic partial differential equation that arises in various physical applications such as fluid flow in porous media, heat transfer in plasmas, and population dynamics. It is known for its nonlinear diffusion and finite propagation speed. In this paper, we study numerical solutions of the one-dimensional direct and inverse PME using Physics-Informed Neural Networks (PINNs), and compare them with classical numerical methods and available analytical and manufactured solutions. While PINNs…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

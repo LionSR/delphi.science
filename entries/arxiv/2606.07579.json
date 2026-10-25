@@ -1,0 +1,21 @@
+{
+  "key": "2606.07579",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.07579",
+  "title": "Exact Boundary Enforcement Along Implicit Geometries for Physics-Informed, Deep Learning Problems in Continuum Mechanics",
+  "authors": [
+    "Cody Rucker",
+    "Brittany A. Erickson"
+  ],
+  "summary": "Solutions to well-posed problems in continuum mechanics are continuously dependent upon prescribed boundary conditions. Because of this, variations in the enforcement of boundary data can impact the reliability of inversion techniques that rely on efficient and accurate forward models. To this end, it is necessary to understand how specific boundary implementation techniques can affect the performance of a given forward model. Our work focuses on the impact that key modeling decisions have on physics-informed neural network (PINN) solutions for initial boundary value problems in continuum…",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "math-ph"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

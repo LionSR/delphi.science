@@ -1,0 +1,20 @@
+{
+  "key": "2606.01232",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.01232",
+  "title": "Residual-Weighted Randomized Jacobi: Sharpened Bounds via Residual Concentration and Asynchronous Extension",
+  "authors": [
+    "Evan Coleman"
+  ],
+  "summary": "We study randomized stationary methods for symmetric positive definite linear systems in which component $j$ is selected with probability proportional to $|r_j|^\\ell$. This power-weighted family interpolates continuously between uniform randomized Jacobi as $\\ell \\to 0$ and Gauss--Southwell greedy relaxation as $\\ell \\to \\infty$. For the central case $\\ell = 2$, we sharpen the standard one-step convergence analysis using the inverse participation ratio (IPR) $ν^2(r) = n\\|r\\|_4^4/\\|r\\|_2^4$, which equals $1$ when the residual is uniform and grows toward $n$ as it concentrates. The resulting…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.DC"
+  ],
+  "published": "2026-05-31",
+  "updated": "2026-05-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

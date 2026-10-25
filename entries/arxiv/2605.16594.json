@@ -1,0 +1,23 @@
+{
+  "key": "2605.16594",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.16594",
+  "title": "fPINN-DeepONet: A Physics-Informed Operator Learning Framework for Multi-term Time-fractional Mixed Diffusion-wave Equations",
+  "authors": [
+    "Binghang Lu",
+    "Zhaopeng Hao",
+    "Christian Moya",
+    "Guang Lin"
+  ],
+  "summary": "In this paper, we develop a physics-informed deep operator learning framework for solving multi-term time-fractional mixed diffusion-wave equations (TFMDWEs). We begin by deriving an $L_2$ approximation, which achieves first-order accuracy for the Caputo fractional derivative of order $β\\in (1,2)$. Building upon this foundation, we propose the fPINN-DeepONet framework, a novel approach that integrates operator learning with the $L_2$ approximation to efficiently solve fractional partial differential equations (FPDEs). Our framework is successfully applied to both fixed and variable…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-05-15",
+  "updated": "2026-05-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

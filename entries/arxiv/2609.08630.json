@@ -1,0 +1,20 @@
+{
+  "key": "2609.08630",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.08630",
+  "title": "A Fully Dual Domain Decomposition Method for Extreme Learning Machines Using GenEO Spectral Coarse Spaces",
+  "authors": [
+    "Chang-Ock Lee",
+    "Byungeun Ryoo"
+  ],
+  "summary": "Extreme learning machines (ELMs) are a class of machine learning algorithms that randomly intialize and subsequently fix the hidden layer parameters, and solve for the last layer coefficients using a least squares method. ELMs have been successfully applied to the solution of various partial differential equations, but the cost of solving large least squares problems limits their use in large scale problems or when high accuracy is desired. To address this limitation, domain decomposition methods (DDMs) have been developed for ELMs, reducing training times via parallel computation. Yet these…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

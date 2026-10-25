@@ -1,0 +1,23 @@
+{
+  "key": "2601.01081",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.01081",
+  "title": "SaddleScape V1.0: A Python Package for Constructing Solution Landscapes via High-index Saddle Dynamics",
+  "authors": [
+    "Yuyang Liu",
+    "Hua Su",
+    "Zixiang Xiao",
+    "Lei Zhang",
+    "Jin Zhao"
+  ],
+  "summary": "We present SaddleScape V1.0, a Python software package designed for the exploration and construction of solution landscapes in complex systems. The package implements the High-index Saddle Dynamics (HiSD) framework and its variants, including the Generalized HiSD for non-gradient systems and the Accelerated HiSD. SaddleScape V1.0 enables the systematic identification of critical points, including both local minima and high-index saddle points, by dynamically updating both the state estimate and an associated subspace characterizing the saddle's local manifold. It supports both gradient…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-03",
+  "updated": "2026-01-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

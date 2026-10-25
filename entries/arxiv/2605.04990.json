@@ -1,0 +1,21 @@
+{
+  "key": "2605.04990",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04990",
+  "title": "Non-Expansive Matrix Based number Systems",
+  "authors": [
+    "Adam Blažek",
+    "Kevin G. Hare",
+    "Edita Pelantová"
+  ],
+  "summary": "An integer $d$-dimensional vector is usually represented by $d$ strings, which express the value of each component separately. This article is devoted to number systems that allow representing integer vectors using a single string of digits. This system is given by an integer square matrix $M$ and a finite set $\\mathcal{D}$ of symbols, called digits. We focus on full number systems, in which every vector $\\vec{x} \\in \\mathbb{Z}^n$ can be written in the form $\\vec{x}=\\sum_{i=0}^{k-1} M^i d_i$ with $d_i \\in \\mathcal{D}$ and thus represented by the string $d_{k-1}d_{k-2}\\cdots d_1d_0$. In…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

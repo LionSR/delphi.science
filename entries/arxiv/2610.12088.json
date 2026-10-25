@@ -1,0 +1,22 @@
+{
+  "key": "2610.12088",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.12088",
+  "title": "A posteriori error estimation for coarse or distorted meshes",
+  "authors": [
+    "Franz Chouly",
+    "Michel Duprez",
+    "Claudio Lobos",
+    "Zuqi Tang"
+  ],
+  "summary": "Finite element simulations carried out on meshes issued from real-world geometries - patient-specific anatomies, scanned industrial parts, fractured media - almost never satisfy the shape-regularity assumptions under which classical a posteriori error analysis is written. Practitioners are therefore left without a quantitative answer to a very legitimate question: how wrong is my simulation when my mesh is coarse and contains badly shaped elements? In this work, we study to which extent equilibrated flux estimators can provide such an answer. Indeed, they deliver a guaranteed and fully…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

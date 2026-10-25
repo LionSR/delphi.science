@@ -1,0 +1,19 @@
+{
+  "key": "2609.38286",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38286",
+  "title": "The Burr-Erdős-Graham-Sós conjecture for the seven-cycle",
+  "authors": [
+    "Asad Shahab"
+  ],
+  "summary": "For a graph $H$, let $f(n,e,H)$ be the least number of colors in an edge-coloring of some $n$-vertex graph with at least $e$ edges in which every copy of $H$ is rainbow. Burr, Erdős, Graham, and Sós conjectured that $f(n,\\lfloor n^2/4\\rfloor+1,C_{2k+1})=(1/8+o(1))n^2$ for every fixed $k\\ge3$, and Bucić, Chen, and Ma recently proved this for all $k\\ge4$. We prove the remaining case $k=3$: \\[ f\\left(n,\\left\\lfloor n^2/4\\right\\rfloor+1,C_7\\right) =\\left(\\frac18+o(1)\\right)n^2. \\] The lower bound rests on a weighted palette inequality, which we prove with an exact rational certificate on five…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

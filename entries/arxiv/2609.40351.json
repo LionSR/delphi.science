@@ -1,0 +1,21 @@
+{
+  "key": "2609.40351",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.40351",
+  "title": "All Unitaries Have Constant Depth Quantum Circuits",
+  "authors": [
+    "Barak Nehoran",
+    "Joseph Slote",
+    "Henry Yuen"
+  ],
+  "summary": "It is well-known that every $n$-qubit unitary can be implemented by a $2^{O(n)}$-depth quantum circuit using single- and two-qubit gates. It has been open whether exponential depth is *necessary* for general unitaries, even when allowing an unlimited number of ancilla qubits. Here we show, perhaps surprisingly, that all unitaries can be implemented exactly by a circuit of one- and two-qubit gates of depth $\\mathsf{poly}(n)$ with $2^{O(n)}$ ancilla qubits. In other words, every $n$-qubit unitary can be parallelized to polynomial depth. In fact, our depth bound is *linear* in $n$, which is the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

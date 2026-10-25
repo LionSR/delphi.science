@@ -1,0 +1,20 @@
+{
+  "key": "2610.25506",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.25506",
+  "title": "A Method for Linearization of Systems of Quadratic Equations",
+  "authors": [
+    "A. A. Pak",
+    "A. S. Pak"
+  ],
+  "summary": "Integrating physical conservation laws into deep neural architectures remains a central SciML challenge. Soft-penalty approaches, including many PINNs, may be sensitive to loss weighting and optimization; generic DEQ and implicit-layer solvers may require instance-dependent iteration counts. We study a norm-linearization scheme for networked systems with linear continuity constraints and nonlinear quadratic or power-law energy balances. We derive sharp universal and finite-$n$ bounds on relative variance and, via the weighted Kantorovich inequality, relate them to worst-case single-step…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-18",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

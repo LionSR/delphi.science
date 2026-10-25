@@ -1,0 +1,21 @@
+{
+  "key": "2609.40231",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.40231",
+  "title": "A Quantum Algorithm for $st$-Transport on Flat Connection Graphs",
+  "authors": [
+    "Stacey Jeffery",
+    "Tobias J. Osborne",
+    "Galina Pass"
+  ],
+  "summary": "We study a generalization of undirected $st$-connectivity to graphs whose edges carry quantum operations. Let $G=(V,E)$ be an undirected graph on $n$ vertices in which each edge $\\{u,v\\}$ is labeled by a unitary $U_{uv}\\in\\mathbb{C}^{k\\times k}$, with $U_{vu}=U_{uv}^\\dagger$. We assume the labels form a \\emph{flat} connection: the ordered product of labels along any path between a pair of vertices $u$ and $v$ is independent of the path. Equivalently, the connection is pure gauge, i.e., gauge-equivalent to the trivial connection; such graphs are exactly the consistent connection graphs of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

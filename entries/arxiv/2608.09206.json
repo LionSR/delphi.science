@@ -1,0 +1,21 @@
+{
+  "key": "2608.09206",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.09206",
+  "title": "A primal--dual interior-point method for nonsymmetric conic optimization with conjugate-free scaling",
+  "authors": [
+    "Rui-Jin Zhang",
+    "Wenhao Fu",
+    "Yu-Hong Dai"
+  ],
+  "summary": "We develop a primal--dual interior-point method for nonsymmetric conic optimization based on a conjugate-free scaling matrix. The scaling is obtained from a single-secant BFGS update of the primal barrier Hessian. In contrast to multi-secant BFGS scalings, it does not require conjugate-barrier derivatives. This feature is important for high-dimensional nonsymmetric cones, where conjugate-barrier derivatives may be unavailable in closed form or expensive to compute. We embed the conjugate-free scaling in a homogeneous self-dual predictor--corrector framework. Using a split central-path…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

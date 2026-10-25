@@ -1,0 +1,22 @@
+{
+  "key": "2604.26413",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26413",
+  "title": "Quantum Gatekeeper: Multi-Factor Context-Bound Image Steganography with VQC Based Key Derivation on Quantum Hardware",
+  "authors": [
+    "Sahil Tomar",
+    "Sandeep Kumar"
+  ],
+  "summary": "This paper presents Quantum Gatekeeper, a context-bound image steganography framework where successful payload recovery depends on both cryptographic decryption and the reconstruction of a precise extraction path. The system integrates lossless least significant bit (LSB) embedding with a deterministic variational quantum circuit (VQC)-derived gate key, multi-factor contextual binding, and authenticated encryption. Payload extraction is contingent upon four requisite factors: a password, a shared secret, a user-supplied context string, and a reference image signature. Any deviation in these…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI",
+    "cs.CR"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

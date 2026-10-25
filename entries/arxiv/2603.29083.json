@@ -1,0 +1,23 @@
+{
+  "key": "2603.29083",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.29083",
+  "title": "Scalable Co-Design via Linear Design Problems: Compositional Theory and Algorithms",
+  "authors": [
+    "Yubo Cai",
+    "Yujun Huang",
+    "Meshal Alharbi",
+    "Gioele Zardini"
+  ],
+  "summary": "Designing complex engineered systems requires managing tightly coupled trade-offs between subsystem capabilities and resource requirements. Monotone co-design provides a compositional language for such problems, but its generality does not by itself reveal which problem classes admit exact and scalable computation. This paper isolates such a class by introducing Linear Design Problems (LDPs): design problems whose feasible functionality--resource relations are polyhedra over Euclidean posets. We show that queries on LDPs reduce exactly to Multi-Objective Linear Programs (MOLPs), thereby…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-03-30",
+  "updated": "2026-03-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

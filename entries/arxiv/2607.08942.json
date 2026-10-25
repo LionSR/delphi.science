@@ -1,0 +1,22 @@
+{
+  "key": "2607.08942",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08942",
+  "title": "Adaptive MPPI with Online Disturbance Covariance Estimation: Provable Stability Tightening via Spatial Smoothing",
+  "authors": [
+    "Hyung-Jin Yoon",
+    "Hunmin Kim"
+  ],
+  "summary": "We study Model Predictive Path Integral (MPPI) control for nonlinear systems with additive process disturbances whose covariance is unknown, spatially varying, and slowly time-varying. A mismatched disturbance covariance produces a persistent penalty in closed-loop stability certificates, while online estimation can reduce this penalty as data are collected. We propose a cell-wise recursive covariance estimator with spatial diffusion and prove a finite-horizon error bound that separates stochastic-approximation error, spatial-smoothing bias, and temporal-drift effects. The diffusion kernel…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-07-09",
+  "updated": "2026-07-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

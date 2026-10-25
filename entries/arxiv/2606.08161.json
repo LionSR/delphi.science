@@ -1,0 +1,26 @@
+{
+  "key": "2606.08161",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.08161",
+  "title": "AttentionCap: Transformer Based Capacitance Matrix Learning Toward Full-Chip Extraction",
+  "authors": [
+    "Jiechen Huang",
+    "Hector R. Rodriguez",
+    "Dingcheng Yang",
+    "Zuochang Ye",
+    "Yibo Lin",
+    "Wenjian Yu"
+  ],
+  "summary": "As capacitance extraction accuracy of rule-based pattern matching becomes difficult to sustain at advanced nodes, a growing trend emerges to develop deep-learning-based 2D capacitance models. However, existing MLP- and CNN-based methods constrain their input to fixed metal-layer combinations in a specific process node, limiting their usability in practice. Recognizing the inherent similarity between capacitance matrix and the prevailing attention mechanism, we propose AttentionCap, a customized Transformer for capacitance matrix learning, with a Gram representation framework, a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AR",
+    "math.NA"
+  ],
+  "published": "2026-06-06",
+  "updated": "2026-06-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

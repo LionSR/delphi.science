@@ -1,0 +1,19 @@
+{
+  "key": "2610.05138",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05138",
+  "title": "Single-call Polyak-Type Extragradient Methods for Monotone Root-Finding Problems",
+  "authors": [
+    "Keke Li"
+  ],
+  "summary": "We propose a single-call variant of Polyak extragradient, termed SPolyakEG, by recycling the previous extrapolation operator evaluation. Under a delayed critical condition, we establish that SPolyakEG achieves an $O(1/K)$ residual convergence rate for monotone operators and linear convergence under strong monotonicity. Compared with PolyakEG, SPolyakEG reduces the number of operator evaluations from two to one per iteration.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

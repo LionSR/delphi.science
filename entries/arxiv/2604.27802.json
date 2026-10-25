@@ -1,0 +1,31 @@
+{
+  "key": "2604.27802",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.27802",
+  "title": "Separating Feasibility and Movement in Solution Discovery: The Case of Path Discovery",
+  "authors": [
+    "Hanno von Bergen",
+    "Larissa Fastenau",
+    "Enna Gerhard",
+    "Nicola Lorenz",
+    "Stephanie Maaz",
+    "Amer E. Mouawad",
+    "Roman Rabinovich",
+    "Nicole Schirrmacher",
+    "Daniel Schmand",
+    "Sebastian Siebertz",
+    "Mai Trinh"
+  ],
+  "summary": "We study solution discovery, where the goal is to obtain a feasible solution to a problem from an initial configuration by a bounded sequence of local moves. In many applications, however, the graph that defines which vertex sets are feasible is not the same as the graph that governs how tokens, agents, or resources may move. Existing models such as token sliding and token jumping typically do not distinguish the problem graph and the movement graph. Motivated by this mismatch, we introduce a directed weighted two-graph model that cleanly separates feasibility from movement. A problem graph…",
+  "domain": "cs.DM",
+  "tags": [
+    "cs.DM",
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-04-30",
+  "updated": "2026-04-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

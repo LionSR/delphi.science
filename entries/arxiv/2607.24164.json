@@ -1,0 +1,21 @@
+{
+  "key": "2607.24164",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.24164",
+  "title": "The KLS constant is $O(\\log^{1/4} n)$",
+  "authors": [
+    "Brayden Letwin"
+  ],
+  "summary": "We confirm the Kannan--Lovász--Simonovits conjecture for quadratic forms: if $X \\sim μ$ is an isotropic log-concave random vector in $\\mathbb{R}^n$, then for any symmetric matrix $M$ one has $$ \\operatorname{Var}_{X \\sim μ}(\\langle MX,X\\rangle) \\leq 2\\,\\mathbb{E}_{X \\sim μ}|\\nabla\\langle MX,X\\rangle|^2. $$ As an application, we apply the above to $M=\\mathbb{E}_{X \\sim μ}(\\langle X,θ\\rangle X\\otimes X)$ for $θ\\in S^{n-1}$ and show that the Kannan--Lovász--Simonovits constant $ψ_n$ satisfies $$ ψ_n\\leq C\\log^{1/4}n $$ for some absolute constant $C>0$.",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.FA",
+    "math.MG"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2604.24283",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.24283",
+  "title": "AutoQResearch: LLM-Guided Closed-Loop Policy Search for Adaptive Variational Quantum Optimization",
+  "authors": [
+    "Monit Sharma",
+    "Hoong Chuin Lau"
+  ],
+  "summary": "Configuring variational quantum algorithms for combinatorial optimization remains a difficult, expert-driven process requiring coordinated choices over solver family, ansatz, objective, and optimizer. We present AutoQResearch, an LLM-guided closed-loop experimentation framework that casts this task as sequential policy search over a curated design space. Instead of a single static configuration, the framework searches for adaptive solver-control policies that condition future decisions on diagnostics such as feasibility, optimality gap, and convergence stagnation. The system operates through…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

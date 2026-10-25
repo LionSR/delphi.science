@@ -1,0 +1,26 @@
+{
+  "key": "2608.26549",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.26549",
+  "title": "Physics-Informed Stochastic Configuration Machine: A Backpropagation-Free Neural Network with Fast Training for Nonlinear Differential Equations",
+  "authors": [
+    "Yuehao Song",
+    "Zhong Chen",
+    "Lihui Cen",
+    "Liang Wu",
+    "Kai Zhang"
+  ],
+  "summary": "While Physics-Informed Neural Networks (PINNs) have emerged as a transformative paradigm for solving complex differential equations, their reliance on backpropagation-based gradient descent and automatic differentiation (AD) imposes significant computational bottlenecks and severe non-convex optimization challenges. To overcome these fundamental limitations, we propose the Physics-Informed Stochastic Configuration Machine (PI-SCM), a novel backpropagation-free framework for both forward and inverse problems in differential equations. The core mathematical contribution lies in the analytical…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.AI",
+    "cs.LG",
+    "eess.SY"
+  ],
+  "published": "2026-08-27",
+  "updated": "2026-08-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

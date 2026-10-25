@@ -1,0 +1,25 @@
+{
+  "key": "2603.17867",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.17867",
+  "title": "RHYME-XT: A Neural Operator for Spatiotemporal Control Systems",
+  "authors": [
+    "Marijn Ruiter",
+    "Miguel Aguiar",
+    "Jake Rap",
+    "Karl H. Johansson",
+    "Amritam Das"
+  ],
+  "summary": "We propose RHYME-XT, an operator-learning framework for surrogate modeling of spatiotemporal control systems governed by input-affine nonlinear partial integro-differential equations (PIDEs) with localized rhythmic behavior. RHYME-XT uses a Galerkin projection to approximate the infinite-dimensional PIDE on a learned finite-dimensional subspace with spatial basis functions parameterized by a neural network. This yields a projected system of ODEs driven by projected inputs. Instead of integrating this non-autonomous system, we directly learn its flow map using an architecture for learning…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-03-18",
+  "updated": "2026-03-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

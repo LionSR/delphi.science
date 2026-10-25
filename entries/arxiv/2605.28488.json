@@ -1,0 +1,24 @@
+{
+  "key": "2605.28488",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.28488",
+  "title": "Bridging Maximum Likelihood and Optimal Transport for Efficient Inference and Model Selection in Stochastic Block Models",
+  "authors": [
+    "Simon Queric",
+    "Cédric Vincent-Cuaz",
+    "Charles Bouveyron",
+    "Marco Corneli"
+  ],
+  "summary": "We study inference in stochastic block models (SBMs) through the lens of optimal transport (OT). We first establish that maximum likelihood variational inference (MLVI) can be interpreted as a semi-relaxed Gromov-Wasserstein (srGW) projection with entropic regularization. While this formulation yields accurate clustering, the entropic regularization prevents transport plans to be sparse, hindering intrinsic model selection. Consequently, we investigate unregularized srGW estimators, and prove that they consistently recover both the SBM connectivity matrix and latent cluster assignments in…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-05-27",
+  "updated": "2026-05-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

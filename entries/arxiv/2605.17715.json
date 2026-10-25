@@ -1,0 +1,22 @@
+{
+  "key": "2605.17715",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.17715",
+  "title": "Observer-Based Stabilization for Linear Multi-Agent Dynamical Systems Using Generalized Frequency Variables",
+  "authors": [
+    "G. Q. Bao Tran",
+    "Yutaka Hori",
+    "Shinji Hara"
+  ],
+  "summary": "We address the conditions and design of controllers and observers for homogeneous networks of linear MIMO agents. We develop networked controllers and observers that ensure the stability of both the system state and the estimation error, leveraging the concept of generalized frequency variables. A separation principle for networks is then established, showing that the observer and controller can be designed independently and combined to achieve a stable output feedback. Our results are illustrated via a highly unstable, oscillatory network of locally actuated pendulums on carts. Finally,…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.DS"
+  ],
+  "published": "2026-05-18",
+  "updated": "2026-05-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,32 @@
+{
+  "key": "2609.34272",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.34272",
+  "title": "Broken Symmetry in BF16 Attention: Why FlashAttention Gradients Blow Up Late in Training",
+  "authors": [
+    "Junlin Chen",
+    "Daize Dong",
+    "Huanwei Di",
+    "Haolong Jia",
+    "Jiawei Wu",
+    "Haotian Xie",
+    "Mingkai Zheng",
+    "Yang Li",
+    "Leshang Chen",
+    "Huishu Wang",
+    "Eric P. Xing",
+    "Hongyi Wang"
+  ],
+  "summary": "BF16 is now standard in large-scale pretraining, including in fused attention kernels such as FlashAttention, and these kernels are widely trusted. When we used FlashAttention-3 to pretrain a 450M-parameter transformer on 50B tokens, however, we ran into a problem: training was healthy for 25B tokens, then the gradient norm grew a thousandfold and the loss ended 0.2 nats above FP32 attention, without a single NaN. Recomputing the attention backward of just two layers in FP32 removes almost all of the excess gradient. Part of the cause is known: a fused multiply-add in the forward softmax, so…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.DC",
+    "math.NA"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

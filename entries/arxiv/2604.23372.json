@@ -1,0 +1,27 @@
+{
+  "key": "2604.23372",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23372",
+  "title": "Physics-Informed Temporal U-Net for High-Fidelity Fluid Interpolation",
+  "authors": [
+    "Eshwar R. A.",
+    "Nevin Mathew Thomas",
+    "Nehal G",
+    "Farida M. Begam"
+  ],
+  "summary": "Reconstructing high-fidelity fluid dynamics from sparse temporal observations is quite challenging, mainly due to the chaotic and non-linear nature of fluid transport. Standard deep learning-based interpolation methods often tend to regress to the mean, which results in spatial blurring and temporal strobing, especially noticeable around the observed anchor frames where transitions become discontinuous. In this work, we propose a novel Temporal U-Net architecture that integrates a VGG-based perceptual loss along with a Physics-Informed Bridge to overcome these issues. By introducing…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "cs.CV",
+    "cs.LG",
+    "math.DS",
+    "nlin.CD",
+    "physics.data-an"
+  ],
+  "published": "2026-04-25",
+  "updated": "2026-04-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

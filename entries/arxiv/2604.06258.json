@@ -1,0 +1,22 @@
+{
+  "key": "2604.06258",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.06258",
+  "title": "Accurate Residues for Floating-Point Debugging",
+  "authors": [
+    "Yumeng He",
+    "Pavel Panchekha"
+  ],
+  "summary": "Floating-point arithmetic is error-prone and unintuitive. Floating-point debuggers instrument programs to monitor floating-point arithmetic at run time and flag numerical issues. They estimate residues, i.e., the difference between actual floating-point and ideal real values, for every floating-point value in the program. Prior work explores various approaches for computing these residues accurately and efficiently. Unfortunately, the most efficient methods, based on \"error-free transformations\", have a high rate of false reports, while the most accurate methods, based on high-precision…",
+  "domain": "cs.MS",
+  "tags": [
+    "cs.MS",
+    "cs.PL",
+    "math.NA"
+  ],
+  "published": "2026-04-06",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

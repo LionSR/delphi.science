@@ -1,0 +1,23 @@
+{
+  "key": "2609.07304",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07304",
+  "title": "A simple algorithm for computing Hamilton paths on independent set polytopes",
+  "authors": [
+    "Jean Cardinal",
+    "Pia Herkenrath",
+    "Torsten Mütze",
+    "Francesco Verciani"
+  ],
+  "summary": "The independent set polytope, or stable set polytope, of a graph $G$ is the 0/1-polytope defined by the convex hull of the characteristic vectors of all independent sets of $G$. We present a simple algorithm for computing a Hamilton path on the independent set polytope of a given $n$-vertex graph $G$ with amortized delay $\\mathcal{O}(n)$. The independent sets are listed such that two consecutive sets differ either in removing a vertex, or adding a vertex and removing its neighbors from the independent set, i.e., the symmetric difference between two consecutive independent sets induces a star…",
+  "domain": "cs.DM",
+  "tags": [
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

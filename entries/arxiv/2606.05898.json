@@ -1,0 +1,22 @@
+{
+  "key": "2606.05898",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.05898",
+  "title": "Designing Zero-Mean Feature Functions for Multimodal Distributions",
+  "authors": [
+    "Hiroshi Yamashita",
+    "Hideyuki Suzuki"
+  ],
+  "summary": "To improve the accuracy of Monte Carlo estimation of expectations, a set of zero-mean feature functions, known as control variates, can be used. They can be used as feature functions for linear regression of the target function, and we can obtain an unbiased and variance-reduced estimate using its residual. One known way to construct such functions is a method using an equality called Stein's identity, but these functions are not sufficient for the case where the target distribution is multimodal. We propose a different approach to constructing these zero-mean functions based on distribution…",
+  "domain": "stat.CO",
+  "tags": [
+    "stat.CO",
+    "math.ST",
+    "nlin.AO"
+  ],
+  "published": "2026-06-04",
+  "updated": "2026-06-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2606.13482",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.13482",
+  "title": "A Stabilized Multilevel B-Spline-Based Fast Integral Method for the Solution of the Electric Field Integral Equation",
+  "authors": [
+    "Danijel Jukić",
+    "Bernd Hofmann",
+    "Thomas F. Eibert",
+    "Simon B. Adrian"
+  ],
+  "summary": "We present a multilevel B-spline-based fast integral method for the solution of the electric field integral equation (EFIE), combining fast Fourier transformation (FFT)-compatible kernel interpolation with robust high-order interpolation. Existing FFT-accelerated global Lagrange-based approaches rely on equidistant interpolation points and can, therefore, suffer from Runge-type instabilities at high interpolation orders, limiting robust high-accuracy compression. In contrast, B-splines on equidistant knot vectors overcome these instabilities and enable robust high-order interpolation for…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

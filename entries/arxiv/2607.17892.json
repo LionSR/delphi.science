@@ -1,0 +1,22 @@
+{
+  "key": "2607.17892",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.17892",
+  "title": "Thermal management optimization of Battery Electric Vehicles via hierarchical NMPC with CMO-trained Neural Models",
+  "authors": [
+    "Francesco Ripa",
+    "Diego Regruto",
+    "Pasquale Ceres",
+    "Christopher Strano"
+  ],
+  "summary": "This paper addresses the problem of energy-efficient thermal management in Battery Electric Vehicles (BEVs), with the goal of extending driving range while ensuring passenger comfort and battery thermal safety. A hierarchical Nonlinear Model Predictive Control (NMPC) framework is proposed, in which the supervisory layer explicitly balances energy consumption and cabin temperature reference tracking over a long horizon and translates this trade-off into optimal actuator command sequences for the integrated heating, ventilation, and air conditioning (HVAC) system and the battery thermal…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-20",
+  "updated": "2026-07-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

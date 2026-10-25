@@ -1,0 +1,20 @@
+{
+  "key": "2603.19032",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.19032",
+  "title": "A heavy-ball type curve search method for smooth convexly constrained optimization",
+  "authors": [
+    "Federica Donnini",
+    "Pierluigi Mansueto"
+  ],
+  "summary": "This paper addresses smooth convexly constrained optimization problems where the Euclidean projection onto the feasible set is computationally tractable. Although momentum techniques like Polyak's heavy-ball are known for accelerating optimization algorithms, their use in constrained settings remains limited due to challenges in preserving feasibility and ensuring convergence. We thus propose a heavy-ball-type method that extends to the constrained case a recently introduced curve-search globalization framework. The method attempts a momentum update and performs a curvilinear search to…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-19",
+  "updated": "2026-03-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

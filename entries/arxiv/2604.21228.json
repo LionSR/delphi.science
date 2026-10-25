@@ -1,0 +1,19 @@
+{
+  "key": "2604.21228",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.21228",
+  "title": "Lean-certified four-point HRT results for three lattice points and one off-lattice point",
+  "authors": [
+    "Vignon Oussa"
+  ],
+  "summary": "We record a Lean-certified theorem package for the four-point Heil--Ramanathan--Topiwala configuration \\[ Λ=\\{0,a,b,ν\\}\\subset \\R^2, \\qquad \\Lzero=\\Z a+\\Z b, \\qquad ν=r a+s b, \\] with $a$ and $b$ linearly independent. The principal certified theorem states that if $|\\symp(a,b)|>1$ and $1,r,s$ are linearly independent over $\\Q$, then for every nonzero $f\\in L^2(\\R)$ the four vectors \\[ f,\\qquad π(a)f,\\qquad π(b)f,\\qquad π(ν)f \\] are linearly independent. A second certified theorem treats the rational-coordinate case $r,s\\in \\Q$, where the configuration lies in a finer full-rank lattice and…",
+  "domain": "math.FA",
+  "tags": [
+    "math.FA"
+  ],
+  "published": "2026-04-23",
+  "updated": "2026-04-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

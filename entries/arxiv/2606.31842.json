@@ -1,0 +1,21 @@
+{
+  "key": "2606.31842",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.31842",
+  "title": "Numerical Study of Eigenvector Deflation to Accelerate the WaveHoltz Method",
+  "authors": [
+    "Daniel Appelo",
+    "William D. Henshaw",
+    "Zhichao Peng"
+  ],
+  "summary": "We present a numerical study of eigenvector deflation as a means of accelerating the WaveHoltz method for solving the Helmholtz equation. For energy-conserving (Dirichlet or Neumann) boundary conditions the WaveHoltz fixed-point iteration converges slowly at high frequency, requiring approximately $\\mathcal{O}(ω^{2d})$ iterations in $d$ dimensions. We show that deflating the eigenvectors whose eigenvalues lie nearest the driving frequency substantially reduces iteration counts, and we examine two ways of incorporating the eigenvectors: direct eigenvector deflation (DEVD), in which the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-30",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

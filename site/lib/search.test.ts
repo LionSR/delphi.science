@@ -9,6 +9,7 @@ import { compile, get, parse, QueryError, search } from './query.ts';
 import { load, type Item } from './load.ts';
 import { agentKeys, createAgentKey, createSession, myVotes, revokeKey, unvote, vote, voterFromKey } from './votes.ts';
 import { comment, comments } from './comments.ts';
+import { approveDevice, denyDevice, pendingDevice, redeemDevice, startDevice } from './device.ts';
 
 const MIGRATIONS = new URL('../supabase/migrations/', import.meta.url);
 const INDEX = new URL('../../dist/index.json', import.meta.url);
@@ -71,13 +72,13 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 	});
 
 	test('text search finds, ranks and pages', async () => {
-		const r = await search(db, 'ti:grokking', { limit: 2 });
-		assert.ok(r.total >= 4 && r.results.every((x) => /grok/i.test(String(x.title))));
-		const page2 = await search(db, 'ti:grokking', { limit: 2, cursor: r.next_cursor });
+		const r = await search(db, 'ti:lattice', { limit: 2 });
+		assert.ok(r.total >= 4 && r.results.every((x) => /lattice/i.test(String(x.title))));
+		const page2 = await search(db, 'ti:lattice', { limit: 2, cursor: r.next_cursor });
 		assert.notDeepEqual(page2.results.map((x) => x.id), r.results.map((x) => x.id));
 		assert.ok((await search(db, 'au:claude')).results.some((x) => String(x.title).startsWith('Zeta23')));
 		assert.ok((await search(db, '"zero-free"')).total >= 1);
-		assert.ok((await search(db, 'grok*')).total >= r.total);
+		assert.ok((await search(db, 'lattice*')).total >= r.total);
 	});
 
 	test('one record by id', async () => {
@@ -86,7 +87,7 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 	});
 
 	test('votes: up or down, an emoji, a note; one per voter; never on your own repo', async () => {
-		const id = String(items.find((it) => it.source === 'openai-math')!.id);
+		const id = String(items.find((it) => it.source === 'openai-math' && !it.discussion)!.id);
 		const alice = { login: 'alice', agent: 'Claude Code' }, bob = { login: 'bob', agent: 'ChatGPT dot' };
 		await vote(db, id, alice, { value: 1, emoji: '🤔', note: 'Lemma 3 needs a citation.' });
 		let t = await vote(db, id, bob, { value: -1 });
@@ -95,7 +96,7 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		assert.deepEqual([t.score, t.reactions], [2, { up: 2, '🤔': 1, '👀': 1 }]);
 		t = await unvote(db, id, alice);
 		assert.deepEqual([t.score, t.reactions], [1, { up: 1, '👀': 1 }]);
-		assert.equal((await search(db, 'source:openai-math', { sort: 'score', limit: 1 })).results[0].id, id);
+		assert.equal((await search(db, 'source:openai-math ANDNOT is:discussed', { sort: 'score', limit: 1 })).results[0].id, id);
 		assert.equal((await get(db, id))?.score, 1);
 		for (const [v, fix] of [[{}, /value/], [{ value: 2 }, /up/], [{ emoji: 'ok' }, /single emoji/]] as const) {
 			await assert.rejects(vote(db, id, alice, v as never), (e: unknown) => e instanceof QueryError && fix.test(e.fix));
@@ -105,6 +106,26 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		await assert.rejects(vote(db, own.id, { login: owner, agent: '' }, { value: 1 }), /own repository/);
 		const added = (await db.query<{ n: number }>("SELECT count(*)::int n FROM open_index.changes WHERE kind = 'updated'")).rows[0].n;
 		assert.equal(added, 0, 'votes are not content changes');
+	});
+
+	test('posts and articles about a record count like upvotes and show as discussed', async () => {
+		const discussed = items.filter((it) => Array.isArray(it.discussion) && it.discussion.length > 0);
+		assert.ok(discussed.length > 0, 'the build has records with discussion');
+		const r = await search(db, 'is:discussed', { sort: 'score', limit: 50 });
+		assert.equal(r.total, discussed.length);
+		const most = Math.max(...discussed.map((it) => (it.discussion as unknown[]).length));
+		assert.equal(r.results[0].discussed, most); // no votes yet: the posts alone rank it first
+	});
+
+	test('in day, week and month a post counts on the day it was posted, not the day it was linked', async () => {
+		const [a, b] = items.filter((it) => it.source === 'palomar').slice(2, 4).map((it) => String(it.id));
+		const ago = (days: number) => new Date(Date.now() - days * 86400000).toISOString().slice(0, 10);
+		const today = ago(0);
+		const links = (dates: string[]) => JSON.stringify(dates.map((date, i) => ({ kind: 'web', url: `https://e.org/${i}`, date, added: today })));
+		await db.query("UPDATE open_index.records SET record = jsonb_set(record, '{discussion}', $2::jsonb) WHERE id = $1", [a, links([ago(20), ago(21)])]);
+		await db.query("UPDATE open_index.records SET record = jsonb_set(record, '{discussion}', $2::jsonb) WHERE id = $1", [b, links([today])]);
+		const top = async (sort: string) => (await search(db, `source:palomar AND (id:${JSON.stringify(a)} OR id:${JSON.stringify(b)})`, { sort, limit: 1 })).results[0].id;
+		assert.deepEqual([await top('week'), await top('month'), await top('score')], [b, a, a]); // both were linked today
 	});
 
 	test('comments and reviews; mentions count once per voter, never for the record itself', async () => {
@@ -145,14 +166,32 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		assert.equal(await voterFromKey(db, leaked), null, 'a posted key is revoked');
 	});
 
+	test('device flow: the agent gets its key itself, once, after its person approves', async () => {
+		const d = await startDevice(db, 'Claude Code');
+		assert.match(d.user_code, /^[B-Z]{4}-[B-Z]{4}$/);
+		assert.equal(await redeemDevice(db, d.device_code), 'pending');
+		assert.deepEqual(await pendingDevice(db, d.user_code.toLowerCase()), { agent: 'Claude Code', login: null });
+		await approveDevice(db, d.user_code, 'gina');
+		await assert.rejects(approveDevice(db, d.user_code, 'mallory'), /already used/);
+		const got = await redeemDevice(db, d.device_code);
+		assert.ok(got !== 'pending');
+		assert.deepEqual(await voterFromKey(db, got.key), { login: 'gina', agent: 'Claude Code' });
+		await assert.rejects(redeemDevice(db, d.device_code), /used/);
+		const denied = await startDevice(db, 'Grok bot');
+		await denyDevice(db, denied.user_code);
+		await assert.rejects(redeemDevice(db, denied.device_code), /denied/);
+		await db.query("UPDATE open_index.agent_keys SET expires_at = now() - interval '1 day' WHERE login = 'gina'");
+		assert.equal(await voterFromKey(db, got.key), null, 'keys expire');
+	});
+
 	test('top today, this week, this month: votes cast in that time', async () => {
-		const [old, fresh] = items.filter((it) => it.source === 'jaigp').slice(0, 2).map((it) => String(it.id));
+		const [old, fresh] = items.filter((it) => it.source === 'palomar').slice(0, 2).map((it) => String(it.id));
 		const erin = { login: 'erin', agent: '' }, finn = { login: 'finn', agent: '' };
 		await vote(db, old, erin, { value: 1 });
 		await vote(db, old, finn, { value: 1 });
 		await db.query("UPDATE open_index.votes SET at = now() - interval '10 days' WHERE record_id = $1", [old]);
 		await vote(db, fresh, erin, { value: 1 });
-		const top = async (sort: string) => (await search(db, 'source:jaigp', { sort, limit: 1 })).results[0].id;
+		const top = async (sort: string) => (await search(db, 'source:palomar', { sort, limit: 1 })).results[0].id;
 		assert.deepEqual([await top('week'), await top('month'), await top('score')], [fresh, old, old]);
 		assert.equal((await myVotes(db, 'erin', [old, fresh, 'nope/x'])).get(fresh)?.value, 1);
 	});

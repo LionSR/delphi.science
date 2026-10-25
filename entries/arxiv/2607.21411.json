@@ -1,0 +1,22 @@
+{
+  "key": "2607.21411",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.21411",
+  "title": "QSTAR: Quantum Selective Transfer with Adaptive Routing",
+  "authors": [
+    "Saim Rehman",
+    "Nouhaila Innan",
+    "Muhammad Shafique"
+  ],
+  "summary": "Quantum transfer learning (QTL) is often evaluated by replacing a classical classifier with a fixed variational quantum head, but this hides a key question: when is the quantum branch actually useful? We propose QSTAR: Quantum Selective Transfer with Adaptive Routing, a selective QTL framework that keeps high-confidence classical predictions and routes only low-confidence samples to a fallback branch. Using a frozen ResNet18 backbone on Fashion-MNIST, we compare manually designed QTL heads, KetGPT-designed quantum heads, and parameter-matched classical baselines under a common data split and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-07-23",
+  "updated": "2026-07-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

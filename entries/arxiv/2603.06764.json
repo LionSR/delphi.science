@@ -1,0 +1,20 @@
+{
+  "key": "2603.06764",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.06764",
+  "title": "Efficient Classical Simulation of Low-Rank-Width Quantum Circuits Using ZX-Calculus",
+  "authors": [
+    "Fedor Kuyanov",
+    "Aleks Kissinger"
+  ],
+  "summary": "In this paper, we introduce a technique for contracting (i.e. numerically evaluating) ZX-diagrams whose complexity scales with their rank-width, a graph parameter that behaves nicely under ZX rewrite rules. Given a rank-decomposition of width $R$, our method simulates a graph-like ZX-diagram in $Õ(4^R)$ time. Applied to classical simulation of quantum circuits, it is no slower than either naive state vector simulation or stabiliser decompositions with $α= 0.5$, and in practice can be significantly faster for suitably chosen rank-decompositions. Since finding optimal rank-decompositions is…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-06",
+  "updated": "2026-03-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

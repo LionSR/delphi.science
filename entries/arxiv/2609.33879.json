@@ -1,0 +1,24 @@
+{
+  "key": "2609.33879",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.33879",
+  "title": "DCEmbed: Scalable Optimization over Neural Surrogates",
+  "authors": [
+    "Akshay Sreekumar",
+    "Nicolas Christianson",
+    "Priya L. Donti",
+    "Ellen Vitercik",
+    "Ram Rajagopal"
+  ],
+  "summary": "Neural surrogates can accelerate large-scale optimization by replacing expensive or intractable model components with efficient learned approximations, but solving the resulting embedded problems can remain prohibitively costly. For instance, standard exact encodings of neural networks with ReLU activations allow the problem to be solved by mixed-integer solvers, but add large numbers of binary variables to accommodate the nonlinearity of the activations, which can render the problem computationally prohibitive. To address this, we propose DCEmbed, a heuristic for optimization problems with…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-09-27",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

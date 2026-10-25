@@ -1,0 +1,20 @@
+{
+  "key": "2609.10201",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10201",
+  "title": "Distributed Vector Assembly via Selector-Anchored Diffusion with Local Innovation",
+  "authors": [
+    "Diana Vieira Fernandes",
+    "Carlos Santos Silva"
+  ],
+  "summary": "We introduce Selector-Anchored Diffusion with Local Innovation (D+LI), a distributed vector-assembly primitive that constructs complete local replicas from independently owned authoritative blocks. Orthogonal selectors preserve block identity, local innovation anchors each owner's contribution, and Laplacian diffusion propagates these contributions across the network. We show that pure averaging with raw additive selector sources cannot isolate this replica. The D+LI error operator decomposes coordinatewise as the identity minus an owner-grounded Laplacian, yielding global contraction with a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

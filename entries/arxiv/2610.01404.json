@@ -1,0 +1,21 @@
+{
+  "key": "2610.01404",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01404",
+  "title": "Constant-Modulus Optimization for Quadratic K-Medoids Graph Clustering",
+  "authors": [
+    "Yutong Zheng",
+    "Qingna Li",
+    "Wenshun Teng"
+  ],
+  "summary": "Graph clustering aims to partition the vertices of a graph into groups with dense intra-cluster connections and sparse inter-cluster connections. In this paper, we study a quadratic $K$-medoids formulation for graph clustering from the perspective of CM optimization. By identifying the binary feasible set as a discrete CM set, we establish a connection between the quadratic $K$-medoids model and CM optimization. Rather than solving the original binary problem directly, we consider the convex hull of its feasible set and introduce a negative squared-norm penalty to promote extreme-point…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

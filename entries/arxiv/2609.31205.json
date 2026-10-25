@@ -1,0 +1,22 @@
+{
+  "key": "2609.31205",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.31205",
+  "title": "Complexity, approximation, and extension of proper $\\{a,b\\}$-edge-weightings",
+  "authors": [
+    "Péter Madarasi",
+    "Máté Simon"
+  ],
+  "summary": "For distinct integers $a$ and $b$, an $\\{a,b\\}$-edge-weighting assigns $a$ or $b$ to each edge and labels each vertex by the sum of its incident weights. Such a weighting is proper if adjacent vertices receive distinct labels. We prove that, for every fixed pair of distinct integers, deciding whether a proper weighting exists is NP-complete even for simple cubic planar graphs. On planar multigraphs with $m$ edges, we give an exact $2^{O(\\sqrt m)}$-time algorithm and, assuming the Exponential Time Hypothesis (ETH), exclude $2^{o(\\sqrt m)}$-time algorithms even for simple cubic planar graphs.…",
+  "domain": "cs.DM",
+  "tags": [
+    "cs.DM",
+    "cs.CC",
+    "math.CO"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

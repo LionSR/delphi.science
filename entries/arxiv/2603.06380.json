@@ -1,0 +1,23 @@
+{
+  "key": "2603.06380",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.06380",
+  "title": "Kinetic-based regularization: Learning spatial derivatives and PDE applications",
+  "authors": [
+    "Abhisek Ganguly",
+    "Santosh Ansumali",
+    "Sauro Succi"
+  ],
+  "summary": "Accurate estimation of spatial derivatives from discrete and noisy data is central to scientific machine learning and numerical solutions of PDEs. We extend kinetic-based regularization (KBR), a localized multidimensional kernel regression method with a single trainable parameter, to learn spatial derivatives with provable second-order accuracy in 1D. Two derivative-learning schemes are proposed: an explicit scheme based on the closed-form prediction expressions, and an implicit scheme that solves a perturbed linear system at the points of interest. The fully localized formulation enables…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "published": "2026-03-06",
+  "updated": "2026-03-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

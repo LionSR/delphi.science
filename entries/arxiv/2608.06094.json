@@ -1,0 +1,23 @@
+{
+  "key": "2608.06094",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.06094",
+  "title": "Time-Dependent Hamiltonian Simulation with Optimal Query Complexity",
+  "authors": [
+    "Boyang Chen",
+    "Minbo Gao",
+    "Xinzhao Wang",
+    "Shuo Zhou"
+  ],
+  "summary": "We give a query-optimal algorithm for simulating a general $n$-qubit time-dependent Hamiltonian $H(t)$ on $[0,T]$, assuming that $H$ is Lipschitz continuous and $\\|H(t)\\|\\leqα$. In the standard $\\mathrm{HAM\\mbox{-}T}$ access model, the algorithm approximates the time-ordered propagator $U_H(T)$ to error $\\varepsilon$ using $$ O\\left( αT+\\frac{\\log(1/\\varepsilon)} {\\log(e+\\log(1/\\varepsilon)/(αT))} \\right) $$ $\\mathrm{HAM\\mbox{-}T}$ queries. This matches the known query lower bound for time-independent Hamiltonians, showing that time dependence incurs no asymptotic query overhead. Our method…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS"
+  ],
+  "published": "2026-08-06",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

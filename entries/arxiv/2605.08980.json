@@ -1,0 +1,25 @@
+{
+  "key": "2605.08980",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.08980",
+  "title": "Muon Does Not Converge on Convex Lipschitz Functions",
+  "authors": [
+    "Tetiana Parshakova",
+    "Ahmed Khaled",
+    "Michael Crawshaw",
+    "Guillaume Garrigos",
+    "Robert M. Gower"
+  ],
+  "summary": "Muon and its variants have shown strong empirical performance in a variety of deep learning tasks. Existing convergence analyses of Muon rely on smoothness assumptions, though arguably the most successful function class for developing deep learning methods (such as AdaGrad, Shampoo, Schedule-Free and more) has been the class of convex and Lipschitz functions. In this paper we question whether the classical convex Lipschitz model is a useful one for understanding Muon. Our answer is no. We show that Muon does not converge on the class of convex and Lipschitz functions, regardless of the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-05-09",
+  "updated": "2026-05-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2603.10272",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.10272",
+  "title": "An operator-level ARCH Model",
+  "authors": [
+    "Alexander Aue",
+    "Sebastian Kühnert",
+    "Gregory Rice",
+    "Jeremy VanderDoes"
+  ],
+  "summary": "AutoRegressive Conditional Heteroscedasticity (ARCH) models are standard for modeling time series exhibiting volatility, with a rich literature in univariate and multivariate settings. In recent years, these models have been extended to function spaces. However, functional ARCH and generalized ARCH (GARCH) processes established in the literature have thus far been restricted to model ``pointwise'' variances. In this paper, we propose a new ARCH framework for data residing in general separable Hilbert spaces that accounts for the full evolution of the conditional covariance operator. We…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "econ.EM",
+    "math.ST",
+    "q-fin.ST"
+  ],
+  "published": "2026-03-10",
+  "updated": "2026-03-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

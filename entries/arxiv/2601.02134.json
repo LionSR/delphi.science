@@ -1,0 +1,20 @@
+{
+  "key": "2601.02134",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.02134",
+  "title": "Complexity of quadratic penalty methods with adaptive accuracy under a PL condition for the constraints",
+  "authors": [
+    "Florentin Goyens",
+    "Geovani N. Grapiglia"
+  ],
+  "summary": "We study the quadratic penalty method (QPM) for smooth nonconvex optimization problems with equality constraints. Assuming the constraint violation satisfies the PL condition near the feasible set, we derive sharper worst-case complexity bounds for obtaining approximate first-order KKT points. When the objective and constraints are twice continuously differentiable, we show that QPM equipped with a suitable first-order inner solver requires at most $O(\\varepsilon_{0}^{-1}\\varepsilon_{1}^{-2})$ first-order oracle calls to find an $(\\varepsilon_{0},\\varepsilon_{1})$-approximate KKT point --…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-05",
+  "updated": "2026-01-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

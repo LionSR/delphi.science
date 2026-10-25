@@ -1,0 +1,21 @@
+{
+  "key": "2605.11073",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11073",
+  "title": "Quantum Fanout Gates in Constant Depth via Resonance Engineering",
+  "authors": [
+    "Johannes Alexander Jaeger",
+    "Elias Zapusek",
+    "Florentin Reiter"
+  ],
+  "summary": "We present a novel implementation of an n-qubit fanout gate using resonance engineering. Our proposed mechanism uses Jaynes-Cummings interactions between multiple qubits and a common harmonic oscillator to realize a fanout gate at the system-level. Our theoretical analysis establishes upper bounds on the gate error, demonstrating linear infidelity scaling in constant time -- a favorable trade-off compared to a conventional CNOT decomposition. To validate the performance of our scheme at large system sizes, we exploit permutation symmetry to reduce the simulation complexity from exponential…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

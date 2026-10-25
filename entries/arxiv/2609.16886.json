@@ -1,0 +1,19 @@
+{
+  "key": "2609.16886",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.16886",
+  "title": "Static output-feedback stabilization is NP-hard",
+  "authors": [
+    "Johan Löfberg"
+  ],
+  "summary": "We prove that unrestricted static output-feedback stabilization is NP-hard, already in the single-input multiple-output case. More precisely, we give a polynomial-time many-one reduction from the NP-complete Betweenness problem. Given an instance with $n$ elements and $m$ betweenness constraints, the reduction constructs integer matrices $A\\in\\mathbb Z^{D\\times D}$, $B\\in\\mathbb Z^{D\\times1}$, and $C\\in\\mathbb Z^{n\\times D}$ such that the instance is satisfiable if and only if there exists an unrestricted real row vector $K\\in\\mathbb{R}^{1\\times n}$ for which $A+BKC$ is Hurwitz. The state…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

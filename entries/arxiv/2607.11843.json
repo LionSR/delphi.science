@@ -1,0 +1,25 @@
+{
+  "key": "2607.11843",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.11843",
+  "title": "Input-Aware Dynamic Backdoor Attack Against Quantum Neural Networks",
+  "authors": [
+    "Junrui Zhang",
+    "Zemin Chen",
+    "Lusi Li",
+    "Mohammad Ghasemigol",
+    "Daniel Takabi",
+    "Rui Ning"
+  ],
+  "summary": "Quantum Neural Networks (QNNs) are a promising framework for quantum machine learning on near-term quantum devices, but their security risks remain insufficiently understood. Studies have shown that QNNs are vulnerable to backdoor attacks, yet existing quantum backdoors mostly rely on a fixed trigger shared by all poisoned inputs. This fixed-trigger design is a major weakness because many defenses detect or weaken the repeated patterns such triggers leave in data representations. Although input-aware dynamic backdoors have been studied in classical neural networks, transferring them to QNNs…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

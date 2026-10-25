@@ -1,0 +1,20 @@
+{
+  "key": "2608.22129",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.22129",
+  "title": "Blockwise Stabilized Adaptive Cubic Regularization with Subsolvers via Recurrence",
+  "authors": [
+    "Rodion Podorozhny"
+  ],
+  "summary": "Overparameterized networks often have ill-conditioned, saddle rich loss landscapes. They are usually trained with first-order methods that struggle on those landscapes, while many second-order methods stay infeasible at scale. Some scalable cubic methods replace the Hessian by a computationally cheap approximation and drop the exact block curvature. This paper introduces ARC-block, a blockwise adaptive regularization with cubics (ARC) optimizer. For each parameter tensor it minimizes a cubic model over the true block Hessian, with a per-block adaptive cubic constant and a monotone guard on…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-08-22",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2607.03355",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.03355",
+  "title": "Amortized low-rank approximation for hyperparameter marginalization in PDE-governed Bayesian inverse problems",
+  "authors": [
+    "Sonia Reilly",
+    "Georg Stadler"
+  ],
+  "summary": "This paper addresses the efficient solution of hierarchical Bayesian inverse problems with a high- or infinite-dimensional parameter field and a moderate number of hyperparameters. We focus on a class of problems in which the parameter-to-observable mapping is a linear PDE, so that, for fixed hyperparameters, the problem becomes conditionally Gaussian. Marginalizing the hyperparameters entails repeated evaluation of their marginal density, which in turn entails repeated large-scale log-determinant ratio computations and maximum a posteriori (MAP) estimations. To address these computational…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-07-03",
+  "updated": "2026-07-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

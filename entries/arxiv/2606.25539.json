@@ -1,0 +1,21 @@
+{
+  "key": "2606.25539",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.25539",
+  "title": "An example of Ensemble Kalman Filter with resampling",
+  "authors": [
+    "Sylvain Rubenthaler"
+  ],
+  "summary": "This paper introduces the Exact Ensemble Kalman Filter (ExEnKF), a novel algorithm for state estimation in discrete-time nonlinear filtering problems with linear observations. Unlike traditional Ensemble Kalman Filters (EnKFs), which approximate the filtering distribution using ensembles of Dirac measures, the ExEnKF employs Gaussian measures, enabling more efficient exploration of the state space and potentially alleviating the curse of dimensionality. We prove the algorithm's asymptotic consistency with the optimal filter (Theorem 3.1), establishing a convergence rate of order 1/ $\\sqrt$ N…",
+  "domain": "stat.CO",
+  "tags": [
+    "stat.CO",
+    "math.PR",
+    "stat.ME"
+  ],
+  "published": "2026-06-24",
+  "updated": "2026-06-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

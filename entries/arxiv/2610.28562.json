@@ -1,0 +1,25 @@
+{
+  "key": "2610.28562",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.28562",
+  "title": "OptScientist: Automated Discovery of Optimization Laws",
+  "authors": [
+    "Ma ZhenYao",
+    "Yue Liang",
+    "Jian-Qiao Zhu"
+  ],
+  "summary": "Many scientific phenomena are best understood as outcomes of underlying optimization problems, yet automated scientific discovery has largely focused on recovering equations that describe observed input-output patterns. We introduce OptScientist, a novel automated framework for discovering compact symbolic optimization laws directly from data. OptScientist comprises (i) a model that infers symbolic optimization problems by first learning to represent data as an optimization problem and then extracting its symbolic form, and (ii) an LLM agentic system embedding the model in a discovery…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.LG",
+    "cs.SC",
+    "econ.EM",
+    "math.OC"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

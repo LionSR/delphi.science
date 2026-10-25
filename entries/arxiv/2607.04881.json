@@ -1,0 +1,24 @@
+{
+  "key": "2607.04881",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04881",
+  "title": "Towards Fully Dynamic Omnitrees: Moment-Conserving Anisotropic Compression With Wavelets",
+  "authors": [
+    "Theresa Pollinger",
+    "Masado Ishii",
+    "Jens Domke"
+  ],
+  "summary": "Recently, omnitrees were introduced as a flexible space partitioning tree that improves upon the benefits of both octrees and k-d trees: Omnitrees' efficient encoding of anisotropic refinements holds particular interest for applications with anisotropic features and high dimensionality. These include, but are not limited to, computer graphics, databases, machine learning, and physics simulations. The present paper defines new operations on the omnitree encoding that extend its capabilities from the existing refinement to also include coarsening and therefore fully adaptive compression. It…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.CG",
+    "cs.GR",
+    "math.NA"
+  ],
+  "published": "2026-07-06",
+  "updated": "2026-07-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

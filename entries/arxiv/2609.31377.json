@@ -1,0 +1,22 @@
+{
+  "key": "2609.31377",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.31377",
+  "title": "Controlling three-dimensional falling liquid films: from weighted-residual models to direct numerical simulation",
+  "authors": [
+    "Oscar A. Holroyd",
+    "Susana N. Gomes",
+    "Radu Cimpeanu"
+  ],
+  "summary": "We consider the problem of controlling a three-dimensional falling liquid film using same-fluid blowing and suction through the substrate. Building upon recent results for the corresponding two-dimensional problem, we employ a reduced-dimensional weighted-residual model for the film height and downstream flux as the basis for controller design. Linear stability analysis is used to estimate the number of actuators required to stabilise the film, while a linear-quadratic regulator (LQR) framework is used to construct feedback controls for the linearised system. The resulting gain matrix is…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math.OC"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

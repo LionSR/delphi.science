@@ -1,0 +1,20 @@
+{
+  "key": "2604.26263",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26263",
+  "title": "qSHIFT: An Adaptive Sampling Protocol for Higher-Order Quantum Simulation",
+  "authors": [
+    "Sangjin Lee",
+    "Sangkook Choi"
+  ],
+  "summary": "Early fault-tolerant quantum computers are expected to support reliable but depth-limited quantum circuits, while classical computational resources remain available. These conditions have motivated hybrid coherent algorithms which use quantum simulation as a central algorithmic primitive. This trend calls for quantum-simulation methods that operate with shallow circuits and admit systematic improvements in gate-complexity scaling. Here, we introduce qSHIFT, an adaptive sampling protocol for simulating a Hamiltonian $H=\\sum_{i=1}^{L}h_iH_i$. qSHIFT achieves gate complexity…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-09-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

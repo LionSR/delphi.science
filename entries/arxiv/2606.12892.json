@@ -1,0 +1,23 @@
+{
+  "key": "2606.12892",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.12892",
+  "title": "Prediction-Powered Causal Inference by Automatic Debiased Machine Learning and Semi-Supervised Riesz Regression",
+  "authors": [
+    "Masahiro Kato"
+  ],
+  "summary": "This study investigates semiparametric efficient estimation of causal and structural parameters in a semi-supervised setting. In our setting, unlabeled auxiliary regressors are available in addition to labeled observations consisting of outcomes and regressors. Our goal is to construct estimators of causal and structural parameters whose asymptotic variances are smaller than those of estimators constructed using only labeled data. We refer to this framework as prediction-powered causal inference (PPCI). We first derive the efficient influence function and the efficiency bound, which imply…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "econ.EM",
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

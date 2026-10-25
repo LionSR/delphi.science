@@ -1,0 +1,24 @@
+{
+  "key": "2607.00939",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.00939",
+  "title": "Leveraging LLM-Based Agentic Systems to Generate Quantum Applications for Test Optimization",
+  "authors": [
+    "Ming Tao",
+    "Yuechen Li",
+    "Tao Yue",
+    "Man Zhang",
+    "Aitor Arrieta Marcos"
+  ],
+  "summary": "Quantum computing is increasingly explored for software engineering (SE) optimization, but translating natural-language (NL) task-level requirements into executable quantum applications still demands substantial quantum and programming expertise. We present QPipe, a large language model (LLM)-based multi-agent architecture that autonomously turns NL requirements into traceable quantum-application workflows through specialized agents for requirement parsing, formulation, code generation, review, execution, and verification. We evaluate QPipe on 20 NL requirements, each associated with a…",
+  "domain": "cs.SE",
+  "tags": [
+    "cs.SE",
+    "quant-ph"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

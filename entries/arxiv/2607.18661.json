@@ -1,0 +1,27 @@
+{
+  "key": "2607.18661",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.18661",
+  "title": "Gaffke's confidence interval for the mean of bounded data is inadmissible but asymptotically efficient",
+  "authors": [
+    "Jiahao Ming",
+    "Aaditya Ramdas",
+    "Yi Shen",
+    "Ruodu Wang",
+    "Ian Waudby-Smith"
+  ],
+  "summary": "Given observations $\\mathbf x=(x_1,\\dots,x_n)$, Gaffke (2005) defined \\[ K_n(\\mathbf x)=\\mathbb{P}_{\\mathbf D}\\!\\left\\{\\sum_{i=1}^n x_iD_i\\le 1\\right\\}, \\qquad (D_0,D_1,\\ldots,D_n)\\sim\\mathrm{Dirichlet}(1,\\ldots,1), \\] and conjectured that it is a $p$-value whenever the inputs are independent e-values. Recently, Vlassis and Thomas (2026) proved this conjecture. Inverting the tests for observations in $[0,1]$ gives the confidence interval studied by Learned-Miller and Thomas (2020), which reduces to Clopper--Pearson for Bernoulli data. We give a finite- and large-sample account of Gaffke's…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.IT",
+    "eess.SP",
+    "math.PR",
+    "stat.ME"
+  ],
+  "published": "2026-07-21",
+  "updated": "2026-07-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

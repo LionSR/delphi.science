@@ -1,0 +1,20 @@
+{
+  "key": "2609.20258",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20258",
+  "title": "A Protocol-Guided LLM Agent for Quantum Program Synthesis and Execution",
+  "authors": [
+    "Ming-Kang Ho",
+    "Tai-Yue Li"
+  ],
+  "summary": "This study evaluates a protocol-guided large language model (LLM) agent workflow for quantum program synthesis and execution. A versioned YAML protocol specifies interface and quantum-semantic requirements while leaving circuit design to the model. The workflow combines Qiskit circuit generation, evaluator-guided repair, and quantum processing unit (QPU) deployment. A matched ablation evaluates four LLM endpoints using the variational quantum eigensolver (VQE) for H$_2$, the quantum approximate optimization algorithm (QAOA) for MaxCut, and Fashion-MNIST quantum-kernel classification. Across…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-28",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

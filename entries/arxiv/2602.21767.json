@@ -1,0 +1,26 @@
+{
+  "key": "2602.21767",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.21767",
+  "title": "Kernel Methods for the Construction of Certified Lyapunov Functions via Approximate Koopman Eigenfunctions",
+  "authors": [
+    "P. Giesl",
+    "S. Hafstein",
+    "B. Hamzi",
+    "J. Lee",
+    "H. Owhadi",
+    "G. Santin",
+    "U. Vaidya"
+  ],
+  "summary": "We present a kernel-based methodology for constructing Lyapunov functions for nonlinear dynamical systems using approximate Koopman eigenfunctions. Our approach decomposes principal Koopman eigenfunctions into linear and nonlinear components, where the linear part is obtained from the system's linearization and the nonlinear part is computed by solving a partial differential equation using symmetric kernel collocation in reproducing kernel Hilbert spaces (RKHS). The resulting Lyapunov function is constructed as a quadratic form in the approximate eigenfunctions. We establish error bounds…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.DS"
+  ],
+  "published": "2026-02-25",
+  "updated": "2026-02-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

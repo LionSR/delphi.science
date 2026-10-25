@@ -1,0 +1,22 @@
+{
+  "key": "2605.31152",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.31152",
+  "title": "Approximation and learning of anisotropic and mixed smooth functions by deep ReLU neural networks",
+  "authors": [
+    "Yunfei Yang",
+    "Jun Fan"
+  ],
+  "summary": "This paper studies how efficiently deep ReLU neural networks can approximate and learn smooth functions. When the error is measured in $L^p([0,1]^d)$ norm and the approximator is a network with width $W$ and depth $L$, recent works have proven the supper approximation rate $\\mathcal{O}((WL)^{-2s/d})$ for Besov space $\\mathcal{B}^s_{q,r}([0,1]^d)$ under the Sobolev embedding condition $s/d>1/q-1/p$. In order to overcome the curse of dimensionality in this rate, we extent this result to anisotropic and mixed smooth function classes. We establish the approximation rate…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-07-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

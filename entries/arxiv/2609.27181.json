@@ -1,0 +1,23 @@
+{
+  "key": "2609.27181",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.27181",
+  "title": "Emergent Prethermal Symmetries for Scalable Hamiltonian Learning",
+  "authors": [
+    "Myeongjin Shin",
+    "Junseo Lee",
+    "Iman Marvian",
+    "Yu Tong"
+  ],
+  "summary": "Learning an interacting many-body Hamiltonian at the Heisenberg limit generally requires control that preserves local information for evolution times of order $1/\\varepsilon$ to attain $\\varepsilon$ precision. To achieve this, existing protocols often rely on trusted many-qubit operations or increasingly rapid control pulses, creating a precision barrier when gates involve unknown multi-qubit interaction or have finite duration. We show that neither resource is necessary for geometrically local Hamiltonians. Our protocol applies only static single-qubit fields, whose strength is independent…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math-ph"
+  ],
+  "published": "2026-09-23",
+  "updated": "2026-09-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

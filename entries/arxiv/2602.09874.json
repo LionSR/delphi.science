@@ -1,0 +1,20 @@
+{
+  "key": "2602.09874",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.09874",
+  "title": "Simpler Presentations for Many Fragments of Quantum Circuits",
+  "authors": [
+    "Colin Blake"
+  ],
+  "summary": "Equational reasoning is central to quantum circuit optimisation and verification: one replaces subcircuits by provably equivalent ones using a fixed set of rewrite rules viewed as equations. A finite rule set is most informative when it separates the genuine algebra of a circuit fragment from the structural treatment of wires. This paper gives six near-Clifford fragments a common PROP treatment, where wire permutations are structural: qubit Clifford, real Clifford, Clifford+T (up to two qubits), Clifford+CS (up to three qubits), CNOT-dihedral, and qutrit Clifford. Starting from prior…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LO"
+  ],
+  "published": "2026-02-10",
+  "updated": "2026-07-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

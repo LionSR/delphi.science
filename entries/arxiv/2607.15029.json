@@ -1,0 +1,21 @@
+{
+  "key": "2607.15029",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.15029",
+  "title": "Towards realistic large random models of labeled transition systems and their 0-1 laws",
+  "authors": [
+    "Milan Lopuhaä-Zwakenberg"
+  ],
+  "summary": "Model checking is the automated verification of properties (specified in some modal logic) in labeled transition systems (LTSs); it is an essential tool in ensuring software systems function as intended. State spaces of software grow exponentially, and heuristics are needed to ensure model checking remains feasible in real-world applications. Heuristics, in turn, require a good understanding on the typical behaviour of LTSs. In this paper, we use random graph theory to create a probabilistic model of large LTSs. From a theoretical analysis of the creation of large LTSs, backed by empirical…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "math.CO",
+    "math.PR"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-07-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

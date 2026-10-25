@@ -1,0 +1,21 @@
+{
+  "key": "2603.26921",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.26921",
+  "title": "Comparing Physics-Informed and Neural ODE Approaches for Modeling Nonlinear Biological Systems: A Case Study Based on the Morris-Lecar Model",
+  "authors": [
+    "Nikolaos M. Matzakos",
+    "Chrisovalantis Sfyrakis"
+  ],
+  "summary": "Physics-Informed Neural Networks (PINNs) and Neural Ordinary Differential Equations (NODEs) represent two distinct machine learning frameworks for modeling nonlinear neuronal dynamics. This study systematically evaluates their performance on the two-dimensional Morris-Lecar model across three canonical bifurcation regimes: Hopf, Saddle-Node on Limit Cycle, and homoclinic orbit. Synthetic time-series data are generated via numerical integration under controlled conditions, and training is performed using collocation points for PINNs and adaptive solvers for NODEs (Dormand-Prince method).…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "cs.LG"
+  ],
+  "published": "2026-03-27",
+  "updated": "2026-03-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

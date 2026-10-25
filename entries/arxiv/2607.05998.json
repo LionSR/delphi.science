@@ -1,0 +1,21 @@
+{
+  "key": "2607.05998",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.05998",
+  "title": "A unified energy-stable finite element approximation for evolving fluidic biomembranes",
+  "authors": [
+    "Harald Garcke",
+    "Robert Nürnberg",
+    "Quan Zhao"
+  ],
+  "summary": "We present a unified finite element method for the dynamics of fluidic biomembranes. The model is governed by the Navier--Stokes equations in the bulk coupled to the surface Navier--Stokes equations on the evolving biomembrane surface, with bending forces arising from the Willmore energy. By allowing the bulk mesh velocity to be independent of the fluid velocity and permitting a free tangential surface velocity, we are able to derive a unified weak formulation of the coupled bulk-surface Navier--Stokes system. To address the bending force, we consider an evolution equation for the curvature…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

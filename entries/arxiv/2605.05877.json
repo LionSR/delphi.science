@@ -1,0 +1,23 @@
+{
+  "key": "2605.05877",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05877",
+  "title": "Discrete Optimal Transport: Rapid Convergence of Simulated Annealing Algorithms",
+  "authors": [
+    "Yuchen He",
+    "Tianhui Jiang",
+    "Sihan Wang",
+    "Chihao Zhang"
+  ],
+  "summary": "We develop a discrete optimal transport framework for analyzing simulated annealing algorithms on finite state spaces. Building on the discrete Wasserstein metric introduced by Maas (J. Funct. Anal., 2011), we define a generalized discrete Wasserstein-2 distance and the associated notion of \\emph{discrete action} for paths of probability measures on graphs. Using these tools, we establish non-asymptotic convergence guarantees for simulated annealing: the KL divergence between the algorithm's output and the target distribution is controlled by the discrete action of the annealing path. This…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.PR"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

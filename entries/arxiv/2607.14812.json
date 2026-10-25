@@ -1,0 +1,19 @@
+{
+  "key": "2607.14812",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14812",
+  "title": "How Much Can Gaussian Dependence Inflate the Benjamini-Hochberg Procedure's FDR?",
+  "authors": [
+    "Lihua Lei"
+  ],
+  "summary": "We study the worst-case false discovery rate (FDR) of the Benjamini-Hochberg procedure for both one- and two-sided Gaussian tests with general correlation matrices. For each setting and given target FDR level $q$, we construct a family of finite Gaussian models whose FDR divided by $q$ diverges as $q\\downarrow0$. This disproves any universal multiplicative FDR bound. Moreover, we establish new FDR lower bounds that are independent of the number of hypotheses. For two-sided tests, the worst-case FDR over the number of hypotheses, mean vector, and correlation matrix is at least an explicit…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

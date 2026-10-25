@@ -1,0 +1,21 @@
+{
+  "key": "2603.10642",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.10642",
+  "title": "Practical Regularized Quasi-Newton Methods with Inexact Function Values",
+  "authors": [
+    "Hiroki Hamaguchi",
+    "Naoki Marumo",
+    "Akiko Takeda"
+  ],
+  "summary": "Many practical optimization problems involve objective function values that are corrupted by unavoidable numerical errors. In smooth nonconvex optimization, quasi-Newton methods combined with line search are widely used due to their efficiency and scalability. These methods implicitly assume accurate function evaluations and thus may fail to converge in noisy settings. Developing fast and stable quasi-Newton methods for such scenarios is therefore crucial. To address this issue, we propose a novel noise-tolerant regularized quasi-Newton method equipped with a relaxed Armijo-type line search,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-11",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

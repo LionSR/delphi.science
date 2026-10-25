@@ -1,0 +1,23 @@
+{
+  "key": "2605.07386",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.07386",
+  "title": "Convex Optimization with Nested Evolving Feasible Sets",
+  "authors": [
+    "Karthick Krishna M.",
+    "Haricharan Balasundaram",
+    "Rahul Vaze"
+  ],
+  "summary": "\\emph{Convex Optimization with Nested Evolving Feasible Sets (CONES)} is considered where the objective function \\(f\\) remains fixed but the feasible region evolves over time as a nested sequence \\(S_1 \\supseteq S_2 \\supseteq \\cdots \\supseteq S_T\\). The goal of an online algorithm is to simultaneously minimize the regret with respect to hindsight static optimal benchmark and the total movement cost $M_\\cA(T)$ while ensuring feasibility at all times. CONES is an optimization-oriented generalization of the well-known \\emph{nested convex body chasing} (NCBC). When the loss function is convex,…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.DS",
+    "math.OC"
+  ],
+  "published": "2026-05-08",
+  "updated": "2026-08-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

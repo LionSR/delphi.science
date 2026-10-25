@@ -1,0 +1,22 @@
+{
+  "key": "2609.34181",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.34181",
+  "title": "Efficient Reasoning via Constrained Optimization in Latent Space",
+  "authors": [
+    "Zhinan Hou",
+    "Xingchen Li",
+    "Keyou You"
+  ],
+  "summary": "Large Reasoning Models (LRMs) have shown remarkable reasoning capabilities, yet they still suffer from overthinking, generating redundant reasoning steps which incur substantial token consumption. Existing methods, such as suppressing reflective keywords or forcing shorter reasoning lengths, attempt to mitigate this issue but inevitably truncate necessary steps and induce underthinking, thereby compromising performance. To address this dilemma, we investigate the latent representations and observe that efficient reasoning steps naturally cluster into a concentrated region in latent space,…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

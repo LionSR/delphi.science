@@ -1,0 +1,20 @@
+{
+  "key": "2603.20060",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20060",
+  "title": "Power laws and power-of-two-choices",
+  "authors": [
+    "Amanda Redlich"
+  ],
+  "summary": "This paper analyzes a variation on the well-known \"power of two choices\" allocation algorithms. Classically, the smallest of $d$ randomly-chosen options is selected. We investigate what happens when the largest of $d$ randomly-chosen options is selected. This process generates a power-law-like distribution: the $i^{th}$-smallest value scales with $i^{d-1}$, where $d$ is the number of randomly-chosen options, with high probability. We give a formula for the expectation and show the distribution is concentrated around the expectation",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.PR"
+  ],
+  "published": "2026-03-20",
+  "updated": "2026-03-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

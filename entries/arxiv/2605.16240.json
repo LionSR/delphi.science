@@ -1,0 +1,20 @@
+{
+  "key": "2605.16240",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.16240",
+  "title": "Evaluation of two determinants involving $q$-integers",
+  "authors": [
+    "Zhi-Wei Sun"
+  ],
+  "summary": "The $q$-analogue of an integer $m$ is given by $[m]_q=(1-q^m)/(1-q)$. Let $a$ be an integer, and let $n$ be a positive odd integer. Via discrete Fourier transforms, we establish the following two identities: $$\\det\\left[\\left[\\left\\lfloor\\frac{aj-(a+1)k}n\\right\\rfloor\\right]_q\\right]_{1\\leqslant j,k\\leqslant n}=-\\left(\\frac{a(a+1)}n\\right)q^{(1-3n)/2}$$ and $$\\det\\left[\\left[\\left\\lceil\\frac{(a+1)j-ak}n\\right\\rceil\\right]_q\\right]_{1\\leqslant j,k\\leqslant n}=\\left(\\frac{a(a+1)}n\\right)q^{(n-1)/2},$$ where $(\\frac{\\cdot}n)$ denotes the Jacobi symbol.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.NT"
+  ],
+  "published": "2026-05-15",
+  "updated": "2026-05-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,28 @@
+{
+  "key": "2608.25203",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.25203",
+  "title": "Hamiltonian Two-Way Coupling of Nonlinear Waves and 3D Flows",
+  "authors": [
+    "Sinan Wang",
+    "Ruicheng Wang",
+    "Taiyuan Zhang",
+    "Fan Feng",
+    "Jinjin He",
+    "Yuchen Sun",
+    "Zhiqi Li",
+    "Bo Zhu"
+  ],
+  "summary": "Simulating large-scale free-surface water by coupling a localized 3D fluid solver to a cheaper 2D surface model has long faced a mismatch in wave dynamics: efficient 2D wave models used in graphics are typically either linear or non-dispersive. These models are fast, simple, and accurate for calm, small-amplitude seas, but coupling them with strongly nonlinear 3D solvers produces visible reflections and artifacts at the 2D--3D interface. We address this problem by introducing a nonlinear and dispersive 2D wave model based on the canonical Zakharov formulation. Its Hamiltonian structure, in…",
+  "domain": "cs.GR",
+  "tags": [
+    "cs.GR",
+    "math.NA",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

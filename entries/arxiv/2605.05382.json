@@ -1,0 +1,28 @@
+{
+  "key": "2605.05382",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05382",
+  "title": "Meta-learning for sample-efficient Bayesian optimisation of fed-batch processes",
+  "authors": [
+    "Becky Langdon",
+    "Gabriel D. Patrón",
+    "Chrysoula D. Kappatou",
+    "Robert M. Lee",
+    "Behrang Shafei",
+    "Jixiang Qing",
+    "Ruth Misener",
+    "Mark van der Wilk",
+    "Calvin Tsay"
+  ],
+  "summary": "The optimisation of fed-batch (bio)chemical process recipes is subject to inherent, underlying, and unmeasurable fluctuations across batches, whose trajectories are difficult to model and costly to measure. Bayesian Optimisation (BayesOpt) is a powerful tool for sampling and optimisation of expensive-to-measure functions. Gaussian Processes (GPs), the surrogate models used in BayesOpt, are static, forecast poorly, and lack generalisation across experiments, limiting their applicability to time-varying batch processes with stochastic parameters, i.e., process fluctuations. This work…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

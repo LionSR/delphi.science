@@ -1,0 +1,22 @@
+{
+  "key": "2607.10869",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10869",
+  "title": "Singular perturbations and hierarchical learning in two-layer neural networks",
+  "authors": [
+    "Cédric Gerbelot",
+    "Jean-Christophe Mourrat"
+  ],
+  "summary": "We study the population gradient flow of an infinitely wide two-layer neural network learning a misspecified single-index model in high dimension. The two layers are optimized jointly, with a perturbative parameter tuning the relative training speed between the first and second layer. This setting was considered by Berthier, Montanari and Zhou in \\cite{berthier2024learning}, who conjectured a hierarchical learning scenario with explicit timescales as the second layer is trained faster than the first. In this paper, we prove that the constant and linear components of the hidden link function…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS",
+    "math.OC"
+  ],
+  "published": "2026-07-12",
+  "updated": "2026-07-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

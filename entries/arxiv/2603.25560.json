@@ -1,0 +1,23 @@
+{
+  "key": "2603.25560",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.25560",
+  "title": "Adaptive Negativity Estimation via Collective Measurements",
+  "authors": [
+    "Martin Zeman",
+    "Vojtěch Trávníček",
+    "Antonín Černoch",
+    "Jan Soubusta",
+    "Karel Lemr"
+  ],
+  "summary": "This paper explores an efficient method for entanglement quantification in two-qubit and qubit-qutrit quantum systems based upon the framework of collective measurements in conjunction with machine learning. We introduce an adaptive measurement procedure in which measurement settings are dynamically adjusted based on prior measurement outcomes aiming to optimize the inference precision given a limited number of these measurement settings. The procedure makes use of the Long Short-Term Memory networks to recurrently process collective measurements on two copies of the investigated states.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-26",
+  "updated": "2026-03-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

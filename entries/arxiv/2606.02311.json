@@ -1,0 +1,21 @@
+{
+  "key": "2606.02311",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.02311",
+  "title": "$γ$-CounterBoost: Optimizing response time tails using job type information only",
+  "authors": [
+    "Nils Charlet",
+    "Benny Van Houdt"
+  ],
+  "summary": "In a recent paper the $γ$-Boost scheduling policy was shown to minimize the tail of the response time distribution in a light-tailed M/G/1-queue. This policy schedules jobs using a boosted arrival time, defined as the arrival time of a job minus its boost, where the boost of a job depends on its exact job size. The $γ$-Boost policy can also be used when only partial job size information is available, such as the type of an incoming job. In such case the boost $b_i$ of a job depends solely on its type $i$ and $γ$-Boost was shown to optimize the tail among all boost policies, where a boost…",
+  "domain": "cs.PF",
+  "tags": [
+    "cs.PF",
+    "math.PR"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

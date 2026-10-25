@@ -1,0 +1,22 @@
+{
+  "key": "2604.25664",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.25664",
+  "title": "Deflation-Free Optimal Scoring",
+  "authors": [
+    "Sharmin Afroz",
+    "Brendan Ames"
+  ],
+  "summary": "Sparse Optimal Scoring (SOS) reformulates linear discriminant analysis to enable feature selection through elastic net regularization, making it well-suited for high-dimensional settings where the number of features exceeds observations. Most existing SOS methods use deflation-based strategies that compute discriminant vectors sequentially, which can propagate errors and produce suboptimal solutions. We propose a novel approach that estimates all discriminant vectors simultaneously under an explicit global orthogonality constraint, which we call Deflation-Free Sparse Optimal Scoring (DFSOS).…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-04-28",
+  "updated": "2026-04-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

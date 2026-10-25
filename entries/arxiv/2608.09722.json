@@ -1,0 +1,21 @@
+{
+  "key": "2608.09722",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.09722",
+  "title": "Decoding gene regulatory networks from single-cell RNA velocity",
+  "authors": [
+    "Lingqi Meng",
+    "Shiruo Wang"
+  ],
+  "summary": "We formulate gene regulatory network reconstruction from RNA velocity as a sparse dynamical inverse problem. We show that control-only data can be structurally nonidentifying and characterize excitation conditions under which controlled perturbations restore identifiability by generating complementary regulator trajectories. To enable stable reconstruction from noisy data, we develop an integral sparse estimator that avoids numerical differentiation and derive recovery bounds separating stochastic error from systematic contributions due to latent-time uncertainty, kinetic-parameter error,…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "math.OC"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-08-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

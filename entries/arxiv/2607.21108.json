@@ -1,0 +1,24 @@
+{
+  "key": "2607.21108",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.21108",
+  "title": "A stability-preserving polytopal discontinuous Galerkin method for the Fisher-Kolmogorov model with applications to neurodegenerative disease modelling",
+  "authors": [
+    "Paola Francesca Antonietti",
+    "Francesca Bonizzoni",
+    "Mattia Corti",
+    "Nicola De March",
+    "Salvatore Di Noto",
+    "Francesco Regazzoni"
+  ],
+  "summary": "The Fisher--Kolmogorov equation models the spatio-temporal evolution of interacting biological species and is extensively employed in fields such as ecology, population dynamics, and the modelling of neurodegenerative diseases. Under suitable assumptions on the data, the solution $c$ is non-negative, a key feature because $c$ typically denotes a population density or a relative concentration. However, standard discretisation methods often fail to preserve this property, resulting in non-physical oscillations and unstable numerical approximations. In this work, we propose and analyse a…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-23",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

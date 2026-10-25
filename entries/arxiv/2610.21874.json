@@ -1,0 +1,20 @@
+{
+  "key": "2610.21874",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.21874",
+  "title": "Strong NP-Hardness of Rank-2 Nonnegative Matrix Factorization",
+  "authors": [
+    "Arnaud Vandaele"
+  ],
+  "summary": "Nonnegative matrix factorization (NMF) approximates a nonnegative matrix by the product of two nonnegative matrices with a prescribed inner dimension~$r$. The existence of an exact NMF can be decided in polynomial time for every fixed~$r$, and a best rank-$1$ NMF in the Frobenius norm can be obtained from a truncated singular value decomposition. We prove that computing a best rank-$2$ NMF in the Frobenius norm is strongly NP-hard. Our proof uses a polynomial-time reduction from \\textsc{Clique} that produces symmetric positive-definite, completely positive matrices with polynomially bounded…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.CC"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

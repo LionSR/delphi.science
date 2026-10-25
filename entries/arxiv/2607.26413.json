@@ -1,0 +1,21 @@
+{
+  "key": "2607.26413",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.26413",
+  "title": "Machine-Checked Certificates for the Geometric Half of the Minimum Kochen-Specker Bound",
+  "authors": [
+    "Shayaan Siddique",
+    "Ibrahim Mian"
+  ],
+  "summary": "The best known lower bound for the minimum Kochen-Specker vector system in $\\mathbb{R}^3$ -- 24 vectors -- rests on a computational proof whose combinatorial half emits DRAT proofs but whose geometric half does not: the non-embeddability of thousands of candidate graphs is established by Z3's nonlinear real arithmetic, which produces no checkable proof objects. We close this gap for the proof's blocking database. We introduce exact rational case-tree certificates of real non-embeddability, whose splits are polynomial factorizations and rational sum-of-squares decompositions and whose leaves…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "quant-ph"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2609.11363",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11363",
+  "title": "Scalable Approximate Selected Inversion Based on Single-Level Incomplete $LDL^T$ Factorization and Spectral Corrections for Large Sparse Systems",
+  "authors": [
+    "Tahamina Akter",
+    "Matthias Bollhöfer",
+    "Olaf Schenk"
+  ],
+  "summary": "This article introduces four parallel numerical techniques for computing entries of the inverse of large sparse symmetric systems, all grounded in incomplete $LDL^T$ (ILDL) factorizations: (1) the selected inversion method (SelInv), which applies the $LDL^T$ factorization to recover entries of the matrix inverse within the sparsity pattern of the computed factors; (2) an approximate inversion method based on a truncated Neumann series expansion applied to the inverse of the L factor (NInv), providing an alternative at the cost of reduced accuracy; (3) a Mix approximation that merges the best…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

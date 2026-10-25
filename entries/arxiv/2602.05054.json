@@ -1,0 +1,20 @@
+{
+  "key": "2602.05054",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05054",
+  "title": "An Adaptive Framework for Robust Structural Shape Optimization under Uncertainty",
+  "authors": [
+    "Oğuz Han Altıntaş",
+    "Hamdullah Yücel"
+  ],
+  "summary": "This work presents an adaptive framework for solving a robust structural shape optimization problem governed by linear elasticity with uncertain loading and material parameters. A posteriori error estimators are constructed to control the sample size, mesh resolution, and optimization step length. The sample size used in the stochastic gradient approximation is adjusted dynamically according to the variance of the sampled shape derivatives. In the physical domain, the proposed error estimation strategy accounts not only for discretization errors in the elasticity constraint but also for…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-04",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

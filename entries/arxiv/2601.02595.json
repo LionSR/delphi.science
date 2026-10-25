@@ -1,0 +1,20 @@
+{
+  "key": "2601.02595",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.02595",
+  "title": "Volumetric locking-free Mixed Virtual Element Methods for Contact Problems",
+  "authors": [
+    "C. Lovadina",
+    "L. Molinari"
+  ],
+  "summary": "We consider the approximation of the 2D frictionless contact problem in elasticity using the Virtual Element Methods (VEMs). To overcome the volumetric locking phenomenon in the nearly incompressible case, we adopt a mixed displacement/pressure ($u/p$) variational formulation, where pressure is introduced as an independent unknown. We present the VEM discretization and develop a general error analysis, keeping explicit track of the constants involved in the error estimates, thus allowing to consider meshes with \"small edges\". As examples, we consider two possible VEM schemes: a first-order…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-05",
+  "updated": "2026-01-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

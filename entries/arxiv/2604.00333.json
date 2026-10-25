@@ -1,0 +1,23 @@
+{
+  "key": "2604.00333",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00333",
+  "title": "MVNN: A Measure-Valued Neural Network for Learning McKean-Vlasov Dynamics from Particle Data",
+  "authors": [
+    "Liyao Lyu",
+    "Xinyue Yu",
+    "Hayden Schaeffer"
+  ],
+  "summary": "Collective behaviors that emerge from interactions are fundamental to numerous biological systems. To learn such interacting forces from observations, we introduce a measure-valued neural network that infers measure-dependent interaction (drift) terms directly from particle-trajectory observations. The proposed architecture generalizes standard neural networks to operate on probability measures by learning cylindrical features, using an embedding network that produces scalable distribution-to-vector representations. On the theory side, we establish well-posedness of the resulting dynamics…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG",
+    "physics.comp-ph"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

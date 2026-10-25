@@ -1,0 +1,25 @@
+{
+  "key": "2609.16520",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.16520",
+  "title": "Truncated hybrid tensor networks for distributed quantum simulation",
+  "authors": [
+    "Yong Liu",
+    "Guangyao Huang",
+    "Weixu Shi",
+    "Yizhi Wang",
+    "Jiandong Ouyang",
+    "Zeqian Chen",
+    "Junjie Wu"
+  ],
+  "summary": "Simulation of quantum many-body systems is a principal application of quantum computing, but available devices remain limited by the number of qubits and cannot accommodate systems of the desired size. One approach is to host a large evolution across several modest distributed systems that exchange classical information alone. Current protocols such as circuit knitting incur a quasi-probability sampling cost that grows exponentially with the number of remote gates across the cut, even when physical correlations across the cut are actually bounded. In this work, we present a truncated hybrid…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

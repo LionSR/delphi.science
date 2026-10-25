@@ -1,0 +1,19 @@
+{
+  "key": "2607.04217",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04217",
+  "title": "Log-concavity and log-convexity in the theory of the Graham--Knuth--Patashnik recurrences",
+  "authors": [
+    "Jesús Salas"
+  ],
+  "summary": "We study the triangular array $T(n,k;μ)$ defined by the Graham--Knuth--Patashnik recurrences $$ T(n,k) \\;=\\; (αn + βk + γ) \\, T(n-1,k) + (α' n + β' k + γ') \\, T(n-1,k-1) $$ with initial condition $T(0,k)=δ_{k,0}$ and parameters $μ=(α,β,γ,α',β',γ')$, which are considered to be indeterminates. We first prove that, for any fixed $n\\ge 0$, the sequence $(T(n,k;μ))_{k\\ge 0}$ is strongly log-concave with the coefficientwise partial order in the variables $α,β,γ,α',β',γ'$. Moreover, we show that the sequence of the corresponding row-generating polynomials $(P_n(x;μ))_{n\\ge 0}$ is strongly…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-07-05",
+  "updated": "2026-07-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

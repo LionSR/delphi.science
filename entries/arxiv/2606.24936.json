@@ -1,0 +1,20 @@
+{
+  "key": "2606.24936",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.24936",
+  "title": "A Matrix-Based Polyalphabetic Algorithm for Information Encoding and Decoding Using Number Sequences",
+  "authors": [
+    "Muhammet Karagöz",
+    "Nihal Özgür"
+  ],
+  "summary": "In this paper, we propose a matrix-based polyalphabetic data encoding and decoding scheme using Fibonacci, Leonardo, Jacobsthal, and Lucas sequences. The method employs three sequence-based alphabets for character substitution and a Lucas-based auxiliary alphabet for word separators. A position-dependent selector, \\[ σ=\\bigl(v^2+(i-1)+(j-1)\\bigr)\\pmod 3, \\] distributes repeated plaintext symbols among different numerical alphabets, thereby reducing frequency concentration. The resulting numerical matrix is divided into $3\\times 3$ blocks and transformed using powers of the Leonardo…",
+  "domain": "math.GM",
+  "tags": [
+    "math.GM"
+  ],
+  "published": "2026-06-22",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

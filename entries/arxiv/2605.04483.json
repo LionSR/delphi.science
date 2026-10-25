@@ -1,0 +1,24 @@
+{
+  "key": "2605.04483",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04483",
+  "title": "CDFCI: High-Performance Parallel Software for Quantum Many-Body Eigenvalue Problems",
+  "authors": [
+    "Yuejia Zhang",
+    "Zhe Wang",
+    "Jianfeng Lu",
+    "Yingzhou Li"
+  ],
+  "summary": "CDFCI is a shared-memory parallel numerical program for computing low-lying eigenpairs of large-scale, non-relativistic fermionic Hamiltonians. The software is designed to handle a broad class of many-body quantum models, including both ab initio electronic structure Hamiltonians and lattice-based Hamiltonians arising in condensed matter physics. CDFCI combines an efficient coordinate-descent-based selected configuration interaction algorithm with dedicated parallelization strategies, achieving high performance on modern multi-core architectures. Benchmark results on representative quantum…",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "math.NA",
+    "physics.chem-ph"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2601.20039",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.20039",
+  "title": "Hypergraph Samplers: Typical and Worst Case Behavior",
+  "authors": [
+    "Vedat Levi Alev",
+    "Uriya A. First"
+  ],
+  "summary": "We study the utility and limitations of using $k$-uniform hypergraphs $H = ([n], E)$ ($n \\ge \\mathrm{poly}(k)$) in the context of error reduction for randomized algorithms for decision problems with one- or two-sided error. Our error reduction idea is sampling a uniformly random hyperedge of $H$, and repeating the algorithm $k$ times using the hyperedge vertices as seeds. This is a general paradigm, which captures every pseudorandom method generating $k$ seeds without repetition. We show two results which imply a gap between the typical and the worst-case behavior of using $H$ for…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.CC",
+    "math.CO"
+  ],
+  "published": "2026-01-27",
+  "updated": "2026-01-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

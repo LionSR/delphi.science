@@ -1,0 +1,23 @@
+{
+  "key": "2608.18282",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.18282",
+  "title": "Self-supervised In-context Operator Learning for Stochastic Mean-Field Control",
+  "authors": [
+    "Suyi Gao",
+    "Mo Zhou",
+    "Rongjie Lai"
+  ],
+  "summary": "Stochastic mean-field control (MFC) provides a fundamental framework for coordinating large populations of interacting agents under uncertainty, with a wide range of applications. Existing numerical and deep-learning methods solve one MFC problem instance at a time and must be re-optimized whenever the task changes. In this work, we formulate stochastic MFC as an operator-learning problem and develop, to the best of our knowledge, the first mesh-free, self-supervised neural operator for stochastic MFC. The main challenge is that the diffusion term in the controlled Fokker--Planck equation…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "eess.SY"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

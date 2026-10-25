@@ -1,0 +1,21 @@
+{
+  "key": "2610.14285",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.14285",
+  "title": "Zero-Crossing Time Lower Bounds for the Homogeneous Super-Twisting Algorithm",
+  "authors": [
+    "Diego Gutiérrez-Oribio",
+    "Ioannis Stefanou"
+  ],
+  "summary": "High-frequency switching and chattering are well-known problems in sliding-mode control. Although the super-twisting algorithm produces a continuous control input, the sliding variable may still cross zero repeatedly near the sliding manifold. This paper studies how fast these crossings can occur and whether they can accumulate in finite time for the scalar homogeneous super-twisting algorithm. Two lower bounds on the time required to return to zero are derived, together with a bound on the time needed to complete a full excursion. These results give minimum separation times and upper bounds…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2609.04067",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.04067",
+  "title": "A Multigrid Method for CutFEM and its Convergence",
+  "authors": [
+    "Michal Wichrowski"
+  ],
+  "summary": "We develop a convergence theory for geometric multigrid with vertex-patch smoothers applied to cut finite element discretizations of the Poisson problem. The framework addresses non-inherited level forms and the mismatch between the physical and active domains. Using the discrete extension property, we prove two-level convergence bounds uniform in the mesh size and the cut geometry, and W-cycle bounds under an additional smallness assumption on the two-level rate. The numerical experiments intentionally use the stronger V-cycle, for which no convergence bound is claimed here. The convergence…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

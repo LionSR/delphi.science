@@ -1,0 +1,25 @@
+{
+  "key": "2604.26226",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26226",
+  "title": "Exponentially improved quantum simulation of scalar QFT",
+  "authors": [
+    "Qing-Hong Cao",
+    "Ying-Ying Li",
+    "Xiaohui Liu",
+    "Liang-Qi Zhang",
+    "Ke Zhao"
+  ],
+  "summary": "Quantum simulations of scalar quantum field theories (QFT) provide important benchmarks for demonstrating quantum advantage. We revisit digitization in the occupation basis, which is typically hindered by unfavorable circuit depth scaling. We present an approach that achieves exponential reductions in circuit depth and significantly mitigates Trotter errors by diagonalizing field operators prior to their decomposition into Pauli strings. Focusing on a scalar QFT in 2+1 dimensions, we show that this method substantially reduces circuit depth and CNOT gate counts for time evolution. Using the…",
+  "domain": "hep-ph",
+  "tags": [
+    "hep-ph",
+    "hep-lat",
+    "quant-ph"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

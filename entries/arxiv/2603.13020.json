@@ -1,0 +1,20 @@
+{
+  "key": "2603.13020",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.13020",
+  "title": "Constraint-native quantum control for fidelity--complexity trade-offs with inexact proximal ADMM",
+  "authors": [
+    "Ziwen Song"
+  ],
+  "summary": "Quantum-control pulses are often optimised for nominal fidelity before waveform constraints are imposed. This sequence can conceal the fidelity cost of producing smooth, band-limited, and amplitude-admissible controls. Here, we evaluate a constraint-native alternative based on inexact proximal alternating-direction updates. The formulation combines gate-infidelity minimisation with amplitude bounds, Fourier-domain bandwidth projection, amplitude sparsity, and total-variation regularisation. We compare it with GRAPE, standard Krotov optimisation, and L-BFGS-B on a single-qubit gate, a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.atom-ph"
+  ],
+  "published": "2026-03-13",
+  "updated": "2026-07-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

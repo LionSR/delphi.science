@@ -1,0 +1,28 @@
+{
+  "key": "2602.03061",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.03061",
+  "title": "Evaluating LLMs When They Do Not Know the Answer: Statistical Evaluation of Mathematical Reasoning via Comparative Signals",
+  "authors": [
+    "Zihan Dong",
+    "Zhixian Zhang",
+    "Yang Zhou",
+    "Can Jin",
+    "Ruijia Wu",
+    "Linjun Zhang"
+  ],
+  "summary": "Evaluating mathematical reasoning in LLMs is constrained by limited benchmark sizes and inherent model stochasticity, yielding high-variance accuracy estimates and unstable rankings across platforms. On difficult problems, an LLM may fail to produce a correct final answer, yet still provide reliable pairwise comparison signals indicating which of two candidate solutions is better. We leverage this observation to design a statistically efficient evaluation framework that combines standard labeled outcomes with pairwise comparison signals obtained by having models judge auxiliary reasoning…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.ST",
+    "stat.ME",
+    "stat.ML"
+  ],
+  "published": "2026-02-03",
+  "updated": "2026-07-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

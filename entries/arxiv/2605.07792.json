@@ -1,0 +1,24 @@
+{
+  "key": "2605.07792",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.07792",
+  "title": "Neural Operators as Efficient Function Interpolators",
+  "authors": [
+    "Vasilis Niarchos",
+    "Angelos Sirbu",
+    "Sokratis Trifinopoulos"
+  ],
+  "summary": "Neural operators (NOs) are designed to learn maps between infinite-dimensional function spaces. We propose a novel reframing of their use. By introducing an auxiliary base-space, any finite-dimensional function can be viewed as an operator acting by composition on functions of the base-space. Through a range of benchmarks on analytic functions of increasing complexity and dimensionality, we demonstrate that NOs can match or outperform standard multilayer perceptrons and Kolmogorov--Arnold Networks in accuracy while requiring significantly fewer parameters and training time. As a real-world…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.NA",
+    "nucl-th"
+  ],
+  "published": "2026-05-08",
+  "updated": "2026-05-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

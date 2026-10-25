@@ -1,0 +1,26 @@
+{
+  "key": "2610.16153",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16153",
+  "title": "Architectural Robustness to Label Noise Using Variational Quantum Circuits for Medical Image Classification",
+  "authors": [
+    "Yasoda Lasiru Ariyarathna Epa",
+    "Yaseema Rusiru Ariyarathna Epa",
+    "Sandaru Liyanaarachchi",
+    "Kavindu Jayathissa",
+    "Kalana G. Abeywardena",
+    "Kithmin Wickremasinghe",
+    "Theshani Nuradha Piliththuwasam Gallage",
+    "Chamira U. S. Edussooriya"
+  ],
+  "summary": "Label noise is prevalent in medical image datasets, arising from observer disagreement and ambiguous cases and deep networks memorize the mislabeled examples at the cost of generalization. Current solutions such as loss correction and sample selection add training complexity and generally assume the noise rate is known or estimable. This paper investigates whether robustness can be obtained architecturally, by routing a frozen backbone's features through a low-dimensional bounded bottleneck and classifying them with a head whose function class is intrinsically smooth. Variational quantum…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

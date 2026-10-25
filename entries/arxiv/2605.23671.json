@@ -1,0 +1,23 @@
+{
+  "key": "2605.23671",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.23671",
+  "title": "A Non-Iterative Algorithm for Clearing Two-Layer Energy-Sharing Markets with Voltage Constraints",
+  "authors": [
+    "Tonghua Liu",
+    "Yifan Su",
+    "Zhaojian Wang",
+    "Feng Liu"
+  ],
+  "summary": "Real-time hierarchical energy-sharing markets are promising to coordinate large numbers of prosumers. Still, most existing clearing methods rely on linearized or DC power-flow models and do not explicitly handle reactive power or voltage-security constraints. With AC network constraints, the problem becomes a large-scale bilevel Mathematical Program with Equilibrium Constraints (MPEC) that is difficult to solve in real time. This paper develops a non-iterative clearing algorithm for two-layer energy-sharing markets with voltage constraints. We first derive an efficient best-response function…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-05-22",
+  "updated": "2026-05-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

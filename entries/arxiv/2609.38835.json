@@ -1,0 +1,24 @@
+{
+  "key": "2609.38835",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38835",
+  "title": "Average-and Last-Iterate Lower Bounds for Optimistic Matrix Mirror-Prox in Quantum Zero-Sum Games",
+  "authors": [
+    "Yiheng Su",
+    "Emmanouil-Vasileios Vlatakis-Gkaragkounis",
+    "Pucheng Xiong"
+  ],
+  "summary": "Optimistic matrix mirror-prox (OMMP) computes $ε$-approximate Nash equilibria in quantum zero-sum games with an $O(1/\\varepsilon)$ average-iterate guarantee [arXiv:2311.10859]. We investigate whether this dependence on accuracy is tight and whether geometric last-iterate convergence can be guaranteed. We study these questions through explicit games with one qubit per player. First, we prove an $Ω(1/\\varepsilon)$ lower bound for the uniform-average output that includes the maximally mixed initial state, independently of the regularizer and step size. Second, we construct a fixed game on which…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.GT",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

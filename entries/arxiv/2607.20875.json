@@ -1,0 +1,20 @@
+{
+  "key": "2607.20875",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.20875",
+  "title": "Implicit Primal-Dual Guarantees in Unconstrained First-Order Minimization",
+  "authors": [
+    "Benjamin Grimmer",
+    "Alex L. Wang"
+  ],
+  "summary": "This work considers the design of first-order convex optimization algorithms and convergence proofs. In particular, we consider nonsmooth Lipschitz and smooth problems accessed through a subgradient or gradient oracle, respectively. For the general class of fixed-step first-order methods, prior work on Performance Estimation Problems (PEPs) has shown that structured, tight convergence proofs typically exist. Under mild conditions, we further show that any first-order method guaranteeing a bound on the primal objective gap $f(x_N)-f(x_\\star)$ assuming only a bound on $\\|x_0-x_\\star\\|$…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-23",
+  "updated": "2026-07-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

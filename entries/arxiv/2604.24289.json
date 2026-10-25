@@ -1,0 +1,22 @@
+{
+  "key": "2604.24289",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.24289",
+  "title": "On the encoding complexity of quantum numerical integration: an angle-structure characterization",
+  "authors": [
+    "Francisco Chinesta",
+    "Antonio Falco",
+    "Daniela Falco-Pomares"
+  ],
+  "summary": "We study numerical integration on $[0,1]$ by quantum amplitude estimation (QAE), with emphasis on the cost of constructing the amplitude oracle. We introduce a hierarchy of grid functions $\\mathcal{G}_n^{(d)}$ whose angle map $Θ_g:\\{0,1\\}^n\\to[0,π]$ is multilinear of degree at most $d$. Membership is classically checkable in $O(n2^n)$ time by the Walsh--Hadamard transform, and each $g\\in\\mathcal{G}_n^{(d)}$ admits a canonical encoding circuit with $\\sum_{k=0}^d\\binom{n}{k}$ multi-controlled $R_Y$ gates. Combining this circuit bound with classical discretisation estimates, we obtain a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.NA"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2607.05650",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.05650",
+  "title": "Verifiable blind quantum computing: Comparative analysis and design considerations for client architectures",
+  "authors": [
+    "Janice van Dam",
+    "Jeroen Grimbergen",
+    "Stephanie D. C. Wehner"
+  ],
+  "summary": "Blind quantum computing (BQC) allows a client to delegate quantum computations to a remote server without revealing the input, computation, or output. In addition to being blind, the client can sometimes also verify that the server has performed their instructions correctly, a property known as verifiability. A key part of realizing such verifiable BQC (VBQC) is choosing the design of the client device: many architectures have been proposed, each with different hardware requirements, security properties, and performance characteristics, making it difficult to identify which is most suitable…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-06",
+  "updated": "2026-07-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

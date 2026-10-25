@@ -1,0 +1,20 @@
+{
+  "key": "2609.12266",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.12266",
+  "title": "Error bounds for the Sherman-Morrison formula and its modification with improved stability",
+  "authors": [
+    "Behnam Hashemi",
+    "Yuji Nakatsukasa"
+  ],
+  "summary": "It is known that the Sherman--Morrison (SM) formula is not numerically stable. In recent work, we introduced SMIR, an algorithm that incorporates iterative refinement to enhance the SM backward error. In this paper we take a different route: adapting an algorithm of Govaerts, originally designed for general bordered linear systems, we develop a modified Sherman--Morrison (MSM) method whose built-in self-correction makes it surprisingly resilient. Whereas standard SM requires the solution of two $n\\times n$ linear systems, MSM requires three; by contrast, SMIR requires $2+k$ solves, where $k$…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,26 @@
+{
+  "key": "2606.17260",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.17260",
+  "title": "Accelerated Convex Optimization via Hamiltonian Dynamics with Deterministic Integration Time",
+  "authors": [
+    "Xiuyuan Wang",
+    "Vishwak Srinivasan",
+    "Qiang Fu",
+    "Siddharth Mitra",
+    "Ashia Wilson",
+    "Andre Wibisono"
+  ],
+  "summary": "We develop Hamiltonian dynamics-based algorithms for smooth convex optimization that achieve accelerated rates of convergence. By exploiting contraction of averaged Hamiltonian flow trajectories rather than requiring contraction at trajectory endpoints, we show that Hamiltonian dynamics-based optimization methods admit deterministic and accelerated convergence guarantees, extending prior work that is limited to quadratic objectives or holds only in expectation. We analyze an idealized continuous-time algorithm and derive practical discrete-time implementations with optimal first-order…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-06-15",
+  "updated": "2026-06-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

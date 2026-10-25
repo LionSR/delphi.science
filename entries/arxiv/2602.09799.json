@@ -1,0 +1,21 @@
+{
+  "key": "2602.09799",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.09799",
+  "title": "Time-marching representation based quantum algorithms for the Lattice Boltzmann model of the advection-diffusion equation",
+  "authors": [
+    "Yuan He",
+    "Yuan Yu",
+    "Yue Yu"
+  ],
+  "summary": "This article introduces a novel framework for developing quantum algorithms for the Lattice Boltzmann Method (LBM) applied to the advection-diffusion equation. We formulate the collision-streaming evolution of the LBM as a compact time-marching scheme and rigorously establish its stability under low Mach number conditions. This unified formulation eliminates the need for classical measurement at each time step, enabling a systematic and fully quantum implementation. Building upon this representation, we investigate two distinct quantum algorithmic approaches. The first is a time-marching…",
+  "domain": "math-ph",
+  "tags": [
+    "math-ph"
+  ],
+  "published": "2026-02-10",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2608.09603",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.09603",
+  "title": "A block preconditioner with two parameters for double saddle point systems in liquid crystal director modeling",
+  "authors": [
+    "Mehdi Makhdomi",
+    "Davod Khojasteh Salkuyeh",
+    "Morad Ahmadnasab"
+  ],
+  "summary": "This paper introduces a novel block preconditioner for a class of double saddle point systems arising from the finite element discretization of liquid crystal director modeling. We first establish sufficient conditions to guarantee the convergence of the underlying iterative scheme. A spectral analysis of the preconditioned matrix is then performed, leading to an effective strategy for parameter selection. The new preconditioner is used to accelerate the convergence of the flexible version of GMRES. Experimental results confirm the strong performance of the method.",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

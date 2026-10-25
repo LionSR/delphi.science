@@ -1,0 +1,21 @@
+{
+  "key": "2601.15208",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.15208",
+  "title": "Penalty-Based Smoothing of Convex Nonsmooth Supremum Functions with Accelerated Inertial Dynamics",
+  "authors": [
+    "Samir Adly",
+    "Juan José Maulén",
+    "Emilio Vilches"
+  ],
+  "summary": "We propose a penalty-based smoothing framework for convex nonsmooth functions with a supremum structure. The regularization yields a differentiable surrogate with controlled approximation error, a single-valued dual maximizer, and explicit gradient formulas. We then study an accelerated inertial dynamic with vanishing damping driven by a time-dependent regularized function whose parameter decreases to zero. Under mild integrability and boundedness conditions on the regularization schedule, we establish an accelerated $\\mathcal{O}(t^{-2})$ decay estimate for the regularized residual and, in…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-21",
+  "updated": "2026-01-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

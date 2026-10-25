@@ -1,0 +1,21 @@
+{
+  "key": "2605.00711",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.00711",
+  "title": "A Line-search-free Method for Adaptive Decentralized Optimization",
+  "authors": [
+    "Xiaokai Chen",
+    "Ilya Kuruzov",
+    "Gesualdo Scutari"
+  ],
+  "summary": "We study decentralized optimization over networks where agents cooperatively minimize a smooth (strongly) convex sum of local losses while communicating only with immediate neighbors. Prevailing decentralized methods require either centralized knowledge of global problem and network parameters for stepsize tuning--hence impractical, or costly per-iteration line-searches that demand access to local function values. We propose line-search-free, fully decentralized algorithms in which each agent adapts its stepsize using only past local iterates and gradients--with no extra function evaluations…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-01",
+  "updated": "2026-07-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

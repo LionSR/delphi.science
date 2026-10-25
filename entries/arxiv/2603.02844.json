@@ -1,0 +1,22 @@
+{
+  "key": "2603.02844",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.02844",
+  "title": "Optimal Routing across Constant Function Market Makers with Gas Fees",
+  "authors": [
+    "Carlos Escudero",
+    "Felipe Lara",
+    "Miguel Sama"
+  ],
+  "summary": "We study the optimal routing problem in decentralized exchanges built on Constant Function Market Makers when trades can be split across multiple heterogeneous pools and execution incurs fixed on-chain costs (gas fees). While prior routing formulations typically abstract from fixed activation costs, real on-chain execution presents non-negligible gas fees. They also become convex under concavity/convexity assumptions on the invariant functions. We propose a general optimization framework that allows differentiable invariant functions beyond global convexity and incorporates fixed gas fees…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "q-fin.MF"
+  ],
+  "published": "2026-03-03",
+  "updated": "2026-03-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

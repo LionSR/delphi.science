@@ -1,0 +1,20 @@
+{
+  "key": "2608.29877",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.29877",
+  "title": "High-order energy-stable BGN parametric finite element methods for geometric flows",
+  "authors": [
+    "Shu Ma",
+    "Qiqi Rao"
+  ],
+  "summary": "We construct high-order Runge--Kutta extensions of Barrett--Garcke--Nürnberg (BGN) parametric finite element methods for curve-shortening flow and curve diffusion of planar curves and for mean curvature flow and surface diffusion of closed genus-$0$ surfaces. On each time slab $I_m=(t_m,t_{m+1}]$, the continuous equations are posed on the left-endpoint surface $Γ^m=Γ^{t_m}$ through the map $\\X^{m,t}:Γ^m\\toΓ^t$, whose target is the evolving surface at time $t$. For curves, this formulation follows by harmonic pullback from $Γ^0$ to $Γ^m$. For surfaces, an orientation-preserving harmonic…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-30",
+  "updated": "2026-08-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

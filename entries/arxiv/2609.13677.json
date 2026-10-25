@@ -1,0 +1,22 @@
+{
+  "key": "2609.13677",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.13677",
+  "title": "Nonsmooth Optimization via Orthogonalized Momentum",
+  "authors": [
+    "Lexiao Lai",
+    "Tianyi Lin",
+    "Jiayu Zhang"
+  ],
+  "summary": "Modern real application problems involve matrix-valued parameters, yet conventional optimizers treat them as vectors, thereby motivating matrix-aware methods that exploit input-output geometry, such as Muon which orthogonalizes the momentum matrices before parameter updates. Its empirical success raises a conceptual question: can orthogonalized momentum remain effective beyond smooth optimization? This paper studies this question for locally Lipschitz functions using a generalized derivative framework compatible with backpropagation. Our first contribution is to identify a key limitation:…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-09-12",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

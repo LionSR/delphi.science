@@ -1,0 +1,20 @@
+{
+  "key": "2607.29386",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.29386",
+  "title": "Rational Jacobi Rotations and the Complexity of Approximating Mixed Integer Quadratic Programming",
+  "authors": [
+    "Alberto Del Pia"
+  ],
+  "summary": "We present an algorithm that finds an epsilon-approximate solution to a mixed integer quadratic programming (MIQP) problem, and that runs on a Turing machine in time polynomial in the size of the instance and in 1/epsilon, provided that the number of integer variables and the number of negative eigenvalues of the Hessian of the objective function are fixed. Unless P=NP, both restrictions are necessary, so this completes the characterization of the complexity of approximating MIQP in terms of the number of integer variables and the inertia of the Hessian; the result is new already in the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DM"
+  ],
+  "published": "2026-07-31",
+  "updated": "2026-07-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

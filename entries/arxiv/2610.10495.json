@@ -1,0 +1,20 @@
+{
+  "key": "2610.10495",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.10495",
+  "title": "An Optimal Second-Order Algorithm for Finite-Sum Optimization under Average Smoothness and Convexity",
+  "authors": [
+    "Artem Tsedenov",
+    "Dmitry Kovalev"
+  ],
+  "summary": "In this paper, we consider a finite-sum optimization problem, where the objective function is convex, the $n$ component functions are twice continuously differentiable and their Hessians are mean-square Lipschitz. Our contribution is twofold. First, we develop a stochastic algorithm, which requires $\\tilde{\\mathcal{O}}(n + n^{6/7}/ε^{2/7})$ second-order oracle calls in expectation to find an approximate solution to the problem with the expected accuracy $ε$. Second, we establish a lower complexity bound of $Ω(n + n^{6/7}/ε^{2/7})$ for any stochastic second-order algorithm satisfying a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

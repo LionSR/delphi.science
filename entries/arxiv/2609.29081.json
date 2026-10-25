@@ -1,0 +1,21 @@
+{
+  "key": "2609.29081",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.29081",
+  "title": "A compact high-order and positivity-preserving active flux method for compressible Navier--Stokes equations on Cartesian meshes",
+  "authors": [
+    "Junming Duan",
+    "Wasilij Barsukow",
+    "Christian Klingenberg"
+  ],
+  "summary": "This paper develops a compact fourth-order positivity-preserving active flux (AF) method for the one- and two-dimensional compressible Navier--Stokes equations on Cartesian meshes. The method retains the cell averages and shared point values of the standard third-order AF method as its degrees of freedom. To avoid the order reduction that can arise when diffusion is discretized using operators from the standard third-order AF method, while maintaining compactness, the divergence of the viscous flux is discretized directly using compact fourth-order operators. For the inviscid part,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2609.02412",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.02412",
+  "title": "A Two-Variable Zeta Function for a Parity-Perturbed Hofstadter Q-Recursion: The Exceptional t = -1 Slice and Gaussian Boundary Layers",
+  "authors": [
+    "Marco Mantovanelli"
+  ],
+  "summary": "We study the parity-perturbed Hofstadter $Q$-recursion $$ \\widetilde Q(1)=\\widetilde Q(2)=1,\\qquad \\widetilde Q(n)=\\widetilde Q(n-\\widetilde Q(n-1)) +\\widetilde Q(n-\\widetilde Q(n-2))+(-1)^n, $$ and the associated two-variable Dirichlet series $$ Z_{\\widetilde Q}(s,t)=\\sum_{n\\ge1}n^{-s}\\widetilde Q(n)^{-t}. $$ The estimate $\\widetilde Q(n)=n/2+O(n/\\sqrt{\\log n})$ gives the exact domain of absolute convergence $\\operatorname{Re}(s+t)>1$. With $w=s+t$, we separate the universal term $2^tζ(w)$ and derive exact transport, frequency-position, and dyadic renormalization identities. The main result…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO"
+  ],
+  "published": "2026-09-02",
+  "updated": "2026-09-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

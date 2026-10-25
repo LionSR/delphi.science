@@ -1,0 +1,22 @@
+{
+  "key": "2607.10223",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10223",
+  "title": "PnP-IPA: A Provably Convergent Plug-and-Play Inexact Proximal Algorithm for Nonconvex Imaging Problems",
+  "authors": [
+    "Cristiano Parenti",
+    "Silvia Bonettini",
+    "Marco Prato"
+  ],
+  "summary": "Plug-and-Play (PnP) methods have emerged as a highly effective paradigm for solving imaging inverse problems by replacing traditional proximity operators of regularization terms with highly expressive deep denoisers. While empirically successful, establishing rigorous convergence guarantees for PnP algorithms remains a major challenge. Existing provable approaches based on the Gradient-Step (GS) denoiser suffer from theoretical and practical limitations, such as restrictive bounds on the regularization parameter, rigid step-size rules, and the inability to handle nonconvex data-fidelity…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-07-11",
+  "updated": "2026-07-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

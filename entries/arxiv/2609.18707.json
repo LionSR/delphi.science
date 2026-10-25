@@ -1,0 +1,23 @@
+{
+  "key": "2609.18707",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.18707",
+  "title": "Total Variation Distance Estimation through Domain Reduction",
+  "authors": [
+    "Arnab Bhattacharyya",
+    "Graham Cormode",
+    "Yucheng Fu",
+    "Kuldeep S. Meel"
+  ],
+  "summary": "Computing the total variation (TV) distance between succinctly represented high-dimensional distributions is generally intractable. We give an FPRAS for TV distance between mixtures of product distributions and, more generally, for a natural class of structured probabilistic circuits. Our main technique is a novel application of domain reduction: Given a family of feature vectors indexed by assignments, we use Lewis-weight sampling to replace the assignment domain by a polynomial-size weighted subset that simultaneously approximates the sum of absolute values of every linear projection. For…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.PR"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

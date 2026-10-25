@@ -1,0 +1,24 @@
+{
+  "key": "2605.12410",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.12410",
+  "title": "Model-based Bootstrap of Controlled Markov Chains",
+  "authors": [
+    "Ziwei Su",
+    "Imon Banerjee",
+    "Diego Klabjan"
+  ],
+  "summary": "We propose and analyze a model-based bootstrap for transition kernels in finite controlled Markov chains (CMCs) with possibly nonstationary or history-dependent control policies, a setting that arises naturally in offline reinforcement learning (RL) when the behavior policy generating the data is unknown. We establish distributional consistency of the bootstrap transition estimator in both a single long-chain regime and the episodic offline RL regime. The key technical tools are a novel bootstrap law of large numbers (LLN) for the visitation counts and a novel use of the martingale central…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.OC",
+    "math.ST"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

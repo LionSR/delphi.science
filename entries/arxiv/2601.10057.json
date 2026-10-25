@@ -1,0 +1,22 @@
+{
+  "key": "2601.10057",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.10057",
+  "title": "An Efficient Constant-Coefficient MSAV Scheme for Computing Vesicle Growth and Shrinkage",
+  "authors": [
+    "Zhiwei Zhang",
+    "Shuwang Li",
+    "John Lowengrub",
+    "Steven M. Wise"
+  ],
+  "summary": "We present a fast, unconditionally energy-stable numerical scheme for simulating vesicle deformation under osmotic pressure using a phase-field approach. The model couples an Allen-Cahn equation for the biomembrane interface with a variable-mobility Cahn-Hilliard equation governing mass exchange across the membrane. Classical approaches, including nonlinear multigrid and Multiple Scalar Auxiliary Variable (MSAV) methods, require iterative solution of variable-coefficient systems at each time step, resulting in substantial computational cost. We introduce a constant-coefficient MSAV (CC-MSAV)…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-15",
+  "updated": "2026-01-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

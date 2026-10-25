@@ -1,0 +1,22 @@
+{
+  "key": "2608.30894",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.30894",
+  "title": "The Cayley Completion of a Graph",
+  "authors": [
+    "Rigobert Fokam Souop",
+    "Laurent Bitjoka"
+  ],
+  "summary": "A finite connected graph is rarely a Cayley graph. We measure how far it is from being one: given $G$ with $n$ vertices and $m$ edges, how few edges must be added, or added and deleted, before the result is a Cayley graph of an abelian group of order $n$ on the same vertex set? This defines two invariants, the completion number $γ^{+}$ (additions only) and the Cayley edit distance $γ_{\\triangle}$ (both), each normalized by $m$. We show that deciding the edit version is NP-complete already for a fixed cyclic host, by a reduction from Hamiltonian Cycle in which the edit cost of a labeling is…",
+  "domain": "cs.DM",
+  "tags": [
+    "cs.DM",
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-08-31",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

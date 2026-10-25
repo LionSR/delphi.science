@@ -1,0 +1,20 @@
+{
+  "key": "2604.09797",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.09797",
+  "title": "Optimising Quantum Error Correction Using Morphing Circuits",
+  "authors": [
+    "Mackenzie H. Shaw",
+    "Barbara M. Terhal"
+  ],
+  "summary": "Quantum error correction (QEC) codes are traditionally defined and searched for without specifying the manner in which its syndrome extraction circuits are executed using elementary gates and measurements. We show how morphing circuits introduced in Refs. [1-3] provide a way of optimising syndrome extraction circuits and codes directly in terms of connectivity, choice of two-qubit gate (ISWAP versus CNOT) and number of physical qubits. We discuss morphing circuits in code optimisation among Abelian two-block group algebra (2BGA) codes, handling boundaries for 2D codes, codes with single-shot…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-10",
+  "updated": "2026-04-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

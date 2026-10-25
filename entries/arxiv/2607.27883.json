@@ -1,0 +1,20 @@
+{
+  "key": "2607.27883",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.27883",
+  "title": "Trainability and Mode Separation of Mixed IQP-QCBMs",
+  "authors": [
+    "Youngseok Lee",
+    "Hyunwoo Kim"
+  ],
+  "summary": "Quantum circuit Born machines (QCBMs) based on instantaneous quantum polynomial-time (IQP) circuits are promising quantum generative models for their classical trainability. It is known that their ancilla-free form avoids barren plateaus under certain initializations, but remains non-universal. Although adding ancilla qubits raises the expressivity, whether the ancilla-extended model retains local trainability remains unknown. We propose the mixed IQP-QCBM, which generalizes the ancilla-extended circuit as a weighted mixture of ancilla-free IQP circuits, called branches. For a polynomial…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-30",
+  "updated": "2026-07-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

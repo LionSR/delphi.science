@@ -1,0 +1,23 @@
+{
+  "key": "2601.02650",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.02650",
+  "title": "A Derivative-Free Saddle-search Algorithm With Linear Convergence Rate",
+  "authors": [
+    "Qiang Du",
+    "Baoming Shi",
+    "Lei Zhang",
+    "Xiangcheng Zheng"
+  ],
+  "summary": "We propose a derivative-free saddle-search algorithm designed to locate transition states using only function evaluations. The algorithm employs a nested architecture consisting of an inner eigenvector search and an outer saddle-point search. Through rigorous numerical analysis, we prove the almost sure convergence of the inner step under suitable assumptions. Furthermore, we establish the convergence of the outer search using a decaying step size, while demonstrating linear convergence under constant step size and boundedness conditions. Numerical experiments are provided to validate our…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-01-06",
+  "updated": "2026-01-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2606.04125",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.04125",
+  "title": "A Systematic Benchmark of Physics-Informed Neural Network Architectures for the Stiff Poisson-Nernst-Planck System: Adaptive LossWeighting and Multi-Scale Resolution",
+  "authors": [
+    "David Pankaczy",
+    "Conrard Giresse Tetsassi Feugmo"
+  ],
+  "summary": "The Poisson Nernst Planck PNP system constitutes a canonical stiff coupled PDE problem where the charge density prefactor produces extreme coefficient ratios and the electric double layer imposes sharp boundary layers. Physics informed neural networks PINNs are appealing here because they require no mesh and differentiate through the physics automatically. Spectral bias and multi task loss imbalance however have limited their accuracy on stiff PNP systems. We present the first systematic data free benchmark of eleven PINN configurations organised into four strategy groups on a physically…",
+  "domain": "physics.app-ph",
+  "tags": [
+    "physics.app-ph",
+    "math-ph",
+    "physics.comp-ph"
+  ],
+  "published": "2026-06-02",
+  "updated": "2026-06-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

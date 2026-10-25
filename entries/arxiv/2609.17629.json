@@ -1,0 +1,22 @@
+{
+  "key": "2609.17629",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.17629",
+  "title": "Fenchel-Young Duality Gaps: Certified Early Stopping for Regularized Inverse Problems",
+  "authors": [
+    "Pierre-Cyril Aubin-Frankowski",
+    "Yohann de Castro"
+  ],
+  "summary": "We study computable error bounds and certified early stopping for regularized inverse problems, where a data-fidelity term is traded against a regularizer. The analysis relies on an exact duality-gap identity that splits the total gap of $F(Φμ)+λR(μ)$ into a data-fidelity Fenchel--Young loss and a regularizer Fenchel--Young loss, $ Δ(μ,h)=L_F(Φμ\\parallel h)+λL_R(μ\\parallelη),\\qquad η=-Φ^\\star h/λ, $ valid for any primal point $μ$ and any dual point $h$. The data-fidelity term $F$ is strictly convex, so wherever $F^\\star$ is differentiable the loss $L_F(Φμ\\parallel h)$ is the Bregman…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

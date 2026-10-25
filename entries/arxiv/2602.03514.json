@@ -1,0 +1,21 @@
+{
+  "key": "2602.03514",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.03514",
+  "title": "A Function-Space Stability Boundary for Generalization in Interpolating Learning Systems",
+  "authors": [
+    "Ronald Katende"
+  ],
+  "summary": "Modern learning systems often interpolate training data while still generalizing well, yet it remains unclear when algorithmic stability explains this behavior. We model training as a function-space trajectory and measure sensitivity to single-sample perturbations along this trajectory. We propose a contractive propagation condition and a stability certificate obtained by unrolling the resulting recursion. A small certificate implies stability-based generalization, while we also prove that there exist interpolating regimes with small risk where such contractive sensitivity cannot hold,…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-02-03",
+  "updated": "2026-02-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

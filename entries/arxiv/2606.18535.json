@@ -1,0 +1,24 @@
+{
+  "key": "2606.18535",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.18535",
+  "title": "Shrinkage priors for Bayesian Substitute Confounders",
+  "authors": [
+    "Yordan P. Raykov",
+    "Hengrui Luo",
+    "Justin D. Strait",
+    "Wasiur R. KhudaBukhsh"
+  ],
+  "summary": "Multi-cause observational studies contain information about unmeasured confounding through the dependence structure among causes. However, literal imputation of the unobserved confounder is often more complex than learning a lower-dimensional substitute score that preserves the shared assignment variation needed for stable causal adjustment. The deconfounder (Wang and Blei, 2019) and related substitute confounder methods exploit this idea, but flexible assignment models can fit the joint distribution of the causes while producing scores that over-encode the treatment vector, collapse…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

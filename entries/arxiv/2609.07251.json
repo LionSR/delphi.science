@@ -1,0 +1,22 @@
+{
+  "key": "2609.07251",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07251",
+  "title": "Adaptive Conformal Inference Under Delayed Feedback: Coverage Guarantees and a Delay-to-Memory Diagnostic",
+  "authors": [
+    "Lama El Halabi",
+    "Adam Brandt"
+  ],
+  "summary": "Adaptive Conformal Inference (ACI) extends conformal prediction to non-exchangeable settings by adjusting the nominal miscoverage level online in response to recent coverage errors. When forecasts are issued with horizon $τ$, however, the outcome needed to evaluate a prediction is observed only $τ$ steps later, so these adaptive updates must rely on delayed feedback. We study this setting and ask how the effect of delay depends on the persistence of the residual process. First, we show that the $τ$-delayed ACI recursion can be decomposed into $τ$ interleaved ACI-like sequences. This…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

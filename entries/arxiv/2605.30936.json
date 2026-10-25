@@ -1,0 +1,23 @@
+{
+  "key": "2605.30936",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.30936",
+  "title": "Local linear convergence of gradient methods for overparameterized Gaussian mixtures",
+  "authors": [
+    "Jingxing Wang",
+    "Vasileios Charisopoulos",
+    "Maryam Fazel"
+  ],
+  "summary": "We study the problem of learning Gaussian mixture models under overparameterization. Prior work has shown that while overparameterization is essential for avoiding spurious local optima and enables global recovery of the ground-truth model using the gradient-EM (expectation-maximization) algorithm, it can dramatically slow down the local rate of convergence. Under certain assumptions on the mixture weights, we show that a standard divergence measure minimized by statistical learning procedures possesses a manifold of slow growth on which the well-known Polyak stepsize reduces the loss…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

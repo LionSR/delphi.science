@@ -1,0 +1,20 @@
+{
+  "key": "2604.04833",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.04833",
+  "title": "Cryptanalysis of the Legendre Pseudorandom Function over Extension Fields",
+  "authors": [
+    "Daksh Pandey"
+  ],
+  "summary": "The Legendre Pseudorandom Function (PRF) is a highly efficient cryptographic primitive built upon the Legendre symbol, valued for its low multiplicative complexity in Multi-Party Computation (MPC) and Zero-Knowledge Proof (ZKP) protocols. While its security over prime fields $\\mathbb{F}_p$ is well-documented, recent interest has shifted toward instantiations over extension fields $\\mathbb{F}_{p^r}$. This paper presents the first comprehensive cryptanalysis of the single-degree Legendre PRF operating over $\\mathbb{F}_{p^r}$. First, we analyze polynomial input encoding under a standard passive…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "math.NT"
+  ],
+  "published": "2026-04-06",
+  "updated": "2026-05-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

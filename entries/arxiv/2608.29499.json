@@ -1,0 +1,23 @@
+{
+  "key": "2608.29499",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.29499",
+  "title": "ENPINN: Energy-Norm-Guided Gradient-Enhanced PINNs for Generalized Transport Problems with Sharp Gradients",
+  "authors": [
+    "Subhendu Maity",
+    "Pratibhamoy Das",
+    "Arihant Patawari",
+    "Ameya D. Jagtap"
+  ],
+  "summary": "Physics-informed neural networks (PINNs) have emerged as a meshless alternative to conventional numerical methods for solving partial differential equations (PDEs). However, their limited ability to capture sharp gradients can lead to substantial errors when resolving boundary and interior layers. Here, we introduce an energy-norm-enhanced PINN (ENPINN) that incorporates gradient information and variational structure into the loss function to improve the resolution of layer-dominated solutions. We first examine two related formulations: weak-loss PINNs (WLPINNs), which incorporate test…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math-ph"
+  ],
+  "published": "2026-08-30",
+  "updated": "2026-08-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

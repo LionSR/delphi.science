@@ -1,0 +1,23 @@
+{
+  "key": "2604.00227",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00227",
+  "title": "Deception in Linear-Quadratic Control",
+  "authors": [
+    "Yerin Kim",
+    "Haosheng Zhou",
+    "Alexander Benvenuti",
+    "Ruimeng Hu",
+    "Matthew Hale"
+  ],
+  "summary": "Systems operating in adversarial environments may inadvertently leak sensitive information to adversaries. To address this challenge, we revisit the linear-quadratic control framework and introduce deception to actively mislead adversaries. Specifically, we consider a blue-team agent, observed by a red-team agent, that seeks to minimize a quadratic cost while introducing perturbations to its trajectories over time. These perturbations are designed to corrupt the red team's observations and, consequently, any downstream inferences, while remaining undetected by a red team using sequential…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-31",
+  "updated": "2026-03-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

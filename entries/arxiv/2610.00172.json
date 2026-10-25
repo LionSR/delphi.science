@@ -1,0 +1,19 @@
+{
+  "key": "2610.00172",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00172",
+  "title": "Certificate-Coupled DCA for the Trust-Region Subproblem: Early Structural Escape and Progressive Global Certification",
+  "authors": [
+    "Binh T. Nguyen"
+  ],
+  "summary": "We study the nonconvex trust-region subproblem by a certificate-coupled difference-of-convex algorithm that incorporates spectral information before exact first-order stationarity is attained. The method maintains a persistent randomized Krylov subspace together with the DCA iterates. Near stationarity, a sufficiently negative shifted Rayleigh quotient yields an explicit feasible correction with a quantitative decrease in the objective value; otherwise, completion of a prescribed Lanczos depth provides, with high probability, an approximate positive-semidefiniteness certificate. The same…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

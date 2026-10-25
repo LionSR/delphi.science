@@ -1,0 +1,19 @@
+{
+  "key": "2607.19647",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.19647",
+  "title": "On the Universality of Simple Trust-Region Algorithms",
+  "authors": [
+    "Clemens Sirotenko"
+  ],
+  "summary": "We establish universal complexity guarantees for quadratic trust-region methods and identify a common mechanism underlying their universal behavior under convexity, based on a function-gap model-decrease estimate that appears to be new in the trust-region literature. First, we prove that the basic trust-region method with inexact subproblem solves is universal under convexity. Under a $ν$-Hölder-continuous Hessian, it attains the global complexity bound $\\mathcal{O}(\\varepsilon^{-1/(1+ν)})$ for computing an $\\varepsilon$-approximate minimizer, without knowledge of $ν\\in[0,1]$ or the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-22",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

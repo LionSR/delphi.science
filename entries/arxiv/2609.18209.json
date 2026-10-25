@@ -1,0 +1,21 @@
+{
+  "key": "2609.18209",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.18209",
+  "title": "The Expressive Power of Constrained QAOA: What You Might Have MISsed",
+  "authors": [
+    "Boris Tsvelikhovskiy",
+    "Bao Bach",
+    "Ilya Safro"
+  ],
+  "summary": "Feasibility-preserving mixer Hamiltonians offer an attractive alternative to penalty encodings for constrained quantum optimization, yet how enforcing constraints alters the state space reachable by the Quantum Approximate Optimization Algorithm (QAOA) remains largely unexplored. We address this question within the context of the Maximum Independent Set (MIS) problem. Alongside the standard controlled bit-flip mixer, we analyze the alternative $\\mathit{Flip\\text{-}or\\text{-}Stay}$ mixer, whose restriction to the feasible subspace $W_{\\mathcal{F}}$ corresponds precisely to the shifted…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

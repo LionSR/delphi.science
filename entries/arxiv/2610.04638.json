@@ -1,0 +1,23 @@
+{
+  "key": "2610.04638",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04638",
+  "title": "Policy as Data: Replay-Based Policy Dual Averaging via Advantage Regression",
+  "authors": [
+    "Nianli Peng",
+    "Geoffrey J. Gordon",
+    "Kianté Brantley"
+  ],
+  "summary": "Actor-critic methods reuse past experience to improve sample efficiency. However, historical data are typically regarded as off-policy samples for the current policy-improvement update. This work introduces Regularized Dual Averaging Actor Critic (RDA2C), which assigns a distinct role to replay. In regularized dual averaging, the subsequent policy is determined by accumulated policy-improvement feedback, so historical advantage estimates contribute directly to the actor objective rather than solely to the most recent update. RDA2C stores state-action samples with critic-estimated advantage…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-10-03",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

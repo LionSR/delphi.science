@@ -1,0 +1,24 @@
+{
+  "key": "2605.10996",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.10996",
+  "title": "Towards Scalable Persistence-Based Topological Optimization",
+  "authors": [
+    "Abderrahim Bendahi",
+    "Alexandre Duplessis",
+    "Arnaud Fickinger"
+  ],
+  "summary": "Persistence-based topological optimization deforms a point cloud $X \\subset \\mathbb{R}^d$ by minimizing objectives of the form $L(X) = \\ell(\\mathrm{Dgm}(X))$, where $\\mathrm{Dgm}(X)$ is a persistence diagram. In practice, optimization is limited by two coupled issues: persistent homology is typically computed on subsamples, and the resulting topological gradients are highly sparse, with only a few anchor points receiving nonzero updates. Motivated by diffeomorphic interpolation, which extends sparse gradients to smooth ambient vector fields via Reproducing Kernel Hilbert Space (RKHS)…",
+  "domain": "cs.CG",
+  "tags": [
+    "cs.CG",
+    "cs.AI",
+    "cs.GR",
+    "math.OC"
+  ],
+  "published": "2026-05-09",
+  "updated": "2026-05-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

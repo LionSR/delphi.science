@@ -1,0 +1,23 @@
+{
+  "key": "2607.15184",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.15184",
+  "title": "Backpropagating Pauli Propagation",
+  "authors": [
+    "Sheng-Hsuan Lin",
+    "Etienne Granet",
+    "Kevin Hémery",
+    "Henrik Dreyer"
+  ],
+  "summary": "We develop a backpropagation algorithm for evaluating parameter gradients in quantum circuits using Pauli propagation simulation. The method has computational complexity comparable to that of standard sparse Pauli simulation techniques, while producing gradients whose accuracy is of the same order as the corresponding observable expectation values. By exploiting the reversibility of quantum circuits, the algorithm reduces the memory cost by a factor of $\\mathcal{O}(n_\\text{param})$ compared with conventional reverse-mode automatic differentiation, where $n_\\text{param}$ denotes the number of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.str-el"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

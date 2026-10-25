@@ -1,0 +1,26 @@
+{
+  "key": "2610.20413",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.20413",
+  "title": "When Does Momentum Help in Reinforcement Learning with Verifiable Rewards?",
+  "authors": [
+    "Kaifei Wang",
+    "Zikang Shan",
+    "Liwei Wang",
+    "Yinyu Ye",
+    "Han Zhong"
+  ],
+  "summary": "Momentum is a classical tool for accelerating convex optimization and a standard component of modern large language model training. Yet recent empirical work has questioned the usefulness of first-moment momentum in reinforcement learning with verifiable rewards (RLVR). We study this question through a bandit formulation of RLVR with bias-corrected exponential moving average (EMA) momentum, where the EMA coefficient $β$ controls how quickly the weights on past gradients decay. When policy gradients are evaluated exactly, we prove that increasing $β$ within a range that prevents overshoot…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

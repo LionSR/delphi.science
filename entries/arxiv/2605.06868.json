@@ -1,0 +1,21 @@
+{
+  "key": "2605.06868",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.06868",
+  "title": "When Descent Is Too Stable: Event-Triggered Hamiltonian Learning to Optimize",
+  "authors": [
+    "Yi Wang",
+    "Chandrajit Bajaj"
+  ],
+  "summary": "Fixed-budget nonconvex optimization can fail not because local descent is unstable, but because it is too stable: after reaching a nearby stationary point, an optimizer may spend the remaining evaluations refining an uninformative local minimum. We formulate this failure mode as a control problem over optimizer dynamics, where the learner must decide when to descend, when to exploit a promising basin, and when stagnation should trigger movement elsewhere. We introduce SHAPE, a structured adaptive port-Hamiltonian task-family optimizer for event-triggered minima hunting under local…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

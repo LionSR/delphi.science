@@ -1,0 +1,19 @@
+{
+  "key": "2610.10664",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.10664",
+  "title": "Why Distance Two Is Exceptional for Poisson-Binomial Point Probabilities",
+  "authors": [
+    "Igor Kleiner"
+  ],
+  "summary": "Let $S$ be a finite sum of independent Bernoulli random variables. We ask how large the mean must be before the atom at $k+r$ can strictly exceed the atom at $k$. For the threshold $T_{k,r}:=\\inf\\{\\mathbb{E}S:\\mathbb{P}(S=k+r)>\\mathbb{P}(S=k)\\}$, the adjacent case recovers the classical Darroch boundary $k+1/(k+2)$, while every gap $r\\ge3$ has threshold $k+1$. Distance two is the unique nonadjacent exception: $T_{k,2}=k+Δ_k$, where $Δ_k$ and its staircase optimizer are explicit and $Δ_k=1/2+1/\\sqrt{2k}-1/(4k)+O(k^{-3/2})$. The proof combines the classical fixed-mean reduction to shifted…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2603.23302",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.23302",
+  "title": "A Theory of Nonparametric Covariance Function Estimation for Discretely Observed Data",
+  "authors": [
+    "Yoshikazu Terada",
+    "Atsutomo Yara"
+  ],
+  "summary": "We study nonparametric covariance function estimation for functional data observed with noise at discrete locations on a $d$-dimensional domain. Estimating the covariance function from discretely observed data is a challenging nonparametric problem, particularly in multidimensional settings, since the covariance function is defined on a product domain and thus suffers from the curse of dimensionality. This motivates the use of adaptive estimators, such as deep learning estimators. However, existing theoretical results are largely limited to estimators with explicit analytic representations,…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-03-24",
+  "updated": "2026-03-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

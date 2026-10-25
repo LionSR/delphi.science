@@ -1,0 +1,20 @@
+{
+  "key": "2609.39531",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.39531",
+  "title": "WEIRDO: WEak resIdual Regularized DOob's h-transform diffusion alignment",
+  "authors": [
+    "Denis Suchkov"
+  ],
+  "summary": "We study the problem of estimating the guidance that steers the distribution learned by a diffusion generative model toward a tilted target $q_0 \\propto w\\,p_0$ at inference time. Relying on the stochastic optimal control approach, we observe that the exact drift correction is the gradient of the logarithm of Doob's $h$-function, and we study the problem of estimating it from a sample. In the present paper, we assume that the score of the pretrained model is available, that the tilting weight is bounded and positive, and that the reference distribution has a bounded support, no smoothness of…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.LG"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

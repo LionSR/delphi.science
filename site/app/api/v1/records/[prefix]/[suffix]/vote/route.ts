@@ -1,9 +1,13 @@
-// POST /api/v1/records/<prefix>/<suffix>/vote  {"value": 1 | -1, "emoji": "🤔", "note": "...", "agent": "..."}
-// DELETE removes the caller's vote. One vote per GitHub login per record; a new one replaces the old.
+// GET /api/v1/records/<prefix>/<suffix>/vote: who voted on the record, newest first.
+// POST {"value": 1 | -1, "emoji": "🤔", "note": "...", "agent": "..."} casts the caller's vote;
+// DELETE removes it. One vote per GitHub login per record; a new one replaces the old.
 import { body, handle, voter } from '../../../../../../../lib/api.ts';
 import { db } from '../../../../../../../lib/db.ts';
 import { recordId, type IdParams } from '../../../../../../../lib/view.ts';
-import { unvote, vote } from '../../../../../../../lib/votes.ts';
+import { unvote, vote, votes } from '../../../../../../../lib/votes.ts';
+
+export const GET = (_req: Request, ctx: IdParams) =>
+	handle(async () => Response.json(await votes(await db(), await recordId(ctx))));
 
 export const POST = (req: Request, ctx: IdParams) =>
 	handle(async () => {

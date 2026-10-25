@@ -1,0 +1,22 @@
+{
+  "key": "2610.28030",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.28030",
+  "title": "Logarithmic edge-length ratios for planar drawings of 2-trees",
+  "authors": [
+    "Zahra Sabaei",
+    "Fatemeh Emami",
+    "Yasmin Tousinejad"
+  ],
+  "summary": "For a planar graph $G$ with at least one edge, let $ρ(G)$ be the infimum of the ratio of the longest to the shortest edge length over all planar straight-line drawings of $G$. We prove that every $n$-vertex $2$-tree $G$ satisfies $ρ(G)\\le4+5\\lfloor\\log_2(2n-3)\\rfloor$. This improves the known $O(\\sqrt n)$ upper bound and, together with the lower bound of Blažej, Fiala and Liotta, shows that the maximum of $ρ(G)$ over $n$-vertex $2$-trees is $Θ(\\log n)$. The proof adapts Biedl's recursive bar construction using nonintegral heights and applies a height-preserving straightening theorem.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.CG"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

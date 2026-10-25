@@ -1,0 +1,22 @@
+{
+  "key": "2604.21858",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.21858",
+  "title": "Meshless $h$-adaptive Solution for non-Newtonian Natural Convection in a Differentially Heated Cavity",
+  "authors": [
+    "Miha Rot",
+    "Gregor Kosec"
+  ],
+  "summary": "One of the main challenges in numerically solving partial differential equations is finding a discretisation for the computational domain that balances the accurate representation of the underlying field with computational efficiency. Meshless methods approximate differential operators based on the values of the field in computational nodes, offering a natural approach to adaptivity. The density of computational nodes can either be increased to enhance accuracy or decreased to reduce the number of numerical operations, depending on the properties of the intermediate solution. In this paper,…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-04-23",
+  "updated": "2026-04-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

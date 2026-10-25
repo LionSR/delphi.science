@@ -1,0 +1,27 @@
+{
+  "key": "2610.00420",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00420v2",
+  "pdf": "https://hexagonmath.org/pdf/2610.00420v2",
+  "title": "The Riemann Hypothesis on Young's Lattice",
+  "authors": [
+    "José Damián Espinosa"
+  ],
+  "summary": "This work establishes a novel structural connection between the Riemann Hypothesis and Young's Lattice through partition-indexed harmonic numbers and the Generalized Assembly Theorem. We establish a new family of equivalences for the conjecture, define the partition-based harmonic numbers $H_n^{\\boldsymbol{\\lambda}}$, and reformulate the Riemann Hypothesis as the Young's Lattice equivalence: $$\\sum_{\\substack{k \\in \\mathbb{N} \\\\ \\boldsymbol{\\lambda} \\, \\vdash \\, k}}\\frac{H_n^{\\boldsymbol{\\lambda}}}{\\boldsymbol{\\lambda}!} \\, a_k > \\sum_{d \\mid n} d$$ for every $n \\in \\mathbb{N}$, where…",
+  "domain": "math.NT",
+  "tags": [
+    "math.CO",
+    "msc:11M26",
+    "msc:11P81"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "version": 2,
+  "authorship": "human",
+  "human_understanding": "all",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

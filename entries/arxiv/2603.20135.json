@@ -1,0 +1,21 @@
+{
+  "key": "2603.20135",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20135",
+  "title": "Classifier-Based Nonparametric Sequential Hypothesis Testing",
+  "authors": [
+    "Chia-Yu Hsu",
+    "Shubhanshu Shekhar"
+  ],
+  "summary": "We consider the problem of constructing sequential power-one tests where the null and alternative classes are specified indirectly through historical or offline data. More specifically, given an offline dataset consisting of observations from $L+1$ distributions $\\{P_0, P_1, \\ldots, P_L\\}$, and a new unlabeled data stream $\\{X_t: t \\geq 1\\} \\overset{i.i.d}{\\sim} P_θ$, the goal is to decide between the null $H_0: θ= 0$, against the alternative $H_1: θ\\in [L]:=\\{1,\\ldots,L\\}$. Our main methodological contribution is a general approach for designing a level-$α$ power-one test for this problem…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.IT"
+  ],
+  "published": "2026-03-20",
+  "updated": "2026-03-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2609.08751",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.08751",
+  "title": "Optimal input design via Frank-Wolfe",
+  "authors": [
+    "Fethi Bencherki",
+    "Bruce Lee",
+    "Nikolai Matni",
+    "Anders Rantzer"
+  ],
+  "summary": "We study optimal input design over a finite horizon for linear dynamical systems. The goal is to minimize a weighted inverse-covariance (information) criterion subject to an energy budget. The set of covariances achievable by causal policies is convex but lacks a tractable explicit description, ruling out projection-based methods. We show that Frank--Wolfe applies naturally: each linear minimization subproblem is a budget-constrained finite-horizon linear quadratic (LQ) problem, solvable by a Riccati recursion and one-dimensional bisection over a Lagrange multiplier. Using smoothness of the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

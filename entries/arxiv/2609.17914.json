@@ -1,0 +1,22 @@
+{
+  "key": "2609.17914",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.17914",
+  "title": "Separating Non-redundancy and Chain Length",
+  "authors": [
+    "Joshua Brakensiek",
+    "Venkatesan Guruswami",
+    "Aaron Putterman"
+  ],
+  "summary": "For a constraint satisfaction problem defined by a relation $R$, its non-redundancy $\\text{NRD}(R,n)$ is the size of largest instance (as a function of the number $n$ of variables) for which no constraint is implied by the rest. Its chain length $\\text{CL}(R,n)$ is the largest such instance where the constraints can be ordered so that no constraint is implied by the preceding ones. Clearly $\\text{CL}(R,n) \\ge \\text{NRD}(R,n)$ but so far no asymptotic separation was known between these quantities. We exhibit an explicit arity $4$ relation for which $\\text{CL}(R,n) \\ge ω(\\text{NRD}(R,n))$.",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "math.CO"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

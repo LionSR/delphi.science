@@ -1,0 +1,21 @@
+{
+  "key": "2604.19272",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.19272",
+  "title": "Symplectic Error of Implicit Symplectic Integrators: A Qualitative Structural Analysis",
+  "authors": [
+    "Matěj Gajdoš",
+    "Ondřej Brichta",
+    "Václav Kučera"
+  ],
+  "summary": "We study how inexact nonlinear solvers lead to a loss of exact symplecticity in the Symplectic Euler (SE) and Stormer-Verlet (SV) schemes when applied to general nonseparable Hamiltonian systems. These schemes are implicit and require nonlinear solvers in practice. Here, we consider a fixed number $M$ of fixed-point iterations (FPI). While SE is exactly symplectic under exact solves, a finite $M$ gives only pseudo-symplecticity. Compared to previous results, we provide a more qualitative, block-wise characterization of the induced pseudo-symplecticity by analyzing the resulting perturbations…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-21",
+  "updated": "2026-04-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

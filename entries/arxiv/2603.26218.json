@@ -1,0 +1,22 @@
+{
+  "key": "2603.26218",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.26218",
+  "title": "Discrete hypocoercive estimates for discontinuous Galerkin methods: application to the Vlasov-Poisson-Fokker-Planck system",
+  "authors": [
+    "Yi Cai",
+    "Alain Blaustein",
+    "Tao Xiong",
+    "Francis Filbet"
+  ],
+  "summary": "We develop and analyze a class of structure-preserving discontinuous Galerkin schemes for the nonlinear Vlasov-Poisson-Fokker-Planck model, reformulated as a hyperbolic system through a Hermite expansion in the velocity variable. We discretize the Vlasov-Fokker-Planck equation with the discontinuous Galerkin method, while the Poisson equation is approximated with either a discontinuous Galerkin method or a Raviart-Thomas mixed finite element method. We prove the exponential relaxation to equilibrium for suitable initial data, uniformly with respect to the discretization parameters thanks to…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-27",
+  "updated": "2026-03-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

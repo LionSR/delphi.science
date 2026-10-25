@@ -1,0 +1,22 @@
+{
+  "key": "2608.03656",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.03656",
+  "title": "Iterative linear quadratic regulator on SU(N) for multi-qubit gate synthesis",
+  "authors": [
+    "Dirk Heimann",
+    "Felix Wiebe",
+    "Elie Mounzer",
+    "Shivesh Kumar"
+  ],
+  "summary": "In quantum optimal control theory, gradient-based trajectory optimization techniques have proven versatile in designing multi-qubit quantum gates. Furthermore, incorporating the underlying Lie-group structure can accelerate the optimization process. In this work, we adapt the Lie-group formulation of the iterative linear quadratic regulator (iLQR) to the special unitary group SU(N) and apply it to quantum gate synthesis, systematically comparing it against the standard Euclidean iLQR formulation across multiple two- to five-qubit gates. We find that in the idealized, unconstrained setting,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

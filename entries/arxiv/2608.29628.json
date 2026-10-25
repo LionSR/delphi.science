@@ -1,0 +1,24 @@
+{
+  "key": "2608.29628",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.29628",
+  "title": "Reciprocal-Manifold Annealed KKT Flows for Constrained Optimization: Application to the Nonconvex AC Optimal Power Flow",
+  "authors": [
+    "M Parimi",
+    "Aditi Ramteke",
+    "Rachit Mehra",
+    "Arun Mahindrakar",
+    "Navdeep Singh"
+  ],
+  "summary": "Safety-critical optimization applications, such as real-time power system operation, maintain feasibility at every intermediate step, not merely at convergence. Existing approaches either violate constraints mid-solve (interior-point methods) or enforce feasibility through per-instant quadratic programming subproblems with cubic computational cost and unbounded worst-case execution time. We propose a continuous-time optimization framework for smooth constrained nonlinear problems that preserves feasibility throughout the optimization process without requiring projection operators, quadratic…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-08-30",
+  "updated": "2026-08-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

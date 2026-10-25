@@ -1,0 +1,23 @@
+{
+  "key": "2608.07017",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.07017",
+  "title": "Extended Walk-on-Spheres Algorithm for Linear and Nonlinear Elliptic Problems of Divergence-type",
+  "authors": [
+    "Iulian Cîmpean",
+    "Andreea Grecu",
+    "Arghir Zarnescu"
+  ],
+  "summary": "The Walk-on-Spheres algorithm, introduced by M. E. Muller in 1956, is a well known Monte Carlo method that leverages Brownian exit distributions from spheres to solve the Laplace equation with Dirichlet boundary conditions. Its mesh-free nature, robustness on complex geometries, favorable scaling with dimension, and intrinsic parallelism distinguish it from mesh-based solvers. However, its efficient applicability has been essentially limited to operators that admit explicit probabilistic exit laws, excluding most variable-coefficient and nonlinear elliptic operators. We propose a general…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.AP",
+    "math.PR"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

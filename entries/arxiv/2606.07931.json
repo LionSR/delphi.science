@@ -1,0 +1,23 @@
+{
+  "key": "2606.07931",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.07931",
+  "title": "Pointwise Complexity for Gaussian Fields: Upper Envelopes, Algorithmic Lower Bounds, and Separation",
+  "authors": [
+    "Yunbei Xu"
+  ],
+  "summary": "We prove a variance-aware pointwise majorizing-measure theorem for centered Gaussian processes. Classical generic chaining characterizes the scalar quantity $\\mathbb E\\sup_{x\\in T}X_x$; the theorem here gives a simultaneous high-probability envelope for the entire field. For an ambient prior $μ$, the envelope at $x$ is governed by a pointwise Fernique-Talagrand functional \\[Φ_μ(x):=\\int_0^{4σ(x)}\\sqrt{\\log\\frac{1}{μ(B_d(x,\\varepsilon))}}\\,d\\varepsilon,\\] together with the corresponding Gaussian tail term. The theorem provides a reusable field-level refinement of classical generic chaining…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cond-mat.stat-mech",
+    "cs.IT",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-06-06",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

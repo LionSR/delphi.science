@@ -1,0 +1,23 @@
+{
+  "key": "2604.17661",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.17661",
+  "title": "Maximum Cuts and Fractional Cut Covers: A Computational Study of a Randomized Semidefinite Programming Approach",
+  "authors": [
+    "Nathan Benedetto Proença",
+    "Marcel K. de Carli Silva",
+    "Cristiane M. Sato",
+    "Levent Tunçel"
+  ],
+  "summary": "We present experimental work on a primal-dual framework simultaneously approximating maximum cut and weighted fractional cut-covering instances. In this primal-dual framework, we solve a semidefinite programming (SDP) relaxation to either the maximum cut problem or to the weighted fractional cut-covering problem, and then independently sample a collection of cuts via the random-hyperplane technique. We then simultaneously certify the approximate optimality of a cut and a fractional cut cover. We present several implementations which reliably achieve the celebrated Goemans and Williamson…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DM"
+  ],
+  "published": "2026-04-19",
+  "updated": "2026-04-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2610.08420",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08420",
+  "title": "Symmetry-Aware Feature Learning: A Polynomial Separation for Multi-Index Models",
+  "authors": [
+    "Jivan Waber",
+    "Vanessa Piccolo",
+    "Yatin Dandi",
+    "Florent Krzakala"
+  ],
+  "summary": "We establish a polynomial sample complexity separation between symmetry-aware and symmetry-agnostic feature learning. We study growing-rank multi-index models with high-dimensional Gaussian covariates in $\\mathbb{R}^d$ and $r=Θ(d^δ)$ teacher directions forming a cyclic symmetry orbit, where $0<δ<1/2$. We compare three ways of exploiting this structure: architectural weight sharing, data augmentation over the full symmetry group, and learning without access to the symmetry. In particular, we analyze a symmetry-tied convolutional network, an untied network, and the same untied network trained…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

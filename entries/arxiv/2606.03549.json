@@ -1,0 +1,22 @@
+{
+  "key": "2606.03549",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.03549",
+  "title": "How Many Trees in a Random Forest? A Revisited Approach with Plateau Search and Optuna Integration",
+  "authors": [
+    "Vadim Porvatov",
+    "Andrey Dukhovny",
+    "Andrey Lange"
+  ],
+  "summary": "Hyperparameter optimization (HPO) for Random Forest faces a specific difficulty in tuning the number of trees: the predictive score typically improves monotonically with ensemble size, so standard methods such as Tree-structured Parzen Estimator (TPE) and Hyperband require a predefined search range and often drive the estimate toward its right boundary. Early-stopping strategies avoid fixing such a range, but can be sensitive to score noise and prone to premature stopping. To address this, we propose an integrated triplet-based plateau-search algorithm that removes the number of trees from…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-06-02",
+  "updated": "2026-06-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

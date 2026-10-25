@@ -1,0 +1,24 @@
+{
+  "key": "2604.17515",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.17515",
+  "title": "Robustness Evaluation of Hybrid Quantum Neural Networks under Noise Models via System-Level Error Mitigation",
+  "authors": [
+    "Jesse Roberta Mingue Njiki",
+    "Nouhaila Innan",
+    "Alberto Marchisio",
+    "Muhammad Kashif",
+    "Jean-Michel Dricot",
+    "Muhammad Shafique"
+  ],
+  "summary": "Quantum Neural Networks (QNNs) represent a promising direction within Quantum Machine Learning (QML), yet their realization on noisy intermediate-scale quantum (NISQ) devices remains constrained by decoherence, gate imperfections, crosstalk, and readout errors. This study provides a systematic evaluation of noise effects and mitigation strategies in hybrid quantum neural networks (HQNNs). Zero-Noise Extrapolation (ZNE), Digital Dynamical Decoupling (DDD), and Layerwise Richardson Extrapolation (LRE) are integrated into end-to-end QNN training pipelines developed with PennyLane, simulated…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-19",
+  "updated": "2026-07-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

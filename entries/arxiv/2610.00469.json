@@ -1,0 +1,23 @@
+{
+  "key": "2610.00469",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00469",
+  "title": "Factor Code Networks",
+  "authors": [
+    "Abhisek Sahu",
+    "Jeremy van der Heijden",
+    "Mark Van Raamsdonk",
+    "Rana Zibakhsh"
+  ],
+  "summary": "For a quantum code defined by an isometry $T:H_{\\rm code} \\to H_{\\rm phys}$, an operator map is a *-homomorphism $\\varphi: B(H_{\\rm code}) \\to B(H_{\\rm phys})$ from the space of operators on the logical Hilbert space to the space of operators on the physical Hilbert space satisfying $\\varphi({\\cal O}) T = T {\\cal O}$ for every operator ${\\cal O}$ on $H_{\\rm code}$. This can additionally be taken to be unital $\\varphi(I_{code}) = I_{phys}$ if and only if $\\dim H_{\\rm code}$ divides $\\dim H_{\\rm phys}$. In this case, $\\varphi(B(H_{\\rm code})$ is a von Neumann factor subalgebra of $B(H_{\\rm…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "hep-th"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

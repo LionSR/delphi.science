@@ -1,0 +1,22 @@
+{
+  "key": "2609.16353",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.16353",
+  "title": "Finite-sample guarantees for data-driven operator splitting methods via martingale inequalities",
+  "authors": [
+    "Andrea Martin",
+    "Filippo Fabiani",
+    "Giuseppe Belgioioso"
+  ],
+  "summary": "Operator splitting methods are a fundamental class of algorithms for solving structured monotone inclusion problems arising in optimization, control, and game theory. We consider the case, common in stochastic regimes, where the forward evaluation of one of the constituent operators is either unavailable in closed form or computationally expensive to evaluate, and is therefore approximated using a finite number of noisy oracle samples. We establish distribution-free, finite-sample certificates for the quality of the output produced by data-driven Davis-Yin splitting algorithms. Unlike…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

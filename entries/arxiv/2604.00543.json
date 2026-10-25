@@ -1,0 +1,20 @@
+{
+  "key": "2604.00543",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00543",
+  "title": "Activation Saturation and Floquet Spectrum Collapse in Neural ODEs",
+  "authors": [
+    "Nikolaos M. Matzakos"
+  ],
+  "summary": "We prove that activation saturation imposes a structural dynamical limitation on autonomous Neural ODEs $\\dot{h}=f_θ(h)$ with saturating activations ($\\tanh$, sigmoid, etc.): if $q$ hidden layers of the MLP $f_θ$ satisfy $|σ'|\\leδ$ on a region~$U$, the input Jacobian is attenuated as $\\norm{Df_θ(x)}\\le C(U)$ (for activations with $\\sup_{x}|σ'(x)|\\le 1$, e.g.\\ $\\tanh$ and sigmoid, this reduces to $C_Wδ^q$), forcing every Floquet (Lyapunov) exponen along any $T$-periodic orbit $γ\\subset U$ into the interval $[-C(U),\\;C(U)]$. This is a collapse of the Floquet spectrum: as saturation deepens…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "cs.LG"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-04-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

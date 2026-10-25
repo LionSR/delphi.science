@@ -1,0 +1,23 @@
+{
+  "key": "2605.28690",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.28690",
+  "title": "Latent-Conditioned Parameterized Quantum Circuits as Universal Approximators for Distributions over Quantum States",
+  "authors": [
+    "Quoc Hoan Tran",
+    "Koki Chinzei",
+    "Yasuhiro Endo",
+    "Hirotaka Oshima"
+  ],
+  "summary": "Many applications in quantum simulation, quantum chemistry, and quantum machine learning require not a single quantum state but an ensemble of states characterizing the heterogeneity of a target system. Preparing such ensembles state-by-state is prohibitive in both variational and fault-tolerant settings, thereby motivating a generative modeling approach. We introduce latent-conditioned parameterized quantum circuits (LPQCs), a hybrid quantum-classical framework in which classical neural networks map a latent variable sampled from a prior distribution to the parameters of a parameterized…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-05-27",
+  "updated": "2026-06-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

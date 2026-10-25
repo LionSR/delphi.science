@@ -1,0 +1,19 @@
+{
+  "key": "2603.20294",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20294",
+  "title": "A 67%-Rate CSS Code on the FCC Lattice: [[192,130,3]] from Weight-12 Stabilizers",
+  "authors": [
+    "Raghu Kulkarni"
+  ],
+  "summary": "We construct a three-dimensional Calderbank-Shor-Steane (CSS) stabilizer code on the Face-Centered Cubic (FCC) lattice. Physical qubits reside on the edges of the lattice (coordination $K=12$); X-stabilizers act on octahedral voids and Z-stabilizers on vertices, both with uniform weight 12. Computational verification confirms CSS validity ($H_{X}H_{Z}^{T}=0$ over GF(2)) and reveals $k=2L^{3}+2$ logical qubits: $k=130$ at $L=4$ and $k=434$ at $L=6$, yielding encoding rates of 67.7% and 67.0% respectively. The minimum distance $d=3$ is proven exactly by exhaustive elimination of all…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-19",
+  "updated": "2026-03-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

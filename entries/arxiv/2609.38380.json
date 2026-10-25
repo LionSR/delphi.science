@@ -1,0 +1,21 @@
+{
+  "key": "2609.38380",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38380",
+  "title": "Priority-Aware Routing for Quantum Networks:Integrating Coherence-Time Constraints into Scheduling",
+  "authors": [
+    "Sadhgun Ram Dasi",
+    "Aswath Babu H"
+  ],
+  "summary": "Quantum networks face a fundamental challenge absent in classical networks; finite memory coherence times mean that queuing delay directly degrades information quality, causing decoherence that has no classical analog. Existing routing protocols optimize for hop count or channel fidelity while treating scheduling delays as a secondary concern, leaving fidelity vulnerable to congestion-induced decoherence. We present a coherence-aware routing protocol that integrates decoherence constraints into path selection via a priority-modulated aging model derived analytically from Weighted Fair…",
+  "domain": "cs.NI",
+  "tags": [
+    "cs.NI",
+    "quant-ph"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

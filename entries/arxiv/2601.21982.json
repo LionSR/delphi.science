@@ -1,0 +1,20 @@
+{
+  "key": "2601.21982",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.21982",
+  "title": "Metric Approximations of Consistent Path Systems",
+  "authors": [
+    "Daniel Cizma",
+    "Nati Linial"
+  ],
+  "summary": "A path system $\\mathscr{P}$ in a graph $G=(V,E)$ is a collection of paths, with exactly one path between any two vertices in $V$. A path system is said to be consistent if it is closed under subpaths. We say that a path system $\\mathscr{P}$ is $α$-metric if there exists a metric $ρ$ on $V$ such that $\\sum_{i=1}^{k}ρ(x_{i-1},x_{i}) \\le αρ(x_0,x_k)$ for every path $(x_0,x_1,\\dots,x_k)\\in \\mathscr{P}$. Also, we denote by $Δ(\\mathscr{P})$ the infimum of $α$ for which $\\mathscr{P}$ is $α$-metric. We show that $Δ(\\mathscr{P}) \\le O(\\sqrt{n})$ for every $n$-point consistent path system…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

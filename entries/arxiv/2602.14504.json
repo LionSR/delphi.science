@@ -1,0 +1,20 @@
+{
+  "key": "2602.14504",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14504",
+  "title": "Adaptive Finite Elements with Algebraic Stabilization for Convection-Dominated Transport",
+  "authors": [
+    "Naveed Ahmed",
+    "Abhinav Jha"
+  ],
+  "summary": "We present a numerical investigation of residual-based a posteriori error estimation for finite element discretizations of convection--diffusion equations stabilized by algebraic flux correction and related algebraic stabilization techniques. In particular, we consider AFC schemes employing the BJK and Monolithic Convex (MC) limiters and algebraically stabilized methods including MUAS, SMUAS, and the BBK approach. The performance of the estimators and limiters are studied on adaptively refined meshes for several two-dimensional test problems, including boundary layers, interior layers, and a…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-02-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

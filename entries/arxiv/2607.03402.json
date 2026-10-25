@@ -1,0 +1,20 @@
+{
+  "key": "2607.03402",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.03402",
+  "title": "Sketch low-rank dynamics: orthogonal vs. oblique projections",
+  "authors": [
+    "Benjamin Carrel",
+    "Laura Grigori"
+  ],
+  "summary": "We study how sketching techniques from randomized numerical linear algebra can be incorporated into the dynamical low-rank approximation (DLRA) of large-scale matrix differential equations. A natural approach is to sketch the Galerkin condition that defines the DLRA, which leads to an oblique tangent space projection. We show that this oblique projection approximately reproduces the standard DLRA only under restrictive conditions on the vector field, and that it fails on problems with a large perpendicular residual. As an alternative, we propose an orthogonal sketch DLRA that evolves…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-03",
+  "updated": "2026-07-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

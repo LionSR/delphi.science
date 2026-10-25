@@ -1,0 +1,26 @@
+{
+  "key": "2605.05881",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05881",
+  "title": "Surface-Code Thresholds and Qubit Footprints in Shuttling-Based Spin-Qubit Railways",
+  "authors": [
+    "Arun John Moncy",
+    "Reza Dastbasteh",
+    "Josu Etxezarreta Martinez",
+    "Ryo Nagai",
+    "Pedro M. Crespo",
+    "Normann Mertig",
+    "Charles Smith",
+    "Ruben M. Otxoa"
+  ],
+  "summary": "We present a fault-tolerant mapping of rotated surface codes onto a $2\\times N$ silicon spin-qubit railway architecture, utilizing electron shuttling to resolve the wiring fan-out bottleneck. Employing circuit-level noise modeling, we evaluate threshold performances across various noise biases. We demonstrate that shuttling check qubits instead of data qubits fundamentally improves system thresholds. Crucially, under a noise model biased towards dephasing for spin-qubit shuttling, the non-CSS XZZX surface code outperforms standard CSS variants. By tailoring the topological code to this…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

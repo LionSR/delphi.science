@@ -1,0 +1,25 @@
+{
+  "key": "2604.21274",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.21274",
+  "title": "Random Access Codes: Explicit Constructions, Optimality, and Classical-Quantum Gaps",
+  "authors": [
+    "Ruho Kondo",
+    "Yuki Sato",
+    "Hiroshi Yano",
+    "Yota Maeda",
+    "Kosuke Ito",
+    "Naoki Yamamoto"
+  ],
+  "summary": "A random access code (RAC) encodes an $L$-bit string into a $k$-bit message, $L>k$, so that any requested bit can be recovered with high probability; a quantum RAC (QRAC) uses $k$ qubits instead. We give a geometric characterization of optimal classical $(L,k)$-RACs under average and worst-case decoding criteria. The average criterion is reduced to choosing $2^k$ representatives in $\\{0,1\\}^L$, while the worst-case criterion is reduced to a minimax problem over $2^k$ points in $[0,1]^L$ with a distance-like objective. This framework proves optimality for several parameter families, with many…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.IT"
+  ],
+  "published": "2026-04-23",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

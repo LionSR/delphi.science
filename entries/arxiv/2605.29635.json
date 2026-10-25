@@ -1,0 +1,22 @@
+{
+  "key": "2605.29635",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.29635",
+  "title": "MoSSP: A Momentum-Based Single-Loop Stochastic Penalty Method for Nonconvex Constrained DC-Regularized Optimization",
+  "authors": [
+    "Luxuan Li",
+    "Chunfeng Cui",
+    "Xiao Wang"
+  ],
+  "summary": "In this paper, we study a structured class of nonconvex constrained stochastic problems with difference-of-convex (DC) regularization, where the feasible set is possibly nonconvex and the concave part of the DC regularizer is allowed to be nonsmooth. The fundamental challenge lies in maintaining feasibility for nonconvex constraints while achieving favorable oracle complexity. Although single-loop algorithms efficiently solve unconstrained DC optimization problems, their potential for constrained optimization with DC structure remains largely unexplored. To address this gap, we develop…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-05-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

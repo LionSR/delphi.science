@@ -1,0 +1,23 @@
+{
+  "key": "2607.11835",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.11835",
+  "title": "Stabilize-then-optimize: Feedback transformations as preconditioners in optimal control",
+  "authors": [
+    "Till Preuster",
+    "Manuel Schaller",
+    "Anton Schiela",
+    "Martin Stoll"
+  ],
+  "summary": "Many numerical algorithms for optimal control leverage an elimination of the state via the control-to-state map such as condensed approaches or preconditioned conjugate gradient methods for the optimality system. As such, the norm of the control-to-state map directly enters the convergence estimates for these methods, e.g., via the condition number of the associated linear system. In this work we show that using feedback transformations one may reformulate the optimal control problem to decrease the norm of the (feedbacked) control-to-state map, leading to a drastic improvement of the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

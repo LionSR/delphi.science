@@ -1,0 +1,21 @@
+{
+  "key": "2608.25567",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.25567",
+  "title": "Combined High-Dimensional and Reduced-Order Modeling Based on an Iterative Domain Decomposition Method",
+  "authors": [
+    "Taiji Saito",
+    "Tomoshi Miyamura",
+    "Yasunori Yusa"
+  ],
+  "summary": "A method is developed for structural analysis in which parts of an analysis domain are modeled by reduced-order models (ROMs) and the remaining part is modeled by a high-dimensional model (HDM). The multiple ROMs and HDM are combined based on an iterative domain decomposition method (DDM) with an arbitrary number of non-overlapping subdomains. A diagonal preconditioner is derived for the iterative DDM. The method is implemented based on a framework of the existing DDM-based analysis code. The ROM is implemented on GPU. Snapshot generation methods for the ROM are also proposed. Static…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-26",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

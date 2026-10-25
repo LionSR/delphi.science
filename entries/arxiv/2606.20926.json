@@ -1,0 +1,22 @@
+{
+  "key": "2606.20926",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20926",
+  "title": "Learning-Based List Sequential Belief Propagation Decoding of Quantum LDPC Codes",
+  "authors": [
+    "Mohsen Moradi",
+    "Taejoon Kim",
+    "Remi A. Chou"
+  ],
+  "summary": "Quantum low-density parity-check (QLDPC) codes are strong candidates for fault-tolerant quantum computation, but efficient decoding remains a major challenge due to short cycles, degeneracy, and the poor convergence of standard belief-propagation (BP) decoders. We propose a reinforcement learning-based list sequential (RL-LS) BP decoder for QLDPC codes by extending the reinforcement-learning-based sequential variable-node scheduling (RL-S) framework with list-based search. At each step, the learned policy selects the next variable node to update; the decoder then retains the ordinary RL-S…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "quant-ph"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

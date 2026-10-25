@@ -1,0 +1,23 @@
+{
+  "key": "2604.02112",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.02112",
+  "title": "Q2NS Demo: A Quantum Network Simulator Based on ns-3",
+  "authors": [
+    "Francesco Mazza",
+    "Adam Pearson",
+    "Marcello Caleffi",
+    "Angela Sara Cacciapuoti"
+  ],
+  "summary": "Q2NS is an open-source quantum network simulator built on ns-3, the de facto standard for classical network simulation. By inheriting ns-3's mature classical stack and event-driven execution model, Q2NS enables faithful co-simulation of quantum-network dynamics and classical signaling, a core requirement for the functioning of any quantum network. Its modular architecture is designed for extensibility, with pluggable quantum-state backends (state-vector, density matrix, stabilizer) and a clean separation between network control and node-level operations. Q2NS comes with a quantum network…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.NI"
+  ],
+  "published": "2026-04-02",
+  "updated": "2026-04-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

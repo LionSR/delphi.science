@@ -1,0 +1,23 @@
+{
+  "key": "2606.09275",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.09275",
+  "title": "An implicit octree-based adaptive Material Point Method",
+  "authors": [
+    "Robert E. Bird",
+    "William M. Coombs",
+    "Charles E. Augarde",
+    "Giuliano Pretti",
+    "Ted J. O'Hare"
+  ],
+  "summary": "The Material Point Method provides an effective approach for modelling the large deformations that often arise from contact interactions between rigid structures and surrounding continua. However, solving these problems requires accurate representation of the continuum-structure interface, which necessitates high resolution background mesh and material point discretisations. This requirement, combined with evolving continuum-structure interfaces and the fact that most Material Point Method implementations are dependent on structured meshes, can result in large numerical systems and long run…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-08",
+  "updated": "2026-06-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2610.05221",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05221",
+  "title": "Harnessing LLMs with Direction-Scope Control for Combinatorial Solver Refinement",
+  "authors": [
+    "Yili Cao",
+    "Anqi Li",
+    "Haoran Li",
+    "Yongtang Shi",
+    "Zicheng Zhang"
+  ],
+  "summary": "Harnesses are increasingly unlocking the potential of large language model (LLM) agents by making their actions more controllable. In automatic heuristic design (AHD) for combinatorial optimization (CO), LLMs iteratively revise solvers using execution and verification feedback. However, these revisions often break previously validated solver behavior, making refinement unstable and costly. We characterize this pattern as feasibility oscillation and document it across CO benchmarks, AHD methods, and backbone LLMs. Tracing this oscillation, our analysis reveals that feasibility degradation…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

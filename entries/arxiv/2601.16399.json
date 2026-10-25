@@ -1,0 +1,23 @@
+{
+  "key": "2601.16399",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.16399",
+  "title": "A Hessian-Free Actor-Critic Algorithm for Bi-Level Reinforcement Learning with Applications to LLM Fine-Tuning",
+  "authors": [
+    "Sihan Zeng",
+    "Sujay Bhatt",
+    "Sumitra Ganesh",
+    "Alec Koppel"
+  ],
+  "summary": "We study a structured bi-level optimization problem where the upper-level objective is a smooth function and the lower-level problem is policy optimization in a Markov decision process (MDP). The upper-level decision variable parameterizes the reward of the lower-level MDP, and the upper-level objective depends on the optimal induced policy. Existing methods for bi-level optimization and RL often require second-order information, impose strong regularization at the lower level, or inefficiently use samples through nested-loop procedures. In this work, we propose a single-loop, first-order…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-01-23",
+  "updated": "2026-04-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

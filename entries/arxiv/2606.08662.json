@@ -1,0 +1,22 @@
+{
+  "key": "2606.08662",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.08662",
+  "title": "Uncertainty Principles for the Number Theoretic Transform",
+  "authors": [
+    "Giulio Malavolta",
+    "Alon Rosen"
+  ],
+  "summary": "Motivated by polynomial identity testing with exponentials (Li and Wu, ITCS'26), we study uncertainty principles for the number-theoretic transform (NTT). We show that the NTT satisfies strong sparsity tradeoffs: For every fixed prime $q$ and for all but finitely many primes $p \\equiv 1 \\pmod q$ every nonzero $f\\in \\mathbb F_p^{\\mathbb Z_q}$ and its number-theoretic transform $\\hat f$ satisfy \\[ |\\mathrm{Supp}(f)| + |\\mathrm{Supp}(\\hat f)| \\ge q+1. \\] Thus, a $k$-sparse function has transform support at least $q-k+1$. As our main technical contribution, we prove a probabilistic version of…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "cs.CR",
+    "cs.DS"
+  ],
+  "published": "2026-06-07",
+  "updated": "2026-06-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

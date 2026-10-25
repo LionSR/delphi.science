@@ -1,0 +1,20 @@
+{
+  "key": "2610.11688",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.11688",
+  "title": "A Localized Hybrid Finite Element--Random Feature Method for Elliptic Interface Problems on Unfitted Meshes",
+  "authors": [
+    "Siyuan Lang",
+    "Zhiyue Zhang"
+  ],
+  "summary": "We develop a localized hybrid finite element--random feature method (FEM--RFM) for elliptic interface problems on unfitted background meshes. The central idea is to use the random feature method (RFM) only in the narrow band formed by interface-cut cells of a uniform Cartesian background mesh,while retaining standard $Q_p$ finite elements on the remaining uncut cells. Within the band, local RFM representations are used on the two physical sides of the interface. The prescribed jumps in the solution and normal flux are incorporated through residual equations involving the two RFM…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

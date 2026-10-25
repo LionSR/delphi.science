@@ -1,0 +1,21 @@
+{
+  "key": "2602.04086",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.04086",
+  "title": "Efficient Explicit Taylor ODE Integrators with Symbolic-Numeric Computing",
+  "authors": [
+    "Songchen Tan",
+    "Oscar Smith",
+    "Christopher Rackauckas"
+  ],
+  "summary": "Taylor series methods show a newfound promise for the solution of non-stiff ordinary differential equations (ODEs) given the rise of new compiler-enhanced techniques for calculating high order derivatives. In this paper we detail a new Julia-based implementation that has two important techniques: (1) a general purpose higher-order automatic differentiation engine for derivative evaluation with low overhead; (2) a combined symbolic-numeric approach to generate code for recursively computing the Taylor polynomial of the ODE solution. We demonstrate that the resulting software's compiler-based…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-03",
+  "updated": "2026-02-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

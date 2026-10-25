@@ -1,0 +1,20 @@
+{
+  "key": "2608.15906",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.15906",
+  "title": "Dimension-Free Lipschitz Bounds for Brenier Maps to Compactly Supported Log-Concave Targets",
+  "authors": [
+    "Maja Gwozdz"
+  ],
+  "summary": "We fix an integer $d\\ge1$ and a symmetric positive-definite matrix $Q\\in\\mathbb{R}^{d\\times d}$. Let $V:\\mathbb{R}^d\\to\\mathbb{R}$ be finite, set \\[ Z_μ:=\\int_{\\mathbb{R}^d}e^{-V(x)}\\,dx\\in(0,\\infty), \\qquad dμ(x):=Z_μ^{-1}e^{-V(x)}\\,dx, \\] and assume that $μ$ has finite second moment and that \\[ x\\longmapsto \\frac12\\langle Qx,x\\rangle-V(x) \\] is convex. Let $ν$ be a compactly supported log-concave probability measure with support $K$, and let $\\nablaΦ$ be the Brenier map from $μ$ to $ν$. For $v\\in\\mathbb{R}^d$, define \\[ w_K(v):= \\sup_{y\\in K}\\langle y,v\\rangle - \\inf_{y\\in K}\\langle…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "math.PR"
+  ],
+  "published": "2026-08-16",
+  "updated": "2026-08-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

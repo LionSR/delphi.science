@@ -1,0 +1,24 @@
+{
+  "key": "2605.08746",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.08746",
+  "title": "The Global Empirical NTK: Self-Referential Bias and Dimensionality of Gradient Descent Learning",
+  "authors": [
+    "James Hazelden",
+    "Laura Driscoll",
+    "Eli Shlizerman",
+    "Eric Shea-Brown"
+  ],
+  "summary": "In training a neural network with gradient descent (GD), each iteration induces a linear operator that governs first-order updates to a model's internal state variables. We define this operator as the Global Empirical Neural Tangent Kernel (NTK). In finite-width networks, the NTK is typically intractable to form, leading prior work to focus on restrictive settings such as tracking outputs only or taking infinite-width limits. Here, we study the structure of the NTK for a range of models. Formulating the model state as the solution to a single global implicit constraint, we derive the NTK as…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS",
+    "math.OC"
+  ],
+  "published": "2026-05-09",
+  "updated": "2026-05-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

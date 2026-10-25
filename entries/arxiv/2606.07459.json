@@ -1,0 +1,20 @@
+{
+  "key": "2606.07459",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.07459",
+  "title": "Adjacency Spectral Radius Under Laplacian Sparsification: Deterministic and Probabilistic Bounds",
+  "authors": [
+    "Joshua Steier"
+  ],
+  "summary": "Spielman-Srivastava spectral sparsification preserves Laplacian quadratic forms to within (1 +/- epsilon), but does not directly control the adjacency spectral radius lambda_1, which governs the NIMFA epidemic threshold and arises in spectral clustering. We prove |lambda_1(A_H) - lambda_1(A_G)| <= epsilon(2 Delta - lambda_1) deterministically, with a sharp epsilon*lambda_1 bound for reweighting sparsifiers via Perron-Frobenius monotonicity. Under effective-resistance sampling, Matrix Bernstein gives O(epsilon Delta / sqrt(c)) with high probability. Combining eigenvector delocalization with…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DS"
+  ],
+  "published": "2026-06-05",
+  "updated": "2026-06-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

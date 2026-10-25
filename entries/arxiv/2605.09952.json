@@ -1,0 +1,20 @@
+{
+  "key": "2605.09952",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09952",
+  "title": "Fast Evaluation of the Azimuthal Fourier Modes of the 3D Helmholtz Green's Function and Their Derivatives",
+  "authors": [
+    "Hanwen Zhang"
+  ],
+  "summary": "We introduce an $O(M)$ algorithm for evaluating the azimuthal Fourier modes $G_{k,m}$, $m = 0, 1, ..., M$, of the three-dimensional Helmholtz Green's function with real wavenumber $k$, together with all their first- and second-order derivatives with respect to the cylindrical source and target coordinates. The cost is independent of both the wavenumber and the source-target separation, and high relative accuracy is retained even for modes whose magnitude is exponentially small. The method combines contour deformation at a few boundary modes with a boundary-value formulation of the five-term…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

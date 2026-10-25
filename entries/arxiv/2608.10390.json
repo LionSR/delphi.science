@@ -1,0 +1,22 @@
+{
+  "key": "2608.10390",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.10390",
+  "title": "A fifth-order divergence-free finite difference Hermite WENO scheme for ideal magnetohydrodynamics",
+  "authors": [
+    "Peiwen Chen",
+    "Shi Jin",
+    "Jianxian Qiu",
+    "Zhuang Zhao"
+  ],
+  "summary": "In this paper, we present a fifth-order finite difference divergence-free Hermite weighted essentially non-oscillatory (HWENO) scheme for the ideal magnetohydrodynamics (MHD) equations. In this framework, both the solution and its spatial partial derivatives are evolved in time and jointly employed in the spatial reconstruction procedure. A major challenge in MHD simulations is preserving the divergence-free constraint of the magnetic field, which is generally violated by standard numerical methods designed solely for hyperbolic conservation laws. To address this issue, we first solve the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-11",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

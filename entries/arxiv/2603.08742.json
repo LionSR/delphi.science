@@ -1,0 +1,24 @@
+{
+  "key": "2603.08742",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.08742",
+  "title": "Robust Parameter and State Estimation in Multiscale Neuronal Systems Using Physics-Informed Neural Networks",
+  "authors": [
+    "Changliang Wei",
+    "Yangyang Wang",
+    "Xueyu Zhu"
+  ],
+  "summary": "Inferring biophysical parameters and hidden state variables from partial and noisy observations is a fundamental challenge in computational neuroscience. This problem is particularly difficult for fast - slow spiking and bursting models, where strong nonlinearities, multiscale dynamics, and limited observational data often lead to severe sensitivity to initial parameter guesses and convergence failure in the methods replying on the traditional numerical forward solvers. In this work, we developed a physics-informed neural network (PINN) framework for the joint reconstruction of unobserved…",
+  "domain": "cs.NE",
+  "tags": [
+    "cs.NE",
+    "cs.LG",
+    "math.NA",
+    "stat.ML"
+  ],
+  "published": "2026-02-27",
+  "updated": "2026-02-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

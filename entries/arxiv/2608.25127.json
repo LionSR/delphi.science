@@ -1,0 +1,23 @@
+{
+  "key": "2608.25127",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.25127",
+  "title": "Learning spatially varying regularisation parameters of low regularity for image reconstruction",
+  "authors": [
+    "Kostas Papafitsoros",
+    "Luca Calatroni",
+    "Andreas Kofler"
+  ],
+  "summary": "In this chapter, we review and discuss the regularity properties of spatially adaptive regularisation weight functions used in variational image reconstruction. Incorporating such weights into classical model-based regularisers, such as Total Variation (TV) and Total Generalised Variation (TGV), allows the regularisation strength to vary across the image and adapt to local image content. When appropriately estimated, these weights can thus significantly improve edge and detail preservation in the reconstructions. We review the existing theoretical literature on this topic for different…",
+  "domain": "eess.IV",
+  "tags": [
+    "eess.IV",
+    "cs.CV",
+    "math.OC"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

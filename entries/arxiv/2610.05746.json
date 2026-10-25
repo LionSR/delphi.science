@@ -1,0 +1,21 @@
+{
+  "key": "2610.05746",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05746",
+  "title": "Learning to Solve Mixed-Integer Nonlinear Programming with Neural Networks and Sequential Quadratic Programming Refinement",
+  "authors": [
+    "Viet-Anh Le",
+    "Rahul Mangharam"
+  ],
+  "summary": "We propose a learning-to-optimize framework for solving parametric mixed-integer nonlinear programs arising in model predictive control and trajectory optimization. The proposed method combines neural network prediction with a sequential quadratic programming (SQP) refinement layer. First, neural networks are trained using a combination of supervised and self-supervised losses to predict integer solutions together with compatible continuous warm starts. To account for prediction inaccuracies, the trained predictor generates multiple candidate integer solutions, each paired with a continuous…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2609.07045",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07045",
+  "title": "Equivalence Between Continuous-Time Risk-Sensitive Control and Rényi Divergence Minimization",
+  "authors": [
+    "Shinji Kataoka",
+    "Kaoru Teranishi",
+    "Yasumasa Fujisaki"
+  ],
+  "summary": "In this study, we show that a continuous-time risk-sensitive control problem is equivalent to a Rényi divergence minimization problem over trajectory path measures. Reformulating stochastic optimal control as probabilistic inference via Kullback-Leibler (KL) divergence minimization avoids the computational intractability of the Hamilton-Jacobi-Bellman equation. However, standard KL control is inherently risk-neutral, and recent minimax extensions remain restricted to risk-averse settings. Our equivalence result resolves this limitation by offering a unified probabilistic framework for…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

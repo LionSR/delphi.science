@@ -1,0 +1,29 @@
+{
+  "key": "2602.00395",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.00395",
+  "title": "3DGS$^2$-TR: Scalable Second-Order Trust-Region Method for 3D Gaussian Splatting",
+  "authors": [
+    "Roger Hsiao",
+    "Yuchen Fang",
+    "Xiangru Huang",
+    "Ruilong Li",
+    "Hesam Rabeti",
+    "Zan Gojcic",
+    "Javad Lavaei",
+    "James Demmel",
+    "Sophia Shao"
+  ],
+  "summary": "We propose 3DGS$^2$-TR,a second-order optimizer for accelerating the scene training problem in 3D Gaussian Splatting (3DGS). Unlike existing second-order approaches that rely on explicit or dense curvature representations, such as 3DGS-LM (Höllein et al., 2025) or 3DGS2 (Lan et al., 2025), our method approximates curvature using only the diagonal of the Hessian matrix, efficiently via Hutchinson's method. Our approach is fully matrix-free and has the same complexity as ADAM (Kingma, 2024), $O(n)$ in both computation and memory costs. To ensure stable optimization in the presence of strong…",
+  "domain": "cs.CV",
+  "tags": [
+    "cs.CV",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-01-30",
+  "updated": "2026-01-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

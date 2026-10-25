@@ -1,0 +1,21 @@
+{
+  "key": "2605.24401",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.24401",
+  "title": "Geometry-Preserving Nudged Elastic Band and Dimer Methods under Anisotropic Force Uncertainty",
+  "authors": [
+    "Yifan Yu",
+    "Yangshuai Wang"
+  ],
+  "summary": "The nudged elastic band (NEB) and Dimer methods are standard tools for computing minimum-energy paths and index-one saddle points in atomistic transition problems. They are increasingly driven by surrogate or learned force models, whose force errors are often anisotropic and spatially varying near transition states and defect cores, where saddle-search iterations are most sensitive. We introduce uncertainty-aware NEB and Dimer methods (UA-NEB, UA-Dimer) that use covariance as an optimizer-level reliability metric while preserving the mean-potential saddle-search equations: an oblique normal…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-05-23",
+  "updated": "2026-05-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

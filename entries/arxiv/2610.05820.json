@@ -1,0 +1,25 @@
+{
+  "key": "2610.05820",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05820",
+  "title": "Entropy-Stable and Well-Balanced Discontinuous Galerkin Methods for the Compressible Euler Equations in Vector-Invariant Form",
+  "authors": [
+    "Marco Artiano",
+    "Kieran Ricardo",
+    "Oswald Knoth",
+    "Peter Spichtinger",
+    "Hendrik Ranocha"
+  ],
+  "summary": "We develop structure-preserving methods for the compressible Euler equations with gravity in vector-invariant form and potential temperature as a prognostic variable within the flux-differencing discontinuous Galerkin spectral element method (DGSEM) framework. By discretizing the nonconservative terms as symmetric and antisymmetric products, we derive two-point numerical fluxes that conserve both the thermodynamic entropy and the total energy. Moreover, we design an entropy-stable numerical flux that is well-balanced for both isothermal and isentropic background states. All properties are…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.ao-ph",
+    "physics.comp-ph"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

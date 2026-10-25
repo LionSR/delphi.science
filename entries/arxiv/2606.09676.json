@@ -1,0 +1,20 @@
+{
+  "key": "2606.09676",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.09676",
+  "title": "Boundary-Layer-Induced Failure of Standard Physics-Informed Neural Networks: A Legendre Wavelet Collocation Benchmark for Singularly Perturbed Transport Problems",
+  "authors": [
+    "Suvendu Nayak",
+    "Arun Kumar Gupta"
+  ],
+  "summary": "Boundary layers provide a demanding test for numerical solvers because the solution may remain almost constant over most of the domain while changing rapidly in a narrow region near the boundary. This paper studies a singularly perturbed one-dimensional transport boundary-value problem with increasing Peclet number $(\\mathrm{Pe})$. A local Legendre wavelet collocation method (LWM) is compared with a standard soft-boundary physics-informed neural network (PINN) for this benchmark. The wavelet approximation uses locally supported Legendre polynomial basis functions and converts the problem…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-08",
+  "updated": "2026-06-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

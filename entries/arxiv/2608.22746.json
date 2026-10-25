@@ -1,0 +1,23 @@
+{
+  "key": "2608.22746",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.22746",
+  "title": "Generative Neural Networks for Sinkhorn Distributionally Robust Hypothesis Testing",
+  "authors": [
+    "Fenglin Zhang",
+    "Teyan Liu",
+    "Jie Wang"
+  ],
+  "summary": "This paper studies the Sinkhorn distributionally robust hypothesis testing (SDRHT) problem, seeking a robust detector against least-favorable distributions in Sinkhorn discrepancy-based ambiguity sets centered at the empirical distributions. Existing approaches solve this problem by solving large-scale conic programs, which are not scalable. To overcome this, we propose a generative framework that learns least-favorable distributions and supports efficient training and end-to-end sampling. For the Sinkhorn discrepancy-based ambiguity sets, we first derive an equivalent…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-08-24",
+  "updated": "2026-08-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

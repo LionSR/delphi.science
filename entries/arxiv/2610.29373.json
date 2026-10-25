@@ -1,0 +1,20 @@
+{
+  "key": "2610.29373",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.29373",
+  "title": "Convergence Analysis of the Quantum Blahut-Arimoto Algorithm and the Contraction Coefficient of Qubit Amplitude-Damping Channels",
+  "authors": [
+    "Junke Han",
+    "Yonglong Li"
+  ],
+  "summary": "In this work, we investigate the convergence rate of the quantum Blahut-Arimoto (BA) algorithm proposed for computing the coherent information of less noisy quantum channels. Previous work established exponential convergence under certain restrictive assumptions on the channel. Using a Taylor expansion around a positive definite optimizer, we show that, for an injective degradable channel whose degrading channel has a relative-entropy contraction coefficient strictly less than one, the algorithm converges at an exponential rate after sufficiently many iterations. We further verify this…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

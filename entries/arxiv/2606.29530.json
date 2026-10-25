@@ -1,0 +1,20 @@
+{
+  "key": "2606.29530",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.29530",
+  "title": "Cutoff profiles for colored top-m-to-random shuffles with growing block size",
+  "authors": [
+    "Ivan Z. Feng"
+  ],
+  "summary": "We study the $p$-colored top-$m$-to-random shuffle on $C_p\\wr S_n$ when the block size $m=m_n$ grows with $n$. Let $E_{k_n}^{(m_n)}$ be the number of labels never touched after $k_n$ independent uniform $m_n$-subset draws, and set $b_n=n-m_n$, $q_n=b_n/n$, and $λ_n=nq_n^{k_n}$. We prove that if $λ_n\\toλ\\in(0,\\infty)$ and $b_n\\to\\infty$, then $E_{k_n}^{(m_n)}\\Rightarrow\\mathrm{Poisson}(λ)$. Combining this with the exact nested-set reduction for colored top-$m$-to-random shuffles, we obtain growing-block total variation, separation, and integrated likelihood-ratio profiles. In particular, if…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.CO"
+  ],
+  "published": "2026-06-28",
+  "updated": "2026-06-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,27 @@
+{
+  "key": "2604.21472",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.21472",
+  "title": "LightStim: A Framework for QEC Protocol Evaluation and Prototyping with Automated DEM Construction",
+  "authors": [
+    "Xiang Fang",
+    "Ming Wang",
+    "Yue Wu",
+    "Sharanya Prabhu",
+    "Dean Tullsen",
+    "Narasinga Rao Miniskar",
+    "Frank Mueller",
+    "Travis Humble",
+    "Yufei Ding"
+  ],
+  "summary": "Fault-tolerant quantum computing increasingly demands rigorous, circuit-level evaluation of diverse quantum error correction (QEC) protocols and efficient prototyping of new ones. Such evaluation requires both the physical circuit and its Detector Error Model (DEM) to estimate end-to-end logical error rates. However, DEM construction today is performed by manual annotation, a tedious and error-prone process that effectively limits evaluation to simple memory experiments. We present LightStim, a framework that automates DEM construction concurrently with circuit compilation by maintaining a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-23",
+  "updated": "2026-08-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

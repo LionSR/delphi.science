@@ -1,0 +1,20 @@
+{
+  "key": "2608.19513",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19513",
+  "title": "The Normal Procrustes Problem: A Riemannian Optimization Approach",
+  "authors": [
+    "Kyle Bierly"
+  ],
+  "summary": "For given $m \\times n$ data matrices $X, Y$, we investigate the Normal Procrustes Problem---the least squares optimization problem that aims to minimize $\\|AX-Y\\|_F^2$, where $A$ is constrained to be a normal $m \\times m$ matrix. As far as the author of this article is aware, no other method that attempts to solve the Normal Procrustes Problem exists in the literature; we thus propose what is, to our knowledge, the first such method. We, furthermore, adapt our approach to address the Real Normal Procrustes Problem, where $A$ must be real. In our treatment of these problems, we first reduce…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-08-20",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

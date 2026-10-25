@@ -1,0 +1,23 @@
+{
+  "key": "2602.08471",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.08471",
+  "title": "Boltzmann sampling and optimal exact-size sampling for directed acyclic graphs",
+  "authors": [
+    "Wojciech Gabryelski",
+    "Zbigniew Gołȩbiewski",
+    "Martin Pépin"
+  ],
+  "summary": "We propose two efficient algorithms for generating uniform random directed acyclic graphs, including an asymptotically optimal exact-size sampler that performs $\\frac{n^2}{2} + o(n^2)$ operations and requests to a random generator. This was achieved by extending the Boltzmann model for graphical generating functions and by using various decompositions of directed acyclic graphs. The presented samplers improve upon the state-of-the-art algorithms in terms of theoretical complexity and offer a significant speed-up in practice.",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-02-09",
+  "updated": "2026-02-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2603.06145",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.06145",
+  "title": "Policy Iteration Achieves Regularized Equilibrium under Time Inconsistency",
+  "authors": [
+    "Yu-Jui Huang",
+    "Xiang Yu",
+    "Keyu Zhang"
+  ],
+  "summary": "For a general entropy-regularized time-inconsistent stochastic control problem, we propose a policy iteration algorithm (PIA) and establish its convergence to an equilibrium policy with an exponential convergence rate. The design of the PIA is based on a coupled system of non-local partial differential equations, called the exploratory equilibrium Hamilton--Jacobi--Bellman (EEHJB) equation. As opposed to the standard time-consistent case, policy improvement fails in general and the target value function (now an equilibrium value function) is not even known to exist a priori. To overcome…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-06",
+  "updated": "2026-03-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2604.00432",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00432",
+  "title": "Denoising distances beyond the volumetric barrier",
+  "authors": [
+    "Han Huang",
+    "Pakawut Jiradilok",
+    "Elchanan Mossel"
+  ],
+  "summary": "We study the problem of reconstructing the latent geometry of a $d$-dimensional Riemannian manifold from a random geometric graph. While recent works have made significant progress in manifold recovery from random geometric graphs, and more generally from noisy distances, the precision of pairwise distance estimation has been fundamentally constrained by the volumetric barrier, namely the natural sample-spacing scale $n^{-1/d}$ coming from the fact that a generic point of the manifold typically lies at distance of order $n^{-1/d}$ from the nearest sampled point. In this paper, we introduce a…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-04-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

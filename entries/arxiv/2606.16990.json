@@ -1,0 +1,21 @@
+{
+  "key": "2606.16990",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.16990",
+  "title": "Analytic Torsion and Spectral Gap Capture Persistent-Laplacian Performance",
+  "authors": [
+    "Jernej Grlj",
+    "Aaron D. Lauda"
+  ],
+  "summary": "While persistent Laplacians (PL) offer a richer geometric representation of data than persistent homology, utilizing their full eigenspectrum for learning tasks is often hampered by high dimensionality and the ``varying length'' problem across different filtration scales. We propose a compact spectral representation that distills the persistent Laplacian into three mathematically grounded invariants: Betti numbers, the spectral gap, and analytic torsion. Across benchmark datasets including MNIST, QM-3D, and SKEMPI WT, we demonstrate that this reduced feature space captures the essential…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.AT"
+  ],
+  "published": "2026-06-15",
+  "updated": "2026-06-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

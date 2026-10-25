@@ -1,0 +1,22 @@
+{
+  "key": "2610.28510",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.28510",
+  "title": "Variance Reduction with Delayed Feedback for Non-Convex Optimization",
+  "authors": [
+    "Wei Jiang",
+    "Dingzhi Yu",
+    "Zechao Li"
+  ],
+  "summary": "We study variance reduction for non-convex optimization when gradient evaluations return with a delay. The server can update the parameter while earlier evaluations remain unfinished. We first analyze an ordered recursive momentum estimator for stochastic optimization. Under average smoothness and bounded variance, its oracle complexity is $O(1+σ^2ε^{-2}+LΔ_f(1+σ/ε+τ)ε^{-2})$, where the target is an expected squared gradient norm of at most $ε^2$ and $τ$ bounds the feedback delay. We next study finite sums with $n$ components and obtain $O(n+LΔ_f(\\sqrt n+\\min\\{τ,n-1\\})ε^{-2})$ evaluations.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

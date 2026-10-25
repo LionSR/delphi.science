@@ -1,0 +1,22 @@
+{
+  "key": "2609.26843",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.26843",
+  "title": "Gaussian-process surrogate indicators for residual-based adaptive GMsFEM",
+  "authors": [
+    "Siqing Liu",
+    "Eric Chung",
+    "Yiran Wang"
+  ],
+  "summary": "Residual-based adaptive GMsFEM for high-contrast elliptic problems repeatedly evaluates local weighted $H^{-1}$ indicators on every coarse neighborhood, making indicator evaluation a recurring cost in repeated-query settings. We introduce a non-intrusive Gaussian-process (GP) surrogate for the indicator scores used in Dörfler marking. The operational predictor is the GP posterior mean, algebraically equivalent to a kernel ridge regression (KRR) estimator under the stated convention; it uses compressed local solution and spectral features without changing the multiscale solve, local spectral…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "stat.ML"
+  ],
+  "published": "2026-09-22",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

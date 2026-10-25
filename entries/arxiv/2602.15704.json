@@ -1,0 +1,23 @@
+{
+  "key": "2602.15704",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.15704",
+  "title": "Controlled oscillation modeling using port-Hamiltonian neural networks",
+  "authors": [
+    "Maximino Linares",
+    "Guillaume Doras",
+    "Thomas Hélie"
+  ],
+  "summary": "Learning dynamical systems through purely data-driven methods is challenging as they do not learn the underlying conservation laws that enable them to correctly generalize. Existing port-Hamiltonian neural network methods have recently been successfully applied for modeling mechanical systems. However, even though these methods are designed on power-balance principles, they usually do not consider power-preserving discretizations and often rely on Runge-Kutta numerical methods. In this work, we propose to use a second-order discrete gradient method embedded in the learning of dynamical…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "eess.SY",
+    "math.DS"
+  ],
+  "published": "2026-02-17",
+  "updated": "2026-02-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

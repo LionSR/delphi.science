@@ -1,0 +1,21 @@
+{
+  "key": "2605.16016",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.16016",
+  "title": "Beyond Commutativity: Redesigning Trotter Decomposition via Local Symmetry",
+  "authors": [
+    "Naoki Negishi",
+    "Bo Yang"
+  ],
+  "summary": "The product formula, commonly known as Trotter decomposition, is a central tool for digital quantum simulation, whose performance depends critically on how the Hamiltonian is partitioned into tractable blocks. Standard decompositions typically rely on direct commutativity among Hamiltonian terms in a chosen operator representation, which can lead to large residual errors and deep circuits for complex, practically relevant many-body quantum systems. We address this fundamental bottleneck by introducing a new decomposition principle that goes beyond commutativity, grouping Hamiltonian terms…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.str-el"
+  ],
+  "published": "2026-05-15",
+  "updated": "2026-05-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

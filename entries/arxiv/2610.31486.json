@@ -1,0 +1,21 @@
+{
+  "key": "2610.31486",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.31486",
+  "title": "Effective Dual Subgradient Methods Through Sequential Subgradient-Aligned Rays",
+  "authors": [
+    "Hansi Abeynanda",
+    "Chathuranga Weeraddana",
+    "Carlo Fischione"
+  ],
+  "summary": "In this paper, we propose an efficient subgradient-based framework, referred to as the sequential subgradient-aligned rays (SSAR) method, for improving the convergence performance of the dual subgradient method. In particular, the proposed method identifies and exploits a finite sequence of rays, when available, as the dual subgradient method evolves, along each of which a subgradient of the negative dual function remains constant and aligns with the ray. While the dual variable iterates remain on each identified ray, a constant stepsize associated with the ray is employed, with the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

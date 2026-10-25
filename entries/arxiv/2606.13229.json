@@ -1,0 +1,22 @@
+{
+  "key": "2606.13229",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.13229",
+  "title": "Embedded Trefftz DG method for steady Navier-Stokes flow. Part I: Oseen linearization",
+  "authors": [
+    "Paul Stocker",
+    "Igor Voulis",
+    "Christoph Lehrenfeld",
+    "Philip L. Lederer"
+  ],
+  "summary": "We develop an embedded Trefftz-DG method for the Oseen problem and prove a complete stability and quasi-optimality theory in standard DG norms. The key ingredient is a construction of a suitable local complement space to the Trefftz space, on which the Oseen operator is stably invertible. We also derive a reduced formulation of the method, the resulting system is posed in terms of the velocity unknown only, a crucial step in the analysis especially for the nonlinear Navier-Stokes problem in Part II.",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2605.14235",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.14235",
+  "title": "Quantum Advantage in Multi Agent Reinforcement Learning",
+  "authors": [
+    "Simranjeet Singh Dahia",
+    "Claudia Szabo"
+  ],
+  "summary": "We present an empirical evaluation of quantum entanglement in agent coordination within quantum multi agent reinforcement learning (QMARL). While QMARL has attracted growing interest recently, most prior work evaluates quantum policies without provable baselines, making it impossible to rigorously distinguish quantum advantage from algorithmic coincidence. We address this directly by evaluating a decentralized QMARL framework with variational quantum circuit (VQC) actors with shared entangled states. In the CHSH game, which has a mathematically proven classical performance ceiling of 0.75…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.MA",
+    "quant-ph"
+  ],
+  "published": "2026-05-14",
+  "updated": "2026-05-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

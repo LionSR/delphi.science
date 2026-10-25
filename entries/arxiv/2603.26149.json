@@ -1,0 +1,22 @@
+{
+  "key": "2603.26149",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.26149",
+  "title": "Graph-Based Meshfree Multi-scale Coarse Space Approximation for Two-Level Schwarz Methods",
+  "authors": [
+    "Yucheng Liu",
+    "Tak Shing Au Yeung",
+    "Eric T. Chung",
+    "Simon See"
+  ],
+  "summary": "Efficient simulation of Darcy flow in highly heterogeneous porous media requires iterative solvers that remain robust under large permeability contrasts and mixed boundary conditions. Spectral coarse spaces in two-level overlapping Schwarz methods provide such robustness, but their practical use is often limited by an expensive setup phase dominated by many local generalized eigenvalue solves. We propose a purely algebraic, coarse-space approximation that avoids these repeated local eigensolves by using a graph neural network operating on the system-matrix graph. On the analysis side, we…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-27",
+  "updated": "2026-03-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

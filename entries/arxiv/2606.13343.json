@@ -1,0 +1,21 @@
+{
+  "key": "2606.13343",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.13343",
+  "title": "A smoothing extended sequential quadratic method for difference-of-convex optimization over a convex composite inequality constraint",
+  "authors": [
+    "Jiefeng Xu",
+    "Ting Kei Pong",
+    "Yongle Zhang"
+  ],
+  "summary": "We consider the problem of minimizing a difference-of-convex objective over a convex composite inequality constraint and a compact convex set constraint. To solve this problem, we extend the ESQM in [1] via incorporating a variable smoothing scheme. In essence, in each iteration of our algorithm, we apply one proximal gradient step to a smoothed penalty function, constructed based on a smooth approximation of the convex composite constraint function; and we design explicit rules to update the smoothing and penalty parameters. Under suitable constraint qualifications, we establish an…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2605.09772",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09772",
+  "title": "Safe Exploration for Nonlinear Processes Using Online Gaussian Process Learning",
+  "authors": [
+    "Stefano Tonini",
+    "Soroush Rastegarpour",
+    "Hamid Reza Feyzmahdavian",
+    "Nicola Bastianello",
+    "Karl Henrik Johansson"
+  ],
+  "summary": "This paper proposes a safe data-driven control framework for nonlinear systems with partially known dynamics. The method ensures stability and constraint satisfaction during online learning, assuming only a stabilizable linear approximation of the process is available. Unmodeled nonlinear dynamics are captured by a Gaussian process residual learned in real time. Safety is enforced through a probabilistic control-invariant set derived from Lyapunov theory, guaranteeing high-probability stability. A convex quadratic program computes control inputs that maximize information gain while…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-05-10",
+  "updated": "2026-05-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

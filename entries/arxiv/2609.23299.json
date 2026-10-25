@@ -1,0 +1,21 @@
+{
+  "key": "2609.23299",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.23299",
+  "title": "Sparsely connected neural network representation of Lagrange finite element function",
+  "authors": [
+    "Jiaxiong Hao",
+    "Yunqing Huang",
+    "Nianyu Yi"
+  ],
+  "summary": "We construct a mesh-induced sparsely connected neural network framework that exactly reproduces arbitrary-order Lagrange finite element spaces over simplicial meshes. Unlike conventional black-box neural surrogates, the proposed network architecture is fully dictated by finite element discretization rules: local computations stem from simplex geometry and barycentric coordinate transformations, while global consistency is enforced through shared degrees of freedom. For linear Lagrange elements, local basis functions are directly implemented via affine barycentric layers, and high-order…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-20",
+  "updated": "2026-09-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2607.12938",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12938",
+  "title": "Sharp Optimal Algorithm for Derivative-Free Stochastic Convex Optimization in One Dimension",
+  "authors": [
+    "Alexandra Carpentier",
+    "Chloé Rouyer",
+    "Alexandre Tsybakov",
+    "Arya Akhavan"
+  ],
+  "summary": "Stochastic convex optimization is a classical problem with well-understood guarantees under first-order feedback. In contrast, for zero-order optimization with noisy function evaluations, a logarithmic gap has persisted between known upper bounds and the $Ω(1/\\sqrt{T})$ lower bound, even in the one-dimensional case. In this work, we study the problem of minimizing a convex function $f : [0,1] \\to [0,1]$ using a zero-order oracle with subGaussian noise. We propose a computationally efficient algorithm that achieves the optimal $O(1/\\sqrt{T})$ convergence rate, matching the lower bound. The…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

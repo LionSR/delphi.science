@@ -1,0 +1,21 @@
+{
+  "key": "2607.17378",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.17378",
+  "title": "Econometrics with Pre-Trained Embeddings for Unstructured Data",
+  "authors": [
+    "Yuya Shimizu"
+  ],
+  "summary": "Unstructured data, such as images and text, are increasingly used in empirical economics. Since training machine-learning models on unstructured data is costly, economists often use off-the-shelf pre-trained deep learning models developed by computer scientists to extract embeddings, which are then used as covariates in target economic analyses. Despite the popularity of this practice, its theoretical foundations remain limited. There are two main difficulties. First, pre-trained models are typically trained on different datasets and for different tasks, making it unclear when they can be…",
+  "domain": "econ.EM",
+  "tags": [
+    "econ.EM",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-07-19",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

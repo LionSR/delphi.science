@@ -1,0 +1,20 @@
+{
+  "key": "2605.04433",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04433",
+  "title": "Implementation of the Habegger--Lin decision algorithm",
+  "authors": [
+    "Yuka Kotorii",
+    "Atsuhiko Mizusawa"
+  ],
+  "summary": "Habegger and Lin gave a classification of link-homotopy classes of links in terms of that of string links modulo certain group actions. As an application, they constructed an algorithm for determining whether given two links are link-homotopic. In \\cite{KM4}, we explicitly computed these group actions for the 4- and 5-component cases. Consequently, the Habegger--Lin algorithm can be effectively applied in these cases. In this paper, we present an implementation of this algorithm, which is available at \\cite{KMcode}, and exhibit new pairs of links that are not link-homotopic yet cannot be…",
+  "domain": "math.GT",
+  "tags": [
+    "math.GT"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

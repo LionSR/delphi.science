@@ -1,0 +1,19 @@
+{
+  "key": "2610.20034",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.20034",
+  "title": "Maximal subsets of $n\\times n$ board without cycles",
+  "authors": [
+    "Giedrius Alkauskas"
+  ],
+  "summary": "Define $\\nabla(n)$ as the least possible number of cells that must be removed from the $n\\times n$ square board in order to leave no cycles. Put $L_n=\\left\\lceil\\left((n-1)^2+1\\right)/3\\right\\rceil$. The results of Luccio, Madelaine-Stewart, and Lien-Fu-Shih imply that $\\nabla(n)=L_n$ in case $n\\equiv 1\\pmod 6$ and $n\\equiv 4\\pmod 6$, while for the remaining $4$ residue classes $\\nabla(n)=L_n$ or $\\nabla(n)=L_n+1$. In this paper, we provide optimal constructions in the odd residue classes $n\\equiv3,5\\pmod6$, (proving $\\nabla(n)=L_n$) and a geometric obstruction showing that equality in lower…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

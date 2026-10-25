@@ -1,0 +1,28 @@
+{
+  "key": "2604.09221",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.09221",
+  "title": "Fast Isotopy Computation for T-Curves",
+  "authors": [
+    "Zoe Geiselmann",
+    "Michael Joswig",
+    "Lars Kastner",
+    "Konrad Mundinger",
+    "Sebastian Pokutta",
+    "Christoph Spiegel",
+    "Marcel Wack",
+    "Max Zimmer"
+  ],
+  "summary": "A T-curve of degree $d$ is given by a regular unimodular triangulation of $d \\cdot Δ_2$ together with a sign distribution on its lattice points. By Viro's Patchworking Theorem, this determines the ambient isotopy type (a.k.a. real scheme) of a smooth real plane projective algebraic curve of the same degree. We present a near-quadratic time algorithm for extracting that isotopy type from the triangulation and the signs. Through a GPU-accelerated implementation, this allows one to compute billions of real schemes per second, enabling exhaustive enumeration at scale. This algorithm was…",
+  "domain": "math.AG",
+  "tags": [
+    "math.AG",
+    "cs.CG",
+    "math.CO"
+  ],
+  "published": "2026-04-10",
+  "updated": "2026-04-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

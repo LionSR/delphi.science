@@ -1,0 +1,25 @@
+{
+  "key": "2610.29909",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.29909",
+  "title": "Tractable Inference with Kolmogorov-Arnold Networks",
+  "authors": [
+    "Juan Diego Toscano",
+    "Sascha Ranftl",
+    "Zhiwei Gao",
+    "Li-Lian Wang",
+    "George Em Karniadakis"
+  ],
+  "summary": "Machine-learning surrogates in computational science often require not only accurate predictions but also expectations, variances, conserved integrals, and normalization constants. Conventional neural networks, including Kolmogorov--Arnold networks (KANs), generally evaluate these quantities through Monte Carlo sampling or multidimensional quadrature, making repeated inference costly, particularly in high dimensions. We introduce KANs with Tractable Operators for Uncertainty and Constraints (TOUCKANs), whose finite-degree polynomial outer functions yield a decomposable sum--product…",
+  "domain": "physics.comp-ph",
+  "tags": [
+    "physics.comp-ph",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

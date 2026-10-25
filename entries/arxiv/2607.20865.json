@@ -1,0 +1,22 @@
+{
+  "key": "2607.20865",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.20865",
+  "title": "Upper bound for the first $p$-Steklov eigenvalue in $\\mathbb{R}^n$",
+  "authors": [
+    "Lili Wang",
+    "Tao Wang"
+  ],
+  "summary": "For $p\\in(1,n]$ and any bounded convex domain $Ω\\subset\\mathbb{R}^n$, we prove the sharp inequality \\[ Λ_p(Ω):=\\frac{W_p(Ω)}{P(Ω)V(Ω)^{p/n}}\\geqω_n^{-p/n}, \\qquad W_p(Ω)=\\int_{\\partialΩ}|x|^p\\ dS, \\] with equality holding exactly at centered balls. Combining this with the isoperimetric inequality yields the explicit upper bound \\[ σ_{1,p}(Ω)\\leq \\frac{A(n,p)}{r(Ω^*)^{p-1}}, \\] where $Ω^*$ is a ball having the same perimeter as $Ω$, and $A(n,p)=1$ for $1<p\\leq 2$, $A(n,p)=n^{p/2-1}$ for $2<p\\leq n$. When $p=2$, the result recovers the higher-dimensional Weinstock inequality of Bucur et al.…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "math.DG",
+    "math.SP"
+  ],
+  "published": "2026-07-23",
+  "updated": "2026-07-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2610.02424",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02424",
+  "title": "Towards a Theory of Quantitative Vulnerability Analysis for Engineering Systems",
+  "authors": [
+    "Daniel A. Eisenberg",
+    "David L. Alderson"
+  ],
+  "summary": "Since the 1980s, risk analysis for engineering systems has been defined based on a tuple of scenarios, $\\mathcal{S}$, likelihoods, $L$, and consequences, $C$, where $Risk = (\\mathcal{S},L,C)$. We argue that equating this triplet with risk alone is insufficient and potentially misleading. Instead, we define this tuple as a vulnerability space $\\mathcal{V} = (\\mathcal{S},L,C)$, which becomes risk only when one makes specific interpretations of likelihood and consequence. Here, an interpretation has mathematical meaning, and defines a map that assigns data elements about system vulnerability to…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

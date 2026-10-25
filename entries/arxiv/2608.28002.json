@@ -1,0 +1,19 @@
+{
+  "key": "2608.28002",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.28002",
+  "title": "On Solving Continuous-Discrete Projection Filters via Sum-of-Squares Relaxation",
+  "authors": [
+    "Muhammad F. Emzir"
+  ],
+  "summary": "The continuous-discrete projection filter offers a rigorous framework to approximate the solution of the nonlinear state estimation problems. However, it suffers from numerical instability during the prediction phase when integration errors force the natural parameters outside their admissible domain. To address this issue, we introduce the sum-of-squares (SOS) relaxation to constrain the evolution of the natural parameters within the admissible domain. By parameterizing the underlying SOS matrix using the log-Cholesky map, we derive a projected ordinary differential equation (ODE) that…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-28",
+  "updated": "2026-08-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

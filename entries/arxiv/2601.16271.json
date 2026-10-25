@@ -1,0 +1,21 @@
+{
+  "key": "2601.16271",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.16271",
+  "title": "A Constructive Cayley Representation of Orthogonal Matrices and Applications to Optimization",
+  "authors": [
+    "Iwo Biborski"
+  ],
+  "summary": "It is known that every real orthogonal matrix can be brought into the domain of the Cayley transform by multiplication with a suitable diagonal signature matrix. In this paper we provide a constructive and numerically efficient algorithm that, given a real orthogonal matrix $U$, computes a diagonal matrix $D$ with entries in $\\{\\pm1\\}$ such that the Cayley transform of $DU$ is well defined. This yields a representation of $U$ in the form \\[ U = D(I-S)(I+S)^{-1}, \\] where $S$ is a skew-symmetric matrix. The proposed algorithm requires $O(n^{3})$ arithmetic operations and produces an explicit…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.AG",
+    "math.NA"
+  ],
+  "published": "2026-01-22",
+  "updated": "2026-01-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

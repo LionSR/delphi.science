@@ -1,0 +1,25 @@
+{
+  "key": "2607.00284",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.00284",
+  "title": "Active Learning for Calibrating Entangling Gates via Surrogate-Based Optimization",
+  "authors": [
+    "Caleb Walton",
+    "Patricia García-Caspueñas",
+    "Filippo Zacchei",
+    "Ana Larrañaga",
+    "Steven L. Brunton",
+    "Sara Mouradian"
+  ],
+  "summary": "The fidelity of a quantum gate is sensitive to small deviations in the physical control parameters. Unfortunately, it is generally difficult to exactly model the implemented Hamiltonian for a set of user-defined parameters, necessitating on-device calibration. Here, we present an active learning framework based on Bayesian optimization with a Gaussian Process surrogate to find the optimal parameter set. We validate the technique through numerical calibration of the laser amplitude and frequencies that implement the trapped-ion Mølmer Sørensen gate. We show that a Gaussian process can model…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.app-ph"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

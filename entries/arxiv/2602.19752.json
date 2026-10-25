@@ -1,0 +1,20 @@
+{
+  "key": "2602.19752",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.19752",
+  "title": "Improving Generalization and Trainability of Quantum Eigensolvers via Graph Neural Encoding",
+  "authors": [
+    "Jungyun Lee",
+    "Daniel K. Park"
+  ],
+  "summary": "Determining the ground state of a many-body Hamiltonian is a central problem across physics, chemistry, and combinatorial optimization, yet it is often classically intractable due to the exponential growth of Hilbert space with system size. Even on fault-tolerant quantum computers, quantum algorithms with convergence guarantees -- such as quantum phase estimation and quantum subspace methods -- require an initial state with sufficiently large overlap with the true ground state to be effective. Variational quantum eigensolvers (VQEs) are natural candidates for preparing such states; however,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-23",
+  "updated": "2026-02-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

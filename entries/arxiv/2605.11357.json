@@ -1,0 +1,21 @@
+{
+  "key": "2605.11357",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11357",
+  "title": "Reputation-Based Byzantine-Resilient Vector Consensus without Prespecified Fault Bounds",
+  "authors": [
+    "Rui Huang",
+    "Changxin Liu",
+    "Yang Shi"
+  ],
+  "summary": "This paper proposes an adaptive reputation-based algorithm for Byzantine-resilient vector consensus in distributed multi-agent systems. The proposed algorithm does not require a prespecified bound on the number of Byzantine neighbors as an algorithmic input. Instead, each agent evaluates neighboring behavior from observed state discrepancies and updates reputation weights using accumulated behavioral evidence. The reputation mechanism adaptively redistributes communication weights and can assign exactly zero weight to sufficiently inconsistent neighbors. These reputation weights are…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

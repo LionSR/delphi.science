@@ -1,0 +1,23 @@
+{
+  "key": "2609.40167",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.40167",
+  "title": "Shadow Quantum Singular Value Transformation with Shallow Quantum Circuits",
+  "authors": [
+    "Nai-Hui Chia",
+    "Hyunseong Kim",
+    "Chia-Ying Lin",
+    "Yu-Ching Shen"
+  ],
+  "summary": "We introduce shadow quantum singular value transformation (Shadow QSVT): given an initial state $|ψ\\rangle$, a Hermitian matrix $H$, a polynomial $f$, and a set of observables $\\{O_1,\\dots,O_m\\}$, the goal is to estimate $\\langleψ|f(H)^{\\dagger}O_j f(H)|ψ\\rangle$ for all $j\\in\\{1,\\dots,m\\}$. Shadow QSVT provides a systematic route to reduce the quantum resources required by standard QSVT, which constructs a unitary block-encoding of $f(H)$. It uses structure in the input state and observables, together with the fact that many applications require only observable estimates rather than…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

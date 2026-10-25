@@ -1,0 +1,21 @@
+{
+  "key": "2609.30283",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.30283",
+  "title": "Restricting Trainable Lie-Algebra Growth in Equivariant Quantum Networks via Hierarchical Ancilla-Controlled Subspace Projections",
+  "authors": [
+    "Ting Li",
+    "Zhiming Xiao",
+    "Qibiao Tang"
+  ],
+  "summary": "Equivariant quantum networks encode symmetry as an inductive bias, which can improve generalization and may also favor optimization convergence. Equivariance alone, however, does not constrain the noncommuting closure of trainable generators, and this closure can still grow rapidly in symmetry-preserving variational circuits. We introduce a hierarchical ancilla-controlled architecture that addresses this Lie-algebra-growth mechanism. Commuting invariant-sector projectors on the data register select parameterized operations on a shared ancilla register, where the noncommuting trainable…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

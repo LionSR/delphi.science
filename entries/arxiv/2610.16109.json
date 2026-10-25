@@ -1,0 +1,20 @@
+{
+  "key": "2610.16109",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16109",
+  "title": "Admissibility-Preserving Constraint Lifting for Conditional Deadbeat Control of Discrete-Time Nonlinear Systems",
+  "authors": [
+    "Jhon Manuel Portella Delgado",
+    "Ankit Goel"
+  ],
+  "summary": "This paper presents a constraint-enforcing control framework for a class of discrete-time strict- feedback nonlinear systems. The objective is to guarantee closed-loop stability while ensuring forward invariance of a prescribed safe set defined by state constraints. The pro- posed approach transforms the constrained control problem into an equivalent unconstrained one through smooth constraint-lifting mappings constructed using strictly increasing sigmoid functions. Controller synthesis is then performed in the lifted coordinates, enabling recursive backstepping design while preserving the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

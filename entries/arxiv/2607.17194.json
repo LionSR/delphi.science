@@ -1,0 +1,21 @@
+{
+  "key": "2607.17194",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.17194",
+  "title": "A short survey the game Bulgarian solitaire and related games",
+  "authors": [
+    "Romeo Meštrović"
+  ],
+  "summary": "Let $N$ be an arbitrary positive integer and let $λ=(λ_1, λ_2, \\ldots, λ_l)$ be a partition of $N$ of length $l$, i.e., $\\sum_{i=1}^lλ_i= N$ with parts $λ_1\\ge λ_2\\ldots λ_l\\ge 1$. Define $T(λ)$ as the partition of $N$ with parts $l,λ_1-1λ_2-1,\\ldots λ_l-1$,ignoring any zeros that might occur. Starting with a partition $λ$ of $N$, we describe Bulgarian solitaire by repeatedly applying the shift operation $T$ to obtain the sequence of partitions $$ λ, T(λ), T^2(λ),\\ldots . $$ We say a partition $μ$ of $N$ is $T$-cyclic if $T(μ) = μ$ for some $i\\ge 1$. In 1982 Brandt [9] characterized all…",
+  "domain": "math.HO",
+  "tags": [
+    "math.HO",
+    "math.CO",
+    "math.NT"
+  ],
+  "published": "2026-07-19",
+  "updated": "2026-07-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

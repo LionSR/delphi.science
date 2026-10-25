@@ -1,0 +1,23 @@
+{
+  "key": "2603.27803",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.27803",
+  "title": "Distributed Online Submodular Maximization under Communication Delays: A Simultaneous Decision-Making Approach",
+  "authors": [
+    "Zirui Xu",
+    "Vasileios Tzoumas"
+  ],
+  "summary": "We provide a distributed online algorithm for multi-agent submodular maximization under communication delays. We are motivated by the future distributed information-gathering tasks in unknown and dynamic environments, where utility functions naturally exhibit the diminishing-returns property, i.e., submodularity. Existing approaches for online submodular maximization either rely on sequential multi-hop communication, resulting in prohibitive delays and restrictive connectivity assumptions, or restrict each agent's coordination to its one-hop neighborhood only, thereby limiting the…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.MA",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-03-29",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

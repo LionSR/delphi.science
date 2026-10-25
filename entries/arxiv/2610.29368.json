@@ -1,0 +1,21 @@
+{
+  "key": "2610.29368",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.29368",
+  "title": "Adaptive Grid Refinement for Optimal Feedback Control",
+  "authors": [
+    "Alen E. Golpashin",
+    "Matthew T. Clark",
+    "Bruce A. Conway"
+  ],
+  "summary": "This paper introduces an algorithmic approach for adaptive grid refinement for solving the Hamilton-Jacobi-Bellman (HJB) partial differential equation (PDE) to obtain the optimal feedback control. Traditional grid generation methods often face challenges associated with state-space dimensionality, solution regularity, and large variations in the solution. Whereas fixed grid generation methods may fail to capture the intricate details of the optimal solution, our methodology addresses this challenge by dynamically refining the grid used to solve the HJB equation, thereby optimizing…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

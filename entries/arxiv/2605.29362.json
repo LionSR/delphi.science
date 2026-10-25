@@ -1,0 +1,22 @@
+{
+  "key": "2605.29362",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.29362",
+  "title": "High-order time splitting methods for the nonlinear Gross-Pitaevskii equation",
+  "authors": [
+    "Roberto Ben",
+    "Agustín Besteiro",
+    "Diego Rial"
+  ],
+  "summary": "We propose a high-order numerical methodology for computing the ground state and time evolution of the two-dimensional Gross-Pitaevskii equation with harmonic trapping potential. The ground state is obtained by combining normalized gradient flow with time-splitting schemes featuring strictly positive coefficients, which makes them suitable for both dissipative and Hamiltonian regimes and avoids the negative time steps required by classical symplectic methods. The computational cost of these methods grows quadratically with the order, in contrast to the exponential growth of symplectic…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.AP"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-05-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

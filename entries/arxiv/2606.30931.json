@@ -1,0 +1,25 @@
+{
+  "key": "2606.30931",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.30931",
+  "title": "RoPoLL: Robust Panel of LLM Judges",
+  "authors": [
+    "Anish Acharya",
+    "Kris W Pan",
+    "Brian Verkhovsky"
+  ],
+  "summary": "The LLM Jury, a Panel of LLM Evaluators (PoLL) reporting consensus scores, has become a practical alternative to single-judge LLM evaluation, yet its statistical behavior remains poorly understood. We formalize the LLM Jury under the Huber contamination model and show that PoLL incurs unbounded bias under any positive contamination, regardless of jury size, whenever a single judge fails in a biased, LLM-typical way (mode collapse, sycophancy, safety refusal). Framing jury consensus as classical robust mean estimation, we propose RoPoLL (Robust Panel of LLM-as-Judge), which preserves the PoLL…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.LG",
+    "cs.MA",
+    "math.OC",
+    "math.PR"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2607.23080",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.23080",
+  "title": "A mixed residual method for biharmonic equations in spectral Barron spaces",
+  "authors": [
+    "Mengjia Bai",
+    "Kuo Gai",
+    "Shuai Lu"
+  ],
+  "summary": "We propose a mixed residual method (MIM) for numerically solving the biharmonic equation with nonhomogeneous clamped boundary conditions. By establishing the well-posedness of the biharmonic equation in spectral Barron spaces, we derive an error bound for MIM that relates shallow neural network approximations to the exact solution and overcomes the curse of dimensionality. This error bound consists of two components: the first corresponds to the approximation error of the neural network, while the second represents the generalization error arising from randomly sampled training data. Several…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-25",
+  "updated": "2026-07-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

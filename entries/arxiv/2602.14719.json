@@ -1,0 +1,22 @@
+{
+  "key": "2602.14719",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14719",
+  "title": "Hua-Pickrell diffusions and differential equations related with pseudo-Jacobi polynomials",
+  "authors": [
+    "Martin Auer",
+    "Michael Voit"
+  ],
+  "summary": "Following Assiotis (2020), we study general $β$-Hua-Pickrell diffusions of $N$ particles on $\\mathbb R$ as solutions of the stochastic differential equations (SDEs) $$dX_{j,t}=\\sqrt{2(1+X_{j,t}^2)}\\,dB_{j,t}+β\\left[b-a X_{j,t}+\\sum_{l=1,\\ldots, N; \\> l\\neq j}\\frac{X_{j,t}X_{l,t}+1}{X_{j,t}-X_{l,t}}\\right]dt\\,,\\;\\; (j=1,\\ldots,N)$$ with $β\\ge 1,\\> a,b\\in\\mathbb R$. These processes form a subclass of the Pearson diffusions which are defined as solutions of algebraic SDEs where the moments of the empirical distributions $μ_t^N:=\\frac{1}{N}\\sum_{j=1}^N δ_{X_{j,t}}$ can be computed inductively.…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math-ph",
+    "math.CA"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-08-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

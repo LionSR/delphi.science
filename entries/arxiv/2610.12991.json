@@ -1,0 +1,26 @@
+{
+  "key": "2610.12991",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.12991",
+  "title": "Dynamic Matching with Abandonment: Optimal Guarantees via Static Priority Policies",
+  "authors": [
+    "Nick Arnosti",
+    "Rad Niazadeh",
+    "Pranav Nuti",
+    "Felipe Simon"
+  ],
+  "summary": "We study stochastic dynamic matching with abandonment, a fundamental model in which agents of different types arrive over time, may abandon the market while waiting, and can be matched in pairs for rewards that depend on their types. No online policy can guarantee more than $0.5$ of the omniscient benchmark, which knows all arrival and departure times. Whether this guarantee is achievable has been a central open problem, even in special cases. We resolve this problem by showing that, on every instance, a simple static priority policy, which is computable in polynomial time, earns at least…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.CC",
+    "cs.GT",
+    "econ.TH",
+    "math.OC"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

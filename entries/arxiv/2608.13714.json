@@ -1,0 +1,22 @@
+{
+  "key": "2608.13714",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.13714",
+  "title": "Approximating matrix functions by block Krylov methods with randomized vectors",
+  "authors": [
+    "Josh Kane",
+    "Lucas Onisk",
+    "Lothar Reichel",
+    "Giuseppe Rodriguez"
+  ],
+  "summary": "The need to evaluate expressions of the form $f(A)\\mathbf{b}$, where $A$ is a square matrix, $f$ is a function, and $\\mathbf{b}$ is a vector, arises in several areas of applied mathematics. When the matrix $A$ is very large, it is usually not attractive to evaluate $f(A)$. Instead, $f(A)\\mathbf{b}$ often is approximated by computing an estimate in a Krylov subspace that depends on $A$ and $\\mathbf{b}$, and only requires that $f$ be evaluated at a small matrix. This paper explores the application of several variants of randomized block Krylov methods to the approximation of $f(A)\\mathbf{b}$.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

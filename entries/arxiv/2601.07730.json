@@ -1,0 +1,25 @@
+{
+  "key": "2601.07730",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.07730",
+  "title": "Explicit complex time integrators for stiff problems",
+  "authors": [
+    "Jithin D. George",
+    "Julian Koellermeier",
+    "Samuel Y. Jung",
+    "Niall M. Mangan"
+  ],
+  "summary": "Most numerical methods for time integration use real-valued time steps. Complex time steps, however, can provide an additional degree of freedom, as we can select the magnitude of the time step in both the real and imaginary directions. We show that specific paths in the complex time plane lead to expanded stability regions, providing clear computational advantages for complex-valued systems. In particular, we highlight the Schrödinger equation, for which complex time integrators can be uniquely optimal. Furthermore, we demonstrate that these benefits extend to certain classes of real-valued…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math-ph",
+    "math.CV",
+    "quant-ph"
+  ],
+  "published": "2026-01-12",
+  "updated": "2026-01-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

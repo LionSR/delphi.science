@@ -1,0 +1,21 @@
+{
+  "key": "2610.13787",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.13787",
+  "title": "Optimal Algorithms for Nonsmooth Nonconvex Stochastic Optimization with Constraints",
+  "authors": [
+    "Gon Buzaglo",
+    "Guy Kornowski"
+  ],
+  "summary": "We present new algorithms for stochastic optimization problems in which the objective is neither smooth nor convex, subject to a convex constraint set. Our algorithms return a $(δ,\\varepsilon)$-Goldstein stationary point, as recently defined for constrained problems by Liu et al. (2024), with improved complexities, and are the first to achieve optimal convergence rates for this task in several settings. In particular, we design projection-based and projection-free algorithms that achieve a $\\widetilde O(δ^{-1}\\varepsilon^{-3})$ rate using stochastic gradients, which we show to be optimal,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

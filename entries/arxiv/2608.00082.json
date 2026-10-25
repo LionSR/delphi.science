@@ -1,0 +1,23 @@
+{
+  "key": "2608.00082",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.00082",
+  "title": "Data-Driven Model Order Reduction with pyMOR",
+  "authors": [
+    "Hendrik Kleikamp",
+    "Petar Mlinarić",
+    "Stephan Rave",
+    "Felix Schindler"
+  ],
+  "summary": "pyMOR is a free and open-source software library of model order reduction algorithms for the Python programming language. Designed with classical model-based reduction methods for large-scale parametric partial differential equation problems in mind, algorithms in pyMOR are implemented in terms of operations on abstract VectorArray, Operator and Model interfaces, allowing for a seamless integration with external solver codes implementing the full-order model. For cases where a tight integration with the full-order model code is not feasible, data-driven model order reduction algorithms,…",
+  "domain": "cs.MS",
+  "tags": [
+    "cs.MS",
+    "math.NA"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

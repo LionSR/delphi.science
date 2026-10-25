@@ -1,0 +1,21 @@
+{
+  "key": "2604.02384",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.02384",
+  "title": "General formulas for a class of Euler sums",
+  "authors": [
+    "David H Bailey",
+    "Ross McPhedran",
+    "Bruno Salvy"
+  ],
+  "summary": "Let $H_k = 1 + 1/2 + 1/3 + \\cdots + 1/k$ denote the $k$th harmonic number. We present an easy-to-implement algorithm for the computation of explicit closed-form evaluations, in terms of the digamma and polygamma functions, for Euler sums of the form \\begin{align} \\sum_{k=1}^\\infty R(k) H_k, \\end{align} where $R(k)$ is a rational function (quotient of two polynomials) whose denominator degree is at least two larger than the numerator degree. We apply the same method to show how the computation of a general formula for Euler sums of the form \\begin{align*} \\sum_{k=1}^\\infty \\frac{H_k}{(m_1 k +…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-04-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

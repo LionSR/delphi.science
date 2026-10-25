@@ -1,0 +1,23 @@
+{
+  "key": "2606.08388",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.08388",
+  "title": "The Spectral Dynamics and Noise Geometry of Muon",
+  "authors": [
+    "Pierfrancesco Beneventano",
+    "Mahmoud Abdelmoneum",
+    "Tomaso Poggio"
+  ],
+  "summary": "Muon replaces a matrix gradient $G=UΣV^\\top$ by its polar factor $UV^\\top$. This keeps the singular directions selected by the gradient, but makes the update spectrum flat. We study the optimization bias created by this operation. Under explicit alignment assumptions, we prove that the polar update is the one-step entropy-maximizing choice among bounded updates that use the gradient singular directions and do not adapt to the current weight spectrum. In an underdetermined regression model, we derive exact singular-value dynamics for continuous-time Muon and identify a measurement-dependent…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-06-07",
+  "updated": "2026-06-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

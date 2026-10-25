@@ -1,0 +1,20 @@
+{
+  "key": "2601.00972",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.00972",
+  "title": "Improved decoding algorithms for surface codes under independent bit-flip and phase-flip errors",
+  "authors": [
+    "Louay Bazzi"
+  ],
+  "summary": "We study exact decoding for the toric code and for planar and rotated surface codes under the standard independent \\(X/Z\\) noise model, focusing on Separate Minimum Weight (SMW) decoding and Separate Most Likely Coset (SMLC) decoding. For the SMW decoding problem, we show that an \\(O(n^{3/2}\\log n)\\)-time decoder is achievable for surface and toric codes, improving over the \\(O(n^{3}\\log n)\\) worst-case time of the standard approach based on complete decoding graphs. Our approach is based on a local reduction of SMW decoding to the minimum weight perfect matching problem using Fisher…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "quant-ph"
+  ],
+  "published": "2026-01-02",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

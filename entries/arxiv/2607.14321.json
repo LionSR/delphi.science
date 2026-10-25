@@ -1,0 +1,25 @@
+{
+  "key": "2607.14321",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14321",
+  "title": "Accounting for Hysteresis and Eddy Currents in Finite Element Simulations of Ferromagnetic Laminated Cores using a Recurrent Neural Network",
+  "authors": [
+    "Florent Purnode",
+    "Louis Denis",
+    "François Henrotte",
+    "Gilles Louppe",
+    "Christophe Geuzaine"
+  ],
+  "summary": "Incorporating hysteresis and eddy currents into finite element simulations of laminated-core electrical machines is computationally challenging. Resolving the fields inside the laminations at each integration point and at every nonlinear iteration leads to computational costs several orders of magnitude higher than anhysteretic simulations, making such approaches impractical for design applications. Conversely, simplified models accounting only for magnetic saturation are becoming increasingly inadequate as electrical machine topologies and operating conditions grow in complexity. In this…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "cs.AI",
+    "math.NA"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

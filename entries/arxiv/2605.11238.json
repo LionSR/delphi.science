@@ -1,0 +1,21 @@
+{
+  "key": "2605.11238",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11238",
+  "title": "Efficient Robust Constrained Signal Detection via Kolmogorov Width Approximations",
+  "authors": [
+    "Yikun Li",
+    "Matey Neykov"
+  ],
+  "summary": "Robust statistical inference often faces a severe computational-statistical gap when dealing with complex parameter spaces. We investigate minimax signal detection in the Gaussian sequence model under strong $ε$-contamination, where the signal belongs to a general prior constraint $K$. Existing optimal tests require computing the exact Kolmogorov $k$-width of $K$, a computationally intractable task for general non-trivial sets. We bridge this gap by proposing a polynomial-time testing framework that universally applies to balanced, type-2, and exactly 2-convex constraints. By leveraging a…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.CO"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

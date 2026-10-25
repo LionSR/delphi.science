@@ -1,0 +1,22 @@
+{
+  "key": "2606.20534",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20534",
+  "title": "On Second-Order Methods for Bilevel Optimization",
+  "authors": [
+    "Jiawen Bi",
+    "Jiaxiang Li",
+    "Mingyi Hong",
+    "Shuzhong Zhang"
+  ],
+  "summary": "Bilevel optimization is an indispensable modeling tool for modern machine learning and engineering design. However, the theory and practice for finding second order stationary points in the context of bilevel optimization still remain largely unsettled. Even for bilevel optimization with strongly convex lower-level problem, the hyperfunction it induces is in general nonconvex. Although the Cubic Regularized Newton methods (CRN) famously achieve the optimal $\\mathcal{O}(\\varepsilon^{-1.5})$ SOSP (second-order stationary point) rate in single-level optimization, it is unclear how to control…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

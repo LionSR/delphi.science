@@ -1,0 +1,25 @@
+{
+  "key": "2601.18678",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.18678",
+  "title": "Counterfactual Explanations on Robust Perceptual Geodesics",
+  "authors": [
+    "Eslam Zaher",
+    "Maciej Trzaskowski",
+    "Quan Nguyen",
+    "Fred Roosta"
+  ],
+  "summary": "Latent-space optimization methods for counterfactual explanations - framed as minimal semantic perturbations that change model predictions - inherit the ambiguity of Wachter et al.'s objective: the choice of distance metric dictates whether perturbations are meaningful or adversarial. Existing approaches adopt flat or misaligned geometries, leading to off-manifold artifacts, semantic drift, or adversarial collapse. We introduce Perceptual Counterfactual Geodesics (PCG), a method that constructs counterfactuals by tracing geodesics under a perceptually Riemannian metric induced from robust…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.CV",
+    "cs.HC",
+    "math.DG"
+  ],
+  "published": "2026-01-26",
+  "updated": "2026-03-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

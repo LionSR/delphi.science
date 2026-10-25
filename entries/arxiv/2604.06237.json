@@ -1,0 +1,19 @@
+{
+  "key": "2604.06237",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.06237",
+  "title": "The Mantovanelli-Hofstadter Sequence",
+  "authors": [
+    "Benoit Cloitre"
+  ],
+  "summary": "We study the perturbed Hofstadter recurrence introduced by Mantovanelli, $\\widetilde{Q}(n)=\\widetilde{Q}(n-\\widetilde{Q}(n-1))+\\widetilde{Q}(n-\\widetilde{Q}(n-2))+(-1)^n$, with $\\widetilde{Q}(1)=\\widetilde{Q}(2)=1$. We prove that this recurrence is well-defined for every positive integer and that $\\lim_{n\\to\\infty}\\widetilde{Q}(n)/n=1/2$. We establish the optimal order $\\widetilde{Q}(n)=n/2+O(n/\\sqrt{\\log n})$ and give explicit positive lower and upper bounds for the corresponding normalized limsup. The proof is primarily combinatorial. An odd-even split turns the recurrence into two exact…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-04-04",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

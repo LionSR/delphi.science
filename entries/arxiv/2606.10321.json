@@ -1,0 +1,23 @@
+{
+  "key": "2606.10321",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.10321",
+  "title": "Baseline-Free Policy Optimization for Neural Combinatorial Optimization",
+  "authors": [
+    "Carlos S. Sepúlveda",
+    "Gonzalo A. Ruz"
+  ],
+  "summary": "Neural combinatorial optimization (NCO) trains autoregressive policies to solve routing problems. The standard training algorithm, REINFORCE with a rollout baseline, requires maintaining and periodically updating a frozen copy of the policy for variance reduction. This baseline introduces a structural vulnerability: on harder instances, a poor baseline produces noisy gradient estimates that can destabilize training. We evaluate Group Relative Policy Optimization (GRPO), an algorithm from large language model alignment that eliminates the baseline entirely by normalizing advantages within…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-06-09",
+  "updated": "2026-06-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

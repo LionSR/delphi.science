@@ -1,0 +1,24 @@
+{
+  "key": "2602.01607",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.01607",
+  "title": "Minimax optimal differentially private synthetic data for smooth queries",
+  "authors": [
+    "Rundong Ding",
+    "Yiyun He",
+    "Yizhe Zhu"
+  ],
+  "summary": "Differentially private synthetic data enables the sharing and analysis of sensitive datasets while providing rigorous privacy guarantees for individual contributors. A central challenge is to achieve strong utility guarantees for meaningful downstream analysis. Many existing methods ensure uniform accuracy over broad query classes, such as all Lipschitz functions, but this level of generality often leads to suboptimal rates for statistics of practical interest. Since many common data analysis queries exhibit smoothness beyond what worst-case Lipschitz bounds capture, we ask whether…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.IT",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-02-02",
+  "updated": "2026-06-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

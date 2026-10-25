@@ -1,0 +1,22 @@
+{
+  "key": "2607.27742",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.27742",
+  "title": "Chance-Constrained Nonlinear Covariance Control via Robust Linearization Remainder Bounds",
+  "authors": [
+    "Man Jun Koh",
+    "Hyochoong Bang",
+    "SooJean Han"
+  ],
+  "summary": "When dealing with nonlinear systems, classical covariance steering typically propagates uncertainty via first-order linearizations, discarding higher-order Taylor remainders. This truncation causes computed statistical moments to diverge from the true physical state distribution, often leading to chance constraint violations. This paper introduces a discrete-time Sequential Convex Programming (SCP) framework that casts the deterministic one-step nonlinear numerical map as a Linear Stochastic Inclusion. The The Taylor remainder is modeled as a state-independent unstructured uncertainty block,…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-07-30",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

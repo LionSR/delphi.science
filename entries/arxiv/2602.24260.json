@@ -1,0 +1,22 @@
+{
+  "key": "2602.24260",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.24260",
+  "title": "Observer-Based Estimation and Hydrostatic Inertia Modeling for Cooperative Transport of Variable-Inertia Loads with Quadrotors",
+  "authors": [
+    "Jacob Goodman",
+    "Leonardo Colombo",
+    "Juan Giribet"
+  ],
+  "summary": "We address load-parameter estimation in cooperative aerial transport with time-varying mass and inertia, as in fluid-carrying payloads. Using an intrinsic manifold model of the multi-quadrotor-load dynamics, we combine a geometric tracking controller with an observer for parameter identification. We estimate mass from measurable kinematics and commanded forces, and handle variable inertia via an inertia surrogate that reproduces the load's rotational dynamics for control and state propagation. Instead of real-time identification of the true inertia tensor, driven by high-dimensional internal…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-02-27",
+  "updated": "2026-02-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

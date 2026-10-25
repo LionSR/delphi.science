@@ -1,0 +1,21 @@
+{
+  "key": "2607.11493",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.11493",
+  "title": "Agentic Skill Optimization over Lie Algebroids",
+  "authors": [
+    "Sridhar Mahadevan"
+  ],
+  "summary": "Agentic systems increasingly improve themselves by editing skills: prompts, rubrics, plans, tool contracts, examples, validators, and traces. Skill edits are not independent coordinates in a vector space: they are local repairs to structured artifacts whose effects are observed only after rollout, validation, and critique. Distinct edits can have the same immediate visible effect while differing in routing context, template state, guardrail scope, or future composability. The order of edits can matter as well: repairing a schema before a normalization rule need not be equivalent to applying…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.CT"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

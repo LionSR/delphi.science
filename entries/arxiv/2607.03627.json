@@ -1,0 +1,21 @@
+{
+  "key": "2607.03627",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.03627",
+  "title": "Rapid Concurrent GPU-CPU Solvers for Scalable Unit Commitment in Large Power Grids",
+  "authors": [
+    "Hussein Sharadga",
+    "Yuhan Du",
+    "Javad Mohammadi"
+  ],
+  "summary": "This paper presents an accelerated solver for the unit commitment problem in large-scale power systems. The approach is based on the concurrent execution of GPU- and CPU-based optimization solvers on a single machine, with the solver that converges first terminating the other to minimize overall runtime. This strategy effectively harnesses the complementary strengths of different solvers. Convergence is further accelerated through a systematic and aggressive presolve approach. Numerical experiments on a 6,049-bus system with millions of decision variables and constraints demonstrate speedups…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-03",
+  "updated": "2026-07-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2609.23344",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.23344",
+  "title": "High-order mass-, energy- and momentum-conserving methods for the nonlinear Schrödinger equation",
+  "authors": [
+    "Georgios Akrivis",
+    "Buyang Li",
+    "Rong Tang",
+    "Hui Zhang"
+  ],
+  "summary": "This paper introduces a novel formulation and an associated space-time finite element method for simulating solutions to the nonlinear Schrödinger equation. A major advantage of the proposed algorithm is its intrinsic ability to preserve the conservation of mass, energy, and momentum at the discrete level. This is proved for the numerical solutions determined by the fully discrete implicit scheme. An effective iterative scheme is proposed for solving the nonlinear system based on an equivalent formulation which suggests using Newton's iteration for the solution and no iteration for the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-20",
+  "updated": "2026-09-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

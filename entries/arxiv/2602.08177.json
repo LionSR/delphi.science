@@ -1,0 +1,19 @@
+{
+  "key": "2602.08177",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.08177",
+  "title": "Implicit regularization of normalized gradient descent",
+  "authors": [
+    "Cédric Josz"
+  ],
+  "summary": "How to find flat minima? We propose running normalized gradient descent, usually reserved for nonsmooth optimization, with sufficiently slowly diminishing step sizes. This induces implicit regularization towards flat minima if an appropriate Lyapunov functions exists in the gradient dynamics. Our analysis shows that implicit regularization is intrinsically a question of nonsmooth analysis, for which we deploy the full power of variational analysis and stratification theory.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-09",
+  "updated": "2026-02-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

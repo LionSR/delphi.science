@@ -1,0 +1,23 @@
+{
+  "key": "2609.16449",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.16449",
+  "title": "Beyond Phase Reduction: Amplitude Collapse in Optimal Control of Coupled Oscillators",
+  "authors": [
+    "Faranak Rajabi",
+    "Frédéric Gibou",
+    "Jeff Moehlis"
+  ],
+  "summary": "We solve the four-dimensional Hamilton-Jacobi-Bellman (HJB) equation for two diffusively coupled Stuart-Landau-like oscillators to obtain full-state optimal feedback control. A sweep over coupling strength reveals a sharp change in the numerically optimal strategy: below a threshold coupling value, the controller steers the phase difference toward anti-phase while keeping both oscillators near the limit cycle, as reduced-order models would suggest. Above this threshold, the HJB solution changes qualitatively; the controller transiently collapses one oscillator's amplitude to near zero,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY",
+    "math.NA"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

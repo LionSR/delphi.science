@@ -1,0 +1,21 @@
+{
+  "key": "2609.03616",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.03616",
+  "title": "Nash-Bargaining HalpernSGD via Limited-Memory MultiLRSGA: A Two-Phase Optimizer for Multi-Objective Learning",
+  "authors": [
+    "Katherine Rossella Foglia",
+    "Francesco Sergio Pisani",
+    "Vittorio Colao"
+  ],
+  "summary": "We propose NB-HalpernSGD via LM-MultiLRSGA, a two-phase optimizer for multi-objective optimization. The process starts with a competitive optimization phase by applying a limited-memory variant of MultiLRSGA, named LM-MultiLRSGA, designed to reduce the memory footprint of the original optimizer while preserving its rotational correction mechanism. It addresses multi-objective tasks by considering the competitive game associated with the original multi-objective problem, approximating a Nash equilibrium. This point defines a Nash-equilibrium-induced disagreement point: we formulate the Nash…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

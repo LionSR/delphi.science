@@ -1,0 +1,21 @@
+{
+  "key": "2608.16256",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.16256",
+  "title": "Error Distribution of the Local Linearization Method for Stochastic Differential Equations with Additive Brownian Noise",
+  "authors": [
+    "Masaaki Fukasawa",
+    "Mikio Hirokane",
+    "Kostas Kardaras"
+  ],
+  "summary": "We prove a functional stable limit theorem for the discretization error process of a local linearization scheme for stochastic differential equations with additive Brownian noise. The scheme includes the conditional mean of the second-order term involving the Brownian increment in the Taylor expansion of the drift. The leading error is then formed by centered quadratic terms in the Brownian increments, and the sharp normalization is \\(n\\sqrt n\\). Under \\(C^3\\)-regularity and a Lyapunov-type condition on the drift, the scaled error process converges stably in \\(C([0,1],\\mathbb R^d)\\) to the…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

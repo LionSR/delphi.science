@@ -1,0 +1,20 @@
+{
+  "key": "2601.14400",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.14400",
+  "title": "Pauli Propagation for Imaginary-Time Evolution",
+  "authors": [
+    "Rafael Gómez-Lurbe",
+    "Armando Pérez"
+  ],
+  "summary": "We extend the Pauli Propagation framework to imaginary-time evolution and introduce imaginary-time Pauli Propagation (ITPP), an operator-based algorithm for approximating thermal and ground-state properties directly in the Pauli basis. We derive explicit imaginary-time propagation rules for Pauli strings and analyze the main approximation errors arising from Trotterization and Pauli-space truncation, including bounds that account for the non-unitary nature of the evolution. Benchmarking ITPP on the one-dimensional transverse field Ising model, we find that the method performs best in the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-20",
+  "updated": "2026-08-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2603.28814",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.28814",
+  "title": "From Vieta to Chebyshev: A Unified Trigonometric Census of Polynomial Roots",
+  "authors": [
+    "Sawon Pratiher"
+  ],
+  "summary": "This article gives a trigonometric method for counting how many roots of a polynomial are real and how many are complex, without solving the equation. For a depressed polynomial $P(t) = t^d + c_{d-2}t^{d-2} + \\cdots + c_1 t + c_0$ of degree~$d$ with $c_{d-2} < 0$ (the case $c_{d-2}\\geq 0$ is discussed briefly in Section~\\ref{sec:cgeq0} but not resolved), the substitution $t = u\\cosθ$, $u = 2\\sqrt{-c_{d-2}/d}$, matches $P$ against the Chebyshev identity $T_d(\\cosθ) = \\cos dθ$ and reduces the classification problem to a single trigonometric equation $f(θ) = \\sum_{k=1}^{d-3}α_k\\cos^k\\!θ+ \\cos…",
+  "domain": "math.GM",
+  "tags": [
+    "math.GM"
+  ],
+  "published": "2026-03-28",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

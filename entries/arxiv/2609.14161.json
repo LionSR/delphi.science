@@ -1,0 +1,22 @@
+{
+  "key": "2609.14161",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.14161",
+  "title": "Quantitative linear independence for square roots",
+  "authors": [
+    "Marco Aymone",
+    "Samuel Figueredo",
+    "Siddharth Iyer",
+    "Christian Táfula"
+  ],
+  "summary": "We consider the problem of finding lower bounds for integer linear combinations of $\\sqrt{a_1},\\ldots,\\sqrt{a_K}$, where $a_1,\\ldots,a_K$ are positive integers such that their square roots are linearly independent over the rationals. We use a probabilistic approach and prove that for $K\\geq 8$ and nonzero integers $m_1,\\ldots,m_K$, $$ \\bigg|\\sum_{n\\leq K} m_n\\sqrt{a_n}\\bigg| > e^{\\frac{2^{K-1}-1}{K} - \\frac{1}{2}} \\bigg(\\max_{n\\leq K}|m_n|\\sqrt{a_n}\\cdot \\sqrt{K}\\bigg)^{-(2^{K-1}-1)}. $$ This inequality improves the dependence on $K$ in the classical product bound.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-09-12",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

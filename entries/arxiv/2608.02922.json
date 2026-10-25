@@ -1,0 +1,24 @@
+{
+  "key": "2608.02922",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.02922",
+  "title": "Spectral clustering of network time series via the sample covariance matrix",
+  "authors": [
+    "Brendan Martin",
+    "Joshua Agterberg",
+    "Mihai Cucuringu",
+    "Alessandra Luati",
+    "Francesco Sanna Passino"
+  ],
+  "summary": "Spectral clustering for community detection is analysed in multivariate time series models whose dependence structure is determined by an unobserved stochastic blockmodel. We establish that spectral clustering of the sample covariance matrix achieves exact recovery of the underlying communities. The recovery rates depend explicitly on the network size, sample length, block separation, and degree of data dependence. This demonstrates that exact community recovery under a stochastic blockmodel is possible even when the adjacency matrix is unobserved. Our theory provides extensions of both…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-08-03",
+  "updated": "2026-08-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2608.11141",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.11141",
+  "title": "Certificate-based Synthesis of Coordinated Droop Control for Heterogeneous Radial Distribution Networks",
+  "authors": [
+    "Georgios Pantazis",
+    "Michelle Chong"
+  ],
+  "summary": "Voltage certificates for droop-controlled radial distribution networks are often constructed from worst-case quantities. In heterogeneous radial networks, this approach can hide where voltage deviations are most likely. Furthermore, such certificates become increasingly conservative as the network sensitivities accumulate. Leveraging the structure of the linearized DistFlow model and slope-restricted droop controllers, we derive tighter deterministic voltage certificates that retain heterogeneous network, disturbance and inverter characteristics of each bus. The certificates reveal the buses…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-08-11",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2610.05456",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05456",
+  "title": "Taylor Representations for Model-Free RL in Networked MDPs",
+  "authors": [
+    "Salah Chikhi",
+    "Abdelhaq Chaoui",
+    "Asuman Ozdaglar",
+    "Saurabh Amin"
+  ],
+  "summary": "In Networked Markov Decision Processes, transition dynamics are often unknown and the state--action space grows rapidly with the number of agents. In this setting, Taylor representations naturally approximate $Q$-functions, but a naive order-$n$ expansion over $N$ agents requires $Θ(N^n)$ coefficients. We justify these expansions under smooth expected future local rewards with controlled derivatives. Under this condition, finite-speed information propagation and discounting imply that local-critic Taylor coefficients decay exponentially with the graph distance to the farthest agent involved.…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

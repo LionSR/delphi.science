@@ -1,0 +1,23 @@
+{
+  "key": "2603.01268",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.01268",
+  "title": "Achievability of Heterogeneous Hypergraph Recovery from its Graph Projection",
+  "authors": [
+    "Alexander Morgan",
+    "Chenghao Guo"
+  ],
+  "summary": "We formulate and analyze a heterogeneous random hypergraph model, and we provide an achieveability result for recovery of hyperedges from the observed projected graph. We observe a projected graph which combines random hyperedges across all degrees, where a projected edge appears if and only if both vertices appear in at least one hyperedge. Our goal is to reconstruct the original set of hyperedges of degree $d_j$ for some $j$. Our achievability result is based on the idea of selecting maximal cliques of size $d_j$ in the projected graph, and we show that this algorithm succeeds under a…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.IT",
+    "math.PR",
+    "math.ST"
+  ],
+  "published": "2026-03-01",
+  "updated": "2026-03-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

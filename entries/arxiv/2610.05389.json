@@ -1,0 +1,21 @@
+{
+  "key": "2610.05389",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05389",
+  "title": "On State Distinguishing Without Inverse Queries",
+  "authors": [
+    "Emma Wang",
+    "Joseph Carolan",
+    "Andrew M. Childs"
+  ],
+  "summary": "In the quantum state distinguishing problem, an algorithm is given copies of a state $|ψ\\rangle$ or $|φ\\rangle$ separated by trace distance $\\varepsilon$, and tasked with deciding which is the case. It is a standard result that $Θ(\\varepsilon^{-2})$ copies are required, while having access to a unitary state preparation oracle and its inverse improves this to $Θ(\\varepsilon^{-1})$ queries. We study the intermediate case with forward-only access, capturing scenarios where the oracle is a physical process that cannot be reversed. Tang and Wright recently showed that distinguishing a known…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

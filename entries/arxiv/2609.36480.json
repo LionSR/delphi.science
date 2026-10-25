@@ -1,0 +1,21 @@
+{
+  "key": "2609.36480",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.36480",
+  "title": "Improved Quantum Algorithms for Black-Box Abelian Group Decomposition",
+  "authors": [
+    "Junrong Luo",
+    "Yinan Li",
+    "Francois Le Gall"
+  ],
+  "summary": "Decomposing finite Abelian black-box groups into cyclic factors is a basic problem in quantum computation. We give a quantum algorithm for decomposing finite Abelian black-box groups by adapting the quantum sampling and classical lattice-reduction method of Regev's factoring algorithm. The algorithm computes an invariant-factor decomposition and corresponding cyclic generators with high probability. For a group G of order at most 2^n with unique encodings and reversible group-operation cost T_op = Omega(sqrt(n)), our algorithm uses O(sqrt(n)) quantum circuits, each with O~(n T_op) gates and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

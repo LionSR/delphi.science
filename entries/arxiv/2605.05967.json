@@ -1,0 +1,22 @@
+{
+  "key": "2605.05967",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05967",
+  "title": "Sharper Guarantees for Misspecified Kernelized Bandit Optimization",
+  "authors": [
+    "Davide Maran",
+    "Csaba Szepesvári"
+  ],
+  "summary": "Existing guarantees for misspecified kernelized bandit optimization pay for misspecification through kernel complexity: in generic offline bounds, the misspecification level $\\varepsilon$ is multiplied by $\\sqrt{d_\\mathrm{eff}}$, where $d_\\mathrm{eff}$ is the kernel effective dimension, while in online regret bounds, the corresponding penalty is $\\sqrt{γ_n}\\,n\\varepsilon$, where $γ_n$ is the maximum information gain after $n$ rounds of interaction. In this work, we show that, for a large class of kernels, the misspecification amplification can be reduced to logarithmic or polylogarithmic…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

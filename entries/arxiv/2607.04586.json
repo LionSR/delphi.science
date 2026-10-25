@@ -1,0 +1,24 @@
+{
+  "key": "2607.04586",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04586",
+  "title": "QuTuner: Feature- and Learning-Guided Optimization Pass Tuning for Quantum Compilers",
+  "authors": [
+    "Ming Zhong",
+    "Xiangyu Ren",
+    "Jinglei Cheng",
+    "Shaohua Li",
+    "Zhiding Liang"
+  ],
+  "summary": "Quantum compilers play a key role in transforming quantum circuits into lower-cost implementations with improved execution fidelity. This process is commonly guided by circuit-level metrics, such as gate counts and circuit depth. Although compiler pass tuning has been widely studied in classical compilation, directly transferring these techniques to quantum compilers is challenging, because quantum programs are expressed as circuits and exhibit optimization behaviors that are shaped by quantum-specific structures. Prior quantum compiler tuning approaches have begun to use circuit features to…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.SE"
+  ],
+  "published": "2026-07-06",
+  "updated": "2026-07-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

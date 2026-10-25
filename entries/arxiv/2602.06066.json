@@ -1,0 +1,20 @@
+{
+  "key": "2602.06066",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.06066",
+  "title": "Non-Definability of Reachability in Büchi Arithmetic for a Family of Generalized Collatz Maps",
+  "authors": [
+    "Madhav Dhiman",
+    "Rohan Pandey"
+  ],
+  "summary": "Let $q \\ge 3$ and $d \\ge 1$ be odd integers with $q+d$ a power of $2$. We study the generalized Collatz map $T_{q,d}$, a one-dimensional piecewise-affine map on the positive integers, and its unparameterized reachability relation $R(x,z)$, which holds when $z$ is an iterate of $x$ under $T_{q,d}$. We prove that for every such pair $(q,d)$ the relation $R$ is not first-order definable in Büchi arithmetic $\\langle \\mathbb{N}, +, V_q \\rangle$. Equivalently, no finite automaton recognizes the base-$q$ encoding of $R$. Assuming definability of $R$, we construct a first-order formula that defines…",
+  "domain": "math.GM",
+  "tags": [
+    "math.GM"
+  ],
+  "published": "2026-02-01",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

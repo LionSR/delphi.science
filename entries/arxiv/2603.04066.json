@@ -1,0 +1,20 @@
+{
+  "key": "2603.04066",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.04066",
+  "title": "Deterministic Quantum Jump (DQJ) Method for Weakly Dissipative Systems",
+  "authors": [
+    "Marcus Meschede",
+    "Ludwig Mathey"
+  ],
+  "summary": "Physical quantum systems are generically coupled to an environment, resulting in open system dynamics. A typical approach to simulating this dynamics is to propagate the density matrix of the system via the Lindblad master equation. This approach is numerically challenging due to the size of the density matrix, which has led to the development of quantum jump methods, which unravel the density matrix into an ensemble of state vectors. These methods utilize a stochastic sampling of the quantum jump times, which becomes inefficent for weakly dissipative dynamics, in which jumps are rare…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-04",
+  "updated": "2026-03-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2605.26547",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.26547",
+  "title": "High-Probability Guarantees for Random Zeroth-Order Gradient Descent on Smooth Functions",
+  "authors": [
+    "Haishan Ye"
+  ],
+  "summary": "Randomized zeroth-order methods are classically analyzed in expectation, but a black-box Markov conversion can give misleading high-probability guarantees, in particular by forcing the finite-difference smoothing radius to shrink with the confidence parameter. This paper gives a direct finite-horizon high-probability analysis of a two-query Gaussian finite-difference method for deterministic objectives with Lipschitz gradients. The method uses the classical two-point estimator together with the normalized stepsize \\(η_t=1/(4L\\norm{\\bu_t}^2)\\). We prove that it finds an…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2602.03843",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.03843",
+  "title": "Classical Benchmarks of a Symmetry-Adapted Variational Quantum Eigensolver for Real-Time Green's Functions in Dynamical Mean-Field Theory",
+  "authors": [
+    "Aadi Singh",
+    "Chakradhar Rangi",
+    "Ka-Ming Tam"
+  ],
+  "summary": "We present a variational quantum eigensolver (VQE) approach for solving the Anderson Impurity Model (AIM) arising in Dynamical Mean-Field Theory (DMFT). Recognizing that the minimal two-site approximation often fails to resolve essential spectral features, we investigate the efficacy of VQE for larger bath discretizations while adhering to near-term hardware constraints. We employ a symmetry-adapted ansatz enforcing conservation of particle number $(N)$, spin projection $(S_z=0)$, and total spin $(S^2=0)$ symmetry, benchmarking the performance against exact diagonalization across different…",
+  "domain": "cond-mat.str-el",
+  "tags": [
+    "cond-mat.str-el",
+    "cond-mat.mtrl-sci",
+    "quant-ph"
+  ],
+  "published": "2026-02-03",
+  "updated": "2026-02-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

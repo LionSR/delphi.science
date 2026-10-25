@@ -1,0 +1,21 @@
+{
+  "key": "2605.14371",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.14371",
+  "title": "Boundary null-controllability for the beam equation with classical structural damping",
+  "authors": [
+    "Sergei Avdonin",
+    "Julian Edward"
+  ],
+  "summary": "Let $Δ$ be the Dirichlet Laplacian on the interval $(0,π)$, and let $T>0$. We prove a well-posedness results for the structurally damped beam equation $$u_{tt}+Δ^2 u-ρΔu_t=0, x\\in (0,π),t>0$$ with various boundary conditions including $$ u(0,t)=u_{xx}(0,t)=0; u(π,t)=f(t),u_{xx}(π,t)=0, $$ and $f\\in H_0^2(0,T)$ and appropriate initial conditions. Viewing $f$ as a control, we prove null controllability for all $ρ\\leq 2$. For $ρ>2$, we show null controllability for arbitrary $T>0$ holds for almost all $ρ$, but fails for a dense subset of $(2,\\infty)$. An analagous result is proven for Neumann…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.AP"
+  ],
+  "published": "2026-05-14",
+  "updated": "2026-05-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

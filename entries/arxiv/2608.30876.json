@@ -1,0 +1,20 @@
+{
+  "key": "2608.30876",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.30876",
+  "title": "Symmetry-dependence in Rounding of a Convex Body",
+  "authors": [
+    "Zikai Xiong",
+    "Robert M. Freund"
+  ],
+  "summary": "The symmetry measure of a convex body $S\\subset\\mathbb{R}^n$ is given by: $\\mathrm{sym}(S):=\\max\\{α\\ge0:\\text{ there exists }x\\in S\\text{ such that }-α(S-x)\\subseteq S-x\\}$, where such an $x$ is called a Minkowski center. We prove that every convex body $S$ admits a $\\sqrt{\\frac{n}{\\mathrm{sym}(S)}}$-rounding of $S$, namely, there exists an origin-centered ellipsoid $E$ and a center $c$ such that $E\\subseteq S-c\\subseteq\\sqrt{\\frac{n}{\\mathrm{sym}(S)}}\\,E$. This result was conjectured in 2005 by Belloni and Freund. As special cases, this recovers an $n$-rounding of $S$ (since…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-31",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

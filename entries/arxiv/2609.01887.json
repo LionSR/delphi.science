@@ -1,0 +1,21 @@
+{
+  "key": "2609.01887",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.01887",
+  "title": "Bouvier's Conjecture and Dimension Sequences of Unique Factorization Domains",
+  "authors": [
+    "Viet-Hoang Tran",
+    "Thieu N. Vo",
+    "Tan M. Nguyen"
+  ],
+  "summary": "We prove Bouvier's conjecture. More generally, an integer sequence $(a_n)_{n \\ge 0}$ with $a_0=d \\ge 0$ is realized by a unique factorization domain (UFD) $R$ with $\\dim R[X_1,\\ldots,X_n]=a_n$ for every $n \\ge 0$ if and only if $$ a_n+1\\le a_{n+1} \\le a_n+\\left\\lfloor\\frac{a_n+1}{n+1}\\right\\rfloor \\qquad(n\\ge0) $$ and $a_1 \\le 2d$ whenever $d \\ge 1$.",
+  "domain": "math.AC",
+  "tags": [
+    "math.AC"
+  ],
+  "published": "2026-09-01",
+  "updated": "2026-09-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

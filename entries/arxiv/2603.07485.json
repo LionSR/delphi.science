@@ -1,0 +1,19 @@
+{
+  "key": "2603.07485",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.07485",
+  "title": "Quantum Speedup for Network Coordination via Fourier Sparsity",
+  "authors": [
+    "Vinayak Dixit"
+  ],
+  "summary": "Network coordination - synchronising traffic signals, scheduling trains, assigning communication slots requires minimising pairwise costs across coupled systems. These problems are NP-hard yet share a common Fourier-sparse structure exploitable by quantum algorithms. We introduce the Fourier Network Coordination problem (Fourier-NC),unifying eight application domains. For abelian and dihedral groups, classical sparse Fourier transforms match quantum in the same oracle model, limiting the advantage to at most polynomial. The genuine separation emerges for the symmetric group Sk: a conditional…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-08",
+  "updated": "2026-03-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

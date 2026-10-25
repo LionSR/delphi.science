@@ -1,0 +1,21 @@
+{
+  "key": "2603.13129",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.13129",
+  "title": "Solving Chance Constrained Programs via a Penalty based Difference of Convex Approach",
+  "authors": [
+    "Zhiping Li",
+    "Nan Jiang",
+    "Rujun Jiang"
+  ],
+  "summary": "We develop two penalty based difference of convex (DC) algorithms for solving chance constrained programs. First, leveraging a rank-based DC decomposition of the chance constraint, we propose a proximal penalty based DC algorithm in the primal space that does not require a feasible initialization. Second, to improve numerical stability in the general nonlinear settings, we derive an equivalent lifted formulation with complementary constraints and show that, after minimizing primal variables, the penalized lifted problem admits a tractable DC structure in the dual space over a simple…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-13",
+  "updated": "2026-03-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

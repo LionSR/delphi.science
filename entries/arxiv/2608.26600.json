@@ -1,0 +1,23 @@
+{
+  "key": "2608.26600",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.26600",
+  "title": "Auditing Structured Randomness for Quantum Error Correction under a Bounded Cloud Fault Model",
+  "authors": [
+    "Ziqing Guo",
+    "Anthony Lawrence",
+    "Renyu Wang",
+    "Randy Kuang",
+    "Ziwen Pan"
+  ],
+  "summary": "Cloud quantum processors compile submitted quantum error correction circuits and may colocate them with untrusted workloads. A fixed public encoder gives a fault-injection adversary a reusable target. Per-run reseeding changes the physical-to-logical fault map. Exact Haar-random encoders have exponential circuit cost. Efficient random ensembles provide average-moment guarantees and leave worst-case accepted corruption uncharacterized. We define accepted logical disturbance, an acceptance-weighted measure of harmful logical action in accepted results, and derive its exact Haar expectation. We…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-27",
+  "updated": "2026-08-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

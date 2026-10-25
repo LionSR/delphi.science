@@ -1,0 +1,25 @@
+{
+  "key": "2603.14515",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.14515",
+  "title": "Excited Pfaffians: Generalized Neural Wave Functions Across Structure and State",
+  "authors": [
+    "Nicholas Gao",
+    "Till Grutschus",
+    "Frank Noé",
+    "Stephan Günnemann"
+  ],
+  "summary": "Neural-network wave functions in Variational Monte Carlo (VMC) have achieved great success in accurately representing both ground and excited states. However, achieving sufficient numerical accuracy in state overlaps requires increasing the number of Monte Carlo samples, and consequently the computational cost, with the number of states. We present a nearly constant sample-size approach, Multi-State Importance Sampling (MSIS), that leverages samples from all states to estimate pairwise overlap. To efficiently evaluate all states for all samples, we introduce Excited Pfaffians. Inspired by…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "physics.chem-ph",
+    "physics.comp-ph",
+    "quant-ph"
+  ],
+  "published": "2026-03-15",
+  "updated": "2026-05-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

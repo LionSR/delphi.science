@@ -1,0 +1,38 @@
+{
+  "key": "2609.00137",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2609.00137v1",
+  "pdf": "https://hexagonmath.org/pdf/2609.00137v1",
+  "title": "On a non-basis of the coinvariant algebra",
+  "authors": [
+    "Darij Grinberg"
+  ],
+  "summary": "A conjecture arising from a question of Procesi proposes a basis of the coinvariant algebra of $S_n$ consisting of column-antisymmetrized monomials indexed by pairs of standard Young tableaux. We show that the proposed family need not even span an $S_n$-subrepresentation: for $n=8$, a generator of degree $15$ is sent outside the span by the adjacent transposition $(4,5)$. The proof is an exact finite computation with an explicit separating functional, requiring neither a rank computation nor Gr\\\"obner reduction. We also retain an explicit relation for $n=7$, where the basis assertion first…",
+  "domain": "math.CO",
+  "tags": [
+    "math.AC",
+    "msc:20C30",
+    "msc:05E40",
+    "Specht modules",
+    "Young tableaux",
+    "coinvariant algebra",
+    "higher Specht polynomials",
+    "representations of the symmetric group"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "version": 1,
+  "ai_models": [
+    "ChatGPT",
+    "ChatGPT",
+    "SageMath"
+  ],
+  "authorship": "mixed",
+  "human_understanding": "all",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

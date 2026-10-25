@@ -1,0 +1,20 @@
+{
+  "key": "2606.22245",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.22245",
+  "title": "Compensated Splitting For Generalized Lyapunov Equations",
+  "authors": [
+    "Hongjia Chen",
+    "Ren-Cang Li"
+  ],
+  "summary": "The generalized Lyapunov equation has a natural splitting that leads to the standard fixed-point iteration (sFPI) for its numerical solution. sFPI is convergent, for an arbitrarily given initial guess, if and only if the spectral radius of the associated linear operator is smaller than $1$. This means that sFPI may diverge if the spectral radius is $1$ or bigger. In this paper, we propose a compensated splitting scheme that aims to reduce the spectral radius so that the resulting compensated fixed-point iteration (cFPI) has a better convergence property, namely, cFPI may still converge even…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-20",
+  "updated": "2026-06-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

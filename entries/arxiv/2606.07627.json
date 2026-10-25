@@ -1,0 +1,21 @@
+{
+  "key": "2606.07627",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.07627",
+  "title": "Learning Transfers: Kan Extensions of Topological Invariants of Learned Representations",
+  "authors": [
+    "Luciano Melodia"
+  ],
+  "summary": "When a learned representation is reused for a new task, which of its structure should survive? A task is a small category, a change of task is a functor $J$, and the invariants of a trained representation form a functor $F$. The left Kan extension $\\operatorname{Lan}_JF$ is the invariant that the source and the change of task force on the target: by its universal property, every comparison of the source with an observed target invariant factors through it. The transfer discrepancy is the largest distance, over the target objects, between this extension and the observed invariant. For…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.AT",
+    "math.CT"
+  ],
+  "published": "2026-05-30",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

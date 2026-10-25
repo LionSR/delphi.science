@@ -1,0 +1,20 @@
+{
+  "key": "2609.14837",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.14837",
+  "title": "Low Dimensional Sampling under Reconstructed Constraints",
+  "authors": [
+    "Imon Banerjee",
+    "Riddhiman Bhattacharyya"
+  ],
+  "summary": "We study sampling from a distribution supported on an unknown compact $d$-dimensional $C^2$ manifold $M\\subset\\mathbb{R}^D$, observed only through i.i.d. uniform points from $M$. We reconstruct the constraint using an adaptive local-convex-hull estimator and target an ambient distribution penalized by squared distance to the reconstruction. Although the reconstructed set may be nonsmooth or fail to be a manifold, its Hausdorff accuracy alone suffices to control the Wasserstein error. We quantify the tradeoff between reconstruction accuracy and penalty strength and show that optimal tuning…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-09-13",
+  "updated": "2026-09-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

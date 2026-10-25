@@ -1,0 +1,24 @@
+{
+  "key": "2603.16973",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.16973",
+  "title": "Hybrid Classical-Quantum Transfer Learning with Noisy Quantum Circuits",
+  "authors": [
+    "D. Martín-Pérez",
+    "F. Rodríguez-Díaz",
+    "D. Gutiérrez-Avilés",
+    "A. Troncoso",
+    "F. Martínez-Álvarez"
+  ],
+  "summary": "Quantum transfer learning combines pretrained classical deep learning models with quantum circuits to reuse expressive feature representations while limiting the number of trainable parameters. In this work, we introduce a family of compact quantum transfer learning architectures that attach variational quantum classifiers to frozen convolutional backbones for image classification. We instantiate and evaluate several classical-quantum hybrid models implemented in PennyLane and Qiskit, and systematically compare them with a classical transfer-learning baseline across heterogeneous image…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-03-17",
+  "updated": "2026-03-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

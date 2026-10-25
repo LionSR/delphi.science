@@ -1,0 +1,24 @@
+{
+  "key": "2609.29267",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.29267",
+  "title": "MagiCFirm: A Runtime for Magic-State Cultivation with Algorithm-Hardware Co-Design",
+  "authors": [
+    "Jubo Xu",
+    "Abbas B. Ziad",
+    "Prakash Murali",
+    "Hongxiang Fan"
+  ],
+  "summary": "Magic-state cultivation offers a promising alternative for lowering the cost of non-Clifford operations in fault-tolerant quantum computing (FTQC). However, realizing cultivation in practice exposes two challenges: (i) the lack of an open-source classical runtime layer between logical software and physical control, and (ii) the latency constraints on protocol-specific decisions that determine magic-state readiness. To address these challenges, we adopt an algorithm--hardware co-design approach. At the algorithm level, we develop a two-stage early-escape scheme that identifies an informative…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AR",
+    "cs.DC"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

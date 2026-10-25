@@ -1,0 +1,21 @@
+{
+  "key": "2602.14848",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14848",
+  "title": "Existence of large-data solutions to a thermo-piezoelectric system and forward operator analysis for associated inverse problems",
+  "authors": [
+    "Torben J. Fricke",
+    "Raphael Kuess",
+    "Felix Meyer"
+  ],
+  "summary": "We consider an inverse problem governed by the initial-boundary value problem for the thermo-piezoelectric Kelvin-Voigt dynamical system \\[ \\left\\{ \\begin{aligned} ρ(z,t) u_{tt} &= \\frac{d}{dz} \\big( Γ(Θ) u_{zt} +p_1 u_z +p_2(z,t)φ_z^0 +p_2(z,t)χ_z -βΘ\\big), \\\\[1ex] 0 &=-\\frac{d}{dz} \\big( p_2(z,t)u_z -p_3(z,t)φ_z^0 -p_3(z,t)χ_z\\big), \\\\ b(z,t)Θ_t &= \\frac{d}{dz}(k(z,t)Θ_z) +Γ(Θ)u_{zt}^2 -βΘu_{zt}. \\end{aligned} \\right. \\] in an open bounded interval $Ω\\subset\\mathbb{R}$, for the evolution of the displacement variable $u$, the electric potential $φ^0$ and the temperature $Θ\\geq 0$, where $χ$…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-06-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2605.00740",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.00740",
+  "title": "Randomized Subspace Nesterov Accelerated Gradient",
+  "authors": [
+    "Gaku Omiya",
+    "Pierre-Louis Poirion",
+    "Akiko Takeda"
+  ],
+  "summary": "Randomized-subspace methods reduce the cost of first-order optimization by using only low-dimensional projected-gradient information, a feature that is attractive in forward-mode automatic differentiation and communication-limited settings. While Nesterov acceleration is well understood for full-gradient and coordinate-based methods, obtaining accelerated methods for general subspace sketches that use only projected-gradient information and can improve over full-dimensional Nesterov acceleration in oracle complexity is technically nontrivial. We develop randomized-subspace Nesterov…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-05-01",
+  "updated": "2026-05-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

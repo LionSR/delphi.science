@@ -1,0 +1,22 @@
+{
+  "key": "2607.10284",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10284",
+  "title": "Rank-Refined Quantum-Behaved Particle Swarm Optimization for Quantum Molecular Generation",
+  "authors": [
+    "Sing-Yun Wu",
+    "Sheng Yun Wu",
+    "I-Min Chiang",
+    "Tai-Yue Li"
+  ],
+  "summary": "This work proposes Rank-Refined Quantum-Behaved Particle Swarm Optimization (RR-QPSO) for high-dimensional parameter search in Quantum Molecular Generation (QMG). RR-QPSO targets the optimization bottleneck caused by expensive objective evaluations, where each candidate parameter vector requires stochastic circuit sampling, bitstring decoding, and molecular evaluation. The method provides a population-based alternative to Bayesian optimization (BO), combining Sobol-based initialization, a rank-refined mean-best update, and fitness-guided refinement based on validity and uniqueness.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-11",
+  "updated": "2026-07-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

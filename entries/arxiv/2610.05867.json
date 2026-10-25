@@ -1,0 +1,20 @@
+{
+  "key": "2610.05867",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05867",
+  "title": "Learning Sparse Support under Differential Privacy: Adaptive Algorithms and Minimax Limits",
+  "authors": [
+    "Jia Gu",
+    "T. Tony Cai"
+  ],
+  "summary": "We study exact support recovery under $(ε,δ)$-differential privacy in sparse high-dimensional linear regression. We introduce Saturated Propose-test-release, a general mechanism that privately releases the output of a discrete selector with probability one once its stability certificate reaches a finite threshold. Exploiting the coordinatewise geometry of the LASSO, we construct a computable support-stability score. The resulting computationally efficient Saturated LASSO satisfies worst-case $(ε,δ)$-differential privacy and achieves exact support recovery with high probability under explicit…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

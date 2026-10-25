@@ -1,0 +1,23 @@
+{
+  "key": "2607.18888",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.18888",
+  "title": "MOSAIQC: Mixed-topology-aware Optimization for Scalable Approximate noise-Informed Quantum circuit Cutting",
+  "authors": [
+    "Koen Mesman",
+    "Yinglu Tang",
+    "Matthias Moller",
+    "Boyang Chen",
+    "Sebastian Feld"
+  ],
+  "summary": "Current quantum computers do not yet have the required qubit resources to meet the demands of most practical quantum algorithms. To circumvent this constraint, the practice of dividing these algorithms into parts through quantum circuit cutting has been explored. Many of these works either show exponential scaling or are far from optimal solutions. In this paper, MosaiQC is presented as a novel framework to improve upon existing circuit cutting frameworks. A hybrid warmstart with refinement optimization is used to find cutting solutions, allowing the combination of both wire and gate cuts.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-21",
+  "updated": "2026-07-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2607.14814",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14814",
+  "title": "Post Hoc Inference for Component Attribution in Multivariate Change-Point Detection",
+  "authors": [
+    "Dhia-Elhaq Ouerfelli",
+    "Sylvain Arlot",
+    "Kevin Bleakley",
+    "Patrick Pamphile"
+  ],
+  "summary": "We consider the post-detection analysis of change-points for multivariate time series, with the goal of identifying which coordinates are responsible for a detected change. After a change-point has been located by an offline detection algorithm, we propose post hoc statistical procedures to determine whether the change occurs in either of two predefined blocks of coordinates or in both. Our methods rely on two-sample testing procedures with a particular focus on nonparametric tests; we provide theoretical guarantees for Type I error control. Simulations and a real-data experiment demonstrate…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2607.27003",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.27003",
+  "title": "Algorithms for Linear Ordinary Differential Operators",
+  "authors": [
+    "Jean Della Dora",
+    "Stephen M. Watt"
+  ],
+  "summary": "We describe an implementation in Scratchpad II of linear ordinary differential operators over a differential ring, acting on a module equipped with a compatible derivation. The abstract data type facilities of the system allow such operators to be represented and manipulated as first-class objects while retaining the usual notation for operator application. For coefficients in a field, we give constructive algorithms for left and right division, greatest common divisors, least common multiples, and an extended Euclidean algorithm; the right-hand constructions may be obtained from the…",
+  "domain": "cs.SC",
+  "tags": [
+    "cs.SC",
+    "math.RA"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

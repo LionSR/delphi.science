@@ -1,0 +1,21 @@
+{
+  "key": "2610.03685",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03685",
+  "title": "Boundary inference for the Makeham term in mortality models",
+  "authors": [
+    "Silvio C. Patricio"
+  ],
+  "summary": "Whether a mortality model needs a Makeham term, the constant representing background mortality, is commonly decided with a likelihood-ratio test. The constant cannot be negative, so testing its absence places it on a boundary, where the usual chi-squared calibration fails. Assuming independent Poisson death counts and standard regularity conditions, we show that when the constant is the only parameter on a boundary the statistic converges to an equal mixture of a point mass at zero and a chi-squared distribution with one degree of freedom: at the 5% level the critical value is 2.71, not…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "q-bio.PE"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

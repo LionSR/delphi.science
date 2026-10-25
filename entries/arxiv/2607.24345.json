@@ -1,0 +1,21 @@
+{
+  "key": "2607.24345",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.24345",
+  "title": "Perturbative-NeuSA: A Structured Spectral Framework for Time-Dependent PDEs",
+  "authors": [
+    "Xianli Zhu",
+    "Jia Yin"
+  ],
+  "summary": "Neural spectral PDE solvers often learn an entire unresolved vector field even when an inexpensive approximate model can already capture most of the trajectory. Here we introduce Perturbative-NeuSA, a residual formulation that decomposes the target solution into a low-fidelity background and a high-resolution perturbation, so that only the unresolved dynamics is learned. Starting from the exact perturbation equation, the method combines a fixed spectral operator, a background-dependent correction, the background defect in the target PDE, and an optional neural closure. This construction…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

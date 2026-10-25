@@ -1,0 +1,19 @@
+{
+  "key": "2603.08765",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.08765",
+  "title": "A finite element continuous data assimilation framework for a Navier--Stokes--Cahn--Hilliard system",
+  "authors": [
+    "Tianyu Sun"
+  ],
+  "summary": "This paper studies a coupled two-dimensional Navier--Stokes--Cahn--Hilliard phase-field model augmented by a transported auxiliary field, and develops a continuous data assimilation (CDA) framework for recovering its trajectories from coarse-in-space observations. We formulate a nudging-based CDA system for the coupled NSCH--auxiliary-field model, in which coarse measurements are incorporated through a general linear observation operator. The observation mechanism is described abstractly by an interpolant satisfying an $H^{2}$-type approximation property, which is compatible with coarse…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-09",
+  "updated": "2026-03-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2608.12087",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.12087",
+  "title": "Parallel Machine Scheduling with a Singler Server and Loading-Unloading Operations",
+  "authors": [
+    "Keramat Hasani",
+    "Frank Werner"
+  ],
+  "summary": "This paper investigates a parallel machine scheduling problem featuring a single common server responsible for both loading and unloading operations. Each job consists of a unit-time loading operation, non-preemptive processing on one of \\(m\\) identical machines, and a unit-time unloading operation executed by the same server. The objective is to minimize the makespan. Unlike classical loading-only common-server models, our setting requires the server to handle an unloading operation immediately after a job's processing phase concludes. We prove that the corresponding decision problem is…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.DS"
+  ],
+  "published": "2026-08-12",
+  "updated": "2026-08-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

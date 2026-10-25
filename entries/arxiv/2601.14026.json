@@ -1,0 +1,21 @@
+{
+  "key": "2601.14026",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.14026",
+  "title": "Universal Approximation Theorem for Input-Connected Multilayer Perceptrons",
+  "authors": [
+    "Vugar Ismailov"
+  ],
+  "summary": "We present the Input-Connected Multilayer Perceptron (IC-MLP), a feedforward neural network architecture in which each hidden neuron receives, in addition to the outputs of the preceding layer, a direct affine connection from the raw input. We first study this architecture in the univariate setting and give an explicit and systematic description of IC-MLPs with an arbitrary finite number of hidden layers, including iterated formulas for the network functions. In this setting, we prove a universal approximation theorem showing that deep IC-MLPs can approximate any continuous function on a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.NE",
+    "math.FA"
+  ],
+  "published": "2026-01-20",
+  "updated": "2026-03-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

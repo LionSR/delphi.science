@@ -1,0 +1,21 @@
+{
+  "key": "2604.14107",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.14107",
+  "title": "Bound-Preserving Flux-Corrected Transport Methods for Solving Richards' Equation",
+  "authors": [
+    "Arnob Barua",
+    "Christopher E. Kees",
+    "Dmitri Kuzmin"
+  ],
+  "summary": "Simulating infiltration in porous media using Richards' equation remains computationally challenging due to its parabolic structure and nonlinear coefficients. While a wide range of numerical methods for differential equations have been applied over the past several decades, basic higher-order numerical methods often fail to preserve physical bounds on water pressure and saturation, leading to spurious oscillations and poor iterative solver convergence. Instead, low-order, bound-preserving methods have been preferred. The combination of mass lumping and relative permeability upwinding…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-15",
+  "updated": "2026-04-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

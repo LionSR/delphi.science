@@ -1,0 +1,23 @@
+{
+  "key": "2604.22471",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.22471",
+  "title": "Boundary-Aware Stabilizer Scheduling for Distributed Quantum Error Correction",
+  "authors": [
+    "Sanidhya Gupta",
+    "Sanidhay Bhambay",
+    "Narges Alavisamani",
+    "Neil Walton",
+    "Thirupathaiah Vasantam"
+  ],
+  "summary": "Future quantum architectures are expected to be modular, with quantum processors connecting multiple quantum processing units (QPUs) via photonic interconnects. In topological quantum error correction, such as color codes, this creates seam boundaries where parity checks require remote CNOT operations using heralded Bell pairs. These non-local checks are slower and noisier than bulk local checks because entanglement generation is probabilistic, causing data qubits to accumulate idle noise while waiting for remote operations. A natural way to reduce this overhead is to skip some seam…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-24",
+  "updated": "2026-04-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

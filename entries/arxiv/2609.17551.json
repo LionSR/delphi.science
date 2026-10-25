@@ -1,0 +1,19 @@
+{
+  "key": "2609.17551",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.17551",
+  "title": "A $\\sqrt{2}$-Approximation to the Bilu-Linial Conjecture",
+  "authors": [
+    "Zejun Huang"
+  ],
+  "summary": "Bilu and Linial conjectured that if $d\\ge 2$, then every $d$-regular graph $G$ has an edge signing $σ:E(G)\\to\\{-1,1\\}$ such that its signed adjacency matrix $A_σ$ satisfies the Ramanujan bound \\begin{equation*} ρ(A_σ)\\le 2\\sqrt{d-1} \\end{equation*} and they proved that \\begin{equation*} ρ(A_σ)=O\\!\\left(\\sqrt{d\\log^3 d}\\right). \\end{equation*} Using a method of interlacing polynomials, Marcus, Spielman, and Srivastava confirmed one side of this conjecture that there is a signing $σ$ for which \\[ λ_{\\max}(A_σ)\\le 2\\sqrt{d-1}. \\] By constructing an auxiliary bipartite graph from a balanced…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

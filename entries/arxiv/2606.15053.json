@@ -1,0 +1,22 @@
+{
+  "key": "2606.15053",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.15053",
+  "title": "Physics-conforming Latent Twins",
+  "authors": [
+    "Matthias Chung",
+    "Yutong Bu",
+    "Deepanshu Verma"
+  ],
+  "summary": "Surrogate models are central to scientific machine learning, where they enable fast prediction, simulation, inference, and control for complex physical systems. For time-dependent problems, however, accurate interpolation of training trajectories is not sufficient: reliable surrogates should also respect the conservation laws, invariants, admissibility conditions, and dissipative structures that give those trajectories physical meaning. We introduce Physics-conforming Latent Twins, a framework for learning latent surrogate solution operators whose dynamics satisfy selected physical…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-06-13",
+  "updated": "2026-06-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2607.14937",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14937",
+  "title": "A Minimal Interpretable Architecture for Zero-Shot Reconstruction of Dynamical Systems",
+  "authors": [
+    "Christoph Jürgen Hemmer",
+    "Florian Plaswig",
+    "Daniel Durstewitz"
+  ],
+  "summary": "Recent foundation models (FMs) for zero-shot reconstruction of dynamical systems (DS) achieve strong out-of-domain generalization but provide little insight into the mechanisms that underlie their forecasts. Such an understanding could help to strip down overladen FM architectures to their bare essence and expose the minimal requirements for in-context learning in the DS domain. Toward this goal, here we iteratively reduce a recent powerful SOTA model for DS reconstruction, DynaMix (Hemmer & Durstewitz, 2025), to a minimal interpretable two-parameter form, which we call DynaBase. DynaBase…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.DS",
+    "nlin.CD"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

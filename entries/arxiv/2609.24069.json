@@ -1,0 +1,22 @@
+{
+  "key": "2609.24069",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.24069",
+  "title": "Accurate wall shear stress in immersed flow analysis with application to point cloud-based CFD",
+  "authors": [
+    "Monu Jaiswal",
+    "Ming-Chen Hsu"
+  ],
+  "summary": "Point cloud-based CFD enables flow analysis directly on discrete points obtained from 3D scanning and medical imaging, bypassing surface reconstruction, geometry cleanup, and boundary-fitted mesh generation. Derived from immersogeometric analysis, the method immerses the point cloud in a background mesh and enforces no-slip conditions on discrete points through a Nitsche-based weak boundary condition (BC). The framework delivers accurate velocity fields, pressure distribution, and integrated loads; however, accurate prediction of the local wall shear stress (WSS) has remained a critical…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.CE",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-09-21",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

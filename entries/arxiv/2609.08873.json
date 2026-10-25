@@ -1,0 +1,26 @@
+{
+  "key": "2609.08873",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.08873",
+  "title": "High-Magnetization Sampling at Low Temperatures: Ising Models and Bayesian Sparse Linear Regression",
+  "authors": [
+    "Syamantak Kumar",
+    "Purnamrita Sarkar",
+    "Kevin Tian",
+    "Yusong Zhu"
+  ],
+  "summary": "Sparsity is a powerful structural resource in optimization and statistics. We develop frameworks for leveraging sparsity in sampling problems over the Hamming slice $\\mathcal{X}_k^d:=\\{\\mathbf{x}\\in\\{\\pm 1\\}^d:|\\{i:\\mathbf{x}_i=1\\}|=k\\}$, in high-dimensional regimes where $k\\ll d$ (i.e., where $\\mathcal{X}_k^d$ is \\emph{highly magnetized}). We use our frameworks to design improved samplers for canonical problems in the study of \\emph{Ising models} and \\emph{Bayesian sparse linear regression}. Our first main result considers the \\emph{Sherrington--Kirkpatrick} (SK) model restricted to…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.LG",
+    "math.PR",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

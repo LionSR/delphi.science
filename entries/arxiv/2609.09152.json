@@ -1,0 +1,21 @@
+{
+  "key": "2609.09152",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.09152",
+  "title": "Silver Rate Is (Almost) Optimal for Gradient Descent",
+  "authors": [
+    "Yuhan Ye",
+    "Kaizhao Liu"
+  ],
+  "summary": "We study how far gradient descent (GD) can be accelerated by predetermined stepsizes in smooth convex optimization. Writing $p_{\\mathrm{sil}}=\\log_2(1+\\sqrt{2})$, we prove an $Ω\\left(n^{-p_{\\mathrm{sil}}-O(\\sqrt{\\log\\log n/\\log n})}\\right)$ non-anytime lower bound. In the anytime setting, every infinite schedule has infinitely many horizons with error $Ω\\left(n^{-\\frac{2p_{\\mathrm{sil}}}{1+p_{\\mathrm{sil}}}-O(\\sqrt{\\log\\log n/\\log n})}\\right)$. Together with the silver-schedule upper bound [Altschuler and Parrilo, 2025] and the anytime upper bound [Zhang et al., 2025], our results determine…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

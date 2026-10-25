@@ -1,0 +1,22 @@
+{
+  "key": "2604.22624",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.22624",
+  "title": "Compositional Online Learning for Multi-Objective System Co-Design",
+  "authors": [
+    "Meshal Alharbi",
+    "Munther A. Dahleh",
+    "Gioele Zardini"
+  ],
+  "summary": "Many engineered systems must balance competing objectives, such as performance and safety, cost and reliability, or efficiency and sustainability, and are naturally modeled as compositions of interacting subsystems. We study online multi-objective decision-making in monotone co-design, where functionalities and resources are partially ordered, and the goal is to identify the target-feasible antichain of non-dominated trade-offs using few expensive evaluations. We introduce optimistic evaluators: history-dependent bounds on functionality and resource mappings that enable safe elimination of…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-04-24",
+  "updated": "2026-04-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

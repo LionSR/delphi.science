@@ -1,0 +1,19 @@
+{
+  "key": "2606.04561",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.04561",
+  "title": "A GPH-Filtered Hannan--Rissanen Information Criterion for ARFIMA Order Selection",
+  "authors": [
+    "Chunhao Cai"
+  ],
+  "summary": "We propose a simple two-stage order selector for finite-order ARFIMA models. First, a preliminary log-periodogram estimate of the memory parameter is used to fractionally filter the data. Second, a Hannan--Rissanen residual construction is applied to the filtered series, and the autoregressive and moving-average orders are selected by a generalized information criterion over a growing candidate rectangle. The search bounds are allowed to satisfy \\(P_n,Q_n\\to\\infty\\), whereas the true orders remain fixed and finite. The penalty is allowed to be larger than the ordinary BIC penalty so that it…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-06-03",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

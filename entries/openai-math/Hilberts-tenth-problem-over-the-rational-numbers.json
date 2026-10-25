@@ -28,5 +28,36 @@
     "reason": "Shows no algorithm decides rational zeros of integer polynomials, answering Hilbert's tenth problem.",
     "by": "claude-haiku",
     "at": "2026-10-23"
-  }
+  },
+  "discussion": [
+    {
+      "kind": "web",
+      "url": "https://galoisrepresentations.org/2026/10/08/a-brief-digest-of-some-new-openai-results/#:~:text=As%20for%20Hilbert%E2%80%99s%20tenth%20problem%20itself%2C%20it%20seemed%20plausible%20to%20me%20that%20it%20was%20actually%20solvable%20over%20the%20rational%20numbers.",
+      "title": "A Brief Digest of Some New OpenAI Results | Persiflage",
+      "site": "galoisrepresentations.org",
+      "author": "Persiflage",
+      "text": "As for Hilbert’s tenth problem itself, it seemed plausible to me that it was actually solvable over the rational numbers. I don’t think I would have put money on that, however. I still certainly hope that Hilbert’s tenth problem has a positive answer over the rational numbers for algebraic curves,…",
+      "added": "2026-10-24"
+    },
+    {
+      "kind": "web",
+      "url": "https://scottaaronson.blog/?p=10169#:~:text=this%20was%20arguably%20the%20biggest%20open%20problem%20in%20computability%20theory",
+      "title": "The Mathocalypse",
+      "site": "Shtetl-Optimized",
+      "author": "Scott Aaronson",
+      "text": "this was arguably the biggest open problem in computability theory (note that uncomputability of solving Diophantine equations, i.e. polynomial equations over the integers , was proved in the 1970s, giving a negative answer to Hilbert’s 10th Problem) Any of the above, alone, could easily have been…",
+      "date": "2026-10-07",
+      "added": "2026-10-24"
+    },
+    {
+      "kind": "web",
+      "url": "https://arxiv.org/abs/2610.20691",
+      "title": "86 unknowns for Hilbert's tenth problem over the rationals",
+      "site": "arXiv.org",
+      "author": "Zhi-Wei Sun",
+      "text": "Recently, Hilbert's Tenth Problem over the field $\\mathbb Q$ of rational numbers was solved negatively by OpenAI based on a five-contact height estimate and a pole-parity construction. In this paper, we prove further that there is no algorithm to decide for any polynomial $P(x_1,\\ldots,x_{86})$…",
+      "date": "2026-10-14",
+      "added": "2026-10-24"
+    }
+  ]
 }

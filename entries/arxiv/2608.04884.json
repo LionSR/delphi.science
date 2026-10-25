@@ -1,0 +1,19 @@
+{
+  "key": "2608.04884",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.04884",
+  "title": "A Few Accelerated Algorithms for Convex Optimization under $(H_0,H_1)$-Smoothness",
+  "authors": [
+    "Aleksandr Lobanov"
+  ],
+  "summary": "We develop accelerated algorithms for convex $(H_0,H_1)$-smooth optimization, where $\\|\\nabla^2 f(x)\\|\\le H_0+H_1(f(x)-f^*)$. This class generalizes standard smoothness and contains the $(L_0,L_1)$-smooth class. Combining a Nesterov-type accelerated gradient scheme with small-dimensional relaxation and phase restarts, we obtain a full-gradient method with iteration complexity $\\widetilde O(\\sqrt{H_0\\widetilde R^2/\\varepsilon}+\\sqrt{H_1\\widetilde R^2}\\log(F_0/\\varepsilon))$. We extend the same approach to randomized coordinate optimization, obtaining a coordinate method with uniform sampling…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-05",
+  "updated": "2026-08-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

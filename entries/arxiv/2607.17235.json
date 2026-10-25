@@ -1,0 +1,22 @@
+{
+  "key": "2607.17235",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.17235",
+  "title": "A Dynamical Approximation Scheme on the Stiefel manifold for Wasserstein Gradient Flows",
+  "authors": [
+    "Isabella Carla Gonnella",
+    "Olga Mula",
+    "Federico Pichi",
+    "Gianluigi Rozza"
+  ],
+  "summary": "We propose a meshless Lagrangian dynamical method for approximating Wasserstein gradient flows (WGFs). The evolving measure is represented as the pushforward of the initial measure $μ_0$ through a transport map in the weighted Hilbert space $L^2_{μ_0}$. We approximate this map in time-dependent linear subspaces of $L^2_{μ_0}$, whose orthonormal frames are evolved by a Dirac--Frenkel dynamical principle on a Stiefel manifold constrained to a finite-dimensional background space, adaptively constructed via local approximations of the WGF velocity field. We prove that the resulting transport map…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-19",
+  "updated": "2026-07-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2608.05740",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.05740",
+  "title": "Online learning of quantum states under structure",
+  "authors": [
+    "Akshay Bansal",
+    "Jiahui Liu"
+  ],
+  "summary": "Quantum state tomography is fundamental to quantum information processing but becomes infeasible at scale due to the exponential growth of the state space. Shadow tomography alleviates this challenge by focusing on predicting measurement outcomes rather than reconstructing the full state. Its online variant models adaptive and potentially adversarial measurement scenarios, where a learner sequentially predicts outcomes while competing with the best fixed quantum state in hindsight. We show that exploiting additional structure in the measurements leads to significantly stronger regret…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-06",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2605.09462",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09462",
+  "title": "Proximal Path-Specific Inference",
+  "authors": [
+    "Yang Bai",
+    "Sihan Wu",
+    "Baoluo Sun",
+    "Yifan Cui"
+  ],
+  "summary": "Causal mediation analysis has been extended to estimate path-specific effects with multiple intermediate variables, isolating treatment effects through a mediator of interest while excluding pathways through its ancestors. Such analyses address bias from recanting witnesses, i.e., treatment-induced mediator-outcome confounders. However, existing methods typically rely on stringent assumptions precluding general unmeasured confounding, which are often violated in practice. In this paper, we relax these restrictions by leveraging observed covariates as proxy variables to accommodate unmeasured…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-05-10",
+  "updated": "2026-05-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

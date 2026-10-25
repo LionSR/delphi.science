@@ -1,0 +1,24 @@
+{
+  "key": "2601.03445",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.03445",
+  "title": "Policy Synthesis for Interval MDPs via Polyhedral Lyapunov Functions",
+  "authors": [
+    "Negar Monir",
+    "Sadegh Soudjani"
+  ],
+  "summary": "Decision-making under uncertainty is central to many safety-critical applications, where decisions must be guided by probabilistic modeling formalisms. This paper introduces a novel approach to policy synthesis in multi-objective interval Markov decision processes using polyhedral Lyapunov functions. Unlike previous Lyapunov-based methods that mainly rely on quadratic functions, our method utilizes polyhedral functions to enhance accuracy in managing uncertainties within value iteration of dynamic programming. We reformulate the value iteration algorithm as a switched affine system with…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.FL",
+    "math.LO",
+    "math.OC",
+    "math.PR"
+  ],
+  "published": "2026-01-06",
+  "updated": "2026-01-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

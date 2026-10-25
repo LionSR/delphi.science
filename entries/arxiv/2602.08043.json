@@ -1,0 +1,23 @@
+{
+  "key": "2602.08043",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.08043",
+  "title": "V-ABFT: Variance-Based Adaptive Threshold for Fault-Tolerant Matrix Multiplication in Mixed-Precision Deep Learning",
+  "authors": [
+    "Yiheng Gao",
+    "Qin Hua",
+    "Zizhong Chen"
+  ],
+  "summary": "Algorithm-Based Fault Tolerance (ABFT) is widely adopted to detect silent data corruptions (SDCs) in matrix multiplication, a cornerstone operation in deep learning systems. However, existing threshold determination methods face critical challenges: analytical bounds are overly conservative, while probabilistic approaches like A-ABFT yield thresholds $160$--$4200\\times$ larger than actual rounding errors. We present V-ABFT, a variance-based adaptive threshold algorithm that achieves tighter error bounds by directly modeling the verification difference. By leveraging statistical variance…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.NA"
+  ],
+  "published": "2026-02-08",
+  "updated": "2026-02-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

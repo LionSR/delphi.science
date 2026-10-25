@@ -1,0 +1,20 @@
+{
+  "key": "2609.14753",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.14753",
+  "title": "A Superdiffusive Local Limit Theorem for the Elephant Random Walk and the Breakdown of Log-Concavity",
+  "authors": [
+    "Hélio Trinas",
+    "Glauco Valle"
+  ],
+  "summary": "Let $(S_n)_{n\\geq 1}$ be the one-dimensional Elephant Random Walk (ERW) in the superdiffusive regime, with memory parameter $p\\in(3/4,1)$ and first-step bias $\\mathbb{P}(S_1=1)=q$. Set $a=2p-1\\in(1/2,1)$. If $f_{q,a}$ denotes the density of the superdiffusive limit $L_{q,a}$, we prove the uniform local limit theorem $\\lim_{n\\to\\infty}\\sup_{j\\in\\mathbb{Z},\\,j\\equiv n\\;(\\mathrm{mod}\\;2)}\\left|\\frac{n^a}{2}\\mathbb{P}(S_n=j)-f_{q,a}(j/n^a)\\right|=0$. The proof uses the exact recurrence for the probability mass function of $S_n$, yielding uniform $O(n^{-a})$ and $O(n^{-2a})$ bounds for the p.m.f.…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-09-13",
+  "updated": "2026-09-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

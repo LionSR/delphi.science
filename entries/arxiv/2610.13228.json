@@ -1,0 +1,22 @@
+{
+  "key": "2610.13228",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.13228",
+  "title": "Block encoding of semiseparable matrices via their generators",
+  "authors": [
+    "Giacomo Antonioli",
+    "Gianna M. Del Corso",
+    "Roel Van Beeumen"
+  ],
+  "summary": "We present an explicit quantum circuit that constructs a block encoding of a generator-representable semiseparable (one-pair) matrix directly from its two generators. For an $N\\times N$ semiseparable matrix with $N=2^{n}$, the circuit uses $2n+2$ ancilla qubits and has $O({\\rm polylog} N)$ depth, and it realizes a $(2\\sqrt{N},\\,2n+2,\\,2 \\sqrt{2}\\ \\varepsilon)$-block encoding, where $\\varepsilon$ is controlled by the accuracy of the state-preparation routines that load the generators. The building blocks of the circuit are cyclic shifts, swaps, and Hadamard gates, each admitting an efficient…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.NA"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2604.17548",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.17548",
+  "title": "Contraction and Hourglass Persistence for Learning on Graphs, Simplices, and Cells",
+  "authors": [
+    "Mattie Ji",
+    "Indradyumna Roy",
+    "Vikas Garg"
+  ],
+  "summary": "Persistent homology (PH) encodes global information, such as cycles, and is thus increasingly integrated into graph neural networks (GNNs). PH methods in GNNs typically traverse an increasing sequence of subgraphs. In this work, we first expose limitations of this inclusion procedure. To remedy these shortcomings, we analyze contractions as a principled topological operation, in particular, for graph representation learning. We study the persistence of contraction sequences, which we call Contraction Homology (CH). We establish that forward PH and CH differ in expressivity. We then introduce…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.AT",
+    "stat.ML"
+  ],
+  "published": "2026-04-19",
+  "updated": "2026-05-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

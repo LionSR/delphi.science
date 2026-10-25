@@ -1,0 +1,19 @@
+{
+  "key": "2610.08886",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08886",
+  "title": "Mean Estimates for Short Polynomial Exponential Sums over Primes",
+  "authors": [
+    "Karimjon Ibrohimjonovich Mirzoabdughafurov"
+  ],
+  "summary": "Let $n\\ge2$ be a fixed integer, and let $K,x,y$ be positive integers satisfying $2\\le K\\le y<x$. Consider a polynomial \\[ f(u)=αu^n+α_{n-1}u^{n-1}+\\cdots+α_1u+α_0 \\] with real coefficients. We study the quantity \\[ V_n(K,x,y) = \\sum_{k=1}^{K} \\left| \\sum_{x-y<p\\le x}e(kf(p)) \\right|, \\qquad e(t)=e^{2πit}, \\] where the inner sum is over primes. For $α=\\frac{a}{q}+\\fracθ{q^2}$, $a\\in\\mathbb Z$, $q\\in\\mathbb N$, $(a,q)=1$, $|θ|\\le1$, we establish the bound \\[ \\begin{aligned} V_n(K,x,y) &\\ll Ky\\Biggl[ \\frac{1}{\\sqrt{K\\log(2y)}}+ \\min\\left\\{ Δ^{\\frac{1}{2^n}}…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

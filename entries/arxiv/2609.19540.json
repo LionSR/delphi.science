@@ -1,0 +1,19 @@
+{
+  "key": "2609.19540",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.19540",
+  "title": "Peeling sequences: a directional method for the three-block construction",
+  "authors": [
+    "Dániel Gábor Simon"
+  ],
+  "summary": "A peeling sequence of a finite planar point set is an ordering of its points, such that when the points get removed in this order, each removed point is a vertex of the current convex hull of the set. Write $g(S)$ for the number of such sequences, and $g(n)$ for the minimum of $g(S)$ over $n$-point sets in general position. We present a method which can be used to prove better upper bounds on the previously analysed recursive 3-block constructions $S_n$. In fact, we prove $g(n)\\leq g(S_n)=O(6.57^n)$, using directional restrictions and a weighted prefix-tree form of the Kraft--McMillan…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

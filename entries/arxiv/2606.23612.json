@@ -1,0 +1,32 @@
+{
+  "key": "2606.23612",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.23612",
+  "title": "A quantum algorithm for one-shot signatures",
+  "authors": [
+    "Gopikrishnan Muraleedharan",
+    "Minh Thuy Truc Pham",
+    "Vir Pathak",
+    "Thomas Gardner",
+    "Chuanqi Zhang",
+    "Samuel Crew",
+    "Tom Hartweg",
+    "Adrian Aasen",
+    "Guido Masella",
+    "Vase Moeini",
+    "Asier Piñeiro Orioli",
+    "Hugo Perrin",
+    "Gavin K. Brennen"
+  ],
+  "summary": "We provide a pre-obfuscation circuit-level implementation of an efficient one shot signature scheme, which has known applications to delegated signatures, secure token transfer, and publicly verifiable randomness. The algorithm consists of two stages: a key generation stage where a classical public key/quantum secret key pair is produced, and a signing stage where the quantum secret key is processed with a message string to produce a classical signature. There is no algorithmic error in the construction and the signed message can be efficiently checked by a classical verifier. Our scheme…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-06-22",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

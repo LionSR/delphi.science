@@ -1,0 +1,21 @@
+{
+  "key": "2609.20399",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20399",
+  "title": "SIPHy: Sparse identification of port-Hamiltonian systems from noisy data",
+  "authors": [
+    "Håkon Noren Myhr",
+    "Sølve Eidnes",
+    "J. Nathan Kutz"
+  ],
+  "summary": "We propose sparse identification of port-Hamiltonian systems (SIPHy), enabling structure-preserving symbolic regression from noisy trajectory observations. The method applies to port-Hamiltonian systems, which provide a general framework for describing dynamical systems in terms of energy exchange, dissipation and control. Our algorithm can jointly identify the Hamiltonian as well as the dissipation and input matrices. Furthermore, we introduce Hamiltonian flow splines to better approximate derivatives of trajectory data corrupted by noise or with missing time points, a major challenge of…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2604.16282",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.16282",
+  "title": "Geometric regularization of autoencoders via observed stochastic dynamics",
+  "authors": [
+    "Sean Hill",
+    "Felix X. -F. Ye"
+  ],
+  "summary": "Stochastic dynamical systems with slow or metastable behavior evolve, on long time scales, on an unknown low-dimensional manifold in high-dimensional ambient space. Building a reduced simulator from short-burst ambient ensembles is a long-standing problem: local-chart methods like ATLAS suffer from exponential landmark scaling and per-step reprojection, while autoencoder alternatives leave tangent-bundle geometry poorly constrained, and the errors propagate into the learned drift and diffusion. We observe that the ambient covariance~$Λ$ already encodes coordinate-invariant tangent-space…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS",
+    "math.PR"
+  ],
+  "published": "2026-04-17",
+  "updated": "2026-04-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

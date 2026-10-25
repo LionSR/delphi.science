@@ -1,0 +1,24 @@
+{
+  "key": "2609.34310",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.34310",
+  "title": "Riemannian Difference-of-Convex Optimization for K-Means Clustering",
+  "authors": [
+    "Meng Xu",
+    "Bo Jiang",
+    "Hanfu Zhang",
+    "Ya-Feng Liu",
+    "Anthony Man-Cho So"
+  ],
+  "summary": "K-means is a widely adopted clustering approach in signal processing and machine learning. In this paper, we study K-means clustering through a cardinality-constrained formulation on a compact embedded submanifold. We replace the cardinality constraint with a difference-of-convex (DC) penalty and establish a global error bound to prove that the penalized and constrained formulations share the same global minimizers whenever the penalty parameter exceeds a finite threshold. To solve the resulting nonsmooth Riemannian DC problem, we reformulate it as a minimax problem and propose RADA-DC, a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

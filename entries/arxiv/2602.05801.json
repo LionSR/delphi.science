@@ -1,0 +1,22 @@
+{
+  "key": "2602.05801",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05801",
+  "title": "The Quantum Message Complexity of Distributed Wake-Up with Advice",
+  "authors": [
+    "Peter Robinson",
+    "Ming Ming Tan"
+  ],
+  "summary": "We consider the distributed wake-up problem with advice, where nodes are equipped with initial knowledge about the network at large. After the adversary awakens a subset of nodes, an oracle computes a bit string (``the advice'') for each node, and the goal is to wake up all sleeping nodes efficiently. We present the first upper and lower bounds on the message complexity for wake-up in the quantum routing model, introduced by Dufoulon, Magniez, and Pandurangan (PODC 2025). In more detail, we give a distributed advising scheme that, given $α$ bits of advice per node, wakes up all nodes with a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DC",
+    "cs.DS"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-02-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

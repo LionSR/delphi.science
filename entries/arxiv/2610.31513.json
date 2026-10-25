@@ -1,0 +1,22 @@
+{
+  "key": "2610.31513",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.31513",
+  "title": "Closing All-Exp Gaps in Local Search for the Traveling Salesman Problem and Maximum Constraint Assignment",
+  "authors": [
+    "Sophia Heimann",
+    "Hung P. Hoang",
+    "Stefan Hougardy"
+  ],
+  "summary": "We prove the all-exp property for the Traveling Salesman Problem with the $2$-opt neighborhood, and for $(3,2,2)$- and $(2,3,2)$-Maximum Constraint Assignment with the flip neighborhood. The all-exp property states that infinitely many instances have an initial solution from which every sequence of improving moves to a local optimum, and hence every run of local search, has exponential length. For the Traveling Salesman Problem, the all-exp property was previously known for every $k$-opt neighborhood with $k \\ge 3$, so our result for $2$-opt completes the picture for all $k$-kopt…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

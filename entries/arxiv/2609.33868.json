@@ -1,0 +1,23 @@
+{
+  "key": "2609.33868",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.33868",
+  "title": "Conformal Coverage of Time Series: Validity and Inference",
+  "authors": [
+    "Percy S. Zhai",
+    "Maggie Cheng",
+    "Wei Biao Wu"
+  ],
+  "summary": "Conformal prediction provides marginal coverage guarantees, yet practitioners may wonder if the observed coverage is truly abnormal or consistent with sampling variation. Inference for realized coverage has received comparatively little attention, especially for time series. We study split conformal prediction with adjacent calibration and test sets of temporally dependent data. Using the functional dependence measure, we derive non-asymptotic bounds on marginal coverage error without mixing assumptions, which can be difficult to verify and may fail even for simple short-memory models. We…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME",
+    "stat.ML"
+  ],
+  "published": "2026-09-27",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

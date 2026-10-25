@@ -1,0 +1,21 @@
+{
+  "key": "2604.16578",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.16578",
+  "title": "Verifying random matrix product states with autoregressive local measurements",
+  "authors": [
+    "Hyunho Cha",
+    "Subin Kim",
+    "Jungwoo Lee"
+  ],
+  "summary": "Matrix product states (MPS) are a central language for one-dimensional quantum matter and a practical target for near-term quantum simulators and variational algorithms. Yet, while substantial effort has focused on preparing MPS with shallow circuits, scalable methods to \\emph{verify} that a many-body device has actually produced the intended state remain underdeveloped. Direct fidelity estimation (DFE) relies only on local Pauli measurements, but in many-body settings it suffers an exponential classical overhead from the preprocessing needed to sample Pauli strings. We eliminate this…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-17",
+  "updated": "2026-04-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

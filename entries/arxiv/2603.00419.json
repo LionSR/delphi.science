@@ -1,0 +1,20 @@
+{
+  "key": "2603.00419",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.00419",
+  "title": "Inexact versions of several block-splitting preconditioners for indefinite least squares problems",
+  "authors": [
+    "Mohaddese Kaveh Shaldehi",
+    "Davod Khojasteh Salkuyeh"
+  ],
+  "summary": "This paper introduces inexact versions of several block-splitting preconditioners for solving the three-by-three block linear systems arising from a special class of indefinite least squares problems. We first establish the convergence conditions for the corresponding stationary iterative methods. Then, it follows that under these conditions, all eigenvalues of the preconditioned matrices are contained within a circle centered at $(1,0)$ with radius $1$. This property implies that these preconditioners are effective in accelerating the convergence of the GMRES method. Furthermore, we analyze…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-28",
+  "updated": "2026-05-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

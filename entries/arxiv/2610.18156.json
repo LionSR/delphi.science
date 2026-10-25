@@ -1,0 +1,21 @@
+{
+  "key": "2610.18156",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.18156",
+  "title": "UQ-ACE: Stability-Aware Counterfactual Controller Tuning via Bayesian SINDy",
+  "authors": [
+    "Margarita A. Guerrero",
+    "Rodrigo A. Gonzalez",
+    "Cristian R. Rojas"
+  ],
+  "summary": "Retuning feedback controllers in critical processes is challenging when experiments are costly, open-loop excitation is infeasible, and candidate controllers must be screened before deployment. The existing Adaptive Sampling for Counterfactual Explanations (ACE) method provides a sample-efficient approach for finding minimal controller-parameter changes that recover prescribed closed-loop performance, but it does not explicitly account for stability of candidate controllers proposed during the search, which may be destabilizing under plant uncertainty. This paper introduces UQ-ACE, a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

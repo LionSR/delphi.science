@@ -1,0 +1,20 @@
+{
+  "key": "2608.14201",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.14201",
+  "title": "A Near-Optimal Lower Bound for $\\ell_p$-Subspace Embeddings, $1\\leq p<2$",
+  "authors": [
+    "Yi Li"
+  ],
+  "summary": "For $d \\geq 2$, $p \\geq 1$ and $ε> 0$, let $N_p(d,ε)$ be the smallest integer $N$ such that for every integer $n$ and every $A\\in\\mathbb{R}^{n\\times d}$, there exists a matrix $Φ\\in\\mathbb{R}^{N\\times n}$ satisfying $(1-ε)\\lVert Ax\\rVert_p\\leq \\lVertΦA x\\rVert_p\\leq (1+ε)\\lVert Ax\\rVert_p$ for all $x\\in\\mathbb{R}^d$. For every constant $p\\geq 1$ with $p\\not\\in 2\\mathbb{Z}$, when $d\\gtrsim_p \\log(1/ε)$, the bound \\[ N_p(d,ε) \\gtrsim_{p} \\frac{d}{ε^2 \\operatorname{polylog}(d/ε)} \\] is established. This improves the previous lower bound $Ω(1/(ε^2\\operatorname{polylog}(1/ε)))$ due to Li et al.…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.FA"
+  ],
+  "published": "2026-08-14",
+  "updated": "2026-08-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

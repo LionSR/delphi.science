@@ -1,0 +1,20 @@
+{
+  "key": "2603.04940",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.04940",
+  "title": "An Efficient Stochastic First-Order Algorithm for Nonconvex--Strongly Concave Minimax Optimization beyond Lipschitz Smoothness",
+  "authors": [
+    "Yan Gao",
+    "Yongchao Liu"
+  ],
+  "summary": "In recent years, nonconvex minimax problems have attracted significant attention because of their broad applications in machine learning, including generative adversarial networks, robust optimization and adversarial training. Most existing algorithms for nonconvex stochastic minimax problems are developed under the standard Lipschitz smoothness assumption. In this paper, we study stochastic minimax problems under a generalized smoothness condition and propose an algorithm, NSGDA-M, which simultaneously updates the inner variable by stochastic gradient ascent and updates the outer variable…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-05",
+  "updated": "2026-08-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

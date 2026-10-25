@@ -1,0 +1,20 @@
+{
+  "key": "2604.04304",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.04304",
+  "title": "Analytic Non-Gaussian Confidence Boundary Method for Chance-Constrained Trajectory Control",
+  "authors": [
+    "Ethan Burnett",
+    "Spencer Boone"
+  ],
+  "summary": "Standard chance constrained control algorithms typically rely on the assumption that uncertainties in vehicle states obey Gaussian statistics. Highly nonlinear systems tend to disrupt Gaussianity, challenging standard chance-constrained control methods. This paper develops a non-Gaussian confidence boundary parameterization technique for such cases where the problem departs appreciably from the Gaussian assumption. The approach is to consider the true confidence boundary as a perturbation of the one predicted from covariance, deriving perturbed boundary geometry from computed higher-order…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-05",
+  "updated": "2026-04-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

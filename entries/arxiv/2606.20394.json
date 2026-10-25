@@ -1,0 +1,21 @@
+{
+  "key": "2606.20394",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20394",
+  "title": "Agentic AutoResearch forSpace Autonomy: An Auditable, LLM-Driven Research Agent for Aerospace Control Problems",
+  "authors": [
+    "Amit Jain",
+    "Richard Linares"
+  ],
+  "summary": "Spacecraft guidance, navigation, and control functions are increasingly realized as learned policies distilled from expert solvers. Developing such a policy is itself a research process: an investigator selects an architecture and hyperparameters, runs experiments, and must determine whether an apparent improvement is genuine or merely seed noise. This paper presents AutoResearch, a framework in which a large language model autonomously drives that loop for aerospace control problems, coupled with a credibility layer, built into the loop, that certifies each reported result against the…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

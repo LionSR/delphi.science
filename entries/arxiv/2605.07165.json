@@ -1,0 +1,21 @@
+{
+  "key": "2605.07165",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.07165",
+  "title": "Prox-PEP: A Proximal Partial Exact Penalty Algorithm for Weakly Convex Stochastic Nonlinear Programming",
+  "authors": [
+    "Lixin Tang",
+    "Xingyu Wang",
+    "Liwei Zhang"
+  ],
+  "summary": "This paper considers stochastic optimization problems with weakly convex objective and constraint functions. We propose Prox-PEP, a proximal method equipped with quadratic subproblems. To handle nonlinear equality constraints, we employ an exact penalty approach, transforming them into inequality constraints with auxiliary slack variables. At each iteration, we construct quadratic approximations for both the objective and the constraint functions to facilitate efficient subproblem computation. By carefully designing the second-order approximation matrices, the subproblem constructed via the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-08",
+  "updated": "2026-05-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,31 @@
+{
+  "key": "2605.04604",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04604",
+  "title": "Generative Quantum-inspired Kolmogorov-Arnold Eigensolver",
+  "authors": [
+    "Yu-Cheng Lin",
+    "Yu-Chao Hsu",
+    "I-Shan Tsai",
+    "Chun-Hua Lin",
+    "Kuo-Chung Peng",
+    "Jiun-Cheng Jiang",
+    "Yun-Yuan Wang",
+    "Tzung-Chi Huang",
+    "Tai-Yue Li",
+    "Kuan-Cheng Chen",
+    "Samuel Yen-Chi Chen",
+    "Nan-Yow Chen"
+  ],
+  "summary": "High-performance computing (HPC) is increasingly important for scalable quantum chemistry workflows that couple classical generative models, quantum circuit simulation, and selected configuration interaction postprocessing. We present the generative quantum-inspired Kolmogorov-Arnold eigensolver (GQKAE), a parameter-efficient extension of the generative quantum eigensolver (GQE) for quantum chemistry. GQKAE replaces the parameter-heavy feed-forward network components in GPT-style generative eigensolvers with hybrid quantum-inspired Kolmogorov-Arnold network modules, forming a compact…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

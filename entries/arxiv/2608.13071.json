@@ -1,0 +1,20 @@
+{
+  "key": "2608.13071",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.13071",
+  "title": "On the Erdős Five-Edge Intersection Problem",
+  "authors": [
+    "Chengrui Fang",
+    "Jianfeng Hou"
+  ],
+  "summary": "For an $n$-vertex graph $G$ and a permutation $π$ of its vertex set, let \\[ I_G(π)=|E(G)\\cap E(G_π)|,\\qquad μ(G)=\\min_π I_G(π), \\] where $G_π$ is the copy of $G$ obtained by relabelling every vertex $x\\in V(G)$ as $π(x)$. Let $f(n,k)$ be the minimum number of edges in an $n$-vertex graph $G$ satisfying $μ(G)\\ge k$. Erdős recorded a construction of Mullin showing $f(n,5)\\le 2n-2$ and asked whether equality holds for sufficiently large $n$. We prove that it does: \\[ f(n,5)=2n-2 \\] for all sufficiently large $n$. The proof strategy is a core--buffer--completion framework: it moves the few…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-08-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2608.07032",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.07032",
+  "title": "Certified High-Dimensional Wasserstein Robust Portfolio Optimization",
+  "authors": [
+    "Chung-Han Hsieh",
+    "Rong Gan"
+  ],
+  "summary": "We develop a certified, scalable approximation for high-dimensional Wasserstein distributionally robust portfolio optimization. For expected-utility maximization under order-one Wasserstein ambiguity, standard duality yields a semi-infinite convex program. For long-only portfolios with box support under the one-norm ground metric, an exact sample-specific vertex reformulation provides an exponential-size computational benchmark. We then majorize the utility by supporting hyperplanes and dualize the support subproblems, obtaining a finite hyperplane--dual formulation over compact polyhedral…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.CE",
+    "q-fin.PM"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

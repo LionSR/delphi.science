@@ -1,0 +1,21 @@
+{
+  "key": "2604.09113",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.09113",
+  "title": "A ROM-based BDDC solver for unfitted p-FEM level-set-based two-dimensional lattice structures",
+  "authors": [
+    "Gonzalo Bonilla Moreno",
+    "Giuliano Guarino",
+    "Pablo Antolin"
+  ],
+  "summary": "We present a domain decomposition method for the fast simulation of large two-dimensional lattice structures described by level set functions. The method does not rely on homogenization or multiscale techniques, and therefore avoids their underlying assumptions such as scale separation and periodicity. Individual cells are defined through level set functions and mapped into physical space using arbitrary order mappings, which allows the creation of complex graded designs with varying geometries and topologies. The discretization is based on unfitted p-FEM, where each cell is approximated by…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-10",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

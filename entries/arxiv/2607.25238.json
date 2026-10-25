@@ -1,0 +1,21 @@
+{
+  "key": "2607.25238",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.25238",
+  "title": "Optimization of the directed spanning trees using the weighted matroid intersection algorithm",
+  "authors": [
+    "Binhong Jiang",
+    "Gehao Wang"
+  ],
+  "summary": "In this paper, we consider the problem of updating the directed minimum spanning tree (DMST), when the given sample tree is subject to the weight changes, edge deletions and edge insertions. We present an implementation for updating the tree to a DMST using the weighted matroid intersection algorithm. Our algorithm focuses on maintaining a dynamic auxiliary graph, which plays a central role in the matroid intersection algorithm, and governs the iterations from the given tree to a DMST. Each iteration is guaranteed to yield an improved solution. We also provide an implementation of this…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-07-28",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

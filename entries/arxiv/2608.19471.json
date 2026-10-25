@@ -1,0 +1,21 @@
+{
+  "key": "2608.19471",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19471",
+  "title": "Exact Multistate Reliability and Upgrade Design for Heterogeneous HBM Systems via Threshold-Pruned BAT",
+  "authors": [
+    "Wei-Chang Yeh"
+  ],
+  "summary": "High Bandwidth Memory (HBM) systems can exhibit partial service rather than only full service or complete isolation: a controller-visible service unit may deliver full, reduced, or zero bandwidth because of sub-channel isolation, lane remapping, or protection overhead. This paper develops an exact multistate reliability framework in which each service unit carries an arbitrary finite set of bandwidth states and reliability is the probability that aggregate delivered bandwidth meets a demand. The binary k-out-of-n model is recovered as a special case, while closed-form binary-mapping error…",
+  "domain": "cs.AR",
+  "tags": [
+    "cs.AR",
+    "cs.PF",
+    "math.OC"
+  ],
+  "published": "2026-08-19",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

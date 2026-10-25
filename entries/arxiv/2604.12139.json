@@ -1,0 +1,20 @@
+{
+  "key": "2604.12139",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.12139",
+  "title": "Estimating Price Elasticity Matrices",
+  "authors": [
+    "Maximilian Schaller",
+    "Stephen Boyd"
+  ],
+  "summary": "The relationship between demand and prices of a set of products can be modeled as a linear mapping from logarithmic price changes to logarithmic changes in demand. We consider the problem of estimating the coefficient matrix of this mapping, the elasticity matrix, based on observed data consisting of real-valued prices and integer-valued demands. We regularize the estimation problem by imposing a factor model structure, i.e., that the elasticity matrix is diagonal plus low-rank, similar to factor models used for financial returns. Maximizing the likelihood of observations of this model is a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-13",
+  "updated": "2026-04-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2603.13034",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.13034",
+  "title": "Embedded Trefftz DG method for the Helmholtz equation",
+  "authors": [
+    "Paul Stocker",
+    "Igor Voulis"
+  ],
+  "summary": "We study an embedded Trefftz discontinuous Galerkin method for the Helmholtz equation. The method starts from a polynomial DG space and enforces the Trefftz property through local constraints, avoiding an explicit construction of Trefftz basis functions. For the global coupling we use a simple symmetric interior penalty DG bilinear form. Since the resulting formulation is not coercive, stability is proved by a $T$-coercivity argument combined with a Schatz-type duality technique. This yields wavenumber-explicit stability, quasi-optimality, and convergence estimates in standard DG norms under…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-13",
+  "updated": "2026-03-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

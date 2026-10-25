@@ -1,0 +1,20 @@
+{
+  "key": "2609.05419",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.05419",
+  "title": "The 2M Multiplication Algorithm for Complex Matrices",
+  "authors": [
+    "Peter Caday"
+  ],
+  "summary": "Complex matrix multiplication is typically computed using 4 real matrix multiplications (GEMMs) of the same size. The well-known 3M multiplication algorithm reduces this cost to 3 real GEMMs, together with quadratic time pre- and post-processing steps. In this paper, we reduce 3M to 2M for matrices with integer real and imaginary parts, performing complex GEMM with only 2 real GEMMs of the same size, along with quadratic time pre- and post-processing. For floating-point matrices, 2M multiplication combines naturally with the Ozaki-II scheme, yielding a practical, high-performance algorithm…",
+  "domain": "cs.DC",
+  "tags": [
+    "cs.DC",
+    "math.NA"
+  ],
+  "published": "2026-05-15",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

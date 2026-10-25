@@ -1,0 +1,20 @@
+{
+  "key": "2604.13785",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.13785",
+  "title": "Pathwise convergence of a linearization scheme for stochastic differential-algebraic equations under the local Lipschitz coefficients",
+  "authors": [
+    "Guy Tsafack",
+    "Antoine Tambue"
+  ],
+  "summary": "The paper deals with the numerical treatment of index-1 stochastic differential-algebraic equations (SDAEs) with nonlinear coefficients that satisfy the local Lipschitz and the Khasminskii conditions. The key challenge here is the presence of a singular and non-autonomous matrix in the equation, which makes the numerical method challenging to analyze. To tackle this challenge, we develop a more general numerical method using a local linearization technique. More precisely, we use the Taylor expansion to decompose locally the drift component of the SDAEs in linear and nonlinear parts. The…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-15",
+  "updated": "2026-04-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

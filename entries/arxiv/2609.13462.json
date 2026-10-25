@@ -1,0 +1,24 @@
+{
+  "key": "2609.13462",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.13462",
+  "title": "Matching Higher-Order Oracle Complexity for Smooth Monotone Variational Inequalities",
+  "authors": [
+    "Haihan Zhang",
+    "Wendao Wu",
+    "Chenheng Zhang",
+    "Cong Fang",
+    "Haoxuan Li",
+    "Zhouchen Lin"
+  ],
+  "summary": "We establish near-optimal higher-order oracle bounds for smooth monotone variational inequalities. For fixed $p\\ge2$, let $F$ be monotone on a known compact convex set $X$ of diameter at most $D$, with $\\operatorname{Lip}(D^{p-1}F)\\le L_p$. Each feasible query returns the complete jet $(F,DF,\\ldots,D^{p-1}F)$, and the goal is to find $x$ with tangent residual $\\operatorname{dist}(0,F(x)+N_X(x))\\le\\varepsilon$. Writing $Q=L_pD^p/\\varepsilon$, we improve the $\\widetilde O_p(Q^{1/p})$ upper bound of Chen et al. to $\\widetilde O_p(Q^{2/(3p-1)})$ via a dimension-independent deterministic…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-11",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

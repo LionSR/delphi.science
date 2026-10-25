@@ -1,0 +1,22 @@
+{
+  "key": "2608.03004",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.03004",
+  "title": "On the endpoint estimate for discrete spherical average over sparse sequences",
+  "authors": [
+    "Sanghyuk Lee",
+    "Ji Li",
+    "Chong-Wei Liang",
+    "Chun-Yen Shen"
+  ],
+  "summary": "Let $d\\ge5$, and let $A_λ$ denote the normalized discrete spherical average on $\\mathbb{Z}^d$ with squared radius $λ$. For a strictly increasing sequence $(μ_k)$ of positive integers, set $λ_k=μ_k!$ and consider the lacunary maximal operator $A_\\star f:=\\sup_k|A_{λ_k}f|$. For each fixed $γ>0$, we prove that the estimate \\[ \\#\\{x:A_\\star f(x)>α\\} \\le K\\sum_x\\frac{|f(x)|}α \\left(1+\\log^+\\frac{|f(x)|}α\\right)^γ\\] holds with some finite $K$ for all $α>0$ and finitely supported $f$ if and only if \\[ \\sup_{N\\ge2}\\frac{\\#\\{k:μ_k\\le N\\}}{(1+\\log N)^γ} 0$, but $A_\\star$ is not of weak type $(1,1)$.…",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2608.06872",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.06872",
+  "title": "Pessimal Elections for Approximately Dominating Sets",
+  "authors": [
+    "Moses Charikar",
+    "Prasanna Ramakrishnan",
+    "Kangning Wang"
+  ],
+  "summary": "Condorcet's paradox is a foundational result in social choice theory, showing that no matter which candidate wins an election, a majority of voters may prefer some losing candidate. Worse still, even if the election can choose a committee of $k$ winners, some loser may beat every winner in a majority vote. Recent work showed that this obstruction can be sidestepped by relaxing the majority threshold. For all $\\varepsilon > 0$, any election can select a committee of $O(1/\\varepsilon^2)$ winners such that no loser is preferred to every winner by $\\frac12 + \\varepsilon$ fraction of voters. We…",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

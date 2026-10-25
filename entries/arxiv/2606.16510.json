@@ -1,0 +1,21 @@
+{
+  "key": "2606.16510",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.16510",
+  "title": "Petrov-Galerkin Variational Physics-Informed Neural Network Framework for Two-Dimensional Singularly Perturbed Problems",
+  "authors": [
+    "Vijay Kumar",
+    "Gautam Singh"
+  ],
+  "summary": "This study proposes a Petrov-Galerkin based Variational Physics-Informed Neural Network (VPINN) for efficiently solving two-dimensional singularly perturbed problems (SPPs) with one and two small perturbation parameters. The approach employs neural networks to construct the trial solution space, while tensor-product hat functions are adopted as test functions to enforce the variational form. To accurately resolve of sharp boundary layers, the variational form is implemented using a Petrov-Galerkin formulation. Dirichlet boundary conditions are imposed directly, while the source terms are…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-06-15",
+  "updated": "2026-06-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

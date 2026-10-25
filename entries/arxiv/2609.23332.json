@@ -1,0 +1,22 @@
+{
+  "key": "2609.23332",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.23332",
+  "title": "Streaming PCA: averaging from a geometric perspective",
+  "authors": [
+    "Tuan Pham",
+    "Alessandro Rinaldo",
+    "Purnamrita Sarkar"
+  ],
+  "summary": "We study principal component analysis (PCA) under memory constraints, a setting that is increasingly important in large-scale data analysis. Our focus is on Oja's algorithm, which is a one-pass, memory-efficient algorithm requiring only $O(p)$ storage in the rank-one case and $O(pk)$ storage for $k$- PCA. The main goal is to develop a procedure based on Oja's algorithm that is optimal without prior knowledge of the eigengap, which is otherwise needed to tune the learning rates effectively. We do this by first introducing a geometric perspective on the convergence of $k$-PCA: by embedding the…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-09-20",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2610.05661",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05661",
+  "title": "Amicable numbers",
+  "authors": [
+    "Paul Pollack"
+  ],
+  "summary": "Let $s(n):=\\sum_{d\\mid n,\\,d < n} d$ denote the sum of the proper divisors of $n$. Distinct positive integers $n,m$ form an amicable pair if $s(n)=m$ and $s(m)=n$. Let $A(x)$ count the positive integers not exceeding $x$ that belong to an amicable pair. We report on a proof, found by ChatGPT Astra, that $$ A(x)\\le x\\exp\\{-(1/2+o(1))\\log x\\,\\log_3 x/\\log_2 x\\}$$ as $x\\to\\infty$. Here $\\log_k$ denotes the $k$th iterate of the natural logarithm.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

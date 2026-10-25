@@ -1,0 +1,22 @@
+{
+  "key": "2604.25503",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.25503",
+  "title": "Quantum-Accelerated Gowers $U_2$ Norm for Bent Boolean Functions",
+  "authors": [
+    "Rajdeep Dwivedi",
+    "C. A. Jothiwashran",
+    "Sugata Gangopadhyay",
+    "Vishvendra Singh Poonia"
+  ],
+  "summary": "Bent Boolean functions extremal objects that maximally resist affine approximation are notoriously hard to construct for large numbers of variables. We propose a hybrid quantum-classical genetic algorithm (GA) that uses a quantum circuit to evaluate the Gowers $U_2$ norm as the evolutionary fitness function. Our central contribution is a complexity-theoretic separation: the quantum evaluation circuit requires only $3n$ qubits and $\\bigO(n^2)$ two-qubit gates per function query, whereas the classical computation of the exact Gowers $U_2$ norm demands $\\bigO(2^{2n})$ arithmetic operations an…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-28",
+  "updated": "2026-05-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

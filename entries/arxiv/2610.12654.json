@@ -1,0 +1,22 @@
+{
+  "key": "2610.12654",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.12654",
+  "title": "Symbolic-Permutation-Based Direct Sparse Jacobian Assembly for Accelerated Power-Flow Analysis",
+  "authors": [
+    "Tianshi Cheng",
+    "Venkata Dinavahi"
+  ],
+  "summary": "The repeated assembly of the sparse Jacobian matrix constitutes a primary computational bottleneck in the Newton-Raphson power-flow analysis. Through an algebraic equivariance analysis of the Jacobian matrix, this paper proposes a direct sparse Jacobian assembly method based on symbolic permutation. By pre-applying the permutation to the admittance matrix during a one-time symbolic phase, the runtime bus-type projection overhead is entirely eliminated. Consequently, complex Jacobian differentiation and global matrix assembly fuse into a single operation, yielding a single-pass, branchless…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.PF",
+    "math.NA"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

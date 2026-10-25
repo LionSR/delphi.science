@@ -1,0 +1,20 @@
+{
+  "key": "2608.13132",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.13132",
+  "title": "Analysis of Error Propagation in Autoencoder-Based Reduced-Order Neural Ordinary Differential Equations",
+  "authors": [
+    "Jingyi Zhang",
+    "Gwanghyun Jo"
+  ],
+  "summary": "Neural ODE reduced-order models often achieve comparable local prediction accuracy, yet their long-horizon extrapolation behavior can differ substantially. To analyze this discrepancy, we develop a path-integral identity that separates local discrepancy injection from amplification in the learned latent dynamics. The associated multi-step Jacobian norms quantify transport sensitivity and distinguish different propagation regimes. Experiments on the Burgers and Gray--Scott systems exhibit two distinct patterns of error evolution. In Burgers systems, prediction errors remain bounded and are…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

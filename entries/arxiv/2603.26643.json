@@ -1,0 +1,22 @@
+{
+  "key": "2603.26643",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.26643",
+  "title": "Boundary neuron method for solving partial differential equations",
+  "authors": [
+    "Ye Lin",
+    "Wentao Liu",
+    "Young Ju Lee",
+    "Jiwei Jia"
+  ],
+  "summary": "We propose a boundary neuron method with random features (BNM-RF) for solving partial differential equations. The method approximates the unknown boundary function by a shallow network within the boundary integral formulation. With randomly sampled and fixed hidden parameters, the computation reduces to a linear least squares problem for the output coefficients, which avoids gradient based nonconvex optimization. This construction retains the dimensionality reduction of boundary integral equations and the linear solution structure of the random feature method. For elliptic problems, we…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-27",
+  "updated": "2026-03-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

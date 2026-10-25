@@ -1,0 +1,22 @@
+{
+  "key": "2610.06700",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06700",
+  "title": "Random-Oracle Unitary Synthesis is Impossible",
+  "authors": [
+    "Andrew Huang",
+    "Akshar Ramkumar",
+    "John Wright"
+  ],
+  "summary": "A major open problem in quantum complexity is the question of unitary synthesis---namely, is it possible to efficiently implement any unitary, given the ability to evaluate any classical function in superposition? Inspired by a recent work by Brakerski and Yuen (CRYPTO 2026), we propose an ``average-case'' unitary synthesis problem, which asks whether it is possible to efficiently implement a Haar random unitary given access to a random Boolean function. We then demonstrate a superpolynomial query lower bound, establishing that unitary synthesis in this model is impossible. Along with our…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

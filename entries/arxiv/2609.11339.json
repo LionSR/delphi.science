@@ -1,0 +1,22 @@
+{
+  "key": "2609.11339",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11339",
+  "title": "InFlow: entropic stochastic dual dynamic programming with HJB cross-certification for seasonal energy storage",
+  "authors": [
+    "Steeven B. Affognona",
+    "Babacar M. Ndiaye",
+    "Pierre Mendy",
+    "Cheikh M. F. Kebe"
+  ],
+  "summary": "Seasonal reservoir operation requires optimization methods that remain reliable under strongly periodic and uncertain inflow dynamics. We present InFlow, a verification-oriented framework combining periodic stochastic dual dynamic programming (SDDP), entropic robustness, control-space Bellman annealing, and an independently discretized Hamilton-Jacobi-Bellman (HJB) benchmark. The entropic transition operator is interpreted as a KL-penalized worst-case expectation and linked to fixed-radius KL ambiguity sets through Lagrange duality. We establish a uniform soft-Bellman approximation bound and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

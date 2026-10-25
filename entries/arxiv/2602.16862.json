@@ -1,0 +1,20 @@
+{
+  "key": "2602.16862",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.16862",
+  "title": "Action-Space Entropy Regularization in Bayesian Markowitz",
+  "authors": [
+    "Andy Au"
+  ],
+  "summary": "We solve the entropy-regularized mean--variance portfolio problem under Bayesian drift uncertainty. We combine continuous-time Bayesian filtering with stochastic policy optimization; the main finding is negative: the two mechanisms are orthogonal. Posterior dynamics are policy-independent, so entropy regularization cannot accelerate learning about the unknown drift. The mean control is identical to the deterministic Bayesian Markowitz feedback, and entropy enters only through policy variance. On the technical side, the optimal policy is Gaussian, the value function is quadratic in wealth,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "q-fin.PM"
+  ],
+  "published": "2026-02-18",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

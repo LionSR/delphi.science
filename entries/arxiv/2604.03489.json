@@ -1,0 +1,21 @@
+{
+  "key": "2604.03489",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.03489",
+  "title": "Improving Feasibility via Fast Autoencoder-Based Projections",
+  "authors": [
+    "Maria Chzhen",
+    "Priya L. Donti"
+  ],
+  "summary": "Enforcing complex (e.g., nonconvex) operational constraints is a critical challenge in real-world learning and control systems. However, existing methods struggle to efficiently enforce general classes of constraints. To address this, we propose a novel data-driven amortized approach that uses a trained autoencoder as an approximate projector to provide fast corrections to infeasible predictions. Specifically, we train an autoencoder using an adversarial objective to learn a structured, convex latent representation of the feasible set. This enables rapid correction of neural network outputs…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-04-03",
+  "updated": "2026-04-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

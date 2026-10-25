@@ -1,0 +1,20 @@
+{
+  "key": "2607.04113",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04113",
+  "title": "Asymptotic Preservation and Uniform Accuracy of Diffusion and Flow-Matching Samplers",
+  "authors": [
+    "Shiheng Zhang"
+  ],
+  "summary": "Diffusion and Gaussian-interpolant flow-matching samplers approach data through a terminal noise floor $\\varepsilon$, a singular limit for manifold-supported or rank-deficient data. We study two properties of a complete sampler specification, comprising its update rule, time grid, and terminal rule. Asymptotic preservation (AP) means a stable and consistent zero-noise discretization with a step count bounded independently of $\\varepsilon$. Uniform accuracy (UA) of order $p$ means that, at numerical resolution $h$, the endpoint $W_2$ error is $O(h^p)$ with a floor-independent constant.…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-07-05",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

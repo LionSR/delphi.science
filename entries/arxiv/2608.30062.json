@@ -1,0 +1,20 @@
+{
+  "key": "2608.30062",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.30062",
+  "title": "An Immersed Interface Method for Parabolic Interface Problems with Nonlinear Jump Conditions",
+  "authors": [
+    "So-Hsiang Chou",
+    "Patrick Nyadjo Fonga"
+  ],
+  "summary": "We develop an immersed interface finite difference method for a one-dimensional nonlinear parabolic interface problem with jump condition \\[ [u]_α=λu^+u^-. \\] The method combines a Crank--Nicolson immersed interface discretization with an \\(s\\)-parameter reduction of the nonlinear interface condition, thereby reducing the nonlinear coupling to a scalar quadratic equation. We also discuss two different viewpoints for combining Newton iteration with immersed interface discretization, namely the IIM--Newton and Newton--IIM formulations. Numerical experiments are presented to illustrate the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-30",
+  "updated": "2026-08-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

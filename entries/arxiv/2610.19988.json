@@ -1,0 +1,20 @@
+{
+  "key": "2610.19988",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.19988",
+  "title": "New spherical codes by tuning an annealing solver",
+  "authors": [
+    "Ilmari Vahteristo"
+  ],
+  "summary": "The spherical code problem asks how to place $N$ points on a unit sphere in $D$ dimensions to maximize the smallest distance between two points. It is a non-smooth and non-convex max-min problem, where few problem sizes have known optimal solutions, some have constructions, but most still only have numerically obtained solutions. We use a simple solver, with seven parameters, that anneals a LogSumExp surrogate, minimizes with L-BFGS, applies a random perturbation between anneals, and repeats with no acceptance test until a fixed limit is reached. We search the solver parameters for every…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.MG"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

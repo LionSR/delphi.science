@@ -1,0 +1,21 @@
+{
+  "key": "2608.22925",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.22925",
+  "title": "Importance-Reweighted Fock-Space Variational Monte Carlo",
+  "authors": [
+    "Zheng Che"
+  ],
+  "summary": "Fock-space variational Monte Carlo (FS-VMC) evaluates variational quantities by sampling discrete many-body configurations. In molecular applications, concentrated Born distributions can hinder Markov-chain mixing, while Monte Carlo estimators can also exhibit large variance. We introduce importance-reweighted FS-VMC (IR-FS-VMC), which combines Metropolis--Hastings sampling, an evaluation kernel, and self-normalized importance sampling to estimate the Born-distribution energy, gradient, and stochastic reconfiguration (SR) matrix. Controlled comparisons on equilibrium H2O and Fe2S2 show that…",
+  "domain": "physics.chem-ph",
+  "tags": [
+    "physics.chem-ph",
+    "cond-mat.str-el",
+    "quant-ph"
+  ],
+  "published": "2026-08-24",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

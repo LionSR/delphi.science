@@ -1,0 +1,21 @@
+{
+  "key": "2605.20572",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.20572",
+  "title": "Minimax unbiased estimation for finite populations with bounded outcomes",
+  "authors": [
+    "P. M. Aronow",
+    "Patrick Lopatto"
+  ],
+  "summary": "We study design-unbiased estimation of the finite-population total $\\sum_{i=1}^N y_i$ when each outcome satisfies known bounds $y_i\\in[a_i,b_i]$. For any sampling design with inclusion probabilities $π_i>0$, we prove a sharp lower bound on the worst-case squared error over the rectangular parameter space. This bound is attained if and only if the unit inclusion indicators are pairwise independent, in which case the minimax estimator is the midpoint-differenced Horvitz-Thompson estimator $\\sum_{i=1}^N m_i+\\sum_{i\\in S}(y_i-m_i)/π_i$, with $m_i=(a_i+b_i)/{2}$. We then solve the joint…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-05-20",
+  "updated": "2026-05-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

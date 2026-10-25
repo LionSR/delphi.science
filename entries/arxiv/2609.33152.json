@@ -1,0 +1,24 @@
+{
+  "key": "2609.33152",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.33152",
+  "title": "Convergence of Practical Muon",
+  "authors": [
+    "Haonan Wang",
+    "Yu Wu",
+    "Minghui Liwang",
+    "Xinlei Yi",
+    "Yiguang Hong"
+  ],
+  "summary": "Muon is emerging as a promising alternative to AdamW for large-scale neural network training, yet theoretical understanding of its practical implementation remains incomplete, as existing analyses often simplify or omit two key components: (i) practical Newton--Schulz iterations with empirically tuned polynomial coefficients $(3.4445,-4.7750,2.0315)$; and (ii) decoupled weight decay for regularization. In this paper, we provide an optimization interpretation and establish convergence for practical Muon, jointly accounting for both components. Specifically, we interpret practical Muon as…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-09-27",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2602.14708",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14708",
+  "title": "A Unified Mathematical Framework for Distributed Data Fabrics: Categorical Hypergraph Models",
+  "authors": [
+    "T. Shaska",
+    "I. Kotsireas"
+  ],
+  "summary": "Current distributed data fabrics lack a rigorous mathematical foundation, often relying on ad-hoc architectures that struggle with consistency, lineage, and scale. We propose a mathematical framework for data fabrics, unifying heterogeneous data management in distributed systems through a hypergraph-based structure \\( \\mathcal{F} = (D, M, G, T, P, A) \\). Datasets, metadata, transformations, policies, and analytics are modeled over a distributed system \\( Σ= (N, C) \\), with multi-way relationships encoded in a hypergraph \\( G = (V, E) \\). A categorical approach, with datasets as objects and…",
+  "domain": "cs.DB",
+  "tags": [
+    "cs.DB",
+    "math.CT"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-02-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

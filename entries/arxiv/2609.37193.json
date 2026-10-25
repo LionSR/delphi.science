@@ -1,0 +1,21 @@
+{
+  "key": "2609.37193",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.37193",
+  "title": "Adaptive Rotation for iSOMA: Geometry, Benchmarking, and Noise Robustness in Variational Quantum Objectives",
+  "authors": [
+    "Vojtěch Novák",
+    "Ivan Zelinka"
+  ],
+  "summary": "We study whether the coordinate dependence of the improved Self-Organizing Migrating Algorithm (iSOMA) can be reduced while retaining its inexpensive leader-directed migration mechanism. We introduce iSOMA-AR, which learns a basis from successful migration displacements and selectively applies the standard perturbation mask in that basis. On the complete noiseless BBOB suite, iSOMA- AR significantly outperformed baseline iSOMA across matched conditions, with the largest gains on geometrically difficult landscapes. A targeted ablation shows that the learned orientation is beneficial on a…",
+  "domain": "cs.NE",
+  "tags": [
+    "cs.NE",
+    "quant-ph"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

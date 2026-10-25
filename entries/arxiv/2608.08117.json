@@ -1,0 +1,24 @@
+{
+  "key": "2608.08117",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.08117",
+  "title": "High-Resolution Weighted Essentially Non-Oscillatory Compact Least-Squares Schemes with Implicit Time Integration for Compressible Navier-Stokes Equations on Curvilinear Grids",
+  "authors": [
+    "Yongzhi Luo",
+    "Huiheng Fan",
+    "Wei-Gang Zeng",
+    "Yu-Xin Ren",
+    "Jianhua Pan"
+  ],
+  "summary": "This paper presents a family of high-resolution weighted essentially non-oscillatory compact least-squares schemes with implicit time integration for the compressible Navier-Stokes equations on curvilinear grids. Compared with the original compact least-squares schemes, the proposed method introduces two main improvements. First, instead of enforcing the accuracy constraints over the entire computational domain, including discontinuous regions, it constructs the reconstruction matrix only along smooth reconstruction lines using an accuracy-preserving weighting strategy. This treatment…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-08-08",
+  "updated": "2026-08-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

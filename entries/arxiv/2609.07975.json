@@ -1,0 +1,22 @@
+{
+  "key": "2609.07975",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07975",
+  "title": "Heat Field Signatures: From Point Clouds to Smooth Geometry",
+  "authors": [
+    "Yuanqing Wang",
+    "Yapeng Tian",
+    "Baris Coskunuzer"
+  ],
+  "summary": "Bringing multiscale geometric analysis directly to irregular point clouds remains difficult: quantities such as local dimension, anisotropy, density variation, and geometric transitions are typically estimated through explicit neighborhood, manifold, or graph constructions, or left for neural networks to infer from coordinates. We introduce Heat Field Signatures (HFS), which lift a point cloud to a multiscale family of smooth ambient heat fields, providing a direct interface from discrete samples to geometric analysis. From this field, HFS computes closed-form global and local signatures…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DG"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

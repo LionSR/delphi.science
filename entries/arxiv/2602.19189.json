@@ -1,0 +1,22 @@
+{
+  "key": "2602.19189",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.19189",
+  "title": "An efficient recursive decomposition algorithm for undirected graphs",
+  "authors": [
+    "Pei Heng",
+    "Yi Sun",
+    "Jianhua Guo"
+  ],
+  "summary": "The decomposition of undirected graphs simplifies complex problems by breaking them into solvable subgraphs, following the philosophy of divide and conquer. This paper investigates the relationship between atom decomposition and the maximum cardinality search (MCS) ordering in general undirected graphs. Specifically, we prove that applying a convex extension to the node numbered $1$ and its neighborhood in an MCS ordering yields an atom in the graph. Furthermore, based on the MCS ordering, we introduce a recursive algorithm for decomposing an undirected graph into its atoms. This approach…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-02-22",
+  "updated": "2026-02-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2601.00337",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.00337",
+  "title": "When Does Quantum Differential Privacy Compose?",
+  "authors": [
+    "Daniel Alabi",
+    "Theshani Nuradha"
+  ],
+  "summary": "Composition is a cornerstone of classical differential privacy, enabling strong end-to-end guarantees for complex algorithms through composition theorems (e.g., basic and advanced). In the quantum setting, however, privacy is defined operationally against arbitrary measurements, and classical composition arguments based on scalar privacy-loss random variables no longer apply. As a result, it has remained unclear when meaningful composition guarantees can be obtained for quantum differential privacy (QDP). In this work, we clarify both the limitations and possibilities of composition in the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR",
+    "cs.IT"
+  ],
+  "published": "2026-01-01",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2605.26800",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.26800",
+  "title": "Accelerated Schrödinger-Föllmer samplers",
+  "authors": [
+    "Haotian Lin",
+    "Xiaojie Wang",
+    "Xiaoyan Zhang"
+  ],
+  "summary": "Sampling is a fundamental algorithmic task in wide-ranging applications across multiple disciplines such as scientific computing, statistics and machine learning. In this paper, an efficient stochastic Runge-Kutta scheme is proposed to accelerate the Schrödinger-Föllmer sampler, designed for sampling from complex and high-dimensional multimodal distributions. The resulting stochastic Runge-Kutta Schrödinger-Föllmer sampler (SRKSFS) is proved to achieve a convergence rate of order $\\mathcal{O} ( h^{3/2} |\\ln h|)$ in the $L^2$-Wasserstein distance, considerably improving the order…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

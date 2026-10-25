@@ -1,0 +1,24 @@
+{
+  "key": "2605.28550",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.28550",
+  "title": "Model Predictive Control for Constrained Linear Positive Systems on Graphs",
+  "authors": [
+    "Roland Schurig",
+    "David Ohlin",
+    "Anders Rantzer",
+    "Emma Tegling",
+    "Rolf Findeisen"
+  ],
+  "summary": "Positive systems describing networks with inherently non-negative states and inputs arise naturally in routing, logistics, and compartmental modelling. We consider problems modelled as positive linear systems in incidence form with linear cost. The addition of capacity constraints on states (storage) and inputs (flows between nodes) significantly increases the problem complexity. Leveraging the analytic structure of the unconstrained problem, an explicit suboptimal admissible controller is constructed. This yields graph-computable performance bounds and a minimum stabilising horizon length…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-05-27",
+  "updated": "2026-05-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

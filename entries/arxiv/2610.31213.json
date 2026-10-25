@@ -1,0 +1,19 @@
+{
+  "key": "2610.31213",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.31213",
+  "title": "Exact value functions and sensitivities for energy storage by fast Legendre transforms",
+  "authors": [
+    "Robin Girard"
+  ],
+  "summary": "Long chains of decisions coupled only through a bounded cumulative state, such as the operation of an energy-storage device, form convex programs that generic solvers treat as arbitrary sparse models. We present an exact solver for this class that propagates the complete convex cost-to-reach function through restrictions and infimal convolutions, each evaluated by fast Legendre-Fenchel conjugation as an ordered merge of slopes: no state grid, no value approximation, and a function rather than a single primal-dual pair as output. Price-taking storage instances of 5,000 to 15,000 hourly steps…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

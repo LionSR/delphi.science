@@ -1,0 +1,22 @@
+{
+  "key": "2608.28135",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.28135",
+  "title": "Stochastic trace estimation for positive trace-class operators",
+  "authors": [
+    "Zvonimir Bujanović",
+    "Luka Grubišić",
+    "Daniel Kressner",
+    "Hrvoje Olić"
+  ],
+  "summary": "Implicit trace estimation aims to approximate the trace of a matrix or linear operator accessible only through matrix-vector or operator-vector products. In the matrix setting, the Girard-Hutchinson estimator typically requires $\\mathcal{O}(\\varepsilon^{-2})$ products to achieve accuracy $\\varepsilon$, while the variance-reduced Hutch++ algorithm reduces this sample complexity to $\\mathcal{O}(\\varepsilon^{-1})$ for positive semidefinite matrices. We develop infinite-dimensional analogues of these estimators for positive trace-class operators on separable Hilbert spaces. The idealized…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-28",
+  "updated": "2026-08-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

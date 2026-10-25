@@ -1,0 +1,22 @@
+{
+  "key": "2605.02701",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.02701",
+  "title": "Robust and Fast Training via Per-Sample Clipping",
+  "authors": [
+    "Davide Nobile",
+    "Philipp Grohs"
+  ],
+  "summary": "We propose a robust gradient estimator based on per-sample gradient clipping and analyze its properties both theoretically and empirically. We show that the resulting method, per-sample clipped SGD (PS-Clip-SGD), achieves optimal in-expectation convergence rates for non-convex optimization problems under heavy-tailed gradient noise. Moreover, we establish high-probability convergence guarantees that match the in-expectation rates up to polylogarithmic factors in the failure probability. We complement our theoretical results with multiple numerical experiments. In particular, we demonstrate…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-05-04",
+  "updated": "2026-06-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

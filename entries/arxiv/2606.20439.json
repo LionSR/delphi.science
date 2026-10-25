@@ -1,0 +1,23 @@
+{
+  "key": "2606.20439",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20439",
+  "title": "Four-digit Kaprekar dynamics in odd bases",
+  "authors": [
+    "Evan Chen",
+    "Ken Ono",
+    "Richard E. Schwartz",
+    "Dinesh S. Thakur"
+  ],
+  "summary": "Start with four digits, arrange them in both descending and ascending order, subtract, and repeat. This simple process is known as the Kaprekar routine, famous in base ten for sending every nonconstant four-digit string to $6174$. We show that in every odd base $B>3$, the four-digit Kaprekar map has an unexpectedly rigid structure. After at most three iterations, every nonconstant orbit enters an explicit triangular region $\\mathcal{T}_B$, and on this region the map is conjugate to projective doubling: \\[ \\{[r],[s]\\}\\longmapsto \\{[2r],[2s]\\}. \\] This gives a complete finite description of…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2607.07078",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.07078",
+  "title": "Forgetting-Factor Regret for Online Zero-Sum Games",
+  "authors": [
+    "Yuhang Liu",
+    "Zi'ang Yan",
+    "Wenjun Mei",
+    "Wenxiao Zhao"
+  ],
+  "summary": "This paper studies dynamic equilibrium tracking in online two-player zero-sum games with time-varying convex-concave payoff functions. Existing regret metrics for online saddle-point problems usually aggregate historical payoffs with uniform weights, and hence may fail to characterize the real-time tracking performance with respect to the current Nash equilibrium (NE). To address this issue, we introduce a zero-sum game regret function with a forgetting factor, which assigns exponentially decaying weights to past saddle gaps and emphasizes recent performance. This metric directly links…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

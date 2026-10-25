@@ -1,0 +1,21 @@
+{
+  "key": "2603.07156",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.07156",
+  "title": "Inexact Bregman Sparse Newton Method for Efficient Optimal Transport",
+  "authors": [
+    "Jianting Pan",
+    "Ji'an Li",
+    "Ming Yan"
+  ],
+  "summary": "Computing exact Optimal Transport (OT) distances for large-scale datasets is computationally prohibitive. While entropy-regularized alternatives offer speed, they sacrifice precision and frequently suffer from numerical instability in high-accuracy regimes. To address these limitations, we propose the Inexact Bregman Sparse Newton (IBSN) method, which efficiently solves the exact OT problems. Our approach utilizes a Bregman proximal point framework through a sequence of semi-dual subproblems. By solving these subproblems inexactly, we significantly reduce per-iteration complexity while…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-07",
+  "updated": "2026-03-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

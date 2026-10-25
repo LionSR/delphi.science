@@ -1,0 +1,19 @@
+{
+  "key": "2604.15690",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.15690",
+  "title": "Optimization Workshop Notes for Mathematical Programming with Equilibrium Constraints Algorithms: Penalty Interior-Point, Implicit-Programming, and Piecewise SQP",
+  "authors": [
+    "Jiguang Yu"
+  ],
+  "summary": "In this workshop, we discuss several algorithms for mathematical programs with equilibrium constraints (MPECs). The unifying theme is that MPECs are optimization problems whose feasible set contains a lower-level equilibrium system, often written through complementarity or variational-inequality conditions. This destroys the smooth manifold or convex structure that standard nonlinear programming methods rely on. We focus on four algorithmic viewpoints: (i) the classical penalty interior-point algorithm (PIPA); (ii) a monotone-linear complementarity problem (LCP) variant of PIPA that…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-17",
+  "updated": "2026-04-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2605.09484",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09484",
+  "title": "A Patchwise Local Fourier Extension Method for Function Approximation on General Two-Dimensional Domains",
+  "authors": [
+    "Zhenyu Zhao",
+    "Yanfei Wang"
+  ],
+  "summary": "We propose a patchwise local Fourier extension method for approximating smooth functions on general two dimensional domains with curved boundaries. The domain is embedded into a Cartesian background grid and decomposed into rectangular interior patches and one-side curved trapezoidal boundary patches. After local data transfer, all patches are converted into fixed-size tensor-product arrays and approximated by a truncated-SVD stabilized local Fourier extension procedure. Unlike global Fourier frame approximations, the proposed method localizes both the geometry and the ill-conditioned…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-10",
+  "updated": "2026-05-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

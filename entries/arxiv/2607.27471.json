@@ -1,0 +1,22 @@
+{
+  "key": "2607.27471",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.27471",
+  "title": "Residual-Driven Lifting Identification for Nonlinear-Manifold Reduced-Order Models of Parametrized Linear PDEs",
+  "authors": [
+    "Francesco A. B. Silva",
+    "Jean C. Ragusa",
+    "Theron Guo",
+    "Rudy Geelen"
+  ],
+  "summary": "We introduce a residual-driven procedure for training nonlinear-manifold reduced-order models for parametrized linear partial differential equations that, given prescribed latent and lifting spaces, identifies the nonlinear lifting without high-fidelity solution snapshots. The approximation is represented by a low-dimensional latent coordinate together with a nonlinear lifting into a richer reduced space. Rather than fitting the lifting to snapshot data, we determine it by minimizing a computable residual-based upper bound for the state error. For affinely parametrized operators, the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

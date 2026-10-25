@@ -1,0 +1,20 @@
+{
+  "key": "2609.27941",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.27941",
+  "title": "A bandwidth refinement of the Erdős distinct subset sums bound",
+  "authors": [
+    "Simone Costa",
+    "Stefano Della Fiore"
+  ],
+  "summary": "Let $f(n)$ be the least possible largest element of an $n$-element set of positive integers with pairwise distinct subset sums. Dubroff, Fox and Xu proved the finite lower bound \\[ f(n)\\ge \\binom{n}{\\lfloor n/2\\rfloor} \\] by applying a vertex-boundary estimate to the $2^{n-1}$ subsets whose sums lie below half of the total sum. We instead order all $2^n$ subsets by increasing subset-sum value. We prove that the bandwidth of this numbering is at most the largest element of the set, so the exact formula for the bandwidth of the hypercube gives the stronger finite bound \\[ f(n)\\ge…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-08-22",
+  "updated": "2026-08-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

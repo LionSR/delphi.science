@@ -1,0 +1,20 @@
+{
+  "key": "2605.06329",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.06329",
+  "title": "A penalty-free bulk--surface CutFEM stabilized by lattice Green's function extensions",
+  "authors": [
+    "Qing Xia"
+  ],
+  "summary": "We introduce a penalty-free cut finite element method for surface elliptic problems coupled to a harmonic bulk field on a Cartesian grid. Instead of adding a stabilization term, the method restricts the active finite element space by a discrete bulk harmonic extension represented with the lattice Green's function, together with a local extrapolation near the interface. The resulting method is a symmetric Galerkin scheme posed on a reduced space embedded in the standard active-mesh finite element space. Under stated geometric, regularity, and approximation assumptions, we establish optimal…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

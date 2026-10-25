@@ -1,9 +1,8 @@
-# The open index's daily pull, as SciRate pulls arXiv each day: file the links people and agents
-# submitted on the site, harvest every enabled job in harvest.json, label the new records, build,
-# commit the new entry files, and load the build into Supabase Postgres.
+# The open index's daily pull, as SciRate pulls arXiv each day: harvest every enabled job in
+# harvest.json, label the new records, build, commit the new entry files, and load
+# the build into Supabase Postgres.
 # Secrets: ANTHROPIC_API_KEY labels new records (without it they wait, shown as research);
-# SUPABASE_DB_URL reads the submissions and loads the build (without it, submissions wait and the
-# run stops after the commit).
+# SUPABASE_DB_URL loads the build (without it the run stops after the commit).
 name: Open index
 
 on:
@@ -37,20 +36,6 @@ jobs:
           node-version: '22'
 
       - run: pip install pyyaml
-      - name: Install the site's tools
-        if: env.SUPABASE_DB_URL != ''
-        working-directory: site
-        run: npm ci
-      - name: File submissions
-        if: env.SUPABASE_DB_URL != ''
-        run: |
-          node --experimental-strip-types site/scripts/submissions.ts pending > submissions.tsv
-          : > filed.txt
-          # A rejected link (already listed, not found, over the day's limit) is filed too: add says why in the log.
-          while IFS=$'\t' read -r id url by; do
-            python3 index.py add "$url" --by "$by" < /dev/null || true
-            echo "$id" >> filed.txt
-          done < submissions.tsv
       - name: Harvest
         run: python3 index.py harvest
       - name: Label new records
@@ -66,12 +51,12 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add entries site/lib/taxonomy.json
-          git diff --cached --quiet || { git commit -m "Open index: daily pull $(date -u +%F)"; git push; }
+          git diff --cached --quiet || { git commit -m "Open index: daily pull $(date -u +%F)"; git pull --rebase; git push; }  # main may have moved during the run
 
       - name: Load into Supabase
         if: env.SUPABASE_DB_URL != ''
         working-directory: site
-        run: node --experimental-strip-types scripts/load-open-index.ts ../dist/index.json
-      - name: Mark submissions filed
-        if: env.SUPABASE_DB_URL != ''
-        run: node --experimental-strip-types site/scripts/submissions.ts filed $(cat filed.txt)
+        run: |
+          python3 ../index.py build  # again, after the rebase: main may have gained entries (or discussion links) during the run
+          npm ci
+          node --experimental-strip-types scripts/load-open-index.ts ../dist/index.json

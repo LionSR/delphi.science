@@ -1,0 +1,25 @@
+{
+  "key": "2610.04671",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04671",
+  "title": "Asking the Crowd the Right Question: Bias-Cancelling Weights for Federated Learning",
+  "authors": [
+    "Ilya Kuruzov",
+    "Dmitrii Vishovan",
+    "Kirill Novoselov",
+    "Yuriy Dorn",
+    "Darina Dvinskikh",
+    "Alexander Gasnikov"
+  ],
+  "summary": "A federated objective is a weighted sum of client risks, and the weights are almost always fixed in advance. We treat them instead as the only instrument of a wisdom-of-crowds mechanism: clients are noisy views of one truth, each seeing it through an independent distortion that is unbiased across the crowd. That the optimal weights are inversely proportional to the clients' error energies is classical; we begin at the question that answer presupposes, which energies belong there and whether a crowd can recover them from itself. Excess risk on the truth is of the exact order of the aggregate…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-10-03",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

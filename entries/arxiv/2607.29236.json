@@ -1,0 +1,21 @@
+{
+  "key": "2607.29236",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.29236",
+  "title": "Enumeration and Classification of Triangle-Maximal Pseudoline Arrangements",
+  "authors": [
+    "Roman Parpalak",
+    "Denis Utkin"
+  ],
+  "summary": "We describe algorithms for the exhaustive enumeration and classification of simple arrangements of $n$ pseudolines ($n$ odd) maximizing the number of triangular faces. The depth-first search enumerates reduced words for the longest permutation $w_0$ by branching only on the even-indexed generators, using pruning constraints imposed by the geometry of optimal arrangements. The approach handles both perfect arrangements with a regular triangular pattern and unavoidable deviations from it for $n \\equiv 1 \\pmod 6$. The output is classified into a hierarchy of equivalence classes: by commutation,…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.CG"
+  ],
+  "published": "2026-07-31",
+  "updated": "2026-07-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

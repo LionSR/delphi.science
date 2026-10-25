@@ -1,0 +1,20 @@
+{
+  "key": "2607.12969",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12969",
+  "title": "Low-Precision Rank Compensation for Matrices and Tensor Trains",
+  "authors": [
+    "Ibrahim El Mountasser",
+    "Khalide Jbilou"
+  ],
+  "summary": "Lower numerical precision reduces storage and memory traffic but raises the perturbation floor. We study rank compensation: reinvesting saved memory in a larger approximation rank. For matrices, the singular-value error identity yields a directly testable sufficient condition requiring the additional singular component to offset the perturbation from storing the rank-augmented approximation in lower precision. On ten SuiteSparse matrices, all 100 truncation-dominated configurations (50 FP32 and 50 FP16) are certified non-increases and strict accuracy wins, with mean error ratio $0.963$ and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

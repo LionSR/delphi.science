@@ -1,0 +1,21 @@
+{
+  "key": "2605.25907",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.25907",
+  "title": "Rainbow panconnectivity in a graph collection",
+  "authors": [
+    "Menghan Ma",
+    "Lihua You",
+    "Xiaoxue Zhang"
+  ],
+  "summary": "Let $\\mathbf{G}=\\{G_1,\\dots,G_{n-1}\\}$ be a collection of not necessarily distinct $n$-vertex graphs with the same vertex set $V$. A path $P$ with $V(P)\\subseteq V$ and $|E(P)|\\leq n-1$ is called \\emph{rainbow} in $\\mathbf{G}$, if there exists an injection $φ\\colon E(P)\\to [n-1]$ such that $e\\in E(G_{φ(e)})$ for each $e\\in E(P)$. The graph collection $\\mathbf{G}$ is said to be \\emph{rainbow panconnected} if for every pair of vertices $x,y\\in V$, there exists a rainbow path of $k$ vertices joining $x$ and $y$ in $\\mathbf{G}$ for every integer $k\\in \\left[d_{\\mathbf{G}}(x,y)+1, n\\right]$,…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-05-25",
+  "updated": "2026-06-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

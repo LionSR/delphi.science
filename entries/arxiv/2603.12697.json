@@ -1,0 +1,22 @@
+{
+  "key": "2603.12697",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.12697",
+  "title": "Efficient equivalence checking of Clifford-U circuits with shared single-qubit unitaries",
+  "authors": [
+    "Daisuke Sakamoto",
+    "Soshun Naito",
+    "Yusei Mori",
+    "Kosuke Mitarai"
+  ],
+  "summary": "Quantum circuit equivalence checking asks whether two circuits implement the same unitary. It guarantees compiler correctness and safe optimization, yet most existing approaches scale exponentially with the number of qubits or the circuit depth, or are restricted to specific circuit structures. In this work, we present an equivalence-checking method for circuits formed by arbitrary single-qubit layers interleaved with Clifford layers. This pattern is common in variational quantum algorithms and Hamiltonian simulation via Trotter decomposition. It can also represent any unitary with…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-13",
+  "updated": "2026-03-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

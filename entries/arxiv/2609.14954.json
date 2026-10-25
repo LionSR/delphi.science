@@ -1,0 +1,21 @@
+{
+  "key": "2609.14954",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.14954",
+  "title": "A time explicit multiscale framework for heterogeneous elastic wave propagation based on multipoint stress discretization",
+  "authors": [
+    "Xiang Zhong",
+    "Eric T. Chung",
+    "Shubin Fu"
+  ],
+  "summary": "Simulating elastic wave propagation in heterogeneous media presents significant mathematical and computational challenges, since resolving fine-scale material variations requires extremely fine spatial discretizations, while mixed stress--displacement formulations typically lead to large saddle-point systems that are not well suited for efficient time integration. Moreover, conventional multiscale reductions generally produce nontrivial coarse mass matrices, thereby requiring additional linear solves at every time step and diminishing the advantages of explicit schemes. To address these…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

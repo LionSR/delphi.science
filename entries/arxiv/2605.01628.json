@@ -1,0 +1,24 @@
+{
+  "key": "2605.01628",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.01628",
+  "title": "Self-Normalized Martingales and Uniform Regret Bounds for Linear Regression",
+  "authors": [
+    "Fan Chen",
+    "Jian Qian",
+    "Alexander Rakhlin",
+    "Nikita Zhivotovskiy"
+  ],
+  "summary": "Self-normalized martingale inequalities lie at the heart of confidence ellipsoids for online least squares and, more broadly, many bandit and reinforcement-learning results. Yet existing vector and scalar results typically rely on bounded covariates and an explicit regularization matrix, producing bounds that are \\emph{not scale-invariant}: although the self-normalized quantity is scale-invariant by definition, its standard upper bounds are not. We characterize when scale-invariant upper bounds on self-normalized martingales are possible. Without further assumptions, we prove that nontrivial…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-05-02",
+  "updated": "2026-05-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

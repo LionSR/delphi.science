@@ -1,0 +1,23 @@
+{
+  "key": "2606.20917",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20917",
+  "title": "NektarIR: A Domain-Specific Compiler for High-Order Finite Element Operations on Heterogeneous Hardware",
+  "authors": [
+    "Edward Erasmie-Jones",
+    "Giacomo Castiglioni",
+    "David Moxey"
+  ],
+  "summary": "Modern high performance computing (HPC) applications must target heterogeneous hardware. This requires significant work to ensure domain specific implementations translate to highly performant kernels across a range hardware types and vendors, each requiring bespoke optimization to make use of the specific target architecture. Through the development of a domain specific compiler built with the multi-level intermediate representations (MLIR) project, one can express a high-level, close to the specific domain, abstraction that is progressively lowered to a low, close to metal, abstraction. At…",
+  "domain": "cs.MS",
+  "tags": [
+    "cs.MS",
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

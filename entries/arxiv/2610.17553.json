@@ -1,0 +1,20 @@
+{
+  "key": "2610.17553",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.17553",
+  "title": "Efficient Shallow Ritz Method: 1D Semi-Linear Diffusion-Reaction and Allen-Cahn Equations",
+  "authors": [
+    "Zhiqiang Cai",
+    "César Herrera"
+  ],
+  "summary": "An efficient shallow Ritz method was developed in [8, 9] for one-dimensional linear diffusion and diffusion-reaction problems. In this paper, the method is extended to a nonlinear diffusion-reaction equation with a cubic reaction term: (1) a basic error estimate of the shallow Ritz discretization is established and (2) a reduced block Newton (rBN) method for solving the resulting non-convex optimization problem is developed. Again, the computational cost of the rBN method is $\\mathcal{O}(n)$ for one-dimensional problems, where $n$ is the number of neurons. Combining a convex splitting scheme…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2603.21457",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.21457",
+  "title": "Local linear stability of dual-pairing summation-by-parts methods for nonlinear conservation laws",
+  "authors": [
+    "Dougal Stewart",
+    "Kenneth Duru"
+  ],
+  "summary": "A recent study by Gassner et al. [J. Sci. Comput. 90:79 (2022)] demonstrates that local energy stability--that is, ensuring the asymptotic numerical growth rate does not exceed the continuous growth rate--is crucial for achieving accurate numerical simulations of nonlinear conservation laws. While nonlinear entropy stability is necessary for numerical stability (i.e., ensuring the boundedness of nonlinear numerical solutions), local energy stability is essential to prevent unresolved high-frequency wave modes from dominating the simulation. Currently, it remains an open question whether…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-03-23",
+  "updated": "2026-03-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

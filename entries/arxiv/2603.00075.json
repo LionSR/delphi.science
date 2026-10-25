@@ -1,0 +1,19 @@
+{
+  "key": "2603.00075",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.00075",
+  "title": "A Surface-Based Formulation of the Traveling Salesman Problem",
+  "authors": [
+    "Yılmaz Arslanoğlu"
+  ],
+  "summary": "We present an exact formulation of the symmetric Traveling Salesman Problem (TSP) that replaces the classical edge-selection view with a surface-building approach. Instead of selecting edges to form a cycle, the model selects a set of connected triangles where the boundary of the resulting surface forms the tour. This method yields a mixed-integer linear programming (MILP) formulation where a tree constraint enforces global connectivity, while local connectivity at each vertex is guaranteed via Euler characteristic constraints, replacing the need for subtour elimination. The formulation is…",
+  "domain": "math.GM",
+  "tags": [
+    "math.GM"
+  ],
+  "published": "2026-02-12",
+  "updated": "2026-02-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

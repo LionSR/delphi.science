@@ -1,0 +1,23 @@
+{
+  "key": "2608.04573",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.04573",
+  "title": "Resource Estimation for Fault-Tolerant Quantum Programs",
+  "authors": [
+    "Bonan Su",
+    "Yuan Feng",
+    "Li Zhou",
+    "Mingsheng Ying"
+  ],
+  "summary": "Fault-tolerant quantum computation enables the deployment of practical quantum algorithms but incurs substantial overhead from error correction, making resource estimation a central concern. Beyond case-by-case analyses, existing quantum programming languages either require programmers to manipulate low-level hardware details, rendering fault-tolerant implementations cumbersome, or abstract away the underlying error-correction schemes, reducing the effectiveness of resource utilization and estimation. To address these limitations while preserving programmability, we present a quantum…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.PL"
+  ],
+  "published": "2026-08-05",
+  "updated": "2026-08-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

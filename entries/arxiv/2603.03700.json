@@ -1,0 +1,24 @@
+{
+  "key": "2603.03700",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.03700",
+  "title": "Generalization Properties of Score-matching Diffusion Models for Intrinsically Low-dimensional Data",
+  "authors": [
+    "Saptarshi Chakraborty",
+    "Quentin Berthet",
+    "Peter L. Bartlett"
+  ],
+  "summary": "Despite the remarkable empirical success of score-based diffusion models, their statistical guarantees remain underdeveloped. Existing analyses often provide pessimistic convergence rates that do not reflect the intrinsic low-dimensional structure common in real data, such as that arising in natural images. In this work, we study the statistical convergence of score-based diffusion models for learning an unknown distribution $μ$ from finitely many samples. Under mild regularity conditions on the forward diffusion process and the data distribution, we derive finite-sample error bounds on the…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.AI",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-03-04",
+  "updated": "2026-04-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

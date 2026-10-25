@@ -1,0 +1,23 @@
+{
+  "key": "2605.17189",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.17189",
+  "title": "Sample-efficient inductive matrix completion with noise and inexact side-information",
+  "authors": [
+    "Yuepeng Yang",
+    "Cong Ma"
+  ],
+  "summary": "Inductive matrix completion (IMC) is a variant of low-rank matrix completion that incorporates row and column side-information. In principle, it can reduce the effective dimension of the recovery problem from the ambient matrix size to the dimension of the side-information features. Existing theory, however, does not fully realize this advantage in the noisy setting: sample-efficient guarantees only apply to noiseless recovery, while noisy guarantees require sample sizes comparable to ordinary matrix completion. This paper closes this gap for noisy IMC. We analyze a nonconvex projected…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.IT",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-05-16",
+  "updated": "2026-06-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

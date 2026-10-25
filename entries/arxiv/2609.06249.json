@@ -1,0 +1,22 @@
+{
+  "key": "2609.06249",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.06249",
+  "title": "Effects of Trotter Error, Digitization Error, and Initial State Overlap on Tapered Quantum Phase Estimation for Minimum Eigenvalue Computation",
+  "authors": [
+    "Elijah Pelofske",
+    "Stephan Eidenbenz"
+  ],
+  "summary": "We numerically implement full quantum circuits of optimal tapered Quantum Phase Estimation (in the form of an implementable approximate bandwidth-limited DPSS taper) for the purpose of minimum eigenvalue computation, where the Hamiltonian time-evolution unitary is implemented using standard Trotterization, and the taper state is constructed using an optimized bandwidth-limited taper. We illustrate, on representative quantum Hamiltonians, with tractable exact classical numerical quantum circuit simulations, how tapered QPE performs with respect to optimal phase sampling rate, absolute error,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.dis-nn",
+    "math.NA"
+  ],
+  "published": "2026-09-05",
+  "updated": "2026-09-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

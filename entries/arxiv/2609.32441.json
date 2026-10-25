@@ -1,0 +1,20 @@
+{
+  "key": "2609.32441",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32441",
+  "title": "Saddle-Point Problems with a Low-Dimensional Block Do Not Need Accurate Inner Solves",
+  "authors": [
+    "Ivan Fomin",
+    "Alexander V. Gasnikov"
+  ],
+  "summary": "Many learning problems couple a high-dimensional block of parameters with a handful of adversarial or dual variables: worst-group risk over a few groups, or learning under a few constraints. We consider $\\min_{x\\in X}\\max_{y\\in Y} f(x,y)$ with $X\\subseteq\\mathbb{R}^n$, a compact convex set and strongly convex with condition number $κ$, and we count the oracle calls for $x$ and for $y$ separately. The textbook approach runs a cutting-plane method in $y$ and solves every inner problem to accuracy $\\varepsilon$ with an accelerated method; it needs $O(m\\log(1/\\varepsilon))$ calls for $y$ but…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2603.13072",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.13072",
+  "title": "Practical framework for simulating permutation-equivariant quantum circuits",
+  "authors": [
+    "Su Yeon Chang",
+    "Martin Larocca",
+    "M. Cerezo"
+  ],
+  "summary": "Understanding which subclasses of quantum circuits are efficiently classically simulable is fundamental to delineating the boundary between classical and quantum computation. In this context, it is well known that certain tasks based on permutation-equivariant unitaries-i.e., $n$-qubit circuits whose action commutes with the qubit-permuting representation of the symmetric group $S_n$-can be simulated in polynomial time. However, existing approaches scale as $O(n^7)$, and can rapidly become prohibitively expensive. In this work, we introduce a practical algorithm for simulating…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-13",
+  "updated": "2026-03-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2604.26692",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26692",
+  "title": "Towards Quantum Optimised Malware Containment",
+  "authors": [
+    "Matthew Sutcliffe",
+    "Ravindra Mutyamsetty"
+  ],
+  "summary": "The containment of malware in computing networks may be naturally formulated as a network influence minimisation problem, in which one seeks to limit the expected spread of an infection while balancing the operational cost of disabling network connections. Classical approaches often rely on Monte Carlo simulation of stochastic diffusion processes and greedy optimisation over candidate edge removals, resulting in significant computational overhead due to repeated influence evaluations. In this work, we propose a hybrid quantum approach which combines Quantum Amplitude Estimation (QAE) and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

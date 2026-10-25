@@ -1,0 +1,22 @@
+{
+  "key": "2603.24495",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.24495",
+  "title": "Reflected diffusion models adapt to low-dimensional data",
+  "authors": [
+    "Asbjørn Holk",
+    "Claudia Strauch",
+    "Lukas Trottner"
+  ],
+  "summary": "While the mathematical foundations of score-based generative models are increasingly well understood for unconstrained Euclidean spaces, many practical applications involve data restricted to bounded domains. This paper provides a statistical analysis of reflected diffusion models on the hypercube $[0,1]^D$ for target distributions supported on $d$-dimensional linear subspaces. A primary challenge in this setting is the absence of Gaussian transition kernels, which play a central role in standard theory in $\\mathbb{R}^D$. By employing an easily implementable infinite series expansion of the…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-03-25",
+  "updated": "2026-03-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

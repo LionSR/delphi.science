@@ -1,0 +1,22 @@
+{
+  "key": "2608.28727",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.28727",
+  "title": "Overcoming the spatial order barrier for nonlinear SPDEs with additive space-time white noise",
+  "authors": [
+    "Lukas Anzeletti",
+    "Máté Gerencsér",
+    "Helena Kremp"
+  ],
+  "summary": "We introduce a fully discrete numerical scheme for semilinear SPDEs with additive space-time white noise that overcomes the previous order barrier for the spatial convergence rate. The scheme, which we refer to as the doubly accelerated exponential Euler scheme, achieves a strong convergence rate of $M^{-1+ε}$ in time and $N^{-3/2+ε}$ in space for any $ε>0$, where $M^{-1}$ and $N^{-1}$ are the temporal, respectively the spatial, meshsizes. This substantially improves the standard spatial error bounds of order $N^{-1/2}$ in the literature. Numerical simulations support the findings.",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.PR"
+  ],
+  "published": "2026-08-28",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2601.21333",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.21333",
+  "title": "Certifying optimality in nonconvex robust PCA",
+  "authors": [
+    "Pinxi Gong",
+    "Lexiao Lai",
+    "Jianhao Ma"
+  ],
+  "summary": "Robust principal component analysis seeks to recover a low-rank matrix from fully observed data with sparse corruptions. A scalable approach fits a low-rank factorization by minimizing the sum of entrywise absolute residuals, leading to a nonsmooth and nonconvex objective. Under standard incoherence conditions and a random model for the corruption support, we study factorizations of the ground-truth rank-$r$ matrix with both factors of rank $r$. With high probability, every such factorization is a Clarke critical point. We also characterize the local geometry: when the factorization rank…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-01-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2609.35418",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.35418",
+  "title": "Convex Optimization Is Free When Accuracy Is Expensive",
+  "authors": [
+    "Arthur Paing",
+    "Arthur Jacot"
+  ],
+  "summary": "This paper studies convex optimization when the gradient cannot be evaluated exactly, but only approximated by a hierarchy of algorithms whose compute grows like $δ^{-γ}$ in the accuracy $δ$. When $γ>2$, falling into the Harder-Than-Monte-Carlo (HTMC) regime, the price of accuracy outruns the variance reduction that Monte Carlo would buy and we show that minimizing a loss function costs no more, up to a factor depending only on $γ$, than a single evaluation of its gradient at the accuracy the problem demands. A randomized multilevel oracle replaces the deterministic approximation of accuracy…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

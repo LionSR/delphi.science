@@ -1,0 +1,20 @@
+{
+  "key": "2602.04988",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.04988",
+  "title": "A uniformly accurate multiscale time integrator for the nonlinear Klein-Gordon equation in the nonrelativistic regime via simplified transmission conditions",
+  "authors": [
+    "Weizhu Bao",
+    "Caoyi Liu"
+  ],
+  "summary": "We propose a new and simplified multiscale time integrator Fourier pseudospectral (MTI-FP) method for the nonlinear Klein-Gordon equation (NKGE) with a dimensionless parameter epsilon in (0,1] inversely proportional to the speed of light, and establish its uniform first-order accuracy in time in the nonrelativistic regime, i.e. 0 < epsilon << 1. In this regime, the solution of the NKGE is highly oscillatory in time with O(epsilon^2)-wavelength, which brings significant difficulties in designing uniformly accurate numerical methods. The MTI-FP is based on (i) a multiscale decomposition by…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-04",
+  "updated": "2026-02-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

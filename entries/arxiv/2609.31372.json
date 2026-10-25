@@ -1,0 +1,23 @@
+{
+  "key": "2609.31372",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.31372",
+  "title": "Quantum algorithms for the exponentiation of Toeplitz matrices and applications in partial differential equations",
+  "authors": [
+    "Xabier Gutiérrez",
+    "Nicola Mariella",
+    "Javier González-Conde",
+    "Sergiy Zhuk",
+    "Mikel Sanz"
+  ],
+  "summary": "We present quantum algorithms to approximate the exponential of banded Toeplitz matrices. These matrices have central importance in many PDE related problems, but their quantum implementation is hindered by their possibly large norms. Constructing directly the exponential we can circumvent this limitation. By relating the lower/upper shift operators to circulant and skewcirculant generators, which are diagonalised by the QFT, we construct (i) an LCU-based block encoding of banded Toeplitz matrices, (ii) an efficient, controllably truncated Pauli-string decomposition of the circulant…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

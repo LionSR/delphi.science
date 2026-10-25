@@ -1,0 +1,24 @@
+{
+  "key": "2609.19828",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.19828",
+  "title": "Mixed-precision GPU algorithms for efficient turbulent flow simulations with Raviart-Thomas finite elements",
+  "authors": [
+    "Ivan Prusak",
+    "Enes Mustafa Soydan",
+    "Ivan Pribec",
+    "Martin Kronbichler"
+  ],
+  "summary": "We propose GPU algorithms for high-fidelity simulation of incompressible turbulent flows. Discretization in space is performed with H(div)-conforming high-order Raviart-Thomas finite elements for the velocity and an $L^2$-conforming discontinuous Galerkin approximation for the pressure. In time, a consistent splitting scheme based on higher-order BDF time stepping is used, with convection treated explicitly. In this scheme, a pressure Poisson equation and a symmetric reaction-diffusion-type equation for the velocity need to be solved in each time step. We develop a solution framework with…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "cs.MS",
+    "math.NA"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

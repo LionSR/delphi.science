@@ -1,0 +1,22 @@
+{
+  "key": "2605.06448",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.06448",
+  "title": "Performance guaranteed MPC Policy Approximation via Cost Guided Learning",
+  "authors": [
+    "Chenchen Zhou",
+    "Yi Cao",
+    "Shuang-hua Yang"
+  ],
+  "summary": "Model predictive control (MPC) is widely used in industries but implementing it poses challenges due to hardware or time constraints. A promising solution is to approximate the MPC policy using function approximators like neural networks. Existing methods focus on minimizing the error between the approximators outputs and the MPC optimal control actions on training data, which is called error guided learning approach in this paper. However, the goals of control law design is not to minimize the fitting error but to minimize the operation cost. This paper proposes a novel cost-guided learning…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

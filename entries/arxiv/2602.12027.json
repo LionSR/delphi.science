@@ -1,0 +1,20 @@
+{
+  "key": "2602.12027",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.12027",
+  "title": "General-purpose post-sampling reweighting method for multimodal target measures",
+  "authors": [
+    "Pierre Monmarché"
+  ],
+  "summary": "When sampling multi-modal probability distributions, correctly estimating the relative probability of each mode, even when the modes have been discovered and locally sampled, remains challenging. We test a simple reweighting scheme designed for this situation, which consists in minimizing (in terms of weights) the Kullback-Leibler divergence of a weighted (regularized) empirical distribution of the samples with respect to the target measure.",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "math.PR"
+  ],
+  "published": "2026-02-12",
+  "updated": "2026-02-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

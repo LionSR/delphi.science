@@ -1,0 +1,22 @@
+{
+  "key": "2610.01199",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01199",
+  "title": "Low-Budget Active Learning through Entropic Optimal Transport",
+  "authors": [
+    "Rim Hajal",
+    "Mathieu Besançon",
+    "Jérôme Malick"
+  ],
+  "summary": "We consider low-budget active learning, which consists of selecting a limited number of points, the coreset, such that a model can be trained to high accuracy on the selection only. This problem is particularly relevant in contexts where labeling requires costly expert intervention, as in medical applications. We leverage features extracted from a pretrained self-supervised model to represent the data, and perform coreset selection directly in this feature space. In this paper, we use entropic optimal transport, specifically the Sinkhorn divergence, as the coreset selection criterion, which…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

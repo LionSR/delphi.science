@@ -1,0 +1,23 @@
+{
+  "key": "2607.28422",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.28422",
+  "title": "QAdapt: A Noise-Adaptive Neural Pre-Decoding Framework for Quantum Error Correction",
+  "authors": [
+    "Ran Miao",
+    "Rui Luo",
+    "Xiaohan Shan",
+    "Xiaoming Sun"
+  ],
+  "summary": "Fault-tolerant quantum computing (FTQC) relies on quantum error correction to suppress physical errors and preserve logical information at scale. In practice, however, performance is constrained not only by physical noise but also by the latency of classical decoders processing rapidly generated syndrome data. This challenge is exacerbated by hardware noise that is strong, heterogeneous, and nonstationary, as well as by the simulation-to-hardware distribution shift that can substantially degrade fixed neural decoders. We present QAdapt, a noise-adaptive neural pre-decoding framework for…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "quant-ph"
+  ],
+  "published": "2026-07-30",
+  "updated": "2026-07-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

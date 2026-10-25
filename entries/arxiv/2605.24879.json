@@ -1,0 +1,24 @@
+{
+  "key": "2605.24879",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.24879",
+  "title": "Efficient DP-SGD for LLMs with Randomized Clipping",
+  "authors": [
+    "Enayat Ullah",
+    "Sai Aparna Aketi",
+    "Devansh Gupta",
+    "Huanyu Zhang",
+    "Meisam Razaviyayn"
+  ],
+  "summary": "Large language models (LLMs) are trained on vast datasets that may contain sensitive information. Differential privacy (DP), the de facto standard for formal privacy guarantees, provides a principled framework for training LLMs with provable privacy protection. However, state-of-the-art DP training implementations rely on fast gradient clipping techniques with memory overhead $O(B \\min\\{T^2, d^2\\})$, where $B$ is the batch size, $T$ is the sequence length, and $d$ is the model width. This becomes prohibitive as both model size and context length grow. We propose DP-SGD-RC, a novel variant of…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-05-24",
+  "updated": "2026-05-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

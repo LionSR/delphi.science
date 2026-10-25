@@ -1,0 +1,22 @@
+{
+  "key": "2610.14070",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.14070",
+  "title": "Can the Quantum Fisher Effective Dimension Judge a Hybrid Quantum Neural Network?",
+  "authors": [
+    "Md Masum Mia",
+    "Amith Khandakar",
+    "Mohamed Arselene Ayari"
+  ],
+  "summary": "Hybrid quantum neural networks (QNNs) pair a classical feature extractor with a variational quantum circuit, and the effective dimension of the circuit's quantum Fisher information matrix (QFIM) is widely used to assess such models. This scalar is often interpreted as an indicator of trainability or accuracy, although these readings are rarely tested under controlled conditions. We therefore investigate what it actually measures. We define the effective dimension as the participation ratio of the QFIM diagonal, which lies between one and the parameter count, and we evaluate it across two…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

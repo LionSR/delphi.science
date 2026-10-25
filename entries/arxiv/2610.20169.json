@@ -1,0 +1,22 @@
+{
+  "key": "2610.20169",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.20169",
+  "title": "Continuous-Time q-Learning with Nonsmooth Value Functions: a BSDE Approach",
+  "authors": [
+    "Manuel Asero",
+    "Elena Bandini",
+    "Andrea Cosso",
+    "Laura Perelli"
+  ],
+  "summary": "We study continuous-time q-learning for entropy-regularized diffusion control without assuming classical differentiability of the value function. Rewards and admissible policies need only be Borel measurable, which allows discontinuous rewards. The diffusion coefficient $σ$ is action independent and locally uniformly elliptic, and the drift is $b_0 + σψ$, with $b_0$ action independent and $ψ$ bounded. In this setting the q-function involves the value only through its gradient. For each admissible policy, we represent its value by a backward stochastic differential equation (BSDE) and prove…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2603.21374",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.21374",
+  "title": "Hybrid Quantum-Classical Branch-and-Price for Intra-Day Electric Vehicle Charging Scheduling via Partition Coloring",
+  "authors": [
+    "Peng Sun",
+    "Liang Zhong",
+    "Qing-Guo Zeng",
+    "Li Wang"
+  ],
+  "summary": "The rapid deployment of electric vehicles (EVs) in public parking facilities and fleet operations raises challenging intra-day charging scheduling problems under tight charger capacity and limited dwell times. We model this problem as a variant of the Partition Coloring Problem (PCP), where each vehicle defines a partition, its candidate charging intervals are vertices, and temporal and resource conflicts are represented as edges in a conflict graph. On this basis, we design a branch-and-price algorithm in which the restricted master problem selects feasible combinations of intervals, and…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math.OC"
+  ],
+  "published": "2026-03-22",
+  "updated": "2026-04-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

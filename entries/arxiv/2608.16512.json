@@ -1,0 +1,19 @@
+{
+  "key": "2608.16512",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.16512",
+  "title": "MoMPy: automated construction of moment matrices for semidefinite programming relaxations",
+  "authors": [
+    "Carles Roch i Carceller"
+  ],
+  "summary": "We present MoMPy, an open-source Python package that provides a unified, declarative construction of moment matrices for semidefinite programming (SDP) hierarchies. The user declares operator labels together with a small set of structural relations, and MoMPy returns a matrix of SDP variable indices in which every implied identification has already been made, ready for CVXPY or any other modelling layer. Internally, the identification problem is recast as a word-rewriting problem on tuples of integers and solved with a memoised breadth-first closure coupled to a disjoint-set forest, so that…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

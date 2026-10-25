@@ -1,0 +1,21 @@
+{
+  "key": "2607.24655",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.24655",
+  "title": "On the problem of large gcd for disjoint residue classes",
+  "authors": [
+    "Jan Fornal",
+    "Yu-Chen Sun"
+  ],
+  "summary": "Consider $k$ pairwise disjoint residue classes $a_i \\pmod{m_i}$. We prove that \\[ \\max_{1\\leq i<j\\leq k}\\gcd(m_i,m_j) \\gg k\\exp\\!\\left(-(2+o(1)) \\sqrt{\\frac{\\log k}{\\log\\log k}}\\right). \\] The proof uses a complete graph whose edges are colored by the gcds of the corresponding moduli, together with a structural lemma, a sieve-theoretic partition, Möbius inversion, and the discrete Fourier transform.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.NT"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

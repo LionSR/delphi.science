@@ -1,0 +1,21 @@
+{
+  "key": "2602.07196",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.07196",
+  "title": "Primal-dual algorithm for distributed optimization: A dissipativity-based perspective",
+  "authors": [
+    "Weijian Li",
+    "Panos J. Antsaklis",
+    "Hai Lin"
+  ],
+  "summary": "We study a continuous-time primal-dual algorithm for distributed optimization with nonconvex local cost functions over weight-unbalanced digraphs, and analyze its performance from a dissipativity-based perspective. We first reformulate the algorithm as a Lure type system, consisting of a linear subsystem that relies on the communication topology and the algorithm gains, and a static nonlinear gradient feedback. We then show that the linear subsystem is dissipative with respect to a suitable supply rate, while the nonlinear feedback is not passive. Finally, we establish that, by properly…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-06",
+  "updated": "2026-02-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,26 @@
+{
+  "key": "2606.26912",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.26912",
+  "title": "A Givens-exchange ansatz for molecular variational eigensolvers",
+  "authors": [
+    "Azadeh Alavi",
+    "Fatemeh Kouchmeshki",
+    "Muhammad Usman",
+    "Yongli Ren",
+    "Ke Deng",
+    "Hossein Akhoundi",
+    "Abdolrahman Alavi"
+  ],
+  "summary": "Molecular ground-state energies help determine conformer rankings, reaction energetics, and electronic effects in computational drug discovery, but accurate calculations become difficult when strong correlation or large active spaces are important. Variational quantum eigensolvers estimate these energies by optimizing a parameterized quantum state, making ansatz design central to both accuracy and cost. We study a fixed-topology Givens-exchange ansatz that avoids architecture search. The circuit starts from the computational-basis state with the lowest diagonal Hamiltonian expectation and…",
+  "domain": "physics.chem-ph",
+  "tags": [
+    "physics.chem-ph",
+    "quant-ph"
+  ],
+  "published": "2026-06-25",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

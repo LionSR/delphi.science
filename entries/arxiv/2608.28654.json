@@ -1,0 +1,23 @@
+{
+  "key": "2608.28654",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.28654",
+  "title": "Orientations without transitive arcs for cubic graphs and phylogenetic networks",
+  "authors": [
+    "Janosch Döcker",
+    "Simone Linz"
+  ],
+  "summary": "An $st$-orientation of an undirected graph $G$ is an acyclic digraph with a single source $s$ and a single sink $t$ that can be obtained from $G$ by assigning a direction to each edge. The classical problem of deciding if an undirected graph $G$ has an $st$-orientation can be solved efficiently. On the other hand, deciding if an $st$-orientation of $G$ exists that does not have any transitive arc is NP-complete, even if each vertex of $G$ has degree at most four. Here we show that this last decision problem remains NP-complete if $G$ is cubic, which settles an open question by Binucci et al.…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "cs.DM",
+    "math.CO",
+    "q-bio.PE"
+  ],
+  "published": "2026-08-20",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

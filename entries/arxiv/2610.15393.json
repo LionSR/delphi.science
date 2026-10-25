@@ -1,0 +1,19 @@
+{
+  "key": "2610.15393",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.15393",
+  "title": "Impact of matrix topological properties on the convergence of the conjugate gradient method",
+  "authors": [
+    "Alexander Prolubnikov"
+  ],
+  "summary": "It is well known that the matrix structure affects the convergence of iterative methods, particularly those utilizing Krylov subspaces. The matrix structure, determined by its graph, dictates the propagation order of updates to the vector components that are recursively computed during the conjugate gradient method iterations. Along with the propagation of these component updates, round-off errors also propagate. We present a model for the propagation and accumulation of round-off errors and demonstrate that the larger the values of topological characteristics of the matrix graph, such as…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-11",
+  "updated": "2026-10-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

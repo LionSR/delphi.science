@@ -1,0 +1,25 @@
+{
+  "key": "2602.05227",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05227",
+  "title": "Radon--Wasserstein Gradient Flows for Interacting-Particle Sampling in High Dimensions",
+  "authors": [
+    "Elias Hess-Childs",
+    "Dejan Slepčev",
+    "Lantian Xu"
+  ],
+  "summary": "Gradient flows of the Kullback--Leibler (KL) divergence, such as the Fokker--Planck equation and Stein Variational Gradient Descent, evolve a distribution toward a target density known only up to a normalizing constant. We introduce new gradient flows of the KL divergence with a remarkable combination of properties: they admit accurate interacting-particle approximations in high dimensions, and the per-step cost scales linearly in both the number of particles and the dimension. These gradient flows are based on new transportation-based Riemannian geometries on the space of probability…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.AP",
+    "math.NA",
+    "stat.ME"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-02-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

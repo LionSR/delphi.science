@@ -1,0 +1,31 @@
+{
+  "key": "2601.21284",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.21284",
+  "title": "PILD: Physics-Informed Learning via Diffusion",
+  "authors": [
+    "Tianyi Zeng",
+    "Tianyi Wang",
+    "Jiaru Zhang",
+    "Zimo Zeng",
+    "Feiyang Zhang",
+    "Yiming Xu",
+    "Sikai Chen",
+    "Junfeng Jiao",
+    "Christian Claudel",
+    "Xinbo Chen"
+  ],
+  "summary": "Diffusion models have emerged as powerful generative tools for modeling complex data distributions, yet their purely data-driven nature limits applicability in engineering and scientific problems where physical laws must be respected. This paper proposes Physics-Informed Learning via Diffusion (PILD), a framework that unifies diffusion modeling and physical constraints through a probabilistic residual formulation with a virtual residual observation sampled from a Laplace distribution. To make this formulation practical under noisy diffusion states, we introduce a Jensen-gap-aware adaptive…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "cs.ET",
+    "math.AP"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-07-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

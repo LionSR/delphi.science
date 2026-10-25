@@ -1,0 +1,20 @@
+{
+  "key": "2609.13066",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.13066",
+  "title": "Convergence and compactness of discrete aggregation trees",
+  "authors": [
+    "Serte Donderwinkel",
+    "Jeroen van Haastert"
+  ],
+  "summary": "We study a class of random aggregation trees that generalizes the discrete stick-breaking construction of the uniform labelled tree (Aldous, 1991). To sample the tree of size $n$, vertices are added sequentially, with the $i$th vertex starting a new branch with a prescribed probability $f(n,i)$; otherwise, it extends the current branch. We also define a continuum analogue by replacing the Poisson point process of intensity $tdt$ in the construction of the Brownian continuum random tree by one of intensity $f(t)dt$. We establish scaling limits for two families of discrete aggregation trees in…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-09-11",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

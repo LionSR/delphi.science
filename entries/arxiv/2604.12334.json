@@ -1,0 +1,24 @@
+{
+  "key": "2604.12334",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.12334",
+  "title": "On additive averaging kernels for finite Markov chains",
+  "authors": [
+    "Ryan J. Y. Lim",
+    "Michael C. H. Choi"
+  ],
+  "summary": "We study additive mixtures of Markov kernels of the form $A_α= αP + (1-α)G$, where $α\\in [0,1]$, $P$ is a baseline sampler and $G$ is a Gibbs kernel induced by a partition of the state space. We first motivate the study of $A_α$, which can be interpreted as the projection of a lifted Markov chain. We then consider the minimisation of distance to stationarity under two objectives: the squared Frobenius norm and the Kullback-Leibler (KL) divergence. For the Frobenius objective, we derive explicit trace formulae and identify a Cheeger-type functional that characterises optimal two-block…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.IT",
+    "math.CO",
+    "math.OC",
+    "stat.CO"
+  ],
+  "published": "2026-04-14",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2606.30270",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.30270",
+  "title": "A Complete Complexity Dichotomy for Cyclic Attractor Detection in Boolean Networks with Restricted Local Rules",
+  "authors": [
+    "Alexander Drobyshev",
+    "Grigoriy Bokov"
+  ],
+  "summary": "Boolean networks (BNs) are finite models of interacting systems whose long-term behaviour is organised by attractors. After a transient phase, every synchronously updated BN reaches either a fixed state or a cyclic attractor. Therefore, deciding whether a prescribed cyclic behaviour exists is a basic computational task in finite-state network dynamics. Here we study this task for networks with restricted local rules: each node is updated by a Boolean rule from a fixed closed rule family, and the period is fixed in advance. We prove a complete dichotomy for every fixed period at least two.…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "cs.DM",
+    "math.DS"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-07-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

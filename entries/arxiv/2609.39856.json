@@ -1,0 +1,21 @@
+{
+  "key": "2609.39856",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.39856",
+  "title": "Exact Representation of Piecewise Polynomial Finite Element Functions by Two-Hidden-Layer Multilayer Perceptrons",
+  "authors": [
+    "Jun Hu",
+    "Pengzhan Jin",
+    "Shengyang Xu"
+  ],
+  "summary": "We construct exact representations of finite element functions of arbitrary polynomial degree on simplicial meshes in any spatial dimension by two-hidden-layer multilayer perceptrons (MLPs). The first hidden layer uses $\\mathrm{ReLU}^0+\\mathrm{ReLU}$, and the second uses the degree-dependent activation $\\mathrm{ReLU}^k$. The neural networks can realize both zero-skeleton and prescribed-skeleton representatives of discontinuous finite element functions, where the former vanish on the mesh skeleton and the latter admit independently prescribed polynomial data on each relatively open…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

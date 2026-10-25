@@ -1,0 +1,23 @@
+{
+  "key": "2607.29272",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.29272",
+  "title": "Temporal Role Colouring",
+  "authors": [
+    "Jessica Enright",
+    "Kitty Meeks",
+    "Puck Rombach",
+    "Ella Yates"
+  ],
+  "summary": "A role colouring of a graph $G$ is an assignment of colours to the vertices of $G$ such that two vertices of the same colour have identical sets of colours in their neighbourhoods. This model is used to capture the idea of vertices having roles in a contact network, consistent with the set of roles of their contacts. We define an extension of the role colouring problem to temporal graphs. Temporal roles are defined via an automaton with states and transitions capturing both the current colour of a vertex and information about its current and past adjacencies. We show, by a reduction from the…",
+  "domain": "cs.DM",
+  "tags": [
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-07-31",
+  "updated": "2026-07-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

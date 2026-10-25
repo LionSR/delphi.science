@@ -1,0 +1,22 @@
+{
+  "key": "2610.04854",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04854",
+  "title": "Communication-Efficient Differentially Private Gradient Tracking for Distributed Optimization via Local Updates",
+  "authors": [
+    "Mihitha Maithripala",
+    "Chenyang Qiu",
+    "Zongli Lin"
+  ],
+  "summary": "This paper studies privacy-preserving distributed optimization using gradient tracking with one communication-free local update between consecutive communication rounds. Since local computation alone does not protect gradient information, we perturb both the primal state and the gradient-tracking direction at communication iterations while keeping local updates noise-free. We establish an aggregate variable for tracking, characterize the limiting consensus point in the presence of added random noise, and prove convergence in mean under certain parameter conditions. We also establish…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

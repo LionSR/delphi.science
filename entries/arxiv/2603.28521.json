@@ -1,0 +1,21 @@
+{
+  "key": "2603.28521",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.28521",
+  "title": "Quantum Enhanced Numerical Homogenization",
+  "authors": [
+    "Loïc Balazi",
+    "Matthias Deiml",
+    "Daniel Peterseim"
+  ],
+  "summary": "We propose a numerical homogenization method for scalar linear partial differential equations with rough coefficients that integrates classical coarse-scale solvers with quantum subroutines for fine-scale corrections. Inspired by the Localized Orthogonal Decomposition, we employ quantum local problem solvers to capture fine-scale features efficiently. Unlike periodic homogenization approaches, it does not rely on any periodicity assumption. Moreover, the coupling between quantum computation and the coarse model requires only selected measurements of quantum representative volume elements,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-30",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

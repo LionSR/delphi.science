@@ -1,0 +1,25 @@
+{
+  "key": "2610.02316",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02316",
+  "title": "A Polynomial-Scaling PDE Solver with Entanglement-Basis Tensor Networks",
+  "authors": [
+    "Abhijatmedhi Chotrattanapituk",
+    "Michael J. Landry",
+    "Chu-Liang Fu",
+    "Mingda Li"
+  ],
+  "summary": "We develop a finite element method (FEM) for partial differential equation (PDE) solver based on the entanglement-basis representation introduced in our companion work. By lifting non-linear finite-element equations into an augmented coefficient space, the governing PDE together with boundary, initial, and inter-element constraints can be expressed through a unified quadratic residual minimization. Although this augmented space grows exponentially with the number of elements, its tensor-product structure allows it to be represented efficiently using tensor networks. Using the matrix product…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cond-mat.other",
+    "hep-lat",
+    "physics.comp-ph"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

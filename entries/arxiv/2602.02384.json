@@ -1,0 +1,21 @@
+{
+  "key": "2602.02384",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.02384",
+  "title": "A formula for any real number, maybe",
+  "authors": [
+    "James E. Hanson",
+    "Connor Watson"
+  ],
+  "summary": "We discuss how to write down three specific natural numbers $A$, $B$, $C$ such that for any real number $r$ you've probably ever thought of, it is consistent with $\\mathsf{ZFC}$ set theory that $$\\def\\Rb{\\mathbb{R}}\\def\\Nb{\\mathbb{N}}r = \\log\\left(\\sup_{x_0,x_1 \\in \\Rb} \\inf_{x_2 \\in \\Rb} \\sup_{x_3 \\in \\Rb}\\inf_{x_4 \\in \\Rb}\\sup_{m \\in \\Nb}\\inf_{n_0,\\dots,n_{A} \\in \\Nb} x^2_0 \\begin{bmatrix} \\phantom{+}(n_0 - 2)^2 + (n_1-m)^2 \\\\ + n_2 + (n_B - n_C)^2 \\\\ + n_3 \\sum_{k=0}^4 ( x_k - \\frac{n_{k+5}}{1+n_4} +n_4)^2 \\\\ + \\sum_{i,j = 0}^B (n_{9+2^i3^j} - n_i^{n_j})^2 \\end{bmatrix} \\right).$$ We also…",
+  "domain": "math.LO",
+  "tags": [
+    "math.LO",
+    "math.HO"
+  ],
+  "published": "2026-02-02",
+  "updated": "2026-02-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

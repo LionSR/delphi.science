@@ -1,0 +1,19 @@
+{
+  "key": "2601.18599",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.18599",
+  "title": "Asymptotics of the d'Arcais Numbers at Small $k$",
+  "authors": [
+    "Shannon Starr"
+  ],
+  "summary": "The d'Arcais numbers are the triangular array $\\{A(2,n,k)\\, :\\, n=0,1,\\dots,\\, k=0,\\dots,n\\}$, such that $\\sum_{n=0}^{\\infty} \\sum_{k=0}^{n} A(2,n,k) x^k z^n/n! = ((z;z)_{\\infty})^{-x}$. The infinite $q$-Pochhammer symbol is $(q;q)_{\\infty} = \\prod_{n=1}^{\\infty} (1-q^n)$. Holding $k$ fixed and considering large $n$, we note that the ratio $k! A(2,n,k)/n!$ is asymptotic to $C(k) σ_{2k-1}(n)/n^k$ where the divisor sum function is $σ_p(n) = \\sum_{d|n} d^p$ and $C(k) = (ζ(2))^k/(Γ(k) ζ(2k))$. This is a slightly generalized version of one of Ramanujan's formulas from his paper, ``On Certain…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-01-26",
+  "updated": "2026-02-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

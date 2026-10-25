@@ -1,0 +1,21 @@
+{
+  "key": "2604.16779",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.16779",
+  "title": "Q-SINDy: Quantum-Kernel Sparse Identification of Nonlinear Dynamics with Provable Coefficient Debiasing",
+  "authors": [
+    "Samrendra Roy",
+    "Syed Bahauddin Alam"
+  ],
+  "summary": "Quantum feature maps offer expressive embeddings for classical learning tasks, and augmenting sparse identification of nonlinear dynamics (SINDy) with such features is a natural but unexplored direction. We introduce \\textbf{Q-SINDy}, a quantum-kernel-augmented SINDy framework, and identify a specific failure mode that arises: \\emph{coefficient cannibalization}, in which quantum features absorb coefficient mass that rightfully belongs to the polynomial basis, corrupting equation recovery. We derive the exact cannibalization-bias formula $Δξ_P = (P^\\top P)^{-1}P^\\top Q\\,\\hatξ_Q$ and prove…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-04-18",
+  "updated": "2026-04-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

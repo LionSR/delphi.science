@@ -1,0 +1,21 @@
+{
+  "key": "2604.08327",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.08327",
+  "title": "Finite-time Reachability for Constrained, Partially Uncontrolled Nonlinear Systems",
+  "authors": [
+    "Ram Padmanabhan",
+    "Melkior Ornik"
+  ],
+  "summary": "This paper presents a technique to drive the state of a constrained nonlinear system to a specified target state in finite time, when the system suffers a partial loss in control authority. Our technique builds on a recent method to control constrained nonlinear systems by building a simple, linear driftless approximation at the initial state. We construct a partition of the finite time horizon into successively smaller intervals, and design controlled inputs based on the approximate dynamics in each partition. Under conditions that bound the length of the time horizon, we prove that these…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-04-09",
+  "updated": "2026-09-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

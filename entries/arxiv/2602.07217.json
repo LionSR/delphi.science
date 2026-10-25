@@ -1,0 +1,20 @@
+{
+  "key": "2602.07217",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.07217",
+  "title": "Dynamic Interval Scheduling with Random Start and End Times",
+  "authors": [
+    "Rui Gong",
+    "Alejandro Toriello"
+  ],
+  "summary": "We study sequential interval scheduling with random task start and end times. Task weights and the discrete distributions of task intervals are known, but each task's realized interval is revealed only upon commitment; this also eliminates tasks that conflict with the committed task. The objective is to maximize the expected weight of a conflict-free schedule. We propose two models that differ in how conflicts are enforced, develop relaxations and bounds for each, and present a computational study.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-06",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

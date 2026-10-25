@@ -1,0 +1,22 @@
+{
+  "key": "2606.31473",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.31473",
+  "title": "Von Mises Based Uncertainty Quantification for Closely Spaced Automotive Radar Targets",
+  "authors": [
+    "Vinay Kulkarni",
+    "V. V. Reddy"
+  ],
+  "summary": "This work investigates uncertainty-aware deep learning approaches for direction of arrival (DOA) estimation in automotive radar, focusing on probabilistic modeling and downstream integration. A circular-statistics-based von Mises (VM) ensemble (ENS) is compared with an evidential deep learning (EDL) framework based on a normal inverse gamma formulation, yielding a Student t predictive distribution in the Euclidean domain. The ENS framework produces angular predictions parameterized by (mu, kappa), enabling interpretable uncertainty aligned with directional geometry. Performance is evaluated…",
+  "domain": "eess.SP",
+  "tags": [
+    "eess.SP",
+    "cs.AI",
+    "math.PR"
+  ],
+  "published": "2026-06-30",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

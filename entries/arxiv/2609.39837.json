@@ -1,0 +1,23 @@
+{
+  "key": "2609.39837",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.39837",
+  "title": "Fast Regularized Policy Mirror Descent with One-Step TD Updates",
+  "authors": [
+    "Qipei Chen",
+    "Wenye Li",
+    "Yule Sun",
+    "Ke Wei"
+  ],
+  "summary": "Policy mirror descent (PMD) enjoys fast convergence in regularized Markov decision processes (MDPs), but existing guarantees often rely on exact or increasingly accurate policy evaluation. We analyze PMD coupled with a persistent critic advanced by one temporal-difference (TD) update. For finite discounted MDPs, we establish global linear convergence in value for exact coordinate-wise Bellman updates, with any positive constant actor stepsize and arbitrary finite critic initialization. The proof combines a resolvent-based auxiliary distribution with a decaying Bellman-violation correction…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2610.21340",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.21340",
+  "title": "Dimension-Free PAC-Bayes Generalization for Deep Neural Networks via Dirichlet Processes",
+  "authors": [
+    "Sumit Vashishtha"
+  ],
+  "summary": "Classical PAC-Bayesian generalization theory places prior distributions over Euclidean parameter space $Θ\\subseteq \\mathbb{R}^D$, causing relative entropy to scale with network dimension $D$. For modern overparameterized neural networks where $D \\gg n$, this parameter-counting dependency yields vacuous generalization bounds ($> 1{,}000\\%$). In this work, we resolve this barrier by shifting prior specification from internal parameters to the non-parametric space of data distributions $\\mathcal{M}_1(\\mathcal{Z})$ via a \\textbf{Dirichlet Process (DP)}, $\\mathcal{DP}(α, F_0)$, inducing parameter…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

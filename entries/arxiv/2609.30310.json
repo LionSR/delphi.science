@@ -1,0 +1,20 @@
+{
+  "key": "2609.30310",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.30310",
+  "title": "The maximum area of the convex hull of a polyhex",
+  "authors": [
+    "Pragyaan Gaur"
+  ],
+  "summary": "A polyhex is an edge-connected set of n cells of the regular hexagonal tiling, where each cell has area one. We prove that the convex hull of a polyhex has area at most (1/6)*ceiling(n^2 + 14n/3), and we show that some polyhex reaches this bound for every n. This proves a conjecture of Kurz from 2008, which asked for the weaker bound (1/6)*floor(n^2 + 14n/3 + 1). The two bounds differ exactly when 3 divides n. We checked the upper bound in the Lean 4 proof assistant with the Mathlib library. We also report a computation over all polyhexes with at most 12 cells, which shows that for these…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.MG"
+  ],
+  "published": "2026-09-23",
+  "updated": "2026-09-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

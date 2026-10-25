@@ -1,0 +1,20 @@
+{
+  "key": "2608.13044",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.13044",
+  "title": "Identifiability-aware neural ordinary differential equations for parsimonious and reliable dynamic modelling",
+  "authors": [
+    "Núria Campo-Manzanares",
+    "Eva Balsa-Canto"
+  ],
+  "summary": "Neural ordinary differential equations (NODE) and hybrid NODE models provide flexible continuous-time representations of complex dynamic systems, but their expressive capacity can exceed the information content of the available data. Consequently, these models may reproduce observed trajectories while retaining weakly identifiable parameters, poorly constrained neural components, and unreliable extrapolation. Here we introduce identifiability-aware neural ordinary differential equations (iNODE), a framework that incorporates practical identifiability into neural differential equation design.…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2610.17892",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.17892",
+  "title": "Provable Method of Moments for Cryo-EM",
+  "authors": [
+    "Amnon Balanov",
+    "Tamir Bendory",
+    "Dan Edidin",
+    "Josh Katz",
+    "Shay Kreymer",
+    "Nir Sharon"
+  ],
+  "summary": "We study the recovery of a three-dimensional volume in single-particle cryo-electron microscopy (cryo-EM) from noisy tomographic projections acquired at unknown viewing rotations, drawn independently and uniformly from $\\mathrm{SO}(3)$. We show that, in a spherical-shell representation satisfying an explicit shell-separation condition, the first three moments generically determine the underlying real volume up to its intrinsic global $\\mathrm{O}(3)$ ambiguity. The proof is constructive and yields a frequency-marching procedure that successively recovers the volume. Consequently, consistent…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "eess.SP"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

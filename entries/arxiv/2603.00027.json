@@ -1,0 +1,23 @@
+{
+  "key": "2603.00027",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.00027",
+  "title": "Bilevel Optimization with Lower-Level Uniform Convexity: Theory and Algorithm",
+  "authors": [
+    "Yuman Wu",
+    "Xiaochuan Gong",
+    "Jie Hao",
+    "Mingrui Liu"
+  ],
+  "summary": "Bilevel optimization is a hierarchical framework where an upper-level optimization problem is constrained by a lower-level problem, commonly used in machine learning applications such as hyperparameter optimization. Existing bilevel optimization methods typically assume strong convexity or Polyak-Łojasiewicz (PL) conditions for the lower-level function to establish non-asymptotic convergence to a solution with small hypergradient. However, these assumptions may not hold in practice, and recent work~\\citep{chen2024finding} has shown that bilevel optimization is inherently intractable for…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-02-04",
+  "updated": "2026-02-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

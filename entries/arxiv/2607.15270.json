@@ -1,0 +1,31 @@
+{
+  "key": "2607.15270",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.15270",
+  "title": "New Snake-in-the-Box Records via Snakepit Surgery and Learned Construction",
+  "authors": [
+    "Paul Orland",
+    "Lucas Fagan",
+    "Michele Tarquini",
+    "Davide Passaro",
+    "Maksymilian Manko",
+    "Elli Heyes",
+    "Angus Gruen",
+    "Giorgi Butbaia",
+    "Justin Tan",
+    "Sergei Gukov"
+  ],
+  "summary": "The snake-in-the-box problem asks for a longest induced path in the hypercube graph $Q_n$. We find a length-191 snake in dimension $n=9$, the lowest dimension where the maximum is unknown, improving the previous record of 190 that had stood for 14 years. We also establish new lower bounds in dimensions 10-13. To find these records, we introduce snakepits, collections of disjoint snakes, to expand the search space and open new routes between snakes. This motivates our new Snakepit-in-the-Box benchmark, which seeks maximal edge counts when allowing multiple components. Finally, we introduce…",
+  "domain": "cs.DM",
+  "tags": [
+    "cs.DM",
+    "cs.AI",
+    "cs.LG",
+    "math.CO"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2609.07005",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07005",
+  "title": "Limiter-based fully-discrete entropy stable explicit DG schemes for ideal MHD equations",
+  "authors": [
+    "Yuchang Liu",
+    "Yan Jiang",
+    "Zheng Sun"
+  ],
+  "summary": "We propose a class of high-order fully-discrete entropy stable (ES) explicit discontinuous Galerkin (DG) solvers for the compressible ideal magnetohydrodynamics (MHD) equations. Our main theoretical contribution is the introduction of a novel generalized-path-decomposition framework for MHD equations in Godunov's symmetric form. By innovatively interpreting the interior volume integral of the non-conservative source term as a path integral along a generalized path constructed by the solution polynomial, we establish the weak cell entropy inequality for the fully-discrete DG schemes. This…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

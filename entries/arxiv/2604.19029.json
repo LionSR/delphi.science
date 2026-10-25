@@ -1,0 +1,22 @@
+{
+  "key": "2604.19029",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.19029",
+  "title": "MonteQ: A Monte Carlo Tree Search Based Quantum Circuit Synthesis Framework",
+  "authors": [
+    "Mulundano Machiya",
+    "Matt Menickelly",
+    "Paul Hovland",
+    "Ji Liu"
+  ],
+  "summary": "Hamiltonian simulation is one of the most promising paths toward quantum advantage. Most prior approaches to Hamiltonian simulation circuit synthesis focus on local rewrite rules and low-level optimizations, and give limited attention to high-level scheduling of Pauli terms under varying constraints. In practice, different simulation algorithms require different orderings of the Pauli terms, yet many prior IR-based methods assume a fixed commutation structure, which limits their flexibility. We present MonteQ, a novel quantum circuit synthesis framework for Hamiltonian simulation. MonteQ…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-21",
+  "updated": "2026-04-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

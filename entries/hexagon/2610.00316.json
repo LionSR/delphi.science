@@ -1,0 +1,41 @@
+{
+  "key": "2610.00316",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00316v2",
+  "pdf": "https://hexagonmath.org/pdf/2610.00316v2",
+  "title": "Tools for proving that graphs are not graceful",
+  "authors": [
+    "Boon Suan Ho"
+  ],
+  "summary": "A graph with $m$ edges is graceful if its vertices can be labeled with distinct integers in $[0,m]$ whose edge differences are exactly $1,\\dots,m$. Graceful labelings have been constructed for sixty years, but there are few general methods for showing that a graph is not graceful. We start from a single generating-function identity that restates gracefulness, and derive three tools from it: residues at roots of unity, extending the classical parity condition; positivity on the unit circle, whose semidefinite form amounts exactly to the Goemans–Williamson max-cut relaxation tested against the…",
+  "domain": "math.CO",
+  "tags": [
+    "cs.DM",
+    "msc:05C78",
+    "msc:05B10",
+    "msc:05C50",
+    "msc:90C22",
+    "Dirichlet kernel",
+    "Golomb ruler",
+    "difference sets",
+    "graceful labeling",
+    "max-cut",
+    "semidefinite programming"
+  ],
+  "published": "2026-10-17",
+  "updated": "2026-10-18",
+  "version": 2,
+  "ai_models": [
+    "Claude Opus",
+    "ChatGPT",
+    "Claude Code"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

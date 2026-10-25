@@ -1,0 +1,23 @@
+{
+  "key": "2602.15218",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.15218",
+  "title": "Multiplierless DFT Approximation Based on the Prime Factor Algorithm",
+  "authors": [
+    "L. Portella",
+    "F. M. Bayer",
+    "R. J. Cintra"
+  ],
+  "summary": "Matrix approximation methods have successfully produced efficient, low-complexity approximate transforms for the discrete cosine transforms and the discrete Fourier transforms. For the DFT case, literature archives approximations operating at small power-of-two blocklenghts, such as \\{8, 16, 32\\}, or at large blocklengths, such as 1024, which are obtained by means of the Cooley-Tukey-based approximation relying on the small-blocklength approximate transforms. Cooley-Tukey-based approximations inherit the intermediate multiplications by twiddled factors which are usually not approximated;…",
+  "domain": "eess.SP",
+  "tags": [
+    "eess.SP",
+    "math.NA",
+    "stat.CO"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-02-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

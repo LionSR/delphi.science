@@ -1,0 +1,23 @@
+{
+  "key": "2603.08367",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.08367",
+  "title": "Loopless Proximal Riemannian Gradient EXTRA for Distributed Optimization on Compact Manifolds",
+  "authors": [
+    "Yongyang Xiong",
+    "Chen Ouyang",
+    "Keyou You",
+    "Yang Shi",
+    "Ligang Wu"
+  ],
+  "summary": "Distributed optimization has gained substantial interest in recent years due to its wide applications in machine learning. However, most of existing algorithms are designed for Euclidean spaces, leaving composite optimization on Riemannian manifolds largely unexplored. To bridge this gap, we propose the proximal Riemannian gradient EXTRA algorithm (PR-EXTRA) to solve distributed composite optimization problem with nonsmooth regularizer over compact manifolds. In each iteration, PR-EXTRA requires only a single round communication, coupled with local gradient evaluations and proximal mappings.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-09",
+  "updated": "2026-03-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

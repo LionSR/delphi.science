@@ -1,0 +1,20 @@
+{
+  "key": "2606.21534",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.21534",
+  "title": "Conformability is NP-complete, even on connected regular graphs",
+  "authors": [
+    "József Pintér"
+  ],
+  "summary": "A graph $G$ is conformable if it admits a proper $(Δ(G)+1)$-coloring in which, among the $Δ(G)+1$ color classes including the empty ones, at most $\\sum_{v\\in V(G)}(Δ(G)-d_G(v))$ have parity different from that of $|V(G)|$. The complexity of deciding conformability was left open in recent work, and positive results for several graph classes had suggested that the problem might be polynomial-time solvable. We settle the general problem by proving that Conformability is NP-complete. Hardness holds even for connected regular graphs $G$ of odd order with independence number $α(G)=3$ and maximum…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.CC"
+  ],
+  "published": "2026-06-19",
+  "updated": "2026-06-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

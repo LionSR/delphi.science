@@ -1,0 +1,23 @@
+{
+  "key": "2609.01122",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.01122",
+  "title": "Optimal Gradient-Norm Minimization in Non-Euclidean Hölder-Smooth Convex Optimization",
+  "authors": [
+    "Nico Pelleriti",
+    "Maryam Shiran",
+    "David Martínez-Rubio",
+    "Max Zimmer",
+    "Sebastian Pokutta"
+  ],
+  "summary": "Minimizing gradients of a convex function is an important problem across optimization and learning tasks. The gradient provides a directly computable certificate of approximate stationarity, and its minimization usually implies stronger results than those for minimization of function values. In this work, we study gradient-norm minimization for convex functions that are $(L,κ)$-Hölder smooth with respect to the $\\ell_p$-norms, $p \\geq 1$. We develop algorithms that achieve near-optimal gradient-oracle complexity for this problem. In the smooth case, our results resolve the previously open…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-01",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

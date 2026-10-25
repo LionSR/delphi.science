@@ -1,0 +1,24 @@
+{
+  "key": "2604.23436",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.23436",
+  "title": "Inference of Online Newton Methods with Nesterov's Accelerated Sketching",
+  "authors": [
+    "Haoxuan Wang",
+    "Xinchen Du",
+    "Sen Na"
+  ],
+  "summary": "Reliable decision-making with streaming data requires principled uncertainty quantification of online methods. While first-order methods enable efficient iterate updates, their inference procedures still require updating proper (covariance) matrices, incurring $O(d^2)$ time and memory complexity, and are sensitive to ill-conditioning and noise heterogeneity of the problem. This costly inference task offers an opportunity for more robust second-order methods, which are, however, bottlenecked by solving Newton systems with $O(d^3)$ complexity. In this paper, we address this gap by studying an…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.OC",
+    "stat.CO"
+  ],
+  "published": "2026-04-25",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

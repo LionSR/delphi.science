@@ -1,0 +1,21 @@
+{
+  "key": "2605.04786",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.04786",
+  "title": "Improving accuracy of finite element solutions by smoothing",
+  "authors": [
+    "Yuwen Li",
+    "Han Shui",
+    "Ludmil Zikatanov"
+  ],
+  "summary": "This paper develops a smoothing-based postprocessing method for improving the accuracy of finite element solutions. The method applies a few smoothing iterations, such as damped Jacobi, symmetrized Gauss-Seidel, or preconditioned conjugate gradient, with the initial guess being the current finite element solution embedded in an augmented finite element space. The resulting procedure is algebraic, easy to implement, and applicable to high-order and three-dimensional discretizations. For symmetric and positive-definite problems, we show that the accuracy of the smoothed solutions is improved…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

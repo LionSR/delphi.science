@@ -1,0 +1,24 @@
+{
+  "key": "2604.14912",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.14912",
+  "title": "Formalizing Wu-Ritt Method in Lean 4",
+  "authors": [
+    "Yuxuan Xiao",
+    "Hao Shen",
+    "Junyu Guo",
+    "Dingkang Wang",
+    "Lihong Zhi"
+  ],
+  "summary": "We formalize the Wu-Ritt characteristic set method for the triangular decomposition of polynomial systems in the Lean 4 theorem prover. Our development includes the core algebraic notions of the method, such as polynomial initials, orders, pseudo-division, pseudo-remainders with respect to a polynomial or a triangular set, and standard and weak ascending sets. On this basis, we formalize algorithms for computing basic sets, characteristic sets, and zero decompositions, and prove their termination and correctness. In particular, we formalize the well-ordering principle relating a polynomial…",
+  "domain": "math.AC",
+  "tags": [
+    "math.AC",
+    "cs.LO"
+  ],
+  "published": "2026-04-16",
+  "updated": "2026-04-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

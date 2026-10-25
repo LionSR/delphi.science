@@ -1,0 +1,24 @@
+{
+  "key": "2601.06025",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.06025",
+  "title": "Manifold limit for the training of shallow graph convolutional neural networks",
+  "authors": [
+    "Johanna Tengler",
+    "Christoph Brune",
+    "José A. Iglesias"
+  ],
+  "summary": "We study the discrete-to-continuum consistency of the training of shallow graph convolutional neural networks (GCNNs) on proximity graphs of sampled point clouds under a manifold assumption. Graph convolution is defined spectrally via the graph Laplacian, whose low-frequency spectrum approximates that of the Laplace-Beltrami operator of the underlying smooth manifold, and shallow GCNNs of possibly infinite width are linear functionals on the space of measures on the parameter space. From this functional-analytic perspective, graph signals are seen as spatial discretizations of functions on…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.FA",
+    "math.OC"
+  ],
+  "published": "2026-01-09",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

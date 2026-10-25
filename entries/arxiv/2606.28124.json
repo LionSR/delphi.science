@@ -1,0 +1,21 @@
+{
+  "key": "2606.28124",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28124",
+  "title": "Reservoir Zero-Coordinatewise Projected Subspace Search for Minimization Over Sparse Symmetric Sets in Machine Learning",
+  "authors": [
+    "Morteza Kimiaei",
+    "Shima Shabani",
+    "Michael Breuss"
+  ],
+  "summary": "We study a class of nonconvex cardinality-constrained optimization problems arising in sparse learning. These problems are NP-hard due to the combinatorial nature of sparsity constraints. We introduce a Reservoir Zero-Coordinatewise Projected Subspace Search (RZCW-PSS) algorithm, a simplex-style method on sparse manifolds that integrates coordinatewise search, symmetry-aware swap-based support updates, randomized low-dimensional subspace exploration, and zero-coordinatewise reservoir injection. The proposed method augments classical coordinate and swap moves with sparse-compatible subspace…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-26",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

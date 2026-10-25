@@ -1,0 +1,20 @@
+{
+  "key": "2606.20057",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20057",
+  "title": "On the asymptotic density of the ordered pairs $(a,b)$ of positive integers such that $\\gcd(ab,a+b)=\\gcd(a,b)$",
+  "authors": [
+    "Steve Fan",
+    "László Tóth"
+  ],
+  "summary": "Consider the arithmetic function of two variables $f(a,b)= \\gcd(ab,a+b)/\\gcd(a,b)$, investigated in a recent preprint. We deduce asymptotic formulas for sums of the form $\\sum_{a,b\\le x} h(f(a,b))$, where $h$ belongs to a certain class of arithmetic functions. In particular, we obtain an asymptotic formula for the number of ordered pairs $(a,b)\\in {\\Bbb N}^2$ such that $a,b\\le x$ and $f(a,b)=m$, where $m\\in {\\Bbb N}$ is fixed. This shows that in the case $m=1$ the corresponding density is the quadratic class number constant $C= \\prod_p (1-1/(p^2(p+1))) \\doteq 0.881513$.",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

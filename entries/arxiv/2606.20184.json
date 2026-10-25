@@ -1,0 +1,26 @@
+{
+  "key": "2606.20184",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20184",
+  "title": "Operator learning for efficient quantum computation",
+  "authors": [
+    "Paul Over",
+    "Sergio Bengoechea",
+    "Leonardo Borello Busilacchi",
+    "Martin Kiffner",
+    "Thomas Rung",
+    "Alexios A. Michailidis"
+  ],
+  "summary": "An efficient implementation of quantum algorithms is often hindered by the lack of efficient primitives for operators and state preparation. This limits both the ability of near-term quantum hardware to simulate complex problems and the potential of fault-tolerant algorithms to achieve practical quantum advantage. To address this, we propose a framework that maps discrete operators onto compact, structured quantum circuits. The resulting variational circuits can be tailored to the connectivity and long-range interaction of the target hardware. The learning process employs backpropagation…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CE",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

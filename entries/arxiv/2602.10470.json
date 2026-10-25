@@ -1,0 +1,20 @@
+{
+  "key": "2602.10470",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.10470",
+  "title": "Revisiting Superlinear Convergence of Proximal Newton-Like Methods to Degenerate Solutions",
+  "authors": [
+    "Ching-pei Lee",
+    "Stephen J. Wright"
+  ],
+  "summary": "We describe inexact proximal Newton-like methods for solving degenerate regularized optimization problems and for the broader problem of finding a zero of a generalized equation that is the sum of a continuous map and a maximal monotone operator. Superlinear convergence for both the distance to the solution set and a certain measure of first-order optimality can be achieved under a Hölderian error bound condition, including for problems in which the continuous map is nonmonotone, with Jacobian singular at the solution and not Lipschitz. Superlinear convergence is attainable even when the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-11",
+  "updated": "2026-02-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

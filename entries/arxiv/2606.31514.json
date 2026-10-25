@@ -1,0 +1,24 @@
+{
+  "key": "2606.31514",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.31514",
+  "title": "MINT: Dynamic-Precision CNN Inference with MSDF Digit-Serial Arithmetic on FPGA",
+  "authors": [
+    "Muhammad Usman",
+    "Malik Zohaib Nisar",
+    "Florian Aschauer",
+    "Dorit Merhof"
+  ],
+  "summary": "We present MINT, a dynamic-precision CNN inference accelerator based on left-to-right (LR) arithmetic. LR arithmetic computes in most-significant-digit-first manner and exposes useful partial results early so that the computation can be terminated once the desired precision is achieved. At the core, there is a MSDF serial-parallel inner-product unit, which uses redundant signed-digit representation to compute each convolution window. A budget-constrained greedy search profiles all convolution layers from INT2 to INT7 and selects the lowest precision per layer while constraining total…",
+  "domain": "cs.AR",
+  "tags": [
+    "cs.AR",
+    "math.LO",
+    "math.OC"
+  ],
+  "published": "2026-06-30",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

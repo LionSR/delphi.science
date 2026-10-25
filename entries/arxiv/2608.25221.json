@@ -1,0 +1,22 @@
+{
+  "key": "2608.25221",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.25221",
+  "title": "Representing MAX functions using two-hidden-layer ReLU networks",
+  "authors": [
+    "Zhimao Wang",
+    "Amitabh Basu"
+  ],
+  "summary": "We study exact representations of $\\mathrm{MAX}_N(x)=\\max{x_1,\\ldots,x_N}$ using two-hidden-layer ReLU neural networks. This problem has been studied in recent years in an attempt to characterize the exact number of hidden layers required to represent continuous piecewise linear functions. The best lower bound is 2, while the current upper bound is logarithmic in $N$. It remains completely open if the right answer is a constant number of hidden layers (possibly even 2!) or not. In fact, a recent breakthrough was the representation of $\\mathrm{MAX}_5$ as a two-hidden-layer ReLU function…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2610.11481",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.11481",
+  "title": "A QPTAS for Stochastic Scheduling of Bernoulli Jobs",
+  "authors": [
+    "Junho Hwang"
+  ],
+  "summary": "We study the classical problem of scheduling jobs with random processing times on $m$ identical machines to minimize the expected sum of completion times, for Bernoulli jobs: job $j$ takes time $p_j$ with probability $q_j$ and time $0$ otherwise, and its outcome is revealed when it starts. The benchmark is an optimal adaptive policy. We give a quasi-polynomial-time approximation scheme for every number of machines. Previously, quasi-polynomial time was known to give an $O(\\log N)$-approximation, and approximation schemes were known only for a constant number of distinct sizes. The scheme…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.CC",
+    "math.OC"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2609.24509",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.24509",
+  "title": "Error Analysis and Precision Selection for Mixed-Precision DEIM-CUR Decompositions",
+  "authors": [
+    "Ioannis Thanasis",
+    "Erin Carson"
+  ],
+  "summary": "CUR approximation is a popular approach for constructing an interpretable low-rank approximation of a matrix. There are many approaches for constructing the CUR approximation, many of which are based on the SVD. Results in the literature bounding the quality of the approximation usually rely on the assumption that all or part of the SVD is computed exactly. In this work, we relax this assumption and show how the quality of the approximation is affected by an inexact SVD. Moreover, we analyze the effect of finite precision arithmetic on the DEIM-CUR method. Our analysis suggests guidelines…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-21",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

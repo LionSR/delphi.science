@@ -1,0 +1,20 @@
+{
+  "key": "2601.22295",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.22295",
+  "title": "Operating Imperfect AI: Reliability Drift and Human Congestion",
+  "authors": [
+    "Ziyao Wang",
+    "Svetlozar T Rachev"
+  ],
+  "summary": "The deployment of machine learning in high-stakes services relies on ``human-in-the-loop'' architectures to mitigate algorithmic uncertainty. However, existing static policies fail to address a fundamental tension: algorithms suffer from stochastic ``reliability drift,'' while human override capacity is scarce and congestible. We formulate the management of such systems as a dynamic queueing control problem. The system state is defined by the tuple (queue backlog, reliability regime), and the control variable is a state-dependent risk threshold. We prove that the optimal escalation policy is…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-01-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

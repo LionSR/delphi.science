@@ -1,0 +1,23 @@
+{
+  "key": "2604.00683",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00683",
+  "title": "Convergence of projected stochastic natural gradient variational inference for various step size and sample or batch size schedules",
+  "authors": [
+    "Thomas Guilmeau",
+    "Hadrien Hendrikx",
+    "Florence Forbes"
+  ],
+  "summary": "Stochastic natural gradient variational inference (NGVI) is a popular and efficient algorithm for Bayesian inference. Despite empirical success, the convergence of this method is still not fully understood. In this work, we define and study a projected stochastic NGVI when variational distributions form an exponential family. Stochasticity arises when either gradients are intractable expectations or large sums. We prove new non-asymptotic convergence results for combinations of constant or decreasing step sizes and constant or increasing sample/batch sizes. When all hyperparameters are…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-04-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

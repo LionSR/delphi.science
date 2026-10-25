@@ -1,0 +1,23 @@
+{
+  "key": "2607.05183",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.05183",
+  "title": "Adaptive direct search algorithms with relaxable and quantifiable constraints",
+  "authors": [
+    "Charles Audet",
+    "Théo Denorme",
+    "Youssef Diouane",
+    "Sébastien Le Digabel",
+    "Christophe Tribes"
+  ],
+  "summary": "This work introduces ADS-PB, an extension of the Adaptive Direct Search (ADS) framework for solving constrained blackbox optimization problems. With ADS, iterates progress without relying on mesh structures or sufficient decrease conditions on the objective function value. Unlike the extreme barrier approach used in ADS, where only unrelaxable constraints are considered, the proposed method also handles quantifiable and relaxable constraints using a Progressive Barrier (PB) mechanism that exploits both constraint and objective function values. A convergence analysis of the proposed framework…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-06",
+  "updated": "2026-07-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

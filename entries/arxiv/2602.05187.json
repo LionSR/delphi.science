@@ -1,0 +1,22 @@
+{
+  "key": "2602.05187",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05187",
+  "title": "SpectraKAN: Conditioning Spectral Operators",
+  "authors": [
+    "Chun-Wun Cheng",
+    "Carola-Bibiane Schönlieb",
+    "Angelica I. Aviles-Rivero"
+  ],
+  "summary": "Spectral neural operators, particularly Fourier Neural Operators (FNO), are a powerful framework for learning solution operators of partial differential equations (PDEs) due to their efficient global mixing in the frequency domain. However, existing spectral operators rely on static Fourier kernels applied uniformly across inputs, limiting their ability to capture multi-scale, regime-dependent, and anisotropic dynamics governed by the global state of the system. We introduce SpectraKAN, a neural operator that conditions the spectral operator on the input itself, turning static spectral…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-02-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

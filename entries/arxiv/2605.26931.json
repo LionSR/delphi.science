@@ -1,0 +1,20 @@
+{
+  "key": "2605.26931",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.26931",
+  "title": "Dual Privacy Guarantees for Distributed Nash Equilibrium Seeking in Aggregative Games",
+  "authors": [
+    "Qingtan Meng",
+    "Qian Ma"
+  ],
+  "summary": "This paper investigates the privacy-preserving distributed Nash equilibrium seeking problem for aggregative games. A novel differential privacy mechanism is designed by incorporating stochastic event-triggering with stochastic quantization, which provides strong privacy protection by obfuscating the temporal patterns of information exchange among players and quantizing the transmitted information at triggering instants. Based on this mechanism, a differentially private distributed Nash equilibrium seeking algorithm with dual randomness is proposed. By embedding a decaying factor sequence…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

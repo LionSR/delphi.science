@@ -1,0 +1,25 @@
+{
+  "key": "2610.09452",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.09452",
+  "title": "Finite-Rank Logistic Gaussian Processes with Exact Likelihood for Conditional Density Estimation",
+  "authors": [
+    "Jaehoan Kim",
+    "Indrajit Ghosh",
+    "Debdeep Pati",
+    "Dipankar Bandyopadhyay"
+  ],
+  "summary": "Conditional density estimation describes how the entire distribution of a response changes with covariates, and in imaging studies also with location. Logistic Gaussian processes (LGP) give a flexible prior for such densities. However, the normalizing constant of an LGP has no closed form, so existing methods approximate or replace the likelihood. We propose the exact likelihood finite-rank LGP (ExFR-LGP), which writes the log density as the sum of two bivariate functions, one of the response and a location-varying linear index of the covariates, and one of the response and the location.…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST",
+    "stat.AP",
+    "stat.ML"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

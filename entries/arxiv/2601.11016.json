@@ -1,0 +1,23 @@
+{
+  "key": "2601.11016",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.11016",
+  "title": "Contextual Distributionally Robust Optimization with Causal and Continuous Structure",
+  "authors": [
+    "Fenglin Zhang",
+    "Jie Wang"
+  ],
+  "summary": "We propose a framework for contextual distributionally robust optimization (DRO) that considers the causal and continuous structure of the underlying distribution, and we develop an interpretable and tractable decision rule. We first introduce the causal Sinkhorn discrepancy (CSD), an entropy-regularized causal Wasserstein distance that encourages continuous transport plans while preserving causal consistency. We then formulate a contextual DRO model with a CSD-based ambiguity set, termed Causal Sinkhorn DRO (Causal-SDRO), and derive its strong dual reformulation, where the worst-case…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.AI",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-01-16",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

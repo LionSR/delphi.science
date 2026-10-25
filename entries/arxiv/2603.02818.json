@@ -1,0 +1,19 @@
+{
+  "key": "2603.02818",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.02818",
+  "title": "Merged amplitude encoding for Chebyshev quantum Kolmogorov-Arnold networks",
+  "authors": [
+    "Hikaru Wakaura"
+  ],
+  "summary": "Quantum Kolmogorov--Arnold networks evaluate each edge activation function as a quantum inner product, creating a trade-off between qubit count and the number of circuit executions per forward pass. We introduce merged amplitude encoding for the Chebyshev-edge classical-to-classical QKAN (CCQKAN), which packs the element-wise products of all $n$ input-edge vectors of an output node into a single amplitude state, reducing circuit executions by a factor of $n$ while using no more qubits than the sequential SWAP-test baseline once its measurement registers are counted. The merged and original…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-03",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

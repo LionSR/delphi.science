@@ -1,0 +1,22 @@
+{
+  "key": "2608.16120",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.16120",
+  "title": "When More Data Become Less Informative: Finite-Precision Periodicization and Collapse of Forecast-Error Lyapunov Estimates",
+  "authors": [
+    "Andrei Velichko",
+    "Viet-Thanh Pham"
+  ],
+  "summary": "Largest Lyapunov exponents (LLEs) quantify exponential sensitivity, but data-driven estimates are often obtained from finite-precision trajectories. We show that increasing the length of a single reduced-precision chaotic record can eventually degrade a forecast-error LLE estimate. Using the logistic map at r=4, an ESP32 single-precision trajectory is reproduced bit-for-bit by NumPy float32. Across 10,000 random float32 initial conditions, every trajectory reaches an exact recurrence before iteration 7612. For one long float32 record, the estimated LLE changes from 0.6853 at N=15,000 to…",
+  "domain": "nlin.CD",
+  "tags": [
+    "nlin.CD",
+    "math.DS",
+    "physics.comp-ph"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

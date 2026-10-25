@@ -1,0 +1,21 @@
+{
+  "key": "2604.01719",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.01719",
+  "title": "Mixed Consistent PINNs for Elliptic Obstacle Problems with Stability Analysis",
+  "authors": [
+    "Arbaz Khan",
+    "Kent-Andre Mardal",
+    "Shiv Mishra"
+  ],
+  "summary": "We propose a consistent physics-informed neural networks (CPINNs) framework for elliptic obstacle problems formulated as variational inequalities. The method is based on a mixed loss functional that is rigorously aligned with the stability structure of the underlying problem and incorporates obstacle constraints through a consistent treatment of the associated Lagrange multiplier. Relying on optimal recovery theory under Besov regularity assumptions, we establish near-optimal convergence rates for the simultaneous reconstruction of the solution and the multiplier from pointwise interior and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-02",
+  "updated": "2026-04-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

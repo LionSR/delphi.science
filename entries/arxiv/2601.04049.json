@@ -1,0 +1,22 @@
+{
+  "key": "2601.04049",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.04049",
+  "title": "Quantum computing for multidimensional option pricing: End-to-end pipeline",
+  "authors": [
+    "Julien Hok",
+    "Álvaro Leitao"
+  ],
+  "summary": "This work introduces an end-to-end framework for multi-asset option pricing that combines market-consistent risk-neutral density recovery with quantum-accelerated numerical integration. We first calibrate arbitrage-free marginal distributions from European option quotes using the Normal Inverse Gaussian (NIG) model, leveraging its analytical tractability and ability to capture skewness and fat tails. Marginals are coupled via a Gaussian copula to construct joint distributions. To address the computational bottleneck of the high-dimensional integration required to solve the option pricing…",
+  "domain": "q-fin.CP",
+  "tags": [
+    "q-fin.CP",
+    "math.NA",
+    "quant-ph"
+  ],
+  "published": "2026-01-07",
+  "updated": "2026-01-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

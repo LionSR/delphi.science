@@ -1,0 +1,24 @@
+{
+  "key": "2610.16209",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16209",
+  "title": "Bootstrapping Classical and Quantum Query Lower Bounds for Finding Tarski Fixed Points",
+  "authors": [
+    "Tongyang Li",
+    "Weiran Ma",
+    "Ziyi Yang",
+    "Xingyu Zhao"
+  ],
+  "summary": "The Tarski fixed-point problem asks for a fixed point of a monotone map on a $k$-dimensional grid lattice of width $n$ and has applications in game theory, economics, and verification. Substantial gaps remain between the known upper and lower bounds on its quantum query complexity. We prove two hardness bootstrapping theorems for quantum query lower bounds. Starting from a hard instance family whose instances have pair-wise incomparable unique fixed points, and a lower bound established by the nonnegative adversary method, we bootstrap this lower bound by (i) a factor of $Ω(t)$ when the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.DS"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

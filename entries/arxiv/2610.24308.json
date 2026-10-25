@@ -1,0 +1,21 @@
+{
+  "key": "2610.24308",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.24308",
+  "title": "Lifting Safety Through Reduced-Order Model Architectures: An Invariant Manifold Approach",
+  "authors": [
+    "Massimiliano de Sa",
+    "Aaron D. Ames"
+  ],
+  "summary": "Reduced-order model architectures are often used to decompose complex safety-critical control design tasks into tractable subproblems. In this paradigm, one must ask: when does the safety of a reduced-order model lift to safety of the full system? Taking an invariant manifold perspective, we provide necessary and sufficient conditions for the existence of smooth, regular lifts of compact safe sets from reduced-order models. Our characterization relies only on asymptotic stability of an embedding of a reduced-order safe set, without additional robustness or rate conditions. We apply these…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

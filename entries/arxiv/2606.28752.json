@@ -1,0 +1,21 @@
+{
+  "key": "2606.28752",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28752",
+  "title": "Schrödingerization based quantum algorithms for regularized Wasserstein proximal operators",
+  "authors": [
+    "Shi Jin",
+    "Nana Liu",
+    "Yue Yu"
+  ],
+  "summary": "We develop a quantum algorithm for the regularized Wasserstein proximal operator, which is a fundamental tool in optimal transport and mean-field games. The regularization introduces a small diffusive term into the continuity equation of the Benamou-Brenier formulation, which results in a forward-backward PDE system consisting of a Fokker-Planck equation and a viscous Hamilton-Jacobi equation with a quadratic Hamiltonian. Through the Cole-Hopf transformation, both equations are converted to forward heat equations, whose coupling requires a Hadamard division to prepare the initial data for…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-27",
+  "updated": "2026-06-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2602.23672",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.23672",
+  "title": "General Bayesian Policy Learning",
+  "authors": [
+    "Masahiro Kato"
+  ],
+  "summary": "This study proposes a General Bayes framework for policy learning. We consider decision problems in which a decision-maker chooses an action from a given set to maximize expected welfare. Typical examples include treatment choice and portfolio optimization. In such problems, the statistical target is a decision rule, and predicting each potential outcome is not necessarily of primary interest. We formulate this policy-learning problem through loss-based Bayesian updating. Our main technical device is a squared-loss surrogate for welfare maximization. We show that maximizing empirical welfare…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "econ.EM",
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-02-27",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

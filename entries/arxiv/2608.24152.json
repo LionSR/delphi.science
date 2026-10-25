@@ -1,0 +1,22 @@
+{
+  "key": "2608.24152",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.24152",
+  "title": "A Dynamic-Kernel/QPacket Executable for Quantum Repeater Chains in Q2NS/ns-3",
+  "authors": [
+    "Adam Pearson",
+    "Marcello Caleffi",
+    "Angela Sara Cacciapuoti"
+  ],
+  "summary": "The Quantum Internet operates on entanglement, a non-local, non-copyable, stateful network resource, which motivates protocol organization beyond classical layering. We present a first executable specialization of the Dynamic Kernel/QPacket logic from the beyond-layering protocol suite, targeting entanglement distribution over a linear quantum repeater chain. The implementation builds on Q2NS, an ns-3-based quantum-network simulation module available through the ns-3 App Store. It realizes QPacket meta-headers with service intent and append-only action-commit stamps processed by node-local…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.NI"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-08-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

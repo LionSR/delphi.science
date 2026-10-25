@@ -1,0 +1,23 @@
+{
+  "key": "2610.17465",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.17465",
+  "title": "Optimal Feature-Based Newsvendor Policies under Censored Demand",
+  "authors": [
+    "Joost van der Haar",
+    "Ilias Willems",
+    "Joachim Arts",
+    "Ingrid Van Keilegom"
+  ],
+  "summary": "We investigate a newsvendor problem where a decision-maker observes a z-dimensional vector of covariates, and wants to learn how much stock to order given a sample of size n of censored demand data to minimize costs. Demand is censored when insufficient stock is available to meet it, and past stocking quantities are known. We propose a new model-agnostic loss function approach to estimate optimal order quantities using observational data, and characterize the optimal newsvendor policy as the policy that minimizes our proposed loss function. Our method requires only a single estimation step,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.PR"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

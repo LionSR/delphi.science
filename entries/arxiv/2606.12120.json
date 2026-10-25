@@ -1,0 +1,21 @@
+{
+  "key": "2606.12120",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.12120",
+  "title": "A Riemannian Approach to Low-Rank Optimal Transport",
+  "authors": [
+    "Pratik Jawanpuria",
+    "Bamdev Mishra"
+  ],
+  "summary": "Low-rank optimal transport (OT) mitigates the quadratic scaling of classical solvers, yet existing approaches rely heavily on first-order mirror-descent updates that require careful hyperparameter tuning and ignore the optimization landscape's curvature. To address these limitations, we propose a unified Riemannian geometric framework for low-rank OT, modeling balanced and unbalanced rank-$r$ positive factored couplings as novel smooth embedded submanifolds of the positive orthant. By equipping these manifolds with the Fisher-Rao product metric, we derive tractable formulations for…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-06-10",
+  "updated": "2026-06-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

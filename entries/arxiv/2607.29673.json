@@ -1,0 +1,20 @@
+{
+  "key": "2607.29673",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.29673",
+  "title": "ArcLP: A Matlab implementation of an $\\mathcal{O}(\\sqrt{n}L)$ arc-search infeasible interior-point algorithm for linear programming",
+  "authors": [
+    "Yang",
+    "Yaguang"
+  ],
+  "summary": "This paper presents a Matlab implementation of an arc-search infeasible interior point algorithm for linear programming (LP), which has a proven polynomial bound of $\\mathcal{O}(\\sqrt{n}L)$, the best among all interior-point algorithms for LP. Software architecture and major functions are discussed. Its ease of use is described by a simple example. Crucial strategies are summarized. Quality of the software is assured because this software has been extensively tested on both PC and Linux for the widely used Netlib benchmark linear programming problems in standard form. Some benchmark test…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-31",
+  "updated": "2026-07-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

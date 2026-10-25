@@ -1,0 +1,21 @@
+{
+  "key": "2603.21873",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.21873",
+  "title": "Accurate ground state energy estimation with noise and imperfect state preparation",
+  "authors": [
+    "Alicja Dutkiewicz",
+    "Thomas E. O'Brien",
+    "Stefano Polla"
+  ],
+  "summary": "We introduce a classical estimator for the post-processing of quantum phase estimation (QPE) data when a single target phase is isolated within a known interval, as is typical of ground state energy estimation of gapped systems. Our estimator filters the QPE signal within this promise region and recovers the phase through a moment-projection routine, which is robust to both external spurious phases and experimental noise. In the noiseless case this achieves an exponential suppression of bias with respect to a naive mean estimator. In the presence of global depolarizing noise the bias is…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-23",
+  "updated": "2026-08-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

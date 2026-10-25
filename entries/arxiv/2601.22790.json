@@ -1,0 +1,24 @@
+{
+  "key": "2601.22790",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.22790",
+  "title": "Conditional Performance Guarantee for Large Reasoning Models",
+  "authors": [
+    "Jianguo Huang",
+    "Hao Zeng",
+    "Bingyi Jing",
+    "Hongxin Wei",
+    "Bo An"
+  ],
+  "summary": "Large reasoning models have shown strong performance through extended chain-of-thought reasoning, yet their computational cost remains significant. Probably approximately correct (PAC) reasoning provides statistical guarantees for efficient reasoning by adaptively switching between thinking and non-thinking models, but the guarantee holds only in the marginal case and does not provide exact conditional coverage. We propose G-PAC reasoning, a practical framework that provides PAC-style guarantees at the group level by partitioning the input space. We develop two instantiations: Group PAC…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "math.ST"
+  ],
+  "published": "2026-01-30",
+  "updated": "2026-01-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

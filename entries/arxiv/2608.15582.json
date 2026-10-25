@@ -1,0 +1,22 @@
+{
+  "key": "2608.15582",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.15582",
+  "title": "Condensed PIPG Sequential Convex Optimization for Reusable-Rocket Powered Landing with Strong Aerodynamics",
+  "authors": [
+    "Wenbo Li",
+    "Linwei Li",
+    "Ziqi Xu",
+    "Shengping Gong"
+  ],
+  "summary": "Reusable-rocket powered landing under strong aerodynamics couples variable mass, free final time, and bounded aerodynamic controls through nonlinear velocity-frame dynamics. This paper develops a condensed proportional--integral projected-gradient (PIPG) sequential-convex method whose principal contribution is an exact reduced-space inner architecture. Because the problem contains only six terminal hard equalities and no state path constraints, 217 nodal-state variables and 210 trapezoidal dynamics equalities are eliminated from the 31-node convex subproblem, leaving 101 primal variables and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-16",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

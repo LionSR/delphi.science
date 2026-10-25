@@ -1,0 +1,20 @@
+{
+  "key": "2608.17958",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17958",
+  "title": "A First-Order Entropy Law for Canonical T-Complexity of Finite-Alphabet i.i.d. Sources",
+  "authors": [
+    "Thomas Schürmann"
+  ],
+  "summary": "Let $W_N$ be an exact length-$N$ block from a strictly positive i.i.d. source $\\mathbf p$ on a fixed finite alphabet. We prove that the canonical T-complexity $c_T$ satisfies \\[ \\frac{c_T(W_N)}{e^{-γ}h(\\mathbf p) N/\\log N}\\longrightarrow1 \\] in probability and in $L^r$ for every fixed $1\\le r<\\infty$, where $h(\\mathbf p)$ is the source entropy in nats and $γ$ is the Euler-Mascheroni constant. The proof combines an exact length budget for canonical recovery, a critical-scale $E_1$ estimate for an ideal backward chain, and an exact finite-block boundary representation. An exact Doob-transform…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.IT"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

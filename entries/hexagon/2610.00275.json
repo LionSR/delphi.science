@@ -1,0 +1,37 @@
+{
+  "key": "2610.00275",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00275v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00275v1",
+  "title": "The Willow Transform and the Blind Zone Theorem: A Sharp Information-Theoretic Obstruction in the Turán Hierarchy for the Riemann xi-Function",
+  "authors": [
+    "Changxia Lin"
+  ],
+  "summary": "Let Xi(t) = xi(1/2 + it) be the Riemann Xi-function, let Xi(t) = sum_{k>=0} (-1)^k c_k t^{2k} be its even Taylor expansion at the origin, and let D(n,r) = det[c_{n+i-j}] (i,j = 0..r-1) be the Toeplitz minors whose positivity for all n >= 0, r >= 1 is equivalent to the Riemann Hypothesis (RH). We prove a sharp and quantitative obstruction in the resulting hierarchy of criteria. Parametrising the zeros of G(z) = sum c_k z^k by beta_j = -1/z_j, we establish by the dual Jacobi-Trudi identity the exact identity D(n,r) = s_{(r^n)}(beta), the Schur function of the rectangular partition (r^n) in the…",
+  "domain": "math.NT",
+  "tags": [
+    "msc:11M26",
+    "msc:05E05",
+    "msc:30C15",
+    "msc:15B48",
+    "msc:33C45",
+    "Chebyshev polynomials",
+    "Riemann Zeta Function",
+    "Schur functions",
+    "Toeplitz minors",
+    "Turan inequalities",
+    "blind zone",
+    "total positivity"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-15",
+  "version": 1,
+  "authorship": "mixed",
+  "human_understanding": "all",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

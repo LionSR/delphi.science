@@ -1,0 +1,24 @@
+{
+  "key": "2605.11204",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11204",
+  "title": "Multi-Agent System Identification with Nonlinear Sheaf Diffusion",
+  "authors": [
+    "Nivar Anwer",
+    "Hans Riess",
+    "Matthew Hale"
+  ],
+  "summary": "Local interaction laws governing multi-agent systems can be difficult to recover from trajectory data, even when the dynamics are observed faithfully. In systems governed by a nonlinear sheaf Laplacian -- a generalization of the graph Laplacian accommodating heterogeneous state spaces and asymmetric communication channels -- the coordination law is encoded by edge potential functions whose gradients produce the inter-agent forces. Because trajectory observations record node-state evolution, they expose only the aggregate effect of the edge forces at each node: distinct interaction laws that…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.LG",
+    "cs.MA",
+    "math.AT"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

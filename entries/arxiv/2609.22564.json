@@ -1,0 +1,20 @@
+{
+  "key": "2609.22564",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.22564",
+  "title": "Generating Dicke State Graphs",
+  "authors": [
+    "Rebekah Herrman"
+  ],
+  "summary": "Graph theory is a powerful tool in quantum computing, with applications ranging from quantum circuit synthesis and optimization to entanglement mapping. Recent work has shown how one can use edge-colored graphs to model photonic experiments that generate GHZ and W states. However, the latter work also proved that verifying that a graph models a Dicke state experiment is coNP-complete. In this work, we provide families of graphs that generate $|D_{k}^a\\rangle \\otimes |0\\rangle^{\\otimes b }$, where $b = |a-2k|$ is the number of spectator modes. The graph setup consists of a doubled complete…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.CO"
+  ],
+  "published": "2026-09-18",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2604.10191",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.10191",
+  "title": "Policy Iteration for Stationary Discounted Hamilton--Jacobi--Bellman Equations: A Viscosity Approach",
+  "authors": [
+    "Namkyeong Cho",
+    "Yeoneung Kim"
+  ],
+  "summary": "We study policy iteration (PI) for deterministic infinite-horizon discounted control problems characterized by stationary Hamilton--Jacobi--Bellman equations. For general viscosity solutions, the classical gradient-based policy improvement step need not be defined pointwise. We introduce a semi-discrete formulation with centered difference quotients at scale $h$ and a separate artificial-viscosity term of order $O(h)$. The resulting stencil is monotone, and the positive discount yields a resolvent contraction. Under bounded Lipschitz data and a globally Lipschitz minimizing policy map, we…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-04-11",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

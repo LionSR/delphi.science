@@ -1,0 +1,21 @@
+{
+  "key": "2610.06808",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06808",
+  "title": "Quantum 1-PCA with Pauli Measurements in Nearly Linear Time",
+  "authors": [
+    "Dutch Hansen",
+    "Jerry Li"
+  ],
+  "summary": "We consider the problem of quantum 1-PCA: given copies of an unknown $n$-qubit mixed state, recover a classical description of its leading eigenvector. Our goal is to do so using non-adaptive and single-qubit measurements. For an $n$-qubit state with top eigenvalue $λ$ and spectral gap at least $Δ> 0$, we give an algorithm that recovers the leading eigenvector to fidelity at least $1 - \\varepsilon$ with high probability using $\\tilde{O}\\left( {2^n \\cdot η^2} / {Δ^3 \\varepsilon^3}\\right)$ copies and $\\tilde{O}((2^n/Δ\\varepsilon) \\cdot \\operatorname{poly}(η/Δ\\varepsilon))$ time, where $η= \\max…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

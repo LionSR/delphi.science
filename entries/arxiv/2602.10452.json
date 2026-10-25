@@ -1,0 +1,24 @@
+{
+  "key": "2602.10452",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.10452",
+  "title": "Distributed Online Convex Optimization with Nonseparable Costs and Constraints",
+  "authors": [
+    "Zhaoye Pan",
+    "Haozhe Lei",
+    "Fan Zuo",
+    "Zilin Bian",
+    "Tao Li"
+  ],
+  "summary": "This paper studies distributed online convex optimization with time-varying coupled constraints, motivated by distributed online control in network systems. Most prior work assumes a separability condition: the global objective and coupled constraint functions are sums of local costs and individual constraints. In contrast, we study a group of agents, networked via a communication graph, that collectively select actions to minimize a sequence of nonseparable global cost functions and to satisfy nonseparable long-term constraints based on full-information feedback and intra-agent…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-02-11",
+  "updated": "2026-02-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

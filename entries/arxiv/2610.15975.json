@@ -1,0 +1,20 @@
+{
+  "key": "2610.15975",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.15975",
+  "title": "Scalable Exact Non-Pauli Noise Simulation for Fault-Tolerant Quantum Circuits",
+  "authors": [
+    "Yuewen Hou",
+    "Gokul Subramanian Ravi"
+  ],
+  "summary": "Fault-tolerant quantum design relies on simulating noisy quantum error correction (QEC) circuits with hundreds to thousands of physical qubits and large circuit depths. High-throughput stabilizer simulators, such as Stim, are the de facto tools for this regime. However, these simulators typically support only Clifford gates and stochastic Pauli noise. As a result, more realistic device noise models-such as coherent control errors and thermal relaxation-are often approximated using Pauli Twirling. This replacement offers speed but can introduce inaccuracies. To address this, we propose…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-11",
+  "updated": "2026-10-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

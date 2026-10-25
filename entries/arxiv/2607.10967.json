@@ -1,0 +1,24 @@
+{
+  "key": "2607.10967",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10967",
+  "title": "Performance Evaluation of Stabilized Corrections for Mixed Precision Runge--Kutta Methods",
+  "authors": [
+    "César Herrera",
+    "John Driscoll",
+    "Sigal Gottlieb",
+    "Zachary J. Grant",
+    "Tej Sai Kakumanu",
+    "Andrew Christlieb"
+  ],
+  "summary": "Mixed precision Runge--Kutta methods reduce the cost of the expensive implicit solves in diagonally implicit Runge--Kutta (DIRK) schemes by evaluating them in low precision, while retaining the accuracy of the scheme for larger time steps. The accuracy lost to the low-precision perturbation can be recovered through inexpensive explicit corrections; however, these corrections have an adverse impact on stability. Recently proposed stabilized corrections remedy this by applying a stabilization matrix to the correction step, but their runtime cost has not previously been quantified. In this…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

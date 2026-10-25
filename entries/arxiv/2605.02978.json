@@ -1,0 +1,20 @@
+{
+  "key": "2605.02978",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.02978",
+  "title": "Observability for Post-Quantum TLS Readiness: A Multi-Surface Evidence Framework",
+  "authors": [
+    "José Luis Delgado"
+  ],
+  "summary": "Post-quantum migration in Transport Layer Security (TLS) requires evidence-aware measurements that distinguish session negotiation, endpoint capability, certificate-chain evidence, and the provenance of missing observations. This distinction is essential under TLS 1.3 encryption, resumption, mutual TLS, trace truncation, fragmentation, coalescing, active certificate retrieval, and temporal drift. We present a multi-surface framework for post-quantum TLS observability. The framework separates passive session evidence, active probing, certificate-chain evidence, and registry knowledge, and…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "quant-ph"
+  ],
+  "published": "2026-05-04",
+  "updated": "2026-05-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2602.07559",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.07559",
+  "title": "VERIFY-RL: Verifiable Recursive Decomposition for Reinforcement Learning in Mathematical Reasoning",
+  "authors": [
+    "Kaleem Ullah Qasim",
+    "Jiashu Zhang",
+    "Hao Li",
+    "Muhammad Kafeel Shaheen"
+  ],
+  "summary": "Training language models to solve complex mathematical problems benefits from curriculum learning progressively training on simpler subproblems. However, existing decomposition methods are often heuristic, offering no guarantees that subproblems are simpler, that solving them aids the parent task, or that their relationships are mathematically grounded. We observe that symbolic differentiation provides a natural structure for verified decomposition: calculus rules explicitly define how expressions reduce to simpler components with provable properties. We introduce Verify-RL, a framework…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "cs.CC",
+    "math.NA"
+  ],
+  "published": "2026-02-07",
+  "updated": "2026-02-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2609.18992",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.18992",
+  "title": "From Optimal Transport to Optimal Quantization: A Variational Study of the Witsenhausen Counterexample",
+  "authors": [
+    "Quanyan Zhu"
+  ],
+  "summary": "Witsenhausen's counterexample is a canonical problem in decentralized control: a two-stage linear-quadratic-Gaussian team problem in which nonlinear policies strictly outperform every affine one. This paper develops a variational and computational framework for the scalar counterexample based on optimal transport. Building on the transport formulation of Wu and Verdú, we absorb the first controller into a transport map and recast the problem as $J^\\star=\\inf_Q\\{k^2W_2^2(P,Q)+\\mathrm{mmse}(Q)\\}$, which trades a quadratic Wasserstein transport cost against a minimum mean-square estimation…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-07-17",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

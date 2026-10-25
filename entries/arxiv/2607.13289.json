@@ -1,0 +1,21 @@
+{
+  "key": "2607.13289",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.13289",
+  "title": "Model predictive control for laser thermal processing: operator learning, closed-loop validation, and out-of-distribution analysis",
+  "authors": [
+    "Smajil Halilovic",
+    "Yuchen Zhang",
+    "Daniel M. Tartakovsky"
+  ],
+  "summary": "Laser-based thermal processing, such as laser powder bed fusion, requires tight regulation of the peak surface temperature: heat accumulates where the moving source re-enters previously heated material, driving the temperature out of its process window and causing defects. High-fidelity thermal models capture this physics but are too slow for online optimization, which motivates fast, differentiable, and generalizable surrogates. We develop and validate a complete surrogate-based control pipeline that regulates the maximum surface temperature of a moving laser on a 304-stainless-steel…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

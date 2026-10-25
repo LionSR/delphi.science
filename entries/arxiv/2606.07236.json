@@ -1,0 +1,19 @@
+{
+  "key": "2606.07236",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.07236",
+  "title": "Moving One-Component Regularity Criteria for the 3D Incompressible MHD Equations",
+  "authors": [
+    "Maotuo Guo"
+  ],
+  "summary": "We establish a scaling-critical continuation criterion for the three-dimensional incompressible magnetohydrodynamic equations in $\\mathbb{R}^3$ with arbitrary positive viscosity and magnetic diffusivity. Let $β(t)$ be a unit vector that is piecewise $H^1$ in time and has only finitely many jumps. For $3\\le p<\\infty$, set $γ_p=2p/(2p-3)$. We prove that an $H^1$ strong solution can be continued beyond $T_*$ if \\[ \\int_0^{T_*}\\left( \\|u(t)\\cdotβ(t)\\|_{\\dot H^{3/2}}^2+ \\|b(t)\\cdotβ(t)\\|_{\\dot H^{3/2}}^2+ \\|β(t)\\cdot\\operatorname{curl}b(t)\\|_{L^p}^{γ_p} \\right)\\,dt<\\infty . \\] Thus the observed…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-06-05",
+  "updated": "2026-06-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

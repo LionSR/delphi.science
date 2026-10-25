@@ -1,0 +1,22 @@
+{
+  "key": "2608.09030",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.09030",
+  "title": "Closing the loop in learning with missing data",
+  "authors": [
+    "Dimitrios Pylorof",
+    "Humberto E. Garcia"
+  ],
+  "summary": "What should a machine learning model learn when data is missing during training? We look at the learning process from a dynamical systems perspective, cast data missingness as a structured loss of actuation that limits controllability of the parameter error dynamics, and ultimately derive adaptation mechanisms with Lyapunov stability characteristics that throttle model updates in ways that preserve learning coherence under partial, intermittent observability. Under recurrent excitation, our analysis provides ISS-type residual-to-state bounds with respect to a bounded closed-loop mismatch…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

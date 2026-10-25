@@ -1,0 +1,22 @@
+{
+  "key": "2606.15665",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.15665",
+  "title": "Information Gap and Feasibility-Aware Inference in Binomial Logistic Mixtures",
+  "authors": [
+    "Yuta Hayashida",
+    "Shonosuke Sugasawa"
+  ],
+  "summary": "This paper studies the information gap between mixture detection and label recovery in binomial logistic mixtures. Standard likelihood-based criteria such as the Bayesian information criterion (BIC) can detect the presence of two components, but this does not guarantee that the corresponding labels are recoverable. We show that this gap is intrinsic to binomial logistic mixtures with a fixed number of trials: observed-data evidence for mixture structure and per-observation information for label recovery have different local orders in the component separation, and only the former accumulates…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-06-14",
+  "updated": "2026-06-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

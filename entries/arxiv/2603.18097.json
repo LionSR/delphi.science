@@ -1,0 +1,20 @@
+{
+  "key": "2603.18097",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.18097",
+  "title": "One Key Good, L Keys Better: List Decoding Meets Quantum Privacy Amplification",
+  "authors": [
+    "Prateek P. Kulkarni"
+  ],
+  "summary": "We introduce list privacy amplification (LPA), a relaxation of the final step of quantum key distribution (QKD) in which Alice and Bob extract a list of $L$ candidate keys from a raw string correlated with an eavesdropper Eve, with the guarantee that at least one key is perfectly secret while Eve cannot identify which. This parallels list decoding in error-correcting codes: relaxing unique decoding to list decoding increases the decoding radius; analogously, list extraction increases achievable key length beyond the standard quantum leftover hash lemma (QLHL). Within the abstract…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-03-18",
+  "updated": "2026-03-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

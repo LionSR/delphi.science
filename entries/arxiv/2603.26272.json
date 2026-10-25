@@ -1,0 +1,22 @@
+{
+  "key": "2603.26272",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.26272",
+  "title": "A Family of Even-Order Central-Upwind WENO Schemes with Averaged Downwind and Novel Global Smoothness Indicators",
+  "authors": [
+    "Jiaxi Gu",
+    "Bao-Shan Wang",
+    "Wai Sun Don",
+    "Jae-Hun Jung"
+  ],
+  "summary": "We propose a simple yet effective local smoothness indicator for the downwind stencil in central-upwind weighted essentially non-oscillatory (WENO) schemes of even order for hyperbolic conservation laws. Starting from an odd-order upwind WENO scheme, we construct an even-number-of-points stencil by incorporating a downwind substencil whose smoothness indicator is the arithmetic mean of all local smoothness indicators. This straightforward averaging approach incorporates regularity information from the entire stencil without requiring additional tuning parameters or complex formulations.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-27",
+  "updated": "2026-03-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

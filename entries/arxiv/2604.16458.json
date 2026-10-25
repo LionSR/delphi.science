@@ -1,0 +1,21 @@
+{
+  "key": "2604.16458",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.16458",
+  "title": "A Unified Control Theory Derivation of Discrete-Time Linear Ensemble Kalman Filters",
+  "authors": [
+    "Jin Won Kim"
+  ],
+  "summary": "The ensemble Kalman filter (EnKF) has become a standard methodology for state estimation in high-dimensional systems, yet its various stochastic and deterministic formulations often appear conceptually disconnected. In this paper, a unified derivation framework for EnKF algorithms are established by leveraging the classical duality between estimation and optimal control, which is the key concept in deriving Kalman filter. By recasting the minimum variance estimation problem into second order moment for the ensembles, we demonstrate that seemingly distinct EnKF variants -- both with or…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC",
+    "math.PR"
+  ],
+  "published": "2026-04-08",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

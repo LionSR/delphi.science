@@ -1,0 +1,23 @@
+{
+  "key": "2603.26048",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.26048",
+  "title": "Asymptotic Optimism for Tensor Regression Models with Applications to Neural Network Compression",
+  "authors": [
+    "Haoming Shi",
+    "Eric C. Chi",
+    "Hengrui Luo"
+  ],
+  "summary": "We study rank selection for low-rank tensor regression under random covariates design. Under a Gaussian random-design model and some mild conditions, we derive population expressions for the expected training-testing discrepancy (optimism) for both CP and Tucker decomposition. We further demonstrate that the optimism is minimized at the true tensor rank for both CP and Tucker regression. This yields a prediction-oriented rank-selection rule that aligns with cross-validation and extends naturally to tensor-model averaging. We also discuss conditions under which under- or over-ranked models…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-03-27",
+  "updated": "2026-03-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

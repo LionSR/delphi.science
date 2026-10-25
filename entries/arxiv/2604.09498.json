@@ -1,0 +1,21 @@
+{
+  "key": "2604.09498",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.09498",
+  "title": "New Scheme Adaption Strategy for Hyperbolic Conservation Laws",
+  "authors": [
+    "Shaoshuai Chu",
+    "Michael Herty",
+    "Alexander Kurganov"
+  ],
+  "summary": "We introduce a new scheme adaption strategy for one- and two-dimensional hyperbolic systems of conservation laws. The proposed approach builds upon the adaptive framework introduced in [S. Chu, A. Kurganov, and I. Menshov, Appl. Numer. Math., 209 (2025), pp.155--170], where we first employed the smoothness indicator from [R. Lohner, Comput. Methods. Appl. Mech. Eng., 61 (1987), pp.323--338] to automatically detect ``rough'' and smooth parts of the computed solution, and then used different limiters in the detected regions. This adaptive strategy was based on a threshold needed to sharply…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-10",
+  "updated": "2026-06-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

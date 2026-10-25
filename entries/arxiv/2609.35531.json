@@ -1,0 +1,22 @@
+{
+  "key": "2609.35531",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.35531",
+  "title": "Latent Twin Operator",
+  "authors": [
+    "Deepanshu Verma",
+    "Riley Chen",
+    "Matthias Chung"
+  ],
+  "summary": "Surrogate models deployed on real physical systems rarely see data at fixed resolutions: sensor configurations vary across deployments and may evolve over time as sensing infrastructure changes. We introduce the Latent Twin Operator (LTO), a latent-space surrogate for time-evolving PDEs with a Convolutional Conditional Neural Process (ConvCNP)-style encoder and decoder that accepts a context set of $N$ sensor observations with arbitrary placement and can be queried at any resolution. A learned latent evolution map advances the encoded state directly between arbitrary time points, decoupling…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math.NA"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2602.22482",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.22482",
+  "title": "On the Computation Rate of All-Reduce",
+  "authors": [
+    "Yufeng Zhou",
+    "Hua Sun"
+  ],
+  "summary": "In the All-Reduce problem, each one of the K nodes holds an input and wishes to compute the sum of all K inputs through a communication network where each pair of nodes is connected by a parallel link with arbitrary bandwidth. The computation rate of All-Reduce is defined as the number of sum instances that can be computed over each network use. For the computation rate, we provide a cut-set upper bound and a linear programming lower bound based on time (bandwidth) sharing over all schemes that first perform Reduce (aggregating all inputs at one node) and then perform Broadcast (sending the…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "math.CO"
+  ],
+  "published": "2026-02-25",
+  "updated": "2026-02-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2602.02068",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.02068",
+  "title": "On the Numerical Treatment of an Abstract Nonlinear System of Coupled Hyperbolic Equations Associated with the Timoshenko Model",
+  "authors": [
+    "Jemal Rogava",
+    "Zurab Vashakidze"
+  ],
+  "summary": "The present work addresses the Cauchy problem for an abstract nonlinear system of coupled hyperbolic equations associated with the Timoshenko model in a real Hilbert space. Our purpose is to develop and delve into a temporal discretization scheme for approximating a solution to this problem. To this end, we propose a symmetric three-layer semi-discrete time-stepping scheme in which the nonlinear term is evaluated at the temporal midpoint. As a result, at each time step, this approach reduces the original nonlinear problem to a linear one and enables parallel computation of its solution.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math-ph",
+    "math.AP"
+  ],
+  "published": "2026-02-02",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

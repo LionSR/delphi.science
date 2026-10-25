@@ -1,0 +1,21 @@
+{
+  "key": "2610.03783",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03783",
+  "title": "Neural Network Solvers for Nonlinear ODEs: Benchmarking MLPs and B-Spline/Chebyshev KANs",
+  "authors": [
+    "Mahidhar Reddy Patukuri",
+    "B. Veena S. N. Rao",
+    "S. M. Mallikarjunaiah"
+  ],
+  "summary": "Three neural networks are compared as solvers of nonlinear ordinary differential equations: a multilayer perceptron (MLP), a Kolmogorov-Arnold network (KAN) whose edges are B-splines, and a KAN whose edges are Chebyshev series. Each network is trained only on the residual of the equation and on its initial or boundary conditions. The exact solution, or a numerical solution accurate to $10^{-13}$, is used only afterward to measure the error. Five test problems of differential orders one to four are investigated: the logistic equation, a singular Lane-Emden type initial value problem, a…",
+  "domain": "math.GM",
+  "tags": [
+    "math.GM"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

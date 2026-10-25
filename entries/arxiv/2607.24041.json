@@ -1,0 +1,24 @@
+{
+  "key": "2607.24041",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.24041",
+  "title": "The Zero Pattern of a Design Matrix Drives Multiple Descent in Over-parameterized Regression",
+  "authors": [
+    "Kevin Han Huang",
+    "Haoyu Ye",
+    "Somak Laha",
+    "Morgane Austern"
+  ],
+  "summary": "Over-parameterized linear regression has been widely studied over the last decade. However, most existing works assume that the covariates are independent and that their covariance matrices are non-degenerate. In this paper, we relax both assumptions and derive deterministic equivalents for the prediction risk in a vanishing-ridge regime. We show that degeneracy of the covariance matrices and dependence can lead to multiple descent, and characterize where the corresponding peaks can occur. Our proofs use a novel graph representation of the variance profile. We show that maximum matchings and…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

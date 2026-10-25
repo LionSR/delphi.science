@@ -1,0 +1,25 @@
+{
+  "key": "2603.18640",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.18640",
+  "title": "A Theoretical Comparison of No-U-Turn Sampler Variants: Necessary and Sufficient Convergence Conditions and Mixing Time Analysis under Gaussian Targets",
+  "authors": [
+    "Samuel Gruffaz",
+    "Kyurae Kim",
+    "Fares Guehtar",
+    "Hadrien Duval-decaix",
+    "Pacôme Trautmann"
+  ],
+  "summary": "The No-U-Turn Sampler (NUTS) is the computational workhorse of modern Bayesian software libraries, yet its qualitative and quantitative convergence guarantees were established only recently. A significant gap remains in the theoretical comparison of its two main variants: NUTS-mul and NUTS-BPS, which use multinomial sampling and biased progressive sampling, respectively, for index selection. In this paper, we address this gap in three contributions. First, we derive the first necessary conditions for geometric ergodicity for both variants. Second, we establish the first sufficient conditions…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-03-19",
+  "updated": "2026-04-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2604.22630",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.22630",
+  "title": "Upper bounds on the running time of bootstrap percolation",
+  "authors": [
+    "Weichan Liu",
+    "Xiangxiang Nie",
+    "Simón Piga",
+    "Bjarne Schülke"
+  ],
+  "summary": "For $k$-graphs $F$ and $H_0$ the $F$-bootstrap percolation process (or $F$-process) starting with $H_0$ is a sequence $(H_i)_{i\\geq0}$ of $k$-graphs such that $H_{i+1}$ is obtained from $H_i$ by adding all those $e\\in V(H_0)^{(k)}\\setminus E(H_i)$ as edges that complete a new copy of $F$. The running time of this $F$-process, denoted by $M_F(H_0)$, is the smallest $i$ with $H_i=H_{i+1}$. Bollobás proposed the problem of determining the maximum running time for $n\\in\\mathbb{N}$, i.e., $M_F(n)=\\max_{\\vert V(H_0)\\vert=n}M_F(H_0)$. Although this problem has received a lot of attention recently,…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-04-24",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

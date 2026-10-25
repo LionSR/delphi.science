@@ -1,0 +1,20 @@
+{
+  "key": "2604.27058",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.27058",
+  "title": "Clifft: Fast Exact Simulation of Near-Clifford Quantum Circuits",
+  "authors": [
+    "Bradley A. Chase",
+    "Farrokh Labib"
+  ],
+  "summary": "Exact classical simulation of fault-tolerant quantum circuits remains limited by a tradeoff between exponential state vector scaling, exponential $T$-count scaling in stabilizer-rank approaches, and per-shot tracking overhead in sparse generalized stabilizer simulators. In this work, we introduce Clifft, an open-source simulator that shifts the dominant exponential cost from the total qubit count to a dynamic active subspace by factoring the quantum state into an offline Clifford frame, an online Pauli frame, and a dynamically sized active state vector. This architecture resolves…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-05-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

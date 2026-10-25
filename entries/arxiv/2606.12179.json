@@ -1,0 +1,21 @@
+{
+  "key": "2606.12179",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.12179",
+  "title": "Nearly Instance Optimal Sparse Matrix Approximation from Matrix-Vector Products",
+  "authors": [
+    "Christoper Musco",
+    "Indu Ramesh"
+  ],
+  "summary": "A large body of work studies the problem of learning an approximation to an implicit matrix $A\\in \\mathbb{R}^{m\\times n}$ that is only accessible implicitly via matrix-vector product queries (matvec queries) of the form ${x} \\rightarrow {A}{x}$ or ${x} \\rightarrow {A}^T{x}$. Of particular interest are methods that learn a near-optimal approximation with a fixed sparsity pattern. For example, we might want to learn a near-optimal diagonal, banded, or arrow-head approximation to an implicit matrix $A$. Naturally, the number of matvec queries required to solve this problem depends on the…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.NA"
+  ],
+  "published": "2026-06-10",
+  "updated": "2026-06-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

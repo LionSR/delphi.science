@@ -1,0 +1,42 @@
+{
+  "key": "2610.00188",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00188v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00188v1",
+  "title": "A counterexample to Vaught's Conjecture for $L_{\\omega_1,\\omega}$",
+  "authors": [
+    "Nathanael L. Ackerman",
+    "Cameron Freer",
+    "Robin W. Knight"
+  ],
+  "summary": "We construct a sentence of $L_{\\omega_1,\\omega}$ having exactly $\\aleph_1$ many countable models up to isomorphism, but no perfect set of non-isomorphic models. This disproves Vaught's conjecture for infinitary logic. The construction follows a framework devised by Robin Knight, and the proof has been formally verified in Lean.",
+  "domain": "math.LO",
+  "tags": [
+    "msc:03C15",
+    "msc:03C75",
+    "msc:03E15",
+    "Knight systems",
+    "Vaught’s conjecture",
+    "infinitary logic",
+    "number of models"
+  ],
+  "published": "2026-10-11",
+  "updated": "2026-10-10",
+  "version": 1,
+  "ai_models": [
+    "Claude Code",
+    "Codex",
+    "ChatGPT",
+    "SMT and Horn clause solvers"
+  ],
+  "authorship": "human",
+  "human_understanding": "all",
+  "formalized": true,
+  "formalizations": [
+    "https://palomar-registry.org/entry?id=PALOMAR-2026-10-07-000001&version=1"
+  ],
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

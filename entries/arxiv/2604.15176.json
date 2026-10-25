@@ -1,0 +1,24 @@
+{
+  "key": "2604.15176",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.15176",
+  "title": "Lightweight Real-Time ALADIN for Distributed Optimization",
+  "authors": [
+    "Yifei Wang",
+    "Xuhui Feng",
+    "Shimin Pan",
+    "Liangfan Zhu",
+    "Xu Du",
+    "Apostolos I. Rikos"
+  ],
+  "summary": "This paper presents a real-time computational framework for multi-node distributed optimization by extending the Augmented Lagrangian Alternating Direction Inexact Newton (ALADIN) algorithm. Our approach integrates adjoint sequential quadratic programming (SQP) techniques to enable efficient approximation of Jacobian information within the ALADIN embedded quadratic program, thereby reducing communication overhead. Furthermore, to decrease computational complexity, we design an event-triggered update strategy that avoids updating Hessian and Jacobian matrices at every iteration. The proposed…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-16",
+  "updated": "2026-04-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

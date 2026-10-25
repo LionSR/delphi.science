@@ -1,0 +1,22 @@
+{
+  "key": "2609.10980",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10980",
+  "title": "EGGROLL, Unrolled: Understanding and Improving Low-Rank Evolution Strategies at Scale",
+  "authors": [
+    "Ege C. Kaya",
+    "Abolfazl Hashemi"
+  ],
+  "summary": "EGGROLL (Sarkar et al., 2026) makes evolution strategies (ES) practical for LLMs by replacing dense Gaussian weight perturbations with low-rank Gaussian products, often of rank one. This choice is computationally attractive but geometrically severe: Each rank-one perturbation lies in a zero-volume subset of the ambient matrix space, despite having identity covariance. We characterize the EGGROLL update mean field at finite rank and nonzero perturbation radius as a resolvent applied to the gradient of the perturbation-smoothed objective. This transformation can make the mean field…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2601.22187",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.22187",
+  "title": "A root finding method with arbitrary order of convergence",
+  "authors": [
+    "Alois Schiessl"
+  ],
+  "summary": "Let $a\\in \\mathbb{R}^{+}\\backslash\\left\\{0\\right\\}$ and $M\\in\\mathbb{N}$. We consider the equation $t^M-a=0$, which is equivalent to $1-\\frac{t^M}{a}=0\\,.$ The real solution is $\\sqrt[M]{a}$. In this publication, we present a method that enables the calculation of $\\sqrt[M]{a}$ with arbitrary order of convergence using only polynomials. We define the fixed point function \\[ F\\left(x\\right) =\\prod_{\\ell=1}^{P}\\left(1+\\frac{1}{\\ell\\cdot M}\\right) \\int\\limits_{0}^{x}\\!\\left(1-{\\frac{{t}^{M}}{a}}\\right)^{P}{\\rm d}t…",
+  "domain": "math.GM",
+  "tags": [
+    "math.GM"
+  ],
+  "published": "2026-01-28",
+  "updated": "2026-02-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

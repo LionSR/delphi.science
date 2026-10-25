@@ -1,0 +1,24 @@
+{
+  "key": "2602.19434",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.19434",
+  "title": "$L_1$-distortion of Earth Mover Distances and Transportation Cost Spaces on High Dimensional Grids",
+  "authors": [
+    "Chris Gartland",
+    "Mikhail Ostrovskii",
+    "Yuval Rabani",
+    "Robert Young"
+  ],
+  "summary": "We prove that the distortion of any embedding into $L_1$ of the transportation cost space or earth mover distance over a $d$-dimensional grid $\\{1,\\dots m\\}^d$ is $Ω(\\log N)$, where $N$ is the number of vertices and the implicit constant is universal (in particular, independent of dimension). This lower bound matches the universal upper bound $O(\\log N)$ holding for any $N$-point metric space. Our proof relies on a new Sobolev inequality for real-valued functions on the grid, based on random measures supported on dyadic cubes.",
+  "domain": "math.FA",
+  "tags": [
+    "math.FA",
+    "cs.CG",
+    "math.MG"
+  ],
+  "published": "2026-02-23",
+  "updated": "2026-02-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,26 @@
+{
+  "key": "2607.15753",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.15753",
+  "title": "CoG-Guided Weight Correction for Fault-Tolerant Deep Neural Networks",
+  "authors": [
+    "Bahram Parchekani",
+    "Samira Nazari",
+    "Ali Azarpeyvand",
+    "Mohammad Hasan Ahmadilivani",
+    "Tara Ghasempouri",
+    "Jaan Raik"
+  ],
+  "summary": "Deep Neural Networks (DNNs) used in safety-critical applications are vulnerable to hardware and memory faults that corrupt network weights and degrade reliability. In this paper, we propose a Center of Gravity (CoG) guided weight correction method that restores faulty weights based on their spatial characteristics within each layer. The proposed approach detects and corrects weight faults using distance-aware correction rules, eliminating the need for retraining or architectural modification. The effectiveness of the proposed method in terms of the capability of tolerating hardware faults…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AR",
+    "math.NA"
+  ],
+  "published": "2026-07-17",
+  "updated": "2026-07-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

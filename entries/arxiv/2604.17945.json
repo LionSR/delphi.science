@@ -1,0 +1,23 @@
+{
+  "key": "2604.17945",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.17945",
+  "title": "Flow Shop Scheduling with Stochastic Reentry",
+  "authors": [
+    "Maximilian von Aspern",
+    "Felix Buld",
+    "Michael Pinedo"
+  ],
+  "summary": "We study flow shop scheduling with stochastic reentry, where jobs must complete multiple passes through the entire shop, and the number of passes that a job requires for completion is drawn from a discrete probability distribution. The goal is to find policies that minimize performance measures in expectation. Our main contribution is a reduction to a stochastic scheduling problem on identical parallel machines augmented by machine arrivals. This reduction preserves objective values and enables the transfer of structural results and performance guarantees from the auxiliary problems to the…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.DM",
+    "math.OC"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-08-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

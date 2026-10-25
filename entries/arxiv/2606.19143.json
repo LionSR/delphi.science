@@ -1,0 +1,20 @@
+{
+  "key": "2606.19143",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.19143",
+  "title": "Single-loop approaches to nonsmooth bilevel optimisation",
+  "authors": [
+    "Ensio Suonperä",
+    "Tuomo Valkonen"
+  ],
+  "summary": "We study bilevel optimisation problems in which the inner problem is represented as a set-valued, parametric constraint. We develop relevant optimistic and pessimistic calculus rules, derive corresponding optimality conditions, and formulate nonsmooth adjoint inclusions based on both the Fréchet and limiting coderivatives. Founded on these results, we propose a single-loop algorithm that accommodates a wide range of inner and adjoint steps, including those of primal-dual methods. We prove its convergence. Numerical experiments on total variation regularised inverse problems demonstrate the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-17",
+  "updated": "2026-06-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

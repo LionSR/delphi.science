@@ -1,0 +1,24 @@
+{
+  "key": "2601.18681",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.18681",
+  "title": "ART for Diffusion Sampling: A Reinforcement Learning Approach to Timestep Schedule",
+  "authors": [
+    "Yilie Huang",
+    "Wenpin Tang",
+    "Xunyu Zhou"
+  ],
+  "summary": "We consider time discretization for score-based diffusion models to generate samples from a learned reverse-time dynamic on a finite grid. Uniform and hand-crafted grids can be suboptimal given a budget on the number of time steps. We introduce Adaptive Reparameterized Time (ART), which controls the clock speed of a reparameterized time variable to redistribute computation along the sampling trajectory while preserving the terminal time, with the objective of minimizing the aggregate Euler discretization error. We derive a randomized companion ART-RL that recasts ART as a continuous-time…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-01-26",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

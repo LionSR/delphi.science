@@ -1,0 +1,23 @@
+{
+  "key": "2603.09734",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.09734",
+  "title": "Long-Run Conditional Value at Risk Reinforcement Learning",
+  "authors": [
+    "Qixin Wang",
+    "Hao Cao",
+    "Jian-Qiang Hu",
+    "Mingjie Hu",
+    "Li Xia"
+  ],
+  "summary": "We propose a reinforcement learning method for minimizing the long-run conditional value at risk (CVaR) in Markov decision processes with finite state and action spaces. The method uses a single sample trajectory to update a quantile estimate, a $Q$-function, and a randomized policy, without requiring knowledge of transition probabilities or cost distributions. Under appropriate conditions, we show that the estimates track their changing targets as the policy is updated and exploration decreases, even when the proportion of updates for some state and action pairs tends to zero. With a strict…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-10",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

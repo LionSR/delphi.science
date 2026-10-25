@@ -1,0 +1,21 @@
+{
+  "key": "2604.11715",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.11715",
+  "title": "Koopman Representations for Non-Vanishing Time Intervals: An Optimization Approach and Sampling Effects",
+  "authors": [
+    "Younghwan Cho",
+    "Richard Sowers"
+  ],
+  "summary": "Koopman operator theory is a key tool in data assimilation of complex dynamical systems, with the potential to be applied to multimodal data. We formulate the problem of learning Koopman eigenfunctions from observations at arbitrary, possibly non-vanishing, time intervals as an optimization problem. Analysis of the formulation reveals aliasing induced by oscillatory dynamics and the sampling pattern, making an inherent identifiability limit explicit. The analysis also uncovers phase alignment near the true Koopman frequency, which creates a steep loss valley and demands careful optimization.…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-04-13",
+  "updated": "2026-04-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

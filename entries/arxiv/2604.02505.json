@@ -1,0 +1,20 @@
+{
+  "key": "2604.02505",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.02505",
+  "title": "Optimal Projection-Free Adaptive SGD for Matrix Optimization",
+  "authors": [
+    "Dmitry Kovalev"
+  ],
+  "summary": "Recently, Jiang et al. [2026] developed Leon, a practical variant of One-sided Shampoo [Xie et al., 2025a, An et al., 2025] algorithm for online convex optimization, which does not require computing a costly quadratic projection at each iteration. Unfortunately, according to the existing analysis, Leon requires tuning an additional hyperparameter in its preconditioner and cannot achieve dimension-independent convergence guarantees for convex optimization problems beyond the bounded gradients assumption. In this paper, we resolve this issue by proving certain stability properties of Leon's…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-04-02",
+  "updated": "2026-04-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

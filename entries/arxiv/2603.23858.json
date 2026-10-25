@@ -1,0 +1,23 @@
+{
+  "key": "2603.23858",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.23858",
+  "title": "Stable High-Order Interpolation on the Grassmann Manifold by Maximum-Volume Coordinates and Arnoldi Orthogonalization",
+  "authors": [
+    "Qiang Niu",
+    "Wen Jiang",
+    "Jie Fei",
+    "Ruoyu Xiong",
+    "Yuxuan Li"
+  ],
+  "summary": "High-order interpolation on the Grassmann manifold $\\Gr(n, p)$ is often hindered by the computational overhead and derivative instability of SVD-based geometric mappings. To solve the challenges, we propose a stabilized framework that combines Maximum-Volume (MV) local coordinates with Arnoldi-orthogonalized polynomial bases. First, manifold data are mapped to a well-conditioned Euclidean domain via MV coordinates. The approach bypasses the costly matrix factorizations inherent to traditional Riemannian normal coordinates. Within the coordinate space, we use the Vandermonde-with-Arnoldi…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-25",
+  "updated": "2026-03-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

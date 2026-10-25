@@ -1,0 +1,24 @@
+{
+  "key": "2605.02656",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.02656",
+  "title": "Learning Temporal Patterns in Financial Time Series: A Comparative Study of Quantum LSTM and Quantum Reservoir Computing",
+  "authors": [
+    "Danyal Maheshwari",
+    "Gerhard Hellstern",
+    "Martin Zaefferer",
+    "Martin Braun",
+    "Tanja Döhler"
+  ],
+  "summary": "This study explores quantum and classical hybrid architectures for financial time-series fore casting, focusing on Quantum Long Short-Term Memory (QLSTM) networks and Quantum Reservoir Computing (QRC), using univariate and multivariate lag structures on real financial data. We assess how lag embeddings affect predictive accuracy and robustness. Data are en coded into quantum states via amplitude encoding, enabling efficient representation of normalized lagged observations under realistic qubit constraints. The recurrent dynamics of QLSTM and the reservoir of QRC are implemented as…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CE"
+  ],
+  "published": "2026-05-04",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

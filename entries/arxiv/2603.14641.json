@@ -1,0 +1,21 @@
+{
+  "key": "2603.14641",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.14641",
+  "title": "GPU-Accelerated Quantum Simulation of Stabilizer Circuits",
+  "authors": [
+    "Muhammad Osama",
+    "Dimitrios Thanos",
+    "Alfons Laarman"
+  ],
+  "summary": "We introduce new parallel algorithms for efficiently simulating stabilizer (Clifford) circuits on GPUs, with a focus on data-parallel tableau evolution and scalable handling of projective measurements. Our approach reformulates key bottlenecks in stabilizer simulation -- such as Gaussian elimination and measurement updates -- into GPU-tailored primitives that eliminate sequential dependencies and maximize memory coalescing. We implement these techniques in QuaSARQ, a GPU-accelerated stabilizer simulator designed for large qubit counts and many-shot sampling. Across a broad benchmark suite…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-15",
+  "updated": "2026-09-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

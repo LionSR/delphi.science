@@ -1,0 +1,23 @@
+{
+  "key": "2608.24183",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.24183",
+  "title": "Gradient-extrapolation-based distributed mirror descent algorithm for multi-cluster aggregative games",
+  "authors": [
+    "Rui Zhu",
+    "Fuyong Wang",
+    "Zhongxin Liu",
+    "Zengqiang Chen"
+  ],
+  "summary": "This paper studies a class of multi-cluster aggregative games characterized by the coexistence of cooperation and competition, where each agent's cost function depends on its own strategy and the aggregate of all agents' strategies. To address the Nash equilibrium seeking problem for such games in the non-Euclidean setting, a distributed mirror descent algorithm with gradient extrapolation is proposed over time-varying intra-cluster and inter-cluster networks. The mirror descent framework employs a general Bregman divergence as the distance measure, providing greater flexibility than…",
+  "domain": "cs.GT",
+  "tags": [
+    "cs.GT",
+    "math.OC"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

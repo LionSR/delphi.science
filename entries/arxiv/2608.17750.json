@@ -1,0 +1,20 @@
+{
+  "key": "2608.17750",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17750",
+  "title": "On the Expressive Power of the Transverse-Field Ising Model for Graph Learning",
+  "authors": [
+    "Mehdi Djellabi",
+    "Louis-Paul Henry"
+  ],
+  "summary": "We study the quantum evolution induced by graph-indexed Ising Hamiltonians as a source of structural signal for graph learning. Graph automorphisms preserve symmetries of the Hamiltonian, and these symmetries constrain the quantum evolution in a way that turns time-dependent local measurements into informative probes of graph structure. Leveraging this idea, we introduce QDAGer, a quantum-inspired graph-pair Transformer that injects quantum-dynamical features from time series of node occupations and connected two-point correlators directly into the attention mechanism. We apply QDAGer to…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

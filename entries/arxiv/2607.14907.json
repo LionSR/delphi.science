@@ -1,0 +1,21 @@
+{
+  "key": "2607.14907",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14907",
+  "title": "Recognition of algebraic matroids is undecidable",
+  "authors": [
+    "Tobias Boege",
+    "Geva Yashfe"
+  ],
+  "summary": "We prove that the recognition problem for algebraic matroids is undecidable. Explicitly, this means that there is no algorithm that takes as input a finite set $S$ and a function $r\\colon\\mathcal{P}(S) \\to \\mathbb{Z}_{\\ge 0}$ (where $\\mathcal{P}(S)$ is the power set) and decides whether there exists a pair of fields $F \\subset K$, and a function $f\\colon S \\to K$, such that for all $A \\subseteq S$: $\\mathrm{trdeg}_F f(A) = r(A)$. This problem is known to be decidable if the characteristic of the fields involved is constrained to be zero. We prove that it is undecidable if the characteristic…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.LO"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-07-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

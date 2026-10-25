@@ -1,0 +1,21 @@
+{
+  "key": "2604.11115",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.11115",
+  "title": "A regularized truncated finite element method for degenerate parabolic stochastic PDE on non-compact graph",
+  "authors": [
+    "Jianbo Cui",
+    "Mihály Kovács",
+    "Derui Sheng"
+  ],
+  "summary": "We study the numerical approximation of a class of degenerate parabolic stochastic partial differential equations on non-compact metric graphs, which naturally arise in the asymptotic analysis of Hamiltonian flows under small noise perturbations. The numerical discretization of these equations faces several challenges, including the non-compactness of the graph, the degeneracy of the differential operator near vertices, and the non-symmetry of the associated bilinear form. To address these issues, we propose a multi-step numerical strategy combining graph truncation, localized coefficient…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-13",
+  "updated": "2026-04-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

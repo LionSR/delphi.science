@@ -1,0 +1,21 @@
+{
+  "key": "2609.19331",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.19331",
+  "title": "Fredholm Backstepping with Heymann Pre-Feedback for Linearized Navier--Stokes 2D Channel",
+  "authors": [
+    "Miroslav Krstic"
+  ],
+  "summary": "We stabilize the linearized 2-D Poiseuille channel flow at arbitrary Reynolds numbers, and assign the decay of every wavenumber to any user-prescribed rate. The actuation is as in Vazquez--Krstic (IEEE TAC, 2007), VK'07 below: the two velocity components at only one wall. This is the first Fredholm backstepping design for a Navier--Stokes system. In VK'07 the wall-normal input renders the plant spatially causal, after which the tangential input closes a Volterra backstepping loop. Here the normal input carries a finite-rank feedback of arbitrarily small gain, whose sole role, in the sense of…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

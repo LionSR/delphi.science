@@ -1,0 +1,23 @@
+{
+  "key": "2610.17973",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.17973",
+  "title": "Simultaneous energy and entropy stability of volume-penalisation immersed-boundary methods for the compressible Navier--Stokes equations",
+  "authors": [
+    "Abbas Ballout",
+    "Albert Jiménez-Ramos",
+    "Gonzalo Rubio",
+    "Esteban Ferrer"
+  ],
+  "summary": "Immersed-boundary methods avoid body-fitted meshes, but the energy or entropy stability of the underlying flow discretisation does not automatically extend to the immersed treatment. This manuscript analyses the volume-penalised compressible Navier--Stokes equations for both energy and entropy stability, on the continuous and semi-discrete levels, and integrates the isolated source exactly in time. The source is formulated as a one-parameter family indexed by $θ$, whose momentum component relaxes the fluid velocity towards the prescribed solid velocity; $θ$ sets how much of the resulting…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

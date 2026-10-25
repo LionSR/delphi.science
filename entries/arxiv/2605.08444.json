@@ -1,0 +1,19 @@
+{
+  "key": "2605.08444",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.08444",
+  "title": "A short proof of Mathar's 2013 recurrence conjecture for the Laguerre sequence~A025166",
+  "authors": [
+    "Tong Niu"
+  ],
+  "summary": "For the OEIS sequence A025166, defined by $a(n) = -n!\\,2^{n}\\,L_{n}(1/2)$ where $L_{n}$ is the Laguerre polynomial of degree $n$, R.~J.~Mathar contributed in February 2013 the conjectured order-2 P-recursive recurrence \\[ a(n) + (-4n+3)\\, a(n-1) + 4(n-1)^{2}\\, a(n-2) \\;=\\; 0, \\qquad n \\ge 2. \\] We give a one-page proof. The exponential generating function $F(x) = -\\exp\\!\\big(-x/(1-2x)\\big)/(1-2x)$ satisfies the first-order linear ODE $(1-2x)^{2} F'(x) = (1-4x)\\, F(x)$, and Mathar's recurrence then falls out by reading off the coefficient of $x^{n}/n!$. Both steps are short. The supplementary…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-05-08",
+  "updated": "2026-05-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

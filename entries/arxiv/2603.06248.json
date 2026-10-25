@@ -1,0 +1,23 @@
+{
+  "key": "2603.06248",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.06248",
+  "title": "Gradient Flow Polarizes Softmax Outputs towards Low-Entropy Solutions",
+  "authors": [
+    "Aditya Varre",
+    "Mark Rofin",
+    "Nicolas Flammarion"
+  ],
+  "summary": "Understanding the intricate non-convex training dynamics of softmax-based models is crucial for explaining the empirical success of transformers. In this article, we analyze the gradient flow dynamics of the value-softmax model, defined as ${L}(\\mathbf{V} σ(\\mathbf{a}))$, where $\\mathbf{V}$ and $\\mathbf{a}$ are a learnable value matrix and attention vector, respectively. As the matrix times softmax vector parameterization constitutes the core building block of self-attention, our analysis provides direct insight into transformer's training dynamics. We reveal that gradient flow on this…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-03-06",
+  "updated": "2026-03-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

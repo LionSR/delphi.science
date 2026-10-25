@@ -1,0 +1,22 @@
+{
+  "key": "2607.28456",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.28456",
+  "title": "Graph Neural Multilevel Preconditioners for Iterative Solvers",
+  "authors": [
+    "Zechen Zhang",
+    "Rui Peng Li",
+    "Yousef Saad"
+  ],
+  "summary": "Solving large, sparse linear systems is a core task in scientific computing, and efficient iterative solvers rely critically on effective and robust preconditioning. While classical methods such as algebraic multigrid (AMG) are highly scalable, their robustness can degrade on indefinite or nonsymmetric systems where heuristics originally developed for elliptic PDEs are less reliable. Recently, Graph Neural Networks (GNNs) have emerged as data-driven preconditioners; yet, the practical impact of imposing an AMG-style hierarchy remains underexplored for general sparse matrices. In this work,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-07-30",
+  "updated": "2026-07-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

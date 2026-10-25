@@ -1,0 +1,26 @@
+{
+  "key": "2610.00275",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00275",
+  "title": "Joint Lower Bounds for Zeroth-Order Nonconvex Optimization on Euclidean Balls",
+  "authors": [
+    "Haihan Zhang",
+    "Wendao Wu",
+    "Chenheng Zhang",
+    "Yanyi Li",
+    "Chunyuan Zheng",
+    "Cong Fang",
+    "Haoxuan Li",
+    "Zhouchen Lin"
+  ],
+  "summary": "We prove a joint stochastic zeroth-order lower bound for Goldstein stationarity on a Euclidean query ball, even when the ball is guaranteed to contain a stationary point. In dimension $d$, let $f=\\mathbb{E}[F(\\cdot;ξ)]$, assume $\\mathbb{E}[\\operatorname{Lip}(F(\\cdot;ξ))^2]\\le L_0^2$, and bound the initial objective gap over the ball by $Δ$. For neighborhood radius $δ>0$ and residual tolerance $\\varepsilon>0$, our smooth hard family requires $Ω(dL_0^2Δ/(δ\\varepsilon^3))$ scalar evaluations for success probability $1/2$, against randomized adaptive algorithms that may retain and repeatedly…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

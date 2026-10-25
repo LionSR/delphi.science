@@ -1,0 +1,22 @@
+{
+  "key": "2606.03769",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.03769",
+  "title": "Bregman meets Lévy: Stochastic mirror descent with heavy-tailed noise in continuous and discrete time",
+  "authors": [
+    "Pierre-Louis Cauvin",
+    "Panayotis Mertikopoulos"
+  ],
+  "summary": "We study the robustness of stochastic mirror descent (SMD) under heavy-tailed noise, focusing on whether the method retains its convergence guarantees when run with infinite-variance stochastic gradient input. To address this question in a principled manner, we begin by introducing a continuous-time model of SMD as a stochastic differential equation (SDE) driven by a centered Lévy noise process with finite $p$-th order moments, $1 < p \\leq 2$. This scheme -- which we call the Lévy mirror flow (LMF) -- arises naturally as the scaling limit of SMD in the presence of heavy-tailed noise. In…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-06-02",
+  "updated": "2026-06-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2602.07290",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.07290",
+  "title": "A probabilistic model of X-ray computed tomography",
+  "authors": [
+    "Tyler Gomez",
+    "Jason Swanson",
+    "Alexandru Tamasan"
+  ],
+  "summary": "We consider a discrete stochastic process, indexed by lines through the unit disk in the plane, which models the observed photon counts in a medical X-ray tomography scan. We first prove a functional law of large numbers, showing that this process converges in $L^2$ to the X-ray transform of the underlying attenuation function. We then prove a family of functional central limit theorems, which show that the normalized observations converge to a white noise on the space of lines, provided the growth rate of the mean number of photons per line is greater than a certain power of the number of…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-02-07",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

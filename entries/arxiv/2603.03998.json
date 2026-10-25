@@ -1,0 +1,21 @@
+{
+  "key": "2603.03998",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.03998",
+  "title": "Spectrally Corrected Polynomial Approximation for Quantum Singular Value Transformation",
+  "authors": [
+    "Krishnan Suresh"
+  ],
+  "summary": "Quantum Singular Value Transformation (QSVT) provides a unified framework for applying polynomial functions to the singular values of a block-encoded matrix. QSVT prepares a state proportional to $\\bA^{-1}\\bb$ with circuit depth $O(d\\cdot\\mathrm{polylog}(N))$, where $d$ is the polynomial degree of the $1/x$ approximation and $N$ is the size of $\\bA$. Current polynomial approximation methods are over the continuous interval $[a,1]$, giving $d = O(\\sqrt{\\kap}\\log(1/\\varepsilon))$, and make no use of any properties of $\\bA$. We observe here that QSVT solution accuracy depends only on the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CE",
+    "math.QA"
+  ],
+  "published": "2026-03-04",
+  "updated": "2026-06-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

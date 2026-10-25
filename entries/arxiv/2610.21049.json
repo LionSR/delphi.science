@@ -1,0 +1,21 @@
+{
+  "key": "2610.21049",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.21049",
+  "title": "SALTO: Solver-Anchored Lifted Transfer Operators for Nonlinear Event Inference",
+  "authors": [
+    "Qi Wang",
+    "Rylie Foster"
+  ],
+  "summary": "Learned dynamical models can accurately predict trajectories while producing unreliable sensitivities when differentiated or transposed, limiting their use in inverse problems and scientific decision-making. Classical adjoints provide exact local derivatives, but a single adjoint cannot represent the nonlinear response of a system to a family of finite-amplitude perturbations. We introduce SALTO (Solver-Anchored Lifted Transfer Operators), a Koopman-based framework for inferring finite-amplitude sources. In the lifted space, the nonlinear dynamics are approximated by a linear propagator, and…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

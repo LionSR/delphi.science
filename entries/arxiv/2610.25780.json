@@ -1,0 +1,23 @@
+{
+  "key": "2610.25780",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.25780",
+  "title": "Convergence of alternating score-system iterations for regularized Landau particle dynamics",
+  "authors": [
+    "Yeoneung Kim",
+    "Donghyun Lee",
+    "Sung-Jun Son"
+  ],
+  "summary": "We analyze an alternating iteration for score-based particle approximations of the homogeneous Landau equation. Each step computes a regularized score along the previous trajectory and recomputes the trajectory with that score frozen. First, at fixed positive regularization, we prove existence, uniqueness, and $W_1$-Lipschitz stability of a Tikhonov score minimizer in a vector-valued reproducing kernel Hilbert space embedded in $C_b^2$. For bounded Lipschitz collision matrices, this yields factorial convergence to the coupled regularized dynamics on every finite interval, with constants…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math-ph",
+    "math.AP"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

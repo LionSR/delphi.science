@@ -1,0 +1,25 @@
+{
+  "key": "2610.07540",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.07540",
+  "title": "Preserving Unstable Modes Through Inverse Dynamics in JEPA World Models",
+  "authors": [
+    "Leonardo F. Toso",
+    "Yann LeCun",
+    "James Anderson",
+    "Oumayma Bounou"
+  ],
+  "summary": "Robotic systems often exhibit unstable modes, along which small perturbations and disturbances can cause unbounded growth unless corrected through feedback. Controlling such systems from high-dimensional visual observations requires representations that preserve these modes. Joint-embedding predictive architectures (JEPAs) provide a natural framework for learning such representations and their dynamics from visual data. However, we demonstrate that next step prediction combined with anti-collapse regularization does not guarantee that controllable unstable modes are preserved: the training…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.RO",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

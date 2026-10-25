@@ -1,0 +1,23 @@
+{
+  "key": "2609.11736",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11736",
+  "title": "Learning structural balance of graphs from quantum spectral features",
+  "authors": [
+    "Stefano Scali",
+    "Oleksandr Kyriienko"
+  ],
+  "summary": "We develop a quantum approach to spectral feature extraction from the density of states (DOS) of a problem-dependent Hamiltonian, and apply it to machine learning on signed graphs. We propose to embed a signed graph as an Ising model instance with positive and negative interactions, and use the standardized moments of the Ising DOS as features for learning. We show that these moments count signed closed walks, are switching-invariant, and are size-free by construction. As a benchmark, we target learning the frustration index, an NP-hard measure of structural balance that can be labeled…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.dis-nn",
+    "cs.LG",
+    "cs.SI"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

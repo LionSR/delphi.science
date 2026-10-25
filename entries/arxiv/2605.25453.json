@@ -1,0 +1,22 @@
+{
+  "key": "2605.25453",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.25453",
+  "title": "Rigidity and Quantitative Stability of the Sliced Wasserstein Deficit",
+  "authors": [
+    "Bang-Xian Han"
+  ],
+  "summary": "The sliced Wasserstein distance $SW_2(μ,ν)$ compares high-dimensional probability measures by averaging one-dimensional optimal transport distances over linear projections. Although sliced Wasserstein distances are now standard computational tools in statistics, imaging, and machine learning, the rigidity behind the elementary comparison \\[ SW_2^2(μ,ν)\\leq \\frac1d W_2^2(μ,ν) \\] has not been systematically studied. Let $μ,ν\\in\\mathcal P_2(\\mathbb R^d)$, $d\\ge2$, with $μ\\ll\\mathcal L^d$, and define the sliced Wasserstein deficit by \\[ {\\mathrm D}(μ,ν):=\\frac1d W_2^2(μ,ν)-SW_2^2(μ,ν)\\geq 0. \\]…",
+  "domain": "math.MG",
+  "tags": [
+    "math.MG",
+    "math.FA",
+    "math.PR",
+    "math.SP"
+  ],
+  "published": "2026-05-25",
+  "updated": "2026-06-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

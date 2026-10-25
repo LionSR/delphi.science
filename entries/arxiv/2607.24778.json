@@ -1,0 +1,20 @@
+{
+  "key": "2607.24778",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.24778",
+  "title": "Warm-Start Interior-Point Methods for Online Second-Order Cone Programming",
+  "authors": [
+    "Krishna Harish"
+  ],
+  "summary": "We analyze the computational complexity of solving a sequence of related second-order cone programs (SOCPs) whose right-hand-side data $b_t$ varies between rounds. The standard primal-dual interior-point algorithm solves each round at cost $\\tilde{O}(n^{2.5}\\log(1/ε))$ from a cold start. We show that when the per-round perturbation $\\|b_t - b_{t-1}\\|_2$ is bounded by a problem-specific threshold $δ$, Newton's method warm-started at the previous round's solution $x^*_{t-1}$ converges to $x^*_t$ to accuracy $ε$ in $O(\\log\\log(1/ε))$ iterations. Over $T$ rounds the total cost is…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.OC"
+  ],
+  "published": "2026-06-17",
+  "updated": "2026-06-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

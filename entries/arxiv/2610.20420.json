@@ -1,0 +1,19 @@
+{
+  "key": "2610.20420",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.20420",
+  "title": "Dual-Inertial Bregman Methods with Energy-Based Safeguarding",
+  "authors": [
+    "Kangming Chen"
+  ],
+  "summary": "We develop dual-inertial Bregman proximal methods for convex optimization and analyze their convergence through an exact signed-drift representation. For unrestarted iterations, one-sided directional curvature control yields a last-iterate $\\cO((1+\\log k)/k^2)$ rate, improving to $\\cO(k^{-2})$ under weighted summability. A computable energy-based safeguard guarantees a global $\\cO(N^{-1})$ objective-gap bound, counting all proximal oracle calls. Under a stepsize condition and local quadratic growth with suitable kernel regularity, the safeguarded methods restart finitely and eventually…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,37 @@
+{
+  "key": "2609.10834",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10834",
+  "title": "Programmable CMOS DAC Operating in Cryogenic Environments for Controlling Superconducting Qubits",
+  "authors": [
+    "A. Pelteku",
+    "D. Reitz",
+    "M. Covington",
+    "A. Frederick",
+    "H. Adebayo",
+    "K. D. Hillaire",
+    "N. Mitran",
+    "Z. Steffen",
+    "R. Schwartz",
+    "Z. Stegen",
+    "J. X. Przybysz",
+    "J. Yager",
+    "C. Walter",
+    "T. Graves",
+    "D. Meyer",
+    "J. Clark",
+    "G. R. Boyd",
+    "A. Pesetski"
+  ],
+  "summary": "This paper presents the design and test results of a CMOS current-based Digital to Analog Converter (DAC) that operates at cryogenic temperatures and that can be used to precisely control the amount of flux coupled to qubits or that can be used in the readout of superconducting circuits. The current pulse output can be controlled in terms of its amplitude, rise and fall slopes, via digital controls, and pulse width, via external triggers, while driving a superconducting circuit. The design has been implemented in a planar 90 nm CMOS process and test results closely match circuit predictions.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "physics.app-ph"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

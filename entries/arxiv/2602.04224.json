@@ -1,0 +1,26 @@
+{
+  "key": "2602.04224",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.04224",
+  "title": "RAPO: Risk-Aware Preference Optimization for Generalizable Safe Reasoning",
+  "authors": [
+    "Zeming Wei",
+    "Qiaosheng Zhang",
+    "Xia Hu",
+    "Xingcheng Xu"
+  ],
+  "summary": "Large Reasoning Models (LRMs) have achieved tremendous success with their chain-of-thought (CoT) reasoning, yet also face safety issues similar to those of basic language models. In particular, while algorithms are designed to guide them to deliberately refuse harmful prompts with safe reasoning, this process often fails to generalize against diverse and complex jailbreak attacks. In this work, we attribute these failures to the generalization of the safe reasoning process, particularly their insufficiency against complex attack prompts. We provide both theoretical and empirical evidence to…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL",
+    "cs.CR",
+    "math.OC"
+  ],
+  "published": "2026-02-04",
+  "updated": "2026-02-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

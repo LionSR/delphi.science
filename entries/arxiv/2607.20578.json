@@ -1,0 +1,21 @@
+{
+  "key": "2607.20578",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.20578",
+  "title": "Fisher Widths: Local Learning Geometry and Anisotropic Recovery",
+  "authors": [
+    "Vu Khac Ky"
+  ],
+  "summary": "We study Gaussian-width complexity on statistical manifolds through a pair of functionals: the primal Fisher width $w_G(T) = w(G^{1/2}T)$, induced by the Fisher metric, and the inverse-Fisher width $w_{G^{-1}}(T) = w(G^{-1/2}T)$, induced by the inverse Fisher metric. The two widths play complementary statistical roles. On the learning side, the Fisher width measures the size of local parameter fluctuations in the geometry induced by the Fisher information. For Fisher-regular losses, we prove that the scale \\(w_G(H_r)/\\sqrt n\\) is attained on sufficiently small Fisher balls. On the recovery…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-07-22",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

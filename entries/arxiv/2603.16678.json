@@ -1,0 +1,20 @@
+{
+  "key": "2603.16678",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.16678",
+  "title": "Sharp Threshold for the Convergence of Nonstationary Averaging",
+  "authors": [
+    "Saba Lepsveridze",
+    "Elchanan Mossel"
+  ],
+  "summary": "We study non-stationary averaging processes, where each term of a sequence is a weighted average of previous terms, namely $a_{n+1} = \\sum_{j=1}^n p_n(j) a_j$. Our results extend classical theory in two distinct regimes. First, we prove a sharp threshold for convergence in the regime where the weights are bounded between two envelopes $(\\log n)^{-α} \\le np_n(\\cdot) \\leq (\\log n)^β$. We show that the sequence necessarily converges when $α+ β/ 2 \\leq 1$, while $α+ β/ 2 > 1$ the convergence can fail. Second, we study complementary fixed shape regime, when $p_n$ is obtained by a fixed limiting…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-03-17",
+  "updated": "2026-03-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

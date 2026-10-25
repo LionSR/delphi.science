@@ -1,0 +1,25 @@
+{
+  "key": "2605.06091",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.06091",
+  "title": "Time-Inhomogeneous Preconditioned Langevin Dynamics",
+  "authors": [
+    "Alexander Falk",
+    "Laurenz Nagler",
+    "Andreas Habring",
+    "Thomas Pock"
+  ],
+  "summary": "Langevin sampling from distributions of the form $p(x) \\propto \\exp(-Ψ(x))$ faces two major challenges: (global) mode coverage and (local) mode exploration. The first challenge is particularly relevant for multi-modal distributions with disjoint modes, whereas the second arises when the potential $Ψ$ exhibits diverse and ill-conditioned local mode geometry. To address these challenges, a common approach is to precondition Langevin dynamics with problem-specific information, such as the sample covariance or the local curvature of $Ψ$. However, existing preconditioner choices inherently…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.LG",
+    "math.PR",
+    "stat.CO"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2610.01651",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01651",
+  "title": "Theoretical guarantees for stochastic gradient Langevin dynamics",
+  "authors": [
+    "Daniel Paulin",
+    "Peter A. Whalley"
+  ],
+  "summary": "We prove asymptotic bias bounds for stochastic gradient Langevin dynamics in Wasserstein distance of order two. We assume that the negative log-density is strongly convex with a Lipschitz gradient, and that the stochastic gradient estimator is unbiased with an error satisfying a mean-square Lipschitz condition. The bounds are of order $h$ under a fourth moment assumption on the stochastic gradient error and of order $h^{1/2}$ under only a second moment assumption, where $h$ is the stepsize. A spiked-noise example shows that a second moment assumption alone is insufficient for a bound of…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.NA",
+    "stat.CO"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

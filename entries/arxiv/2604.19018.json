@@ -1,0 +1,25 @@
+{
+  "key": "2604.19018",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.19018",
+  "title": "Local Linearity of LLMs Enables Activation Steering via Model-Based Linear Optimal Control",
+  "authors": [
+    "Julian Skifstad",
+    "Xinyue Annie Yang",
+    "Glen Chou"
+  ],
+  "summary": "Inference-time LLM alignment methods, particularly activation steering, offer an alternative to fine-tuning by directly modifying activations during generation. Existing methods, however, often rely on non-anticipative interventions that ignore how perturbations propagate through transformer layers and lack online error feedback, resulting in suboptimal, open-loop control. To address this, we show empirically that, despite the nonlinear structure of transformer blocks, layer-wise dynamics across multiple LLM architectures and scales are well-approximated by locally-linear models. Exploiting…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "eess.SY",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-04-21",
+  "updated": "2026-04-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

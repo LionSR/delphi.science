@@ -1,0 +1,23 @@
+{
+  "key": "2607.16879",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.16879",
+  "title": "Complexity Classification of Colouring Problems with Parity Constraints",
+  "authors": [
+    "Rémy Belmonte",
+    "Juan Pablo Bravo",
+    "Noleen Köhler",
+    "Haiko Müller"
+  ],
+  "summary": "We study variants of graph colouring with parity constraints. More specifically, we consider $q$-colourings $c\\colon V(G)\\rightarrow \\{1,\\dots,q\\}$ of a graph $G$ where, for every vertex $v\\in V(G)$, the number of neighbours $w$ of $v$ with $c(w)=c(v)$ is restricted to be odd, even, positive, zero or a combination thereof. For every colour $i\\neq c(v)$ the number of neighbours $w$ of $v$ with $c(w)=i$ is restricted by a constraint of similar type. Many known colouring problems such as proper colouring, defective colouring, exact defective colouring, odd colouring, and strong odd colouring…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-07-18",
+  "updated": "2026-07-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

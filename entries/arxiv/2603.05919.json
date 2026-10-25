@@ -1,0 +1,23 @@
+{
+  "key": "2603.05919",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.05919",
+  "title": "Design Experiments to Compare Multi-armed Bandit Algorithms",
+  "authors": [
+    "Huiling Meng",
+    "Ningyuan Chen",
+    "Xuefeng Gao"
+  ],
+  "summary": "Online platforms routinely compare multi-armed bandit algorithms, such as UCB and Thompson Sampling, to select the best-performing policy. Unlike standard A/B tests for static treatments, each run of a bandit algorithm over $T$ users produces only one trajectory, because the algorithm's decisions depend on all past interactions. Reliable inference therefore demands many independent restarts of the algorithm, making experimentation costly and delaying deployment decisions. We propose Artificial Replay (AR) as a new experimental design for this problem. AR first runs one policy and records its…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-03-06",
+  "updated": "2026-04-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

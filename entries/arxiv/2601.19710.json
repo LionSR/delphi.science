@@ -1,0 +1,23 @@
+{
+  "key": "2601.19710",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.19710",
+  "title": "On randomized step sizes in Metropolis-Hastings algorithms",
+  "authors": [
+    "Sebastiano Grazzi",
+    "Samuel Livingstone",
+    "Lionel Riou-Durand"
+  ],
+  "summary": "The performance of Metropolis-Hastings algorithms is highly sensitive to the choice of step size, and miss-specification can lead to severe loss of efficiency. We study algorithms with randomized step sizes, considering both auxiliary-variable and marginalized constructions. We show that algorithms with a randomized step size inherit weak Poincaré inequalities/spectral gaps from their fixed-step-size counterparts under minimal conditions, and that the marginalized kernel should always be preferred in terms of asymptotic variance to the auxiliary-variable choice if it is implementable. In…",
+  "domain": "stat.CO",
+  "tags": [
+    "stat.CO",
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-01-27",
+  "updated": "2026-07-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

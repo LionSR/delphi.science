@@ -1,0 +1,19 @@
+{
+  "key": "2610.29826",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.29826",
+  "title": "Numerical Information of Hilbert Space Operators",
+  "authors": [
+    "Dylan Johnson"
+  ],
+  "summary": "For a Hilbert space operator $A\\in B(H)$, the numerical range map of $A$, denoted $φ_A$ is the map sending unit vectors $x$ in $H$ to $\\langle Ax,x\\rangle$. From this map we define the Numerical Information of $A$, denoted $Σ_A$, which is the sigma algebra induced on the unit sphere by the numerical range map. One of the main results of the paper are that if $A,B\\in B(H)$, and $φ_B=f\\circ φ_A$, then $f$ is affine. Our other main result is showing that $Σ_B\\subsetΣ_A$ if and only if $B=αRe(A)+βIm(A)+γI$ for some complex numbers $α,β,γ$.",
+  "domain": "math.FA",
+  "tags": [
+    "math.FA"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

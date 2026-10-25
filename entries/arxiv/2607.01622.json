@@ -1,0 +1,23 @@
+{
+  "key": "2607.01622",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.01622",
+  "title": "Stream function -- pressure virtual element methods for the Stokes--Darcy interface problem",
+  "authors": [
+    "Franco Dassi",
+    "Rekha Khot",
+    "David Mora",
+    "Andres E. Rubiano",
+    "Ricardo Ruiz-Baier"
+  ],
+  "summary": "This paper introduces a novel Virtual Element Method (VEM) for the coupled Stokes--Darcy system in primal-primal form. In the free-flow Stokes domain, we implement a stream function formulation that inherently satisfies the incompressibility constraint and reduces computational cost. Across the interface, mass conservation, normal stress balance, and the Beavers--Joseph--Saffman slip condition are enforced to couple the biharmonic stream function equation with the Darcy's pressure equation. Leveraging VEM's ability to handle general polygonal meshes, the proposed method naturally…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-02",
+  "updated": "2026-07-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

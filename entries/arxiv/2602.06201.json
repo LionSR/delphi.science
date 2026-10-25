@@ -1,0 +1,19 @@
+{
+  "key": "2602.06201",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.06201",
+  "title": "Hybrid Quantum Image Preparation via JPEG Compression",
+  "authors": [
+    "Emad Rezaei Fard Boosari"
+  ],
+  "summary": "We present a hybrid classical-quantum image preparation scheme that reduces the quantum implementation cost of image loading for quantum pixel information encoding (QPIE). The proposed method, termed JPEG-assisted QPIE (JQPIE), loads only the quantized JPEG coefficients into a quantum register, leading to substantial reductions in \\texttt{CX} gate count and circuit depth while preserving reconstruction quality comparable to classical JPEG compression. We develop two variants of the hybrid strategy. The first realizes the complete JPEG decompression pipeline coherently by implementing inverse…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-02-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

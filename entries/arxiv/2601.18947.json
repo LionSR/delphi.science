@@ -1,0 +1,20 @@
+{
+  "key": "2601.18947",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.18947",
+  "title": "On the Strong Stability Preserving Property of Runge-Kutta Methods for Hyperbolic Problems",
+  "authors": [
+    "Mohammad R. Najafian",
+    "Brian C. Vermeire"
+  ],
+  "summary": "Strong Stability Preserving (SSP) time integration schemes maintain stability of the forward Euler method for any initial value problem. However, only a small subset of Runge-Kutta (RK) methods are SSP, and many efficient high-order time integration schemes do not formally belong to this class. In this work, we introduce a mathematical strategy to analyze the nonlinear stability of RK schemes that may not necessarily belong to the SSP class. With this approach, we mathematically demonstrate that there are time integration schemes outside the class of SSP schemes that can maintain entropy…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-26",
+  "updated": "2026-01-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

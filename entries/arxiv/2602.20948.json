@@ -1,0 +1,21 @@
+{
+  "key": "2602.20948",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.20948",
+  "title": "Lanczos with compression for symmetric eigenvalue problems",
+  "authors": [
+    "Angelo A. Casulli",
+    "Daniel Kressner",
+    "Nian Shao"
+  ],
+  "summary": "The Lanczos method with implicit restarting is one of the most popular methods for finding a few exterior eigenpairs of a large symmetric matrix $A$. Usually based on polynomial filtering, restarting is crucial to limit memory and the cost of orthogonalization. In this work, we propose a novel strategy for the same purpose, called Lanczos with compression. Unlike polynomial filtering, our approach compresses the Krylov subspace using rational approximation and, in doing so, it sacrifices the structure of the associated Krylov decomposition. Nevertheless, it remains compatible with subsequent…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-24",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2605.07531",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.07531",
+  "title": "SGD for Variational Inference: Tackling Unbounded Variance via Preconditioning and Dynamic Batching",
+  "authors": [
+    "Hippolyte Labarrière",
+    "Cesare Molinari",
+    "Silvia Villa",
+    "Lorenzo Rosasco"
+  ],
+  "summary": "Black-Box Variational Inference (BBVI) typically relies on Stochastic Gradient Descent (SGD) to optimize the Evidence Lower Bound (ELBO). However, the stochastic gradients in BBVI inherently exhibit unbounded variance, violating standard assumptions and instead satisfying the weaker Blum-Gladyshev (BG) condition, where variance grows quadratically with distance from the optimum. In this paper, we bridge the gap between stochastic optimization theory and the practical instances of BBVI. Focusing on the broad elliptic location-scale family of parameterized distributions, we offer two main…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-05-08",
+  "updated": "2026-05-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2608.18402",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.18402",
+  "title": "Algorithms for adaptive and heteroskedastic linear regression at the computational threshold",
+  "authors": [
+    "Spencer Compton",
+    "Tselil Schramm"
+  ],
+  "summary": "We study finite-sample linear regression in the presence of varied and unknown label noise, focusing on the heteroskedastic and adaptive linear regression models. Heteroskedastic linear regression models settings where the labels are of varying quality. We receive $n$ pairs $(X_i,Y_i)$ with labels $Y_i=X_i^\\topβ+\\varepsilon_i$, where $\\varepsilon_i\\sim N(0,σ_i^2)$ and the variances are unknown to the estimator. One natural measurement of the difficulty of this problem is the number of samples $m$ for which $σ_i^2\\le1$ (larger $m$ is easier). We obtain a polynomial-time estimator with rate…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.DS",
+    "cs.LG"
+  ],
+  "published": "2026-08-19",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

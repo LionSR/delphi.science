@@ -1,0 +1,24 @@
+{
+  "key": "2601.21917",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.21917",
+  "title": "On Approximate Computation of Critical Points",
+  "authors": [
+    "Amir Ali Ahmadi",
+    "Georgina Hall"
+  ],
+  "summary": "We show that computing even very coarse approximations of critical points is intractable for simple classes of nonconvex functions. More concretely, we prove that if there exists a polynomial-time algorithm that takes as input a polynomial in $n$ variables of constant degree (as low as three) and outputs a point whose gradient has Euclidean norm at most $2^n$ whenever the polynomial has a critical point, then P=NP. The algorithm is permitted to return an arbitrary point when no critical point exists. We also prove hardness results for approximate computation of critical points under…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.CC",
+    "cs.LG",
+    "math.NA",
+    "stat.ML"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-01-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

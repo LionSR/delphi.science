@@ -1,0 +1,21 @@
+{
+  "key": "2609.27348",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.27348",
+  "title": "Relative Primal--Dual Gap Certificates for Operator-Composite Trust-Region Methods",
+  "authors": [
+    "Harbir Antil"
+  ],
+  "summary": "We study trust-region minimization of a smooth, possibly nonconvex functional plus a convex functional composed with a bounded linear operator. A relative primal--dual gap condition controls both the error in an approximate proximal-gradient step and its linear-model decrease. Together with a computable absolute stationarity test, it yields a finite Cauchy search, convergence of the proximal stationarity measure to zero, and an $O(\\varepsilon^{-2})$ bound on outer trials. The outer analysis allows the linear operator to take values in a Banach space and does not require dual attainment. When…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.AP",
+    "math.NA"
+  ],
+  "published": "2026-09-23",
+  "updated": "2026-09-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

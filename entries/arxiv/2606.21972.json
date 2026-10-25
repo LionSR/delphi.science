@@ -1,0 +1,21 @@
+{
+  "key": "2606.21972",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.21972",
+  "title": "Human vs Machine Mathematical Difficulty on Project Euler: An Experimental Analysis",
+  "authors": [
+    "David Holmes",
+    "Johannes Schmitt"
+  ],
+  "summary": "We study how the effort and success probability of frontier AI systems scale with human difficulty on problems from Project Euler, an online platform of computational mathematics problems. Our dataset, from the MathArena benchmark, consists of 3840 attempts across 50 problems and 26 model configurations, with problem difficulty measured by the site's public human solve times. Motivated by a proposal of Timothy Gowers, we test a power-law relation $t_{\\text{machine}} = a \\cdot t_{\\text{human}}^b$ between generated-token cost per successful answer and human time, and find $b < 1$ for 20 of the…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "math.HO"
+  ],
+  "published": "2026-06-20",
+  "updated": "2026-06-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

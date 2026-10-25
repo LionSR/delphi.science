@@ -1,0 +1,26 @@
+{
+  "key": "2609.37134",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.37134",
+  "title": "SQUARE: Structured Quantum Representation Adapters as Compact Quadratic Feature Maps for Frozen Language Models",
+  "authors": [
+    "Emily Jimin Roh",
+    "Hyojun Ahn",
+    "Hoyeong Lee",
+    "Soohyun Park",
+    "Sung Whan Yoon",
+    "Vaneet Aggarwal",
+    "Joongheon Kim"
+  ],
+  "summary": "Frozen language models (LMs) are increasingly used as fixed feature extractors for downstream reranking, scoring, and preference modeling, raising a practical question: how should a compact module represent interactions among features in a fixed low-dimensional bottleneck? Common linear and low-rank adapters remain linear at the adaptation module itself, whereas explicit second-order alternatives introduce pairwise interactions through direct parameterization or predefined factorizations. We propose SQUARE, a Structured QUAntum REpresentation adapter that amplitude-encodes the bottleneck…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

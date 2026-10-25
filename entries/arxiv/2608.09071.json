@@ -1,0 +1,22 @@
+{
+  "key": "2608.09071",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.09071",
+  "title": "Two-Step MV-DeepONet: Probabilistic Operator Learning for Uncertainty Propagation Driven by Random Input Fields",
+  "authors": [
+    "Yupei Nie",
+    "Lei Wang",
+    "Jiasen Liu"
+  ],
+  "summary": "Forward uncertainty propagation in complex physical systems can induce structured covariance across field-valued outputs. For a probabilistic surrogate, the total predictive covariance comprises the covariance of conditional means across input realizations and the average conditional predictive covariance. Probabilistic DeepONet (Prob-DeepONet) provides lightweight uncertainty quantification by predicting pointwise Gaussian means and variances in a single forward pass, but its conditional predictive covariance is restricted to a diagonal form. To represent cross-location conditional…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.AI"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

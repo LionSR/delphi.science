@@ -1,0 +1,21 @@
+{
+  "key": "2608.23986",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.23986",
+  "title": "The Shadow Price of Intelligence: Quality Degradation in LLM Inference as a Supply Chain Problem",
+  "authors": [
+    "Elioth Sanabria"
+  ],
+  "summary": "Large language model providers are compute constrained, and a common response to congestion is to degrade service. A degraded answer fails with some probability, and a failed answer either returns as a retry or departs as churn, destroying LTV on an unaccounted ledger. We model inference allocation as a newsvendor whose stockout cost is churned lifetime value, a geometric retry multiplier in which the recycled product is dissatisfaction, and a two-regime transient fluid queue whose arrival rate is made endogenous by retries. Statically, there is a regime in which a cheaper model saves energy…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI",
+    "cs.PF"
+  ],
+  "published": "2026-08-25",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2604.27883",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.27883",
+  "title": "Decoupled Descent: Exact Test Error Tracking Via Approximate Message Passing",
+  "authors": [
+    "Max Lovig"
+  ],
+  "summary": "In modern parametric model training, full-batch gradient descent (and its variants) suffers due to progressively stronger biasing towards the exact realization of training data; this drives the systematic ``generalization gap'', where the train error becomes an unreliable proxy for test error. Existing approaches either argue this gap is benign through complex analysis or sacrifice data to a validation set. In contrast, we introduce decoupled descent (DD), a novel theory-based training algorithm that satisfies a train-test identity -- enforcing the train error to asymptotically track the…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.IT",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-04-30",
+  "updated": "2026-04-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

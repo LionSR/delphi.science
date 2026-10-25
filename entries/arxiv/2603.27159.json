@@ -1,0 +1,25 @@
+{
+  "key": "2603.27159",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.27159",
+  "title": "Online Learning of Kalman Filtering: From Output to State Estimation",
+  "authors": [
+    "Lintao Ye",
+    "Ankang Zhang",
+    "Ming Chi",
+    "Bin Du",
+    "Jianghai Hu"
+  ],
+  "summary": "In this paper, we study the problem of learning Kalman filtering with unknown system model in partially observed linear dynamical systems. We propose a unified algorithmic framework based on online optimization that can be used to solve both the output estimation and state estimation scenarios. By exploring the properties of the estimation error cost functions, such as conditionally strong convexity, we show that our algorithm achieves a $\\log T$-regret in the horizon length $T$ for the output estimation scenario. More importantly, we tackle the more challenging scenario of learning Kalman…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-03-28",
+  "updated": "2026-03-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

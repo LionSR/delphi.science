@@ -1,0 +1,22 @@
+{
+  "key": "2603.18211",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.18211",
+  "title": "Finite-size resource scaling for learning quantum phase transitions with fidelity-based support vector machines",
+  "authors": [
+    "Aaqib Ali",
+    "Giovanni Scala",
+    "Cosmo Lupo",
+    "Antonio Mandarino"
+  ],
+  "summary": "Quantum kernels offer a valid procedure for learning quantum phase transitions on quantum processing devices, yet issues on the scalability of the learning strategy in connection with the symmetry of the critical model have not been clarified. We derive a link between model symmetry and fidelity-kernel resource scaling. We quantify the measurement resources required to estimate fidelity-based quantum kernels for many-body ground states while preserving the structure of the resulting Gram matrix under finite-shot sampling. Crucially, we show that increasing symmetry in the underlying spin…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-18",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

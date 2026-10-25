@@ -1,0 +1,23 @@
+{
+  "key": "2609.15111",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.15111",
+  "title": "Eigenvalue-Decomposition Cost Denoising for Predict-then-Optimize",
+  "authors": [
+    "Henry Aldridge-Krawciw",
+    "Irene Aldridge"
+  ],
+  "summary": "Predict-then-optimize methods learn a mapping from features to unknown edge costs. They then solve the shortest-path problem on the predicted costs. We study a feature-free alternative for the case where the decision-maker observes many noisy cost vectors on a fixed network. The cost vectors are denoised by an eigenvalue decomposition (PCA) of their covariance matrix. Dijkstra's algorithm then runs on the result. We test this on the $5\\times5$ grid of \\citet{elmachtoub2022}, with $1000$ independent replications and a fresh ground truth in each. We compare against SPO+, against naive Dijkstra…",
+  "domain": "econ.EM",
+  "tags": [
+    "econ.EM",
+    "cs.LG",
+    "math.OC",
+    "math.SP"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-10-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2607.10724",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10724",
+  "title": "A four-field auxiliary reformulation of a Cahn-Hilliard time step: Analysis and conforming finite element discretization",
+  "authors": [
+    "Marvin Fritz"
+  ],
+  "summary": "We propose a four-field auxiliary reformulation of a time-discrete Cahn-Hilliard step. The construction is motivated by the scalar trace structure underlying two-dimensional Rafetseder-Zulehner decompositions and represents the scalar quantity $-Δc$ in the form $2p+div\\,u$ through an auxiliary scalar field $p$ and an auxiliary vector field $u$. The resulting auxiliary problem is a mixed second-order Stokes/elasticity-type system, while the evolution equation for the phase field retains its standard mass-conserving gradient-flow structure. We derive a continuous four-field formulation that is…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.AP"
+  ],
+  "published": "2026-07-12",
+  "updated": "2026-07-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

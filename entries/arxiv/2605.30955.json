@@ -1,0 +1,23 @@
+{
+  "key": "2605.30955",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.30955",
+  "title": "A non-intrusive approach to index-aware learning",
+  "authors": [
+    "Peter Förster",
+    "Idoia Cortes Garcia",
+    "Wil Schilders",
+    "Sebastian Schöps"
+  ],
+  "summary": "We present a non-intrusive version of the index-aware learning framework introduced in arXiv:2309.00958. Index-aware learning itself is an approach for learning the time and parameter dependent solutions of differential-algebraic equations (DAEs), in particular those describing electric circuits. A central feature of the approach is that it ensures the learned solutions to fulfill the inherent constraints of the DAE, such as e.g. Kirchhoff's laws in the case of electric circuits. This is achieved by leveraging a decoupling of the DAE into its differential and algebraic parts, with the…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math.NA"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

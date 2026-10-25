@@ -1,0 +1,21 @@
+{
+  "key": "2609.32872",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32872",
+  "title": "Sampled-Max Subgradient Method for Convex Finite-Max Optimization",
+  "authors": [
+    "Egor Gladin",
+    "Anna Popova",
+    "Georgii Babinskii"
+  ],
+  "summary": "We study the Sampled-Max Subgradient Method (SMax-SGM) for large convex finite-max problems. Each iteration maximizes over a fresh random subset of the $N$ components and takes one subgradient of the sampled maximizer. The method is therefore stochastic subgradient descent on a sampled-max surrogate. We bound the surrogate error by an average-top-$k$ gap plus the probability of missing all top-$k$ components. A localization argument requires these quantities only on a near-optimal sublevel set. Under a bounded subgradient-moment assumption, this yields $O(\\varepsilon^{-2})$ subgradient…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

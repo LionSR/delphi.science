@@ -1,0 +1,23 @@
+{
+  "key": "2602.23703",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.23703",
+  "title": "A Boundary Integral-based Neural Operator for Mesh Deformation",
+  "authors": [
+    "Zhengyu Wu",
+    "Jun Liu",
+    "Wei Wang"
+  ],
+  "summary": "This paper presents an efficient mesh deformation method based on boundary integration and neural operators, formulating the problem as a linear elasticity boundary value problem (BVP). To overcome the high computational cost of traditional finite element methods and the limitations of existing neural operators in handling Dirichlet boundary conditions for vector fields, we introduce a direct boundary integral representation using a Dirichlet-type Green's tensor. This formulation expresses the internal displacement field solely as a function of boundary displacements, eliminating the need to…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.CE",
+    "cs.LG"
+  ],
+  "published": "2026-02-27",
+  "updated": "2026-03-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2601.00672",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.00672",
+  "title": "Sparse FEONet: A Low-Cost, Memory-Efficient Operator Network via Finite-Element Local Sparsity for Parametric PDEs",
+  "authors": [
+    "Seungchan Ko",
+    "Jiyeon Kim",
+    "Dongwook Shin"
+  ],
+  "summary": "In this paper, we study the finite element operator network (FEONet), an operator-learning method for parametric problems, originally introduced in J. Y. Lee, S. Ko, and Y. Hong, Finite Element Operator Network for Solving Elliptic-Type Parametric PDEs, SIAM J. Sci. Comput., 47(2), C501-C528, 2025. FEONet realizes the parameter-to-solution map on a finite element space and admits a training procedure that does not require training data, while exhibiting high accuracy and robustness across a broad class of problems. However, its computational cost increases and accuracy may deteriorate as the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-01-02",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

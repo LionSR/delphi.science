@@ -1,0 +1,21 @@
+{
+  "key": "2603.20599",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20599",
+  "title": "A posteriori analysis of a virtual element approach on polytopal meshes for the buckling eigenvalue problem",
+  "authors": [
+    "Franco Dassi",
+    "Andres E Rubiano",
+    "Iván Velásquez"
+  ],
+  "summary": "We introduce a novel residual-based a posteriori error estimator for the conforming $C^1$ Virtual Element Method (VEM) applied to the buckling eigenvalue problem, incorporating nonlinear plane stress effects in both two and three dimensions. The estimator is fully computable on general polyhedral meshes and implemented within the open-source \\texttt{vem++} library. Its reliability is rigorously justified via bounds on the residual equation using polynomial projections, stabilisation contributions, and interpolation estimates, while efficiency is ensured through the use of bubble function…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-21",
+  "updated": "2026-03-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2608.16610",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.16610",
+  "title": "ADMM Fails to Achieve an $O(K^{-1})$ Ergodic KKT Residual Bound",
+  "authors": [
+    "Kaihuang Chen",
+    "Defeng Sun",
+    "Yancheng Yuan",
+    "Guojun Zhang",
+    "Xinyuan Zhao"
+  ],
+  "summary": "The Karush--Kuhn--Tucker (KKT) residual is a fundamental measure of first-order optimality and, under an error bound condition, is comparable to the distance to the KKT solution set up to constant factors. Despite the $O(K^{-1})$ ergodic rates known for objective error and feasibility violations, we show that the KKT residual of classical ADMM cannot, in general, satisfy a uniform $O(K^{-1})$ bound. Specifically, we construct a fixed-dimensional, horizon-dependent family of two-block convex optimization problems for which the KKT residual is $Ω(K^{-1/2})$ at both the last iterate and the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

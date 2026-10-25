@@ -1,0 +1,23 @@
+{
+  "key": "2610.26612",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.26612",
+  "title": "Degree Bounds for Separating Polynomial and Neural Invariants for Point Clouds",
+  "authors": [
+    "Snir Hordan",
+    "Harm Derksen",
+    "Mircea Petrache",
+    "Nadav Dym"
+  ],
+  "summary": "Neural networks that respect the symmetries of point clouds commonly compute high-order representations of the rotation group to improve their expressivity. Such models are known to be universal, and thus able to separate any pair of point clouds, when using representations of sufficiently high order, yet no precise bound on this order, as a function of the number of points, was previously known. We establish the first quadratic lower and upper degree bounds for polynomials that separate point clouds of n points up to rotations and permutations. By showing Tensor Field Networks and MACE can…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.AC"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

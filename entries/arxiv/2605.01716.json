@@ -1,0 +1,25 @@
+{
+  "key": "2605.01716",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.01716",
+  "title": "Towards Real-time Control of a CartPole System on a Quantum Computer",
+  "authors": [
+    "Nguyen Truong Thu Ngo",
+    "Väinö Mehtola",
+    "Jérome Lenssen",
+    "Peiyong Wang",
+    "Francesco Cosco",
+    "Tien-Fu Lu",
+    "James Q. Quach"
+  ],
+  "summary": "The application of quantum reinforcement learning (QRL) to real-time control systems faces significant challenges regarding hardware latency, noise susceptibility, and learning convergence. This work presents an end-to-end investigation of a minimal hybrid quantum-classical agent applied to the CartPole benchmark, addressing the gap between idealized simulation and execution on a physical superconducting quantum processing unit (QPU). We demonstrate that a single-qubit agent acts as an effective learning model, solving the environment in substantially fewer episodes than a comparable…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-03",
+  "updated": "2026-05-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

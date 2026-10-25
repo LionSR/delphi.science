@@ -1,0 +1,23 @@
+{
+  "key": "2606.03862",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.03862",
+  "title": "APX-Hardness of Computing Lipschitz Constants for Multi-Parametric Quadratic Programs",
+  "authors": [
+    "Xingchen Li",
+    "Kunpeng Liu",
+    "Keyou You"
+  ],
+  "summary": "Computing the Lipschitz constant of the solution map of a multi-parametric quadratic program is important for the analysis of optimization-based control. This problem is governed by three factors: the parameter dimension, the number of decision variables, and the number of constraints. While empirical evidence has long suggested exponential complexity, a rigorous complexity-theoretic proof has been lacking. In this paper, we fill this gap by proving that this problem is not only NP-hard but also APX-hard. Furthermore, we reveal that: (a) the problem becomes polynomial-time solvable when the…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.CC",
+    "math.OC"
+  ],
+  "published": "2026-06-02",
+  "updated": "2026-06-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "2602.11679",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.11679",
+  "title": "Provable Offline Reinforcement Learning for Structured Cyclic MDPs",
+  "authors": [
+    "Kyungbok Lee",
+    "Angelica Cristello Sarteau",
+    "Michael R. Kosorok"
+  ],
+  "summary": "We introduce a novel cyclic Markov decision process (MDP) framework for multi-step decision problems with heterogeneous stage-specific dynamics, transitions, and discount factors across the cycle. In this setting, offline learning is challenging: optimizing a policy at any stage shifts the state distributions of subsequent stages, propagating mismatch across the cycle. To address this, we propose a modular structural framework that decomposes the cyclic process into stage-wise sub-problems. While generally applicable, we instantiate this principle as CycleFQI, an extension of fitted…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.AI",
+    "cs.LG",
+    "math.OC",
+    "stat.ME"
+  ],
+  "published": "2026-02-12",
+  "updated": "2026-02-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

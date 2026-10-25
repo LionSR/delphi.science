@@ -1,0 +1,22 @@
+{
+  "key": "2606.25914",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.25914",
+  "title": "A fast scheme for the homogeneous Boltzmann equation based on lifting and tensor train approximation",
+  "authors": [
+    "Kun Huang",
+    "Yingda Cheng",
+    "Irene M. Gamba"
+  ],
+  "summary": "We propose a fast deterministic scheme for the space-homogeneous Boltzmann equation that exploits the low-rank structure of the velocity distribution. This paper consists of two independent contributions. The first is a \\emph{lifting-projection (LP) scheme}, inspired by the approach in the recent theoretical breakthroughs \\cite{guillen2025landau, imbert2026monotonicity, guillen2025landau2} on the well-posedness of the Landau and Boltzmann equations. In particular, the approach lifts the nonlinear 3D Boltzmann equation to the 6D linear Kac master equation, advanced over a single time step,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-06-24",
+  "updated": "2026-06-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

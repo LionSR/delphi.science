@@ -1,0 +1,34 @@
+{
+  "key": "2607.15426",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.15426",
+  "title": "Performance Model for Hybrid Quantum-Classical Workflows",
+  "authors": [
+    "Pooja Rao",
+    "Dimitar Trenev",
+    "Jerome Gonthier",
+    "Taylor Patti",
+    "Sebastian Stern",
+    "Tyler Takeshita",
+    "Yuri Alexeev",
+    "Cedric Lin",
+    "Sam McArdle",
+    "Justin Lietz",
+    "Katherine Klymko",
+    "Ermal Rrapaj",
+    "Norm Tubman",
+    "Krysta Svore",
+    "Peter Komar",
+    "Elica Kyoseva"
+  ],
+  "summary": "Hybrid quantum-classical workflows are expected to underpin practical quantum computing applications, yet the quantum and HPC communities lack a shared framework for reasoning about where and when their integration requirements matter most. Such a framework must separate two distinct levels of analysis: the application level, where communication overhead affects runtime performance, and the real-time level, where it determines feasibility. To address this, we introduce a runtime model that decomposes workflow execution into quantum compute, classical compute, and communication costs. At the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2605.23446",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.23446",
+  "title": "Weisfeiler-Leman Is Incomplete on Simple Spectrum Graphs, so Canonicalize Them",
+  "authors": [
+    "Snir Hordan",
+    "Nadav Dym",
+    "Tim Seppelt"
+  ],
+  "summary": "Graphs with a simple spectrum admit cubic-time isomorphism testing, yet we prove that for every natural number $k$, the $k$-Weisfeiler-Leman ($k$-WL) test cannot distinguish all non-isomorphic graphs with a simple spectrum. As the WL hierarchy upper-bounds the distinguishing power of widely-used Graph Neural Networks (GNNs), this incompleteness applies to all such GNNs, ruling out completeness for every $k$-WL-aligned GNN family. To close this gap, we introduce PRiSM (Partition, Refine, Solve, Match), the first provably complete canonicalization of simple-spectrum eigendecompositions. PRiSM…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.CO"
+  ],
+  "published": "2026-05-22",
+  "updated": "2026-05-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

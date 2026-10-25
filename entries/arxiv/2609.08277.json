@@ -1,0 +1,22 @@
+{
+  "key": "2609.08277",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.08277",
+  "title": "Adaptively Incorporating Directional Hints into Zeroth-Order Optimization",
+  "authors": [
+    "Alexander Ryabchenko",
+    "Jian Qian",
+    "Wenlong Mou"
+  ],
+  "summary": "We study zeroth-order optimization of non-convex functions with the aid of directional hints, which are cheap but potentially inaccurate approximations of the true gradient direction, given by linear subspaces at each iteration. To leverage these hints adaptively while maintaining robustness to their quality, we introduce Control-Variate Zeroth-Order Descent (CV-ZOD), a new framework that refines the classical zeroth-order gradient estimator with a control variate that can be set based on the directional hints. We first show that the oracle algorithm that optimally sets the reference vector…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

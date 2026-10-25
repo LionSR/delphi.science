@@ -1,0 +1,25 @@
+{
+  "key": "2606.02930",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.02930",
+  "title": "Fast Tensor Network Imaginary Time Evolution by Implicit Stepping on Logarithmic Grids",
+  "authors": [
+    "John P. Zima",
+    "E. Miles Stoudenmire",
+    "Steven R. White",
+    "Olivier Parcollet",
+    "Jason Kaye"
+  ],
+  "summary": "We present a new method for the efficient imaginary time evolution of quantum many-body wavefunctions represented by matrix product states (MPS). We first show that logarithmic time grids are sufficient to resolve long imaginary time dynamics, yielding an exponential reduction in the number of time steps compared with standard approaches. We then show that A-stable implicit time-stepping methods for ordinary differential equations allow stable propagation for any time step size. The resulting scheme requires only matrix-vector products and linear solves, standard operations in the MPS…",
+  "domain": "cond-mat.str-el",
+  "tags": [
+    "cond-mat.str-el",
+    "math.NA",
+    "quant-ph"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

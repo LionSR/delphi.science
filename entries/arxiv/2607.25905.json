@@ -1,0 +1,21 @@
+{
+  "key": "2607.25905",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.25905",
+  "title": "The Barron-Lipschitz Energy Gap and Depth Separation Phenomena in Scientific Machine Learning",
+  "authors": [
+    "Nima Rezaei",
+    "Stephan Wojtowytsch"
+  ],
+  "summary": "We illustrate in several examples that even neural networks of infinite width (specifically, Barron functions) may encounter substantial obstacles when used as a model class for problems in the calculus of variations. An instance of practical relevance concerns the bending, stretching and folding of a thin elastic shell with anchored or clamped boundary conditions where elastic energy could be reduced by folding along a circular line, but the neural networks can only describe straight folds along entire lines. Conversely, we show that there is no gap between the energy that Barron functions…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP",
+    "stat.ML"
+  ],
+  "published": "2026-07-28",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

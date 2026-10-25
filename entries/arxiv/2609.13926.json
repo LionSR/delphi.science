@@ -1,0 +1,21 @@
+{
+  "key": "2609.13926",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.13926",
+  "title": "Can one regularizer reproduce posterior means at two noise levels?",
+  "authors": [
+    "Kang Liu"
+  ],
+  "summary": "Consider Gaussian denoising with a fixed prior and varying noise variance. When the prior has a density, maximum a posteriori estimation uses its negative logarithm as a fixed regularizer; only the weight of the quadratic data term changes with the noise variance. We ask whether a fixed regularizer can also recover the posterior mean. Although a suitable regularizer exists at each variance, we prove that no single regularizer works at two distinct positive variances for any compactly supported prior other than a point mass. This holds even for nonconvex and nonsmooth regularizers. A residual…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "eess.SP",
+    "math.OC"
+  ],
+  "published": "2026-09-12",
+  "updated": "2026-09-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

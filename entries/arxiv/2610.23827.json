@@ -1,0 +1,25 @@
+{
+  "key": "2610.23827",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.23827",
+  "title": "Quality-of-Transmission Estimation in Quantum Networks: Compute, Simulate, or Learn?",
+  "authors": [
+    "Anis Bekri",
+    "Amar Abane",
+    "Van Sy Mai",
+    "Abdella Battou",
+    "Saddek Bensalem"
+  ],
+  "summary": "Future quantum networks will rely on control-plane decisions such as routing, scheduling, entanglement provisioning, purification, and memory allocation. Each decision depends on a timely and reliable estimate of the quality of the entanglement that a candidate path can deliver, with end-to-end fidelity as a central metric. Inspired by the optical-networking experience with quality-of-transmission (QoT) estimation, this article asks when a quantum controller should compute fidelity analytically, simulate it, or learn a surrogate model. The optical analogy is useful but incomplete: optical…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG",
+    "cs.NI"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

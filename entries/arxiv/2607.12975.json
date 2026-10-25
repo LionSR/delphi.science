@@ -1,0 +1,24 @@
+{
+  "key": "2607.12975",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12975",
+  "title": "Ensemble Controlled-Flow Filtering for Implicit Data Assimilation",
+  "authors": [
+    "Zhuoyuan Li",
+    "Yue Zhao",
+    "Ming Li"
+  ],
+  "summary": "Data assimilation estimates the state of a dynamical system from model forecasts and incoming observations. Many observation mechanisms, however, are many-to-one, implicit, non-smooth, or accessible only through simulation, and need not provide the residual structures or likelihood guidance required by existing ensemble filters. We introduce implicit data assimilation, in which the analysis law is defined as an energy tilt of the forecast distribution. We then propose the Ensemble Controlled-flow Filter (EnCF), which realizes this update through a stochastic controlled flow and learns the…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2602.07718",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.07718",
+  "title": "Certified surface approximations using the interval Krawczyk test",
+  "authors": [
+    "Michael Burr",
+    "Jonathan D. Hauenstein",
+    "Kisun Lee"
+  ],
+  "summary": "We propose an algorithm to construct a certified approximation of a surface by generalizing the Krawczyk test. The Krawczyk test is based on interval arithmetic, and confirms the existence and uniqueness of a solution to a square system of analytic equations in a region. By generalizing this test, we extend the reach of this technique to non-square systems and higher-dimensional varieties. We provide a prototype implementation and illustrate its use on several examples.",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.SC",
+    "math.AG"
+  ],
+  "published": "2026-02-07",
+  "updated": "2026-02-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

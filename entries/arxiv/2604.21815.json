@@ -1,0 +1,20 @@
+{
+  "key": "2604.21815",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.21815",
+  "title": "Norm-based convergence bounds for nonsymmetric algebraic V-cycle multigrid methods",
+  "authors": [
+    "Reinhard Nabben",
+    "Ludwig Rooch"
+  ],
+  "summary": "Recently a new approach to analyze and create algebraic multigrid methods (AMG) for nonsymmetric and indefinite matrices was established. Convergence is measured in general norms induced by a certain HPD matrix $B$ and $B$-orthogonal projections built by compatible transfer operators are used. Here we continue our theoretical framework, started in Nabben and Rooch (2026), for nonsymmetric algebraic multigrid methods using any HPD matrix $B$ to induce a norm. Our framework not only includes all recent results but also provides many new results. We consider two, slightly different, multigrid…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-23",
+  "updated": "2026-04-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

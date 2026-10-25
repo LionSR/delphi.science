@@ -1,0 +1,23 @@
+{
+  "key": "2608.26891",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.26891",
+  "title": "Sparse Delta Integration method for the calculation of spatiotemporal pressure fields of arbitrary ultrasound transducer geometries",
+  "authors": [
+    "Deyver E. Rivera",
+    "Charlie Demene",
+    "Mickael Tanter"
+  ],
+  "summary": "Accurate and efficient simulation of ultrasound pressure fields and pulse-echo responses is essential for transducer design, beamforming optimization, and model-based imaging research. Conventional Spatial Impulse Response methods compute acoustic fields by explicitly sampling trapezoidal impulse responses for each rectangular aperture subdivision, which leads to high computational cost for large apertures, dense spatial grids, and high sampling frequencies. We introduce Sparse Delta Integration, a mathematical framework for the far-field SIR of rectangular apertures that expresses the…",
+  "domain": "physics.med-ph",
+  "tags": [
+    "physics.med-ph",
+    "math-ph",
+    "physics.app-ph"
+  ],
+  "published": "2026-08-27",
+  "updated": "2026-08-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

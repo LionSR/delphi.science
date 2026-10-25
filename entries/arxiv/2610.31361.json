@@ -1,0 +1,22 @@
+{
+  "key": "2610.31361",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.31361",
+  "title": "Gradient Discrete Schrodinger Bridge Matching for Peptide Generation",
+  "authors": [
+    "Abdallah BenAbdallah",
+    "Mohsen Dlala"
+  ],
+  "summary": "The optimal control of a discrete Schrödinger bridge is a discrete gradient, a difference of vertex potentials, but recent models such as MadSBM instead learn a free control on the edges by cross-entropy. We prove that this leaves the action uncontrolled: cross-entropy identifies the control only up to a state-dependent shift (a gauge), and the action is $\\operatorname{KL}(r\\|p)$ plus a gauge term the loss never constrains. We propose GDSBM, which writes the control as a difference of vertex potentials and adds the action to the loss; pinning the gauge costs no expressiveness and makes the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.PR",
+    "math.ST"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

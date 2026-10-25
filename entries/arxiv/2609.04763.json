@@ -1,0 +1,25 @@
+{
+  "key": "2609.04763",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.04763",
+  "title": "Resilience Beyond Stationary Client Unavailability: Unlocking Efficient and Unbiased Federated Learning",
+  "authors": [
+    "Ming Xiang",
+    "Stratis Ioannidis",
+    "Edmund Yeh",
+    "Carlee Joe-Wong",
+    "Lili Su"
+  ],
+  "summary": "Due to resource constraints or external and internal uncertainties, clients in real-world federated learning systems are often intermittently available edge devices. In highly dynamic environments, the parameter server lacks prior real-time knowledge of clients' availability, making it challenging to adapt traditional federated learning algorithms to be resilient to uncertainties in client availability. If not carefully addressed, complex client availability can introduce significant bias, potentially harming the performance of the trained model. Most prior work either fails to account for…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.DC",
+    "math.OC"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

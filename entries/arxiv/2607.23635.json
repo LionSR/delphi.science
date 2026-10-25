@@ -1,0 +1,21 @@
+{
+  "key": "2607.23635",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.23635",
+  "title": "Stability and error analysis of IMEX-BDFk finite element schemes for the incompressible Navier-Stokes system",
+  "authors": [
+    "Qianqian Ding",
+    "Yifan Luo",
+    "Shipeng Mao"
+  ],
+  "summary": "In this paper, we propose and analyze a class of high-order numerical schemes within a fully discrete finite element framework for the incompressible Navier-Stokes equations with no-slip boundary conditions. The temporal discretization employs a kth-order (k=1,...,6) implicit-explicit backward difference formula (IMEX-BDFk), in which the nonlinear convection term is treated explicitly and the linear Stokes part implicitly, whereas the spatial discretization utilizes Taylor-Hood finite elements. We establish the stability and uniform boundedness of the numerical solution. We further establish…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-26",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

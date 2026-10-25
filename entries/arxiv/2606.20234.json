@@ -1,0 +1,22 @@
+{
+  "key": "2606.20234",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20234",
+  "title": "A conservative adaptive rank method for the Wigner-Poisson system",
+  "authors": [
+    "Andrew Christlieb",
+    "Sining Gong",
+    "F. Alejandro Padilla-Gomez",
+    "Jing-Mei Qiu"
+  ],
+  "summary": "We propose a conservative adaptive rank method for the 1D1V Wigner-Poisson system. The method targets a central challenge in deterministic quantum kinetic simulations: reducing the cost of phase-space evolution while preserving the macroscopic invariants needed for physical fidelity. The scheme combines a sampling-based adaptive rank Wigner-Poisson update [7] with a conservative macroscopic correction. A conservative density-momentum solve provides local macroscopic updates, a Fermi-Dirac-type reconstruction transfers them to the kinetic solution, and a global quadratic moment correction…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2604.11093",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.11093",
+  "title": "A discontinuous Galerkin method with fractal elements",
+  "authors": [
+    "Sergio Gómez",
+    "David Hewett",
+    "Andrea Moiola"
+  ],
+  "summary": "We formulate, analyse, and implement a discontinuous Galerkin finite element method (DG-FEM) for the approximation of the solution of an elliptic boundary value problem in a domain with fractal boundary. We consider the case of the Poisson equation in the Koch snowflake domain with zero Dirichlet boundary conditions, but our methodology can be generalised to other cases. Rather than first approximating the snowflake domain by a polygonal \"prefractal\" and then applying a standard DG-FEM on the prefractal, we define a DG-FEM on the snowflake itself, using a geometry-conforming mesh (a fractal…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-13",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

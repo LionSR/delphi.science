@@ -1,0 +1,23 @@
+{
+  "key": "2610.07290",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.07290",
+  "title": "A Single-Loop, Constant-Batch First-Order Penalty Method for Stochastic Bilevel Optimization",
+  "authors": [
+    "Xingyu Chen",
+    "Ming Yang",
+    "Quanqi Hu",
+    "Tianbao Yang"
+  ],
+  "summary": "Recent advances in penalty-based methods for stochastic bilevel optimization (SBO) have eliminated the need for second-order derivative oracles. However, for stochastic nonconvex-strongly convex bilevel problems, existing first-order methods typically rely on nested loops and/or large batch sizes for attaining $O(ε^{-6})$ or $O(ε^{-4})$ sample complexity under standard bounded-variance assumption or mean-square smoothness assumption. Achieving these rates with a single-loop penalty method and a constant batch size remains challenging due to a large penalty value needed for an accurate…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

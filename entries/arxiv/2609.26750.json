@@ -1,0 +1,23 @@
+{
+  "key": "2609.26750",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.26750",
+  "title": "Quantum Broadcast Channels with Mutually Confidential Messages",
+  "authors": [
+    "Paula Belzig",
+    "Sukanya Ghosal",
+    "Farzin Salek",
+    "Graeme Smith"
+  ],
+  "summary": "We study the transmission of two independent confidential classical messages over a quantum broadcast channel, one for each receiver. Each message must remain secret from the other receiver, including when that receiver knows its own message. For classical inputs and quantum outputs, we establish the classical Marton-type inner bound under average reliability and conditional strong secrecy. The encoder selects pairs of codewords from independently generated codebooks using normalized likelihood weights. We prove reliability through a change-of-distribution argument. Our main technical result…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.IT"
+  ],
+  "published": "2026-09-22",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2602.01938",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.01938",
+  "title": "A Flux-Correction Form of the Third-Order Edge-Based Scheme for a General Numerical Flux Function",
+  "authors": [
+    "Hiroaki Nishikawa"
+  ],
+  "summary": "In this short note, we present a flux-correction form of the third-order edge-based scheme for the Euler equations that enables the direct use of a general flux function. The core idea is to replace, without loss of accuracy, the arithmetic average of the flux extrapolations by a general numerical flux evaluated at the edge midpoint, together with a correction term. We show that the proposed flux-correction form preserves third-order accuracy, provided that the general numerical flux is evaluated with the left and right states that are computed exactly for a quadratic function, which can be…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-02-02",
+  "updated": "2026-03-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

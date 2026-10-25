@@ -1,0 +1,22 @@
+{
+  "key": "2604.27208",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.27208",
+  "title": "Reliability-based Topology Optimization using Large Deviation Theory",
+  "authors": [
+    "Maryam Maghazeh",
+    "Ayyappan Unnikrishna Pillai",
+    "Mohammad Masiur Rahaman",
+    "Subhayan De"
+  ],
+  "summary": "Reliability-based topology optimization (RBTO) requires repeated estimation of small failure probabilities and their gradients, making conventional nested Monte Carlo approaches computationally prohibitive for large scale structural problems. We propose an RBTO framework that integrates large deviation theory~(LDT) with stochastic gradient descent~(SGD) to address this challenge. LDT provides closed-form exponential rate estimates of rare event probabilities, enabling accurate gradient computation without parametric assumptions on the failure density and without evaluating a full nested…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

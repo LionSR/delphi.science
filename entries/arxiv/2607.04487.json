@@ -1,0 +1,21 @@
+{
+  "key": "2607.04487",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04487",
+  "title": "Two Black Boxes, One Solver: Encoder Probing and Decoder Attribution for Neural Multi-Attribute VRP under Hard-Mask and Recourse Decoders",
+  "authors": [
+    "Sohaib Afifi"
+  ],
+  "summary": "Neural autoregressive solvers for the Multi-Attribute Vehicle Routing Problem (MAVRP) reach competitive cost but offer no per-step justification, a problem when dispatchers must validate, accept, or compare them. We open two complementary black boxes in one protocol. On the encoder side, linear probes, spontaneous-organization metrics, rank-based richness measures, and discovered-direction analyses with intervention validation characterize how the latent represents constraint families at the graph, node, and edge level. On the decoder side, three attribution methods (gradient, integrated…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-07-05",
+  "updated": "2026-07-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

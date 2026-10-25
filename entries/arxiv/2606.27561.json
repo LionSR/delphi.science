@@ -1,0 +1,24 @@
+{
+  "key": "2606.27561",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.27561",
+  "title": "Quantum Generative Diffusion Model for Real-World Time Series",
+  "authors": [
+    "Jack Waller",
+    "Filippo Caruso",
+    "Dimitrios Makris",
+    "Rajagopal Nilavalan",
+    "Xing Liang"
+  ],
+  "summary": "Generative models have achieved remarkable success in data synthesis, though recent advances driven by increasing model scale have introduced challenges in computational cost and efficiency. Quantum machine learning offers a promising alternative, representing complex data distributions using compact, highly expressive models. Here, we propose QDiffusion-TS, the first quantum generative diffusion model for time series synthesis, and validate it on the IQM quantum processor. The framework extends a classical diffusion architecture by replacing feed-forward components within the denoising…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "quant-ph"
+  ],
+  "published": "2026-06-25",
+  "updated": "2026-06-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

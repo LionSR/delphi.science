@@ -1,0 +1,21 @@
+{
+  "key": "2609.19473",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.19473",
+  "title": "Product-profile anti-concentration for block-structured multi-affine polynomials",
+  "authors": [
+    "Evgeny Abakumov",
+    "Omer Friedland",
+    "Yosef Yomdin"
+  ],
+  "summary": "We establish product-profile anti-concentration, density, and Remez estimates for multi-affine polynomials on the cube. Let $X$ be uniformly distributed on $[0,1]^n$, and let $P:[0,1]^n\\to\\R$ be a nonconstant multi-affine polynomial of exact degree $d$, with all variables active. For a partition $\\cB$ of the variables such that no monomial contains two variables from the same block, define $$ w_d(\\cB) = \\sum_{\\cI\\subseteq\\cB, \\abs{\\cI} = d-1} \\left(\\prod_{B\\in\\cI}\\sqrt{\\abs B}\\right) \\sqrt{\\sum_{C\\in\\cB\\setminus\\cI}\\abs C}. $$ We prove the all-center small-ball estimate $$ \\sup_{u\\in\\R}…",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

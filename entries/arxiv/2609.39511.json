@@ -1,0 +1,21 @@
+{
+  "key": "2609.39511",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.39511",
+  "title": "Rotating bases for finite element exterior calculus: closed-form change of basis under vertex permutations",
+  "authors": [
+    "Santiago Badia",
+    "Jordi Manyer",
+    "Antoine Marteau"
+  ],
+  "summary": "The geometrically decomposed bases of the polynomial differential form spaces $\\mathcal{P}_rΛ^1$ and $\\mathcal{P}_r^-Λ^1$ on a simplex are products of a barycentric scalar polynomial and a directional or Whitney 1-form. These bases depend on an ordering of the simplex vertices. On unstructured meshes, neighbouring cells need not agree on this ordering, making it non-trivial to achieve conformity in finite element software. Existing strategies compute degree-of-freedom transformation matrices numerically, or impose a global vertex ordering through face-bubble spaces or by preprocessing the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

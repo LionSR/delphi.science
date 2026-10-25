@@ -1,0 +1,23 @@
+{
+  "key": "2604.03001",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.03001",
+  "title": "The Variational Approach in Filtering and Correlated Noise",
+  "authors": [
+    "Sharan Srinivasan",
+    "Vijay Gupta",
+    "Harsha Honnappa"
+  ],
+  "summary": "The variational formulation of nonlinear filtering due to Mitter and Newton characterizes the filtering distribution as the unique minimizer of a free energy functional involving the relative entropy with respect to the prior and an expected energy. This formulation rests on an absolute continuity condition between the joint path measure and a product reference measure. We prove that this condition necessarily fails whenever the signal and observation diffusions share a common noise source. Specifically we show that the joint and product measures are mutually singular, so no choice of…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-04-03",
+  "updated": "2026-04-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

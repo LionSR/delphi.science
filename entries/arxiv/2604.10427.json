@@ -1,0 +1,26 @@
+{
+  "key": "2604.10427",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.10427",
+  "title": "A Queueing-Theoretic Framework for Dynamic Attack Surfaces: Data-Integrated Risk Analysis and Adaptive Defense",
+  "authors": [
+    "Jihyeon Yun",
+    "Abdullah Yasin Etcibasi",
+    "Ming Shi",
+    "C. Emre Koksal"
+  ],
+  "summary": "We develop a queueing-theoretic framework to model the temporal evolution of cyber-attack surfaces, where the number of active vulnerabilities is represented as the backlog of a queue. Vulnerabilities arrive as they are discovered or created, and leave the system when they are patched or successfully exploited. Building on this model, we study how automation affects attack and defense dynamics by introducing an AI amplification factor that scales arrival, exploit, and patching rates. Our analysis shows that even symmetric automation can increase the rate of successful exploits. We validate…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "cs.AI",
+    "cs.LG",
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-04-12",
+  "updated": "2026-04-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

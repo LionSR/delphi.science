@@ -1,0 +1,21 @@
+{
+  "key": "2604.02599",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.02599",
+  "title": "Chemotaxis models with signal-dependent sensitivity and a logistic-type source, II: Persistence and stabilization",
+  "authors": [
+    "Le Chen",
+    "Ian Ruau",
+    "Wenxian Shen"
+  ],
+  "summary": "This paper is Part II of a series on boundedness, global existence, and asymptotic behavior of positive classical solutions to the chemotaxis model $$\\begin{cases} u_t=Δu-χ_0\\nabla\\cdot\\left(\\frac{u^m}{(1+v)^β}\\nabla v\\right)+au-bu^{1+α}, & x\\inΩ,\\\\ 0=Δv-μv+νu^γ, & x\\inΩ,\\\\ \\frac{\\partial u}{\\partial n}=\\frac{\\partial v}{\\partial n}=0, & x\\in\\partialΩ, \\end{cases} \\tag{CM}$$ where $Ω\\subset\\mathbb{R}^N$ is a bounded smooth domain, $α,γ,m,μ,ν>0$, $χ_0\\in\\mathbb{R}$, and $a,b,β\\ge0$. Part I established biologically relevant parameter regimes ensuring boundedness and global existence of…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-04-03",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

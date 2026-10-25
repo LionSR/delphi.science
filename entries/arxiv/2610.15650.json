@@ -1,0 +1,21 @@
+{
+  "key": "2610.15650",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.15650",
+  "title": "Transport Polynomial Exactness for Direct ALE-DG Methods with Nonsmooth mesh motion: A Conservative Coefficient-Evolution Framework",
+  "authors": [
+    "Qiqin Cheng",
+    "Chaoyi Cai",
+    "Jianxian Qiu"
+  ],
+  "summary": "High-order direct arbitrary Lagrangian--Eulerian discontinuous Galerkin (ALE-DG) methods can suffer severe order reduction under nonsmooth mesh motion despite satisfying the geometric conservation law (GCL). To address this limitation, we propose a new ALE-DG framework applicable to moving triangular and quadrilateral meshes. This framework successfully overcomes the uniform Lipschitz constraint inherent in existing direct ALE-DG methods, retaining high-order accuracy even when the mesh-velocity gradients are unbounded. This capability is driven by transport polynomial exactness (TPE($k$)),…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-11",
+  "updated": "2026-10-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

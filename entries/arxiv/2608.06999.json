@@ -1,0 +1,20 @@
+{
+  "key": "2608.06999",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.06999",
+  "title": "Generalized high-order minimization-based polynomial corrections on unfitted spectral elements for the Poisson problem",
+  "authors": [
+    "Mirco Ciallella",
+    "Jens Visbech"
+  ],
+  "summary": "Higher-order finite element methods are effective for solving partial differential equations. However, applying them in complex curved domains is often difficult due to challenges in creating high-quality curvilinear meshes. Unfitted, or embedded, methods provide a valid alternative by avoiding complete mesh generation and curved element integration, but their accuracy can suffer from geometric errors introduced during embedding. In this work, we explore a new family of polynomial corrections obtained by solving a local minimization problem to improve the consistency of embedded boundary…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

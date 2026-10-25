@@ -1,0 +1,22 @@
+{
+  "key": "2608.02041",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.02041",
+  "title": "Towards Tensor-Network SAT-Solvers for Quantum-Classical Workflows",
+  "authors": [
+    "Benjamin Zec",
+    "Lukas Schmidbauer",
+    "Maja Franz",
+    "Wolfgang Mauerer"
+  ],
+  "summary": "Integrated HPC/QC systems aim to combine classical high-performance computing with quantum processors, but cannot be reduced to mechanisms for dispatching quantum kernels. An integrated architecture must support aspects such as observability, which cannot be implemented using QPUs alone, as well as fallback execution and cost-aware decisions on whether to replace quantum tasks with classical surrogates. Such mechanisms must be approximate or benefit from problem structure to soften the inescapable exponential classical worst-case complexity. In this work, we study tensor-network ground-state…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-03",
+  "updated": "2026-08-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

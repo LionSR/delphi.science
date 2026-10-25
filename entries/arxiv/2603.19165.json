@@ -1,0 +1,24 @@
+{
+  "key": "2603.19165",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.19165",
+  "title": "Rigorous Error Certification for Neural PDE Solvers: From Empirical Residuals to Solution Guarantees",
+  "authors": [
+    "Amartya Mukherjee",
+    "Maxwell Fitzsimmons",
+    "David C. Del Rey Fernández",
+    "Jun Liu"
+  ],
+  "summary": "Uncertainty quantification for partial differential equations is traditionally grounded in discretization theory, where solution error is controlled via mesh/grid refinement. Physics-informed neural networks fundamentally depart from this paradigm: they approximate solutions by minimizing residual losses at collocation points, introducing new sources of error arising from optimization, sampling, representation, and overfitting. As a result, the generalization error in the solution space remains an open problem. Our main theoretical contribution establishes generalization bounds that connect…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.AP",
+    "math.FA"
+  ],
+  "published": "2026-03-19",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

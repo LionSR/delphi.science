@@ -1,0 +1,23 @@
+{
+  "key": "2608.27774",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.27774",
+  "title": "Beyond Procrustes distances: a multilinear Gromov-Wasserstein distance capturing chirality",
+  "authors": [
+    "Clément Soubrier",
+    "Geoffrey Woollard",
+    "Andrew Warren",
+    "Khanh Dao Duc"
+  ],
+  "summary": "Efficiently and robustly analyzing shape data is critical across many scientific disciplines. While chirality is a fundamental property in numerous applications - most notably in molecular science - existing shape analysis metrics fail to distinguish between a shape and its mirror image. To address this gap, we introduce a multilinear generalization of the Gromov-Wasserstein objective. Under mild assumptions, this objective yields a distance between shapes, represented as probability distributions quotiented by a symmetry group $G$. In particular, for $G = SO(d)$, we introduce the Chiral…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-08-27",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2609.31090",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.31090",
+  "title": "Moment Ambiguity and the Limits of Robust Stochastic Optimization",
+  "authors": [
+    "Andrés Cristi",
+    "Matteo Russo",
+    "Jiechen Zhang"
+  ],
+  "summary": "We study fundamental information-theoretic limits of robust stochastic optimization when the distribution is known only through its exact moment sequence. We develop a unified framework that produces families of distinct distributions sharing all moments yet inducing radically different optimal decisions, thereby establishing strong impossibility results for a range of decision problems under moment ambiguity. Our binary and $N$-way moment-matching constructions separate quantiles, threshold regions, and online selection opportunities while preserving every moment. For the newsvendor…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "cs.DS",
+    "cs.GT",
+    "math.OC"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

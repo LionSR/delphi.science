@@ -1,0 +1,20 @@
+{
+  "key": "2602.04966",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.04966",
+  "title": "Tighter Asymptotic Key Rates for Intensity-Correlated Decoy-State QKD via Nonlinear Programming",
+  "authors": [
+    "Matej Pivoluska",
+    "Mateus Araújo"
+  ],
+  "summary": "Decoy-state QKD with phase-randomized weak coherent pulses is typically analyzed assuming independent, precisely prepared intensities. Real sources, however, can exhibit correlated intensity drift across rounds, potentially leaking intensity information and breaking the standard decoy-state reduction to linear programs. Cauchy--Schwarz (CS) constraints can restore security by coupling $n$-photon yields across intensities, but they introduce nonlinear square-root constraints that are commonly handled via outer linearisation around channel-model-based reference points. We propose a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-04",
+  "updated": "2026-05-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

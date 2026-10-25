@@ -1,0 +1,22 @@
+{
+  "key": "2609.06351",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.06351",
+  "title": "A Theory of Information Architecture for Networked Decisions: Freshness, Locality, and Coordination",
+  "authors": [
+    "Scott Moeller",
+    "Bhaskar Krishnamachari"
+  ],
+  "summary": "Networked systems face a tradeoff between the scope of the information behind a decision and its freshness: a broader view of the system supports better coordination, but assembling and communicating it takes time, so it arrives older. We study this tradeoff for a team of agents that repeatedly choose actions to minimize a shared quadratic cost driven by an environment that evolves on its own, unaffected by the agents' actions. An information architecture specifies what each agent observes, from where, and with what delay; we measure an architecture by the cost it loses relative to a…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.NI",
+    "math.OC"
+  ],
+  "published": "2026-09-06",
+  "updated": "2026-09-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

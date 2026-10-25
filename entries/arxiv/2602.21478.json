@@ -1,0 +1,27 @@
+{
+  "key": "2602.21478",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.21478",
+  "title": "Efficient Inference after Directionally Stable Adaptive Experiments",
+  "authors": [
+    "Zikai Shen",
+    "Houssam Zenati",
+    "Nathan Kallus",
+    "Arthur Gretton",
+    "Koulik Khamaru",
+    "Aurélien Bibaut"
+  ],
+  "summary": "We study inference on scalar-valued pathwise differentiable targets after adaptive data collection, such as a bandit algorithm. We introduce a novel target-specific condition, directional stability, which is strictly weaker than previously imposed target-agnostic stability conditions. Under directional stability, we show that estimators that would have been efficient under i.i.d. data remain asymptotically normal and semiparametrically efficient when computed from adaptively collected trajectories. The canonical gradient has a martingale form, and directional stability guarantees…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-02-25",
+  "updated": "2026-02-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2606.17918",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.17918",
+  "title": "Conforming Virtual Element Method for Biharmonic Poisson-Nernst-Planck Navier-Stokes systems",
+  "authors": [
+    "Ankur Ankur",
+    "Andrea Cangiani"
+  ],
+  "summary": "We develop and analyze a conforming Virtual Element Method (VEM) for the fourth-order Poisson-Nernst-Planck-Navier-Stokes (PNP-NS) system. The proposed scheme is based on compatible discretizations of each component: an \\(H^2\\)-conforming VEM for a fourth-order electrostatic potential equation, an \\(H^1\\)-conforming VEM for the Nernst--Planck equations, and a \\textit{divergence-free} and \\textit{pressure-robust} VEM for the Navier--Stokes equations. Time integration is performed using a backward Euler scheme to ensure stability. We establish the well-posedness of the continuous problem up to…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

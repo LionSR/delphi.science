@@ -1,0 +1,22 @@
+{
+  "key": "2606.13308",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.13308",
+  "title": "Subdivision-based isogeometric analysis for axisymmetric electromagnetic problems",
+  "authors": [
+    "Devin Balian",
+    "Sebastian Schöps",
+    "Melina Merkel"
+  ],
+  "summary": "This paper applies a subdivision-based isogeometric method to solve the axisymmetric Maxwell eigenvalue problem. The reduction to an $H^1$-formulation allows to use a Catmull-Clark construction for both geometry and field discretization. The approach yields a numerical solution for the electric field, which is $C^1$-continuous everywhere except at extraordinary vertices. This is demonstrated by computing the eigenmodes of a TESLA 9-cell cavity, showing smoother fields with less numerical noise than conventional methods. The convergence rate of the method is numerically analyzed and is in…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math.NA"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

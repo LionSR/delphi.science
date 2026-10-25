@@ -1,0 +1,23 @@
+{
+  "key": "2607.11241",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.11241",
+  "title": "Bounded-Support Additive Latin Transversals",
+  "authors": [
+    "Antoine Deza",
+    "Yan Gerard",
+    "Yijun Ma",
+    "Sebastian Pokutta"
+  ],
+  "summary": "We consider the following additive Latin transversal problem. Given a multiset $A=(a_1,\\dots,a_k)$ of elements of $\\mathbb Z_m$ and a set $B\\subseteq\\mathbb Z_m$ of cardinality $k$, the task is to order $B$ as $b_1,\\dots,b_k$ so that the sums $a_i+b_i$ are pairwise distinct. When $k=m$, Hall proved that a solution exists if and only if $\\sum_{i=1}^m a_i\\equiv 0 \\pmod m$; moreover, his theorem yields a polynomial-time construction. Alon proved that a solution always exists when $m$ is prime and $k<m$, but no polynomial-time construction is known in general. Our main algorithmic contribution…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

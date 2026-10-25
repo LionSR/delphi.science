@@ -1,0 +1,28 @@
+{
+  "key": "2607.13291",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.13291",
+  "title": "A Measurement Plane for Quantum Networking",
+  "authors": [
+    "Abderrahim Amlou",
+    "Amar Abane",
+    "Anouar Rahmouni",
+    "Mheni Merzouki",
+    "Abdella Battou",
+    "Ahmed Lbath",
+    "Ya-Shian Li-Baboud",
+    "Oliver Slattery",
+    "Thomas Gerrits"
+  ],
+  "summary": "Quantum networking testbeds lack a distinct plane for coordinating distributed measurements and collecting experimental data across heterogeneous devices. To address this gap, we present the Measurement Plane, a dedicated plane that complements the data, control, and management planes rather than replacing or extending their pipelines. The contribution is presented as a distributed framework that organizes measurement functions into four layers: application, experiment coordination, capability, and resource agents. Our design separates user workflows from device-specific control. We…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.NI"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

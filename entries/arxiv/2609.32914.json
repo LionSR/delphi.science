@@ -1,0 +1,22 @@
+{
+  "key": "2609.32914",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32914",
+  "title": "Amortized Generative Modeling of Invariant Measures across A Family of Kuramoto-Sivashinsky PDEs",
+  "authors": [
+    "Arnab Roy",
+    "Tobin A. Driscoll"
+  ],
+  "summary": "The long-run statistics of chaotic dissipative partial differential equations are described by invariant measures, and when the equation carries a parameter these measures form a family whose members can differ in kind, from steady states to sustained spatiotemporal chaos. We ask whether a single generative model can cover such a family. We train a single conditional diffusion model once, on states of the Kuramoto-Sivashinsky equation at 160 values of its hyperviscosity, and evaluate it against held-out data at interleaved parameter values not seen in training, using a classifier two-sample…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.DS",
+    "nlin.CD"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

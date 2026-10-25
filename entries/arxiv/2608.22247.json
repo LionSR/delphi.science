@@ -1,0 +1,21 @@
+{
+  "key": "2608.22247",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.22247",
+  "title": "Near-Optimal Bounds for Sketching the Schatten Norms",
+  "authors": [
+    "Lin F. Yang"
+  ],
+  "summary": "Let $k_{1,\\varepsilon}(n)$ be the smallest number of real linear measurements needed by a randomized oblivious sketch that estimates the nuclear norm of every fixed real $n\\times n$ matrix within a factor $1\\pm\\varepsilon$, with probability at least $2/3$. For every fixed $0 0$ that is not a positive even integer, there are positive constants $A_{p,\\varepsilon},C_{p,\\varepsilon},c_p$ such that \\[ \\frac{n^2}{(\\log n)^{A_{p,\\varepsilon}}} \\le k_{p,\\varepsilon}(n) \\le C_{p,\\varepsilon}\\frac{n^2}{(\\log n)^{c_p}}, \\] so $k_{p,\\varepsilon}(n)=n^{2-o(1)}$ throughout the non-even regime. Together…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.CC",
+    "math.ST"
+  ],
+  "published": "2026-08-23",
+  "updated": "2026-08-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

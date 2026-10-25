@@ -1,0 +1,25 @@
+{
+  "key": "2609.36381",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.36381",
+  "title": "Suêtes: An end-to-end differentiable non-hydrostatic limited-area dynamical core",
+  "authors": [
+    "Tim Whittaker",
+    "Seth Taylor",
+    "Elsa Cardoso-Bihlo",
+    "Alejandro Di Luca",
+    "Alex Bihlo"
+  ],
+  "summary": "We present Suêtes, a fully differentiable, non-hydrostatic, limited-area atmospheric dynamical core implemented in JAX. Suêtes includes both a semi-implicit semi-Lagrangian scheme and a Split-Explicit Runge-Kutta scheme with acoustic substepping, enabling applications from coarse regional simulations to convection-permitting dynamics. Its terrain-following geometry, spatial discretization, time integration, initial conditions, lateral boundary treatment, and included physical parameterizations are all compatible with reverse-mode automatic differentiation. A single reverse-mode pass can…",
+  "domain": "physics.ao-ph",
+  "tags": [
+    "physics.ao-ph",
+    "math.DS",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

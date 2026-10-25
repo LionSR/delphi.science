@@ -1,0 +1,30 @@
+{
+  "key": "2607.21651",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.21651",
+  "title": "Shallower ReLU Network Representations via Exact Linear Algebra",
+  "authors": [
+    "Kilian Rueß",
+    "Gennadiy Averkov",
+    "Florestan Brunck",
+    "Moritz Grillo",
+    "Christoph Hertrich",
+    "Georg Loho",
+    "Jack Stade",
+    "Moritz Stargalla",
+    "Matthew Sun",
+    "Martin Winter"
+  ],
+  "summary": "We study the depth required by ReLU networks to exactly represent piecewise linear functions, focusing specifically on the maximum function. This problem has recently received significant attention in both the ML and TCS literature. We prove that $\\max_n(x)=\\max\\{x_1,\\ldots,x_n\\}$ is exactly representable with two hidden layers for every $n\\leq 12$. Previously, this was only known up to $n\\leq5$ [Bakaev, Brunck, Hertrich, Stade, Yehudayoff, STOC'26]. We obtain our constructions through an exact computer-assisted search within a space of candidate solutions: After a symmetry reduction, we…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.NE",
+    "math.CO"
+  ],
+  "published": "2026-07-22",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2601.09383",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.09383",
+  "title": "Thermodynamically consistent phase-field modeling and numerical simulation for reactive two-phase fluid-solid dynamics",
+  "authors": [
+    "Cedric Riethmüller",
+    "Lars von Wolff",
+    "Dominik Göddeke",
+    "Christian Rohde"
+  ],
+  "summary": "We introduce a coupled Cahn-Hilliard Navier-Stokes model that governs the reactive two-phase dynamics of a system that consists of a fluid and a solid phase and prove its thermodynamic consistency. Moreover, we present an associated fully-discrete numerical method that relies on a continuous finite element approach and a semi-implicit time-stepping method. Our main theoretical result establishes that the fully discrete method satisfies an analog of the free energy dissipation inequality, provided that the phase-field variable remains within prescribed bounds. Numerical experiments confirm…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-14",
+  "updated": "2026-08-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

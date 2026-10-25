@@ -1,0 +1,21 @@
+{
+  "key": "2608.26314",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.26314",
+  "title": "Dispersive Forward Tree Search for Optimal Control: Coverage, Complexity, and Computation",
+  "authors": [
+    "Shashank A. Deshpande",
+    "Jonathan P. How"
+  ],
+  "summary": "Steering-based planners require solutions to state-to-state boundary value problems, which can be inaccessible for nonlinear platforms. Forward propagation evades the steering requirement, but the finite-sample behavior of the associated planners remains uncharacterized and their implementations underperform in practice. This paper develops a propagation-based kinodynamic planner with deterministic finite-sample near-optimality guarantees. We work within the large class of differentially flat nonlinear systems and show that a forward tree of locally dispersive control commands contains a…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-08-26",
+  "updated": "2026-08-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

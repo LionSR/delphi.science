@@ -1,0 +1,21 @@
+{
+  "key": "2609.29890",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.29890",
+  "title": "Syndrome measurements enable deterministic fault-tolerant $T$ gates",
+  "authors": [
+    "Kishor Bharti",
+    "Tobias Haug",
+    "Andrew Tanggara"
+  ],
+  "summary": "Non-Clifford gates are essential for universal quantum computation, yet implementing them fault-tolerantly remains a central challenge for stabilizer codes. Here, we show how a syndrome degree of freedom can mediate a logical non-Clifford gate. Releasing one stabilizer check makes an additional logical qubit available within the encoded data block. Two Pauli rotations, followed by syndrome measurement and Clifford feed-forward, then implement a deterministic logical $T$ gate on every stabilizer code of distance at least two, in a suitable logical basis. During the ideal rotations, the state…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

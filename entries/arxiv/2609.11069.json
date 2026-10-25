@@ -1,0 +1,22 @@
+{
+  "key": "2609.11069",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11069",
+  "title": "Adaptive Diagonally Implicit Runge-Kutta Methods Devoid of Order Reduction for Semilinear ODEs",
+  "authors": [
+    "Steven B. Roberts",
+    "Abhijit Biswas",
+    "David Shirokoff",
+    "Benjamin Seibold"
+  ],
+  "summary": "Diagonally implicit Runge-Kutta (DIRK) methods are a prominent class of numerical methods for solving stiff systems of ordinary differential equations (ODEs). Stiffness does not only impose stability challenges on Runge-Kutta methods; it can also degrade the order of convergence. This so-called order reduction phenomenon occurs when assumptions used for classical convergence analysis, e.g., an asymptotically small step size, fail to hold. In a prior paper by the authors, sharp order conditions and global error bounds for Runge-Kutta methods were developed, which hold uniformly with respect…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

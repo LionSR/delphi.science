@@ -1,0 +1,21 @@
+{
+  "key": "2610.03655",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03655",
+  "title": "Breaking the cubic barrier for the inverse-free Solovay-Kitaev algorithm",
+  "authors": [
+    "Adam Bouland",
+    "Victor Shyaka",
+    "Chenyi Zhang"
+  ],
+  "summary": "The Solovay-Kitaev algorithm states that it is possible to efficiently compile unitaries to accuracy $ε$ in $\\text{polylog}(1/ε)$ time using any universal gate set. While Solovay and Kitaev's initial work addressed inverse-closed gate sets, recently Bouland and Giurgicǎ-Tiron showed it is possible to efficiently compile arbitrary gate sets without inverses. However, the exponent of their compilation algorithm is high. For example the inverse-free exponent for a qubit is over $8.62$, while information theoretically it is known that an inverse-free exponent of $3$ is possible in any dimension…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

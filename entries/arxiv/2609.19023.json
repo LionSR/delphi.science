@@ -1,0 +1,20 @@
+{
+  "key": "2609.19023",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.19023",
+  "title": "Pointwise Monotonicity of the Allen--Cahn Flow and Dynamical Limitations of Energy-Stable Schemes",
+  "authors": [
+    "Pansheng Li",
+    "Dongling Wang"
+  ],
+  "summary": "Energy stability is fundamental in the numerical approximation of phase-field models, but it does not by itself guarantee faithful reproduction of local dynamics. Recent ODE-level studies have shown that energy dissipation alone does not ensure dynamical fidelity for spatially homogeneous phase-field models (Xu and Xu, 2023; Li and Wang, 2026). However, these ODE arguments do not extend directly to spatially inhomogeneous Allen--Cahn solutions: diffusion enters the full residual $\\mathcal R_\\varepsilon(u):=Δu+\\varepsilon^{-2}(u-u^3)$ and may change its pointwise sign even when $0<u\\leq1$.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-19",
+  "updated": "2026-07-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

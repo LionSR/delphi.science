@@ -1,0 +1,21 @@
+{
+  "key": "2609.25489",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.25489",
+  "title": "High-Order Variable-Scaled Energetic Variational Neural Networks for Phase-Field Gradient Flows",
+  "authors": [
+    "Xiaobo Jing",
+    "Leiyi Dong",
+    "Jia Zhao"
+  ],
+  "summary": "In this paper, we develop a high-order variable-scaled energetic variational neural network (VS-EVNN) method for phase-field gradient flows. Each discretization stage uses an updated-state network whose spatial inputs are centered and divided by the interface scale, while the sampled energy and movement penalties remain unchanged relative to the baseline EVNN formulation. This rescaling is motivated by a coordinate change in the energy that normalizes the gradient coefficient of the transformed functional. We combine the scaled representation with high-order, multi-stage variational…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-21",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

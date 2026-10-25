@@ -1,0 +1,20 @@
+{
+  "key": "2604.16784",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.16784",
+  "title": "Learning Non-Markovian Noise via Ensemble Optimal Control",
+  "authors": [
+    "Da-Wei Luo",
+    "Ting Yu"
+  ],
+  "summary": "We study the estimation of parameters pertaining to non-Markovian quantum open systems, such as the dissipation rate and environmental memory time. A key challenge is identifying the optimal measurement time, which must allow sufficient time to acquire information about the environment, yet be short enough to avoid dissipation that erases the information. Using machine learning approaches, we develop an optimized control scheme trained over a representative ensemble to fix the optimal measurement time at a prescribed runtime. The protocol is robust to errors in the training process, enhances…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-18",
+  "updated": "2026-04-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

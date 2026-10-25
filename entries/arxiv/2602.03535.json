@@ -1,0 +1,23 @@
+{
+  "key": "2602.03535",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.03535",
+  "title": "Sparse Training of Neural Networks based on Multilevel Mirror Descent",
+  "authors": [
+    "Yannick Lunk",
+    "Sebastian J. Scott",
+    "Leon Bungert"
+  ],
+  "summary": "We introduce a dynamic sparse training algorithm based on linearized Bregman iterations / mirror descent that exploits the naturally incurred sparsity by alternating between periods of static and dynamic sparsity pattern updates. The key idea is to combine sparsity-inducing Bregman iterations with adaptive freezing of the network structure to enable efficient exploration of the sparse parameter space while maintaining sparsity. We provide convergence guaranties by embedding our method in a multilevel optimization framework. Furthermore, we empirically show that our algorithm can produce…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-02-03",
+  "updated": "2026-05-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

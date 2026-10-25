@@ -1,0 +1,20 @@
+{
+  "key": "2608.08779",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.08779",
+  "title": "A Least-Squares Approach to Sample-Based Prior Elicitation",
+  "authors": [
+    "Yannik Pitcan"
+  ],
+  "summary": "An expert who supplies examples of a quantity often also signals how plausible each one is; when is that signal worth using? We study eliciting a Bayesian prior from an expert who provides example points together with their approximate likelihoods. We propose fitting the prior by least squares--minimizing the squared discrepancy between a parametric density and the elicited likelihoods--which defines an M-estimator that remains well posed even for families whose moments do not exist. We establish consistency and asymptotic normality, and prove--under explicit regularity conditions,…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-08-09",
+  "updated": "2026-09-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

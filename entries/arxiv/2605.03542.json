@@ -1,0 +1,20 @@
+{
+  "key": "2605.03542",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.03542",
+  "title": "Random test functions, $H^{-1}$ norm equivalence, and stochastic variational physics-informed neural networks",
+  "authors": [
+    "Diego Marcondes"
+  ],
+  "summary": "The dual norm characterisation of weak solutions of second-order linear elliptic partial differential equations is mathematically natural but computationally intractable: evaluating the $H^{-1}$ norm of the residual requires a supremum over an infinite-dimensional test space. We prove that the $H^{-1}$ norm of any functional is equivalent to its expected squared evaluation against a random test function whose probability distribution depends only on the domain. Crucially, realisations of this random test function have negative Sobolev regularity for $d \\geq 2$, yet this roughness is not an…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-06-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

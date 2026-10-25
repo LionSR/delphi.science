@@ -1,0 +1,21 @@
+{
+  "key": "2608.19789",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19789",
+  "title": "TT-net: Quantum Inspired Tensor Network Denoising in Conditional GANs",
+  "authors": [
+    "Michal A. Sterzel",
+    "Marko J. Rančić"
+  ],
+  "summary": "Developed as a workhorse for classical simulations of quantum algorithms and quantum many-body systems, Tensor Network methods have entered the scientific mainstream in quantum physics. Among various types of tensor networks, Tensor Trains (commonly know as Matrix Product States in the quantum computing community) have already found applications in machine learning. These methods often rely on a powerful linear algebra tool called the Singular Value Decomposition (SVD). Several conditional GAN architectures for image denoising incorporate SVD as a single-cut decomposition step applied to…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "quant-ph"
+  ],
+  "published": "2026-08-20",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

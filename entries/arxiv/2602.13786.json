@@ -1,0 +1,20 @@
+{
+  "key": "2602.13786",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.13786",
+  "title": "A hybridizable discontinuous Galerkin method for the Ostrovsky equation",
+  "authors": [
+    "Mukul Dwivedi",
+    "Andreas Rupp"
+  ],
+  "summary": "This paper develops the hybridizable discontinuous Galerkin (HDG) method for the Ostrovsky equation, a nonlinear dispersive wave equation featuring both third-order dispersion and a nonlocal antiderivative term with Coriolis effect. On a bounded interval, the nonlocal operator $\\partial_x^{-1}$ is localized through an auxiliary variable $v$ satisfying $v_x=u$ together with an additional boundary constraint that ensures uniqueness. We employ a mixed first-order formulation to decompose the dispersive operator and to localize the nonlocal term, and we couple the resulting semi-discrete HDG…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-14",
+  "updated": "2026-02-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

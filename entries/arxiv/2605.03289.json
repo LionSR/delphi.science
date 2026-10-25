@@ -1,0 +1,22 @@
+{
+  "key": "2605.03289",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.03289",
+  "title": "Imbalanced Classification under Capacity Constraints",
+  "authors": [
+    "Daniel Fraiman",
+    "Ricardo Fraiman"
+  ],
+  "summary": "Detecting observations from a minority class under severe class imbalance is a central challenge in applications such as fraud detection, medical screening, and industrial quality control. In these settings, each positive prediction triggers a costly follow-up action, an MRI scan, a transaction audit, whose execution is subject to real operational constraints. This paper proposes a formal classification framework under capacity constraints: given a user-defined bound limit $b$ on the proportion of observations that can be labeled as belonging to the minority class, the goal is to find the…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-06-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

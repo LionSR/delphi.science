@@ -1,0 +1,20 @@
+{
+  "key": "2604.24989",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.24989",
+  "title": "State-Constrained Control of Discrete-Time Nonlinear Systems via Constraint Lifting",
+  "authors": [
+    "Jhon Manuel Portella Delgado",
+    "Ankit Goel"
+  ],
+  "summary": "This paper presents a constraint-enforcing control framework for a class of discrete-time strict-feedback nonlinear systems. The objective is to guarantee closed-loop stability while ensuring forward invariance of a prescribed safe set defined by state constraints. The proposed approach transforms the constrained control problem into an equivalent unconstrained one through smooth constraint-lifting mappings constructed using strictly increasing sigmoid functions. Controller synthesis is then performed in the lifted coordinates, enabling recursive backstepping design while preserving the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-04-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

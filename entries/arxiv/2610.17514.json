@@ -1,0 +1,19 @@
+{
+  "key": "2610.17514",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.17514",
+  "title": "Matroid-Aware Spectral Certificates for Multiplicative Coverage Approximation",
+  "authors": [
+    "Navid Rezazadeh"
+  ],
+  "summary": "We maximize the weight of edges covered by selected vertices, together with nonnegative individual rewards, under an arbitrary matroid constraint. The continuous coverage objective is quadratic and need not be concave. Our method searches projections onto a small set of directions and solves a concave subproblem for each projection center. A coverage-specific inequality converts the subproblem bounds into a multiplicative guarantee, while matroid rounding restores an integral solution. Let $A$ be the weighted adjacency matrix and $D$ the diagonal matrix of singleton values, restricted to…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

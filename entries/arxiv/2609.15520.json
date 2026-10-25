@@ -1,0 +1,21 @@
+{
+  "key": "2609.15520",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.15520",
+  "title": "Strongly enstrophy-stable integrators for the incompressible Navier-Stokes equations",
+  "authors": [
+    "Boris D. Andrews",
+    "Matin Shams",
+    "Patrick E. Farrell"
+  ],
+  "summary": "We propose a mixed finite element discretisation for the incompressible Navier-Stokes equations that preserves the evolution laws of both energy and enstrophy, in a stronger sense than previous discretisations. In two dimensions, the evolution law for enstrophy only permits dissipation for thermodynamically isolated systems, leading to a Reynolds-number-independent bound on the velocity gradient that naturally stabilises the scheme, even on severely under-resolved meshes. In three dimensions, the scheme preserves both dissipation and the generation of enstrophy through vortex stretching. We…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-14",
+  "updated": "2026-09-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

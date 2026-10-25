@@ -1,0 +1,23 @@
+{
+  "key": "2606.20535",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20535",
+  "title": "Near-Optimal Learning of Local Lindbladians",
+  "authors": [
+    "Itai Arad",
+    "Zhili Chen",
+    "Naixu Guo",
+    "Patrick Rebentrost",
+    "Zhan Yu"
+  ],
+  "summary": "We study the problem of learning local Lindbladians from black-box access to the physical evolution, where the goal is to estimate all Hamiltonian and dissipative coefficients. For local Lindbladians with low-intersection dissipators and local dynamical strength at most $Λ$, we design an algorithm that learns the coefficients to target accuracy $\\varepsilon$, whose number of channel uses and total evolution time scale as $\\widetilde{O}(Λ^2/\\varepsilon^2)$ and $\\widetilde{O}(Λ/\\varepsilon^2)$, respectively, with only logarithmic dependence on the number of qubits. The algorithm is built…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-07-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

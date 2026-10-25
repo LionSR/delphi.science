@@ -1,0 +1,23 @@
+{
+  "key": "2608.16473",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.16473",
+  "title": "Reference-free logged energy-oracle recovery for neural approximations of symmetric coercive variational problems: conforming Riesz reconstruction and archive-level selection",
+  "authors": [
+    "Karim Bounja",
+    "Lahcen Laayouni",
+    "Boujemaa Achchab",
+    "Abdeljalil Sakat"
+  ],
+  "summary": "Neural PDE training yields a finite checkpoint archive, yet its logged energy errors are inaccessible without the exact solution, while loss-based selection does not necessarily recover the logged energy oracle. For admissible neural approximations of symmetric coercive variational problems, we introduce a reference-free selection rule based on minimizing a computable conforming Riesz monitor. The exact residual-energy identity and conforming projection make the monitor an unconditional lower bound converging monotonically to each logged energy error under nested conforming refinement; under…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

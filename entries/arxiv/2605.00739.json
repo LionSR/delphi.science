@@ -1,0 +1,21 @@
+{
+  "key": "2605.00739",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.00739",
+  "title": "A Resource-Efficient Variational Quantum Framework for the Traveling Salesman Problem",
+  "authors": [
+    "Yuefeng Lin",
+    "Chao Zheng",
+    "Cong Guo"
+  ],
+  "summary": "The Traveling Salesman Problem (TSP) is a prototypical combinatorial optimization problem, but its quantum implementation is limited by the O(n^2)-qubit overhead of standard one-hot encodings. Here, we propose a resource-efficient variational quantum framework based on compact binary-register encoding, a permutation-preserving problem-inspired ansatz, and a complementary divide-and-conquer execution strategy. The compact encoding reduces the data-qubit requirement to O(n log n), while the divide-and-conquer formulation lowers the number of qubits required in each local hardware execution to…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-01",
+  "updated": "2026-05-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

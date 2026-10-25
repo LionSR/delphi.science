@@ -1,0 +1,23 @@
+{
+  "key": "2610.13906",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.13906",
+  "title": "Quantum Query Complexity of Maximum Degree and its Generalizations",
+  "authors": [
+    "Amin Shiraz Gilani",
+    "Nikhil S. Mande",
+    "Subhasree Patro",
+    "Nithish Raja"
+  ],
+  "summary": "We study the quantum query complexity of several basic graph problems. 1) We prove a tight $Θ(n^{3/2})$ bound for finding a maximum-out-degree vertex in an $n$-vertex tournament, resolving a conjecture of Mande, Paraashar, and Saurabh [FSTTCS'23]. 2) Using the same proof idea, we give a direct proof that finding a maximum-degree vertex in an $n$-vertex undirected graph requires $Θ(n^{3/2})$ quantum queries, a bound implicit in the work of Apers and Lee [CCC'21]. Both lower bounds above hold even for computing only the maximum degree or maximum out-degree. 3) We also study Maximum…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

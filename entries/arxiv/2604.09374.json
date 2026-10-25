@@ -1,0 +1,22 @@
+{
+  "key": "2604.09374",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.09374",
+  "title": "Variational Quantum Physics-Informed Neural Networks for Hydrological PDE-Constrained Learning with Inherent Uncertainty Quantification",
+  "authors": [
+    "Prasad Nimantha Madusanka Ukwatta Hewage",
+    "Midhun Chakkravarthy",
+    "Ruvan Kumara Abeysekara"
+  ],
+  "summary": "We propose a Hybrid Quantum-Classical Physics-Informed Neural Network (HQC-PINN) that integrates parameterized variational quantum circuits into the PINN framework for hydrological PDE-constrained learning. Our architecture encodes multi-source remote sensing features into quantum states via trainable angle encoding, processes them through a hardware-efficient variational ansatz with entangling layers, and constrains the output using the Saint-Venant shallow water equations and Manning's flow equation as differentiable physics loss terms. The inherent stochasticity of quantum measurement…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-04-10",
+  "updated": "2026-04-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

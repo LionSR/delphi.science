@@ -1,0 +1,20 @@
+{
+  "key": "2603.24309",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.24309",
+  "title": "The Riemannian Landing Method: From projected gradient flows to SQP",
+  "authors": [
+    "Florentin Goyens",
+    "Florian Feppon"
+  ],
+  "summary": "Landing methods have recently emerged in Riemannian matrix optimization as efficient schemes for handling nonlinear equality constraints without resorting to costly retractions. These methods decompose the search direction into tangent and normal components, enabling asymptotic feasibility while maintaining inexpensive updates. In this work, we provide a unifying geometric framework which reveals that, under suitable choices of Riemannian metric, the landing algorithm encompasses several classical optimization methods such as projected and null-space gradient flows, Sequential Quadratic…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-25",
+  "updated": "2026-03-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2602.01877",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.01877",
+  "title": "Autocorrelated Optimize-via-Estimate: Predict-then-Optimize versus Finite-sample Optimal",
+  "authors": [
+    "Zichun Wang",
+    "Gar Goei Loke",
+    "Ruiting Zuo"
+  ],
+  "summary": "Models that directly optimize for out-of-sample performance in the finite-sample regime have emerged as a promising alternative to traditional estimate-then-optimize approaches in data-driven optimization. In this work, we compare their performance in the context of autocorrelated uncertainties, specifically, under a Vector Autoregressive Moving Average VARMA(p,q) process. We propose an autocorrelated Optimize-via-Estimate (A-OVE) model that obtains an out-of-sample optimal solution as a function of sufficient statistics, and propose a recursive form for computing its sufficient statistics.…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-02-02",
+  "updated": "2026-02-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

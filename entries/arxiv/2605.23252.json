@@ -1,0 +1,21 @@
+{
+  "key": "2605.23252",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.23252",
+  "title": "A matrix-based spectral method for the numerical approximation of the fractional Laplacian and the fractional $p$-Laplacian of functions defined on $\\mathbb R^n$",
+  "authors": [
+    "Loïc Constantin",
+    "Carlota M. Cuesta",
+    "Francisco de la Hoz"
+  ],
+  "summary": "Given a function $u$ defined on $\\mathbb R^n$, its fractional $p$-Laplacian is given by $$(-Δ)_p^su(\\vec x)=C_1(n,s,p)\\int_{\\mathbb R^n}\\frac{|u(\\vec x)-u(\\vec y)|^{p-2}(u(\\vec x)-u(\\vec y))}{\\|\\vec x-\\vec y\\|_2^{n+sp}}d\\vec y,\\quad\\vec x\\in\\mathbb R^n,$$where the integral is understood in the principal value sense, $p\\in(1,\\infty)$, $s\\in(0,1)$, and $C_1(n,s,p)$ is a normalization constant. A formally equivalent nonlinear Balakrishnan formulation is given by $$(-Δ)_p^su(\\vec x)=C_4(n,s,p)\\int_0^\\inftyΔ(t-Δ)^{-1}\\left[Φ_p(u(\\vec x)-u(\\cdot))\\right](\\vec x)\\frac{dt}{t^{1-sp/2}},$$ where…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-22",
+  "updated": "2026-05-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

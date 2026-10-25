@@ -1,0 +1,21 @@
+{
+  "key": "2610.02433",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02433",
+  "title": "Accelerated Safe Gradient Flow",
+  "authors": [
+    "Xuting Gao",
+    "Sonia Martínez"
+  ],
+  "summary": "This letter introduces an accelerated safe gradient flow (A-SGF) for strongly convex constrained optimization problems. The A-SGF filters a nominal second-order accelerated flow through a second-order control barrier function quadratic program. We establish conditions for strict feasibility and local Lipschitz continuity of the resulting vector field, prove forward invariance of a lifted safe set, and show that its unique equilibrium is the constrained minimizer. A variational Lyapunov analysis isolates the effect of the safety correction and gives explicit conditions on the barrier gains…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

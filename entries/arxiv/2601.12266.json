@@ -1,0 +1,25 @@
+{
+  "key": "2601.12266",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.12266",
+  "title": "Opportunistic Scheduling for Optimal Spot Instance Savings in the Cloud",
+  "authors": [
+    "Neelkamal Bhuyan",
+    "Randeep Bhatia",
+    "Murali Kodialam",
+    "TV Lakshman"
+  ],
+  "summary": "We study the problem of scheduling delay-sensitive jobs over spot and on-demand cloud instances to minimize average cost while meeting an average delay constraint. Jobs arrive as a general stochastic process, and incur different costs based on the instance type. This work provides the first analytical treatment of this problem using tools from queuing theory, stochastic processes, and optimization. We derive cost expressions for general policies, prove queue length one is optimal for low target delays, and characterize the optimal wait-time distribution. For high target delays, we identify a…",
+  "domain": "cs.DC",
+  "tags": [
+    "cs.DC",
+    "cs.NI",
+    "cs.PF",
+    "math.OC"
+  ],
+  "published": "2026-01-18",
+  "updated": "2026-01-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

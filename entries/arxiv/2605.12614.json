@@ -1,0 +1,21 @@
+{
+  "key": "2605.12614",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.12614",
+  "title": "A Quantum Multi-Programming Framework to Maximize Quantum Resources for the LUCJ Ansatz",
+  "authors": [
+    "Milana Bazayeva",
+    "Abigail McClain Gomez",
+    "Kenneth M. Merz"
+  ],
+  "summary": "In the context of quantum computing, efficient resource management is crucial for optimizing throughput on cloud-based platforms and maximizing hardware utilization. In the present work, we propose an approach to tackle quantum chemistry problems via quantum multi-programming of the Local Unitary Cluster Jastrow (LUCJ) ansätze. The ground-state energy of the molecular system is obtained via Sample-based quantum diagonalization (SQD), further refined by its extended version (ext-SQD). Building upon the Qiskit Experiments package, which already supports parallel execution functionality for…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

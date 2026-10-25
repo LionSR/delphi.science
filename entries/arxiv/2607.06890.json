@@ -1,0 +1,21 @@
+{
+  "key": "2607.06890",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06890",
+  "title": "A locking free mixed FEM based on a pure pseudostress based formulation for the elasticity eigenproblem",
+  "authors": [
+    "Arbaz Khan",
+    "Felipe Lepe",
+    "Jesus Vellojin"
+  ],
+  "summary": "We analyze a novel locking-free mixed formulation for the elasticity eigenvalue problem in both two and three dimensions, expressed exclusively in terms of the pseudostress tensor. An important feature of this formulation is that it does not require the enforcement of symmetry, either in a weak or strong sense. The displacement of the structure is recovered via a postprocess of the computed pseudostress. We introduce a mixed finite element method based in the tensorial version of the standard families of finite elements to discretize the space $\\boldsymbol{\\mathcal{H}}(\\bdiv)$. We prove…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

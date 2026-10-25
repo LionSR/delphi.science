@@ -1,0 +1,21 @@
+{
+  "key": "2608.02015",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.02015",
+  "title": "An $H^{-1}$ least-squares UnCut FEM on domains defined by a level set function",
+  "authors": [
+    "Jiashun Hu",
+    "Buyang Li",
+    "Han Yang"
+  ],
+  "summary": "We propose a novel UnCut finite element method (FEM) for the Poisson and Stokes equations on domains with curved boundaries represented by a level set function. Like the $φ$-FEM, the method avoids numerical integration over cut subregions of boundary elements, but introduces a novel least-squares formulation that minimizes an $H^{-1}$ residual of the governing equations. This formulation ensures stability without requiring large stabilization parameters, thereby eliminating the need for user-tuned penalty parameters and improving the robustness of the computation. Optimal-order convergence…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-03",
+  "updated": "2026-08-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

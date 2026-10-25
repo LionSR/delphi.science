@@ -1,0 +1,24 @@
+{
+  "key": "2610.02798",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02798",
+  "title": "Muon Learns Facts Better: Understanding the Role of Spectral Orthogonalization",
+  "authors": [
+    "Xuheng Li",
+    "Qiwei Di",
+    "Yuan Cao",
+    "Quanquan Gu"
+  ],
+  "summary": "The Muon optimizer applies spectral orthogonalization to matrix-valued updates and has shown strong performance in large-scale neural network training, yet the mechanisms of this transformation in feature learning remain poorly understood. In this work, we investigate this question through a tractable factual-recall model, where a fact maps each subject-relation pair to an answer, and a linear transformer learns the subject- and relation-dependent information required to recover this mapping. The transformer is optimized with gradient flow (GF), spectral GF, or Sign GF, which are…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

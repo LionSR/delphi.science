@@ -1,0 +1,21 @@
+{
+  "key": "2607.11726",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.11726",
+  "title": "Improving Upper Bounds for the Maximum Clique Problem using Reduction Rules",
+  "authors": [
+    "Aljaž Krpan",
+    "Janez Povh"
+  ],
+  "summary": "We study the interaction between reduction rules and upper-bound functions for the Maximum Clique Problem (MCP). We show how MCP upper-bound functions can strengthen classical core and truss reductions by replacing local size conditions with upper-bound tests. This leads to the \\((k,ω^u)\\)-core, the \\((k,ω^u)\\)-truss, and the more general \\((k,d,ω^u)\\)-truss, where the parameter \\(d\\) controls the trade-off between stronger reductions and additional computational cost. For each of these notions, we prove clique-preservation properties, correctness of the corresponding peeling algorithm, and…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DS"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

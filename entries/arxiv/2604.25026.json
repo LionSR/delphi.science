@@ -1,0 +1,21 @@
+{
+  "key": "2604.25026",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.25026",
+  "title": "Networked Realization of Quantum LDPC Codes",
+  "authors": [
+    "Swayangprabha Shaw",
+    "Narayanan Rengaswamy"
+  ],
+  "summary": "Quantum low-density parity-check (QLDPC) codes with good parameters are promising candidates for low-overhead fault-tolerant quantum computing, but their non-local stabilizers require long-range connectivity and frequent qubit movement, introducing practical challenges. Prior work has studied the networked implementation of topological codes, where each node only holds one or a few qubits of the entire code, and demonstrated competitive performance under practical constraints such as the quality of network-provided entanglement. However, since these codes are already geometrically local,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.IT"
+  ],
+  "published": "2026-04-27",
+  "updated": "2026-04-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

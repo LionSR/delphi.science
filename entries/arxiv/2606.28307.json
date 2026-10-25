@@ -1,0 +1,22 @@
+{
+  "key": "2606.28307",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28307",
+  "title": "Second-Order KKT Guarantees for Bregman ADMM in Nonconvex and Non-Lipschitz Optimization",
+  "authors": [
+    "Shuang Li",
+    "Zhihui Zhu",
+    "Qiuwei Li"
+  ],
+  "summary": "We analyze Bregman ADMM for nonconvex linearly constrained problems under two-sided relative smoothness, a condition that replaces the standard Lipschitz gradient assumption with a Hessian comparison relative to a Bregman kernel. This setting covers polynomial objectives arising in matrix and tensor models for which a global Lipschitz-gradient constant need not exist. We show that on an invariant open state-space domain, one iteration of Bregman ADMM defines a smooth primal--dual fixed-point map whose strict-saddle KKT points are unstable fixed points; consequently, from random…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-06-26",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2604.03816",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.03816",
+  "title": "GPU-Accelerated Quantum Simulation: Empirical Backend Selection, Gate Fusion, and Adaptive Precision",
+  "authors": [
+    "Poornima Kumaresan",
+    "Pavithra Muruganantham",
+    "Lakshmi Rajendran",
+    "Santhosh Sivasubramani"
+  ],
+  "summary": "Classical simulation of quantum circuits remains indispensable for algorithm development, hardware validation, and error analysis in the noisy intermediate-scale quantum (NISQ) era. However, state-vector simulation faces exponential memory scaling, with an n-qubit system requiring O(2^n) complex amplitudes, and existing simulators often lack the flexibility to exploit heterogeneous computing resources at runtime. This paper presents a GPU-accelerated quantum circuit simulation framework that introduces three contributions: (1) an empirical backend selection algorithm that benchmarks CuPy,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DC",
+    "cs.ET"
+  ],
+  "published": "2026-04-04",
+  "updated": "2026-04-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2607.17285",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.17285",
+  "title": "Raviart--Thomas Elements with Geometric Correction for Distorted Quadrilateral Meshes",
+  "authors": [
+    "So-Hsiang Chou"
+  ],
+  "summary": "Mixed finite element methods based on Raviart--Thomas spaces are widely used for the numerical approximation of second--order elliptic problems in flux form. On quadrilateral meshes, however, the bilinear mapping from the reference element introduces a spatially varying Jacobian, which may violate the inclusion property $\\mathrm{div}\\,V_h \\subset W_h$ for the standard Raviart--Thomas spaces. In this paper we propose a simple modification of the classical Raviart--Thomas elements on quadrilateral meshes. The modification consists of adding geometrically motivated correction terms to the local…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-19",
+  "updated": "2026-07-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

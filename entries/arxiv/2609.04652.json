@@ -1,0 +1,23 @@
+{
+  "key": "2609.04652",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.04652",
+  "title": "Qmes: Quantum Meta-Learning for Encoding Selection in Quantum Kernel Methods",
+  "authors": [
+    "Dao Duy Tung",
+    "Quoc Chuong Nguyen",
+    "Vu Tuan Hai",
+    "Le Bin Ho",
+    "Lan Nguyen Tran"
+  ],
+  "summary": "Selecting an effective encoding quantum circuit is a key challenge in quantum kernel methods because different feature maps can lead to different performance. Conventional methods require constructing and evaluating every circuit for each new dataset, making it computationally expensive. We present Qmes, an open-source Python package that automatically recommends circuits through meta-learning. Qmes characterizes a dataset using classical complexity measures and queries a pre-trained model to recommend circuits without quantum evaluation at inference time. The package provides modular…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

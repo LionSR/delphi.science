@@ -1,0 +1,19 @@
+{
+  "key": "2610.11448",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.11448",
+  "title": "Dimension-Adaptive Accuracy Certificates for Convex Optimization",
+  "authors": [
+    "Egor Gladin"
+  ],
+  "summary": "Many convex optimization methods use affine lower models to certify that a candidate solution is near optimal. Keeping full gradients can be costly when the informative directions occupy a small, initially unknown subspace. We develop accuracy certificates that store projected affine minorants together with bounds on the discarded components. The certificates remain valid as the subspace, queries, and certificate weights are chosen adaptively. For quadratic regularization, we derive an exact correction that accounts for when each discarded component was recorded, and a compact problem for…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2609.23059",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.23059",
+  "title": "clifford_qc: A Python Toolkit for Quantum Simulation",
+  "authors": [
+    "Ginanjar Utama",
+    "Hermawan Kresno Dipojono"
+  ],
+  "summary": "clifford_qc is a Python research toolkit for constructing quantum models, comparing variational and subspace eigensolvers, and estimating measurement resources. A common sparse Pauli algebra connects Hamiltonians, density operators, gates, and candidate-selection observables; dedicated interfaces handle circuits, execution, and statistical estimates. A worked gradient example illustrates shared measurements, and a molecular workflow separates reusable preparation, solving, and reference validation. Matrix-element banks support virtual subspaces, exact Ritz residuals, and folded-spectrum…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-19",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,33 @@
+{
+  "key": "2609.04674",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.04674",
+  "title": "QMClaw: A Scalable General-purpose Framework for Quantum Measurement and Control",
+  "authors": [
+    "Zhiqiang Fan",
+    "Haoran He",
+    "Ping Lv",
+    "Junchao Wang",
+    "Yaqiang Sun",
+    "Chenhui Wang",
+    "Hanshi Zhao",
+    "Geyuyan Ma",
+    "Haoran Yang",
+    "Pengyu Han",
+    "Xiangdong Meng",
+    "Lixin Wang",
+    "Feng Yue",
+    "Weilong Wang",
+    "Zheng Shan"
+  ],
+  "summary": "As quantum computing continues to scale, quantum measurement and control (QMC) are increasingly constrained by calibration workflow complexity and by requirements for low-latency execution, robust exception handling, and traceable workflow governance. Existing frameworks for QMC are specialized and task-specific, while language-model-based agents for QMC suffer from excessive latency and cannot satisfy the strict timing and control-density demands of large-scale quantum systems. Here we propose QMClaw, a general, workflow-oriented framework for QMC built, featuring a local-first,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2608.05463",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.05463",
+  "title": "Structured Tensor Approximation from Lateral Slice Sampling via Basis and Manifold Priors",
+  "authors": [
+    "Jeongmin Chae",
+    "Usama Saleem",
+    "Selin Bac",
+    "Shaama Mallikarjun Sharada",
+    "Urbashi Mitra"
+  ],
+  "summary": "In this work, we consider a structured tensor approximation problem, where only a limited number of lateral slices are observed. The proposed algorithm , called Basis and Manifold prior Tensor Approximation (BMTA), exploits both global and local structures of the evolution of a global tensor. Specifically, BMTA integrates two signal models: (i) a quasi-basis model that captures smooth global variations along a physical trajectory, and (ii) a manifold-guided interpolation model that characterizes local relationships among tensor slices. A low-rank Tucker reconstruction framework is…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-05",
+  "updated": "2026-08-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

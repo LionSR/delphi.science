@@ -1,0 +1,24 @@
+{
+  "key": "2605.16622",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.16622",
+  "title": "Does Weight Decay Enhance Training Stability?",
+  "authors": [
+    "Marius Saether",
+    "Amir Kolic",
+    "Tomaso Poggio",
+    "Pierfrancesco Beneventano"
+  ],
+  "summary": "In modern deep learning, weight decay is often credited with \"stabilizing\" training dynamics, diverging from its classical role as a static regularization penalty. We investigate a fundamental question: *does weight decay stabilize training dynamics, and if so, through which mechanism?* Indeed, training stability is understood through different but related notions in the literature. We consider how weight decay affects the parameter-space dynamics and loss sharpness by analyzing its effects at the \\emph{Edge of Stability} (EoS). We show that weight decay robustly slows *progressive…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-05-15",
+  "updated": "2026-05-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

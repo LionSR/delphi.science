@@ -1,0 +1,21 @@
+{
+  "key": "2601.12831",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.12831",
+  "title": "Data-Consistent Learning of Inverse Problems",
+  "authors": [
+    "Markus Haltmeier",
+    "Gyeongha Hwang"
+  ],
+  "summary": "Inverse problems are inherently ill-posed, suffering from non-uniqueness and instability. Classical regularization methods provide mathematically well-founded solutions, ensuring stability and convergence, but often at the cost of reduced flexibility or visual quality. Learned reconstruction methods, such as convolutional neural networks, can produce visually compelling results, yet they typically lack rigorous theoretical guarantees. DC (DC) networks address this gap by enforcing the measurement model within the network architecture. In particular, null-space networks combined with a…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.CV"
+  ],
+  "published": "2026-01-19",
+  "updated": "2026-01-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

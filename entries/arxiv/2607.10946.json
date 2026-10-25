@@ -1,0 +1,22 @@
+{
+  "key": "2607.10946",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10946",
+  "title": "Randomized Quantum Optimal Control",
+  "authors": [
+    "Leeseok Kim",
+    "Francisco Riberi",
+    "Kevin Baca",
+    "Milad Marvian"
+  ],
+  "summary": "Quantum optimal control (QOC) aims to find control functions that optimally steer a quantum system toward a target operation. We introduce a \\emph{randomized} QOC framework where optimization is carried over an ensemble of control functions and their probabilities, instead of a single set of functions. Using this framework, we prove that randomized QOC can reach a target accuracy faster than any deterministic protocol under the same resource constraints. We also develop general symmetry-based constructions that convert a given control into an ensemble of controls that can systematically…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-12",
+  "updated": "2026-07-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

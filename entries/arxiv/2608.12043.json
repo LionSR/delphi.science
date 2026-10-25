@@ -1,0 +1,21 @@
+{
+  "key": "2608.12043",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.12043",
+  "title": "Direct Acceleration of Stochastic Root-Finding Without Variance Reduction and Regularization",
+  "authors": [
+    "TaeHo Yoon",
+    "Nicolas Loizou"
+  ],
+  "summary": "Acceleration for deterministic root-finding problems has been extensively studied in recent years; specifically, the anchor-based, or Halpern-type methods achieve optimal convergence rates with respect to the operator norm. However, acceleration via these methods does not directly carry over to stochastic setting due to accumulation of errors, unless one enforces diminishing variance via increasing batch sizes or variance reduction techniques. In this work, we show that another class of acceleration, namely the dual-anchor mechanism, extends to the stochastic setting without such error…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-08-12",
+  "updated": "2026-08-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

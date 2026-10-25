@@ -1,0 +1,24 @@
+{
+  "key": "2606.22629",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.22629",
+  "title": "Counting Triangles of Graphs via Randomized Trace Estimation with Incomplete Matrix-Vector Products",
+  "authors": [
+    "Soumyadip Ghosh",
+    "Lior Horesh",
+    "Vasileios Kalantzis",
+    "Yingdong Lu",
+    "Tomasz Nowicki",
+    "Shashanka Ubaru"
+  ],
+  "summary": "Counting triangles in graphs is a fundamental operation in network analysis, underpinning metrics such as clustering coefficients and serving as a signal for community detection, link prediction, and anomaly detection. The standard approach computes the trace of the cube of the adjacency matrix, but explicitly forming $\\mathbf{A}^3$ is infeasible for large graphs. Hutchinson randomized trace estimator offers an efficient alternative by approximating the trace through stochastic averaging of quadratic forms, requiring only matrix vector products with $\\mathbf{A}$. However, in distributed and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-21",
+  "updated": "2026-06-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

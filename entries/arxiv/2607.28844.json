@@ -1,0 +1,22 @@
+{
+  "key": "2607.28844",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.28844",
+  "title": "Seeing the Forest for the Trees: The Gaussian Process Limit of BART",
+  "authors": [
+    "Cory McCartan",
+    "Melody Huang"
+  ],
+  "summary": "Bayesian Additive Regression Trees (BART) have shown state-of-the-art performance in both prediction and causal inference problems. Previous theoretical work has attempted to explain BART's superior performance by establishing posterior contraction rates for standard BART models, but these rates depend strongly on the number of covariates. Here, we take a different approach and study the behavior of BART as the number of trees grows towards infinity. We show that in this regime, BART converges to a Gaussian process (GP) with a particular kernel. The kernel and its corresponding reproducing…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME",
+    "stat.ML"
+  ],
+  "published": "2026-07-30",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2607.13918",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.13918",
+  "title": "Partially Correlated Verifier Cascades in LLM Harnesses: Concave Log-Odds, Polynomial Reliability, and Blind-Spot Ceilings",
+  "authors": [
+    "Jiangang Han"
+  ],
+  "summary": "Serial verification gates are a core reliability primitive in LLM harnesses: a candidate answer is returned only if $k$ verifier calls all accept it. Under conditionally independent gates, the recent Odds Law (arXiv:2606.15712) shows that posterior log-odds grow linearly in $k$, so failure decays exponentially, and states that \"a tight theory of partially correlated verifier cascades remains open.\" This note gives a minimal such theory. Modeling the per-instance false-accept rate on the generator's own errors as a latent variable $α\\sim G$ (de Finetti), the exact cascade posterior is $\\ell_k…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-07-15",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

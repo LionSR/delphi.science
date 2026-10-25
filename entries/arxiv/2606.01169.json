@@ -1,0 +1,22 @@
+{
+  "key": "2606.01169",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.01169",
+  "title": "Time-Optimal Collision Avoidance Via a Greedy Polynomial Backward Sweep",
+  "authors": [
+    "Zeno Pavanello",
+    "Frank De Veld",
+    "Roberto Armellin"
+  ],
+  "summary": "Spacecraft collision avoidance for low-thrust satellites often requires determining not only how to maneuver, but also how late a maneuver can begin while still ensuring safety. This paper presents a greedy time-optimal (GTO) backward-sweep method to find the latest maneuver initiation time. The method starts from the nominal time of closest approach and iteratively propagates the maneuver backward in time, selecting at each step the thrust direction that locally minimizes the chosen danger metric. Differential algebra is used to efficiently propagate state sensitivities and update the time…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.RO"
+  ],
+  "published": "2026-05-31",
+  "updated": "2026-05-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,29 @@
+{
+  "key": "2609.31070",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.31070",
+  "title": "Quantum Diffusion Models for Medical Image Analysis",
+  "authors": [
+    "Francesco Aldo Venturelli",
+    "Stefano Martina",
+    "Marco Parigi",
+    "Filippo Caruso",
+    "Alba Cervera-Lierta",
+    "Miguel A. González Ballester"
+  ],
+  "summary": "Quantum Machine Learning is a novel field of research aimed at devising machine learning approaches exploiting principles of quantum mechanics, such as superposition, entanglement and interference. In this context, we present a scalable hybrid Quantum Diffusion Model, and evaluate its use for medical image analysis. Specifically, our method is based on a Discrete-Time Quantum Walk algorithm, executed on a real quantum device, to model the forward dynamics of the diffusion model. For the backward step of the diffusion model, we devise and evaluate a classical learning model, which is used to…",
+  "domain": "eess.IV",
+  "tags": [
+    "eess.IV",
+    "cs.AI",
+    "cs.CV",
+    "cs.ET",
+    "cs.LG",
+    "quant-ph"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-09-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

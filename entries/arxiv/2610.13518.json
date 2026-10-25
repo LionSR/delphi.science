@@ -1,0 +1,21 @@
+{
+  "key": "2610.13518",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.13518",
+  "title": "Asymptotic Analysis of Discrete-Time Self-Attention Dynamics in Transformers",
+  "authors": [
+    "Claudio Altafini"
+  ],
+  "summary": "In machine learning, a self-attention dynamics describes the attention mechanism of transformers, and is obtained treating the layer index of a transformer as time index. Even though naturally discrete-time, this dynamical system is most often studied in continuous-time. Scope of this paper is to provide a thorough investigation of the discrete-time version of the self-attention dynamics: a complete classification of its equilibria is given, and their stability properties are studied, in both the single-head and the multihead case. We show that in both cases the main attractor of the…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "cs.LG",
+    "eess.SY"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

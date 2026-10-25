@@ -1,0 +1,22 @@
+{
+  "key": "2604.00569",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00569",
+  "title": "An Accelerated Proximal Bundle Method with Momentum",
+  "authors": [
+    "Zhuoqing Zheng",
+    "Junshan Yin",
+    "Shaofu Yang",
+    "Xuyang Wu"
+  ],
+  "summary": "Proximal bundle methods (PBM) are a powerful class of algorithms for convex optimization. Compared to gradient descent, PBM constructs more accurate surrogate models that incorporate gradients and function values from multiple past iterations, which leads to faster and more robust convergence. However, for smooth convex problems, PBM only achieves an O(1/k) convergence rate, which is inferior to the optimal O(1/k^2) rate. To bridge this gap, we propose an accelerated proximal bundle method (APBM) that integrates Nesterov's momentum into PBM. We prove that under standard assumptions, APBM…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-04-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

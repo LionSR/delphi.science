@@ -1,0 +1,21 @@
+{
+  "key": "2610.21444",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.21444",
+  "title": "Restarted Fixed-Point Acceleration of Proximal ADMM for Capped-$\\ell_1$ Penalized Optimization",
+  "authors": [
+    "Hongyuan Tao",
+    "Fan Wu",
+    "Wei Bian"
+  ],
+  "summary": "We consider box-constrained optimization with a convex, Lipschitz continuous loss function that may be nonsmooth and a capped-$\\ell_1$ penalty. Exploiting the convex branch representation of the capped-$\\ell_1$ penalty, we construct an associated nonexpansive fixed-point mapping for each branch and, based on these mappings, propose a restarted accelerated proximal alternating direction method of multipliers (RA-pADMM). The resulting algorithm consists of a preliminary branch identification phase and a subsequent accelerated phase based on either the Halpern or fast Krasnosel'skiĭ--Mann…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

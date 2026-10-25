@@ -1,0 +1,20 @@
+{
+  "key": "2604.09934",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.09934",
+  "title": "A Carleman contraction method for inverse initial data recovery in the Navier-Stokes equations with unknown body force",
+  "authors": [
+    "Phuong M. Nguyen",
+    "Loc H. Nguyen"
+  ],
+  "summary": "We solve an inverse initial data problem for the incompressible Navier-Stokes system. The objective is to recover the initial velocity and pressure from lateral boundary observations, without assuming that the time-independent body force is known. To eliminate this unknown force, we differentiate the momentum equation with respect to time and then apply a Legendre polynomial-exponential time-dimensional reduction. This procedure yields a coupled system of elliptic equations for the expansion coefficients. We then construct a contractive map for this reduced system on a suitable admissible…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-04-10",
+  "updated": "2026-04-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

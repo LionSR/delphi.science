@@ -1,0 +1,21 @@
+{
+  "key": "2603.01141",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.01141",
+  "title": "A First Step Towards Mesh-Free Probabilistic Shape Optimization",
+  "authors": [
+    "Stephan Schmidt",
+    "Maximilian Würschmidt"
+  ],
+  "summary": "We present an initial implementation of a probabilistic PDE-constrained shape optimization algorithm. Our method is based on a novel probabilistic representation of the shape derivative, which is evaluated using Monte Carlo sampling; and does not rely on a mesh. The underlying state is represented with a neural network-based PDE solver on point clouds. The methodology is applied throughout to a benchmark tracking problem.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.PR"
+  ],
+  "published": "2026-03-01",
+  "updated": "2026-03-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

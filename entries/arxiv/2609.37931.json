@@ -1,0 +1,24 @@
+{
+  "key": "2609.37931",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.37931",
+  "title": "The WittVectors package for Macaulay2",
+  "authors": [
+    "Anne Fayolle",
+    "Abhay Goel",
+    "Devlin Mallory",
+    "Eamon Quinlan-Gallego",
+    "Teppei Takamatsu"
+  ],
+  "summary": "We implement a Macaulay2 package for computations involving rings of truncated Witt vectors $W_n(R)$ of a finitely generated $\\F_p$-algebra $R$. This package includes ring operations (addition, multiplication, Frobenius, Verschiebung, etc.) on elements of $W_n(R)$, conversion between tuple representatives and ghost map representatives of elements of truncated Witt vectors over polynomial rings, and explicit computation of $W_n(R)$ as a finite-type algebra over $\\Z/p^n$. This functionality is based on an algorithm we developed for performing arithmetic operations in rings of finite length…",
+  "domain": "math.AC",
+  "tags": [
+    "math.AC",
+    "math.AG"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

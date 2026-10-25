@@ -1,0 +1,19 @@
+{
+  "key": "2609.08415",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.08415",
+  "title": "Time-Dependent Quantum Monte Carlo for fermions: from Bayesian conditioning to spinor dynamics",
+  "authors": [
+    "Ivan P. Christov"
+  ],
+  "summary": "The time-dependent quantum Monte Carlo method represents a many-electron state by an ensemble of replicas, in which each electron is described by a cloud of walkers which samples its density in physical space, one walker and one guide wave per replica, and it replaces the Hartree potential by a conditional interaction built from the walker positions. The sampling is in physical space rather than in configuration space, which keeps the cost polynomial. Here we derive that conditional interaction. Treating the walker as a localization of its electron to a finite resolution, we show that Bayes'…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2602.14855",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14855",
+  "title": "A Pragmatic Method for Comparing Clusterings with Overlaps and Outliers",
+  "authors": [
+    "Ryan DeWolfe",
+    "Paweł Prałat",
+    "François Théberge"
+  ],
+  "summary": "Clustering algorithms are an essential part of the unsupervised data science ecosystem, and extrinsic evaluation of clustering algorithms requires a method for comparing the detected clustering to a ground truth clustering. In a general setting, the detected and ground truth clusterings may have outliers (objects belonging to no cluster), overlapping clusters (objects may belong to more than one cluster), or both, but methods for comparing these clusterings are currently undeveloped. In this note, we define a pragmatic similarity measure for comparing clusterings with overlaps and outliers,…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.SI",
+    "math.CO"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-03-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

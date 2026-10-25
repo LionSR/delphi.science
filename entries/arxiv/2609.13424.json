@@ -1,0 +1,20 @@
+{
+  "key": "2609.13424",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.13424",
+  "title": "Wasserstein mixing of a systematic-scan random rotation sampler",
+  "authors": [
+    "Amir Sepehri"
+  ],
+  "summary": "We study the mixing time of a systematic-scan analogue of Kac's walk that was proposed as a fast surrogate for Haar-distributed orthogonal matrices in randomized high-dimensional algorithms and was conjectured to approach Haar measure after only logarithmically many sweeps. We show that this conjectured speed-up does not occur for convergence of the full matrix law to Haar measure in Frobenius Wasserstein distance. At fixed normalized accuracy, the mixing time lies between order $n/\\log n$ and order $n$ sweeps; at fixed absolute Frobenius accuracy, the corresponding bounds are between order…",
+  "domain": "stat.CO",
+  "tags": [
+    "stat.CO",
+    "math.PR"
+  ],
+  "published": "2026-09-11",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

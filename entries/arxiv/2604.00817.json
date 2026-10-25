@@ -1,0 +1,23 @@
+{
+  "key": "2604.00817",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.00817",
+  "title": "Multicentric thrombus segmentation using an attention-based recurrent network with gradual modality dropout",
+  "authors": [
+    "Sofia Vargas-Ibarra",
+    "Vincent Vigneron",
+    "Hichem Maaref",
+    "Sonia Garcia-Salicetti"
+  ],
+  "summary": "Detecting and delineating tiny targets in 3D brain scans is a central yet under-addressed challenge in medical imaging.In ischemic stroke, for instance, the culprit thrombus is small, low-contrast, and variably expressed across modalities(e.g., susceptibility-weighted T2 blooming, diffusion restriction on DWI/ADC), while real-world multi-center dataintroduce domain shifts, anisotropy, and frequent missing sequences. We introduce a methodology that couples an attention-based recurrent segmentation network (UpAttLLSTM), a training schedule that progressively increases the difficulty of…",
+  "domain": "cs.CV",
+  "tags": [
+    "cs.CV",
+    "math.OC"
+  ],
+  "published": "2026-04-01",
+  "updated": "2026-04-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

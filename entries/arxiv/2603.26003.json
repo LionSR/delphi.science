@@ -1,0 +1,19 @@
+{
+  "key": "2603.26003",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.26003",
+  "title": "Pathwise Convergence of a Modular Simulation Scheme for Hybrid SDEs with Memory",
+  "authors": [
+    "Oscar Peralta"
+  ],
+  "summary": "This work introduces hybrid stochastic differential equations with memory (mH-SDEs), a new class of stochastic systems where transition rates depend on the joint history of both Euclidean and discrete components. This extends existing hybrid stochastic differential equation models that condition transitions only on the Euclidean process history, enabling richer dependencies such as age-based transitions and self-reinforcing dynamics. For mH-SDEs driven by Lévy processes, we develop the Modular-Poisson algorithm, which employs path-dependent uniformization to generate discrete jumps while…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-03-27",
+  "updated": "2026-03-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

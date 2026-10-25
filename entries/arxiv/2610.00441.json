@@ -1,0 +1,22 @@
+{
+  "key": "2610.00441",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00441",
+  "title": "Quantum Secret Sharing and Error Correction vs No-Cloning",
+  "authors": [
+    "Steven Chien",
+    "Ishani Mukherjee",
+    "Mark Zhandry"
+  ],
+  "summary": "Secret sharing is ubiquitous throughout cryptography. All possible access structures are classically feasible, and in the case of threshold access structures, the protocols are even very efficient. However, when moving to the quantum setting, the no-cloning theorem shows that many access structures are impossible. In fact, no-cloning exactly characterizes feasibility: for thresholds, quantum secret sharing is possible if and only if the threshold $t$ is strictly more than $n/2$. In this work, we propose a variant of quantum secret sharing (QSS) where two or more identical copies of the input…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

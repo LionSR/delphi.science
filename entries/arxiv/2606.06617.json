@@ -1,0 +1,23 @@
+{
+  "key": "2606.06617",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.06617",
+  "title": "Prolate spheroidal wave functions enable fast and exponent-aware long-range machine learning interatomic potentials",
+  "authors": [
+    "Jiuyang Liang",
+    "Libin Lu",
+    "Yajie Ji",
+    "Shidong Jiang"
+  ],
+  "summary": "Long-range interactions such as electrostatics and dispersion remain a central bottleneck for machine learning interatomic potentials (MLIPs), especially in ionic, polar and interfacial systems. Ewald-based reciprocal-space mechanisms provide a physically grounded route for capturing these nonlocal effects, but often require dense Fourier grids and can become memory-limited at scale. This problem is particularly pronounced in molecular dynamics, where high efficiency requirements make accurate long-range modelling particularly costly. Here we introduce PSWF-LR, an exponent-aware long-range…",
+  "domain": "physics.chem-ph",
+  "tags": [
+    "physics.chem-ph",
+    "math.NA"
+  ],
+  "published": "2026-06-04",
+  "updated": "2026-06-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

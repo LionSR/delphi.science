@@ -1,0 +1,24 @@
+{
+  "key": "2608.09912",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.09912",
+  "title": "Learning Clifford-structured quantum unitaries and Hamiltonians",
+  "authors": [
+    "Arkopal Dutt",
+    "Dale Jacobs",
+    "John Jeang",
+    "Saeed Mehraban",
+    "Vladimir Podolskii"
+  ],
+  "summary": "Learning algorithms for structured quantum unitaries and Hamiltonians have primarily considered classes of processes that are local or sparse in the Pauli basis. We turn our attention to learning $n$-qubit quantum unitaries $U$ and Hamiltonians $H$, given query access to $U$ or the unitary evolution of $H$, that may be dense in the Pauli basis but still admit concise Clifford decompositions. Specifically, we consider unitaries (or Hamiltonians) of the form $U = \\sum_i α_i C_i$ over Cliffords $C_i$ with bounded Clifford extent $\\sum_i |α_i|$. To extract this Clifford structure, we introduce…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

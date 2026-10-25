@@ -1,0 +1,20 @@
+{
+  "key": "2609.06214",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.06214",
+  "title": "Fourier-cosine Tensor Trains for Density Recovery and Expectation Calculation",
+  "authors": [
+    "Auke Schaap",
+    "Fang Fang"
+  ],
+  "summary": "The Fourier-cosine (COS) method of Fang and Oosterlee (2008) recovers densities and computes expectations semi-analytically from characteristic functions (ch.f.s). In higher dimensions, both expansion synthesis and COS coefficient-tensor construction scale exponentially with dimension. We address this curse of dimensionality with two tensor-train (TT) methods. A straightforward TT decomposition of the COS coefficient tensor gives COS-TT, which removes the exponential cost of online synthesis but not of offline decomposition. Our main contribution, COS-TT-CHF, instead compresses a ch.f.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-05",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

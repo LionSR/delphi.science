@@ -1,0 +1,20 @@
+{
+  "key": "2603.13536",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.13536",
+  "title": "Active Sampling Sample-based Quantum Diagonalization from Finite-Shot Measurements",
+  "authors": [
+    "Rinka Miura"
+  ],
+  "summary": "Near-term quantum devices provide only finite-shot measurements and prepare imperfect, contaminated states. This motivates algorithms that convert samples into reliable low-energy estimates without full tomography or exhaustive measurements. We propose Active Sampling Sample-based Quantum Diagonalization (AS-SQD), framing SQD as an active learning problem: given measured bitstrings, which additional basis states should be included to efficiently recover the ground-state energy? SQD restricts the Hamiltonian to a selected set of basis states and classically diagonalizes the restricted matrix.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-03-13",
+  "updated": "2026-03-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

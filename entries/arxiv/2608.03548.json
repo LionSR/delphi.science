@@ -1,0 +1,24 @@
+{
+  "key": "2608.03548",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.03548",
+  "title": "Adaptive Stepsizes With Certified Convergence in Distributed Gradient Tracking With Quadratic Costs",
+  "authors": [
+    "Yifan Wang",
+    "Luca Ballotta",
+    "Ruggero Carli",
+    "Andrea Iannelli",
+    "Xianghui Cao",
+    "Luca Schenato"
+  ],
+  "summary": "In this work, we propose an adaptive stepsize rule with guaranteed convergence for Distributed Gradient Tracking applied to scalar quadratic problems with heterogeneous curvatures. Most distributed gradient-based algorithms require a suitable stepsize selection. Available theoretical bounds are often overly conservative, while practical implementations typically rely on empirically tuned heuristics. Online adaptive strategies have only recently emerged for general distributed convex optimization, but their properties and performance remain only partially understood. To gain analytical…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

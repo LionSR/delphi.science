@@ -1,0 +1,23 @@
+{
+  "key": "2602.10922",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.10922",
+  "title": "Implicit representations via the polynomial method",
+  "authors": [
+    "Jean Cardinal",
+    "Micha Sharir"
+  ],
+  "summary": "Semialgebraic graphs are graphs whose vertices are points in $\\mathbb{R}^d$, and adjacency between two vertices is determined by the truth value of a semialgebraic predicate of constant complexity. We show how to harness polynomial partitioning methods to construct compact adjacency labeling schemes for families of semialgebraic graphs. That is, we show that for any family of semialgebraic graphs, given a graph on $n$ vertices in this family, we can assign a label consisting of $O(n^{1-2/(d+1) + \\varepsilon})$ bits to each vertex (where $\\varepsilon > 0$ can be made arbitrarily small and the…",
+  "domain": "cs.CG",
+  "tags": [
+    "cs.CG",
+    "cs.DM",
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-02-11",
+  "updated": "2026-04-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

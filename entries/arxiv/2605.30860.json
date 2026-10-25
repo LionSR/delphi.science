@@ -1,0 +1,22 @@
+{
+  "key": "2605.30860",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.30860",
+  "title": "Bayesian Inference with Shaped Deep Non-linear MLPs",
+  "authors": [
+    "Boris Hanin",
+    "Tianze Jiang"
+  ],
+  "summary": "A central aim of deep learning theory is to characterize how neural networks make predictions in the regime of simultaneously large model and training set size. Since the limits of diverging number of model parameters and dataset size do not commute it is not clear a priori what limits exist. In this work, we shed new light on these questions by studying Bayesian inference in deep non-linear MLPs in the regime where the number of training samples ($P$), the input dimension ($N_0$), the hidden layer width ($N$), and the number of hidden layers ($L$) can all be large. We build on the Neural…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-05-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

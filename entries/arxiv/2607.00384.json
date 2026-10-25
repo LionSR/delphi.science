@@ -1,0 +1,20 @@
+{
+  "key": "2607.00384",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.00384",
+  "title": "Exponential Low-Regularity Parareal Algorithms for Nonlinear Schrödinger Equations",
+  "authors": [
+    "Qingle Lin",
+    "Zhi Zhou"
+  ],
+  "summary": "The parareal algorithm is one of the most widely studied parallel-in-time methods for the numerical approximation of time-dependent problems. For non-diffusive equations, however, standard parareal methods may converge slowly or even become unstable due to the absence of damping, while nonlinear interactions can transfer and amplify phase errors across Fourier modes. In this work, we consider the nonlinear Schrödinger equation (NLS) as a representative non-diffusive model and analyze parareal algorithms with an exact fine propagator, with particular emphasis on the design of suitable coarse…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

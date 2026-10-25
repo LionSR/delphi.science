@@ -1,0 +1,20 @@
+{
+  "key": "2609.10849",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10849",
+  "title": "Structure-preserving operator splitting for 2.5D ideal MHD with an entropy-stable DGSEM and exactly divergence-free compatible finite elements",
+  "authors": [
+    "Siyuan Fan",
+    "Guosheng Fu"
+  ],
+  "summary": "We develop a high-order, fully explicit operator-splitting method for 2.5D ideal magnetohydrodynamics on Cartesian meshes. The hydrodynamic subflow is advanced by an entropy-stable discontinuous Galerkin spectral element method equipped with stagewise oscillation elimination and a positivity-preserving limiter. The magnetic--velocity subflow uses compatible finite elements and mass-lumped reconstructions of electric field and current density. Its discrete-curl update exactly preserves the global $H(\\mathrm{div})$ divergence-free subspace, while the ideal semidiscretization balances kinetic,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

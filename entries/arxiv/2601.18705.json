@@ -1,0 +1,24 @@
+{
+  "key": "2601.18705",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.18705",
+  "title": "Efficient SN-like and PN-like Dynamic Low Rank methods for Thermal Radiative Transfer",
+  "authors": [
+    "Terry Haut",
+    "John Loffeld",
+    "Lukas Einkemmer",
+    "Pierson Guthrey",
+    "Stefan Brunner",
+    "William Schill"
+  ],
+  "summary": "Dynamic Low Rank (DLR) methods are a promising way to reduce the computational cost and memory footprint of the high-dimensional thermal radiative transfer (TRT) equations. The TRT equations are a system of nonlinear PDEs that model the energy exhchange between the material temperature and the radiation energy density; due to their high dimensionality, solving the TRT equations is often bottleneck in multi-physics simulations. DLR methods represent the solution in terms of time-evolving SVD-like factors of angle and space. Although previous work has explored DLR methods for TRT, most of the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-26",
+  "updated": "2026-01-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

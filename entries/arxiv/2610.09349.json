@@ -1,0 +1,20 @@
+{
+  "key": "2610.09349",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.09349",
+  "title": "A near-quadratic lower bound for sets with no unique sums",
+  "authors": [
+    "Jianfeng Hou",
+    "Kai Yang"
+  ],
+  "summary": "Let $m(p)$ be the least size of a subset of $\\F_p$ with at least two elements for which every sum has two distinct representations as unordered pairs, allowing repetition. We prove that, for every prime $p\\ge64$, \\[ m(p)\\ge2^{-80}\\left(\\frac{\\log p}{\\log\\log p}\\right)^2. \\] The argument compresses the full integer collision lattice by unit-pivot elimination. A shared random sample and forests of bounded diameter give $O(\\sqrt n+n/\\log p)$ surviving coordinates of polynomial height for a minimal set of size $n$. A nonzero minor divisible by $p$ then gives the lower bound. We also construct…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

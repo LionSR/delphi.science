@@ -1,0 +1,22 @@
+{
+  "key": "2608.05437",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.05437",
+  "title": "Discrete energy as an exact label-free training objective for finite-element surrogates",
+  "authors": [
+    "Ruifeng Cao",
+    "Xidan Song"
+  ],
+  "summary": "Supervised training of finite-element (FE) surrogate models requires reference solutions, and each reference solution is obtained by solving the system that the surrogate is intended to replace. The assembled discrete potential energy provides a training signal that requires no reference solution. This note records, with proofs, the identities that make this signal exact for linear elastostatics: the difference between the energy of a prediction and the energy of the reference solution equals one half of the squared stiffness-norm error, and the gradient of the energy equals the…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-08-05",
+  "updated": "2026-08-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

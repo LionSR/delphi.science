@@ -1,0 +1,22 @@
+{
+  "key": "2610.08657",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08657",
+  "title": "Efficient localised model reduction for multiscale PDEs via Grassmannian interpolation",
+  "authors": [
+    "Christian Alber",
+    "Markus Bachmayr",
+    "Robert Scheichl",
+    "Huqing Yang"
+  ],
+  "summary": "Multiscale, parameter-dependent partial differential equations (PDEs) pose severe computational challenges due to strong coefficient heterogeneity and high-dimensional parameter spaces. We develop a geometric interpolation approach within the multiscale generalized finite element method (MS-GFEM) that targets the most expensive component: computing parameter-dependent optimal local approximation spaces. Leveraging the spatial localization of MS-GFEM and assuming local parameter dependence, we decompose the global problem into parametrically low-dimensional local subproblems. The optimal…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

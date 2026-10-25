@@ -1,0 +1,20 @@
+{
+  "key": "2606.09070",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.09070",
+  "title": "An Adaptive Decentralized Quasi-Newton Method with Stepsizes Independent of the Local-Update Budget",
+  "authors": [
+    "Hao Wu",
+    "Liping Wang"
+  ],
+  "summary": "This paper proposes a novel Adaptive Decentralized Quasi-Newton (AdaDQN) method for solving smooth nonconvex optimization problems over undirected networks. While standard decentralized algorithms with multiple fixed local updates typically admit a convergence stepsize inversely proportional to the number of local updates, we show that this scaling is worst-case tight for the typical unscaled fixed-local-update scheme. We revisit a class of gradient-tracking methods with this scheme from a surrogate-based perspective and establish a Robust Inexact Algorithm (RIA) framework. Inspired by this…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-08",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

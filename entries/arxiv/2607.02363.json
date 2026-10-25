@@ -1,0 +1,33 @@
+{
+  "key": "2607.02363",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.02363",
+  "title": "Stable Self-Modulating Quantum Fast-Weight Programmers with Bounded Memory Gates",
+  "authors": [
+    "Kuo-Chung Peng",
+    "Jiun-Cheng Jiang",
+    "Chun-Hua Lin",
+    "Yifeng Peng",
+    "Junghoon Justin Park",
+    "Huan-Hsin Tseng",
+    "Hsin-Yi Lin",
+    "Kuan-Cheng Chen",
+    "Chen-Yu Liu",
+    "Shinjae Yoo",
+    "Samuel Yen-Chi Chen"
+  ],
+  "summary": "Quantum Fast-Weight Programmers (QFWPs) store temporal information in dynamically programmed variational-circuit parameters rather than in nonlinear recurrent hidden states, offering a practical route to quantum sequence modeling. Self-Modulating QFWP improves this framework by using input-dependent gates for both new fast-weight updates and the accumulated fast-weight state, but its unbounded old-state multiplier can diverge in long-sequence regimes. We propose a bounded old-state modulation rule that applies a sign-preserving tanh gate only to the recurrent memory branch while leaving the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI",
+    "cs.ET",
+    "cs.LG",
+    "cs.NE"
+  ],
+  "published": "2026-07-02",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

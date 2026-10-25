@@ -1,0 +1,22 @@
+{
+  "key": "2607.00383",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.00383",
+  "title": "Regularized Model Predictive Control via Contractivity and Implicit Lur'e Analysis",
+  "authors": [
+    "Ryotaro Shima",
+    "Anand Gokhale",
+    "Alexander Davydov",
+    "Francesco Bullo"
+  ],
+  "summary": "This paper develops a contraction-based stability analysis for regularized model predictive control (MPC), whose feedback law is defined implicitly by a finite-horizon optimal control problem with an additional regularizing cost. The proposed approach interprets regularized MPC as an implicit Lur'e system, in which the regularizing cost perturbs the optimality conditions. We develop a multiplier-based contraction framework for implicit Lur'e systems and derive linear matrix inequality conditions for regularized MPC with three broad classes of regularizers: convex smooth stage costs, convex…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

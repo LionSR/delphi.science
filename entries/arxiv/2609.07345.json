@@ -1,0 +1,22 @@
+{
+  "key": "2609.07345",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.07345",
+  "title": "Monadic Second-Order Logic in HOL: Deep and Shallow with Automated Faithfulness (Extended Preprint)",
+  "authors": [
+    "Christoph Benzmueller",
+    "Daniel Kirchner"
+  ],
+  "summary": "In Isabelle/HOL, we apply the deep-and-shallow embedding methodology of our prior work to monadic second-order logic (MSO). Three embeddings are developed side by side: a deep embedding (an inductive datatype with an explicit satisfaction relation); a maximal-shallow embedding that translates the connectives and quantifiers directly into HOL, carrying the interpretation and both assignments explicitly; and a minimal-shallow embedding -- a locale that fixes those parameters, collapsing the formula type to bool. The enabling new ingredient is a two-sorted substitution apparatus --…",
+  "domain": "cs.LO",
+  "tags": [
+    "cs.LO",
+    "cs.AI",
+    "math.LO"
+  ],
+  "published": "2026-09-07",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

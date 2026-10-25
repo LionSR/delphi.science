@@ -1,0 +1,22 @@
+{
+  "key": "2609.09731",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.09731",
+  "title": "Conditions for Global Optimality in Quantum Arimoto-Blahut Algorithms",
+  "authors": [
+    "Geng Liu",
+    "Masahito Hayashi"
+  ],
+  "summary": "Generalized Arimoto--Blahut (AB) algorithms are widely used in information theory and quantum optimization, but monotonic objective decrease and numerical stabilization do not guarantee global optimality. We establish necessary and sufficient conditions for the global optimality of full-rank AB fixed points for convex differentiable objectives under linear constraints. An AB fixed point is globally optimal if and only if the AB update direction and the objective gradient differ by an element of the constraint normal space at that point. The same compatibility condition characterizes…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "math.OC",
+    "quant-ph"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

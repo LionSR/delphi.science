@@ -1,0 +1,22 @@
+{
+  "key": "2608.06687",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.06687",
+  "title": "Optimal Neural Network Approximation via Empirical Least Squares with Deterministic Samples",
+  "authors": [
+    "Xinliang Liu",
+    "Tong Mao",
+    "Jinchao Xu"
+  ],
+  "summary": "We develop a rigorous theory of discrete residual least-squares approximation for elliptic spectral equations $\\mathfrak L_βu=f$ using linearized ReLU$^k$ neural networks on the sphere, where $\\mathfrak L_β$ is a positive elliptic spectral multiplier of order $β$. Given a parameter set $Θ_n=\\{θ_{j}^*\\}_{j=1}^n\\subset\\mathbb S^d$, we approximate $u$ in the linearized network space $L_n^k(Θ_n)$ by the discrete residual on the collocation points $\\{η_i^*\\}_{i=1}^m$ \\begin{equation*} u_{n,m}\\in\\arg\\min_{v_n\\in L_n^k(Θ_n)}\\frac1m\\sum_{i=1}^m\\left(f(η_i^*)-\\mathfrak L_βv_n(η_i^*)\\right)^2.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

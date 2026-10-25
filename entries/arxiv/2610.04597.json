@@ -1,0 +1,20 @@
+{
+  "key": "2610.04597",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04597",
+  "title": "Efficient Quantum State Identity Testing",
+  "authors": [
+    "Shih-Han Hung",
+    "Ming-Hsien Tsai"
+  ],
+  "summary": "We study the following quantum state identity problem: given access to copies of $n$ unknown pure quantum states, the goal is to determine whether every pair has fidelity at least $1-\\varepsilon$ or some pair has fidelity at most $\\varepsilon$. This problem relaxes the identical-or-orthogonal promise considered in previous work. For any fixed overlap parameter $\\varepsilon\\in(0,1/4)$, we present two quantum algorithms with complementary guarantees on circuit depth and sample complexity. The first runs in constant depth using parallel swap tests and takes $O(\\log(n/δ)\\log(2/δ))$ copies of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-03",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

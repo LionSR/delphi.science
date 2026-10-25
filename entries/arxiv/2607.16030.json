@@ -1,0 +1,25 @@
+{
+  "key": "2607.16030",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.16030",
+  "title": "Rethinking Quantum Continual Learning with Quantum Fisher Information",
+  "authors": [
+    "Yu-Chao Hsu",
+    "Yu-Cheng Lin",
+    "Tai-Yue Li",
+    "Nan-Yow Chen",
+    "En-Jui Kuo"
+  ],
+  "summary": "Quantum continual learning aims to train quantum models on sequential tasks without losing previously learned knowledge. However, variational quantum classifiers (VQCs) are prone to catastrophic forgetting under nonstationary task distributions. We propose quantum elastic weight consolidation (QEWC), a quantum Fisher information (QFI)-informed regularization method for mitigating forgetting. Unlike conventional elastic weight consolidation based on classical Fisher information (CFI), which measures parameter importance through measurement-dependent output statistics, QEWC uses QFI to…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "published": "2026-07-17",
+  "updated": "2026-07-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

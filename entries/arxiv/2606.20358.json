@@ -1,0 +1,21 @@
+{
+  "key": "2606.20358",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20358",
+  "title": "Formalizing Extended Complex Numbers, Mobius Transformations, and Cross Ratio in Lean 4",
+  "authors": [
+    "Fubin Yan",
+    "Kenneth W. Shum"
+  ],
+  "summary": "The extended complex plane is a fundamental object in complex analysis, hyperbolic geometry, and mathematical physics. Its geometry is governed by Möbius transformations, with the cross ratio serving as a central invariant. We present a formalization of these concepts in the Lean4 theorem prover. The extended complex plane is represented using Mathlib's Option type over $\\mathbb{C}$, where the additional element represents the point at infinity. On this foundation, we define Möbius transformations, their action on the extended complex plane, and the cross ratio. We formalize several basic…",
+  "domain": "math.CV",
+  "tags": [
+    "math.CV",
+    "cs.MS"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

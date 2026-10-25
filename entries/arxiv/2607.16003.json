@@ -1,0 +1,22 @@
+{
+  "key": "2607.16003",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.16003",
+  "title": "Accelerated Exact Recovery from Noisy Data via Averaging and Noise-Aware Adaptive Bregman-Kaczmarz",
+  "authors": [
+    "Lionel Tondji",
+    "Abakar A. Mahamat",
+    "Idriss Tondji"
+  ],
+  "summary": "The adaptive Bregman-Kaczmarz method recovers the exact, noise-free solution of a linear inverse problem even when every measurement it queries is corrupted, provided the corruption is fresh, independent and zero-mean. A block version was proposed for parallel hardware, but whether larger blocks actually converge faster was left open. We show the answer hinges on how the block is used: replacing the block sum with a block average collapses the analysis onto a single positive-semidefinite matrix, through which we prove that the guaranteed convergence improves monotonically with the batch…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-07-17",
+  "updated": "2026-07-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

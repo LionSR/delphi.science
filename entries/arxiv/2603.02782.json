@@ -1,0 +1,22 @@
+{
+  "key": "2603.02782",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.02782",
+  "title": "A non-autonomous center-stable set theorem for saddle avoidance in optimization",
+  "authors": [
+    "Andreea-Alexandra Muşat",
+    "Nicolas Boumal"
+  ],
+  "summary": "Optimization algorithms are unlikely to converge to strict saddle points. Proofs to that effect rely on the Center-Stable Manifold Theorem (CSMT), casting algorithms as dynamical systems: $x_{k+1} = g_k(x_k)$. In its standard form, the CSMT is limited to autonomous systems (the maps $g_k$ are all the same). To study algorithms such as gradient descent with non-constant step-size schedules, we need a non-autonomous CSMT. There are a few, but they are unable to handle, for example, vanishing step sizes. To cover such scenarios, we establish a new Center-Stable Set Theorem (CSST) for…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.DS",
+    "math.NA"
+  ],
+  "published": "2026-03-03",
+  "updated": "2026-05-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

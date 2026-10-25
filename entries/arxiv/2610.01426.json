@@ -1,0 +1,23 @@
+{
+  "key": "2610.01426",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01426",
+  "title": "Least-time Gradient Flow",
+  "authors": [
+    "Alessandro Betti",
+    "Marco Gori",
+    "Stefano Melacci",
+    "Jinwei Zhao"
+  ],
+  "summary": "Prescribing the speed of gradient flow on the risk itself, by the dynamics $\\dot w=-u(E(w))\\nabla E(w)/\\abs{\\nabla E(w)}^{2}$, makes the risk $e(t)=E(w(t))$ obey $\\dot e=-u(e)$ exactly, whatever the landscape~$E$; the time needed to reach zero risk from $e_0$ is $\\int_0^{e_0}\\dd e/u(e)$. Minimizing this time alone is ill posed, and we study the regularized problem $\\inf\\{\\int_0^{e_0}(\\tfrac\\lambda2\\abs{u'}^{2}+1/u)\\,\\dd e:\\ u\\in H^{1}(0,e_0),\\ u\\ge0,\\ u(0)=0\\}$, $λ>0$. We prove that the minimizer exists, is unique, and is a linearly scaled cycloid, and we show that the optimal rate behaves…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

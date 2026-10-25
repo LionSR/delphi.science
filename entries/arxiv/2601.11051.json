@@ -1,0 +1,21 @@
+{
+  "key": "2601.11051",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.11051",
+  "title": "An Adaptive Lagrangian B-Spline Framework for Point Cloud Manifold Evolution",
+  "authors": [
+    "Muhammad Ammad",
+    "Leevan Ling"
+  ],
+  "summary": "We extend our recent curve-evolution framework based on localized B-spline interpolation to present an adaptive Lagrangian framework for the geometric evolution of point-cloud data representing smooth, codimension-one surfaces in $\\mathbb{R}^3$. The method constructs overlapping, localized tensor-product B-spline patches, enabling direct, meshless surface evolution from discrete samples. Within each patch, the differentiable B-spline representation yields analytic, high-order estimates of intrinsic geometric invariants, supporting curvature-driven and geometry-coupled flows. The organization…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.DG"
+  ],
+  "published": "2026-01-16",
+  "updated": "2026-01-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

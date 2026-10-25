@@ -1,0 +1,19 @@
+{
+  "key": "2603.21181",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.21181",
+  "title": "A sharp upper bound on the third adjacency eigenvalue of a graph",
+  "authors": [
+    "Quanyu Tang"
+  ],
+  "summary": "For a graph $G$ of order $n$, let $$ λ_1(G)\\ge \\cdots \\ge λ_n(G) $$ be the eigenvalues of its adjacency matrix. We prove that every graph $G$ on $n\\ge 3$ vertices satisfies $$ λ_3(G)\\le \\frac{n}{3}-1, $$ thereby solving a problem of Nikiforov. The bound is best possible whenever $3\\mid n$. Our proof is derived from a more general matrix result: if $A=(a_{ij})$ is a real symmetric matrix of order $n$ with $0\\le a_{ij}\\le 1$ for all off-diagonal entries and $a_{ii}\\ge 0$ for all $i$, then $$ λ_{n-1}(A)+λ_n(A)\\ge -\\frac{2n}{3}. $$ This in particular confirms a conjecture of Leonida and Li.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-03-22",
+  "updated": "2026-03-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

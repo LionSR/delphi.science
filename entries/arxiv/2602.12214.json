@@ -1,0 +1,21 @@
+{
+  "key": "2602.12214",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.12214",
+  "title": "The colored knapsack problem: structural properties and exact algorithms",
+  "authors": [
+    "Fabio Ciccarelli",
+    "Alexander Helber",
+    "Erik Mühmer"
+  ],
+  "summary": "We introduce and study a novel generalization of the classical Knapsack Problem (KP), called the Colored Knapsack Problem (CKP). In this problem, the items are partitioned into classes of colors and the packed items need to be ordered such that no consecutive items are of the same color. We establish that the problem is weakly NP-hard and propose two exact dynamic programming algorithms with time complexities of $\\mathcal{O}(bn^4)$ and $\\mathcal{O}(b^2n^3)$, respectively. To enhance practical performance, we derive various dominance and fathoming rules for both approaches. From a theoretical…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-12",
+  "updated": "2026-02-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

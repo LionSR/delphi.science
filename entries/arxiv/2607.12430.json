@@ -1,0 +1,21 @@
+{
+  "key": "2607.12430",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12430",
+  "title": "A mixed precision algorithm for the matrix square root",
+  "authors": [
+    "Bowen Gao",
+    "Daniel Kressner",
+    "Meiyue Shao"
+  ],
+  "summary": "Mixed precision algorithms can significantly enhance the performance of linear algebra solvers by leveraging increasingly powerful low precision hardware while recovering working precision accuracy through, for example, iterative refinement. In this paper, we propose a novel mixed precision algorithm for computing matrix square roots. Our algorithm combines a Schur decomposition approach in low precision with iterative refinement performed through an approximate Newton method. We perform a detailed convergence analysis of the approximate Newton method. For the special case of symmetric…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

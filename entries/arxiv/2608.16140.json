@@ -1,0 +1,21 @@
+{
+  "key": "2608.16140",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.16140",
+  "title": "Internalized Truth in Reflective Grounded Arithmetic",
+  "authors": [
+    "Bryan Ford"
+  ],
+  "summary": "By Tarski's undefinability theorem, no consistent classical formal system that includes arithmetic can define its own truth predicate. Reflective Grounded Arithmetic (RGA) is a powerful arithmetic whose universal quantifier is grounded in its own reflected proof search, and whose paracompleteness circumvents Tarski's theorem. This paper presents a machine-checked Isabelle/HOL development that defines a truth predicate for RGA's full language, quantifiers included, as an internal term of RGA itself. This term is compiled from a primitive-recursive decider for its operational semantics, and…",
+  "domain": "math.LO",
+  "tags": [
+    "math.LO",
+    "cs.LO",
+    "cs.PL"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

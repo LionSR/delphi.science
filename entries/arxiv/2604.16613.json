@@ -1,0 +1,22 @@
+{
+  "key": "2604.16613",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.16613",
+  "title": "GreenPeas: Unlocking adaptive quantum error correction with just-in-time decoding hypergraphs",
+  "authors": [
+    "Abbas B. Ziad",
+    "Jubo Xu",
+    "Hongxiang Fan"
+  ],
+  "summary": "Circuit-level decoders are essential for the realisation of low-overhead fault-tolerant quantum computing. However, they rely on complex hypergraphs that are traditionally compiled ahead-of-time. This static approach introduces a significant bottleneck for an emerging class of adaptive circuits, where the structure is modified during execution based on mid-circuit measurement outcomes. Pre-compiling hypergraphs for all possible circuit branches would incur an exponential memory cost, rendering current tools impractical for these workloads. Hence, we introduce GreenPeas, a just-in-time…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DC"
+  ],
+  "published": "2026-04-17",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

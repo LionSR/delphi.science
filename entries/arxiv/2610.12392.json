@@ -1,0 +1,22 @@
+{
+  "key": "2610.12392",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.12392",
+  "title": "Tiling 3D by Translates of a Single Polycube is Undecidable",
+  "authors": [
+    "Erik D. Demaine",
+    "Stefan Langerman"
+  ],
+  "summary": "We prove co-RE-completeness, and thus undecidability, of the following problem: given a single (connected) polycube, decide whether it tiles 3D Euclidean space by translations. We reduce from Wang tiling using the decorated two-prime Sudoku construction of Greenfeld and Tao and a cyclic encoding adapted from OpenAI's 3D aperiodic tile, and apply a reduction of Kim to make the prototile connected (via faces). Dimension three is optimal: translational monotiling is known to be decidable in $\\mathbb{Z}^2$ and for a single (possibly disconnected) polyomino in $\\mathbb{R}^2$.",
+  "domain": "cs.CG",
+  "tags": [
+    "cs.CG",
+    "math.CO",
+    "math.MG"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

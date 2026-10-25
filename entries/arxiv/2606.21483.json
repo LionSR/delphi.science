@@ -1,0 +1,22 @@
+{
+  "key": "2606.21483",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.21483",
+  "title": "A note on the convergence guarantees of RLT-based algorithms for polynomial optimization",
+  "authors": [
+    "Alejandro Barros-González",
+    "Julio González-Díaz",
+    "Brais González-Rodríguez",
+    "Iria Rodríguez Acevedo"
+  ],
+  "summary": "This paper identifies and addresses a mathematical oversight in one of the foundational results on the Reformulation-Linearization Technique (RLT) for polynomial optimization. Correctness of the original result can be easily recovered by adding a minor and natural assumption. However, not being aware of this nuance may lead to the loss of convergence guarantees in RLT-based algorithms, especially if they rely on filtering strategies for the construction of the bound-factor constraints.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-19",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

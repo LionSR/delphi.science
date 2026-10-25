@@ -1,0 +1,19 @@
+{
+  "key": "2603.09381",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.09381",
+  "title": "An accelerated direct solver for scalar wave scattering by multiple transmissive inclusions in two dimensions",
+  "authors": [
+    "Yasuhiro Matsumoto"
+  ],
+  "summary": "This paper discusses a fast direct solver using boundary integral equations for Helmholtz transmission problems involving multiple inclusions in two dimensions. Efficiently addressing scattering problems in the presence of numerous inclusions remains a key challenge for various practical applications. For problems involving a large number of scatterers, the number of iterations in Krylov subspace methods is known to increase significantly. This occurs even when using second-kind boundary integral equations, which are typically recognized for their rapid convergence. We consider a fast direct…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-10",
+  "updated": "2026-03-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

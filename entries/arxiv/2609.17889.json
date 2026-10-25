@@ -1,0 +1,20 @@
+{
+  "key": "2609.17889",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.17889",
+  "title": "Bounded Integer Quadratic Programming through Parallelepiped Covers and Discrete Convic Optimization",
+  "authors": [
+    "Cinar Ari",
+    "Robert Hildebrand"
+  ],
+  "summary": "We give an exact algorithm for minimizing an arbitrary rational quadratic polynomial $x^T Q x + c^T x + γ$ over the integer points of a bounded rational polyhedron $\\{x : Ax \\le b\\}$. For $n$ variables and $m$ inequalities, the running time is $$2^{O(n \\log(n+1))} (m+1)^{O(n)} β^{O(n)} (1+L)^{O(1)},$$ where $β$ is one plus the maximum binary encoding length of an entry of $A$ or $Q$, and $L$ is the full input encoding length. The polynomial degree in $L$ is absolute; in particular, the encoding of $b$, $c$, and $γ$ enters only this fixed-degree factor. Our algorithm refines the integral…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

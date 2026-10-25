@@ -1,0 +1,22 @@
+{
+  "key": "2608.11633",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.11633",
+  "title": "Construction and Periodicity of Minimal Resolution Graphs of Suspension Singularities",
+  "authors": [
+    "Sümeyra Sakallı",
+    "Claudia Salles"
+  ],
+  "summary": "We develop computational tools for constructing the minimal resolution graphs of suspension singularities. In particular, we provide a Magma program that implements Nemethi's algorithm that can be used to construct the minimal resolution graph of any suspension singularity. The program outputs the resulting resolution graph as structured graph data, encoding the vertices, edges, and decorations of the graph. We further develop a SageMath program that takes this data as input and produces graphical representations of the resolution graphs, facilitating their visualization and analysis. For…",
+  "domain": "math.GT",
+  "tags": [
+    "math.GT",
+    "math.AG",
+    "math.SG"
+  ],
+  "published": "2026-08-12",
+  "updated": "2026-08-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

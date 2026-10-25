@@ -1,0 +1,22 @@
+{
+  "key": "2608.14981",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.14981",
+  "title": "Qudit-ADAPT-VQE: an adaptive variational algorithm with counterdiabatic-inspired improvements for qudits",
+  "authors": [
+    "Joaquín Molina",
+    "Herbert Díaz-Moraga",
+    "Dardo Goyeneche",
+    "Diego Tancara"
+  ],
+  "summary": "Variational quantum algorithms based on qudits have attracted significant attention in recent years. However, as in their qubit-based counterparts, challenges such as barren plateaus and the design of efficient ansatz remain major obstacles. In this work, we propose to address these issues through a qudit implementation of the ADAPT-VQE algorithm, which constructs the ansatz iteratively. Specifically, we introduce an operator pool inspired by adiabatic evolution enhanced with counterdiabatic driving for ansatz construction and employ it to solve Max 3-Cut. We show that the warm-start…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-15",
+  "updated": "2026-08-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

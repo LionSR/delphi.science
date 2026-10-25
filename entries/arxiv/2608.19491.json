@@ -1,0 +1,23 @@
+{
+  "key": "2608.19491",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19491",
+  "title": "Activation-Keyed Momentum: An Anisotropic Momentum Update via the Delta Rule",
+  "authors": [
+    "Euijin Hong",
+    "Guannan Qu"
+  ],
+  "summary": "Most modern optimizers form their momentum as an exponential moving average (EMA) of past gradients, forgetting every direction at one fixed rate. However, the inputs a deep network sees during training can be highly anisotropic, with a few directions queried frequently while most are seen rarely. Preconditioning methods address this anisotropy by wrapping extra processing around this buffer and leave the momentum update itself unchanged. We propose Activation-Keyed Momentum (AK-Momentum), which builds direction-awareness into the momentum update rule. The gradient of a linear layer splits…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.CL",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-08-19",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

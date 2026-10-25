@@ -1,0 +1,23 @@
+{
+  "key": "2602.01589",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.01589",
+  "title": "Two-chart Beltrami Optimization for Distortion-Controlled Spherical Bijection with Application to Brain Surface Registration",
+  "authors": [
+    "Zhehao Xu",
+    "Lok Ming Lui"
+  ],
+  "summary": "Many genus-0 surface mapping tasks such as landmark alignment, feature matching, and image-driven registration, can be reduced (via an initial spherical conformal map) to optimizing a spherical self-homeomorphism with controlled distortion. However, existing works lack efficient mechanisms to control the geometric distortion of the resulting mapping. To resolve this issue, we formulate this as a Beltrami-space optimization problem, where the angle distortion is encoded explicitly by the Beltrami differential and bijectivity can be enforced through the constraint $\\|μ\\|_{\\infty}<1$. To make…",
+  "domain": "cs.GR",
+  "tags": [
+    "cs.GR",
+    "cs.CV",
+    "cs.LG",
+    "math.AG"
+  ],
+  "published": "2026-02-02",
+  "updated": "2026-02-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

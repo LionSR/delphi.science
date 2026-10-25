@@ -1,0 +1,21 @@
+{
+  "key": "2609.25819",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.25819",
+  "title": "On the Construction of Trapdoor Claw-Free Functions with Certifiable Key",
+  "authors": [
+    "Charles Lim",
+    "Yao Ma"
+  ],
+  "summary": "Trapdoor claw-free functions (TCFs) underpin much of classical-quantum cryptographic interaction, yet every TCF-based protocol states its guarantees relative to an honestly generated key. We give a family-agnostic abstraction of key certification for (noisy) TCF constructions, built on two notions: a certifiable key relation, an NP relation capturing a family's honest keys with witnesses recoverable from the trapdoor; and certified key generation, which emits with each key a certificate of membership satisfying completeness, certificate soundness with extractability, and key privacy. We…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "quant-ph"
+  ],
+  "published": "2026-09-22",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

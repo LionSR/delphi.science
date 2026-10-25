@@ -1,0 +1,21 @@
+{
+  "key": "2603.03625",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.03625",
+  "title": "Negative Curvature Methods with High-Probability Complexity Guarantees for Stochastic Nonconvex Optimization",
+  "authors": [
+    "Albert S. Berahas",
+    "Raghu Bollapragada",
+    "Wanping Dong"
+  ],
+  "summary": "This paper develops negative curvature methods for continuous nonlinear unconstrained optimization in stochastic settings, in which function, gradient, and Hessian information is available only through probabilistic oracles, i.e., oracles that return approximations of a certain accuracy and reliability. We introduce conditions on these oracles and design a two-step framework that systematically combines gradient and negative curvature steps. The framework employs an early-stopping mechanism to guarantee sufficient progress and uses an adaptive mechanism based on an Armijo-type criterion to…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-04",
+  "updated": "2026-03-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

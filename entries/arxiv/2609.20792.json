@@ -1,0 +1,19 @@
+{
+  "key": "2609.20792",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20792",
+  "title": "A Framework for Supervised and Unsupervised Learning via Reproducing Kernel Hilbert Spaces",
+  "authors": [
+    "Frédéric Protin"
+  ],
+  "summary": "We introduce a unified framework for supervised and unsupervised learning through density estimation using reproducing kernel Hilbert spaces (RKHSs). To this end, we introduce the notion of a nested RKHS, that is, an increasing sequence of RKHSs whose union is dense in an ambient $L^2$-space. This construction allows us to exploit the computational structure of RKHS methods at each finite approximation level while preserving the approximation power of the entire $L^2$-space. We first study statistical learning in a fixed RKHS. In both unsupervised and supervised settings, we establish strong…",
+  "domain": "math.FA",
+  "tags": [
+    "math.FA"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

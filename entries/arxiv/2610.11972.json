@@ -1,0 +1,21 @@
+{
+  "key": "2610.11972",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.11972",
+  "title": "Mathematical foundation of symmetric fast Fourier transform",
+  "authors": [
+    "Weifeng Hou",
+    "Kai Jiang",
+    "Jingfei Tang"
+  ],
+  "summary": "In this work, we study the fast Fourier transform (FFT) of discrete data with crystallographic symmetry, for which standard FFT algorithms incur substantial redundant computation. We establish a rigorous mathematical theory of the symmetric fast Fourier transform (SFFT) for $n$-dimensional crystallographic groups and propose the SFFT and symmetric inverse fast Fourier transform (SIFFT) algorithms. We derive symmetry-reduction formulas for both linear and translational symmetries and unify them into a recursive framework. We analyze the arithmetic complexity to obtain theoretical speedup…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

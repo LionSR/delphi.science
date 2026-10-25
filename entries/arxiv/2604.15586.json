@@ -1,0 +1,21 @@
+{
+  "key": "2604.15586",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.15586",
+  "title": "Scalable Outer Approximation of Minkowski Sums of Matrix Ellipsoids for Data-Driven Control",
+  "authors": [
+    "Taira Kaminaga",
+    "Hampei Sasahara"
+  ],
+  "summary": "Matrix ellipsoids provide a standard framework for representing bounded uncertainties in data-driven control. Since noise models for sequential observations are naturally represented as the Minkowski sum of multiple matrix ellipsoids, applying existing robust control methods, which typically assume a single ellipsoidal set, requires a tight outer approximation. While techniques based on linear matrix inequalities (LMI) are applicable, their computational cost grows quadratically with the data length, limiting their scalability. This paper investigates the optimal outer approximation problem…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-04-16",
+  "updated": "2026-04-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

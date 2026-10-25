@@ -1,0 +1,20 @@
+{
+  "key": "2602.17885",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.17885",
+  "title": "Multi-agent path-planning in a moving medium via Wasserstein Hamiltonian Flow",
+  "authors": [
+    "Christina Frederick",
+    "Haomin Zhou"
+  ],
+  "summary": "We present a finite dimensional variational model for multi-agent path-planning in which a group of agents traverses from initial positions to a target distribution in a moving medium. The model is derived using the agent-based formulation of the Wasserstein Hamiltonian flows that transport between probability distributions while optimizing a running cost. The objective is the mismatch between their final positions and the target distribution. The constraints are a system of Hamiltonian equations that provide the trajectories of the agents. The free variables on which the optimization is…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-19",
+  "updated": "2026-02-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

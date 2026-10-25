@@ -1,0 +1,20 @@
+{
+  "key": "2607.13014",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.13014",
+  "title": "A posteriori error analysis for the Navier-Stokes equations with non-smooth data",
+  "authors": [
+    "María Gabriela Armentano",
+    "Mauricio Mendiluce"
+  ],
+  "summary": "We study the stationary Navier-Stokes equations with Dirichlet boundary data in L2, a setting in which the limited regularity of the solution prevents the direct application of standard a posteriori error estimation techniques. To address this issue, we introduce a regularized formulation that yields a well-posed approximation of the original problem and admits a conforming finite element discretization. Using Taylor-Hood P2P1 elements, we construct a residual-based a posteriori error estimator and establish its reliability and efficiency under suitable smallness assumptions on the data. We…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

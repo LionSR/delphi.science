@@ -1,0 +1,22 @@
+{
+  "key": "2606.21433",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.21433",
+  "title": "Central limit theorem for the averaged Adam optimizer",
+  "authors": [
+    "Steffen Dereich",
+    "Arnulf Jentzen"
+  ],
+  "summary": "In this article, we analyse convergence of the averaged Adam optimizer to an attracting zero of the Adam vector field. We provide a central limit theorem that, in particular, quantifies exactly the speed of convergence. The order of convergence is $n^{-1/2}$ in the number of steps of the algorithm which coincides with the order observed for classical stochastic approximation algorithms. The covariance in the central limit theorem is given in terms of properties of the Adam algorithm in the state of the attractor.",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-06-19",
+  "updated": "2026-06-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

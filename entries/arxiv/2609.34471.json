@@ -1,0 +1,21 @@
+{
+  "key": "2609.34471",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.34471",
+  "title": "Three Standard Deviations Suffice While One Does Not",
+  "authors": [
+    "Victor Reis",
+    "Zhao Song"
+  ],
+  "summary": "Spencer's 1985 ``six standard deviations suffice'' theorem shows that every $A \\in [-1,1]^{n \\times n}$ has a sign vector $x \\in \\{-1,1\\}^n$ with $\\|Ax\\|_\\infty \\le 6\\sqrt{n}$. We show the upper bound $\\sqrt{3\\operatorname{arsinh}(10)}\\sqrt{n}+4 1.0000002\\sqrt{n}$ for every choice of signs $x \\in \\{-1,1\\}^n$. The construction simply replaces a $2^{-22}$ fraction of the columns of a Hadamard matrix with independent random sign vectors. This is the first improvement over the $\\sqrt{n}$ lower bound of Olson and Spencer (1978), which uses a Hadamard matrix.",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

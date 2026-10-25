@@ -1,0 +1,19 @@
+{
+  "key": "2604.06909",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.06909",
+  "title": "Mini-Batch Stochastic Krasnosel'ski\\uı-Mann Algorithm for Nonexpansive Fixed Point Problems",
+  "authors": [
+    "Hideaki Iiduka"
+  ],
+  "summary": "The Krasnosel'ski\\uı-Mann algorithm is a well-known method for finding fixed points of a nonexpansive mapping with strong theoretical guarantees. However, there are practical large-scale problems to which this algorithm cannot be applied. Here, to resolve the issue caused by the computational difficulty of the mapping, we define a computable mini-batch stochastic mapping, which is a unbiased estimator of the nonexpansive mapping, and implement it in the Krasnosel'ski\\uı-Mann algorithm. We show that the algorithm with increasing batch sizes converges almost surely to a fixed point of the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-08",
+  "updated": "2026-04-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2608.07216",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.07216",
+  "title": "Geometric Bounds for the Mean Gauge and the Mean Width in Isotropic Position",
+  "authors": [
+    "Silouanos Brazitikos",
+    "Christos Pandis"
+  ],
+  "summary": "Let $K \\subset \\mathbb{R}^n$ be an origin-symmetric convex body and assume that its uniform probability measure is isotropic in the probabilistic normalization, namely \\[ \\int_K x \\otimes x \\, dμ_K(x) = \\mathrm{Id}_n. \\] We give deterministic geometric proofs of \\[ M(K) \\leq C \\frac{\\log(n)}{\\sqrt{n}} \\qquad \\text{and} \\qquad M^*(K) \\leq C \\sqrt{n} \\, \\log(n), \\] where \\[ M(K) = \\int_{\\mathbb{S}^{n-1}} \\|θ\\|_K \\, dσ(θ), \\qquad M^*(K) = \\int_{\\mathbb{S}^{n-1}} h_K(θ) \\, dσ(θ). \\] Combining both estimates yields \\[ M(K) M^*(K) \\leq C \\log^2(n). \\] The first proof uses a quadratic aggregate of…",
+  "domain": "math.MG",
+  "tags": [
+    "math.MG"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

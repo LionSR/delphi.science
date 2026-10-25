@@ -1,0 +1,25 @@
+{
+  "key": "2605.06656",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.06656",
+  "title": "Why Global LLM Leaderboards Are Misleading: Small Portfolios for Heterogeneous Supervised ML",
+  "authors": [
+    "Jai Moondra",
+    "Ayela Chughtai",
+    "Bhargavi Lanka",
+    "Swati Gupta"
+  ],
+  "summary": "Ranking LLMs via pairwise human feedback underpins current leaderboards for open-ended tasks, such as creative writing and problem-solving. We analyze ~89K comparisons in 116 languages from 52 LLMs from Arena, and show that the best-fit global Bradley-Terry (BT) ranking is misleading. Nearly 2/3 of the decisive votes cancel out, and even the top 50 models according to the global BT ranking are statistically indistinguishable (pairwise win probabilities are at most 0.53 within the top 50 models). We trace this failure to strong, structured heterogeneity of opinions across language, task, and…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.DM",
+    "cs.ET",
+    "math.OC"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

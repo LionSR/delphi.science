@@ -1,0 +1,22 @@
+{
+  "key": "2609.17624",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.17624",
+  "title": "Intrinsic-Dimensional Wasserstein Guarantees for Private Synthetic Measures",
+  "authors": [
+    "Yiyun He"
+  ],
+  "summary": "We study an $\\varepsilon$-differentially private synthetic measure for $n$ points in $[0,1]^d$ by applying the existing PrivTree algorithm to construct an adaptive binary partition and then privately releasing its leaf masses. We consider the worst-case data model without any sampling or population-distribution assumption. The 1-Wasserstein error of the synthetic measure is $\\widetilde O_d((\\varepsilon n)^{-1/d})$ for $d\\ge2$, which is optimal compared to the minimax lower bound up to a logarithmic factor. Moreover, for $d\\ge3$ and $2<s\\le d$, if the data set has covering number at most…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.CR",
+    "cs.IT",
+    "math.PR"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

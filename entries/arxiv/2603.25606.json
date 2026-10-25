@@ -1,0 +1,21 @@
+{
+  "key": "2603.25606",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.25606",
+  "title": "Stabilization of stochastic networks in Markovian environment",
+  "authors": [
+    "Robin Kaiser",
+    "Martin Klötzer",
+    "Ecaterina Sava-Huss"
+  ],
+  "summary": "We establish criteria under which stochastic networks in a Markovian environment stabilize, thus confirming Conjecture 7.2 from Levine-Greco [GL23]. The networks evolve on finite connected graphs $G=(V,E)$, and their dynamics are encoded by $V \\times V$ toppling matrices $M$, whose columns record the expected number of topplings when the environment is in stationarity. Stabilization and non-stabilization are characterized by a parameter $ρ$ which depends on the largest eigenvalue of the matrix $M+αI$, with $α=1+\\max\\{-M(v,v):v\\in V\\}$. The proofs rely on the toppling random walk, in which…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-03-26",
+  "updated": "2026-03-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

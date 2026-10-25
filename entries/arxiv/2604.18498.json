@@ -1,0 +1,20 @@
+{
+  "key": "2604.18498",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.18498",
+  "title": "A primality test for $Kp^\\ell - 1$ numbers",
+  "authors": [
+    "Anuj Jakhar",
+    "Mahesh Kumar Ram"
+  ],
+  "summary": "We develop an algebraic framework over arbitrary quadratic fields $L = \\mathbb{Q}(\\sqrt{D})$ to generalize the Miller-Rabin primality test. Consequently, we present a deterministic primality test for integers of the form $N = K p^{\\ell} - 1$ that requires only a single modular exponentiation and achieves a computational complexity of $\\tilde{\\mathcal{O}}(\\log^2 N)$. Furthermore, we also establish an analogue of Korselt's criterion within this setting. Finally, computational data generated using SageMath confirm its efficiency, successfully establishing the primality of numbers in the…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

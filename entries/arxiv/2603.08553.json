@@ -1,0 +1,24 @@
+{
+  "key": "2603.08553",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.08553",
+  "title": "Generative Adversarial Regression (GAR): Learning Conditional Risk Scenarios",
+  "authors": [
+    "Saeed Asadi",
+    "Jonathan Yu-Meng Li"
+  ],
+  "summary": "We propose Generative Adversarial Regression (GAR), a framework for learning conditional risk scenarios through generators aligned with downstream risk objectives. GAR builds on a regression characterization of conditional risk for elicitable functionals, including quantiles, expectiles, and jointly elicitable pairs. We extend this principle from point prediction to generative modeling by training generators whose policy-induced risk matches that of real data under the same context. To ensure robustness across all policies, GAR adopts a minimax formulation in which an adversarial policy…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.OC",
+    "q-fin.PM",
+    "q-fin.RM"
+  ],
+  "published": "2026-03-09",
+  "updated": "2026-03-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

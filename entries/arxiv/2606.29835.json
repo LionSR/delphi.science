@@ -1,0 +1,25 @@
+{
+  "key": "2606.29835",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.29835",
+  "title": "A Sieve-Accelerated Quadrature Method for Exact Privacy Accounting in the 2020 U.S. Decennial Census",
+  "authors": [
+    "Buxin Su",
+    "Weijie Su",
+    "Chendi Wang"
+  ],
+  "summary": "In 2020, the U.S. Census Bureau adopted differential privacy for the Decennial Census by injecting integer-valued Gaussian noise into published census tabulations. Exactly evaluating the privacy guarantees of these data releases would enable the Bureau to determine the absolute minimum noise required to satisfy a given privacy budget, preventing the injection of unnecessary excess noise and thereby substantially enhancing the statistical utility of the data for downstream applications such as federal funding allocation and political redistricting. In this paper, we introduce a…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "cs.DS",
+    "math.NA",
+    "stat.AP",
+    "stat.ML"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

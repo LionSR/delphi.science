@@ -1,0 +1,20 @@
+{
+  "key": "2609.05710",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.05710",
+  "title": "Can Acceleration in Gradient-Norm Minimization Be Anytime? Sharp Last-Iterate Limits in Smooth Convex Optimization",
+  "authors": [
+    "Pierre Vernimmen",
+    "François Glineur"
+  ],
+  "summary": "In smooth convex optimization, the gradient norm is a directly observable measure of stationarity. Accelerating a first-order method that minimizes the gradient norm is known to be more delicate than accelerating the minimization of function values. Optimal accelerated methods such as OGM-G (Kim & Fessler, 2021) are known to exist for any prescribed finite horizon, but their coefficients depend explicitly on the length of that horizon, i.e. the number of iterations. We ask what kind of acceleration is feasible when the stopping horizon is unknown to the method, i.e. for horizon-independent…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

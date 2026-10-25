@@ -1,0 +1,26 @@
+{
+  "key": "2610.29170",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.29170",
+  "title": "Turning Quantum Compiler Configuration Selection Upside Down: A Top-Down Paradigm",
+  "authors": [
+    "Ming Zhong",
+    "Xiangyu Ren",
+    "Kangyu Zheng",
+    "Zhi Zeng",
+    "Shenggen Zheng",
+    "Shaohua Li",
+    "Zhiding Liang"
+  ],
+  "summary": "Selecting an effective quantum compiler configuration requires coordinated decisions over both hardware targets and compiler settings, with the ultimate goal of improving circuit execution fidelity. Existing SOTA approaches typically decompose this problem into two sequential stages: a device is chosen first, after which compiler options are tuned on that device through RL-based search. This bottom-up strategy can be fundamentally limited by its initial device decision, since a poorly matched backend may constrain the best fidelity achievable regardless of how effectively later compiler…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.SE"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

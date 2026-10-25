@@ -1,0 +1,20 @@
+{
+  "key": "2608.17575",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17575",
+  "title": "Mixed Finite Element Methods for a Dirac Source: Divergence-Form Splitting and L^p Error Analysis",
+  "authors": [
+    "Yueyao Wu",
+    "Shun Zhang"
+  ],
+  "summary": "For a mixed finite element method, a Dirac source is first a failure of duality, not of regularity: the conservation equation is tested against a Lebesgue space, and a Dirac measure lies in the dual of none. We therefore remove the measure from the conservation law by a divergence-form splitting. An explicit field whose divergence is the Dirac measure is subtracted from the physical flux, and the modified flux is taken as the mixed unknown, so that only the regular part of the load remains in the conservation equation. Equivalently, and independently of any discretization, the Dirac problem…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

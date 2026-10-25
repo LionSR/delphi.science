@@ -1,0 +1,23 @@
+{
+  "key": "2609.22012",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.22012",
+  "title": "COMPLEX: A Closed-Form Certified Embedding of Multiparameter Persistence Modules",
+  "authors": [
+    "Sushovan Majhi",
+    "Atish Mitra",
+    "Žiga Virk",
+    "Pramita Bagchi"
+  ],
+  "summary": "Every multiparameter persistence vectorization we know of carries a one-sided Lipschitz upper bound and nothing below it: without a lower gauge there is no sense in which the features are faithful, and no per-prediction guarantee can be built on them. This paper supplies the missing side. COMPLEX is a closed-form, training-free embedding of multiparameter modules -- slice the module along a fixed near-diagonal net, embed each slice barcode by the certified PLACE/PALACE landmark map, concatenate. Under a checkable witnessing-slice coherence condition, holding on 100% of audited pairs on…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.AT"
+  ],
+  "published": "2026-09-18",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2606.19115",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.19115",
+  "title": "Finite free perpetuities",
+  "authors": [
+    "Julia Le Bihan",
+    "Bartosz Kołodziejek"
+  ],
+  "summary": "We introduce and study finite free perpetuities, defined as monic polynomial solutions of degree $n$ to the affine fixed-point equation \\[ p(z) = \\mathbb{E}\\!\\left[ A^{n}\\,p\\!\\left(\\frac{z-B}{A}\\right)\\mathbf{1}_{\\{A\\neq0\\}} \\right] + \\mathbb{E}\\!\\left[ (z-B)^n\\mathbf{1}_{\\{A=0\\}} \\right], \\] where $A$ and $B$ are complex-valued random variables with finite moments up to order $n$. Equivalently, if $p(z)=\\mathbb{E}[(z-X)^n]$, then $p$ encodes a truncated moment version of the classical perpetuity equation $X\\stackrel{d}{=}AX+B$ with $X$ and $(A,B)$ independent. This places finite free…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math.OA"
+  ],
+  "published": "2026-06-17",
+  "updated": "2026-06-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

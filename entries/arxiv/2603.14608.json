@@ -1,0 +1,22 @@
+{
+  "key": "2603.14608",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.14608",
+  "title": "Delightful Policy Gradient",
+  "authors": [
+    "Ian Osband"
+  ],
+  "summary": "Standard policy gradients weight each sampled action by advantage alone, regardless of how likely that action was under the current policy. This creates two pathologies: within a single decision context (e.g. one image or prompt), a rare negative-advantage action can disproportionately distort the update direction; across many such contexts in a batch, the expected gradient over-allocates budget to contexts the policy already handles well. We introduce the \\textit{Delightful Policy Gradient} (DG), which gates each term with a sigmoid of \\emph{delight}, the product of advantage and action…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-03-15",
+  "updated": "2026-03-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

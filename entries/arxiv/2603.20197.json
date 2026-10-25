@@ -1,0 +1,22 @@
+{
+  "key": "2603.20197",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20197",
+  "title": "Fast Solving Complete 2000-Node Optimization Using Stochastic-Computing Simulated Annealing",
+  "authors": [
+    "Kota Katsuki",
+    "Duckgyu Shin",
+    "Naoya Onizawa",
+    "Takahiro Hanyu"
+  ],
+  "summary": "In this paper, we evaluate stochastic-computing simulated annealing (SC-SA) for solving large-scale combinatorial optimization problems. SC-SA is designed using stochastic computing, where the computatoin is reazlied using random bitstream, resulting in fast converging to the global minimum energy of the problems. The proposed SC-SA is compared with a typical SA and existing simulated-annealing (SA) processors on the maximum cut (MAX-CUT) problems, such as Gset that is a benchmark for SA. The simulation results show that SC-SA realizes a few orders of magnitude faster than a typical SA. In…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-01-20",
+  "updated": "2026-01-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

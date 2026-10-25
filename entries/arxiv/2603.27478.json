@@ -1,0 +1,22 @@
+{
+  "key": "2603.27478",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.27478",
+  "title": "A limiter-based approach to construct high-order fully-discrete entropy stable explicit DG schemes for hyperbolic conservation laws",
+  "authors": [
+    "Yuchang Liu",
+    "Wei Guo",
+    "Yan Jiang",
+    "Zheng Sun"
+  ],
+  "summary": "This paper presents a class of novel high-order fully-discrete entropy stable (ES) discontinuous Galerkin (DG) schemes with explicit time discretization. The proposed methodology exploits a critical observation from [4] that the cell averages of classical DG solutions with forward Euler time stepping satisfy an ``entropy-stable-like'' property. Building on this result, fully-discrete entropy stability is rigorously enforced through a simple Zhang--Shu-type scaling limiter [45] applied as a post-processing step, without modifying the underlying spatial discretization. Furthermore, the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-29",
+  "updated": "2026-03-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

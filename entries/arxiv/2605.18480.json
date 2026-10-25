@@ -1,0 +1,22 @@
+{
+  "key": "2605.18480",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.18480",
+  "title": "A characteristic function framework for chance constraint programming in stochastic model predictive control",
+  "authors": [
+    "Yuwei Ying",
+    "Johan Löfberg",
+    "Anders Hansson"
+  ],
+  "summary": "The computation of chance constraints in stochastic model predictive control is often numerically challenging due to the non-Gaussian nature of the disturbances. To overcome this problem, we propose an optimization computational framework applicable to non-Gaussian disturbances. This framework employs a numerical inversion method, utilizing the characteristic function of the disturbance distribution to compute the probability in the chance constraint as well as its gradient. To improve efficiency, it vectorizes integral points and reuses intermediate computations in Gauss-Kronrod quadrature.…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-05-18",
+  "updated": "2026-05-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

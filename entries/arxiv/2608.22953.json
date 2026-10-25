@@ -1,0 +1,21 @@
+{
+  "key": "2608.22953",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.22953",
+  "title": "Stochastic gradient descent with initial regularization",
+  "authors": [
+    "Nabil Kahalé"
+  ],
+  "summary": "We analyze a variant of stochastic gradient descent with initial regularization (SGDIR) and derive dimension-free upper bounds on its expected excess risk for the squared loss. In the noiseless case, we obtain new bounds for both averaged and non-averaged SGDIR under moment, source, and capacity assumptions. For a particular value of the source parameter, these bounds are of order $m^{-2}\\log^{2}m$, where the number of training samples is of order $m$. For another value of the source parameter, we obtain, for any $ε>0$, bounds of order $m^{-3+ε}$, provided that the capacity parameter exceeds…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-08-24",
+  "updated": "2026-08-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

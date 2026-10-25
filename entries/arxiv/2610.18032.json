@@ -1,0 +1,23 @@
+{
+  "key": "2610.18032",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.18032",
+  "title": "Lifted Restricted Isometry Property and Fast Algorithm for Spectral Compressed Sensing With Near-Optimal Sample Complexity",
+  "authors": [
+    "Xunmeng Wu",
+    "Jian-Feng Cai",
+    "Zongben Xu",
+    "Zai Yang"
+  ],
+  "summary": "This paper studies the spectral compressed sensing problem, which aims to recover an $r$-spectrally-sparse signal of length $N$ from linear compressive measurements. We reformulate the problem as the recovery of a low-rank Hankel matrix. Motivated by this formulation, we propose a Lifted Restricted Isometry Property (LRIP) for the measurement matrix and show that Gaussian measurement matrices satisfy LRIP under certain conditions. Unlike classical RIP, LRIP imposes a rank constraint in the lifted matrix domain while taking measurements in the signal domain through the adjoint Hankel…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SP"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

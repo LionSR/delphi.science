@@ -1,0 +1,21 @@
+{
+  "key": "2609.16941",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.16941",
+  "title": "Optimal Scaling of Langevin Proposals with Generalized Acceptance Rules",
+  "authors": [
+    "Ritik Soni",
+    "Dootika Vats"
+  ],
+  "summary": "Langevin-based Markov chain Monte Carlo (MCMC) algorithms use gradient information to improve sampling, particularly in high dimensions. Classical optimal scaling theory for these algorithms has largely focused on the Metropolis-Hastings (MH) acceptance rule. However, there has been a recent surge in acceptance rules beyond MH for applications spanning differential privacy, stochastic MCMC, diffusion models, and molecular dynamics. We develop optimal scaling results for Langevin proposals employed with generalized acceptance rules belonging to a suitable class. For high-dimensional targets,…",
+  "domain": "stat.CO",
+  "tags": [
+    "stat.CO",
+    "math.ST"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2610.27673",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.27673",
+  "title": "Improved rapid phase ordering for Ising dynamics on random regular graphs",
+  "authors": [
+    "Zhangsong Li",
+    "Allan Sly"
+  ],
+  "summary": "We study Glauber dynamics for the Ising model on random $d$-regular graphs with $n$ vertices at low temperature, in the regime $β\\geq C/d$ where $C,d$ are sufficiently large constants. In this regime, the full mixing time is exponential in $n$, because of the bottleneck between the two dominant phases: configurations with a majority of plus spins and configurations with a majority of minus spins. We show that, for sufficiently large $d$, if the dynamics is initialized with an excess of at least $ε_{C,d} n$ plus spins over minus spins, then it quasi-equilibrates in time $O(\\log n)$ to the…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.DS",
+    "math-ph"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

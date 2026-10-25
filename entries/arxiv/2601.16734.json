@@ -1,0 +1,23 @@
+{
+  "key": "2601.16734",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.16734",
+  "title": "SeeMPS: A Python-based Matrix Product State and Tensor Train Library",
+  "authors": [
+    "Paula García-Molina",
+    "Juan José Rodríguez-Aldavero",
+    "Jorge Gidi",
+    "Juan José García-Ripoll"
+  ],
+  "summary": "We introduce SeeMPS, a Python library dedicated to implementing tensor network algorithms based on the well-known Matrix Product States (MPS) and Quantized Tensor Train (QTT) formalisms. SeeMPS is implemented as a complete finite precision linear algebra package where exponentially large vector spaces are compressed using the MPS/TT formalism. It enables both low-level operations, such as vector addition, linear transformations, and Hadamard products, as well as high-level algorithms, including the approximation of linear equations, eigenvalue computations, and exponentially efficient…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math.NA"
+  ],
+  "published": "2026-01-23",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

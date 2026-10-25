@@ -1,0 +1,22 @@
+{
+  "key": "2606.29554",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.29554",
+  "title": "Optimizer Memory Makes Shuffle Order a First-Order Source of Fine-Tuning Noise",
+  "authors": [
+    "John Sweeney"
+  ],
+  "summary": "Shuffle order can be a larger source of fine-tuning noise than a memoryless analysis predicts: fixed-clock optimizer memory makes local equal-multiset contrasts first order in the learning rate rather than second order, and the resulting order channel can be large enough for a single seed to flip a close A/B comparison. We isolate this mechanism and derive a fit-free way to size the noise it produces. For a memoryless optimizer, reordering an equal multiset has no first-order endpoint term; the leading local contrast is the $O(η^2)$ gradient bracket. Fixed-clock optimizers such as AdamW are…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-06-28",
+  "updated": "2026-06-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

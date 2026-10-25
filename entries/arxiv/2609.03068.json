@@ -1,0 +1,22 @@
+{
+  "key": "2609.03068",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.03068",
+  "title": "Dimensional hyperreduction of nonlinear finite element models via empirical cubature with manifold-adaptive weights",
+  "authors": [
+    "Joaquín A. Hernández",
+    "S. Ares de Parga",
+    "Riccardo Rossi"
+  ],
+  "summary": "Nonlinear-manifold reduced-order models for parametrized finite element problems can achieve substantial compression both in the number of generalized (latent) coordinates and, through sampling-and-weighting hyperreduction, in the number of sampled elements/integration points. Yet current sampling-and-weighting approaches employ weights that remain fixed over the solution manifold. We contend that this restriction leaves hyperreduction potential untapped: allowing the weights to vary continuously and nonlinearly with the latent coordinates can further decrease the number of sampled spatial…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.CE"
+  ],
+  "published": "2026-09-02",
+  "updated": "2026-09-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,26 @@
+{
+  "key": "2607.01203",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.01203",
+  "title": "GPU-Parallel Linearization Error Bounds for Real-Time Robust Optimal Control of Nonlinear and Neural Network Dynamics",
+  "authors": [
+    "Jeffrey Fang",
+    "Keyi Shen",
+    "Anutam Srinivasan",
+    "Glen Chou"
+  ],
+  "summary": "This paper studies real-time robust optimal control for uncertain nonlinear systems, where linear time-varying (LTV) approximations make planning tractable but require sound linearization error bounds (LEBs) to guarantee robust constraint satisfaction. We develop tight, differentiable, GPU-parallel LEBs for LTV approximations of nonlinear and neural network (NN) dynamics. For analytic dynamics, we introduce path-based Hessian bounds that are tighter than standard interval methods. For NN dynamics, we derive certified LEBs using NN verifier-generated affine relaxations and local Jacobian…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.AI",
+    "cs.LG",
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

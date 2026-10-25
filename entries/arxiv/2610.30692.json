@@ -1,0 +1,19 @@
+{
+  "key": "2610.30692",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.30692",
+  "title": "Learned smoothing in operator-adapted multigrid: controlled accuracy gains and computational limits",
+  "authors": [
+    "Kumar Kaushik Ranjan"
+  ],
+  "summary": "Learned multigrid components are often evaluated at a fixed iteration budget, but such comparisons do not distinguish local approximation gains from practical solver efficiency. We study this distinction for high-contrast elliptic problems on unstructured finite element meshes. A learned V-cycle uses operator-dependent transfers, Galerkin coarse operators, near-kernel deflation and an energy-norm safeguard; only its smoothers are trained. The architecture represents a specified class of fixed polynomial smoothers and is positively homogeneous in the load. On fresh conductive-channel…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

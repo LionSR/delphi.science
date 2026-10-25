@@ -1,0 +1,20 @@
+{
+  "key": "2602.05417",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05417",
+  "title": "Optimistic Bilevel Optimization with Composite Lower-Level Problem",
+  "authors": [
+    "Mattia Solla",
+    "Johannes O. Royset"
+  ],
+  "summary": "This paper introduces a novel double regularization scheme for bilevel optimization problems whose lower-level problem is composite and convex, but not necessarily strongly convex, in the lower-level variable. The analysis focuses on the primal-dual solution mapping of the regularized lower-level problem and exploits its properties to derive an almost-everywhere formula for the gradient of the regularized hyper-objective under mild assumptions. The paper then establishes conditions under which the hyper-objective of the actual problem is well defined and shows that its gradient can be…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-02-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

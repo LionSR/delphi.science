@@ -1,0 +1,23 @@
+{
+  "key": "2604.18357",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.18357",
+  "title": "Momentum Stability and Adaptive Control in Stochastic Reconfiguration",
+  "authors": [
+    "Yuyang Wang",
+    "Xin Liu"
+  ],
+  "summary": "Variational Monte Carlo (VMC) combined with expressive neural network wavefunctions has become a powerful route to high-accuracy ground-state calculations, yet its practical success hinges on efficient and stable wavefunction optimization. While stochastic reconfiguration (SR) provides a geometry-aware preconditioner motivated by imaginary-time evolution, its Kaczmarz-inspired variant, subsampled projected-increment natural gradient descent (SPRING), achieves state-of-the-art empirical performance. However, the effectiveness of SPRING is highly sensitive to the choice of a momentum-like…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA",
+    "physics.comp-ph",
+    "quant-ph"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-04-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

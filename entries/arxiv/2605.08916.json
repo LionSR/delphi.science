@@ -1,0 +1,23 @@
+{
+  "key": "2605.08916",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.08916",
+  "title": "Diffusion Restore: Real-Time Markov Chain Monte Carlo Light Transport",
+  "authors": [
+    "Sascha Holl",
+    "Gurprit Singh",
+    "Hans-Peter Seidel"
+  ],
+  "summary": "We present Diffusion Restore, a real-time framework for diffusion-based MCMC light transport. MCMC methods are highly suitable for sampling from complex high-dimensional distributions and for approximating integrals over them. In practice, they are often the only viable solution when direct sampling is not possible and alternative methods are either inefficient or cannot be applied due to the structure of the target distribution. However, controlling the exploration of the target distribution in MCMC methods remains challenging. Efficient exploration requires a balance between local…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math.NA",
+    "math.PR"
+  ],
+  "published": "2026-05-09",
+  "updated": "2026-05-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

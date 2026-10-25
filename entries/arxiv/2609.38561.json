@@ -1,0 +1,21 @@
+{
+  "key": "2609.38561",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38561",
+  "title": "Parameter-Free Zeroth-Order Optimization with Ellipsoidal Sampling",
+  "authors": [
+    "Alexander Sholokhov",
+    "Alexander Rogozin"
+  ],
+  "summary": "Zeroth-order optimization methods are essential for solving black-box problems where gradient information is unavailable or expensive to compute. This paper presents POEM-ES, a novel parameter-free stochastic zeroth-order algorithm that extends the recent POEM method by integrating subspace preconditioning with ellipsoidal randomized sampling. In contrast to traditional zeroth-order approaches that rely on isotropic random directions, POEM-ES performs anisotropic sampling guided by a fixed structural symmetric positive semi-definite (SPSD) preconditioner $\\hatΣ$ that encodes the underlying…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

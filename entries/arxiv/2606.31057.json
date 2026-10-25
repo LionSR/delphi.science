@@ -1,0 +1,20 @@
+{
+  "key": "2606.31057",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.31057",
+  "title": "Debiased parametric inference for regime-switching jump diffusions with infinite variation jumps",
+  "authors": [
+    "Yuzhong Cheng"
+  ],
+  "summary": "We study high-frequency inference for an ergodic regime-switching jump diffusion with locally stable infinite-variation jumps. The state and the finite-state regime are observed on the same grid. The mesh satisfies \\(h_n\\to0\\), while the horizon satisfies \\(T_n=nh_n\\to\\infty\\). We estimate structural drift and diffusion parameters in the presence of unknown regime-specific Lévy measures. For a common activity index \\(1<β<8/5\\), we remove two leading jump biases from each regime's truncated variation. We then combine the diffusion estimator with estimated signed tail means in an adaptive…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "math.PR"
+  ],
+  "published": "2026-06-30",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

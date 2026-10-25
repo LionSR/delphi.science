@@ -1,0 +1,20 @@
+{
+  "key": "2606.21145",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.21145",
+  "title": "Necessary conditions for the existence of exponential-polynomial expansions for solutions of certain differential equations",
+  "authors": [
+    "Rahaf Habib",
+    "Roland Hildebrand"
+  ],
+  "summary": "We consider ordinary differential equations (ODE) of the form $u''u - (u')^2 = e^{-x}P(u) - 1$, where $P$ is a polynomial. For $P = u^k$, $k = 3,4,6$ this ODE is equivalent to certain degenerate Painlevé III equations. We study whether families of solutions of these ODEs have asymptotic expansions of the form $u(x) = \\sum_{k=0}^{\\infty} p_k(x+c)e^{-kx}$ for $Re\\,x \\to +\\infty$, where $c \\in \\mathbb C$ is an arbitrary constant parameterizing the solution family, $p_k$ are polynomials, with $p_0(x) = x$. We find necessary conditions on $P$ for such expansions to exist. Numerical experiments…",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA"
+  ],
+  "published": "2026-06-19",
+  "updated": "2026-06-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

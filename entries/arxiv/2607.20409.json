@@ -1,0 +1,25 @@
+{
+  "key": "2607.20409",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.20409",
+  "title": "Efficiently Simulable Pauli Correlation Encoding",
+  "authors": [
+    "Daniele Lizzio Bosco",
+    "Gabriel Matos",
+    "Chen-Yu Liu",
+    "Frederic Rapp",
+    "Fabian Finger",
+    "Enrico Rinaldi",
+    "Konstantinos Meichanetzidis"
+  ],
+  "summary": "Pauli Correlation Encoding (PCE) is a heuristic framework for binary optimisation that encodes classical variables into many-body Pauli observables. While PCE requires fewer qubits than other approaches, it relies on estimating a large number of Pauli expectation values whose signs determine the variables' values, which can incur substantial measurement overhead. Here, we introduce efficiently simulable PCE, a class of dequantised PCE realisations where all expectation values needed can be computed efficiently classically. We instantiate this idea using free-fermionic evolutions, realised by…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-22",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

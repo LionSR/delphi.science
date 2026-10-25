@@ -1,0 +1,24 @@
+{
+  "key": "2605.11453",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11453",
+  "title": "Predictive Maps of Multi-Agent Reasoning: A Successor-Representation Spectrum for LLM Communication Topologies",
+  "authors": [
+    "Ethan Parks",
+    "Dalal Alharthi"
+  ],
+  "summary": "Practitioners deploying multi-agent large language model (LLM) systems must currently choose between communication topologies such as chain, star, mesh, and richer variants without any pre-inference diagnostic for which topology will amplify drift, converge to consensus, or remain robust under perturbation. Existing evaluation answers these questions only post hoc and only for the task measured. We introduce a structural diagnostic for multi-agent LLM communication graphs based on the successor representation $M = (I - γP)^{-1}$ of the row-stochastic communication operator, and we connect…",
+  "domain": "cs.MA",
+  "tags": [
+    "cs.MA",
+    "cs.AI",
+    "cs.LG",
+    "cs.SI",
+    "math.SP"
+  ],
+  "published": "2026-05-12",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

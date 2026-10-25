@@ -1,0 +1,20 @@
+{
+  "key": "2602.15215",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.15215",
+  "title": "Linear error bounds for HJB equations in finite horizon control problems",
+  "authors": [
+    "Alessandro Alla",
+    "Filippo Mayer"
+  ],
+  "summary": "We study semi Lagrangian approximation schemes for Hamilton Jacobi Bellman equations arising from finite horizon optimal control problems. Classical error estimates for these schemes include the term $\\frac{1}{Δt}$ which leads to pessimistic convergence bounds and is not observed in numerical experiments. In this work, we provide improved error estimates under standard regularity assumptions on the dynamics, the running cost, and the final cost, assuming the presence of a positive discount factor. The new bound depends linearly on the time step, the spatial mesh size, and a measure of the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-02-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

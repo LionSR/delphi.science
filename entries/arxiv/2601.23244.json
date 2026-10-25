@@ -1,0 +1,21 @@
+{
+  "key": "2601.23244",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.23244",
+  "title": "A Primal-Dual Level Set Method for Computing Geodesic Distances",
+  "authors": [
+    "Hailiang Liu",
+    "Laura Zinnel"
+  ],
+  "summary": "The numerical computation of shortest paths or geodesics on surfaces, along with the associated geodesic distance, has a wide range of applications. Compared to Euclidean distance computation, these tasks are more complex due to the influence of surface geometry on the behavior of shortest paths. This paper introduces a primal-dual level set method for computing geodesic distances. A key insight is that the underlying surface can be implicitly represented as a zero level set, allowing us to formulate a constraint minimization problem. We employ the primal-dual methodology, along with…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-01-30",
+  "updated": "2026-02-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

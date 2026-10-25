@@ -1,0 +1,21 @@
+{
+  "key": "2606.17052",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.17052",
+  "title": "Nitsche-based FEM for the Laplace eigenvalue problem: spectral approximation and a posteriori error analysis",
+  "authors": [
+    "Arbaz Khan",
+    "David Mora",
+    "Jesus Vellojin"
+  ],
+  "summary": "In this paper, we present the numerical analysis of an elliptic eigenvalue problem in which the essential boundary condition is imposed weakly by means of the Nitsche method. The resulting discrete eigenvalue problem is studied within the framework of compact operator theory. We prove norm convergence of the discrete solution operator and derive error estimates for the eigenvalues and eigenfunctions, with rates depending on the chosen Nitsche variant. In addition, we develop an a posteriori error analysis and propose a residual-based estimator suitable for adaptive refinement. Several…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-15",
+  "updated": "2026-06-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

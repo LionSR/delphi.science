@@ -1,0 +1,22 @@
+{
+  "key": "2607.29409",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.29409",
+  "title": "The Zombie Infection Model",
+  "authors": [
+    "Stein Andreas Bethuelsen",
+    "Erik Broman",
+    "Samuel Modée"
+  ],
+  "summary": "We study a variant of the stochastic SIR model on graphs that has previously been introduced in the physics literature for modelling zombie outbreaks and here referred to as the Zombie Infection Model (ZIM). In this model, initially each node of a graph is either susceptible, infected or removed. As in the SIR model, a susceptible node becomes infected at rate $λ$ times the number of its infected neighbours. Moreover, in the ZIM, an infected node is removed at rate $1$ times the number of its susceptible neighbours. This process exhibits rich and sometimes counterintuitive behaviour. By…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "q-bio.PE"
+  ],
+  "published": "2026-07-31",
+  "updated": "2026-07-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

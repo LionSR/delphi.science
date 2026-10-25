@@ -1,0 +1,24 @@
+{
+  "key": "2601.10626",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.10626",
+  "title": "Differentially Private Inference for Longitudinal Linear Regression",
+  "authors": [
+    "Getoar Sopa",
+    "Marco Avella Medina",
+    "Cynthia Rush"
+  ],
+  "summary": "Differential Privacy (DP) provides a rigorous framework for releasing statistics while protecting individual information present in a dataset. Although substantial progress has been made on differentially private linear regression, existing methods almost exclusively address the item-level DP setting, where each user contributes a single observation. Many scientific and economic applications instead involve longitudinal or panel data, in which each user contributes multiple dependent observations. In these settings, item-level DP offers inadequate protection, and user-level DP - shielding an…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.CR",
+    "stat.ME",
+    "stat.ML"
+  ],
+  "published": "2026-01-15",
+  "updated": "2026-01-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

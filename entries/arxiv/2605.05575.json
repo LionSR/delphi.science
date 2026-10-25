@@ -1,0 +1,22 @@
+{
+  "key": "2605.05575",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05575",
+  "title": "Maximal Controlled Invariant-MPC: Enhancing Feasibility and Reducing Conservatism through Terminal CBF Constraint in Safety-Critical Control",
+  "authors": [
+    "Tanmay Dokania",
+    "Yashwanth Kumar Nakka"
+  ],
+  "summary": "Optimal control for safety-critical systems is often dependent on the conservativeness of constraints. Control Barrier Functions (CBFs) serve as a medium to represent such constraints, but constructing a minimally conservative CBF is a computationally intractable problem. Therefore, approaches that can guarantee safety while reducing conservatism will help improve the optimality of the system under consideration. Here, we present a Model Predictive Control (MPC) formulation using CBF as a terminal constraint, which is proven to improve feasibility and reachable sets with increasing…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

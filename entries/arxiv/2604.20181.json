@@ -1,0 +1,19 @@
+{
+  "key": "2604.20181",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.20181",
+  "title": "Selection Rules and Channel Structure in a Base Octave Model of Collatz Dynamics",
+  "authors": [
+    "Katharina Lodders"
+  ],
+  "summary": "The Collatz iteration is governed by two distinct update rules, depending on the parity of the current iterate: n(i+1)=3n(i)+1 for odd n(i), and n(i+1)=n(i)/2 for even n(i). We show that these rules can be written equivalently as a single parity controlled transformation, n(i+1)=((2s(i)+1)(2k(i)+s(i))+s(i))/2, where n(i)=2k(i)+s(i) and s(i) is the parity (0 or 1) of n(i), yielding a uniform, step aligned dynamical system in which parity variables are tracked explicitly. This reformulation removes the asymmetry of the traditional presentation and exposes structural regularities that are…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS"
+  ],
+  "published": "2026-04-22",
+  "updated": "2026-04-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

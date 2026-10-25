@@ -1,0 +1,21 @@
+{
+  "key": "2605.11270",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.11270",
+  "title": "A Unified Approach for Computing Wasserstein Barycenters of Discrete and Continuous Measures",
+  "authors": [
+    "Peng Xu",
+    "Changbo Zhu",
+    "Xiaohui Chen"
+  ],
+  "summary": "Computing the unregularized Wasserstein barycenter for measure-valued data is a challenging optimization task. Recent algorithms have been tailored to either discrete measures as point clouds or continuous measures discretized on regular grids. In this work, we propose a primal mirror descent algorithm for computing the exact Wasserstein barycenter in the Fisher-Rao geometry. Our algorithm is a unified approach that is flexible enough to simultaneously cover discrete and absolutely continuous input measures, with convergence guarantees in both settings. In particular, when all input measures…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

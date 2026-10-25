@@ -26,5 +26,26 @@
     "reason": "Presents a deterministic exact DFT algorithm with an improved log-factor operation count.",
     "by": "claude-haiku",
     "at": "2026-10-23"
-  }
+  },
+  "discussion": [
+    {
+      "kind": "x",
+      "url": "https://x.com/beenwrekt/status/2109652311538843934",
+      "author": "Ben Recht",
+      "handle": "beenwrekt",
+      "text": "OpenAI’s faster Fourier transform is less a mathematical breakthrough and more a malicious exploit of mathematical traditions. https://t.co/KOvsrWTLeN",
+      "date": "2026-10-12",
+      "added": "2026-10-24"
+    },
+    {
+      "kind": "web",
+      "url": "https://www.argmin.net/p/faster-fourier-transforms",
+      "title": "Faster Fourier Transforms",
+      "site": "argmin.net",
+      "author": "Ben Recht",
+      "text": "The OpenAI algorithm for the FFT is less a breakthrough and more a malicious exploit.",
+      "date": "2026-10-14",
+      "added": "2026-10-24"
+    }
+  ]
 }

@@ -1,0 +1,20 @@
+{
+  "key": "2604.04613",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.04613",
+  "title": "A Convergent Hybridizable Discontinuous Galerkin Method for Einstein--Scalar Equations",
+  "authors": [
+    "Mukul Dwivedi",
+    "Andreas Rupp"
+  ],
+  "summary": "We propose and analyze a hybridized discontinuous Galerkin (HDG) method for the spherically symmetric Einstein--scalar system in Bondi gauge. After rewriting the model as a local first-order PDE--ODE system by introducing suitable scaled variables, we construct a semidiscrete scheme in which the element unknowns are computed locally and the coupling is carried by traces on the mesh skeleton. In the present radial setting, these traces can be eliminated recursively, so that only the main evolution variable is advanced in time, while the metric variables are recovered from discrete constraint…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-06",
+  "updated": "2026-04-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

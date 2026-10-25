@@ -1,0 +1,20 @@
+{
+  "key": "2606.19876",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.19876",
+  "title": "Global Convergence of Gradient Descent for Score Matching in Gaussian Mixtures via Reverse Fisher Divergence",
+  "authors": [
+    "Alexander Tyurin"
+  ],
+  "summary": "The score matching problem is a central training objective in modern generative modeling, diffusion models, fitting unnormalized statistical models, and inverse problems. A standard approach is to minimize the forward Fisher divergence, where the expectation is taken with respect to the teacher distribution. However, recent results show that even in simple Gaussian mixture model settings, this objective can lead to undesirable and initialization-dependent convergence behavior. In this paper, we study an alternative objective: the reverse Fisher divergence, where the expectation is taken with…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

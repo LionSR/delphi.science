@@ -1,0 +1,22 @@
+{
+  "key": "2604.19981",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.19981",
+  "title": "Debiasing optimal transport: classical and entropic",
+  "authors": [
+    "Pierre-Cyril Aubin-Frankowski",
+    "Virginie Ehrlacher",
+    "Gabriele Todeschi"
+  ],
+  "summary": "We study the notion of debiasability for cost functions arising in optimal transport. We call a symmetric cost function $c:\\mathscr{X}\\times\\mathscr{X}\\to\\mathbb{R}\\cup\\{+\\infty\\}$ debiasable if it satisfies $c(x,y)\\ge \\tfrac{1}{2}c(x,x)+\\tfrac{1}{2}c(y,y)$ for all $x,y\\in\\mathscr{X}$. Building on an equivalent characterization by an inf-representation $c(x,y)=\\inf_{z\\in\\mathscr{Z}}ψ(x,z)+ψ(y,z)$ for some set $\\mathscr{Z}$ and some function $ψ: \\mathscr{X}\\times \\mathscr{Z} \\to \\mathbb{R} \\cup \\{+\\infty\\}$, interpreted as a generalization of the midpoint identity for squared geodesic…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.FA"
+  ],
+  "published": "2026-04-21",
+  "updated": "2026-07-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

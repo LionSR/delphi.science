@@ -1,0 +1,22 @@
+{
+  "key": "2601.05444",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.05444",
+  "title": "What Functions Does XGBoost Learn?",
+  "authors": [
+    "Dohyeong Ki",
+    "Adityanand Guntuboyina"
+  ],
+  "summary": "This paper establishes a rigorous theoretical foundation for the function class implicitly learned by XGBoost, bridging the gap between its empirical success and our theoretical understanding. We introduce an infinite-dimensional function class $\\mathcal{F}^{d, s}_{\\infty-\\text{ST}}$ that extends finite ensembles of bounded-depth regression trees, together with a complexity measure $V^{d, s}_{\\infty-\\text{XGB}}(\\cdot)$ that generalizes the $L^1$ regularization penalty used in XGBoost. We show that every optimizer of the XGBoost objective is also an optimizer of an equivalent penalized…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-01-09",
+  "updated": "2026-01-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

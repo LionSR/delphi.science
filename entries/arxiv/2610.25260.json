@@ -1,0 +1,22 @@
+{
+  "key": "2610.25260",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.25260",
+  "title": "Spatial Discretization Error for Quantum Chemistry Simulation",
+  "authors": [
+    "Di Fang",
+    "Jiaqi Zhang"
+  ],
+  "summary": "Nonrelativistic quantum chemistry is based on the Schrödinger equation in continuous, unbounded space. Computational approaches on classical and quantum computers often truncate the spatial domain and introduce a finite-dimensional basis, reducing the continuum problem to a finite-dimensional one. There is therefore a fundamental question: to what extent does this approximation capture the original continuum problem? In this work, we develop a general Sobolev-Galerkin framework for estimating spatial discretization errors in quantum simulation with unbounded Hamiltonians. We apply this…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math-ph",
+    "math.NA"
+  ],
+  "published": "2026-10-18",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

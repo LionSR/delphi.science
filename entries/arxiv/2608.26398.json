@@ -1,0 +1,19 @@
+{
+  "key": "2608.26398",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.26398",
+  "title": "Solving the Dirichlet problem with prescribed density",
+  "authors": [
+    "Ling Xiao"
+  ],
+  "summary": "In this paper we prove the following result. Let $Ω\\subset\\mathbb R^n, n\\geq 3,$ be a bounded, strictly convex, smooth domain and $\\varphi: \\partialΩ\\rightarrow\\mathbb R$ be a smooth function. Then for any $z\\inΩ,$ there exists $c_1=c_1(Ω, \\{z\\}, n, \\varphi)>0,$ such that if $c\\geq c_1$ then the problem: $σ_{n-1}(D^2 u)=0$ in $\\barΩ\\setminus\\{z\\},$ $u|_{\\partialΩ}=\\varphi,$ $\\lim\\limits_{r\\rightarrow 0}\\sup\\limits_{B_r(z)}\\frac{u(x)-u(z)}{|x-z|^{(n-2)/(n-1)}}=c,$ admits a smooth solution in $\\barΩ\\setminus\\{z\\}.$ Moreover, we obtain the optimal a priori estimates for this solution. In…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-08-26",
+  "updated": "2026-08-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

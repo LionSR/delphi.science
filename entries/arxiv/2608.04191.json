@@ -1,0 +1,20 @@
+{
+  "key": "2608.04191",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.04191",
+  "title": "An Artificial-Compressibility Physics-Informed Neural Network for the Unsteady Incompressible Navier--Stokes Equations",
+  "authors": [
+    "Aytekin Çibik"
+  ],
+  "summary": "We study a physics-informed neural network (PINN) for the unsteady, two-dimensional incompressible Navier--Stokes equations in which the stiff divergence-free constraint is replaced by an artificial-compressibility (AC) relaxation governed by a single scalar parameter $\\eps$. The relaxation reintroduces a pressure time derivative, converting a differential-algebraic constraint into an ordinary residual that a PINN can minimise directly. On the Taylor--Green vortex, which admits a closed-form unsteady solution, we quantify the effect of $\\eps$: the residual divergence scales as…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math.NA"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

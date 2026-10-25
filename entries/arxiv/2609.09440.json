@@ -1,0 +1,24 @@
+{
+  "key": "2609.09440",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.09440",
+  "title": "The anisotropic local law for sample covariance matrices under quadratic-form concentration",
+  "authors": [
+    "Renyuan Ma",
+    "Theodor Misiakiewicz"
+  ],
+  "summary": "We study sample covariance matrices $K = \\frac{1}{N} \\sum_{i=1}^N \\mathbf{x}_i \\mathbf{x}_i^* \\in \\mathbb{R}^{n \\times n}$ in the proportional regime $n \\asymp N$. The columns $ \\mathbf{x}_1, \\ldots, \\mathbf{x}_N \\in \\mathbb{R}^n$ are independent and centered, with common covariance $\\mathbb{E} \\mathbf{x}_i \\mathbf{x}_i^* = Σ$, but may otherwise have strongly and nonlinearly dependent coordinates. Assuming only that quadratic forms of the columns concentrate uniformly at the optimal rate $| \\mathbf{x}_i^* A \\mathbf{x}_i - \\mathrm{Tr} ΣA | \\prec \\| A \\|_F$, together with polynomial norm…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math-ph",
+    "math.MG",
+    "math.SP",
+    "math.ST"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

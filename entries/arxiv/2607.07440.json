@@ -1,0 +1,22 @@
+{
+  "key": "2607.07440",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.07440",
+  "title": "Compact Rational Krylov for Parametrized Systems with Application to BEM Frequency Sweeping",
+  "authors": [
+    "Kobe Bruyninckx",
+    "Daan Huybrechs",
+    "Karl Meerbergen"
+  ],
+  "summary": "In parametrized linear systems $\\mathsf{P}(μ)\\mathsf{x}=\\mathsf{b}$ the system matrix $\\mathsf{P}$ depends nonlinearly on a parameter $μ$ and solutions are sought for many values of this parameter. We show that the compact rational Krylov (CORK) framework, originally introduced to solve nonlinear eigenvalue problems, can be used to efficiently produce approximate solutions to such a system for many values of the parameter at once. In this approach, the parametrized system is first linearized, resulting in a large shifted linear system…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.MS"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

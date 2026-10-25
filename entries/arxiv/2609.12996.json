@@ -1,0 +1,21 @@
+{
+  "key": "2609.12996",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.12996",
+  "title": "A Full Adam Theorem for Spectral Heavy-Tail Onset",
+  "authors": [
+    "Zongmin Liu"
+  ],
+  "summary": "We prove a full Adam theorem for spectral heavy-tail onset in a closed Gaussian Stein-Hermite teacher-student state-evolution model. The theorem begins with the actual full-batch Adam recurrences, derives the population gradient by Stein-Hermite calculus, proves finite-width covariance concentration, converts multi-step Adam momentum into an exact non-centered Gaussian sign kernel, controls the diagonal Adam denominator by a basis-homogenization theorem, derives a regularly varying projected update response from a Hermite edge-transfer theorem, pushes the response through the exact Gram…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-07-10",
+  "updated": "2026-07-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

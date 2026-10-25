@@ -1,0 +1,21 @@
+{
+  "key": "2609.12650",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.12650",
+  "title": "Second-Order IMEX Time-Stepping Methods for Efficient Bidomain Multi-Electrode Array Simulations of Cardiac Stem Cell Monolayers",
+  "authors": [
+    "Sofia Tonali",
+    "Sofia Botti",
+    "Luca Franco Pavarino"
+  ],
+  "summary": "Multi-electrode Arrays (MEAs) enable tissue-level electrophysiological studies of human induced pluripotent stem cell-derived cardiomyocytes (hiPSC-CMs) by recording extracellular field potentials. Recent computational models have improved MEA simulations by coupling detailed electrode descriptions with the Bidomain framework, a parabolic-elliptic system of nonlinear PDEs coupled with a stiff ionic model. The standard numerical strategy relies on operator splitting techniques that decouple the PDE and ODE components. In most implementations, the ionic subsystem is treated explicitly while…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-11",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2610.30535",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.30535",
+  "title": "High-Order Fully Discrete Entropy-Stable DG Methods with Compact Explicit Single-Step Time Discretizations",
+  "authors": [
+    "Yuchang Liu",
+    "Yan Jiang",
+    "Mengping Zhang"
+  ],
+  "summary": "We develop a unified framework for high-order, fully discrete entropy-stable discontinuous Galerkin (DG) methods with compact explicit single-step time discretizations. At the end of each time step, the preliminary DG polynomial is scaled toward its cell average to enforce a strong cell entropy inequality while preserving conservation. This correction is feasible if and only if the updated cell average satisfies a weak cell entropy inequality, which standard third-order strong-stability-preserving Runge--Kutta DG updates can violate at arbitrarily small positive CFL numbers. For compact…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

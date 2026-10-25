@@ -1,0 +1,23 @@
+{
+  "key": "2609.37368",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.37368",
+  "title": "A Memory-Magic Exchange Law in Streaming Clifford+T Compilation",
+  "authors": [
+    "Jinze Yang",
+    "Yangyang Li",
+    "Xiu-Hao Deng"
+  ],
+  "summary": "A phase that reaches a fault-tolerant processor in additive pieces can be remembered until the last piece arrives, or executed on arrival: the first option costs classical memory carried across rounds, the second costs magic states committed before the phase is known. We determine the exchange rate $α$, committed $T$ gates per bit of memory forgone, for ancilla-free coordinatewise Clifford+$T$ compilation. The Ramanujan bound gives $α\\ge2$ with explicit constants, the square-root barrier of the spectral method. An elementary determinant method, using that quaternion numerators lie on spheres…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.IT",
+    "math.NT"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

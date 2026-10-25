@@ -1,0 +1,21 @@
+{
+  "key": "2610.21599",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.21599",
+  "title": "Persistence in probability for stochastic delay equations with multiplicative noise",
+  "authors": [
+    "Mark van den Bosch",
+    "John Ioannis Stavroulakis"
+  ],
+  "summary": "We study the stochastic delay equation \\begin{equation*} dX(t)=[-γX(t)+r f(X(t-τ))]\\,dt+σX(t)\\,dW(t), \\end{equation*} where $γ,r,τ\\in(0,\\infty)$, $σ\\in[0,\\infty)$, and with $f$ either globally Lipschitz or globally bounded and locally Lipschitz, with $f(0)=0$ and $f(x)\\ge0$ for all $x>0$. Under the condition \\begin{equation*} r\\liminf_{x\\to 0^{+}}\\frac{f(x)}{x}>γ+\\frac{1}{2}σ^2, \\end{equation*} independent of the time delay $τ,$ we obtain that every solution $X$ with nonnegative initial history and $X(0)>0$ is bounded away from zero in probability. This result then confirms a recent…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "math.PR"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

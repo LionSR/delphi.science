@@ -1,0 +1,21 @@
+{
+  "key": "2606.13058",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.13058",
+  "title": "Scheduling of Star Observations under Uncertain Conditions: A Comparison of Models and Solvers",
+  "authors": [
+    "Thomas Rahab Lacroix",
+    "Pierre Lemaire",
+    "Nadia Brauner"
+  ],
+  "summary": "We consider a scheduling problem for star observations using a telescope. Identical nights are available to observe stars that have been identified as of interest by astronomers. Each star yields a profit if it is observed; in that case, the observation must respect a visibility window and a minimum observation duration. The objective is to maximize the total profit of the observations that are actually performed. By interpreting nights as machines and stars as jobs to be processed, this problem is a classic scheduling setting of parallel machines. In the practical star-observation problem,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

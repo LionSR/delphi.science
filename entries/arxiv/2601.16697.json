@@ -1,0 +1,22 @@
+{
+  "key": "2601.16697",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.16697",
+  "title": "Sparsity-dependent Complexity Lower Bound of Quantum Linear System Solvers",
+  "authors": [
+    "Hitomi Mori",
+    "Yuta Kikuchi",
+    "Marcello Benedetti",
+    "Matthias Rosenkranz"
+  ],
+  "summary": "Quantum linear system (QLS) solvers are a fundamental class of quantum algorithms used in many potential quantum computing applications, including machine learning and solving differential equations. The performance of quantum algorithms is often measured by their query complexity, which quantifies the number of oracle calls required to access the input. The main parameters determining the complexity of QLS solvers are the condition number $κ$ and sparsity $s$ of the linear system, and the target error $ε$. To date, the best known query-complexity lower bound is $Ω(κ\\log(1/ε))$, which…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-23",
+  "updated": "2026-08-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

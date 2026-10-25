@@ -1,0 +1,21 @@
+{
+  "key": "2601.04334",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.04334",
+  "title": "Autonomous Reasoning for Spacecraft Control: A Large Language Model Framework with Group Relative Policy Optimization",
+  "authors": [
+    "Amit Jain",
+    "Richard Linares"
+  ],
+  "summary": "This paper presents a learning-based guidance-and-control approach that couples a reasoning-enabled Large Language Model (LLM) with Group Relative Policy Optimization (GRPO). A two-stage procedure consisting of Supervised Fine-Tuning (SFT) to learn formatting and control primitives, followed by GRPO for interaction-driven policy improvement, trains controllers for each environment. The framework is demonstrated on four control problems spanning a gradient of dynamical complexity, from canonical linear systems through nonlinear oscillatory dynamics to three-dimensional spacecraft attitude…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-01-07",
+  "updated": "2026-01-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

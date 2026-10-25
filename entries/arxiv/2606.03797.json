@@ -1,0 +1,21 @@
+{
+  "key": "2606.03797",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.03797",
+  "title": "Convergence of an algorithm for constructing Lyapunov functions for switched systems using meshfree collocation",
+  "authors": [
+    "Jay Ward",
+    "Nicos Georgiou",
+    "Peter Giesl"
+  ],
+  "summary": "Switched systems are a class of dynamical systems where trajectories switch between different systems based on a switching rule. This rule can depend on time and/or the position of the trajectory in the state space. The existence of a Lyapunov function implies the existence of a uniformly asymptotically stable equilibrium point at the origin, which we prove in this paper. A method to construct Lyapunov functions for switched systems using meshfree collocation and quadratic programming was described in a related article. We prove that, under suitable assumptions, the algorithm described in…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS"
+  ],
+  "published": "2026-06-02",
+  "updated": "2026-06-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

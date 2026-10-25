@@ -1,0 +1,24 @@
+{
+  "key": "2602.05174",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05174",
+  "title": "Total Variation Rates for Riemannian Flow Matching",
+  "authors": [
+    "Yunrui Guan",
+    "Krishnakumar Balasubramanian",
+    "Shiqian Ma"
+  ],
+  "summary": "Riemannian flow matching (RFM) extends flow-based generative modeling to data supported on manifolds by learning a time-dependent tangent vector field whose flow-ODE transports a simple base distribution to the data law. We develop a nonasymptotic Total Variation (TV) convergence analysis for RFM samplers that use a learned vector field together with Euler discretization on manifolds. Our key technical ingredient is a differential inequality governing the evolution of TV between two manifold ODE flows, which expresses the time-derivative of TV through the divergence of the vector-field…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.AI",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-02-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

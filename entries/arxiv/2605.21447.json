@@ -1,0 +1,22 @@
+{
+  "key": "2605.21447",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.21447",
+  "title": "Combining non-parametric quantum states and MERA tensor networks for ground-state optimization",
+  "authors": [
+    "Julian Schuhmacher",
+    "Alberto Baiardi",
+    "Francesco Tacchino",
+    "Ivano Tavernelli"
+  ],
+  "summary": "Hybrid tensor networks offer a promising route to enhance the expressivity of classical tensor network methods by incorporating quantum states prepared on a quantum computer. Existing approaches are limited by the variational optimization of the quantum component of the tensor network. In this work, we introduce an alternative strategy that combines a non-parametric quantum state prepared through quantum annealing and a classical isometric tensor network. The latter is variationally optimized while the former is used as a fixed, boundary tensor resource in the form of classical shadows. We…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-20",
+  "updated": "2026-05-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

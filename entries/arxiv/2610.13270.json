@@ -1,0 +1,24 @@
+{
+  "key": "2610.13270",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.13270",
+  "title": "Polynomial directed treewidth forces a large bramble with congestion two",
+  "authors": [
+    "Victor A. Campos",
+    "Raul Lopes",
+    "Rodrigo Nogueira",
+    "Ignasi Sau"
+  ],
+  "summary": "Brambles of constant congestion in directed graphs have interesting structural and algorithmic applications, and it is desirable to find the smallest function $f_c(k)$ such that if a digraph has directed treewidth at least $f_c(k)$, then it contains a bramble of size at least $k$ and congestion at most $c$. By the Directed Grid Theorem of Kawarabayashi and Kreutzer [STOC 2015], such a function $f_c(k)$ exists for every value $c \\geq 2$ of the congestion. However, even using the recent improvements due to Hatzel et al. [FOCS 2024], the resulting function is a power tower of height $22$.…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.DM",
+    "math.CO"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

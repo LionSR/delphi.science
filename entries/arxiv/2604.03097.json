@@ -1,0 +1,19 @@
+{
+  "key": "2604.03097",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.03097",
+  "title": "A High-Order Fast Direct Solver for Surface PDEs on Triangles",
+  "authors": [
+    "Gentian Zavalani"
+  ],
+  "summary": "We develop a triangular formulation of the hierarchical Poincaré-Steklov (HPS) method for elliptic partial differential equations on surfaces, allowing high-order discretizations on unstructured meshes and complex geometries. Classical HPS formulations rely on high-order quadrilateral meshes and tensor-product spectral discretizations, which enable efficient algorithms but restrict applicability to structured geometries. To overcome this restriction, we introduce a triangle-based hierarchical Poincaré-Steklov scheme (THPS) built on orthogonal Dubiner polynomial bases. As in the classical HPS…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-03",
+  "updated": "2026-04-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

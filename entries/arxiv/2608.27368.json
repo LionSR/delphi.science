@@ -1,0 +1,21 @@
+{
+  "key": "2608.27368",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.27368",
+  "title": "UGM: A Unified Framework and New Perspectives for Accelerated Gradient Methods in Smooth and Strongly Convex Optimization",
+  "authors": [
+    "Danqing Zhou",
+    "Shiqian Ma",
+    "Junfeng Yang"
+  ],
+  "summary": "In this paper, we propose a unified framework for accelerated gradient methods, dubbed UGM, which subsumes a wide range of accelerated and conventional gradient-type methods designed for minimizing $L$-smooth and $μ$-strongly convex functions. We demonstrate that the iteration update of the proposed framework can be intrinsically interpreted as a hybrid combination of the heavy-ball method and vanilla gradient descent. This interpretation reveals that classical accelerated gradient methods essentially integrate a conservative gradient descent step into the fast yet unstable heavy-ball…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-27",
+  "updated": "2026-08-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

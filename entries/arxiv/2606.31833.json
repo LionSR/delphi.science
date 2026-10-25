@@ -1,0 +1,27 @@
+{
+  "key": "2606.31833",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.31833",
+  "title": "Lazy-Move Compilation for Neutral-Atom Quantum Computers via a Buffer-Relay Fabric",
+  "authors": [
+    "Chen Huang",
+    "Jingbo Wang",
+    "Zhemin Zhang",
+    "Ming Zhong",
+    "Zhuo Fu",
+    "Zhiding Liang",
+    "Yuan Sun",
+    "Dong E. Liu"
+  ],
+  "summary": "Neutral atom quantum computing offers strong scalability and flexible qubit connectivity, but most existing compilation flows rely on reconfigurable atom arrays that physically shuttle qubit atoms during execution. Although this approach improves connectivity, it also introduces handoff errors, motional heating, and atom-loss risks that can degrade overall fidelity. We present BRIDGE, a Buffer-Relay Interconnect for Data-stable Gate Execution that co-designs a static, compiler-managed buffer-relay fabric with a lazy-move compiler that exploits it. BRIDGE targets an optimized, dual-species 2D…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AR"
+  ],
+  "published": "2026-06-30",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

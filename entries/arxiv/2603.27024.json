@@ -1,0 +1,22 @@
+{
+  "key": "2603.27024",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.27024",
+  "title": "Data-driven discovery and control of multistable nonlinear systems and hysteresis via structured Neural ODEs",
+  "authors": [
+    "Ike Griss Salas",
+    "Ethan King"
+  ],
+  "summary": "Many engineered physical processes exhibit nonlinear but asymptotically stable dynamics that converge to a finite set of equilibria determined by control inputs. Identifying such systems from data is challenging: stable dynamics provide limited excitation and model discovery is often non-unique. We propose a minimally structured Neural Ordinary Differential Equation (NODE) architecture that enforces trajectory stability and provides a tractable parameterization for multistable systems, by learning a vector field in the form $F(x,u) = f(x)\\,(x - g(x,u))$, where $f(x) < 0$ elementwise ensures…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math-ph",
+    "math.DS"
+  ],
+  "published": "2026-03-27",
+  "updated": "2026-03-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

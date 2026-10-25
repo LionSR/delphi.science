@@ -1,0 +1,22 @@
+{
+  "key": "2605.06004",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.06004",
+  "title": "A Fine-Grained Understanding of Uniform Convergence for Halfspaces",
+  "authors": [
+    "Aryeh Kontorovich",
+    "Kasper Green Larsen"
+  ],
+  "summary": "We study the fine-grained uniform convergence behavior of halfspaces beyond worst-case VC bounds. For inhomogeneous halfspaces in $\\mathbb{R}^d$ with $d\\ge 2$, we show that standard first-order VC bounds are essentially tight: even consistent hypotheses can incur population error $Θ(d\\ln(n/d)/n)$, and in the agnostic setting the deviation scales as $\\sqrt{τ\\ln(1/τ)}$ at true error $τ$. In contrast, homogeneous halfspaces in $\\mathbb{R}^2$ exhibit a markedly different behavior. In the realizable case, every hypothesis consistent with the sample has error $O(1/n)$. In the agnostic case, we…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.ST"
+  ],
+  "published": "2026-05-07",
+  "updated": "2026-05-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

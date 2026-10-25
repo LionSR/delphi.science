@@ -1,0 +1,21 @@
+{
+  "key": "2608.16925",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.16925",
+  "title": "Wrong Operator or Blind Design? A Post-Training Diagnostic for Physics-Informed Coefficient Learning",
+  "authors": [
+    "Eric Fock"
+  ],
+  "summary": "Physics-informed and hybrid models integrate data and physics, and read learned coefficients as physical. Yet a small prediction error guarantees neither that the postulated operator is right, nor that the design identifies the coefficient, nor that training reached its minimum. On one parabolic benchmark where a sensor aggregates several diffusion rates and the truth is known, a correct operator recovers the coefficient to machine precision. A wrong one leaves it $30\\%$ off while the in-domain error is 1.36 times the noise, and drifts $27\\%$ across windows. At $7\\%$ noise the error falls…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "stat.ME"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

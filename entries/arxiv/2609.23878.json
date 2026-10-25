@@ -1,0 +1,20 @@
+{
+  "key": "2609.23878",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.23878",
+  "title": "Modeling and Control of a Unicycle Robot on Manifolds",
+  "authors": [
+    "Adeel Akhtar",
+    "Mohamed Al Lawati"
+  ],
+  "summary": "This paper studies path-following control for a kinematic unicycle evolving on a smooth manifold embedded in \\(\\mathbb{R}^3\\). The objective is to stabilize a one-dimensional path on the manifold without imposing a temporal parameterization, thereby distinguishing the problem from trajectory tracking. Working in a geometric framework, we propose two feedback laws: a static controller for prescribed nonzero translational speed and a dynamic controller based on a dynamic extension of the translational speed. By lifting the path to the unit tangent bundle of the surface, we characterize the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-20",
+  "updated": "2026-09-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2608.31040",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.31040",
+  "title": "Fast Fault-Tolerant Decoders for Hypergraph Product and Lifted-Product Codes",
+  "authors": [
+    "Asit Kumar Pradhan",
+    "Nithin Raveendran",
+    "David Declercq",
+    "Bane Vasić"
+  ],
+  "summary": "We design low-complexity, fault-tolerant decoders for quantum low-density parity-check (QLDPC) codes with the goal of reducing decoding latency. We target two major bottlenecks of decoding under the \\emph{circuit-level} noise model: (i) post-processing via order-statistics decoding (OSD), and (ii) the large number of auxiliary variable nodes commonly introduced to represent CNOT-induced correlations during syndrome extraction. Our key observation is that propagating CNOT faults (\\emph{hook errors}) create \\emph{stabilizer-induced} trapping sets (TSs) that are intrinsic to hypergraph-product…",
+  "domain": "cs.IT",
+  "tags": [
+    "cs.IT",
+    "quant-ph"
+  ],
+  "published": "2026-08-31",
+  "updated": "2026-08-31",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

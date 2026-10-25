@@ -1,0 +1,22 @@
+{
+  "key": "2609.36230",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.36230",
+  "title": "The Role of Feed-Forward Layers in Transformer Dynamics",
+  "authors": [
+    "Thomas Jacob Maranzatto",
+    "Semih Akkoc",
+    "Sennur Ulukus"
+  ],
+  "summary": "We study the dynamical behavior of tokens in transformers from a control-theoretic perspective. Our model includes the feed-forward layer present after the self-attention mechanism, with the self-attention mechanism interpreted as an interacting particle system and the feed-forward layer as an independent control. Our main theoretical result establishes that the feed-forward network can steer the tokens arbitrarily close to consensus regardless of the key, query, and value matrices. Our result are easily extended to convergence to many clusters and to multi-head attention. We conduct…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DS"
+  ],
+  "published": "2026-09-28",
+  "updated": "2026-09-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2601.21388",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.21388",
+  "title": "Higher-Order Finite Difference Methods for the Tempered Fractional Laplacian",
+  "authors": [
+    "Mingyi Wang",
+    "Dongling Wang"
+  ],
+  "summary": "This paper presents a general framework of high-order finite difference (HFD) schemes for the tempered fractional Laplacian (TFL) based on new generating functions obtained from the discrete symbols. Specifically, for sufficiently smooth functions, the resulting discretizations achieve high-order convergence with orders $p=4, 6, 8$. The discrete operators lead to Toeplitz stiffness matrices, allowing efficient matrix-vector multiplications via fast algorithms. Building on these approximations, HFD methods are formulated for solving TFL equations, and their stability and convergence are…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-29",
+  "updated": "2026-01-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

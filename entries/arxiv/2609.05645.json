@@ -1,0 +1,20 @@
+{
+  "key": "2609.05645",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.05645",
+  "title": "Ordered-Angle Coding for Exact Multiuser Unanimity Testing",
+  "authors": [
+    "Luis Adrián Lizama-Pérez"
+  ],
+  "summary": "We introduce ordered-angle coding for binary-unanimity testing among $n$ transformation-only users in a serial quantum architecture inherited from Loop-Back communication. User $B_i$ fixes one private sign across a logical word and applies $R(s_iα_j)$ in trial $j$. If $w$ users choose the negative sign, serial composition gives $R[(n-2w)α_j]$. We show that every fixed same-axis pulse that is deterministic for both unanimous inputs under the binary Bell readout has $α_j=q_jπ/(2n)$ with integer $q_j$. For a nonadaptive word $\\mathbf q=(q_1,\\ldots,q_m)$, a mixed Hamming weight imitates the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CR"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

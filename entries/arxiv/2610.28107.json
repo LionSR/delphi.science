@@ -1,0 +1,26 @@
+{
+  "key": "2610.28107",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.28107",
+  "title": "Weak-$L^α$ Noise, Strong Guarantees: Gradient Clipping under Affine Heavy Tails",
+  "authors": [
+    "Alyona Nekrasova",
+    "Makar Sidorov",
+    "Savelii Chezhegov",
+    "Alexander Gasnikov",
+    "Margarita Preobrazhenskaia",
+    "Igor Preobrazhensky",
+    "Eduard Gorbunov"
+  ],
+  "summary": "Gradient clipping is a key tool for obtaining high-probability convergence guarantees for stochastic first-order methods under heavy-tailed noise. Existing analyses typically assume a bounded central moment of order $α\\in(1,2]$, which excludes distributions with tails of order $u^{-α}$ at the critical exponent. In this paper, we consider smooth convex optimization under affine heavy-tailed noise, whose scale may grow with the gradient norm. We derive high-probability convergence guarantees for clipped SGD (Clip-SGD) and its accelerated variant Clip-SSTM under a weak-$L^α$ tail condition,…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

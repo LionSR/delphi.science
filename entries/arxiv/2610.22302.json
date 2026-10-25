@@ -1,0 +1,22 @@
+{
+  "key": "2610.22302",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.22302",
+  "title": "Near-Optimal Parallel $M$-Matrix Scaling",
+  "authors": [
+    "Chih-Hung Liu",
+    "Aaron Sidford",
+    "Ta-Wei Tu"
+  ],
+  "summary": "In this paper we consider the problem of computing a positive diagonal scaling of a $d \\times d$ symmetric $M$-matrix so that all row and column sums are $1$. We provide a poly-logarithmic iteration algorithm that solves this problem to high accuracy, where the cost of each iteration is dominated by the cost of solving a Laplacian system. This improves upon the recent $\\tilde{O}(d^{1/3})$ iteration bound of [Vladu STOC 2025] and yields a randomized algorithm for the problem that runs in near-linear time and poly-logarithmic parallel depth.",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.OC"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

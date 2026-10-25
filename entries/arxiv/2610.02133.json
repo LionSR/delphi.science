@@ -1,0 +1,22 @@
+{
+  "key": "2610.02133",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02133",
+  "title": "Optimal transducers using symmetries",
+  "authors": [
+    "Benoît Dubus",
+    "Julien Ladeuze",
+    "Jérémie Roland"
+  ],
+  "summary": "Transducers (Belovs, Jeffery and Yolcu, 2024) are a quantum computing framework describing a quantum algorithm as a unitary converting an input state into a target state using a catalyst, an auxiliary vector that is left unchanged. They are a powerful tool in quantum algorithm design, especially in the context of quantum query complexity: feasible points of the (dual) adversary semidefinite program directly translate into transducers and the optimal transduction complexity is equal to the adversary bound, i.e. the Las Vegas complexity, which is known to characterize bounded-error quantum…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

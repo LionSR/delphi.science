@@ -1,0 +1,24 @@
+{
+  "key": "2607.24983",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.24983",
+  "title": "Generative Distributionally Robust Optimization",
+  "authors": [
+    "Ziwei Zhang",
+    "Jonathan Yu-Meng Li",
+    "Zhihao Jin"
+  ],
+  "summary": "Generative models are increasingly adopted in distributionally robust optimization (DRO), but existing approaches trade off model compatibility and adversarial structure: methods that accept arbitrary samplers do not restrict worst-case laws to a generator family, while generator-parameterized adversaries rely on model-specific access such as likelihoods, scores, or training data. We propose Generative Distributionally Robust Optimization (GDRO), a principled framework that accepts any sampleable conditional generator as the nominal model and restricts worst-case laws to a chosen conditional…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-07-27",
+  "updated": "2026-07-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

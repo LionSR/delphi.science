@@ -1,0 +1,20 @@
+{
+  "key": "2606.28053",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28053",
+  "title": "Global convergence analysis of mixtures of Exponential densities",
+  "authors": [
+    "Rajita Chandak",
+    "Kathryn Dullerud"
+  ],
+  "summary": "The theoretical foundations of the EM algorithm are often thought of in the context of Gaussian mixture models, However, the practical use cases of the EM algorithm span beyond Gaussian models. This paper establishes the first step towards understanding the behavior of the EM algorithm under mixtures of non-Gaussian densities. We show that a mixture of two Exponential distributions can be approximated by the EM algorithm at the sub-Exponential rate of convergence in at most $\\log(n)$ iterations. The results here show that extending away from Gaussian mixture models does not affect the…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-06-26",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

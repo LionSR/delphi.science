@@ -1,0 +1,22 @@
+{
+  "key": "2607.04231",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04231",
+  "title": "Ordered alternating paths and the depth of symbolic powers of cover ideals of graphs",
+  "authors": [
+    "Nguyen Thu Hang",
+    "Nguyen Thi Thanh Tam",
+    "Thanh Vu"
+  ],
+  "summary": "Let $G$ be a simple graph with cover ideal $J(G)$ in a polynomial ring $S$ in $|V(G)|$ variables. For a matching $M$ of $G$, we denote by $\\ell(M)$ the length of the longest $M$-alternating path in $G$. We define $α_t(G)$ to be the maximum size of an ordered matching $M$ of $G$ such that $\\ell(M) \\le 2t-1$. We then prove that $$\\operatorname{depth}(S/J(G)^{(t)}) \\le |V(G)| - 1 - α_t(G)$$ for all $t \\ge 1$, where $J(G)^{(t)}$ denotes the $t$-th symbolic power of $J(G)$, and that equality holds when $G$ is a forest.",
+  "domain": "math.AC",
+  "tags": [
+    "math.AC",
+    "math.CO"
+  ],
+  "published": "2026-07-05",
+  "updated": "2026-07-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

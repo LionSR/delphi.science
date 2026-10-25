@@ -1,0 +1,24 @@
+{
+  "key": "2603.15463",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.15463",
+  "title": "The Compilability Thresholds of 2-CNF to OBDD",
+  "authors": [
+    "Alexis de Colnet",
+    "Alfons Laarman",
+    "Joon Hyung Lee"
+  ],
+  "summary": "We prove the existence of two thresholds regarding the compilability of random 2-CNF formulas to OBDDs. The formulas are drawn from $\\mathcal{F}_2(n,δn)$, the uniform distribution over all 2-CNFs with $δn$ clauses and $n$ variables, with $δ\\geq 0$ a constant. We show that, with high probability, the random 2-CNF admits OBDDs of size polynomial in $n$ if $0 \\leq δ 1$. On the other hand, for $1/2 < δ< 1$, with high probability, the random $2$-CNF admits only OBDDs of size exponential in $n$. It is no coincidence that the two ``compilability thresholds'' are $δ= 1/2$ and $δ= 1$. Both are known…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.DM",
+    "math.CO",
+    "math.PR"
+  ],
+  "published": "2026-03-16",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

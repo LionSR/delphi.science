@@ -1,0 +1,20 @@
+{
+  "key": "2605.02019",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.02019",
+  "title": "Multi-Agent Motion Planning for Simultaneous Arrival using Time-Reversed Search and Distributed Optimal Control",
+  "authors": [
+    "Anja Hellander",
+    "Daniel Axehill"
+  ],
+  "summary": "In this work we consider the multi-agent motion planning (MAMP) problem with the constraint that agents arrive at their respective goals at the same time. For the special case where all agents are initially at rest we propose a two-step method for finding optimized and kinematically feasible solutions. The first step finds an initial feasible solution by applying a state-of-the-art MAMP algorithm (conflict-based search and safe interval path planning with interval projection) backward. The algorithm is complete, and we provide necessary conditions for when it is also optimal. The second step…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-03",
+  "updated": "2026-05-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

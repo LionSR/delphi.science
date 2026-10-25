@@ -1,0 +1,22 @@
+{
+  "key": "2610.19444",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.19444",
+  "title": "Large-Step Last-Iterate Convergence of Random-Reshuffling Stochastic Gradient Descent",
+  "authors": [
+    "Zijun Chen",
+    "Zihan Zhang"
+  ],
+  "summary": "Random reshuffling stochastic gradient descent (RR-SGD) is widely used for finite-sum optimization in machine learning. For convex $L$-smooth components, recent work establishes convergence guarantees for an averaged iterate with component stepsizes as large as order $1/L$. However, the final iterate is a natural output in practice, and existing last-iterate guarantees in this setting require stepsizes that scale inversely with the number of components $n$. We establish an expected objective-gap bound for the last iterate of standard RR-SGD on unconstrained problems with a constant component…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "published": "2026-10-14",
+  "updated": "2026-10-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

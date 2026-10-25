@@ -1,0 +1,21 @@
+{
+  "key": "2605.19867",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.19867",
+  "title": "When can a neural operator replace a coarse solve? Architectural principles for two-level preconditioning",
+  "authors": [
+    "Hugo Melchers",
+    "Victorita Dolean",
+    "Michael Abdelmalik"
+  ],
+  "summary": "Neural operators are increasingly used as accelerators inside classical numerical methods, but it is rarely clear which architectural ingredients matter for which application. We answer this question for one important use case: the coarse-space correction inside a two-level preconditioner for discretised linear partial differential equations. We systematically vary four DeepONet-like architectures along two design axes: input discretisation (sampling versus integration against a basis) and source-term linearity. In doing this, we show that the favourable corner of this 2$\\times$2 design is…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-07-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

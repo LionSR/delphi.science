@@ -1,0 +1,22 @@
+{
+  "key": "2604.26441",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.26441",
+  "title": "A Matrix-Free Galerkin Multigrid Solver and Failure-Mode Screen for Single-GPU 3D SIMP Linear Systems",
+  "authors": [
+    "Shaoliang Yang",
+    "Jun Wang",
+    "Yunsheng Wang"
+  ],
+  "summary": "Large 3D SIMP studies require repeated elasticity solves for density-dependent operators whose finest matrices are expensive to assemble and whose conditioning degrades under high contrast. We study this linear-solver layer rather than claiming end-to-end optimization acceleration. The solver builds a matrix-free Galerkin geometric multigrid (GMG) hierarchy around a fused fine operator: the finest level remains matrix-free, the first coarse level is assembled by local Galerkin aggregation, and deeper levels use sparse Galerkin products. The practical default is FP32-GMG; BF16 is evaluated as…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math.NA"
+  ],
+  "published": "2026-04-29",
+  "updated": "2026-04-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

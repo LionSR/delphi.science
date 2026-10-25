@@ -1,0 +1,23 @@
+{
+  "key": "2606.31061",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.31061",
+  "title": "Online TT-ALS for Streaming Tensor Decomposition with Incremental Orthogonalization",
+  "authors": [
+    "Hiroki Takeda",
+    "Yuto Miyatake",
+    "Daisuke Furihata"
+  ],
+  "summary": "Tensor Train (TT) decomposition is a powerful technique for analyzing high-dimensional data. Existing algorithms for computing TT decompositions can be categorized into two main types: conventional batch-based approaches and recursive online methods. In the context of streaming data, batch methods typically achieve higher reconstruction accuracy but often suffer from memory exhaustion, while online methods provide greater computational efficiency. In this work, we introduce Online TT-ALS (Alternating Least Squares), an algorithm that sequentially enforces orthogonality constraints. This…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.CV",
+    "cs.LG"
+  ],
+  "published": "2026-06-30",
+  "updated": "2026-06-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,26 @@
+{
+  "key": "2607.09645",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.09645",
+  "title": "Deep Gaussian Processes on Directed Acyclic Graphs",
+  "authors": [
+    "Federico L. Perlino",
+    "Oliver Hamelijnck",
+    "Adam M. Johansen",
+    "Theodoros Damoulas"
+  ],
+  "summary": "Many real-world processes can be represented as compositions of functions along a directed acyclic graph (DAG). In causal modelling, these correspond to the underlying mechanisms; in engineering, to multiple fidelity levels; and in gene-regulatory networks, to transcription factors. These functions are partially observed across the DAG, with noisy and heterogeneously sampled measurements, posing significant challenges for reconstruction, uncertainty propagation, and inference. To tackle these challenges, we place priors over functions and naturally arrive at Deep Gaussian Processes over…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST",
+    "stat.CO",
+    "stat.ME"
+  ],
+  "published": "2026-07-10",
+  "updated": "2026-07-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

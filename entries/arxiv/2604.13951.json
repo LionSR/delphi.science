@@ -1,0 +1,25 @@
+{
+  "key": "2604.13951",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.13951",
+  "title": "Quantum Machine Learning for Colorectal Cancer Data: Anastomotic Leak Classification and Risk Factors",
+  "authors": [
+    "Vojtěch Novák",
+    "Ivan Zelinka",
+    "Lenka Přibylová",
+    "Lubomír Martínek",
+    "Vladimír Benčurík",
+    "Martin Beseda"
+  ],
+  "summary": "This study evaluates colorectal risk factors and compares classical models against Quantum Neural Networks (QNNs) for anastomotic leak prediction. Analyzing clinical data with 14\\% leak prevalence, we tested ZZFeatureMap encodings with RealAmplitudes and EfficientSU2 ansatze under simulated noise. $F_β$-optimized quantum configurations yielded significantly higher sensitivity (83.3\\%) than classical baselines (66.7\\%). This demonstrates that quantum feature spaces better prioritize minority class identification, which is critical for low-prevalence clinical risk prediction. Our work explores…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "quant-ph"
+  ],
+  "published": "2026-04-15",
+  "updated": "2026-04-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

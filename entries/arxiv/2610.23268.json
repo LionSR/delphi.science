@@ -1,0 +1,20 @@
+{
+  "key": "2610.23268",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.23268",
+  "title": "Unconditional Quantum PAC Learning Advantage in the Large Error Regime",
+  "authors": [
+    "Igor C. Oliveira"
+  ],
+  "summary": "We establish an unconditional super-polynomial separation between quantum and classical PAC learning of Boolean functions under the uniform distribution in the large error regime. For every advantage $λ(n) = n^{-ω(1)}$, we construct a concept class that a polynomial-time quantum learner learns to agreement $1/2+λ(n)$ with success probability at least $1-1/n^k$. The learner uses only quantum random examples and outputs a polynomial-size deterministic classical circuit. In contrast, no polynomial-time classical learner achieves agreement $1/2 + λ(n)/n^k$ with success probability greater than…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "quant-ph"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

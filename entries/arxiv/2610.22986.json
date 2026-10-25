@@ -1,0 +1,20 @@
+{
+  "key": "2610.22986",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.22986",
+  "title": "Rigorous verification of period-doubling bifurcations in maps",
+  "authors": [
+    "Olivier Hénot",
+    "Jean-Philippe Lessard"
+  ],
+  "summary": "We present a computer-assisted approach for proving period-doubling bifurcations in one-parameter families of maps $x \\mapsto f(x,λ)$ on $\\mathbb{R}^n$. We solve a square augmented system, called the period-doubling map, whose unknowns are the fixed point, the parameter, the right eigenvector attached to the eigenvalue $-1$, the left eigenvector with its eigenvalue, and the vector which describes the center manifold to second order. A contraction argument gives a solution close to a numerical approximation, at which the Jacobian is invertible. The determinant of this Jacobian factors into a…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS"
+  ],
+  "published": "2026-10-16",
+  "updated": "2026-10-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

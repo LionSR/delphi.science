@@ -1,0 +1,24 @@
+{
+  "key": "2607.07372",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.07372",
+  "title": "Vectorizing Quantum Control: A RISC-V Vector Extension Architecture for Scalable Qubit Systems",
+  "authors": [
+    "Xiaorang Guo",
+    "Kun Qin",
+    "Yanbin Chen",
+    "Carsten Trinitis",
+    "Martin Schulz"
+  ],
+  "summary": "The Quantum Control Processor (QCP) bridges the gap between compiler toolchains and control electronics, and is responsible for translating compiled quantum circuits into executable instructions that directly manipulate qubits and handle measurement feedback. However, existing designs rely primarily on customized instruction sets, limiting design reuse and requiring significant effort to build supporting toolchains. Furthermore, efficiently addressing qubits and scheduling operations in highly scalable scenarios remains a critical challenge. In this work, we present a vectorized quantum…",
+  "domain": "cs.AR",
+  "tags": [
+    "cs.AR",
+    "quant-ph"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2607.16764",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.16764",
+  "title": "When Is Heterogeneous Distance-Decay Facility Location Tractable? A Structural Classification, Exact Methods, and a Real-World Study",
+  "authors": [
+    "Zhou He",
+    "T. C. E. Cheng",
+    "Jichang Dong"
+  ],
+  "summary": "We study continuous planar facility location in which a demand point's captured value decays with distance, with the per-point decay scale varying across points. This heterogeneity is ubiquitous yet underexploited, and one nearest-facility objective unifies decay, clustering, and median goals, containing k-means, the Weber/p-median problem, and maximum covering as special cases. We make four contributions. (i) A tractability classification: the discrete objective is always monotone submodular, so the (1-1/e) greedy guarantee holds regardless of decay shape or heterogeneity, and the…",
+  "domain": "cs.MA",
+  "tags": [
+    "cs.MA",
+    "cs.CG",
+    "math.OC"
+  ],
+  "published": "2026-07-18",
+  "updated": "2026-07-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2607.02926",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.02926",
+  "title": "A Proximal Point Semismooth Newton Algorithm for Structural Composite Cardinality Optimization",
+  "authors": [
+    "Penghe Zhang",
+    "Naihua Xiu",
+    "Houduo Qi"
+  ],
+  "summary": "Many image-processing problems can be formulated as composite cardinality optimization (CCOP), whose objective is the sum of two convex terms and a cardinality function composed with a linear operator. The composite cardinality term creates major algorithmic challenges: the separability of the cardinality function is lost and convergence analysis often requires surjectivity-type assumptions on the linear operators. To overcome these challenges, we consider the stationary dual formulation of CCOP, which has more favorable structure consisting of two convex terms and a separable cardinality…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-03",
+  "updated": "2026-07-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2610.18939",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.18939",
+  "title": "Wong--Zakai Convergence and FNO Learning for Stochastic Volterra Equations",
+  "authors": [
+    "Wonjae Lee",
+    "Jiuk Jang",
+    "Hyungbin Park"
+  ],
+  "summary": "This paper studies Wong--Zakai convergence and Fourier neural operator learning for stochastic Volterra integral equations (SVIEs) describing random systems with memory. A Wong--Zakai theorem establishes convergence of pathwise solutions driven by piecewise linear approximations of Brownian motion to the corresponding SVIE solution. This convergence provides a foundation for using mirror-padded Fourier neural operators to learn the solution operator mapping initial conditions and driving noise to entire solution trajectories. Numerical experiments demonstrate competitive prediction accuracy…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.PR"
+  ],
+  "published": "2026-10-13",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

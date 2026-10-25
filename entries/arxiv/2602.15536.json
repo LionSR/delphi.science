@@ -1,0 +1,23 @@
+{
+  "key": "2602.15536",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.15536",
+  "title": "Novel distance-based masking and adaptive alpha-shape methods for CNN-ready reconstruction of arbitrary 2D CFD flow domains",
+  "authors": [
+    "Mehran Sharifi",
+    "Gorka S. Larraona",
+    "Alejandro Rivas"
+  ],
+  "summary": "Interpolating scattered CFD datasets onto a uniform Cartesian grid can distort the true geometry, producing a convex-hull type envelope and activating nonphysical regions. This work presents a reconstruction framework that recovers physically consistent masks before exporting CNN-ready fields. It introduces two novel strategies, distance-based masking and an adaptive alpha-shape formulation that normalizes alpha using local data resolution, and evaluates them against classical alpha-shape boundary recovery. A quantitative, topology-aware metric suite is introduced to assess retention,…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math.MG",
+    "physics.comp-ph"
+  ],
+  "published": "2026-02-17",
+  "updated": "2026-02-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

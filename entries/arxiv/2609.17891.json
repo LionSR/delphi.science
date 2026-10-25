@@ -1,0 +1,25 @@
+{
+  "key": "2609.17891",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.17891",
+  "title": "Structural Parameterizations for Eternal Vertex Cover",
+  "authors": [
+    "Neeldhara Misra",
+    "Sebastian Ordyniak",
+    "Giacomo Paesani",
+    "Mateusz Rychlicki"
+  ],
+  "summary": "Eternal Vertex Cover (EVC) is a turn-based attacker-defender game on an undirected graph $G$. To begin with, the defender places $k$ guards on vertices of $G$. The attacker, on their turn, can choose an edge $e$ not already occupied at both endpoints to \"attack\". The edge $e$ is defended if a guard moves along the edge $e$. The defender, on their turn, can move any subset of guards. A guard can only move to a neighboring vertex. The minimum number of guards needed to indefinitely defend against any sequence of attacks is called the eternal vertex cover number, generalizing the classic vertex…",
+  "domain": "cs.DM",
+  "tags": [
+    "cs.DM",
+    "cs.CC",
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2610.03144",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03144",
+  "title": "A Physics-Driven Multiscale Method for High-Frequency Helmholtz Equations",
+  "authors": [
+    "Huangxin Chen",
+    "Jianhui Chen",
+    "Shubin Fu",
+    "Zhiyu Tan"
+  ],
+  "summary": "We develop and analyze a physics-driven multiscale method for model reduction of the Helmholtz equation at high frequency. The method constructs a reduced approximation space from local wave responses within a mixed finite element formulation with velocity elimination. These responses are computed by solving Helmholtz problems with boundary excitations on oversampled regions, giving snapshots that incorporate the oscillatory behavior and propagation characteristics of the underlying medium. Local generalized eigenvalue problems then select modes from this physically informed space to form a…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

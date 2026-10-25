@@ -1,0 +1,23 @@
+{
+  "key": "2604.22588",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.22588",
+  "title": "Analytical and Compressed Simulation of Noisy Stabilizer Circuits",
+  "authors": [
+    "Paul Aigner",
+    "Jasmin Matti",
+    "Maria Flors Mor-Ruiz",
+    "Julius Wallnöfer",
+    "Wolfgang Dür"
+  ],
+  "summary": "We develop analytical and algorithmic techniques that enable efficient simulation of a broad class of noisy stabilizer circuits. We derive closed-form expressions of expectation values for tensor product of Paulis in circuits with non-deterministic Pauli measurements, yielding an efficient strong simulation method that avoids explicit density matrix construction and enables direct noise parameter sweeps. We introduce a circuit compression framework that reduces the per-sample cost of weak simulation in general noisy stabilizer circuits, including deterministic measurements, by separating…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-24",
+  "updated": "2026-04-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

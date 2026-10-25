@@ -1,0 +1,22 @@
+{
+  "key": "2609.37103",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.37103",
+  "title": "Riemannian optimization on low-rank tensor train manifolds for the Gross-Pitaevskii equation",
+  "authors": [
+    "Ivan Bioli",
+    "Carlo Marcati",
+    "Maxim Rakhuba"
+  ],
+  "summary": "This work is concerned with the numerical computation of Gross-Pitaevskii ground states using the tensor train (TT) format. We regard the problem as the minimization of the Gross-Pitaevskii energy functional under a unit mass constraint, and propose a first-order Riemannian optimization scheme that preserves both the mass constraint and the low-rank representation throughout the optimization, by operating on the manifold of unit-norm functions of fixed TT-rank. On this manifold, we derive the energy-adaptive Riemannian gradient and show how to compute it efficiently in the TT format. Spatial…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

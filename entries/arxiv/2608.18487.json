@@ -1,0 +1,21 @@
+{
+  "key": "2608.18487",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.18487",
+  "title": "An Efficient Second-Order-in-Time Penalty-Projection Ensemble Eddy Viscosity Method for Parameterized Navier-Stokes Flows",
+  "authors": [
+    "Md Mahmudul Islam",
+    "Muhammad Mohebujjaman",
+    "Jahrul Alam"
+  ],
+  "summary": "We propose a novel, robust, and second-order-accurate parameterized penalty-projection ensemble algorithm for incompressible Navier--Stokes flow problems. The resulting linearized algorithm, based on the second-order Backward Differentiation Formula (BDF-2), is computationally efficient because it shares the same coefficient matrix across all realizations for each subproblem at every time step. To enhance robustness in convection-dominated flows, the scheme incorporates Ensemble Eddy Viscosity (EEV) regularization. In addition, it is equipped with grad-div stabilization parameter $γ$, which…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-19",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

@@ -27,5 +27,17 @@
     "reason": "Proves polynomial mixing of the switch chain and gives an exactly uniform graph sampler.",
     "by": "claude-haiku",
     "at": "2026-10-23"
-  }
+  },
+  "discussion": [
+    {
+      "kind": "web",
+      "url": "https://mathoverflow.net/a/515910",
+      "title": "Answer to: How many of the results released by OpenAI went against the conventional mathematical wisdom?",
+      "site": "mathoverflow.net",
+      "author": "Daniel Soltész",
+      "text": "Rapid mixing of graph switches for every degree sequence: I worked on this one in a team. I recall that we were all convinced that it's rapidly mixing. Glad that OpenAI finally proved it!",
+      "date": "2026-10-10",
+      "added": "2026-10-24"
+    }
+  ]
 }

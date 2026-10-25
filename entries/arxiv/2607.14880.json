@@ -1,0 +1,21 @@
+{
+  "key": "2607.14880",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.14880",
+  "title": "Measuring Spatial Clustering via Metropolis-Hastings Diffusion Distance",
+  "authors": [
+    "Thomas Weighill",
+    "Chidinma Williams"
+  ],
+  "summary": "We propose a novel measure of the discrepancy between two probability distributions $f$ and $g$ on a graph - which we call the diffusion distance - that measures the rate of convergence of $f$ to $g$ under a graph-constrained Markov chain with stationary distribution $g$. As a default choice for this Markov chain, we use the Metropolis-Hastings transition matrix targeting $g$ with proposals given by a random walk on the graph. Our primary case of interest is when the second distribution $g$ is uniform, in which case the diffusion distance becomes a measure of spatial clustering in $f$. Used…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cs.LG"
+  ],
+  "published": "2026-07-16",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

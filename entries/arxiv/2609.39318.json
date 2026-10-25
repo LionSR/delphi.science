@@ -1,0 +1,23 @@
+{
+  "key": "2609.39318",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.39318",
+  "title": "A Dichotomy for MIP* in the Presence of Unital Noise",
+  "authors": [
+    "Yangjing Dong",
+    "Zhenyu Jiang",
+    "Minglong Qin",
+    "Penghui Yao",
+    "Haigang Zhou"
+  ],
+  "summary": "A recent work studied quantum two-prover one-round proof systems $\\mathsf{MIP}^ψ[\\text{poly},O(1)]$. It showed that when $ψ$ is a noisy EPR state with quantum maximal correlation $ρ_{\\max}(ψ)<1$, the resulting complexity class is equivalent to $\\mathsf{NEXP}=\\mathsf{MIP}$. In contrast, $\\mathsf{MIP}^{\\text{EPR}}[\\text{poly},O(1)]=\\mathsf{RE}$. Not all noise, however, decreases quantum maximal correlation. A basic example is dephasing noise: a dephased EPR pair retain quantum maximal correlation $1$. In this work, we remove the constant-answer restriction and establish a complete dichotomy…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

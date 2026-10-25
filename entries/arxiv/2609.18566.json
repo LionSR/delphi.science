@@ -1,0 +1,25 @@
+{
+  "key": "2609.18566",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.18566",
+  "title": "Deep learning emergent spacetime from fermionic spectral functions in holography",
+  "authors": [
+    "Koji Hashimoto",
+    "Hyun-Sik Jeong",
+    "Keun-Young Kim",
+    "Daichi Takeda",
+    "Kwan Yun"
+  ],
+  "summary": "We present a physics-informed machine learning framework based on Neural Ordinary Differential Equations that solves the holographic inverse problem: reconstructing the bulk spacetime and gauge field of a charged AdS black hole directly from boundary fermionic spectral functions. Encoding the UV asymptotics, horizon regularity, and zero temperature extremality as hard constraints in the neural network architecture, our framework reliably reconstructs the extremal Reissner-Nordström AdS geometry across three quantum critical regimes set by the $U(1)$ probe charge---non-Fermi liquid, marginal…",
+  "domain": "hep-th",
+  "tags": [
+    "hep-th",
+    "cond-mat.str-el",
+    "cs.LG"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-hep-th-2026",
+  "refreshed": "2026-10-24"
+}

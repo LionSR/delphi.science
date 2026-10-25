@@ -1,0 +1,24 @@
+{
+  "key": "2610.14902",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.14902",
+  "title": "A single LU~factorization approach to model reduction for linear system families with a quadratic matrix pencil",
+  "authors": [
+    "Mikhail A. Botchev",
+    "Leonid Knizhnerman",
+    "Nikolai L. Zamarashkin",
+    "Dmitry A. Zheltkov"
+  ],
+  "summary": "To solve a family of large linear systems where the system matrix depends on the family parameter quadratically, we propose a new solution approach. Our method employs the derivatives of solutions with respect to the parameter. It turns out that the accumulated solution derivatives of increasing order, evaluated at a single specially chosen parameter value, provide successively better approximations to solution subspaces for the whole linear system family. We show that the derivatives can be computed by a recurrence, involving, at each step, solving a linear system with the same matrix.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.CE",
+    "physics.comp-ph"
+  ],
+  "published": "2026-10-10",
+  "updated": "2026-10-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

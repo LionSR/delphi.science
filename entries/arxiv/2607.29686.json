@@ -1,0 +1,23 @@
+{
+  "key": "2607.29686",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.29686",
+  "title": "Online Shadow Tomography Matching the Classical Bounds",
+  "authors": [
+    "Sitan Chen",
+    "Ryan O'Donnell",
+    "Angelos Pelecanos",
+    "John Wright"
+  ],
+  "summary": "In Online Shadow Tomography, we are given copies of an unknown $d$-dimensional quantum state $ρ$, an adversary (adaptively) proposes a sequence of bounded observables $A^{(1)},\\ldots,A^{(m)}$, and after each $A^{(t)}$ is given we must estimate $\\mathrm{Tr}(A^{(t)}ρ)$ to within $\\pm ε$. This is the direct quantum generalization of the classical problem of Adaptive Data Analysis. Prior results for online Shadow Tomography were suboptimal in all three parameters $m, d, ε$, lagging behind the best known and classical rates, for which there is some evidence of optimality. In this work, we finally…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS"
+  ],
+  "published": "2026-07-31",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

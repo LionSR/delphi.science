@@ -1,0 +1,21 @@
+{
+  "key": "2605.17145",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.17145",
+  "title": "Scaling Quantum Optimization for Unit Commitment via Pauli Correlation Encoding",
+  "authors": [
+    "Kien X. Nguyen",
+    "Ilya Safro",
+    "Xiaoyuan Liu"
+  ],
+  "summary": "Unit commitment is an important optimization problem in power system operations, classified as NP-hard. This paper presents a hybrid quantum-classical method for the unit commitment problem with time-dependent constraints, where decisions must be made about which generators to turn on/off and how much power they should produce over a planning horizon. We use a hybrid quantum-classical optimization procedure to determine the on/off schedules of the generating units and the corresponding power dispatch that satisfies operational constraints such as load balance, generator limits, ramping, and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-16",
+  "updated": "2026-05-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

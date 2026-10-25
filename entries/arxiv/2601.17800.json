@@ -1,0 +1,20 @@
+{
+  "key": "2601.17800",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.17800",
+  "title": "Differentiable Integer Linear Programming is not Differentiable & it's not a mere technical problem",
+  "authors": [
+    "Thanawat Sornwanee"
+  ],
+  "summary": "We show how the differentiability method employed in the paper ``Differentiable Integer Linear Programming'', Geng, et al., 2025 as shown in its theorem 5 is incorrect. Moreover, there already exists some downstream work that inherits the same error. The underlying reason comes from that, though being continuous in expectation, the surrogate loss is discontinuous in almost every realization of the randomness, for the stochastic gradient descent.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-01-25",
+  "updated": "2026-01-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

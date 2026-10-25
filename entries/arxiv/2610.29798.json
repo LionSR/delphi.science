@@ -1,0 +1,25 @@
+{
+  "key": "2610.29798",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.29798",
+  "title": "Asymmetric Likelihood-Free Hypothesis Testing",
+  "authors": [
+    "Gunjan Kumar",
+    "Yash Pote",
+    "Jonathan Scarlett"
+  ],
+  "summary": "In likelihood-free hypothesis testing (LFHT), given samples from two unknown distributions $P,Q$ on $[n]$ with $\\mathrm{d_{TV}}(P,Q)\\geq\\varepsilon$, and from a third distribution $D\\in\\{P,Q\\}$, the goal is to identify whether $D=P$ or $D=Q$. We study asymmetric likelihood-free hypothesis testing, where the sample budgets $s_P$ and $s_Q$ for $P$ and $Q$ may differ, and characterize the feasible triples $(s_P,s_Q,s_D)$ up to logarithmic factors. We establish that unequal reference budgets can give a polynomial saving. For instance, for constant separation, $n$ samples from $P$ and $n^{3/4}$…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.DS",
+    "cs.IT",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

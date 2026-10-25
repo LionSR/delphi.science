@@ -1,0 +1,23 @@
+{
+  "key": "2610.17236",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.17236",
+  "title": "Whither quantum advantage? New classical lower bounds for Max-Cut on large-girth 3-regular graphs",
+  "authors": [
+    "Flaviano Morone",
+    "Shivang Rawat",
+    "Dries Sels"
+  ],
+  "summary": "Every 3-regular graph of girth at least $g$ has a cut containing at least a fraction $M_g$ of its edges, and the best rigorous bounds at large girth are $0.912\\le \\lim_{g\\to\\infty}M_g \\le 0.92386$. Lower bounds on $M_g$ follow from the performance of local algorithms: on a graph of girth $g \\ge 2p+2$ a depth-$p$ local algorithm sees the same tree around every edge, so its expected cut fraction on that tree bounds $M_g$ from below. We apply this strategy to the Variational Iterative Rotation Algorithm (VIRAL), a classical local algorithm, and evaluate it on the depth-$p$ tree for every even…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.dis-nn",
+    "math.CO"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

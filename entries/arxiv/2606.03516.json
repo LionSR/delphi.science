@@ -1,0 +1,22 @@
+{
+  "key": "2606.03516",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.03516",
+  "title": "Linear Convergence of Parareal Algorithm for Semilinear Parabolic Equations",
+  "authors": [
+    "Guanglian Li",
+    "Qingle Lin",
+    "Shu-lin Wu",
+    "Zhi Zhou"
+  ],
+  "summary": "Long-time simulations of evolution equations present substantial computational challenges due to the inherently sequential nature of conventional time-stepping schemes. The parareal method, a leading parallel-in-time (PinT) algorithm, offers a promising approach to overcome the challenge by introducing concurrency in the time domain. While its convergence theory is well-established for linear problems, extending the theory to nonlinear problems, particularly when the problem data have only limited regularity, remains a significant challenge. In this work, we provide the convergence analysis…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-02",
+  "updated": "2026-06-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

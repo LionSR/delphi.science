@@ -1,0 +1,22 @@
+{
+  "key": "2601.00161",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.00161",
+  "title": "Fast Ewald Summation with Prolates for Charged Systems in the NPT Ensemble",
+  "authors": [
+    "Jiuyang Liang",
+    "Libin Lu",
+    "Shidong Jiang"
+  ],
+  "summary": "We present an NPT extension of Ewald summation with prolates (ESP), a spectrally accurate and scalable particle-mesh method for molecular dynamics simulations of periodic, charged systems. Building on the recently introduced ESP framework, this work focuses on rigorous and thermodynamically consistent pressure/stress evaluation in the isothermal--isobaric ensemble. ESP employs prolate spheroidal wave functions as both splitting and spreading kernels, reducing the Fourier grid size needed to reach a prescribed pressure accuracy compared with current widely used mesh-Ewald methods based on…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.chem-ph"
+  ],
+  "published": "2026-01-01",
+  "updated": "2026-01-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

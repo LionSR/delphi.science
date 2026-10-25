@@ -1,0 +1,19 @@
+{
+  "key": "2603.12302",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.12302",
+  "title": "Decorated Cospans at Work: Coupling Heterogeneous Dynamical Systems via Pushouts and Particle Filters",
+  "authors": [
+    "Wesley Phoa"
+  ],
+  "summary": "Decorated cospans provide a categorical framework for composing open systems along shared interfaces. This paper is a computational proof of concept: we show that the framework produces a working coupled dynamical system when the decorations are quantitative models from different mathematical traditions. Specifically, we couple a linearised New Keynesian DSGE, a stochastic compartmental epidemic (multi-strain SEIR), and a nonlinear vaccine adoption model with hysteresis into a single sequential Monte Carlo sampler. Each model is a decorated cospan -- interior dynamics as decoration, exposed…",
+  "domain": "math.CT",
+  "tags": [
+    "math.CT"
+  ],
+  "published": "2026-03-12",
+  "updated": "2026-03-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

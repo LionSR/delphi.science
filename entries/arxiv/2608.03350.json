@@ -1,0 +1,22 @@
+{
+  "key": "2608.03350",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.03350",
+  "title": "Electro-Magnetic Decoupling Preconditioner for Eddy Current Problems with External Circuit Coupling",
+  "authors": [
+    "Shingo Hiruma",
+    "Takeshi Mifune",
+    "Tetsuji Matsuo"
+  ],
+  "summary": "This paper proposes an efficient and scalable preconditioning strategy for eddy current problems involving coupled external circuits. The approach, named Electro-Magnetic Decoupling (EMD) preconditioner, decomposes the discrete system into vector and scalar potential components and applies tailored preconditioners to each. In particular, strong preconditioning is applied to the scalar component to address the spectral degradation induced by the discrete Laplacian. The method was evaluated on four eddy current models with varying frequencies, conductor topologies, and excitation types.…",
+  "domain": "cs.CE",
+  "tags": [
+    "cs.CE",
+    "math.NA"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

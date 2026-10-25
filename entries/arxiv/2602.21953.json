@@ -1,0 +1,22 @@
+{
+  "key": "2602.21953",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.21953",
+  "title": "Noise-adaptive hybrid quantum convolutional neural networks based on depth-stratified feature extraction",
+  "authors": [
+    "Taehyun Kim",
+    "Israel F. Araujo",
+    "Daniel K. Park"
+  ],
+  "summary": "Hierarchical quantum classifiers, such as quantum convolutional neural networks (QCNNs), represent recent progress toward designing effective and feasible architectures for quantum classification. However, their performance on near-term quantum hardware remains highly sensitive to noise accumulation across circuit depth, calling for strategies beyond circuit-architecture design alone. We propose a noise-adaptive hybrid QCNN that improves classification under noise by exploiting depth-stratified intermediate measurements. Instead of discarding qubits removed during pooling operations, we…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-02-25",
+  "updated": "2026-02-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

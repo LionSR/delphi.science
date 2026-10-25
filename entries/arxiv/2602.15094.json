@@ -1,0 +1,23 @@
+{
+  "key": "2602.15094",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.15094",
+  "title": "On propagation of chaos for the Fisher-Rao gradient flow in entropic mean-field optimization",
+  "authors": [
+    "Petra Lazić",
+    "Linshan Liu",
+    "Mateusz B. Majka"
+  ],
+  "summary": "We consider a class of optimization problems on the space of probability measures motivated by the mean-field approach to studying neural networks. Such problems can be solved by constructing continuous-time gradient flows that converge to the minimizer of the energy function under consideration, and then implementing discrete-time algorithms that approximate the flow. In this work, we focus on the Fisher-Rao gradient flow and we construct an interacting particle system that approximates the flow as its mean-field limit. We discuss the connection between the energy function, the gradient…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-02-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2610.24403",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.24403",
+  "title": "Prototype-Guided Optimization of Quantum Data Embeddings with Linear Cost",
+  "authors": [
+    "Seokhoon Jeong",
+    "Daniel K. Park"
+  ],
+  "summary": "In supervised quantum machine learning with classical data, classification performance critically depends on the geometry induced by quantum data embedding. Existing data-adaptive approaches rely on pairwise fidelity evaluations between samples, which scale as $O(B^2)$ for $B$ samples and create a computational bottleneck in iterative embedding optimization. To address this issue, we propose a prototype-guided framework for efficient data-adaptive quantum embedding. Using class-prototype separation and sample-to-prototype compactness, we derive a measurable lower certificate for…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-10-17",
+  "updated": "2026-10-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

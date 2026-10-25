@@ -1,0 +1,22 @@
+{
+  "key": "2607.26271",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.26271",
+  "title": "Sharp bounds for the fractional chromatic number of high-girth $d$-degenerate graphs",
+  "authors": [
+    "Peter Allen",
+    "Abhishek Dhawan",
+    "Jonathan A. Noel"
+  ],
+  "summary": "Martinsson and Steiner recently proved that the fractional chromatic number of any $d$-degenerate triangle-free graph $G$ satisfies $χ_f(G) = O\\left(\\frac{d}{\\log d}\\right)$. They further conjectured a sharp leading constant $1 + o(1)$. In this paper, we confirm their upper bound conjecture for graphs having girth at least $5$. Our proof is constructive: it gives an efficient randomized algorithm that, with high probability, computes a fractional coloring of weight at most $(1 + o(1))\\frac{d}{\\log d}$ in such graphs. Furthermore, we establish their conjectured lower bound in a stronger form:…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM"
+  ],
+  "published": "2026-07-28",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

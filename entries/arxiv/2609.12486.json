@@ -1,0 +1,24 @@
+{
+  "key": "2609.12486",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.12486",
+  "title": "Adaptive Agent Design",
+  "authors": [
+    "Raj Kiriti Velicheti",
+    "Subhonmesh Bose",
+    "Tamer Başar"
+  ],
+  "summary": "We consider an agent acting against a general non-Markovian environment. The agent maintains its agent states, but is free to choose a transition kernel across those states and optimize its state-feedback control policies. We study the bi-level agent design problem that optimizes the transition kernel and the policy it induces, given said kernel with offline data of observations and actions obtained via a behavioral policy. For general environments, we show that a soft $Q$-learning algorithm converges almost surely to the fixed point of a soft Bellman equation defined by the stationary…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.AI",
+    "cs.GT",
+    "math.OC"
+  ],
+  "published": "2026-09-11",
+  "updated": "2026-09-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

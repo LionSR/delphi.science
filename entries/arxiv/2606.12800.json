@@ -1,0 +1,19 @@
+{
+  "key": "2606.12800",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.12800",
+  "title": "Massively parallel flow routing and drainage area determination",
+  "authors": [
+    "Wolfgang Bangerth"
+  ],
+  "summary": "Digital elevation models (DEMs) have reached resolutions and sizes that only parallel computaters can efficiently process. One important application of DEMs is predicting how much water flows where, the so-called ``flow routing problem'' (a variation of which is the problem of determining the drainage area upstream of a point in a DEM). The traditional algorithm for flow routing is sequential, and attempts to parallelize this method have so far only been moderately successful. Herein, we build on earlier work in Richardson et al. (2014) and propose an algorithm and several variations that…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-11",
+  "updated": "2026-06-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

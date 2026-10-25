@@ -1,0 +1,24 @@
+{
+  "key": "2602.12854",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.12854",
+  "title": "Hyb-Adam-UM: hybrid ultrametric-aware mtDNA phylogeny reconstruction",
+  "authors": [
+    "Dmitrii Chaikovskii",
+    "Weilai Qu",
+    "Boris Melnikov",
+    "Ye Zhang",
+    "Yuehong Zhao"
+  ],
+  "summary": "Motivation: mtDNA distance matrices are standard inputs for distance-based phylogeny, but computing all pairwise alignments is costly. Missing entries can degrade inferred topology and branch lengths, and generic matrix-completion methods may disrupt tree-like (ultrametric) structure. Results: We propose Hyb-Adam-UM, which starts from an alignment-limited Needleman-Wunsch distance backbone and completes the matrix by minimizing a robust triplet ultrametric-violation functional. An Adam-style finite-difference optimizer updates only missing entries while enforcing symmetry, non-negativity,…",
+  "domain": "q-bio.PE",
+  "tags": [
+    "q-bio.PE",
+    "math.NA"
+  ],
+  "published": "2026-02-13",
+  "updated": "2026-02-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

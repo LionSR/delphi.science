@@ -1,0 +1,20 @@
+{
+  "key": "2607.05024",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.05024",
+  "title": "Post-Learning Inference for Combinatorial Optimizers with High-Dimensional Sparse Contextual Information via Minimal Directional Perturbation",
+  "authors": [
+    "Pengyu Li",
+    "Shuting Shen"
+  ],
+  "summary": "We study post-learning inference for structural properties of data-dependent combinatorial optimizers. The target is whether an oracle optimizer, rather than a latent parameter or smooth functional, belongs to a prescribed class, such as a category-mix, inventory, or resource-feasibility class. We focus on a high-dimensional contextual multinomial logit model with sequentially adaptive data collection, where the parameter-to-optimizer map is discontinuous and the policy induces temporal dependence. We propose a novel perturbation test based on a nonsmooth max-difference revenue statistic…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-07-06",
+  "updated": "2026-07-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

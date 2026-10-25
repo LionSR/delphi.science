@@ -1,0 +1,21 @@
+{
+  "key": "2610.08199",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.08199",
+  "title": "Efficient Posterior Sampling for $\\mathbb Z_2$ Synchronization",
+  "authors": [
+    "Zhangsong Li"
+  ],
+  "summary": "Consider the $\\mathbb Z_2$ synchronization problem \\[ \\boldsymbol{Y} = \\fracλ{\\sqrt n} θθ^{\\top} + \\boldsymbol{Z}, \\] where $θ$ is uniform on $\\{-1,1\\}^n$ and $\\boldsymbol{Z}$ is an independent Gaussian Wigner matrix with off-diagonal variance one. We give a polynomial-time posterior sampling algorithm for every fixed $λ>1$, for which the conditional output law converges to the posterior in total variation, in expectation over the observation. The construction combines sequential TAP proposals with an independence Metropolis correction. The key is to control signed overlaps after logarithmic…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.DS",
+    "math.ST"
+  ],
+  "published": "2026-10-06",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

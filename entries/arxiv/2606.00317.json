@@ -1,0 +1,22 @@
+{
+  "key": "2606.00317",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.00317",
+  "title": "Generalized Model Predictive Path Integral Control as Expectation--Maximization",
+  "authors": [
+    "Jiarui Wang",
+    "Sina Sharifi",
+    "Mahyar Fazlyab"
+  ],
+  "summary": "Model Predictive Path Integral (MPPI) control is a powerful sampling-based method for solving stochastic optimal control problems and has enabled real-time control in complex robotic systems. Despite its empirical success, its theoretical understanding remains limited. In this work, we show that MPPI can be interpreted as a special case of the Expectation-Maximization (EM) algorithm applied to a probabilistic inference formulation of optimal control. This perspective leads to a generalized EM-MPPI framework that extends MPPI beyond the commonly used Gaussian parameterization. We analyze the…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

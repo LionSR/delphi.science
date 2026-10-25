@@ -1,0 +1,22 @@
+{
+  "key": "2605.19760",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.19760",
+  "title": "Heuristic approaches for solving a bilevel optimistic scheduling problem on parallel machines",
+  "authors": [
+    "Quentin Schau",
+    "Federico Della Croce",
+    "Olivier Ploton",
+    "Vincent t'Kindt"
+  ],
+  "summary": "This work addresses the uniform parallel machine scheduling problem within an optimistic bilevel optimization framework. The leader seeks to minimize the weighted number of tardy jobs, while the follower aims to minimize the total completion time across a set of uniform machines. The hierarchical decision-making process of the bilevel problem makes designing effective heuristics challenging. To tackle this, we exploit a property of the follower that enables the construction of optimal schedules. From this property, we derive an effective branching scheme that simultaneously accounts for both…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

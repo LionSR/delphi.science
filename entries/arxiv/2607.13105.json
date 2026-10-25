@@ -1,0 +1,24 @@
+{
+  "key": "2607.13105",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.13105",
+  "title": "Biased-Noise Quantum Reed-Solomon Codes and a Tornado Concatenation for Cat Qubits",
+  "authors": [
+    "Cheng-You Ho",
+    "Daniel Wang",
+    "Simba Shi",
+    "Justin Luo",
+    "Henry Ng"
+  ],
+  "summary": "Dissipative cat qubits exponentially suppress one Pauli error channel with the mean photon number, leaving the conjugate bit-flip error as the dominant failure mode. This strong noise bias makes the full machinery of general quantum error correction unnecessary: a code need only protect against a single error type, and any classical linear code can be promoted to a Clifford stabilizer code that does exactly this. We use this observation to build a bit-flip-only quantum Reed-Solomon (RS) code. Starting from the maximum-distance-separable RS code [7, 3, 5] over GF($2^3$), we binary-expand it…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.IT"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-07-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

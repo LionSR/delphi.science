@@ -1,0 +1,22 @@
+{
+  "key": "2601.04830",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.04830",
+  "title": "Noise tailoring for error mitigation and for diagnozing digital quantum computers",
+  "authors": [
+    "Thibault Scoquart",
+    "Hugo Perrin",
+    "Kyrylo Snizhko"
+  ],
+  "summary": "Error mitigation (EM) methods are crucial for obtaining reliable results in the realm of noisy intermediate-scale quantum (NISQ) computers, where noise significantly impacts output accuracy. Some EM protocols are particularly efficient for specific types of noise. Yet the noise in the actual hardware may not align with that. In this article, we introduce Noise Tailoring (NT) -- an innovative strategy designed to modify the structure of the noise associated with two-qubit gates through statistical sampling. We perform classical emulation of the protocol behavior and find that the NT+EM…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.supr-con"
+  ],
+  "published": "2026-01-08",
+  "updated": "2026-03-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

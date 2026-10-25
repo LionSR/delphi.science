@@ -1,0 +1,23 @@
+{
+  "key": "2607.00320",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.00320",
+  "title": "From Spectral Methods to Sample Complexity Bounds for Fourier Neural Operators",
+  "authors": [
+    "Nisha Chandramoorthy",
+    "Daniel Sanz-Alonso",
+    "Nathan Waniorek"
+  ],
+  "summary": "We establish approximation and learning guarantees for Fourier neural operators (FNOs) applied to time-$T$ solution operators of dissipative evolution equations. The analysis builds on the premise that FNOs can efficiently approximate and learn solution operators whenever these operators admit stable and accurate spectral discretizations. To formalize this idea, we introduce classes of evolution operators defined through spectral methods and derive FNO approximation bounds and polynomial sample complexity guarantees for these classes. For equations with polynomial nonlinearities, the…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

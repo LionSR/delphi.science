@@ -1,0 +1,21 @@
+{
+  "key": "2609.11049",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11049",
+  "title": "A deterministic $(1+\\varepsilon)^n$ approximation for the permanent of a nonnegative matrix",
+  "authors": [
+    "Dingding Dong",
+    "Vishesh Jain"
+  ],
+  "summary": "For every fixed $0<\\varepsilon\\le1$, we give a deterministic strongly polynomial algorithm that, given a nonnegative matrix $A\\in\\mathbb{R}_{\\ge0}^{n\\times n}$, returns $Q$ satisfying $\\operatorname{per} A\\le Q\\le(1+\\varepsilon)^n\\operatorname{per} A$.",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2603.11527",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.11527",
+  "title": "Error-Mitigated Hamiltonian Simulation: Complexity Analysis and Optimization for Near-Term and Early-Fault-Tolerant Quantum Computers",
+  "authors": [
+    "Keisuke Murota",
+    "Synge Todo",
+    "Suguru Endo"
+  ],
+  "summary": "Simulating real-time dynamics under a Hamiltonian is a central goal of quantum information science. While numerous Hamiltonian-simulation quantum algorithms have been proposed, the effects of physical noise have rarely been incorporated into their performance analysis, despite the non-negligible noise levels of quantum devices. We present an end-to-end complexity analysis of noisy Hamiltonian simulation combined with quantum error mitigation (QEM) to answer how many circuit runs are required to reach a given target accuracy. Because the QEM sampling overhead grows exponentially with the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-12",
+  "updated": "2026-08-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

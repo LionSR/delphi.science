@@ -1,0 +1,20 @@
+{
+  "key": "2609.10924",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10924",
+  "title": "Why we should condition denoising diffusion generative models on windows of past observations",
+  "authors": [
+    "Matthias Morzfeld",
+    "Daniel Hodyss"
+  ],
+  "summary": "Data assimilation (DA) is, traditionally, a cycling process that relies on time-dependent priors to propagate information from past observations to future cycles. Using denoising diffusion generative modeling for DA is challenging because standard approaches use a fixed training data set, which in turn leads to a static prior that ignores information from past observations. Because past observations are ignored, DA systems with static priors lead to larger posterior errors than cycling DA systems. Incorporating time-dependent priors into generative models, however, requires expensive and…",
+  "domain": "math-ph",
+  "tags": [
+    "math-ph"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2609.30628",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.30628",
+  "title": "OpenHail: An Event-Driven Gymnasium Environment for Electric Ride-Hailing Fleet Control",
+  "authors": [
+    "Tommaso Schettini",
+    "Nicholas D. Kullman",
+    "Jorge E. Mendoza"
+  ],
+  "summary": "Machine-learning policies have attracted increasing interest for ride-hailing fleet control in recent years. Reinforcement learning, in particular, requires a structured simulation environment that specifies observations, actions, rewards, and decision epochs for training and evaluation. For electric fleets, this environment must also capture the interaction among stochastic demand, vehicle operations, and capacitated charging infrastructure. We present OpenHail, an open-source Gymnasium environment for joint control of electric ride-hailing fleets. Its fixed-size observation--action…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-09-24",
+  "updated": "2026-09-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

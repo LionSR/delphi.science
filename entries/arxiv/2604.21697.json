@@ -1,0 +1,20 @@
+{
+  "key": "2604.21697",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.21697",
+  "title": "Structure-preserving approximation for non-isothermal phase-field models in melt flow",
+  "authors": [
+    "Aaron Brunk",
+    "Dennis Höhn"
+  ],
+  "summary": "This work presents a conforming finite-element scheme for the non-isothermal Allen-Cahn-Navier-Stokes system, incorporating periodic, closed, and thermal boundary conditions. The system comprises the incompressible Navier-Stokes equations coupled with the non-isothermal Allen-Cahn equation, which includes a non-conserved phase-field equation and a temperature equation. The proposed numerical scheme preserves entropy production exactly and maintains total energy conservation up to a negative numerical dissipation. Convergence tests in both space and time are conducted, and representative…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-23",
+  "updated": "2026-04-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2602.00324",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.00324",
+  "title": "Dual Quaternion SE(3) Synchronization with Recovery Guarantees",
+  "authors": [
+    "Jianing Zhao",
+    "Linglingzhi Zhu",
+    "Anthony Man-Cho So"
+  ],
+  "summary": "Synchronization over the special Euclidean group SE(3) aims to recover absolute poses from noisy pairwise relative transformations and is a core primitive in robotics and 3D vision. Standard approaches often require multi-step heuristic procedures to recover valid poses, which are difficult to analyze and typically lack theoretical guarantees. This paper adopts a dual quaternion representation and formulates SE(3) synchronization directly over the unit dual quaternion. A two-stage algorithm is developed: A spectral initializer computed via the power method on a Hermitian dual quaternion…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.CV",
+    "cs.RO",
+    "eess.SP"
+  ],
+  "published": "2026-01-30",
+  "updated": "2026-05-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

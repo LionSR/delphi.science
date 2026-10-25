@@ -1,0 +1,23 @@
+{
+  "key": "2606.09686",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.09686",
+  "title": "Golden Ruler: A Numeric Format Catalog with Bit-Exact Conformance Vectors for FP8, BF16, MXFP4, and Microscaling Formats",
+  "authors": [
+    "Dmitrii Vasilev"
+  ],
+  "summary": "Numeric format proliferation in machine learning hardware -- FP8 (E4M3 and E5M2), BF16, MXFP4, microscaling block formats, and dozens of research variants -- has outpaced the availability of vendor-neutral, bit-exact reference material. Engineers porting models across accelerators encounter silent divergences that are difficult to diagnose without a shared ruler. This paper describes a catalog of 109 numeric formats spanning 12 clusters (83 at v2; the count is a catalog invariant, not a fixed number), a suite of six bit-exact conformance packs covering GF16, MXFP4 element, BF16, FP8 E4M3,…",
+  "domain": "cs.AR",
+  "tags": [
+    "cs.AR",
+    "cs.AI",
+    "cs.MS",
+    "cs.PF",
+    "math.NA"
+  ],
+  "published": "2026-06-08",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2606.02263",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.02263",
+  "title": "Exact Sampling of Permutations with a Fixed Longest Increasing Subsequence",
+  "authors": [
+    "Peter Clifford",
+    "Raphaël Clifford"
+  ],
+  "summary": "We study exact uniform sampling of permutations of length $n$ whose longest increasing subsequence (LIS) has prescribed length $k$. Our main result is, to the best of our knowledge, the first polynomial-time exact sampler for this problem, valid for every $1\\le k\\le n$. Via the Robinson--Schensted correspondence the problem reduces to sampling a Young diagram with first row of length $k$ from the hook-length-squared (conditioned Plancherel) law. We sample this shape one coordinate at a time, where each conditional weight, a sum over exponentially many completions, collapses, through the…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-07-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

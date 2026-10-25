@@ -1,0 +1,23 @@
+{
+  "key": "2604.03450",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.03450",
+  "title": "High-Order Matrix Control Barrier Functions: Well-Posedness and Feasibility via Matrix Relative Degree",
+  "authors": [
+    "Samuel G. Gessow",
+    "Pio Ong",
+    "Aaron D. Ames",
+    "Brett T. Lopez"
+  ],
+  "summary": "Control barrier functions (CBFs) provide an effective framework for enforcing safety in dynamical systems with scalar constraints. However, many safety constraints are more naturally expressed as matrix-valued conditions, such as positive definiteness or eigenvalue bounds - scalar formulations introduce potential nonsmoothness that complicates analysis. Matrix control barrier functions (MCBFs) address this limitation by directly enforcing matrix-valued safety constraints. Yet for constraints where the control input does not appear in the first derivative, high-order formulations are…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-04-03",
+  "updated": "2026-10-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

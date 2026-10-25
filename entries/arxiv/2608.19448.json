@@ -1,0 +1,23 @@
+{
+  "key": "2608.19448",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19448",
+  "title": "Efficient Classical Simulation of Weakly Interacting Fermion Dynamics",
+  "authors": [
+    "Chu Zhao",
+    "Iman Marvian",
+    "Yu Tong"
+  ],
+  "summary": "We consider the task of simulating the real-time dynamics of weakly interacting fermionic systems. In particular, we focus on computing the expectation value of a local observable $A$ at time $t$. By analyzing the convergence of the perturbative expansion in the interaction strength $λ$ for the Heisenberg-picture observable, we propose a polynomial-time algorithm for estimating this expectation value in the weakly interacting regime $λ|t|^{2D+1}=\\mathcal{O}(1)$, when the Hamiltonian is geometrically local on a $D$-dimensional lattice. Importantly, this condition is independent of the system…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "math-ph",
+    "math.NA"
+  ],
+  "published": "2026-08-19",
+  "updated": "2026-08-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

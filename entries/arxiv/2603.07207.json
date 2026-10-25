@@ -1,0 +1,22 @@
+{
+  "key": "2603.07207",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.07207",
+  "title": "Online Bidding for Contextual First-Price Auctions with Budgets under One-Sided Information Feedback",
+  "authors": [
+    "Zeng Fu",
+    "Jiashuo Jiang",
+    "Yige Wang",
+    "Yuan Zhou"
+  ],
+  "summary": "In this paper, we study learning to bid in repeated first-price auctions with a hard budget constraint. We focus on one-sided information feedback: the highest competing bid is observed after a loss but remains unobserved after a win. The competing bid depends on the impression context through an unknown coefficient and additive noise with an unknown distribution. To learn this model from censored observations, we propose a regression method based on conditional quantile invariance. Combining this estimator with bid elimination and a dual update procedure, we obtain expected regret growing…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-07",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

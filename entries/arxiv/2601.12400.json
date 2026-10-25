@@ -1,0 +1,22 @@
+{
+  "key": "2601.12400",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.12400",
+  "title": "BiCoLoR: Communication-Efficient Optimization with Bidirectional Compression and Local Training",
+  "authors": [
+    "Laurent Condat",
+    "Artavazd Maranjyan",
+    "Peter Richtárik"
+  ],
+  "summary": "Slow and costly communication is often the main bottleneck in distributed optimization, especially in federated learning where it occurs over wireless networks. We introduce BiCoLoR, a communication-efficient optimization algorithm that combines two widely used and effective strategies: local training, which increases computation between communication rounds, and compression, which encodes high-dimensional vectors into short bitstreams. While these mechanisms have been combined before, compression has typically been applied only to uplink (client-to-server) communication, leaving the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-01-18",
+  "updated": "2026-01-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

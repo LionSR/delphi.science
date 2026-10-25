@@ -1,0 +1,22 @@
+{
+  "key": "2606.12478",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.12478",
+  "title": "Boltzmann Attention: Learnable Ising Couplings for Cooperative Attention",
+  "authors": [
+    "Gilhan Kim",
+    "Daniel K. Park"
+  ],
+  "summary": "Attention mechanisms are central to modern sequence models, yet standard attention computes relevance primarily through individual query--key similarities. Although softmax normalization introduces competition among positions, a standard attention layer does not explicitly parameterize learnable interactions between attention decisions. This limits its ability to directly model cooperative or antagonistic co-attention structure within the attention mechanism itself. We propose Boltzmann attention, an energy-based generalization in which attention patterns are governed by an interacting Ising…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cond-mat.stat-mech",
+    "quant-ph"
+  ],
+  "published": "2026-06-10",
+  "updated": "2026-06-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

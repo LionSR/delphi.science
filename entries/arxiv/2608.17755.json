@@ -1,0 +1,22 @@
+{
+  "key": "2608.17755",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.17755",
+  "title": "A (Purely) Graph-Theoretic Approach to Synchronization of Nonlinear Dynamical Networks",
+  "authors": [
+    "Aandrew Baggio Sahaya Arokiadoss",
+    "G. Arunkumar"
+  ],
+  "summary": "Synchronizing nonlinear dynamical networks typically requires solving matrix inequalities or detailed system models, which fail for large networks. This paper offers a simple fix : a purely graph-theoretic framework using only a single Lipschitz-like bound on the dynamics. Coupling strengths are computed directly from the digraph, bypassing inequality solvers entirely. The method succeeds where existing approaches encounter infeasibility due to connectivity patterns. It examines only $n-1$ directed paths per strongly connected component versus $\\frac{n(n-1)}{2}$ undirected paths before,…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.DS",
+    "nlin.CD"
+  ],
+  "published": "2026-08-18",
+  "updated": "2026-08-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

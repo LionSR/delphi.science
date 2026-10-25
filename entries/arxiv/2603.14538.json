@@ -1,0 +1,22 @@
+{
+  "key": "2603.14538",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.14538",
+  "title": "Reversible Lifetime Semantics for Quantum Programs",
+  "authors": [
+    "Simone Faro",
+    "Francesco Pio Marino",
+    "Gabriele Messina"
+  ],
+  "summary": "Reversible computation requires that intermediate data be explicitly undone rather than discarded. In quantum programming, this principle appears as uncomputation, usually treated as a technical cleanup mechanism. We instead present uncomputation as a semantic foundation. In the Qutes language, we introduce a formal model of \\emph{Scope-Bounded Liveness-Guided Uncomputation}, where lexical scope bounds variable lifetime and static liveness and entanglement analysis determine the earliest safe reclamation point. We define semantic lifetime and a Restoration Invariant ensuring that temporary…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.PL"
+  ],
+  "published": "2026-03-15",
+  "updated": "2026-03-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

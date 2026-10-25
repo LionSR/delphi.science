@@ -1,0 +1,20 @@
+{
+  "key": "2607.12877",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12877",
+  "title": "From Manifold Identification to Newton Acceleration on Intersections: Sparse Stiefel Optimization",
+  "authors": [
+    "Shixiang Chen",
+    "Wen Huang"
+  ],
+  "summary": "We study a Newton acceleration for sparse composite optimization on the Stiefel manifold. The main difficulty is geometric: the active manifold identified by the nonsmooth regularizer may fail to intersect the Stiefel manifold transversely, which obstructs a Riemannian Newton step on the identified manifold. In the transverse case, we prove local identification of the ManPG tangent proximal mapping. For nontransverse cases, we introduce an off-diagonally perturbed Stiefel family that generically restores the identification geometry while yielding an \\(O(\\|Δ\\|_F)\\)-KKT guarantee for the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-14",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

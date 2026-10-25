@@ -1,0 +1,24 @@
+{
+  "key": "2603.02429",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.02429",
+  "title": "Dimension-Independent Convergence of Underdamped Langevin Monte Carlo in KL Divergence",
+  "authors": [
+    "Shiyuan Zhang",
+    "Qiwei Di",
+    "Xuheng Li",
+    "Quanquan Gu"
+  ],
+  "summary": "Underdamped Langevin dynamics (ULD) is a widely-used sampler for Gibbs distributions $π\\propto e^{-V}$, and is often empirically effective in high dimensions. However, existing non-asymptotic convergence guarantees for discretized ULD typically scale polynomially with the ambient dimension $d$, leading to vacuous bounds when $d$ is large. The main known dimension-free result concerns the randomized midpoint discretization in Wasserstein-2 distance (Liu et al.,2023), while dimension-independent guarantees for ULD discretizations in KL divergence have remained open. We close this gap by…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-03-02",
+  "updated": "2026-03-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2607.12138",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.12138",
+  "title": "Broken-space Additive Schwarz Mass Inverse Approximations and (Block) Preconditioning",
+  "authors": [
+    "Oliver A. Krzysik",
+    "Ben S. Southworth",
+    "Golo A. Wimmer"
+  ],
+  "summary": "Finite-element mass matrix solves and approximate inverses arise often in explicit time integration as well as Schur-complement-based block preconditioning. A diagonal approximation of the mass matrix is cheap and widely used, but can be a poor approximation, particularly for high-order elements. This paper introduces a broken-space additive Schwarz (BRAS) mass inverse approximation, formed by applying exact element-local inverse mass matrices on the broken finite-element space and averaging the result back to the conforming space. The construction uses the same element matrices and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-13",
+  "updated": "2026-07-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

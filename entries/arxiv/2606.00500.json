@@ -1,0 +1,23 @@
+{
+  "key": "2606.00500",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.00500",
+  "title": "Easy, robust approximate message passing for planted spike models",
+  "authors": [
+    "Misha Ivkov",
+    "Tselil Schramm"
+  ],
+  "summary": "We present a simple and efficient algorithm for robust approximate message passing (AMP) in the spiked matrix setting. In particular, let $\\varepsilon$ be a sufficiently small constant, and suppose that $X \\in \\mathbb R^{n \\times n}$ is a Gaussian matrix with a planted rank-$1$ spike, and $E \\in \\mathbb R^{n \\times n}$ is an adversarially chosen matrix supported on an $\\varepsilon n \\times \\varepsilon n$ principal minor. Let $v_{\\mathrm{AMP}}(X)$ be the output of an AMP iteration on the uncorrupted matrix $X$. We give a procedure that, given access only to the corrupted matrix $Y = X + E$,…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "cs.LG",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-05-30",
+  "updated": "2026-05-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2609.22495",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.22495",
+  "title": "Combinatorial Optimization Augmented Machine Learning for Dynamic Electric Autonomous Dial-a-Ride Problem",
+  "authors": [
+    "Yue Su",
+    "Léa Ricard"
+  ],
+  "summary": "This study introduces a decision-epoch-based dynamic electric autonomous dial-a-ride problem (Dyn-EADARP), in which incoming requests are collected and processed at periodic decision epochs. A key decision is not only how to serve requests, but also when to dispatch them. At each decision epoch, the service provider decides which requests to serve and which to postpone, while jointly determining vehicle routes, schedules, and charging decisions. Unexecuted parts of existing plans can be revised as new information becomes available. To solve this problem, we develop an ML--CO policy following…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-18",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

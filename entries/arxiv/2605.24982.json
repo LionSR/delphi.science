@@ -1,0 +1,23 @@
+{
+  "key": "2605.24982",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.24982",
+  "title": "A Guided Tour of Modern Domain Decomposition: From Schwarz Iterations to Robust Preconditioners and HPC Implementations",
+  "authors": [
+    "Victorita Dolean",
+    "Pierre Jolivet",
+    "Frédéric Nataf",
+    "Pierre-Henri Tournier"
+  ],
+  "summary": "Domain decomposition methods (DDMs) provide a unifying framework for the scalable numerical solution of partial differential equations. Originating from Schwarz's alternating method, they have evolved into a rich family of algorithms that combine local robustness with global convergence acceleration and natural parallelism. Over the past decades, domain decomposition has played a central role in enabling large-scale simulations in numerous applications. This chapter presents an overview of modern DDMs, with a particular emphasis on scalable preconditioning techniques for challenging…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-05-24",
+  "updated": "2026-05-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

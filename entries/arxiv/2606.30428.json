@@ -1,0 +1,21 @@
+{
+  "key": "2606.30428",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.30428",
+  "title": "Computing sieve integrals using LattE, and the density of integers with a localized divisor",
+  "authors": [
+    "Sary Drappeau",
+    "Adrien Mounier"
+  ],
+  "summary": "We consider the problem of estimating numerically integrals of the shape $$ \\int_P \\frac{dt}{t_1 \\dotsb t_k} $$ where $P \\in {\\mathbb R}_{>0}^k$ is a convex polytope, $t=(t_1,\\dotsc, t_k)$ and $d t$ is the Lebesgue measure. This type of integral appears frequently in main terms of sieve theory. We propose a simple method, based on the LattE software for integration of polynomials over polytopes, which computes rigorous bounds on this integral in polynomial time with respect to the precision (in bits). We test the method on several examples from the literature of sieve theory. We apply our…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.NA"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

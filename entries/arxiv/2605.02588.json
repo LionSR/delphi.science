@@ -1,0 +1,21 @@
+{
+  "key": "2605.02588",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.02588",
+  "title": "S-CAD: Selective Classical Advantage Distillation for Quantum Conference Key Agreement",
+  "authors": [
+    "Trevor Thomas",
+    "Walter O. Krawec",
+    "Bing Wang"
+  ],
+  "summary": "Quantum conference key agreement (QCKA) protocols utilize GHZ states to establish shared group keys between multiple parties. While previous work has shown that standard Classical Advantage Distillation (CAD) protocols can sometimes benefit QCKA performance, it was unknown if past results were asymptotically tight. In this work, we design a new CAD protocol, \"Selective Classical Advantage Distillation (S-CAD)\", for QCKA, which generalizes prior QCKA+CAD work and allows the parties to selectively enable or disable CAD. We derive an asymptotic proof of security against general coherent…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-04",
+  "updated": "2026-05-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

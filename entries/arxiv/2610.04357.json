@@ -1,0 +1,20 @@
+{
+  "key": "2610.04357",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.04357",
+  "title": "Checkable NTK Positivity and Finite-Width Gradient Descent for Scalar- and Vector-Valued PINNs with Strong-Form, Weak-Form, and Nonlocal Linear Constraints",
+  "authors": [
+    "Zifan Lyu"
+  ],
+  "summary": "We give checkable positive-definiteness criteria for the limiting neural tangent kernel (NTK) and high-probability finite-width gradient-descent guarantees for scalar- or vector-valued physics-informed neural networks (PINNs) with linear constraints. The constraints may be strong-form differential rows of any fixed finite order, including coupled systems, with any linear initial or boundary conditions; weak-form residual and boundary functionals; or finite-measure nonlocal observations such as integral, nonlocal-diffusion, and Dirac-data rows, all in any dimension. For each class, positive…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-10-03",
+  "updated": "2026-10-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

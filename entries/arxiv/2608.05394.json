@@ -1,0 +1,20 @@
+{
+  "key": "2608.05394",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.05394",
+  "title": "Feasibility-Preserving Quantum Search for Constrained Transportation Routing",
+  "authors": [
+    "Dahye Kim",
+    "Monika Filipovska"
+  ],
+  "summary": "Transportation routing problems such as the Traveling Salesperson Problem (TSP) and the Vehicle Routing Problem (VRP) are characterized by strict feasibility requirements involving customer assignment and visit rules, route sequencing, and depot-return logic alongside cost minimization. Most quantum routing formulations adopt Quadratic Unconstrained Binary Optimization (QUBO) encodings, where feasibility is incorporated indirectly via penalty terms in the cost Hamiltonian. While convenient for standard implementations of the Quantum Approximate Optimization Algorithm (QAOA), QUBO encodings…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-05",
+  "updated": "2026-08-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

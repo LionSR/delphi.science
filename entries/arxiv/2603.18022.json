@@ -1,0 +1,24 @@
+{
+  "key": "2603.18022",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.18022",
+  "title": "Using Laplace Transform To Optimize the Hallucination of Generation Models",
+  "authors": [
+    "Cheng Kang",
+    "Xinye Chen",
+    "Daniel Novak",
+    "Xujing Yao"
+  ],
+  "summary": "To explore the feasibility of avoiding the confident error (or hallucination) of generation models (GMs), we formalise the system of GMs as a class of stochastic dynamical systems through the lens of control theory. Numerous factors can be attributed to the hallucination of the learning process of GMs, utilising knowledge of control theory allows us to analyse their system functions and system responses. Due to the high complexity of GMs when using various optimization methods, we cannot figure out their solution of Laplace transform, but from a macroscopic perspective, simulating the source…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.AI",
+    "eess.SY"
+  ],
+  "published": "2026-03-05",
+  "updated": "2026-03-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

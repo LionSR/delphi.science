@@ -1,0 +1,21 @@
+{
+  "key": "2610.03794",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03794",
+  "title": "Generalised Bit-Vector Abstractions for Formal Verification of Quantum Error-Detection and Entanglement Circuits over {H,X,C-NOT}: CSS Constructions, Soundness, and Mutation-Based Validation",
+  "authors": [
+    "Arun Govindankutty"
+  ],
+  "summary": "Formal verification of quantum circuits becomes difficult as circuit size grows because exhaustive reasoning over the Hilbert space is computationally expensive. In previous work [1], we introduced a bit-vector abstraction that separates superposition tracking from basis-state behavior, enabling SMT-based verification of fixed-size error-detection and entanglement circuits built from H, X, and C-NOT gates. This paper extends the framework in five directions. First, we generalise correctness properties to parametrised repetition and concatenated phase-flip codes with up to 101 logical…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET",
+    "cs.LO"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

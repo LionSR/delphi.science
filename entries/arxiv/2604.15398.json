@@ -1,0 +1,23 @@
+{
+  "key": "2604.15398",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.15398",
+  "title": "Python library supporting Discrete Variational Formulations and training solutions with Collocation-based Robust Variational Physics Informed Neural Networks (DVF-CRVPINN)",
+  "authors": [
+    "Tomasz Służalec",
+    "Marcin Łoś",
+    "Askold Vilkha",
+    "Maciej Paszyński"
+  ],
+  "summary": "We explore the possibility of solving Partial Differential Equations (PDEs) using discrete weak formulations. We propose a programming environment for defining a discrete computational domain, introducing discrete functions defined over a set of points, constructing discrete inner products, and introducing discrete weak formulations employing Kronecker delta test functions. Building on this setup, we propose a discrete neural network representation, training the solution function defined over a discrete set of points and employing discrete finite difference derivatives in the automatic…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-04-16",
+  "updated": "2026-04-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2610.30617",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.30617",
+  "title": "Retraction-Free Nonsmooth Optimization on the Stiefel Manifold: Subgradient and Proximal Landing Methods",
+  "authors": [
+    "Zilong Cui",
+    "Tongxin Hu",
+    "Bin Gao",
+    "Ran Gu"
+  ],
+  "summary": "We develop three retraction-free Landing methods for nonsmooth composite optimization over the Stiefel manifold, combining an (approximately) tangential direction with an infeasibility-reducing normal direction. The subgradient Landing method, with normal stepsizes parameterized by $α\\in[0,1]$, has best-iterate complexity bounds $\\mathcal{O}(ε^{-4})$ for surrogate stationarity and $\\mathcal{O}(ε^{-2/(2-α)})$ for feasibility. For $α=0$, it converges locally $R$-linearly under local weak sharpness and mild assumptions. The proximal gradient Landing method computes a tangential direction by…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

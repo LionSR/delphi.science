@@ -1,0 +1,21 @@
+{
+  "key": "2603.24425",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.24425",
+  "title": "Stability in unlimited sampling",
+  "authors": [
+    "José Luis Romero",
+    "Irina Shafkulovska"
+  ],
+  "summary": "Folded sampling replaces clipping in analog-to-digital converters by reducing samples modulo a threshold, thereby avoiding saturation artifacts. We study the reconstruction of bandlimited functions from folded samples and show that, for equispaced sampling patterns, the recovery problem is inherently unstable. We then prove that imposing any a priori energy bound restores stability, and that this regularization effect extends to non-uniform sampling geometries. Our analysis recasts folded-sampling stability as an infinite-dimensional lattice shortest-vector problem, which we resolve via…",
+  "domain": "math.FA",
+  "tags": [
+    "math.FA",
+    "cs.IT"
+  ],
+  "published": "2026-03-25",
+  "updated": "2026-03-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

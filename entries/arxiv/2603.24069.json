@@ -1,0 +1,23 @@
+{
+  "key": "2603.24069",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.24069",
+  "title": "Learning Quantum-Samplers for Stochastic Processes with Quantum Sequence Models",
+  "authors": [
+    "Ximing Wang",
+    "Chengran Yang",
+    "Chidambaram Aditya Somasundaram",
+    "Jayne Thompson",
+    "Mile Gu"
+  ],
+  "summary": "Quantum circuits that generate coherent superpositions of stochastic processes are key to many downstream quantum-accelerated tasks, such as risk analysis, importance sampling, and DNA sequencing. However, traditional methods for designing such circuits from data face immense challenges, given the exponential growth in the size of the associated probability vectors as the desired simulation time horizon increases. Here, we introduce quantum sequence models that leverage a recurrent quantum circuit structure to generate coherent superpositions with circuit complexity that grows linearly with…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-25",
+  "updated": "2026-03-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

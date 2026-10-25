@@ -1,0 +1,19 @@
+{
+  "key": "2607.04995",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04995",
+  "title": "Quadrature rules for the mass and stiffness matrices of finite elements for the wave equation on the 2-, 3- and 4-simplex",
+  "authors": [
+    "W. A. Mulder"
+  ],
+  "summary": "Mass lumping enables explicit time stepping for finite-element discretisation of the wave equation if the resulting quadrature weights are positive and accuracy is preserved. New rules for elements of degree two and three on the 4-simplex are presented. Numerical quadrature for the stiffness matrix can be more efficient than exact evaluation if it requires fewer nodes. For the latter, new rules in two and four space dimensions for the lower-degree elements on the simplex were found, as well as some additional results for three dimensions.",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-06",
+  "updated": "2026-07-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

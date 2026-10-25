@@ -1,0 +1,30 @@
+{
+  "key": "2602.11092",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.11092",
+  "title": "MerLin: A Discovery Engine for Photonic and Hybrid Quantum Machine Learning",
+  "authors": [
+    "Cassandre Notton",
+    "Benjamin Stott",
+    "Philippe Schoeb",
+    "Anthony Walsh",
+    "Grégoire Leboucher",
+    "Vincent Espitalier",
+    "Vassilis Apostolou",
+    "Louis-Félix Vigneux",
+    "Alexia Salavrakos",
+    "Jean Senellart"
+  ],
+  "summary": "Identifying where quantum models may offer practical benefits in near term quantum machine learning (QML) requires moving beyond isolated algorithmic proposals toward systematic and empirical exploration across models, datasets, and hardware constraints. We introduce MerLin, an open-source framework designed as a discovery engine for photonic and hybrid quantum machine learning. MerLin integrates optimized strong simulation of linear optical circuits into standard PyTorch and scikit learn workflows, enabling end-to-end differentiable training of quantum layers. MerLin is designed around…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.PL",
+    "quant-ph"
+  ],
+  "published": "2026-02-11",
+  "updated": "2026-04-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

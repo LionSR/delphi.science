@@ -1,0 +1,22 @@
+{
+  "key": "2607.04828",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.04828",
+  "title": "Mixed precision Newton's method for optimization",
+  "authors": [
+    "Nicolas Brisebarre",
+    "Giuseppe Carrino",
+    "Theo Mary",
+    "Elisa Riccietti"
+  ],
+  "summary": "Second-order optimization methods, such as Newton's algorithm, achieve fast local convergence and high accuracy, but their practical use is often limited by high computational costs. To mitigate this issue, variants such as inexact and quasi-Newton methods are widely used. A complementary and promising approach to improve the efficiency of the method is to employ mixed precision arithmetic, using different floating-point precisions for different operations, based on their impact on the convergence and accuracy of the method. In this work, we perform an error analysis of Newton's method…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-06",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

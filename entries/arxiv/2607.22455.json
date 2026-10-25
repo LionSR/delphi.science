@@ -1,0 +1,30 @@
+{
+  "key": "2607.22455",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.22455",
+  "title": "Modeling and Stabilization of Transport-Dominated Flows",
+  "authors": [
+    "Christopher Agesen",
+    "Sam Bradford",
+    "Abhijnan Dikshit",
+    "Anshi Gupta",
+    "Bhavana Morankar",
+    "Jack Murphy",
+    "Nanda N. Raghunathan",
+    "Karnav Raval",
+    "Lane H. Rogers",
+    "Valeria Barra"
+  ],
+  "summary": "This report explores and compares numerical stabilization methods for transport-dominated flows arising in atmospheric modeling. The Streamline-Upwind (SU) and Streamline-Upwind Petrov-Galerkin (SUPG) stabilization formulations are implemented in Julia's ClimaCore.jl package and Python's Firedrake package for a test problem with slotted-cylinder initial conditions. These methods are compared for their ability to mitigate spurious oscillations while preserving sharp features against existing hyperdiffusion and quasi-monotone limiter methods, alongside various combinations. For this benchmark,…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math-ph",
+    "math.NA"
+  ],
+  "published": "2026-07-24",
+  "updated": "2026-07-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

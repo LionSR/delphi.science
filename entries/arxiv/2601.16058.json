@@ -1,0 +1,22 @@
+{
+  "key": "2601.16058",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.16058",
+  "title": "Fully Functional Weighted Testing for Abrupt and Gradual Location Changes in Functional Time Series",
+  "authors": [
+    "Claudia Kirch",
+    "Hedvika Ranošová",
+    "Martin Wendler"
+  ],
+  "summary": "Change point tests for abrupt changes in the mean of functional data, i.e., random elements in infinite-dimensional Hilbert spaces, are either based on dimension reduction techniques, e.g., based on principal components, or directly based on a functional CUSUM (cumulative sum) statistic. The former have often been criticized as not being fully functional and losing too much information. On the other hand, unlike the latter, they take the covariance structure of the data into account by weighting the CUSUM statistics obtained after dimension reduction with the inverse covariance matrix. In…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-01-22",
+  "updated": "2026-01-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

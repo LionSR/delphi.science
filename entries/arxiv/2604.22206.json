@@ -1,0 +1,20 @@
+{
+  "key": "2604.22206",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.22206",
+  "title": "Gradient regularity for nonlocal double phase equations",
+  "authors": [
+    "Yuzhou Fang",
+    "Chao Zhang"
+  ],
+  "summary": "This paper is devoted to investigating the interior $C^{1, α}$ regularity of viscosity solutions to the nonlocal double phase equations $$ \\int_{\\mathbb{R}^d} \\left(\\frac{|u(x)-u(y)|^{p-2}(u(x)-u(y))}{|x-y|^{d+sp}}+a(x,y)\\frac{|u(x)-u(y)|^{q-2}(u(x)-u(y))}{|x-y|^{d+tq}}\\right)dy=0, $$ where $2\\le p\\le q$, $0<s\\le t<1$, and $a(x, y)\\ge0$. By assuming the Lipschitz continuity of $a(\\cdot)$, we show that the gradient of solution is Hölder continuous, provided the distance of $tq$ and $sp$ is suitably small. As a key ingredient to this conclusion, the Lipschitz property of solutions is also…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-04-24",
+  "updated": "2026-07-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,30 @@
+{
+  "key": "2610.00324",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00324v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00324v1",
+  "title": "Three-Element Lucky Sets of Stirling Permutations",
+  "authors": [
+    "YURAN XIU"
+  ],
+  "summary": "We characterize the three-element sets of lucky car indices that occur when a Stirling permutation of order $n$ is used as a parking function. A set $\\{1,x,y\\}$, with $1<x<y<2n$, is admissible precisely when $x$ is odd, or $x$ is even and $y$ is odd with $x<n$, or both are even with $x+y\\leq2n$. Explicit Stirling words realize every permitted case. The number of admissible sets is $(n-1)(n-2)+2nh-3h(h+1)/2$, where $h=\\lfloor(n-1)/2\\rfloor$. This answers the three-element characterization and enumeration question in Problem 46 of Colmenarejo et al. The complete classification, parking…",
+  "domain": "math.CO",
+  "tags": [
+    "msc:05A05",
+    "Lean formalization",
+    "Stirling permutations",
+    "lucky sets",
+    "parking functions"
+  ],
+  "published": "2026-10-18",
+  "updated": "2026-10-18",
+  "version": 1,
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "none",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

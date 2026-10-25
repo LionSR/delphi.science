@@ -1,0 +1,20 @@
+{
+  "key": "2606.05386",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.05386",
+  "title": "Reinforced random walks with geometric inter-transition times",
+  "authors": [
+    "Mirela G. Coelho",
+    "Fernando P. A. Prado"
+  ],
+  "summary": "We consider interacting vertex-reinforced random walks on a finite graph, each transitioning according to independent geometric holding times of parameter $p_i \\in (0,1]$. Letting $x=X(n)$ be the vector of vertex-occupation proportions up to time $n$, the one-step transition probabilities of walk $i$ are governed by $Q^i(x,p_i)=p_iΠ^i(x)+(1-p_i)I$, where $Π^i(x)$ has rows equal to a probability measure $π^i(x)$ on the vertex set and $I$ is the identity. Its unique invariant measure is thus $π^i(x)$, independent of $p_i$. Consequently, the limiting points of $X(n)$ coincide with those of the…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-06-03",
+  "updated": "2026-07-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

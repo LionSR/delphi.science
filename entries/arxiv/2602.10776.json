@@ -1,0 +1,22 @@
+{
+  "key": "2602.10776",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.10776",
+  "title": "Efficient Operator Selection and Warm-Start Strategy for Excitations in Variational Quantum Eigensolvers",
+  "authors": [
+    "Max Haas",
+    "Thierry N. Kaldenbach",
+    "Thomas Hammerschmidt",
+    "Daniel Barragan-Yani"
+  ],
+  "summary": "We present a novel approach for efficient preparation of electronic ground states, leveraging the optimizer ExcitationSolve [Jäger et al., Comm. Phys. (2025)] and established variational quantum eigensolver-based operator selection methods, such as Energy Sorting (ES). By combining these tools, we demonstrate a computationally efficient protocol that enables the construction of an approximate ground state from a unitary coupled cluster ansatz via a single sweep over the operator pool. Utilizing efficient classical pre-processing to select the majority of relevant operators, this approach…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-11",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

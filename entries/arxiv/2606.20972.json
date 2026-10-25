@@ -1,0 +1,22 @@
+{
+  "key": "2606.20972",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20972",
+  "title": "Neural network approximation in discrete dual norms with adaptive test spaces",
+  "authors": [
+    "Tanakorn Udomworarat",
+    "Ignacio Brevis",
+    "Kristoffer G. van der Zee",
+    "Sergio Rojas"
+  ],
+  "summary": "In robust variational physics-informed neural networks (RVPINNs), the loss function is formulated in terms of the Riesz representative of the variational residual within a discrete test space. This approach guarantees that the loss function is robust with respect to the true error in the energy norm up to a remainder term that depends on both the neural network approximation and the discrete space configuration. However, in problems with localized singularities, steep gradients, or interface layers, a fixed coarse test space may fail to resolve the continuous Riesz representative of the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-06-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

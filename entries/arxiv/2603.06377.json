@@ -1,0 +1,20 @@
+{
+  "key": "2603.06377",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.06377",
+  "title": "Unifying Graph Measures and Stabilizer Decompositions for the Classical Simulation of Quantum Circuits",
+  "authors": [
+    "Julien Codsi",
+    "Tuomas Laakkonen"
+  ],
+  "summary": "Various algorithms have been developed to simulate quantum circuits on classical hardware. Among the most prominent are approaches based on \\emph{stabilizer decompositions} and \\emph{tensor network contraction}. In this work, we present a unified framework that bridges these two approaches, placing them under a common formalism. Using this, we present two new algorithms to simulate an $n$-qubit circuit $C$: one that runs in $\\tilde{O}(T^{\\mathsf{tw}(C)})$ time and the other in $\\tilde{O}(T^{γ\\cdot \\mathsf{tw}(C)})$ time, where $\\mathsf{tw}(C)$ and $\\mathsf{rw}(C)$ refer to the the tree-width…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-06",
+  "updated": "2026-03-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

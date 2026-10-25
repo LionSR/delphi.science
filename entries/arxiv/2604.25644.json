@@ -1,0 +1,20 @@
+{
+  "key": "2604.25644",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.25644",
+  "title": "Efficient Complex-Valued State Preparation on Bucket Brigade QRAM",
+  "authors": [
+    "Alessandro Berti",
+    "Francesco Ghisoni"
+  ],
+  "summary": "Efficient quantum state preparation is a critical component in quantum algorithms that process large classical data, and it is fundamental to realizing quantum advantage in domains such as machine learning, quantum linear algebra, and quantum finance. Building on the framework of~\\cite{berti2025efficient}, which integrates Bucket Brigade QRAM (BBQRAM) with a segment tree to achieve amplitude encoding in polylogarithmic query time, we present two improvements within the same architecture-aware framework. First, we remove the $U_{2\\mathrm{CR}}$ subroutine by classically precomputing the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-04-28",
+  "updated": "2026-04-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

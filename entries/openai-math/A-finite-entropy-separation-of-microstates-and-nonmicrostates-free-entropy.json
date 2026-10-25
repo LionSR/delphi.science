@@ -27,5 +27,17 @@
     "reason": "Answers a finite-entropy question on microstates and nonmicrostates free entropy negatively.",
     "by": "claude-haiku",
     "at": "2026-10-23"
-  }
+  },
+  "discussion": [
+    {
+      "kind": "web",
+      "url": "https://arxiv.org/abs/2610.27243",
+      "title": "On counterexamples to the unification of free entropy",
+      "site": "arXiv.org",
+      "author": "David Jekel",
+      "text": "It has been a long-standing open problem to determine when two versions of Voiculescu's free entropy, $χ$ and $χ^*$, agree. OpenAI recently generated the first example with $-\\infty < χ< χ^*$. We give a detailed presentation of a similar example, and explicitly show the separation between free…",
+      "date": "2026-10-19",
+      "added": "2026-10-24"
+    }
+  ]
 }

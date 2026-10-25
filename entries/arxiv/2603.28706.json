@@ -1,0 +1,21 @@
+{
+  "key": "2603.28706",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.28706",
+  "title": "A Scalable Monolithic Modified Newton Multigrid Framework for Time-Dependent $p$-Navier-Stokes Flow",
+  "authors": [
+    "Nils Margenberg",
+    "Carolin Mehlmann"
+  ],
+  "summary": "Fully implicit tensor-product space-time discretizations of time-dependent $(p,δ)$-Navier-Stokes models yield, on each time step, large nonlinear monolithic saddle-point systems. In the shear-thinning regime $1 0$ and consistency of the reduced time quadrature. Numerical tests demonstrate robustness with respect to model parameters, nonlinear and linear iteration counts, and scalable parallel performance.",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-03-30",
+  "updated": "2026-03-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

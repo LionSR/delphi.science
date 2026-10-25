@@ -1,0 +1,21 @@
+{
+  "key": "2609.08608",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.08608",
+  "title": "Reduction Modulo Binary Polynomials with Logarithmic Feedback Depth",
+  "authors": [
+    "Junyu Zhou",
+    "Kaiyi Zhang"
+  ],
+  "summary": "Polynomial modular reduction is central to binary finite-field arithmetic and repeated Frobenius powering. Top-down shift/XOR folding can use few operations when the nonleading support is sparse, but a tap near the leading term creates a long feedback chain. We formulate this recurrence as inversion of a nilpotent shift operator and factor its inverse by characteristic-two Frobenius powers. The resulting Frobenius-factorized reduction (FFR) applies to every monic binary modulus without materializing a reciprocal or dense reduction matrix, and its shifts can be generated online without a…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "cs.SC"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "2604.04801",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.04801",
+  "title": "Feasibility-Aware Imitation Learning for Benders Decomposition",
+  "authors": [
+    "Bernard T. Agyeman",
+    "Zhe Li",
+    "Ilias Mitrai",
+    "Prodromos Daoutidis"
+  ],
+  "summary": "Mixed-integer optimization problems arise in a wide range of control applications. Benders decomposition is a widely used algorithm for solving such problems by decomposing them into a mixed-integer master problem and a continuous subproblem. A key computational bottleneck is the repeated solution of increasingly complex master problems across iterations. In this paper, we propose a feasibility-aware imitation learning framework that predicts the values of the integer variables of the master problem at each iteration while accounting for feasibility with respect to constraints governing…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-04-06",
+  "updated": "2026-04-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

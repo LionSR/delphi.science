@@ -1,0 +1,21 @@
+{
+  "key": "2603.20889",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20889",
+  "title": "Implementation of QR factorization of tall and very skinny matrices on current GPUs",
+  "authors": [
+    "Jonas Thies",
+    "Melven Röhrig-Zöllner"
+  ],
+  "summary": "We consider the problem of computing a QR (or QZ) decomposition of a real, dense, tall and very skinny matrix. That is, the number of columns is tiny compared to the number of rows, rendering most computations completely or partially memory-bandwidth limited. The paper focuses on recent NVIDIA GPGPUs still supporting 64-bit floating-point arithmetic, but the findings carry over to AMD GPUs as well. We discuss two basic algorithms: Methods based on the normal equations (Gram matrix), in particular Cholesky-QR2 and SVQB, and the \"tall-skinny QR\" (TSQR), based on Householder transformations in…",
+  "domain": "cs.MS",
+  "tags": [
+    "cs.MS",
+    "math.NA"
+  ],
+  "published": "2026-03-21",
+  "updated": "2026-03-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

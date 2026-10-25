@@ -1,0 +1,21 @@
+{
+  "key": "2606.28169",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28169",
+  "title": "Time Evolution on Hybrid Tensor Networks -- A Novel and Parallelizable Algorithm",
+  "authors": [
+    "Tobias V. Bauer",
+    "Richard M. Milbradt",
+    "Christian B. Mendl"
+  ],
+  "summary": "We develop a novel time-evolution algorithm for matrix product states based on the recently introduced hybrid tensor network (hTN) framework. We retain the tensors close to the boundary on the classical computer and offload the highly entangled inner ones to the quantum computer. In our variant, we employ the Basis Update and Galerkin (BUG) integrator to time-evolve the classical tensors, and we develop a coupling scheme between the classical and quantum parts. Our framework admits modular combination with any quantum time-evolution method, such as (classically pre-optimized) Trotterization.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-26",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

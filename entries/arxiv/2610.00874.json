@@ -1,0 +1,23 @@
+{
+  "key": "2610.00874",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.00874",
+  "title": "Beyond odd characteristic: Faster isomorphism testing of 2-groups of Frattini class 2",
+  "authors": [
+    "Joshua A. Grochow",
+    "Gábor Ivanyos",
+    "Youming Qiao",
+    "Xiaorui Sun"
+  ],
+  "summary": "The finite group isomorphism problem asks whether two finite groups of order $N$ are isomorphic. The first algorithm, attributed to Tarjan (see Miller, STOC '78), runs in time $N^{\\log N + O(1)}$. Despite intensive study, the current best known algorithm has a running time of $N^{(1 / 4 + o(1))\\log N}$ (Rosenbaum, '13). $p$-groups of class $2$ have been recognized as the major bottleneck for faster group isomorphism. Recent progress has led to $N^{o(\\log N)}$-time algorithms for $p$-groups of class $2$ where $p$ is odd (Sun, STOC '23; Ivanyos--Mendoza--Qiao--Sun--Zhang, FOCS '24;…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.GR"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

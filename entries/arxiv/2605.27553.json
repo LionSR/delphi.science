@@ -1,0 +1,25 @@
+{
+  "key": "2605.27553",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.27553",
+  "title": "Economic Nonlinear Model Predictive Control for Microgrids with Generator Up and Downtime Constraints",
+  "authors": [
+    "Jürgen Gutekunst",
+    "Armin Nurkanovic",
+    "Ekaterina Kostina",
+    "Hans Georg Bock",
+    "Robert Scholz",
+    "Amer Mesanovic"
+  ],
+  "summary": "Recently there has been a lot of progress in the development of economic nonlinear model predictive control (NMPC) schemes for multistage optimal power flow (OPF) problems. However, the additional inclusion of discrete decision variables to model generator runtimes and generator startup costs can amount to large scale mixed-integer nonlinear programs (MINLPs) that are computationally very challenging. This work investigates the practical approach that replaces the nonlinear AC power flow equations by convex quadratic approximations. In combination with the discrete generator dynamics this…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

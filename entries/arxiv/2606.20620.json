@@ -1,0 +1,20 @@
+{
+  "key": "2606.20620",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.20620",
+  "title": "A Viscosity Semigroup Framework for Stable Image Reconstruction",
+  "authors": [
+    "Arina Oberoi"
+  ],
+  "summary": "Starting from the axiomatic formulation of scale-space theory, we develop a viscosity-solution framework for multiscale image representations arising from degenerate elliptic-parabolic partial differential equations. Rather than introducing a new semigroup theory, we work within the standard viscosity-solution setting, using comparison principles to obtain well-posedness, uniqueness, and contraction in the supremum norm. This perspective is used to motivate a hybrid reconstruction operator in which a learned inverse map is followed by a nonlinear diffusion evolution. At the continuous level,…",
+  "domain": "cs.CV",
+  "tags": [
+    "cs.CV",
+    "math.FA"
+  ],
+  "published": "2026-05-26",
+  "updated": "2026-05-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

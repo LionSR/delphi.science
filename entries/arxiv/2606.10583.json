@@ -1,0 +1,24 @@
+{
+  "key": "2606.10583",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.10583",
+  "title": "NOVA: Symbolic Regression Discovery of Interpretable Car-Following and Lane-Change Models with Driver Heterogeneity",
+  "authors": [
+    "Ishak Abassi",
+    "Nassim Ali Bouazzouni",
+    "Farah Ibelaiden",
+    "Nadir Farhi"
+  ],
+  "summary": "We present NOVA, an autonomous symbolic regression framework that identifies interpretable car-following and lane-change structures from raw trajectory data with minimal behavioral priors. Applied to 4,765,788 active driving observations from the NGSIM I-80 and US-101 datasets, NOVA's deterministic Rust-powered search engine evaluates over 10,000 candidate algebraic structures and identifies a compact two-term acceleration model under a forward-shifted rolling-mean prediction target. Evaluated under two complementary preprocessing pipelines, NOVA achieves $RMSE = 1.376 m/s^2$ ($R^2 =…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-06-09",
+  "updated": "2026-06-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

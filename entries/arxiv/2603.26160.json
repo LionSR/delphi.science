@@ -1,0 +1,24 @@
+{
+  "key": "2603.26160",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.26160",
+  "title": "Distributed Quantum Discrete Logarithm Algorithm",
+  "authors": [
+    "Renjie Xu",
+    "Daowen Qiu",
+    "Ligang Xiao",
+    "Le Luo",
+    "Xu Zhou"
+  ],
+  "summary": "Solving the discrete logarithm problem (DLP) with quantum computers is a fundamental task with important implications. Beyond Shor's algorithm, many researchers have proposed alternative solutions in recent years. However, due to current hardware limitations, the scale of DLP instances that can be addressed by quantum computers remains insufficient. To overcome this limitation, we propose a distributed quantum discrete logarithm algorithm that reduces the required quantum register size for solving DLPs. Specifically, we design a distributed quantum algorithm to determine whether the solution…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DC"
+  ],
+  "published": "2026-03-27",
+  "updated": "2026-03-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

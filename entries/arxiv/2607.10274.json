@@ -1,0 +1,20 @@
+{
+  "key": "2607.10274",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.10274",
+  "title": "Efficient Circuit Transpilation of Commuting Gates on 2D Grids",
+  "authors": [
+    "Sabina Drăgoi",
+    "Daniel J. Egger"
+  ],
+  "summary": "Combinatorial optimization problems are central to many applications but can be challenging to solve. Quantum approaches such as the Quantum Approximate Optimization Algorithm (QAOA) offer new tools with which to tackle such problems. However, QAOA circuits inherit the interaction structure of the target Hamiltonian, often resulting in deep circuits when compiled onto hardware with limited connectivity. Efficient transpilation is therefore critical to their practical performance. In this work, we propose a transpilation scheme for circuits consisting of blocks of commuting two-qubit gates on…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-11",
+  "updated": "2026-07-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

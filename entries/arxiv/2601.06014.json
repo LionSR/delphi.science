@@ -1,0 +1,20 @@
+{
+  "key": "2601.06014",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.06014",
+  "title": "On the Effect of Misspecifying the Embedding Dimension in Low-rank Network Models",
+  "authors": [
+    "Roddy Taing",
+    "Keith Levin"
+  ],
+  "summary": "As network data has become ubiquitous in the sciences, there has been growing interest in network models whose structure is driven by latent node-level variables in a (typically low-dimensional) latent geometric space. These \"latent positions\" are often estimated via embeddings, whereby the nodes of a network are mapped to points in Euclidean space so that \"similar\" nodes are mapped to nearby points. Under certain model assumptions, these embeddings are consistent estimates of the latent positions, but most such results require that the embedding dimension be chosen correctly, typically…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-01-09",
+  "updated": "2026-01-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

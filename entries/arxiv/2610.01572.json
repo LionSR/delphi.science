@@ -1,0 +1,25 @@
+{
+  "key": "2610.01572",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.01572",
+  "title": "Optimal Momentum Methods for Stochastic Multilevel Compositional Optimization",
+  "authors": [
+    "Wei Jiang",
+    "Rui Yan",
+    "Sifan Yang",
+    "Yuanyu Wan",
+    "Lijun Zhang",
+    "Zechao Li"
+  ],
+  "summary": "This paper investigates stochastic multi-level optimization where the objective is a nested composition of several smooth non-convex functions. We assume that only stochastic estimates of the gradient and function values for each level are accessible. Consequently, obtaining an accurate estimate of the overall gradient is challenging due to the nested structure. To address this, we employ a momentum-based estimator with mini-batches to track the function values of each level, which are subsequently used to construct momentum gradient estimators. We establish an optimal sample complexity of…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2609.01037",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.01037",
+  "title": "A Dynamic Intermediate Representation for Hybrid Quantum-Classical Programs",
+  "authors": [
+    "Alex Rice",
+    "Chris Heunen",
+    "Tobias Grosser"
+  ],
+  "summary": "Quantum compilers typically follow the circuit model, representing programs as fixed sequences of gates. This static view breaks down in hybrid quantum-classical applications, where gate choices depend on runtime data or measurement results. We introduce a new Intermediate Representation (IR) that elevates gates to first-class values, enabling their dynamic creation, composition, and control. This unified representation allows classical computation to steer quantum behaviour, capturing phenomena including stochastic gate selection, adaptive error correction, and measurement-driven…",
+  "domain": "cs.PL",
+  "tags": [
+    "cs.PL",
+    "quant-ph"
+  ],
+  "published": "2026-09-01",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

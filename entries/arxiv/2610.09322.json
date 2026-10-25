@@ -1,0 +1,30 @@
+{
+  "key": "2610.09322",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.09322",
+  "title": "Cross-Validation of Open-Source Quantum Network Simulators",
+  "authors": [
+    "Joaquin Chung",
+    "Michal Hajdušek",
+    "Naphan Benchasattabuse",
+    "Robert J. Hayek",
+    "Alexander Kolar",
+    "Ansh Singal",
+    "Kento Samuel Soon",
+    "Kentaro Teramoto",
+    "Allen Zang",
+    "Caitao Zhan",
+    "Raj Kettimuthu",
+    "Rodney Van Meter"
+  ],
+  "summary": "We present a comparative analysis of two open-source quantum network simulators, QuISP and SeQUeNCe, focusing on cross-validation of basic networking tasks to ensure consistency and accuracy in simulation outputs. Although both simulators are designed to study quantum network management policies and their dynamics under complex noise models, their differing underlying assumptions can lead to variations in simulation results. We highlight the discrepancies in how the two simulators handle connections, internal network node processing time, and classical communication, resulting in significant…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

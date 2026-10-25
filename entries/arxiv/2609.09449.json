@@ -1,0 +1,20 @@
+{
+  "key": "2609.09449",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.09449",
+  "title": "Afterimage Slow Regions in First-Order Methods for Linear Conic Programming",
+  "authors": [
+    "Shucheng Kang",
+    "Heng Yang"
+  ],
+  "summary": "First-order methods for linear conic programming often stall on long plateaus. Existing analyses characterize when during a run or on which problem instances slow convergence occurs; we instead ask where in the state space slow convergence is present. We introduce the slow region family for parameterized averaged fixed-point iterations. On a slow region, one step moves the state by only a small fraction of its distance to the fixed-point set, so an orbit starting there keeps almost its initial distance for arbitrarily many iterations. We then develop the afterimage principle to construct…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-08",
+  "updated": "2026-09-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

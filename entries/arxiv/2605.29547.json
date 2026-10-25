@@ -1,0 +1,24 @@
+{
+  "key": "2605.29547",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.29547",
+  "title": "Singularity-aware Optimization via Randomized Geometric Probing: Towards Stable Non-smooth Optimization",
+  "authors": [
+    "Ruoran Xu",
+    "Borong She",
+    "Xiaobo Jin",
+    "Qiufeng Wang"
+  ],
+  "summary": "Deep learning optimization relies heavily on the assumption of smooth loss landscapes, a condition systematically violated by modern architectures due to non-smooth components such as ReLU activations and quantization operators. In such non-smooth regimes, adaptive optimizers such as Adam suffer from gradient chattering, violent oscillations caused by conflicting signals within the Clarke subdifferential, leading to poor convergence and suboptimal generalization. To address this, we introduce Singularity-aware Adam (S-Adam), a novel optimizer that stabilizes training by dynamically…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-07-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

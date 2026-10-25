@@ -1,0 +1,20 @@
+{
+  "key": "2607.07638",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.07638",
+  "title": "A new kind of numbers and related congruences",
+  "authors": [
+    "Zhi-Wei Sun"
+  ],
+  "summary": "For integers $l>0$ and $m\\geqslant0$, we introduce the numbers $$S_l^{(m)}(n) = \\sum_{k_1,\\ldots,k_l\\in\\mathbb N\\atop k_1+\\cdots+k_l = n} \\binom n{k_1,\\ldots,k_l}^m \\ \\ (n=0,1,2,\\ldots),$$ and prove that for any prime $p$ not dividing $l+1$ we have the congruence $$\\sum_{n=1}^{p-1}\\frac{(-1)^{mn}}{n^{m-1}}S_l^{(m)}(n)\\equiv0\\pmod p.$$ We also obtain a $q$-analogue of this result. For the Domb numbers given by $$D(n)=\\sum_{k=0}^n\\binom nk^2\\binom{2k}k\\binom{2(n-k)}{n-k}=S_4^{(2)}(n)\\ \\ (n=0,1,2,\\ldots),$$ we confirm a previous conjecture which states that…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO"
+  ],
+  "published": "2026-07-08",
+  "updated": "2026-07-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

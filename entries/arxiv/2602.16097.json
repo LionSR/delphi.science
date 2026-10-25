@@ -1,0 +1,21 @@
+{
+  "key": "2602.16097",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.16097",
+  "title": "Local and Multi-Scale Strategies to Mitigate Exponential Concentration in Quantum Kernels",
+  "authors": [
+    "Claudia Zendejas-Morales",
+    "Debashis Saikia",
+    "Utkarsh Singh"
+  ],
+  "summary": "Fidelity-based quantum kernels provide a direct interface between quantum feature maps and classical kernel methods, but they can exhibit exponential concentration: with increasing system size or circuit expressivity, the Gram matrix approaches the identity and suppresses informative similarity structure. We present an empirical study of two mitigation strategies implemented in Qiskit: (i) local (patch-wise) kernels that aggregate subsystem similarities, and (ii) multi-scale kernels that mix local and global similarity across patch granularities. We benchmark baseline, local, and multi-scale…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-18",
+  "updated": "2026-08-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2609.11520",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.11520",
+  "title": "Approximate Inversion of Discrete Fourier Integral Operators via Hierarchically Semiseparable Matrices",
+  "authors": [
+    "Yingzhou Li",
+    "Jingyu Liu"
+  ],
+  "summary": "This paper introduces a novel method for approximating the inverse of discrete Fourier integral operators (FIOs). Given an $N \\times N$ matrix representation $K$ of an FIO, the proposed algorithm consists of two stages. In the offline stage, we first construct a butterfly factorization (BF) $\\tilde{K}$ of $K$, which enables fast forward matrix-vector multiplication. We then construct a hierarchically semiseparable (HSS) approximation $\\tilde{G} \\approx G$, where $G = K^{*} K$, using fast applications of $\\tilde{K}$ and $\\tilde{K}^{*}$ to random matrices. Finally, we apply the ULV…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

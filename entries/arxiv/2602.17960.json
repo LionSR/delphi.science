@@ -1,0 +1,24 @@
+{
+  "key": "2602.17960",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.17960",
+  "title": "Anisotropic local law for non-separable sample covariance matrices",
+  "authors": [
+    "Zhou Fan",
+    "Renyuan Ma",
+    "Elliot Paquette",
+    "Zhichao Wang"
+  ],
+  "summary": "We establish local laws for sample covariance matrices $K = N^{-1}\\sum_{i=1}^N \\g_i\\g_i^*$ where the random vectors $\\g_1, \\ldots, \\g_N \\in \\R^n$ are independent with common covariance $Σ$. Previous work has largely focused on the separable model $\\g = Σ^{1/2}\\w$ with $\\w$ having independent entries, but this structure is rarely present in statistical applications involving dependent or nonlinearly transformed data. Under a concentration assumption for quadratic forms $\\g^*A\\g$, we prove an optimal averaged local law showing that the Stieltjes transform of $K$ converges to its deterministic…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "stat.AP",
+    "stat.ML"
+  ],
+  "published": "2026-02-20",
+  "updated": "2026-02-23",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

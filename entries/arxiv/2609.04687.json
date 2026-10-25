@@ -1,0 +1,21 @@
+{
+  "key": "2609.04687",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.04687",
+  "title": "A class of high-order discontinuous-Galerkin methods satisfying infinitely many entropy conditions with provable error estimates and strong convergence for general nonlinear conservation laws",
+  "authors": [
+    "Yuanzhe Wei",
+    "Chi-Wang Shu"
+  ],
+  "summary": "We propose a novel framework for deriving semi-discrete discontinuous-Galerkin (DG) methods using operator semigroups for scalar conservation laws, then apply it to construct a class of high-order OFDG-type schemes [13] satisfying infinitely many local entropy inequalities with general E-fluxes on non-uniform meshes. Such schemes are further generalized to systems of conservation laws in any number of space dimensions by using entropy stable numerical fluxes in the sense of [1]. Finally, we prove optimal error estimates for smooth solutions to nonlinear scalar conservation laws, and prove…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-09-04",
+  "updated": "2026-09-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

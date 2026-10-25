@@ -1,0 +1,25 @@
+{
+  "key": "2605.19621",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.19621",
+  "title": "Diffusion Graph Posterior Sampling for Nonlinear Inverse Problems with Application to Electrical Impedance Tomography",
+  "authors": [
+    "Giovanni S. Alberti",
+    "Damiana Lazzaro",
+    "Serena Morigi",
+    "Matteo Santacesaria",
+    "Shibo Wang"
+  ],
+  "summary": "Deep generative models have emerged as state-of-the-art for solving inverse problems, but applying them to inverse problems for PDEs, like electrical impedance tomography (EIT) remains challenging. Because physical domains are naturally discretized as unstructured meshes rather than regular grids, standard convolutional architectures are often inadequate. In this paper, we propose a novel framework that extends diffusion posterior sampling (DPS) to graph-structured data. We develop an unconditional score-based diffusion model directly on a 2D triangular mesh to learn an accurate prior over…",
+  "domain": "eess.IV",
+  "tags": [
+    "eess.IV",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

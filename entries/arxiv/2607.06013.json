@@ -1,0 +1,24 @@
+{
+  "key": "2607.06013",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06013",
+  "title": "Stability Annealing Selects the Implicit Bias of Smoothed Sign Descent: A Rate-Indexed Barrier Path on Separable Data",
+  "authors": [
+    "Xiangwu Wang",
+    "Chengwei Cao",
+    "Yicheng Song",
+    "Ran Bi",
+    "Peilin Yu"
+  ],
+  "summary": "Adaptive gradient methods can favor max-margin separators that differ from gradient descent, yet a fixed positive numerical stability constant eventually changes the update geometry again. This paper studies the rate-controlled middle case for full-batch linear classification on separable data. For memoryless stability-annealed smoothed-sign descent with weighted exponential loss, we prove that the normalized iterates converge to the minimizer of a convex Burg-type barrier over a margin slice. The proof rewrites the dynamics exactly as entropic mirror ascent on a concave dual objective,…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

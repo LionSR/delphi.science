@@ -1,0 +1,26 @@
+{
+  "key": "2610.28678",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.28678",
+  "title": "Benchmarking the Quantum Leap: Auditing LLM Evaluation for Quantum Code Generation",
+  "authors": [
+    "Ethan Seefried",
+    "Romit Ghosh",
+    "Sharmin Afrose",
+    "Nicholas Stapleton",
+    "Vicente Layton Ortega",
+    "Travis Humble",
+    "Tirthankar Ghosal"
+  ],
+  "summary": "Large language models (LLMs) can generate quantum programs, but reliable evaluation remains difficult because benchmarks differ in task composition, scoring, and failure handling. We evaluate 15 hosted frontier, open-weight, quantum-specialized, and retrieval-augmented models on five quantum code-generation suites (530 tasks), plus 10 models on our new QuantumBenchEval (QBE) benchmark (96 tasks across six topics). We report bootstrap confidence intervals, multiplicity-adjusted paired comparisons, and audits of output validity and evaluator behavior. QiskitHumanEval-Standard approaches…",
+  "domain": "cs.SE",
+  "tags": [
+    "cs.SE",
+    "quant-ph"
+  ],
+  "published": "2026-10-19",
+  "updated": "2026-10-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

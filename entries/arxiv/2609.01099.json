@@ -1,0 +1,21 @@
+{
+  "key": "2609.01099",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.01099",
+  "title": "The Complexity of Approximating the Value in Revealing POMDPs with Long-Run Average Objectives",
+  "authors": [
+    "Ali Asadi",
+    "Krishnendu Chatterjee",
+    "David Lurie"
+  ],
+  "summary": "We study partially observable Markov decision processes (POMDPs) with long-run average objectives, where the payoff is defined as the limit inferior of the expected average rewards. We consider the computational problem of approximating the long-run average value of a POMDP. In general, the long-run average value of a POMDP is neither computable nor approximable. We therefore consider the subclass of revealing POMDPs. Informally, a POMDP is revealing when the controller observes the underlying state with positive probability at each stage of the process. Our main contributions are threefold.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-01",
+  "updated": "2026-09-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

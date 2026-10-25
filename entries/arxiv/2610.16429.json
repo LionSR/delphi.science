@@ -1,0 +1,22 @@
+{
+  "key": "2610.16429",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.16429",
+  "title": "Taming Nonconvexity with Epigraph Lifting",
+  "authors": [
+    "Clara Lage",
+    "Hok Shing Wong",
+    "Matthias Ehrhardt"
+  ],
+  "summary": "We consider inverse problems regularized by a trained neural network with \\emph{convex activations} and \\emph{unrestricted weights}. The resulting optimization problem is generally nonconvex, and gradient-based methods may converge to poor local minima. We introduce a \\emph{penalized epigraph lifting} of the network and show that the lifted problem admits a \\emph{difference-of-convex (DC) decomposition}. For Lipschitz continuous activations, we establish \\emph{finite exactness}: the original objective is recovered exactly at a finite and explicitly computable penalty threshold $\\barρ$.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-10-12",
+  "updated": "2026-10-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

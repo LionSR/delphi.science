@@ -1,0 +1,22 @@
+{
+  "key": "2610.09890",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.09890",
+  "title": "Outperformance Inverse Optimization: Learning Objective Functions that Outperform Agent Decisions",
+  "authors": [
+    "Akira Kitaoka"
+  ],
+  "summary": "Inverse optimization estimates the weights of an objective function that explain observed decisions as optimal solutions, and is used in a variety of fields. For mixed-integer linear programs (MILPs), existing methods aim to reproduce the observations as optimal solutions, and thus learn compromise weights when the observations are suboptimal. We propose outperformance inverse optimization, which instead seeks weights that induce, at each state, an optimal solution outperforming the observed action in every component. We give a loss function that can be evaluated with forward-problem oracles…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "math.OC",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

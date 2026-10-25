@@ -1,0 +1,26 @@
+{
+  "key": "2610.09634",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.09634",
+  "title": "Safe Control of Semi-Explicit Differential-Algebraic Systems: Control Barrier Functions with SOS Verification",
+  "authors": [
+    "Mohamad H. Kazma",
+    "Hongchao Zhang",
+    "Abdallah A. Albustami",
+    "Ben Wooding",
+    "Meiyi Ma",
+    "Taylor T. Johnson",
+    "Ahmad F. Taha"
+  ],
+  "summary": "Differential-algebraic equation (DAE) systems arise in power networks, multibody mechanics, and chemical processes, where algebraic constraints couple dynamic and algebraic states. Standard control barrier function (CBF) methods, designed for ordinary differential equations, fail for DAE systems because the algebraic constraints impose compatibility requirements that may render safety filters infeasible. This paper develops a safety-critical control framework for semi-explicit DAE systems using CBFs that consider compatibility with the algebraic constraints, termed DAE-aware CBFs. We…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "math.OC"
+  ],
+  "published": "2026-10-07",
+  "updated": "2026-10-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

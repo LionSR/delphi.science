@@ -1,0 +1,21 @@
+{
+  "key": "2606.17523",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.17523",
+  "title": "Beyond IGO-Flow: Toward Convergence Analysis of IGO in Continuous Spaces",
+  "authors": [
+    "Ryosuke Kimura",
+    "Youhei Akimoto"
+  ],
+  "summary": "Information-Geometric Optimization (IGO) provides a unified framework for black-box optimization by interpreting the adaptation of a search distribution as a natural gradient update. Despite its conceptual importance, the convergence theory of IGO remains limited: most existing results concern continuous-time idealizations such as the IGO flow, rather than discrete-time updates with non-infinitesimal learning rates. In this paper, we study discrete-time IGO in continuous spaces, formulated as natural gradient updates in the expectation-parameter coordinates of an exponential family. In…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-06-16",
+  "updated": "2026-06-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

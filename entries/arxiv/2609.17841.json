@@ -1,0 +1,23 @@
+{
+  "key": "2609.17841",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.17841",
+  "title": "Hybrid coupling with numerics-informed neural networks and the overlapping Schwarz alternating method",
+  "authors": [
+    "George Chumbipuma",
+    "Irina Tezaur",
+    "Alejandro Diaz",
+    "Beatrice Riviere"
+  ],
+  "summary": "We develop a hybrid modeling framework for coupling pre-trained numerics-informed neural networks (NINNs) with classical full order models (FOMs) using the overlapping Schwarz alternating method. We consider the two-dimensional advection-diffusion equation in the advection-dominated, Peclet-number 10^6 regime. We first demonstrate that, unlike the corresponding physics-informed neural network (PINN), a monolithic NINN can be accurately trained on our model problem without domain decomposition. We then employ overlapping multiplicative Schwarz as a deployment mechanism for coupling a…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math-ph"
+  ],
+  "published": "2026-09-15",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

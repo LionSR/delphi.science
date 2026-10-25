@@ -1,0 +1,19 @@
+{
+  "key": "2606.02235",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.02235",
+  "title": "Optimized Point Addition Circuits for Elliptic Curve Discrete Logarithms",
+  "authors": [
+    "André Schrottenloher"
+  ],
+  "summary": "Shor's algorithm represents the main threat of quantum computers to cryptography. In order to precisely understand its feasibility, many authors have worked towards reducing its costs, either at the logical level (assuming a fault-tolerant architecture), or at the physical level (taking into account the constraints of envisioned hardware). In particular, recent works by Chevignard et al. (CRYPTO 2024) and Gidney (arXiv 2025) used improved arithmetic to significantly reduce the qubit cost of factoring RSA public keys. Even more recently, Babbush et al. (arXiv 2026) improved the cost of…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-01",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

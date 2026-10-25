@@ -1,0 +1,21 @@
+{
+  "key": "2606.14503",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.14503",
+  "title": "Efficient and Fast Tensor-Product Multinode Shepard Collocation for Elliptic PDEs on Cartesian Grids",
+  "authors": [
+    "Anouar El Harrak",
+    "Hatim Tayeq",
+    "Benaissa Zerroudi"
+  ],
+  "summary": "We introduce a Grid-Based Multinode Shepard Collocation Method (GBMSC) for two-dimensional elliptic boundary value problems on rectangular domains. The method combines Shepard-type partition functions with tensor-product Lagrange interpolation on overlapping local Cartesian subgrids. The Cartesian structure avoids the local unisolvency search required by multinode Shepard constructions on scattered data, while the local character of the approximation yields sparse collocation matrices and moderate conditioning. We establish the main structural properties of the method, including the cardinal…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-12",
+  "updated": "2026-09-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

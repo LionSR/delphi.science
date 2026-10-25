@@ -1,0 +1,22 @@
+{
+  "key": "2603.09300",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.09300",
+  "title": "Worst-Case and Covariance-Reconstruction Robust Adaptive Beamforming: Equivalence and Closed-Form Solution",
+  "authors": [
+    "Licheng Zhao",
+    "Rui Zhou",
+    "Wenqiang Pu",
+    "Daniel P. Palomar"
+  ],
+  "summary": "Robust adaptive beamforming (RAB) has developed along two separate lines. The worst-case-constrained approach guards against steering vector mismatch with a bounded uncertainty set, but suffers from desired signal cancellation at high input signal-to-noise ratio (SNR). The covariance-reconstruction approach instead estimates the interference-plus-noise covariance matrix and solves for the mismatch numerically. We prove that the two are related by primal-dual equivalence: once the worst-case beamformer is normalized, it coincides exactly with the reconstruction-based one, so both reduce to…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-10",
+  "updated": "2026-10-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

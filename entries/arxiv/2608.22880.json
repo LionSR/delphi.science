@@ -1,0 +1,22 @@
+{
+  "key": "2608.22880",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.22880",
+  "title": "A particle method for the Boltzmann equation via amortized sampling from Green's function of the lifted linear operator",
+  "authors": [
+    "Zichang Ju",
+    "Lei Li",
+    "Yang Yu"
+  ],
+  "summary": "The collision operator for the Boltzmann equation is a nonlinear nonlocal operator. When lifted in the extended 2-particle space, it is viewed as the projection of a collisional linear operator. In this paper, we propose a particle method that samples the post-collision relative velocity directly from the Green's function of this operator (the transition probability of the generated time-continuous Markov chain). The normalizing flow amortized sampling is then proposed to reduce the sampling complexity. The resulted method takes $O(N)$ each time where $N$ is the particle number, and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-08-24",
+  "updated": "2026-08-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

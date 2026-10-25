@@ -1,0 +1,19 @@
+{
+  "key": "2606.29662",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.29662",
+  "title": "Fixed-parameter tractable computation of Reshetikhin--Turaev knot polynomials via tensor networks",
+  "authors": [
+    "Shana Yunsheng Li"
+  ],
+  "summary": "We give a thorough analysis of the time complexity of computing Reshetikhin--Turaev knot polynomials via tensor contractions on the associated tensor networks, showing that the computation is fixed-parameter tractable with respect to a parameter at most linear in the tree-width of the input knot diagram. When combined with existing approximation algorithms for tree decomposition, this recovers the sub-exponential bound $e^{O(\\sqrt{n})}$ for the time complexity of computing any Reshetikhin--Turaev knot polynomial. We accompany this paper with an implementation of such an algorithm in SnapPy,…",
+  "domain": "math.GT",
+  "tags": [
+    "math.GT"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-06-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

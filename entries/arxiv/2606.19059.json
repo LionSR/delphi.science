@@ -1,0 +1,24 @@
+{
+  "key": "2606.19059",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.19059",
+  "title": "A performance portable fast Ewald summation for Stokes flow",
+  "authors": [
+    "Gabriel Kosmacher",
+    "Ziyu Du",
+    "Joar Bagge",
+    "George Biros"
+  ],
+  "summary": "We present GPU algorithms for Ewald summation methods for accelerating N-body Stokes flow problems in periodic domains. Like most N-body codes, Ewald sums use a near-field/far-field decomposition. The near field involves particle-to-particle (P2P) interactions. The far field primarily involves particle-to-grid (P2G) and grid-to-particle (G2P) interactions, as well as Fast Fourier Transforms. For each interaction, we investigate several algorithmic variants. Our implementation uses PyKokkos, a Python interface for the Kokkos C++ parallel programming framework, which supports portability to…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.DC",
+    "physics.comp-ph"
+  ],
+  "published": "2026-06-17",
+  "updated": "2026-06-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

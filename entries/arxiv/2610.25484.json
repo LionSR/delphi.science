@@ -1,0 +1,24 @@
+{
+  "key": "2610.25484",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.25484",
+  "title": "KernelPack-JAX: a meshless differentiable GPU framework for node generation and forward and inverse PDE problems",
+  "authors": [
+    "Alberto Cattaneo",
+    "M. Keith Ballard",
+    "Robert M. Kirby",
+    "Grady B. Wright",
+    "Varun Shankar"
+  ],
+  "summary": "We present KernelPack-JAX, a meshless, differentiable, GPU framework in JAX for solving forward and inverse PDE problems in domains whose boundaries, including internal obstacles, are given only by samples of their smooth pieces. Our node generator is based on a new stacked representation of piecewise-smooth boundaries, in which a parametric partition of unity of each smooth piece induces the supports of a curl-free implicit partition of unity of the whole boundary. This representation keeps the edges and corners of the boundary and classifies every point of space without a global fit.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.MS"
+  ],
+  "published": "2026-10-18",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

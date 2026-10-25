@@ -1,0 +1,20 @@
+{
+  "key": "2609.31469",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.31469",
+  "title": "LandscapeSHAP: Which Persistent Homology Class Gets the Credit?",
+  "authors": [
+    "Nikola Milićević"
+  ],
+  "summary": "Shapley values, a solution concept from cooperative game theory, have recently become a standard tool for feature credit allocation in machine learning. They provide an axiomatically justified method to fairly distribute a model's prediction among the data features. Shapley values have not yet been applied to explain machine learning models trained on features from topological data analysis. We develop what we believe is the first such approach, focusing on the persistence landscape featurization of persistence diagrams. Because each landscape coordinate is a rank statistic, crediting a…",
+  "domain": "math.AT",
+  "tags": [
+    "math.AT",
+    "cs.LG"
+  ],
+  "published": "2026-09-25",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

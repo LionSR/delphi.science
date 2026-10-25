@@ -1,0 +1,23 @@
+{
+  "key": "2601.04827",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.04827",
+  "title": "PACOX: A FPGA-based Pauli Composer Accelerator for Pauli String Computation",
+  "authors": [
+    "Tran Xuan Hieu Le",
+    "Tuan Hai Vu",
+    "Vu Trung Duong Le",
+    "Hoai Luan Pham",
+    "Yasuhiko Nakashima"
+  ],
+  "summary": "Pauli strings are a fundamental computational primitive in hybrid quantum-classical algorithms. However, classical computation of Pauli strings suffers from exponential complexity and quickly becomes a performance bottleneck as the number of qubits increases. To address this challenge, this paper proposes the Pauli Composer Accelerator (PACOX), the first dedicated FPGA-based accelerator for Pauli string computation. PACOX employs a compact binary encoding with XOR-based index permutation and phase accumulation. Based on this formulation, we design a parallel and pipelined processing element…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-01-08",
+  "updated": "2026-01-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

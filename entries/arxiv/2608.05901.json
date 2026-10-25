@@ -1,0 +1,20 @@
+{
+  "key": "2608.05901",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.05901",
+  "title": "From Value Bounds to Policy-Distance and Active-Face Certificates: Same-Grid Duality for Constrained Dynamic Portfolios",
+  "authors": [
+    "Jeonggyu Huh"
+  ],
+  "summary": "Neural and numerical policy solvers can produce feasible controls even when the optimal rule and its binding constraints are unavailable. A primal-dual bracket certifies value loss, but it does not locate the optimal policy or explain which constraints genuinely bind. We show that, on the same declared simulation grid, one bracket can support both conclusions. For polyhedral controls, an exact conditional budget identity rewrites the residual as a pathwise nonnegative terminal Fenchel defect plus date-by-constraint complementary-slackness terms. A canonical Doob compensation removes the…",
+  "domain": "q-fin.MF",
+  "tags": [
+    "q-fin.MF",
+    "math.OC"
+  ],
+  "published": "2026-08-06",
+  "updated": "2026-08-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

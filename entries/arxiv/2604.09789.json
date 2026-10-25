@@ -1,0 +1,24 @@
+{
+  "key": "2604.09789",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.09789",
+  "title": "ProxiCBO: A Provably Convergent Consensus-Based Method for Composite Optimization",
+  "authors": [
+    "Haoyu Zhang",
+    "Yanting Ma",
+    "Ruangrawee Kitichotkul",
+    "Joshua Rapp",
+    "Petros Boufounos"
+  ],
+  "summary": "This paper introduces an interacting-particle optimization method tailored to possibly non-convex composite optimization problems, which arise widely in signal processing. The proposed method, \\emph{ProxiCBO}, integrates consensus-based optimization (CBO) with proximal gradient techniques to handle challenging optimization landscapes and exploit the composite structure of the objective function. We establish global convergence guarantees for the continuous-time finite-particle dynamics and develop an alternating update scheme for efficient practical implementation. Simulation results for…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.NA"
+  ],
+  "published": "2026-04-10",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

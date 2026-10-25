@@ -1,0 +1,28 @@
+{
+  "key": "2609.12123",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.12123",
+  "title": "Rank-Efficient LoRA via Joint Tangent-Space Optimization under Isotropic Curvature",
+  "authors": [
+    "Zihan Zhu",
+    "Zhehang Du",
+    "Xuyang Chen",
+    "Tim Tsz-Kit Lau",
+    "Jiayuan Wu",
+    "X. Y. Han",
+    "Qi Long",
+    "Weijie Su"
+  ],
+  "summary": "Low-Rank Adaptation (LoRA) is an effective approach for adapting large pretrained models by learning low-rank weight updates. In practice, the LoRA rank is used to control an adapter's parameter budget and representational capacity. We show that this view is incomplete: while the nominal rank determines the representational capacity, the optimizer shapes how much of that capacity is used in the induced weight-space updates. In a case study of GPT-2 adaptation with LoRA, we observe a strong rank-dependent optimizer effect. Despite using the same nominal rank, AdamW often produces per-step…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-09-10",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

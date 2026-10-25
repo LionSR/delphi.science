@@ -1,0 +1,20 @@
+{
+  "key": "2603.08297",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.08297",
+  "title": "Inverse boundary value problems for certain doubly nonlinear parabolic and elliptic equations",
+  "authors": [
+    "Cătălin I. Cârstea",
+    "Tuhin Ghosh"
+  ],
+  "summary": "We consider an inverse boundary value problem for the doubly nonlinear parabolic equation \\[ ε(x)\\partial_t u^m-\\nabla\\cdot\\bigl(γ(x)|\\nabla u|^{p-2}\\nabla u\\bigr)=0 \\quad\\text{in }(0,T)\\timesΩ, \\] where $p\\in(1,\\infty)\\setminus\\{2\\}$, $m>0$, and the coefficients $ε$ and $γ$ are positive. Our first main result shows that when $m>p-1$, the lateral Cauchy data determine both coefficients. The proof proceeds by reducing the parabolic inverse problem to an inverse problem for the nonlinear elliptic equation \\[ -\\nabla\\cdot\\bigl(γ|\\nabla w|^{p-2}\\nabla w\\bigr)+Vw^m=0 \\quad\\text{in }Ω. \\] Our…",
+  "domain": "math.AP",
+  "tags": [
+    "math.AP"
+  ],
+  "published": "2026-03-09",
+  "updated": "2026-03-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

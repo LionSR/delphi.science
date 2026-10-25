@@ -1,0 +1,21 @@
+{
+  "key": "2609.33067",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.33067",
+  "title": "Arithmetic Progressions in a Random Binary Subset-Sum Set",
+  "authors": [
+    "Norbert Hegyvári",
+    "Thang Pham",
+    "Boqing Xue"
+  ],
+  "summary": "Let $u=(u_n)_{n\\ge0}$ be a binary sequence, and define \\[ X_0=1,\\qquad X_{n+1}=2X_n+u_n \\qquad(n\\ge0). \\] Let $A_u$ be the set of all nonempty finite subset sums of the sequence $(X_n)$, and let $L_u(N)$ denote the maximum length of an arithmetic progression contained in $A_u\\cap[1,N]$. We prove that there are absolute constants $c>0$ and $N_0\\geq 1$ such that, for every binary sequence $u$, \\[ L_u(N)\\ge \\exp\\!\\left(c\\sqrt{\\frac{\\log N}{\\log\\log N}}\\right) \\] for all $N\\geq N_0$. Moreover, if the random variables $u_n$ are independent and uniformly distributed on $\\{0,1\\}$, then, almost…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-09-27",
+  "updated": "2026-09-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

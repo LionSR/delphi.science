@@ -1,0 +1,21 @@
+{
+  "key": "2607.05693",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.05693",
+  "title": "Free Multiplicative Convolution and Erlang Moments in Monitored Quantum Transport",
+  "authors": [
+    "Joon Hyung Lee"
+  ],
+  "summary": "We study the transmission eigenvalues of monitored Haar products \\[ B_L=(PS_L)(PS_{L-1})\\cdots(PS_1), \\] where the $S_i$ are independent Haar unitaries and $P$ is a deterministic projection. For fixed $L$, we prove that the empirical eigenvalue distribution of $B_L^\\dagger B_L$ converges to $ν_c^{\\boxtimes L}$, where $ν_c=(1-c)δ_1+cδ_0$. We then take the free small-loss limit and identify the limiting law by \\[ S_{μ_τ}(z)=\\exp\\left(\\fracτ{1+z}\\right). \\] Lagrange inversion gives explicit Erlang-type moments, explaining the polynomials appearing in Beenakker's recursion. We also record…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "math-ph",
+    "quant-ph"
+  ],
+  "published": "2026-07-06",
+  "updated": "2026-07-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

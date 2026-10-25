@@ -1,0 +1,25 @@
+{
+  "key": "2605.07116",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.07116",
+  "title": "Monotone Neural Policy Iteration for High-Dimensional First-Order Hamilton--Jacobi--Bellman Equations",
+  "authors": [
+    "Minseok Kim",
+    "Yeongjong Kim",
+    "Namkyeong Cho",
+    "Yeoneung Kim"
+  ],
+  "summary": "We analyze a neural semi-discrete method for high-dimensional first-order Hamilton-Jacobi-Bellman (HJB) equations with known or learned dynamics. Centered differences and an artificial viscosity $Nh=O(h)$ define a monotone operator evaluated through $2d+1$ shifted network queries; policy iteration solves the resulting Bellman equation without a tensor grid. At fixed $h$, the sharp componentwise condition $\\max_i|f_i|\\le2N$ turns every frozen-policy operator into a nearest-neighbor Markov-chain generator with a policy-independent total jump rate. Uniformization gives whole-space…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-05-08",
+  "updated": "2026-09-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

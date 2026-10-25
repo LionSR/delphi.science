@@ -1,0 +1,21 @@
+{
+  "key": "2609.29651",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.29651",
+  "title": "Randomized Jacobi-Davidson method",
+  "authors": [
+    "Laura Grigori",
+    "Taejun Park",
+    "Igor Simunec"
+  ],
+  "summary": "The Jacobi-Davidson method is a widely used subspace method for computing a few eigenpairs of a large, sparse, non-Hermitian matrix closest to a target. Like other subspace methods, it orthogonalizes each new expansion vector against the whole search basis, at a cost that grows quadratically with the subspace dimension and, in a distributed setting, requires a global synchronization at every iteration. We introduce a randomized Jacobi-Davidson method that replaces this orthogonalization with a much cheaper randomized orthogonalization process, which requires no inner products involving…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-09-01",
+  "updated": "2026-09-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

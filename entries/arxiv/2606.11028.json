@@ -1,0 +1,19 @@
+{
+  "key": "2606.11028",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.11028",
+  "title": "Logistic Gene Regulatory Networks: A Modelling Framework Beyond Hill Functions",
+  "authors": [
+    "Ismail Belgacem"
+  ],
+  "summary": "Boolean networks model gene regulatory networks, but extracting quantitative dynamics requires translating their logical rules into differential equations, and the sigmoidal kernel chosen carries direct biological consequences. The near-universal choice, the Hill function, sets production to exactly zero when an activator is absent, creating a spurious absorbing off-state with no biological counterpart. We develop a product-of-logistics framework in which increasing logistic functions represent activation, decreasing logistic functions represent repression, and a recursive De Morgan product…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS"
+  ],
+  "published": "2026-06-09",
+  "updated": "2026-06-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

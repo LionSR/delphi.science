@@ -1,0 +1,21 @@
+{
+  "key": "2602.00778",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.00778",
+  "title": "The complexity of finding coset-generating polymorphisms and the promise metaproblem",
+  "authors": [
+    "Manuel Bodirsky",
+    "Armin Weiß"
+  ],
+  "summary": "We show that the metaproblem for coset-generating polymorphisms is NP-complete, answering a question of Chen and Larose: given a finite structure, the computational question is whether this structure has a polymorphism of the form $(x,y,z) \\mapsto x y^{-1} z$ with respect to some group; such operations are also called coset-generating, or heaps. Furthermore, we introduce a promise version of the metaproblem, parametrised by two polymorphism conditions $Σ_1$ and $Σ_2$ and defined analogously to the promise constraint satisfaction problem. We give sufficient conditions under which the promise…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "math.RA"
+  ],
+  "published": "2026-01-31",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

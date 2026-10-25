@@ -1,0 +1,20 @@
+{
+  "key": "2604.22746",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.22746",
+  "title": "Relaxation-Informed Training of Neural Network Surrogate Models",
+  "authors": [
+    "Calvin Tsay"
+  ],
+  "summary": "ReLU neural networks trained as surrogate models can be embedded exactly in mixed-integer linear programs (MILPs), enabling global optimization over the learned function. The tractability of the resulting MILP depends on structural properties of the network, i.e., the number of binary variables in associated formulations and the tightness of the continuous LP relaxation. These properties are determined during training, yet standard training objectives (prediction loss with classical weight regularization) offer no mechanism to directly control them. This work studies training regularizers…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-04-24",
+  "updated": "2026-04-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

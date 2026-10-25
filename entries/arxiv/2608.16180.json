@@ -1,0 +1,24 @@
+{
+  "key": "2608.16180",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.16180",
+  "title": "Demystifying Oversmoothing in Sheaf Neural Networks: An Index-Theoretic Criterion",
+  "authors": [
+    "Junwen Dong",
+    "Yuhan Peng",
+    "Hao Li",
+    "Huitao Feng",
+    "Kelin Xia"
+  ],
+  "summary": "To combat oversmoothing in Graph Convolutional Networks, Sheaf Neural Networks (SNNs) were proposed as a generalization by equipping the graph with a sheaf structure and replacing the graph Laplacian with a sheaf Laplacian $\\mathcal{L}$. Existing analyses connect sheaf diffusion to oversmoothing via the harmonic space ($\\ker\\mathcal{L}$), taking its absolute dimension as an indicator of anti-oversmoothing capacity. However, absolute dimension alone is not a reliable measure: certain sheaf configurations inflate $\\dim \\ker \\mathcal{L}$ while their harmonic sections remain entirely constant,…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.DG"
+  ],
+  "published": "2026-08-17",
+  "updated": "2026-08-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

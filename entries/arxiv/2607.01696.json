@@ -1,0 +1,24 @@
+{
+  "key": "2607.01696",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.01696",
+  "title": "Structure-Preserving Reduced-Order Modeling via Low-Rank Transport Signatures",
+  "authors": [
+    "Jiajia Yu",
+    "Jingwei Hu",
+    "Fengyan Li",
+    "Shanyin Tong",
+    "Yunan Yang",
+    "Zhaiming Shen"
+  ],
+  "summary": "Parametrized PDEs with density-valued solutions are often difficult to approximate with classical linear reduced-order models, especially in transport-dominated regimes. We introduce an optimal-transport-based reduced-order modeling that represents each density by the Kantorovich potential transporting a fixed reference density to the target density, and then maps these potentials to transport signatures using a weighted Laplacian associated with the reference measure. This embeds the density-valued solution map in a Hilbert space while preserving control of the induced transport maps and…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-02",
+  "updated": "2026-10-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

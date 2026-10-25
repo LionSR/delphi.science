@@ -1,0 +1,25 @@
+{
+  "key": "2610.06798",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.06798",
+  "title": "A Response Theory Probe for Learned Stochastic AI Simulators, Tested on Lorenz-63",
+  "authors": [
+    "João Böger",
+    "Simon Driscoll",
+    "Niccolò Zagli",
+    "Valerio Lucarini",
+    "Francisco Camara Pereira"
+  ],
+  "summary": "Machine-learning emulators of chaotic and stochastic systems are usually validated on forecast skill and long-run statistics. Neither certifies that an emulator responds correctly to forcing, the property that projection and attribution studies rely on. Linear response theory makes this testable: the forced response follows from unperturbed correlations through a generalized fluctuation-dissipation relation, and decomposes over the stochastic Ruelle-Pollicott resonances of the Koopman generator. Building on the Koopmanism Response framework, we turn this into a calibrated, mode-resolved test…",
+  "domain": "math.DS",
+  "tags": [
+    "math.DS",
+    "cs.LG",
+    "nlin.CD"
+  ],
+  "published": "2026-10-05",
+  "updated": "2026-10-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

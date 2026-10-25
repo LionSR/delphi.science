@@ -1,0 +1,22 @@
+{
+  "key": "2605.21459",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.21459",
+  "title": "Network evolution with self-reinforcement",
+  "authors": [
+    "Shankar Bhamidi",
+    "Remco van der Hofstad",
+    "Frank den Hollander",
+    "Rounak Ray"
+  ],
+  "summary": "We study a new class of preferential attachment trees with \\emph{self-reinforcement}. At each time, each vertex is assigned a weight equal to the cumulative sum over past times of an affine function of its degree. A new vertex attaches itself via a single edge to an already present vertex with a probability proportional to the current weight of that vertex. This ``integrated popularity'' rule builds long memory directly into the attachment mechanism, thereby destroying the Markov and partial-exchangeability features that underlie the classical analysis of affine preferential attachment…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-05-20",
+  "updated": "2026-05-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

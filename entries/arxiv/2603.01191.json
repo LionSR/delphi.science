@@ -1,0 +1,20 @@
+{
+  "key": "2603.01191",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.01191",
+  "title": "Beyond singular value gaps in randomized subspace approximation",
+  "authors": [
+    "Christopher Wang",
+    "Alex Townsend"
+  ],
+  "summary": "The success of randomized range finders (RRFs) is typically analyzed via the singular value gaps of a target matrix $A$. In this work, we show that the so-called Frobenius singular value ratio provides a sharper analysis of an RRF's subspace quality under Gaussian sketching. For any matrix $A$ and any integer $k\\ge1$, we derive an exact formula for the cumulative distribution function of the largest principal angle between the $k$-dominant singular subspace of $A$ and the approximate RRF subspace, expressing it in terms of a hypergeometric function. We obtain definitive probabilistic…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-01",
+  "updated": "2026-09-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

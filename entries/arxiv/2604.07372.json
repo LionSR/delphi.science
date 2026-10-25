@@ -1,0 +1,25 @@
+{
+  "key": "2604.07372",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.07372",
+  "title": "NS-RGS: Newton-Schulz based Riemannian gradient method for orthogonal group synchronization",
+  "authors": [
+    "Haiyang Peng",
+    "Deren Han",
+    "Xin Chen",
+    "Meng Huang"
+  ],
+  "summary": "Group synchronization is a fundamental task involving the recovery of group elements from pairwise measurements. For orthogonal group synchronization, the most common approach reformulates the problem as a constrained nonconvex optimization and solves it using projection-based methods, such as the generalized power method. However, these methods rely on exact SVD or QR decompositions in each iteration, which are computationally expensive and become a bottleneck for large-scale problems. In this paper, we propose a Newton-Schulz-based Riemannian Gradient Scheme (NS-RGS) for orthogonal group…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.IT",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-04-07",
+  "updated": "2026-04-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

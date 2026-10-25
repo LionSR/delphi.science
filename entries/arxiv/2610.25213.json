@@ -1,0 +1,22 @@
+{
+  "key": "2610.25213",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.25213",
+  "title": "LiftDiff: Guided Discrete Diffusion for Quantum Code Construction",
+  "authors": [
+    "Yotam Peled",
+    "Eliya Nachmani"
+  ],
+  "summary": "The realization of fault-tolerant quantum computation relies on Quantum Error-Correcting Codes (QECC). Of particular interest are codes that combine a high encoding rate with sufficient distance. Existing algebraic constructions, such as lifted product (LP) codes, build a large quantum low-density parity-check (qLDPC) code from a classical base matrix. In this work we introduce LiftDiff, a generative approach to the discovery of QECC. A discrete denoising diffusion model is trained to generate base matrices over the group algebra $\\mathbb{F}_2[\\mathbb{Z}_\\ell]$, which are then expanded into…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.IT",
+    "cs.LG"
+  ],
+  "published": "2026-10-18",
+  "updated": "2026-10-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

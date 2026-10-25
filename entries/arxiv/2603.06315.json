@@ -1,0 +1,21 @@
+{
+  "key": "2603.06315",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.06315",
+  "title": "Intrinsic Information Flow in Structureless NP Search",
+  "authors": [
+    "Jing-Yuan Wei"
+  ],
+  "summary": "Rather than measuring NP search in terms of Turing-machine time, we reinterpret witness recovery as an information-acquisition process: the hidden witness is the sole source of uncertainty, and identification requires sufficient reduction of this uncertainty through a rate-limited access interface in the sense of Shannon. To make this perspective explicit, we analyze an extreme regime, the \\emph{psocid model}, in which the witness is accessible only via equality probes $[π= w^\\star]$ under a uniform, structureless prior. Each probe reveals at most $O(N/2^N)$ bits of mutual information, so…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.CC",
+    "cs.IT"
+  ],
+  "published": "2026-03-06",
+  "updated": "2026-04-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

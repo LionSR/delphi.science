@@ -1,0 +1,23 @@
+{
+  "key": "2606.09594",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.09594",
+  "title": "Constraint residuals, graph posteriors, and determinant-corrected full-space targets in Bayesian inverse problems",
+  "authors": [
+    "Jonathon Cottom",
+    "Emilia Olsson"
+  ],
+  "summary": "Bayesian inverse problems constrained by state equations are often sampled in a full parameter-state space by penalising the residual, rather than in a reduced space where the state is eliminated. We show that these formulations are not automatically equivalent as posterior measures. For finite-dimensional discretisations of equality-constrained inverse problems, assume the state equation \\(c(θ,u)=0\\) has a unique solution \\(u=G(θ)\\) and nonsingular state Jacobian \\(\\D_u c\\). The reduced posterior, its graph lift, and the zero-noise residual posterior are then distinct. A local change of…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "cond-mat.stat-mech",
+    "math-ph",
+    "math.NA"
+  ],
+  "published": "2026-06-08",
+  "updated": "2026-06-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

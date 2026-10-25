@@ -1,0 +1,21 @@
+{
+  "key": "2606.07003",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.07003",
+  "title": "A Single-Loop Regularized Newton Method for Nonconvex-Strongly-Concave Minimax Optimization",
+  "authors": [
+    "Bohao Ma",
+    "Nachuan Xiao",
+    "Junyu Zhang"
+  ],
+  "summary": "For smooth nonconvex-strongly-concave minimax problems, existing second-order methods share a common double-loop structure where the inner maximization is solved to sufficiently high accuracy before each second-order step. First-order methods are often adopted in the inner loops for scalability, but they also undermine the condition-insensitivity of second-order methods, limiting these methods to instances with mild conditioning. To resolve this issue, we propose a novel single-loop framework based on an equivalent regularized minimization reformulation of the original problem. By deriving a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-05",
+  "updated": "2026-06-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

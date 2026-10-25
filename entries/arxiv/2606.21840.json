@@ -1,0 +1,24 @@
+{
+  "key": "2606.21840",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.21840",
+  "title": "A Test for Treatment Heterogeneity under a Distributional Difference-in-Difference Framework",
+  "authors": [
+    "Satarupa Bhattacharjee",
+    "Bing Li",
+    "Lingzhou Xue"
+  ],
+  "summary": "We develop a novel distributional Difference-in-Differences (DiD) framework to capture treatment heterogeneity across outcome distributions. By leveraging optimal transport, we use the control group to estimate the untreated distributional drift from the pre- to post-treatment period and apply it to the treated group's pre-treatment baseline, constructing a counterfactual distribution under the assumption of no treatment effect. We frame the null hypothesis as a distributional equality between the transported counterfactual distribution and the observed treated post-treatment distribution,…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "econ.EM",
+    "math.ST",
+    "stat.AP"
+  ],
+  "published": "2026-06-20",
+  "updated": "2026-06-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

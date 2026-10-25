@@ -1,0 +1,22 @@
+{
+  "key": "2608.23669",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.23669",
+  "title": "Single-shot online sequence classification with unbounded quantum memory advantage",
+  "authors": [
+    "Keith K. Ng",
+    "Haochen Jay Li",
+    "Mile Gu",
+    "Jayne Thompson"
+  ],
+  "summary": "An agent monitors a complex environment, receiving one observation at each time step and eventually deciding how to label the resulting sequence. Does the sequence indicate an anomaly, and if so, of what type? Does it signal market instability, and to what degree? This is the setting of online multi-class classification: the input arrives sequentially, the full history is never available at once, and the agent must retain any past information relevant to the eventual decision. As the environment becomes more complex, the memory needed to track this information can grow rapidly without bound.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-08-24",
+  "updated": "2026-08-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

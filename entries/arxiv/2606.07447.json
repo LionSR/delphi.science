@@ -1,0 +1,21 @@
+{
+  "key": "2606.07447",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.07447",
+  "title": "Community Detection on a Randomly Growing Network",
+  "authors": [
+    "Jianxiang Wang",
+    "Min Xu"
+  ],
+  "summary": "We study community detection on Markovian random networks outside of the Stochastic Block Model (SBM) framework. Specifically, we consider a random network growth process which generates $K$ separate preferential attachment trees and connects them with Erdős--Rényi edges, so that each tree represents a community and each node inherits the label of the tree to which it belongs. This model is able to produce many features of real world networks that are improbable under SBM, such as power law degree distribution and the existence of chains and hubs. Given only the final graph, without any…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.ST"
+  ],
+  "published": "2026-06-05",
+  "updated": "2026-07-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

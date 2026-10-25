@@ -1,0 +1,20 @@
+{
+  "key": "2606.00855",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.00855",
+  "title": "Constrained Neural Parameterization for Optimization in Function Spaces",
+  "authors": [
+    "Michael Hintermüller",
+    "Jianfeng Ning"
+  ],
+  "summary": "We propose constrained neural parameterization schemes for several classes of constraints arising in optimization problems in function spaces. This is achieved by constructing smooth neural parameterizations whose image lies entirely in the admissible set while remaining asymptotically dense. In this way, the original constrained optimization problem is transformed into a smooth unconstrained problem in parameter space, enabling efficient gradient-based optimization without penalty parameters or Lagrange multipliers. We develop geometric constructions for polyhedral constraint sets in…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-30",
+  "updated": "2026-05-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

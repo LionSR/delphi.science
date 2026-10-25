@@ -1,0 +1,20 @@
+{
+  "key": "2606.19050",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.19050",
+  "title": "First-Order Methods for Solving Convex (Strongly) Concave Minimax Problems with Functional Constraints",
+  "authors": [
+    "Yangyang Xu",
+    "Xinhao Ying"
+  ],
+  "summary": "Minimax problems arise in many applications, including robust learning and Stackelberg models. Most existing methods for minimax problems address unconstrained or projection-friendly settings, while functional constrained minimax problems remain far less explored. We study a class of convex-(strongly-)concave minimax problems with functional constraints. By exploiting strong duality, we incorporate the inner-maximization functional constraints into the objective. This allows us to efficiently obtain inexact gradients of the primal function of the reformulation and to design a proximal…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-06-17",
+  "updated": "2026-06-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

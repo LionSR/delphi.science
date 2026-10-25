@@ -1,0 +1,23 @@
+{
+  "key": "2605.18406",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.18406",
+  "title": "Computational aspects of the Volterra Signature",
+  "authors": [
+    "Paul P. Hager",
+    "Fabian N. Harang",
+    "Luca Pelizzari",
+    "Samy Tindel"
+  ],
+  "summary": "The Volterra signature extends the classical path signature by incorporating general matrix-valued kernel into its iterated integral structure, yielding a flexible notion of memory for time series. Its components can be viewed as successive Picard iterates of linear controlled Volterra equations, making their exact computation of additional mathematical interest. However, the kernel introduces substantial algorithmic challenges. We provide a resolution by first decomposing the Chen-type convolution relation established in [arXiv:2603.04525] into analytic and arithmetic parts, and then…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "stat.ML"
+  ],
+  "published": "2026-05-18",
+  "updated": "2026-05-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

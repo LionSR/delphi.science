@@ -1,0 +1,23 @@
+{
+  "key": "2609.20729",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.20729",
+  "title": "Blind Quantum Computation with a Small Quantum Server",
+  "authors": [
+    "Daniel Lovsted",
+    "Filipa C. R. Peres",
+    "Joshua Nevin",
+    "Selman Ipek",
+    "Anne Broadbent"
+  ],
+  "summary": "Blind quantum computation (BQC) allows low-resource clients to securely delegate computations to a quantum server, but server resource costs scale with the computation size, posing a bottleneck for implementations. By leveraging Pauli-based computation (PBC), we achieve BQC with a server whose size depends only on the non-Clifford gate count. Our protocol inherits fault tolerance and qubit virtualization from PBC and reveals that classical-client BQC is possible even in the absence of classical simulability. Finally, we present an entanglement-based dual protocol that performs a resource…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

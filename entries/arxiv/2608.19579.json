@@ -1,0 +1,22 @@
+{
+  "key": "2608.19579",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19579",
+  "title": "Enforcing LLM Safety through DMD-based Classification of Prompt-Response Embedding Dynamics",
+  "authors": [
+    "Mohamed Akrout",
+    "Olivera Kotevska",
+    "Dan Wilson"
+  ],
+  "summary": "Large Language Models (LLMs) are increasingly deployed in high-stakes applications, yet their tendency to generate toxic, harmful, or policy-violating content poses significant risks. Detecting these unsafe outputs efficiently in a black-box manner remains an open challenge. In this paper, we extend a recently proposed dynamical systems framework designed for hallucination detection to LLM safety classification. By projecting both prompts and responses into high-dimensional embedding spaces and fitting separate Koopman-based predictive models for safe and unsafe regimes, we classify new…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "math.DS"
+  ],
+  "published": "2026-08-20",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

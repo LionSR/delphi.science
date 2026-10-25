@@ -1,0 +1,21 @@
+{
+  "key": "2605.31505",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.31505",
+  "title": "The sketched landing method for large-scale optimization under orthogonality constraints",
+  "authors": [
+    "Florentin Goyens",
+    "Simon Mataigne",
+    "Pierre-Antoine Absil"
+  ],
+  "summary": "We propose the sketched landing method, a randomized variant of the landing method for optimization under orthogonality constraints. Each landing step consists of the sum of a normal component, which reduces infeasibility, and a tangent component, which decreases the objective function. Our main contribution is the introduction of low-dimensional random sketch matrices to reduce the computational cost of these directions. We consider both dense (Gaussian) and sparse (subsampling) sketch matrices, and show how they reduce the per-iteration cost while preserving convergence guarantees in…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-29",
+  "updated": "2026-07-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

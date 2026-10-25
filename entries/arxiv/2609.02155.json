@@ -1,0 +1,23 @@
+{
+  "key": "2609.02155",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.02155",
+  "title": "Exact Limits of Random Projections for Preserving Geometry: Distance Recovery, Nearest-Neighbor Rankings, and Covariance Shape in Gaussian Models",
+  "authors": [
+    "Piyush Sao"
+  ],
+  "summary": "The Johnson-Lindenstrauss (JL) lemma guarantees that a random projection of $n$ points to $m=O(\\varepsilon^{-2}\\log n)$ dimensions preserves pairwise squared distances within relative error $\\varepsilon$ with high probability, and this dimension order is asymptotically optimal. In high dimensions, however, distances concentrate around a baseline while key geometric information lies in much smaller fluctuations. We show that the JL bound can therefore be uninformative about retained geometry: an independent Gaussian replacement map can satisfy it even though the replacement cloud is…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.IT",
+    "math.NA",
+    "math.PR",
+    "math.ST"
+  ],
+  "published": "2026-09-02",
+  "updated": "2026-09-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

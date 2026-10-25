@@ -1,0 +1,21 @@
+{
+  "key": "2609.32627",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.32627",
+  "title": "Fewer Qubits, Better Choices: Coupling-Aware Sub-QUBO Selection for Quantum-Assisted Traffic Zone Partitioning",
+  "authors": [
+    "Qianwen Guo",
+    "Ruimin Ke"
+  ],
+  "summary": "Near-term quantum optimizers accommodate roughly a hundred binary variables, requiring large Quadratic Unconstrained Binary Optimization problems to be decomposed into hardware-sized subproblems while other variables remain fixed. Variables are typically selected by ranking the objective changes from individual flips. We show that this rule is uninformative once the incumbent is optimal under single-variable flips: every score represents a cost, while remaining improvements depend on overlooked pairwise interactions. A second-order expansion instead yields a prize-collecting densest-subgraph…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.ET"
+  ],
+  "published": "2026-09-26",
+  "updated": "2026-09-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

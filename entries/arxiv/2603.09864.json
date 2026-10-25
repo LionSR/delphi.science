@@ -1,0 +1,23 @@
+{
+  "key": "2603.09864",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.09864",
+  "title": "Sparse Cuts for the Positive Semidefinite Cone",
+  "authors": [
+    "Oktay Günlük",
+    "Paul Jünger",
+    "Jeff Linderoth",
+    "Andrea Lodi",
+    "James Luedtke"
+  ],
+  "summary": "We consider optimization problems containing nonconvex quadratic functions for which semidefinite programming (SDP) relaxations often yield strong bounds. We investigate linear inequalities that outer approximate the positive semidefinite cone and are sparse in the sense that they are supported only on the variables corresponding to products of variables present in quadratic functions. We show that these sparse linear inequalities yield an LP relaxation that gives the same bound as the SDP relaxation. We demonstrate how to identify these inequalities via a separation procedure that involves…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-10",
+  "updated": "2026-08-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

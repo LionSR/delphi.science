@@ -1,0 +1,26 @@
+{
+  "key": "2602.03670",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.03670",
+  "title": "Equilibrium Propagation for Non-Conservative Systems",
+  "authors": [
+    "Antonino Emanuele Scurria",
+    "Dimitri Vanden Abeele",
+    "Bortolo Matteo Mognetti",
+    "Serge Massar"
+  ],
+  "summary": "Equilibrium Propagation (EP) is a physics-inspired learning algorithm that uses stationary states of a dynamical system both for inference and learning. In its original formulation it is limited to conservative systems, $\\textit{i.e.}$ to dynamics which derive from an energy function. Given their applications, it is important to extend EP to non-conservative systems, $\\textit{i.e.}$ systems with non-reciprocal interactions. Previous attempts to generalize EP to such systems failed to compute the exact gradient of the cost function. Here we propose a framework that extends EP to arbitrary…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "cs.NE",
+    "math.DS",
+    "physics.class-ph"
+  ],
+  "published": "2026-02-03",
+  "updated": "2026-06-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

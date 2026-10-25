@@ -1,0 +1,22 @@
+{
+  "key": "2603.13155",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.13155",
+  "title": "Reinforcement Learning for Discounted and Ergodic Control of Diffusion Processes",
+  "authors": [
+    "Erhan Bayraktar",
+    "Ali D. Kara",
+    "Somnath Pradhan",
+    "Serdar Yuksel"
+  ],
+  "summary": "This paper develops a quantized Q-learning algorithm for the optimal control of controlled diffusion processes on $\\mathbb{R}^d$ under both discounted and ergodic (average) cost criteria. We first establish near-optimality of finite-state MDP approximations to discrete-time discretizations of the diffusion, then introduce a quantized Q-learning scheme and prove its almost-sure convergence to near-optimal policies for the finite MDP. These policies, when interpolated to continuous time, are shown to be near-optimal for the original diffusion model under discounted costs and -- via a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-03-13",
+  "updated": "2026-03-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

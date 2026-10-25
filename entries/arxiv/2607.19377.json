@@ -1,0 +1,25 @@
+{
+  "key": "2607.19377",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.19377",
+  "title": "Reliability-Aware Hard--Soft Physics-Informed Neural Networks for Robust Learning of Challenging Partial Differential Equations",
+  "authors": [
+    "Duc Tien Nguyen",
+    "Hang Tran",
+    "Trinh Minh Tuan",
+    "Nguyen Duc Manh",
+    "Dinh Gia Ninh"
+  ],
+  "summary": "Physics-informed neural networks (PINNs) provide a mesh-free framework for solving partial differential equations, but their training is often affected by loss imbalance, optimization stiffness, and difficulty in capturing localized or multi-mode solution structures. Hard-soft PINNs (HSPINN) alleviate part of this difficulty by embedding Dirichlet or periodic constraints directly into the trial space, but the resulting fixed admissible representation can still be poorly conditioned for sharp or heterogeneous residual fields. This paper proposes a reliability-aware hard-soft PINN (RA-HSPINN)…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2607.09007",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.09007",
+  "title": "Benchmarking Large Language Models on Repairing Qiskit Programs using Bugs4Q",
+  "authors": [
+    "Saumya Brahmbhatt",
+    "Mitali Hukkeri",
+    "Dongchan Kim",
+    "M. V. Panduranga Rao",
+    "Lei Zhang"
+  ],
+  "summary": "In quantum programs, Bugs4Q is a widely used benchmark containing real quantum defects. However, its evaluation assumes that benchmark labels remain valid and that generated fixes execute in the target environment. We evaluate two Bugs4Q versions containing 67 unique real Qiskit defects, adding executable tests where missing, and re-run all entries across six pinned Qiskit releases (0.25.0, 0.45.0, 1.0.0, 1.1.1, 2.0.0, and 2.3.1). We find that quantum benchmarks can suffer from silent label inversion: entries become invalid without errors when reference fixes stop executing or buggy programs…",
+  "domain": "cs.SE",
+  "tags": [
+    "cs.SE",
+    "quant-ph"
+  ],
+  "published": "2026-07-10",
+  "updated": "2026-07-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

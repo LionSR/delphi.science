@@ -1,0 +1,32 @@
+{
+  "key": "2606.28201",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.28201",
+  "title": "Hybrid Quantum-Classical Neural Networks for Recognizing Quantum Phases",
+  "authors": [
+    "Colin Scarato",
+    "Johannes Knörzer",
+    "Markus K. Hoffmann",
+    "Leon C. Sander",
+    "Luca Hofele",
+    "Shengpu Wang",
+    "Kilian Hanke",
+    "Ashay Sathe",
+    "Dominic Hagmann",
+    "Alexander Flasby",
+    "Michael J. Hartmann",
+    "Petr Zapletal",
+    "Andreas Wallraff",
+    "Christoph Hellings"
+  ],
+  "summary": "Identifying quantum phases of matter is key to understanding strongly correlated materials, but remains a challenging task for both conventional computers and current quantum processors. Here, we introduce and implement a hybrid quantum-classical neural network for quantum phase recognition by combining a hardware-efficient parameterized quantum circuit and a feedforward neural network. We jointly train both components with superconducting quantum hardware in the optimization loop, to experimentally demonstrate a classifier for the quantum phases of surface code lattices with up to 4x4 sites…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-06-26",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

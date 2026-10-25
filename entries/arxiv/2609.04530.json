@@ -1,0 +1,22 @@
+{
+  "key": "2609.04530",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.04530",
+  "title": "An Energy-Based Conservative-Dissipative Latent Neural Evolution Operator for Magnetization Dynamics",
+  "authors": [
+    "Sebastian Schaffer",
+    "Lukas Exl"
+  ],
+  "summary": "We develop an energy-based reduced-order model for micromagnetic magnetization dynamics that couples a convolutional autoencoder to a structured latent neural ordinary differential equation. Motivated by the precessional-dissipative structure of the Landau-Lifshitz-Gilbert equation, the latent vector field is generated from the gradient of a learned scalar potential through an antisymmetric operator and a symmetric positive-semidefinite dissipative operator. This potential is learned in nonunique latent coordinates and is not identified with the Gibbs free energy, but decreases monotonically…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

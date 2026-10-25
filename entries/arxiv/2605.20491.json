@@ -1,0 +1,22 @@
+{
+  "key": "2605.20491",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.20491",
+  "title": "A Simple GPU-Accelerated Solver for the Schrödinger Operator with Applications to Ground States and Hamiltonian Simulation",
+  "authors": [
+    "Xinyu Liu",
+    "Xiangxiong Zhang"
+  ],
+  "summary": "We extend the tensor-product direct solver from the Laplacian to the Schrödinger operator $-Δ+ V$. When the potential $V_1$ is separable, the operator $-Δ+ V_1$ is inverted or exponentiated at cost $O(N^{1+1/d})$ in $d$ dimensions via per-axis eigendecomposition. On a single NVIDIA A100 GPU, this costs less than one second for $10^9$ degrees of freedom in 3D. For non-separable potentials $V = V_1 + V_2$, the same solver provides a preconditioner $(-Δ+ V_1)^{-1}$ for the preconditioned conjugate gradient (PCG) method and a propagator for operator-splitting time integrators. For bounded $V_2$,…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.comp-ph",
+    "quant-ph"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

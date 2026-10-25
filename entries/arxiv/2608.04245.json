@@ -1,0 +1,20 @@
+{
+  "key": "2608.04245",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.04245",
+  "title": "Strong error analysis for the stochastic momentum optimizer",
+  "authors": [
+    "Davide Gallon",
+    "Arnulf Jentzen"
+  ],
+  "summary": "Stochastic gradient descent (SGD) optimization schemes are the methods of choice for the optimization of deep neural networks (DNNs) in artificial intelligence (AI) systems. Often not the standard SGD method is used but instead suitable accelerated, adaptive, and/or normalized variants of standard SGD such as Adam, AdamW, and MUON are employed to train large scale AI systems in practically relevant settings. The acceleration (higher order convergence speed) in all these popular optimizers relies on the momentum SGD optimizer. In this work we provide a rigorous error analysis for the momentum…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-08-04",
+  "updated": "2026-08-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2610.03705",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.03705",
+  "title": "Unitary complexity in polynomial space",
+  "authors": [
+    "William Kretschmer",
+    "Ewin Tang"
+  ],
+  "summary": "We show that if quantum commitments exist, then either there is no polynomial-time solution to the unitary synthesis problem, or $\\mathsf{BPP} \\neq \\mathsf{NEXP}$. Thus, showing unconditionally that quantum commitments exist would require answering at least one of two longstanding open questions in complexity theory. We prove our main result as a consequence of a more general lemma, which shows that every unitary in $\\mathsf{unitaryPSPACE}$ either cannot be synthesized efficiently relative to any classical oracle, or can be synthesized efficiently with an oracle for $\\mathsf{NEXP}$ search…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC",
+    "cs.CR"
+  ],
+  "published": "2026-10-02",
+  "updated": "2026-10-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

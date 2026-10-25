@@ -1,0 +1,22 @@
+{
+  "key": "2608.19815",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.19815",
+  "title": "Trustworthy Decisions in Reliability Set Estimation under Insufficient Model Information",
+  "authors": [
+    "Holger Dette",
+    "Zhengfu Liu",
+    "Jun Yu"
+  ],
+  "summary": "Reliability set estimation identifies input regions where a response probability exceeds a target level, bridging estimation and safety-critical decisions. Practitioners typically start with a working model, an imperfect approximation of the true response surface. Relying on this imperfect model may incur decision risk, potentially certifying unsafe regions as safe. We develop a unified framework that turns such a working model into a trustworthy decision rule. First, a modeling-then-calibration procedure decouples estimation from decision. Since the true set is unobservable, we introduce an…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ME"
+  ],
+  "published": "2026-08-20",
+  "updated": "2026-08-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

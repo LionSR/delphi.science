@@ -1,0 +1,22 @@
+{
+  "key": "2605.29213",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.29213",
+  "title": "Multifidelity Proper Orthogonal Decomposition",
+  "authors": [
+    "Nicole Aretz",
+    "Karen Willcox"
+  ],
+  "summary": "This paper introduces a multifidelity formulation that reduces the computational cost of the proper orthogonal decomposition (POD) of a high-fidelity model by leveraging data from cheaper, lower-fidelity models. POD is a prevalent technique for extracting a low-dimensional basis from training data to achieve subsequent dimension reduction or reduced-order modeling. In scientific and engineering applications, the training data are typically numerical snapshot solutions of a high-fidelity model, and computation of a sufficiently rich snapshot set can be prohibitively expensive, especially when…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.CE",
+    "math-ph"
+  ],
+  "published": "2026-05-28",
+  "updated": "2026-06-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

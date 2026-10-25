@@ -1,0 +1,26 @@
+{
+  "key": "2601.06392",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.06392",
+  "title": "Continual Quantum Architecture Search with Tensor-Train Encoding: Theory and Applications to Signal Processing",
+  "authors": [
+    "Jun Qi",
+    "Chao-Han Huck Yang",
+    "Pin-Yu Chen",
+    "Javier Tejedor",
+    "Ling Li",
+    "Min-Hsiu Hsieh"
+  ],
+  "summary": "We introduce CL-QAS, a continual quantum architecture search framework that mitigates the challenges of costly amplitude encoding and catastrophic forgetting in variational quantum circuits. The method uses Tensor-Train encoding to efficiently compress high-dimensional stochastic signals into low-rank quantum feature representations. A bi-loop learning strategy separates circuit parameter optimization from architecture exploration, while an Elastic Weight Consolidation regularization ensures stability across sequential tasks. We derive theoretical upper bounds on approximation,…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG",
+    "eess.SP"
+  ],
+  "published": "2026-01-10",
+  "updated": "2026-01-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

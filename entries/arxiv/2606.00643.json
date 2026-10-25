@@ -1,0 +1,26 @@
+{
+  "key": "2606.00643",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.00643",
+  "title": "Taming the Loss Landscape of PINNs with Noisy Feynman-Kac Supervision: Operator Preconditioning and Non-Asymptotic Error Bounds",
+  "authors": [
+    "Nathanael Tepakbong",
+    "Hanyu Hu",
+    "Chengyu Liu",
+    "Xiang Zhou"
+  ],
+  "summary": "Physics-Informed Neural Networks (PINNs) often train slowly or fail to converge on challenging partial differential equations (PDEs), a behavior recently linked to severely ill-conditioned loss landscapes inherited from the underlying differential operator. We study PINNs augmented with a pointwise data-fidelity term, added at a few points in the domain to the standard residual and boundary losses. We show that this supervision term acts as an operator-level preconditioner: for suitable weights, our comparison bounds guarantee a substantially smaller condition number than under the standard…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.NA",
+    "math.OC",
+    "math.ST"
+  ],
+  "published": "2026-05-30",
+  "updated": "2026-08-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

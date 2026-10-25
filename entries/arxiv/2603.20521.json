@@ -1,0 +1,22 @@
+{
+  "key": "2603.20521",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.20521",
+  "title": "Delightful Distributed Policy Gradient",
+  "authors": [
+    "Ian Osband"
+  ],
+  "summary": "Distributed reinforcement learning trains on data from stale, buggy, or mismatched actors, producing actions with high surprisal (negative log-probability) under the learner's policy. The core difficulty is not surprising data per se, but \\emph{negative learning from surprising data}. High-surprisal failures can dominate finite-batch updates through large perpendicular components, while high-surprisal successes reveal opportunities the current policy would otherwise miss. The \\textit{Delightful Policy Gradient} (DG) separates these cases by gating each update with delight, the product of…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "math.OC",
+    "stat.ML"
+  ],
+  "published": "2026-03-20",
+  "updated": "2026-05-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

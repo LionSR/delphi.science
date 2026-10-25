@@ -1,0 +1,21 @@
+{
+  "key": "2609.10229",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.10229",
+  "title": "Circuit-Embedded Feeder-State Reconstruction for Low-Voltage Distribution Networks under Extreme Measurement Sparsity",
+  "authors": [
+    "Diana Vieira Fernandes",
+    "Carlos Santos Silva",
+    "Soummya Kar"
+  ],
+  "summary": "Low-voltage (LV) distribution feeders increasingly require internal state information, yet real-time telemetry is often limited to feeder-head active and reactive power, while downstream demand and production are described only by static contract metadata. This paper proposes a physics-based AC circuit-embedding reconstruction framework for this extreme-sparsity regime. Feeder-head measurements, matched metadata, and class-level profiles first determine bus-level load and production priors. These priors parameterize auxiliary constant-power elements coupled to the physical feeder through…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

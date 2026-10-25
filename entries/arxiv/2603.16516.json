@@ -1,0 +1,21 @@
+{
+  "key": "2603.16516",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.16516",
+  "title": "Neural network parametrized level sets for image segmentation",
+  "authors": [
+    "Otmar Scherzer",
+    "Cong Shi",
+    "Thi Lan Nhi Vu"
+  ],
+  "summary": "Chan-Vese algorithms have proven to be a first-class method for image segmentation. Early implementations used level set methods with a pixelwise representation of the level set function. Later, parametrized level set approximations, such as splines, have been studied and computationally developed to improve efficiency. In this paper, we use neural networks as parametrized approximations of level set functions for implementing the Chan-Vese methods. We show that this approach is efficient because of the equivalence between two layer neural networks and polygonal approximations of level…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-17",
+  "updated": "2026-05-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

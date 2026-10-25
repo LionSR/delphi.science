@@ -1,0 +1,21 @@
+{
+  "key": "2607.16782",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.16782",
+  "title": "Dynamical Optimal Transport with $\\mathfrak{so}(d)$-Invariance: From Theory to Computation",
+  "authors": [
+    "Kevine Meugang Toukam",
+    "Max von Renesse",
+    "Johannes Storn"
+  ],
+  "summary": "We introduce a modified Benamou--Brenier (MBB) formulation of optimal transport that incorporates Euclidean invariance at the dynamical level. We establish existence of minimizers for the resulting variational problem and prove its equivalence to a static formulation defining the Procrustes--Wasserstein distance. In the Gaussian setting, we show that this distance admits a closed-form expression, reducing to the Euclidean distance between the vectors of square roots of the ordered eigenvalues of the covariance matrices. On the computational side, we formulate a primal--dual scheme for the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-18",
+  "updated": "2026-07-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

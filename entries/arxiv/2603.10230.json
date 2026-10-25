@@ -1,0 +1,26 @@
+{
+  "key": "2603.10230",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.10230",
+  "title": "A Trust-Region Interior-Point Stochastic Sequential Quadratic Programming Method",
+  "authors": [
+    "Yuchen Fang",
+    "Jihun Kim",
+    "Sen Na",
+    "James Demmel",
+    "Javad Lavaei"
+  ],
+  "summary": "In this paper, we propose a trust-region interior-point stochastic sequential quadratic programming (TR-IP-SSQP) method for solving optimization problems with a stochastic objective and deterministic nonlinear equality and inequality constraints. In this setting, exact evaluations of the objective function and its gradient are unavailable, but their stochastic estimates can be constructed. In particular, at each iteration our method builds stochastic oracles, which estimate the objective value and gradient to satisfy proper adaptive accuracy conditions with a fixed probability. To handle…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "math.NA",
+    "stat.ML"
+  ],
+  "published": "2026-03-10",
+  "updated": "2026-03-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

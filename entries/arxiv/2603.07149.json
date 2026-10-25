@@ -1,0 +1,21 @@
+{
+  "key": "2603.07149",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.07149",
+  "title": "Quantitative Fluctuation Analysis for Continuous-Time Stochastic Gradient Descent via Malliavin Calculus",
+  "authors": [
+    "Solesne Bourguin",
+    "Shivam Singh Dhama",
+    "Konstantinos Spiliopoulos"
+  ],
+  "summary": "In this paper, we establish a Quantitative Central Limit Theorem (QCLT) for the Stochastic Gradient Descent in Continuous Time (SGDCT) algorithm, whose parameter updates are governed by a stochastic differential equation. We derive an explicit rate at which the SGDCT iterates converge, in the Wasserstein metric, to a critical point of the objective function. This rate is driven primarily by the magnitude of the learning rate: for a fixed convexity constant of the objective function, smaller learning rates lead to slower convergence. Our approach relies on tools from Malliavin calculus. In…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-03-07",
+  "updated": "2026-08-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03a",
+  "refreshed": "2026-10-24"
+}

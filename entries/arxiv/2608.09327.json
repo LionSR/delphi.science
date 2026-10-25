@@ -1,0 +1,23 @@
+{
+  "key": "2608.09327",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.09327",
+  "title": "High-order fully discrete multi-entropy-stable and bound-preserving schemes for relativistic Euler equations",
+  "authors": [
+    "Linfeng Xu",
+    "Kailiang Wu"
+  ],
+  "summary": "A discrete entropy inequality is the principal nonlinear stability estimate available for systems of conservation laws, and evaluating it presupposes a physically admissible state. So far, however, the two have been secured separately. Entropy-stable schemes are almost always semi-discrete, are built around one selected entropy pair, and take for granted the positivity of density and pressure that makes the entropy well defined in the first place, whereas bound-preserving limiters keep the solution admissible but deliver no entropy estimate. For the special relativistic Euler equations, the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "astro-ph.IM",
+    "physics.comp-ph",
+    "physics.flu-dyn"
+  ],
+  "published": "2026-08-10",
+  "updated": "2026-08-10",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2609.19485",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.19485",
+  "title": "Efficiently estimating failure rates of fault-tolerant logical non-Clifford blocks",
+  "authors": [
+    "Julio C. Magdalena de la Fuente",
+    "Thomas R. Scruby"
+  ],
+  "summary": "Useful quantum computation requires the fault-tolerant implementations of a universal gate set which are generically not efficiently simulable. We devise an algebraic framework that allows for efficient sampling from the measurement distribution of fault-tolerant circuits that implement diagonal logic gates in the third level of the Clifford hierarchy. Upon successful sampling we also provide sufficient conditions for decoding success. The resulting estimate for the logical failure rate is an overestimate, which becomes more accurate for blocks that are fault tolerant against arbitrary local…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-09-16",
+  "updated": "2026-09-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

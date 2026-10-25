@@ -1,0 +1,22 @@
+{
+  "key": "2609.21017",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.21017",
+  "title": "A Smoothed Discrepancy Principle for Random Feature Methods and Neural Networks",
+  "authors": [
+    "Mike Nguyen",
+    "Nicole Mücke"
+  ],
+  "summary": "We study data-driven early stopping for spectral regularisation methods in the classical non-parametric regression setting. Building on the discrepancy principle, we propose a multi-scale stopping rule that applies to general kernel estimators and show that, unlike previous approaches, it achieves full adaptivity over all smoothness levels in the well-specified case. A key contribution of our work is an extension based on random feature approximations, which reduces computational cost on large datasets while preserving minimax-optimal statistical guarantees. Our procedure not only selects an…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-09-17",
+  "updated": "2026-09-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

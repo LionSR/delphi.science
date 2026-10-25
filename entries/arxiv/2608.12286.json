@@ -1,0 +1,21 @@
+{
+  "key": "2608.12286",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.12286",
+  "title": "PatternFormer: Learning Multiple Solution Patterns in Reaction--Diffusion Systems",
+  "authors": [
+    "Zhipeng Chang",
+    "Wenpeng Yin",
+    "Wenrui Hao"
+  ],
+  "summary": "Many nonlinear models across physics, chemistry, and biology exhibit multiple solutions for the same parameters, and capturing this entire solution set is essential for understanding pattern-forming systems. Yet existing learned surrogates are fundamentally single-valued: neural operators map each parameter to a single output, and physics-informed neural networks converge to one branch. We develop \\textbf{PatternFormer} (PF), a large language model-based framework for learning the multiple solutions of nonlinear partial differential equations. By transforming unordered coexisting solutions…",
+  "domain": "math-ph",
+  "tags": [
+    "math-ph"
+  ],
+  "published": "2026-08-12",
+  "updated": "2026-08-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

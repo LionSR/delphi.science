@@ -1,0 +1,22 @@
+{
+  "key": "2602.14758",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14758",
+  "title": "An Age-Structured Vaccination Strategy for Epidemic Containment: A Model Predictive Control Approach",
+  "authors": [
+    "Candy Sonveaux",
+    "Morgane Dumont",
+    "Mirko Fiacchini",
+    "Mohamad Ajami"
+  ],
+  "summary": "This work presents a novel Model Predictive Control (MPC) approach to develop an optimal age-structured vaccination strategy for the containment of COVID-19 in Wallonia, Belgium. The proposed MPC framework is designed to minimize deaths, achieve early disease eradication, and adhere to operational constraints. By incorporating an age-structured Susceptible-Infected-Recovered-Deceased (SIRD) model with an additional term for vaccination, the MPC strategy dynamically adapts to the evolving epidemic state. A detailed proof of the asymptotic stability and recursive feasibility of the proposed…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-02-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

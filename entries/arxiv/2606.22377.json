@@ -1,0 +1,22 @@
+{
+  "key": "2606.22377",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.22377",
+  "title": "Multigrid Training for Molecular Generation using Graph Neural Networks",
+  "authors": [
+    "Zixuan Ling",
+    "Paula Mercurio",
+    "Di Liu"
+  ],
+  "summary": "Deep learning has demonstrated significant success for modeling biochemical molecular systems, where inputs are commonly represented as graphs or 3D grids. A major challenge is that computational cost scales with resolution, making full graph/grid computation of molecular densities expensive and often unstable. We introduce a multigrid training strategy that leverages low-resolution optimization to accelerate learning at higher resolution through parameter transfer across discretizations. For graph molecular representations, we progressively transfer parameters learned from a coarse graph to…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-06-21",
+  "updated": "2026-06-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

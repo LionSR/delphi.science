@@ -1,0 +1,24 @@
+{
+  "key": "2602.17699",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.17699",
+  "title": "Certified Learning under Distribution Shift: Sound Verification and Identifiable Structure",
+  "authors": [
+    "Chandrasekhar Gokavarapu",
+    "Sudhakar Gadde",
+    "Y. Rajasekhar",
+    "S. R. Bhargava"
+  ],
+  "summary": "Proposition. Let $f$ be a predictor trained on a distribution $P$ and evaluated on a shifted distribution $Q$. Under verifiable regularity and complexity constraints, the excess risk under shift admits an explicit upper bound determined by a computable shift metric and model parameters. We develop a unified framework in which (i) risk under distribution shift is certified by explicit inequalities, (ii) verification of learned models is sound for nontrivial sizes, and (iii) interpretability is enforced through identifiability conditions rather than post hoc explanations. All claims are stated…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.RA",
+    "stat.ML"
+  ],
+  "published": "2026-02-06",
+  "updated": "2026-02-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

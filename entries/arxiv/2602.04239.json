@@ -1,0 +1,21 @@
+{
+  "key": "2602.04239",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.04239",
+  "title": "Benchmarking Quantum and Classical Algorithms for the 1D Burgers Equation: QTN, HSE, and PINN",
+  "authors": [
+    "Vanshaj Kerni",
+    "Abdelrahman E. Ahmed",
+    "Syed Ali Asghar"
+  ],
+  "summary": "We present a comparative benchmark of Quantum Tensor Networks (QTN), the Hydrodynamic Schrödinger Equation (HSE), and Physics-Informed Neural Networks (PINN) for simulating the 1D Burgers' equation. Evaluating these emerging paradigms against classical GMRES and Spectral baselines, we analyse solution accuracy, runtime scaling, and resource overhead across grid resolutions ranging from $N=4$ to $N=128$. Our results reveal a distinct performance hierarchy. The QTN solver achieves superior precision ($L_2 \\sim 10^{-7}$) with remarkable near-constant runtime scaling, effectively leveraging…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-04",
+  "updated": "2026-02-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

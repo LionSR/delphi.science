@@ -1,0 +1,24 @@
+{
+  "key": "2609.23855",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.23855",
+  "title": "Kadison--Singer partitions and Bilu--Linial graph signings in polynomial time",
+  "authors": [
+    "Ali Jadbabaie",
+    "Amin Saberi",
+    "Suvrit Sra"
+  ],
+  "summary": "We prove two main algorithmic results in spectral discrepancy. First, we give a deterministic polynomial-time rounding theorem for rational positive semidefinite matrices of arbitrary rank. The algorithm starts from any rational fractional signing and assigns one sign per original matrix. Its discrepancy is less than $3.37\\,\\|\\sum_i \\mathrm{Tr}(A_i)A_i\\|^{1/2}$. This yields Kadison--Singer half-partitions with error below $1.69\\sqrt{\\varepsilon}$, as well as deterministic graph signings that control signed adjacency and signed degrees simultaneously. The proof builds on the…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.CO",
+    "math.FA",
+    "math.OC"
+  ],
+  "published": "2026-09-20",
+  "updated": "2026-09-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

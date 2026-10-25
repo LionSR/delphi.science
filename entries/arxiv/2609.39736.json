@@ -1,0 +1,21 @@
+{
+  "key": "2609.39736",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.39736",
+  "title": "Improved KKT Complexity for First-Order Bilevel Optimization under Weak Lower-Level Convexity",
+  "authors": [
+    "Jan Harold Alcantara",
+    "Masahiro Inoue",
+    "Akiko Takeda"
+  ],
+  "summary": "We study deterministic first-order bilevel optimization under weak lower-level convexity, allowing nonconvex lower-level objectives and without assuming strong convexity, the Polyak-Łojasiewicz condition, or an error-bound property. We consider a $δ$-relaxed Moreau-gap constraint, with $δ>0$, for the lower-level stationarity condition and propose an inexact variable-smoothing penalty method (IVSP) for computing its approximate Karush-Kuhn-Tucker (KKT) points. For any fixed relaxation level $δ$, under a standard extended no-nonzero-abnormal-multiplier constraint qualification (ENNAMCQ), we…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-30",
+  "updated": "2026-09-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

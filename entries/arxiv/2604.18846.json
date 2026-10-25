@@ -1,0 +1,21 @@
+{
+  "key": "2604.18846",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.18846",
+  "title": "Trainability Beyond Linearity in Variational Quantum Objectives",
+  "authors": [
+    "Gordon Ma",
+    "Xiufan Li"
+  ],
+  "summary": "Barren-plateau results have established exponential gradient suppression as a widely cited obstacle to the scalability of variational quantum algorithms. When and whether these results extend to a given objective has been addressed through loss-specific arguments, but a general structural characterization has remained open. We show that the objective itself admits a fixed-observable representation if and only if the loss is affine in the measured statistics, thereby identifying the exact boundary of the standard concentration-based proof template. Existing transfer results for non-affine…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.LG"
+  ],
+  "published": "2026-04-20",
+  "updated": "2026-04-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

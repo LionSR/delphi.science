@@ -1,0 +1,23 @@
+{
+  "key": "2607.06011",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.06011",
+  "title": "Metagraph-Based Domain-Decomposed Galerkin Reduced-Order Model",
+  "authors": [
+    "Kyohei Shintate",
+    "Naoki Morita",
+    "Shigeki Kaneko",
+    "Nozomi Magome",
+    "Naoto Mitsume"
+  ],
+  "summary": "This study proposes a metagraph-based domain-decomposed Galerkin reduced-order model (MBDD-G-ROM) for distributed-memory parallel reduced-order analysis of large-scale problems. The method represents domain-decomposed Galerkin reduced-order models over arbitrary domain decompositions using two graph levels: calculation-point graphs for interactions among discretization points and metagraphs for connectivity among local approximation-space subdomains. In the proper orthogonal decomposition (POD)-based implementation, POD computation subdomains are represented as metanodes, while metaedges…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-07",
+  "updated": "2026-07-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

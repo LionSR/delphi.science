@@ -1,0 +1,24 @@
+{
+  "key": "2607.09476",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.09476",
+  "title": "Orthogonal Quantum Krylov Diagonalisation",
+  "authors": [
+    "Hadi Rammal",
+    "Alexandre Perrin",
+    "Oumaya Ladhari",
+    "Clément Dutreix",
+    "Jérémie Messud",
+    "Matthieu Saubanere"
+  ],
+  "summary": "Quantum subspace-diagonalization methods, particularly Quantum Krylov Diagonalization (QKD), provide a promising route for computing low-energy spectra of quantum many-body Hamiltonians. However, existing quantum Krylov approaches rely on non-orthogonal Krylov bases, requiring overlap-matrix regularization that limits numerical stability and accuracy. In this work, we introduce an Orthogonal Quantum Krylov Diagonalization (OQKD) framework that reformulates the classical Lanczos recursion at the operator level, enabling an orthogonal quantum implementation of Krylov-subspace diagonalization.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-07-10",
+  "updated": "2026-07-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

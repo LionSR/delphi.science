@@ -1,0 +1,36 @@
+{
+  "key": "2602.14694",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.14694",
+  "title": "Demonstrating and Benchmarking Classical Shadows for Lindblad Tomography",
+  "authors": [
+    "Rune Thinggaard Birke",
+    "Johann Bock Severin",
+    "Malthe A. Marciniak",
+    "Emil Hogedal",
+    "Andreas Nylander",
+    "Irshad Ahmad",
+    "Amr Osman",
+    "Janka Biznárová",
+    "Marcus Rommel",
+    "Anita Fadavi Roudsari",
+    "Jonas Bylander",
+    "Giovanna Tancredi",
+    "Daniel Stilck França",
+    "Albert Werner",
+    "Christopher W. Warren",
+    "Jacob Hastrup",
+    "Svend Krøjer",
+    "Morten Kjaergaard"
+  ],
+  "summary": "Spurious couplings and decoherence degrade the performance of solid-state quantum processors, demanding careful design, calibration, and mitigation protocols. These strategies often rely on characterization of the idling processor, but tomographic recovery of (time-independent) Lindblad dynamics scales exponentially with qubit count. Here, we experimentally benchmark and demonstrate that randomized (\"shadow\") measurements accelerate Lindblad tomography on a superconducting transmon processor. We first implement extensible Lindblad tomography, which estimates Lindblad parameters using a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-02-16",
+  "updated": "2026-02-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

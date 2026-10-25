@@ -1,0 +1,21 @@
+{
+  "key": "2603.21554",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.21554",
+  "title": "Sinkhorn algorithms for entropic vector quantile regression",
+  "authors": [
+    "Kengo Kato",
+    "Boyu Wang"
+  ],
+  "summary": "Vector quantile regression (VQR) is an optimal transport (OT)-based framework that extends linear quantile regression to vector-valued response variables and can be formulated as an OT problem with a mean-independence constraint. In this paper, we study Sinkhorn-type algorithms for VQR with entropic regularization, building on the authors' previous work on its duality theory. We first study a direct adaptation of the classical Sinkhorn iteration based on solving the full Schrödinger-type system characterizing the dual potentials, which requires solving an implicit functional equation at each…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.ST"
+  ],
+  "published": "2026-03-23",
+  "updated": "2026-09-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

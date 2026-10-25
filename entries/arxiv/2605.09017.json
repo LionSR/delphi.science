@@ -1,0 +1,22 @@
+{
+  "key": "2605.09017",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.09017",
+  "title": "Quantum algorithms for path and cycle containment problems",
+  "authors": [
+    "Arjan Cornelissen",
+    "Amin Shiraz Gilani",
+    "Subhasree Patro"
+  ],
+  "summary": "The quantum query complexity of subgraph-containment problems, which ask whether a given subgraph $H$ is present in an input graph $G$, has been the subject of considerable study. However, even for relatively simple subgraphs, such as paths and cycles, a complete understanding of their query complexities remains elusive. In this work, we consider several variants of path- and cycle-containment problems in the adjacency matrix model, where we search for paths or cycles of constant length $k$. We compare the settings where the graphs are directed or undirected, where the goal is to detect or…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.CC"
+  ],
+  "published": "2026-05-09",
+  "updated": "2026-08-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2609.05863",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.05863",
+  "title": "Endpoint Asymptotics of Optimal Stabilization Prefactors",
+  "authors": [
+    "Changqin Quan",
+    "Gengsheng Wang"
+  ],
+  "summary": "Consider the stabilizable finite-dimensional linear control system $\\dot x=Ax+Bu$. For a prescribed decay rate $δ>0$, we define the optimal stabilization prefactor $$ \\hat{C}(δ) := \\inf_{K\\in\\mathbb{R}^{m\\times n}} \\sup_{t\\ge0}e^{δt}\\|e^{(A+BK)t}\\|. $$ We determine its asymptotic behavior as $δ$ approaches the right endpoint of the achievable decay-rate range. If $(A,B)$ is controllable and $μ$ is its largest controllability index, then $\\hat{C}(δ)\\asympδ^{μ-1}$ as $δ\\to+\\infty$; whereas if $(A,B)$ is stabilizable but not controllable, then $\\hat{C}(δ)\\asymp(δ_*-δ)^{-(q-1)}$ as…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-05",
+  "updated": "2026-09-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

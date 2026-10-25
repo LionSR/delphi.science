@@ -1,0 +1,22 @@
+{
+  "key": "2608.00840",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.00840",
+  "title": "Sublinear Time Eigenvector Approximation via Column Sampling",
+  "authors": [
+    "Rajarshi Bhattacharjee",
+    "Cameron Musco",
+    "Dominic Rutkowski"
+  ],
+  "summary": "We study sublinear time sampling methods for approximating the outlying eigenvectors of large matrices. Our main result is an algorithm that uniformly samples just $\\tilde{O}(\\log n/ε^4)$ columns of a symmetric matrix $A \\in \\mathbb{R}^{n \\times n}$ with entries bounded in magnitude by $1$, and, for any eigenvalue $λ$ of $A$ with $|λ| \\ge εn$, outputs an approximate eigenvector $v$ satisfying $\\|Av - λv\\|_2 \\le εn$. For approximating just the eigenvector of the largest magnitude eigenvalue, our algorithm samples only $\\tilde{O}(\\log n/ε^2)$ columns. Given the ability to sample rows and…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.NA"
+  ],
+  "published": "2026-08-01",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

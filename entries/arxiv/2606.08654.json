@@ -1,0 +1,24 @@
+{
+  "key": "2606.08654",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.08654",
+  "title": "Operator learning for the 2D incompressible Navier-Stokes equations: a conformal prediction approach in the data-scarce regime",
+  "authors": [
+    "Weinan Wang",
+    "Bowen Gang",
+    "Hao Deng"
+  ],
+  "summary": "In this paper, we propose a perturbation-based conformal prediction framework for uncertainty quantification in operator learning, with a focus on the 2D Navier--Stokes equations. While neural operators provide fast surrogates for expensive PDE solvers, they do not by themselves provide calibrated uncertainty for spatiotemporal field predictions. Our approach wraps a trained Fourier Neural Operator (FNO) with split conformal prediction and constructs the local uncertainty scale by comparing the predictions of two operators trained on nearly identical datasets: one on the original labels and…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.AP",
+    "math.NA",
+    "stat.AP"
+  ],
+  "published": "2026-06-07",
+  "updated": "2026-06-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

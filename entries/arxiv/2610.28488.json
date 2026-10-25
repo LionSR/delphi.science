@@ -1,0 +1,19 @@
+{
+  "key": "2610.28488",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.28488",
+  "title": "Discrete Exterior Calculus-based Whittle-Matérn Fields on Meshes",
+  "authors": [
+    "Michael Gillan"
+  ],
+  "summary": "This work presents a sparse precision formulation for Whittle-Matérn fields based on Discrete Exterior Calculus. By treating the $k$-cochain as the latent object to be modeled, we show that a single formulation can produce Whittle-Matérn fields for all $k$ and integer $α$ values. By utilising Whitney maps we can enable a push-forward of the prior on 1-cochains, enabling inference for discrete vector fields. We demonstrate this model on interpolation of vector fields on a sphere.",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

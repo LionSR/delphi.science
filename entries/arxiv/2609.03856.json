@@ -1,0 +1,19 @@
+{
+  "key": "2609.03856",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.03856",
+  "title": "Consensus time for asynchronous $\\ell^p$ relaxation: graph dependence",
+  "authors": [
+    "Chenyu Gan"
+  ],
+  "summary": "We study the asynchronous $\\ell^p$ relaxation introduced by Amir, Nazarov, and Peres: at each step, a uniformly chosen vertex minimizes its incident $\\ell^p$ energy. For the profile $f_t$ after $t$ updates, let $$ \\mathsf T_p(G,1/2):= \\sup_{\\lVert f_0\\rVert_\\infty\\le1} \\mathbb{E}\\bigl[\\min\\{t\\ge0:\\operatorname{osc}(f_t)\\le1/2\\}\\bigr]. $$ For $1 0$, then $\\mathsf T_p(G,1/2)=Θ_{p,h_0}(n\\log n)$ without a degree assumption. At $p=\\infty$, every connected graph satisfies $\\mathsf T_\\infty(G,1/2)\\ge c nD^2/Δ$, where $D$ and $Δ$ are its diameter and maximum degree.",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

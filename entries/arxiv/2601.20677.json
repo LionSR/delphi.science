@@ -1,0 +1,21 @@
+{
+  "key": "2601.20677",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.20677",
+  "title": "Unconditional full linear convergence and quasi-optimal complexity of smoothed adaptive finite element methods",
+  "authors": [
+    "Philipp Bringmann",
+    "Christoph Lietz",
+    "Dirk Praetorius"
+  ],
+  "summary": "We present the first rigorous convergence analysis of the smoothed adaptive finite element method (S-AFEM) proposed in [Mulita, Giani, Heltai: SIAM J. Sci. Comput. 43, 2021]. S-AFEM modifies the classical adaptive finite element method (AFEM) by performing accurate discrete solves only on periodically determined mesh levels, while the intermediate levels employ a fixed number of cheap smoothing iterations. Numerical experiments in that work showed that this strategy generates adapted meshes comparable to those of AFEM at substantially lower computational cost. In this paper, we prove…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-28",
+  "updated": "2026-07-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

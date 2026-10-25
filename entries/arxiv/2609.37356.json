@@ -1,0 +1,23 @@
+{
+  "key": "2609.37356",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.37356",
+  "title": "Teaching LLMs to Generate Challenging MILP Instances via Solver Feedback",
+  "authors": [
+    "Jitin Singla",
+    "Parikshit Pareek",
+    "Pratik Jawanpuria",
+    "Parag Singla"
+  ],
+  "summary": "Generating optimization instances that are both feasible and computationally challenging is crucial for benchmarking solvers and training learning-based optimization algorithms. Existing non-LLM generators rely on seed instances or parameter tuning, resulting in high test-time computational cost, while existing LLM generators lack explicit hardness measures. Recent reinforcement learning methods with verifier feedback evaluate only binary correctness, which is misaligned with generating challenging problems. We note that an optimization solver reports the cost of solving at several stages of…",
+  "domain": "cs.AI",
+  "tags": [
+    "cs.AI",
+    "math.OC"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

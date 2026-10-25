@@ -1,0 +1,24 @@
+{
+  "key": "2601.11461",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.11461",
+  "title": "Smooth SCAD: A Raised Cosine SCAD Type Thresholding Rule for Wavelet Denoising",
+  "authors": [
+    "Radhika Kulkarni",
+    "Aluisio Pinheiro",
+    "Brani Vidakovic",
+    "Abdourrahmane M. Atto"
+  ],
+  "summary": "We introduce a smooth variant of the SCAD thresholding rule for wavelet denoising by replacing its piecewise linear transition with a raised cosine. The resulting shrinkage function is odd, continuous on R, and continuously differentiable away from the main threshold, yet retains the hallmark SCAD properties of sparsity for small coefficients and near unbiasedness for large ones. This smoothness places the rule within the continuous thresholding class for which Stein's unbiased risk estimate is valid. As a result, unbiased risk computation, stable data-driven threshold selection, and the…",
+  "domain": "stat.CO",
+  "tags": [
+    "stat.CO",
+    "cs.CE",
+    "math.ST"
+  ],
+  "published": "2026-01-16",
+  "updated": "2026-01-16",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

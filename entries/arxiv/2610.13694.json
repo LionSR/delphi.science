@@ -1,0 +1,24 @@
+{
+  "key": "2610.13694",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.13694",
+  "title": "QTN-RQNN: Quantum Tensor Network-Based Recurrent Quantum Neural Network",
+  "authors": [
+    "Amit S. Patel",
+    "Himanshu R. Patel",
+    "Bikash K. Behera",
+    "Pranav Mehta",
+    "Ghanshyam Tejani",
+    "Deepak Parashar"
+  ],
+  "summary": "Resource constraints and imperfect quantum operations remain major challenges for quantum machine learning (QML) on noisy intermediate-scale quantum (NISQ) devices, particularly for fault-diagnosis tasks involving imbalanced and heterogeneous data. This work proposes QTN-RQNN, a Quantum Tensor Network-Based Recurrent Quantum Neural Network that integrates tensor-network-inspired nearest-neighbor interactions with recurrent quantum processing. The model sequentially encodes input features while propagating quantum memory across recurrent steps and incorporates QSMOTE for class balancing.…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-09",
+  "updated": "2026-10-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

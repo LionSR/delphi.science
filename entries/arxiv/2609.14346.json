@@ -1,0 +1,21 @@
+{
+  "key": "2609.14346",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.14346",
+  "title": "Spectral-Residual Continuous Greedy for Tensor Sampling",
+  "authors": [
+    "Hao Li",
+    "Jie Xu",
+    "Zheng Xie"
+  ],
+  "summary": "Sampling a multidomain tensor from limited measurements is fundamental in structured linear inverse problems. Kronecker-structured sampling avoids the full high-dimensional sensing matrix, but design remains difficult: sequential discrete methods can commit the cross-mode budget too early, whereas standard continuous greedy avoids such early commitment at the cost of repeated state-dependent gradient evaluations. We propose spectral-residual continuous greedy (\\alg) for frame-potential (FP) tensor sampling. \\alg maintains a state-dependent fractional allocation before rounding. Mode-wise…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-09-13",
+  "updated": "2026-09-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

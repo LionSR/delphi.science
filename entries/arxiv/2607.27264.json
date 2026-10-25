@@ -1,0 +1,20 @@
+{
+  "key": "2607.27264",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.27264",
+  "title": "Stronger Lower Bounds for Tree Covers via Cyclic Symmetry",
+  "authors": [
+    "Shengtang Huang"
+  ],
+  "summary": "A tree cover of an $n$-point metric space is a collection of $k$ dominating trees such that every pairwise distance is approximately preserved by at least one tree. The best known general upper bound on the distortion is $\\widetilde{O}(n^{1/k})$. Recently, Chen, Tan, and Xu (ITCS 2026, SICOMP 2026) proved a lower bound of $Ω_k(n^{1/2^{k-1}})$ using a topological approach. We improve their lower bound to $Ω_k(n^{1/[k(p-1)]})=Ω_k(n^{1/O(k^2)})$, where $p$ is the smallest prime strictly larger than $k$. Thus, the gap between the known upper and lower exponents is reduced from exponential in $k$…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DS"
+  ],
+  "published": "2026-07-29",
+  "updated": "2026-07-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,22 @@
+{
+  "key": "2609.04527",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.04527",
+  "title": "Learning Memory-Dependent Neural Network Correlation Potentials for Accurate Electron Dynamics",
+  "authors": [
+    "Harish S. Bhat",
+    "Christine M. Isborn"
+  ],
+  "summary": "Time-dependent density functional theory, though exact in theory, is in practice applied in an adiabatic approximation using exchange-correlation functionals with only local temporal dependence. Simultaneously, the exact correlation potential formally depends on, among other quantities, the time-history of electron densities. Here we develop a framework to learn neural network models of correlation functionals that feature explicit memory-dependence. Our framework includes two different approaches, both linked through their use of adjoint-based optimization. One approach decouples the…",
+  "domain": "physics.chem-ph",
+  "tags": [
+    "physics.chem-ph",
+    "math.OC",
+    "physics.comp-ph"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-09-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

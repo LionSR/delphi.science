@@ -1,0 +1,19 @@
+{
+  "key": "2604.21132",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.21132",
+  "title": "The Method of Ellipcenters for Strongly Convex Functions",
+  "authors": [
+    "Yunier Bello-Cruz"
+  ],
+  "summary": "The Method of Ellipcenters (ME), introduced in~\\cite{ME2025} for strongly convex quadratic minimization, uses two gradient evaluations per iteration: one at the current iterate and one at a companion point on the same level set. We extend ME to the broader class of strongly convex functions with Lipschitz continuous gradient. We prove that ME contracts unconditionally at the linear rate $1-μ^2/L^2$, and that at every step where the two gradient directions are linearly independent, which, in dimension at least two, is every step generically, it matches the rate of gradient descent with exact…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-22",
+  "updated": "2026-06-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04b",
+  "refreshed": "2026-10-24"
+}

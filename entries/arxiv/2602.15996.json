@@ -1,0 +1,29 @@
+{
+  "key": "2602.15996",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.15996",
+  "title": "Exploring New Frontiers in Vertical Federated Learning: the Role of Saddle Point Reformulation",
+  "authors": [
+    "Aleksandr Beznosikov",
+    "Georgiy Kormakov",
+    "Alexander Grigorievskiy",
+    "Mikhail Rudakov",
+    "Ruslan Nazykov",
+    "Alexander Rogozin",
+    "Anton Vakhrushev",
+    "Andrey Savchenko",
+    "Martin Takáč",
+    "Alexander Gasnikov"
+  ],
+  "summary": "The objective of Vertical Federated Learning (VFL) is to collectively train a model using features available on different devices while sharing the same users. This paper focuses on the saddle point reformulation of the VFL problem via the classical Lagrangian function. We first demonstrate how this formulation can be solved using deterministic methods. More importantly, we explore various stochastic modifications to adapt to practical scenarios, such as employing compression techniques for efficient information transmission, enabling partial participation for asynchronous communication, and…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-02-17",
+  "updated": "2026-02-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

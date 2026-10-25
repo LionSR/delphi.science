@@ -1,0 +1,19 @@
+{
+  "key": "2608.04468",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.04468",
+  "title": "Iterated Distinct Absolute Differences of Integer Compositions",
+  "authors": [
+    "Felix Huber"
+  ],
+  "summary": "Starting from an integer composition, form its consecutive absolute differences, provided that they are nonzero and pairwise distinct, and then permute these differences arbitrarily before repeating the operation. The depth of the composition is the maximum possible number of successive iterations. We determine the least positive integer admitting a composition of any prescribed depth. If a(n) is the least positive integer having a composition of depth n, then $a(n)=n+1+\\lceil n(n+1)/4\\rceil+\\lfloor n/2\\rfloor$. We also prove that every integer k at least a(n) has a composition of depth at…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-08-05",
+  "updated": "2026-08-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2604.02797",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.02797",
+  "title": "A Non-compact Positivity-Preserving Numerical Scheme for Elliptic Differential Equations Based on Mathematical Expectation",
+  "authors": [
+    "Haoran Xu",
+    "Kunyang Li",
+    "Xingye Yue"
+  ],
+  "summary": "We propose a novel non-compact, positivity-preserving scheme for linear non-divergence form elliptic equations. Based on the Feynman--Kac formula, the solution is represented as a conditional expectation associated with a diffusion process.Instead of using compact Markov chain approximations, we construct a wide-stencil scheme by approximating the expectation with carefully designed transition probabilities, ensuring both consistency and positivity preservation. The method is effective for anisotropic diffusion problems with mixed derivatives, where classical schemes typically fail unless…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-04-03",
+  "updated": "2026-04-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

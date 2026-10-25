@@ -1,0 +1,20 @@
+{
+  "key": "2608.25899",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.25899",
+  "title": "Sharp extremal asymptotics for Cusick's sum-of-digits bias at fixed Hamming weight",
+  "authors": [
+    "Kaimin Cheng"
+  ],
+  "summary": "Let $s_2(n)$ be the binary sum-of-digits function and let $c_t$ be the natural density of the integers $n\\ge0$ for which $s_2(n+t)\\ge s_2(n)$. Earlier work of the author proved the universal exponential bound $$c_t-\\frac12\\ge 2^{-2s_2(t)-1},$$ thereby resolving Cusick's conjecture for every $t$. This estimate, however, does not reflect the true size of the smallest possible bias at a given large Hamming weight. In this paper, we determine this extremal scale sharply: $$\\inf_{s_2(t)=k}\\left(c_t-\\frac12\\right) \\sim \\frac{1}{2\\sqrtπ} \\left(\\frac{\\log_2 k}{k}\\right)^{3/2} \\qquad(k\\to\\infty).$$…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT",
+    "math.CO"
+  ],
+  "published": "2026-08-26",
+  "updated": "2026-08-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08b",
+  "refreshed": "2026-10-24"
+}

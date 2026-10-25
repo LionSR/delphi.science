@@ -1,0 +1,25 @@
+{
+  "key": "2605.16473",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.16473",
+  "title": "Dimension-Uniform Discretization Analysis of Preconditioned Annealed Langevin Dynamics for Multimodal Gaussian Mixtures",
+  "authors": [
+    "Lorenzo Baldassari",
+    "Josselin Garnier",
+    "Knut Solna",
+    "Maarten V. de Hoop"
+  ],
+  "summary": "Obtaining stable diffusion-based samplers in high- and infinite-dimensional settings is challenging because errors can accumulate across high-frequency coordinates and make the dynamics unstable under refinement of the finite-dimensional approximation of the underlying function-space problem. Discretization is a typical source of such errors, and preconditioning with a suitable spectral decay is one way to control their accumulation. In this paper, we study this problem for preconditioned annealed Langevin dynamics (ALD) applied to Gaussian mixtures. We first show that Euler-Maruyama (EM)…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.NA",
+    "math.PR"
+  ],
+  "published": "2026-05-15",
+  "updated": "2026-05-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

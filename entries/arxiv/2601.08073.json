@@ -1,0 +1,21 @@
+{
+  "key": "2601.08073",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.08073",
+  "title": "Monte Carlo to Las Vegas for Recursively Composed Functions",
+  "authors": [
+    "Bandar Al-Dhalaan",
+    "Shalev Ben-David"
+  ],
+  "summary": "For a (possibly partial) Boolean function $f\\colon\\{0,1\\}^n\\to\\{0,1\\}$ as well as a query complexity measure $M$ which maps Boolean functions to real numbers, define the composition limit of $M$ on $f$ by $M^*(f)=\\lim_{k\\to\\infty} M(f^k)^{1/k}$. We study the composition limits of general measures in query complexity. We show this limit converges under reasonable assumptions about the measure. We then give a surprising result regarding the composition limit of randomized query complexity: we show $R_0^*(f)=\\max\\{R^*(f),C^*(f)\\}$. Among other things, this implies that any bounded-error…",
+  "domain": "cs.CC",
+  "tags": [
+    "cs.CC",
+    "quant-ph"
+  ],
+  "published": "2026-01-12",
+  "updated": "2026-01-12",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

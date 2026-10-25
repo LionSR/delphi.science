@@ -1,0 +1,20 @@
+{
+  "key": "2609.03890",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.03890",
+  "title": "The 11/6 supremum of the Wang-Sitters rounding scheme for graph balancing",
+  "authors": [
+    "Adam Y. Shavit"
+  ],
+  "summary": "Wang and Sitters' 11/6-approximation for graph balancing (each job allowed on at most two machines) is not one algorithm but a set of permitted executions. Step 1 may return any feasible solution of the fractional relaxation. Step 3 may match remaining jobs to the rounding's slots in many ways. We determine exactly what that latitude permits: ratios arbitrarily close to 11/6, none reaching it, so 11/6 is the least constant bounding every permitted run. We then determine the worst-case guarantee, against the optimum itself, as a function of the big-job threshold beta, the fractional share at…",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.DS",
+    "math.OC"
+  ],
+  "published": "2026-09-03",
+  "updated": "2026-10-20",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09a",
+  "refreshed": "2026-10-24"
+}

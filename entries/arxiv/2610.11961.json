@@ -1,0 +1,23 @@
+{
+  "key": "2610.11961",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.11961",
+  "title": "A Bregman proximal linearized ADMM for fractional programming with nonlinear coupling constraints",
+  "authors": [
+    "Pengjie Liu",
+    "Jinhu Chen",
+    "Minh N. Dao",
+    "Hu Shao",
+    "Jinbao Jian"
+  ],
+  "summary": "This paper considers a nonconvex fractional optimization problem with composite structure and nonlinear equality constraints. We reformulate the problem as a non-fractional min-max problem with corresponding optimal solutions. By linearizing the nonlinear constraint terms in the augmented Lagrangian and incorporating Bregman proximal linearization and a relaxation factor in $(0, 2)$ into the alternating direction method of multipliers (ADMM), we develop a Bregman proximal linearized ADMM with guaranteed subsequential convergence to a lifted critical point. Convergence of the entire sequence…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-08",
+  "updated": "2026-10-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

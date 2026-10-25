@@ -1,0 +1,22 @@
+{
+  "key": "2608.13131",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.13131",
+  "title": "Huber-Wasserstein barycenters for robust distribution-valued data",
+  "authors": [
+    "Carlos Cardoso-Perelló",
+    "Alberto González-Sanz"
+  ],
+  "summary": "We propose a robust barycenter for distribution-valued data by incorporating the Huber loss directly into the optimal transport cost. In contrast to metric-space Huber means, which apply the Huber loss to the Wasserstein distance after optimization, our construction acts on individual transport displacements, preserving quadratic behavior locally while limiting the influence of large displacements. The resulting Huber-Wasserstein barycenters form a natural interpolation between Wasserstein means and $L^1$-type Wasserstein medians. We establish the analytical and statistical foundations of…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "math.PR",
+    "stat.ML"
+  ],
+  "published": "2026-08-13",
+  "updated": "2026-08-13",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

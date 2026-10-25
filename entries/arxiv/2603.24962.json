@@ -1,0 +1,22 @@
+{
+  "key": "2603.24962",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.24962",
+  "title": "Nonlinear Model Order Reduction on Quadratic Manifolds via Greedy Algorithms with Dimension-Dependent Regularization",
+  "authors": [
+    "Lijie Ji",
+    "Sabrina Rashid",
+    "Yanlai Chen",
+    "Zhu Wang"
+  ],
+  "summary": "Traditional projection-based reduced-order modeling approximates the full-order model by projecting it onto a linear subspace. With a fast-decaying Kolmogorov $n$-width of the solution manifold, the resulting reduced-order model (ROM) can be an efficient and accurate emulator. However, for parametric partial differential equations with slowly decaying Kolmogorov $n$-width, the dimension of the linear subspace required for a reasonable accuracy becomes very large, which undermines computational efficiency. To address this limitation, quadratic manifold methods have recently been proposed.…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-26",
+  "updated": "2026-03-26",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2602.21315",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.21315",
+  "title": "The Instability of all Backoff Protocols",
+  "authors": [
+    "Leslie Ann Goldberg",
+    "John Lapinskas"
+  ],
+  "summary": "In this paper we prove Aldous's conjecture from 1987 that there is no backoff protocol that is stable for any positive arrival rate. The setting is a communication channel for coordinating requests for a shared resource. Each user who wants to access the resource makes a request by sending a message to the channel. The users don't have any way to communicate with each other, except by sending messages to the channel. The operation of the channel proceeds in discrete time steps. If exactly one message is sent to the channel during a time step then this message succeeds (and leaves the…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR",
+    "cs.DM",
+    "cs.DS",
+    "cs.IT",
+    "cs.NI"
+  ],
+  "published": "2026-02-24",
+  "updated": "2026-07-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "2604.06612",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.06612",
+  "title": "Neural parametric representations for thin-shell shape optimisation",
+  "authors": [
+    "Xiao Xiao",
+    "Fehmi Cirak"
+  ],
+  "summary": "Shape optimisation of thin-shell structures requires a flexible, differentiable geometric representation suitable for gradient-based optimisation. We propose a neural parametric geometry representation (NRep) for shells based on a neural network with periodic activation functions. The NRep is defined using a multi-layer perceptron (MLP), which maps the parametric coordinates of mid-surface vertices to their physical coordinates. A structural compliance optimisation problem is posed to optimise the shape of a thin-shell parameterised by the NRep subject to a volume constraint, with the…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "cs.LG"
+  ],
+  "published": "2026-04-08",
+  "updated": "2026-09-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

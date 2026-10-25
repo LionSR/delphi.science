@@ -1,0 +1,23 @@
+{
+  "key": "2606.30358",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.30358",
+  "title": "Learning the structure of open quantum systems",
+  "authors": [
+    "Laura Lewis",
+    "Ewin Tang",
+    "John Wright"
+  ],
+  "summary": "We design an algorithm for learning the coefficients of an $n$-qubit constant-local Lindbladian to $\\varepsilon$ error with $O(g d^2 \\log(n) / \\varepsilon^2)$ total evolution time, where $g$ is the single-site energy and $d$ is the (approximate) degree of the interaction graph. Though Lindbladians present new challenges not present in the special case of Hamiltonians, our algorithm achieves the suite of desiderata attained by state-of-the-art Hamiltonian learning algorithms: (1) it uses non-adaptive, ancilla-free randomized Pauli measurement circuits with a time resolution of only $Θ(1/g)$;…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.DS",
+    "cs.LG"
+  ],
+  "published": "2026-06-29",
+  "updated": "2026-10-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

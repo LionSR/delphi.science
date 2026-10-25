@@ -1,0 +1,21 @@
+{
+  "key": "2607.08628",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.08628",
+  "title": "Exact Permutation Recovery Under Unknown Scalar Affine Transformation",
+  "authors": [
+    "Tigran Galstyan",
+    "Avetik Karagulyan",
+    "Arshak Minasyan"
+  ],
+  "summary": "We study the problem of matching two sets of noisy feature vectors when underlying true features are related by an unknown scalar affine transformation. Our method comprises two primary steps. First, we standardize the feature vectors to estimate the unknown scalar affine transformation. Subsequently, we estimate the permutation by minimizing the Least Sum of Logarithms (LSL) between two sets of observations using the estimated transformation. Our main result shows that the unknown permutation can be perfectly recovered given that the minimal separation distance of true feature vectors…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST"
+  ],
+  "published": "2026-07-09",
+  "updated": "2026-07-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

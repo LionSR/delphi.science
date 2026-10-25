@@ -1,0 +1,35 @@
+{
+  "key": "2610.00470",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00470v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00470v1",
+  "title": "Gluing defects for projected coarse graining in finite spin-foam models",
+  "authors": [
+    "Zhenyu Sun"
+  ],
+  "summary": "Orthogonal truncation can discard states that contribute to a later boundary amplitude. For a self-adjoint contraction $T$ on a finite-dimensional Hilbert space and an isometric inclusion $s$ of retained states, we prove that the two-step residual $\\Delta=s^*T^2s-(s^*Ts)^2$ controls every finite placement of intermediate projections in every Schatten norm. For blocks of lengths $n_1,\\ldots,n_k$, the error is at most $\\sum_{i<j}n_in_j\\|\\Delta\\|$, and the constant is optimal even for positive contractions. The residual vanishes exactly when the retained subspace is invariant. Two-dimensional…",
+  "domain": "math.MP",
+  "tags": [
+    "math.CT",
+    "math.FA",
+    "msc:81T25",
+    "msc:47A20",
+    "msc:81T17",
+    "coarse graining",
+    "cylindrical consistency",
+    "finite gauge theory",
+    "spin foams",
+    "tensor gluing",
+    "truncation error"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "version": 1,
+  "authorship": "human",
+  "human_understanding": "all",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

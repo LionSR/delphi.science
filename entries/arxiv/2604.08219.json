@@ -1,0 +1,23 @@
+{
+  "key": "2604.08219",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.08219",
+  "title": "Stochastic Momentum Tracking Push-Pull for Decentralized Optimization over Directed Graphs",
+  "authors": [
+    "Wenqi Fan",
+    "Yiwei Liao",
+    "Qing Xu",
+    "Bin Guo",
+    "Songyi Dian"
+  ],
+  "summary": "Decentralized optimization over directed networks is frequently challenged by asymmetric communication and the inherent high variance of stochastic gradients, which collectively cause severe oscillations and hinder algorithmic convergence. To address these challenges, we propose the Stochastic Momentum Tracking Push-Pull (SMTPP) algorithm, which tracks the momentum term rather than raw stochastic gradients within the Push-Pull architecture. This design successfully decouples the variance reduction capacity from the algebraic connectivity of the graph.Although the inherent topology mismatch…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-04-09",
+  "updated": "2026-04-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

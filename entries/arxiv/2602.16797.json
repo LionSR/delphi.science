@@ -1,0 +1,21 @@
+{
+  "key": "2602.16797",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.16797",
+  "title": "Fast, High-Accuracy, Randomized Nullspace Computations for Tall Matrices",
+  "authors": [
+    "Ethan N. Epperly",
+    "Taejun Park",
+    "Yuji Nakatsukasa"
+  ],
+  "summary": "In this paper, we develop RLOBPCG, an efficient method for computing a small number of singular triplets corresponding to the smallest singular values of large, tall matrices. The algorithm combines randomized preconditioner from the sketch-and-precondition techniques with the LOBPCG eigensolver: a small sketch is used to construct a high-quality preconditioner, and LOBPCG is run on the Gram matrix to refine the singular vector. Under the standard subspace embedding assumption and a modest singular value gap between the two smallest singular values, we prove that RLOBPCG converges…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-02-18",
+  "updated": "2026-02-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02b",
+  "refreshed": "2026-10-24"
+}

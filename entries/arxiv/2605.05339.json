@@ -1,0 +1,21 @@
+{
+  "key": "2605.05339",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.05339",
+  "title": "Passive Fault Tolerance through Tension-to-Thrust Feed-Forward: Hybrid Input-to-State Stability for Decentralized Multi-UAV Slung-Load Transport under Abrupt Cable Severance",
+  "authors": [
+    "Hadi Hajieghrary",
+    "Paul Schmitt"
+  ],
+  "summary": "Abrupt cable severance in multi-UAV slung-load transport redistributes load and changes the active constraint set, leaving limited time for fault diagnosis and reconfiguration. Existing controllers rely on coordinated force allocation, peer-state exchange, or fixed cable topology, and therefore lack a certified decentralized recovery mechanism for unannounced severance. We present a passive architecture that routes each vehicle's measured cable tension directly into its altitude thrust command, $T_i^{\\mathrm{ff}}=T_i$, while a surrounding proportional-derivative, anti-swing, and projection…",
+  "domain": "cs.RO",
+  "tags": [
+    "cs.RO",
+    "math.OC"
+  ],
+  "published": "2026-05-06",
+  "updated": "2026-05-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

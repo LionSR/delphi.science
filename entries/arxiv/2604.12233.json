@@ -1,0 +1,21 @@
+{
+  "key": "2604.12233",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2604.12233",
+  "title": "An upper bound on the smallest singular value of dense random combinatorial matrices",
+  "authors": [
+    "Dongbin Li",
+    "Alexander E. Litvak",
+    "Tingzhou Yu"
+  ],
+  "summary": "Let $M$ be an $n\\times n$ random matrix with entries in $\\{0, 1\\}$, where each row is independently and uniformly sampled from the set of all vectors in $\\{0, 1\\}^n$ containing exactly $d$ ones, with $d=pn$ for some fixed constant $p\\in (0,1/2]$. A recent result of Tran states that the smallest singular value $s_n(M)$ is bounded below by $c_p n^{-1/2}$ with high probability. In this note, we establish a complementary upper bound for $s_n(M)$, proving that \\[ \\forall \\varepsilon >0 \\qquad \\mathbb{P}\\left(s_n(M)\\le \\frac{\\sqrt{d}}{\\varepsilon^2 n}\\right)\\ge…",
+  "domain": "math.PR",
+  "tags": [
+    "math.PR"
+  ],
+  "published": "2026-04-14",
+  "updated": "2026-04-14",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-04a",
+  "refreshed": "2026-10-24"
+}

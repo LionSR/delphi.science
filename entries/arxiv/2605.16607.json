@@ -1,0 +1,20 @@
+{
+  "key": "2605.16607",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.16607",
+  "title": "Recursive upper bounds for the vertex online Ramsey game with applications to hypergraph Ramsey numbers",
+  "authors": [
+    "Dániel Dobák",
+    "Eion Mulrenin"
+  ],
+  "summary": "The classical recursive upper bound on hypergraph Ramsey numbers due to Erdős and Rado states that for $2 \\leq k < s \\leq t$, \\[ r_k(s,t) \\leq 2^{\\binom{r_{k-1}(s-1,t-1)}{k-1}}. \\] In 2010, Conlon, Fox, and Sudakov introduced the so-called vertex online Ramsey numbers $\\tilde{r}(s,t)$ for graphs to obtain a quantitative improvement over this bound when $k=3$. In this note, we show that the natural hypergraph generalization $\\tilde{r}_k(s,t)$ of the vertex online Ramsey numbers satisfy an improved recurrence \\[ \\tilde{r}_k(s,t) \\leq 2^{(1+o(1))\\tilde{r}_{k-1}(s-1,t-1)}. \\] We obtain several…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO"
+  ],
+  "published": "2026-05-15",
+  "updated": "2026-05-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

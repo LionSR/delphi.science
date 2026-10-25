@@ -1,0 +1,23 @@
+{
+  "key": "2605.19244",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.19244",
+  "title": "Multiresolution analysis on tessellation graphs for inertial particle dynamics",
+  "authors": [
+    "Keigo Matsuda",
+    "Thibault Maurel-Oujia",
+    "Kai Schneider"
+  ],
+  "summary": "A multiresolution technique on tessellation graphs for particle dynamics is proposed. This allows to split spatial field data given on millions of discrete particle positions into scale-dependent contributions. The Delaunay tessellation is used to define the graph, and Voronoi cell volumes are used to satisfy volume conservation. Our approach enables computation of the scale-dependent statistics of particle dynamics by leveraging a wavelet transformation of Lagrangian point particle data and is useful for characterizing particle clustering in turbulent flows. The technique is systematically…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math.NA",
+    "physics.comp-ph"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-05-19",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

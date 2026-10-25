@@ -1,0 +1,24 @@
+{
+  "key": "2606.04476",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.04476",
+  "title": "When Both Layers Learn: Training Dynamics of Representing Linear Models via ReLU Networks",
+  "authors": [
+    "Berk Tinaz",
+    "Changzhi Xie",
+    "Mahdi Soltanolkotabi"
+  ],
+  "summary": "In this paper, we study the gradient descent dynamics for jointly training both layers of a one-hidden-layer ReLU network to fit a linear target function. Concretely, we consider a realizable setting where inputs are drawn i.i.d. from a Gaussian distribution and labels follow a planted linear model. This stylized framework captures salient features of end-to-end training in inverse problems and certain auto-encoder models. Despite its apparent simplicity, the dynamics remain poorly understood, in part because the loss landscape contains multiple non-strict saddle points, making it unclear…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC",
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-06-03",
+  "updated": "2026-06-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

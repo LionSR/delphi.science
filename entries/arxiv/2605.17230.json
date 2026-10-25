@@ -1,0 +1,25 @@
+{
+  "key": "2605.17230",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.17230",
+  "title": "Maximum Likelihood Decoding of Quantum Error Correction Codes",
+  "authors": [
+    "Hanyan Cao",
+    "Ge Yan",
+    "Yuxuan Du",
+    "Feng Pan"
+  ],
+  "summary": "Quantum error correction (QEC) is indispensable for realizing fault-tolerant quantum computation, yet its effectiveness hinges critically on the classical decoding algorithm that interprets noisy syndrome measurements. Among all possible decoding strategies, maximum likelihood decoding (MLD) is provably optimal, since it identifies the logical group with largest likelihood by summing over all possible errors within logical class consistent with the observed syndrome. Despite its optimality, MLD is computationally intractable in general (#P-hard), motivating a rich landscape of exact and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.dis-nn",
+    "cond-mat.stat-mech",
+    "cs.LG"
+  ],
+  "published": "2026-05-17",
+  "updated": "2026-05-17",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

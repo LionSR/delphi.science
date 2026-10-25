@@ -1,0 +1,22 @@
+{
+  "key": "2607.00645",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.00645",
+  "title": "Approximate full-conformal multi-task regression with reproducing kernels",
+  "authors": [
+    "Davidson Lova Razafindrakoto",
+    "Alain Celisse",
+    "Jérôme Lacaille"
+  ],
+  "summary": "Multi-task regression aims at jointly solving multiple regression problems, called tasks. Compared to solving each task separately, better performances can be achieved as long as the tasks are sufficiently related. Full-conformal prediction is a framework that formulates a data-dependent prediction-region containing the unknown output-vector at any prescribed confidence level. However, explicit computation of this prediction-region is intractable in general since it requires training infinitely many predictors. The present work focuses on multi-task regression in a Reproducing Kernel Hilbert…",
+  "domain": "math.ST",
+  "tags": [
+    "math.ST",
+    "stat.ML"
+  ],
+  "published": "2026-07-01",
+  "updated": "2026-07-08",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

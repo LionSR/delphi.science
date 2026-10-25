@@ -1,0 +1,23 @@
+{
+  "key": "2605.19961",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.19961",
+  "title": "Data-driven approximation of regions of attraction via an LP-based selection of PWA Lyapunov functions",
+  "authors": [
+    "Oumayma Khattabi",
+    "Matteo Tacchi-Bénard",
+    "Martin Gulan",
+    "Sorin Olaru"
+  ],
+  "summary": "This paper presents a method to approximate regions of attraction of unknown nonlinear dynamical systems from data. Assuming point-wise evaluations of the vector field and known Lipschitz bounds, a polyhedral uncertainty set of admissible dynamics is constructed. This uncertainty description enables the synthesis of a continuous piece-wise affine Lyapunov candidate via a linear program, enforcing a robust decrease condition for all admissible vector fields. The approach allows certification of a region of attraction consistent with the available data. Numerical examples illustrate the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-05-19",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

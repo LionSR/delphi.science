@@ -1,0 +1,25 @@
+{
+  "key": "2602.10150",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.10150",
+  "title": "PEST: Physics-Enhanced Swin Transformer for 3D Turbulence Simulation",
+  "authors": [
+    "Yilong Dai",
+    "Shengyu Chen",
+    "Xiaowei Jia",
+    "Peyman Givi",
+    "Runlong Yu"
+  ],
+  "summary": "Accurate simulation of turbulent flows is fundamental to scientific and engineering applications. Direct numerical simulation (DNS) offers the highest fidelity but is computationally prohibitive, while existing data-driven alternatives struggle with stable long-horizon rollouts, physical consistency, and faithful simulation of small-scale structures. These challenges are particularly acute in three-dimensional (3D) settings, where the cubic growth of spatial degrees of freedom dramatically amplifies computational cost, memory demand, and the difficulty of capturing multi-scale interactions.…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "cs.AI",
+    "math.AP"
+  ],
+  "published": "2026-02-09",
+  "updated": "2026-02-09",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

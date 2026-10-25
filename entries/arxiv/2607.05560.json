@@ -1,0 +1,23 @@
+{
+  "key": "2607.05560",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.05560",
+  "title": "A Variation Norm Carleson Theorem Along the Primes",
+  "authors": [
+    "Anastasios Fragkos",
+    "Ben Krause",
+    "Nazar Miheisi",
+    "Yu-Chen Sun"
+  ],
+  "summary": "Let $Λ$ denote the von Mangoldt function; we prove that for each $r > 2$, there exist constants \\[ r' < \\mathbf{c}(r) < 2 < \\mathbf{C}(r), \\qquad \\lim_{r \\to \\infty} \\mathbf{c}(r) = 1, \\ \\lim_{r \\to \\infty} \\mathbf{C}(r) = \\infty \\] so that the discrete variational Carleson operator along the primes \\begin{align} \\mathcal{V}^r \\Big( \\sum_{n \\neq 0} f(x-n) Λ(|n|) \\frac{e^{2πi λn}}{n} : λ\\in \\mathbb{T} \\Big) \\end{align} is bounded on $\\ell^p$ for all $\\mathbf{c}(r) < p < \\mathbf{C}(r)$, while the variation is unbounded when $p \\leq r'$. At the non-variational endpoint, the same argument gives…",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA",
+    "math.NT"
+  ],
+  "published": "2026-07-06",
+  "updated": "2026-07-06",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

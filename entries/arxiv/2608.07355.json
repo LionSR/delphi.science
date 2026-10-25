@@ -1,0 +1,20 @@
+{
+  "key": "2608.07355",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.07355",
+  "title": "On the Role of Split Formulations on Aliasing Errors and Entropy Stability of Discontinuous Galerkin Schemes",
+  "authors": [
+    "Mathias Dufresne-Piché",
+    "Siva Nadarajah"
+  ],
+  "summary": "In this work, we formally investigate the dealiasing properties of split form discontinuous Galerkin (DG) discretizations for the one-dimensional Burgers problem. By generalizing the proof of Blaisdell et al. for spectral discretizations, we show that split form DG schemes achieve dealiasing in the weakly underresolved range through integration error cancellation on the conservative and non-conservative forms. As a corollary, we identify quadrature- and order-dependent pairs of splitting coefficients that eliminate the dominant component of the aliasing error. While these ``optimized''…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-07",
+  "updated": "2026-08-07",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

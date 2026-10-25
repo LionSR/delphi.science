@@ -1,0 +1,21 @@
+{
+  "key": "2602.05974",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2602.05974",
+  "title": "Normalization of ReLU Dual for Cut Generation in Stochastic Mixed-Integer Programs",
+  "authors": [
+    "Akul Bansal",
+    "Simge Küçükyavuz"
+  ],
+  "summary": "We study the Rectified Linear Unit (ReLU) dual, an existing dual formulation for stochastic programs that reformulates non-anticipativity constraints using ReLU functions to generate tight, non-convex, and mixed-integer representable cuts. While this dual reformulation guarantees convergence with mixed-integer state variables, it admits multiple optimal solutions that can yield weak cuts. To address this issue, we propose normalizing the dual in the extended space to identify solutions that yield stronger cuts. We prove that the resulting normalized cuts are tight and Pareto-optimal in the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-02-05",
+  "updated": "2026-02-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-02a",
+  "refreshed": "2026-10-24"
+}

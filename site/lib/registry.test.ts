@@ -40,6 +40,10 @@ const SOURCES = fake({
 	'https://export.arxiv.org/api/query?id_list=1706.03762': ATOM,
 	'https://api.github.com/repos/karpathy/nanoGPT': REPO,
 	'https://api.github.com/repos/karpathy/nanoGPT/contents/': [{ name: 'README.md' }, { name: 'AGENTS.md' }],
+	'https://api.github.com/repos/someone/tiny': { ...REPO, full_name: 'someone/tiny', html_url: 'https://github.com/someone/tiny', name: 'tiny', stargazers_count: 3 },
+	'https://api.github.com/repos/someone/tiny/contents/': [{ name: 'README.md' }],
+	'https://api.github.com/repos/someone/cited': { ...REPO, full_name: 'someone/cited', html_url: 'https://github.com/someone/cited', name: 'cited', stargazers_count: 3 },
+	'https://api.github.com/repos/someone/cited/contents/': [{ name: 'CITATION.cff' }],
 });
 
 describe('reading a link', () => {
@@ -52,9 +56,9 @@ describe('reading a link', () => {
 		assert.equal(id('10.1038/nature14539'), 'doi/10.1038__nature14539');
 		assert.equal(id('10.5281/zenodo.123456'), 'zenodo/123456');
 		assert.equal(id('https://huggingface.co/datasets/openai/gsm8k'), 'huggingface/datasets__openai__gsm8k');
-		// The harvester's own adapters read these, so the site leaves them for the daily pull.
+		// The harvester's own adapters read these, so the site does not.
 		assert.equal(id('https://github.com/openai/math/blob/main/preprints/X/paper.pdf'), null);
-		assert.equal(id('https://jaigp.org/paper/105'), null);
+		assert.equal(id('PALOMAR-2026-10-17-000014'), null);
 	});
 	test('metadata comes from the source', async () => {
 		const it = await resolve('https://arxiv.org/abs/1706.03762v7', SOURCES);
@@ -88,6 +92,8 @@ describe('submitting and the forum, on Postgres', () => {
 		assert.equal((await submit(db, 'karpathy/nanoGPT', ada, SOURCES)).status, 'listed');
 		const [last] = await submissions(db, 1);
 		assert.deepEqual([last.record_id, last.voter, last.title], ['github/karpathy__nanoGPT', 'ada', 'nanoGPT']);
+		await assert.rejects(submit(db, 'someone/tiny', ada, SOURCES), /fewer than 50 stars and no CITATION.cff/);
+		assert.equal((await submit(db, 'someone/cited', ada, SOURCES)).status, 'listed', 'a citable repository is listed whatever its stars');
 	});
 
 	test('a record already listed is found by id, URL or repository, without reading the source', async () => {
@@ -97,14 +103,13 @@ describe('submitting and the forum, on Postgres', () => {
 		assert.equal((await submit(db, 'https://github.com/someone/paper', bo, SOURCES)).status, 'already_listed');
 	});
 
-	test('other links wait for the daily pull; missing records are refused; 20 a day', async () => {
-		assert.equal((await submit(db, 'https://jaigp.org/paper/105', bo, SOURCES)).status, 'queued');
-		assert.equal((await submit(db, 'https://jaigp.org/paper/105', bo, SOURCES)).status, 'queued');
-		assert.equal((await db.query('SELECT 1 FROM open_index.submissions WHERE url = $1', ['https://jaigp.org/paper/105'])).rows.length, 1, 'queued once');
+	test('links the site cannot read, blocked venues and missing records are refused; 20 a day', async () => {
+		await assert.rejects(submit(db, 'https://data.palomar-registry.org/entries/PALOMAR-2026-10-17-000014', bo, SOURCES), /cannot read this link/);
+		await assert.rejects(submit(db, 'https://jaigp.org/paper/105', bo, SOURCES), /venue is not listed/);
 		await assert.rejects(submit(db, 'https://arxiv.org/abs/2999.99999', bo, SOURCES), /not found or is not public/);
 		await assert.rejects(submit(db, 'two words', bo, SOURCES), /one link/);
-		await db.query(`INSERT INTO open_index.submissions (url, voter) SELECT 'https://example.org/' || g, 'cy' FROM generate_series(1, 20) g`);
-		await assert.rejects(submit(db, 'https://example.org/new', { login: 'cy', agent: '' }, SOURCES), /20 links today/);
+		await db.query(`INSERT INTO open_index.submissions (url, record_id, voter) SELECT 'x' || g, 'arxiv/1706.03762', 'cy' FROM generate_series(1, 20) g`);
+		await assert.rejects(submit(db, 'arXiv:1801.00001', { login: 'cy', agent: '' }, SOURCES), /20 links today/);
 	});
 
 	test('topics: started with a first post, replies, mentions of records, latest activity', async () => {

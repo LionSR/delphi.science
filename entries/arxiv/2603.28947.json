@@ -1,0 +1,19 @@
+{
+  "key": "2603.28947",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.28947",
+  "title": "Toward generalized solutions of the Keller--Segel equations with singular sensitivity and signal absorption via an algebraic manipulation finite element algorithm",
+  "authors": [
+    "Juan Vicente Gutiérrez-Santacreu"
+  ],
+  "summary": "The paper that follows describes a numerical algorithm to solve the parabolic-parabolic Keller--Segel system characterized by singular sensitivity and signal absorption in such a manner that the numerical approximations converge towards a generalized solution on two-dimensional polygonal domains as the time and space discretization parameters tend to zero. The algorithm employs an algebraic manipulation finite element method for space, while time remains continuous, based on introducing a stabilized term. This term is constructed via a graph-Laplacian operator and a shock detector for…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-03-30",
+  "updated": "2026-03-30",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-03b",
+  "refreshed": "2026-10-24"
+}

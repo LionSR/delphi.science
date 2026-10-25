@@ -1,0 +1,21 @@
+{
+  "key": "2607.17606",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.17606",
+  "title": "An operator-splitting algorithm for the hypergraph $p$-Laplacian with applications to missing data recovery",
+  "authors": [
+    "Kehan Shi",
+    "Jin Liu",
+    "Martin Burger"
+  ],
+  "summary": "Hypergraph $p$-Laplacian regularization is a fundamental model in data analysis with successful applications in various tasks. It aims to minimize a nonsmooth and typically large-scale objective function defined as the sum of the $p$-th powers of the Lipschitz regularization over hyperedges. In this paper, we propose an operator-splitting algorithm for the hypergraph $p$-Laplacian that allows us to handle hyperedges separately in a Gauss-Seidel fashion. Each subproblem can be viewed as a generalized graph Lipschitz learning on a hyperedge, for which we introduce an auxiliary variable to…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-07-20",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07b",
+  "refreshed": "2026-10-24"
+}

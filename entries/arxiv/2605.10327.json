@@ -1,0 +1,28 @@
+{
+  "key": "2605.10327",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.10327",
+  "title": "SCALAR: A Neurosymbolic Framework for Automated Conjecture and Reasoning in Quantum Circuit Analysis",
+  "authors": [
+    "Sean Feeney",
+    "Pooja Rao",
+    "Andreas Klappenecker",
+    "Reuben Tate",
+    "Yuri Alexeev",
+    "Stefano Mensa",
+    "Elica Kyoseva",
+    "Stephan Eidenbenz"
+  ],
+  "summary": "In this paper, we present SCALAR (Symbolic Conjecture and LLM-Assisted Reasoning), a neurosymbolic framework for automated conjecture generation in quantum circuit analysis built on top of the CUDA-Q open source framework. The system integrates quantum simulation, symbolic conjecture generation, and LLM-based interpretation. We evaluate SCALAR on 82 MaxCut instances from the MQLib benchmark dataset and extend the analysis to 2,000 randomly generated graphs across four topologies: regular, Erdos-Renyi, Barabasi-Albert, and Watts-Strogatz. The framework generates conjectured bounds relating…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cs.AI",
+    "cs.SC"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-05-11",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

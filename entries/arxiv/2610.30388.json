@@ -1,0 +1,24 @@
+{
+  "key": "2610.30388",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.30388",
+  "title": "A Transformer-based Approach for Real-time Multi-agent Path Planning with Varying Initial/Final Conditions",
+  "authors": [
+    "Qian Zhang",
+    "Shanqing Liu",
+    "Jerome Darbon",
+    "George Karniadakis"
+  ],
+  "summary": "We address the problem of real-time multi-agent path planning under prescribed initial and final configurations, formulated as a high-dimensional optimal control problem subject to inter-agent collision avoidance and obstacle constraints. Classical solvers based on the Hamilton--Jacobi--Bellman equation or Pontryagin's maximum principle (PMP) become computationally intractable as the number of agents grows, due to the curse of dimensionality and the non-convexity introduced by interaction constraints. We propose OCFormer, a transformer-based neural network that parameterizes the inverse of a…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

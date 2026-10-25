@@ -1,0 +1,21 @@
+{
+  "key": "2609.21477",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.21477",
+  "title": "Integrality-Gap Bounds for Weighted Matchoids and Matroid Intersection",
+  "authors": [
+    "Yu Cong",
+    "Yajie Zhao"
+  ],
+  "summary": "The weighted $k$-matroid intersection problem asks for a maximum-weight set that is independent in each of $k$ matroids on a common ground set. The natural LP relaxation optimizes over the intersection of the $k$ matroid independent set polytopes. It is conjectured that this LP has integrality gap at most $k-1$. The conjecture is known for $k\\le3$, but for $k\\ge4$ the best general upper bound was $k$. We improve this bound to $k-1+1/k$. More generally, we prove that the natural LP of a $p$-matchoid has integrality gap at most $p-1+1/p$, with a deterministic LP-relative algorithm attaining…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DM"
+  ],
+  "published": "2026-09-18",
+  "updated": "2026-09-18",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

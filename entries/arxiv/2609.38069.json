@@ -1,0 +1,22 @@
+{
+  "key": "2609.38069",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.38069",
+  "title": "Stochastic Lie-Bracket Approximations for Zeroth-Order Optimization on Manifolds",
+  "authors": [
+    "Mahmoud Abdelgalil",
+    "Miroslav Krstic",
+    "Jorge I. Poveda"
+  ],
+  "summary": "We propose a continuous-time algorithm for zeroth-order global optimization of smooth functions on compact manifolds that synthesizes Riemannian gradient dynamics using only objective measurements, without evaluating gradients. The algorithm is formulated as an ordinary differential equation driven by piecewise-smooth McShane-type approximations of the Wiener process, with a geometric compensation term that depends only on the actuation frame and not on the objective function. Our main result establishes infinite-horizon practical probabilistic guarantees for fixed approximation parameters.…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-09-29",
+  "updated": "2026-09-29",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

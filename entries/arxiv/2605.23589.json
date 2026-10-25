@@ -1,0 +1,20 @@
+{
+  "key": "2605.23589",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.23589",
+  "title": "Unlocking the Informational Value of Marginal Costs for Exact Time Series Aggregation in Generation Expansion Planning",
+  "authors": [
+    "Luca Santosuosso",
+    "Sonja Wogrin"
+  ],
+  "summary": "This paper addresses the generation expansion planning (GEP) problem, formulated as a mixed-integer linear programming model with intertemporal storage constraints. Being generally NP-hard, the problem's computational complexity grows sharply with the planning horizon and the number of binary variables. While previous research has tackled this challenge using heuristic time series aggregation (TSA) methods, we propose a theoretically grounded marginal-cost-based TSA, designed to construct an aggregated model that preserves the active constraints of its full-scale counterpart, thereby…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-05-22",
+  "updated": "2026-06-24",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05b",
+  "refreshed": "2026-10-24"
+}

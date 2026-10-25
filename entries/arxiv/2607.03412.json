@@ -1,0 +1,21 @@
+{
+  "key": "2607.03412",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.03412",
+  "title": "Asynchronous Sensitivity-Based Distributed NMPC",
+  "authors": [
+    "Maximilian Pierer von Esch",
+    "Andres Völz",
+    "Knut Graichen"
+  ],
+  "summary": "This paper presents a cooperative distributed model predictive control (MPC) scheme for nonlinear continuous-time systems. The centralized optimal control problem is solved asynchronously via a fixed number of sensitivity-based distributed programming (SBDP) iterations. The proposed scheme requires only neighbor-to-neighbor communication and no synchronization between agents during optimization. Under nominal MPC stability and bounded information delay, local exponential stability is established for a sufficiently large number of per-agent SBDP iterations. Numerical and hardware-in-the-loop…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-07-03",
+  "updated": "2026-07-03",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-07a",
+  "refreshed": "2026-10-24"
+}

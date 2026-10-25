@@ -1,0 +1,20 @@
+{
+  "key": "2601.10399",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.10399",
+  "title": "A Geometric Multigrid Preconditioner for Shifted Boundary Method",
+  "authors": [
+    "Michał Wichrowski",
+    "Ajay Ajith"
+  ],
+  "summary": "The Shifted Boundary Method (SBM) trades some part of the burden of body-fitted meshing for increased algebraic complexity. While the resulting linear systems retain the standard $\\mathcal{O}(h^{-2})$ conditioning of second-order operators, the non-symmetry and non-local boundary coupling render them resistant to standard Algebraic Multigrid (AMG) and simple smoothers for high-order discretisations. We present a geometric multigrid preconditioner that effectively tames these systems. At its core lies the \\emph{Full-Residual Shy Patch} smoother: a subspace correction strategy that filters out…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-01-15",
+  "updated": "2026-01-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01a",
+  "refreshed": "2026-10-24"
+}

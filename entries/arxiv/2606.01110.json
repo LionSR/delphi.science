@@ -1,0 +1,23 @@
+{
+  "key": "2606.01110",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.01110",
+  "title": "Accelerating physics-informed neural networks for full waveform inversion using a hybrid quantum-classical finite-basis architecture",
+  "authors": [
+    "Hoang Anh Nguyen",
+    "Divakar Vashisth",
+    "Ali Tura"
+  ],
+  "summary": "Full waveform inversion (FWI) reconstructs heterogeneous material properties from receiver data but remains computationally demanding. Physics-informed neural networks (PINNs) and their domain-decomposed variants (FBPINNs) offer a mesh-free alternative but face convergence challenges when representing complex velocity fields. We present a hybrid quantum-classical FBPINN for acoustic FWI, bringing together quantum computing and classical machine learning, in which the decomposed wavefield network and the global velocity network are implemented as classical-to-quantum pipelines terminating in…",
+  "domain": "physics.geo-ph",
+  "tags": [
+    "physics.geo-ph",
+    "cs.LG",
+    "quant-ph"
+  ],
+  "published": "2026-05-31",
+  "updated": "2026-06-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026",
+  "refreshed": "2026-10-24"
+}

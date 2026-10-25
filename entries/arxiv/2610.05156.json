@@ -1,0 +1,21 @@
+{
+  "key": "2610.05156",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.05156",
+  "title": "Ordered Weighted Average Support Vector Regression",
+  "authors": [
+    "Luisa I. Martínez-Merino",
+    "Justo Puerto",
+    "Antonio M. Rodríguez-Chía"
+  ],
+  "summary": "This paper introduces a novel Support Vector Regression (SVR) model that incorporates Ordered Weighted Average (OWA) operators to differently penalize deviations of observations from the ε-strip. The penalty is determined based on the position of each deviation in the ordered vector of all deviations. A key contribution of this work is the development of two nonlinear formulations: a continuous formulation for non-decreasing monotone weight vectors and a mixed-integer formulation for general weight vectors. By leveraging dual approaches associated with these formulations, the model…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-04",
+  "updated": "2026-10-04",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

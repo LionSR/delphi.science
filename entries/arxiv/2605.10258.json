@@ -1,0 +1,24 @@
+{
+  "key": "2605.10258",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.10258",
+  "title": "Parity Supervision as a Driver of Generalization in Quantum Generative Modeling",
+  "authors": [
+    "Markus Baumann",
+    "Daniel Hein",
+    "Steffen Udluft",
+    "Tobias Rohe",
+    "Claudia Linnhoff-Popien",
+    "Jonas Stein"
+  ],
+  "summary": "Generative models learn probability distributions in order to produce new samples beyond a finite training set. Their usefulness therefore depends on assigning probability to valid but previously unseen states. In a controlled benchmark, we test whether parity-based training provides an inductive bias for this kind of generalization in instantaneous quantum polynomial-time (IQP) circuit Born machines. We compare the same IQP circuit trained with parity supervision and coordinate-wise mean-squared error (MSE), together with classical controls. Parity supervision improves exact distributional…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-05-11",
+  "updated": "2026-07-22",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q2",
+  "refreshed": "2026-10-24"
+}

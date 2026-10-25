@@ -1,0 +1,23 @@
+{
+  "key": "2603.03803",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2603.03803",
+  "title": "Approximate Amplitude Encoding with the Adaptive Interpolating Quantum Transform",
+  "authors": [
+    "Gekko Budiutama",
+    "Shunsuke Daimon",
+    "Xinchi Huang",
+    "Hirofumi Nishi",
+    "Yu-ichiro Matsushita"
+  ],
+  "summary": "Amplitude encoding of real-world data on quantum computers is often the workflow bottleneck: direct amplitude encoding scales poorly with input size and can offset any speedups in subsequent processing. Fourier-based sparse amplitude encoding lowers cost by retaining only a small subset of dominant coefficients, but its fixed, non-adaptive basis leads to significant information loss. In this work, we replace the Fourier transform with the adaptive interpolating quantum transform (AIQT) in the sparse amplitude encoding workflow. The AIQT learns a data-adapted basis that concentrates…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-03-04",
+  "updated": "2026-03-25",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-quant-ph-2026q1",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2610.29261",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.29261",
+  "title": "Group Distributionally Robust Optimization over Decentralized Networks",
+  "authors": [
+    "Haomin Bai",
+    "Junyan Sun",
+    "Quan Cheng",
+    "Yuanyu Wan",
+    "Lijun Zhang"
+  ],
+  "summary": "We study group distributionally robust optimization (GDRO) over decentralized networks, where workers collaborate to learn robust models by minimizing the maximum local risk. Existing methods optimize only dual-regularized surrogates and establish guarantees for a globally averaged model that is not available to workers. In this paper, we directly optimize the original GDRO objective and establish guarantees for local models in semi-decentralized (SemiDec) and fully decentralized (Dec) settings. A key difficulty is that applying the primal-dual decomposition from centralized GDRO yields…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "cs.LG"
+  ],
+  "published": "2026-10-21",
+  "updated": "2026-10-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-24"
+}

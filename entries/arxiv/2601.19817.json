@@ -1,0 +1,19 @@
+{
+  "key": "2601.19817",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2601.19817",
+  "title": "U-Bit Collapse in Arnault Composites:Probing the Boundary of Strong Lucas Pseudoprimes",
+  "authors": [
+    "Bowman Hall"
+  ],
+  "summary": "We present a computational study of 200 composite integers of approximately 350 bits, engineered using the Arnault framework to pass all Miller-Rabin tests up to base 11. Generated at a rate of approximately 20 per hour from a high-throughput construction process producing ~7,700 Carmichael numbers per minute, all samples fail the strong Lucas probable prime test. We introduce the U-bit collapse metric delta = log_2(n) - log_2(U_d mod n) to quantify deviation from the expected uniform distribution of Lucas sequence terms. Analysis reveals minimal collapse values: mean delta = 1.61 bits,…",
+  "domain": "math.NT",
+  "tags": [
+    "math.NT"
+  ],
+  "published": "2026-01-27",
+  "updated": "2026-01-27",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-01b",
+  "refreshed": "2026-10-24"
+}

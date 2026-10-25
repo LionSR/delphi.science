@@ -1,0 +1,20 @@
+{
+  "key": "2607.22627",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2607.22627",
+  "title": "Spectral Analysis of Heavy-Ball Q-value Iteration",
+  "authors": [
+    "Donghwan Lee"
+  ],
+  "summary": "We study the convergence and acceleration of Qvalue iteration (QVI) with heavy-ball momentum. Although acceleration of value iteration has been studied extensively, there has been less work on the acceleration of heavy-ball QVI for control tasks. We analyze heavy-ball QVI from the viewpoint of switched linear system (SLS) theory and the joint spectral radius (JSR). First, we convert heavy-ball QVI into an exact SLS and interpret its convergence through the JSR. We also give JSR-based conditions under which heavy-ball QVI can be faster than standard QVI.",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-06-18",
+  "updated": "2026-07-28",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06b",
+  "refreshed": "2026-10-24"
+}

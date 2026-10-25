@@ -1,0 +1,24 @@
+{
+  "key": "2606.17227",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2606.17227",
+  "title": "Hybrid Digital-Analog Approximate Inverse Preconditioning for Krylov Methods",
+  "authors": [
+    "Shikhar Shah",
+    "Rui Peng Li",
+    "Tayfun Gokmen",
+    "Vassilis Kalantzis",
+    "Lior Horesh",
+    "Yuanzhe Xi"
+  ],
+  "summary": "Analog in-memory computing enables highly parallel matrix-vector multiplications with reduced data movement, but the resulting operations are noisy, quantized, and affected by device- and circuit-level non-idealities. This paper studies approximate inverse preconditioning for Krylov subspace methods in a hybrid digital-analog setting. The digital host performs sparse products with the coefficient matrix and the precision-sensitive Krylov operations, while preconditioner applications are performed through analog crossbar matrix-vector multiplications. Since the realized preconditioner is…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-06-15",
+  "updated": "2026-06-15",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-06a",
+  "refreshed": "2026-10-24"
+}

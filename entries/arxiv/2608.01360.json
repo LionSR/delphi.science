@@ -1,0 +1,21 @@
+{
+  "key": "2608.01360",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2608.01360",
+  "title": "Control variates with neural surrogates for uncertainty quantification in kinetic equations",
+  "authors": [
+    "Wei Chen",
+    "Giacomo Dimarco",
+    "Lorenzo Pareschi"
+  ],
+  "summary": "Efficient uncertainty quantification for kinetic equations with random inputs is challenging because it requires repeated simulations of high-dimensional models, such as the Boltzmann, Landau, and related collisional equations, whose computational cost can quickly become prohibitive. Multifidelity control variates address this difficulty by coupling a small number of high-fidelity simulations with many evaluations of lower-complexity reduced models. In this work, we analyze the case in which the reduced model is replaced by a neural surrogate rather than evaluated through a classical…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-08-02",
+  "updated": "2026-08-02",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-08a",
+  "refreshed": "2026-10-24"
+}

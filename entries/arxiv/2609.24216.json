@@ -1,0 +1,21 @@
+{
+  "key": "2609.24216",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2609.24216",
+  "title": "Cesàro-type operators on average radial integrability spaces induced by doubling weights",
+  "authors": [
+    "Jiaxin Pan",
+    "Cezhong Tong",
+    "Zixing Yuan"
+  ],
+  "summary": "In this paper, we study the Cesàro-type operator $$ \\Ces_{μ,β}f(z)=\\int_{[0,1)}\\frac{f(tz)}{(1-tz)^β}\\,dμ(t), $$ where \\(μ\\) is a positive Borel measure on \\([0,1)\\) and \\(β>0\\). For \\(0<p,q<\\infty\\) and radial doubling weights \\(ω_1,ω_2\\), we prove that \\(\\Ces_{μ,β}:\\AL_p^q(ω_1)\\to\\AL_p^q(ω_2)\\) is bounded if and only if $$ μ([0,1))+\\sup_{1/2\\le r<1}\\frac{μ([r,1))}{(1-r)^β}\\left(\\frac{\\whatω_2(r)}{\\whatω_1(r)}\\right)^{1/p}<\\infty, $$ and its norm is comparable to this quantity. For standard weights, our result extends \\cite{BlascoMas2026,GalanopoulosSiskakisZhao2025} to the full range…",
+  "domain": "math.FA",
+  "tags": [
+    "math.FA"
+  ],
+  "published": "2026-09-21",
+  "updated": "2026-09-21",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-09b",
+  "refreshed": "2026-10-24"
+}

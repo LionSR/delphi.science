@@ -1,0 +1,41 @@
+{
+  "key": "2610.00272",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00272v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00272v1",
+  "title": "Diameter-Free Pointwise Gaussian KDE in Near-Additive Query Time",
+  "authors": [
+    "Matěj Kripner",
+    "Václav Rozhoň",
+    "Robert Šámal",
+    "Martin Šindelář",
+    "Adrián Zámečník"
+  ],
+  "summary": "Wagner asked whether Gaussian kernel density estimation in $\\mathbb R^d$ admits query time $\\widetilde O(d+\\varepsilon^{-2})$ without dependence on the diameter of the data. We answer this affirmatively for each fixed query: a randomized data structure answers a query to additive error $\\varepsilon$ with probability $1-\\delta$ in time $O((d+\\varepsilon^{-2})\\log(d+1)\\log(2/\\delta))$, independently of the number of data points and of their diameter. The key ingredient is a variance bound for a Fastfood-type structured Fourier block that holds uniformly in the norm of the displacement.",
+  "domain": "cs.DS",
+  "tags": [
+    "cs.NA",
+    "math.PR",
+    "msc:68W20",
+    "msc:62G07",
+    "Fastfood",
+    "Gaussian kernel density estimation",
+    "pointwise approximation",
+    "random Fourier features",
+    "structured random features"
+  ],
+  "published": "2026-10-15",
+  "updated": "2026-10-15",
+  "version": 1,
+  "ai_models": [
+    "Bolzano"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-24",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-24"
+}

@@ -1,0 +1,20 @@
+{
+  "key": "2605.03917",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2605.03917",
+  "title": "Exact ReLU realization of tensor-product refinement iterates",
+  "authors": [
+    "Tsogtgerel Gantumur"
+  ],
+  "summary": "We study scalar dyadic refinement operators on R^2 of the form (Vf)(x,y) = sum_{(j,k) in Z^2} c_{j,k} f(2x-j, 2y-k), where only finitely many mask coefficients c_{j,k} are nonzero. Under a fixed support-window hypothesis, we prove that for every compactly supported continuous piecewise linear seed g:R^2->R, the iterates V^n g admit exact ReLU realizations of fixed width and depth O(n). This gives a first genuinely two-dimensional extension of the exact realization theory for refinement cascades. Using the one-dimensional exact loop-controller framework, the proof transports the…",
+  "domain": "math.CA",
+  "tags": [
+    "math.CA",
+    "cs.LG"
+  ],
+  "published": "2026-05-05",
+  "updated": "2026-05-05",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-05a",
+  "refreshed": "2026-10-24"
+}

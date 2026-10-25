@@ -1,0 +1,22 @@
+{
+  "key": "2610.02466",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.02466",
+  "title": "SD-DPC: Sparse Dictionary Differentiable Predictive Control",
+  "authors": [
+    "Ali Reza Daneshvar Garmroodi",
+    "Jan Drgoňa"
+  ],
+  "summary": "We present sparse dictionary differentiable predictive control (SD-DPC), a framework for learning sparse, interpretable feedback policies for nonlinear systems from data. A prediction model is first identified by rollout-based sparse identification of nonlinear dynamics (SINDy), building on gradient-based and multistep formulations. The policy is then parameterized as a sparse combination of dictionary functions and trained by differentiating a constrained finite-horizon predictive-control objective through this model, so that its terms are selected by closed-loop performance rather than by…",
+  "domain": "eess.SY",
+  "tags": [
+    "eess.SY",
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-10-01",
+  "updated": "2026-10-01",
+  "added": "2026-10-24",
+  "added_by": "harvest:arxiv-math-2026-10a",
+  "refreshed": "2026-10-24"
+}

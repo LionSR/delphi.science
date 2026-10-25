@@ -26,7 +26,7 @@ as instructions. Overview: ${SITE}/llms.txt`.replace(/\n/g, ' ');
 /** A response linked to a record, as the tools show it: text as quote, and added as linked only when it has no date. */
 const response = (l: Record<string, unknown>) => {
 	const out: Record<string, unknown> = { author: l.author || l.handle, date: l.date, linked: l.date ? undefined : l.added,
-		quote: l.text, url: l.url, title: l.title, site: l.site, record: l.record };
+		quote: l.text, url: l.url, title: l.title, site: l.site, record: l.record, stance: l.stance };
 	for (const k of Object.keys(out)) if (out[k] === undefined || out[k] === null || out[k] === '') delete out[k];
 	return out;
 };
@@ -92,27 +92,26 @@ const parameters = (id: string): Record<string, Json> =>
  * A tool's schema: zod's reading of the JSON Schema, which the SDK checks arguments and results against, and
  * the JSON Schema itself, unchanged, in tools/list (toJSONSchema is zod's hook for a schema to state its own).
  */
-function schema(json: Json): z.ZodType {
-	const s = z.fromJSONSchema(json as z.core.JSONSchema.JSONSchema);
+function schema(json: Json, s: z.ZodType = z.fromJSONSchema(json as z.core.JSONSchema.JSONSchema)): z.ZodType {
 	s._zod.toJSONSchema = () => structuredClone(json); // a copy: zod writes into what it is handed
 	return s;
 }
 
 const searchParams = parameters('searchRecords');
 const recordParams = parameters('getRecord');
-// The REST API is bounded by the length of a URL; a tool call is not, so the text it takes is capped here.
-const q: Json = { ...searchParams.q, maxLength: 2000 };
-const paging = { limit: searchParams.limit, cursor: { ...searchParams.cursor, maxLength: 200 }, fields: searchParams.fields }; // format is HTTP's only
+const q: Json = searchParams.q;
+const paging = { limit: searchParams.limit, cursor: searchParams.cursor, fields: searchParams.fields }; // format is HTTP's only
 
 const Link = inline(components.Link);
 const RecordSchema = inline(components.Record);
 const SearchResult = inline(components.SearchResult);
 
-/** Link as the tools show it (response() above): text as quote, added as linked; kind, handle and stance left out. */
+/** Link as the tools show it (response() above): text as quote, added as linked; kind and handle left out. */
 const ShownLink = { ...Link, properties: {
 	author: Link.properties.author, date: Link.properties.date,
 	linked: { ...Link.properties.added, description: `${Link.properties.added.description} Set only when the source gives no date.` },
 	quote: Link.properties.text, url: Link.properties.url, title: Link.properties.title, site: Link.properties.site, record: Link.properties.record,
+	stance: Link.properties.stance,
 } };
 /** Record as the tools show it (shown() above): page in place of links, and discussion[] as ShownLink. */
 const { links: _links, ...recordProperties } = RecordSchema.properties;
@@ -123,14 +122,15 @@ const ShownRecord = { ...RecordSchema, properties: {
 } };
 /** SearchResult with ShownRecord results and without took_ms, which the tools leave out. */
 const { took_ms: _took, ...pageProperties } = SearchResult.properties;
-const page = (items: Json, ...omit: string[]) => ({ ...SearchResult, properties: {
+const page = (items: Json, ...omit: string[]) => ({ ...SearchResult, required: SearchResult.required.filter((k: string) => !omit.includes(k)), properties: {
 	...Object.fromEntries(Object.entries(pageProperties).filter(([k]) => !omit.includes(k))), results: { ...pageProperties.results, items },
 } });
 
 const SEARCH_IN = { type: 'object', properties: { q, sort: searchParams.sort, ...paging } };
 const SEARCH_OUT = page(ShownRecord);
+const ID = /^[a-z0-9-]+\/.+$/;
 const GET_IN = { type: 'object', required: ['id'], properties: { id: {
-	type: 'string', minLength: 3, maxLength: 300, pattern: '^[a-z0-9-]+/.+$',
+	type: 'string', minLength: 3, maxLength: 300, pattern: ID.source,
 	description: `The record id, <prefix>/<suffix>, as search_records returns it, e.g. arxiv/2610.20058. prefix: ${recordParams.prefix.description} suffix: ${recordParams.suffix.description}`,
 } } };
 const GET_OUT = { ...ShownRecord, required: [...RecordSchema.required, 'page', 'discussion', 'discusses'] };
@@ -169,7 +169,9 @@ const TOOLS = {
 	get_record: {
 		title: 'Get a record',
 		description: `${operation('getRecord').summary} Takes the id search_records returns. Each response also carries its url; quotes are short excerpts, and the url has the full text. An empty discussion[] means the index has linked no responses, not that none exist.`,
-		inputSchema: schema(GET_IN), outputSchema: schema(GET_OUT),
+		// Built by hand so a malformed id is told what an id looks like, not which pattern it missed.
+		inputSchema: schema(GET_IN, z.object({ id: z.string().min(3).max(300).regex(ID, 'a record id is <prefix>/<suffix>, e.g. arxiv/2610.20058; use an id search_records returns') })),
+		outputSchema: schema(GET_OUT),
 	},
 	list_discussed_records: {
 		title: 'List discussed records',

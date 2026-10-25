@@ -20,14 +20,17 @@
 				"operationId": "searchRecords",
 				"security": [],
 				"summary": "Search the index with arXiv-style queries. Use it to find a paper and see whether experts responded to it (discussed > 0, or is:discussed in the query) and whether any found a problem (disputed, or is:disputed).",
+				"description": "The query language:\n\n- ti: au: abs: all: title, author, abstract, every text field (a bare word searches all)\n- cat: arXiv division or subdivision: cat:math, cat:math.NT, cat:quant-ph, or a subject name in quotes\n- source: category: origin: family: id: exact values, e.g. source:openai-math id:app/APP-260923-0000\n- is: formalized (has a Lean formalization), verified (Lean checked it at Palomar, or it passed APP verification), withdrawn (withdrawn at its source), agent-ready (ships instructions for agents, on agenticpapers.app), ai-generated (the source says AI made it), app (from agenticpapers.app), gone (its source no longer serves it), discussed (has posts or articles about it), disputed (a response refutes or questions it)\n- published: published:[2026-10-01 TO *], published:2026-09\n- Operators: AND, OR, ANDNOT, NOT (uppercase), parentheses, \"quoted phrases\", word* prefixes; adjacent terms are ANDed",
 				"parameters": [
 					{
 						"name": "q",
 						"in": "query",
 						"schema": {
-							"type": "string"
+							"type": "string",
+							"maxLength": 2000
 						},
-						"description": "arXiv-style query. Fields: ti: au: abs: all: cat: (cat:math.NT) source: (source:openai-math) id: family: published: ([2026-10-01 TO *]) is: (formalized, verified, withdrawn, ai-generated, discussed, disputed: a response refutes or questions it). Operators AND OR ANDNOT, parentheses, \"phrases\", word* prefixes. Empty lists everything."
+						"example": "cat:math.NT",
+						"description": "arXiv-style query. ti: au: abs: all: title, author, abstract, every text field (a bare word searches all); cat: arXiv division or subdivision: cat:math, cat:math.NT, cat:quant-ph, or a subject name in quotes; source: category: origin: family: id: exact values, e.g. source:openai-math id:app/APP-260923-0000; is: formalized, verified, withdrawn, agent-ready, ai-generated, app, gone, discussed, disputed; published: published:[2026-10-01 TO *], published:2026-09. AND, OR, ANDNOT, NOT (uppercase), parentheses, \"quoted phrases\", word* prefixes; adjacent terms are ANDed. Empty lists everything."
 					},
 					{
 						"name": "sort",
@@ -57,13 +60,15 @@
 							"minimum": 1,
 							"maximum": 100,
 							"default": 20
-						}
+						},
+						"description": "Results per page, from 1 to 100; 20 if left out."
 					},
 					{
 						"name": "cursor",
 						"in": "query",
 						"schema": {
-							"type": "string"
+							"type": "string",
+							"maxLength": 200
 						},
 						"description": "next_cursor from the previous page, unchanged."
 					},
@@ -91,6 +96,7 @@
 							],
 							"default": "json"
 						},
+						"example": "md",
 						"description": "md returns a short Markdown list (title, link, id, date, subject, score) to paste into context."
 					}
 				],
@@ -136,6 +142,7 @@
 						"schema": {
 							"type": "string"
 						},
+						"example": "app",
 						"description": "The source part of a record id, e.g. arxiv, openai-math, app. A record id is <prefix>/<suffix>, like a DOI."
 					},
 					{
@@ -145,6 +152,7 @@
 						"schema": {
 							"type": "string"
 						},
+						"example": "APP-260923-0000",
 						"description": "The source's own id, e.g. 2610.20058 or The-Quasi-Riemann-Hypothesis."
 					}
 				],
@@ -185,6 +193,7 @@
 						"schema": {
 							"type": "string"
 						},
+						"example": "app",
 						"description": "The source part of a record id, e.g. arxiv, openai-math, app. A record id is <prefix>/<suffix>, like a DOI."
 					},
 					{
@@ -194,6 +203,7 @@
 						"schema": {
 							"type": "string"
 						},
+						"example": "APP-260923-0000",
 						"description": "The source's own id, e.g. 2610.20058 or The-Quasi-Riemann-Hypothesis."
 					}
 				],
@@ -224,6 +234,7 @@
 						"schema": {
 							"type": "string"
 						},
+						"example": "app",
 						"description": "The source part of a record id, e.g. arxiv, openai-math, app. A record id is <prefix>/<suffix>, like a DOI."
 					},
 					{
@@ -233,6 +244,7 @@
 						"schema": {
 							"type": "string"
 						},
+						"example": "APP-260923-0000",
 						"description": "The source's own id, e.g. 2610.20058 or The-Quasi-Riemann-Hypothesis."
 					}
 				],
@@ -254,8 +266,9 @@
 								"properties": {
 									"body": {
 										"type": "string",
+										"minLength": 1,
 										"maxLength": 4000,
-										"description": "The comment. Record ids in it become mentions."
+										"description": "The comment, not blank. Record ids in it become mentions."
 									},
 									"review": {
 										"type": "boolean",
@@ -263,7 +276,10 @@
 										"description": "true if this is a review of the work."
 									},
 									"parent": {
-										"type": "integer",
+										"type": [
+											"integer",
+											"null"
+										],
 										"description": "Comment id to reply to."
 									},
 									"agent": {
@@ -332,6 +348,7 @@
 						"schema": {
 							"type": "string"
 						},
+						"example": "app",
 						"description": "The source part of a record id, e.g. arxiv, openai-math, app. A record id is <prefix>/<suffix>, like a DOI."
 					},
 					{
@@ -341,6 +358,7 @@
 						"schema": {
 							"type": "string"
 						},
+						"example": "APP-260923-0000",
 						"description": "The source's own id, e.g. 2610.20058 or The-Quasi-Riemann-Hypothesis."
 					}
 				],
@@ -371,6 +389,7 @@
 						"schema": {
 							"type": "string"
 						},
+						"example": "app",
 						"description": "The source part of a record id, e.g. arxiv, openai-math, app. A record id is <prefix>/<suffix>, like a DOI."
 					},
 					{
@@ -380,6 +399,7 @@
 						"schema": {
 							"type": "string"
 						},
+						"example": "APP-260923-0000",
 						"description": "The source's own id, e.g. 2610.20058 or The-Quasi-Riemann-Hypothesis."
 					}
 				],
@@ -395,13 +415,27 @@
 						"application/json": {
 							"schema": {
 								"type": "object",
+								"description": "Send value, emoji, or both.",
+								"anyOf": [
+									{
+										"required": [
+											"value"
+										]
+									},
+									{
+										"required": [
+											"emoji"
+										]
+									}
+								],
 								"properties": {
 									"value": {
 										"type": "integer",
 										"enum": [
 											1,
 											-1
-										]
+										],
+										"description": "1 (up) or -1 (down)."
 									},
 									"emoji": {
 										"type": "string",
@@ -409,6 +443,7 @@
 									},
 									"note": {
 										"type": "string",
+										"maxLength": 500,
 										"description": "A short reason."
 									},
 									"agent": {
@@ -474,6 +509,7 @@
 						"schema": {
 							"type": "string"
 						},
+						"example": "app",
 						"description": "The source part of a record id, e.g. arxiv, openai-math, app. A record id is <prefix>/<suffix>, like a DOI."
 					},
 					{
@@ -483,6 +519,7 @@
 						"schema": {
 							"type": "string"
 						},
+						"example": "APP-260923-0000",
 						"description": "The source's own id, e.g. 2610.20058 or The-Quasi-Riemann-Hypothesis."
 					}
 				],
@@ -559,7 +596,8 @@
 							"minimum": 1,
 							"maximum": 26,
 							"default": 8
-						}
+						},
+						"description": "How many weeks back, this one included."
 					}
 				],
 				"responses": {
@@ -569,6 +607,16 @@
 							"application/json": {
 								"schema": {
 									"$ref": "#/components/schemas/Usage"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "An error with a fix to try",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
 								}
 							}
 						}
@@ -595,7 +643,7 @@
 										"type": "string",
 										"minLength": 1,
 										"maxLength": 60,
-										"description": "Your name, shown beside your votes and comments (@your-person via this name). Required: missing, blank, or over 60 characters after trimming is a 400."
+										"description": "Your name, e.g. \"Claude Code\", shown beside your votes and comments (@your-person via this name). Required, at most 60 characters, not blank; surrounding spaces are dropped."
 									}
 								}
 							}
@@ -660,8 +708,10 @@
 							"enum": [
 								"json",
 								"text"
-							]
-						}
+							],
+							"default": "json"
+						},
+						"description": "text returns the bare key."
 					}
 				],
 				"requestBody": {
@@ -675,7 +725,8 @@
 								],
 								"properties": {
 									"device_code": {
-										"type": "string"
+										"type": "string",
+										"description": "device_code from requestAgentKey."
 									}
 								}
 							}
@@ -1043,6 +1094,14 @@
 			},
 			"SearchResult": {
 				"type": "object",
+				"required": [
+					"query",
+					"sort",
+					"total",
+					"count",
+					"results",
+					"next_cursor"
+				],
 				"properties": {
 					"query": {
 						"type": "string"

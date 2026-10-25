@@ -61,8 +61,8 @@ describe('the MCP tools follow the OpenAPI document', () => {
 		const { search_records: t } = await listTools();
 		const params = (operation('searchRecords').parameters as Json[]).filter((p) => p.name !== 'format');
 		assert.deepEqual(Object.keys(t.inputSchema.properties).sort(), params.map((p) => p.name).sort());
-		// The same type, enum, limits, default and description; MCP only caps the length of the text it takes.
-		for (const p of params) assert.deepEqual(without(t.inputSchema.properties[p.name], 'maxLength'), param(p), p.name);
+		// The same type, enum, limits, default and description, length caps included.
+		for (const p of params) assert.deepEqual(t.inputSchema.properties[p.name], param(p), p.name);
 		assert.ok(t.description.startsWith(operation('searchRecords').summary));
 	});
 
@@ -134,6 +134,16 @@ describe('what the tools return fits their output schemas, closed', { skip: !exi
 		for (const args of [{ limit: 5 }, { query: 'source:openai-math', limit: 2, fields: 'full' }]) {
 			assert.deepEqual(problems(tools.list_discussed_records.outputSchema, await call('list_discussed_records', args)), [], JSON.stringify(args));
 		}
+	});
+
+	test('get_record shows each response\'s stance, and says what an id looks like when one is malformed', async () => {
+		const links = (await call('get_record', { id: discussed })).discussion.map((d: Json) => ({ url: d.url, stance: 'questions' }));
+		await pg.query("UPDATE open_index.records SET record = jsonb_set(record, '{discussion}', (SELECT jsonb_agg(d || '{\"stance\": \"questions\"}') FROM jsonb_array_elements(record->'discussion') d)) WHERE id = $1", [discussed]);
+		const rec = await call('get_record', { id: discussed });
+		assert.deepEqual(rec.discussion.map((d: Json) => ({ url: d.url, stance: d.stance })), links);
+		assert.deepEqual(problems(tools.get_record.outputSchema, rec), []);
+		const bad = await rpc(pg, 'tools/call', { name: 'get_record', arguments: { id: 'no slash here' } });
+		assert.ok(bad.isError && /a record id is <prefix>\/<suffix>/.test(bad.content[0].text), bad.content[0].text);
 	});
 
 	test('query, search_records\' old name for q, still answers the same', async () => {

@@ -33,10 +33,10 @@ export const spec = {
 				summary: 'Search the index with arXiv-style queries. Use it to find a paper and see whether experts responded to it (discussed > 0, or is:discussed in the query) and whether any found a problem (disputed, or is:disputed).',
 				description: `The query language:\n\n${QUERY_GUIDE}`,
 				parameters: [
-					{ name: 'q', in: 'query', schema: { type: 'string' }, example: 'cat:math.NT', description: QUERY_HELP },
+					{ name: 'q', in: 'query', schema: { type: 'string', maxLength: 2000 }, example: 'cat:math.NT', description: QUERY_HELP },
 					{ name: 'sort', in: 'query', schema: { type: 'string', enum: [...SORTS] }, description: SORT_HELP },
-					{ name: 'limit', in: 'query', schema: { type: 'integer', minimum: 1, maximum: MAX_LIMIT, default: DEFAULT_LIMIT }, description: 'Results per page.' },
-					{ name: 'cursor', in: 'query', schema: { type: 'string' }, description: 'next_cursor from the previous page, unchanged.' },
+					{ name: 'limit', in: 'query', schema: { type: 'integer', minimum: 1, maximum: MAX_LIMIT, default: DEFAULT_LIMIT }, description: `Results per page, from 1 to ${MAX_LIMIT}; ${DEFAULT_LIMIT} if left out.` },
+					{ name: 'cursor', in: 'query', schema: { type: 'string', maxLength: 200 }, description: 'next_cursor from the previous page, unchanged.' },
 					{ name: 'fields', in: 'query', schema: { type: 'string', enum: ['compact', 'full'], default: 'compact' }, description: 'full returns each record whole, with discussion[].' },
 					{ name: 'format', in: 'query', schema: { type: 'string', enum: ['json', 'md'], default: 'json' }, example: 'md', description: 'md returns a short Markdown list (title, link, id, date, subject, score) to paste into context.' },
 				],
@@ -192,7 +192,7 @@ export const spec = {
 				discusses: { type: 'array', description: 'Records this one responds to.', items: { type: 'object', properties: { id: { type: 'string' }, title: { type: 'string' } } } },
 				links: { type: 'object', description: 'In search results: where the full record is.', properties: { self: { type: 'string' } } },
 			} },
-			SearchResult: { type: 'object', properties: {
+			SearchResult: { type: 'object', required: ['query', 'sort', 'total', 'count', 'results', 'next_cursor'], properties: {
 				query: { type: 'string' }, sort: { type: 'string' }, total: { type: 'integer' }, count: { type: 'integer' },
 				results: { type: 'array', items: { $ref: '#/components/schemas/Record' } }, next_cursor: { type: ['string', 'null'] }, took_ms: { type: 'number' },
 			} },

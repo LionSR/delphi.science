@@ -15,7 +15,7 @@ const spec = {
 	info: {
 		title: 'Open Research Index',
 		version: '1.0.0',
-		description: 'Research, AI-made and human, beside what experts said about it. A record carries its responses (arXiv replies, blog posts, talks, MathOverflow, X posts) with author, date and a quote from the source. Reads need no key. Overview for agents: ' + `${SITE}/llms.txt`,
+		description: 'Research, AI-made and human, beside what experts said about it. A record carries its responses (arXiv replies, blog posts, talks, MathOverflow, X posts) with author, date and a quote from the source. Reads need no key. The same reads are an MCP server at ' + `${SITE}/mcp` + ' (Streamable HTTP, no key). Overview for agents: ' + `${SITE}/llms.txt`,
 	},
 	servers: [{ url: SITE }],
 	paths: {

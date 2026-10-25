@@ -10,6 +10,7 @@ import { load, type Item } from './load.ts';
 import { agentKeys, createAgentKey, createSession, myVotes, revokeKey, unvote, vote, voterFromKey } from './votes.ts';
 import { comment, comments } from './comments.ts';
 import { approveDevice, denyDevice, pendingDevice, redeemDevice, startDevice } from './device.ts';
+import { handle as mcp } from './mcp.ts';
 
 const MIGRATIONS = new URL('../supabase/migrations/', import.meta.url);
 const INDEX = new URL('../../dist/index.json', import.meta.url);
@@ -205,6 +206,49 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		const top = async (sort: string) => (await search(db, 'source:palomar', { sort, limit: 1 })).results[0].id;
 		assert.deepEqual([await top('week'), await top('month'), await top('score')], [fresh, old, old]);
 		assert.equal((await myVotes(db, 'erin', [old, fresh, 'nope/x'])).get(fresh)?.value, 1);
+	});
+
+	test('MCP at /mcp: initialize, list the tools, call each, over Streamable HTTP', async () => {
+		const rpc = async (method: string, params: object = {}) => {
+			const req = new Request('http://localhost/mcp', { method: 'POST', body: JSON.stringify({ jsonrpc: '2.0', id: 1, method, params }),
+				headers: { 'Content-Type': 'application/json', Accept: 'application/json, text/event-stream' } });
+			const res = await mcp(req, async () => db);
+			assert.equal(res.status, 200);
+			return (await res.json()).result;
+		};
+		const call = async (name: string, args: object) => rpc('tools/call', { name, arguments: args });
+		const init = await rpc('initialize', { protocolVersion: '2025-06-18', capabilities: {}, clientInfo: { name: 'test', version: '0' } });
+		assert.equal(init.serverInfo.name, 'open-research-index');
+		const tools = (await rpc('tools/list')).tools as { name: string; annotations: object; outputSchema?: object }[];
+		assert.deepEqual(tools.map((t) => t.name), ['search_records', 'get_record', 'list_discussed_records']);
+		for (const t of tools) {
+			assert.deepEqual(t.annotations, { readOnlyHint: true, destructiveHint: false, openWorldHint: false, idempotentHint: true });
+			assert.ok(t.outputSchema, t.name);
+		}
+
+		const total = async (q: string) => (await search(db, q, { limit: 1 })).total; // earlier tests link posts to some records
+		const found = (await call('search_records', { query: 'is:discussed', sort: 'score', limit: 2 })).structuredContent;
+		assert.equal(found.total, await total('is:discussed'));
+		assert.ok(found.results.every((r: Record<string, unknown>) => r.page && !r.links && r.discussed));
+		assert.ok(!('took_ms' in found));
+
+		const it = items.find((x) => x.source === 'openai-math' && Array.isArray(x.discussion) && x.discussion.length > 2)!;
+		const rec = (await call('get_record', { id: it.id })).structuredContent;
+		assert.equal(rec.discussion.length, (it.discussion as unknown[]).length);
+		assert.ok(rec.discussion.every((l: Record<string, unknown>) => l.url && l.quote && !('added' in l) && !('kind' in l)));
+		assert.ok(Array.isArray(rec.discusses));
+
+		const list = (await call('list_discussed_records', { limit: 3 })).structuredContent;
+		assert.equal(list.total, await total('is:discussed'));
+		assert.ok(list.results.every((r: Record<string, unknown>) => r.latest_response));
+		assert.equal((await call('list_discussed_records', { query: 'source:openai-math', limit: 1 })).structuredContent.total,
+			await total('is:discussed source:openai-math'));
+
+		for (const [name, args, text] of [['get_record', { id: 'nope/x' }, /no record/], ['search_records', { query: 'foo:bar' }, /Use one of/],
+			['list_discussed_records', { query: 'a) OR (b' }, /Balance/], ['search_records', { limit: 0 }, /limit/]] as const) {
+			const r = await call(name, args);
+			assert.ok(r.isError && text.test(r.content[0].text), name);
+		}
 	});
 
 	test('hybrid ranking puts the nearest embedding first', async () => {

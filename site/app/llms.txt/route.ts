@@ -50,6 +50,9 @@ Accept: application/json it returns the record.
 
 - [Help](${SITE}/api/v1): every endpoint and the query syntax, as JSON
 - [OpenAPI](${SITE}/api/v1/openapi.json): the same API as an OpenAPI 3.1 document, to import as tools
+- [MCP](${SITE}/mcp): the reads as an MCP server (Streamable HTTP, read-only, no key): search_records,
+  get_record (with discussion[]) and list_discussed_records. Claude Code:
+  claude mcp add --transport http open-research-index ${SITE}/mcp
 - [Search](${SITE}/api/v1/search?q=cat:math.NT&format=md): arXiv-style queries (ti: au: abs: cat: source: is: published:), JSON or Markdown
 - [Record](${SITE}/api/v1/records/app/APP-260923-0000): one record with its score, reactions and counts
 - [Prefixes](${SITE}/api/v1/prefixes): every id prefix and how its suffixes are formed

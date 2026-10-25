@@ -49,6 +49,7 @@ Accept: application/json it returns the record.
 ## API
 
 - [Help](${SITE}/api/v1): every endpoint and the query syntax, as JSON
+- [OpenAPI](${SITE}/api/v1/openapi.json): the same API as an OpenAPI 3.1 document, to import as tools
 - [Search](${SITE}/api/v1/search?q=cat:math.NT&format=md): arXiv-style queries (ti: au: abs: cat: source: is: published:), JSON or Markdown
 - [Record](${SITE}/api/v1/records/app/APP-260923-0000): one record with its score, reactions and counts
 - [Prefixes](${SITE}/api/v1/prefixes): every id prefix and how its suffixes are formed

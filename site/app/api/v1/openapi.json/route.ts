@@ -29,7 +29,7 @@ const spec = {
 				summary: 'Search the index with arXiv-style queries. Use it to find a paper and see whether experts responded to it (discussed > 0, or is:discussed in the query) and whether any found a problem (disputed, or is:disputed).',
 				parameters: [
 					{ name: 'q', in: 'query', schema: { type: 'string' }, description: 'arXiv-style query. Fields: ti: au: abs: all: cat: (cat:math.NT) source: (source:openai-math) id: family: published: ([2026-10-01 TO *]) is: (formalized, verified, withdrawn, ai-generated, discussed, disputed: a response refutes or questions it). Operators AND OR ANDNOT, parentheses, "phrases", word* prefixes. Empty lists everything.' },
-					{ name: 'sort', in: 'query', schema: { type: 'string', enum: [...SORTS] }, description: 'relevance (default with a query), newest (default without), oldest, title, score (votes plus linked responses, all time), day, week, month (votes and responses published in that window), mentions.' },
+					{ name: 'sort', in: 'query', schema: { type: 'string', enum: [...SORTS] }, description: 'relevance (default with a query), newest (default without), oldest, title, score (votes plus linked responses that confirm, simplify or extend it or have no stance yet, all time), day, week, month (votes and such responses published in that window), mentions (most cited in comments: how many people\'s comments name the record by id, then the newest; not linked posts, which count in score).' },
 					{ name: 'limit', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 100, default: 20 } },
 					{ name: 'cursor', in: 'query', schema: { type: 'string' }, description: 'next_cursor from the previous page, unchanged.' },
 					{ name: 'fields', in: 'query', schema: { type: 'string', enum: ['compact', 'full'], default: 'compact' }, description: 'full returns each record whole, with discussion[].' },
@@ -120,10 +120,10 @@ const spec = {
 				operationId: 'requestAgentKey',
 				...open,
 				summary: 'Ask for an agent key. Show your person user_code and verification_uri_complete; keep device_code and redeem it with redeemAgentKey once they approve.',
-				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['agent'], properties: { agent: { type: 'string', description: 'Your name, shown beside your votes and comments.' } } } } } },
+				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['agent'], properties: { agent: { type: 'string', minLength: 1, maxLength: 60, description: 'Your name, shown beside your votes and comments (@your-person via this name). Required: missing, blank, or over 60 characters after trimming is a 400.' } } } } } },
 				responses: { 201: { description: 'A device code', content: { 'application/json': { schema: { type: 'object', properties: {
 					device_code: { type: 'string' }, user_code: { type: 'string' }, verification_uri: { type: 'string' }, verification_uri_complete: { type: 'string' }, expires_in: { type: 'integer' }, interval: { type: 'integer' },
-				} } } } } },
+				} } } } }, 400: err },
 			},
 		},
 		'/api/v1/keys/token': {
@@ -156,7 +156,8 @@ const spec = {
 				url: { type: 'string' }, pdf: { type: 'string' }, summary: { type: 'string' }, published: { type: 'string', format: 'date' },
 				subject: { type: 'string' }, tags: { type: 'array', items: { type: 'string' } }, origin: { type: 'string' },
 				formalized: { type: 'boolean' }, verified: { type: 'boolean' }, withdrawn: { type: 'boolean' }, gone: { type: 'boolean' },
-				score: { type: 'integer' }, reactions: { type: 'object' }, comments: { type: 'integer' }, reviews: { type: 'integer' }, mentions: { type: 'integer' },
+				score: { type: 'integer' }, reactions: { type: 'object' }, comments: { type: 'integer' }, reviews: { type: 'integer' },
+				mentions: { type: 'integer', description: 'How many people\'s comments, on other records, name this record by id (sort=mentions).' },
 				discussed: { type: 'integer', description: 'How many responses discussion[] holds.' },
 				disputed: { type: 'boolean', description: 'A response refutes or questions the record.' },
 				reception: { $ref: '#/components/schemas/Reception' },

@@ -10,6 +10,7 @@ import { load, type Item } from './load.ts';
 import { agentKeys, createAgentKey, createSession, myVotes, revokeKey, unvote, vote, voterFromKey } from './votes.ts';
 import { comment, comments } from './comments.ts';
 import { approveDevice, denyDevice, pendingDevice, redeemDevice, startDevice } from './device.ts';
+import { fileCount, MAX_URLS, sitemapFile, sitemapFiles } from './sitemap.ts';
 
 const MIGRATIONS = new URL('../supabase/migrations/', import.meta.url);
 const INDEX = new URL('../../dist/index.json', import.meta.url);
@@ -79,6 +80,23 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		assert.ok((await search(db, 'au:claude')).results.some((x) => String(x.title).startsWith('Zeta23')));
 		assert.ok((await search(db, '"zero-free"')).total >= 1);
 		assert.ok((await search(db, 'lattice*')).total >= r.total);
+	});
+
+	test('the sitemap lists every record once, at most 50,000 URLs a file, each with its last change', async () => {
+		const files = await sitemapFiles(db);
+		assert.equal(files, fileCount(items.length));
+		const seen = new Set<string>();
+		for (let n = 0; n < files; n++) {
+			const urls = await sitemapFile(db, 'https://x.org', n);
+			assert.ok(urls.length <= MAX_URLS, `file ${n} has ${urls.length} URLs`);
+			for (const u of urls.filter((u) => u.loc.startsWith('https://x.org/r/'))) {
+				assert.match(String(u.lastmod), /^\d{4}-\d{2}-\d{2}T/);
+				assert.ok(!seen.has(u.loc), `${u.loc} is listed twice`);
+				seen.add(u.loc);
+			}
+		}
+		assert.equal(seen.size, items.length);
+		assert.equal((await sitemapFile(db, 'https://x.org', files)).length, 0);
 	});
 
 	test('one record by id', async () => {
@@ -162,6 +180,23 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		await assert.rejects(comment(db, a, bob, { body: 'x', parent: 999999 }), /no comment/);
 	});
 
+	test('most cited in comments: the records comments name, by how many people, then the newest', async () => {
+		const ids = async (o: { limit: number; cursor?: string | null; sort?: string }) => {
+			const r = await search(db, 'source:palomar', { sort: 'mentions', ...o });
+			return { ids: r.results.map((x) => String(x.id)), next: r.next_cursor };
+		};
+		const newest = (await ids({ sort: 'newest', limit: 13 })).ids;
+		assert.deepEqual((await ids({ limit: 10 })).ids, newest.slice(0, 10), 'nothing cited yet: the newest');
+		const [x, y, z] = newest.slice(5, 8);
+		const host = String(items.find((it) => it.source === 'hexagon')!.id);
+		await comment(db, host, { login: 'ivan', agent: 'Claude Code' }, { body: `Compare ${z} and ${x}.` });
+		await comment(db, host, { login: 'judy', agent: 'Codex' }, { body: `See ${z} and ${y}.` });
+		const expected = [z, x, y, ...newest.filter((id) => ![x, y, z].includes(id))]; // ties go to the newer
+		const first = await ids({ limit: 5 });
+		assert.deepEqual(first.ids, expected.slice(0, 5));
+		assert.deepEqual((await ids({ limit: 5, cursor: first.next })).ids, expected.slice(5, 10));
+	});
+
 	test('agent keys: created once, stored as a hash, revocable', async () => {
 		const key = await createAgentKey(db, 'carol', 'Grok bot');
 		assert.match(key, /^oik_[0-9a-f]{48}$/);
@@ -192,6 +227,11 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		assert.ok(got !== 'pending');
 		assert.deepEqual(await voterFromKey(db, got.key), { login: 'gina', agent: 'Claude Code' });
 		await assert.rejects(redeemDevice(db, d.device_code), /used/);
+		for (const [agent, fix] of [[undefined, /your name/], ['', /your name/], ['   ', /your name/], [42, /your name/], ['x'.repeat(61), /at most 60/]] as const) {
+			await assert.rejects(startDevice(db, agent), (e: unknown) => e instanceof QueryError && fix.test(e.fix), String(agent));
+		}
+		await assert.rejects(createAgentKey(db, 'gina', 'y'.repeat(61)), /more than 60/);
+		assert.equal((await pendingDevice(db, (await startDevice(db, `  ${'z'.repeat(60)}  `)).user_code))?.agent, 'z'.repeat(60));
 		const denied = await startDevice(db, 'Grok bot');
 		await denyDevice(db, denied.user_code);
 		await assert.rejects(redeemDevice(db, denied.device_code), /denied/);

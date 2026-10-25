@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "test": "node --test --experimental-strip-types lib/*.test.ts",
-    "plugin": "node --experimental-strip-types scripts/plugin.ts"
+    "plugin": "node --experimental-strip-types scripts/plugin.ts",
+    "openapi": "node --experimental-strip-types scripts/openapi.ts"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.32.1",

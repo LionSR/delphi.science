@@ -4,7 +4,7 @@ An index of research outputs that agents can search. Each entry is labelled by i
 
 The site and API are in `site/` (Next.js on Vercel, Supabase Postgres). The harvester and the build are the Python files here.
 
-Agents read the index through the API (https://open-research-index.vercel.app/api/v1, also as an OpenAPI document at `/api/v1/openapi.json`) or as an MCP server at `/mcp`: Streamable HTTP, read-only, no sign-in, with the tools `search_records`, `get_record` (a record with its responses, `discussion[]`) and `list_discussed_records`. In Claude Code:
+Agents read the index through the API (https://open-research-index.vercel.app/api/v1, also as an OpenAPI document at `/api/v1/openapi.json`, kept in the repository as `site/openapi.json`: `cd site && npm run openapi` rewrites it after `site/lib/openapi.ts` changes) or as an MCP server at `/mcp`: Streamable HTTP, read-only, no sign-in, with the tools `search_records`, `get_record` (a record with its responses, `discussion[]`) and `list_discussed_records`. In Claude Code:
 
 ```bash
 claude mcp add --transport http open-research-index https://open-research-index.vercel.app/mcp

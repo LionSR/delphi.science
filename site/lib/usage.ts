@@ -1,25 +1,25 @@
 // How the API is used: calls per day, endpoint and client, counted in aggregate. The client is a name
 // read from the user agent (ClaudeBot, ChatGPT-User, python-requests, curl, browser); the endpoint is
 // the route pattern (GET /api/v1/records/{prefix}/{suffix}). No IP address, full user agent or URL is
-// kept. lib/api.ts track() counts a call; /api/v1/stats and /stats show the counts.
+// kept. lib/api.ts counted() counts a call; /api/v1/stats and /stats show the counts.
 import type { Db } from './query.ts';
 
 export type Kind = 'ai' | 'search' | 'bot' | 'tool' | 'browser' | 'other';
 
 // AI assistants, their crawlers and search engines, found anywhere in the user agent (they often sit
 // inside a browser-like one: "Mozilla/5.0 … compatible; ChatGPT-User/1.0; +https://openai.com/bot").
-const KNOWN: [string, Kind][] = [
-	['Claude-User', 'ai'], ['Claude-SearchBot', 'ai'], ['ClaudeBot', 'ai'], ['Claude-Web', 'ai'], ['claude-code', 'ai'], ['anthropic-ai', 'ai'],
-	['ChatGPT-User', 'ai'], ['OAI-SearchBot', 'ai'], ['GPTBot', 'ai'], ['codex', 'ai'],
-	['Perplexity-User', 'ai'], ['PerplexityBot', 'ai'], ['MistralAI-User', 'ai'], ['DuckAssistBot', 'ai'],
-	['Google-CloudVertexBot', 'ai'], ['Gemini-Deep-Research', 'ai'], ['GoogleAgent-Mariner', 'ai'],
-	['meta-externalagent', 'ai'], ['meta-externalfetcher', 'ai'], ['Amazonbot', 'ai'], ['Bytespider', 'ai'], ['CCBot', 'ai'],
-	['cohere-ai', 'ai'], ['YouBot', 'ai'], ['AI2Bot', 'ai'], ['PhindBot', 'ai'], ['Diffbot', 'ai'],
-	['Googlebot', 'search'], ['GoogleOther', 'search'], ['bingbot', 'search'], ['Applebot', 'search'], ['DuckDuckBot', 'search'],
-	['YandexBot', 'search'], ['Baiduspider', 'search'], ['PetalBot', 'search'], ['Kagibot', 'search'],
-	['HeadlessChrome', 'bot'],
+// The first match, in this order, names the client.
+const KNOWN: [Kind, string[]][] = [
+	['ai', ['Claude-User', 'Claude-SearchBot', 'ClaudeBot', 'Claude-Web', 'claude-code', 'anthropic-ai',
+		'ChatGPT-User', 'OAI-SearchBot', 'GPTBot', 'codex',
+		'Perplexity-User', 'PerplexityBot', 'MistralAI-User', 'DuckAssistBot',
+		'Google-CloudVertexBot', 'Gemini-Deep-Research', 'GoogleAgent-Mariner',
+		'meta-externalagent', 'meta-externalfetcher', 'Amazonbot', 'Bytespider', 'CCBot',
+		'cohere-ai', 'YouBot', 'AI2Bot', 'PhindBot', 'Diffbot']],
+	['search', ['Googlebot', 'GoogleOther', 'bingbot', 'Applebot', 'DuckDuckBot', 'YandexBot', 'Baiduspider', 'PetalBot', 'Kagibot']],
+	['bot', ['HeadlessChrome']],
 ];
-const KINDS = new Map(KNOWN.map(([name, kind]) => [name, kind]));
+const KINDS = new Map(KNOWN.flatMap(([kind, names]) => names.map((name) => [name, kind] as const)));
 const BOTLIKE = /^[a-z][\w.-]*(?:bot|spider|crawler)$/i;
 
 /** A short, stable name for the client that sent this user agent. */
@@ -27,8 +27,8 @@ export function client(ua: string | null | undefined): string {
 	const s = (ua ?? '').trim();
 	if (!s) return 'none';
 	const low = s.toLowerCase();
-	const known = KNOWN.find(([name]) => low.includes(name.toLowerCase()));
-	if (known) return known[0];
+	const known = [...KINDS.keys()].find((name) => low.includes(name.toLowerCase()));
+	if (known) return known;
 	if (/^(mozilla|opera)\//i.test(s)) {
 		const bot = s.match(/\b([a-z][\w.-]*?(?:bot|spider|crawler))\b/i);
 		return bot ? bot[1].toLowerCase().slice(0, 32) : 'browser';
@@ -64,13 +64,12 @@ export async function countCall(db: Db, endpoint: string, name: string) {
 export const USAGE_NOTE = 'Calls are counted per day, endpoint and client, where the client is a name read from the user agent (ClaudeBot, python-requests, curl, browser). No IP address, full user agent or URL is kept. Answers the CDN serves from its cache are not counted. Page views are counted by Vercel Web Analytics, which is not public.';
 
 const TOP = 20;
-const iso = (d: Date) => d.toISOString().slice(0, 10);
 
 /** The first day (a Monday, UTC) of the week `weeks - 1` weeks before this one. */
 export function since(weeks: number, now = new Date()) {
 	const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
 	d.setUTCDate(d.getUTCDate() - ((d.getUTCDay() + 6) % 7) - 7 * (weeks - 1));
-	return iso(d);
+	return d.toISOString().slice(0, 10);
 }
 
 /** Calls per week (all clients, and AI clients alone), the top endpoints and the top clients, over the last `weeks` weeks. */
@@ -80,11 +79,7 @@ export async function usage(db: Db, weeks = 8, now = new Date()) {
 		`SELECT to_char(date_trunc('week', day), 'YYYY-MM-DD') AS week, endpoint, client, sum(calls)::int AS calls
 		 FROM open_index.api_usage WHERE day >= $1::date GROUP BY 1, 2, 3`, [from])).rows;
 	const weekly = new Map<string, { week: string; calls: number; ai: number }>();
-	for (let i = 0; i < weeks; i++) {
-		const d = new Date(`${from}T00:00:00Z`);
-		d.setUTCDate(d.getUTCDate() + 7 * i);
-		weekly.set(iso(d), { week: iso(d), calls: 0, ai: 0 });
-	}
+	for (let w = weeks; w > 0; w--) weekly.set(since(w, now), { week: since(w, now), calls: 0, ai: 0 });
 	const endpoints = new Map<string, number>(), clients = new Map<string, number>();
 	for (const r of rows) {
 		const w = weekly.get(r.week);

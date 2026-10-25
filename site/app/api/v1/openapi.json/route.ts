@@ -178,5 +178,5 @@ const spec = {
 	},
 };
 
-// Cached by the agent, not the CDN, so each fetch reaches track() and is counted.
+// Cached by the agent, not the CDN, so each fetch reaches counted().
 export const GET = counted('GET /api/v1/openapi.json', () => Response.json(spec, { headers: { 'Cache-Control': 'public, max-age=3600', 'Access-Control-Allow-Origin': '*' } }));

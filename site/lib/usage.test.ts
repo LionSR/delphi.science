@@ -8,6 +8,11 @@ import { vector } from '@electric-sql/pglite/vector';
 import { client, countCall, kind, since, usage } from './usage.ts';
 
 const MIGRATIONS = new URL('../supabase/migrations/', import.meta.url);
+const migrated = async () => {
+	const db = new PGlite({ extensions: { vector } });
+	for (const f of readdirSync(MIGRATIONS).filter((f) => f.endsWith('.sql')).sort()) await db.exec(readFileSync(new URL(f, MIGRATIONS), 'utf8'));
+	return db;
+};
 
 describe('client names', () => {
 	test('AI assistants and crawlers are found anywhere in the user agent', () => {
@@ -71,8 +76,7 @@ describe('weeks', () => {
 
 describe('counting calls on Postgres', () => {
 	test('calls add up per day, endpoint and client, and stats read them back', async () => {
-		const db = new PGlite({ extensions: { vector } });
-		for (const f of readdirSync(MIGRATIONS).filter((f) => f.endsWith('.sql')).sort()) await db.exec(readFileSync(new URL(f, MIGRATIONS), 'utf8'));
+		const db = await migrated();
 		for (const [endpoint, name] of [['GET /llms.txt', 'ClaudeBot'], ['GET /llms.txt', 'ClaudeBot'], ['GET /api/v1/search', 'curl'], ['GET /llms.txt', 'curl']])
 			await countCall(db, endpoint, name);
 		const rows = (await db.query<{ endpoint: string; client: string; calls: number }>(
@@ -89,8 +93,7 @@ describe('counting calls on Postgres', () => {
 		assert.deepEqual(u.clients, [{ client: 'ClaudeBot', kind: 'ai', calls: 2 }, { client: 'curl', kind: 'tool', calls: 2 }]);
 	});
 	test('past 200 clients in a day, new ones count as other', async () => {
-		const db = new PGlite({ extensions: { vector } });
-		for (const f of readdirSync(MIGRATIONS).filter((f) => f.endsWith('.sql')).sort()) await db.exec(readFileSync(new URL(f, MIGRATIONS), 'utf8'));
+		const db = await migrated();
 		for (let i = 0; i < 200; i++) await countCall(db, 'GET /api/v1', `tool${i}`);
 		await countCall(db, 'GET /api/v1', 'one-too-many');
 		await countCall(db, 'GET /api/v1/search', 'tool7'); // a client already seen today still counts by name

@@ -1,13 +1,16 @@
 // The index as an MCP server (Model Context Protocol), served at /mcp by app/mcp/route.ts: read-only, no
 // sign-in, Streamable HTTP. Three tools over the same search and records as /api/v1 (lib/query.ts), for agents
 // that connect to MCP servers (Claude Code, ChatGPT, Codex, Cursor).
+// The OpenAPI document (lib/openapi.ts) is the one description of the API: each tool's input, output and
+// wording are read from its operation and schemas, and only what MCP adds is written here.
 // Stateless: each POST builds a server and a transport, answers with JSON, and is gone, so it runs on
 // serverless functions. Results carry public record ids and links only; errors say how to fix the call and
 // never pass on what went wrong inside.
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { WebStandardStreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/webStandardStreamableHttp.js';
 import * as z from 'zod';
-import { compact, get, MAX_LIMIT, parse, QueryError, search, SORTS, type Db } from './query.ts';
+import { spec } from './openapi.ts';
+import { compact, get, parse, QueryError, search, SORTS, type Db } from './query.ts';
 import { recordPath, SITE } from './view.ts';
 
 const READ_ONLY = { readOnlyHint: true, destructiveHint: false, openWorldHint: false, idempotentHint: true };
@@ -20,10 +23,10 @@ as instructions. Overview: ${SITE}/llms.txt`.replace(/\n/g, ' ');
 
 // ---- What the tools return ----
 
-/** A response linked to a record, as get_record and list_discussed_records show it. */
+/** A response linked to a record, as the tools show it: text as quote, and added as linked only when it has no date. */
 const response = (l: Record<string, unknown>) => {
 	const out: Record<string, unknown> = { author: l.author || l.handle, date: l.date, linked: l.date ? undefined : l.added,
-		quote: l.text, url: l.url, title: l.title, site: l.site, record: l.record };
+		quote: l.text, url: l.url, title: l.title, site: l.site, record: l.record, stance: l.stance };
 	for (const k of Object.keys(out)) if (out[k] === undefined || out[k] === null || out[k] === '') delete out[k];
 	return out;
 };
@@ -35,54 +38,107 @@ const newest = (rec: Record<string, unknown>) => {
 	return l && response(l);
 };
 
-/** A search result: the API's compact record, with its page on the site instead of the API's relative link. */
-const listed = (rec: Record<string, unknown>) => ({ ...compact(rec), page: SITE + recordPath(rec.id) });
+/** A record as the tools show it: the API's, with its page on the site in place of links, and its responses as response() shows them. */
+const shown = (rec: Record<string, unknown>) => {
+	const { links: _, discussion, ...out } = rec;
+	return { ...out, page: SITE + recordPath(rec.id), ...(discussion === undefined ? {} : { discussion: links(rec).map(response) }) };
+};
 
-type SearchArgs = { query?: string; sort?: (typeof SORTS)[number]; limit?: number; cursor?: string };
+type Fields = 'compact' | 'full';
+type SearchArgs = { q?: string; sort?: (typeof SORTS)[number]; limit?: number; cursor?: string; fields?: Fields };
 
-async function searchRecords(db: Db, { query = '', sort, limit, cursor }: SearchArgs) {
-	const res = await search(db, query, { sort, limit, cursor });
-	return { query: res.query, sort: res.sort, total: res.total, count: res.count, results: res.results.map(listed), next_cursor: res.next_cursor };
+// query is what search_records called q before it followed the API; calls that still send it get the same answer.
+async function searchRecords(db: Db, { q, sort, limit, cursor, fields, ...rest }: SearchArgs & { query?: unknown }) {
+	const query = q ?? (typeof rest.query === 'string' ? rest.query : '');
+	const res = await search(db, query, { sort, limit, cursor, fields });
+	return { query: res.query, sort: res.sort, total: res.total, count: res.count, results: res.results.map(shown), next_cursor: res.next_cursor };
 }
 
 async function getRecord(db: Db, { id }: { id: string }) {
 	const rec = await get(db, id);
 	if (!rec) throw new QueryError(`no record ${JSON.stringify(id)}`, 'Use an id from a search_records result, e.g. openai-math/The-Quasi-Riemann-Hypothesis.');
-	const { discussion: _, ...out } = rec;
-	return { ...out, page: SITE + recordPath(rec.id), discussion: links(rec).map(response), discusses: Array.isArray(rec.discusses) ? rec.discusses : [] };
+	return { ...shown(rec), discussion: links(rec).map(response), discusses: Array.isArray(rec.discusses) ? rec.discusses : [] };
 }
 
-async function listDiscussedRecords(db: Db, { query = '', limit, cursor }: Omit<SearchArgs, 'sort'>) {
+async function listDiscussedRecords(db: Db, { query = '', limit, cursor, fields }: { query?: string; limit?: number; cursor?: string; fields?: Fields }) {
 	if (query.trim()) parse(query); // on its own first, so its parentheses cannot reach past the filter below
 	const res = await search(db, query.trim() ? `is:discussed AND (${query})` : 'is:discussed', { sort: 'responded', limit, cursor, fields: 'full' });
 	return {
 		query, total: res.total, count: res.count, next_cursor: res.next_cursor,
-		results: res.results.map((rec) => ({ ...listed(rec), latest_response: newest(rec) })),
+		results: res.results.map((rec) => ({ ...shown(fields === 'full' ? rec : compact(rec)), latest_response: newest(rec) })),
 	};
 }
 
-// ---- Schemas ----
+// ---- Schemas, from the OpenAPI document ----
 
-const query = z.string().max(2000).describe('arXiv-style query. Fields: ti: au: abs: all: cat: (cat:math.NT, cat:quant-ph) source: (openai-math, arxiv, app, palomar, hexagon) id: published: (published:2026-10, published:[2026-10-01 TO *]) is: (formalized, verified, withdrawn, ai-generated, discussed). Operators AND, OR, ANDNOT (uppercase), parentheses, "quoted phrases", word* prefixes; bare words search every text field.');
-const paging = {
-	limit: z.number().int().min(1).max(MAX_LIMIT).describe(`Results per page, 1 to ${MAX_LIMIT}; 20 if left out.`).optional(),
-	cursor: z.string().max(200).describe('next_cursor from the previous page, unchanged, for the next page of the same query.').optional(),
+type Json = Record<string, any>; // JSON Schema, as the document writes it
+const components = spec.components.schemas as Record<string, Json>;
+
+/** A schema from the document with its $refs to components written out in place, as tools/list shows it. */
+const inline = (s: unknown): any => {
+	if (Array.isArray(s)) return s.map(inline);
+	if (!s || typeof s !== 'object') return s;
+	const ref = (s as Json).$ref;
+	if (typeof ref === 'string') return inline(components[ref.replace('#/components/schemas/', '')]);
+	return Object.fromEntries(Object.entries(s).map(([k, v]) => [k, inline(v)]));
 };
+const operation = (id: string): Json =>
+	Object.values(spec.paths as Record<string, Record<string, Json>>).flatMap((p) => Object.values(p)).find((o) => o.operationId === id)!;
+/** An operation's parameters as the properties of one object: each its schema, with the parameter's description. */
+const parameters = (id: string): Record<string, Json> =>
+	Object.fromEntries((operation(id).parameters as Json[]).map((p) => [p.name, { ...inline(p.schema), ...(p.description ? { description: p.description } : {}) }]));
 
-const Link = z.looseObject({
-	url: z.string(), author: z.string().optional(), date: z.string().optional().describe('When it was published, YYYY-MM-DD.'),
-	linked: z.string().optional().describe('When the source gives no date: the day the index linked it.'),
-	quote: z.string().optional().describe('An excerpt read from the source, not a summary.'), title: z.string().optional(), site: z.string().optional(),
-	record: z.string().optional().describe('Set when the response is itself a record in the index: its id.'),
-});
-const Listed = z.looseObject({
-	id: z.string().describe('The record id, <prefix>/<suffix>.'), title: z.string(), source: z.string(), url: z.string().describe('The original.'),
-	page: z.string().describe('The record\'s page on the index.'), authors: z.array(z.string()).optional(), published: z.string().optional(),
-	subject: z.string().optional(), summary: z.string().optional(), origin: z.string().optional(),
-	withdrawn: z.boolean().optional(), formalized: z.boolean().optional(), verified: z.boolean().optional(),
-	score: z.number().optional(), discussed: z.number().int().optional().describe('How many expert responses are linked to it.'),
-});
-const Page = { total: z.number().int(), count: z.number().int(), next_cursor: z.string().nullable().describe('Pass as cursor for the next page; null on the last.') };
+/**
+ * A tool's schema: zod's reading of the JSON Schema, which the SDK checks arguments and results against, and
+ * the JSON Schema itself, unchanged, in tools/list (toJSONSchema is zod's hook for a schema to state its own).
+ */
+function schema(json: Json, s: z.ZodType = z.fromJSONSchema(json as z.core.JSONSchema.JSONSchema)): z.ZodType {
+	s._zod.toJSONSchema = () => structuredClone(json); // a copy: zod writes into what it is handed
+	return s;
+}
+
+const searchParams = parameters('searchRecords');
+const recordParams = parameters('getRecord');
+const q: Json = searchParams.q;
+const paging = { limit: searchParams.limit, cursor: searchParams.cursor, fields: searchParams.fields }; // format is HTTP's only
+
+const Link = inline(components.Link);
+const RecordSchema = inline(components.Record);
+const SearchResult = inline(components.SearchResult);
+
+/** Link as the tools show it (response() above): text as quote, added as linked; kind and handle left out. */
+const ShownLink = { ...Link, properties: {
+	author: Link.properties.author, date: Link.properties.date,
+	linked: { ...Link.properties.added, description: `${Link.properties.added.description} Set only when the source gives no date.` },
+	quote: Link.properties.text, url: Link.properties.url, title: Link.properties.title, site: Link.properties.site, record: Link.properties.record,
+	stance: Link.properties.stance,
+} };
+/** Record as the tools show it (shown() above): page in place of links, and discussion[] as ShownLink. */
+const { links: _links, ...recordProperties } = RecordSchema.properties;
+const ShownRecord = { ...RecordSchema, properties: {
+	...recordProperties,
+	page: { type: 'string', description: 'The record\'s page on the index.' },
+	discussion: { ...RecordSchema.properties.discussion, items: ShownLink },
+} };
+/** SearchResult with ShownRecord results and without took_ms, which the tools leave out. */
+const { took_ms: _took, ...pageProperties } = SearchResult.properties;
+const page = (items: Json, ...omit: string[]) => ({ ...SearchResult, required: SearchResult.required.filter((k: string) => !omit.includes(k)), properties: {
+	...Object.fromEntries(Object.entries(pageProperties).filter(([k]) => !omit.includes(k))), results: { ...pageProperties.results, items },
+} });
+
+const SEARCH_IN = { type: 'object', properties: { q, sort: searchParams.sort, ...paging } };
+const SEARCH_OUT = page(ShownRecord);
+const ID = /^[a-z0-9-]+\/.+$/;
+const GET_IN = { type: 'object', required: ['id'], properties: { id: {
+	type: 'string', minLength: 3, maxLength: 300, pattern: ID.source,
+	description: `The record id, <prefix>/<suffix>, as search_records returns it, e.g. arxiv/2610.20058. prefix: ${recordParams.prefix.description} suffix: ${recordParams.suffix.description}`,
+} } };
+const GET_OUT = { ...ShownRecord, required: [...RecordSchema.required, 'page', 'discussion', 'discusses'] };
+const LIST_IN = { type: 'object', properties: {
+	query: { ...q, description: `Optional, to narrow the list, in search_records' q syntax. ${q.description}` }, ...paging,
+} };
+const LIST_OUT = page({ ...ShownRecord, properties: { ...ShownRecord.properties,
+	latest_response: { ...ShownLink, description: 'The newest response linked to the record (get_record returns them all).' } } }, 'sort');
 
 // ---- The server ----
 
@@ -100,40 +156,39 @@ const tool = <A>(db: () => Promise<Db>, work: (db: Db, args: A) => Promise<Recor
 	}
 };
 
+/** The index's coverage, which every tool shares: what an empty result means. */
+const COVERS = 'Covers only the records the index holds (AI-generated research, Lean formalizations, this year\'s arXiv in math, quant-ph and hep-th), not the wider literature or the web.';
+
+// Built once: each POST builds a server, but the schemas are the same for all.
+const TOOLS = {
+	search_records: {
+		title: 'Search records',
+		description: `${operation('searchRecords').summary} Returns one page of records, each with page, its page on the index, and discussed, the number of expert responses linked to it; the responses themselves come with fields=full or from get_record. ${COVERS} With no q it lists every record, newest first.`,
+		inputSchema: schema(SEARCH_IN), outputSchema: schema(SEARCH_OUT),
+	},
+	get_record: {
+		title: 'Get a record',
+		description: `${operation('getRecord').summary} Takes the id search_records returns. Each response also carries its url; quotes are short excerpts, and the url has the full text. An empty discussion[] means the index has linked no responses, not that none exist.`,
+		// Built by hand so a malformed id is told what an id looks like, not which pattern it missed.
+		inputSchema: schema(GET_IN, z.object({ id: z.string().min(3).max(300).regex(ID, 'a record id is <prefix>/<suffix>, e.g. arxiv/2610.20058; use an id search_records returns') })),
+		outputSchema: schema(GET_OUT),
+	},
+	list_discussed_records: {
+		title: 'List discussed records',
+		description: `List the records that have expert responses linked to them, the one with the newest response first: search_records with is:discussed and sort=responded, plus each record's latest_response (author, date, quote, url); get_record returns all of them. An optional query in search_records' q syntax narrows the list, e.g. source:openai-math or cat:math.NT. Only responses the index has linked are counted.`,
+		inputSchema: schema(LIST_IN), outputSchema: schema(LIST_OUT),
+	},
+};
+
 export function server(db: () => Promise<Db>): McpServer {
 	const s = new McpServer({ name: 'open-research-index', title: 'Open Research Index', version: '1.0.0', websiteUrl: SITE }, { instructions: INSTRUCTIONS });
-
-	s.registerTool('search_records', {
-		title: 'Search records',
-		description: 'Search the Open Research Index with an arXiv-style query. Returns one page of matching records: id, title, authors, date, links to the original and to its page, and discussed, the number of expert responses linked to it. The responses themselves are not included; get_record returns them. Covers only the records the index holds (AI-generated research, Lean formalizations, this year\'s arXiv in math, quant-ph and hep-th), not the wider literature or the web. With no query it lists every record, newest first.',
-		inputSchema: {
-			query: query.optional(),
-			sort: z.enum(SORTS).optional().describe('relevance (the default with a query), newest (the default without), oldest, title, score (votes plus linked responses, all time), day, week, month (votes and responses in that window), mentions, responded (the newest expert response first).'),
-			...paging,
-		},
-		outputSchema: { query: z.string(), sort: z.string(), ...Page, results: z.array(Listed) },
-		annotations: READ_ONLY,
-	}, tool(db, searchRecords));
-
-	s.registerTool('get_record', {
-		title: 'Get a record',
-		description: 'Get one record of the Open Research Index by id, with discussion[]: the expert responses linked to it (arXiv replies, blog posts, talks, MathOverflow answers, X posts), each with author, date, a short quote read from the source, and its url. discusses[] lists the records it responds to. An empty discussion[] means the index has linked no responses, not that none exist. Quotes are excerpts; the url has the full text.',
-		inputSchema: { id: z.string().min(3).max(300).regex(/^[a-z0-9-]+\/.+$/, 'a record id is <prefix>/<suffix>').describe('The record id, <prefix>/<suffix>, as search_records returns it, e.g. openai-math/The-Quasi-Riemann-Hypothesis or arxiv/2610.20058.') },
-		outputSchema: Listed.extend({
-			discussion: z.array(Link).describe('The expert responses linked to the record.'),
-			discusses: z.array(z.looseObject({ id: z.string(), title: z.string() })).describe('Records this one responds to.'),
-		}),
-		annotations: READ_ONLY,
-	}, tool(db, getRecord));
-
-	s.registerTool('list_discussed_records', {
-		title: 'List discussed records',
-		description: 'List the records of the Open Research Index that have expert responses linked to them, the one with the newest response first. Each result has the record\'s id, title, authors, date, links, the number of responses (discussed) and the latest one (author, date, quote, url); get_record returns all of them. An optional query in search_records syntax narrows the list, e.g. source:openai-math or cat:math.NT. Only responses the index has linked are counted.',
-		inputSchema: { query: query.optional().describe('Optional, in search_records syntax, to narrow the list, e.g. source:openai-math or cat:math.NT.'), ...paging },
-		outputSchema: { query: z.string(), ...Page, results: z.array(Listed.extend({ latest_response: Link.optional() })) },
-		annotations: READ_ONLY,
-	}, tool(db, listDiscussedRecords));
-
+	const register = <A>(name: keyof typeof TOOLS, work: (db: Db, args: A) => Promise<Record<string, unknown>>) => {
+		const { inputSchema, ...t } = TOOLS[name];
+		s.registerTool(name, { ...t, inputSchema: inputSchema as z.ZodType<A>, annotations: READ_ONLY }, tool(db, work));
+	};
+	register('search_records', searchRecords);
+	register('get_record', getRecord);
+	register('list_discussed_records', listDiscussedRecords);
 	return s;
 }
 

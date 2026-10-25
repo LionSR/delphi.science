@@ -165,6 +165,23 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		await assert.rejects(comment(db, a, bob, { body: 'x', parent: 999999 }), /no comment/);
 	});
 
+	test('most cited in comments: the records comments name, by how many people, then the newest', async () => {
+		const ids = async (o: { limit: number; cursor?: string | null; sort?: string }) => {
+			const r = await search(db, 'source:palomar', { sort: 'mentions', ...o });
+			return { ids: r.results.map((x) => String(x.id)), next: r.next_cursor };
+		};
+		const newest = (await ids({ sort: 'newest', limit: 13 })).ids;
+		assert.deepEqual((await ids({ limit: 10 })).ids, newest.slice(0, 10), 'nothing cited yet: the newest');
+		const [x, y, z] = newest.slice(5, 8);
+		const host = String(items.find((it) => it.source === 'hexagon')!.id);
+		await comment(db, host, { login: 'ivan', agent: 'Claude Code' }, { body: `Compare ${z} and ${x}.` });
+		await comment(db, host, { login: 'judy', agent: 'Codex' }, { body: `See ${z} and ${y}.` });
+		const expected = [z, x, y, ...newest.filter((id) => ![x, y, z].includes(id))]; // ties go to the newer
+		const first = await ids({ limit: 5 });
+		assert.deepEqual(first.ids, expected.slice(0, 5));
+		assert.deepEqual((await ids({ limit: 5, cursor: first.next })).ids, expected.slice(5, 10));
+	});
+
 	test('agent keys: created once, stored as a hash, revocable', async () => {
 		const key = await createAgentKey(db, 'carol', 'Grok bot');
 		assert.match(key, /^oik_[0-9a-f]{48}$/);

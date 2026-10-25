@@ -220,15 +220,16 @@ export interface SearchOptions {
 	embedding?: number[]; // the query's embedding, for hybrid ranking
 }
 
-// day, week, month: as on SciRate, the net votes cast in that many days plus the links attached in them, then the
-// newest. Almost no record has either, so only the candidates are ranked (the votes table, and the few rows with
+// day, week, month: as on SciRate, the net votes cast in that many days plus the posts and articles published in
+// them (a link's own date; the day it was attached only when the source gives none), then the newest. Almost no record has either, so only the candidates are ranked (the votes table, and the few rows with
 // links); the rest come from the published index, already in order, and only as many as the page needs.
 function recentSql(days: number, where: string, n: number): string {
 	return `WITH hot AS (
 			SELECT id, sum(points)::int AS points FROM (
 				SELECT v.record_id AS id, v.value AS points FROM open_index.votes v WHERE v.at > now() - interval '${days} days'
 				UNION ALL
-				SELECT r.id, (SELECT count(*) FROM jsonb_array_elements(r.record->'discussion') d WHERE (d->>'added')::date > current_date - ${days})::int
+				SELECT r.id, (SELECT count(*) FROM jsonb_array_elements(r.record->'discussion') d
+					WHERE coalesce(nullif(d->>'date', ''), d->>'added')::date > current_date - ${days})::int
 				FROM open_index.records r WHERE r.discussed > 0
 			) x GROUP BY id HAVING sum(points) <> 0),
 		cand AS (

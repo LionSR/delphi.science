@@ -17,7 +17,6 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
-import json
 import math
 import re
 import sys
@@ -26,15 +25,12 @@ from collections import Counter
 from pathlib import Path
 from typing import Any, Iterable
 
+import index as I
 import sources as S
 
-HERE = Path(__file__).resolve().parent
-ENTRIES = HERE / "entries"
-
-# Names that mark an abstract as being about AI-made work. arXiv's search matches words in the abstract.
-ARXIV_TERMS = ['"OpenAI"', '"openai/math"', '"Astra"', '"Anthropic"', '"Claude"', '"Hexagon"', '"Palomar"',
-               '"AlphaProof"', '"AlphaEvolve"', '"DeepMind"', '"Gemini Deep Think"']
-MO_TERMS = ["OpenAI", "Anthropic", "Claude", "AlphaProof", "AlphaEvolve", "DeepMind", "Gemini", "Hexagon"]
+# Names that mark an abstract or a question as being about AI-made work.
+TERMS = ["OpenAI", "openai/math", "Astra", "Anthropic", "Claude", "Hexagon", "Palomar", "AlphaProof", "AlphaEvolve", "DeepMind", "Gemini"]
+MENTIONS = re.compile("|".join(map(re.escape, TERMS)), re.I)
 # Records that responses are about: the AI-made sources, not this year's arXiv or the web.
 SKIP_SOURCES = {"arxiv", "web"}
 MIN_CONFIDENCE = 0.45
@@ -49,26 +45,25 @@ def words(text: str | None) -> list[str]:
 
 
 def records() -> list[dict[str, Any]]:
-    out = []
-    for path in sorted(ENTRIES.glob("*/*.json")):
-        if path.parent.name in SKIP_SOURCES:
-            continue
-        e = json.loads(path.read_text())
-        if not e.get("gone"):
-            out.append(e)
-    return out
+    """The AI-made records, read source by source: entries/arxiv alone holds most of the index's files."""
+    found = [I.load(d.name) for d in sorted(I.ENTRIES.iterdir()) if d.is_dir() and d.name not in SKIP_SOURCES]
+    return [e for pairs in found for _, e in pairs if not e.get("gone")]
 
 
-def linked_urls(entries: Iterable[dict[str, Any]]) -> set[str]:
-    """Every discussion link already attached, so a candidate is reported once."""
-    return {norm(d["url"]) for e in entries for d in e.get("discussion", [])}
+def ident(url: str) -> str:
+    """What makes two links the same work: the record id sources.detect gives (any arXiv URL form is one
+    paper), or for a plain web page its URL without fragment or query."""
+    try:
+        src, key = S.detect(url)
+    except ValueError:
+        src, key = S.BY_NAME["web"], ""
+    return f"{src.name}/{key}" if src.name != "web" else url.split("#")[0].split("?")[0].rstrip("/")
 
 
-def norm(url: str) -> str:
-    """arxiv.org/abs/2610.01234v2 and arxiv.org/pdf/2610.01234 are one paper; fragments and queries don't matter."""
-    url = url.split("#")[0].split("?")[0].rstrip("/").replace("http://", "https://").replace("://www.", "://")
-    m = re.match(r"https://arxiv\.org/(?:abs|pdf|html)/(.+?)(?:v\d+)?(?:\.pdf)?$", url)
-    return f"https://arxiv.org/abs/{m[1]}" if m else url
+def seen(entries: Iterable[dict[str, Any]]) -> set[str]:
+    """Every discussion link already attached, so a candidate is reported once. A candidate that is itself
+    an arXiv record still counts: this year's arXiv is harvested, so most responses are records too."""
+    return {ident(d["url"]) for e in entries for d in e.get("discussion", [])}
 
 
 class Matcher:
@@ -78,48 +73,55 @@ class Matcher:
 
     LAB = {"openai-math": ("openai",), "anthropic-science": ("anthropic", "claude"), "hexagon": ("hexagon",),
            "palomar": ("palomar",), "lean": ("lean",)}
+    TOP = 3
 
     def __init__(self, entries: list[dict[str, Any]]):
-        self.entries = entries
-        self.titles = [set(words(f"{e.get('title')} {e.get('family_title', '')}")) for e in entries]
-        df = Counter(w for t in self.titles for w in t)
-        self.idf = {w: math.log((1 + len(entries)) / (1 + n)) + 1 for w, n in df.items()}
+        titled = [(e, set(words(f"{e.get('title')} {e.get('family_title', '')}"))) for e in entries]
+        titled = [(e, t) for e, t in titled if len(t) >= 2]  # a one-word title matches anything
+        df = Counter(w for _, t in titled for w in t)
+        self.idf = {w: math.log((1 + len(titled)) / (1 + n)) + 1 for w, n in df.items()}
+        self.records = [(e, t, sum(self.idf[w] for w in t)) for e, t in titled]
 
-    def match(self, text: str, n: int = 3) -> list[tuple[float, dict[str, Any]]]:
+    def match(self, text: str) -> list[tuple[float, dict[str, Any]]]:
         have = set(words(text))
         low = text.lower()
+        named = {src for src, labs in self.LAB.items() if any(lab in low for lab in labs)}
         scored: dict[str, tuple[float, dict[str, Any]]] = {}
-        for e, title in zip(self.entries, self.titles):
-            if len(title) < 2:
-                continue
-            total = sum(self.idf[w] for w in title)
+        for e, title, total in self.records:
             score = sum(self.idf[w] for w in title & have) / total
-            if any(lab in low for lab in self.LAB.get(e["source"], ())):
+            if e["source"] in named:
                 score = min(1.0, score * 1.15)
             # One line per family: versions of one OpenAI manuscript share a family.
             group = f"{e['source']}:{e.get('family') or e['key']}"
             if score >= MIN_CONFIDENCE and score > scored.get(group, (0.0, {}))[0]:
                 scored[group] = (score, e)
-        return sorted(scored.values(), key=lambda s: -s[0])[:n]
+        return sorted(scored.values(), key=lambda s: -s[0])[: self.TOP]
 
 
 def arxiv_candidates(start: dt.date, end: dt.date) -> list[dict[str, Any]]:
     window = f"submittedDate:[{start:%Y%m%d}0000 TO {end:%Y%m%d}2359]"
-    query = f"({' OR '.join(f'abs:{t}' for t in ARXIV_TERMS)}) AND {window}"
+    terms = " OR ".join(f'abs:"{t}"' for t in TERMS)
+    query = f"({terms}) AND {window}"
     return [{"url": e["url"], "title": e["title"], "authors": e.get("authors", []), "date": e.get("published", ""),
              "text": e.get("summary", ""), "where": "arXiv"} for e in S.ArXiv().harvest(query, 500)]
 
 
 def mathoverflow_candidates(start: dt.date, end: dt.date) -> list[dict[str, Any]]:
-    out: dict[str, dict[str, Any]] = {}
-    for term in MO_TERMS:
-        q = urllib.parse.urlencode({"site": "mathoverflow", "q": term, "fromdate": int(dt.datetime.combine(start, dt.time()).timestamp()),
-                                    "todate": int(dt.datetime.combine(end, dt.time.max).timestamp()), "pagesize": 100, "filter": "withbody"})
-        for item in S.get_json(f"https://api.stackexchange.com/2.3/search/advanced?{q}", cache=False).get("items", []):
-            out[item["link"]] = {"url": item["link"], "title": S.clean(item.get("title")), "where": "MathOverflow",
-                                 "authors": [S.clean((item.get("owner") or {}).get("display_name"))],
-                                 "date": dt.date.fromtimestamp(item.get("creation_date", 0)).isoformat(), "text": S.trim(item.get("body"))}
-    return list(out.values())
+    """The week's questions, a page or two, filtered here: one listing costs fewer of the keyless
+    API quota's requests than a search per term."""
+    out = []
+    for page in range(1, 6):
+        q = urllib.parse.urlencode({"site": S.STACKEXCHANGE["mathoverflow.net"], "fromdate": int(dt.datetime.combine(start, dt.time()).timestamp()),
+                                    "todate": int(dt.datetime.combine(end, dt.time.max).timestamp()), "pagesize": 100, "page": page, "filter": "withbody"})
+        data = S.get_json(f"https://api.stackexchange.com/2.3/questions?{q}", cache=False)
+        for item in data.get("items", []):
+            if MENTIONS.search(f"{item.get('title')} {item.get('body')}"):
+                link = S.stackexchange_item(item)
+                out.append({"url": item["link"], "title": link["title"], "authors": [link["author"]], "date": link["date"],
+                            "text": link["text"], "where": "MathOverflow"})
+        if not data.get("has_more"):
+            break
+    return out
 
 
 def report(candidates: list[dict[str, Any]], matcher: Matcher, start: dt.date, end: dt.date, errors: list[str]) -> str:
@@ -136,9 +138,12 @@ def report(candidates: list[dict[str, Any]], matcher: Matcher, start: dt.date, e
         who = ", ".join(c["authors"][:4]) + (" et al." if len(c["authors"]) > 4 else "")
         lines += ["", f"## [{c['title']}]({c['url']})", f"{c['where']}, {c['date']}, {who}", ""]
         for score, e in m:
-            lines.append(f"- {score:.0%} `{e['source']}/{e['key']}`: {e.get('title')}")
-            lines.append(f"  `python3 index.py discuss {e['source']}/{e['key']} {norm(c['url'])}`")
+            lines.append(f"- {score:.0%} `{I.rid(e)}`: {e.get('title')}")
+            lines.append(f"  `python3 index.py discuss {I.rid(e)} {c['url']}`")
     return "\n".join(lines) + "\n"
+
+
+FINDERS = (("arXiv", arxiv_candidates), ("MathOverflow", mathoverflow_candidates))
 
 
 def main(argv: Iterable[str] | None = None) -> int:
@@ -149,21 +154,21 @@ def main(argv: Iterable[str] | None = None) -> int:
     a = ap.parse_args(list(argv) if argv is not None else None)
     start, end = a.until - dt.timedelta(days=a.days - 1), a.until
     entries = records()
-    seen = linked_urls(entries) | {norm(e["url"]) for e in entries}
+    known = seen(entries)
     candidates, errors = [], []
-    for name, find in (("arXiv", arxiv_candidates), ("MathOverflow", mathoverflow_candidates)):
+    for name, find in FINDERS:
         try:
-            candidates += [c for c in find(start, end) if norm(c["url"]) not in seen]
+            candidates += [c for c in find(start, end) if ident(c["url"]) not in known]
         except (S.NotFound, S.SourceError) as err:  # one source down still leaves a report from the other
             errors.append(f"{name} ({err})")
     text = report(candidates, Matcher(entries), start, end, errors)
     if a.out:
         a.out.parent.mkdir(parents=True, exist_ok=True)
         a.out.write_text(text)
-        print(f"{a.out}: {text.count(chr(10) + '## ')} candidates")
+        print(a.out)
     else:
         sys.stdout.write(text)
-    return 1 if len(errors) == 2 else 0
+    return 1 if len(errors) == len(FINDERS) else 0
 
 
 if __name__ == "__main__":

@@ -12,15 +12,17 @@ permissions:
   contents: read
 
 env:
-  OWNER_EMAIL: 14889516+LionSR@users.noreply.github.com
+  OWNER_EMAIL: 14889516+LionSR@users.noreply.github.com # the address .github/actions/commit-as-owner commits as
 
 jobs:
   authors:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-        with:
+        with: # history only: commits without their trees, and no working tree beyond .github
           fetch-depth: 0
+          filter: tree:0
+          sparse-checkout: .github
       - name: Every new commit is authored as the owner
         env:
           BASE: ${{ github.event.pull_request.base.sha || github.event.before }}

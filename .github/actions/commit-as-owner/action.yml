@@ -1,0 +1,23 @@
+# Commit and push as the Vercel account owner. Vercel's Hobby plan does not deploy a commit of this
+# private repository authored by anyone else; author-check.yml checks the same address.
+name: Commit as owner
+description: Commit the given paths, if they changed, as the repository owner, and push onto main as it now is.
+inputs:
+  paths:
+    description: Paths to add, space-separated
+    required: true
+  message:
+    description: Commit message; {date} becomes today's date (UTC)
+    required: true
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      env:
+        PATHS: ${{ inputs.paths }}
+        MESSAGE: ${{ inputs.message }}
+      run: |
+        git config user.name 'Sirui Lu'
+        git config user.email '14889516+LionSR@users.noreply.github.com'
+        git add $PATHS
+        git diff --cached --quiet || { git commit -m "${MESSAGE//\{date\}/$(date -u +%F)}"; git pull --rebase; git push; }  # main may have moved during the run

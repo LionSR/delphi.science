@@ -1,0 +1,39 @@
+# Each week, list new arXiv papers and MathOverflow questions that may respond to an AI-made
+# record (candidates.py) in reports/responses/<date>.md. Nothing is attached: a person reads
+# the report and runs the `index.py discuss` commands for the ones that do respond.
+name: Candidate responses
+
+on:
+  schedule:
+    - cron: '17 6 * * 1' # Mondays, 06:17 UTC
+  workflow_dispatch:
+
+concurrency:
+  group: registry
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  candidates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Find candidates
+        run: |
+          out="reports/responses/$(date -u +%F).md"
+          python3 candidates.py --out "$out"
+          cat "$out" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit the report
+        run: |
+          # Vercel's Hobby plan deploys only commits authored by the account owner (author-check.yml)
+          git config user.name 'Sirui Lu'
+          git config user.email '14889516+LionSR@users.noreply.github.com'
+          git add reports
+          git diff --cached --quiet || { git commit -m "Candidate responses for the week to $(date -u +%F)"; git pull --rebase; git push; }

@@ -23,11 +23,14 @@ python3 index.py label [--all] [--labeler claude|none|canned:<file.json>]
 python3 index.py refresh [--older-than 7] [--dry-run]
 python3 index.py discuss openai-math/<key> <url>...   # X posts, blog posts, articles about the record
 python3 index.py build     # dist/index.json, dist/index.db, dist/llms.txt
+python3 candidates.py [--days 7]   # this week's arXiv and MathOverflow items that may respond to a record
 cd site && npm run dev     # the site and API, on local Postgres (PGlite)
-python3 test_index.py
+python3 test_index.py && python3 test_candidates.py
 ```
 
 Commit as the Vercel account owner (`git config user.email 14889516+LionSR@users.noreply.github.com`): Vercel's Hobby plan does not deploy a commit of this private repository authored by anyone else, and `.github/workflows/author-check.yml` fails on one. `Co-Authored-By` trailers are fine.
+
+New responses are found weekly, not attached: `.github/workflows/responses.yml` runs `candidates.py` on Mondays and commits its report to `reports/responses/`, with the `discuss` command for each candidate; a person reads it and runs the ones that hold up.
 
 `harvest.json` lists the harvest jobs. A job with `"enabled": false` is kept in the file but does not run. The arXiv searches are off for now.
 

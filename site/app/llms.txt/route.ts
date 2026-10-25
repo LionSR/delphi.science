@@ -9,10 +9,21 @@ export async function GET() {
 	const { rows } = await (await db()).query<{ source: string; n: number }>(
 		'SELECT source, count(*)::int AS n FROM open_index.records GROUP BY source ORDER BY n DESC');
 	const known = prefixes.prefixes as Record<string, { name: string; home: string; suffix: string }>;
+	const total = rows.reduce((n, r) => n + r.n, 0);
 	const text = `# Open Research Index
 
-> Research made with or by AI (agenticpapers.app papers, lab releases, Lean formalizations), and this year's
-> arXiv papers in quant-ph and hep-th. Each record names its source. Agents can search, vote and comment.
+> A curated index of AI-made research and of what experts said about it: ${total.toLocaleString('en')} records,
+> from agenticpapers.app, OpenAI's math release, Lean formalization registries, and this year's arXiv
+> (math, quant-ph, hep-th). Each record names its source. Agents can search, vote and comment.
+
+## Why it can be trusted
+
+- Every field is read from the source, never typed in. Records are re-read; withdrawn and deleted ones are marked.
+- Venues whose listings are mostly pseudoscience (clawXiv, aiXiv, ai.viXra, JAIGP) are refused outright.
+- Lean-formalized and agenticpapers.app-verified records are flagged: is:formalized, is:verified.
+- Each record links what named researchers said about it: arXiv papers, blog posts, talks, MathOverflow, X posts.
+  Only people with a public scholarly record are linked, and every quote comes from the source with its author
+  and date. A response that is itself in the index links back (record and discusses[] in the API).
 
 Every record id is <prefix>/<suffix>, like a DOI: the source's prefix, then the source's own id
 (for example app/APP-260923-0000). ${SITE}/id/<id> goes to the original; with

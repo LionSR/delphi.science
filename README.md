@@ -10,6 +10,8 @@ Agents read the index through the API (https://open-research-index.vercel.app/ap
 claude mcp add --transport http open-research-index https://open-research-index.vercel.app/mcp
 ```
 
+`site/plugin/` is the same server packaged as a ChatGPT and Codex plugin: `plugin.json` (names, descriptions, example prompts, icon), `mcp.json` (the remote server, no sign-in) and `TESTING.md` (test cases for reviewers). The files say `{{SITE}}` where the host goes; `cd site && npm run plugin` fills in `SITE_URL` (default https://open-research-index.vercel.app), checks the names, prompts and links, and writes `dist/open-research-index-plugin.zip`. To verify the domain, set the portal's token as `OPENAI_APPS_CHALLENGE` on Vercel: the site serves it at `/.well-known/openai-apps-challenge`, and 404 while it is unset.
+
 ## Rules
 
 - **Research outputs only, not software.** GitHub repositories are not listed on their own; a paper's code is reached through the paper (APP, arXiv, DOI). Lean formalizations come in through Palomar and `formalization.yaml` projects.

@@ -92,7 +92,6 @@
       "url": "https://x.com/ValerioCapraro/status/2108153427742032300",
       "author": "Valerio Capraro",
       "handle": "ValerioCapraro",
-      "text": "BREAKING: OpenAI’s solution to Navier–Stokes does not match its Lean verification. The most important article to read today is not one of OpenAI’s 700 AI-generated math papers. It is this other paper, making a deep and worrying point: A Lean-verified proof does not… pic.twitter.com/bU7TQdv594",
       "date": "2026-10-08",
       "added": "2026-10-24"
     },
@@ -101,7 +100,6 @@
       "url": "https://x.com/miniapeur/status/2108124820357460200",
       "author": "Mathieu",
       "handle": "miniapeur",
-      "text": "👀👀 \"[…] we provide several examples of AI mistranslations of natural language (NL) statements and proofs into Lean in practice, resulting in mismatches between NL proofs and their Lean 'verifications'. These include OpenAI's announced Navier-Stokes proof. In particular, we…",
       "date": "2026-10-08",
       "added": "2026-10-24"
     },
@@ -110,7 +108,6 @@
       "url": "https://x.com/Frances01896069/status/2109010432350376344",
       "author": "Francesco Maggi",
       "handle": "Frances01896069",
-      "text": "I think there is quite a bit of misinformation circulating about OpenAI’s forced Navier–Stokes proof, including newspaper articles suggesting that the LLM somehow “cheated.” Let me be clear: according to colleagues who have been examining it closely, OpenAI presented a correct…",
       "date": "2026-10-10",
       "added": "2026-10-24"
     },
@@ -119,7 +116,6 @@
       "url": "https://x.com/che_shr_cat/status/2110392338715648313",
       "author": "Grigory Sapunov",
       "handle": "che_shr_cat",
-      "text": "2/ Since I'm not a Navier–Stokes expert, my biggest concern with OpenAI's announcement was how they got the Lean code—generated after the text by a separate process—and how to know it matches the paper. Bastounis, Circelli, and Hansen audited commit f9e8bc5. It does not match.",
       "date": "2026-10-14",
       "added": "2026-10-24"
     },
@@ -128,7 +124,6 @@
       "url": "https://x.com/Math_files/status/2113115139897766041",
       "author": "Math Files",
       "handle": "Math_files",
-      "text": "A new NPR investigation has found a troubling problem in AI-generated mathematics. Cambridge mathematician Anders Hansen identified a discrepancy between an AI-generated proof and its Lean formalization. A constant had changed from 4 to 5, making the formally verified statement… pic.twitter.com/5Ezq5n6nx1",
       "date": "2026-10-22",
       "added": "2026-10-24"
     }

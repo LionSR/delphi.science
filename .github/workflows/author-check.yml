@@ -1,0 +1,41 @@
+# Vercel deploys a commit of this private repository only when its author is a member of the
+# Vercel team (on Pro, each member is a seat), so every new commit must be authored by one.
+# Co-Authored-By trailers are fine: only the author email is checked. The members' commit
+# emails are the repository variable VERCEL_TEAM_EMAILS (space-separated); without it, the owner.
+name: Commit authors
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  # The owner's address is also the one .github/actions/commit-as-owner commits as.
+  TEAM_EMAILS: ${{ vars.VERCEL_TEAM_EMAILS || '14889516+LionSR@users.noreply.github.com' }}
+
+jobs:
+  authors:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with: # history only: commits without their trees, and no working tree beyond .github
+          fetch-depth: 0
+          filter: tree:0
+          sparse-checkout: .github
+      - name: Every new commit is authored by a member of the Vercel team
+        env:
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+          HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          # A new branch or a force push has no usable base: check the pushed commit alone.
+          if [ -z "$BASE" ] || ! git cat-file -e "$BASE^{commit}" 2>/dev/null; then range="$HEAD -1"; else range="$BASE..$HEAD"; fi
+          bad=$(git log --format='%h %ae %s' $range | awk -v ok=" $TEAM_EMAILS " 'index(ok, " " $2 " ") == 0')
+          if [ -n "$bad" ]; then
+            echo "::error::These commits are not authored by a member of the Vercel team ($TEAM_EMAILS), so Vercel will not deploy them:"
+            echo "$bad"
+            echo "Fix: git config user.email <a member's address>, then rewrite the commits' author (git commit --amend --reset-author, or git rebase -r --exec 'git commit --amend --no-edit --reset-author' $BASE). A new member's address goes in the repository variable VERCEL_TEAM_EMAILS."
+            exit 1
+          fi

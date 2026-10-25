@@ -1,11 +1,11 @@
 :root {
-	--bg: #fbfbfd; --ink: #161a22; --muted: #5b6273; --rule: #dde1ea; --surface: #f1f3f8; --accent: #1f56a8;
+	--bg: #fbfbfd; --ink: #161a22; --muted: #5b6273; --rule: #dde1ea; --surface: #f1f3f8; --accent: #1f56a8; --warn: #a3261b;
 	--serif: 'Newsreader', Georgia, 'Times New Roman', serif;
 	--sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
 	--mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 @media (prefers-color-scheme: dark) {
-	:root { --bg: #10131a; --ink: #eef1f7; --muted: #a3aabb; --rule: #262c3a; --surface: #181c26; --accent: #7fa7e6; color-scheme: dark; }
+	:root { --bg: #10131a; --ink: #eef1f7; --muted: #a3aabb; --rule: #262c3a; --surface: #181c26; --accent: #7fa7e6; --warn: #f0928a; color-scheme: dark; }
 }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 var(--sans); }
 main { max-width: 52rem; margin: 0 auto; padding: 1.5rem max(16px, env(safe-area-inset-right)) 4rem max(16px, env(safe-area-inset-left)); }
@@ -32,6 +32,11 @@ h2 { font: 500 1.15rem var(--serif); margin: 2rem 0 0.4rem; }
 .abstract { max-width: 68ch; line-height: 1.6; }
 .comment { padding: 0.7rem 0; border-bottom: 1px solid var(--rule); }
 .comment.reply { margin-left: 1.5rem; }
+.reception { margin: 0.9rem 0 0; padding: 0.6rem 0.9rem; background: var(--surface); border-left: 3px solid var(--accent); border-radius: 0.25rem; }
+.reception p { margin: 0; max-width: 68ch; line-height: 1.55; }
+.reception p.meta { margin-top: 0.35rem; }
+.stance { font-weight: 600; color: var(--ink); }
+.stance.refutes, .stance.questions { color: var(--warn); }
 .twitter-tweet { margin: 0.7rem 0; padding: 0.7rem 1rem; border: 1px solid var(--rule); border-radius: 0.5rem; }
 .comment p { margin: 0.25rem 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
 pre { background: var(--surface); padding: 0.8rem 1rem; border-radius: 0.35rem; overflow-x: auto; font: 0.78rem/1.5 var(--mono); }

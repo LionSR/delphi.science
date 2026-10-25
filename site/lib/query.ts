@@ -4,7 +4,7 @@
 //   ti:grokking AND au:openai          title, author         (arXiv: ti, au, abs, all)
 //   abs:"zero-free region" ANDNOT ti:survey
 //   cat:math  cat:math.NT  cat:"number theory"              division, subdivision, or a subject name
-//   source:openai-math is:formalized is:discussed   category:research origin:ai-generated family:017 id:<id>
+//   source:openai-math is:formalized is:discussed is:disputed   category:research origin:ai-generated family:017 id:<id>
 //   published:[2026-10-01 TO *]        grok*  (prefix)      bare words search every text field
 //
 // Operators AND, OR, ANDNOT, NOT (uppercase), parentheses; adjacent terms are ANDed. Text terms rank by
@@ -31,19 +31,21 @@ const TEXT: Record<string, [column: string, config: string]> = {
 };
 const EXACT: Record<string, string> = { source: 'source', src: 'source', category: 'category', origin: 'origin', id: 'id', family: 'family' };
 // Posts and articles about the record (record.discussion, attached by index.py discuss; r.discussed is their
-// stored count). Each counts like an upvote in the popularity sorts: all of them in score, the ones attached in
-// the window in day, week and month.
+// stored count). Those that confirm, simplify or extend it, or have no stance yet (r.upvoting), count like an
+// upvote in the popularity sorts: all of them in score, the ones posted in the window in day, week and month.
+// One that refutes or questions it marks the record disputed instead.
 export const FLAGS: Record<string, string> = {
 	formalized: 'r.formalized', verified: 'r.verified', withdrawn: 'r.withdrawn', 'agent-ready': 'r.agent_ready',
 	'ai-generated': "r.origin = 'ai-generated'", app: "r.source = 'app'", gone: 'r.gone', discussed: 'r.discussed > 0',
+	disputed: 'r.disputed',
 };
 export const SORTS = ['relevance', 'newest', 'oldest', 'title', 'score', 'day', 'week', 'month', 'mentions'] as const;
 export const MAX_LIMIT = 100;
 const COMPACT = ['id', 'source', 'title', 'authors', 'url', 'pdf', 'published', 'subject', 'division', 'category', 'origin',
-	'agent_ready', 'formalized', 'verified', 'withdrawn', 'family', 'ai_models', 'score', 'reactions', 'comments', 'reviews', 'mentions', 'discussed'];
+	'agent_ready', 'formalized', 'verified', 'withdrawn', 'disputed', 'family', 'ai_models', 'score', 'reactions', 'comments', 'reviews', 'mentions', 'discussed'];
 
 // The record as the API serves it: the stored JSON plus the live counts.
-const SERVED = `r.record || jsonb_build_object('score', r.score, 'reactions', r.reactions, 'comments', r.comments_count, 'reviews', r.reviews_count, 'mentions', r.mentions_count, 'discussed', r.discussed)`;
+const SERVED = `r.record || jsonb_build_object('score', r.score, 'reactions', r.reactions, 'comments', r.comments_count, 'reviews', r.reviews_count, 'mentions', r.mentions_count, 'discussed', r.discussed, 'disputed', r.disputed)`;
 
 // ---- Parsing ----
 
@@ -221,7 +223,7 @@ export interface SearchOptions {
 }
 
 // day, week, month: as on SciRate, the net votes cast in that many days plus the posts and articles published in
-// them (a link's own date; the day it was attached only when the source gives none), then the newest. Almost no record has either, so only the candidates are ranked (the votes table, and the few rows with
+// them that count as upvotes (a link's own date; the day it was attached only when the source gives none), then the newest. Almost no record has either, so only the candidates are ranked (the votes table, and the few rows with
 // links); the rest come from the published index, already in order, and only as many as the page needs.
 function recentSql(days: number, where: string, n: number): string {
 	return `WITH hot AS (
@@ -229,7 +231,8 @@ function recentSql(days: number, where: string, n: number): string {
 				SELECT v.record_id AS id, v.value AS points FROM open_index.votes v WHERE v.at > now() - interval '${days} days'
 				UNION ALL
 				SELECT r.id, (SELECT count(*) FROM jsonb_array_elements(r.record->'discussion') d
-					WHERE coalesce(nullif(d->>'date', ''), d->>'added')::date > current_date - ${days})::int
+					WHERE coalesce(nullif(d->>'date', ''), d->>'added')::date > current_date - ${days}
+					AND coalesce(d->>'stance', 'confirms') IN ('confirms', 'simplifies', 'extends'))::int -- as index.py UPVOTING
 				FROM open_index.records r WHERE r.discussed > 0
 			) x GROUP BY id HAVING sum(points) <> 0),
 		cand AS (
@@ -254,7 +257,7 @@ export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 	const total = known ?? Number((await db.query<{ n: number }>(`SELECT count(*)::int AS n FROM open_index.records r WHERE ${where}`, params)).rows[0].n);
 
 	const order: Record<string, string> = { newest: 'r.published DESC NULLS LAST, r.id', oldest: 'r.published ASC NULLS LAST, r.id',
-		title: 'lower(r.title), r.id', score: '(r.score + r.discussed) DESC, r.published DESC NULLS LAST, r.id', // records_top
+		title: 'lower(r.title), r.id', score: '(r.score + r.upvoting) DESC, r.published DESC NULLS LAST, r.id', // records_top
 		mentions: 'r.mentions_count DESC, r.score DESC, r.id' };
 	const window: Record<string, number> = { day: 1, week: 7, month: 30 };
 	let sql: string;

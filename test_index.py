@@ -6,6 +6,8 @@
 
 from __future__ import annotations
 
+import contextlib
+import io
 import json
 import sys
 import tempfile
@@ -119,8 +121,8 @@ class Discussion(unittest.TestCase):
     def test_parse_oembed(self) -> None:
         self.assertEqual(S.parse_oembed(self.OEMBED), {
             "kind": "x", "url": "https://x.com/AndrewLott1331/status/2108189504259727838", "author": "Andrew Lott",
-            "handle": "AndrewLott1331", "text": "Did you notice that the bound is weaker? Still gets Erdős Turán", "date": "2026-10-08",
-        })
+            "handle": "AndrewLott1331", "date": "2026-10-08",
+        })  # not the text: X's embed shows it
 
     def test_first_title_only(self) -> None:
         m = S.MetaParser(); m.feed("<html><title>Post | Asaf Karagila</title><svg><title>Search</title></svg><h1>H</h1><p>First.</p><p>Second.</p>")
@@ -143,9 +145,222 @@ class Discussion(unittest.TestCase):
         self.assertNotIn("record", paper["discussion"][1])
         self.assertEqual(reply["discusses"], [{"id": "openai-math/P", "title": "P"}])
 
-    def test_discussion_is_served(self) -> None:
-        e = {"key": "k", "source": "web", "url": "https://e.org/p", "title": "T", "discussion": [{"kind": "x", "url": "https://x.com/a/status/1", "text": "hi"}]}
-        self.assertEqual(index.to_item(e)["discussion"], e["discussion"])
+    def test_discussion_is_served_without_x_text(self) -> None:
+        x = {"kind": "x", "url": "https://x.com/a/status/1", "author": "A", "handle": "a", "text": "hi", "date": "2026-10-08", "added": "2026-10-09"}
+        web = {"kind": "web", "url": "https://e.org/q", "title": "Q", "text": "a quote", "added": "2026-10-09"}
+        e = {"key": "k", "source": "web", "url": "https://e.org/p", "title": "T", "discussion": [x, web]}
+        served = index.to_item(e)["discussion"]
+        self.assertEqual(served, [{k: v for k, v in x.items() if k != "text"}, web])
+        self.assertNotIn('"hi"', index.dumps(index.to_item(e)))
+        self.assertEqual(e["discussion"][0]["text"], "hi")  # serving does not change the entry
+
+
+class Recheck(unittest.TestCase):
+    """discuss --recheck reads every link again: a deleted post drops out, an unreachable one is kept."""
+
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory()
+        self.saved = index.ENTRIES, S.discussion_link
+        index.ENTRIES = Path(self.tmp.name)
+        S.discussion_link = self.fake
+
+    def tearDown(self) -> None:
+        index.ENTRIES, S.discussion_link = self.saved
+        self.tmp.cleanup()
+
+    @staticmethod
+    def fake(url: str) -> dict:
+        if "deleted" in url:
+            raise S.NotFound(url)
+        if "down" in url:
+            raise S.SourceError("timed out")
+        return {"kind": "x", "url": url, "author": "A", "handle": "a", "date": "2026-10-08"}
+
+    def entry(self, key: str, links: list | None = None) -> None:
+        index.save(index.path_for("web", key), {"key": key, "source": "web", "url": f"https://e.org/{key}", "title": key, "discussion": links})
+
+    def test_recheck_drops_deleted_and_keeps_the_rest(self) -> None:
+        links = [{"kind": "x", "url": "https://x.com/a/status/1", "text": "old", "added": "2026-10-09"},
+                 {"kind": "x", "url": "https://x.com/a/status/2/deleted", "added": "2026-10-09"},
+                 {"kind": "web", "url": "https://down.example/p", "title": "P", "added": "2026-10-10"}]
+        self.entry("k", links)
+        self.entry("j")
+        self.assertEqual(index.main(["discuss", "--recheck"]), 0)
+        after = json.loads(index.path_for("web", "k").read_text())["discussion"]
+        self.assertEqual([d["url"] for d in after], ["https://x.com/a/status/1", "https://down.example/p"])
+        self.assertNotIn("text", after[0])  # read again, without the post's text
+        self.assertEqual(after[0]["added"], "2026-10-09")
+        self.assertEqual(after[1], links[2])  # unreachable: kept as it was
+
+    def test_recheck_keeps_the_stance(self) -> None:
+        self.entry("k", [{"kind": "x", "url": "https://x.com/a/status/1", "added": "2026-10-09", "stance": "questions"}])
+        index.main(["discuss", "--recheck"])
+        self.assertEqual(json.loads(index.path_for("web", "k").read_text())["discussion"][0]["stance"], "questions")
+
+    def test_recheck_only_named_records(self) -> None:
+        for k in ("a", "b"):
+            self.entry(k, [{"kind": "x", "url": "https://x.com/a/status/9/deleted"}])
+        index.main(["discuss", "--recheck", "web/a"])
+        self.assertNotIn("discussion", json.loads(index.path_for("web", "a").read_text()))
+        self.assertIn("discussion", json.loads(index.path_for("web", "b").read_text()))
+
+
+class Stance(unittest.TestCase):
+    """A person labels what each response does; only support counts as an upvote, refutes or questions mark it disputed."""
+
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory()
+        self.saved = index.ENTRIES, S.discussion_link
+        index.ENTRIES = Path(self.tmp.name)
+        S.discussion_link = lambda url: {"kind": "web", "url": url.split("?")[0], "title": "fresh"}
+        index.save(index.path_for("web", "k"), {"key": "k", "source": "web", "url": "https://e.org/k", "title": "K", "discussion": [
+            {"kind": "x", "url": "https://x.com/a/status/1", "author": "A", "handle": "a", "added": "2026-10-09"}]})
+
+    def tearDown(self) -> None:
+        index.ENTRIES, S.discussion_link = self.saved
+        self.tmp.cleanup()
+
+    def links(self) -> list:
+        return json.loads(index.path_for("web", "k").read_text())["discussion"]
+
+    def test_stance_on_an_attached_link_is_set_without_reading_it(self) -> None:
+        S.discussion_link = lambda url: self.fail("an attached link is not read again to label it")
+        index.main(["discuss", "web/k", "https://twitter.com/a/status/1?s=20", "--stance", "refutes"])
+        self.assertEqual(self.links()[0], {"kind": "x", "url": "https://x.com/a/status/1", "author": "A", "handle": "a",
+                                           "added": "2026-10-09", "stance": "refutes"})
+        index.main(["discuss", "web/k", "https://x.com/a/status/1", "--stance", "none"])
+        self.assertNotIn("stance", self.links()[0])
+
+    def test_new_links_take_the_stance_and_keep_it_when_read_again(self) -> None:
+        index.main(["discuss", "web/k", "https://e.org/reply", "--stance", "simplifies"])
+        self.assertEqual(self.links()[1]["stance"], "simplifies")
+        index.main(["discuss", "web/k", "https://e.org/reply"])  # read again, no stance given: it keeps its own
+        self.assertEqual([d.get("stance") for d in self.links()], [None, "simplifies"])
+
+    def test_unknown_stance_is_refused(self) -> None:
+        with self.assertRaises(SystemExit):
+            index.main(["discuss", "web/k", "https://x.com/a/status/1", "--stance", "likes"])
+
+    def test_proposals_are_printed_as_commands_and_nothing_is_written(self) -> None:
+        index.main(["discuss", "web/k", "https://e.org/a#:~:text=a%20gap", "https://e.org/b"])
+        index.main(["discuss", "web/k", "https://e.org/b", "--stance", "extends"])
+        before = index.path_for("web", "k").read_text()
+        canned = Path(self.tmp.name) / "stances.json"
+        canned.write_text(json.dumps({"https://e.org/a#:~:text=a%20gap": {"stance": "questions", "reason": "Lean states less"},
+                                      "https://e.org/b": {"stance": "refutes"}, "https://x.com/a/status/1": {"stance": "likes"}}))
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            index.main(["discuss", "--propose-stances", "--labeler", f"canned:{canned}"])
+        text = out.getvalue()
+        self.assertIn("python3 index.py discuss web/k 'https://e.org/a#:~:text=a%20gap' --stance questions   # Lean states less", text)
+        self.assertNotIn("e.org/b", text)  # already labelled by a person
+        self.assertIn("# no proposal, open it: https://x.com/a/status/1", text)  # not a stance
+        self.assertEqual(index.path_for("web", "k").read_text(), before)
+
+    def test_the_labeler_gets_the_responses_as_data(self) -> None:
+        seen = {}
+
+        def run(cmd: list, input: str, **kw: object) -> object:
+            seen["prompt"] = input
+            return type("Done", (), {"returncode": 0, "stderr": "", "stdout": 'Sure. [{"url": "https://x.com/a/status/1", "stance": null}]'})()
+
+        saved, index.subprocess.run = index.subprocess.run, run
+        try:
+            with contextlib.redirect_stdout(io.StringIO()):
+                index.main(["discuss", "--propose-stances"])
+        finally:
+            index.subprocess.run = saved
+        data = json.loads(seen["prompt"].split("BEGIN_RECORDS\n")[1].split("\nEND_RECORDS")[0])
+        self.assertEqual(data, [{"id": "web/k", "title": "K", "summary": "", "responses": [
+            {"url": "https://x.com/a/status/1", "kind": "x", "author": "A"}]}])
+
+    def test_counts_and_flags(self) -> None:
+        links = [{"url": "1"}, {"url": "2", "stance": "confirms"}, {"url": "3", "stance": "reacts"}, {"url": "4", "stance": "questions"}]
+        self.assertEqual(index.upvoting(links), 2)  # unlabelled and confirms
+        self.assertTrue(index.disputed(links))
+        self.assertFalse(index.disputed(links[:3]))
+        e = {"key": "k", "source": "web", "url": "https://e.org/p", "title": "T",
+             "discussion": [{"kind": "x", "url": "https://x.com/a/status/1", "text": "t", "stance": "refutes"}]}
+        it = index.to_item(e)
+        self.assertEqual((it["disputed"], it["discussion"][0]), (True, {"kind": "x", "url": "https://x.com/a/status/1", "stance": "refutes"}))
+        self.assertNotIn("disputed", index.to_item({**e, "discussion": [{"kind": "web", "url": "u", "stance": "extends"}]}))
+
+    def test_is_disputed_and_is_discussed_in_the_snapshot(self) -> None:
+        import query
+        base = {"source": "web", "url": "u", "title": "T"}
+        items = [{**base, "id": "web/a", "discussion": [{"url": "1", "stance": "refutes"}], "disputed": True},
+                 {**base, "id": "web/b", "discussion": [{"url": "1", "stance": "confirms"}]}, {**base, "id": "web/c"}]
+        path = Path(self.tmp.name) / "index.db"
+        query.build_db(path, items, {}, {})
+        db = query.connect(path)
+        ids = lambda q: sorted(r["id"] for r in query.search(db, q)["results"])  # noqa: E731
+        self.assertEqual((ids("is:disputed"), ids("is:discussed"), ids("T ANDNOT is:discussed")), (["web/a"], ["web/a", "web/b"], ["web/c"]))
+        db.close()
+
+
+class Reception(unittest.TestCase):
+    """Where the work stands: drafted by the agent from labelled links, published only once a person reviews it,
+    and no longer published once the links change."""
+
+    LINKS = [{"kind": "web", "url": "https://e.org/sign-error", "author": "Lekili", "stance": "refutes", "text": "a sign error"},
+             {"kind": "x", "url": "https://x.com/a/status/1", "author": "A"}]
+
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory()
+        self.saved = index.ENTRIES, S.discussion_link
+        index.ENTRIES = Path(self.tmp.name)
+        S.discussion_link = lambda url: {"kind": "web", "url": url, "title": "new"}
+        index.save(index.path_for("web", "k"), {"key": "k", "source": "web", "url": "https://e.org/k", "title": "K", "discussion": self.LINKS})
+        self.canned = Path(self.tmp.name) / "drafts.json"
+        self.canned.write_text(json.dumps({"web/k": {"text": "Withdrawn on 7 October after a sign error found by Lekili.",
+                                                     "links": ["https://e.org/sign-error", "https://not.attached/x"]}}))
+
+    def tearDown(self) -> None:
+        index.ENTRIES, S.discussion_link = self.saved
+        self.tmp.cleanup()
+
+    def run_cmd(self, *argv: str) -> int:
+        with contextlib.redirect_stdout(io.StringIO()):
+            return index.main(["reception", "web/k", *argv])
+
+    def entry(self) -> dict:
+        return json.loads(index.path_for("web", "k").read_text())
+
+    def test_a_draft_is_not_published_until_a_person_reviews_it(self) -> None:
+        self.assertEqual(self.run_cmd("--draft", "--labeler", f"canned:{self.canned}"), 0)
+        e = self.entry()
+        self.assertEqual(e["reception"]["links"], ["https://e.org/sign-error"])  # only links the record has
+        self.assertNotIn("reviewed_by", e["reception"])
+        self.assertEqual(index.reception_state(e), "draft")
+        self.assertNotIn("reception", index.to_item(e))
+        self.assertEqual(self.run_cmd("--reviewed-by", "LionSR"), 0)
+        e = self.entry()
+        self.assertEqual(index.to_item(e)["reception"], {"text": "Withdrawn on 7 October after a sign error found by Lekili.",
+                                                         "written": S.today(), "links": ["https://e.org/sign-error"], "reviewed_by": "LionSR"})
+
+    def test_text_by_hand_and_stale_when_the_links_change(self) -> None:
+        self.assertEqual(self.run_cmd("--text", "Refuted by Lekili.", "--reviewed-by", "LionSR", "--links", "https://e.org/sign-error"), 0)
+        self.assertEqual(index.reception_state(self.entry()), "published")
+        with contextlib.redirect_stdout(io.StringIO()):
+            index.main(["discuss", "web/k", "https://x.com/a/status/1", "--stance", "confirms"])  # relabelled
+        e = self.entry()
+        self.assertEqual(index.reception_state(e), "stale")
+        self.assertNotIn("reception", index.to_item(e))
+        self.assertEqual(self.run_cmd("--reviewed-by", "LionSR"), 0)  # reviewed again against the links as they are
+        self.assertEqual(index.reception_state(self.entry()), "published")
+        with contextlib.redirect_stdout(io.StringIO()):
+            index.main(["discuss", "web/k", "https://e.org/new-reply"])  # a link added
+        self.assertEqual(index.reception_state(self.entry()), "stale")
+
+    def test_refusals(self) -> None:
+        self.assertEqual(self.run_cmd("--reviewed-by", "LionSR"), 2)  # nothing to review yet
+        self.assertEqual(self.run_cmd("--text", "x", "--reviewed-by", "not a login"), 2)
+        self.assertEqual(self.run_cmd("--text", "x", "--links", "https://elsewhere.org/p"), 2)
+        self.assertEqual(self.run_cmd("--text", "word " * 100), 2)
+        self.assertEqual(self.run_cmd("--draft", "--reviewed-by", "LionSR", "--labeler", f"canned:{self.canned}"), 2)
+        index.save(index.path_for("web", "k"), {**self.entry(), "discussion": [{**d, "stance": None} for d in self.LINKS]})
+        self.assertEqual(self.run_cmd("--draft", "--labeler", f"canned:{self.canned}"), 2)  # no labelled links
+        self.assertNotIn("reception", self.entry())
 
 
 class Text(unittest.TestCase):

@@ -8,7 +8,7 @@ import { refuseKeys, type Voter } from './votes.ts';
 
 export const MAX_PER_DAY = 20; // per GitHub login, as index.py's MAX_ADDS_PER_DAY
 
-const SEND = 'Send "url": an arXiv id or URL, a DOI, a Zenodo or Hugging Face link, or a GitHub repository.';
+const SEND = 'Send "url": an arXiv id or URL, a DOI, a Zenodo link, or a GitHub repository.';
 
 export type Submitted = { status: 'listed' | 'already_listed'; id: string; message: string; record?: Record<string, unknown> };
 
@@ -46,13 +46,4 @@ export async function submit(db: Db, link: string, voter: Voter, fetcher: typeof
 		ON CONFLICT (id) DO NOTHING`, await row(item));
 	await db.query('INSERT INTO open_index.submissions (url, record_id, voter, agent) VALUES ($1, $2, $3, $4)', [url, item.id, voter.login, voter.agent]);
 	return { status: 'listed', id: item.id, record: item, message: `Listed as ${item.id}, with its metadata from ${hit.source.name}.` };
-}
-
-export type Submission = { url: string; record_id: string; title: string | null; voter: string; agent: string; at: string };
-
-/** The newest submissions, with the record each one became. */
-export async function submissions(db: Db, limit = 20): Promise<Submission[]> {
-	return (await db.query<Submission>(
-		`SELECT s.url, s.record_id, r.title, s.voter, s.agent, s.at FROM open_index.submissions s
-		 JOIN open_index.records r ON r.id = s.record_id ORDER BY s.at DESC, s.id DESC LIMIT $1`, [limit])).rows;
 }

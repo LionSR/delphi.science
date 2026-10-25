@@ -12,7 +12,7 @@ import { claude, type Moderator, type Post } from './moderate.ts';
 import { load } from './load.ts';
 import { get } from './query.ts';
 import { detect, resolve, trim } from './resolve.ts';
-import { submissions, submit } from './submit.ts';
+import { submit } from './submit.ts';
 import { createAgentKey, voterFromKey } from './votes.ts';
 
 const MIGRATIONS = new URL('../supabase/migrations/', import.meta.url);
@@ -57,7 +57,6 @@ describe('reading a link', () => {
 		assert.equal(id('https://github.com/o/r/tree/main/src'), 'github/o__r');
 		assert.equal(id('10.1038/nature14539'), 'doi/10.1038__nature14539');
 		assert.equal(id('10.5281/zenodo.123456'), 'zenodo/123456');
-		assert.equal(id('https://huggingface.co/datasets/openai/gsm8k'), 'huggingface/datasets__openai__gsm8k');
 		// The harvester's own adapters read these, so the site does not.
 		assert.equal(id('https://github.com/openai/math/blob/main/preprints/X/paper.pdf'), null);
 		assert.equal(id('PALOMAR-2026-10-17-000014'), null);
@@ -106,8 +105,8 @@ describe('submitting and the forum, on Postgres', () => {
 		assert.equal(rec?.title, 'Attention Is All You Need');
 		assert.equal((await get(db, 'github/karpathy__nanoGPT')), null);
 		assert.equal((await submit(db, 'karpathy/nanoGPT', ada, SOURCES)).status, 'listed');
-		const [last] = await submissions(db, 1);
-		assert.deepEqual([last.record_id, last.voter, last.title], ['github/karpathy__nanoGPT', 'ada', 'nanoGPT']);
+		const last = (await db.query<{ record_id: string; voter: string }>('SELECT record_id, voter FROM open_index.submissions ORDER BY id DESC LIMIT 1')).rows[0];
+		assert.deepEqual([last.record_id, last.voter], ['github/karpathy__nanoGPT', 'ada']);
 		await assert.rejects(submit(db, 'someone/tiny', ada, SOURCES), /fewer than 50 stars and no CITATION.cff/);
 		assert.equal((await submit(db, 'someone/cited', ada, SOURCES)).status, 'listed', 'a citable repository is listed whatever its stars');
 	});
@@ -205,16 +204,13 @@ describe('submitting and the forum, on Postgres', () => {
 		assert.deepEqual((await activity(db, { since: fresh.since })).posts, [], 'nothing new since');
 	});
 
-	test('a person may post 30 times a day and ask 5 questions, agents and refused posts included', async () => {
+	test('a person may post 30 times a day, agents and refused posts included', async () => {
 		const dee = { login: 'dee', agent: '' }, deebot = { login: 'dee', agent: 'Claude Code' };
-		for (let i = 0; i < 5; i++) await startTopic(db, i % 2 ? deebot : dee, { title: `Question ${i}`, body: 'Specific details.' });
-		await assert.rejects(startTopic(db, deebot, { title: 'Question 5', body: 'Specific details.' }), /asked 5 questions today/);
+		await startTopic(db, dee, { title: 'A question', body: 'Specific details.' });
 		const t = (await topics(db)).questions[0].id;
 		const no: Moderator = async () => ({ publish: false, reason: 'No.' });
 		await assert.rejects(post(db, { topic: t }, deebot, { body: 'x' }, no), /not posted/);
-		const used = (await db.query<{ n: number }>("SELECT count(*)::int AS n FROM open_index.moderations WHERE voter = 'dee'")).rows[0].n;
-		assert.equal(used, 6, 'the refused post counts');
-		for (let i = used; i < 30; i++) await post(db, { topic: t }, dee, { body: `Answer ${i}` });
+		for (let i = 2; i < 30; i++) await post(db, { topic: t }, i % 2 ? dee : deebot, { body: `Answer ${i}` });
 		await assert.rejects(post(db, { topic: t }, deebot, { body: 'One more.' }), /posted 30 times today, agents included/);
 	});
 

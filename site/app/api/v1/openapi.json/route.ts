@@ -101,7 +101,7 @@ const spec = {
 				summary: 'Add a paper, repository or dataset by its link or id. Metadata is read from the source: 201 listed, 200 already listed, 400 not taken (with the reason). Search first.',
 				...write,
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['url'], properties: {
-					url: { type: 'string', description: 'An arXiv id or URL, a DOI, a Zenodo or Hugging Face link, or a GitHub repository (listed with at least 50 stars or a CITATION.cff).' },
+					url: { type: 'string', description: 'An arXiv id or URL, a DOI, a Zenodo link, or a GitHub repository (listed with at least 50 stars or a CITATION.cff).' },
 				} } } } },
 				responses: { 200: { description: 'Already listed, with its id' }, 201: { description: 'Listed, with the record' }, 400: err, 401: err },
 			},

@@ -1,6 +1,6 @@
 // Reading a submitted link's metadata from its source, so it is listed the moment it is submitted. The
-// same rules as the harvester's adapters (sources.py), for the sources the site reads: arXiv, GitHub, DOI,
-// Zenodo and Hugging Face. Ids and fields match what `index.py add` writes, so a record the harvester
+// same rules as the harvester's adapters (sources.py), for the sources the site reads: arXiv, GitHub, DOI
+// and Zenodo. Ids and fields match what `index.py add` writes, so a record the harvester
 // also reaches is the same record, not another one.
 import taxonomy from './taxonomy.json' with { type: 'json' };
 import type { Item } from './load.ts';
@@ -95,24 +95,6 @@ const SOURCES: Source[] = [
 				url: d.links?.self_html ?? `https://zenodo.org/records/${d.id}`, title: clean(m.title),
 				authors: (m.creators ?? []).map((c: { name?: string }) => clean(c.name)).filter(Boolean), summary: trim(m.description),
 				tags: m.keywords ?? [], domain: m.resource_type?.type ?? '', published: isoDate(m.publication_date),
-			});
-		},
-	},
-	{
-		name: 'huggingface',
-		patterns: [/^(?:https?:\/\/)?huggingface\.co\/((?:datasets\/|spaces\/)?[\w.-]+\/[\w.-]+)\/?$/],
-		key: (m) => {
-			const kind = /^(datasets|spaces)\//.exec(m[1])?.[1] ?? 'models';
-			return `${kind}__${m[1].replace(`${kind}/`, '').replace('/', '__')}`;
-		},
-		async read(key, get) {
-			const [kind, rest] = [key.slice(0, key.indexOf('__')), key.slice(key.indexOf('__') + 2)];
-			const repo = rest.replace('__', '/');
-			const d = await (await get(`https://huggingface.co/api/${kind}/${repo}`, 'application/json')).json();
-			return item('huggingface', key, {
-				url: `https://huggingface.co/${kind === 'models' ? '' : `${kind}/`}${repo}`, title: repo.split('/').pop()!.replaceAll('-', ' '),
-				authors: [d.author ?? repo.split('/')[0]], summary: trim(d.cardData?.description ?? (typeof d.description === 'string' ? d.description : '')),
-				tags: (d.tags ?? []).filter((t: string) => !t.includes(':')).slice(0, 12), domain: kind.replace(/s$/, ''), published: isoDate(d.createdAt),
 			});
 		},
 	},

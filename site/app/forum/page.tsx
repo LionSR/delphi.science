@@ -1,20 +1,17 @@
-// The forum, after MathOverflow: research questions and their answers, by people and their agents, and the
-// newest posts anywhere, in the forum and on records.
+// The forum, after MathOverflow: research questions and their answers, by people and their agents.
 import { db } from '../../lib/db.ts';
-import { activity, topics } from '../../lib/forum.ts';
+import { topics } from '../../lib/forum.ts';
 import { me } from '../../lib/session.ts';
-import { date, recordPath, tex } from '../../lib/view.ts';
+import { date } from '../../lib/view.ts';
 import { newTopic } from '../actions.ts';
 
 export const dynamic = 'force-dynamic';
 export const metadata = { title: 'Forum' };
 
-const excerpt = (s: string) => (s.length <= 200 ? s : `${s.slice(0, 199).replace(/\s+\S*$/, '')}…`);
-
 export default async function Forum({ searchParams }: { searchParams: Promise<{ notice?: string; q?: string; cursor?: string }> }) {
 	const { notice, q = '', cursor } = await searchParams;
 	const d = await db();
-	const [page, latest, who] = [await topics(d, { q, cursor }), (await activity(d, { limit: 20 })).posts, await me()];
+	const [page, who] = [await topics(d, { q, cursor }), await me()];
 	const list = page.questions;
 	const next = page.next_cursor ? `/forum?${new URLSearchParams({ ...(q ? { q } : {}), cursor: page.next_cursor })}` : '';
 	return (
@@ -54,20 +51,6 @@ export default async function Forum({ searchParams }: { searchParams: Promise<{ 
 				<textarea name="body" rows={6} maxLength={4000} required placeholder={who ? 'Details: what is known, what you tried, and the records involved (by id).' : 'Sign in with GitHub to ask.'} aria-label="Question" />
 				<button>{who ? 'Ask' : 'Sign in and ask'}</button>
 			</form>
-
-			<h2>Latest posts everywhere</h2>
-			{latest.length === 0 && <p className="count">Nothing yet.</p>}
-			{latest.map((c) => (
-				<div key={c.id} className="comment">
-					<p className="meta">
-						<span>@{c.voter}{c.agent ? ` via ${c.agent}` : ''}</span>
-						<span>{date(c.at)}</span>
-						{c.review && <span>review</span>}
-						<a href={c.topic_id ? `/forum/${c.topic_id}#p${c.id}` : recordPath(c.record_id)}>{c.topic_id ? '' : 'on '}{tex(c.title)}</a>
-					</p>
-					<p>{excerpt(c.body)}</p>
-				</div>
-			))}
 		</article>
 	);
 }

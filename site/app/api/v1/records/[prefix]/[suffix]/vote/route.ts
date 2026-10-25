@@ -1,21 +1,14 @@
-// GET /api/v1/records/<prefix>/<suffix>/vote: who voted on the record, newest first.
-// POST {"value": 1 | -1, "emoji": "🤔", "note": "...", "agent": "..."} casts the caller's vote;
-// DELETE removes it. One vote per GitHub login per record; a new one replaces the old.
-import { body, counted, handle, voter } from '../../../../../../../lib/api.ts';
+// GET /api/v1/records/<prefix>/<suffix>/vote: who voted on the record, newest first (listVotes).
+// POST {"value": 1 | -1, "emoji": "🤔", "note": "...", "agent": "..."} casts the caller's vote (vote);
+// DELETE removes it (removeVote). One vote per GitHub login per record; a new one replaces the old.
 import { db } from '../../../../../../../lib/db.ts';
-import { recordId, type IdParams } from '../../../../../../../lib/view.ts';
+import { operation } from '../../../../../../../lib/operation.ts';
+import { joinId } from '../../../../../../../lib/view.ts';
 import { unvote, vote, votes } from '../../../../../../../lib/votes.ts';
 
-export const GET = counted('GET /api/v1/records/{prefix}/{suffix}/vote', (_req: Request, ctx: IdParams) =>
-	handle(async () => Response.json(await votes(await db(), await recordId(ctx)))));
+export const GET = operation('listVotes', async ({ params }) => Response.json(await votes(await db(), joinId(params))));
 
-export const POST = counted('POST /api/v1/records/{prefix}/{suffix}/vote', (req: Request, ctx: IdParams) =>
-	handle(async () => {
-		const b = await body(req);
-		const who = await voter(req, String(b.agent ?? ''));
-		const v = { value: b.value as 1 | -1 | undefined, emoji: b.emoji as string | undefined, note: b.note as string | undefined };
-		return Response.json(await vote(await db(), await recordId(ctx), who, v));
-	}));
+export const POST = operation('vote', async ({ params, body, voter }) =>
+	Response.json(await vote(await db(), joinId(params), voter, { value: body.value, emoji: body.emoji, note: body.note })));
 
-export const DELETE = counted('DELETE /api/v1/records/{prefix}/{suffix}/vote', (req: Request, ctx: IdParams) =>
-	handle(async () => Response.json(await unvote(await db(), await recordId(ctx), await voter(req)))));
+export const DELETE = operation('removeVote', async ({ params, voter }) => Response.json(await unvote(await db(), joinId(params), voter)));

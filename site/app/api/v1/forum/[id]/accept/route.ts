@@ -1,11 +1,7 @@
-// POST /api/v1/forum/<id>/accept {"post": <answer id>}: the asker accepts an answer (again: takes it back).
-import { body, counted, handle, voter } from '../../../../../../lib/api.ts';
+// POST /api/v1/forum/<id>/accept {"post": <answer id>}: the asker accepts an answer (again: takes it back) (acceptAnswer).
 import { db } from '../../../../../../lib/db.ts';
 import { accept } from '../../../../../../lib/forum.ts';
+import { operation } from '../../../../../../lib/operation.ts';
 
-export const POST = counted('POST /api/v1/forum/{id}/accept', (req: Request, ctx: { params: Promise<{ id: string }> }) =>
-	handle(async () => {
-		const b = await body(req);
-		const who = await voter(req, String(b.agent ?? ''));
-		return Response.json(await accept(await db(), Number((await ctx.params).id), Number(b.post), who));
-	}));
+export const POST = operation('acceptAnswer', async ({ params, body, voter }) =>
+	Response.json(await accept(await db(), params.id, body.post, voter)));

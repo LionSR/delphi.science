@@ -53,6 +53,18 @@ describe('the OpenAPI document', () => {
 		}
 	});
 
+	test('every operation is served by operation(), which takes its name, checks and usage count from the document', async () => {
+		for (const [p, file] of routes().filter(([p]) => !UNDOCUMENTED.includes(p))) {
+			assert.doesNotMatch(readFileSync(file, 'utf8'), /\bcounted\(/, `${p} counts itself instead of through operation()`);
+			const mod = await import(file.href);
+			for (const [m, op] of Object.entries(paths[p] as unknown as Record<string, { operationId: string }>)) {
+				const handler = mod[m.toUpperCase()] as { operationId?: string; endpoint?: string };
+				assert.equal(handler.operationId, op.operationId, `${m} ${p}`);
+				assert.equal(handler.endpoint, `${m.toUpperCase()} ${p}`, `${m} ${p}: counted under another name`);
+			}
+		}
+	});
+
 	test('fits what tool importers accept: unique operation ids, summaries under 300 characters, parameters under 700', () => {
 		type Full = Op & { operationId: string; summary: string; parameters?: { name: string; description?: string }[] };
 		const ops = Object.values(paths).flatMap((o) => Object.values(o) as Full[]);
@@ -170,6 +182,52 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 		assert.match((await call('POST', '/api/v1/keys/token', { body: { device_code: d.device_code } })).text, /oik_/);
 	});
 
+	test('a request the document does not allow is a 400 that says what to send', async () => {
+		const at = `/api/v1/records/${discussed.split('/')[0]}/${encodeURIComponent(discussed.split('/')[1])}`;
+		const error = async (method: string, path: string, opts: Parameters<typeof call>[2]) => {
+			const r = await call(method, path, opts);
+			assert.equal(r.status, 400, `${method} ${path} ${opts?.query ?? JSON.stringify(opts?.body)}`);
+			return JSON.parse(r.text).error as { code: string; message: string; fix: string };
+		};
+		// Parameters: enums, ranges and types, read from the query string.
+		assert.deepEqual(await error('GET', '/api/v1/search', { query: 'sort=hot' }), { code: 'bad_request', message: 'unknown sort "hot"',
+			fix: 'Use sort=relevance, sort=newest, sort=oldest, sort=title, sort=score, sort=day, sort=week, sort=month, sort=mentions, sort=responded.' });
+		assert.match((await error('GET', '/api/v1/search', { query: 'fields=all' })).fix, /^Use fields=compact \(default\), fields=full\.$/);
+		assert.match((await error('GET', '/api/v1/search', { query: 'format=xml' })).message, /^unknown format "xml"$/);
+		for (const limit of ['0', '101', 'abc', '2.5', '']) {
+			assert.match((await error('GET', '/api/v1/search', { query: `limit=${limit}` })).fix, /^Send limit: an integer from 1 to 100 \(default 20\)\./, limit);
+		}
+		assert.match((await error('GET', '/api/v1/stats', { query: 'weeks=27' })).message, /^weeks must be from 1 to 26$/);
+		await error('POST', '/api/v1/keys/token', { query: 'format=xml', body: { device_code: 'x' } });
+		// Bodies: required fields, types, lengths, and one of several fields.
+		assert.match((await error('POST', '/api/v1/keys/token', { body: {} })).message, /^the body needs "device_code"$/);
+		assert.match((await error('POST', '/api/v1/keys/device', { body: { agent: 5 } })).message, /^"agent" must be a string$/);
+		assert.equal((await error('POST', '/api/v1/keys/device', { body: ['Test agent'] })).code, 'bad_body');
+		assert.match((await error('POST', `${at}/comments`, { body: { body: 'x'.repeat(4001) }, auth: true })).message, /^"body" is longer than 4000 characters$/);
+		assert.match((await error('POST', `${at}/comments`, { body: { body: 'Hi.', review: 'yes' }, auth: true })).message, /^"review" must be a boolean$/);
+		assert.deepEqual(await error('POST', `${at}/vote`, { body: { note: 'Why not.' }, auth: true }),
+			{ code: 'bad_request', message: 'the body needs "value" or "emoji"', fix: 'Send value, emoji, or both.' });
+		assert.match((await error('POST', `${at}/vote`, { body: { value: 1, note: 'x'.repeat(501) }, auth: true })).message, /^"note" is longer than 500 characters$/);
+		// The domain's own checks still answer after the document's.
+		assert.match((await error('POST', '/api/v1/keys/device', { body: { agent: '   ' } })).message, /needs a name/);
+		assert.match((await error('POST', `${at}/vote`, { body: { emoji: 'no' }, auth: true })).message, /one emoji/);
+	});
+
+	test('query strings are read as the declared types, with their defaults', async () => {
+		assert.equal(JSON.parse((await call('GET', '/api/v1/search', { query: 'limit=3' })).text).count, 3);
+		assert.equal(JSON.parse((await call('GET', '/api/v1/search')).text).count, 20);
+		assert.equal(JSON.parse((await call('GET', '/api/v1/stats')).text).weeks, 8);
+		assert.equal((await call('POST', `/api/v1/records/${discussed.split('/')[0]}/${encodeURIComponent(discussed.split('/')[1])}/comments`, { body: { body: 'A reply to nothing.', parent: null }, auth: true })).status, 201);
+	});
+
+	test('/api/v1 and /llms.txt list the operations from the document', async () => {
+		const ops = Object.entries(paths).flatMap(([p, o]) => Object.entries(o).map(([m, op]) => ({ name: `${m.toUpperCase()} ${p}`, id: (op as unknown as { operationId: string }).operationId })));
+		const index = await (await (await import(new URL('route.ts', API).href)).GET(new Request('http://test/api/v1'))).json();
+		assert.deepEqual(index.endpoints.map((e: { id: string }) => e.id), ops.map((o) => o.id));
+		const llms = await (await (await import(new URL('../../llms.txt/route.ts', API).href)).GET(new Request('http://test/llms.txt'))).text();
+		for (const { name } of ops) assert.ok(llms.includes(`${name}`), `llms.txt leaves out ${name}`);
+	});
+
 	test('submitting a link, and the forum: asking, answering, voting and accepting', async () => {
 		const atom = `<?xml version="1.0"?><feed xmlns="http://www.w3.org/2005/Atom" xmlns:arxiv="http://arxiv.org/schemas/atom"><entry>
 			<id>http://arxiv.org/abs/1706.03762v7</id><published>2017-06-12T17:57:34Z</published><title>Attention Is All You Need</title>
@@ -211,6 +269,13 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 		await call('GET', '/api/v1/forum', { query: 'limit=1' });
 		await call('GET', '/api/v1/forum', { query: 'q=table&since=0' });
 		assert.equal((await call('GET', '/api/v1/forum', { query: 'cursor=%25%25' })).status, 400);
+		// What the document allows, checked before the forum's own rules.
+		const fix = async (method: string, path: string, opts: Parameters<typeof call>[2]) => JSON.parse((await call(method, path, opts)).text).error.message;
+		assert.equal(await fix('POST', '/api/v1/forum', { body: { title: 'x'.repeat(201), body: 'B' }, auth: true }), '"title" is longer than 200 characters');
+		assert.equal(await fix('POST', `/api/v1/forum/${t.id}/vote`, { body: { post: a.id, value: 2 }, auth: true }), '"value" must be 1, -1 or 0');
+		assert.equal(await fix('GET', '/api/v1/forum', { query: 'limit=0' }), 'limit must be from 1 to 100');
+		assert.equal(await fix('GET', '/api/v1/forum/abc', {}), 'id must be an integer');
+		assert.equal(await fix('POST', '/api/v1/submit', { body: {}, auth: true }), 'the body needs "url"');
 	});
 
 	test('every documented response was checked', () => {

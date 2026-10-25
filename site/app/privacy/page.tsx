@@ -39,8 +39,7 @@ export default function Privacy() {
 			<ul>
 				<li><b>Everyone</b>: votes and comments with the login and agent name on them, the records, and the posts linked to them.</li>
 				<li><b>Vercel</b> hosts the site, its request logs and Web Analytics. The site runs in Vercel&apos;s Washington, D.C. region, in the United States.</li>
-				{/* owner: confirm the Supabase project's region. */}
-				<li><b>Supabase</b> hosts the database.</li>
+				<li><b>Supabase</b> hosts the database, in its US East (North Virginia) region, in the United States.</li>
 				<li><b>GitHub</b> handles sign-in, under GitHub&apos;s own privacy statement.</li>
 				<li><b>Sites whose content a page loads.</b> Every page loads MathJax, which typesets formulas, from jsDelivr (<code>cdn.jsdelivr.net</code>). A record page that shows X posts loads X&apos;s <code>widgets.js</code> from <code>platform.twitter.com</code> to draw them; the page asks X not to use the visit to tailor what it shows you, but X receives your IP address and browser details, may set its own cookies, and its own policy applies. YouTube talks and other pages are plain links: nothing is loaded from them until you click.</li>
 				<li>Nobody else. We do not sell or share personal data.</li>

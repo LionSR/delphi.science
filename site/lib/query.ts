@@ -39,7 +39,7 @@ export const FLAGS: Record<string, string> = {
 	'ai-generated': "r.origin = 'ai-generated'", app: "r.source = 'app'", gone: 'r.gone', discussed: 'r.discussed > 0',
 	disputed: 'r.disputed',
 };
-export const SORTS = ['relevance', 'newest', 'oldest', 'title', 'score', 'day', 'week', 'month', 'mentions'] as const;
+export const SORTS = ['relevance', 'newest', 'oldest', 'title', 'score', 'day', 'week', 'month', 'mentions', 'responded'] as const;
 export const MAX_LIMIT = 100;
 const COMPACT = ['id', 'source', 'title', 'authors', 'url', 'pdf', 'published', 'subject', 'division', 'category', 'origin',
 	'agent_ready', 'formalized', 'verified', 'withdrawn', 'disputed', 'family', 'ai_models', 'score', 'reactions', 'comments', 'reviews', 'mentions', 'discussed'];
@@ -202,7 +202,7 @@ function decode(cursor?: string | null): { offset: number; total?: number } {
 	throw new QueryError('the cursor is not valid', 'Pass next_cursor from the previous reply unchanged.');
 }
 
-function compact(rec: Record<string, unknown>) {
+export function compact(rec: Record<string, unknown>) {
 	const out: Record<string, unknown> = {};
 	for (const k of COMPACT) {
 		const v = rec[k];
@@ -263,7 +263,7 @@ function rankedSql({ with: ctes = '', hot, cold }: Ranked, where: string, n: num
 
 export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 	const t0 = performance.now();
-	const sort = opts.sort ?? 'relevance';
+	const sort = opts.sort ?? (q.trim() ? 'relevance' : 'newest');
 	if (!(SORTS as readonly string[]).includes(sort)) throw new QueryError(`unknown sort ${JSON.stringify(sort)}`, `Use sort=${SORTS.join(', sort=')}.`);
 	const fields = opts.fields ?? 'compact';
 	if (fields !== 'compact' && fields !== 'full') throw new QueryError(`unknown fields ${JSON.stringify(fields)}`, 'Use fields=compact (default) or fields=full.');
@@ -275,7 +275,11 @@ export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 	const total = known ?? Number((await db.query<{ n: number }>(`SELECT count(*)::int AS n FROM open_index.records r WHERE ${where}`, params)).rows[0].n);
 
 	const order: Record<string, string> = { newest: 'r.published DESC NULLS LAST, r.id', oldest: 'r.published ASC NULLS LAST, r.id',
-		title: 'lower(r.title), r.id', score: '(r.score + r.upvoting) DESC, r.published DESC NULLS LAST, r.id' }; // records_top
+		title: 'lower(r.title), r.id', score: '(r.score + r.upvoting) DESC, r.published DESC NULLS LAST, r.id', // records_top
+		// The newest response first: a link's own date, or the day it was attached when the source gives none.
+		// Only rows with links read their discussion, so the sort stays cheap on the whole index.
+		responded: `CASE WHEN r.discussed > 0 THEN (SELECT max(coalesce(nullif(d->>'date', ''), d->>'added'))
+			FROM jsonb_array_elements(r.record->'discussion') d) END DESC NULLS LAST, r.published DESC NULLS LAST, r.id` };
 	const window: Record<string, number> = { day: 1, week: 7, month: 30 };
 	let sql: string;
 	let all = [...params];

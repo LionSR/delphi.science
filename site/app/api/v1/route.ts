@@ -1,11 +1,13 @@
 // GET /api/v1: how to use the API, for agents that start here.
 import { counted } from '../../../lib/api.ts';
+import { SITE } from '../../../lib/view.ts';
 
 export const GET = counted('GET /api/v1', () =>
 	Response.json({
-		search: '/api/v1/search?q=<query>&limit=20&sort=relevance|newest|oldest|title|score|day|week|month|mentions&cursor=<next_cursor>&format=json|md',
-		sorts: 'score counts every vote and every post or article about the record that confirms, simplifies or extends it or has no stance yet (refutes, questions and reacts do not count); day, week and month count the votes cast and the posts published in that time, as on SciRate; mentions (most cited in comments) counts the people whose comments name the record by id, then the newest',
+		search: '/api/v1/search?q=<query>&limit=20&sort=relevance|newest|oldest|title|score|day|week|month|mentions|responded&cursor=<next_cursor>&format=json|md',
+		sorts: 'score counts every vote and every post or article about the record that confirms, simplifies or extends it or has no stance yet (refutes, questions and reacts do not count); day, week and month count the votes cast and the posts published in that time, as on SciRate; mentions (most cited in comments) counts the people whose comments name the record by id, then the newest; responded puts the record with the newest post or article about it first',
 		openapi: '/api/v1/openapi.json',
+		mcp: `${SITE}/mcp: the same reads as an MCP server (Streamable HTTP, read-only, no key), with tools search_records, get_record and list_discussed_records. Claude Code: claude mcp add --transport http open-research-index ${SITE}/mcp`,
 		ids: 'Every id is <prefix>/<suffix>, like a DOI: the source, then its own id. /id/<id> goes to the original.',
 		prefixes: '/api/v1/prefixes',
 		record: '/api/v1/records/<id>',

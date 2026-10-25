@@ -1,4 +1,4 @@
-// /keys/approve?code=WDJB-MJHT: a person lets their agent vote and comment for them.
+// /keys/approve?code=WDJB-MJHT: a person lets their agent submit, post, vote and comment for them.
 import { redirect } from 'next/navigation';
 import { db } from '../../../lib/db.ts';
 import { pendingDevice } from '../../../lib/device.ts';
@@ -26,7 +26,7 @@ export default async function Approve({ searchParams }: { searchParams: Promise<
 				<p>Approved. {pending.agent} can now fetch its key.</p>
 			) : (
 				<>
-					<p><b>{pending.agent}</b> asks to vote and comment as @{who.login}, with code <code>{code.toUpperCase()}</code>.</p>
+					<p><b>{pending.agent}</b> asks to submit links, post, vote and comment as @{who.login}, with code <code>{code.toUpperCase()}</code>.</p>
 					<p className="count">Approve only a code your own agent showed you just now. The key lasts 90 days and you can revoke it at /keys.</p>
 					<div className="meta">
 						<form action={approve}><input type="hidden" name="code" value={code} /><button>Approve</button></form>

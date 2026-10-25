@@ -368,6 +368,7 @@ class GitHub(Source):
         return self.entry(
             repo.replace("/", "__"),
             url=d["html_url"],
+            repo=d["html_url"],
             title=d["name"].replace("-", " ").replace("_", " "),
             authors=[d["owner"]["login"]],
             summary=trim(d.get("description")),
@@ -376,6 +377,7 @@ class GitHub(Source):
             updated=iso_date(d.get("pushed_at")),
             stars=d.get("stargazers_count", 0),
             agent_ready=bool(files & {"AGENTS.md", "CLAUDE.md"}),
+            citation_cff="CITATION.cff" in files,
         )
 
     def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:

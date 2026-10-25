@@ -6,7 +6,7 @@ import type { Db } from './query.ts';
 
 export type Item = Record<string, unknown> & { id: string; source: string; url: string; title: string };
 
-const COLUMNS = ['id', 'source', 'url', 'title', 'authors', 'abstract', 'tags', 'subject', 'division', 'domain', 'published',
+export const COLUMNS = ['id', 'source', 'url', 'title', 'authors', 'abstract', 'tags', 'subject', 'division', 'domain', 'published',
 	'category', 'origin', 'family', 'agent_ready', 'formalized', 'verified', 'withdrawn', 'gone', 'record', 'content_hash'];
 
 async function sha256(text: string): Promise<string> {

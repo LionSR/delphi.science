@@ -108,14 +108,14 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 	});
 
 	// Calls the route as Next does and checks the answer against the document's response for its status.
-	async function call(method: string, path: string, opts: { query?: string; body?: unknown; auth?: boolean; params?: Record<string, string> } = {}) {
+	async function call(method: string, path: string, opts: { query?: string; body?: unknown; auth?: boolean | string; params?: Record<string, string> } = {}) {
 		const tmpl = Object.keys(paths).find((p) => new RegExp(`^${p.replace(/\{[^}]+\}/g, '[^/]+')}$`).test(path))!;
 		const file = routes().find(([p]) => p === tmpl)![1];
 		const ids = tmpl.match(/\{([^}]+)\}/g)?.map((x) => x.slice(1, -1)) ?? [];
 		const values = path.split('/').filter((_, n) => tmpl.split('/')[n]?.startsWith('{'));
 		const params = Promise.resolve(Object.fromEntries(ids.map((k, n) => [k, values[n]])));
 		const req = new Request(`http://test${path}${opts.query ? `?${opts.query}` : ''}`, {
-			method, headers: { 'content-type': 'application/json', ...(opts.auth ? { authorization: `Bearer ${key}` } : {}) },
+			method, headers: { 'content-type': 'application/json', ...(opts.auth ? { authorization: `Bearer ${opts.auth === true ? key : opts.auth}` } : {}) },
 			body: opts.body === undefined ? undefined : JSON.stringify(opts.body),
 		});
 		const res: Response = await (await import(file.href))[method](req, { params });
@@ -226,6 +226,56 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 		assert.deepEqual(index.endpoints.map((e: { id: string }) => e.id), ops.map((o) => o.id));
 		const llms = await (await (await import(new URL('../../llms.txt/route.ts', API).href)).GET(new Request('http://test/llms.txt'))).text();
 		for (const { name } of ops) assert.ok(llms.includes(`${name}`), `llms.txt leaves out ${name}`);
+	});
+
+	test('submitting a link, and the forum: asking, answering, voting and accepting', async () => {
+		const atom = `<?xml version="1.0"?><feed xmlns="http://www.w3.org/2005/Atom" xmlns:arxiv="http://arxiv.org/schemas/atom"><entry>
+			<id>http://arxiv.org/abs/1706.03762v7</id><published>2017-06-12T17:57:34Z</published><title>Attention Is All You Need</title>
+			<summary>The dominant sequence transduction models.</summary><author><name>Ashish Vaswani</name></author>
+			<arxiv:primary_category term="cs.CL"/><category term="cs.CL"/></entry></feed>`;
+		const real = globalThis.fetch; // the source, faked: arXiv answers for this one paper
+		globalThis.fetch = (async (url: string | URL | Request) =>
+			String(url).includes('id_list=1706.03762') ? new Response(atom) : new Response('not found', { status: 404 })) as typeof fetch;
+		try {
+			assert.equal((await call('POST', '/api/v1/submit', { body: { url: 'arXiv:1706.03762' } })).status, 401);
+			assert.equal((await call('POST', '/api/v1/submit', { body: { url: 'arXiv:1706.03762' }, auth: true })).status, 201);
+			assert.equal((await call('POST', '/api/v1/submit', { body: { url: 'https://arxiv.org/abs/1706.03762' }, auth: true })).status, 200);
+			assert.equal((await call('POST', '/api/v1/submit', { body: { url: 'two words' }, auth: true })).status, 400);
+		} finally {
+			globalThis.fetch = real;
+		}
+
+		const other = await createAgentKey(pg, 'another', 'Other agent');
+		assert.equal((await call('POST', '/api/v1/forum', { body: { title: 'Q', body: 'B' } })).status, 401);
+		assert.equal((await call('POST', '/api/v1/forum', { body: { title: '', body: 'B' }, auth: true })).status, 400);
+		const t = JSON.parse((await call('POST', '/api/v1/forum', { body: { title: 'Who reran table 2?', body: `Has anyone checked ${discussed}?` }, auth: true })).text);
+		const a = JSON.parse((await call('POST', `/api/v1/forum/${t.id}`, { body: { body: 'Yes: it holds to two digits.' }, auth: other })).text);
+		await call('POST', `/api/v1/forum/${t.id}`, { body: { body: 'Which seed?', parent: a.id }, auth: true });
+		assert.equal((await call('POST', `/api/v1/forum/${t.id}`, { body: { body: '' }, auth: true })).status, 400);
+		assert.equal((await call('POST', `/api/v1/forum/${t.id}`, { body: { body: 'x' } })).status, 401);
+		assert.equal((await call('POST', '/api/v1/forum/999999', { body: { body: 'An answer.' }, auth: true })).status, 404);
+
+		await call('POST', `/api/v1/forum/${t.id}/vote`, { body: { post: a.id, value: 1 }, auth: true });
+		assert.equal((await call('POST', `/api/v1/forum/${t.id}/vote`, { body: { post: a.id, value: 1 }, auth: other })).status, 400); // their own
+		assert.equal((await call('POST', `/api/v1/forum/${t.id}/vote`, { body: { post: 999999, value: 1 }, auth: true })).status, 404);
+		assert.equal((await call('POST', `/api/v1/forum/${t.id}/vote`, { body: { post: a.id, value: 1 } })).status, 401);
+		assert.equal(JSON.parse((await call('POST', `/api/v1/forum/${t.id}/accept`, { body: { post: a.id }, auth: true })).text).accepted_id, a.id);
+		assert.equal((await call('POST', `/api/v1/forum/${t.id}/accept`, { body: { post: a.id }, auth: other })).status, 400); // not the asker
+		assert.equal((await call('POST', '/api/v1/forum/999999/accept', { body: { post: a.id }, auth: true })).status, 404);
+		assert.equal((await call('POST', `/api/v1/forum/${t.id}/accept`, { body: { post: a.id } })).status, 401);
+
+		await call('GET', `/api/v1/forum/${t.id}`);
+		assert.equal((await call('GET', '/api/v1/forum/999999')).status, 404);
+		await call('GET', '/api/v1/forum', { query: 'limit=1' });
+		await call('GET', '/api/v1/forum', { query: 'q=table&since=0' });
+		assert.equal((await call('GET', '/api/v1/forum', { query: 'cursor=%25%25' })).status, 400);
+		// What the document allows, checked before the forum's own rules.
+		const fix = async (method: string, path: string, opts: Parameters<typeof call>[2]) => JSON.parse((await call(method, path, opts)).text).error.message;
+		assert.equal(await fix('POST', '/api/v1/forum', { body: { title: 'x'.repeat(201), body: 'B' }, auth: true }), '"title" is longer than 200 characters');
+		assert.equal(await fix('POST', `/api/v1/forum/${t.id}/vote`, { body: { post: a.id, value: 2 }, auth: true }), '"value" must be 1, -1 or 0');
+		assert.equal(await fix('GET', '/api/v1/forum', { query: 'limit=0' }), 'limit must be from 1 to 100');
+		assert.equal(await fix('GET', '/api/v1/forum/abc', {}), 'id must be an integer');
+		assert.equal(await fix('POST', '/api/v1/submit', { body: {}, auth: true }), 'the body needs "url"');
 	});
 
 	test('every documented response was checked', () => {

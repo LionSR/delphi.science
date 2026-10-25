@@ -286,7 +286,7 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		}
 
 		const total = async (q: string) => (await search(db, q, { limit: 1 })).total; // earlier tests link posts to some records
-		const found = (await call('search_records', { query: 'is:discussed', sort: 'score', limit: 2 })).structuredContent;
+		const found = (await call('search_records', { q: 'is:discussed', sort: 'score', limit: 2 })).structuredContent;
 		assert.equal(found.total, await total('is:discussed'));
 		assert.ok(found.results.every((r: Record<string, unknown>) => r.page && !r.links && r.discussed));
 		assert.ok(!('took_ms' in found));
@@ -303,7 +303,7 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		assert.equal((await call('list_discussed_records', { query: 'source:openai-math', limit: 1 })).structuredContent.total,
 			await total('is:discussed source:openai-math'));
 
-		for (const [name, args, text] of [['get_record', { id: 'nope/x' }, /no record/], ['search_records', { query: 'foo:bar' }, /Use one of/],
+		for (const [name, args, text] of [['get_record', { id: 'nope/x' }, /no record/], ['search_records', { q: 'foo:bar' }, /Use one of/],
 			['list_discussed_records', { query: 'a) OR (b' }, /Balance/], ['search_records', { limit: 0 }, /limit/]] as const) {
 			const r = await call(name, args);
 			assert.ok(r.isError && text.test(r.content[0].text), name);

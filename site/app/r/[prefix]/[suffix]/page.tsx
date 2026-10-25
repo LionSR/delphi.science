@@ -7,7 +7,7 @@ import { comments } from '../../../../lib/comments.ts';
 import { db } from '../../../../lib/db.ts';
 import { get } from '../../../../lib/query.ts';
 import { me } from '../../../../lib/session.ts';
-import { date, idPath, recordId, recordPath, SITE, source, tally, tex, type IdParams } from '../../../../lib/view.ts';
+import { date, idPath, reception, recordId, recordPath, SITE, source, tally, tex, type IdParams } from '../../../../lib/view.ts';
 import { myVotes, votes } from '../../../../lib/votes.ts';
 import { commentOn } from '../../../actions.ts';
 import { Vote } from '../../../vote.tsx';
@@ -35,7 +35,8 @@ export async function generateMetadata(ctx: IdParams): Promise<Metadata> {
 	if (r.published) cite.citation_publication_date = String(r.published).replaceAll('-', '/');
 	if (r.pdf) cite.citation_pdf_url = String(r.pdf);
 	return {
-		title: String(r.title), description: String(r.summary ?? '').slice(0, 300) || undefined,
+		// Where the work stands, when a person reviewed it, says more about a discussed record than its abstract.
+		title: String(r.title), description: reception(r)?.text ?? (String(r.summary ?? '').slice(0, 300) || undefined),
 		alternates: { canonical: recordPath(id), types: { 'application/json': `/api/v1/records/${idPath(id)}` } },
 		other: cite,
 	};
@@ -56,6 +57,12 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	const links = (Array.isArray(r.discussion) ? r.discussion : []) as { kind: string; url: string; author?: string; handle?: string; site?: string; title?: string; text?: string; date?: string; record?: string; stance?: string }[];
 	// Records whose discussion names this one (a response to a manuscript, say): the reverse of the above, set at build time.
 	const discusses = (Array.isArray(r.discusses) ? r.discusses : []) as { id: string; title: string }[];
+	const stands = reception(r);
+	// A link the reception rests on, named as its author or site.
+	const cite = (url: string) => {
+		const l = links.find((x) => x.url === url);
+		return l?.author || l?.site || url.replace(/^https?:\/\/(www\.)?/, '').split('/')[0];
+	};
 	const api = `/api/v1/records/${idPath(id)}`;
 	const ld = {
 		'@context': 'https://schema.org', '@type': 'ScholarlyArticle', identifier: id, name: r.title, url: `${SITE}${recordPath(id)}`,
@@ -78,6 +85,16 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 				<span>{tally(r)}</span>
 				{reactions.filter(([k]) => k !== 'up' && k !== 'down').map(([k, n]) => <span key={k}>{k} {n}</span>)}
 			</p>
+			{stands && (
+				<section className="reception" aria-label="Where it stands">
+					<p>{stands.text}</p>
+					<p className="meta">
+						<span>{date(stands.written)}</span>
+						{stands.reviewed_by ? <span>reviewed by <a href={`https://github.com/${stands.reviewed_by}`}>@{stands.reviewed_by}</a></span> : null}
+						{(stands.links ?? []).map((u) => <a key={u} href={u}>{cite(u)}</a>)}
+					</p>
+				</section>
+			)}
 			<Vote id={id} reactions={r.reactions} mine={mine?.value} back={back} />
 			{voters.length > 0 && (
 				<ul className="voters">

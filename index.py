@@ -12,6 +12,7 @@ copied: they are read from registry/entries/ at build time and shown with the AP
     python index.py discuss <record id> <url>... [--stance STANCE] [--drop] [--dry-run]
     python index.py discuss --recheck [<record id>...] [--dry-run]   # daily: deleted posts drop out
     python index.py discuss --propose-stances [<record id>...] [--labeler claude|canned:<file.json>]
+    python index.py reception [<record id>] [--draft [--labeler ...] | --text TEXT] [--reviewed-by LOGIN] [--links URL...]
     python index.py build            # writes dist/: index.json, index.db, llms.txt
 """
 
@@ -20,6 +21,7 @@ from __future__ import annotations
 import argparse
 import itertools
 import datetime as dt
+import hashlib
 import json
 import re
 import shlex
@@ -439,6 +441,117 @@ def discuss(record: str, urls: list[str], drop: bool, dry_run: bool, stance: str
     return 0
 
 
+# ---- reception ----
+
+# A record with responses opens with one or two sentences saying where the work stands, resting on some of its
+# links. The labelling agent may draft it (reception-prompt.md); only a person's review publishes it, and it
+# stops being published as soon as the links it was written against change (one added, dropped or relabelled).
+RECEPTION_CHARS = 400
+LOGIN = re.compile(r"^[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?$")  # a GitHub login
+
+
+def basis(links: list[dict[str, Any]]) -> str:
+    """A short hash of the record's links and their stances, as they were when the reception was written."""
+    pairs = sorted([d["url"], d.get("stance") or ""] for d in links)
+    return hashlib.sha1(json.dumps(pairs).encode()).hexdigest()[:12]
+
+
+def reception_state(e: dict[str, Any]) -> str | None:
+    """published, draft (not reviewed yet), stale (the links changed after it was written), or None."""
+    r = e.get("reception")
+    if not r:
+        return None
+    if r.get("basis") != basis(e.get("discussion") or []):
+        return "stale"
+    return "published" if r.get("reviewed_by") and r.get("text") else "draft"
+
+
+def published_reception(e: dict[str, Any]) -> dict[str, Any] | None:
+    r = e.get("reception") or {}
+    return {k: r[k] for k in ("text", "written", "links", "reviewed_by") if k in r} if reception_state(e) == "published" else None
+
+
+def draft_reception(e: dict[str, Any], labeler: str) -> dict[str, Any]:
+    """The labelling agent's draft, from the links a person labelled. canned:<file.json> reads {record id: {text, links}}."""
+    labelled = [d for d in e.get("discussion") or [] if d.get("stance")]
+    if not labelled:
+        raise ValueError("no labelled links: label them first (discuss --stance, or --propose-stances)")
+    if labeler.startswith("canned:"):
+        reply = json.loads(Path(labeler.split(":", 1)[1]).read_text()).get(rid(e)) or {}
+    else:
+        data = {"id": rid(e), "title": e["title"], "summary": e.get("summary", ""), "withdrawn": e.get("withdrawn_on") or bool(e.get("withdrawn")),
+                "responses": [{k: d[k] for k in ("url", "kind", "author", "site", "date", "stance", "title", "text") if k in d} for d in labelled]}
+        reply = ask_claude("reception-prompt.md", "RECORD", data, reply=r"\{.*\}")
+    if not isinstance(reply, dict):
+        raise ValueError("the labeler did not reply with an object")
+    text = S.clean(str(reply.get("text", "")))
+    if not text:
+        raise ValueError("the labeler gave no text")
+    urls = {d["url"] for d in labelled}
+    return {"text": text[:RECEPTION_CHARS], "links": [u for u in reply.get("links", []) if u in urls] or sorted(urls),
+            "drafted_by": labeler if labeler.startswith("canned:") else "claude-haiku"}
+
+
+def reception(record: str | None, draft: bool, text: str | None, reviewed_by: str | None, links: list[str] | None,
+              labeler: str, dry_run: bool) -> int:
+    """Draft, write or review a record's reception; with no record, list every reception and its state."""
+    if not record:
+        rows = [(rid(e), reception_state(e), e["reception"]) for _, e in load() if e.get("reception")]
+        for i, state, r in rows:
+            print(f"{state:<9} {i}  {r.get('text', '')[:80]}  {'@' + r['reviewed_by'] if r.get('reviewed_by') else ''}")
+        print(f"{len(rows)} receptions: {sum(s == 'published' for _, s, _ in rows)} published")
+        return 0
+    source, _, key = record.partition("/")
+    path = path_for(source, key)
+    if not path.exists():
+        print(f"no entry {record}")
+        return 2
+    e = json.loads(path.read_text())
+    attached = e.get("discussion") or []
+    old = e.get("reception") or {}
+    if reviewed_by and not LOGIN.match(reviewed_by):
+        print(f"not a GitHub login: {reviewed_by}")
+        return 2
+    if draft and (reviewed_by or text):
+        print("a draft is reviewed after it is read: run --draft first, then --reviewed-by (or --text) on its own")
+        return 2
+    if not (draft or text or reviewed_by):
+        print(json.dumps(old, indent=2, ensure_ascii=False) if old else f"{record} has no reception")
+        print(f"state: {reception_state(e)}")
+        return 0
+    if not attached:
+        print(f"{record} has no links to rest a reception on (discuss attaches them)")
+        return 2
+    try:
+        if draft:
+            new = draft_reception(e, labeler)
+        elif text is not None:
+            new = {"text": S.clean(text), "links": old.get("links") or [d["url"] for d in attached]}
+        else:
+            new = {k: old[k] for k in ("text", "links", "drafted_by") if k in old}
+            if not new.get("text"):
+                raise ValueError("nothing to review: draft it (--draft) or write it (--text) first")
+    except (ValueError, RuntimeError, json.JSONDecodeError, subprocess.TimeoutExpired) as err:
+        print(f"no reception written: {err}")
+        return 2
+    urls = {d["url"] for d in attached}
+    if links:
+        new["links"] = [u.strip() if u.strip() in urls else link_url(u) for u in links]
+    if missing := [u for u in new["links"] if u not in urls]:
+        print(f"not among {record}'s links: {', '.join(missing)}")
+        return 2
+    if len(new["text"]) > RECEPTION_CHARS:
+        print(f"the text has {len(new['text'])} characters; keep it to one or two sentences, under {RECEPTION_CHARS}")
+        return 2
+    # Written against the links as they are now; a person's review (draft or their own text) publishes it.
+    e["reception"] = _drop_empty({**new, "written": S.today(), "reviewed_by": None if draft else reviewed_by, "basis": basis(attached)})
+    print(json.dumps(e["reception"], indent=2, ensure_ascii=False))
+    print(f"state: {reception_state(e)}" + ("" if reviewed_by else f"; a person publishes it with: python3 index.py reception {record} --reviewed-by <login>"))
+    if not dry_run:
+        save(path, e)
+    return 0
+
+
 # ---- build ----
 
 
@@ -474,7 +587,7 @@ def to_item(e: dict[str, Any]) -> dict[str, Any] | None:
     subject = TX.subject_of(e.get("domain"), r.get("subject"))
     return _drop_empty({
         "id": rid(e), **{k: e.get(k) for k in PASSTHROUGH}, "discussion": [served_link(d) for d in e.get("discussion") or []],
-        "disputed": disputed(e.get("discussion") or []) or None,
+        "disputed": disputed(e.get("discussion") or []) or None, "reception": published_reception(e),
         "tags": list(dict.fromkeys([*(e.get("tags") or []), *(r.get("tags") or [])]))[:10],
         "published": e.get("published") or e.get("added"), "category": r.get("category", "research"),
         "subject": subject, "division": TX.division_of(subject) if subject else None,
@@ -538,6 +651,9 @@ def build() -> int:
     dates = {rid(e): (e.get("added", ""), e.get("refreshed", "")) for e in entries}
     query.build_db(DIST / "index.db", all_items, dates, {"generated": index["generated"], "labels": names})
     print(f"built dist/: {len(all_items)} items " + ", ".join(f"{names.get(k, k)} {v}" for k, v in counts.most_common()))
+    if stale := [rid(e) for e in entries if reception_state(e) == "stale"]:
+        print(f"{len(stale)} receptions not published, their links changed after they were written: {', '.join(stale)}."
+              " Review each again: python3 index.py reception <id> --reviewed-by <login> (or --text, or --draft)", file=sys.stderr)
     return 0
 
 
@@ -556,6 +672,7 @@ def llms_txt(index: dict[str, Any]) -> str:
         "Vote or comment: POST /api/v1/records/<id>/vote or /comments, with an agent key or a GitHub token.",
         "What researchers said about a record: its discussion[] (X posts with url, author and date; articles also with a quote as text); is:discussed finds records that have any.",
         "Each response may carry a stance, set by a person: refutes, questions, confirms, simplifies, extends or reacts. is:disputed finds records with a response that refutes or questions them.",
+        "A record's reception, when present, says in a sentence or two where the work stands (text, written, the links it rests on, reviewed_by); a person reviewed it.",
         "Whole index: index.db (SQLite) or index.json.",
         "",
         "Query examples:",
@@ -591,6 +708,10 @@ def main(argv: Iterable[str] | None = None) -> int:
     d.add_argument("--stance", choices=[*STANCES, "none"], help="what the links say about the record (see STANCES); set on links already attached without reading them again")
     d.add_argument("--propose-stances", action="store_true", help="the labelling agent proposes stances for unlabelled links (or the named records'); prints them as commands, writes nothing")
     d.add_argument("--labeler", default="claude", help="for --propose-stances: claude, or canned:<file.json>")
+    rc = sub.add_parser("reception"); rc.add_argument("record", nargs="?"); rc.add_argument("--draft", action="store_true"); rc.add_argument("--text")
+    rc.add_argument("--reviewed-by", help="the GitHub login of the person who checked the text against its links; publishes it")
+    rc.add_argument("--links", nargs="+", help="the links the text rests on (default: all of the record's)"); rc.add_argument("--labeler", default="claude")
+    rc.add_argument("--dry-run", action="store_true")
     sub.add_parser("build")
     args = ap.parse_args(list(argv) if argv is not None else None)
     S.TOKEN = github_token()
@@ -611,6 +732,8 @@ def main(argv: Iterable[str] | None = None) -> int:
         if not args.record:
             ap.error("discuss needs a record id, or --recheck or --propose-stances")
         return discuss(args.record, args.urls, args.drop, args.dry_run, args.stance)
+    if args.cmd == "reception":
+        return reception(args.record, args.draft, args.text, args.reviewed_by, args.links, args.labeler, args.dry_run)
     return build()
 
 

@@ -30,6 +30,8 @@ the paper.
   Each comes with its author and its date; an article or paper also with a quote read from the source,
   never paraphrased. An X post is linked, not quoted, and drops out within a day once it is deleted.
   A person labels each response's stance: refutes, questions, confirms, simplifies, extends or reacts.
+- Says where the work stands. A discussed record may open with reception: a sentence or two such as
+  "withdrawn after a sign error", with its date, the links it rests on, and the person who reviewed it.
 - Links both ways. A response that is itself a record points back to what it discusses.
 - Covers the AI-made work in full (OpenAI's math release, agenticpapers.app, Lean formalization
   registries) and this year's arXiv in math, quant-ph and hep-th, so human work sits beside it.

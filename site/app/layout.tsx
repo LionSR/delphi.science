@@ -30,7 +30,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
 							<a href="/api/v1">API</a>
 							{who ? (
 								<form action={signOut}>
-									<span title={`@${who.login}`}>{who.name}</span> <a href="/keys">Connect an agent</a> <button className="link">Sign out</button>
+									<a href="/keys">@{who.login}</a> <button className="link">Sign out</button>
 								</form>
 							) : <a href="/auth/github">Sign in with GitHub</a>}
 						</nav>

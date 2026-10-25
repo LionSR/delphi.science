@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import { me } from '../lib/session.ts';
 import { SITE } from '../lib/view.ts';
 import { signOut } from './actions.ts';
+import { PageViews } from './analytics.tsx';
 import './globals.css';
 
 export const metadata = {
@@ -36,7 +37,13 @@ export default async function Layout({ children }: { children: ReactNode }) {
 						</nav>
 					</header>
 					{children}
+					<footer>
+						<a href="/stats">Use</a>
+						<a href="/api/v1">API</a>
+						<a href="/llms.txt">llms.txt</a>
+					</footer>
 				</main>
+				<PageViews />
 				<Script id="mathjax-config" strategy="beforeInteractive">{MATHJAX}</Script>
 				<Script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js" strategy="afterInteractive" />
 			</body>

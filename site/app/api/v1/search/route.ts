@@ -1,11 +1,11 @@
 // GET /api/v1/search?q=…: arXiv-style search. JSON by default; format=md for a short list to paste into context.
-import { handle } from '../../../../lib/api.ts';
+import { counted, handle } from '../../../../lib/api.ts';
 import { db } from '../../../../lib/db.ts';
 import { search } from '../../../../lib/query.ts';
 
 const CACHE = { 'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=300' };
 
-export const GET = (req: Request) =>
+export const GET = counted('GET /api/v1/search', (req: Request) =>
 	handle(async () => {
 		const p = new URL(req.url).searchParams;
 		const res = await search(await db(), p.get('q') ?? '', {
@@ -20,4 +20,4 @@ export const GET = (req: Request) =>
 		return new Response(`${res.total} results for \`${res.query}\`\n\n${lines.join('\n')}\n${more}`, {
 			headers: { ...CACHE, 'Content-Type': 'text/markdown; charset=utf-8' },
 		});
-	});
+	}));

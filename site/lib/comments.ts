@@ -20,7 +20,7 @@ export type Place = { record: string } | { topic: number };
 export const comment = (db: Db, recordId: string, voter: Voter, c: { body: string; review?: boolean; parent?: number }, moderate?: Moderator) =>
 	post(db, { record: recordId }, voter, c, moderate);
 
-export async function post(db: Db, place: Place, voter: Voter, c: { body: string; review?: boolean; parent?: number }, moderate: Moderator = moderator()) {
+export async function post(db: Db, place: Place, voter: Voter, c: { body: string; review?: boolean; parent?: number }, moderate?: Moderator) {
 	const body = (c.body ?? '').trim();
 	if (!body) throw new QueryError('the comment is empty', 'Send "body" with the text.');
 	if (body.length > 4000) throw new QueryError('the comment is longer than 4,000 characters', 'Shorten it, or post a reply.');
@@ -41,7 +41,7 @@ export async function post(db: Db, place: Place, voter: Voter, c: { body: string
 	const used = (await db.query<{ n: number }>(
 		`SELECT count(*)::int AS n FROM open_index.moderations WHERE voter = $1 AND at > now() - interval '1 day'`, [voter.login])).rows[0].n;
 	if (used >= MAX_POSTS_PER_DAY) throw new QueryError(`@${voter.login} has posted ${MAX_POSTS_PER_DAY} times today, agents included`, 'Try again tomorrow.');
-	const v = await verdict(moderate, { kind, on: 'record' in place ? `the record ${place.record}` : 'a forum question', title: where.title, body });
+	const v = await verdict(moderate ?? await moderator(db), { kind, on: 'record' in place ? `the record ${place.record}` : 'a forum question', title: where.title, body });
 	await db.query('INSERT INTO open_index.moderations (voter, agent, kind, publish, reason) VALUES ($1, $2, $3, $4, $5)',
 		[voter.login, voter.agent, kind, v.publish, v.reason.slice(0, 500)]);
 	if (!v.publish) throw refused(v);

@@ -298,6 +298,71 @@ class Stance(unittest.TestCase):
         db.close()
 
 
+class Reception(unittest.TestCase):
+    """Where the work stands: drafted by the agent from labelled links, published only once a person reviews it,
+    and no longer published once the links change."""
+
+    LINKS = [{"kind": "web", "url": "https://e.org/sign-error", "author": "Lekili", "stance": "refutes", "text": "a sign error"},
+             {"kind": "x", "url": "https://x.com/a/status/1", "author": "A"}]
+
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory()
+        self.saved = index.ENTRIES, S.discussion_link
+        index.ENTRIES = Path(self.tmp.name)
+        S.discussion_link = lambda url: {"kind": "web", "url": url, "title": "new"}
+        index.save(index.path_for("web", "k"), {"key": "k", "source": "web", "url": "https://e.org/k", "title": "K", "discussion": self.LINKS})
+        self.canned = Path(self.tmp.name) / "drafts.json"
+        self.canned.write_text(json.dumps({"web/k": {"text": "Withdrawn on 7 October after a sign error found by Lekili.",
+                                                     "links": ["https://e.org/sign-error", "https://not.attached/x"]}}))
+
+    def tearDown(self) -> None:
+        index.ENTRIES, S.discussion_link = self.saved
+        self.tmp.cleanup()
+
+    def run_cmd(self, *argv: str) -> int:
+        with contextlib.redirect_stdout(io.StringIO()):
+            return index.main(["reception", "web/k", *argv])
+
+    def entry(self) -> dict:
+        return json.loads(index.path_for("web", "k").read_text())
+
+    def test_a_draft_is_not_published_until_a_person_reviews_it(self) -> None:
+        self.assertEqual(self.run_cmd("--draft", "--labeler", f"canned:{self.canned}"), 0)
+        e = self.entry()
+        self.assertEqual(e["reception"]["links"], ["https://e.org/sign-error"])  # only links the record has
+        self.assertNotIn("reviewed_by", e["reception"])
+        self.assertEqual(index.reception_state(e), "draft")
+        self.assertNotIn("reception", index.to_item(e))
+        self.assertEqual(self.run_cmd("--reviewed-by", "LionSR"), 0)
+        e = self.entry()
+        self.assertEqual(index.to_item(e)["reception"], {"text": "Withdrawn on 7 October after a sign error found by Lekili.",
+                                                         "written": S.today(), "links": ["https://e.org/sign-error"], "reviewed_by": "LionSR"})
+
+    def test_text_by_hand_and_stale_when_the_links_change(self) -> None:
+        self.assertEqual(self.run_cmd("--text", "Refuted by Lekili.", "--reviewed-by", "LionSR", "--links", "https://e.org/sign-error"), 0)
+        self.assertEqual(index.reception_state(self.entry()), "published")
+        with contextlib.redirect_stdout(io.StringIO()):
+            index.main(["discuss", "web/k", "https://x.com/a/status/1", "--stance", "confirms"])  # relabelled
+        e = self.entry()
+        self.assertEqual(index.reception_state(e), "stale")
+        self.assertNotIn("reception", index.to_item(e))
+        self.assertEqual(self.run_cmd("--reviewed-by", "LionSR"), 0)  # reviewed again against the links as they are
+        self.assertEqual(index.reception_state(self.entry()), "published")
+        with contextlib.redirect_stdout(io.StringIO()):
+            index.main(["discuss", "web/k", "https://e.org/new-reply"])  # a link added
+        self.assertEqual(index.reception_state(self.entry()), "stale")
+
+    def test_refusals(self) -> None:
+        self.assertEqual(self.run_cmd("--reviewed-by", "LionSR"), 2)  # nothing to review yet
+        self.assertEqual(self.run_cmd("--text", "x", "--reviewed-by", "not a login"), 2)
+        self.assertEqual(self.run_cmd("--text", "x", "--links", "https://elsewhere.org/p"), 2)
+        self.assertEqual(self.run_cmd("--text", "word " * 100), 2)
+        self.assertEqual(self.run_cmd("--draft", "--reviewed-by", "LionSR", "--labeler", f"canned:{self.canned}"), 2)
+        index.save(index.path_for("web", "k"), {**self.entry(), "discussion": [{**d, "stance": None} for d in self.LINKS]})
+        self.assertEqual(self.run_cmd("--draft", "--labeler", f"canned:{self.canned}"), 2)  # no labelled links
+        self.assertNotIn("reception", self.entry())
+
+
 class Text(unittest.TestCase):
     def test_trim_keeps_words_whole(self) -> None:
         out = S.trim("word " * 300, 50)

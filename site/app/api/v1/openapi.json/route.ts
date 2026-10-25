@@ -41,7 +41,7 @@ const spec = {
 			get: {
 				operationId: 'getRecord',
 				...open,
-				summary: 'One record in full: metadata, votes, and discussion[], the expert responses to it with author, date and quote. discusses[] lists the records it responds to.',
+				summary: 'One record in full: metadata, votes, reception (where the work stands, reviewed by a person), and discussion[], the expert responses to it with author, date and quote. discusses[] lists the records it responds to.',
 				parameters: [prefix, suffix],
 				responses: { 200: { description: 'The record', content: { 'application/json': { schema: { $ref: '#/components/schemas/Record' } } } }, 404: err },
 			},
@@ -135,6 +135,10 @@ const spec = {
 				date: { type: 'string', format: 'date' }, record: { type: 'string', description: 'Set when the response is itself a record: its id.' },
 				stance: { type: 'string', enum: ['refutes', 'questions', 'confirms', 'simplifies', 'extends', 'reacts'], description: 'What the response does, set by a person: refutes (an error that breaks the main result), questions (a gap, a Lean/prose mismatch, a weaker statement than claimed, or priority), confirms (checks or formalizes it independently), simplifies (a shorter or human-readable proof), extends (builds on it), reacts (no technical claim). Absent until labelled.' },
 			} },
+			Reception: { type: 'object', description: 'Where the work stands, in a sentence or two. Set only once a person reviewed it against the links it rests on, and dropped when those links change.', properties: {
+				text: { type: 'string' }, written: { type: 'string', format: 'date' }, links: { type: 'array', items: { type: 'string' }, description: 'Urls from discussion[] the text rests on.' },
+				reviewed_by: { type: 'string', description: 'GitHub login of the person who reviewed it.' },
+			} },
 			Record: { type: 'object', required: ['id', 'title', 'url', 'source'], properties: {
 				id: { type: 'string' }, source: { type: 'string' }, title: { type: 'string' }, authors: { type: 'array', items: { type: 'string' } },
 				url: { type: 'string' }, pdf: { type: 'string' }, summary: { type: 'string' }, published: { type: 'string', format: 'date' },
@@ -143,6 +147,7 @@ const spec = {
 				score: { type: 'integer' }, reactions: { type: 'object' }, comments: { type: 'integer' }, reviews: { type: 'integer' }, mentions: { type: 'integer' },
 				discussed: { type: 'integer', description: 'How many responses discussion[] holds.' },
 				disputed: { type: 'boolean', description: 'A response refutes or questions the record.' },
+				reception: { $ref: '#/components/schemas/Reception' },
 				discussion: { type: 'array', items: { $ref: '#/components/schemas/Link' } },
 				discusses: { type: 'array', description: 'Records this one responds to.', items: { type: 'object', properties: { id: { type: 'string' }, title: { type: 'string' } } } },
 			} },

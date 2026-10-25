@@ -1,0 +1,14 @@
+{
+ "about": "What a response (record.discussion[].stance) does to the record, set by a person with index.py discuss --stance. Read by index.py, lib/view.ts (the record page and the API docs) and lib/query.ts (the popularity sorts). upvoting stances count like an upvote, and so does a link with no stance yet when unlabelled_upvotes is true; a disputing one marks the record disputed (is:disputed). supabase/migrations/20261026000000_stance.sql and stance-prompt.md cannot read this file: test_index.py checks they list the same stances.",
+ "stances": {
+  "refutes": "finds an error that breaks the main result",
+  "questions": "a gap, a Lean/prose mismatch, a weaker statement than claimed, or priority",
+  "confirms": "checks or formalizes it independently",
+  "simplifies": "a shorter or human-readable proof",
+  "extends": "builds on it",
+  "reacts": "no technical claim"
+ },
+ "upvoting": ["confirms", "simplifies", "extends"],
+ "unlabelled_upvotes": true,
+ "disputing": ["refutes", "questions"]
+}

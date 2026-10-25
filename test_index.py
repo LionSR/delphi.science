@@ -319,6 +319,31 @@ class Stance(Entries):
         db.close()
 
 
+class StanceCopies(unittest.TestCase):
+    """site/lib/stances.json is the one list of stances. The migration's generated columns and the labelling
+    prompt cannot read it, so they must name the same stances, with the same upvoting/disputing split."""
+
+    ROOT = Path(__file__).resolve().parent
+
+    def test_the_migration_counts_and_disputes_the_same_stances(self) -> None:
+        import re
+        sql = next(t for f in sorted((self.ROOT / "site" / "supabase" / "migrations").glob("*.sql"), reverse=True)
+                   if "upvoting integer generated" in (t := f.read_text()))  # the latest migration that defines them
+        column = lambda name: re.search(rf"add column {name} \w+ generated always as \((.*?)\) stored", sql, re.S).group(1)  # noqa: E731
+        named = lambda path: set(re.findall(r'@\.stance == "(\w+)"', path))  # noqa: E731
+        upvoting, disputing = column("upvoting"), column("disputed")
+        self.assertEqual(named(upvoting), index.UPVOTING)
+        self.assertEqual("!(exists(@.stance))" in upvoting, index.STANCE_FILE["unlabelled_upvotes"])
+        self.assertEqual(named(disputing), index.DISPUTING)
+        self.assertNotIn("exists(@.stance)", disputing)  # an unlabelled link disputes nothing
+        self.assertLessEqual(index.UPVOTING | index.DISPUTING, set(index.STANCES))
+
+    def test_the_labelling_prompt_offers_the_same_stances(self) -> None:
+        import re
+        prompt = (self.ROOT / "stance-prompt.md").read_text()
+        self.assertEqual(re.findall(r"^- `(\w+)`:", prompt, re.M), list(index.STANCES))
+
+
 class Reception(Entries):
     """Where the work stands: drafted by the agent from labelled links, published only once a person reviews it,
     and no longer published once the links change."""
@@ -368,6 +393,83 @@ class Reception(Entries):
         self.entry("k", [{**d, "stance": None} for d in self.LINKS])
         self.assertEqual(self.reception("--draft", "--labeler", f"canned:{self.canned}"), 2)  # no labelled links
         self.assertNotIn("reception", self.read())
+
+
+class RecordShape(unittest.TestCase):
+    """The items index.py builds are the records /api/v1 serves (the loader stores them, the API adds the live
+    counts), so every field they carry must be documented in the API's Record schema, at every depth, with its
+    type. The schema is read from site/openapi.json, the static copy of site/lib/openapi.ts (npm run openapi)."""
+
+    ROOT = Path(__file__).resolve().parent
+    SPEC = json.loads((ROOT / "site" / "openapi.json").read_text())
+    TYPES = {"string": str, "integer": int, "number": (int, float), "boolean": bool, "array": list, "object": dict, "null": type(None)}
+
+    def problems(self, value: object, schema: dict, at: str) -> list[str]:
+        """Where value does not fit schema: a field the schema does not list (objects are closed), a missing
+        required field, a wrong type or a value outside an enum. Covers the keywords the document uses."""
+        if "$ref" in schema:
+            schema = self.SPEC["components"]["schemas"][schema["$ref"].rsplit("/", 1)[1]]
+        types = schema.get("type", [])
+        types = [types] if isinstance(types, str) else types
+        if types and not any(isinstance(value, self.TYPES[t]) and not (t in ("integer", "number") and isinstance(value, bool)) for t in types):
+            return [f"{at}: {value!r} is not {' or '.join(types)}"]
+        if "enum" in schema and value not in schema["enum"]:
+            return [f"{at}: {value!r} is not one of {schema['enum']}"]
+        out = []
+        if isinstance(value, dict) and "properties" in schema:
+            props = schema["properties"]
+            out += [f"{at}.{k}: not in the schema" for k in value if k not in props]
+            out += [f"{at}.{k}: required" for k in schema.get("required", []) if k not in value]
+            out += [p for k, v in value.items() if k in props for p in self.problems(v, props[k], f"{at}.{k}")]
+        if isinstance(value, list) and "items" in schema:
+            out += [p for v in value for p in self.problems(v, schema["items"], f"{at}[]")]
+        return out
+
+    def built(self) -> list[dict]:
+        """Items from entries that use every field to_item serves: each source's fields, both kinds of link with
+        stances, a reviewed reception, and a response that is itself a record (record, discusses)."""
+        links = [{"kind": "x", "url": "https://x.com/a/status/1", "author": "A", "handle": "a", "text": "t", "date": "2026-10-08", "added": "2026-10-09", "stance": "refutes"},
+                 {"kind": "web", "url": "https://arxiv.org/abs/2610.20058", "author": "B", "site": "arXiv", "title": "Reply", "text": "a quote",
+                  "date": "2026-10-08", "added": "2026-10-09", "stance": "questions"}]
+        paper = {"key": "P", "source": "openai-math", "url": "https://github.com/openai/math/P", "title": "P", "authors": ["C"],
+                 "summary": "s", "domain": "Number theory", "origin": "ai-generated", "gone": True, "stars": 3, "pdf": "https://e.org/p.pdf",
+                 "family": "017", "family_title": "F", "formalized": True, "withdrawn": True, "withdrawn_on": "2026-10-07", "verified": True,
+                 "trust": "high", "ai_models": ["model"], "formalizes": [{"id": "arxiv/2610.20058"}], "formalizations": ["lean/o__r"],
+                 "authorship": "human", "human_understanding": "all", "repo": "https://github.com/o/r", "json": "https://e.org/p.json",
+                 "tags": ["t"], "published": "2026-10-01", "review": {"category": "research", "subject": "math.NT", "tags": ["u"]},
+                 "discussion": links, "reception": {"text": "Refuted.", "written": "2026-10-09", "links": [links[0]["url"]],
+                                                    "reviewed_by": "LionSR", "basis": index.basis(links)}}
+        reply = {"key": "2610.20058", "source": "arxiv", "url": "https://arxiv.org/abs/2610.20058", "title": "Reply", "added": "2026-10-08"}
+        app = index.app_entry({"id": "APP-260923-0000", "repo_url": "https://github.com/o/app", "versions": [
+            {"title": "A", "authors": [{"name": "D"}], "paper_summary": "s", "tags": ["physics"], "domain": "hep-th", "listed_at": "2026-09-23"}]})
+        self.assertEqual(set(index.PASSTHROUGH) - set(paper) - set(app), set(), "a served field this fixture leaves out")
+        items = [index.to_item(e) for e in (paper, reply, app)]
+        index.crosslink(items)
+        self.assertEqual((items[0]["reception"]["reviewed_by"], items[0]["discussion"][1]["record"], items[1]["discusses"][0]["id"]),
+                         ("LionSR", "arxiv/2610.20058", "openai-math/P"))  # the fixture reaches every part
+        return items
+
+    def check(self, items: list[dict]) -> None:
+        record = {"$ref": "#/components/schemas/Record"}
+        found = [p for it in items for p in self.problems(it, record, it.get("id", "?"))]
+        self.assertFalse(found, "index.py serves records that do not fit the API's Record schema (fix site/lib/openapi.ts, then run "
+                                "npm run openapi in site/):\n" + "\n".join(found[:20]))
+
+    def test_built_items_fit_the_record_schema(self) -> None:
+        self.check(self.built())
+
+    def test_the_whole_build_fits_the_record_schema(self) -> None:
+        built = self.ROOT / "dist" / "index.json"
+        if not built.exists():
+            self.skipTest("no dist/index.json: python3 index.py build")
+        self.check(json.loads(built.read_text())["items"])
+
+    def test_an_undocumented_field_is_caught(self) -> None:
+        item = {**self.built()[0], "secret": 1, "stars": "3"}
+        item["discussion"] = [{**item["discussion"][0], "stance": "likes"}]
+        self.assertEqual(sorted(self.problems(item, {"$ref": "#/components/schemas/Record"}, "r")),
+                         ["r.discussion[].stance: 'likes' is not one of ['refutes', 'questions', 'confirms', 'simplifies', 'extends', 'reacts']",
+                          "r.secret: not in the schema", "r.stars: '3' is not integer"])
 
 
 class Text(unittest.TestCase):

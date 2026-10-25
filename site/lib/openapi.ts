@@ -243,3 +243,40 @@ export const operations: readonly Operation[] = Object.entries(spec.paths as unk
 		operationId: op.operationId, method: method.toUpperCase(), path, summary: op.summary, parameters: op.parameters ?? [],
 		body: op.requestBody?.content['application/json'].schema, secured: Boolean(op.security?.length),
 	})));
+
+// The values a schema allows, as the docs write them: 1..100, compact|full, text (at most 500 characters).
+function shape(s: Schema): string {
+	if (s.enum) return s.enum.join('|');
+	const kind = (t: string) => t === 'string' ? 'text' : t === 'boolean' ? 'true|false'
+		: t === 'integer' && s.minimum !== undefined && s.maximum !== undefined ? `${s.minimum}..${s.maximum}` : t;
+	const length = s.maxLength === undefined ? '' : s.minLength ? ` (${s.minLength}-${s.maxLength} characters)` : ` (at most ${s.maxLength} characters)`;
+	return [s.type ?? 'any'].flat().map(kind).join('|') + length;
+}
+
+/** The operation as one line: GET /api/v1/search?q=<text>&sort=relevance|newest|… */
+export function call(op: Operation): string {
+	const query = op.parameters.filter((p) => p.in === 'query').map((p) => `${p.name}=${p.schema.enum ? shape(p.schema) : `<${shape(p.schema)}>`}`);
+	return `${op.method} ${op.path}${query.length ? `?${query.join('&')}` : ''}`;
+}
+
+/** Its JSON body as one line: {"body": text (1-4000 characters, required), "review": true|false, …}. */
+export function bodyShape(op: Operation): string | undefined {
+	if (!op.body?.properties) return undefined;
+	const required = new Set(op.body.required ?? []);
+	const fields = Object.entries(op.body.properties).map(([k, s]) => `"${k}": ${shape(s)}${required.has(k) ? ', required' : ''}`);
+	return `{${fields.join('; ')}}${op.body.description ? ` ${op.body.description}` : ''}`;
+}
+
+/** A link that runs a GET operation on its parameters' examples; undefined for writes, or a path parameter with no example. */
+export function exampleUrl(op: Operation): string | undefined {
+	if (op.method !== 'GET') return undefined;
+	const enc = (v: unknown) => encodeURIComponent(String(v)).replaceAll('%3A', ':');
+	let path = op.path;
+	for (const p of op.parameters.filter((p) => p.in === 'path')) {
+		if (p.example === undefined) return undefined;
+		path = path.replace(`{${p.name}}`, enc(p.example));
+	}
+	const query = op.parameters.filter((p) => p.in === 'query' && p.example !== undefined).map((p) => `${p.name}=${enc(p.example)}`);
+	return `${SITE}${path}${query.length ? `?${query.join('&')}` : ''}`;
+}
+

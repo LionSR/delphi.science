@@ -126,6 +126,17 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		await db.query("UPDATE open_index.records SET record = jsonb_set(record, '{discussion}', $2::jsonb) WHERE id = $1", [b, links([today])]);
 		const top = async (sort: string) => (await search(db, `source:palomar AND (id:${JSON.stringify(a)} OR id:${JSON.stringify(b)})`, { sort, limit: 1 })).results[0].id;
 		assert.deepEqual([await top('week'), await top('month'), await top('score')], [b, a, a]); // both were linked today
+		assert.equal(await top('responded'), b);
+	});
+
+	test('responded: the record with the newest response first, then the ones without', async () => {
+		const latest = (it: Item) => Math.max(...(it.discussion as { date?: string; added: string }[]).map((d) => Date.parse(d.date || d.added)));
+		const discussed = items.filter((it) => it.source === 'openai-math' && Array.isArray(it.discussion) && it.discussion.length);
+		const r = await search(db, 'source:openai-math', { sort: 'responded', limit: 20 });
+		const byId = new Map(items.map((it) => [it.id, it]));
+		assert.deepEqual(r.results.map((x) => latest(byId.get(String(x.id))!)), discussed.map(latest).sort((x, y) => y - x).slice(0, 20));
+		const after = await search(db, 'source:openai-math', { sort: 'responded', limit: 1, cursor: btoa(JSON.stringify({ o: discussed.length, t: r.total })) });
+		assert.ok(!after.results[0].discussed);
 	});
 
 	test('comments and reviews; mentions count once per voter, never for the record itself', async () => {

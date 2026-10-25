@@ -11,7 +11,7 @@ export const GET = (req: Request) =>
 		const res = await search(await db(), p.get('q') ?? '', {
 			limit: Number(p.get('limit') ?? 20) || 20,
 			cursor: p.get('cursor'),
-			sort: p.get('sort') ?? (p.get('q') ? 'relevance' : 'newest'),
+			sort: p.get('sort') ?? undefined, // relevance with a query, newest without
 			fields: p.get('fields') === 'full' ? 'full' : 'compact',
 		});
 		if (p.get('format') !== 'md') return Response.json(res, { headers: CACHE });

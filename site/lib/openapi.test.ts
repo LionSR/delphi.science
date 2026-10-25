@@ -220,6 +220,14 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 		assert.equal((await call('POST', `/api/v1/records/${discussed.split('/')[0]}/${encodeURIComponent(discussed.split('/')[1])}/comments`, { body: { body: 'A reply to nothing.', parent: null }, auth: true })).status, 201);
 	});
 
+	test('/api/v1 and /llms.txt list the operations from the document', async () => {
+		const ops = Object.entries(paths).flatMap(([p, o]) => Object.entries(o).map(([m, op]) => ({ name: `${m.toUpperCase()} ${p}`, id: (op as unknown as { operationId: string }).operationId })));
+		const index = await (await (await import(new URL('route.ts', API).href)).GET(new Request('http://test/api/v1'))).json();
+		assert.deepEqual(index.endpoints.map((e: { id: string }) => e.id), ops.map((o) => o.id));
+		const llms = await (await (await import(new URL('../../llms.txt/route.ts', API).href)).GET(new Request('http://test/llms.txt'))).text();
+		for (const { name } of ops) assert.ok(llms.includes(`${name}`), `llms.txt leaves out ${name}`);
+	});
+
 	test('every documented response was checked', () => {
 		const documented = Object.entries(paths).flatMap(([p, ops]) => Object.entries(ops).flatMap(([m, op]) => Object.keys(op.responses).map((s) => `${m} ${p} ${s}`)));
 		assert.deepEqual(documented.filter((d) => !seen.has(d)), []);

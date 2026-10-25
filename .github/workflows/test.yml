@@ -1,0 +1,45 @@
+# The tests, on every pull request and every push to main: the harvester's (test_index.py,
+# test_candidates.py) and the site's (npm test, the type check). Both need a build: the site's tests load
+# dist/index.json into an in-memory Postgres, and test_index.py checks every built record against the
+# API's Record schema (site/openapi.json). The build reads all of entries/ and the APP registry from
+# agenticpapers.app, which the tests that read APP papers also reach.
+name: Tests
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency: # a newer push to the same branch or pull request replaces a run still going
+  group: test-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Build
+        run: python3 index.py build
+      - name: Harvester tests
+        run: |
+          python3 test_index.py
+          python3 test_candidates.py
+      - name: Site tests
+        working-directory: site
+        run: |
+          npm ci
+          npm test
+          npx tsc --noEmit -p .

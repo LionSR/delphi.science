@@ -127,9 +127,10 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 				<>
 					<h2>Discussed elsewhere</h2>
 					{links.map((l) => l.kind === 'x' ? (
-						// X's own embed markup: widgets.js turns it into the card, and leaves it as text if the post is gone.
+						// X's own embed markup: widgets.js reads the post from its link and shows it as a card. The index
+						// does not keep the post's text, so without the script (or once the post is gone) only who and when show.
 						<blockquote key={l.url} className="twitter-tweet" data-dnt="true">
-							<p>{l.text}</p>— {l.author} (@{l.handle}) <a href={l.url}>{date(l.date)}</a>
+							— {l.author} (@{l.handle}) <a href={l.url}>{date(l.date) || 'Post on X'}</a>
 						</blockquote>
 					) : (
 						<div key={l.url} className="comment">

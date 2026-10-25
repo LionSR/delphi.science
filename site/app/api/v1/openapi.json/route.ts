@@ -131,7 +131,7 @@ const spec = {
 			Error: { type: 'object', properties: { error: { type: 'object', properties: { code: { type: 'string' }, message: { type: 'string' }, fix: { type: 'string' } } } } },
 			Link: { type: 'object', description: 'A response to the record: a post, article, paper, talk or thread.', properties: {
 				kind: { type: 'string', enum: ['x', 'web'] }, url: { type: 'string' }, author: { type: 'string' }, handle: { type: 'string' },
-				site: { type: 'string' }, title: { type: 'string' }, text: { type: 'string', description: 'A quote read from the source.' },
+				site: { type: 'string' }, title: { type: 'string' }, text: { type: 'string', description: 'A quote read from the source. Not set for X posts: X shows a post\'s text in its own embed, so open the url.' },
 				date: { type: 'string', format: 'date' }, record: { type: 'string', description: 'Set when the response is itself a record: its id.' },
 			} },
 			Record: { type: 'object', required: ['id', 'title', 'url', 'source'], properties: {

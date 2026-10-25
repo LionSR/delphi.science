@@ -27,7 +27,8 @@ the paper.
 
 - Joins them. A record carries the responses to it: arXiv papers that simplify, extend or refute it,
   expert blog posts (Tao, Kalai, Aaronson, Karagila and others), talks, MathOverflow threads, X posts.
-  Each comes with its author, its date and a quote read from the source, never paraphrased.
+  Each comes with its author and its date; an article or paper also with a quote read from the source,
+  never paraphrased. An X post is linked, not quoted, and drops out within a day once it is deleted.
 - Links both ways. A response that is itself a record points back to what it discusses.
 - Covers the AI-made work in full (OpenAI's math release, agenticpapers.app, Lean formalization
   registries) and this year's arXiv in math, quant-ph and hep-th, so human work sits beside it.

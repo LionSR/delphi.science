@@ -119,8 +119,8 @@ class Discussion(unittest.TestCase):
     def test_parse_oembed(self) -> None:
         self.assertEqual(S.parse_oembed(self.OEMBED), {
             "kind": "x", "url": "https://x.com/AndrewLott1331/status/2108189504259727838", "author": "Andrew Lott",
-            "handle": "AndrewLott1331", "text": "Did you notice that the bound is weaker? Still gets Erdős Turán", "date": "2026-10-08",
-        })
+            "handle": "AndrewLott1331", "date": "2026-10-08",
+        })  # not the text: X's embed shows it
 
     def test_first_title_only(self) -> None:
         m = S.MetaParser(); m.feed("<html><title>Post | Asaf Karagila</title><svg><title>Search</title></svg><h1>H</h1><p>First.</p><p>Second.</p>")
@@ -143,9 +143,59 @@ class Discussion(unittest.TestCase):
         self.assertNotIn("record", paper["discussion"][1])
         self.assertEqual(reply["discusses"], [{"id": "openai-math/P", "title": "P"}])
 
-    def test_discussion_is_served(self) -> None:
-        e = {"key": "k", "source": "web", "url": "https://e.org/p", "title": "T", "discussion": [{"kind": "x", "url": "https://x.com/a/status/1", "text": "hi"}]}
-        self.assertEqual(index.to_item(e)["discussion"], e["discussion"])
+    def test_discussion_is_served_without_x_text(self) -> None:
+        x = {"kind": "x", "url": "https://x.com/a/status/1", "author": "A", "handle": "a", "text": "hi", "date": "2026-10-08", "added": "2026-10-09"}
+        web = {"kind": "web", "url": "https://e.org/q", "title": "Q", "text": "a quote", "added": "2026-10-09"}
+        e = {"key": "k", "source": "web", "url": "https://e.org/p", "title": "T", "discussion": [x, web]}
+        served = index.to_item(e)["discussion"]
+        self.assertEqual(served, [{k: v for k, v in x.items() if k != "text"}, web])
+        self.assertNotIn('"hi"', index.dumps(index.to_item(e)))
+        self.assertEqual(e["discussion"][0]["text"], "hi")  # serving does not change the entry
+
+
+class Recheck(unittest.TestCase):
+    """discuss --recheck reads every link again: a deleted post drops out, an unreachable one is kept."""
+
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory()
+        self.saved = index.ENTRIES, S.discussion_link
+        index.ENTRIES = Path(self.tmp.name)
+        S.discussion_link = self.fake
+
+    def tearDown(self) -> None:
+        index.ENTRIES, S.discussion_link = self.saved
+        self.tmp.cleanup()
+
+    @staticmethod
+    def fake(url: str) -> dict:
+        if "deleted" in url:
+            raise S.NotFound(url)
+        if "down" in url:
+            raise S.SourceError("timed out")
+        return {"kind": "x", "url": url, "author": "A", "handle": "a", "date": "2026-10-08"}
+
+    def entry(self, key: str, links: list | None = None) -> None:
+        index.save(index.path_for("web", key), {"key": key, "source": "web", "url": f"https://e.org/{key}", "title": key, "discussion": links})
+
+    def test_recheck_drops_deleted_and_keeps_the_rest(self) -> None:
+        links = [{"kind": "x", "url": "https://x.com/a/status/1", "text": "old", "added": "2026-10-09"},
+                 {"kind": "x", "url": "https://x.com/a/status/2/deleted", "added": "2026-10-09"},
+                 {"kind": "web", "url": "https://down.example/p", "title": "P", "added": "2026-10-10"}]
+        self.entry("k", links)
+        self.entry("j")
+        self.assertEqual(index.main(["discuss", "--recheck"]), 0)
+        after = json.loads(index.path_for("web", "k").read_text())["discussion"]
+        self.assertEqual([d["url"] for d in after], ["https://x.com/a/status/1", "https://down.example/p"])
+        self.assertNotIn("text", after[0])  # read again, without the post's text
+        self.assertEqual(after[0]["added"], "2026-10-09")
+        self.assertEqual(after[1], links[2])  # unreachable: kept as it was
+
+    def test_recheck_only_named_records(self) -> None:
+        for k in ("a", "b"):
+            self.entry(k, [{"kind": "x", "url": "https://x.com/a/status/9/deleted"}])
+        index.main(["discuss", "--recheck", "web/a"])
+        self.assertNotIn("discussion", json.loads(index.path_for("web", "a").read_text()))
+        self.assertIn("discussion", json.loads(index.path_for("web", "b").read_text()))
 
 
 class Text(unittest.TestCase):

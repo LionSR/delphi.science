@@ -128,6 +128,21 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		assert.deepEqual([await top('week'), await top('month'), await top('score')], [b, a, a]); // both were linked today
 	});
 
+	test('only responses that confirm, simplify or extend count as upvotes; refutes and questions mark it disputed', async () => {
+		const [a, b] = items.filter((it) => it.source === 'palomar').slice(4, 6).map((it) => String(it.id));
+		const today = new Date().toISOString().slice(0, 10);
+		const links = (stances: (string | null)[]) => JSON.stringify(stances.map((stance, i) => ({ kind: 'web', url: `https://e.org/s${i}`, date: today, ...(stance ? { stance } : {}) })));
+		await db.query("UPDATE open_index.records SET record = jsonb_set(record, '{discussion}', $2::jsonb) WHERE id = $1", [a, links(['refutes', 'questions', 'reacts'])]);
+		await db.query("UPDATE open_index.records SET record = jsonb_set(record, '{discussion}', $2::jsonb) WHERE id = $1", [b, links(['confirms', null])]);
+		const both = `source:palomar AND (id:${JSON.stringify(a)} OR id:${JSON.stringify(b)})`;
+		for (const sort of ['score', 'day', 'week']) assert.equal((await search(db, both, { sort, limit: 1 })).results[0].id, b, sort);
+		assert.deepEqual((await search(db, `${both} is:disputed`)).results.map((x) => x.id), [a]);
+		assert.equal((await search(db, `${both} is:discussed`)).total, 2); // a refutation is still a response
+		const rec = await get(db, a);
+		assert.deepEqual([rec?.discussed, rec?.disputed, (await get(db, b))?.disputed], [3, true, false]);
+		await db.query("UPDATE open_index.records SET record = record - 'discussion' WHERE id = ANY($1)", [[a, b]]); // leave the later rankings alone
+	});
+
 	test('comments and reviews; mentions count once per voter, never for the record itself', async () => {
 		const [a, b] = items.filter((it) => it.source === 'palomar').slice(0, 2).map((it) => it.id);
 		const app = items.find((it) => it.source === 'app')!;

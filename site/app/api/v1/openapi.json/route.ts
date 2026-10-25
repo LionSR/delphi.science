@@ -26,9 +26,9 @@ const spec = {
 			get: {
 				operationId: 'searchRecords',
 				...open,
-				summary: 'Search the index with arXiv-style queries. Use it to find a paper and see whether experts responded to it (discussed > 0, or is:discussed in the query).',
+				summary: 'Search the index with arXiv-style queries. Use it to find a paper and see whether experts responded to it (discussed > 0, or is:discussed in the query) and whether any found a problem (disputed, or is:disputed).',
 				parameters: [
-					{ name: 'q', in: 'query', schema: { type: 'string' }, description: 'arXiv-style query. Fields: ti: au: abs: all: cat: (cat:math.NT) source: (source:openai-math) id: family: published: ([2026-10-01 TO *]) is: (formalized, verified, withdrawn, ai-generated, discussed). Operators AND OR ANDNOT, parentheses, "phrases", word* prefixes. Empty lists everything.' },
+					{ name: 'q', in: 'query', schema: { type: 'string' }, description: 'arXiv-style query. Fields: ti: au: abs: all: cat: (cat:math.NT) source: (source:openai-math) id: family: published: ([2026-10-01 TO *]) is: (formalized, verified, withdrawn, ai-generated, discussed, disputed: a response refutes or questions it). Operators AND OR ANDNOT, parentheses, "phrases", word* prefixes. Empty lists everything.' },
 					{ name: 'sort', in: 'query', schema: { type: 'string', enum: [...SORTS] }, description: 'relevance (default with a query), newest (default without), oldest, title, score (votes plus linked responses, all time), day, week, month (votes and responses published in that window), mentions.' },
 					{ name: 'limit', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 100, default: 20 } },
 					{ name: 'cursor', in: 'query', schema: { type: 'string' }, description: 'next_cursor from the previous page, unchanged.' },
@@ -44,7 +44,7 @@ const spec = {
 			get: {
 				operationId: 'getRecord',
 				...open,
-				summary: 'One record in full: metadata, votes, and discussion[], the expert responses to it with author, date and quote. discusses[] lists the records it responds to.',
+				summary: 'One record in full: metadata, votes, reception (where the work stands, reviewed by a person), and discussion[], the expert responses to it with author, date and quote. discusses[] lists the records it responds to.',
 				parameters: [prefix, suffix],
 				responses: { 200: { description: 'The record', content: { 'application/json': { schema: { $ref: '#/components/schemas/Record' } } } }, 404: err },
 			},
@@ -143,8 +143,13 @@ const spec = {
 			Error: { type: 'object', properties: { error: { type: 'object', properties: { code: { type: 'string' }, message: { type: 'string' }, fix: { type: 'string' } } } } },
 			Link: { type: 'object', description: 'A response to the record: a post, article, paper, talk or thread.', properties: {
 				kind: { type: 'string', enum: ['x', 'web'] }, url: { type: 'string' }, author: { type: 'string' }, handle: { type: 'string' },
-				site: { type: 'string' }, title: { type: 'string' }, text: { type: 'string', description: 'A quote read from the source.' },
+				site: { type: 'string' }, title: { type: 'string' }, text: { type: 'string', description: 'A quote read from the source. Not set for X posts: X shows a post\'s text in its own embed, so open the url.' },
 				date: { type: 'string', format: 'date' }, record: { type: 'string', description: 'Set when the response is itself a record: its id.' },
+				stance: { type: 'string', enum: ['refutes', 'questions', 'confirms', 'simplifies', 'extends', 'reacts'], description: 'What the response does, set by a person: refutes (an error that breaks the main result), questions (a gap, a Lean/prose mismatch, a weaker statement than claimed, or priority), confirms (checks or formalizes it independently), simplifies (a shorter or human-readable proof), extends (builds on it), reacts (no technical claim). Absent until labelled.' },
+			} },
+			Reception: { type: 'object', description: 'Where the work stands, in a sentence or two. Set only once a person reviewed it against the links it rests on, and dropped when those links change.', properties: {
+				text: { type: 'string' }, written: { type: 'string', format: 'date' }, links: { type: 'array', items: { type: 'string' }, description: 'Urls from discussion[] the text rests on.' },
+				reviewed_by: { type: 'string', description: 'GitHub login of the person who reviewed it.' },
 			} },
 			Record: { type: 'object', required: ['id', 'title', 'url', 'source'], properties: {
 				id: { type: 'string' }, source: { type: 'string' }, title: { type: 'string' }, authors: { type: 'array', items: { type: 'string' } },
@@ -153,6 +158,8 @@ const spec = {
 				formalized: { type: 'boolean' }, verified: { type: 'boolean' }, withdrawn: { type: 'boolean' }, gone: { type: 'boolean' },
 				score: { type: 'integer' }, reactions: { type: 'object' }, comments: { type: 'integer' }, reviews: { type: 'integer' }, mentions: { type: 'integer' },
 				discussed: { type: 'integer', description: 'How many responses discussion[] holds.' },
+				disputed: { type: 'boolean', description: 'A response refutes or questions the record.' },
+				reception: { $ref: '#/components/schemas/Reception' },
 				discussion: { type: 'array', items: { $ref: '#/components/schemas/Link' } },
 				discusses: { type: 'array', description: 'Records this one responds to.', items: { type: 'object', properties: { id: { type: 'string' }, title: { type: 'string' } } } },
 			} },

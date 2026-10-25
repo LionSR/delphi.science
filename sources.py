@@ -191,24 +191,23 @@ def from_citation_meta(m: MetaParser) -> dict[str, Any]:
 
 # What a record's page shows under "Discussed elsewhere". Nothing is typed in: an X post comes from
 # X's oEmbed endpoint (free, no key, and X's own way to republish a post), anything else from the
-# page's Open Graph tags. A link whose source answers 404 is dropped on refresh, which is how a
-# deleted post or a takedown leaves the index.
+# page's Open Graph tags. Of an X post only the link, author, handle and day are kept: its text is
+# shown by X's own embed, never copied. A link whose source answers 404 is dropped when the links are
+# rechecked (discuss --recheck, daily), which is how a deleted post or a takedown leaves the index.
 OEMBED = "https://publish.twitter.com/oembed"
 X_HOSTS = {"x.com", "www.x.com", "twitter.com", "www.twitter.com", "mobile.twitter.com"}
 LINK_CHARS = 300
 
 
 def parse_oembed(data: dict[str, Any]) -> dict[str, Any]:
-    """An X post from its oEmbed record: who wrote it, the text, the day."""
+    """An X post from its oEmbed record: who wrote it and the day. Not its text, which X's embed shows."""
     h = data.get("html", "")
-    body = re.search(r"<p[^>]*>(.*?)</p>", h, re.S)
     when = re.search(r">([A-Z][a-z]+ \d{1,2}, \d{4})</a>\s*</blockquote>", h)
     handle = (data.get("author_url") or "").rstrip("/").rsplit("/", 1)[-1]
     post = re.search(r"/status/(\d+)", data.get("url") or "")
     return {
         "kind": "x", "url": f"https://x.com/{handle}/status/{post[1]}" if handle and post else data.get("url", ""),
         "author": clean(data.get("author_name")), "handle": handle,
-        "text": clean(re.sub(r"<br\s*/?>", " ", body[1])) if body else "",
         "date": dt.datetime.strptime(when[1], "%B %d, %Y").date().isoformat() if when else "",
     }
 

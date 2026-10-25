@@ -1,6 +1,6 @@
 # The open index's daily pull, as SciRate pulls arXiv each day: harvest every enabled job in
-# harvest.json, label the new records, build, commit the new entry files, and load
-# the build into Supabase Postgres.
+# harvest.json, read every discussion link again (a deleted post drops out), label the new records,
+# build, commit the new entry files, and load the build into Supabase Postgres.
 # Secrets: ANTHROPIC_API_KEY labels new records (without it they wait, shown as research);
 # SUPABASE_DB_URL loads the build (without it the run stops after the commit).
 name: Open index
@@ -38,6 +38,8 @@ jobs:
       - run: pip install pyyaml
       - name: Harvest
         run: python3 index.py harvest
+      - name: Recheck discussion links
+        run: python3 index.py discuss --recheck  # a deleted post drops out within a day, apart from the weekly refresh
       - name: Label new records
         if: env.ANTHROPIC_API_KEY != ''
         run: |

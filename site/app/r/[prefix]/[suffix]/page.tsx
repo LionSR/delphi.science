@@ -2,12 +2,12 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import { notFound } from 'next/navigation';
-import { cache } from 'react';
+import { cache, Fragment } from 'react';
 import { comments } from '../../../../lib/comments.ts';
 import { db } from '../../../../lib/db.ts';
 import { get } from '../../../../lib/query.ts';
 import { me } from '../../../../lib/session.ts';
-import { date, idPath, recordId, recordPath, SITE, source, tally, tex, type IdParams } from '../../../../lib/view.ts';
+import { date, idPath, reception, recordId, recordPath, SITE, source, tally, tex, type IdParams } from '../../../../lib/view.ts';
 import { myVotes, votes } from '../../../../lib/votes.ts';
 import { commentOn } from '../../../actions.ts';
 import { Vote } from '../../../vote.tsx';
@@ -15,6 +15,14 @@ import { Vote } from '../../../vote.tsx';
 export const dynamic = 'force-dynamic';
 
 const record = cache(async (id: string) => get(await db(), id));
+
+// What a response says about the record, set by a person (index.py discuss --stance).
+const STANCES: Record<string, string> = {
+	refutes: 'finds an error that breaks the main result', questions: 'raises a gap, a mismatch, a weaker statement than claimed, or a priority issue',
+	confirms: 'checks the result or formalizes it independently', simplifies: 'a shorter or human-readable proof', extends: 'builds on it',
+	reacts: 'a general reaction, no technical claim',
+};
+const Stance = ({ stance }: { stance: string }) => <span className={`stance ${stance}`} title={STANCES[stance]}>{stance}</span>;
 
 // Highwire citation_* tags (read by Google Scholar, Zotero and most agents) and schema.org JSON-LD.
 export async function generateMetadata(ctx: IdParams): Promise<Metadata> {
@@ -27,7 +35,8 @@ export async function generateMetadata(ctx: IdParams): Promise<Metadata> {
 	if (r.published) cite.citation_publication_date = String(r.published).replaceAll('-', '/');
 	if (r.pdf) cite.citation_pdf_url = String(r.pdf);
 	return {
-		title: String(r.title), description: String(r.summary ?? '').slice(0, 300) || undefined,
+		// Where the work stands, when a person reviewed it, says more about a discussed record than its abstract.
+		title: String(r.title), description: reception(r)?.text ?? (String(r.summary ?? '').slice(0, 300) || undefined),
 		alternates: { canonical: recordPath(id), types: { 'application/json': `/api/v1/records/${idPath(id)}` } },
 		other: cite,
 	};
@@ -45,9 +54,15 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	const back = recordPath(id);
 	const reactions = Object.entries((r.reactions ?? {}) as Record<string, number>);
 	// Posts and articles about the record, read from X's oEmbed or the page's Open Graph tags (index.py discuss).
-	const links = (Array.isArray(r.discussion) ? r.discussion : []) as { kind: string; url: string; author?: string; handle?: string; site?: string; title?: string; text?: string; date?: string; record?: string }[];
+	const links = (Array.isArray(r.discussion) ? r.discussion : []) as { kind: string; url: string; author?: string; handle?: string; site?: string; title?: string; text?: string; date?: string; record?: string; stance?: string }[];
 	// Records whose discussion names this one (a response to a manuscript, say): the reverse of the above, set at build time.
 	const discusses = (Array.isArray(r.discusses) ? r.discusses : []) as { id: string; title: string }[];
+	const stands = reception(r);
+	// A link the reception rests on, named as its author or site.
+	const cite = (url: string) => {
+		const l = links.find((x) => x.url === url);
+		return l?.author || l?.site || url.replace(/^https?:\/\/(www\.)?/, '').split('/')[0];
+	};
 	const api = `/api/v1/records/${idPath(id)}`;
 	const ld = {
 		'@context': 'https://schema.org', '@type': 'ScholarlyArticle', identifier: id, name: r.title, url: `${SITE}${recordPath(id)}`,
@@ -70,6 +85,16 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 				<span>{tally(r)}</span>
 				{reactions.filter(([k]) => k !== 'up' && k !== 'down').map(([k, n]) => <span key={k}>{k} {n}</span>)}
 			</p>
+			{stands && (
+				<section className="reception" aria-label="Where it stands">
+					<p>{stands.text}</p>
+					<p className="meta">
+						<span>{date(stands.written)}</span>
+						{stands.reviewed_by ? <span>reviewed by <a href={`https://github.com/${stands.reviewed_by}`}>@{stands.reviewed_by}</a></span> : null}
+						{(stands.links ?? []).map((u) => <a key={u} href={u}>{cite(u)}</a>)}
+					</p>
+				</section>
+			)}
 			<Vote id={id} reactions={r.reactions} mine={mine?.value} back={back} />
 			{voters.length > 0 && (
 				<ul className="voters">
@@ -127,13 +152,18 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 				<>
 					<h2>Discussed elsewhere</h2>
 					{links.map((l) => l.kind === 'x' ? (
-						// X's own embed markup: widgets.js turns it into the card, and leaves it as text if the post is gone.
-						<blockquote key={l.url} className="twitter-tweet" data-dnt="true">
-							<p>{l.text}</p>— {l.author} (@{l.handle}) <a href={l.url}>{date(l.date)}</a>
-						</blockquote>
+						<Fragment key={l.url}>
+							{l.stance ? <p className="meta"><Stance stance={l.stance} /></p> : null}
+							{/* X's own embed markup: widgets.js reads the post from its link and shows it as a card. The index
+							    does not keep the post's text, so without the script (or once the post is gone) only who and when show. */}
+							<blockquote className="twitter-tweet" data-dnt="true">
+								— {l.author} (@{l.handle}) <a href={l.url}>{date(l.date) || 'Post on X'}</a>
+							</blockquote>
+						</Fragment>
 					) : (
 						<div key={l.url} className="comment">
 							<p className="meta">
+								{l.stance ? <Stance stance={l.stance} /> : null}
 								<a href={l.url}>{l.title || l.url}</a>
 								{l.site ? <span>{l.site}</span> : null}
 								{l.author ? <span>{l.author}</span> : null}

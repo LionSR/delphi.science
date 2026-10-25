@@ -21,9 +21,16 @@ export const recordId = async ({ params }: IdParams) => {
 	const { prefix, suffix } = await params;
 	return `${decodeURIComponent(prefix)}/${decodeURIComponent(suffix)}`;
 };
-export const tally = (r: Record<string, unknown>) => {
+// Where the work stands, in a sentence or two a person reviewed (index.py reception); the build serves only reviewed ones.
+export type Reception = { text: string; written?: string; links?: string[]; reviewed_by?: string };
+export const reception = (r: Record<string, unknown>): Reception | null => {
+	const x = r.reception as Partial<Reception> | undefined;
+	return x && typeof x.text === 'string' && x.text ? (x as Reception) : null;
+};
+export const tally =(r: Record<string, unknown>) => {
 	const parts = [`score ${r.score ?? 0}`];
 	if (r.discussed) parts.push(`🔥 ${r.discussed} ${r.discussed === 1 ? 'post' : 'posts'}`);
+	if (r.disputed) parts.push('disputed');
 	if (r.reviews) parts.push(`${r.reviews} reviews`);
 	if (r.comments) parts.push(`${r.comments} comments`);
 	if (r.mentions) parts.push(`mentioned by ${r.mentions}`);

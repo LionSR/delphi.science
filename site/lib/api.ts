@@ -62,19 +62,14 @@ export const body = async (req: Request): Promise<Record<string, unknown>> => {
 };
 
 /**
- * Counts a call to `endpoint` (method and route pattern, e.g. 'GET /llms.txt') by the caller's client
- * (lib/usage.ts), after the response is sent: it never slows a request, and a failure is dropped.
+ * A route handler that counts each call to `endpoint` (method and route pattern, e.g. 'GET /llms.txt') by the
+ * caller's client (lib/usage.ts), after the response is sent: it never slows a request, and a failure is dropped.
  */
-export function track(endpoint: string, from: { headers: { get(name: string): string | null } }) {
-	const name = client(from.headers.get('user-agent'));
-	try {
-		after(() => db().then((d) => countCall(d, endpoint, name)).catch(() => {}));
-	} catch { /* outside a request (a build): nothing to count */ }
-}
-
-/** A route handler that counts its calls (track, above). */
 export const counted = <A extends unknown[]>(endpoint: string, run: (req: Request, ...rest: A) => Response | Promise<Response>) =>
 	(req: Request, ...rest: A) => {
-		track(endpoint, req);
+		const name = client(req.headers.get('user-agent'));
+		try {
+			after(() => db().then((d) => countCall(d, endpoint, name)).catch(() => {}));
+		} catch { /* outside a request (a build): nothing to count */ }
 		return run(req, ...rest);
 	};

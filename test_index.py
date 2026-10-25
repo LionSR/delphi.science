@@ -190,12 +190,76 @@ class Recheck(unittest.TestCase):
         self.assertEqual(after[0]["added"], "2026-10-09")
         self.assertEqual(after[1], links[2])  # unreachable: kept as it was
 
+    def test_recheck_keeps_the_stance(self) -> None:
+        self.entry("k", [{"kind": "x", "url": "https://x.com/a/status/1", "added": "2026-10-09", "stance": "questions"}])
+        index.main(["discuss", "--recheck"])
+        self.assertEqual(json.loads(index.path_for("web", "k").read_text())["discussion"][0]["stance"], "questions")
+
     def test_recheck_only_named_records(self) -> None:
         for k in ("a", "b"):
             self.entry(k, [{"kind": "x", "url": "https://x.com/a/status/9/deleted"}])
         index.main(["discuss", "--recheck", "web/a"])
         self.assertNotIn("discussion", json.loads(index.path_for("web", "a").read_text()))
         self.assertIn("discussion", json.loads(index.path_for("web", "b").read_text()))
+
+
+class Stance(unittest.TestCase):
+    """A person labels what each response does; only support counts as an upvote, refutes or questions mark it disputed."""
+
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory()
+        self.saved = index.ENTRIES, S.discussion_link
+        index.ENTRIES = Path(self.tmp.name)
+        S.discussion_link = lambda url: {"kind": "web", "url": url.split("?")[0], "title": "fresh"}
+        index.save(index.path_for("web", "k"), {"key": "k", "source": "web", "url": "https://e.org/k", "title": "K", "discussion": [
+            {"kind": "x", "url": "https://x.com/a/status/1", "author": "A", "handle": "a", "added": "2026-10-09"}]})
+
+    def tearDown(self) -> None:
+        index.ENTRIES, S.discussion_link = self.saved
+        self.tmp.cleanup()
+
+    def links(self) -> list:
+        return json.loads(index.path_for("web", "k").read_text())["discussion"]
+
+    def test_stance_on_an_attached_link_is_set_without_reading_it(self) -> None:
+        S.discussion_link = lambda url: self.fail("an attached link is not read again to label it")
+        index.main(["discuss", "web/k", "https://twitter.com/a/status/1?s=20", "--stance", "refutes"])
+        self.assertEqual(self.links()[0], {"kind": "x", "url": "https://x.com/a/status/1", "author": "A", "handle": "a",
+                                           "added": "2026-10-09", "stance": "refutes"})
+        index.main(["discuss", "web/k", "https://x.com/a/status/1", "--stance", "none"])
+        self.assertNotIn("stance", self.links()[0])
+
+    def test_new_links_take_the_stance_and_keep_it_when_read_again(self) -> None:
+        index.main(["discuss", "web/k", "https://e.org/reply", "--stance", "simplifies"])
+        self.assertEqual(self.links()[1]["stance"], "simplifies")
+        index.main(["discuss", "web/k", "https://e.org/reply"])  # read again, no stance given: it keeps its own
+        self.assertEqual([d.get("stance") for d in self.links()], [None, "simplifies"])
+
+    def test_unknown_stance_is_refused(self) -> None:
+        with self.assertRaises(SystemExit):
+            index.main(["discuss", "web/k", "https://x.com/a/status/1", "--stance", "likes"])
+
+    def test_counts_and_flags(self) -> None:
+        links = [{"url": "1"}, {"url": "2", "stance": "confirms"}, {"url": "3", "stance": "reacts"}, {"url": "4", "stance": "questions"}]
+        self.assertEqual(index.upvoting(links), 2)  # unlabelled and confirms
+        self.assertTrue(index.disputed(links))
+        self.assertFalse(index.disputed(links[:3]))
+        e = {"key": "k", "source": "web", "url": "https://e.org/p", "title": "T",
+             "discussion": [{"kind": "x", "url": "https://x.com/a/status/1", "text": "t", "stance": "refutes"}]}
+        it = index.to_item(e)
+        self.assertEqual((it["disputed"], it["discussion"][0]), (True, {"kind": "x", "url": "https://x.com/a/status/1", "stance": "refutes"}))
+        self.assertNotIn("disputed", index.to_item({**e, "discussion": [{"kind": "web", "url": "u", "stance": "extends"}]}))
+
+    def test_is_disputed_and_is_discussed_in_the_snapshot(self) -> None:
+        import query
+        base = {"source": "web", "url": "u", "title": "T"}
+        items = [{**base, "id": "web/a", "discussion": [{"url": "1", "stance": "refutes"}], "disputed": True},
+                 {**base, "id": "web/b", "discussion": [{"url": "1", "stance": "confirms"}]}, {**base, "id": "web/c"}]
+        path = Path(self.tmp.name) / "index.db"
+        query.build_db(path, items, {}, {})
+        db = query.connect(path)
+        ids = lambda q: sorted(r["id"] for r in query.search(db, q)["results"])  # noqa: E731
+        self.assertEqual((ids("is:disputed"), ids("is:discussed"), ids("T ANDNOT is:discussed")), (["web/a"], ["web/a", "web/b"], ["web/c"]))
 
 
 class Text(unittest.TestCase):

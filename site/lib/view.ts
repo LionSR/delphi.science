@@ -24,6 +24,7 @@ export const recordId = async ({ params }: IdParams) => {
 export const tally = (r: Record<string, unknown>) => {
 	const parts = [`score ${r.score ?? 0}`];
 	if (r.discussed) parts.push(`🔥 ${r.discussed} ${r.discussed === 1 ? 'post' : 'posts'}`);
+	if (r.disputed) parts.push('disputed');
 	if (r.reviews) parts.push(`${r.reviews} reviews`);
 	if (r.comments) parts.push(`${r.comments} comments`);
 	if (r.mentions) parts.push(`mentioned by ${r.mentions}`);

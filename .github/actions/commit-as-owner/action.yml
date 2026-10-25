@@ -1,5 +1,5 @@
-# Commit and push as the Vercel account owner. Vercel's Hobby plan does not deploy a commit of this
-# private repository authored by anyone else; author-check.yml checks the same address.
+# Commit and push as the Vercel account owner. Vercel deploys a commit of this private repository only
+# when its author is a member of the Vercel team, and a bot cannot be one; author-check.yml checks it.
 name: Commit as owner
 description: Commit the given paths, if they changed, as the repository owner, and push onto main as it now is.
 inputs:

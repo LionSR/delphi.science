@@ -44,7 +44,7 @@ cd site && npm run dev     # the site and API, on local Postgres (PGlite)
 python3 test_index.py && python3 test_candidates.py
 ```
 
-Commit as the Vercel account owner (`git config user.email 14889516+LionSR@users.noreply.github.com`): Vercel's Hobby plan does not deploy a commit of this private repository authored by anyone else, and `.github/workflows/author-check.yml` fails on one. `Co-Authored-By` trailers are fine.
+Commit as a member of the Vercel team, today the owner (`git config user.email 14889516+LionSR@users.noreply.github.com`): Vercel deploys a commit of this private repository only when its author is a member of the team (on Pro, each member is a seat), and `.github/workflows/author-check.yml` fails on any other. A new member's commit email goes in the repository variable `VERCEL_TEAM_EMAILS`. `Co-Authored-By` trailers are fine.
 
 New responses are found weekly, not attached: `.github/workflows/responses.yml` runs `candidates.py` on Mondays and commits its report to `reports/responses/`, with the `discuss` command for each candidate; a person reads it and runs the ones that hold up.
 

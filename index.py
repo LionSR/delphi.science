@@ -425,7 +425,7 @@ def llms_txt(index: dict[str, Any]) -> str:
     lines = [
         "# Open research index",
         "",
-        "> A curated index of AI-made research and of what experts said about it, read from each source: agenticpapers.app,",
+        "> A curated index of research, AI-made and human, and of what experts said about it, read from each source: agenticpapers.app,",
         "> OpenAI's math release, Lean formalization registries, and this year's arXiv (math, quant-ph, hep-th).",
         "> Pseudoscience venues are refused; expert reactions are linked with author, date and a quote from the source.",
         "",

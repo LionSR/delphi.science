@@ -276,7 +276,9 @@ class Stance(Entries):
     def test_the_labeler_gets_the_responses_as_data(self) -> None:
         seen = {}
 
-        def run(cmd: list, input: str, **kw: object) -> object:
+        def run(cmd: list, input: str | None = None, **kw: object) -> object:
+            if input is None:  # not the labeller: `gh auth token`, where gh is installed
+                return saved(cmd, **kw)
             seen["prompt"] = input
             return type("Done", (), {"returncode": 0, "stderr": "", "stdout": 'Sure. [{"url": "https://x.com/a/status/1", "stance": null}]'})()
 

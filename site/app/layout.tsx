@@ -8,7 +8,7 @@ import './globals.css';
 export const metadata = {
 	metadataBase: new URL(SITE),
 	title: 'Open Research Index',
-	description: 'A curated index of research, AI-made and human, and of what experts said about it: every record read from its source, pseudoscience venues refused, and expert reactions linked with author and date. Search it here, or through the API at /api/v1.',
+	description: 'Check an AI-generated result before you trust it: every paper, preprint and formal proof beside what experts said about it, from arXiv replies to blog posts, talks and MathOverflow, with author, date and source. Search it here, or through the API at /api/v1.',
 };
 
 // Titles and abstracts use TeX ($…$, and GitHub's $`…`$, which the pages rewrite to $…$).

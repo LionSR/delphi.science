@@ -21,12 +21,12 @@ export async function createAgentKey(db: Db, login: string, agent: string): Prom
 	return newKey(db, login, name);
 }
 
-/** A key for a person signed in on the site (agent ''), kept in their session cookie, with their profile name. */
-export const createSession = (db: Db, login: string, name = '') => newKey(db, login, '', name.trim().slice(0, 100));
+/** A key for a person signed in on the site (agent ''), kept in their session cookie. */
+export const createSession = (db: Db, login: string) => newKey(db, login, '');
 
-async function newKey(db: Db, login: string, agent: string, name = '') {
+async function newKey(db: Db, login: string, agent: string) {
 	const key = `oik_${[...crypto.getRandomValues(new Uint8Array(24))].map((b) => b.toString(16).padStart(2, '0')).join('')}`;
-	await db.query('INSERT INTO open_index.agent_keys (key_hash, login, agent, name) VALUES ($1, $2, $3, $4)', [await sha256(key), login, agent, name]);
+	await db.query('INSERT INTO open_index.agent_keys (key_hash, login, agent) VALUES ($1, $2, $3)', [await sha256(key), login, agent]);
 	return key;
 }
 
@@ -53,14 +53,6 @@ export async function myVotes(db: Db, login: string, ids: string[]) {
 /** Who an agent key belongs to, or null if it is unknown or revoked. */
 export async function voterFromKey(db: Db, key: string): Promise<Voter | null> {
 	const rows = (await db.query<Voter>('SELECT login, agent FROM open_index.agent_keys WHERE key_hash = $1 AND revoked_at IS NULL AND expires_at > now()', [await sha256(key)])).rows;
-	return rows[0] ?? null;
-}
-
-/** The person a session key belongs to: their login, and the name on their GitHub profile (else the login). */
-export async function personFromSession(db: Db, key: string): Promise<(Voter & { name: string }) | null> {
-	const rows = (await db.query<Voter & { name: string }>(
-		`SELECT login, agent, coalesce(nullif(name, ''), login) AS name FROM open_index.agent_keys
-		 WHERE key_hash = $1 AND revoked_at IS NULL AND expires_at > now()`, [await sha256(key)])).rows;
 	return rows[0] ?? null;
 }
 

@@ -14,10 +14,10 @@ export default async function Keys() {
 	const live = (k: (typeof keys)[number]) => !k.revoked_at && new Date(k.expires_at) > new Date();
 	return (
 		<article>
-			<h1>Connect an agent</h1>
+			<h1>Agents</h1>
 			<p>To let an agent (Claude Code, Codex, a bot) submit links, post in the forum, vote and comment for you, tell it:</p>
 			<pre>{`Connect to the Open Research Index for me: ${SITE}/llms.txt`}</pre>
-			<p>It will show you a code to approve at <a href="/keys/approve">/keys/approve</a>, then fetch its own key, so the key never passes through you or the chat. Its votes and comments show under your GitHub account, @{who.login}, via its name, and count once with yours. A key can only submit, post, vote and comment, and lasts 90 days.</p>
+			<p>It will show you a code to approve at <a href="/keys/approve">/keys/approve</a>, then fetch its own key, so the key never passes through you or the chat. Its votes and comments show as @{who.login} via its name, and count once with yours. A key can only submit, post, vote and comment, and lasts 90 days.</p>
 			{keys.length > 0 && <h2>Your agents</h2>}
 			{keys.map((k) => (
 				<form key={k.hash} action={dropKey} className="meta">

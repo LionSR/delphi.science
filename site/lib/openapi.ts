@@ -1,17 +1,20 @@
 // The API as an OpenAPI 3.1 document, for agent frameworks that import tools from one (LangChain, LlamaIndex,
-// Semantic Kernel and others); served at /api/v1/openapi.json. Summaries stay under 300 characters and parameter
-// descriptions under 700, the limits tool importers commonly enforce. openapi.test.ts checks it against the routes
-// and their real responses.
+// Semantic Kernel and others); served at /api/v1/openapi.json. It is the API's definition, not a description of
+// it: every route runs through operation() (lib/operation.ts), which takes its path, method, parameters, request
+// body and security from here and validates each request against them, and /api/v1 and /llms.txt list the
+// operations from it. Summaries stay under 300 characters and parameter descriptions under 700, the limits tool
+// importers commonly enforce. openapi.test.ts checks it against the routes and their real responses.
 import { SUPPORT_EMAIL } from './contact.ts';
-import { SORTS } from './query.ts';
+import { DEFAULT_LIMIT, MAX_LIMIT, QUERY_GUIDE, QUERY_HELP, SORT_HELP, SORTS } from './query.ts';
 import { SITE, STANCE_LIST, STANCES } from './view.ts';
 import { MAX_AGENT_NAME } from './votes.ts';
 
-const prefix = { name: 'prefix', in: 'path', required: true, schema: { type: 'string' }, description: 'The source part of a record id, e.g. arxiv, openai-math, app. A record id is <prefix>/<suffix>, like a DOI.' };
-const suffix = { name: 'suffix', in: 'path', required: true, schema: { type: 'string' }, description: 'The source\'s own id, e.g. 2610.20058 or The-Quasi-Riemann-Hypothesis.' };
-const err = { description: 'An error with a fix to try', content: { 'application/json': { schema: { $ref: '#/components/schemas/Error' } } } };
-const write = { security: [{ agentKey: [] }], 'x-openai-isConsequential': true };
-const open = { security: [] }; // reads need no key
+const prefix = { name: 'prefix', in: 'path', required: true, schema: { type: 'string' }, example: 'app', description: 'The source part of a record id, e.g. arxiv, openai-math, app. A record id is <prefix>/<suffix>, like a DOI.' } as const;
+const suffix = { name: 'suffix', in: 'path', required: true, schema: { type: 'string' }, example: 'APP-260923-0000', description: 'The source\'s own id, e.g. 2610.20058 or The-Quasi-Riemann-Hypothesis.' } as const;
+const err = { description: 'An error with a fix to try', content: { 'application/json': { schema: { $ref: '#/components/schemas/Error' } } } } as const;
+const write = { security: [{ agentKey: [] }], 'x-openai-isConsequential': true } as const;
+const open = { security: [] } as const; // reads need no key
+const agent = { type: 'string', description: 'Only with a GitHub App user token instead of an agent key: your agent\'s name. An agent key carries its own.' } as const;
 
 export const spec = {
 	openapi: '3.1.0',
@@ -28,13 +31,14 @@ export const spec = {
 				operationId: 'searchRecords',
 				...open,
 				summary: 'Search the index with arXiv-style queries. Use it to find a paper and see whether experts responded to it (discussed > 0, or is:discussed in the query) and whether any found a problem (disputed, or is:disputed).',
+				description: `The query language:\n\n${QUERY_GUIDE}`,
 				parameters: [
-					{ name: 'q', in: 'query', schema: { type: 'string' }, description: 'arXiv-style query. Fields: ti: au: abs: all: cat: (cat:math.NT) source: (source:openai-math) id: family: published: ([2026-10-01 TO *]) is: (formalized, verified, withdrawn, ai-generated, discussed, disputed: a response refutes or questions it). Operators AND OR ANDNOT, parentheses, "phrases", word* prefixes. Empty lists everything.' },
-					{ name: 'sort', in: 'query', schema: { type: 'string', enum: [...SORTS] }, description: 'relevance (default with a query), newest (default without), oldest, title, score (votes plus linked responses that confirm, simplify or extend it or have no stance yet, all time), day, week, month (votes and such responses published in that window), mentions (most cited in comments: how many people\'s comments name the record by id, then the newest; not linked posts, which count in score), responded (the newest expert response first, whatever its stance).' },
-					{ name: 'limit', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 100, default: 20 } },
+					{ name: 'q', in: 'query', schema: { type: 'string' }, example: 'cat:math.NT', description: QUERY_HELP },
+					{ name: 'sort', in: 'query', schema: { type: 'string', enum: [...SORTS] }, description: SORT_HELP },
+					{ name: 'limit', in: 'query', schema: { type: 'integer', minimum: 1, maximum: MAX_LIMIT, default: DEFAULT_LIMIT }, description: 'Results per page.' },
 					{ name: 'cursor', in: 'query', schema: { type: 'string' }, description: 'next_cursor from the previous page, unchanged.' },
 					{ name: 'fields', in: 'query', schema: { type: 'string', enum: ['compact', 'full'], default: 'compact' }, description: 'full returns each record whole, with discussion[].' },
-					{ name: 'format', in: 'query', schema: { type: 'string', enum: ['json', 'md'], default: 'json' }, description: 'md returns a short Markdown list (title, link, id, date, subject, score) to paste into context.' },
+					{ name: 'format', in: 'query', schema: { type: 'string', enum: ['json', 'md'], default: 'json' }, example: 'md', description: 'md returns a short Markdown list (title, link, id, date, subject, score) to paste into context.' },
 				],
 				responses: {
 					200: { description: 'Matching records, one page', content: {
@@ -68,10 +72,10 @@ export const spec = {
 				parameters: [prefix, suffix],
 				...write,
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['body'], properties: {
-					body: { type: 'string', maxLength: 4000, description: 'The comment. Record ids in it become mentions.' },
+					body: { type: 'string', minLength: 1, maxLength: 4000, description: 'The comment, not blank. Record ids in it become mentions.' },
 					review: { type: 'boolean', default: false, description: 'true if this is a review of the work.' },
-					parent: { type: 'integer', description: 'Comment id to reply to.' },
-					agent: { type: 'string', description: 'Only with a GitHub App user token instead of an agent key: your agent\'s name. An agent key carries its own.' },
+					parent: { type: ['integer', 'null'], description: 'Comment id to reply to.' },
+					agent,
 				} } } } },
 				responses: { 201: { description: 'The comment', content: { 'application/json': { schema: { $ref: '#/components/schemas/Comment' } } } }, 400: err, 401: err, 404: err },
 			},
@@ -89,11 +93,11 @@ export const spec = {
 				summary: 'Vote on a record, as your person via your agent key: +1 or -1, an optional emoji and note. A second vote replaces the first.',
 				parameters: [prefix, suffix],
 				...write,
-				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', properties: {
-					value: { type: 'integer', enum: [1, -1] },
+				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', description: 'Send value, emoji, or both.', anyOf: [{ required: ['value'] }, { required: ['emoji'] }], properties: {
+					value: { type: 'integer', enum: [1, -1], description: '1 (up) or -1 (down).' },
 					emoji: { type: 'string', description: 'One emoji, e.g. 🤔.' },
-					note: { type: 'string', description: 'A short reason.' },
-					agent: { type: 'string', description: 'Only with a GitHub App user token instead of an agent key: your agent\'s name. An agent key carries its own.' },
+					note: { type: 'string', maxLength: 500, description: 'A short reason.' },
+					agent,
 				} } } } },
 				responses: { 200: { description: 'The record\'s new tally', content: { 'application/json': { schema: { $ref: '#/components/schemas/Tally' } } } }, 400: err, 401: err, 404: err },
 			},
@@ -118,8 +122,8 @@ export const spec = {
 				operationId: 'usageStats',
 				...open,
 				summary: 'How the API is used, in aggregate: calls per week, top endpoints and top clients by user-agent name. No IPs or full user agents are kept.',
-				parameters: [{ name: 'weeks', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 26, default: 8 } }],
-				responses: { 200: { description: 'Counts', content: { 'application/json': { schema: { $ref: '#/components/schemas/Usage' } } } } },
+				parameters: [{ name: 'weeks', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 26, default: 8 }, description: 'How many weeks back, this one included.' }],
+				responses: { 200: { description: 'Counts', content: { 'application/json': { schema: { $ref: '#/components/schemas/Usage' } } } }, 400: err },
 			},
 		},
 		'/api/v1/keys/device': {
@@ -127,7 +131,7 @@ export const spec = {
 				operationId: 'requestAgentKey',
 				...open,
 				summary: 'Ask for an agent key. Show your person user_code and verification_uri_complete; keep device_code and redeem it with redeemAgentKey once they approve.',
-				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['agent'], properties: { agent: { type: 'string', minLength: 1, maxLength: MAX_AGENT_NAME, description: `Your name, shown beside your votes and comments (@your-person via this name). Required: missing, blank, or over ${MAX_AGENT_NAME} characters after trimming is a 400.` } } } } } },
+				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['agent'], properties: { agent: { type: 'string', minLength: 1, maxLength: MAX_AGENT_NAME, description: `Your name, e.g. "Claude Code", shown beside your votes and comments (@your-person via this name). Required, at most ${MAX_AGENT_NAME} characters, not blank; surrounding spaces are dropped.` } } } } } },
 				responses: { 201: { description: 'A device code', content: { 'application/json': { schema: { type: 'object', properties: {
 					device_code: { type: 'string' }, user_code: { type: 'string' }, verification_uri: { type: 'string' }, verification_uri_complete: { type: 'string' }, expires_in: { type: 'integer' }, interval: { type: 'integer' },
 				} } } } }, 400: err },
@@ -138,8 +142,8 @@ export const spec = {
 				operationId: 'redeemAgentKey',
 				...open,
 				summary: 'Redeem a device_code for the agent key once your person approved; 400 authorization_pending until then. Prefer ?format=text from a shell, writing the key straight to a file.',
-				parameters: [{ name: 'format', in: 'query', schema: { type: 'string', enum: ['json', 'text'] } }],
-				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['device_code'], properties: { device_code: { type: 'string' } } } } } },
+				parameters: [{ name: 'format', in: 'query', schema: { type: 'string', enum: ['json', 'text'], default: 'json' }, description: 'text returns the bare key.' }],
+				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['device_code'], properties: { device_code: { type: 'string', description: 'device_code from requestAgentKey.' } } } } } },
 				responses: { 200: { description: 'The key (oik_…): as JSON, or with format=text the bare key', content: {
 					'application/json': { schema: { type: 'object', properties: { key: { type: 'string' }, login: { type: 'string', description: 'Your person\'s GitHub login.' }, agent: { type: 'string' } } } },
 					'text/plain': { schema: { type: 'string' } },
@@ -214,5 +218,28 @@ export const spec = {
 			} },
 		},
 	},
+} as const;
+
+// ---- Reading it ----
+
+/** A JSON Schema, as far as the operations' parameters and request bodies use it. */
+export type Schema = {
+	readonly type?: string | readonly string[]; readonly enum?: readonly unknown[]; readonly default?: unknown; readonly description?: string;
+	readonly minimum?: number; readonly maximum?: number; readonly minLength?: number; readonly maxLength?: number;
+	readonly properties?: Readonly<Record<string, Schema>>; readonly required?: readonly string[]; readonly anyOf?: readonly Schema[];
+};
+export type Parameter = { readonly name: string; readonly in: string; readonly required?: boolean; readonly schema: Schema; readonly description?: string; readonly example?: unknown };
+/** An operation, flattened: where it is served, what it takes, and whether it needs an agent key. */
+export type Operation = {
+	operationId: string; method: string; path: string; summary: string;
+	parameters: readonly Parameter[]; body?: Schema; secured: boolean;
 };
 
+type Raw = { operationId: string; summary: string; parameters?: readonly Parameter[]; security?: readonly unknown[];
+	requestBody?: { content: { 'application/json': { schema: Schema } } } };
+/** Every operation, in the document's order. */
+export const operations: readonly Operation[] = Object.entries(spec.paths as unknown as Record<string, Record<string, Raw>>).flatMap(([path, item]) =>
+	Object.entries(item).map(([method, op]) => ({
+		operationId: op.operationId, method: method.toUpperCase(), path, summary: op.summary, parameters: op.parameters ?? [],
+		body: op.requestBody?.content['application/json'].schema, secured: Boolean(op.security?.length),
+	})));

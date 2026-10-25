@@ -18,10 +18,9 @@ const NAMES = prefixes.prefixes as Record<string, { name: string }>;
 export const source = (s: unknown) => ({ name: NAMES[String(s)]?.name ?? String(s), href: `/?q=source:${String(s)}` });
 export const recordPath = (id: unknown) => `/r/${idPath(id)}`;
 export type IdParams = { params: Promise<{ prefix: string; suffix: string }> };
-export const recordId = async ({ params }: IdParams) => {
-	const { prefix, suffix } = await params;
-	return `${decodeURIComponent(prefix)}/${decodeURIComponent(suffix)}`;
-};
+/** The record id from a route's prefix and suffix segments. */
+export const joinId = ({ prefix, suffix }: { prefix: string; suffix: string }) => `${decodeURIComponent(prefix)}/${decodeURIComponent(suffix)}`;
+export const recordId = async ({ params }: IdParams) => joinId(await params);
 // Where the work stands, in a sentence or two a person reviewed (index.py reception); the build serves only reviewed ones.
 export type Reception = { text: string; written?: string; links?: string[]; reviewed_by?: string };
 export const reception = (r: Record<string, unknown>): Reception | null => {

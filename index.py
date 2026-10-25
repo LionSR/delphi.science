@@ -9,7 +9,7 @@ copied: they are read from registry/entries/ at build time and shown with the AP
     python index.py harvest [--source NAME] [--limit N] [--dry-run]
     python index.py label [--all] [--labeler claude|none|canned:<file.json>]
     python index.py refresh [--older-than DAYS] [--limit N] [--dry-run]
-    python index.py discuss <record id> <url>... [--drop] [--dry-run]
+    python index.py discuss <record id> <url>... [--stance STANCE] [--drop] [--dry-run]
     python index.py discuss --recheck [<record id>...] [--dry-run]   # daily: deleted posts drop out
     python index.py build            # writes dist/: index.json, index.db, llms.txt
 """
@@ -289,7 +289,41 @@ def refresh(older_than: int, limit: int, dry_run: bool) -> int:
 
 
 # A link's fields that a person set, not the source: kept when the link is read again.
-KEPT = ("added",)
+KEPT = ("added", "stance")
+
+# What a response says about the record, set by a person (discuss --stance). Only the last three count as
+# upvotes in the popularity sorts, and so does a link with no stance yet; refutes or questions mark the
+# record disputed (is:disputed).
+STANCES = {
+    "refutes": "finds an error that breaks the main result",
+    "questions": "raises a gap: a mismatch (Lean against prose), a weaker statement than claimed, or a priority issue",
+    "reacts": "a general reaction, no technical claim",
+    "confirms": "checks the result, or formalizes it independently",
+    "simplifies": "a shorter or human-readable proof",
+    "extends": "builds on it",
+}
+UPVOTING = {"confirms", "simplifies", "extends"}
+DISPUTING = {"refutes", "questions"}
+
+
+def upvoting(links: list[dict[str, Any]]) -> int:
+    """How many responses count as upvotes: the ones that support the result, and those not yet labelled."""
+    return sum(1 for d in links if d.get("stance", "confirms") in UPVOTING)
+
+
+def disputed(links: list[dict[str, Any]]) -> bool:
+    return any(d.get("stance") in DISPUTING for d in links)
+
+
+def with_stance(link: dict[str, Any], stance: str) -> dict[str, Any]:
+    """The link with that stance; "none" clears it."""
+    out = {k: v for k, v in link.items() if k != "stance"}
+    return out if stance == "none" else {**out, "stance": stance}
+
+
+def link_url(url: str) -> str:
+    """A link as it is stored, to find it among a record's links without reading it again."""
+    return url.strip().replace("twitter.com/", "x.com/").split("?")[0]
 
 
 def recheck(links: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -321,9 +355,11 @@ def recheck_all(records: list[str], dry_run: bool) -> int:
     return 0
 
 
-def discuss(record: str, urls: list[str], drop: bool, dry_run: bool) -> int:
+def discuss(record: str, urls: list[str], drop: bool, dry_run: bool, stance: str | None = None) -> int:
     """Attach posts and articles about a record: X posts through oEmbed, anything else through its Open Graph tags.
-    Only voices with a public scholarly record are taken (see README); --drop removes links again."""
+    Only voices with a public scholarly record are taken (see README); --drop removes links again. With --stance,
+    new links are attached with that stance and links already attached take it without being read again
+    (--stance none clears it)."""
     if not urls:
         print("name the links to attach, or use --recheck")
         return 2
@@ -335,16 +371,23 @@ def discuss(record: str, urls: list[str], drop: bool, dry_run: bool) -> int:
     e = json.loads(path.read_text())
     links = e.get("discussion", [])
     if drop:
-        gone = {u.strip().replace("twitter.com/", "x.com/").split("?")[0] for u in urls}
+        gone = {link_url(u) for u in urls}
         links = [x for x in links if x["url"] not in gone]
         print(f"{len(e.get('discussion', [])) - len(links)} dropped")
     for url in [] if drop else urls:
+        old = next((x for x in links if x["url"] in (url.strip(), link_url(url))), None)
+        if old and stance:
+            links = [with_stance(x, stance) if x is old else x for x in links]
+            print(f"= {stance:<10} {old['url']}")
+            continue
         try:
             d = S.discussion_link(url)
         except (ValueError, S.NotFound, S.SourceError) as err:
             print(f"skipped {url}: {err}", file=sys.stderr)
             continue
-        links = [x for x in links if x["url"] != d["url"]] + [{**d, "added": S.today()}]
+        old = old or next((x for x in links if x["url"] == d["url"]), {})
+        new = {**d, "added": S.today(), **{k: old[k] for k in KEPT if k in old}}  # read again: keeps its stance
+        links = [x for x in links if x["url"] != d["url"]] + [with_stance(new, stance) if stance else new]
         print(f"+ {d.get('author') or d.get('site')}: {(d.get('text') or d.get('title') or d['url'])[:90]}")
     e["discussion"] = sorted(links, key=lambda d: d.get("date", ""))
     if not dry_run:
@@ -371,7 +414,7 @@ def rid(e: dict[str, Any]) -> str:
 
 # What is served of an X post: who, when and where. Its text is X's to show, in its own embed (the
 # record page renders one from the url), so it is never served, even from an entry file that still has it.
-X_FIELDS = ("kind", "url", "author", "handle", "date", "added")
+X_FIELDS = ("kind", "url", "author", "handle", "date", "added", "stance")
 
 
 def served_link(d: dict[str, Any]) -> dict[str, Any]:
@@ -387,6 +430,7 @@ def to_item(e: dict[str, Any]) -> dict[str, Any] | None:
     subject = TX.subject_of(e.get("domain"), r.get("subject"))
     return _drop_empty({
         "id": rid(e), **{k: e.get(k) for k in PASSTHROUGH}, "discussion": [served_link(d) for d in e.get("discussion") or []],
+        "disputed": disputed(e.get("discussion") or []) or None,
         "tags": list(dict.fromkeys([*(e.get("tags") or []), *(r.get("tags") or [])]))[:10],
         "published": e.get("published") or e.get("added"), "category": r.get("category", "research"),
         "subject": subject, "division": TX.division_of(subject) if subject else None,
@@ -467,6 +511,7 @@ def llms_txt(index: dict[str, Any]) -> str:
         "How to use the API: /api/v1. Search: /api/v1/search?q=<query> (arXiv syntax). One record: /api/v1/records/<id>.",
         "Vote or comment: POST /api/v1/records/<id>/vote or /comments, with an agent key or a GitHub token.",
         "What researchers said about a record: its discussion[] (X posts with url, author and date; articles also with a quote as text); is:discussed finds records that have any.",
+        "Each response may carry a stance, set by a person: refutes, questions, confirms, simplifies, extends or reacts. is:disputed finds records with a response that refutes or questions them.",
         "Whole index: index.db (SQLite) or index.json.",
         "",
         "Query examples:",
@@ -499,6 +544,7 @@ def main(argv: Iterable[str] | None = None) -> int:
     r = sub.add_parser("refresh"); r.add_argument("--older-than", type=int, default=7); r.add_argument("--limit", type=int, default=200); r.add_argument("--dry-run", action="store_true")
     d = sub.add_parser("discuss"); d.add_argument("record", nargs="?"); d.add_argument("urls", nargs="*"); d.add_argument("--drop", action="store_true"); d.add_argument("--dry-run", action="store_true")
     d.add_argument("--recheck", action="store_true", help="read every link again (or the named records' links); a deleted post drops out")
+    d.add_argument("--stance", choices=[*STANCES, "none"], help="what the links say about the record (see STANCES); set on links already attached without reading them again")
     sub.add_parser("build")
     args = ap.parse_args(list(argv) if argv is not None else None)
     S.TOKEN = github_token()
@@ -515,7 +561,7 @@ def main(argv: Iterable[str] | None = None) -> int:
             return recheck_all([x for x in [args.record, *args.urls] if x], args.dry_run)
         if not args.record:
             ap.error("discuss needs a record id, or --recheck")
-        return discuss(args.record, args.urls, args.drop, args.dry_run)
+        return discuss(args.record, args.urls, args.drop, args.dry_run, args.stance)
     return build()
 
 

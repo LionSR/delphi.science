@@ -1,0 +1,32 @@
+{
+  "name": "open-research-index",
+  "version": "1.0.0",
+  "description": "Search papers, preprints and formal proofs, and read what experts said about each, with sources.",
+  "author": {
+    "name": "Sirui Lu",
+    "url": "https://github.com/LionSR"
+  },
+  "homepage": "{{SITE}}",
+  "repository": "https://github.com/lionsr/open-research-index",
+  "keywords": ["research", "papers", "preprints", "arxiv", "mathematics", "formal proofs", "lean", "expert review"],
+  "mcpServers": "./mcp.json",
+  "interface": {
+    "displayName": "Open Research Index",
+    "shortDescription": "Papers beside what experts said about them",
+    "longDescription": "Open Research Index lists papers, preprints and formal proofs: AI-generated research such as OpenAI's mathematics release and agenticpapers.app, Lean formalization registries, and this year's arXiv in math, quant-ph and hep-th. Each record sits beside the expert responses the index has linked to it (arXiv replies, blog posts, talks, MathOverflow answers and X posts), each with its author, its date, a quote read from the source and a link. Ask about a paper and the assistant can find its record and show who responded and what they said. Read-only, no account needed. It covers only what the index holds: a record with no responses means none have been linked, not that none exist.",
+    "developerName": "Sirui Lu",
+    "category": "Research",
+    "capabilities": ["Read"],
+    "websiteURL": "{{SITE}}",
+    "defaultPrompt": [
+      "What did mathematicians say about OpenAI's quasi-Riemann hypothesis paper?",
+      "Which AI-generated papers got expert responses most recently?",
+      "Has anyone checked OpenAI's matrix multiplication exponent paper?"
+    ],
+    "brandColor": "#1F56A8",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png",
+    "logoDark": "./assets/icon.png",
+    "screenshots": []
+  }
+}

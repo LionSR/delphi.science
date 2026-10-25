@@ -55,15 +55,11 @@ export async function handle(run: () => Promise<Response>): Promise<Response> {
 	}
 }
 
-export const body = async (req: Request): Promise<Record<string, unknown>> => {
-	const b = await req.json().catch(() => null);
-	if (!b || typeof b !== 'object') throw new ApiError(400, 'bad_body', 'send a JSON object', 'Set Content-Type: application/json and send {...}.');
-	return b as Record<string, unknown>;
-};
-
 /**
  * A route handler that counts each call to `endpoint` (method and route pattern, e.g. 'GET /llms.txt') by the
  * caller's client (lib/usage.ts), after the response is sent: it never slows a request, and a failure is dropped.
+ * API operations get it from operation() (lib/operation.ts), named from the OpenAPI document; pages and guides
+ * that are not operations name themselves.
  */
 export const counted = <A extends unknown[]>(endpoint: string, run: (req: Request, ...rest: A) => Response | Promise<Response>) =>
 	(req: Request, ...rest: A) => {

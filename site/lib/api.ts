@@ -3,8 +3,10 @@
 // a signed-in person for one agent) or a GitHub token from this index's GitHub App, so nobody hands the
 // index a broader token. People on the site sign in with the same app (app/auth).
 import { checkToken } from '@octokit/oauth-methods';
+import { after } from 'next/server';
 import { db } from './db.ts';
 import { QueryError } from './query.ts';
+import { client, countCall } from './usage.ts';
 import { SITE } from './view.ts';
 import { voterFromKey, type Voter } from './votes.ts';
 
@@ -58,3 +60,16 @@ export const body = async (req: Request): Promise<Record<string, unknown>> => {
 	if (!b || typeof b !== 'object') throw new ApiError(400, 'bad_body', 'send a JSON object', 'Set Content-Type: application/json and send {...}.');
 	return b as Record<string, unknown>;
 };
+
+/**
+ * A route handler that counts each call to `endpoint` (method and route pattern, e.g. 'GET /llms.txt') by the
+ * caller's client (lib/usage.ts), after the response is sent: it never slows a request, and a failure is dropped.
+ */
+export const counted = <A extends unknown[]>(endpoint: string, run: (req: Request, ...rest: A) => Response | Promise<Response>) =>
+	(req: Request, ...rest: A) => {
+		const name = client(req.headers.get('user-agent'));
+		try {
+			after(() => db().then((d) => countCall(d, endpoint, name)).catch(() => {}));
+		} catch { /* outside a request (a build): nothing to count */ }
+		return run(req, ...rest);
+	};

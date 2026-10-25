@@ -4,7 +4,7 @@
 //   ti:grokking AND au:openai          title, author         (arXiv: ti, au, abs, all)
 //   abs:"zero-free region" ANDNOT ti:survey
 //   cat:math  cat:math.NT  cat:"number theory"              division, subdivision, or a subject name
-//   source:openai-math is:formalized is:discussed   category:research origin:ai-generated family:017 id:<id>
+//   source:openai-math is:formalized is:discussed is:disputed   category:research origin:ai-generated family:017 id:<id>
 //   published:[2026-10-01 TO *]        grok*  (prefix)      bare words search every text field
 //
 // Operators AND, OR, ANDNOT, NOT (uppercase), parentheses; adjacent terms are ANDed. Text terms rank by
@@ -31,19 +31,21 @@ const TEXT: Record<string, [column: string, config: string]> = {
 };
 const EXACT: Record<string, string> = { source: 'source', src: 'source', category: 'category', origin: 'origin', id: 'id', family: 'family' };
 // Posts and articles about the record (record.discussion, attached by index.py discuss; r.discussed is their
-// stored count). Each counts like an upvote in the popularity sorts: all of them in score, the ones attached in
-// the window in day, week and month.
+// stored count). Those that confirm, simplify or extend it, or have no stance yet (r.upvoting), count like an
+// upvote in the popularity sorts: all of them in score, the ones posted in the window in day, week and month.
+// One that refutes or questions it marks the record disputed instead.
 export const FLAGS: Record<string, string> = {
 	formalized: 'r.formalized', verified: 'r.verified', withdrawn: 'r.withdrawn', 'agent-ready': 'r.agent_ready',
 	'ai-generated': "r.origin = 'ai-generated'", app: "r.source = 'app'", gone: 'r.gone', discussed: 'r.discussed > 0',
+	disputed: 'r.disputed',
 };
-export const SORTS = ['relevance', 'newest', 'oldest', 'title', 'score', 'day', 'week', 'month', 'mentions'] as const;
+export const SORTS = ['relevance', 'newest', 'oldest', 'title', 'score', 'day', 'week', 'month', 'mentions', 'responded'] as const;
 export const MAX_LIMIT = 100;
 const COMPACT = ['id', 'source', 'title', 'authors', 'url', 'pdf', 'published', 'subject', 'division', 'category', 'origin',
-	'agent_ready', 'formalized', 'verified', 'withdrawn', 'family', 'ai_models', 'score', 'reactions', 'comments', 'reviews', 'mentions', 'discussed'];
+	'agent_ready', 'formalized', 'verified', 'withdrawn', 'disputed', 'family', 'ai_models', 'score', 'reactions', 'comments', 'reviews', 'mentions', 'discussed'];
 
 // The record as the API serves it: the stored JSON plus the live counts.
-const SERVED = `r.record || jsonb_build_object('score', r.score, 'reactions', r.reactions, 'comments', r.comments_count, 'reviews', r.reviews_count, 'mentions', r.mentions_count, 'discussed', r.discussed)`;
+const SERVED = `r.record || jsonb_build_object('score', r.score, 'reactions', r.reactions, 'comments', r.comments_count, 'reviews', r.reviews_count, 'mentions', r.mentions_count, 'discussed', r.discussed, 'disputed', r.disputed)`;
 
 // ---- Parsing ----
 
@@ -200,7 +202,7 @@ function decode(cursor?: string | null): { offset: number; total?: number } {
 	throw new QueryError('the cursor is not valid', 'Pass next_cursor from the previous reply unchanged.');
 }
 
-function compact(rec: Record<string, unknown>) {
+export function compact(rec: Record<string, unknown>) {
 	const out: Record<string, unknown> = {};
 	for (const k of COMPACT) {
 		const v = rec[k];
@@ -208,7 +210,6 @@ function compact(rec: Record<string, unknown>) {
 	}
 	const s = typeof rec.summary === 'string' ? rec.summary : '';
 	if (s) out.summary = s.length <= 240 ? s : s.slice(0, 239).replace(/\s+\S*$/, '') + '…';
-	out.links = { self: `/api/v1/records/${rec.id}` };
 	return out;
 }
 
@@ -220,29 +221,55 @@ export interface SearchOptions {
 	embedding?: number[]; // the query's embedding, for hybrid ranking
 }
 
-// day, week, month: as on SciRate, the net votes cast in that many days plus the posts and articles published in
-// them (a link's own date; the day it was attached only when the source gives none), then the newest. Almost no record has either, so only the candidates are ranked (the votes table, and the few rows with
-// links); the rest come from the published index, already in order, and only as many as the page needs.
-function recentSql(days: number, where: string, n: number): string {
-	return `WITH hot AS (
+// When a link (an element d of record.discussion) was posted: its own date, or the day it was attached when the
+// source gives none.
+const LINK_DATE = "coalesce(nullif(d->>'date', ''), d->>'added')";
+
+// day, week, month: as on SciRate, the net votes cast in that many days plus the posts and articles posted in
+// them that count as upvotes, then the newest.
+// mentions (most cited in comments): how many people's comments name the record by id, then the newest.
+// Almost no record has either, so only the candidates are ranked (hot: the votes table and the few rows with
+// links, or the few rows with mentions); the rest (cold) come from the published index, already in order, and
+// only as many as the page needs.
+type Ranked = (where: string) => { with?: string; hot: string; cold: string };
+
+const recent = (days: number): Ranked => (where) => ({
+	with: `hot AS (
 			SELECT id, sum(points)::int AS points FROM (
 				SELECT v.record_id AS id, v.value AS points FROM open_index.votes v WHERE v.at > now() - interval '${days} days'
 				UNION ALL
 				SELECT r.id, (SELECT count(*) FROM jsonb_array_elements(r.record->'discussion') d
-					WHERE coalesce(nullif(d->>'date', ''), d->>'added')::date > current_date - ${days})::int
+					WHERE ${LINK_DATE}::date > current_date - ${days}
+					AND coalesce(d->>'stance', 'confirms') IN ('confirms', 'simplifies', 'extends'))::int -- as index.py UPVOTING
 				FROM open_index.records r WHERE r.discussed > 0
-			) x GROUP BY id HAVING sum(points) <> 0),
+			) x GROUP BY id HAVING sum(points) <> 0),`,
+	hot: `SELECT r.*, h.points FROM open_index.records r JOIN hot h ON h.id = r.id WHERE ${where}`,
+	cold: 'NOT EXISTS (SELECT 1 FROM hot WHERE hot.id = r.id)',
+});
+
+// records_mentioned finds the few with mentions; joining them as a CTE instead lets the planner read every
+// record of a broad filter (cat:math) when the table has no statistics yet.
+const mentioned: Ranked = (where) => ({
+	hot: `SELECT r.*, r.mentions_count AS points FROM open_index.records r WHERE r.mentions_count > 0 AND ${where}`,
+	cold: 'r.mentions_count <= 0',
+});
+
+const RANKED: Record<string, Ranked> = { day: recent(1), week: recent(7), month: recent(30), mentions: mentioned };
+
+function rankedSql(ranked: Ranked, where: string, n: number): string {
+	const { with: ctes = '', hot, cold } = ranked(where);
+	return `WITH ${ctes}
 		cand AS (
-			SELECT r.*, h.points FROM open_index.records r JOIN hot h ON h.id = r.id WHERE ${where}
+			${hot}
 			UNION ALL
-			(SELECT r.*, 0 FROM open_index.records r WHERE ${where} AND NOT EXISTS (SELECT 1 FROM hot WHERE hot.id = r.id)
+			(SELECT r.*, 0 FROM open_index.records r WHERE ${where} AND ${cold}
 			 ORDER BY r.published DESC NULLS LAST, r.id LIMIT $${n + 1}::int + $${n + 2}::int))
 		SELECT ${SERVED} AS record FROM cand r ORDER BY r.points DESC, r.published DESC NULLS LAST, r.id LIMIT $${n + 1} OFFSET $${n + 2}`;
 }
 
 export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 	const t0 = performance.now();
-	const sort = opts.sort ?? 'relevance';
+	const sort = opts.sort ?? (q.trim() ? 'relevance' : 'newest');
 	if (!(SORTS as readonly string[]).includes(sort)) throw new QueryError(`unknown sort ${JSON.stringify(sort)}`, `Use sort=${SORTS.join(', sort=')}.`);
 	const fields = opts.fields ?? 'compact';
 	if (fields !== 'compact' && fields !== 'full') throw new QueryError(`unknown fields ${JSON.stringify(fields)}`, 'Use fields=compact (default) or fields=full.');
@@ -254,9 +281,10 @@ export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 	const total = known ?? Number((await db.query<{ n: number }>(`SELECT count(*)::int AS n FROM open_index.records r WHERE ${where}`, params)).rows[0].n);
 
 	const order: Record<string, string> = { newest: 'r.published DESC NULLS LAST, r.id', oldest: 'r.published ASC NULLS LAST, r.id',
-		title: 'lower(r.title), r.id', score: '(r.score + r.discussed) DESC, r.published DESC NULLS LAST, r.id', // records_top
-		mentions: 'r.mentions_count DESC, r.score DESC, r.id' };
-	const window: Record<string, number> = { day: 1, week: 7, month: 30 };
+		title: 'lower(r.title), r.id', score: '(r.score + r.upvoting) DESC, r.published DESC NULLS LAST, r.id', // records_top
+		// The newest response first. Only rows with links read their discussion, so the sort stays cheap on the whole index.
+		responded: `CASE WHEN r.discussed > 0 THEN (SELECT max(${LINK_DATE})
+			FROM jsonb_array_elements(r.record->'discussion') d) END DESC NULLS LAST, r.published DESC NULLS LAST, r.id` };
 	let sql: string;
 	let all = [...params];
 	if (sort === 'relevance' && (ranks.length || opts.embedding)) {
@@ -278,8 +306,8 @@ export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 		} else {
 			sql = `SELECT ${SERVED} AS record FROM open_index.records r WHERE ${where} ORDER BY ${rank} DESC, r.published DESC NULLS LAST LIMIT $${n + 1} OFFSET $${n + 2}`;
 		}
-	} else if (window[sort]) {
-		sql = recentSql(window[sort], where, n);
+	} else if (RANKED[sort]) {
+		sql = rankedSql(RANKED[sort], where, n);
 	} else {
 		sql = `SELECT ${SERVED} AS record FROM open_index.records r WHERE ${where} ORDER BY ${order[sort] ?? order.newest} LIMIT $${n + 1} OFFSET $${n + 2}`;
 	}
@@ -288,7 +316,8 @@ export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 	const next = offset + rows.length;
 	return {
 		query: q, sort, total, count: rows.length,
-		results: rows.map((r) => (fields === 'full' ? { ...r.record, links: { self: `/api/v1/records/${r.record.id}` } } : compact(r.record))),
+		results: rows.map((r): Record<string, unknown> =>
+			({ ...(fields === 'full' ? r.record : compact(r.record)), links: { self: `/api/v1/records/${r.record.id}` } })),
 		next_cursor: next < total && rows.length ? encode(next, total) : null,
 		took_ms: Math.round((performance.now() - t0) * 10) / 10,
 	};

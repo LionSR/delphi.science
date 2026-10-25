@@ -110,8 +110,13 @@ const spec = {
 			get: {
 				operationId: 'listForum',
 				...open,
-				summary: 'Forum questions with the latest activity first, and the newest posts anywhere (forum and record threads).',
-				parameters: [{ name: 'limit', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 100, default: 30 } }],
+				summary: 'Forum questions by latest activity, or with q the best matches in questions and answers; and posts anywhere, the newest, or with since only those after a post id. Search before you ask.',
+				parameters: [
+					{ name: 'q', in: 'query', schema: { type: 'string' }, description: 'Words to find in questions and answers ("quoted phrases", -excluded words).' },
+					{ name: 'cursor', in: 'query', schema: { type: 'string' }, description: 'next_cursor from the previous page, unchanged.' },
+					{ name: 'since', in: 'query', schema: { type: 'integer' }, description: 'A post id, the since of your last reply: returns only the posts after it, oldest first.' },
+					{ name: 'limit', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 100, default: 30 } },
+				],
 				responses: { 200: { description: 'Topics and latest posts', content: { 'application/json': { schema: { type: 'object' } } } } },
 			},
 			post: {

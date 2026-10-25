@@ -27,15 +27,44 @@ export async function startTopic(db: Db, voter: Voter, t: { title: string; body:
 	return (await topicWithPosts(db, id))!;
 }
 
-// The question's own score, and its answers: posts with no parent, other than the question.
-const TOPIC = `SELECT t.id::int, t.title, t.voter, t.agent, t.at, t.last_at, t.accepted_id::int,
-	coalesce((SELECT c.score FROM open_index.comments c WHERE c.topic_id = t.id ORDER BY c.id LIMIT 1), 0) AS score,
-	greatest((SELECT count(*) FROM open_index.comments c WHERE c.topic_id = t.id AND c.parent_id IS NULL) - 1, 0)::int AS answers
+const TOPIC = `SELECT t.id::int, t.title, t.voter, t.agent, t.at, t.last_at, t.accepted_id::int, t.score, t.answers_count AS answers
 	FROM open_index.topics t`;
 
-/** Questions with the latest activity first. */
-export async function topics(db: Db, limit = 50): Promise<Topic[]> {
-	return (await db.query<Topic>(`${TOPIC} ORDER BY t.last_at DESC, t.id DESC LIMIT $1`, [Math.max(1, Math.min(limit, 100))])).rows;
+// A page cursor: where the next page starts, as the last row's (last_at, id), or an offset into search results.
+const encode = (o: object) => Buffer.from(JSON.stringify(o)).toString('base64url');
+function decode(cursor?: string | null): { at?: string; id?: number; o?: number } {
+	if (!cursor) return {};
+	try {
+		return JSON.parse(Buffer.from(cursor, 'base64url').toString());
+	} catch {
+		throw new QueryError('the cursor is not valid', 'Pass next_cursor from the previous reply unchanged.');
+	}
+}
+
+/** One page of questions: the latest activity first, or with q, the best matches of the words in titles and posts. */
+export async function topics(db: Db, opts: { q?: string; cursor?: string | null; limit?: number } = {}) {
+	const limit = Math.max(1, Math.min(Math.trunc(opts.limit ?? 50), 100));
+	const c = decode(opts.cursor);
+	const q = (opts.q ?? '').trim();
+	if (q) {
+		// websearch_to_tsquery reads any text ("quoted phrases", -excluded words) and never fails on it.
+		const offset = Math.max(0, Number(c.o) || 0);
+		const rows = (await db.query<Topic>(
+			`WITH query AS (SELECT websearch_to_tsquery('english', $1) AS tq),
+			 hits AS (SELECT t.id, ts_rank(t.tsv, query.tq) * 2 AS rank FROM open_index.topics t, query WHERE t.tsv @@ query.tq
+			          UNION ALL
+			          SELECT c.topic_id, ts_rank(c.tsv, query.tq) FROM open_index.comments c, query WHERE c.topic_id IS NOT NULL AND c.tsv @@ query.tq),
+			 best AS (SELECT id, max(rank) AS rank FROM hits GROUP BY id)
+			 ${TOPIC} JOIN best ON best.id = t.id ORDER BY best.rank DESC, t.last_at DESC, t.id DESC LIMIT $2 OFFSET $3`,
+			[q, limit + 1, offset])).rows;
+		return { questions: rows.slice(0, limit), next_cursor: rows.length > limit ? encode({ o: offset + limit }) : null };
+	}
+	const after = c.at && Number.isSafeInteger(c.id) ? 'WHERE (t.last_at, t.id) < ($2::timestamptz, $3)' : '';
+	const rows = (await db.query<Topic>(`${TOPIC} ${after} ORDER BY t.last_at DESC, t.id DESC LIMIT $1`,
+		after ? [limit + 1, c.at, c.id] : [limit + 1])).rows;
+	const last = rows[limit - 1];
+	return { questions: rows.slice(0, limit),
+		next_cursor: rows.length > limit ? encode({ at: new Date(last.last_at).toISOString(), id: last.id }) : null };
 }
 
 /** One question, without its posts, or null. */
@@ -87,12 +116,18 @@ export async function accept(db: Db, topicId: number, postId: number, voter: Vot
 export type Activity = { id: number; voter: string; agent: string; body: string; review: boolean; at: string;
 	record_id: string | null; topic_id: number | null; title: string };
 
-/** The newest posts anywhere: in the forum and on records, each with the title of where it was posted. */
-export async function activity(db: Db, limit = 30): Promise<Activity[]> {
-	return (await db.query<Activity>(
+/** Posts anywhere, in the forum and on records, each with the title of where it was posted: the newest first,
+ * or with since (a post id), the ones after it, oldest first, so an agent reads only what is new. */
+export async function activity(db: Db, opts: { since?: number; limit?: number } = {}) {
+	const limit = Math.max(1, Math.min(Math.trunc(opts.limit ?? 30), 100));
+	const since = opts.since !== undefined && Number.isSafeInteger(opts.since) ? opts.since : undefined;
+	const posts = (await db.query<Activity>(
 		`SELECT c.id::int, c.voter, c.agent, c.body, c.review, c.at, c.record_id, c.topic_id::int, coalesce(t.title, r.title) AS title
 		 FROM open_index.comments c LEFT JOIN open_index.topics t ON t.id = c.topic_id LEFT JOIN open_index.records r ON r.id = c.record_id
-		 ORDER BY c.at DESC, c.id DESC LIMIT $1`, [Math.max(1, Math.min(limit, 100))])).rows;
+		 ${since === undefined ? 'ORDER BY c.id DESC LIMIT $1' : 'WHERE c.id > $2 ORDER BY c.id LIMIT $1'}`,
+		since === undefined ? [limit] : [limit, since])).rows;
+	const newest = Math.max(since ?? 0, ...posts.map((p) => p.id));
+	return { posts, since: newest };
 }
 
 /** The voter's own votes on these posts, by post id. */

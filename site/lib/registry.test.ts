@@ -140,14 +140,14 @@ describe('submitting and the forum, on Postgres', () => {
 		const full = (await topicWithPosts(db, t.id))!;
 		assert.deepEqual(full.answers.map((a) => a.id), [first.id, second.id].map(Number), 'oldest first while scores tie');
 		assert.deepEqual(full.answers[0].comments.map((c) => c.body), ['Which tokenizer?']);
-		assert.deepEqual([(await topics(db))[0].answers, (await topics(db))[0].score], [2, 0]);
-		const latest = await activity(db, 3);
+		assert.deepEqual([(await topics(db)).questions[0].answers, (await topics(db)).questions[0].score], [2, 0]);
+		const latest = (await activity(db, { limit: 3 })).posts;
 		assert.deepEqual(latest.map((p) => p.title), ['Attention Is All You Need', t.title, t.title]);
 		assert.deepEqual([(await get(db, 'arxiv/1706.03762'))?.mentions, (await get(db, 'arxiv/1706.03762'))?.comments], [1, 1]);
 	});
 
 	test('answers are voted on and sorted by score; the asker accepts one, and it goes first', async () => {
-		const t = (await topics(db))[0];
+		const t = (await topics(db)).questions[0];
 		const [first, second] = (await topicWithPosts(db, t.id))!.answers;
 		assert.deepEqual(await votePost(db, t.id, second.id, ada, 1), { post: second.id, score: 1 });
 		await votePost(db, t.id, second.id, bot, -1); // ada's agent: the same person, so it replaces ada's vote
@@ -159,6 +159,10 @@ describe('submitting and the forum, on Postgres', () => {
 		await accept(db, t.id, first.id, ada);
 		const after = (await topicWithPosts(db, t.id))!;
 		assert.deepEqual([after.accepted_id, after.answers[0].id, after.answers[0].accepted], [first.id, first.id, true], 'accepted first');
+		await votePost(db, t.id, after.question.id, cy, 1);
+		assert.equal((await topic(db, t.id))?.score, 1, 'a vote on the question is the question\'s score, kept on the topic');
+		await votePost(db, t.id, after.question.id, cy, 0);
+		assert.equal((await topic(db, t.id))?.score, 0);
 		await accept(db, t.id, first.id, ada);
 		assert.equal((await topic(db, t.id))?.accepted_id, null, 'accepting again takes it back');
 		await assert.rejects(accept(db, t.id, after.question.id, ada), /not an answer/);
@@ -168,10 +172,10 @@ describe('submitting and the forum, on Postgres', () => {
 		const strict: Moderator = async (p) => (/slop/.test(p.body) ? { publish: false, reason: 'Say what you checked.' } : { publish: true, reason: 'ok' });
 		const seen: Post[] = [];
 		const watch: Moderator = async (p) => (seen.push(p), strict(p));
-		const n = (await topics(db)).length;
+		const n = (await topics(db)).questions.length;
 		await assert.rejects(startTopic(db, bo, { title: 'Thoughts?', body: 'Some slop about it.' }, watch), /not posted: Say what you checked/);
-		assert.equal((await topics(db)).length, n, 'the refused question was removed');
-		const t = (await topics(db))[0];
+		assert.equal((await topics(db)).questions.length, n, 'the refused question was removed');
+		const t = (await topics(db)).questions[0];
 		await assert.rejects(post(db, { topic: t.id }, bo, { body: 'More slop.' }, watch), /not posted/);
 		await assert.rejects(comment(db, 'arxiv/1706.03762', bo, { body: 'slop review', review: true }, watch), /not posted/);
 		assert.deepEqual(seen.map((p) => [p.kind, p.title]), [['question', 'Thoughts?'], ['answer', t.title], ['review', 'Attention Is All You Need']]);
@@ -180,15 +184,49 @@ describe('submitting and the forum, on Postgres', () => {
 		assert.equal((await db.query("SELECT 1 FROM open_index.comments WHERE body LIKE '%slop%' OR body = 'A real answer.'")).rows.length, 0);
 	});
 
+	test('search, pages, and a feed of what is new', async () => {
+		const asked = [];
+		for (const w of ['spectral gaps', 'Ramsey numbers', 'Lean coercions']) asked.push(await startTopic(db, { login: `asker-${w}`, agent: '' }, { title: `What is known about ${w}?`, body: `Context on ${w}.` }));
+		await post(db, { topic: asked[0].id }, bo, { body: 'See the survey on expander graphs.' });
+		const ids = (r: { questions: { id: number }[] }) => r.questions.map((q) => q.id);
+		assert.deepEqual(ids(await topics(db, { q: 'Ramsey' })), [asked[1].id]);
+		assert.deepEqual(ids(await topics(db, { q: 'expander' })), [asked[0].id], 'answers are searched too');
+		assert.deepEqual(ids(await topics(db, { q: '"no such words"' })), []);
+		const all = ids(await topics(db));
+		const one = await topics(db, { limit: 2 });
+		const two = await topics(db, { limit: 2, cursor: one.next_cursor });
+		assert.deepEqual([...ids(one), ...ids(two)], all.slice(0, 4), 'pages follow on without gaps or repeats');
+		await assert.rejects(topics(db, { cursor: 'nonsense!' }), /cursor is not valid/);
+		const feed = await activity(db, { limit: 100 });
+		const mark = feed.since;
+		await post(db, { topic: asked[2].id }, bo, { body: 'Coercions insert ↑ casts; see Mathlib.' });
+		const fresh = await activity(db, { since: mark });
+		assert.deepEqual([fresh.posts.map((p) => p.body), fresh.since > mark], [['Coercions insert ↑ casts; see Mathlib.'], true]);
+		assert.deepEqual((await activity(db, { since: fresh.since })).posts, [], 'nothing new since');
+	});
+
+	test('a person may post 30 times a day and ask 5 questions, agents and refused posts included', async () => {
+		const dee = { login: 'dee', agent: '' }, deebot = { login: 'dee', agent: 'Claude Code' };
+		for (let i = 0; i < 5; i++) await startTopic(db, i % 2 ? deebot : dee, { title: `Question ${i}`, body: 'Specific details.' });
+		await assert.rejects(startTopic(db, deebot, { title: 'Question 5', body: 'Specific details.' }), /asked 5 questions today/);
+		const t = (await topics(db)).questions[0].id;
+		const no: Moderator = async () => ({ publish: false, reason: 'No.' });
+		await assert.rejects(post(db, { topic: t }, deebot, { body: 'x' }, no), /not posted/);
+		const used = (await db.query<{ n: number }>("SELECT count(*)::int AS n FROM open_index.moderations WHERE voter = 'dee'")).rows[0].n;
+		assert.equal(used, 6, 'the refused post counts');
+		for (let i = used; i < 30; i++) await post(db, { topic: t }, dee, { body: `Answer ${i}` });
+		await assert.rejects(post(db, { topic: t }, deebot, { body: 'One more.' }), /posted 30 times today, agents included/);
+	});
+
 	test('bad questions and replies are refused, and leave nothing behind', async () => {
-		const n = (await topics(db)).length;
+		const n = (await topics(db)).questions.length;
 		await assert.rejects(startTopic(db, bo, { title: '', body: 'x' }), /needs a title/);
 		const key = await createAgentKey(db, 'bo', 'Codex');
 		await assert.rejects(startTopic(db, bo, { title: 'my key', body: `here: ${key}` }), /contains an agent key/);
 		assert.equal(await voterFromKey(db, key), null);
-		assert.equal((await topics(db)).length, n, 'the refused question was removed');
+		assert.equal((await topics(db)).questions.length, n, 'the refused question was removed');
 		await assert.rejects(post(db, { topic: 999 }, bo, { body: 'x' }), /no topic 999/);
 		await assert.rejects(post(db, { topic: NaN }, bo, { body: 'x' }), /no topic/);
-		await assert.rejects(post(db, { topic: (await topics(db))[0].id }, bo, { body: 'x', parent: 999 }), /no comment 999/);
+		await assert.rejects(post(db, { topic: (await topics(db)).questions[0].id }, bo, { body: 'x', parent: 999 }), /no comment 999/);
 	});
 });

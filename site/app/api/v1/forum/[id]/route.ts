@@ -13,7 +13,7 @@ export const GET = (_req: Request, ctx: Ctx) =>
 		const id = Number((await ctx.params).id);
 		const t = await topicWithPosts(await db(), id);
 		if (!t) throw new QueryError(`no topic ${JSON.stringify(String((await ctx.params).id))}`, 'Use a topic id from GET /api/v1/forum.');
-		return Response.json(t);
+		return Response.json(t, { headers: { 'Cache-Control': 'public, s-maxage=10, stale-while-revalidate=60' } });
 	});
 
 export const POST = (req: Request, ctx: Ctx) =>

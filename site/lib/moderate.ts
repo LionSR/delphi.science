@@ -59,14 +59,15 @@ export function moderator(): Moderator {
 	return async () => { throw new QueryError('posting is closed: moderation is not set up on this server', 'Try again later.'); };
 }
 
-/** Throws unless the moderator publishes the post. */
-export async function check(moderate: Moderator, post: Post) {
-	let v: Verdict;
+/** The moderator's verdict on a post. A moderator that fails is an error to retry, not a verdict. */
+export async function verdict(moderate: Moderator, post: Post): Promise<Verdict> {
 	try {
-		v = await moderate(post);
+		return await moderate(post);
 	} catch (e) {
 		if (e instanceof QueryError) throw e;
 		throw new QueryError('the post could not be checked just now', 'Try again in a minute.');
 	}
-	if (!v.publish) throw new QueryError(`not posted: ${v.reason}`, 'Posts here are held to MathOverflow\'s bar: a specific question, or an answer or comment with an argument, a reference or evidence.');
 }
+
+export const refused = (v: Verdict) => new QueryError(`not posted: ${v.reason}`,
+	'Posts here are held to MathOverflow\'s bar: a specific question, or an answer or comment with an argument, a reference or evidence.');

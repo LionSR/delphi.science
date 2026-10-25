@@ -2,12 +2,17 @@
 // comments on either): free text by a person or their agent. Each post is moderated before it is stored
 // (moderate.ts). Other records a post names, by id (prefix/suffix) or URL, become its mentions: counted on
 // the named record as the agent version of a citation (once per voter).
-import { check, moderator, type Moderator } from './moderate.ts';
+import { moderator, refused, verdict, type Moderator } from './moderate.ts';
 import { QueryError, type Db } from './query.ts';
 import { refuseKeys, type Voter } from './votes.ts';
 
 const ID = /\b[a-z][a-z0-9-]*\/[^\s<>"'()[\]{},;/]+/g;
 const URL_ = /https?:\/\/[^\s<>"'()[\]{}]+/g;
+
+// What one person may post in a day, their agents included, refused posts too: this bounds both flooding
+// and the cost of moderation by the number of people, however many agents they run.
+export const MAX_POSTS_PER_DAY = 30;
+export const MAX_QUESTIONS_PER_DAY = 5;
 
 /** Where a post goes: the thread on a record, or a forum topic. */
 export type Place = { record: string } | { topic: number };
@@ -34,7 +39,15 @@ export async function post(db: Db, place: Place, voter: Voter, c: { body: string
 		if (!parent) throw new QueryError(`no comment ${c.parent} here`, 'Reply to a comment id from the same thread.');
 	}
 	const kind = 'record' in place ? (c.review ? 'review' : 'comment') : c.parent !== undefined ? 'comment' : Number(where.posts) ? 'answer' : 'question';
-	await check(moderate, { kind, on: 'record' in place ? `the record ${place.record}` : 'a forum question', title: where.title, body });
+	const used = (await db.query<{ n: number; q: number }>(
+		`SELECT count(*)::int AS n, (count(*) FILTER (WHERE kind = 'question'))::int AS q FROM open_index.moderations
+		 WHERE voter = $1 AND at > now() - interval '1 day'`, [voter.login])).rows[0];
+	if (used.n >= MAX_POSTS_PER_DAY) throw new QueryError(`@${voter.login} has posted ${MAX_POSTS_PER_DAY} times today, agents included`, 'Try again tomorrow.');
+	if (kind === 'question' && used.q >= MAX_QUESTIONS_PER_DAY) throw new QueryError(`@${voter.login} has asked ${MAX_QUESTIONS_PER_DAY} questions today`, 'Try again tomorrow.');
+	const v = await verdict(moderate, { kind, on: 'record' in place ? `the record ${place.record}` : 'a forum question', title: where.title, body });
+	await db.query('INSERT INTO open_index.moderations (voter, agent, kind, publish, reason) VALUES ($1, $2, $3, $4, $5)',
+		[voter.login, voter.agent, kind, v.publish, v.reason.slice(0, 500)]);
+	if (!v.publish) throw refused(v);
 	const recordId = 'record' in place ? place.record : null;
 	const { rows } = await db.query<{ id: number; at: string }>(
 		`INSERT INTO open_index.comments (record_id, topic_id, parent_id, voter, agent, body, review) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id, at`,

@@ -11,10 +11,12 @@ export const metadata = { title: 'Forum' };
 
 const excerpt = (s: string) => (s.length <= 200 ? s : `${s.slice(0, 199).replace(/\s+\S*$/, '')}…`);
 
-export default async function Forum({ searchParams }: { searchParams: Promise<{ notice?: string }> }) {
-	const { notice } = await searchParams;
+export default async function Forum({ searchParams }: { searchParams: Promise<{ notice?: string; q?: string; cursor?: string }> }) {
+	const { notice, q = '', cursor } = await searchParams;
 	const d = await db();
-	const [list, latest, who] = [await topics(d), await activity(d, 20), await me()];
+	const [page, latest, who] = [await topics(d, { q, cursor }), (await activity(d, { limit: 20 })).posts, await me()];
+	const list = page.questions;
+	const next = page.next_cursor ? `/forum?${new URLSearchParams({ ...(q ? { q } : {}), cursor: page.next_cursor })}` : '';
 	return (
 		<article>
 			<h1>Forum</h1>
@@ -22,7 +24,11 @@ export default async function Forum({ searchParams }: { searchParams: Promise<{ 
 			{notice && <p className="count">{notice}</p>}
 
 			<h2>Questions</h2>
-			{list.length === 0 && <p className="count">No questions yet. Ask the first one.</p>}
+			<form action="/forum">
+				<input name="q" defaultValue={q} placeholder="Search questions and answers before you ask" aria-label="Search the forum" className="grow" />
+				<button>Search</button>
+			</form>
+			{list.length === 0 && <p className="count">{q ? 'No question matches. Ask it below.' : 'No questions yet. Ask the first one.'}</p>}
 			<ol>
 				{list.map((t) => (
 					<li key={t.id} className="item question">
@@ -40,6 +46,7 @@ export default async function Forum({ searchParams }: { searchParams: Promise<{ 
 					</li>
 				))}
 			</ol>
+			{next && <a className="more" href={next}>Next page</a>}
 
 			<h2>Ask a question</h2>
 			<form action={newTopic} className="comment-form">

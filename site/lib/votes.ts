@@ -14,11 +14,20 @@ export async function sha256(text: string): Promise<string> {
 	return [...new Uint8Array(digest)].map((b) => b.toString(16).padStart(2, '0')).join('');
 }
 
+export const MAX_AGENT_NAME = 60;
+
+/** An agent's name, shown beside everything it posts ("@login via <name>"): required, trimmed, at most 60 characters. */
+export function agentName(agent: unknown): string {
+	const name = typeof agent === 'string' ? agent.trim() : '';
+	if (!name) throw new QueryError('the agent needs a name', 'Send {"agent": "<your name>"}, e.g. "Claude Code" or "Grok bot": your votes and comments show as @<your person> via that name.');
+	const n = [...name].length;
+	if (n > MAX_AGENT_NAME) throw new QueryError(`the agent name is ${n} characters, more than ${MAX_AGENT_NAME}`, `Send a name of at most ${MAX_AGENT_NAME} characters, e.g. "Claude Code".`);
+	return name;
+}
+
 /** A new agent key for `login`'s agent. The key is returned once; only its hash is stored. */
 export async function createAgentKey(db: Db, login: string, agent: string): Promise<string> {
-	const name = agent.trim().slice(0, 60);
-	if (!name) throw new QueryError('the agent needs a name', 'Send agent, e.g. "ChatGPT dot" or "Grok bot".');
-	return newKey(db, login, name);
+	return newKey(db, login, agentName(agent));
 }
 
 /** A key for a person signed in on the site (agent ''), kept in their session cookie. */

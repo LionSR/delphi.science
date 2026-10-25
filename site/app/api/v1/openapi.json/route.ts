@@ -1,6 +1,7 @@
 // GET /api/v1/openapi.json: the API as an OpenAPI 3.1 document, for agent frameworks that import tools
 // from one (LangChain, LlamaIndex, Semantic Kernel and others). Summaries stay under 300 characters and
 // parameter descriptions under 700, the limits tool importers commonly enforce.
+import { counted } from '../../../../lib/api.ts';
 import { SORTS } from '../../../../lib/query.ts';
 import { SITE } from '../../../../lib/view.ts';
 
@@ -103,6 +104,15 @@ const spec = {
 				responses: { 200: { description: 'Prefixes', content: { 'application/json': { schema: { type: 'object' } } } } },
 			},
 		},
+		'/api/v1/stats': {
+			get: {
+				operationId: 'usageStats',
+				...open,
+				summary: 'How the API is used, in aggregate: calls per week, top endpoints and top clients by user-agent name. No IPs or full user agents are kept.',
+				parameters: [{ name: 'weeks', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 26, default: 8 } }],
+				responses: { 200: { description: 'Counts', content: { 'application/json': { schema: { type: 'object' } } } } },
+			},
+		},
 		'/api/v1/keys/device': {
 			post: {
 				operationId: 'requestAgentKey',
@@ -158,4 +168,5 @@ const spec = {
 	},
 };
 
-export const GET = () => Response.json(spec, { headers: { 'Cache-Control': 'public, s-maxage=3600', 'Access-Control-Allow-Origin': '*' } });
+// Cached by the agent, not the CDN, so each fetch reaches track() and is counted.
+export const GET = counted('GET /api/v1/openapi.json', () => Response.json(spec, { headers: { 'Cache-Control': 'public, max-age=3600', 'Access-Control-Allow-Origin': '*' } }));

@@ -13,6 +13,7 @@ import atexit
 import contextlib
 import io
 import json
+import os
 import subprocess
 import sys
 import tempfile
@@ -116,7 +117,7 @@ class Checks(Stored):
     def test_app_repo_is_rejected(self) -> None:
         papers = index.load_entries()
         if not papers:
-            self.skipTest("no APP entries in registry/entries")
+            self.skipTest("no APP papers in the registry's published list")
         repo = papers[0]["repo_url"]
         owner, name = repo.rstrip("/").split("/")[-2:]
         problems = index.check(self.entry(key=f"{owner}__{name}", url=repo))
@@ -244,6 +245,36 @@ class Store(Stored):
         finally:
             S.BY_NAME["web"] = saved
         self.assertEqual(read, ["b", "c"])
+
+
+class Labeller(Stored):
+    """The labelling model, DeepSeek: its key, and what a label records."""
+
+    def test_the_key_is_the_environment_s_or_else_vault_s(self) -> None:
+        saved = os.environ.pop("DEEPSEEK_API_KEY", None)
+        index.deepseek_key.cache_clear()
+        try:
+            with self.assertRaises(SystemExit) as no:
+                index.deepseek_key()  # PGlite has no Vault
+            self.assertIn("deepseek_api_key in Supabase Vault", str(no.exception))
+            os.environ["DEEPSEEK_API_KEY"] = "sk-test"
+            self.assertEqual(index.deepseek_key(), "sk-test")
+        finally:
+            os.environ.pop("DEEPSEEK_API_KEY")
+            if saved is not None:
+                os.environ["DEEPSEEK_API_KEY"] = saved
+            index.deepseek_key.cache_clear()
+
+    def test_a_label_names_the_model(self) -> None:
+        index.save(Ref("web/a"), {"key": "a", "source": "web", "url": "https://e.org/a", "title": "A"})
+        saved, index.chat = index.chat, lambda system, user: '[{"key": "a", "category": "research", "subject": "math.NT", "tags": ["nt"], "reason": "A paper."}]'
+        try:
+            with contextlib.redirect_stdout(io.StringIO()):
+                index.label(False, "deepseek")
+        finally:
+            index.chat = saved
+        review = store.get("web/a")[1]["review"]
+        self.assertEqual((review["category"], review["by"]), ("research", "deepseek-chat"))
 
 
 class Discussion(unittest.TestCase):
@@ -414,18 +445,17 @@ class Stance(Entries):
     def test_the_labeler_gets_the_responses_as_data(self) -> None:
         seen = {}
 
-        def run(cmd: list, input: str | None = None, **kw: object) -> object:
-            if input is None:  # not the labeller: `gh auth token`, where gh is installed
-                return saved(cmd, **kw)
-            seen["prompt"] = input
-            return type("Done", (), {"returncode": 0, "stderr": "", "stdout": 'Sure. [{"url": "https://x.com/a/status/1", "stance": null}]'})()
+        def chat(system: str, user: str) -> str:
+            seen["system"], seen["user"] = system, user
+            return 'Sure. [{"url": "https://x.com/a/status/1", "stance": null}]'
 
-        saved, index.subprocess.run = index.subprocess.run, run
+        saved, index.chat = index.chat, chat
         try:
             self.cmd("discuss", "--propose-stances")
         finally:
-            index.subprocess.run = saved
-        data = json.loads(seen["prompt"].split("BEGIN_RECORDS\n")[1].split("\nEND_RECORDS")[0])
+            index.chat = saved
+        self.assertEqual(seen["system"], (index.HERE / "stance-prompt.md").read_text())
+        data = json.loads(seen["user"].split("BEGIN_RECORDS\n")[1].split("\nEND_RECORDS")[0])
         self.assertEqual(data, [{"id": "web/k", "title": "K", "summary": "", "responses": [
             {"url": "https://x.com/a/status/1", "kind": "x", "author": "A"}]}])
 

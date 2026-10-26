@@ -7,11 +7,11 @@ copied: they are read from the APP registry at build time and shown with the APP
 
     python index.py add <url or id> [--by <github login>] [--dry-run]
     python index.py harvest [--source NAME] [--limit N] [--dry-run]
-    python index.py label [--all] [--labeler claude|none|canned:<file.json>]
+    python index.py label [--all] [--labeler deepseek|none|canned:<file.json>]
     python index.py refresh [--older-than DAYS] [--limit N] [--dry-run]
     python index.py discuss <record id> <url>... [--stance STANCE] [--drop] [--dry-run]
     python index.py discuss --recheck [<record id>...] [--dry-run]   # daily: deleted posts drop out
-    python index.py discuss --propose-stances [<record id>...] [--labeler claude|canned:<file.json>]
+    python index.py discuss --propose-stances [<record id>...] [--labeler deepseek|canned:<file.json>]
     python index.py reception [<record id>] [--draft [--labeler ...] | --text TEXT] [--reviewed-by LOGIN] [--links URL...]
     python index.py build            # writes dist/index.json, which the site loads into open_index.records
 """
@@ -21,12 +21,16 @@ from __future__ import annotations
 import argparse
 import itertools
 import datetime as dt
+import functools
 import hashlib
 import json
+import os
 import re
 import shlex
 import subprocess
 import sys
+import urllib.error
+import urllib.request
 from pathlib import Path
 from collections import Counter
 from typing import Any, Iterable
@@ -224,26 +228,46 @@ def label_batch(batch: list[dict[str, Any]], labeler: str, canned: dict[str, Any
         return {e["key"]: canned[e["key"]] for e in batch if e["key"] in canned}
     data = [{"key": e["key"], "source": e["source"], "title": e["title"], "authors": e.get("authors", [])[:6],
              "summary": e.get("summary", ""), "tags": e.get("tags", [])[:8]} for e in batch]
-    replies = ask_claude("label-prompt.md", "ENTRIES", data)
+    replies = ask("label-prompt.md", "ENTRIES", data)
     return {r["key"]: r for r in replies if isinstance(r, dict) and r.get("category") in CATEGORIES}
 
 
-def ask_claude(prompt_file: str, name: str, data: Any, reply: str = r"\[.*\]") -> Any:
-    """The labelling agent's JSON reply to a prompt file, with the data between BEGIN_<name> and END_<name>.
-    It runs without tools: the data is third-party text, and the prompt says to treat it as such."""
-    prompt = (HERE / prompt_file).read_text() + f"\n\nBEGIN_{name}\n" + json.dumps(data, ensure_ascii=False) + f"\nEND_{name}\n"
-    out = subprocess.run(
-        ["claude", "-p", "--model", "haiku", "--output-format", "text", "--disallowedTools", "Bash,Edit,Write,WebFetch,WebSearch,Read"],
-        input=prompt, capture_output=True, text=True, timeout=300,
-    )
-    m = re.search(reply, out.stdout, re.S)
-    if out.returncode or not m:
-        raise RuntimeError(f"labeler failed: {out.stderr.strip() or out.stdout.strip()[:300]}")
+# The labelling model: DeepSeek, as the site's moderator (site/lib/moderate.ts), through its chat completions API.
+DEEPSEEK = "https://api.deepseek.com/chat/completions"
+MODEL = "deepseek-chat"
+
+
+@functools.cache
+def deepseek_key() -> str:
+    """DEEPSEEK_API_KEY, or else the secret deepseek_api_key in Supabase Vault, where the moderator reads it too."""
+    if key := os.environ.get("DEEPSEEK_API_KEY") or store.secret("deepseek_api_key"):
+        return key
+    raise SystemExit("no DeepSeek key: set DEEPSEEK_API_KEY, or the secret deepseek_api_key in Supabase Vault (see README)")
+
+
+def chat(system: str, user: str) -> str:
+    """The model's reply to one message."""
+    body = json.dumps({"model": MODEL, "temperature": 0, "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}]})
+    req = urllib.request.Request(DEEPSEEK, body.encode(), {"Authorization": f"Bearer {deepseek_key()}", "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=300) as r:
+        out = json.load(r)
+    try:
+        return out["choices"][0]["message"]["content"]
+    except (KeyError, IndexError, TypeError):
+        raise RuntimeError(f"DeepSeek gave no reply: {json.dumps(out)[:300]}") from None
+
+
+def ask(prompt_file: str, name: str, data: Any, reply: str = r"\[.*\]") -> Any:
+    """The labelling model's JSON reply to a prompt file, with the data between BEGIN_<name> and END_<name>.
+    It has no tools: the data is third-party text, and the prompt says to treat it as such."""
+    out = chat((HERE / prompt_file).read_text(), f"BEGIN_{name}\n{json.dumps(data, ensure_ascii=False)}\nEND_{name}")
+    if not (m := re.search(reply, out, re.S)):
+        raise RuntimeError(f"labeler gave no JSON: {out.strip()[:300]}")
     return json.loads(m.group(0))
 
 
-# How an ask_claude call fails: the agent errs or gives no JSON, gives broken JSON, or hangs.
-LABELER_ERRORS = (RuntimeError, json.JSONDecodeError, subprocess.TimeoutExpired)
+# How an ask call fails: the API errs or hangs, or the model gives no JSON or broken JSON.
+LABELER_ERRORS = (RuntimeError, json.JSONDecodeError, urllib.error.URLError, TimeoutError)
 
 
 def canned_replies(labeler: str) -> Any:
@@ -274,7 +298,7 @@ def label(relabel_all: bool, labeler: str, limit: int | None = None, missing_sub
             r = replies.get(e["key"])
             if r:
                 e["review"] = _drop_empty({"category": r["category"], "subject": str(r.get("subject", ""))[:24], "tags": [str(t) for t in r.get("tags", [])][:6],
-                                           "reason": str(r.get("reason", ""))[:200], "by": labeler if labeler != "claude" else "claude-haiku", "at": S.today()})
+                                           "reason": str(r.get("reason", ""))[:200], "by": MODEL if labeler == "deepseek" else labeler, "at": S.today()})
                 try:
                     save(ref, e)
                 except Conflict as err:
@@ -409,7 +433,7 @@ def propose_stances(records: list[str], labeler: str) -> int:
         data = [{"id": rid(e), "title": e["title"], "summary": e.get("summary", ""),
                  "responses": [pick(d, ("url", "kind", "author", "title", "text")) for d in unlabelled(e)]} for e in batch]
         try:
-            replies = canned if canned is not None else {r["url"]: r for r in ask_claude("stance-prompt.md", "RECORDS", data) if isinstance(r, dict) and "url" in r}
+            replies = canned if canned is not None else {r["url"]: r for r in ask("stance-prompt.md", "RECORDS", data) if isinstance(r, dict) and "url" in r}
         except LABELER_ERRORS as err:
             print(f"skipped {len(batch)} records: {err}", file=sys.stderr)
             continue
@@ -521,7 +545,7 @@ def draft_reception(e: dict[str, Any], labeler: str) -> dict[str, Any]:
     else:
         data = {"id": rid(e), "title": e["title"], "summary": e.get("summary", ""), "withdrawn": e.get("withdrawn_on") or bool(e.get("withdrawn")),
                 "responses": [pick(d, ("url", "kind", "author", "site", "date", "stance", "title", "text")) for d in labelled]}
-        reply = ask_claude("reception-prompt.md", "RECORD", data, reply=r"\{.*\}")
+        reply = ask("reception-prompt.md", "RECORD", data, reply=r"\{.*\}")
     if not isinstance(reply, dict):
         raise ValueError("the labeler did not reply with an object")
     text = S.clean(str(reply.get("text", "")))
@@ -529,7 +553,7 @@ def draft_reception(e: dict[str, Any], labeler: str) -> dict[str, Any]:
         raise ValueError("the labeler gave no text")
     urls = {d["url"] for d in labelled}
     return {"text": text[:RECEPTION_CHARS], "links": [u for u in reply.get("links", []) if u in urls] or sorted(urls),
-            "drafted_by": labeler if canned is not None else "claude-haiku"}
+            "drafted_by": labeler if canned is not None else MODEL}
 
 
 def list_receptions() -> int:
@@ -703,16 +727,16 @@ def main(argv: Iterable[str] | None = None) -> int:
     sub = ap.add_subparsers(dest="cmd", required=True)
     a = sub.add_parser("add"); a.add_argument("url"); a.add_argument("--by", default=""); a.add_argument("--dry-run", action="store_true")
     h = sub.add_parser("harvest"); h.add_argument("--source"); h.add_argument("--limit", type=int); h.add_argument("--dry-run", action="store_true")
-    lb = sub.add_parser("label"); lb.add_argument("--all", action="store_true"); lb.add_argument("--labeler", default="claude"); lb.add_argument("--limit", type=int); lb.add_argument("--missing-subject", action="store_true")
+    lb = sub.add_parser("label"); lb.add_argument("--all", action="store_true"); lb.add_argument("--labeler", default="deepseek"); lb.add_argument("--limit", type=int); lb.add_argument("--missing-subject", action="store_true")
     r = sub.add_parser("refresh"); r.add_argument("--older-than", type=int, default=7); r.add_argument("--limit", type=int, default=200); r.add_argument("--dry-run", action="store_true")
     d = sub.add_parser("discuss"); d.add_argument("record", nargs="?"); d.add_argument("urls", nargs="*"); d.add_argument("--drop", action="store_true"); d.add_argument("--dry-run", action="store_true")
     d.add_argument("--recheck", action="store_true", help="read every link again (or the named records' links); a deleted post drops out")
     d.add_argument("--stance", choices=[*STANCES, "none"], help="what the links say about the record (see site/lib/stances.json); set on links already attached without reading them again")
     d.add_argument("--propose-stances", action="store_true", help="the labelling agent proposes stances for unlabelled links (or the named records'); prints them as commands, writes nothing")
-    d.add_argument("--labeler", default="claude", help="for --propose-stances: claude, or canned:<file.json>")
+    d.add_argument("--labeler", default="deepseek", help="for --propose-stances: deepseek, or canned:<file.json>")
     rc = sub.add_parser("reception"); rc.add_argument("record", nargs="?"); rc.add_argument("--draft", action="store_true"); rc.add_argument("--text")
     rc.add_argument("--reviewed-by", help="the GitHub login of the person who checked the text against its links; publishes it")
-    rc.add_argument("--links", nargs="+", help="the links the text rests on (default: all of the record's)"); rc.add_argument("--labeler", default="claude")
+    rc.add_argument("--links", nargs="+", help="the links the text rests on (default: all of the record's)"); rc.add_argument("--labeler", default="deepseek")
     rc.add_argument("--dry-run", action="store_true")
     sub.add_parser("build")
     args = ap.parse_args(list(argv) if argv is not None else None)

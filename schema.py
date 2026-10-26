@@ -1,7 +1,6 @@
-"""The schemas of site/openapi.json (written from site/lib/openapi.ts by `npm run openapi`), checked from Python:
-store.py checks every Entry it writes, and index.py build every Record it serves, so the harvester and the site
-agree on both. Standard library only; it covers the keywords the document uses. Objects are checked closed: a
-field the schema does not list is a problem, so nothing is stored or served that the document leaves out.
+"""Validates Entry and Record dictionaries against the OpenAPI schemas in site/openapi.json (generated from
+site/lib/openapi.ts via `npm run openapi`). Objects are validated closed so undocumented fields are rejected
+on both store writes and index builds.
 """
 
 from __future__ import annotations

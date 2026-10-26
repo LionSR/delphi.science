@@ -301,7 +301,8 @@ def saved(ref: Ref, entry: dict[str, Any]) -> bool:
 
 def refresh(older_than: int, limit: int, dry_run: bool) -> int:
     cutoff = (dt.date.today() - dt.timedelta(days=older_than)).isoformat()
-    stale = load("coalesce(entry->>'refreshed', '') <= %s", [cutoff], limit)
+    # The stalest first, so an entry its source keeps failing on does not hold back the rest.
+    stale = load("coalesce(entry->>'refreshed', '') <= %s", [cutoff], limit, f"coalesce(entry->>'refreshed', ''), {store.ID_ORDER}")
     changed = gone = 0
     for ref, e in stale:
         src = S.BY_NAME[e["source"]]

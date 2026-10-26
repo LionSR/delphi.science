@@ -54,10 +54,13 @@ def conn() -> psycopg.Connection:
     return _conn
 
 
-def load(where: str = "true", params: Iterable[Any] = (), limit: int | None = None) -> list[tuple[Ref, dict[str, Any]]]:
-    """The entries that match a condition on `entry` (jsonb) or `source`, in id order; the first `limit` of them.
-    The order is by bytes, as Python sorts, not by the database's locale, so a build comes out the same anywhere."""
-    rows = conn().execute(f"SELECT id, version, entry FROM open_index.entries WHERE {where} ORDER BY id COLLATE \"C\" LIMIT %s",
+ID_ORDER = 'id COLLATE "C"'
+
+
+def load(where: str = "true", params: Iterable[Any] = (), limit: int | None = None, order: str = ID_ORDER) -> list[tuple[Ref, dict[str, Any]]]:
+    """The entries that match a condition on `entry` (jsonb) or `source`, in id order (or `order`); the first `limit`
+    of them. The order is by bytes, as Python sorts, not by the database's locale, so a build comes out the same anywhere."""
+    rows = conn().execute(f"SELECT id, version, entry FROM open_index.entries WHERE {where} ORDER BY {order} LIMIT %s",
                           [*params, limit])
     return [(Ref(i, v), e) for i, v, e in rows]
 

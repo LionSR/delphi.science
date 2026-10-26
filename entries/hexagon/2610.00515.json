@@ -1,0 +1,37 @@
+{
+  "key": "2610.00515",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00515v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00515v1",
+  "title": "Optimizing a cube–ball lower bound for the reverse Brunn–Minkowski constant",
+  "authors": [
+    "Ricardo Pinho"
+  ],
+  "summary": "We optimize a single term in the cube–Euclidean-ball construction of V. Patankar to obtain C_70 >= exp(1/(2e)) > 1.20194336847. The strongest public proposal located and reproduced in our dated source audit is Patankar's 1.201927, whose specified witness evaluates near 1.2019271425725. A separate finite-dimensional witness certifies 1.20194336. Two separately written arithmetic implementations, using Arb and rational logarithm/Stirling bounds respectively, verify the numerical comparisons and reject corrupted or excessive claims. The geometric reduction and passage to the limit are proved…",
+  "domain": "math.MG",
+  "tags": [
+    "msc:52A40",
+    "msc:52A20",
+    "centrally symmetric convex bodies",
+    "cube and Euclidean ball",
+    "exact certificates",
+    "intrinsic volumes",
+    "reverse Brunn–Minkowski inequality",
+    "rigorous arithmetic"
+  ],
+  "published": "2026-10-26",
+  "updated": "2026-10-23",
+  "version": 1,
+  "ai_models": [
+    "Codex",
+    "Arb ball arithmetic (python-flint)"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "some",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-26",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-26"
+}

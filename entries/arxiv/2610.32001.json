@@ -1,0 +1,22 @@
+{
+  "key": "2610.32001",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.32001",
+  "title": "QuantumMatterExplorer: An Autonomous Agent for the Discovery of Quantum Many-Body Phases of Matter",
+  "authors": [
+    "Jannes Nys",
+    "Andrew Jreissaty",
+    "Juan Carrasquilla"
+  ],
+  "summary": "Mapping the phase diagram of a new quantum Hamiltonian demands expert judgement at every step: which observables to measure, where in parameter space to compute, or how to separate genuine order from finite-size artefacts. We introduce QuantumMatterExplorer, an autonomous agent that takes only a Hamiltonian and its parameter ranges as input and returns a phase diagram obtained from its own numerical simulations. The agent is built on a large language model and is designed to reason over a long horizon, maintain a persistent written plan, and drive a set of computational tools, with…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph",
+    "cond-mat.str-el"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-quant-ph-2026q4",
+  "refreshed": "2026-10-26"
+}

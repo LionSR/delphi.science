@@ -1,0 +1,21 @@
+{
+  "key": "2610.32080",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.32080",
+  "title": "Continuous-Time Wasserstein Distributionally Robust Control: Limits, Duality, and Stability",
+  "authors": [
+    "Minjung Gim",
+    "Hee Jun Yang",
+    "Yeoneung Kim"
+  ],
+  "summary": "A sampled robust control problem averages future values over disturbance laws, while its continuous-time counterpart evolves with an averaged drift. We establish a fluid limit connecting these two models for Wasserstein ambiguity sets. Under a uniform disturbance moment bound and subcritical growth, sampled Bellman values converge locally uniformly to the upper and lower values of a discounted differential game. The argument accommodates unbounded disturbances without requiring square-integrable increments. We also derive an explicit bound on the change in either game value when both the…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-26"
+}

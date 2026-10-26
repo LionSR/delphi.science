@@ -1,0 +1,23 @@
+{
+  "key": "2610.31836",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.31836",
+  "title": "High-order Simulation of Nearly Hydrostatic Atmospheric Flows",
+  "authors": [
+    "Shoyon Panday",
+    "Stéphane Gaudreault",
+    "Carlos Pereira",
+    "Philipp Birken"
+  ],
+  "summary": "Accurate simulation of atmospheric flows is challenging. Low-Mach-number dynamics often need to be resolved in the presence of a dominant, nearly hydrostatic background state. Conventional upwind numerical fluxes can introduce excessive acoustic-speed-based dissipation in the low-Mach regime. Discretization errors in the balance law can also generate spurious motion. This work investigates these two issues within a high-order Direct Flux Reconstruction (DFR) framework coupled with a third-order exponential time integrator for the 3D compressible Euler equations with gravity. Low-Mach-number…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "math.NA"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-26"
+}

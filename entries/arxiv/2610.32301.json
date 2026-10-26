@@ -1,0 +1,21 @@
+{
+  "key": "2610.32301",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.32301",
+  "title": "Continuous-Time Mean-Variance Portfolio Selection Reinforcement Learning Problems for a Markov Regime-Switching System with No-Shorting Constraints",
+  "authors": [
+    "Minghui Zhang",
+    "Xun Li",
+    "Xin Zhang"
+  ],
+  "summary": "This paper is the first to study the continuous-time mean-variance portfolio selection problem with no-shorting constraints in a Markov regime-switching market using reinforcement learning (RL). The main challenge stems from the interaction between random regime shifts and portfolio non-negativity constraints, which typically causes the coupled Hamilton-Jacobi-Bellman (HJB) equations to lose smoothness across different state regions. Additionally, directly imposing no-shorting constraints on randomized policies disrupts their analytically tractable Gaussian structure, complicating both…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-26"
+}

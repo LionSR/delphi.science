@@ -1,0 +1,23 @@
+{
+  "key": "2610.32167",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.32167",
+  "title": "Solving and Learning Navier-Stokes Dynamics with the Neural Basis Method",
+  "authors": [
+    "Yuhe Wang",
+    "Zhu Wang",
+    "Min Wang"
+  ],
+  "summary": "Physics-informed machine learning has become a major direction in predictive modeling of fluid dynamics, combining governing physics with learned representations. Yet prevailing formulations neither guarantee that small PDE-residual losses imply small solution errors nor scale effectively with increasing problem size. Here we present the neural basis method (NBM) as a new approach for Navier--Stokes dynamics. NBM is built on a ``representation-then-projection'' principle: fixed neural bases define the representation space, while projection of the governing equations determines the expansion…",
+  "domain": "physics.flu-dyn",
+  "tags": [
+    "physics.flu-dyn",
+    "cs.LG",
+    "math.NA"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-26"
+}

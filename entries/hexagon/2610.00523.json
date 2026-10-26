@@ -1,0 +1,37 @@
+{
+  "key": "2610.00523",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00523v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00523v1",
+  "title": "Positive density of Collatz convergence at every rate above 3/log(4/3)",
+  "authors": [
+    "Idris Ali Shaik"
+  ],
+  "summary": "We prove that a positive proportion of positive integers reach 1 within c log x ordinary Collatz steps for every fixed c > 3/log(4/3), with one positive lower natural-density bound independent of c. For each fixed positive target not divisible by three, the same range of times holds with a target-dependent bound, irrespective of its subsequent orbit. Targets divisible by three have predecessor basins of natural density zero. Diagonalization gives one positive-density set with a vanishing excess above the limiting time coefficient. The proof extends weighted inverse trajectories from a fixed…",
+  "domain": "math.NT",
+  "tags": [
+    "math.DS",
+    "msc:11B83",
+    "msc:37P99",
+    "Collatz problem",
+    "Fourier decay",
+    "formal verification",
+    "hitting times",
+    "inverse trajectories",
+    "lower natural density"
+  ],
+  "published": "2026-10-26",
+  "updated": "2026-10-24",
+  "version": 1,
+  "authorship": "mixed",
+  "human_understanding": "all",
+  "origin": "ai-generated",
+  "formalized": true,
+  "formalizations": [
+    "https://palomar-registry.org/entry?id=PALOMAR-2026-09-23-000002&version=1"
+  ],
+  "withdrawn": false,
+  "added": "2026-10-26",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-26"
+}

@@ -1,0 +1,24 @@
+{
+  "key": "2610.31978",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.31978",
+  "title": "Parallel Trends as a Spectrum",
+  "authors": [
+    "Kyle Schindl",
+    "Joseph Fry",
+    "Florian Gunsilius",
+    "Larry Wasserman"
+  ],
+  "summary": "Difference-in-differences (DiD) designs are typically used to identify and estimate average causal effects, even though treatment can affect the entire outcome distribution. This has led to a growing interest in distributional DiD methods. However, identifying the full counterfactual distribution requires a parallel trends assumption on the entire distributional dynamics, which can be too strong in practice. We address this problem by introducing a spectrum of identifying restrictions that lie between the average and fully distributional DiD by imposing parallel trends on $L$-moments. This…",
+  "domain": "stat.ME",
+  "tags": [
+    "stat.ME",
+    "econ.EM",
+    "math.ST"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-26"
+}

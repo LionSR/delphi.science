@@ -1,0 +1,32 @@
+{
+  "key": "2610.32801",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.32801",
+  "title": "Multiplicative vs. Additive State Coupling in Learned Optimizer Schedules",
+  "authors": [
+    "M. Harper Langston",
+    "Pierre-David Letourneau",
+    "Dalton Jones",
+    "Roland Memisevic",
+    "Peter Scott",
+    "Mingu Lee",
+    "Richard A. Lethin",
+    "Christopher Lott",
+    "Fatih Porikli",
+    "Harris Teague"
+  ],
+  "summary": "We learn schedules for a continuous penalty relaxation of MAX-CUT by backpropagating through an unrolled classical solver. A state-blind schedule generalizes to instances substantially larger than those used for training. A state-adaptive bilinear schedule also generalizes out of distribution, outperforming its untrained baseline across 15 seeds ($t=4.1$). By contrast, an additive ablation with identical inputs and output heads is statistically indistinguishable from the bilinear model in distribution but performs worse than its own baseline out of distribution ($t=-11.7$). This separation…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL",
+    "math.NA",
+    "math.OC"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-26"
+}

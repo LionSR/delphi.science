@@ -1,0 +1,22 @@
+{
+  "key": "2610.32006",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.32006",
+  "title": "Strengthening AC optimal power flow relaxation through offline bound tightening and linear approximations",
+  "authors": [
+    "Xiangxin An",
+    "Constance Crozier",
+    "Santanu S. Dey"
+  ],
+  "summary": "The alternating-current optimal power flow (ACOPF) problem is fundamental to power system operation and planning, but its nonconvexity makes globally optimal solutions of large-scale instances computationally challenging. Convex relaxations provide tractable lower bounds for assessing solution quality and supporting global optimization, although their effectiveness depends strongly on relaxation strength. This paper proposes an offline convexification and bound tightening framework for constructing strong linear programming (LP) relaxations for families of related ACOPF instances. Rather…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "eess.SY"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-26"
+}

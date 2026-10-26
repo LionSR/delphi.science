@@ -1,0 +1,22 @@
+{
+  "key": "2610.32089",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.32089",
+  "title": "Timed Recovery Safe Gradient Flows for Constrained Nonlinear Programming",
+  "authors": [
+    "Tianxi Luo",
+    "Yue Wu",
+    "Fei Chen",
+    "Hongsheng Qi"
+  ],
+  "summary": "This paper studies how to relax pointwise feasibility in continuous-time dynamics for inequality-constrained nonlinear programming while retaining a quantitative feasible-recovery guarantee. Existing safe gradient flows enforce forward invariance of the feasible set, which yields an anytime-feasible dynamics but can be overly restrictive for optimization because it suppresses transient infeasible motion that may be essential for effective descent. To address this limitation, we propose a timed recovery safe gradient flow that replaces pointwise feasibility with fixed-horizon feasible…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-26"
+}

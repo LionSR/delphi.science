@@ -1,0 +1,22 @@
+{
+  "key": "2610.32798",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.32798",
+  "title": "Proximity Theorem and FPT Algorithm for Minimum Group-labeled Matroid Bases",
+  "authors": [
+    "Siyue Liu",
+    "Taihei Oki",
+    "Chao Xu"
+  ],
+  "summary": "Let $M$ be a matroid, let $\\ell:E(M)\\to G$ be a labeling of its elements by an abelian group, and let $F\\subseteq G$ be finite. A base is $F$-avoiding if the label sum of its elements is not in $F$. We prove that, for arbitrary costs, a min-cost $F$-avoiding base can be obtained from any min-cost base using at most $|F|$ exchanges. This resolves the weighted proximity conjecture by Hörsch, Imolay, Mizutani, Oki, and Schwarcz. Our main technical tool is to replace the assumption of Schrijver--Seymour Conjecture in Liu and Xu's earlier work with Kemperman--Scherk Theorem. The proximity theorem…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "cs.DS"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-26"
+}

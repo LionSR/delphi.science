@@ -1,0 +1,24 @@
+{
+  "key": "2610.32185",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.32185",
+  "title": "An exploration of plug-and-play flow matching for full-waveform inversion on breast imaging",
+  "authors": [
+    "Cristina Garcia-Cardona",
+    "Siting Liu",
+    "Fatma Terzioglu",
+    "Shanyin Tong",
+    "Lu Zhang"
+  ],
+  "summary": "Full-waveform inversion (FWI) reconstructs sound-speed fields from measured waveforms, by solving an optimization problem that minimizes the discrepancy between measured waveforms and those predicted by a numerical wave-propagation model. However, choosing suitable regularization for this optimization is challenging because it must stabilize the inversion while preserving relevant structures, prompting us to investigate whether priors learned from representative sound-speed images can improve reconstruction. In this work, we adapt plug-and-play flow matching (PnP-Flow) to FWI by alternating…",
+  "domain": "eess.IV",
+  "tags": [
+    "eess.IV",
+    "math.NA"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-26"
+}

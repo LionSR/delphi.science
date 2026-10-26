@@ -1,0 +1,24 @@
+{
+  "key": "2610.31814",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.31814",
+  "title": "SILMARILS-MV: Information-Theoretically Secure Multi-Verifier Signatures with Dealer-Free Key Issuance and Linear Aggregation for Permissioned Blockchains",
+  "authors": [
+    "Khadijeh Bagheri",
+    "Hassan Khodaiemehr",
+    "Chen Feng"
+  ],
+  "summary": "Permissioned blockchains authenticate transactions, votes and quorum certificates with computationally secure signatures, and post-quantum replacements inflate consensus traffic by orders of magnitude. Information-theoretic alternatives have required a trusted authority, quantum channels, per-signature interaction, or single-use keys with bounded transfer. We present SILMARILS-MV, a multi-verifier unconditionally secure signature in which a signature is the vector $α= A\\,e(m)$ and each verifier holds a secret functional $c_i = Γ^T λ(x_i)$ derived from virtual anchors $Γ$ that nobody learns.…",
+  "domain": "cs.CR",
+  "tags": [
+    "cs.CR",
+    "cs.DC",
+    "cs.IT",
+    "quant-ph"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-quant-ph-2026q4",
+  "refreshed": "2026-10-26"
+}

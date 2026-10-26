@@ -1,0 +1,25 @@
+{
+  "key": "2610.31807",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.31807",
+  "title": "Additive energy and Fourier complexity of graphs",
+  "authors": [
+    "Vishal Gupta",
+    "Sam Ferguson",
+    "Alex Iosevich",
+    "Joshua Iosevich",
+    "Haoyuan Tian",
+    "Ben Song"
+  ],
+  "summary": "We study the additive energy and the Fourier approximation of graph adjacency matrices labeled by a cyclic group. For a graph with $N$ vertices, $s$ edges and adjacency matrix $M$, the additive energy of its directed edge set is at most $\\min\\{(2s)^3,N^2\\operatorname{tr}(M^4)\\}$, and equality in the spectral bound holds exactly when the labeling attains the graph-energy lower bound for the Fourier ratio. Such a labeling also minimizes every best $k$-term Fourier approximation error, whose square equals the tail of the squared adjacency singular values. We prove that graphs of odd prime-power…",
+  "domain": "math.CO",
+  "tags": [
+    "math.CO",
+    "math.CA"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-26"
+}

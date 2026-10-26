@@ -1,0 +1,21 @@
+{
+  "key": "2610.32156",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.32156",
+  "title": "Quantum Evolution Networks Learn Long-Time Coherent Dynamics in Driven Spin Registers",
+  "authors": [
+    "Puran Li",
+    "Condon Lau",
+    "Xiu-Hao Deng"
+  ],
+  "summary": "Predicting and controlling driven quantum systems requires access to dynamics across physical parameters, initial states, and evolution times. A reusable neural model must capture this dependence while preserving unitary structure and maintaining accuracy over long-time coherent evolution. Here we introduce Quantum Evolution Networks (QENs), which map physical parameters and time to complete propagators for periodically driven three-spin registers. Shared networks learn unitary one-period propagators and compatible within-period paths, enabling predictions through known periodic composition…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-quant-ph-2026q4",
+  "refreshed": "2026-10-26"
+}

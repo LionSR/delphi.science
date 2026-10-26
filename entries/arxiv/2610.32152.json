@@ -1,0 +1,23 @@
+{
+  "key": "2610.32152",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.32152",
+  "title": "Trident: Efficient Load Verification for Yoked Surface Codes using a Three-Level Memory Hierarchy",
+  "authors": [
+    "Gunagya Singh Mamak",
+    "Suhas Vittal",
+    "Kabir Dubey",
+    "Kaitlin N. Smith",
+    "Moinuddin K. Qureshi"
+  ],
+  "summary": "Fault-Tolerant Quantum Computers (FTQCs) commonly use the surface code to encode program qubits as error-corrected logical qubits. Unfortunately, the surface code has a poor encoding rate, so recent work has proposed Yoked Surface Codes (YSCs), which concatenate the surface code with a high-rate quantum code. The surface code qubits in YSCs are protected by the checks, or yokes, of the high-rate code. YSCs have 1D and 2D variants, which are $1.8\\times$ and $4.5\\times$ more efficient than the surface code, respectively. Modern FTQC architectures use a two-level hierarchy: surface codes…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-quant-ph-2026q4",
+  "refreshed": "2026-10-26"
+}

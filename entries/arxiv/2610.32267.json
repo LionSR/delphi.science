@@ -1,0 +1,20 @@
+{
+  "key": "2610.32267",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.32267",
+  "title": "Two-Layer Verification for Fault-Tolerant Magic-State Preparation in High-Rate Quantum Codes",
+  "authors": [
+    "Naoyuki Kanomata",
+    "Hayato Goto"
+  ],
+  "summary": "Encoded magic states are essential for universal fault-tolerant quantum computation, but their resource-efficient preparation in high-rate quantum codes remains challenging. To address this limitation, we propose two-layer verification, which combines local verification of independently prepared subblocks with logical verification after their embedding into a target code. This hierarchy detects harmful error patterns, including even-parity logical-eigenvalue flips that are invisible to a collective product check alone. We demonstrate this scheme for a $[[21,3,5]]$ code by constructing a…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-quant-ph-2026q4",
+  "refreshed": "2026-10-26"
+}

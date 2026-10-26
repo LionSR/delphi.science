@@ -1,0 +1,21 @@
+{
+  "key": "2610.32700",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.32700",
+  "title": "Regret-Based Scenario-Tree Construction for Multistage Stochastic Programs with Deterministic Constraints",
+  "authors": [
+    "Robin Bruneel",
+    "Mathijs Schuurmans",
+    "Panagiotis Patrinos"
+  ],
+  "summary": "Scenario trees are widely used to discretize multistage stochastic programs into forms that are tractable for numerical optimization. Yet, traditional scenario-tree construction methods are typically based on statistical similarity between the original uncertainty process and its discretization, and may fail to preserve the aspects of the uncertainty that matter most for decision-making. This paper shows that, under a fixed probability measure and deterministic feasibility constraints, the gap between the optimal value of the original multistage stochastic program and that of its…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-26"
+}

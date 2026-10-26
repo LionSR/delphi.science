@@ -1,0 +1,25 @@
+{
+  "key": "2610.32465",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.32465",
+  "title": "Sharpness-aware Orthogonalized Momentum Algorithms",
+  "authors": [
+    "Geetika",
+    "Shivani Singh Chauhan",
+    "Gauranshi Gupta",
+    "Anant Jain",
+    "Kaushik Kalyanaraman",
+    "Bapi Chatterjee"
+  ],
+  "summary": "Adversarial sharpness penalty per iteration of a base optimizer, known as sharpness-aware minimization (SAM), is an accepted technique to improve generalization in deep learning. Recently, Muon has emerged as a dominant optimization algorithm for training large language models (LLMs). It achieves lower sample complexity for heavy-tailed gradient updates - a phenomenon common in LLM training. However, sharpness penalties with Muon updates are yet largely unexplored in the literature. Moreover, the behavior of SAM under heavy-tailed noise is unknown both theoretically and empirically. A…",
+  "domain": "cs.LG",
+  "tags": [
+    "cs.LG",
+    "math.OC"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-26"
+}

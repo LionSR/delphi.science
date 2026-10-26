@@ -1,0 +1,21 @@
+{
+  "key": "2610.32340",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.32340",
+  "title": "A domain-decomposition reduced-order model for two-phase CO$_2$ sequestration with moving wells",
+  "authors": [
+    "Xin He",
+    "Xianda Shen",
+    "Lei Zhang"
+  ],
+  "summary": "We present a domain-decomposition reduced-order model for two-phase geological CO$_2$ storage with fixed and moving wells. The approach builds on a nonoverlapping Schur formulation of a conservative RT0--P0 discretization solved by a sequential pressure--transport algorithm. The distinctive feature of the formulation is that local reduced models are coupled through physically meaningful interface variables: pressure traces for the pressure solve and inflow saturation traces for the transport solve. To address moving wells, we introduce a well-aware strategy that combines source-response…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-26"
+}

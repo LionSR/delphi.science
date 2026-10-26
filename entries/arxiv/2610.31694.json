@@ -1,0 +1,20 @@
+{
+  "key": "2610.31694",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.31694",
+  "title": "Verified Pauli-Product Measurement Compilation for Fault-Tolerant Quantum Computation",
+  "authors": [
+    "John Zhuoyang Ye",
+    "Jens Palsberg"
+  ],
+  "summary": "Fault-tolerant quantum compilers implement gates through Pauli-product measurements and classical feedback. Verifying such a compiler requires reasoning about the quantum state and the recorded outcomes together: a correction reads an outcome, a gate's internal outcomes must be hidden from its caller, and an application's outcomes must survive optimization. We introduce QPPM, a language for Pauli-product measurement programs, with a weakest-precondition semantics over store-indexed matrix assertions, following quantum Hoare logic with classical variables. Every program terminates, so the…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-20",
+  "updated": "2026-10-20",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-quant-ph-2026q4",
+  "refreshed": "2026-10-26"
+}

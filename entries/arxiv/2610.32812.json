@@ -1,0 +1,21 @@
+{
+  "key": "2610.32812",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.32812",
+  "title": "Exploiting the Weyl-Chamber Structure for Hardware-Aware Quantum Circuit Compression",
+  "authors": [
+    "Neel Misciasci",
+    "Isabel Nha Minh Le",
+    "Christian B. Mendl"
+  ],
+  "summary": "Quantum circuit compression based on tensor networks enables long-time simulation of quantum many-body dynamics on near-term hardware. While Riemannian optimization has been successfully employed for this purpose, it typically optimizes over the manifold of generic two-qubit unitaries. Consequently, the resulting gates must still be synthesized into the hardware's native gate set via KAK decomposition, an overhead that partially negates the original compression gain. We show that Riemannian-optimized gates already exhibit a predictable Weyl structure: near-$R_{ZZ}$ for the Ising model and…",
+  "domain": "quant-ph",
+  "tags": [
+    "quant-ph"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-quant-ph-2026q4",
+  "refreshed": "2026-10-26"
+}

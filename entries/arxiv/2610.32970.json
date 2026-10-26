@@ -1,0 +1,22 @@
+{
+  "key": "2610.32970",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.32970",
+  "title": "On the continuity of conditional distributions and stratification for derivative pricing",
+  "authors": [
+    "Aleksandar Arandjelovic",
+    "Patrick Cheridito"
+  ],
+  "summary": "Stratification can reduce the estimator variance in Monte Carlo simulations by partitioning the sample space according to a low-dimensional factor and sampling separately within the resulting strata, making it well suited to the valuation of path-dependent claims in high-dimensional financial models. Its performance, however, depends critically on the choice of the stratification factor, and effective low-dimensional factors are generally difficult to identify in complex continuous-time models. Neural networks provide a flexible approximation class for this purpose and have proved useful in…",
+  "domain": "q-fin.CP",
+  "tags": [
+    "q-fin.CP",
+    "math.PR",
+    "q-fin.MF"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-26"
+}

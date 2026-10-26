@@ -1,0 +1,26 @@
+{
+  "key": "2610.32148",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.32148",
+  "title": "Covariance-Informed Ensemble Score Filtering: Embedding Localized Covariance Geometry into Score-Based Transport",
+  "authors": [
+    "Siming Liang",
+    "Peter Jan van Leeuwen",
+    "Hristo G. Chipilski",
+    "Zezhong Zhang",
+    "Feng Bao",
+    "Guannan Zhang"
+  ],
+  "summary": "Background-error covariance models are central to atmospheric data assimilation because they spread partial observational information across space, variables, and dynamically coupled scales. Ensemble and variational methods exploit this covariance geometry efficiently, but their standard analysis formulations are largely built around Gaussian or locally quadratic approximations. Score-based ensemble filtering provides a framework for nonlinear distributional transport, but existing Ensemble Score Filter (EnSF) formulations lack an intrinsic covariance-mediated pathway for propagating…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA",
+    "physics.ao-ph",
+    "stat.ML"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-26"
+}

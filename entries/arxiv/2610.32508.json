@@ -1,0 +1,21 @@
+{
+  "key": "2610.32508",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.32508",
+  "title": "Deterministic Root-Finding over Finite Fields with Elliptic Curves",
+  "authors": [
+    "Pierre-Jean Spaenlehauer"
+  ],
+  "summary": "Finding the roots of a polynomial over a finite field $\\mathbb F_q$ in deterministic polynomial time is a long-standing open problem. Classical deterministic methods work in the multiplicative group $\\mathbb F_q^\\times$ and are efficient only when $q-1$ is smooth, which is rarely the case. We propose a method that replaces $\\mathbb F_q^\\times$ by the groups of rational points of an elliptic curve $E$ and of its quadratic twist $\\widetilde E$. The computation splits into an offline phase, which depends only on $\\mathbb F_q$ and outputs a short \\emph{elliptic preprocessing datum} $\\mathcal D$,…",
+  "domain": "cs.SC",
+  "tags": [
+    "cs.SC",
+    "cs.CC",
+    "math.NT"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-26"
+}

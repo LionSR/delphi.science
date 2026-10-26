@@ -1,0 +1,21 @@
+{
+  "key": "2610.32303",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.32303",
+  "title": "A stochastic mirror descent algorithm for mean-field control problems",
+  "authors": [
+    "Noufel Frikha",
+    "Aymen Haouas"
+  ],
+  "summary": "We develop a stochastic mirror descent method for continuous-time McKean-Vlasov control with measure-valued controls and general Bregman regularisation. The dependence on the state law leads to a coupled Wasserstein-Bregman stability problem and to a McKean-Vlasov adjoint equation, which have no counterpart in classical stochastic control. We establish a first-order representation of the cost and prove its relative smoothness in two regimes: nonlinear dynamics with bounded cost derivatives, and affine state-law dynamics with linearly growing cost derivatives, the latter covering…",
+  "domain": "math.OC",
+  "tags": [
+    "math.OC",
+    "math.PR"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-26"
+}

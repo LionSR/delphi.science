@@ -1,0 +1,30 @@
+{
+  "key": "2610.00535",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00535v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00535v1",
+  "title": "Coefficient Dynamics and Consecutive Toeplitz Minors for the de Bruijn–Newman Famil",
+  "authors": [
+    "Changxia Lin"
+  ],
+  "summary": "Abstract We give a normalization-consistent coefficient formulation of the de Bruijn–Newman heat flow attached to the Riemann ξ-function. For the classical kernel Φ and the family Ht(z) = Z ∞ 0 e tu2 Φ(u) cos(zu) du, Ft(w) = Ht(i √ w) = X n≥0 qn(t)w n , we prove the exact evolution laws ∂tFt = 2F ′ t + 4wF′′ t , q(m) n (t) = (2n + 2m)! (2n)! qn+m(t). The coefficients have positive integral representations and the transformed entire function has order at most 1/2. We relate the zeros of Ft to the Pólya–frequency property of (qn(t)), derive the rectangular Jacobi–Trudi identity for the…",
+  "domain": "math.NT",
+  "tags": [
+    "msc:11M26",
+    "msc:15B05",
+    "msc:05E05",
+    "msc:30D15",
+    "msc:35K05",
+    "Riemann ξ-function; de Bruijn–Newman constant; heat flow"
+  ],
+  "published": "2026-10-26",
+  "updated": "2026-10-25",
+  "version": 1,
+  "authorship": "human",
+  "human_understanding": "all",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-26",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-26"
+}

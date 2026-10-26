@@ -1,0 +1,20 @@
+{
+  "key": "2610.31982",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.31982",
+  "title": "A Novel Matrix-Free Approximate Elemental Inverse for Efficient Preconditioning of Discontinuous Galerkin Spectral Elements",
+  "authors": [
+    "Boyang Xia",
+    "David Moxey"
+  ],
+  "summary": "Efficient matrix-free preconditioning remains a challenge for discontinuous Galerkin spectral element discretisations of elliptic problems, particularly for general element shapes with collapsed-coordinate bases, such as prisms, tetrahedra and pyramids. Multigrid provides a promising framework, but its efficiency depends strongly on the effectiveness and computational cost of the smoother. For modal bases, point Jacobi can provide insufficient smoothing, whereas applying block Jacobi through stored dense inverses incurs substantial storage and computational costs. We propose a matrix-free…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-26"
+}

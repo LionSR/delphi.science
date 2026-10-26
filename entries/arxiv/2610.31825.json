@@ -1,0 +1,20 @@
+{
+  "key": "2610.31825",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.31825",
+  "title": "Mimicking Volatilities under Marginal Constraints via $q_x$-Bass Martingales: A Parallel Computing Approach",
+  "authors": [
+    "Antonio Marini"
+  ],
+  "summary": "We study the calibration of continuous-time martingale models to observed derivative prices via a dynamic martingale optimal transport problem that penalizes deviations from the volatility of a prescribed reference model. Using $q_x$-Bass martingales, we approximate this problem through a sequence of discrete-time problems and prove that the continuous-time interpolations of their optimizers are asymptotically optimal. Building on the theory of $q_x$-Bass martingales, we develop numerical methods for the discrete-time problems that do not require full marginal distributions at calibration…",
+  "domain": "q-fin.MF",
+  "tags": [
+    "q-fin.MF",
+    "math.PR"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-26"
+}

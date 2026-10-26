@@ -1,0 +1,40 @@
+{
+  "key": "2610.00516",
+  "source": "hexagon",
+  "url": "https://hexagonmath.org/abs/2610.00516v1",
+  "pdf": "https://hexagonmath.org/pdf/2610.00516v1",
+  "title": "One of $\\zeta(7),\\zeta(9),\\dots,\\zeta(21)$ is irrational",
+  "authors": [
+    "Shawn Krisman"
+  ],
+  "summary": "We prove that at least one of the eight numbers $\\zeta(7),\\zeta(9),\\dots,\\zeta(21)$ is irrational. The previous best result of this kind not involving $\\zeta(5)$, a consequence of a theorem of Lai and Zhou, was that one of $\\zeta(7),\\dots,\\zeta(35)$ is irrational. We use Zudilin's hypergeometric construction: sums of fourth derivatives of rational functions with quintuple zeros give linear forms in $1,\\zeta(7),\\dots,\\zeta(21)$ with no $\\zeta(3)$ or $\\zeta(5)$ term. The improvement comes from spreading the poles over eighteen blocks with nearby offsets, a sharper $p$-adic bound on the…",
+  "domain": "math.NT",
+  "tags": [
+    "msc:11J72",
+    "msc:11M06",
+    "msc:41A60",
+    "msc:68V20",
+    "Lean",
+    "Riemann Zeta Function",
+    "formal verification",
+    "hypergeometric linear forms",
+    "irrationality",
+    "odd zeta values",
+    "saddle-point method"
+  ],
+  "published": "2026-10-26",
+  "updated": "2026-10-23",
+  "version": 1,
+  "ai_models": [
+    "Claude Fable",
+    "Claude Opus"
+  ],
+  "authorship": "no-human-author-claimed",
+  "human_understanding": "none",
+  "origin": "ai-generated",
+  "formalized": false,
+  "withdrawn": false,
+  "added": "2026-10-26",
+  "added_by": "harvest:hexagon",
+  "refreshed": "2026-10-26"
+}

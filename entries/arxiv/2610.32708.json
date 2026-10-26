@@ -1,0 +1,23 @@
+{
+  "key": "2610.32708",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.32708",
+  "title": "Score-Preserving Continual Lasso under Task Shift",
+  "authors": [
+    "Jingyi Guo",
+    "Runze Li",
+    "Lingzhou Xue"
+  ],
+  "summary": "Continual learning (CL) aims to learn from sequential tasks while mitigating catastrophic forgetting when historical data are no longer accessible. We study continual learning for high-dimensional sparse linear regression, where $\\ell_1$ regularization creates a difficulty absent from continual ridge regression: that recursively reusing an $\\ell_1$-penalized estimator can propagate earlier shrinkage and accumulate regularization bias across tasks. We propose score-preserving continual Lasso (SP-CL), which separates sparse estimation from state transmission by preserving the historical…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.ST"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-26"
+}

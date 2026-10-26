@@ -1,0 +1,23 @@
+{
+  "key": "2610.31783",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.31783",
+  "title": "Early learning in large residual networks",
+  "authors": [
+    "Vladimir Narovlansky",
+    "Boris Hanin"
+  ],
+  "summary": "We study the early training dynamics of nonlinear residual networks with blocks of zero hidden layers as a model of more general residual networks. We analyze networks in a sequential limit where first width and depth diverge, then the number of training data points diverges, and finally the input dimension diverges. This is a more refined setup compared to the typical mean-field theory analysis in which depth and width diverge but the number of training datapoints and input dimension are fixed. Our main technical result is a diagrammatic computation of both the network output and the hidden…",
+  "domain": "stat.ML",
+  "tags": [
+    "stat.ML",
+    "cs.LG",
+    "math.PR",
+    "physics.data-an"
+  ],
+  "published": "2026-10-22",
+  "updated": "2026-10-22",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-26"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "2610.32364",
+  "source": "arxiv",
+  "url": "https://arxiv.org/abs/2610.32364",
+  "title": "Long-time stability and convergence of a BDF3 method for a parabolic equation with fading memory",
+  "authors": [
+    "Wenlin Qiu"
+  ],
+  "summary": "We analyze the long-time stability and convergence of a third-order backward differentiation formula (BDF3) for parabolic equations with exponentially fading memory. The BDF3 scalar resolvent has oscillatory coefficients, so the monotonicity argument used for lower-order formulas in [Math. Comp. 62 (1994) 477-496] does not apply. We instead control memory feedback by the absolute mass of its discrete Green sequence and establish the rigorous stability-constant bounds $23/20<Λ_3<579/500$. A causal third-order memory quadrature with nonnegative assembled weights then yields exponentially…",
+  "domain": "math.NA",
+  "tags": [
+    "math.NA"
+  ],
+  "published": "2026-10-23",
+  "updated": "2026-10-23",
+  "added": "2026-10-26",
+  "added_by": "harvest:arxiv-math-2026-10b",
+  "refreshed": "2026-10-26"
+}

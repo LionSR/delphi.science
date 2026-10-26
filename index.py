@@ -1,19 +1,18 @@
 #!/usr/bin/env python3
-"""Open index prototype: APP papers plus any research link, each labelled by its source.
+"""Open Research Index harvester, classifier, and static build CLI.
 
-Entries live in Postgres (open_index.entries, see store.py), one per record, under the id <source>/<key>:
-the source's own ID, so adding the same record twice finds the existing entry. APP papers are not
-copied: they are read from the APP registry at build time and shown with the APP label.
+Entries are stored in Postgres (open_index.entries, via store.py) keyed by <source>/<key>.
+APP papers are read from the published APP registry index at build time.
 
     python index.py add <url or id> [--by <github login>] [--dry-run]
     python index.py harvest [--source NAME] [--limit N] [--dry-run]
     python index.py label [--all] [--labeler claude|none|canned:<file.json>]
     python index.py refresh [--older-than DAYS] [--limit N] [--dry-run]
     python index.py discuss <record id> <url>... [--stance STANCE] [--drop] [--dry-run]
-    python index.py discuss --recheck [<record id>...] [--dry-run]   # daily: deleted posts drop out
+    python index.py discuss --recheck [<record id>...] [--dry-run]
     python index.py discuss --propose-stances [<record id>...] [--labeler claude|canned:<file.json>]
     python index.py reception [<record id>] [--draft [--labeler ...] | --text TEXT] [--reviewed-by LOGIN] [--links URL...]
-    python index.py build            # writes dist/index.json, which the site loads into open_index.records
+    python index.py build
 """
 
 from __future__ import annotations

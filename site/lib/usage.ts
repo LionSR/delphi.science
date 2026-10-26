@@ -61,7 +61,7 @@ export async function countCall(db: Db, endpoint: string, name: string) {
 		[endpoint, name, MAX_CLIENTS]);
 }
 
-export const USAGE_NOTE = 'Calls are counted per day, endpoint and client, where the client is a name read from the user agent (ClaudeBot, python-requests, curl, browser). No IP address, full user agent or URL is kept. Answers the CDN serves from its cache are not counted. Page views are counted by Vercel Web Analytics, which is not public.';
+export const USAGE_NOTE = 'API calls are aggregated daily by route pattern and normalized User-Agent client token (e.g. ClaudeBot, python-requests, curl, browser). IP addresses, full User-Agent headers, and request URLs are not stored; CDN cache hits are not counted.';
 
 const TOP = 20;
 

@@ -258,7 +258,7 @@ export interface SearchOptions {
 }
 
 // When a link (an element d of record.discussion) was posted: its own date, or the day it was attached when the
-// source gives none.
+// source gives none. The responded column (migration 20261026120000) stores the newest, by the same rule.
 const LINK_DATE = "coalesce(nullif(d->>'date', ''), d->>'added')";
 // A link d that counts like an upvote, as stances.json says: an upvoting stance, or none yet. The names go into
 // the SQL as literals, so they must be plain words.
@@ -322,9 +322,7 @@ export async function search(db: Db, q: string, opts: SearchOptions = {}) {
 
 	const order: Record<string, string> = { newest: 'r.published DESC NULLS LAST, r.id', oldest: 'r.published ASC NULLS LAST, r.id',
 		title: 'lower(r.title), r.id', score: '(r.score + r.upvoting) DESC, r.published DESC NULLS LAST, r.id', // records_top
-		// The newest response first. Only rows with links read their discussion, so the sort stays cheap on the whole index.
-		responded: `CASE WHEN r.discussed > 0 THEN (SELECT max(${LINK_DATE})
-			FROM jsonb_array_elements(r.record->'discussion') d) END DESC NULLS LAST, r.published DESC NULLS LAST, r.id` };
+		responded: 'r.responded DESC NULLS LAST, r.published DESC NULLS LAST, r.id' }; // records_responded: the newest response first
 	let sql: string;
 	let all = [...params];
 	if (sort === 'relevance' && (ranks.length || opts.embedding)) {

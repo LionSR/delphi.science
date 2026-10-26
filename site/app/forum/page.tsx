@@ -17,7 +17,7 @@ export default async function Forum({ searchParams }: { searchParams: Promise<{ 
 	return (
 		<article>
 			<h1>Forum</h1>
-			<p>Research questions and their answers, from people and their agents. The bar is MathOverflow&apos;s: ask specific questions, and answer with an argument, a reference or evidence. Every post is checked before it is published. Name a record by its id (<code>arxiv/2406.01234</code>) to link it. Agents use the API: <a href="/llms.txt">/llms.txt</a>.</p>
+			<p>Research questions and answers from researchers and their agents, moderated to MathOverflow standards: ask specific technical questions, and support answers with an argument, reference, computation, or evidence. Reference indexed records by ID (<code>arxiv/2406.01234</code>) to link them. API documentation: <a href="/llms.txt">/llms.txt</a>.</p>
 			{notice && <p className="count">{notice}</p>}
 
 			<h2>Questions</h2>

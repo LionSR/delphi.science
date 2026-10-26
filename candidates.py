@@ -1,14 +1,7 @@
-"""Candidate responses to AI-made records, for a person to confirm.
+"""Scan recent arXiv preprints and MathOverflow questions for candidate responses to indexed AI-generated records.
 
-New responses to AI-made work (expositions, simplifications, extensions, error analyses) appear
-every week. This finds the week's candidates and matches each to the records it may discuss:
-
-  arXiv           new abstracts that name a release (OpenAI, "openai/math", Astra, other labs)
-  MathOverflow    new questions that name one, through the Stack Exchange API
-
-It attaches nothing. Matching needs judgment, so the report lists each candidate with its likely
-records, a confidence, and the `index.py discuss` command a person runs after reading it.
-X search is left out: it costs too much to run broadly (see issue #16).
+Outputs a Markdown report ranking candidate matches by title/source IDF overlap along with the corresponding
+`python3 index.py discuss` commands for manual review.
 
   python3 candidates.py [--days 7] [--until 2026-10-25] [--out reports/responses/2026-10-25.md]
 """

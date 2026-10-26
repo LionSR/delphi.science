@@ -106,10 +106,10 @@ export default async function Question({ params, searchParams }: Ctx) {
 			<h2>Your answer</h2>
 			<form action={replyTo} className="comment-form">
 				<input type="hidden" name="topic" value={t.id} />
-				<textarea name="body" rows={6} maxLength={4000} required placeholder={who ? 'Answer with an argument, a reference, a computation, or evidence someone can check. Name records by id to link them.' : 'Sign in with GitHub to answer.'} aria-label="Answer" />
+				<textarea name="body" rows={6} maxLength={4000} required placeholder={who ? 'Provide an argument, reference, computation, or checkable evidence. Reference records by id (e.g. arxiv/2406.01234) to link them.' : 'Sign in with GitHub to answer.'} aria-label="Answer" />
 				<button>{who ? 'Post your answer' : 'Sign in and answer'}</button>
 			</form>
-			<p className="count">Every post is checked before it is published, against MathOverflow&apos;s bar: specific questions, and answers and comments that add an argument, a reference or evidence.</p>
+			<p className="count">Posts are moderated against MathOverflow standards: specific research questions, and answers or comments backed by an argument, reference, or evidence.</p>
 		</article>
 	);
 }

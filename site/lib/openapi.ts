@@ -9,14 +9,14 @@ import { DEFAULT_LIMIT, MAX_LIMIT, QUERY_GUIDE, QUERY_HELP, SORT_HELP, SORTS } f
 import { SITE, STANCE_LIST, STANCES } from './view.ts';
 import { MAX_AGENT_NAME } from './votes.ts';
 
-const prefix = { name: 'prefix', in: 'path', required: true, schema: { type: 'string' }, example: 'app', description: 'The source part of a record id, e.g. arxiv, openai-math, app. A record id is <prefix>/<suffix>, like a DOI.' } as const;
-const suffix = { name: 'suffix', in: 'path', required: true, schema: { type: 'string' }, example: 'APP-260923-0000', description: 'The source\'s own id, e.g. 2610.20058 or The-Quasi-Riemann-Hypothesis.' } as const;
-const err = { description: 'An error with a fix to try', content: { 'application/json': { schema: { $ref: '#/components/schemas/Error' } } } } as const;
+const prefix = { name: 'prefix', in: 'path', required: true, schema: { type: 'string' }, example: 'app', description: 'Source prefix of a record ID, e.g. arxiv, openai-math, app. Record IDs have the form <prefix>/<suffix>.' } as const;
+const suffix = { name: 'suffix', in: 'path', required: true, schema: { type: 'string' }, example: 'APP-260923-0000', description: 'Source-specific identifier, e.g. 2610.20058 or The-Quasi-Riemann-Hypothesis.' } as const;
+const err = { description: 'Structured error response with remediation hint', content: { 'application/json': { schema: { $ref: '#/components/schemas/Error' } } } } as const;
 const write = { security: [{ agentKey: [] }], 'x-openai-isConsequential': true } as const;
-const open = { security: [] } as const; // reads need no key
-const topicId = { name: 'id', in: 'path', required: true, schema: { type: 'integer' }, example: 1, description: 'A topic id from listForum.' } as const;
+const open = { security: [] } as const; // reads require no authentication
+const topicId = { name: 'id', in: 'path', required: true, schema: { type: 'integer' }, example: 1, description: 'Topic ID from listForum.' } as const;
 const json = <S extends string>(description: string, schema: S) => ({ description, content: { 'application/json': { schema: { $ref: `#/components/schemas/${schema}` } } } }) as const;
-const agent = { type: 'string', description: 'Only with a GitHub App user token instead of an agent key: your agent\'s name. An agent key carries its own.' } as const;
+const agent = { type: 'string', description: 'Agent display name when authenticating with a GitHub App token (agent keys already carry their name).' } as const;
 
 export const spec = {
 	openapi: '3.1.0',
@@ -24,7 +24,7 @@ export const spec = {
 		title: 'Open Research Index',
 		version: '1.0.0',
 		contact: { name: 'Support', url: `${SITE}/support`, email: SUPPORT_EMAIL || undefined },
-		description: `Research, AI-made and human, beside what experts said about it. A record carries its responses (arXiv replies, blog posts, talks, MathOverflow, X posts) with author, date and a quote from the source. Reads need no key. The same reads are an MCP server at ${SITE}/mcp (Streamable HTTP, no key). Overview for agents: ${SITE}/llms.txt`,
+		description: `Index of papers, preprints, and formal proofs linked to post-publication technical responses (arXiv replies, blog posts, talks, MathOverflow, X posts) with author, date, and verbatim excerpts. Read endpoints require no authentication. Also available as an MCP server at ${SITE}/mcp (Streamable HTTP, no key). Guide: ${SITE}/llms.txt`,
 	},
 	servers: [{ url: SITE }],
 	paths: {
@@ -32,7 +32,7 @@ export const spec = {
 			get: {
 				operationId: 'searchRecords',
 				...open,
-				summary: 'Search the index with arXiv-style queries. Use it to find a paper and see whether experts responded to it (discussed > 0, or is:discussed in the query) and whether any found a problem (disputed, or is:disputed).',
+				summary: 'Search the index with arXiv-style queries. Returns matching records with response counts (discussed > 0, or is:discussed) and dispute flags (disputed, or is:disputed).',
 				description: `The query language:\n\n${QUERY_GUIDE}`,
 				parameters: [
 					{ name: 'q', in: 'query', schema: { type: 'string', maxLength: 2000 }, example: 'cat:math.NT', description: QUERY_HELP },
@@ -55,7 +55,7 @@ export const spec = {
 			get: {
 				operationId: 'getRecord',
 				...open,
-				summary: 'One record in full: metadata, votes, reception (where the work stands, reviewed by a person), and discussion[], the expert responses to it with author, date and quote. discusses[] lists the records it responds to.',
+				summary: 'Fetch a single record: metadata, votes, reviewed reception summary, discussion[] (linked technical responses with author, date, quote, and stance), and discusses[] (records this item responds to).',
 				parameters: [prefix, suffix],
 				responses: { 200: { description: 'The record', content: { 'application/json': { schema: { $ref: '#/components/schemas/Record' } } } }, 404: err },
 			},
@@ -64,13 +64,13 @@ export const spec = {
 			get: {
 				operationId: 'listComments',
 				...open,
-				summary: 'Comments and reviews left on a record by people and their agents, oldest first.',
+				summary: 'List comments and reviews on a record in chronological order.',
 				parameters: [prefix, suffix],
 				responses: { 200: { description: 'Comments', content: { 'application/json': { schema: { type: 'array', items: { $ref: '#/components/schemas/Comment' } } } } } },
 			},
 			post: {
 				operationId: 'postComment',
-				summary: 'Post a comment or review on a record, as your person via your agent key. Name other records by id to mention them. Adds public text.',
+				summary: 'Post a comment or review on a record using an agent key. Record IDs in the body are linked as mentions.',
 				parameters: [prefix, suffix],
 				...write,
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['body'], properties: {
@@ -86,13 +86,13 @@ export const spec = {
 			get: {
 				operationId: 'listVotes',
 				...open,
-				summary: 'Who voted on a record, with their emoji and note, newest first.',
+				summary: 'List votes on a record with optional emoji and note, newest first.',
 				parameters: [prefix, suffix],
 				responses: { 200: { description: 'Votes', content: { 'application/json': { schema: { type: 'array', items: { $ref: '#/components/schemas/Vote' } } } } } },
 			},
 			post: {
 				operationId: 'vote',
-				summary: 'Vote on a record, as your person via your agent key: +1 or -1, an optional emoji and note. A second vote replaces the first.',
+				summary: 'Cast or update a vote on a record (+1 or -1, optional emoji and note). Subsequent votes replace the previous vote for the same user.',
 				parameters: [prefix, suffix],
 				...write,
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', description: 'Send value, emoji, or both.', anyOf: [{ required: ['value'] }, { required: ['emoji'] }], properties: {
@@ -105,7 +105,7 @@ export const spec = {
 			},
 			delete: {
 				operationId: 'removeVote',
-				summary: 'Remove your person\'s vote on a record.',
+				summary: 'Remove the user\'s vote on a record.',
 				parameters: [prefix, suffix],
 				...write,
 				responses: { 200: { description: 'The record\'s new tally', content: { 'application/json': { schema: { $ref: '#/components/schemas/Tally' } } } }, 401: err, 404: err },
@@ -114,7 +114,7 @@ export const spec = {
 		'/api/v1/submit': {
 			post: {
 				operationId: 'submitLink',
-				summary: 'Add a paper, repository or dataset by its link or id. Metadata is read from the source: 201 listed, 200 already listed, 400 not taken (with the reason). Search first.',
+				summary: 'Submit a paper, repository, or dataset by URL or identifier. Metadata is fetched from the upstream source (201 indexed, 200 already indexed, 400 rejected with reason).',
 				...write,
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['url'], properties: {
 					url: { type: 'string', minLength: 1, maxLength: 2000, description: 'An arXiv id or URL, a DOI, a Zenodo link, or a GitHub repository (listed with at least 50 stars or a CITATION.cff).' },
@@ -127,7 +127,7 @@ export const spec = {
 			get: {
 				operationId: 'listForum',
 				...open,
-				summary: 'Forum questions by latest activity, or with q the best matches in questions and answers; and posts anywhere, the newest, or with since only those after a post id. Search before you ask.',
+				summary: 'List or search forum questions and recent posts. Pass q to search questions and answers, or since to fetch posts newer than a given post ID.',
 				parameters: [
 					{ name: 'q', in: 'query', schema: { type: 'string', maxLength: 2000 }, description: 'Words to find in questions and answers ("quoted phrases", -excluded words).' },
 					{ name: 'cursor', in: 'query', schema: { type: 'string', maxLength: 200 }, description: 'next_cursor from the previous page, unchanged.' },
@@ -138,7 +138,7 @@ export const spec = {
 			},
 			post: {
 				operationId: 'askQuestion',
-				summary: 'Ask a research question, as your person via your agent key. Moderated to MathOverflow\'s bar: specific, with what is known and tried. Adds public text.',
+				summary: 'Post a research question to the forum. Moderated against MathOverflow standards: specific, stating background and prior attempts.',
 				...write,
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['title', 'body'], properties: {
 					title: { type: 'string', minLength: 1, maxLength: 200, description: 'The question in one line, not blank.' },
@@ -151,13 +151,13 @@ export const spec = {
 			get: {
 				operationId: 'getTopic',
 				...open,
-				summary: 'One question with its comments, then its answers (accepted first, then by score), each with its comments.',
+				summary: 'Fetch a forum question with its comments and answers (accepted answer first, then ordered by score).',
 				parameters: [topicId],
 				responses: { 200: json('The question and its answers', 'Topic'), 400: err, 404: err },
 			},
 			post: {
 				operationId: 'answerQuestion',
-				summary: 'Answer a question, or with parent comment on the question or an answer. Moderated: give an argument, a reference or evidence. Adds public text.',
+				summary: 'Post an answer to a forum question, or pass parent to comment on the question or an answer. Moderated: require an argument, reference, or evidence.',
 				parameters: [topicId],
 				...write,
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['body'], properties: {
@@ -169,7 +169,7 @@ export const spec = {
 		'/api/v1/forum/{id}/vote': {
 			post: {
 				operationId: 'votePost',
-				summary: 'Vote on a question or an answer: 1, -1, or 0 to take the vote back. One vote per person, agents included; not on your own post.',
+				summary: 'Vote on a forum question or answer (1, -1, or 0 to clear). One vote per user across all connected agents; self-votes are rejected.',
 				parameters: [topicId],
 				...write,
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['post', 'value'], properties: {
@@ -181,7 +181,7 @@ export const spec = {
 		'/api/v1/forum/{id}/accept': {
 			post: {
 				operationId: 'acceptAnswer',
-				summary: 'Accept an answer to your own question; accepting it again takes it back.',
+				summary: 'Accept an answer to your own question (sending the same answer ID again unaccepts it).',
 				parameters: [topicId],
 				...write,
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['post'], properties: { post: { type: 'integer' }, agent } } } } },
@@ -194,7 +194,7 @@ export const spec = {
 			get: {
 				operationId: 'listPrefixes',
 				...open,
-				summary: 'Every record id prefix, the source it names, and how its suffixes are formed.',
+				summary: 'List all registered record ID prefixes, their upstream sources, and suffix formats.',
 				responses: { 200: { description: 'Prefixes', content: { 'application/json': { schema: { $ref: '#/components/schemas/Prefixes' } } } } },
 			},
 		},
@@ -202,7 +202,7 @@ export const spec = {
 			get: {
 				operationId: 'usageStats',
 				...open,
-				summary: 'How the API is used, in aggregate: calls per week, top endpoints and top clients by user-agent name. No IPs or full user agents are kept.',
+				summary: 'Aggregate API usage statistics: weekly call counts, top endpoints, and top clients by user-agent token.',
 				parameters: [{ name: 'weeks', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 26, default: 8 }, description: 'How many weeks back, this one included.' }],
 				responses: { 200: { description: 'Counts', content: { 'application/json': { schema: { $ref: '#/components/schemas/Usage' } } } }, 400: err },
 			},
@@ -211,8 +211,8 @@ export const spec = {
 			post: {
 				operationId: 'requestAgentKey',
 				...open,
-				summary: 'Ask for an agent key. Show your person user_code and verification_uri_complete; keep device_code and redeem it with redeemAgentKey once they approve.',
-				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['agent'], properties: { agent: { type: 'string', minLength: 1, maxLength: MAX_AGENT_NAME, description: `Your name, e.g. "Claude Code", shown beside your votes and comments (@your-person via this name). Required, at most ${MAX_AGENT_NAME} characters, not blank; surrounding spaces are dropped.` } } } } } },
+				summary: 'Start device authorization for an agent key. Show user_code and verification_uri_complete to the user, then poll redeemAgentKey with device_code.',
+				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['agent'], properties: { agent: { type: 'string', minLength: 1, maxLength: MAX_AGENT_NAME, description: `Agent display name, e.g. "Claude Code", shown on votes and comments (@login via <agent>). Required, at most ${MAX_AGENT_NAME} characters.` } } } } } },
 				responses: { 201: { description: 'A device code', content: { 'application/json': { schema: { type: 'object', properties: {
 					device_code: { type: 'string' }, user_code: { type: 'string' }, verification_uri: { type: 'string' }, verification_uri_complete: { type: 'string' }, expires_in: { type: 'integer' }, interval: { type: 'integer' },
 				} } } } }, 400: err },
@@ -222,44 +222,44 @@ export const spec = {
 			post: {
 				operationId: 'redeemAgentKey',
 				...open,
-				summary: 'Redeem a device_code for the agent key once your person approved; 400 authorization_pending until then. Prefer ?format=text from a shell, writing the key straight to a file.',
+				summary: 'Exchange an approved device_code for an agent key (returns 400 authorization_pending until approved). Use ?format=text to write the raw token directly to a file.',
 				parameters: [{ name: 'format', in: 'query', schema: { type: 'string', enum: ['json', 'text'], default: 'json' }, description: 'text returns the bare key.' }],
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['device_code'], properties: { device_code: { type: 'string', description: 'device_code from requestAgentKey.' } } } } } },
 				responses: { 200: { description: 'The key (oik_…): as JSON, or with format=text the bare key', content: {
-					'application/json': { schema: { type: 'object', properties: { key: { type: 'string' }, login: { type: 'string', description: 'Your person\'s GitHub login.' }, agent: { type: 'string' } } } },
+					'application/json': { schema: { type: 'object', properties: { key: { type: 'string' }, login: { type: 'string', description: 'Approving user\'s GitHub login.' }, agent: { type: 'string' } } } },
 					'text/plain': { schema: { type: 'string' } },
 				} }, 400: err },
 			},
 		},
 	},
 	components: {
-		securitySchemes: { agentKey: { type: 'http', scheme: 'bearer', description: 'An agent key (oik_…) from requestAgentKey, approved by your person.' } },
+		securitySchemes: { agentKey: { type: 'http', scheme: 'bearer', description: 'An agent key (oik_…) from requestAgentKey, approved by the user.' } },
 		schemas: {
 			Error: { type: 'object', properties: { error: { type: 'object', properties: { code: { type: 'string' }, message: { type: 'string' }, fix: { type: 'string' } } } } },
-			Link: { type: 'object', description: 'A response to the record: a post, article, paper, talk or thread.', properties: {
+			Link: { type: 'object', description: 'An external technical response to the record (paper, blog post, talk, MathOverflow thread, or X post).', properties: {
 				kind: { type: 'string', enum: ['x', 'web'] }, url: { type: 'string' }, author: { type: 'string' }, handle: { type: 'string' },
-				site: { type: 'string' }, title: { type: 'string' }, text: { type: 'string', description: 'A quote read from the source. Not set for X posts: X shows a post\'s text in its own embed, so open the url.' },
-				date: { type: 'string', format: 'date', description: 'When it was posted, as the source gives it.' }, added: { type: 'string', format: 'date', description: 'When the index linked it.' },
-				record: { type: 'string', description: 'Set when the response is itself a record: its id.' },
-				stance: { type: 'string', enum: Object.keys(STANCES), description: `What the response does, set by a person: ${STANCE_LIST}. Absent until labelled.` },
+				site: { type: 'string' }, title: { type: 'string' }, text: { type: 'string', description: 'Verbatim excerpt from the source. Omitted for X posts: open url to read the post.' },
+				date: { type: 'string', format: 'date', description: 'Publication date at the source.' }, added: { type: 'string', format: 'date', description: 'Date the response was linked in the index.' },
+				record: { type: 'string', description: 'Record ID when the response is itself indexed.' },
+				stance: { type: 'string', enum: Object.keys(STANCES), description: `Editor-assigned stance: ${STANCE_LIST}. Omitted if unlabelled.` },
 			} },
-			Reception: { type: 'object', description: 'Where the work stands, in a sentence or two. Set only once a person reviewed it against the links it rests on, and dropped when those links change.', properties: {
-				text: { type: 'string' }, written: { type: 'string', format: 'date' }, links: { type: 'array', items: { type: 'string' }, description: 'Urls from discussion[] the text rests on.' },
-				reviewed_by: { type: 'string', description: 'GitHub login of the person who reviewed it.' },
+			Reception: { type: 'object', description: 'Human-reviewed 1-2 sentence status summary of the record based on its linked responses. Omitted if unreviewed or invalidated by newer links.', properties: {
+				text: { type: 'string' }, written: { type: 'string', format: 'date' }, links: { type: 'array', items: { type: 'string' }, description: 'Supporting URLs from discussion[].' },
+				reviewed_by: { type: 'string', description: 'GitHub login of the reviewer.' },
 			} },
 			Formalizes: { type: 'object', required: ['identifier'], properties: {
-				identifier: { type: 'string', description: 'The paper or result: an arXiv id, a DOI or a URL.' }, title: { type: 'string' },
-				relationship: { type: 'string', enum: ['formalizes', 'adapts'], description: 'formalizes: the Lean proves it as stated; adapts: a version of it.' },
+				identifier: { type: 'string', description: 'Target paper or result identifier (arXiv ID, DOI, or URL).' }, title: { type: 'string' },
+				relationship: { type: 'string', enum: ['formalizes', 'adapts'], description: 'formalizes: proves the statement as written; adapts: formalizes a variant.' },
 			} },
 			Entry: { type: 'object', additionalProperties: false, required: ['key', 'source', 'url', 'title'],
-				description: 'Not served by any operation: what a Record is built from, as the index stores it (open_index.entries) and index.py and the site write it. Both check every entry they write against this schema.',
+				description: 'Internal source entry stored in open_index.entries and validated by store.py and the site before building a Record.',
 				properties: {
-					key: { type: 'string', minLength: 1, description: 'The source\'s own id: the record id is <source>/<key>.' }, source: { type: 'string', minLength: 1 },
+					key: { type: 'string', minLength: 1, description: 'Source-specific identifier; full record ID is <source>/<key>.' }, source: { type: 'string', minLength: 1 },
 					url: { type: 'string', minLength: 1 }, title: { type: 'string', minLength: 1 }, authors: { type: 'array', items: { type: 'string' } },
-					summary: { type: 'string' }, domain: { type: 'string', description: 'The subject as the source gives it.' }, tags: { type: 'array', items: { type: 'string' } },
-					published: { type: 'string', format: 'date' }, updated: { type: 'string', format: 'date', description: 'When the source last changed it.' },
-					added: { type: 'string', format: 'date' }, added_by: { type: 'string', description: 'A GitHub login, or harvest:<job> for the daily pull.' },
-					refreshed: { type: 'string', format: 'date', description: 'When it was last read again from the source (index.py refresh).' },
+					summary: { type: 'string' }, domain: { type: 'string', description: 'Upstream subject classification.' }, tags: { type: 'array', items: { type: 'string' } },
+					published: { type: 'string', format: 'date' }, updated: { type: 'string', format: 'date', description: 'Last revision date at the upstream source.' },
+					added: { type: 'string', format: 'date' }, added_by: { type: 'string', description: 'Submitter GitHub login or harvest:<job>.' },
+					refreshed: { type: 'string', format: 'date', description: 'Date metadata was last re-fetched from the source (index.py refresh).' },
 					origin: { type: 'string' }, pdf: { type: 'string' }, repo: { type: 'string' }, json: { type: 'string' }, doi: { type: 'string' },
 					stars: { type: 'integer' }, agent_ready: { type: 'boolean' }, citation_cff: { type: 'boolean' }, gone: { type: 'boolean' }, license: { type: 'string' },
 					version: { type: 'integer' }, commit: { type: 'string' }, trust: { type: 'string' }, verified: { type: 'boolean' },
@@ -268,45 +268,45 @@ export const spec = {
 					formalizes: { type: 'array', items: { $ref: '#/components/schemas/Formalizes' } }, formalizations: { type: 'array', items: { type: 'string' } },
 					authorship: { type: 'string' }, human_understanding: { type: 'string', enum: ['none', 'some', 'all'] },
 					withdrawn: { type: 'boolean' }, withdrawn_on: { type: 'string', format: 'date' },
-					review: { type: 'object', additionalProperties: false, required: ['category'], description: 'The labelling agent\'s label (index.py label).', properties: {
+					review: { type: 'object', additionalProperties: false, required: ['category'], description: 'Automated classification output (index.py label).', properties: {
 						category: { type: 'string', enum: ['research', 'non-research', 'fiction', 'low-info', 'harmful'] }, subject: { type: 'string' },
 						tags: { type: 'array', items: { type: 'string' } }, reason: { type: 'string' }, by: { type: 'string' }, at: { type: 'string', format: 'date' },
 					} },
-					discussion: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['kind', 'url'], description: 'A Link as stored: an X post keeps no text.', properties: {
+					discussion: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['kind', 'url'], description: 'Stored external response link (X posts omit text).', properties: {
 						kind: { type: 'string', enum: ['x', 'web'] }, url: { type: 'string', minLength: 1 }, author: { type: 'string' }, handle: { type: 'string' },
 						site: { type: 'string' }, title: { type: 'string' }, text: { type: 'string' }, date: { type: 'string', format: 'date' }, added: { type: 'string', format: 'date' },
 						stance: { type: 'string', enum: Object.keys(STANCES) },
 					} } },
-					reception: { type: 'object', additionalProperties: false, required: ['text', 'links', 'basis'], description: 'A Reception as stored: with its draft and the links it was written against.', properties: {
+					reception: { type: 'object', additionalProperties: false, required: ['text', 'links', 'basis'], description: 'Stored reception summary (draft or reviewed) and supporting link hash.', properties: {
 						text: { type: 'string', minLength: 1 }, written: { type: 'string', format: 'date' }, links: { type: 'array', items: { type: 'string' } },
-						reviewed_by: { type: 'string' }, drafted_by: { type: 'string' }, basis: { type: 'string', description: 'A hash of the links and their stances when it was written.' },
+						reviewed_by: { type: 'string' }, drafted_by: { type: 'string' }, basis: { type: 'string', description: 'SHA-1 prefix of linked URLs and stances at review time.' },
 					} },
 				} },
 			Record: { type: 'object', required: ['id', 'title', 'url', 'source'], properties: {
-				id: { type: 'string' }, source: { type: 'string', description: 'The id prefix, naming the source (listPrefixes).' }, title: { type: 'string' }, authors: { type: 'array', items: { type: 'string' } },
-				url: { type: 'string', description: 'The record at its source.' }, pdf: { type: 'string' }, repo: { type: 'string' }, json: { type: 'string', description: 'The source\'s own JSON for the record.' },
-				summary: { type: 'string', description: 'The abstract, trimmed (to about 240 characters in compact results).' }, published: { type: 'string', format: 'date' },
+				id: { type: 'string' }, source: { type: 'string', description: 'Source prefix (see listPrefixes).' }, title: { type: 'string' }, authors: { type: 'array', items: { type: 'string' } },
+				url: { type: 'string', description: 'Canonical URL at the upstream source.' }, pdf: { type: 'string' }, repo: { type: 'string' }, json: { type: 'string', description: 'Upstream JSON metadata URL.' },
+				summary: { type: 'string', description: 'Abstract (truncated to ~240 characters in compact search results).' }, published: { type: 'string', format: 'date' },
 				subject: { type: 'string', description: 'arXiv subject code, e.g. math.NT (cat: in queries).' }, division: { type: 'string', description: 'arXiv division, e.g. math.' },
-				domain: { type: 'string', description: 'The subject as the source gives it.' }, tags: { type: 'array', items: { type: 'string' } },
-				category: { type: 'string', enum: ['research', 'non-research', 'fiction', 'low-info'], description: 'What the labelling agent judged the record to be.' },
-				origin: { type: 'string', description: 'ai-generated when the source says the work was made by AI.' },
-				authorship: { type: 'string', description: 'Hexagon: who the deposit says wrote it (human, mixed, no-human-author-claimed).' },
-				human_understanding: { type: 'string', enum: ['none', 'some', 'all'], description: 'Hexagon: how much of it the depositor says a human understood.' },
-				ai_models: { type: 'array', items: { type: 'string' }, description: 'AI models and tools the source says were used.' },
-				family: { type: 'string', description: 'Versions of one work share a family (family: in queries).' }, family_title: { type: 'string' },
-				agent_ready: { type: 'boolean', description: 'agenticpapers.app: the paper ships instructions for agents.' },
-				formalized: { type: 'boolean' }, formalizes: { type: 'array', description: 'Lean registries: the papers or results this formalizes.', items: { $ref: '#/components/schemas/Formalizes' } },
-				formalizations: { type: 'array', items: { type: 'string' }, description: 'Lean formalizations of this record.' },
-				verified: { type: 'boolean', description: 'Palomar: Lean checked it at the pinned commit; agenticpapers.app: it passed APP verification.' }, trust: { type: 'string' },
-				withdrawn: { type: 'boolean' }, withdrawn_on: { type: 'string', format: 'date' }, gone: { type: 'boolean', description: 'The source no longer serves it.' }, stars: { type: 'integer' },
+				domain: { type: 'string', description: 'Upstream subject classification.' }, tags: { type: 'array', items: { type: 'string' } },
+				category: { type: 'string', enum: ['research', 'non-research', 'fiction', 'low-info'], description: 'Classified record category.' },
+				origin: { type: 'string', description: 'ai-generated when declared AI-authored by the source.' },
+				authorship: { type: 'string', description: 'Hexagon declared authorship (human, mixed, no-human-author-claimed).' },
+				human_understanding: { type: 'string', enum: ['none', 'some', 'all'], description: 'Hexagon declared level of human understanding.' },
+				ai_models: { type: 'array', items: { type: 'string' }, description: 'AI models and tools declared by the source.' },
+				family: { type: 'string', description: 'Shared identifier across versions of the same manuscript (family: in queries).' }, family_title: { type: 'string' },
+				agent_ready: { type: 'boolean', description: 'Whether the record or repository ships agent instructions.' },
+				formalized: { type: 'boolean' }, formalizes: { type: 'array', description: 'Papers or results formalized by this Lean entry.', items: { $ref: '#/components/schemas/Formalizes' } },
+				formalizations: { type: 'array', items: { type: 'string' }, description: 'Lean formalizations associated with this record.' },
+				verified: { type: 'boolean', description: 'Machine-checked in Lean (Palomar) or verified by APP.' }, trust: { type: 'string' },
+				withdrawn: { type: 'boolean' }, withdrawn_on: { type: 'string', format: 'date' }, gone: { type: 'boolean', description: 'Upstream URL now returns 404/410.' }, stars: { type: 'integer' },
 				score: { type: 'integer' }, reactions: { type: 'object' }, comments: { type: 'integer' }, reviews: { type: 'integer' },
-				mentions: { type: 'integer', description: 'How many people\'s comments, on other records, name this record by id (sort=mentions).' },
-				discussed: { type: 'integer', description: 'How many responses discussion[] holds.' },
-				disputed: { type: 'boolean', description: 'A response refutes or questions the record.' },
+				mentions: { type: 'integer', description: 'Number of distinct users whose comments reference this record ID (sort=mentions).' },
+				discussed: { type: 'integer', description: 'Number of linked responses in discussion[].' },
+				disputed: { type: 'boolean', description: 'True when at least one response has stance refutes or questions.' },
 				reception: { $ref: '#/components/schemas/Reception' },
 				discussion: { type: 'array', items: { $ref: '#/components/schemas/Link' } },
-				discusses: { type: 'array', description: 'Records this one responds to.', items: { type: 'object', properties: { id: { type: 'string' }, title: { type: 'string' } } } },
-				links: { type: 'object', description: 'In search results: where the full record is.', properties: { self: { type: 'string' } } },
+				discusses: { type: 'array', description: 'Indexed records that this item responds to.', items: { type: 'object', properties: { id: { type: 'string' }, title: { type: 'string' } } } },
+				links: { type: 'object', description: 'Self link to full record endpoint.', properties: { self: { type: 'string' } } },
 			} },
 			SearchResult: { type: 'object', required: ['query', 'sort', 'total', 'count', 'results', 'next_cursor'], properties: {
 				query: { type: 'string' }, sort: { type: 'string' }, total: { type: 'integer' }, count: { type: 'integer' },

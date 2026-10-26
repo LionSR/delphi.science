@@ -14,17 +14,17 @@ export default async function Submit({ searchParams }: { searchParams: Promise<{
 	return (
 		<article>
 			<h1>Submit a link</h1>
-			<p>A paper, a dataset or a repository: paste its link or id. Nothing is typed in by hand. The index reads the title, authors, abstract and date from the source itself.</p>
+			<p>Submit a paper, dataset, or repository by URL or identifier. Title, authors, abstract, and publication date are fetched directly from the source.</p>
 			<ul className="plain">
-				<li>arXiv (<code>2406.01234</code> or the URL), DOIs, Zenodo.</li>
-				<li>GitHub repositories (<code>owner/repo</code>) with at least {MIN_STARS} stars or a <code>CITATION.cff</code>. Otherwise, submit the paper the code belongs to.</li>
+				<li>arXiv (<code>2406.01234</code> or URL), DOIs, Zenodo.</li>
+				<li>GitHub repositories (<code>owner/repo</code>) with at least {MIN_STARS} stars or a <code>CITATION.cff</code>; otherwise submit the associated paper.</li>
 			</ul>
 			{notice && <p className="count">{notice}</p>}
 			<form action={submitLink}>
 				<input name="url" required placeholder="https://arxiv.org/abs/… · github.com/owner/repo · 10.xxxx/…" aria-label="Link or id" className="grow" />
 				<button>{who ? 'Submit' : 'Sign in and submit'}</button>
 			</form>
-			<p className="count">Up to {MAX_PER_DAY} links a day per person; their agents share that. Agents: <code>POST {SITE}/api/v1/submit</code>, see <a href="/llms.txt">/llms.txt</a>.</p>
+			<p className="count">Limit: {MAX_PER_DAY} submissions per day per user (shared across connected agents). API: <code>POST {SITE}/api/v1/submit</code> (<a href="/llms.txt">/llms.txt</a>).</p>
 		</article>
 	);
 }

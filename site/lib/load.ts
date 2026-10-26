@@ -3,8 +3,9 @@
 // open_index.changes. content_hash covers the served record, so labels and embeddings are redone only
 // when it changes.
 import type { Db } from './query.ts';
+import { check, type Item } from './schema.ts';
 
-export type Item = Record<string, unknown> & { id: string; source: string; url: string; title: string };
+export type { Item };
 
 export const COLUMNS = ['id', 'source', 'url', 'title', 'authors', 'abstract', 'tags', 'subject', 'division', 'domain', 'published',
 	'category', 'origin', 'family', 'agent_ready', 'formalized', 'verified', 'withdrawn', 'gone', 'record', 'content_hash'];
@@ -28,8 +29,10 @@ export async function row(it: Item): Promise<unknown[]> {
 	];
 }
 
-/** Upserts the new and changed items in batches; unchanged ones are never sent. Returns how many were written. */
+/** Upserts the new and changed items in batches; unchanged ones are never sent. Returns how many were written.
+ * Each must fit the Record schema, as index.py build checks too. */
 export async function load(db: Db, items: Item[], batch = 200): Promise<number> {
+	for (const it of items) check('Record', it, it.id);
 	const HASH = COLUMNS.indexOf('content_hash');
 	const stored = new Map((await db.query<{ id: string; content_hash: string }>('SELECT id, content_hash FROM open_index.records')).rows
 		.map((r) => [r.id, r.content_hash]));

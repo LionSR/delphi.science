@@ -12,6 +12,7 @@ import addFormats from 'ajv-formats';
 import { load, type Item } from './load.ts';
 import { handle } from './mcp.ts';
 import { spec } from './openapi.ts';
+import { closed } from './schema.ts';
 import type { Db } from './query.ts';
 
 const MIGRATIONS = new URL('../supabase/migrations/', import.meta.url);
@@ -37,13 +38,6 @@ const operation = (id: string): Json => Object.values(spec.paths as Record<strin
 const param = (p: Json) => ({ ...p.schema, ...(p.description ? { description: p.description } : {}) });
 const without = (o: Json, ...keys: string[]) => Object.fromEntries(Object.entries(o).filter(([k]) => !keys.includes(k)));
 
-// A copy of a schema with every object that lists its properties closed to others (as in openapi.test.ts).
-function closed(s: unknown): unknown {
-	if (Array.isArray(s)) return s.map(closed);
-	if (!s || typeof s !== 'object') return s;
-	const o = Object.fromEntries(Object.entries(s).map(([k, v]) => [k, k === 'properties' ? Object.fromEntries(Object.entries(v as object).map(([p, q]) => [p, closed(q)])) : closed(v)]));
-	return 'properties' in o && !('additionalProperties' in o) ? { ...o, additionalProperties: false } : o;
-}
 const ajv = addFormats(new Ajv2020({ strict: false, allErrors: true }));
 /** What in data the tool's output schema, closed, does not allow. */
 const problems = (schema: Json, data: unknown) => {

@@ -1,5 +1,4 @@
 // Search for the open index: arXiv's query syntax, compiled to Postgres (supabase/migrations/*_open_index.sql).
-// The same syntax as query.py (repo root), which compiles it to SQLite for the downloadable snapshot.
 //
 //   ti:grokking AND au:openai          title, author         (arXiv: ti, au, abs, all)
 //   abs:"zero-free region" ANDNOT ti:survey

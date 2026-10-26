@@ -2,8 +2,8 @@
 # harvest.json, read the stalest entries again from their sources, read every discussion link again
 # (a deleted post drops out), label the new records, build, and load the build into Supabase Postgres.
 # The entries live in Supabase (open_index.entries, store.py), so nothing is committed.
-# Secrets: SUPABASE_DB_URL, the database (required); ANTHROPIC_API_KEY labels new records (without it
-# they wait, shown as research).
+# Secrets: SUPABASE_DB_URL, the database. Labels come from DeepSeek, with the key the site's moderator
+# uses: the secret deepseek_api_key in Supabase Vault (or DEEPSEEK_API_KEY).
 name: Open index
 
 on:
@@ -23,12 +23,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ github.token }}
-      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
     steps:
       - uses: actions/checkout@v7
-        with:
-          submodules: true
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
@@ -46,10 +43,7 @@ jobs:
       - name: Recheck discussion links
         run: python3 index.py discuss --recheck  # a deleted post drops out within a day
       - name: Label new records
-        if: env.ANTHROPIC_API_KEY != ''
-        run: |
-          npm install -g @anthropic-ai/claude-code
-          python3 index.py label
+        run: python3 index.py label
       - name: Build
         run: python3 index.py build
 

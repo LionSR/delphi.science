@@ -74,6 +74,15 @@ def ids() -> set[str]:
     return {i for (i,) in conn().execute("SELECT id FROM open_index.entries")}
 
 
+def secret(name: str) -> str | None:
+    """A secret in Supabase Vault (the DeepSeek key), or None; a copy without Vault (PGlite) has none."""
+    try:
+        row = conn().execute("SELECT decrypted_secret FROM vault.decrypted_secrets WHERE name = %s", [name]).fetchone()
+    except (psycopg.errors.UndefinedTable, psycopg.errors.InvalidSchemaName):
+        return None
+    return row[0] if row else None
+
+
 def checked(record: str, entry: dict[str, Any]) -> Jsonb:
     """The entry, ready to store, once it fits the Entry schema and its id: ValueError otherwise."""
     schema.check(entry, "Entry", record)

@@ -17,15 +17,15 @@ permissions:
 
 jobs:
   candidates:
-    runs-on: ubuntu-latest # its python3 (3.12) is enough: candidates.py needs only the standard library
+    runs-on: ubuntu-latest
+    env:
+      SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }} # the records it matches against (store.py)
     steps:
       - uses: actions/checkout@v7
-        with: # everything but entries/arxiv, which holds most of the files and which candidates.py does not read
-          filter: blob:none
-          sparse-checkout-cone-mode: false
-          sparse-checkout: |
-            /*
-            !/entries/arxiv/
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
 
       - name: Find candidates
         run: |

@@ -45,9 +45,8 @@ def words(text: str | None) -> list[str]:
 
 
 def records() -> list[dict[str, Any]]:
-    """The AI-made records, read source by source: entries/arxiv alone holds most of the index's files."""
-    found = [I.load(d.name) for d in sorted(I.ENTRIES.iterdir()) if d.is_dir() and d.name not in SKIP_SOURCES]
-    return [e for pairs in found for _, e in pairs if not e.get("gone")]
+    """The AI-made records: every entry but arXiv's (most of the index) and the web's, and none that is gone."""
+    return [e for _, e in I.load("source <> ALL(%s) AND NOT coalesce((entry->>'gone')::boolean, false)", [sorted(SKIP_SOURCES)])]
 
 
 def ident(url: str) -> str:

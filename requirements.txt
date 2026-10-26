@@ -1,0 +1,3 @@
+# The harvester (index.py, candidates.py): pip install -r requirements.txt
+psycopg[binary]==3.3.6  # the entries, in Postgres (store.py)
+pyyaml==6.0.3           # formalization.yaml files (sources.py, the Lean adapter)

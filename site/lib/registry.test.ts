@@ -10,7 +10,7 @@ import { accept, activity, startTopic, topic, topics, topicWithPosts, votePost }
 import { deepseek, type Moderator, type Post } from './moderate.ts';
 import { load } from './load.ts';
 import { get } from './query.ts';
-import { detect, resolve, trim } from './resolve.ts';
+import { detect, itemOf, resolve, trim } from './resolve.ts';
 import { submit } from './submit.ts';
 import { createAgentKey, voterFromKey } from './votes.ts';
 
@@ -61,12 +61,14 @@ describe('reading a link', () => {
 		assert.equal(id('PALOMAR-2026-10-17-000014'), null);
 	});
 	test('metadata comes from the source', async () => {
-		const it = await resolve('https://arxiv.org/abs/1706.03762v7', SOURCES);
-		assert.deepEqual([it?.id, it?.title, it?.authors, it?.subject, it?.division, it?.published],
-			['arxiv/1706.03762', 'Attention Is All You Need', ['Ashish Vaswani', 'Noam Shazeer'], 'cs.CL', 'cs', '2017-06-12']);
-		assert.match(String(it?.summary), /recurrent & convolutional/);
-		const repo = await resolve('karpathy/nanoGPT', SOURCES);
-		assert.deepEqual([repo?.id, repo?.title, repo?.repo, repo?.agent_ready], ['github/karpathy__nanoGPT', 'nanoGPT', REPO.html_url, true]);
+		const e = (await resolve('https://arxiv.org/abs/1706.03762v7', SOURCES))!;
+		assert.deepEqual([e.source, e.key, e.title, e.authors, e.domain, e.published],
+			['arxiv', '1706.03762', 'Attention Is All You Need', ['Ashish Vaswani', 'Noam Shazeer'], 'cs.CL', '2017-06-12']);
+		assert.match(String(e.summary), /recurrent & convolutional/);
+		const it = itemOf(e); // as index.py to_item serves an entry not labelled yet
+		assert.deepEqual([it.id, it.subject, it.division, it.category, 'key' in it], ['arxiv/1706.03762', 'cs.CL', 'cs', 'research', false]);
+		const repo = itemOf((await resolve('karpathy/nanoGPT', SOURCES))!);
+		assert.deepEqual([repo.id, repo.title, repo.repo, repo.agent_ready], ['github/karpathy__nanoGPT', 'nanoGPT', REPO.html_url, true]);
 		await assert.rejects(resolve('https://arxiv.org/abs/2999.99999', SOURCES), /2999/);
 	});
 	test('abstracts are trimmed at a word, as sources.py does', () => {
@@ -110,6 +112,9 @@ describe('submitting and the forum, on Postgres', () => {
 		assert.equal((await submit(db, 'karpathy/nanoGPT', ada, SOURCES)).status, 'listed');
 		const last = (await db.query<{ record_id: string; voter: string }>('SELECT record_id, voter FROM open_index.submissions ORDER BY id DESC LIMIT 1')).rows[0];
 		assert.deepEqual([last.record_id, last.voter], ['github/karpathy__nanoGPT', 'ada']);
+		// Stored as an entry, as index.py add stores one, so the daily pull labels and refreshes it.
+		const { entry } = (await db.query<{ entry: Record<string, unknown> }>("SELECT entry FROM open_index.entries WHERE id = 'github/karpathy__nanoGPT'")).rows[0];
+		assert.deepEqual([entry.key, entry.source, entry.added_by, entry.added], ['karpathy__nanoGPT', 'github', 'ada', new Date().toISOString().slice(0, 10)]);
 		await assert.rejects(submit(db, 'someone/tiny', ada, SOURCES), /fewer than 50 stars and no CITATION.cff/);
 		assert.equal((await submit(db, 'someone/cited', ada, SOURCES)).status, 'listed', 'a citable repository is listed whatever its stars');
 	});
@@ -126,8 +131,16 @@ describe('submitting and the forum, on Postgres', () => {
 		await assert.rejects(submit(db, 'https://jaigp.org/paper/105', bo, SOURCES), /venue is not listed/);
 		await assert.rejects(submit(db, 'https://arxiv.org/abs/2999.99999', bo, SOURCES), /not found or is not public/);
 		await assert.rejects(submit(db, 'two words', bo, SOURCES), /one link/);
-		await db.query(`INSERT INTO open_index.submissions (url, record_id, voter) SELECT 'x' || g, 'arxiv/1706.03762', 'cy' FROM generate_series(1, 20) g`);
+		// Links added with index.py add count too: one cap per person.
+		await db.query(`INSERT INTO open_index.entries (id, entry) SELECT 'web/x' || g, jsonb_build_object('key', 'x' || g, 'source', 'web', 'added_by', 'cy', 'added', $1::text)
+			FROM generate_series(1, 20) g`, [new Date().toISOString().slice(0, 10)]);
 		await assert.rejects(submit(db, 'arXiv:1801.00001', { login: 'cy', agent: '' }, SOURCES), /20 links today/);
+	});
+
+	test('a record labelled harmful is not listed again by submitting it', async () => {
+		await db.query(`INSERT INTO open_index.entries (id, entry) VALUES ('arxiv/1706.99999', '{"key": "1706.99999", "source": "arxiv", "review": {"category": "harmful"}}')`);
+		assert.equal((await submit(db, 'arXiv:1706.99999', bo, SOURCES)).status, 'already_listed');
+		assert.equal(await get(db, 'arxiv/1706.99999'), null);
 	});
 
 	test('questions, answers and comments; mentions of records; latest activity', async () => {

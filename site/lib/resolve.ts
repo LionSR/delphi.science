@@ -1,9 +1,9 @@
 // Reading a submitted link's metadata from its source, so it is listed the moment it is submitted. The
 // same rules as the harvester's adapters (sources.py), for the sources the site reads: arXiv, GitHub, DOI
-// and Zenodo. Ids and fields match what `index.py add` writes, so a record the harvester
+// and Zenodo. The entry and its id match what `index.py add` stores, so a record the harvester
 // also reaches is the same record, not another one.
 import taxonomy from './taxonomy.json' with { type: 'json' };
-import type { Item } from './load.ts';
+import { check, type Entry, type Item } from './schema.ts';
 
 export class NotFound extends Error {}
 /** The record exists, but the index does not take it (a repository below the bar). */
@@ -31,7 +31,8 @@ const DAILY = [
 ];
 
 type Fetcher = typeof fetch;
-type Source = { name: string; patterns: RegExp[]; key?: (m: RegExpMatchArray) => string; read: (key: string, get: Get) => Promise<Item> };
+export type { Entry };
+type Source = { name: string; patterns: RegExp[]; key?: (m: RegExpMatchArray) => string; read: (key: string, get: Get) => Promise<Entry> };
 type Get = (url: string, accept?: string) => Promise<Response>;
 
 // ---- Text, as sources.py cleans it ----
@@ -55,13 +56,30 @@ function subject(domain: string) {
 	return { subject: domain, division };
 }
 
-/** An item as the build serves it (index.py to_item): empty fields left out, unlabelled (so counted as research). */
-function item(source: string, key: string, f: Record<string, unknown>): Item {
+// Fields the source does not give are left out, not blanked (index.py _drop_empty).
+function dropEmpty<T extends Record<string, unknown>>(o: T): T {
+	for (const [k, v] of Object.entries(o)) if (v === undefined || v === null || v === '' || (Array.isArray(v) && !v.length)) delete o[k];
+	return o;
+}
+
+/** A source's fields as an entry: checked against the Entry schema, as store.py checks the harvester's. */
+function entry(source: string, key: string, f: Omit<Entry, 'key' | 'source'>): Entry {
 	if (!clean(f.title)) throw new NotFound(`${source}/${key} has no title`);
-	const out: Record<string, unknown> = { id: `${source}/${key}`, source, ...f, category: 'research', ...subject(String(f.domain ?? '')) };
-	for (const [k, v] of Object.entries(out)) if (v === undefined || v === null || v === '' || (Array.isArray(v) && !v.length)) delete out[k];
-	if (Array.isArray(out.tags)) out.tags = [...new Set(out.tags.map(String))].slice(0, 10);
-	return out as Item;
+	const e = dropEmpty({ key, source, ...f });
+	check('Entry', e, `${source}/${key}`);
+	return e;
+}
+
+// What the record keeps of how it was added: index.py to_item serves none of it.
+const BOOKKEEPING = new Set(['key', 'added', 'added_by', 'refreshed']);
+
+/** The item the build serves for an entry not labelled yet (index.py to_item): counted as research. */
+export function itemOf(e: Entry): Item {
+	const fields = Object.fromEntries(Object.entries(e).filter(([k]) => !BOOKKEEPING.has(k)));
+	const out = dropEmpty({ id: `${e.source}/${e.key}`, ...fields, tags: e.tags && [...new Set(e.tags)].slice(0, 10),
+		published: e.published || e.added, category: 'research', ...subject(e.domain ?? '') });
+	check('Record', out, out.id);
+	return out;
 }
 
 // ---- The sources ----
@@ -78,7 +96,7 @@ const SOURCES: Source[] = [
 			if (!e) throw new NotFound(`arXiv:${key}`);
 			const id = (xml(e, 'id')[0] ?? '').trim().split('/abs/').pop()!.replace(/v\d+$/, '');
 			const domain = e.match(/<arxiv:primary_category[^>]*term="([^"]+)"/)?.[1] ?? '';
-			return item('arxiv', id, {
+			return entry('arxiv', id, {
 				url: `https://arxiv.org/abs/${id}`, title: clean(xml(e, 'title')[0]),
 				authors: xml(e, 'author').map((a) => clean(xml(a, 'name')[0])).filter(Boolean), summary: trim(xml(e, 'summary')[0]), domain,
 				tags: [...e.matchAll(/<category[^>]*term="([^"]+)"/g)].map((m) => m[1]), published: isoDate(xml(e, 'published')[0]),
@@ -91,7 +109,7 @@ const SOURCES: Source[] = [
 		async read(key, get) {
 			const d = await (await get(`https://zenodo.org/api/records/${key}`, 'application/json')).json();
 			const m = d.metadata ?? {};
-			return item('zenodo', String(d.id), {
+			return entry('zenodo', String(d.id), {
 				url: d.links?.self_html ?? `https://zenodo.org/records/${d.id}`, title: clean(m.title),
 				authors: (m.creators ?? []).map((c: { name?: string }) => clean(c.name)).filter(Boolean), summary: trim(m.description),
 				tags: m.keywords ?? [], domain: m.resource_type?.type ?? '', published: isoDate(m.publication_date),
@@ -110,7 +128,7 @@ const SOURCES: Source[] = [
 			if ((d.stargazers_count ?? 0) < MIN_STARS && !files.has('CITATION.cff')) {
 				throw new NotTaken(`${d.full_name} has fewer than ${MIN_STARS} stars and no CITATION.cff`);
 			}
-			return item('github', d.full_name.replace('/', '__'), {
+			return entry('github', d.full_name.replace('/', '__'), {
 				url: d.html_url, repo: d.html_url, title: String(d.name).replace(/[-_]/g, ' '), authors: [d.owner?.login],
 				summary: trim(d.description), tags: d.topics ?? [], published: isoDate(d.created_at), stars: d.stargazers_count ?? 0,
 				agent_ready: files.has('AGENTS.md') || files.has('CLAUDE.md'),
@@ -125,7 +143,7 @@ const SOURCES: Source[] = [
 			const doi = key.replaceAll('__', '/');
 			const d = await (await get(`https://doi.org/${encodeURI(doi)}`, 'application/vnd.citationstyles.csl+json')).json();
 			const parts: number[] = d.issued?.['date-parts']?.[0] ?? [];
-			return item('doi', key, {
+			return entry('doi', key, {
 				url: `https://doi.org/${doi}`, title: clean(Array.isArray(d.title) ? d.title[0] : d.title),
 				authors: (d.author ?? []).map((a: { given?: string; family?: string; literal?: string }) => clean(`${a.given ?? ''} ${a.family ?? ''}`) || clean(a.literal)),
 				summary: trim(d.abstract), domain: d.type ?? '',
@@ -151,8 +169,8 @@ export function detect(link: string): { source: Source; key: string } | null {
 /** A link or a bare id (arXiv, DOI, owner/repo), one word. */
 export const looksLikeLink = (link: string) => /^\S{1,2000}$/.test(link.trim());
 
-/** Reads the record from its source. Throws NotFound when it does not exist or is not public. */
-export async function resolve(link: string, fetcher: Fetcher = fetch): Promise<Item | null> {
+/** Reads the record's entry from its source. Throws NotFound when it does not exist or is not public. */
+export async function resolve(link: string, fetcher: Fetcher = fetch): Promise<Entry | null> {
 	const hit = detect(link);
 	if (!hit) return null;
 	const get: Get = async (url, accept) => {

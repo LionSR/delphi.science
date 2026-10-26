@@ -106,7 +106,7 @@ def as_json() -> dict:
 
 
 def write_json() -> None:
-    """Write the rules for the site's search, so its cat: matching is the same as the SQLite build's."""
+    """Write the rules for the site's search (site/lib/query.ts), so its cat: matching uses the build's subjects and divisions."""
     text = json.dumps(as_json(), indent=1, ensure_ascii=False) + "\n"
     if not JSON_PATH.exists() or JSON_PATH.read_text() != text:
         JSON_PATH.write_text(text)

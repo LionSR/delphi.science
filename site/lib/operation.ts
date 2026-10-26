@@ -15,6 +15,7 @@ import { Ajv2020, type ErrorObject, type ValidateFunction } from 'ajv/dist/2020.
 import addFormats from 'ajv-formats';
 import { ApiError, counted, handle, voter } from './api.ts';
 import { operations, spec, type Operation, type Parameter, type Schema } from './openapi.ts';
+import type { FromSchema } from './schema.ts';
 import type { Voter } from './votes.ts';
 
 // ---- Types read from the document ----
@@ -25,17 +26,6 @@ export type OperationId = Ops extends { operationId: infer I } ? I : never;
 type Op<I> = Extract<Ops, { operationId: I }>;
 
 type Simplify<T> = { [K in keyof T]: T[K] } & {};
-type FromType<T, S> = T extends 'string' ? string : T extends 'integer' | 'number' ? number : T extends 'boolean' ? boolean
-	: T extends 'null' ? null : T extends 'object' ? ObjectOf<S> : unknown;
-/** The TypeScript type of a value a schema accepts, for the keywords the document uses. */
-export type FromSchema<S> = S extends { enum: readonly (infer E)[] } ? E
-	: S extends { type: readonly (infer T)[] } ? FromType<T, S>
-	: S extends { type: infer T } ? FromType<T, S> : unknown;
-type Given<P, R> = { [K in keyof P]: K extends R ? K : P[K] extends { default: unknown } ? K : never }[keyof P];
-type ObjectOf<S> = S extends { properties: infer P }
-	? Simplify<{ -readonly [K in Given<P, S extends { required: readonly (infer R)[] } ? R : never>]: FromSchema<P[K]> }
-		& { -readonly [K in Exclude<keyof P, Given<P, S extends { required: readonly (infer R)[] } ? R : never>>]?: FromSchema<P[K]> }>
-	: Record<string, unknown>;
 
 type ParamsIn<O, In> = O extends { parameters: readonly (infer X)[] } ? Extract<X, { in: In }> : never;
 type HasValue<X> = X extends { required: true } ? true : X extends { schema: { default: unknown } } ? true : false;

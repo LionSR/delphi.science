@@ -226,6 +226,25 @@ class Store(Stored):
         self.assertEqual(store.get("web/k")[1]["title"], "A person's edit")
         self.assertIn("skipped  web/k was changed", err.getvalue())
 
+    def test_refresh_reads_the_stalest_entries_first(self) -> None:
+        for key, day in (("a", "2026-03-01"), ("b", "2026-01-01"), ("c", "2026-02-01"), ("d", S.today())):
+            index.save(Ref(f"web/{key}"), self.entry(key, refreshed=day))
+        read: list[str] = []
+
+        class Web:
+            def refetch(_, e: dict) -> dict:  # noqa: N805
+                read.append(e["key"])
+                raise S.SourceError("down")  # so nothing moves its date: the same ones come first again
+
+        saved = S.BY_NAME["web"]
+        S.BY_NAME["web"] = Web()
+        try:
+            with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+                index.refresh(7, 2, False)
+        finally:
+            S.BY_NAME["web"] = saved
+        self.assertEqual(read, ["b", "c"])
+
 
 class Discussion(unittest.TestCase):
     OEMBED = {

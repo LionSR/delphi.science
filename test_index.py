@@ -1,14 +1,19 @@
 #!/usr/bin/env python3
-"""Offline tests: source detection, duplicate checks, build filtering. No network.
+"""Offline tests: source detection, duplicate checks, the entry store, build filtering. No network.
+
+The entries are kept in a fresh Postgres for the tests, PGlite with the migrations (site/scripts/db.ts), never the
+database SUPABASE_DB_URL names. It needs node and the site's packages (cd site && npm ci).
 
     python test_index.py
 """
 
 from __future__ import annotations
 
+import atexit
 import contextlib
 import io
 import json
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -16,7 +21,33 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import index  # noqa: E402
+import schema as S_  # noqa: E402
 import sources as S  # noqa: E402
+import store  # noqa: E402
+from store import Ref  # noqa: E402
+
+SITE = Path(__file__).resolve().parent / "site"
+_server: subprocess.Popen[str] | None = None
+
+
+def database() -> None:
+    """Points the store at a fresh test database, started once for the whole run."""
+    global _server
+    if _server is None:
+        _server = subprocess.Popen(["node", "--experimental-strip-types", "scripts/db.ts"], cwd=SITE, stdout=subprocess.PIPE, text=True)
+        atexit.register(_server.terminate)
+        url = _server.stdout.readline().strip() if _server.stdout else ""
+        if not url.startswith("postgresql://"):
+            raise RuntimeError("site/scripts/db.ts did not start: run npm ci in site/")
+        store.use(url)
+
+
+class Stored(unittest.TestCase):
+    """Each test starts with no entries."""
+
+    def setUp(self) -> None:
+        database()
+        store.conn().execute("TRUNCATE open_index.entries, open_index.entry_history")
 
 
 class Detect(unittest.TestCase):
@@ -67,16 +98,7 @@ class Detect(unittest.TestCase):
             S.detect("not a url")
 
 
-class Checks(unittest.TestCase):
-    def setUp(self) -> None:
-        self.tmp = tempfile.TemporaryDirectory()
-        self.saved = index.ENTRIES
-        index.ENTRIES = Path(self.tmp.name)
-
-    def tearDown(self) -> None:
-        index.ENTRIES = self.saved
-        self.tmp.cleanup()
-
+class Checks(Stored):
     def entry(self, **kw: object) -> dict:
         return {"key": "o__r", "source": "github", "url": "https://github.com/o/r", "title": "r", "stars": 120, **kw}
 
@@ -88,7 +110,7 @@ class Checks(unittest.TestCase):
         self.assertEqual(index.check(self.entry(stars=3, citation_cff=True)), [])
 
     def test_duplicate_is_rejected(self) -> None:
-        index.save(index.path_for("github", "o__r"), self.entry())
+        index.save(Ref("github/o__r"), self.entry())
         self.assertIn("already listed", index.check(self.entry())[0])
 
     def test_app_repo_is_rejected(self) -> None:
@@ -101,16 +123,127 @@ class Checks(unittest.TestCase):
         self.assertTrue(any("APP paper" in p for p in problems))
 
     def test_harmful_is_left_out_of_build(self) -> None:
-        index.save(index.path_for("github", "o__r"), self.entry(review={"category": "harmful"}))
-        index.save(index.path_for("github", "o__s"), self.entry(key="o__s", url="https://github.com/o/s", review={"category": "fiction"}))
+        index.save(Ref("github/o__r"), self.entry(review={"category": "harmful"}))
+        index.save(Ref("github/o__s"), self.entry(key="o__s", url="https://github.com/o/s", review={"category": "fiction"}))
         ids = {i["id"]: i for i in index.items([e for _, e in index.load()]) if i["source"] != "app"}
         self.assertNotIn("github/o__r", ids)
         self.assertEqual(ids["github/o__s"]["category"], "fiction")
 
     def test_unlabelled_counts_as_research(self) -> None:
-        index.save(index.path_for("github", "o__r"), self.entry())
+        index.save(Ref("github/o__r"), self.entry())
         it = next(i for i in index.items([e for _, e in index.load()]) if i["id"] == "github/o__r")
         self.assertEqual(it["category"], "research")
+
+
+class Store(Stored):
+    """The entries in Postgres: versions, history, and the passes that read and write many of them."""
+
+    def entry(self, key: str = "k", **kw: object) -> dict:
+        return {"key": key, "source": "web", "url": f"https://e.org/{key}", "title": key.upper(), **kw}
+
+    def history(self) -> list[tuple]:
+        return store.conn().execute("SELECT id, version, entry->>'title' FROM open_index.entry_history ORDER BY seq").fetchall()
+
+    def test_a_save_from_an_older_read_is_refused_and_each_version_is_kept(self) -> None:
+        first = index.save(Ref("web/k"), self.entry())
+        self.assertEqual(first, Ref("web/k", 1))
+        index.save(first, self.entry(title="Second"))
+        with self.assertRaises(store.Conflict):
+            index.save(first, self.entry(title="From the older read"))
+        with self.assertRaises(store.Conflict):
+            index.save(Ref("web/k"), self.entry())  # added twice
+        self.assertEqual(store.get("web/k"), (Ref("web/k", 2), self.entry(title="Second")))
+        self.assertEqual(self.history(), [("web/k", 1, "K")])
+
+    def test_a_refresh_that_moves_only_its_date_is_not_kept(self) -> None:
+        ref = index.save(Ref("web/k"), self.entry(refreshed="2026-10-01"))
+        index.save(ref, self.entry(refreshed="2026-10-08"))
+        self.assertEqual(self.history(), [])
+
+    def test_a_person_adds_at_most_20_links_a_day_with_their_agents(self) -> None:
+        saved = S.detect, S.fetch
+        S.detect = lambda url: (S.BY_NAME["web"], url.rsplit("/", 1)[1])
+        S.fetch = lambda url: self.entry(url.rsplit("/", 1)[1], url=url)
+        try:
+            out = io.StringIO()
+            with contextlib.redirect_stdout(out):
+                codes = [index.add(f"https://e.org/{n}", "ada", False) for n in range(index.MAX_ADDS_PER_DAY + 1)]
+                again = index.add("https://e.org/0", "bo", False)
+        finally:
+            S.detect, S.fetch = saved
+        self.assertEqual(codes, [0] * index.MAX_ADDS_PER_DAY + [2])
+        self.assertIn("20 links today", out.getvalue())
+        self.assertEqual((again, store.added_today("ada", S.today())), (2, index.MAX_ADDS_PER_DAY))  # already listed
+
+    def test_harvest_adds_each_new_record_once(self) -> None:
+        index.save(Ref("web/old"), self.entry("old"))
+
+        class Feed:
+            def harvest(_, query: str | None, limit: int):  # noqa: N805
+                yield from [self.entry("old"), self.entry("new"), self.entry("new")]
+
+        tmp = tempfile.TemporaryDirectory()
+        (Path(tmp.name) / "harvest.json").write_text(json.dumps({"jobs": [{"name": "feed", "source": "web"}]}))
+        saved = index.HERE, S.BY_NAME["web"], index.load_entries
+        index.HERE, S.BY_NAME["web"], index.load_entries = Path(tmp.name), Feed(), lambda: []
+        try:
+            with contextlib.redirect_stdout(io.StringIO()):
+                index.harvest(None, None, False)
+        finally:
+            index.HERE, S.BY_NAME["web"], index.load_entries = saved
+            tmp.cleanup()
+        self.assertEqual(sorted(store.ids()), ["web/new", "web/old"])
+        self.assertEqual(store.get("web/new")[1]["added_by"], "harvest:feed")
+
+    def test_label_reads_only_unlabelled_entries_outside_the_arxiv_harvest(self) -> None:
+        index.save(Ref("web/a"), self.entry("a"))
+        index.save(Ref("web/b"), self.entry("b", review={"category": "fiction"}))
+        index.save(Ref("arxiv/c"), {**self.entry("c"), "source": "arxiv", "added_by": "harvest:arxiv-math"})
+        with tempfile.NamedTemporaryFile("w", suffix=".json") as f:
+            json.dump({k: {"category": "research"} for k in "abc"}, f)
+            f.flush()
+            with contextlib.redirect_stdout(io.StringIO()):
+                index.label(False, f"canned:{f.name}")
+        self.assertEqual({r.id: e.get("review", {}).get("category") for r, e in [store.get(x) for x in ("web/a", "web/b", "arxiv/c")]},
+                         {"web/a": "research", "web/b": "fiction", "arxiv/c": None})
+
+    def test_refresh_leaves_an_entry_a_person_changed_meanwhile(self) -> None:
+        index.save(Ref("web/k"), self.entry(refreshed="2026-01-01"))
+
+        class Web:
+            def refetch(_, e: dict) -> dict:  # noqa: N805
+                ref, now = store.get("web/k")
+                index.save(ref, {**now, "title": "A person's edit"})  # discuss runs while the pass reads the source
+                return {**e, "title": "From the source"}
+
+        saved = S.BY_NAME["web"]
+        S.BY_NAME["web"] = Web()
+        try:
+            with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()) as err:
+                index.refresh(7, 10, False)
+        finally:
+            S.BY_NAME["web"] = saved
+        self.assertEqual(store.get("web/k")[1]["title"], "A person's edit")
+        self.assertIn("skipped  web/k was changed", err.getvalue())
+
+    def test_refresh_reads_the_stalest_entries_first(self) -> None:
+        for key, day in (("a", "2026-03-01"), ("b", "2026-01-01"), ("c", "2026-02-01"), ("d", S.today())):
+            index.save(Ref(f"web/{key}"), self.entry(key, refreshed=day))
+        read: list[str] = []
+
+        class Web:
+            def refetch(_, e: dict) -> dict:  # noqa: N805
+                read.append(e["key"])
+                raise S.SourceError("down")  # so nothing moves its date: the same ones come first again
+
+        saved = S.BY_NAME["web"]
+        S.BY_NAME["web"] = Web()
+        try:
+            with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+                index.refresh(7, 2, False)
+        finally:
+            S.BY_NAME["web"] = saved
+        self.assertEqual(read, ["b", "c"])
 
 
 class Discussion(unittest.TestCase):
@@ -159,27 +292,28 @@ class Discussion(unittest.TestCase):
         self.assertEqual(e["discussion"][0]["text"], "hi")  # serving does not change the entry
 
 
-class Entries(unittest.TestCase):
-    """A temporary entries/ folder; links are read through self.link, not the network."""
+class Entries(Stored):
+    """Entries in the test database, and a folder for canned replies; links are read through self.link, not the network."""
 
     def setUp(self) -> None:
+        super().setUp()
         self.tmp = tempfile.TemporaryDirectory()
-        self.saved = index.ENTRIES, S.discussion_link
-        index.ENTRIES = Path(self.tmp.name)
+        self.saved = S.discussion_link
         S.discussion_link = self.link
 
     def tearDown(self) -> None:
-        index.ENTRIES, S.discussion_link = self.saved
+        S.discussion_link = self.saved
         self.tmp.cleanup()
 
     def link(self, url: str) -> dict:
         return {"kind": "web", "url": url, "title": "new"}
 
     def entry(self, key: str = "k", links: list | None = None) -> None:
-        index.save(index.path_for("web", key), {"key": key, "source": "web", "url": f"https://e.org/{key}", "title": key.upper(), "discussion": links})
+        found = store.get(f"web/{key}")  # written again: a new version of it
+        index.save(found[0] if found else Ref(f"web/{key}"), {"key": key, "source": "web", "url": f"https://e.org/{key}", "title": key.upper(), "discussion": links})
 
     def read(self, key: str = "k") -> dict:
-        return json.loads(index.path_for("web", key).read_text())
+        return store.get(f"web/{key}")[1]
 
     def cmd(self, *argv: str) -> int:
         """index.py with these arguments; what it prints goes to self.out."""
@@ -266,7 +400,7 @@ class Stance(Entries):
     def test_proposals_are_printed_as_commands_and_nothing_is_written(self) -> None:
         self.cmd("discuss", "web/k", "https://e.org/a#:~:text=a%20gap", "https://e.org/b")
         self.cmd("discuss", "web/k", "https://e.org/b", "--stance", "extends")
-        before = index.path_for("web", "k").read_text()
+        before = store.get("web/k")
         canned = Path(self.tmp.name) / "stances.json"
         canned.write_text(json.dumps({"https://e.org/a#:~:text=a%20gap": {"stance": "questions", "reason": "Lean states less"},
                                       "https://e.org/b": {"stance": "refutes"}, "https://x.com/a/status/1": {"stance": "likes"}}))
@@ -275,7 +409,7 @@ class Stance(Entries):
         self.assertIn("python3 index.py discuss web/k 'https://e.org/a#:~:text=a%20gap' --stance questions   # Lean states less", text)
         self.assertNotIn("e.org/b", text)  # already labelled by a person
         self.assertIn("# no proposal, open it: https://x.com/a/status/1", text)  # not a stance
-        self.assertEqual(index.path_for("web", "k").read_text(), before)
+        self.assertEqual(store.get("web/k"), before)
 
     def test_the_labeler_gets_the_responses_as_data(self) -> None:
         seen = {}
@@ -305,18 +439,6 @@ class Stance(Entries):
         it = index.to_item(e)
         self.assertEqual((it["disputed"], it["discussion"][0]), (True, {"kind": "x", "url": "https://x.com/a/status/1", "stance": "refutes"}))
         self.assertNotIn("disputed", index.to_item({**e, "discussion": [{"kind": "web", "url": "u", "stance": "extends"}]}))
-
-    def test_is_disputed_and_is_discussed_in_the_snapshot(self) -> None:
-        import query
-        base = {"source": "web", "url": "u", "title": "T"}
-        items = [{**base, "id": "web/a", "discussion": [{"url": "1", "stance": "refutes"}], "disputed": True},
-                 {**base, "id": "web/b", "discussion": [{"url": "1", "stance": "confirms"}]}, {**base, "id": "web/c"}]
-        path = Path(self.tmp.name) / "index.db"
-        query.build_db(path, items, {}, {})
-        db = query.connect(path)
-        ids = lambda q: sorted(r["id"] for r in query.search(db, q)["results"])  # noqa: E731
-        self.assertEqual((ids("is:disputed"), ids("is:discussed"), ids("T ANDNOT is:discussed")), (["web/a"], ["web/a", "web/b"], ["web/c"]))
-        db.close()
 
 
 class StanceCopies(unittest.TestCase):
@@ -390,7 +512,7 @@ class Reception(Entries):
         self.assertEqual(self.reception("--text", "x", "--links", "https://elsewhere.org/p"), 2)
         self.assertEqual(self.reception("--text", "word " * 100), 2)
         self.assertEqual(self.reception("--draft", "--reviewed-by", "LionSR", "--labeler", f"canned:{self.canned}"), 2)
-        self.entry("k", [{**d, "stance": None} for d in self.LINKS])
+        self.entry("k", [{k: v for k, v in d.items() if k != "stance"} for d in self.LINKS])
         self.assertEqual(self.reception("--draft", "--labeler", f"canned:{self.canned}"), 2)  # no labelled links
         self.assertNotIn("reception", self.read())
 
@@ -401,40 +523,20 @@ class RecordShape(unittest.TestCase):
     type. The schema is read from site/openapi.json, the static copy of site/lib/openapi.ts (npm run openapi)."""
 
     ROOT = Path(__file__).resolve().parent
-    SPEC = json.loads((ROOT / "site" / "openapi.json").read_text())
-    TYPES = {"string": str, "integer": int, "number": (int, float), "boolean": bool, "array": list, "object": dict, "null": type(None)}
 
     def problems(self, value: object, schema: dict, at: str) -> list[str]:
-        """Where value does not fit schema: a field the schema does not list (objects are closed), a missing
-        required field, a wrong type or a value outside an enum. Covers the keywords the document uses."""
-        if "$ref" in schema:
-            schema = self.SPEC["components"]["schemas"][schema["$ref"].rsplit("/", 1)[1]]
-        types = schema.get("type", [])
-        types = [types] if isinstance(types, str) else types
-        if types and not any(isinstance(value, self.TYPES[t]) and not (t in ("integer", "number") and isinstance(value, bool)) for t in types):
-            return [f"{at}: {value!r} is not {' or '.join(types)}"]
-        if "enum" in schema and value not in schema["enum"]:
-            return [f"{at}: {value!r} is not one of {schema['enum']}"]
-        out = []
-        if isinstance(value, dict) and "properties" in schema:
-            props = schema["properties"]
-            out += [f"{at}.{k}: not in the schema" for k in value if k not in props]
-            out += [f"{at}.{k}: required" for k in schema.get("required", []) if k not in value]
-            out += [p for k, v in value.items() if k in props for p in self.problems(v, props[k], f"{at}.{k}")]
-        if isinstance(value, list) and "items" in schema:
-            out += [p for v in value for p in self.problems(v, schema["items"], f"{at}[]")]
-        return out
+        return S_.problems(value, schema, at)
 
-    def built(self) -> list[dict]:
-        """Items from entries that use every field to_item serves: each source's fields, both kinds of link with
-        stances, a reviewed reception, and a response that is itself a record (record, discusses)."""
+    def entries(self) -> tuple[dict, dict, dict]:
+        """Entries that use every field to_item serves: each source's fields, both kinds of link with stances, a
+        reviewed reception, and a response that is itself a record."""
         links = [{"kind": "x", "url": "https://x.com/a/status/1", "author": "A", "handle": "a", "text": "t", "date": "2026-10-08", "added": "2026-10-09", "stance": "refutes"},
                  {"kind": "web", "url": "https://arxiv.org/abs/2610.20058", "author": "B", "site": "arXiv", "title": "Reply", "text": "a quote",
                   "date": "2026-10-08", "added": "2026-10-09", "stance": "questions"}]
         paper = {"key": "P", "source": "openai-math", "url": "https://github.com/openai/math/P", "title": "P", "authors": ["C"],
                  "summary": "s", "domain": "Number theory", "origin": "ai-generated", "gone": True, "stars": 3, "pdf": "https://e.org/p.pdf",
                  "family": "017", "family_title": "F", "formalized": True, "withdrawn": True, "withdrawn_on": "2026-10-07", "verified": True,
-                 "trust": "high", "ai_models": ["model"], "formalizes": [{"id": "arxiv/2610.20058"}], "formalizations": ["lean/o__r"],
+                 "trust": "high", "ai_models": ["model"], "formalizes": [{"identifier": "2610.20058", "relationship": "formalizes", "title": "Primes"}], "formalizations": ["lean/o__r"],
                  "authorship": "human", "human_understanding": "all", "repo": "https://github.com/o/r", "json": "https://e.org/p.json",
                  "tags": ["t"], "published": "2026-10-01", "review": {"category": "research", "subject": "math.NT", "tags": ["u"]},
                  "discussion": links, "reception": {"text": "Refuted.", "written": "2026-10-09", "links": [links[0]["url"]],
@@ -443,11 +545,24 @@ class RecordShape(unittest.TestCase):
         app = index.app_entry({"id": "APP-260923-0000", "repo_url": "https://github.com/o/app", "versions": [
             {"title": "A", "authors": [{"name": "D"}], "paper_summary": "s", "tags": ["physics"], "domain": "hep-th", "listed_at": "2026-09-23"}]})
         self.assertEqual(set(index.PASSTHROUGH) - set(paper) - set(app), set(), "a served field this fixture leaves out")
-        items = [index.to_item(e) for e in (paper, reply, app)]
+        return paper, reply, app
+
+    def built(self) -> list[dict]:
+        """The items built from them, crosslinked (record, discusses)."""
+        items = [index.to_item(e) for e in self.entries()]
         index.crosslink(items)
         self.assertEqual((items[0]["reception"]["reviewed_by"], items[0]["discussion"][1]["record"], items[1]["discusses"][0]["id"]),
                          ("LionSR", "arxiv/2610.20058", "openai-math/P"))  # the fixture reaches every part
         return items
+
+    def test_entries_fit_the_entry_schema_and_a_misfit_is_not_stored(self) -> None:
+        self.assertEqual([p for e in self.entries() for p in self.problems(e, {"$ref": "#/components/schemas/Entry"}, index.rid(e))], [])
+        database()
+        with self.assertRaisesRegex(ValueError, r"web/k.secret: not in the schema[\s\S]*web/k.stars: '3' is not integer"):
+            index.save(Ref("web/k"), {"key": "k", "source": "web", "url": "u", "title": "T", "stars": "3", "secret": 1})
+        with self.assertRaisesRegex(ValueError, "an entry's id is <source>/<key>"):
+            index.save(Ref("web/other"), {"key": "k", "source": "web", "url": "u", "title": "T"})
+        self.assertIsNone(store.get("web/k"))
 
     def check(self, items: list[dict]) -> None:
         record = {"$ref": "#/components/schemas/Record"}

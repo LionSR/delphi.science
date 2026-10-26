@@ -11,6 +11,7 @@ import { Ajv2020 } from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 import { load, type Item } from './load.ts';
 import { spec } from './openapi.ts';
+import { closed } from './schema.ts';
 import { approveDevice } from './device.ts';
 import { createAgentKey } from './votes.ts';
 
@@ -35,13 +36,6 @@ function routes(dir = API, at = '/api/v1'): [string, URL][] {
 	});
 }
 
-// A copy of a schema with every object that lists its properties closed to others, so an undocumented field fails.
-function closed(s: unknown): unknown {
-	if (Array.isArray(s)) return s.map(closed);
-	if (!s || typeof s !== 'object') return s;
-	const o = Object.fromEntries(Object.entries(s).map(([k, v]) => [k, k === 'properties' ? Object.fromEntries(Object.entries(v as object).map(([p, q]) => [p, closed(q)])) : closed(v)]));
-	return 'properties' in o && !('additionalProperties' in o) ? { ...o, additionalProperties: false } : o;
-}
 
 describe('the OpenAPI document', () => {
 	test('documents every API route with its methods, and nothing else', async () => {

@@ -2,11 +2,11 @@
 
 Each adapter knows three things about its source:
 
-  match(url)      -> key or None   Is this URL (or bare ID) one of ours? The key names the entry file.
+  match(url)      -> key or None   Is this URL (or bare ID) one of ours? The record id is <source>/<key>.
   fetch(key)      -> entry         The record's metadata, read from the source itself.
   harvest(q, n)   -> entries       Up to n records, from a search query or the source's own listing.
 
-Entries are plain dicts in the open-index format (see README.md). Nothing is typed in by hand:
+Entries are plain dicts, as the Entry schema states them (site/lib/openapi.ts; store.py checks each). Nothing is typed in by hand:
 every field comes from the source. A record that cannot be read raises NotFound or SourceError,
 and no partial entry is ever written.
 """
@@ -308,7 +308,7 @@ def discussion_link(url: str) -> dict[str, Any]:
 
 
 class Source:
-    name = ""  # the source label, and the folder under entries/
+    name = ""  # the source label, and the first part of its record ids (<source>/<key>)
     label = ""  # shown on the page
     origin = ""  # "ai-generated" when the venue declares its papers are
     patterns: list[str] = []

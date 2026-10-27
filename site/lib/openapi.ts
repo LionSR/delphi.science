@@ -24,7 +24,7 @@ export const spec = {
 		title: 'Open Research Index',
 		version: '1.0.0',
 		contact: { name: 'Support', url: `${SITE}/support`, email: SUPPORT_EMAIL },
-		description: `Index of papers, preprints, and formal proofs linked to post-publication technical responses (arXiv replies, blog posts, talks, MathOverflow, X posts) with author, date, and verbatim excerpts. Read endpoints require no authentication. Also available as an MCP server at ${SITE}/mcp (Streamable HTTP, no key). Guide: ${SITE}/llms.txt`,
+		description: `Index of papers, preprints, and formal proofs linked to post-publication technical responses (arXiv replies, blog posts, talks, MathOverflow, X posts) with author, date, and verbatim excerpts. Research read endpoints require no authentication; usage statistics require administrator access. Also available as an MCP server at ${SITE}/mcp (Streamable HTTP, no key). Guide: ${SITE}/llms.txt`,
 	},
 	servers: [{ url: SITE }],
 	paths: {
@@ -201,10 +201,10 @@ export const spec = {
 		'/api/v1/stats': {
 			get: {
 				operationId: 'usageStats',
-				...open,
-				summary: 'Aggregate API usage statistics: weekly call counts, top endpoints, and top clients by user-agent token.',
-				parameters: [{ name: 'weeks', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 26, default: 8 }, description: 'How many weeks back, this one included.' }],
-				responses: { 200: { description: 'Counts', content: { 'application/json': { schema: { $ref: '#/components/schemas/Usage' } } } }, 400: err },
+				security: [{ agentKey: [] }],
+				summary: 'Admin-only API usage: weekly origin call counts, top route patterns, and claimed user-agent products. Requires a key owned by an ORI_STATS_ADMINS account. Product tokens are spoofable; these are not visitor counts.',
+				parameters: [{ name: 'weeks', in: 'query', schema: { type: 'integer', minimum: 1, maximum: 13, default: 8 }, description: 'How many weeks back, this one included. Counters retain 90 UTC dates.' }],
+				responses: { 200: { description: 'Counts', content: { 'application/json': { schema: { $ref: '#/components/schemas/Usage' } } } }, 400: err, 401: err, 403: err },
 			},
 		},
 		'/api/v1/keys/device': {
@@ -354,7 +354,7 @@ export const spec = {
 			} },
 			Usage: { type: 'object', properties: {
 				since: { type: 'string', format: 'date' }, weeks: { type: 'integer' },
-				weekly: { type: 'array', items: { type: 'object', properties: { week: { type: 'string', format: 'date', description: 'The Monday it starts.' }, calls: { type: 'integer' }, ai: { type: 'integer', description: 'Calls by AI clients.' } } } },
+				weekly: { type: 'array', items: { type: 'object', properties: { week: { type: 'string', format: 'date', description: 'The Monday it starts.' }, calls: { type: 'integer' }, ai: { type: 'integer', description: 'Calls claiming an allowlisted AI product; spoofable, not authenticated identity.' } } } },
 				endpoints: { type: 'array', items: { type: 'object', properties: { endpoint: { type: 'string', description: 'Method and route, e.g. GET /api/v1/search.' }, calls: { type: 'integer' } } } },
 				clients: { type: 'array', items: { type: 'object', properties: { client: { type: 'string' }, kind: { type: 'string', enum: ['ai', 'search', 'bot', 'tool', 'browser', 'other'] }, calls: { type: 'integer' } } } },
 				note: { type: 'string', description: 'What is counted and what is not.' },

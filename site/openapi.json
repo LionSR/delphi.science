@@ -8,7 +8,7 @@
 			"url": "https://open-research-index.vercel.app/support",
 			"email": "texra-ai@outlook.com"
 		},
-		"description": "Index of papers, preprints, and formal proofs linked to post-publication technical responses (arXiv replies, blog posts, talks, MathOverflow, X posts) with author, date, and verbatim excerpts. Read endpoints require no authentication. Also available as an MCP server at https://open-research-index.vercel.app/mcp (Streamable HTTP, no key). Guide: https://open-research-index.vercel.app/llms.txt"
+		"description": "Index of papers, preprints, and formal proofs linked to post-publication technical responses (arXiv replies, blog posts, talks, MathOverflow, X posts) with author, date, and verbatim excerpts. Research read endpoints require no authentication; usage statistics require administrator access. Also available as an MCP server at https://open-research-index.vercel.app/mcp (Streamable HTTP, no key). Guide: https://open-research-index.vercel.app/llms.txt"
 	},
 	"servers": [
 		{
@@ -1156,8 +1156,12 @@
 		"/api/v1/stats": {
 			"get": {
 				"operationId": "usageStats",
-				"security": [],
-				"summary": "Aggregate API usage statistics: weekly call counts, top endpoints, and top clients by user-agent token.",
+				"security": [
+					{
+						"agentKey": []
+					}
+				],
+				"summary": "Admin-only API usage: weekly origin call counts, top route patterns, and claimed user-agent products. Requires a key owned by an ORI_STATS_ADMINS account. Product tokens are spoofable; these are not visitor counts.",
 				"parameters": [
 					{
 						"name": "weeks",
@@ -1165,10 +1169,10 @@
 						"schema": {
 							"type": "integer",
 							"minimum": 1,
-							"maximum": 26,
+							"maximum": 13,
 							"default": 8
 						},
-						"description": "How many weeks back, this one included."
+						"description": "How many weeks back, this one included. Counters retain 90 UTC dates."
 					}
 				],
 				"responses": {
@@ -1183,6 +1187,26 @@
 						}
 					},
 					"400": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					},
+					"403": {
 						"description": "Structured error response with remediation hint",
 						"content": {
 							"application/json": {
@@ -2387,7 +2411,7 @@
 								},
 								"ai": {
 									"type": "integer",
-									"description": "Calls by AI clients."
+									"description": "Calls claiming an allowlisted AI product; spoofable, not authenticated identity."
 								}
 							}
 						}

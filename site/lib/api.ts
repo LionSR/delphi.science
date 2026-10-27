@@ -46,10 +46,10 @@ export async function handle(run: () => Promise<Response>): Promise<Response> {
 	try {
 		return await run();
 	} catch (e) {
-		if (e instanceof ApiError) return Response.json({ error: { code: e.code, message: e.message, fix: e.fix } }, { status: e.status });
+		if (e instanceof ApiError) return Response.json({ error: { code: e.code, message: e.message, fix: e.fix } }, { status: e.status, headers: { 'Cache-Control': 'private, no-store' } });
 		if (e instanceof QueryError) {
 			const status = /^no (record|topic|post) /.test(e.message) ? 404 : 400;
-			return Response.json({ error: { code: status === 404 ? 'not_found' : 'bad_request', message: e.message, fix: e.fix } }, { status });
+			return Response.json({ error: { code: status === 404 ? 'not_found' : 'bad_request', message: e.message, fix: e.fix } }, { status, headers: { 'Cache-Control': 'private, no-store' } });
 		}
 		throw e;
 	}
@@ -63,6 +63,7 @@ export async function handle(run: () => Promise<Response>): Promise<Response> {
  */
 export const counted = <A extends unknown[]>(endpoint: string, run: (req: Request, ...rest: A) => Response | Promise<Response>) =>
 	(req: Request, ...rest: A) => {
+		if (process.env.ORI_USAGE_ANALYTICS_ENABLED !== 'true' || process.env.VERCEL_ENV === 'preview') return run(req, ...rest);
 		const name = client(req.headers.get('user-agent'));
 		try {
 			after(() => db().then((d) => countCall(d, endpoint, name)).catch(() => {}));

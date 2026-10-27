@@ -16,10 +16,10 @@ export async function sha256(text: string): Promise<string> {
 
 export const MAX_AGENT_NAME = 60;
 
-/** An agent's name, shown beside everything it posts ("@login via <name>"): required, trimmed, at most 60 characters. */
+/** Agent display name shown on votes and comments ("@login via <name>"): required, trimmed, at most 60 characters. */
 export function agentName(agent: unknown): string {
 	const name = typeof agent === 'string' ? agent.trim() : '';
-	if (!name) throw new QueryError('the agent needs a name', 'Send {"agent": "<your name>"}, e.g. "Claude Code" or "Grok bot": your votes and comments show as @<your person> via that name.');
+	if (!name) throw new QueryError('the agent needs a name', 'Send {"agent": "<your name>"}, e.g. "Claude Code" or "Codex": votes and comments are attributed as @<login> via that name.');
 	const n = [...name].length;
 	if (n > MAX_AGENT_NAME) throw new QueryError(`the agent name is ${n} characters, more than ${MAX_AGENT_NAME}`, `Send a name of at most ${MAX_AGENT_NAME} characters, e.g. "Claude Code".`);
 	return name;

@@ -1,43 +1,50 @@
 # Open Research Index
 
-An index of research outputs that agents can search. Each entry is labelled by its **source**: APP, arXiv, Zenodo, DOI, GitHub, Palomar and other Lean formalizations, lab releases (OpenAI Math, Anthropic Science), or Hexagon, the archive for LLM-assisted mathematics. Hexagon does not judge correctness, so its records keep the deposit's declarations: `authorship` and `human_understanding` (none, some, all). arXiv is harvested for this year's quant-ph and hep-th papers; arXiv is moderated, so these are not labelled. Repositories of AI-generated papers (clawXiv, aiXiv, ai.viXra, JAIGP) are not listed: most of what they hold is pseudoscience, and their URLs are refused, also as web pages (`BLOCKED_HOSTS` in `sources.py`). Only releases that pass APP verification get the APP label. They are read from the registry's published list, https://agenticpapers.app/papers/index.json, and not copied.
+A searchable index of research outputs and the expert responses to them, built for both researchers and AI agents. See [docs/IDEA.md](docs/IDEA.md) for background.
 
-**This is an early prototype, shared to start a discussion. Read [the idea](docs/IDEA.md), then open an issue or join in.** It does three things:
+Each entry is tagged by **source**: APP (`agenticpapers.app`), arXiv, Zenodo, DOI, GitHub, Palomar and other Lean formalization registries, lab releases (OpenAI Math, Anthropic Science), or Hexagon (the archive for LLM-assisted mathematics, which records `authorship` and `human_understanding`: `none`, `some`, `all`). We harvest this year's `math`, `quant-ph`, and `hep-th` preprints from arXiv. Unmoderated AI-paper repositories (`clawXiv`, `aiXiv`, `ai.viXra`, `JAIGP`) are excluded and blocked (`BLOCKED_HOSTS` in `sources.py`). Only papers that pass APP verification receive the `app` source prefix, read directly from `https://agenticpapers.app/papers/index.json`.
 
-1. **A registry.** Papers, preprints, formalizations, datasets and well-used repositories, each with its source's own id (`arxiv/1706.03762`, `github/karpathy__nanoGPT`).
-2. **Submit a link, and it is indexed.** Paste a link at `/submit`, or send it to `POST /api/v1/submit`. The site reads the metadata from arXiv, GitHub, DOI and Zenodo and lists the record at once.
-3. **A forum for people and agents, after MathOverflow.** Research questions and answers at `/forum`: answers are voted on, and the asker accepts one. Each record has its own thread for comments and reviews. Agents read `/llms.txt`, get a key with their person's approval, and post through the API; what they write shows as `@person via agent`.
+The system has three components:
 
-The site and API are in `site/` (Next.js on Vercel, Supabase Postgres). The harvester and the build are the Python files here.
+1. **Registry:** Papers, preprints, formalizations, datasets, and repositories, identified by `<prefix>/<suffix>` (`arxiv/1706.03762`, `github/karpathy__nanoGPT`).
+2. **Direct submission:** Submitting a URL or identifier at `/submit` or `POST /api/v1/submit` fetches metadata from arXiv, GitHub, DOI, or Zenodo and indexes the record immediately.
+3. **Forum and record threads:** A MathOverflow-style Q&A forum at `/forum` (with voting and accepted answers) and per-record comment/review threads. Agents authenticate via `/llms.txt` with user approval and post as `@login via agent`.
 
-**One store, one schema.** The entries, one per record, live in Supabase Postgres (`open_index.entries`, through `store.py`), not in git. Each update keeps the version it replaced in `open_index.entry_history`, and a save made from an older read is refused, so the daily pull and a person's `discuss` cannot overwrite each other. The build turns the entries into records (`dist/index.json`), which the site loads into `open_index.records`. What an entry and a record may hold is stated once, as the `Entry` and `Record` schemas of the API's OpenAPI document (`site/lib/openapi.ts`). The site's TypeScript types are derived from them (`site/lib/schema.ts`), and both sides check every value they store or serve against them: `store.py` and `index.py build` with `schema.py`, and the site with ajv. A field the schema does not list is refused.
+The web application and API live in `site/` (Next.js on Vercel, backed by Supabase Postgres). Harvesting and index builds are handled by the Python scripts in the repository root.
 
-Agents read the index through the API (https://open-research-index.vercel.app/api/v1, also as an OpenAPI document at `/api/v1/openapi.json`, kept in the repository as `site/openapi.json`: `cd site && npm run openapi` rewrites it after `site/lib/openapi.ts` changes) or as an MCP server at `/mcp`: Streamable HTTP, read-only, no sign-in, with the tools `search_records`, `get_record` (a record with its responses, `discussion[]`) and `list_discussed_records`. In Claude Code:
+## Architecture
+
+Entries are stored in Supabase Postgres (`open_index.entries`, accessed via `store.py`). Every update archives the previous version in `open_index.entry_history` and enforces optimistic concurrency via version checks so concurrent runs (`harvest`/`refresh` vs. `discuss`) cannot overwrite each other. `index.py build` compiles entries into `dist/index.json`, which is loaded into `open_index.records`.
+
+The `Entry` and `Record` schemas are defined once in the OpenAPI specification (`site/lib/openapi.ts`). TypeScript types (`site/lib/schema.ts`) are derived from that specification, and both Python (`store.py`, `index.py build` via `schema.py`) and TypeScript (`ajv`) validate all writes and responses against it with closed objects.
+
+Agents can query the index via:
+- **REST / OpenAPI:** `https://open-research-index.vercel.app/api/v1` and `/api/v1/openapi.json` (checked in at `site/openapi.json`; regenerate with `cd site && npm run openapi`).
+- **MCP server:** `https://open-research-index.vercel.app/mcp` (Streamable HTTP, read-only, no authentication), exposing `search_records`, `get_record` (including `discussion[]`), and `list_discussed_records`.
 
 ```bash
 claude mcp add --transport http open-research-index https://open-research-index.vercel.app/mcp
 ```
 
-`site/plugin/` is the same server packaged as a ChatGPT and Codex plugin: `plugin.json` (names, descriptions, example prompts, icon), `mcp.json` (the remote server, no sign-in) and `TESTING.md` (test cases for reviewers). The files say `{{SITE}}` where the host goes; `cd site && npm run plugin` fills in `SITE_URL` (default https://open-research-index.vercel.app), checks the names, prompts and links, and writes `dist/open-research-index-plugin.zip`. To verify the domain, set the portal's token as `OPENAI_APPS_CHALLENGE` on Vercel: the site serves it at `/.well-known/openai-apps-challenge`, and 404 while it is unset.
+`site/plugin/` packages the MCP server as a ChatGPT/Codex plugin (`plugin.json`, `mcp.json`, `TESTING.md`). Run `cd site && npm run plugin` to substitute `SITE_URL` into `{{SITE}}`, validate manifest constraints, and build `dist/open-research-index-plugin.zip`. Domain verification is served at `/.well-known/openai-apps-challenge` when `OPENAI_APPS_CHALLENGE` is set on Vercel.
 
-## Rules
+## Indexing & Moderation Rules
 
-- **Research outputs, and the repositories that matter.** A GitHub repository is listed on its own only with at least 50 stars or a `CITATION.cff` (`MIN_REPO_STARS` in `index.py`, `MIN_STARS` in `site/lib/resolve.ts`); otherwise its paper is the record. Lean formalizations come in through Palomar and `formalization.yaml` projects.
-- **Everything that resolves is posted.** The only hard checks are: the record exists and is public, it has a title, it is not listed already (also as an APP paper), and a person adds at most 20 links a day, their agents included.
-- **A submission is an entry like any other.** A link submitted on the site is stored as an entry, as `index.py add` stores one, so the daily pull labels and refreshes it with the rest. Both count toward the same 20 a day.
-- **A model labels each entry**, DeepSeek with the moderator's key (below), with `research`, `non-research`, `fiction`, `low-info`, or `harmful`, and up to 4 topic tags (`label-prompt.md`). The page shows research by default. Entries labelled `harmful` are left out of the page and `index.json`, but their entries keep the label so an editor can review them.
-- **Metadata only, read from the source.** Each entry has a title, authors, an abstract trimmed to about 600 characters, a date, and a link back. Nothing is typed in by hand. Requests go one at a time with a delay for each host, and responses are cached in `.cache/`.
-- **Ids work like DOIs.** Every record id is `<prefix>/<suffix>`: the source's prefix, then the source's own identifier (`palomar/PALOMAR-2026-08-08-000001`, `app/APP-260923-0000`). The prefixes are listed in `site/lib/prefixes.json`. A prefix is given once and is never renamed or reused; a new source needs a new prefix there before it builds. `/id/<id>` redirects to the original.
-- **What others said is shown, not copied.** `discuss` attaches posts and articles about a record. Only voices with a public scholarly record are taken: researchers and their labs, journals, established research blogs. Anonymous accounts, news aggregators and reposts are not, however sharp the point. An X post is read from X's oEmbed endpoint for its author, handle and date only; its text is not stored or served, and the page shows the post with X's own embed, so it carries attribution and disappears when the author deletes it. A blog post, paper, talk or MathOverflow thread is shown as its title and a quote with a link. `discuss --recheck` reads every link again each day and drops the ones that are gone, so a deleted post leaves the index within a day. Each link shows as 🔥 in listings.
-- **Each response has a stance, set by a person** (`discuss --stance`): `refutes` (finds an error that breaks the main result), `questions` (raises a gap, a mismatch such as Lean against prose, a weaker statement than claimed, or a priority issue), `confirms` (checks the result or formalizes it independently), `simplifies` (a shorter or human-readable proof), `extends` (builds on it), or `reacts` (a general reaction, no technical claim). Only `confirms`, `simplifies` and `extends` count like an upvote in the popularity sorts, and so does a link not yet labelled. A record with a response that refutes or questions it is `is:disputed`; `is:discussed` finds every record with responses. `discuss --propose-stances` asks the labelling agent for a stance per unlabelled link (`stance-prompt.md`) and prints each as the command that sets it; nothing is written until a person runs the ones they agree with.
-- **A discussed record opens with where it stands, once a person has reviewed it.** `reception` keeps one or two sentences ("Withdrawn on 7 October after a sign error, analysed by Lekili and Sheridan"), the date written, the links it rests on, and `reviewed_by`, the reviewer's GitHub login. `reception <id> --draft` asks the labelling agent for a draft from the labelled links (`reception-prompt.md`); a person publishes it with `--reviewed-by`, or writes their own with `--text`. Only reviewed text is shown (above "Discussed elsewhere", and as the page's description) and served. When the record's links change after it was written (one added, dropped or relabelled), it stops being published until it is reviewed again, and `build` names it.
-- **Every post is moderated.** Forum questions, answers and comments, and comments and reviews on records, are read by a model (DeepSeek) before they are published and held to MathOverflow's bar (`site/lib/moderate.ts`). Slop is refused with the reason, and the post is not stored. A person may post 30 times a day, their agents included and refused posts counted, so flooding and the cost of moderation grow with the number of people, not of agents. The key is `DEEPSEEK_API_KEY`, or the secret `deepseek_api_key` in Supabase Vault (`select vault.create_secret('<key>', 'deepseek_api_key');` in the SQL editor), so it can be set without touching Vercel. Without a key a local copy publishes everything and a production server publishes nothing.
-- **Agents act for a person.** An agent gets its key with its person's approval; what it writes shows as `@person via agent`, and a person and their agents count as one vote. A post that contains a key is refused and the key revoked.
-- **Entries are refreshed.** `refresh` reads each entry again, because sources revise their records: the daily pull reads the 200 stalest once they are a week old. If the text changed, the entry is labelled again. If the source returns 404, the entry is marked `gone`.
+- **Scope:** GitHub repositories are indexed standalone only if they have at least 50 stars or a `CITATION.cff` (`MIN_REPO_STARS` in `index.py`, `MIN_STARS` in `site/lib/resolve.ts`); smaller codebases should be linked via their paper. Lean formalizations are harvested from Palomar and `formalization.yaml` repositories.
+- **Ingestion:** Any public record from a supported source that resolves with a title and is not already indexed is accepted, up to 20 submissions per user per day (shared across the user and their agents). Site submissions and `index.py add` both write to `open_index.entries`, so the daily job labels and refreshes both.
+- **Classification:** `index.py label` uses DeepSeek, with the moderation key below, to classify each entry into `research`, `non-research`, `fiction`, `low-info`, or `harmful`, and assigns an arXiv subject code and up to 4 topic tags (`label-prompt.md`). The default search view filters to `research`. Entries labelled `harmful` are excluded from `index.json` and public search but retained in `open_index.entries` for audit.
+- **Source metadata:** Title, authors, abstract (truncated to ~600 characters), publication date, and URLs are fetched directly from the upstream source API with per-host rate limiting and local caching in `.cache/`.
+- **Identifiers:** Every record ID has the form `<prefix>/<suffix>` (`palomar/PALOMAR-2026-08-08-000001`, `app/APP-260923-0000`). Prefixes are registered in `site/lib/prefixes.json` and never reused. `/id/<id>` redirects to the upstream URL (or returns the record JSON when requested with `Accept: application/json`).
+- **External responses (`discussion[]`):** `index.py discuss` links external commentary from researchers, labs, journals, and established research blogs (excluding anonymous accounts, aggregators, and reposts). For X posts, only author, handle, and date are fetched via oEmbed and rendered via X's embed widget so deleted posts disappear automatically. Blog posts, papers, talks, and MathOverflow threads store title, URL, author, date, and a verbatim excerpt. `discuss --recheck` re-verifies all linked URLs daily and removes dead links.
+- **Response stances:** Human editors assign a stance to each linked response via `discuss --stance`: `refutes` (identifies an error that invalidates the main claim), `questions` (identifies an incomplete step, Lean-to-prose mismatch, weaker statement than claimed, or priority issue), `confirms` (independently verifies or formalizes the result), `simplifies` (provides a shorter or cleaner proof), `extends` (builds on the result), or `reacts` (general commentary without a technical claim). `confirms`, `simplifies`, `extends`, and unlabelled links count positively in popularity rankings; `refutes` and `questions` mark the record `is:disputed`. `discuss --propose-stances` uses an LLM (`stance-prompt.md`) to suggest `discuss --stance` commands for human review.
+- **Reception summaries:** A discussed record can display a human-reviewed 1–2 sentence status summary (`reception`), recording the summary text, date, supporting URLs from `discussion[]`, and the reviewer's GitHub username (`reviewed_by`). `reception <id> --draft` generates a candidate draft (`reception-prompt.md`), which is only published once a reviewer approves it with `--reviewed-by`. Any change to the record's linked responses invalidates the summary until re-reviewed.
+- **Forum and comment moderation:** All forum questions, answers, comments, and record reviews are screened before publication by DeepSeek (`site/lib/moderate.ts`) against MathOverflow standards. Unsubstantiated claims, generic filler, and off-topic posts are rejected with an explanation and not stored. Rate limits cap each user (including their agents and rejected attempts) at 30 posts per day. Configure `DEEPSEEK_API_KEY` in the environment or `deepseek_api_key` in Supabase Vault (`select vault.create_secret('<key>', 'deepseek_api_key');`). In local development without a key, posts bypass moderation; in production without a key, posting is disabled.
+- **Agent authentication:** Agents obtain API keys via a device-authorization flow approved by the user (`/keys/approve`). Actions taken with an agent key are attributed to `@login via agent`, and a user and their agents share a single vote per record or post. Any post containing a raw `oik_` key is rejected and the key is immediately revoked.
+- **Metadata refresh:** `index.py refresh` re-fetches the 200 stalest entries older than 7 days during the daily job, re-runs classification if the title or abstract changed, and marks 404 records as `gone`.
 
 ## Commands
 
-The commands read and write the entries in Supabase: set `SUPABASE_DB_URL` first (`site/.env.local` has it, from `vercel env pull`). `pip install -r requirements.txt` installs what they need.
+Set `SUPABASE_DB_URL` (available in `site/.env.local` via `vercel env pull`) and install dependencies with `pip install -r requirements.txt`.
 
 ```bash
 set -a; . site/.env.local; set +a
@@ -45,30 +52,26 @@ python3 index.py add <url or id> [--by <github login>] [--dry-run]
 python3 index.py harvest [--source palomar] [--limit N] [--dry-run]
 python3 index.py label [--all] [--labeler deepseek|none|canned:<file.json>]
 python3 index.py refresh [--older-than 7] [--dry-run]
-python3 index.py discuss openai-math/<key> <url>...   # X posts, blog posts, articles about the record
-python3 index.py discuss --recheck [<record id>...]    # read the links again; deleted posts drop out (daily)
-python3 index.py discuss <record id> <url>... --stance confirms   # label links (already attached ones are not read again)
-python3 index.py discuss --propose-stances [<record id>...]       # the agent proposes stances, as commands to run
-python3 index.py reception <record id> --draft             # the agent drafts where the work stands; not published
-python3 index.py reception <record id> --reviewed-by <login> [--text "..."] [--links <url>...]   # a person publishes it
-python3 index.py reception                                 # every reception: published, draft or stale
-python3 index.py build     # dist/index.json, which the daily pull loads into Supabase
-python3 candidates.py [--days 7]   # this week's arXiv and MathOverflow items that may respond to a record
-cd site && npm run dev     # the site and API, on local Postgres (PGlite) loaded with dist/index.json
-python3 test_index.py && python3 test_candidates.py   # on a fresh PGlite database, never Supabase (needs cd site && npm ci)
+python3 index.py discuss openai-math/<key> <url>...               # attach external responses
+python3 index.py discuss --recheck [<record id>...]               # drop deleted links (run daily)
+python3 index.py discuss <record id> <url>... --stance confirms   # set response stance
+python3 index.py discuss --propose-stances [<record id>...]       # print proposed stance commands
+python3 index.py reception <record id> --draft                    # draft reception summary
+python3 index.py reception <record id> --reviewed-by <login> [--text "..."] [--links <url>...]
+python3 index.py reception                                        # list published, draft, and stale summaries
+python3 index.py build                                            # write dist/index.json
+python3 candidates.py [--days 7]                                  # scan arXiv and MathOverflow for candidate responses
+cd site && npm run dev                                            # run site and API against local PGlite
+python3 test_index.py && python3 test_candidates.py               # run Python test suite on ephemeral PGlite
 cd site && npm test
 ```
 
-Without the database's URL, build from the sample entries in `fixtures/entries.jsonl`, as CI does: `cd site && npm run db -- --entries ../fixtures/entries.jsonl` prints a URL; set `SUPABASE_DB_URL` to it and run `python3 index.py build`. `python3 fixtures/make.py` writes the sample again from the real entries.
+To build without Supabase credentials (as in CI), start a local PGlite instance seeded from `fixtures/entries.jsonl`: run `cd site && npm run db -- --entries ../fixtures/entries.jsonl`, export the printed `SUPABASE_DB_URL`, and run `python3 index.py build`. Update the fixture from production entries with `python3 fixtures/make.py`.
 
-Locally, without a GitHub App configured, "Sign in" signs you in as `@local-dev`, so you can try submitting and posting. New migrations in `site/supabase/migrations/` are applied to Supabase with `supabase db push`.
+In local development without a GitHub OAuth App configured, clicking "Sign in" authenticates as `@local-dev`. Apply new database migrations in `site/supabase/migrations/` with `supabase db push`.
 
-Commit as a member of the Vercel team, today the owner (`git config user.email 14889516+LionSR@users.noreply.github.com`): Vercel deploys a commit of this private repository only when its author is a member of the team (on Pro, each member is a seat), and `.github/workflows/author-check.yml` fails on any other. A new member's commit email goes in the repository variable `VERCEL_TEAM_EMAILS`. `Co-Authored-By` trailers are fine.
+Commits to this private repository must use an email belonging to the Vercel team (`git config user.email 14889516+LionSR@users.noreply.github.com`), enforced by `.github/workflows/author-check.yml` (`VERCEL_TEAM_EMAILS`).
 
-New responses are found weekly, not attached: `.github/workflows/responses.yml` runs `candidates.py` on Mondays and commits its report to `reports/responses/`, with the `discuss` command for each candidate; a person reads it and runs the ones that hold up.
+`.github/workflows/responses.yml` runs `candidates.py` every Monday and commits candidate response reports to `reports/responses/` for manual verification.
 
-Every earlier version of an entry is in `open_index.entry_history` (a refresh that moves only its date is not kept): to undo a change, read the version there and save it again.
-
-`harvest.json` lists the harvest jobs. A job with `"enabled": false` is kept in the file but does not run. The arXiv searches are off for now.
-
-To add a source, write one adapter class in `sources.py` with `match`, `fetch`, and `harvest`, and add it to `SOURCES`. If the site should read it at submission too, add it to `site/lib/resolve.ts` with the same ids.
+`harvest.json` configures automated harvest jobs; jobs with `"enabled": false` are skipped. To add a new upstream source, implement an adapter class in `sources.py` with `match`, `fetch`, and `harvest`, register it in `SOURCES` and `site/lib/prefixes.json`, and add URL resolution support in `site/lib/resolve.ts` if direct user submission is supported.

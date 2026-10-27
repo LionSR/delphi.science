@@ -1,5 +1,5 @@
 {
- "about": "Every record id is <prefix>/<suffix>, like a DOI. The prefix names the source; the suffix is the source's own identifier. A prefix is given once and is never renamed or reused; a retired prefix names a source that is no longer listed.",
+ "about": "Every record ID has the form <prefix>/<suffix>, where <prefix> identifies the upstream source and <suffix> is the source's identifier. Prefixes are permanent and never reused; retired prefixes indicate sources no longer indexed.",
  "prefixes": {
   "app": {"name": "agenticpapers.app", "home": "https://agenticpapers.app", "suffix": "APP id", "example": "app/APP-260923-0000", "since": "2026-10-24"},
   "openai-math": {"name": "OpenAI Math", "home": "https://github.com/openai/math", "suffix": "preprint folder", "example": "openai-math/Tangent-flow-uniqueness", "since": "2026-10-24"},

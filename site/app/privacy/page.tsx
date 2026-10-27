@@ -37,7 +37,7 @@ export default function Privacy() {
 			<p><b>Page views.</b> Vercel Web Analytics records the request path (excluding query strings), referrer, country, browser, OS, and device type without cookies. Visitors are deduplicated using a short-lived hash rotated every 24 hours.</p>
 			<p><b>Server request logs.</b> Vercel logs incoming HTTP requests (including IP address, user agent, URL, and timestamp) for operational debugging and abuse prevention. We inspect these logs only for troubleshooting and do not export them.</p>
 			<p><b>Database hosting.</b> Index records, accounts, votes, comments, keys, and usage counters are stored in Supabase Postgres. Database connections originate from Vercel servers, so visitor IP addresses are not passed to Supabase.</p>
-			<p><b>Indexed records and external links.</b> Index records contain public bibliographic metadata (titles, authors, abstracts, dates, URLs). Under &ldquo;Discussed elsewhere,&rdquo; records link public commentary by researchers (author name, handle, date, URL, and a short excerpt or page description). Metadata for newly harvested records is sent to Anthropic&apos;s Claude API for topic classification; no user or visitor data is included.</p>
+			<p><b>Indexed records and external links.</b> Index records contain public bibliographic metadata (titles, authors, abstracts, dates, URLs). Under &ldquo;Discussed elsewhere,&rdquo; records link public commentary by researchers (author name, handle, date, URL, and a short excerpt or page description). When optional automated classification or editorial drafting is enabled, public metadata and linked-response excerpts are sent to DeepSeek for topic classification, stance proposals, and reception-summary drafts. Account credentials and visitor data are not included. Stance proposals and reception drafts require human review before publication.</p>
 
 			<h2 id="who-receives-it">Service providers and third parties</h2>
 			<ul>
@@ -46,7 +46,7 @@ export default function Privacy() {
 				<li><b>Supabase</b>: managed Postgres database hosting (US East, North Virginia, United States).</li>
 				<li><b>GitHub</b>: OAuth authentication, governed by GitHub&apos;s privacy policy.</li>
 				{/* owner: confirm DeepSeek's API data terms (retention, training use) and the region it processes in. */}
-				<li><b>DeepSeek</b>: automated moderation of submitted comments and forum posts (receives only the post text and target title).</li>
+				<li><b>DeepSeek</b>: automated moderation of submitted comments and forum posts (post text and target title), and optional classification, stance proposals, and reception drafting (public record metadata and linked-response excerpts).</li>
 				<li><b>Embedded third-party assets</b>: pages load MathJax from jsDelivr (<code>cdn.jsdelivr.net</code>). Record pages containing X links load <code>platform.twitter.com/widgets.js</code> with <code>data-dnt=&quot;true&quot;</code>; loading the widget shares your IP address and browser headers with X under X&apos;s privacy policy. External links to YouTube and other sites do not load third-party scripts until clicked.</li>
 			</ul>
 

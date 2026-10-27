@@ -23,7 +23,7 @@ export const spec = {
 	info: {
 		title: 'Open Research Index',
 		version: '1.0.0',
-		contact: { name: 'Support', url: `${SITE}/support`, email: SUPPORT_EMAIL || undefined },
+		contact: { name: 'Support', url: `${SITE}/support`, email: SUPPORT_EMAIL },
 		description: `Index of papers, preprints, and formal proofs linked to post-publication technical responses (arXiv replies, blog posts, talks, MathOverflow, X posts) with author, date, and verbatim excerpts. Read endpoints require no authentication. Also available as an MCP server at ${SITE}/mcp (Streamable HTTP, no key). Guide: ${SITE}/llms.txt`,
 	},
 	servers: [{ url: SITE }],

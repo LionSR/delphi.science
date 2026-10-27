@@ -66,6 +66,10 @@ python3 test_index.py && python3 test_candidates.py               # run Python t
 cd site && npm test
 ```
 
+Python DeepSeek generation is **off by default**, including classification, stance proposals, and reception drafts. A key alone does not authorize spending. For an owner-authorized one-off run, add `--allow-paid-deepseek --max-cost-usd <approved USD amount>` to the relevant command. The run reserves each request's worst-case input/output cost before sending it, has strict input/output limits, and keeps the full reservation if usage is absent or uncertain. Canned replies and `--labeler none` make no model calls. Other provider names (including `claude`) are rejected rather than invoked or recorded as misleading provenance.
+
+Recurring labeling additionally requires a separately approved recurring budget: repository variables `ORI_DEEPSEEK_ENABLED=true` and a positive `ORI_DEEPSEEK_MAX_RUN_USD`. Neither variable is created by this change. `DEEPSEEK_API_KEY` is optional when the existing Vault secret `deepseek_api_key` is available. The daily job visibly skips labels when opt-in/budget is absent, still harvests/builds/loads metadata, and reports an attempted label failure as a failed job after ingestion completes. Classification is optional metadata, not peer review or a prerequisite for registry inclusion. Recheck the documented DeepSeek peak prices before activation; rates are currently bounded using `deepseek-flash` at $0.30/input-million and $1.20/output-million (checked October 27, 2026).
+
 To build without Supabase credentials (as in CI), start a local PGlite instance seeded from `fixtures/entries.jsonl`: run `cd site && npm run db -- --entries ../fixtures/entries.jsonl`, export the printed `SUPABASE_DB_URL`, and run `python3 index.py build`. Update the fixture from production entries with `python3 fixtures/make.py`.
 
 In local development without a GitHub OAuth App configured, clicking "Sign in" authenticates as `@local-dev`. Apply new database migrations in `site/supabase/migrations/` with `supabase db push`.

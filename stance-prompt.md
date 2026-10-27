@@ -15,5 +15,5 @@ Rely only on the provided response `title` and `text`. If a response has no text
 
 Provide a `reason` of at most 15 words citing the specific phrase or claim in the response.
 
-Reply with a JSON array only, one object per response:
-[{"url": "<response url>", "stance": "questions", "reason": "..."}]
+Reply with a JSON object only, with exactly one `results` array containing one object per distinct response URL. Use only supplied URLs, without omissions or duplicates:
+{"results": [{"url": "<response url>", "stance": "questions", "reason": "..."}]}

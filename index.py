@@ -30,6 +30,7 @@ import subprocess
 import sys
 import urllib.error
 import urllib.request
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
 from collections import Counter
 from typing import Any, Iterable
@@ -225,44 +226,185 @@ def label_batch(batch: list[dict[str, Any]], labeler: str, canned: dict[str, Any
         return {}
     if labeler == "canned":
         return {e["key"]: canned[e["key"]] for e in batch if e["key"] in canned}
+    validate_labeler(labeler)
     data = [{"key": e["key"], "source": e["source"], "title": e["title"], "authors": e.get("authors", [])[:6],
              "summary": e.get("summary", ""), "tags": e.get("tags", [])[:8]} for e in batch]
     replies = ask("label-prompt.md", "ENTRIES", data)
-    return {r["key"]: r for r in replies if isinstance(r, dict) and r.get("category") in CATEGORIES}
+    return {r["key"]: r for r in replies}
 
 
 # The labelling model: DeepSeek, as the site's moderator (site/lib/moderate.ts), through its chat completions API.
 DEEPSEEK = "https://api.deepseek.com/chat/completions"
-MODEL = "deepseek-chat"
+MODEL = "deepseek-flash"
+MAX_OUTPUT_TOKENS = 4096
+MAX_REQUEST_BYTES = 96_000
+# Peak cache-miss rates checked against api-docs.deepseek.com/quick_start/pricing/ on 2026-10-27.
+# Recheck pricing before authorizing a recurring budget. No retries, tools or alternate models are used.
+INPUT_USD_PER_MILLION = Decimal("0.30")
+OUTPUT_USD_PER_MILLION = Decimal("1.20")
+
+
+class GenerationBudget:
+    """A process-wide run cap. Unmetered/failed requests retain their complete reservation."""
+
+    def __init__(self, enabled: bool = False, limit: Decimal = Decimal(0)):
+        self.enabled, self.limit = enabled, limit
+        self.calls: list[dict[str, Any]] = []
+
+    @property
+    def used(self) -> Decimal:
+        return sum((c["cost"] for c in self.calls), Decimal(0))
+
+    def reserve(self, request_bytes: int) -> dict[str, Any]:
+        if not self.enabled or self.limit <= 0:
+            raise RuntimeError("DeepSeek generation is disabled: explicitly authorize it and set a positive per-run USD budget")
+        # UTF-8 bytes bound the visible input tokens; extra space covers chat-format overhead.
+        ceiling = request_bytes + 1024
+        cost = (ceiling * INPUT_USD_PER_MILLION + MAX_OUTPUT_TOKENS * OUTPUT_USD_PER_MILLION) / 1_000_000
+        if self.used + cost > self.limit:
+            raise RuntimeError("DeepSeek run budget exhausted: the next worst-case request would exceed the cap")
+        reservation = {"input_ceiling": ceiling, "cost": cost, "state": "reserved"}
+        self.calls.append(reservation)
+        return reservation
+
+    def settle(self, call: dict[str, Any], usage: Any) -> None:
+        if not isinstance(usage, dict):
+            return
+        prompt, completion = usage.get("prompt_tokens"), usage.get("completion_tokens")
+        if type(prompt) is int and type(completion) is int and 0 <= prompt <= call["input_ceiling"] and 0 <= completion <= MAX_OUTPUT_TOKENS:
+            call.update(cost=(prompt * INPUT_USD_PER_MILLION + completion * OUTPUT_USD_PER_MILLION) / 1_000_000,
+                        state="metered_peak_upper_bound", prompt_tokens=prompt, completion_tokens=completion)
+
+
+GENERATION_BUDGET = GenerationBudget()  # disabled until CLI/environment authorization is explicitly configured
+
+
+def generation_settings() -> tuple[bool, Decimal]:
+    """Existing owner-controlled settings only; absent/empty settings never activate spending."""
+    enabled = os.environ.get("ORI_DEEPSEEK_ENABLED", "").lower() == "true"
+    try:
+        limit = Decimal(os.environ.get("ORI_DEEPSEEK_MAX_RUN_USD") or "0")
+    except InvalidOperation:
+        raise ValueError("ORI_DEEPSEEK_MAX_RUN_USD must be a finite nonnegative number") from None
+    if not limit.is_finite() or limit < 0:
+        raise ValueError("ORI_DEEPSEEK_MAX_RUN_USD must be a finite nonnegative number")
+    return enabled, limit
+
+
+def validate_labeler(labeler: str, allow_none: bool = False) -> str:
+    if labeler == "deepseek" or (allow_none and labeler == "none") or (labeler.startswith("canned:") and labeler.split(":", 1)[1].strip()):
+        return labeler
+    raise ValueError("labeler must be deepseek" + (", none" if allow_none else "") + ", or canned:<file.json>; no other provider is supported")
+
+
+def labeler_option(allow_none: bool = False):
+    def parse(value: str) -> str:
+        try:
+            return validate_labeler(value, allow_none)
+        except ValueError as err:
+            raise argparse.ArgumentTypeError(str(err)) from None
+    return parse
+
+
+def dollar_option(value: str) -> Decimal:
+    try:
+        amount = Decimal(value)
+    except InvalidOperation:
+        raise argparse.ArgumentTypeError("budget must be a finite nonnegative USD amount") from None
+    if not amount.is_finite() or amount < 0:
+        raise argparse.ArgumentTypeError("budget must be a finite nonnegative USD amount")
+    return amount
+
+
+def run_generation(run) -> int:
+    try:
+        return run()
+    finally:
+        if GENERATION_BUDGET.calls:
+            print(f"DeepSeek run budget: ${GENERATION_BUDGET.used} of ${GENERATION_BUDGET.limit} "
+                  f"used/reserved across {len(GENERATION_BUDGET.calls)} requests (unknown usage retains reservation)", file=sys.stderr)
 
 
 @functools.cache
 def deepseek_key() -> str:
     """DEEPSEEK_API_KEY, or else the secret deepseek_api_key in Supabase Vault, where the moderator reads it too."""
     if key := os.environ.get("DEEPSEEK_API_KEY") or store.secret("deepseek_api_key"):
-        return key
-    raise SystemExit("no DeepSeek key: set DEEPSEEK_API_KEY, or the secret deepseek_api_key in Supabase Vault (see README)")
+        if isinstance(key, str) and key.strip():
+            return key.strip()
+    raise RuntimeError("no DeepSeek key: set DEEPSEEK_API_KEY, or the secret deepseek_api_key in Supabase Vault (see README)")
 
 
 def chat(system: str, user: str) -> str:
     """The model's reply to one message."""
-    body = json.dumps({"model": MODEL, "temperature": 0, "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}]})
-    req = urllib.request.Request(DEEPSEEK, body.encode(), {"Authorization": f"Bearer {deepseek_key()}", "Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=300) as r:
+    body = json.dumps({"model": MODEL, "thinking": {"type": "disabled"}, "temperature": 0, "max_tokens": MAX_OUTPUT_TOKENS,
+                       "response_format": {"type": "json_object"},
+                       "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}]}).encode()
+    if len(body) > MAX_REQUEST_BYTES:
+        raise RuntimeError("DeepSeek request is too large for a bounded classification call")
+    # Resolve credentials before reserving: a missing key is known not to have made a billable request.
+    if not GENERATION_BUDGET.enabled or GENERATION_BUDGET.limit <= 0:
+        raise RuntimeError("DeepSeek generation is disabled: explicitly authorize it and set a positive per-run USD budget")
+    key = deepseek_key()
+    reservation = GENERATION_BUDGET.reserve(len(body))
+    req = urllib.request.Request(DEEPSEEK, body, {"Authorization": f"Bearer {key}", "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=45) as r:
         out = json.load(r)
-    try:
-        return out["choices"][0]["message"]["content"]
-    except (KeyError, IndexError, TypeError):
-        raise RuntimeError(f"DeepSeek gave no reply: {json.dumps(out)[:300]}") from None
+    GENERATION_BUDGET.settle(reservation, out.get("usage") if isinstance(out, dict) else None)
+    choices = out.get("choices") if isinstance(out, dict) else None
+    if not isinstance(choices, list) or len(choices) != 1 or not isinstance(choices[0], dict):
+        raise RuntimeError("DeepSeek gave no complete reply")
+    choice, message = choices[0], choices[0].get("message")
+    if choice.get("finish_reason") != "stop" or not isinstance(message, dict) or message.get("tool_calls"):
+        raise RuntimeError("DeepSeek gave no complete reply")
+    content = message.get("content")
+    if not isinstance(content, str) or not content.strip():
+        raise RuntimeError("DeepSeek gave an empty reply")
+    return content
 
 
-def ask(prompt_file: str, name: str, data: Any, reply: str = r"\[.*\]") -> Any:
+def ask(prompt_file: str, name: str, data: Any) -> Any:
     """The labelling model's JSON reply to a prompt file, with the data between BEGIN_<name> and END_<name>.
     It has no tools: the data is third-party text, and the prompt says to treat it as such."""
     out = chat((HERE / prompt_file).read_text(), f"BEGIN_{name}\n{json.dumps(data, ensure_ascii=False)}\nEND_{name}")
-    if not (m := re.search(reply, out, re.S)):
-        raise RuntimeError(f"labeler gave no JSON: {out.strip()[:300]}")
-    return json.loads(m.group(0))
+    value = json.loads(out)  # no Markdown fences, leading prose or greedy substring extraction
+    if prompt_file == "reception-prompt.md":
+        if not isinstance(value, dict) or set(value) != {"text", "links"} or not isinstance(value["text"], str) or not value["text"].strip() or len(value["text"]) > RECEPTION_CHARS:
+            raise RuntimeError("DeepSeek gave an invalid reception draft")
+        known = {r["url"] for r in data["responses"]}
+        links = value["links"]
+        if not isinstance(links, list) or not links or any(not isinstance(u, str) or u not in known for u in links) or len(set(links)) != len(links):
+            raise RuntimeError("DeepSeek reception references an unresolved response")
+        return value
+    if not isinstance(value, dict) or set(value) != {"results"} or not isinstance(value["results"], list):
+        raise RuntimeError("DeepSeek gave no results array")
+    replies = value["results"]
+    if prompt_file == "label-prompt.md":
+        expected = [entry["key"] for entry in data]
+        if len(set(expected)) != len(expected):
+            raise RuntimeError("ambiguous entry keys in classification batch; split the batch")
+        for r in replies:
+            if not isinstance(r, dict) or set(r) != {"key", "category", "subject", "tags", "reason"} or not isinstance(r.get("category"), str) or r["category"] not in CATEGORIES:
+                raise RuntimeError("DeepSeek gave an invalid classification")
+            if not isinstance(r["key"], str) or not isinstance(r["subject"], str) or not TX.is_code(r["subject"]):
+                raise RuntimeError("DeepSeek gave an invalid classification identity or subject")
+            if not isinstance(r["tags"], list) or len(r["tags"]) > 4 or any(not isinstance(t, str) or not t.strip() or len(t) > 80 for t in r["tags"]):
+                raise RuntimeError("DeepSeek gave invalid classification tags")
+            if not isinstance(r["reason"], str) or not r["reason"].strip() or len(r["reason"]) > 200:
+                raise RuntimeError("DeepSeek gave no valid classification reason")
+        returned = [r["key"] for r in replies]
+    elif prompt_file == "stance-prompt.md":
+        expected = list({r["url"] for entry in data for r in entry["responses"]})
+        for r in replies:
+            if not isinstance(r, dict) or set(r) != {"url", "stance", "reason"} or (r.get("stance") is not None and (not isinstance(r["stance"], str) or r["stance"] not in STANCES)):
+                raise RuntimeError("DeepSeek gave an invalid stance proposal")
+            if not isinstance(r["url"], str) or not isinstance(r["reason"], str) or not r["reason"].strip() or len(r["reason"]) > 200:
+                raise RuntimeError("DeepSeek gave no valid stance identity or reason")
+        returned = [r["url"] for r in replies]
+    else:
+        raise RuntimeError("unsupported structured DeepSeek prompt")
+    if len(returned) != len(expected) or len(set(returned)) != len(returned) or set(returned) != set(expected):
+        raise RuntimeError("DeepSeek omitted, duplicated or invented a result identity")
+    return replies
 
 
 # How an ask call fails: the API errs or hangs, or the model gives no JSON or broken JSON.
@@ -271,10 +413,12 @@ LABELER_ERRORS = (RuntimeError, json.JSONDecodeError, urllib.error.URLError, Tim
 
 def canned_replies(labeler: str) -> Any:
     """For --labeler canned:<file.json>, the replies in that file, standing in for the agent's (tests); else None."""
+    validate_labeler(labeler, allow_none=True)
     return json.loads(Path(labeler.split(":", 1)[1]).read_text()) if labeler.startswith("canned:") else None
 
 
 def label(relabel_all: bool, labeler: str, limit: int | None = None, missing_subject: bool = False) -> int:
+    validate_labeler(labeler, allow_none=True)
     canned: dict[str, Any] = canned_replies(labeler) or {}
     if labeler.startswith("canned:"):
         labeler = "canned"
@@ -285,13 +429,14 @@ def label(relabel_all: bool, labeler: str, limit: int | None = None, missing_sub
     else:
         # arXiv is moderated: its bulk-harvested papers are shown as research without a label.
         todo = load("NOT entry ? 'review' AND coalesce(entry->>'added_by', '') NOT LIKE 'harvest:arxiv-%%'", limit=limit)
-    done = 0
+    done, failed = 0, False
     for i in range(0, len(todo), BATCH):
         chunk = todo[i : i + BATCH]
         try:
             replies = label_batch([e for _, e in chunk], labeler, canned)
         except LABELER_ERRORS as err:
             print(f"batch {i // BATCH + 1}: {err}", file=sys.stderr)
+            failed = True
             continue
         for ref, e in chunk:
             r = replies.get(e["key"])
@@ -302,10 +447,11 @@ def label(relabel_all: bool, labeler: str, limit: int | None = None, missing_sub
                     save(ref, e)
                 except Conflict as err:
                     print(f"skipped  {err}", file=sys.stderr)  # labelled next time
+                    failed = True
                     continue
                 done += 1
         print(f"labelled {done}/{len(todo)}")
-    return 0
+    return 2 if failed else 0
 
 
 # ---- refresh ----
@@ -420,6 +566,7 @@ def propose_stances(records: list[str], labeler: str) -> int:
     """The labelling agent proposes a stance for each link that has none (stance-prompt.md); a person decides.
     Nothing is written: each proposal is printed as the discuss command that sets it, to run after reading the
     link. --labeler canned:<file.json> reads {url: {stance, reason}} instead, for tests."""
+    validate_labeler(labeler)
     canned = canned_replies(labeler)
     todo = [e for _, e in load(DISCUSSED) if (not records or rid(e) in records) and unlabelled(e)]
     batches: list[list[dict[str, Any]]] = [[]]
@@ -427,7 +574,7 @@ def propose_stances(records: list[str], labeler: str) -> int:
         if sum(len(x["discussion"]) for x in batches[-1]) >= BATCH:
             batches.append([])
         batches[-1].append(e)
-    n = 0
+    n, failed = 0, False
     for batch in filter(None, batches):
         data = [{"id": rid(e), "title": e["title"], "summary": e.get("summary", ""),
                  "responses": [pick(d, ("url", "kind", "author", "title", "text")) for d in unlabelled(e)]} for e in batch]
@@ -435,6 +582,7 @@ def propose_stances(records: list[str], labeler: str) -> int:
             replies = canned if canned is not None else {r["url"]: r for r in ask("stance-prompt.md", "RECORDS", data) if isinstance(r, dict) and "url" in r}
         except LABELER_ERRORS as err:
             print(f"skipped {len(batch)} records: {err}", file=sys.stderr)
+            failed = True
             continue
         for r in data:
             print(f"\n# {r['id']}: {r['title'][:90]}")
@@ -448,7 +596,7 @@ def propose_stances(records: list[str], labeler: str) -> int:
                     print(f"# no proposal, open it: {d['url']}")
     print(f"\n{n} stances proposed for {sum(len(unlabelled(e)) for e in todo)} unlabelled links on {len(todo)} records; nothing written."
           " Run the commands you agree with.")
-    return 0
+    return 2 if failed else 0
 
 
 def recheck_all(records: list[str], dry_run: bool) -> int:
@@ -535,6 +683,7 @@ def published_reception(e: dict[str, Any]) -> dict[str, Any] | None:
 
 def draft_reception(e: dict[str, Any], labeler: str) -> dict[str, Any]:
     """The labelling agent's draft, from the links a person labelled. canned:<file.json> reads {record id: {text, links}}."""
+    validate_labeler(labeler)
     labelled = [d for d in e.get("discussion") or [] if d.get("stance")]
     if not labelled:
         raise ValueError("no labelled links: label them first (discuss --stance, or --propose-stances)")
@@ -544,7 +693,7 @@ def draft_reception(e: dict[str, Any], labeler: str) -> dict[str, Any]:
     else:
         data = {"id": rid(e), "title": e["title"], "summary": e.get("summary", ""), "withdrawn": e.get("withdrawn_on") or bool(e.get("withdrawn")),
                 "responses": [pick(d, ("url", "kind", "author", "site", "date", "stance", "title", "text")) for d in labelled]}
-        reply = ask("reception-prompt.md", "RECORD", data, reply=r"\{.*\}")
+        reply = ask("reception-prompt.md", "RECORD", data)
     if not isinstance(reply, dict):
         raise ValueError("the labeler did not reply with an object")
     text = S.clean(str(reply.get("text", "")))
@@ -552,7 +701,7 @@ def draft_reception(e: dict[str, Any], labeler: str) -> dict[str, Any]:
         raise ValueError("the labeler gave no text")
     urls = {d["url"] for d in labelled}
     return {"text": text[:RECEPTION_CHARS], "links": [u for u in reply.get("links", []) if u in urls] or sorted(urls),
-            "drafted_by": labeler if canned is not None else MODEL}
+            "drafted_by": "canned" if canned is not None else MODEL}
 
 
 def list_receptions() -> int:
@@ -726,26 +875,39 @@ def main(argv: Iterable[str] | None = None) -> int:
     sub = ap.add_subparsers(dest="cmd", required=True)
     a = sub.add_parser("add"); a.add_argument("url"); a.add_argument("--by", default=""); a.add_argument("--dry-run", action="store_true")
     h = sub.add_parser("harvest"); h.add_argument("--source"); h.add_argument("--limit", type=int); h.add_argument("--dry-run", action="store_true")
-    lb = sub.add_parser("label"); lb.add_argument("--all", action="store_true"); lb.add_argument("--labeler", default="deepseek"); lb.add_argument("--limit", type=int); lb.add_argument("--missing-subject", action="store_true")
+    lb = sub.add_parser("label"); lb.add_argument("--all", action="store_true"); lb.add_argument("--labeler", default="deepseek", type=labeler_option(True)); lb.add_argument("--limit", type=int); lb.add_argument("--missing-subject", action="store_true")
     r = sub.add_parser("refresh"); r.add_argument("--older-than", type=int, default=7); r.add_argument("--limit", type=int, default=200); r.add_argument("--dry-run", action="store_true")
     d = sub.add_parser("discuss"); d.add_argument("record", nargs="?"); d.add_argument("urls", nargs="*"); d.add_argument("--drop", action="store_true"); d.add_argument("--dry-run", action="store_true")
     d.add_argument("--recheck", action="store_true", help="read every link again (or the named records' links); a deleted post drops out")
     d.add_argument("--stance", choices=[*STANCES, "none"], help="what the links say about the record (see site/lib/stances.json); set on links already attached without reading them again")
     d.add_argument("--propose-stances", action="store_true", help="the labelling agent proposes stances for unlabelled links (or the named records'); prints them as commands, writes nothing")
-    d.add_argument("--labeler", default="deepseek", help="for --propose-stances: deepseek, or canned:<file.json>")
+    d.add_argument("--labeler", default="deepseek", type=labeler_option(), help="for --propose-stances: deepseek, or canned:<file.json>")
     rc = sub.add_parser("reception"); rc.add_argument("record", nargs="?"); rc.add_argument("--draft", action="store_true"); rc.add_argument("--text")
     rc.add_argument("--reviewed-by", help="the GitHub login of the person who checked the text against its links; publishes it")
-    rc.add_argument("--links", nargs="+", help="the links the text rests on (default: all of the record's)"); rc.add_argument("--labeler", default="deepseek")
+    rc.add_argument("--links", nargs="+", help="the links the text rests on (default: all of the record's)"); rc.add_argument("--labeler", default="deepseek", type=labeler_option())
     rc.add_argument("--dry-run", action="store_true")
+    for parser in (lb, d, rc):
+        parser.add_argument("--allow-paid-deepseek", action="store_true", help="explicitly authorize DeepSeek generation for this run; requires a positive USD cap")
+        parser.add_argument("--max-cost-usd", type=dollar_option, help="total run cap; absent ORI_DEEPSEEK_MAX_RUN_USD defaults to 0 (disabled)")
     sub.add_parser("build")
     args = ap.parse_args(list(argv) if argv is not None else None)
+    generation = args.cmd == "label" or (args.cmd == "discuss" and args.propose_stances) or (args.cmd == "reception" and args.draft)
+    if generation:
+        try:
+            enabled, limit = generation_settings()
+        except ValueError as err:
+            print(err, file=sys.stderr)
+            return 2
+        global GENERATION_BUDGET
+        GENERATION_BUDGET = GenerationBudget(enabled or args.allow_paid_deepseek,
+                                             limit if args.max_cost_usd is None else args.max_cost_usd)
     S.TOKEN = github_token()
     if args.cmd == "add":
         return add(args.url, args.by, args.dry_run)
     if args.cmd == "harvest":
         return harvest(args.source, args.limit, args.dry_run)
     if args.cmd == "label":
-        return label(args.all, args.labeler, args.limit, args.missing_subject)
+        return run_generation(lambda: label(args.all, args.labeler, args.limit, args.missing_subject))
     if args.cmd == "refresh":
         return refresh(args.older_than, args.limit, args.dry_run)
     if args.cmd == "discuss":
@@ -753,12 +915,14 @@ def main(argv: Iterable[str] | None = None) -> int:
         if args.recheck:
             return recheck_all(named, args.dry_run)
         if args.propose_stances:
-            return propose_stances(named, args.labeler)
+            return run_generation(lambda: propose_stances(named, args.labeler))
         if not args.record:
             ap.error("discuss needs a record id, or --recheck or --propose-stances")
         return discuss(args.record, args.urls, args.drop, args.dry_run, args.stance)
     if args.cmd == "reception":
-        return reception(args.record, args.draft, args.text, args.reviewed_by, args.links, args.labeler, args.dry_run)
+        def run_reception() -> int:
+            return reception(args.record, args.draft, args.text, args.reviewed_by, args.links, args.labeler, args.dry_run)
+        return run_generation(run_reception) if args.draft else run_reception()
     return build()
 
 

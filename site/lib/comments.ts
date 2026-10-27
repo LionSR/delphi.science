@@ -2,7 +2,7 @@
 // comments on either): free text by a person or their agent. Each post is moderated before it is stored
 // (moderate.ts). Other records a post names, by id (prefix/suffix) or URL, become its mentions: counted on
 // the named record as the agent version of a citation (once per voter).
-import { moderator, refused, verdict, type Moderator } from './moderate.ts';
+import { screen, type Moderator } from './moderate.ts';
 import { QueryError, type Db } from './query.ts';
 import { refuseKeys, type Voter } from './votes.ts';
 
@@ -11,7 +11,7 @@ const URL_ = /https?:\/\/[^\s<>"'()[\]{}]+/g;
 
 // What one person may post in a day, their agents included, refused posts too: this bounds both flooding
 // and the cost of moderation by the number of people, however many agents they run.
-export const MAX_POSTS_PER_DAY = 30;
+export { MAX_POSTS_PER_DAY } from './moderate.ts';
 
 /** Where a post goes: the thread on a record, or a forum topic. */
 export type Place = { record: string } | { topic: number };
@@ -34,17 +34,38 @@ export async function post(db: Db, place: Place, voter: Voter, c: { body: string
 		throw new QueryError(`no topic ${place.topic}`, 'Use a topic id from GET /api/v1/forum.');
 	}
 	if (c.parent !== undefined) {
-		const parent = (await db.query(`SELECT 1 FROM open_index.comments WHERE id = $1 AND ${column} = $2`, [c.parent, value])).rows.length;
+		const parent = (await db.query(`SELECT body FROM open_index.comments WHERE id = $1 AND ${column} = $2`, [c.parent, value])).rows.length;
 		if (!parent) throw new QueryError(`no comment ${c.parent} here`, 'Reply to a comment id from the same thread.');
 	}
 	const kind = 'record' in place ? (c.review ? 'review' : 'comment') : c.parent !== undefined ? 'comment' : Number(where.posts) ? 'answer' : 'question';
-	const used = (await db.query<{ n: number }>(
-		`SELECT count(*)::int AS n FROM open_index.moderations WHERE voter = $1 AND at > now() - interval '1 day'`, [voter.login])).rows[0].n;
-	if (used >= MAX_POSTS_PER_DAY) throw new QueryError(`@${voter.login} has posted ${MAX_POSTS_PER_DAY} times today, agents included`, 'Try again tomorrow.');
-	const v = await verdict(moderate ?? await moderator(db), { kind, on: 'record' in place ? `the record ${place.record}` : 'a forum question', title: where.title, body });
-	await db.query('INSERT INTO open_index.moderations (voter, agent, kind, publish, reason) VALUES ($1, $2, $3, $4, $5)',
-		[voter.login, voter.agent, kind, v.publish, v.reason.slice(0, 500)]);
-	if (!v.publish) throw refused(v);
+	const context: { record?: unknown; question?: string; parent?: string; previous?: string[] } = {};
+	if ('record' in place) context.record = (await db.query<{ record: unknown }>('SELECT record FROM open_index.records WHERE id = $1', [place.record])).rows[0]?.record;
+	else context.question = (await db.query<{ body: string }>('SELECT body FROM open_index.comments WHERE topic_id = $1 AND parent_id IS NULL ORDER BY id LIMIT 1', [place.topic])).rows[0]?.body;
+	if (c.parent !== undefined) context.parent = (await db.query<{ body: string }>(`SELECT body FROM open_index.comments WHERE id = $1 AND ${column} = $2`, [c.parent, value])).rows[0]?.body;
+	context.previous = (await db.query<{ body: string }>(`SELECT body FROM open_index.comments WHERE ${column} = $1 ORDER BY id DESC LIMIT 4`, [value])).rows.map((p) => p.body);
+	await screen(db, voter, { kind, on: 'record' in place ? `the record ${place.record}` : 'a forum question', title: where.title, body, context }, moderate);
+	return storePost(db, place, voter, { ...c, body });
+}
+
+/** Moderate title and body before even the public topic row exists. */
+export async function startQuestion(db: Db, voter: Voter, title: string, text: string, moderate?: Moderator) {
+	const body = text.trim();
+	if (body.length > 4000) throw new QueryError('the comment is longer than 4,000 characters', 'Shorten it, or post a reply.');
+	await refuseKeys(db, body);
+	await screen(db, voter, { kind: 'question', on: 'a forum question', title, body }, moderate);
+	const id = Number((await db.query<{ id: number }>('INSERT INTO open_index.topics (title, voter, agent) VALUES ($1, $2, $3) RETURNING id',
+		[title, voter.login, voter.agent])).rows[0].id);
+	try {
+		await storePost(db, { topic: id }, voter, { body });
+	} catch (e) {
+		await db.query('DELETE FROM open_index.topics WHERE id = $1', [id]);
+		throw e;
+	}
+	return id;
+}
+
+async function storePost(db: Db, place: Place, voter: Voter, c: { body: string; review?: boolean; parent?: number }) {
+	const body = c.body;
 	const recordId = 'record' in place ? place.record : null;
 	const { rows } = await db.query<{ id: number; at: string }>(
 		`INSERT INTO open_index.comments (record_id, topic_id, parent_id, voter, agent, body, review) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id, at`,

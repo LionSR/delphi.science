@@ -4,7 +4,7 @@
 Entries are stored in Postgres (open_index.entries, via store.py) keyed by <source>/<key>.
 APP papers are read from the published APP registry index at build time.
 
-    python index.py add <url or id> [--by <github login>] [--dry-run]
+    python index.py add <url or id> --dry-run  # inspect only; submit through authenticated API
     python index.py harvest [--source NAME] [--limit N] [--dry-run]
     python index.py label [--all] [--labeler deepseek|none|canned:<file.json>]
     python index.py refresh [--older-than DAYS] [--limit N] [--dry-run]
@@ -150,6 +150,11 @@ def adds_today(login: str) -> int:
 
 
 def add(url: str, by: str, dry_run: bool) -> int:
+    # An entry is later published by build(), so direct CLI writes would bypass the server's gate.
+    # --by is attribution, not authentication. Keep read-only inspection; submit through the API.
+    if not dry_run:
+        print("not stored: direct CLI submission is closed; use authenticated POST /api/v1/submit for the DeepSeek quality gate, or --dry-run to inspect metadata")
+        return 2
     try:
         source, key = S.detect(url)
         print(f"{url} → {source.name}:{key}")
@@ -171,13 +176,6 @@ def add(url: str, by: str, dry_run: bool) -> int:
         return 2
     entry.update(added=S.today(), added_by=by, refreshed=S.today())
     print(json.dumps(_drop_empty(entry), indent=2, ensure_ascii=False))
-    if not dry_run:
-        try:
-            save(Ref(rid(entry)), entry)
-        except Conflict:
-            print(f"rejected: already listed: {rid(entry)}")  # added by another run since check()
-            return 2
-        print(f"stored {rid(entry)}")
     return 0
 
 
@@ -873,7 +871,7 @@ def build() -> int:
 def main(argv: Iterable[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
-    a = sub.add_parser("add"); a.add_argument("url"); a.add_argument("--by", default=""); a.add_argument("--dry-run", action="store_true")
+    a = sub.add_parser("add", help="inspect with --dry-run; writes use authenticated POST /api/v1/submit"); a.add_argument("url"); a.add_argument("--by", default=""); a.add_argument("--dry-run", action="store_true")
     h = sub.add_parser("harvest"); h.add_argument("--source"); h.add_argument("--limit", type=int); h.add_argument("--dry-run", action="store_true")
     lb = sub.add_parser("label"); lb.add_argument("--all", action="store_true"); lb.add_argument("--labeler", default="deepseek", type=labeler_option(True)); lb.add_argument("--limit", type=int); lb.add_argument("--missing-subject", action="store_true")
     r = sub.add_parser("refresh"); r.add_argument("--older-than", type=int, default=7); r.add_argument("--limit", type=int, default=200); r.add_argument("--dry-run", action="store_true")

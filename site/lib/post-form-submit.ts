@@ -8,7 +8,7 @@ import type { Voter } from './votes.ts';
 import { recordPath } from './view.ts';
 
 export type PostInput = { kind: 'question' | 'answer' | 'comment' | 'record' | 'submission'; title: string; body: string;
-	topic?: number; parent?: number; record?: string; review: boolean };
+	topic?: number; parent?: number; record?: string; review: boolean; retrieveSources?: boolean };
 
 /** Browser and private integration tests share the actual publication path; a retry reuses identical own posts. */
 export async function submitPostForm(db: Db, who: Voter, input: PostInput, moderate?: Moderator, fetcher: typeof fetch = fetch): Promise<string> {
@@ -33,7 +33,7 @@ export async function submitPostForm(db: Db, who: Voter, input: PostInput, moder
 		const existing = (await db.query<{ id: number }>(
 			`SELECT id::int FROM open_index.comments WHERE record_id=$1 AND voter=$2 AND body=$3 AND review=$4 AND parent_id IS NULL LIMIT 1`,
 			[input.record, who.login, body, input.review])).rows[0];
-		const p = existing ?? await comment(db, input.record, who, { body, review: input.review }, moderate);
+		const p = existing ?? await comment(db, input.record, who, { body, review: input.review, retrieveSources: input.retrieveSources }, moderate);
 		return `${recordPath(input.record)}#p${p.id}`;
 	}
 	if (!Number.isSafeInteger(input.topic) || Number(input.topic) < 1 || (input.kind === 'comment' && (!Number.isSafeInteger(input.parent) || Number(input.parent) < 1))) {

@@ -250,3 +250,10 @@ test('browser event URLs contain only approved route patterns with no secrets or
 	assert.equal(analyticsEvent({type: 'event', url: 'https://test/'}), null);
 	assert.equal(analyticsEvent({type: 'pageview', url: 'invalid'}), null);
 });
+
+
+test('source-check endpoint does not expand the deployed aggregate metric categories or issue cleanup writes',async()=>{
+ let queries=0;
+ await countCall({query:async()=>{queries++;throw new Error('new metric category was not approved');}},'POST /api/v1/records/{prefix}/{suffix}/source-checks','curl');
+ assert.equal(queries,0);
+});

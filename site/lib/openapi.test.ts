@@ -118,14 +118,14 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 	after(() => { globalThis.fetch = priorFetch; if (priorKey === undefined) delete process.env.DEEPSEEK_API_KEY; else process.env.DEEPSEEK_API_KEY = priorKey; });
 
 	// Calls the route as Next does and checks the answer against the document's response for its status.
-	async function call(method: string, path: string, opts: { query?: string; body?: unknown; auth?: boolean | string; params?: Record<string, string> } = {}) {
+	async function call(method: string, path: string, opts: { query?: string; body?: unknown; auth?: boolean | string; params?: Record<string, string>; headers?: Record<string,string> } = {}) {
 		const tmpl = Object.keys(paths).find((p) => new RegExp(`^${p.replace(/\{[^}]+\}/g, '[^/]+')}$`).test(path))!;
 		const file = routes().find(([p]) => p === tmpl)![1];
 		const ids = tmpl.match(/\{([^}]+)\}/g)?.map((x) => x.slice(1, -1)) ?? [];
 		const values = path.split('/').filter((_, n) => tmpl.split('/')[n]?.startsWith('{'));
 		const params = Promise.resolve(Object.fromEntries(ids.map((k, n) => [k, values[n]])));
 		const req = new Request(`http://test${path}${opts.query ? `?${opts.query}` : ''}`, {
-			method, headers: { 'content-type': 'application/json', ...(opts.auth ? { authorization: `Bearer ${opts.auth === true ? key : opts.auth}` } : {}) },
+			method, headers: { 'content-type': 'application/json', ...(opts.auth ? { authorization: `Bearer ${opts.auth === true ? key : opts.auth}` } : {}), ...opts.headers },
 			body: opts.body === undefined ? undefined : JSON.stringify(opts.body),
 		});
 		const res: Response = await (await import(file.href))[method](req, { params });
@@ -324,6 +324,21 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 				}
 			}
 		} finally { moderationMode = 'accept'; globalThis.fetch = normalFetch; }
+	});
+
+	test('public source checks document auth, same-origin, strict URL bodies and unavailable audit storage', async () => {
+		const at = `/api/v1/records/${discussed.split('/')[0]}/${encodeURIComponent(discussed.split('/')[1])}/source-checks`;
+		assert.equal((await call('POST', at, {body:{urls:['https://example.org/source']}})).status,401);
+		assert.equal((await call('POST', at, {auth:true,body:{urls:[]}})).status,400);
+		assert.equal((await call('POST','/api/v1/records/nope/nothing/source-checks',{auth:true,body:{urls:['https://example.org/source']}})).status,404);
+		assert.equal((await call('POST',at,{auth:true,body:{urls:['https://example.org/source']}})).status,200);
+		assert.equal((await call('POST',at,{auth:true,headers:{Origin:'https://another.example.org'},body:{urls:['https://example.org/source']}})).status,403);
+		const recordAt=at.replace('/source-checks','');
+		assert.equal((await call('POST',`${recordAt}/comments`,{auth:true,headers:{Origin:'https://another.example.org'},body:{body:'Which boundary convention is used?',retrieve_sources:true}})).status,403);
+		assert.equal((await call('POST',`${recordAt}/vote`,{auth:true,headers:{Origin:'https://another.example.org'},body:{value:1,note:'Which boundary convention is used?',retrieve_sources:true}})).status,403);
+		(globalThis as {openIndexDb?:Promise<unknown>}).openIndexDb=Promise.resolve({query:pg.query.bind(pg)});
+		try{assert.equal((await call('POST',at,{auth:true,body:{urls:['https://example.org/source']}})).status,503);}
+		finally{(globalThis as {openIndexDb?:Promise<unknown>}).openIndexDb=Promise.resolve(pg);}
 	});
 
 	test('every documented response was checked', () => {

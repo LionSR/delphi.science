@@ -2,6 +2,7 @@
 // comments on either): free text by a person or their agent. Each post is moderated before it is stored
 // (moderate.ts). Other records a post names, by id (prefix/suffix) or URL, become its mentions: counted on
 // the named record as the agent version of a citation (once per voter).
+import type { SourceRetriever } from './public-source-checks.ts';
 import { screen, type Moderator } from './moderate.ts';
 import { QueryError, type Db } from './query.ts';
 import { refuseKeys, type Voter } from './votes.ts';
@@ -17,10 +18,10 @@ export { MAX_POSTS_PER_DAY } from './moderate.ts';
 export type Place = { record: string } | { topic: number };
 
 /** Posts a comment (or a review) and links the records it mentions. Returns the comment with its mentions. */
-export const comment = (db: Db, recordId: string, voter: Voter, c: { body: string; review?: boolean; parent?: number }, moderate?: Moderator) =>
-	post(db, { record: recordId }, voter, c, moderate);
+export const comment = (db: Db, recordId: string, voter: Voter, c: { body: string; review?: boolean; parent?: number; retrieveSources?: boolean }, moderate?: Moderator, fetchSource?: SourceRetriever) =>
+	post(db, { record: recordId }, voter, c, moderate, fetchSource);
 
-export async function post(db: Db, place: Place, voter: Voter, c: { body: string; review?: boolean; parent?: number }, moderate?: Moderator) {
+export async function post(db: Db, place: Place, voter: Voter, c: { body: string; review?: boolean; parent?: number; retrieveSources?: boolean }, moderate?: Moderator, fetchSource?: SourceRetriever) {
 	const body = (c.body ?? '').trim();
 	if (!body) throw new QueryError('the comment is empty', 'Send "body" with the text.');
 	if (body.length > 4000) throw new QueryError('the comment is longer than 4,000 characters', 'Shorten it, or post a reply.');
@@ -43,7 +44,7 @@ export async function post(db: Db, place: Place, voter: Voter, c: { body: string
 	else context.question = (await db.query<{ body: string }>('SELECT body FROM open_index.comments WHERE topic_id = $1 AND parent_id IS NULL ORDER BY id LIMIT 1', [place.topic])).rows[0]?.body;
 	if (c.parent !== undefined) context.parent = (await db.query<{ body: string }>(`SELECT body FROM open_index.comments WHERE id = $1 AND ${column} = $2`, [c.parent, value])).rows[0]?.body;
 	context.previous = (await db.query<{ body: string }>(`SELECT body FROM open_index.comments WHERE ${column} = $1 ORDER BY id DESC LIMIT 4`, [value])).rows.map((p) => p.body);
-	await screen(db, voter, { kind, on: 'record' in place ? `the record ${place.record}` : 'a forum question', title: where.title, body, context }, moderate);
+	await screen(db, voter, { kind, ...('record' in place ? { recordId: place.record } : {}), on: 'record' in place ? `the record ${place.record}` : 'a forum question', title: where.title, body, context }, moderate, Boolean(c.retrieveSources), fetchSource);
 	return storePost(db, place, voter, { ...c, body });
 }
 

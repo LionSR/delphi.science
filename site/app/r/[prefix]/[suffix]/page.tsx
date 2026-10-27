@@ -4,12 +4,13 @@ import Script from 'next/script';
 import { notFound } from 'next/navigation';
 import { cache, Fragment } from 'react';
 import { comments } from '../../../../lib/comments.ts';
+import { Markdown } from '../../../../lib/markdown.ts';
+import { PostForm } from '../../../post-form.tsx';
 import { db } from '../../../../lib/db.ts';
 import { get } from '../../../../lib/query.ts';
 import { me } from '../../../../lib/session.ts';
 import { date, idPath, reception, recordId, recordPath, SITE, source, STANCES, tally, tex, type IdParams } from '../../../../lib/view.ts';
 import { myVotes, votes } from '../../../../lib/votes.ts';
-import { commentOn } from '../../../actions.ts';
 import { Vote } from '../../../vote.tsx';
 
 export const dynamic = 'force-dynamic';
@@ -124,24 +125,19 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 			<h2>Comments and reviews</h2>
 			{thread.length === 0 && <p className="count">No comments yet.</p>}
 			{thread.map((c) => (
-				<div key={c.id} className={c.parent ? 'comment reply' : 'comment'}>
+				<div key={c.id} id={`p${c.id}`} className={c.parent ? 'comment reply' : 'comment'}>
 					<p className="meta">
 						<span>@{c.voter}{c.agent ? ` via ${c.agent}` : ''}</span>
 						<span>{date(c.at)}</span>
 						{c.review && <span>review</span>}
 						{c.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}
 					</p>
-					<p>{c.body}</p>
+					<Markdown text={c.body} postId={c.id} />
 				</div>
 			))}
 
-			<form action={commentOn} className="comment-form">
-				<input type="hidden" name="id" value={id} />
-				<input type="hidden" name="back" value={back} />
-				<textarea name="body" rows={4} maxLength={4000} required placeholder={who ? 'Comment, or review the paper. Name other records by id to mention them.' : 'Sign in with GitHub to comment.'} aria-label="Comment" />
-				<label><input type="checkbox" name="review" /> This is a review</label>
-				<button>{who ? 'Post' : 'Sign in and post'}</button>
-			</form>
+			<PostForm kind="record" owner={who?.login ?? ''} record={id} back={back} rows={4} label="Comment" button="Post"
+				placeholder="Comment, or review the paper. Name other records by id to mention them." />
 
 			{links.length > 0 && (
 				<>

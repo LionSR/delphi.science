@@ -163,20 +163,23 @@ class Store(Stored):
         index.save(ref, self.entry(refreshed="2026-10-08"))
         self.assertEqual(self.history(), [])
 
-    def test_a_person_adds_at_most_20_links_a_day_with_their_agents(self) -> None:
+    def test_cli_cannot_bypass_the_public_submission_gate(self) -> None:
+        for by in ("ada", "", "harvest:feed"):
+            with self.subTest(by=by), contextlib.redirect_stdout(io.StringIO()) as out:
+                self.assertEqual(index.add("https://e.org/new", by, False), 2)
+                self.assertIn("authenticated POST /api/v1/submit", out.getvalue())
+        self.assertEqual(store.ids(), set())
+
+    def test_cli_dry_run_inspects_metadata_without_storing(self) -> None:
         saved = S.detect, S.fetch
-        S.detect = lambda url: (S.BY_NAME["web"], url.rsplit("/", 1)[1])
-        S.fetch = lambda url: self.entry(url.rsplit("/", 1)[1], url=url)
+        S.detect = lambda url: (S.BY_NAME["web"], "new")
+        S.fetch = lambda url: self.entry("new", url=url)
         try:
-            out = io.StringIO()
-            with contextlib.redirect_stdout(out):
-                codes = [index.add(f"https://e.org/{n}", "ada", False) for n in range(index.MAX_ADDS_PER_DAY + 1)]
-                again = index.add("https://e.org/0", "bo", False)
+            with contextlib.redirect_stdout(io.StringIO()):
+                self.assertEqual(index.add("https://e.org/new", "ada", True), 0)
+            self.assertEqual(store.ids(), set())
         finally:
             S.detect, S.fetch = saved
-        self.assertEqual(codes, [0] * index.MAX_ADDS_PER_DAY + [2])
-        self.assertIn("20 links today", out.getvalue())
-        self.assertEqual((again, store.added_today("ada", S.today())), (2, index.MAX_ADDS_PER_DAY))  # already listed
 
     def test_harvest_adds_each_new_record_once(self) -> None:
         index.save(Ref("web/old"), self.entry("old"))

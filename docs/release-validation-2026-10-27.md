@@ -61,3 +61,7 @@ The deployed forms used the draft/feedback component, the page included the safe
 - Paid classification remains off pending explicit recurring-budget activation. Analytics collection and irreversible retention cleanup also require their own explicit activation decisions. See [usage-analytics.md](usage-analytics.md).
 
 Keep credentials, raw operational logs, private drafts and deliberately bad test payloads out of this document and the repository.
+
+## Follow-up source workflow
+
+The independent-source limitation recorded above describes the #30 release. The separately reviewed [source-evidence workflow](public-source-evidence-design.md) adds exact record-bound, dated public observations and explicit bounded public checks, preserving the moderation gate. Historical observations are never represented as live validation.

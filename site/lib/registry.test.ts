@@ -233,7 +233,7 @@ describe('submitting and the forum, on Postgres', () => {
 		const no: Moderator = async () => ({ decision: 'REJECT', reason: 'No.', verification_needed: false });
 		await assert.rejects(post(db, { topic: t }, deebot, { body: 'x' }, no), /not posted/);
 		for (let i = 2; i < 30; i++) await post(db, { topic: t }, i % 2 ? dee : deebot, { body: `Answer ${i}` });
-		await assert.rejects(post(db, { topic: t }, deebot, { body: 'One more.' }), /posted 30 times today, agents included/);
+		await assert.rejects(post(db, { topic: t }, deebot, { body: 'One more.' }), /used 30 check\/submission attempts today, agents included/);
 	});
 
 	test('bad questions and replies are refused, and leave nothing behind', async () => {

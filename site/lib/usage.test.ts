@@ -1,6 +1,7 @@
 // API use counts: naming the client from its user agent, and counting calls on real Postgres (PGlite)
 // with the migrations as written.
 import { strict as assert } from 'node:assert';
+import { spawnSync } from 'node:child_process';
 import { readdirSync, readFileSync } from 'node:fs';
 import { describe, test } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
@@ -166,6 +167,14 @@ test('admin allowlist fails closed and matches whole GitHub logins', () => {
 	assert.equal(canReadUsage({login: 'owner', agent: ''}, ''), false);
 	assert.equal(canReadUsage({login: 'OWNER', agent: ''}, 'other, owner'), true);
 	assert.equal(canReadUsage({login: 'own', agent: ''}, 'owner'), false);
+});
+
+test('retention job does not print database credentials when configuration is invalid', () => {
+	const run = spawnSync(process.execPath, ['--experimental-strip-types', new URL('../scripts/prune-usage.ts', import.meta.url).pathname],
+		{ env: { ...process.env, SUPABASE_DB_URL: 'http://[invalid?password=synthetic-secret' }, encoding: 'utf8' });
+	assert.equal(run.status, 1);
+	assert.match(run.stderr, /Usage retention cleanup failed/);
+	assert.doesNotMatch(run.stderr + run.stdout, /synthetic-secret|password=/);
 });
 
 test('browser event URLs contain only approved route patterns with no secrets or IDs', () => {

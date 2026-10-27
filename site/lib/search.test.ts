@@ -7,11 +7,15 @@ import { PGlite } from '@electric-sql/pglite';
 import { vector } from '@electric-sql/pglite/vector';
 import { compile, get, IS, parse, QUERY_FIELDS, QUERY_HELP, QueryError, search, SORT_HELP, SORTS } from './query.ts';
 import { load, type Item } from './load.ts';
-import { agentKeys, createAgentKey, createSession, myVotes, revokeKey, unvote, vote, voterFromKey } from './votes.ts';
-import { comment, comments } from './comments.ts';
+import { agentKeys, createAgentKey, createSession, myVotes, revokeKey, unvote, vote as actualVote, voterFromKey } from './votes.ts';
+import { comment as actualComment, comments } from './comments.ts';
 import { approveDevice, denyDevice, pendingDevice, redeemDevice, startDevice } from './device.ts';
 import { handle as mcp } from './mcp.ts';
 import { fileCount, MAX_URLS, sitemapFile, sitemapFiles } from './sitemap.ts';
+
+const yes = async () => ({ decision: 'ACCEPT' as const, reason: 'Test fixture only.', verification_needed: false });
+const comment: typeof actualComment = (db, id, voter, c, moderate = yes) => actualComment(db, id, voter, c, moderate);
+const vote: typeof actualVote = (db, id, voter, v, moderate = yes) => actualVote(db, id, voter, v, moderate);
 
 const MIGRATIONS = new URL('../supabase/migrations/', import.meta.url);
 const INDEX = new URL('../../dist/index.json', import.meta.url);

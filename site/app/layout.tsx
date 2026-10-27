@@ -13,7 +13,14 @@ export const metadata = {
 };
 
 // Titles and abstracts use TeX ($…$, and GitHub's $`…`$, which the pages rewrite to $…$).
-const MATHJAX = `window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\\\(', '\\\\)']], processEscapes: true } };`;
+const MATHJAX = `window.MathJax = {
+ loader: { load: ['ui/safe'] },
+ tex: { inlineMath: [['$', '$'], ['\\\\(', '\\\\)']], processEscapes: true },
+ options: { ignoreHtmlClass: 'tex2jax_ignore|mathjax_ignore', safeOptions: {
+  allow: { URLs: 'safe', classes: 'none', cssIDs: 'none', styles: 'none' },
+  safeProtocols: { http: true, https: true, file: false, javascript: false, data: false }
+ } }
+};`;
 
 export default async function Layout({ children }: { children: ReactNode }) {
 	const who = await me();
@@ -41,6 +48,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
 					</header>
 					{children}
 					<footer>
+						<a href="/moderation">Moderation</a>
 						<a href="/privacy">Privacy</a>
 						<a href="/support">Support</a>
 						<a href="/stats">Use</a>

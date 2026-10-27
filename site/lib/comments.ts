@@ -72,6 +72,13 @@ async function storePost(db: Db, place: Place, voter: Voter, c: { body: string; 
 		`INSERT INTO open_index.comments (record_id, topic_id, parent_id, voter, agent, body, review) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id, at`,
 		[recordId, 'topic' in place ? place.topic : null, c.parent ?? null, voter.login, voter.agent, body, Boolean(c.review)],
 	);
+	const mentioned = await linkMentions(db, Number(rows[0].id), body, recordId);
+	return { id: rows[0].id, ...('record' in place ? { record_id: place.record } : { topic_id: place.topic }), parent: c.parent ?? null, voter: voter.login, agent: voter.agent, body,
+		review: Boolean(c.review), at: rows[0].at, mentions: mentioned };
+}
+
+/** Creation and accepted edits derive mentions from the same body syntax. */
+export async function linkMentions(db: Db, id: number, body: string, recordId: string | null) {
 	// Trailing punctuation is not part of an id or URL ("see app/APP-260923-0000.").
 	const strip = (s: string) => s.replace(/[.:!?]+$/, '');
 	const ids = [...new Set((body.match(ID) ?? []).map(strip))];
@@ -80,13 +87,12 @@ async function storePost(db: Db, place: Place, voter: Voter, c: { body: string; 
 		`INSERT INTO open_index.mentions (comment_id, record_id)
 		 SELECT $1, r.id FROM open_index.records r WHERE (r.id = ANY($2) OR r.url = ANY($3)) AND r.id IS DISTINCT FROM $4
 		 ON CONFLICT DO NOTHING RETURNING record_id AS id`,
-		[rows[0].id, ids, urls, recordId],
+		[id, ids, urls, recordId],
 	)).rows.map((r) => r.id);
-	return { id: rows[0].id, ...('record' in place ? { record_id: place.record } : { topic_id: place.topic }), parent: c.parent ?? null, voter: voter.login, agent: voter.agent, body,
-		review: Boolean(c.review), at: rows[0].at, mentions: mentioned };
+	return mentioned;
 }
 
-export type Post = { id: number; parent: number | null; voter: string; agent: string; body: string; review: boolean; at: string; score: number; mentions: string[] };
+export type Post = { id: number; parent: number | null; voter: string; agent: string; body: string; review: boolean; at: string; score: number; mentions: string[]; revision: string };
 
 /** A record's comments, oldest first, with each one's mentions. */
 export const comments = (db: Db, recordId: string) => thread(db, { record: recordId });
@@ -94,7 +100,7 @@ export const comments = (db: Db, recordId: string) => thread(db, { record: recor
 /** The posts in one place, oldest first, with each one's mentions. */
 export async function thread(db: Db, place: Place): Promise<Post[]> {
 	return (await db.query<Post>(
-		`SELECT c.id::int, c.parent_id::int AS parent, c.voter, c.agent, c.body, c.review, c.at, c.score,
+		`SELECT c.id::int, c.parent_id::int AS parent, c.voter, c.agent, c.body, c.review, c.at, c.score, c.xmin::text AS revision,
 		        coalesce(array_agg(m.record_id) FILTER (WHERE m.record_id IS NOT NULL), '{}') AS mentions
 		 FROM open_index.comments c LEFT JOIN open_index.mentions m ON m.comment_id = c.id
 		 WHERE c.${'record' in place ? 'record_id' : 'topic_id'} = $1 GROUP BY c.id ORDER BY c.at, c.id`,

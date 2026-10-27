@@ -67,11 +67,10 @@ event URL, not all vendor processing. Cookie-free does not mean the hosting prov
 IPs. Vercel documents a request-derived daily visitor hash discarded after 24 hours. No Vercel
 retention claim beyond the current plan's reporting window is implied.
 
-Support address `texra-ai@outlook.com` is verified from PR #28, which is otherwise separate. This PR
-removes the outdated Anthropic privacy sentence and documents DeepSeek moderation, public record
-classification, stance proposals and reception drafts, including public author names. It imports no
-labeler code. The merge coordinator must merge #28 before #29 and confirm the final provider wording;
-issue #6 still needs owner policy approval and live verification.
+Support address `texra-ai@outlook.com` and the DeepSeek-only pipeline came from merged PR #28.
+This analytics PR adds precise DeepSeek moderation and public indexing data-flow disclosures,
+including author names, and preserves human review of stance proposals and reception drafts.
+It changes no labeler code. Issue #6 still needs owner policy approval and live verification.
 
 ## Verification
 

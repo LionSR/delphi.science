@@ -2,8 +2,8 @@
 # harvest.json, read the stalest entries again from their sources, read every discussion link again
 # (a deleted post drops out), label the new records, build, and load the build into Supabase Postgres.
 # The entries live in Supabase (open_index.entries, store.py), so nothing is committed.
-# Secrets: SUPABASE_DB_URL, the database (required); ANTHROPIC_API_KEY labels new records (without it
-# they wait, shown as research).
+# Secrets: SUPABASE_DB_URL, the database. Labels come from DeepSeek, with the key the site's moderator
+# uses: the secret deepseek_api_key in Supabase Vault (or DEEPSEEK_API_KEY).
 name: Open index
 
 on:
@@ -23,12 +23,11 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ github.token }}
-      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+      ORI_DEEPSEEK_ENABLED: ${{ vars.ORI_DEEPSEEK_ENABLED }}
+      ORI_DEEPSEEK_MAX_RUN_USD: ${{ vars.ORI_DEEPSEEK_MAX_RUN_USD }}
     steps:
       - uses: actions/checkout@v7
-        with:
-          submodules: true
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
@@ -45,11 +44,29 @@ jobs:
         run: python3 index.py refresh  # 200 a day, each read again once it is a week old
       - name: Recheck discussion links
         run: python3 index.py discuss --recheck  # a deleted post drops out within a day
-      - name: Label new records
-        if: env.ANTHROPIC_API_KEY != ''
+      - name: Check optional DeepSeek labeling configuration
+        id: label_config
         run: |
-          npm install -g @anthropic-ai/claude-code
-          python3 index.py label
+          python3 - <<'PY'
+          import os
+          import index
+          try:
+              enabled, cap = index.generation_settings()
+              enabled = enabled and cap > 0
+          except ValueError:
+              enabled = False
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              print(f'enabled={str(enabled).lower()}', file=output)
+          if not enabled:
+              print('::notice::Optional DeepSeek labeling is disabled: owner opt-in and a positive authorized per-run USD budget are required. Metadata ingestion continues.')
+          PY
+      - name: Label new records
+        id: label
+        if: steps.label_config.outputs.enabled == 'true'
+        continue-on-error: true # optional labels must not block independent metadata build/load
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: python3 index.py label
       - name: Build
         run: python3 index.py build
 
@@ -58,3 +75,9 @@ jobs:
         run: |
           npm ci
           node --experimental-strip-types scripts/load-open-index.ts ../dist/index.json
+
+      - name: Report attempted classification failure
+        if: steps.label.outcome == 'failure'
+        run: |
+          echo '::error::Metadata ingestion completed, but optional DeepSeek classification failed. Unlabelled records remain unlabelled; no alternate provider was used.'
+          exit 1

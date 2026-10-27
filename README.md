@@ -32,7 +32,7 @@ claude mcp add --transport http open-research-index https://open-research-index.
 
 - **Scope:** GitHub repositories are indexed standalone only if they have at least 50 stars or a `CITATION.cff` (`MIN_REPO_STARS` in `index.py`, `MIN_STARS` in `site/lib/resolve.ts`); smaller codebases should be linked via their paper. Lean formalizations are harvested from Palomar and `formalization.yaml` repositories.
 - **Ingestion:** Any public record from a supported source that resolves with a title and is not already indexed is accepted, up to 20 submissions per user per day (shared across the user and their agents). Site submissions and `index.py add` both write to `open_index.entries`, so the daily job labels and refreshes both.
-- **Classification:** `index.py label` classifies each entry into `research`, `non-research`, `fiction`, `low-info`, or `harmful`, and assigns an arXiv subject code and up to 4 topic tags (`label-prompt.md`). The default search view filters to `research`. Entries labelled `harmful` are excluded from `index.json` and public search but retained in `open_index.entries` for audit.
+- **Classification:** `index.py label` uses DeepSeek, with the moderation key below, to classify each entry into `research`, `non-research`, `fiction`, `low-info`, or `harmful`, and assigns an arXiv subject code and up to 4 topic tags (`label-prompt.md`). The default search view filters to `research`. Entries labelled `harmful` are excluded from `index.json` and public search but retained in `open_index.entries` for audit.
 - **Source metadata:** Title, authors, abstract (truncated to ~600 characters), publication date, and URLs are fetched directly from the upstream source API with per-host rate limiting and local caching in `.cache/`.
 - **Identifiers:** Every record ID has the form `<prefix>/<suffix>` (`palomar/PALOMAR-2026-08-08-000001`, `app/APP-260923-0000`). Prefixes are registered in `site/lib/prefixes.json` and never reused. `/id/<id>` redirects to the upstream URL (or returns the record JSON when requested with `Accept: application/json`).
 - **External responses (`discussion[]`):** `index.py discuss` links external commentary from researchers, labs, journals, and established research blogs (excluding anonymous accounts, aggregators, and reposts). For X posts, only author, handle, and date are fetched via oEmbed and rendered via X's embed widget so deleted posts disappear automatically. Blog posts, papers, talks, and MathOverflow threads store title, URL, author, date, and a verbatim excerpt. `discuss --recheck` re-verifies all linked URLs daily and removes dead links.
@@ -50,7 +50,7 @@ Set `SUPABASE_DB_URL` (available in `site/.env.local` via `vercel env pull`) and
 set -a; . site/.env.local; set +a
 python3 index.py add <url or id> [--by <github login>] [--dry-run]
 python3 index.py harvest [--source palomar] [--limit N] [--dry-run]
-python3 index.py label [--all] [--labeler claude|none|canned:<file.json>]
+python3 index.py label [--all] [--labeler deepseek|none|canned:<file.json>]
 python3 index.py refresh [--older-than 7] [--dry-run]
 python3 index.py discuss openai-math/<key> <url>...               # attach external responses
 python3 index.py discuss --recheck [<record id>...]               # drop deleted links (run daily)
@@ -65,6 +65,10 @@ cd site && npm run dev                                            # run site and
 python3 test_index.py && python3 test_candidates.py               # run Python test suite on ephemeral PGlite
 cd site && npm test
 ```
+
+Python DeepSeek generation is **off by default**, including classification, stance proposals, and reception drafts. A key alone does not authorize spending. For an owner-authorized one-off run, add `--allow-paid-deepseek --max-cost-usd <approved USD amount>` to the relevant command. The run reserves each request's worst-case input/output cost before sending it, has strict input/output limits, and keeps the full reservation if usage is absent or uncertain. Canned replies and `--labeler none` make no model calls. Other provider names (including `claude`) are rejected rather than invoked or recorded as misleading provenance.
+
+Recurring labeling additionally requires a separately approved recurring budget: repository variables `ORI_DEEPSEEK_ENABLED=true` and a positive `ORI_DEEPSEEK_MAX_RUN_USD`. Neither variable is created by this change. `DEEPSEEK_API_KEY` is optional when the existing Vault secret `deepseek_api_key` is available. The daily job visibly skips labels when opt-in/budget is absent, still harvests/builds/loads metadata, and reports an attempted label failure as a failed job after ingestion completes. Classification is optional metadata, not peer review or a prerequisite for registry inclusion. Recheck the documented DeepSeek peak prices before activation; rates are currently bounded using `deepseek-flash` at $0.30/input-million and $1.20/output-million (checked October 27, 2026).
 
 To build without Supabase credentials (as in CI), start a local PGlite instance seeded from `fixtures/entries.jsonl`: run `cd site && npm run db -- --entries ../fixtures/entries.jsonl`, export the printed `SUPABASE_DB_URL`, and run `python3 index.py build`. Update the fixture from production entries with `python3 fixtures/make.py`.
 

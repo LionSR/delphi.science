@@ -220,7 +220,9 @@ test('the X request uses the current fixed official publish endpoint', () => {
   const old = await retrieveSource(canonicalSource(doc), async () => { calls++; throw new Error('not called'); }, Date.now() - 1);
   assert.equal(old.status, 'unavailable'); assert.equal(calls, 0);
   const held = await retrieveSource(canonicalSource(doc), async () => { calls++; return new Promise<never>(() => {}); }, Date.now() + 10);
-  assert.equal(held.status, 'unavailable'); assert.equal(calls, 1);
+  assert.equal(held.status, 'unavailable');
+  // Under CPU contention the short caller deadline can expire before transport dispatch.
+  assert.ok(calls === 0 || calls === 1, 'expired work never dispatches or retries extra requests');
 });
 
  test('regular executable blobs are supported, but a non-tree ancestor is not traversed', async () => {

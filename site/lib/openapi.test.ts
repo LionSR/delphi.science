@@ -341,6 +341,28 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 		finally{(globalThis as {openIndexDb?:Promise<unknown>}).openIndexDb=Promise.resolve(pg);}
 	});
 
+	test('post editing responses preserve the original through refusal and conflicts', async () => {
+		const at = `/api/v1/records/${discussed.split('/')[0]}/${encodeURIComponent(discussed.split('/')[1])}/comments`;
+		const made = JSON.parse((await call('POST', at, { auth: true, body: { body: 'The finite chain retains its endpoint terms.' } })).text);
+		const p = JSON.parse((await call('GET', at)).text).find((p: { id: number }) => p.id === made.id);
+		const path = `/api/v1/posts/${p.id}`, body = { body: 'The corrected chain has periodic boundaries.', revision: p.revision };
+		assert.equal((await call('PATCH', path, { body })).status, 401);
+		assert.equal((await call('PATCH', path, { auth: true, body: { ...body, human: true } })).status, 400);
+		const other = await createAgentKey(pg, 'another-editor', 'Test agent');
+		assert.equal((await call('PATCH', path, { auth: other, body })).status, 403);
+		assert.equal((await call('PATCH', '/api/v1/posts/99999999', { auth: true, body })).status, 404);
+		assert.equal((await call('PATCH', path, { auth: true, body: { ...body, revision: '0' } })).status, 409);
+		try {
+			for (const mode of ['reject', 'review', 'unavailable'] as const) {
+				moderationMode = mode;
+				assert.equal((await call('PATCH', path, { auth: true, body })).status, mode === 'reject' ? 422 : mode === 'review' ? 409 : 503);
+				assert.equal((await pg.query<{ body: string }>('SELECT body FROM open_index.comments WHERE id=$1', [p.id])).rows[0].body, p.body);
+			}
+		} finally { moderationMode = 'accept'; }
+		const updated = JSON.parse((await call('PATCH', path, { auth: true, body })).text);
+		assert.equal(updated.body, body.body); assert.notEqual(updated.revision, body.revision);
+	});
+
 	test('every documented response was checked', () => {
 		const documented = Object.entries(paths).flatMap(([p, ops]) => Object.entries(ops).flatMap(([m, op]) => Object.keys(op.responses).map((s) => `${m} ${p} ${s}`)));
 		assert.deepEqual(documented.filter((d) => !seen.has(d)), []);

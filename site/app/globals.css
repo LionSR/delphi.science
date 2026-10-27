@@ -80,6 +80,7 @@ ul.plain li { margin: 0.2rem 0; }
 .markdown mjx-container[display='true'] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
 .comment-form fieldset { display: flex; flex-direction: column; gap: 0.6rem; width: 100%; min-width: 0; padding: 0; margin: 0; border: 0; }
 .comment-form fieldset > button { align-self: flex-start; }
+.edit-actions { display: flex; gap: 0.5rem; }
 .comment-form fieldset:disabled { opacity: 0.75; }
 .post-feedback { border-left: 3px solid var(--warn); padding: 0.6rem 0.9rem; background: var(--surface); }
 .post-feedback p { margin: 0.4rem 0 0; }

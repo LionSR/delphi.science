@@ -13,6 +13,7 @@ import { me } from '../../../../lib/session.ts';
 import { date, idPath, reception, recordId, recordPath, SITE, source, STANCES, tally, tex, type IdParams } from '../../../../lib/view.ts';
 import { myVotes, votes } from '../../../../lib/votes.ts';
 import { Vote } from '../../../vote.tsx';
+import { EditPost } from '../../../edit-post.tsx';
 
 export const dynamic = 'force-dynamic';
 
@@ -43,7 +44,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	const id = await recordId(ctx);
 	const r = await record(id);
 	if (!r) notFound();
-	const thread = (await comments(await db(), id)) as { id: number; parent: number | null; voter: string; agent: string; body: string; review: boolean; at: string; mentions: string[] }[];
+	const thread = await comments(await db(), id);
 	const { notice } = await ctx.searchParams;
 	const voters = await votes(await db(), id);
 	const who = await me();
@@ -134,6 +135,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 						{c.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}
 					</p>
 					<Markdown text={c.body} postId={c.id} />
+					{who?.login === c.voter && <EditPost key={who.login} id={c.id} owner={who.login} body={c.body} revision={c.revision} />}
 				</div>
 			))}
 

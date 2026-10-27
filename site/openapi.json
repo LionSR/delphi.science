@@ -551,7 +551,7 @@
 			},
 			"post": {
 				"operationId": "vote",
-				"summary": "Cast or update a vote on a record (+1 or -1, optional emoji and note). Subsequent votes replace the previous vote for the same user.",
+				"summary": "Cast or update a vote (+1 or -1, optional emoji/note). With if_absent: true, atomically preserve any existing owner vote and report created; otherwise replace it.",
 				"parameters": [
 					{
 						"name": "prefix",
@@ -611,6 +611,10 @@
 									"emoji": {
 										"type": "string",
 										"description": "One emoji, e.g. 🤔."
+									},
+									"if_absent": {
+										"type": "boolean",
+										"description": "Optional create-only vote: true never changes an existing owner vote, including another bot’s choice. Response created reports whether this call inserted. Omitted/false keeps manual updates."
 									},
 									"retrieve_sources": {
 										"type": "boolean",
@@ -2946,6 +2950,10 @@
 					},
 					"reactions": {
 						"type": "object"
+					},
+					"created": {
+						"type": "boolean",
+						"description": "Only returned by vote with if_absent: true: whether this call inserted a vote. False preserves the existing owner vote."
 					}
 				}
 			},

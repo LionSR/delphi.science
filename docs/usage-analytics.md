@@ -7,11 +7,12 @@ applied while preparing this PR.
 
 ## Activation after review
 
-1. Review and apply `site/supabase/migrations/20261027034516_private_bounded_usage.sql` using the
-   normal migration process. It deletes old counters and rows with arbitrary legacy client/endpoint
-   names, which could contain identifiers, before adding fixed-category checks. Keep the table
-   private with RLS and no public policies or grants. Do not run an app version that admits arbitrary
-   categories against the new constraints. This migration affects metrics only.
+1. Review `site/supabase/migrations/20261027034516_private_bounded_usage.sql` through the normal
+   migration process. It preserves every historical row and adds `NOT VALID` category checks:
+   new writes are constrained, existing rows are not deleted, rewritten or scanned for validation.
+   Stats independently exclude unsafe legacy dimensions and dates. Keep the table private with RLS
+   and no public policies or grants. No migration is executed by merging this PR or by CI.
+   Any later deletion of historical counters needs separate, exact owner confirmation.
 2. Configure `ORI_STATS_ADMINS` as a comma-separated list of approved GitHub logins on the server.
    Empty configuration denies everyone. Signed-in admins read `/stats`; API admins send an existing
    agent key owned by an approved account to `GET /api/v1/stats?weeks=8`. All such keys owned by an
@@ -22,10 +23,19 @@ applied while preparing this PR.
    Product tokens are claims from an untrusted User-Agent, not authenticated identity. Versions and
    arbitrary products are discarded; unknown products become `other`. No IP, raw UA, query, body,
    credential, login, agent name, request ID or resolved record/forum/sitemap ID is stored.
-4. Verify the daily `Usage retention` workflow can use the **existing** `SUPABASE_DB_URL` secret.
-   It runs at 00:11 UTC independently of harvesting/labeling. Old rows are also deleted on counter
-   writes and stats reads. Retain today plus the preceding 89 UTC dates; daily cleanup may lag by
-   up to a day, and scheduler outages can delay physical deletion. Monitor failed workflow runs.
+4. Retention cleanup is a separate, destructive activation, **off by default**. Obtain exact owner
+   confirmation before enabling it. Collection alone never authorizes deletion. Once approved,
+   set `ORI_USAGE_RETENTION_ENABLED=true` alongside `ORI_USAGE_ANALYTICS_ENABLED=true` in the
+   server environment; preview deployments skip both collection and cleanup. To authorize the daily
+   workflow, both repository variables of those names must also equal `true`. This PR changes none
+   of those variables, environments, credentials, or permissions. The job-level condition skips the
+   entire job (including access to the existing database secret) when either variable is absent/off.
+   The CLI checks both flags again before constructing a database connection. Reads never delete;
+   counter writes prune only when both flags are enabled. After activation, cleanup retains today
+   plus the preceding 89 UTC dates; the daily job runs at 00:11 UTC independently of harvesting.
+   With cleanup disabled, historical rows remain preserved, although reports show only the last
+   90 UTC dates and safe dimensions. Do not describe physical 90-day deletion as active until enabled.
+   Cleanup can lag up to a day and scheduler outages can delay it. Monitor failed workflow runs.
    No backups or vendor log-retention settings are changed by this code.
 5. For visitors, review the Vercel project's **current plan and existing analytics setting** first.
    The official pricing page checked 27 October 2026 lists Hobby at 50,000 events/month with a
@@ -43,8 +53,9 @@ applied while preparing this PR.
 
 ## Privacy and bounds
 
-There are 49 fixed client categories and 25 fixed endpoint categories (110,250 possible rows in
-90 UTC dates). Database constraints make this bound independent of concurrent callers. Unknown
+New counters have 49 fixed client categories and 25 fixed endpoint categories (110,250 possible
+rows across 90 UTC dates after retention activation). Database constraints make category bounds
+independent of concurrent callers; historical rows are preserved until separately approved cleanup. Unknown
 endpoints are dropped before any query. Additions require an explicit migration and code review.
 Weekly tables start Monday UTC, with the current week partial; up to 13 weeks are available.
 
@@ -57,15 +68,16 @@ IPs. Vercel documents a request-derived daily visitor hash discarded after 24 ho
 retention claim beyond the current plan's reporting window is implied.
 
 Support address `texra-ai@outlook.com` is verified from PR #28, which is otherwise separate. This PR
-removes the outdated Anthropic privacy sentence without merging the DeepSeek labeler changes.
-Review the final policy against the final deployed labeler before release; issue #6 still needs
-owner policy approval and live verification.
+removes the outdated Anthropic privacy sentence and documents DeepSeek moderation, public record
+classification, stance proposals and reception drafts, including public author names. It imports no
+labeler code. The merge coordinator must merge #28 before #29 and confirm the final provider wording;
+issue #6 still needs owner policy approval and live verification.
 
 ## Verification
 
 Run `npm test`, `npx tsc --noEmit -p .`, and `npm run build` in `site` after producing the fixture index
 as documented in CI. The usage tests execute every migration in local PGlite, verify privacy,
-retention, concurrency, category constraints and admin authorization. UI review covers anonymous,
+retention, disabled-state preservation, scheduler/CLI gates, concurrency, category constraints and admin authorization. UI review covers anonymous,
 admin, empty and populated views at desktop and mobile widths. No production data is required.
 
 Official references checked 27 October 2026:
@@ -76,3 +88,5 @@ Official references checked 27 October 2026:
 - [Sensitive URL redaction](https://vercel.com/docs/analytics/redacting-sensitive-data)
 - [Supported Web Analytics API](https://vercel.com/docs/analytics/web-analytics-api)
 - [Supabase RLS and grants](https://supabase.com/docs/guides/database/postgres/row-level-security)
+
+- [PostgreSQL NOT VALID constraints](https://www.postgresql.org/docs/current/sql-altertable.html) preserve existing rows while enforcing new writes.

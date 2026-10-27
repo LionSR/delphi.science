@@ -1,6 +1,6 @@
 // /stats: how the API is used, in aggregate (the same numbers as /api/v1/stats).
 import { db } from '../../lib/db.ts';
-import { USAGE_NOTE, usage } from '../../lib/usage.ts';
+import { collectionEnabled, retentionEnabled, USAGE_NOTE, usage } from '../../lib/usage.ts';
 import { date } from '../../lib/view.ts';
 import { me } from '../../lib/session.ts';
 import { canReadUsage } from '../../lib/usage-admin.ts';
@@ -17,7 +17,7 @@ export default async function Stats() {
 	return (
 		<article>
 			<h1>Usage statistics</h1>
-			<p>Admin access. {process.env.ORI_USAGE_ANALYTICS_ENABLED === 'true' ? 'API counting is enabled.' : 'API counting is disabled; any saved counts are historical.'}</p>
+			<p>Admin access. {collectionEnabled() ? 'API counting is enabled.' : 'API counting is disabled; any saved counts are historical.'} {retentionEnabled() ? 'Retention cleanup is enabled.' : 'Retention cleanup is disabled; viewing this page does not delete saved counts.'}</p>
 			<h2>Weekly visitors</h2>
 			<p>Open the <a href="https://vercel.com/dashboard">Vercel project dashboard</a>, select Analytics, and choose the last 7 days. This page does not fetch visitor counts. Web Analytics must be enabled in Vercel and deployed with the collection flag; blocked scripts and clients without JavaScript may not appear.</p>
 			<p className="count">{USAGE_NOTE} For JSON, send an administrator&apos;s agent key to <code>GET /api/v1/stats</code>.</p>

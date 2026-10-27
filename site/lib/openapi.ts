@@ -100,12 +100,13 @@ export const spec = {
 			},
 			post: {
 				operationId: 'vote',
-				summary: 'Cast or update a vote on a record (+1 or -1, optional emoji and note). Subsequent votes replace the previous vote for the same user.',
+				summary: 'Cast or update a vote (+1 or -1, optional emoji/note). With if_absent: true, atomically preserve any existing owner vote and report created; otherwise replace it.',
 				parameters: [prefix, suffix],
 				...write,
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', description: 'Send value, emoji, or both.', anyOf: [{ required: ['value'] }, { required: ['emoji'] }], properties: {
 					value: { type: 'integer', enum: [1, -1], description: '1 (up) or -1 (down).' },
 					emoji: { type: 'string', description: 'One emoji, e.g. 🤔.' },
+					if_absent: { type: 'boolean', description: 'Optional create-only vote: true never changes an existing owner vote, including another bot’s choice. Response created reports whether this call inserted. Omitted/false keeps manual updates.' },
 					retrieve_sources: { type: 'boolean', description: 'Explicitly re-fetch unresolved supported sources in this public vote note before the ordinary quality gate.' },
 					note: { type: 'string', maxLength: 500, description: 'A short reason.' },
 					agent,
@@ -366,7 +367,7 @@ export const spec = {
 				record: { $ref: '#/components/schemas/Record' },
 			} },
 			Vote: { type: 'object', properties: { voter: { type: 'string' }, agent: { type: 'string' }, value: { type: ['integer', 'null'] }, emoji: { type: ['string', 'null'] }, note: { type: ['string', 'null'] }, at: { type: 'string', format: 'date-time' } } },
-			Tally: { type: 'object', properties: { id: { type: 'string' }, score: { type: 'integer' }, reactions: { type: 'object' } } },
+			Tally: { type: 'object', properties: { id: { type: 'string' }, score: { type: 'integer' }, reactions: { type: 'object' }, created: { type: 'boolean', description: 'Only returned by vote with if_absent: true: whether this call inserted a vote. False preserves the existing owner vote.' } } },
 			Prefixes: { type: 'object', properties: {
 				about: { type: 'string' },
 				prefixes: { type: 'object', additionalProperties: { type: 'object', properties: {

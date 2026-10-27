@@ -4,7 +4,7 @@ import { useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { savePostEdit } from './actions.ts';
 import { clearEditDraft, readEditDraft, writeEditDraft, type EditDraft } from '../lib/edit-drafts.ts';
-import type { PostFeedback } from '../lib/post-feedback.ts';
+import { holdFeedbackText, type PostFeedback } from '../lib/post-feedback.ts';
 
 export function EditPost({ id, owner, body, revision }: { id: number; owner: string; body: string; revision: string }) {
 	const router = useRouter();
@@ -35,7 +35,7 @@ export function EditPost({ id, owner, body, revision }: { id: number; owner: str
 	}}>
 		<fieldset disabled={pending}>
 			<textarea autoFocus aria-label="Edit post" required maxLength={4000} rows={6} value={draft.body} onChange={e => remember({ ...draft, body: e.target.value })} />
-			{feedback && <div role="alert"><p>{feedback.message}</p><p>{feedback.fix}</p></div>}
+			{feedback && <div role="alert">{feedback.code === 'moderation_review_needed' ? <p>{holdFeedbackText(feedback)} <a href="/support" target="_blank" rel="noopener noreferrer">Contact Support</a></p> : <><p>{feedback.message}</p><p>{feedback.fix}</p></>}</div>}
 			{draft.revision !== revision && <p role="status">The post has changed since this draft. Cancel to start again from the current text.</p>}
 			<div className="edit-actions"><button disabled={pending}>{pending ? 'Saving…' : 'Save'}</button>
 			<button type="button" disabled={pending} onClick={() => {

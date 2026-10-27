@@ -22,7 +22,8 @@ export function EditPost({ id, owner, body, revision }: { id: number; owner: str
 	return <form className="comment-form tex2jax_ignore" onSubmit={async event => {
 		event.preventDefault();
 		if (saving.current) return;
-		saving.current = true; setPending(true); setFeedback(undefined);
+		// Keep feedback in place while saving so a repeated click cannot hit a link beneath the form.
+		saving.current = true; setPending(true);
 		try {
 			const result = await savePostEdit({ id, ...draft });
 			if (result.ok) {

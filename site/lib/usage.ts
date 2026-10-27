@@ -29,6 +29,10 @@ export const ENDPOINTS = [...operations.map((o) => `${o.method} ${o.path}`),
 	'GET /id/{prefix}/{suffix}', 'GET /sitemap.xml', 'GET /sitemap/{file}'];
 export const RETENTION_DAYS = 90;
 
+// Collection and irreversible retention cleanup require separate, explicit activation.
+export const collectionEnabled = (env = process.env) => env.ORI_USAGE_ANALYTICS_ENABLED === 'true' && env.VERCEL_ENV !== 'preview';
+export const retentionEnabled = (env = process.env) => collectionEnabled(env) && env.ORI_USAGE_RETENTION_ENABLED === 'true';
+
 /** A short, stable name for the client that sent this user agent. */
 export function client(ua: string | null | undefined): string {
 	const s = (ua ?? '').slice(0, 2048).trim();
@@ -55,11 +59,13 @@ export function kind(name: string): Kind {
 
 /** Retain today and the previous 89 UTC dates. Also run daily, even when there is no traffic. */
 export async function pruneUsage(db: Db) {
+	if (!retentionEnabled()) return;
 	await db.query(`DELETE FROM open_index.api_usage WHERE day < (now() AT TIME ZONE 'utc')::date - ${RETENTION_DAYS - 1}`);
 }
 
 /** Counts one call: today's (UTC) row for this endpoint and client goes up by one. */
 export async function countCall(db: Db, endpoint: string, name: string) {
+	if (!collectionEnabled()) return;
 	if (!ENDPOINTS.includes(endpoint)) return; // never write a resolved path, query, unknown route or method
 	const safeClient = CLIENTS.includes(name) ? name : 'other';
 	await pruneUsage(db);
@@ -70,7 +76,7 @@ export async function countCall(db: Db, endpoint: string, name: string) {
 		[endpoint, safeClient]);
 }
 
-export const USAGE_NOTE = 'Origin API calls are aggregated by UTC day, fixed route pattern and allowlisted User-Agent product token. Unknown products count as other. Tokens are spoofable claims, not authenticated agent identities or unique visitors. No IPs, raw user agents, query strings, credentials, bodies or personal identifiers are stored in these metrics. CDN cache hits are not counted; failed metric writes are dropped. Retention: 90 UTC dates.';
+export const USAGE_NOTE = 'Origin API calls are aggregated by UTC day, fixed route pattern and allowlisted User-Agent product token. Unknown products count as other. Tokens are spoofable claims, not authenticated agent identities or unique visitors. No IPs, raw user agents, query strings, credentials, bodies or personal identifiers are stored in these metrics. CDN cache hits are not counted; failed metric writes are dropped. Reports show 90 UTC dates; deletion requires separate retention activation.';
 
 const TOP = 20;
 
@@ -84,11 +90,13 @@ export function since(weeks: number, now = new Date()) {
 /** Calls per week (all clients, and AI clients alone), the top endpoints and the top clients, over the last `weeks` weeks. */
 export async function usage(db: Db, weeks = 8, now = new Date()) {
 	weeks = Math.max(1, Math.min(13, Number.isFinite(weeks) ? Math.trunc(weeks) : 8));
-	await pruneUsage(db);
 	const from = since(weeks, now);
 	const rows = (await db.query<{ week: string; endpoint: string; client: string; calls: number }>(
 		`SELECT to_char(date_trunc('week', day), 'YYYY-MM-DD') AS week, endpoint, client, sum(calls)::double precision AS calls
-		 FROM open_index.api_usage WHERE day >= $1::date AND day <= (now() AT TIME ZONE 'utc')::date GROUP BY 1, 2, 3`, [from])).rows;
+		 FROM open_index.api_usage
+		 WHERE day >= greatest($1::date, (now() AT TIME ZONE 'utc')::date - ${RETENTION_DAYS - 1})
+		 AND day <= (now() AT TIME ZONE 'utc')::date AND endpoint = ANY($2::text[]) AND client = ANY($3::text[])
+		 GROUP BY 1, 2, 3`, [from, ENDPOINTS, CLIENTS])).rows;
 	const weekly = new Map<string, { week: string; calls: number; ai: number }>();
 	for (let w = weeks; w > 0; w--) weekly.set(since(w, now), { week: since(w, now), calls: 0, ai: 0 });
 	const endpoints = new Map<string, number>(), clients = new Map<string, number>();

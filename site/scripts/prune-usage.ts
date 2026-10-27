@@ -1,10 +1,14 @@
 // No production credentials are needed for development/tests. The scheduled job reuses the existing
 // database secret, and prints only a completion message (never the URL, rows, queries or errors).
 import postgres from 'postgres';
-import { pruneUsage } from '../lib/usage.ts';
+import { pruneUsage, retentionEnabled } from '../lib/usage.ts';
 
 let sql: ReturnType<typeof postgres> | undefined;
 try {
+	if (!retentionEnabled()) {
+		console.log('Usage retention cleanup is disabled.');
+		process.exit(0);
+	}
 	const url = process.env.SUPABASE_DB_URL;
 	if (!url) throw new Error('Missing database configuration.');
 	const connection = sql = postgres(url, { prepare: false, max: 1 });

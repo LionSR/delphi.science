@@ -3,12 +3,21 @@
 import { strict as assert } from 'node:assert';
 import { spawnSync } from 'node:child_process';
 import { readdirSync, readFileSync } from 'node:fs';
-import { describe, test } from 'node:test';
+import { after, before, describe, test } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
 import { vector } from '@electric-sql/pglite/vector';
-import { CLIENTS, ENDPOINTS, client, countCall, kind, pruneUsage, since, usage } from './usage.ts';
+import { CLIENTS, ENDPOINTS, client, collectionEnabled, countCall, kind, pruneUsage, retentionEnabled, since, usage } from './usage.ts';
 import { canReadUsage } from './usage-admin.ts';
 import { analyticsEvent } from './analytics.ts';
+
+const flagNames = ['ORI_USAGE_ANALYTICS_ENABLED', 'ORI_USAGE_RETENTION_ENABLED', 'VERCEL_ENV'] as const;
+const savedFlags = Object.fromEntries(flagNames.map((name) => [name, process.env[name]]));
+before(() => {
+	process.env.ORI_USAGE_ANALYTICS_ENABLED = 'true';
+	process.env.ORI_USAGE_RETENTION_ENABLED = 'true';
+	delete process.env.VERCEL_ENV;
+});
+after(() => { for (const name of flagNames) { if (savedFlags[name] === undefined) delete process.env[name]; else process.env[name] = savedFlags[name]; } });
 
 const MIGRATIONS = new URL('../supabase/migrations/', import.meta.url);
 const migrated = async () => {
@@ -146,7 +155,7 @@ test('normalization discards arbitrary tokens, email addresses, keys, URLs and s
 	assert.equal(new Set(ENDPOINTS).size, ENDPOINTS.length);
 });
 
-test('migration removes legacy identifiers and stale counts before enforcing categories', async () => {
+test('migration preserves legacy rows while reports exclude unsafe dimensions and old dates', async () => {
 	const db = new PGlite({ extensions: { vector } });
 	try {
 		for (const f of readdirSync(MIGRATIONS).filter((f) => f.endsWith('.sql')).sort()) {
@@ -157,8 +166,10 @@ test('migration removes legacy identifiers and stale counts before enforcing cat
 			 ((now() AT TIME ZONE 'utc')::date, 'GET /api/v1', 'curl', 2)`);
 			await db.exec(readFileSync(new URL(f, MIGRATIONS), 'utf8'));
 		}
-		assert.deepEqual((await db.query('SELECT endpoint, client, calls FROM open_index.api_usage')).rows,
-			[{ endpoint: 'GET /api/v1', client: 'curl', calls: 2 }]);
+		assert.equal((await db.query('SELECT * FROM open_index.api_usage')).rows.length, 4);
+		const beforeRead = JSON.stringify((await db.query('SELECT * FROM open_index.api_usage ORDER BY day, endpoint, client')).rows);
+		assert.deepEqual((await usage(db)).clients, [{client: 'curl', kind: 'tool', calls: 2}]);
+		assert.equal(JSON.stringify((await db.query('SELECT * FROM open_index.api_usage ORDER BY day, endpoint, client')).rows), beforeRead);
 	} finally { await db.close(); }
 });
 
@@ -169,9 +180,60 @@ test('admin allowlist fails closed and matches whole GitHub logins', () => {
 	assert.equal(canReadUsage({login: 'own', agent: ''}, 'owner'), false);
 });
 
+test('collection and deletion fail closed independently, including direct calls and stats reads', async () => {
+	const db = await migrated();
+	try {
+		await db.exec("INSERT INTO open_index.api_usage VALUES ((now() AT TIME ZONE 'utc')::date - 100, 'GET /api/v1', 'curl', 7)");
+		delete process.env.ORI_USAGE_ANALYTICS_ENABLED;
+		delete process.env.ORI_USAGE_RETENTION_ENABLED;
+		assert.equal(collectionEnabled(), false);
+		assert.equal(retentionEnabled(), false);
+		await countCall(db, 'GET /api/v1', 'curl');
+		await pruneUsage(db);
+		await usage(db);
+		assert.equal((await db.query('SELECT calls FROM open_index.api_usage')).rows.length, 1);
+		process.env.ORI_USAGE_RETENTION_ENABLED = 'true';
+		await pruneUsage(db); // retention alone cannot delete while collection is off
+		assert.equal((await db.query('SELECT * FROM open_index.api_usage')).rows.length, 1);
+		process.env.ORI_USAGE_ANALYTICS_ENABLED = 'true';
+		delete process.env.ORI_USAGE_RETENTION_ENABLED;
+		await countCall(db, 'GET /api/v1', 'curl'); // collection alone cannot delete
+		assert.equal((await db.query('SELECT * FROM open_index.api_usage')).rows.length, 2);
+		process.env.ORI_USAGE_RETENTION_ENABLED = 'true';
+		await usage(db); // a read never deletes, even when retention is enabled
+		assert.equal((await db.query('SELECT * FROM open_index.api_usage')).rows.length, 2);
+		process.env.VERCEL_ENV = 'preview';
+		await countCall(db, 'GET /api/v1', 'curl');
+		await pruneUsage(db);
+		assert.equal((await db.query('SELECT * FROM open_index.api_usage')).rows.length, 2);
+		delete process.env.VERCEL_ENV;
+		await pruneUsage(db); // only both opt-ins on a non-preview runtime allow deletion
+		assert.equal((await db.query('SELECT * FROM open_index.api_usage')).rows.length, 1);
+	} finally {
+		process.env.ORI_USAGE_ANALYTICS_ENABLED = 'true';
+		process.env.ORI_USAGE_RETENTION_ENABLED = 'true';
+		delete process.env.VERCEL_ENV;
+		await db.close();
+	}
+});
+
+test('scheduler and CLI are inert until both collection and retention are explicitly enabled', () => {
+	const workflow = readFileSync(new URL('../../.github/workflows/usage-retention.yml', import.meta.url), 'utf8');
+	assert.match(workflow, /if: \$\{\{ vars\.ORI_USAGE_ANALYTICS_ENABLED == 'true' && vars\.ORI_USAGE_RETENTION_ENABLED == 'true' \}\}/);
+	for (const [collection, retention, environment] of [
+		['', '', 'production'], ['', 'true', 'production'], ['true', '', 'production'], ['true', 'true', 'preview'],
+	]) {
+		const run = spawnSync(process.execPath, ['--experimental-strip-types', new URL('../scripts/prune-usage.ts', import.meta.url).pathname],
+			{ env: { ...process.env, SUPABASE_DB_URL: 'http://[invalid?password=synthetic-secret', ORI_USAGE_ANALYTICS_ENABLED: collection, ORI_USAGE_RETENTION_ENABLED: retention, VERCEL_ENV: environment }, encoding: 'utf8' });
+		assert.equal(run.status, 0);
+		assert.match(run.stdout, /cleanup is disabled/);
+		assert.equal(run.stderr, '');
+	}
+});
+
 test('retention job does not print database credentials when configuration is invalid', () => {
 	const run = spawnSync(process.execPath, ['--experimental-strip-types', new URL('../scripts/prune-usage.ts', import.meta.url).pathname],
-		{ env: { ...process.env, SUPABASE_DB_URL: 'http://[invalid?password=synthetic-secret' }, encoding: 'utf8' });
+		{ env: { ...process.env, SUPABASE_DB_URL: 'http://[invalid?password=synthetic-secret', ORI_USAGE_ANALYTICS_ENABLED: 'true', ORI_USAGE_RETENTION_ENABLED: 'true', VERCEL_ENV: 'production' }, encoding: 'utf8' });
 	assert.equal(run.status, 1);
 	assert.match(run.stderr, /Usage retention cleanup failed/);
 	assert.doesNotMatch(run.stderr + run.stdout, /synthetic-secret|password=/);

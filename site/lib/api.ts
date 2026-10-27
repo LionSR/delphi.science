@@ -6,7 +6,7 @@ import { checkToken } from '@octokit/oauth-methods';
 import { after } from 'next/server';
 import { db } from './db.ts';
 import { QueryError } from './query.ts';
-import { client, countCall } from './usage.ts';
+import { client, collectionEnabled, countCall } from './usage.ts';
 import { SITE } from './view.ts';
 import { voterFromKey, type Voter } from './votes.ts';
 
@@ -63,7 +63,7 @@ export async function handle(run: () => Promise<Response>): Promise<Response> {
  */
 export const counted = <A extends unknown[]>(endpoint: string, run: (req: Request, ...rest: A) => Response | Promise<Response>) =>
 	(req: Request, ...rest: A) => {
-		if (process.env.ORI_USAGE_ANALYTICS_ENABLED !== 'true' || process.env.VERCEL_ENV === 'preview') return run(req, ...rest);
+		if (!collectionEnabled()) return run(req, ...rest);
 		const name = client(req.headers.get('user-agent'));
 		try {
 			after(() => db().then((d) => countCall(d, endpoint, name)).catch(() => {}));

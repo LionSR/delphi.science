@@ -9,6 +9,7 @@ import { me } from '../../../lib/session.ts';
 import { date, recordPath } from '../../../lib/view.ts';
 import { acceptOn, votePostOn } from '../../actions.ts';
 import { PostForm } from '../../post-form.tsx';
+import { PublicAuthor } from '../../../lib/public-author.ts';
 import { Markdown } from '../../../lib/markdown.ts';
 
 export const dynamic = 'force-dynamic';
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }: Ctx): Promise<Metadata> {
 	return t ? { title: t.title, alternates: { types: { 'application/json': `/api/v1/forum/${t.id}` } } } : {};
 }
 
-const by = (p: Post) => `@${p.voter}${p.agent ? ` via ${p.agent}` : ''}`;
+const by = (p: Post) => <PublicAuthor voter={p.voter} agent={p.agent} />;
 
 function Votes({ topic, p, mine }: { topic: number; p: Post; mine?: number }) {
 	return (

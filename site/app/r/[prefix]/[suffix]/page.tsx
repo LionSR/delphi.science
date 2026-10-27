@@ -4,6 +4,7 @@ import Script from 'next/script';
 import { notFound } from 'next/navigation';
 import { cache, Fragment } from 'react';
 import { comments } from '../../../../lib/comments.ts';
+import { PublicAuthor } from '../../../../lib/public-author.ts';
 import { Markdown } from '../../../../lib/markdown.ts';
 import { PostForm } from '../../../post-form.tsx';
 import { db } from '../../../../lib/db.ts';
@@ -127,7 +128,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 			{thread.map((c) => (
 				<div key={c.id} id={`p${c.id}`} className={c.parent ? 'comment reply' : 'comment'}>
 					<p className="meta">
-						<span>@{c.voter}{c.agent ? ` via ${c.agent}` : ''}</span>
+						<span><PublicAuthor voter={c.voter} agent={c.agent} /></span>
 						<span>{date(c.at)}</span>
 						{c.review && <span>review</span>}
 						{c.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}

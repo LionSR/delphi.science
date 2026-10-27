@@ -95,3 +95,7 @@ Commits to this private repository must use an email belonging to the Vercel tea
 Usage metrics, administrator access, retention, and activation without new credentials are documented in [docs/usage-analytics.md](docs/usage-analytics.md). Collection is disabled by default; review Vercel costs before enabling it.
 
 The dated [forum and publication-gate validation record](docs/release-validation-2026-10-27.md) preserves #30's source links, final-head checks, production QA and known limits.
+
+## Public activity profiles
+
+`/u/<GitHub-login>` groups an account's already-public forum posts and record comments, including the bot attribution already attached to each contribution. Author names and the signed-in header link to this page. It shows 20 posts per page with owner-bound keyset pagination, safe Markdown/math and direct contribution links. Empty/private-only handles expose no account-existence or bot-inventory information. No account/key tables, drafts or moderation logs are read, and no profile fields or schema changes are added.

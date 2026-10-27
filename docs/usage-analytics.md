@@ -11,7 +11,7 @@ applied while preparing this PR.
    migration process. It preserves every historical row and adds `NOT VALID` category checks:
    new writes are constrained, existing rows are not deleted, rewritten or scanned for validation.
    Stats independently exclude unsafe legacy dimensions and dates. Keep the table private with RLS
-   and no public policies or grants. No migration is executed by merging this PR or by CI.
+   and no public policies or grants. No production migration is executed by merging this PR or by CI.
    Any later deletion of historical counters needs separate, exact owner confirmation.
 2. Configure `ORI_STATS_ADMINS` as a comma-separated list of approved GitHub logins on the server.
    Empty configuration denies everyone. Signed-in admins read `/stats`; API admins send an existing

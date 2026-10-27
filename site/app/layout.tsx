@@ -1,5 +1,6 @@
 import Script from 'next/script';
 import type { ReactNode } from 'react';
+import { AccountNavigation } from '../lib/account-navigation.ts';
 import { me } from '../lib/session.ts';
 import { SITE } from '../lib/view.ts';
 import { signOut } from './actions.ts';
@@ -41,7 +42,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
 							<a href="/api/v1">API</a>
 							{who ? (
 								<form action={signOut}>
-									<a href="/keys">@{who.login}</a> <button className="link">Sign out</button>
+									<AccountNavigation person={who} />
 								</form>
 							) : <a href="/auth/github">Sign in with GitHub</a>}
 						</nav>

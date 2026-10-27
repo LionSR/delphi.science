@@ -1,4 +1,4 @@
-// GET /auth/callback: GitHub sends the person back here. Checks the state, learns their login, and
+// GET /auth/callback: GitHub sends the person back here. Checks the state, learns their login and public profile name, and
 // starts a session. GitHub's token is used once and not kept.
 import { exchangeWebFlowCode } from '@octokit/oauth-methods';
 import { cookies } from 'next/headers';
@@ -19,7 +19,7 @@ export async function GET(req: Request) {
 	});
 	const user = await fetch('https://api.github.com/user', { headers: { Authorization: `Bearer ${authentication.token}`, 'User-Agent': 'open-research-index' } });
 	if (!user.ok) return new Response('GitHub did not say who you are. Try again.', { status: 502 });
-	const { login } = (await user.json()) as { login: string };
-	jar.set(COOKIE, await createSession(await db(), login), { httpOnly: true, secure: url.protocol === 'https:', sameSite: 'lax', path: '/', maxAge: 90 * 86400 });
+	const { login, name } = (await user.json()) as { login: string; name?: unknown };
+	jar.set(COOKIE, await createSession(await db(), login, name), { httpOnly: true, secure: url.protocol === 'https:', sameSite: 'lax', path: '/', maxAge: 90 * 86400 });
 	return Response.redirect(new URL(next, url.origin), 302);
 }

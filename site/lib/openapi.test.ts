@@ -4,7 +4,7 @@
 import { strict as assert } from 'node:assert';
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { registerHooks } from 'node:module';
-import { before, describe, test } from 'node:test';
+import { after, before, describe, test } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
 import { vector } from '@electric-sql/pglite/vector';
 import { Ajv2020 } from 'ajv/dist/2020.js';
@@ -82,6 +82,8 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 	ajv.addSchema({ $id: 'spec', components: closed(spec.components) });
 	const seen = new Set<string>();
 	let key = '';
+	const savedAdmins = process.env.ORI_STATS_ADMINS;
+	after(() => { if (savedAdmins === undefined) delete process.env.ORI_STATS_ADMINS; else process.env.ORI_STATS_ADMINS = savedAdmins; });
 	let discussed = '';
 
 	before(async () => {
@@ -99,6 +101,7 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 			[discussed, JSON.stringify(links), JSON.stringify(reception)]);
 		(globalThis as { openIndexDb?: Promise<unknown> }).openIndexDb = Promise.resolve(pg); // what lib/db.ts hands every route
 		key = await createAgentKey(pg, 'someone', 'Test agent');
+		process.env.ORI_STATS_ADMINS = 'someone';
 	});
 
 	// Calls the route as Next does and checks the answer against the document's response for its status.
@@ -128,7 +131,7 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 			assert.deepEqual(problems, [], `${method} ${path} ${res.status}`);
 		}
 		seen.add(`${method.toLowerCase()} ${tmpl} ${res.status}`);
-		return { status: res.status, text };
+		return { status: res.status, text, headers: res.headers };
 	}
 	// A response schema, closed like the components, with its $refs pointed at the registered document.
 	const closedRef = (s: object): object => JSON.parse(JSON.stringify(closed(s)).replaceAll('"#/components/', '"spec#/components/'));
@@ -168,7 +171,17 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 
 	test('prefixes, usage stats and the agent-key device flow', async () => {
 		await call('GET', '/api/v1/prefixes');
-		await call('GET', '/api/v1/stats', { query: 'weeks=2' });
+		const stats = await call('GET', '/api/v1/stats', { query: 'weeks=2', auth: true });
+		assert.equal(stats.status, 200);
+		assert.equal(stats.headers.get('cache-control'), 'private, no-store');
+		assert.equal((await call('GET', '/api/v1/stats')).status, 401);
+		const other = await createAgentKey(pg, 'not-an-admin', 'tool');
+		const denied = await call('GET', '/api/v1/stats', { auth: other });
+		assert.equal(denied.status, 403);
+		assert.equal(denied.headers.get('cache-control'), 'private, no-store');
+		process.env.ORI_STATS_ADMINS = '';
+		assert.equal((await call('GET', '/api/v1/stats', { auth: true })).status, 403);
+		process.env.ORI_STATS_ADMINS = 'someone';
 		const d = JSON.parse((await call('POST', '/api/v1/keys/device', { body: { agent: 'Test agent' } })).text);
 		assert.equal((await call('POST', '/api/v1/keys/device', { body: { agent: ' ' } })).status, 400);
 		assert.equal((await call('POST', '/api/v1/keys/token', { body: { device_code: d.device_code } })).status, 400);
@@ -191,7 +204,7 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 		for (const limit of ['0', '101', 'abc', '2.5', '']) {
 			assert.match((await error('GET', '/api/v1/search', { query: `limit=${limit}` })).fix, /^Send limit: an integer from 1 to 100 \(default 20\)\./, limit);
 		}
-		assert.match((await error('GET', '/api/v1/stats', { query: 'weeks=27' })).message, /^weeks must be from 1 to 26$/);
+		assert.match((await error('GET', '/api/v1/stats', { query: 'weeks=14', auth: true })).message, /^weeks must be from 1 to 13$/);
 		await error('POST', '/api/v1/keys/token', { query: 'format=xml', body: { device_code: 'x' } });
 		// Bodies: required fields, types, lengths, and one of several fields.
 		assert.match((await error('POST', '/api/v1/keys/token', { body: {} })).message, /^the body needs "device_code"$/);
@@ -210,7 +223,7 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 	test('query strings are read as the declared types, with their defaults', async () => {
 		assert.equal(JSON.parse((await call('GET', '/api/v1/search', { query: 'limit=3' })).text).count, 3);
 		assert.equal(JSON.parse((await call('GET', '/api/v1/search')).text).count, 20);
-		assert.equal(JSON.parse((await call('GET', '/api/v1/stats')).text).weeks, 8);
+		assert.equal(JSON.parse((await call('GET', '/api/v1/stats', { auth: true })).text).weeks, 8);
 		assert.equal((await call('POST', `/api/v1/records/${discussed.split('/')[0]}/${encodeURIComponent(discussed.split('/')[1])}/comments`, { body: { body: 'A reply to nothing.', parent: null }, auth: true })).status, 201);
 	});
 

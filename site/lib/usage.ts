@@ -24,7 +24,8 @@ const KINDS = new Map(KNOWN.flatMap(([kind, names]) => names.map((name) => [name
 const TOOLS = ['curl', 'python-requests', 'python-urllib', 'python-httpx', 'go-http-client', 'node', 'wget', 'axios', 'postmanruntime'];
 // Never retain an arbitrary caller-supplied token: it may contain a name, email, key or unique ID.
 export const CLIENTS = [...KINDS.keys(), ...TOOLS, 'browser', 'none', 'other'];
-export const ENDPOINTS = [...operations.map((o) => `${o.method} ${o.path}`),
+// Source checks use the existing private attempt audit. Their aggregate category is not in the deployed SQL allowlist; no schema/collection activation is implied.
+export const ENDPOINTS = [...operations.filter((o) => o.operationId !== 'checkPublicSources').map((o) => `${o.method} ${o.path}`),
 	'GET /api/v1', 'GET /api/v1/openapi.json', 'GET /llms.txt', 'POST /mcp',
 	'GET /id/{prefix}/{suffix}', 'GET /sitemap.xml', 'GET /sitemap/{file}'];
 export const RETENTION_DAYS = 90;

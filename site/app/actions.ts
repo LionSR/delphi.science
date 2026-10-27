@@ -1,7 +1,7 @@
 'use server';
 // What people do on the site: submit links, vote, comment, post in the forum, sign out, and approve or
 // revoke their agents.
-import { cookies } from 'next/headers';
+import { cookies, headers } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { comment, post } from '../lib/comments.ts';
 import { db } from '../lib/db.ts';
@@ -14,6 +14,9 @@ import { approveDevice, denyDevice } from '../lib/device.ts';
 import { myVotes, revokeKey, unvote, vote } from '../lib/votes.ts';
 import { postFeedback, type PostFormState } from '../lib/post-feedback.ts';
 import { submitPostForm, type PostInput } from '../lib/post-form-submit.ts';
+import { checkPublicSources, type CheckBatch } from '../lib/public-source-checks.ts';
+import { requireSourceCheckOrigin } from '../lib/source-check-origin.ts';
+import type { PostFeedback } from '../lib/post-feedback.ts';
 import { revalidatePath } from 'next/cache';
 
 const signedIn = async (back: string) => (await me()) ?? redirect(`/auth/github?next=${encodeURIComponent(back)}`);
@@ -30,14 +33,26 @@ export async function sendPost(_previous: PostFormState, form: FormData): Promis
 	try {
 		const who = await me();
 		if (!who) return { status: 'failed', feedback: { code: 'sign_in', message: 'Sign in with GitHub before posting.', fix: 'Your draft is retained. Sign in, review it, then submit.' } };
+		if (kind === 'record' && form.get('retrieve_sources') === 'on') requireSourceCheckOrigin((await headers()).get('origin'), true);
 		const location = await submitPostForm(await db(), who, { kind, title: String(form.get('title') ?? ''), body: String(form.get('body') ?? ''),
 			topic: form.has('topic') ? Number(form.get('topic')) : undefined,
 			parent: form.has('parent') ? Number(form.get('parent')) : undefined,
-			record: form.has('record') ? String(form.get('record')) : undefined, review: form.get('review') === 'on' });
+			record: form.has('record') ? String(form.get('record')) : undefined, review: form.get('review') === 'on', retrieveSources: form.get('retrieve_sources') === 'on' });
 		revalidatePath(location.split('#')[0]);
 		if (kind === 'question') revalidatePath('/forum');
 		return { status: 'posted', location };
 	} catch (error) { return { status: 'failed', feedback: postFeedback(error) }; }
+}
+
+/** An explicit preflight batch; no draft body, posting operation, model call or client verification token. */
+export async function checkRecordSources(input: { record: string; urls: string[] }): Promise<{ ok: boolean; batch?: CheckBatch; feedback?: PostFeedback }> {
+	try {
+		requireSourceCheckOrigin((await headers()).get('origin'), true);
+		const who = await me();
+		if (!who) return { ok: false, feedback: { code: 'sign_in', message: 'Sign in before checking public sources.', fix: 'Your draft stays in this form. Sign in and explicitly check its sources.' } };
+		if (!input || typeof input !== 'object' || Array.isArray(input) || Object.keys(input).sort().join(',') !== 'record,urls' || typeof input.record !== 'string') throw new QueryError('Send a record and public source URL list.', 'Client text, verified flags and preflight results are not accepted as source evidence.');
+		return { ok: true, batch: await checkPublicSources(await db(), who, input.record, input.urls) };
+	} catch (error) { return { ok: false, feedback: postFeedback(error) }; }
 }
 
 /** ▲ or ▼. Clicking the vote you already gave takes it back; an emoji or note you left is kept. */

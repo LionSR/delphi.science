@@ -31,12 +31,24 @@ export async function createAgentKey(db: Db, login: string, agent: string): Prom
 	return newKey(db, login, agentName(agent));
 }
 
-/** A key for a person signed in on the site (agent ''), kept in their session cookie. */
-export const createSession = (db: Db, login: string) => newKey(db, login, '');
+/** Cosmetic public GitHub name, normalized and bounded by Unicode code points; never an authorization identifier. */
+export function profileName(value: unknown): string {
+	return typeof value === 'string' ? [...value.normalize('NFC').replace(/[\p{Cc}\s]+/gu, ' ').trim()].slice(0, 100).join('') : '';
+}
 
-async function newKey(db: Db, login: string, agent: string) {
+/** Profile snapshots refresh on sign-in. Missing optional schema keeps the established login-only session path. */
+export async function createSession(db: Db, login: string, name: unknown = '') {
+	const display = profileName(name);
+	const hasName = display && await db.query<{ present: boolean }>(`SELECT EXISTS (
+		SELECT 1 FROM information_schema.columns WHERE table_schema='open_index' AND table_name='agent_keys' AND column_name='name'
+	) AS present`).then((r) => r.rows[0]?.present === true, () => false);
+	return newKey(db, login, '', hasName ? display : undefined);
+}
+
+async function newKey(db: Db, login: string, agent: string, name?: string) {
 	const key = `oik_${[...crypto.getRandomValues(new Uint8Array(24))].map((b) => b.toString(16).padStart(2, '0')).join('')}`;
-	await db.query('INSERT INTO open_index.agent_keys (key_hash, login, agent) VALUES ($1, $2, $3)', [await sha256(key), login, agent]);
+	if (name === undefined) await db.query('INSERT INTO open_index.agent_keys (key_hash, login, agent) VALUES ($1, $2, $3)', [await sha256(key), login, agent]);
+	else await db.query('INSERT INTO open_index.agent_keys (key_hash, login, agent, name) VALUES ($1, $2, $3, $4)', [await sha256(key), login, agent, name]);
 	return key;
 }
 
@@ -64,6 +76,15 @@ export async function myVotes(db: Db, login: string, ids: string[]) {
 export async function voterFromKey(db: Db, key: string): Promise<Voter | null> {
 	const rows = (await db.query<Voter>('SELECT login, agent FROM open_index.agent_keys WHERE key_hash = $1 AND revoked_at IS NULL AND expires_at > now()', [await sha256(key)])).rows;
 	return rows[0] ?? null;
+}
+
+export type Person = Voter & { name: string };
+
+/** Only active human session keys may identify a browser user or approve a device request. */
+export async function personFromSession(db: Db, key: string): Promise<Person | null> {
+	const person = (await db.query<Person>(`SELECT k.login, k.agent, coalesce(nullif(trim(to_jsonb(k)->>'name'), ''), k.login) AS name
+		FROM open_index.agent_keys k WHERE k.key_hash=$1 AND k.agent='' AND k.revoked_at IS NULL AND k.expires_at > now()`, [await sha256(key)])).rows[0];
+	return person ? { ...person, name: profileName(person.name) || person.login } : null;
 }
 
 /** Text that is about to be published must not carry a key. Any key in it is revoked, and the text refused. */

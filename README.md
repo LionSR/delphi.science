@@ -93,3 +93,5 @@ Commits to this private repository must use an email belonging to the Vercel tea
 `harvest.json` configures automated harvest jobs; jobs with `"enabled": false` are skipped. To add a new upstream source, implement an adapter class in `sources.py` with `match`, `fetch`, and `harvest`, register it in `SOURCES` and `site/lib/prefixes.json`, and add URL resolution support in `site/lib/resolve.ts` if direct user submission is supported.
 
 Usage metrics, administrator access, retention, and activation without new credentials are documented in [docs/usage-analytics.md](docs/usage-analytics.md). Collection is disabled by default; review Vercel costs before enabling it.
+
+The dated [forum and publication-gate validation record](docs/release-validation-2026-10-27.md) preserves #30's source links, final-head checks, production QA and known limits.

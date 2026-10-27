@@ -3,6 +3,7 @@
 // the route pattern (GET /api/v1/records/{prefix}/{suffix}). No IP address, full user agent or URL is
 // kept. lib/api.ts counted() counts a call; /api/v1/stats and /stats show the counts.
 import type { Db } from './query.ts';
+import { operations } from './openapi.ts';
 
 export type Kind = 'ai' | 'search' | 'bot' | 'tool' | 'browser' | 'other';
 
@@ -20,22 +21,27 @@ const KNOWN: [Kind, string[]][] = [
 	['bot', ['HeadlessChrome']],
 ];
 const KINDS = new Map(KNOWN.flatMap(([kind, names]) => names.map((name) => [name, kind] as const)));
-const BOTLIKE = /^[a-z][\w.-]*(?:bot|spider|crawler)$/i;
+const TOOLS = ['curl', 'python-requests', 'python-urllib', 'python-httpx', 'go-http-client', 'node', 'wget', 'axios', 'postmanruntime'];
+// Never retain an arbitrary caller-supplied token: it may contain a name, email, key or unique ID.
+export const CLIENTS = [...KINDS.keys(), ...TOOLS, 'browser', 'none', 'other'];
+export const ENDPOINTS = [...operations.map((o) => `${o.method} ${o.path}`),
+	'GET /api/v1', 'GET /api/v1/openapi.json', 'GET /llms.txt', 'POST /mcp',
+	'GET /id/{prefix}/{suffix}', 'GET /sitemap.xml', 'GET /sitemap/{file}'];
+export const RETENTION_DAYS = 90;
 
 /** A short, stable name for the client that sent this user agent. */
 export function client(ua: string | null | undefined): string {
-	const s = (ua ?? '').trim();
+	const s = (ua ?? '').slice(0, 2048).trim();
 	if (!s) return 'none';
 	const low = s.toLowerCase();
-	const known = [...KINDS.keys()].find((name) => low.includes(name.toLowerCase()));
+	// Match whole product tokens, not substrings inside a unique/custom product or URL.
+	const products = new Set([...low.matchAll(/(?:^|[\s;(])([a-z][a-z0-9._-]*)(?=\/|[\s;)]|$)/g)].map((m) => m[1]));
+	if (products.has('codex_cli_rs')) return 'codex';
+	const known = [...KINDS.keys()].find((name) => products.has(name.toLowerCase()));
 	if (known) return known;
-	if (/^(mozilla|opera)\//i.test(s)) {
-		const bot = s.match(/\b([a-z][\w.-]*?(?:bot|spider|crawler))\b/i);
-		return bot ? bot[1].toLowerCase().slice(0, 32) : 'browser';
-	}
-	// Anything else names itself first: curl/8.7.1, python-requests/2.32, Go-http-client/2.0, node.
-	const first = low.split(/[\s/;(]/, 1)[0].replace(/[^a-z0-9._-]/g, '').slice(0, 32);
-	return first || 'other';
+	if (/^(mozilla|opera)\//i.test(s)) return 'browser';
+	const first = low.split(/[\s/;(]/, 1)[0];
+	return TOOLS.includes(first) ? first : 'other';
 }
 
 /** What sort of client a name from client() is. */
@@ -44,24 +50,27 @@ export function kind(name: string): Kind {
 	if (k) return k;
 	if (name === 'browser') return 'browser';
 	if (name === 'none' || name === 'other') return 'other';
-	return BOTLIKE.test(name) ? 'bot' : 'tool';
+	return TOOLS.includes(name) ? 'tool' : 'other';
 }
 
-// Past this many clients in a day, new ones count as 'other', so made-up user agents cannot grow the table.
-const MAX_CLIENTS = 200;
+/** Retain today and the previous 89 UTC dates. Also run daily, even when there is no traffic. */
+export async function pruneUsage(db: Db) {
+	await db.query(`DELETE FROM open_index.api_usage WHERE day < (now() AT TIME ZONE 'utc')::date - ${RETENTION_DAYS - 1}`);
+}
 
 /** Counts one call: today's (UTC) row for this endpoint and client goes up by one. */
 export async function countCall(db: Db, endpoint: string, name: string) {
+	if (!ENDPOINTS.includes(endpoint)) return; // never write a resolved path, query, unknown route or method
+	const safeClient = CLIENTS.includes(name) ? name : 'other';
+	await pruneUsage(db);
 	await db.query(
 		`INSERT INTO open_index.api_usage AS u (day, endpoint, client, calls)
-		 SELECT t.day, $1, CASE WHEN EXISTS (SELECT 1 FROM open_index.api_usage WHERE day = t.day AND client = $2)
-		     OR (SELECT count(DISTINCT client) FROM open_index.api_usage WHERE day = t.day) < $3 THEN $2 ELSE 'other' END, 1
-		 FROM (SELECT (now() AT TIME ZONE 'utc')::date AS day) t
-		 ON CONFLICT (day, endpoint, client) DO UPDATE SET calls = u.calls + 1`,
-		[endpoint, name, MAX_CLIENTS]);
+		 VALUES ((now() AT TIME ZONE 'utc')::date, $1, $2, 1)
+		 ON CONFLICT (day, endpoint, client) DO UPDATE SET calls = least(u.calls::bigint + 1, 2147483647)::int`,
+		[endpoint, safeClient]);
 }
 
-export const USAGE_NOTE = 'API calls are aggregated daily by route pattern and normalized User-Agent client token (e.g. ClaudeBot, python-requests, curl, browser). IP addresses, full User-Agent headers, and request URLs are not stored; CDN cache hits are not counted.';
+export const USAGE_NOTE = 'Origin API calls are aggregated by UTC day, fixed route pattern and allowlisted User-Agent product token. Unknown products count as other. Tokens are spoofable claims, not authenticated agent identities or unique visitors. No IPs, raw user agents, query strings, credentials, bodies or personal identifiers are stored in these metrics. CDN cache hits are not counted; failed metric writes are dropped. Retention: 90 UTC dates.';
 
 const TOP = 20;
 
@@ -74,10 +83,12 @@ export function since(weeks: number, now = new Date()) {
 
 /** Calls per week (all clients, and AI clients alone), the top endpoints and the top clients, over the last `weeks` weeks. */
 export async function usage(db: Db, weeks = 8, now = new Date()) {
+	weeks = Math.max(1, Math.min(13, Number.isFinite(weeks) ? Math.trunc(weeks) : 8));
+	await pruneUsage(db);
 	const from = since(weeks, now);
 	const rows = (await db.query<{ week: string; endpoint: string; client: string; calls: number }>(
-		`SELECT to_char(date_trunc('week', day), 'YYYY-MM-DD') AS week, endpoint, client, sum(calls)::int AS calls
-		 FROM open_index.api_usage WHERE day >= $1::date GROUP BY 1, 2, 3`, [from])).rows;
+		`SELECT to_char(date_trunc('week', day), 'YYYY-MM-DD') AS week, endpoint, client, sum(calls)::double precision AS calls
+		 FROM open_index.api_usage WHERE day >= $1::date AND day <= (now() AT TIME ZONE 'utc')::date GROUP BY 1, 2, 3`, [from])).rows;
 	const weekly = new Map<string, { week: string; calls: number; ai: number }>();
 	for (let w = weeks; w > 0; w--) weekly.set(since(w, now), { week: since(w, now), calls: 0, ai: 0 });
 	const endpoints = new Map<string, number>(), clients = new Map<string, number>();

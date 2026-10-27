@@ -48,7 +48,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
 						<a href="/llms.txt">llms.txt</a>
 					</footer>
 				</main>
-				<PageViews />
+				{process.env.ORI_WEB_ANALYTICS_ENABLED === 'true' && process.env.VERCEL_ENV === 'production' && <PageViews />}
 				<Script id="mathjax-config" strategy="beforeInteractive">{MATHJAX}</Script>
 				<Script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js" strategy="afterInteractive" />
 			</body>

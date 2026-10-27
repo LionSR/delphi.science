@@ -5,7 +5,9 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { describe, test } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
 import { vector } from '@electric-sql/pglite/vector';
-import { client, countCall, kind, since, usage } from './usage.ts';
+import { CLIENTS, ENDPOINTS, client, countCall, kind, pruneUsage, since, usage } from './usage.ts';
+import { canReadUsage } from './usage-admin.ts';
+import { analyticsEvent } from './analytics.ts';
 
 const MIGRATIONS = new URL('../supabase/migrations/', import.meta.url);
 const migrated = async () => {
@@ -28,7 +30,7 @@ describe('client names', () => {
 			['Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)', 'bingbot'],
 		]) assert.equal(client(ua), name, ua);
 	});
-	test('anything else is named by its first product token, lower case, without the version', () => {
+	test('allowlisted HTTP tools retain their product name without the version', () => {
 		for (const [ua, name] of [
 			['curl/8.7.1', 'curl'],
 			['python-requests/2.32.3', 'python-requests'],
@@ -41,10 +43,10 @@ describe('client names', () => {
 			['  PostmanRuntime/7.39.0 ', 'postmanruntime'],
 		]) assert.equal(client(ua), name, ua);
 	});
-	test('browsers are browsers; unknown crawlers in a browser user agent keep their bot name', () => {
+	test('browsers and unknown crawlers inside browser UAs share a generic category', () => {
 		assert.equal(client('Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15'), 'browser');
 		assert.equal(client('Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0'), 'browser');
-		assert.equal(client('Mozilla/5.0 (compatible; SemrushBot/7~bl; +http://www.semrush.com/bot.html)'), 'semrushbot');
+		assert.equal(client('Mozilla/5.0 (compatible; SemrushBot/7~bl; +http://www.semrush.com/bot.html)'), 'browser');
 		assert.equal(client('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/129.0.0.0 Safari/537.36'), 'HeadlessChrome');
 	});
 	test('empty and odd user agents', () => {
@@ -52,14 +54,14 @@ describe('client names', () => {
 		assert.equal(client(''), 'none');
 		assert.equal(client('   '), 'none');
 		assert.equal(client('$$$'), 'other');
-		assert.equal(client(`${'a'.repeat(100)}/1.0`).length, 32);
+		assert.equal(client(`${'a'.repeat(100)}/1.0`), 'other');
 		assert.match(client('evil<script>/1'), /^[a-z0-9._-]+$/);
 	});
 	test('kinds', () => {
 		assert.equal(kind('ClaudeBot'), 'ai');
 		assert.equal(kind('ChatGPT-User'), 'ai');
 		assert.equal(kind('Googlebot'), 'search');
-		assert.equal(kind('semrushbot'), 'bot');
+		assert.equal(kind('semrushbot'), 'other');
 		assert.equal(kind('curl'), 'tool');
 		assert.equal(kind('browser'), 'browser');
 		assert.equal(kind('none'), 'other');
@@ -92,12 +94,88 @@ describe('counting calls on Postgres', () => {
 		assert.deepEqual(u.endpoints, [{ endpoint: 'GET /llms.txt', calls: 3 }, { endpoint: 'GET /api/v1/search', calls: 1 }]);
 		assert.deepEqual(u.clients, [{ client: 'ClaudeBot', kind: 'ai', calls: 2 }, { client: 'curl', kind: 'tool', calls: 2 }]);
 	});
-	test('past 200 clients in a day, new ones count as other', async () => {
+	test('unknown products collapse to one bucket and unique endpoints never get stored', async () => {
 		const db = await migrated();
-		for (let i = 0; i < 200; i++) await countCall(db, 'GET /api/v1', `tool${i}`);
-		await countCall(db, 'GET /api/v1', 'one-too-many');
-		await countCall(db, 'GET /api/v1/search', 'tool7'); // a client already seen today still counts by name
-		const names = (await db.query<{ client: string }>("SELECT client FROM open_index.api_usage WHERE client IN ('other', 'one-too-many', 'tool7') ORDER BY client, endpoint")).rows.map((r) => r.client);
-		assert.deepEqual(names, ['other', 'tool7', 'tool7']);
+		try {
+			await Promise.all(Array.from({length: 220}, (_, i) => countCall(db, 'GET /api/v1', `person-${i}@example.org`)));
+			for (const path of ['GET /id/arxiv/unique-id', 'GET /api/v1/search?q=private', 'GET /private']) await countCall(db, path, 'curl');
+			assert.deepEqual((await db.query('SELECT endpoint, client, calls FROM open_index.api_usage')).rows,
+				[{endpoint: 'GET /api/v1', client: 'other', calls: 220}]);
+			await assert.rejects(db.query("INSERT INTO open_index.api_usage VALUES (current_date, 'GET /api/v1', 'unique-person', 1)"), /api_usage_client_category/);
+			await assert.rejects(db.query("INSERT INTO open_index.api_usage VALUES (current_date, 'GET /private', 'curl', 1)"), /api_usage_endpoint_category/);
+		} finally { await db.close(); }
 	});
+});
+
+test('fixed categories match the database constraints; only four aggregate columns exist', async () => {
+	const db = await migrated();
+	try {
+		for (const name of CLIENTS) await countCall(db, 'GET /api/v1', name);
+		for (const endpoint of ENDPOINTS) await countCall(db, endpoint, 'curl');
+		const columns = (await db.query<{ column_name: string }>("SELECT column_name FROM information_schema.columns WHERE table_schema='open_index' AND table_name='api_usage' ORDER BY ordinal_position")).rows;
+		assert.deepEqual(columns.map(r => r.column_name), ['day', 'endpoint', 'client', 'calls']);
+		assert.equal((await db.query('SELECT DISTINCT client FROM open_index.api_usage')).rows.length, CLIENTS.length);
+		assert.equal((await db.query('SELECT DISTINCT endpoint FROM open_index.api_usage')).rows.length, ENDPOINTS.length);
+		assert.equal((await db.query<{ relrowsecurity: boolean }>("SELECT relrowsecurity FROM pg_class WHERE oid='open_index.api_usage'::regclass")).rows[0].relrowsecurity, true);
+		assert.equal((await db.query("SELECT * FROM pg_policies WHERE schemaname='open_index' AND tablename='api_usage'")).rows.length, 0);
+		await db.query("UPDATE open_index.api_usage SET calls=2147483647 WHERE client='none'");
+		await countCall(db, 'GET /api/v1', 'none');
+		assert.ok((await usage(db)).weekly.at(-1)!.calls > 2147483647);
+	} finally { await db.close(); }
+});
+
+test('retains exactly 90 UTC dates, with repeatable cleanup even when traffic stops', async () => {
+	const db = await migrated();
+	try {
+		await db.exec(`SET TIME ZONE 'Pacific/Honolulu'; INSERT INTO open_index.api_usage
+			SELECT (now() AT TIME ZONE 'utc')::date - n, 'GET /api/v1', 'curl', 1 FROM generate_series(0, 95) n`);
+		await pruneUsage(db); await pruneUsage(db);
+		assert.equal((await db.query('SELECT * FROM open_index.api_usage')).rows.length, 90);
+		assert.equal((await usage(db, 999)).weeks, 13);
+		await db.exec("INSERT INTO open_index.api_usage VALUES ((now() AT TIME ZONE 'utc')::date - 100, 'GET /llms.txt', 'curl', 1)");
+		await countCall(db, 'GET /llms.txt', 'curl');
+		assert.equal((await db.query("SELECT * FROM open_index.api_usage WHERE day < (now() AT TIME ZONE 'utc')::date - 89")).rows.length, 0);
+	} finally { await db.close(); }
+});
+
+test('normalization discards arbitrary tokens, email addresses, keys, URLs and substrings', () => {
+	for (const ua of ['person@example.org/1', 'unique-person-bot/1', 'oik_secret', 'Bearer secret',
+		'https://example.org/ClaudeBot', 'private-ClaudeBot/1', 'a'.repeat(10000)]) assert.equal(client(ua), 'other');
+	assert.equal(new Set(CLIENTS).size, CLIENTS.length);
+	assert.equal(new Set(ENDPOINTS).size, ENDPOINTS.length);
+});
+
+test('migration removes legacy identifiers and stale counts before enforcing categories', async () => {
+	const db = new PGlite({ extensions: { vector } });
+	try {
+		for (const f of readdirSync(MIGRATIONS).filter((f) => f.endsWith('.sql')).sort()) {
+			if (f.includes('private_bounded_usage')) await db.exec(`INSERT INTO open_index.api_usage VALUES
+			 ((now() AT TIME ZONE 'utc')::date, 'GET /api/v1', 'private-person@example.org', 1),
+			 ((now() AT TIME ZONE 'utc')::date, 'GET /id/arxiv/unique-id', 'curl', 1),
+			 ((now() AT TIME ZONE 'utc')::date - 100, 'GET /api/v1', 'curl', 1),
+			 ((now() AT TIME ZONE 'utc')::date, 'GET /api/v1', 'curl', 2)`);
+			await db.exec(readFileSync(new URL(f, MIGRATIONS), 'utf8'));
+		}
+		assert.deepEqual((await db.query('SELECT endpoint, client, calls FROM open_index.api_usage')).rows,
+			[{ endpoint: 'GET /api/v1', client: 'curl', calls: 2 }]);
+	} finally { await db.close(); }
+});
+
+test('admin allowlist fails closed and matches whole GitHub logins', () => {
+	assert.equal(canReadUsage(null, 'owner'), false);
+	assert.equal(canReadUsage({login: 'owner', agent: ''}, ''), false);
+	assert.equal(canReadUsage({login: 'OWNER', agent: ''}, 'other, owner'), true);
+	assert.equal(canReadUsage({login: 'own', agent: ''}, 'owner'), false);
+});
+
+test('browser event URLs contain only approved route patterns with no secrets or IDs', () => {
+	for (const [url, path] of [
+		['https://test/?q=private#secret', '/'],
+		['https://test/r/arxiv/unique-id?token=secret', '/r/[prefix]/[suffix]'],
+		['https://user:password@test/forum/123?key=secret', '/forum/[id]'],
+	]) assert.deepEqual(analyticsEvent({type: 'pageview', url}), {type: 'pageview', url: `https://test${path}`});
+	for (const path of ['/stats', '/keys', '/keys/approve?user_code=secret', '/auth/callback?code=secret', '/unique-person', '/api/v1/stats'])
+		assert.equal(analyticsEvent({type: 'pageview', url: `https://test${path}`}), null);
+	assert.equal(analyticsEvent({type: 'event', url: 'https://test/'}), null);
+	assert.equal(analyticsEvent({type: 'pageview', url: 'invalid'}), null);
 });

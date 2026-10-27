@@ -127,7 +127,7 @@ export async function screen(db: Db, voter: Voter, post: Post, moderate?: Modera
 			const pending = sources.filter((s) => s.status === 'unresolved');
 			const details = pending.map((s) => `${safeSourceReference(s.reference)} (${('check_status' in s ? s.check_status : undefined) ?? 'unindexed/unrequested'})`).join('; ');
 			v = { decision: 'REVIEW_NEEDED', reason: `A cited source remains unresolved: ${details}. Missing or unavailable material is not proof a claim is false.`,
-				fix: post.recordId ? 'Keep the draft. Use Check public sources on this record to inspect statuses, then explicitly enable Request fresh public retrieval when I submit for fresh retrieval in the posting request. Unsupported or essential unseen material stays on hold.' : 'Provide an indexed research reference or obtain independent source review. Public source checks currently support existing-record comments, reviews and vote notes.', verification_needed: true };
+				fix: post.recordId ? 'Keep your draft. Request source review through Support, or revise the post with an indexed reference or a self-contained argument.' : 'Provide an indexed research reference or obtain independent source review. Public source checks currently support existing-record comments, reviews and vote notes.', verification_needed: true };
 		}
 		else if (JSON.stringify({ ...post, sources }).length > 32_000) v = { decision: 'REVIEW_NEEDED', reason: 'The indexed source context is too large for a bounded quality check. Ask for smaller verified metadata.', verification_needed: false };
 		else {

@@ -6,7 +6,7 @@ import { test } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
 import { vector } from '@electric-sql/pglite/vector';
 import { deepseek, moderator, parseVerdict, verdict, type Moderator } from './moderate.ts';
-import { ModerationError, postFeedback } from './post-feedback.ts';
+import { ModerationError, postFeedback, holdFeedbackText } from './post-feedback.ts';
 import { submitPostForm, type PostInput } from './post-form-submit.ts';
 import { createAgentKey } from './votes.ts';
 import { load } from './load.ts';
@@ -132,4 +132,12 @@ test('actual forum API distinguishes 422 refusal from 503 unavailable and preser
 		assert.equal((await pg.query('SELECT * FROM open_index.topics')).rows.length, 0);
 		assert.equal((await pg.query('SELECT * FROM open_index.comments')).rows.length, 0);
 	} finally { globalThis.fetch = priorFetch; if (priorKey === undefined) delete process.env.DEEPSEEK_API_KEY; else process.env.DEEPSEEK_API_KEY = priorKey; delete (globalThis as { openIndexDb?: unknown }).openIndexDb; await pg.close(); }
+});
+
+
+test('ordinary hold feedback is one concise actionable explanation, without verification machinery', () => {
+ const source=holdFeedbackText({code:'moderation_review_needed',message:'not posted: REVIEW_NEEDED: A cited source remains unresolved: https://example.org/public (unindexed/unrequested). Missing material is not proof a claim is false.',fix:'Detailed API guidance remains separate.'});
+ assert.ok(source.length<250);assert.match(source,/cited source needs review/);assert.match(source,/draft remains in this form/);assert.doesNotMatch(source,/unindexed|https:|batch|retrieve_sources|Check public sources/);
+ const proof=holdFeedbackText({code:'moderation_review_needed',message:'not posted: REVIEW_NEEDED: The claimed bound needs an independent check.',fix:'Supply scoped evidence.'});
+ assert.match(proof,/claimed bound needs an independent check/);assert.match(proof,/Revise the evidence/);
 });

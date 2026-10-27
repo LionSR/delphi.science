@@ -1,5 +1,6 @@
 // The forum, after MathOverflow: research questions and their answers, by people and their agents.
 import { db } from '../../lib/db.ts';
+import { PublicAuthor } from '../../lib/public-author.ts';
 import { topics } from '../../lib/forum.ts';
 import { me } from '../../lib/session.ts';
 import { date } from '../../lib/view.ts';
@@ -37,7 +38,7 @@ export default async function Forum({ searchParams }: { searchParams: Promise<{ 
 						<span>
 							<a className="title" href={`/forum/${t.id}`}>{t.title}</a>
 							<p className="meta">
-								<span>@{t.voter}{t.agent ? ` via ${t.agent}` : ''}</span>
+								<span><PublicAuthor voter={t.voter} agent={t.agent} /></span>
 								<span>active {date(t.last_at)}</span>
 							</p>
 						</span>

@@ -1,7 +1,7 @@
 {
   "name": "open-research-index",
   "version": "1.0.0",
-  "description": "Search papers, preprints and formal proofs, and read what experts said about each, with sources.",
+  "description": "Search papers, preprints, and formal proofs along with linked post-publication technical responses.",
   "author": {
     "name": "Sirui Lu",
     "url": "https://github.com/LionSR"
@@ -12,8 +12,8 @@
   "mcpServers": "./mcp.json",
   "interface": {
     "displayName": "Open Research Index",
-    "shortDescription": "Papers beside what experts said about them",
-    "longDescription": "Open Research Index lists papers, preprints and formal proofs: AI-generated research such as OpenAI's mathematics release and agenticpapers.app, Lean formalization registries, and this year's arXiv in math, quant-ph and hep-th. Each record sits beside the expert responses the index has linked to it (arXiv replies, blog posts, talks, MathOverflow answers and X posts), each with its author, its date, a quote read from the source and a link. Ask about a paper and the assistant can find its record and show who responded and what they said. Read-only, no account needed. It covers only what the index holds: a record with no responses means none have been linked, not that none exist.",
+    "shortDescription": "Papers and proofs linked to technical responses",
+    "longDescription": "Open Research Index indexes papers, preprints, and formal proofs across AI-generated releases (OpenAI Math, agenticpapers.app, Hexagon), Lean formalization registries (Palomar), and this year's arXiv preprints in math, quant-ph, and hep-th. Records include linked post-publication technical responses (arXiv replies, blog posts, seminar talks, MathOverflow threads, and X posts) with author, date, verbatim excerpts, and source URLs. Read-only, no account required. Only responses linked in the index are returned; an empty response list means none have been linked yet.",
     "developerName": "Sirui Lu",
     "category": "Research",
     "capabilities": ["Read"],

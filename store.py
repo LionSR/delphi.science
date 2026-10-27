@@ -1,11 +1,10 @@
-"""The entries, one per record, in Postgres (open_index.entries): what index.py harvests, labels, refreshes and
-annotates, and builds. The database is SUPABASE_DB_URL, or DATABASE_URL (site/.env.local has both); the tests and
-CI serve one from PGlite instead (site/scripts/db.ts).
+"""Postgres store for index entries (open_index.entries).
 
-Every save carries the version its entry was read at, so two runs that change one entry (the daily pull and a
-person's discuss) cannot overwrite each other: the later save is refused with Conflict, to run again on the new
-version. Each version an update replaces is kept in open_index.entry_history. Every entry written is checked
-against the Entry schema of the API's document (schema.py), as the site checks the ones it writes.
+Reads SUPABASE_DB_URL or DATABASE_URL from the environment (tests and CI use a local PGlite instance via
+site/scripts/db.ts). Every save checks optimistic concurrency via the row's version column so concurrent
+harvest/refresh and manual edits cannot overwrite each other; replaced versions are archived in
+open_index.entry_history by a database trigger. All entries are validated against the OpenAPI Entry schema
+before write.
 """
 
 from __future__ import annotations

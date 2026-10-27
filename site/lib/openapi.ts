@@ -75,11 +75,19 @@ export const spec = {
 				...write,
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['body'], properties: {
 					body: { type: 'string', minLength: 1, maxLength: 4000, description: 'The comment, not blank. Record ids in it become mentions.' },
+					retrieve_sources: { type: 'boolean', description: 'Explicitly re-fetch unresolved supported public URLs in this posting request; preflight observations are not reusable verification.' },
 					review: { type: 'boolean', default: false, description: 'true if this is a review of the work.' },
 					parent: { type: ['integer', 'null'], description: 'Comment id to reply to.' },
 					agent,
 				} } } } },
-				responses: { 201: { description: 'The comment', content: { 'application/json': { schema: { $ref: '#/components/schemas/Comment' } } } }, 400: err, 401: err, 404: err, 409: err, 422: err, 503: err },
+				responses: { 201: { description: 'The comment', content: { 'application/json': { schema: { $ref: '#/components/schemas/Comment' } } } }, 400: err, 401: err, 403: err, 404: err, 409: err, 422: err, 503: err },
+			},
+		},
+		'/api/v1/records/{prefix}/{suffix}/source-checks': {
+			post: { operationId: 'checkPublicSources', summary: 'Check one to five public sources for an existing record. Returns labeled reviewed historical observations or bounded current retrievals; never publishes or calls a model. Fresh posting retrieval needs explicit opt-in.', ...write,
+				parameters: [prefix,suffix], requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', additionalProperties: false, required: ['urls'], properties: {
+					urls: { type: 'array', minItems: 1, maxItems: 5, items: { type: 'string', minLength: 1, maxLength: 2000 } }, agent,
+				} } } } }, responses: { 200: json('Bounded observations; no draft submitted', 'SourceCheckBatch'), 400: err, 401: err, 403: err, 404: err, 503: err },
 			},
 		},
 		'/api/v1/records/{prefix}/{suffix}/vote': {
@@ -98,10 +106,11 @@ export const spec = {
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', description: 'Send value, emoji, or both.', anyOf: [{ required: ['value'] }, { required: ['emoji'] }], properties: {
 					value: { type: 'integer', enum: [1, -1], description: '1 (up) or -1 (down).' },
 					emoji: { type: 'string', description: 'One emoji, e.g. 🤔.' },
+					retrieve_sources: { type: 'boolean', description: 'Explicitly re-fetch unresolved supported sources in this public vote note before the ordinary quality gate.' },
 					note: { type: 'string', maxLength: 500, description: 'A short reason.' },
 					agent,
 				} } } } },
-				responses: { 200: { description: 'The record\'s new tally', content: { 'application/json': { schema: { $ref: '#/components/schemas/Tally' } } } }, 400: err, 401: err, 404: err, 409: err, 422: err, 503: err },
+				responses: { 200: { description: 'The record\'s new tally', content: { 'application/json': { schema: { $ref: '#/components/schemas/Tally' } } } }, 400: err, 401: err, 403: err, 404: err, 409: err, 422: err, 503: err },
 			},
 			delete: {
 				operationId: 'removeVote',
@@ -311,6 +320,19 @@ export const spec = {
 			SearchResult: { type: 'object', required: ['query', 'sort', 'total', 'count', 'results', 'next_cursor'], properties: {
 				query: { type: 'string' }, sort: { type: 'string' }, total: { type: 'integer' }, count: { type: 'integer' },
 				results: { type: 'array', items: { $ref: '#/components/schemas/Record' } }, next_cursor: { type: ['string', 'null'] }, took_ms: { type: 'number' },
+			} },
+			CuratedPublicSnapshot: { type: 'object', additionalProperties: false, required: ['status','record_id','reference','adapter','method','observed_window_utc','visibility','title','factual_summary','attribution_caveats','review','digest','digest_kind','evidence_limits'], properties: {
+				status: { type: 'string', enum: ['curated_public_snapshot'] }, record_id: { type: 'string' }, reference: { type: 'string', maxLength: 2000 }, adapter: { type: 'string', enum: ['github','google_doc','drive_folder','x_post','drive_file'] }, method: { type: 'string', enum: ['signed_out_browser'] },
+				observed_window_utc: { type: 'object', additionalProperties: false, required: ['start','end'], properties: {start:{type:'string',format:'date-time'},end:{type:'string',format:'date-time'}} }, visibility:{type:'string',enum:['public_at_observation']}, title:{type:'string',maxLength:240}, attributed_author:{type:'string',maxLength:200}, factual_summary:{type:'string',maxLength:2000},
+				attribution_caveats:{type:'array',maxItems:8,items:{type:'string',maxLength:600}}, review:{type:'object',additionalProperties:false,required:['reviewed_by','process'],properties:{reviewed_by:{type:'string',maxLength:200},process:{type:'string',maxLength:500}}}, digest:{type:'string',pattern:'^[0-9a-f]{64}$'},digest_kind:{type:'string',enum:['reviewed_observation_record_sha256']},evidence_limits:{type:'array',maxItems:8,items:{type:'string',maxLength:600}},
+			} },
+			SourceCheckBatch: { type: 'object', additionalProperties: false, required: ['record_id','results','posted'], properties: {
+				record_id: { type: 'string' }, posted: { type: 'boolean', enum: [false] }, results: { type: 'array', maxItems: 5, items: { type: 'object', additionalProperties: false, required: ['index','reference','status','reason','fix'], properties: {
+					observed_window_utc: { type: 'object', additionalProperties: false, required: ['start','end'], properties: {start:{type:'string',format:'date-time'},end:{type:'string',format:'date-time'}} }, factual_summary: {type:'string',maxLength:2000}, digest_kind:{type:'string',enum:['remote_response_sha256','reviewed_observation_record_sha256']}, curated: { $ref: '#/components/schemas/CuratedPublicSnapshot' }, index: { type: 'integer', minimum: 0, maximum: 4 }, reference: { type: 'string', maxLength: 2000 }, status: { type: 'string', enum: ['retrieved','unsupported','not_found','unavailable','identity_mismatch','unsupported_format','curated_public_snapshot'] },
+					reason: { type: 'string', maxLength: 500 }, fix: { type: 'string', maxLength: 500 }, observed_at: { type: 'string', format: 'date-time' }, adapter: { type: 'string', enum: ['github','google_doc','drive_folder','x_post','drive_file'] }, method: { type: 'string', enum: ['public-https-v1','signed_out_browser'] }, response_status: { type: 'integer', minimum: 100, maximum: 599 },
+					title: { type: 'string', maxLength: 200 }, author: { type: 'string', maxLength: 100 }, excerpt: { type: 'string', maxLength: 2000 }, digest: { type: 'string', pattern: '^[0-9a-f]{64}$' },
+					requested_ref: { type: 'string' }, resolved_commit: { type: 'string', pattern: '^[0-9a-f]{40}$' }, path: { type: 'string', maxLength: 2000 }, blob_sha: { type: 'string', pattern: '^[0-9a-f]{40}$' }, file_mode: { type: 'string', enum: ['100644','100755'] }, root_tree_sha: { type: 'string', pattern: '^[0-9a-f]{40}$' },
+				} } },
 			} },
 			Comment: { type: 'object', properties: {
 				id: { type: 'integer' }, record_id: { type: 'string', description: 'In the reply to postComment: the record commented on.' },

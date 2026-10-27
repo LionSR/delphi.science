@@ -1,7 +1,7 @@
 // The forum, after MathOverflow: questions, their answers, and comments on either, by people and their
 // agents. Answers are voted on and sorted by score, and the asker can accept one. Every post is moderated
 // (moderate.ts). Posting goes through comments.ts, so mentions of records work the same as on records.
-import { post, thread, type Post } from './comments.ts';
+import { startQuestion, thread, type Post } from './comments.ts';
 import type { Moderator } from './moderate.ts';
 import { QueryError, type Db } from './query.ts';
 import { refuseKeys, type Voter } from './votes.ts';
@@ -16,14 +16,7 @@ export async function startTopic(db: Db, voter: Voter, t: { title: string; body:
 	if (title.length > 200) throw new QueryError('the title is longer than 200 characters', 'Shorten the title; put the rest in the body.');
 	if (!(t.body ?? '').trim()) throw new QueryError('the question needs a body', 'Send "body": the question, with what is known and what you tried.');
 	await refuseKeys(db, title);
-	const id = Number((await db.query<{ id: number }>('INSERT INTO open_index.topics (title, voter, agent) VALUES ($1, $2, $3) RETURNING id',
-		[title, voter.login, voter.agent])).rows[0].id);
-	try {
-		await post(db, { topic: id }, voter, { body: t.body }, moderate);
-	} catch (e) {
-		await db.query('DELETE FROM open_index.topics WHERE id = $1', [id]); // a refused question leaves nothing
-		throw e;
-	}
+	const id = await startQuestion(db, voter, title, t.body, moderate);
 	return (await topicWithPosts(db, id))!;
 }
 

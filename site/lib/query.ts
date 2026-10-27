@@ -224,7 +224,10 @@ export function compile(q: string) {
 // ---- Running ----
 
 /** Anything that runs a parameterized query: PGlite's db.query, or postgres.js via sql.unsafe. */
-export type Db = { query<T = Record<string, unknown>>(sql: string, params?: unknown[]): Promise<{ rows: T[] }> };
+export type Db = {
+	query<T = Record<string, unknown>>(sql: string, params?: unknown[]): Promise<{ rows: T[] }>;
+	transaction?<T>(run: (tx: Db) => Promise<T>): Promise<T>;
+};
 
 // A cursor carries where the next page starts and the total, so later pages skip the count.
 const encode = (o: number, t: number) => btoa(JSON.stringify({ o, t })).replace(/=+$/, '');

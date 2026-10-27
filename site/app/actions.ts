@@ -12,12 +12,33 @@ import { submit } from '../lib/submit.ts';
 import { recordPath } from '../lib/view.ts';
 import { approveDevice, denyDevice } from '../lib/device.ts';
 import { myVotes, revokeKey, unvote, vote } from '../lib/votes.ts';
+import { postFeedback, type PostFormState } from '../lib/post-feedback.ts';
+import { submitPostForm, type PostInput } from '../lib/post-form-submit.ts';
+import { revalidatePath } from 'next/cache';
 
 const signedIn = async (back: string) => (await me()) ?? redirect(`/auth/github?next=${encodeURIComponent(back)}`);
 const withNotice = (back: string, e: unknown) => {
 	if (!(e instanceof QueryError)) throw e;
 	return `${back}${back.includes('?') ? '&' : '?'}notice=${encodeURIComponent(e.message)}`;
 };
+
+/** Failed checks return structured feedback in-place; the client retains the author's draft. */
+export async function sendPost(_previous: PostFormState, form: FormData): Promise<PostFormState> {
+	const kind = String(form.get('kind')) as PostInput['kind'];
+	if (!['question', 'answer', 'comment', 'record', 'submission'].includes(kind)) return { status: 'failed', feedback: {
+		code: 'bad_request', message: 'Choose a question, answer, comment or review form.', fix: 'Open the relevant thread and try again.' } };
+	try {
+		const who = await me();
+		if (!who) return { status: 'failed', feedback: { code: 'sign_in', message: 'Sign in with GitHub before posting.', fix: 'Your draft is retained. Sign in, review it, then submit.' } };
+		const location = await submitPostForm(await db(), who, { kind, title: String(form.get('title') ?? ''), body: String(form.get('body') ?? ''),
+			topic: form.has('topic') ? Number(form.get('topic')) : undefined,
+			parent: form.has('parent') ? Number(form.get('parent')) : undefined,
+			record: form.has('record') ? String(form.get('record')) : undefined, review: form.get('review') === 'on' });
+		revalidatePath(location.split('#')[0]);
+		if (kind === 'question') revalidatePath('/forum');
+		return { status: 'posted', location };
+	} catch (error) { return { status: 'failed', feedback: postFeedback(error) }; }
+}
 
 /** ▲ or ▼. Clicking the vote you already gave takes it back; an emoji or note you left is kept. */
 export async function voteOn(form: FormData) {

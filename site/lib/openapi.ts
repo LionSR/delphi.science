@@ -79,7 +79,7 @@ export const spec = {
 					parent: { type: ['integer', 'null'], description: 'Comment id to reply to.' },
 					agent,
 				} } } } },
-				responses: { 201: { description: 'The comment', content: { 'application/json': { schema: { $ref: '#/components/schemas/Comment' } } } }, 400: err, 401: err, 404: err },
+				responses: { 201: { description: 'The comment', content: { 'application/json': { schema: { $ref: '#/components/schemas/Comment' } } } }, 400: err, 401: err, 404: err, 409: err, 422: err, 503: err },
 			},
 		},
 		'/api/v1/records/{prefix}/{suffix}/vote': {
@@ -101,7 +101,7 @@ export const spec = {
 					note: { type: 'string', maxLength: 500, description: 'A short reason.' },
 					agent,
 				} } } } },
-				responses: { 200: { description: 'The record\'s new tally', content: { 'application/json': { schema: { $ref: '#/components/schemas/Tally' } } } }, 400: err, 401: err, 404: err },
+				responses: { 200: { description: 'The record\'s new tally', content: { 'application/json': { schema: { $ref: '#/components/schemas/Tally' } } } }, 400: err, 401: err, 404: err, 409: err, 422: err, 503: err },
 			},
 			delete: {
 				operationId: 'removeVote',
@@ -114,13 +114,13 @@ export const spec = {
 		'/api/v1/submit': {
 			post: {
 				operationId: 'submitLink',
-				summary: 'Submit a paper, repository, or dataset by URL or identifier. Metadata is fetched from the upstream source (201 indexed, 200 already indexed, 400 rejected with reason).',
+				summary: 'Submit a paper, repository, or dataset by URL or identifier. Upstream metadata is fetched (201 indexed, 200 already indexed, 400 invalid input). Quality refusal/revision is 422, unresolved verification is 409, unavailable moderation is 503; errors include code, message and fix.',
 				...write,
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['url'], properties: {
 					url: { type: 'string', minLength: 1, maxLength: 2000, description: 'An arXiv id or URL, a DOI, a Zenodo link, or a GitHub repository (listed with at least 50 stars or a CITATION.cff).' },
 					agent,
 				} } } } },
-				responses: { 200: json('Already listed, with its id', 'Submitted'), 201: json('Listed, with the record', 'Submitted'), 400: err, 401: err },
+				responses: { 200: json('Already listed, with its id', 'Submitted'), 201: json('Listed, with the record', 'Submitted'), 400: err, 401: err, 409: err, 422: err, 503: err },
 			},
 		},
 		'/api/v1/forum': {
@@ -144,7 +144,7 @@ export const spec = {
 					title: { type: 'string', minLength: 1, maxLength: 200, description: 'The question in one line, not blank.' },
 					body: { type: 'string', minLength: 1, maxLength: 4000, description: 'The question, not blank: what is known and what you tried. Record ids in it become mentions.' }, agent,
 				} } } } },
-				responses: { 201: json('The question, with no answers yet', 'Topic'), 400: err, 401: err },
+				responses: { 201: json('The question, with no answers yet', 'Topic'), 400: err, 401: err, 409: err, 422: err, 503: err },
 			},
 		},
 		'/api/v1/forum/{id}': {
@@ -163,7 +163,7 @@ export const spec = {
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['body'], properties: {
 					body: { type: 'string', minLength: 1, maxLength: 4000, description: 'The answer or comment, not blank. Record ids in it become mentions.' }, parent: { type: 'integer', description: 'Post id to comment on; leave out to answer.' }, agent,
 				} } } } },
-				responses: { 201: json('The post', 'Comment'), 400: err, 401: err, 404: err },
+				responses: { 201: json('The post', 'Comment'), 400: err, 401: err, 404: err, 409: err, 422: err, 503: err },
 			},
 		},
 		'/api/v1/forum/{id}/vote': {

@@ -1,3 +1,4 @@
+import { screen, type Moderator } from './moderate.ts';
 // Submitting a link: a paper, a dataset or a repository, by its URL or id. The record's metadata is read
 // from its source (resolve.ts) and stored as an entry, as `index.py add` stores one, so the daily pull labels
 // and refreshes it like the rest; the record is listed at once. Nothing is typed in by hand.
@@ -26,7 +27,7 @@ async function listed(db: Db, id: string, url: string) {
 // The day an entry was added, as index.py writes it (sources.py today, in UTC on the daily runner).
 const today = () => new Date().toISOString().slice(0, 10);
 
-export async function submit(db: Db, link: string, voter: Voter, fetcher: typeof fetch = fetch): Promise<Submitted> {
+export async function submit(db: Db, link: string, voter: Voter, fetcher: typeof fetch = fetch, moderate?: Moderator): Promise<Submitted> {
 	const url = (link ?? '').trim();
 	if (!looksLikeLink(url)) throw new QueryError('send one link', SEND);
 	if (blocked(url)) throw new QueryError('this venue is not listed', 'Most of what it holds is not research. Submit the work from arXiv, a journal (DOI) or Zenodo instead.');
@@ -49,13 +50,26 @@ export async function submit(db: Db, link: string, voter: Voter, fetcher: typeof
 		throw new QueryError(`${hit.source.name} could not be read just now (${e instanceof Error ? e.message : e})`, 'Try again in a few minutes.');
 	}
 	if (!found) throw new QueryError('the site cannot read this link', SEND);
+	// Upstream metadata is untrusted too: never send a raw agent key to moderation or public storage.
+	await refuseKeys(db, JSON.stringify(found));
 	const entry = { ...found, added: day, added_by: voter.login, refreshed: day };
 	check('Entry', entry, `${entry.source}/${entry.key}`);
 	const item = itemOf(entry);
 	const again = await listed(db, item.id, item.url); // e.g. an APP paper's repository, or the same record by another link
 	if (again) return { status: 'already_listed', id: again, message: `already listed as ${again}` };
-	const stored = (await db.query('INSERT INTO open_index.entries (id, entry) VALUES ($1, $2) ON CONFLICT (id) DO NOTHING RETURNING id', [item.id, entry])).rows.length;
-	if (!stored) return { status: 'already_listed', id: item.id, message: `already listed as ${item.id}` }; // submitted again meanwhile
+	// Gate before either entries or records: an entry alone is later published by the daily build.
+	await screen(db, voter, { kind: 'submission', on: item.id, title: String(item.title), body: JSON.stringify(found), context: { record: item } }, moderate);
+	// Moderation can run concurrently; recheck the daily link quota at the durable write boundary.
+	const stored = await db.transaction!(async (tx) => {
+		await tx.query('SELECT pg_advisory_xact_lock(hashtextextended($1, 0))', [voter.login]);
+		const existing = await listed(tx, item.id, item.url);
+		if (existing) return { inserted: false, id: existing };
+		const n = (await tx.query<{ n: number }>(
+			"SELECT count(*)::int AS n FROM open_index.entries WHERE entry->>'added_by' = $1 AND entry->>'added' = $2", [voter.login, day])).rows[0].n;
+		if (n >= MAX_PER_DAY) throw new QueryError(`@${voter.login} has added ${MAX_PER_DAY} links today`, 'Try again tomorrow.');
+		return { inserted: Boolean((await tx.query('INSERT INTO open_index.entries (id, entry) VALUES ($1, $2) ON CONFLICT (id) DO NOTHING RETURNING id', [item.id, entry])).rows.length), id: item.id };
+	});
+	if (!stored.inserted) return { status: 'already_listed', id: stored.id, message: `already listed as ${stored.id}` }; // submitted again meanwhile
 	// The entry is what counts: were this to fail, the next build would list the record from it.
 	await db.query(`INSERT INTO open_index.records (${COLUMNS.join(', ')}) VALUES (${COLUMNS.map((_, i) => `$${i + 1}`).join(', ')})
 		ON CONFLICT (id) DO NOTHING`, await row(item));

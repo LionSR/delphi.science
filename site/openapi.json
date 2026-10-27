@@ -332,6 +332,36 @@
 								}
 							}
 						}
+					},
+					"409": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					},
+					"422": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					},
+					"503": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
 					}
 				}
 			}
@@ -496,6 +526,36 @@
 								}
 							}
 						}
+					},
+					"409": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					},
+					"422": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					},
+					"503": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
 					}
 				}
 			},
@@ -567,7 +627,7 @@
 		"/api/v1/submit": {
 			"post": {
 				"operationId": "submitLink",
-				"summary": "Submit a paper, repository, or dataset by URL or identifier. Metadata is fetched from the upstream source (201 indexed, 200 already indexed, 400 rejected with reason).",
+				"summary": "Submit a paper, repository, or dataset by URL or identifier. Upstream metadata is fetched (201 indexed, 200 already indexed, 400 invalid input). Quality refusal/revision is 422, unresolved verification is 409, unavailable moderation is 503; errors include code, message and fix.",
 				"security": [
 					{
 						"agentKey": []
@@ -631,6 +691,36 @@
 						}
 					},
 					"401": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					},
+					"409": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					},
+					"422": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					},
+					"503": {
 						"description": "Structured error response with remediation hint",
 						"content": {
 							"application/json": {
@@ -782,6 +872,36 @@
 								}
 							}
 						}
+					},
+					"409": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					},
+					"422": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					},
+					"503": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
 					}
 				}
 			}
@@ -918,6 +1038,36 @@
 						}
 					},
 					"404": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					},
+					"409": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					},
+					"422": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					},
+					"503": {
 						"description": "Structured error response with remediation hint",
 						"content": {
 							"application/json": {

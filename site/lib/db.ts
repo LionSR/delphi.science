@@ -11,7 +11,13 @@ async function open(): Promise<Db> {
 	if (process.env.DATABASE_URL) {
 		const { default: postgres } = await import('postgres');
 		const sql = postgres(process.env.DATABASE_URL, { prepare: false, max: 5 });
-		return { query: async (text, params = []) => ({ rows: (await sql.unsafe(text, params as never[])) as never[] }) };
+		const query: Db['query'] = async (text, params = []) => ({ rows: (await sql.unsafe(text, params as never[])) as never[] });
+		return { query, transaction: async (run) => {
+			const result = await sql.begin(async (tx) => ({ value: await run({
+				query: async (text, params = []) => ({ rows: (await tx.unsafe(text, params as never[])) as never[] }),
+			}) }));
+			return result.value;
+		} };
 	}
 	const { PGlite } = await import('@electric-sql/pglite');
 	const { vector } = await import('@electric-sql/pglite/vector');

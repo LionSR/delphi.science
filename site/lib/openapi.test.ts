@@ -85,8 +85,20 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 	const savedAdmins = process.env.ORI_STATS_ADMINS;
 	after(() => { if (savedAdmins === undefined) delete process.env.ORI_STATS_ADMINS; else process.env.ORI_STATS_ADMINS = savedAdmins; });
 	let discussed = '';
+	const priorFetch = globalThis.fetch, priorKey = process.env.DEEPSEEK_API_KEY;
+	let moderationMode: 'accept' | 'reject' | 'review' | 'unavailable' = 'accept';
 
 	before(async () => {
+		// Schema/publication plumbing only: no live model request and no environment-based acceptance path.
+		process.env.DEEPSEEK_API_KEY = 'offline-schema-fixture';
+		globalThis.fetch = (async (url) => {
+			assert.equal(String(url), 'https://api.deepseek.com/chat/completions', 'unexpected network call');
+			if (moderationMode === 'unavailable') return new Response('private unavailable fixture', { status: 503 });
+			return Response.json({ choices: [{ finish_reason: 'stop', message: { content: JSON.stringify(moderationMode === 'reject'
+				? { decision: 'REQUEST_REVISION', verification_needed: false, reason: 'Private schema fixture needs a specific contribution.', fix: 'Provide the argument or narrow the claim.' }
+				: moderationMode === 'review' ? { decision: 'REVIEW_NEEDED', verification_needed: true, reason: 'A source needs independent checking.', fix: 'Supply a verifiable source or independent argument.' }
+				: { decision: 'ACCEPT', verification_needed: false, reason: 'Private schema fixture.', fix: '' }) } }] });
+		}) as typeof fetch;
 		for (const f of readdirSync(MIGRATIONS).filter((f) => f.endsWith('.sql')).sort()) await pg.exec(readFileSync(new URL(f, MIGRATIONS), 'utf8'));
 		// Every discussed record and a few hundred others: enough for each field to appear, quick to load.
 		const all: Item[] = JSON.parse(readFileSync(INDEX, 'utf8')).items;
@@ -103,6 +115,7 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 		key = await createAgentKey(pg, 'someone', 'Test agent');
 		process.env.ORI_STATS_ADMINS = 'someone';
 	});
+	after(() => { globalThis.fetch = priorFetch; if (priorKey === undefined) delete process.env.DEEPSEEK_API_KEY; else process.env.DEEPSEEK_API_KEY = priorKey; });
 
 	// Calls the route as Next does and checks the answer against the document's response for its status.
 	async function call(method: string, path: string, opts: { query?: string; body?: unknown; auth?: boolean | string; params?: Record<string, string> } = {}) {
@@ -241,8 +254,8 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 			<summary>The dominant sequence transduction models.</summary><author><name>Ashish Vaswani</name></author>
 			<arxiv:primary_category term="cs.CL"/><category term="cs.CL"/></entry></feed>`;
 		const real = globalThis.fetch; // the source, faked: arXiv answers for this one paper
-		globalThis.fetch = (async (url: string | URL | Request) =>
-			String(url).includes('id_list=1706.03762') ? new Response(atom) : new Response('not found', { status: 404 })) as typeof fetch;
+		globalThis.fetch = (async (url: string | URL | Request, init) =>
+			String(url).includes('id_list=1706.03762') ? new Response(atom) : real(url, init)) as typeof fetch;
 		try {
 			assert.equal((await call('POST', '/api/v1/submit', { body: { url: 'arXiv:1706.03762' } })).status, 401);
 			assert.equal((await call('POST', '/api/v1/submit', { body: { url: 'arXiv:1706.03762' }, auth: true })).status, 201);
@@ -283,6 +296,34 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 		assert.equal(await fix('GET', '/api/v1/forum', { query: 'limit=0' }), 'limit must be from 1 to 100');
 		assert.equal(await fix('GET', '/api/v1/forum/abc', {}), 'id must be an integer');
 		assert.equal(await fix('POST', '/api/v1/submit', { body: {}, auth: true }), 'the body needs "url"');
+	});
+
+	test('posting feedback: every prose path documents revision, verification hold and service failure', async () => {
+		const t = JSON.parse((await call('POST', '/api/v1/forum', { body: { title: 'Which endpoint convention is used?', body: 'For an open chain, which terms remain after telescoping?'  }, auth: true })).text);
+		const at = `/api/v1/records/${discussed.split('/')[0]}/${encodeURIComponent(discussed.split('/')[1])}`;
+		const normalFetch = globalThis.fetch;
+		globalThis.fetch = (async (url, init) => {
+			if (String(url).includes('id_list=2601.99999')) return new Response(`<feed xmlns="http://www.w3.org/2005/Atom"><entry><id>http://arxiv.org/abs/2601.99999v1</id><published>2026-01-01</published><title>Finite-chain boundary computations</title><summary>A reproducible scoped computation.</summary><author><name>Offline Author</name></author></entry></feed>`);
+			return normalFetch(url, init);
+		}) as typeof fetch;
+		try {
+			for (const mode of ['reject', 'review', 'unavailable'] as const) {
+				moderationMode = mode;
+				for (const [path, body] of [
+					[`${at}/comments`, { body: 'Which boundary conditions are assumed for the displayed calculation?'  }],
+					[`${at}/vote`, { value: 1, note: 'The endpoint terms depend on the boundary convention.'  }],
+					['/api/v1/submit', { url: 'arXiv:2601.99999' }],
+					['/api/v1/forum', { title: 'How are the boundary terms normalized?', body: 'Which boundary conditions are assumed for the displayed calculation?'  }],
+					[`/api/v1/forum/${t.id}`, { body: 'Which boundary conditions are assumed for the displayed calculation?'  }],
+				] as const) {
+					const r = await call('POST', path, { body, auth: true });
+					assert.equal(r.status, mode === 'reject' ? 422 : mode === 'review' ? 409 : 503, path);
+					const error = JSON.parse(r.text).error;
+					assert.equal(error.code, mode === 'reject' ? 'moderation_rejected' : mode === 'review' ? 'moderation_review_needed' : 'moderation_unavailable');
+					assert.ok(error.message && error.fix);
+				}
+			}
+		} finally { moderationMode = 'accept'; globalThis.fetch = normalFetch; }
 	});
 
 	test('every documented response was checked', () => {

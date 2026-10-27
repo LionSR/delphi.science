@@ -7,7 +7,9 @@ import { db } from '../../../lib/db.ts';
 import { myPostVotes, topicWithPosts } from '../../../lib/forum.ts';
 import { me } from '../../../lib/session.ts';
 import { date, recordPath } from '../../../lib/view.ts';
-import { acceptOn, replyTo, votePostOn } from '../../actions.ts';
+import { acceptOn, votePostOn } from '../../actions.ts';
+import { PostForm } from '../../post-form.tsx';
+import { Markdown } from '../../../lib/markdown.ts';
 
 export const dynamic = 'force-dynamic';
 
@@ -33,20 +35,16 @@ function Votes({ topic, p, mine }: { topic: number; p: Post; mine?: number }) {
 	);
 }
 
-function Comments({ topic, p, signedIn }: { topic: number; p: Post & { comments: Post[] }; signedIn: boolean }) {
+function Comments({ topic, p, owner }: { topic: number; p: Post & { comments: Post[] }; owner: string }) {
 	return (
 		<div className="post-comments">
 			{p.comments.map((c) => (
-				<p key={c.id} id={`p${c.id}`}>{c.body} <span className="meta-inline">{by(c)} · {date(c.at)}</span></p>
+				<div className="post-comment" key={c.id} id={`p${c.id}`}><Markdown text={c.body} postId={c.id} /><span className="meta-inline">{by(c)} · {date(c.at)}</span></div>
 			))}
 			<details>
 				<summary>Add a comment</summary>
-				<form action={replyTo} className="comment-form">
-					<input type="hidden" name="topic" value={topic} />
-					<input type="hidden" name="parent" value={p.id} />
-					<textarea name="body" rows={2} maxLength={4000} required placeholder={signedIn ? 'Ask for a clarification, point out an error, or add a reference.' : 'Sign in with GitHub to comment.'} aria-label="Comment" />
-					<button>Comment</button>
-				</form>
+				<PostForm kind="comment" owner={owner} topic={topic} parent={p.id} back={`/forum/${topic}`} rows={2} label="Comment" button="Comment"
+					placeholder="Ask for a clarification, point out an error, or add a reference." />
 			</details>
 		</div>
 	);
@@ -64,18 +62,19 @@ export default async function Question({ params, searchParams }: Ctx) {
 		<article>
 			<p className="meta"><a href="/forum">Forum</a></p>
 			<h1>{t.title}</h1>
+			<p><a href="/moderation">Quality criteria and moderation decisions</a></p>
 			{notice && <p className="count">{notice}</p>}
 
 			<div className="post" id={`p${t.question.id}`}>
 				<Votes topic={t.id} p={t.question} mine={mine.get(t.question.id)} />
 				<div className="post-body">
-					<p className="text">{t.question.body}</p>
+					<Markdown text={t.question.body} postId={t.question.id} />
 					<p className="meta">
 						<span>asked by {by(t.question)}</span>
 						<span>{date(t.question.at)}</span>
 						{t.question.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}
 					</p>
-					<Comments topic={t.id} p={t.question} signedIn={Boolean(who)} />
+					<Comments topic={t.id} p={t.question} owner={who?.login ?? ''} />
 				</div>
 			</div>
 
@@ -84,8 +83,8 @@ export default async function Question({ params, searchParams }: Ctx) {
 				<div key={a.id} className={a.accepted ? 'post accepted' : 'post'} id={`p${a.id}`}>
 					<Votes topic={t.id} p={a} mine={mine.get(a.id)} />
 					<div className="post-body">
-						<p className="text">{a.body}</p>
-						<p className="meta">
+						<Markdown text={a.body} postId={a.id} />
+						<div className="meta">
 							<span>answered by {by(a)}</span>
 							<span>{date(a.at)}</span>
 							{a.accepted && <span className="badge">✓ accepted</span>}
@@ -97,18 +96,15 @@ export default async function Question({ params, searchParams }: Ctx) {
 								</form>
 							)}
 							{a.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}
-						</p>
-						<Comments topic={t.id} p={a} signedIn={Boolean(who)} />
+						</div>
+						<Comments topic={t.id} p={a} owner={who?.login ?? ''} />
 					</div>
 				</div>
 			))}
 
 			<h2>Your answer</h2>
-			<form action={replyTo} className="comment-form">
-				<input type="hidden" name="topic" value={t.id} />
-				<textarea name="body" rows={6} maxLength={4000} required placeholder={who ? 'Provide an argument, reference, computation, or checkable evidence. Reference records by id (e.g. arxiv/2406.01234) to link them.' : 'Sign in with GitHub to answer.'} aria-label="Answer" />
-				<button>{who ? 'Post your answer' : 'Sign in and answer'}</button>
-			</form>
+			<PostForm kind="answer" owner={who?.login ?? ''} topic={t.id} back={`/forum/${t.id}`} label="Answer" button="Post your answer"
+				placeholder="Provide an argument, reference, computation, or checkable evidence. Reference records by id (e.g. arxiv/2406.01234) to link them." />
 			<p className="count">Posts are moderated against MathOverflow standards: specific research questions, and answers or comments backed by an argument, reference, or evidence.</p>
 		</article>
 	);

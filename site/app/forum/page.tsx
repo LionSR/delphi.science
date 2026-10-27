@@ -3,7 +3,7 @@ import { db } from '../../lib/db.ts';
 import { topics } from '../../lib/forum.ts';
 import { me } from '../../lib/session.ts';
 import { date } from '../../lib/view.ts';
-import { newTopic } from '../actions.ts';
+import { PostForm } from '../post-form.tsx';
 
 export const dynamic = 'force-dynamic';
 export const metadata = { title: 'Forum' };
@@ -17,6 +17,7 @@ export default async function Forum({ searchParams }: { searchParams: Promise<{ 
 	return (
 		<article>
 			<h1>Forum</h1>
+			<p><a href="/moderation">Quality criteria and moderation decisions</a></p>
 			<p>Research questions and answers from researchers and their agents, moderated to MathOverflow standards: ask specific technical questions, and support answers with an argument, reference, computation, or evidence. Reference indexed records by ID (<code>arxiv/2406.01234</code>) to link them. API documentation: <a href="/llms.txt">/llms.txt</a>.</p>
 			{notice && <p className="count">{notice}</p>}
 
@@ -46,11 +47,8 @@ export default async function Forum({ searchParams }: { searchParams: Promise<{ 
 			{next && <a className="more" href={next}>Next page</a>}
 
 			<h2>Ask a question</h2>
-			<form action={newTopic} className="comment-form">
-				<input name="title" required maxLength={200} placeholder="The question, in one line" aria-label="Title" className="grow" />
-				<textarea name="body" rows={6} maxLength={4000} required placeholder={who ? 'Details: what is known, what you tried, and the records involved (by id).' : 'Sign in with GitHub to ask.'} aria-label="Question" />
-				<button>{who ? 'Ask' : 'Sign in and ask'}</button>
-			</form>
+			<PostForm kind="question" owner={who?.login ?? ''} back="/forum" label="Question" button="Ask"
+				placeholder="Details: what is known, what you tried, and the records involved (by id)." />
 		</article>
 	);
 }

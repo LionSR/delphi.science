@@ -18,12 +18,26 @@ import { checkPublicSources, type CheckBatch } from '../lib/public-source-checks
 import { requireSourceCheckOrigin } from '../lib/source-check-origin.ts';
 import type { PostFeedback } from '../lib/post-feedback.ts';
 import { revalidatePath } from 'next/cache';
+import { editPost } from '../lib/edit-post.ts';
 
 const signedIn = async (back: string) => (await me()) ?? redirect(`/auth/github?next=${encodeURIComponent(back)}`);
 const withNotice = (back: string, e: unknown) => {
 	if (!(e instanceof QueryError)) throw e;
 	return `${back}${back.includes('?') ? '&' : '?'}notice=${encodeURIComponent(e.message)}`;
 };
+
+/** The session supplies the owner; the client can only propose a body and its base revision. */
+export async function savePostEdit(input: { id: number; body: string; revision: string }): Promise<{ ok: boolean; feedback?: PostFeedback }> {
+	try {
+		const who = await me();
+		if (!who) return { ok: false, feedback: { code: 'sign_in', message: 'Sign in before saving.', fix: 'Your draft is retained. Sign in as the post owner and try again.' } };
+		const saved = await editPost(await db(), input.id, { ...who, human: true }, input);
+		revalidatePath(saved.record_id ? recordPath(saved.record_id) : `/forum/${saved.topic_id}`);
+		if (saved.topic_id) revalidatePath('/forum');
+		revalidatePath(`/u/${encodeURIComponent(who.login)}`);
+		return { ok: true };
+	} catch (error) { return { ok: false, feedback: postFeedback(error) }; }
+}
 
 /** Failed checks return structured feedback in-place; the client retains the author's draft. */
 export async function sendPost(_previous: PostFormState, form: FormData): Promise<PostFormState> {

@@ -3,6 +3,11 @@ import { QueryError } from './query.ts';
 export type PostFeedback = { code: string; message: string; fix: string };
 export type PostFormState = { status: 'idle' | 'failed' | 'posted'; feedback?: PostFeedback; location?: string };
 
+export class EditError extends QueryError {
+	readonly code: string; readonly status: 403 | 409;
+	constructor(status: 403 | 409, code: string, message: string, fix: string) { super(message, fix); this.status = status; this.code = code; }
+}
+
 /** Classification is set by server control flow, never guessed from a model's prose. */
 export class ModerationError extends QueryError {
 	readonly code: 'moderation_rejected' | 'moderation_review_needed' | 'moderation_unavailable';
@@ -22,7 +27,7 @@ export class SourceCheckError extends QueryError {
 
 /** Unexpected failures may happen after a write: ask the author to check the thread before retrying. */
 export function postFeedback(error: unknown): PostFeedback {
-	if (error instanceof ModerationError || error instanceof SourceCheckError) return { code: error.code, message: error.message, fix: error.fix };
+	if (error instanceof ModerationError || error instanceof SourceCheckError || error instanceof EditError) return { code: error.code, message: error.message, fix: error.fix };
 	if (error instanceof QueryError) return { code: 'bad_request', message: error.message, fix: error.fix };
 	return { code: 'posting_unconfirmed', message: 'Posting could not be confirmed.',
 		fix: 'Your draft is retained. Check the thread before trying again, in case the post was saved.' };

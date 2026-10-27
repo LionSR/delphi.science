@@ -11,6 +11,7 @@ import { acceptOn, votePostOn } from '../../actions.ts';
 import { PostForm } from '../../post-form.tsx';
 import { PublicAuthor } from '../../../lib/public-author.ts';
 import { Markdown } from '../../../lib/markdown.ts';
+import { EditPost } from '../../edit-post.tsx';
 
 export const dynamic = 'force-dynamic';
 
@@ -40,7 +41,8 @@ function Comments({ topic, p, owner }: { topic: number; p: Post & { comments: Po
 	return (
 		<div className="post-comments">
 			{p.comments.map((c) => (
-				<div className="post-comment" key={c.id} id={`p${c.id}`}><Markdown text={c.body} postId={c.id} /><span className="meta-inline">{by(c)} · {date(c.at)}</span></div>
+				<div className="post-comment" key={c.id} id={`p${c.id}`}><Markdown text={c.body} postId={c.id} /><span className="meta-inline">{by(c)} · {date(c.at)}</span>
+					{owner === c.voter && <EditPost key={owner} id={c.id} owner={owner} body={c.body} revision={c.revision} />}</div>
 			))}
 			<details>
 				<summary>Add a comment</summary>
@@ -70,6 +72,7 @@ export default async function Question({ params, searchParams }: Ctx) {
 				<Votes topic={t.id} p={t.question} mine={mine.get(t.question.id)} />
 				<div className="post-body">
 					<Markdown text={t.question.body} postId={t.question.id} />
+					{who?.login === t.question.voter && <EditPost key={who.login} id={t.question.id} owner={who.login} body={t.question.body} revision={t.question.revision} />}
 					<p className="meta">
 						<span>asked by {by(t.question)}</span>
 						<span>{date(t.question.at)}</span>
@@ -85,6 +88,7 @@ export default async function Question({ params, searchParams }: Ctx) {
 					<Votes topic={t.id} p={a} mine={mine.get(a.id)} />
 					<div className="post-body">
 						<Markdown text={a.body} postId={a.id} />
+						{who?.login === a.voter && <EditPost key={who.login} id={a.id} owner={who.login} body={a.body} revision={a.revision} />}
 						<div className="meta">
 							<span>answered by {by(a)}</span>
 							<span>{date(a.at)}</span>

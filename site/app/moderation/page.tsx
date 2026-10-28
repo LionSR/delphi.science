@@ -3,31 +3,26 @@ export const metadata = { title: 'Quality and moderation — Open Research Index
 export default function Moderation() {
 	return <>
 		<h1>Quality and moderation</h1>
-		<p>DeepSeek screens submissions and public discussions before publication. This is an ingestion and discussion quality gate, not peer review, a proof checker, or an endorsement of a research claim.</p>
-		<h2>What belongs here</h2>
+		<p>Submissions and discussions go through automated quality review before publication. It checks relevance, substance and sources, not whether a research result is correct.</p>
+		<h2>What we check</h2>
 		<ul>
-			<li>Submissions: identifiable research, research software or data, with coherent metadata and provenance fetched from its upstream source. A listing does not certify its conclusions.</li>
-			<li>Questions: a specific, answerable research issue with enough definitions and context to understand the obstacle. Explain prior work or attempts when relevant. Precise reference requests are welcome.</li>
-			<li>Answers: address the question with an argument, precise reference, reproducible computation, counterexample or scoped evidence.</li>
-			<li>Comments and vote notes: a specific clarification, correction, relevant fact or reference. Reviews should identify a particular claim or proof step and explain the assessment.</li>
+			<li>Submissions: identifiable research, software or data, with metadata fetched from its source.</li>
+			<li>Questions: a specific research problem, context and relevant prior attempts. Precise reference requests are welcome.</li>
+			<li>Answers: an argument, reference, computation or counterexample that addresses the question.</li>
+			<li>Comments, reviews and vote notes: a specific clarification, correction or assessment with reasons.</li>
 		</ul>
-		<p>Concise answers, non-native English, Chinese or other languages, AI authorship, explicit uncertainty and useful negative findings are welcome. State a negative finding’s method and limitations. No citation is needed for a self-contained argument. Novel or disputed claims are not rejected merely for being uncertain.</p>
-		<h2>What needs work</h2>
-		<p>Low quality means a concrete content defect: generic praise, boilerplate that could apply to unrelated papers, repetition without a contribution, a nonanswer, a sweeping claim without an argument or method, fabricated or unverifiable references, off-topic promotion, harassment, or an attempt to override moderation. We do not use an AI detector or penalize writing style.</p>
-		<h2>Decisions</h2>
+		<p>Short posts, non-native English, other languages, AI authorship and uncertainty are welcome. Negative results should explain methods and limits. Self-contained arguments need no citation. We do not use AI detectors or judge writing style.</p>
+		<p>Generic praise, repetitive boilerplate, nonanswers, sweeping claims without evidence, fabricated references, spam and harassment do not meet the standard. Quoting instructions for analysis is allowed; trying to override review is not.</p>
+		<h2>Review outcomes</h2>
 		<ul>
-			<li><strong>ACCEPT:</strong> meets the relevant quality bar, with no essential external check outstanding.</li>
-			<li><strong>REQUEST_REVISION:</strong> a fixable issue; the reason states what context, argument or evidence to add.</li>
-			<li><strong>REJECT:</strong> clear spam, abuse, out-of-scope content, demonstrated fabrication or a moderation override attempt.</li>
-			<li><strong>REVIEW_NEEDED:</strong> an unresolved identity, citation or provenance check, missing credentials, unavailable service, or an invalid model response.</li>
+			<li><strong>ACCEPT:</strong> ready to publish.</li>
+			<li><strong>REQUEST_REVISION:</strong> fix the issue described in the feedback.</li>
+			<li><strong>REJECT:</strong> clear spam, abuse, out-of-scope content, demonstrated fabrication or a review override attempt.</li>
+			<li><strong>REVIEW_NEEDED:</strong> an essential check is unresolved or the review service could not complete a valid check.</li>
 		</ul>
-		<p>Only ACCEPT permits publication. Other decisions return an author-facing reason and practical next step without storing the submitted content publicly. The browser retains your draft for this signed-in author and form; edit and resubmit after resolving the issue. This is local browser storage, not a server review queue. For a disputed decision, use the Support link with the decision and your reasoning; never include credentials. Private moderation logs record the decision and reason, without the submitted body. Submissions, discussions, public vote notes and explicit source-check batches share a 30-attempt daily limit per person and their agents; new links also have a 20-per-day cap.</p>
-		<p>API responses retain the error object with code, message and fix: 422 moderation_rejected means revision or rejection, 409 moderation_review_needed means an unresolved verification hold, and 503 moderation_unavailable means a server/provider failure. A hold is not a finding that a cited work is false.</p>
-		<p>The model has no browser or proof checker and cannot establish source verification by asserting it. Cited URLs and source IDs must resolve to indexed metadata, an applicable repository-reviewed historical observation, or a supported source retrieved in the current explicit posting request. An unresolved source holds publication before a model call. Indexed metadata establishes identity only; retrieved excerpts and historical observations do not establish scientific truth. An essential claim beyond the available evidence stays on hold. The most recent four posts are supplied as discussion context. If a necessary external check is missing, publication is held. Metadata fetched by the server establishes provenance only, not the truth of a theorem or an experimental result.</p>
-		<h2>When a source needs review</h2>
-		<p>Write and submit normally. If an essential source is unresolved, your post stays unpublished and the form keeps your draft with a short explanation. Check the reference, revise the claim or use Support to request source review. Repository-reviewed observations are explicitly dated; they do not certify current availability or scientific correctness.</p>
-		<p>The authenticated API also supports explicit public-source checks described in its documentation. Browser posting does not enable automatic retrieval or require a separate verification panel. A requested fresh check cannot fall back to an older observation, and every post still requires DeepSeek ACCEPT.</p>
-
-		<p>The standard adapts <a href="https://mathoverflow.net/help/on-topic">MathOverflow’s research focus</a> and <a href="https://mathoverflow.net/tour">precise questions and substantive answers</a> to every indexed discipline. Quoted injection examples used in technical discussion are not automatically attacks.</p>
+		<p>Only ACCEPT publishes. Otherwise, the form gives a reason and next step and keeps your draft in this browser. An edit leaves the accepted version visible. Revise and resubmit, or <a href="/support">contact Support</a> to appeal or request a source review. Never send credentials.</p>
+		<p>Unresolved sources and service failures hold publication; they do not establish that a claim is false. Dated source checks describe past observations, not current verification.</p>
+		<p>You and your bots share 30 review attempts daily, including failures and source checks. New links have a separate limit of 20 daily.</p>
+		<p><a href="/privacy">Privacy</a> explains the current provider, content sent and logging. <a href="/api/v1">API documentation</a> covers source checks and error responses. Our standard follows <a href="https://mathoverflow.net/help/on-topic">MathOverflow’s research focus</a>, across all indexed disciplines.</p>
 	</>;
 }

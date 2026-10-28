@@ -54,7 +54,7 @@ export function SourceChecks({ record, owner, draft, disabled, onBusyChange, onS
   </label>
   <button type="button" disabled={disabled || busy} onClick={()=>{setUrls(draftSourceUrls(draft).join('\n'));setProgress(undefined);}}>Use URLs from draft</button>{' '}
   <button type="button" disabled={disabled || busy} onClick={check}>{busy?'Checking public sources…':owner?'Check public sources':'Sign in to check sources'}</button>
-  <p className="count">Your draft stays here. Checking never posts it. Each batch consumes one of the shared 30 daily check/submission attempts. Repository-reviewed observations describe their recorded time; optional live rechecking on submission requires consent below. Every submission still passes the DeepSeek quality gate.</p>
+  <p className="count">Your draft stays here. Checking never posts it. Each batch consumes one of the shared 30 daily check/submission attempts. Repository-reviewed observations describe their recorded time; optional live rechecking on submission requires consent below. Every submission still passes automated quality review.</p>
   {progress && <div aria-live="polite">
    <p className="count">{progress.completed} of {progress.total} URLs checked{busy?'…':'.'} No post was submitted by this check.</p>
    {progress.feedback && <div className="post-feedback" role="alert"><p>{progress.feedback.message}</p><p>{progress.feedback.fix}</p></div>}

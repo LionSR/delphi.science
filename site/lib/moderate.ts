@@ -81,14 +81,14 @@ async function resolveModerator(db: Db): Promise<{ moderate: Moderator; unavaila
 		"SELECT decrypted_secret AS key FROM vault.decrypted_secrets WHERE name = 'deepseek_api_key'")
 		.then((r) => r.rows[0]?.key, () => undefined));
 	if (key?.trim()) return { moderate: deepseek(key), unavailable: false };
-	return { unavailable: true, moderate: async () => ({ decision: 'REVIEW_NEEDED', reason: 'DeepSeek moderation is not configured. Try again after the server has a key.', verification_needed: false }) };
+	return { unavailable: true, moderate: async () => ({ decision: 'REVIEW_NEEDED', reason: 'Automated quality review is not configured. Try again later.', verification_needed: false }) };
 }
 export async function moderator(db: Db): Promise<Moderator> { return (await resolveModerator(db)).moderate; }
 
 /** Trusted injected moderators may use the earlier three-field contract. Provider responses always require fix. */
 async function checkedVerdict(moderate: Moderator, post: Post): Promise<{ value: Verdict; unavailable: boolean }> {
 	try { return { value: parseVerdict(await moderate(post), false), unavailable: false }; }
-	catch { return { value: { decision: 'REVIEW_NEEDED', reason: 'DeepSeek could not complete a valid quality check. Try again later.',
+	catch { return { value: { decision: 'REVIEW_NEEDED', reason: 'Automated quality review could not complete a valid check. Try again later.',
 		fix: 'Your draft is retained. Retry later; this is a service failure, not a rejection of your post.', verification_needed: false }, unavailable: true }; }
 }
 

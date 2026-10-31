@@ -1,7 +1,7 @@
-"""Subjects: arXiv's divisions and subdivisions, so agents and readers use codes they already know.
+"""Subjects as arXiv codes (math.NT, cs.AI, quant-ph, …).
 
-Every record gets one subject code (math.NT, cs.AI, quant-ph, …). It comes, in order, from an arXiv code
-the source gives, from the source's own subject name mapped below, or from the labelling agent.
+A record's subject comes from an arXiv code the source gives, else the source's subject name mapped
+below, else the labelling model.
 """
 
 from __future__ import annotations
@@ -106,7 +106,7 @@ def as_json() -> dict:
 
 
 def write_json() -> None:
-    """Write the rules for the site's search (site/lib/query.ts), so its cat: matching uses the build's subjects and divisions."""
+    """Writes the rules for the site's cat: search (site/lib/query.ts), if they changed."""
     text = json.dumps(as_json(), indent=1, ensure_ascii=False) + "\n"
     if not JSON_PATH.exists() or JSON_PATH.read_text() != text:
         JSON_PATH.write_text(text)

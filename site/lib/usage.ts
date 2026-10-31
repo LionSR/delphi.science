@@ -1,15 +1,13 @@
-// How the API is used: calls per day, endpoint and client, counted in aggregate. The client is a name
-// read from the user agent (ClaudeBot, ChatGPT-User, python-requests, curl, browser); the endpoint is
-// the route pattern (GET /api/v1/records/{prefix}/{suffix}). No IP address, full user agent or URL is
-// kept. lib/api.ts counted() counts a call; /api/v1/stats and /stats show the counts.
+// Aggregate API call counts per UTC day, route pattern (GET /api/v1/records/{prefix}/{suffix}) and client
+// name read from the user agent (ClaudeBot, python-requests, browser). No IP, full user agent or URL is kept.
+// lib/api.ts counted() counts a call; /api/v1/stats and /stats show the counts.
 import type { Db } from './query.ts';
 import { operations } from './openapi.ts';
 
 export type Kind = 'ai' | 'search' | 'bot' | 'tool' | 'browser' | 'other';
 
-// AI assistants, their crawlers and search engines, found anywhere in the user agent (they often sit
-// inside a browser-like one: "Mozilla/5.0 … compatible; ChatGPT-User/1.0; +https://openai.com/bot").
-// The first match, in this order, names the client.
+// AI assistants, crawlers and search engines, found anywhere in the user agent (often inside a
+// browser-like one: "Mozilla/5.0 … compatible; ChatGPT-User/1.0; +https://openai.com/bot").
 const KNOWN: [Kind, string[]][] = [
 	['ai', ['Claude-User', 'Claude-SearchBot', 'ClaudeBot', 'Claude-Web', 'claude-code', 'anthropic-ai',
 		'ChatGPT-User', 'OAI-SearchBot', 'GPTBot', 'codex',
@@ -22,16 +20,15 @@ const KNOWN: [Kind, string[]][] = [
 ];
 const KINDS = new Map(KNOWN.flatMap(([kind, names]) => names.map((name) => [name, kind] as const)));
 const TOOLS = ['curl', 'python-requests', 'python-urllib', 'python-httpx', 'go-http-client', 'node', 'wget', 'axios', 'postmanruntime'];
-// Never retain an arbitrary caller-supplied token: it may contain a name, email, key or unique ID.
+// Only these names are stored: an arbitrary token could hold a name, email, key or unique ID.
 export const CLIENTS = [...KINDS.keys(), ...TOOLS, 'browser', 'none', 'other'];
-// Source checks and edits use the existing private attempt audit. Their aggregate categories are not in
-// the deployed SQL allowlist; no schema/collection activation is implied.
+// Source checks and edits are not counted: the database's endpoint allowlist does not include them.
 export const ENDPOINTS = [...operations.filter((o) => !['checkPublicSources', 'editPost'].includes(o.operationId)).map((o) => `${o.method} ${o.path}`),
 	'GET /api/v1', 'GET /api/v1/openapi.json', 'GET /llms.txt', 'POST /mcp',
 	'GET /id/{prefix}/{suffix}', 'GET /sitemap.xml', 'GET /sitemap/{file}'];
 export const RETENTION_DAYS = 90;
 
-// Collection and irreversible retention cleanup require separate, explicit activation.
+// Collection and retention cleanup are each off unless enabled by environment variable.
 export const collectionEnabled = (env = process.env) => env.ORI_USAGE_ANALYTICS_ENABLED === 'true' && env.VERCEL_ENV !== 'preview';
 export const retentionEnabled = (env = process.env) => collectionEnabled(env) && env.ORI_USAGE_RETENTION_ENABLED === 'true';
 
@@ -68,7 +65,7 @@ export async function pruneUsage(db: Db) {
 /** Counts one call: today's (UTC) row for this endpoint and client goes up by one. */
 export async function countCall(db: Db, endpoint: string, name: string) {
 	if (!collectionEnabled()) return;
-	if (!ENDPOINTS.includes(endpoint)) return; // never write a resolved path, query, unknown route or method
+	if (!ENDPOINTS.includes(endpoint)) return;
 	const safeClient = CLIENTS.includes(name) ? name : 'other';
 	await pruneUsage(db);
 	await db.query(

@@ -1,4 +1,4 @@
-// Ephemeral Postgres, neutral scientific text and scripted verdicts only; no real provider or public database.
+// Moderation on every posting path, on ephemeral Postgres with scripted verdicts.
 import { strict as assert } from 'node:assert';
 import { readdirSync, readFileSync } from 'node:fs';
 import { registerHooks } from 'node:module';

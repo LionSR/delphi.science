@@ -1,4 +1,4 @@
-// site/openapi.json, the static copy of the OpenAPI document that test_index.py reads, matches lib/openapi.ts.
+// site/openapi.json (read by test_index.py) matches lib/openapi.ts.
 import { strict as assert } from 'node:assert';
 import { readFileSync } from 'node:fs';
 import { test } from 'node:test';

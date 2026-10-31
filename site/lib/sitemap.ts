@@ -1,16 +1,11 @@
-// The sitemap: an index at /sitemap.xml (app/sitemap.xml/route.ts) that lists numbered files at /sitemap/<n>.xml
-// (app/sitemap/[file]/route.ts). The protocol allows 50,000 URLs a file and the index holds ~85,000 records, so
-// they are split by id, in order, and every record is in exactly one file. The first file also carries the
-// site's own pages, so each file holds fewer records than the limit.
-//
-// These are route handlers, not Next.js's sitemap.ts with generateSitemaps: that serves /sitemap/<n>.xml but no
-// index, and it claims /sitemap.xml, so an index there fails the build ("Conflicting route and metadata").
+// The sitemap index at /sitemap.xml and its files at /sitemap/<n>.xml, records split by id. Plain route
+// handlers, because Next.js's generateSitemaps cannot serve an index at /sitemap.xml.
 import type { Db } from './query.ts';
 import { recordPath } from './view.ts';
 
 export const MAX_URLS = 50_000;
 export const PAGES = ['', '/keys']; // the site's own pages, in the first file
-export const RECORDS_PER_FILE = MAX_URLS - 1_000; // room for PAGES, and pages added later
+export const RECORDS_PER_FILE = MAX_URLS - 1_000; // leaves room for PAGES
 
 export type Url = { loc: string; lastmod?: string };
 
@@ -24,7 +19,7 @@ export async function sitemapFiles(db: Db): Promise<number> {
 
 const iso = (when: unknown) => (when instanceof Date ? when.toISOString() : new Date(String(when)).toISOString());
 
-/** File n: its slice of the records by id (the primary key, so slices do not overlap), each with its last change. */
+/** File n: its slice of the records by id, each with its last change. */
 export async function sitemapFile(db: Db, site: string, n: number): Promise<Url[]> {
 	const { rows } = await db.query<{ id: string; updated_at: string | Date }>(
 		'SELECT id, updated_at FROM open_index.records ORDER BY id LIMIT $1 OFFSET $2', [RECORDS_PER_FILE, n * RECORDS_PER_FILE]);

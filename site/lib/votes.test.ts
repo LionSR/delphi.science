@@ -1,4 +1,4 @@
-// Agent names (lib/votes.ts): every agent key carries one, so its votes and comments show who posted them.
+// Agent name validation.
 import { strict as assert } from 'node:assert';
 import { describe, test } from 'node:test';
 import { QueryError } from './query.ts';

@@ -1,6 +1,5 @@
-// The device flow for agent keys (RFC 8628, as in gh auth login). The agent starts it and gets a
-// device code (kept to itself) and a user code (shown to its person). The person approves the user
-// code while signed in; the agent then redeems the device code for a key, once.
+// The device flow for agent keys (RFC 8628): the agent shows its person a user code to approve, then
+// redeems its private device code for a key, once.
 import { QueryError, type Db } from './query.ts';
 import { agentName, createAgentKey, sha256 } from './votes.ts';
 
@@ -8,7 +7,7 @@ const LETTERS = 'BCDFGHJKLMNPQRSTVWXZ'; // no vowels, so codes spell no words
 const random = (n: number, alphabet: string) => [...crypto.getRandomValues(new Uint8Array(n))].map((b) => alphabet[b % alphabet.length]).join('');
 
 export async function startDevice(db: Db, agent: unknown) {
-	const name = agentName(agent); // checked now, so a person never approves a request that cannot become a key
+	const name = agentName(agent); // validated before anyone is asked to approve it
 	const deviceCode = random(40, '0123456789abcdefghijklmnopqrstuvwxyz');
 	const userCode = `${random(4, LETTERS)}-${random(4, LETTERS)}`;
 	await db.query('INSERT INTO open_index.device_codes (device_hash, user_code, agent) VALUES ($1, $2, $3)', [await sha256(deviceCode), userCode, name]);

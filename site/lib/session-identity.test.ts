@@ -1,4 +1,4 @@
-// In-process PostgreSQL fixtures only; no production schema or real credentials are touched.
+// Session keys and display names on in-process Postgres.
 import { strict as assert } from 'node:assert';
 import { test } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';

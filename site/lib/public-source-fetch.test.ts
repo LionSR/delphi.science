@@ -3,7 +3,7 @@ import { strict as assert } from 'node:assert';
 import { Agent } from 'node:https';
 import { createHash } from 'node:crypto';
 import { test } from 'node:test';
-import { boundedHttps, canonicalSource, isPublicIPv4, retrieveSource, SourceInputError,
+import { boundedHttps, canonicalSource, MAX_METADATA_BYTES, publicWebTarget, readPublicWeb, isPublicIPv4, retrieveSource, SourceInputError,
   type Connector, type SourceResponse, type SourceTarget, type SourceTransport } from './public-source-fetch.ts';
 
 const commit = 'a'.repeat(40), rootTree = 'b'.repeat(40), notesTree = 'c'.repeat(40);
@@ -296,4 +296,21 @@ test('all Git calls share a caller deadline, including a stalled later metadata 
   now = 0;
   await assert.rejects(boundedHttps(canonicalSource(doc), { deadlineMs: 10, now: () => now, resolve4: async () => ['8.8.8.8'], connect: async () => ({ status: 200, headers: {}, body: (async function* () { while (true) { now++; yield new Uint8Array(); } })() }) }), /deadline/i);
   assert.ok(now <= 10);
+});
+
+
+test('web intake preserves DNS, redirect, secret and response-size guards', async () => {
+ const url = 'https://xiaoliangqi.github.io/blog/posts/what-is-life/', target = publicWebTarget(url); let sockets = 0;
+ for (const ips of [['127.0.0.1'], ['169.254.169.254'], ['8.8.8.8', '10.0.0.1']]) await assert.rejects(boundedHttps(target, { resolve4: async () => ips, connect: async () => { sockets++; return wire(); } }));
+ assert.equal(sockets, 0);
+ for (const location of ['https://127.0.0.1/private', 'https://other.example.org/page', url + '?token=secret', 'http://xiaoliangqi.github.io/page']) {
+  let hops = 0;
+  await assert.rejects(boundedHttps(target, { resolve4: async () => ['8.8.8.8'], connect: async () => { hops++; return wire(302, { location }); } }));
+  assert.equal(hops, 1);
+ }
+ let lookups = 0;
+ await assert.rejects(boundedHttps(target, { resolve4: async () => ++lookups === 1 ? ['8.8.8.8'] : ['192.168.0.1'], connect: async () => wire(302, { location: '/moved' }) }));
+ assert.equal(lookups, 2);
+ for (const input of ['http://example.org/page', 'https://reader:secret@example.org/page', url + '?token=secret', 'https://127.1/page', 'https://jaigp.org/paper/1']) assert.throws(() => publicWebTarget(input));
+ for (const body of ['<title>Research</title><meta name="citation_publication_date" content="2026-02-31"><p>A research description.</p>', '<title>Research</title>' + 'x'.repeat(MAX_METADATA_BYTES), '<title>Research</title><p>oik_' + 'a'.repeat(48) + '</p>']) await assert.rejects(readPublicWeb(url, async t => ({ status: 200, url: t.requestUrl, headers: { 'content-type': 'text/html' }, body: bytes(body) })));
 });

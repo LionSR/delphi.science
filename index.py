@@ -82,9 +82,6 @@ CATEGORIES = {
     "harmful": "Hidden: flagged content",
 }
 MAX_ADDS_PER_DAY = 20  # per GitHub login; the only limit on who may post
-# A repository is listed on its own only when it is well used or citable: this many stars, or a CITATION.cff.
-# Otherwise its paper is the record (site/lib/resolve.ts MIN_STARS says the same).
-MIN_REPO_STARS = 50
 
 
 load = store.load
@@ -134,8 +131,6 @@ def listed_as(entry: dict[str, Any], known: set[str], repos: dict[str, str]) -> 
 def check(entry: dict[str, Any]) -> list[str]:
     """The hard checks. Anything that passes them is posted; the agent's label does the rest."""
     problems = []
-    if entry["source"] == "github" and entry.get("stars", 0) < MIN_REPO_STARS and not entry.get("citation_cff"):
-        problems.append(f"a repository is listed only with at least {MIN_REPO_STARS} stars or a CITATION.cff; add its paper instead")
     known = {rid(entry)} if store.get(rid(entry)) else set()
     listed = listed_as(entry, known, app_repos())
     if listed:

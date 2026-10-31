@@ -14,6 +14,7 @@ import contextlib
 import io
 import json
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -101,6 +102,27 @@ class Detect(unittest.TestCase):
             S.detect("not a url")
 
 
+class BoundedWeb(unittest.TestCase):
+    def test_web_bridge_starts_without_npm_packages_on_a_clean_runner(self) -> None:
+        with tempfile.TemporaryDirectory() as raw:
+            clean = Path(raw)
+            for file in ["scripts/read-web.ts", "lib/public-source-fetch.ts"]:
+                target = clean / "site" / file
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(SITE / file, target)
+            (clean / "site/package.json").write_text('{"type":"module"}')
+            result = subprocess.run(["node", "--experimental-strip-types", "site/scripts/read-web.ts"], cwd=clean,
+                                    input='{"url":"https://127.0.0.1/private"}', text=True, capture_output=True, timeout=12)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertEqual(json.loads(result.stdout), {"error": "unavailable"})
+
+    def test_web_refresh_uses_the_bridge_without_renaming_existing_records(self) -> None:
+        data = {"source": "web", "key": "canonical", "url": "https://example.org/paper", "title": "Research"}
+        with patch.object(S.subprocess, "run", return_value=subprocess.CompletedProcess([], 0, json.dumps(data), "")) as run:
+            self.assertEqual(S.Web().refetch({**data, "key": "historical"})["key"], "historical")
+            self.assertEqual(run.call_args.kwargs["timeout"], 12)
+
+
 class Checks(Stored):
     def entry(self, **kw: object) -> dict:
         return {"key": "o__r", "source": "github", "url": "https://github.com/o/r", "title": "r", "stars": 120, **kw}
@@ -108,9 +130,9 @@ class Checks(Stored):
     def test_new_entry_passes(self) -> None:
         self.assertEqual(index.check(self.entry()), [])
 
-    def test_repository_needs_stars_or_a_citation_file(self) -> None:
-        self.assertIn("CITATION.cff", index.check(self.entry(stars=3))[0])
-        self.assertEqual(index.check(self.entry(stars=3, citation_cff=True)), [])
+    def test_repository_does_not_need_stars_or_a_citation_file(self) -> None:
+        self.assertEqual(index.check(self.entry(stars=0)), [])
+        self.assertEqual(index.check(self.entry(stars=0, citation_cff=True)), [])
 
     def test_duplicate_is_rejected(self) -> None:
         index.save(Ref("github/o__r"), self.entry())

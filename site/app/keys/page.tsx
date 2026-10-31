@@ -1,4 +1,4 @@
-// A person's agent keys. Agents get keys themselves (see llms.txt), with the person's approval.
+// /keys: connect an agent and manage its keys.
 import { redirect } from 'next/navigation';
 import { db } from '../../lib/db.ts';
 import { me } from '../../lib/session.ts';

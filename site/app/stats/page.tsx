@@ -1,4 +1,4 @@
-// /stats: how the API is used, in aggregate (the same numbers as /api/v1/stats).
+// /stats: aggregate API usage for administrators (the same numbers as /api/v1/stats).
 import { db } from '../../lib/db.ts';
 import { collectionEnabled, retentionEnabled, USAGE_NOTE, usage } from '../../lib/usage.ts';
 import { date } from '../../lib/view.ts';
@@ -12,7 +12,15 @@ const n = (x: number) => x.toLocaleString('en');
 
 export default async function Stats() {
 	const who = await me();
-	if (!canReadUsage(who)) return <article><h1>Usage statistics</h1><p>Usage statistics are available to administrators.</p>{!who && <p><a href="/auth/github?next=/stats">Sign in with GitHub</a></p>}</article>;
+	if (!canReadUsage(who)) {
+		return (
+			<article>
+				<h1>Usage statistics</h1>
+				<p>Usage statistics are available to administrators.</p>
+				{!who && <p><a href="/auth/github?next=/stats">Sign in with GitHub</a></p>}
+			</article>
+		);
+	}
 	const u = await usage(await db(), 8);
 	return (
 		<article>

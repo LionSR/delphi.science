@@ -1,5 +1,4 @@
-// POST /api/v1/forum/<id>/vote {"post": <post id>, "value": 1 | -1 | 0}: vote on the question or an answer
-// (0 takes the vote back). One vote per person, their agents included; never on your own post (votePost).
+// POST /api/v1/forum/<id>/vote {"post": <post id>, "value": 1 | -1 | 0}: vote on a post; 0 removes the vote (votePost).
 import { db } from '../../../../../../lib/db.ts';
 import { votePost } from '../../../../../../lib/forum.ts';
 import { operation } from '../../../../../../lib/operation.ts';

@@ -1,32 +1,36 @@
 'use server';
-// What people do on the site: submit links, vote, comment, post in the forum, sign out, and approve or
-// revoke their agents.
+// Server actions behind the site's forms.
+import { revalidatePath } from 'next/cache';
 import { cookies, headers } from 'next/headers';
 import { redirect } from 'next/navigation';
-import { comment, post } from '../lib/comments.ts';
 import { db } from '../lib/db.ts';
-import { accept, startTopic, votePost } from '../lib/forum.ts';
+import { approveDevice, denyDevice } from '../lib/device.ts';
+import { editPost } from '../lib/edit-post.ts';
+import { accept, votePost } from '../lib/forum.ts';
+import { postFeedback, type PostFeedback, type PostFormState } from '../lib/post-feedback.ts';
+import { submitPostForm, type PostInput } from '../lib/post-form-submit.ts';
 import { QueryError } from '../lib/query.ts';
 import { COOKIE, me, safeNext } from '../lib/session.ts';
-import { submit } from '../lib/submit.ts';
-import { recordPath } from '../lib/view.ts';
-import { approveDevice, denyDevice } from '../lib/device.ts';
-import { myVotes, revokeKey, unvote, vote } from '../lib/votes.ts';
-import { postFeedback, type PostFormState } from '../lib/post-feedback.ts';
-import { submitPostForm, type PostInput } from '../lib/post-form-submit.ts';
-import { checkPublicSources, type CheckBatch } from '../lib/public-source-checks.ts';
 import { requireSourceCheckOrigin } from '../lib/source-check-origin.ts';
-import type { PostFeedback } from '../lib/post-feedback.ts';
-import { revalidatePath } from 'next/cache';
-import { editPost } from '../lib/edit-post.ts';
+import { recordPath } from '../lib/view.ts';
+import { myVotes, revokeKey, unvote, vote } from '../lib/votes.ts';
+
+const KINDS: PostInput['kind'][] = ['question', 'answer', 'comment', 'record', 'submission'];
 
 const signedIn = async (back: string) => (await me()) ?? redirect(`/auth/github?next=${encodeURIComponent(back)}`);
-const withNotice = (back: string, e: unknown) => {
-	if (!(e instanceof QueryError)) throw e;
-	return `${back}${back.includes('?') ? '&' : '?'}notice=${encodeURIComponent(e.message)}`;
-};
 
-/** The session supplies the owner; the client can only propose a body and its base revision. */
+// Runs a form action and redirects back, with a QueryError's message as ?notice=.
+async function thenBack(back: string, act: () => Promise<unknown>) {
+	let to = back;
+	try {
+		await act();
+	} catch (e) {
+		if (!(e instanceof QueryError)) throw e;
+		to = `${back}${back.includes('?') ? '&' : '?'}notice=${encodeURIComponent(e.message)}`;
+	}
+	redirect(to);
+}
+
 export async function savePostEdit(input: { id: number; body: string; revision: string }): Promise<{ ok: boolean; feedback?: PostFeedback }> {
 	try {
 		const who = await me();
@@ -36,114 +40,64 @@ export async function savePostEdit(input: { id: number; body: string; revision: 
 		if (saved.topic_id) revalidatePath('/forum');
 		revalidatePath(`/u/${encodeURIComponent(who.login)}`);
 		return { ok: true };
-	} catch (error) { return { ok: false, feedback: postFeedback(error) }; }
+	} catch (error) {
+		return { ok: false, feedback: postFeedback(error) };
+	}
 }
 
-/** Failed checks return structured feedback in-place; the client retains the author's draft. */
 export async function sendPost(_previous: PostFormState, form: FormData): Promise<PostFormState> {
 	const kind = String(form.get('kind')) as PostInput['kind'];
-	if (!['question', 'answer', 'comment', 'record', 'submission'].includes(kind)) return { status: 'failed', feedback: {
-		code: 'bad_request', message: 'Choose a question, answer, comment or review form.', fix: 'Open the relevant thread and try again.' } };
+	if (!KINDS.includes(kind)) {
+		return { status: 'failed', feedback: { code: 'bad_request', message: 'Choose a question, answer, comment or review form.', fix: 'Open the relevant thread and try again.' } };
+	}
 	try {
 		const who = await me();
 		if (!who) return { status: 'failed', feedback: { code: 'sign_in', message: 'Sign in with GitHub before posting.', fix: 'Your draft is retained. Sign in, review it, then submit.' } };
-		if (kind === 'record' && form.get('retrieve_sources') === 'on') requireSourceCheckOrigin((await headers()).get('origin'), true);
-		const location = await submitPostForm(await db(), who, { kind, title: String(form.get('title') ?? ''), body: String(form.get('body') ?? ''),
+		const retrieveSources = form.get('retrieve_sources') === 'on';
+		if (kind === 'record' && retrieveSources) requireSourceCheckOrigin((await headers()).get('origin'), true);
+		const location = await submitPostForm(await db(), who, {
+			kind,
+			title: String(form.get('title') ?? ''),
+			body: String(form.get('body') ?? ''),
 			topic: form.has('topic') ? Number(form.get('topic')) : undefined,
 			parent: form.has('parent') ? Number(form.get('parent')) : undefined,
-			record: form.has('record') ? String(form.get('record')) : undefined, review: form.get('review') === 'on', retrieveSources: form.get('retrieve_sources') === 'on' });
+			record: form.has('record') ? String(form.get('record')) : undefined,
+			review: form.get('review') === 'on',
+			retrieveSources,
+		});
 		revalidatePath(location.split('#')[0]);
 		if (kind === 'question') revalidatePath('/forum');
 		return { status: 'posted', location };
-	} catch (error) { return { status: 'failed', feedback: postFeedback(error) }; }
+	} catch (error) {
+		return { status: 'failed', feedback: postFeedback(error) };
+	}
 }
 
-/** An explicit preflight batch; no draft body, posting operation, model call or client verification token. */
-export async function checkRecordSources(input: { record: string; urls: string[] }): Promise<{ ok: boolean; batch?: CheckBatch; feedback?: PostFeedback }> {
-	try {
-		requireSourceCheckOrigin((await headers()).get('origin'), true);
-		const who = await me();
-		if (!who) return { ok: false, feedback: { code: 'sign_in', message: 'Sign in before checking public sources.', fix: 'Your draft stays in this form. Sign in and explicitly check its sources.' } };
-		if (!input || typeof input !== 'object' || Array.isArray(input) || Object.keys(input).sort().join(',') !== 'record,urls' || typeof input.record !== 'string') throw new QueryError('Send a record and public source URL list.', 'Client text, verified flags and preflight results are not accepted as source evidence.');
-		return { ok: true, batch: await checkPublicSources(await db(), who, input.record, input.urls) };
-	} catch (error) { return { ok: false, feedback: postFeedback(error) }; }
-}
-
-/** ▲ or ▼. Clicking the vote you already gave takes it back; an emoji or note you left is kept. */
+/** Clicking the vote you already gave takes it back; an emoji or note you left is kept. */
 export async function voteOn(form: FormData) {
-	const id = String(form.get('id')), value = Number(form.get('value')) === -1 ? -1 : 1, back = safeNext(form.get('back'));
+	const id = String(form.get('id'));
+	const value = Number(form.get('value')) === -1 ? -1 : 1;
+	const back = safeNext(form.get('back'));
 	const who = await signedIn(back);
 	const d = await db();
 	const mine = (await myVotes(d, who.login, [id])).get(id);
-	let to = back;
-	try {
-		if (mine?.value === value && !mine.emoji) await unvote(d, id, who);
-		else await vote(d, id, who, { value: mine?.value === value ? undefined : value, emoji: mine?.emoji ?? undefined, note: mine?.note ?? undefined });
-	} catch (e) { to = withNotice(back, e); }
-	redirect(to);
+	await thenBack(back, () => mine?.value === value && !mine.emoji
+		? unvote(d, id, who)
+		: vote(d, id, who, { value: mine?.value === value ? undefined : value, emoji: mine?.emoji ?? undefined, note: mine?.note ?? undefined }));
 }
 
-export async function commentOn(form: FormData) {
-	const id = String(form.get('id')), back = safeNext(form.get('back'));
-	const who = await signedIn(back);
-	let to = back;
-	try {
-		await comment(await db(), id, who, { body: String(form.get('body') ?? ''), review: form.get('review') === 'on' });
-	} catch (e) { to = withNotice(back, e); }
-	redirect(to);
-}
-
-/** Adds a link. The record opens on its page; a refused link comes back to the submit page with the reason. */
-export async function submitLink(form: FormData) {
-	const who = await signedIn('/submit');
-	let to: string;
-	try {
-		const r = await submit(await db(), String(form.get('url') ?? ''), who);
-		to = `${recordPath(r.id)}?notice=${encodeURIComponent(r.message)}`;
-	} catch (e) { to = withNotice('/submit', e); }
-	redirect(to);
-}
-
-export async function newTopic(form: FormData) {
-	const who = await signedIn('/forum');
-	let to: string;
-	try {
-		to = `/forum/${(await startTopic(await db(), who, { title: String(form.get('title') ?? ''), body: String(form.get('body') ?? '') })).id}`;
-	} catch (e) { to = withNotice('/forum', e); }
-	redirect(to);
-}
-
-export async function replyTo(form: FormData) {
-	const topic = Number(form.get('topic')), back = `/forum/${topic}`;
-	const who = await signedIn(back);
-	const parent = form.get('parent') ? Number(form.get('parent')) : undefined;
-	let to = back;
-	try {
-		await post(await db(), { topic }, who, { body: String(form.get('body') ?? ''), parent });
-	} catch (e) { to = withNotice(back, e); }
-	redirect(to);
-}
-
-/** ▲ or ▼ on a question or an answer. Clicking the vote you already gave takes it back. */
+/** Clicking the vote you already gave takes it back. */
 export async function votePostOn(form: FormData) {
 	const topic = Number(form.get('topic')), back = `/forum/${topic}`;
 	const who = await signedIn(back);
 	const value = Number(form.get('value')), mine = Number(form.get('mine') ?? 0);
-	let to = back;
-	try {
-		await votePost(await db(), topic, Number(form.get('post')), who, value === mine ? 0 : value);
-	} catch (e) { to = withNotice(back, e); }
-	redirect(to);
+	await thenBack(back, async () => votePost(await db(), topic, Number(form.get('post')), who, value === mine ? 0 : value));
 }
 
 export async function acceptOn(form: FormData) {
 	const topic = Number(form.get('topic')), back = `/forum/${topic}`;
 	const who = await signedIn(back);
-	let to = back;
-	try {
-		await accept(await db(), topic, Number(form.get('post')), who);
-	} catch (e) { to = withNotice(back, e); }
-	redirect(to);
+	await thenBack(back, async () => accept(await db(), topic, Number(form.get('post')), who));
 }
 
 export async function signOut() {
@@ -157,9 +111,7 @@ export async function signOut() {
 export async function approve(form: FormData) {
 	const code = String(form.get('code') ?? ''), back = `/keys/approve?code=${encodeURIComponent(code)}`;
 	const who = await signedIn(back);
-	let to = back;
-	try { await approveDevice(await db(), code, who.login); } catch (e) { to = withNotice(back, e); }
-	redirect(to);
+	await thenBack(back, async () => approveDevice(await db(), code, who.login));
 }
 
 export async function deny(form: FormData) {

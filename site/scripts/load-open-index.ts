@@ -1,8 +1,6 @@
-// Loads a build of the open index (dist/index.json) into Supabase Postgres.
+// Loads dist/index.json into Supabase Postgres, writing only new and changed records (lib/load.ts).
 //
 //   SUPABASE_DB_URL=postgres://… node --experimental-strip-types scripts/load-open-index.ts [path/to/index.json]
-//
-// Only new and changed records are written (lib/load.ts); the daily workflow runs this after the build.
 import { readFileSync } from 'node:fs';
 import postgres from 'postgres';
 import { load } from '../lib/load.ts';

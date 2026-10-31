@@ -1,9 +1,5 @@
-# The open index's daily pull, as SciRate pulls arXiv each day: harvest every enabled job in
-# harvest.json, read the stalest entries again from their sources, read every discussion link again
-# (a deleted post drops out), label the new records, build, and load the build into Supabase Postgres.
-# The entries live in Supabase (open_index.entries, store.py), so nothing is committed.
-# Secrets: SUPABASE_DB_URL, the database. Labels come from DeepSeek, with the key the site's moderator
-# uses: the secret deepseek_api_key in Supabase Vault (or DEEPSEEK_API_KEY).
+# Daily: harvest, refresh stale entries, recheck discussion links, label new records (DeepSeek, optional),
+# build, and load into Supabase Postgres. Entries live in Supabase, so nothing is committed.
 name: Open index
 
 on:
@@ -41,9 +37,9 @@ jobs:
       - name: Harvest
         run: python3 index.py harvest
       - name: Refresh the stalest entries
-        run: python3 index.py refresh  # 200 a day, each read again once it is a week old
+        run: python3 index.py refresh  # up to 200 entries older than a week
       - name: Recheck discussion links
-        run: python3 index.py discuss --recheck  # a deleted post drops out within a day
+        run: python3 index.py discuss --recheck  # drops deleted posts
       - name: Check optional DeepSeek labeling configuration
         id: label_config
         run: |
@@ -63,7 +59,7 @@ jobs:
       - name: Label new records
         id: label
         if: steps.label_config.outputs.enabled == 'true'
-        continue-on-error: true # optional labels must not block independent metadata build/load
+        continue-on-error: true # labeling failure must not block build and load
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: python3 index.py label

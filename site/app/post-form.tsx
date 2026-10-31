@@ -10,9 +10,15 @@ import copy from '../lib/post-copy.json';
 type Props = { kind: 'question' | 'answer' | 'comment' | 'record' | 'submission'; owner: string; topic?: number; parent?: number; record?: string;
 	back: string; label: string; placeholder: string; button: string; rows?: number };
 const initial: PostFormState = { status: 'idle' };
+const TITLES: Record<string, string> = {
+	moderation_review_needed: copy.reviewTitle,
+	moderation_rejected: copy.revisionTitle,
+	moderation_unavailable: copy.unavailableTitle,
+	posting_unconfirmed: copy.serverTitle,
+};
 
 export function PostForm(props: Props) {
-	// A new author/thread gets new action and effect state; no old draft or success may touch that context.
+	// Remount for a new author or thread so no draft or result carries over.
 	return <Composer key={JSON.stringify([props.owner, props.kind, props.record, props.topic, props.parent])} {...props} />;
 }
 
@@ -26,8 +32,11 @@ function Composer({ kind, owner, topic, parent, record, back, label, placeholder
 	const formKey = `${kind}:${record ?? topic ?? 'new'}:${parent ?? 'root'}`;
 	const login = `/auth/github?next=${encodeURIComponent(back)}`;
 	useEffect(() => {
-		try { const restored = restoreDraft(sessionStorage, formKey, owner); setDraft(restored.draft); setAlternate(restored.alternate); }
-		catch { /* private browsing may block sessionStorage */ }
+		try {
+			const restored = restoreDraft(sessionStorage, formKey, owner);
+			setDraft(restored.draft);
+			setAlternate(restored.alternate);
+		} catch { /* sessionStorage may be blocked */ }
 		setReady(true);
 	}, [formKey, owner]);
 	useEffect(() => {
@@ -37,15 +46,19 @@ function Composer({ kind, owner, topic, parent, record, back, label, placeholder
 	useEffect(() => {
 		if (result.status !== 'posted' || !result.location) return;
 		try { clearDraft(sessionStorage, formKey, owner); } catch { /* visible form still clears */ }
-		setDraft(emptyDraft()); setAlternate(undefined);
-		router.push(result.location); router.refresh();
+		setDraft(emptyDraft());
+		setAlternate(undefined);
+		router.push(result.location);
+		router.refresh();
 	}, [result, formKey, owner, router]);
 	const rememberLogin = () => {
-		try { saveDraft(sessionStorage, formKey, owner, draft); markDraftLogin(sessionStorage, formKey, owner); } catch { /* keep current form */ }
+		try {
+			saveDraft(sessionStorage, formKey, owner, draft);
+			markDraftLogin(sessionStorage, formKey, owner);
+		} catch { /* keep current form */ }
 	};
 	const feedback = result.feedback;
-	const title = feedback?.code === 'moderation_review_needed' ? copy.reviewTitle : feedback?.code === 'moderation_rejected' ? copy.revisionTitle : feedback?.code === 'moderation_unavailable' ? copy.unavailableTitle
-		: feedback?.code === 'posting_unconfirmed' ? copy.serverTitle : copy.validationTitle;
+	const title = (feedback && TITLES[feedback.code]) ?? copy.validationTitle;
 	return (
 		<form action={action} className="comment-form tex2jax_ignore" onSubmit={(event) => {
 			if (pending) { event.preventDefault(); return; }

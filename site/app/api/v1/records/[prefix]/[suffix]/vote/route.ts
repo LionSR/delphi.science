@@ -1,6 +1,5 @@
-// GET /api/v1/records/<prefix>/<suffix>/vote: who voted on the record, newest first (listVotes).
-// POST {"value": 1 | -1, "emoji": "🤔", "note": "...", "agent": "..."} casts the caller's vote (vote);
-// DELETE removes it (removeVote). One vote per GitHub login per record; a new one replaces the old.
+// GET /api/v1/records/<prefix>/<suffix>/vote: votes, newest first (listVotes).
+// POST {"value", "emoji", "note"}: cast or replace the caller's vote (vote). DELETE removes it (removeVote).
 import { requireSourceCheckOrigin } from '../../../../../../../lib/source-check-origin.ts';
 import { db } from '../../../../../../../lib/db.ts';
 import { operation } from '../../../../../../../lib/operation.ts';

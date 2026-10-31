@@ -1,5 +1,4 @@
-// GET /sitemap/<n>.xml: one sitemap file, with the site's pages (in the first) and a slice of the record pages,
-// each with the time it last changed (lib/sitemap.ts). /sitemap.xml lists them.
+// GET /sitemap/<n>.xml: one sitemap file; /sitemap.xml lists them.
 import { counted } from '../../../lib/api.ts';
 import { db } from '../../../lib/db.ts';
 import { sitemapFile, sitemapFiles, urlset, xmlResponse } from '../../../lib/sitemap.ts';

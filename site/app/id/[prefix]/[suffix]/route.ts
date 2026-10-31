@@ -1,5 +1,4 @@
-// GET /id/<prefix>/<suffix>: the resolver, as doi.org is for DOIs. Redirects to the record at its
-// source; with Accept: application/json it returns the index's record instead.
+// GET /id/<prefix>/<suffix>: redirects to the record's source, or returns the record for Accept: application/json.
 import { counted, handle } from '../../../../lib/api.ts';
 import { db } from '../../../../lib/db.ts';
 import { get, QueryError } from '../../../../lib/query.ts';

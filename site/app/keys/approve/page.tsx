@@ -1,4 +1,4 @@
-// /keys/approve?code=WDJB-MJHT: a person lets their agent submit, post, vote and comment for them.
+// /keys/approve?code=WDJB-MJHT: approve or deny an agent's device code.
 import { redirect } from 'next/navigation';
 import { db } from '../../../lib/db.ts';
 import { pendingDevice } from '../../../lib/device.ts';

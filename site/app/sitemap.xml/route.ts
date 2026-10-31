@@ -1,4 +1,4 @@
-// GET /sitemap.xml: the sitemap index, listing /sitemap/0.xml, /sitemap/1.xml, … (lib/sitemap.ts).
+// GET /sitemap.xml: the sitemap index.
 import { counted } from '../../lib/api.ts';
 import { db } from '../../lib/db.ts';
 import { sitemapFiles, sitemapIndex, xmlResponse } from '../../lib/sitemap.ts';

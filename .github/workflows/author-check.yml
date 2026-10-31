@@ -1,7 +1,5 @@
-# Vercel deploys a commit of this private repository only when its author is a member of the
-# Vercel team (on Pro, each member is a seat), so every new commit must be authored by one.
-# Co-Authored-By trailers are fine: only the author email is checked. The members' commit
-# emails are the repository variable VERCEL_TEAM_EMAILS (space-separated); without it, the owner.
+# Vercel deploys commits of this private repository only if the author is a Vercel team member.
+# Checks each new commit's author email against VERCEL_TEAM_EMAILS (space-separated; default: the owner).
 name: Commit authors
 
 on:
@@ -13,7 +11,7 @@ permissions:
   contents: read
 
 env:
-  # The owner's address is also the one .github/actions/commit-as-owner commits as.
+  # Same address as .github/actions/commit-as-owner.
   TEAM_EMAILS: ${{ vars.VERCEL_TEAM_EMAILS || '14889516+LionSR@users.noreply.github.com' }}
 
 jobs:
@@ -21,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-        with: # history only: commits without their trees, and no working tree beyond .github
+        with: # commit history only
           fetch-depth: 0
           filter: tree:0
           sparse-checkout: .github
@@ -30,7 +28,7 @@ jobs:
           BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
           HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
         run: |
-          # A new branch or a force push has no usable base: check the pushed commit alone.
+          # New branch or force push: no usable base, so check only the head commit.
           if [ -z "$BASE" ] || ! git cat-file -e "$BASE^{commit}" 2>/dev/null; then range="$HEAD -1"; else range="$BASE..$HEAD"; fi
           bad=$(git log --format='%h %ae %s' $range | awk -v ok=" $TEAM_EMAILS " 'index(ok, " " $2 " ") == 0')
           if [ -n "$bad" ]; then

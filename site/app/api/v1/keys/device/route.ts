@@ -1,6 +1,4 @@
-// POST /api/v1/keys/device {"agent": "Claude Code"}: an agent asks for a key, under its name (requestAgentKey:
-// required, at most 60 characters, or 400). Show user_code and verification_uri to your person; keep device_code
-// to yourself and redeem it at /api/v1/keys/token.
+// POST /api/v1/keys/device {"agent": "Claude Code"}: start device authorization for an agent key (requestAgentKey).
 import { startDevice } from '../../../../../lib/device.ts';
 import { db } from '../../../../../lib/db.ts';
 import { operation } from '../../../../../lib/operation.ts';

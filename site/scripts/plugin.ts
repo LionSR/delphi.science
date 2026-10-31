@@ -1,12 +1,9 @@
-// Packages the ChatGPT and Codex plugin (site/plugin/) as the ZIP to upload in OpenAI's plugin portal.
+// Packages site/plugin/ as dist/open-research-index-plugin.zip for OpenAI's plugin portal. Needs `zip`.
 //
-//   npm run plugin                          # dist/open-research-index-plugin.zip, for the site's host
+//   npm run plugin
 //   SITE_URL=https://example.org npm run plugin
 //
-// The files in plugin/ do not name the host: {{SITE}} in them becomes SITE (lib/view.ts, which reads SITE_URL),
-// so the site and the plugin always point at the same place. Before zipping it checks the portal's rules that
-// can be checked here: names that do not end in MCP or Plugin, at most 3 example prompts of 128 characters,
-// https links. Needs the zip command. TESTING.md is for the portal's test-case form and is not packaged.
+// {{SITE}} in the JSON files becomes SITE (lib/view.ts). The portal's checkable rules are enforced before zipping.
 import { execFileSync } from 'node:child_process';
 import { copyFileSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname } from 'node:path';

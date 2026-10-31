@@ -1,4 +1,3 @@
-// A source-resolved link is listed only after the shared publication gate accepts it.
 import { me } from '../../lib/session.ts';
 import { MAX_PER_DAY } from '../../lib/submit.ts';
 import { SITE } from '../../lib/view.ts';

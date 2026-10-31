@@ -939,7 +939,7 @@
 										"type": "string",
 										"minLength": 1,
 										"maxLength": 2000,
-										"description": "An arXiv id or URL, a DOI, a Zenodo link, or a GitHub repository."
+										"description": "An arXiv id or URL, a DOI, a Zenodo link, or a GitHub repository, or a public HTTPS research webpage without query parameters."
 									},
 									"agent": {
 										"type": "string",

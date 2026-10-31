@@ -14,6 +14,7 @@ import contextlib
 import io
 import json
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -99,6 +100,27 @@ class Detect(unittest.TestCase):
     def test_garbage_is_rejected(self) -> None:
         with self.assertRaises(ValueError):
             S.detect("not a url")
+
+
+class BoundedWeb(unittest.TestCase):
+    def test_web_bridge_starts_without_npm_packages_on_a_clean_runner(self) -> None:
+        with tempfile.TemporaryDirectory() as raw:
+            clean = Path(raw)
+            for file in ["scripts/read-web.ts", "lib/public-source-fetch.ts"]:
+                target = clean / "site" / file
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(SITE / file, target)
+            (clean / "site/package.json").write_text('{"type":"module"}')
+            result = subprocess.run(["node", "--experimental-strip-types", "site/scripts/read-web.ts"], cwd=clean,
+                                    input='{"url":"https://127.0.0.1/private"}', text=True, capture_output=True, timeout=12)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertEqual(json.loads(result.stdout), {"error": "unavailable"})
+
+    def test_web_refresh_uses_the_bridge_without_renaming_existing_records(self) -> None:
+        data = {"source": "web", "key": "canonical", "url": "https://example.org/paper", "title": "Research"}
+        with patch.object(S.subprocess, "run", return_value=subprocess.CompletedProcess([], 0, json.dumps(data), "")) as run:
+            self.assertEqual(S.Web().refetch({**data, "key": "historical"})["key"], "historical")
+            self.assertEqual(run.call_args.kwargs["timeout"], 12)
 
 
 class Checks(Stored):

@@ -103,8 +103,11 @@ export const refused = (v: Verdict, unavailable = false) => new ModerationError(
 		: `Revise the specific issue above, then resubmit. ${v.reason}`));
 
 /** Shared budget/rate guard and audit for submissions, discussions and public vote notes. The raw submitted body is not logged. */
-export async function screen(db: Db, voter: Voter, post: Post, moderate?: Moderator, retrieveSources = false, fetchSource?: SourceRetriever): Promise<Verdict> {
-	const audit = await reserveAttempt(db, voter, post.kind);
+export async function screen(db: Db, voter: Voter, post: Post, moderate?: Moderator, retrieveSources = false, fetchSource?: SourceRetriever, reservedAuditId?: number): Promise<Verdict> {
+	// A reservation can only come from server-side submission preparation.
+	if (reservedAuditId !== undefined && !(await db.query("SELECT id FROM open_index.moderations WHERE id=$1 AND voter=$2 AND kind=$3 AND NOT publish AND reason='REVIEW_NEEDED: check pending'", [reservedAuditId, voter.login, post.kind])).rows.length)
+		throw refused({ decision: 'REVIEW_NEEDED', reason: 'The submission budget reservation is unavailable.', fix: 'Keep your draft and retry later.', verification_needed: false }, true);
+	const audit = reservedAuditId ?? await reserveAttempt(db, voter, post.kind);
 	let checkedSources: CheckBatch | undefined;
 	let v: Verdict;
 	let unavailable = false;

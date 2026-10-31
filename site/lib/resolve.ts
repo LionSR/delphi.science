@@ -2,6 +2,8 @@
 // same rules as the harvester's adapters (sources.py), for the sources the site reads: arXiv, GitHub, DOI
 // and Zenodo. The entry and its id match what `index.py add` stores, so a record the harvester
 // also reaches is the same record, not another one.
+import { createHash } from 'node:crypto';
+import { publicWebTarget, readPublicWeb, RetrievalError, type SourceTransport } from './public-source-fetch.ts';
 import taxonomy from './taxonomy.json' with { type: 'json' };
 import { check, type Entry, type Item } from './schema.ts';
 
@@ -155,16 +157,28 @@ export function detect(link: string): { source: Source; key: string } | null {
 			if (m) return { source, key: source.key ? source.key(m) : m[1] };
 		}
 	}
-	return null;
+	try {
+		const target = publicWebTarget(url);
+		return { source: { name: 'web', patterns: [], read: async () => readPublicWeb(target.canonical) }, key: createHash('sha1').update(target.canonical).digest('hex').slice(0, 12) };
+	} catch { return null; }
 }
 
 /** A link or a bare id (arXiv, DOI, owner/repo), one word. */
 export const looksLikeLink = (link: string) => /^\S{1,2000}$/.test(link.trim());
 
 /** Reads the record's entry from its source. Throws NotFound when it does not exist or is not public. */
-export async function resolve(link: string, fetcher: Fetcher = fetch): Promise<Entry | null> {
+export async function resolve(link: string, fetcher: Fetcher = fetch, webTransport?: SourceTransport): Promise<Entry | null> {
 	const hit = detect(link);
 	if (!hit) return null;
+	if (hit.source.name === 'web') {
+		try {
+			const e = await readPublicWeb(link.trim(), webTransport);
+			check('Entry', e, `web/${e.key}`); return e;
+		} catch (error) {
+			if (error instanceof RetrievalError && error.status === 'not_found') throw new NotFound(link);
+			throw error;
+		}
+	}
 	const get: Get = async (url, accept) => {
 		const headers: Record<string, string> = { 'User-Agent': USER_AGENT, ...(accept ? { Accept: accept } : {}) };
 		if (url.startsWith('https://api.github.com/') && process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;

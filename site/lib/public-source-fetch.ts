@@ -5,7 +5,7 @@ import { resolve4 } from 'node:dns/promises';
 import type { LookupFunction } from 'node:net';
 import { Agent, request, type RequestOptions } from 'node:https';
 
-export type SourceAdapter = 'github' | 'google_doc' | 'drive_folder' | 'x_post';
+export type SourceAdapter = 'github' | 'google_doc' | 'drive_folder' | 'x_post' | 'web';
 export type SourceTarget = {
   canonical: string; adapter: SourceAdapter; requestUrl: string;
   identity: Record<string, string>; phase?: 'github_commit_object' | 'github_tree' | 'github_blob' | 'single';
@@ -40,7 +40,7 @@ export class SourceInputError extends Error {
     super(message); this.fix = fix;
   }
 }
-class RetrievalError extends Error {
+export class RetrievalError extends Error {
   readonly status: Exclude<SourceStatus, 'retrieved'>;
   constructor(status: Exclude<SourceStatus, 'retrieved'>, message: string) { super(message); this.status = status; }
 }
@@ -115,6 +115,17 @@ export function canonicalSource(value: string): SourceTarget {
   throw inputError();
 }
 
+/** Web intake uses the same transport, without enabling arbitrary discussion-source retrieval. */
+export function publicWebTarget(value: string): SourceTarget {
+  const url = inputURL(value);
+  queryOnly(url, {});
+  if (!url.hostname.includes('.') || /^[0-9.]+$/.test(url.hostname) || url.hostname.endsWith('.')
+    || /(?:^|\.)(?:localhost|local|internal|test|invalid)$/.test(url.hostname)
+    || ['github.com', 'api.github.com', 'raw.githubusercontent.com', 'docs.google.com', 'drive.google.com', 'doi.org', 'arxiv.org', 'zenodo.org', 'x.com', 'twitter.com'].includes(url.hostname)
+    || ['vixra.org', 'aixiv.science', 'clawxiv.org', 'jaigp.org'].some(h => url.hostname === h || url.hostname.endsWith(`.${h}`))) throw inputError();
+  return { canonical: url.href, adapter: 'web', requestUrl: url.href, identity: {} };
+}
+
 /** Conservative public IPv4 allowlist: reject every special/private range, not just RFC1918. */
 export function isPublicIPv4(ip: string): boolean {
   const words = ip.split('.');
@@ -126,7 +137,7 @@ export function isPublicIPv4(ip: string): boolean {
     || (a === 198 && (b === 18 || b === 19)) || (a === 198 && b === 51 && c === 100) || (a === 203 && b === 0 && c === 113));
 }
 function preparedRequest(input: SourceTarget): SourceTarget {
-  const base = canonicalSource(input.canonical);
+  const base = input.adapter === 'web' ? publicWebTarget(input.canonical) : canonicalSource(input.canonical);
   if (base.adapter !== input.adapter) throw inputError();
   if (base.adapter === 'github') {
     if (!SHA.test(base.identity.ref)) throw new SourceInputError('Automatic GitHub retrieval requires a full 40-character commit SHA.', 'Use GitHub Copy permalink to obtain a /blob/<full commit SHA>/ URL, then explicitly check it again. Branch URLs can be reviewed separately as historical operator observations.');
@@ -141,6 +152,9 @@ function preparedRequest(input: SourceTarget): SourceTarget {
 }
 function allowedHop(target: SourceTarget, at: URL, initial: URL): boolean {
   if (at.protocol !== 'https:' || at.username || at.password || at.port || at.hash) return false;
+  if (target.adapter === 'web') {
+    try { return at.origin === initial.origin && publicWebTarget(at.href).adapter === 'web'; } catch { return false; }
+  }
   if (target.adapter === 'google_doc') {
     if (at.hostname === 'docs.google.com') return at.pathname === initial.pathname && at.search === initial.search;
     return at.hostname.endsWith('.googleusercontent.com') && /^[a-z0-9.-]+$/.test(at.hostname);
@@ -210,7 +224,7 @@ export async function boundedHttps(input: SourceTarget, options: TransportOption
         if (opts?.all) callback(null, [{ address: pinned, family: 4 }]); else callback(null, pinned, 4);
       }) as LookupFunction;
       const accept = target.adapter === 'github' ? 'application/vnd.github+json'
-        : target.adapter === 'x_post' ? 'application/json' : 'text/plain';
+        : target.adapter === 'x_post' ? 'application/json' : target.adapter === 'web' ? 'text/html' : 'text/plain';
       const agent = new Agent({ keepAlive: false, maxSockets: 1, maxFreeSockets: 0, maxCachedSessions: 0, proxyEnv: {} as NodeJS.ProcessEnv });
       try {
         const response = await abortable(connector({ protocol: 'https:', hostname: at.hostname, servername: at.hostname,
@@ -489,4 +503,29 @@ export async function retrieveSource(input: SourceTarget, transport: SourceTrans
       reason: error instanceof RetrievalError || error instanceof SourceInputError ? error.message : 'The fixed public endpoint could not complete a bounded source check.',
       fix: 'Keep your draft. Use an individual publicly accessible supported source or retry this explicit check later; unavailable material is not evidence that a claim is false.' };
   } finally { clearTimeout(timer); controller.abort(); }
+}
+
+/** Page-reported metadata only; no scripts, child links, credentials or npm packages. */
+export async function readPublicWeb(url: string, transport: SourceTransport = (t, deadlineAt) => boundedHttps(t, { deadlineAt })) {
+  const target = publicWebTarget(url), response = await transport(target, Date.now() + SOURCE_DEADLINE_MS);
+  const html = checkedResponse(response, target);
+  if (contentType(response) !== 'text/html') fail('unsupported_format', 'Use a public HTML research landing page; PDFs and login-required material are unsupported.');
+  const meta = new Map<string, string[]>(); let title = '', titleAt: number | undefined;
+  for (const token of htmlTokens(html)) {
+    if (token.name === 'title' && !token.closing) titleAt = token.end;
+    if (token.name === 'title' && token.closing && titleAt !== undefined) title = inertText(html.slice(titleAt, token.start));
+    if (token.name !== 'meta' || token.closing) continue;
+    const key = (attr(token.raw, 'name') ?? attr(token.raw, 'property'))?.toLowerCase(), value = attr(token.raw, 'content');
+    if (key && value) {
+      const values = meta.get(key) ?? []; if (values.length < 20) values.push(inertText(value)); meta.set(key, values);
+    }
+  }
+  const first = (...keys: string[]) => keys.map(k => meta.get(k)?.[0]).find(Boolean);
+  title = first('citation_title', 'og:title') ?? title;
+  const summary = first('citation_abstract', 'description', 'og:description') ?? inertText(html);
+  const authors = meta.get('citation_author') ?? meta.get('author') ?? [];
+  const published = first('citation_publication_date', 'citation_online_date', 'citation_date', 'article:published_time')?.match(/\d{4}[-/]\d{2}[-/]\d{2}/)?.[0].replaceAll('/', '-');
+  if (!title || !summary) fail('unsupported_format', 'The page needs a source-reported title and research description.');
+  return { source: 'web', key: createHash('sha1').update(target.canonical).digest('hex').slice(0, 12), url: target.canonical,
+    title: short(title, 200), ...(authors.length ? { authors: authors.map(a => short(a, 200)).slice(0, 20) } : {}), summary: short(summary, 600), ...(published ? { published } : {}) };
 }

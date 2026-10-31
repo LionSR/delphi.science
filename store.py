@@ -1,10 +1,7 @@
-"""Postgres store for index entries (open_index.entries).
+"""Postgres store for index entries (open_index.entries), at SUPABASE_DB_URL or DATABASE_URL.
 
-Reads SUPABASE_DB_URL or DATABASE_URL from the environment (tests and CI use a local PGlite instance via
-site/scripts/db.ts). Every save checks optimistic concurrency via the row's version column so concurrent
-harvest/refresh and manual edits cannot overwrite each other; replaced versions are archived in
-open_index.entry_history by a database trigger. All entries are validated against the OpenAPI Entry schema
-before write.
+Saves are checked against the row's version, so concurrent runs cannot overwrite each other, and against
+the Entry schema. A database trigger archives replaced versions in open_index.entry_history.
 """
 
 from __future__ import annotations
@@ -57,8 +54,8 @@ ID_ORDER = 'id COLLATE "C"'
 
 
 def load(where: str = "true", params: Iterable[Any] = (), limit: int | None = None, order: str = ID_ORDER) -> list[tuple[Ref, dict[str, Any]]]:
-    """The entries that match a condition on `entry` (jsonb) or `source`, in id order (or `order`); the first `limit`
-    of them. The order is by bytes, as Python sorts, not by the database's locale, so a build comes out the same anywhere."""
+    """Up to `limit` entries matching a condition on `entry` (jsonb) or `source`, in `order`.
+    The default id order is bytewise, so a build comes out the same whatever the database's locale."""
     rows = conn().execute(f"SELECT id, version, entry FROM open_index.entries WHERE {where} ORDER BY {order} LIMIT %s",
                           [*params, limit])
     return [(Ref(i, v), e) for i, v, e in rows]
@@ -83,7 +80,7 @@ def secret(name: str) -> str | None:
 
 
 def checked(record: str, entry: dict[str, Any]) -> Jsonb:
-    """The entry, ready to store, once it fits the Entry schema and its id: ValueError otherwise."""
+    """The entry as Jsonb; ValueError if it does not fit the Entry schema or its id."""
     schema.check(entry, "Entry", record)
     if record != f"{entry['source']}/{entry['key']}":
         raise ValueError(f"{record} is stored as {entry['source']}/{entry['key']}: an entry's id is <source>/<key>")
@@ -116,6 +113,6 @@ def add_all(entries: list[tuple[str, dict[str, Any]]]) -> int:
 
 
 def added_today(login: str, day: str) -> int:
-    """How many entries a person added on a day (YYYY-MM-DD), on the site or with index.py add."""
+    """How many entries a person added on a day (YYYY-MM-DD)."""
     return conn().execute("SELECT count(*) FROM open_index.entries WHERE entry->>'added_by' = %s AND entry->>'added' = %s",
                           [login, day]).fetchone()[0]

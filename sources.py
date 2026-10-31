@@ -1,19 +1,14 @@
-"""Source adapters for the open index: one class per place a research output can live.
+"""Source adapters: one class per place a research output can live.
 
-Each adapter knows three things about its source:
-
-  match(url)      -> key or None   Is this URL (or bare ID) one of ours? The record id is <source>/<key>.
-  fetch(key)      -> entry         The record's metadata, read from the source itself.
-  harvest(q, n)   -> entries       Up to n records, from a search query or the source's own listing.
-
-Entries are plain dicts, as the Entry schema states them (site/lib/openapi.ts; store.py checks each). Nothing is typed in by hand:
-every field comes from the source. A record that cannot be read raises NotFound or SourceError,
-and no partial entry is ever written.
+Each adapter has match(url) -> key or None, fetch(key) -> entry, and harvest(query, n) -> entries.
+Entries are plain dicts in the shape of the Entry schema (site/lib/openapi.ts). A record that cannot be
+read raises NotFound or SourceError.
 """
 
 from __future__ import annotations
 
 import datetime as dt
+import functools
 import hashlib
 import html
 import json
@@ -42,7 +37,7 @@ class SourceError(Exception):
     """The source answered, but not in the shape this adapter expects."""
 
 
-# ---- HTTP: one request at a time, cached, with a per-host delay ----
+# ---- HTTP: cached, with a per-host delay ----
 
 _last_hit: dict[str, float] = {}
 DELAY = {"data.palomar-registry.org": 0.1, "www.anthropic.com": 1.0, "export.arxiv.org": 3.0, "hexagonmath.org": 0.5}
@@ -90,9 +85,9 @@ def get(url: str, *, accept: str | None = None, cache: bool = True, max_age: flo
     return body
 
 
-def get_json(url: str, **kw: Any) -> Any:
+def get_json(url: str, accept: str = "application/json", **kw: Any) -> Any:
     try:
-        return json.loads(get(url, accept=kw.pop("accept", "application/json"), **kw))
+        return json.loads(get(url, accept=accept, **kw))
     except json.JSONDecodeError:
         raise SourceError(f"{url} did not return JSON") from None
 
@@ -101,8 +96,7 @@ def get_text(url: str, **kw: Any) -> str:
     return get(url, **kw).decode("utf-8", "replace")
 
 
-# ---- Small text helpers ----
-
+# ---- Text helpers ----
 
 # Some sites (ai.viXra) write characters outside the BMP as two UTF-16 halves: &#55349;&#56395;.
 SURROGATE_PAIR = re.compile(r"&#(5[5-6]\d{3});&#(5[6-7]\d{3});")
@@ -176,32 +170,17 @@ def page_meta(url: str) -> MetaParser:
     return p
 
 
-def from_citation_meta(m: MetaParser) -> dict[str, Any]:
-    """Highwire Press citation_* tags, which most scholarly sites (and Google Scholar) use."""
-    one = m.one
-    return {
-        "title": clean(one("citation_title") or one("og:title")),
-        "authors": [clean(a) for a in m.meta.get("citation_author", []) if clean(a)],
-        "summary": trim(one("citation_abstract") or one("og:description") or one("description")),
-        "published": iso_date(one("citation_publication_date") or one("citation_online_date") or one("citation_date")),
-        "pdf": one("citation_pdf_url"),
-    }
-
-
 # ---- Discussion: posts and articles about a record ----
 
-# What a record's page shows under "Discussed elsewhere". Nothing is typed in: an X post comes from
-# X's oEmbed endpoint (free, no key, and X's own way to republish a post), anything else from the
-# page's Open Graph tags. Of an X post only the link, author, handle and day are kept: its text is
-# shown by X's own embed, never copied. A link whose source answers 404 is dropped when the links are
-# rechecked (discuss --recheck, daily), which is how a deleted post or a takedown leaves the index.
+# An X post is read through X's oEmbed endpoint and keeps only link, author, handle and day (X's embed
+# shows the text). Anything else is read from the page's own meta tags.
 OEMBED = "https://publish.twitter.com/oembed"
 X_HOSTS = {"x.com", "www.x.com", "twitter.com", "www.twitter.com", "mobile.twitter.com"}
 LINK_CHARS = 300
 
 
 def parse_oembed(data: dict[str, Any]) -> dict[str, Any]:
-    """An X post from its oEmbed record: who wrote it and the day. Not its text, which X's embed shows."""
+    """An X post from its oEmbed record: who wrote it and the day."""
     h = data.get("html", "")
     when = re.search(r">([A-Z][a-z]+ \d{1,2}, \d{4})</a>\s*</blockquote>", h)
     handle = (data.get("author_url") or "").rstrip("/").rsplit("/", 1)[-1]
@@ -215,15 +194,14 @@ def parse_oembed(data: dict[str, Any]) -> dict[str, Any]:
 
 def passage(page: str, fragment: str) -> tuple[str, str]:
     """What a text-fragment URL (#:~:text=prefix-,start,end,-suffix) points at: (prefix, the page's text from
-    start on). On a page that collects many people's remarks, the prefix names the one quoted, as in
-    #:~:text=Jakob%20Glas-,But%20when%20I%20saw. The fragment is still URL-encoded, so %2C is a literal comma."""
+    start on). The prefix may name the person quoted. The fragment is still URL-encoded, so %2C is a literal comma."""
     text = clean(re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", page, flags=re.S | re.I))
     parts = [urllib.parse.unquote(x) for x in fragment.split(",")]
     prefix = clean(parts.pop(0)[:-1]) if parts[0].endswith("-") else ""
     start = clean(parts[0]) if parts else ""
     low = text.lower()
     after = low.find(prefix.lower()) if prefix else 0
-    i = low.find(start.lower(), after) if start and after >= 0 else -1  # a prefix that is not on the page matches nothing
+    i = low.find(start.lower(), after) if start and after >= 0 else -1
     return (prefix, trim(text[i:], LINK_CHARS)) if i >= 0 else ("", "")
 
 
@@ -256,21 +234,22 @@ def stackexchange(host: str, url: str) -> dict[str, str]:
     q = (data.get("items") or [{}])[0]
     if not q:
         raise NotFound(url)
-    if kind == "answers":  # an answer carries no title: use its question's
-        qq = get_json(f"https://api.stackexchange.com/2.3/questions/{q['question_id']}?site={STACKEXCHANGE[host]}", cache=False)
-        q["title"] = "Answer to: " + ((qq.get("items") or [{}])[0].get("title") or "")
+    if kind == "answers":  # an answer has no title of its own
+        question = get_json(f"https://api.stackexchange.com/2.3/questions/{q['question_id']}?site={STACKEXCHANGE[host]}", cache=False)
+        q["title"] = "Answer to: " + ((question.get("items") or [{}])[0].get("title") or "")
     return stackexchange_item(q)
 
 
 def stackexchange_item(q: dict[str, Any]) -> dict[str, str]:
     """A Stack Exchange API question or answer (filter=withbody) as a link shows it."""
+    created = q.get("creation_date")
     return {"title": clean(q.get("title")), "author": clean((q.get("owner") or {}).get("display_name")),
-            "text": trim(q.get("body"), LINK_CHARS), "date": dt.date.fromtimestamp(q.get("creation_date", 0)).isoformat() if q.get("creation_date") else ""}
+            "text": trim(q.get("body"), LINK_CHARS), "date": dt.date.fromtimestamp(created).isoformat() if created else ""}
 
 
 def discussion_link(url: str) -> dict[str, Any]:
     """The link as the page shows it. Raises NotFound when the post or page is gone. A text-fragment URL
-    (page#:~:text=a%20passage) quotes that passage, and opens the page scrolled to it."""
+    (page#:~:text=a%20passage) quotes that passage."""
     url = url.strip()
     parts = urllib.parse.urlsplit(url)
     host = (parts.hostname or "").lower()
@@ -280,29 +259,41 @@ def discussion_link(url: str) -> dict[str, Any]:
         q = urllib.parse.urlencode({"url": url, "omit_script": "true", "dnt": "true"})
         link = parse_oembed(get_json(f"{OEMBED}?{q}", cache=False))
     else:
-        page = "" if host in STACKEXCHANGE else get_text(urllib.parse.urlunsplit(parts._replace(fragment="")), cache=False)  # Stack Exchange: the API only
-        who, quoted = passage(page, parts.fragment[len(":~:text="):]) if parts.fragment.startswith(":~:text=") else ("", "")
-        if who:  # the link keeps only the passage, which browsers scroll to; the name goes in author
-            url = urllib.parse.urlunsplit(parts._replace(fragment=":~:text=" + parts.fragment.split("-,", 1)[1]))
-        m = MetaParser()
-        m.feed(page)
-        one = m.one
-        video = youtube(url, page) if host in YOUTUBE_HOSTS else stackexchange(host, url) if host in STACKEXCHANGE else {}
-        # citation_author (arXiv, journals) is "Last, First"; shown as "First Last".
-        authors = [" ".join(reversed(clean(a).split(", ", 1))) for a in m.meta.get("citation_author", []) if clean(a)]
-        author = who or ", ".join(authors[:4]) + (" et al." if len(authors) > 4 else "") or clean(one("author") or one("article:author"))
-        # Personal blogs often sign only in the window title: "Post title | Asaf Karagila".
-        byline = re.split(r"\s+[|–—]\s+", clean(m.title))
-        if not author and len(byline) > 1 and byline[-1] != clean(one("og:site_name")):
-            author = byline[-1]
-        link = {
-            "kind": "web", "url": url, "title": video.get("title") or clean(one("citation_title") or one("og:title") or m.title or m.h1),
-            "site": clean(one("og:site_name")) or host.removeprefix("www."), "author": video.get("author") or ("" if "://" in author else author),
-            "text": quoted or video.get("text") or trim(one("og:description") or one("description") or m.p, LINK_CHARS),
-            "date": video.get("date") or iso_date(one("article:published_time") or one("citation_publication_date") or one("citation_date")
-                                                  or one("citation_online_date") or one("date") or one("article:modified_time")),
-        }
+        link = web_link(url, parts, host)
     return {k: v for k, v in link.items() if v}
+
+
+def page_author(m: MetaParser) -> str:
+    """The page's author from its meta tags, or from a window title like "Post title | Asaf Karagila"."""
+    # citation_author (arXiv, journals) is "Last, First"; shown as "First Last".
+    authors = [" ".join(reversed(clean(a).split(", ", 1))) for a in m.meta.get("citation_author", []) if clean(a)]
+    author = ", ".join(authors[:4]) + (" et al." if len(authors) > 4 else "") or clean(m.one("author") or m.one("article:author"))
+    byline = re.split(r"\s+[|–—]\s+", clean(m.title))
+    if not author and len(byline) > 1 and byline[-1] != clean(m.one("og:site_name")):
+        author = byline[-1]
+    return author
+
+
+def web_link(url: str, parts: urllib.parse.SplitResult, host: str) -> dict[str, Any]:
+    # Stack Exchange is read through its API only.
+    page = "" if host in STACKEXCHANGE else get_text(urllib.parse.urlunsplit(parts._replace(fragment="")), cache=False)
+    who, quoted = passage(page, parts.fragment[len(":~:text="):]) if parts.fragment.startswith(":~:text=") else ("", "")
+    if who:  # the URL keeps only the passage; the name goes in author
+        url = urllib.parse.urlunsplit(parts._replace(fragment=":~:text=" + parts.fragment.split("-,", 1)[1]))
+    m = MetaParser()
+    m.feed(page)
+    one = m.one
+    extra = youtube(url, page) if host in YOUTUBE_HOSTS else stackexchange(host, url) if host in STACKEXCHANGE else {}
+    author = who or page_author(m)
+    return {
+        "kind": "web", "url": url,
+        "title": extra.get("title") or clean(one("citation_title") or one("og:title") or m.title or m.h1),
+        "site": clean(one("og:site_name")) or host.removeprefix("www."),
+        "author": extra.get("author") or ("" if "://" in author else author),
+        "text": quoted or extra.get("text") or trim(one("og:description") or one("description") or m.p, LINK_CHARS),
+        "date": extra.get("date") or iso_date(one("article:published_time") or one("citation_publication_date") or one("citation_date")
+                                              or one("citation_online_date") or one("date") or one("article:modified_time")),
+    }
 
 
 # ---- Adapters ----
@@ -392,7 +383,6 @@ class ArXiv(Source):
     name, label = "arxiv", "arXiv"
     patterns = [r"^(?:https?://)?(?:www\.)?arxiv\.org/(?:abs|pdf|html)/([\w./-]+?)(?:v\d+)?(?:\.pdf)?/?$", r"^(?:arXiv:)?(\d{4}\.\d{4,5})(?:v\d+)?$"]
     NS = {"a": "http://www.w3.org/2005/Atom", "x": "http://arxiv.org/schemas/atom"}
-
     PAGE = 1000
 
     def _feed(self, params: str, cache: bool = True) -> tuple[int, list[ET.Element]]:
@@ -403,9 +393,6 @@ class ArXiv(Source):
             raise SourceError(f"arXiv API error for {params}")
         total = int(root.findtext("{http://a9.com/-/spec/opensearch/1.1/}totalResults", "0"))
         return total, [e for e in entries if e.find("a:title", self.NS) is not None]
-
-    def _query(self, params: str) -> list[ET.Element]:
-        return self._feed(params)[1]
 
     def _entry(self, e: ET.Element) -> dict[str, Any]:
         t = lambda p: (e.findtext(p, "", self.NS) or "").strip()  # noqa: E731
@@ -424,7 +411,7 @@ class ArXiv(Source):
         )
 
     def fetch(self, key: str) -> dict[str, Any]:
-        found = self._query(f"id_list={urllib.parse.quote(key)}")
+        _, found = self._feed(f"id_list={urllib.parse.quote(key)}")
         if not found:
             raise NotFound(f"arXiv:{key}")
         return self._entry(found[0])
@@ -434,7 +421,7 @@ class ArXiv(Source):
         start, total = 0, limit
         while start < min(limit, total):
             params = f"search_query={q}&sortBy=submittedDate&sortOrder=descending&start={start}&max_results={min(self.PAGE, limit - start)}"
-            for attempt in range(3):  # the API now and then answers with an error or an empty page: ask again, uncached
+            for attempt in range(3):  # the API sometimes answers with an error or an empty page: retry uncached
                 try:
                     total, page = self._feed(params, cache=attempt == 0)
                 except SourceError:
@@ -507,13 +494,11 @@ class HuggingFace(Source):
 
 
 class OpenAIMath(Source):
-    """github.com/openai/math: manuscripts by an internal OpenAI model, grouped into result families.
+    """github.com/openai/math: manuscripts by an OpenAI model, grouped into result families.
 
-    Four files describe the whole release, so a harvest is a handful of requests, not one per paper:
-    CONTENTS.md (every manuscript with its abstract, under its family), overview.tex (each family's
-    discipline), lean/formalization.yaml (papers whose main result is formalized in Lean), and
-    history.md (withdrawals). The key drops the folder's date, so a revised edition replaces the
-    earlier one instead of becoming a second entry.
+    Read from four files: CONTENTS.md (manuscripts and abstracts by family), overview.tex (each family's
+    discipline), lean/formalization.yaml (formalized papers), and history.md (withdrawals). The key drops
+    the folder's date, so a revised edition replaces the earlier one.
     """
 
     name, label, origin = "openai-math", "OpenAI Math", "ai-generated"
@@ -533,12 +518,8 @@ class OpenAIMath(Source):
     def _norm(title: str) -> str:
         return re.sub(r"[^a-z0-9]", "", title.lower())
 
-    def _catalogue(self) -> dict[str, dict[str, Any]]:
-        if getattr(self, "_parsed", None) is None:
-            self._parsed = self._parse()
-        return self._parsed
-
-    def _parse(self) -> dict[str, dict[str, Any]]:
+    @functools.cached_property
+    def catalogue(self) -> dict[str, dict[str, Any]]:
         contents = get_text(f"{self.RAW}/CONTENTS.md", max_age=3600)
         overview = get_text(f"{self.RAW}/overview.tex", max_age=3600)
         lean = get_text(f"{self.RAW}/lean/formalization.yaml", max_age=3600)
@@ -586,45 +567,45 @@ class OpenAIMath(Source):
         if len(records) < 100:
             raise SourceError(f"{self.RAW}/CONTENTS.md: only {len(records)} manuscripts parsed; the layout may have changed")
 
-        # Withdrawn manuscripts are no longer in CONTENTS.md; history.md names them, and their folders remain.
+        # Withdrawn manuscripts are gone from CONTENTS.md; history.md names them, and their folders remain.
         withdrawn = re.findall(r"^- (.+)$", history.split("**Withdrawals**", 1)[-1].split("**Fixes**", 1)[0], re.M)
         if withdrawn:
             folders = [f["name"] for f in get_json(f"https://api.github.com/repos/{self.REPO}/contents/preprints", max_age=3600)]
             for title in withdrawn:
                 hits = sorted(f for f in folders if self._norm(self.DATED.sub("", f)) == self._norm(title))
                 if hits:
-                    folder = hits[-1]
-                    key = self.DATED.sub("", folder)
-                    # The folder's README is OpenAI's withdrawal notice: the gap, the date, the archived PDF.
-                    notice = get_text(f"{self.RAW}/preprints/{folder}/README.md", max_age=3600)
-                    body = notice.split("## Archived manuscript", 1)[0]
-                    body = re.sub(r"^#.*$|^OpenAI\s*$|\*\*Withdrawn on [^*]+\*\*", "", body, flags=re.M)
-                    on = re.search(r"Withdrawn on ([A-Z][a-z]+ \d{1,2}, \d{4})", notice)
-                    archived = re.search(r"\[Pre-withdrawal PDF\]\((https://[^)]+)\)", notice)
-                    records.setdefault(key, self.entry(
-                        key, url=f"https://github.com/{self.REPO}/tree/main/preprints/{folder}", title=clean(title),
-                        authors=["OpenAI"], published=self._date(folder), withdrawn=True,
-                        withdrawn_on=dt.datetime.strptime(on[1], "%B %d, %Y").date().isoformat() if on else "",
-                        pdf=archived[1] if archived else "",
-                        summary=trim("Withdrawal notice: " + re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", body)),
-                    ))
+                    records.setdefault(self.DATED.sub("", hits[-1]), self._withdrawn(hits[-1], title))
         return records
 
+    def _withdrawn(self, folder: str, title: str) -> dict[str, Any]:
+        """A withdrawn manuscript, from the withdrawal notice in its folder's README."""
+        notice = get_text(f"{self.RAW}/preprints/{folder}/README.md", max_age=3600)
+        body = notice.split("## Archived manuscript", 1)[0]
+        body = re.sub(r"^#.*$|^OpenAI\s*$|\*\*Withdrawn on [^*]+\*\*", "", body, flags=re.M)
+        on = re.search(r"Withdrawn on ([A-Z][a-z]+ \d{1,2}, \d{4})", notice)
+        archived = re.search(r"\[Pre-withdrawal PDF\]\((https://[^)]+)\)", notice)
+        return self.entry(
+            self.DATED.sub("", folder), url=f"https://github.com/{self.REPO}/tree/main/preprints/{folder}", title=clean(title),
+            authors=["OpenAI"], published=self._date(folder), withdrawn=True,
+            withdrawn_on=dt.datetime.strptime(on[1], "%B %d, %Y").date().isoformat() if on else "",
+            pdf=archived[1] if archived else "",
+            summary=trim("Withdrawal notice: " + re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", body)),
+        )
+
     def fetch(self, key: str) -> dict[str, Any]:
-        rec = self._catalogue().get(key)
+        rec = self.catalogue.get(key)
         if not rec:
             raise NotFound(f"openai/math: {key}")
         return rec
 
     def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
-        yield from list(self._catalogue().values())[:limit]
+        yield from list(self.catalogue.values())[:limit]
 
 
 class Palomar(Source):
-    """palomar-registry.org: Lean 4 formalizations machine-checked at one pinned commit (CC0 JSON API).
+    """palomar-registry.org: Lean 4 formalizations checked at a pinned commit (CC0 JSON API).
 
-    The list API gives the summary; each full record (one more request) adds provenance: the papers a
-    result formalizes or adapts, which links Lean results back to papers indexed from other sources.
+    The full record (one more request) adds provenance: the papers a result formalizes or adapts.
     """
 
     name, label = "palomar", "Palomar"
@@ -690,18 +671,18 @@ class Formalization(Source):
     """Any GitHub project with a formalization.yaml (mathlib-initiative v0.4), e.g. anthropics/formal-math.
 
     The query names repositories ("owner/repo owner/repo"); the root and each top-level folder are checked.
-    AI involvement is taken only from what the file declares: automation.methods[].models, or AI authors.
+    AI involvement comes from the file: automation.methods[].models, or AI authors.
     """
 
     name, label = "lean", "Lean project"
-    # Only a link to the file itself; other GitHub links stay GitHub records.
+    # Only links to the file itself; other GitHub links are GitHub records.
     patterns = [r"^(?:https?://)?github\.com/([\w.-]+/[\w.-]+)/blob/[^/]+/(?:([\w./-]+?)/)?formalization\.yaml$"]
 
     def key_of(self, m: re.Match[str]) -> str:
         return m[1].replace("/", "__") + (f"__{m[2].replace('/', '__')}" if m[2] else "")
 
     def _read(self, repo: str, folder: str) -> dict[str, Any] | None:
-        import yaml  # PyYAML; only this adapter needs it
+        import yaml  # optional dependency, needed only here
 
         info = get_json(f"https://api.github.com/repos/{repo}")
         branch = info.get("default_branch", "main")
@@ -760,7 +741,7 @@ class Formalization(Source):
 
 
 class AnthropicScience(Source):
-    """anthropic.com/science: Anthropic's posts on research done with Claude. Each post's own meta tags."""
+    """anthropic.com/science: Anthropic's posts on research done with Claude."""
 
     name, label = "anthropic-science", "Anthropic Science"
     patterns = [r"^(?:https?://)?(?:www\.)?anthropic\.com/research/([\w-]+)/?$"]
@@ -786,8 +767,7 @@ class AnthropicScience(Source):
 class Hexagon(Source):
     """hexagonmath.org: an arXiv-style archive for LLM-assisted mathematics, with a JSON API.
 
-    It screens deposits for scholarly content but not for correctness, so each record keeps the
-    deposit's own declarations (authorship, how much of it a human understood) for readers to judge.
+    Records keep the deposit's declarations (authorship, how much a human understood) for readers to judge.
     """
 
     name, label = "hexagon", "Hexagon"
@@ -830,20 +810,18 @@ class Hexagon(Source):
             return self._entry(self._detail(key))
         except (NotFound, SourceError):
             pass
-        latest, v = None, 1  # if the API wants a version, the latest is the last that answers
-        while v <= 50:
+        latest = None  # the API may want a version: the latest is the last that answers
+        for v in range(1, 51):
             try:
                 latest = self._detail(f"{key}v{v}")
             except NotFound:
                 break
-            v += 1
         if latest is None:
             raise NotFound(f"Hexagon {key}")
         return self._entry(latest)
 
     def harvest(self, query: str | None, limit: int) -> Iterator[dict[str, Any]]:
-        """Newest first, one record per work (its latest version). The detail record adds the
-        formalization links that the list leaves out."""
+        """Newest first, one record per work. The detail record adds the formalization links the list leaves out."""
         cursor = None
         while True:
             page = get_json(f"{self.API}?limit=100" + (f"&cursor={urllib.parse.quote(cursor)}" if cursor else ""), max_age=3600)
@@ -911,12 +889,12 @@ class Web(Source):
         return {**self.fetch_url(entry["url"]), "key": entry["key"]}
 
 
-# Order matters: the first adapter that matches wins, so specific ones come before GitHub, DOI and Web.
+# The first adapter that matches wins, so specific ones come before GitHub, DOI and Web.
 SOURCES: list[Source] = [OpenAIMath(), Palomar(), AnthropicScience(), Hexagon(), ArXiv(), Zenodo(), HuggingFace(), Formalization(), GitHub(), Doi(), Web()]
 BY_NAME = {s.name: s for s in SOURCES}
 
 
-# Venues whose listings are mostly pseudoscience. Their papers are not taken, not even as web pages.
+# Venues whose listings are mostly pseudoscience; not taken, not even as web pages.
 BLOCKED_HOSTS = ("vixra.org", "aixiv.science", "clawxiv.org", "jaigp.org")
 
 

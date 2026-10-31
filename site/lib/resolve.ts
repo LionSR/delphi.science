@@ -2,15 +2,12 @@
 // same rules as the harvester's adapters (sources.py), for the sources the site reads: arXiv, GitHub, DOI
 // and Zenodo. The entry and its id match what `index.py add` stores, so a record the harvester
 // also reaches is the same record, not another one.
+import { createHash } from 'node:crypto';
+import { publicWebTarget, readPublicWeb, RetrievalError, type SourceTransport } from './public-source-fetch.ts';
 import taxonomy from './taxonomy.json' with { type: 'json' };
 import { check, type Entry, type Item } from './schema.ts';
 
 export class NotFound extends Error {}
-/** The record exists, but the index does not take it (a repository below the bar). */
-export class NotTaken extends Error {}
-
-// A repository is listed on its own only with this many stars or a CITATION.cff (index.py MIN_REPO_STARS).
-export const MIN_STARS = 50;
 // Venues whose listings are mostly pseudoscience, refused also as web pages (sources.py BLOCKED_HOSTS).
 const BLOCKED_HOSTS = ['vixra.org', 'aixiv.science', 'clawxiv.org', 'jaigp.org'];
 export function blocked(link: string) {
@@ -125,9 +122,6 @@ const SOURCES: Source[] = [
 			if (d.private) throw new NotFound(key);
 			const files = await get(`https://api.github.com/repos/${d.full_name}/contents/`, 'application/vnd.github+json')
 				.then(async (r) => new Set<string>((await r.json()).map((f: { name: string }) => f.name)), () => new Set<string>());
-			if ((d.stargazers_count ?? 0) < MIN_STARS && !files.has('CITATION.cff')) {
-				throw new NotTaken(`${d.full_name} has fewer than ${MIN_STARS} stars and no CITATION.cff`);
-			}
 			return entry('github', d.full_name.replace('/', '__'), {
 				url: d.html_url, repo: d.html_url, title: String(d.name).replace(/[-_]/g, ' '), authors: [d.owner?.login],
 				summary: trim(d.description), tags: d.topics ?? [], published: isoDate(d.created_at), stars: d.stargazers_count ?? 0,
@@ -163,16 +157,28 @@ export function detect(link: string): { source: Source; key: string } | null {
 			if (m) return { source, key: source.key ? source.key(m) : m[1] };
 		}
 	}
-	return null;
+	try {
+		const target = publicWebTarget(url);
+		return { source: { name: 'web', patterns: [], read: async () => readPublicWeb(target.canonical) }, key: createHash('sha1').update(target.canonical).digest('hex').slice(0, 12) };
+	} catch { return null; }
 }
 
 /** A link or a bare id (arXiv, DOI, owner/repo), one word. */
 export const looksLikeLink = (link: string) => /^\S{1,2000}$/.test(link.trim());
 
 /** Reads the record's entry from its source. Throws NotFound when it does not exist or is not public. */
-export async function resolve(link: string, fetcher: Fetcher = fetch): Promise<Entry | null> {
+export async function resolve(link: string, fetcher: Fetcher = fetch, webTransport?: SourceTransport): Promise<Entry | null> {
 	const hit = detect(link);
 	if (!hit) return null;
+	if (hit.source.name === 'web') {
+		try {
+			const e = await readPublicWeb(link.trim(), webTransport);
+			check('Entry', e, `web/${e.key}`); return e;
+		} catch (error) {
+			if (error instanceof RetrievalError && error.status === 'not_found') throw new NotFound(link);
+			throw error;
+		}
+	}
 	const get: Get = async (url, accept) => {
 		const headers: Record<string, string> = { 'User-Agent': USER_AGENT, ...(accept ? { Accept: accept } : {}) };
 		if (url.startsWith('https://api.github.com/') && process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;

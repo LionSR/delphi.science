@@ -1,5 +1,7 @@
 // Submitting links and the forum, on real Postgres (PGlite) with the migrations as written. Sources are
 // faked, so this needs no network and no build of the index.
+import { createHash } from 'node:crypto';
+import { publicWebTarget, readPublicWeb, type SourceTransport } from './public-source-fetch.ts';
 import { strict as assert } from 'node:assert';
 import { readdirSync, readFileSync } from 'node:fs';
 import { before, describe, test } from 'node:test';
@@ -7,7 +9,7 @@ import { PGlite } from '@electric-sql/pglite';
 import { vector } from '@electric-sql/pglite/vector';
 import { comment as actualComment, post as actualPost } from './comments.ts';
 import { accept, activity, startTopic as actualStartTopic, topic, topics, topicWithPosts, votePost } from './forum.ts';
-import { deepseek, type Moderator, type Post } from './moderate.ts';
+import { deepseek, screen, type Moderator, type Post } from './moderate.ts';
 import { load } from './load.ts';
 import { get } from './query.ts';
 import { detect, itemOf, resolve, trim } from './resolve.ts';
@@ -18,7 +20,7 @@ const yes: Moderator = async () => ({ decision: 'ACCEPT', reason: 'Test fixture 
 const comment: typeof actualComment = (db, id, voter, c, moderate = yes) => actualComment(db, id, voter, c, moderate);
 const post: typeof actualPost = (db, place, voter, c, moderate = yes) => actualPost(db, place, voter, c, moderate);
 const startTopic: typeof actualStartTopic = (db, voter, t, moderate = yes) => actualStartTopic(db, voter, t, moderate);
-const submit: typeof actualSubmit = (db, link, voter, fetcher, moderate = yes) => actualSubmit(db, link, voter, fetcher, moderate);
+const submit: typeof actualSubmit = (db, link, voter, fetcher, moderate = yes, transport) => actualSubmit(db, link, voter, fetcher, moderate, transport);
 
 const MIGRATIONS = new URL('../supabase/migrations/', import.meta.url);
 
@@ -47,7 +49,7 @@ const SOURCES = fake({
 	'https://export.arxiv.org/api/query?id_list=1706.03762': ATOM,
 	'https://api.github.com/repos/karpathy/nanoGPT': REPO,
 	'https://api.github.com/repos/karpathy/nanoGPT/contents/': [{ name: 'README.md' }, { name: 'AGENTS.md' }],
-	'https://api.github.com/repos/someone/tiny': { ...REPO, full_name: 'someone/tiny', html_url: 'https://github.com/someone/tiny', name: 'tiny', stargazers_count: 3 },
+	'https://api.github.com/repos/someone/tiny': { ...REPO, full_name: 'someone/tiny', html_url: 'https://github.com/someone/tiny', name: 'tiny', stargazers_count: 0 },
 	'https://api.github.com/repos/someone/tiny/contents/': [{ name: 'README.md' }],
 	'https://api.github.com/repos/someone/cited': { ...REPO, full_name: 'someone/cited', html_url: 'https://github.com/someone/cited', name: 'cited', stargazers_count: 3 },
 	'https://api.github.com/repos/someone/cited/contents/': [{ name: 'CITATION.cff' }],
@@ -121,8 +123,41 @@ describe('submitting and the forum, on Postgres', () => {
 		// Stored as an entry, as index.py add stores one, so the daily pull labels and refreshes it.
 		const { entry } = (await db.query<{ entry: Record<string, unknown> }>("SELECT entry FROM open_index.entries WHERE id = 'github/karpathy__nanoGPT'")).rows[0];
 		assert.deepEqual([entry.key, entry.source, entry.added_by, entry.added], ['karpathy__nanoGPT', 'github', 'ada', new Date().toISOString().slice(0, 10)]);
-		await assert.rejects(submit(db, 'someone/tiny', ada, SOURCES), /fewer than 50 stars and no CITATION.cff/);
+		assert.equal((await submit(db, 'someone/tiny', ada, SOURCES)).status, 'listed');
 		assert.equal((await submit(db, 'someone/cited', ada, SOURCES)).status, 'listed', 'a citable repository is listed whatever its stars');
+	});
+
+	test('a public blog uses the existing moderation gate and one attempt, including failed checks', async () => {
+		const url = 'https://xiaoliangqi.github.io/blog/posts/what-is-life/', who = { login: 'blog-submitter', agent: '' };
+		const html = '<title>What Is Life? -- Question Revisited in the AI Era</title><meta name="description" content="A research essay about physical descriptions of living systems."><meta name="citation_publication_date" content="2026/10/30"><script>' + 'inert theme padding '.repeat(4000) + '</script>';
+		const transport: SourceTransport = async t => ({ status: 200, url: t.requestUrl, headers: { 'content-type': 'text/html' }, body: new TextEncoder().encode(html) });
+		assert.equal(detect(url)?.source.name, 'web');
+		assert.equal(publicWebTarget(url).canonical, url);
+		const fetched = await readPublicWeb(url, transport);
+		assert.doesNotMatch(JSON.stringify(fetched), /inert theme/);
+		assert.equal(fetched.published, '2026-10-30');
+		await assert.rejects(submit(db, url, who, SOURCES, async () => ({ decision: 'REQUEST_REVISION', reason: 'Clarify the research scope.', fix: 'Describe the finite model.', verification_needed: false }), transport), /REQUEST_REVISION/);
+		const id = 'web/' + createHash('sha1').update(url).digest('hex').slice(0, 12);
+		assert.equal(await get(db, id), null);
+		assert.equal((await submit(db, url, who, SOURCES, yes, transport)).status, 'listed');
+		assert.match(String((await get(db, id))!.title), /What Is Life/);
+		assert.equal((await submit(db, url, who, SOURCES, yes, async () => { throw new Error('duplicate must not fetch'); })).status, 'already_listed');
+		assert.equal((await db.query('SELECT id FROM open_index.moderations WHERE voter=$1', [who.login])).rows.length, 2);
+		const used = (await db.query<{id:number}>('SELECT id FROM open_index.moderations WHERE voter=$1 AND publish', [who.login])).rows[0].id;
+		await assert.rejects(screen(db, who, { kind: 'submission', on: 'test', body: 'No reusable reservation.' }, yes, false, undefined, used), /reservation is unavailable/);
+	});
+	test('thirty failed source requests exhaust the shared budget before any further fetch or model call', async () => {
+		const who = { login: 'failed-web-budget', agent: '' }, url = 'https://example.org/missing-research'; let calls = 0;
+		const missing: SourceTransport = async t => { calls++; return { status: 404, url: t.requestUrl, headers: {}, body: new Uint8Array() }; };
+		const noModel: Moderator = async () => { throw new Error('missing source must not reach moderation'); };
+		for (let i = 0; i < 30; i++) await assert.rejects(submit(db, url, who, SOURCES, noModel, missing), /not found/);
+		await assert.rejects(submit(db, url, who, SOURCES, noModel, missing), /30 check\/submission attempts/);
+		assert.equal(calls, 30);
+		assert.equal((await db.query('SELECT id FROM open_index.moderations WHERE voter=$1', [who.login])).rows.length, 30);
+		const racing = { login: 'racing-web-budget', agent: '' };
+		await db.query("INSERT INTO open_index.moderations (voter,agent,kind,publish,reason) SELECT $1,'','submission',false,'Previous failure' FROM generate_series(1,29)", [racing.login]);
+		await Promise.allSettled([1, 2].map(() => submit(db, url, racing, SOURCES, noModel, missing)));
+		assert.equal(calls, 31, 'only one concurrent request can use the final attempt');
 	});
 
 	test('a record already listed is found by id, URL or repository, without reading the source', async () => {
@@ -133,7 +168,7 @@ describe('submitting and the forum, on Postgres', () => {
 	});
 
 	test('links the site cannot read, blocked venues and missing records are refused; 20 a day', async () => {
-		await assert.rejects(submit(db, 'https://data.palomar-registry.org/entries/PALOMAR-2026-10-17-000014', bo, SOURCES), /cannot read this link/);
+		await assert.rejects(submit(db, 'https://github.com/owner', bo, SOURCES), /cannot read this link/);
 		await assert.rejects(submit(db, 'https://jaigp.org/paper/105', bo, SOURCES), /venue is not listed/);
 		await assert.rejects(submit(db, 'https://arxiv.org/abs/2999.99999', bo, SOURCES), /not found or is not public/);
 		await assert.rejects(submit(db, 'two words', bo, SOURCES), /one link/);

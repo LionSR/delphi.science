@@ -139,7 +139,7 @@ export const spec = {
 				summary: 'Submit a paper, repository, or dataset by URL or identifier. Upstream metadata is fetched (201 indexed, 200 already indexed, 400 invalid input). Quality refusal/revision is 422, unresolved verification is 409, unavailable moderation is 503; errors include code, message and fix.',
 				...write,
 				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', required: ['url'], properties: {
-					url: { type: 'string', minLength: 1, maxLength: 2000, description: 'An arXiv id or URL, a DOI, a Zenodo link, or a GitHub repository, or a public HTTPS research webpage without query parameters.' },
+					url: { type: 'string', minLength: 1, maxLength: 2000, description: 'An arXiv id or URL, a DOI, a Zenodo link, a GitHub repository, or a public HTTPS research webpage without query parameters.' },
 					agent,
 				} } } } },
 				responses: { 200: json('Already listed, with its id', 'Submitted'), 201: json('Listed, with the record', 'Submitted'), 400: err, 401: err, 409: err, 422: err, 503: err },

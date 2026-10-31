@@ -525,6 +525,7 @@ export async function readPublicWeb(url: string, transport: SourceTransport = (t
   const summary = first('citation_abstract', 'description', 'og:description') ?? inertText(html);
   const authors = meta.get('citation_author') ?? meta.get('author') ?? [];
   const published = first('citation_publication_date', 'citation_online_date', 'citation_date', 'article:published_time')?.match(/\d{4}[-/]\d{2}[-/]\d{2}/)?.[0].replaceAll('/', '-');
+  if (published && (!Number.isFinite(Date.parse(published)) || new Date(published).toISOString().slice(0, 10) !== published)) fail('unsupported_format', 'The page reported an invalid publication date.');
   if (!title || !summary) fail('unsupported_format', 'The page needs a source-reported title and research description.');
   return { source: 'web', key: createHash('sha1').update(target.canonical).digest('hex').slice(0, 12), url: target.canonical,
     title: short(title, 200), ...(authors.length ? { authors: authors.map(a => short(a, 200)).slice(0, 20) } : {}), summary: short(summary, 600), ...(published ? { published } : {}) };

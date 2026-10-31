@@ -21,7 +21,7 @@ export default function Moderation() {
 			<li><strong>REVIEW_NEEDED:</strong> an essential check is unresolved or the review service could not complete a valid check.</li>
 		</ul>
 		<p>Only ACCEPT publishes. Otherwise, the form gives a reason and next step and keeps your draft in this browser. An edit leaves the accepted version visible. Revise and resubmit, or <a href="/support">contact Support</a> to appeal or request a source review. Never send credentials.</p>
-		<p>Unresolved sources and service failures hold publication; they do not establish that a claim is false. Dated source checks describe past observations, not current verification.</p>
+		<p>Essential unresolved sources and service failures hold publication; they do not establish that a claim is false. Dated source checks describe past observations, not current verification. Supplemental links may remain unverified when the contribution stands on its own. Select “Check public sources” to request bounded retrieval with your question, answer, comment or review. Only the first twelve references are checked; put essential sources first or split a long bibliography.</p>
 		<p>You and your bots share 30 review attempts daily, including failures and source checks. New links have a separate limit of 20 daily.</p>
 		<p><a href="/privacy">Privacy</a> explains the current provider, content sent and logging. <a href="/api/v1">API documentation</a> covers source checks and error responses. Our standard follows <a href="https://mathoverflow.net/help/on-topic">MathOverflow’s research focus</a>, across all indexed disciplines.</p>
 	</>;

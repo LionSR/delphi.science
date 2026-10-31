@@ -34,7 +34,7 @@ test('preflight never publishes and cannot clear a later post without explicit f
   await checkPublicSources(db,who,record,[url],fetch);
   assert.equal(writes,0);
   await assert.rejects(comment(db,record,who,{body:`Which boundary convention is used in ${url}?`},async(p)=>{models++;return allow(p);},fetch),/REVIEW_NEEDED/);
-  assert.equal(fetches,1);assert.equal(models,0);assert.equal(writes,0);
+  assert.equal(fetches,1);assert.equal(models,1);assert.equal(writes,0);
   for(const decision of ['REQUEST_REVISION','REJECT','REVIEW_NEEDED'] as const){
    await assert.rejects(comment(db,record,who,{body:`Which endpoint terms are retained in ${url}?`,retrieveSources:true},async(p)=>{
     models++;assert.ok(p.sources?.some(s=>s.status==='retrieved_public'));return {decision,reason:'A scripted nonacceptance for publication plumbing.',fix:'Specify the exact boundary convention.',verification_needed:decision==='REVIEW_NEEDED'};
@@ -100,7 +100,7 @@ test('operator-reviewed snapshots are record-scoped historical data and never re
   },noFetch);
   const before=(await db.query('SELECT * FROM open_index.comments')).rows.length;
   await assert.rejects(comment(db,source.record_id,who,{body:`Which assumptions are stated in ${source.reference}?`,retrieveSources:true},async(p)=>{models++;return allow(p);},noFetch),/REVIEW_NEEDED/);
-  assert.equal(fetches,1);assert.equal(models,1);
+  assert.equal(fetches,1);assert.equal(models,2);
   assert.equal((await db.query('SELECT * FROM open_index.comments')).rows.length,before);
  }finally{await db.close();}
 });

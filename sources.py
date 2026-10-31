@@ -18,6 +18,7 @@ import hashlib
 import html
 import json
 import re
+import subprocess
 import time
 import urllib.error
 import urllib.parse
@@ -892,15 +893,22 @@ class Web(Source):
         return hashlib.sha1(m.group(1).encode()).hexdigest()[:12]
 
     def fetch_url(self, url: str) -> dict[str, Any]:
-        m = page_meta(url)
-        f = from_citation_meta(m)
-        return self.entry(
-            self.match(url) or "", url=url, title=f["title"] or clean(m.title), authors=f["authors"],
-            summary=f["summary"], published=f["published"],
-        )
+        try:
+            result = subprocess.run(["node", "--experimental-strip-types", "site/scripts/read-web.ts"],
+                                    cwd=HERE, input=json.dumps({"url": url}), text=True, capture_output=True, timeout=12)
+            if result.returncode or len(result.stdout) > 16_384:
+                raise SourceError("bounded webpage retrieval could not complete")
+            data = json.loads(result.stdout)
+            if isinstance(data, dict) and data.get("error") == "not_found":
+                raise NotFound("public webpage not found")
+            if not isinstance(data, dict) or data.get("source") != "web" or not data.get("title"):
+                raise SourceError("public HTML metadata is unavailable or unsupported")
+            return data
+        except (OSError, subprocess.TimeoutExpired, json.JSONDecodeError) as error:
+            raise SourceError("bounded webpage retrieval requires Node.js") from error
 
     def refetch(self, entry: dict[str, Any]) -> dict[str, Any]:
-        return self.fetch_url(entry["url"])
+        return {**self.fetch_url(entry["url"]), "key": entry["key"]}
 
 
 # Order matters: the first adapter that matches wins, so specific ones come before GitHub, DOI and Web.

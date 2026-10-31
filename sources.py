@@ -18,7 +18,6 @@ import hashlib
 import html
 import json
 import re
-import subprocess
 import time
 import urllib.error
 import urllib.parse
@@ -348,7 +347,7 @@ class Source:
 
 class GitHub(Source):
     name, label = "github", "GitHub"
-    patterns = [r"^(?:https?://)?github\.com/([\w.-]+/[\w.-]+?)(?:\.git)?/?$", r"^(?!10\.\d)([\w.-]+/[\w.-]+)$"]
+    patterns = [r"^(?:https?://)?github\.com/([\w.-]+/[\w.-]+?)(?:\.git)?(?:/.*)?$", r"^(?!10\.\d)([\w.-]+/[\w.-]+)$"]
 
     def key_of(self, m: re.Match[str]) -> str:
         return m.group(1).replace("/", "__")
@@ -893,30 +892,15 @@ class Web(Source):
         return hashlib.sha1(m.group(1).encode()).hexdigest()[:12]
 
     def fetch_url(self, url: str) -> dict[str, Any]:
-        # Publicly submitted pages also reach operator refresh. Reuse the site's pinned,
-        # credential-free, bounded transport here rather than urllib's unrestricted redirects.
-        try:
-            result = subprocess.run(
-                ["node", "--experimental-strip-types", "site/scripts/read-web.ts"],
-                cwd=HERE, input=json.dumps({"url": url}), text=True, capture_output=True, timeout=12,
-            )
-            if result.returncode or len(result.stdout) > 16_384:
-                raise SourceError("bounded public webpage retrieval could not complete")
-            data = json.loads(result.stdout)
-            if not isinstance(data, dict):
-                raise SourceError("bounded public webpage retrieval returned no metadata")
-            if data.get("status") == "not_found":
-                raise NotFound("public webpage not found")
-            entry = data.get("entry")
-            if data.get("status") != "retrieved" or not isinstance(entry, dict) or entry.get("source") != "web":
-                raise SourceError("bounded public webpage retrieval is unavailable or unsupported")
-            return entry
-        except (OSError, subprocess.TimeoutExpired, json.JSONDecodeError) as error:
-            raise SourceError("bounded public webpage retrieval requires Node and the site's installed dependencies") from error
+        m = page_meta(url)
+        f = from_citation_meta(m)
+        return self.entry(
+            self.match(url) or "", url=url, title=f["title"] or clean(m.title), authors=f["authors"],
+            summary=f["summary"], published=f["published"],
+        )
 
     def refetch(self, entry: dict[str, Any]) -> dict[str, Any]:
-        # Historical Web keys may predate URL normalization; refresh never renames a record.
-        return {**self.fetch_url(entry["url"]), "key": entry["key"]}
+        return self.fetch_url(entry["url"])
 
 
 # Order matters: the first adapter that matches wins, so specific ones come before GitHub, DOI and Web.
@@ -940,8 +924,6 @@ def detect(url: str) -> tuple[Source, str]:
     for s in SOURCES:
         key = s.match(url)
         if key:
-            if s.name == "web" and (urllib.parse.urlsplit(url).hostname or "").lower() in {"github.com", "www.github.com"}:
-                raise ValueError("Use the repository root for a repository record; file and release links are distinct objects, not repository identities")
             return s, key
     raise ValueError(f"not a URL or a known ID: {url!r}")
 

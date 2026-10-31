@@ -1,8 +1,7 @@
-// Read source metadata before the authenticated publication gate. The same record identities as the
-// harvester's adapters (sources.py): arXiv, GitHub roots, DOI, Zenodo and bounded public webpages.
-// A record the harvester also reaches has the same identity.
-import { createHash } from 'node:crypto';
-import { canonicalSource, retrieveSource, SourceInputError, type SourceTransport } from './public-source-fetch.ts';
+// Reading a submitted link's metadata from its source, so it is listed the moment it is submitted. The
+// same rules as the harvester's adapters (sources.py), for the sources the site reads: arXiv, GitHub, DOI
+// and Zenodo. The entry and its id match what `index.py add` stores, so a record the harvester
+// also reaches is the same record, not another one.
 import taxonomy from './taxonomy.json' with { type: 'json' };
 import { check, type Entry, type Item } from './schema.ts';
 
@@ -67,7 +66,7 @@ function entry(source: string, key: string, f: Omit<Entry, 'key' | 'source'>): E
 }
 
 // What the record keeps of how it was added: index.py to_item serves none of it.
-const BOOKKEEPING = new Set(['key', 'added', 'added_by', 'refreshed', 'citation_cff']);
+const BOOKKEEPING = new Set(['key', 'added', 'added_by', 'refreshed']);
 
 /** The item the build serves for an entry not labelled yet (index.py to_item): counted as research. */
 export function itemOf(e: Entry): Item {
@@ -114,7 +113,7 @@ const SOURCES: Source[] = [
 	},
 	{
 		name: 'github',
-		patterns: [/^(?:https?:\/\/)?github\.com\/([\w.-]+\/[\w.-]+?)(?:\.git)?\/?$/, /^(?!10\.\d)([\w.-]+\/[\w.-]+)$/],
+		patterns: [/^(?:https?:\/\/)?github\.com\/([\w.-]+\/[\w.-]+?)(?:\.git)?(?:\/.*)?$/, /^(?!10\.\d)([\w.-]+\/[\w.-]+)$/],
 		key: (m) => m[1].replace('/', '__'),
 		async read(key, get) {
 			const d = await (await get(`https://api.github.com/repos/${key.replace('__', '/')}`, 'application/vnd.github+json')).json();
@@ -124,7 +123,7 @@ const SOURCES: Source[] = [
 			return entry('github', d.full_name.replace('/', '__'), {
 				url: d.html_url, repo: d.html_url, title: String(d.name).replace(/[-_]/g, ' '), authors: [d.owner?.login],
 				summary: trim(d.description), tags: d.topics ?? [], published: isoDate(d.created_at), stars: d.stargazers_count ?? 0,
-				agent_ready: files.has('AGENTS.md') || files.has('CLAUDE.md'), citation_cff: files.has('CITATION.cff'),
+				agent_ready: files.has('AGENTS.md') || files.has('CLAUDE.md'),
 			});
 		},
 	},
@@ -156,29 +155,16 @@ export function detect(link: string): { source: Source; key: string } | null {
 			if (m) return { source, key: source.key ? source.key(m) : m[1] };
 		}
 	}
-	try {
-		if (blocked(url)) return null;
-		const target = canonicalSource(url);
-		if (target.adapter !== 'web') return null;
-		return { source: { name: 'web', patterns: [], read: async () => { throw new Error('Use bounded web retrieval'); } }, key: createHash('sha1').update(target.canonical).digest('hex').slice(0, 12) };
-	} catch { return null; }
+	return null;
 }
 
 /** A link or a bare id (arXiv, DOI, owner/repo), one word. */
 export const looksLikeLink = (link: string) => /^\S{1,2000}$/.test(link.trim());
 
 /** Reads the record's entry from its source. Throws NotFound when it does not exist or is not public. */
-export async function resolve(link: string, fetcher: Fetcher = fetch, webTransport?: SourceTransport): Promise<Entry | null> {
+export async function resolve(link: string, fetcher: Fetcher = fetch): Promise<Entry | null> {
 	const hit = detect(link);
 	if (!hit) return null;
-	if (blocked(link)) throw new NotFound('This venue is not listed');
-	if (hit.source.name === 'web') {
-		const target = canonicalSource(link.trim());
-		const observed = await retrieveSource(target, webTransport);
-		if (observed.status === 'not_found') throw new NotFound('Public page not found');
-		if (observed.status !== 'retrieved') throw new SourceInputError(observed.reason, observed.fix);
-		return entry('web', hit.key, { url: target.canonical, title: observed.title ?? '', authors: observed.author ? [observed.author] : [], summary: trim(observed.excerpt) });
-	}
 	const get: Get = async (url, accept) => {
 		const headers: Record<string, string> = { 'User-Agent': USER_AGENT, ...(accept ? { Accept: accept } : {}) };
 		if (url.startsWith('https://api.github.com/') && process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;

@@ -47,7 +47,7 @@ const SOURCES = fake({
 	'https://export.arxiv.org/api/query?id_list=1706.03762': ATOM,
 	'https://api.github.com/repos/karpathy/nanoGPT': REPO,
 	'https://api.github.com/repos/karpathy/nanoGPT/contents/': [{ name: 'README.md' }, { name: 'AGENTS.md' }],
-	'https://api.github.com/repos/someone/tiny': { ...REPO, full_name: 'someone/tiny', html_url: 'https://github.com/someone/tiny', name: 'tiny', stargazers_count: 3 },
+	'https://api.github.com/repos/someone/tiny': { ...REPO, full_name: 'someone/tiny', html_url: 'https://github.com/someone/tiny', name: 'tiny', stargazers_count: 0 },
 	'https://api.github.com/repos/someone/tiny/contents/': [{ name: 'README.md' }],
 	'https://api.github.com/repos/someone/cited': { ...REPO, full_name: 'someone/cited', html_url: 'https://github.com/someone/cited', name: 'cited', stargazers_count: 3 },
 	'https://api.github.com/repos/someone/cited/contents/': [{ name: 'CITATION.cff' }],
@@ -59,9 +59,7 @@ describe('reading a link', () => {
 		assert.equal(id('https://arxiv.org/abs/1706.03762v7'), 'arxiv/1706.03762');
 		assert.equal(id('arXiv:2406.01234'), 'arxiv/2406.01234');
 		assert.equal(id('github.com/owner/repo.git'), 'github/owner__repo');
-		assert.equal(id('https://github.com/o/r/tree/main/src'), null);
-		assert.equal(id('https://github.com/o/r/blob/main/paper.md'), null);
-		assert.equal(id('https://github.com/o/r/releases/tag/v1'), null);
+		assert.equal(id('https://github.com/o/r/tree/main/src'), 'github/o__r');
 		assert.equal(id('10.1038/nature14539'), 'doi/10.1038__nature14539');
 		assert.equal(id('10.5281/zenodo.123456'), 'zenodo/123456');
 		// The harvester's own adapters read these, so the site does not.
@@ -123,7 +121,7 @@ describe('submitting and the forum, on Postgres', () => {
 		// Stored as an entry, as index.py add stores one, so the daily pull labels and refreshes it.
 		const { entry } = (await db.query<{ entry: Record<string, unknown> }>("SELECT entry FROM open_index.entries WHERE id = 'github/karpathy__nanoGPT'")).rows[0];
 		assert.deepEqual([entry.key, entry.source, entry.added_by, entry.added], ['karpathy__nanoGPT', 'github', 'ada', new Date().toISOString().slice(0, 10)]);
-		assert.equal((await submit(db, 'someone/tiny', ada, SOURCES)).status, 'listed', 'new repositories need neither stars nor a citation file');
+		assert.equal((await submit(db, 'someone/tiny', ada, SOURCES)).status, 'listed');
 		assert.equal((await submit(db, 'someone/cited', ada, SOURCES)).status, 'listed', 'a citable repository is listed whatever its stars');
 	});
 
@@ -135,7 +133,7 @@ describe('submitting and the forum, on Postgres', () => {
 	});
 
 	test('links the site cannot read, blocked venues and missing records are refused; 20 a day', async () => {
-		await assert.rejects(submit(db, 'https://github.com/o/r/releases/tag/v1', bo, SOURCES), /cannot read this link/);
+		await assert.rejects(submit(db, 'https://data.palomar-registry.org/entries/PALOMAR-2026-10-17-000014', bo, SOURCES), /cannot read this link/);
 		await assert.rejects(submit(db, 'https://jaigp.org/paper/105', bo, SOURCES), /venue is not listed/);
 		await assert.rejects(submit(db, 'https://arxiv.org/abs/2999.99999', bo, SOURCES), /not found or is not public/);
 		await assert.rejects(submit(db, 'two words', bo, SOURCES), /one link/);

@@ -149,7 +149,7 @@ describe('publication paths through the shared gate', () => {
 		const who = { login: 'source-hold-user', agent: 'Codex test' }, before = await count('comments');
 		let modelCalls = 0;
 		await assert.rejects(comment(db, 'app/quality-test', who, { body: `The cited result ${reference} is my only support.` }, async () => { modelCalls++; return accepted; }), /REVIEW_NEEDED.*cited source/);
-		assert.equal(modelCalls, 1, 'the moderator assesses relevance; an unclassified ACCEPT still cannot publish');
+		assert.equal(modelCalls, 0, 'unresolved source is held before the model can assert verification');
 		assert.equal(await count('comments'), before);
 	});
 	test('indexed citation sends server identity metadata without asserting proof verification', async () => {

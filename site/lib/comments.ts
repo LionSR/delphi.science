@@ -49,11 +49,11 @@ export async function post(db: Db, place: Place, voter: Voter, c: { body: string
 }
 
 /** Moderate title and body before even the public topic row exists. */
-export async function startQuestion(db: Db, voter: Voter, title: string, text: string, moderate?: Moderator, retrieveSources = false, fetchSource?: SourceRetriever) {
+export async function startQuestion(db: Db, voter: Voter, title: string, text: string, moderate?: Moderator) {
 	const body = text.trim();
 	if (body.length > 4000) throw new QueryError('the comment is longer than 4,000 characters', 'Shorten it, or post a reply.');
 	await refuseKeys(db, body);
-	await screen(db, voter, { kind: 'question', on: 'a forum question', title, body }, moderate, retrieveSources, fetchSource);
+	await screen(db, voter, { kind: 'question', on: 'a forum question', title, body }, moderate);
 	const id = Number((await db.query<{ id: number }>('INSERT INTO open_index.topics (title, voter, agent) VALUES ($1, $2, $3) RETURNING id',
 		[title, voter.login, voter.agent])).rows[0].id);
 	try {

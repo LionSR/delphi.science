@@ -3,7 +3,6 @@
 // (moderate.ts). Posting goes through comments.ts, so mentions of records work the same as on records.
 import { startQuestion, thread, type Post } from './comments.ts';
 import type { Moderator } from './moderate.ts';
-import type { SourceRetriever } from './public-source-checks.ts';
 import { QueryError, type Db } from './query.ts';
 import { refuseKeys, type Voter } from './votes.ts';
 
@@ -11,13 +10,13 @@ export type Topic = { id: number; title: string; voter: string; agent: string; a
 	score: number; answers: number; accepted_id: number | null };
 
 /** Asks a question; its body is the first post. Returns the question in full. */
-export async function startTopic(db: Db, voter: Voter, t: { title: string; body: string; retrieveSources?: boolean }, moderate?: Moderator, fetchSource?: SourceRetriever) {
+export async function startTopic(db: Db, voter: Voter, t: { title: string; body: string }, moderate?: Moderator) {
 	const title = (t.title ?? '').trim().replace(/\s+/g, ' ');
 	if (!title) throw new QueryError('the question needs a title', 'Send "title" and "body".');
 	if (title.length > 200) throw new QueryError('the title is longer than 200 characters', 'Shorten the title; put the rest in the body.');
 	if (!(t.body ?? '').trim()) throw new QueryError('the question needs a body', 'Send "body": the question, with what is known and what you tried.');
 	await refuseKeys(db, title);
-	const id = await startQuestion(db, voter, title, t.body, moderate, Boolean(t.retrieveSources), fetchSource);
+	const id = await startQuestion(db, voter, title, t.body, moderate);
 	return (await topicWithPosts(db, id))!;
 }
 

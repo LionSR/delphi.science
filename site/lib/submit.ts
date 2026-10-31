@@ -1,19 +1,17 @@
 import { screen, type Moderator } from './moderate.ts';
 // Submitting a link: a paper, a dataset or a repository, by its URL or id. The record's metadata is read
 // from its source (resolve.ts) and stored as an entry, as `index.py add` stores one, so the daily pull labels
-// and refreshes it like the rest. Optional submitter context stays separate from source metadata.
+// and refreshes it like the rest; the record is listed at once. Nothing is typed in by hand.
 import { COLUMNS, row } from './load.ts';
 import { QueryError, type Db } from './query.ts';
 import { blocked, detect, itemOf, looksLikeLink, NotFound, resolve } from './resolve.ts';
-import { hasPrivateSourceInput } from './moderation-sources.ts';
 import { check } from './schema.ts';
-import { SourceInputError, type SourceTransport } from './public-source-fetch.ts';
 import { refuseKeys, type Voter } from './votes.ts';
 
 // Per GitHub login, their agents included, on the site and with index.py add together (its MAX_ADDS_PER_DAY).
 export const MAX_PER_DAY = 20;
 
-const SEND = 'Send "url": an arXiv id or URL, a DOI, a Zenodo link, a GitHub repository root, or a public HTTPS research page without query parameters.';
+const SEND = 'Send "url": an arXiv id or URL, a DOI, a Zenodo link, or a GitHub repository.';
 
 export type Submitted = { status: 'listed' | 'already_listed'; id: string; message: string; record?: Record<string, unknown> };
 
@@ -29,11 +27,7 @@ async function listed(db: Db, id: string, url: string) {
 // The day an entry was added, as index.py writes it (sources.py today, in UTC on the daily runner).
 const today = () => new Date().toISOString().slice(0, 10);
 
-export async function submit(db: Db, link: string, voter: Voter, fetcher: typeof fetch = fetch, moderate?: Moderator, supplemental = '', webTransport?: SourceTransport): Promise<Submitted> {
-	if (typeof supplemental !== 'string' || supplemental.length > 2000) throw new QueryError('Supplemental metadata must be at most 2,000 characters.', 'Supply a short description of the research, attribution, version, or missing provenance.');
-	supplemental = supplemental.trim();
-	await refuseKeys(db, supplemental);
-	if (hasPrivateSourceInput(supplemental)) throw new QueryError('Supplemental context contains a private or credential-bearing URL.', 'Remove credentials, opaque query parameters and private-network links before resubmitting.');
+export async function submit(db: Db, link: string, voter: Voter, fetcher: typeof fetch = fetch, moderate?: Moderator): Promise<Submitted> {
 	const url = (link ?? '').trim();
 	if (!looksLikeLink(url)) throw new QueryError('send one link', SEND);
 	if (blocked(url)) throw new QueryError('this venue is not listed', 'Most of what it holds is not research. Submit the work from arXiv, a journal (DOI) or Zenodo instead.');
@@ -49,9 +43,8 @@ export async function submit(db: Db, link: string, voter: Voter, fetcher: typeof
 	if (added >= MAX_PER_DAY) throw new QueryError(`@${voter.login} has added ${MAX_PER_DAY} links today`, 'Try again tomorrow.');
 	let found;
 	try {
-		found = await resolve(url, fetcher, webTransport);
+		found = await resolve(url, fetcher);
 	} catch (e) {
-		if (e instanceof SourceInputError) throw new QueryError(e.message, e.fix);
 		if (e instanceof NotFound) throw new QueryError('the record was not found or is not public', 'Check the link, and that the record is public.');
 		throw new QueryError(`${hit.source.name} could not be read just now (${e instanceof Error ? e.message : e})`, 'Try again in a few minutes.');
 	}
@@ -64,7 +57,7 @@ export async function submit(db: Db, link: string, voter: Voter, fetcher: typeof
 	const again = await listed(db, item.id, item.url); // e.g. an APP paper's repository, or the same record by another link
 	if (again) return { status: 'already_listed', id: again, message: `already listed as ${again}` };
 	// Gate before either entries or records: an entry alone is later published by the daily build.
-	await screen(db, voter, { kind: 'submission', on: item.id, title: String(item.title), body: JSON.stringify(found), context: { record: item, ...(supplemental ? { supplemental: { attribution: `Submitted by @${voter.login}; unverified author-supplied context`, text: supplemental } } : {}) } }, moderate);
+	await screen(db, voter, { kind: 'submission', on: item.id, title: String(item.title), body: JSON.stringify(found), context: { record: item } }, moderate);
 	// Moderation can run concurrently; recheck the daily link quota at the durable write boundary.
 	const stored = await db.transaction!(async (tx) => {
 		await tx.query('SELECT pg_advisory_xact_lock(hashtextextended($1, 0))', [voter.login]);

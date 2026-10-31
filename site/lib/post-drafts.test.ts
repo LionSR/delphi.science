@@ -265,14 +265,3 @@ describe('private post drafts', () => {
 	clearDraft(storage, 'submission:new:root', 'alice');
 	assert.deepEqual(restoreDraft(storage, 'submission:new:root', 'alice').draft, emptyDraft());
 });
-
-
-test('supplemental submission context survives refusal without leaking across accounts or retaining keys', () => {
- const storage = new MemoryStorage();
- const d = { ...draft('lab/new-research'), supplemental: 'A finite-chain reproduction; version 1.' };
- assert.equal(saveDraft(storage, 'submission:new:root', 'alice', d), true);
- assert.deepEqual(restoreDraft(storage, 'submission:new:root', 'alice').draft, d);
- assert.deepEqual(restoreDraft(storage, 'submission:new:root', 'bob').draft, emptyDraft());
- assert.equal(saveDraft(storage, 'submission:new:root', 'alice', { ...d, supplemental: 'oik_' + 'a'.repeat(48) }), false);
- assert.deepEqual(restoreDraft(storage, 'submission:new:root', 'alice').draft, emptyDraft());
-});

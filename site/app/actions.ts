@@ -47,11 +47,11 @@ export async function sendPost(_previous: PostFormState, form: FormData): Promis
 	try {
 		const who = await me();
 		if (!who) return { status: 'failed', feedback: { code: 'sign_in', message: 'Sign in with GitHub before posting.', fix: 'Your draft is retained. Sign in, review it, then submit.' } };
-		if (form.get('retrieve_sources') === 'on') requireSourceCheckOrigin((await headers()).get('origin'), true);
+		if (kind === 'record' && form.get('retrieve_sources') === 'on') requireSourceCheckOrigin((await headers()).get('origin'), true);
 		const location = await submitPostForm(await db(), who, { kind, title: String(form.get('title') ?? ''), body: String(form.get('body') ?? ''),
 			topic: form.has('topic') ? Number(form.get('topic')) : undefined,
 			parent: form.has('parent') ? Number(form.get('parent')) : undefined,
-			record: form.has('record') ? String(form.get('record')) : undefined, review: form.get('review') === 'on', retrieveSources: form.get('retrieve_sources') === 'on', supplemental: String(form.get('supplemental') ?? '') });
+			record: form.has('record') ? String(form.get('record')) : undefined, review: form.get('review') === 'on', retrieveSources: form.get('retrieve_sources') === 'on' });
 		revalidatePath(location.split('#')[0]);
 		if (kind === 'question') revalidatePath('/forum');
 		return { status: 'posted', location };

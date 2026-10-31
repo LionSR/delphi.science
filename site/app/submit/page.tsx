@@ -16,9 +16,8 @@ export default async function Submit({ searchParams }: { searchParams: Promise<{
 			<p><a href="/moderation">Quality criteria and moderation decisions</a></p>
 			<p>Submit a paper, dataset, or repository by URL or identifier. Title, authors, abstract, and publication date are fetched directly from the source.</p>
 			<ul className="plain">
-				<li>Public HTTPS research webpages and blogs (no credentials or query parameters); page-reported metadata is screened before publication.</li>
 				<li>arXiv (<code>2406.01234</code> or URL), DOIs, Zenodo.</li>
-				<li>GitHub repository roots (<code>owner/repo</code>), including new projects. Citation files help attribution but are optional.</li>
+				<li>GitHub repositories (<code>owner/repo</code>).</li>
 			</ul>
 			{notice && <p className="count">{notice}</p>}
 			<PostForm kind="submission" owner={who?.login ?? ''} back="/submit" label="Link or id" button="Submit"

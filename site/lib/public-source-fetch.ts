@@ -5,7 +5,7 @@ import { resolve4 } from 'node:dns/promises';
 import type { LookupFunction } from 'node:net';
 import { Agent, request, type RequestOptions } from 'node:https';
 
-export type SourceAdapter = 'github' | 'google_doc' | 'drive_folder' | 'x_post' | 'web';
+export type SourceAdapter = 'github' | 'google_doc' | 'drive_folder' | 'x_post';
 export type SourceTarget = {
   canonical: string; adapter: SourceAdapter; requestUrl: string;
   identity: Record<string, string>; phase?: 'github_commit_object' | 'github_tree' | 'github_blob' | 'single';
@@ -36,7 +36,7 @@ const CREDENTIAL = /oik_[a-f0-9]{48}/i;
 
 export class SourceInputError extends Error {
   readonly fix: string;
-  constructor(message = 'This public source URL is not supported.', fix = 'Use a public HTTPS research page, GitHub text-file permalink, public Google document, or X post without credentials or query parameters.') {
+  constructor(message = 'This public source URL is not supported.', fix = 'Use a public GitHub text-file URL, a public Google document URL, or an X post URL without access tokens.') {
     super(message); this.fix = fix;
   }
 }
@@ -80,10 +80,8 @@ function githubRequest(target: SourceTarget): string {
 
 /** Only these input shapes can generate requests. Share parameters are dropped, never forwarded. */
 export function canonicalSource(value: string): SourceTarget {
-  const url = inputURL(value);
-  const pathParts = () => url.pathname.split('/').slice(1).map(segment);
+  const url = inputURL(value), parts = url.pathname.split('/').slice(1).map(segment);
   if (url.hostname === 'github.com') {
-    const parts = pathParts();
     queryOnly(url, { plain: ['1'], raw: ['1'] });
     const [owner, repo, mode, requested_ref, ...path] = parts;
     if (mode !== 'blob' || !owner || !repo || !requested_ref || !path.length || path.length > 8 || !/^[a-zA-Z0-9_-]{1,100}$/.test(owner)
@@ -96,7 +94,6 @@ export function canonicalSource(value: string): SourceTarget {
     target.requestUrl = githubRequest(target); return target;
   }
   if (url.hostname === 'docs.google.com') {
-    const parts = pathParts();
     queryOnly(url, { usp: ['sharing', 'drive_link'] });
     if (parts[0] !== 'document' || parts[1] !== 'd' || !/^[a-zA-Z0-9_-]{10,100}$/.test(parts[2] ?? '')
       || (parts.length !== 3 && !(parts.length === 4 && ['edit', 'view', 'preview'].includes(parts[3])))) throw inputError();
@@ -104,26 +101,18 @@ export function canonicalSource(value: string): SourceTarget {
     return { canonical, adapter: 'google_doc', identity: { id }, phase: 'single', requestUrl: `${canonical}/export?format=txt` };
   }
   if (url.hostname === 'drive.google.com') {
-    const parts = pathParts();
     queryOnly(url, { usp: ['sharing', 'drive_link'] });
     if (parts.length !== 3 || parts[0] !== 'drive' || parts[1] !== 'folders' || !/^[a-zA-Z0-9_-]{10,100}$/.test(parts[2])) throw inputError();
     const canonical = `https://drive.google.com/drive/folders/${parts[2]}`;
     return { canonical, adapter: 'drive_folder', identity: { id: parts[2] }, phase: 'single', requestUrl: canonical };
   }
   if (['x.com', 'www.x.com', 'twitter.com', 'www.twitter.com'].includes(url.hostname)) {
-    const parts = pathParts();
     queryOnly(url, { s: ['19', '20', '21'], t: [] });
     if (parts.length !== 3 || !/^[a-zA-Z0-9_]{1,15}$/.test(parts[0]) || parts[1] !== 'status' || !/^[1-9][0-9]{4,24}$/.test(parts[2])) throw inputError();
     const canonical = `https://x.com/${parts[0].toLowerCase()}/status/${parts[2]}`;
     return { canonical, adapter: 'x_post', identity: { handle: parts[0].toLowerCase(), id: parts[2] }, phase: 'single', requestUrl: `https://publish.x.com/oembed?url=${enc(canonical)}&omit_script=true&dnt=true` };
   }
-  url.pathname.split('/').slice(1).filter((p, i, all) => p !== '' || i !== all.length - 1).forEach(segment);
-  queryOnly(url, {});
-  if (!url.hostname.includes('.') || /^[0-9.]+$/.test(url.hostname) || url.hostname.endsWith('.')
-    || /(?:^|\.)(?:localhost|local|internal|test|invalid|example)$/.test(url.hostname)
-    || ['github.com', 'api.github.com', 'raw.githubusercontent.com', 'docs.google.com', 'drive.google.com', 'x.com', 'www.x.com', 'twitter.com', 'www.twitter.com', 'doi.org', 'arxiv.org', 'zenodo.org'].includes(url.hostname)
-    || ['vixra.org', 'aixiv.science', 'clawxiv.org', 'jaigp.org'].some(h => url.hostname === h || url.hostname.endsWith(`.${h}`))) throw inputError();
-  return { canonical: url.href, adapter: 'web', identity: { host: url.hostname, path: url.pathname }, phase: 'single', requestUrl: url.href };
+  throw inputError();
 }
 
 /** Conservative public IPv4 allowlist: reject every special/private range, not just RFC1918. */
@@ -152,9 +141,6 @@ function preparedRequest(input: SourceTarget): SourceTarget {
 }
 function allowedHop(target: SourceTarget, at: URL, initial: URL): boolean {
   if (at.protocol !== 'https:' || at.username || at.password || at.port || at.hash) return false;
-  if (target.adapter === 'web') {
-    try { return at.origin === initial.origin && canonicalSource(at.href).adapter === 'web'; } catch { return false; }
-  }
   if (target.adapter === 'google_doc') {
     if (at.hostname === 'docs.google.com') return at.pathname === initial.pathname && at.search === initial.search;
     return at.hostname.endsWith('.googleusercontent.com') && /^[a-z0-9.-]+$/.test(at.hostname);
@@ -224,7 +210,7 @@ export async function boundedHttps(input: SourceTarget, options: TransportOption
         if (opts?.all) callback(null, [{ address: pinned, family: 4 }]); else callback(null, pinned, 4);
       }) as LookupFunction;
       const accept = target.adapter === 'github' ? 'application/vnd.github+json'
-        : target.adapter === 'x_post' ? 'application/json' : target.adapter === 'web' ? 'text/html, text/plain' : 'text/plain';
+        : target.adapter === 'x_post' ? 'application/json' : 'text/plain';
       const agent = new Agent({ keepAlive: false, maxSockets: 1, maxFreeSockets: 0, maxCachedSessions: 0, proxyEnv: {} as NodeJS.ProcessEnv });
       try {
         const response = await abortable(connector({ protocol: 'https:', hostname: at.hostname, servername: at.hostname,
@@ -474,33 +460,6 @@ export async function retrieveSource(input: SourceTarget, transport: SourceTrans
         fix: 'Review the retrieved excerpt and source version, then explicitly resubmit your discussion for the normal quality check.' };
     }
     const fetched = await get(base);
-    if (base.adapter === 'web') {
-      const type = contentType(fetched.response);
-      if (!['text/html', 'text/plain'].includes(type)) fail('unsupported_format', 'Only bounded public HTML or plain text pages are supported; use a DOI or repository for other formats.');
-      const meta = new Map<string, string[]>();
-      let title = '';
-      if (type === 'text/html') {
-        let titleAt: number | undefined;
-        for (const token of htmlTokens(fetched.text)) {
-          if (token.name === 'title') {
-            if (!token.closing) titleAt = token.end;
-            else if (titleAt !== undefined && !title) title = inertText(fetched.text.slice(titleAt, token.start));
-          }
-          if (token.name === 'meta' && !token.closing) {
-            const key = (attr(token.raw, 'name') ?? attr(token.raw, 'property'))?.toLowerCase(), value = attr(token.raw, 'content');
-            if (key && value) meta.set(key, [...(meta.get(key) ?? []), inertText(value)]);
-          }
-        }
-      }
-      const first = (...keys: string[]) => keys.map(k => meta.get(k)?.[0]).find(Boolean);
-      title = first('citation_title', 'og:title') ?? title;
-      const excerpt = first('citation_abstract', 'description', 'og:description') ?? (type === 'text/html' ? inertText(fetched.text) : fetched.text.trim());
-      if (!title || !excerpt) fail('unsupported_format', 'The page needs a source-reported title and usable text; provide a scholarly landing page with metadata.');
-      const author = meta.get('citation_author')?.join('; ') || first('author', 'og:article:author');
-      return { ...common, status: 'retrieved', response_status, title: short(title, 200), ...(author ? { author: short(author, 100) } : {}), excerpt: short(excerpt, 2000), digest: digest(fetched.response.body),
-        reason: 'Retrieved bounded inert public page text and page-reported metadata. Authorship and scientific claims remain unverified.',
-        fix: 'Review the page-reported metadata and excerpt before submitting to the normal quality gate.' };
-    }
     if (base.adapter === 'google_doc') {
       if (contentType(fetched.response) !== 'text/plain') fail('unavailable', 'The fixed Google document export did not expose public UTF-8 text; an access wall or unsupported export may be present.');
       const excerpt = fetched.text.trim();

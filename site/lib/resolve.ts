@@ -1,14 +1,12 @@
-// Reading a submitted link's metadata from its source, so it is listed the moment it is submitted. The
-// same rules as the harvester's adapters (sources.py), for the sources the site reads: arXiv, GitHub, DOI
-// and Zenodo. The entry and its id match what `index.py add` stores, so a record the harvester
-// also reaches is the same record, not another one.
+// Reads a submitted link's metadata from its source (arXiv, GitHub, DOI, Zenodo, or a public web page),
+// following the harvester's rules in sources.py so ids match what `index.py add` stores.
 import { createHash } from 'node:crypto';
 import { publicWebTarget, readPublicWeb, RetrievalError, type SourceTransport } from './public-source-fetch.ts';
 import taxonomy from './taxonomy.json' with { type: 'json' };
 import { check, type Entry, type Item } from './schema.ts';
 
 export class NotFound extends Error {}
-// Venues whose listings are mostly pseudoscience, refused also as web pages (sources.py BLOCKED_HOSTS).
+// Mostly-pseudoscience venues (sources.py BLOCKED_HOSTS).
 const BLOCKED_HOSTS = ['vixra.org', 'aixiv.science', 'clawxiv.org', 'jaigp.org'];
 export function blocked(link: string) {
 	const url = link.trim();
@@ -20,7 +18,7 @@ export function blocked(link: string) {
 const USER_AGENT = 'open-research-index/0.1 (+https://github.com/LionSR/open-research-index; metadata only)';
 const SUMMARY_CHARS = 600;
 
-// Links the harvester reads with its own adapters, though they look like GitHub links. The site leaves them.
+// GitHub-looking links the harvester reads with its own adapters.
 const DAILY = [
 	/^(?:https?:\/\/)?github\.com\/SakanaAI\/AI-Scientist\/(?:blob|tree)\/main\/example_papers\//i,
 	/^(?:https?:\/\/)?github\.com\/openai\/math\/(?:blob|tree)\/main\/preprints\//i,
@@ -28,14 +26,13 @@ const DAILY = [
 ];
 
 type Fetcher = typeof fetch;
-export type { Entry };
 type Source = { name: string; patterns: RegExp[]; key?: (m: RegExpMatchArray) => string; read: (key: string, get: Get) => Promise<Entry> };
 type Get = (url: string, accept?: string) => Promise<Response>;
 
-// ---- Text, as sources.py cleans it ----
+// ---- Text cleanup, as in sources.py ----
 
 const ENTITIES: Record<string, string> = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ' };
-export const clean = (text: unknown) =>
+const clean = (text: unknown) =>
 	String(text ?? '').replace(/<[^>]+>/g, ' ')
 		.replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (m, e: string) => e[0] === '#'
 			? String.fromCodePoint(e[1].toLowerCase() === 'x' ? parseInt(e.slice(2), 16) : parseInt(e.slice(1), 10))
@@ -53,13 +50,13 @@ function subject(domain: string) {
 	return { subject: domain, division };
 }
 
-// Fields the source does not give are left out, not blanked (index.py _drop_empty).
+// Drops missing fields (index.py _drop_empty).
 function dropEmpty<T extends Record<string, unknown>>(o: T): T {
 	for (const [k, v] of Object.entries(o)) if (v === undefined || v === null || v === '' || (Array.isArray(v) && !v.length)) delete o[k];
 	return o;
 }
 
-/** A source's fields as an entry: checked against the Entry schema, as store.py checks the harvester's. */
+/** A source's fields as a schema-checked entry. */
 function entry(source: string, key: string, f: Omit<Entry, 'key' | 'source'>): Entry {
 	if (!clean(f.title)) throw new NotFound(`${source}/${key} has no title`);
 	const e = dropEmpty({ key, source, ...f });
@@ -67,10 +64,9 @@ function entry(source: string, key: string, f: Omit<Entry, 'key' | 'source'>): E
 	return e;
 }
 
-// What the record keeps of how it was added: index.py to_item serves none of it.
 const BOOKKEEPING = new Set(['key', 'added', 'added_by', 'refreshed']);
 
-/** The item the build serves for an entry not labelled yet (index.py to_item): counted as research. */
+/** The record served for an entry not labelled yet (index.py to_item). */
 export function itemOf(e: Entry): Item {
 	const fields = Object.fromEntries(Object.entries(e).filter(([k]) => !BOOKKEEPING.has(k)));
 	const out = dropEmpty({ id: `${e.source}/${e.key}`, ...fields, tags: e.tags && [...new Set(e.tags)].slice(0, 10),
@@ -158,12 +154,15 @@ export function detect(link: string): { source: Source; key: string } | null {
 		}
 	}
 	try {
-		const target = publicWebTarget(url);
-		return { source: { name: 'web', patterns: [], read: async () => readPublicWeb(target.canonical) }, key: createHash('sha1').update(target.canonical).digest('hex').slice(0, 12) };
+		const { canonical } = publicWebTarget(url);
+		return {
+			source: { name: 'web', patterns: [], read: async () => readPublicWeb(canonical) },
+			key: createHash('sha1').update(canonical).digest('hex').slice(0, 12),
+		};
 	} catch { return null; }
 }
 
-/** A link or a bare id (arXiv, DOI, owner/repo), one word. */
+/** A link or a bare id: one word. */
 export const looksLikeLink = (link: string) => /^\S{1,2000}$/.test(link.trim());
 
 /** Reads the record's entry from its source. Throws NotFound when it does not exist or is not public. */
@@ -173,7 +172,8 @@ export async function resolve(link: string, fetcher: Fetcher = fetch, webTranspo
 	if (hit.source.name === 'web') {
 		try {
 			const e = await readPublicWeb(link.trim(), webTransport);
-			check('Entry', e, `web/${e.key}`); return e;
+			check('Entry', e, `web/${e.key}`);
+			return e;
 		} catch (error) {
 			if (error instanceof RetrievalError && error.status === 'not_found') throw new NotFound(link);
 			throw error;

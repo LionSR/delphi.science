@@ -1,5 +1,4 @@
-// The open index on real Postgres (PGlite: Postgres compiled to WebAssembly, with pgvector), using the
-// migration as written. Needs a build of the index first: python3 index.py build.
+// Search and votes on PGlite with the migrations. Needs a build: python3 index.py build.
 import { strict as assert } from 'node:assert';
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { before, describe, test } from 'node:test';

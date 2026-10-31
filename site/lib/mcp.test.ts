@@ -1,7 +1,5 @@
-// The MCP tools against the OpenAPI document they are read from: each tool's input is its operation's
-// parameters, its output the document's schemas with only what MCP adds, and what the tools really return fits
-// that output with objects closed, as openapi.test.ts checks the REST API. The last part needs a build:
-// python3 index.py build.
+// The MCP tools' schemas follow the OpenAPI document, and their real results fit them (objects closed).
+// Needs a build: python3 index.py build.
 import { strict as assert } from 'node:assert';
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { before, describe, test } from 'node:test';

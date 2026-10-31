@@ -1,7 +1,5 @@
-// What every API route shares: who is calling, and how errors look.
-// Readers need nothing. Writers send Authorization: Bearer <token>, either an agent key (oik_…, made by
-// a signed-in person for one agent) or a GitHub token from this index's GitHub App, so nobody hands the
-// index a broader token. People on the site sign in with the same app (app/auth).
+// Shared by API routes: caller identity and error responses. Writers send Authorization: Bearer with an
+// agent key (oik_…) or a GitHub token from this index's GitHub App.
 import { checkToken } from '@octokit/oauth-methods';
 import { after } from 'next/server';
 import { db } from './db.ts';
@@ -32,7 +30,8 @@ export async function voter(req: Request, agent = ''): Promise<Voter & { via: 'k
 		if (!v) throw new ApiError(401, 'bad_key', 'this agent key is unknown, revoked or expired', `Request a new key: ${SITE}/llms.txt.`);
 		return { ...v, via: 'key' };
 	}
-	const clientId = process.env.GITHUB_APP_CLIENT_ID, clientSecret = process.env.GITHUB_APP_CLIENT_SECRET;
+	const clientId = process.env.GITHUB_APP_CLIENT_ID;
+	const clientSecret = process.env.GITHUB_APP_CLIENT_SECRET;
 	if (!clientId || !clientSecret) throw new ApiError(503, 'no_github', 'GitHub sign-in is not configured here', 'Use an agent key.');
 	try {
 		const { data } = await checkToken({ clientType: 'github-app', clientId, clientSecret, token });
@@ -42,33 +41,32 @@ export async function voter(req: Request, agent = ''): Promise<Voter & { via: 'k
 	}
 }
 
+const errorResponse = (status: number, code: string, e: { message: string; fix: string }) =>
+	Response.json({ error: { code, message: e.message, fix: e.fix } }, { status, headers: { 'Cache-Control': 'private, no-store' } });
+
 /** Runs a route, turning known errors into {"error": {code, message, fix}}. */
 export async function handle(run: () => Promise<Response>): Promise<Response> {
 	try {
 		return await run();
 	} catch (e) {
-		if (e instanceof ApiError) return Response.json({ error: { code: e.code, message: e.message, fix: e.fix } }, { status: e.status, headers: { 'Cache-Control': 'private, no-store' } });
-		if (e instanceof ModerationError || e instanceof SourceCheckError || e instanceof EditError) return Response.json({ error: { code: e.code, message: e.message, fix: e.fix } }, { status: e.status, headers: { 'Cache-Control': 'private, no-store' } });
+		if (e instanceof ApiError || e instanceof ModerationError || e instanceof SourceCheckError || e instanceof EditError) {
+			return errorResponse(e.status, e.code, e);
+		}
 		if (e instanceof QueryError) {
-			const status = /^no (record|topic|post) /.test(e.message) ? 404 : 400;
-			return Response.json({ error: { code: status === 404 ? 'not_found' : 'bad_request', message: e.message, fix: e.fix } }, { status, headers: { 'Cache-Control': 'private, no-store' } });
+			const notFound = /^no (record|topic|post) /.test(e.message);
+			return errorResponse(notFound ? 404 : 400, notFound ? 'not_found' : 'bad_request', e);
 		}
 		throw e;
 	}
 }
 
-/**
- * A route handler that counts each call to `endpoint` (method and route pattern, e.g. 'GET /llms.txt') by the
- * caller's client (lib/usage.ts), after the response is sent: it never slows a request, and a failure is dropped.
- * API operations get it from operation() (lib/operation.ts), named from the OpenAPI document; pages and guides
- * that are not operations name themselves.
- */
+/** Wraps a route handler to count each call to `endpoint` (e.g. 'GET /llms.txt') by client, after the response. */
 export const counted = <A extends unknown[]>(endpoint: string, run: (req: Request, ...rest: A) => Response | Promise<Response>) =>
 	(req: Request, ...rest: A) => {
 		if (!collectionEnabled()) return run(req, ...rest);
 		const name = client(req.headers.get('user-agent'));
 		try {
 			after(() => db().then((d) => countCall(d, endpoint, name)).catch(() => {}));
-		} catch { /* outside a request (a build): nothing to count */ }
+		} catch { /* outside a request, e.g. during a build */ }
 		return run(req, ...rest);
 	};

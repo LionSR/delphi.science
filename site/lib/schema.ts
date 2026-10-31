@@ -1,7 +1,5 @@
-// The OpenAPI document's schemas (lib/openapi.ts) as TypeScript types and as checks at runtime, so a value has the
-// shape the document states wherever it crosses a boundary: what the site stores (an Entry), serves (a Record) or
-// loads from a build. schema.py checks the same schemas from Python, for the entries and records index.py writes.
-// Objects are checked closed, as there: a field the schema does not list is a problem.
+// The OpenAPI schemas as TypeScript types and runtime checks (schema.py checks the same from Python).
+// Objects are closed: a field the schema does not list is an error.
 import { Ajv2020 } from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 import { spec } from './openapi.ts';
@@ -40,7 +38,7 @@ export function closed(s: unknown): unknown {
 	return 'properties' in o && !('additionalProperties' in o) ? { ...o, additionalProperties: false } : o;
 }
 
-// Strict, so a keyword ajv does not know (a typo in a schema) fails; components is where the document keeps them.
+// Strict, so an unknown keyword (a typo in a schema) fails.
 const ajv = addFormats(new Ajv2020({ allErrors: true, allowUnionTypes: true })).addVocabulary(['components']);
 ajv.addSchema({ $id: 'spec', components: closed(spec.components) });
 const validators = new Map<string, ReturnType<typeof ajv.compile>>();

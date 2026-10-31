@@ -1,4 +1,4 @@
-// Local Postgres and scripted verdicts only. No public edits or paid calls.
+// Post editing on in-process Postgres with scripted moderation verdicts.
 import { strict as assert } from 'node:assert';
 import { readdirSync, readFileSync } from 'node:fs';
 import { registerHooks } from 'node:module';

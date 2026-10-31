@@ -1,4 +1,4 @@
-// Offline atomic-vote contracts on migrated in-process Postgres; no live votes or provider requests.
+// The if_absent vote on migrated in-process Postgres.
 import { strict as assert } from 'node:assert';
 import { before, after, test } from 'node:test';
 import { readFileSync, readdirSync } from 'node:fs';

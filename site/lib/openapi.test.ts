@@ -1,6 +1,5 @@
-// The OpenAPI document against the API itself: every route is documented with its methods, and what each
-// operation really answers (status, content type, body) fits the document's schema for it. Objects are checked
-// closed, so a field the API serves but the document leaves out fails too. Needs a build: python3 index.py build.
+// Every route is documented, and each operation's real responses fit its schema (objects closed).
+// Needs a build: python3 index.py build.
 import { strict as assert } from 'node:assert';
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { registerHooks } from 'node:module';
@@ -89,7 +88,7 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 	let moderationMode: 'accept' | 'reject' | 'review' | 'unavailable' = 'accept';
 
 	before(async () => {
-		// Schema/publication plumbing only: no live model request and no environment-based acceptance path.
+		// Fake the moderation model's API.
 		process.env.DEEPSEEK_API_KEY = 'offline-schema-fixture';
 		globalThis.fetch = (async (url) => {
 			assert.equal(String(url), 'https://api.deepseek.com/chat/completions', 'unexpected network call');

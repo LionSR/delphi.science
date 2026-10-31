@@ -1,7 +1,5 @@
-// Load the open index's records (dist/index.json, items[]) into Postgres. Upserts by id, so a
-// rebuild only rewrites what changed; the trigger in the migration records each add and update in
-// open_index.changes. content_hash covers the served record, so labels and embeddings are redone only
-// when it changes.
+// Loads the built records (dist/index.json items[]) into Postgres, upserting only those whose
+// content_hash changed.
 import type { Db } from './query.ts';
 import { check, type Item } from './schema.ts';
 
@@ -24,13 +22,13 @@ export async function row(it: Item): Promise<unknown[]> {
 		it.id, it.source, it.url, it.title, list(it.authors).join('; '), str(it.summary), list(it.tags).join(' '),
 		str(it.subject), str(it.division), str(it.domain), /^\d{4}-\d{2}-\d{2}$/.test(str(it.published)) ? it.published : null,
 		str(it.category) || 'research', str(it.origin), str(it.family), Boolean(it.agent_ready), Boolean(it.formalized),
-		// The object, not the string: postgres.js would encode a string a second time into a jsonb string.
-		Boolean(it.verified), Boolean(it.withdrawn), Boolean(it.gone), it, await sha256(record),
+		Boolean(it.verified), Boolean(it.withdrawn), Boolean(it.gone),
+		it, // the object, not the string: postgres.js would encode a string again as a jsonb string
+		await sha256(record),
 	];
 }
 
-/** Upserts the new and changed items in batches; unchanged ones are never sent. Returns how many were written.
- * Each must fit the Record schema, as index.py build checks too. */
+/** Upserts the new and changed items in batches and returns how many were written. */
 export async function load(db: Db, items: Item[], batch = 200): Promise<number> {
 	for (const it of items) check('Record', it, it.id);
 	const HASH = COLUMNS.indexOf('content_hash');

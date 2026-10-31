@@ -1,16 +1,15 @@
-import type { Db } from './query.ts';
-import { QueryError } from './query.ts';
+// The publish path for the site's post forms. A retry returns the author's identical existing post.
 import { comment, post } from './comments.ts';
 import { startTopic } from './forum.ts';
 import type { Moderator } from './moderate.ts';
+import { QueryError, type Db } from './query.ts';
 import { submit } from './submit.ts';
-import type { Voter } from './votes.ts';
 import { recordPath } from './view.ts';
+import type { Voter } from './votes.ts';
 
 export type PostInput = { kind: 'question' | 'answer' | 'comment' | 'record' | 'submission'; title: string; body: string;
 	topic?: number; parent?: number; record?: string; review: boolean; retrieveSources?: boolean };
 
-/** Browser and private integration tests share the actual publication path; a retry reuses identical own posts. */
 export async function submitPostForm(db: Db, who: Voter, input: PostInput, moderate?: Moderator, fetcher: typeof fetch = fetch): Promise<string> {
 	const body = input.body.trim();
 	if (!body || body.length > 4000) throw new QueryError('The post needs 1–4,000 characters.', 'Keep the precise question, argument or evidence and shorten unrelated background.');
@@ -36,7 +35,8 @@ export async function submitPostForm(db: Db, who: Voter, input: PostInput, moder
 		const p = existing ?? await comment(db, input.record, who, { body, review: input.review, retrieveSources: input.retrieveSources }, moderate);
 		return `${recordPath(input.record)}#p${p.id}`;
 	}
-	if (!Number.isSafeInteger(input.topic) || Number(input.topic) < 1 || (input.kind === 'comment' && (!Number.isSafeInteger(input.parent) || Number(input.parent) < 1))) {
+	const positive = (n: number | undefined) => Number.isSafeInteger(n) && Number(n) >= 1;
+	if (!positive(input.topic) || (input.kind === 'comment' && !positive(input.parent))) {
 		throw new QueryError('No valid thread was selected.', 'Open the question and use its answer or comment form.');
 	}
 	const parent = input.kind === 'comment' ? input.parent : undefined;

@@ -312,5 +312,5 @@ test('web intake preserves DNS, redirect, secret and response-size guards', asyn
  await assert.rejects(boundedHttps(target, { resolve4: async () => ++lookups === 1 ? ['8.8.8.8'] : ['192.168.0.1'], connect: async () => wire(302, { location: '/moved' }) }));
  assert.equal(lookups, 2);
  for (const input of ['http://example.org/page', 'https://reader:secret@example.org/page', url + '?token=secret', 'https://127.1/page', 'https://jaigp.org/paper/1']) assert.throws(() => publicWebTarget(input));
- for (const body of ['<title>Research</title>' + 'x'.repeat(MAX_METADATA_BYTES), '<title>Research</title><p>oik_' + 'a'.repeat(48) + '</p>']) await assert.rejects(readPublicWeb(url, async t => ({ status: 200, url: t.requestUrl, headers: { 'content-type': 'text/html' }, body: bytes(body) })));
+ for (const body of ['<title>Research</title><meta name="citation_publication_date" content="2026-02-31"><p>A research description.</p>', '<title>Research</title>' + 'x'.repeat(MAX_METADATA_BYTES), '<title>Research</title><p>oik_' + 'a'.repeat(48) + '</p>']) await assert.rejects(readPublicWeb(url, async t => ({ status: 200, url: t.requestUrl, headers: { 'content-type': 'text/html' }, body: bytes(body) })));
 });

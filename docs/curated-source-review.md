@@ -1,15 +1,24 @@
 # Curated public-source observations
 
-Repository changes require the ordinary owner-reviewed PR before production activation. No public post, schema change, network refresh or proof check is performed by this module.
+`site/lib/curated-public-sources.json` holds reviewed, dated observations of public sources cited in record discussions. It ships with the server and changes only through an owner-reviewed PR, like code.
 
-`site/lib/curated-public-sources.json` is server-shipped repository data, with the same review boundary as code. Changes require an owner-reviewed PR. A caller cannot register a source by providing a verified flag, preflight response, client digest, research record or custom registry. The backend must verify that the target research record exists before consulting the registry. All twelve observations are scoped exactly to `openai-math/The-Exponential-Time-Hypothesis-is-False`; they do not create research records. Registry structure validation accepts ordinary record IDs, but only shipped exact record/source pairs can match.
+## How it is used
 
-`lookupCuratedPublicSource(recordId, sourceUrl)` returns an immutable `CuratedPublicSnapshot` or `undefined`, matching the exact record and safe canonical source identity. The schema rejects unknown fields, noncanonical stored URLs, mismatched adapters, unbounded/HTML/credential-shaped text and invalid observation windows. The SHA-256 digest identifies the canonical reviewed observation record; it is **not a raw page digest** or an authorship attestation.
+- `lookupCuratedPublicSource(recordId, sourceUrl)` (`site/lib/curated-public-sources.ts`) returns an immutable `CuratedPublicSnapshot` only for an exact shipped record/source pair (compared by canonical source identity), otherwise `undefined`.
+- The backend checks that the record exists before consulting the registry. Callers cannot add entries: verified flags, preflight results, client digests or custom registries are ignored.
+- A snapshot is passed to the normal moderation gate as source data; only `ACCEPT` publishes. Lookup never publishes anything.
+- Snapshots serve as historical evidence only when no fresh check was requested. If a requested fresh check fails, the attempt fails; it does not fall back to a snapshot.
+- Schema validation rejects unknown fields, non-canonical URLs, mismatched adapters, unbounded/HTML/credential-like text and invalid observation windows.
+- The SHA-256 digest identifies the reviewed observation record. It is not a digest of the raw page and does not attest authorship.
 
-An independent research-agent observation report supplied findings from a signed-out browser review of ten URLs and two separately rendered public children during **2026-10-27 05:40–05:43 UTC**. The exact time of each observation is unknown. The collection's bounded child facts came from those separate public renderings, not recursive fetching. The two child PDF URLs use a curated-only `drive_file` identity normalizer; this does not extend automatic fetching or PDF parsing. Connected Drive content was cross-checked for public visibility. The module author did not repeat these network observations. The `reviewed_by` label identifies the agent and repository review process, not a human approval already obtained.
+## Current contents
 
-Review the shipped summaries against that provenance in the PR. They are paraphrases, not quotations. All seven X display dates are October 26 in an unspecified UI timezone; no UTC publication conversion is made. The community letter contains no publication date. The GitHub URL uses mutable `main`, without a commit binding in this historical observation. Titles, displayed accounts and signatures do not authenticate real-world authorship. Public observations do not certify proof correctness, technical expertise, consensus or current availability.
+All twelve observations are scoped to `openai-math/The-Exponential-Time-Hypothesis-is-False`.
 
-The backend may consult this registry as historical server-held metadata when no fresh network check has been requested. A requested current check that fails must remain a failure; do not silently fall back to an older snapshot in that same attempt. The observation still passes to the normal model gate as source data, and only `ACCEPT` may publish. Hold when current availability or stronger proof is essential. Preflight and lookup never publish automatically.
+- Source: a research agent's signed-out browser review of ten URLs and two separately rendered public child PDFs, 2026-10-27 05:40–05:43 UTC (exact per-item times unknown). The child PDFs use a curated-only `drive_file` identity; this does not enable automatic Drive fetching or PDF parsing.
+- `reviewed_by` names the agent and repository review, not a human approval.
+- Summaries are paraphrases, not quotations.
+- The seven X display dates read October 26 in an unspecified timezone; they are not converted to UTC. The community letter has no date. The GitHub URL points at mutable `main`, not a commit.
+- Titles, accounts and signatures do not authenticate authorship. Observations do not certify proof correctness, expertise, consensus or current availability.
 
-Offline tests use neutral note text, structure validation and lookup checks. They perform no network, DB, model or public-write operations.
+Tests (`site/lib/curated-public-sources.test.ts`) cover structure validation and lookup with no network, database or model calls.

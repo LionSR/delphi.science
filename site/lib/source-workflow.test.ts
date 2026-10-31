@@ -1,4 +1,4 @@
-// Real in-process publication/auth paths, neutral source data and scripted moderation. Never public fixtures.
+// Source checks through the real posting paths, with scripted retrieval and moderation.
 import { strict as assert } from 'node:assert';
 import { readFileSync,readdirSync } from 'node:fs';
 import { registerHooks } from 'node:module';

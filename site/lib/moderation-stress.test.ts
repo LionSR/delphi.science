@@ -1,4 +1,4 @@
-// Offline publication regressions with neutral scientific inputs and scripted verdicts; full adversarial fixtures stay outside this checkout.
+// Posting regressions with scripted verdicts. Full adversarial fixtures are kept outside this repository.
 import { strict as assert } from 'node:assert';
 import { readdirSync, readFileSync } from 'node:fs';
 import { before, after, test } from 'node:test';

@@ -15,7 +15,7 @@ A successful check shows what a public endpoint returned at a given time. It say
 
 ## Workflow
 
-- **Preflight (optional):** the **Check public sources** button (`site/app/source-checks.tsx`) or `POST /api/v1/records/<prefix>/<suffix>/source-checks` with up to 5 URLs. It returns, per URL, the canonical reference, status, observation time, provenance and a next step. It never posts, never calls a model and keeps the draft. The browser splits up to 12 URLs into 5-URL batches with visible progress and no automatic retry.
+- **Preflight (optional):** `POST /api/v1/records/<prefix>/<suffix>/source-checks` with up to 5 URLs. It returns, per URL, the canonical reference, status, observation time, provenance and a next step. It never posts and never calls a model.
 - **Posting:** a post with `retrieve_sources: true` fetches its cited URLs again within that request. Earlier preflight results are never reused or trusted, and a fresh request never falls back to curated observations. Without the flag, posting makes no outbound fetches.
 - **Auth:** the API takes Bearer auth only and rejects an unexpected `Origin`; browser actions require an active session and an allowed origin (`site/lib/source-check-origin.ts`). The server checks the record exists. Client-supplied text, status, excerpts or `verified` flags are ignored.
 - **Feedback** distinguishes unindexed, unsupported, inaccessible/private, identity mismatch, 404/410 and retrieval failure. An unavailable source is never reported as a false claim.
@@ -46,7 +46,7 @@ Network and parser adapters are injected so tests run offline.
 
 ## Tests
 
-`public-source-checks.test.ts`, `public-source-fetch.test.ts`, `source-check-batches.test.ts`, `source-check-origin.test.ts`, `source-workflow.test.ts` and `moderation-sources.test.ts` in `site/lib/` cover URL canonicalization, DNS/redirect rules, limits, adapter identity checks, auth and origin, rate reservation before network access, fresh/curated separation, and that no non-`ACCEPT` outcome writes anything. They use scripted decisions and no real network or model.
+`public-source-checks.test.ts`, `public-source-fetch.test.ts`, `source-check-origin.test.ts`, `source-workflow.test.ts` and `moderation-sources.test.ts` in `site/lib/` cover URL canonicalization, DNS/redirect rules, limits, adapter identity checks, auth and origin, rate reservation before network access, fresh/curated separation, and that no non-`ACCEPT` outcome writes anything. They use scripted decisions and no real network or model.
 
 ## Billing
 

@@ -1,4 +1,4 @@
-// Offline contracts and real PGlite publication paths. These fixtures do not evaluate model semantics.
+// Post feedback classification, offline and on real PGlite posting paths.
 import { strict as assert } from 'node:assert';
 import { readFileSync, readdirSync } from 'node:fs';
 import { registerHooks } from 'node:module';

@@ -1,5 +1,5 @@
 // Drafts stay in this tab, scoped to an author and one form/topic/parent. Never store keys or send drafts in URLs.
-export type Draft = { title: string; body: string; review: boolean };
+export type Draft = { title: string; body: string; review: boolean; supplemental?: string };
 export type DraftStorage = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>;
 const key = (form: string, owner: string) => `ori:post-draft:v1:${owner ? `user:${encodeURIComponent(owner)}` : 'anon'}:${encodeURIComponent(form)}`;
 const loginKey = (form: string) => `ori:post-login:v1:${encodeURIComponent(form)}`;
@@ -9,15 +9,15 @@ function read(storage: DraftStorage, form: string, owner: string): Draft | undef
 	try {
 		const d = JSON.parse(storage.getItem(key(form, owner)) || 'null');
 		if (d?.version !== 1 || typeof d.title !== 'string' || d.title.length > 200 || typeof d.body !== 'string'
-			|| d.body.length > 4000 || typeof d.review !== 'boolean' || /oik_[0-9a-f]{48}/.test(d.title + d.body)) return;
-		return { title: d.title, body: d.body, review: d.review };
+			|| d.body.length > 4000 || typeof d.review !== 'boolean' || (d.supplemental !== undefined && (typeof d.supplemental !== 'string' || d.supplemental.length > 2000)) || /oik_[0-9a-f]{48}/.test(d.title + d.body + (d.supplemental ?? ''))) return;
+		return { title: d.title, body: d.body, review: d.review, ...(d.supplemental ? { supplemental: d.supplemental } : {}) };
 	} catch { return; }
 }
 
 export function saveDraft(storage: DraftStorage, form: string, owner: string, draft: Draft): boolean {
 	try {
-		if (/oik_[0-9a-f]{48}/.test(draft.title + draft.body)) { storage.removeItem(key(form, owner)); return false; }
-		if (!draft.title && !draft.body && !draft.review) storage.removeItem(key(form, owner));
+		if (/oik_[0-9a-f]{48}/.test(draft.title + draft.body + (draft.supplemental ?? ''))) { storage.removeItem(key(form, owner)); return false; }
+		if (!draft.title && !draft.body && !draft.review && !draft.supplemental) storage.removeItem(key(form, owner));
 		else storage.setItem(key(form, owner), JSON.stringify({ version: 1, ...draft }));
 		return true;
 	} catch { return false; }

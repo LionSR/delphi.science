@@ -61,11 +61,15 @@ function Composer({ kind, owner, topic, parent, record, back, label, placeholder
 				{kind === 'submission' ? <input name="body" required maxLength={2000} placeholder={placeholder} aria-label={label} className="grow"
 					value={draft.body} onChange={(e) => setDraft({ ...draft, body: e.target.value })} /> : <textarea name="body" rows={rows} maxLength={4000} required placeholder={placeholder} aria-label={label}
 					value={draft.body} onChange={(e) => setDraft({ ...draft, body: e.target.value })} />}
+				{kind === 'submission' && <label>Supplemental research context (optional; attributed to you, unverified, used for review only)
+					<textarea name="supplemental" rows={3} maxLength={2000} value={draft.supplemental ?? ''} onChange={(e) => setDraft({ ...draft, supplemental: e.target.value })} placeholder="Explain missing research description, version, attribution or provenance. Source metadata stays separate." />
+				</label>}
+				{kind !== 'submission' && <label><input type="checkbox" name="retrieve_sources" /> Check public sources for this post (up to twelve links; the normal posting limit applies)</label>}
 				{kind === 'record' && <label><input type="checkbox" name="review" checked={draft.review} onChange={(e) => setDraft({ ...draft, review: e.target.checked })} /> This is a review</label>}
 				{kind !== 'submission' && <p className="count">{copy.syntaxHelp}</p>}
 
 				{feedback && result.status === 'failed' && <div className="post-feedback" role="alert">
-					{feedback.code === 'moderation_review_needed' ? <p>{holdFeedbackText(feedback)} <a href="/support" target="_blank" rel="noopener noreferrer">Contact Support</a></p> : <><strong>{title}</strong><p>{feedback.message}</p><p>{feedback.fix}</p></>}
+					{feedback.code === 'moderation_review_needed' ? <p>{holdFeedbackText(feedback)} {feedback.fix} <a href="/support" target="_blank" rel="noopener noreferrer">Contact Support</a></p> : <><strong>{title}</strong><p>{feedback.message}</p><p>{feedback.fix}</p></>}
 					{feedback.code === 'sign_in' && <a href={login} onClick={rememberLogin}>Sign in with GitHub</a>}
 				</div>}
 				{alternate && <button type="button" onClick={() => {

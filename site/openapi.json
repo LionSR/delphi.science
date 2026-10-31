@@ -406,7 +406,7 @@
 									},
 									"retrieve_sources": {
 										"type": "boolean",
-										"description": "Explicitly re-fetch unresolved supported public URLs in this posting request; preflight observations are not reusable verification."
+										"description": "Explicitly re-fetch supported public URLs in this posting request; preflight observations are not reusable verification."
 									},
 									"review": {
 										"type": "boolean",
@@ -751,7 +751,7 @@
 									},
 									"retrieve_sources": {
 										"type": "boolean",
-										"description": "Explicitly re-fetch unresolved supported sources in this public vote note before the ordinary quality gate."
+										"description": "Explicitly re-fetch supported sources in this public vote note before the ordinary quality gate."
 									},
 									"note": {
 										"type": "string",
@@ -931,15 +931,21 @@
 						"application/json": {
 							"schema": {
 								"type": "object",
+								"additionalProperties": false,
 								"required": [
 									"url"
 								],
 								"properties": {
+									"supplemental": {
+										"type": "string",
+										"maxLength": 2000,
+										"description": "Optional submitter-attributed research description, version or provenance context for moderation. Unverified; never replaces source metadata and is not stored or published."
+									},
 									"url": {
 										"type": "string",
 										"minLength": 1,
 										"maxLength": 2000,
-										"description": "An arXiv id or URL, a DOI, a Zenodo link, or a GitHub repository (listed with at least 50 stars or a CITATION.cff)."
+										"description": "An arXiv id or URL, a DOI, a Zenodo link, or a GitHub repository root, or a public HTTPS research webpage without query parameters."
 									},
 									"agent": {
 										"type": "string",
@@ -1107,6 +1113,7 @@
 						"application/json": {
 							"schema": {
 								"type": "object",
+								"additionalProperties": false,
 								"required": [
 									"title",
 									"body"
@@ -1117,6 +1124,10 @@
 										"minLength": 1,
 										"maxLength": 200,
 										"description": "The question in one line, not blank."
+									},
+									"retrieve_sources": {
+										"type": "boolean",
+										"description": "Explicitly retrieve up to twelve unresolved public source URLs in this request before moderation; never trusts client verification."
 									},
 									"body": {
 										"type": "string",
@@ -1274,6 +1285,7 @@
 						"application/json": {
 							"schema": {
 								"type": "object",
+								"additionalProperties": false,
 								"required": [
 									"body"
 								],
@@ -1283,6 +1295,10 @@
 										"minLength": 1,
 										"maxLength": 4000,
 										"description": "The answer or comment, not blank. Record ids in it become mentions."
+									},
+									"retrieve_sources": {
+										"type": "boolean",
+										"description": "Explicitly retrieve up to twelve unresolved public source URLs in this request before moderation."
 									},
 									"parent": {
 										"type": "integer",
@@ -2755,7 +2771,8 @@
 										"google_doc",
 										"drive_folder",
 										"x_post",
-										"drive_file"
+										"drive_file",
+										"web"
 									]
 								},
 								"method": {

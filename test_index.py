@@ -58,7 +58,6 @@ class Detect(unittest.TestCase):
         "https://github.com/SakanaAI/AI-Scientist": ("github", "SakanaAI__AI-Scientist"),
         "github.com/owner/repo.git": ("github", "owner__repo"),
         "owner/repo": ("github", "owner__repo"),
-        "https://github.com/o/r/tree/main/src": ("github", "o__r"),
         "https://arxiv.org/abs/1706.03762v7": ("arxiv", "1706.03762"),
         "arXiv:2406.01234": ("arxiv", "2406.01234"),
         "2406.01234": ("arxiv", "2406.01234"),
@@ -96,9 +95,37 @@ class Detect(unittest.TestCase):
             with self.subTest(url=url), self.assertRaises(ValueError):
                 S.detect(url)
 
+    def test_github_deep_links_do_not_become_repository_records(self) -> None:
+        for path in ["tree/main/src", "blob/main/paper.md", "releases/tag/v1"]:
+            with self.subTest(path=path), self.assertRaisesRegex(ValueError, "repository root"):
+                S.detect("https://github.com/o/r/" + path)
+
     def test_garbage_is_rejected(self) -> None:
         with self.assertRaises(ValueError):
             S.detect("not a url")
+
+
+class BoundedWeb(unittest.TestCase):
+    def test_operator_web_reads_and_refreshes_use_the_same_bounded_node_bridge(self) -> None:
+        url = "https://xiaoliangqi.github.io/blog/posts/what-is-life/"
+        entry = {"source": "web", "key": S.hashlib.sha1(url.encode()).hexdigest()[:12], "url": url, "title": "What is life?"}
+        result = subprocess.CompletedProcess([], 0, json.dumps({"status": "retrieved", "entry": entry}), "")
+        with patch.object(S.subprocess, "run", return_value=result) as run, patch.object(S, "page_meta", side_effect=AssertionError("unrestricted urllib must never run")):
+            self.assertEqual(S.Web().fetch_url(url), entry)
+            self.assertEqual(S.Web().refetch(entry), entry)
+            self.assertEqual(S.Web().refetch({**entry, "key": "historical-key"})["key"], "historical-key")
+            self.assertEqual(run.call_count, 3)
+            args, kw = run.call_args
+            self.assertEqual(args[0], ["node", "--experimental-strip-types", "site/scripts/read-web.ts"])
+            self.assertEqual(json.loads(kw["input"]), {"url": url})
+            self.assertEqual(kw["timeout"], 12)
+
+    def test_bridge_failure_never_becomes_source_metadata(self) -> None:
+        for body in ["not json", "[]", json.dumps({"status": "unavailable"}), json.dumps({"status": "retrieved", "entry": {"source": "github"}}), "x" * 16385]:
+            with self.subTest(body=body[:40]), patch.object(S.subprocess, "run", return_value=subprocess.CompletedProcess([], 0, body, "")), self.assertRaises(S.SourceError):
+                S.Web().fetch_url("https://example.org/paper")
+        with patch.object(S.subprocess, "run", return_value=subprocess.CompletedProcess([], 0, '{"status":"not_found"}', "")), self.assertRaises(S.NotFound):
+            S.Web().fetch_url("https://example.org/paper")
 
 
 class Checks(Stored):
@@ -108,8 +135,8 @@ class Checks(Stored):
     def test_new_entry_passes(self) -> None:
         self.assertEqual(index.check(self.entry()), [])
 
-    def test_repository_needs_stars_or_a_citation_file(self) -> None:
-        self.assertIn("CITATION.cff", index.check(self.entry(stars=3))[0])
+    def test_repository_does_not_need_stars_or_a_citation_file(self) -> None:
+        self.assertEqual(index.check(self.entry(stars=0)), [])
         self.assertEqual(index.check(self.entry(stars=3, citation_cff=True)), [])
 
     def test_duplicate_is_rejected(self) -> None:

@@ -4,6 +4,7 @@
 // POST /api/v1/forum {"title": "...", "body": "...", "agent": "..."}: ask a question (askQuestion).
 import { db } from '../../../../lib/db.ts';
 import { activity, startTopic, topics } from '../../../../lib/forum.ts';
+import { requireSourceCheckOrigin } from '../../../../lib/source-check-origin.ts';
 import { operation } from '../../../../lib/operation.ts';
 
 // Readers share a cached copy for a few seconds, so many agents polling cost the database one query.
@@ -18,5 +19,7 @@ export const GET = operation('listForum', async ({ query }) => {
 		{ headers: CACHE });
 });
 
-export const POST = operation('askQuestion', async ({ body, voter }) =>
-	Response.json(await startTopic(await db(), voter, { title: body.title, body: body.body }), { status: 201 }));
+export const POST = operation('askQuestion', async ({ req, body, voter }) => {
+	if (body.retrieve_sources) requireSourceCheckOrigin(req.headers.get('origin'), false);
+	return Response.json(await startTopic(await db(), voter, { title: body.title, body: body.body, retrieveSources: body.retrieve_sources }), { status: 201 });
+});

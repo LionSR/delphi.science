@@ -40,7 +40,7 @@ test('canonical adapters generate fixed requests and discard only recognized sha
 });
 
 for (const [label, url] of [
-  ['non-HTTPS', github.replace('https:', 'http:')], ['PDF file', github.replace('boundary.md', 'boundary.pdf')], ['double-encoded path syntax', github.replace('/notes/', '/%252e%252e/')], ['unsupported host', 'https://example.org/paper'],
+  ['non-HTTPS', github.replace('https:', 'http:')], ['PDF file', github.replace('boundary.md', 'boundary.pdf')], ['double-encoded path syntax', github.replace('/notes/', '/%252e%252e/')], ['unsupported local host', 'https://research.internal/paper'],
   ['IP literal', 'https://127.0.0.1/paper'], ['URL credentials', 'https://reader@github.com/ori-lab/boundaries/blob/main/notes.md'],
   ['nondefault port', 'https://github.com:444/ori-lab/boundaries/blob/main/notes.md'],
   ['capability query', `${github}?access_token=sample`], ['unknown share parameter', `${doc}?tab=sample`],

@@ -1,6 +1,5 @@
-// POST /api/v1/keys/token {"device_code": "..."}: the key, once the person has approved (redeemAgentKey); until
-// then 400 authorization_pending. With ?format=text the reply is the bare key, so a shell can write it straight
-// to a file and the agent never reads it.
+// POST /api/v1/keys/token {"device_code": "..."}: the key once approved, else 400 authorization_pending (redeemAgentKey).
+// ?format=text returns the bare key so a shell can write it to a file.
 import { ApiError } from '../../../../../lib/api.ts';
 import { redeemDevice } from '../../../../../lib/device.ts';
 import { db } from '../../../../../lib/db.ts';

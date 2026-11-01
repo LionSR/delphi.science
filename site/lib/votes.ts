@@ -1,8 +1,7 @@
-import type { SourceRetriever } from './public-source-checks.ts';
+// Votes on records (up/down, an emoji, or both, with an optional note), and the agent and session keys
+// that identify voters.
 import { screen, type Moderator } from './moderate.ts';
-// Votes on open-index records, SciRate-style: per GitHub user per record, an up or down vote, an
-// emoji, or both, with an optional short note. The caller is already identified (a GitHub token from
-// the registry's app, or an agent key); this module only checks the vote and writes it.
+import type { SourceRetriever } from './public-source-checks.ts';
 import { QueryError, type Db } from './query.ts';
 
 export type Voter = { login: string; agent: string };
@@ -11,9 +10,10 @@ export type Vote = { value?: 1 | -1; emoji?: string; note?: string; retrieveSour
 // One emoji: a pictograph with its optional variation selector, skin tone, and ZWJ sequence.
 const EMOJI = /^\p{Extended_Pictographic}(?:\uFE0F|\p{Emoji_Modifier}|\u200D\p{Extended_Pictographic})*$/u;
 
+const hex = (bytes: Uint8Array) => [...bytes].map((b) => b.toString(16).padStart(2, '0')).join('');
+
 export async function sha256(text: string): Promise<string> {
-	const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
-	return [...new Uint8Array(digest)].map((b) => b.toString(16).padStart(2, '0')).join('');
+	return hex(new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text))));
 }
 
 export const MAX_AGENT_NAME = 60;
@@ -32,12 +32,13 @@ export async function createAgentKey(db: Db, login: string, agent: string): Prom
 	return newKey(db, login, agentName(agent));
 }
 
-/** Cosmetic public GitHub name, normalized and bounded by Unicode code points; never an authorization identifier. */
+/** A GitHub display name for show only: NFC, whitespace and control characters collapsed, at most 100 code points. */
 export function profileName(value: unknown): string {
-	return typeof value === 'string' ? [...value.normalize('NFC').replace(/[\p{Cc}\s]+/gu, ' ').trim()].slice(0, 100).join('') : '';
+	if (typeof value !== 'string') return '';
+	return [...value.normalize('NFC').replace(/[\p{Cc}\s]+/gu, ' ').trim()].slice(0, 100).join('');
 }
 
-/** Profile snapshots refresh on sign-in. Missing optional schema keeps the established login-only session path. */
+/** A new session key. Stores the display name when the agent_keys.name column exists. */
 export async function createSession(db: Db, login: string, name: unknown = '') {
 	const display = profileName(name);
 	const hasName = display && await db.query<{ present: boolean }>(`SELECT EXISTS (
@@ -47,9 +48,10 @@ export async function createSession(db: Db, login: string, name: unknown = '') {
 }
 
 async function newKey(db: Db, login: string, agent: string, name?: string) {
-	const key = `oik_${[...crypto.getRandomValues(new Uint8Array(24))].map((b) => b.toString(16).padStart(2, '0')).join('')}`;
-	if (name === undefined) await db.query('INSERT INTO open_index.agent_keys (key_hash, login, agent) VALUES ($1, $2, $3)', [await sha256(key), login, agent]);
-	else await db.query('INSERT INTO open_index.agent_keys (key_hash, login, agent, name) VALUES ($1, $2, $3, $4)', [await sha256(key), login, agent, name]);
+	const key = `oik_${hex(crypto.getRandomValues(new Uint8Array(24)))}`;
+	const hash = await sha256(key);
+	if (name === undefined) await db.query('INSERT INTO open_index.agent_keys (key_hash, login, agent) VALUES ($1, $2, $3)', [hash, login, agent]);
+	else await db.query('INSERT INTO open_index.agent_keys (key_hash, login, agent, name) VALUES ($1, $2, $3, $4)', [hash, login, agent, name]);
 	return key;
 }
 
@@ -81,14 +83,14 @@ export async function voterFromKey(db: Db, key: string): Promise<Voter | null> {
 
 export type Person = Voter & { name: string };
 
-/** Only active human session keys may identify a browser user or approve a device request. */
+/** The person behind an active session key (agent keys do not count), or null. */
 export async function personFromSession(db: Db, key: string): Promise<Person | null> {
 	const person = (await db.query<Person>(`SELECT k.login, k.agent, coalesce(nullif(trim(to_jsonb(k)->>'name'), ''), k.login) AS name
 		FROM open_index.agent_keys k WHERE k.key_hash=$1 AND k.agent='' AND k.revoked_at IS NULL AND k.expires_at > now()`, [await sha256(key)])).rows[0];
 	return person ? { ...person, name: profileName(person.name) || person.login } : null;
 }
 
-/** Text that is about to be published must not carry a key. Any key in it is revoked, and the text refused. */
+/** Refuses text that contains an agent key, and revokes the key. */
 export async function refuseKeys(db: Db, text: string) {
 	const keys = text.match(/oik_[0-9a-f]{48}/g);
 	if (!keys) return;
@@ -97,7 +99,7 @@ export async function refuseKeys(db: Db, text: string) {
 	throw new QueryError('the text contains an agent key, so it was not posted and the key is now revoked', 'Never post a key. Get a new one: see /llms.txt.');
 }
 
-/** Normal votes update an owner's choice; opt-in ifAbsent atomically inserts without replacing it. */
+/** Casts or replaces a vote; with ifAbsent, keeps an existing vote and reports whether one was created. */
 export async function vote(db: Db, recordId: string, voter: Voter, v: Vote, moderate?: Moderator, fetchSource?: SourceRetriever) {
 	if (v.ifAbsent !== undefined && typeof v.ifAbsent !== 'boolean') throw new QueryError('if_absent must be a boolean', 'Send if_absent: true to preserve an existing owner vote, or omit it for normal updates.');
 	if (v.value === undefined && v.emoji === undefined) throw new QueryError('the vote is empty', 'Send "value": 1 or -1, an "emoji", or both.');
@@ -108,7 +110,7 @@ export async function vote(db: Db, recordId: string, voter: Voter, v: Vote, mode
 	await refuseKeys(db, note);
 	const rec = (await db.query<{ repo: string | null; record: unknown }>("SELECT record, record->>'repo' AS repo FROM open_index.records WHERE id = $1", [recordId])).rows[0];
 	if (!rec) throw new QueryError(`no record ${JSON.stringify(recordId)}`, 'Use an id from a search result.');
-	// As on SciRate's open issue #541: nobody scores their own repository.
+	// Nobody votes on their own repository.
 	const owner = rec.repo?.match(/github\.com\/([^/]+)\//i)?.[1]?.toLowerCase();
 	if (owner && owner === voter.login.toLowerCase()) throw new QueryError('you cannot vote on your own repository', 'Vote on other records.');
 	if (note) await screen(db, voter, { kind: 'note', recordId, on: recordId, body: note, context: { record: rec.record } }, moderate, Boolean(v.retrieveSources), fetchSource);
@@ -135,6 +137,6 @@ export async function votes(db: Db, recordId: string) {
 
 async function tally(db: Db, recordId: string) {
 	const row = (await db.query<{ score: number; reactions: Record<string, number> }>('SELECT score, reactions FROM open_index.records WHERE id = $1', [recordId])).rows[0];
-	if (!row) throw new QueryError(`no record ${JSON.stringify(recordId)}`, 'Use an id from a search result.'); // unvote on an unknown id
+	if (!row) throw new QueryError(`no record ${JSON.stringify(recordId)}`, 'Use an id from a search result.');
 	return { id: recordId, score: row.score, reactions: row.reactions };
 }

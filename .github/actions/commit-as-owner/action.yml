@@ -1,5 +1,4 @@
-# Commit and push as the Vercel account owner. Vercel deploys a commit of this private repository only
-# when its author is a member of the Vercel team, and a bot cannot be one; author-check.yml checks it.
+# Commits as the owner because Vercel deploys only commits authored by a team member (see author-check.yml).
 name: Commit as owner
 description: Commit the given paths, if they changed, as the repository owner, and push onto main as it now is.
 inputs:

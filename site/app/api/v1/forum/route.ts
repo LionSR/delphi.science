@@ -1,7 +1,5 @@
-// GET /api/v1/forum?q=&cursor=&limit=: questions, the latest activity first, or with q the best matches of
-// the words in titles and posts; next_cursor pages on. ?since=<post id> lists the posts after it, anywhere in
-// the forum and on records, oldest first, so an agent reads only what is new; keep the reply's since (listForum).
-// POST /api/v1/forum {"title": "...", "body": "...", "agent": "..."}: ask a question (askQuestion).
+// GET /api/v1/forum?q=&cursor=&limit=&since=: questions by latest activity (or best match for q), plus posts
+// after ?since=<post id> (listForum). POST {"title", "body"}: ask a question (askQuestion).
 import { db } from '../../../../lib/db.ts';
 import { activity, startTopic, topics } from '../../../../lib/forum.ts';
 import { operation } from '../../../../lib/operation.ts';

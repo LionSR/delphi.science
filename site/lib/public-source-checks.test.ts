@@ -1,4 +1,4 @@
-// Stateless offline checks: neutral source text and scripted retrievals; no external requests.
+// Public-source checks with scripted retrievals; no network.
 import { strict as assert } from 'node:assert';
 import { test } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';

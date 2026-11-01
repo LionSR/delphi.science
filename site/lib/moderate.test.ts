@@ -1,5 +1,5 @@
-// Offline contract tests: scripted verdicts verify transport, schema and hold behavior.
-// These fixtures do NOT measure a real model's classification quality and are never posted publicly.
+// Moderator transport, verdict schema and hold behavior, with scripted verdicts.
+// These do not measure a real model's classification quality.
 import { strict as assert } from 'node:assert';
 import { describe, test } from 'node:test';
 import { deepseek, MODEL, moderator, parseVerdict, SYSTEM, verdict, type Decision, type Post, type Verdict } from './moderate.ts';

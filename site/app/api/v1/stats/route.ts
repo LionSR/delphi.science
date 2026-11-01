@@ -1,5 +1,4 @@
-// GET /api/v1/stats?weeks=8: how the API is used, in aggregate (usageStats in lib/openapi.ts). Calls per week (and
-// by AI clients alone), the top endpoints and the top clients, named from the user agent (lib/usage.ts).
+// GET /api/v1/stats?weeks=8: aggregate API usage, for administrators (usageStats).
 import { db } from '../../../../lib/db.ts';
 import { ApiError } from '../../../../lib/api.ts';
 import { operation } from '../../../../lib/operation.ts';

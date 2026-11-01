@@ -1,4 +1,4 @@
-// Neutral offline data and malformed structures only; no network, models, DB or public posts.
+// Curated registry validation and lookup.
 import { strict as assert } from 'node:assert';
 import { createHash } from 'node:crypto';
 import { test } from 'node:test';

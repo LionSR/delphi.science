@@ -1,6 +1,5 @@
-# Each week, list new arXiv papers and MathOverflow questions that may respond to an AI-made
-# record (candidates.py) in reports/responses/<date>.md. Nothing is attached: a person reads
-# the report and runs the `index.py discuss` commands for the ones that do respond.
+# Weekly: write arXiv papers and MathOverflow questions that may respond to AI-made records
+# (candidates.py) to reports/responses/<date>.md for a person to review.
 name: Candidate responses
 
 on:
@@ -19,7 +18,7 @@ jobs:
   candidates:
     runs-on: ubuntu-latest
     env:
-      SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }} # the records it matches against (store.py)
+      SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v6

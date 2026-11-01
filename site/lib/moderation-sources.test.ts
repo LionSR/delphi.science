@@ -1,4 +1,4 @@
-// Citation parsing tests use server metadata stubs only: no URL retrieval or proof verification.
+// Citation parsing against stubbed record metadata.
 import { strict as assert } from 'node:assert';
 import { test } from 'node:test';
 import { citationEvidence } from './moderation-sources.ts';

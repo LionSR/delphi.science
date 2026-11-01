@@ -1,6 +1,4 @@
-// GET /api/v1: how to use the API, for agents that start here. The endpoints are read from the OpenAPI document
-// (lib/openapi.ts) and the query language from lib/query.ts, so this page lists what the routes really take; the
-// rest is the guidance the document has no place for.
+// GET /api/v1: a JSON guide to the API. Endpoints come from the OpenAPI document and the query syntax from lib/query.ts.
 import { counted } from '../../../lib/api.ts';
 import { bodyShape, call, operations } from '../../../lib/openapi.ts';
 import { OPERATORS, QUERY_FIELDS, SORT_HELP } from '../../../lib/query.ts';

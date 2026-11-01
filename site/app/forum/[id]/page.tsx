@@ -1,5 +1,4 @@
-// One question, after MathOverflow: the question and its comments, then the answers (accepted first, then by
-// score), each with its comments, and a form for a new answer.
+// One question with its comments, then its answers (accepted first, then by score), and a form for a new answer.
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import type { Post } from '../../../lib/comments.ts';
@@ -60,6 +59,7 @@ export default async function Question({ params, searchParams }: Ctx) {
 	const who = await me();
 	const ids = [t.question, ...t.answers].map((p) => p.id);
 	const mine = who ? await myPostVotes(await db(), who.login, ids) : new Map<number, number>();
+	const owner = who?.login ?? '';
 	const asker = who?.login === t.voter;
 	return (
 		<article>
@@ -72,13 +72,13 @@ export default async function Question({ params, searchParams }: Ctx) {
 				<Votes topic={t.id} p={t.question} mine={mine.get(t.question.id)} />
 				<div className="post-body">
 					<Markdown text={t.question.body} postId={t.question.id} />
-					{who?.login === t.question.voter && <EditPost key={who.login} id={t.question.id} owner={who.login} body={t.question.body} revision={t.question.revision} />}
+					{owner === t.question.voter && <EditPost key={owner} id={t.question.id} owner={owner} body={t.question.body} revision={t.question.revision} />}
 					<p className="meta">
 						<span>asked by {by(t.question)}</span>
 						<span>{date(t.question.at)}</span>
 						{t.question.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}
 					</p>
-					<Comments topic={t.id} p={t.question} owner={who?.login ?? ''} />
+					<Comments topic={t.id} p={t.question} owner={owner} />
 				</div>
 			</div>
 
@@ -88,7 +88,7 @@ export default async function Question({ params, searchParams }: Ctx) {
 					<Votes topic={t.id} p={a} mine={mine.get(a.id)} />
 					<div className="post-body">
 						<Markdown text={a.body} postId={a.id} />
-						{who?.login === a.voter && <EditPost key={who.login} id={a.id} owner={who.login} body={a.body} revision={a.revision} />}
+						{owner === a.voter && <EditPost key={owner} id={a.id} owner={owner} body={a.body} revision={a.revision} />}
 						<div className="meta">
 							<span>answered by {by(a)}</span>
 							<span>{date(a.at)}</span>
@@ -102,13 +102,13 @@ export default async function Question({ params, searchParams }: Ctx) {
 							)}
 							{a.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}
 						</div>
-						<Comments topic={t.id} p={a} owner={who?.login ?? ''} />
+						<Comments topic={t.id} p={a} owner={owner} />
 					</div>
 				</div>
 			))}
 
 			<h2>Your answer</h2>
-			<PostForm kind="answer" owner={who?.login ?? ''} topic={t.id} back={`/forum/${t.id}`} label="Answer" button="Post your answer"
+			<PostForm kind="answer" owner={owner} topic={t.id} back={`/forum/${t.id}`} label="Answer" button="Post your answer"
 				placeholder="Provide an argument, reference, computation, or checkable evidence. Reference records by id (e.g. arxiv/2406.01234) to link them." />
 			<p className="count">Posts are moderated against MathOverflow standards: specific research questions, and answers or comments backed by an argument, reference, or evidence.</p>
 		</article>

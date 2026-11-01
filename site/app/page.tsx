@@ -15,16 +15,17 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 	const { q = '', sort = q ? 'relevance' : 'week', cursor, notice } = await searchParams;
 	let res: Awaited<ReturnType<typeof search>> | null = null;
 	let error = '';
+	const d = await db();
 	try {
-		res = await search(await db(), q, { sort, cursor, limit: 50 });
+		res = await search(d, q, { sort, cursor, limit: 50 });
 	} catch (e) {
 		if (!(e instanceof QueryError)) throw e;
 		error = `${e.message}. ${e.fix}`;
 	}
-	const sources = (await (await db()).query<{ source: string; n: number }>(
+	const sources = (await d.query<{ source: string; n: number }>(
 		'SELECT source, count(*)::int AS n FROM open_index.records GROUP BY source ORDER BY n DESC')).rows;
 	const who = await me();
-	const mine = who && res ? await myVotes(await db(), who.login, res.results.map((r) => String(r.id))) : new Map();
+	const mine = who && res ? await myVotes(d, who.login, res.results.map((r) => String(r.id))) : new Map();
 	const here = `/?${new URLSearchParams({ q, sort, ...(cursor ? { cursor } : {}) })}`;
 	const next = res?.next_cursor ? `/?${new URLSearchParams({ q, sort, cursor: res.next_cursor })}` : '';
 	return (

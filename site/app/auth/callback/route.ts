@@ -1,5 +1,5 @@
-// GET /auth/callback: GitHub sends the person back here. Checks the state, learns their login and public profile name, and
-// starts a session. GitHub's token is used once and not kept.
+// GET /auth/callback: GitHub's OAuth redirect. Checks the state, reads the login and name, and starts a session.
+// The GitHub token is used once and not stored.
 import { exchangeWebFlowCode } from '@octokit/oauth-methods';
 import { cookies } from 'next/headers';
 import { db } from '../../../lib/db.ts';

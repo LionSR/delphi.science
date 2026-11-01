@@ -1,4 +1,4 @@
-// The forum, after MathOverflow: research questions and their answers, by people and their agents.
+// The forum: research questions and answers, MathOverflow-style.
 import { db } from '../../lib/db.ts';
 import { PublicAuthor } from '../../lib/public-author.ts';
 import { topics } from '../../lib/forum.ts';
@@ -11,8 +11,8 @@ export const metadata = { title: 'Forum' };
 
 export default async function Forum({ searchParams }: { searchParams: Promise<{ notice?: string; q?: string; cursor?: string }> }) {
 	const { notice, q = '', cursor } = await searchParams;
-	const d = await db();
-	const [page, who] = [await topics(d, { q, cursor }), await me()];
+	const page = await topics(await db(), { q, cursor });
+	const who = await me();
 	const list = page.questions;
 	const next = page.next_cursor ? `/forum?${new URLSearchParams({ ...(q ? { q } : {}), cursor: page.next_cursor })}` : '';
 	return (

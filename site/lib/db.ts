@@ -1,5 +1,5 @@
-// The database: Supabase Postgres when DATABASE_URL is set (its connection pooler, transaction mode),
-// otherwise Postgres in-process (PGlite) loaded with the last local build, for development.
+// Postgres via DATABASE_URL (Supabase pooler, transaction mode), or for development an in-process PGlite
+// loaded with the last local build.
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import type { Db } from './query.ts';
@@ -11,13 +11,13 @@ async function open(): Promise<Db> {
 	if (process.env.DATABASE_URL) {
 		const { default: postgres } = await import('postgres');
 		const sql = postgres(process.env.DATABASE_URL, { prepare: false, max: 5 });
-		const query: Db['query'] = async (text, params = []) => ({ rows: (await sql.unsafe(text, params as never[])) as never[] });
-		return { query, transaction: async (run) => {
-			const result = await sql.begin(async (tx) => ({ value: await run({
-				query: async (text, params = []) => ({ rows: (await tx.unsafe(text, params as never[])) as never[] }),
-			}) }));
-			return result.value;
-		} };
+		const queryOn = (conn: typeof sql): Db['query'] =>
+			async (text, params = []) => ({ rows: (await conn.unsafe(text, params as never[])) as never[] });
+		return {
+			query: queryOn(sql),
+			// Wrapped in an object so sql.begin does not unwrap a returned array.
+			transaction: async (run) => (await sql.begin(async (tx) => ({ value: await run({ query: queryOn(tx) }) }))).value,
+		};
 	}
 	const { PGlite } = await import('@electric-sql/pglite');
 	const { vector } = await import('@electric-sql/pglite/vector');

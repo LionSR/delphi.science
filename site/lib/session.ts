@@ -1,5 +1,4 @@
-// People on the site sign in with the index's GitHub App. The session is an agent key with no agent
-// name, kept in an httpOnly cookie, so the site and the API identify people the same way.
+// Site sessions: an agent key with an empty agent name, kept in an httpOnly cookie.
 import { cookies } from 'next/headers';
 import { db } from './db.ts';
 import { personFromSession, type Person } from './votes.ts';

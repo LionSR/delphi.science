@@ -1,5 +1,5 @@
-// The browser SDK receives only approved public route patterns. Private/unknown routes and custom
-// events are dropped; queries, fragments, URL credentials and resolved record IDs never leave here.
+// Pass only pageviews of known public routes to the analytics SDK, reduced to the route pattern:
+// no query, fragment, credentials or record ID.
 export function analyticsEvent<T extends { type: string; url: string }>(event: T): T | null {
 	if (event.type !== 'pageview') return null;
 	try {

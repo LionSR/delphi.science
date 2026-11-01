@@ -1,7 +1,7 @@
-"""Scan recent arXiv preprints and MathOverflow questions for candidate responses to indexed AI-generated records.
+"""Finds recent arXiv preprints and MathOverflow questions that may respond to indexed AI-generated records.
 
-Outputs a Markdown report ranking candidate matches by title/source IDF overlap along with the corresponding
-`python3 index.py discuss` commands for manual review.
+Writes a Markdown report of matches, ranked by IDF-weighted title overlap, each with the
+`python3 index.py discuss` command to attach it after review.
 
   python3 candidates.py [--days 7] [--until 2026-10-25] [--out reports/responses/2026-10-25.md]
 """
@@ -24,7 +24,7 @@ import sources as S
 # Names that mark an abstract or a question as being about AI-made work.
 TERMS = ["OpenAI", "openai/math", "Astra", "Anthropic", "Claude", "Hexagon", "Palomar", "AlphaProof", "AlphaEvolve", "DeepMind", "Gemini"]
 MENTIONS = re.compile("|".join(map(re.escape, TERMS)), re.I)
-# Records that responses are about: the AI-made sources, not this year's arXiv or the web.
+# Sources whose records are not matched against: responses are about AI-made records.
 SKIP_SOURCES = {"arxiv", "web"}
 MIN_CONFIDENCE = 0.45
 STOP = set("a an and are as at be by for from in into is it of on or our the this to via we with without new "
@@ -38,13 +38,12 @@ def words(text: str | None) -> list[str]:
 
 
 def records() -> list[dict[str, Any]]:
-    """The AI-made records: every entry but arXiv's (most of the index) and the web's, and none that is gone."""
+    """Every entry outside SKIP_SOURCES that is not gone."""
     return [e for _, e in I.load("source <> ALL(%s) AND NOT coalesce((entry->>'gone')::boolean, false)", [sorted(SKIP_SOURCES)])]
 
 
 def ident(url: str) -> str:
-    """What makes two links the same work: the record id sources.detect gives (any arXiv URL form is one
-    paper), or for a plain web page its URL without fragment or query."""
+    """An identity for a link: its record id, or for a plain web page its URL without fragment or query."""
     try:
         src, key = S.detect(url)
     except ValueError:
@@ -53,15 +52,13 @@ def ident(url: str) -> str:
 
 
 def seen(entries: Iterable[dict[str, Any]]) -> set[str]:
-    """Every discussion link already attached, so a candidate is reported once. A candidate that is itself
-    an arXiv record still counts: this year's arXiv is harvested, so most responses are records too."""
+    """The identities of every discussion link already attached, so a candidate is reported once."""
     return {ident(d["url"]) for e in entries for d in e.get("discussion", [])}
 
 
 class Matcher:
-    """Scores a candidate's text against each record's title: the share of the title's distinctive words
-    (weighted by how rare they are among record titles) that the candidate uses. A candidate that names
-    the record's source (OpenAI for openai-math) scores a little higher."""
+    """Scores a candidate's text against each record's title: the IDF-weighted share of the title's words
+    that the candidate uses, raised a little when the candidate names the record's source."""
 
     LAB = {"openai-math": ("openai",), "anthropic-science": ("anthropic", "claude"), "hexagon": ("hexagon",),
            "palomar": ("palomar",), "lean": ("lean",)}
@@ -99,8 +96,7 @@ def arxiv_candidates(start: dt.date, end: dt.date) -> list[dict[str, Any]]:
 
 
 def mathoverflow_candidates(start: dt.date, end: dt.date) -> list[dict[str, Any]]:
-    """The week's questions, a page or two, filtered here: one listing costs fewer of the keyless
-    API quota's requests than a search per term."""
+    """The window's questions, filtered here: a listing uses less of the keyless API quota than a search per term."""
     out = []
     for page in range(1, 6):
         q = urllib.parse.urlencode({"site": S.STACKEXCHANGE["mathoverflow.net"], "fromdate": int(dt.datetime.combine(start, dt.time()).timestamp()),
@@ -151,7 +147,7 @@ def main(argv: Iterable[str] | None = None) -> int:
     for name, find in FINDERS:
         try:
             candidates += [c for c in find(start, end) if ident(c["url"]) not in known]
-        except (S.NotFound, S.SourceError) as err:  # one source down still leaves a report from the other
+        except (S.NotFound, S.SourceError) as err:
             errors.append(f"{name} ({err})")
     text = report(candidates, Matcher(entries), start, end, errors)
     if a.out:

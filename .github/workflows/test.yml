@@ -1,8 +1,5 @@
-# The tests, on every pull request and every push to main: the harvester's (test_index.py,
-# test_candidates.py) and the site's (npm test, the type check). The site's tests load dist/index.json into
-# an in-memory Postgres, so the index is built first, from the sample of entries in fixtures/entries.jsonl
-# served by PGlite (site/scripts/db.ts): CI never reads the real database. test_index.py starts its own,
-# empty one. The build and the tests that read APP papers reach the APP registry, agenticpapers.app.
+# Python and site tests. The site tests need dist/index.json, so it is built first from
+# fixtures/entries.jsonl on a local PGlite server (site/scripts/db.ts), never the real database.
 name: Tests
 
 on:
@@ -10,7 +7,7 @@ on:
   push:
     branches: [main]
 
-concurrency: # a newer push to the same branch or pull request replaces a run still going
+concurrency:
   group: test-${{ github.ref }}
   cancel-in-progress: true
 

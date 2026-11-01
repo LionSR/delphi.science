@@ -1,9 +1,5 @@
-// The API as an OpenAPI 3.1 document, for agent frameworks that import tools from one (LangChain, LlamaIndex,
-// Semantic Kernel and others); served at /api/v1/openapi.json. It is the API's definition, not a description of
-// it: every route runs through operation() (lib/operation.ts), which takes its path, method, parameters, request
-// body and security from here and validates each request against them, and /api/v1 and /llms.txt list the
-// operations from it. Summaries stay under 300 characters and parameter descriptions under 700, the limits tool
-// importers commonly enforce. openapi.test.ts checks it against the routes and their real responses.
+// The API's OpenAPI 3.1 definition, served at /api/v1/openapi.json. Routes validate requests against it
+// (lib/operation.ts). Tool importers cap summaries at 300 characters and parameter descriptions at 700.
 import { SUPPORT_EMAIL } from './contact.ts';
 import { DEFAULT_LIMIT, MAX_LIMIT, QUERY_GUIDE, QUERY_HELP, SORT_HELP, SORTS } from './query.ts';
 import { SITE, STANCE_LIST, STANCES } from './view.ts';
@@ -425,7 +421,7 @@ export const operations: readonly Operation[] = Object.entries(spec.paths as unk
 		body: op.requestBody?.content['application/json'].schema, secured: Boolean(op.security?.length),
 	})));
 
-// The values a schema allows, as the docs write them: 1..100, compact|full, text (at most 500 characters).
+// The values a schema allows: 1..100, compact|full, text (at most 500 characters).
 function shape(s: Schema): string {
 	if (s.enum) return s.enum.join('|');
 	const kind = (t: string) => t === 'string' ? 'text' : t === 'boolean' ? 'true|false'

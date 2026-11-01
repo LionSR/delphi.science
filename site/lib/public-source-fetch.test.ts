@@ -1,4 +1,4 @@
-// Offline transport/adapter contracts only: no network, model, credentials, or public writes.
+// Source adapters and the bounded HTTPS transport, with scripted responses; no network.
 import { strict as assert } from 'node:assert';
 import { Agent } from 'node:https';
 import { createHash } from 'node:crypto';

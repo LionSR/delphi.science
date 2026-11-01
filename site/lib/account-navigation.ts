@@ -1,4 +1,3 @@
-// Explicit public-profile and agent-management navigation labels.
 import { createElement, Fragment } from 'react';
 import { profilePath } from './public-author.ts';
 import type { Person } from './votes.ts';

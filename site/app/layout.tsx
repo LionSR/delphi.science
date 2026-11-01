@@ -13,7 +13,7 @@ export const metadata = {
 	description: 'Searchable index of papers, preprints, and formal proofs linked to post-publication technical responses from arXiv, blog posts, talks, MathOverflow, and X.',
 };
 
-// Titles and abstracts use TeX ($…$, and GitHub's $`…`$, which the pages rewrite to $…$).
+// Titles and abstracts use inline TeX ($…$); GitHub's $`…`$ is rewritten to $…$ before rendering.
 const MATHJAX = `window.MathJax = {
  loader: { load: ['ui/safe'] },
  tex: { inlineMath: [['$', '$'], ['\\\\(', '\\\\)']], processEscapes: true },

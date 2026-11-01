@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-"""Offline tests: source detection, duplicate checks, the entry store, build filtering. No network.
+"""Offline tests for index.py, sources.py and store.py.
 
-The entries are kept in a fresh Postgres for the tests, PGlite with the migrations (site/scripts/db.ts), never the
-database SUPABASE_DB_URL names. It needs node and the site's packages (cd site && npm ci).
+Entries go to a fresh PGlite database (site/scripts/db.ts), which needs node and `cd site && npm ci`.
 
     python test_index.py
 """
@@ -14,6 +13,7 @@ import contextlib
 import io
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -302,7 +302,7 @@ class Labeller(Stored):
 
 
 class DeepSeekContracts(unittest.TestCase):
-    """No real provider, credential or shell invocation. Test transport, failure and financial boundaries."""
+    """The DeepSeek request, its failures and the run budget, with the network stubbed."""
 
     ENTRY = {"key": "a", "source": "web", "url": "https://e.org/a", "title": "A"}
     LABEL = {"key": "a", "category": "research", "subject": "math.NT", "tags": ["number-theory"], "reason": "A scoped research paper."}
@@ -343,7 +343,8 @@ class DeepSeekContracts(unittest.TestCase):
             with patch.object(index, "deepseek_key") as key, patch.object(index.urllib.request, "urlopen") as http:
                 with self.assertRaisesRegex(RuntimeError, "disabled"):
                     index.chat("JSON only", "private fixture")
-                key.assert_not_called(); http.assert_not_called()
+                key.assert_not_called()
+                http.assert_not_called()
 
     def test_all_generation_commands_default_to_disabled_without_public_writes(self) -> None:
         entry = {**self.ENTRY, "discussion": [{"url": "https://e.org/reply", "kind": "web"}]}
@@ -352,7 +353,9 @@ class DeepSeekContracts(unittest.TestCase):
             for argv in [["label"], ["discuss", "--propose-stances"], ["reception", "web/a", "--draft"]]:
                 with self.subTest(argv=argv):
                     self.assertEqual(index.main(argv), 2)
-            key.assert_not_called(); http.assert_not_called(); save.assert_not_called()
+            key.assert_not_called()
+            http.assert_not_called()
+            save.assert_not_called()
 
     def test_budget_configuration_and_uncertain_usage_never_enable_or_release_funds(self) -> None:
         for settings in [{}, {"ORI_DEEPSEEK_ENABLED": "true"}, {"ORI_DEEPSEEK_MAX_RUN_USD": "1"}]:
@@ -423,11 +426,14 @@ class DeepSeekContracts(unittest.TestCase):
     def test_environment_and_vault_key_success_use_intended_lookup_only(self) -> None:
         with patch.dict(os.environ, {"DEEPSEEK_API_KEY": "offline-env"}, clear=True), patch.object(store, "secret") as vault:
             index.deepseek_key.cache_clear()
-            self.assertEqual(index.deepseek_key(), "offline-env"); vault.assert_not_called()
+            self.assertEqual(index.deepseek_key(), "offline-env")
+            vault.assert_not_called()
         with patch.dict(os.environ, {}, clear=True), patch.object(store, "secret", return_value="offline-vault") as vault:
             index.deepseek_key.cache_clear()
-            self.assertEqual(index.deepseek_key(), "offline-vault"); vault.assert_called_once_with("deepseek_api_key")
-        connection = Mock(); connection.execute.return_value.fetchone.return_value = ("offline-vault",)
+            self.assertEqual(index.deepseek_key(), "offline-vault")
+            vault.assert_called_once_with("deepseek_api_key")
+        connection = Mock()
+        connection.execute.return_value.fetchone.return_value = ("offline-vault",)
         with patch.object(store, "conn", return_value=connection):
             self.assertEqual(store.secret("deepseek_api_key"), "offline-vault")
         connection.execute.assert_called_once_with("SELECT decrypted_secret FROM vault.decrypted_secrets WHERE name = %s", ["deepseek_api_key"])
@@ -436,7 +442,8 @@ class DeepSeekContracts(unittest.TestCase):
         ref = Ref("web/a", 1)
         for failure in [TimeoutError("offline timeout"), RuntimeError("offline unavailable"), json.JSONDecodeError("offline invalid JSON", "x", 0)]:
             with patch.object(index, "load", return_value=[(ref, dict(self.ENTRY))]), patch.object(index, "chat", side_effect=failure), patch.object(index, "save") as save, contextlib.redirect_stderr(io.StringIO()), contextlib.redirect_stdout(io.StringIO()):
-                self.assertEqual(index.label(False, "deepseek"), 2); save.assert_not_called()
+                self.assertEqual(index.label(False, "deepseek"), 2)
+                save.assert_not_called()
             discussed = {**self.ENTRY, "discussion": [{"url": "https://e.org/reply", "kind": "web"}]}
             with patch.object(index, "load", return_value=[(ref, discussed)]), patch.object(index, "chat", side_effect=failure), contextlib.redirect_stderr(io.StringIO()), contextlib.redirect_stdout(io.StringIO()):
                 self.assertEqual(index.propose_stances([], "deepseek"), 2)
@@ -445,7 +452,8 @@ class DeepSeekContracts(unittest.TestCase):
         entry = {**self.ENTRY, "discussion": [{"url": "https://e.org/reply", "kind": "web", "stance": "questions"}]}
         for value in [{"text": "A specific gap.", "links": ["https://not-supplied.example"]}, {"text": "A specific gap.", "links": "not-an-array"}, {"text": "", "links": ["https://e.org/reply"]}]:
             with patch.object(index, "read_entry", return_value=(Ref("web/a", 1), entry)), patch.object(index, "chat", return_value=json.dumps(value)), patch.object(index, "save") as save, contextlib.redirect_stdout(io.StringIO()):
-                self.assertEqual(index.reception("web/a", True, None, None, None, "deepseek", False), 2); save.assert_not_called()
+                self.assertEqual(index.reception("web/a", True, None, None, None, "deepseek", False), 2)
+                save.assert_not_called()
         self.assertNotIn("reception", entry)
 
     def test_workflow_defaults_to_disabled_and_reports_attempted_failure_after_metadata_load(self) -> None:
@@ -662,13 +670,11 @@ class Stance(Entries):
 
 
 class StanceCopies(unittest.TestCase):
-    """site/lib/stances.json is the one list of stances. The migration's generated columns and the labelling
-    prompt cannot read it, so they must name the same stances, with the same upvoting/disputing split."""
+    """The migration's generated columns and the stance prompt must match site/lib/stances.json."""
 
     ROOT = Path(__file__).resolve().parent
 
     def test_the_migration_counts_and_disputes_the_same_stances(self) -> None:
-        import re
         sql = next(t for f in sorted((self.ROOT / "site" / "supabase" / "migrations").glob("*.sql"), reverse=True)
                    if "upvoting integer generated" in (t := f.read_text()))  # the latest migration that defines them
         column = lambda name: re.search(rf"add column {name} \w+ generated always as \((.*?)\) stored", sql, re.S).group(1)  # noqa: E731
@@ -681,7 +687,6 @@ class StanceCopies(unittest.TestCase):
         self.assertLessEqual(index.UPVOTING | index.DISPUTING, set(index.STANCES))
 
     def test_the_labelling_prompt_offers_the_same_stances(self) -> None:
-        import re
         prompt = (self.ROOT / "stance-prompt.md").read_text()
         self.assertEqual(re.findall(r"^- `(\w+)`:", prompt, re.M), list(index.STANCES))
 
@@ -738,14 +743,9 @@ class Reception(Entries):
 
 
 class RecordShape(unittest.TestCase):
-    """The items index.py builds are the records /api/v1 serves (the loader stores them, the API adds the live
-    counts), so every field they carry must be documented in the API's Record schema, at every depth, with its
-    type. The schema is read from site/openapi.json, the static copy of site/lib/openapi.ts (npm run openapi)."""
+    """Every field the built items carry, at every depth, must be in the API's Record schema (site/openapi.json)."""
 
     ROOT = Path(__file__).resolve().parent
-
-    def problems(self, value: object, schema: dict, at: str) -> list[str]:
-        return S_.problems(value, schema, at)
 
     def entries(self) -> tuple[dict, dict, dict]:
         """Entries that use every field to_item serves: each source's fields, both kinds of link with stances, a
@@ -776,7 +776,7 @@ class RecordShape(unittest.TestCase):
         return items
 
     def test_entries_fit_the_entry_schema_and_a_misfit_is_not_stored(self) -> None:
-        self.assertEqual([p for e in self.entries() for p in self.problems(e, {"$ref": "#/components/schemas/Entry"}, index.rid(e))], [])
+        self.assertEqual([p for e in self.entries() for p in S_.problems(e, {"$ref": "#/components/schemas/Entry"}, index.rid(e))], [])
         database()
         with self.assertRaisesRegex(ValueError, r"web/k.secret: not in the schema[\s\S]*web/k.stars: '3' is not integer"):
             index.save(Ref("web/k"), {"key": "k", "source": "web", "url": "u", "title": "T", "stars": "3", "secret": 1})
@@ -786,7 +786,7 @@ class RecordShape(unittest.TestCase):
 
     def check(self, items: list[dict]) -> None:
         record = {"$ref": "#/components/schemas/Record"}
-        found = [p for it in items for p in self.problems(it, record, it.get("id", "?"))]
+        found = [p for it in items for p in S_.problems(it, record, it.get("id", "?"))]
         self.assertFalse(found, "index.py serves records that do not fit the API's Record schema (fix site/lib/openapi.ts, then run "
                                 "npm run openapi in site/):\n" + "\n".join(found[:20]))
 
@@ -802,7 +802,7 @@ class RecordShape(unittest.TestCase):
     def test_an_undocumented_field_is_caught(self) -> None:
         item = {**self.built()[0], "secret": 1, "stars": "3"}
         item["discussion"] = [{**item["discussion"][0], "stance": "likes"}]
-        self.assertEqual(sorted(self.problems(item, {"$ref": "#/components/schemas/Record"}, "r")),
+        self.assertEqual(sorted(S_.problems(item, {"$ref": "#/components/schemas/Record"}, "r")),
                          ["r.discussion[].stance: 'likes' is not one of ['refutes', 'questions', 'confirms', 'simplifies', 'extends', 'reacts']",
                           "r.secret: not in the schema", "r.stars: '3' is not integer"])
 

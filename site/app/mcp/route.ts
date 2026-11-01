@@ -1,6 +1,5 @@
-// POST /mcp: the index as a read-only MCP server (Streamable HTTP, stateless, no sign-in); see lib/mcp.ts.
-//   claude mcp add --transport http open-research-index https://<host>/mcp
-// There is no server-to-client stream and no session, so GET and DELETE answer 405, as the transport spec allows.
+// POST /mcp: read-only, stateless Streamable HTTP MCP server (lib/mcp.ts). Without sessions or a server stream,
+// GET and DELETE answer 405, as the transport spec allows.
 import { counted } from '../../lib/api.ts';
 import { db } from '../../lib/db.ts';
 import { handle } from '../../lib/mcp.ts';

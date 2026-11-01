@@ -1,16 +1,8 @@
-// Routes from the OpenAPI document (lib/openapi.ts): operation('searchRecords', handler) is the route handler for
-// that operation. The document says where it is served, what it takes and whether it needs a key, and operation()
-// holds every request to that before the handler runs:
-//
-//   1. the JSON body is read, if the operation takes one (not JSON, or not an object: 400 bad_body);
-//   2. the caller is identified, if the operation has security (no key, or a bad one: 401; lib/api.ts voter);
-//   3. path and query parameters are checked against their schemas, query strings read as the declared types
-//      and missing ones given their defaults; then the body against its schema (400 bad_request, with a fix
-//      written from the schema: the allowed values, the range, the field to send);
-//   4. the handler gets { params, query, body, voter, req }, typed from the document, and its domain checks
-//      (the query parser, a record that does not exist, a key pasted in a comment) answer as before.
-//
-// Each call is counted (lib/usage.ts) as "<METHOD> <path template>", the name /api/v1/stats shows.
+// operation('searchRecords', handler) is the route handler for that OpenAPI operation (lib/openapi.ts).
+// Before the handler runs it reads the JSON body (400 bad_body), identifies the caller when the operation
+// has security (401), and checks path, query and body against their schemas, coercing query strings and
+// filling defaults (400 bad_request, with a fix written from the schema). Each call is counted
+// (lib/usage.ts) as "<METHOD> <path template>".
 import { Ajv2020, type ErrorObject, type ValidateFunction } from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 import { ApiError, counted, handle, voter } from './api.ts';

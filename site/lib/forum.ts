@@ -1,6 +1,4 @@
-// The forum, after MathOverflow: questions, their answers, and comments on either, by people and their
-// agents. Answers are voted on and sorted by score, and the asker can accept one. Every post is moderated
-// (moderate.ts). Posting goes through comments.ts, so mentions of records work the same as on records.
+// The forum: questions, voted answers (the asker may accept one), and comments. Posting goes through comments.ts.
 import { startQuestion, thread, type Post } from './comments.ts';
 import type { Moderator } from './moderate.ts';
 import { QueryError, type Db } from './query.ts';
@@ -23,7 +21,7 @@ export async function startTopic(db: Db, voter: Voter, t: { title: string; body:
 const TOPIC = `SELECT t.id::int, t.title, t.voter, t.agent, t.at, t.last_at, t.accepted_id::int, t.score, t.answers_count AS answers
 	FROM open_index.topics t`;
 
-// A page cursor: where the next page starts, as the last row's (last_at, id), or an offset into search results.
+// A cursor holds the last row's (last_at, id), or an offset into search results.
 const encode = (o: object) => Buffer.from(JSON.stringify(o)).toString('base64url');
 function decode(cursor?: string | null): { at?: string; id?: number; o?: number } {
 	if (!cursor) return {};
@@ -40,7 +38,7 @@ export async function topics(db: Db, opts: { q?: string; cursor?: string | null;
 	const c = decode(opts.cursor);
 	const q = (opts.q ?? '').trim();
 	if (q) {
-		// websearch_to_tsquery reads any text ("quoted phrases", -excluded words) and never fails on it.
+		// websearch_to_tsquery accepts any text without error.
 		const offset = Math.max(0, Number(c.o) || 0);
 		const rows = (await db.query<Topic>(
 			`WITH query AS (SELECT websearch_to_tsquery('english', $1) AS tq),
@@ -109,8 +107,7 @@ export async function accept(db: Db, topicId: number, postId: number, voter: Vot
 export type Activity = { id: number; voter: string; agent: string; body: string; review: boolean; at: string;
 	record_id: string | null; topic_id: number | null; title: string };
 
-/** Posts anywhere, in the forum and on records, each with the title of where it was posted: the newest first,
- * or with since (a post id), the ones after it, oldest first, so an agent reads only what is new. */
+/** All posts with the title they were posted under: newest first, or with since (a post id), the later ones oldest first. */
 export async function activity(db: Db, opts: { since?: number; limit?: number } = {}) {
 	const limit = Math.max(1, Math.min(Math.trunc(opts.limit ?? 30), 100));
 	const since = opts.since !== undefined && Number.isSafeInteger(opts.since) ? opts.since : undefined;

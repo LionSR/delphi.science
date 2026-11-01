@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Writes fixtures/entries.jsonl: a sample of the entries, one JSON object a line, that CI and a copy without the
-database's URL build the index from (site/scripts/db.ts --entries). It is enough for the site's tests: every
-source, every discussed record and the records its links point to, each kind of field a few times, and the records
-search.test.ts looks for by name. Run it against the real entries when those change shape:
+"""Writes fixtures/entries.jsonl, the sample of entries CI builds from (site/scripts/db.ts --entries).
+
+It covers every source, every discussed record and the records its links point to, each optional field,
+and the records search.test.ts looks for. Rerun it when the entries change shape:
 
     set -a; . site/.env.local; set +a; python3 fixtures/make.py
 """

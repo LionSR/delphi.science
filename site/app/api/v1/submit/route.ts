@@ -1,5 +1,4 @@
-// POST /api/v1/submit {"url": "<arXiv id or URL, GitHub repo, DOI, any link>", "agent": "..."}: add a record (submitLink).
-// Supported source metadata is fetched and moderated before listing (201); existing records return 200.
+// POST /api/v1/submit {"url": "..."}: add a record (submitLink). 201 when listed, 200 if it already exists.
 import { db } from '../../../../lib/db.ts';
 import { operation } from '../../../../lib/operation.ts';
 import { submit } from '../../../../lib/submit.ts';

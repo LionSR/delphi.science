@@ -1,4 +1,4 @@
-// POST /api/v1/forum/<id>/accept {"post": <answer id>}: the asker accepts an answer (again: takes it back) (acceptAnswer).
+// POST /api/v1/forum/<id>/accept {"post": <answer id>}: the asker accepts an answer, or un-accepts it (acceptAnswer).
 import { db } from '../../../../../../lib/db.ts';
 import { accept } from '../../../../../../lib/forum.ts';
 import { operation } from '../../../../../../lib/operation.ts';

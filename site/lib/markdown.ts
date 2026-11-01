@@ -1,5 +1,5 @@
-// Forum bodies are untrusted Markdown. Sanitize the input tree before trusted MathJax SVG output.
-// No raw HTML, remote images, TeX HTML/URL extensions, autoload or author-triggered package loading.
+// Renders untrusted forum Markdown: sanitized, then TeX typeset to SVG by MathJax with a fixed package list.
+// Raw HTML is skipped and images become links.
 import { createElement } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -9,22 +9,36 @@ import rehypeSanitize, { defaultSchema } from 'rehype-sanitize';
 import rehypeMathjax from 'rehype-mathjax/svg';
 import { unified } from 'unified';
 
-type Node = { type: string; value?: string; tagName?: string; properties?: Record<string, unknown>; data?: Record<string, unknown>; position?: { start: { offset?: number }; end: { offset?: number } }; children?: Node[] };
+type Node = {
+	type: string;
+	value?: string;
+	tagName?: string;
+	properties?: Record<string, unknown>;
+	data?: Record<string, unknown>;
+	position?: { start: { offset?: number }; end: { offset?: number } };
+	children?: Node[];
+};
+const VERBATIM = ['code', 'inlineCode', 'html', 'definition', 'image', 'imageReference', 'math', 'inlineMath'];
 type Prepared = { markdown: string; tokens: { marker: string; value: string; display: boolean }[] };
 
-/** Preserve MathJax's existing backslash delimiters without changing code, URLs or escaped backslashes. */
+/** Replaces \\(…\\) and \\[…\\] math with markers, outside code, URLs and escaped backslashes. */
 function prepareMath(text: string): Prepared {
 	const tree = unified().use(remarkParse).use(remarkGfm).use(remarkMath).parse(text) as Node;
 	const protectedRanges: [number, number][] = [];
 	function visit(node: Node) {
-		const start = node.position?.start.offset, end = node.position?.end.offset;
+		const start = node.position?.start.offset;
+		const end = node.position?.end.offset;
 		if (start !== undefined && end !== undefined) {
-			if (['code', 'inlineCode', 'html', 'definition', 'image', 'imageReference', 'math', 'inlineMath'].includes(node.type)) {
-				protectedRanges.push([start, end]); return;
+			if (VERBATIM.includes(node.type)) {
+				protectedRanges.push([start, end]);
+				return;
 			}
 			if (node.type === 'link' || node.type === 'linkReference') {
-				const raw = text.slice(start, end);
-				if (!raw.startsWith('[')) { protectedRanges.push([start, end]); return; }
+				// An autolink is protected whole; a [label](url) only after its label.
+				if (!text.startsWith('[', start)) {
+					protectedRanges.push([start, end]);
+					return;
+				}
 				const labelEnd = node.children?.at(-1)?.position?.end.offset;
 				if (labelEnd !== undefined) protectedRanges.push([labelEnd, end]);
 			}
@@ -38,18 +52,25 @@ function prepareMath(text: string): Prepared {
 		while (at > 0 && text[--at] === '\\') count++;
 		return count % 2 === 1;
 	};
-	let out = '', prefix = 'ORIbackslashMathToken';
+	let out = '';
+	let prefix = 'ORIbackslashMathToken';
 	while (text.includes(prefix)) prefix += 'Z';
 	const tokens: Prepared['tokens'] = [];
 	for (let i = 0; i < text.length; i++) {
-		if (text[i] !== '\\' || escaped(i) || protectedAt(i) || !['(', '['].includes(text[i + 1])) { out += text[i]; continue; }
-		const display = text[i + 1] === '[', close = display ? ']' : ')';
+		if (text[i] !== '\\' || escaped(i) || protectedAt(i) || !['(', '['].includes(text[i + 1])) {
+			out += text[i];
+			continue;
+		}
+		const display = text[i + 1] === '[';
+		const close = display ? ']' : ')';
 		let end = i + 2;
 		for (; end < text.length; end++) if (text[end] === '\\' && text[end + 1] === close && !escaped(end) && !protectedAt(end)) break;
-		if (end === text.length || protectedRanges.some(([start]) => i < start && start < end)) { out += text[i]; continue; }
-		const math = text.slice(i + 2, end);
+		if (end === text.length || protectedRanges.some(([start]) => i < start && start < end)) {
+			out += text[i];
+			continue;
+		}
 		const marker = `${prefix}${tokens.length}END`;
-		tokens.push({ marker, value: math, display });
+		tokens.push({ marker, value: text.slice(i + 2, end), display });
 		out += marker;
 		i = end + 1;
 	}
@@ -58,7 +79,7 @@ function prepareMath(text: string): Prepared {
 
 export const mathDelimiters = (text: string) => prepareMath(text).markdown;
 
-/** Restore AST nodes rather than dollar strings: TeX dollars and Markdown list/quote containers stay intact. */
+/** Turns the markers back into math nodes (not $ strings, so literal dollars and containers stay intact). */
 function restoreBackslashMath(prepared: Prepared) {
 	return (tree: Node) => {
 		if (!prepared.tokens.length) return;
@@ -73,7 +94,8 @@ function restoreBackslashMath(prepared: Prepared) {
 			if (!parent.children) return;
 			parent.children = parent.children.flatMap((child): Node[] => {
 				if (child.type !== 'text' || !child.value) { walk(child); return [child]; }
-				const parts: Node[] = []; let at = 0;
+				const parts: Node[] = [];
+				let at = 0;
 				for (const match of child.value.matchAll(tokenPattern)) {
 					if (match.index > at) parts.push({ type: 'text', value: child.value.slice(at, match.index) });
 					const token = byMarker.get(match[0])!;
@@ -86,12 +108,20 @@ function restoreBackslashMath(prepared: Prepared) {
 			});
 			parent.children = parent.children.flatMap((child): Node[] => {
 				if (child.type !== 'paragraph' || !child.children?.some((n) => n.type === 'math')) return [child];
-				const blocks: Node[] = []; let inline: Node[] = [];
+				// Display math splits its paragraph.
+				const blocks: Node[] = [];
+				let inline: Node[] = [];
+				const flush = () => {
+					if (inline.length) blocks.push({ type: 'paragraph', children: inline });
+					inline = [];
+				};
 				for (const node of child.children) {
-					if (node.type === 'math') { if (inline.length) blocks.push({ type: 'paragraph', children: inline }); blocks.push(node); inline = []; }
-					else inline.push(node);
+					if (node.type === 'math') {
+						flush();
+						blocks.push(node);
+					} else inline.push(node);
 				}
-				if (inline.length) blocks.push({ type: 'paragraph', children: inline });
+				flush();
 				return blocks;
 			});
 		}
@@ -99,17 +129,21 @@ function restoreBackslashMath(prepared: Prepared) {
 	};
 }
 
-/** TeX tags/eqref must resolve within this post, never to an identically tagged equation in another post. */
+/** Prefixes MathJax ids per post, so a \\ref cannot resolve to an equation in another post. */
 function namespaceMathIds(namespace: string) {
 	return (tree: Node) => {
 		const hex = (value: string) => Array.from(new TextEncoder().encode(value), (b) => b.toString(16).padStart(2, '0')).join('');
-		const prefix = `ori-math-${hex(namespace)}-`, ids = new Map<string, string>();
+		const prefix = `ori-math-${hex(namespace)}-`;
+		const ids = new Map<string, string>();
 		function visit(node: Node, inside: boolean, action: (node: Node) => void) {
 			const math = inside || node.tagName === 'mjx-container';
 			if (math) action(node);
 			for (const child of node.children ?? []) visit(child, math, action);
 		}
-		visit(tree, false, (node) => { const id = node.properties?.id; if (typeof id === 'string') ids.set(id, prefix + hex(id)); });
+		visit(tree, false, (node) => {
+			const id = node.properties?.id;
+			if (typeof id === 'string') ids.set(id, prefix + hex(id));
+		});
 		visit(tree, false, (node) => {
 			const props = node.properties;
 			if (!props) return;
@@ -117,7 +151,10 @@ function namespaceMathIds(namespace: string) {
 			for (const name of ['href', 'xLinkHref']) {
 				const value = props[name];
 				if (typeof value !== 'string' || !value.startsWith('#')) continue;
-				let id = value.slice(1); try { id = decodeURIComponent(id); } catch { /* malformed ref stays local */ }
+				let id = value.slice(1);
+				try {
+					id = decodeURIComponent(id);
+				} catch { /* keep it as written */ }
 				props[name] = `#${ids.get(id) ?? `${prefix}unresolved-${hex(id)}`}`;
 			}
 		});
@@ -148,8 +185,10 @@ export function Markdown({ text, postId }: { text: string; postId: number }) {
 		remarkPlugins: [remarkGfm, remarkMath, [restoreBackslashMath, prepared]],
 		rehypePlugins: [[rehypeSanitize, sanitize], [rehypeMathjax, mathjax], [namespaceMathIds, String(postId)]],
 		components: {
-			// Images were previously plaintext. Keep their useful link/alt text without third-party tracking fetches.
-			img: ({ src, alt }) => typeof src === 'string' && src ? createElement('a', { href: src, rel: 'noopener noreferrer' }, alt || 'Image') : createElement('span', null, alt),
+			// Images become links, so the page never fetches third-party images.
+			img: ({ src, alt }) => typeof src === 'string' && src
+				? createElement('a', { href: src, rel: 'noopener noreferrer' }, alt || 'Image')
+				: createElement('span', null, alt),
 		},
 	}, prepared.markdown));
 }

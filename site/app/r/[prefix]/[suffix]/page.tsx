@@ -1,4 +1,4 @@
-// One record: what it is, where it lives, its votes, its comments and reviews, and what was said about it elsewhere.
+// One record: metadata, votes, comments and reviews, and external discussion.
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import { notFound } from 'next/navigation';
@@ -19,7 +19,6 @@ export const dynamic = 'force-dynamic';
 
 const record = cache(async (id: string) => get(await db(), id));
 
-// What a response does to the record, if a person has labelled it.
 const Stance = ({ stance }: { stance?: string }) => (stance ? <span className={`stance ${stance}`} title={STANCES[stance]}>{stance}</span> : null);
 
 // Highwire citation_* tags (read by Google Scholar, Zotero and most agents) and schema.org JSON-LD.
@@ -33,7 +32,7 @@ export async function generateMetadata(ctx: IdParams): Promise<Metadata> {
 	if (r.published) cite.citation_publication_date = String(r.published).replaceAll('-', '/');
 	if (r.pdf) cite.citation_pdf_url = String(r.pdf);
 	return {
-		// Where the work stands, when a person reviewed it, says more about a discussed record than its abstract.
+		// A reviewed reception summary describes a discussed record better than its abstract.
 		title: String(r.title), description: reception(r)?.text ?? (String(r.summary ?? '').slice(0, 300) || undefined),
 		alternates: { canonical: recordPath(id), types: { 'application/json': `/api/v1/records/${idPath(id)}` } },
 		other: cite,
@@ -44,19 +43,20 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	const id = await recordId(ctx);
 	const r = await record(id);
 	if (!r) notFound();
-	const thread = await comments(await db(), id);
+	const d = await db();
+	const thread = await comments(d, id);
 	const { notice } = await ctx.searchParams;
-	const voters = await votes(await db(), id);
+	const voters = await votes(d, id);
 	const who = await me();
-	const mine = who ? (await myVotes(await db(), who.login, [id])).get(id) : undefined;
+	const mine = who ? (await myVotes(d, who.login, [id])).get(id) : undefined;
 	const back = recordPath(id);
 	const reactions = Object.entries((r.reactions ?? {}) as Record<string, number>);
-	// Posts and articles about the record, read from X's oEmbed or the page's Open Graph tags (index.py discuss).
+	// External posts and articles about the record (index.py discuss).
 	const links = (Array.isArray(r.discussion) ? r.discussion : []) as { kind: string; url: string; author?: string; handle?: string; site?: string; title?: string; text?: string; date?: string; record?: string; stance?: string }[];
-	// Records whose discussion names this one (a response to a manuscript, say): the reverse of the above, set at build time.
+	// Records whose discussion links this one, set at build time.
 	const discusses = (Array.isArray(r.discusses) ? r.discusses : []) as { id: string; title: string }[];
 	const stands = reception(r);
-	// A link the reception rests on, named as its author or site.
+	// Label for a reception link: its author, site, or host.
 	const cite = (url: string) => {
 		const l = links.find((x) => x.url === url);
 		return l?.author || l?.site || url.replace(/^https?:\/\/(www\.)?/, '').split('/')[0];
@@ -148,8 +148,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 					{links.map((l) => l.kind === 'x' ? (
 						<Fragment key={l.url}>
 							{l.stance ? <p className="meta"><Stance stance={l.stance} /></p> : null}
-							{/* X's own embed markup: widgets.js reads the post from its link and shows it as a card. The index
-							    does not keep the post's text, so without the script (or once the post is gone) only who and when show. */}
+							{/* widgets.js turns this into an embedded post; without it only author and date show. */}
 							<blockquote className="twitter-tweet" data-dnt="true">
 								— {l.author} (@{l.handle}) <a href={l.url}>{date(l.date) || 'Post on X'}</a>
 							</blockquote>

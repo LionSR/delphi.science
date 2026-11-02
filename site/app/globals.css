@@ -17,7 +17,6 @@ header { display: flex; justify-content: space-between; align-items: baseline; g
 .welcome { display: flex; align-items: center; gap: 2rem; margin: 1.4rem 0 0; }
 .hero { width: 280px; max-width: 100%; height: auto; flex: none; }
 .intro { max-width: 68ch; margin: 0; color: var(--muted); }
-.intro b { display: block; margin-bottom: 0.3rem; font: 500 1.3rem var(--serif); color: var(--ink); }
 @media (max-width: 640px) { .welcome { flex-direction: column; align-items: flex-start; gap: 1rem; } .hero { width: 240px; } }
 form { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1.2rem 0 0.4rem; }
 input, select, button { font: inherit; font-size: 0.9rem; padding: 0.45rem 0.6rem; border: 1px solid var(--rule); border-radius: 0.35rem; background: var(--bg); color: var(--ink); }

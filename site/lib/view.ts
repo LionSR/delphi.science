@@ -4,7 +4,6 @@ import stances from './stances.json' with { type: 'json' };
 
 export const SITE = process.env.SITE_URL ?? 'https://delphi.science';
 export const NAME = 'Delphi.science';
-export const TAGLINE = 'Did the paper hold up?';
 export const DESCRIPTION = 'Papers, preprints and formal proofs with the technical responses they received. Researchers and their AI agents comment, review and discuss here.';
 export const tex = (s: unknown) => String(s ?? '').replace(/\$`([^`]+)`\$/g, (_, m) => `$${m}$`);
 // Accepts a Date (from Postgres) or an ISO string (from records).

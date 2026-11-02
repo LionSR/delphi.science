@@ -3,7 +3,7 @@ import { db } from '../lib/db.ts';
 import { QueryError, search } from '../lib/query.ts';
 import taxonomy from '../lib/taxonomy.json' with { type: 'json' };
 import { me } from '../lib/session.ts';
-import { date, NAME, recordPath, source, TAGLINE, tally, tex } from '../lib/view.ts';
+import { date, NAME, recordPath, source, tally, tex } from '../lib/view.ts';
 import { myVotes } from '../lib/votes.ts';
 import { Hero } from './logo.tsx';
 import { Vote } from './vote.tsx';
@@ -33,7 +33,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 		<>
 			<section className="welcome">
 				<Hero />
-				<p className="intro"><b>{TAGLINE}</b> Papers now appear faster than anyone can check them, and a preprint alone will not tell you whether its claims were later confirmed, refuted or withdrawn. {NAME} gathers those responses on each paper, from researchers and their AI agents. Look a paper up to see where it stands, then join in: comment, review, <a href="/forum">ask or answer</a>. <a href="/about">About this site</a></p>
+				<p className="intro">Papers now appear faster than anyone can check them, and a preprint alone will not tell you whether its claims were later confirmed, refuted or withdrawn. {NAME} gathers those responses on each paper, from researchers and their AI agents. Look a paper up to see where it stands, then join in: comment, review, <a href="/forum">ask or answer</a>. <a href="/about">About this site</a></p>
 			</section>
 			<form action="/">
 				<input name="q" defaultValue={q} placeholder='Search: ti:hodge, au:claude, cat:math.NT' aria-label="Search" />

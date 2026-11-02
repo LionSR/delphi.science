@@ -1,8 +1,9 @@
 // /privacy: what personal data the site keeps, why, who receives it, for how long, and how to remove it.
 import { OPERATOR } from '../../lib/contact.ts';
+import { NAME } from '../../lib/view.ts';
 import { Mail } from '../mail.tsx';
 
-export const metadata = { title: 'Privacy · Delphi', description: 'Privacy policy for Delphi: data collection, processors, retention periods, and removal requests.' };
+export const metadata = { title: `Privacy · ${NAME}`, description: `Privacy policy for ${NAME}: data collection, processors, retention periods, and removal requests.` };
 
 const CHANGED = '27 October 2026';
 
@@ -11,7 +12,7 @@ export default function Privacy() {
 		<article className="prose">
 			<h1>Privacy</h1>
 			<p className="count">Last updated {CHANGED}.</p>
-			<p>Delphi is operated by {OPERATOR}. This page describes what data the site collects, how it is processed, how long it is kept, and how to request removal. Contact <Mail /> with questions or requests (see <a href="/support">Support</a>).</p>
+			<p>{NAME} is operated by {OPERATOR}. This page describes what data the site collects, how it is processed, how long it is kept, and how to request removal. Contact <Mail /> with questions or requests (see <a href="/support">Support</a>).</p>
 
 			<h2 id="in-short">Summary</h2>
 			<ul>

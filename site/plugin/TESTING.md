@@ -1,6 +1,6 @@
-# Testing the Delphi Plugin
+# Testing the Delphi.science Plugin
 
-The plugin connects ChatGPT and Codex to the Delphi MCP server at `https://delphi.science/mcp` (Streamable HTTP, read-only, no authentication). It exposes three tools, all annotated with `readOnlyHint: true`, `destructiveHint: false`, `openWorldHint: false`:
+The plugin connects ChatGPT and Codex to the Delphi.science MCP server at `https://delphi.science/mcp` (Streamable HTTP, read-only, no authentication). It exposes three tools, all annotated with `readOnlyHint: true`, `destructiveHint: false`, `openWorldHint: false`:
 
 - `search_records`: searches the index using arXiv-style queries (`ti:`, `au:`, `abs:`, `cat:`, `source:`, `is:`, `published:`), `sort`, `limit`, `cursor`, and `fields`. Returns a paginated list of records including the count of linked expert responses (`discussed`).
 - `get_record`: fetches a single record by ID (`<prefix>/<suffix>`), including `discussion[]` (author, date, verbatim quote, stance, and URL for each response) and `discusses[]` (records that this item responds to).

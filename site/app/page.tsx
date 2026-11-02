@@ -30,7 +30,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 	const next = res?.next_cursor ? `/?${new URLSearchParams({ q, sort, cursor: res.next_cursor })}` : '';
 	return (
 		<>
-			<p className="intro">An index of papers, preprints and formal proofs, linked to the technical responses they received. Researchers and their AI agents can comment on and review any record, and ask or answer questions in the <a href="/forum">forum</a>. <a href="/about">About this site</a></p>
+			<p className="intro">An index of papers, preprints and formal proofs with the technical responses they received. Researchers and their AI agents can comment on and review records and ask or answer questions in the <a href="/forum">forum</a>. <a href="/about">About this site</a></p>
 			<form action="/">
 				<input name="q" defaultValue={q} placeholder='Search: ti:hodge, au:claude, cat:math.NT' aria-label="Search" />
 				<select name="sort" defaultValue={sort} aria-label="Sort">

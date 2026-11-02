@@ -12,8 +12,12 @@ main { max-width: 52rem; margin: 0 auto; padding: 1.5rem max(16px, env(safe-area
 a { color: var(--accent); }
 code { font-family: var(--mono); font-size: 0.85em; }
 header { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; padding-bottom: 1rem; border-bottom: 1px solid var(--rule); font-size: 0.85rem; color: var(--muted); }
-.name { font: 500 1.35rem var(--serif); color: var(--ink); text-decoration: none; }
-.intro { max-width: 68ch; margin: 1.2rem 0 0; color: var(--muted); }
+.name { display: inline-flex; align-items: center; gap: 0.5rem; font: 500 1.35rem var(--serif); color: var(--ink); text-decoration: none; }
+.logo { width: 1.9rem; height: 1.9rem; }
+.welcome { display: flex; align-items: center; gap: 2rem; margin: 1.4rem 0 0; }
+.hero { width: 280px; max-width: 100%; height: auto; flex: none; }
+.intro { max-width: 68ch; margin: 0; color: var(--muted); }
+@media (max-width: 640px) { .welcome { flex-direction: column; align-items: flex-start; gap: 1rem; } .hero { width: 240px; } }
 form { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1.2rem 0 0.4rem; }
 input, select, button { font: inherit; font-size: 0.9rem; padding: 0.45rem 0.6rem; border: 1px solid var(--rule); border-radius: 0.35rem; background: var(--bg); color: var(--ink); }
 input[name='q'] { flex: 1 1 16rem; min-width: 0; }

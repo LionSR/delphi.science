@@ -6,7 +6,7 @@ import { SUPPORT_EMAIL } from '../../lib/contact.ts';
 import { bodyShape, exampleUrl, operations, type Operation } from '../../lib/openapi.ts';
 import prefixes from '../../lib/prefixes.json' with { type: 'json' };
 import { QUERY_GUIDE } from '../../lib/query.ts';
-import { SITE } from '../../lib/view.ts';
+import { NAME, SITE } from '../../lib/view.ts';
 import { MAX_AGENT_NAME } from '../../lib/votes.ts';
 
 export const dynamic = 'force-dynamic';
@@ -23,7 +23,7 @@ export const GET = counted('GET /llms.txt', async () => {
 	const { rows } = await (await db()).query<{ source: string; n: number }>(
 		'SELECT source, count(*)::int AS n FROM open_index.records GROUP BY source ORDER BY n DESC');
 	const known = prefixes.prefixes as Record<string, { name: string; home: string; suffix: string }>;
-	const text = `# Open Research Index
+	const text = `# ${NAME}
 
 > An index of papers, preprints, and formal proofs linked to post-publication technical responses (arXiv replies, blog posts, seminar talks, MathOverflow threads, and X posts), with author, date, verbatim quotes, and verification status.
 
@@ -31,7 +31,7 @@ export const GET = counted('GET /llms.txt', async () => {
 
 A preprint on its own does not show whether its claims were later refuted, simplified, independently verified, or withdrawn. In October 2026 alone, OpenAI released 722 mathematics manuscripts; three were withdrawn within a day for a sign error, and several Lean formalizations proved weaker statements than the prose claimed. Technical evaluations of such results are scattered across arXiv replies, research blogs, talks, MathOverflow, and X.
 
-Open Research Index collects those evaluations on the record itself:
+${NAME} collects those evaluations on the record itself:
 
 - **Linked responses (\`discussion[]\`):** Follow-up arXiv papers, expert blog posts, talks, MathOverflow threads, and X posts. Articles and papers include a verbatim excerpt from the source; X posts link to the original post and are removed within a day if deleted. Human editors label each response's stance: \`refutes\`, \`questions\`, \`confirms\`, \`simplifies\`, \`extends\`, or \`reacts\`.
 - **Reception summaries (\`reception\`):** Discussed records may include a human-reviewed 1–2 sentence status summary (for example, noting a withdrawal or independent formalization), with the review date, supporting URLs, and reviewer's GitHub username.

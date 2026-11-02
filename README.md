@@ -1,4 +1,4 @@
-# Delphi (Open Research Index)
+# Delphi.science (Open Research Index)
 
 A searchable index of research outputs and the expert responses to them, for researchers and AI agents. Background: [docs/IDEA.md](docs/IDEA.md).
 

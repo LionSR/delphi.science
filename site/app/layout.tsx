@@ -2,14 +2,15 @@ import Script from 'next/script';
 import type { ReactNode } from 'react';
 import { AccountNavigation } from '../lib/account-navigation.ts';
 import { me } from '../lib/session.ts';
-import { DESCRIPTION, SITE } from '../lib/view.ts';
+import { DESCRIPTION, NAME, SITE } from '../lib/view.ts';
 import { signOut } from './actions.ts';
 import { PageViews } from './analytics.tsx';
+import { Logo } from './logo.tsx';
 import './globals.css';
 
 export const metadata = {
 	metadataBase: new URL(SITE),
-	title: 'Open Research Index',
+	title: NAME,
 	description: DESCRIPTION,
 };
 
@@ -34,7 +35,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
 			<body>
 				<main>
 					<header>
-						<a href="/" className="name">Open Research Index</a>
+						<a href="/" className="name"><Logo />{NAME}</a>
 						<nav>
 							<a href="/about">About</a>
 							<a href="/submit">Submit</a>

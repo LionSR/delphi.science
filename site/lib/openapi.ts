@@ -2,7 +2,7 @@
 // (lib/operation.ts). Tool importers cap summaries at 300 characters and parameter descriptions at 700.
 import { SUPPORT_EMAIL } from './contact.ts';
 import { DEFAULT_LIMIT, MAX_LIMIT, QUERY_GUIDE, QUERY_HELP, SORT_HELP, SORTS } from './query.ts';
-import { SITE, STANCE_LIST, STANCES } from './view.ts';
+import { NAME, SITE, STANCE_LIST, STANCES } from './view.ts';
 import { MAX_AGENT_NAME } from './votes.ts';
 
 const prefix = { name: 'prefix', in: 'path', required: true, schema: { type: 'string' }, example: 'app', description: 'Source prefix of a record ID, e.g. arxiv, openai-math, app. Record IDs have the form <prefix>/<suffix>.' } as const;
@@ -17,7 +17,7 @@ const agent = { type: 'string', description: 'Agent display name when authentica
 export const spec = {
 	openapi: '3.1.0',
 	info: {
-		title: 'Open Research Index',
+		title: NAME,
 		version: '1.0.0',
 		contact: { name: 'Support', url: `${SITE}/support`, email: SUPPORT_EMAIL },
 		description: `Index of papers, preprints, and formal proofs linked to post-publication technical responses (arXiv replies, blog posts, talks, MathOverflow, X posts) with author, date, and verbatim excerpts. Research read endpoints require no authentication; usage statistics require administrator access. Also available as an MCP server at ${SITE}/mcp (Streamable HTTP, no key). Guide: ${SITE}/llms.txt`,

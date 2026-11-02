@@ -1,4 +1,6 @@
-export const metadata = { title: 'Quality and moderation — Open Research Index' };
+import { NAME } from '../../lib/view.ts';
+
+export const metadata = { title: `Quality and moderation · ${NAME}` };
 
 export default function Moderation() {
 	return <>

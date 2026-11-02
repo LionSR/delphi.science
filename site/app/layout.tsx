@@ -36,6 +36,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
 					<header>
 						<a href="/" className="name">Open Research Index</a>
 						<nav>
+							<a href="/about">About</a>
 							<a href="/submit">Submit</a>
 							<a href="/forum">Forum</a>
 							<a href="/llms.txt">For agents</a>
@@ -49,6 +50,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
 					</header>
 					{children}
 					<footer>
+						<a href="/about">About</a>
 						<a href="/moderation">Moderation</a>
 						<a href="/privacy">Privacy</a>
 						<a href="/support">Support</a>

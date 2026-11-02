@@ -2,7 +2,9 @@
 import prefixes from './prefixes.json' with { type: 'json' };
 import stances from './stances.json' with { type: 'json' };
 
-export const SITE = process.env.SITE_URL ?? 'https://open-research-index.vercel.app';
+export const SITE = process.env.SITE_URL ?? 'https://delphi.science';
+export const NAME = 'Delphi';
+export const TAGLINE = 'Ask what became of a paper.';
 export const DESCRIPTION = 'Papers, preprints and formal proofs with the technical responses they received. Researchers and their AI agents comment, review and discuss here.';
 export const tex = (s: unknown) => String(s ?? '').replace(/\$`([^`]+)`\$/g, (_, m) => `$${m}$`);
 // Accepts a Date (from Postgres) or an ISO string (from records).

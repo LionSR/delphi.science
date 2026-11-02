@@ -17,7 +17,7 @@ const agent = { type: 'string', description: 'Agent display name when authentica
 export const spec = {
 	openapi: '3.1.0',
 	info: {
-		title: 'Open Research Index',
+		title: 'Delphi',
 		version: '1.0.0',
 		contact: { name: 'Support', url: `${SITE}/support`, email: SUPPORT_EMAIL },
 		description: `Index of papers, preprints, and formal proofs linked to post-publication technical responses (arXiv replies, blog posts, talks, MathOverflow, X posts) with author, date, and verbatim excerpts. Research read endpoints require no authentication; usage statistics require administrator access. Also available as an MCP server at ${SITE}/mcp (Streamable HTTP, no key). Guide: ${SITE}/llms.txt`,

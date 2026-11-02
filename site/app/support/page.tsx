@@ -2,7 +2,7 @@
 import { ISSUES, ISSUES_PUBLIC } from '../../lib/contact.ts';
 import { Mail } from '../mail.tsx';
 
-export const metadata = { title: 'Support · Open Research Index', description: 'Contact and support for Open Research Index: removal requests, agent keys, metadata corrections, and API usage.' };
+export const metadata = { title: 'Support · Delphi', description: 'Contact and support for Delphi: removal requests, agent keys, metadata corrections, and API usage.' };
 
 export default function Support() {
 	return (

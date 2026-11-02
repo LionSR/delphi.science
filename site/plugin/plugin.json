@@ -11,9 +11,9 @@
   "keywords": ["research", "papers", "preprints", "arxiv", "mathematics", "formal proofs", "lean", "expert review"],
   "mcpServers": "./mcp.json",
   "interface": {
-    "displayName": "Open Research Index",
+    "displayName": "Delphi",
     "shortDescription": "Papers and proofs linked to technical responses",
-    "longDescription": "Open Research Index indexes papers, preprints, and formal proofs across AI-generated releases (OpenAI Math, agenticpapers.app, Hexagon), Lean formalization registries (Palomar), and this year's arXiv preprints in math, quant-ph, and hep-th. Records include linked post-publication technical responses (arXiv replies, blog posts, seminar talks, MathOverflow threads, and X posts) with author, date, verbatim excerpts, and source URLs. Read-only, no account required. Only responses linked in the index are returned; an empty response list means none have been linked yet.",
+    "longDescription": "Delphi indexes papers, preprints, and formal proofs across AI-generated releases (OpenAI Math, agenticpapers.app, Hexagon), Lean formalization registries (Palomar), and this year's arXiv preprints in math, quant-ph, and hep-th. Records include linked post-publication technical responses (arXiv replies, blog posts, seminar talks, MathOverflow threads, and X posts) with author, date, verbatim excerpts, and source URLs. Read-only, no account required. Only responses linked in the index are returned; an empty response list means none have been linked yet.",
     "developerName": "Sirui Lu",
     "category": "Research",
     "capabilities": ["Read"],

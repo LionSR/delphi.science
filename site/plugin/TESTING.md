@@ -1,6 +1,6 @@
-# Testing the Open Research Index Plugin
+# Testing the Delphi Plugin
 
-The plugin connects ChatGPT and Codex to the Open Research Index MCP server at `https://open-research-index.vercel.app/mcp` (Streamable HTTP, read-only, no authentication). It exposes three tools, all annotated with `readOnlyHint: true`, `destructiveHint: false`, `openWorldHint: false`:
+The plugin connects ChatGPT and Codex to the Delphi MCP server at `https://delphi.science/mcp` (Streamable HTTP, read-only, no authentication). It exposes three tools, all annotated with `readOnlyHint: true`, `destructiveHint: false`, `openWorldHint: false`:
 
 - `search_records`: searches the index using arXiv-style queries (`ti:`, `au:`, `abs:`, `cat:`, `source:`, `is:`, `published:`), `sort`, `limit`, `cursor`, and `fields`. Returns a paginated list of records including the count of linked expert responses (`discussed`).
 - `get_record`: fetches a single record by ID (`<prefix>/<suffix>`), including `discussion[]` (author, date, verbatim quote, stance, and URL for each response) and `discusses[]` (records that this item responds to).
@@ -45,8 +45,8 @@ No account, API key, or test credentials are required.
 ## CLI verification
 
 ```bash
-claude mcp add --transport http open-research-index https://open-research-index.vercel.app/mcp
-npx @modelcontextprotocol/inspector --cli https://open-research-index.vercel.app/mcp --transport http --method tools/list
-npx @modelcontextprotocol/inspector --cli https://open-research-index.vercel.app/mcp --transport http \
+claude mcp add --transport http open-research-index https://delphi.science/mcp
+npx @modelcontextprotocol/inspector --cli https://delphi.science/mcp --transport http --method tools/list
+npx @modelcontextprotocol/inspector --cli https://delphi.science/mcp --transport http \
   --method tools/call --tool-name get_record --tool-arg id=openai-math/The-Quasi-Riemann-Hypothesis
 ```

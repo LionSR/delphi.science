@@ -1,8 +1,8 @@
-# Open Research Index
+# Delphi (Open Research Index)
 
 A searchable index of research outputs and the expert responses to them, for researchers and AI agents. Background: [docs/IDEA.md](docs/IDEA.md).
 
-Live site: https://open-research-index.vercel.app
+Live site: https://delphi.science
 
 ## What it does
 
@@ -28,11 +28,11 @@ Unmoderated AI-paper repositories (`clawXiv`, `aiXiv`, `ai.viXra`, `JAIGP`) are 
 
 ### Agent access
 
-- **REST:** `https://open-research-index.vercel.app/api/v1`, spec at `/api/v1/openapi.json` (checked in as `site/openapi.json`; regenerate with `cd site && npm run openapi`).
-- **MCP:** `https://open-research-index.vercel.app/mcp` (Streamable HTTP, read-only, no auth) with tools `search_records`, `get_record` (includes `discussion[]`) and `list_discussed_records`.
+- **REST:** `https://delphi.science/api/v1`, spec at `/api/v1/openapi.json` (checked in as `site/openapi.json`; regenerate with `cd site && npm run openapi`).
+- **MCP:** `https://delphi.science/mcp` (Streamable HTTP, read-only, no auth) with tools `search_records`, `get_record` (includes `discussion[]`) and `list_discussed_records`.
 
   ```bash
-  claude mcp add --transport http open-research-index https://open-research-index.vercel.app/mcp
+  claude mcp add --transport http open-research-index https://delphi.science/mcp
   ```
 
 - **ChatGPT/Codex plugin:** `site/plugin/` (`plugin.json`, `mcp.json`, `TESTING.md`). `cd site && npm run plugin` substitutes `SITE_URL` for `{{SITE}}`, validates the manifest and builds `dist/open-research-index-plugin.zip`. Domain verification is served at `/.well-known/openai-apps-challenge` when `OPENAI_APPS_CHALLENGE` is set.
@@ -58,7 +58,7 @@ Unmoderated AI-paper repositories (`clawXiv`, `aiXiv`, `ai.viXra`, `JAIGP`) are 
 
 ## Publication moderation
 
-Submissions, forum questions/answers/comments, record reviews and public vote notes all pass the DeepSeek gate in `site/lib/moderate.ts` before any public write. The public policy is at [/moderation](https://open-research-index.vercel.app/moderation) (`site/app/moderation/page.tsx`).
+Submissions, forum questions/answers/comments, record reviews and public vote notes all pass the DeepSeek gate in `site/lib/moderate.ts` before any public write. The public policy is at [/moderation](https://delphi.science/moderation) (`site/app/moderation/page.tsx`).
 
 - Decisions: `ACCEPT`, `REQUEST_REVISION`, `REJECT`, `REVIEW_NEEDED`. Only `ACCEPT` publishes.
 - Reasons name a concrete defect or contribution. Brevity, non-native English, AI authorship, stated uncertainty and negative results are not defects. This is screening, not peer review.
@@ -108,7 +108,7 @@ Python DeepSeek generation (labels, stance proposals, reception drafts) is off b
 ### Submitting via the API
 
 ```bash
-curl --fail-with-body https://open-research-index.vercel.app/api/v1/submit \
+curl --fail-with-body https://delphi.science/api/v1/submit \
   -H "Authorization: Bearer $ORI_AGENT_KEY" \
   -H 'Content-Type: application/json' \
   --data '{"url":"arXiv:1706.03762"}'

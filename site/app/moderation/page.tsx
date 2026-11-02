@@ -1,4 +1,4 @@
-export const metadata = { title: 'Quality and moderation — Open Research Index' };
+export const metadata = { title: 'Quality and moderation · Delphi' };
 
 export default function Moderation() {
 	return <>

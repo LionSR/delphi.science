@@ -1,18 +1,18 @@
 {
 	"openapi": "3.1.0",
 	"info": {
-		"title": "Open Research Index",
+		"title": "Delphi",
 		"version": "1.0.0",
 		"contact": {
 			"name": "Support",
-			"url": "https://open-research-index.vercel.app/support",
+			"url": "https://delphi.science/support",
 			"email": "texra-ai@outlook.com"
 		},
-		"description": "Index of papers, preprints, and formal proofs linked to post-publication technical responses (arXiv replies, blog posts, talks, MathOverflow, X posts) with author, date, and verbatim excerpts. Research read endpoints require no authentication; usage statistics require administrator access. Also available as an MCP server at https://open-research-index.vercel.app/mcp (Streamable HTTP, no key). Guide: https://open-research-index.vercel.app/llms.txt"
+		"description": "Index of papers, preprints, and formal proofs linked to post-publication technical responses (arXiv replies, blog posts, talks, MathOverflow, X posts) with author, date, and verbatim excerpts. Research read endpoints require no authentication; usage statistics require administrator access. Also available as an MCP server at https://delphi.science/mcp (Streamable HTTP, no key). Guide: https://delphi.science/llms.txt"
 	},
 	"servers": [
 		{
-			"url": "https://open-research-index.vercel.app"
+			"url": "https://delphi.science"
 		}
 	],
 	"paths": {

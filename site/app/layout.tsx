@@ -2,7 +2,7 @@ import Script from 'next/script';
 import type { ReactNode } from 'react';
 import { AccountNavigation } from '../lib/account-navigation.ts';
 import { me } from '../lib/session.ts';
-import { SITE } from '../lib/view.ts';
+import { DESCRIPTION, SITE } from '../lib/view.ts';
 import { signOut } from './actions.ts';
 import { PageViews } from './analytics.tsx';
 import './globals.css';
@@ -10,7 +10,7 @@ import './globals.css';
 export const metadata = {
 	metadataBase: new URL(SITE),
 	title: 'Open Research Index',
-	description: 'Searchable index of papers, preprints, and formal proofs linked to post-publication technical responses from arXiv, blog posts, talks, MathOverflow, and X.',
+	description: DESCRIPTION,
 };
 
 // Titles and abstracts use inline TeX ($…$); GitHub's $`…`$ is rewritten to $…$ before rendering.
@@ -50,7 +50,6 @@ export default async function Layout({ children }: { children: ReactNode }) {
 					</header>
 					{children}
 					<footer>
-						<a href="/about">About</a>
 						<a href="/moderation">Moderation</a>
 						<a href="/privacy">Privacy</a>
 						<a href="/support">Support</a>

@@ -10,7 +10,7 @@ import { PostForm } from '../../../post-form.tsx';
 import { db } from '../../../../lib/db.ts';
 import { get } from '../../../../lib/query.ts';
 import { me } from '../../../../lib/session.ts';
-import { date, idPath, reception, recordId, recordPath, SITE, source, STANCES, tally, tex, type IdParams, voteMark } from '../../../../lib/view.ts';
+import { date, idPath, original, reception, recordId, recordPath, SITE, source, STANCES, tally, tex, type IdParams, voteMark } from '../../../../lib/view.ts';
 import { publicNames } from '../../../../lib/people.ts';
 import { myVotes, votes } from '../../../../lib/votes.ts';
 import { Vote } from '../../../vote.tsx';
@@ -64,6 +64,9 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 		return l?.author || l?.site || url.replace(/^https?:\/\/(www\.)?/, '').split('/')[0];
 	};
 	const api = `/api/v1/records/${idPath(id)}`;
+	// The original work at its upstream site.
+	const from = original(r);
+	const tag = source(r.source);
 	const ld = {
 		'@context': 'https://schema.org', '@type': 'ScholarlyArticle', identifier: id, name: r.title, url: `${SITE}${recordPath(id)}`,
 		sameAs: r.url, datePublished: r.published, abstract: r.summary, about: r.subject, keywords: r.tags,
@@ -74,9 +77,12 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld).replaceAll('<', '\\u003c') }} />
 			{notice && <p className="count">{notice}</p>}
 			<h1>{tex(r.title)}</h1>
+			{/* Where to read the original work, at its upstream site. */}
+			{from && <p className="origin">Source: <a className="external" href={from.href} rel="external" title={from.href}>{from.label}</a></p>}
 			{Array.isArray(r.authors) && <p className="authors">{r.authors.join(', ')}</p>}
 			<p className="meta">
-				<a href={source(r.source).href}>{source(r.source).name}</a>
+				{/* The source tag filters the index; it is not a link to the paper. */}
+				<a className="tag" href={tag.href} title={tag.title}>{tag.name}</a>
 				<code>{id}</code>
 				<span>{date(r.published)}</span>
 				{r.subject ? <code>{String(r.subject)}</code> : null}
@@ -112,7 +118,6 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 			)}
 			{r.summary ? <p className="abstract">{tex(r.summary)}</p> : null}
 			<p className="meta">
-				<a href={String(r.url)}>Source</a>
 				{r.pdf ? <a href={String(r.pdf)}>PDF</a> : null}
 				{r.repo ? <a href={String(r.repo)}>Repository</a> : null}
 				<a href={api}>JSON</a>

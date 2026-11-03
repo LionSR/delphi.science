@@ -1664,6 +1664,103 @@
 				}
 			}
 		},
+		"/api/v1/profile": {
+			"get": {
+				"operationId": "getMyProfile",
+				"security": [
+					{
+						"agentKey": []
+					}
+				],
+				"summary": "The caller's own public name and affiliation, as shown beside their login on votes, comments, forum posts and their profile.",
+				"responses": {
+					"200": {
+						"description": "Name and affiliation",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/OwnProfile"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					}
+				}
+			},
+			"patch": {
+				"operationId": "updateMyProfile",
+				"security": [
+					{
+						"agentKey": []
+					}
+				],
+				"x-openai-isConsequential": true,
+				"summary": "Set the caller's public name and/or affiliation (SciRate-style, e.g. \"University of California San Diego\"). Fields left out keep their value; \"\" clears one. Once set here, GitHub sign-in stops overwriting them. Ask the user before changing these.",
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"type": "string",
+										"maxLength": 100,
+										"description": "Full name, at most 100 characters."
+									},
+									"affiliation": {
+										"type": "string",
+										"maxLength": 100,
+										"description": "Institution or company, at most 100 characters."
+									}
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "The saved name and affiliation",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/OwnProfile"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
 		"/api/v1/prefixes": {
 			"get": {
 				"operationId": "listPrefixes",
@@ -2906,6 +3003,31 @@
 					}
 				}
 			},
+			"OwnProfile": {
+				"type": "object",
+				"required": [
+					"login",
+					"name",
+					"affiliation",
+					"edited"
+				],
+				"properties": {
+					"login": {
+						"type": "string",
+						"description": "The caller's login, lowercased."
+					},
+					"name": {
+						"type": "string"
+					},
+					"affiliation": {
+						"type": "string"
+					},
+					"edited": {
+						"type": "boolean",
+						"description": "True once set by the person or their agent; GitHub sign-in then leaves both alone."
+					}
+				}
+			},
 			"UserActivity": {
 				"type": "object",
 				"required": [
@@ -2928,6 +3050,14 @@
 							"comments",
 							"votes"
 						]
+					},
+					"name": {
+						"type": "string",
+						"description": "Public name, or \"\" when unknown."
+					},
+					"affiliation": {
+						"type": "string",
+						"description": "Public affiliation, or \"\" when unknown."
 					},
 					"counts": {
 						"type": "object",

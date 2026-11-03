@@ -42,14 +42,28 @@ export async function rememberGitHubProfile(db: Db, login: string, github: { nam
 	[login.toLowerCase(), profileName(github.name), profileAffiliation(github.company)]).catch(() => {});
 }
 
-/** The person's own edit from their profile page. Blank fields are allowed and stay blank at later sign-ins. */
-export async function editPublicName(db: Db, login: string, input: { name?: unknown; affiliation?: unknown }): Promise<PublicName> {
-	const raw = { name: typeof input.name === 'string' ? input.name : '', affiliation: typeof input.affiliation === 'string' ? input.affiliation : '' };
-	if ([...raw.name.trim()].length > MAX_NAME) throw new QueryError(`Names are at most ${MAX_NAME} characters.`, 'Shorten the name.');
-	if ([...raw.affiliation.trim()].length > MAX_AFFILIATION) throw new QueryError(`Affiliations are at most ${MAX_AFFILIATION} characters.`, 'Shorten the affiliation.');
-	const saved = { name: profileName(raw.name), affiliation: profileName(raw.affiliation) };
-	await db.query(`INSERT INTO open_index.people (login, name, affiliation, edited) VALUES ($1, $2, $3, true)
-		ON CONFLICT (login) DO UPDATE SET name = excluded.name, affiliation = excluded.affiliation, edited = true, updated_at = now()`,
-	[login.toLowerCase(), saved.name, saved.affiliation]);
-	return saved;
+/** What a person has stored, as they and their agents see it: unlike publicName, a name equal to the login is kept. */
+export type OwnName = PublicName & { login: string; edited: boolean };
+
+/** The person's own name and affiliation, for their profile form and their agents. */
+export async function ownName(db: Db, login: string): Promise<OwnName> {
+	const row = (await db.query<OwnName>('SELECT login, name, affiliation, edited FROM open_index.people WHERE login = $1', [login.toLowerCase()])).rows[0];
+	return row ?? { login: login.toLowerCase(), name: '', affiliation: '', edited: false };
+}
+
+/** The person's own edit, from their profile page or one of their agents. A field left out (not a string) keeps its
+ *  value; '' clears it. Edited values stay at later sign-ins. */
+export async function editPublicName(db: Db, login: string, input: { name?: unknown; affiliation?: unknown }): Promise<OwnName> {
+	const given = (v: unknown, max: number, what: string) => {
+		if (typeof v !== 'string') return null;
+		if ([...v.trim()].length > max) throw new QueryError(`${what} is longer than ${max} characters.`, `Shorten the ${what.toLowerCase()}.`);
+		return profileName(v);
+	};
+	const name = given(input.name, MAX_NAME, 'Name');
+	const affiliation = given(input.affiliation, MAX_AFFILIATION, 'Affiliation');
+	if (name === null && affiliation === null) throw new QueryError('Nothing to change.', 'Send "name", "affiliation" or both; "" clears one.');
+	return (await db.query<OwnName>(`INSERT INTO open_index.people (login, name, affiliation, edited) VALUES ($1, coalesce($2, ''), coalesce($3, ''), true)
+		ON CONFLICT (login) DO UPDATE SET name = coalesce($2, open_index.people.name), affiliation = coalesce($3, open_index.people.affiliation),
+			edited = true, updated_at = now()
+		RETURNING login, name, affiliation, edited`, [login.toLowerCase(), name, affiliation])).rows[0];
 }

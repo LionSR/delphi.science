@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { db } from '../../../lib/db.ts';
-import { MAX_AFFILIATION, MAX_NAME, publicName } from '../../../lib/people.ts';
+import { MAX_AFFILIATION, MAX_NAME, ownName, publicName } from '../../../lib/people.ts';
 import { normalizeProfileLogin, profile, TABS, type Profile, type Tab } from '../../../lib/profile.ts';
 import { ProfileView } from '../../../lib/profile-view.ts';
 import { me } from '../../../lib/session.ts';
@@ -38,17 +38,18 @@ export default async function Profile({ params, searchParams }: Context) {
 		page = null;
 	}
 	const owner = (await me())?.login.toLowerCase() === login.toLowerCase();
-	const editor = owner ? (
-		<details className="profile-edit" open={!who.name && !who.affiliation}>
+	const own = owner ? await ownName(d, login).catch(() => null) : null;
+	const editor = own ? (
+		<details className="profile-edit" open={!own.name && !own.affiliation}>
 			<summary>Edit name and affiliation</summary>
 			{notice && <p className="count">{notice}</p>}
 			<form action={savePublicName}>
 				<input type="hidden" name="login" value={login} />
-				<label>Name <input name="name" defaultValue={who.name} maxLength={MAX_NAME} autoComplete="name" /></label>
-				<label>Affiliation <input name="affiliation" defaultValue={who.affiliation} maxLength={MAX_AFFILIATION} autoComplete="organization" placeholder="e.g. University of California San Diego" /></label>
+				<label>Name <input name="name" defaultValue={own.name} maxLength={MAX_NAME} autoComplete="name" /></label>
+				<label>Affiliation <input name="affiliation" defaultValue={own.affiliation} maxLength={MAX_AFFILIATION} autoComplete="organization" placeholder="e.g. University of California San Diego" /></label>
 				<button>Save</button>
 			</form>
-			<p className="meta"><span>Shown publicly beside your username. Sign-in no longer copies these from GitHub once you save here.</span></p>
+			<p className="meta"><span>Shown publicly beside your username. Sign-in no longer copies these from GitHub once you save here. Your connected agents can also set them.</span></p>
 		</details>
 	) : null;
 	return <ProfileView login={login} tab={tab} page={page} who={who} editor={editor} />;

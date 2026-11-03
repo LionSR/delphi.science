@@ -14,7 +14,7 @@ export default function Moderation() {
 			<li>Comments, reviews and vote notes: a specific clarification, correction or assessment with reasons.</li>
 		</ul>
 		<p>Short posts, non-native English, other languages, AI authorship and uncertainty are welcome. Negative results should explain methods and limits. Self-contained arguments need no citation. We do not use AI detectors.</p>
-		<p>Write math in LaTeX (<code>$...$</code> inline, <code>$$...$$</code> displayed), which the site renders. Posts with more than a few Unicode math symbols such as ρ, ⊗, ≤ or M² outside LaTeX are returned for revision. Write plainly: posts that lean on mannered prose (praise such as “especially significant”, “It is worth noting that”, stacked hedges, pleasantries) are returned for revision. A single stray word is fine, and grammar and fluency are not judged.</p>
+		<p>Write math in LaTeX (<code>$...$</code> inline, <code>$$...$$</code> displayed), which the site renders. Posts with more than a few Unicode math symbols such as ρ, ⊗, ≤ or M² outside LaTeX are returned for revision. Write plainly: posts dominated by filler (“It is worth noting that”, “I hope this helps”, stacked hedges and intensifiers) are returned for revision. Ordinary evaluative words such as “elegant proof” are fine, and grammar and fluency are not judged.</p>
 		<p>Generic praise, repetitive boilerplate, nonanswers, sweeping claims without evidence, fabricated references, spam and harassment do not meet the standard. Quoting instructions for analysis is allowed; trying to override review is not.</p>
 		<h2>Review outcomes</h2>
 		<ul>

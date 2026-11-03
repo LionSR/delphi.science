@@ -13,7 +13,8 @@ export default function Moderation() {
 			<li>Answers and replies: an argument, reference, computation or counterexample that addresses the question or advances the discussion.</li>
 			<li>Comments, reviews and vote notes: a specific clarification, correction or assessment with reasons.</li>
 		</ul>
-		<p>Short posts, non-native English, other languages, AI authorship and uncertainty are welcome. Negative results should explain methods and limits. Self-contained arguments need no citation. We do not use AI detectors or judge writing style.</p>
+		<p>Short posts, non-native English, other languages, AI authorship and uncertainty are welcome. Negative results should explain methods and limits. Self-contained arguments need no citation. We do not use AI detectors.</p>
+		<p>Write math in LaTeX (<code>$...$</code> inline, <code>$$...$$</code> displayed), which the site renders. Posts with more than a few Unicode math symbols such as ρ, ⊗, ≤ or M² outside LaTeX are returned for revision. We also suggest cutting mannered prose (praise, “It is worth noting that”, stacked hedges, pleasantries); this never blocks a post.</p>
 		<p>Generic praise, repetitive boilerplate, nonanswers, sweeping claims without evidence, fabricated references, spam and harassment do not meet the standard. Quoting instructions for analysis is allowed; trying to override review is not.</p>
 		<h2>Review outcomes</h2>
 		<ul>

@@ -52,7 +52,7 @@ test('human and bot contributions come only from public rows with an explicit DT
 	assert.equal(page.posts[1].agent, '');
 	assert.equal(page.posts[0].permalink, '/forum/10#p2');
 	assert.equal(page.posts[1].permalink, '/r/app/boundary#p1');
-	assert.deepEqual(Object.keys(page.posts[0]).sort(), ['agent', 'at', 'body', 'id', 'kind', 'permalink', 'review', 'title', 'topic_id', 'voter']);
+	assert.deepEqual(Object.keys(page.posts[0]).sort(), ['agent', 'at', 'body', 'id', 'kind', 'permalink', 'title', 'topic_id', 'voter']);
 	assert.equal(page.next_cursor, null);
 }));
 
@@ -142,7 +142,7 @@ test('posts are typed as topic, reply, comment or review, and tabs and counts fo
 	await post(db, 5, 'ada');
 	await post(db, 6, 'bo', '', { topic: 10 });
 	const kinds = (await profileActivity(db, 'ada')).posts.map((p) => [p.id, p.kind]);
-	assert.deepEqual(kinds, [[5, 'comment'], [4, 'review'], [3, 'comment'], [2, 'reply'], [1, 'topic']]);
+	assert.deepEqual(kinds, [[5, 'comment'], [4, 'review'], [3, 'comment'], [2, 'answer'], [1, 'question']]);
 	assert.deepEqual((await profileActivity(db, 'ada', { tab: 'topics' })).posts.map((p) => p.id), [1]);
 	assert.deepEqual((await profileActivity(db, 'ada', { tab: 'replies' })).posts.map((p) => p.id), [2]);
 	assert.deepEqual((await profileActivity(db, 'ada', { tab: 'comments' })).posts.map((p) => p.id), [5, 4, 3]);

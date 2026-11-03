@@ -3,14 +3,10 @@ import { createElement as h, Fragment } from 'react';
 import { Markdown } from './markdown.ts';
 import type { PostKind, ProfileActivity, ProfileCounts, ProfileVotes, Tab } from './profile.ts';
 import { PublicAuthor, profilePath } from './public-author.ts';
-import { date } from './view.ts';
+import { date, voteMark } from './view.ts';
 
 const TAB_NAMES: Record<Tab, string> = { all: 'All', topics: 'Topics', replies: 'Replies', comments: 'Comments', votes: 'Votes' };
-const KIND_NAMES: Record<PostKind, string> = { topic: 'Topic', reply: 'Reply', comment: 'Comment', review: 'Review' };
-const EMPTY: Record<Tab, string> = {
-	all: 'No public posts or comments on this page.', topics: 'No topics on this page.', replies: 'No replies on this page.',
-	comments: 'No comments on this page.', votes: 'No public votes on this page.',
-};
+const KIND_NAMES: Record<PostKind, string> = { question: 'Topic', answer: 'Reply', comment: 'Comment', review: 'Review' };
 
 const tabPath = (login: string, tab: Tab, cursor?: string) => {
 	const q = new URLSearchParams({ ...(tab === 'all' ? {} : { tab }), ...(cursor ? { cursor } : {}) }).toString();
@@ -35,7 +31,7 @@ function Posts({ activity }: { activity: ProfileActivity }) {
 
 function Votes({ votes }: { votes: ProfileVotes }) {
 	return h('ol', { className: 'profile-activity' }, ...votes.votes.map((v) => h('li', { key: v.record_id, className: 'comment' },
-		h('p', null, h('span', { className: 'kind' }, v.value === 1 ? '▲ Up' : v.value === -1 ? '▼ Down' : 'Reaction'),
+		h('p', null, h('span', { className: 'kind' }, `${voteMark(v.value)} ${v.value === 1 ? 'Up' : v.value === -1 ? 'Down' : 'Reaction'}`),
 			v.emoji ? ` ${v.emoji}` : '', ' ', h('a', { href: v.permalink }, v.title)),
 		h('p', { className: 'meta' },
 			h('span', null, h(PublicAuthor, { voter: votes.login, agent: v.agent })),
@@ -43,23 +39,23 @@ function Votes({ votes }: { votes: ProfileVotes }) {
 		v.note ? h('p', null, v.note) : null)));
 }
 
-export function ProfileView({ activity, votes, counts, tab = 'all', failed = false }:
-	{ activity?: ProfileActivity; votes?: ProfileVotes; counts?: ProfileCounts; tab?: Tab; failed?: boolean }) {
-	const login = (activity ?? votes)!.login;
-	const page = tab === 'votes' ? votes : activity;
-	const items = tab === 'votes' ? votes?.votes : activity?.posts;
-	const body = failed || !page
+/** page is the tab's posts or votes, or null when loading failed. */
+export function ProfileView({ login, tab = 'all', counts, page }:
+	{ login: string; tab?: Tab; counts?: ProfileCounts; page: ProfileActivity | ProfileVotes | null }) {
+	const noun = tab === 'votes' ? 'votes' : 'posts';
+	const empty = tab === 'all' ? 'public posts or comments' : tab === 'votes' ? 'public votes' : TAB_NAMES[tab].toLowerCase();
+	const body = !page
 		? h('p', { role: 'alert' }, 'Public activity is temporarily unavailable. ', h('a', { href: tabPath(login, tab) }, 'Try again'))
-		: !items?.length
-			? h('p', { className: 'count' }, EMPTY[tab])
-			: tab === 'votes' ? h(Votes, { votes: votes! }) : h(Posts, { activity: activity! });
-	const older = !failed && page?.next_cursor
-		? h(Fragment, null, ' · ', h('a', { href: tabPath(login, tab, page.next_cursor) }, tab === 'votes' ? 'Older votes' : 'Older posts'))
+		: !('votes' in page ? page.votes : page.posts).length
+			? h('p', { className: 'count' }, `No ${empty} on this page.`)
+			: 'votes' in page ? h(Votes, { votes: page }) : h(Posts, { activity: page });
+	const older = page?.next_cursor
+		? h(Fragment, null, ' · ', h('a', { href: tabPath(login, tab, page.next_cursor) }, `Older ${noun}`))
 		: null;
 	return h('article', null,
 		h('h1', { className: 'tex2jax_ignore' }, `@${login}`),
 		h('p', null, 'Public topics, replies, comments and record votes by this account and the bots attributed on them. Forum post votes are not shown, as on MathOverflow.'),
 		h(Tabs, { login, tab, counts }),
 		body,
-		h('nav', { 'aria-label': 'Public activity pages' }, h('a', { href: tabPath(login, tab) }, tab === 'votes' ? 'Latest votes' : 'Latest posts'), older));
+		h('nav', { 'aria-label': 'Public activity pages' }, h('a', { href: tabPath(login, tab) }, `Latest ${noun}`), older));
 }

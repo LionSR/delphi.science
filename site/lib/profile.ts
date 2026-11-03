@@ -6,15 +6,18 @@ import { recordPath } from './view.ts';
 export const DEFAULT_PROFILE_LIMIT = 20;
 export const MAX_PROFILE_LIMIT = 50;
 
-/** What a post is, as edit-post.ts tells them apart: a topic's opening post, a reply to it, or a comment. */
-export type PostKind = 'topic' | 'reply' | 'comment' | 'review';
-/** Profile tabs: all posts, one kind (comments include record reviews), or record votes. */
+/** Post kinds, named as moderation names them (comments.ts, edit-post.ts): a topic's opening post is a question, a
+ * reply to it an answer. The profile shows them as Topic and Reply. */
+export const POST_KINDS = ['question', 'answer', 'comment', 'review'] as const;
+export type PostKind = (typeof POST_KINDS)[number];
+/** Profile tabs: all posts, one group of kinds (comments include record reviews), or record votes. */
 export const TABS = ['all', 'topics', 'replies', 'comments', 'votes'] as const;
 export type Tab = (typeof TABS)[number];
-const TAB_KINDS: Record<Exclude<Tab, 'all' | 'votes'>, PostKind[]> = { topics: ['topic'], replies: ['reply'], comments: ['comment', 'review'] };
+type PostTab = Exclude<Tab, 'votes'>;
+const TAB_KINDS: Record<Exclude<PostTab, 'all'>, PostKind[]> = { topics: ['question'], replies: ['answer'], comments: ['comment', 'review'] };
 
 export type ProfilePost = {
-	id: number; kind: PostKind; voter: string; agent: string; body: string; review: boolean; at: string; title: string;
+	id: number; kind: PostKind; voter: string; agent: string; body: string; at: string; title: string;
 	record_id?: string; topic_id?: number; parent?: number; permalink: string;
 };
 export type ProfileVote = { record_id: string; title: string; agent: string; value: 1 | -1 | null; emoji: string | null; note: string | null; at: string; permalink: string };
@@ -22,9 +25,10 @@ export type ProfileActivity = { login: string; posts: ProfilePost[]; next_cursor
 export type ProfileVotes = { login: string; votes: ProfileVote[]; next_cursor: string | null };
 export type ProfileCounts = Record<Exclude<Tab, 'all'>, number>;
 type Row = {
-	id: string; kind: PostKind; voter: string; agent: string; body: string; review: boolean; at: string | Date; title: string;
+	id: string; kind: PostKind; voter: string; agent: string; body: string; at: string | Date; title: string;
 	record_id: string | null; topic_id: string | null; parent: string | null;
 };
+type VoteRow = { record_id: string; title: string; agent: string; value: number | null; emoji: string | null; note: string | null; at: string | Date; at_key: string };
 
 const badLogin = () => new QueryError('Use a valid GitHub login.', 'Use 1–39 ASCII letters/digits or single internal hyphens; account paths and display names are not handles.');
 const badCursor = () => new QueryError('The public-activity cursor is invalid for this handle.', 'Pass this handle’s next_cursor unchanged, or start from its first page.');
@@ -35,22 +39,27 @@ export function normalizeProfileLogin(value: unknown): string {
 	return value.toLowerCase();
 }
 
-const encode = (login: string, before: number) => Buffer.from(JSON.stringify({ v: 1, login, before })).toString('base64url');
+const encode = (login: string, payload: object) => Buffer.from(JSON.stringify({ v: 1, login, ...payload })).toString('base64url');
 
-/** The post id a cursor starts before. Only a cursor this module issued for this login is accepted. */
-function decode(cursor: string | undefined | null, login: string): number | undefined {
+/** A cursor's payload. Only a cursor this module issued for this login is accepted: re-encoding the payload must
+ * reproduce it exactly, which also pins v and login. */
+function decode<T extends object>(cursor: string | undefined | null, login: string, valid: (p: Record<string, unknown>) => p is T & Record<string, unknown>): T | undefined {
 	if (cursor === undefined || cursor === null) return undefined;
-	if (typeof cursor !== 'string' || !cursor || cursor.length > 256 || !/^[a-z\d_-]+$/i.test(cursor)) throw badCursor();
-	let before: unknown;
+	if (typeof cursor !== 'string' || !cursor || cursor.length > 1024 || !/^[a-z\d_-]+$/i.test(cursor)) throw badCursor();
+	let parsed: Record<string, unknown>;
 	try {
-		before = JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(Buffer.from(cursor, 'base64url'))).before;
+		parsed = JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(Buffer.from(cursor, 'base64url')));
 	} catch {
 		throw badCursor();
 	}
-	// Re-encoding must reproduce the cursor exactly, which also pins v and login.
-	if (!Number.isSafeInteger(before) || (before as number) < 1 || encode(login, before as number) !== cursor) throw badCursor();
-	return before as number;
+	const { v, login: owner, ...payload } = parsed ?? {};
+	if (v !== 1 || owner !== login || !valid(payload) || encode(login, payload) !== cursor) throw badCursor();
+	return payload;
 }
+const postCursor = (p: Record<string, unknown>): p is { before: number } => Number.isSafeInteger(p.before) && (p.before as number) >= 1;
+// The database's own timestamp text, so microseconds survive the round trip.
+const voteCursor = (p: Record<string, unknown>): p is { at: string; record: string } =>
+	typeof p.at === 'string' && typeof p.record === 'string' && /^\d{4}-\d\d-\d\d [\d:.]+[+-]\d\d(:\d\d)?$/.test(p.at);
 
 function id(value: string | number): number {
 	const n = Number(value);
@@ -63,12 +72,12 @@ function toPost(row: Row, login: string): ProfilePost {
 	const topic = row.topic_id === null ? undefined : id(row.topic_id);
 	const parent = row.parent === null ? undefined : id(row.parent);
 	const at = row.at instanceof Date ? row.at : new Date(row.at);
-	const valid = ['topic', 'reply', 'comment', 'review'].includes(row.kind) && typeof row.voter === 'string' && row.voter.toLowerCase() === login
+	const valid = (POST_KINDS as readonly string[]).includes(row.kind) && typeof row.voter === 'string' && row.voter.toLowerCase() === login
 		&& typeof row.agent === 'string' && typeof row.body === 'string' && typeof row.title === 'string'
-		&& typeof row.review === 'boolean' && Number.isFinite(at.getTime());
+		&& Number.isFinite(at.getTime());
 	if (!valid) throw unavailable();
 	return {
-		id: postId, kind: row.kind, voter: row.voter, agent: row.agent, body: row.body, review: row.review, at: at.toISOString(), title: row.title,
+		id: postId, kind: row.kind, voter: row.voter, agent: row.agent, body: row.body, at: at.toISOString(), title: row.title,
 		...(row.record_id === null ? {} : { record_id: row.record_id }),
 		...(topic === undefined ? {} : { topic_id: topic }),
 		...(parent === undefined ? {} : { parent }),
@@ -76,12 +85,12 @@ function toPost(row: Row, login: string): ProfilePost {
 	};
 }
 
-// A login's public posts with their kind. Posts on a live record, or in a topic whose question exists; replies only to a
+// A login's public posts with their kind (the rule in edit-post.ts, in SQL). Posts on a live record, or in a topic whose question exists; replies only to a
 // parent in the same place.
-const ACTIVITY = `SELECT c.id::text AS id, c.voter, c.agent, c.body, c.review, c.at,
+const ACTIVITY = `SELECT c.id AS pid, c.id::text AS id, c.voter, c.agent, c.body, c.at,
 		c.record_id, c.topic_id::text AS topic_id, c.parent_id::text AS parent, coalesce(r.title, t.title) AS title,
 		CASE WHEN c.record_id IS NOT NULL THEN CASE WHEN c.review THEN 'review' ELSE 'comment' END
-			WHEN c.parent_id IS NOT NULL THEN 'comment' WHEN c.id = t.question_id THEN 'topic' ELSE 'reply' END AS kind
+			WHEN c.parent_id IS NOT NULL THEN 'comment' WHEN c.id = t.question_id THEN 'question' ELSE 'answer' END AS kind
 	FROM open_index.comments c
 	LEFT JOIN open_index.records r ON r.id = c.record_id AND NOT r.gone
 	LEFT JOIN open_index.topics t ON t.id = c.topic_id
@@ -100,19 +109,19 @@ function checkLimit(limit: number) {
 }
 
 /** One page of a login's public posts, newest first: all of them, or one tab's kinds. */
-export async function profileActivity(db: Db, handle: unknown, options: { limit?: number; cursor?: string | null; tab?: Tab } = {}): Promise<ProfileActivity> {
+export async function profileActivity(db: Db, handle: unknown, options: { limit?: number; cursor?: string | null; tab?: PostTab } = {}): Promise<ProfileActivity> {
 	const login = normalizeProfileLogin(handle);
 	const limit = options.limit ?? DEFAULT_PROFILE_LIMIT;
 	checkLimit(limit);
-	const before = decode(options.cursor, login);
+	const before = decode(options.cursor, login, postCursor)?.before;
 	const tab = options.tab ?? 'all';
-	const kinds = tab === 'all' || tab === 'votes' ? null : TAB_KINDS[tab];
+	const kinds = tab === 'all' ? null : TAB_KINDS[tab];
 	try {
 		const rows = (await db.query<Row>(`SELECT * FROM (${ACTIVITY}) a
-			WHERE ($2::bigint IS NULL OR a.id::bigint < $2::bigint) AND ($4::text[] IS NULL OR a.kind = ANY($4::text[]))
-			ORDER BY a.id::bigint DESC LIMIT $3`, [login, before ?? null, limit + 1, kinds])).rows;
+			WHERE ($2::bigint IS NULL OR a.pid < $2::bigint) AND ($4::text[] IS NULL OR a.kind = ANY($4::text[]))
+			ORDER BY a.pid DESC LIMIT $3`, [login, before ?? null, limit + 1, kinds])).rows;
 		const posts = rows.slice(0, limit).map((row) => toPost(row, login));
-		return { login, posts, next_cursor: rows.length > limit ? encode(login, posts.at(-1)!.id) : null };
+		return { login, posts, next_cursor: rows.length > limit ? encode(login, { before: posts.at(-1)!.id }) : null };
 	} catch {
 		throw unavailable();
 	}
@@ -122,31 +131,17 @@ export async function profileActivity(db: Db, handle: unknown, options: { limit?
 export async function profileCounts(db: Db, handle: unknown): Promise<ProfileCounts> {
 	const login = normalizeProfileLogin(handle);
 	try {
+		// One pass over the activity, counting each tab's kinds.
 		const row = (await db.query<Record<string, string | number>>(`SELECT
-				(SELECT count(*) FROM (${ACTIVITY}) a WHERE a.kind = 'topic') AS topics,
-				(SELECT count(*) FROM (${ACTIVITY}) a WHERE a.kind = 'reply') AS replies,
-				(SELECT count(*) FROM (${ACTIVITY}) a WHERE a.kind IN ('comment', 'review')) AS comments,
-				(SELECT count(*) ${VOTES}) AS votes`, [login])).rows[0];
+				count(*) FILTER (WHERE a.kind = ANY($2::text[])) AS topics,
+				count(*) FILTER (WHERE a.kind = ANY($3::text[])) AS replies,
+				count(*) FILTER (WHERE a.kind = ANY($4::text[])) AS comments,
+				(SELECT count(*) ${VOTES}) AS votes
+			FROM (${ACTIVITY}) a`, [login, TAB_KINDS.topics, TAB_KINDS.replies, TAB_KINDS.comments])).rows[0];
 		return { topics: Number(row.topics), replies: Number(row.replies), comments: Number(row.comments), votes: Number(row.votes) };
 	} catch {
 		throw unavailable();
 	}
-}
-
-const encodeVote = (login: string, at: string, record: string) => Buffer.from(JSON.stringify({ v: 1, login, at, record })).toString('base64url');
-
-/** The (at, record) a votes cursor starts after. Only a cursor issued for this login is accepted. */
-function decodeVote(cursor: string | undefined | null, login: string): { at: string; record: string } | undefined {
-	if (cursor === undefined || cursor === null) return undefined;
-	if (typeof cursor !== 'string' || !cursor || cursor.length > 1024 || !/^[a-z\d_-]+$/i.test(cursor)) throw badCursor();
-	let at: unknown, record: unknown;
-	try {
-		({ at, record } = JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(Buffer.from(cursor, 'base64url'))));
-	} catch {
-		throw badCursor();
-	}
-	if (typeof at !== 'string' || typeof record !== 'string' || !/^\d{4}-\d\d-\d\d [\d:.]+[+-]\d\d(:\d\d)?$/.test(at) || encodeVote(login, at, record) !== cursor) throw badCursor();
-	return { at, record };
 }
 
 /** One page of a login's votes on live records, newest first. */
@@ -154,10 +149,9 @@ export async function profileVotes(db: Db, handle: unknown, options: { limit?: n
 	const login = normalizeProfileLogin(handle);
 	const limit = options.limit ?? DEFAULT_PROFILE_LIMIT;
 	checkLimit(limit);
-	const after = decodeVote(options.cursor, login);
+	const after = decode(options.cursor, login, voteCursor);
 	try {
-		// The cursor keeps the database's own timestamp text, so microseconds survive the round trip.
-		const rows = (await db.query<{ record_id: string; title: string; agent: string; value: number | null; emoji: string | null; note: string | null; at: string | Date; at_key: string }>(
+		const rows = (await db.query<VoteRow>(
 			`SELECT v.record_id, r.title, v.agent, v.value, v.emoji, v.note, v.at, v.at::text AS at_key ${VOTES}
 				AND ($2::timestamptz IS NULL OR (v.at, v.record_id) < ($2::timestamptz, $3::text))
 			ORDER BY v.at DESC, v.record_id DESC LIMIT $4`, [login, after?.at ?? null, after?.record ?? null, limit + 1])).rows;
@@ -166,7 +160,7 @@ export async function profileVotes(db: Db, handle: unknown, options: { limit?: n
 			emoji: v.emoji, note: v.note, at: new Date(v.at).toISOString(), permalink: recordPath(v.record_id),
 		}));
 		const last = rows[limit - 1];
-		return { login, votes, next_cursor: rows.length > limit ? encodeVote(login, last.at_key, last.record_id) : null };
+		return { login, votes, next_cursor: rows.length > limit ? encode(login, { at: last.at_key, record: last.record_id }) : null };
 	} catch {
 		throw unavailable();
 	}

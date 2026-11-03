@@ -218,17 +218,24 @@ def youtube(url: str, page: str) -> dict[str, str]:
     return {"title": clean(data.get("title")), "author": clean(data.get("author_name")), "date": when[1] if when else ""}
 
 
-STACKEXCHANGE = {"mathoverflow.net": "mathoverflow", "math.stackexchange.com": "math", "cstheory.stackexchange.com": "cstheory"}
+STACKEXCHANGE = {"mathoverflow.net": "mathoverflow", "math.stackexchange.com": "math", "cstheory.stackexchange.com": "cstheory",
+                 "physics.stackexchange.com": "physics"}
+# An answer: /a/<id>, /answers/<id>, or /questions/<question id>/<slug>/<answer id>, the link Stack Exchange shares.
+SE_ANSWER = re.compile(r"/(?:a|answers)/(\d+)|/questions/\d+/[^/?#]+/(\d+)")
+SE_QUESTION = re.compile(r"/questions/(\d+)")
 
 
 def stackexchange(host: str, url: str) -> dict[str, str]:
-    """A MathOverflow (or Stack Exchange) question: the asker as author, the day asked, the opening of the body."""
-    m = re.search(r"/(questions|a|answers)/(\d+)", url)
-    if not m:
+    """A MathOverflow (or Stack Exchange) question or answer: its author, the day posted, the opening of the body."""
+    path = urllib.parse.urlsplit(url).path
+    if m := SE_ANSWER.search(path):
+        kind, post = "answers", m[1] or m[2]
+    elif m := SE_QUESTION.search(path):
+        kind, post = "questions", m[1]
+    else:
         return {}
-    kind = "questions" if m[1] == "questions" else "answers"
     try:
-        data = get_json(f"https://api.stackexchange.com/2.3/{kind}/{m[2]}?site={STACKEXCHANGE[host]}&filter=withbody", cache=False)
+        data = get_json(f"https://api.stackexchange.com/2.3/{kind}/{post}?site={STACKEXCHANGE[host]}&filter=withbody", cache=False)
     except (NotFound, SourceError):
         return {}
     q = (data.get("items") or [{}])[0]
@@ -276,7 +283,10 @@ def page_author(m: MetaParser) -> str:
 
 def web_link(url: str, parts: urllib.parse.SplitResult, host: str) -> dict[str, Any]:
     # Stack Exchange is read through its API only.
-    page = "" if host in STACKEXCHANGE else get_text(urllib.parse.urlunsplit(parts._replace(fragment="")), cache=False)
+    body = b"" if host in STACKEXCHANGE else get(urllib.parse.urlunsplit(parts._replace(fragment="")), cache=False)
+    if body.lstrip()[:5] == b"%PDF-":  # a note on someone's home page: its title and author are given by a person
+        return {"kind": "web", "url": url, "site": host.removeprefix("www.")}
+    page = body.decode("utf-8", "replace")
     who, quoted = passage(page, parts.fragment[len(":~:text="):]) if parts.fragment.startswith(":~:text=") else ("", "")
     if who:  # the URL keeps only the passage; the name goes in author
         url = urllib.parse.urlunsplit(parts._replace(fragment=":~:text=" + parts.fragment.split("-,", 1)[1]))

@@ -41,6 +41,7 @@ jobs:
         run: |
           python3 test_index.py
           python3 test_candidates.py
+          python3 test_x_candidates.py
       - name: Site tests
         working-directory: site
         run: |

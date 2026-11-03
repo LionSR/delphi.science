@@ -97,7 +97,7 @@ export default async function Question({ params, searchParams }: Ctx) {
 								<form action={acceptOn} className="inline">
 									<input type="hidden" name="topic" value={t.id} />
 									<input type="hidden" name="post" value={a.id} />
-									<button className="link">{a.accepted ? 'Unaccept' : 'Accept this answer'}</button>
+									<button className="link">{a.accepted ? 'Unaccept' : 'Accept as the answer'}</button>
 								</form>
 							)}
 							{a.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}

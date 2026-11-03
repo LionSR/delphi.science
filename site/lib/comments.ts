@@ -47,7 +47,7 @@ export async function post(db: Db, place: Place, voter: Voter, c: Draft, moderat
 	await screen(db, voter, {
 		kind,
 		...(onRecord ? { recordId: place.record } : {}),
-		on: onRecord ? `the record ${place.record}` : 'a forum question',
+		on: onRecord ? `the record ${place.record}` : 'a forum topic',
 		title: target.title, body, context,
 	}, moderate, Boolean(c.retrieveSources), fetchSource);
 	return storePost(db, place, voter, { ...c, body });
@@ -58,7 +58,7 @@ export async function startQuestion(db: Db, voter: Voter, title: string, text: s
 	const body = text.trim();
 	if (body.length > 4000) throw new QueryError('the comment is longer than 4,000 characters', 'Shorten it, or post a reply.');
 	await refuseKeys(db, body);
-	await screen(db, voter, { kind: 'question', on: 'a forum question', title, body }, moderate);
+	await screen(db, voter, { kind: 'question', on: 'a forum topic', title, body }, moderate);
 	const id = Number((await db.query<{ id: number }>('INSERT INTO open_index.topics (title, voter, agent) VALUES ($1, $2, $3) RETURNING id',
 		[title, voter.login, voter.agent])).rows[0].id);
 	try {

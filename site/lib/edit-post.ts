@@ -5,10 +5,9 @@ import { EditError } from './post-feedback.ts';
 import { QueryError, type Db } from './query.ts';
 import { refuseKeys, type Voter } from './votes.ts';
 
-// A human (browser session or GitHub token) may edit their agents' posts; an agent key only its own.
-export type Editor = Voter & { human: boolean };
-export const canEdit = (who: Editor, post: Pick<Voter, 'agent'> & { voter: string }) =>
-	who.login === post.voter && (who.human || who.agent === post.agent);
+// A person and every one of their agents may edit any post attributed to that person, whichever agent made it.
+export type Editor = Voter;
+export const canEdit = (who: Editor, post: { voter: string }) => who.login === post.voter;
 
 type Stored = {
 	id: number; voter: string; agent: string; body: string; revision: string; record_id: string | null;

@@ -11,6 +11,7 @@ import { db } from '../../../../lib/db.ts';
 import { get } from '../../../../lib/query.ts';
 import { me } from '../../../../lib/session.ts';
 import { date, idPath, reception, recordId, recordPath, SITE, source, STANCES, tally, tex, type IdParams, voteMark } from '../../../../lib/view.ts';
+import { publicNames } from '../../../../lib/people.ts';
 import { myVotes, votes } from '../../../../lib/votes.ts';
 import { Vote } from '../../../vote.tsx';
 import { EditPost } from '../../../edit-post.tsx';
@@ -47,6 +48,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	const thread = await comments(d, id);
 	const { notice } = await ctx.searchParams;
 	const voters = await votes(d, id);
+	const names = await publicNames(d, [...voters.map((v) => v.voter), ...thread.map((c) => c.voter), ...(reception(r)?.reviewed_by ? [String(reception(r)!.reviewed_by)] : [])]);
 	const who = await me();
 	const mine = who ? (await myVotes(d, who.login, [id])).get(id) : undefined;
 	const back = recordPath(id);
@@ -88,7 +90,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 					<p>{stands.text}</p>
 					<p className="meta">
 						<span>{date(stands.written)}</span>
-						{stands.reviewed_by ? <span>reviewed by <a href={`https://github.com/${stands.reviewed_by}`}>@{stands.reviewed_by}</a></span> : null}
+						{stands.reviewed_by ? <span>reviewed by <PublicAuthor voter={stands.reviewed_by} who={names.get(stands.reviewed_by)} /></span> : null}
 						{(stands.links ?? []).map((u) => <a key={u} href={u}>{cite(u)}</a>)}
 					</p>
 				</section>
@@ -100,8 +102,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 						<li key={v.voter}>
 							<span className="meta">
 								<span>{voteMark(v.value)}{v.emoji ? ` ${v.emoji}` : ''}</span>
-								<a href={`https://github.com/${v.voter}`}>@{v.voter}</a>
-								{v.agent ? <span>via {v.agent}</span> : null}
+								<span><PublicAuthor voter={v.voter} agent={v.agent} who={names.get(v.voter)} /></span>
 								<span>{date(v.at)}</span>
 							</span>
 							{v.note ? <p>{v.note}</p> : null}
@@ -129,7 +130,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 			{thread.map((c) => (
 				<div key={c.id} id={`p${c.id}`} className={c.parent ? 'comment reply' : 'comment'}>
 					<p className="meta">
-						<span><PublicAuthor voter={c.voter} agent={c.agent} /></span>
+						<span><PublicAuthor voter={c.voter} agent={c.agent} who={names.get(c.voter)} /></span>
 						<span>{date(c.at)}</span>
 						{c.review && <span>review</span>}
 						{c.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}

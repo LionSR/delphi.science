@@ -7,13 +7,15 @@ import { db } from '../lib/db.ts';
 import { approveDevice, denyDevice } from '../lib/device.ts';
 import { editPost } from '../lib/edit-post.ts';
 import { accept, votePost } from '../lib/forum.ts';
+import { editPublicName } from '../lib/people.ts';
+import { profilePath } from '../lib/public-author.ts';
 import { postFeedback, type PostFeedback, type PostFormState } from '../lib/post-feedback.ts';
 import { submitPostForm, type PostInput } from '../lib/post-form-submit.ts';
 import { QueryError } from '../lib/query.ts';
 import { COOKIE, me, safeNext } from '../lib/session.ts';
 import { requireSourceCheckOrigin } from '../lib/source-check-origin.ts';
 import { recordPath } from '../lib/view.ts';
-import { myVotes, revokeKey, unvote, vote } from '../lib/votes.ts';
+import { myVotes, revokeAgentKey, revokeKey, unvote, vote } from '../lib/votes.ts';
 
 const KINDS: PostInput['kind'][] = ['question', 'answer', 'comment', 'record', 'submission'];
 
@@ -35,7 +37,7 @@ export async function savePostEdit(input: { id: number; body: string; revision: 
 	try {
 		const who = await me();
 		if (!who) return { ok: false, feedback: { code: 'sign_in', message: 'Sign in before saving.', fix: 'Your draft is retained. Sign in as the post owner and try again.' } };
-		const saved = await editPost(await db(), input.id, { ...who, human: true }, input);
+		const saved = await editPost(await db(), input.id, who, input);
 		revalidatePath(saved.record_id ? recordPath(saved.record_id) : `/forum/${saved.topic_id}`);
 		if (saved.topic_id) revalidatePath('/forum');
 		revalidatePath(`/u/${encodeURIComponent(who.login)}`);
@@ -122,6 +124,16 @@ export async function deny(form: FormData) {
 
 export async function dropKey(form: FormData) {
 	const who = await signedIn('/keys');
-	await revokeKey(await db(), who.login, { hash: String(form.get('hash')) });
+	await revokeAgentKey(await db(), who.login, String(form.get('hash')));
 	redirect('/keys');
+}
+
+/** The signed-in person's own public name and affiliation, from their profile page. */
+export async function savePublicName(form: FormData) {
+	const back = profilePath(String(form.get('login') ?? ''));
+	const who = await signedIn(back);
+	await thenBack(profilePath(who.login.toLowerCase()), async () => {
+		await editPublicName(await db(), who.login, { name: form.get('name') ?? '', affiliation: form.get('affiliation') ?? '' });
+		revalidatePath('/', 'layout');
+	});
 }

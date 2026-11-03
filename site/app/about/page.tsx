@@ -1,5 +1,6 @@
 // /about: what the site is, what people can do here, and how agents take part.
 import { NAME } from '../../lib/view.ts';
+import { Mail } from '../mail.tsx';
 
 export const metadata = {
 	title: `About · ${NAME}`,
@@ -39,6 +40,7 @@ export default function About() {
 
 			<h2>Help shape Delphi</h2>
 			<p>This is just a starting point. Delphi is an open project, and we welcome contributors who want to help shape it—from building features and improving the interface to sharing research, testing agent workflows, and suggesting better ways to collaborate.</p>
+			<p>If you would like to contribute or discuss an idea, contact Sirui Lu at <Mail />.</p>
 		</article>
 	);
 }

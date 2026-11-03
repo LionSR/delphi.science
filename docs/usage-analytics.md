@@ -43,17 +43,27 @@ Cleanup is destructive, so it is separately gated and needs explicit owner appro
 
 ### Web Analytics
 
-1. Check the Vercel plan first. As of 2026-10-27: Hobby includes 50,000 events/month with a one-month reporting window; Pro charges $0.03 per 1,000 events (against monthly usage credit) with a 12-month window. Get approval before enabling paid collection.
+1. Check the Vercel plan first. As of 2026-11-03: Hobby includes 50,000 events/month across the team with a one-month reporting window and no paid overages; Pro charges $0.03 per 1,000 events (against monthly usage credit) with a 12-month window. Pro trial events can be billed after the trial ends. Web Analytics Plus is optional and adds $10/month per team; it is unnecessary for this integration. Get approval before enabling paid collection or accepting any new agreement.
 2. Enable Web Analytics in the Vercel project and set `ORI_WEB_ANALYTICS_ENABLED=true`.
 3. View results in Vercel: project → Analytics → Visitors. ORI's `/stats` page links there but does not fetch visitor counts.
 
-The SDK (`@vercel/analytics/next`) uses `beforeSend` to drop custom events, private and unknown routes, queries and fragments, and to replace record/forum IDs with route patterns. This controls only the event URL: Vercel may still process referrer, location, device data and IP addresses, and uses a daily visitor hash discarded after 24 hours. Clients without JavaScript, with blocked scripts, or bots may not appear.
+The SDK (`@vercel/analytics/react`) receives explicit fixed `route` and `path` values from `analyticsPath`, preserving Vercel's Next.js intake configuration. This avoids the Next wrapper deriving dynamic-path names from arbitrary query keys on static pages. `beforeSend` drops custom events, private and unknown routes, queries and fragments, and replaces record/forum IDs with route patterns.
+
+The hosted script adds referrer and stored attribution separately from the filtered event URL. Collection therefore skips documents with a non-origin incoming referrer (path, query, fragment, credentials, invalid URL or non-HTTP scheme), existing `__va_attribution` storage, or inaccessible storage. Checks run before mounting and before every event; no visitor storage is deleted or modified by these checks. A site-wide `Referrer-Policy: strict-origin` also strips paths and queries from same-origin script/intake request headers. Incoming referrers are controlled by their source, so the response header alone is insufficient. Private routes never mount the SDK initially, and explicit routes disable its automatic history tracking.
+
+No page content, search text, account identity, custom event properties, or record IDs are supplied by the app. Vercel still processes origin-only referrer, location and device data and incoming network requests, and uses a daily visitor hash discarded after 24 hours. The privacy policy at `/privacy` discloses these limits. Clients without JavaScript, with blocked scripts, unsafe referrers or stored attribution, or bots may not appear.
+
+Activation still requires the project dashboard switch, the production environment flag, and a subsequent authorized deployment. Installing the SDK does not prove collection is active. Verify a sanitized pageview request in browser Network tools and its arrival in the dashboard after activation; do not infer success from a successful build.
 
 ## Tests
 
 `site/lib/usage.test.ts` runs every migration on PGlite and covers privacy filtering, retention, the disabled state, workflow/CLI gates, concurrency, category constraints and admin authorization.
 
-## References (checked 2026-10-27)
+`site/lib/analytics.test.ts` checks canonical public routes, query/credential/ID removal, unsafe referrers and stored attribution. Browser validation should intercept analytics intake locally so test visits do not create real telemetry or charges.
+
+Validated locally on 2026-11-03: production build and TypeScript passed; all 21 tests in `analytics.test.ts` and `usage.test.ts` passed. Chromium exercised the production build with the current hosted analytics script and intercepted all intake requests: public and record-to-record transitions sent only fixed routes, while custom events, private transitions, unsafe incoming referrers, stored attribution and inaccessible storage sent no events. Preview and disabled-production servers loaded no analytics SDK. This validates the integration locally, not dashboard activation or live event arrival.
+
+## References (checked 2026-11-03)
 
 - Vercel: [Next.js setup](https://vercel.com/docs/analytics/quickstart), [pricing](https://vercel.com/docs/analytics/limits-and-pricing), [privacy](https://vercel.com/docs/analytics/privacy-policy), [URL redaction](https://vercel.com/docs/analytics/redacting-sensitive-data), [Web Analytics API](https://vercel.com/docs/analytics/web-analytics-api)
 - [Supabase RLS](https://supabase.com/docs/guides/database/postgres/row-level-security), [PostgreSQL `NOT VALID`](https://www.postgresql.org/docs/current/sql-altertable.html)

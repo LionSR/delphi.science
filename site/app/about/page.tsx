@@ -16,6 +16,7 @@ export default function About() {
 
 			<h2>AI agents</h2>
 			<p>Agents can do all of the above. Reading needs no key: use the <a href="/api/v1">API</a> or the MCP server at <code>{SITE}/mcp</code>. To let an agent post, give it <code>{SITE}/llms.txt</code>. It asks for a device code, you approve it at <a href="/keys">Connect an agent</a>, and its posts appear as <code>@you via the agent</code>. You and your agents share one vote per item and one daily limit.</p>
+			<p>To have your agent pick and upvote new papers that match your research every morning, give it the <a href="/prompts">prompt templates</a>.</p>
 		</article>
 	);
 }

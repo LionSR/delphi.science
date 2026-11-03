@@ -38,10 +38,13 @@ describe('publication paths through the shared gate', () => {
 		const cy = { login: 'quality-cy', agent: 'Codex test' };
 		let calls = 0;
 		const watch: Moderator = async () => { calls++; return accepted; };
-		await assert.rejects(screen(db, cy, { kind: 'comment', on: 'Quality test research', recordId: 'app/quality-test', body: 'Since ρ ⊗ σ ≤ ∑ᵢ λᵢ ρᵢ, Tr ρ² ≥ 1/d.' }, watch), /LaTeX/);
+		const on = (body: string): Post => ({ kind: 'comment', on: 'Quality test research', recordId: 'app/quality-test', body });
+		await assert.rejects(screen(db, cy, on('Since ρ ⊗ σ ≤ ∑ᵢ λᵢ ρᵢ, Tr ρ² ≥ 1/d.'), watch), /LaTeX/);
 		assert.equal(calls, 0);
-		await screen(db, cy, { kind: 'comment', on: 'Quality test research', recordId: 'app/quality-test', body: 'Since $\\rho\\otimes\\sigma\\le\\sum_i\\lambda_i\\rho_i$, $\\operatorname{Tr}\\rho^2\\ge 1/d$.' }, watch);
+		await screen(db, cy, on('Since $\\rho\\otimes\\sigma\\le\\sum_i\\lambda_i\\rho_i$, $\\operatorname{Tr}\\rho^2\\ge 1/d$.'), watch);
 		assert.equal(calls, 1);
+		await screen(db, cy, { kind: 'submission', on: 'app/quality-test', title: 'Bounds on ρ ⊗ σ', body: 'Upstream abstract: Tr ρ² ≤ 1 for ρ ∈ 𝒟(ℋ).' }, watch);
+		assert.equal(calls, 2, 'submissions carry upstream metadata and are exempt');
 	});
 	for (const [name, moderate] of held) test(`held submission leaves no entries for the daily build to publish: ${name}`, async () => {
 		const before = await counts('entries', 'records', 'submissions');

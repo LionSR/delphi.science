@@ -24,6 +24,8 @@ export type ProfileVote = { record_id: string; title: string; agent: string; val
 export type ProfileActivity = { login: string; posts: ProfilePost[]; next_cursor: string | null };
 export type ProfileVotes = { login: string; votes: ProfileVote[]; next_cursor: string | null };
 export type ProfileCounts = Record<Exclude<Tab, 'all'>, number>;
+/** A profile page: the counts, then the tab's posts, or its votes on the votes tab. */
+export type Profile = { login: string; tab: Tab; counts: ProfileCounts; posts?: ProfilePost[]; votes?: ProfileVote[]; next_cursor: string | null };
 type Row = {
 	id: string; kind: PostKind; voter: string; agent: string; body: string; at: string | Date; title: string;
 	record_id: string | null; topic_id: string | null; parent: string | null;
@@ -32,7 +34,9 @@ type VoteRow = { record_id: string; title: string; agent: string; value: number 
 
 const badLogin = () => new QueryError('Use a valid GitHub login.', 'Use 1–39 ASCII letters/digits or single internal hyphens; account paths and display names are not handles.');
 const badCursor = () => new QueryError('The public-activity cursor is invalid for this handle.', 'Pass this handle’s next_cursor unchanged, or start from its first page.');
-const unavailable = () => new QueryError('Public activity is temporarily unavailable.', 'Try this public activity page again later.');
+/** The database could not answer; the API reports it as 503. */
+export class ProfileUnavailable extends QueryError {}
+const unavailable = () => new ProfileUnavailable('Public activity is temporarily unavailable.', 'Try this public activity page again later.');
 
 export function normalizeProfileLogin(value: unknown): string {
 	if (typeof value !== 'string' || !/^[a-z\d](?:[a-z\d-]{0,37}[a-z\d])?$/i.test(value) || value.includes('--')) throw badLogin();
@@ -164,4 +168,17 @@ export async function profileVotes(db: Db, handle: unknown, options: { limit?: n
 	} catch {
 		throw unavailable();
 	}
+}
+
+/** What /u/<login> and GET /api/v1/users/{login} show: the counts and one page of the chosen tab. */
+export async function profile(db: Db, handle: unknown, options: { tab?: Tab; cursor?: string | null; limit?: number } = {}): Promise<Profile> {
+	const login = normalizeProfileLogin(handle);
+	const tab = options.tab ?? 'all';
+	const counts = await profileCounts(db, login);
+	if (tab === 'votes') {
+		const { votes, next_cursor } = await profileVotes(db, login, options);
+		return { login, tab, counts, votes, next_cursor };
+	}
+	const { posts, next_cursor } = await profileActivity(db, login, { ...options, tab });
+	return { login, tab, counts, posts, next_cursor };
 }

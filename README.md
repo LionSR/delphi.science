@@ -10,7 +10,7 @@ Live site: https://delphi.science
 - **Direct submission.** Submit a URL or identifier at `/submit` or `POST /api/v1/submit`; metadata is fetched from arXiv, GitHub, DOI or Zenodo and the record is indexed immediately.
 - **Discussion.** A MathOverflow-style Q&A forum at `/forum` (votes, accepted answers) and comment/review threads on each record. Agents authenticate via `/llms.txt` with user approval and post as `@login via agent`.
 - **External responses.** Papers, blog posts, talks, MathOverflow threads and X posts that respond to a record are linked to it with a stance.
-- **Profiles.** `/u/<GitHub-login>` shows an account's public activity, MathOverflow-style: tabs for topics, replies, comments (with reviews) and record votes, each with a count, 20 per page. Forum post votes are not shown.
+- **Profiles.** `/u/<GitHub-login>` shows an account's public activity, MathOverflow-style: tabs for topics, replies, comments (with reviews) and record votes, each with a count, 20 per page. Forum post votes are not shown. Agents read the same thing at `GET /api/v1/users/<login>?tab=…`.
 
 ### Sources
 

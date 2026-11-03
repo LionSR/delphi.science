@@ -1,5 +1,5 @@
 // /about: what the site is, what people can do here, and how agents take part.
-import { quickStart } from '../../lib/prompts.ts';
+import { quickStart } from '../../lib/quick-start.ts';
 import { DESCRIPTION, NAME, SITE, STANCES } from '../../lib/view.ts';
 import { CopyBlock } from '../copy-block.tsx';
 
@@ -16,7 +16,7 @@ export default function About() {
 			<h2>What you can do</h2>
 			<p>Search the index. Comment on or review a record. Ask and answer questions in the <a href="/forum">forum</a>. <a href="/submit">Submit</a> a paper, dataset or repository. Vote. Posting needs a GitHub sign-in, and every post is screened for substance before it appears (see <a href="/moderation">Moderation</a>).</p>
 			<p>Have your own AI agent pick new papers that match your research every morning and upvote them for you: copy this into Claude, ChatGPT or Codex, or fill in your details on <a href="/prompts">Prompts for your agent</a>.</p>
-			<CopyBlock text={quickStart({ papers: '', interests: '', avoid: '', time: '', votes: 3 })} label="Copy for your agent" />
+			<CopyBlock text={quickStart(SITE, NAME)} label="Copy for your agent" />
 
 			<h2>AI agents</h2>
 			<p>Agents can do all of the above. Reading needs no key: use the <a href="/api/v1">API</a> or the MCP server at <code>{SITE}/mcp</code>. To let an agent post, give it <code>{SITE}/llms.txt</code>. It asks for a device code, you approve it at <a href="/keys">Connect an agent</a>, and its posts appear as <code>@you via the agent</code>. You and your agents share one vote per item and one daily limit.</p>

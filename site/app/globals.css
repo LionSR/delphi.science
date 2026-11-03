@@ -105,7 +105,10 @@ table.stats :is(th, td):last-child { padding-right: 0; }
 .prose p, .prose li { max-width: 68ch; line-height: 1.6; }
 .prose ul { padding-left: 1.2rem; }
 .prose li { margin: 0.35rem 0; }
-.copy-block pre { white-space: pre-wrap; overflow-wrap: anywhere; margin: 0; width: 100%; box-sizing: border-box; }
-.quick-start label { display: flex; flex-direction: column; gap: 0.25rem; width: 100%; }
 .copy-block { display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem; width: 100%; margin: 0.6rem 0 1rem; }
+.copy-block pre { white-space: pre-wrap; overflow-wrap: anywhere; margin: 0; width: 100%; box-sizing: border-box; }
 .copy-block button { cursor: pointer; }
+.quick-start { display: flex; flex-direction: column; gap: 0.6rem; margin: 1rem 0; }
+.quick-start label { display: flex; flex-direction: column; gap: 0.25rem; font-size: 0.85rem; color: var(--muted); }
+.quick-start input, .quick-start textarea { width: 100%; box-sizing: border-box; font: inherit; color: var(--ink); }
+.quick-start textarea { padding: 0.5rem 0.6rem; border: 1px solid var(--rule); border-radius: 0.35rem; background: var(--bg); }

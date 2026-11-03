@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { db } from '../../../lib/db.ts';
-import { normalizeProfileLogin, profileActivity, profileCounts, profileVotes, TABS, type ProfileActivity, type ProfileCounts, type ProfileVotes, type Tab } from '../../../lib/profile.ts';
+import { normalizeProfileLogin, profile, TABS, type Profile, type Tab } from '../../../lib/profile.ts';
 import { ProfileView } from '../../../lib/profile-view.ts';
 
 export const dynamic = 'force-dynamic';
@@ -23,15 +23,12 @@ export default async function Profile({ params, searchParams }: Context) {
 	}
 	const { cursor, tab: rawTab } = await searchParams;
 	const tab: Tab = (TABS as readonly string[]).includes(rawTab as string) ? rawTab as Tab : 'all';
-	let counts: ProfileCounts | undefined;
-	let page: ProfileActivity | ProfileVotes | null = null;
+	let page: Profile | null = null;
 	try {
 		if (Array.isArray(cursor)) throw new Error('Repeated cursor');
-		const d = await db();
-		counts = await profileCounts(d, login);
-		page = tab === 'votes' ? await profileVotes(d, login, { cursor }) : await profileActivity(d, login, { cursor, tab });
+		page = await profile(await db(), login, { tab, cursor });
 	} catch {
 		page = null;
 	}
-	return <ProfileView login={login} tab={tab} counts={counts} page={page} />;
+	return <ProfileView login={login} tab={tab} page={page} />;
 }

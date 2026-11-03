@@ -2,6 +2,7 @@
 // The GitHub token is used once and not stored.
 import { exchangeWebFlowCode } from '@octokit/oauth-methods';
 import { cookies } from 'next/headers';
+import { callbackUrl } from '../../../lib/callback.ts';
 import { db } from '../../../lib/db.ts';
 import { COOKIE, STATE } from '../../../lib/session.ts';
 import { createSession } from '../../../lib/votes.ts';
@@ -15,7 +16,7 @@ export async function GET(req: Request) {
 	if (!code || !state || url.searchParams.get('state') !== state) return new Response('Sign-in expired. Try again.', { status: 400 });
 	const { authentication } = await exchangeWebFlowCode({
 		clientType: 'github-app', clientId: process.env.GITHUB_APP_CLIENT_ID!, clientSecret: process.env.GITHUB_APP_CLIENT_SECRET!,
-		code, redirectUrl: `${url.origin}/auth/callback`,
+		code, redirectUrl: callbackUrl(url.origin),
 	});
 	const user = await fetch('https://api.github.com/user', { headers: { Authorization: `Bearer ${authentication.token}`, 'User-Agent': 'open-research-index' } });
 	if (!user.ok) return new Response('GitHub did not say who you are. Try again.', { status: 502 });

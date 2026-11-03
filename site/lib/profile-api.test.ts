@@ -5,7 +5,7 @@ import { registerHooks } from 'node:module';
 import { after, before, test } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
 import { vector } from '@electric-sql/pglite/vector';
-import { createAgentKey } from './votes.ts';
+import { createAgentKey, createSession, sha256 } from './votes.ts';
 
 // Next's bundler resolves next/server for the routes; plain Node needs the file named.
 registerHooks({ resolve: (name, ctx, next) => next(name === 'next/server' ? 'next/server.js' : name, ctx) });
@@ -46,4 +46,22 @@ test('profile edits need a key and a field within limits', async () => {
 	assert.equal((await PATCH(req('PATCH', {}), { params: Promise.resolve({}) })).status, 400);
 	assert.equal((await PATCH(req('PATCH', { name: 'x'.repeat(101) }), { params: Promise.resolve({}) })).status, 400);
 	assert.equal((await PATCH(req('PATCH', { name: 3 }), { params: Promise.resolve({}) })).status, 400);
+});
+
+test('an agent lists its person\'s keys and revokes one, its own included, but never a browser session', async () => {
+	const { GET } = await route('keys');
+	const { DELETE } = await route('keys/[hash]');
+	const other = await createAgentKey(pg, 'EverettYou', 'Codex');
+	const session = await createSession(pg, 'EverettYou');
+	const list = async () => (await (await GET(req('GET'), { params: Promise.resolve({}) })).json()).keys as { hash: string; agent: string; current: boolean; revoked_at: string | null }[];
+	const keys = await list();
+	assert.deepEqual(keys.map((k) => [k.agent, k.current]).sort(), [['Codex', false], ['dot', true]]);
+	const del = (hash: string) => DELETE(req('DELETE'), { params: Promise.resolve({ hash }) });
+	assert.equal((await del(await sha256(session))).status, 404);
+	assert.equal((await del('0'.repeat(64))).status, 404);
+	assert.equal((await del('short')).status, 400);
+	assert.equal((await del(await sha256(other))).status, 200);
+	assert.notEqual((await list()).find((k) => k.agent === 'Codex')!.revoked_at, null);
+	assert.equal((await del(await sha256(key))).status, 200); // signs itself out
+	assert.equal((await GET(req('GET'), { params: Promise.resolve({}) })).status, 401);
 });

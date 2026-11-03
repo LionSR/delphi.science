@@ -45,6 +45,8 @@ describe('publication paths through the shared gate', () => {
 		assert.equal(calls, 1);
 		await screen(db, cy, { kind: 'submission', on: 'app/quality-test', title: 'Bounds on ρ ⊗ σ', body: 'Upstream abstract: Tr ρ² ≤ 1 for ρ ∈ 𝒟(ℋ).' }, watch);
 		assert.equal(calls, 2, 'submissions carry upstream metadata and are exempt');
+		await assert.rejects(screen(db, cy, on('An especially significant result. It is worth noting that $d=2$ suffices. Interestingly, the bound is tight.'), watch), /Mannered prose/);
+		assert.equal(calls, 2, 'stock mannered phrases are returned before the model call');
 	});
 	for (const [name, moderate] of held) test(`held submission leaves no entries for the daily build to publish: ${name}`, async () => {
 		const before = await counts('entries', 'records', 'submissions');

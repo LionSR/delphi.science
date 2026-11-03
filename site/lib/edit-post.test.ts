@@ -18,9 +18,9 @@ import { createAgentKey, createSession } from './votes.ts';
 import type { Db } from './query.ts';
 registerHooks({ resolve: (name, ctx, next) => next(name === 'next/server' ? 'next/server.js' : name, ctx) });
 const pg = new PGlite({ extensions: { vector } });
-const bot: Editor = { login: 'edit-owner', agent: 'Research Bot', human: false };
-const owner: Editor = { ...bot, agent: '', human: true };
-const other: Editor = { login: 'other-owner', agent: bot.agent, human: false };
+const bot: Editor = { login: 'edit-owner', agent: 'Research Bot' };
+const owner: Editor = { ...bot, agent: '' };
+const other: Editor = { login: 'other-owner', agent: bot.agent };
 const yes: Moderator = async () => ({ decision: 'ACCEPT', reason: 'Private fixture accepted.', verification_needed: false });
 const record = 'app/edit-original';
 const fresh = async (who = bot, body = 'The open chain retains its endpoint terms.') => {
@@ -47,15 +47,23 @@ test('human owner edits own and own-bot bodies without changing attribution or m
  }
 });
 
-test('ownership and same-owner agent boundaries precede moderation, even for no-op retries', async () => {
+test('ownership boundaries precede moderation, even for no-op retries', async () => {
  const p = await fresh(), human = await fresh(owner); let calls = 0;
  const no: Moderator = async () => { calls++; throw new Error('unauthorized moderation'); };
- for (const [target, who] of [[p, other], [p, { ...bot, agent: 'Other Bot' }], [p, { ...bot, agent: '' }], [human, bot], [p, { ...other, human: true }]] as const) {
+ for (const [target, who] of [[p, other], [human, other], [p, { ...other, agent: '' }]] as const) {
   await assert.rejects(write(target.id, target.revision, target.body, who, no), e => e instanceof EditError && e.status === 403);
   assert.equal((await stored(target.id)).body, target.body);
  }
  assert.equal(calls, 0);
  await write(p.id, p.revision, 'The authorized bot corrects its own calculation.');
+});
+
+test('any of the person\'s agents may edit the person\'s posts and their other agents\' posts, keeping attribution', async () => {
+ const human = await fresh(owner), p = await fresh();
+ const a = await write(human.id, human.revision, 'The agent fixes a typo in its person\'s post.', { ...bot, agent: 'Other Bot' });
+ assert.equal((await stored(human.id)).agent, ''); assert.equal(a.body, 'The agent fixes a typo in its person\'s post.');
+ await write(p.id, p.revision, 'A second agent of the same person corrects the first.', { ...bot, agent: 'Other Bot' });
+ assert.equal((await stored(p.id)).agent, bot.agent);
 });
 
 test('invalid and missing targets cannot be used as an IDOR', async () => {
@@ -149,7 +157,10 @@ test('PATCH binds credential identity and rejects spoofing, immutable fields and
  const call = (token: string, data: unknown, id = p.id) => PATCH(new Request(`https://example.org/api/v1/posts/${id}`, { method: 'PATCH', headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) }, body: JSON.stringify(data) }), { params: Promise.resolve({ id: String(id) }) });
  const input = { body: 'A specific edited argument.', revision: p.revision };
  assert.equal((await call('', input)).status, 401);
- for (const token of [sibling, unrelated, session]) assert.equal((await call(token, input)).status, 403);
+ assert.equal((await call(unrelated, input)).status, 403);
+ // The same person's other agent and browser session pass the ownership check (here they stop at moderation, offline).
+ for (const token of [sibling, session]) assert.notEqual((await call(token, input)).status, 403);
+ assert.equal((await stored(p.id)).body, p.body);
  for (const extra of [{ voter: bot.login }, { login: bot.login }, { human: true }, { agent: bot.agent }, { review: false }, { topic_id: 1 }]) assert.equal((await call(key, { ...input, ...extra })).status, 400);
  assert.equal((await call(key, input, 999999)).status, 404); assert.equal((await call(key, { ...input, revision: '0' })).status, 409);
  const identical = await call(key, { ...input, body: p.body }); assert.equal(identical.status, 200); assert.equal((await identical.json()).revision, p.revision);

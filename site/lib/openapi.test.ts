@@ -118,7 +118,9 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 
 	// Calls the route as Next does and checks the answer against the document's response for its status.
 	async function call(method: string, path: string, opts: { query?: string; body?: unknown; auth?: boolean | string; params?: Record<string, string>; headers?: Record<string,string> } = {}) {
-		const tmpl = Object.keys(paths).find((p) => new RegExp(`^${p.replace(/\{[^}]+\}/g, '[^/]+')}$`).test(path))!;
+		// As Next routes: a static path (/keys/device) wins over a parameter (/keys/{hash}).
+		const tmpl = Object.keys(paths).filter((p) => new RegExp(`^${p.replace(/\{[^}]+\}/g, '[^/]+')}$`).test(path))
+			.sort((a, b) => (a.match(/\{/g)?.length ?? 0) - (b.match(/\{/g)?.length ?? 0))[0]!;
 		const file = routes().find(([p]) => p === tmpl)![1];
 		const ids = tmpl.match(/\{([^}]+)\}/g)?.map((x) => x.slice(1, -1)) ?? [];
 		const values = path.split('/').filter((_, n) => tmpl.split('/')[n]?.startsWith('{'));
@@ -297,6 +299,31 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 		assert.equal(await fix('POST', '/api/v1/submit', { body: {}, auth: true }), 'the body needs "url"');
 	});
 
+	test('a person\'s activity, by tab and page, for agents as for /u/<login>', async () => {
+		const at = `/api/v1/records/${discussed.split('/')[0]}/${encodeURIComponent(discussed.split('/')[1])}`;
+		await call('POST', `${at}/vote`, { body: { value: 1, emoji: '🤔' }, auth: true });
+		const all = JSON.parse((await call('GET', '/api/v1/users/Someone', { query: 'limit=1' })).text);
+		assert.equal(all.login, 'someone');
+		assert.equal(all.posts.length, 1);
+		assert.ok(all.counts.topics >= 1 && all.counts.votes === 1, JSON.stringify(all.counts));
+		const next = JSON.parse((await call('GET', '/api/v1/users/someone', { query: `limit=1&cursor=${all.next_cursor}` })).text);
+		assert.ok(next.posts[0].id < all.posts[0].id);
+		assert.ok(JSON.parse((await call('GET', '/api/v1/users/someone', { query: 'tab=topics' })).text).posts.every((p: { kind: string }) => p.kind === 'question'));
+		const votes = JSON.parse((await call('GET', '/api/v1/users/someone', { query: 'tab=votes' })).text);
+		assert.equal(votes.votes[0].record_id, discussed);
+		assert.equal(votes.posts, undefined);
+		assert.equal((await call('GET', '/api/v1/users/no--such', {})).status, 400);
+		assert.equal((await call('GET', '/api/v1/users/someone', { query: 'tab=answers' })).status, 400);
+		assert.equal((await call('GET', '/api/v1/users/someone', { query: 'cursor=forged' })).status, 400);
+		const cache = globalThis as { openIndexDb?: Promise<unknown> };
+		cache.openIndexDb = Promise.resolve({ query: async () => { throw new Error('offline'); } });
+		try {
+			assert.equal((await call('GET', '/api/v1/users/someone', {})).status, 503);
+		} finally {
+			cache.openIndexDb = Promise.resolve(pg);
+		}
+	});
+
 	test('posting feedback: every prose path documents revision, verification hold and service failure', async () => {
 		const t = JSON.parse((await call('POST', '/api/v1/forum', { body: { title: 'Which endpoint convention is used?', body: 'For an open chain, which terms remain after telescoping?'  }, auth: true })).text);
 		const at = `/api/v1/records/${discussed.split('/')[0]}/${encodeURIComponent(discussed.split('/')[1])}`;
@@ -360,6 +387,27 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 		} finally { moderationMode = 'accept'; }
 		const updated = JSON.parse((await call('PATCH', path, { auth: true, body })).text);
 		assert.equal(updated.body, body.body); assert.notEqual(updated.revision, body.revision);
+	});
+
+	test('an agent reads and sets its person\'s name and affiliation, and lists and revokes keys', async () => {
+		assert.equal((await call('GET', '/api/v1/profile')).status, 401);
+		assert.equal((await call('PATCH', '/api/v1/profile', { body: { name: 'X' } })).status, 401);
+		assert.equal((await call('PATCH', '/api/v1/profile', { body: { name: 'x'.repeat(101) }, auth: true })).status, 400);
+		const saved = JSON.parse((await call('PATCH', '/api/v1/profile', { body: { name: 'Some One', affiliation: 'UCSD' }, auth: true })).text);
+		assert.deepEqual(saved, { login: 'someone', name: 'Some One', affiliation: 'UCSD', edited: true });
+		assert.equal(JSON.parse((await call('GET', '/api/v1/profile', { auth: true })).text).affiliation, 'UCSD');
+		assert.equal(JSON.parse((await call('GET', '/api/v1/users/someone', {})).text).name, 'Some One');
+
+		const spare = await createAgentKey(pg, 'someone', 'Spare agent');
+		assert.equal((await call('GET', '/api/v1/keys')).status, 401);
+		const keys = JSON.parse((await call('GET', '/api/v1/keys', { auth: true })).text).keys as { hash: string; agent: string; current: boolean }[];
+		assert.equal(keys.find((k) => k.current)?.agent, 'Test agent');
+		const hash = keys.find((k) => k.agent === 'Spare agent')!.hash;
+		assert.equal((await call('DELETE', `/api/v1/keys/${hash}`)).status, 401);
+		assert.equal((await call('DELETE', '/api/v1/keys/short', { auth: true })).status, 400);
+		assert.equal((await call('DELETE', `/api/v1/keys/${'0'.repeat(64)}`, { auth: true })).status, 404);
+		assert.equal((await call('DELETE', `/api/v1/keys/${hash}`, { auth: true })).status, 200);
+		assert.equal((await call('GET', '/api/v1/keys', { auth: spare })).status, 401);
 	});
 
 	test('every documented response was checked', () => {

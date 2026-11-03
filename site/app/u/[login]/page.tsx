@@ -1,14 +1,19 @@
 import { notFound } from 'next/navigation';
 import { db } from '../../../lib/db.ts';
-import { normalizeProfileLogin, profileActivity, type ProfileActivity } from '../../../lib/profile.ts';
+import { MAX_AFFILIATION, MAX_NAME, ownName, publicName } from '../../../lib/people.ts';
+import { normalizeProfileLogin, profile, TABS, type Profile, type Tab } from '../../../lib/profile.ts';
 import { ProfileView } from '../../../lib/profile-view.ts';
+import { me } from '../../../lib/session.ts';
+import { savePublicName } from '../../actions.ts';
 
 export const dynamic = 'force-dynamic';
-type Context = { params: Promise<{ login: string }>; searchParams: Promise<{ cursor?: string | string[] }> };
+type Context = { params: Promise<{ login: string }>; searchParams: Promise<{ cursor?: string | string[]; tab?: string | string[]; notice?: string }> };
 
 export async function generateMetadata({ params }: Context) {
 	try {
-		return { title: `@${normalizeProfileLogin((await params).login)} — Public activity` };
+		const login = normalizeProfileLogin((await params).login);
+		const { name } = await publicName(await db(), login);
+		return { title: `${name ? `${name} (@${login})` : `@${login}`} — Public activity` };
 	} catch {
 		return {};
 	}
@@ -21,14 +26,31 @@ export default async function Profile({ params, searchParams }: Context) {
 	} catch {
 		notFound();
 	}
-	const { cursor } = await searchParams;
-	let activity: ProfileActivity = { login, posts: [], next_cursor: null };
-	let failed = false;
+	const { cursor, tab: rawTab, notice } = await searchParams;
+	const tab: Tab = (TABS as readonly string[]).includes(rawTab as string) ? rawTab as Tab : 'all';
+	const d = await db();
+	const who = await publicName(d, login);
+	let page: Profile | null = null;
 	try {
 		if (Array.isArray(cursor)) throw new Error('Repeated cursor');
-		activity = await profileActivity(await db(), login, { cursor });
+		page = await profile(d, login, { tab, cursor });
 	} catch {
-		failed = true;
+		page = null;
 	}
-	return <ProfileView activity={activity} failed={failed} />;
+	const owner = (await me())?.login.toLowerCase() === login.toLowerCase();
+	const own = owner ? await ownName(d, login).catch(() => null) : null;
+	const editor = own ? (
+		<details className="profile-edit" open={!own.name && !own.affiliation}>
+			<summary>Edit name and affiliation</summary>
+			{notice && <p className="count">{notice}</p>}
+			<form action={savePublicName}>
+				<input type="hidden" name="login" value={login} />
+				<label>Name <input name="name" defaultValue={own.name} maxLength={MAX_NAME} autoComplete="name" /></label>
+				<label>Affiliation <input name="affiliation" defaultValue={own.affiliation} maxLength={MAX_AFFILIATION} autoComplete="organization" placeholder="e.g. University of California San Diego" /></label>
+				<button>Save</button>
+			</form>
+			<p className="meta"><span>Shown publicly beside your username. Sign-in no longer copies these from GitHub once you save here. Your connected agents can also set them.</span></p>
+		</details>
+	) : null;
+	return <ProfileView login={login} tab={tab} page={page} who={who} editor={editor} />;
 }

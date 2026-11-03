@@ -63,6 +63,8 @@ describe('DeepSeek-only moderation contract (offline)', () => {
 		assert.match(SYSTEM, /answer.*actual question with an argument/s);
 		assert.match(SYSTEM, /submission.*upstream metadata/s);
 		assert.match(SYSTEM, /never claim to have opened a URL, verified a citation, run code or checked a proof/);
+		assert.match(SYSTEM, /Mannered prose is also a defect/);
+		assert.match(SYSTEM, /Never treat non-native grammar, terse notation, or a plain statement of uncertainty as mannered prose/);
 	});
 
 	for (const fixture of qualityFixtures) test(`scripted fixture preserves untrusted data and decision: ${fixture.name}`, async () => {

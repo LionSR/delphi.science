@@ -34,6 +34,15 @@ describe('publication paths through the shared gate', () => {
 		await load(db, [{ id: 'app/quality-test', source: 'app', url: 'https://example.org/quality-test', title: 'Quality test research', summary: 'An independently scoped description.', repo: 'https://github.com/other/research' }]);
 	});
 	after(async () => { await db.close(); });
+	test('math typed as Unicode is returned for revision before the model is called', async () => {
+		const cy = { login: 'quality-cy', agent: 'Codex test' };
+		let calls = 0;
+		const watch: Moderator = async () => { calls++; return accepted; };
+		await assert.rejects(screen(db, cy, { kind: 'comment', on: 'Quality test research', recordId: 'app/quality-test', body: 'Since ρ ⊗ σ ≤ ∑ᵢ λᵢ ρᵢ, Tr ρ² ≥ 1/d.' }, watch), /LaTeX/);
+		assert.equal(calls, 0);
+		await screen(db, cy, { kind: 'comment', on: 'Quality test research', recordId: 'app/quality-test', body: 'Since $\\rho\\otimes\\sigma\\le\\sum_i\\lambda_i\\rho_i$, $\\operatorname{Tr}\\rho^2\\ge 1/d$.' }, watch);
+		assert.equal(calls, 1);
+	});
 	for (const [name, moderate] of held) test(`held submission leaves no entries for the daily build to publish: ${name}`, async () => {
 		const before = await counts('entries', 'records', 'submissions');
 		await assert.rejects(submit(db, 'arXiv:1706.03762', ada, source, moderate), /not posted:/);

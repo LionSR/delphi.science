@@ -133,7 +133,7 @@ export async function savePublicName(form: FormData) {
 	const back = profilePath(String(form.get('login') ?? ''));
 	const who = await signedIn(back);
 	await thenBack(profilePath(who.login.toLowerCase()), async () => {
-		await editPublicName(await db(), who.login, { name: form.get('name'), affiliation: form.get('affiliation') });
+		await editPublicName(await db(), who.login, { name: form.get('name') ?? '', affiliation: form.get('affiliation') ?? '' });
 		revalidatePath('/', 'layout');
 	});
 }

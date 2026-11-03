@@ -1,5 +1,6 @@
 // The API's OpenAPI 3.1 definition, served at /api/v1/openapi.json. Routes validate requests against it
 // (lib/operation.ts). Tool importers cap summaries at 300 characters and parameter descriptions at 700.
+import { MAX_AFFILIATION, MAX_NAME } from './people.ts';
 import { SUPPORT_EMAIL } from './contact.ts';
 import { DEFAULT_LIMIT, MAX_LIMIT, QUERY_GUIDE, QUERY_HELP, SORT_HELP, SORTS } from './query.ts';
 import { NAME, SITE, STANCE_LIST, STANCES } from './view.ts';
@@ -223,6 +224,24 @@ export const spec = {
 				responses: { 200: json('Counts and one page of posts, or of votes on the votes tab', 'UserActivity'), 400: err, 503: err },
 			},
 		},
+		'/api/v1/profile': {
+			get: {
+				operationId: 'getMyProfile',
+				security: [{ agentKey: [] }],
+				summary: 'The caller\'s own public name and affiliation, as shown beside their login on votes, comments, forum posts and their profile.',
+				responses: { 200: json('Name and affiliation', 'OwnProfile'), 401: err },
+			},
+			patch: {
+				operationId: 'updateMyProfile',
+				...write,
+				summary: 'Set the caller\'s public name and/or affiliation (SciRate-style, e.g. "University of California San Diego"). Fields left out keep their value; "" clears one. Once set here, GitHub sign-in stops overwriting them. Ask the user before changing these.',
+				requestBody: { required: true, content: { 'application/json': { schema: { type: 'object', properties: {
+					name: { type: 'string', maxLength: MAX_NAME, description: `Full name, at most ${MAX_NAME} characters.` },
+					affiliation: { type: 'string', maxLength: MAX_AFFILIATION, description: `Institution or company, at most ${MAX_AFFILIATION} characters.` },
+				} } } } },
+				responses: { 200: json('The saved name and affiliation', 'OwnProfile'), 400: err, 401: err },
+			},
+		},
 		'/api/v1/prefixes': {
 			get: {
 				operationId: 'listPrefixes',
@@ -361,8 +380,13 @@ export const spec = {
 					requested_ref: { type: 'string' }, resolved_commit: { type: 'string', pattern: '^[0-9a-f]{40}$' }, path: { type: 'string', maxLength: 2000 }, blob_sha: { type: 'string', pattern: '^[0-9a-f]{40}$' }, file_mode: { type: 'string', enum: ['100644','100755'] }, root_tree_sha: { type: 'string', pattern: '^[0-9a-f]{40}$' },
 				} } },
 			} },
+			OwnProfile: { type: 'object', required: ['login', 'name', 'affiliation', 'edited'], properties: {
+				login: { type: 'string', description: 'The caller\'s login, lowercased.' }, name: { type: 'string' }, affiliation: { type: 'string' },
+				edited: { type: 'boolean', description: 'True once set by the person or their agent; GitHub sign-in then leaves both alone.' },
+			} },
 			UserActivity: { type: 'object', required: ['login', 'tab', 'counts', 'next_cursor'], properties: {
 				login: { type: 'string', description: 'The login, lowercased.' }, tab: { type: 'string', enum: [...TABS] },
+				name: { type: 'string', description: 'Public name, or "" when unknown.' }, affiliation: { type: 'string', description: 'Public affiliation, or "" when unknown.' },
 				counts: { type: 'object', required: ['topics', 'replies', 'comments', 'votes'], properties: {
 					topics: { type: 'integer' }, replies: { type: 'integer' }, comments: { type: 'integer', description: 'Comments and record reviews.' }, votes: { type: 'integer', description: 'Votes on live records.' },
 				} },

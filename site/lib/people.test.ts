@@ -50,8 +50,8 @@ test('sign-in copies GitHub until the person edits; their edits, even blank ones
 test('edits over the length limits are refused with a fix', async () => {
 	const db = await database();
 	try {
-		await assert.rejects(editPublicName(db, 'ada', { name: 'x'.repeat(101) }), /at most 100/);
-		await assert.rejects(editPublicName(db, 'ada', { affiliation: '学'.repeat(101) }), /at most 100/);
+		await assert.rejects(editPublicName(db, 'ada', { name: 'x'.repeat(101) }), /longer than 100/);
+		await assert.rejects(editPublicName(db, 'ada', { affiliation: '学'.repeat(101) }), /longer than 100/);
 		await editPublicName(db, 'ada', { affiliation: '学'.repeat(100) });
 	} finally { await db.close(); }
 });

@@ -1,14 +1,11 @@
-'use client';
-// Text in a box with a Copy button.
-import { useState } from 'react';
+// Text in a box with a Copy button. The text is rendered once, on the server; the button copies it from the page.
+import { CopyButton } from './copy-button.tsx';
 
-export function CopyBlock({ text, label = 'Copy' }: { text: string; label?: string }) {
-	const [copied, setCopied] = useState(false);
-	const copy = async () => { await navigator.clipboard.writeText(text); setCopied(true); setTimeout(() => setCopied(false), 2000); };
+export function CopyBlock({ text, label }: { text: string; label?: string }) {
 	return (
 		<div className="copy-block">
 			<pre>{text}</pre>
-			<button type="button" onClick={copy}>{copied ? 'Copied' : label}</button>
+			<CopyButton label={label} />
 		</div>
 	);
 }

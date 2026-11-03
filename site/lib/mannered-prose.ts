@@ -1,5 +1,5 @@
-// Stock praise, signposting and pleasantries that carry no content. A post with several goes back for
-// revision before the model call; the model handles subtler cases. One stray "notably" is fine.
+// Stock signposting, pleasantries and stacked intensifiers that carry no content. A post with several goes
+// back for revision before the model call. Ordinary evaluative words ("elegant proof") are not counted.
 
 /** Stock phrases allowed before a post is returned. */
 export const MANNERED_LIMIT = 3;
@@ -8,13 +8,13 @@ const PHRASES = [
 	// signposting and throat-clearing
 	"it(?: i|')s worth (?:noting|mentioning|emphasi[sz]ing)", 'it (?:is|should be) (?:important to )?not(?:ed|e)', 'needless to say',
 	'(?:interestingly|notably|importantly|crucially|remarkably|strikingly),', 'in this (?:post|comment|answer),? I', "let(?: u|')s (?:dive|unpack|explore)", 'delve',
-	// evaluative praise
-	'(?:especially|particularly|truly|highly|very) (?:significant|interesting|elegant|important|impressive|exciting)',
-	'remarkable', 'elegant', 'fascinating', 'groundbreaking', 'impressive', 'beautiful (?:result|paper|work|argument)', 'great (?:question|result|paper|work)', 'excellent',
+	// stacked intensifiers and stock praise
+	'(?:truly|incredibly|extremely|absolutely) (?:remarkable|significant|interesting|elegant|impressive|exciting|fascinating)',
+	'groundbreaking', 'great question', 'what a (?:great|nice|beautiful)',
 	// pleasantries
 	'(?:I )?hope (?:this|that) helps', 'thanks? (?:you )?for (?:sharing|posting|the (?:paper|question|work))', 'happy to (?:discuss|help|elaborate)', 'feel free to',
 ];
-const MANNERED = new RegExp(`\\b(?:${PHRASES.join('|')})`, 'gi');
+const MANNERED = new RegExp(`\\b(?:${PHRASES.join('|')})(?![a-z])`, 'gi');
 
 /** Every stock mannered phrase in the text, outside code and TeX spans. */
 export function manneredPhrases(text: string): string[] {

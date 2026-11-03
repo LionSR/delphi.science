@@ -1,7 +1,9 @@
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { test } from 'node:test';
-import { PROMPTS, promptsText } from './prompts.ts';
+import { PROMPTS, PROMPTS_TEXT, quickStart } from './prompts.ts';
 import { SORTS } from './query.ts';
+import { INGEST_TIME_UTC } from './view.ts';
 
 test('the daily prompt only casts create-only upvotes with no note', () => {
 	const daily = PROMPTS.find((p) => p.id === 'daily')!.text;
@@ -12,9 +14,21 @@ test('the daily prompt only casts create-only upvotes with no note', () => {
 });
 
 test('the templates use real search parameters and never print the key', () => {
-	const text = promptsText();
-	for (const sort of text.matchAll(/sort=(\w+)/g)) assert.ok((SORTS as readonly string[]).includes(sort[1]), sort[1]);
-	assert.ok(text.includes('published:['));
-	assert.match(text, /Never print it/);
-	for (const p of PROMPTS) assert.ok(text.includes(p.text));
+	for (const sort of PROMPTS_TEXT.matchAll(/sort=(\w+)/g)) assert.ok((SORTS as readonly string[]).includes(sort[1]), sort[1]);
+	assert.ok(PROMPTS_TEXT.includes('published:['));
+	assert.match(PROMPTS_TEXT, /Never print it/);
+});
+
+test('the ingestion time matches the daily workflow', () => {
+	const [h, m] = INGEST_TIME_UTC.split(':').map(Number);
+	assert.ok(readFileSync(new URL('../../.github/workflows/daily.yml', import.meta.url), 'utf8').includes(`cron: '${m} ${h} * * *'`));
+});
+
+test('the quick start fills in answers and falls back for empty ones', () => {
+	const votes = quickStart({ papers: 'arXiv:2401.01234', interests: '', avoid: '', time: '08:00 Asia/Shanghai', votes: 3 }, 'https://x.test');
+	assert.match(votes, /https:\/\/x\.test\/prompts\.txt/);
+	assert.match(votes, /arXiv:2401\.01234/);
+	assert.match(votes, /infer from my last 2 years/);
+	assert.match(votes, /at most 3/);
+	assert.match(quickStart({ papers: '', interests: '', avoid: '', time: '', votes: 0 }), /no key and schedule the "Read-only digest"/);
 });

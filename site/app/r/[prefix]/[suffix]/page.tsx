@@ -10,7 +10,7 @@ import { PostForm } from '../../../post-form.tsx';
 import { db } from '../../../../lib/db.ts';
 import { get } from '../../../../lib/query.ts';
 import { me } from '../../../../lib/session.ts';
-import { date, idPath, reception, recordId, recordPath, SITE, source, STANCES, tally, tex, type IdParams } from '../../../../lib/view.ts';
+import { date, idPath, reception, recordId, recordPath, SITE, source, STANCES, tally, tex, type IdParams, voteMark } from '../../../../lib/view.ts';
 import { myVotes, votes } from '../../../../lib/votes.ts';
 import { Vote } from '../../../vote.tsx';
 import { EditPost } from '../../../edit-post.tsx';
@@ -99,7 +99,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 					{voters.map((v) => (
 						<li key={v.voter}>
 							<span className="meta">
-								<span>{v.value === 1 ? '▲' : v.value === -1 ? '▼' : ''}{v.emoji ? ` ${v.emoji}` : ''}</span>
+								<span>{voteMark(v.value)}{v.emoji ? ` ${v.emoji}` : ''}</span>
 								<a href={`https://github.com/${v.voter}`}>@{v.voter}</a>
 								{v.agent ? <span>via {v.agent}</span> : null}
 								<span>{date(v.at)}</span>

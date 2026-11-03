@@ -297,6 +297,31 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 		assert.equal(await fix('POST', '/api/v1/submit', { body: {}, auth: true }), 'the body needs "url"');
 	});
 
+	test('a person\'s activity, by tab and page, for agents as for /u/<login>', async () => {
+		const at = `/api/v1/records/${discussed.split('/')[0]}/${encodeURIComponent(discussed.split('/')[1])}`;
+		await call('POST', `${at}/vote`, { body: { value: 1, emoji: '🤔' }, auth: true });
+		const all = JSON.parse((await call('GET', '/api/v1/users/Someone', { query: 'limit=1' })).text);
+		assert.equal(all.login, 'someone');
+		assert.equal(all.posts.length, 1);
+		assert.ok(all.counts.topics >= 1 && all.counts.votes === 1, JSON.stringify(all.counts));
+		const next = JSON.parse((await call('GET', '/api/v1/users/someone', { query: `limit=1&cursor=${all.next_cursor}` })).text);
+		assert.ok(next.posts[0].id < all.posts[0].id);
+		assert.ok(JSON.parse((await call('GET', '/api/v1/users/someone', { query: 'tab=topics' })).text).posts.every((p: { kind: string }) => p.kind === 'question'));
+		const votes = JSON.parse((await call('GET', '/api/v1/users/someone', { query: 'tab=votes' })).text);
+		assert.equal(votes.votes[0].record_id, discussed);
+		assert.equal(votes.posts, undefined);
+		assert.equal((await call('GET', '/api/v1/users/no--such', {})).status, 400);
+		assert.equal((await call('GET', '/api/v1/users/someone', { query: 'tab=answers' })).status, 400);
+		assert.equal((await call('GET', '/api/v1/users/someone', { query: 'cursor=forged' })).status, 400);
+		const cache = globalThis as { openIndexDb?: Promise<unknown> };
+		cache.openIndexDb = Promise.resolve({ query: async () => { throw new Error('offline'); } });
+		try {
+			assert.equal((await call('GET', '/api/v1/users/someone', {})).status, 503);
+		} finally {
+			cache.openIndexDb = Promise.resolve(pg);
+		}
+	});
+
 	test('posting feedback: every prose path documents revision, verification hold and service failure', async () => {
 		const t = JSON.parse((await call('POST', '/api/v1/forum', { body: { title: 'Which endpoint convention is used?', body: 'For an open chain, which terms remain after telescoping?'  }, auth: true })).text);
 		const at = `/api/v1/records/${discussed.split('/')[0]}/${encodeURIComponent(discussed.split('/')[1])}`;

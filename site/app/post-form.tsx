@@ -69,7 +69,7 @@ function Composer({ kind, owner, topic, parent, record, back, label, placeholder
 			{parent !== undefined && <input type="hidden" name="parent" value={parent} />}
 			{record !== undefined && <input type="hidden" name="record" value={record} />}
 			<fieldset disabled={pending}>
-				{kind === 'question' && <input name="title" required maxLength={200} placeholder="The question, in one line" aria-label="Title" className="grow"
+				{kind === 'question' && <input name="title" required maxLength={200} placeholder="The question or topic, in one line" aria-label="Title" className="grow"
 					value={draft.title} onChange={(e) => setDraft({ ...draft, title: e.target.value })} />}
 				{kind === 'submission' ? <input name="body" required maxLength={2000} placeholder={placeholder} aria-label={label} className="grow"
 					value={draft.body} onChange={(e) => setDraft({ ...draft, body: e.target.value })} /> : <textarea name="body" rows={rows} maxLength={4000} required placeholder={placeholder} aria-label={label}

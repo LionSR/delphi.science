@@ -46,7 +46,7 @@ export async function editPost(db: Db, id: number, who: Editor, input: { body: s
 	await screen(db, who, {
 		kind,
 		...(p.record_id ? { recordId: p.record_id } : {}),
-		on: p.record_id ? `the record ${p.record_id}` : 'a forum question',
+		on: p.record_id ? `the record ${p.record_id}` : 'a forum topic',
 		title: p.title, body, context,
 	}, moderate);
 	return db.transaction(async tx => {

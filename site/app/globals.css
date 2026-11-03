@@ -111,6 +111,13 @@ li.item .vote { float: right; margin: 0 0 0.3rem 0.8rem; }
 .post-feedback { border-left: 3px solid var(--warn); padding: 0.6rem 0.9rem; background: var(--surface); }
 .post-feedback p { margin: 0.4rem 0 0; }
 
+/* Profile */
+.tabs { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; margin: 1rem 0; border-bottom: 1px solid var(--rule); }
+.tabs a { padding: 0.3rem 0; text-decoration: none; color: var(--muted); border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.tabs a[aria-current='page'] { color: var(--ink); border-bottom-color: var(--accent); }
+.tabs .n { font-size: var(--small); }
+.profile-activity .kind { font-size: var(--small); text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+
 /* Markdown (after .comment p, which it overrides) */
 .markdown { overflow-wrap: anywhere; }
 .markdown p, .comment .markdown p { margin: 0.5rem 0; white-space: normal; }

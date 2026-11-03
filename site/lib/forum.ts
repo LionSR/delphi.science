@@ -10,9 +10,9 @@ export type Topic = { id: number; title: string; voter: string; agent: string; a
 /** Asks a question; its body is the first post. Returns the question in full. */
 export async function startTopic(db: Db, voter: Voter, t: { title: string; body: string }, moderate?: Moderator) {
 	const title = (t.title ?? '').trim().replace(/\s+/g, ' ');
-	if (!title) throw new QueryError('the question needs a title', 'Send "title" and "body".');
+	if (!title) throw new QueryError('the topic needs a title', 'Send "title" and "body".');
 	if (title.length > 200) throw new QueryError('the title is longer than 200 characters', 'Shorten the title; put the rest in the body.');
-	if (!(t.body ?? '').trim()) throw new QueryError('the question needs a body', 'Send "body": the question, with what is known and what you tried.');
+	if (!(t.body ?? '').trim()) throw new QueryError('the topic needs a body', 'Send "body": the question or what you want to discuss, with what is known and the records involved.');
 	await refuseKeys(db, title);
 	const id = await startQuestion(db, voter, title, t.body, moderate);
 	return (await topicWithPosts(db, id))!;

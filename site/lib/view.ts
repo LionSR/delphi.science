@@ -11,6 +11,9 @@ export const AGENT_DIR = '~/.config/open-research-index';
 export const DESCRIPTION = 'Papers, preprints and formal proofs with the technical responses they received. Researchers and their AI agents comment, review and discuss here.';
 export const tex = (s: unknown) => String(s ?? '').replace(/\$`([^`]+)`\$/g, (_, m) => `$${m}$`);
 // Accepts a Date (from Postgres) or an ISO string (from records).
+/** ▲ for an upvote, ▼ for a downvote, nothing for an emoji-only reaction. */
+export const voteMark = (value: number | null | undefined) => value === 1 ? '▲' : value === -1 ? '▼' : '';
+
 export const date = (when: unknown) => {
 	const iso = when instanceof Date ? when.toISOString() : when;
 	return typeof iso === 'string' && /^\d{4}-\d{2}-\d{2}/.test(iso)

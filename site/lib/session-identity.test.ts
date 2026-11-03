@@ -83,6 +83,7 @@ test('display names come from the newest named session and skip agents, blanks a
 		await db.query("INSERT INTO open_index.agent_keys (key_hash, login, agent, name, created_at) VALUES ('a', 'ada', '', 'Old Name', now() - interval '1 day'), ('b', 'ada', '', 'Ada Lovelace', now()), ('c', 'bob', 'Claude Code', 'Agent Name', now()), ('d', 'cy', '', 'cy', now())");
 		assert.deepEqual([...await displayNames(db, ['ada', 'bob', 'cy', 'ada'])], [['ada', 'Ada Lovelace']]);
 		assert.deepEqual([...await displayNames(db, [])], []);
+		assert.deepEqual([...await displayNames(db, ['ADA', 'Cy'])], [['ADA', 'Ada Lovelace']]);
 	} finally { await db.close(); }
 });
 

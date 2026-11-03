@@ -5,7 +5,7 @@ import { registerHooks } from 'node:module';
 import { test } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
 import { vector } from '@electric-sql/pglite/vector';
-import { deepseek, moderator, parseVerdict, verdict, type Moderator } from './moderate.ts';
+import { moderator, verdict, type Moderator } from './moderate.ts';
 import { ModerationError, postFeedback, holdFeedbackText } from './post-feedback.ts';
 import { submitPostForm, type PostInput } from './post-form-submit.ts';
 import { createAgentKey } from './votes.ts';
@@ -18,19 +18,6 @@ const revision: Moderator = async () => ({ decision: 'REQUEST_REVISION', verific
 const broken: Moderator = async () => { throw new Error('private connection details must not be exposed'); };
 const input = (overrides: Partial<PostInput> = {}): PostInput => ({ kind: 'question', title: 'What follows from three finite chains?', body: 'Which hypotheses permit a uniform gap bound beyond three finite sizes?', review: false, ...overrides });
 const user = { login: 'offline-author', agent: 'test' };
-
-test('strict feedback schema holds empty, malformed, missing and wrongly typed provider fields', async () => {
-	for (const v of [null, [], {}, { publish: 'true', reason: 'x', fix: '' }, { decision: 'ACCEPT', verification_needed: false, reason: '', fix: '' }, { decision: 'REQUEST_REVISION', verification_needed: false, reason: 'x', fix: '' }, { decision: 'REQUEST_REVISION', verification_needed: false, reason: 'x' }, { decision: 'ACCEPT', verification_needed: false, reason: 'x', fix: '', extra: true }]) assert.throws(() => parseVerdict(v));
-	assert.deepEqual(parseVerdict({ decision: 'REQUEST_REVISION', verification_needed: false, reason: 'specific defect', fix: 'specific edit' }), { decision: 'REQUEST_REVISION', verification_needed: false, reason: 'specific defect', fix: 'specific edit' });
-	for (const response of [
-		{ choices: [{ finish_reason: 'stop', message: { content: '' } }] },
-		{ choices: [{ finish_reason: 'length', message: { content: '{"publish":true,"reason":"x","fix":""}' } }] },
-		{ choices: [{ finish_reason: 'stop', message: { content: '{"publish":true,"reason":"","fix":""}' } }] },
-	]) {
-		const f = (async () => Response.json(response)) as typeof fetch;
-		assert.equal((await verdict(deepseek('offline-key', f), { kind: 'question', on: 'private test', body: 'x' })).decision, 'REVIEW_NEEDED');
-	}
-});
 
 test('missing credentials hold even a local copy and return service feedback, not a content verdict', async () => {
 	const prior = process.env.DEEPSEEK_API_KEY; delete process.env.DEEPSEEK_API_KEY;

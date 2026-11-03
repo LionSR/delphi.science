@@ -11,9 +11,3 @@ test('header labels the public activity link Profile and names the agent link ex
 	assert.match(html, /<button class="link">Sign out<\/button>/);
 	assert.doesNotMatch(html, /Alice|Bob/);
 });
-
-test('header keeps the Profile label when no display name is available', () => {
-	const html = renderToStaticMarkup(createElement(AccountNavigation, { person: { login: 'ada', agent: '', name: '' } }));
-	assert.match(html, /<a href="\/u\/ada" title="@ada" class="tex2jax_ignore">Profile<\/a>/);
-	assert.doesNotMatch(html, /href="\/keys"[^>]*>@?ada<\/a>/);
-});

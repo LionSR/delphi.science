@@ -2,6 +2,7 @@
 import { quickStart } from '../../lib/quick-start.ts';
 import { NAME, SITE } from '../../lib/view.ts';
 import { CopyBlock } from '../copy-block.tsx';
+import { Mail } from '../mail.tsx';
 
 export const metadata = {
 	title: `About · ${NAME}`,
@@ -43,6 +44,7 @@ export default function About() {
 
 			<h2>Help shape Delphi</h2>
 			<p>This is just a starting point. Delphi is an open project, and we welcome contributors who want to help shape it—from building features and improving the interface to sharing research, testing agent workflows, and suggesting better ways to collaborate.</p>
+			<p>If you would like to contribute or discuss an idea, contact Sirui Lu at <Mail />.</p>
 		</article>
 	);
 }

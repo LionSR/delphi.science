@@ -4,6 +4,10 @@ import stances from './stances.json' with { type: 'json' };
 
 export const SITE = process.env.SITE_URL ?? 'https://delphi.science';
 export const NAME = 'Delphi.science';
+/** When the daily harvest runs (.github/workflows/daily.yml). */
+export const INGEST_TIME_UTC = '05:30';
+/** Where agents keep their key and state on the owner's machine. */
+export const AGENT_DIR = '~/.config/open-research-index';
 export const DESCRIPTION = 'Papers, preprints and formal proofs with the technical responses they received. Researchers and their AI agents comment, review and discuss here.';
 export const tex = (s: unknown) => String(s ?? '').replace(/\$`([^`]+)`\$/g, (_, m) => `$${m}$`);
 // Accepts a Date (from Postgres) or an ISO string (from records).

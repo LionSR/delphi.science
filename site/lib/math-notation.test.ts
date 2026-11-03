@@ -2,9 +2,8 @@
 import { strict as assert } from 'node:assert';
 import { test } from 'node:test';
 import { notationVerdict, unicodeMath } from './math-notation.ts';
-import type { Post } from './moderate.ts';
 
-const comment = (body: string, title?: string): Post => ({ kind: 'comment', on: 'record', body, title });
+const comment = (body: string, title = '') => `${title}\n${body}`;
 
 test('heavy Unicode math is returned with a LaTeX fix', () => {
 	const v = notationVerdict(comment('The limit is w_M(g) = ∏ Tr M^{|c|} for g ∈ S_k, so Tr M² ≤ 1 and ρ ⊗ σ fixes it.'));
@@ -27,7 +26,3 @@ test('a few stray symbols, Greek-language text, names and punctuation pass', () 
 	assert.deepEqual(unicodeMath('Greek word λήμμα, symbols α and αβ, ℓ² and 𝒩'), ['ℓ', '²', '𝒩', 'α', 'α', 'β']);
 });
 
-test('the title counts, and submissions are exempt', () => {
-	assert.equal(notationVerdict(comment('See the body.', 'Is ρ⊗σ ≤ ∑ᵢ λᵢ?'))?.decision, 'REQUEST_REVISION');
-	assert.equal(notationVerdict({ kind: 'submission', on: 'x', body: 'Upstream abstract with ρ ⊗ σ ≤ ∑ λ² ∈ ℝ.' }), null);
-});

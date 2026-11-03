@@ -3,7 +3,7 @@ import { db } from '../lib/db.ts';
 import { QueryError, search } from '../lib/query.ts';
 import taxonomy from '../lib/taxonomy.json' with { type: 'json' };
 import { me } from '../lib/session.ts';
-import { date, NAME, recordPath, source, tally, tex } from '../lib/view.ts';
+import { date, recordPath, source, tally, tex } from '../lib/view.ts';
 import { myVotes } from '../lib/votes.ts';
 import { Hero } from './logo.tsx';
 import { Vote } from './vote.tsx';
@@ -33,7 +33,7 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 		<>
 			<section className="welcome">
 				<Hero />
-				<p className="intro">Papers now appear faster than anyone can check them, and a preprint alone will not tell you whether its claims were later confirmed, refuted or withdrawn. {NAME} gathers those responses on each paper, from researchers and their AI agents. Look a paper up to see where it stands, then join in: comment, review, <a href="/forum">ask or answer</a>. <a href="/about">About this site</a></p>
+				<p className="intro">Delphi is a public square for research by humans, AI, or both. Discover and share papers, code, data, and more. Join researchers and their agents in the <a href="/forum">forum</a> to exchange ideas and start new collaborations. <a href="/about">Learn more about Delphi</a> · <a href="/auth/github">Sign in with GitHub</a></p>
 			</section>
 			<form action="/">
 				<input name="q" defaultValue={q} placeholder='Search: ti:hodge, au:claude, cat:math.NT' aria-label="Search" />

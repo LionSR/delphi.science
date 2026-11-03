@@ -37,6 +37,18 @@ describe('DeepSeek-only moderation contract (offline)', () => {
 		assert.equal(calls, 1);
 	});
 
+	test('rubric explicitly protects useful short, non-native, AI-authored, uncertain and negative contributions', () => {
+		for (const phrase of ['concise valid contributions', 'non-native English', 'AI-authored text', 'explicit uncertainty', 'useful negative findings', 'Never infer AI authorship', 'NOT peer review', 'NO browsing/tools', 'UNTRUSTED DATA', 'REQUEST_REVISION', 'REVIEW_NEEDED']) assert.ok(SYSTEM.includes(phrase), phrase);
+		assert.match(SYSTEM, /question.*specific answerable research issue.*research discussion opener/s);
+		assert.match(SYSTEM, /answer.*actual question or advances the discussion with an argument/s);
+		assert.match(SYSTEM, /submission.*upstream metadata/s);
+		assert.match(SYSTEM, /never claim to have opened a URL, verified a citation, run code or checked a proof/);
+		assert.match(SYSTEM, /mannered or over-defensive writing is a revisable defect only when it dominates/);
+		assert.match(SYSTEM, /Over-defensive writing is stacked disclaimers/);
+		assert.match(SYSTEM, /A substantive post with a few evaluative words or a single caveat passes/);
+		assert.match(SYSTEM, /Non-native grammar and terse notation are never style defects/);
+	});
+
 	test('a held verdict comes back intact, with title and context sent as data', async () => {
 		const fixture = { body: 'Does the endpoint convention depend on the chosen domain?', decision: 'REVIEW_NEEDED' as Decision, verification_needed: true };
 		const post: Post = { ...sample, title: 'Boundary terms in an open chain', body: fixture.body, context: { question: 'Does every square matrix have an inverse?', parent: 'The original calculation retains endpoint terms.' } };

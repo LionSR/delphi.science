@@ -47,7 +47,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	const thread = await comments(d, id);
 	const { notice } = await ctx.searchParams;
 	const voters = await votes(d, id);
-	const names = await displayNames(d, [...voters.map((v) => v.voter), ...thread.map((c) => c.voter)]);
+	const names = await displayNames(d, [...voters.map((v) => v.voter), ...thread.map((c) => c.voter), ...(reception(r)?.reviewed_by ? [String(reception(r)!.reviewed_by)] : [])]);
 	const who = await me();
 	const mine = who ? (await myVotes(d, who.login, [id])).get(id) : undefined;
 	const back = recordPath(id);
@@ -89,7 +89,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 					<p>{stands.text}</p>
 					<p className="meta">
 						<span>{date(stands.written)}</span>
-						{stands.reviewed_by ? <span>reviewed by <a href={`https://github.com/${stands.reviewed_by}`}>@{stands.reviewed_by}</a></span> : null}
+						{stands.reviewed_by ? <span>reviewed by <PublicAuthor voter={stands.reviewed_by} who={names.get(stands.reviewed_by)} /></span> : null}
 						{(stands.links ?? []).map((u) => <a key={u} href={u}>{cite(u)}</a>)}
 					</p>
 				</section>

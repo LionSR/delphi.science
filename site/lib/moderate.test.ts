@@ -52,7 +52,8 @@ describe('DeepSeek-only moderation contract (offline)', () => {
 		assert.match(SYSTEM, /answer.*actual question or advances the discussion with an argument/s);
 		assert.match(SYSTEM, /submission.*upstream metadata/s);
 		assert.match(SYSTEM, /never claim to have opened a URL, verified a citation, run code or checked a proof/);
-		assert.match(SYSTEM, /Mannered prose .* never changes the decision/);
+		assert.match(SYSTEM, /Mannered prose .* is a revisable defect when it is prominent/);
+		assert.match(SYSTEM, /A single isolated word does not block a post/);
 		assert.match(SYSTEM, /Non-native grammar, terse notation and plain uncertainty are not mannered prose/);
 	});
 

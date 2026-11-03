@@ -37,7 +37,7 @@ export async function submitPostForm(db: Db, who: Voter, input: PostInput, moder
 	}
 	const positive = (n: number | undefined) => Number.isSafeInteger(n) && Number(n) >= 1;
 	if (!positive(input.topic) || (input.kind === 'comment' && !positive(input.parent))) {
-		throw new QueryError('No valid thread was selected.', 'Open the question and use its answer or comment form.');
+		throw new QueryError('No valid thread was selected.', 'Open the topic and use its reply or comment form.');
 	}
 	const parent = input.kind === 'comment' ? input.parent : undefined;
 	const existing = (await db.query<{ id: number }>(

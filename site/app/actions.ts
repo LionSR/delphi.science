@@ -48,7 +48,7 @@ export async function savePostEdit(input: { id: number; body: string; revision: 
 export async function sendPost(_previous: PostFormState, form: FormData): Promise<PostFormState> {
 	const kind = String(form.get('kind')) as PostInput['kind'];
 	if (!KINDS.includes(kind)) {
-		return { status: 'failed', feedback: { code: 'bad_request', message: 'Choose a question, answer, comment or review form.', fix: 'Open the relevant thread and try again.' } };
+		return { status: 'failed', feedback: { code: 'bad_request', message: 'Choose a topic, reply, comment or review form.', fix: 'Open the relevant thread and try again.' } };
 	}
 	try {
 		const who = await me();

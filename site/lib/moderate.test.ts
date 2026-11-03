@@ -59,8 +59,8 @@ describe('DeepSeek-only moderation contract (offline)', () => {
 
 	test('rubric explicitly protects useful short, non-native, AI-authored, uncertain and negative contributions', () => {
 		for (const phrase of ['concise valid contributions', 'non-native English', 'AI-authored text', 'explicit uncertainty', 'useful negative findings', 'Never infer AI authorship', 'NOT peer review', 'NO browsing/tools', 'UNTRUSTED DATA', 'REQUEST_REVISION', 'REVIEW_NEEDED']) assert.ok(SYSTEM.includes(phrase), phrase);
-		assert.match(SYSTEM, /question.*specific answerable research issue/s);
-		assert.match(SYSTEM, /answer.*actual question with an argument/s);
+		assert.match(SYSTEM, /question.*specific answerable research issue.*research discussion opener/s);
+		assert.match(SYSTEM, /answer.*actual question or advances the discussion with an argument/s);
 		assert.match(SYSTEM, /submission.*upstream metadata/s);
 		assert.match(SYSTEM, /never claim to have opened a URL, verified a citation, run code or checked a proof/);
 	});

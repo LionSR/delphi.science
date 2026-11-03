@@ -516,6 +516,7 @@ def refresh(older_than: int, limit: int, dry_run: bool) -> int:
 # ---- discuss ----
 
 KEPT = ("added", "stance")  # a link's fields set by a person, kept when the link is read again
+DESCRIBED = ("title", "author", "date")  # what discuss --title/--author/--date give a page that does not say (a PDF)
 DISCUSSED = "jsonb_typeof(entry->'discussion') = 'array' AND jsonb_array_length(entry->'discussion') > 0"
 
 # Stances, which count as upvotes and which mark a record disputed; shared with the site.
@@ -550,12 +551,19 @@ def link_url(url: str, attached: Iterable[str] = ()) -> str:
     return url if url in attached else url.replace("twitter.com/", "x.com/").split("?")[0]
 
 
+def reread(old: dict[str, Any], fresh: dict[str, Any]) -> dict[str, Any]:
+    """A link read again. A web page keeps the title, author and date it had where the page no longer gives
+    them (a PDF never does: a person gave them); an X post keeps only what the post shows now."""
+    kept = pick(old, DESCRIBED) if fresh.get("kind") == "web" else {}
+    return {**kept, **fresh, **pick(old, KEPT)}
+
+
 def recheck(links: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """Each link read again: a deleted one drops out, an unreachable one is kept as it was."""
     out = []
     for d in links:
         try:
-            out.append({**S.discussion_link(d["url"]), **pick(d, KEPT)})
+            out.append(reread(d, S.discussion_link(d["url"])))
         except S.NotFound:
             print(f"dropped  {d['url']}")
         except (ValueError, S.SourceError) as err:
@@ -614,9 +622,12 @@ def recheck_all(records: list[str], dry_run: bool) -> int:
     return 0
 
 
-def discuss(record: str, urls: list[str], drop: bool, dry_run: bool, stance: str | None = None) -> int:
+def discuss(record: str, urls: list[str], drop: bool, dry_run: bool, stance: str | None = None,
+            described: dict[str, str] | None = None) -> int:
     """Attaches (or with drop, removes) links about a record. With a stance, new links get it and links
-    already attached take it without being read again."""
+    already attached take it without being read again. `described` (--title, --author, --date) stands in
+    for what a page does not say about itself, as a PDF does not; a web page with no title is not attached."""
+    described = {k: v for k, v in (described or {}).items() if v}
     if not urls:
         print("name the links to attach, or use --recheck")
         return 2
@@ -632,16 +643,20 @@ def discuss(record: str, urls: list[str], drop: bool, dry_run: bool, stance: str
     for url in [] if drop else urls:
         attached = {x["url"]: x for x in links}
         old = attached.get(link_url(url, attached))
-        if old and stance:
-            links = [with_stance(x, stance) if x is old else x for x in links]
-            print(f"= {stance:<10} {old['url']}")
+        if old and (stance or described):
+            changed = with_stance({**old, **described}, stance) if stance else {**old, **described}
+            links = [changed if x is old else x for x in links]
+            print(f"= {stance or 'described':<10} {old['url']}")
             continue
         try:
             d = S.discussion_link(url)
         except (ValueError, S.NotFound, S.SourceError) as err:
             print(f"skipped {url}: {err}", file=sys.stderr)
             continue
-        new = {**d, "added": S.today(), **pick(old or attached.get(d["url"], {}), KEPT)}
+        if d.get("kind") == "web" and not (described.get("title") or d.get("title")):
+            print(f"skipped {url}: the page gives no title (a PDF?); give --title and --author", file=sys.stderr)
+            continue
+        new = {**d, **described, "added": S.today(), **pick(old or attached.get(d["url"], {}), KEPT)}
         links = [x for x in links if x["url"] != d["url"]] + [with_stance(new, stance) if stance else new]
         print(f"+ {d.get('author') or d.get('site')}: {(d.get('text') or d.get('title') or d['url'])[:90]}")
     e["discussion"] = sorted(links, key=lambda d: d.get("date", ""))
@@ -878,6 +893,9 @@ def parser() -> argparse.ArgumentParser:
     d.add_argument("--dry-run", action="store_true")
     d.add_argument("--recheck", action="store_true", help="read every link again (or the named records' links); a deleted post drops out")
     d.add_argument("--stance", choices=[*STANCES, "none"], help="what the links say about the record (see site/lib/stances.json); set on links already attached without reading them again")
+    d.add_argument("--title", help="the link's title, for a page that does not give one (a PDF note on a home page)")
+    d.add_argument("--author", help="who wrote it, for a page that does not say (a PDF)")
+    d.add_argument("--date", type=lambda s: dt.date.fromisoformat(s).isoformat(), help="YYYY-MM-DD, for a page that does not say")
     d.add_argument("--propose-stances", action="store_true", help="the labelling agent proposes stances for unlabelled links (or the named records'); prints them as commands, writes nothing")
     d.add_argument("--labeler", default="deepseek", type=labeler_option(), help="for --propose-stances: deepseek, or canned:<file.json>")
 
@@ -927,7 +945,8 @@ def main(argv: Iterable[str] | None = None) -> int:
             return run_generation(functools.partial(propose_stances, named, args.labeler))
         if not args.record:
             ap.error("discuss needs a record id, or --recheck or --propose-stances")
-        return discuss(args.record, args.urls, args.drop, args.dry_run, args.stance)
+        return discuss(args.record, args.urls, args.drop, args.dry_run, args.stance,
+                       {"title": args.title, "author": args.author, "date": args.date})
     if args.cmd == "reception":
         run = functools.partial(reception, args.record, args.draft, args.text, args.reviewed_by, args.links, args.labeler, args.dry_run)
         return run_generation(run) if args.draft else run()

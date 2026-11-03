@@ -47,11 +47,7 @@ test('Chinese substantive posts have an explicit language-neutral rubric and sur
 
 for (const [label, body, decision] of [
 	['substantive one-line counterexample', 'No: tr(AB-BA)=0 whereas tr(I)=n>0.', 'ACCEPT'],
-	['non-native precise argument', 'Need assumption strict. For x=0 both sides zero, then strict not true.', 'ACCEPT'],
-	['bounded negative finding', 'Enumeration of n-bit words for n<=6 found no counterexample; larger lengths remain unresolved.', 'ACCEPT'],
-	['uncertain useful clarification', 'I may be missing an assumption: are the two boundary terms retained for an open chain?', 'ACCEPT'],
 	['scripted revision A', 'Which endpoint terms remain after telescoping on an open chain?', 'REQUEST_REVISION'],
-	['scripted revision B', 'A uniform bound would need evidence beyond the three finite spectra.', 'REQUEST_REVISION'],
 ] as const) test(`scripted scientific-quality gate: ${label}`, async () => {
 	const before = await counts(); let seen: Post | undefined;
 	const moderate: Moderator = async (p) => { seen = p; return { decision, reason: 'Private scripted fixture: clarify the specific argument and its limits.', verification_needed: false }; };

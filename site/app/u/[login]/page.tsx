@@ -1,10 +1,10 @@
 import { notFound } from 'next/navigation';
 import { db } from '../../../lib/db.ts';
-import { normalizeProfileLogin, profileActivity, type ProfileActivity } from '../../../lib/profile.ts';
+import { normalizeProfileLogin, profile, TABS, type Profile, type Tab } from '../../../lib/profile.ts';
 import { ProfileView } from '../../../lib/profile-view.ts';
 
 export const dynamic = 'force-dynamic';
-type Context = { params: Promise<{ login: string }>; searchParams: Promise<{ cursor?: string | string[] }> };
+type Context = { params: Promise<{ login: string }>; searchParams: Promise<{ cursor?: string | string[]; tab?: string | string[] }> };
 
 export async function generateMetadata({ params }: Context) {
 	try {
@@ -21,14 +21,14 @@ export default async function Profile({ params, searchParams }: Context) {
 	} catch {
 		notFound();
 	}
-	const { cursor } = await searchParams;
-	let activity: ProfileActivity = { login, posts: [], next_cursor: null };
-	let failed = false;
+	const { cursor, tab: rawTab } = await searchParams;
+	const tab: Tab = (TABS as readonly string[]).includes(rawTab as string) ? rawTab as Tab : 'all';
+	let page: Profile | null = null;
 	try {
 		if (Array.isArray(cursor)) throw new Error('Repeated cursor');
-		activity = await profileActivity(await db(), login, { cursor });
+		page = await profile(await db(), login, { tab, cursor });
 	} catch {
-		failed = true;
+		page = null;
 	}
-	return <ProfileView activity={activity} failed={failed} />;
+	return <ProfileView login={login} tab={tab} page={page} />;
 }

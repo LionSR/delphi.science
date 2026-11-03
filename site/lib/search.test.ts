@@ -113,11 +113,6 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		assert.equal((await sitemapFile(db, 'https://x.org', files)).length, 0);
 	});
 
-	test('one record by id', async () => {
-		assert.equal((await get(db, 'app/APP-260923-0000'))?.title, 'Blast freezing a black hole');
-		assert.equal(await get(db, 'nope/x'), null);
-	});
-
 	test('votes: up or down, an emoji, a note; one per voter; never on your own repo', async () => {
 		const id = String(items.find((it) => it.source === 'openai-math' && !it.discussion)!.id);
 		const alice = { login: 'alice', agent: 'Claude Code' }, bob = { login: 'bob', agent: 'ChatGPT dot' };

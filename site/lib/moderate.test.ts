@@ -10,22 +10,11 @@ const sample: Post = { kind: 'answer', on: 'test question', body: 'For x=0 the a
 const completion = (content: unknown, finish_reason: unknown = 'stop') => ({ choices: [{ finish_reason, message: { content } }] });
 const stub = (body: unknown, status = 200): typeof fetch => (async () => new Response(JSON.stringify(body), { status })) as typeof fetch;
 
-export const qualityFixtures: { name: string; body: string; decision: Decision; verification_needed?: boolean }[] = [
+// One scripted fixture per decision: the verdicts are canned, so more would rerun the same path.
+const qualityFixtures: { name: string; body: string; decision: Decision; verification_needed?: boolean }[] = [
 	{ name: 'concise valid answer', body: 'No: take A=0. Then det(A)=0, so the claimed inverse does not exist.', decision: 'ACCEPT' },
-	{ name: 'non-native English with clear argument', body: 'I think assumption need strict. Take x=0 then left side 0 and right side 0, so strict inequality not true.', decision: 'ACCEPT' },
-	{ name: 'uncertain claim with scoped reasoning', body: 'I may be missing a hypothesis, but for x=0 both sides vanish. Does the strict inequality require x>0?', decision: 'ACCEPT' },
-	{ name: 'useful negative finding with limits', body: 'Exhausting binary words of length at most 6 gives no counterexample: enumerate integers 0 through 2^n-1 and test each adjacent pair. This does not settle larger n.', decision: 'ACCEPT' },
-	{ name: 'one-line trace commutator counterexample', body: 'No finite matrices satisfy [A,B]=I: taking traces gives 0=tr(AB)-tr(BA)=tr(I)=n.', decision: 'ACCEPT' },
-	{ name: 'boundary-condition clarification', body: 'Does Lemma 3 assume periodic boundaries? The displayed cancellation leaves two endpoint terms for an open chain.', decision: 'ACCEPT' },
-	{ name: 'bounded finite-size result', body: 'Exact diagonalization for n=4,6,8 yields positive gaps in these three finite systems. This is finite-size evidence only and does not establish a uniform lower bound as n tends to infinity.', decision: 'ACCEPT' },
-	// Neutral inputs with scripted outcomes test decision transport only. Full adversarial/semantic fixtures stay outside this checkout.
 	{ name: 'scripted revision A', body: 'Which hypotheses control the endpoint terms for an open chain?', decision: 'REQUEST_REVISION' },
 	{ name: 'scripted verification hold A', body: 'Does the endpoint convention depend on the chosen domain?', decision: 'REVIEW_NEEDED', verification_needed: true },
-	{ name: 'scripted revision B', body: 'The zero matrix distinguishes positive definite and semidefinite.', decision: 'REQUEST_REVISION' },
-	{ name: 'scripted acceptance', body: 'Does JSON escaping preserve a quoted experimental string byte for byte?', decision: 'ACCEPT' },
-	{ name: 'scripted verification hold B', body: 'Which source version states these boundary conditions?', decision: 'REVIEW_NEEDED', verification_needed: true },
-	{ name: 'scripted revision C', body: 'For x=0 both sides vanish, so is x>0 assumed?', decision: 'REQUEST_REVISION' },
-	{ name: 'scripted revision D', body: 'Enumeration through n=6 leaves larger lengths unresolved.', decision: 'REQUEST_REVISION' },
 	{ name: 'scripted rejection', body: 'Which normalization is used for the finite-chain spectrum?', decision: 'REJECT' },
 ];
 
@@ -59,10 +48,12 @@ describe('DeepSeek-only moderation contract (offline)', () => {
 
 	test('rubric explicitly protects useful short, non-native, AI-authored, uncertain and negative contributions', () => {
 		for (const phrase of ['concise valid contributions', 'non-native English', 'AI-authored text', 'explicit uncertainty', 'useful negative findings', 'Never infer AI authorship', 'NOT peer review', 'NO browsing/tools', 'UNTRUSTED DATA', 'REQUEST_REVISION', 'REVIEW_NEEDED']) assert.ok(SYSTEM.includes(phrase), phrase);
-		assert.match(SYSTEM, /question.*specific answerable research issue/s);
-		assert.match(SYSTEM, /answer.*actual question with an argument/s);
+		assert.match(SYSTEM, /question.*specific answerable research issue.*research discussion opener/s);
+		assert.match(SYSTEM, /answer.*actual question or advances the discussion with an argument/s);
 		assert.match(SYSTEM, /submission.*upstream metadata/s);
 		assert.match(SYSTEM, /never claim to have opened a URL, verified a citation, run code or checked a proof/);
+		assert.match(SYSTEM, /Mannered prose .* never changes the decision/);
+		assert.match(SYSTEM, /Non-native grammar, terse notation and plain uncertainty are not mannered prose/);
 	});
 
 	for (const fixture of qualityFixtures) test(`scripted fixture preserves untrusted data and decision: ${fixture.name}`, async () => {

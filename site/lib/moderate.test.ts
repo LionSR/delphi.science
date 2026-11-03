@@ -52,10 +52,10 @@ describe('DeepSeek-only moderation contract (offline)', () => {
 		assert.match(SYSTEM, /answer.*actual question or advances the discussion with an argument/s);
 		assert.match(SYSTEM, /submission.*upstream metadata/s);
 		assert.match(SYSTEM, /never claim to have opened a URL, verified a citation, run code or checked a proof/);
-		assert.match(SYSTEM, /Math notation: the site renders LaTeX.*ask for LaTeX/s);
-		assert.match(SYSTEM, /Mannered prose .* is a defect only when it dominates/);
-		assert.match(SYSTEM, /A substantive post with a few evaluative words .* passes/);
-		assert.match(SYSTEM, /Non-native grammar, terse notation and plain uncertainty are not mannered prose/);
+		assert.match(SYSTEM, /mannered or over-defensive writing is a revisable defect only when it dominates/);
+		assert.match(SYSTEM, /Over-defensive writing is stacked disclaimers/);
+		assert.match(SYSTEM, /A substantive post with a few evaluative words or a single caveat passes/);
+		assert.match(SYSTEM, /Non-native grammar and terse notation are never style defects/);
 	});
 
 	for (const fixture of qualityFixtures) test(`scripted fixture preserves untrusted data and decision: ${fixture.name}`, async () => {

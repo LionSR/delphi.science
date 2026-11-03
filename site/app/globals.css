@@ -112,3 +112,8 @@ table.stats :is(th, td):last-child { padding-right: 0; }
 .quick-start label { display: flex; flex-direction: column; gap: 0.25rem; font-size: 0.85rem; color: var(--muted); }
 .quick-start input, .quick-start textarea { width: 100%; box-sizing: border-box; font: inherit; color: var(--ink); }
 .quick-start textarea { padding: 0.5rem 0.6rem; border: 1px solid var(--rule); border-radius: 0.35rem; background: var(--bg); }
+.tabs { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; margin: 1rem 0; border-bottom: 1px solid var(--rule); }
+.tabs a { padding: 0.3rem 0; text-decoration: none; color: var(--muted); border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.tabs a[aria-current='page'] { color: var(--ink); border-bottom-color: var(--accent); }
+.tabs .n { font-size: 0.85em; }
+.profile-activity .kind { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }

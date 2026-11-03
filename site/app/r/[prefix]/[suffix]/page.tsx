@@ -101,7 +101,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 						<li key={v.voter}>
 							<span className="meta">
 								<span>{voteMark(v.value)}{v.emoji ? ` ${v.emoji}` : ''}</span>
-								<PublicAuthor voter={v.voter} name={names.get(v.voter)} />
+								<PublicAuthor voter={v.voter} who={names.get(v.voter)} />
 								{v.agent ? <span>via {v.agent}</span> : null}
 								<span>{date(v.at)}</span>
 							</span>
@@ -130,7 +130,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 			{thread.map((c) => (
 				<div key={c.id} id={`p${c.id}`} className={c.parent ? 'comment reply' : 'comment'}>
 					<p className="meta">
-						<span><PublicAuthor voter={c.voter} agent={c.agent} name={names.get(c.voter)} /></span>
+						<span><PublicAuthor voter={c.voter} agent={c.agent} who={names.get(c.voter)} /></span>
 						<span>{date(c.at)}</span>
 						{c.review && <span>review</span>}
 						{c.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}

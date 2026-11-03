@@ -2,14 +2,15 @@
 import { strict as assert } from 'node:assert';
 import { test } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
-import { profileActivity, normalizeProfileLogin } from './profile.ts';
+import { profileActivity, profileCounts, profileVotes, normalizeProfileLogin } from './profile.ts';
 import { QueryError, type Db } from './query.ts';
 
 async function database() {
 	const db = new PGlite();
 	await db.exec(`CREATE SCHEMA open_index;
 		CREATE TABLE open_index.records(id text PRIMARY KEY, title text NOT NULL, gone boolean NOT NULL DEFAULT false);
-		CREATE TABLE open_index.topics(id bigint PRIMARY KEY, title text NOT NULL);
+		CREATE TABLE open_index.topics(id bigint PRIMARY KEY, title text NOT NULL, question_id bigint);
+		CREATE TABLE open_index.votes(record_id text NOT NULL, voter text NOT NULL, agent text NOT NULL DEFAULT '', value smallint, emoji text, note text, at timestamptz NOT NULL DEFAULT now(), PRIMARY KEY (record_id, voter));
 		CREATE TABLE open_index.comments(id bigint PRIMARY KEY, record_id text, topic_id bigint, parent_id bigint, voter text NOT NULL,
 			agent text NOT NULL DEFAULT '', body text NOT NULL, review boolean NOT NULL DEFAULT false, at timestamptz NOT NULL DEFAULT now());
 		INSERT INTO open_index.records(id, title, gone) VALUES ('app/boundary', 'Finite-chain boundary terms', false), ('app/gone', 'An unavailable record', true);
@@ -51,7 +52,7 @@ test('human and bot contributions come only from public rows with an explicit DT
 	assert.equal(page.posts[1].agent, '');
 	assert.equal(page.posts[0].permalink, '/forum/10#p2');
 	assert.equal(page.posts[1].permalink, '/r/app/boundary#p1');
-	assert.deepEqual(Object.keys(page.posts[0]).sort(), ['agent', 'at', 'body', 'id', 'permalink', 'review', 'title', 'topic_id', 'voter']);
+	assert.deepEqual(Object.keys(page.posts[0]).sort(), ['agent', 'at', 'body', 'id', 'kind', 'permalink', 'review', 'title', 'topic_id', 'voter']);
 	assert.equal(page.next_cursor, null);
 }));
 
@@ -130,4 +131,39 @@ test('empty or incomplete topics with only a reply cycle are excluded without a 
 	const page = await profileActivity(db, 'ada');
 	assert.deepEqual(page.posts.map((p) => p.id), [3]);
 	assert.equal(page.posts[0].title, 'Which boundary convention is assumed?');
+}));
+
+test('posts are typed as topic, reply, comment or review, and tabs and counts follow the types', () => withDb(async (db) => {
+	await post(db, 1, 'ada', '', { topic: 10 });
+	await db.exec('UPDATE open_index.topics SET question_id = 1 WHERE id = 10');
+	await post(db, 2, 'ada', '', { topic: 10 });
+	await post(db, 3, 'ada', '', { topic: 10, parent: 2 });
+	await post(db, 4, 'ada', '', { record: 'app/boundary', review: true });
+	await post(db, 5, 'ada');
+	await post(db, 6, 'bo', '', { topic: 10 });
+	const kinds = (await profileActivity(db, 'ada')).posts.map((p) => [p.id, p.kind]);
+	assert.deepEqual(kinds, [[5, 'comment'], [4, 'review'], [3, 'comment'], [2, 'reply'], [1, 'topic']]);
+	assert.deepEqual((await profileActivity(db, 'ada', { tab: 'topics' })).posts.map((p) => p.id), [1]);
+	assert.deepEqual((await profileActivity(db, 'ada', { tab: 'replies' })).posts.map((p) => p.id), [2]);
+	assert.deepEqual((await profileActivity(db, 'ada', { tab: 'comments' })).posts.map((p) => p.id), [5, 4, 3]);
+	await db.exec(`INSERT INTO open_index.votes(record_id, voter, value) VALUES ('app/boundary', 'Ada', 1), ('app/gone', 'ada', 1), ('app/boundary', 'bo', -1)`);
+	assert.deepEqual(await profileCounts(db, 'ADA'), { topics: 1, replies: 1, comments: 3, votes: 1 });
+}));
+
+test('record votes page newest first with a cursor that keeps full timestamp precision', () => withDb(async (db) => {
+	for (let i = 1; i <= 5; i++) await db.query('INSERT INTO open_index.records(id, title) VALUES ($1, $2)', [`app/r${i}`, `Record ${i}`]);
+	// Microseconds apart, so a millisecond cursor would skip some.
+	for (let i = 1; i <= 5; i++) await db.query(`INSERT INTO open_index.votes(record_id, voter, agent, value, note, at)
+		VALUES ($1, 'ada', 'Daily picks', 1, 'Matches open-chain work.', '2026-11-03 07:00:00.000001+00'::timestamptz + make_interval(secs => $2 * 0.000001))`, [`app/r${i}`, i]);
+	await db.query("INSERT INTO open_index.votes(record_id, voter, value) VALUES ('app/gone', 'ada', 1)");
+	const first = await profileVotes(db, 'ada', { limit: 2 });
+	assert.deepEqual(first.votes.map((v) => v.record_id), ['app/r5', 'app/r4']);
+	assert.equal(first.votes[0].permalink, '/r/app/r5');
+	assert.deepEqual(Object.keys(first.votes[0]).sort(), ['agent', 'at', 'emoji', 'note', 'permalink', 'record_id', 'title', 'value']);
+	const second = await profileVotes(db, 'ada', { limit: 2, cursor: first.next_cursor! });
+	const third = await profileVotes(db, 'ada', { limit: 2, cursor: second.next_cursor! });
+	assert.deepEqual([...second.votes, ...third.votes].map((v) => v.record_id), ['app/r3', 'app/r2', 'app/r1']);
+	assert.equal(third.next_cursor, null);
+	await assert.rejects(profileVotes(db, 'bo', { cursor: first.next_cursor! }), QueryError);
+	await assert.rejects(profileVotes(db, 'ada', { cursor: 'not-a-cursor' }), QueryError);
 }));

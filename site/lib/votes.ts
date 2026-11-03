@@ -38,6 +38,16 @@ export function profileName(value: unknown): string {
 	return [...value.normalize('NFC').replace(/[\p{Cc}\s]+/gu, ' ').trim()].slice(0, 100).join('');
 }
 
+/** Public GitHub display names by login, from each person's newest named session; logins without one are left out. */
+export async function displayNames(db: Db, logins: string[]): Promise<Map<string, string>> {
+	const unique = [...new Set(logins)];
+	if (!unique.length) return new Map();
+	const rows = await db.query<{ login: string; name: string }>(
+		`SELECT DISTINCT ON (login) login, name FROM open_index.agent_keys
+		 WHERE login = ANY($1) AND agent = '' AND name <> '' ORDER BY login, created_at DESC`, [unique]).then((r) => r.rows, () => []);
+	return new Map(rows.flatMap((r) => { const n = profileName(r.name); return n && n !== r.login ? [[r.login, n] as [string, string]] : []; }));
+}
+
 /** A new session key. Stores the display name when the agent_keys.name column exists. */
 export async function createSession(db: Db, login: string, name: unknown = '') {
 	const display = profileName(name);

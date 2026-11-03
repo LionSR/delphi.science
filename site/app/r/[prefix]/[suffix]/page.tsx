@@ -11,7 +11,7 @@ import { db } from '../../../../lib/db.ts';
 import { get } from '../../../../lib/query.ts';
 import { me } from '../../../../lib/session.ts';
 import { date, idPath, reception, recordId, recordPath, SITE, source, STANCES, tally, tex, type IdParams, voteMark } from '../../../../lib/view.ts';
-import { myVotes, votes } from '../../../../lib/votes.ts';
+import { displayNames, myVotes, votes } from '../../../../lib/votes.ts';
 import { Vote } from '../../../vote.tsx';
 import { EditPost } from '../../../edit-post.tsx';
 
@@ -47,6 +47,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	const thread = await comments(d, id);
 	const { notice } = await ctx.searchParams;
 	const voters = await votes(d, id);
+	const names = await displayNames(d, [...voters.map((v) => v.voter), ...thread.map((c) => c.voter)]);
 	const who = await me();
 	const mine = who ? (await myVotes(d, who.login, [id])).get(id) : undefined;
 	const back = recordPath(id);
@@ -100,7 +101,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 						<li key={v.voter}>
 							<span className="meta">
 								<span>{voteMark(v.value)}{v.emoji ? ` ${v.emoji}` : ''}</span>
-								<a href={`https://github.com/${v.voter}`}>@{v.voter}</a>
+								<PublicAuthor voter={v.voter} name={names.get(v.voter)} />
 								{v.agent ? <span>via {v.agent}</span> : null}
 								<span>{date(v.at)}</span>
 							</span>
@@ -129,7 +130,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 			{thread.map((c) => (
 				<div key={c.id} id={`p${c.id}`} className={c.parent ? 'comment reply' : 'comment'}>
 					<p className="meta">
-						<span><PublicAuthor voter={c.voter} agent={c.agent} /></span>
+						<span><PublicAuthor voter={c.voter} agent={c.agent} name={names.get(c.voter)} /></span>
 						<span>{date(c.at)}</span>
 						{c.review && <span>review</span>}
 						{c.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}

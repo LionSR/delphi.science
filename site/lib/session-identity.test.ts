@@ -2,7 +2,7 @@
 import { strict as assert } from 'node:assert';
 import { test } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
-import { createAgentKey, createSession, personFromSession, profileName, revokeKey, sha256, voterFromKey } from './votes.ts';
+import { createAgentKey, createSession, displayNames, personFromSession, profileName, revokeKey, sha256, voterFromKey } from './votes.ts';
 
 async function database(named: boolean) {
 	const db = new PGlite();
@@ -74,4 +74,19 @@ test('revoked, expired and unknown sessions do not identify a person', async () 
 		assert.equal(await personFromSession(db, expired), null);
 		assert.equal(await personFromSession(db, 'unknown-offline-fixture'), null);
 	} finally { await db.close(); }
+});
+
+test('display names come from the newest named session and skip agents, blanks and bare logins', async () => {
+	const db = await database(true);
+	try {
+		await db.exec("ALTER TABLE open_index.agent_keys ADD COLUMN created_at timestamptz NOT NULL DEFAULT now()");
+		await db.query("INSERT INTO open_index.agent_keys (key_hash, login, agent, name, created_at) VALUES ('a', 'ada', '', 'Old Name', now() - interval '1 day'), ('b', 'ada', '', 'Ada Lovelace', now()), ('c', 'bob', 'Claude Code', 'Agent Name', now()), ('d', 'cy', '', 'cy', now())");
+		assert.deepEqual([...await displayNames(db, ['ada', 'bob', 'cy', 'ada'])], [['ada', 'Ada Lovelace']]);
+		assert.deepEqual([...await displayNames(db, [])], []);
+	} finally { await db.close(); }
+});
+
+test('display names fall back to none without the name column', async () => {
+	const db = await database(false);
+	try { assert.equal((await displayNames(db, ['ada'])).size, 0); } finally { await db.close(); }
 });

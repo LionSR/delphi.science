@@ -23,8 +23,20 @@ export const date = (when: unknown) => {
 // Record ids are <prefix>/<suffix>; routes take the two parts as path segments.
 export const idPath = (id: unknown) => String(id).split('/').map(encodeURIComponent).join('/');
 const NAMES = prefixes.prefixes as Record<string, { name: string }>;
-/** The source's name, linked to its records. */
-export const source = (s: unknown) => ({ name: NAMES[String(s)]?.name ?? String(s), href: `/?q=source:${String(s)}` });
+/** The source's name as a tag: it links to the index's records from that source, not to the original work. */
+export const source = (s: unknown) => {
+	const name = NAMES[String(s)]?.name ?? String(s);
+	return { name, href: `/?q=source:${String(s)}`, title: `All ${name} records on ${NAME}` };
+};
+/** The original work at its upstream site (the record's canonical url), to show as an external "Source" link; null without one. */
+export const original = (r: Record<string, unknown>) => {
+	const href = typeof r.url === 'string' && /^https?:\/\//i.test(r.url) ? r.url : '';
+	if (!href) return null;
+	// The address as people read it: no scheme, no www., no trailing slash, and cut when long.
+	const shown = href.replace(/^https?:\/\/(www\.)?/i, '').replace(/\/$/, '');
+	const host = shown.split('/')[0];
+	return { href, host, label: shown.length > 60 ? `${shown.slice(0, 59)}…` : shown };
+};
 export const recordPath = (id: unknown) => `/r/${idPath(id)}`;
 export type IdParams = { params: Promise<{ prefix: string; suffix: string }> };
 /** The record id from a route's prefix and suffix segments. */

@@ -5,7 +5,7 @@ import type { Post } from '../../../lib/comments.ts';
 import { db } from '../../../lib/db.ts';
 import { myPostVotes, topicWithPosts } from '../../../lib/forum.ts';
 import { me } from '../../../lib/session.ts';
-import { displayNames } from '../../../lib/votes.ts';
+import { displayNames, type PublicName } from '../../../lib/votes.ts';
 import { date, recordPath } from '../../../lib/view.ts';
 import { acceptOn, votePostOn } from '../../actions.ts';
 import { PostForm } from '../../post-form.tsx';
@@ -22,8 +22,8 @@ export async function generateMetadata({ params }: Ctx): Promise<Metadata> {
 	return t ? { title: t.title, alternates: { types: { 'application/json': `/api/v1/forum/${t.id}` } } } : {};
 }
 
-type Names = Map<string, string>;
-const by = (p: Post, names: Names) => <PublicAuthor voter={p.voter} agent={p.agent} name={names.get(p.voter)} />;
+type Names = Map<string, PublicName>;
+const by = (p: Post, names: Names) => <PublicAuthor voter={p.voter} agent={p.agent} who={names.get(p.voter)} />;
 
 function Votes({ topic, p, mine }: { topic: number; p: Post; mine?: number }) {
 	return (

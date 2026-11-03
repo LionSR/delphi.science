@@ -2,7 +2,7 @@
 import { strict as assert } from 'node:assert';
 import { test } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
-import { createAgentKey, createSession, displayNames, personFromSession, profileName, revokeKey, sha256, voterFromKey } from './votes.ts';
+import { createAgentKey, createSession, displayNames, profileAffiliation, personFromSession, profileName, revokeKey, sha256, voterFromKey } from './votes.ts';
 
 async function database(named: boolean) {
 	const db = new PGlite();
@@ -81,13 +81,29 @@ test('display names come from the newest named session and skip agents, blanks a
 	try {
 		await db.exec("ALTER TABLE open_index.agent_keys ADD COLUMN created_at timestamptz NOT NULL DEFAULT now()");
 		await db.query("INSERT INTO open_index.agent_keys (key_hash, login, agent, name, created_at) VALUES ('a', 'ada', '', 'Old Name', now() - interval '1 day'), ('b', 'ada', '', 'Ada Lovelace', now()), ('c', 'bob', 'Claude Code', 'Agent Name', now()), ('d', 'cy', '', 'cy', now())");
-		assert.deepEqual([...await displayNames(db, ['ada', 'bob', 'cy', 'ada'])], [['ada', 'Ada Lovelace']]);
+		assert.deepEqual([...await displayNames(db, ['ada', 'bob', 'cy', 'ada'])], [['ada', { name: 'Ada Lovelace', affiliation: '' }]]);
 		assert.deepEqual([...await displayNames(db, [])], []);
-		assert.deepEqual([...await displayNames(db, ['ADA', 'Cy'])], [['ADA', 'Ada Lovelace']]);
+		assert.deepEqual([...await displayNames(db, ['ADA', 'Cy'])], [['ADA', { name: 'Ada Lovelace', affiliation: '' }]]);
 	} finally { await db.close(); }
 });
 
 test('display names fall back to none without the name column', async () => {
 	const db = await database(false);
 	try { assert.equal((await displayNames(db, ['ada'])).size, 0); } finally { await db.close(); }
+});
+
+test('affiliations are stored at sign-in, shown with or without a name, and skipped on old schemas', async () => {
+	assert.equal(profileAffiliation('  @anthropic '), 'anthropic'); assert.equal(profileAffiliation('@'), '@');
+	const db = await database(true);
+	try {
+		await db.exec("ALTER TABLE open_index.agent_keys ADD COLUMN created_at timestamptz NOT NULL DEFAULT now()");
+		await createSession(db, 'ada', 'Ada L', 'Analytical Engines');
+		const before = (await db.query<{ n: number }>('SELECT count(*)::int AS n FROM open_index.agent_keys')).rows[0].n;
+		assert.equal(before, 1);
+		assert.deepEqual([...await displayNames(db, ['ada'])], [['ada', { name: 'Ada L', affiliation: '' }]]);
+		await db.exec("ALTER TABLE open_index.agent_keys ADD COLUMN affiliation text NOT NULL DEFAULT ''");
+		await createSession(db, 'ada', 'Ada L', '@engines');
+		await createSession(db, 'cy', '', 'Uni');
+		assert.deepEqual(Object.fromEntries(await displayNames(db, ['ada', 'cy'])), { ada: { name: 'Ada L', affiliation: 'engines' }, cy: { name: '', affiliation: 'Uni' } });
+	} finally { await db.close(); }
 });

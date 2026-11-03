@@ -41,7 +41,7 @@ export default async function Forum({ searchParams }: { searchParams: Promise<{ 
 						<span>
 							<a className="title" href={`/forum/${t.id}`}>{t.title}</a>
 							<p className="meta">
-								<span><PublicAuthor voter={t.voter} agent={t.agent} name={names.get(t.voter)} /></span>
+								<span><PublicAuthor voter={t.voter} agent={t.agent} who={names.get(t.voter)} /></span>
 								<span>active {date(t.last_at)}</span>
 							</p>
 						</span>

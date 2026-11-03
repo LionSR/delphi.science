@@ -5,6 +5,7 @@ import { cookies } from 'next/headers';
 import { callbackUrl } from '../../../lib/callback.ts';
 import { db } from '../../../lib/db.ts';
 import { COOKIE, STATE } from '../../../lib/session.ts';
+import { rememberGitHubProfile } from '../../../lib/people.ts';
 import { createSession } from '../../../lib/votes.ts';
 
 export async function GET(req: Request) {
@@ -21,6 +22,7 @@ export async function GET(req: Request) {
 	const user = await fetch('https://api.github.com/user', { headers: { Authorization: `Bearer ${authentication.token}`, 'User-Agent': 'open-research-index' } });
 	if (!user.ok) return new Response('GitHub did not say who you are. Try again.', { status: 502 });
 	const { login, name, company } = (await user.json()) as { login: string; name?: unknown; company?: unknown };
-	jar.set(COOKIE, await createSession(await db(), login, name, company), { httpOnly: true, secure: url.protocol === 'https:', sameSite: 'lax', path: '/', maxAge: 90 * 86400 });
+	await rememberGitHubProfile(await db(), login, { name, company });
+	jar.set(COOKIE, await createSession(await db(), login, name), { httpOnly: true, secure: url.protocol === 'https:', sameSite: 'lax', path: '/', maxAge: 90 * 86400 });
 	return Response.redirect(new URL(next, url.origin), 302);
 }

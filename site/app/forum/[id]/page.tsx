@@ -5,7 +5,7 @@ import type { Post } from '../../../lib/comments.ts';
 import { db } from '../../../lib/db.ts';
 import { myPostVotes, topicWithPosts } from '../../../lib/forum.ts';
 import { me } from '../../../lib/session.ts';
-import { displayNames, type PublicName } from '../../../lib/votes.ts';
+import { publicNames, type PublicName } from '../../../lib/people.ts';
 import { date, recordPath } from '../../../lib/view.ts';
 import { acceptOn, votePostOn } from '../../actions.ts';
 import { PostForm } from '../../post-form.tsx';
@@ -63,7 +63,7 @@ export default async function Question({ params, searchParams }: Ctx) {
 	const mine = who ? await myPostVotes(await db(), who.login, ids) : new Map<number, number>();
 	const owner = who?.login ?? '';
 	const all = [t.question, ...t.answers].flatMap((p) => [p, ...((p as Post & { comments?: Post[] }).comments ?? [])]);
-	const names = await displayNames(await db(), all.map((p) => p.voter));
+	const names = await publicNames(await db(), all.map((p) => p.voter));
 	const asker = who?.login === t.voter;
 	return (
 		<article>

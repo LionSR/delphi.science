@@ -7,6 +7,8 @@ import { db } from '../lib/db.ts';
 import { approveDevice, denyDevice } from '../lib/device.ts';
 import { editPost } from '../lib/edit-post.ts';
 import { accept, votePost } from '../lib/forum.ts';
+import { editPublicName } from '../lib/people.ts';
+import { profilePath } from '../lib/public-author.ts';
 import { postFeedback, type PostFeedback, type PostFormState } from '../lib/post-feedback.ts';
 import { submitPostForm, type PostInput } from '../lib/post-form-submit.ts';
 import { QueryError } from '../lib/query.ts';
@@ -124,4 +126,14 @@ export async function dropKey(form: FormData) {
 	const who = await signedIn('/keys');
 	await revokeKey(await db(), who.login, { hash: String(form.get('hash')) });
 	redirect('/keys');
+}
+
+/** The signed-in person's own public name and affiliation, from their profile page. */
+export async function savePublicName(form: FormData) {
+	const back = profilePath(String(form.get('login') ?? ''));
+	const who = await signedIn(back);
+	await thenBack(profilePath(who.login.toLowerCase()), async () => {
+		await editPublicName(await db(), who.login, { name: form.get('name'), affiliation: form.get('affiliation') });
+		revalidatePath('/', 'layout');
+	});
 }

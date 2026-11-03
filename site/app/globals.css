@@ -1,18 +1,17 @@
 :root {
-	--bg: #fbfbfd; --ink: #161a22; --muted: #5b6273; --rule: #dde1ea; --surface: #f1f3f8; --accent: #1f56a8; --warn: #a3261b;
-	--serif: 'Newsreader', Georgia, 'Times New Roman', serif;
-	--sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+	--bg: #fbfbfd; --ink: #161a22; --muted: #4a5163; --rule: #dde1ea; --surface: #f1f3f8; --accent: #1f56a8; --warn: #a3261b;
+	--sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', 'Noto Sans SC', sans-serif;
 	--mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 @media (prefers-color-scheme: dark) {
-	:root { --bg: #10131a; --ink: #eef1f7; --muted: #a3aabb; --rule: #262c3a; --surface: #181c26; --accent: #7fa7e6; --warn: #f0928a; color-scheme: dark; }
+	:root { --bg: #10131a; --ink: #eef1f7; --muted: #b4bacb; --rule: #262c3a; --surface: #181c26; --accent: #7fa7e6; --warn: #f0928a; color-scheme: dark; }
 }
-body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 var(--sans); }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 var(--sans); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
 main { max-width: 52rem; margin: 0 auto; padding: 1.5rem max(16px, env(safe-area-inset-right)) 4rem max(16px, env(safe-area-inset-left)); }
 a { color: var(--accent); }
 code { font-family: var(--mono); font-size: 0.85em; }
 header { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; padding-bottom: 1rem; border-bottom: 1px solid var(--rule); font-size: 0.85rem; color: var(--muted); }
-.name { display: inline-flex; align-items: center; gap: 0.5rem; font: 500 1.35rem var(--serif); color: var(--ink); text-decoration: none; }
+.name { display: inline-flex; align-items: center; gap: 0.5rem; font: 600 1.35rem var(--sans); color: var(--ink); text-decoration: none; }
 .logo { width: 1.9rem; height: 1.9rem; }
 .welcome { display: flex; align-items: center; gap: 2rem; margin: 1.4rem 0 0; }
 .hero { width: 280px; max-width: 100%; height: auto; flex: none; }
@@ -23,17 +22,17 @@ input, select, button { font: inherit; font-size: 0.9rem; padding: 0.45rem 0.6re
 input[name='q'] { flex: 1 1 16rem; min-width: 0; }
 .subjects { display: flex; gap: 0.35rem 0.9rem; flex-wrap: wrap; font-size: 0.85rem; margin: 0.4rem 0 0; }
 .subjects .n { color: var(--muted); }
-.count { color: var(--muted); font-size: 0.82rem; margin: 0.8rem 0 0; }
+.count { color: var(--muted); font-size: 0.86rem; margin: 0.8rem 0 0; }
 ol { list-style: none; padding: 0; margin: 0.3rem 0 0; }
 li.item { padding: 0.85rem 0; border-bottom: 1px solid var(--rule); }
-.title { font: 500 1.15rem/1.3 var(--serif); color: var(--ink); text-decoration: none; overflow-wrap: anywhere; }
+.title { font: 600 1.15rem/1.3 var(--sans); color: var(--ink); text-decoration: none; overflow-wrap: anywhere; }
 .title:hover { color: var(--accent); }
 .authors { margin: 0.2rem 0 0; color: var(--muted); font-size: 0.875rem; overflow-wrap: anywhere; }
-.meta { display: flex; gap: 0.25rem 0.8rem; flex-wrap: wrap; margin: 0.25rem 0 0; color: var(--muted); font-size: 0.8rem; }
+.meta { display: flex; gap: 0.25rem 0.8rem; flex-wrap: wrap; margin: 0.25rem 0 0; color: var(--muted); font-size: 0.85rem; }
 .meta code { color: var(--ink); }
 .more { display: inline-block; margin-top: 1rem; }
-h1 { font: 500 1.7rem/1.2 var(--serif); margin: 1.4rem 0 0.4rem; text-wrap: balance; }
-h2 { font: 500 1.15rem var(--serif); margin: 2rem 0 0.4rem; }
+h1 { font: 600 1.7rem/1.2 var(--sans); margin: 1.4rem 0 0.4rem; text-wrap: balance; }
+h2 { font: 600 1.15rem var(--sans); margin: 2rem 0 0.4rem; }
 .abstract { max-width: 68ch; line-height: 1.6; }
 .comment { padding: 0.7rem 0; border-bottom: 1px solid var(--rule); }
 .comment.reply { margin-left: 1.5rem; }
@@ -44,10 +43,10 @@ h2 { font: 500 1.15rem var(--serif); margin: 2rem 0 0.4rem; }
 .stance.refutes, .stance.questions { color: var(--warn); }
 .twitter-tweet { margin: 0.7rem 0; padding: 0.7rem 1rem; border: 1px solid var(--rule); border-radius: 0.5rem; }
 .comment p { margin: 0.25rem 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
-pre { background: var(--surface); padding: 0.8rem 1rem; border-radius: 0.35rem; overflow-x: auto; font: 0.78rem/1.5 var(--mono); }
+pre { background: var(--surface); padding: 0.8rem 1rem; border-radius: 0.35rem; overflow-x: auto; font: 0.84rem/1.55 var(--mono); }
 .vote { display: inline-flex; gap: 0.3rem; margin: 0.5rem 0 0; }
 li.item .vote { float: right; margin: 0 0 0.3rem 0.8rem; }
-.vote button { font-size: 0.8rem; padding: 0.15rem 0.5rem; color: var(--muted); cursor: pointer; }
+.vote button { font-size: 0.85rem; padding: 0.15rem 0.5rem; color: var(--muted); cursor: pointer; }
 .vote button[aria-pressed='true'] { color: var(--accent); border-color: var(--accent); }
 .voters { list-style: none; margin: 0.4rem 0 0; padding: 0; }
 .voters li { margin: 0.15rem 0; }
@@ -89,14 +88,14 @@ ul.plain li { margin: 0.2rem 0; }
 .comment-form fieldset:disabled { opacity: 0.75; }
 .post-feedback { border-left: 3px solid var(--warn); padding: 0.6rem 0.9rem; background: var(--surface); }
 .post-feedback p { margin: 0.4rem 0 0; }
-.post-comments summary { cursor: pointer; color: var(--accent); font-size: 0.82rem; margin-top: 0.4rem; }
-.meta-inline { color: var(--muted); font-size: 0.78rem; }
+.post-comments summary { cursor: pointer; color: var(--accent); font-size: 0.86rem; margin-top: 0.4rem; }
+.meta-inline { color: var(--muted); font-size: 0.84rem; }
 .badge { color: var(--accent); font-weight: 600; }
 form.inline { display: inline; margin: 0; }
 li.item.question { display: flex; gap: 1rem; }
-li.item.question .stats { display: flex; flex-direction: column; flex: none; width: 5.2rem; gap: 0.15rem; font-size: 0.78rem; color: var(--muted); text-align: right; }
+li.item.question .stats { display: flex; flex-direction: column; flex: none; width: 5.2rem; gap: 0.15rem; font-size: 0.84rem; color: var(--muted); text-align: right; }
 li.item.question .answered { color: var(--accent); font-weight: 600; }
-footer { display: flex; gap: 0.4rem 1rem; flex-wrap: wrap; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.8rem; color: var(--muted); }
+footer { display: flex; gap: 0.4rem 1rem; flex-wrap: wrap; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.85rem; color: var(--muted); }
 table.stats { border-collapse: collapse; font-size: 0.85rem; margin: 0.4rem 0 0; }
 table.stats th, table.stats td { text-align: left; padding: 0.25rem 1.2rem 0.25rem 0; border-bottom: 1px solid var(--rule); overflow-wrap: anywhere; }
 table.stats th { font-weight: 500; color: var(--muted); }

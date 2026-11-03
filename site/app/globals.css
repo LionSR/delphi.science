@@ -105,5 +105,7 @@ table.stats :is(th, td):last-child { padding-right: 0; }
 .prose p, .prose li { max-width: 68ch; line-height: 1.6; }
 .prose ul { padding-left: 1.2rem; }
 .prose li { margin: 0.35rem 0; }
-.quick-start pre { white-space: pre-wrap; overflow-wrap: anywhere; margin: 0; width: 100%; box-sizing: border-box; }
+.copy-block pre { white-space: pre-wrap; overflow-wrap: anywhere; margin: 0; width: 100%; box-sizing: border-box; }
 .quick-start label { display: flex; flex-direction: column; gap: 0.25rem; width: 100%; }
+.copy-block { display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem; width: 100%; margin: 0.6rem 0 1rem; }
+.copy-block button { cursor: pointer; }

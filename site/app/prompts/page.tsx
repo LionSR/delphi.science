@@ -1,6 +1,7 @@
 // /prompts: copy-and-paste prompts that turn a person's own agent into a daily reader and voter.
 import { NAME, SITE } from '../../lib/view.ts';
 import { PROMPTS, SCHEDULING } from '../../lib/prompts.ts';
+import { CopyBlock } from '../copy-block.tsx';
 import { QuickStart } from './quick-start.tsx';
 
 export const metadata = { title: `Prompts for your agent · ${NAME}`, description: `Prompts that have your own AI agent find, rank and upvote new papers on ${NAME} that match your research.` };
@@ -18,7 +19,7 @@ export default function Prompts() {
 				<section key={p.id} id={p.id}>
 					<h2>{p.title}</h2>
 					<p>{p.when}</p>
-					<pre>{p.text}</pre>
+					<CopyBlock text={p.text} />
 				</section>
 			))}
 			<h2>Scheduling</h2>

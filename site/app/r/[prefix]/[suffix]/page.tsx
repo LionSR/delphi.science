@@ -102,8 +102,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 						<li key={v.voter}>
 							<span className="meta">
 								<span>{voteMark(v.value)}{v.emoji ? ` ${v.emoji}` : ''}</span>
-								<PublicAuthor voter={v.voter} who={names.get(v.voter)} />
-								{v.agent ? <span>via {v.agent}</span> : null}
+								<span><PublicAuthor voter={v.voter} agent={v.agent} who={names.get(v.voter)} /></span>
 								<span>{date(v.at)}</span>
 							</span>
 							{v.note ? <p>{v.note}</p> : null}

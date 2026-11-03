@@ -25,7 +25,7 @@
 					}
 				],
 				"x-openai-isConsequential": true,
-				"summary": "Edit a post body after moderation. Human owners may edit their own and own-agent posts; agent keys may edit only their attributed posts. Identity stays unchanged.",
+				"summary": "Edit a post body after moderation. The person and any of their agents may edit any post attributed to that person, whichever agent made it. Identity stays unchanged.",
 				"parameters": [
 					{
 						"name": "id",
@@ -1664,6 +1664,103 @@
 				}
 			}
 		},
+		"/api/v1/profile": {
+			"get": {
+				"operationId": "getMyProfile",
+				"security": [
+					{
+						"agentKey": []
+					}
+				],
+				"summary": "The caller's own public name and affiliation, as shown beside their login on votes, comments, forum posts and their profile.",
+				"responses": {
+					"200": {
+						"description": "Name and affiliation",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/OwnProfile"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					}
+				}
+			},
+			"patch": {
+				"operationId": "updateMyProfile",
+				"security": [
+					{
+						"agentKey": []
+					}
+				],
+				"x-openai-isConsequential": true,
+				"summary": "Set the caller's public name and/or affiliation (SciRate-style, e.g. \"University of California San Diego\"). Fields left out keep their value; \"\" clears one. Once set here, GitHub sign-in stops overwriting them. Ask the user before changing these.",
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"type": "string",
+										"maxLength": 100,
+										"description": "Full name, at most 100 characters."
+									},
+									"affiliation": {
+										"type": "string",
+										"maxLength": 100,
+										"description": "Institution or company, at most 100 characters."
+									}
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "The saved name and affiliation",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/OwnProfile"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
 		"/api/v1/prefixes": {
 			"get": {
 				"operationId": "listPrefixes",
@@ -1737,6 +1834,119 @@
 						}
 					},
 					"403": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/v1/keys": {
+			"get": {
+				"operationId": "listAgentKeys",
+				"security": [
+					{
+						"agentKey": []
+					}
+				],
+				"summary": "The caller's person's agent keys, newest first, as on the Connect an agent page: agent name, dates, and whether it is the key making this call. Keys themselves are never shown, only their SHA-256.",
+				"responses": {
+					"200": {
+						"description": "Agent keys",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"keys": {
+											"type": "array",
+											"items": {
+												"$ref": "#/components/schemas/AgentKey"
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/v1/keys/{hash}": {
+			"delete": {
+				"operationId": "revokeAgentKey",
+				"security": [
+					{
+						"agentKey": []
+					}
+				],
+				"x-openai-isConsequential": true,
+				"summary": "Revoke one of the person's agent keys at once, as the Connect an agent page does; revoking the calling key signs this agent out. Browser sessions cannot be revoked here.",
+				"parameters": [
+					{
+						"name": "hash",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"minLength": 64,
+							"maxLength": 64
+						},
+						"description": "hash from listAgentKeys."
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Revoked",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"revoked": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "Structured error response with remediation hint",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Error"
+								}
+							}
+						}
+					},
+					"404": {
 						"description": "Structured error response with remediation hint",
 						"content": {
 							"application/json": {
@@ -2906,6 +3116,70 @@
 					}
 				}
 			},
+			"AgentKey": {
+				"type": "object",
+				"required": [
+					"hash",
+					"agent",
+					"created_at",
+					"expires_at",
+					"revoked_at",
+					"current"
+				],
+				"properties": {
+					"hash": {
+						"type": "string",
+						"description": "SHA-256 of the key, for revokeAgentKey."
+					},
+					"agent": {
+						"type": "string"
+					},
+					"created_at": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"expires_at": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"revoked_at": {
+						"type": [
+							"string",
+							"null"
+						],
+						"format": "date-time"
+					},
+					"current": {
+						"type": "boolean",
+						"description": "True for the key making this call."
+					}
+				}
+			},
+			"OwnProfile": {
+				"type": "object",
+				"required": [
+					"login",
+					"name",
+					"affiliation",
+					"edited"
+				],
+				"properties": {
+					"login": {
+						"type": "string",
+						"description": "The caller's login, lowercased."
+					},
+					"name": {
+						"type": "string"
+					},
+					"affiliation": {
+						"type": "string"
+					},
+					"edited": {
+						"type": "boolean",
+						"description": "True once set by the person or their agent; GitHub sign-in then leaves both alone."
+					}
+				}
+			},
 			"UserActivity": {
 				"type": "object",
 				"required": [
@@ -2928,6 +3202,14 @@
 							"comments",
 							"votes"
 						]
+					},
+					"name": {
+						"type": "string",
+						"description": "Public name, or \"\" when unknown."
+					},
+					"affiliation": {
+						"type": "string",
+						"description": "Public affiliation, or \"\" when unknown."
 					},
 					"counts": {
 						"type": "object",

@@ -45,6 +45,10 @@ input[name='q'], input.grow { flex: 1 1 16rem; min-width: 0; }
 .quick-start { display: flex; flex-direction: column; gap: 0.6rem; margin: 1rem 0; }
 .quick-start label { display: flex; flex-direction: column; gap: 0.25rem; font-size: var(--small); color: var(--muted); }
 .quick-start :is(input, textarea) { width: 100%; font-size: inherit; }
+.profile-edit summary { cursor: pointer; color: var(--muted); font-size: var(--small); }
+.profile-edit form { align-items: flex-end; }
+.profile-edit label { display: flex; flex-direction: column; gap: 0.25rem; flex: 1 1 14rem; min-width: 0; font-size: var(--small); color: var(--muted); }
+.profile-edit input { width: 100%; }
 .copy-block { display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem; width: 100%; margin: 0.6rem 0 1rem; }
 .copy-block pre { white-space: pre-wrap; overflow-wrap: anywhere; margin: 0; width: 100%; box-sizing: border-box; }
 

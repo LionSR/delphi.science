@@ -118,7 +118,9 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 
 	// Calls the route as Next does and checks the answer against the document's response for its status.
 	async function call(method: string, path: string, opts: { query?: string; body?: unknown; auth?: boolean | string; params?: Record<string, string>; headers?: Record<string,string> } = {}) {
-		const tmpl = Object.keys(paths).find((p) => new RegExp(`^${p.replace(/\{[^}]+\}/g, '[^/]+')}$`).test(path))!;
+		// As Next routes: a static path (/keys/device) wins over a parameter (/keys/{hash}).
+		const tmpl = Object.keys(paths).filter((p) => new RegExp(`^${p.replace(/\{[^}]+\}/g, '[^/]+')}$`).test(path))
+			.sort((a, b) => (a.match(/\{/g)?.length ?? 0) - (b.match(/\{/g)?.length ?? 0))[0]!;
 		const file = routes().find(([p]) => p === tmpl)![1];
 		const ids = tmpl.match(/\{([^}]+)\}/g)?.map((x) => x.slice(1, -1)) ?? [];
 		const values = path.split('/').filter((_, n) => tmpl.split('/')[n]?.startsWith('{'));
@@ -385,6 +387,27 @@ describe('real responses fit it', { skip: !existsSync(INDEX) && 'build the index
 		} finally { moderationMode = 'accept'; }
 		const updated = JSON.parse((await call('PATCH', path, { auth: true, body })).text);
 		assert.equal(updated.body, body.body); assert.notEqual(updated.revision, body.revision);
+	});
+
+	test('an agent reads and sets its person\'s name and affiliation, and lists and revokes keys', async () => {
+		assert.equal((await call('GET', '/api/v1/profile')).status, 401);
+		assert.equal((await call('PATCH', '/api/v1/profile', { body: { name: 'X' } })).status, 401);
+		assert.equal((await call('PATCH', '/api/v1/profile', { body: { name: 'x'.repeat(101) }, auth: true })).status, 400);
+		const saved = JSON.parse((await call('PATCH', '/api/v1/profile', { body: { name: 'Some One', affiliation: 'UCSD' }, auth: true })).text);
+		assert.deepEqual(saved, { login: 'someone', name: 'Some One', affiliation: 'UCSD', edited: true });
+		assert.equal(JSON.parse((await call('GET', '/api/v1/profile', { auth: true })).text).affiliation, 'UCSD');
+		assert.equal(JSON.parse((await call('GET', '/api/v1/users/someone', {})).text).name, 'Some One');
+
+		const spare = await createAgentKey(pg, 'someone', 'Spare agent');
+		assert.equal((await call('GET', '/api/v1/keys')).status, 401);
+		const keys = JSON.parse((await call('GET', '/api/v1/keys', { auth: true })).text).keys as { hash: string; agent: string; current: boolean }[];
+		assert.equal(keys.find((k) => k.current)?.agent, 'Test agent');
+		const hash = keys.find((k) => k.agent === 'Spare agent')!.hash;
+		assert.equal((await call('DELETE', `/api/v1/keys/${hash}`)).status, 401);
+		assert.equal((await call('DELETE', '/api/v1/keys/short', { auth: true })).status, 400);
+		assert.equal((await call('DELETE', `/api/v1/keys/${'0'.repeat(64)}`, { auth: true })).status, 404);
+		assert.equal((await call('DELETE', `/api/v1/keys/${hash}`, { auth: true })).status, 200);
+		assert.equal((await call('GET', '/api/v1/keys', { auth: spare })).status, 401);
 	});
 
 	test('every documented response was checked', () => {

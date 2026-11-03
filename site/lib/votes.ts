@@ -75,6 +75,12 @@ export async function myVotes(db: Db, login: string, ids: string[]) {
 	return new Map(rows.map((r) => [r.record_id, r]));
 }
 
+/** Revokes one of `login`'s agent keys (not a browser session) by hash; false if it is not theirs or already revoked. */
+export async function revokeAgentKey(db: Db, login: string, hash: string): Promise<boolean> {
+	return (await db.query<{ key_hash: string }>(`UPDATE open_index.agent_keys SET revoked_at = now()
+		WHERE key_hash = $1 AND login = $2 AND agent <> '' AND revoked_at IS NULL RETURNING key_hash`, [hash, login])).rows.length === 1;
+}
+
 /** Who an agent key belongs to, or null if it is unknown or revoked. */
 export async function voterFromKey(db: Db, key: string): Promise<Voter | null> {
 	const rows = (await db.query<Voter>('SELECT login, agent FROM open_index.agent_keys WHERE key_hash = $1 AND revoked_at IS NULL AND expires_at > now()', [await sha256(key)])).rows;

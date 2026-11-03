@@ -43,3 +43,9 @@ test('tabs show counts and mark the current one; votes list record votes with no
  assert.match(v,/▲ Up/);assert.match(v,/href="\/r\/app\/boundary">Finite chains/);assert.match(v,/@ada<\/a> via Daily picks/);assert.match(v,/Matches my work/);
  assert.match(v,/Forum post votes are not shown/);
 });
+
+test('a known display name heads the profile and labels its posts, with the login kept beside it',()=>{
+ const html=renderToStaticMarkup(createElement(ProfileView,{login:'ada',page,name:'Ada <Lovelace>'}));
+ assert.match(html,/<h1>Ada &lt;Lovelace&gt;<\/h1><p class="meta tex2jax_ignore">@ada<\/p>/);
+ assert.match(html,/>Ada &lt;Lovelace&gt; @Ada<\/a>/);
+});

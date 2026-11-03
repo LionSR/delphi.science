@@ -3,6 +3,7 @@ import { db } from '../../lib/db.ts';
 import { PublicAuthor } from '../../lib/public-author.ts';
 import { topics } from '../../lib/forum.ts';
 import { me } from '../../lib/session.ts';
+import { displayNames } from '../../lib/votes.ts';
 import { date } from '../../lib/view.ts';
 import { PostForm } from '../post-form.tsx';
 
@@ -11,7 +12,9 @@ export const metadata = { title: 'Forum' };
 
 export default async function Forum({ searchParams }: { searchParams: Promise<{ notice?: string; q?: string; cursor?: string }> }) {
 	const { notice, q = '', cursor } = await searchParams;
-	const page = await topics(await db(), { q, cursor });
+	const d = await db();
+	const page = await topics(d, { q, cursor });
+	const names = await displayNames(d, page.questions.map((t) => t.voter));
 	const who = await me();
 	const list = page.questions;
 	const next = page.next_cursor ? `/forum?${new URLSearchParams({ ...(q ? { q } : {}), cursor: page.next_cursor })}` : '';
@@ -38,7 +41,7 @@ export default async function Forum({ searchParams }: { searchParams: Promise<{ 
 						<span>
 							<a className="title" href={`/forum/${t.id}`}>{t.title}</a>
 							<p className="meta">
-								<span><PublicAuthor voter={t.voter} agent={t.agent} /></span>
+								<span><PublicAuthor voter={t.voter} agent={t.agent} name={names.get(t.voter)} /></span>
 								<span>active {date(t.last_at)}</span>
 							</p>
 						</span>

@@ -1,15 +1,13 @@
 'use client';
 // Fills in the quick-start message from a few answers, with a Copy button. Nothing is sent anywhere.
 import { useEffect, useState } from 'react';
+import { CopyBlock } from '../copy-block.tsx';
 import { quickStart, type QuickStart as Fill } from '../../lib/prompts.ts';
 
 export function QuickStart({ site }: { site: string }) {
 	const [f, setF] = useState<Fill>({ papers: '', interests: '', avoid: '', time: '', votes: 3 });
-	const [copied, setCopied] = useState(false);
 	useEffect(() => setF((f) => f.time ? f : { ...f, time: `08:00 ${Intl.DateTimeFormat().resolvedOptions().timeZone}` }), []);
-	const set = (k: keyof Fill) => (e: { target: { value: string } }) => { setCopied(false); const v = k === 'votes' ? Number(e.target.value) : e.target.value; setF((f) => ({ ...f, [k]: v })); };
-	const text = quickStart(f, site);
-	const copy = async () => { await navigator.clipboard.writeText(text); setCopied(true); };
+	const set = (k: keyof Fill) => (e: { target: { value: string } }) => { const v = k === 'votes' ? Number(e.target.value) : e.target.value; setF((f) => ({ ...f, [k]: v })); };
 	return (
 		<div className="comment-form quick-start">
 			<fieldset>
@@ -26,8 +24,7 @@ export function QuickStart({ site }: { site: string }) {
 						{[1, 2, 3, 5].map((n) => <option key={n} value={n}>at most {n}</option>)}
 						<option value={0}>none, just send me the list</option>
 					</select></label>
-				<pre>{text}</pre>
-				<button type="button" onClick={copy}>{copied ? 'Copied' : 'Copy for your agent'}</button>
+				<CopyBlock text={quickStart(f, site)} label="Copy for your agent" />
 			</fieldset>
 		</div>
 	);

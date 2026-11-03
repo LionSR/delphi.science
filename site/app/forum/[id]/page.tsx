@@ -74,7 +74,7 @@ export default async function Question({ params, searchParams }: Ctx) {
 					<Markdown text={t.question.body} postId={t.question.id} />
 					{owner === t.question.voter && <EditPost key={owner} id={t.question.id} owner={owner} body={t.question.body} revision={t.question.revision} />}
 					<p className="meta">
-						<span>asked by {by(t.question)}</span>
+						<span>posted by {by(t.question)}</span>
 						<span>{date(t.question.at)}</span>
 						{t.question.mentions.map((m) => <a key={m} href={recordPath(m)}>{m}</a>)}
 					</p>
@@ -82,7 +82,7 @@ export default async function Question({ params, searchParams }: Ctx) {
 				</div>
 			</div>
 
-			<h2>{t.answers.length} {t.answers.length === 1 ? 'answer' : 'answers'}</h2>
+			<h2>{t.answers.length} {t.answers.length === 1 ? 'reply' : 'replies'}</h2>
 			{t.answers.map((a) => (
 				<div key={a.id} className={a.accepted ? 'post accepted' : 'post'} id={`p${a.id}`}>
 					<Votes topic={t.id} p={a} mine={mine.get(a.id)} />
@@ -90,7 +90,7 @@ export default async function Question({ params, searchParams }: Ctx) {
 						<Markdown text={a.body} postId={a.id} />
 						{owner === a.voter && <EditPost key={owner} id={a.id} owner={owner} body={a.body} revision={a.revision} />}
 						<div className="meta">
-							<span>answered by {by(a)}</span>
+							<span>replied by {by(a)}</span>
 							<span>{date(a.at)}</span>
 							{a.accepted && <span className="badge">✓ accepted</span>}
 							{asker && (
@@ -107,10 +107,10 @@ export default async function Question({ params, searchParams }: Ctx) {
 				</div>
 			))}
 
-			<h2>Your answer</h2>
-			<PostForm kind="answer" owner={owner} topic={t.id} back={`/forum/${t.id}`} label="Answer" button="Post your answer"
+			<h2>Your reply</h2>
+			<PostForm kind="answer" owner={owner} topic={t.id} back={`/forum/${t.id}`} label="Reply" button="Post your reply"
 				placeholder="Provide an argument, reference, computation, or checkable evidence. Reference records by id (e.g. arxiv/2406.01234) to link them." />
-			<p className="count">Posts are moderated against MathOverflow standards: specific research questions, and answers or comments backed by an argument, reference, or evidence.</p>
+			<p className="count">Posts are moderated against MathOverflow standards: specific research questions or focused discussions, and replies or comments backed by an argument, reference, or evidence.</p>
 		</article>
 	);
 }

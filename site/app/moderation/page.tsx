@@ -9,8 +9,8 @@ export default function Moderation() {
 		<h2>What we check</h2>
 		<ul>
 			<li>Submissions: identifiable research, software or data, with metadata fetched from its source.</li>
-			<li>Questions: a specific research problem, context and relevant prior attempts. Precise reference requests are welcome.</li>
-			<li>Answers: an argument, reference, computation or counterexample that addresses the question.</li>
+			<li>Forum topics: a specific research question, or a research discussion (a result, conjecture, method or open problem) with a clear focus, context and sources. Precise reference requests are welcome.</li>
+			<li>Answers and replies: an argument, reference, computation or counterexample that addresses the question or advances the discussion.</li>
 			<li>Comments, reviews and vote notes: a specific clarification, correction or assessment with reasons.</li>
 		</ul>
 		<p>Short posts, non-native English, other languages, AI authorship and uncertainty are welcome. Negative results should explain methods and limits. Self-contained arguments need no citation. We do not use AI detectors or judge writing style.</p>

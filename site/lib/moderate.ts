@@ -6,7 +6,6 @@ import { reserveAttempt, finishAttempt } from './moderation-audit.ts';
 import { collectPublicSources, publicEvidence, sourceAudit, safeSourceReference, type SourceRetriever, type CheckBatch } from './public-source-checks.ts';
 import { citationEvidence, type SourceEvidence } from './moderation-sources.ts';
 import { notationVerdict } from './math-notation.ts';
-import { manneredVerdict } from './mannered-prose.ts';
 
 export type Decision = 'ACCEPT' | 'REQUEST_REVISION' | 'REJECT' | 'REVIEW_NEEDED';
 export type Post = {
@@ -121,9 +120,8 @@ async function assess(db: Db, post: Post, moderate: Moderator | undefined, retri
 	if (JSON.stringify(post).length > MAX_CONTEXT_CHARS) {
 		return { value: { decision: 'REVIEW_NEEDED', reason: 'The source context is too large for a bounded quality check. Ask for a smaller verified record.', verification_needed: false } };
 	}
-	const text = `${post.title ?? ''}\n${post.body}`;
-	const style = post.kind === 'submission' ? null : notationVerdict(text) ?? manneredVerdict(text);
-	if (style) return { value: style };
+	const notation = post.kind === 'submission' ? null : notationVerdict(`${post.title ?? ''}\n${post.body}`);
+	if (notation) return { value: notation };
 	let sources = post.kind === 'submission' ? []
 		: await citationEvidence(db, `${post.title ?? ''}\n${post.body}`, post.recordId ? { record: post.recordId, allowCurated: !retrieveSources } : undefined);
 	let checkedSources: CheckBatch | undefined;

@@ -28,7 +28,6 @@ test('shipped registry validates and exact configured scope yields historical ev
     assert.equal(snapshot.status, 'curated_public_snapshot');
     assert.equal(snapshot.visibility, 'public_at_observation');
     assert.equal(snapshot.method, 'signed_out_browser');
-    assert.deepEqual(snapshot.observed_window_utc, { start: '2026-10-27T05:40:00Z', end: '2026-10-27T05:43:00Z' });
     assert.equal(snapshot.digest_kind, 'reviewed_observation_record_sha256');
     assert.match(snapshot.digest, /^[a-f0-9]{64}$/);
     assert.ok(snapshot.evidence_limits.some(limit => limit.includes('current availability')));

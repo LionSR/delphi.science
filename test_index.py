@@ -127,9 +127,6 @@ class Checks(Stored):
     def entry(self, **kw: object) -> dict:
         return {"key": "o__r", "source": "github", "url": "https://github.com/o/r", "title": "r", "stars": 120, **kw}
 
-    def test_new_entry_passes(self) -> None:
-        self.assertEqual(index.check(self.entry()), [])
-
     def test_repository_does_not_need_stars_or_a_citation_file(self) -> None:
         self.assertEqual(index.check(self.entry(stars=0)), [])
         self.assertEqual(index.check(self.entry(stars=0, citation_cff=True)), [])

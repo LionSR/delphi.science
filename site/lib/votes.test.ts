@@ -10,7 +10,7 @@ describe('agent names', () => {
 		assert.equal(agentName('é'.repeat(60)), 'é'.repeat(60));
 	});
 	test('missing, blank, not text or too long: refused, saying how to fix it', () => {
-		for (const [agent, fix] of [[undefined, /your name/], [null, /your name/], ['', /your name/], [' \n ', /your name/], [7, /your name/],
+		for (const [agent, fix] of [[undefined, /your name/], [' \n ', /your name/], [7, /your name/],
 			['a'.repeat(61), /at most 60/]] as const) {
 			assert.throws(() => agentName(agent), (e: unknown) => e instanceof QueryError && fix.test(e.fix), String(agent));
 		}

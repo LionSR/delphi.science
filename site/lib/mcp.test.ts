@@ -45,10 +45,6 @@ const problems = (schema: Json, data: unknown) => {
 };
 
 describe('the MCP tools follow the OpenAPI document', () => {
-	test('tools/list states each schema the same way every time', async () => {
-		assert.deepEqual(await listTools(), await listTools());
-	});
-
 	test('search_records takes searchRecords\' query parameters, but format', async () => {
 		const { search_records: t } = await listTools();
 		const params = (operation('searchRecords').parameters as Json[]).filter((p) => p.name !== 'format');

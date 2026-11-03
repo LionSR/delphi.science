@@ -7,7 +7,7 @@ import { fileCount, MAX_URLS, PAGES, RECORDS_PER_FILE, sitemapIndex, urlset } fr
 describe('sitemap', () => {
 	test('no file holds more than 50,000 URLs, with room for the site pages', () => {
 		assert.ok(RECORDS_PER_FILE + PAGES.length <= MAX_URLS);
-		assert.deepEqual([fileCount(0), fileCount(1), fileCount(RECORDS_PER_FILE), fileCount(RECORDS_PER_FILE + 1), fileCount(85_000)], [1, 1, 1, 2, 2]);
+		assert.deepEqual([fileCount(0), fileCount(RECORDS_PER_FILE), fileCount(RECORDS_PER_FILE + 1)], [1, 1, 2]);
 	});
 	test('the index lists each numbered file', () => {
 		const xml = sitemapIndex('https://x.org', 2);

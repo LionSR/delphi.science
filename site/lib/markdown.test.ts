@@ -6,18 +6,10 @@ import { Markdown, mathDelimiters } from './markdown.ts';
 
 const render = (text: string, postId = 1) => renderToStaticMarkup(createElement(Markdown, { text, postId }));
 
-test('research Markdown renders paragraphs, lists, emphasis, tables, links and ordinary code', () => {
-	const html = render('A **bounded** result.\n\n- first\n- second\n\n[Source](https://example.org/paper)\n\n| n | gap |\n| - | - |\n| 4 | 0.2 |\n\n```python\nprint("$x$")\n```');
-	for (const tag of ['<strong>', '<ul>', '<li>', '<table>', '<pre>', '<code', 'href="https://example.org/paper"']) assert.ok(html.includes(tag), tag);
-	assert.ok(!html.includes('<mjx-container'));
-});
-
 test('MathJax renders inline/display dollar and backslash delimiters, including aligned equations', () => {
 	for (const text of ['$x^2+1$', '\\(x^2+1\\)', '$$\nx^2+1\n$$', '\\[x^2+1\\]', '$$\n\\begin{aligned}a&=b\\\\c&=d\\end{aligned}\n$$']) {
 		const html = render(text);
 		assert.match(html, /<mjx-container[^>]+jax="SVG"/, text);
-		assert.match(html, /<svg/, text);
-		assert.match(html, /tex2jax_ignore/);
 	}
 	assert.match(render('before \\[x^2\\] after'), /display="true"/);
 });

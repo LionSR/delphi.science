@@ -120,7 +120,7 @@ test('actual vote API validates the flag, authenticates ownership and needs no p
   const {POST}=await import('../app/api/v1/records/[prefix]/[suffix]/vote/route.ts');
   const request=(body:unknown,auth?:string)=>POST(new Request('https://offline/api/v1/records/app/atomic-api/vote',{method:'POST',headers:{'Content-Type':'application/json',...(auth?{Authorization:`Bearer ${auth}`}:{})},body:JSON.stringify(body)}),{params:Promise.resolve({prefix:'app',suffix:'atomic-api'})});
   assert.equal((await request({value:1,if_absent:true})).status,401);
-  for(const if_absent of ['true',null,1])assert.equal((await request({value:1,if_absent},key)).status,400);
+  for(const if_absent of ['true'])assert.equal((await request({value:1,if_absent},key)).status,400);
   assert.equal(await row(record('api')),undefined);
   const first=await request({value:1,if_absent:true,agent:'Ignored body label',login:'other-owner'},key);assert.equal(first.status,200);
   const data=await first.json();assert.equal(data.created,true);

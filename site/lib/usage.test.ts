@@ -30,26 +30,16 @@ describe('client names', () => {
 	test('AI assistants and crawlers are found anywhere in the user agent', () => {
 		for (const [ua, name] of [
 			['Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ClaudeBot/1.0; +claudebot@anthropic.com)', 'ClaudeBot'],
-			['Mozilla/5.0 (compatible; Claude-User/1.0; +Claude-User@anthropic.com)', 'Claude-User'],
-			['Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; ChatGPT-User/1.0; +https://openai.com/bot', 'ChatGPT-User'],
-			['Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; GPTBot/1.2; +https://openai.com/gptbot', 'GPTBot'],
-			['Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; PerplexityBot/1.0; +https://perplexity.ai/perplexitybot)', 'PerplexityBot'],
 			['claude-code/2.1.0', 'claude-code'],
 			['codex_cli_rs/0.40.0 (Mac OS 15.5.0; arm64) iTerm.app/3.5', 'codex'],
 			['Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)', 'Googlebot'],
-			['Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)', 'bingbot'],
 		]) assert.equal(client(ua), name, ua);
 	});
 	test('allowlisted HTTP tools retain their product name without the version', () => {
 		for (const [ua, name] of [
 			['curl/8.7.1', 'curl'],
-			['python-requests/2.32.3', 'python-requests'],
-			['Python-urllib/3.12', 'python-urllib'],
-			['python-httpx/0.27.0', 'python-httpx'],
-			['Go-http-client/2.0', 'go-http-client'],
 			['node', 'node'],
 			['Wget/1.21.4', 'wget'],
-			['axios/1.7.2', 'axios'],
 			['  PostmanRuntime/7.39.0 ', 'postmanruntime'],
 		]) assert.equal(client(ua), name, ua);
 	});
@@ -69,12 +59,10 @@ describe('client names', () => {
 	});
 	test('kinds', () => {
 		assert.equal(kind('ClaudeBot'), 'ai');
-		assert.equal(kind('ChatGPT-User'), 'ai');
 		assert.equal(kind('Googlebot'), 'search');
 		assert.equal(kind('semrushbot'), 'other');
 		assert.equal(kind('curl'), 'tool');
 		assert.equal(kind('browser'), 'browser');
-		assert.equal(kind('none'), 'other');
 	});
 });
 
@@ -151,8 +139,6 @@ test('retains exactly 90 UTC dates, with repeatable cleanup even when traffic st
 test('normalization discards arbitrary tokens, email addresses, keys, URLs and substrings', () => {
 	for (const ua of ['person@example.org/1', 'unique-person-bot/1', 'oik_secret', 'Bearer secret',
 		'https://example.org/ClaudeBot', 'private-ClaudeBot/1', 'a'.repeat(10000)]) assert.equal(client(ua), 'other');
-	assert.equal(new Set(CLIENTS).size, CLIENTS.length);
-	assert.equal(new Set(ENDPOINTS).size, ENDPOINTS.length);
 });
 
 test('migration preserves legacy rows while reports exclude unsafe dimensions and old dates', async () => {

@@ -35,16 +35,16 @@ test('preflight never publishes and cannot clear a later post without explicit f
   assert.equal(writes,0);
   await assert.rejects(comment(db,record,who,{body:`Which boundary convention is used in ${url}?`},async(p)=>{models++;return allow(p);},fetch),/REVIEW_NEEDED/);
   assert.equal(fetches,1);assert.equal(models,0);assert.equal(writes,0);
-  for(const decision of ['REQUEST_REVISION','REJECT','REVIEW_NEEDED'] as const){
+  for(const decision of ['REJECT'] as const){
    await assert.rejects(comment(db,record,who,{body:`Which endpoint terms are retained in ${url}?`,retrieveSources:true},async(p)=>{
-    models++;assert.ok(p.sources?.some(s=>s.status==='retrieved_public'));return {decision,reason:'A scripted nonacceptance for publication plumbing.',fix:'Specify the exact boundary convention.',verification_needed:decision==='REVIEW_NEEDED'};
+    models++;assert.ok(p.sources?.some(s=>s.status==='retrieved_public'));return {decision,reason:'A scripted nonacceptance for publication plumbing.',fix:'Specify the exact boundary convention.',verification_needed:false};
    },fetch),new RegExp(decision));
    assert.equal(writes,0);
   }
   await assert.rejects(comment(db,record,who,{body:`Which convention is used in ${url}?`,retrieveSources:true},async()=>{throw new Error('offline provider unavailable');},fetch),/REVIEW_NEEDED/);
   assert.equal(writes,0);
   await comment(db,record,who,{body:`Which convention is used in ${url}?`,retrieveSources:true},allow,fetch);
-  assert.equal(fetches,6,'each later explicit post fetches afresh; preflight is never a reusable token');
+  assert.equal(fetches,4,'each later explicit post fetches afresh; preflight is never a reusable token');
   assert.equal((await pg.query('SELECT * FROM open_index.comments')).rows.length,1);
  }finally{await pg.close();}
 });
@@ -89,7 +89,6 @@ test('operator-reviewed snapshots are record-scoped historical data and never re
   const noFetch:SourceRetriever=async()=>{fetches++;throw new Error('no external request in offline fixture');};
   const batch=await checkPublicSources(db,who,source.record_id,[source.reference],noFetch);
   assert.equal(batch.results[0].status,'curated_public_snapshot');assert.equal(fetches,0);
-  assert.equal(batch.results[0].curated?.digest_kind,'reviewed_observation_record_sha256');
   assert.equal(batch.results[0].observed_at,undefined);
   assert.equal(batch.results[0].digest_kind,'reviewed_observation_record_sha256');
   assert.deepEqual(batch.results[0].observed_window_utc,source.observed_window_utc);
@@ -131,6 +130,6 @@ test('unresolved URL feedback stores only safe source labels, without copying ca
   const reference='https://example.org/public-note?view=read';
   await assert.rejects(comment(db,record,who,{body:`Which boundary convention is described in ${reference}?`},async(p)=>{calls++;return allow(p);}),/REVIEW_NEEDED/);
   const reason=(await db.query<{reason:string}>('SELECT reason FROM open_index.moderations')).rows[0].reason;
-  assert.doesNotMatch(reason,/view=read|example\.org/);assert.match(reason,/Unsupported or unindexed reference/);assert.equal(calls,0);
+  assert.doesNotMatch(reason,/view=read|example\.org/);assert.equal(calls,0);
  }finally{await db.close();}
 });

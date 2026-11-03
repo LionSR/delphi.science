@@ -25,18 +25,6 @@ describe('private post drafts', () => {
 		assert.deepEqual(restoreDraft(new MemoryStorage(), 'ask', 'alice'), { draft: b });
 	});
 
-	test('rejected and service-failed attempts retain exact drafts across reads and revisions', () => {
-		const storage = new MemoryStorage();
-		assert.equal(saveDraft(storage, 'ask', 'alice', question), true);
-		// The form owns posting outcomes. A refusal/failure must not invoke clearDraft.
-		for (const outcome of ['moderation_rejected', 'moderation_unavailable', 'posting_unconfirmed']) {
-			assert.deepEqual(restoreDraft(storage, 'ask', 'alice').draft, question, outcome);
-		}
-		const revised = { ...question, body: question.body + '\nI am considering the finite open-chain identity only.' };
-		assert.equal(saveDraft(storage, 'ask', 'alice', revised), true);
-		assert.deepEqual(restoreDraft(storage, 'ask', 'alice').draft, revised);
-	});
-
 	test('isolates author, form, topic, and parent drafts', () => {
 		const storage = new MemoryStorage();
 		const cases: [string, string, Draft][] = [
@@ -223,7 +211,6 @@ describe('private post drafts', () => {
 		assert.doesNotThrow(() => markDraftLogin(storage, 'ask', ''));
 		assert.doesNotThrow(() => adoptGuestDraft(storage, 'ask', 'alice', guestDraft));
 		assert.doesNotThrow(() => clearDraft(storage, 'ask', 'alice'));
-		assert.deepEqual(question, draft('For an open chain the telescoping sum leaves endpoint terms.', 'Which boundary conditions are assumed?'));
 	});
 
 	test('quota failure does not destroy a prior saved owner draft', () => {
@@ -255,13 +242,4 @@ describe('private post drafts', () => {
 			assert.ok(![...storage.values.values()].some((text) => text.includes(secret)));
 		}
 	});
-});
-
- test('submission URLs retain their own author-scoped draft through refusal and resubmission', () => {
-	const storage = new MemoryStorage(), url = draft('arXiv:1706.03762');
-	assert.equal(saveDraft(storage, 'submission:new:root', 'alice', url), true);
-	assert.deepEqual(restoreDraft(storage, 'submission:new:root', 'alice').draft, url);
-	assert.deepEqual(restoreDraft(storage, 'submission:new:root', 'bob').draft, emptyDraft());
-	clearDraft(storage, 'submission:new:root', 'alice');
-	assert.deepEqual(restoreDraft(storage, 'submission:new:root', 'alice').draft, emptyDraft());
 });

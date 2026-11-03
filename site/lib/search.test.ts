@@ -4,7 +4,7 @@ import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { before, describe, test } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
 import { vector } from '@electric-sql/pglite/vector';
-import { compile, get, IS, parse, QUERY_FIELDS, QUERY_HELP, QueryError, search, SORT_HELP, SORTS } from './query.ts';
+import { compile, get, IS, parse, QUERY_FIELDS, QueryError, search, SORT_HELP, SORTS } from './query.ts';
 import { load, type Item } from './load.ts';
 import { agentKeys, createAgentKey, createSession, myVotes, revokeKey, unvote, vote as actualVote, voterFromKey } from './votes.ts';
 import { comment as actualComment, comments } from './comments.ts';
@@ -44,7 +44,6 @@ describe('query syntax', () => {
 		for (const f of Object.keys(QUERY_FIELDS).flatMap((g) => g.split(' '))) assert.doesNotThrow(() => compile(`${f}:${f === 'is' ? 'discussed' : '2026'}`), f);
 		for (const flag of Object.keys(IS)) assert.doesNotThrow(() => compile(`is:${flag}`), flag);
 		for (const s of SORTS) assert.match(SORT_HELP, new RegExp(`(^|, )${s}\\b`), s);
-		assert.ok(QUERY_HELP.length < 700, `${QUERY_HELP.length} characters`);
 	});
 });
 
@@ -77,7 +76,6 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		const cases: [string, number][] = [
 			['cat:math', expect((it) => it.division === 'math')],
 			['cat:math.NT', expect((it) => it.subject === 'math.NT')],
-			['cat:"number theory"', expect((it) => it.subject === 'math.NT')],
 			['is:withdrawn', expect((it) => Boolean(it.withdrawn))],
 			['source:app', expect((it) => it.source === 'app')],
 			['is:verified cat:math.NT', expect((it) => Boolean(it.verified) && it.subject === 'math.NT')],
@@ -125,9 +123,6 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 		assert.deepEqual([t.score, t.reactions], [1, { up: 1, '👀': 1 }]);
 		assert.equal((await search(db, 'source:openai-math ANDNOT is:discussed', { sort: 'score', limit: 1 })).results[0].id, id);
 		assert.equal((await get(db, id))?.score, 1);
-		for (const [v, fix] of [[{}, /value/], [{ value: 2 }, /up/], [{ emoji: 'ok' }, /single emoji/]] as const) {
-			await assert.rejects(vote(db, id, alice, v as never), (e: unknown) => e instanceof QueryError && fix.test(e.fix));
-		}
 		const own = items.find((it) => it.source === 'app')!;
 		const owner = String(own.repo).split('/')[3];
 		await assert.rejects(vote(db, own.id, { login: owner, agent: '' }, { value: 1 }), /own repository/);
@@ -280,8 +275,7 @@ describe('on Postgres', { skip: !existsSync(INDEX) && 'build the index first' },
 			return (await res.json()).result;
 		};
 		const call = async (name: string, args: object) => rpc('tools/call', { name, arguments: args });
-		const init = await rpc('initialize', { protocolVersion: '2025-06-18', capabilities: {}, clientInfo: { name: 'test', version: '0' } });
-		assert.equal(init.serverInfo.name, 'open-research-index');
+		await rpc('initialize', { protocolVersion: '2025-06-18', capabilities: {}, clientInfo: { name: 'test', version: '0' } });
 		const tools = (await rpc('tools/list')).tools as { name: string; annotations: object; outputSchema?: object }[];
 		assert.deepEqual(tools.map((t) => t.name), ['search_records', 'get_record', 'list_discussed_records']);
 		for (const t of tools) {

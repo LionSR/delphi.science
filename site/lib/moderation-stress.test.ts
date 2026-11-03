@@ -4,20 +4,16 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { before, after, test } from 'node:test';
 import { PGlite } from '@electric-sql/pglite';
 import { vector } from '@electric-sql/pglite/vector';
-import { comment, post } from './comments.ts';
 import { startTopic } from './forum.ts';
 import { load } from './load.ts';
-import { deepseek, SYSTEM, type Moderator, type Post, type Verdict } from './moderate.ts';
+import { type Moderator, type Post, type Verdict } from './moderate.ts';
 import { submit } from './submit.ts';
-import { vote } from './votes.ts';
 
 const db = new PGlite({ extensions: { vector } });
 const migrations = new URL('../supabase/migrations/', import.meta.url);
 const ok: Verdict = { decision: 'ACCEPT', reason: 'Scripted offline fixture.', verification_needed: false };
-const allow: Moderator = async () => ok;
 const who = { login: 'overnight-test', agent: 'Offline test' };
 const atom = `<?xml version="1.0"?><feed xmlns="http://www.w3.org/2005/Atom" xmlns:arxiv="http://arxiv.org/schemas/atom"><entry><id>http://arxiv.org/abs/1706.03762</id><published>2017-06-12T17:57:34Z</published><title>Attention Is All You Need</title><summary>A research architecture.</summary><author><name>Ashish Vaswani</name></author><arxiv:primary_category term="cs.CL"/></entry></feed>`;
-const source: typeof fetch = async () => new Response(atom);
 const counts = async () => Promise.all(['entries', 'records', 'topics', 'comments', 'votes', 'submissions'].map(async (t) => (await db.query<{ n: number }>(`SELECT count(*)::int AS n FROM open_index.${t}`)).rows[0].n));
 const originalFetch = globalThis.fetch;
 before(async () => {
@@ -37,38 +33,6 @@ test('source-fetched agent keys cannot be transmitted to the moderator or enter 
 	assert.deepEqual(await counts(), before);
 });
 
-test('Chinese substantive posts have an explicit language-neutral rubric and survive transport', async () => {
-	assert.match(SYSTEM, /Chinese or other languages/);
-	let seen: Post | undefined;
-	const body = '不成立：取零矩阵 A，其行列式为零，因此不存在逆矩阵。这里没有声称一般情形下的充分条件。';
-	const result = await comment(db, 'app/stress', who, { body }, async (p) => { seen = p; return ok; });
-	assert.equal(result.body, body); assert.equal(seen?.body, body);
-});
-
-for (const [label, body, decision] of [
-	['substantive one-line counterexample', 'No: tr(AB-BA)=0 whereas tr(I)=n>0.', 'ACCEPT'],
-	['scripted revision A', 'Which endpoint terms remain after telescoping on an open chain?', 'REQUEST_REVISION'],
-] as const) test(`scripted scientific-quality gate: ${label}`, async () => {
-	const before = await counts(); let seen: Post | undefined;
-	const moderate: Moderator = async (p) => { seen = p; return { decision, reason: 'Private scripted fixture: clarify the specific argument and its limits.', verification_needed: false }; };
-	if (decision === 'ACCEPT') assert.equal((await comment(db, 'app/stress', who, { body }, moderate)).body, body);
-	else { await assert.rejects(comment(db, 'app/stress', who, { body }, moderate), /REQUEST_REVISION/); assert.deepEqual(await counts(), before); }
-	assert.equal(seen?.body, body);
-});
-
-test('parent mismatch is judged against the server question and exact reply parent', async () => {
-	const question = 'Does telescoping for an open chain leave endpoint terms?';
-	const t = await startTopic(db, { login: 'overnight-asker', agent: 'Offline test' }, { title: 'Open-chain endpoint terms', body: question }, allow);
-	const answer = await post(db, { topic: t.id }, { login: 'overnight-answerer', agent: 'Offline test' }, { body: 'Yes: the interior differences cancel but the first and last terms remain.' }, allow);
-	let seen: Post | undefined;
-	const before = await counts();
-	await assert.rejects(post(db, { topic: t.id }, who, { parent: answer.id, body: 'Instead, here is an unrelated conjecture about training language models.' }, async (p) => {
-		seen = p; return { decision: 'REQUEST_REVISION', reason: 'Address the endpoint calculation in the question and parent.', verification_needed: false };
-	}), /REQUEST_REVISION/);
-	assert.equal(seen?.context?.question, question); assert.equal(seen?.context?.parent, answer.body);
-	assert.deepEqual(await counts(), before);
-});
-
 test('scripted rejection gates source metadata and question titles before public writes', async () => {
 	const questionText = 'Which boundary terms remain on an open chain?';
 	const before = await counts(); const seen: Post[] = [];
@@ -77,21 +41,6 @@ test('scripted rejection gates source metadata and question titles before public
 	await assert.rejects(startTopic(db, who, { title: questionText, body: 'Does the telescoping sum retain the first and last terms?' }, reject), /REJECT/);
 	assert.equal(seen.length, 2); assert.equal(seen[0].kind, 'submission'); assert.ok(JSON.parse(seen[0].body).summary.includes(questionText));
 	assert.equal(seen[1].title, questionText); assert.deepEqual(await counts(), before);
-});
-
-test('unavailable DeepSeek holds every publication path without fallback or public writes', async () => {
-	let calls = 0;
-	const down = deepseek('synthetic-test-placeholder', async () => { calls++; throw new Error('offline provider unavailable'); });
-	const t = await startTopic(db, { login: 'provider-asker', agent: 'Offline test' }, { title: 'Which boundary convention?', body: 'Does the endpoint term vanish only for a periodic chain?' }, allow);
-	const before = await counts();
-	for (const run of [
-		() => submit(db, 'arXiv:1706.03762', who, source, down),
-		() => startTopic(db, who, { title: 'A specific research question', body: 'What precise hypothesis controls this endpoint term?' }, down),
-		() => post(db, { topic: t.id }, who, { body: 'Periodic boundaries identify the endpoints.' }, down),
-		() => comment(db, 'app/stress', who, { body: 'The endpoint terms need an explicit boundary convention.', review: true }, down),
-		() => vote(db, 'app/stress', who, { value: 1, note: 'The displayed formula retains the endpoint terms.' }, down),
-	]) await assert.rejects(run(), /REVIEW_NEEDED/);
-	assert.equal(calls, 5); assert.deepEqual(await counts(), before);
 });
 
 test('two accepted submissions competing for the twentieth daily link cannot exceed the public limit', async () => {

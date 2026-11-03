@@ -57,6 +57,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
 						<a href="/stats">Use</a>
 						<a href="/api/v1">API</a>
 						<a href="/llms.txt">llms.txt</a>
+						<a href="/prompts">Agent prompts</a>
 					</footer>
 				</main>
 				{process.env.ORI_WEB_ANALYTICS_ENABLED === 'true' && process.env.VERCEL_ENV === 'production' && <PageViews />}

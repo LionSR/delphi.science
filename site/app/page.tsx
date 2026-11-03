@@ -7,6 +7,7 @@ import { date, recordPath, source, tally, tex } from '../lib/view.ts';
 import { myVotes } from '../lib/votes.ts';
 import { Hero } from './logo.tsx';
 import { Vote } from './vote.tsx';
+import { HomeOrder } from './home-order.ts';
 
 export const dynamic = 'force-dynamic';
 
@@ -56,7 +57,10 @@ export default async function Home({ searchParams }: { searchParams: Params }) {
 				{sources.map((r) => <a key={r.source} href={source(r.source).href}>{source(r.source).name} <span className="n">{r.n.toLocaleString('en')}</span></a>)}
 			</nav>
 			{(error || notice) && <p className="count">{error || notice}</p>}
-			{res && <p className="count">{res.total.toLocaleString('en')} records</p>}
+			{res && <div className="results-heading">
+				<p className="count">{res.total.toLocaleString('en')} records</p>
+				<HomeOrder q={q} sort={sort} />
+			</div>}
 			<ol>
 				{res?.results.map((r) => (
 					<li key={String(r.id)} className="item">

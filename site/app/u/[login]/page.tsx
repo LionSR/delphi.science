@@ -23,19 +23,15 @@ export default async function Profile({ params, searchParams }: Context) {
 	}
 	const { cursor, tab: rawTab } = await searchParams;
 	const tab: Tab = (TABS as readonly string[]).includes(rawTab as string) ? rawTab as Tab : 'all';
-	let activity: ProfileActivity | undefined;
-	let votes: ProfileVotes | undefined;
 	let counts: ProfileCounts | undefined;
-	let failed = false;
+	let page: ProfileActivity | ProfileVotes | null = null;
 	try {
 		if (Array.isArray(cursor)) throw new Error('Repeated cursor');
 		const d = await db();
 		counts = await profileCounts(d, login);
-		if (tab === 'votes') votes = await profileVotes(d, login, { cursor });
-		else activity = await profileActivity(d, login, { cursor, tab });
+		page = tab === 'votes' ? await profileVotes(d, login, { cursor }) : await profileActivity(d, login, { cursor, tab });
 	} catch {
-		failed = true;
-		activity = { login, posts: [], next_cursor: null };
+		page = null;
 	}
-	return <ProfileView activity={activity} votes={votes} counts={counts} tab={tab} failed={failed} />;
+	return <ProfileView login={login} tab={tab} counts={counts} page={page} />;
 }

@@ -1,9 +1,9 @@
 // Server-rendered profile: tabs with counts, then the chosen tab's posts or record votes.
-import { createElement as h, Fragment } from 'react';
+import { createElement as h, Fragment, type ReactNode } from 'react';
 import { Markdown } from './markdown.ts';
 import type { PostKind, Profile, ProfilePost, ProfileVote, Tab } from './profile.ts';
 import { PublicAuthor, profilePath } from './public-author.ts';
-import type { PublicName } from './votes.ts';
+import type { PublicName } from './people.ts';
 import { date, voteMark } from './view.ts';
 
 const TAB_NAMES: Record<Tab, string> = { all: 'All', topics: 'Topics', replies: 'Replies', comments: 'Comments', votes: 'Votes' };
@@ -40,8 +40,9 @@ function Votes({ login, votes, who }: { login: string; votes: ProfileVote[]; who
 		v.note ? h('p', null, v.note) : null)));
 }
 
-/** page is null when loading failed; who is the person's public name and affiliation, when known. */
-export function ProfileView({ login, tab = 'all', page, who }: { login: string; tab?: Tab; page: Profile | null; who?: PublicName }) {
+/** page is null when loading failed; who is the person's public name and affiliation, when known; editor is the
+ *  owner's form for changing them. */
+export function ProfileView({ login, tab = 'all', page, who, editor }: { login: string; tab?: Tab; page: Profile | null; who?: PublicName; editor?: ReactNode }) {
 	const noun = tab === 'votes' ? 'votes' : 'posts';
 	const empty = tab === 'all' ? 'public posts or comments' : tab === 'votes' ? 'public votes' : TAB_NAMES[tab].toLowerCase();
 	const body = !page
@@ -57,6 +58,7 @@ export function ProfileView({ login, tab = 'all', page, who }: { login: string; 
 		who?.name || who?.affiliation ? h('p', { className: 'meta' },
 			who.name ? h('span', { className: 'tex2jax_ignore' }, `@${login}`) : null,
 			who.affiliation ? h('span', null, who.affiliation) : null) : null,
+		editor ?? null,
 		h('p', null, 'Public topics, replies, comments and record votes by this account and the bots attributed on them. Forum post votes are not shown, as on MathOverflow.'),
 		h(Tabs, { login, tab, counts: page?.counts }),
 		body,

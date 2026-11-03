@@ -3,7 +3,7 @@ import { db } from '../../lib/db.ts';
 import { PublicAuthor } from '../../lib/public-author.ts';
 import { topics } from '../../lib/forum.ts';
 import { me } from '../../lib/session.ts';
-import { displayNames } from '../../lib/votes.ts';
+import { publicNames } from '../../lib/people.ts';
 import { date } from '../../lib/view.ts';
 import { PostForm } from '../post-form.tsx';
 
@@ -14,7 +14,7 @@ export default async function Forum({ searchParams }: { searchParams: Promise<{ 
 	const { notice, q = '', cursor } = await searchParams;
 	const d = await db();
 	const page = await topics(d, { q, cursor });
-	const names = await displayNames(d, page.questions.map((t) => t.voter));
+	const names = await publicNames(d, page.questions.map((t) => t.voter));
 	const who = await me();
 	const list = page.questions;
 	const next = page.next_cursor ? `/forum?${new URLSearchParams({ ...(q ? { q } : {}), cursor: page.next_cursor })}` : '';

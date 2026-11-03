@@ -11,7 +11,8 @@ import { db } from '../../../../lib/db.ts';
 import { get } from '../../../../lib/query.ts';
 import { me } from '../../../../lib/session.ts';
 import { date, idPath, reception, recordId, recordPath, SITE, source, STANCES, tally, tex, type IdParams, voteMark } from '../../../../lib/view.ts';
-import { displayNames, myVotes, votes } from '../../../../lib/votes.ts';
+import { publicNames } from '../../../../lib/people.ts';
+import { myVotes, votes } from '../../../../lib/votes.ts';
 import { Vote } from '../../../vote.tsx';
 import { EditPost } from '../../../edit-post.tsx';
 
@@ -47,7 +48,7 @@ export default async function Record(ctx: IdParams & { searchParams: Promise<{ n
 	const thread = await comments(d, id);
 	const { notice } = await ctx.searchParams;
 	const voters = await votes(d, id);
-	const names = await displayNames(d, [...voters.map((v) => v.voter), ...thread.map((c) => c.voter), ...(reception(r)?.reviewed_by ? [String(reception(r)!.reviewed_by)] : [])]);
+	const names = await publicNames(d, [...voters.map((v) => v.voter), ...thread.map((c) => c.voter), ...(reception(r)?.reviewed_by ? [String(reception(r)!.reviewed_by)] : [])]);
 	const who = await me();
 	const mine = who ? (await myVotes(d, who.login, [id])).get(id) : undefined;
 	const back = recordPath(id);

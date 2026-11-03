@@ -38,49 +38,20 @@ export function profileName(value: unknown): string {
 	return [...value.normalize('NFC').replace(/[\p{Cc}\s]+/gu, ' ').trim()].slice(0, 100).join('');
 }
 
-/** A GitHub "company" for show only: profileName rules, without GitHub's leading "@" on organization mentions. */
-export function profileAffiliation(value: unknown): string {
-	return profileName(value).replace(/^@(?=\S)/, '');
+/** A new session key. Stores the display name when the agent_keys.name column exists. */
+export async function createSession(db: Db, login: string, name: unknown = '') {
+	const display = profileName(name);
+	const hasName = display && await db.query<{ present: boolean }>(`SELECT EXISTS (
+		SELECT 1 FROM information_schema.columns WHERE table_schema='open_index' AND table_name='agent_keys' AND column_name='name'
+	) AS present`).then((r) => r.rows[0]?.present === true, () => false);
+	return newKey(db, login, '', hasName ? display : undefined);
 }
 
-/** What a person's public profile shows beside their login: GitHub display name and affiliation, either possibly ''. */
-export type PublicName = { name: string; affiliation: string };
-
-/** Public names keyed by each login as given (matched ignoring case, as GitHub does), from the person's newest session
- *  that recorded either. A name that is just the login is dropped; logins with nothing to show are left out. */
-export async function displayNames(db: Db, logins: string[]): Promise<Map<string, PublicName>> {
-	const lower = [...new Set(logins.map((l) => l.toLowerCase()))];
-	if (!lower.length) return new Map();
-	const query = (affiliation: boolean) => db.query<{ login: string; name: string; affiliation?: string }>(
-		`SELECT DISTINCT ON (lower(login)) lower(login) AS login, name${affiliation ? ', affiliation' : ''} FROM open_index.agent_keys
-		 WHERE lower(login) = ANY($1) AND agent = '' AND (name <> ''${affiliation ? " OR affiliation <> ''" : ''})
-		 ORDER BY lower(login), created_at DESC`, [lower]).then((r) => r.rows);
-	const rows = await query(true).catch(() => query(false)).catch(() => []);
-	const byLower = new Map(rows.map((r) => [r.login, { name: profileName(r.name), affiliation: profileAffiliation(r.affiliation) }]));
-	return new Map(logins.flatMap((l) => {
-		const p = byLower.get(l.toLowerCase());
-		if (!p) return [];
-		const shown = { name: p.name.toLowerCase() === l.toLowerCase() ? '' : p.name, affiliation: p.affiliation };
-		return shown.name || shown.affiliation ? [[l, shown] as [string, PublicName]] : [];
-	}));
-}
-
-/** A new session key. Stores the display name and affiliation in whichever of those agent_keys columns exist. */
-export async function createSession(db: Db, login: string, name: unknown = '', affiliation: unknown = '') {
-	const wanted = Object.entries({ name: profileName(name), affiliation: profileAffiliation(affiliation) }).filter(([, v]) => v);
-	const present = wanted.length ? await db.query<{ column_name: string }>(
-		`SELECT column_name FROM information_schema.columns WHERE table_schema='open_index' AND table_name='agent_keys' AND column_name = ANY($1)`,
-		[wanted.map(([k]) => k)]).then((r) => new Set(r.rows.map((c) => c.column_name)), () => new Set<string>()) : new Set<string>();
-	return newKey(db, login, '', Object.fromEntries(wanted.filter(([k]) => present.has(k))));
-}
-
-async function newKey(db: Db, login: string, agent: string, extra: Record<string, string> = {}) {
+async function newKey(db: Db, login: string, agent: string, name?: string) {
 	const key = `oik_${hex(crypto.getRandomValues(new Uint8Array(24)))}`;
 	const hash = await sha256(key);
-	// Column names come only from createSession's fixed list.
-	const cols = Object.keys(extra);
-	await db.query(`INSERT INTO open_index.agent_keys (key_hash, login, agent${cols.map((c) => `, ${c}`).join('')})
-		VALUES ($1, $2, $3${cols.map((_, i) => `, $${i + 4}`).join('')})`, [hash, login, agent, ...Object.values(extra)]);
+	if (name === undefined) await db.query('INSERT INTO open_index.agent_keys (key_hash, login, agent) VALUES ($1, $2, $3)', [hash, login, agent]);
+	else await db.query('INSERT INTO open_index.agent_keys (key_hash, login, agent, name) VALUES ($1, $2, $3, $4)', [hash, login, agent, name]);
 	return key;
 }
 
